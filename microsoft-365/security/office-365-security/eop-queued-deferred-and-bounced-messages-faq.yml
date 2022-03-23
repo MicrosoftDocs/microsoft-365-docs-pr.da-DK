@@ -1,0 +1,57 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om EOP i kø, udskudt og afvist
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: 9d015a0d-52a0-484d-9a08-121d04f973d3
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Find svar på de mest almindelige spørgsmål om meddelelser, der er sat i kø, udskudt eller afvist under Exchange Online Protection (EOP)-filtreringsprocessen.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 4de909072409b1ee01adb79ecb8f324b76c6a2fd
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "63593272"
+title: Ofte stillede spørgsmål om EOP i kø, udskudt og afvist
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Gælder for**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Dette emne indeholder svar på ofte stillede spørgsmål om meddelelser, der er sat i kø, udskudt eller afvist under Exchange Online Protection (EOP)-filtreringsprocessen.
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvorfor står mail i kø?
+    answer: >
+      Meddelelser er sat i kø eller udskydes, hvis tjenesten ikke kan oprette forbindelse til modtagerserveren for levering. Den udskyder ikke meddelelser, hvis der returneres en fejl i 500 serier fra modtagernetværket.
+  - question: >
+      Hvordan bliver en meddelelse udskudt?
+    answer: >
+      Meddelelser opbevares, når der ikke kan oprettes forbindelse til modtagerserveren, og modtagerens server returnerer en "midlertidig fejl", f.eks. en time out for forbindelsen, afvist forbindelse eller en 400-seriefejl. Hvis der opstår en permanent fejl, f.eks. en fejl i 500 serier, returneres meddelelsen til afsenderen.
+  - question: >
+      Hvor lang tid forbliver en meddelelse i udskydelse, og hvad er retry-intervallet?
+    answer: >
+      Meddelelser i udskydelse forbliver i vores køer i 1 dag. Gentagne forsøg på meddelelse er baseret på den fejl, vi får tilbage fra modtagerens mailsystem. De første par udskydeninger er 15 minutter eller mindre, og efterfølgende genposter (i løbet af det næste halvfinde eller deromkring) øger intervallet over flere retries til maksimalt 60 minutter. Udvidelse af intervalvarigheden er dynamisk, idet der tages højde for flere variabler som f.eks. køstørrelser og prioritet af interne meddelelser. I det grundlæggende er det 15 minutter (eller mindre) til at starte og derefter udvide derfra i løbet af de næste par timer til 60 min.
+  - question: >
+      Hvordan distribueres meddelelser i kø, når mailserveren er gendannet?
+    answer: Når mailserveren er gendannet, behandles alle meddelelser i kø automatisk i den rækkefølge, de blev modtaget i og sat i kø, da serveren blev utilgængelig.

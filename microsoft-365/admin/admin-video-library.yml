@@ -1,0 +1,170 @@
+### YamlMime:Landing
+title: Videobibliotek for administratorkurser
+summary: Lær, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed med korte videoer.
+metadata:
+  title: Videobibliotek for administratorkurser
+  description: Lær, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed med korte videoer.
+  ms.service: O365-administration
+  ms.prod: microsoft-365-business
+  ms.topic: landing-page
+  author: efrene
+  ms.author: efrene
+  ms.date: 02/25/2022
+  ms.localizationpriority: high
+  ms.openlocfilehash: daa4b3f2892a27229404dd61a836792a4b35eef5
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63594713"
+landingContent:
+- title: Kom i gang
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Hvad er Microsoft 365
+      url: admin-overview/what-is-microsoft-365.md
+    - text: Oversigt over konfiguration
+      url: setup/plan-your-setup.md
+    - text: Vælg et abonnement
+      url: admin-overview/sign-up-for-office-365.md
+- title: Skykonfiguration
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Tilmeld dig et abonnement
+      url: admin-overview/sign-up-for-office-365.md
+    - text: Konfigurer tjenesten
+      url: setup/business-set-up.md
+    - text: Sikre Windows 10 pc'er
+      url: setup/secure-win-10-pcs.md
+- title: Konfiguration af enhed
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Forbind pc'er til Microsoft 365
+      url: setup/set-up-windows-devices.md
+    - text: Installér Microsoft Office apps
+      url: setup/install-applications.md
+    - text: Konfigurer Outlook til mail
+      url: setup/setup-outlook.md
+    - text: Importér og omdiriger mail
+      url: setup/migrate-email-and-contacts-admin.md
+    - text: Flyt dine filer til OneDrive
+      url: setup/files-to-onedrive.md
+    - text: Flyt firmafiler til SharePoint
+      url: setup/files-to-sharepoint.md
+- title: Mobile
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Hent mobilappen Administration
+      url: admin-overview/admin-mobile-app.md
+- title: Business Voice
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Hvad er Business Voice?
+      url: /microsoftteams/business-voice/whats-business-voice
+    - text: Konfigurer Business Voice
+      url: /microsoftteams/business-voice/set-up-overview
+- title: Administrer tjenester
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Hvad er en administrator?
+      url: add-users/about-admin-roles.md
+    - text: Oversigt over Administration
+      url: admin-overview/admin-center-overview.md
+    - text: Opret en signatur for hele virksomheden
+      url: setup/create-signatures-and-disclaimers.md
+    - text: Reagere på anvendelsesrapport
+      url: activity-reports/activity-reports.md
+    - text: Tilføj et andet domæne
+      url: setup/add-domain.md
+    - text: Konfigurer en ny firmamailadresse
+      url: email/change-email-address.md
+- title: Administrer brugere
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Nulstil brugeradgangskoder
+      url: add-users/reset-passwords.md
+    - text: Konfigurer nulstilling af adgangskode via selvbetjening
+      url: add-users/let-users-reset-passwords.md
+    - text: Tilføj en bruger
+      url: add-users/add-users.md
+    - text: Slet en bruger
+      url: add-users/remove-former-employee.md
+    - text: Tilføj en anden administrator
+      url: add-users/assign-admin-roles.md
+    - text: Ændre et brugernavn eller en mail
+      url: add-users/change-a-user-name-and-email-address.md
+    - text: Flytte brugere til et andet abonnement
+      url: ../commerce/try-or-buy-microsoft-365.md
+- title: Administrer licenser og fakturering
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Få vist, download eller udskriv din faktura
+      url: ../commerce/billing-and-payments/view-your-bill-or-invoice.md
+    - text: Køb nye licenser
+      url: ../commerce/licenses/buy-licenses.md
+    - text: Fjern eksisterende licenser
+      url: ../commerce/licenses/buy-licenses.md
+    - text: Opdater din betalingsmetode
+      url: ../commerce/billing-and-payments/manage-payment-methods.md
+- title: Administrer enheder
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Gør Windows 10 Pro enheder sikre
+      url: devices/protection-settings-for-windows-10-pcs.md
+    - text: Gør Office-apps sikre på iOS
+      url: devices/app-protection-settings-for-android-and-ios.md
+- title: Sikkerheds- & overholdelse af regler og standarder
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Oversigt over Microsoft 365 Business Premium sikkerhed
+      url: security-and-compliance/secure-your-business-data.md
+    - text: (NY!) Microsoft Defender for Business
+      url: /microsoft-365/security/defender-business/index.yml
+    - text: Gør medarbejderkonti sikre med MFA
+      url: security-and-compliance/set-up-multi-factor-authentication.md
+    - text: Aktiver registrering af malware
+      url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#raise-the-level-of-protection-against-malware-in-mail
+    - text: Opret mailregler for ransomware
+      url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#protect-against-ransomware
+    - text: Konfigurer antiphishing
+      url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#protect-your-email-from-phishing-attacks
+    - text: Administrer sikre vedhæftede filer
+      url: security-and-compliance/increase-threat-protection.md
+    - text: Administrer sikre links
+      url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#protect-against-phishing-attacks-with-safe-links
+    - text: Undgå tab af data
+      url: security-and-compliance/set-up-compliance.md
+    - text: Opret følsomhedsmærkater
+      url: security-and-compliance/set-up-compliance.md
+- title: Support
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Få hjælp eller support
+      url: get-help-support.md
+    - text: Hurtig konfiguration for medarbejdere
+      url: ../business-video/employee-quick-setup.md
+- title: Skift fra Google Workspace til M365
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Konfigurere Microsoft 365 til overførsel af Google Workspace
+      url: /moveto-microsoft-365/set-up-microsoft-365-forgoogle
+    - text: Føj dit Google Workspace-domæne til Microsoft 365
+      url: /moveto-microsoft-365/add-google-domain
+    - text: Overføre virksomhedsmail og -kalender fra Google Workspace
+      url: /moveto-microsoft-365/migrate-email
+    - text: Forbind dit domæne til Microsoft 365 til virksomheder
+      url: /moveto-microsoft-365/connect-domain-tom365
+    - text: Overfør Google-filer Microsoft 365 til virksomheder med Migration Manager
+      url: /moveto-microsoft-365/migrate-files-migration-manager
