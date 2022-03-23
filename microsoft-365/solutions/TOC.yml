@@ -1,0 +1,398 @@
+- name: Microsoft 365 og arkitekturcenter
+  href: index.yml
+  displayName: Home
+- name: Løsnings- og arkitekturillustrationer
+  items:
+    - name: Microsoft 365 med produktivitetsillustrationer
+      href: productivity-illustrations.md
+    - name: Microsoft-skyarkitekturmodeller
+      href: cloud-architecture-models.md
+    - name: Infografik til brugere
+      href: infographics-for-users.md
+    - name: Arkitekturikoner og -skabeloner
+      href: architecture-icons-templates.md
+- name: Microsoft 365 foundationsløsninger
+  items:
+    - name: Konfigurer din infrastruktur til hybridarbejde
+      items:
+        - name: Oversigt
+          href: empower-people-to-work-remotely.md
+        - name: Trin 1. Øg sikkerheden for logon
+          href: empower-people-to-work-remotely-secure-sign-in.md
+        - name: Trin 2. Giv fjernadgang
+          href: empower-people-to-work-remotely-remote-access.md
+        - name: Trin 3. Installér sikkerhed og overholdelse af regler og standarder
+          href: empower-people-to-work-remotely-security-compliance.md
+        - name: Trin 4. Installér slutpunktsstyring
+          href: empower-people-to-work-remotely-manage-endpoints.md
+        - name: Trin 5. Installér produktivitetsapps og -tjenester
+          href: empower-people-to-work-remotely-teams-productivity-apps.md
+        - name: Trin 6. Oplære dine medarbejdere
+          href: empower-people-to-work-remotely-train-monitor-usage.md
+    - name: Administrer slutpunkter med Intune og Microsoft 365
+      items:
+        - name: Oversigt
+          href: manage-devices-with-intune-overview.md
+        - name: Trin 1. Implementer politikker for appbeskyttelse
+          href: manage-devices-with-intune-app-protection.md
+        - name: Trin 2. Tilmeld enheder til administration
+          href: manage-devices-with-intune-enroll.md
+        - name: Trin 3. Konfigurere politikker for overholdelse af regler og standarder
+          href: manage-devices-with-intune-compliance-policies.md
+        - name: Trin 4. Kræv sunde og kompatible enheder
+          href: manage-devices-with-intune-require-compliance.md
+        - name: Trin 5. Installér enhedsprofiler
+          href: manage-devices-with-intune-configuration-profiles.md
+        - name: Trin 6. Overvåg enhedsrisici og overholdelse af grundlinjer for sikkerhed
+          href: manage-devices-with-intune-monitor-risk.md
+        - name: Trin 7. Implementere forebyggelse af datatab (DLP) med funktioner til beskyttelse af oplysninger
+          href: manage-devices-with-intune-dlp-mip.md
+    - name: Konfigurer sikkert samarbejde med Microsoft 365
+      items:
+        - name: Oversigt
+          href: setup-secure-collaboration-with-teams.md
+        - name: Konfigurer tre niveauer af beskyttelse med Microsoft Teams
+          items:
+            - name: Oversigt over tre niveauer af beskyttelse
+              href: configure-teams-three-tiers-protection.md
+            - name: Konfigurere beskyttelse af grundlinje
+              href: configure-teams-baseline-protection.md
+            - name: Konfigurere følsom beskyttelse
+              href: configure-teams-sensitive-protection.md
+            - name: Konfigurer meget følsom beskyttelse
+              href: configure-teams-highly-sensitive-protection.md
+            - name: Konfigurere et team med sikkerhedsisolation
+              href: secure-teams-security-isolation.md
+        - name: Konfigurere ekstern deling
+          items:
+            - name: Oversigt over ekstern deling
+              href: collaborate-with-people-outside-your-organization.md
+            - name: Konfigurationsscenarier
+              items:
+                - name: Samarbejde om dokumenter
+                  href: collaborate-on-documents.md
+                - name: Samarbejd på et websted
+                  href: collaborate-in-site.md
+                - name: Samarbejd som et team
+                  href: collaborate-as-team.md
+                - name: Opret et B2B-ekstranet
+                  href: b2b-extranet.md
+                - name: Begræns deling
+                  href: microsoft-365-limit-sharing.md
+            - name: Sikkerhedsscenarier
+              items:
+                - name: Ikke-godkendt deling
+                  href: best-practices-anonymous-sharing.md
+                - name: Begræns utilsigtet eksponering
+                  href: share-limit-accidental-exposure.md
+                - name: Gør gæstedelingsmiljøet sikkert
+                  href: create-secure-guest-sharing-environment.md
+            - name: Reference til ekstern deling
+              href: microsoft-365-guest-settings.md
+    - name: Installér ransomware-beskyttelse for din Microsoft 365 lejer
+      items:
+        - name: Oversigt
+          href: ransomware-protection-microsoft-365.md
+        - name: Trin 1. Konfigurere grundlinjer for sikkerhed
+          href: ransomware-protection-microsoft-365-security-baselines.md
+        - name: Trin 2. Udrul registrering af angreb og svar
+          href: ransomware-protection-microsoft-365-attack-detection-response.md
+        - name: Trin 3. Beskyt identiteter
+          href: ransomware-protection-microsoft-365-identities.md
+        - name: Trin 4. Beskyt enheder
+          href: ransomware-protection-microsoft-365-devices.md
+        - name: Trin 5. Beskyt oplysninger
+          href: ransomware-protection-microsoft-365-information.md
+    - name: Implementere beskyttelse af oplysninger til bestemmelser om beskyttelse af data
+      items:
+        - name: Oversigt
+          href: information-protection-deploy.md
+        - name: Plan
+          href: information-protection-deploy-assess.md
+        - name: Spor
+          href: information-protection-deploy-compliance.md
+        - name: Forebyd
+          href: information-protection-deploy-identity-device-threat.md
+        - name: Beskyt
+          href: information-protection-deploy-protect-information.md
+        - name: Be behold
+          href: information-protection-deploy-govern.md
+        - name: Undersøg
+          href: information-protection-deploy-monitor-respond.md
+- name: Arbejdsbelastningsløsninger og -scenarier
+  items:
+    - name: Oversigt
+      href: ./index.yml
+    - name: Administration og overførsel
+      items:
+        - name: Lejeradministration
+          items:
+            - name: Oversigt
+              href: tenant-management-overview.md
+            - name: Trin 1. Dine lejere
+              href: tenant-management-tenants.md
+            - name: Trin 2. Optimalt netværk
+              href: tenant-management-networking.md
+            - name: Trin 3. Identitet
+              href: tenant-management-identity.md
+            - name: Trin 4. Overførsel
+              href: tenant-management-migration.md
+            - name: Trin 5. Enheds- og appadministration
+              href: tenant-management-device-management.md
+            - name: Fjern en tidligere medarbejder
+              items:
+                - name: Oversigt
+                  href: ../admin/add-users/remove-former-employee.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 1. Forhindre en medarbejder i at logge på og blokere adgangen til Microsoft 365-tjenester
+                  href: ../admin/add-users/remove-former-employee-step-1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 2. Gemme indholdet af en tidligere medarbejders postkasse
+                  href: ../admin/add-users/remove-former-employee-step-2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 3. Slette og blokere en tidligere medarbejders mobilenhed
+                  href: ../admin/add-users/remove-former-employee-step-3.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 4. Videresende en tidligere medarbejders mail til en anden medarbejder eller konvertere den til en delt postkasse
+                  href: ../admin/add-users/remove-former-employee-step-4.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 5. Giv en anden medarbejder adgang til OneDrive og Outlook data
+                  href: ../admin/add-users/remove-former-employee-step-5.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 6. Fjerne licensen Microsoft 365 fra en tidligere medarbejder
+                  href: ../admin/add-users/remove-former-employee-step-6.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Trin 7. Slette en tidligere medarbejders brugerkonto
+                  href: ../admin/add-users/remove-former-employee-step-7.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+        - name: Overfør indhold til Microsoft 365
+          href: /sharepointmigration/migrate-to-sharepoint-online?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+        - name: Overfør filshares til Microsoft 365
+          items:
+            - name: Oversigt
+              href: /sharepointmigration/mm-get-started?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: 'Trin 1: Konfigurer agenter'
+              href: /sharepointmigration/mm-setup-clients?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: 'Trin 2: Oprette en overførselsopgave'
+              href: /sharepointmigration/mm-how-to-use?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: 'Trin 3: Overvåge og rapportere'
+              href: /sharepointmigration/mm-reports?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+    - name: Møder og kommunikation
+      items:
+        - name: Installér Teams voice i Microsoft 365
+          items:
+            - name: Oversigt
+              href: deploy-voice.md
+            - name: Trin 1. Vælg din stemmeløsning
+              href: /MicrosoftTeams/cloud-voice-landing-page?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Trin 2. - Konfigurer Telefonsystem
+              href: /MicrosoftTeams/setting-up-your-phone-system?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Trin 3. - Konfigurere PSTN-forbindelse
+              items:
+                - name: Opkaldsplanindstilling
+                  href: /MicrosoftTeams/set-up-calling-plans?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Indstillingen Direkte routing
+                  href: /MicrosoftTeams/direct-routing-configure?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Case study for multi-national corporation
+              href: /MicrosoftTeams/voice-case-study-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+        - name: Virksomhedskommunikation
+          items:
+            - name: Oversigt over virksomhedskommunikation
+              href: /sharepoint/corporate-communications-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+              items:
+                - name: 'Trin 1: Planlæg din kommunikationsstrategi'
+                  href: /sharepoint/plan-communication-strategy?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: 'Trin 2: Gennemse kommunikationsværktøjer'
+                  href: /sharepoint/review-communication-apps?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: 'Trin 3: Omfang og definer din målgruppe'
+                  href: /sharepoint/audience-profile?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: 'Trin 4: Vælg en kommunikationsløsning'
+                  href: /sharepoint/choose-communication-method?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Konfigurer Viva-forbindelser
+              href: /sharepoint/guide-to-setting-up-viva-connections?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Få et hjemmewebsted til dit intranet
+              href: /sharepoint/home-site-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Distribuer organisationsnyheder
+              href: /sharepoint/distribute-corporate-news-to-your-organization?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Forbind ledere og din organisation
+              href: /sharepoint/leadership-connection?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Hold en rådhus ved hjælp af Yammer
+              href: /sharepoint/hold-town-hall-using-yammer?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Opbyg lærings- og træningsoplevelser
+              href: /sharepoint/build-learning-and-training-experiences-for-employees?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+    - name: Teamwork og samarbejde
+      items:
+        - name: Administrer kontrakter for din virksomhed
+          items:
+            - name: Oversigt
+              href: ../contentunderstanding/solution-manage-contracts-in-microsoft-365.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Trin 1. Brug SharePoint Syntex
+              href: ../contentunderstanding/solution-manage-contracts-step1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Trin 2. Brug Microsoft Teams
+              href: ../contentunderstanding/solution-manage-contracts-step2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Trin 3. Power Automate
+              href: ../contentunderstanding/solution-manage-contracts-step3.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+        - name: Opbyg et intelligent SharePoint intranet
+          items:
+            - name: Oversigt
+              href: /sharepoint/intelligent-internet-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Sådan tænker du på dit intelligente intranet
+              href: /sharepoint/trad-vs-modern-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Roadmap for intranet
+              items:
+                - name: Roadmap for intranet
+                  href: /sharepoint/intranet-team-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Intranetroller og -opgaver
+                  href: /sharepoint/intranet-roles-tasks?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+                - name: Oversigt over intranetoversigt
+                  href: /sharepoint/intranet-get-started?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Planlæg dit intranet
+              href: /sharepoint/plan-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Overvejelser i forbindelse med planlægning af et globalt intranet
+              href: /sharepoint/set-up-global-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Intranetstyring
+              href: /sharepoint/intranet-governance?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: Kommunikation på arbejdspladsen
+              href: /sharepoint/workplace-communications?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+        - name: Styring af samarbejde
+          items:
+            - name: Oversigt
+              href: collaboration-governance-overview.md
+            - name: Opret din styringsplan
+              href: collaboration-governance-first.md
+            - name: Indstillinger i tjenester
+              items:
+                - name: Grupper med SharePoint
+                  href: groups-sharepoint-governance.md
+                - name: 'Grupper, SharePoint og Teams'
+                  href: groups-sharepoint-teams-governance.md
+                - name: Grupper med andre tjenester
+                  href: groups-services-interactions.md
+            - name: Access
+              href: groups-teams-access-governance.md
+            - name: Overholdelse af regler og standarder
+              href: groups-teams-compliance-governance.md
+            - name: Kommunikation
+              href: groups-teams-communication-governance.md
+            - name: Organisation og livscyklus
+              items:
+                - name: Styring af organisation og livscyklus
+                  href: plan-organization-lifecycle-governance.md
+                - name: Administrer oprettelse af grupper
+                  href: manage-creation-of-groups.md
+                - name: Navngivningspolitikker
+                  href: groups-naming-policy.md
+                - name: Udløbspolitik
+                  href: microsoft-365-groups-expiration-policy.md
+                - name: Gæsteadgang pr. gruppe
+                  href: per-group-guest-access.md
+                - name: Send-som-politik
+                  href: allow-members-to-send-as-or-send-on-behalf-of-group.md
+                - name: Domæne til oprettelse af grupper
+                  href: choose-domain-to-create-groups.md
+                - name: Indstillinger for afslutning af livscyklus
+                  href: end-life-cycle-groups-teams-sites-yammer.md
+        - name: Filsamarbejde i SharePoint med Microsoft 365
+          href: /sharepoint/deploy-file-collaboration
+        - name: OneDrive vejledning til virksomheder
+          href: /onedrive/plan-onedrive-enterprise
+    - name: Overholdelse af regler og standarder
+      items:
+        - name: Insider-risikoløsninger i Microsoft 365
+          href: ../compliance/insider-risk-solution-overview.md
+        - name: Revisionsløsninger
+          href: ../compliance/auditing-solutions-overview.md
+        - name: eDiscovery-løsninger i Microsoft 365
+          href: ../compliance/ediscovery.md
+        - name: Microsoft 365 Advanced eDiscovery
+          href: ../compliance/overview-ediscovery-20.md
+        - name: Lovgivningsmæssige handlingsplaner for overholdelse af regler og standarder
+          items:
+            - name: ISO – Anbefalet handlingsplan
+              href: /compliance/regulatory/iso-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: NIST – Anbefalet handlingsplan
+              href: /compliance/regulatory/nist-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: CCPA – ofte stillede spørgsmål
+              href: /compliance/regulatory/ccpa-faq?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+            - name: GDPR – Anbefalet handlingsplan
+              href: /compliance/regulatory/gdpr?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+    - name: Sikkerhed
+      items:
+        - name: Microsoft 365 Zero Trust-installationsplan
+          href: ../security/microsoft-365-zero-trust.md
+        - name: Vigtigste opgaver for sikkerhedsteams til at understøtte hjemmearbejde
+          href: ../security/top-security-tasks-for-remote-work.md
+        - name: Konfigurationer for identitets- og enhedsadgang
+          href: ../security/office-365-security/microsoft-365-policies-configurations.md
+        - name: Evaluer og Microsoft 365 Defender
+          href: ../security/defender/eval-overview.md
+        - name: Svar på din første hændelse
+          href: ../security/defender/first-incident-overview.md
+        - name: Installér Microsoft Defender til Slutpunkt
+          href: ../security/defender-endpoint/deployment-phases.md
+        - name: Skift fra ikke-Microsoft-slutpunktsbeskyttelse til Microsoft Defender til slutpunkt
+          href: ../security/defender-endpoint/switch-to-mde-overview.md
+        - name: Skift fra et ikke-Microsoft-beskyttelsesværktøj til Microsoft Defender Office 365
+          href: ../security/office-365-security/migrate-to-defender-for-office-365.md
+        - name: Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365
+          href: ../security/office-365-security/security-recommendations-for-priority-accounts.md
+        - name: 'Fjern en tidligere medarbejder, og beskyt data'
+          href: /admin/add-users/remove-former-employee?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
+    - name: Casestudier af Contoso
+      items:
+        - name: Microsoft 365 løsninger til Contoso Corporation
+          href: contoso-case-study-solutions.md
+        - name: COVID-19-svar og support til hybridarbejde
+          href: contoso-remote-onsite-work.md
+        - name: Isolerede team til et tophemmeligt projekt
+          href: contoso-team-for-top-secret-project.md
+        - name: Teams taleoverførsel
+          href: /MicrosoftTeams/voice-case-study-overview
+        - name: Casestudie om overholdelse af contoso
+          href: ../compliance/communication-compliance-case-study.md
+    - name: Test Lab-vejledninger
+      items:
+        - name: Test Lab-vejledninger til løsninger og scenarier
+          href: test-lab-guides-overview-solutions.md
+        - name: Team med sikkerhedsisolation
+          href: team-security-isolation-dev-test.md
+- name: Branchespecifik vejledning
+  items:
+    - name: Den finansielle sektor
+      items:
+        - name: Sikkerhed og overholdelse af regler og standarder for finansielle tjenester
+          href: financial-services-secure-collaboration.md
+    - name: Energi og hjælpetjenester
+      items:
+        - name: Sikkerhed og overholdelse af regler og standarder for energi og hjælpetjenester
+          href: energy-secure-collaboration.md
+    - name: Sundhedssektoren
+      items:
+        - name: Oversigt
+          href: healthcare-overview.md
+        - name: Teams til sundhedssektoren
+          href: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc
+    - name: Education
+      items:
+        - name: Teams til uddannelse
+          href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page
+    - name: Government
+      items:
+        - name: Teams for Government
+          href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page
+        - name: Understøtte eksterne government workers ved hjælp af Teams
+          href: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams
+    - name: Detail
+      items:
+        - name: Oversigt
+          href: retail-overview.md
+        - name: Teams til detail
+          href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-retail-landing-page
+- name: Principper for virksomhedsarkitekturdesign
+  items:
+    - name: Oversigt
+      href: design-principles.md
+    - name: Til identitet og videre
+      href: identity-design-principles.md
+    - name: 'Sikkerhedstrusler, du kan sejle over'
+      href: security-design-principles.md
+    - name: Netværke op (til skyen)
+      href: networking-design-principles.md
+- name: Microsoft 365 installationsressourcer
+  items:
+    - name: Installér Microsoft 365
+      href: ../enterprise/microsoft-365-overview.md
+- name: Navigationsvejledning
+  href: ../microsoft-365-docs-navigation-guide.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json

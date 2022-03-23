@@ -1,0 +1,44 @@
+---
+title: Supportoplysninger for Bosn og Herzegovnia
+author: cmcatee-MSFT
+f1.keywords:
+- NOCSH
+ms.author: cmcatee
+manager: scotv
+audience: Admin
+ms.topic: reference
+ms.service: o365-administration
+ms.collection: Adm_Support
+ms.localizationpriority: medium
+description: Få mere at vide om, hvordan du kontakter support i dit land eller område.
+ROBOTS: NOINDEX, NOFOLLOW
+ms.openlocfilehash: 92ee143c0ee9782f0ba023a6bd2d04a0ba3c0bdb
+ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.translationtype: MT
+ms.contentlocale: da-DK
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "63588075"
+---
+# <a name="contact-support-for-bosnia-and-herzegovnia"></a>Kontakt support til Bosn og Herzegovnia
+
+[Find et andet land eller område] ((.. /get-help-support.md).
+
+## <a name="phone-number"></a>Telefon tal
+0800 20 230
+
+Vælg mulighed 9
+
+Angiv kode 7700
+
+## <a name="hours"></a>Timer
+### <a name="billing-support"></a>Faktureringssupport:
+
+Engelsk: Mon-Fri 9-17
+
+### <a name="technical-support"></a>Teknisk support:
+
+Engelsk: 24 timer i døgnet, syv dage om ugen
+
+Alternativt Telefon tal: +387 33 606 100
+
+International opkaldstakst

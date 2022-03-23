@@ -1,0 +1,131 @@
+- name: Microsoft 365 til små virksomheder
+  href: index.yml
+  items:
+    - name: Kom i gang
+      items:
+        - name: Oversigt over konfiguration
+          href: setup-overview.md
+        - name: Vælg et abonnement
+          href: Choose-subscription.md
+    - name: Skykonfiguration
+      items:
+        - name: Tilmeld dig et abonnement
+          href: sign-up.md
+        - name: Konfigurer tjenesten
+          href: set-up.md
+        - name: Sikre Windows 10 pc'er
+          href: secure-win10-pcs.md
+        - name: Oprette et GoDaddy-websted
+          href: create-web-site.md
+    - name: Konfiguration af enhed
+      items:
+        - name: Opgrader til Windows 10 Pro
+          href: upgrade.md
+        - name: Forbind pc'er til Microsoft 365
+          href: connect.md
+        - name: Installér Microsoft Office apps
+          href: install-office.md
+        - name: Importér og omdiriger mail
+          href: import-email.md
+    - name: Mobile
+      items:
+        - name: Arbejd hvor som helst
+          href: work-from-anywhere.md
+        - name: Installér Office apps på Android
+          href: 'https://support.microsoft.com/office/6ef2ebf2-fc2d-474a-be4a-5a801365c87f'
+        - name: Installér Office apps på iOS
+          href: 'https://support.microsoft.com/office/0402b37e-49c4-4419-a030-f34c2013041f'
+        - name: Hent mobilappen Administration
+          href: admin-mobile.md
+    - name: Samarbejd
+      items:
+        - name: Brug Outlook og Teams
+          href: collab-outlook-teams.md
+        - name: Introduktion til Teams
+          href: 'https://support.microsoft.com/office/6723dc43-dbc0-46e6-af49-8a2d1c5cb937'
+        - name: Opret en gruppemailadresse
+          href: 'https://support.microsoft.com/office/3f73d218-52d6-4f88-a733-9ff37073ee4c'
+        - name: Opret en delt kalender
+          href: 'https://support.microsoft.com/office/353ed2c1-3ec5-449d-8c73-6931a0adab88'
+        - name: Opret et team for hele organisationen
+          href: /microsoftteams/create-an-org-wide-team
+        - name: Opret et team med gæster
+          href: 'https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f'
+        - name: Deltag i et team som gæst
+          href: /microsoftteams/guest-experience
+        - name: Chat med medarbejdere og kunder
+          href: 'https://support.microsoft.com/office/65748808-a403-462c-a6e1-b169e5bc6c92'
+        - name: Planlæg et møde med gæster
+          href: 'https://support.microsoft.com/office/943507a9-8583-4c58-b5d2-8ec8265e04e5'
+        - name: Deltag i et møde med gæster
+          href: 'https://support.microsoft.com/office/c6efc38f-4e03-4e79-b28f-e65a4c039508'
+    - name: Skylager
+      items:
+        - name: Oversigt over deling
+          href: overview-file-sharing.md
+        - name: Hvor du kan gemme filer
+          href: 'https://support.microsoft.com/office/d18d21a0-1f9f-4f6c-ac45-d52afa0a4a2e'
+        - name: Del filer sikkert eksternt
+          href: 'https://support.microsoft.com/office/9fcc2f7d-de0c-4cec-93b0-a82024800c07'
+        - name: Del nemt filer eksternt
+          href: 'https://support.microsoft.com/office/9fcc2f7d-de0c-4cec-93b0-a82024800c07'
+    - name: Business Voice
+      items:
+        - name: Oversigt over Business Voice
+          href: business-voice.md
+        - name: Køb Business Voice-tilføjelsesprogrammet
+          href: buy-business-voice.md
+    - name: Produktivitetsapps
+      items:
+        - name: Oversigt over Bookings
+          href: 'https://support.microsoft.com/office/42d4e852-8e99-4d8f-9b70-d7fc93973cb5'
+    - name: Administrer tjenester
+      items:
+        - name: Hvad er en administrator?
+          href: what-is-admin.md
+        - name: 'Få vist, download eller udskriv din faktura'
+          href: view-bill.md
+        - name: Køb nye licenser
+          href: buy-licenses.md
+        - name: Fjern eksisterende licenser
+          href: remove-existing-licenses.md
+        - name: Opdater din betalingsmetode
+          href: update-payment.md
+        - name: Nulstil brugeradgangskoder
+          href: reset-user-passwords.md
+        - name: Konfigurer nulstilling af adgangskode via selvbetjening
+          href: set-up-self-serve-password-reset.md
+        - name: Tilføj en bruger
+          href: add-user.md
+        - name: Tilføj en anden administrator
+          href: add-admin.md
+        - name: Ændre et brugernavn eller en mail
+          href: change-user-name-email.md
+        - name: Flytte brugere til et andet abonnement
+          href: change-subscription.md
+        - name: Opret en signatur for hele virksomheden
+          href: company-wide-signature.md
+        - name: Reagere på anvendelsesrapport
+          href: act-on-report.md
+        - name: Konfigurer en ny firmamailadresse
+          href: set-up-a-new-business-email-address.md
+    - name: Administrer enheder
+      items:
+        - name: Gør Windows 10 Pro enheder sikre
+          href: secure-win-10-pro-devices.md
+        - name: Gør Office-apps sikre på iOS
+          href: secure-office-on-ios.md
+    - name: Sikkerheds- & overholdelse af regler og standarder
+      items:
+        - name: Oversigt over Microsoft 365 Business Premium sikkerhed
+          href: overview-m365-security.md
+        - name: Gør medarbejderkonti sikre med MFA
+          href: ../admin/security-and-compliance/set-up-multi-factor-authentication.md
+        - name: Konfigurer tofaktor-logon på din telefon
+          href: 'https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14'
+    - name: Support
+      items:
+        - name: Find dokumenter og kurser
+          href: ../admin/index.yml
+    - name: Skifte fra Google Workspace
+      href: moveto-microsoft-365/move-from-google-workspace-overview.md

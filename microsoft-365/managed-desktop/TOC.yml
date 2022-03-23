@@ -1,0 +1,195 @@
+- name: Microsoft-administreret skrivebord
+  href: index.yml
+  items:
+    - name: Hvad er Microsoft Managed Desktop?
+      href: intro/index.md
+      items:
+        - name: Microsoft-administreret skrivebord og Windows 11
+          href: intro/win11-overview.md
+        - name: Roller og ansvarsområder
+          href: intro/roles-and-responsibilities.md
+        - name: Teknologier i Microsoft Managed Desktop
+          href: intro/technologies.md
+        - name: Microsoft-administreret skrivebord og ITIL
+          href: MMD-and-ITSM.md
+        - name: Overholdelse af regler og standarder
+          href: intro/compliance.md
+    - name: Tjenestebeskrivelse for Microsoft-administreret skrivebord
+      href: service-description/index.md
+      items:
+        - name: Understøttede områder
+          href: service-description/regions-languages.md
+        - name: Enheder
+          href: null
+          items:
+            - name: Krav til enhed
+              href: service-description/device-requirements.md
+            - name: Enhedsbilleder
+              href: service-description/device-images.md
+            - name: Enhedsnavne
+              href: service-description/device-names.md
+            - name: Enhedstjenester
+              href: service-description/device-services.md
+            - name: Enhedsprofiler
+              href: service-description/profiles.md
+            - name: Installationsgrupper for enheder
+              href: service-description/deployment-groups.md
+            - name: Enhedskonfiguration
+              href: service-description/device-policies.md
+        - name: Sikkerhedsteknologier
+          href: service-description/security.md
+        - name: Sikkerhedshandlinger
+          href: service-description/security-operations.md
+        - name: Beskyttelse af personlige oplysninger
+          href: service-description/privacy-personal-data.md
+        - name: Opdateringer
+          href: service-description/updates.md
+        - name: Administratorsupport
+          href: service-description/support.md
+        - name: Brugersupport
+          href: service-description/user-support.md
+        - name: Handlinger og overvågning
+          href: service-description/operations-and-monitoring.md
+        - name: Diagnostiske logfiler
+          href: service-description/diagnostic-logs.md
+        - name: Programkrav
+          href: service-description/mmd-app-requirements.md
+        - name: Programkontrolelement
+          href: service-description/app-control.md
+        - name: Tjenesteændringer og -kommunikation
+          href: service-description/servicechanges.md
+        - name: Undtagelser til serviceplanen
+          href: service-description/customizing.md
+        - name: Delte enheder
+          href: service-description/shared-devices.md
+    - name: Bliv klar til tilmelding i Microsoft Managed Desktop
+      href: get-ready/index.md
+      items:
+        - name: Forudsætninger for Microsoft-administreret skrivebord
+          href: get-ready/prerequisites.md
+        - name: Brug parathedsvurderingsværktøjer
+          href: get-ready/readiness-assessment-tool.md
+          items:
+            - name: 'Løs problemer, der findes i værktøjet til vurdering af onlineparathed'
+              href: get-ready/readiness-assessment-fix.md
+            - name: Kontrol af parathed til download
+              href: get-ready/readiness-assessment-downloadable.md
+        - name: Forudsætninger for gæstekonti
+          href: get-ready/guest-accounts.md
+        - name: Klargør netværk
+          href: get-ready/network.md
+        - name: Forberede certifikater og netværksprofiler
+          href: get-ready/certs-wifi-lan.md
+        - name: Forbered ressourcer i det lokale miljø
+          href: get-ready/authentication.md
+        - name: Forbered apps
+          href: get-ready/apps.md
+          items:
+            - name: Arbejde med Microsoft Consulting Services
+              href: get-ready/apps-MCS.md
+        - name: Forbered tilknyttede drev
+          href: get-ready/mapped-drives.md
+        - name: Forberede udskriftsressourcer
+          href: get-ready/printing.md
+        - name: Navne på adresseenhed
+          href: get-ready/address-device-names.md
+    - name: Introduktion til Microsoft Managed Desktop
+      href: get-started/index.md
+      items:
+        - name: Få adgang til administrationsportalen
+          href: get-started/access-admin-portal.md
+        - name: Tilføj og bekræft administratorkontakter i administrationsportalen
+          href: get-started/add-admin-contacts.md
+        - name: Juster indstillinger efter tilmelding
+          href: get-started/conditional-access.md
+        - name: Tildel licenser
+          href: get-started/assign-licenses.md
+        - name: Installér Intune-firmaportal
+          href: get-started/company-portal.md
+        - name: Aktivér roaming i virksomhedstilstand
+          href: get-started/enterprise-state-roaming.md
+        - name: Lokalisere brugeroplevelsen
+          href: get-started/localization.md
+        - name: Valider nye enheder
+          href: get-started/validate-device.md
+        - name: Klargør enheder
+          href: null
+          items:
+            - name: Kom i gang
+              href: get-started/prepare-devices.md
+            - name: Enhedsregistrering
+              href: null
+              items:
+                - name: Registreringsmetoder for enhed
+                  href: get-started/device-registration-methods.md
+                  items:
+                    - name: Manuel registrering
+                      href: get-started/manual-registration.md
+                    - name: Partnerregistrering
+                      href: get-started/partner-registration.md
+                    - name: Manuel registrering af eksisterende enheder
+                      href: get-started/manual-registration-existing-devices.md
+        - name: Aktivér brugersupportfunktioner
+          href: get-started/enable-support.md
+        - name: Gør dine brugere klar til at bruge enheder
+          href: get-started/get-started-devices.md
+        - name: Første kørselsoplevelse med Autopilot og Statussiden For tilmelding
+          href: get-started/esp-first-run.md
+        - name: Windows 10 placeringstjeneste
+          href: get-started/device-location.md
+        - name: Introduktion til appkontrol
+          href: get-started/get-started-app-control.md
+        - name: Installér apps
+          href: get-started/deploy-apps.md
+          items:
+            - name: Microsoft Project og Microsoft Visio
+              href: get-started/project-visio.md
+            - name: Microsoft Edge
+              href: get-started/edge-browser-app.md
+            - name: Microsoft 365 Apps til store virksomheder
+              href: get-started/m365-apps.md
+            - name: Microsoft Teams
+              href: get-started/teams.md
+            - name: Microsoft OneDrive
+              href: get-started/onedrive.md
+    - name: Arbejde med Microsoft Managed Desktop
+      href: working-with-managed-desktop/index.md
+      items:
+        - name: Arbejd med rapporter
+          href: working-with-managed-desktop/reports.md
+          items:
+            - name: Rapport over lager for enhed
+              href: working-with-managed-desktop/device-inventory-report.md
+            - name: Statusrapport for enhed
+              href: working-with-managed-desktop/device-status-report.md
+            - name: Windows rapport over sikkerhedsopdateringer
+              href: working-with-managed-desktop/security-updates-report.md
+            - name: Rapport over appanvendelse
+              href: working-with-managed-desktop/app-usage-report.md
+            - name: Service metrics report
+              href: working-with-managed-desktop/service-metrics-report.md
+        - name: Administratorsupport
+          href: working-with-managed-desktop/admin-support.md
+        - name: Brugersupport
+          href: working-with-managed-desktop/end-user-support.md
+        - name: Administrer apps
+          href: working-with-managed-desktop/manage-apps.md
+        - name: Arbejde med appkontrol
+          href: working-with-managed-desktop/work-with-app-control.md
+        - name: Skift enhedsprofil
+          href: working-with-managed-desktop/change-device-profile.md
+        - name: Tildel enheder til installationsgruppe
+          href: working-with-managed-desktop/assign-deployment-group.md
+        - name: Fjern enheder
+          href: working-with-managed-desktop/remove-devices.md
+        - name: Konfigurerbare indstillinger
+          href: working-with-managed-desktop/config-setting-overview.md
+          items:
+            - name: Reference til konfigurerbare indstillinger
+              href: working-with-managed-desktop/config-setting-ref.md
+            - name: Installer konfigurerbare indstillinger
+              href: working-with-managed-desktop/config-setting-deploy.md
+        - name: Forhåndsvisning og test Windows 11 med Microsoft Managed Desktop
+          href: working-with-managed-desktop/test-win11-mmd.md
+    - name: Ændringsoversigt
+      href: change-history-managed-desktop.md

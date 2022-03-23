@@ -1,0 +1,44 @@
+- name: Testbasedokumentation
+  href: index.yml
+- name: Oversigt
+  items:
+    - name: Hvad er Test Base?
+      href: overview.md
+- name: Hurtigstarter
+  items:
+    - name: Opret testbasekonto
+      href: createAccount.md
+    - name: Opbyg en pakke
+      href: buildpackage.md
+    - name: Upload af en pakke
+      href: uploadApplication.md
+    - name: Upload binære & afhængigheder
+      href: binaries.md
+    - name: Angiv testopgaver
+      href: testtask.md
+    - name: Angive testindstillinger
+      href: testoptions.md
+    - name: Gennemse
+      href: review.md
+    - name: Pakkeretningslinje
+      href: contentguideline.md
+    - name: Program-/testregler
+      href: rules.md
+- name: Vejledninger til at gøre dette
+  items:
+    - name: Test af serverprogram
+      href: server.md
+    - name: Funktionstest
+      href: functional.md
+    - name: Validering af funktionsopdatering
+      href: feature.md
+    - name: Regressionsanalyse af hukommelse
+      href: memory.md
+    - name: Regressionsanalyse for CPU
+      href: cpu.md
+    - name: SDK-& API
+      href: sdkapi.md
+- name: Reference
+  items:
+    - name: Ofte stillede spørgsmål
+      href: faq.md

@@ -1,0 +1,130 @@
+- name: Microsoft SharePoint Syntex
+  href: index.md
+- name: Brugerdefinerede modeller
+  items:
+    - name: Dokumentforståelse
+      items:
+        - name: Oversigt
+          href: document-understanding-overview.md
+        - name: Forskelle mellem modeller
+          href: difference-between-document-understanding-and-form-processing-model.md
+        - name: Importere en eksempelmodel
+          href: learn-about-document-understanding-models-through-the-sample-model.md
+        - name: Opret et indholdscenter
+          href: create-a-content-center.md
+        - name: Opret en klassificering
+          href: create-a-classifier.md
+        - name: Dupliker en model
+          href: duplicate-a-model.md
+        - name: Omdøbe en model
+          href: rename-a-model.md
+        - name: Opret en extractor
+          href: create-an-extractor.md
+        - name: Omdøbe en extractor
+          href: rename-an-extractor.md
+        - name: Forklaringstyper
+          href: explanation-types-overview.md
+        - name: Brug forklaringsskabeloner
+          href: explanation-templates.md
+        - name: Anvend en dokumentforståelsesmodel
+          href: apply-a-model.md
+        - name: Udgive og finde en model
+          href: model-discovery.md
+        - name: Anvend en opbevaringsetiket
+          href: apply-a-retention-label-to-a-model.md
+        - name: Anvend et følsomhedsmærkat
+          href: apply-a-sensitivity-label-to-a-model.md
+        - name: Opret en lokal model
+          href: create-local-model.md
+        - name: Modelforbrugsanalyse
+          href: model-usage-analytics.md
+        - name: Brug term store-taksonomi ved oprettelse af en extractor
+          href: leverage-term-store-taxonomy.md
+        - name: Tilgængelighedstilstand
+          href: accessibility-mode.md
+    - name: Formularbehandling
+      items:
+        - name: Oversigt
+          href: form-processing-overview.md
+        - name: Forskelle mellem modeller
+          href: difference-between-document-understanding-and-form-processing-model.md
+        - name: Oprette en formularbehandlingsmodel
+          href: create-a-form-processing-model.md
+        - name: Anvend en opbevaringsetiket
+          href: apply-a-retention-label-to-a-model.md
+        - name: Modelforbrugsanalyse
+          href: model-usage-analytics.md
+- name: Færdigbuilte modeller
+  items:
+    - name: Oversigt
+      href: prebuilt-overview.md
+    - name: Færdigbuilte faktura- og kvitteringsmodeller
+      href: prebuilt-models.md
+    - name: Anvend en opbevaringsetiket
+      href: apply-a-retention-label-to-a-model.md
+    - name: Opret en lokal model
+      href: create-local-model.md
+    - name: Modelforbrugsanalyse
+      href: model-usage-analytics.md
+- name: Indholdssamling
+  items:
+    - name: Oprette dokumenter ved hjælp af en indholdssamling
+      href: content-assembly.md
+- name: Metadatasøgning
+  items:
+    - name: Søge efter metadata i dokumentbiblioteker
+      href: metadata-search.md
+- name: Taksonomi
+  items:
+    - name: Importere ved hjælp af SKOS
+      href: import-term-set-skos.md
+    - name: SKOS-formateringsreference
+      href: skos-format-reference.md
+    - name: Skubbe indholdstype til hub
+      href: push-content-type-to-hub.md
+    - name: Rapporter over ordlager
+      href: term-store-analytics.md
+- name: Konfiguration og administration
+  items:
+    - name: Licenser til SharePoint Syntex
+      href: syntex-licensing.md
+    - name: Konfigurer SharePoint Syntex
+      href: set-up-content-understanding.md
+    - name: Opret et indholdscenter
+      href: create-a-content-center.md
+    - name: Administrer SharePoint Syntex med PowerShell
+      items:
+        - name: Oversigt
+          href: powershell-syntex-intro.md
+        - name: Eksportér og importér modeller
+          href: powershell-syntex-import-export.md
+        - name: Udgiv modeller
+          href: powershell-syntex-publishing.md
+        - name: Anmod om behandling efter en model
+          href: powershell-syntex-processing.md
+        - name: Arbejd med modelforklaringer
+          href: powershell-syntex-explanations.md
+- name: Indføring
+  items:
+    - name: Introduktion til indføring
+      href: adoption-getstarted.md
+    - name: Scenarier og use cases
+      href: adoption-scenarios.md
+    - name: Kør en prøveversion
+      href: trial-syntex.md
+    - name: Administrer kontrakter i Microsoft 365
+      items:
+        - name: Oversigt
+          href: solution-manage-contracts-in-microsoft-365.md
+        - name: Trin 1. Brug SharePoint Syntex
+          href: solution-manage-contracts-step1.md
+        - name: Trin 2. Brug Microsoft Teams
+          href: solution-manage-contracts-step2.md
+        - name: Trin 3. Brug Power Automate
+          href: solution-manage-contracts-step3.md
+    - name: Webstedsskabelon til administration af kontrakter
+      href: use-contracts-management-site.md
+    - name: Webstedsskabelon til indholdscenter
+      href: use-content-center-site.md
+- name: Mulighed for udvidelse
+  href: /sharepoint/dev/apis/syntex/syntex-model-rest-api

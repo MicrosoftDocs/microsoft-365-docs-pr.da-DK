@@ -1,0 +1,114 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om downloads
+  author: cmcatee-MSFT
+  ms.author: cmcatee
+  manager: scotv
+  ms.reviewer: racheg, armanv
+  ms.date: 07/22/2021
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.custom: commerce_vl
+  ms.localizationpriority: medium
+  description: Ofte stillede spørgsmål om Microsoft 365 Administration downloads.
+  ms.openlocfilehash: ea42562d13184ef002699db35902a58127c4279f
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63593952"
+title: Ofte stillede spørgsmål om downloads
+summary: ''
+sections:
+- name: Generel
+  questions:
+  - question: >
+      Hvilke krav gælder der for hentning af software Microsoft 365 Administration?
+    answer: "Du skal købe en licens til de produkter, du planlægger at downloade, og have adgang til en gyldig produktnøgle for hver licens for at fuldføre installationen. Bekræft din licensaftale, før du downloader produkter.\n\nDu kan finde systemkravene for hvert  >  produkt ved at logge på Administration og gå til siden Dine **produkterDownloads** > **Produktbeskrivelse**. \n\n> [!NOTE]\n> Ikke alle produkter kræver en produktnøgle.\n"
+  - question: >
+      Hvilke produkter kan jeg downloade fra Administration?
+    answer: >
+      Hvis dine downloadrettigheder er knyttet til programmet Open License, Open Value eller Open Value Subscription, kan du kun downloade de produkter, du allerede har købt. Administration viser kun downloads for licenser, du har købt.
+
+
+      Andre licensprogrammer (Select Plus, Enterprise, Campus eller Skole) giver dig mulighed for at downloade et hvilket som helst produkt fra kataloget, før du køber licenser.
+
+
+      Hvis din profil er sammenkædet med både Åbn og andre licensprogrammer, kan du få vist hele kataloget.
+
+
+      Sådan finder du ud af, om et produkt er berettiget til download:
+
+        1. Vælg **Volumenlicens**, og vælg derefter produktet eller **Vis downloads**.
+        2. Hvis **produktet** ikke er tilgængeligt under Download, får du vist "Dette produkt kan ikke downloades."
+  - question: >
+      Hvad er en CAL (Client Access License)?
+    answer: >
+      A Client Access License (CAL) is a license that gives a user the right to access the services of the server.
+
+
+      Du behøver ikke en softwareoverførselsfil eller produktnøgle for at aktivere en CAL. I stedet aktiveres og installeres produktet via aktiveringsguiden direkte fra computeren.
+
+
+      Eksempler på nøglecenteradresser omfatter:
+        - Windows Server
+        - SQL Server
+        - Exchange Server
+        - Skype for Business Server
+        - SharePoint Server
+        - Systemcenter
+        - Project Server
+  - question: "Hvordan downloader jeg Office til Mac? \n"
+    answer: >
+      Hvis du vil køre en volumenlicensversion Office til Mac, skal du downloade og installere følgende filer:
+        - [Serializer-pakken (Volume License ( VL) serialiseringspakke](/deployoffice/mac/volume-license-serializer), der er placeret Office til Mac den downloadede fil.
+        - [Installationspakken Office til Mac.](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac) Installer pakkefiler til individuelle programmer er også tilgængelige på Microsoft 365 Administration. Office til Mac ikke kræver en produktnøgle, fordi VL Serializer bruges til at aktivere en volumenlicensversion af Office til Mac.
+  - question: >
+      Hvordan downloader jeg produkter i Administration?
+    answer: "Sådan downloader du produkter i Administration:\n1. Vælg **Volumenlicens**, og vælg derefter produktet eller **Vis downloads**.\n2. Under **Download skal** du vælge en komponent og vælge en downloadhandling eller downloadikonet. \n\nFor at få adgang til downloads i Administration kan en VLSC-administrator i din organisation give adgang ved at tildele dig en af disse roller:\n  - Administrator\n  - Download\n  - Software Assurance Manager\n"
+  - question: >
+      Hvordan ændrer jeg mine indstillinger for overførsel?
+    answer: >
+      Sådan får du adgang til indstillingerne for download i Administration:
+
+      1. Vælg **Volumenlicens**, og vælg derefter produktet eller **Vis downloads**.
+
+      2. Under **Download** skal du vælge **Sprog** **og operativsystemtype**.
+
+
+      > [!NOTE]
+
+      > Blokering af pop op-programmer kan blokere overførsler. Sørg for, at blokering af pop op-programmer er deaktiveret, når du henter software fra Administration.
+  - question: >
+      Hvad er EXE- og ISO-filer?
+    answer: "Du kan vælge to filtyper, når du downloader produkter fra Administration:\n  \n  - **Eksekverbare filer (EXE)** kan downloades og installeres på det samme system, men du kan ikke oprette separate startdisks til installation på andre computere.\n  - **ISO-billedfiler (International Standards Organization)** er nøjagtige repræsentationer af indholdet og det logiske format. Du kan installere disse på den computer, der bruges til at downloade pakken, eller skrive filerne til diske til distribution og installation på andre computere.\n\n> [!NOTE]\n> Ikke alle produkter er tilgængelige på alle sprog og i alle formater.\n"
+  - question: >
+      Hvordan bruger jeg ISO-billedfilsoftware til at downloade og gemme ISO-billedfilen på en cd-r eller en dvd-r-disk?
+    answer: >
+      Hvis du bruger en pc med Windows, behøver du ikke yderligere software for at brænde en cd-r eller dvd-r. Dobbeltklik på den ISO-fil, du hentede, og følg derefter trinnene i guiden Billedbrænding.
+
+
+      Hvis du bruger et andet operativsystem end Windows, skal du muligvis bruge yderligere software. Hvis computeren er udstyret med en cd/dvd-burner, er softwaren sandsynligvis indlæst på din pc. De fleste cd-r/dvd-r-skrivesoftware giver dig mulighed for at oprette en disk fra en billedfil. Vælg et menupunkt som **f.eks. Kopiér billede til cd eller** **Burn Image for at få adgang** til denne funktion.
+  - question: >
+      Hvordan kan jeg oprette og få adgang til ISO-filer som en virtuel enhed?
+    answer: >
+      Hvis du ikke har en cd/dvd-burner installeret på computeren, eller mediet ikke er tilgængeligt, kan du installere ISO-filen som et virtuelt drev. Med denne metode mener computeren, at filen er et rigtigt diskdrev, og du kan læse filer fra denne virtuelle disk.
+
+
+      > [!NOTE]
+
+      > Denne fremgangsmåde kan kun anbefales til installation af programmer som f.Office eller mindre systemopgradering. Du kan ikke installere et operativsystem ved hjælp af denne fremgangsmåde, fordi det virtuelle drev forsvinder under installationen.
+  - question: >
+      Hvordan får jeg support til downloadede produkter?
+    answer: >
+      Hvis du vil se en liste over supportmuligheder, skal [du se Microsoft Support](https://support.microsoft.com/). Nogle volumenlicenskunder kan bruge support til problemløsning, en Software Assurance-fordel. Gennemse dine Software Assurance Benefits for at bekræfte din berettigelse.
+  - question: >
+      Hvor kan jeg finde support til de emner, der er dækket i disse ofte stillede spørgsmål?
+    answer: >
+      Du kan finde flere undervisningsressourcer, herunder videoer, [under Microsoft Volume Licensing Service Center – kurser og ressourcer](https://www.microsoft.com/licensing/existing-customer/vlsc-training-and-resources).
+  - question: >
+      Hvordan kan jeg kontakte Microsoft Support?
+    answer: >
+      Hvis du vil have support til VLSC-kundetelefoner eller -webformularer, skal [du se Kontakt os](/licensing/contact-us). Microsoft svarer på webformularindsendelser inden for 24 timer.
+additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Ofte stillede spørgsmål om produktnøgler](product-keys-faq.yml)\n\n- [Ofte stillede spørgsmål om aktivering af onlinetjenester for åbne programmer](online-service-activation-faq.yml)"

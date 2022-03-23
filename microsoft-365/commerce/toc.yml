@@ -1,0 +1,84 @@
+- name: Administrere abonnementer til virksomheder
+  href: index.yml
+- name: Microsoft 365 Hjælp til administratorer
+  href: ../admin/index.yml
+- name: Prøv eller køb
+  items:
+    - name: Prøv eller køb Microsoft 365
+      href: try-or-buy-microsoft-365.md
+    - name: Køb eller administrer tilføjelser
+      href: buy-or-edit-an-add-on.md
+    - name: Business Assist til Microsoft 365
+      href: ../admin/misc/business-assist.md
+    - name: Tilføj lagerplads
+      href: add-storage-space.md
+- name: Administrer abonnementer
+  items:
+    - name: Opgrader abonnementer
+      href: subscriptions/upgrade-to-different-plan.md
+    - name: Forny dit abonnement
+      href: subscriptions/renew-your-subscription.md
+    - name: Genaktiver dit abonnement
+      href: subscriptions/reactivate-your-subscription.md
+    - name: Opsnuller dit abonnement
+      href: subscriptions/cancel-your-subscription.md
+    - name: 'Hvad nu, hvis mit abonnement udløber?'
+      href: subscriptions/what-if-my-subscription-expires.md
+    - name: Administrer appabonnementer fra tredjeparter
+      href: manage-saas-apps.md
+    - name: Administrer selvbetjeningskøb (brugere)
+      href: subscriptions/manage-self-service-purchases-users.md
+    - name: Administrer selvbetjeningskøb (administrator)
+      href: subscriptions/manage-self-service-purchases-admins.md
+- name: Administrer licenser
+  items:
+    - name: Køb eller fjern abonnementslicenser
+      href: licenses/buy-licenses.md
+    - name: Tildel licenser til brugere
+      href: ../admin/manage/assign-licenses-to-users.md
+    - name: Fjern tildeling af licenser fra brugere
+      href: ../admin/manage/remove-licenses-from-users.md
+    - name: Flytte brugere til et andet abonnement
+      href: subscriptions/move-users-different-subscription.md
+    - name: Administrere ISV-applicenser
+      href: licenses/manage-third-party-app-licenses.md
+    - name: Administrer politikker for automatisk krav
+      href: licenses/manage-auto-claim-policies.md
+    - name: Forstå abonnementer og licenser
+      href: licenses/subscriptions-and-licenses.md
+- name: Regninger og betalinger
+  items:
+    - name: Få vist din regning eller faktura
+      href: billing-and-payments/view-your-bill-or-invoice.md
+    - name: Forstå din regning eller faktura
+      href: billing-and-payments/understand-your-invoice2.md
+    - name: Betal for dit abonnement
+      href: billing-and-payments/pay-for-your-subscription.md
+    - name: Administrer betalingsmetoder
+      href: billing-and-payments/manage-payment-methods.md
+    - name: Skift faktureringsfrekvens
+      href: billing-and-payments/change-payment-frequency.md
+    - name: Administrer faktureringsbeskeder og vedhæftede filer til fakturaer
+      href: billing-and-payments/manage-billing-notifications.md
+    - name: Forstå faktureringsprofiler
+      href: billing-and-payments/manage-billing-profiles.md
+    - name: Ændre dine faktureringsadresser
+      href: billing-and-payments/change-your-billing-addresses.md
+    - name: About Payment Services Directive 2 and Strong Customer Authentication
+      href: billing-and-payments/psd2.md
+    - name: Anmod om en kredit til tilbageholdelsesafgift på din konto
+      href: billing-and-payments/withholding-tax-credit-global.md
+- name: Faktureringskonti
+  items:
+    - name: Forstå faktureringskonti
+      href: manage-billing-accounts.md
+    - name: Knyt en lejer til din faktureringskonto
+      href: /microsoft-store/manage-mpsa-software-microsoft-store-for-business
+- name: Administrere relationer med dine partnere
+  href: manage-partners.md
+- name: Gennemse partnerrettigheder
+  href: review-partner-admin-privileges.md
+- name: Luk din konto
+  href: close-your-account.md
+- name: Kontakt support
+  href: ../admin/get-help-support.md

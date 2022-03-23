@@ -1,0 +1,245 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om beskyttelse mod spam
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: c534a35d-b121-45da-9d0a-ce738ce51fce
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Administratorer kan få vist ofte stillede spørgsmål og svar om beskyttelse mod uønsket post i Exchange Online Protection (EOP).
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 6932c56b79f03f142c8551c9fdf7661765f194bf
+  ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 02/06/2022
+  ms.locfileid: "63592217"
+title: Ofte stillede spørgsmål om beskyttelse mod spam
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Gælder for**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Dette emne indeholder ofte stillede spørgsmål og svar om beskyttelse mod uønsket post for Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection(EOP)-organisationer uden Exchange Online postkasser.
+
+
+  Du kan finde spørgsmål og svar om karantæne i Ofte [stillede spørgsmål om karantæne](quarantine-faq.yml).
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod malware under Ofte stillede [spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml).
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod spoofing under [Ofte stillede spørgsmål om beskyttelse mod spoofing](anti-spoofing-protection-faq.yml).
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvad sker der som standard med en spam registreret meddelelse?
+    answer: >
+      **For indgående meddelelser:** Størstedelen af spam slettes via forbindelsesfiltrering, som er baseret på IP-adressen på kildemailserveren. Antispampolitikker (også kaldet politikker for spamfilter eller politikker for indholdsfiltre) undersøger og klassificerer meddelelser som spam, massemails eller phishing. Som standard sendes de meddelelser, der er klassificeret som spam eller massemail, til modtagerens mappe med Uønsket mail, mens meddelelser, der er klassificeret som phishing, er i karantæne. Du kan ændre standardpolitikken for uønsket post (gælder for alle modtagere), eller du kan oprette brugerdefinerede antispampolitikker med mere restriktive indstillinger for bestemte grupper af brugere (du kan f.eks. sætte spam i karantæne, der sendes til ledere). Få mere at vide under [Konfigurer antispam-politikker](configure-your-spam-filter-policies.md) og [Anbefalede indstillinger for politik for uønsket post](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+
+
+      > [!IMPORTANT]
+
+      > I hybridinstallationer, hvor EOP beskytter lokale Exchange-postkasser, skal du konfigurere to Exchange-regler for mailflow (også kaldet transportregler) i din lokale Exchange-organisation til at registrere de EOP-spamfiltreringsoverskrifter, der føjes til meddelelser. Du kan få mere at [vide under Konfigurer EOP til at levere spam til mappen Uønsket mail i hybridmiljøer](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+
+       **For udgående meddelelser:** Meddelelsen sendes enten gennem puljen af levering med høj risiko eller returneres til afsenderen i en rapport om manglende levering (også kaldet en NDR eller en meddelelse om [ikke-leveret](high-risk-delivery-pool-for-outbound-messages.md) mail). Du kan finde flere oplysninger om beskyttelse mod udgående spam under [Udgående spamkontrolelementer](outbound-spam-controls.md).
+  - question: >
+      Hvad er en spamvariant uden dag, og hvordan håndteres den af tjenesten?
+    answer: >
+      En spamvariant af nul dage er en første generation, tidligere ukendt variant af spam, der aldrig er blevet registreret eller analyseret, så vores antispamfiltre har endnu ikke nogen oplysninger tilgængelige til at registrere det. Når et spameksempel på nul dage er registreret og analyseret af vores spamanalytikere, opdateres vores antispamfiltre for at registrere det, hvis det opfylder kriterierne for spamklassificering, og de betragtes ikke længere som "nuldag".
+
+
+      > [!NOTE]
+
+      > Hvis du modtager en meddelelse, der kan være en spamvariant uden dag, skal du sende meddelelsen til Microsoft med en af de metoder, der er beskrevet i Rapportér meddelelser og filer til Microsoft for at hjælpe os med at forbedre [tjenesten](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      Skal jeg konfigurere tjenesten til at yde beskyttelse mod uønsket post?
+    answer: >
+      Når du tilmelder dig tjenesten og tilføjer dit domæne, aktiveres spamfiltrering automatisk. Som standard er spamfiltrering indstillet til at beskytte dig, uden at der kræves yderligere konfiguration (bortset fra den tidligere nævnte undtagelse for enkeltstående EOP-enkeltstående kunder i hybridmiljøer). Som administrator kan du redigere standardindstillingerne for spamfiltrering, så de bedst opfylder organisationens behov. For større granularitet kan du også oprette antispampolitikker og udgående antispampolitikker, der anvendes for bestemte brugere, grupper eller domæner i organisationen. Brugerdefinerede politikker tilsidesætter altid standardpolitikken, men du kan ændre prioriteten (dvs. rækkefølgen) for dine brugerdefinerede politikker.
+
+
+      Du kan finde flere oplysninger i følgende emner:
+
+
+      [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md)
+
+
+      [Konfigurere forbindelsesfiltrering i EOP](configure-the-connection-filter-policy.md)
+
+
+      [Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)
+
+
+      [Konfigurere politikken for udgående spam](configure-the-outbound-spam-policy.md)
+  - question: >
+      Hvis jeg foretager en ændring i en politik for uønsket post, hvor lang tid tager det så, efter jeg har gemt mine ændringer, før de træder i kraft?
+    answer: >
+      Det kan tage op til 1 time, før ændringerne træder i kraft.
+  - question: >
+      Er massefiltrering af mail automatisk aktiveret?
+    answer: >
+      Ja. Du kan finde flere oplysninger om [massemail i Hvad er forskellen på uønsket mail og massemails?](what-s-the-difference-between-junk-email-and-bulk-email.md)
+  - question: >
+      Indeholder tjenesten FILTRERING AF URL-adresser?
+    answer: >
+      Ja, tjenesten har et URL-filter, der søger efter URL-adresser i meddelelser. Hvis der registreres URL-adresser, der er knyttet til kendt spam eller skadeligt indhold, markeres meddelelsen som spam.
+  - question: >
+      Hvordan kan kunder, der bruger tjenesten, sende falske negative (spam) og falske positive (ikke uønskede) meddelelser til Microsoft?
+    answer: >
+      Spam og ikke-spammeddelelser kan sendes til Microsoft til analyse på flere måder. Få mere at vide under [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      Kan jeg få spamrapporter?
+    answer: >
+      Ja, for eksempel kan du få en rapport til registrering af spam i Microsoft 365 Administration. Denne rapport viser mængden af spam som en optælling af unikke meddelelser. Du kan finde flere oplysninger om rapportering i følgende links:
+
+
+      Exchange Online kunder: [Overvågning, rapportering og meddelelsessporing i Exchange Online](/exchange/monitoring/monitoring)
+
+
+      Enkeltstående EOP-kunder: [Rapportering og meddelelsessporing i Exchange Online Protection](reporting-and-message-trace-in-exchange-online-protection.md)
+  - question: >
+      Nogen har sendt mig en meddelelse, og jeg kan ikke finde den. Jeg har mistanke om, at det kan være blevet registreret som spam. Er der et værktøj, jeg kan bruge til at finde ud af det?
+    answer: >
+      Ja, værktøjet til sporing af meddelelser gør det muligt at følge mails, når de passerer gennem tjenesten, for at finde ud af, hvad der er sket med dem. Du kan finde flere oplysninger om, hvordan du bruger værktøjet til sporing af meddelelser til at finde ud af, hvorfor en meddelelse blev markeret som spam, under Var en meddelelse markeret [som spam?](/exchange/monitoring/trace-an-email-message/message-trace-faq#was-a-message-marked-as-spam)
+  - question: >
+      Vil tjenestebegrænsningen (grænseværdien) for min mail, hvis mine brugere sender udgående spam?
+    answer: >
+      Hvis mere end halvdelen af de mails, der sendes fra en bruger via tjenesten inden for en bestemt tidsramme (f.eks. pr. time), vurderes at være spam af EOP, blokeres brugeren fra at sende meddelelser. Hvis en udgående meddelelse i de fleste tilfælde bestemmes som spam, dirigeres den gennem mængden af levering med høj risiko, hvilket reducerer sandsynligheden for, at den normale udgående IP-gruppe føjes til en blokliste.
+
+
+      Du kan sende en meddelelse til en bestemt mailadresse, når en afsender blokeres og sender udgående spam. Du kan finde flere oplysninger om denne indstilling under [Konfigurere politikken for udgående spam](configure-the-outbound-spam-policy.md).
+  - question: >
+      Kan jeg bruge en tredjepartsudbyder af uønsket post og antimalware sammen med Exchange Online?
+    answer: >
+      Ja. Selvom vi anbefaler, at du peger din MX-post til Microsoft, er vi klar over, at der er legitime forretningsmæssige grunde til at distribuere din mail til et andet sted end Microsoft først.
+
+
+      - **Indgående**: Ret dine MX-poster, så de peger på tredjepartsudbyderen, og omdiriger derefter meddelelserne til EOP for yderligere behandling. Du kan finde flere oplysninger [under Forbedret filtrering for forbindelser i Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+
+
+      - **Udgående**: Konfigurer intelligent værtsrouting fra Microsoft 365 til destinationens tredjepartsudbyder.
+  - question: >
+      Har Microsoft nogen dokumentation om, hvordan jeg kan beskytte mig selv mod forsøg på phishing?
+    answer: >
+      Ja. Du kan få mere at vide [under Beskyt dine personlige oplysninger på internettet](https://support.microsoft.com/help/4091455)
+  - question: >
+      Undersøges spam- og malwaremeddelelser om, hvem der har sendt dem, eller om de overføres til enheder, der håndhæver lovgivningen?
+    answer: >
+      Tjenesten fokuserer på registrering og fjernelse af spam og malware, men vi kan af og til undersøge især farligt eller beskadigelse af spam- eller angrebskampagner og udforske dem. Dette kan omfatte at arbejde med vores juridiske og digitale gerningsenheder til at overtage en spammers botnet, blokere spammeren fra at bruge tjenesten (hvis de bruger den til at sende udgående mail) og videregive oplysninger om retslig håndhævelse for kriminelle.
+  - question: >
+      Hvad er de bedste fremgangsmåder for udgående mail, der sikrer, at min mail leveres?
+    answer: >
+      Nedenstående retningslinjer er de bedste fremgangsmåder til at sende udgående mails.
+
+
+      - **Kildemaildomænet skal fortolkes i DNS.**
+
+        Hvis f.eks. afsenderen er user@fabrikam, løses domænet fabrikam til IP-adressen 192.0.43.10.
+
+        Hvis et afsendende domæne ikke har en A-post og ingen MX-post i DNS, dirigerer tjenesten meddelelsen gennem dens større risikoleveringspulje, uanset om indholdet af meddelelsen er spam eller ej. Du kan finde flere oplysninger om den højere risikoleveringspulje i [Pulje til levering af høj risiko for udgående meddelelser](high-risk-delivery-pool-for-outbound-messages.md).
+
+      - **Serveren til udgående mail skal have en omvendt DNS-post (PTR).**
+
+        Hvis mailadressen til mailkilden f.eks. er 192.0.43.10, vil den omvendte DNS-post være `43-10.any.icann.org`.'
+
+      - **Kommandoerne HELO/EHLO og MAIL FROM skal være ensartede og være til stede i form af et domænenavn i stedet for en IP-adresse.**
+
+        KOMMANDOEN HELO/EHLO skal konfigureres til at matche den omvendte DNS for den afsendende IP-adresse, så domænet forbliver det samme på tværs af de forskellige dele af brevhovederne.
+
+      - **Sørg for, at der er konfigureret rigtige SPF-poster i DNS.**
+
+        SPF-poster er en mekanisme til at validere, at mails, der sendes fra et domæne, virkelig kommer fra dette domæne og ikke er efterlignet. Du kan finde flere oplysninger om SPF-poster under følgende links:
+
+        [Konfigurer SPF for at forhindre spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
+
+        [Ofte stillede spørgsmål om domæner](../../admin/setup/domains-faq.yml#how-can-i-validate-spf-records-for-my-domain)
+
+      - **Signering af mail med DKIM, signer med afslappet vedskrivning.**
+
+        Hvis en afsender vil signere sine meddelelser ved hjælp af domænenøgler identificeret mail (DKIM), og vedkommende vil sende udgående mail via tjenesten, skal vedkommende signere ved hjælp af den afslappet algoritme til brevhovedvedligegørelse. Hvis du signerer med streng vedskrivelse af brevhoved, kan det gøre signaturen ugyldig, når den passerer gennem tjenesten.
+
+      - **Domæneejere skal have nøjagtige oplysninger i WHOIS-databasen.**
+
+        Dette identificerer ejeren af domænet, og hvordan du kontakter dem ved at indtaste det stabile overordnet firma, kontaktpunkt og navneservere.
+
+      - **For masseforsendelser bør navnet Fra: afspejle, hvem der sender meddelelsen, mens emnelinjen i meddelelsen skal være et kort resume af, hvad meddelelsen handler om.**
+
+        Meddelelsens brødtekst skal tydeligt angive, hvad tilbuddet, tjenesten eller produktet er. Hvis en afsender f.eks. sender en masseforsendelse til Contoso-virksomheden, vil mailen Fra og Emne f.eks. se således ud:
+
+        > Fra: marketing@contoso.com <br> Emne: Nyt opdateret katalog for juletiden!
+
+        Følgende er et eksempel på, hvad du ikke skal gøre, fordi det ikke er beskrivende:
+
+        > Fra: user@hotmail.com <br> Emne: Kataloger
+
+      - **Hvis afsendelse af en masseforsendelse til mange modtagere, og meddelelsen er i nyhedsbrevformat, bør der være en metode til at fjerne abonnementet nederst i meddelelsen.**
+
+        Indstillingen for frameld bør ligne denne:
+
+        > Denne meddelelse blev sendt til example@contoso.com af sender@fabrikam.com. Opdater profil/mailadresse | Øjeblikkelig fjernelse **med SafeUnsubscribe**&trade; | Politik om beskyttelse af personlige oplysninger
+
+      - **Hvis du sender massemails, bør anskaffelse af lister udføres ved hjælp af dobbelttilvalg. Hvis du er masseforsendelse, er dobbelttilmelding en branche bedste fremgangsmåde.**
+
+        Dobbelttilvalg er en krav om, at en bruger skal udføre to handlinger for at tilmelde sig marketingmail:
+
+        1. Når brugeren klikker på et tidligere ikke-markeret afkrydsningsfelt, hvor brugeren har tilvalgt at modtage yderligere tilbud eller mails fra marketingudbyderen.
+
+        2. Endnu en gang, når marketingsfirmaet sender en bekræftelsesmail til brugerens angivne mailadresse, bliver brugeren bedt om at klikke på et tidsfølsomt link, der fuldfører bekræftelsen.
+
+        Brug af dobbelttilmelding skaber et godt ry for massemailafsendere.
+
+      - **Masseafsendere skal oprette gennemsigtigt indhold, som de kan holdes til regnskab for:**
+
+        1. Detaljeret anmodning om, at modtagerne tilføjer afsenderen til adressekartoteket, skal tydeligt angive, at en sådan handling ikke er en garanti for levering.
+
+        2. Når du konstruerer omdirigeringer i meddelelsens brødtekst, skal du bruge en ensartet linktypografi.
+
+        3. Send ikke store billeder eller vedhæftede filer eller meddelelser, der udelukkende består af et billede.
+
+        4. Når du anvender registrerings pixel (webfejl eller beacons), skal deres tilstedeværelse tydeligt angives i dine offentlige indstillinger for beskyttelse af personlige oplysninger eller P3P.
+
+      - **Formatere udgående meddelelser om ikke-sendt mail.**
+
+        Når du genererer meddelelser om leveringsstatus (også kaldet rapporter om manglende levering, rapporter om manglende levering eller meddelelser om ikke-leveret mail), skal afsendere følge formatet for afvisning som angivet i [RFC 3464](https://www.ietf.org/rfc/rfc3464.txt).
+
+      - **Fjern ikke-eksisterende mailadresser for ikke-eksisterende brugere.**
+
+        Hvis du modtager en NDR, der angiver, at en mailadresse ikke længere er i brug, skal du fjerne det ikke-eksisterende mailalias fra listen. Mailadresser ændres med tiden, og folk kasserer dem nogle gange.
+
+      - **Brug Hotmails SNDS-program (Smart Network Data Services).**
+
+        Hotmail bruger et program med navnet Smart Network Data Services, der giver afsendere mulighed for at tjekke klager, der er indsendt af slutbrugere. SNDS er den primære portal til fejlfinding af leveringsproblemer med Hotmail.
+  - question: >
+      Hvordan deaktiverer jeg spamfiltrering?
+    answer: >-
+      Hvis du bruger en tredjepartsbeskyttelsestjeneste eller -enhed til at scanne mail, før den leveres til Microsoft 365, kan du bruge en regel for mailflow (også kaldet en transportregel) til at omgå de fleste spamfiltrering for indgående meddelelser. Du kan finde en vejledning [i Brug regler for mailflow til at angive tillidsniveauet for spam i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+
+
+      Hvis du bruger en regel for mailflow til at tilsidesætte spamfiltrering, filtreres phishingmeddelelser med høj grad af tillid til. Andre funktioner i EOP påvirkes ikke (meddelelser scannes f.eks. altid for malware).
+
+
+      Hvis du bruger en tredjepartsbeskyttelsestjeneste eller -enhed til at scanne mails, før de leveres til Microsoft 365, skal du også aktivere udvidet filtrering for forbindelser (også kaldet spring listen *over), så* registrerings-, rapporterings- og undersøgelsesfunktioner i Microsoft 365 kan identificere meddelelseskilder korrekt. Du kan finde flere oplysninger [under Forbedret filtrering af forbindelser](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+
+
+      Hvis du har brug for at tilsidesætte spamfiltrering for SecOps-postkasser eller phishing-simulering, skal du ikke bruge regler for mailflow. Få mere at vide under Konfigurer levering af [phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser](configure-advanced-delivery.md).

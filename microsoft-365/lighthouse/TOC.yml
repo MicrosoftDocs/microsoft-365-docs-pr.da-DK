@@ -1,0 +1,72 @@
+- name: Microsoft 365 fyrtårn
+  items:
+    - name: Oversigt over Microsoft 365 fyrtårn
+      href: m365-lighthouse-overview.md
+    - name: Krav til Microsoft 365 fyrtårn
+      href: m365-lighthouse-requirements.md
+- name: Kom i gang
+  items:
+    - name: Tilmeld dig
+      href: m365-lighthouse-sign-up.md
+- name: Secure Microsoft 365 Lighthouse
+  items:
+    - name: Konfigurere portalsikkerhed
+      href: m365-lighthouse-configure-portal-security.md
+    - name: Konfigurer roller
+      href: m365-lighthouse-set-up-roles.md
+    - name: Gennemse overvågningslogfiler
+      href: m365-lighthouse-review-audit-logs.md
+- name: Beskyt kunder med oprindelige planer
+  items:
+    - name: Oversigt over brug af oprindelige planer til installation af standardlejerkonfigurationer
+      href: m365-lighthouse-deploy-standard-tenant-configurations-overview.md
+    - name: Installere oprindelige planer
+      href: m365-lighthouse-deploy-baselines.md
+- name: Administrer lejere
+  items:
+    - name: Oversigt over siden Lejere
+      href: m365-lighthouse-tenants-page-overview.md
+    - name: Administrer din lejerliste
+      href: m365-lighthouse-manage-tenant-list.md
+    - name: Få vist lejertjenestens tilstand
+      href: m365-lighthouse-view-service-health.md
+- name: Administrere brugere i lejere
+  items:
+    - name: Oversigt over siden Brugere
+      href: m365-lighthouse-users-page-overview.md
+    - name: Bloker bruger login
+      href: m365-lighthouse-block-user-signin.md
+    - name: Administrer multifaktorgodkendelse
+      href: m365-lighthouse-manage-mfa.md
+    - name: Administrer nulstilling af adgangskode via selvbetjening
+      href: m365-lighthouse-manage-sspr.md
+    - name: Nulstil en brugeradgangskode
+      href: m365-lighthouse-reset-user-password.md
+    - name: Søg efter brugere
+      href: m365-lighthouse-search-for-users.md
+    - name: Få vist og administrer risikabelt bruger
+      href: m365-lighthouse-view-manage-risky-users.md
+- name: Administrer enheder
+  items:
+    - name: Oversigt over siden til overholdelse af enhed
+      href: m365-lighthouse-device-compliance-page-overview.md
+    - name: Sammenlign indstillinger for politikker for overholdelse af enhed
+      href: m365-lighthouse-compare-compliance-policies.md
+    - name: Windows 365 -siden (sky-pc'er)
+      href: m365-lighthouse-win365-page-overview.md
+- name: Administrer trusler
+  items:
+    - name: Oversigt over siden Trusselsadministration
+      href: m365-lighthouse-threat-management-page-overview.md
+    - name: Mindske trusler med Microsoft Defender Antivirus
+      href: m365-lighthouse-mitigate-threats.md
+- name: Få hjælp og support
+  items:
+    - name: Få hjælp og support
+      href: m365-lighthouse-get-help-and-support.md
+    - name: Kendte problemer
+      href: m365-lighthouse-known-issues.md
+    - name: Fejlfinding og løsning af problemer og fejlmeddelelser
+      href: m365-lighthouse-troubleshoot.md
+    - name: Ofte stillede spørgsmål
+      href: m365-lighthouse-faq.yml
