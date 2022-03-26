@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger, som it-administratorer kan bruge til at administrere følsomhedsmærkater Office apps til computer, mobil og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b251789795cbb55cd5d79dc686449e4c87aa6f9f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4a2b68e3e85b2c621a002ce762b7ec59ce31c891
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587753"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712746"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -75,7 +75,7 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities)                      | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ | 2.46+ | 16.0.13628+ | Ja |
 |[Kræv, at brugerne anvender en etiket på deres mails og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig virksomhedskanal: 2101+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.45+         | 2.47+ | 16.0.13628+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md)                                            
 |[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
-|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2018+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Understøttelse af samtidig redigering og automatisk lagring af](sensitivity-labels-coauthoring.md) mærkede og krypterede dokumenter | Aktuel kanal: 2107+ <br /><br> Månedlig virksomhedskanal: 2107+ <br /><br> Semi-Annual virksomhedskanal: 2202+ |  16.51+ | Forhåndsvisning: 2,58 +, [når du tilmelder dig](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | Forhåndsvisning: 16.0.14931+, når [du tilmelder dig](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 
 
@@ -98,7 +98,7 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |[Lad brugere tildele tilladelser: <br /> - Videresende ikke](encryption-sensitivity-labels.md#let-users-assign-permissions)                     | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+                 | 4.7.1+         | 4.0.39+           | Ja               |
 |[Giv brugere tilladelse til at tildele tilladelser: <br /> - Kun krypteret](encryption-sensitivity-labels.md#let-users-assign-permissions)  | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.48+ <sup>\*</sup> | 4.2112.0+  | 4.2112.0+ | Ja |
 |[Kræv, at brugerne anvender en etiket på deres mails og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig virksomhedskanal: 2101+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                    | 4.2111+            | 4.2111+                | Ja                |
-|[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities) | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2202+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Ja |
+|[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities) | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2022+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Ja |
 |[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ <sup>\*</sup>                    | Under gennemgang           | Under gennemgang               | Ja |
 |[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
 |[Forskellige indstillinger for standardetiket og obligatorisk mærkning](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Ja |

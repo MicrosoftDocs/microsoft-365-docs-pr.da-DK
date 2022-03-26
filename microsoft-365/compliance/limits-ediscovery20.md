@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de case limits, indexing limits, and search limits in effect for the Advanced eDiscovery solution in Microsoft 365.
-ms.openlocfilehash: fc658f4502bf510cf34297435db75bd7cdd7c136
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 04b0f98286693ef14019b30ab9c8d3a592484d92
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587711"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712789"
 ---
 # <a name="limits-in-advanced-ediscovery"></a>Begrænsninger i Advanced eDiscovery
 
@@ -42,7 +42,6 @@ I følgende tabel vises begrænsningerne for tilfælde og kontrolsæt i Advanced
 |Maksimale antal entydige mærker pr. sag. <br/> |1.0001<sup></sup> |
 |Maksimum af samtidige job i organisationen for at føje indhold til et korrektursæt. Disse job har navnet **Føje data til et gennemsynssæt** og vises på **fanen Jobs** i en sag.| <sup>102</sup> |
 |Maksimalt antal samtidige job for at føje indhold til et gennemsynssæt pr. bruger. Disse job har navnet **Føje data til et gennemsynssæt** og vises på **fanen Jobs** i en sag. | 3 |
-|||
 
 ## <a name="hold-limits"></a>Begrænsninger for venteposition
 
@@ -64,7 +63,6 @@ I følgende tabel vises indekseringsgrænserne i Advanced eDiscovery.
 |Maksimumstørrelse på en enkelt fil.   <br/> |150 <sup>MB4</sup> <br/> |
 |Maksimal dybde for integrerede elementer i et dokument.  <br/> |<sup>254</sup> <br/> |
 |Maksimumstørrelse på filer, der behandles af Optical Character Recognition (OCR).  <br/> |24 <sup>MB4</sup> <br/>  
-|||
 
 ## <a name="search-limits"></a>Søgebegrænsninger
 
@@ -87,28 +85,26 @@ De grænser, der er beskrevet i dette afsnit, er relateret til brug af **søgev�
 |Maksimale antal elementer pr. postkasse i offentlig mappe, der vises på forhåndsvisningssiden for søgninger. |100|
 |Maksimale antal elementer, der findes i alle elementer i postkassen i den offentlige mappe, som vises på eksempelsiden til søgninger. |200|
 |Maksimale antal postkasser i offentlige mapper, der kan vises i søgeresultaterne. Hvis der er mere end 500 postkasser i offentlige mapper, der indeholder elementer, der svarer til søgeforespørgslen, er det kun de øverste 500 postkasser med de bedste resultater, der er tilgængelige til forhåndsvisning.|500|
-|||
+|Den maksimale størrelse på et element, der kan vises på eksempelsiden i en kladdesamling.|10.000.000 byte (ca. 9,5 MB)|
 
 ## <a name="search-times"></a>Søgetider
 
 Microsoft indsamler oplysninger om ydeevnen for søgninger, der køres af alle organisationer. Selvom kompleksiteten af søgeforespørgslen kan påvirke søgetider, er den største faktor, der påvirker, hvor lang tid søgninger tager, antallet af postkasser, der søges i. Selvom Microsoft ikke leverer en serviceaftale for søgetider, viser følgende tabel gennemsnitlige søgetider for søgning i samlinger baseret på antallet af postkasser, der er inkluderet i søgningen.
   
-  | Antal postkasser | Gennemsnitlig søgetid |
-  |:-----|:-----|
-  |100  <br/> |30 sekunder  <br/> |
-  |1,000  <br/> |45 sekunder  <br/> |
-  |10,000  <br/> |4 minutter  <br/> |
-  |25,000  <br/> |10 minutter  <br/> |
-  |50,000  <br/> |20 minutter  <br/> |
-  |100,000  <br/> |25 minutter  <br/> |
-  |||
+| Antal postkasser | Gennemsnitlig søgetid |
+|:-----|:-----|
+|100  <br/> |30 sekunder  <br/> |
+|1,000  <br/> |45 sekunder  <br/> |
+|10,000  <br/> |4 minutter  <br/> |
+|25,000  <br/> |10 minutter  <br/> |
+|50,000  <br/> |20 minutter  <br/> |
+|100,000  <br/> |25 minutter  <br/> |
 
 ## <a name="viewer-limits"></a>Begrænsninger for fremvisere
 
 | Beskrivelse af grænse | Grænse |
 |:-----|:-----|
 |Maksimumstørrelse på Excel fil, der kan vises i den oprindelige fremviser.  <br/> |4 MB  <br/> |
-|||
 
 ## <a name="export-limits---final-export-out-of-review-set"></a>Eksportgrænser – Endelig eksport ud af Korrektursæt
 
@@ -118,14 +114,12 @@ De grænser, der er beskrevet i dette afsnit, er relateret til eksport af dokume
 |:-----|:-----|
 |Maksimumstørrelse for en enkelt eksport.|5 millioner dokumenter eller 500 GB, alt efter hvad der er mindre|
 |Det maksimale antal samtidige eksporter pr. gennemsynssæt. | 1 |
-|||
 
 ## <a name="review-set-download-limits"></a>Gennemgå de indstillede grænser for download
 
 | Beskrivelse af grænse | Grænse |
 |:-----|:-----|
 |Samlet filstørrelse eller maksimalt antal dokumenter, der er hentet fra et korrektursæt.  <br/> |3 MB eller 50 <sup>dokumenter7</sup>|
-|||
 
 ## <a name="notes"></a>Bemærkninger
 

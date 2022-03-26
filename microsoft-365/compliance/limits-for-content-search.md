@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: Få mere at vide om de begrænsninger, der gælder for indholdssøgning og kerne eDiscovery-funktioner i Microsoft 365 Overholdelsescenter.
-ms.openlocfilehash: fe59136a8b7c3cb0e10698ec5578794ff4d8a853
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ad72dfa1d599a908a56b3b6530433ccb5ed23df4
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63588900"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715944"
 ---
 # <a name="limits-for-ediscovery-search"></a>Begrænsninger for eDiscovery-søgning
 
@@ -52,12 +52,12 @@ I følgende tabel vises søgebegrænsningerne, når du bruger værktøjet til in
 |Det maksimale antal elementer pr. postkasse med offentlig mappe, der vises på eksempelsiden, når du får vist resultater fra indholdssøgningen.|100|
 |Det maksimale antal elementer, der findes i alle postkasser i offentlige mapper, der vises på eksempelsiden, når indholdssøgningsresultater vises.|200|
 |Det maksimale antal postkasser i offentlige mapper, der kan vises i søgeresultaterne. Hvis der er mere end 500 postkasser i offentlige mapper, der indeholder indhold, der svarer til søgeforespørgslen, vil kun de øverste 500 postkasser i den offentlige mappe med de fleste søgeresultater være tilgængelige til forhåndsvisning.|500|
+|Den maksimale størrelse på et element, der kan vises på eksempelsiden.|10.000.000 byte (ca. 9,5 MB)|
 |Det maksimale antal tegn for søgeforespørgslen (herunder operatorer og betingelser) for en søgning. <p> **Bemærk!** Denne grænse træder i kraft, når forespørgslen er udvidet og indeholder tegn fra nøgleordsforespørgslen, eventuelle filtre for søgetilladelser, der anvendes til brugeren, og URL-adresserne for alle placeringer. Det betyder, at forespørgslen udvides i forhold til hver af nøgleordene. Hvis en søgeforespørgsel f.eks. indeholder 15 nøgleord og yderligere parametre og betingelser, udvides forespørgslen 15 gange, hver med de andre parametre og betingelser i forespørgslen. Så selvom antallet af tegn i søgeforespørgslen kan være under grænsen, er det den udvidede forespørgsel, der kan bidrage til at overskride denne grænse.|**Postkasser:** 10.000. <p> **Websteder:** 4.000, når der søges på alle websteder eller 2.000, når der søges på op til 20 websteder. <sup>3</sup>|
-|Det maksimale antal varianter, der returneres, når du bruger et præfiks med jokertegn til at søge efter et bestemt udtryk i en søgeforespørgsel, eller når du bruger et præfiks med jokertegn og operatoren **NEAR Boolean** .|10.000 <sup>4</sup>|
+|Det maksimale antal varianter, der returneres, når du bruger et jokertegn med præfiks til at søge efter et nøjagtigt udtryk i en søgeforespørgsel, eller når du bruger et præfiks med jokertegn og operatoren **NEAR** Boolean.|10.000 <sup>4</sup>|
 |Det mindste antal alfategn for præfiks jokertegn; f.eks `time*`. , `one*`eller `set*`.|3|
 |Det maksimale antal postkasser i en søgning, som du kan slette elementer i ved at udføre en "søgning og sletning"-handling (ved hjælp af kommandoen **New-ComplianceSearchAction -Tøm** ). Hvis den søgning, du udfører en tømningshandling for, har flere kildepostkasser end denne grænse, mislykkes handlingen for at fjerne. Du kan finde flere oplysninger om søgning og [tømning i Søg efter og slet mails i organisationen](search-for-and-delete-messages-in-your-organization.md).|50,000|
 |Det maksimale antal placeringer i en søgning, som du kan eksportere elementer fra. Hvis søgningen, som du eksporterer, har flere placeringer end denne grænse, mislykkes eksporten. Få mere at vide under [Eksportér resultater fra indholdssøgning](export-search-results.md).|100,000|
-|||
 
 > [!NOTE]
 > <sup>1</sup> Selvom du kan søge i et ubegrænset antal postkasser i en enkelt søgning, kan du kun downloade de eksporterede søgeresultater fra maksimalt 100.000 postkasser ved hjælp af eDiscovery-eksportværktøjet i Microsoft 365 Overholdelsescenter.
@@ -84,7 +84,6 @@ Microsoft indsamler oplysninger om ydeevnen for søgninger, der køres af alle o
 |25,000|10 minutter|
 |50,000|20 minutter|
 |100,000|25 minutter|
-|||
 
 ## <a name="export-limits"></a>Eksportgrænser
 
@@ -103,7 +102,6 @@ I følgende tabel vises begrænsningerne, når resultaterne af en indholdssøgni
 |Maksimale antal postkasser til søgeresultater, der kan downloades ved hjælp af eDiscovery-eksportværktøjet|100,000|
 |Maksimumstørrelse på PST-fil, der kan eksporteres <p> **Bemærk!** Hvis søgeresultaterne fra en brugers postkasse er større end 10 GB, eksporteres søgeresultaterne for postkassen i to (eller flere) separate PST-filer. Hvis du vælger at eksportere alle søgeresultater i en enkelt PST-fil, overser PST-filen til flere PST-filer, hvis den samlede størrelse af søgeresultaterne er større end 10 GB. Hvis du vil ændre denne standardstørrelse, kan du redigere registreringsdatabasen Windows på den computer, du bruger til at eksportere søgeresultaterne. Se [Skift størrelsen på PST-filer, når du eksporterer eDiscovery-søgeresultater](change-the-size-of-pst-files-when-exporting-results.md). Søgeresultaterne fra en bestemt postkasse opdeles ikke mellem flere PST-filer, medmindre indholdet af en enkelt postkasse er mere end 10 GB. Hvis du vælger at eksportere søgeresultaterne i én PST-fil, der indeholder alle meddelelser i en enkelt mappe, og søgeresultaterne er større end 10 GB, organiseres elementerne stadig i kronologisk rækkefølge, så de oversøges i flere PST-filer baseret på den sendte dato.|10 GB|
 |Bedøm, hvor søgeresultaterne fra postkasser og websteder uploades til en Microsoft-leveret placering Azure Storage placering.|Maksimalt 2 GB pr. time|
-|||
 
 ## <a name="indexing-limits-for-email-messages"></a>Indekseringsgrænser for mails
 

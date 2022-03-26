@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e534211008ea560642ba306844b9223170ac0140
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: de49205fe20cd5685279c0a5f9d138147f24bb8d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593947"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754169"
 ---
 # <a name="review-architecture-requirements-and-key-concepts-for-microsoft-defender-for-identity"></a>Gennemgå arkitekturkrav og nøglekoncepter for Microsoft Defender for Identity
 
@@ -46,13 +46,13 @@ Defender til identitet beskytter dine lokale Active Directory-brugere og/eller b
 
 Følgende diagram illustrerer grundlinjearkitekturen for Defender for Identity. 
 
-![Arkitektur for Microsoft Defender til identitet.](../../media/defender/m365-defender-identity-architecture.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-architecture.png" alt-text="Identitetsarkitekturen for Microsoft Defender for Identity" lightbox="../../media/defender/m365-defender-identity-architecture.png":::
 
 I denne illustration:
+
 - De sensorer, der er installeret på AD-domænecontrollere, fortolker logge og netværkstrafik og sender dem til Microsoft Defender for Identity til analyse og rapportering.
 -  Sensorerne kan også fortolke Active Directory Federation Services (AD FS), når Azure AD er konfigureret til at bruge federated authentication (stiplede linje i illustration). 
 - Microsoft Defender til identitet deler signaler Microsoft 365 Defender til udvidet registrering og svar (XDR).
-
 
 Defender til identitetssensorer kan installeres direkte på følgende servere:
 
@@ -66,7 +66,6 @@ Se nærmere på arkitekturen for Defender for Identity, herunder integration med
 
 Følgende tabel identificerede nøglekoncepter, som er vigtige at forstå, når de skal evaluere, konfigurere og udrulle Microsoft Defender for Identity.
 
-
 |Koncept  |Beskrivelse |Flere oplysninger  |
 |---------|---------|---------|
 | Overvågede aktiviteter | Defender til identitet overvåger signaler, der genereres fra din organisation til at registrere mistænkelig eller ondsindet aktivitet, og hjælper dig med at afgøre gyldigheden af hver potentielle trussel, så du effektivt kan undersøge og reagere.  |  [Overvågede aktiviteter for Microsoft Defender til identitet](/defender-for-identity/monitored-activities)       |
@@ -78,8 +77,6 @@ Følgende tabel identificerede nøglekoncepter, som er vigtige at forstå, når 
 | Rollegrupper    | Defender for Identity giver rollebaserede grupper og delegeret adgang til at beskytte data i henhold til organisationens specifikke behov for sikkerhed og overholdelse, som omfatter Administratorer, Brugere og Seere.        |  [Microsoft Defender for Identity-rollegrupper](/defender-for-identity/role-groups)       |
 | Administrativ portal    |  Ud over portalen Microsoft 365 Defender, kan Defender for Identity-portalen bruges til at overvåge og reagere på mistænkelig aktivitet.      | [Arbejde med Microsoft Defender for Identity-portalen](/defender-for-identity/workspace-portal)        |
 | Integration af Microsoft Defender til skyapps   | Microsoft Defender til skyapps integreres med Microsoft Defender for Identity for at levere brugerenheds behavioral analytics (UEBA) på tværs af et hybridmiljø – både skyapp og lokalt miljø   | Integration af Microsoft Defender for Identity  |
-| | | |
-
 
 ## <a name="review-prerequisites"></a>Gennemgå forudsætninger
 

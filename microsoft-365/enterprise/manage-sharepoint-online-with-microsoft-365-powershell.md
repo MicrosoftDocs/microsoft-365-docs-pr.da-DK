@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 07/17/2020
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: Lær at bruge PowerShell til Microsoft 365 at administrere brugere, grupper og webstedsgrupper.
-ms.openlocfilehash: 22276453c1d95cc7799da9082a8cd4b71229511d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 9a138dd7622bda9cbb7d3206349ddd8992b93831
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590365"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675388"
 ---
 # <a name="manage-sharepoint-with-powershell"></a>Administrer SharePoint med PowerShell
 

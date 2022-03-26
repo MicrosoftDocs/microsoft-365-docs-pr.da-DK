@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: e21d2904ec2afdcd57b69267f99af6a0726dca56
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cdd368e7e78458067b9f363d41f7931ac5a2c0cd
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588765"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754214"
 ---
 # <a name="get-started-with-insider-risk-management"></a>Kom i gang med insider-risikostyring
 
@@ -50,7 +50,7 @@ Hvis du ikke har en eksisterende Microsoft 365 Enterprise E5-plan og gerne vil p
 
 ## <a name="recommended-actions-preview"></a>Anbefalede handlinger (eksempel)
 
-Anbefalede handlinger kan hjælpe din organisation med hurtigt at komme i gang og få mest muligt ud af insider-funktioner til risikostyring. På siden Oversigt **finder** du anbefalede handlinger, der hjælper dig med at konfigurere og implementere politikker og udføre undersøgelseshandlinger for brugerhandlinger, der genererer beskeder ud fra politik matches.
+Anbefalede handlinger kan hjælpe din organisation med hurtigt at få insider-risikostyring. På siden Oversigt **finder du** anbefalede handlinger, der hjælper dig gennem trinnene til konfiguration og implementering af politikker.
 
 ![Anbefalede handlinger for Insider-risikostyring.](../media/insider-risk-recommended-actions.png)
 
@@ -62,9 +62,6 @@ Der findes følgende anbefalinger, der kan hjælpe dig med at komme i gang med e
 - **Søg efter potentielle insider-risici**: Kør en analysescanning for at finde potentielle Insider-risici i din organisation. Efter evaluering af resultater skal du gennemse anbefalede politikker for at konfigurere.
 - **Tildel tilladelser til** andre: Hvis der er flere teammedlemmer, som skal være ansvarlige for administration af insider-risikofunktioner, skal du tildele dem til de relevante rollegrupper.
 - **Opret din første** politik: For at modtage beskeder om potentielt risikabelt arbejde skal du konfigurere politikker, der er baseret på foruddefinerede skabeloner, der definerer de brugeraktiviteter, du vil registrere og undersøge.
-- **Gennemgå bruger**, hvis aktivitet der er ved at blive  scoret: Brugerdashboardet giver dig mulighed for at få vist brugere, hvis aktivitet i øjeblikket tildeles risikoresultater, uanset om denne aktivitet har opfyldt tærskelværdien for at generere en besked.
-- **Gennemse beskeder**: Når en udløsende hændelse forekommer for en bruger, begynder politikker at tildele risikoresultater til registreret aktivitet. Hvis et risikoresultat opfylder en politiks grænseværdier, får du vist en besked, der indeholder en detaljeret oversigt over al aktivitet, der bliver scoret for den pågældende bruger.
-- **Undersøg en sag**: Der oprettes manuelt ud fra beskeder, når det er nødvendigt at undersøge yderligere for at identificere potentielle insiderrisici. Hver sag er begrænset til en enkelt bruger, og flere beskeder for brugeren kan føjes til en eksisterende sag eller til en ny sag.
 
 Hver anbefalede handling, der er inkluderet i denne oplevelse, har fire attributter:
 

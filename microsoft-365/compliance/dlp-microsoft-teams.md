@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Teams og kanaler understøtter politikker til forebyggelse af datatab (DLP).
-ms.openlocfilehash: 66d451e55d5ee41abb0d43927e56295261bd4c8f
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 693b71181f34e948c0456779c7207fa22861dd5f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63588903"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715339"
 ---
 # <a name="data-loss-prevention-and-microsoft-teams"></a>Forebyggelse af datatab og Microsoft Teams
 
@@ -33,6 +33,11 @@ Hvis din organisation har forebyggelse af datatab (DLP), kan du definere politik
 
 - **Eksempel 2: Beskyttelse af følsomme oplysninger i dokumenter**. Antag, at nogen forsøger at dele et dokument med gæster i Microsoft Teams en kanal eller chat, og dokumentet indeholder følsomme oplysninger. Hvis du har defineret en DLP-politik for at forhindre dette, åbnes dokumentet ikke for disse brugere. Din DLP-politik skal SharePoint og OneDrive for at beskyttelsen kan være på plads. Dette er et eksempel på DLP til SharePoint, der vises i Microsoft Teams, og kræver derfor, at brugere har licens til Office 365 DLP (inkluderet i Office 365 E3), men kræver ikke, at brugere skal have licens til Avanceret overholdelse i Office 365.)
 
+- **Eksempel 3: Beskyttelse af kommunikation i Teams delte kanaler**. For delte kanaler anvendes Teams på teamets DLP-politik. Lad os f.eks. sige, at der er en delt kanal, der ejes af TeamA af Contoso. TeamA har en DLP-politik P1. Du kan dele en kanal på tre måder:
+    - **Del med medlem**: Du inviterer bruger1 fra Contoso til at deltage i den delte kanal uden at gøre ham til medlem af TeamA. Alle i denne delte kanal, herunder bruger1, er dækket af P1.
+    - **Del med team (internt)**: Du deler kanalen med et andet teamteamB i Contoso. At et andet team kan have en anden DLP-politik, men det er ligegyldigt. P1 gælder for alle i denne delte kanal, herunder både TeamA- og TeamB-brugere.
+    - **Del med team (på tværs af lejere)**: Du deler kanalen med et teamteam på Fabrikam. Fabrikam har muligvis sin egen DLP-politik, men det gør ikke noget. P1 gælder for alle i denne delte kanal, herunder brugere af TeamA (Contoso) og TeamF (Fabrikam).
+ 
 ## <a name="dlp-licensing-for-microsoft-teams"></a>DLP-licensering til Microsoft Teams
 
 [Funktioner til forebyggelse af](dlp-learn-about-dlp.md) datatab blev udvidet til at omfatte Microsoft Teams chat- og kanalmeddelelser, **herunder private kanalmeddelelser** for:
@@ -58,14 +63,14 @@ DLP-beskyttelse anvendes anderledes for Teams enheder.
 |Når politikken er begrænset af |Disse Teams enheder |DLP-beskyttelse er tilgængelig|
 |---------|---------|---------|
 |Individuelle brugerkonti     |1:1/n chats         |Ja         |
-|     |Generelle chats         |Nej         |
-|     |private kanaler         |Ja         |
+|     |Standard- og delte kanalmeddelelser         |Nej         |
+|     |Private kanalmeddelelser         |Ja         |
 |Sikkerhedsgrupper/distributionslister  | 1:1/n chats         |Ja         |
-|     |Generelle chats         |Nej         |
-|     |private kanaler         |Ja        |
+|     |Standard- og delte kanalmeddelelser  |Nej         |
+|     |Private kanalmeddelelser         |Ja        |
 |Microsoft 365 gruppe    |1:1/n chats          |Nej         |
-|     |Generelle chats          |Ja        |
-|     |private kanaler|Nej| 
+|     |Standard- og delte kanalmeddelelser          |Ja        |
+|     |Private kanalmeddelelser|Nej| 
 
 
 ## <a name="policy-tips-help-educate-users"></a>Politiktip hjælper med at informere brugerne

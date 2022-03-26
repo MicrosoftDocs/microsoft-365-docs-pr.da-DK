@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder Microsoft Teams.
-ms.openlocfilehash: d3562126a678e486fd97f3c760841f9ba4de7193
-ms.sourcegitcommit: 6e43aeff217afe97876137b1ead8df26db6e9937
+ms.openlocfilehash: fc870050b8ef69a908553617d755412d95efa288
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "63588229"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63714868"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring af Microsoft Teams
 
@@ -43,6 +43,9 @@ For andre arbejdsbelastninger skal du se:
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Hvad er inkluderet i opbevaring og sletning
 
+> [!NOTE]
+> Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er i forhåndsvisning. Alle delte kanaler arver opbevaringsindstillinger fra den overordnede kanal.
+
 Teams chats, kanalmeddelelser og private kanalmeddelelser kan slettes ved hjælp af opbevaringspolitikker for Teams, og ud over teksten i meddelelserne, kan følgende elementer bevares af hensyn til overholdelse af regler og standarder: Integrerede billeder, tabeller, hypertekstlinks, links til andre Teams-meddelelser og -filer og [kortindhold](/microsoftteams/platform/task-modules-and-cards/what-are-cards). Chatbeskeder og private kanalmeddelelser indeholder alle navnene på personerne i samtalen, og kanalmeddelelser indeholder teamnavnet og meddelelsestitlen (hvis det er angivet). 
 
 Kodestykker, optegnede talenotater fra Teams-mobilklienten, miniaturebilleder, meddelelsesbilleder og reaktioner fra andre i form af humørikoner bevares ikke, når du bruger opbevaringspolitikker til Teams.
@@ -60,6 +63,7 @@ Disse postkasser er angivet af deres RecipientTypeDetails-attribut:
 - **UserMailbox**: Disse postkasser gemmer meddelelsesdata for skybaserede brugere Teams brugere.
 - **MailUser**: Disse postkasser gemmer meddelelsesdata for [lokale Teams brugere](search-cloud-based-mailboxes-for-on-premises-users.md).
 - **GroupMailbox**: Disse postkasser gemmer meddelelsesdata for Teams standardkanaler.
+- **UnderstrateGroup**: Disse postkasser gemmer meddelelsesdata for Teams delte kanaler.
 
 Andre postkassetyper, f.eks. RoomMailbox, der Teams til mødelokaler, understøttes ikke Teams opbevaringspolitikker.
 

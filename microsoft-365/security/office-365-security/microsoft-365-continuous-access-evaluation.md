@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 255618508559e989a356ab404429bc4d87bfe2c6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 22927fbf85d9dab424c8b546b7e837bf035d8a2f
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594053"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775340"
 ---
 # <a name="continuous-access-evaluation-for-microsoft-365"></a>Løbende evaluering af adgang til Microsoft 365
 
@@ -76,10 +76,6 @@ Evaluering af betinget adgang-politik sker, når brugerkontoen ikke længere opr
 
 Følgende tjenester Microsoft 365 i øjeblikket evaluering af kontinuerlig adgang ved at lytte til begivenheder fra Azure AD.
 
-<br>
-
-****
-
 |Håndhævelsestype|Exchange|SharePoint|Teams|
 |---|---|---|---|
 |**Kritiske hændelser:**||||
@@ -87,7 +83,6 @@ Følgende tjenester Microsoft 365 i øjeblikket evaluering af kontinuerlig adgan
 |Bruger risiko|Understøttet|Understøttes ikke|Understøttes ikke|
 |**Evaluering af betinget adgang-politik:**||||
 |Politik for placering af IP-adresse|Understøttet|Understøttet\*|Understøttet|
-|
 
 \*SharePoint Office webbrowser understøtter øjeblikkelig håndhævelse af IP-politikken ved at aktivere streng tilstand. Uden streng tilstand er adgangstokenslevetid én time.
 

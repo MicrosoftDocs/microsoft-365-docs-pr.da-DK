@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Interaktioner mellem grupper af tjenester
-ms.openlocfilehash: 226c1588c0275c3349d0fd996dd68f5748f11cd6
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 3f5433671e4407e25669498824817db0b43ff329
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63594205"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712812"
 ---
 # <a name="groups-services-interactions"></a>Interaktioner mellem grupper af tjenester
 
@@ -558,7 +558,7 @@ Ja, SharePoint tilbyder flere ikke-gruppe-tilknyttede tjenester og websteder som
 
 **Kan der være flere websteder pr. gruppe?**
 
-Nej, der kan kun være et enkelt websted pr. gruppe. Private kanaler i Teams andre websteder, der ikke har forbindelse til gruppen.
+Nej, der kan kun være et enkelt websted pr. gruppe. Private og delte kanaler i Teams bruge flere websteder, der ikke har forbindelse til gruppen.
 
 **Kan websteder være knyttet til flere grupper?**
 

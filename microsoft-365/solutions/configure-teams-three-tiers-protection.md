@@ -22,12 +22,12 @@ ms.custom:
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 recommendations: false
 description: Lær, hvordan du konfigurerer Teams for bedre sikkerhed i forbindelse med fildeling ved hjælp af tre beskyttelsesniveauer og justering af sikkerhed uden besvær.
-ms.openlocfilehash: 279e338af6db4d82291209deb66e1ea1eef74630
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 116675ac6736e1761286226a8bf724915627574f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588223"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712715"
 ---
 # <a name="configure-teams-with-three-tiers-of-protection"></a>Konfigurere Teams med tre niveauer af beskyttelse
 
@@ -55,6 +55,7 @@ Følgende tabel opsummerer konfigurationerne for hvert niveau. Brug disse konfig
 |Privat eller offentligt team|Offentlig|Privat|Privat|Privat|
 |Who har adgang?|Alle i organisationen, herunder B2B-brugere.|Kun medlemmer af teamet. Andre kan anmode om adgang til det tilknyttede websted.|Kun medlemmer af teamet.|Kun medlemmer af teamet.|
 |Private kanaler|Ejere og medlemmer kan oprette private kanaler|Ejere og medlemmer kan oprette private kanaler|Kun ejere kan oprette private kanaler|Kun ejere kan oprette private kanaler|
+|Delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Kun ejere kan oprette delte kanaler|Kun ejere kan oprette delte kanaler|
 |Gæsteadgang på webstedsniveau|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** eller Kun **personer i din organisation afhængigt** af teamets behov.|**Nye og eksisterende gæster** eller Kun **personer i din organisation afhængigt** af teamets behov.|
 |Indstillinger for webstedsdeling|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Kun webstedsejere kan dele filer, mapper og webstedet**.<br>Anmodninger om adgang **er slået Fra**.|
 |Ikke-administreret enhedsadgang på webstedsniveau|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Tillad begrænset adgang, der kun findes på internettet**.|**Bloker adgang**.|
@@ -69,7 +70,7 @@ Teams til følsom og meget følsom beskyttelse er private teams, hvor deling og 
 
 ## <a name="sensitivity-labels"></a>Følsomhedsmærkater
 
-De følsomme og meget følsomme niveauer bruger følsomhedsmærkater til at sikre teamet og dets filer. For at implementere disse niveauer skal du aktivere følsomhedsetiketter for at beskytte indhold [i Microsoft Teams, Office 365 grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md).
+De følsomme og meget følsomme niveauer bruger følsomhedsmærkater til at sikre teamet og dets filer. For at implementere disse niveauer skal du aktivere følsomhedsetiketter for at beskytte indhold [i Microsoft Teams, Office 365 Grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md).
 
 Selvom niveauet for den oprindelige plan ikke kræver følsomhedsmærkater, kan du overveje at oprette en "generel" etiket og derefter kræve, at alle teams mærkes. Dette er med til at sikre, at brugerne foretager et bevidst valg om følsomhed, når de opretter et team. Hvis du planlægger at installere de følsomme eller meget følsomme niveauer, anbefaler vi, at du opretter en "generel" etiket, som du kan bruge til oprindelige teams og til filer, der ikke er følsomme.
 
@@ -94,15 +95,24 @@ Teams har ikke en skrivebeskyttet tilladelse, men det har SharePoint websted. Hv
 
 Som standard kan både ejere og medlemmer af teamet dele filer og mapper med personer uden for teamet. Dette kan omfatte personer uden for organisationen, hvis du har tilladt gæstedeling. På alle tre niveauer opdaterer vi standardlinktypen for deling for at undgå utilsigtet overdeling. På det meget følsomme niveau begrænser vi denne deling til kun teamejere.
 
-## <a name="guest-sharing"></a>Gæstedeling
+## <a name="sharing-with-people-outside-your-organization"></a>Dele med personer uden for organisationen
 
-Hvis du har brug for at samarbejde med personer uden for organisationen, anbefaler vi, at du konfigurerer [SharePoint og OneDrive-integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) for at få den bedste delings- og administrationsoplevelse.
+Hvis du har brug for at Teams indhold med personer uden for organisationen, er der to muligheder:
 
-Teams er som standard slået til, men du kan slå det fra, hvis det er nødvendigt i de følsomme og meget følsomme niveauer, ved hjælp af en følsomhedsmærkat.
+- **Gæstedeling** – Gæstedeling bruger Azure AD B2B-samarbejde, som giver brugerne mulighed for at dele filer, mapper, websteder, grupper og teams med personer uden for organisationen. Disse personer får adgang til delte ressourcer ved hjælp af gæstekonti i biblioteket.
+- **Delte kanaler** – Delte kanaler bruger Azure AD B2B direkte forbindelse, som giver brugerne mulighed for at dele ressourcer i organisationen med personer fra andre Azure AD-organisationer. Disse personer får adgang til de delte Teams via deres egen arbejds- eller skolekonto. Der oprettes ingen gæstekonto i organisationen.
 
-I det meget følsomme niveau, konfigurerer vi følsomhedsmærkaten til at kryptere filer, som den er anvendt på. Hvis du har brug for, at gæster skal have adgang til disse filer, skal du give dem tilladelser, når du opretter etiketten.
+Både gæstedeling og delte kanaler er nyttige afhængigt af situationen. Se [Planlæg eksternt samarbejde](plan-external-collaboration.md) for at få mere at vide om hver enkelt af dem, og hvordan du beslutter, hvilken du vil bruge i et bestemt scenarie.
+
+Hvis du planlægger at bruge gæstedeling, anbefaler vi, at [du konfigurerer SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) for at få den bedste delings- og administrationsoplevelse.
+
+Teams er som standard slået til, men du kan slå det fra, hvis det er nødvendigt i de følsomme og meget følsomme niveauer, ved hjælp af en følsomhedsmærkat. Delte kanaler er som standard tilgængelige, men det kræver konfiguration af relationer på tværs af organisationer for hver organisation, du vil samarbejde med. Se [Samarbejd med eksterne deltagere i en kanal](collaborate-teams-direct-connect.md) for at få flere oplysninger.
+
+I det meget følsomme niveau, konfigurerer vi følsomhedsmærkaten til at kryptere filer, som den er anvendt på. Hvis du har brug for, at gæster skal have adgang til disse filer, skal du give dem tilladelser, når du opretter etiketten. Eksterne deltagere i delte kanaler kan ikke tildeles tilladelser til følsomhedsmærkater og kan ikke få adgang til indhold, der er krypteret med en følsomhedsmærkat.
 
 Vi anbefaler på det kraftigste, at du lader gæstedeling være på grundniveau og på følsomme eller meget følsomme niveauer, hvis du har brug for at samarbejde med personer uden for organisationen. Funktionerne til gæstedeling i Microsoft 365 giver en meget mere sikker og styret delingsoplevelse end at sende filer som vedhæftede filer i mails. Det reducerer også risikoen for skygge-it, hvor brugerne bruger forbrugerprodukter, der ikke er rettigheder til, til at dele med legitime eksterne samarbejdspartnere.
+
+Hvis du jævnligt samarbejder med andre organisationer, der bruger Azure AD, kan delte kanaler være en god mulighed. Delte kanaler vises problemfrit i den anden organisations Teams-klient og tillader eksterne deltagere at bruge deres almindelige brugerkonto for deres organisation i stedet for at skulle logge på separat ved hjælp af en gæstekonto.
 
 Se følgende referencer for at oprette et sikkert og produktivt miljø for gæstedeling i organisationen:
 

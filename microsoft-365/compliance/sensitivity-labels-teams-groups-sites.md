@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsetiketter til at beskytte indhold SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: 46daf3ecd4c918196fa7a50f8e8869bdd54c945e
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: b5eb295e83e2a87a538201fe58c221f3f9400f97
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63588975"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63714911"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsetiketter til at beskytte indhold Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -57,6 +57,9 @@ Før du aktiverer følsomhedsmærkater for objektbeholdere og konfigurerer føls
 Når du har aktiveret og konfigureret følsomhedsmærkater for objektbeholdere, kan brugerne desuden se og anvende følsomhedsmærkater på Microsoft-teamwebsteder, Microsoft 365 grupper og SharePoint websteder. Når du f.eks. opretter et nyt teamwebsted ud fra SharePoint:
 
 ![Et følsomhedsmærkat, når du opretter et teamwebsted SharePoint.](../media/sensitivity-labels-new-team-site.png)
+
+> [!NOTE]
+> Følsomhedsmærkater for beholdere [understøtter Teams delte kanaler](/MicrosoftTeams/shared-channels), som i øjeblikket er i forhåndsvisning. Hvis et team har delte kanaler, arver de automatisk indstillinger for følsomhedsmærkater fra deres overordnede team, og denne etiket kan ikke fjernes eller erstattes med en anden etiket.
 
 ## <a name="how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels"></a>Sådan aktiverer du følsomhedsmærkater for objektbeholdere og synkroniserer etiketter
 

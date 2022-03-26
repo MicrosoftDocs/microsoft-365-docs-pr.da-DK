@@ -21,18 +21,21 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide Microsoft 365 konfigurationstrin, der er nødvendige for at konfigurere et team til samarbejde om opgaver, samtaler og dokumentation med gæster Teams.
-ms.openlocfilehash: bb6ccf4f3e17192d86675d99072eca8b836973e2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0fd723a86f79f97703eca96c0693882fbc05f13a
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588184"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712900"
 ---
 # <a name="collaborate-with-guests-in-a-team"></a>Samarbejd med gæster i et team
 
 Hvis du har brug for at samarbejde med gæster på tværs af dokumenter, opgaver og samtaler, anbefaler vi, at du bruger Microsoft Teams. Teams indeholder alle de samarbejdsfunktioner, der er tilgængelige i Office og SharePoint med fast chat samt en brugerdefinerbar og udvidet sæt samarbejdsværktøjer i en samlet brugeroplevelse.
 
 I denne artikel gennemgår vi de mest Microsoft 365 konfigurationstrin for at konfigurere et team til samarbejde med gæster. Når du har konfigureret gæsteadgang, kan du invitere gæster til teams ved at følge trinnene i Føj gæster til [et team Teams](https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f).
+
+> [!NOTE]
+> [Delte kanaler](collaborate-teams-direct-connect.md) giver en mere problemfri oplevelse end gæstekonti, når du samarbejder med Microsoft 365 organisationer. Delte kanaler giver dig mulighed for at samarbejde med personer uden for organisationen ved hjælp af Teams-kanaler, uden at eksterne deltagere skal logge på din organisation. Vi anbefaler, at du [gennemgår Planlæg](plan-external-collaboration.md) eksternt samarbejde for at se, om delte kanaler er bedre end at samarbejde med gæster for et givent scenarie.
 
 ## <a name="video-demonstration"></a>Videodemonstration
 
@@ -195,5 +198,3 @@ Sådan inviterer du gæster til et team
 [Opret et B2B-ekstranet med administrerede gæster](b2b-extranet.md)
 
 [SharePoint- og OneDrive-integration med Azure Active Directory B2B](/sharepoint/sharepoint-azureb2b-integration-preview)
-
-[Delingsindstillinger nedtones, når du deler fra SharePoint eller OneDrive](/sharepoint/troubleshoot/administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive)

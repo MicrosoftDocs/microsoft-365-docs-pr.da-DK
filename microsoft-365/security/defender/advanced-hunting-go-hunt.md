@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: e14f2d5e35585cf5b0edfe433084fa7c8a1d5280
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: 3d1ec22febe0c0072a4eed2a9b8fece3687762d7
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "63591916"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754272"
 ---
 # <a name="quickly-hunt-for-entity-or-event-information-with-go-hunt"></a>Hurtig jagt på enheds- eller begivenhedsoplysninger med gå på jagt
 
@@ -38,25 +38,27 @@ ms.locfileid: "63591916"
 
 Med handlingen *gå på jagt* kan du hurtigt undersøge begivenheder og forskellige enhedstyper ved hjælp af effektive forespørgselsbaserede [avancerede jagtegenskaber](advanced-hunting-overview.md) . Denne handling kører automatisk en avanceret forespørgsel for at finde relevante oplysninger om den valgte hændelse eller enhed.
 
-Handlingen *er tilgængelig* i forskellige sektioner af Defender for Cloud, når der vises oplysninger om begivenhed eller enhed. Du kan f.eks. *bruge go hunt* fra følgende afsnit:
+Handlingen *er tilgængelig* i forskellige afsnit af Defender til skyen. Denne handling er tilgængelig for visning, når oplysninger om hændelse eller enhed vises. Du kan f.eks. bruge *indstillingen gå* på jagt fra følgende afsnit:
 
-- På [hændelsessiden kan](investigate-incidents.md#summary) du gennemse oplysninger om brugere, enheder og mange andre enheder, der er knyttet til en hændelse. Når du vælger en enhed, får du yderligere oplysninger samt forskellige handlinger, du kan udføre på den pågældende enhed. I eksemplet nedenfor er en postkasse markeret og viser detaljer om postkassen samt muligheden for at lede efter flere oplysninger om postkassen.
+- På [hændelsessiden kan](investigate-incidents.md#summary) du gennemse oplysninger om brugere, enheder og mange andre enheder, der er knyttet til en hændelse. Når du vælger en enhed, får du yderligere oplysninger og de forskellige handlinger, du kan udføre på den pågældende enhed. I eksemplet nedenfor er en postkasse markeret og viser detaljer om postkassen og muligheden for at lede efter flere oplysninger om postkassen.
 
-    :::image type="content" source="../../media/go-hunt-1-incident.png" alt-text="Siden **Mailboxes** med indstillingen **Go hunt** i Microsoft 365 Defender portal" lightbox="../../media/go-hunt-1-incident.png":::
+    :::image type="content" source="../../media/go-hunt-1-incident.png" alt-text="Siden Postkasser med indstillingen Gå på jagt Microsoft 365 Defender portalen" lightbox="../../media/go-hunt-1-incident.png":::
 
 - På hændelsessiden kan du også få adgang til en liste over enheder under **fanen** Beviser. Hvis du vælger en af disse enheder, kan du hurtigt lede efter oplysninger om den pågældende enhed.
 
-    :::image type="content" source="../../media/go-hunt-2-entity.png" alt-text="Indstillingen Gå på jagt efter et stykke bevis på siden **Hændelse** i Microsoft 365 Defender portal" lightbox="../../media/go-hunt-2-entity.png":::
+    :::image type="content" source="../../media/go-hunt-2-entity.png" alt-text="Indstillingen Gå på jagt efter et stykke bevis på siden Hændelse i Microsoft 365 Defender portal" lightbox="../../media/go-hunt-2-entity.png":::
 
 
 - Når du får vist tidslinjen for en enhed, kan du vælge en begivenhed på tidslinjen for at få vist yderligere oplysninger om den pågældende begivenhed. Når en begivenhed er markeret, får du mulighed for at lede efter andre relevante begivenheder i avanceret jagt.
 
-    :::image type="content" source="../../media/go-hunt-3-event.png" alt-text="Indstillingen **Søg efter relaterede begivenheder** på en begivenheds side på fanen **Tidslinjer** i Microsoft 365 Defender portal" lightbox="../../media/go-hunt-3-event.png":::
+    :::image type="content" source="../../media/go-hunt-3-event.png" alt-text="Indstillingen Søg efter relaterede begivenheder på en begivenheds side under fanen Tidslinjer i Microsoft 365 Defender portal" lightbox="../../media/go-hunt-3-event.png":::
 
 Når du **vælger Gå på** **jagt eller På jagt efter** relaterede begivenheder, sendes der forskellige forespørgsler, afhængigt af om du har valgt en enhed eller en hændelse.
 
 ## <a name="query-for-entity-information"></a>Forespørgsel for enhedsoplysninger
-Når du *bruger go hunt* til at forespørge efter oplysninger om en bruger, enhed eller en anden type enhed, kontrollerer forespørgslen alle relevante skematabeller for alle hændelser, der vedrører den pågældende enhed. For at holde resultaterne håndterbare er forespørgslen begrænset til omkring den samme tidsperiode som den tidligste aktivitet i de seneste 30 dage, der involverer enheden og er knyttet til hændelsen.
+Du kan bruge *gå på jagt* efter oplysninger om en bruger, enhed eller enhver anden type enhed; Forespørgslen kontrollerer alle relevante skematabeller for alle hændelser, der vedrører den pågældende enhed, for at returnere oplysninger. For at holde resultaterne håndterbare er forespørgslen:
+- området til omkring den samme tidsperiode som den tidligste aktivitet i de seneste 30 dage, der omfatter enheden
+- knyttet til hændelsen.
 
 Her er et eksempel på søgeforespørgslen om en enhed:
 
@@ -72,7 +74,7 @@ and DeviceName == deviceName
 | take 100
 ```
 ### <a name="supported-entity-types"></a>Understøttede enhedstyper
-Du kan bruge *gå på jagt efter* at have valgt en af disse enhedstyper:
+Du kan bruge indstillingen *gå på jagt* efter at have valgt en af disse enhedstyper:
 
 - Filer
 - Mails

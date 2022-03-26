@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 08d15cacdd6b391759aeb1a22abd91c98376cd17
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 27d45b46944a624abde48a37affad285092bc44d
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591693"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775472"
 ---
 # <a name="common-zero-trust-identity-and-device-access-policies"></a>Fælles politikker for nultillids identitet og enhedsadgang
 
@@ -67,7 +67,6 @@ For at give dig tid til at udføre disse opgaver anbefaler vi, at du implementer
 ||[Definer politikker for enhedsoverholdelse](#define-device-compliance-policies)|Én politik for hver platform.|Microsoft 365 E3 eller E5|
 ||[Kræv kompatible pc'er og mobilenheder](#require-compliant-pcs-and-mobile-devices)|Gennemtvinger Intune-administration for både pc'er (Windows eller macOS) og telefoner eller tablets (iOS, iPadOS eller Android).|Microsoft 365 E3 eller E5|
 |**Speciel sikkerhed**|[*Kræv* altid MFA](#assigning-policies-to-groups-and-users)||Microsoft 365 E3 eller E5|
-|
 
 ## <a name="assigning-policies-to-groups-and-users"></a>Tildele politikker til grupper og brugere
 
@@ -119,7 +118,6 @@ I **sektionen** Opgaver:
 |Skyapps eller -handlinger|**Skyapps med > Inkluder**|**Vælg apps**: Vælg de apps, denne politik skal gælde for. Vælg f.eks Exchange Online.||
 |Betingelser|||Konfigurer betingelser, der er specifikke for dit miljø og dine behov.|
 ||Risiko ved logon||Se vejledningen i følgende tabel.|
-|
 
 ### <a name="sign-in-risk-condition-settings"></a>Indstillinger for risiko ved logon
 
@@ -130,7 +128,6 @@ Anvend indstillingerne for risikoniveau baseret på det beskyttelsesniveau, du m
 |Udgangspunkt|Høj, mellem|Kontrollér begge dele.|
 |Enterprise|Høj, mellem, lav|Markér alle tre.|
 |Speciel sikkerhed||Lad alle indstillinger være umarkeret for altid at gennemtvinge MFA.|
-|
 
 I sektionen **Access-kontrolelementer** :
 
@@ -139,7 +136,6 @@ I sektionen **Access-kontrolelementer** :
 |Giv|**Giv adgang**||Vælg|
 |||**Kræv multifaktorgodkendelse**|Tjek|
 ||**Kræve alle de markerede kontrolelementer**||Vælg|
-|
 
 Vælg **Vælg** for at gemme **indstillingerne for Tildeling** .
 
@@ -161,7 +157,6 @@ I **sektionen** Opgaver:
 ||Udelad|**Brugere og grupper**: Vælg undtagelsesgruppen Betinget adgang. tjenestekonti (appidentiteter).|Medlemskab bør ændres midlertidigt efter behov.|
 |Skyapps eller -handlinger|**Skyapps med > Inkluder**|**Vælg apps**: Vælg de apps, der svarer til de klienter, der ikke understøtter moderne godkendelse.||
 |Betingelser|**Klientapps**|Vælg **Ja** for **Konfigurer** <p> Fjern markeringen for Browser- **og** **Mobilapps og skrivebordsklienter**||
-|
 
 I sektionen **Access-kontrolelementer** :
 
@@ -169,7 +164,6 @@ I sektionen **Access-kontrolelementer** :
 |---|---|---|---|
 |Giv|**Bloker adgang**||Vælg|
 ||**Kræve alle de markerede kontrolelementer**||Vælg|
-|
 
 Vælg **Vælg** for at gemme **indstillingerne for Tildeling** .
 
@@ -191,7 +185,6 @@ I **sektionen** Opgaver:
 |---|---|---|---|
 |Brugere|Medtag|**Alle brugere**|Vælg|
 |Bruger risiko|**Høj**||Vælg|
-|
 
 I den **anden Opgavesektion** :
 
@@ -199,7 +192,6 @@ I den **anden Opgavesektion** :
 |---|---|---|---|
 |Access|**Tillad adgang**||Vælg|
 |||**Kræv ændring af adgangskode**|Tjek|
-|
 
 Vælg **Udført** for at gemme **Access-indstillingerne** .
 
@@ -228,7 +220,6 @@ Med udgangspunkt i de principper, der er beskrevet i [Konfigurationer af Zero Tr
 |Udgangspunkt|[Niveau 2 forbedret databeskyttelse](/mem/intune/apps/app-protection-framework#level-2-enterprise-enhanced-data-protection)|Politikindstillingerne, der håndhæves på niveau 2, omfatter alle de politikindstillinger, der anbefales til niveau 1, og tilføjer eller opdaterer kun nedenstående politikindstillinger for at implementere flere kontrolelementer og en mere avanceret konfiguration end niveau 1.|
 |Enterprise|[Niveau 2 forbedret databeskyttelse](/mem/intune/apps/app-protection-framework#level-2-enterprise-enhanced-data-protection)|Politikindstillingerne, der håndhæves på niveau 2, omfatter alle de politikindstillinger, der anbefales til niveau 1, og tilføjer eller opdaterer kun nedenstående politikindstillinger for at implementere flere kontrolelementer og en mere avanceret konfiguration end niveau 1.|
 |Speciel sikkerhed|[Niveau 3 til virksomheder høj databeskyttelse](/mem/intune/apps/app-protection-framework#level-3-enterprise-high-data-protection)|Politikindstillingerne, der håndhæves på niveau 3, omfatter alle de politikindstillinger, der anbefales til niveau 1 og 2 og tilføjer eller opdaterer kun nedenstående politikindstillinger for at implementere flere kontrolelementer og en mere avanceret konfiguration end niveau 2.|
-|
 
 Hvis du vil oprette en ny politik for beskyttelse af apps til hver platform (iOS og Android) inden for Microsoft Endpoint Manager brug af indstillingerne for databeskyttelse, kan du:
 
@@ -362,7 +353,6 @@ Du **kan finde flere > Windows om evalueringsregler for enhedstilstand i** denne
 |Kræv BitLocker|Kræv|Vælg|
 |Kræv, at Secure Boot er aktiveret på enheden|Kræv|Vælg|
 |Kræve kodeintegritet|Kræv|Vælg|
-|
 
 For **Enhedsegenskaber skal** du angive relevante værdier for operativsystemversioner baseret på it og sikkerhedspolitikker.
 
@@ -388,14 +378,12 @@ Du **kan se Systemsikkerhed** i denne tabel.
 ||Minimumversion af Microsoft Defender Antimalware||Type <p> Understøttes kun til Windows 10 skrivebord. Microsoft anbefaler versioner, der højst er fem bagud i forhold til den nyeste version.|
 ||Microsoft Defender Antimalware-signatur opdateret|Kræv|Vælg|
 ||Beskyttelse i realtid|Kræv|Vælg <p> Understøttes kun til Windows 10 og nyere computere|
-|
 
 #### <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender til Slutpunkt
 
 |Type|Egenskaber|Værdi|Handling|
 |---|---|---|---|
 |Microsoft Defender for Endpoint-regler Microsoft Endpoint Manager Administration|[Kræv, at enheden er på eller under scoren for maskinrisici](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level)|Mellem|Vælg|
-|
 
 <!--
 ## Require compliant PCs (but not compliant phones and tablets)

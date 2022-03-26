@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsetiketter, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: ac57859d7f27b22060b88189e79d386791535c9e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a7498685709dfc24feae61453057d51025ee9168
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589478"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716293"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsnavne
 
@@ -117,6 +117,9 @@ Opbevaringspolitikker kan anvendes på følgende placeringer:
 - Teams private kanalmeddelelser
 - Yammer communitymeddelelser
 - Yammer brugermeddelelser
+
+> [!NOTE]
+> Teams inkluderer nu [delte kanaler](/MicrosoftTeams/shared-channels) (i øjeblikket i forhåndsvisning) samt standardkanaler.
 
 Du kan anvende en enkelt politik meget effektivt på flere placeringer eller på bestemte placeringer eller brugere.
 

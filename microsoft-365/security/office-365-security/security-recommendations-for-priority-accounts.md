@@ -21,12 +21,12 @@ ms.custom: ''
 description: Administratorer kan lære, hvordan de hæver sikkerhedsindstillingerne og bruger rapporter, beskeder og undersøgelser til prioritetskonti i deres Microsoft 365 organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2e0964d9b023a3a7c1efdda121cc34c1f37edd06
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: f27e146df680b36c117816f0a07e45e0345c647a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63590488"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675410"
 ---
 # <a name="security-recommendations-for-priority-accounts-in-microsoft-365"></a>Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365
 
@@ -38,10 +38,6 @@ Microsoft 365 og Microsoft Defender til Office 365 indeholder flere vigtige funk
 
 ![Oversigt over sikkerhedsanbefalinger i ikonform.](../../media/security-recommendations-for-priority-users.png)
 
-<br>
-
-****
-
 |Opgave|Alle Office 365 Enterprise-planer|Microsoft 365 E3|Microsoft 365 E5|
 |---|:---:|:---:|:---:|
 |[Øg sikkerheden for logon på prioritetskonti](#increase-sign-in-security-for-priority-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
@@ -49,7 +45,6 @@ Microsoft 365 og Microsoft Defender til Office 365 indeholder flere vigtige funk
 |[Anvend brugermærker på prioritetskonti](#apply-user-tags-to-priority-accounts)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |[Overvåge prioritetskonti i beskeder, rapporter og registreringer](#monitor-priority-accounts-in-alerts-reports-and-detections)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |[Oplære brugere](#train-users)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|
 
 > [!NOTE]
 > Du kan finde oplysninger om _beskyttelse af privilegerede_ konti (administratorkonti) [i dette emne](/azure/architecture/framework/security/critical-impact-accounts).
@@ -94,10 +89,6 @@ Du kan også oprette brugerdefinerede mærker til yderligere at identificere og 
 
 Når du sikrer og mærker dine prioritetsbrugere, kan du bruge de tilgængelige rapporter, beskeder og undersøgelser i EOP og Defender til Office 365 til hurtigt at identificere hændelser eller registreringer, der involverer prioritetskonti. De funktioner, der understøtter brugermærker, er beskrevet i følgende tabel.
 
-<br>
-
-****
-
 |Funktion|Beskrivelse|
 |---|---|
 |Beskeder|Brugermærkerne for de berørte brugere er synlige og tilgængelige som filtre **på siden Beskeder** i Microsoft 365 Defender portal. Du kan få mere at vide [under Få vist beskeder](../../compliance/alert-policies.md#viewing-alerts).|
@@ -105,7 +96,6 @@ Når du sikrer og mærker dine prioritetsbrugere, kan du bruge de tilgængelige 
 |Kampagnevisninger|Brugermærker er en af mange filtrerbare egenskaber i Kampagnevisninger i Microsoft Defender Office 365 Plan 2. Du kan finde flere oplysninger i [Kampagnevisninger](campaigns.md).|
 |Statusrapport over trusselsbeskyttelse|I stort set alle visninger og detaljetabeller i **statusrapporten for trusselsbeskyttelse** kan du filtrere resultaterne efter **prioritetskonti**. Du kan få mere at vide [under Statusrapport for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).|
 |Mailproblemer for prioritetskonti-rapport|Rapporten **Mailproblemer for prioritetskonti** i Exchange Administration (EAC) indeholder oplysninger om ikke-leveret og forsinkede meddelelser for **prioritetskonti**. Få mere at vide under [Mailproblemer for prioritetskonti-rapport](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report).|
-|
 
 ## <a name="train-users"></a>Oplære brugere
 
@@ -114,10 +104,6 @@ Kursus brugere med prioritetskonti kan hjælpe med at spare disse brugere og dit
 The Harvard The School [Cybersecurity Campaign Handbook giver](https://www.belfercenter.org/CyberPlaybook) fremragende vejledning til oprettelse af en stærk kultur for sikkerhedskultur i din organisation, herunder uddannelse af brugere til at identificere phishing-angreb.
 
 Microsoft 365 indeholder følgende ressourcer, som kan hjælpe med at informere brugerne i organisationen:
-
-<br>
-
-****
 
 |Koncept|Ressourcer|Beskrivelse|
 |---|---|---|

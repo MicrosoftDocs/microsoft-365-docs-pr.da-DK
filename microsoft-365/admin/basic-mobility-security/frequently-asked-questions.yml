@@ -1,0 +1,77 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed
+  f1.keywords:
+  - NOCSH
+  ms.author: kwekua
+  author: kwekua
+  manager: scotv
+  audience: Admin
+  ms.topic: reference
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  ms.collection:
+  - M365-subscription-management
+  - Adm_O365
+  - Adm_TOC
+  ms.custom:
+  - AdminSurgePortfolio
+  - admindeeplinkEXCHANGE
+  search.appverid:
+  - MET150
+  description: Ofte stillede spørgsmål om Grundlæggende mobilitet og sikkerhed.
+  ms.openlocfilehash: cf95c02fcd3acb3ded119559812cab8ce90316ec
+  ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 12/13/2021
+  ms.locfileid: "63595984"
+title: Ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed
+summary: Denne artikel indeholder ofte stillede spørgsmål om Grundlæggende mobilitet og sikkerhed, som er en funktion, der hjælper dig med at administrere og sikre mobilenheder Microsoft 365. Hvis du ikke kan finde et svar på dit spørgsmål, kan du fortælle os det ved at skrive en kommentar på siden, så vi kan overveje at tilføje dit spørgsmål i denne artikel.
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvordan får jeg Grundlæggende mobilitet og sikkerhed? Jeg kan ikke se den i Microsoft 365 Administration
+    answer: >
+      1.  Aktivér Grundlæggende mobilitet og sikkerhed ved at gå [til Office 365 Security & Compliance](https://protection.office.com/).
+
+
+      2.  Gå til Forebyggelse af datatab > administration af enheder.
+  - question: >
+      Hvordan kommer jeg i gang med administration af enheder i Grundlæggende mobilitet og sikkerhed?
+    answer: "Der er fire trin til at komme i gang med Grundlæggende mobilitet og sikkerhed: \n\n1. Aktivér Grundlæggende mobilitet og sikkerhed ved at gå [til Office 365 Security & Compliance](https://protection.office.com/).\n\n2. Gå til Forebyggelse af datatab > politikker for > enhed.\n    \n3. Opret politikker for administration af enheder, og anvend dem på grupper af brugere, der er konfigureret i sikkerhedsgrupper. Vi anbefaler, at du starter med at implementere politikkerne for en lille testgruppe. Få mere at vide under [Opret sikkerhedspolitikker for enheder i Grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).\n\n4. Brugere, der har fået anvendt en politik, bliver bedt om at tilmelde deres enheder, når de forsøger at få adgang til Microsoft 365 data. Du kan få mere at vide [under Tilmeld din mobilenhed ved hjælp af Grundlæggende mobilitet og sikkerhed](enroll-your-mobile-device.md).\n\nDu kan få mere at vide [under Konfigurer Grundlæggende mobilitet og sikkerhed](set-up.md).\n"
+  - question: >
+      Jeg forsøger at konfigurere Grundlæggende mobilitet og sikkerhed, men den ser ud til at være fastlåst. Den Microsoft 365 tjeneste sundhed har vist "klargøring" i et stykke tid. Hvad kan jeg gøre?
+    answer: >
+      Det kan tage lidt tid at få tjenesten klar til dig. Når klargøring er fuldført, får du vist siden Grundlæggende mobilitet og sikkerhed. Hvis du har ventet i 24 timer, og status stadig er ved at blive klargjort, skal du kontakte Support, så hjælper vi dig med at finde ud af, hvad problemet er.
+  - question: >
+      Hvad kan jeg gøre, hvis tilmelding af enheder mislykkes?
+    answer: "Hvis du har problemer med at tilmelde en enhed, skal du først kontrollere følgende:\n\n- Sørg for, at enheden ikke allerede er tilmeldt en anden udbyder af administration af mobilenheder, f.eks. Intune.\n\n- Sørg for, at enheden er indstillet til den korrekte dato og det korrekte klokkeslæt.\n\n- Skift til et andet WIFI- eller mobilnetværk på enheden.\n\n- På Android- eller iOS-enheder skal du fjerne og Intune-firmaportal appen på enheden.\n    \nHvis din tilmelding stadig ikke virker, skal du se Fejlfinding [af grundlæggende mobilitet og sikkerhed](troubleshoot.md).\n"
+  - question: >
+      Hvad er forskellen mellem Intune og Grundlæggende mobilitet og sikkerhed?
+    answer: >
+      Intune-tjenesten hoster Grundlæggende mobilitet og sikkerhed. Det er et undersæt af Intune-tjenester, der leveres som en ekstra fordel for Microsoft 365 og er en indbygget skybaseret løsning til administration af enheder i organisationen. Du kan finde en side om side-sammenligning af de to tjenester for at hjælpe dig med at beslutte, om det er bedst for dig at bruge Intune eller Grundlæggende mobilitet og sikkerhed til Microsoft 365 under Vælg mellem [Basic Mobility Security og Intune](choose-between-basic-mobility-and-security-and-intune.md).
+  - question: >
+      Hvordan fungerer politikker for Grundlæggende mobilitet og sikkerhed? Hvordan konfigurerer jeg dem? Vil du deaktivere dem?
+    answer: >
+      Når du har fuldført den indledende konfiguration for Grundlæggende mobilitet og sikkerhed, kan du oprette politikker og anvende dem til grupper af brugere i Security & Compliance Center. Politikker kræver, at brugere af politikkerne tilmelder sig deres enheder i Grundlæggende mobilitet og sikkerhed, før enheden kan bruges til at få adgang til Microsoft 365 data. De politikker, du konfigurerer, bestemmer indstillingerne for mobilenheder, f.eks. hvor ofte adgangskoder skal nulstilles, eller om datakryptering er påkrævet. Få mere at vide under [Opret sikkerhedspolitikker for enheder i Grundlæggende mobilitet og sikkerhedog](create-device-security-policies.md)  [Microsoft 365 Overholdelsescenter](../../compliance/microsoft-365-compliance-center.md).
+
+
+      Du kan finde en trinvis vejledning til oprettelse og implementering af enhedspolitikker under Opret sikkerhedspolitikker [for enheder i Grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).
+
+
+      Hvis du vil udelukke en bestemt gruppe af brugere fra at blive påvirket af politikker, kan du føje en gruppe til udelukkelsesgruppen.
+  - question: >
+      Kan jeg skifte fra Exchange ActiveSync til Basic Mobility and Security for Microsoft 365?
+    answer: >
+      Hvis du allerede bruger Exchange ActiveSync politikker til administration af mobilenheder, kan du begynde at bruge Grundlæggende mobilitet og sikkerhed ved at følge trinnene for at konfigurere Grundlæggende mobilitet og sikkerhed. Få mere at vide under [Beskyt bruger- og enhedsadgang](../../compliance/protect-access-to-data-and-services.md) [og Konfigurer Grundlæggende mobilitet og sikkerhed](set-up.md).
+
+
+      Når du anvender de politikker, du opretter i Grundlæggende mobilitet og sikkerhed på grupper af brugere, tilsidesætter disse politikker Exchange ActiveSync politikker for postkasse til mobilenheder og adgangsregler for enheder, som du tidligere har oprettet i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> for disse brugere.
+
+
+      Når en enhed er tilmeldt Basic Mobility and Security, ignoreres Exchange ActiveSync politik for mobilenhedspostkasse eller adgangsregel for enheder, der anvendes på enheden.
+  - question: >
+      Jeg har konfigureret Grundlæggende mobilitet og sikkerhed, men nu vil jeg fjerne den. Hvad er fremgangsmåden?
+    answer: Desværre kan du ikke bare fjerne "unprovision" Basic Mobility and Security, når du har konfigureret den. Men du kan fjerne det for grupper af brugere ved at fjerne brugersikkerhedsgrupper fra de enhedspolitikker, du har oprettet. Eller du kan deaktivere det for alle ved at fjerne enhedspolitikkerne, så de ikke er på plads og ikke håndhæves. Du kan få mere at vide [under Slå Grundlæggende mobilitet og sikkerhed fra](turn-off.md).

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug en opbevaringspolitik til effektivt at holde styr på det indhold, som brugerne genererer med mail, dokumenter og samtaler. Behold det, du ønsker, og afvis det, du ikke ønsker.
-ms.openlocfilehash: ddd0553405aa92a1eb7a7978398392b780a0a2ea
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: 94388a375c3c50d97e696637ef6ef4ebefc96aab
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63588231"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715487"
 ---
 # <a name="create-and-configure-retention-policies"></a>Opret og konfigurer opbevaringspolitikker
 
@@ -73,6 +73,9 @@ Når du har mere end én opbevaringspolitik, og når du også bruger opbevarings
 
 ### <a name="retention-policy-for-teams-locations"></a>Opbevaringspolitik for Teams placeringer
 
+> [!NOTE]
+> Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er i forhåndsvisning. Når du konfigurerer opbevaringsindstillinger for **Teams** kanalmeddelelsesplaceringen, arver de opbevaringsindstillinger fra deres overordnede team, hvis et team har nogen delte kanaler.
+
 1. Vælg [Microsoft 365 Overholdelsescenter politikker](https://compliance.microsoft.com/) **for informationsstyring** >  **på listen**.
 
 2. Vælg **Ny opbevaringspolitik for** at starte Konfiguration **af Opret opbevaringspolitik** , og navngive din nye opbevaringspolitik.
@@ -84,7 +87,7 @@ Når du har mere end én opbevaringspolitik, og når du også bruger opbevarings
     - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge Teams **,** men ikke Teams **kanalmeddelelser**. 
     
     - Hvis du vælger **Statisk**: På **siden Vælg placeringer for at** anvende politikken skal du vælge en eller flere placeringer Teams:
-        - **Teams kanalmeddelelse**: Meddelelser fra almindelige kanalchats og standardkanalmøder, men ikke fra [private](/microsoftteams/private-channels) kanaler, der har deres egen politikplacering.
+        - **Teams kanalmeddelelse**: Meddelelser fra standardchats og delte kanalchats samt standard- og delte kanalmøder, men ikke fra [private](/microsoftteams/private-channels) kanaler, der har deres egen politikplacering.
         - **Teams chatsamtaler**: Beskeder fra private 1:1-chats, gruppechats og mødechats.
         - **Teams private kanalmeddelelser**: Beskeder fra private kanalchats og private kanalmøder.
         
@@ -224,7 +227,7 @@ For det første skal opbevaringspolitikken fordeles til de placeringer, du har v
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - For alle andre politikplaceringer, f.eks. **Exchange, mail** **SharePoint, websteder****, Teams kanalmeddelelser** osv.:
+    - For alle andre politikplaceringer, f.eks. **Exchange mail**, **SharePoint** websteder og **Teams kanalmeddelelser**:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution

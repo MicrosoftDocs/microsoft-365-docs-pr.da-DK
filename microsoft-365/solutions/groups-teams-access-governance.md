@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om, hvordan du Microsoft 365 adgang i Teams, grupper og SharePoint.
-ms.openlocfilehash: e01326093476f341c6c4c75448efbdf8c745779f
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 3f4304a54cd1eae86c98d530e5a4ec4db5f6dc66
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63590527"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716162"
 ---
 # <a name="governing-access-in-microsoft-365-groups-teams-and-sharepoint"></a>Styre adgangen til Microsoft 365 grupper, Teams og SharePoint
 
@@ -36,7 +36,7 @@ Den følgende tabel giver en hurtig reference til de adgangskontrolelementer, de
 ||Dynamisk gruppemedlemskab baseret på regler|[Opret eller opdater en dynamisk gruppe i Azure Active Directory](/azure/active-directory/users-groups-roles/groups-create-rule)|
 ||Be kontrol, hvem der kan dele filer, mapper og websteder.|[Konfigurere og administrere anmodninger om adgang](https://support.microsoft.com/office/94b26e0b-2822-49d4-929a-8455698654b3)|
 |Betinget adgang|||
-||Multifaktorgodkendelse|[Azure AD Multifactor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)|
+||Multifaktorgodkendelse|[Azure AD multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)|
 ||Kontroller adgang til enheder baseret på gruppe-, team- eller webstedsfølsomhed.|[Brug følsomhedsetiketter til at beskytte indhold Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md)|
 ||Begræns adgangen til webstedet for enheder, der ikke er administrerede.|[Styre SharePoint adgang fra enheder, der ikke er administrerede](/sharepoint/control-access-from-unmanaged-devices)|
 ||Kontrollere adgang til webstedet baseret på placering|[Kontrollere adgang til SharePoint og OneDrive baseret på netværksplacering](/sharepoint/control-access-based-on-network-location)|
@@ -53,7 +53,6 @@ Den følgende tabel giver en hurtig reference til de adgangskontrolelementer, de
 |Brugeradministration|||
 ||Gennemgå team- og gruppemedlemskab med jævne mellemrum.|[Hvad er Azure AD-adgangsvurderinger?](/azure/active-directory/governance/access-reviews-overview)|
 ||Automatiser adgangsstyring for grupper og teams.|[Hvad er Azure AD rettighedsstyring?](/azure/active-directory/governance/entitlement-management-overview)|
-||Tillad eller bloker personer i at oprette private kanaler Teams.|[Administrer livscyklussen for private kanaler i Microsoft Teams](/MicrosoftTeams/private-channels-life-cycle-management)|
 
 ## <a name="membership"></a>Medlemskab
 
@@ -72,9 +71,9 @@ SharePoint giver mulighed for at tilføje ejere, medlemmer og besøgende, som ik
 
 ## <a name="conditional-access"></a>Betinget adgang
 
-Med Microsoft 365 kan du kræve multifaktorgodkendelse for både personer i og uden for organisationen. Der er mange muligheder for de omstændigheder, hvor folk bliver bedt om en anden godkendelsesmetode. Vi anbefaler stærkt, at du installerer multifaktorgodkendelse for organisationen:
+Med Microsoft 365 kan du kræve multifaktorgodkendelse for både personer i og uden for organisationen. Der er mange muligheder for de omstændigheder, hvor folk bliver bedt om en anden godkendelsesmetode. Vi anbefaler på det kraftigste, at du installerer multifaktorgodkendelse for organisationen:
 
-- [Azure AD Multifactor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 Hvis du har følsomme oplysninger i nogle af dine grupper og teams, kan du håndhæve politikker for administration af enheder baseret på en gruppe eller et teams følsomhedsmærkat. Du kan blokere adgangen helt fra enheder, der ikke er administrerede, eller tillade begrænset adgang, kun via internettet:
 
@@ -156,7 +155,9 @@ Private kanaler i Teams mulighed for samtaler og fildeling mellem et undersæt a
 
 - [Private kanaler i Microsoft Teams](/MicrosoftTeams/private-channels)
 
-- [Administrer livscyklussen for private kanaler i Microsoft Teams](/MicrosoftTeams/private-channels-life-cycle-management)
+Delte kanaler giver dig mulighed for at invitere personer, der er uden for teamet eller uden for organisationen. Afhængigt af dine specifikke forretningsbehov og politikker for ekstern deling kan det være en ide at tillade eller blokere denne funktion.
+
+- [Delte kanaler](/MicrosoftTeams/shared-channels)
 
 Flere ressourcer:
 

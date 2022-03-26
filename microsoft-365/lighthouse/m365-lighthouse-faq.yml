@@ -6,7 +6,7 @@ metadata:
   author: SKjerland
   manager: scotv
   audience: Admin
-  ms.topic: article
+  ms.topic: faq
   ms.prod: microsoft-365-lighthouse
   ms.localizationpriority: medium
   ms.collection:
@@ -17,12 +17,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få svar på ofte stillede spørgsmål om Microsoft 365 Fyrtårn.
-  ms.openlocfilehash: 746ec9210e517921d1c2145c9e87f0d339a67758
-  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.openlocfilehash: 24edebe8ef0a04c3256937195252fd5421599558
+  ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63592480"
+  ms.lasthandoff: 03/24/2022
+  ms.locfileid: "63775428"
 title: Microsoft 365 Lighthouse ofte stillede spørgsmål (Ofte stillede spørgsmål)
 summary: >
   Denne artikel indeholder svar på ofte stillede spørgsmål om Microsoft 365 Lighthouse.
@@ -57,7 +57,7 @@ sections:
     answer: >
       Det kan tage op til 48 timer, før kundelejerdata indlæses i Lighthouse. Hvis der er gået mere end 48 timer, siden du fuldførte onboarding, skal du kontakte vores supportteam for at få hjælp. Du skal give dem besked, når du er færdig med onboarding, og angive relevante skærmbilleder og logfiler. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
   - question: Hvorfor kan jeg se data for nogle kundelejere, men ikke for andre?
-    answer: "\nFor at kundelejerdata kan vises i Lighthouse, skal MSP'er etablere delegerede administratorrettigheder (DAP) eller detaljeret delegerede administratorprivilegiteter (GDAP) med kunder via Partnercenter. Få mere at vide under [Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst ét Microsoft 365 Business Premium-Microsoft 365 E3-abonnement og færre end 1000 brugere med licens i deres lejer. Du kan få mere at [vide under Sideoversigt Microsoft 365 requirements](m365-lighthouse-requirements.md) for [Microsoft 365 Lighthouse Microsoft 365 Lighthouse Tenants](m365-lighthouse-tenants-page-overview.md).\n"
+    answer: "For at kundelejerdata kan vises i Lighthouse, skal MSP'er etablere delegeret adgang for at administrere kundelejeren. Delegerede administratorrettigheder (DAP) kræves for at onboarde kunder til Lighthouse. Vi anbefaler, at du etablerer GDAP (Granular Delegated Admin Privileges) med dine kunder for at give en mere sikker delegeret adgang. Mens DAP og GDAP coexist anvendes, har GDAP forrang for kunder, hvor begge modeller er på plads. Kunder med just GDAP (og ingen DAP) vil snart kunne onboarde til Lighthouse. Du kan finde flere oplysninger om delegeret adgang [i Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst ét Microsoft 365 Business Premium-Microsoft 365 E3-abonnement og færre end 1000 brugere med licens i deres lejer. Du kan få mere at [vide under Sideoversigt Microsoft 365 requirements](m365-lighthouse-requirements.md) for [Microsoft 365 Lighthouse Microsoft 365 Lighthouse Tenants](m365-lighthouse-tenants-page-overview.md).          \n"
   - question: Hvad nu, hvis jeg ikke vil se bestemte lejere i Microsoft 365 Lighthouse?
     answer: >
       Hvis du ikke vil se bestemte lejere og deres data i Lighthouse, kan du deaktivere disse lejere. Hvis du vil deaktivere en lejer, skal du følge disse trin:

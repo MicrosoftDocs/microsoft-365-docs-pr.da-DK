@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsetiketpolitik for at beholde det, du ønsker, og fjerne det, du ikke ønsker.
-ms.openlocfilehash: 2fd9f2655b13d8c9ac829108d3563a6a4322f3bc
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 3b2833b2b6293845379f9f5aeffd3bd46610e2a8
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63592982"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63713069"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og opbevaringsetiketpolitikker
 
@@ -59,7 +59,7 @@ Når du vælger at bruge tilpassede områder, bliver du bedt om at vælge, hvilk
 |:-----|:-----|
 |**Brugere** – gælder for:  <br/> - Exchange mail <br/> - OneDrive konti <br/> - Teams chatsamtaler <br/> - Teams private kanalmeddelelser <br/> - Yammer brugermeddelelser| Fornavn <br/> Efternavn    <br/>Vist navn <br/> Stilling <br/> Afdeling <br/> Office <br/>Adresse    <br/> By <br/>Stat eller provins <br/>Postnummer <br/> Land eller område <br/> Mailadresser <br/> Alias <br/> Exchange brugerdefinerede attributter: CustomAttribute1 - CustomAttribute15|
 |**SharePoint-websteder** – gælder for:  <br/> - SharePoint websteder <br/> - OneDrive konti |URL-adresse til websted <br/>Webstedets navn <br/> SharePoint brugerdefinerede egenskaber: RefinableString00 - RefinableString99 |
-|**Microsoft 365-grupper** – gælder for:  <br/> - Microsoft 365 grupper <br/> - Teams kanalmeddelelser <br/> - Yammer communitymeddelelser |Navn <br/> Vist navn <br/> Beskrivelse <br/> Mailadresser <br/> Alias <br/> Exchange brugerdefinerede attributter: CustomAttribute1 - CustomAttribute15 |
+|**Microsoft 365-grupper** – gælder for:  <br/> - Microsoft 365 grupper <br/> - Teams kanalmeddelelser (standard og delt) <br/> - Yammer communitymeddelelser |Navn <br/> Vist navn <br/> Beskrivelse <br/> Mailadresser <br/> Alias <br/> Exchange brugerdefinerede attributter: CustomAttribute1 - CustomAttribute15 |
 
 Egenskabsnavnene for websteder er baseret på SharePoint websteds administrerede egenskaber. Du kan finde oplysninger om de brugerdefinerede attributter i Brug [af brugerdefinerede egenskaber SharePoint egenskaber for websted til at anvende Microsoft 365 opbevaring med tilpassede politikomfang](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 

@@ -19,31 +19,33 @@ ms.localizationpriority: medium
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om, hvordan Microsoft 365 konfigurerer apps som Teams, OneDrive og SharePoint til samarbejde med personer uden for organisationen.
-ms.openlocfilehash: 0a67eff5c201eaa82e36152c5a429df00c3ec876
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 65511cbafdc1f5a666c11e1bef7fefd6e6852ee3
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588602"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712768"
 ---
 # <a name="collaborating-with-people-outside-your-organization"></a>Samarbejde med personer uden for organisationen
 
-De eksterne delingsfunktioner i Microsoft 365 giver personer i organisationen mulighed for at samarbejde med partnere, leverandører, kunder og andre, der ikke har en konto i kataloget. Du kan dele hele teams eller websteder med personer uden for organisationen eller blot individuelle filer.
+De eksterne delingsfunktioner i Microsoft 365 giver personer i organisationen mulighed for at samarbejde med partnere, leverandører, kunder og andre, der ikke har en konto i kataloget. Du kan dele hele teams, kanaler eller websteder med personer uden for organisationen eller blot individuelle filer.
 
-Samarbejde med personer uden for organisationen består af to overordnede komponenter:
+Samarbejde med personer uden for organisationen består af disse overordnede komponenter:
 
 - **Aktivér** deling – Konfigurer kontrolelementerne for deling på tværs af Azure Active Directory, Teams, Microsoft 365 Groups og SharePoint for at tillade det niveau af deling, du ønsker for organisationen.
+- **Konfigurer organisationsrelationer** – Hvis du bruger delte kanaler, skal du konfigurere adgangsindstillinger for flere lejere i Azure Active Directory for at tillade B2B direkte forbindelsesadgang for hver organisation, du vil samarbejde med. (Disse organisationer skal også konfigurere organisationsrelationer med din lejer).
 - **Aktivér** ekstra sikkerhed – Mens de grundlæggende delingsfunktioner kan konfigureres til at kræve, at personer uden for organisationen skal godkendes, indeholder Microsoft 365 mange ekstra funktioner til sikkerhed og overholdelse, som kan hjælpe dig med at beskytte dine data og vedligeholde dine styringspolitikker, mens du deler eksternt.
 
 Læs [Konfigurer sikkert samarbejde med Microsoft 365 og Microsoft Teams](/microsoft-365/solutions/setup-secure-collaboration-with-teams) for at få mere at vide om, hvordan eksterne deling bindinger med den overordnede Microsoft 365 samarbejdsvejledning.
 
 ## <a name="enable-sharing"></a>Aktivér deling
 
-Deling med personer Microsoft 365 organisationen er som standard aktiveret. Mange scenarier for ekstern deling fungerer uden yderligere konfiguration. Hvis du vil bekræfte indstillingerne for et scenarie, du bruger, eller aktivere et nyt, skal du vælge mellem følgende indstillinger:
+Som standard er deling med personer uden for organisationen ved hjælp af gæsteadgang eller anonym adgang aktiveret, men delte kanaler skal være aktiveret ved at konfigurere organisationsrelationer i Azure AD. De fleste scenarier for gæstedeling fungerer uden yderligere konfiguration. Hvis du vil bekræfte indstillingerne for et scenarie, du bruger, eller aktivere et nyt, skal du vælge mellem følgende indstillinger:
 
 - [Samarbejde om dokumenter](collaborate-on-documents.md) – Få mere at vide om, hvordan du konfigurerer Microsoft 365 til at tillade deling og samarbejde med personer uden for organisationen (både gæster og ikke-godkendte brugere) om filer og mapper.
 - [Samarbejd på et websted –](collaborate-in-site.md) Få mere at vide om, hvordan du konfigurerer Microsoft 365 at aktivere deling SharePoint websteder med gæster.
 - [Samarbejd som et team](collaborate-as-team.md) – Lær, hvordan du konfigurerer Microsoft 365 for at aktivere gæstesamarbejde Teams.
+- [Samarbejd med eksterne deltagere i en kanal](/microsoft-365/solutions/collaborate-teams-direct-connect) for at samarbejde med personer uden for organisationen i en delt kanal.
 
 Du kan finde et nærmere overblik over de indstillinger for gæstedeling, der er tilgængelige Microsoft 365, [Microsoft 365 reference til indstillinger for gæstedeling](microsoft-365-guest-settings.md).
 
@@ -57,7 +59,9 @@ Når du har aktiveret det scenarie, du vil bruge til deling med personer uden fo
 
 ## <a name="collaborate-with-partner-companies"></a>Samarbejd med partnervirksomheder
 
-Når du arbejder på et stort projekt, der involverer mange gæster fra en anden organisation, eller hvis du har en igangværende leverandørrelation, som gæster ofte ændrer sig i, kan du bruge rettighedsadministration i Azure Active Directory til at forenkle gæsteadministrationen og tillade partnerfirmaet at dele det pågældende ansvar. Se [Opret et B2B-ekstranet med administrerede gæster](b2b-extranet.md) for at få flere oplysninger.
+Når du arbejder på et stort projekt, der involverer gæster fra en anden organisation, bør du overveje delte kanaler. Da delte kanaler ikke bruger gæstekonti, kan brugerne i den anden organisation få direkte adgang til den delte kanal uden at skulle logge på din organisation separat.
+
+Hvis du har en igangværende leverandørrelation, hvor gæster ofte ændrer sig, kan du bruge rettighedsstyring i Azure Active Directory til at forenkle gæsteadministration og tillade partnerfirmaet at dele det pågældende ansvar. Se [Opret et B2B-ekstranet med administrerede gæster](b2b-extranet.md) for at få flere oplysninger.
 
 ## <a name="limit-sharing"></a>Begræns deling
 

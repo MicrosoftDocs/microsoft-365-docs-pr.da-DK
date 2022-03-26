@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Få mere at vide om, hvordan du installerer teams med beskyttelse til meget følsomme data.
-ms.openlocfilehash: 053f92f0a3f7551d747c81b13b3832798c7e953c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 02b74d6f2a2e168f07a095207dcdc1bb6785aa8f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588644"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715207"
 ---
 # <a name="configure-teams-with-protection-for-highly-sensitive-data"></a>Konfigurer teams med beskyttelse til meget følsomme data
 
@@ -62,7 +62,7 @@ For at tillade eller blokere gæstedeling bruger vi en kombination af et følsom
 
 Til det meget følsomme beskyttelsesniveau bruger vi en følsomhedsmærkat til at klassificere teamet. Denne etiket kan også bruges til at klassificere og kryptere individuelle filer i dette eller andre teams eller på andre filplaceringer, f.eks SharePoint eller OneDrive. 
 
-Som det første trin skal du aktivere følsomhedsmærkater for Teams. Se [Brug følsomhedsetiketter til at beskytte indhold Microsoft Teams, Office 365 grupper og SharePoint, hvis](../compliance/sensitivity-labels-teams-groups-sites.md) du vil have mere at vide.
+Som det første trin skal du aktivere følsomhedsmærkater for Teams. Se [Brug følsomhedsetiketter til at beskytte indhold i Microsoft Teams, Office 365 grupper og SharePoint, hvis](../compliance/sensitivity-labels-teams-groups-sites.md) du vil have mere at vide.
 
 Hvis du allerede har implementeret følsomhedsmærkater i din organisation, kan du overveje, hvordan denne etiket passer til din overordnede etiketstrategi. Du kan ændre navnet eller indstillingerne, hvis det er nødvendigt, for at imødekomme organisationens behov.
 
@@ -119,6 +119,10 @@ Sådan begrænser du oprettelse af private kanaler
 
 Du kan også bruge [teams-politikker til](/MicrosoftTeams/teams-policies) at styre, hvem der kan oprette private kanaler.
 
+## <a name="shared-channel-settings"></a>Indstillinger for delt kanal
+
+[Delte kanaler](/MicrosoftTeams/shared-channels) har ikke teamniveauindstillinger. De indstillinger for delte kanaler, du konfigurerer i Teams Administration og Azure AD, er tilgængelige for alle teams uanset følsomhed.
+
 ## <a name="sharepoint-settings"></a>SharePoint indstillinger
 
 Hver gang du opretter et nyt team med den meget følsomme etiket, er der to trin at udføre i SharePoint:
@@ -136,9 +140,7 @@ Sådan opdateres webstedets standardlinktype for deling
 1. Fjern markeringen i afkrydsningsfeltet Samme som indstilling på **organisationsniveau under** Standardtype for delingslink, og vælg **Personer med eksisterende adgang**.
 1. Vælg **Gem**.
 
-#### <a name="private-channels"></a>Private kanaler
-
-Hvis du føjer private kanaler til teamet, opretter hver privat kanal et nyt SharePoint-websted med standardindstillingerne for deling. Disse websteder er ikke synlige i SharePoint Administration, så du skal bruge Set-SPOSite PowerShell-cmdlet'en til at opdatere indstillingerne for gæstedeling.
+Bemærk, at hvis du føjer private eller delte kanaler til teamet, opretter hver SharePoint websted med standardindstillingerne for deling. Du kan opdatere dem i SharePoint Administration ved at vælge de websteder, der er knyttet til teamet.
 
 ### <a name="site-sharing-settings"></a>Indstillinger for webstedsdeling
 

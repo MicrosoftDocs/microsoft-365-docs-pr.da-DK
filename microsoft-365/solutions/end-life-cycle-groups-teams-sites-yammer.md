@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Indstillinger for afslutning af livscyklus for grupper, teams og Yammer.
-ms.openlocfilehash: 883af3878bd0bc68aa539fc1cc36b66c4f1cfe9e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: d48b1950d65c91c5869cd65e47790f4c65d69f0f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589706"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715866"
 ---
 # <a name="end-of-lifecycle-options-for-groups-teams-and-yammer"></a>Indstillinger for slutningen af livscyklus for grupper, teams og Yammer
 
@@ -93,7 +93,7 @@ Fordelen ved at [arkivere et team](/microsoftteams/archive-or-delete-a-team) er,
 
 Når et team arkiveres af en ejer, er det indstillet til skrivebeskyttet for medlemmer både for indhold i teamet og, hvis det er valgt, den tilknyttede SharePoint webstedet. Formålet med denne handling er at sikre, at samtaler i kanaler bevares i deres eksisterende tilstand sammen med SharePoint-baseret indhold som f.eks. filer og wikier.
 
-I SharePoint er der ingen synlige ændringer. Der kan dog ikke foretages ændringer af nogen filer eller lister, fordi tilladelserne SharePoint for gruppen Microsoft 365 er indstillet til Besøgende **på webstedet**. Dette omfatter OneNote for teamet, som er gemt i biblioteket Webstedsaktiver på SharePoint websted.
+I SharePoint er der ingen synlige ændringer. Der kan dog ikke foretages ændringer af nogen filer eller lister, fordi tilladelserne SharePoint for gruppen Microsoft 365 angivet til Besøgende **på webstedet**. Dette omfatter OneNote for teamet, som er gemt i biblioteket Webstedsaktiver på SharePoint websted.
 
 Når et team arkiveres, er den underliggende Microsoft 365 gruppe stadig underlagt udløbspolitikken (hvis den er indstillet), og ejeren skal derfor fortsætte med at forny teamet.
 
@@ -221,7 +221,7 @@ Filer gemmes normalt på tre primære placeringer på et SharePoint websted:
 - Filer i kanaler – biblioteket Dokumenter
 - Wikisider – Teams wikidatabibliotek
 
-Hvis webstedet har et eller flere underordnede websteder, skal overskrivningsprocessen gentages for hvert underordnet websted. Hvis teamet indeholder private kanaler, er der et separat SharePoint for hver kanal.
+Hvis webstedet har et eller flere underordnede websteder, skal overskrivningsprocessen gentages for hvert underordnet websted. Hvis teamet indeholder private eller delte kanaler, er der et separat SharePoint for hver kanal.
 
 Når du fjerner filer fra en gruppe eller et team, er det vigtigt at overveje, at de kan deles med brugere, der ikke er medlemmer af gruppen eller teamet. Du ønsker måske at kommunikere den foreende ændring til dem.
 

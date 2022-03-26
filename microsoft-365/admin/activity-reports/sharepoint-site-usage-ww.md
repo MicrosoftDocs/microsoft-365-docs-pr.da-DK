@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få rapporten SharePoint webstedsbrug for at vide, hvor mange filer brugerne gemmer på SharePoint, hvor mange der bruges aktivt og den samlede forbrugte lagerplads.
-ms.openlocfilehash: da857d1814bf0aa27532d3f730d352c6edeb66e9
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: ae25562924f569431b3a6d7eda3099f69cd912b1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63590450"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754223"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365 Rapporter i Administration – SharePoint brug af websted
 
@@ -80,7 +80,7 @@ I **SharePoint for webstedsbrug** kan du se tendenser i løbet af de seneste 7 d
 |Ikke-administreret enhedspolitik  | Politikken for webstedsadgang for enheder, der ikke er administrerede.  |
 |Geoplacering  | Webstedets geografiske placering.  |
 |Filer  |Antallet af filer på webstedet. |
-|Aktive filer  | Antallet af aktive filer på webstedet.<br/> BEMÆRK! Hvis filerne er blevet fjernet i løbet af den angivne periode for rapporten, kan antallet af aktive filer, der vises i rapporten, være større end det aktuelle antal filer på webstedet.  |
+|Aktive filer  | Antallet af aktive filer på webstedet. En fil betragtes som aktiv, hvis den er blevet gemt, synkroniseret, ændret eller delt inden for den angivne periode.<br/> BEMÆRK! Hvis filerne er blevet fjernet i løbet af den angivne periode for rapporten, kan antallet af aktive filer, der vises i rapporten, være større end det aktuelle antal filer på webstedet.  |
 |Storage anvendt (MB)  |Mængden af lagerplads, der aktuelt bruges på webstedet.  |
 |Storage allokeret (MB)  |Den maksimale mængde lagerplads, der er allokeret til webstedet.  |
 |Sidevisninger  |Det antal gange, siderne blev vist på webstedet.  |

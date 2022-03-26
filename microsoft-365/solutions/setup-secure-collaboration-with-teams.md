@@ -17,12 +17,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om de bedste fremgangsmåder til at konfigurere sikkert filsamarbejde og -deling Teams at beskytte dine data baseret på deres følsomhed.
-ms.openlocfilehash: 4bf18635b0c345e18c1ed5db8c7072ca6225e33c
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: db1ad7d6d5c62775c696da89c3d771114d48e67e
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63590255"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63714947"
 ---
 # <a name="set-up-secure-file-sharing-and-collaboration-with-microsoft-teams"></a>Konfigurer sikker fildeling og samarbejde med Microsoft Teams
 
@@ -70,7 +70,7 @@ For at konfigurere sikkert samarbejde skal du bruge Microsoft 365 funktioner.
 |---|---|---|
 |Microsoft Defender til Office 365|Pengeskab vedhæftede filer til SPO, OneDrive og Teams; Pengeskab Dokumenter; Pengeskab Links til Teams|Microsoft 365 E1, E3 og E5|
 |SharePoint|Politikker for websteds- og fildeling, tilladelser for webstedsdeling, delingslinks, anmodninger om adgang, indstillinger for gæstedeling på webstedet|Microsoft 365 E1, E3 og E5|
-|Microsoft Teams|Gæsteadgang, private teams, private kanaler|Microsoft 365 E1, E3 og E5|
+|Microsoft Teams|Gæsteadgang, private teams, private kanaler, delte kanaler|Microsoft 365 E1, E3 og E5|
 |Microsoft 365 overholdelse af regler og standarder|Følsomhedsmærkater|Microsoft 365 E3 og E5|
 
 ## <a name="collaboration-governance-framework-for-teams-and-microsoft-365"></a>Samarbejdsstyringsrammer for Teams og Microsoft 365
@@ -119,6 +119,7 @@ Disse ressourcer kan hjælpe dig med at komme i gang med at konfigurere dit milj
 - [Samarbejd om dokumenter](collaborate-on-documents.md) til deling af individuelle filer i mapper.
 - [Samarbejd på et websted](collaborate-in-site.md) om at samarbejde med gæster på et SharePoint websted.
 - [Samarbejd som et team](collaborate-as-team.md) om at samarbejde med gæster i et team.
+- [Samarbejd med eksterne deltagere i en kanal](/microsoft-365/solutions/collaborate-teams-direct-connect) for at samarbejde med personer uden for organisationen i en delt kanal.
 
 Afhængigt af følsomheden af de oplysninger, der deles, kan du tilføje sikkerhedsforanstaltninger for at forhindre overdeling. Disse ressourcer kan hjælpe dig med at konfigurere de beskyttelser, du har brug for i din organisation:
 
@@ -126,7 +127,7 @@ Afhængigt af følsomheden af de oplysninger, der deles, kan du tilføje sikkerh
 - [Begræns utilsigtet eksponering af filer ved deling med personer uden for organisationen](share-limit-accidental-exposure.md)
 - [Opret et sikkert miljø for gæstedeling](create-secure-guest-sharing-environment.md)
 
-Hvis du har et større projekt med en partnerorganisation, kan du bruge administration af Azure-rettighed til at administrere gæster fra den pågældende organisation i et team, som du har konfigureret for projektet. Se [Opret et B2B-ekstranet med administrerede gæster](b2b-extranet.md) for at få flere oplysninger.
+Hvis du har et større projekt med en partnerorganisation, kan du bruge enten [](/microsoft-365/solutions/collaborate-teams-direct-connect) delte kanaler eller [administration af Azure-rettighed](b2b-extranet.md) til at administrere de personer uden for organisationen, som du skal samarbejde med.
 
 ## <a name="training-for-administrators"></a>Kurser til administratorer
 
