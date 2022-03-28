@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 83f0f53e2d2376975f853d826531e749732416b7
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: db219fe7ce39ae59668cedff10f03e931ddba416
+ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754315"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "63597480"
 ---
 # <a name="onboard-devices-without-internet-access-to-microsoft-defender-for-endpoint"></a>Onboard-enheder uden internetadgang til Microsoft Defender til Slutpunkt
 
@@ -37,7 +37,7 @@ ms.locfileid: "63754315"
 Hvis du vil onboarde enheder uden adgang til internettet, skal du gøre følgende generelle trin:
 
 > [!IMPORTANT] 
-> Følgende trin gælder kun for enheder, der kører tidligere versioner af Windows der bruger den  VERSIONS-baserede løsning. Få mere at vide under [Onboard Windows-servere til Microsoft Defender for Endpoint-tjenesten](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
+> Nedenstående trin gælder kun for enheder, der kører tidligere versioner Windows f.eks.: Windows Server 2016 og tidligere eller Windows 8.1 og tidligere.
 
 > [!NOTE]
 > - En OMS-gatewayserver kan ikke bruges som proxy for afbrudte Windows- eller Windows-serverenheder, når den er konfigureret via registreringsdatabasen 'TelemetryProxyServer' eller gruppepolitikobjekt.
@@ -50,7 +50,7 @@ Du kan finde flere oplysninger om onboardingmetoder i følgende artikler:
 - [Onboard-servere til Microsoft Defender for Endpoint-tjenesten](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2008-r2-sp1--windows-server-2012-r2-and-windows-server-2016)
 - [Konfigurere indstillinger for enhedsproxy og internetforbindelse](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy)
 
-## <a name="devices-running-the-previous-mma-based-solution"></a>Enheder, der kører den forrige  ÆLDRE-baserede løsning
+## <a name="on-premises-devices"></a>Lokale enheder
 
 - Konfigurer Azure Log Analytics (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
   - [Azure Log Analytics-agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
@@ -63,9 +63,9 @@ Du kan finde flere oplysninger om onboardingmetoder i følgende artikler:
     - Azure Log Analytics IP som proxy
     - Defender til endpoint-arbejdsområdets nøgle & id
 
-### <a name="azure-virtual-machines"></a>Virtuelle Azure-maskiner
+## <a name="azure-virtual-machines"></a>Virtuelle Azure-maskiner
 
-- For enheder, der kører den forrige,  ÆLDRE-baserede løsning, skal du konfigurere Azure Log Analytics Gateway (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
+- Konfigurer Azure Log Analytics Gateway (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
     - [Azure Log Analytics Gateway](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
     - [Installér og konfigurer Microsoft Overvågningsagent (MANUELT)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peger på Defender for Endpoint Workspace-&-id
 - Offline Azure-VM'er i det samme netværk af OMS-gateway

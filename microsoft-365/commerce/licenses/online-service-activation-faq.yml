@@ -1,0 +1,76 @@
+### YamlMime:FAQ
+metadata:
+  title: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
+  author: cmcatee-MSFT
+  ms.author: cmcatee
+  manager: scotv
+  ms.reviewer: racheg, armanv
+  ms.date: 07/22/2021
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.custom: commerce_vl
+  ms.localizationpriority: medium
+  description: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
+  ms.openlocfilehash: e6175dddb97d1a752e64c6264d5d8cdd66f35bf6
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63596836"
+title: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
+summary: ''
+sections:
+- name: Generel
+  questions:
+  - question: >
+      Hvordan aktiverer jeg onlinetjenester, der er købt via Open-programmerne (Open, Open Value og Open Value-abonnementet)?
+    answer: >
+      Åbne kunder kan aktivere onlinetjenester på to måder:
+
+      - Når du har bestillet dine onlinetjenester gennem Open-programfamilien, modtager du en mail med et link og en vejledning til at aktivere dine tjenester.
+
+      ELLER
+
+      - Open program [customers from the Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/Servicecenter/default.aspx) Open program customers can go to the Online Service Activation section and select the license to manage:
+
+
+      1. Vælg linket Administrer aktivering, og vælg derefter Start aktivering. Et vindue til produktaktivering åbnes, og nøglen udfyldes på forhånd.
+
+      2. Fortsæt de resterende aktiveringstrin for at fuldføre produktaktivering.
+
+
+      En vellykket aktivering er fuldført inden for 48 timer på webstedet til aktivering af onlinetjenester med volumenlicens.
+
+      Du kan finde oplysninger om Microsoft Azure i [Kom i gang med Azure i Open Licensing](https://azure.microsoft.com/offers/ms-azr-0111p/).
+  - question: >
+      Jeg kan ikke se min Azure-ordre. Hvad skal jeg gøre?
+    answer: >
+      Azure-ordrer aktiveres via nøgler. Hent dine nøgler via fanen Downloads og nøgler i VLSC, og angiv nøglen på siden Kom i gang [Azure i Open Licensing](https://azure.microsoft.com/offers/azure-open/).
+  - question: >
+      Hvad er en arbejds- eller skolekonto, og hvorfor skal jeg bruge en til at aktivere onlinetjenester?
+    answer: >
+      En arbejds- eller skolekonto er beregnet til, at brugerne logger på organisationen Microsoft-tjenester. Logon'et bruger typisk formularen til username@orgname.com eller username@orgname.onmicrosoft.com, hvor *orgname* er deres organisations maildomænenavn.
+  - question: >
+      Hvordan ved jeg, om min organisation allerede har en konto?
+    answer: "Det organisationsnavn, der er knyttet til din arbejds- eller skolekonto, tages fra licens-id'et for den tjeneste, du aktiverer. Hvis der findes en konto, er organisationsnavnet udfyldt på forhånd i organisationskontoen og er allerede knyttet til din organisation fra den oprindelige onlinetjenesterækkefølge. Registreringsprocessen validerer, om din organisation har en konto. \n\nHvis feltet for **Firma er** tilgængeligt, skal du afslutte registreringsprocessen for at logge på og aktivere tjenesten. Hvis dette felt ikke er tilgængeligt, skal du registrere organisationen. Du skal være global administrator for at registrere en organisation til en konto.\n\nNår du anmoder om en arbejds- eller skolekonto, sendes din anmodning til din organisation Lejeradministrator, der giver eller afviser din registreringsanmodning. Brug denne arbejds- eller skolekonto, når du logger på Aktivering af Microsoft VLSC Online-tjenesten.\n"
+  - question: >
+      Hvorfor logger aktiveringsportalen mig ud, når jeg aktiverer en onlinetjeneste?
+    answer: "Ved aktivering af onlinetjenester i henhold til open license-programmet aktiveres hver aftale separat. For at sikre at licenser ikke aktiveres på den forkerte lejer, håndteres hver aktivering i en separat session. \n"
+  - question: >
+      Hvordan fungerer aktivering af onlinetjenester ved open license-køb?
+    answer: >
+      Microsoft Online Services til åbne aftaler er flyttet til en nøgleløs aktiveringsmodel for håndtering. Når du bestiller Åbn onlinetjenester, modtager du en mail med et link og instruktioner til at aktivere dine tjenester.
+  - question: >
+      Hvad nu, hvis jeg vil tildele mit køb til en anden organisation?
+    answer: >
+      Hvis du vil tildele produkter til en ny organisation, skal du gennemgå tilmeldingstrinnene for at oprette en ny organisation. Derfra kan du tildele sæder eller produkter, du har købt.
+  - question: >
+      Jeg har lige aktiveret min onlinetjeneste. Hvorfor står der stadig, at jeg skal aktivere min tjeneste på siden Administrer aktiveringer i Volume Licensing Service Center?
+    answer: >
+      Det kan tage op til 24 timer, før den tjeneste, du har aktiveret, vises **som status** Aktiveret på **siden Administrer aktiveringer** .
+  - question: >
+      Hvordan kontakter jeg support?
+    answer: >
+      Hvis du har brug for support til en telefon eller web, skal [du se Kontakt os](/licensing/contact-us). Microsoft svarer på webformularindsendelser inden for 24 timer.
+additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Ofte stillede spørgsmål om produktnøgler](product-keys-faq.yml)\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)"

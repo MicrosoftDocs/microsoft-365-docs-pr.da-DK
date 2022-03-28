@@ -21,29 +21,25 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 41583a89abc3418799263dc46643fbe06a07e818
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: ce75fff753acfa9d5e183154e09805b04d7523da
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712834"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63597471"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg beskeder i Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
-
 - Microsoft 365 Defender
-
->[!Note]
->I denne artikel beskrives sikkerhedsadvarsler i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende beskeder via mail til dig selv eller andre administratorer, når brugere udfører bestemte aktiviteter i Microsoft 365. Få mere at vide under [Opret aktivitetsbeskeder – Microsoft 365 overholdelse | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Beskeder er grundlaget for alle hændelser og angiver forekomsten af skadelige eller mistænkelige hændelser i dit miljø. Beskeder er typisk en del af et bredere angreb og giver fingerpeg om en hændelse.
 
-I Microsoft 365 Defender sammenlægges relaterede beskeder for at danne [hændelser](incidents-overview.md). Hændelser vil altid give et bredere perspektiv på et angreb, men analyse af beskeder kan være værdifuld, når en dybere analyse er påkrævet.
+I Microsoft 365 Defender sammenlægges relaterede beskeder for at danne [hændelser](incidents-overview.md). Hændelser vil altid give et bredere perspektiv på et angreb, men analyse af beskeder kan være værdifuld, når en dybere analyse er påkrævet. 
 
-**Køen Beskeder** viser det aktuelle sæt af beskeder. Du får adgang til køen med beskeder **fra & og > vigtige** beskeder, når den hurtige start af [Microsoft 365 Defender-portalen](https://go.microsoft.com/fwlink/p/?linkid=2077139).
+**Køen Beskeder** viser det aktuelle sæt af beskeder. Du får adgang til køen med beskeder **fra & og > vigtige** beskeder, når den hurtige start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>.
 
 :::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Eksempel på advarselskøen i Microsoft 365 Defender portal":::
 

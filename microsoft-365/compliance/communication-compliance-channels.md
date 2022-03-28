@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 35bd11ac88859c3e587771552a02097a2f090a44
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 9cc2b77c9983fecc6e58be515fe316c6c5239fef
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712878"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63596900"
 ---
 # <a name="detect-channel-signals-with-communication-compliance"></a>Registrer kanalsignaler med kommunikationsoverholdelse
 
@@ -33,14 +33,7 @@ Med politikker for overholdelse af kommunikation kan du vælge at scanne meddele
 
 Chatkommunikation i både offentlig og privat Microsoft Teams kanaler og individuelle chats kan scannes. Når brugerne er tildelt en politik for overholdelse af kommunikation med Microsoft Teams dækning valgt, overvåges chatkommunikation for brugerne automatisk på tværs af alle Microsoft Teams, hvor brugerne er medlem. Microsoft Teams medfølger automatisk til foruddefinerede politikskabeloner og vælges som standard i den brugerdefinerede politikskabelon. Teams kan det tage op til 48 timer at behandle chatsamtaler, der opfylder politikbetingelserne for kommunikation.
 
-For private chat- og private kanaler understøtter politikker for overholdelse af kommunikation [Delte kanaler](/MicrosoftTeams/shared-channels) og Moderne scanning af vedhæftede filer. Understøttelse af delte kanaler Teams automatisk og kræver ikke yderligere konfigurationsændringer i kommunikationsoverholdelse. Følgende tabel opsummerer kommunikationsoverholdelsesfunktionsmåden, når du deler Teams med grupper og brugere:
-
-|**Scenarie**|**Kommunikationsoverholdelsesfunktionsmåde**|
-|:-----------|:------------------------------------|
-| **Del en kanal med et internt team** | Politikker for overholdelse af kommunikation gælder for in-scope-brugere og alle meddelelser i den delte kanal |
-| **Del en kanal med et eksternt team** | Politikker for overholdelse af kommunikation gælder for interne brugere og meddelelser i den delte kanal for den interne organisation |
-
-Moderne vedhæftede filer er filer, der kommer [OneDrive](/onedrive/plan-onedrive-enterprise#modern-attachments) eller [SharePoint](/sharepoint/dev/solution-guidance/modern-experience-customizations) websteder, der er inkluderet i Teams meddelelser. Tekst udtrækkes automatisk fra disse vedhæftede filer til automatisk behandling og potentielle matches med aktive politikbetingelser og klassificeringer i kommunikation. Der er ikke behov for yderligere konfiguration for registrering og behandling af moderne vedhæftede filer. Tekst udtrækkes kun for vedhæftede filer, der matcher politikbetingelser. Tekst udtrækkes ikke for vedhæftede filer for meddelelser med politikoverensstemmelse, selvom den vedhæftede fil også har et politik match.
+For private chat- og private kanaler understøtter politikker for overholdelse af kommunikation Moderne scanning af vedhæftede filer. Moderne vedhæftede filer er filer, der kommer [OneDrive](/onedrive/plan-onedrive-enterprise#modern-attachments) eller [SharePoint](/sharepoint/dev/solution-guidance/modern-experience-customizations) websteder, der er inkluderet i Teams meddelelser. Tekst udtrækkes automatisk fra disse vedhæftede filer til automatisk behandling og potentielle matches med aktive politikbetingelser og klassificeringer i kommunikation. Der er ikke behov for yderligere konfiguration for registrering og behandling af moderne vedhæftede filer. Tekst udtrækkes kun for vedhæftede filer, der matcher politikbetingelser. Tekst udtrækkes ikke for vedhæftede filer for meddelelser med politikoverensstemmelse, selvom den vedhæftede fil også har et politik match.
 
 Moderne scanning af vedhæftede filer understøttes for følgende filtyper:
 

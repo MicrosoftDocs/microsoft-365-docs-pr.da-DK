@@ -1,0 +1,110 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om EOP
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: 9dbff00a-474e-4452-aeb5-5be9a6b8c6d5
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Få svar på de mest almindelige generelle spørgsmål om Exchange Online Protection (EOP) skybaserede mailfiltreringstjeneste.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: d768d523a875be6b4db159e4b91f559cc4050ba4
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "63597942"
+title: Ofte stillede spørgsmål om EOP
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Gælder for**
+
+  -  [Exchange Online Protection enkeltstående](exchange-online-protection-overview.md)
+
+
+  Her besvarer vi de mest almindelige generelle spørgsmål om Exchange Online Protection (EOP) skybaseret mailfiltreringstjeneste. Hvis du vil have flere ofte stillede spørgsmål, skal du gå til følgende links:
+
+
+  - [Ofte stillede spørgsmål om EOP i kø, udskudt og afvist](eop-queued-deferred-and-bounced-messages-faq.yml)
+
+
+  - [Ofte stillede spørgsmål om delegeret administration](delegated-administration-faq.yml)
+
+
+  - [Ofte stillede spørgsmål om beskyttelse mod spam](anti-spam-protection-faq.yml)
+
+
+  - [Ofte stillede spørgsmål om karantæne](quarantine-faq.yml)
+
+
+  - [Ofte stillede spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml)
+
+
+  - [Ofte stillede spørgsmål om meddelelsessporing](/exchange/monitoring/trace-an-email-message/message-trace-faq)
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvad er EOP?
+    answer: >
+      EOP er en skybaseret mailfiltreringstjeneste, der er udviklet til at beskytte kunder mod spam og malware, og som bruges til at implementere brugerdefinerede politikregler. EOP er inkluderet i alle Microsoft 365, der indeholder Exchange Online postkasser. EOP fås også som et separat tilbud til at beskytte lokale mailmiljøer.
+  - question: >
+      Hvordan tilmelder jeg mig en EOP-prøveversion eller køber EOP?
+    answer: >
+      Tilmeld dig en EOP-prøveversion, eller køb EOP [via internettet Exchange Online Protection-startsiden](https://products.office.com/exchange/exchange-email-security-spam-protection). Bemærk, at funktionaliteten for et prøvekøb er det samme som for et betalt abonnement, men omfatter også de ekstra funktioner, der leveres med [Exchange Enterprise CAL med Services-abonnementsplan](https://products.office.com/exchange/microsoft-exchange-server-licensing-licensing-overview).
+  - question: >
+      Hvordan er EOP prisfastsat?
+    answer: >
+      EOP gives i licens af brugeren. Du kan finde de seneste prisoplysninger [Exchange Online Protection startsiden](https://products.office.com/exchange/exchange-email-security-spam-protection).
+  - question: >
+      Hvor lang tid tager det at sætte EOP i produktion?
+    answer: >
+      Når du ændrer din MX-post i henhold til de trin, der er beskrevet i Konfigurer din [EOP-tjeneste](/exchange/standalone-eop/set-up-your-eop-service), og dine mails flyder gennem EOP, begynder filtreringen med det samme. MX-posten kan tage op til 24-48 timer at blive overført via DNS. Du kan finjustere dine beskyttelsesindstillinger når som helst under denne proces.
+  - question: >
+      Skal jeg bruge alle funktioner i Microsoft 365 at bruge EOP? Hvad nu, hvis jeg kun ønsker EOP-beskyttelse, og det er alt?
+    answer: >
+      Du kan bruge EOP til at beskytte dine lokale postkasser uden at bruge andre funktioner Microsoft 365. Dette kaldes et enkeltstående abonnement. Der findes en liste over EOP-funktioner i [Exchange Online Protection beskrivelse af tjenesten](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+  - question: >
+      Hvorfor skal jeg bruge en Microsoft 365, når jeg tilmelder mig mailfiltrering via EOP?
+    answer: >
+      Microsoft 365 er navnet på en samling af produkter og tjenester, der kan tilgås via en Microsoft 365 lejer. Tænk på Microsoft 365 som det udgangspunkt, hvor du kan tilføje licenser til mailfiltrering.
+  - question: >
+      Har EOP en kommunikationsportal, hvor jeg kan få mere at vide om kendte problemer og forventede løsninger? Hvad med de nye funktioner?
+    answer: >
+      De Microsoft 365 Administration vil have nogle af disse oplysninger. Hvis du er påvirket af en hændelse på tjenesteniveau, bør du få vist en meddelelse (typisk sammen med et klokkeikon), når du er logget på Microsoft 365 Administration. Vi anbefaler, at du læser og reagerer på alle elementer efter behov.
+
+
+      Hvad angår de nye EOP-funktioner[, er roadmap Microsoft 365 for business](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) en god ressource til at finde oplysninger om kommende nye funktioner. Vi sender også blogartikler om nye funktioner på Microsoft 365 [Blogs](https://www.microsoft.com/microsoft-365/blog/).
+  - question: >
+      Fungerer tjenesten med ældre Exchange (f.eks. Exchange Server 2010) og ikke-Exchange-miljøer?
+    answer: >
+      Ja, tjenesten er serveragnostisk og kan bruges sammen med en HVILKEN som helst SMTP-mailoverførselsagent.
+  - question: >
+      Hvilken størrelse organisation kan bruge tjenesten på?
+    answer: >
+      En hvilken som helst størrelse. EOP-netværket har tilstrækkelig kapacitet til at skabe vækst, uanset hvor hurtigt organisationen vokser.
+  - question: >
+      Hvilke tilladelser skal jeg bruge for at konfigurere EOP?
+    answer: >
+      For at kunne konfigurere EOP skal du være global administrator eller Exchange (rollegruppen Organisationsadministration).
+  - question: >
+      Hvordan ved jeg, at mine data og private oplysninger er sikre?
+    answer: >
+      Hvis du vil vide mere om de trin, vi har taget for at sikre dine data og private oplysninger, herunder oplysninger om serviceaftaler, skal du gå til Office 365 [Sikkerhedscenter](https://www.microsoft.com/trust-center).
+  - question: >
+      Er der nogen begrænsninger, jeg skal være opmærksom på, f.eks. begrænsninger af størrelsen på meddelelser?
+    answer: >
+      Ja. Du kan finde flere oplysninger om begrænsninger i EOP [Exchange Online Protection Begrænsninger](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+  - question: >
+      Understøtter EOP PowerShell?
+    answer: 'Ja, fuld EOP-funktionalitet er tilgængelig via PowerShell: Exchange Online PowerShell til organisationer med Exchange Online-postkasser; enkeltstående EOP PowerShell til enkeltstående EOP-organisationer. Du kan finde flere oplysninger [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell) [og Exchange Online Protection PowerShell](/powershell/exchange/exchange-online-protection-powershell).'

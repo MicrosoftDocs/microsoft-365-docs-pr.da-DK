@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 691db83111ba14e9fed7eed36a819479bda15ff5
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 28f50cbd362104ba910ed5560e184036fc7f8703
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63591841"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754654"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -155,7 +155,7 @@ Microsoft 365 Defender fremhæver forening *, tydelighed* og fælles mål, når 
 
 Centralisering af sikkerhedsoplysninger udgør et samlet sted til undersøgelse af sikkerhedshændelser på tværs Microsoft 365. Et primært eksempel **er Hændelser** under **hændelser & beskeder** om hurtig start af Microsoft 365 Defender.
 
-:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Siden Hændelser i Microsoft 365 Defender" lightbox="../../media/converged-incidents-2.png.png":::
+:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Eksempel på siden Hændelser i Microsoft 365 Defender" lightbox="../../media/converged-incidents-2.png.png":::
 
 Når du vælger et hændelsesnavn, vises en side, der demonstrerer værdien af at centralisere sikkerhedsoplysninger.
 

@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: f80ab9fcb0a3e057a20c22ff05c3a960cdf7eab4
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: 4b14f2def771294bdfa05109d6060242736f26d5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63590916"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754721"
 ---
 # <a name="get-started-with-insider-risk-management-settings"></a>Kom i gang med indstillingerne for insider-risikostyring
 
@@ -576,11 +576,15 @@ Udfør følgende trin for at deaktivere Insider Risk Analytics:
 
 ## <a name="admin-notifications"></a>Administratormeddelelser
 
-Administratormeddelelser sender automatisk en mail til brugere, der er inkluderet i *rollegrupperne Insider Risk Management*, *Insider Risk Management-analytikere* og *insider-risikoadministrationsgrupper* , når den første advarsel genereres for en ny politik. Dette er aktiveret som standard for alle organisationer, og politikker kontrolleres hver 24 timer for første gang. Meddelelser sendes ikke for beskeder, der forekommer i politikker efter den første besked.
+Administratormeddelelser sender automatisk en mail til udvalgte rollegrupper inden for insider-risikostyring. Du kan aktivere meddelelser og tildele hvilke rollegrupper, der modtager meddelelser til følgende scenarier:
 
-Hvis du har aktiveret Insider Risk Management Analytics for din organisation, modtager medlemmer af rollegruppen for *Insider Risk Management-administrator* automatisk en mailmeddelelse for indledende analyseindsigt om datalækager, tyveri og udfyldningsaktiviteter.
+- Send en mail, når den første besked genereres for en ny politik. Politikker kontrolleres hver 24 timer for første gang, og der sendes ikke meddelelser om efterfølgende beskeder for politikken.
+- Send en daglig mail, når der genereres nye beskeder om høj alvorsgrad. Politikker kontrolleres hver 24. time for beskeder om høj alvorsgrad.
+- Sende en ugentlig mail med oversigt over politikker, der har ikke-afklarede advarsler
 
-Hvis du foretrækker at deaktivere administratormeddelelser, skal du udføre følgende trin:
+Hvis du har aktiveret Insider Risk Management analyse for din organisation, modtager medlemmer af rollegruppen for *Insider Risk Management-administrator* automatisk en mailmeddelelse for indledende analyseindsigt om datalækager, tyveri og udfyldningsaktiviteter.
+
+Hvis du foretrækker at deaktivere administrator- og analysemeddelelser, skal du udføre følgende trin:
 
 1. I [Microsoft 365 Overholdelsescenter,](https://compliance.microsoft.com) skal du gå **til Insider Risk ManagementInsider** >  **risikoindstillinger**.
 2. Vælg siden **Administratormeddelelser** .
@@ -590,5 +594,3 @@ Hvis du foretrækker at deaktivere administratormeddelelser, skal du udføre fø
     - **Send en mail, når Analytics er slået fra**
 
 4. Vælg **Gem for** at konfigurere og afslutte.
-
-![Indstillinger for insider-beskeder til administratorer af risikostyring.](../media/insider-risk-admin-notifications.png)

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: e127f757b2aaa2865e8cb109699d76ed79f41cb6
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 41427760a0a02f0dafbb9685da457a473698207c
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63593776"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755002"
 ---
 # <a name="work-with-advanced-hunting-query-results"></a>Arbejd med avancerede resultater af en forespørgsel
 
@@ -38,7 +38,7 @@ ms.locfileid: "63593776"
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Selvom du kan [oprette dine avancerede](advanced-hunting-overview.md) forespørgselsforespørgsler for at returnere meget præcise oplysninger, kan du også arbejde med forespørgselsresultaterne for at få yderligere indsigt og undersøge specifikke aktiviteter og indikatorer. Du kan udføre følgende handlinger for dine forespørgselsresultater:
+Selvom du kan [oprette dine avancerede](advanced-hunting-overview.md) forespørgselsforespørgsler for at returnere præcise oplysninger, kan du også arbejde med forespørgselsresultaterne for at få yderligere indsigt og undersøge specifikke aktiviteter og indikatorer. Du kan udføre følgende handlinger for dine forespørgselsresultater:
 
 - Få vist resultater som en tabel eller et diagram
 - Eksportér tabeller og diagrammer
@@ -49,7 +49,7 @@ Selvom du kan [oprette dine avancerede](advanced-hunting-overview.md) forespørg
 Avanceret forespørgsel viser som standard forespørgselsresultater som tabeldata. Du kan også få vist de samme data som et diagram. Avanceret ræv understøtter følgende visninger:
 
 | Visningstype | Beskrivelse |
-| -- | -- |
+|--|--|
 | **Tabel** | Viser forespørgselsresultaterne i tabelformat |
 | **Søjlediagram** | Gengiver en række entydige elementer på x-aksen som lodrette søjler, hvis højder repræsenterer numeriske værdier fra et andet felt |
 | **Stablet søjlediagram** | Gengiver en række entydige elementer på x-aksen som stablede lodrette søjler, hvis højde repræsenterer numeriske værdier fra et eller flere andre felter |
@@ -71,12 +71,12 @@ AlertInfo
 ```
 Når resultaterne gengives, viser et søjlediagram hver alvorlighedsværdi som en separat kolonne:
 
-![Billede af resultater af avanceret forespørgsel, der vises som et søjlediagram.](../../media/advanced-hunting-column-chart-new.png)
- *Forespørgselsresultater for beskeder efter alvorsgrad vist som et søjlediagram*
+:::image type="content" source="../../media/advanced-hunting-column-chart-new.png" alt-text="Et eksempel på et diagram, der viser avancerede ræveresultater i Microsoft 365 Defender portal" lightbox="../../media/advanced-hunting-column-chart-new.png":::
+*Forespørgselsresultater for beskeder efter alvorsgrad vist som et søjlediagram*
 
 
 #### <a name="phishing-emails-across-top-ten-sender-domains"></a>Phishingmails på tværs af top ti afsenderdomæner
-Hvis du arbejder med en liste over værdier, der ikke er endelige, `Top` kan du kun bruge operatoren til at oprette diagrammer med de fleste forekomster. Hvis du f.eks. vil have de ti mest populære afsenderdomæner med de fleste phishingmails, skal du bruge forespørgslen nedenfor:
+Hvis du arbejder med en liste over værdier, der ikke er endelige, `Top` kan du kun bruge operatoren til at oprette diagrammer med de fleste forekomster. Hvis du f.eks. vil have de 10 mest populære afsenderdomæner med de fleste phishing-mails, skal du bruge forespørgslen nedenfor:
 
 ```kusto
 EmailEvents
@@ -86,11 +86,11 @@ EmailEvents
 ```
 Brug cirkeldiagramvisningen til effektivt at vise distribution på tværs af de øverste domæner:
 
-![Billede af resultater af avanceret forespørgsel, der vises som et cirkeldiagram.](../../media/advanced-hunting-pie-chart-new.png)
- *Cirkeldiagram, der viser fordelingen af phishingmails på tværs af de mest populære afsenderdomæner*
+:::image type="content" source="../../media/advanced-hunting-pie-chart-new.png" alt-text="Cirkeldiagrammet, der viser avancerede ræveresultater i Microsoft 365 Defender portal" lightbox="../../media/advanced-hunting-pie-chart-new.png":::
+*Cirkeldiagram, der viser fordelingen af phishingmails på tværs af de mest populære afsenderdomæner*
 
 #### <a name="file-activities-over-time"></a>Filaktiviteter over tid
-Med operatoren `summarize` med funktionen `bin()` kan du kontrollere, om der er hændelser med en bestemt indikator over tid. Nedenstående forespørgsel tæller hændelser, der involverer filen med `invoice.doc` 30 minutters intervaller, for at vise samlinger i aktivitet relateret til den pågældende fil:
+Med operatoren `summarize` med funktionen `bin()` kan du kontrollere, om der er hændelser med en bestemt indikator over tid. Nedenstående forespørgsel tæller hændelser, der involverer `invoice.doc` filen med 30-minutters intervaller, for at vise samlingerne i aktivitet relateret til den pågældende fil:
 
 ```kusto
 CloudAppEvents
@@ -100,8 +100,8 @@ CloudAppEvents
 ```
 Kurvediagrammet nedenfor fremhæver tydeligt tidsperioder med mere aktivitet, der involverer `invoice.doc`: 
 
-![Billede af resultater af avanceret forespørgsel, der vises som et kurvediagram.](../../media/line-chart-a.png)
- *Kurvediagram, der viser antallet af hændelser, der involverer en fil over tid*
+:::image type="content" source="../../media/line-chart-a.png" alt-text="Kurvediagrammet, der viser avancerede ræveresultater i Microsoft 365 Defender portal" lightbox="../../media/line-chart-a.png":::
+*Kurvediagram, der viser antallet af hændelser, der involverer en fil over tid*
 
 
 ## <a name="export-tables-and-charts"></a>Eksportér tabeller og diagrammer
@@ -113,10 +113,10 @@ Når du har kørt en forespørgsel, skal **du vælge** Eksportér for at gemme r
 ## <a name="drill-down-from-query-results"></a>Analysere ned fra forespørgselsresultater
 Hvis du hurtigt vil undersøge en post i forespørgselsresultaterne, skal du markere den tilsvarende række for at åbne **panelet Undersøg** post. Panelet indeholder følgende oplysninger baseret på den valgte post:
 
-- **Aktiver** – opsummeret visning af de vigtigste aktiver (postkasser, enheder og brugere), som findes i posten, og som er beriget med tilgængelige oplysninger, f.eks. risiko- og eksponeringsniveauer
+- **Aktiver** – opsummeret visning af de vigtigste aktiver (postkasser, enheder og brugere), der findes i posten, og som er beriget med tilgængelige oplysninger, f.eks. risiko- og eksponeringsniveauer
 - **Alle detaljer** – alle værdierne fra kolonnerne i posten  
 
-![Billede af valgt post med panel til undersøgelse af posten.](../../media/results-inspect-record.png)
+:::image type="content" source="../../media/results-inspect-record.png" alt-text="Den valgte post med panel til undersøgelse af posten i Microsoft 365 Defender portal" lightbox="../../media/results-inspect-record.png":::
 
 Hvis du vil have vist flere oplysninger om en bestemt enhed i forespørgselsresultaterne, f.eks. en computer, fil, bruger, IP-adresse eller URL-adresse, skal du vælge enheds-id'en for at åbne en detaljeret profilside for den pågældende enhed.
 
@@ -125,14 +125,14 @@ Vælg de tre prik til højre for en vilkårlig kolonne i panelet **Undersøg** p
 
 - Søge eksplicit efter den valgte værdi (`==`)
 - Udelade den valgte værdi fra forespørgslen (`!=`)
-- Få mere avancerede operatorer til at føje værdien til din forespørgsel, f.eks `contains`. , `starts with` og `ends with` 
+- Få mere avancerede operatorer til at føje værdien til din forespørgsel, f.eks `contains`. , `starts with`og `ends with` 
 
-![Billede af avanceret jagtresultatsæt.](../../media/work-with-query-tweak-query.png)
+:::image type="content" source="../../media/work-with-query-tweak-query.png" alt-text="Ruden Handlingstype på siden Undersøg post i Microsoft 365 Defender portal" lightbox="../../media/work-with-query-tweak-query.png":::
 
 
 
 >[!NOTE]
->Nogle tabeller i denne artikel er muligvis ikke tilgængelige i Microsoft Defender til slutpunkt. [Slå en Microsoft 365 Defender til](m365d-enable.md) for at lede efter trusler ved hjælp af flere datakilder. Du kan flytte dine avancerede arbejdsprocesser på jagt fra Microsoft Defender for Endpoint til Microsoft 365 Defender ved at følge trinnene i Overfør avancerede [forespørgselsforespørgsler fra Microsoft Defender til slutpunkt](advanced-hunting-migrate-from-mde.md).
+>Nogle tabeller i denne artikel er muligvis ikke tilgængelige på Microsoft Defender til slutpunkt. [Slå en Microsoft 365 Defender til](m365d-enable.md) for at lede efter trusler ved hjælp af flere datakilder. Du kan flytte dine avancerede arbejdsprocesser på jagt fra Microsoft Defender for Endpoint til Microsoft 365 Defender ved at følge trinnene i Overfør avancerede [forespørgselsforespørgsler fra Microsoft Defender til slutpunkt](advanced-hunting-migrate-from-mde.md).
 
 ## <a name="related-topics"></a>Relaterede emner
 - [Avanceret jagtoversigt](advanced-hunting-overview.md)

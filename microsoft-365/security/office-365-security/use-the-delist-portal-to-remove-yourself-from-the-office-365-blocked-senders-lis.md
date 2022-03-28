@@ -20,12 +20,12 @@ ms.custom:
 description: I denne artikel kan du se, hvordan du kan bruge listeportalen til at fjerne dig selv fra listen Microsoft 365 afsendere af uønsket mail. Dette er det bedste svar på adresse 5.7.511 Access denied errors.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 36187288b2a7acf1a852e6c203cbb84035ba5d7a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 58ddb2913ce7ecd047b1d5acb360c8f4c9ff5074
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587475"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775780"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Brug aflistingsportalen til at fjerne dig selv fra listen over blokerede afsendere og adresse 5.7.511 Adgang nægtet fejl
 
@@ -55,7 +55,6 @@ Der er gode grunde til, at afsendere ender på listen over blokerede afsendere, 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvD]
 
-
 ## <a name="to-use-delist-portal-to-remove-yourself-from-the-blocked-senders-list-after-errors-like-57511-access-denied"></a>For at bruge fralistingsportalen til at fjerne dig selv fra listen over blokerede afsendere (efter fejl som f.eks. 5.7.511 adgang nægtet)
 
 1. I en webbrowser skal du gå til <https://sender.office.com>.
@@ -82,13 +81,13 @@ Der er gode grunde til, at afsendere ender på listen over blokerede afsendere, 
 Se [Opret lister over afsendere, der er tillid til i EOP](create-safe-sender-lists-in-office-365.md) [og Beskyttelse mod udgående spam i EOP](outbound-spam-controls.md) for at forhindre, at en IP blokeres.
 
 ### <a name="how-do-fix-error-code-57511"></a>Hvordan retter jeg fejlkode 5.7.511?
- 
+
 Når der er et problem med at levere en mail, du har sendt, sender Microsoft 365 eller Office 365 en mail for at fortælle dig det. Den mail, du modtager, er en besked om leveringsstatus, også kaldet en DSN- eller en meddelelse om ikke-leveret post. Den mest almindelige type kaldes en rapport om manglende levering (NDR), og den fortæller dig, at meddelelsen ikke blev leveret. I visse situationer skal Microsoft foretage yderligere undersøgelser af trafikken fra din IP, og hvis du modtager NDR-koden 5.7.511, kan du ikke bruge frameldingsportalen.
- 
->   550 5.7.511 Access denied, banned sender[xxx.xxx.xxx.xxx]. Hvis du vil anmode om at blive fjernet fra denne liste, skal du videresende denne meddelelse delist@messaging.microsoft.com. Du kan få mere at vide ved at gå til https://go.microsoft.com/fwlink/?LinkId=526653. 
- 
-Angiv den fulde NDR-kode og IP-adresse i mailen for at anmode om at blive fjernet fra denne liste. Microsoft kontakter dig inden for 48 timer med de næste trin. 
+
+> 550 5.7.511 Access denied, banned sender[xxx.xxx.xxx.xxx]. Hvis du vil anmode om at blive fjernet fra denne liste, skal du videresende denne meddelelse delist@messaging.microsoft.com. Du kan få mere at vide ved at gå til <https://go.microsoft.com/fwlink/?LinkId=526653>.
+
+Angiv den fulde NDR-kode og IP-adresse i mailen for at anmode om at blive fjernet fra denne liste. Microsoft kontakter dig inden for 48 timer med de næste trin.
 
 ## <a name="more-information"></a>Flere oplysninger
-  
-Formularen til at **Outlook.com, forbrugertjenesten**, kan findes [her](https://support.microsoft.com/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75). Sørg for at læse de ofte [stillede spørgsmål](https://sendersupport.olc.protection.outlook.com/pm/troubleshooting.aspx) først for *indsendelsesretning* .
+
+Formularen til at **Outlook.com, forbrugertjenesten**, kan findes [her](https://support.microsoft.com/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75). Sørg for at læse de ofte [stillede spørgsmål](https://sendersupport.olc.protection.outlook.com/pm/troubleshooting.aspx) først for _indsendelsesretning_ .

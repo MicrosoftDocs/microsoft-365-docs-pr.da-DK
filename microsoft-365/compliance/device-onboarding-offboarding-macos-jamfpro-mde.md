@@ -14,12 +14,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i Microsoft 365 Overholdelsesløsninger ved hjælp af SYLF Pro til Microsoft Defender for Endpoint-kunder (prøveversion)
-ms.openlocfilehash: f260d901f8f02c2c02007b2cc0d49ab9ee57dafd
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 7e2109f52590cc4d9ad23700fa4b51a09ae4b5db
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63716315"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63596912"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview"></a>Onboard og offboard macOS-enheder i Overholdelsesløsninger ved hjælp af SYLF Pro til Microsoft Defender til Slutpunkt-kunder (prøveversion)
 
@@ -37,8 +37,9 @@ Du kan bruge SYLF-Pro til at onboarde macOS-enheder Microsoft 365 løsninger til
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Sørg for, at [dine macOS-enheder administreres via SYLF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD forbundet UPN) via JAMF Forbind eller Intune.
-- Installér browseren v95+ Edge på dine macOS-enheder
+- Sørg for, at [dine macOS-enheder er forbundet til Azure AD](https://docs.jamf.com/10.30.0/jamf-pro/administrator-guide/Azure_AD_Integration.html)
+- Sørg for, at [dine macOS-enheder administreres via SYLF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) 
+- Installér browseren v95+ Edge på dine macOS-enheder 
 
 ## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>Onboard-enheder til Microsoft 365 løsninger til overholdelse af regler og standarder ved hjælp af SYLF Pro
 

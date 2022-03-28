@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-overview
 - m365solution-zero-trust
 ms.technology: mdo
-ms.openlocfilehash: abfd2603d4b374899ba3ff17d1be977043c5d5ab
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c8bf111acd41ede8a493672234de4e4a33ccd105
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590676"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775846"
 ---
 # <a name="zero-trust-identity-and-device-access-configurations"></a>Konfigurationer for nultillidsidentitet og enhedsadgang
 
@@ -39,7 +39,7 @@ Hvis du vil tage hånd om denne nye verden af databehandling, anbefaler Microsof
 
 - Brug adgang med mindst rettigheder
 
-  Begræns brugeradgang med Just-In-Time og Just-Enough-Access (JIT/JEA), risikobaserede adaptive politikker og databeskyttelse.  
+  Begræns brugeradgang med Just-In-Time og Just-Enough-Access (JIT/JEA), risikobaserede adaptive politikker og databeskyttelse.
 
 - Antag misligholdelse
 
@@ -157,7 +157,6 @@ Azure AD indeholder en komplet pakke med funktioner til identitetsadministration
 |[Azure AD Identity Protection](/azure/active-directory/identity-protection/overview)|Gør det muligt at registrere potentielle sårbarheder, der påvirker organisationens identiteter, og konfigurere automatiseret afhjælpningspolitik til lav, mellem og høj logon-risiko og brugerrisici. Denne vejledning afhænger af denne risikoevaluering for at anvende betingede Access-politikker til multifaktorgodkendelse. Denne vejledning indeholder også en politik for betinget adgang, der kræver, at brugerne ændrer deres adgangskode, hvis der registreres aktivitet med høj risiko for deres konto.|Microsoft 365 E5, Microsoft 365 E3 med E5 Security-tilføjelsesprogrammet, EMS E5 eller Azure AD Premium P2-licenser|
 |[Selvbetjeningstjenesten til nulstilling af adgangskode (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Giv dine brugere mulighed for at nulstille deres adgangskoder sikkert og uden helpdesk-handling ved at levere bekræftelse af flere godkendelsesmetoder, som administratoren kan styre.|Microsoft 365 E3 eller E5|
 |[Azure AD-adgangskodebeskyttelse](/azure/active-directory/authentication/concept-password-ban-bad)|Find og bloker kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Standard globale lister over forbudte adgangskoder anvendes automatisk for alle brugere i en Azure AD-lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugere ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at håndhæve brugen af stærke adgangskoder.|Microsoft 365 E3 eller E5|
-|
 
 Her er komponenterne for Zero Trust-identitet og enhedsadgang, herunder Intune- og Azure AD-objekter, indstillinger og undertjenester.
 
@@ -199,7 +198,6 @@ Den følgende tabel opsummerer vores anbefalinger til brug af disse funktioner p
 |**Gennemtving ændring af adgangskode**|For brugere med høj risiko|For brugere med høj risiko|For brugere med høj risiko|
 |**Gennemtving Intune-programbeskyttelse**|Ja|Ja|Ja|
 |**Gennemtving Intune-registrering for organisationejede enheder**|Kræve en kompatibel eller domæne-forbundet pc, men tillade BYOD-telefoner og -tablets (bring-your-own devices)|Kræve en kompatibel eller domæneforenet enhed|Kræve en kompatibel eller domæneforenet enhed|
-|
 
 ## <a name="device-ownership"></a>Ejerskab af enhed
 

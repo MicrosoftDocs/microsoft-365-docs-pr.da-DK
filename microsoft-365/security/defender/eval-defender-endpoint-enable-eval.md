@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 846fd6854b8e2dcb408aaa55348380bb91c6b907
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: a12c81635f712dd0fac70101348d30bc1dc4f154
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63596010"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754633"
 ---
 # <a name="enable-microsoft-defender-for-endpoint-evaluation-environment"></a>Aktivér Microsoft Defender til slutpunktsevalueringsmiljø
 
@@ -39,7 +39,7 @@ Denne artikel fører dig gennem trinnene til konfiguration af evalueringsmiljøe
 
 Brug følgende trin til at aktivere evalueringen af Microsoft Defender til slutpunkt.
 
-![Trin til at aktivere Microsoft Defender til slutpunkt i Microsoft Defender-evalueringsmiljøet.](../../media/defender/m365-defender-endpoint-eval-enable-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-eval-enable-steps.png" alt-text="Disse trin til at aktivere Microsoft Defender til slutpunkt i Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-endpoint-eval-enable-steps.png":::
 
 - [Trin 1. Kontrollér licenstilstanden](#step-1-check-license-state)
 - [Trin 2. Onboard slutpunkter](#step-2-onboard-endpoints-using-any-of-the-supported-management-tools)
@@ -52,13 +52,14 @@ Du skal først kontrollere licenstilstanden for at bekræfte, at den er blevet k
 
 1. For at få vist dine licenser skal du **gå Microsoft Azure portal** og gå til [afsnittet Microsoft Azure portallicens](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
-   ![Billede af siden Azure-licensering.](../../media/defender/atp-licensing-azure-portal.png)
+   :::image type="content" source="../../media/defender/atp-licensing-azure-portal.png" alt-text="Siden Azure-licensering i Microsoft 365 Defender portalen" lightbox="../../media/defender/atp-licensing-azure-portal.png":::
 
 1. Alternativt kan du i Administration gå til **BillingSubscriptions** > .
 
     På skærmen får du vist alle de klargjorte licenser og deres aktuelle **Status**.
 
-    ![Billede af faktureringslicenser.](../../media/defender/atp-billing-subscriptions.png)
+    :::image type="content" source="../../media/defender/atp-billing-subscriptions.png" alt-text="Siden Faktureringslicenser i Microsoft Azure portal" lightbox="../../media/defender/atp-billing-subscriptions.png":::
+    
 
 ## <a name="step-2-onboard-endpoints-using-any-of-the-supported-management-tools"></a>Trin 2. Onboard slutpunkter ved hjælp af et af de understøttede administrationsværktøjer
 

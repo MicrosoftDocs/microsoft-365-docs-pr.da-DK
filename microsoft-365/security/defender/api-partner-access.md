@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 8a80245f4e94ee6f5f413154cf9b6d2ea318f5e4
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: f0ed889cbc0a07a1f64bc0f717fe07fe877a98b9
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63592634"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754682"
 ---
 # <a name="create-an-app-with-partner-access-to-microsoft-365-defender-apis"></a>Oprette en app med partneradgang til Microsoft 365 Defender API'er
 
@@ -77,7 +77,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 
 2. Gå til **Azure Active Directory** >  **App-registreringer** >  **Ny registrering**.
 
-   ![Billede af Microsoft Azure og navigation til programregistrering.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Et programs registreringssektion i Microsoft 365 Defender-portalen" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. I registreringsformularen:
 
@@ -87,18 +87,18 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 
    Når du er færdig med at udfylde formularen, skal du vælge **Registrer**.
 
-   ![Billede af registrer en programformular.](../..//media/atp-api-new-app-partner.png)
+   :::image type="content" source="../..//media/atp-api-new-app-partner.png" alt-text="Et programs registreringssnit i Microsoft 365 Defender-portalen" lightbox="../..//media/atp-api-new-app-partner.png":::
 
 4. På din programside skal du vælge **API-tilladelserFår** >  >  tilladelse API'er, som **min organisation bruger** >, skriv **Microsoft Threat Protection**, og vælg **Microsoft Threat Protection**. Din app kan nu få adgang Microsoft 365 Defender.
 
    > [!TIP]
    > *Microsoft Threat Protection* er et tidligere navn til Microsoft 365 Defender og vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at få det vist.
 
-   ![Billede af valg af API-tilladelse.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Afsnittet Brug af API'er i Microsoft 365 Defender portal" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
 5. Vælg **Programtilladelser**. Vælg de relevante tilladelser til scenariet ( **f.eks. Incident.Read.All**), og vælg **derefter Tilføj tilladelser**.
 
-   ![Billede af API-adgang og API-markering.](../../media/request-api-permissions.PNG)
+   :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Ruden med tilladelser for et program i Microsoft 365 Defender portalen" lightbox="../../media/request-api-permissions.PNG":::
 
     > [!NOTE]
     > Du skal vælge de relevante tilladelser til scenariet. *Læs alle hændelser er* blot et eksempel. Se afsnittet Tilladelser i den API, du vil ringe til **, for at** finde ud af, hvilken tilladelse du skal bruge.
@@ -107,18 +107,18 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 
 6. Vælg **Giv administratorsamtykke**. Hver gang du tilføjer en tilladelse, skal du vælge **Giv administratorsamtykke** , før den træder i kraft.
 
-    ![Billede af Giv tilladelser.](../../media/grant-consent.PNG)
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Et afsnit til at give administratorsamtykke i Microsoft 365 Defender portal" lightbox="../../media/grant-consent.PNG":::
 
 7. Hvis du vil føje en hemmelighed til programmet, **skal du & Certifikater** og hemmeligheder, føje en beskrivelse til hemmeligheden og derefter vælge **Tilføj**.
 
     > [!TIP]
     > Når du har valgt **Tilføj**, skal du **vælge Kopiér den genererede hemmelige værdi**. Du kan ikke hente den hemmelige værdi, når du har forladet.
 
-    ![Billede af Opret appnøgle.](../../media/webapp-create-key2.png)
+      :::image type="content" source="../../media/webapp-create-key2.png" alt-text="Sektionen Hemmelig tilføjelse i Microsoft 365 Defender portal" lightbox="../../media/webapp-create-key2.png":::
 
 8. Optag dit program-id og dit lejer-id et sikkert sted. De er angivet under **Oversigt på** din programside.
 
-   ![Billede af oprettet app-id.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Ruden Oversigt i Microsoft 365 Defender portal" lightbox="../../media/app-and-tenant-ids.png":::
 
 9. Føj programmet til din brugers lejer.
 
@@ -136,7 +136,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 
    Når du har klikket på linket til samtykke, skal du logge på med den globale administrator for brugerens lejer og give samtykke til programmet.
 
-   ![Billede af samtykke.](../../media/app-consent-partner.png)
+   :::image type="content" source="../../media/app-consent-partner.png" alt-text="Siden for samtykkeprogrammet i Microsoft 365 Defender portal" lightbox="../../media/app-consent-partner.png":::
 
    Du skal også bede din bruger om deres lejer-id. Lejer-id'et er et af de identifikatorer, der bruges til at hente adgangstokens.
 
@@ -266,7 +266,8 @@ Et vellykket svar vil se sådan ud:
 
 På følgende billede kan du se et afkodet token, der er købt fra en app, ```Incidents.ReadWrite.All```med ```Incidents.Read.All```, og ```AdvancedHunting.Read.All``` tilladelser:
 
-![Billede af tokenvalidering.](../../media/webapp-decoded-token.png)
+:::image type="content" source="../../media/webapp-decoded-token.png" alt-text="Ruden Afkodet token i Microsoft 365 Defender portal" lightbox="../../media/webapp-decoded-token.png":::
+
 
 ## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Brug tokenet til at få adgang til Microsoft 365 Defender API
 

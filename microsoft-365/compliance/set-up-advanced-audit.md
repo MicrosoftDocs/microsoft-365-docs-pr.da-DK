@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du kan konfigurere Avanceret overvågning, så du kan undersøge, hvornår brugerkonti kompromitteres, eller for at undersøge andre sikkerhedsrelaterede hændelser.
-ms.openlocfilehash: 34ae98eaafcc3eeb3d6a25a457f017999b8c6078
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: dafe53161e04f28f2f5e4ff8dcfa71bab6c1a1f1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63593880"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754574"
 ---
 # <a name="set-up-advanced-audit-in-microsoft-365"></a>Konfigurer Avanceret overvågning i Microsoft 365
 
@@ -49,9 +49,7 @@ Avancerede overvågningsfunktioner, såsom muligheden for at logføre vigtige h�
 
    Logføringen af overvågningsposter for MailItemsAccessed og Send starter inden for 24 timer. Du skal udføre trin 3 for at starte logføring af to andre Avancerede overvågningshændelser: SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint.
 
-For organisationer, der tildeler licenser til grupper af brugere ved hjælp af gruppebaseret licensering, skal du deaktivere licenstildelingen for Microsoft 365 Avanceret overvågning for gruppen. Når du gemmer ændringerne, skal du kontrollere, Microsoft 365 Avanceret overvågning er slået fra for gruppen. Slå derefter licenstildelingen for gruppen til igen. Du kan finde en vejledning til gruppebaserede licenser [i Tildel licenser til brugere efter gruppemedlemskab Azure Active Directory](/azure/active-directory/users-groups-roles/licensing-groups-assign).
-
-Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, bliver alle nye Avancerede overvågning-hændelser, der udgives af Microsoft, ikke automatisk overvåget for disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Rediger eller gendan postkassehandlinger, der er logført som standard" i Administrer [postkasserevision](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
+Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, så bliver alle nye Avancerede overvågning-hændelser, der frigives af Microsoft, ikke automatisk overvåget for disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Rediger eller gendan postkassehandlinger, der er logført som standard" i Administrer [postkasserevision](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
 
 ## <a name="step-2-enable-advanced-audit-events"></a>Trin 2: Aktivér avancerede overvågningshændelser
 

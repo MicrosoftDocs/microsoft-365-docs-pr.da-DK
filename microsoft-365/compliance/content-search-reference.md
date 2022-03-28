@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Denne artikel indeholder referenceoplysninger om værktøjet eDiscovery-indholdssøgning i værktøjet Microsoft 365 Overholdelsescenter så du kan lære de mange detaljer om indholdssøgning.
-ms.openlocfilehash: 0688f3119b500f8e11675aa101d92942a3063e8b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3f2918c378d94fd65d4a89afed50957a2da40a7d
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63593267"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716370"
 ---
 # <a name="feature-reference-for-content-search"></a>Funktionsreference til indholdssøgning
 
@@ -80,7 +80,7 @@ Husk følgende, når du søger efter indhold i Microsoft Teams og Microsoft 365 
 
 - Hvis du vil søge efter indhold, der er placeret i Teams og Microsoft 365 Grupper, skal du angive den postkasse og det SharePoint-websted, der er knyttet til et team eller en gruppe.
 
-- Indhold fra private kanaler gemmes i hver brugers postkasse, ikke i teampostkassen. Hvis du vil søge efter indhold i private kanaler, skal [du se eDiscovery for private kanaler](/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels).
+- Indhold fra private kanaler gemmes i hver brugers postkasse, ikke i teampostkassen. Hvis du vil søge efter indhold i private kanaler, skal [du se eDiscovery af private og delte kanaler](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
 
 - Kør **cmdlet'en Get-UnifiedGroup** i Exchange Online for at få vist egenskaber for et team eller en Microsoft 365 gruppe. Dette er en god måde at hente URL-adressen til det websted, der er knyttet til et team eller en gruppe. Eksempelvis viser følgende kommando de valgte egenskaber for en gruppe Microsoft 365 seniorledelse:
 

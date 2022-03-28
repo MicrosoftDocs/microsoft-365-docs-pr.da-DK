@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5c4d1be31742d21f6e7919a8db4a3d2aff75f66e
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 5737a2d1974805dc55b85b7ff8f4117cbc1da898
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775384"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63596001"
 ---
 # <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>Mailanalyse i undersøgelser af Microsoft Defender til Office 365
 

@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 1c83a64c3bf1e721ea54b526c0db0c5d7c403fba
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 3a8696a14b85374d4bcb0a8704c14b82fdd845b5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63593522"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754595"
 ---
 # <a name="hello-world-for-microsoft-365-defender-rest-api"></a>Hello World til Microsoft 365 Defender REST API
 
@@ -49,7 +49,7 @@ Det bør tage 5 til 10 minutter at gennemføre dette projekt. Denne anslåede ti
 
 2. Gå til **Azure Active Directory** >  **App-registreringer** >  **Ny registrering**.
 
-   ![Billede af Microsoft Azure og navigation til programregistrering.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Afsnittet Ny registrering i Microsoft 365 Defender-portalen" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. I registreringsformularen skal du vælge et navn til dit program og derefter vælge **Registrer**. Det er valgfrit, om du vil vælge en omdirigerings-URI. Du behøver ikke en for at fuldføre dette eksempel.
 
@@ -57,26 +57,27 @@ Det bør tage 5 til 10 minutter at gennemføre dette projekt. Denne anslåede ti
 
    > [!TIP]
    > *Microsoft Threat Protection* er et tidligere navn til Microsoft 365 Defender og vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at få det vist.
-   ![Billede af valg af API-tilladelse.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Afsnittet om anvendelse af API'er i Microsoft 365 Defender portal" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
    - Vælg Application **permissionsIncident.Read.All** > , og **vælg Add permissions**.
 
-   ![Billede af API-adgang og API-markering.](../../media/request-api-permissions.PNG)
+     :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Ruden med tilladelser for et program i Microsoft 365 Defender-portalen" lightbox="../../media/request-api-permissions.PNG":::
 
 5. Vælg **Giv administratorsamtykke**. Hver gang du tilføjer en tilladelse, skal du vælge **Giv administratorsamtykke** , før den træder i kraft.
 
-    ![Billede af Giv tilladelser.](../../media/grant-consent.PNG)
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Afsnittet Giv administratorsamtykke i Microsoft 365 Defender portal" lightbox="../../media/grant-consent.PNG":::
 
 6. Føj en hemmelighed til programmet. Vælg **Certifikater & hemmeligheder,** føj en beskrivelse til hemmeligheden, og vælg derefter **Tilføj**.
 
     > [!TIP]
     > Når du har valgt **Tilføj**, skal du **vælge Kopiér den genererede hemmelige værdi**. Du kan ikke hente den hemmelige værdi, når du har forladet.
 
-    ![Billede af Opret appnøgle.](../../media/webapp-create-key2.png)
+    :::image type="content" source="../../media/webapp-create-key2.png" alt-text="Afsnittet Tilføj hemmelig i Microsoft 365 Defender portal" lightbox="../../media/webapp-create-key2.png":::
+    
 
 7. Optag dit program-id og dit lejer-id et sikkert sted. De er angivet under **Oversigt på** din programside.
 
-   ![Billede af oprettet app-id.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Afsnittet Oversigt i Microsoft 365 Defender portal" lightbox="../../media/app-and-tenant-ids.png":::
 
 ### <a name="get-a-token-using-the-app-and-use-the-token-to-access-the-api"></a>Få et token ved hjælp af appen, og brug tokenet til at få adgang til API'en
 
@@ -118,7 +119,7 @@ Du kan finde flere Azure Active Directory om Azure Active Directory i [Azure AD-
 
     På følgende billede kan du se et afkodet token, der er købt fra en app, ```Incidents.ReadWrite.All```med ```Incidents.Read.All```, og ```AdvancedHunting.Read.All``` tilladelser:
 
-    ![Billede jwt.ms.](../../media/api-jwt-ms.png)
+    :::image type="content" source="../../media/api-jwt-ms.png" alt-text="Afsnittet Afkodet token i Microsoft 365 Defender portal" lightbox="../../media/api-jwt-ms.png":::
 
 ### <a name="get-a-list-of-recent-incidents"></a>Få en liste over de seneste hændelser
 

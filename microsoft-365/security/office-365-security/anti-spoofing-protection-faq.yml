@@ -1,0 +1,99 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om beskyttelse mod spoofing
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: 
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  description: Administratorer kan få vist ofte stillede spørgsmål og svar om beskyttelse mod spoofing i Exchange Online Protection (EOP).
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: a9380bb72fdcae4b4847d4dd624c560fd0e7db5c
+  ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 02/06/2022
+  ms.locfileid: "63597943"
+title: Ofte stillede spørgsmål om beskyttelse mod spoofing
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Gælder for**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Denne artikel indeholder ofte stillede spørgsmål og svar om beskyttelse mod spoofing til Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser.
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod uønsket post under [Ofte stillede spørgsmål om beskyttelse mod uønsket post](anti-spam-protection-faq.yml).
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod malware under Ofte stillede [spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml)
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvorfor valgte Microsoft uønsket indgående mail?
+    answer: >
+      Microsoft mener, at risikoen for fortsat at tillade ikke-godkendt indgående mail er større end risikoen for at miste legitim indgående mail.
+  - question: >
+      Medfører uønsket mail, der ikke er godkendt indgående mail, at legitime mails markeres som spam?
+    answer: >
+      Da Microsoft aktiverede denne funktion i 2018, skete der nogle falske positive (gode meddelelser blev markeret som dårlige). Afsendere har dog over tid tilpasset sig kravene. Antallet af meddelelser, der blev fejlidentificeret som forfalskede, blev modtaget for de fleste mailstier.
+
+
+      Microsoft har først indført de nye krav til mailgodkendelse flere uger før udrulning til kunderne. Mens der først var afbrydelser, blev den gradvist afvist.
+  - question: >
+      Er efterlignet intelligens tilgængelig for Microsoft 365 uden Defender til Office 365?
+    answer: >
+      Ja. Pr. oktober 2018 er efterlignet intelligens tilgængelig for alle organisationer med postkasser i Exchange Online og enkeltstående EOP-organisationer uden Exchange Online postkasser.
+  - question: >
+      Hvordan kan jeg rapportere spam- eller ikke-spammeddelelser tilbage til Microsoft?
+    answer: >
+      Se [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      Jeg er administrator, og jeg kender ikke alle kilder til meddelelser i mit maildomæne!
+    answer: >
+      Se [Du kender ikke alle kilder til din mail](email-validation-and-authentication.md#you-dont-know-all-sources-for-your-email).
+  - question: >
+      Hvad sker der, hvis jeg deaktiverer beskyttelse mod spoofing for min organisation?
+    answer: >
+      Vi anbefaler ikke deaktivering af beskyttelse mod poofing. Hvis du deaktiverer beskyttelsen, bliver flere phishing- og spammeddelelser leveret i organisationen. Ikke alt phishing er spoofing, og ikke alle spoofed meddelelser går glip af. Din risiko vil dog være højere.
+
+
+      Nu, [hvor Udvidet filtrering for](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) forbindelser er tilgængelig, anbefales det ikke længere at deaktivere beskyttelse mod spoofing, når din mail dirigeres gennem en anden tjeneste før EOP.
+  - question: >
+      Betyder antispoofing-beskyttelse, at jeg er beskyttet mod al phishing?
+    answer: >
+      Desværre nej. Hackere vil tilpasse sig til at bruge andre teknikker (f.eks. kompromitterede konti eller konti i gratis mailtjenester). Beskyttelse mod phishing fungerer dog meget bedre til at registrere disse andre typer phishingmetoder. Beskyttelseslagene i EOP er designet til at arbejde sammen og bygge oven på hinanden.
+  - question: >
+      Blokerer andre store mailtjenester ikke-godkendt indgående mail?
+    answer: >
+      Næsten alle store mailtjenester implementerer traditionelle SPF-, DKIM- og DMARC-kontroller. Nogle tjenester har andre, mere restriktive kontroller, men få går så langt som EOP til at blokere ikke-godkendt mail og behandle dem som efterlignede meddelelser. Men branchen bliver mere opmærksom på problemer med ikke-godkendt mail, især på grund af problemet med phishing.
+  - question: >
+      Skal jeg stadig aktivere indstillingen for Avanceret spamfilter "SPF-post: hard fail" ('MarkAsSpamSpfRecordHardFail'), hvis jeg aktiverer antispoofing?
+    answer: >
+      Nej. Denne asf-indstilling er ikke længere påkrævet. Beskyttelse mod spoofing tager højde for, at både SPF'en slår fejl og giver et meget bredere sæt kriterier. Hvis du har aktiveret antispoofing og **SPF-posten: Hard Fail** (_MarkAsSpamSpfRecordHardFail_) er slået til, får du sandsynligvis flere falske positive.
+
+
+      Vi anbefaler, at du deaktiverer denne funktion, da den giver næsten ingen yderligere fordel til at registrere spam eller phishing-meddelelser og i stedet genererer hovedsageligt falske positive. Du kan finde flere oplysninger [i Avancerede indstillinger for spamfilter (ASF) i EOP](advanced-spam-filtering-asf-options.md).
+  - question: >
+      Hjælper Afsenders omskrivningsskema med at rette videresendte mails?
+    answer: Kun SRS delvist løser problemet med videresendte mails. Ved at omskrive **SMTP-MAIL FRA** kan SRS sikre, at den videresendte meddelelse passerer SPF på den næste destination. Men fordi antispoofing er baseret på **Fra-adressen** i kombination med **MAIL FROM** - eller DKIM-signeringsdomænet (eller andre signaler), er det ikke nok til at forhindre, at SRS-videresendte mails markeres som efterlignede.

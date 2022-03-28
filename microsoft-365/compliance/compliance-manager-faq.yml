@@ -1,0 +1,112 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om Microsoft Compliance Manager
+  f1.keywords:
+  - NOCSH
+  ms.author: chvukosw
+  author: chvukosw
+  manager: laurawi
+  audience: Admin
+  ms.topic: article
+  ms.service: O365-seccomp
+  ms.localizationpriority: medium
+  ms.collection: M365-security-compliance
+  search.appverid:
+  - MOE150
+  - MET150
+  description: Find svar på ofte stillede spørgsmål om Microsoft Compliance Manager, som hjælper organisationer med at forenkle og automatisere risikovurdering.
+  ms.openlocfilehash: 20200c1ea4c8a23045b86ba5f54c1269e0256898
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63598005"
+title: Ofte stillede spørgsmål om Overholdelsesstyring
+summary: ''
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Er Overholdelsesstyring og Overholdelsesscore det samme, eller er de forskellige?
+    answer: >
+      Der er nu kun én løsning: Overholdelsesstyring. I dette afsnit gennemgås overgangen, hvor du starter med en grundlæggende oversigt nedenfor. Du kan også få brug for at hoppe direkte til et af følgende afsnit:
+
+
+      - [Din organisation brugte primært Overholdelsesstyring (enten den klassiske eller offentlige prøveversion), der er placeret i Microsoft Service Trust Portal](#your-organization-regularly-used-compliance-manager-in-the-service-trust-portal)
+
+
+      - [Din organisation brugte primært Overholdelsesscore (offentlig prøveversion), som er placeret i Microsoft 365 Overholdelsescenter](#your-organization-used-compliance-score-public-preview-in-the-microsoft-365-compliance-center)
+
+
+      - [Din organisation er ny bruger af Overholdelsesstyring](#youre-new-to-compliance-manager
+
+      )
+
+      ### <a name="the-basics"></a>Grundlæggende oplysninger
+
+
+      Microsoft Compliance Manager begyndte som en løsning til styring af overholdelse inden for Microsoft Service Trust Portal.  Da løsninger til overholdelse af angivne standarder blev Microsoft 365 Overholdelsescenter udviklet en ny oplevelse med et mere brugervenligt design til denne placering. Offentlig forhåndsvisning af overholdelsesscore blev udgivet Microsoft 365 Overholdelsescenter i november 2019. Overholdelsesscore delte den samme backend som Compliance Manager, så kunderne kan arbejde begge steder. Siden november 2019 har vi udgivet flere opdateringer, efterhånden som vi opbyggede ny funktionalitet og reageret på kundefeedback.
+
+
+      Den generelle tilgængelighed af Overholdelsesstyring i Microsoft 365 Overholdelsescenter september 2020 fuldfører denne udvikling. Overholdelsesstyring er den samlede, en-til-ende-løsning til overholdelse af regler og standarder. Dit overholdelsesresultat forbliver en vigtig komponent i Overholdelsesstyring.
+
+
+      Læs dette [blogindlæg](https://aka.ms/compliancemanager/GAblog) for at få mere at vide om nyhederne i GA-udgivelsen af Overholdelsesstyring.
+
+
+      ### <a name="your-organization-regularly-used-compliance-manager-in-the-service-trust-portal"></a>Din organisation har regelmæssigt brugt Overholdelsesstyring i Service Trust Portal
+
+
+      Hvis du har brugt Overholdelsesstyring i Service Trust Portal, findes alle organisationens data nu i Overholdelsesstyring på Microsoft 365 Overholdelsescenter at https://compliance.microsoft.com/compliancemanager. Der er ikke noget, du skal gøre for at genoptage dit arbejde i Overholdelsesstyring på den nye placering bortset fra for at opdatere eventuelle bogmærker, du har til den tidligere placering. Alle dine bedømmelser og andre data er blevet hentet til dig.
+
+
+      Bemærk, at Overholdelsesstyring (prøveversion) ikke længere er tilgængelig i Service Trust Portal, og alle links til den omdirigerer dig til den nye placering Microsoft 365 Overholdelsescenter.
+
+
+      Alt, hvad du plejede at gøre i tidligere versioner af Overholdelsesstyring, f.eks. at udføre handlinger (der nu kaldes "forbedringshandlinger") og oprette evalueringer, kan udføres i den nye Overholdelsesstyring. Vi har tilføjet over 150 nye bedømmelsesskabeloner og forbedret processen til oprettelse af skabeloner. Vi tilføjer flere forbedringer i fremtidige versioner.
+
+
+      Nedenfor finder du nogle nyttige ressourcer:
+
+
+      - [Bliv fortrolig med din nye Oplevelse af Overholdelsesstyring](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
+
+      - [Find tilladelser og andre konfigurationsoplysninger til Overholdelsesstyring i den nye startside](compliance-manager-setup.md#who-can-access-compliance-manager)
+
+      - [Få mere at vide om Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center.md)
+
+
+      ### <a name="your-organization-used-compliance-score-public-preview-in-the-microsoft-365-compliance-center"></a>Din organisation brugte Compliance Score (offentlig prøveversion) i Microsoft 365 Overholdelsescenter
+
+
+      Hvis du har brugt Overholdelsesscore i offentlig forhåndsvisning, vil du bemærke, at Overholdelsesstyring i høj grad ser ens ud, og din score er fremhævet på dit dashboard. Med GA-udgivelsen behøver du ikke længere at forlade Microsoft 365 Overholdelsescenter for at udføre visse administrationsfunktioner, f.eks. oprettelse og ændring af skabeloner til bedømmelsesopgaver. Alle funktioner findes nu på ét sted. Alle data, du havde i forhåndsvisningsversionen af Compliance Score, forbliver i GA-versionen af Compliance Manager.
+
+
+      Bemærk, at hvis du filtrerede din Dashboardvisning for Overholdelsesscore, blev disse filtre nulstillet, da vi installerede den nye Overholdelsesstyring i september. Du skal genanvende eventuelle filtre, du havde.
+
+
+      Overholdelsesstyring har også nye licensvilkår. Se spørgsmålet nedenfor om licenser.
+
+
+      ### <a name="youre-new-to-compliance-manager"></a>Du er ny bruger af Overholdelsesstyring
+
+
+      Overholdelsesstyring er en ende-til-ende-løsning i Microsoft 365 Overholdelsescenter til administration og sporing af overholdelsesaktiviteter. Det er et godt sted at starte din overholdelsesrejse, da den giver dig en indledende vurdering af din overholdelsesoverholdelse, første gang du besøger den. Nedenfor er der nogle gode steder, hvor du kan begynde at lære mere:
+
+
+      - [Få et overblik over Overholdelsesstyring](compliance-manager.md)
+
+      - [Brug vores startvejledning til at få styr på faserne](compliance-manager-quickstart.md)
+
+      - [Få mere at vide om Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center.md)
+  - question: >
+      Er der licenskrav for brug af Overholdelsesstyring?
+    answer: >
+      Ja. GA-udgivelsen af Overholdelsesstyring indeholder nye licensvilkår. Alle organisationer med Office 365- og Microsoft 365-licenser og us Government Community (GCC) Moderate-, GCC High- og Department of Defense-kunder (DoD) har adgang til Compliance Manager. De bedømmelser, der er tilgængelige for din organisation, og hvordan du administrerer bedømmelsesskabeloner, afhænger dog af din licensaftale. Gå til [Microsoft 365 for sikkerhed og overholdelse af regler og standarder for at](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) få flere oplysninger.
+  - question: >
+      Hvis jeg har et højt pointtal, betyder det så, at jeg er fuldt kompatibel?
+    answer: >
+      Nej. Dit overholdelsesresultat måler dit fremskridt med at fuldføre anbefalede handlinger, der er med til at reducere risici i forhold til databeskyttelse og lovgivningsmæssige standarder. Den udtrykker ikke et absolut mål for organisationens overholdelse af en bestemt standard eller et bestemt regel. Overholdelsesstyring og din vurdering af overholdelse skal ikke fortolkes som en garanti på nogen måde.
+  - question: >
+      Kan jeg bruge Overholdelsesstyring til ikke-Microsoft-produkter?
+    answer: Selvom Overholdelsesstyring kun leverer kontinuerlig overvågning og anbefalede handlinger til Microsofts skytjenester, kan du tilføje brugerdefinerede bedømmelser i Overholdelsesstyring for dine tredjepartstjenester. På denne måde kan du bruge Microsoft Compliance Manager som et SaaS-værktøj til styring af overholdelse af regler og standarder, der hjælper dig med at administrere alle kontrolelementer på tværs af dine digitale aktiver.

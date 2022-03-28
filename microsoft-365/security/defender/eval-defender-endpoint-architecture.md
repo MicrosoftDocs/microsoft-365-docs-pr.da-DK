@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 7a7e7a397f9cf9f89b75eb1f515e37a5386a73b1
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: b1381e7c2be2224818c72fb8e269ad65ffcacfc8
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63592286"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755019"
 ---
 # <a name="review-microsoft-defender-for-endpoint-architecture-requirements-and-key-concepts"></a>Gennemse krav og nøglekoncepter for Microsoft Defender til slutpunktsarkitektur
 
@@ -42,7 +42,7 @@ Før du aktiverer Microsoft Defender til slutpunkt, skal du sørge for, at du fo
 
 Følgende diagram illustrerer Microsoft Defender til slutpunktsarkitektur og -integration. 
 
-![Trin til at føje Microsoft Defender Office til Defender-evalueringsmiljøet.](../../media/defender/m365-defender-endpoint-architecture.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-architecture.png" alt-text="Trinnene til at føje Microsoft Defender for Office til Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-endpoint-architecture.png":::
 
 I følgende tabel beskrives illustrationen.
 

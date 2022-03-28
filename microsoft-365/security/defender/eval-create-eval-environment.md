@@ -21,16 +21,16 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: d81d33a01802ebdf8ef0ea67a9ee74fc69b79384
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: 5b684a1ead5638a787413d7470cb103cbe55e7df
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63592496"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775516"
 ---
 # <a name="step-1-create-the-microsoft-365-defender-evaluation-environment-for-greater-cyber-security"></a>Trin 1. Skab et Microsoft 365 Defender evalueringsmiljø for større cybersikkerhed
 
-LYou kan lære om og også bygge denne Microsoft Defender XDR løsning i trin, der er fordelt gennem resten af denne serie:
+Du kan få mere at vide om og opbygge denne Microsoft Defender XDR løsning i trin, der er fordelt gennem resten af serien:
 
 - [Sådan oprettes miljøet](eval-create-eval-environment.md)
 - Konfigurer eller få mere at vide om hver teknologi i denne Microsoft XDR
@@ -44,7 +44,7 @@ LYou kan lære om og også bygge denne Microsoft Defender XDR løsning i trin, d
 
 Trinnene i denne serie kører fra ende til anden, fra at lære begreberne bag Microsoft 365 Defender XDR at bygge det og til at tage evalueringsmiljøet live til produktion.
 
-Der er to almindelige måder at udføre dette næste trin i evalueringen på. Serien antager, at du allerede har en Microsoft 365 lejer, og aktiverer E5-prøvelicenser for at evaluere Microsoft 365 Defender i *det aktuelle miljø*. Med en direkte evaluering kan du beholde alle sikkerhedsmetoder ved køb af licenser efter evalueringsperioden.
+Der er to almindelige måder at udføre dette næste trin i evalueringen på. Serien antager, at du allerede har en produktionslejer Microsoft 365 og aktiverer E5-prøvelicenser for at evaluere Microsoft 365 Defender i *det aktuelle miljø*. Med en direkte evaluering kan du beholde alle sikkerhedsmetoder ved køb af licenser efter evalueringsperioden.
 
 Den anden er [at konfigurere dit Microsoft 365 Defender-prøvemiljø](setup-m365deval.md) med henblik på evaluering. Bemærk, at der muligvis ikke er mange reelle signaler fra virksomheden under test.
 
@@ -54,15 +54,15 @@ Den anden er [at konfigurere dit Microsoft 365 Defender-prøvemiljø](setup-m365
 2. Vælg **Køb tjenester** i navigationsmenuen.
 3. Rul ned til sektionen Office 365, og **vælg knappen** Detaljer under Office 365 E5 licens.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Sektionen Office 365 har en Detalje-knap, du kan klikke på.":::
+   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Knappen Detaljer i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/2_mdo-eval-license-details.png":::
 
 4. Vælg **Start gratis prøveversionslink** .
 
-   :::image type="content" source="../../media/mdo-eval/3-m365-purchase-button.png" alt-text="Klik på &quot;Start gratis prøveversion&quot; (der er et gebyr på 35 $).":::
+   :::image type="content" source="../../media/mdo-eval/3-m365-purchase-button.png" alt-text="Knappen Start gratis prøveversion i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/3-m365-purchase-button.png":::
 
 5. Bekræft din anmodning, og klik **på knappen Prøv** nu.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-trial-order.png" alt-text="Der er en &quot;Prøv nu&quot;-knap på panelet &quot;Tjek ud, bekræft din ordre&quot; (for en Office 365 E5 prøveversion på en måned for 25 brugere).":::
+   :::image type="content" source="../../media/mdo-eval/4_mdo-trial-order.png" alt-text="Knappen Prøv nu i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/4_mdo-trial-order.png":::
 
 ## <a name="go-to-the-next-step"></a>Gå til næste trin
 

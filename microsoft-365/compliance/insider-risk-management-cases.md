@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: ab0eb6c9f7ecfbc51de4857d708f1fa34bd3f515
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 59933705bb113e4ad23b12fe8bf00e8d0ca2e701
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587338"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775802"
 ---
 # <a name="insider-risk-management-cases"></a>Insider-sager om risikostyring
 
@@ -150,7 +150,7 @@ Sådan føjer du en note til en sag:
 
 ### <a name="contributors"></a>Bidragydere
 
-Fanen **Bidragydere** er der, hvor risikoanalytikere og analyseværktøjer kan føje andre korrekturlæsere til sagen. Som standard er alle brugere, der er **tildelt Insider Risk Management-analytikere** og **rollerne Insider Risk Management angivne** som bidragydere for hver aktiv og lukket sag. Kun de brugere, der **er tildelt rollen Insider Risk Management administration,** har tilladelse til at få vist filer og meddelelser i Indholdsstifinder.
+Fanen **Bidragydere** er der, hvor risikoanalytikere og analyseværktøjer kan føje andre korrekturlæsere til sagen. Som standard er alle brugere, der er tildelt **Insider Risk Management-analytikere** og **rollerne Insider Risk Management angivne** som bidragydere for hver aktiv og lukket sag. Kun de brugere, der **er tildelt rollen Insider Risk Management administration,** har tilladelse til at få vist filer og meddelelser i Indholdsstifinder.
 
 Midlertidig adgang til en sag kan tildeles ved at tilføje en bruger som bidragyder. Bidragydere har al sagsstyringskontrol på den specifikke sag undtagen:
 

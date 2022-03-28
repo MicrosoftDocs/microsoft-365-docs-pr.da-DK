@@ -22,12 +22,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 3712875579c7d157fe52a5e115d059fc88b4b6d7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5e1b841c5638bf9228efc844daa58d1d1e170726
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592288"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754747"
 ---
 # <a name="run-an-attack-simulation-in-a-microsoft-365-defender-pilot-environment"></a>Kør en angrebssimulering i Microsoft 365 Defender pilotmiljø
 
@@ -127,13 +127,13 @@ Et alternativ er at hoste din AD DS domænecontroller og teste enheden som virtu
 
 Her er resultatet.
 
-![Slutpunkter for dit Defender-evalueringsmiljø ved hjælp af den simulerede Enterprise Test Lab-vejledning.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png)
+:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png" alt-text="Evalueringsmiljøet ved hjælp af den simulerede Enterprise Test Lab-vejledning" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png":::
 
 Du simulerer et avanceret angreb, der udnytter avancerede teknikker til at skjule fra registrering. Angrebene optæller åbne SMB-sessioner (Server Message Block) på domænecontrollere og henter de seneste IP-adresser på brugernes enheder. Denne kategori af angreb omfatter normalt ikke filer, der er tabt på offerets enhed, og de forekommer kun i hukommelsen. De "lever af land" ved hjælp af eksisterende system- og administrationsværktøjer og indsætter deres kode i systemprocesser for at skjule deres udførelse. En sådan funktionsmåde gør det muligt for dem at undgå registrering og bevares på enheden.
 
 I denne simulering starter vores eksempelscenarie med et PowerShell-script. I den virkelige verden kan en bruger blive narret til at køre et script, eller scriptet kan køre fra en fjernforbindelse til en anden computer fra en tidligere inficeret enhed, hvilket indikerer, at hackeren forsøger at bevæge sig side om side i netværket. Registrering af disse scripts kan være svært, fordi administratorer også ofte kører scripts eksternt for at udføre forskellige administrative aktiviteter.
 
-![Filløs PowerShell-angreb med procesindtrædelse og SMB-rekognosering af angrebsdiagram.](../../media/mtp/mtpdiydiagram.png)
+:::image type="content" source="../../media/mtp/mtpdiydiagram.png" alt-text="Det filløse PowerShell-angreb med procesindtrædelse og SMB-rekognosering af angreb" lightbox="../../media/mtp/mtpdiydiagram.png":::
 
 Under simulering indsætter angrebene shellcode i en tilsyneladende proces, der virker som en proces, der virker som en proces. Scenariet kræver brug af notepad.exe. Vi valgte denne proces til simulering, men hackere vil mere sandsynligt målrette en længere proces i systemet, f.eks. svchost.exe. Shellkoden går derefter videre og kontakter hackerens kommando- og kontrolserver (C2) for at få instruktioner om, hvordan du fortsætter. Scriptet forsøger at udføre rekognoseringsforespørgsler mod domænecontrolleren (DC). Rekognossance gør det muligt for en hacker at få oplysninger om de seneste brugerlogonoplysninger. Når hackere har disse oplysninger, kan de bevæge sig senere i netværket for at få adgang til en bestemt følsom konto
 
@@ -195,7 +195,7 @@ Når du skifter til SOC-analytikerens synspunkt, kan du nu begynde at undersøge
 
 3. Den nye hændelse for de simulerede angreb vises i hændelseskøen.
 
-    ![Eksempel på hændelseskøen.](../../media/mtp/fig2.png)
+   :::image type="content" source="../../media/mtp/fig2.png" alt-text="Køen Hændelser i Microsoft 365 Defender-portalen" lightbox="../../media/mtp/fig2.png":::
 
 #### <a name="investigate-the-attack-as-a-single-incident"></a>Undersøg angrebene som en enkelt hændelse
 
@@ -226,7 +226,7 @@ Lad os se på nogle af de beskeder, der genereres under de simulerede angreb.
 > [!NOTE]
 > Vi gennemgår kun nogle få af de beskeder, der genereres under de simulerede angreb. Afhængigt af versionen af Windows og Microsoft 365 Defender-produkter, der kører på din testenhed, får du muligvis vist flere beskeder, der vises i en lidt anden rækkefølge.
 
-![Eksempel på de oprettede beskeder.](../../media/mtp/fig6.png)
+:::image type="content" source="../../media/mtp/fig6.png" alt-text="En genereret besked i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig6.png":::
 
 ##### <a name="alert-suspicious-process-injection-observed-source-microsoft-defender-for-endpoint"></a>Advarsel: Mistænkelig indførsel af proces, som er blevet observeret (kilde: Microsoft Defender til slutpunkt)
 
@@ -234,7 +234,7 @@ Avancerede hackere bruger avancerede og avancerede metoder til at bevare deres h
 
 For at give SOC-analytikere mulighed for at opfange disse avancerede angreb, giver de dybe hukommelsessensorer i Microsoft Defender til Slutpunkt vores skytjeneste, hvor de kan se de forskellige teknikker til indløsning af kode på tværs af processer. Følgende figur viser, hvordan Defender til slutpunktet har registreret og advaret ved forsøget på at indsætte kode <i>notepad.exe</i>.
 
-![Eksempel på beskeden om indførsel af potentielt skadelig kode.](../../media/mtp/fig7.png)
+:::image type="content" source="../../media/mtp/fig7.png" alt-text="En besked om indførslen af potentielt skadelig kode i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig7.png":::
 
 ##### <a name="alert-unexpected-behavior-observed-by-a-process-run-with-no-command-line-arguments-source-microsoft-defender-for-endpoint"></a>Advarsel: Uventet funktionsmåde, der observeres af en proces, der kører uden kommandolinjeargumenter (kilde: Microsoft Defender til slutpunkt)
 
@@ -251,11 +251,12 @@ Bemærk, at advarselsoplysningerne omfatter den eksterne IP-adresse – en indik
 
 Vælg IP-adressen i beskedprocestræet for at få vist siden med oplysninger om IP-adressen.
 
-![Eksempel på beskeden om uventet funktionsmåde ved at køre en proces uden kommandolinjeargumenter.](../../media/mtp/fig8.png)
+:::image type="content" source="../../media/mtp/fig8.png" alt-text="En besked om uventet funktionsmåde i en proces, der kører uden kommandolinjeargumenter i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig8.png":::
 
 I følgende figur vises den valgte side med oplysninger om IP-adresse (når du klikker på IP-adressen i træet Beskedproces).
 
-![Eksempel på siden med oplysninger om IP-adresse.](../../media/mtp/fig9.png)
+:::image type="content" source="../../media/mtp/fig9.png" alt-text="Siden med oplysninger om IP-adressen i Microsoft 365 Defender portalen" lightbox="../../media/mtp/fig9.png":::
+
 
 ##### <a name="alert-user-and-ip-address-reconnaissance-smb-source-microsoft-defender-for-identity"></a>Besked: Bruger- og IP-adresserekognosering (SMB) (kilde: Microsoft Defender til identitet)
 
@@ -263,7 +264,7 @@ Optælling ved hjælp af SMB-protokollen (Server Message Block) gør det muligt 
 
 Under denne registrering udløses der en besked, når SMB-sessionens optælling kører mod en domænecontroller.
 
-![Eksempel på en Microsoft Defender for Identity-påmindelse for bruger- og IP-adresserekognosering.](../../media/mtp/fig10.png)
+:::image type="content" source="../../media/mtp/fig10.png" alt-text="Microsoft Defender for Identity-påmindelse for genkonfiguration af bruger- og IP-adresse i Microsoft 365 Defender-portalen" lightbox="../../media/mtp/fig10.png":::
 
 #### <a name="review-the-device-timeline-with-microsoft-defender-for-endpoint"></a>Gennemse enhedens tidslinje med Microsoft Defender til slutpunkt
 
@@ -273,13 +274,13 @@ Vælg navnet på den enhed, hvor angrebene blev udført, for at åbne enhedsside
 
 Vælg fanen **Tidslinje** for at åbne enhedens tidslinje og få vist alle hændelser og funktionsmåder, der er observeret på enheden i kronologisk rækkefølge, der er indbyrdes for beskederne hævet.
 
-![Eksempel på enhedens tidslinje med funktionsmåder.](../../media/mtp/fig11.png)
+:::image type="content" source="../../media/mtp/fig11.png" alt-text="Sektionen Tidslinje for enhed i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig11.png":::
 
 Ved at udvide nogle af de mere interessante funktionsmåder får du nyttige oplysninger, f.eks. procestræer.
 
 Rul f.eks. ned, indtil du finder hændelsen Mistænkelig indhændelse **observeret**. Vælg den **powershell.exe, der notepad.exe** en proceshændelse under sig, for at få vist hele procestræet til denne funktionsmåde under grafen Hændelsesenheder  i sideruden. Brug søgelinjen til filtrering, hvis det er nødvendigt.
 
-![Eksempel på procestræet til den valgte funktionalitet til oprettelse af PowerShell-filer.](../../media/mtp/fig12.png)
+:::image type="content" source="../../media/mtp/fig12.png" alt-text="En valgt PowerShell-funktionsmåde for oprettelse af filers procestræ i Microsoft 365 Defender-portalen" lightbox="../../media/mtp/fig12.png":::
 
 #### <a name="review-the-user-information-with-microsoft-defender-for-cloud-apps"></a>Gennemse brugeroplysningerne med Microsoft Defender til skyapps
 
@@ -287,7 +288,7 @@ På hændelsessiden skal du vælge fanen **Brugere** for at få vist listen over
 
 Vælg brugernavnet for at åbne brugerens profilside, hvor yderligere undersøgelse kan udføres. [Læs mere om undersøgelse af risikabelt bruger](/cloud-app-security/tutorial-ueba#identify).
 
-![Eksempel på brugersiden Defender til skyapps.](../../media/mtp/fig13.png)
+:::image type="content" source="../../media/mtp/fig13.png" alt-text="Brugersiden for Defender til skyapps i Microsoft 365 Defender-portalen" lightbox="../../media/mtp/fig13.png":::
 
 #### <a name="automated-investigation-and-remediation"></a>Automatiseret undersøgelse og afhjælpning
 
@@ -298,7 +299,7 @@ Vælg brugernavnet for at åbne brugerens profilside, hvor yderligere undersøge
 
 Gå tilbage til hændelsen i Microsoft 365 Defender-portalen. Fanen **Undersøgelser på** **siden Hændelse viser** de automatiserede undersøgelser, der blev udløst af Microsoft Defender for Identity og Microsoft Defender til Slutpunkt. Skærmbilledet nedenfor viser kun den automatiske undersøgelse, der udløses af Defender til Slutpunkt. Som standard afhjælper Defender til slutpunkt automatisk de artefakter, der findes i køen, hvilket kræver afhjælpning.
 
-![Eksempel på de automatiserede undersøgelser, der er relateret til hændelsen.](../../media/mtp/fig14.png)
+:::image type="content" source="../../media/mtp/fig14.png" alt-text="Det afsnit af automatiserede undersøgelser, der er relateret til hændelsen Microsoft 365 Defender portalen" lightbox="../../media/mtp/fig14.png":::
 
 Vælg den besked, der udløste en undersøgelse, for at åbne **siden Undersøgelsesoplysninger** . Du får vist følgende detaljer:
 
@@ -310,7 +311,7 @@ Vælg den besked, der udløste en undersøgelse, for at åbne **siden Undersøge
 > [!NOTE]
 > Afhængigt af tidsindstillingen kører den automatiske undersøgelse muligvis stadig. Vent et par minutter, indtil processen er fuldført, før du indsamler og analyserer beviserne og gennemgår resultaterne. Opdater siden **med undersøgelsesoplysninger** for at få de nyeste resultater.
 
-![Eksempel på siden Undersøgelsesoplysninger.](../../media/mtp/fig15.png)
+:::image type="content" source="../../media/mtp/fig15.png" alt-text="Siden Undersøgelsesoplysninger i Microsoft 365 Defender portalen" lightbox="../../media/mtp/fig15.png":::
 
 Under den automatiserede undersøgelse identificerede Microsoft Defender for Endpoint notepad.exe processen, der blev tilføjet som en af de artefakter, der kræver afhjælpning. Defender til Slutpunkt stopper automatisk den mistænkelige procesindsætning som en del af den automatiske afhjælpning.
 
@@ -322,7 +323,7 @@ Når undersøgelsen er afsluttet og bekræftet for at blive løst, løser du hæ
 
 Vælg Administrer **hændelse** på **siden Hændelse**. Angiv status til Løs **hændelse, og** vælg **True alert** for the classification and **Security testing** for the determination.
 
-![Eksempel på siden Hændelser med det åbne Administrer hændelsespanel, hvor du kan løse hændelsen.](../../media/mtp/fig16.png)
+:::image type="content" source="../../media/mtp/fig16.png" alt-text="Panelet Administrer hændelser med mulighed for at løse hændelser i Microsoft 365 Defender-portalen" lightbox="../../media/mtp/fig16.png":::
 
 Når hændelsen er løst, løses alle de tilknyttede beskeder i Microsoft 365 Defender og de relaterede portaler.
 
@@ -330,7 +331,7 @@ Dette ombryder angrebssimulering til hændelsesanalyse, automatiseret undersøge
 
 ## <a name="next-step"></a>Næste trin
 
-[![Prøv Microsoft 365 Defender egenskaber for hændelsesrespons.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png)](eval-defender-investigate-respond-additional.md)
+[:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png" alt-text="De Microsoft 365 Defender egenskaber for hændelsesrespons" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png":::](eval-defender-investigate-respond-additional.md)
 
 Trin 2 af 2: [Prøv Microsoft 365 Defender egenskaber for hændelsesrespons](eval-defender-investigate-respond-additional.md)
 

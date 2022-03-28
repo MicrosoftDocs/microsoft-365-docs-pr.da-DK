@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3b889649de7b56d6a1b5300ff323850a4e555b57
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 22e11be0080243325ca7048138fd1212eccc861d
+ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775356"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "63597932"
 ---
 # <a name="explorer-and-real-time-detections"></a>Registreringer i Stifinder og i realtid
 

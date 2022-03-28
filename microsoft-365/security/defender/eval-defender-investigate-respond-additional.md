@@ -23,12 +23,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: cc57c2b39466e84d5652ef60c56d6951fbe86714
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0ad2fc9a1566e7816b3ff806b7d07ac29347cc89
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63596012"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754780"
 ---
 # <a name="try-microsoft-365-defender-incident-response-capabilities-in-a-pilot-environment"></a>Prøv Microsoft 365 Defender egenskaber for hændelsesrespons i et pilotmiljø
 
@@ -51,7 +51,8 @@ Når du har udført et [hændelsessvar for en simuleret angreb](eval-defender-in
 
 Du kommer til hændelseskøen **fra Hændelser & hændelser > hændelser** i hurtig start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Eksempel på hændelseskøen.":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Afsnittet om & vigtige beskeder i Microsoft 365 Defender portal" lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+
 
 Afsnittet **Seneste hændelser og beskeder** viser en graf over antallet af modtagne beskeder og hændelser, der er oprettet inden for de seneste 24 timer.
 
@@ -63,7 +64,7 @@ Hvis du vil undersøge listen over hændelser og prioritere deres betydning for 
 
 Fra standardhændelseskøen skal du **vælge Filtre** for **at få vist** ruden Filtre, hvorfra du kan angive et bestemt sæt hændelser. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Eksempel på ruden filtre for hændelseskøen.":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Ruden Filtre i sektionen & beskeder på Microsoft 365 Defender-portalen" lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
 
 Få mere at vide [under Prioriter hændelser](incident-queue.md).
 
@@ -71,7 +72,7 @@ Få mere at vide [under Prioriter hændelser](incident-queue.md).
 
 Du kan administrere hændelser fra **ruden Administrer hændelse** for en hændelse. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Eksempel på ruden Administrer hændelse for en hændelse.":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Ruden Administrer hændelse i sektionen & med beskeder i Microsoft 365 Defender" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
 
 Du kan få vist denne rude **via linket Administrer** hændelse på:
 
@@ -112,11 +113,12 @@ Afhængigt af hvordan automatiserede undersøgelses- og svarfunktioner er konfig
 
 Her er et eksempel.
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Samlet handlingscenter i Microsoft 365 Defender.":::
+:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Samlet handlingscenter i Microsoft 365 Defender portalen" lightbox="../../media/m3d-action-center-unified.png":::
 
 Fra Handlingscenter kan du vælge afventende handlinger og derefter godkende eller afvise dem i pop op-ruden. Her er et eksempel.
 
-:::image type="content" source="../../media/air-actioncenter-itemselected.png" alt-text="Godkend eller afvis en handling.":::
+:::image type="content" source="../../media/air-actioncenter-itemselected.png" alt-text="Ruden, der viser indstillingerne for at godkende eller afvise en handling i Microsoft 365 Defender portal" lightbox="../../media/air-actioncenter-itemselected.png":::
+
 
 Godkend (eller afvis) afventende handlinger så hurtigt som muligt, så dine automatiserede undersøgelser kan fortsætte og afslutte i tide.
 
@@ -187,7 +189,7 @@ Der kræves en enkelt intern postkasse og enhed til denne simulering. Du skal og
       > [!NOTE]
       > Se næste trin for at få filtreringsindstillinger til at begrænse dataretur.
 
-      ![Eksempel på resultater fra avanceret forespørgsel.](../../media/advanced-hunting-incident-response-try-1.png)
+      :::image type="content" source="../../media/advanced-hunting-incident-response-try-1.png" alt-text="Siden Avanceret jagt i Microsoft 365 Defender portal" lightbox="../../media/advanced-hunting-incident-response-try-1.png":::
 
         > [!NOTE]
         > Avanceret forespørgsel viser forespørgselsresultater som tabeldata. Du kan også vælge at få vist dataene i andre formattyper, f.eks. diagrammer.
@@ -201,7 +203,7 @@ Der kræves en enkelt intern postkasse og enhed til denne simulering. Du skal og
 
    1. Klik på de resulterende rækker fra forespørgslen, så du kan undersøge posten.
 
-      ![Eksempel på sidepanelet undersøg post, som åbnes, når der er valgt et avanceret jagtresultat.](../../media/advanced-hunting-incident-response-try-2.png)
+      :::image type="content" source="../../media/advanced-hunting-incident-response-try-2.png" alt-text="Sektionen Undersøg post på siden Avanceret ræve Microsoft 365 Defender portalen" lightbox="../../media/advanced-hunting-incident-response-try-2.png":::
 
 4. Nu hvor du har bekræftet, at du kan se mailen, kan du tilføje et filter for de vedhæftede filer. Fokuser på alle mails med vedhæftede filer i miljøet. Til denne simulering skal du fokusere på indgående mails, ikke dem, der sendes ud fra dit miljø. Fjern eventuelle filtre, du har tilføjet, for at finde din meddelelse og tilføje "| where **AttachmentCount > 0** and **EmailDirection** == **"Inbound""**
 
@@ -259,40 +261,41 @@ Brugerdefinerede registreringer kører forespørgslen i overensstemmelse med den
 
 1. På forespørgselssiden skal du fjerne linje 7 og 8, der blev tilføjet i trin 7 i gå på jagtinstruktioner, og klikke **på Opret registreringsregel**.
 
-   ![Eksempel på, hvor du kan klikke på opret registreringsregel på den avancerede jagtside.](../../media/advanced-hunting-incident-response-try-3.png)
+   :::image type="content" source="../../media/advanced-hunting-incident-response-try-3.png" alt-text="Afsnittet til redigering af forespørgsel på siden Avanceret ræve Microsoft 365 Defender portalen" lightbox="../../media/advanced-hunting-incident-response-try-3.png":::
 
    > [!NOTE]
    > Hvis du klikker **på Opret registreringsregel** , og du har syntaksfejl i forespørgslen, gemmes din registreringsregel ikke. Dobbelttjek din forespørgsel for at sikre, at der ikke er nogen fejl.
 
 2. Udfyld de påkrævede felter med de oplysninger, der gør det muligt for sikkerhedsteamet at forstå beskeden, hvorfor den blev oprettet, og hvilke handlinger du forventer, de skal udføre.
 
-   ![Eksempel på siden til registrering af regler for oprettelse, hvor du kan definere oplysninger om beskeden.](../../media/mtp/fig23.png)
+   :::image type="content" source="../../media/mtp/fig23.png" alt-text="Siden med beskedoplysninger i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig23.png":::
 
    Sørg for, at du udfylder felterne med klarhed for at give den næste bruger en informeret beslutning om denne besked om registreringsregel
 
 3. Vælg, hvilke enheder der påvirkes af denne besked. I dette tilfælde skal du vælge **Enhed** og **postkasse**.
 
-   ![Eksempel på siden opret registreringsregel, hvor du kan vælge parametrene for de på påvirkede enheder.](../../media/mtp/fig24.png)
+   :::image type="content" source="../../media/mtp/fig24.png" alt-text="Detaljesiden for de på påvirkede enheder i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig24.png":::
 
 4. Afgør, hvilke handlinger der skal foregå, hvis beskeden udløses. I dette tilfælde skal du køre en antivirusscanning, selvom der kan blive foretaget andre handlinger.
 
-   ![Eksempel på siden opret registreringsregel, hvor du kan køre en antivirus-scanning, når en besked udløses for at hjælpe med at håndtere trusler.](../../media/mtp/fig25.png)
+   :::image type="content" source="../../media/mtp/fig25.png" alt-text="Siden Handlinger i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig25.png":::
 
 5. Vælg området for beskedreglen. Da denne forespørgsel involverer enheder, er enhedsgrupperne relevante i denne brugerdefinerede registrering i henhold til Microsoft Defender til slutpunktskontekst. Når du opretter en brugerdefineret registrering, der ikke omfatter enheder som på påvirkede enheder, gælder omfang ikke.
 
-   ![Eksempel på siden til registrering af regler for oprettelse, hvor du kan angive omfanget for beskedreglen, så dine forventninger til de resultater, du får vist, administreres.](../../media/mtp/fig26.png)
+   :::image type="content" source="../../media/mtp/fig26.png" alt-text="Siden Omfang i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig26.png":::
+
 
    For dette pilotprojekt kan det være en god ide at begrænse denne regel til et undersæt af testenheder i produktionsmiljøet.
 
 6. Vælg **Opret**. Vælg derefter **Brugerdefinerede registreringsregler** fra navigationspanelet.
 
-   ![Eksempel på indstillingen Brugerdefinerede registreringsregler i menuen.](../../media/mtp/fig27a.png)
+   :::image type="content" source="../../media/mtp/fig27a.png" alt-text="Indstillingen Regler for brugerdefinerede registreringsregler i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig27a.png":::
 
-   ![Eksempel på siden med registreringsregler, der viser oplysninger om reglen og udførelsen.](../../media/mtp/fig27b.png)
+   :::image type="content" source="../../media/mtp/fig27b.png" alt-text="Siden, der viser registreringsregler og eksekveringsoplysninger i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig27b.png":::
 
    Fra denne side kan du vælge registreringsreglen, som åbner en detaljeside.
 
-   ![Eksempel på siden med vedhæftede filer i mails, hvor du kan se status for udførelse af reglen, udløsede beskeder og handlinger, redigere registrering osv.](../../media/mtp/fig28.png)
+   :::image type="content" source="../../media/mtp/fig28.png" alt-text="Den side, der viser detaljer om de udløste beskeder i Microsoft 365 Defender portal" lightbox="../../media/mtp/fig28.png":::
 
 
 ### <a name="expert-training-on-advanced-hunting"></a>Ekspertkursus om avanceret jagt

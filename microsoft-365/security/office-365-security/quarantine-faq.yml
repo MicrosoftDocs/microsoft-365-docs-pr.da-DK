@@ -1,0 +1,177 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om meddelelser i karantæne
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: c440b2ac-cafa-4be5-ba4c-14278a7990ae
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  description: Administratorer kan få vist ofte stillede spørgsmål og svar om meddelelser i karantæne i Exchange Online Protection (EOP).
+  ms.custom: seo-marvel-apr2020
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 839469f1aa872ff89c4dd488ed441cf51c911a8d
+  ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 01/12/2022
+  ms.locfileid: "63597944"
+title: Ofte stillede spørgsmål om meddelelser i karantæne
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Gælder for**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Dette emne indeholder ofte stillede spørgsmål og svar om mails, der er sat i karantæne, for Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser.
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod uønsket post under [Ofte stillede spørgsmål om beskyttelse mod uønsket post](anti-spam-protection-faq.yml).
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod malware under Ofte stillede [spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml).
+
+
+  Du kan finde spørgsmål og svar om beskyttelse mod spoofing under [Ofte stillede spørgsmål om beskyttelse mod spoofing](anti-spoofing-protection-faq.yml).
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Hvordan administrerer jeg meddelelser, der var i karantæne for malware?
+    answer: >
+      Som standard er det kun administratorer, der kan administrere meddelelser, der var i karantæne for malware. Du kan finde flere oplysninger [i Administrere meddelelser og filer, der er sat i karantæne, som administrator](manage-quarantined-messages-and-files.md).
+
+
+      Men administratorer kan oprette og anvende karantænepolitikker _på_ antimalwarepolitikker, der definerer flere funktioner for brugerne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+  - question: >
+      Hvordan sætter jeg spam i karantæne?
+    answer: >
+      Som standard sendes meddelelser, der er klassificeret som spam eller massemails via spamfiltrering, til brugerens postkasse og flyttes til mappen Uønsket mail. Men du kan i stedet konfigurere antispampolitikker til at sætte spam- eller massemails i karantæne. Få mere at vide under [Konfigurer antispam-politikker i EOP](configure-your-spam-filter-policies.md).
+  - question: >
+      Hvordan giver jeg brugere adgang til karantæne?
+    answer: >
+      En bruger skal have en gyldig konto for at få adgang til sine egne meddelelser i karantæne. Enkeltstående EOP kræver, at brugerne er repræsenteret som mailbrugere i EOP (oprettet manuelt eller oprettet via katalogsynkronisering). Du kan finde flere oplysninger om administration af brugere i enkeltstående EOP-miljøer under [Administrere mailbrugere i enkeltstående EOP](/exchange/standalone-eop/manage-mail-users-in-eop).
+  - question: >
+      Hvilke meddelelser kan slutbrugere få adgang til i karantæne?
+    answer: >
+      Karantænepolitikker definerer, om brugere kan få adgang til meddelelser, der er sat i karantæne, baseret på, hvorfor meddelelsen var i karantæne (for [understøttede funktioner](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features)). Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+
+
+      Brugere har som standard adgang til følgende typer af meddelelser, der er i karantæne, hvor de er modtager:
+
+
+      - **Antispampolitikker**: Spam, massemails og phishingmeddelelser (phishingmeddelelser, der ikke er så sikre).
+
+      - **Antiphishing-politikker**: forfalskede afsendere, beskyttelse af bruger efterligning (Defender til Office 365), beskyttelse mod domæne efterligning (Defender til Office 365) og beskyttelse af postkassens intelligens (Defender til Office 365).
+
+
+      Du kan finde flere oplysninger [i Finde og frigive meddelelser, der er sat i karantæne, som en bruger](find-and-release-quarantined-messages-as-a-user.md).
+
+
+      Slutbrugere kan som standard ikke få adgang til følgende typer af meddelelser, der er i karantæne, hvor de er en modtager:
+
+
+      - **Antispampolitikker**: Phishing med høj tillid.
+
+      - **Antimalwarepolitikker**
+
+      - **Pengeskab Vedhæftede filer (Defender til Office 365)**: Mails fra politikker og filer fra Pengeskab Politikker for vedhæftede filer og filer fra Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams.
+
+      - **Mailflowregler (transportregler)**: Meddelelser, der var i karantæne på grund  af handlingen Lever meddelelsen til den tilknyttede karantænehandling i mailflowregler.
+
+
+      Du kan finde flere oplysninger [i Administrere meddelelser og filer, der er sat i karantæne, som administrator](manage-quarantined-messages-and-files.md).
+  - question: >
+      Hvor længe opbevares meddelelser i karantæne?
+    answer: >
+      Det afhænger af, hvorfor meddelelsen var i karantæne. Få mere at vide under [Meddelelser, der er sat i karantæne i EOP og Defender for Office 365](quarantine-email-messages.md).
+  - question: >
+      Kan jeg frigive eller rapportere mere end én meddelelse, der er sat i karantæne, ad gangen?
+    answer: >
+      I Microsoft 365 Defender kan du vælge og frigive op til 100 meddelelser ad gangen.
+
+
+      Administratorer kan bruge [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)- og [Release-QuarantineMessage-cmdlet'er](/powershell/module/exchange/release-quarantinemessage) i Exchange Online PowerShell eller den enkeltstående EOP PowerShell til at finde og frigive meddelelser, der er sat i karantæne, og rapportere falske positive flere steder.
+  - question: >
+      Understøttes jokertegn, når du søger efter meddelelser, der er sat i karantæne? Kan jeg søge efter meddelelser, der er sat i karantæne, efter et bestemt domæne?
+    answer: >-
+      Jokertegn understøttes ikke i Microsoft 365 Defender portal. Når du f.eks. søger efter en afsender, skal du angive den fulde mailadresse. Men du kan bruge jokertegn i Exchange Online PowerShell eller enkeltstående EOP PowerShell.
+
+
+      Kopiér f.eks. følgende PowerShell-kode til Notesblok, og gem filen som .ps1 på en placering, som du nemt kan finde (f.eks. C:\Data\QuarantineRelease.ps1).
+
+
+      Når du derefter har forbindelse til [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) eller [Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell), skal du køre følgende kommando for at køre scriptet:
+
+
+      ```powershell
+
+      & C:\Data\QuarantineRelease.ps1
+
+      ```
+
+
+      Scriptet gør følgende handlinger:
+
+
+      - Find ikke-slettede meddelelser, der var i karantæne som spam fra alle afsendere i fabrikam-domænet. Det maksimale antal resultater er 50.000 (50 sider med 1000 resultater).
+
+      - Gem resultaterne i en CSV-fil.
+
+      - Slip de matchende meddelelser, der er sat i karantæne, til alle de oprindelige modtagere.
+
+
+      ```powershell
+
+      $Page = 1
+
+      $List = $null
+
+
+      Do
+
+      {
+
+      Write-Host "Getting Page " $Page
+
+
+      $List = (Get-QuarantineMessage -Type Spam -PageSize 1000 -Page $Page | where {$_.Released -like "False" -and $_.SenderAddress -like "*fabrikam.com"})
+
+      Write-Host "                     " $List.count " rows in this page match"
+
+      Write-Host "                                                             Exporting list to appended CSV for logging"
+
+      $List | Export-Csv -Path "C:\Data\Quarantined Message Matches.csv" -Append -NoTypeInformation
+
+
+      Write-Host "Releasing page " $Page
+
+      $List | foreach {Release-QuarantineMessage -Identity $_.Identity -ReleaseToAll}
+
+
+      $Page = $Page + 1
+
+
+      } Until ($Page -eq 50)
+
+      ```
+
+
+      Når du har udgivet en meddelelse, kan du ikke slippe den igen.

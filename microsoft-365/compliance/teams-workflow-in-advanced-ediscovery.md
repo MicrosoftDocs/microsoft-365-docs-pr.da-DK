@@ -14,28 +14,26 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Lær at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams i Advanced eDiscovery.
-ms.openlocfilehash: 68a255dda7aa9b879c9e608eb99c9575ba691c16
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 27f3ada633f7af37b657e59cce64ef1c8e102177
+ms.sourcegitcommit: b71a8fdda2746f18fde2c94d188be89f9cab45f2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63716211"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "63598031"
 ---
 # <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Advanced eDiscovery arbejdsproces for indhold i Microsoft Teams
 
 Denne artikel indeholder et omfattende sæt procedurer, retningslinjer og bedste fremgangsmåder til brug af Advanced eDiscovery til at bevare, indsamle, gennemgå og eksportere indhold fra Microsoft Teams. Formålet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsproces til Teams indhold.
 
-Der er fem kategorier af Teams, som du kan indsamle og behandle ved hjælp af Advanced eDiscovery:
+Der er fire kategorier af indhold Teams, som du kan indsamle og behandle ved hjælp af Advanced eDiscovery:
 
 - **Teams chatsamtaler med 1:1**. Chatbeskeder, indlæg og vedhæftede filer, der deles Teams en samtale mellem to personer.  Teams 1:1-chats kaldes også *samtaler*.
 
 - **Teams gruppechats**. Chatbeskeder, indlæg og vedhæftede filer, der er delt Teams en samtale mellem tre eller flere personer. Kaldes også *1:N-chatsamtaler* *eller gruppesamtaler*.
 
-- **Teams kanaler**. Chatbeskeder, indlæg, svar og vedhæftede filer, der er delt i Teams kanal.
+- **Teams kanaler**. Chatmeddelelser, indlæg, svar og vedhæftede filer, der er delt i Teams kanal.
 
-- **Private kanaler**. Meddelelsesopslag, svar og vedhæftede filer, der er delt i en Teams kanal.
-
-- **Delte kanaler**. Meddelelsesopslag, svar og vedhæftede filer, der er delt i en delt Teams kanal.
+- **Private Teams kanaler**. Meddelelsesopslag, svar og vedhæftede filer, der er delt i en Teams kanal.
 
 ## <a name="where-teams-content-is-stored"></a>Hvor Teams indhold gemmes
 
@@ -46,12 +44,8 @@ En forudsætning for at administrere Teams-indhold i Advanced eDiscovery er at f
 |Teams chatsamtaler med 1:1     |Meddelelser i 1:1-chats gemmes i Exchange Online for alle chatdeltagere. |Filer, der deles i en 1:1-chat, gemmes OneDrive for Business den person, der har delt filen. |
 |Teams gruppechats     |Meddelelser i gruppechats gemmes i Exchange Online for alle chatdeltagere. |Filer, der deles i gruppechats, gemmes OneDrive for Business den person, der har delt filen. |
 |Teams kanaler     |Alle kanalmeddelelser og -indlæg gemmes i den Exchange Online, der er knyttet til teamet.|Filer, der deles i en kanal, gemmes på det SharePoint Online-websted, der er knyttet til teamet.           |
-|Private kanaler     |Meddelelser, der sendes i en privat kanal, gemmes i Exchange Online for alle medlemmer af den private kanal.|Filer, der deles i en privat kanal, gemmes i et dedikeret SharePoint Online-websted, der er knyttet til den private kanal.|
-|Delte kanaler     |Meddelelser, der sendes i en delt kanal, gemmes i en systempostkasse, der er knyttet til den delte kanal. <sup>1</sup>|Filer, der deles i en delt kanal, gemmes i en dedikeret SharePoint Online-websted, der er knyttet til den delte kanal.|
+|Private Teams kanaler     |Meddelelser, der sendes i en privat kanal, gemmes i Exchange Online for alle medlemmer af den private kanal.|Filer, der deles i en privat kanal, gemmes i et dedikeret SharePoint Online-websted, der er knyttet til den private kanal.|
 ||||
-
-> [!NOTE]
-> <sup>1</sup> Hvis du vil søge efter (og bevare) meddelelser, der er sendt i en delt kanal, skal du søge eller angive Exchange Online postkassen for det overordnede team.
 
 ## <a name="create-a-case-for-teams-content"></a>Oprette en sag til Teams indhold
 
@@ -101,12 +95,12 @@ Sådan føjer du ledende leverandører til en sag og bevarer datakilder, der er 
 
    - **OneDrives**. Den OneDrive OneDrive konto er valgt som standard. Sørg for, at dette vælges for at tilføje (og bevare) filer, der deles i 1:1-chats og gruppechats, som følsomme data.
 
-   - **SharePoint**. Tilføj det SharePoint websted, der er knyttet til en privat eller delt kanal, som den, der er tilknyttet, er medlem af for at tilføje (og bevare) som arkiveringsdata for de filer, der deles i en kanal. Klik **på Rediger**, og tilføj derefter URL-adressen til det SharePoint, der er knyttet til en privat eller delt kanal. Du kan få mere at vide om, hvordan du finder de private og delte kanaler, som en bruger er medlem af, under [eDiscovery for private og delte kanaler](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
+   - **SharePoint**. Tilføj det SharePoint websted, der er knyttet til en privat kanal, som den, der er tilknyttet, er medlem af for at tilføje (og bevare) som arkiveringsdata for de filer, der deles i den private kanal. Klik **på Rediger**, og tilføj derefter URL-adressen til det SharePoint, der er knyttet til en privat kanal. Du kan få mere at vide om, hvordan du finder de private kanaler, en bruger er medlem af, [under eDiscovery til private kanaler](/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels).
 
-   - **Teams**. Tilføj de teams, som din leder er medlem af, for at tilføje (og bevare) som arkiveringsdata for alle kanalmeddelelser og alle filer, der deles på en Teams kanal. Dette omfatter tilføjelse af postkassen for det overordnede team for en delt kanal, som den, der er medlem af, er medlem af. Når du klikker **på Rediger**, vises den postkasse og det websted, der er knyttet til hvert team, som teamets leder er medlem af, på en liste. Vælg de teams, du vil knytte til assistenten. Du skal vælge både den tilsvarende postkasse og webstedet for hvert team.
+   - **Teams**. Tilføj de teams, som din leder er medlem af, for at tilføje (og bevare) som arkiveringsdata for alle kanalmeddelelser og alle filer, der deles på en Teams kanal. Når du klikker **på Rediger**, vises den postkasse og det websted, der er knyttet til hvert team, som teamets leder er medlem af, på en liste. Vælg de teams, du vil knytte til assistenten. Du skal vælge både den tilsvarende postkasse og webstedet for hvert team.
 
    > [!NOTE]
-   > Du kan også tilføje postkassen og webstedet for de Teams, som familiemedlemmer ikke er medlemmer af som en placering, hvor dataene skal vises. Det gør du ved **at klikke på** Rediger **ud for Exchange** og **SharePoint** derefter tilføje den postkasse og det websted, der er knyttet til teamet.
+   > Du kan også tilføje postkassen og webstedet for de Teams, som familiemedlemmer ikke er medlemmer af som en placering, hvor dataene skal vises. Det gør du ved **at klikke på** **Rediger Exchange** gruppen **SharePoint** derefter tilføje postkassen og webstedets tilknytning til teamet.
 
 6. Når du har tilføjet ledende leverandører og konfigurerer de sikkerhedsdatakilder, du skal bruge, skal du klikke på **Næste** for at **få vist siden med indstillinger for** Venteposition.
 
@@ -146,13 +140,13 @@ Sådan opretter du en samling Teams indhold:
 
 5. Vælg en eller flere førere, og klik derefter **på Tilføj**.
 
-   Når du har føjet bestemte personer, der skal anvendes, til samlingen, vises der en liste over bestemte datakilder for hver person, der er tillid til. Dette er de datakilder, du konfigurerede, da du føjede den person, der skal have sagen, til sagen. Alle datakilder, der er under hjælp til hjælp, er valgt som standard. Dette omfatter alle Teams eller kanaler, du har knyttet til en seer.
+   Når du har føjet bestemte personer, der skal anvendes, til samlingen, vises der en liste over bestemte datakilder for hver person, der er tillid til. Dette er de datakilder, du konfigurerede, da du føjede den person, der skal have sagen, til sagen. Alle datakilder, der er under hjælp til hjælp, er valgt som standard. Dette omfatter alle Teams og private kanaler, som du har knyttet til en person, der er tilknyttet en person, der er tilknyttet.
 
    Vi anbefaler, at du gør følgende, når du indsamler Teams indhold:
 
    - Fjern OneDrive konti fra samlingsomfanget (ved at fjerne markeringen i afkrydsningsfeltet i kolonnen Med hjælp til **OneDrive** for hver kontrolplum). Dette forhindrer indsamling af dublerede filer, der blev vedhæftet 1:1-chats og gruppechats. Vedhæftede skybaserede filer indsamles automatisk fra hver samtale, der findes i samlingen, når du opbevarer kladdesamlingen i gennemsynssættet. Ved at bruge denne metode (i stedet OneDrive søge på konti som en del af samlingen) grupperes filer, der er vedhæftet 1:1 og gruppechats, i den samtale, de blev delt i.
 
-   - Fjern markeringen i afkrydsningsfeltet i kolonnen **Yderligere websted for at fjerne markeringen af** de websteder SharePoint der indeholder filer, som er delt i private eller delte kanaler. Dette fjerner indsamling af dublerede filer, der blev vedhæftet private eller delte kanalsamtaler, fordi disse vedhæftede skyfiler automatisk føjes til gennemsynssættet, når du vedhæfter kladdesamlingen og grupperes i de samtaler, de blev delt i.
+   - Fjern markeringen i afkrydsningsfeltet i kolonnen Yderligere **websted for at fjerne** markeringen af de websteder SharePoint der indeholder filer, der er delt i private kanaler. Dette fjerner indsamling af dublerede filer, der blev vedhæftet private kanalsamtaler, fordi vedhæftede skyfiler, der er vedhæftet private kanalsamtaler, automatisk føjes til gennemsynssættet, når du arkiverer kladdesamlingen og grupperes i de samtaler, der blev delt i.
 
 6. Hvis du tidligere har fulgt trinnene for at tilføje Teams som datakilder, der skal følges, kan du springe dette trin over og vælge **Næste**. Ellers kan du på siden for guider for **ikke-registrerede datakilder vælge ikke-registrerede** datakilder, der indeholder Teams indhold, som du måske har føjet til sagen for at søge i samlingen.
 
@@ -160,7 +154,7 @@ Sådan opretter du en samling Teams indhold:
 
 8. På siden **med guiden** Betingelser skal du konfigurere søgeforespørgslen til at indsamle Teams fra de datakilder, du angav på de forrige sider i guiden. Du kan bruge forskellige nøgleord og søgebetingelser for at begrænse omfanget af samlingen. Du kan finde flere oplysninger [i Oprette søgeforespørgsler efter samlinger](building-search-queries.md).
 
-   For at sikre den mest omfattende samling af Teams-chatsamtaler (herunder 1:1-, gruppe- og kanalchats) skal du bruge betingelsen **Type** og vælge indstillingen **Chatbeskeder**. Vi anbefaler også, at du med medtage et datointerval eller flere nøgleord for at begrænse omfanget af samlingen til elementer, der er relevante for din undersøgelse. Her er et skærmbillede af en eksempelforespørgsel, der bruger **indstillingerne Type** **og** Dato:
+   For at sikre den mest omfattende samling af Teams-chatsamtaler (herunder 1:1, gruppe-, kanal- og private chatsamtaler) skal du bruge betingelsen **Type** og vælge indstillingen **Chatbeskeder.** Vi anbefaler også, at du med medtage et datointerval eller flere nøgleord for at begrænse omfanget af samlingen til elementer, der er relevante for din undersøgelse. Her er et skærmbillede af en eksempelforespørgsel, der bruger **indstillingerne Type** **og** Dato:
 
    ![Forespørgsel til indsamling Teams indhold.](..\media\TeamsConditionsQueryType.png)
 
@@ -199,7 +193,7 @@ I følgende tabel beskrives det, hvordan de forskellige typer Teams chatindhold 
 | Teams indholdstype|Gruppere efter familie  |Gruppere efter samtale  |
 |:---------|:---------|:---------|
 |Teams 1:1 og gruppechats   | En udskrift og alle dens vedhæftede filer og udpakkede elementer deler det samme **FamilyId**. Hver afskrift har et entydigt **FamilyId**. |Alle afskriftsfiler og deres familieelementer i den samme samtale deler det samme **ConversationId**. Dette omfatter følgende elementer:<br/><br/>  - Alle udtrukne elementer og vedhæftede filer af alle afskrifter, der deler det samme **ConversationId**. <br/> - Alle afskrifter for den samme chatsamtale<br/> - Alle udvisker kopier af hver afskrift<br/> - Afskrifter fra efterfølgende samlinger fra den samme chatsamtale <br/><br/>  I Teams 1:1 og gruppechatsamtaler kan du have flere afskriftsfiler, hver enkelt svarende til en anden tidsramme i samtalen. Da disse afskriftsfiler er fra den samme samtale med de samme deltagere, deler de det samme **ConversationId**.|
-|Standardchatsamtaler, private og delte kanalchats    | Hvert indlæg og alle svar og vedhæftede filer gemmes i deres egen afskrift. Denne afskrift og alle dens vedhæftede filer og udpakkede elementer deler det samme **FamilyId**.         |Hvert indlæg og dets vedhæftede filer og udtrukne elementer har et entydigt **ConversationId**. Hvis der er efterfølgende samlinger eller nye svar fra det samme indlæg, vil de delta-afskrifter, der fremkommer ved disse samlinger, også have det samme **ConversationId**.|
+|Teams og private kanalchats    | Hvert indlæg og alle svar og vedhæftede filer gemmes i deres egen afskrift. Denne afskrift og alle dens vedhæftede filer og udpakkede elementer deler det samme **FamilyId**.         |Hvert indlæg og dets vedhæftede filer og udtrukne elementer har et entydigt **ConversationId**. Hvis der er efterfølgende samlinger eller nye svar fra det samme indlæg, vil de delta-afskrifter, der fremkommer ved disse samlinger, også have det samme **ConversationId**.|
 ||||
 
 Brug **kontrolelementet Gruppe** i kommandolinjen i et korrektursæt for at få vist Teams indhold grupperet efter familie eller samtale.
@@ -240,7 +234,7 @@ Her er den logik, der bruges af Advanced eDiscovery til at medtage yderligere me
 | Teams indholdstype|Forespørgsler med søgeparametre  |Forespørgsler med datointervaller  |
 |:---------|:---------|:---------|
 |Teams 1:1 og gruppechats   |Meddelelser, der blev sendt 12 timer før og 12 timer efter, at dynamiske elementer er grupperet med svartidselementet i en enkelt afskriftsfil.   |Meddelelser i et 24-timers vindue grupperes i en enkelt afskriftsfil.|
-|Standardchatsamtaler, private Teams delte kanalchats    |Hvert indlæg, der indeholder svarsvar og alle tilsvarende svar, grupperes i en enkelt afskriftsfil. |Hvert indlæg, der indeholder svarsvar og alle tilsvarende svar, grupperes i en enkelt afskriftsfil.|
+|Teams og private kanalchats    |Hvert indlæg, der indeholder svarsvar og alle tilsvarende svar, grupperes i en enkelt afskriftsfil. |Hvert indlæg, der indeholder svarsvar og alle tilsvarende svar, grupperes i en enkelt afskriftsfil.|
 ||||
 
 ### <a name="deduplication-of-teams-content"></a>Deduplikering af Teams indhold
@@ -271,14 +265,14 @@ I følgende tabel beskrives metadataegenskaber for Teams indhold.
 |:---------|:---------|
 |ContainsEditedMessage      | Angiver, om en afskriftsfil indeholder en redigeret meddelelse. Redigerede meddelelser identificeres ved visning af afskriftsfilen.|
 |ConversationId|Et GUID, der identificerer den samtale, som elementet er knyttet til. Afskrift af filer og vedhæftede filer fra den samme samtale har den samme værdi for denne egenskab.|
-|Samtalenavn     | Navnet på samtalen, som afskriftsfilen eller den vedhæftede fil er knyttet til. For Teams 1:1 og gruppechats er værdien af denne egenskab UPN for alle deltagere i samtalen. F.eks. `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams (standardchatsamtaler, private og delte) bruger følgende format til samtalenavn: `<Team name>,<Channel name>`.F.eks. `eDiscovery vNext, General`.          |
-|ConversationType     | Angiver typen af Teamchat. For Teams 1:1 og gruppechats er værdien for denne egenskab `Group`. For standardchatsamtaler, private og delte kanalchats er værdien `Channel`.|
+|Samtalenavn     | Navnet på samtalen, som afskriftsfilen eller den vedhæftede fil er knyttet til. For Teams 1:1 og gruppechats er værdien af denne egenskab UPN for alle deltagere i samtalen. F.eks. `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams kanal- og private kanalchats skal bruge følgende format for samtalenavn: `<Team name>,<Channel name>`.F.eks. `eDiscovery vNext, General`.          |
+|ConversationType     | Angiver typen af Teamchat. For Teams 1:1 og gruppechats er værdien for denne egenskab `Group`. For Teams kanal og private kanalchats er værdien `Channel`.|
 |Dato | Tidsstemplet for den første meddelelse i udskriftsfilen.|
 |FamilyId|Et GUID, der identificerer afskriftsfilen for en chatsamtale. Vedhæftede filer har samme værdi for denne egenskab som den afskriftsfil, der indeholder den meddelelse, som filen blev vedhæftet.|
 |FileClass     |Angiver den pågældende type indhold. Elementer fra Teams chatsamtaler har værdien `Conversation`. I modsætning hertil Exchange mail har værdien `Email`.|          |
 |MessageKind     | Egenskaben Meddelelsesegenskab. Teams indeholder værdien `microsoftteams , im`. |
 |Modtagere     | En liste over alle brugere, der har modtaget en meddelelse i afskriftssamtalen.|
-|TeamsChannelName     | Den Teams kanalnavn for afskriften.|
+|TeamsChannelName     | Den Teams kanalnavn eller det private kanalnavn for afskriften.|
 |||
 
 Du kan finde beskrivelser Advanced eDiscovery af metadataegenskaber under [Felter til dokumentmetadata Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).
