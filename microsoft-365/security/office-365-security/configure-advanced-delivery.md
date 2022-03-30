@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan lære, hvordan de bruger den avancerede leveringspolitik i Exchange Online Protection (EOP) til at identificere meddelelser, der ikke skal filtreres i bestemte understøttede scenarier (phishingsimulering fra tredjeparter og meddelelser leveret til sikkerhedshandlinger ) postkasser (SecOps).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1abb2c1710d1a7bd101801110e3c44f3b8e2ae65
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: bf564765b9bb896fcfcdac01961d414139199603
+ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775868"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "63597899"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser
 
@@ -446,7 +446,7 @@ Du identificerer posten, der skal ændres ud fra dens URL-værdier _(parameteren
 I dette eksempel er udløbsdatoen for den angivne post blevet ændret.
 
 ```powershell
-Set-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
+Set-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery –Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
 ```
 
 Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
@@ -490,7 +490,7 @@ Du identificerer posten, der skal ændres ud fra dens URL-værdier _(parameteren
 I dette eksempel er udløbsdatoen for den angivne post blevet ændret.
 
 ```powershell
-Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
+Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery –Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
 ```
 
 Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).

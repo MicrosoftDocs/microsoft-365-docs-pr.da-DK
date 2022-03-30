@@ -13,12 +13,13 @@ ms.assetid: 37640c80-ce6f-47e2-afd1-bc1d3c50e637
 description: Administratorer kan lære at bruge widgetten Køer i dashboardet for mailflow i Security & Compliance Center til at overvåge mislykket mailflow for deres lokale organisationer eller partnerorganisationer over udgående forbindelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 197dbf1c50451f205b9a6f692faa7bab3c40fd11
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 54bff65b29555fe0c94c86141cd7a10a77c36219
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587322"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680000"
 ---
 # <a name="queues-insight-in-the-security--compliance-center"></a>Køindsigt i Sikkerheds- & Compliance Center
 

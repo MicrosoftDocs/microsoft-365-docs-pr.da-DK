@@ -6,7 +6,7 @@ metadata:
   manager: scotv
   ms.reviewer: tugu, jmueller
   audience: Admin
-  ms.topic: reference
+  ms.topic: faq
   ms.service: o365-administration
   ms.localizationpriority: medium
   ms.collection:
@@ -19,12 +19,12 @@ metadata:
   search.appverid: MET150
   description: Ofte stillede spørgsmål om Microsoft Home Use Program.
   ms.date: 05/01/2021
-  ms.openlocfilehash: 5fbc27e82c61fd1cc7ca3fc75f4369afca532f9d
-  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.openlocfilehash: 2a97fd487ecc25fe06500608cb35701853258e03
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63593886"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63680110"
 title: Microsoft Home Use Program ofte stillede spørgsmål
 summary: >
   Volumenlicenskunder bruger Microsoft Home Use Program (HUP) på [Microsoft Store til Virksomheder websted](https://go.microsoft.com/fwlink/?linkid=2139192).

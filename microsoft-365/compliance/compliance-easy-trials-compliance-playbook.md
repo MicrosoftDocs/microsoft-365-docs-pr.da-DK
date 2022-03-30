@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft 365 prøveversion af løsninger til overholdelse af regler og standarder.
-ms.openlocfilehash: 896e3fe81c74cc2a594ab88807e0b9505fed1a18
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: e0d48ba9c4a5ca50869b64d6312fe845ef9bf50c
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754248"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679890"
 ---
 # <a name="trial-playbook-microsoft-365-compliance-solutions"></a>Prøvespilbog: Microsoft 365 løsninger til overholdelse af regler og standarder
 
@@ -434,6 +434,6 @@ Proaktivt identificere og beskytte mod risici i forbindelse med beskyttelse af p
 
 **Hvad er inkluderet**: Du kan se en komplet liste over Microsoft 365 over overholdelsesløsninger og funktioner, der er angivet efter produktniveau, i [Funktionsmatrix](https://go.microsoft.com/fwlink/?linkid=2139145).
 
-**Microsoft Security Technical Content Library: Udforsk** dette bibliotek for at finde interaktive vejledninger og andet læringsindhold, der er relevant for dine behov. [Besøg Bibliotek](/security).
+**Microsoft Security Technical Content Library: Udforsk** dette bibliotek for at finde interaktive vejledninger og andet læringsindhold, der er relevant for dine behov. [Besøg Bibliotek](/security/content-library).
 
 **Microsoft-sikkerhedsressourcer**: Fra antimalware til Zero Trust får du alle de relevante ressourcer til organisationens sikkerhedsbehov. [Besøg Ressourcer](/security/business/resources).

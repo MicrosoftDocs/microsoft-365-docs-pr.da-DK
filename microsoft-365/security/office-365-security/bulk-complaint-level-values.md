@@ -17,12 +17,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om værdier for masseannulleringsniveau (BCL), der bruges i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 93eed15773acc505b0106510d3774d862c50e67a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8c50ca25a355ca142e36c67d03fad42c3aa461a2
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587717"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679868"
 ---
 # <a name="bulk-complaint-level-bcl-in-eop"></a>Masseklageniveau (BCL) i EOP
 
@@ -41,14 +41,11 @@ Masseforsendelser varierer i deres afsendelsesmønstre, oprettelse af indhold og
 
 BCL-tærskelværdierne er beskrevet i følgende tabel.
 
-****
-
 |BCL|Beskrivelse|
 |:---:|---|
 |0|Meddelelsen kommer ikke fra en masseafsender.|
 |1, 2, 3|Meddelelsen kommer fra en masseafsender, der medfører færre klager.|
 |4, 5, 6, 7<sup>\*</sup>|Meddelelsen kommer fra en masseafsender, der genererer et blandet antal klager.|
 |8, 9|Meddelelsen kommer fra en masseafsender, som genererer et stort antal klager.|
-|
 
 <sup>\*</sup> Dette er standardtærskelværdien, der bruges i antispampolitikker.

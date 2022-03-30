@@ -12,12 +12,13 @@ ms.assetid: b5543faa-44fa-44c5-8180-fb835e7e452d
 description: Administratorer kan få mere at vide om rapporten om automatisk videresendte meddelelser i dashboardet for mailflow i & Compliance Center.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 734a072e23ecd77bcf1dd328c9c952387ba65c52
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 05ad934fbc7736c0cfbb86f7411a2ca73705112f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587742"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680154"
 ---
 # <a name="auto-forwarded-messages-insight-in-the-security--compliance-center"></a>Indsigt i automatisk videresendte meddelelser i Security & Compliance Center
 

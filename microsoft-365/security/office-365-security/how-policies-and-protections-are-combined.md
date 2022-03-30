@@ -17,12 +17,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om programrækkefølgen for beskyttelse i Exchange Online Protection (EOP), og hvordan prioritetsværdien i beskyttelsespolitikker bestemmer, hvilken politik der anvendes.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5fbccec656e0508535c2fbdaa055777a07968878
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 1debec0d2f8ca1498fd674f3d5a2d5a4681196eb
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588706"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679780"
 ---
 # <a name="order-and-precedence-of-email-protection"></a>Rækkefølge og rangorden af mailbeskyttelse
 
@@ -41,10 +41,6 @@ Der er to overordnede faktorer, der bestemmer, hvilken politik der anvendes på 
 
 - **Prioriteten af mailbeskyttelsestypen**: Denne ordre kan ikke konfigureres og er beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Prioritet|Mailbeskyttelse|Kategori|Her kan du administrere|
   |---|---|---|---|
   |1|Malware|KAT:MALW|[Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md)|
@@ -55,7 +51,6 @@ Der er to overordnede faktorer, der bestemmer, hvilken politik der anvendes på 
   |6<sup>\*</sup>|Domænepersonation (beskyttede domæner)|DIMP|[Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)|
   |7|Spam|KAT:SPM|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
   |8|Masse|KAT:MASSE|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
-  |
 
   <sup>\*</sup>Disse funktioner er kun tilgængelige i antiphishing-politikker i Microsoft Defender Office 365.
 
@@ -66,15 +61,10 @@ Der er to overordnede faktorer, der bestemmer, hvilken politik der anvendes på 
 
 Overvej f.eks. følgende antiphishing-politikker i Microsoft Defender for Office 365, der gælder for de samme **brugere, og** en meddelelse, der identificeres som både bruger efterligning og spoofing:
 
-<br>
-
-****
-
 |Politiknavn|Prioritet|Bruger efterligning|Antispoofing|
 |---|---|---|---|
 |Politik A|1|Til|Fra|
 |Politik B|2|Fra|Til|
-|
 
 1. Meddelelsen markeres og behandles som spoof, fordi spoofing har en højere prioritet (4) end brugerens efterligning (5).
 2. Politik A anvendes på brugerne, fordi den har en højere prioritet end politik B.

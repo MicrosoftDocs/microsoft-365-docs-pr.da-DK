@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 07/17/2020
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -16,12 +16,12 @@ f1.keywords:
 ms.custom: seo-marvel-apr2020
 ms.assetid: 795158e1-7dfc-4d9e-b805-373dd576c4e7
 description: Få mere at vide om, hvordan du overfører mail fra dit eksisterende system Microsoft 365 ved hjælp af PowerShell.
-ms.openlocfilehash: e23f528b846f23877a08cc9b26d0985f03c3490d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 4b578057a4e95d1fb835c819d547fc93a970f5f2
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591399"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675278"
 ---
 # <a name="how-to-use-powershell-to-migrate-email-to-microsoft-365"></a>Sådan bruger du PowerShell til at overføre mail Microsoft 365
 

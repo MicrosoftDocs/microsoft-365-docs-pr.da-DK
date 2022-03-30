@@ -7,7 +7,7 @@ author: kccross
 manager: laurawi
 ms.date: 4/2/2018
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 search.appverid:
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 ms.assetid: e86fc991-0161-4f01-9c1c-d25e87733d06
 description: Med Office 365 er nogle krypteringsfunktioner som standard slået til. Andre funktioner kan konfigureres til at opfylde bestemte krav til overholdelse af regler og standarder eller juridiske krav.
-ms.openlocfilehash: 00035af0049abedff8a794710649f162576dc46c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 84ba80c38d6167fbd9d32fdac0288fa1ef4ac3db
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587915"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680404"
 ---
 # <a name="set-up-encryption-in-office-365-enterprise"></a>Konfigurer kryptering i Office 365 Enterprise
 

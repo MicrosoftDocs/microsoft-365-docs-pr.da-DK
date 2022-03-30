@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Delte postkasser bruges, når flere personer skal have adgang til den samme postkasse. Få mere at vide om, hvad du bør vide, før du opretter en delt postkasse.
-ms.openlocfilehash: 2fbf07fbe71ccb42411f5808aa923d7179d2f13d
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 7b2632d8fde1b898fb9f2f425ef26a2eec28abb0
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63590164"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675331"
 ---
 # <a name="about-shared-mailboxes"></a>Om delte postkasser
 
@@ -60,7 +60,7 @@ Før du [opretter en delt postkasse](create-a-shared-mailbox.md), er her nogle t
 
 - **For mange brugere:** Når der samtidig er for mange angivne brugere, der tilgår en delt postkasse (det anbefales ikke at have mere end 25), kan de periodisk undlade at oprette forbindelse til denne postkasse eller have uoverensstemmelser som meddelelser, der duplikeres i udbakken. I dette tilfælde kan du overveje at reducere antallet af brugere eller bruge en anden arbejdsbyrde, f.eks. en Microsoft 365 gruppe eller en offentlig mappe.
 
-- **Sletning af meddelelse:** Du kan desværre ikke forhindre folk i at slette meddelelser i en delt postkasse. Den eneste måde at løse dette på er at oprette Microsoft 365 gruppe i stedet for en delt postkasse. En gruppe i Outlook er ligesom en delt postkasse. Se en sammenligning af de to i [Sammenlign grupper](../create-groups/compare-groups.md). Du kan få mere at vide om grupper under [Få mere at vide om grupper](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+- **Sletning af meddelelse:** Du kan desværre ikke forhindre folk i at slette meddelelser i en delt postkasse. Den eneste måde at løse dette på [er at oprette Microsoft 365 gruppe i](/microsoft-365/admin/create-groups/create-groups) stedet for en delt postkasse. En gruppe i Outlook er ligesom en delt postkasse. Se en sammenligning af de to i [Sammenlign grupper](../create-groups/compare-groups.md). Du kan få mere at vide om grupper [under Få mere at vide Microsoft 365 grupper](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 - **Multi-Geo** I et multi-geo-miljø skal delte postkasser have licens på samme måde, som en brugerpostkasse er licenseret. Bemærk, at overvågning af postkasser på tværs af geografiske geografiske postkasser ikke understøttes. Hvis en bruger f.eks. har fået tildelt adgangstilladelse til en delt postkasse på en anden geoplacering, logføres postkassehandlinger, der udføres af den pågældende bruger, ikke i postkassens overvågningslog for den delte postkasse. 
 

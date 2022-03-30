@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7532d5be8febda1b4dc4dfc0a0860516188ecfc5
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 3fb48e432d20067f3c6ca1913349152154c57e81
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775592"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63599335"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Få vist Defender for Office 365 rapporter i Microsoft 365 Defender-portalen
 
@@ -88,8 +88,8 @@ På siden **Rapport over mailventetid** er følgende faner tilgængelige på **r
 
 Uanset hvilken fane du vælger, viser diagrammet meddelelser organiseret i følgende kategorier:
 
-- **Generelt**
-- **Detonation**
+- **Ventetid for levering af mail**
+- **Detonations**
 
 Når du peger på en kategori i diagrammet, kan du se en oversigt over ventetiden i hver kategori.
 
@@ -100,20 +100,17 @@ Hvis du klikker **på** Filter, kan du filtrere både diagrammet og detaljetabel
 - **Dato (UTC)**: **Startdato** **og slutdato**
 - **Meddelelsesvisning**: En af følgende værdier:
   - **Alle meddelelser**
-  - **Meddelelser, der er** blevet fjernet: En af følgende værdier:
-    - **Indbygget detonation**: Omfatter meddelelser, der er helt testet før levering.
-    - **Asynkron detonation**
+  - **Meddelelser, der indeholder vedhæftede filer eller URL-adresser**
+  - **Meddelelser, der er blevet fjernet**
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
 Følgende oplysninger er tilgængelige i detaljetabellen under diagrammet:
 
 - **Dato (UTC)**
-- **Ventetid**
+- **Fraktiler**: **50**, **90** eller **99**
 - **Antal meddelelser**
-- **50. fraktil**
-- **90. fraktil**
-- **99. fraktil**
+- **Samlet ventetid**
 
 På hovedrapportsiden er ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knappen](view-email-security-reports.md#export-report)** Eksportér er tilgængelig.
 
@@ -214,13 +211,22 @@ På hovedrapportsiden er ikonet ![Opret tidsplan.](../../media/m365-cc-sc-create
 
 Ud over de rapporter, der er beskrevet i denne artikel, er flere andre rapporter tilgængelige som beskrevet i følgende tabel:
 
+<br>
+
+****
+
 |Rapport|Emne|
 |---|---|
 |**Explorer** (Microsoft Defender Office 365 Plan 2) eller registreringer i **realtid** (Microsoft Defender Office 365 Plan 1)|[Trusselsstifinder (og registreringer i realtid)](threat-explorer.md)|
 |Mailsikkerhedsrapporter, der ikke kræver Defender for Office 365|[Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md)|
 |Mailflowrapporter i Exchange Administration (EAC)|[Mailflowrapporter i den nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
+|
 
 PowerShell-rapporterings-cmdlet'er:
+
+<br>
+
+****
 
 |Rapport|Emne|
 |---|---|
@@ -231,6 +237,7 @@ PowerShell-rapporterings-cmdlet'er:
 |Kompromitterede brugere|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
 |Status for mailflow|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
 |Spoofed brugere|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
+|
 
 ## <a name="what-permissions-are-needed-to-view-the-defender-for-office-365-reports"></a>Hvilke tilladelser er nødvendige for at få vist Defender til Office 365 rapporter?
 

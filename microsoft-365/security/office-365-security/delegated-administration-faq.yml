@@ -1,0 +1,54 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om delegeret administration
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: d6a87ce8-2c22-433a-b430-5eab14f6afdc
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Administratorer kan få vist ofte stillede spørgsmål og svar om delegerede administrationsopgaver i Microsoft 365 for Microsoft-partnere og -forhandlere.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 7f011829110481f6cd7b9238deadccad0d2a1264
+  ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 12/15/2021
+  ms.locfileid: "63599413"
+title: Ofte stillede spørgsmål om delegeret administration
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+
+  Denne artikel indeholder ofte stillede spørgsmål og svar om delegerede administrationsopgaver i Microsoft 365 til Microsoft-partnere og -forhandlere. Delegeret administration omfatter muligheden for at administrere Exchange Online Protection (EOP) for andre lejere (virksomheder).
+sections:
+- name: Ignoreret
+  questions:
+  - question: >
+      Jeg er forhandler, og jeg har brug for at administrere mine kundelejere. Hvordan fungerer det?
+    answer: >
+      Hvis du er en Microsoft-partner eller -forhandler, og du har tilmeldt dig som Microsoft Cloud Solution Provider (CSP), kan du anmode om delegeret _administrationsfunktioner_ i kundens Microsoft 365-organisation. Du kan finde flere oplysninger i følgende artikler:
+
+
+      - [Cloud Solution Provider program](/partner-center/csp-overview)
+
+      - [Få tilladelse til at administrere en kundes tjeneste eller abonnement](/customers-revoke-admin-privileges).
+  - question: >
+      Jeg er kunde og ikke forhandler. Hvordan kan du konfigurere delegeret administrator for mine underordnede?
+    answer: >
+      Delegeret administration er kun tilgængelig for forhandlere og partnere. Der er dog et PowerShell-eksempelscript, der kan hjælpe dig med at anvende politikker for dine underenheder (virksomheder). Få mere at vide under [Eksempelscript til anvendelse af EOP-indstillinger for flere lejere](/exchange/standalone-eop/sample-script-standalone-eop-settings-to-multiple-tenants).
+  - question: >
+      Kan jeg forhindre min underordnede administrator i at ændre min politik?
+    answer: >
+      Nej. Microsoft 365 har i øjeblikket ikke denne funktion.
+  - question: >
+      Kan jeg få konsolideret rapportering på tværs af alle mine underenheder?
+    answer: Konsolideret rapportering på tværs af de firmaer, du administrerer, er ikke tilgængelig i Microsoft 365 Administration rapporter. Du kan dog få rapporter ved hjælp [af Microsoft Graph](/graph/overview).

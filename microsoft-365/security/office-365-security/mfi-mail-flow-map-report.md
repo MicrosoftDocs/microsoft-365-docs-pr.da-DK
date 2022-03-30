@@ -7,6 +7,7 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Administratorer kan lære, hvordan de bruger kortet Mailflow i dashboardet Mailflow i Security & Compliance Center til at visualisere og registrere, hvordan mailflows til og fra deres organisation over forbindelser og uden brug af forbindelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 725489dc92fc43edab13c291129ed78c3ca7915e
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 53c86584680f14c68b8d69ac0a0c2fc51933db28
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63588736"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680132"
 ---
 # <a name="mail-flow-map-in-the-security--compliance-center"></a>Mailflowoversigt i Security & Compliance Center
 

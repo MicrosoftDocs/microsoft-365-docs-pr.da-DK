@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Indholdsstifinder giver dig mulighed for indbygget at få vist elementer, der er mærket.
-ms.openlocfilehash: 61d262c04d4a304506bc521d155be71f81d219ca
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: f402df53c19da78435e22717577b351fc302d0f4
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63587952"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679956"
 ---
 # <a name="get-started-with-content-explorer"></a>Introduktion til indholdsstifinder
 
@@ -34,15 +34,7 @@ Med dataklassificeringsindholdsstifinder kan du indbygget se de elementer, der e
 
 ## <a name="prerequisites"></a>Forudsætninger
 
-Alle konti, der tilgås og bruger dataklassificering, skal have en licens tildelt fra et af disse abonnementer:
-
-- Microsoft 365 (E5)
-- Office 365 (E5)
-- Tilføjelsesprogrammet Avanceret overholdelse af regler og standarder (E5)
-- Avanceret tilføjelsesprogrammet Threat Intelligence (E5)
-- Microsoft 365 E5/A5 Info Protection & styring
-- Microsoft 365 E5/A5-overholdelse
-
+For licenskrav skal du se [Information Protection: Dataklassificeringsanalyse: Over indhold & Aktivitetsoversigt](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-classification-analytics-overview-content--activity-explorer)
 
 ### <a name="permissions"></a>Tilladelser
 

@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: bba910b46c4b4769e67ae00af0381e129139dfe5
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 3801fdb4a7aeda5e75c4e36f622f7e76604d96a6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754561"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63598014"
 ---
 # <a name="pilot-microsoft-defender-for-identity"></a>Prøve på Microsoft Defender for Identity
 
@@ -38,7 +38,7 @@ Denne artikel er [trin 3 af 3](eval-defender-identity-overview.md) i oprettelsen
 
 Brug følgende trin til at konfigurere pilotprojektet for Microsoft Defender til identitet. Bemærk, at anbefalingerne ikke omfatter konfiguration af en pilotgruppe. Den bedste fremgangsmåde er at installere sensoren på alle dine servere, der kører Active Directory-domæneservices (AD DS) og Active Directory Federated Services (AD FS).
 
-:::image type="content" source="../../media/defender/m365-defender-identity-pilot-steps.png" alt-text="Trinnene til pilotprojekter med Microsoft Defender for Identity i microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-identity-pilot-steps.png":::
+![Trin til at føje Microsoft Defender for Identity til evalueringsmiljøet for Defender.](../../media/defender/m365-defender-identity-pilot-steps.png)
 
 I følgende tabel beskrives trinnene i illustrationen.
 

@@ -1,0 +1,134 @@
+### YamlMime:FAQ
+metadata:
+  title: Ofte stillede spørgsmål om selvbetjeningskøb
+  f1.keywords:
+  - NOCSH
+  author: cmcatee-MSFT
+  ms.author: cmcatee
+  manager: scotv
+  ms.reviewer: mijeffer, pablom
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  ms.collection: M365-subscription-management
+  ms.custom:
+  - commerce_ssp
+  - AdminSurgePortfolio
+  - aka.ms/self-service-purchase-faq
+  search.appverid:
+  - MET150
+  description: Find svar på ofte stillede spørgsmål om selvbetjeningskøb.
+  ms.date: 09/15/2020
+  ms.openlocfilehash: 026269d86bda075d460e3f62d64bb8a8a36cfaf9
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63599416"
+title: Ofte stillede spørgsmål om selvbetjeningskøb
+summary: >
+  Selvbetjeningskøb giver brugerne mulighed for at afprøve nye teknologier og udvikle løsninger, der i sidste ende er til gavn for deres større organisationer. Central indkøb og it-teams har synlighed for alle brugere, der køber og implementerer selvbetjeningskøbsløsninger <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">via Microsoft 365 Administration</a>. Administratorer kan deaktivere selvbetjeningskøb pr. produkt via PowerShell. Du kan få mere at [vide under Brug AllowSelfServicePurchase til MSCommerce PowerShell-modulet](allowselfservicepurchase-powershell.md).
+
+
+  Selvbetjeningskøb er tilgængeligt for Power Platform (Power BI, Power Apps og Power Automate), Project og Visio.
+
+
+  > [!NOTE]
+
+  > Selvbetjeningskøb er ikke tilgængeligt i Indien eller for kunder inden for offentlige myndigheder eller uddannelse. Project og Visio kan ikke købes via selvbetjening i Brasilien og Den Demokratiske Republik Congo.
+sections:
+- name: Foretage et selvbetjeningskøb
+  questions:
+  - question: >
+      Hvordan foretager en kunde et selvbetjeningskøb?
+    answer: >
+      Kunder kan foretage et selvbetjeningskøb online fra produktwebsteder eller fra instruktioner om køb i appen. Kunder bliver først bedt om at angive en mailadresse for at sikre, at de er en bruger i en eksisterende Azure Active Directory (AD) lejer. Derefter bliver de henvist til at logge på ved hjælp af deres Azure AD-legitimationsoplysninger. Når du har logget på, bliver kunden bedt om at vælge, hvor mange abonnementer, kunden vil købe, og om at betale med kreditkort. Når købet er fuldført, kan de begynde at bruge deres abonnement. Indkøberen har adgang til en begrænset visning af <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> hvor han eller hun kan tildele licenser til produktet til andre personer i organisationen.
+  - question: >
+      Hvilke betalingsmåder er der for selvbetjeningskøb?
+    answer: >
+      I øjeblikket er kreditkort den eneste tilgængelige betalingsmetode. Betaling via invoicing understøttes ikke.
+  - question: >
+      Who kan købe gennem selvbetjeningskøb?
+    answer: >
+      Alle brugere med en brugerkonto, der ikke er gæster, i en administreret Azure AD-lejer kan foretage et selvbetjeningskøb. Selvbetjeningskøb er ikke tilgængeligt for lejere, der er offentlige myndigheder eller uddannelsesorganisationer. Hvis dette gælder for din organisation, kræves der ingen yderligere handling for at styre selvbetjeningskøb.
+
+
+      Brugere i organisationer eller markeder, der ikke er berettiget til selvbetjeningskøb, får vist en meddelelse, der beder dem om at kontakte deres it-administrator.
+  - question: >
+      Kan gæstebrugere købe gennem selvbetjeningskøb?
+    answer: >
+      Nej, gæstebrugere kan ikke gennemføre et selvbetjeningskøb i en lejer, hvor de er gæster.
+  - question: >
+      Kan brugere synkroniseret fra et lokalt Active Directory-køb via selvbetjeningskøb?
+    answer: >
+      Hvis en bruger har en aktiv brugerkonto i en berettiget Azure AD-lejer, kan brugeren gennemføre et selvbetjeningskøb.
+  - question: >
+      Who kan selvbetjeningskøbere tildele licenser til?
+    answer: >
+      Selvbetjeningskøbere kan kun tildele licenser til brugere i den samme Azure AD-lejer. Indkøberen har adgang til en begrænset visning af de licenser<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">, Microsoft 365 Administration</a> tildele licenser. Indkøbere kan tildele licenser til de produkter, de har købt via selvbetjeningskøb, og de kan kun tildele disse licenser til brugere i den samme Azure AD-lejer.
+  - question: >
+      Hvor kan selvbetjeningskøberen se og administrere deres køb?
+    answer: >
+      Selvbetjeningskøbere kan administrere deres køb i den begrænsede visning af <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Indkøbere kan altid komme til Administration fra feltet Administrator i  appstarteren indbygget i alle Microsoft 365 Dynamics-onlineapps. Indkøbere kan få vist de køb, de har foretaget, købe flere abonnementer til den samme tjeneste og tildele licenser til disse abonnementer til andre brugere i organisationen. Desuden kan indkøbere få vist og betale deres regning, opdatere deres betalingsmetode og annullere deres abonnement.
+- name: Priser
+  questions:
+  - question: >
+      Hvad er priserne for selvbetjeningskøb?
+    answer: >
+      Priser for hvert af produkterne for selvbetjeningskøb findes på Microsofts websted. Priserne vises også som en del af betalingsoplevelsen, når brugerne foretager et selvbetjeningskøb. Disse priser kan afvige fra de priser, en organisation betaler, når du foretager centrale køb eller priser, der tilbydes via en partner.
+  - question: >
+      Who er ansvarlig for betaling?
+    answer: >
+      Den person, der køber abonnementet via selvbetjeningskøb, er den person, der faktureres, og som er ansvarlig for betaling baseret på vilkårene og priserne for købet.
+- name: Administratorfunktioner
+  questions:
+  - question: >
+      Hvilke funktioner har en administrator til selvbetjeningskøb?
+    answer: >
+      Administratorer kan få vist alle selvbetjeningskøb, der er foretaget i deres organisation<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">, Microsoft 365 Administration</a>. De kan se produktet, indkøbernavn, købte abonnementer, udløbsdato, ordreoversigt, købspris og tildelte brugere for hvert selvbetjeningskøb. I Power Platform Administration kan administratorer også få vist selvbetjeningskapacitet for køb. Hvis det er påkrævet for deres organisation, kan administratorer deaktivere selvbetjeningskøb pr. produkt via PowerShell. Administratorer har de samme datastyrings- og adgangspolitikker over produkter, der er købt via selvbetjeningskøb eller centralt.
+
+
+      Administratorer kan også styre, om brugerne i organisationen kan foretage selvbetjeningskøb. Få mere at vide under [Brug AllowSelfServicePurchase til MSCommerce PowerShell-modulet](allowselfservicepurchase-powershell.md).
+  - question: >
+      Hvordan overholder Microsoft datastyring og overholdelse af regler og standarder ved at aktivere selvbetjeningskøb?
+    answer: >
+      Administratorer bevarer kontrollen over, hvilke tjenester og produkter der er tilgængelige i deres lejer baseret på deres datastyring og overholdelseskrav. Alle politikker for dataadministration og adgang, som organisationen har aktiveret, gælder for tilgængelige tjenester, der er købt via selvbetjening.
+  - question: >
+      Who ejer de produktdata, der er oprettet ved selvbetjeningskøb?
+    answer: >
+      Data, der er oprettet fra produkter, der er købt via selvbetjeningskøb, ejes og kontrolleres af organisationen.
+  - question: >
+      Hvordan centraliserer jeg de køb, der foretages via selvbetjeningskøb?
+    answer: >
+      Administratorer kan tildele eksisterende licenser eller købe yderligere abonnementer på selvbetjeningskøbsprodukter gennem eksisterende aftaler og priser for brugere, der er tildelt til selvbetjeningskøb. Efter tildeling af disse centralt købte licenser kan administratorer derefter anmode om, at indkøberne annullerer deres eksisterende abonnementer.
+  - question: >
+      Hvor får administratoren vist selvbetjeningskøb?
+    answer: >
+      Globale administratorer og faktureringsadministratorer kan se abonnementer, der er købt via selvbetjeningskøb, i **BillingYour-produkter**  > <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. De kan filtrere listen over produkter, så de kun viser de abonnementer, der er købt via centralt indkøb, eller for at medtage abonnementer, der er købt via selvbetjeningskøb.
+
+
+      Administratorer kan se produktet, indkøbernavn, købt abonnement, udløbsdato, ordreoversigt, indkøbspris og tildelte brugere.
+- name: Support og kurser
+  questions:
+  - question: >
+      Forventes kundernes it-afdelinger eller partnere at understøtte produkter, der er købt via selvbetjeningskøb?
+    answer: >
+      It-afdelinger og -partnere forventes ikke at yde support til produkter, der er købt via selvbetjeningskøb. Microsoft yder standardsupport til selvbetjeningskøbere.
+  - question: >
+      Hvis en selvbetjeningskøber ringer til support, bruger det så kundens Premier Support-hændelser?
+    answer: >
+      Selvbetjeningskøbere bruger ikke en kundes Premier Support-hændelser til at modtage support til deres selvbetjeningskøb.
+  - question: >
+      Hvordan forventes brugerne at modtage kurser på de produkter, de køber via selvbetjeningskøb?
+    answer: >
+      Omfattende kurser til brugerne findes på produktwebsteder. Produkterne har guidet læring, dokumentation, eksempler og stærke communities til at få svar og tip direkte fra andre brugere.
+  - question: >
+      Hvad sker der med et selvbetjeningskøb, hvis en bruger forlader organisationen?
+    answer: >
+      Hvis den person, der oprindeligt købte produktet til selvbetjening, forlader organisationen, vil gyldige brugere fortsat have fuld brug af produktet i abonnementsperioden. Abonnementet forbliver aktivt, indtil indkøberen annullerer det direkte, eller en administrator anmoder om annullering af abonnementet via kundesupport. Administratorer kan også vælge at tildele en centralt købt licens til brugere af det annullerede abonnement.
+- name: Partnere
+  questions:
+  - question: >
+      Hvad er Microsofts partneres rolle ved selvbetjeningskøb?
+    answer: Partnere, der har delegerede administrationsrettigheder, kan se selvbetjeningskøb i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>, ligesom en administrator. Partnere kan hjælpe med at understøtte en organisation, der ønsker at centralisere produkter, der er købt via selvbetjeningskøb. Partnere kan desuden tilbyde løsninger, der udvider mulighederne for et selvbetjeningskøb.

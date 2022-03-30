@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Få den nyeste hardwarebaserede isolation. Undgå aktuelle og nye angreb som udnyttelse eller ondsindede links i at forstyrre medarbejdernes produktivitet og virksomhedens sikkerhed.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d1dfe0bf7082d05fa534a34cb0dd55d9227fca1a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8a483c6430721e0540a7012dabfcbd4480fd7ad8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63591027"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675366"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Application Guard til Office til administratorer
 
@@ -138,7 +138,6 @@ Office understøtter følgende politikker, så du kan konfigurere funktionalitet
 |Slå kamera- og mikrofonadgang fra for dokumenter, der er åbnet i Application Guard, Office|Aktivering af denne politik fjerner Office adgang til kameraet og mikrofonen i Application Guard til Office.|
 |Begræns udskrivning fra dokumenter, der er åbnet i Application Guard, Office|Hvis du aktiverer denne politik, begrænses de printere, som en bruger kan udskrive til, fra en fil, der åbnes i Application Guard, Office. Du kan f.eks. bruge denne politik til at begrænse brugere til kun at udskrive til PDF.|
 |Forebyg, at brugere fjerner Application Guard Office beskyttelse af filer|Aktivering af denne politik fjerner indstillingen (i Office-programoplevelsen) for at deaktivere Application Guard for Office-beskyttelse eller for at åbne en fil uden for Application Guard Office. <p> **Bemærk!** Brugere kan stadig tilsidesætte denne politik ved manuelt at fjerne egenskaben Mark-of-the-web fra filen eller ved at flytte et dokument til en placering, der er tillid til.|
-|
 
 > [!NOTE]
 > Følgende politikker kræver, at brugeren logger af og logger på igen for at Windows træder i kraft:

@@ -6,7 +6,7 @@ ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: O365-seccomp
 ms.collection: m365-security-compliance
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Om forsøgene på løsninger til overholdelse af regler og standarder.
-ms.openlocfilehash: 8cfa95b5998d78a2128e2e99ac6b23babf11f3ff
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+ms.openlocfilehash: 247080c374cd99c93e538e46ed0894ad24e501cd
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63594019"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679824"
 ---
 # <a name="about-the-compliance-solutions-trial"></a>Om prøveversionen af løsninger til overholdelse af regler og standarder
 

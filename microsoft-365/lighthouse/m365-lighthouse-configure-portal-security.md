@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du konfigurerer portalsikkerhed.
-ms.openlocfilehash: dd99330d520b409a93cfd5d1ca777c17b9ef4373
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 8f8ec851d2ce6795565530e120f3704128336ea2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775934"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63599479"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Konfigurere Microsoft 365 Lighthouse-portalens sikkerhed
 
@@ -37,7 +37,7 @@ Når brugere første gang får adgang til Lighthouse, bliver de bedt om at konfi
 
 ## <a name="set-up-role-based-access-control"></a>Konfigurere rollebaseret adgangskontrol
 
-Rollebaseret adgangskontrol giver adgang til ressourcer eller oplysninger baseret på brugerroller. Adgang til kundelejerdata og indstillinger i Lighthouse er begrænset til bestemte roller fra Cloud Solution Provider (CSP)-programmet. Hvis du vil konfigurere RBAC-roller i Lighthouse, anbefaler vi, at du bruger GDAP (Granular Delegated Admin Privileges) til at implementere granulartildelinger for brugere. Delegerede administratorrettigheder (DAP) er stadig påkrævet, for at lejeren kan komme i gang, men kun GDAP-kunder vil snart kunne onboarde uden at være afhængige af DAP. GDAP-tilladelser har forrang, når DAP og GDAP anvendes for en kunde. 
+Rollebaseret adgangskontrol giver adgang til ressourcer eller oplysninger baseret på brugerroller. Adgang til kundelejerdata og indstillinger i Lighthouse er begrænset til bestemte roller fra Cloud Solution Provider (CSP)-programmet. Hvis du vil konfigurere RBAC-roller i Lighthouse, anbefaler vi, at du bruger GDAP (Granular Delegated Admin Privileges) til at implementere granulartildelinger for brugere.
 
 Se Konfigurer roller til at administrere kundelejere for at [komme i gang med](m365-lighthouse-set-up-roles.md) GDAP.
 
