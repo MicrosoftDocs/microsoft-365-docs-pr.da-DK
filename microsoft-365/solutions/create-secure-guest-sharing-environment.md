@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om de tilgængelige muligheder for at oprette et sikkert miljø for gæstedeling i Microsoft 365 hvilket giver gæsteadgang til forbedret samarbejde.
-ms.openlocfilehash: 13190f2dba0f2cb1f4817a1a831b8d78359e1b81
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 97b9c3c26fce137ad4471bbf080d4b7340c8b622
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63715135"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63599827"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>Opret et sikkert miljø for gæstedeling
 
@@ -68,7 +68,7 @@ Nu skal gæster tilmeldes multifaktorgodkendelse, før de kan få adgang til del
 
 ### <a name="more-information"></a>Flere oplysninger
 
-[Planlægning af en Azure AD-installation med multifaktorgodkendelse](/azure/active-directory/authentication/howto-mfa-getstarted)
+[Planlægning af en Azure AD Multi-Factor Authentication-installation](/azure/active-directory/authentication/howto-mfa-getstarted)
 
 ## <a name="set-up-a-terms-of-use-for-guests"></a>Konfigurer en vilkår for anvendelse for gæster
 
@@ -143,7 +143,7 @@ Sådan konfigurerer du en gæsteadgangsgennemgang
 13. Skriv et **Navn på Gennemse** , og gennemse indstillingerne.
 14. Klik **på Opret**.
 
-Det er vigtigt at bemærke, at for SharePoint- og OneDrive-placeringer blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet deles eller ej, for alle gæster, mens interne brugere fortsat har adgang til dokumentet.
+Det er vigtigt at bemærke, at for SharePoint- og OneDrive-placeringer blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet deles eller ej, for alle eksterne brugere, mens interne brugere fortsat har adgang til dokumentet.
 
 ### <a name="more-information"></a>Flere oplysninger
 
@@ -283,10 +283,7 @@ Sådan oprettes en DLP-regel
 13. Vælg dine testindstillinger, og klik på **Næste**.
 14. Klik **på Send**, og klik derefter på **Udført**.
 
-Det er vigtigt at bemærke, at denne politik ikke fjerner adgangen, hvis gæsten er medlem af webstedet eller teamet som en helhed. Hvis du planlægger at have meget følsomme dokumenter på et websted eller team med gæstemedlemmer, skal du overveje disse muligheder:
-
-- Brug [private kanaler](/MicrosoftTeams/private-channels) , og kun tillade medlemmer af organisationen i de private kanaler.
-- Brug [delte kanaler](/MicrosoftTeams/shared-channels) til at samarbejde med personer uden for organisationen, mens du kun har personer fra din organisation i selve teamet.
+Det er vigtigt at bemærke, at denne politik ikke fjerner adgangen, hvis gæsten er medlem af webstedet eller teamet som en helhed. Hvis du planlægger at have meget følsomme dokumenter på et websted eller team med gæstemedlemmer, kan du overveje at bruge private kanaler i [Teams](https://support.microsoft.com/office/de3e20b0-7494-439c-b7e5-75899ebe6a0e) og kun tillade medlemmer af organisationen i de private kanaler.
 
 ## <a name="additional-options"></a>Yderligere indstillinger
 

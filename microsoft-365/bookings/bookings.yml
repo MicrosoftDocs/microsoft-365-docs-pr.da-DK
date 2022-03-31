@@ -1,0 +1,52 @@
+### YamlMime:Landing
+title: Microsoft Bookings
+summary: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede beskeder.
+metadata:
+  title: Microsoft Bookings
+  description: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede beskeder.
+  ms.service: bookings
+  ms.topic: landing-page
+  author: dmaguire
+  ms.author: dmaguire
+  manager: serdars
+  audience: Admin
+  ms.date: 07/21/2020
+  ms.openlocfilehash: f8a428cb7d52eddd067e236b0a31c0cc10ab0b7d5f9f9d44e589b3cb88b580d1
+  ms.sourcegitcommit: a1b66e1e80c25d14d67a9b46c79ec7245d88e045
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "63601665"
+landingContent:
+- title: Om Microsoft Bookings
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Bookings?
+      url: bookings-overview.md
+  - linkListType: download
+    links:
+    - text: Hent Bookings-appen
+      url: get-bookings-app.md
+- title: Konfigurer Microsoft Bookings
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Angiv dine firmaoplysninger
+      url: enter-business-information.md
+    - text: Angiv dine planlægningspolitikker
+      url: set-scheduling-policies.md
+    - text: Definer dine servicetilbud
+      url: define-service-offerings.md
+    - text: Angiv medarbejdernes arbejdstider
+      url: employee-hours.md
+    - text: Tilpasse og publicere din bookingside
+      url: customize-booking-page.md
+    - text: Opret og bemand dine bookinger
+      url: create-a-manual-booking.md
+- title: Inviter personer til at booke aftaler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tilpas din bookingside
+      url: customize-booking-page.md

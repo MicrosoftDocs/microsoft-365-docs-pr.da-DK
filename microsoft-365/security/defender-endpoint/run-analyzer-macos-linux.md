@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: f6767b1a788129266bff713a6608277a2450598c
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: bbd4100466fbfef75363848bc5b89bbb9a769265
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775890"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63600944"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalyse på macOS og Linux
 
@@ -34,7 +34,7 @@ ms.locfileid: "63775890"
 1. Download [værktøjet XMDE Client Analyzer på](https://aka.ms/XMDEClientAnalyzer) den macOS- eller Linux-computer, du skal undersøge.
 
    > [!NOTE]
-   > Den aktuelle SHA256-hash for "XMDEClientAnalyzer.zip", som downloades fra ovenstående link, er: 'A9BF065DE3F2608A309BC4F5295548BB9931F107BF2F01DC42A789C5527C1308'.
+   > Den aktuelle SHA256-hash for "XMDEClientAnalyzer.zip", som downloades fra ovenstående link, er: 'B95E2E21D5A93E0AC88BA401ACB20E5F721727B409D4186147C8D17468185583'.
 
 2. Udtræk indholdet XMDEClientAnalyzer.zip på maskinen.
 

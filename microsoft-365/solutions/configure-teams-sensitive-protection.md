@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Få mere at vide om, hvordan du installerer teams med beskyttelse af følsomme data.
-ms.openlocfilehash: 51e4c3b13d1a54e4edcfd9926ae246dde7d7e3e4
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 42124881ac795c54288dee46e70dc1d5eccef3e3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712693"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63599852"
 ---
 # <a name="configure-teams-with-protection-for-sensitive-data"></a>Konfigurer teams med beskyttelse af følsomme data
 
@@ -57,7 +57,7 @@ For at tillade eller blokere gæstedeling bruger vi en kombination af et følsom
 
 For det følsomme beskyttelsesniveau bruger vi et følsomhedsmærkat til at klassificere teamet. Denne etiket kan også bruges til at klassificere individuelle filer i dette eller andre teams eller på andre filplaceringer, f.eks SharePoint eller OneDrive. 
 
-Som det første trin skal du aktivere følsomhedsmærkater for Teams. Se [Brug følsomhedsetiketter til at beskytte indhold i Microsoft Teams, Office 365 grupper og SharePoint, hvis](../compliance/sensitivity-labels-teams-groups-sites.md) du vil have mere at vide.
+Som det første trin skal du aktivere følsomhedsmærkater for Teams. Se [Brug følsomhedsetiketter til at beskytte indhold Microsoft Teams, Office 365 grupper og SharePoint, hvis](../compliance/sensitivity-labels-teams-groups-sites.md) du vil have mere at vide.
 
 Hvis du allerede har implementeret følsomhedsmærkater i din organisation, kan du overveje, hvordan denne etiket passer til din overordnede etiketstrategi. Du kan ændre navnet eller indstillingerne, hvis det er nødvendigt, for at imødekomme organisationens behov.
 
@@ -109,10 +109,6 @@ Sådan begrænser du oprettelse af private kanaler
 
 Du kan også bruge [teams-politikker til](/MicrosoftTeams/teams-policies) at styre, hvem der kan oprette private kanaler.
 
-## <a name="shared-channel-settings"></a>Indstillinger for delt kanal
-
-[Delte kanaler](/MicrosoftTeams/shared-channels) har ikke teamniveauindstillinger. De indstillinger for delte kanaler, du konfigurerer i Teams Administration og Azure AD, gælder for alle teams uanset følsomhed.
-
 ## <a name="sharepoint-settings"></a>SharePoint indstillinger
 
 Hver gang du opretter et nyt team med den følsomme etiket, er der to trin at udføre i SharePoint:
@@ -132,11 +128,13 @@ Sådan opdateres webstedets standardlinktype for deling
 
 Hvis du vil scripte dette som en del af dit teams oprettelsesproces, kan du bruge [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) `-DefaultSharingLinkType Direct` med parameteren til at ændre standarddelingslinket til *Bestemte personer*.
 
-Bemærk, at hvis du føjer private eller delte kanaler til teamet, opretter hver SharePoint websted med standardindstillingerne for deling. Du kan opdatere dem i SharePoint Administration ved at vælge de websteder, der er knyttet til teamet.
+#### <a name="private-channels"></a>Private kanaler
+
+Hvis du føjer private kanaler til teamet, opretter hver privat kanal et nyt SharePoint-websted med standardindstillingerne for deling. Disse websteder er ikke synlige i SharePoint Administration, så du skal bruge Set-SPOSite PowerShell-cmdlet'en til at opdatere indstillingerne for gæstedeling.
 
 ### <a name="site-sharing-settings"></a>Indstillinger for webstedsdeling
 
-For at sikre, at SharePoint-webstedet ikke deles med personer, der ikke er medlemmer af teamet, begrænser vi deling til ejere. Dette er kun nødvendigt for det SharePoint, der blev oprettet sammen med teamet. Flere websteder, der er oprettet som en del af private eller delte kanaler, kan ikke deles uden for teamet eller kanalen.
+For at sikre, at SharePoint-webstedet ikke deles med personer, der ikke er medlemmer af teamet, begrænser vi deling til ejere.
 
 Sådan konfigureres webstedsdeling kun for ejere
 1. I Teams du gå til **fanen Generelt** for det team, du vil opdatere.
@@ -147,6 +145,6 @@ Sådan konfigureres webstedsdeling kun for ejere
 6. Under **Tilladelser til deling** skal du vælge Webstedsejere og -medlemmer, og personer med redigeringstilladelser kan dele filer og mapper, men kun **webstedsejere** kan dele webstedet, og klik derefter på **Gem**.
 
 
-## <a name="related-topics"></a>Relaterede emner
+## <a name="see-also"></a>Se også
 
 [Opret og konfigurer følsomhedsmærkater og deres politikker](../compliance/create-sensitivity-labels.md)

@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 12/17/2019
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: I denne artikel kan du finde procedurer for brug af PowerShell til Microsoft 365 at administrere SharePoint Online-webstedsgrupper.
-ms.openlocfilehash: deef41118789a9df4353fa188c88d827909dc863
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 393771fec5346b10d76bbe5af471ca3dd42ebf80
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590592"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681210"
 ---
 # <a name="manage-sharepoint-online-site-groups-with-powershell"></a>Administrer SharePoint onlinewebstedsgrupper med PowerShell
 
