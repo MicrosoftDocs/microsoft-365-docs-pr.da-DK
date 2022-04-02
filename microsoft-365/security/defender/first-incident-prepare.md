@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: c3b86a133b5126029378018fdac821d5423b2761
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c31a6e43e66b6e1ffeace75ac2d8419cc764174f
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593852"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499127"
 ---
 # <a name="prepare-your-security-posture-for-your-first-incident"></a>Forbered din sikkerhed på din første hændelse
 
@@ -40,26 +40,26 @@ Forberedelse til hændelseshåndtering indebærer konfiguration af tilstrækkeli
 
 Microsoft 365 Defender kan hjælpe med at tage hånd om flere aspekter af forebyggelse af hændelser: 
 
-- Implementering af en [nultillidsstruktur](/security/zero-trust/)
+- Implementering af [Nul tillid](/security/zero-trust/) struktur
 - Fastslå din sikkerhedsmæssige stilling ved at tildele en score med [Microsoft Secure Score](microsoft-secure-score.md)
 - Forhindring af trusler via vurdering af sikkerhedsrisiko i administration [af trusler og sikkerhedsrisiko](../defender-endpoint/next-gen-threat-and-vuln-mgt.md)
 - Forstå de nyeste sikkerhedstrusler, så du kan forberede dig på dem med [trusselsanalyse](threat-analytics.md)
 
-## <a name="step-1-implement-zero-trust"></a>Trin 1. Implementer nultillids
+## <a name="step-1-implement-zero-trust"></a>Trin 1. Implementere Nul tillid
 
-[Zero Trust](/security/zero-trust/) er en integreret sikkerhedsintegreret og ende-til-ende-strategi, der tager højde for den komplekse karakter af et moderne miljø, herunder den mobile arbejdsstyrke og brugere, enheder, programmer og data, uanset hvor de befinder sig. Ved at have en enkelt rude med glas til at administrere alle registreringer på en ensartet måde kan Microsoft 365 Defender gøre det nemmere for dit sikkerhedsteam at implementere de styrende principper for Zero Trust.[](/security/zero-trust/#guiding-principles-of-zero-trust) 
+[Nul tillid](/security/zero-trust/) er en integreret sikkerhedsintegreret og ende-til-ende-strategi, der tager højde for et moderne miljøs komplekse karakter, herunder den mobile arbejdsstyrke og brugere, enheder, programmer og data, uanset hvor de befinder sig. Hvis du har en enkelt rude med glas til at administrere alle registreringer på en ensartet måde, kan Microsoft 365 Defender gøre det nemmere for dit sikkerhedsteam at implementere de [](/security/zero-trust/#guiding-principles-of-zero-trust) styrende principper for Nul tillid. 
 
-Komponenter af Microsoft 365 Defender kan vise overtrædelser af regler, der er blevet implementeret for at oprette betingede access-politikker for Nul tillid ved at integrere data fra Microsoft Defender til Slutpunkt eller andre mobile sikkerhedsleverandører som en informationskilde til politikker for enhedsoverholdelse og implementering af enhedsbaserede betingede adgangspolitikker. 
+Komponenter af Microsoft 365 Defender kan vise overtrædelser af regler, der er blevet implementeret for at oprette betingede Access-politikker for Nul tillid ved at integrere data fra Microsoft Defender for Endpoint  eller andre leverandører af mobilsikkerhed som en informationskilde til politikker for enhedsoverholdelse og implementering af enhedsbaserede politikker for betinget adgang. 
 
-Risiko for enheder påvirker direkte, hvilke ressourcer der vil være tilgængelige for brugeren af den pågældende enhed. Afvisning af adgang til ressourcer, der er baseret på bestemte kriterier, er hovedtemaet i Nul tillid, og Microsoft 365 Defender indeholder oplysninger, der er nødvendige for at bestemme kriterierne for tillidsniveau. Eksempelvis kan Microsoft 365 Defender levere softwareversionsniveauet for en enhed via siden til administration af trussel og sikkerhedsrisiko, mens politikker for betinget adgang begrænser enheder, der har forældede eller følsomme versioner.
+Risiko for enheder påvirker direkte, hvilke ressourcer der vil være tilgængelige for brugeren af den pågældende enhed. Afvisning af adgang til ressourcer, der er baseret på bestemte kriterier, er hovedtemaet i Nul tillid, og Microsoft 365 Defender indeholder oplysninger, der skal bruges til at bestemme kriterierne for tillidsniveau. Eksempelvis kan Microsoft 365 Defender levere softwareversionsniveauet for en enhed via siden til administration af trussel og sikkerhedsrisiko, mens politikker for betinget adgang begrænser enheder, der har forældede eller følsomme versioner.
 
-Automatisering er en vigtig del af at implementere og vedligeholde et Zero Trust-miljø og samtidig reducere antallet af beskeder, der potentielt kan føre til hændelser med hændelsesrespons. Komponenter i Microsoft 365 Defender kan være automatiserede såsom afhjælpningshandlinger [(også](m365d-autoir.md) kaldet undersøgelser af en hændelse på Microsoft 365 Defender-portalen), meddelelseshandlinger og endda oprettelse af supportbilletter som f.eks. [i ServiceNow](https://microsoft.service-now.com/sp/).
+Automatisering er en vigtig del af at implementere og vedligeholde et Nul tillid-miljø og samtidig reducere antallet af beskeder, der potentielt kan føre til hændelser med hændelsesrespons. Komponenter i Microsoft 365 Defender kan være automatiserede såsom afhjælpningshandlinger [(også](m365d-autoir.md) kaldet undersøgelser af en hændelse på Microsoft 365 Defender-portalen), meddelelseshandlinger og endda oprettelse af supportbilletter som f.eks. [i ServiceNow](https://microsoft.service-now.com/sp/).
 
 ## <a name="step-2-determine-your-organizations-security-posture"></a>Trin 2. Bestem din organisations sikkerhedsfunktioner
 
 Derefter kan organisationer bruge [Microsoft Secure Score](microsoft-secure-score.md) i Microsoft 365 Defender til at bestemme din aktuelle sikkerhed og overveje anbefalinger til, hvordan du kan forbedre den. Jo højere pointen er, jo flere sikkerhedsanbefalinger og forbedringshandlinger har organisationen foretaget. Secure Score-anbefalinger kan tages på tværs af forskellige produkter og give organisationer mulighed for at øge deres pointtal endnu højere. 
 
-:::image type="content" source="../../media/first-incident-prepare/first-incident-secure-score.png" alt-text="Eksempel på Microsoft Secure Score i Microsofts sikkerhedscenter.":::
+:::image type="content" source="../../media/first-incident-prepare/first-incident-secure-score.png" alt-text="Siden Microsoft Secure Score i Microsoft 365 Defender portal" lightbox="../../media/first-incident-prepare/first-incident-secure-score.png":::
  
 ## <a name="step-3-assess-your-organizations-vulnerability-exposure"></a>Trin 3. Vurder din organisations eksponering for sikkerhedsrisikoen
 
@@ -67,7 +67,7 @@ At forhindre hændelser kan hjælpe med at strømline sikkerhedshandlinger for a
 
 Hvis du vil se status for softwarerettelser, [](../defender-endpoint/next-gen-threat-and-vuln-mgt.md) skal du gå til siden til administration af trussel og sikkerhedsrisiko i Defender til slutpunkt, som du kan få adgang Microsoft 365 Defender via **fanen Flere** ressourcer.
 
-:::image type="content" source="../../media/first-incident-prepare/first-incident-vulnerability.png" alt-text="Eksempel på siden trussel og sikkerhedsrisiko i Microsofts sikkerhedscenter."::: 
+:::image type="content" source="../../media/first-incident-prepare/first-incident-vulnerability.png" alt-text="Siden med trusler og sikkerhedsrisiko i Microsoft 365 Defender portal" lightbox="../../media/first-incident-prepare/first-incident-vulnerability.png"::: 
  
 ## <a name="4-understand-emerging-threats"></a>4. Forstå fremspirende trusler
 

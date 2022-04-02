@@ -1,0 +1,49 @@
+- name: Microsoft Bookings
+  href: bookings-overview.md
+  items:
+    - name: Konfiguration
+      items:
+        - name: Få adgang til Microsoft Bookings
+          href: get-access.md
+        - name: Angiv dine virksomhedsoplysninger
+          href: enter-business-information.md
+        - name: Definer dine servicetilbud
+          href: define-service-offerings.md
+        - name: Konfigurer sms-beskeder
+          href: bookings-sms.md
+        - name: Føj medarbejdere til Bookings
+          href: add-staff.md
+        - name: Planlæg fridage og lukninger af virksomhed
+          href: schedule-closures-time-off-vacation.md
+        - name: Angiv dine politikker for tidsbestilling
+          href: set-scheduling-policies.md
+        - name: Tilpas og publicer din bookingside
+          href: customize-booking-page.md
+        - name: Opret en manuel booking
+          href: create-a-manual-booking.md
+        - name: Medarbejdertimer
+          href: employee-hours.md
+        - name: Føj brugerdefinerede og obligatoriske spørgsmål til bookingsiden
+          href: add-questions.md
+        - name: Angiv buffertid
+          href: set-buffer-time.md
+        - name: Målinger og aktivitetssporing
+          href: metrics-and-activity-tracking.md
+        - name: Angiv sprog og tidszone
+          href: set-language-time-zones.md
+    - name: Hent Bookings-appen
+      href: get-bookings-app.md
+    - name: Administrer Bookings-appen i Microsoft Teams
+      href: /microsoftteams/bookings-app-admin?bc=%2fmicrosoft-365%2fbookings%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fbookings%2ftoc.json
+    - name: Virtuelle besøg med Microsoft Teams og Bookings-appen
+      href: /microsoftteams/expand-teams-across-your-org/bookings-virtual-visits
+    - name: Sammenligningsdiagram – webapp kontra Teams-app
+      href: comparison-chart.md
+    - name: Slet en bookingkalender
+      href: delete-calendar.md
+    - name: Slå Microsoft Bookings til eller fra
+      href: turn-bookings-on-or-off.md
+    - name: Rapporteringsoplysninger for Microsoft Bookings
+      href: reporting-info.md
+    - name: Ofte stillede spørgsmål om Microsoft Bookings
+      href: bookings-faq.yml

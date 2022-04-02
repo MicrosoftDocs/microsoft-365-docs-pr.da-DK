@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Administrer feedback, som dine brugere kan sende til Microsoft om Microsoft-produkter.
-ms.openlocfilehash: 9b63a4046c9d1ab13ae6b3f4856a521d4c7a9b70
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8cd20b1a6138f389ba996bdaee8cae8ae24d2974
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63597876"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403561"
 ---
 # <a name="manage-microsoft-feedback-for-your-organization"></a>Administrer Microsoft-feedback for din organisation
 
@@ -69,10 +69,10 @@ Dine enheder skal have et buildnummer som minimum for at kunne bruge disse polit
 
 |**Build #**|**Win32**|**iOS**|**Android**|**Mac**|**Web**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|Feedback i produktet|Mindst 16.0.13328|Mindst 2,42|Mindst 16.0.13328|Mindst 16,42|Offentligt tilgængelig|
-|Produktundersøgelse|Mindst 16.0.13328|Mindst 2,42|Mindst 16.0.13426|Mindst 16,42|Ventende udrulning|
-|Samling af metadata|Mindst 16.0.13328|Mindst 2,42|Mindst 16.0.13328|Mindst 16,42|Offentligt tilgængelig|
-|Kundeengagement|Mindst 16.0.13328|Mindst 2,42|Mindst 16.0.13426|Mindst 16,42|Ventende udrulning|
+|Feedback i produktet|Mindst Version 2010|Mindst 2,42|Mindst 16.0.13328|Mindst 16,42|Offentligt tilgængelig|
+|Produktundersøgelse|Mindst Version 2010|Mindst 2,42|Mindst 16.0.13426|Mindst 16,42|Ventende udrulning|
+|Samling af metadata|Mindst Version 2010|Mindst 2,42|Mindst 16.0.13328|Mindst 16,42|Offentligt tilgængelig|
+|Kundeengagement|Mindst Version 2010|Mindst 2,42|Mindst 16.0.13426|Mindst 16,42|Ventende udrulning|
 
 ## <a name="specific-policies-you-can-configure"></a>Specifikke politikker, du kan konfigurere
 
@@ -88,19 +88,11 @@ Dine enheder skal have et buildnummer som minimum for at kunne bruge disse polit
 
 ## <a name="configure-policies"></a>Konfigurere politikker
 
-1. Gå til og [https://config.office.com](https://config.office.com) log på.
-1. Vælg **Tilpasning** og **derefter Politikstyring**.
-1. Vælg **Opret**.
-1. Angiv **navn** og **beskrivelse**.
-1. Vælg de Azure Active Directory-grupper, du vil konfigurere.
-1. Søg efter **feedback** og **undersøgelse**.
-1. Angiv den ønskede værdi for hver politik, der er angivet.
-
-Få mere at vide under [Oversigt over Office skypolitiktjeneste](/deployoffice/overview-office-cloud-policy-service).
+Hvis du vil konfigurere disse politikindstillinger, kan du bruge Office skypolitiktjeneste. Få mere at vide under [Oversigt over Office skypolitiktjeneste](/deployoffice/overview-office-cloud-policy-service). Du kan søge efter "feedback" eller "undersøgelse" i Office brugergrænsefladen for skypolitik for at finde politikindstillingerne til at konfigurere dem. 
 
 Disse politikindstillinger er også tilgængelige, hvis du bruger Gruppepolitik. For at bruge disse politikindstillinger skal du downloade mindst version 5146.1000 af de administrative skabelonfiler [(ADMX/ADML)](https://www.microsoft.com/download/details.aspx?id=49030), udgivet d. 22. marts 2021.
 
-Du kan finde disse politikindstillinger under Brugerkonfiguration -> Politikker -> Administrative skabeloner -> Microsoft Office 2016 -> -> Center for sikkerhed og rettigheder.
+Du kan finde disse politikindstillinger under Brugerkonfiguration\Politikker\Administrative skabeloner\Microsoft Office 2016\Privacy\Trust Center.
 
 > [!NOTE]
 > Det tager et par timer, før klientprogrammer er opdateret.

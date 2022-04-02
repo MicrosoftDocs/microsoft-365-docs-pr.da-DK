@@ -1,5 +1,5 @@
 ---
-title: Aktivér Corelight-integration i Microsoft Defender til Slutpunkt
+title: Aktivér Corelight-integration i Microsoft Defender for Endpoint
 description: Aktivér Corelight-integration for at opnå synlighed med fokus på IoT/OT-enheder i områder af netværket, hvor MDE ikke er installeret
 keywords: aktivér siem-forbindelse, siem, forbindelse, sikkerhedsoplysninger og hændelser
 search.product: eADQiWindows 10XVcnh
@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 34e8b1f97319e4881175c7d79629dbed83730738
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: 3a7a4b7ab842baaadb276e60037451e8eb919bf9
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63598564"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465466"
 ---
 # <a name="enable-corelight-data-integration"></a>Aktivere Integration af Corelight-data
 
@@ -29,16 +29,16 @@ ms.locfileid: "63598564"
 
 **Gælder for:**
 
-- [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
 Microsoft har indgået partnerskab med [Corelight](https://corelight.com/integrations/iot-security), udbyder af branchens førende platform til åben netværksregistrering og -svar (NDR), som kan hjælpe dig med at opdage IoT-/OT-enheder på tværs af organisationen. Ved hjælp af data, der sendes fra Corelight-netværksenheder, øges Microsoft 365 Defender synligheden i netværksaktiviteterne for enheder, der ikke er administrerede, herunder kommunikation med andre enheder, der ikke er administrerede, eller eksterne netværk.
 
-Når denne datakilde er aktiveret, sendes alle hændelser fra Corelight-netværkskabe til Microsoft 365 Defender. Du kan få vist disse aktiviteter på tidslinjen for enheder, der ikke er administrerede, som findes i lagerlisten for Microsoft Defender til slutpunktsenheder. Du kan få mere at vide under [Enhedsregistrering](device-discovery.md).
+Når denne datakilde er aktiveret, sendes alle hændelser fra Corelight-netværkskabe til Microsoft 365 Defender. Du kan få vist disse aktiviteter på tidslinjen for ikke-administrerede enheder, der er tilgængelige Microsoft Defender for Endpoint lager over enheder. Du kan få mere at vide under [Enhedsregistrering](device-discovery.md).
 
 ## <a name="enabling-the-corelight-integration"></a>Aktivering af Corelight-integration
 
@@ -52,7 +52,7 @@ Hvis du vil aktivere Corelight-integrationen, skal du gøre følgende:
 
 1. I navigationsruden på portalen skal [https://security.microsoft.com](https://security.microsoft.com/) du vælge Indstillinger **datakilder** \> **for enhedsregistrering**\>.
 
-    ![Billede af datakilder](images/enable-corelight.png)
+   :::image type="content" source="images/enable-corelight.png" alt-text="Siden datakilder i Microsoft 365 Defender portal" lightbox="images/enable-corelight.png":::
 
 2. Vælg **Send Corelight-data til M365D,** og vælg **Gem**.
 
@@ -81,15 +81,15 @@ Ud over dette kræver GUI-validering, at en formidler er konfigureret i konfigur
 1. I sektionen Konfiguration af Corelight-sensor-GUI skal du **vælge Sensor** \> **Export**.
 2. Gå til EKSPORTÉR TIL **KAFKA på listen** , og vælg kontakten for at aktivere den.
 
-   ![Billede af kafka-eksport](images/exporttokafka.png)
+   :::image type="content" source="images/exporttokafka.png" alt-text="Kafka-eksporten" lightbox="images/exporttokafka.png":::
 
 3. Slå derefter EKSPORT TIL **AZURE DEFENDER FOR IOT** til, og angiv dit lejer-id, der er angivet i trin 1, i feltet LEJER-id.
 
-   ![Billede af iot-eksport](images/exporttodiot.png)
+   :::image type="content" source="images/exporttodiot.png" alt-text="Den iot-eksport" lightbox="images/exporttodiot.png":::
 
 4. Vælg **Anvend ændringer**.
 
-   ![Anvend billede ](images/corelightapply.png)
+   :::image type="content" source="images/corelightapply.png" alt-text="Ikonet Anvend ændringer" lightbox="images/corelightapply.png":::
 
 > [!NOTE]
 > Konfigurationsindstillingerne i Kafka (undtagen Logudeudelse og Filtre) bør ikke ændres. De ændringer, der foretages, ignoreres.

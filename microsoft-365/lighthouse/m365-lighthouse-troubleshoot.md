@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
-ms.openlocfilehash: 49e6657815ed71476a3dc79d778f7e1fbacfa1f4
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 957177dd20817f9b3d5fbc378f22b19eeaef1f7f
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775450"
+ms.locfileid: "64403671"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Fejlfind og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
 
@@ -53,8 +53,8 @@ I denne artikel beskrives fejlmeddelelser og problemer, du kan støde på, når 
 
 **Årsag:** Dine kundelejere opfylder ikke følgende kriterier:
 
-  - Skal have konfigureret en delegeret (DAP) for den administrerede tjenesteudbyder (MSP) for at kunne administrere kundeancirkelen*
-  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 licens eller Windows 365 Business-licens
+  - Skal have konfigureret en delegeret tjenesteudbyder (DAP) for at kunne administrere kundelejeren*
+  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 licens eller Windows 365 Business licens
   - Ikke må have mere end 1000 brugere med licens 
 
 **Løsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og forklarer, hvordan du løser dem.
@@ -107,7 +107,7 @@ For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som
 
 **Årsag:** Du har ikke fuldført konfigurationen af Microsoft Intune i kundelejeren.
 
-**Løsning:** Kontrollér, at du har gennemført de grundlæggende konfigurationstrin for Intune inden for kundelejeren. Hvis problemet fortsætter, efter du har kontrolleret, at Intune-konfigurationen er fuldført for kundelejeren, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Løsning:** Kontrollér, at du har gennemført de grundlæggende konfigurationstrin for Intune i kundelejeren. Hvis problemet fortsætter, efter du har kontrolleret, at Intune er fuldført for kundelejeren, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Kan ikke få adgang til partnerlejerdata i Fyrtårn
 
@@ -119,9 +119,9 @@ For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som
 
 ### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Jeg kan ikke se nogen kundelejerdata på siderne enhedsoverholdelse og trusselsadministration i Lighthouse
 
-**Årsag 1:** Kundelejeren har ikke færdiggjort onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne enhedsoverholdelse eller trusselsadministration i Lighthouse, før kundelejeren har færdiggjort onboarding til Intune.
+**Årsag 1:** Kundelejeren har ikke færdiggjort onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne til enhedsoverholdelse eller trusselsadministration i Lighthouse, før kundelejeren har færdiggjort onboarding til Intune.
 
-**Løsning:** Kontrollér, at den kundelejer, du forsøger at få vist data for, har færdiggjort onboarding til Intune. Når onboarding er fuldført i Intune, skal der gå 4 timer, før enhedens data vises i Fyrtårn.
+**Løsning:** Kontrollér, at den kundelejer, du forsøger at få vist data for, har færdiggjort onboarding til Intune. Når onboarding er fuldført i Intune, skal du bruge 4 timer, før enhedens data vises i Fyrtårn.
 
 **Årsag 2:** Kundelejeren blev for nylig onboardet til Lighthouse, og data indlæses stadig i Lighthouse.
 

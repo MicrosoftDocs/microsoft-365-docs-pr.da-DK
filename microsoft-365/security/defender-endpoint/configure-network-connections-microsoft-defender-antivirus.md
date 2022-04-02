@@ -16,24 +16,24 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: f29cf5f77acd52a4ff3ccc8384f3c64861e48b64
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 1029549339d5c54334690bf5577a46f2d2be6bf6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63592371"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465305"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Konfigurere og validere Microsoft Defender Antivirus netværksforbindelser
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 For at Microsoft Defender Antivirus beskyttelse, der leveres i skyen, fungerer korrekt, skal dit sikkerhedsteam konfigurere dit netværk for at tillade forbindelser mellem dine slutpunkter og bestemte Microsoft-servere. I denne artikel vises forbindelser, der skal være tilladt for at bruge firewall-reglerne. Den indeholder også en vejledning til validering af din forbindelse. Hvis du konfigurerer beskyttelsen korrekt, sikrer du dig den bedste værdi fra dine skybaserede beskyttelsestjenester.
 
 > [!IMPORTANT]
-> Denne artikel indeholder kun oplysninger om konfiguration af netværksforbindelser for Microsoft Defender Antivirus. Hvis du bruger Microsoft Defender til slutpunkt (som omfatter Microsoft Defender Antivirus), skal du se Konfigurer enhedsproxy og [indstillinger for internetforbindelse for Defender til slutpunkt](configure-proxy-internet.md).
+> Denne artikel indeholder kun oplysninger om konfiguration af netværksforbindelser for Microsoft Defender Antivirus. Hvis du bruger en Microsoft Defender for Endpoint (som omfatter Microsoft Defender Antivirus), skal du se Konfigurer enhedsproxy og [indstillinger for internetforbindelse for Defender til slutpunkt](configure-proxy-internet.md).
 
 
 > [!NOTE]
@@ -41,7 +41,7 @@ For at Microsoft Defender Antivirus beskyttelse, der leveres i skyen, fungerer k
 
 ## <a name="allow-connections-to-the-microsoft-defender-antivirus-cloud-service"></a>Tillad forbindelser til Microsoft Defender Antivirus-skytjenesten
 
-Den Microsoft Defender Antivirus skytjeneste giver hurtig og stærk beskyttelse til dine slutpunkter. Det er valgfrit at aktivere den skybaserede tjeneste til beskyttelse. Microsoft Defender Antivirus skytjeneste anbefales, fordi den giver vigtig beskyttelse mod malware på dine slutpunkter og dit netværk. Du kan få mere at [](enable-cloud-protection-microsoft-defender-antivirus.md) vide under Aktivér beskyttelse, der leveres i skyen, for at aktivere tjenesten med Intune-, Microsoft Endpoint Configuration Manager-, Gruppepolitik-, PowerShell-cmdlet'er eller individuelle klienter i Windows Sikkerhed-appen.
+Den Microsoft Defender Antivirus skytjeneste giver hurtig og stærk beskyttelse til dine slutpunkter. Det er valgfrit at aktivere den skybaserede tjeneste til beskyttelse. Microsoft Defender Antivirus skytjeneste anbefales, fordi den giver vigtig beskyttelse mod malware på dine slutpunkter og dit netværk. Få mere at vide under [](enable-cloud-protection-microsoft-defender-antivirus.md) Aktivér beskyttelse, der leveres i skyen, for at aktivere tjenesten med Intune, Microsoft Endpoint Configuration Manager, Gruppepolitik, PowerShell-cmdlet'er eller individuelle klienter i Windows Sikkerhed-appen.
 
 Når du har aktiveret tjenesten, skal du konfigurere dit netværk eller din firewall til at tillade forbindelser mellem netværk og dine slutpunkter. Da din beskyttelse er en skybaseret tjeneste, skal computere have adgang til internettet og nå Microsofts skytjenester. Du må ikke udelade URL-adressen `*.blob.core.windows.net` fra nogen form for netværksinspektion.
 
@@ -59,7 +59,7 @@ Sørg for, at der ikke er nogen firewall eller regler for netværksfiltrering, d
 |Tjeneste og beskrivelse|URL-adresse|
 |---|---|
 |Microsoft Defender Antivirus sky-leveret beskyttelsestjeneste kaldes for Microsoft Active Protection Service (MAPS).<p> Den Microsoft Defender Antivirus bruger MAPS-tjenesten til at levere beskyttelse i skyen.|`*.wdcp.microsoft.com` <p> `*.wdcpalt.microsoft.com` <p> `*.wd.microsoft.com`|
-|MICROSOFT Update Service (MU) og Windows Update Service (WU) <p>Disse tjenester giver adgang til sikkerhedsintelligens og produktopdateringer.|`*.update.microsoft.com` <p> `*.delivery.mp.microsoft.com`<p> `*.windowsupdate.com` <p> Du kan finde flere oplysninger [i Forbindelsesslutpunkter for Windows Opdatering](/windows/privacy/manage-windows-1709-endpoints#windows-update)|
+|Microsoft Update Service (MU) og Windows Update Service (WU) <p>Disse tjenester giver adgang til sikkerhedsintelligens og produktopdateringer.|`*.update.microsoft.com` <p> `*.delivery.mp.microsoft.com`<p> `*.windowsupdate.com` <p> Du kan finde flere oplysninger [i Forbindelsesslutpunkter for Windows Update](/windows/privacy/manage-windows-1709-endpoints#windows-update)|
 |Sikkerhedsintelligensopdateringer Alternativ downloadplacering (ADL)<p>Dette er en alternativ placering til Microsoft Defender Antivirus sikkerhedsintelligensopdateringer, hvis den installerede sikkerhedsintelligens er forældet (syv eller flere dage bagud).|`*.download.microsoft.com` <p> `*.download.windowsupdate.com`<p>  `go.microsoft.com`<p> `https://fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx`|
 |Lagring af malwareindsendelser <p>Dette er en overførselsplacering for filer, der er sendt til Microsoft via indsendelsesformularen eller automatisk indsendelse af eksempler.|`ussus1eastprod.blob.core.windows.net` <p> `ussus2eastprod.blob.core.windows.net` <p> `ussus3eastprod.blob.core.windows.net` <p> `ussus4eastprod.blob.core.windows.net` <p> `wsus1eastprod.blob.core.windows.net` <p> `wsus2eastprod.blob.core.windows.net` <p> `ussus1westprod.blob.core.windows.net` <p> `ussus2westprod.blob.core.windows.net` <p> `ussus3westprod.blob.core.windows.net` <p> `ussus4westprod.blob.core.windows.net` <p> `wsus1westprod.blob.core.windows.net` <p> `wsus2westprod.blob.core.windows.net` <p> `usseu1northprod.blob.core.windows.net` <p> `wseu1northprod.blob.core.windows.net` <p> `usseu1westprod.blob.core.windows.net` <p> `wseu1westprod.blob.core.windows.net` <p> `ussuk1southprod.blob.core.windows.net` <p> `wsuk1southprod.blob.core.windows.net` <p> `ussuk1westprod.blob.core.windows.net` <p> `wsuk1westprod.blob.core.windows.net`|
 |Liste over tilbagekaldte certifikater <p> Windows denne liste, mens du opretter SSL-forbindelsen til KORT til opdatering af liste over tilbagekaldte certifikater.|`http://www.microsoft.com/pkiops/crl/` <p> `http://www.microsoft.com/pkiops/certs` <p> `http://crl.microsoft.com/pki/crl/products` <p> `http://www.microsoft.com/pki/certs`|
@@ -95,11 +95,11 @@ Hvis du har forbindelse korrekt, får du vist en advarsel, Microsoft Defender An
 
 Hvis du bruger Microsoft Edge, får du også vist en meddelelse:
 
-:::image type="content" source="../../media/wdav-bafs-edge.png" alt-text="Skærmbillede af meddelelse om, at der blev fundet malware i Azure IoT Edge.":::
+:::image type="content" source="../../media/wdav-bafs-edge.png" alt-text="Meddelelsen om, at der blev fundet malware i Edge" lightbox="../../media/wdav-bafs-edge.png":::
 
 Der vises en lignende meddelelse, hvis du bruger Internet Explorer:
 
-:::image type="content" source="../../media/wdav-bafs-ie.png" alt-text="Microsoft Defender AV-besked om, at der blev fundet malware.":::
+:::image type="content" source="../../media/wdav-bafs-ie.png" alt-text="Microsoft Defender AV-meddelelsen om, at der blev fundet malware" lightbox="../../media/wdav-bafs-ie.png":::
 
 #### <a name="view-the-fake-malware-detection-in-your-windows-security-app"></a>Se registrering af falske malware i din Windows Sikkerhed-app
 
@@ -116,6 +116,6 @@ Der vises en lignende meddelelse, hvis du bruger Internet Explorer:
 
 ## <a name="see-also"></a>Se også
 
-- [Konfigurer enhedsproxy og indstillinger for internetforbindelse for Microsoft Defender til Slutpunkt](configure-proxy-internet.md)
+- [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Microsoft Defender for Endpoint](configure-proxy-internet.md)
 - [Brug Gruppepolitik til at konfigurere og administrere Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
 - [Vigtige ændringer af Microsoft Active Protection Services-slutpunkt](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 

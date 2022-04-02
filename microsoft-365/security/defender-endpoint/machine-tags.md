@@ -14,22 +14,22 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 65df8553f5ee3b7dd7876557398e0d4aa22c7bd5
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b0b94e4905a780be9a608c8e91967b47a4db7160
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591933"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465745"
 ---
 # <a name="create-and-manage-device-tags"></a>Opret og administrer enhedsmærker
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Tilføj mærker på enheder for at oprette en logisk gruppetilhørsforhold. Enhedsmærker understøtter korrekt tilknytning af netværket, så du kan vedhæfte forskellige mærker for at registrere kontekst og aktivere dynamisk oprettelse af lister som en del af en hændelse. Mærker kan bruges som et filter i visningen **Lager over enheder** eller til at gruppere enheder. Du kan finde flere oplysninger om enhedsgruppering i [Opret og administrer enhedsgrupper](machine-groups.md).
 
@@ -56,11 +56,12 @@ Hvis du vil tilføje enhedsmærker ved hjælp af API, skal [du se Tilføj eller 
 
 2. Vælg **Administrer mærker** fra rækken af Svarhandlinger.
 
-    :::image type="content" alt-text="Billede af knappen Administrer mærker." source="images/manage-tags-option.png":::
+    :::image type="content" source="images/manage-tags-option.png" alt-text="Billede af knappen Administrer mærker" lightbox="images/manage-tags-option.png":::
+    
 
 3. Skriv for at finde eller oprette mærker
 
-    :::image type="content" alt-text="Billede af at tilføje mærker på en enhed1." source="images/create-new-tag.png":::
+    :::image type="content" source="images/create-new-tag.png" alt-text="Tilføjelse af mærker på enhed1" lightbox="images/create-new-tag.png":::
 
 Mærker føjes til enhedsvisningen og afspejles også i visningen **Lagerenheder** . Du kan derefter bruge **filteret Mærker** til at få vist den relevante liste over enheder.
 
@@ -71,7 +72,7 @@ Mærker føjes til enhedsvisningen og afspejles også i visningen **Lagerenheder
 
 Du kan også slette mærker fra denne visning.
 
-:::image type="content" alt-text="Billede af at tilføje mærker på en enhed2." source="images/new-tag-label-display.png":::
+:::image type="content" source="images/new-tag-label-display.png" alt-text="Tilføjelse af mærker på enhed2" lightbox="images/new-tag-label-display.png":::
 
 ## <a name="add-device-tags-by-setting-a-registry-key-value"></a>Tilføj enhedsmærker ved at angive en registreringsdatabasenøgleværdi
 

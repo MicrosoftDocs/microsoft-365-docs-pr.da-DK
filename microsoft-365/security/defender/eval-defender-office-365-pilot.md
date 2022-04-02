@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: 456f5dae90f2a559e82599271f23bd5f3452ac12
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 58d7a8acd752eda36fe8ee73989105b54e746ddf
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63593345"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755550"
 ---
 # <a name="pilot-microsoft-defender-for-office-365"></a>Prøve microsoft Defender til Office 365
 
@@ -45,28 +45,28 @@ Brug følgende trin til at konfigurere pilotprojektet for Microsoft Defender til
 
 Når du evaluerer Microsoft Defender Office 365, kan du vælge at prøve pilotspecifikke brugere, før du aktiverer og gennemtvinger politikker for hele organisationen. Oprettelse af distributionsgrupper kan hjælpe med at administrere installationsprocesserne. Du kan f.eks. oprette grupper som *Defender til Office 365-brugere – Standard Protection*, *Defender til Office 365-brugere – Streng beskyttelse*, *Defender til Office 365-brugere –* brugerdefineret beskyttelse eller *Defender for Office 365-brugere – undtagelser*.
 
-Det fremgår muligvis ikke tydeligt, hvorfor "Standard" og "Streng" er de udtryk, der bruges til dette, men det bliver klart, når du udforsker mere om Defender Office 365 sikkerhedsindstillinger. Navngivningsgrupper "brugerdefinerede" og "undtagelser" taler for sig selv, og selvom de fleste af dine brugere skal falde ind under *standard* og *strenge, vil* brugerdefinerede grupper og undtagelsesgrupper indsamle værdifulde data om risikostyring.
+Det fremgår muligvis ikke tydeligt, hvorfor "Standard" og "Streng" er de udtryk, der bruges til disse grupper, men det bliver klart, når du udforsker mere om Defender Office 365 sikkerhedsindstillinger. Navngivningsgrupper "brugerdefinerede" og "undtagelser" taler for sig selv, og selvom de fleste af dine brugere skal falde ind under *standard* og *strenge, vil* brugerdefinerede grupper og undtagelsesgrupper indsamle værdifulde data om risikostyring.
 
 ## <a name="step-1-create-pilot-groups"></a>Trin 1: Opret pilotgrupper
 
 Distributionsgrupper kan oprettes og defineres direkte Exchange Online eller synkroniseres fra active directory i det lokale miljø.
 
-1. Log på Exchange Administration (EAC) med en konto, der har fået tildelt Modtageradministrator-rolle eller fået delegeret gruppeadministrationstilladelser.
-2. I navigationsmenuen skal du **udvide Modtagere** og vælge <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**Grupper**</a>.
+1. Log på Exchange Administration (EAC) med en konto, der har fået modtageradministratorrolle eller fået delegeret gruppeadministrationstilladelser.
+2. I navigationsmenuen skal du *udvide Modtagere* og vælge *Grupper*.
 
-   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-pilot.png" alt-text="Exchange Administration i navigationsmenuen (hurtig start) med en pil, der peger på Grupper. Klik på Grupper.":::
+   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-pilot.png" alt-text="Navigationsmenuen i Exchange (hurtig start) med en pil, der peger på Grupper. Klik på Grupper" lightbox="../../media/mdo-eval/1_mdo-eval-pilot.png":::
 
 3. Vælg "Tilføj en gruppe" i dashboardet Grupper.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Tilføj grupper i panelet Grupper.":::
+   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Indstillingen Tilføj grupper i panelet Grupper i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
 
 4. For gruppetype skal du vælge *Distribution* og klikke på Næste.
 
-   :::image type="content" source="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Vælg en distributionsgruppetype her.":::
+   :::image type="content" source="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Siden Vælg en gruppetype i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
 
 5. Giv gruppen et navn og en beskrivelse, og klik derefter på Næste.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Navngive og beskrive gruppen.":::
+   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Siden Konfigurer de grundlæggende funktioner i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
 
 ## <a name="step-2-configure-protection"></a>Trin 2: Konfigurer beskyttelse
 
@@ -83,7 +83,7 @@ Nogle funktioner er *endnu ikke* konfigureret. Du har tre muligheder for at konf
 
 ### <a name="assign-preset-security-policies"></a>Tildel forudindstillede sikkerhedspolitikker
 
-Det opfordres til at starte med de  anbefalede oprindelige politikker, når MDO evalueres, og derefter justere dem efter behov i løbet af evalueringsperioden.
+Det anbefales, at du begynder med de  anbefalede oprindelige politikker, når du evaluerer MDO, og derefter justerer dem efter behov i løbet af evalueringsperioden.
 
 Du kan hurtigt aktivere anbefalede EOP og Defender Office 365 beskyttelsespolitikker og tildele dem til bestemte pilotbrugere eller definerede grupper som en del af din evaluering. Forudindstillede politikker giver en **standardbeskyttelsesskabelon** eller en mere aggressive **skabelon** til streng beskyttelse, som kan tildeles uafhængigt eller kombineres.
 
@@ -96,28 +96,28 @@ Her er de [forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender Off
 
 3. Klik på & på *Trusselspolitikker i dashboardet Regler for politik*.
 
-   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png" alt-text="a.":::
+   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png" alt-text="Menuelementet Trusselspolitikker i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png":::
 
 4. I Microsoft 365 Defender skal du udvide Trusselsadministration i navigationsmenuen og derefter vælge Politik i undermenuen.
 5. Klik på Forudindstillede sikkerhedspolitikker *på dashboardet Politik*.
 
-   :::image type="content" source="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png" alt-text="Klik på feltet Forudindstillede sikkerhedspolitikker.":::
+   :::image type="content" source="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png" alt-text="Siden Trusselspolitikker i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png":::
 
 6. Klik *på* Rediger for at konfigurere og tildele standardpolitikken og/eller Streng-politikken.
 
-   :::image type="content" source="../../media/mdo-eval/8-mdo-eval-pilot-preset.png" alt-text="Klik på Rediger i panelet Forudindstillede sikkerhedspolitikker.":::
+   :::image type="content" source="../../media/mdo-eval/8-mdo-eval-pilot-preset.png" alt-text="Siden Forudindstillede sikkerhedspolitikker i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/8-mdo-eval-pilot-preset.png":::
 
 7. Tilføj betingelser for at anvende grundlinje ***EOP** _-beskyttelse til bestemte pilotbrugere eller grupper af brugere efter behov, og vælg _Next* for at fortsætte.
 
    Eksempelvis kan en Defender for Office 365-betingelse for pilotevalueringer anvendes, hvis modtagerne er medlemmer af en defineret *Defender til Office 365 Standard Protection-gruppe* og derefter administreres ved blot at føje konti til eller fjerne konto fra gruppen.
 
-   :::image type="content" source="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png" alt-text="Tilføj de nødvendige betingelser for at anvende EOP-sikkerhedsniveauet på din pilotgruppe.":::
+   :::image type="content" source="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png" alt-text="EOP-beskyttelserne gælder for siden i Microsoft 365 Defender portal" lightbox="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png":::
 
 8. Tilføj betingelser for at anvende **grundlinje *MDO** _-beskyttelse til bestemte pilotbrugere eller grupper af brugere efter behov. Klik _Next* for at fortsætte.
 
    Eksempelvis kan en Defender for Office 365-betingelse for pilotevalueringer anvendes, hvis modtagerne er medlemmer af en defineret *Defender til Office 365 Standard Protection-gruppe* og derefter administreres ved blot at tilføje/fjerne konti via gruppen.
 
-   :::image type="content" source="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png" alt-text="Tilføj de nødvendige betingelser for at anvende Defender Office 365 sikkerhedsniveau for din pilotgruppe.":::
+   :::image type="content" source="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png" alt-text="Beskyttelse af Defender Office 365 beskyttelse gælder for siden i Microsoft 365 Defender-portalen" lightbox="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png":::
 
 9. Gennemse og bekræft dine ændringer for at tildele forudindstillede sikkerhedspolitikker.
 10. Forudindstillede beskyttelsespolitikker kan administreres (konfigureres igen, anvendes igen, deaktiveres osv.) ved at gå tilbage til Microsoft 365 Defender-portalen >-politikker & regler > Trusselspolitikker > og klikke på feltet Forudindstillede sikkerhedspolitikker.

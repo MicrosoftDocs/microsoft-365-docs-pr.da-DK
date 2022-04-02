@@ -21,16 +21,16 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: 5b684a1ead5638a787413d7470cb103cbe55e7df
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 98d2ee2394e4384fbf8d7b2b3832d11a847b8521
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775516"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755155"
 ---
 # <a name="step-1-create-the-microsoft-365-defender-evaluation-environment-for-greater-cyber-security"></a>Trin 1. Skab et Microsoft 365 Defender evalueringsmiljø for større cybersikkerhed
 
-Du kan få mere at vide om og opbygge denne Microsoft Defender XDR løsning i trin, der er fordelt gennem resten af serien:
+LYou kan lære om og også bygge denne Microsoft Defender XDR løsning i trin, der er fordelt gennem resten af denne serie:
 
 - [Sådan oprettes miljøet](eval-create-eval-environment.md)
 - Konfigurer eller få mere at vide om hver teknologi i denne Microsoft XDR
@@ -44,7 +44,7 @@ Du kan få mere at vide om og opbygge denne Microsoft Defender XDR løsning i tr
 
 Trinnene i denne serie kører fra ende til anden, fra at lære begreberne bag Microsoft 365 Defender XDR at bygge det og til at tage evalueringsmiljøet live til produktion.
 
-Der er to almindelige måder at udføre dette næste trin i evalueringen på. Serien antager, at du allerede har en produktionslejer Microsoft 365 og aktiverer E5-prøvelicenser for at evaluere Microsoft 365 Defender i *det aktuelle miljø*. Med en direkte evaluering kan du beholde alle sikkerhedsmetoder ved køb af licenser efter evalueringsperioden.
+Der er to almindelige måder at udføre dette næste trin i evalueringen på. Serien antager, at du allerede har en Microsoft 365 lejer, og aktiverer E5-prøvelicenser for at evaluere Microsoft 365 Defender i *det aktuelle miljø*. Med en direkte evaluering kan du beholde alle sikkerhedsmetoder ved køb af licenser efter evalueringsperioden.
 
 Den anden er [at konfigurere dit Microsoft 365 Defender-prøvemiljø](setup-m365deval.md) med henblik på evaluering. Bemærk, at der muligvis ikke er mange reelle signaler fra virksomheden under test.
 

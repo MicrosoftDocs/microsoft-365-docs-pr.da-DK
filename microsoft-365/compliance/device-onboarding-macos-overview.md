@@ -14,27 +14,27 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om onboarding af macOS-enheder i Løsninger til overholdelse af regler og standarder
-ms.openlocfilehash: 93a930f13a17c19c3ff7209295ddada648b9575a
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 783179ae749ac7cd6de671435927ba5bbdbdacad
+ms.sourcegitcommit: 9d563faeaa50b59b0b468dbb373d886e5270f58e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63598518"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64387009"
 ---
 # <a name="onboard-macos-devices-into-microsoft-365-overview-preview"></a>Onboard macOS-enheder Microsoft 365 oversigt (forhåndsvisning)
 
-MacOS-enheder kan onboardes i Microsoft 365 løsninger til overholdelse af regler og standarder ved hjælp af enten Intune eller SYLF Pro. Onboarding-procedurerne varierer, afhængigt af hvilken administrationsløsning du bruger. Hvis dine macOS-enheder allerede er blevet onboardet til Microsoft Defender for Endpoint (MDE), er der færre trin. Se [Næste trin](#next-steps) for at få links til de relevante procedurer for dig.
+MacOS-enheder kan onboardes i Microsoft 365 løsninger til overholdelse af regler og standarder ved hjælp Intune eller SYLF Pro. Onboarding-procedurerne varierer, afhængigt af hvilken administrationsløsning du bruger. Hvis dine macOS-enheder allerede er blevet onboardet Microsoft Defender for Endpoint (MDE), er der færre trin. Se [Næste trin](#next-steps) for at få links til de relevante procedurer for dig.
 
 **Gælder for:**
 
-- [Microsoft 365 forebyggelse af datatab på slutpunkter (DLP)](./endpoint-dlp-learn-about.md)
+- [Forebyggelse af datatab på slutpunkt (DLP)](./endpoint-dlp-learn-about.md)
 - [Insider-risikostyring](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
 ## <a name="before-you-begin"></a>Før du begynder
 
 Før du går i gang med slutpunkt DLP på macOS-enheder (Catalina 10.15 eller nyere), skal du gøre dig bekendt med disse artikler:
 
-- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention)
+- [Få mere at vide om forebyggelse af datatab på slutpunkt](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention)
 - [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention)
 
 Hvis du slet ikke kender DLP, bør du også gøre dig bekendt med disse artikler:
@@ -50,7 +50,7 @@ Hvis du ikke kender til Insider Risk, bør du gøre dig bekendt med følgende ar
 
 Dine macOS-enheder skal allerede administreres via Intune eller SYLTEF Pro.
  
-- For at komme i gang med Intune skal du se Installationsvejledning[: Administrer macOS-enheder Microsoft Intune](/mem/intune/fundamentals/deployment-guide-platform-macos) og [Tilmeld din Mac med Intune-firmaportal](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
+- For at komme i gang Intune du se [Installationsvejledning: Administrer macOS-enheder Microsoft Intune](/mem/intune/fundamentals/deployment-guide-platform-macos) [og Tilmeld din Mac med Intune-firmaportal](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
 - Du kan finde oplysninger om onboarding til SYLF Pro, ved at se [GUIDE](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) Pro [for ADMINISTRATORER og SYLF Pro installations- og konfigurationsvejledning til Mac](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
 - Installér browseren v95+ Edge på dine macOS-enheder 
 
@@ -87,10 +87,7 @@ Når du vil onboarde enheder, der endnu ikke er blevet onboardet, skal du downlo
    > [!NOTE]
    > Det tager som regel ca. 60 sekunder, før onboarding af enheder er aktiveret, men det kan tage op til 30 minutter, før du går i gang med Microsoft Support.
 
-2. Åbn siden med indstillinger for Overholdelsescenter, og vælg **Onboard-enheder**.
-
-   > [!div class="mx-imgBorder"]
-   > ![skal du aktivere enhedshåndtering.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
+2. Åbn siden med indstillinger for Overholdelsescenter, og vælg **Slå overvågning af macOS-enheder til**.
 
 ## <a name="next-steps"></a>Næste trin
 
@@ -98,10 +95,10 @@ Det er påkrævet at få Microsoft 365 enheder i gang med overholdelsesløsninge
 
 Emne | Beskrivelse
 :---|:---
-|[Onboard and offboard macOS devices into Microsoft 365 Compliance solutions using Intune (preview)](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|For macOS-enheder, der administreres via Intune
-|[Onboard og offboard macOS-enheder i Overholdelsesløsninger ved hjælp af Intune til Microsoft Defender til Endpoint-kunder (preview)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |På macOS-enheder, der administreres via Intune, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
+|[Onboard og offboard macOS-enheder i Microsoft 365 overholdelsesløsninger ved hjælp Intune (preview)](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|For macOS-enheder, der administreres via Intune
+|[Onboard og offboard macOS-enheder i Overholdelsesløsninger med Intune til Microsoft Defender for Endpoint kunder (preview)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |For macOS-enheder, der administreres via Intune, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
 |[Onboard og offboard macOS-enheder i Microsoft 365 overholdelsesløsninger ved hjælp af SYLF Pro (preview)](device-onboarding-offboarding-macos-jamfpro.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview) | For macOS-enheder, der administreres via JAMF Pro
-|[Onboard og offboard macOS-enheder i Overholdelsesløsninger ved hjælp af SYLF Pro til Microsoft Defender til Slutpunkt-kunder (prøveversion)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|For macOS-enheder, der administreres via SYLF Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
+|[Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro til Microsoft Defender for Endpoint kunder (preview)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|For macOS-enheder, der administreres via SYLF Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
 
 
 ## <a name="related-topics"></a>Relaterede emner

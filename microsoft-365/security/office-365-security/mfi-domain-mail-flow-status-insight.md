@@ -7,6 +7,7 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan du bruger det øverste indsigt i mailflowstatus i mailflowdashboardet i Security & Compliance Center til fejlfinding af problemer med mailflow i forbindelse med deres MX-poster.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e4ed59e31cd21826eebf306e566610d54635f0c4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3994859c1d5a4e0026f61dcc24a9735c6122ad15
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589160"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465415"
 ---
 # <a name="top-domain-mail-flow-status-insight-in-the-security--compliance-center"></a>Øverste indsigt i domænemailflowstatus i Sikkerheds- & Compliance Center
 
@@ -27,14 +28,14 @@ ms.locfileid: "63589160"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Det **Øverste indsigt i domænemailflowstatus** i [dashboardet Mailflow](mail-flow-insights-v2.md) i [Security & Compliance Center](https://protection.office.com) giver dig den aktuelle mailflowstatus for organisationen.
 
 Dette indsigt hjælper dig med at identificere og foretage fejlfinding af domæner, der oplever ***problemer med mailflow*** . Domænet kan f.eks. ikke modtage ekstern mail, fordi domænet er udløbet, eller domænet har en forkert MX-post.
 
-![Øverste widget for domæneflowstatus i dashboardet mailflow i & Compliance Center.](../../media/mfi-top-domain-mail-flow-status-widget.png)
+:::image type="content" source="../../media/mfi-top-domain-mail-flow-status-widget.png" alt-text="Den øverste widget for domæneflowstatus i dashboardet Mailflow i & Compliance Center" lightbox="../../media/mfi-top-domain-mail-flow-status-widget.png":::
 
 Når du klikker **på Vis detaljer** i widgetten, vises **en** pop op-vindue med domænestatus, der viser dig flere oplysninger om status for hvert domæne:
 
@@ -48,7 +49,7 @@ Når du klikker **på Vis detaljer** i widgetten, vises **en** pop op-vindue med
 
 Du kan klikke **på Vis flere** for at få vist de samme oplysninger om flere domæner.
 
-![Pop op-meddelelse med detaljer i mailflowstatus for det øverste domæne.](../../media/mfi-top-domain-mail-flow-status-view-details.png)
+:::image type="content" source="../../media/mfi-top-domain-mail-flow-status-view-details.png" alt-text="Pop op-pop op-pop-op-pop-op'en Detaljer i statussen for mailflowet Øverst på domænet" lightbox="../../media/mfi-top-domain-mail-flow-status-view-details.png":::
 
 ## <a name="see-also"></a>Se også
 

@@ -1,5 +1,5 @@
 ---
-title: Administrer Microsoft Defender for Endpoint-hændelser
+title: Administrer Microsoft Defender for Endpoint hændelser
 description: Administrer hændelser ved at tildele den, opdatere dens status eller angive klassificeringen.
 keywords: hændelser, administrer, tildel, status, klassificering, sand besked, falsk besked
 search.product: eADQiWindows 10XVcnh
@@ -18,32 +18,31 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 45c08c5a3c304a23b5761d96a4d9aceb1b4f1562
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: a84f7ba72acb4caf3e229f0bed4d997e123cc7ae
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63593454"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466207"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-incidents"></a>Administrer Microsoft Defender for Endpoint-hændelser
+# <a name="manage-microsoft-defender-for-endpoint-incidents"></a>Administrer Microsoft Defender for Endpoint hændelser
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Håndtering af hændelser er en vigtig del af enhver cybersecurity-handling. Du kan administrere hændelser ved at vælge en hændelse fra **køen Hændelser eller** **ruden til administration af hændelser**. 
 
 
 Hvis du vælger en hændelse fra **køen Hændelser, vises ruden Hændelsesstyring**, hvor du kan åbne hændelsessiden for at få flere oplysninger.
 
-
-![Billede af ruden til administration af hændelser.](images/atp-incidents-mgt-pane-updated.png)
+:::image type="content" source="images/atp-incidents-mgt-pane-updated.png" alt-text="Ruden til administration af hændelser" lightbox="images/atp-incidents-mgt-pane-updated.png":::
 
 Du kan tildele hændelser til dig selv, ændre status og klassificering, omdøbe eller kommentere dem for at holde styr på deres fremskridt.
 
@@ -55,8 +54,7 @@ Du kan tildele hændelser til dig selv, ændre status og klassificering, omdøbe
 > Hændelser, der fandtes før rullen af automatisk navngivning af hændelser, bevarer deres navne.
 >
 
-
-![Billede af siden med hændelsesdetaljer.](images/atp-incident-details-updated.png)
+:::image type="content" source="images/atp-incident-details-updated.png" alt-text="Siden med hændelsesdetaljer" lightbox="images/atp-incident-details-updated.png":::
 
 ## <a name="assign-incidents"></a>Tildel hændelser
 Hvis en hændelse ikke er blevet tildelt endnu, kan du vælge **Tildel til mig for** at tildele hændelsen til dig selv. Dette antager, at du ikke kun er ejerskab af hændelsen, men også alle de beskeder, der er knyttet til den.

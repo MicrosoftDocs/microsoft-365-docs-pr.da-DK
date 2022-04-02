@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: ec1c4942923edb824452c4438f79edff1abfd702
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: f6170ef1ef7dc4167fdd61072a9fcd7e189fc23b
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775912"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755290"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365 med produktivitetsillustrationer
 
@@ -40,12 +40,14 @@ At vide, hvilken metode (eller kombinationer af metoder) du skal bruge, og hvorn
 |:-----|:-----|
 |[![Plakat for scenarie i forbindelse med Contoso-virksomhedskommunikation.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Opdateret januar 2022   |Denne plakat illustrerer, hvordan Contoso holder medarbejdere informeret og engageret på tværs af populære kommunikationsscenarier. Contoso bruger en række forskellige M365-apps, herunder et nyt tilbud, Viva Connections.<br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Organisatorisk kommunikation: Vejledning, metoder og produkter](/sharepoint/corporate-communications-overview)|
 
+
+
 ## <a name="groups-in-microsoft-365-for-it-architects"></a>Grupper i Microsoft 365 til IT-arkitekter
 Denne illustration indeholder oplysninger til IT-arkitekter om Microsoft 365 grupper. Hvis du vil vide mere om konfiguration og administration af Microsoft 365 Grupper og teams til samarbejde i din organisation, skal du se Konfigurere sikkert samarbejde [med Microsoft 365](/microsoft-365/solutions/setup-secure-collaboration-with-teams) og [Hvad er styring af samarbejde?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Miniaturebillede til gruppe infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Opdateret i maj 2020|Disse illustrationer beskriver de forskellige typer grupper, hvordan de oprettes og administreres, og nogle få anbefalinger om styring.
+|[![Miniaturebillede til gruppe infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Opdateret i maj 2020|Disse illustrationer beskriver de forskellige typer grupper, hvordan de oprettes og administreres, og nogle få anbefalinger om styring.|
 
 ## <a name="migrate-to-microsoft-365"></a>Overfør til Microsoft 365
 
@@ -74,15 +76,6 @@ Sikkerhed og beskyttelse af oplysninger for organisationer i flere områder med 
 |:-----|:-----|
 |[![Infografik med flere områder.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Opdateret marts 2020 |At bruge en Microsoft 365 lejer i din globale organisation er det bedste valg og den bedste oplevelse af mange årsager. Mange arkitekter vil dog gerne vide, hvordan man lever op til målsætninger for sikkerhed og informationsbeskyttelse på tværs af forskellige områder. Dette sæt emner giver anbefalinger. |
 
-## <a name="security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>Sikkerhedsvejledning til politiske kampagner, nonprofitorganisationer og andre Agile-organisationer
-
-Hvis din organisation er Agile, har du et lille it-team, og din trusselsprofil er højere end gennemsnittet, er denne vejledning beregnet til dig. Denne løsning viser, hvordan du hurtigt opbygger et miljø med vigtige skytjenester, der fra starten indeholder sikre kontrolelementer. Denne vejledning indeholder præskrivive sikkerhedsanbefalinger til beskyttelse af data, identiteter, mail og adgang fra mobilenheder.
-
-| Element | Beskrivelse |
-|:---|:---|
-|**Microsoft-sikkerhedsvejledning til politiske kampagner** <br> [:::image type="content" source="../media/d370ce28-ca40-4930-9a2c-907312aa06c8.png" alt-text="Miniaturebillede med en miniplakat om sikkerhedsvejledning.":::](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br> [PDF](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) \| [Visio](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx)|Denne vejledning bruger en politiske kampagneorganisation som eksempel. Brug denne vejledning som et udgangspunkt for alle miljøer.|
-|**Microsoft-sikkerhedsvejledning til nonprofitorganisationer** <br> [:::image type="content" source="../media/e4784889-1c69-4067-9a8f-31d31d1eceea.png" alt-text="Miniaturebillede, hvor der kan hentes sikkerhedsvejledning.":::](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br> [PDF](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) \| [Visio](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx)|Denne vejledning er revideret lidt for nonprofitorganisationer. Den henviser f.eks. Office 365 til nonprofitorganisationer planer. Den tekniske vejledning er den samme som den politiske kampagneløsningsvejledning.|
-
 ## <a name="microsoft-defender-for-endpoint-deployment-strategy"></a>Implementeringsstrategi for Microsoft Defender til Slutpunkt
 
 Afhængigt af dit miljø er nogle værktøjer bedre egnet til bestemte arkitekturer.
@@ -90,7 +83,9 @@ Afhængigt af dit miljø er nogle værktøjer bedre egnet til bestemte arkitektu
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Thumb image for Microsoft Defender for Endpoint deployment strategy.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Opdateret september 2021| Det arkitektoniske materiale hjælper dig med at planlægge din installation for følgende arkitekturer: <ul><li> Skybaseret </li><li> Medadministration </li><li> Lokalt miljø</li><li>Evaluering og lokal onboarding</li> |
+|[![Thumb image for Microsoft Defender for Endpoint deployment strategy.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Opdateret september 2021| Det arkitektoniske materiale hjælper dig med at planlægge din installation for følgende arkitekturer: <ul><li> Skybaseret </li><li> Medadministration </li><li> Lokalt miljø</li><li>Evaluering og lokal onboarding</li>
+
+
 <!--
 
 <a name="BKMK_O365IDP"></a>
@@ -103,15 +98,18 @@ Recommended Zero Trust capabilities for protecting identities and devices that a
 |[![Model poster: Zero Trust identity and device protection for Microsoft 365.](../media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-thumbnail.png)](../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) <br/>  [View as a PDF](../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.pdf)  \| [Download as a Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.vsdx) <br/> Updated November 2021|It's important to use consistent levels of protection across your data, identities, and devices. This model shows you which Zero Trust capabilities are comparable with more information on capabilities to protect identities and devices.  <br/> |
 
 --> 
-<a name="BKMK_ediscovery"></a>
 
-## <a name="advanced-ediscovery-architecture-in-microsoft-365"></a>Advanced eDiscovery arkitektur i Microsoft 365
+
+<a name="BKMK_ediscovery"></a>
+##Advanced eDiscovery arkitektur i Microsoft 365
 
 Advanced eDiscovery en ende-til-ende-arbejdsproces og dataflow, herunder Microsoft 365 eller Multi-Geo-miljøer.
 
 | Element | Beskrivelse |
 |:-----|:-----|
 |[![Modelplakat: Advanced eDiscovery arkitektur i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Få vist som et billede](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| [Download som PDF-fil](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| [Download som Visio](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Opdateret oktober 2020|Omfatter: <ul><li>  En samlet arbejdsproces i et enkelt miljø</li><li>En end-to-end-arbejdsproces i Microsoft 365 et Multi-Geo-miljø </li><li>End-to-end-dataflow, der understøtter EDRM-arbejdsprocessen</li> |
+
+
 
 ## <a name="microsoft-telephony-solutions"></a>Microsoft-telefoniløsninger
 

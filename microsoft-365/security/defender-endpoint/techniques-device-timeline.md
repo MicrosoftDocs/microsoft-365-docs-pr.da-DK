@@ -1,6 +1,6 @@
 ---
 title: Teknikker på enhedens tidslinje
-description: Forstå enhedens tidslinje i Microsoft Defender til slutpunkt
+description: Forstå enhedens tidslinje i Microsoft Defender for Endpoint
 keywords: enhedens tidslinje, slutpunkt, MITRE, MITRE ATT&CK, teknikker, taktik
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -16,17 +16,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 897a8691bc7cbc3c03adcbf5befc2a2da8b12294
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: d724b7663bd4484c630e97362eb5766490e1fa8e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63591778"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465899"
 ---
 # <a name="techniques-in-the-device-timeline"></a>Teknikker på enhedens tidslinje
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 Du kan få mere indsigt i en undersøgelse ved at analysere de hændelser, der er sket på en bestemt enhed. Først skal du vælge den enhed, der har interesse, [på listen Enheder](machines-view-overview.md). På enhedssiden kan du vælge fanen Tidslinje for **at** få vist alle de hændelser, der er opstået på enheden.
 
@@ -35,13 +35,13 @@ Du kan få mere indsigt i en undersøgelse ved at analysere de hændelser, der e
 > [!IMPORTANT]
 > Nogle oplysninger relaterer til en allerede udgivet produktfunktion i offentlig prøveversion, som kan være væsentligt ændret, før den frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
 
-I Microsoft Defender til slutpunkt er **Teknikker en** ekstra datatype på begivenhedstidslinjen. Teknikker giver mere indsigt i aktiviteter, der er knyttet [til MITRE ATT&CK-teknikker](https://attack.mitre.org/) eller underteknikker.
+I Microsoft Defender for Endpoint er **Techniques** en yderligere datatype i begivenhedstidslinjen. Teknikker giver mere indsigt i aktiviteter, der er knyttet [til MITRE ATT&CK-teknikker](https://attack.mitre.org/) eller underteknikker.
 
 Denne funktion forenkler undersøgelsesoplevelsen ved at hjælpe analytikere med at forstå de aktiviteter, der er blevet observeret på en enhed. Analytikere kan derefter beslutte at undersøge yderligere.
 
 For offentlig forhåndsvisning er Teknikker tilgængelige som standard og vises sammen med begivenheder, når en enheds tidslinje vises.
 
-![Skærmbillede af teknikker på enhedens tidslinje.](images/device-timeline-2.png)
+:::image type="content" source="images/device-timeline-2.png" alt-text="Teknikkerne på enhedens tidslinje" lightbox="images/device-timeline-2.png":::
 
 Teknikker fremhæves med fed tekst og vises med et blåt ikon til venstre. Den tilsvarende MITRE ATT&CK-id og det tilhørende tekniknavn vises også som mærker under Yderligere oplysninger.
 
@@ -55,17 +55,17 @@ Vælg den specifikke *Angrebsteknik for* at åbne den relaterede ATT&CK-tekniksi
 
 Du kan kopiere oplysninger om en enhed, når du ser et blåt ikon til højre. Hvis du f.eks. vil kopiere en relateret fils SHA1, skal du vælge det blå sideikon.
 
-![Kopiér enhedsdetaljer.](images/techniques-side-pane-clickable.png)
+:::image type="content" source="images/techniques-side-pane-clickable.png" alt-text="Oplysninger om at kopiere enhed" lightbox="images/techniques-side-pane-clickable.png":::
 
 Du kan gøre det samme for kommandolinjer.
 
-![Kopiér kommandolinje.](images/techniques-side-pane-command.png)
+:::image type="content" source="images/techniques-side-pane-command.png" alt-text="Muligheden for at kopiere kommandolinjen" lightbox="images/techniques-side-pane-command.png":::
 
 ## <a name="investigate-related-events"></a>Undersøg relaterede hændelser
 
 Hvis du vil [bruge avanceret jagt](advanced-hunting-overview.md) til at finde begivenheder, der er relateret til den valgte teknik, **skal du vælge Søg efter relaterede begivenheder**. Dette fører til den avancerede jagtside med en forespørgsel for at finde begivenheder, der er relateret til Teknik.
 
-![Lede efter relaterede begivenheder.](images/techniques-hunt-for-related-events.png)
+:::image type="content" source="images/techniques-hunt-for-related-events.png" alt-text="Indstillingen Lede efter relaterede begivenheder" lightbox="images/techniques-hunt-for-related-events.png":::
 
 > [!NOTE]
 > Forespørgsel ved hjælp af **knappen** Søg efter relaterede hændelser fra sideruden Teknik viser alle de hændelser, der er relateret til den identificerede metode, men inkluderer ikke selve teknik i forespørgselsresultaterne.
@@ -80,7 +80,8 @@ Du kan tilpasse, hvilke kolonner der skal vises. Du kan også filtrere efter mar
 
 Du kan vælge, hvilke kolonner der skal vises på tidslinjen, ved at **vælge knappen Vælg** kolonner.
 
-![Tilpas kolonner.](images/filter-customize-columns.png)
+:::image type="content" source="images/filter-customize-columns.png" alt-text="Den rude, hvor du kan tilpasse kolonner" lightbox="images/filter-customize-columns.png":::
+
 
 Derfra kan du vælge, hvilke oplysninger der skal medtages.
 
@@ -88,9 +89,9 @@ Derfra kan du vælge, hvilke oplysninger der skal medtages.
 
 Hvis du kun vil have vist enten begivenheder eller teknikker, skal **du vælge Filtre** fra enhedens tidslinje og vælge den foretrukne Datatype, du vil have vist.
 
-![Skærmbillede af filtre.](images/device-timeline-filters.png)
+:::image type="content" source="images/device-timeline-filters.png" alt-text="Ruden Filtre" lightbox="images/device-timeline-filters.png":::
 
 ## <a name="see-also"></a>Se også
 
 - [Få vist og organiser listen Enheder](machines-view-overview.md)
-- [Flag for tidslinjehændelse for Microsoft Defender til slutpunktsenhed](device-timeline-event-flag.md)
+- [Microsoft Defender for Endpoint med flag til tidslinje på enheden](device-timeline-event-flag.md)

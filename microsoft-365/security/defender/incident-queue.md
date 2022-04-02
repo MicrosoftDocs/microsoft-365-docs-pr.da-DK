@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 38bfde92a2988cd8bdbca770402af96a4b9c5134
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 40178e42737bdfea756db55658aaeb988ad4f19f
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593450"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498731"
 ---
 # <a name="prioritize-incidents-in-microsoft-365-defender"></a>Prioriter hændelser i Microsoft 365 Defender
 
@@ -43,7 +43,7 @@ Microsoft 365 Defender anvender korrelationsanalyser og aggregerer relaterede be
 
 Du kommer til hændelseskøen **fra Hændelser & hændelser > hændelser** i hurtig start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Eksempel på hændelseskøen." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Afsnittet Hændelse, der viser hændelseskøen i Microsoft 365 Defender-portalen." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
 Afsnittet **Seneste hændelser og beskeder** viser en graf over antallet af modtagne beskeder og hændelser, der er oprettet inden for de seneste 24 timer.
 
@@ -66,7 +66,7 @@ Listen **Filtre** over listen over hændelser viser de aktuelt anvendte filtre.
 
 Fra standardhændelseskøen kan du vælge **Filtrer** for at få vist en **Filter-rude** , hvorfra du angiver et filtreret sæt hændelser. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Eksempel på ruden filtre for hændelseskøen." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Ruden Filtre for hændelseskøen i Microsoft 365 Defender portalen." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
 
 Du kan også se ruden **Filter** ved at vælge et af filtrene på **listen** Filtre over listen over hændelser.
 
@@ -78,7 +78,7 @@ Denne tabel viser de filternavne, der er tilgængelige.
 | Alvorsgrad | Alvoren af en hændelse er omfanget af den indvirkning, det kan have på dine aktiver. Jo højere alvorsgrad, desto større virkning og kræver typisk den mest øjeblikkelige opmærksomhed. Vælg **Høj**, **Mellem**, **Lav** eller **Informations.** |
 | Hændelsestildeling | Vælg den eller de tildelte brugere. |
 | Flere tjenestekilder  | Angiv, om filteret er for mere end én tjenestekilde. |
-| Tjenestekilder  | Angiv hændelser, der indeholder beskeder fra: Appstyring, Microsoft 365 Defender, Microsoft Defender til Office 365, Microsoft Defender til Slutpunkt, Microsoft Defender for Identity, Microsoft Defender til skyapps. |
+| Tjenestekilder  | Angiv hændelser, der indeholder beskeder fra: Styring af apps, Microsoft 365 Defender, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps. |
 | Mærker | Markér et eller flere kodenavne på listen. |
 | Flere kategorier  | Angiv, om filteret er til mere end én kategori. |
 | Kategorier | Vælg kategorier for at fokusere på bestemte taktikker, teknikker eller angrebskomponenter, der kan ses. |
@@ -105,7 +105,7 @@ Når du har konfigureret et nyttigt filter i køen til hændelser, kan du oprett
 - Ikke-tildelte hændelser
 - Hændelser med høj alvorlighed og ikke-tildelte hændelser
 - Hændelser, der er tildelt mig
-- Hændelser, der er tildelt mig og Microsoft Defender til Slutpunkt
+- Hændelser, der er tildelt mig og for Microsoft Defender for Endpoint
 - Hændelser med et bestemt mærke eller mærker
 - Hændelser med en bestemt trusselskategori
 - Hændelser med en bestemt relateret trussel

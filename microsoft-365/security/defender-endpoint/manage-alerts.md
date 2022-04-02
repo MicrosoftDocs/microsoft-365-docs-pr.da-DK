@@ -1,5 +1,5 @@
 ---
-title: Administrer Microsoft Defender for Endpoint-beskeder
+title: Administrer Microsoft Defender for Endpoint vigtige beskeder
 description: Rediger status for beskeder, opret skjulningsregler for at skjule beskeder, sende kommentarer og gennemse ændringsoversigten for individuelle beskeder med menuen Administrer besked.
 keywords: administrere beskeder, administrere, beskeder, status, ny, i gang, løst, løse beskeder, undertrykke, supression, regler, kontekst, historik, kommentarer, ændringer
 ms.prod: m365-security
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5e0cde3a8a852fab426c1e0bf0290f9785aa0b40
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 83e7bd2cc46469cb6a5a6bc8c29a8d21dba20b7f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63591782"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466185"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-alerts"></a>Administrer Microsoft Defender for Endpoint-beskeder
+# <a name="manage-microsoft-defender-for-endpoint-alerts"></a>Administrer Microsoft Defender for Endpoint vigtige beskeder
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -39,7 +39,7 @@ Du kan administrere beskeder ved at vælge en besked i køen Vigtige beskeder el
 
 Hvis du vælger en besked et af disse steder, vises **administrationsruden Vigtige beskeder**.
 
-![Billede af ruden til administration af beskeder og køen med beskeder.](images/atp-alerts-selected.png)
+:::image type="content" source="images/atp-alerts-selected.png" alt-text="Administrationsruden Beskeder og køen Vigtige beskeder" lightbox="images/atp-alerts-selected.png":::
 
 ## <a name="link-to-another-incident"></a>Opret et link til en anden hændelse
 
@@ -131,10 +131,10 @@ Tilføjede kommentarer vises med det samme i ruden.
 ## <a name="related-topics"></a>Relaterede emner
 
 - [Administrer skjuleregler](manage-suppression-rules.md)
-- [Få vist og organiser køen for Microsoft Defender for Endpoint Alerts](alerts-queue.md)
-- [Undersøg Microsoft Defender for at få slutpunktsbeskeder](investigate-alerts.md)
-- [Undersøg en fil, der er knyttet til en besked om Microsoft Defender for Endpoint](investigate-files.md)
-- [Undersøg enhederne på listen Microsoft Defender for Slutpunktsenheder](investigate-machines.md)
-- [Undersøg en IP-adresse, der er knyttet til en besked om Microsoft Defender for Endpoint](investigate-ip.md)
-- [Undersøg et domæne, der er knyttet til en besked om Microsoft Defender for Endpoint](investigate-domain.md)
-- [Undersøg en brugerkonto i Microsoft Defender til slutpunkt](investigate-user.md)
+- [Få vist og organiser Microsoft Defender for Endpoint i køen vigtige beskeder](alerts-queue.md)
+- [Undersøg Microsoft Defender for Endpoint vigtige beskeder](investigate-alerts.md)
+- [Undersøg en fil, der er knyttet Microsoft Defender for Endpoint besked](investigate-files.md)
+- [Undersøg enhederne Microsoft Defender for Endpoint listen Over enheder](investigate-machines.md)
+- [Undersøg en IP-adresse, der er knyttet Microsoft Defender for Endpoint besked](investigate-ip.md)
+- [Undersøg et domæne, der er knyttet Microsoft Defender for Endpoint besked](investigate-domain.md)
+- [Undersøg en brugerkonto i Microsoft Defender for Endpoint](investigate-user.md)

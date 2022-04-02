@@ -1,6 +1,6 @@
 ---
-title: Stream Microsoft Defender til slutpunktshændelser til din Storage-konto
-description: Få mere at vide om, hvordan du konfigurerer Microsoft Defender til slutpunkt for at streame Avancerede rævebegivenheder til din Storage konto.
+title: Stream Microsoft Defender for Endpoint begivenheder til din Storage-konto
+description: Få mere at vide om, hvordan Microsoft Defender for Endpoint til at streame Avancerede rævebegivenheder til din Storage konto.
 keywords: rå dataeksport, streaming-API, API, Hændelseshubs, Azure-lager, lagerkonto, Avanceret jagt, rå datadeling
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: a9db98456cc971b4ac4179cd4f3460dfe2137b91
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 77220c8e34cfcbcdb6b1ca527786696bb67e5d79
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63597549"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465773"
 ---
-# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft Defender til slutpunkt for at streame Advanced Hunting-begivenheder til din Storage-konto
+# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft Defender for Endpoint at streame avancerede rævebegivenheder til din Storage konto
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
@@ -50,9 +50,9 @@ ms.locfileid: "63597549"
 
 5. Vælg **Videressendelse af begivenheder for Azure Storage**.
 
-6. Skriv dit **Storage-kontoressource-id**. For at få dit **Storage-kontoressource-id** skal du gå til din Storage-kontoside på fanen Egenskaber for [Azure-portal](https://ms.portal.azure.com/) \> \> kopiere teksten under **Storage for kontoressource-id**:
+6. Skriv dit **Storage-kontoressource-id**. For at få dit **Storage-kontoressource-id** skal du gå til din Storage-kontoside [på fanen Azure Portal-egenskaber](https://ms.portal.azure.com/) \> \> kopiere teksten under **Storage kontoressource-id**:
 
-   :::image type="content" alt-text="Billede af id for hændelseshubressourcen ID1." source="images/storage-account-resource-id.png" lightbox="images/storage-account-resource-id.png":::
+   :::image type="content" source="images/storage-account-resource-id.png" alt-text="Hændelseshubs med ressource-id1" lightbox="images/storage-account-resource-id.png":::
 
 7. Vælg de hændelser, du vil streame, og klik på **Gem**.
 
@@ -60,7 +60,7 @@ ms.locfileid: "63597549"
 
 - Der oprettes en blobbeholder for hver hændelsestype:
 
-  :::image type="content" alt-text="Billede af id for hændelseshubressource-id2." source="images/storage-account-event-schema.png" lightbox="images/storage-account-event-schema.png":::
+  :::image type="content" source="images/storage-account-event-schema.png" alt-text="Hændelseshubs med ressource-id2" lightbox="images/storage-account-event-schema.png":::
 
 - Skemaet for hver række i en blob er følgende JSON:
 
@@ -77,7 +77,7 @@ ms.locfileid: "63597549"
 
 - Hver række indeholder navnet på begivenheden, tidspunktet, hvor Defender for Endpoint modtog begivenheden, den lejer, den tilhører (du får kun begivenheder fra din lejer), og begivenheden i JSON-format i en egenskab kaldet "egenskaber".
 
-- Du kan finde flere oplysninger om skemaet for Microsoft Defender til slutpunktshændelser i [Oversigt over Avanceret jagt](advanced-hunting-overview.md).
+- Du kan finde flere oplysninger om skemaet for Microsoft Defender for Endpoint i Oversigt [over Avanceret ræving](advanced-hunting-overview.md).
 
 - I Avanceret jagt har **tabellen DeviceInfo** en kolonne med **navnet MachineGroup** , som indeholder gruppen af enheden. Her vil alle begivenheder også være pyntet med denne kolonne. Se [Enhedsgrupper for](machine-groups.md) at få flere oplysninger.
 
@@ -97,11 +97,11 @@ For at få datatyperne for vores hændelsesegenskaber skal du gøre følgende:
 
 - Her er et eksempel på hændelsen Enhedsoplysninger:
 
-  ![Billede af id for begivenhedshubressource-id3.](images/data-types-mapping-query.png)
+  :::image type="content" source="images/data-types-mapping-query.png" alt-text="Hændelseshubs med ressource-id3" lightbox="images/data-types-mapping-query.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 
 - [Oversigt over Avanceret jagt](advanced-hunting-overview.md)
-- [Microsoft Defender til Endpoint Streaming API](raw-data-export.md)
-- [Stream Microsoft Defender til slutpunktshændelser til din Azure-lagerkonto](raw-data-export-storage.md)
+- [Microsoft Defender for Endpoint Streaming API](raw-data-export.md)
+- [Stream Microsoft Defender for Endpoint begivenheder til din Azure Storage-konto](raw-data-export-storage.md)
 - [Azure Storage firmadokumentation](/azure/storage/common/storage-account-overview)

@@ -18,12 +18,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du konfigurerer domænebaseret meddelelsesgodkendelse, -rapportering og -overholdelse (DMARC) til at validere meddelelser, der sendes fra din organisation.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7b166a481bf503ce2d46e79f2cb674861935f4ff
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+ms.openlocfilehash: cae3f007cc046bfc2afd6bb7322c65fe047816d5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63589555"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465877"
 ---
 # <a name="use-dmarc-to-validate-email"></a>Brug DMARC til at validere mail
 
@@ -31,7 +31,7 @@ ms.locfileid: "63589555"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Domain-based Message Authentication, Reporting, and Conformance ([DMARC](https://dmarc.org)) works with Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) to authenticate mail senders and ensure that destination email systems trust messages sent from your domain. Implementering af DMARC med SPF og DKIM giver yderligere beskyttelse mod spoofing- og phishing-mail. DMARC hjælper modtagende mailsystemer med at afgøre, hvad der skal sker med meddelelser, der sendes fra dit domæne, og som ikke kontrollerer SPF eller DKIM.
@@ -258,7 +258,7 @@ contoso.com     3600   IN  MX  10 contoso-com.mail.protection.outlook.com
 
 Alle, eller de fleste, mails dirigeres først til mail.contoso.com, da det er den primære MX, og derefter sendes mail til EOP. I nogle tilfælde vil du muligvis slet ikke en gang vise EOP som en MX-post og blot tilslutte forbindelser for at dirigere dine mails. EOP behøver ikke at være den første post, for at DMARC-validering kan udføres. Det sikrer blot valideringen for at sikre, at alle lokale/ikke-O365-servere kontrollerer DMARC.  DMARC kan håndhæves på en kundes domæne (ikke en server), når du konfigurerer DMARC TXT-posten, men det er op til den modtagende server rent faktisk at gennemtvinge gennemtvingelsen.  Hvis du konfigurerer EOP som den modtagende server, så håndhæver EOP DMARC-håndhævelsen.
 
-:::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="Fejlfindingsgrafik til DMARC fra Daniel Mande" lightbox="../../media/Tp_DMARCTroublehoot.png":::
+:::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="Fejlfindingsgrafik til DMARC" lightbox="../../media/Tp_DMARCTroublehoot.png":::
 
 ## <a name="for-more-information"></a>Du kan finde flere oplysninger
 

@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 66b810f7bb6381d405ee7ffc0d6b1cf7a10f2bf2
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c375d77c3aa64d996a8d8d2f8dce538829eaa3b2
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589157"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568308"
 ---
 # <a name="remove-blocked-users-from-the-restricted-users-portal-in-microsoft-365"></a>Fjern blokerede brugere fra portalen Begrænsede brugere i Microsoft 365
 
@@ -34,16 +34,16 @@ ms.locfileid: "63589157"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Hvis en bruger overskrider en af begrænsningerne for udgående afsendelse som angivet i tjenestegrænserne eller politikkerne for udgående [spam](configure-the-outbound-spam-policy.md), er brugeren begrænset i at kunne sende mail, men brugeren kan stadig modtage mail.[](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options)
 
-Brugeren føjes til siden **Begrænsede brugere** i Microsoft 365 Defender portal. Når de forsøger at sende mail, returneres meddelelsen i en rapport om manglende levering (også kaldet en NDR eller meddelelser om ikke-leveret post) med fejlkoden [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) og følgende tekst:
+Brugeren føjes til siden **Begrænsede brugere** i Microsoft 365 Defender portal. Når de forsøger at sende mail, returneres meddelelsen i en rapport om manglende levering (også kaldet en NDR eller meddelelse om ikke-leveret post) med fejlkoden [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) og følgende tekst:
 
 > "Meddelelsen kunne ikke leveres, fordi du ikke blev genkendt som en gyldig afsender. Den mest almindelige årsag til dette er, at der er mistanke om, at din mailadresse sender spam, og at den ikke længere har tilladelse til at sende mails.  Kontakt mailadministratoren for at få hjælp. Fjernserver returnerede '550 5.1.8 Access denied, bad udgående afsender."
 
-Administratorer kan fjerne brugere fra siden Begrænsede brugere i Microsoft 365 Defender eller i Exchange Online PowerShell.
+Administratorer kan fjerne brugere fra **siden Begrænsede brugere** i Microsoft 365 Defender eller i Exchange Online PowerShell.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -93,9 +93,9 @@ Standardpolitikken for påmindelse, der hedder **Bruger, der ikke kan sende** ma
 > [!IMPORTANT]
 > For at beskeder kan fungere, skal søgning i overvågningsloggen være aktiveret. Du kan finde flere oplysninger [i Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
 
-1. I portalen Microsoft 365 Defender skal du gå til **& politikker for** \> **samarbejde &** **reglerBeskedpolitik**\>.
+1. I portalen Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til Politik for **& mailsamarbejde** \> **& politikker for besked** \> **om regler**. Hvis du vil gå direkte til siden **med politik for beskeder** , skal du bruge <https://security.microsoft.com/alertpolicies>.
 
-2. På siden **Beskedpolitik skal** du finde og vælge beskeden Bruger begrænset fra **at sende mail**. Du kan sortere politikkerne efter navn eller bruge **feltet Søg til** at finde politikken.
+2. På siden **Beskedpolitik skal** du finde og vælge beskeden Bruger begrænset fra **at sende mail**. Du kan sortere politikkerne efter navn eller bruge **feltet Søg** til at finde politikken.
 
 3. I pop **op-menuen Bruger begrænset i at sende** mails, der vises, skal du bekræfte eller konfigurere følgende indstillinger:
    - **Status**: Bekræft, at beskeden er slået ![til.](../../media/scc-toggle-on.png).

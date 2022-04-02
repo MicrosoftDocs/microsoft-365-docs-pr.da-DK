@@ -1,7 +1,7 @@
 ---
 title: Implementering af ASR-regler (Operationalize Attack Surface Reduction)
 description: Giver vejledning i at drifte dine regler for reduktion af angrebsoverfladen.
-keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indtrængen, Microsoft Defender til slutpunkt, konfigurer ASR-regler
+keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indisk virus, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,14 +16,16 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 3229cd0a98714819009e7d50baab0872f3a67c43
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 9a3e8ab38c807b8cf3ea54bb5a18a5405d0b3c49
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63598595"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465349"
 ---
 # <a name="step-4-operationalize-asr-rules"></a>Trin 4: At drifte ASR-regler
 
@@ -31,7 +33,7 @@ Når du har implementeret fuldt implementeret reduktion af angrebsoverfladen (AS
 
 ## <a name="managing-false-positives"></a>Administration af falske positive
 
-Falske positive/negativer kan forekomme med enhver trusselsbeskyttelsesløsning. Falske positive er tilfælde, hvor en enhed (f.eks. en fil eller proces) registreres og identificeres som skadelig, selvom enheden faktisk ikke er en trussel. I modsætning hertil er en falsk negativ en enhed, der ikke blev registreret som en trussel, men er skadelig. Du kan finde flere oplysninger om falske positive og falske negativer i: [Adresserer falske positive/negativer i Microsoft Defender til slutpunkt](defender-endpoint-false-positives-negatives.md)
+Falske positive/negativer kan forekomme med enhver trusselsbeskyttelsesløsning. Falske positive er tilfælde, hvor en enhed (f.eks. en fil eller proces) registreres og identificeres som skadelig, selvom enheden faktisk ikke er en trussel. I modsætning hertil er en falsk negativ en enhed, der ikke blev registreret som en trussel, men er skadelig. Du kan finde flere oplysninger om falske positive og falske negativer i: [Adresserer falske positive/negativer i Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 ## <a name="keeping-up-with-reports"></a>Holde styr på rapporter
 
@@ -42,7 +44,7 @@ Konsekvent, regelmæssig gennemgang af rapporter er et vigtigt aspekt i forbinde
 En af de mest effektive funktioner [i Microsoft 365 Defender er](https://security.microsoft.com) avanceret på jagt. Hvis du ikke kender til avanceret jagt, kan du se: [Proaktivt på jagt efter trusler med avanceret jagt](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview).
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender Avanceret på jagt](images/asr-defender365-advanced-hunting2.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting2.png" alt-text="Siden Avanceret jagt i Microsoft 365 Defender portal" lightbox="images/asr-defender365-advanced-hunting2.png":::
 
 Avanceret jagt er et forespørgselsbaseret (Kusto-forespørgselssprog) værktøj til trusselssøgning, som giver dig mulighed for at udforske op til 30 dage af de registrerede (rå) data, som Microsoft Defender ATP-slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) indsamler fra alle dine computere. Ved hjælp af avanceret jagt kan du proaktivt undersøge begivenheder for at finde interessante indikatorer og enheder. Fleksibel adgang til data letter uoverensholdet jagt på både kendte og potentielle trusler.
 
@@ -53,10 +55,10 @@ Ved hjælp af avanceret jagt er det muligt at udtrække oplysninger om ASR-regle
 ASR-hændelser vist i den fremadstormende jagtportal bliver begrænser til unikke processer, der kan ses hver time. Tidspunktet for asr-begivenheden er første gang, begivenheden ses inden for den pågældende time.
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender Avanceret forespørgsel på forespørgsel](images/asr-defender365-advanced-hunting3.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting3.png" alt-text="Kommandolinjen Avanceret forespørgsel på Microsoft 365 Defender-portalen" lightbox="images/asr-defender365-advanced-hunting3.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender avancerede forespørgselsresultater](images/asr-defender365-advanced-hunting4.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4.png" alt-text="Avanceret forespørgsel resulterer i Microsoft 365 Defender portal" lightbox="images/asr-defender365-advanced-hunting4.png":::
 
 Ovenstående viser, at der blev registreret 187 hændelser for AsrLsassCredentialTheft:
 
@@ -68,10 +70,10 @@ Ovenstående viser, at der blev registreret 187 hændelser for AsrLsassCredentia
 Hvis du vil fokusere på reglen AsrOffice Direkteprocess og få mere at vide om de faktiske filer og processer, skal du ændre filteret for ActionType og erstatte opsummeringslinjen med en projektion af de ønskede felter (i dette tilfælde er det DeviceName, FileName, FolderPath osv.).
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender Avanceret forespørgsel fokuseret](images/asr-defender365-advanced-hunting4b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4b.png" alt-text="Eksempel med fokuseret forespørgsel om avanceret forespørgsel i Microsoft 365 Defender portal" lightbox="images/asr-defender365-advanced-hunting4b.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender Avancerede forespørgsel fokuserede resultater](images/asr-defender365-advanced-hunting5b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting5b.png" alt-text="Avanceret forespørgselsforespørgsel fokuserede resultater i Microsoft 365 Defender portal" lightbox="images/asr-defender365-advanced-hunting5b.png":::
 
 Den store fordel ved avanceret jagt er, at du kan forme forespørgslerne efter din smag. Ved at forme din forespørgsel kan du se den nøjagtige historie om, hvad der skete, uanset om du vil finde noget på en enkelt maskine, eller du vil udtrække viden fra hele miljøet.
 

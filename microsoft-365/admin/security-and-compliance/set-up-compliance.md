@@ -2,8 +2,8 @@
 title: Forøg trusselsbeskyttelse til Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: skjerland
+ms.author: deniseb
+author: denisebmsft
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -23,76 +23,71 @@ search.appverid:
 - BCS160
 - MET150
 description: Konfigurer overholdelsesfunktioner for at forhindre datatab og hjælpe med at beskytte dine og dine kunders følsomme oplysninger.
-ms.openlocfilehash: 69960c4f158a30d9d47d749ed1e7eb2d2d74f430
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: baac8bc1ad9a425ad7219a1e76949286858f60e0
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63600951"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403704"
 ---
 # <a name="set-up-compliance-features"></a>Konfigurer overholdelsesfunktioner
 
-Dine Microsoft 365 Business Premium leveres med funktioner til beskyttelse af dine data og enheder og hjælper dig med at beskytte dine og dine kunders følsomme oplysninger.
+Dit Microsoft 365 Business Premium omfatter funktioner til overholdelse af regler og standarder og beskyttelse af personlige oplysninger. Disse funktioner er med til at beskytte din virksomheds data og for at hjælpe dig med at beskytte dine og dine kunders følsomme oplysninger. Denne artikel er beregnet til at hjælpe dig med at komme i gang med dine overholdelsesfunktioner.
 
-## <a name="watch-set-up-dlp-features"></a>Se: Konfigurer DLP-funktioner
+## <a name="before-you-begin"></a>Før du begynder
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3TGvL?autoplay=false]
+Sørg for, at du har en af følgende roller tildelt Azure Active Directory:
 
-Politikker til forebyggelse af datatab hjælper med at identificere og beskytte virksomhedens følsomme oplysninger, f.eks. CPR-numre eller medicinske journaler.
+- Global Administrator
+- Overholdelsesadministrator
 
-1. For at komme i gang skal [du gå til Administration](https://admin.microsoft.com) og vælge **Konfiguration**.
-1. Rul ned **til Konfigurer forebyggelse af datatab**, og vælg **derefter** Vis og derefter **Administrer**.
-1. Hvis du vil redigere en politik, skal du markere den, **vælge Rediger politik** og derefter vælge, hvad du vil ændre. Vælg f.eks Placeringer **for at ændre** , hvad der bliver scannet.
-1. Hvis du vil oprette en ny politik, skal du **vælge Opret en politik**.
-1. Du kan oprette en brugerdefineret politik eller starte med en skabelon. Hvis du f.eks. vil oprette en HIPAA-politik, skal du vælge skabelonen for medicin og sundhed og derefter vælge **US Health Insurance Act (HIPAA)**. Vælg **Næste**.
-1. Gennemse dine indstillinger, og vælg **Opret**. Når din politik træder i kraft, blokeres mails, der indeholder de beskrevne følsomme oplysninger, og den afsender, der forsøgte at sende disse oplysninger, får vist en advarsel.
+Du kan få mere at vide [under Introduktion til siden roller](../add-users/admin-roles-page.md).
 
-Se [Opret en DLP-politik ud](../../compliance/create-a-dlp-policy-from-a-template.md) fra en skabelon for et eksempel på, hvordan du konfigurerer en politik for at beskytte mod tab af personlige data. 
-  
-DLP leveres med mange klar-til-brug-politikskabeloner til mange forskellige lande/områder. Det kan f.eks. være Australien Financial Data, Canada Personal Information Act, USA Financial Data osv. Se [Hvad DLP-politikskabelonerne indeholder](../../compliance/what-the-dlp-policy-templates-include.md) for at få en komplet liste. Alle disse skabeloner kan aktiveres på samme måde som eksemplet på pii-skabelonen.
- 
-## <a name="set-up-email-retention-with-exchange-online-archiving"></a>Konfigurer mailopbevaring med Exchange Online-arkivering
+## <a name="use-compliance-manager-to-get-started"></a>Brug Overholdelsesstyring til at komme i gang
 
- **Exchange Online-arkivering licensfunktioner** er med til at opretholde overholdelse og lovmæssige standarder ved at bevare mailindhold til eDiscovery. Det er også med til at reducere risikoen, hvis der er en advokatsag, og giver en metode til at gendanne data efter en sikkerhedsbrist, eller når du har brug for at gendanne slettede elementer. Du kan bruge retslig tilbageholdelse for at bevare hele en brugers indhold, eller du kan bruge opbevaringspolitikker til at tilpasse det, du vil bevare.
-  
-**Retslig venteposition:** Du kan bevare alt postkasseindhold, herunder slettede elementer, ved at sætte en brugers hele postkassen i venteposition. 
-    
-Sådan placerer du en postkasse i retslig venteposition i Administration:
-    
-1. I venstre navigationslinje skal du gå **til Aktive** \> **brugere for brugere**.
-    
-2. Vælg en bruger, hvis postkasse du vil placere i retslig venteposition. I brugerruden skal du udvide **Mailindstillinger**, og ud for **Flere indstillinger** skal du **vælge Rediger Exchange egenskaber**.
-    
-3. På brugerens postkasseside skal du vælge ** postkassefunktioner ** i venstre navigationslinje og derefter vælge linket Aktivér  under Retslig **venteposition**.
-    
-4. I dialogboksen **retslig venteposition** kan du angive varigheden af retslig venteposition i **feltet Varighed af retslig venteposition** . Lad feltet være tomt, hvis du vil placere et uendeligt sæt. Du kan også tilføje noter og dirigere ejeren af postkassen til et websted, som du muligvis skal forklare mere om retslig venteposition. \>**Gem**.
-    
-**Opbevaring:** Du kan aktivere brugerdefinerede opbevaringspolitikker, f.eks. for at bevare i et bestemt tidsrum eller slette indhold permanent i slutningen af en opbevaringsperiode. Du kan få mere at vide [under Oversigt over opbevaringspolitikker](../../compliance/retention.md).
+:::image type="content" source="../../business-premium/media/m365bp-compliancemanager.png" alt-text="Skærmbillede af Overholdelsesstyring i Microsoft 365 Business Premium.":::
 
-## <a name="watch-set-up-sensitivity-labels"></a>Se: Konfigurer følsomhedsmærkater
+Microsoft 365 Business Premium inkluderer Overholdelsesstyring, som kan hjælpe dig i gang med at konfigurere dine overholdelsesfunktioner. Disse funktioner omfatter forebyggelse af datatab, informationsstyring og insider-risikostyring for blot at nævne nogle få. Overholdelsesstyring kan spare dig tid ved at fremhæve anbefalinger, et overholdelsesresultat og metoder til at forbedre dit resultat.
 
-Følsomhedsmærkater omfatter Azure Information Protection (AIP) Plan 1 og hjælper dig med at klassificere og eventuelt beskytte dine dokumenter og mails ved at anvende mærkater. Etiketter kan anvendes automatisk af administratorer, der definerer regler og betingelser, manuelt af brugerne eller ved hjælp af en kombination, hvor brugerne får anbefalinger.
+Sådan kommer du i gang:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3VRGT?autoplay=false]
+1. Gå til [https://compliance.microsoft.com](https://compliance.microsoft.com) , og log på.
 
-1. Vælg [Overholdelsesadministration](https://admin.microsoft.com) i Administration.
-1. Vælg **Klassificering** og derefter **Følsomhedsmærkater**.
-1. Vælg **Opret en etiket**, og når advarslen vises, skal du vælge **Ja**.
-1. Gennemse dine indstillinger, og vælg **Opret**. Din etiket er blevet oprettet. Gentag denne proces for eventuelle yderligere etiketter, du ønsker.
-1. Som standard vises etiketter i Office i følgende rækkefølge: **Fortrolig****, Intern** og **Offentlig**. Hvis du vil ændre rækkefølgen, skal du for hver etiket vælge de tre prik (flere handlinger) og derefter flytte navnet op eller ned. Tilladelser vises typisk fra det laveste til det højeste tilladelsesniveau.
-1. Gennemse dine indstillinger, og vælg derefter **Publicer**.
+2. Vælg Styring af overholdelse i **navigationsruden**.
 
-For at dine etiketter skal fungere, skal hver enkelt bruger downloade Den samlede Azure Information Protection-etiketklient. Søg efter filer **påAzinfoProtection_UL.exe**, hent den derefter fra Microsoft Download Center, og kør den på dine brugeres computere.
+3. Gennemgå **oplysningerne** under fanen Oversigt. Vælg et element eller et link for at få vist flere oplysninger eller for at udføre handlinger, f.eks. konfigurere en politik til forebyggelse af datatab (DLP). Eksempelvis kan du i **sektionen Løsninger, der påvirker din score** vælge linket i **kolonnen Resterende** handlinger.
 
-Næste gang du åbner en Office-app f.eks. Word, kan du se de følsomhedsmærkater, der er blevet oprettet. Hvis du vil ændre eller anvende en etiket, skal du vælge Følsomhed og vælge en mærkat.
+   :::image type="content" source="../../business-premium/media/m365bp-compliancesolutions.png" alt-text="Skærmbillede af løsninger, der påvirker ruden Score.":::
 
-### <a name="install-the-azure-information-protection-client-manually"></a>Installer Azure Information Protection-klienten manuelt
+   Denne handling fører dig til fanen **Forbedringshandlinger** , der filtreres for det element, du har valgt. I dette eksempel kigger vi på DLP-politikker til konfiguration.
 
-Sådan installeres AIP-klienten manuelt:
+   :::image type="content" source="../../business-premium/media/m365bp-dlppoliciestoconfigure.png" alt-text="Skærmbillede af DLP-politikker til konfiguration.":::
 
-1. Download **AzinfoProtection_UL.exe** Microsoft [Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
- 
-2. Du kan kontrollere, at installationen virkede ved at få vist et Word-dokument og sørge for, **at indstillingen Følsomhed** er tilgængelig på **fanen** Hjem.
-<br/>![Rullelisten Beskyttelse i et Word-dokument.](../../media/word-sensitivity.png)
+4. Vælg et **element på** fanen Forbedringshandlinger. I vores eksempel har vi valgt Opret tilpassede **DLP-politikker eller personlige oplysninger**. En side indlæses, som indeholder flere oplysninger om den politik, der skal konfigureres.
 
-Du kan finde flere oplysninger [under Installere klienten](/azure/information-protection/infoprotect-tutorial-step3).
+   :::image type="content" source="../../business-premium/media/m365bp-dlppolicyinfo.png" alt-text="Skærmbillede af oplysninger om DLP-politik for kundeindhold.":::
+
+   Følg oplysningerne på skærmen for at konfigurere din DLP-politik.
+
+Du kan finde flere oplysninger om overholdelsesfunktioner Microsoft 365 til virksomheder i dokumentationen [Microsoft 365 overholdelse af regler og standarder](../../compliance/index.yml).
+
+## <a name="use-sensitivity-labels"></a>Brug følsomhedsmærkater
+
+Følsomhedsmærkater er tilgængelige Office apps (f.eks. Outlook, Word, Excel og PowerPoint). Eksempler på etiketter omfatter:
+
+- Normal
+- Personal
+- Privat
+- Fortroligt
+
+Du kan dog også definere andre etiketter for virksomheden.
+
+Brug følgende artikler til at komme i gang med følsomhedsmærkater:
+
+1. [Hvad er følsomhedsmærkater?](../../compliance/sensitivity-labels.md)
+
+2. [Kom i gang med at oprette dine følsomhedsmærkater](../../compliance/get-started-with-sensitivity-labels.md)
+
+3. [Publicere følsomhedsmærkater og deres politikker](../../compliance/create-sensitivity-labels.md)
+
+4. [Vis personer i din virksomhed, hvordan man bruger følsomhedsmærkater](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)

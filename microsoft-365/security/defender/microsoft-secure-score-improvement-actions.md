@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: d9f1b4619670c1998dbac584bf7ef4e1d1f940b6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b969efd9d83fa34ded01f8be7db7aaf4db971128
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591222"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498630"
 ---
 # <a name="assess-your-security-posture-with-microsoft-secure-score"></a>Vurder din sikkerhedsstilling med Microsoft Secure Score
 
@@ -38,15 +38,15 @@ Microsoft Secure Score er en måling af en organisations sikkerhedshold, med et 
 For at hjælpe dig med hurtigere at finde de oplysninger, du skal bruge, er Microsoft-forbedringshandlinger organiseret i grupper:
 
 - Identitet (Azure Active Directory konti & roller)
-- Enhed (Microsoft Defender til slutpunkt, kendt som [Microsoft Secure Score for enheder](/windows/security/threat-protection/microsoft-defender-atp/tvm-microsoft-secure-score-devices))
-- Apps (mail og skyapps, herunder Office 365 og Microsoft Defender til skyapps)
+- Enhed (Microsoft Defender for Endpoint, også kaldet [Microsoft Secure Score for enheder](/windows/security/threat-protection/microsoft-defender-atp/tvm-microsoft-secure-score-devices))
+- Apps (mail og skyapps, herunder Office 365 og Microsoft Defender for Cloud Apps)
 
 >[!NOTE]
 >I den seneste version af Microsoft Secure Score blev der udgivet en forbedret pointmodel, som gjorde Microsoft Secure Score midlertidigt inkompatibel med Identity Secure Score og Graph API. [Vis detaljer](microsoft-secure-score-whats-new.md)
 
 På siden Microsoft Secure Score overview kan du se, hvordan punkter opdeles mellem disse grupper, og hvilke punkter der er tilgængelige. Du kan også få en komplet oversigt over det samlede antal point, den historiske tendens for din sikre score med sammenligninger af benchmarks og prioriteret forbedringshandlinger, der kan foretages for at forbedre din score.
 
-![Secure Score-startside.](../../media/secure-score/secure-score-home-page.png)
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Secure Score-startsiden i Microsoft 365 Defender-portalen" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="check-your-current-score"></a>Kontrollér din aktuelle score
 
@@ -62,7 +62,7 @@ Følgende er resultater, du kan tilføje til din visning af dine samlede resulta
 
 Sådan ser denne visning ud, hvis du har inkluderet alle mulige scorevisninger:
 
-![Dit sikre resultat, herunder planlagt score, aktuelle licenspoint og opnåelige resultater.](../../media/secure-score/secure-score-achievable.png)
+:::image type="content" source="../../media/secure-score/secure-score-achievable.png" alt-text="Dit sikre resultat, herunder planlagt score, aktuelle licenspoint og opnåelige resultater i Microsoft 365 Defender portal" lightbox="../../media/secure-score/secure-score-achievable.png":::
 
 ## <a name="take-action-to-improve-your-score"></a>Gør noget for at forbedre din score
 
@@ -76,7 +76,7 @@ Rangering er baseret på antallet af punkter, der er tilbage for at opnå, imple
 
 Når du vælger en bestemt forbedringshandling, vises en pop op-meddelelse på hele siden.  
 
-![Pop op-eksempel på forbedringshandling.](../../media/secure-score/secure-score-improvement-action-details.png)
+:::image type="content" source="../../media/secure-score/secure-score-improvement-action-details.png" alt-text="Pop op-handlingen til forbedring i Microsoft 365 Defender portalen" lightbox="../../media/secure-score/secure-score-improvement-action-details.png":::
 
 For at fuldføre handlingen har du nogle få muligheder:
 

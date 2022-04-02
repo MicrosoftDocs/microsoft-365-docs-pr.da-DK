@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: eb881611ad4b983eb80d028dfe3dee20c3ed6216
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: cd4423ab63019b554157de3a05da3c6c7e7d3d4c
+ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754677"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "63603111"
 ---
 # <a name="take-action-on-advanced-hunting-query-results"></a>Tag skridtet videre med avancerede resultater af en forespørgsel
 
@@ -62,10 +62,10 @@ Du kan få mere at vide om, hvordan disse svarhandlinger udføres via Microsoft 
 ## <a name="quarantine-files"></a>Karantæne af filer
 Du kan installere *karantænehandlingen* på filer, så de automatisk er i karantæne, når de stødes. Når du vælger denne handling, kan du vælge mellem følgende kolonner for at identificere, hvilke filer i forespørgslen, der skal karantæne:
 
-- `SHA1`: I de fleste avancerede jagttabeller refererer denne kolonne til SHA-1 i filen, der blev påvirket af den registrerede handling. Hvis f.eks. en fil blev kopieret, ville denne påvirkede fil være den kopierede fil.
-- `InitiatingProcessSHA1`: I de fleste avancerede jagttabeller henviser denne kolonne til den fil, der er ansvarlig for at starte den registrerede handling. Hvis f.eks. en underordnet proces blev startet, vil denne initiatorfil være en del af den overordnede proces. 
-- `SHA256`: Denne kolonne svarer til SHA-256 i den fil, der identificeres af `SHA1` kolonnen.
-- `InitiatingProcessSHA256`: Denne kolonne svarer til SHA-256 i den fil, der identificeres af `InitiatingProcessSHA1` kolonnen.
+- `SHA1` – I de fleste avancerede jagttabeller er dette SHA-1 i filen, der blev påvirket af den registrerede handling. Hvis f.eks. en fil blev kopieret, ville dette være den kopierede fil.
+- `InitiatingProcessSHA1` – I de fleste avancerede jagttabeller er dette filen, der er ansvarlig for at starte den registrerede handling. Hvis eksempelvis en underordnet proces blev startet, ville dette være den overordnede proces. 
+- `SHA256` – Dette er SHA-256-svarende til den fil, der identificeres af `SHA1` kolonnen.
+- `InitiatingProcessSHA256` – Dette er SHA-256-svarende til den fil, der identificeres af `InitiatingProcessSHA1` kolonnen.
 
 Hvis du vil have mere at vide om, hvordan der skal oprettes karantænehandlinger, og hvordan filer kan gendannes, kan du [læse om svarhandlinger for filer](/windows/security/threat-protection/microsoft-defender-atp/respond-file-alerts).
 
@@ -75,7 +75,7 @@ Hvis du vil have mere at vide om, hvordan der skal oprettes karantænehandlinger
 ## <a name="take-action"></a>Gør noget
 Hvis du vil udføre en af de beskrevne handlinger, skal du vælge en eller flere poster i forespørgselsresultaterne og derefter **vælge Udføre handlinger**. En guide vejleder dig gennem processen med at vælge og derefter indsende dine foretrukne handlinger.
 
-:::image type="content" source="../../media/take-action-multiple.png" alt-text="Indstillingen Udføre handlinger i Microsoft 365 Defender portalen" lightbox="../../media/take-action-multiple.png":::
+![Billede af valgt post med panel til undersøgelse af posten.](../../media/take-action-multiple.png)
 
 ## <a name="review-actions-taken"></a>Gennemse handlinger, der er foretaget
 Hver handling optages individuelt i [handlingscenteret](m365d-action-center.md) under **HandlingscenterHistory**  >  ([security.microsoft.com/action-center/history](https://security.microsoft.com/action-center/history)). Gå til handlingscenter for at kontrollere status for hver handling.

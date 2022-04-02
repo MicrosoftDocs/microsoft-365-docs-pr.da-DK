@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 88b1bc6c46296e3694ef53ae733955a1491b21c7
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: fdba7ee1b1cf2f46bd17c648c7cda48f1ca65490
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63597648"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755213"
 ---
 # <a name="create-an-app-to-access-microsoft-365-defender-apis-on-behalf-of-a-user"></a>Oprette en app til at få adgang Microsoft 365 Defender API'er på vegne af en bruger
 
@@ -69,11 +69,12 @@ I denne artikel forklares det, hvordan du:
 
 2. Gå til **Azure Active Directory** >  **App-registreringer** >  **Ny registrering**.
 
-   ![Billede af Microsoft Azure og navigation til programregistrering.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Indstillingen Ny registrering i ruden Administrer i Azure-portalen" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. Vælg et navn til programmet i formularen, og angiv følgende oplysninger for omdirigerings-URI'en, og vælg derefter **Registrer**.
 
-   ![Billede af vinduet Opret program.](../../media/nativeapp-create2.PNG)
+   :::image type="content" source="../../media/nativeapp-create2.PNG" alt-text="Programregistreringsruden i Azure-portalen" lightbox="../../media/nativeapp-create2.PNG":::
+   
 
    - **Programtype:** Offentlig klient
    - **Omdiriger URI:** https://portal.azure.com
@@ -83,11 +84,11 @@ I denne artikel forklares det, hvordan du:
    > [!TIP]
    > *Microsoft Threat Protection* er et tidligere navn til Microsoft 365 Defender og vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at få det vist.
 
-   ![Billede af valg af API-tilladelse.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Ruden Din organisations API'er i Microsoft 365 Defender portal" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
    - Vælg **Delegerede tilladelser**. Vælg de relevante tilladelser for dit scenarie ( **f.eks. Hændelse.Læs**), og vælg **derefter Tilføj tilladelser**.
 
-   ![Billede af API-adgang og API-markering.](../../media/request-api-permissions-delegated.PNG)
+     :::image type="content" source="../../media/request-api-permissions-delegated.PNG" alt-text="Ruden Delegerede tilladelser i Microsoft 365 Defender portal" lightbox="../../media/request-api-permissions-delegated.PNG":::
 
     > [!NOTE]
     > Du skal vælge de relevante tilladelser til scenariet. *Læs alle hændelser er* blot et eksempel. Se afsnittet Tilladelser i den API, du vil ringe til **, for at** finde ud af, hvilken tilladelse du skal bruge.
@@ -96,11 +97,11 @@ I denne artikel forklares det, hvordan du:
 
 5. Vælg **Giv administratorsamtykke**. Hver gang du tilføjer en tilladelse, skal du vælge **Giv administratorsamtykke** , før den træder i kraft.
 
-   ![Billede af Giv tilladelser.](../../media/grant-consent-delegated.PNG)
+   :::image type="content" source="../../media/grant-consent-delegated.PNG" alt-text="Ruden til godkendelse af administrator i Microsoft 365 Defender portal" lightbox="../../media/grant-consent-delegated.PNG":::
 
 6. Optag dit program-id og dit lejer-id et sikkert sted. De er angivet under **Oversigt på** din programside.
 
-   ![Billede af oprettet app-id.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Ruden Oversigt i Microsoft 365 Defender portal" lightbox="../../media/app-and-tenant-ids.png":::
 
 ## <a name="get-an-access-token"></a>Få et adgangstoken
 
@@ -131,7 +132,7 @@ $response.AccessToken
 
 På følgende billede kan du se et afkodet token, der er købt fra en app, ```Incidents.ReadWrite.All```med ```Incidents.Read.All```, og ```AdvancedHunting.Read.All``` tilladelser:
 
-![Billede af tokenvalidering.](../../media/webapp-decoded-token.png)
+:::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="Afsnittet tilladelser i ruden Afkodet token i Microsoft 365 Defender portal" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
 
 ## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Brug tokenet til at få adgang til Microsoft 365 Defender API
 

@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 8cbf6d8b69d9fbc8d8b083bf11e455a74b636af1
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 01d6a00bba5bd286e6c741dce6ec6ba3fa3625a1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63592123"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755609"
 ---
 # <a name="create-an-app-to-access-microsoft-365-defender-without-a-user"></a>Opret en app for at få adgang Microsoft 365 Defender uden en bruger
 
@@ -63,7 +63,7 @@ I denne artikel forklares det, hvordan du:
 
 2. Gå til **Azure Active Directory** >  **App-registreringer** >  **Ny registrering**.
 
-   ![Billede af Microsoft Azure og navigation til programregistrering.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Fanen Ny registrering i Microsoft 365 Defender portal" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. I formularen skal du vælge et navn til dit program og derefter vælge **Registrer**.
 
@@ -72,11 +72,11 @@ I denne artikel forklares det, hvordan du:
    > [!TIP]
    > *Microsoft Threat Protection* er et tidligere navn til Microsoft 365 Defender og vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at få det vist.
 
-   ![Billede af valg af API-tilladelse.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Organisationens fane for anvendelse af API'er i Microsoft 365 Defender portal" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
 5. Vælg **Programtilladelser**. Vælg de relevante tilladelser til scenariet ( **f.eks. Incident.Read.All**), og vælg **derefter Tilføj tilladelser**.
 
-   ![Billede af API-adgang og API-markering.](../../media/request-api-permissions.PNG)
+   :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Ruden med programtilladelser i Microsoft 365 Defender portal" lightbox="../../media/request-api-permissions.PNG":::
 
     > [!NOTE]
     > Du skal vælge de relevante tilladelser til scenariet. *Læs alle hændelser er* blot et eksempel. Se afsnittet Tilladelser i den API, du vil ringe til **, for at** finde ud af, hvilken tilladelse du skal bruge.
@@ -85,18 +85,18 @@ I denne artikel forklares det, hvordan du:
 
 6. Vælg **Giv administratorsamtykke**. Hver gang du tilføjer en tilladelse, skal du vælge **Giv administratorsamtykke** , før den træder i kraft.
 
-    ![Billede af Giv tilladelser.](../../media/grant-consent.PNG)
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Den tilladelsesrelaterede rude i Microsoft 365 Defender portalen" lightbox="../../media/grant-consent.PNG":::
 
 7. Hvis du vil føje en hemmelighed til programmet, **skal du & Certifikater** og hemmeligheder, føje en beskrivelse til hemmeligheden og derefter vælge **Tilføj**.
 
     > [!TIP]
     > Når du har valgt **Tilføj**, skal du **vælge Kopiér den genererede hemmelige værdi**. Du kan ikke hente den hemmelige værdi, når du har forladet.
 
-    ![Billede af Opret appnøgle.](../../media/webapp-create-key2.png)
+    :::image type="content" source="../../media/defender-endpoint/webapp-create-key2.png" alt-text="Ruden Opret app i Microsoft 365 Defender portal" lightbox="../../media/defender-endpoint/webapp-create-key2.png":::
 
 8. Optag dit program-id og dit lejer-id et sikkert sted. De er angivet under **Oversigt på** din programside.
 
-   ![Billede af oprettet app-id.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Ruden Oversigt i Microsoft 365 Defender portal" lightbox="../../media/app-and-tenant-ids.png":::
 
 9. **Kun Microsoft 365 Defender-partnere**[: Følg](./api-partner-access.md) disse instruktioner for at få partneradgang via MICROSOFT 365 DEFENDER-API'er, indstil din app til at være flerlejer, så den kan være tilgængelig for alle lejere, når du modtager administratorsamtykke. Partneradgang er **påkrævet** til tredjepartsapps – f.eks. hvis du opretter en app, der er beregnet til at køre i flere kunders lejere. Det er **ikke påkrævet** , hvis du opretter en tjeneste, som du kun vil køre i din lejer, f.eks. et program til dit eget brug, der kun interagerer med dine egne data. Sådan angiver du din app til at være flere lejere:
 
@@ -244,7 +244,7 @@ aadToken = jsonResponse["access_token"]
 
    På følgende billede kan du se et afkodet token, der er købt fra en app, `Incidents.ReadWrite.All`med `Incidents.Read.All`, og `AdvancedHunting.Read.All` tilladelser:
 
-   ![Billede af tokenvalidering.](../../media/webapp-decoded-token.png)
+   :::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="Ruden Afkodet token i Microsoft 365 Defender portal" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
 
 ## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Brug tokenet til at få adgang til Microsoft 365 Defender API
 

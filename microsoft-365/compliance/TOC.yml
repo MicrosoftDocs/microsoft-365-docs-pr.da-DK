@@ -1,0 +1,1088 @@
+- name: Overholdelse af regler og standarder for Microsoft 365
+  href: index.yml
+- name: Få mere at vide om nyheder i overholdelse af regler og standarder for Microsoft 365
+  href: whats-new.md
+- name: Prøveversion af overholdelse af regler og standarder
+  items:
+    - name: Om den gratis prøveversion af overholdelse af regler og standarder for Microsoft 365
+      href: compliance-easy-trials.md
+    - name: Om den gratis prøveversion af Premium-vurderinger til Microsoft Overholdelsesstyring
+      href: compliance-easy-trials-compliance-manager-assessments.md
+- name: Kom i gang
+  items:
+    - name: Hurtige opgaver for at komme i gang med overholdelse af regler og standarder
+      href: compliance-quick-tasks.md
+    - name: Microsoft 365-løsningskatalog
+      href: microsoft-365-solution-catalog.md
+    - name: Microsoft 365-overholdelsescenter
+      href: microsoft-365-compliance-center.md
+    - name: Tilladelser i Microsoft 365-overholdelsescenter
+      href: microsoft-365-compliance-center-permissions.md
+    - name: Omdirigerer brugere til Microsoft 365-overholdelsescenter
+      href: microsoft-365-compliance-center-redirection.md
+    - name: Brug dit gratis Azure Active Directory-abonnement
+      href: use-your-free-azure-ad-subscription-in-office-365.md
+    - name: 'Plan for beskyttelse af personlige oplysninger, sikkerhed og overholdelse af regler og standarder i Office 365'
+      href: plan-for-security-and-compliance.md
+    - name: Mulighed for udvidelse af overholdelse af regler og standarder
+      href: compliance-extensibility.md
+- name: Funktioner på tværs af løsninger
+  items:
+    - name: Onboard Windows 10- og Windows 11-enheder
+      items:
+        - name: Onboard Windows 10- og Windows 11-enheder i Microsoft 365 oversigt
+          href: device-onboarding-overview.md
+        - name: Onboard Windows 10- og Windows 11-enheder via gruppepolitik
+          href: device-onboarding-gp.md
+        - name: Onboard Windows 10- og Windows 11-enheder ved hjælp af værktøjer til administration af mobilenheder
+          href: device-onboarding-mdm.md
+        - name: Onboard Windows 10 Windows 11-enheder ved hjælp af konfigurationsstyring
+          href: device-onboarding-sccm.md
+        - name: Onboard Windows 10- og Windows 11-enheder ved hjælp af et lokalt script
+          href: device-onboarding-script.md
+        - name: Onboard ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)
+          href: device-onboarding-vdi.md
+    - name: Onboard macOS-enheder (prøveversion)
+      items:
+        - name: Oversigt over onboarding af macOS-enheder i Microsoft 365 (prøveversion)
+          href: device-onboarding-macos-overview.md
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Microsoft Intune (prøveversion)
+          href: device-onboarding-offboarding-macos-intune.md
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder (prøveversion)
+          href: device-onboarding-offboarding-macos-intune-mde.md
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro (prøveversion)
+          href: device-onboarding-offboarding-macos-jamfpro.md
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder (prøveversion)
+          href: device-onboarding-offboarding-macos-jamfpro-mde.md
+- name: Administrer forbindelser for tredjepartsdata
+  items:
+    - name: Få mere at vide om forbindelser til tredjepartsdata
+      href: archiving-third-party-data.md
+    - name: Microsoft-dataforbindelser
+      items:
+        - name: Meddelelse fra Bloomberg
+          href: archive-bloomberg-message-data.md
+        - name: Episk EPJ-sundhedsdata (prøveversion)
+          href: import-epic-data.md
+        - name: Facebook Business
+          href: archive-facebook-data-with-sample-connector.md
+        - name: Generiske EPJ-sundhedsdata (prøveversion)
+          href: import-healthcare-data.md
+        - name: HR-data
+          href: import-hr-data.md
+        - name: ICE Chat
+          href: archive-icechat-data.md
+        - name: Øjeblikkelig Bloomberg
+          href: archive-instant-bloomberg-data.md
+        - name: LinkedIn
+          href: archive-linkedin-data.md
+        - name: Fysiske badgedata
+          href: import-physical-badging-data.md
+        - name: Slack eDiscovery (prøveversion)
+          href: archive-slack-data-microsoft.md
+        - name: Twitter
+          href: archive-twitter-data-with-sample-connector.md
+    - name: Veritas-dataforbindelser
+      items:
+        - name: CellTrust
+          href: archive-celltrust-data.md
+        - name: Cisco Japper på MS SQL
+          href: archive-ciscojabberonmssql-data.md
+        - name: Cisco Japper på Oracle
+          href: archive-ciscojabberonoracle-data.md
+        - name: Cisco Japper på PostgreSQL
+          href: archive-ciscojabberonpostgresql-data.md
+        - name: EML
+          href: archive-eml-data.md
+        - name: FX-forbindelse
+          href: archive-fxconnect-data.md
+        - name: Jive
+          href: archive-jive-data.md
+        - name: MS SQL Database
+          href: archive-mssqldatabaseimporter-data.md
+        - name: Pivot
+          href: archive-pivot-data.md
+        - name: Redtail-tale
+          href: archive-redtailspeak-data.md
+        - name: Reuters håndtering
+          href: archive-reutersdealing-data.md
+        - name: Reuters Eikon
+          href: archive-reuterseikon-data.md
+        - name: Reuters FX
+          href: archive-reutersfx-data.md
+        - name: RingCentral
+          href: archive-ringcentral-data.md
+        - name: Salesforce-snak
+          href: archive-salesforcechatter-data.md
+        - name: ServiceNow
+          href: archive-servicenow-data.md
+        - name: Skype for Business
+          href: archive-skypeforbusiness-data.md
+        - name: Slack eDiscovery
+          href: archive-slack-data.md
+        - name: Symphony
+          href: archive-symphony-data.md
+        - name: Afgrænset tekst
+          href: archive-text-delimited-data.md
+        - name: Twitter (prøveversion)
+          href: archive-veritas-twitter-data.md
+        - name: Webex Teams
+          href: archive-webexteams-data.md
+        - name: Websider
+          href: archive-webpagecapture-data.md
+        - name: Workplace fra Facebook
+          href: archive-workplacefromfacebook-data.md
+        - name: XIP
+          href: archive-xip-data.md
+        - name: XSLT/XML
+          href: archive-xslt-xml-data.md
+        - name: Yieldbroker
+          href: archive-yieldbroker-data.md
+        - name: YouTube
+          href: archive-youtube-data.md
+        - name: Zoom-møde.
+          href: archive-zoommeetings-data.md
+    - name: TeleMessage-dataforbindelser
+      items:
+        - name: Android-arkivering
+          href: archive-android-archiver-data.md
+        - name: AT&T SMS/MMS-netværksarkivering
+          href: archive-att-network-archiver-data.md
+        - name: Bell SMS/MMS-netværksarkivering
+          href: archive-bell-network-data.md
+        - name: Arkivér virksomhedsnummer
+          href: archive-enterprise-number-data.md
+        - name: 'O2 Telefonica SMS- og stemmenetværksarkivering '
+          href: archive-o2-network-data.md
+        - name: Rogers Netværksarkivering
+          href: archive-rogers-network-archiver-data.md
+        - name: Signal-arkivering
+          href: archive-signal-archiver-data.md
+        - name: Telegram-arkivering
+          href: archive-telegram-archiver-data.md
+        - name: TELUS-netværk
+          href: archive-telus-network-data.md
+        - name: Verizon SMS/MMS-netværksarkivering
+          href: archive-verizon-network-data.md
+        - name: WeChat-arkivering
+          href: archive-wechat-data.md
+        - name: WhatsApp-akivering
+          href: archive-whatsapp-data.md
+    - name: 17a-4 dataforbindelser
+      items:
+        - name: BlackBerry DataParser
+          href: archive-17a-4-blackberry-data.md
+        - name: Bloomberg DataParser
+          href: archive-17a-4-bloomberg-data.md
+        - name: Cisco Japper DataParser
+          href: archive-17a-4-cisco-jabber-data.md
+        - name: Cisco Webex DataParser
+          href: archive-17a-4-webex-teams-data.md
+        - name: FactSet DataParser
+          href: archive-17a-4-factset-data.md
+        - name: Fuze DataParser
+          href: archive-17a-4-fuze-data.md
+        - name: FX Connect DataParser
+          href: archive-17a-4-fxconnect-data.md
+        - name: ICE DataParser
+          href: archive-17a-4-ice-im-data.md
+        - name: InvestEdge DataParser
+          href: archive-17a-4-investedge-data.md
+        - name: LivePerson DataParser for samtaler i skyen
+          href: archive-17a-4-liveperson-data.md
+        - name: Quip DataParser
+          href: archive-17a-4-quip-data.md
+        - name: Refinitiv Eikon Messenger DataParser
+          href: archive-17a-4-refinitiv-messenger-data.md
+        - name: ServiceNow DataParser
+          href: archive-17a-4-servicenow-data.md
+        - name: Skype for Business Server DataParser
+          href: archive-17a-4-skype-for-business-server-data.md
+        - name: Slack DataParser
+          href: archive-17a-4-slack-data.md
+        - name: SQL DataParser
+          href: archive-17a-4-sql-database-data.md
+        - name: Symphony DataParser
+          href: archive-17a-4-symphony-data.md
+        - name: Zoom DataParser
+          href: archive-17a-4-zoom-data.md
+    - name: CellTrust-forbindelser
+      items:
+        - name: CellTrust SL2
+          href: archive-data-from-celltrustsl2.md
+    - name: Arbejd sammen med en partner om at arkivere tredjepartsdata
+      href: work-with-partner-to-archive-third-party-data.md
+    - name: Søg efter tredjepartsdata
+      href: use-content-search-to-search-third-party-data-that-was-imported.md
+- name: Administrer insider-risici
+  items:
+    - name: Microsoft 365-løsninger til insider-risiko
+      href: insider-risk-solution-overview.md
+    - name: Kommunikationsoverholdelse
+      items:
+        - name: Oversigt
+          href: communication-compliance-solution-overview.md
+        - name: Få mere at vide om kommunikationsoverholdelse
+          href: communication-compliance.md
+        - name: Plan for kommunikationsoverholdelse
+          href: communication-compliance-plan.md
+        - name: Kom i gang med kommunikationsoverholdelse
+          href: communication-compliance-configure.md
+        - name: Registrer kanalsignaler med kommunikationsoverholdelse
+          href: communication-compliance-channels.md
+        - name: Opret og administrer politikker for kommunikationsoverholdelse
+          href: communication-compliance-policies.md
+        - name: Undersøg og afhjælp underretninger om kommunikationsoverholdelse
+          href: communication-compliance-investigate-remediate.md
+        - name: Få mere at vide om kommunikationsoverholdelsesrapporter og overvågninger
+          href: communication-compliance-reports-audits.md
+        - name: Kommunikationsoverholdelse med SIEM-løsninger
+          href: communication-compliance-siem.md
+        - name: Casestudie – Contoso konfigurerer hurtigt en upassende tekstpolitik
+          href: communication-compliance-case-study.md
+    - name: Styring af insider-risiko
+      items:
+        - name: Oversigt
+          href: insider-risk-management-solution-overview.md
+        - name: Få mere at vide om styring af insider-risiko
+          href: insider-risk-management.md
+        - name: Plan for styring af insider-risiko
+          href: insider-risk-management-plan.md
+        - name: Kom i gang med styring af insider-risiko
+          href: insider-risk-management-configure.md
+        - name: Kom i gang med indstilling af insider-risiko
+          href: insider-risk-management-settings.md
+        - name: Opret og administrer politikker for insider-risiko
+          href: insider-risk-management-policies.md
+        - name: Undersøg aktiviteter i insider-risiko
+          href: insider-risk-management-activities.md
+        - name: Udfør handlinger på sager i insider-risiko
+          href: insider-risk-management-cases.md
+        - name: Få mere at vide om og konfigurer registrering af browsersignal
+          href: insider-risk-management-browser-support.md
+        - name: Gennemse aktiviteter med overvågningsloggen for insider-risiko
+          href: insider-risk-management-audit-log.md
+        - name: Gennemse data med indholdsoversigten for insider-risiko
+          href: insider-risk-management-content-explorer.md
+        - name: Administrer arbejdsprocessen med Brugere-dashboardet
+          href: insider-risk-management-users.md
+        - name: Opret skabeloner til meddelelser om insider-risiko
+          href: insider-risk-management-notices.md
+    - name: Informationsbarrierer
+      items:
+        - name: Oversigt
+          href: information-barriers-solution-overview.md
+        - name: Få mere at vide om informationsbarrierer
+          href: information-barriers.md
+        - name: Kom i gang med informationsbarrierer
+          href: information-barriers-policies.md
+        - name: Administrer informationsbarrierer
+          href: information-barriers-edit-segments-policies.md
+        - name: Attributter for informationsbarrierer
+          href: information-barriers-attributes.md
+        - name: Informationsbarrierer og Microsoft 365-tjenester
+          items:
+            - name: Microsoft Teams og informationsbarrierer
+              href: /microsoftteams/information-barriers-in-teams?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+            - name: OneDrive og informationsbarrierer
+              href: /onedrive/information-barriers?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+            - name: SharePoint og informationsbarrierer
+              href: /sharepoint/information-barriers?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+    - name: Privileged Access Management
+      items:
+        - name: Oversigt
+          href: privileged-access-management-solution-overview.md
+        - name: Få mere at vide om Privileged Access Management
+          href: privileged-access-management-overview.md
+        - name: Kom i gang med Privileged Access Management
+          href: privileged-access-management-configuration.md
+    - name: Beskyt bruger- og enhedsadgang
+      href: protect-access-to-data-and-services.md
+    - name: Kundelockbox
+      href: customer-lockbox-requests.md
+- name: Azure Information Protection
+  items:
+    - name: 'Kend dine data, beskyt dine data, undgå tab af data'
+      href: information-protection.md
+    - name: Udrul en MIP-løsning
+      href: information-protection-solution.md
+    - name: Standardmærkater og -politikker for Microsoft Information Protection
+      href: mip-easy-trials.md
+    - name: Typer af følsomme oplysninger
+      items:
+        - name: Få mere at vide om typer af følsomme oplysninger.
+          items:
+            - name: Få mere at vide om typer af følsomme oplysninger.
+              href: sensitive-information-type-learn-about.md
+            - name: Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger
+              href: sit-learn-about-exact-data-match-based-sits.md
+            - name: Dokumentfingeraftryk
+              href: document-fingerprinting.md
+            - name: Få mere at vide om navngivne enheder (prøveversion)
+              href: named-entities-learn.md
+        - name: Kom i gang med typer af følsomme oplysninger
+          items:
+            - name: Opret en brugerdefineret type af følsomme oplysninger – Overholdelsescenter
+              href: create-a-custom-sensitive-information-type.md
+            - name: Kom i gang med nøjagtigt datamatch baseret på typer af følsomme oplysninger
+              href: sit-get-started-exact-data-match-based-sits-overview.md
+            - name: Eksportér kildedata for at finde nøjagtigt datamatch baseret på følsom oplysningstype
+              href: sit-get-started-exact-data-match-export-data.md
+            - name: Opret skemaet for nøjagtigt datamatch baseret på typer af følsomme oplysninger
+              href: sit-get-started-exact-data-match-create-schema.md
+            - name: 'Hash og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der stemmer overens med typer af følsomme oplysninger'
+              href: sit-get-started-exact-data-match-hash-upload.md
+            - name: Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger
+              href: sit-get-started-exact-data-match-create-rule-package.md
+            - name: Test et nøjagtigt datamatch for typen af følsomme oplysninger
+              href: sit-get-started-exact-data-match-test.md
+        - name: Brug typer af følsomme oplysninger
+          items:
+            - name: Tilpas en indbygget type af følsomme oplysninger
+              href: customize-a-built-in-sensitive-information-type.md
+            - name: Rediger skemaet for nøjagtige datamatch for at bruge konfigurerbart match
+              href: sit-modify-edm-schema-configurable-match.md
+            - name: Opret meddelelser for aktiviteter med nøjagtigt datamatch
+              href: sit-edm-notifications-activities.md
+            - name: Administrer brugerdefinerede typer af følsomme oplysninger i Overholdelsescenter
+              href: sit-manage-custom-sits-compliance-center.md
+            - name: REGEX-valideringer og yderligere kontroller af typer af følsomme oplysninger
+              href: sit-regex-validators-additional-checks.md
+            - name: Opret en brugerdefineret type af følsomme oplysninger – PowerShell
+              href: create-a-custom-sensitive-information-type-in-scc-powershell.md
+            - name: Fjern en brugerdefineret type af følsomme oplysninger – PowerShell
+              href: sit-remove-a-custom-sensitive-information-type-in-powershell.md
+            - name: Rediger en brugerdefineret type af følsomme oplysninger – PowerShell
+              href: sit-modify-a-custom-sensitive-information-type-in-powershell.md
+            - name: Opret en ordbog over nøgleord
+              href: create-a-keyword-dictionary.md
+            - name: Rediger en ordbog over nøgleord
+              href: sit-modify-keyword-dictionary.md
+            - name: Administrer dit skema for nøjagtige datamatch
+              href: sit-use-exact-data-manage-schema.md
+            - name: Opdater kildetabelfilen for følsomme oplysninger
+              href: sit-use-exact-data-refresh-data.md
+            - name: Brug navngivne enheder i dine politikker til forebyggelse af datatab (prøveversion)
+              href: named-entities-use.md
+            - name: Almindelige brugsscenarier for typer af følsomme oplysninger
+              href: sit-common-scenarios.md
+        - name: Reference til type af følsomme oplysninger
+          items:
+            - name: Enhedsdefinitioner for type af følsomme oplysninger
+              href: sensitive-information-type-entity-definitions.md
+            - name: Funktioner for type af følsomme oplysninger
+              href: sit-functions.md
+            - name: Reference til filtre for brugerdefinerede følsomme oplysninger
+              href: sit-custom-sit-filters.md
+    - name: Trænbare klassificeringer
+      items:
+        - name: Få mere at vide om trænbare klassificeringer
+          href: classifier-learn-about.md
+        - name: Kom i gang med trænbare klassificeringer
+          href: classifier-get-started-with.md
+        - name: Sådan genoplæres en klassificering i Indholdsviser
+          href: classifier-how-to-retrain-content-explorer.md
+    - name: Klassificering af data
+      items:
+        - name: Om klassificering af data
+          href: data-classification-overview.md
+        - name: Kom i gang med Indholdsviser
+          href: data-classification-content-explorer.md
+        - name: Kom i gang med aktivitetsviser
+          href: data-classification-activity-explorer.md
+        - name: 'Mærkningshandlinger, der er rapporteret i aktivitetsviser'
+          href: data-classification-activity-explorer-available-events.md
+    - name: Følsomhedsmærkater
+      items:
+        - name: Få mere at vide om følsomhedsmærkater
+          href: sensitivity-labels.md
+        - name: Hvorfor vælge MIP-indbygget mærkning til Office-apps
+          href: sensitivity-labels-aip.md
+        - name: Kom i gang med følsomhedsmærkater
+          href: get-started-with-sensitivity-labels.md
+        - name: Opret og publicer følsomhedsmærkater
+          href: create-sensitivity-labels.md
+        - name: Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
+          href: encryption-sensitivity-labels.md
+        - name: Anvend automatisk en følsomhedsmærkat på indhold
+          href: apply-sensitivity-label-automatically.md
+        - name: 'Brug følsomhedsmærkater med teams, grupper og websteder'
+          href: sensitivity-labels-teams-groups-sites.md
+        - name: Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive
+          href: sensitivity-labels-sharepoint-onedrive-files.md
+        - name: 'Aktivér samtidig redigering af dokumenter, der er krypteret med følsomhedsmærkater'
+          href: sensitivity-labels-coauthoring.md
+        - name: Angiv standardtypen af delingslink ved hjælp af følsomhedsmærkater
+          href: sensitivity-labels-default-sharing-link.md
+        - name: Administrer følsomhedsmærkater i Office apps
+          href: sensitivity-labels-office-apps.md
+    - name: Kryptering
+      items:
+        - name: Forstå kryptering
+          href: encryption.md
+        - name: Kryptering med dobbelt nøgle (DKE)
+          href: double-key-encryption.md
+        - name: Ofte stillede spørgsmål om kryptering med dobbelt nøgle
+          href: double-key-encryption-overview.md
+        - name: Kryptering af Office 365-tjenester
+          href: office-365-service-encryption.md
+        - name: Kundenøgle
+          items:
+            - name: Kundenøgle i Microsoft 365
+              href: customer-key-overview.md
+            - name: Konfigurer kundenøgle til Microsoft 365
+              href: customer-key-set-up.md
+            - name: Administrer kundenøgle for Microsoft 365
+              href: customer-key-manage.md
+            - name: Rul eller roter en kundenøgle eller en tilgængelighedsnøgle
+              href: customer-key-availability-key-roll.md
+            - name: Få mere at vide om tilgængelighedsnøglen til kundenøglen
+              href: customer-key-availability-key-understand.md
+        - name: Mailkryptering
+          href: email-encryption.md
+          items:
+            - name: Kryptering af Office 365-meddelelser
+              href: ome.md
+            - name: De nye egenskaber i Office 365-meddelelseskryptering
+              href: set-up-new-message-encryption-capabilities.md
+            - name: Definer regler for mailflow for at kryptere mails i Office 365
+              href: define-mail-flow-rules-to-encrypt-email.md
+            - name: Føj din organisations brand til dine krypterede meddelelser
+              href: add-your-organization-brand-to-encrypted-messages.md
+            - name: Opret en politik for følsomme oplysninger for din organisation ved hjælp af Office 365-meddelelseskryptering
+              href: ome-sensitive-info-types.md
+            - name: Fjern Office 365-meddelelseskryptering
+              href: manage-office-365-message-encryption.md
+            - name: Avanceret meddelelseskryptering i Office 365
+              href: ome-advanced-message-encryption.md
+            - name: 'Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Office 365'
+              href: ome-advanced-expiration.md
+            - name: 'Tilbagekald mail, der er krypteret med Avanceret meddelelseskryptering i Office 365'
+              href: revoke-ome-encrypted-mail.md
+            - name: Sammenlign versioner af OME
+              href: ome-version-comparison.md
+            - name: Ofte stillede spørgsmål om kryptering af Office 365-meddelelser
+              href: ome-faq.yml
+            - name: Sådan beskytter Exchange Online dine mailhemmeligheder
+              href: exchange-online-secures-email-secrets.md
+            - name: Sådan anvender Exchange Online-brugere TLS til at sikre deres mailforbindelser i Office 365
+              href: exchange-online-uses-tls-to-secure-email-connections.md
+            - name: Sådan fungerer SMTP-DANE
+              href: how-smtp-dane-works.md
+            - name: BitLocker og DKM (Distributed Key Manager) til kryptering
+              href: office-365-bitlocker-and-distributed-key-manager-for-encryption.md
+            - name: Ældre OME
+              items:
+                - name: Ældre oplysninger om Office 365-meddelelseskryptering
+                  href: legacy-information-for-message-encryption.md
+                - name: Konfigurer Azure Rights Management til den tidligere version af Office 365-meddelelseskryptering
+                  href: set-up-azure-rms-for-previous-version-message-encryption.md
+        - name: SharePoint IRM
+          href: set-up-irm-in-sp-admin-center.md
+        - name: Teknisk reference
+          href: technical-reference-details-about-encryption.md
+        - name: Microsoft 365-krypteringskæder
+          href: encryption-office-365-certificate-chains.md
+        - name: TLS 1.0 og 1.1 udfasning for Office 365
+          href: tls-1.0-and-1.1-deprecation-for-office-365.md
+        - name: Udfasning af TLS 1.0 og 1.1 i Office 365 GCC High og DoD
+          href: tls-1-2-in-office-365-gcc.md
+        - name: TLS 1.2 i Office 365
+          href: prepare-tls-1.2-in-office-365.md
+        - name: Ændringer i Office TLS-certifikatet
+          href: encryption-office-365-tls-certificates-changes.md
+    - name: Forebyggelse af datatab (DLP)
+      items:
+        - name: Få mere at vide om DLP
+          items:
+            - name: Få mere at vide om forebyggelse af datatab
+              href: dlp-learn-about-dlp.md
+            - name: Få mere at vide om forebyggelse af datatab ved slutpunkt
+              href: endpoint-dlp-learn-about.md
+            - name: Få mere at vide om standardpolitikken for forebyggelse af datatab i Microsoft Teams (prøveversion)
+              href: dlp-teams-default-policy.md
+            - name: Få mere at vide om Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+              href: dlp-on-premises-scanner-learn.md
+            - name: Få mere at vide om Microsoft Overholdelsesudvidelse
+              href: dlp-chrome-learn-about.md
+            - name: Få mere at vide om dashboardet til forebyggelse af datatab
+              href: dlp-alerts-dashboard-learn.md
+        - name: Plan for DLP
+          items:
+            - name: Plan for forebyggelse af datatab
+              href: dlp-overview-plan-for-dlp.md
+            - name: Design en DLP-politik
+              href: dlp-policy-design.md
+            - name: Reference til politik til forebyggelse af datatab
+              href: dlp-policy-reference.md
+        - name: Kom i gang med DLP
+          items:
+            - name: Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt
+              href: dlp-configure-endpoint-settings.md
+            - name: Kom i gang med DLP-standardpolitikken
+              href: get-started-with-the-default-dlp-policy.md
+            - name: Opret en DLP-politik ud fra en skabelon
+              href: create-a-dlp-policy-from-a-template.md
+            - name: 'Opret, test og finjuster en DLP-politik'
+              href: create-test-tune-dlp-policy.md
+            - name: Kom i gang med Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+              href: dlp-on-premises-scanner-get-started.md
+            - name: Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt
+              href: endpoint-dlp-getting-started.md
+            - name: Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection
+              href: device-onboarding-configure-proxy.md
+            - name: Kom i gang med Microsoft Overholdelsesudvidelse
+              href: dlp-chrome-get-started.md
+            - name: Kom i gang med dashboardet til advarsel om forebyggelse af datatab
+              href: dlp-alerts-dashboard-get-started.md
+            - name: Kom i gang med politikker til forebyggelse af datatab for Power BI (prøveversion)
+              href: dlp-powerbi-get-started.md
+        - name: Brug DLP
+          items:
+            - name: DLP og Microsoft Teams
+              href: dlp-microsoft-teams.md
+            - name: Brug forebyggelse af datatab ved slutpunkt
+              href: endpoint-dlp-using.md
+            - name: Brug Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+              href: dlp-on-premises-scanner-use.md
+            - name: Brug meddelelser og politiktip i DLP-politikker
+              href: use-notifications-and-policy-tips.md
+            - name: Hvad inkluderes i DLP-politikskabelonerne
+              href: what-the-dlp-policy-templates-include.md
+            - name: Opret en DLP-politik for at beskytte dokumenter med FCI eller andre egenskaber
+              href: protect-documents-that-have-fci-or-other-properties.md
+            - name: Få vist DLP-rapporterne
+              href: view-the-dlp-reports.md
+            - name: 'Opret en forespørgsel for at finde følsomme data, der er gemt på websteder'
+              href: form-a-query-to-find-sensitive-data-stored-on-sites.md
+            - name: Sådan fungerer DLP mellem Security & Compliance Center og Exchange Administration
+              href: how-dlp-works-between-admin-centers.md
+            - name: Konfigurer og få vist beskeder om DLP-politikker (prøveversion)
+              href: dlp-configure-view-alerts-policies.md
+            - name: Brug følsomhedsmærkater som en betingelse i DLP-politikker
+              href: dlp-sensitivity-label-as-condition.md
+            - name: 'Brug politikker til forebyggelse af datatab til skyapps, der ikke er fra Microsoft'
+              href: dlp-use-policies-non-microsoft-cloud-apps.md
+            - name: Betingelser og undtagelser for DLP-politikker
+              href: dlp-conditions-and-exceptions.md
+            - name: Overfør politikker til forebyggelse af datatab i Exchange Online til Overholdelsescenter
+              href: dlp-migrate-exo-policy-to-unified-dlp.md
+            - name: Reference til politiktips til forebyggelse af datatab
+              href: dlp-policy-tips-reference.md
+- name: Administrer informationsstyring og data
+  items:
+    - name: Styr dine data
+      href: manage-information-governance.md
+    - name: Forstå opbevaring og sletning af data
+      items:
+        - name: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
+          href: retention.md
+        - name: Rutediagram til opbevaring- og sletningsresultater
+          href: retention-flowchart.md
+        - name: Opbevaring og sletning for Microsoft 365-arbejdsbelastninger
+          items:
+            - name: SharePoint og OneDrive
+              href: retention-policies-sharepoint.md
+            - name: Microsoft Teams
+              href: retention-policies-teams.md
+            - name: Yammer
+              href: retention-policies-yammer.md
+            - name: Exchange
+              href: retention-policies-exchange.md
+        - name: Almindelige indstillinger for opbevaring og sletning
+          href: retention-settings.md
+        - name: Begrænsninger for opbevaring og sletning
+          href: retention-limits.md
+    - name: Informationsstyring
+      items:
+        - name: Få mere at vide om informationsstyring
+          href: information-governance.md
+        - name: Kom i gang med informationsstyring
+          href: get-started-with-information-governance.md
+        - name: Opret opbevaringspolitik
+          href: create-retention-policies.md
+        - name: Brug opbevaringsmærkater til undtagelser
+          href: create-retention-labels-information-governance.md
+        - name: Arkivér postkassedata
+          items:
+            - name: Få mere at vide om arkivpostkasser
+              href: archive-mailboxes.md
+            - name: Aktivér arkivpostkasse
+              href: enable-archive-mailboxes.md
+            - name: Få mere at vide om automatisk udvidelse af arkivering
+              href: autoexpanding-archiving.md
+            - name: Aktivér automatisk udvidelse af arkiv
+              href: enable-autoexpanding-archiving.md
+            - name: Tilpas en arkiverings- og sletningspolitik for postkasser (MRM)
+              href: set-up-an-archive-and-deletion-policy-for-mailboxes.md
+        - name: Administrer inaktive postkasser
+          items:
+            - name: Få mere at vide om inaktive postkasser
+              href: inactive-mailboxes-in-office-365.md
+            - name: Opret og administrer inaktive postkasser
+              href: create-and-manage-inactive-mailboxes.md
+            - name: Rediger varigheden af fastfrysning for en inaktiv postkasse
+              href: change-the-hold-duration-for-an-inactive-mailbox.md
+            - name: Gendan en inaktiv postkasse
+              href: recover-an-inactive-mailbox.md
+            - name: Gendan en inaktiv postkasse
+              href: restore-an-inactive-mailbox.md
+            - name: Slet en inaktiv postkasse
+              href: delete-an-inactive-mailbox.md
+        - name: Importér PST-filer
+          items:
+            - name: Få mere at vide om import af PST-filer
+              href: importing-pst-files-to-office-365.md
+            - name: Brug netværksupload til at importere PST-filer
+              href: use-network-upload-to-import-pst-files.md
+            - name: Brug drevforsendelse til at importere PST-filer
+              href: use-drive-shipping-to-import-pst-files-to-office-365.md
+            - name: Filtrer data ved import af PST-filer
+              href: filter-data-when-importing-pst-files.md
+            - name: Ofte stillede spørgsmål om import af PST-filer
+              href: faqimporting-pst-files-to-office-365.yml
+    - name: Datastyring
+      items:
+        - name: Forstå datastyring
+          items:
+            - name: Få mere at vide om datastyring
+              href: records-management.md
+            - name: Ressourcer til lovmæssige krav
+              href: retention-regulatory-requirements.md
+            - name: Erklær data ved hjælp af opbevaringsmærkater
+              href: declare-records.md
+            - name: Brug dataversionsstyring til filer
+              href: record-versioning.md
+        - name: Kom i gang med datastyring
+          href: get-started-with-records-management.md
+        - name: Opret og administrer opbevaringsmærkater med filplan
+          href: file-plan-manager.md
+        - name: 'Start opbevaring, når der opstår en hændelse'
+          href: event-driven-retention.md
+        - name: Publicer og anvend opbevaringsmærkater i apps
+          href: create-apply-retention-labels.md
+        - name: Anvend automatisk opbevaringsmærkater på indhold
+          href: apply-retention-labels-automatically.md
+        - name: Lås politikker for at begrænse ændringer
+          href: retention-preservation-lock.md
+        - name: Brug PowerShell til at oprette og publicer opbevaringsmærkater
+          href: bulk-create-publish-labels-using-powershell.md
+        - name: Brug opbevaringsmærkater til at administrere dokumenter i SharePoint
+          href: auto-apply-retention-labels-scenario.md
+        - name: Administrer bortskaffelse af data
+          href: disposition.md
+- name: Administrer eDiscovery
+  items:
+    - name: Microsoft 365 eDiscovery-løsninger
+      href: ediscovery.md
+    - name: Indholdssøgning
+      items:
+        - name: Oversigt over indholdssøgning
+          href: search-for-content.md
+        - name: Søg efter indhold
+          href: content-search.md
+          items:
+            - name: Nøgleordsforespørgsler og søgebetingelser
+              href: keyword-queries-and-search-conditions.md
+            - name: Brug KQL-editoren til at oprette søgeforespørgsler
+              href: ediscovery-kql-editor.md
+            - name: Søg efter Teams-chatdata for brugere i det lokale miljø
+              href: search-cloud-based-mailboxes-for-on-premises-users.md
+            - name: Konfigurer filtrering af søgetilladelser
+              href: permissions-filtering-for-content-search.md
+            - name: Eksportér søgeresultater fra eDiscovery
+              href: preview-ediscovery-search-results.md
+            - name: Vis statistik for søgeresultater
+              href: view-keyword-statistics-for-content-search.md
+            - name: Eksportér søgeresultater
+              href: export-search-results.md
+            - name: Eksportér en søgerapport
+              href: export-a-content-search-report.md
+            - name: Søg efter og slet mails
+              href: search-for-and-delete-messages-in-your-organization.md
+            - name: Prøv en mislykket søgning igen
+              href: retry-failed-content-search.md
+            - name: Bevar Bcc-modtagere til søgning
+              href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+        - name: Reference til indholdssøgning
+          items:
+            - name: Funktionsreference til indholdssøgning
+              href: content-search-reference.md
+            - name: Begrænsninger for eDiscovery-søgning
+              href: limits-for-content-search.md
+            - name: 'Indhold, der er gemt i postkasser for eDiscovery'
+              href: what-is-stored-in-exo-mailbox.md
+            - name: Forskelle mellem anslåede og faktiske søgeresultater
+              href: differences-between-estimated-and-actual-ediscovery-search-results.md
+            - name: Delvist indekserede elementer
+              href: partially-indexed-items-in-content-search.md
+            - name: Undersøger delvist indekserede elementer
+              href: investigating-partially-indexed-items-in-ediscovery.md
+            - name: Deduplikering af søgeresultater
+              href: de-duplication-in-ediscovery-search-results.md
+            - name: Dekryptering i eDiscovery-værktøjer
+              href: ediscovery-decryption.md
+            - name: Skift størrelsen på PST-filer ved eksport af søgeresultater
+              href: change-the-size-of-pst-files-when-exporting-results.md
+            - name: 'Deaktiver rapporter, når du eksporterer søgeresultater'
+              href: disable-reports-when-you-export-content-search-results.md
+            - name: Kontrollér søgeforespørgslen for fejl
+              href: check-your-content-search-query-for-errors.md
+            - name: Brug Microsoft Edge til at downloade søgeresultater
+              href: configure-edge-to-export-search-results.md
+            - name: Søg efter eDiscovery-aktiviteter i overvågningsloggen
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+        - name: Indholdssøgning i PowerShell-scripts
+          items:
+            - name: Brug indholdssøgning til målrettede samlinger
+              href: use-content-search-for-targeted-collections.md
+            - name: Søg i postkassen og OneDrive-kontoen efter en liste over brugere
+              href: search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md
+            - name: 'Opret, rapportér om og slet flere søgninger'
+              href: create-report-on-and-delete-multiple-content-searches.md
+            - name: Klon en søgning
+              href: clone-a-content-search.md
+    - name: Grundlæggende eDiscovery
+      items:
+        - name: Kom i gang med grundlæggende eDiscovery
+          href: get-started-core-ediscovery.md
+        - name: Opret eDiscovery-fastfrysninger
+          href: create-ediscovery-holds.md
+        - name: Søg efter indhold i en sag
+          href: search-for-content-in-core-ediscovery.md
+        - name: Eksportér indhold fra en sag
+          href: export-content-in-core-ediscovery.md
+        - name: 'Lukke, genåbne og slette en sag'
+          href: close-reopen-delete-core-ediscovery-cases.md
+        - name: Grundlæggende eDiscovery-reference
+          items:
+            - name: Begrænsninger for eDiscovery-søgning
+              href: limits-for-content-search.md
+            - name: Tildel eDiscovery-tilladelser
+              href: assign-ediscovery-permissions.md
+            - name: Nøgleordsforespørgsler og søgebetingelser
+              href: keyword-queries-and-search-conditions.md
+            - name: Brug KQL-editoren til at oprette søgeforespørgsler
+              href: ediscovery-kql-editor.md
+            - name: Konfigurer grænser for overholdelse af regler og standarder
+              href: set-up-compliance-boundaries.md
+            - name: Konfigurer filtrering af søgetilladelser
+              href: permissions-filtering-for-content-search.md
+            - name: 'Indhold, der er gemt i postkasser for eDiscovery'
+              href: what-is-stored-in-exo-mailbox.md
+            - name: Forskelle mellem anslåede og faktiske søgeresultater
+              href: differences-between-estimated-and-actual-ediscovery-search-results.md
+            - name: Delvist indekserede elementer
+              href: partially-indexed-items-in-content-search.md
+            - name: Undersøger delvist indekserede elementer
+              href: investigating-partially-indexed-items-in-ediscovery.md
+            - name: Eksportér søgeresultater fra eDiscovery
+              href: preview-ediscovery-search-results.md
+            - name: Eksportér en søgerapport
+              href: export-a-content-search-report.md
+            - name: Brug et script til at føje brugere til en fastfrysning i eDiscovery
+              href: use-a-script-to-add-users-to-a-hold-in-ediscovery.md
+            - name: Brug et script til at oprette en rapport over fastfrysninger
+              href: create-a-report-on-holds-in-ediscovery-cases.md
+            - name: Vis statistik for søgeresultater
+              href: view-keyword-statistics-for-content-search.md
+            - name: Søg efter og fjern overløbsdata
+              href: data-spillage-scenariosearch-and-purge.md
+            - name: Bevar Bcc-modtagere til søgning
+              href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+            - name: Dekryptering i eDiscovery-værktøjer
+              href: ediscovery-decryption.md
+            - name: Indsaml diagnosticeringsoplysninger i eDiscovery
+              href: ediscovery-diagnostic-info.md
+            - name: Prøv en mislykket søgning igen
+              href: retry-failed-content-search.md
+            - name: Brug Microsoft Edge til at downloade søgeresultater
+              href: configure-edge-to-export-search-results.md
+            - name: Søg efter eDiscovery-aktiviteter i overvågningsloggen
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+    - name: Avanceret eDiscovery
+      items:
+        - name: Oversigt
+          href: overview-ediscovery-20.md
+        - name: Konfigurer avanceret eDiscovery
+          href: get-started-with-advanced-ediscovery.md
+        - name: Opret en Avanceret eDiscovery-sag
+          items:
+            - name: Opret og administrer en sag
+              href: create-and-manage-advanced-ediscoveryv2-case.md
+            - name: Brug det nye sagsformat
+              href: advanced-ediscovery-new-case-format.md
+        - name: Avanceret eDiscovery-arbejdsproces til Teams-indhold
+          href: teams-workflow-in-advanced-ediscovery.md
+        - name: Administrer ansvarlige og datakilder uden ansvarlige
+          href: managing-custodians.md
+          items:
+            - name: Føj ansvarlige til en sag
+              href: add-custodians-to-case.md
+            - name: Importér flere ansvarlige til en sag
+              href: bulk-add-custodians.md
+            - name: Administrer ansvarlige
+              href: manage-new-custodians.md
+            - name: Vis aktivitet for ansvarlig
+              href: view-custodian-activity.md
+            - name: Føj datakilder uden ansvarlige til en sag
+              href: non-custodial-data-sources.md
+        - name: Administrer kommunikation med ansvarlige
+          href: managing-custodian-communications.md
+          items:
+            - name: Opret en meddelelse om fastfrysning
+              href: create-hold-notification.md
+            - name: Brug kommunikationseditoren
+              href: using-communications-editor.md
+            - name: Administrer meddelelser om fastfrysning
+              href: manage-hold-notification.md
+            - name: Anerkend en meddelelse om fastfrysning
+              href: acknowledge-hold-notification.md
+            - name: Administrer den udstedende officer
+              href: advanced-ediscovery-issuing-officers.md
+            - name: Administrer kommunikationsskabeloner for ansvarlige
+              href: advanced-ediscovery-communications-library.md
+        - name: Administrer fastfrysninger
+          href: managing-holds.md
+          items:
+            - name: Brug et script til at oprette en rapport over fastfrysninger
+              href: create-a-report-on-holds-in-ediscovery-cases.md
+        - name: Administrer behandlingsfejl
+          href: processing-data-for-case.md
+          items:
+            - name: Avanceret indeksering af indhold fra den ansvarlige
+              href: indexing-custodian-data.md
+            - name: Fejlafhjælpning under behandling af indhold
+              href: error-remediation-when-processing-data-in-advanced-ediscovery.md
+            - name: Afhjælpning af fejl med et enkelt element
+              href: single-item-error-remediation.md
+        - name: Indsaml indhold til en sag
+          items:
+            - name: Få mere at vide om samlinger
+              href: collections-overview.md
+            - name: Opret en kladdesamling
+              href: create-draft-collection.md
+            - name: Bekræft en kladdesamling til et valideringssæt
+              href: commit-draft-collection.md
+            - name: Indsamlingsstatistik og -rapporter
+              href: collection-statistics-reports.md
+            - name: Opret søgeforespørgsler til samlinger
+              href: building-search-queries.md
+            - name: Brug KQL-editoren til at oprette søgeforespørgsler
+              href: ediscovery-kql-editor.md
+            - name: Nøgleordsforespørgsler og søgebetingelser
+              href: keyword-queries-and-search-conditions.md
+            - name: Indsaml vedhæftede filer i skyen
+              href: advanced-ediscovery-cloud-attachments.md
+        - name: Administrer valideringssæt
+          href: managing-review-sets.md
+          items:
+            - name: Indlæs ikke-Office 365-data i et valideringssæt
+              href: load-non-Office-365-data-into-a-review-set.md
+            - name: Føj data til et andet valideringssæt
+              href: add-data-to-review-set-from-another-review-set.md
+        - name: Gennemse sagsindhold
+          items:
+            - name: Forespørg om og filtrer indhold i et valideringssæt
+              href: review-set-search.md
+            - name: Markér dokumenter i et valideringssæt
+              href: tagging-documents.md
+            - name: Få vist dokumenter i et valideringssæt
+              href: view-documents-in-review-set.md
+            - name: Brug dashboardet til valideringssæt
+              href: advanced-ediscovery-dashboard.md
+        - name: Analysér sagsindhold
+          href: analyzing-data-in-review-set.md
+          items:
+            - name: Registrering af næsten dubletter
+              href: near-duplicate-detection-in-advanced-ediscovery.md
+            - name: Mailtrådning
+              href: email-threading-in-advanced-ediscovery.md
+            - name: Temaer
+              href: themes-in-advanced-ediscovery.md
+        - name: Brug af forudsigende kodning (prøveversion)
+          items:
+            - name: Hurtig start – forudsigende kodning
+              href: predictive-coding-quick-start.md
+            - name: Få mere at vide om forudsigende kodning
+              href: predictive-coding-overview.md
+            - name: Opret en forudsigende kodningsmodel
+              href: predictive-coding-create-model.md
+            - name: Oplær en forudsigende kodningsmodel
+              href: predictive-coding-train-model.md
+            - name: Anvend filter for forudsigelsesscore
+              href: predictive-coding-apply-prediction-filter.md
+            - name: Reference til forudsigende kodning
+              href: predictive-coding-reference.md
+        - name: Eksportere sagsindhold
+          href: exporting-data-ediscover20.md
+          items:
+            - name: Download dokumenter fra et valideringssæt
+              href: download-documents-from-review-set.md
+            - name: Eksportér dokumenter fra et valideringssæt
+              href: export-documents-from-review-set.md
+            - name: Eksportér dokumenter til en Azure Storage-konto
+              href: download-export-jobs.md
+        - name: Administrer job
+          href: managing-jobs-ediscovery20.md
+        - name: Konfigurer sagsindstillinger
+          items:
+            - name: Luk eller slet en sag
+              href: close-or-delete-case.md
+            - name: Tilføj eller fjern medlemmer fra en sag
+              href: add-or-remove-members-from-a-case-in-advanced-ediscovery.md
+            - name: Konfigurer indstillinger for søgning og analyse
+              href: configure-search-and-analytics-settings-in-advanced-ediscovery.md
+        - name: Avanceret eDiscovery-reference
+          items:
+            - name: Avancerede eDiscovery-grænser
+              href: limits-ediscovery20.md
+            - name: Understøttede filtyper
+              href: supported-filetypes-ediscovery20.md
+            - name: Dokumentmetadatafelter
+              href: document-metadata-fields-in-advanced-ediscovery.md
+            - name: Konfigurer historiske versioner
+              href: advanced-ediscovery-historical-versions.md
+            - name: Konfiguration af gensidig tavshedsret og -pligt mellem klient og advokat er deaktiveret
+              href: attorney-privilege-detection.md
+            - name: Tildel eDiscovery-tilladelser
+              href: assign-ediscovery-permissions.md
+            - name: Nøgleordsforespørgsler og søgebetingelser
+              href: keyword-queries-and-search-conditions.md
+            - name: Konfigurer grænser for overholdelse af regler og standarder
+              href: set-up-compliance-boundaries.md
+            - name: Konfigurer filtrering af søgetilladelser
+              href: permissions-filtering-for-content-search.md
+            - name: 'Indhold, der er gemt i postkasser for eDiscovery'
+              href: what-is-stored-in-exo-mailbox.md
+            - name: Dekryptering i eDiscovery-værktøjer
+              href: ediscovery-decryption.md
+            - name: 'Valideringssæt for samtaler '
+              href: conversation-review-sets.md
+            - name: Understøttelse af CJK-sprog
+              href: ediscovery-cjk-support.md
+            - name: Indsaml diagnosticeringsoplysninger i eDiscovery
+              href: ediscovery-diagnostic-info.md
+            - name: Søg efter eDiscovery-aktiviteter i overvågningsloggen
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+            - name: Fejlfinding af AzCopy
+              href: troubleshooting-azcopy.md
+    - name: Ophør af ældre eDiscovery-værktøjer
+      href: legacy-ediscovery-retirement.md
+- name: Administrer fastfrysninger
+  items:
+    - name: 'Sådan identificeres den type fastfrysning, der er placeret på en postkasse'
+      href: identify-a-hold-on-an-exchange-online-mailbox.md
+    - name: Slet elementer i mappen genoprettelige elementer i fastfrosne postkasser
+      href: delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md
+    - name: Øg kvoten for genoprettelige elementer for fastfrosne postkasser
+      href: increase-the-recoverable-quota-for-mailboxes-on-hold.md
+    - name: Opret en retslig fastfrysning
+      href: create-a-litigation-hold.md
+    - name: Bevar Bcc og udvidede modtagere af distributionsgrupper
+      href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+- name: Administrer overvågnings- og underretningspolitikker
+  items:
+    - name: Microsoft 365-overvågningsløsninger
+      href: auditing-solutions-overview.md
+    - name: Grundlæggende overvågning
+      items:
+        - name: Konfigurer grundlæggende overvågning
+          href: set-up-basic-audit.md
+        - name: Søgning i overvågningsloggen
+          href: search-the-audit-log-in-security-and-compliance.md
+        - name: 'Eksportér, konfigurer og få vist data fra overvågningsloggen'
+          href: export-view-audit-log-records.md
+        - name: Brug et PowerShell-script til at søge i overvågningsloggen
+          href: audit-log-search-script.md
+        - name: Detaljerede egenskaber i overvågningsloggen
+          href: detailed-properties-in-the-office-365-audit-log.md
+        - name: Slå overvågning til eller fra
+          href: turn-audit-log-search-on-or-off.md
+        - name: Brug overvågningsloggen til at undersøge almindelige problemer
+          href: auditing-troubleshooting-scenarios.md
+        - name: Brug overvågning af deling i overvågningsloggen
+          href: use-sharing-auditing.md
+        - name: Office 365 Management Activity API
+          items:
+            - name: Reference til Office 365 Management Activity API
+              href: /office/office-365-management-api/office-365-management-activity-api-reference
+            - name: Skema til Office 365 Management Activity API
+              href: /office/office-365-management-api/office-365-management-activity-api-schema
+            - name: Ofte stillede spørgsmål og fejlfinding i forbindelse med Office 365 Management Activity API
+              href: /office/office-365-management-api/troubleshooting-the-office-365-management-activity-api
+    - name: Avanceret overvågning
+      items:
+        - name: Oversigt over Avanceret overvågning
+          href: advanced-audit.md
+        - name: Konfigurer Avanceret overvågning
+          href: set-up-advanced-audit.md
+        - name: Administrer opbevaringspolitikker for overvågningslog
+          href: audit-log-retention-policies.md
+        - name: Brug Avanceret overvågning til at undersøge kompromitterede konti
+          href: mailitemsaccessed-forensics-investigations.md
+    - name: Postkasseovervågning
+      href: enable-mailbox-auditing.md
+    - name: Underretningspolitikker
+      href: alert-policies.md
+- name: Administrer risici for overholdelse af regler og standarder
+  items:
+    - name: Overholdelsesstyring
+      items:
+        - name: Få mere at vide om Overholdelsesstyring
+          href: compliance-manager.md
+        - name: Nyheder i Overholdelsesstyring
+          href: compliance-manager-whats-new.md
+        - name: Hurtig start til Overholdelsesstyring
+          href: compliance-manager-quickstart.md
+        - name: Kom i gang med Overholdelsesstyring
+          href: compliance-manager-setup.md
+        - name: Byg og administrer vurderinger
+          href: compliance-manager-assessments.md
+        - name: Få mere at vide om vurderingsskabeloner
+          href: compliance-manager-templates.md
+        - name: Opret vurderingsskabeloner
+          href: compliance-manager-templates-create.md
+        - name: Udvid vurderingsskabeloner
+          href: compliance-manager-templates-extend.md
+        - name: Rediger vurderingsskabeloner
+          href: compliance-manager-templates-modify.md
+        - name: Formatér skabelondata i Excel
+          href: compliance-manager-templates-format-excel.md
+        - name: Liste over skabeloner til Overholdelsesstyring
+          href: compliance-manager-templates-list.md
+        - name: Arbejde med forbedringshandlinger
+          href: compliance-manager-improvement-actions.md
+        - name: Opret og administrer underretningspolitikker
+          href: compliance-manager-alert-policies.md
+        - name: 'Få mere at vide om, hvordan din overholdelsesscore beregnes'
+          href: compliance-score-calculation.md
+        - name: Værktøj til analyse af overholdelseskonfiguration
+          href: compliance-manager-mcca.md
+        - name: Ofte stillede spørgsmål (FAQ)
+          href: compliance-manager-faq.yml
+    - name: Microsoft Service Trust Portal
+      href: get-started-with-service-trust-portal.md
+    - name: Branchespecifik vejledning
+      items:
+        - name: Sikkerhed og overholdelse af regler og standarder for den finansielle sektor
+          href: ../solutions/financial-services-secure-collaboration.md
+        - name: Sikkerhed og overholdelse af regler og standarder for energitjenester
+          href: ../solutions/energy-secure-collaboration.md
+- name: Egenskaber for hybrid overholdelse af regler og standarder
+  items:
+    - name: Exchange Online-mailkryptering med AD RMS
+      href: information-rights-management-in-exchange-online.md
+      items:
+        - name: Konfigurer IRM til at bruge en lokal AD RMS-server
+          href: configure-irm-to-use-an-on-premises-ad-rms-server.md
+- name: "Microsoft\_365 Enterprise"
+  href: ../enterprise/index.yml
+- name: Microsoft 365-sikkerhed
+  href: ../security/index.yml
+- name: Microsoft 365 Apps for business
+  href: /office365/admin/admin-home
+- name: Microsoft Priva
+  href: /privacy/priva/
+- name: Fejlfinding
+  href: /office365/troubleshoot/microsoft-365-compliance-welcome

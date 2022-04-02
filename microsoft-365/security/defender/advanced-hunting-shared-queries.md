@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 06952be112f4eb28867a4a0cd4bffbee0c664b5c
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 96db917808094487039a13740cba80ad751f062f
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63592604"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755509"
 ---
 # <a name="use-shared-queries-in-advanced-hunting"></a>Brug delte forespørgsler i avanceret jagt
 
@@ -38,7 +38,7 @@ ms.locfileid: "63592604"
 
 [Avancerede](advanced-hunting-overview.md) forespørgselsforespørgsler kan deles mellem brugere i samme organisation. Du kan også finde forespørgsler, der deles offentligt på GitHub. Disse forespørgsler gør det muligt for dig hurtigt at følge bestemte scenarier med trusselssøgning uden at skulle skrive forespørgsler fra bunden.
 
-![Billede af delte forespørgsler.](../../media/shared-query-1.png)
+:::image type="content" source="../../media/shared-query-1.png" alt-text="Oplysningerne om delte forespørgsler i Microsoft 365 Defender portalen" lightbox="../../media/shared-query-1.png":::
 
 ## <a name="save-modify-and-share-a-query"></a>Gem, rediger og del en forespørgsel
 Du kan gemme en ny eller eksisterende forespørgsel, så den kun er tilgængelig for dig eller delt med andre brugere i organisationen. 
@@ -49,7 +49,7 @@ Du kan gemme en ny eller eksisterende forespørgsel, så den kun er tilgængelig
     
 3. Angiv et navn til forespørgslen. 
 
-   ![Billede af at gemme en forespørgsel.](../../media/shared-query-2.png)
+   :::image type="content" source="../../media/shared-query-2.png" alt-text="Den nye forespørgsel, der er ved at blive gemt i Microsoft 365 Defender portal" lightbox="../../media/shared-query-2.png":::
 
 4. Vælg den mappe, hvor du vil gemme forespørgslen.
     - **Delte forespørgsler –** delt med alle brugere i organisationen
@@ -60,7 +60,7 @@ Du kan gemme en ny eller eksisterende forespørgsel, så den kun er tilgængelig
 ## <a name="delete-or-rename-a-query"></a>Slette eller omdøbe en forespørgsel
 1. Markér de tre prik til højre for en forespørgsel, du vil omdøbe eller slette.
 
-    ![Billede af sletteforespørgsel.](../../media/shared-query-3.png)
+    :::image type="content" source="../../media/shared-query-3.png" alt-text="Indstillingerne for en delt forespørgsel på siden Avanceret ræv på Microsoft 365 Defender portal" lightbox="../../media/shared-query-3.png":::
 
 2. Vælg **Slet,** og bekræft sletningen. Eller vælg **Omdøb** , og angiv et nyt navn til forespørgslen.
 

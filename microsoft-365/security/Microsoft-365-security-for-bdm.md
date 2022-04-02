@@ -15,59 +15,61 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-ms.openlocfilehash: 41b38a3e51644859a1ef10c514b3b6f31d44e76e
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 59b74fdc13cc21f0266e0f110935f76656827f65
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63587543"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755175"
 ---
 # <a name="microsoft-365-security-for-business-decision-makers-bdms"></a>Microsoft 365 Security for Business Decision Makers (BDMs)
 
 I denne artikel beskrives nogle af de mest almindelige scenarier med trusler og angreb, som organisationer i øjeblikket står over for for deres Microsoft 365-miljøer, og anbefalede handlinger til at mindske disse risici. Selvom Microsoft 365 leveres med en lang række forudkonfigurerede sikkerhedsfunktioner, kræver det også, at du som kunde tager ansvaret for at sikre dine egne identiteter, data og enheder, der bruges til at få adgang til skytjenester. Denne vejledning er udviklet af Kozeta Beam (Microsoft Cloud Security Architect) og Taragaraj Sundararaplatform (Microsoft Senior Consultant).
 
-Denne artikel er organiseret efter prioritet af arbejde, startende med at beskytte disse konti, der bruges til at administrere de mest kritiske tjenester og aktiver, f.eks din lejer, mail og SharePoint. Det er en metodisk metode til at nærmer sikkerhed og arbejder sammen med følgende regneark, så du kan spore fremskridt med interessenter og teams i hele organisationen: [Microsoft 365 sikkerhed for regneark med BDMs](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx). 
+Denne artikel er organiseret efter prioritet af arbejde, startende med at beskytte disse konti, der bruges til at administrere de mest kritiske tjenester og aktiver, f.eks din lejer, mail og SharePoint. Det er en metodisk metode til at nærmer sikkerhed og arbejder sammen med følgende regneark, så du kan spore fremskridt med interessenter og teams i hele organisationen: [Microsoft 365 sikkerhed for regneark med BDMs](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx).
 
-[![Miniaturebillede med Microsoft 365 regneark med BDM-sikkerhedsanbefalinger.](../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx)
+:::image type="content" source="../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png" alt-text="Et eksempel på Microsoft 365 BDM security recommendation spreadhsheet" lightbox="../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png":::
 
 Microsoft giver dig Secure Score-værktøjet i din lejer, så du automatisk kan analysere din sikkerhedsstilling ud fra dine almindelige aktiviteter, tildele et resultat og komme med anbefalinger til forbedring af sikkerheden. Før du tager de anbefalede handlinger i denne artikel, skal du notere dig dine aktuelle resultater og anbefalinger. De handlinger, der anbefales i denne artikel, øger din score. Målet er ikke at opnå det højeste antal point, men at være opmærksom på mulighederne for at beskytte dit miljø på en måde, der ikke påvirker produktiviteten for dine brugere negativt. Se [Microsoft Secure Score](defender/microsoft-secure-score.md).
 
-![Følg disse trin for at reducere risici for din virksomhed.](../media/security/security-for-bdms-overview.png)
+:::image type="content" source="../media/security/security-for-bdms-overview.png" alt-text="Et eksempel på Secure Score-værktøjet, der leverer målinger for virksomhedsmiljøer på Microsoft 365 Defender-portalen" lightbox="../media/security/security-for-bdms-overview.png":::
 
-En ting mere, før vi går i gang. . . Sørg for at [aktivere overvågningsloggen](../compliance/search-the-audit-log-in-security-and-compliance.md). Du skal bruge disse data senere, i tilfælde af at du har brug for at undersøge en hændelse eller et brud. 
+En ting mere, før vi går i gang. . . Sørg for at [aktivere overvågningsloggen](../compliance/search-the-audit-log-in-security-and-compliance.md). Du skal bruge disse data senere, i tilfælde af at du har brug for at undersøge en hændelse eller et brud.
 
 ## <a name="protect-privileged-accounts"></a>Beskyt konti med rettigheder
 
-Som det første trin anbefaler vi at sikre, at kritiske konti i miljøet får et ekstra lag beskyttelse, da disse konti har adgang og tilladelser til at administrere og ændre kritiske tjenester og ressourcer, hvilket kan påvirke hele organisationen negativt, hvis de kompromitteres. Beskyttelse af privilegerede konti er en af de mest effektive måder at beskytte sig mod en hacker, der forsøger at øge tilladelserne for en kompromitteret konto til en administrativ person. 
+Som det første trin anbefaler vi at sikre, at kritiske konti i miljøet får et ekstra lag beskyttelse, da disse konti har adgang og tilladelser til at administrere og ændre kritiske tjenester og ressourcer, hvilket kan påvirke hele organisationen negativt, hvis de kompromitteres. Beskyttelse af privilegerede konti er en af de mest effektive måder at beskytte sig mod en hacker, der forsøger at øge tilladelserne for en kompromitteret konto til en administrativ person.
 
 |Anbefaling  |E3 |E5  |
 |---------|---------|---------|
-|Gennemtving multifaktorgodkendelse (MFA) for alle administrative konti.|![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)| 
+|Gennemtving multifaktorgodkendelse (MFA) for alle administrative konti.|![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)|
 |Implementer Azure Active Directory (Azure AD) Privileged Identity Management (PIM) for at anvende just-in-time-privilegeret adgang til Azure AD og Azure-ressourcer. Du kan også finde ud af, hvem der har adgang til og gennemgår adgangspriviligerede rettigheder.|         | ![grønt afkrydsning.](../media/green-check-mark.png)|
 |Implementer adgangsstyring med rettigheder til at administrere detaljeret adgangskontrol over privilegerede administratoropgaver Office 365. |         | ![grønt afkrydsning.](../media/green-check-mark.png)|
-|Konfigurer og brug privileged access workstations (AFSER) til at administrere tjenester. Brug ikke de samme arbejdsstationer til at søge på internettet og tjekke mails, der ikke er relateret til din administrative konto.|  ![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png) | 
+|Konfigurer og brug privileged access workstations (AFSER) til at administrere tjenester. Brug ikke de samme arbejdsstationer til at søge på internettet og tjekke mails, der ikke er relateret til din administrative konto.|  !![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)::: |
 
 Følgende diagram illustrerer disse funktioner.
-![Anbefalede funktioner til beskyttelse af privilegerede konti.](../media/m365-security-bdm-illustrations-privileged-accounts.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-privileged-accounts.png" alt-text="Et eksempel på de funktioner, der tilbydes af værktøjer til beskyttelse af privilegerede konti" lightbox="../media/m365-security-bdm-illustrations-privileged-accounts.png":::
 
 Yderligere anbefalinger:
-- Sørg for, at konti, der synkroniseres fra det lokale miljø, ikke tildeles administratorroller til skytjenester. Dette hjælper med at forhindre en hacker i at anvende lokale konti for at få administrativ adgang til skytjenester. 
+
+- Sørg for, at konti, der synkroniseres fra det lokale miljø, ikke tildeles administratorroller til skytjenester. Dette hjælper med at forhindre en hacker i at anvende lokale konti for at få administrativ adgang til skytjenester.
 - Sørg for, at tjenestekonti ikke tildeles administratorroller. Disse konti overvåges ofte ikke og angives med adgangskoder, der ikke udløber. Start med at sikre, at kontiene AADConnect og ADFS ikke er globale administratorer som standard.
-- Fjern licenser fra administratorkonti. Medmindre der er en bestemt use case til at tildele licenser til bestemte administratorkonti, skal du fjerne licenser fra disse konti. 
+- Fjern licenser fra administratorkonti. Medmindre der er en bestemt use case til at tildele licenser til bestemte administratorkonti, skal du fjerne licenser fra disse konti.
 
 ## <a name="reduce-the-surface-of-attack"></a>Reducer angrebsoverfladen
 
 Det næste fokusområde er at reducere angrebsoverfladen. Dette kan gøres med minimalt arbejde og indvirkning for dine brugere og tjenester. Ved at reducere angrebsområdet har hackere færre metoder til at starte et angreb mod din organisation.
 
 Her er nogle eksempler:
-- Deaktiver protokollerne POP3, IMAP og SMTP. De fleste moderne organisationer bruger ikke længere disse ældre protokoller. Du kan roligt deaktivere disse og kun tillade undtagelser efter behov. 
-- Reducer og bevar antallet af globale administratorer i lejeren til det absolutte minimum, der kræves. Dette reducerer direkte angrebsområdet for alle Cloud-programmer. 
-- Tilbagetrækning af servere og programmer, der ikke længere bruges i dit miljø. 
-- Implementer en proces til deaktivering og sletning af konti, der ikke længere bruges. 
+
+- Deaktiver protokollerne POP3, IMAP og SMTP. De fleste moderne organisationer bruger ikke længere disse ældre protokoller. Du kan roligt deaktivere disse og kun tillade undtagelser efter behov.
+- Reducer og bevar antallet af globale administratorer i lejeren til det absolutte minimum, der kræves. Dette reducerer direkte angrebsområdet for alle Cloud-programmer.
+- Tilbagetrækning af servere og programmer, der ikke længere bruges i dit miljø.
+- Implementer en proces til deaktivering og sletning af konti, der ikke længere bruges.
 
 ## <a name="protect-against-known-threats"></a>Beskyt dig mod kendte trusler
 
-Kendte trusler omfatter malware, kompromitterede konti og phishing. Nogle beskyttelser mod disse trusler kan gennemføres hurtigt uden direkte indvirkning på dine brugere, mens andre kræver mere planlægning og brugerkurser. 
+Kendte trusler omfatter malware, kompromitterede konti og phishing. Nogle beskyttelser mod disse trusler kan gennemføres hurtigt uden direkte indvirkning på dine brugere, mens andre kræver mere planlægning og brugerkurser.
 
 |Anbefaling  |E3  |E5  |
 |---------|---------|---------|
@@ -79,45 +81,38 @@ Kendte trusler omfatter malware, kompromitterede konti og phishing. Nogle beskyt
 |**Bloker forbindelser fra lande, du ikke handler med**. Opret en politik for betinget adgang til Azure AD for at blokere eventuelle forbindelser, der kommer fra disse lande, så der effektivt oprettes en geofirewall omkring din lejer.| |![grønt afkrydsning.](../media/green-check-mark.png)|
 
 Følgende diagram illustrerer disse funktioner.
-![Anbefalede funktioner til beskyttelse mod kendte trusler.](../media/m365-security-bdm-illustrations-known-threats.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-known-threats.png" alt-text="Et eksempel på de forskellige funktioner, der tilbydes af værktøjer til at beskytte dig mod trusler fra forskellige typer" lightbox="../media/m365-security-bdm-illustrations-known-threats.png":::
 
 ## <a name="protect-against-unknown-threats"></a>Beskyt dig mod ukendte trusler
 
-Når du har føjet ekstra beskyttelse til dine privilegerede konti og beskytter dig mod kendte angreb, kan du forskyde din opmærksomhed mod ukendte trusler. De mere målrettede og avancerede modgangsgrupper bruger innovative og nye, ukendte metoder til at angreb organisationer. Med Microsofts enorme telemetri af data, der er indsamlet over millioner af enheder, programmer og tjenester, kan vi udføre Defender for Office 365 på Windows, Office 365 og Azure for at forhindre Zero-Day-angreb, benytte sandkassemiljøer og kontrollere gyldigheden, før du tillader adgang til dit indhold. 
-
+Når du har føjet ekstra beskyttelse til dine privilegerede konti og beskytter dig mod kendte angreb, kan du forskyde din opmærksomhed mod ukendte trusler. De mere målrettede og avancerede modgangsgrupper bruger innovative og nye, ukendte metoder til at angreb organisationer. Med Microsofts enorme telemetri af data, der er indsamlet over millioner af enheder, programmer og tjenester, kan vi udføre Defender for Office 365 på Windows, Office 365 og Azure for at forhindre Zero-Day-angreb, benytte sandkassemiljøer og kontrollere gyldigheden, før du tillader adgang til dit indhold.
 
 |Anbefaling  |E3  |E5  |
 |---------|---------|---------|
-|**Konfigurer Microsoft Defender for Office 365**:<br>* Pengeskab vedhæftede filer<br>* Pengeskab Links<br>* Microsoft Defender til slutpunkt for SharePoint, OneDrive og Microsoft Teams<br>* Antiphishing i Defender for Office 365 beskyttelse|         |![grønt afkrydsning.](../media/green-check-mark.png) |
-|**Konfigurer Microsoft Defender til slutpunktsfunktioner**:<br>* Windows Defender Antivirus <br>* Exploit protection <br> * Reduktion af angrebsoverfladen <br> * Hardwarebaseret isolation <br>* Kontrolleret mappeadgang     |         |![grønt afkrydsning.](../media/green-check-mark.png) |
+|**Konfigurer Microsoft Defender for Office 365**:<br>*Pengeskab vedhæftede filer<br>* Pengeskab links    <br>*Microsoft Defender til Slutpunkt for SharePoint, OneDrive og Microsoft Teams<br>* Antiphishing i Defender for Office 365 beskyttelse|         |![grønt afkrydsning.](../media/green-check-mark.png) |
+|**Konfigurer Microsoft Defender til slutpunktsfunktioner**:<br>*<br>Windows Defender Antivirus* Exploit Protection <br> *Reduktion af angrebsoverfladen <br>*    Hardwarebaseret isolation <br>* Kontrolleret mappeadgang     |         |![grønt afkrydsning.](../media/green-check-mark.png) |
 |**Brug Microsoft Defender til skyapps** til at opdage SaaS-apps og begynde at bruge adfærdsanalyser og registrering af unormalt indhold. |         |![grønt afkrydsning.](../media/green-check-mark.png) |
 
 Følgende diagram illustrerer disse funktioner.
-![Anbefalede funktioner til beskyttelse mod ukendte trusler.](../media/m365-security-bdm-illustrations-unknown-threats.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-unknown-threats.png" alt-text="Et eksempel på de funktioner, der tilbydes af værktøjer til at beskytte dig mod ukendte trusler" lightbox="../media/m365-security-bdm-illustrations-unknown-threats.png":::
 
 Yderligere anbefalinger:
+
 - Sikre partnerkanalkommunikation, f.eks. mails, der bruger TLS.
 - Åbn Teams sammenslutning til de partnere, du kommunikerer med.
-- Føj ikke afsenderdomæner, individuelle afsendere eller kilde-IP'er til din tilladelsesliste, da dette gør det muligt for disse at tilsidesætte spam- og malwarekontroller – En almindelig fremgangsmåde med kunder er at tilføje deres egne accepterede domæner eller mange andre domæner, hvor der kan være rapporteret problemer med mailflow på tilladelseslisten. Tilføj ikke domæner på listen Spam- og forbindelsesfiltrering, da dette potentielt tilsidesætter alle spamkontroller. 
+- Føj ikke afsenderdomæner, individuelle afsendere eller kilde-IP'er til din tilladelsesliste, da dette gør det muligt for disse at tilsidesætte spam- og malwarekontroller – En almindelig fremgangsmåde med kunder er at tilføje deres egne accepterede domæner eller mange andre domæner, hvor der kan være rapporteret problemer med mailflow på tilladelseslisten. Tilføj ikke domæner på listen Spam- og forbindelsesfiltrering, da dette potentielt tilsidesætter alle spamkontroller.
 - Aktivér udgående spammeddelelser – Aktivér udgående spammeddelelser til en distributionsliste internt til Helpdesk- eller it-administratorteamet for at rapportere, hvis nogen af de interne brugere sender spammails eksternt. Dette kan være en indikator for, at kontoen er blevet kompromitteret.
-- Deaktiver Remote PowerShell for alle brugere – Remote PowerShell bruges hovedsageligt af administratorer til at få adgang til tjenester til administrative formål eller programmeringsmæssige API-adgang. Vi anbefaler, at du deaktiverer denne indstilling for brugere, der ikke er administratorer, for at undgå genvalg, medmindre de har forretningsmæssige krav om at få adgang til den. 
-- Bloker adgang til Microsoft Azure-administrationsportalen for alle ikke-administratorer. Du kan gøre dette ved at oprette en regel for betinget adgang for at blokere alle brugere, undtagen administratorer. 
-
+- Deaktiver Remote PowerShell for alle brugere – Remote PowerShell bruges hovedsageligt af administratorer til at få adgang til tjenester til administrative formål eller programmeringsmæssige API-adgang. Vi anbefaler, at du deaktiverer denne indstilling for brugere, der ikke er administratorer, for at undgå genvalg, medmindre de har forretningsmæssige krav om at få adgang til den.
+- Bloker adgang til Microsoft Azure-administrationsportalen for alle ikke-administratorer. Du kan gøre dette ved at oprette en regel for betinget adgang for at blokere alle brugere, undtagen administratorer.
 
 ## <a name="assume-breach"></a>Antag misligholdelse
 
-Microsoft træffer alle mulige foranstaltninger for at forhindre trusler og angreb, men vi anbefaler, at du altid arbejder under mennesker med mennesker med fokus på "Antag brud". Selvom det er lykkedes en hacker at komme ud i miljøet, skal vi sikre os, at de ikke kan eksfiltrere data eller identitetsoplysninger fra miljøet. Vi anbefaler derfor, at du aktiverer beskyttelse mod følsomme datalækager som f.eks. CPR-numre, kreditkortnumre, andre personlige oplysninger og andre fortrolige oplysninger på organisationsniveau. 
-
-The "Assume Breach" mindset requires implementing a Zero Trust network strategy, which means users are not fully trusted just because they are internal to the network. Som en del af autorisationen af, hvad brugerne kan gøre, angives sæt af betingelser, og når disse betingelser er opfyldt, gennemtvinges visse kontrolelementer. Betingelser kan omfatte status for enhedstilstand, adgang til program, handlinger, der udføres, og brugerrisici. Eksempelvis bør en enhedsregistreringshandling altid udløse MFA-godkendelse for at sikre, at der ikke føjes nogen rougeenheder til dit miljø. 
-
-A Zero Trust network strategy also requires that you know where your information is stored and apply appropriate controls for classification, protection, and retention. For effektivt at beskytte dine vigtigste og mest følsomme aktiver skal du først identificere, hvor disse er placeret og lageropgørelsen, hvilket kan være en udfordring. Dernæst skal du samarbejde med din organisation om at definere en strategi. Definition af et klassificeringsskema for en organisation og konfiguration af politikker, etiketter og betingelser kræver nøje planlægning og forberedelse. Det er vigtigt at forstå, at dette ikke er en it-dreven proces. Sørg for at arbejde sammen med dit juridiske team og overholdelsesteamet om at udarbejde et passende klassificerings- og etiketskema til din organisations data.
-
-Microsoft 365 funktioner til beskyttelse af oplysninger kan hjælpe dig med at finde ud af, hvilke oplysninger du har, hvor de gemmes, og hvilke oplysninger der kræver ekstra beskyttelse. Beskyttelse af oplysninger er en kontinuerlig proces, og Microsoft 365-funktioner giver dig overblik over, hvordan brugerne bruger og distribuerer følsomme oplysninger, hvor dine oplysninger i øjeblikket er gemt, og hvor de flyder. Du kan også se, hvordan brugere, der håndterer oplysninger, der er regulerede, for at sikre, at de korrekte etiketter og beskyttelse anvendes.
+Microsoft træffer alle mulige foranstaltninger for at forhindre trusler og angreb, men vi anbefaler, at du altid arbejder under mennesker med mennesker med fokus på "Antag brud". Selvom det er lykkedes en hacker at komme ud i miljøet, skal vi sikre os, at de ikke kan eksfiltrere data eller identitetsoplysninger fra miljøet. Vi anbefaler derfor, at du aktiverer beskyttelse mod følsomme datalækager som f.eks. CPR-numre, kreditkortnumre, andre personlige oplysninger og andre fortrolige oplysninger på organisationsniveau.
 
 
 |Anbefaling |E3|E5 |
 |---------|---------|---------|
-|**Gennemse og optimer din betingede adgang og relaterede politikker, så de passer til dine målsætninger for et Zero Trust-netværk**. Beskyttelse mod kendte trusler omfatter implementering af et sæt [anbefalede politikker](./office-365-security/microsoft-365-policies-configurations.md). Gennemse implementeringen af disse politikker for at sikre, at du beskytter dine apps og data mod hackere, der har fået adgang til dit netværk. Den anbefalede beskyttelsespolitik for apps i Intune til Windows 10 aktiverer Windows Information Protection (WIP). WIP beskytter mod utilsigtede lækager af din organisations data gennem apps og tjenester som mail, sociale medier og den offentlige sky. |         |![grønt afkrydsning.](../media/green-check-mark.png)|
+|**Gennemse og optimer din betingede adgang og relaterede politikker for at tilpasse dig dine målsætninger for et netværk uden tillid**. Beskyttelse mod kendte trusler omfatter implementering af et sæt [anbefalede politikker](./office-365-security/microsoft-365-policies-configurations.md). Gennemse implementeringen af disse politikker for at sikre, at du beskytter dine apps og data mod hackere, der har fået adgang til dit netværk. Den anbefalede beskyttelsespolitik for apps i Intune til Windows 10 aktiverer Windows Information Protection (WIP). WIP beskytter mod utilsigtede lækager af din organisations data gennem apps og tjenester som mail, sociale medier og den offentlige sky. |         |![grønt afkrydsning.](../media/green-check-mark.png)|
 |**Deaktiver ekstern videresendelse af mail**. Hackere, der får adgang til en brugers postkasse, kan stjæle din mail ved at indstille postkassen til automatisk at videresende mails. Dette kan ske, selv uden brugerens opmærksomhed. Du kan forhindre dette ved at konfigurere en regel for mailflow.|![grønt afkrydsning.](../media/green-check-mark.png) |![grønt afkrydsning.](../media/green-check-mark.png)|
 |**Deaktiver anonym ekstern kalenderdeling**. Ekstern anonym kalenderdeling er som standard tilladt. [Deaktiver kalenderdeling](/exchange/sharing/sharing-policies/modify-a-sharing-policy) for at reducere potentiel lækage af følsomme oplysninger.|![grønt afkrydsning.](../media/green-check-mark.png) |![grønt afkrydsning.](../media/green-check-mark.png)|
 |**Konfigurer politikker til forebyggelse af datatab for følsomme data**. Opret en politik til forebyggelse af datatab i Security &amp; Compliance Center for at opdage og beskytte følsomme data som f.eks. kreditkortnumre, CPR-numre og bankkontonumre. Microsoft 365 indeholder mange foruddefinerede typer af følsomme oplysninger, som du kan bruge i politikker til forebyggelse af datatab. Du kan også oprette dine egne typer af følsomme oplysninger til følsomme data, der er brugerdefineret til dit miljø. |![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)|
@@ -128,6 +123,7 @@ Microsoft 365 funktioner til beskyttelse af oplysninger kan hjælpe dig med at f
 
 Følgende diagram illustrerer disse funktioner.
 ![Anbefalede funktioner til beskyttelse mod brud.](../media/m365-security-bdm-illustrations-assume-breach.png)
+ :::image type="content" source="../media/m365-security-bdm-illustrations-assume-breach.png" alt-text="Et eksempel på de funktioner, som værktøjet tilbyder til beskyttelse mod brud" lightbox="../media/m365-security-bdm-illustrations-assume-breach.png":::
 
 ## <a name="continuous-monitoring-and-auditing"></a>Løbende overvågning og overvågning
 
@@ -137,15 +133,15 @@ Sidst, men ikke mindst, er Løbende overvågning og overvågning af Microsoft 36
 |---------|---------|---------|
 |Kontrollér, **at overvågningsloggen** er aktiveret.|![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)|
 |**Gennemse Secure Score ugentligt** – Secure score er et centralt sted til at få adgang til din virksomheds sikkerhedsstatus og udføre handlinger baseret på anbefalinger til Secure-scorer. Det anbefales at udføre denne kontrol ugentligt.|![grønt afkrydsning.](../media/green-check-mark.png)|![grønt afkrydsning.](../media/green-check-mark.png)|
-|Brug **Microsoft Defender til Office 365** funktioner:<br>* Trusselsundersøgelse og svarmuligheder<br> * Automatiseret undersøgelse og svar |         |![grønt afkrydsning.](../media/green-check-mark.png)|
-|Brug **Microsoft Defender til slutpunkt**:<br> *    [Registrering af slutpunkt og svar](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) <br> * Automatiseret undersøgelse og afhjælpning Secure-score <br>*    [Avanceret jagt](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview) <br>|         |![grønt afkrydsning.](../media/green-check-mark.png)|
-|Brug **Microsoft Defender til skyapps** til at registrere usædvanlig adfærd på tværs af skyapps for at identificere ransomware, kompromitterede brugere eller programmer, analysér brugen af høj risiko, og afhjulpet automatisk for at begrænse risikoen for din organisation.|         |![grønt afkrydsning.](../media/green-check-mark.png)|
-|Brug **Microsoft Sentinel eller** dit aktuelle SIEM-værktøj til at overvåge for trusler på tværs af dit miljø. |         |![grønt afkrydsning](../media/green-check-mark.png)|
-|**Installer [Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp)** for at overvåge og beskytte dig mod trusler, der er målrettet dit lokale Active Directory-miljø.   |         |![grønt afkrydsning](../media/green-check-mark.png) |
+|Brug **Microsoft Defender til Office 365** funktioner:<br>*Muligheder for trusselsundersøgelse og svar<br>*    Automatiseret undersøgelse og svar |         |![grønt afkrydsning.](../media/green-check-mark.png)|
+|Brug **Microsoft Defender til slutpunkt**:<br> *[Registrering af slutpunkt og svar](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) <br>*    Automatiseret undersøgelse og afhjælpning Secure-score <br>*    [Avanceret jagt](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview) <br>|         |![grønt afkrydsning.](../media/green-check-mark.png)|
+|Brug **Microsoft Defender til skyapps** til at registrere usædvanlig adfærd på tværs af skyapps for at identificere ransomware, kompromitterede brugere eller programmer, analysér brugen af høj risiko, og afhjulpet automatisk for at begrænse risikoen for din organisation.|         |:::image type="content" source="../media/green-check-mark.png" alt-text="Eksemplet med grøn farvet markering" lightbox="../media/green-check-mark.png":::|
+|Brug **Microsoft Sentinel eller** dit aktuelle SIEM-værktøj til at overvåge for trusler på tværs af dit miljø. |         |![grønt afkrydsning.](../media/green-check-mark.png)|
+|**Installer [Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp)** for at overvåge og beskytte dig mod trusler, der er målrettet dit lokale Active Directory-miljø.   |         |![grønt afkrydsning.](../media/green-check-mark.png) |
 |Brug **Microsoft Defender for Cloud til at** overvåge for trusler på tværs af hybride og skybaserede arbejdsbelastninger. Microsoft Defender til skyen indeholder et gratis niveau af funktioner og et standardniveau af funktioner, der betales for, baseret på ressourcetimer eller transaktioner.|         |         |
 
 Følgende diagram illustrerer disse funktioner.
-![Anbefalede funktioner til kontinuerlig overvågning og overvågning.](../media/m365-security-bdm-illustrations-monitoring-auditing.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-monitoring-auditing.png" alt-text="Et eksempel på de funktioner, der tilbydes af værktøjerne til at aktivere trusselsbeskyttelse og -registrering" lightbox="../media/m365-security-bdm-illustrations-monitoring-auditing.png":::
 
 Mest anbefalede overvågningshandlinger:
 

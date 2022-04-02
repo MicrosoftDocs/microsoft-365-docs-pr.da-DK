@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: Lær, Microsoft 365 for business kan hjælpe dig med Persondataforordningen (GDPR).
-ms.openlocfilehash: 07300313cc2ead3d6efba4295a9219e00a6dc2ec
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7c8a2c402e362ede4eb9b2f4ec221dd8556052db
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590003"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403632"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR forenklet: En vejledning til din mindre virksomhed
 
@@ -133,7 +133,8 @@ Hvis du gemmer fysiske dokumenter med personlige data, skal du sørge for, at ua
 Hvis du vælger at gemme personlige data i skyen, f.eks. via Microsoft 365, har du sikkerhedsfunktioner såsom muligheden for at hjælpe dig med at administrere tilladelser til filer og mapper, centraliseret sikre placeringer til at gemme dine filer (OneDrive- eller SharePoint-dokumentbiblioteker) og datakryptering, når du sender eller henter dine filer. 
 
 #### <a name="microsoft-365-features-that-can-help"></a>Microsoft 365 funktioner, der kan hjælpe
-Du kan bruge [Konfigurer DLP-funktioner](set-up-compliance.md#watch-set-up-dlp-features) for at beskytte virksomhedens følsomme oplysninger. Du kan [konfigurere en DLP-politik,](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) der anvender [GDPR-skabelonen](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
+
+Du kan bruge [Konfigurer overholdelsesfunktioner til](set-up-compliance.md) at beskytte virksomhedens følsomme oplysninger. Overholdelsesstyring kan hjælpe dig med at komme i gang med det samme! Du kan f.eks. [konfigurere en DLP-politik](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) , der bruger [GDPR-skabelonen](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
 
 ### <a name="step-5-keep-documentation-on-your-data-processing-activities"></a>Trin 5: Hold dokumentationen om dine databehandlingsaktiviteter
 

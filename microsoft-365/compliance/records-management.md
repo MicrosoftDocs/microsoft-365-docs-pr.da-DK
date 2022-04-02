@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 description: Med datastyring i Microsoft 365 kan du anvende dine opbevaringsplaner i en filplan, der administrerer opbevaring, dataerklæring og disposition.
-ms.openlocfilehash: c7546216a935960e5c4b66b37bb3308d0a69e89e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ce00fdfc6db90b9c65051a31e8768d6cd661072d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589163"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755683"
 ---
 # <a name="learn-about-records-management-in-microsoft-365"></a>Få mere at vide om datastyring i Microsoft 365
 
@@ -87,8 +87,8 @@ En standardopbevaringsetiket har opbevaringsindstillinger og -handlinger, men ma
 |Flytte inden for objektbeholder <sup>3</sup>|Tilladt |Tilladt | Tilladt| Tilladt|
 |Flyt på tværs af <sup>objektbeholdere 3</sup>|Tilladt |Tilladt, hvis den aldrig er låst op | **Blokeret** | **Blokeret**|
 |Åbn/læs|Tilladt |Tilladt | Tilladt| Tilladt|
-|Skift etiket|Tilladt |Tilladt – kun containeradministrator | Tilladt – kun containeradministrator| **Blokeret**
-|Fjern etiket|Tilladt |Tilladt – kun containeradministrator | Tilladt – kun containeradministrator| **Blokeret**
+|Skift etiket|Tilladt |Tilladt – kun containeradministrator | **Blokeret**| **Blokeret**
+|Fjern etiket|Tilladt |Tilladt – kun containeradministrator | **Blokeret**| **Blokeret**
 
 Fodnoter:
 

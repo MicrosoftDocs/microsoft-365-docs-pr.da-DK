@@ -19,23 +19,23 @@ ms.collection:
 search.appverid:
 - MET150
 description: Onboard Windows 10 og Windows 11 enheder i Microsoft 365
-ms.openlocfilehash: dc2324f9ab8105d51730071f84397c8648c9a9de
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: ea1038554349b6c035c52bd3d3429d71d7d866bc
+ms.sourcegitcommit: 9d563faeaa50b59b0b468dbb373d886e5270f58e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63594680"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64387127"
 ---
 # <a name="onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview"></a>Onboard Windows 10 og Windows 11 enheder i Microsoft 365 oversigt
 
 **Gælder for:**
 
-- [Microsoft 365 forebyggelse af datatab på slutpunkter (DLP)](./endpoint-dlp-learn-about.md)
+- [Forebyggelse af datatab på slutpunkt (DLP)](./endpoint-dlp-learn-about.md)
 - [Insider-risikostyring](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
-Microsoft 365 forebyggelse af datatab på slutpunkter (Endpoint DLP) og insider-risikostyring kræver, at Windows 10 Windows- og Windows 11-enheder er onboardet i tjenesten, så de kan sende overvågningsdata til tjenesterne.
+Forebyggelse af datatab på slutpunkter (Endpoint DLP) og insider-risikostyring kræver, at Windows 10 Windows- og Windows 11-enheder er onboardet til tjenesten, så de kan sende overvågningsdata til tjenesterne.
  
-Microsoft 365 Slutpunkt DLP gør det muligt at overvåge Windows 10 eller Windows 11 enheder og registrere, når følsomme elementer bruges og deles. Dette giver dig den synlighed og kontrol, du skal bruge for at sikre, at de bruges og beskyttes korrekt, og for at forhindre risikabel adfærd, der kan kompromittere dem. Du kan finde flere oplysninger om alle Microsofts DLP-tilbud i [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md). Du kan få mere at vide om Endpoint DLP under [Få mere at vide om forebyggelse af datatab i Slutpunkt](endpoint-dlp-learn-about.md).
+Slutpunkt DLP gør det muligt at overvåge Windows 10 eller Windows 11 enheder og registrere, når følsomme elementer bruges og deles. Dette giver dig den synlighed og kontrol, du skal bruge for at sikre, at de bruges og beskyttes korrekt, og for at forhindre risikabel adfærd, der kan kompromittere dem. Du kan finde flere oplysninger om alle Microsofts DLP-tilbud i [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md). Du kan få mere at vide om Endpoint DLP under [Få mere at vide om forebyggelse af datatab i Slutpunkt](endpoint-dlp-learn-about.md).
 
 Insider-risikostyring bruger den fulde bredde i tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikabel brugeraktivitet. Insider-risikostyring giver dig mulighed for at definere specifikke politikker for at identificere risikoindikatorer og træffe foranstaltninger for at reducere disse risici ved hjælp af logge fra Microsoft 365 og Microsoft Graph. Få mere at vide under [Få mere at vide om insider-risikostyring i Microsoft 365](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365).
 
@@ -78,7 +78,7 @@ Sørg for, at Windows enheder, du skal bruge til onboarding, opfylder disse krav
 
 1. Skal køre Windows 10 x64 build 1809 eller nyere eller Windows 11.
 
-2. Antimalware-klientversion er 4.18.2110 eller nyere. Kontrollér din aktuelle version ved at Windows Sikkerhed appen, vælge ikonet Indstillinger og derefter vælge Om. Versionsnummeret er angivet under Klientversionen af antimalware. Opdater til den nyeste Antimalware-klientversion ved at installere Windows KB4052623.
+2. Antimalware-klientversion er 4.18.2110 eller nyere. Kontrollér din aktuelle version ved at Windows Sikkerhed appen, vælge ikonet Indstillinger og derefter vælge Om. Versionsnummeret er angivet under Klientversionen af antimalware. Opdater til den nyeste Antimalware-klientversion ved at installere Windows Update KB4052623.
 
    > [!NOTE]
    > Ingen af Windows Sikkerhed komponenter skal være aktive, men beskyttelse [i realtid og overvågning](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) af funktionsmåde) skal være aktiveret.
@@ -103,15 +103,15 @@ Sørg for, at Windows enheder, du skal bruge til onboarding, opfylder disse krav
    > - Hvis du kører Office 365 - KB 4577063 er påkrævet.
    > - Hvis du er på Månedlig virksomhedskanal i Microsoft 365 Apps versionerne 2004-2008, skal du opdatere til version 2009 eller nyere. Se [Opdateringsoversigt for Microsoft 365 Apps (angivet efter dato)](/officeupdates/update-history-microsoft365-apps-by-date) for aktuelle versioner. Du kan få mere at vide om kendte problemer i afsnittet Office Suite i Produktbemærkninger til udgivelser [for Aktuel kanal i 2020](/officeupdates/current-channel#version-2010-october-27).
 
-6. Hvis du har slutpunkter, der bruger en enhedsproxy til at oprette forbindelse til internettet, skal du følge fremgangsmåden i Konfigurer enhedsproxy og [indstillinger for internetforbindelse for informationsbeskyttelse](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
+6. Hvis du har slutpunkter, der bruger en enhedsproxy til at oprette forbindelse til internettet, skal du følge fremgangsmåden i Konfigurer enhedsproxy og [indstillinger for internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
 
-## <a name="onboarding-windows-10-or-windows-11-devices"></a>Onboarding Windows 10 eller Windows 11 enheder
+## <a name="onboarding-windows-10-or-windows-11-devices"></a>Onboarding-Windows 10 eller Windows 11 enheder
 
 Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge og beskytte følsomme elementer på en enhed. Begge disse handlinger udføres i Microsoft 365 Overholdelse.
 
 Når du vil onboarde enheder, der endnu ikke er blevet onboardet, skal du downloade det relevante script og udrulle det på disse enheder. Følg fremgangsmåderne for onboarding af enheder nedenfor.
 
-Hvis du allerede har enheder, der er onboardet [i Microsoft Defender til Slutpunkt](/windows/security/threat-protection/), vises de allerede på listen over administrerede enheder.
+Hvis du allerede har enheder onboardet i [Microsoft Defender for Endpoint](/windows/security/threat-protection/), vises de allerede på listen over administrerede enheder.
 
 I dette installationsscenarie kan du onboarde Windows 10 eller Windows 11 enheder, der endnu ikke er blevet onboardet.
 
@@ -120,15 +120,12 @@ I dette installationsscenarie kan du onboarde Windows 10 eller Windows 11 enhede
    > [!NOTE]
    > Det tager som regel ca. 60 sekunder, før onboarding af enheder er aktiveret, men det kan tage op til 30 minutter, før du går i gang med Microsoft Support.
 
-2. Åbn siden med indstillinger for Overholdelsescenter, og vælg **Onboard-enheder**.
-
-   > [!div class="mx-imgBorder"]
-   > ![skal du aktivere enhedshåndtering.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
+2. Åbn siden med indstillinger for Overholdelsescenter, **og vælg Aktiv Windows af enheder**.
 
 3. Vælg **Enhedshåndtering** for at åbne **listen** Enheder. 
 
 > [!NOTE]
-> Hvis du tidligere har installeret Microsoft Defender til Slutpunkt, vises alle de enheder, der blev onboardet under processen, på **listen** Enheder. Der er ingen grund til at onboarde dem igen.
+> Hvis du tidligere har installeret Microsoft Defender for Endpoint, vises alle de enheder, der blev onboardet under processen, på **listen** Enheder. Der er ingen grund til at onboarde dem igen.
 
 4. Vælg **Onboarding** for at starte onboardingprocessen.
 
@@ -140,7 +137,7 @@ Emne | Beskrivelse
 :---|:---
 [Onboard Windows 10 eller 11 enheder ved hjælp af Gruppepolitik](device-onboarding-gp.md) | Brug Gruppepolitik til at installere konfigurationspakken på enheder.
 [Onboard Windows 10 eller 11 enheder ved hjælp af Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md) | Du kan enten bruge Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1606 eller Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1602 eller tidligere til at installere konfigurationspakken på enheder.
-[Onboard Windows 10 eller 11 enheder ved hjælp af værktøjer til administration af mobilenheder](device-onboarding-mdm.md) | Brug værktøjer til administration af mobilenheder Microsoft Intune til at installere konfigurationspakken på enheden.
+[Onboard Windows 10 eller 11 enheder ved hjælp af Enhedshåndtering mobilværktøjer](device-onboarding-mdm.md) | Brug mobilværktøjer Enhedshåndtering eller Microsoft Intune til at installere konfigurationspakken på enheden.
 [Onboard Windows 10 eller 11 enheder ved hjælp af et lokalt script](device-onboarding-script.md) | Lær at bruge det lokale script til at installere konfigurationspakken på slutpunkter.
 [Onboard ikke-permanente VDI-enheder (Virtual Desktop Infrastructure)](device-onboarding-vdi.md) | Få mere at vide om, hvordan du bruger konfigurationspakken til at konfigurere VDI-enheder.
 
@@ -170,7 +167,7 @@ Når en enhed er onboardet, bør den være synlig på listen over enheder og ogs
 - [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Introduktion til Aktivitetsstifinder](data-classification-activity-explorer.md)
-- [Microsoft Defender til Slutpunkt](/windows/security/threat-protection/)
+- [Microsoft Defender for Endpoint](/windows/security/threat-protection/)
 - [Onboardingværktøjer og metoder til Windows 10 computere](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints)
 - [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
 - [Enheder, der er forbundet til Azure AD](/azure/active-directory/devices/concept-azure-ad-join)

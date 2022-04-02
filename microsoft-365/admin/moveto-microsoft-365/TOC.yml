@@ -3,20 +3,20 @@
     - name: Oversigt
       href: move-from-google-workspace-overview.md
     - name: Tilmeld dig Microsoft 365
-      href: /admin-overview/sign-up-for-office-365?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: Konfigurer Microsoft 365 til Google-overførsel
+      href: ../admin-overview/sign-up-for-office-365.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
+    - name: Konfigurer Microsoft 365 til Google-migrering
       href: set-up-microsoft-365-forgoogle.md
     - name: Konfigurere sikkerhedspolitikker for Windows enheder
       href: ../setup/secure-win-10-pcs.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: Tilføje et Google Workspace-domæne
+    - name: Tilføj Google Workspace-domæne
       href: add-google-domain.md
-    - name: Installer Office apps og Microsoft Teams
+    - name: Installer Office-apps og Microsoft Teams
       href: ../setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: 'Overfør mail, kalender og kontakter til Microsoft 365'
+    - name: 'Migrer mail, kalender og kontakter til Microsoft 365'
       href: migrate-email.md
     - name: Forbind dit domæne til Microsoft 365
       href: connect-domain-tom365.md
-    - name: Brug Overførselsstyring til at flytte alles data
+    - name: Brug Migreringsstyring til at flytte alles data
       href: migrate-files-migration-manager.md
     - name: Annuller Google Workspace
       href: cancel-google.md

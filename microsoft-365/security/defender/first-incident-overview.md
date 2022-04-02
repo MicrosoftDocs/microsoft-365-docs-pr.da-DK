@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 16654281adf5ca6f31ea2d29aab3387d39424cb1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3034c6020c3d7d04164e37beb1c1186e9aa30958
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592394"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499105"
 ---
 # <a name="responding-to-your-first-incident"></a>Sådan reagerer du på din første hændelse
 
@@ -52,7 +52,7 @@ Hændelser i Microsoft 365 Defender er de logiske udgangspunkter for analyse og 
 
 ## <a name="next-step"></a>Næste trin
 
-[![Forbered din organisation og Microsoft 365 lejer.](../../media/first-incident-overview/first-incident-path.png)](first-incident-prepare.md)
+:::image type="content" source="../../media/first-incident-overview/first-incident-path.png" alt-text="Indstillingen Afhjælp i Svar på din første hændelsesside" lightbox="../../media/first-incident-overview/first-incident-path.png":::
 
 Sørg for, at din organisation Microsoft 365 lejer er [forberedt til hændelseshåndtering](first-incident-prepare.md).
 
@@ -64,7 +64,7 @@ Vejledning til hændelsesrespons for Microsoft 365 Defender:
 - [Undersøg hændelser](investigate-incidents.md)
 - [Administrer hændelser](manage-incidents.md)
 
-Yderligere eksempler på første hændelsessvar:
+Flere eksempler på første hændelsessvar:
 
 - [Phishing-mail](first-incident-path-phishing.md)
 - [Identity-base-angreb](first-incident-path-identity.md)

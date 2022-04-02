@@ -1,5 +1,5 @@
 ---
-title: Kontrollér tilstanden for sensoren i Microsoft Defender til slutpunkt
+title: Kontrollér sensorens tilstand ved Microsoft Defender for Endpoint
 description: Kontrollér sensorens tilstand på enheder for at identificere, hvilke enheder der er konfigureret forkert, inaktive eller ikke rapporterer sensordata.
 keywords: sensor, sensor sundhed, forkert konfigureret, inaktiv, ingen sensordata, sensordata, forringet kommunikation, kommunikation
 ms.prod: m365-security
@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: 926e23da7e439aa6035574a13bab2752004dd189
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: bba5fde870b2916501f4154c6ff628a0d2e3ff1f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "63599290"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465448"
 ---
-# <a name="check-sensor-health-state-in-microsoft-defender-for-endpoint"></a>Kontrollér sensorens tilstand i Microsoft Defender til slutpunkt
+# <a name="check-sensor-health-state-at-microsoft-defender-for-endpoint"></a>Kontrollér sensorens tilstand ved Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-checksensor-abovefoldlink)
@@ -42,7 +42,7 @@ Der er to statusindikatorer på feltet, der indeholder oplysninger om antallet a
 
 Når du klikker på en af grupperne, dirigeres du **til listen Enheder**, der er filtreret efter eget valg.
 
-![Skærmbillede af feltet Enheder med sensorproblemer.](images/atp-devices-with-sensor-issues-tile.png)
+:::image type="content" source="images/atp-devices-with-sensor-issues-tile.png" alt-text="Flisen Enheder med sensorproblemer" lightbox="images/atp-devices-with-sensor-issues-tile.png":::
 
 På **listen Enheder** kan du filtrere listen over tilstandstilstande ud fra følgende status:
 
@@ -57,7 +57,7 @@ Du kan også downloade hele listen i CSV-format ved hjælp af **funktionen** Eks
 > [!NOTE]
 > Eksportér listen i CSV-format for at få vist de ufiltrerede data. CSV-filen indeholder alle enheder i organisationen, uanset hvilken filtrering der anvendes i selve visningen, og kan tage lang tid at downloade, afhængigt af hvor stor din organisation er.
 
-![Skærmbillede af listesiden Enheder.](images/atp-devices-list-page.png)
+:::image type="content" source="images/atp-devices-list-page.png" alt-text="Fanen Eksportér på listesiden Enhed" lightbox="images/atp-devices-list-page.png":::
 
 Du kan få vist oplysninger om enheden, når du klikker på en forkert konfigureret eller inaktiv enhed.
 

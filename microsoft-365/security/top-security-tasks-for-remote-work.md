@@ -17,18 +17,18 @@ ms.collection:
 - remotework
 ms.custom: admindeeplinkDEFENDER
 description: Beskyt din virksomheds mail og data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 584da4e192ddbd8ac5b223e0d292a71f0c35c305
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 1277d001118dda764aa9b2a968f1024d5befcac1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63588617"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755065"
 ---
 # <a name="top-12-tasks-for-security-teams-to-support-working-from-home"></a>De 12 vigtigste opgaver for sikkerhedsteams til at understøtte hjemmearbejde
 
 Hvis du er som [Microsoft](https://www.microsoft.com/microsoft-365/blog/2020/03/10/staying-productive-while-working-remotely-with-microsoft-teams/) og pludselig understøtter en primært hjemmebaseret arbejdsstyrke, vil vi gerne hjælpe dig med at sikre, at din organisation arbejder så sikkert som muligt. Denne artikel prioriterer opgaver for at hjælpe sikkerhedsteams med at implementere de vigtigste sikkerhedsfunktioner så hurtigt som muligt.
 
-![Udfør disse vigtigste opgaver for at understøtte hjemmearbejde.](../media/security/security-support-remote-work.png)
+:::image type="content" source="../media/security/security-support-remote-work.png" alt-text="De 12 vigtigste opgaver for sikkerhedsteams til at understøtte hjemmearbejde" lightbox="../media/security/security-support-remote-work.png":::
 
 Hvis du er en lille eller mellemstor organisation, der bruger en af Microsofts virksomhedsplaner, kan du i stedet se disse ressourcer:
 
@@ -50,17 +50,16 @@ For kunder, der bruger vores virksomhedsplaner, anbefaler Microsoft, at du udfø
 |4|[Konfigurer Microsoft Defender for Identity](#4-configure-microsoft-defender-for-identity)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |5|[Slå Microsoft 365 Defender](#5-turn-on-microsoft-365-defender)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |6|[Konfigurere Intune-mobilappbeskyttelse til telefoner og tablets](#6-configure-intune-mobile-app-protection-for-phones-and-tablets)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|7|[Konfigurer MFA og betinget adgang for gæster, herunder Intune-appbeskyttelse](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|8|[Tilmeld pc'er til enhedsadministration og kræv kompatible pc'er](#8-enroll-pcs-into-device-management-and-require-compliant-pcs)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|9|[Optimere dit netværk til skyforbindelse](#9-optimize-your-network-for-cloud-connectivity)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|10|[Oplære brugere](#10-train-users)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|11|[Kom i gang med Microsoft Defender til skyapps](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|12|[Hold øje med trusler, og gør noget](#12-monitor-for-threats-and-take-action)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|
+|7|[Konfigurer MFA og betinget adgang for gæster, herunder Intune-appbeskyttelse](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|8|[Tilmeld pc'er til enhedsadministration og kræv kompatible pc'er](#8-enroll-pcs-into-device-management-and-require-compliant-pcs)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|9|[Optimere dit netværk til skyforbindelse](#9-optimize-your-network-for-cloud-connectivity)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|10|[Oplære brugere](#10-train-users)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|11|[Kom i gang med Microsoft Defender til skyapps](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|12|[Hold øje med trusler, og gør noget](#12-monitor-for-threats-and-take-action)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 Før du begynder, skal [du Microsoft 365 sikker score](./defender/microsoft-secure-score.md) <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">på Microsoft 365 Defender portal</a>. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365 identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller adressering til anbefalinger med et program eller software fra en tredjepart. De anbefalede opgaver i denne artikel hæver din score.
 
-![Skærmbillede af Microsoft Secure Score.](../media/secure-score.png)
+:::image type="content" source="../media/secure-score.png" alt-text="Microsoft Secure Score-skærmen i Microsoft 365 Defender portal" lightbox="../media/secure-score.png":::
 
 ## <a name="1-enable-azure-ad-multi-factor-authentication-mfa"></a>1: Aktivér Azure AD Multi-Factor Authentication (MFA)
 
@@ -77,7 +76,6 @@ Det kan kun tage et par minutter at anvende disse politikker, men du vil være k
 |Microsoft 365 (uden Azure AD P1 eller P2)|[Aktivér standardindstillinger for sikkerhed i Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Sikkerhedsstandarden i Azure AD omfatter MFA for brugere og administratorer.|
 |Microsoft 365 E3 (med Azure AD P1)|Brug [almindelige politikker for betinget adgang](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) til at konfigurere følgende politikker: <br/>- [Kræv MFA til administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br/>- [Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br/> - [Bloker ældre godkendelse](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)|
 |Microsoft 365 E5 (med Azure AD P2)|Udnyt Azure AD Identity Protection, og begynd at implementere Microsofts anbefalede sæt [af betinget adgang og relaterede politikker](./office-365-security/identity-access-policies.md) ved at oprette disse politikker:<br/> - [Kræv MFA, når logonrisici er mellem eller høj](./office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk) <br/>- [Blokere klienter, der ikke understøtter moderne godkendelse](./office-365-security/identity-access-policies.md#block-clients-that-dont-support-multi-factor)<br/>- [Brugere med høj risiko skal ændre adgangskode](./office-365-security/identity-access-policies.md#high-risk-users-must-change-password)|
-|
 
 ## <a name="2-protect-against-threats"></a>2: Beskyt dig mod trusler
 
@@ -124,7 +122,9 @@ Du skal arbejde sammen med din Exchange Online administrator og SharePoint Onlin
 
 Nu hvor du har konfigureret Microsoft Defender Office 365 Og Microsoft Defender til identitet, kan du se de kombinerede signaler fra disse egenskaber i ét dashboard. [Microsoft 365 Defender](./defender/microsoft-365-defender.md) samler beskeder, hændelser, automatisk undersøgelse og svar og avanceret jagt på tværs af arbejdsbelastninger (Microsoft Defender for Identity, Defender til Office 365, Microsoft Defender til slutpunkt og Microsoft Defender til skyapps) i en enkelt <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">rude i Microsoft 365 Defender .</a>
 
-![MTP-dashboardillustration.](../media/top-ten-security-remote-work-mtp-dashboard.png)
+<!--
+:::image type="content" source="../media/top-ten-security-remote-work-mtp-dashboard.png" alt-text="The MTP dashboard in the Microsoft 365 Defender portal" lightbox="../media/top-ten-security-remote-work-mtp-dashboard.png":::
+--> 
 
 Når du har konfigureret en eller flere af dine Defender til Office 365, skal du aktivere MTP. Nye funktioner føjes kontinuerligt til MTP; overvej at tilmelde dig for at modtage funktioner til eksempelvisning.
 
@@ -215,7 +215,6 @@ Microsoft 365 indeholder følgende ressourcer, som kan hjælpe med at informere 
 |Microsoft 365|[Brugerdefinerbare læringsstier](/office365/customlearning/) <p>Disse ressourcer kan hjælpe dig med at sammensætte kurser til slutbrugere i organisationen|
 |Microsoft 365 sikkerhed|[Learning modul: Beskyt din organisation med indbygget, intelligent sikkerhed Microsoft 365](/learn/modules/security-with-microsoft-365) <p>Dette modul gør det muligt for dig at beskrive, Microsoft 365 sikkerhedsfunktioner fungerer sammen, og til at fordele ved disse sikkerhedsfunktioner.|
 |Multifaktorgodkendelse|[Totrinsbekræftelse: Hvad er den ekstra bekræftelsesside?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time) <p>Denne artikel hjælper slutbrugere med at forstå, hvad multifaktorgodkendelse er, og hvorfor den bruges i din organisation.|
-|
 
 Ud over denne vejledning anbefaler Microsoft, at brugerne tager de handlinger, der er beskrevet i denne artikel: [Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/066d6216-a56b-4f90-9af3-b3a1e9a327d6.aspx). Disse handlinger omfatter:
 

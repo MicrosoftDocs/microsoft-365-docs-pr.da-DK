@@ -15,12 +15,15 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.topic: article
-ms.openlocfilehash: e47783d2308ca4b94360dd4fa06341d18f8973bb
-ms.sourcegitcommit: bd43f08b4719ba984ea6712227508d4a281148cf
+ms.collection:
+- M365-security-compliance
+- m365initiative-m365-defender
+ms.openlocfilehash: 61e98e18466992a0463aa1f97ce2527b943f8abd
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "63593643"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498632"
 ---
 # <a name="microsoft-threat-experts-in-microsoft-365-overview"></a>Microsoft-trusselseksperter i Microsoft 365 oversigt
 
@@ -29,7 +32,7 @@ ms.locfileid: "63593643"
 **Gælder for:**
 
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
@@ -41,9 +44,9 @@ Microsoft-trusselseksperter – Eksperter efter behov giver dig mulighed for at 
 > [!IMPORTANT]
 > Før du anvender, skal du sørge for at diskutere berettigelseskravene til Microsoft-trusselseksperter – Målrettede angrebsmeddelelser med din Microsoft Technical Service-udbyder og dit kontoteam.
 
-Hvis du allerede har Microsoft Defender til slutpunkt og Microsoft 365 Defender, kan du ansøge om Microsoft-trusselseksperter – målrettede angrebsmeddelelser via deres Microsoft 365 Defender portal. Gå til **Indstillinger > slutpunkter > Generelt > avancerede funktioner > Microsoft-trusselseksperter – Målrettede angrebsmeddelelser**, og vælg **Anvend**. Se [Konfigurer Microsoft-trusselseksperter for at](./configure-microsoft-threat-experts.md) få en komplet beskrivelse.
+Hvis du allerede har Microsoft Defender for Endpoint og Microsoft 365 Defender, kan du ansøge om Microsoft-trusselseksperter – Målrettede angrebsmeddelelser via deres Microsoft 365 Defender . Gå til **Indstillinger > slutpunkter > Generelt > avancerede funktioner > Microsoft-trusselseksperter – Målrettede angrebsmeddelelser**, og vælg **Anvend**. Se [Konfigurer Microsoft-trusselseksperter for at](./configure-microsoft-threat-experts.md) få en komplet beskrivelse.
 
-![Skærmbillede af MTE-programside.](../../media/mte/mte-collaboratewithmte.png)
+:::image type="content" source="../../media/mte/mte-collaboratewithmte.png" alt-text="Indstillingen Avancerede funktioner i venstre navigationsrude på siden Slutpunkter i Microsoft 365 Defender-portalen" lightbox="../../media/mte/mte-collaboratewithmte.png":::
 
 Når dit program er godkendt, begynder du at modtage beskeder om målrettede angreb, når Trusselseksperter registrerer en trussel mod dit miljø.
 
@@ -71,22 +74,27 @@ Du kan også kontakte Microsoft-trusselseksperter direkte fra Microsoft 365- og 
 Muligheden for at **kontakte en trusselsekspert** er tilgængelig flere steder i hele portalen:
 
 - <i>**Menuen Enhedssidehandlinger**</i><BR>
-![Skærmbillede af MTE-EOD-menuindstilling i handlingsmenuen for siden Enhed.](../../media/mte/device-actions-mte-highlighted.png)
+
+:::image type="content" source="../../media/mte/device-actions-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD i handlingsmenuen for siden Enhed i Microsoft 365 Defender-portalen" lightbox="../../media/mte/device-actions-mte-highlighted.png":::
 
 - <i>**Pop op-menuen lagerside for enhed**</i><BR>
-![Skærmbillede af MTE-EOD-menuindstillingen på lagersiden for enheder.](../../media/mte/device-inventory-mte-highlighted.png)
+
+:::image type="content" source="../../media/mte/device-inventory-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på lagersiden for enheder i Microsoft 365 Defender portal" lightbox="../../media/mte/device-inventory-mte-highlighted.png":::
 
 - <i>**Pop op-menuen for siden Beskeder**</i><BR>
-![Skærmbillede af MTE-EOD-menuindstillingen på beskedsiden.](../../media/mte/alerts-actions-mte-highlighted.png)
+
+:::image type="content" source="../../media/mte/alerts-actions-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på siden Beskeder på Microsoft 365 Defender-portalen" lightbox="../../media/mte/alerts-actions-mte-highlighted.png":::
 
 - <i>**Menuen Handlinger på siden Hændelser**</i><BR>
-![Skærmbillede af MTE-EOD-menuindstillingen på siden hændelser.](../../media/mte/incidents-action-mte-highlighted.png)
+
+:::image type="content" source="../../media/mte/incidents-action-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på siden Hændelser på Microsoft 365 Defender-portalen" lightbox="../../media/mte/incidents-action-mte-highlighted.png":::
 
 - <i>**Lagerside for hændelser**</i><BR>
-![Skærmbillede af MTE-EOD-menuindstillingen på lagersiden for hændelser.](../../media/mte/incidents-inventory-mte-highlighted.png)
+
+:::image type="content" source="../../media/mte/incidents-inventory-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på lagersiden for hændelser i Microsoft 365 Defender-portalen" lightbox="../../media/mte/incidents-inventory-mte-highlighted.png":::
 
 > [!NOTE]
-> Hvis du har et Premier Support-abonnement, der er knyttet til din Microsoft Defender for Office 365-licens, kan du spore status for dine Experts on Demand-sager via Microsoft Services Hub.
+> Hvis du har Premier Support-abonnement knyttet til din Microsoft Defender for Office 365-licens, kan du spore status for dine Experts on Demand-sager via Microsoft Services Hub.
 
 Se denne video for at få en hurtig oversigt over Microsoft Services Hub.
 

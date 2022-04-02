@@ -1,7 +1,7 @@
 ---
 title: Beskeder fra MRS-tjenesten
-ms.author: markjjo
-author: markjjo
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
 ms.date: ''
 audience: Admin
@@ -16,18 +16,18 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: Brug beskeder om postkasseoverførselstjenesten til at overvåge forsinkelser i postkasseoverførselsanmodninger i organisationen.
-ms.openlocfilehash: 25c569030bd5da914dc6eb7ec0e58ebadfe4d766
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 6b4b618bae602c7c06b2d6371e39cc865d0a3407
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63596985"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64567978"
 ---
 # <a name="service-alerts-for-mrs-source-delays-in-exchange-online-monitoring"></a>Tjenestebeskeder om mrs-kildeforsinkelse i Exchange Online overvågning
 
 MRS-kildeforsinkelsestjenesten (Mailbox Replication Service) informerer dig om lagerbegrænsninger eller problemer med høj processorforbrug på lejersiden (overførselskilde), som kan forsinke postkasseoverflytninger i din Microsoft 365 organisation. Disse serviceadvarsler indeholder også links til Microsoft-ressourcer, der kan hjælpe dig med at løse disse problemer.
 
-Disse serviceadvarsler vises i Microsoft 365 Administration. For at få vist disse serviceadvarsler skal du **gå til HealthService** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**health**</a> >  **Exchange Online** og derefter klikke på **fanen Aktive** problemer.
+Disse serviceadvarsler vises i Microsoft 365 Administration. Hvis du vil have vist disse tjenesteadvarsler > , <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**skal Tjenestetilstand**</a> >  **Exchange Online** og derefter klikke **på fanen Aktive** problemer.
 
 ## <a name="what-do-these-service-alerts-indicate"></a>Hvad angiver disse serviceadvarsler?
 

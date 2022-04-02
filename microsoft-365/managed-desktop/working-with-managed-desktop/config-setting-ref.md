@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 2005ead772399f26c3537ac8bf36f6b0810b07fb
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 18fc51f37e66cd3212ea1e5af22ed4389d025a05
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63587467"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755087"
 ---
 # <a name="configurable-settings-reference---microsoft-managed-desktop"></a>Reference til konfigurerbare indstillinger – Microsoft Managed Desktop
 
@@ -150,6 +150,7 @@ Disse krav skal være opfyldt for undtagelser til proxyserver og proxywebsted:
 
 - Skal være en gyldig serveradresse og et portnummer.
 - URL-adresser skal være et gyldigt http-websted.
+- Proxyundtagelser bør være begrænset til maksimalt 2064 tegn. Dette omfatter tilføjede Microsoft-administrerede skrivebordsadresser.
 
 ### <a name="customize-and-deploy-proxies"></a>Tilpasse og installere proxyer
 

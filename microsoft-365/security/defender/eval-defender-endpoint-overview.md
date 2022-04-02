@@ -22,12 +22,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 24600644e08bdc2b0a208d68d6da1078543bd2bd
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 05dbf222762837f2916a76cc5b183a99cd981101
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592491"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755102"
 ---
 # <a name="step-4-evaluate-microsoft-defender-for-endpoint-overview"></a>Trin 4. Oversigt over Evaluer Microsoft Defender til Slutpunkt
 
@@ -41,7 +41,7 @@ I denne artikel beskrives processen for aktivering og forsøg med Microsoft Defe
 
 Brug følgende trin til at aktivere og prøve prøvebruge Microsoft Defender til slutpunkt.
 
-![Trin til at føje Microsoft Defender til slutpunktet til evalueringsmiljøet for Defender.](../../media/defender/m365-defender-endpoint-eval-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-eval-steps.png" alt-text="Trinnene til at føje Microsoft Defender til Slutpunkt til Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-endpoint-eval-steps.png":::
 
 
 I følgende tabel beskrives trinnene i illustrationen.
@@ -50,6 +50,4 @@ I følgende tabel beskrives trinnene i illustrationen.
 |---------|---------|
 | [Trin 1. Gennemgå arkitekturkrav og nøglekoncepter](eval-defender-endpoint-architecture.md)    | Forstå Arkitekturen i Defender til Slutpunkt og de funktioner, der er tilgængelige for dig.       |
 |[Trin 2. Aktivér evalueringsmiljøet](eval-defender-endpoint-enable-eval.md)     |   Følg trinnene for at konfigurere evalueringsmiljøet.      |
-|[Trin 3. Konfigurer pilotprojektet ](eval-defender-endpoint-pilot.md)    |    Bekræft din pilotgruppe, kør simulering, og bliv fortrolig med vigtige funktioner og dashboards.     |
-
-
+|[Trin 3. Konfigurer pilotprojektet ](eval-defender-endpoint-pilot.md)    |    Bekræft din pilotgruppe, kør simulering, og bliv fortrolig med vigtige funktioner og dashboards. |

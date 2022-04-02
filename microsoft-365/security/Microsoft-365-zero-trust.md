@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 9b37e353af74b7a01c0647f99b149f5fac0ae8a3
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 59ebfb9ffb925cc5937802a31902e7c2342fc740
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63598557"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755664"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Zero Trust-installationsplan
 
@@ -36,13 +36,7 @@ En Nultillids-tilgang strækker sig over hele den digitale ejendom og fungerer s
 
 Denne illustration indeholder en repræsentation af de primære elementer, der bidrager til Nul tillid.
 
-<!---
-[![Zero Trust security architecture](../media/zero-trust/zero-trust-architecture.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/zero-trust/zero-trust-architecture.png)
--->
-
 :::image type="content" source="../media/zero-trust/zero-trust-architecture.png" alt-text="Sikkerhedsarkitekturen Nultillids" lightbox="../media/zero-trust/zero-trust-architecture.png":::
-
-
 
 I illustrationen:
 - Håndhævelse af Sikkerhedspolitik er om centrum for en Zero Trust-arkitektur. Dette omfatter multifaktorgodkendelse med betinget adgang, der tager højde for brugerkontorisici, enhedsstatus samt andre kriterier og politikker, du angiver.
@@ -144,7 +138,8 @@ Mens dette arbejde er repræsenteret øverst i installationsstakken illustreret 
 
 Microsoft Information Protection udgør en ramme, proces og egenskaber, som du kan bruge til at opfylde dine specifikke forretningsmål.
 
-![Microsoft Information Protection (MIP) Framework](../media/zero-trust/mip-solution-overview.png)
+:::image type="content" source="../media/zero-trust/mip-solution-overview.png" alt-text="Den Microsoft Information Protection struktur" lightbox="../media/zero-trust/mip-solution-overview.png":::
+
 
 Du kan finde flere oplysninger om, hvordan du planlægger og installerer informationsbeskyttelse under [**_Installér Microsoft Information Protection løsning_**](../compliance/information-protection-solution.md). 
 

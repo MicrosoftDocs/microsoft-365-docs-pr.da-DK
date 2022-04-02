@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en forbindelse til at importere og arkivere data fra ICE-chatværktøjet i Microsoft 365. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere organisationens tredjepartsdata.
-ms.openlocfilehash: c340cbb65d7efaa5cbc14ca977879c09b585031a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c29a39c8c398a0d8721931cbcb770aa18d0f3c4b
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588190"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568088"
 ---
 # <a name="set-up-a-connector-to-archive-ice-chat-data"></a>Konfigurer en forbindelse til at arkivere ICE-chatdata
 
@@ -121,14 +121,20 @@ Det sidste trin er at oprette en ICE-chatforbindelse i Microsoft 365 Overholdels
 
 7. Klik på Næste, når forbindelsen er blevet **valideret**.
 
-8. På siden **Tilknyt eksterne brugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov. Du kan downloade en kopi af CSV-filen med brugertilknytning på denne side. Du kan føje brugertilknytninger til filen og derefter overføre den.
+8. På siden **Definer bruger** skal du angive de brugere, der skal importere data til.
+
+     - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+     - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+9. På siden **Tilknyt eksterne brugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov. Du kan downloade en kopi af CSV-filen med brugertilknytning på denne side. Du kan føje brugertilknytninger til filen og derefter overføre den.
 
    > [!NOTE]
    > Som tidligere nævnt indeholder den brugerdefinerede tilknytningsfil CSV-fil ICE-chat imidt og Microsoft 365-postkasseadressen for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning for hvert chatelement, kigger forbindelsen først på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers ICE-chat imidt, importerer forbindelsen elementet til postkasserne for de brugere, der er angivet i egenskaberne *SenderEmail* og *RecipientEmail* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365 bruger ved enten automatisk eller brugerdefineret brugertilknytning, importeres elementet ikke.
 
-9. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
+10. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
 
-10. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse.
+11. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse.
 
 ## <a name="set-up-a-connector-using-private-keys"></a>Konfigurer en forbindelse ved hjælp af private taster
 
@@ -196,11 +202,17 @@ Når dit ICE Chat SFTP-websted er konfigureret, er næste trin at oprette en ICE
 
 7. Klik på Næste, når forbindelsen er blevet **valideret**.
 
-8. På siden **Tilknyt ICE-chatbrugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
+8. På siden **Definer bruger** skal du angive de brugere, der skal importere data til.
+
+     - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+     - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+9. På siden **Tilknyt ICE-chatbrugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
 
    > [!NOTE]
    > Som tidligere nævnt indeholder den brugerdefinerede tilknytningsfil CSV-fil ICE-chat imidt og Microsoft 365-postkasseadressen for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning for hvert chatelement, kigger forbindelsen først på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers ICE-chat imidt, importerer forbindelsen elementet til postkasserne for de brugere, der er angivet i egenskaberne *SenderEmail* og *RecipientEmail* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365 bruger ved enten automatisk eller brugerdefineret brugertilknytning, importeres elementet ikke.
 
-9. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
+10. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
 
-10. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
+11. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.

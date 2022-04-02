@@ -22,12 +22,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 2438e7690230af88eae72e0864184e771bdd4135
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: d77bb5f61127475c8c7c00e58af6c19013aaffe2
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63596016"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755428"
 ---
 # <a name="step-2-evaluate-microsoft-defender-for-identity-overview"></a>Trin 2. Evaluer Oversigt over Microsoft Defender til identitet
 
@@ -43,14 +43,12 @@ ms.locfileid: "63596016"
 
 Brug nedenstående trin til at aktivere og prøve prøvebruge Microsoft Defender for Identity.
 
-![Trin til at føje Microsoft Defender for Identity til evalueringsmiljøet for Defender.](../../media/defender/m365-defender-identity-eval-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-eval-steps.png" alt-text="Trinnene til at føje Microsoft Defender for Identity til Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-identity-eval-steps.png":::
 
 I denne tabel beskrives trinnene i illustrationen.
 
-| |Trin  |Beskrivelse  |
+| Serienummer|Trin  |Beskrivelse  |
 |---------|---------|---------|
 |1|[Gennemgå arkitekturkrav og nøglekoncepter](eval-defender-identity-architecture.md)    | Forstå Defender for Identity-arkitekturen, og sørg for, at dit miljø opfylder arkitekturens forudsætninger.       |
 |2|[Aktivér evalueringsmiljøet](eval-defender-identity-enable-eval.md)     |   Følg trinnene for at konfigurere evalueringsmiljøet.      |
 |3|[Konfigurer pilotprojektet](eval-defender-identity-pilot.md)     |   Få mere at vide om benchmarkindstillinger for dit identitetsmiljø, og prøv selvstudier til Defender for Identity.     |
-||||
-

@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: dd39ace81a6128b9edcc33581c8386c06adf0d5f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 299cb7847e19e625bbae3122e16c56bb54e05c89
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597919"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499017"
 ---
 # <a name="step-1-triage-and-analyze-your-first-incident"></a>Trin 1. Undersøge og analysere din første hændelse
 
@@ -42,16 +42,16 @@ Når en sikkerhedshændelse registreres, viser Microsoft 365 Defender oplysninge
 
 ## <a name="detection-by-microsoft-365-defender"></a>Registrering efter Microsoft 365 Defender
 
-Microsoft 365 Defender modtager beskeder og begivenheder fra flere microsoft-sikkerhedsplatforme som registreringskilder for at skabe et billed og kontekst til ondsindet aktivitet. Disse er de mulige registreringskilder:
+Microsoft 365 Defender modtager beskeder og begivenheder fra flere microsoft-sikkerhedsplatforme som registreringskilder for at skabe et billed og kontekst til ondsindet aktivitet. De mulige registreringskilder er:
 
-- [Microsoft Defender til slutpunkt](../defender-endpoint/microsoft-defender-endpoint.md) er en slutpunktsregistrering og -svar-løsning (Slutpunktsregistrering og -svar), der bruger Microsoft Defender antivirus og skyaktiveret avanceret trusselsbeskyttelse ved hjælp af Microsoft Security Graph. Defender til Slutpunkt er en samlet platform til forebyggelse af beskyttelse, registrering efter brud, automatisk undersøgelse og svar. Den beskytter slutpunkter mod cybertrusler, registrerer avancerede angreb og databrister, automatiserer sikkerhedshændelser og forbedrer sikkerheden.
-- [Microsoft Defender for Identity](/defender-for-identity/what-is) er en skybaseret sikkerhedsløsning, der bruger dit lokale Active Directory-domæneservices (AD DS) signaler til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og ondsindede Insider-handlinger rettet mod din organisation.
-- [Microsoft Defender til skyapps](/cloud-app-security/) fungerer som en gatekeeper til at formidle adgang i realtid mellem dine virksomhedsbrugere og de skyressourcer, de bruger, uanset hvor brugerne er placeret, og uanset hvilken enhed de bruger.
-- [Microsoft Defender for Office 365](../office-365-security/overview.md) beskytter din organisation mod skadelige trusler i mails, links (URL-adresser) og samarbejdsværktøjer.
-- [Azure Security Center](/azure/security-center/security-center-introduction) er et samlet infrastruktursikkerhedsstyringssystem, der styrker sikkerheden i dine datacentre og giver avanceret trusselsbeskyttelse på tværs af dine hybride arbejdsbelastninger i skyen og i det lokale miljø.
+- [Microsoft Defender for Endpoint er](../defender-endpoint/microsoft-defender-endpoint.md) en slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar), der bruger Microsoft Defender antivirus og skyaktiveret avanceret trusselsbeskyttelse ved hjælp af Microsoft Security Graph. Defender til Slutpunkt er en samlet platform til forebyggelse af beskyttelse, registrering efter brud, automatisk undersøgelse og svar. Den beskytter slutpunkter mod cybertrusler, registrerer avancerede angreb og databrister, automatiserer sikkerhedshændelser og forbedrer sikkerheden.
+- [Microsoft Defender for Identity](/defender-for-identity/what-is) er en skybaseret sikkerhedsløsning, der bruger dine Active Directory i det lokale miljø-domænetjenester (AD DS) til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og ondsindede Insider-handlinger rettet mod din organisation.
+- [Microsoft Defender for Cloud Apps](/cloud-app-security/) fungerer som gatekeeper til at formidle adgang i realtid mellem dine virksomhedsbrugere og de skyressourcer, de bruger, uanset hvor brugerne er placeret, og uanset hvilken enhed de bruger.
+- [Microsoft Defender for Office 365](../office-365-security/overview.md) beskytter din organisation mod skadelige trusler i mails, links og samarbejdsværktøjer.
+- [Azure Security Center er](/azure/security-center/security-center-introduction) et samlet infrastruktursikkerhedsstyringssystem, der styrker sikkerheden i dine datacentre og giver avanceret trusselsbeskyttelse på tværs af dine hybride arbejdsbelastninger i skyen og i det lokale miljø.
 
 
-In Microsoft 365 Defender hændelser identificeres ved at korrelere beskeder fra disse forskellige [registreringskilder](incidents-overview.md). I stedet for at bruge ressourcer på at strenge sammen eller skelne flere beskeder i deres respektive hændelser, kan du starte med hændelseskøen Microsoft 365 Defender med det samme. Dette giver dig mulighed for at omdele hændelser på en effektiv måde på tværs af slutpunkter, identiteter, mail og programmer og reducere skaden fra et angreb.
+In Microsoft 365 Defender hændelser identificeres ved at korrelere beskeder fra disse forskellige [registreringskilder](incidents-overview.md). I stedet for at bruge ressourcer på at strenge sammen eller skelne flere beskeder i deres respektive hændelser, kan du starte med hændelseskøen Microsoft 365 Defender med det samme. Denne fremgangsmåde giver dig mulighed for at omdele hændelser på en effektiv måde på tværs af slutpunkter, identiteter, mail og programmer og reducere skaden fra et angreb.
 
 ## <a name="triage-your-incidents"></a>Efterse dine hændelser
 
@@ -64,73 +64,73 @@ En nyttig eksempelvejledning til at afgøre, hvilken hændelse der skal priorite
 
 Analytikere igangsætter derefter undersøgelser baseret på **de kriterier for Prioritet** , der er angivet af organisationen.
 
-Prioritering af hændelser kan variere afhængigt af organisationen. NIST anbefaler også, at du overvejer hændelsens funktionelle og informationsmæssige virkning og mulighed for gendannelse.
+Prioritering af hændelser kan variere afhængigt af organisationen. NIST anbefaler også, at man overvejer hændelsens funktionelle og informationsmæssige virkning og mulighed for gendannelse.
 
-Følgende er blot én fremgangsmåde, du skal overveje:
+Der er beskrevet én fremgangsmåde for triage nedenfor:
 
 1. Gå til siden [hændelser for](incidents-overview.md) at starte triage. Her kan du se en liste over hændelser, der påvirker din organisation. Som standard arrangeres de fra den seneste til den ældste hændelse. Herfra kan du også se forskellige kolonner for hver hændelse, der viser deres alvorsgrad, kategori, antal af aktive beskeder og på påvirkede enheder blandt andre. Du kan tilpasse sættet af kolonner og sortere hændelseskøen efter nogle af disse kolonner ved at vælge kolonnenavnet. Du kan også filtrere hændelseskøen efter dine behov. Du kan se en komplet liste over tilgængelige filtre [under Prioriter hændelser](incident-queue.md#available-filters).
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-queue.png" alt-text="Eksempel på hændelseskøen.":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-queue.png" alt-text="Hændelserne i Microsoft 365 sikkerhedsportal" lightbox="../../media/first-incident-analyze/first-incident-analyze-queue.png":::
 
-    Et eksempel på, hvordan du kan udføre prioriteringen af dette sæt hændelser, er at prioritere hændelser, der påvirkede flere brugere og enheder. I dette eksempel kan du prioritere hændelses-id'et 6769, fordi det har påvirket det største antal enheder: 7 enheder, 6 brugere og 2 postkasser. Desuden ser det ud til, at hændelsen indeholder beskeder fra Microsoft Defender for Identity, som angiver en identitetsbaseret besked og muligt tyveri af legitimationsoplysninger.
+    Et eksempel på, hvordan du kan udføre prioriteringen af dette sæt hændelser, er at prioritere hændelser, der påvirkede flere brugere og enheder. I dette eksempel kan du prioritere hændelses-id'et 6769, fordi det har påvirket det største antal enheder: syv enheder, seks brugere og to postkasser. Desuden ser hændelsen ud til at indeholde beskeder fra Microsoft Defender for Identity, som angiver en identitetsbaseret besked og muligt tyveri af legitimationsoplysninger.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-high-impact.png" alt-text="Eksempel på en hændelse med høj effekt.":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-high-impact.png" alt-text="Siden Hændelser**, der viser et eksempel på en hændelse med høj påvirkning på Microsoft 365-sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-high-impact.png":::
 
 2. Vælg cirklen ud for navnet på hændelsen for at gennemgå oplysningerne. Der vises en siderude i højre side, som indeholder yderligere oplysninger, der kan hjælpe din triage yderligere.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png" alt-text="Eksempel på en hændelsessiderude.":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png" alt-text="Siden Hændelser, der viser et eksempel på en siderude for en hændelse Microsoft 365 sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png":::
 
-   Ved f.eks. at se på, hvilke [MITRE ATT&CK-taktikker](https://attack.mitre.org/) hackeren brugte baseret på hændelsens kategorier, kan du prioritere denne hændelse, fordi hackeren har brugt legitimationsoplysninger, etableret kommando og kontrol, udført efterfølgende bevægelser og eksfiltreret nogle data. Det antyder, at hackeren allerede er gået dybt ind i netværket og muligvis stjålet fortrolige oplysninger.
+   Ved f.eks. at se på, hvilke [MITRE ATT&CK-taktikker](https://attack.mitre.org/) hackeren brugte baseret på hændelsens kategorier, kan du prioritere denne hændelse, fordi hackeren har brugt legitimationsoplysninger, etableret kommando og kontrol, udført efterfølgende bevægelser og eksfiltreret nogle data. Disse handlinger antyder, at hackeren allerede er gået dybt ind i netværket og muligvis stjålet fortrolige oplysninger.
 
-   Desuden, hvis din organisation har implementeret Zero Trust Framework, vil du overveje adgang til legitimationsoplysninger som en vigtig sikkerhedskrænkelse, der er værd at prioritere.
+   Desuden bør du, hvis din organisation har implementeret Nul tillid framework, overveje adgang til legitimationsoplysninger som en vigtig sikkerhedskrænkelse, der bør prioriteres.
 
    Når du ruller ned i sideruden, får du vist de specifikke på påvirkede enheder som brugere, enheder og postkasser. Du kan kontrollere eksponeringsniveauet for hver enhed og ejerne af de berørte postkasser.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-details.png" alt-text="Eksempel på detaljer i sideruden hændelser.":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-details.png" alt-text="Oplysninger om ruden med hændelsesside" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-details.png":::
 
 3. Længere nede i sideruden kan du finde de tilknyttede beskeder. Microsoft 365 Defender allerede udført korrelationen af disse beskeder til en enkelt hændelse, hvilket sparer dig tid og bedre ressourcer, der bruges på at løse angrebene. Beskeder er mistænkelige og derfor muligvis skadelige systemhændelser, der antyder, at en hacker er på et netværk.
 
    I dette eksempel blev 87 individuelle beskeder fundet at være en del af én sikkerhedshændelse. Du kan få vist alle beskederne for at få et hurtigt overblik over, hvordan angrebene blev udspilet.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png" alt-text="Eksempel på beskeder i en siderude for hændelser.":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png" alt-text="Beskederne i en hændelsessiderude i Microsoft 365 sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png":::
 
 ## <a name="analyze-your-first-incident"></a>Analysér din første hændelse
 
-Det er lige så vigtigt at forstå konteksten omkring vigtige beskeder. En besked er ofte ikke en enkelt uafhængig hændelse. Der er en kæde af processer, der er oprettet, kommandoer og handlinger, som muligvis ikke er blevet oprettet på samme tid. Derfor skal du se efter den mistænkelige enheds første og sidste aktiviteter på enhedens tidslinjer for at forstå konteksten for beskederne.
+Det er lige så vigtigt at forstå den kontekst, der omgiver vigtige beskeder. En besked er ofte ikke en enkelt uafhængig hændelse. Der er en kæde af processer, der er oprettet, kommandoer og handlinger, som muligvis ikke er blevet oprettet på samme tid. En analytiker skal derfor lede efter den mistænkelige enheds første og sidste aktiviteter på enhedens tidslinjer for at forstå konteksten for beskederne.
 
 Der er flere måder at læse og analysere data på ved hjælp af Microsoft 365 Defender men analytikernes endelige mål er at reagere på hændelser så hurtigt som muligt. Selvom Microsoft 365 Defender betydeligt reducere [MTTR (Mean Time to Remediate)](https://www.microsoft.com/security/blog/2020/05/04/lessons-learned-microsoft-soc-part-3c/) via den [brancheførende funktion](m365d-autoir.md) til automatisk undersøgelse og svar, er der altid tilfælde, der kræver manuel analyse.
 
 Her er et eksempel:
 
-1. Når prioriteringsprioriteten er blevet fastlagt, kan du starte en dybdegående analyse ved at vælge navnet på hændelsen. På denne side vises **Hændelsesoversigt,** hvor data vises i faner for at hjælpe med analysen. Under **fanen Beskeder** vises beskedtypen. Analytikere kan klikke på hver besked for at analysere ned i den pågældende registreringskilde.
+1. Når prioriteringsprioriteten er blevet fastlagt, starter en analytiker en dybdegående analyse ved at vælge navnet på hændelsen. På denne side vises **Hændelsesoversigt,** hvor data vises i faner for at hjælpe med analysen. Under **fanen Beskeder** vises beskedtyperne. Analytikere kan klikke på hver besked for at analysere ned i den pågældende registreringskilde.
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-summary-tab.png" alt-text="Eksempel på fanen Oversigt over en hændelse.":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-summary-tab.png" alt-text="Fanen Oversigt over en hændelse" lightbox="../../media/first-incident-analyze/first-incident-analyze-summary-tab.png":::
 
     Hvis du vil have en hurtig vejledning til, hvilket domæne hver registreringskilde dækker, skal [du se afsnittet](#detection-by-microsoft-365-defender) Registrer i denne artikel.
 
-2. Fra fanen **Beskeder kan** du dreje til registreringskilden for at udføre en mere dybdegående undersøgelse og analyse. Hvis du f.eks. vælger Registrering af malware med Microsoft Defender til skyapps som registreringskilde, kommer analytikeren til sin tilsvarende beskedside.
+2. Fra fanen **Beskeder kan** du dreje til registreringskilden for at udføre en mere dybdegående undersøgelse og analyse. Hvis du f.eks. vælger Registrering af malware Microsoft Defender for Cloud Apps som registreringskilde, kommer analytikeren til sin tilsvarende beskedside.
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-select-alert.png" alt-text="Eksempel på valg af en besked om en hændelse.":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-select-alert.png" alt-text="Siden Hændelser, der viser et eksempel på valg af en besked om en hændelse." lightbox="../../media/first-incident-analyze/first-incident-analyze-select-alert.png":::
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-link-to-mcas.png" alt-text="Eksempel på en tilsvarende side i Microsoft Defender til skyapps.":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-link-to-mcas.png" alt-text="En tilsvarende side i Microsoft Defender for Cloud Apps" lightbox="../../media/first-incident-analyze/first-incident-analyze-link-to-mcas.png":::
 
-3. Hvis du vil undersøge vores eksempel yderligere, skal du rulle til bunden af siden for at få vist **de pågældende Brugere**. Hvis du vil se aktiviteten og konteksten omkring malwareregistreringen, skal du vælge An hele Hills brugerside.
+3. Hvis du vil undersøge vores eksempel yderligere, skal du rulle til bunden af siden for at få vist **de pågældende Brugere**. Hvis du vil se aktiviteten og konteksten omkring registrering af malware, skal du vælge An hele Hills brugerside.
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-user-page.png" alt-text="Eksempel på en brugerside.":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-user-page.png" alt-text="En brugerside" lightbox="../../media/first-incident-analyze/first-incident-analyze-user-page.png":::
 
-4. På brugersiden vises en kronologisk liste over hændelser, der starter med et risikabelt logon fra en *BESKED om IP-adresse til tor-netværk* . Selvom mistænkeligheden af en aktivitet afhænger af, hvordan en organisation udfører sin virksomhed, kan det i de fleste tilfælde være meget usandsynligt og unødvendigt for almindelige onlinehandlinger, at brugerne kan søge anonymt på internettet i et virksomhedsmiljø.
+4. På brugersiden vises hændelser kronologisk startende med et risikabelt logon fra en *IP-adressebesked til tor-netværket* . Selvom mistænkeligheden af en aktivitet afhænger af, hvordan en organisation udfører sin virksomhed, kan det i de fleste tilfælde være meget usandsynligt og unødvendigt for almindelige onlinehandlinger, at brugerne kan søge anonymt på internettet i et virksomhedsmiljø.
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-user-event-list.png" alt-text="Eksempel på den kronologiske liste over hændelser for en bruger.":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-user-event-list.png" alt-text="Den kronologiske liste over hændelser for en bruger" lightbox="../../media/first-incident-analyze/first-incident-analyze-user-event-list.png":::
 
-5. Hver besked kan vælges for at få flere oplysninger om aktiviteten. Hvis du f.eks. **vælger Aktivitet fra en Tor IP-adressebesked** , får du adgang til den pågældende beskeds egen side. Angie er administrator for Office 365, hvilket betyder, at hun har administratorrettigheder, og kildehændelsen kan have ført til adgang til fortrolige oplysninger.
+5. Hver besked kan vælges for at få flere oplysninger om aktiviteten. Hvis du f.eks. **vælger Aktivitet fra en Tor IP-adressebesked** , får du adgang til den pågældende beskeds egen side. Angie er administrator for Office 365, som angiver administratorrettigheder, og at kildehændelsen kan have ført til adgang til fortrolige oplysninger.
 
-    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-mcas-alert.png" alt-text="Eksempel på oplysninger om vigtige beskeder for Microsoft Defender til skyapps .":::
+    :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-mcas-alert.png" alt-text="Oplysningerne om påmindelser for Microsoft Defender for Cloud Apps" lightbox="../../media/first-incident-analyze/first-incident-analyze-mcas-alert.png" :::
 
 6. Ved at vælge andre beskeder kan du få et komplet billede af angrebene.
 
 ## <a name="next-step"></a>Næste trin
 
-[![Trin 2: Lær, hvordan du afhjælper hændelser.](../../media/first-incident-overview/first-incident-path-step2.png)](first-incident-remediate.md)
+:::image type="content" source="../../media/first-incident-overview/first-incident-path-step2.png" alt-text="Indstillingen Afhjælp på siden Svar på din første hændelse" lightbox="../../media/first-incident-overview/first-incident-path-step2.png":::
 
 Få mere at vide [om, hvordan du afhjælper hændelser](first-incident-remediate.md).
 

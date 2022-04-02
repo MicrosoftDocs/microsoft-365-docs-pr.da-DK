@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 9b4640872f4e4fbdba65b1e29ceee5575e583bac
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 6621ca47356f87edd47a905e4edeb592d9b556ff
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63600935"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499083"
 ---
 # <a name="step-5-develop-and-test-use-cases"></a>Trin 5. Udvikle og teste use cases
 
@@ -56,7 +56,7 @@ SOC-oversigtsaktiviteter relateret til udvikling af use case omfatter:
 
 For at lette processerne for oprettelse af runbook og playbook skal du oprette et beslutningstræ for use case. I figuren nedenfor vises et eksempel.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Beslutningsproces for use case." lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Processen for beslutningstagning i use-case" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
 
 Når en use case-standard på højt niveau er blevet defineret og godkendt, er næste trin at oprette og teste en faktisk use case. I de følgende afsnit bruges scenarier med scanning af antiphishing og trussel og sikkerhedsrisiko som eksempler.
 
@@ -64,13 +64,13 @@ Når en use case-standard på højt niveau er blevet defineret og godkendt, er n
 
 Det første trin til at oprette en use case er at oprette en disposition for arbejdsprocessen ved hjælp af et story board. Her er et eksempel på et story board på højt niveau for en ny meddelelse om phishing-udnyttelse til et Threat Intelligence-team.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Et eksempel på en arbejdsproces for use case for en antiphishing-kampagne." lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Arbejdsprocessen for en use case for en antiphishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
 
 ### <a name="invoke-the-use-case-workflow-for-example-1"></a>Aktivere arbejdsprocessen for use case for eksempel 1
 
 Når story boardet er blevet godkendt, er næste trin at fremkalde arbejdsprocessen for use case-sager. Her er et eksempel på en proces til antiphishing-kampagner. 
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="Et eksempel på en detaljeret arbejdsproces for use case for en antiphishing-kampagne." lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="En detaljeret arbejdsproces for use case for en antiphishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
 
 ## <a name="use-case-example-2-threat-and-vulnerability-scanning"></a>Use case example 2: Scanning af trussel og sikkerhedsrisiko
 
@@ -78,13 +78,13 @@ Et andet scenarie, hvor der kunne benyttes en use case, er ved scanning af trusl
 
 Her er et eksempel på et storyboard på højt niveau til Håndtering af trusler og sikkerhedsrisici af aktiver.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="Et eksempel på en arbejdsproces for use case til Håndtering af trusler og sikkerhedsrisici." lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="En arbejdsproces for use-case til Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
 
 ### <a name="invoke-the-use-case-workflow-for-example-2"></a>Aktivere arbejdsprocessen for use case for eksempel 2
 
 Her er en eksempelproces til scanning af trusler og sikkerhedsrisiko.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="Et eksempel på en detaljeret arbejdsproces for use case til Håndtering af trusler og sikkerhedsrisici." lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="En detaljeret arbejdsproces for use case til Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
  
 ### <a name="analyze-the-use-case-output-and-lessons-learned"></a>Analysér output fra use case og indlærte lektioner
 
@@ -95,9 +95,9 @@ I eksemplet med antiphishingscenariet kunne SOC-grupperne f.eks. have foretaget 
 
 | SOC-team | Krav | Personer, der opfylder kravet | Proces for at opfylde krav | Relevant teknologi | Mellemrum identificeret | Use case change log | Undtaget (Y/N) |
 |:-------|:-----|:-------|:-------|:-------|:-----|:-------|:-------|
-| Threat Intelligence and Analytics-team | Datakilder føder trusselsintelligens-motoren korrekt. | Threat Intelligence-analytiker/-tekniker | Etablerede krav til datafeed, trusselsintelligens udløsere fra godkendte kilder | Microsoft Defender for Identity, Microsoft Defender til slutpunkt | Threat Intelligence-teamet brugte ikke automationsscript til at sammenkæde Microsoft 365 Defender API med trussels-Intel-søgemaskiner | Føj Microsoft 365 Defender som datakilder til trusselsmotorer <BR> <BR> Opdatere kørselsbog for use case | N |
+| Threat Intelligence and Analytics-team | Datakilder føder trusselsintelligens-motoren korrekt. | Threat Intelligence-analytiker/-tekniker | Etablerede krav til datafeed, trusselsintelligens udløsere fra godkendte kilder | Microsoft Defender for Identity. Microsoft Defender for Endpoint | Threat Intelligence-teamet brugte ikke automationsscript til at sammenkæde Microsoft 365 Defender API med trussels-Intel-søgemaskiner | Føj Microsoft 365 Defender som datakilder til trusselsmotorer <BR> <BR> Opdatere kørselsbog for use case | N |
 | Overvågningsteam | Datakilder fødningen af overvågningsdashboardsene korrekt | Niveau 1,2 SOC-analytiker– & vigtige beskeder | Arbejdsproces til rapportering af Security & Compliance Center Secure Score | [Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts)  <br><br> Sikker scoreovervågning  | Ingen mekanisme for SOC-analytikere til at rapportere en vellykket registrering af phishingvarianter for at forbedre Secure Score <br><br> [Rapportering i Security & Compliance Center](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)| Føj en proces til registrering af secure score-forbedring til rapportering af arbejdsprocesser | N | 
-| Teknisk team og SecOps-team | Opdateringer til styring af ændringer foretages i SOC-teamets kørselsbøger | Niveau 2 SOC Engineer | Skift kontrolmeddelelsesprocedure for SOC-teamkørselsbøger | Godkendte ændringer af sikkerhedsenheder | Ændringer af Microsoft 365 Defender forbindelse til SOC-sikkerhedsteknologi kræver godkendelse | Føj Microsoft Defender til skyapps, Defender for Identity, Defender til slutpunkt, Security & Compliance Center til SOC-runbooks | Y |
+| Teknisk team og SecOps-team | Opdateringer til styring af ændringer foretages i SOC-teamets kørselsbøger | Niveau 2 SOC Engineer | Skift kontrolmeddelelsesprocedure for SOC-teamkørselsbøger | Godkendte ændringer af sikkerhedsenheder | Ændringer af Microsoft 365 Defender forbindelse til SOC-sikkerhedsteknologi kræver godkendelse | Føj Microsoft Defender for Cloud Apps, Defender for Identity, Defender til slutpunkt, Security & Compliance Center til SOC-runbooks | Y |
 |||||||||
 
 Desuden kan SOC-grupperne have gjort de opdagelser, der er beskrevet i tabellen nedenfor, i forhold til det Håndtering af trusler og sikkerhedsrisici, der er beskrevet ovenfor:

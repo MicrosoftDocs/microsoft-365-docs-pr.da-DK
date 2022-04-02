@@ -21,12 +21,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om beskeder om spam til slutbrugere for meddelelser i karantæne i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1950104e910733bfb3f846ff53411a6c75bbd68d
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: 706303e7bdab7297fbc1dd353238db3542c28177
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63587310"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465833"
 ---
 # <a name="use-quarantine-notifications-to-release-and-report-quarantined-messages"></a>Brug af karantænemeddelelser til at frigive og rapportere meddelelser, der er sat i karantæne
 
@@ -34,7 +34,7 @@ ms.locfileid: "63587310"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser, sætter karantæne i potentielt farlig eller uønskede meddelelser. Få mere at vide under [Meddelelser, der er sat i karantæne i EOP](quarantine-email-messages.md).
@@ -68,7 +68,7 @@ Følgende handlinger er som standard tilgængelige i karantænemeddelelsen for m
 - **Udgivelse**: Du kan slippe meddelelsen her uden at gå til **Karantæne** i Microsoft 365 Defender portal.
 - **Gennemse**: Klik på dette link for at  gå til Karantæne i Microsoft 365 Defender-portalen, hvor du kan (afhængigt af, hvorfor meddelelsen var i karantæne), frigive, slette eller rapportere dine meddelelser, der er i karantæne. Få mere at vide under [Find og slip meddelelser, der er sat i karantæne, som bruger i EOP](find-and-release-quarantined-messages-as-a-user.md).
 
-![Eksempel på besked om karantæne.](../../media/end-user-spam-notification.png)
+:::image type="content" source="../../media/end-user-spam-notification.png" alt-text="Eksempel på en besked om karantæne" lightbox="../../media/end-user-spam-notification.png":::
 
 > [!NOTE]
 > En blokeret afsender kan stadig sende dig mails. Alle meddelelser fra denne afsender, der sender dem til din postkasse, flyttes straks til mappen Uønsket mail. Fremtidige meddelelser fra denne afsender sendes til mappen Uønsket mail eller til karantæne. Hvis du vil slette disse meddelelser ved modtagelse i stedet for at modne dem, skal du bruge [regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kaldet transportregler) til at slette meddelelser ved modtagelse.
