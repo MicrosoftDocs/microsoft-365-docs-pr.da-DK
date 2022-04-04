@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 3418eac69930819fdb0e3fd8d1bae80312f89a9f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 14332b2787b59e2ef192741dc97e59a7c7cb5418
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597573"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499501"
 ---
 # <a name="manage-incidents-in-microsoft-365-defender"></a>Administrer hændelser i Microsoft 365 Defender
 
@@ -40,7 +40,7 @@ Hændelsesstyring er afgørende for at sikre, at hændelser navngives, tildeles 
 
 Du kan administrere hændelser & **hændelser > hændelser** i hurtig start af Microsoft 365 Defender -[portalen (security.microsoft.com](https://security.microsoft.com)). Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Eksempel på hændelseskøen." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Siden Hændelser i Microsoft 365 Defender portalen" lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
 Her er de måder, du kan administrere dine hændelser på:
 
@@ -53,7 +53,7 @@ Her er de måder, du kan administrere dine hændelser på:
 
 Du kan administrere hændelser fra **ruden Administrer hændelse** for en hændelse. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Eksempel på ruden Administrer hændelse for en hændelse." lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Ruden Administrer hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
 
 Du kan få vist denne rude **via linket Administrer** hændelse på:
 

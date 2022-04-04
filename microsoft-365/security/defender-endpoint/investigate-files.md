@@ -1,5 +1,5 @@
 ---
-title: Undersøg Microsoft Defender for slutpunktsfiler
+title: Undersøg Microsoft Defender for Endpoint filer
 description: Brug undersøgelsesmulighederne til at få oplysninger om filer, der er knyttet til beskeder, funktionsmåder eller hændelser.
 keywords: undersøgelse, undersøgelse, fil, ondsindet aktivitet, angrebsmotation, dybdegående analyse, dybdegående analyserapport
 ms.prod: m365-security
@@ -15,20 +15,20 @@ ms.collection: m365-security-compliance
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: 6f93a5ec90404ca28fd47d4115a8ebf8d488216e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0cb7523036d6660d4b5556fdfd07e443a359b208
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63603104"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466229"
 ---
-# <a name="investigate-a-file-associated-with-a-microsoft-defender-for-endpoint-alert"></a>Undersøg en fil, der er knyttet til en besked om Microsoft Defender for Endpoint
+# <a name="investigate-a-file-associated-with-a-microsoft-defender-for-endpoint-alert"></a>Undersøg en fil, der er knyttet Microsoft Defender for Endpoint besked
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -74,13 +74,13 @@ Kortet med filen blev vist, hvor filen blev set på enheder i organisationen og 
 > [!NOTE]
 > Forskellige brugere kan se forskellige værdier i enhederne *i organisationen på* filens skærmkort. Dette skyldes, at kortet viser oplysninger, der er baseret på det RBAC-omfang, en bruger har. Det vil sige, at hvis en bruger har fået tildelt synlighed på et bestemt sæt enheder, vil brugeren kun kunne se filens organisatoriske hjælpemidler på disse enheder.
 
-![Billede af filoplysninger.](images/atp-file-information.png)
+:::image type="content" source="images/atp-file-information.png" alt-text="Filoplysningerne" lightbox="images/atp-file-information.png":::
 
 ## <a name="alerts"></a>Beskeder
 
 Fanen **Beskeder indeholder** en liste over beskeder, der er knyttet til filen. Denne liste dækker mange af de samme oplysninger som køen Beskeder med undtagelse af enhedsgruppen, hvis der er nogen, den pågældende enhed tilhører. Du kan vælge, hvilke typer oplysninger der vises, ved at vælge **Tilpas** kolonner på værktøjslinjen over kolonneoverskrifterne.
 
-![Billede af beskeder, der er relateret til filsektionen.](images/atp-alerts-related-to-file.png)
+:::image type="content" source="images/atp-alerts-related-to-file.png" alt-text="Beskederne, der er relateret til filsektionen" lightbox="images/atp-alerts-related-to-file.png":::
 
 ## <a name="observed-in-organization"></a>Observeret i organisation
 
@@ -89,7 +89,7 @@ Fanen **Observeret i organisation gør** det muligt at angive et datointerval fo
 > [!NOTE]
 > Denne fane viser et maksimalt antal af 100 enheder. Hvis du _vil se_ alle enheder med filen, skal du eksportere fanen til en CSV-fil ved  at vælge Eksportér i handlingsmenuen over fanens kolonneoverskrifter.
 
-![Billede af den senest observerede enhed med filen.](images/atp-observed-machines.png)
+:::image type="content" source="images/atp-observed-machines.png" alt-text="De seneste observerede enheder med filen" lightbox="images/atp-observed-machines.png":::
 
 Brug skyderen eller områdevælgeren til hurtigt at angive en tidsperiode, du vil kontrollere for hændelser, der involverer filen. Du kan angive et tidsvindue så lille som en enkelt dag. Dette giver dig mulighed for kun at se filer, der kommunikerede med den pågældende IP-adresse på det pågældende tidspunkt, hvilket markant reducerer unødvendig rulning og søgning.
 
@@ -97,21 +97,21 @@ Brug skyderen eller områdevælgeren til hurtigt at angive en tidsperiode, du vi
 
 Fanen **Dybdegående** analyse giver dig mulighed [for](respond-file-alerts.md#deep-analysis) at sende filen til dybdegående analyse og afdække flere oplysninger om filens funktionsmåde samt den effekt, den har i din organisation. Når du har indsendt filen, vises den dybdegående analyserapport på denne fane, når resultaterne er tilgængelige. Hvis en dybdegående analyse ikke fandt noget, vil rapporten være tom, og pladsen til resultaterne forbliver tom.
 
-![Billede af fanen dybdegående analyse.](images/submit-file.png)
+:::image type="content" source="images/submit-file.png" alt-text="Fanen Dybdegående analyse" lightbox="images/submit-file.png":::
 
 ## <a name="file-names"></a>Filnavne
 
 Fanen **Filnavne** viser alle de navne, som filen er blevet observeret til brug i din organisation.
 
-![Billede af fanen Filnavne.](images/atp-file-names.png)
+:::image type="content" source="images/atp-file-names.png" alt-text="Fanen Filnavne" lightbox="images/atp-file-names.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Få vist og organiser køen for Microsoft Defender til slutpunkt](alerts-queue.md)
-- [Administrer Microsoft Defender for Endpoint-beskeder](manage-alerts.md)
-- [Undersøg Microsoft Defender for at få slutpunktsbeskeder](investigate-alerts.md)
-- [Undersøg enhederne på listen Microsoft Defender for Slutpunktsenheder](investigate-machines.md)
-- [Undersøg en IP-adresse, der er knyttet til en besked om Microsoft Defender for Endpoint](investigate-ip.md)
-- [Undersøg et domæne, der er knyttet til en besked om Microsoft Defender for Endpoint](investigate-domain.md)
-- [Undersøg en brugerkonto i Microsoft Defender til slutpunkt](investigate-user.md)
+- [Få vist og organiser Microsoft Defender for Endpoint køen](alerts-queue.md)
+- [Administrer Microsoft Defender for Endpoint vigtige beskeder](manage-alerts.md)
+- [Undersøg Microsoft Defender for Endpoint vigtige beskeder](investigate-alerts.md)
+- [Undersøg enhederne Microsoft Defender for Endpoint listen Over enheder](investigate-machines.md)
+- [Undersøg en IP-adresse, der er knyttet Microsoft Defender for Endpoint besked](investigate-ip.md)
+- [Undersøg et domæne, der er knyttet Microsoft Defender for Endpoint besked](investigate-domain.md)
+- [Undersøg en brugerkonto i Microsoft Defender for Endpoint](investigate-user.md)
 - [Udføre svarhandlinger på en fil](respond-file-alerts.md)

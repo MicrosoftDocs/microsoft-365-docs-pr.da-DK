@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 40178e42737bdfea756db55658aaeb988ad4f19f
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 2d5477122a29c672a947a2022f49da3abeb7003b
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498731"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568538"
 ---
 # <a name="prioritize-incidents-in-microsoft-365-defender"></a>Prioriter hændelser i Microsoft 365 Defender
 
@@ -37,7 +37,7 @@ ms.locfileid: "64498731"
 **Gælder for:**
 - Microsoft 365 Defender
 
-Microsoft 365 Defender anvender korrelationsanalyser og aggregerer relaterede beskeder og automatiserede undersøgelser fra forskellige produkter i en hændelse. Microsoft 365 Defender udløser også entydige beskeder om aktiviteter, der kun kan identificeres som skadelig i forhold til den slutpunkt-til-slutpunkt-synlighed, som Microsoft 365 Defender har på tværs af hele produktpakken. Denne visning giver dine sikkerhedsanalytikere den bredere angrebshistorie, som hjælper dem med bedre at forstå og håndtere komplekse trusler på tværs af organisationen.
+Microsoft 365 Defender anvender korrelationsanalyser og aggregerer relaterede beskeder og automatiserede undersøgelser fra forskellige produkter i en hændelse. Microsoft 365 Defender udløser også entydige beskeder om aktiviteter, der kun kan identificeres som skadelige, hvis end-til-end synligheden i Microsoft 365 Defender har på tværs af hele produktpakken. Denne visning giver dine sikkerhedsanalytikere den bredere angrebshistorie, som hjælper dem med bedre at forstå og håndtere komplekse trusler på tværs af organisationen.
 
 **Hændelseskøen** viser en samling af hændelser, der er oprettet på tværs af enheder, brugere og postkasser. Det hjælper dig med at sortere efter hændelser for at prioritere og skabe en informeret beslutning om cybersikkerhedsrespons, en proces kaldet hændelses triage.
 

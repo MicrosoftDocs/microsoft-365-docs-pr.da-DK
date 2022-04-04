@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365, og få mere at vide i hvert diagram.
-ms.openlocfilehash: 8dd72f1f153bb9052317afca1d0370645d8ad85b
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: c9d79b12d4a33282540274cf9f0688e071261469
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63590719"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679328"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 Rapporter i Administration
 
@@ -94,7 +94,7 @@ Afhængigt af dit abonnement er her de tilgængelige rapporter i alle miljøer.
 |[Office aktiveringer](microsoft-office-activations-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Aktive brugere](active-users-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Microsoft 365 grupper](office-365-groups-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[Microsoft 365 Apps brug](microsoft365-apps-usage-ww.md)|Ja|Ja|Nej[^1]|Nej[^1]|Nej[^1]|
+|[Microsoft 365 Apps brug](microsoft365-apps-usage-ww.md)|Ja|Ja|Nej[^1]|Nej[^1]|Ja
 |[OneDrive for Business brugeraktivitet](onedrive-for-business-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[OneDrive for Business brug](onedrive-for-business-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[SharePoint brug af webstedet](sharepoint-site-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
@@ -145,13 +145,13 @@ Rapporter indeholder oplysninger om organisationens brugsdata. Rapporter viser s
 
 Globale administratorer kan vende tilbage til denne ændring for deres lejer og vise identificerbare brugeroplysninger, hvis organisationens praksis for beskyttelse af personlige oplysninger tillader det. Det kan opnås i Microsoft 365 Administration ved at følge disse trin:
   
-1. I Administration skal du gå til siden **Indstillinger for** \> **org-indstillinger** \> **.**
+1. I Administration skal du gå til siden **Indstillinger** \> **Org Indstillinger** \> **Services**.
 
 2. Vælg **Rapporter**. 
   
 3. Fjern markeringen i **sætningen Vis skjulte bruger-, gruppe- og webstedsnavne i alle** rapporter, og gem derefter ændringerne.  
   
-Det kan tage et par minutter, før ændringerne træder i kraft i rapporterne i dashboardet Rapporter. Denne indstilling gælder også for Microsoft 365-forbrugsrapporter i [Microsoft Graph](/graph/api/resources/report?view=graph-rest-1.0) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics?view=o365-worldwide) og brugsrapporter [i Microsoft Teams Administration](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i overvågningsloggen i Microsoft 365-overholdelsescenteret.   
+Det kan tage et par minutter, før ændringerne træder i kraft i rapporterne i dashboardet Rapporter. Denne indstilling gælder også for rapporter Microsoft 365 brug i [Microsoft Graph](/graph/api/resources/report?view=graph-rest-1.0) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics?view=o365-worldwide) og anvendelsesrapporter [Microsoft Teams Administration](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i Microsoft 365 Overholdelsescenter overvågningsloggen.   
 
   
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Hvad sker der med forbrugsdata, når en brugerkonto lukkes?
@@ -163,5 +163,5 @@ Men når du vælger en bestemt dag, op til 28 dage fra den aktuelle dato, viser 
 ## <a name="related-content"></a>Relateret indhold
 
 [Rapporter i sikkerhed &amp; Overholdelsescenter](../../compliance/reports-in-security-and-compliance.md) (artikel)\
-[Microsoft 365-forbrugsanalyse](../usage-analytics/usage-analytics.md) (artikel)\
-[Tilpas rapporterne i Microsoft 365-forbrugsanalyse](../usage-analytics/customize-reports.md) (artikel)
+[Microsoft 365 forbrugsanalyse](../usage-analytics/usage-analytics.md) (artikel)\
+[Tilpas rapporterne i Microsoft 365 (](../usage-analytics/customize-reports.md)artikel)

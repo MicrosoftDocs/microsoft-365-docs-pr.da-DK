@@ -17,12 +17,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om de antiphishing-politikker, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 899a76fac01c6058d5642cb52af5a6e8fb7d11ee
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: a0f491c099e5a3b67866738267215e79ff6cbeb0
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589152"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679538"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Antiphishing-politikker i Microsoft 365
 
@@ -44,10 +44,6 @@ Eksempler på Microsoft Defender til Office 365 organisationer omfatter:
 
 De høje forskelle mellem antiphishing-politikker i EOP og antiphishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Funktion|Antiphishing-politikker i EOP|Antiphishing-politikker i Defender til Office 365|
 |---|:---:|:---:|
 |Automatisk oprettet standardpolitik|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
@@ -57,7 +53,6 @@ De høje forskelle mellem antiphishing-politikker i EOP og antiphishing-politikk
 |Første kontakt sikkerhedstip|![Markering.](../../media/checkmark.png)|![Markering](../../media/checkmark.png)|
 |Indstillinger for repræsentation||![Markering](../../media/checkmark.png)|
 |Avancerede grænseværdier for phishing||![Markering](../../media/checkmark.png)|
-|
 
 <sup>\*</sup> I standardpolitikken er politikkens navn og beskrivelse skrivebeskyttet (beskrivelsen er tom), og du kan ikke angive, hvem politikken gælder for (standardpolitikken gælder for alle modtagere).
 

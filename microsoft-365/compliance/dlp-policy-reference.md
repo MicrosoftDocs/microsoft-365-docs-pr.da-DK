@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: Komponent- og konfigurationsreference for DLP-politik
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 4888569318fd24d25368dc1c923a1efced9f4126
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 9b9658db71ea9945cedb746ec688eff5018a4ba4
+ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675432"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64520610"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
@@ -107,8 +107,8 @@ En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysni
 |SharePoint onlinewebsteder   |websteder       | data-at-rest </br> data i brug | Nej|
 |OneDrive for Business konti| konto eller distributionsgruppe |data-at-rest </br> data i brug|Nej|
 |Teams chat og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
-|Microsoft Defender til skyapps   | forekomst af skyapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til ikke-Microsoft-skyapps](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurere indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Microsoft Defender for Cloud Apps   | forekomst af skyapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til ikke-Microsoft-skyapps](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
+|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
 |Lokale lager (filshares og SharePoint)    |lager         | data-at-rest         | - [Få mere at vide Microsoft 365 lokal scanner til forebyggelse af datatab](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kom i gang med den lokale scanner til forebyggelse af datatab](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
 |PowerBI| arbejdsområder | data i brug | Nej|
 
@@ -132,7 +132,7 @@ DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom 
 |OneDrive for Business konti| Ja| Ja| Ja|
 |Teams chat- og kanalmeddelelser | Ja| Nej| Nej|
 |Enheder |Ja | Ja|  Nej|
-|Microsoft Defender til skyapps | Ja| Ja| Ja|
+|Microsoft Defender for Cloud Apps | Ja| Ja| Ja|
 |Lokale lagre| Ja| Ja| Nej|
 |PowerBI|Ja | Ja| Nej|
 
@@ -297,7 +297,7 @@ De tilgængelige kontekstindstillinger ændrer sig, afhængigt af hvilken placer
 - Indhold indeholder
 - Se [Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
 
-##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser, som Microsoft Defender til skyapps understøtter
+##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser, Microsoft Defender for Cloud Apps understøtter
 
 - Indhold indeholder
 - Indhold deles fra Microsoft 365
@@ -405,7 +405,7 @@ Når du vælger **Overvågning eller begrænser aktiviteter på Windows-enheder*
 
 - Alle apps
 - Ved hjælp af en liste over begrænsede apps, som du definerer
-- Ay en begrænset appgruppe (eksempel), som du definerer.
+- En begrænset appgruppe (eksempel), som du definerer.
 
 ##### <a name="service-domain-and-browser-activities"></a>Tjenestedomæne- og browseraktiviteter
 
@@ -439,7 +439,7 @@ Når du vælger en af indstillingerne  Anvend begrænsninger, og en bruger fors�
 
 Se Begrænsede [apps og appgrupper for at](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) få flere oplysninger. 
 
-#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Handlinger for Microsoft Defender til skyapps
+#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Microsoft Defender for Cloud Apps handlinger
 
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Begræns tredjepartsapps
@@ -480,7 +480,7 @@ Hvis du f.eks. Exchange enheder som placeringer, vil disse handlinger være tilg
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Overvågning eller begræns aktiviteter på Windows enheder
 
-Hvis du vælger Enheder og Microsoft Defender til skyapps, vil disse handlinger være tilgængelige:
+Hvis du vælger Enheder Microsoft Defender for Cloud Apps, vil disse handlinger være tilgængelige:
 
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Overvågning eller begræns aktiviteter på Windows enheder

@@ -13,14 +13,16 @@ ms.author: dansimp
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: fb46d0c03aaaaad016ca13be5bfa26a19887794c
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: c43fdfe746575837e8e5c8f36992f5fa6e2fec96
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63591830"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679494"
 ---
 # <a name="evaluate-network-protection"></a>Evaluer netværksbeskyttelse
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Secure Score til enheder
 description: Dine pointtal for enheder viser den kollektive sikkerhedskonfigurationstilstand for dine enheder på tværs af programmer, operativsystemer, netværk, konti og sikkerhedskontrolelementer.
-keywords: Microsoft Secure Score til enheder, Microsoft Defender til slutpunkt Microsoft Secure Score til enheder, sikker score, konfigurationsscore, Håndtering af trusler og sikkerhedsrisici, sikkerhedskontrolelementer, forbedringsmuligheder, sikkerhedskonfigurationsscore over tid, sikkerhedsovergang, grundlinje
+keywords: Microsoft Secure Score til enheder, Microsoft Defender for Endpoint Microsoft Secure Score til enheder, sikker score, konfigurationsscore, Håndtering af trusler og sikkerhedsrisici, sikkerhedskontrolelementer, forbedringsmuligheder, sikkerhedskonfigurationsscore over tid, sikkerhedsovergang, grundlinje
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ccd5164839244250c5e2d908f41c35a706e0f49d
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 1d63e240c0698273807421a4121061630b8f3951
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63592046"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499523"
 ---
 # <a name="microsoft-secure-score-for-devices"></a>Microsoft Secure Score til enheder
 
@@ -29,7 +29,7 @@ ms.locfileid: "63592046"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -48,22 +48,10 @@ Dine pointtal for enheder vises på [Håndtering af trusler og sikkerhedsrisici 
 
 Vælg en kategori for at gå til [**siden med sikkerhedsanbefalinger**](tvm-security-recommendation.md) og få vist de relevante anbefalinger.
 
-## <a name="turn-on-the-microsoft-secure-score-connector"></a>Slå Microsoft Secure Score-forbindelsen til
-
-Videresende Microsoft Defender til slutpunktssignaler, hvilket giver Microsoft Secure Score indblik i enhedens sikkerhedslager. Videresendte data gemmes og behandles på samme placering som dine Microsoft Secure Score-data.
-
-Der kan gå op til et par timer, før ændringerne afspejles i dashboardet.
-
-1. I navigationsruden skal du gå **til Indstillinger** \> **Generelle avancerede funktioner** \> **i** \> **Slutpunkter**
-
-2. Rul ned **til Microsoft Secure Score** , og skift indstillingen til **Til**.
-
-3. Vælg **Gem indstillinger**.
-
 ## <a name="how-it-works"></a>Sådan fungerer det
 
 > [!NOTE]
-> Microsoft Secure Score for enheder understøtter i øjeblikket konfigurationer, der er angivet via Gruppepolitik. På grund af den aktuelle delvise understøttelse af Intune kan konfigurationer, der er blevet konfigureret via Intune, blive vist som forkert konfigurerede. Kontakt din it-administrator for at bekræfte den faktiske konfigurationsstatus, hvis din organisation bruger Intune til sikker konfigurationsstyring.
+> Microsoft Secure Score til enheder understøtter i øjeblikket konfigurationer, der er angivet via Gruppepolitik. På grund af den aktuelle delvise Intune, kan konfigurationer, som er blevet konfigureret via Intune, blive vist som forkert konfigurerede. Kontakt din it-administrator for at bekræfte den faktiske konfigurationsstatus, hvis din organisation bruger Intune til sikker konfigurationsstyring.
 
 Dataene i kortet Microsoft Secure Score for Devices er produktet af en omhyggelig og løbende proces til registrering af sikkerhedsrisiko. Det samles med konfigurationsvurderinger for registrering, som løbende:
 
@@ -80,17 +68,17 @@ Du kan forbedre sikkerhedskonfigurationen ved at løse problemer fra listen med 
 
 2. Vælg et element på listen. Pop op-panelet åbnes med oplysninger, der er relateret til anbefalingen. Vælg **Afhjælpningsindstillinger**.
 
-   :::image type="content" alt-text="Sikkerhedskontrolelementer relaterede sikkerhedsanbefalinger." source="images/security-controls.png":::
+   :::image type="content" source="images/security-controls.png" alt-text="Sikkerhedskontrolrelaterede sikkerhedsanbefalinger" lightbox="images/security-controls.png":::
 
 3. Læs beskrivelsen for at forstå konteksten for problemet, og hvad du så skal gøre. Vælg en forfaldsdato, tilføj noter, og vælg Eksportér alle afhjælpningsaktivitetsdata til **CSV,så** du kan vedhæfte den til en mail til opfølgning.
 
 4. **Indsend anmodning**. Du får vist en bekræftelsesmeddelelse om, at afhjælpningsopgaven er blevet oprettet.
 
-   :::image type="content" alt-text="Bekræftelse af afhjælpning af opgaveoprettelse." source="images/remediation-task-created.png":::
+   :::image type="content" source="images/remediation-task-created.png" alt-text="Bekræftelse af afhjælpning af opgaveoprettelse" lightbox="images/remediation-task-created.png":::
 
 5. Gem CSV-filen.
 
-   :::image type="content" alt-text="Gem CSV-fil." source="images/tvm_save_csv_file.png":::
+   :::image type="content" source="images/tvm_save_csv_file.png" alt-text="Den side, der indeholder muligheden for at gemme CSV-fil" lightbox="images/tvm_save_csv_file.png":::
 
 6. Send en opfølgende mail til din it-administrator, og giv den tid, du har tildelt til afhjælpningen, til at blive overført i systemet.
 

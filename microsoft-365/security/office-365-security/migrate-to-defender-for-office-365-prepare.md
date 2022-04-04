@@ -16,28 +16,28 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Nødvendige trin til at overføre fra en tredjepartsbeskyttelsestjeneste eller -enhed til Microsoft Defender for Office 365 beskyttelse.
+description: Nødvendige trin til at overføre fra en tredjepartsbeskyttelsestjeneste eller -enhed for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f8a35fa7e8ac469a87861d25f45e7078eb4be940
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 019f7152f0f892abd19bb09ffa9449874b00340c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63594071"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466581"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-1-prepare"></a>Overfør til Microsoft Defender for Office 365 – Fase 1: Forbered
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-1-prepare"></a>Overfør til Microsoft Defender for Office 365 - Fase 1: Forbered
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
 <br>
 
-|![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png) <br> Fase 1: Forbered|[![Fase 2: Konfigurer](../../media/phase-diagrams/setup.png)](migrate-to-defender-for-office-365-setup.md) <br> [Fase 2: Konfigurer](migrate-to-defender-for-office-365-setup.md)|[![Fase 3: Onboard](../../media/phase-diagrams/onboard.png)](migrate-to-defender-for-office-365-onboard.md) <br> [Fase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
+|![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png) <br> Fase 1: Forbered|[![Fase 2: Konfigurer](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Fase 2: Konfigurer](migrate-to-defender-for-office-365-setup.md)|[![Fase 3: Onboard](../../media/phase-diagrams/onboard.png#lightbox)](migrate-to-defender-for-office-365-onboard.md) <br> [Fase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
 |---|---|---|
 |*Du er her!*|||
 
-Velkommen til **Fase 1: Forbered** din **[overførsel til Microsoft Defender for at Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Denne overførselsfase omfatter følgende trin. Du bør lagerliste indstillingerne på din eksisterende beskyttelsestjeneste først, før du foretager ændringer. Ellers kan du udføre de resterende trin i en hvilken som helst rækkefølge:
+Velkommen til **Fase 1: Forbered** din **[overførsel til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Denne overførselsfase omfatter følgende trin. Du bør lagerliste indstillingerne på din eksisterende beskyttelsestjeneste først, før du foretager ændringer. Ellers kan du udføre de resterende trin i en hvilken som helst rækkefølge:
 
 1. [Opliste indstillingerne på din eksisterende beskyttelsestjeneste](#inventory-the-settings-at-your-existing-protection-service)
 2. [Kontrollér din eksisterende beskyttelseskonfiguration i Microsoft 365](#check-your-existing-protection-configuration-in-microsoft-365)
@@ -50,11 +50,11 @@ Velkommen til **Fase 1: Forbered** din **[overførsel til Microsoft Defender for
 
 En komplet oversigt over indstillinger, regler, undtagelser osv. fra din eksisterende beskyttelsestjeneste er en god ide, fordi du sandsynligvis ikke vil have adgang til oplysningerne, når du annullerer dit abonnement.
 
-**Det er dog meget vigtigt, at du ikke automatisk eller vilkårligt genskaber alle dine eksisterende tilpasninger i Defender til Office 365.** Du kan i bedste fald introducere indstillinger, der ikke længere er nødvendige, relevante eller funktionelle. Så værst kan nogle af dine tidligere tilpasninger faktisk skabe sikkerhedsproblemer i Defender Office 365.
+**Det er dog meget vigtigt, at du ikke automatisk eller vilkårligt genskaber alle dine eksisterende tilpasninger Defender for Office 365.** Du kan i bedste fald introducere indstillinger, der ikke længere er nødvendige, relevante eller funktionelle. Så kan nogle af dine tidligere tilpasninger faktisk skabe sikkerhedsproblemer i Defender for Office 365.
 
-Din test og observation af de oprindelige funktioner og funktionsmåden for Defender til Office 365 i sidste ende afgøre tilsidesættelser og indstillinger, du har brug for. Det kan være nyttigt at kategorisere indstillingerne fra din eksisterende beskyttelsestjeneste i følgende kategorier:
+Din test og observation af de oprindelige Defender for Office 365 afgør i sidste ende de tilsidesættelser og indstillinger, du har brug for. Det kan være nyttigt at kategorisere indstillingerne fra din eksisterende beskyttelsestjeneste i følgende kategorier:
 
-- **Filtrering af forbindelse eller indhold**: Du vil sandsynligvis opdage, at du ikke har brug for de fleste af disse tilpasninger i Defender til Office 365.
+- **Filtrering af forbindelse eller indhold**: Du vil sandsynligvis opdage, at du ikke har brug for de fleste af disse tilpasninger Defender for Office 365.
 - **Virksomhedsrouting**: Størstedelen af de tilpasninger, du skal gendanne, falder sandsynligvis til denne kategori. Du kan f.eks. genskabe disse indstillinger i Microsoft 365 som Exchange regler for mailflow (også kaldet transportregler), forbindelser og undtagelser til efterlignet intelligens.
 
 I stedet for blindt at flytte gamle indstillinger ind i Microsoft 365 anbefaler vi en vandfaldstilgang, der involverer en pilotfase med stadig større brugermedlemskab og observationsbaseret justering baseret på justering af sikkerhedsmæssige overvejelser i forhold til virksomhedens behov.
@@ -79,7 +79,7 @@ Gennemse dine eksisterende beskyttelsesfunktioner i Microsoft 365 og overvej at 
 
 - Det Microsoft 365 at videresende mails fra dine lokale mailservere som et komplekst projekt i sig selv. Et simpelt eksempel er et lille antal apps eller enheder, som sender de fleste af deres meddelelser til interne modtagere og ikke bruges til masseforsendelser. Se [denne vejledning for at](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365) få mere at vide. Mere omfattende miljøer skal være mere veltænkte. Marketingmails og meddelelser, der kan ses som spam af modtagere, er ikke tilladt.
 
-- Defender til Office 365 ikke har en funktion til sammenlægning af DMARC-rapporter. Besøg [Kataloget Microsoft Intelligent Security Association (MISA)](https://www.microsoft.com/misapartnercatalog) for at få vist tredjepartsleverandører, der tilbyder DMARC-rapportering til Microsoft 365.
+- Defender for Office 365 ikke har en funktion til sammenlægning af DMARC-rapporter. Besøg [Kataloget Microsoft Intelligent Security Association (MISA)](https://www.microsoft.com/misapartnercatalog) for at få vist tredjepartsleverandører, der tilbyder DMARC-rapportering til Microsoft 365.
 
 ## <a name="move-features-that-modify-messages-into-microsoft-365"></a>Flyt funktioner, der redigerer meddelelser, Microsoft 365
 
@@ -100,7 +100,7 @@ Microsoft arbejder sammen med branchen for at understøtte den godkendte modtagn
 
 ## <a name="account-for-any-active-phishing-simulations"></a>Tage højde for alle aktive phishing-simuleringer
 
-Hvis du har aktive phishingsimeringer fra tredjeparter, skal du forhindre, at meddelelser, links og vedhæftede filer bliver identificeret som phishing af Defender Office 365. Få mere at vide under [Konfigurer phishing-simuleringer fra tredjeparter i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy).
+Hvis du har aktive phishingsimeringer fra tredjeparter, skal du forhindre, at meddelelser, links og vedhæftede filer bliver identificeret som phishing af Defender for Office 365. Få mere at vide under [Konfigurer phishing-simuleringer fra tredjeparter i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy).
 
 ## <a name="define-spam-and-bulk-user-experiences"></a>Definere spam og massebrugeroplevelser
 
@@ -114,7 +114,7 @@ Hvis du har aktive phishingsimeringer fra tredjeparter, skal du forhindre, at me
   - [Efterlignet intelligens](anti-spoofing-protection.md) fungerer ikke korrekt.
   - Du vil sandsynligvis få et stort antal falske positive (gode mails markeret som dårlige).
 
-  I sidste ende er det din beslutning, hvis du vil forhindre levering af mail til mappen Uønsket mail i stedet for levering til karantæne. Men der er én ting, der er sikker: Hvis oplevelsen i Defender til Office 365 er anderledes end den, dine brugere er vant til, skal du give dem besked og give grundlæggende kurser. Inkorkorer læring fra piloten, og sørg for, at brugerne er forberedt til enhver ny adfærd til levering af mail.
+  I sidste ende er det din beslutning, hvis du vil forhindre levering af mail til mappen Uønsket mail i stedet for levering til karantæne. Men der er én ting, der er sikker: Hvis oplevelsen i Defender for Office 365 er anderledes end den, dine brugere er vant til, skal du give dem besked og give grundlæggende kurser. Inkorkorer læring fra piloten, og sørg for, at brugerne er forberedt til enhver ny adfærd til levering af mail.
 
 - **Ønsket massemail vs. uønsket massemail**: Mange beskyttelsessystemer giver brugerne mulighed for at tillade eller blokere massemails til sig selv. Disse indstillinger kan ikke let overføres til Microsoft 365, så du bør overveje at arbejde med VIP'er og deres medarbejdere for at genskabe deres eksisterende konfigurationer Microsoft 365.
 
@@ -124,10 +124,10 @@ Hvis du har aktive phishingsimeringer fra tredjeparter, skal du forhindre, at me
 
 ## <a name="identify-and-designate-priority-accounts"></a>Identificer og angiv prioritetskonti
 
-Hvis funktionen er tilgængelig for **dig, kan** prioritetskonti  og brugermærker hjælpe dig med at identificere dine vigtige Microsoft 365 så de skiller sig ud i rapporter. Få mere at vide under [Brugermærker i Microsoft Defender til Office 365](user-tags.md) Administrer [og overvåg prioritetskonti](/microsoft-365/admin/setup/priority-accounts).
+Hvis funktionen er tilgængelig for **dig, kan** prioritetskonti  og brugermærker hjælpe dig med at identificere dine vigtige Microsoft 365 så de skiller sig ud i rapporter. Få mere at vide under [Brugermærker i Microsoft Defender for Office 365](user-tags.md) Administrer [og overvåg prioritetskonti](/microsoft-365/admin/setup/priority-accounts).
 
 ## <a name="next-step"></a>Næste trin
 
-**Tillykke**! Du har fuldført **klargøringsfasen** af [din overførsel til Microsoft Defender Office 365](migrate-to-defender-for-office-365.md#the-migration-process)!
+**Tillykke**! Du har fuldført **klargøringsfasen** af din [overførsel til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)!
 
 - Fortsæt til [Fase 2: Konfiguration](migrate-to-defender-for-office-365-setup.md).

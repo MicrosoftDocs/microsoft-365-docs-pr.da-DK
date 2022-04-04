@@ -1,0 +1,686 @@
+- name: Microsoft 365 til virksomhedsdokumentation og -ressourcer
+  href: index.yml
+- name: Microsoft 365 til virksomhedsoversigt
+  href: microsoft-365-overview.md
+- name: Netværk
+  items:
+    - name: Oversigt
+      href: networking-roadmap-microsoft-365.md
+    - name: Plan
+      items:
+        - name: oversigt over Microsoft 365 netværksforbindelse
+          href: microsoft-365-networking-overview.md
+        - name: Microsoft 365 principper for netværksforbindelse
+          href: microsoft-365-network-connectivity-principles.md
+        - name: Vurderer Microsoft 365 netværksforbindelse
+          href: assessing-network-connectivity.md
+        - name: Netværksplanlægning med ExpressRoute til Office 365
+          href: network-planning-with-expressroute.md
+        - name: 'Plan for netværksenheder, der opretter forbindelse til Microsoft 365-tjenester'
+          href: plan-for-network-devices.md
+        - name: Netværks- og overførselsplanlægning for Microsoft 365
+          href: network-and-migration-planning.md
+    - name: Rul ud
+      items:
+        - name: Tilføj et domæne
+          href: ../admin/setup/add-domain.md
+        - name: 'Konfigurer slutpunkter, der skal springes over'
+          items:
+            - name: Office 365 IP-adresse og URL-adressewebtjeneste
+              href: microsoft-365-ip-web-service.md
+            - name: 'Yderligere slutpunkter, der ikke er inkluderet i webtjenesten'
+              href: additional-office365-ip-addresses-and-urls.md
+            - name: Yderligere krav til netværkssikkerhed for Office 365 GCC High og DOD
+              href: additional-network-security-requirements-for-office-365-gcchigh-and-dod.md
+            - name: DNS-poster til Office 365 DoD
+              href: dns-records-for-office-365-dod.md
+            - name: DNS-poster til Office 365-GCC High
+              href: dns-records-for-office-365-gcc-high.md
+        - name: Hurtig start til Content Delivery Network (CDN)
+          href: office-365-cdn-quickstart.md
+        - name: Brug CDN med SharePoint Online
+          href: use-microsoft-365-cdn-with-spo.md
+        - name: Optimer forbindelse for fjernbrugere
+          items:
+            - name: Oversigt over VPN-opdelt tunnelføring
+              href: microsoft-365-vpn-split-tunnel.md
+            - name: Almindelige scenarier med opdelt VPN-tunnelføring
+              href: microsoft-365-vpn-common-scenarios.md
+            - name: Implementering af OPDELT VPN-tunnelføring
+              href: microsoft-365-vpn-implement-split-tunnel.md
+            - name: Sikring af Teams-medietrafik til VPN-opdelt tunnelføring
+              href: microsoft-365-vpn-securing-teams.md
+            - name: Stream og livebegivenheder i VPN-miljøer
+              href: microsoft-365-vpn-stream-and-live-events.md
+            - name: Microsoft 365 optimering for Kina-brugere
+              href: microsoft-365-networking-china.md
+            - name: Optimering af Microsoft 365 trafik for fjernmedarbejdere med den oprindelige WINDOWS 10 VPN-klient
+              href: /windows/security/identity-protection/vpn/vpn-office-365-optimization
+        - name: ExpressRoute til Office 365
+          href: azure-expressroute.md
+          items:
+            - name: Implementering af ExpressRoute
+              href: implementing-expressroute.md
+            - name: Routing med ExpressRoute til Office 365
+              href: routing-with-expressroute.md
+    - name: Administrer
+      items:
+        - name: Office 365-slutpunkter
+          items:
+            - name: Microsoft 365-slutpunkter
+              href: microsoft-365-endpoints.md
+            - name: Administrere Office 365-slutpunkter
+              href: managing-office-365-endpoints.md
+            - name: Verdensomspændende slutpunkter
+              href: urls-and-ip-address-ranges.md
+            - name: Den amerikanske regering DoD-slutpunkter
+              href: microsoft-365-u-s-government-dod-endpoints.md
+            - name: Den amerikanske regering GCC High slutpunkter
+              href: microsoft-365-u-s-government-gcc-high-endpoints.md
+            - name: Office 365 drevet af 21Vianet-slutpunkter
+              href: urls-and-ip-address-ranges-21vianet.md
+        - name: Content Delivery Networks
+          href: content-delivery-networks.md
+        - name: IPv6-understøttelse i Office 365-tjenester
+          href: ipv6-support.md
+        - name: NAT-understøttelse med Office 365
+          href: nat-support-with-microsoft-365.md
+        - name: Netværksanmodninger i Office til Mac
+          href: network-requests-in-office-2016-for-mac.md
+        - name: Netværksplanlægning og justering af ydeevne
+          href: network-planning-and-performance.md
+        - name: Overvåg forbindelse
+          href: monitor-connectivity.md
+        - name: Administration af ExpressRoute
+          href: managing-expressroute-for-connectivity.md
+    - name: Microsoft 365-netværksprogram
+      href: microsoft-365-networking-partner-program.md
+- name: Lejer
+  items:
+    - name: Oversigt
+      href: tenant-roadmap-microsoft-365.md
+    - name: Plan
+      items:
+        - name: 'Abonnementer, licenser, konti og lejere'
+          href: subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md
+        - name: Plan for tredjeparts SSL-certifikater
+          href: plan-for-third-party-ssl-certificates.md
+        - name: Konfigurationsvejledninger
+          href: setup-guides-for-microsoft-365.md
+        - name: Integration
+          items:
+            - name: Integrerede apps og Azure AD
+              href: integrated-apps-and-azure-ads.md
+            - name: Integration med det lokale miljø
+              href: microsoft-365-integration.md
+            - name: Integration af Azure
+              href: azure-integration.md
+            - name: Azure ExpressRoute
+              href: azure-expressroute.md
+        - name: Moderne hybridgodkendelse
+          items:
+            - name: Forudsætninger for Skype for Business Server og Exchange Server
+              href: hybrid-modern-auth-overview.md
+            - name: Konfigurer Exchange Server
+              href: configure-exchange-server-for-hybrid-modern-authentication.md
+            - name: Konfigurer Skype for Business
+              href: configure-skype-for-business-for-hybrid-modern-authentication.md
+            - name: Fjern eller deaktiver for Skype for Business og Exchange
+              href: remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md
+            - name: 'Office 2013-, Office 2016- og Office 2019-klientapps'
+              href: modern-auth-for-office-2013-and-2016.md
+        - name: Planlæg din opgradering
+          href: plan-upgrade-previous-versions-office.md
+          items:
+            - name: Office 2007
+              items:
+                - name: Opgrader fra Office 2007-servere og -klienter
+                  href: upgrade-from-office-2007-servers-and-products.md
+                - name: Skrivebordsversionen af Office 2007
+                  href: /DeployOffice/endofsupport/office-2007-end-support-roadmap
+                - name: Exchange 2007
+                  href: exchange-2007-end-of-support.md
+                - name: SharePoint 2007
+                  href: sharepoint-2007-end-of-support.md
+                - name: Office-kommunikationsserver
+                  href: /skypeforbusiness/plan-your-deployment/upgrade
+                - name: PerformancePoint Server 2007
+                  href: pps-2007-end-of-support.md
+                - name: Project Server 2007
+                  href: project-server-2007-end-of-support.md
+            - name: Office 2010
+              items:
+                - name: Opgrader fra Office 2010-servere og -klienter
+                  href: upgrade-from-office-2010-servers-and-products.md
+                - name: Skrivebordsversionen af Office 2010
+                  href: /DeployOffice/endofsupport/office-2010-end-support-roadmap
+                - name: Exchange 2010
+                  href: exchange-2010-end-of-support.md
+                - name: SharePoint 2010
+                  href: upgrade-from-sharepoint-2010.md
+                - name: Lync Server 2010
+                  href: /skypeforbusiness/plan-your-deployment/upgrade
+                - name: Project Server 2010
+                  href: project-server-2010-end-of-support.md
+        - name: Lejerisolering i Microsoft 365
+          href: /compliance/assurance/microsoft-365-isolation-controls
+          items:
+            - name: Isolering og Access Control i Azure Active Directory
+              href: microsoft-365-isolation-in-azure-active-directory.md
+            - name: Overvågning og test af lejergrænser
+              href: /compliance/assurance/assurance-monitoring-and-testing
+            - name: Ressourcegrænser
+              href: /compliance/assurance/assurance-resource-limits
+            - name: Isolering og Access Control
+              href: microsoft-365-isolation-in-microsoft-365.md
+    - name: Rul ud
+      items:
+        - name: Tilføj et domæne
+          href: ../admin/setup/add-domain.md
+    - name: Administrer
+      items:
+        - name: Status for Microsoft 365 tjenestetilstand
+          href: microsoft-365-service-health.md
+        - name: Microsoft 365 overvågning
+          href: microsoft-365-monitoring.md
+          items:
+            - name: Exchange Online-overvågning
+              href: microsoft-365-exchange-monitoring.md
+              items:
+                - name: Tjenestebeskeder om udnyttelse af postkasse
+                  href: microsoft-365-mailbox-utilization-service-alerts.md
+                - name: Servicebeskeder om MRS-kildeforsinkelser
+                  href: microsoft-365-mrs-source-delays-service-alerts.md
+                - name: Tjenestebeskeder for meddelelser i kø til eksterne modtagere
+                  href: microsoft-365-external-recipient-service-alerts.md
+            - name: Overvågning af Microsoft 365 apps
+              href: microsoft-365-apps-monitoring.md
+            - name: Microsoft 365 Teams-overvågning
+              href: microsoft-365-teams-monitoring.md
+        - name: Konfigurationsvejledninger
+          href: setup-guides-for-microsoft-365.md
+    - name: Flere lejere
+      items:
+        - name: Samarbejde mellem lejere
+          href: microsoft-365-inter-tenant-collaboration.md
+        - name: Migrering af postkasse på tværs af lejere
+          href: cross-tenant-mailbox-migration.md
+        - name: Lejer til lejer-migreringer
+          href: microsoft-365-tenant-to-tenant-migrations.md
+    - name: Multi-geo
+      items:
+        - name: Microsoft 365 Multi-Geo
+          href: microsoft-365-multi-geo.md
+        - name: Teams multi-geo
+          href: multi-geo-capabilities-in-teams-in-microsoft-365.md
+        - name: OneDrive og SharePoint multi-geo
+          href: multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md
+        - name: Exchange Multi-Geo
+          href: multi-geo-capabilities-in-exchange-online.md
+        - name: Plan
+          items:
+            - name: Plan for multi-geo
+              href: plan-for-multi-geo.md
+            - name: Administrationsoplevelse
+              href: administering-a-multi-geo-environment.md
+            - name: Brugeroplevelse
+              href: multi-geo-user-experience.md
+        - name: Rul ud
+          items:
+            - name: Konfigurer multi-geo
+              href: multi-geo-tenant-configuration.md
+            - name: Konfigurer foretrukken dataplacering
+              href: /azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation?toc=/microsoft-365/Enterprise/toc.json&bc=/microsoft-365/enterprise/breadcrumb/toc.json
+            - name: Konfigurer søgning
+              href: configure-search-for-multi-geo.md
+        - name: Administrer
+          items:
+            - name: Administration af et multigeografisk miljø
+              href: administering-a-multi-geo-environment.md
+            - name: Administrer SharePoint-kvoter
+              href: sharepoint-multi-geo-storage-quota.md
+            - name: Flyt et OneDrive-websted
+              href: move-onedrive-between-geo-locations.md
+            - name: Flyt et SharePoint-websted
+              href: move-sharepoint-between-geo-locations.md
+            - name: Tilføj eller fjern en geografisk administrator
+              href: add-a-sharepoint-geo-admin.md
+            - name: Begræns indhold til en geografisk placering
+              href: restrict-content-to-geo-location.md
+            - name: Konfigurer Microsoft 365 Multi-Geo eDiscovery
+              href: multi-geo-ediscovery-configuration.md
+            - name: Opret en gruppe med en bestemt PDL
+              href: multi-geo-add-group-with-pdl.md
+            - name: Slet en geografisk placering
+              href: delete-a-geo-location.md
+            - name: Aktivering af SharePoint Multi-Geo på din geografiske satellitplacering
+              href: enabling-SP-multigeo-satellite-geolocation.md
+            - name: Administration af Exchange Multi-Geo
+              href: administering-exchange-online-multi-geo.md
+    - name: Flyt til et nyt Microsoft 365 datacentergeografi
+      href: moving-data-to-new-datacenter-geos.md
+      items:
+        - name: Sådan anmoder du om flytning af dine data
+          href: request-your-data-move.md
+        - name: Under og efter flytningen af dine data
+          href: during-and-after-your-data-move.md
+        - name: Generelle ofte stillede spørgsmål om dataflytning
+          href: data-move-faq.yml
+        - name: Hvor kundedata gemmes
+          href: o365-data-locations.md
+        - name: Dataplaceringer for EU
+          href: eu-data-storage-locations.md
+- name: Identitet
+  items:
+    - name: Oversigt
+      href: deploy-identity-solution-overview.md
+    - name: Trin 1. Bestem din identitetsmodel
+      href: deploy-identity-solution-identity-model.md
+    - name: Trin 2. Beskyt dine privilegerede konti
+      href: protect-your-global-administrator-accounts.md
+    - name: Trin 3. Beskyt dine brugerkonti
+      href: microsoft-365-secure-sign-in.md
+    - name: Trin 4. Udrul din identitetsmodel
+      items:
+        - name: Kun cloud-id
+          href: cloud-only-identities.md
+        - name: Hybrididentitet
+          items:
+            - name: Forbered til katalogsynkronisering
+              href: prepare-for-directory-synchronization.md
+            - name: 'Forbered et domæne, der ikke kan routes, til katalogsynkronisering'
+              href: prepare-a-non-routable-domain-for-directory-synchronization.md
+            - name: Konfigurer katalogsynkronisering
+              href: set-up-directory-synchronization.md
+            - name: Hybridløsninger
+              items:
+                - name: Oversigt
+                  href: hybrid-solutions.md
+                - name: Brug Azure Active Directory til SharePoint Server 2016-godkendelse
+                  href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
+                - name: Opret forbindelse mellem et netværk i det lokale miljø og et virtuelt Azure-netværk
+                  href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md
+                - name: Udrul en katalogsynkroniseringsserver i Azure IaaS
+                  href: deploy-microsoft-365-directory-synchronization-dirsync-in-microsoft-azure.md
+                - name: Udrul organisationsnetværksgodkendelse med høj tilgængelighed i Azure
+                  href: deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md
+                  items:
+                    - name: Fase 1 – Konfigurer Azure
+                      href: high-availability-federated-authentication-phase-1-configure-azure.md
+                    - name: Fase 2 – Konfigurer domænecontrollere
+                      href: high-availability-federated-authentication-phase-2-configure-domain-controllers.md
+                    - name: Fase 3 – Konfigurer AD FS-servere
+                      href: high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md
+                    - name: Fase 4 – Konfigurer proxyer for webprogram
+                      href: high-availability-federated-authentication-phase-4-configure-web-application-pro.md
+                    - name: Fase 5 – Konfigurer samlet godkendelse
+                      href: high-availability-federated-authentication-phase-5-configure-federated-authentic.md
+                - name: It-katastrofeberedskab i SharePoint Server 2013 i Microsoft Azure
+                  href: sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md
+    - name: Administrer
+      items:
+        - name: Brugerkonti
+          items:
+            - name: Brugerkonti
+              href: manage-microsoft-365-accounts.md
+            - name: Tilføj flere brugere på samme tid
+              href: add-several-users-at-the-same-time.md
+        - name: Licenser
+          href: assign-licenses-to-user-accounts.md
+        - name: Adgangskoder
+          href: manage-microsoft-365-passwords.md
+        - name: Grupper
+          href: manage-microsoft-365-groups.md
+        - name: Styring
+          href: manage-microsoft-365-identity-governance.md
+        - name: Katalogsynkronisering
+          items:
+            - name: Vis status
+              href: view-directory-synchronization-status.md
+            - name: Identificer fejl
+              href: identify-directory-synchronization-errors.md
+            - name: Løs problemer
+              href: fix-problems-with-directory-synchronization.md
+            - name: Slå fra
+              href: turn-off-directory-synchronization.md
+- name: Klient- og serversoftware
+  items:
+    - name: Oversigt
+      href: client-server-software-roadmap-microsoft-365.md
+    - name: 'Arkitektoniske modeller til SharePoint, Exchange, Skype for Business og Lync'
+      href: architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md
+    - name: Plan
+      items:
+        - name: Planlæg din opgradering
+          href: plan-upgrade-previous-versions-office.md
+    - name: Rul ud
+      items:
+        - name: Office 2007
+          items:
+            - name: Opgrader fra Office 2007-servere og -klienter
+              href: upgrade-from-office-2007-servers-and-products.md
+            - name: Skrivebordsversionen af Office 2007
+              href: /DeployOffice/office-2007-end-support-roadmap
+            - name: Exchange 2007
+              href: exchange-2007-end-of-support.md
+            - name: SharePoint 2007
+              href: sharepoint-2007-end-of-support.md
+            - name: Office-kommunikationsserver
+              href: /skypeforbusiness/plan-your-deployment/upgrade
+            - name: PerformancePoint Server 2007
+              href: pps-2007-end-of-support.md
+            - name: Project Server 2007
+              href: project-server-2007-end-of-support.md
+        - name: Office 2010
+          items:
+            - name: Opgrader fra Office 2010-servere og -klienter
+              href: upgrade-from-office-2010-servers-and-products.md
+            - name: Skrivebordsversionen af Office 2010
+              href: /DeployOffice/office-2010-end-support-roadmap
+            - name: Exchange 2010
+              href: exchange-2010-end-of-support.md
+            - name: SharePoint 2010
+              href: upgrade-from-sharepoint-2010.md
+            - name: Lync Server 2010
+              href: /skypeforbusiness/plan-your-deployment/upgrade
+            - name: Project Server 2010
+              href: project-server-2010-end-of-support.md
+        - name: Office 2013
+          items:
+            - name: Skrivebordsversionen af Office 2013
+              href: /DeployOffice/endofsupport/plan-upgrade-older-versions-office
+            - name: SharePoint 2013
+              href: upgrade-from-sharepoint-2013.md
+            - name: Lync Server 2013
+              href: upgrade-from-lync-2013.md
+            - name: Project Server 2013
+              href: project-server-2013-end-of-support.md
+            - name: Exchange Server 2013
+              href: exchange-2013-end-of-support.md
+- name: Overholdelse af angivne standarder
+  href: ../compliance/index.yml
+- name: Sikkerhed
+  href: ../security/index.yml
+- name: Cloudtjenester
+  items:
+    - name: Oversigt
+      href: cloud-services-roadmap-microsoft-365.md
+    - name: Rul ud
+      items:
+        - name: Bliv klar
+          href: configure-services-and-applications.md
+        - name: Exchange Online
+          href: /Exchange/exchange-online
+        - name: SharePoint
+          href: /sharepoint/sharepoint-online
+        - name: Skype for Business
+          href: /SkypeForBusiness/skype-for-business-online
+        - name: Microsoft Teams
+          href: /MicrosoftTeams/Teams-overview
+        - name: Yammer
+          href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
+        - name: Aktivér rettighedsstyring
+          href: activate-rms-in-microsoft-365.md
+        - name: Konfiguration af udgivelsesindstillinger
+          href: 'https://support.office.com/article/365-3b3adfa4-1777-4ff0-b606-fb8732101f47'
+        - name: Oplær dine brugere
+          href: /office365/admin/admin-overview/get-started-with-office-365#training-resources-for-your-users
+    - name: Administrer
+      items:
+        - name: Sådan kontrollerer du tjenestetilstanden
+          href: view-service-health.md
+        - name: Supportmuligheder
+          href: ../admin/get-help-support.md
+        - name: Exchange Online
+          href: /Exchange/exchange-online
+        - name: SharePoint
+          href: 'https://support.office.com/article/79eb0420-8cbd-4bcb-a90b-ddc7d3ab4b3a'
+        - name: Skype for Business
+          href: /SkypeForBusiness/skype-for-business-online
+        - name: Microsoft Teams
+          href: /microsoftteams/upgrade-monitor-quality
+        - name: Yammer
+          href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
+        - name: Ydeevne og justering
+          items:
+            - name: Finjuster ydeevnen for Microsoft 365
+              href: tune-microsoft-365-performance.md
+            - name: Justering af ydeevnen ved hjælp af grundlinjer og ydeevnehistorik
+              href: performance-tuning-using-baselines-and-history.md
+            - name: Finjuster ydeevnen i Exchange Online
+              href: tune-exchange-online-performance.md
+            - name: Finjuster SharePoint-ydeevnen
+              href: tune-sharepoint-online-performance.md
+              items:
+                - name: Introduktion til justering af ydeevnen for SharePoint
+                  href: introduction-to-performance-tuning-for-sharepoint-online.md
+                - name: Diagnosticering af problemer med ydeevnen i SharePoint
+                  href: diagnosing-performance-issues-with-sharepoint-online.md
+            - name: Finindstil ydeevnen for Skype for Business Online
+              href: tune-skype-for-business-online-performance.md
+            - name: Finjustere ydeevnen i Project Online
+              href: /ProjectOnline/tune-project-online-performance
+            - name: Plan for fejlfinding af ydeevne
+              href: performance-troubleshooting-plan.md
+- name: Windows 10
+  items:
+    - name: Sådan kontrollerer du udgivelsestilstanden
+      href: /windows/deployment/update/check-release-health
+    - name: Udrul og opdater
+      href: /windows/deployment/
+- name: Microsoft 365 Apps for enterprise
+  href: /deployoffice/deployment-guide-microsoft-365-apps
+- name: Surface-enheder
+  href: /surface/deploy
+- name: Enhedshåndtering
+  items:
+    - name: Oversigt
+      href: device-management-roadmap-microsoft-365.md
+- name: Microsoft Edge
+  href: /deployedge/deploy-edge-plan-deployment
+- name: Konfigurationer af eksempel på udrulning og opdatering af kanal
+  items:
+    - name: Oversigt
+      href: deploy-update-channels-examples.md
+    - name: Bred udrulning af de nyeste udgivelser
+      href: deploy-update-channels-examples-rapid-deploy.md
+- name: Administrer Microsoft 365 med PowerShell
+  href: manage-microsoft-365-with-microsoft-365-powershell.md
+  items:
+    - name: Kom i gang
+      href: getting-started-with-microsoft-365-powershell.md
+      items:
+        - name: Derfor skal du bruge PowerShell
+          href: why-you-need-to-use-microsoft-365-powershell.md
+        - name: Opret forbindelse til Microsoft 365 med PowerShell
+          href: connect-to-microsoft-365-powershell.md
+        - name: Opret forbindelse til alle Microsoft 365 tjenester i et enkelt Windows PowerShell vindue
+          href: connect-to-all-microsoft-365-services-in-a-single-windows-powershell-window.md
+        - name: Opret rapporter med PowerShell
+          href: use-windows-powershell-to-create-reports-in-microsoft-365.md
+        - name: Cmdlet-referencer til Microsoft 365 tjenester
+          href: cmdlet-references-for-microsoft-365-services.md
+        - name: PowerShell-communityressourcer
+          href: microsoft-365-powershell-community-resources.md
+    - name: 'Brugerkonti, adgangskoder, licenser og grupper'
+      href: manage-user-accounts-and-licenses-with-microsoft-365-powershell.md
+      items:
+        - name: Brugerkonti
+          items:
+            - name: Opret
+              href: create-user-accounts-with-microsoft-365-powershell.md
+            - name: Vis
+              href: view-user-accounts-with-microsoft-365-powershell.md
+            - name: Konfigurer egenskaber
+              href: configure-user-account-properties-with-microsoft-365-powershell.md
+            - name: Tildel administratorroller
+              href: assign-roles-to-user-accounts-with-microsoft-365-powershell.md
+            - name: Slet og gendan
+              href: delete-and-restore-user-accounts-with-microsoft-365-powershell.md
+            - name: Bloker
+              href: block-user-accounts-with-microsoft-365-powershell.md
+            - name: Adgangskoder
+              href: manage-passwords-with-microsoft-365-powershell.md
+        - name: Licenser og tjenester
+          items:
+            - name: Få vist licenser og tjenester
+              href: view-licenses-and-services-with-microsoft-365-powershell.md
+            - name: Få vist brugere med og uden licens
+              href: view-licensed-and-unlicensed-users-with-microsoft-365-powershell.md
+            - name: Tildel licenser til brugerkonti
+              href: assign-licenses-to-user-accounts-with-microsoft-365-powershell.md
+            - name: Få vist oplysninger om kontolicens og tjeneste
+              href: view-account-license-and-service-details-with-microsoft-365-powershell.md
+            - name: Fjern licenser fra brugerkonti
+              href: remove-licenses-from-user-accounts-with-microsoft-365-powershell.md
+            - name: Deaktiver adgang til tjenester
+              href: disable-access-to-services-with-microsoft-365-powershell.md
+              items:
+                - name: Deaktiver adgang til Sway
+                  href: disable-access-to-sway-with-microsoft-365-powershell.md
+                - name: Deaktiver adgang til tjenester under tildeling af brugerlicenser
+                  href: disable-access-to-services-while-assigning-user-licenses.md
+        - name: Grupper
+          items:
+            - name: Administrere sikkerhedsgrupper
+              href: manage-security-groups-with-microsoft-365-powershell.md
+            - name: Bevar medlemskab af sikkerhedsgruppe
+              href: maintain-group-membership-with-microsoft-365-powershell.md
+            - name: Administrere Microsoft 365 grupper
+              href: manage-microsoft-365-groups-with-powershell.md
+    - name: Administrer SharePoint
+      href: manage-sharepoint-online-with-microsoft-365-powershell.md
+      items:
+        - name: 'Opret SharePoint Online-websteder, og tilføj brugere'
+          href: create-sharepoint-sites-and-add-users-with-powershell.md
+        - name: Administrer SharePoint Online-brugere og -grupper
+          href: manage-sharepoint-users-and-groups-with-powershell.md
+        - name: Administrer SharePoint Online-webstedsgrupper
+          href: manage-sharepoint-site-groups-with-powershell.md
+    - name: Administrer Exchange Online
+      href: /powershell/exchange/connect-to-exchange-online-powershell
+    - name: Brug PowerShell til at overføre mail til Microsoft 365
+      href: use-powershell-for-email-migration-to-microsoft-365.md
+      items:
+        - name: Brug PowerShell til at udføre en komplet migrering til Microsoft 365
+          href: use-powershell-to-perform-a-cutover-migration-to-microsoft-365.md
+        - name: Brug PowerShell til at udføre en IMAP-overførsel for at Microsoft 365
+          href: use-powershell-to-perform-an-imap-migration-to-microsoft-365.md
+        - name: Brug PowerShell til at udføre en faseinddelt migrering til Microsoft 365
+          href: use-powershell-to-perform-a-staged-migration-to-microsoft-365.md
+    - name: Administrer Microsoft 365 med Windows PowerShell for delegerede adgangspartnere
+      href: manage-microsoft-365-with-windows-powershell-for-delegated-access-permissions-dap-p.md
+      items:
+        - name: Administrer Microsoft 365 lejere med Windows PowerShell for delegerede adgangspartnere
+          href: manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissio.md
+        - name: Føj et domæne til en klients lejer med Windows PowerShell for delegerede adgangspartnere
+          href: add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe.md
+        - name: Opret forbindelse til Exchange Online via fjern-Windows PowerShell for delegerede adgangspartnere
+          href: /powershell/exchange/connect-to-exchange-online-powershell
+        - name: Hent kunderapporteringsdata via Windows PowerShell for delegerede adgangspartnere
+          href: retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md
+    - name: Administrer Microsoft Teams
+      href: /microsoftteams/teams-powershell-install
+    - name: Administrer Skype for Business Online
+      href: manage-skype-for-business-online-with-microsoft-365-powershell.md
+      items:
+        - name: Administrer Skype for Business Online-politikker
+          href: manage-skype-for-business-online-policies-with-microsoft-365-powershell.md
+        - name: Tildel Skype for Business Online-politikker pr. bruger
+          href: assign-per-user-skype-for-business-online-policies-with-microsoft-365-powershell.md
+    - name: Administrer tilføjelsesprogrammer med Centraliseret udrulning af PowerShell
+      href: use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins.md
+- name: Windows- og Office 365-installationslaboratoriesæt
+  href: modern-desktop-deployment-and-management-lab.md
+- name: Vejledninger til testlaboratorier
+  href: m365-enterprise-test-lab-guides.md
+  items:
+    - name: Grundlæggende konfiguration
+      items:
+        - name: Letvægt
+          href: lightweight-base-configuration-microsoft-365-enterprise.md
+        - name: Simuleret virksomhed
+          href: simulated-ent-base-configuration-microsoft-365-enterprise.md
+    - name: Identitet
+      items:
+        - name: Synkronisering af adgangskode-hash
+          href: password-hash-sync-m365-ent-test-environment.md
+        - name: Pass-through-godkendelse
+          href: pass-through-auth-m365-ent-test-environment.md
+        - name: Federated Authentication
+          href: federated-identity-for-your-microsoft-365-dev-test-environment.md
+        - name: Problemfrit enkeltlogon i Azure AD
+          href: single-sign-on-m365-ent-test-environment.md
+        - name: Multifaktorgodkendelse
+          href: multi-factor-authentication-microsoft-365-test-environment.md
+        - name: Beskyt globale administratorkonti
+          href: protect-global-administrator-accounts-microsoft-365-test-environment.md
+        - name: Tilbageførsel af adgangskode
+          href: password-writeback-m365-ent-test-environment.md
+        - name: Nulstilling af adgangskode
+          href: password-reset-m365-ent-test-environment.md
+        - name: Automatisk licensering og gruppemedlemskab
+          href: automate-licenses-group-membership-microsoft-365-test-environment.md
+        - name: Azure AD Identity Protection
+          href: azure-ad-identity-protection-microsoft-365-test-environment.md
+        - name: Identitets- og enhedsadgang
+          href: identity-device-access-m365-test-environment.md
+          items:
+            - name: Kun i skyen
+              href: cloud-only-prereqs-m365-test-environment.md
+            - name: Synkronisering af adgangskodehash
+              href: phs-prereqs-m365-test-environment.md
+            - name: Pass-through-godkendelse
+              href: pta-prereqs-m365-test-environment.md
+    - name: Administration af mobilenheder
+      items:
+        - name: Tilmeld iOS- og Android-enheder
+          href: enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md
+        - name: Politikker for enhedsoverholdelse
+          href: mam-policies-for-your-microsoft-365-enterprise-dev-test-environment.md
+    - name: Beskyttelse af oplysninger
+      items:
+        - name: Øget Microsoft 365 sikkerhed
+          href: increased-o365-security-microsoft-365-enterprise-dev-test-environment.md
+        - name: Klassificering af data
+          href: data-classification-microsoft-365-enterprise-dev-test-environment.md
+        - name: Privilegeret adgangsstyring
+          href: privileged-access-microsoft-365-enterprise-dev-test-environment.md
+- name: Casestudie om Contoso
+  href: contoso-case-study.md
+  items:
+    - name: Oversigt
+      href: contoso-overview.md
+    - name: Contoso it-infrastruktur og -behov
+      href: contoso-infra-needs.md
+    - name: Netværk
+      href: contoso-networking.md
+    - name: Identitet
+      href: contoso-identity.md
+    - name: Windows 10 Enterprise
+      href: contoso-win10.md
+    - name: Microsoft 365 Apps for enterprise
+      href: contoso-o365pp.md
+    - name: Administration af mobilenheder
+      href: contoso-mdm.md
+    - name: Beskyttelse af oplysninger
+      href: contoso-info-protect.md
+    - name: Sikkerhedsoversigt
+      href: contoso-security-summary.md
+- name: Microsoft 365 arkitektur og løsninger
+  href: ../solutions/index.yml
+- name: Enterprise Business Continuity Management (EBCM) med cloudtjenester
+  href: /compliance/assurance/assurance-understanding-ebcm-with-cloud-services
+  items:
+    - name: Kunde- og cloudpartner EBCM-ansvar
+      href: /compliance/assurance/assurance-customer-and-cloud-partner-ebcm-responsibilities
+    - name: Microsoft 365 robusthed i cloudtjenester
+      href: /compliance/assurance/assurance-m365-service-resiliency
+    - name: Udvikling af din kontinuitetsplan
+      href: /compliance/assurance/assurance-developing-your-ebcm-plan
+    - name: Scenarier for afhjælpning af tjenestehændelser
+      href: /compliance/assurance/assurance-microsoft-365-mitigations
+- name: Navigationsvejledning
+  href: ../microsoft-365-docs-navigation-guide.md?toc=/microsoft-365/Enterprise/toc.json&bc=/microsoft-365/enterprise/breadcrumb/toc.json
+- name: Microsoft 365 til virksomheder
+  href: ../admin/index.yml

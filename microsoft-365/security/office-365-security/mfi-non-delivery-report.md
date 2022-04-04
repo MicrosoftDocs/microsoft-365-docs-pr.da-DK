@@ -7,6 +7,7 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan du bruger rapporten om manglende levering i dashboardet for mailflow i Security & Compliance Center til at overvåge de mest anvendte fejlkoder i rapporter om manglende levering (også kaldet rapporter om manglende levering eller meddelelser om ikke-leveret post) fra afsendere i organisationen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 00efa42dbe9f3ca119d407c74d3711d99d6c0d5c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 73d48b831f42deca83b6b1b62fde09cd6c44562e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589175"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679626"
 ---
 # <a name="non-delivery-report-in-the-security--compliance-center"></a>Rapport om manglende levering i Security & Compliance Center
 

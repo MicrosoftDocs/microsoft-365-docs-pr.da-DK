@@ -1,5 +1,5 @@
 ---
-title: Hashtag og upload kildetabellen for følsomme oplysninger for at få nøjagtige data, der matcher følsomme oplysningstyper
+title: Hash og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der stemmer overens med typer af følsomme oplysninger
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,14 +17,14 @@ search.appverid:
 - MET150
 description: Hashtag og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der matcher følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8d3effe3d46375ffcaec268e4b3fc6d53fc5044e
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: e8726b17a3f87d61c8d63be7137ec8e465a5cd9a
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63596944"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568472"
 ---
-# <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Hashtag og upload kildetabellen for følsomme oplysninger for at få nøjagtige data, der matcher følsomme oplysningstyper
+# <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Hash og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der stemmer overens med typer af følsomme oplysninger
 
 I denne artikel kan du se, hvordan du hashhenter og overfører kildetabellen med følsomme oplysninger.
 
@@ -51,18 +51,19 @@ Hvis du ikke vil blotlægge din kildetabelfil med følsomme oplysninger om klar 
 ### <a name="best-practices"></a>Anbefalede fremgangsmåder
 
 Adskil processerne for hashing og upload af følsomme data, så du nemmere kan isolere eventuelle problemer i processen.
- 
+
 Når de er i produktion, skal du holde de to trin adskilt i de fleste tilfælde. Når du udfører hashingsprocessen på en isoleret computer og derefter overfører filen til overførsel til en computer, der er vendt mod internettet, sikrer du, at de faktiske data aldrig er tilgængelige i klar tekst-form på en computer, der kunne være blevet kompromitteret på grund af dens forbindelse til internettet.
 
-### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Sørg for, at din følsomme datatabel ikke har formateringsproblemer. 
+### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Sørg for, at din følsomme datatabel ikke har formateringsproblemer.
 
-Før du hashbehandler og uploader dine følsomme data, skal du udføre en søgning for at validere tilstedeværelsen af specialtegn, der kan medføre problemer med fortolkning af indholdet. Du kan validere, om tabellen er i et format, der er egnet til brug med EDM, ved hjælp af EDM-overførselsagenten med følgende syntaks:
+Før du hashbehandler og uploader dine følsomme data, skal du udføre en søgning for at validere tilstedeværelsen af specialtegn, der kan medføre problemer med fortolkning af indholdet.
+Du kan validere, om tabellen er i et format, der er egnet til brug med EDM, ved hjælp af EDM-overførselsagenten med følgende syntaks:
 
 ```powershell
-EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file] 
+EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]
 ```
 
-Hvis værktøjet angiver en uoverensstemmelse i antal kolonner, kan det skyldes forekomsten af kommaer eller anførselstegn i værdier i tabellen, som forveksles med kolonneafgrænsere. Medmindre de omgiver en hel værdi, kan enkelte og dobbelte anførselstegn få værktøjet til at fejlidentificere, hvor en enkelt kolonne starter eller slutter. 
+Hvis værktøjet angiver en uoverensstemmelse i antal kolonner, kan det skyldes forekomsten af kommaer eller anførselstegn i værdier i tabellen, som forveksles med kolonneafgrænsere. Medmindre de omgiver en hel værdi, kan enkelte og dobbelte anførselstegn få værktøjet til at fejlidentificere, hvor en enkelt kolonne starter eller slutter.
 
 **Hvis du finder enkelte eller dobbelte anførselstegn omkring fulde værdier**: du kan lade dem være, som de er.
 
@@ -93,7 +94,7 @@ Denne computer skal have direkte adgang til din Microsoft 365 lejer.
 > [!NOTE]
 > Før du starter denne procedure, skal du kontrollere, at du er medlem af **sikkerhedsgruppen EDMDataUploaders\_**.
 
-> [!TIP] 
+> [!TIP]
 >Du kan også køre en validering i forhold til kildetabelfilen med følsomme oplysninger for at kontrollere, om der er fejl, før du uploader, ved at køre:
 >
 > `EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]`
@@ -106,7 +107,7 @@ Denne computer skal have direkte adgang til din Microsoft 365 lejer.
 
 - [Kommerciel + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) - de fleste kommercielle kunder skal bruge dette
 - [GCC-High –](https://go.microsoft.com/fwlink/?linkid=2137521) Dette er specifikt for skyabonn abonnenter på den offentlige højsikkerhed
-- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) – dette er specifikt for kunder fra det amerikanske forsvarsministerium i skyen
+- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) – dette er specifikt for USA Department of Defense Cloud-kunder
 
 1. Opret en arbejdsmappe til EDMUploadAgent. F.eks **. C:\EDM\Data**. Placer **PatientRecords.csv** fil der.
 
@@ -121,8 +122,8 @@ Denne computer skal have direkte adgang til din Microsoft 365 lejer.
 
    `EdmUploadAgent.exe /Authorize`
 
-> [!IMPORTANT]
-> Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler. 
+   > [!IMPORTANT]
+   > Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler.
 
 4. Log på med din arbejds- eller skolekonto for Microsoft 365, der blev føjet EDM_DataUploaders sikkerhedsgruppen. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelsen.
 
@@ -137,14 +138,15 @@ Denne computer skal have direkte adgang til din Microsoft 365 lejer.
    ```dos
    EdmUploadAgent.exe /UploadData /DataStoreName [DS Name] /DataFile [data file] /HashLocation [hash file location] /Schema [Schema file] /ColumnSeparator ["{Tab}"|"|"] /AllowedBadLinesPercentage [value]
    ```
+
    > [!NOTE]
-> Standardformatet for den følsomme datafil er kommaseparerede værdier. Du kan angive en tabulatorsepareret fil ved at angive indstillingen "{Tab}" med parameteren /ColumnSeparator, eller du kan angive en pipe-separated fil ved at angive indstillingen "|".
+   > Standardformatet for den følsomme datafil er kommaseparerede værdier. Du kan angive en tabulatorsepareret fil ved at angive indstillingen "{Tab}" med parameteren /ColumnSeparator, eller du kan angive en pipe-separated fil ved at angive indstillingen "|".
+   >
+   > Eksempel: `EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\Edm\Hash\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5`
 
-   Eksempel: **EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\Edm\Hash\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5**
+   Hvis tabellen med følsomme oplysninger har nogle forkert formaterede værdier, men du alligevel vil importere de resterende data, mens ugyldige rækker ignoreres, kan du bruge parameteren */AllowedBadLinesPercentage* i kommandoen. Eksemplet ovenfor angiver en grænseværdi på fem procent. Det betyder, at værktøjet hashtagker og overfører tabellen med følsomme oplysninger, selvom op til fem procent af rækkerne er ugyldige.
 
-Hvis tabellen med følsomme oplysninger har nogle forkert formaterede værdier, men du alligevel vil importere de resterende data, mens ugyldige rækker ignoreres, kan du bruge parameteren */AllowedBadLinesPercentage* i kommandoen. Eksemplet ovenfor angiver en grænseværdi på fem procent. Det betyder, at værktøjet hashtagker og overfører tabellen med følsomme oplysninger, selvom op til fem procent af rækkerne er ugyldige. 
-
-Denne kommando føjer automatisk en tilfældigt genereret saltværdi til hash'en for at opnå større sikkerhed. Hvis du vil bruge din egen saltværdi, kan du føje **/Salt <saltvalue>** til kommandoen. Denne værdi skal være på 64 tegn og må kun indeholde a-z-tegn og 0-9 tegn.
+   Denne kommando føjer automatisk en tilfældigt genereret saltværdi til hash'en for at opnå større sikkerhed. Hvis du vil bruge din egen saltværdi, kan du føje **/Salt \<saltvalue\>** til kommandoen. Denne værdi skal være på 64 tegn og må kun indeholde a-z-tegn og 0-9 tegn.
 
 6. Kontrollér overførselsstatussen ved at køre denne kommando:
 
@@ -152,9 +154,9 @@ Denne kommando føjer automatisk en tilfældigt genereret saltværdi til hash'en
    EdmUploadAgent.exe /GetSession /DataStoreName \<DataStoreName\>
    ```
 
-   Eksempel: **EdmUploadAgent.exe /GetSession /DataStoreName PatientRecords**
+   Eksempel: `EdmUploadAgent.exe /GetSession /DataStoreName PatientRecords`
 
-   Se efter, om status er **i ProcessingInProgress**. Kontrollér igen med få minutter, indtil status ændres til **Fuldført**. Når status er fuldført, er dine EDM-data klar til brug. Afhængigt af størrelsen på kildetabelfilen med følsomme oplysninger kan det tage fra et par minutter til flere timer. 
+   Se efter, om status er **i ProcessingInProgress**. Kontrollér igen med få minutter, indtil status ændres til **Fuldført**. Når status er fuldført, er dine EDM-data klar til brug. Afhængigt af størrelsen på kildetabelfilen med følsomme oplysninger kan det tage fra et par minutter til flere timer.
 
 > [!TIP]
 > Hvis du vil have besked, når de overførte følsomme data er klar til brug, skal du følge procedurerne i [Oprette meddelelser for aktiviteter med nøjagtigt dataoverensstemmelse](sit-edm-notifications-activities.md#create-notifications-for-exact-data-match-activities).
@@ -181,24 +183,24 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    EdmUploadAgent.exe /CreateHash /DataFile C:\Edm\Data\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5
    ```
 
-> [!NOTE]
-> Standardformatet for den følsomme datafil er kommaseparerede værdier. Du kan angive en tabulatorsepareret fil ved at angive indstillingen "{Tab}" med parameteren /ColumnSeparator, eller du kan angive en pipe-separated fil ved at angive indstillingen "|".
+   > [!NOTE]
+   > Standardformatet for den følsomme datafil er kommaseparerede værdier. Du kan angive en tabulatorsepareret fil ved at angive indstillingen "{Tab}" med parameteren /ColumnSeparator, eller du kan angive en pipe-separated fil ved at angive indstillingen "|".
 
-
-   Dette vil få en hashed fil og en salt fil med disse filtypenavne, hvis du ikke har angivet **indstillingen /Salt <saltvalue>** :
+   Dette vil få en hashed fil og en salt fil med disse filtypenavne, hvis du ikke har angivet **indstillingen /Salt \<saltvalue\>** :
 
    - . EdmHash
    - . EdmSalt
-
 
 2. Kopiér disse filer på en sikker måde til den computer, du vil bruge til at uploade din kildetabelfil med følsomme oplysninger (PatientRecords) til din lejer.
 
 3. Godkend EDM Upload-agent, åbn kommandopromptvinduet som administrator, skift til **mappen C:\EDM\Data**, og kør derefter følgende kommando:
 
-   `EdmUploadAgent.exe /Authorize`
+   ```dos
+   EdmUploadAgent.exe /Authorize
+   ```
 
-> [!IMPORTANT]
-> Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler. 
+   > [!IMPORTANT]
+   > Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler.
 
 4. Log på med din arbejds- eller skolekonto for Microsoft 365, der blev føjet EDM_DataUploaders sikkerhedsgruppen. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelsen.
 
@@ -219,6 +221,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetDataStore
    ```
+
    Du får vist en liste over datalagre, og hvornår de sidst blev opdateret.
 
 7. Hvis du vil se alle dataoverførsler til et bestemt lager, skal du køre følgende kommando i en Windows-kommandoprompt for at få vist en liste over alle datalagrene, og hvornår de blev opdateret:
@@ -226,8 +229,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>
    ```
-     
+
 ## <a name="next-step"></a>Næste trin
 
-- [Oprette en nøjagtig dataoverensstemmelse mellem følsomme oplysningstype/regelpakke](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package)
-
+- [Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package)

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 473d58cde13f1f776c31184b2b50e74e23810b22
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: dac2a68249d90b212e6bbcaacdec84918560deb5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63603004"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755804"
 ---
 # <a name="create-and-manage-custom-detections-rules"></a>Oprette og administrere regler for brugerdefinerede registreringer
 
@@ -203,7 +203,7 @@ Hvis du vil have vist alle eksisterende brugerdefinerede registreringsregler, sk
 
 For at få vist omfattende oplysninger om en brugerdefineret registreringsregel skal du gå til **HuntingCustom-registreringsregler**  >  og derefter vælge navnet på reglen. Du kan derefter få vist generelle oplysninger om reglen, herunder oplysninger om dens kørselsstatus og omfang. Siden indeholder også en liste over udløste beskeder og handlinger.
 
-![Detaljeside for brugerdefineret registreringsregel.](../../media/custom-detect-rules-view.png)<br>
+:::image type="content" source="../../media/custom-detect-rules-view.png" alt-text="Detaljesiden for brugerdefineret registreringsregel i Microsoft 365 Defender portal" lightbox="../../media/custom-detect-rules-view.png":::<br>
 *Oplysninger om brugerdefineret registreringsregel*
 
 Du kan også udføre følgende handlinger på reglen fra denne side:

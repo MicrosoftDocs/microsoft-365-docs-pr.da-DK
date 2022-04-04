@@ -13,18 +13,28 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: b0a89bc8a79f3ea2c5c0b3c1f01039944565a75c
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: cdff93ed308767256df1adf8dcf9ce2f3eb095a4
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63590259"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755799"
 ---
 # <a name="microsoft-cloud-for-it-architects-illustrations"></a>Illustrationer af Microsoft Cloud til it-arkitekter
 
 Disse skyarkitekturplakater giver dig oplysninger om Microsofts skytjenester, herunder Microsoft 365, Azure Active Directory (Azure AD), Microsoft Intune, Microsoft Dynamics 365 og hybride lokale løsninger og skyløsninger. 
 
 IT-beslutningstagere og -arkitekter kan bruge disse ressourcer til at bestemme de ideelle løsninger til deres arbejdsmængde og træffe beslutninger om de vigtigste infrastrukturkomponenter såsom netværk, identitet og sikkerhed.
+
+<a name="zero trust"></a>
+### <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Zero Trust-installationsplan
+
+
+Denne illustration indeholder en installationsplan til at opbygge Zero Trust-sikkerhed med Microsoft 365. Zero Trust er en ny sikkerhedsmodel, der antager misligholdelse og bekræfter hver anmodning, som om den stammer fra et netværk, der er til at få adgang til. Uanset hvor anmodningen stammer fra, eller hvilken ressource den har adgang til, lærer Zero Trust-modellen os at "aldrig have tillid til, bekræft altid".
+
+| Element | Beskrivelse |
+|:-----|:-----|
+|[![Illustration af Microsoft 365 Zero Trust-installationsplanen.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Opdateret marts 2022 | Brug denne illustration sammen med denne artikel: Microsoft 365 [Zero Trust-installationsplan](../security/Microsoft-365-zero-trust.md) <br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Installér din identitetsinfrastruktur til Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Anbefalede konfigurationer for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Administrer enheder med Intune](manage-devices-with-intune-overview.md)</li><li>[Evaluer og Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Installér en Microsoft Information Protection løsning](../compliance/information-protection-solution.md)</li><li>[Installér beskyttelse af oplysninger for regler om beskyttelse af data med Microsoft 365](information-protection-deploy.md)</li></ul>
 
 <a name="attacks"></a>
 ### <a name="common-attacks-and-microsoft-capabilities-that-protect-your-organization"></a>Almindelige angreb og Microsoft-funktioner, der beskytter din organisation

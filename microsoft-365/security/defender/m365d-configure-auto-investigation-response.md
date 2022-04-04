@@ -18,12 +18,12 @@ ms.custom:
 ms.reviewer: evaldm, isco
 f1.keywords: CSH
 ms.technology: m365d
-ms.openlocfilehash: 4ec06a96e345345560a2714fa7e23d91a6f5832f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0e38dc36ca85425c033d2b8fd4828043b4043f1a
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599326"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499413"
 ---
 # <a name="configure-automated-investigation-and-response-capabilities-in-microsoft-365-defender"></a>Konfigurer automatiserede undersøgelses- og svarfunktioner i Microsoft 365 Defender
 
@@ -49,8 +49,8 @@ Når du er færdig med at konfigurere, kan du derefter [få vist og administrere
 |Krav|Detaljer|
 |---|---|
 |Abonnementskrav|Et af disse abonnementer: <ul><li>Microsoft 365 E5</li><li>Microsoft 365 A5</li><li>Microsoft 365 E3 med Microsoft 365 E5 Sikkerhed-tilføjelsesprogrammet</li><li>Microsoft 365 A3 med Microsoft 365 A5 Security-tilføjelsesprogrammet</li><li>Office 365 E5 plus Enterprise Mobility + Security E5 plus Windows E5</li></ul> <p> Se [Microsoft 365 Defender licenskrav](./prerequisites.md#licensing-requirements).|
-|Netværkskrav|<ul><li>[Microsoft Defender for Identity aktiveret](/azure-advanced-threat-protection/what-is-atp)</li><li>[Microsoft Defender til skyapps konfigureret](/cloud-app-security/what-is-cloud-app-security)</li><li>[Integration af Microsoft Defender for Identity](/cloud-app-security/mdi-integration)</li></ul>|
-|Windows af enhedskrav|<ul><li>Windows 11</li><li>Windows 10, version 1709 eller nyere installeret (se [Windows udgivelsesoplysninger](/windows/release-information/))</li><li>Følgende trusselsbeskyttelsestjenester er konfigureret:<ul><li>[Microsoft Defender til Slutpunkt](../defender-endpoint/configure-endpoints.md)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
+|Netværkskrav|<ul><li>[Microsoft Defender for Identity aktiveret](/azure-advanced-threat-protection/what-is-atp)</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) konfigureret</li><li>[Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration)</li></ul>|
+|Windows af enhedskrav|<ul><li>Windows 11</li><li>Windows 10, version 1709 eller nyere installeret (se [Windows udgivelsesoplysninger](/windows/release-information/))</li><li>Følgende trusselsbeskyttelsestjenester er konfigureret:<ul><li>[Microsoft Defender for Endpoint](../defender-endpoint/configure-endpoints.md)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
 |Beskyttelse af mailindhold og Office filer|[Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365#configure-atp-policies) konfigureret|
 |Tilladelser|For at konfigurere automatiserede undersøgelses- og svarfunktioner skal du have den globale administrator- eller sikkerhedsadministratorrolle tildelt i enten Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>). <p> Hvis du vil have de nødvendige tilladelser til at arbejde med automatiseret undersøgelse og svarmuligheder, f.eks. gennemgang, godkendelse eller afvisning af afventende handlinger, skal du se Påkrævede tilladelser [til handlingscenteropgaver](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 |
@@ -69,7 +69,7 @@ Om automatiserede undersøgelser kører, og om afhjælpningshandlinger skal løs
 
 ## <a name="review-your-security-and-alert-policies-in-office-365"></a>Gennemse dine sikkerhed- og beskedpolitikker i Office 365
 
-Microsoft leverer indbyggede advarselspolitikker [, der](../../compliance/alert-policies.md) hjælper med at identificere visse risici. Disse risici omfatter Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler og risiko for informationsstyring. Nogle beskeder kan udløse [automatiseret undersøgelse og svar Office 365](../office-365-security/office-365-air.md). Sørg for, [at din Defender Office 365](../office-365-security/defender-for-office-365.md), at alle funktionerne er konfigureret korrekt.
+Microsoft leverer indbyggede advarselspolitikker [, der](../../compliance/alert-policies.md) hjælper med at identificere visse risici. Disse risici omfatter Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler og risiko for informationsstyring. Nogle beskeder kan udløse [automatiseret undersøgelse og svar Office 365](../office-365-security/office-365-air.md). Sørg for, [Defender for Office 365](../office-365-security/defender-for-office-365.md) alle funktioner er konfigureret korrekt.
 
 Selvom visse advarsler og sikkerhedspolitikker kan udløse automatiserede undersøgelser, bliver der ikke taget nogen *afhjælpningshandlinger automatisk for mails og indhold*. I stedet kan alle afhjælpningshandlinger for mail- og mailindhold vente med godkendelse fra dit sikkerhedsteam i [handlingscenteret](m365d-action-center.md).
 
@@ -92,7 +92,7 @@ Sikkerhedsindstillinger i Office 365 beskytte mail og indhold. Hvis du vil have 
 
 ## <a name="make-sure-microsoft-365-defender-is-turned-on"></a>Kontrollér, Microsoft 365 Defender er slået til
 
-:::image type="content" source="../../media/mtp-enable/mtp-on.png" alt-text="Sådan sikrer du, at Microsoft 365 Defender er aktiveret." lightbox="../../media/mtp-enable/mtp-on.png":::
+:::image type="content" source="../../media/mtp-enable/mtp-on.png" alt-text="Den venstre navigationsrude i Microsoft 365 Defender, når Microsoft 365 Defender er slået til" lightbox="../../media/mtp-enable/mtp-on.png":::
 
 1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>
 

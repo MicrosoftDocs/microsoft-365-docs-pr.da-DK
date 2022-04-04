@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: En referenceliste over eksterne Domain Name System-poster, der skal bruges, når du planlægger Office 365 installation.
-ms.openlocfilehash: 39b6f093c196d8b696a8d36458d2ebc18be2a5f2
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+ms.openlocfilehash: 3ba8345c17446f7f6d2d6b034415288eb994ee79
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63601618"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568428"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Eksterne DNS-poster for Office 365
 
@@ -48,12 +48,17 @@ Afsnittene herunder er organiseret efter tjeneste i Office 365. Hvis du vil se e
 ## <a name="external-dns-records-required-for-office-365-core-services"></a>Der kræves eksterne DNS-poster til Office 365 (kernetjenester)
 <a name="BKMK_ReqdCore"> </a>
 
-Hver Office 365 skal føje to poster til deres eksterne DNS. Den første CNAME-post sikrer, at Office 365 kan få arbejdsstationer til at godkende med den relevante identitetsplatform. Den anden påkrævede post er at bevise, at du ejer dit domænenavn.
+TXT-posten skal bruges til at bevise, at du ejer domænet, og er påkrævet for alle kunder.
+
+CNAME-posten er kun påkrævet for kunder, der [bruger Office 365 drevet af 21Vianet](/microsoft-365/admin/services-in-china/services-in-china). Det sikrer, at Office 365 kan få arbejdsstationer til at godkende med den relevante identitetsplatform. 
+
+
   
-|**DNS-post** <br/> |**Formål** <br/> |**Værdi, der skal bruges** <br/> |
-|----------|-----------|------------|
-|**CNAME** <br/> **(Pakke)** <br/> |Bruges af Office 365 til at dirigere godkendelse til den korrekte identitetsplatform. [Flere oplysninger](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Bemærk!** Dette CNAME gælder kun for Office 365 drevet af 21Vianet. Hvis præsentér, og din Office 365 ikke drives af 21Vianet, får brugere på dit brugerdefinerede domæne *fejlen "* brugerdefineret domæne er ikke i vores system", og de vil ikke kunne aktivere deres Office 365-licens. [Flere oplysninger](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Alias:** msoid  <br/> **Destination:** clientconfig.partner.microsoftonline-p.net.cn  <br/> |
-|**TXT** <br/> **(Domænebekræftelse)** <br/> |Bruges af Office 365 til kun at bekræfte, at du ejer dit domæne. Den har ingen anden betydning.  <br/> |**Vært:** @ (eller for nogle DNS-udbydere, dit domænenavn)  <br/> **TXT-værdi:** _En tekststreng leveret af_ Office 365  <br/> Konfigurationsguiden Office 365 **domæne indeholder** de værdier, du bruger til at oprette denne post.  <br/> |
+|**DNS-post** <br/> |**Formål** <br/> |**Værdi, der skal bruges** <br/> |**Gælder for**|
+|----------|-----------|------------|------------|
+|**TXT** <br/> **(Domænebekræftelse)** <br/> |Bruges af Office 365 til kun at bekræfte, at du ejer dit domæne. Den har ingen anden betydning.  <br/> |**Vært:** @ (eller for nogle DNS-udbydere, dit domænenavn)  <br/> **TXT-værdi:** _En tekststreng leveret af_ Office 365  <br/> Konfigurationsguiden Office 365 **domæne indeholder** de værdier, du bruger til at oprette denne post.  <br/> |Alle kunder|
+|**CNAME** <br/> **(Pakke)** <br/> |Bruges af Office 365 til at dirigere godkendelse til den korrekte identitetsplatform. [Flere oplysninger](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Bemærk**, at dette CNAME kun gælder for Office 365 drevet af 21Vianet. Hvis præsentér, og din Office 365 ikke drives af 21Vianet, får brugere på dit brugerdefinerede domæne *fejlen "* brugerdefineret domæne er ikke i vores system", og de vil ikke kunne aktivere deres Office 365-licens. [Flere oplysninger](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Alias:** msoid  <br/> **Destination:** clientconfig.partner.microsoftonline-p.net.cn  <br/> | Kun 21Vianet-kunder|
+
 
 
 ## <a name="external-dns-records-required-for-email-in-office-365-exchange-online"></a>Der kræves eksterne DNS-poster til mail Office 365 (Exchange Online)
@@ -99,7 +104,7 @@ Der er specifikke trin, du skal følge, når [du bruger Office 365 URL-adresser]
 
 |**DNS-post** <br/> |**Formål** <br/> |**Værdi, der skal bruges** <br/> |
 |----------|-----------|------------|
-|**Vært (A)** <br/> |Bruges til enkelt logon (SSO). Det giver slutpunktet for dine lokale brugere (og lokale brugere, hvis du ønsker) til at oprette forbindelse til dine PROXY'er for din AD FS-sammenslutningsserver (Active Directory Federation Services) eller virtuelle IP (VIP) til balance mellem belastningen.  <br/> |**Destination:** Eksempelvis sts.contoso.com  <br/> |
+|**Vært (A)** <br/> |Bruges til enkelt logon (SSO). Det giver slutpunktet for dine lokale brugere (og lokale brugere, hvis du ønsker) til at oprette forbindelse til dine proxyer for din Active Directory Federation Services-sammenslutningsserver (AD FS) eller virtuelle IP (VIP) til balance mellem belastning og belastning.  <br/> |**Destination:** Eksempelvis sts.contoso.com  <br/> |
 
 ## <a name="external-dns-records-required-for-spf"></a>Der kræves eksterne DNS-poster til SPF
 <a name="BKMK_SPFrecords"> </a>

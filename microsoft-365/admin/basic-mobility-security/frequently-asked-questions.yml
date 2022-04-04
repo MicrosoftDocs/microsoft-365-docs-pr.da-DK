@@ -7,7 +7,7 @@ metadata:
   author: kwekua
   manager: scotv
   audience: Admin
-  ms.topic: reference
+  ms.topic: faq
   ms.service: o365-administration
   ms.localizationpriority: medium
   ms.collection:
@@ -20,12 +20,12 @@ metadata:
   search.appverid:
   - MET150
   description: Ofte stillede spørgsmål om Grundlæggende mobilitet og sikkerhed.
-  ms.openlocfilehash: cf95c02fcd3acb3ded119559812cab8ce90316ec
-  ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+  ms.openlocfilehash: b7780c82cbb0519b0e6472d7eb26d92dd250c446
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 12/13/2021
-  ms.locfileid: "63595984"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63679306"
 title: Ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed
 summary: Denne artikel indeholder ofte stillede spørgsmål om Grundlæggende mobilitet og sikkerhed, som er en funktion, der hjælper dig med at administrere og sikre mobilenheder Microsoft 365. Hvis du ikke kan finde et svar på dit spørgsmål, kan du fortælle os det ved at skrive en kommentar på siden, så vi kan overveje at tilføje dit spørgsmål i denne artikel.
 sections:

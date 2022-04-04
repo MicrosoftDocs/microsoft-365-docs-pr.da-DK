@@ -13,16 +13,31 @@ f1.keywords:
 ms.author: tiaraquan
 ms.article: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 57b4119c1c96132b2f9a5c715cb498f228802fcc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c979ace1b5d3f1fa807384c769c5711c9fc2fda7
+ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588885"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63761494"
 ---
 # <a name="change-history-for-microsoft-managed-desktop-documentation"></a>Ændringsoversigt for microsoft-administreret skrivebordsdokumentation
 
 Denne artikel viser nye og opdaterede artikler i [Microsoft Managed Desktop-dokumentationen](index.yml). "Opdaterede" artikler har haft materiale tilføjelser eller rettelser – mindre rettelser som f.eks. rettelser af slåfejl, typografi eller formateringsproblemer vises ikke. Du kan altid se en oversigt over specifikke bekræftelser (herunder detaljer om eventuelle ændringer) ved at [gå til repo on GitHub](https://github.com/MicrosoftDocs/microsoft-365-docs/tree/public/microsoft-365/managed-desktop).
+
+## <a name="march-2022"></a>Marts 2022
+
+Ny eller ændret artikel | Beskrivelse
+--- | ---
+| [Reference til konfigurerbare indstillinger](working-with-managed-desktop/config-setting-ref.md) | Yderligere proxykrav er tilføjet |
+| [Lokalisere brugeroplevelsen](get-started/localization.md) | Tilføjet note i afsnittet Installér flere sprog |
+| [Reference til konfigurerbare indstillinger](working-with-managed-desktop/config-setting-ref.md) | Der er tilføjet en note om den ældre edge |
+
+## <a name="february-2022"></a>Februar 2022
+
+Ny eller ændret artikel | Beskrivelse
+--- | ---
+| [Service metrics report](working-with-managed-desktop/service-metrics-report.md) | Tjenestemetrikrapport tilføjet |
+| [Microsoft Edge](get-started/edge-browser-app.md) | Opdateret artikel |
 
 ## <a name="october-2021"></a>Oktober 2021
 

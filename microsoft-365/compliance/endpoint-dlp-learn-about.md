@@ -19,28 +19,28 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Microsoft 365 forebyggelse af datatab på slutpunkt udvider overvågning af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer gøres synlige i løsningerne til overholdelse af regler og standarder '
-ms.openlocfilehash: 83608f005b9024583142515094b2d958b8f5d915
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 031d1d80dd6700939c9d73cc82350b7abc30c132
+ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63590915"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64520777"
 ---
 # <a name="learn-about-microsoft-365-endpoint-data-loss-prevention"></a>Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter
 
 Du kan bruge Microsoft 365 forebyggelse af datatab (DLP) til at overvåge de handlinger, der er foretaget på elementer, du har besluttet at være følsomme, og for at forhindre utilsigtet deling af disse elementer. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
 
-**Forebyggelse af datatab** på slutpunkt (Slutpunkt DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk gemmes på Windows 10-, Windows 11- og macOS-enheder (Catalina 10.15 eller nyere). Når enheder er onboardet til løsninger til overholdelse af Microsoft 365, bliver oplysningerne om, hvad brugerne gør med følsomme elementer, synlige i Aktivitetsoversigt, og du kan gennemtvinge beskyttende handlinger for disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).[](data-classification-activity-explorer.md)
+**Forebyggelse af datatab** på slutpunkt (Endpoint DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk gemmes på Windows 10-, Windows 11- og macOS-enheder (Catalina 10.15 eller nyere). Når enheder er onboardet til løsninger til overholdelse af Microsoft 365, bliver oplysningerne om, hvad brugerne gør med følsomme elementer, synlige i Aktivitetsoversigt, og du kan gennemtvinge beskyttende handlinger for disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).[](data-classification-activity-explorer.md)
 
 > [!TIP]
-> Hvis du leder efter enhedsstyring til flytbart lager, skal du se [Flytbare enheder i Microsoft Defender til Storage Adgangskontrol](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
+> Hvis du leder efter enhedsstyring til flytbart lager, skal [du Microsoft Defender for Endpoint Kontrol af flytbare Storage Access Control](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
 
 > [!NOTE]
 > I Microsoft 365 regeloverholdelse sker DLP-politikevaluering af følsomme elementer centralt, så der er ingen tidsforsinkelse for, at politikker og politikopdateringer distribueres til individuelle enheder. Når en politik opdateres i overholdelsescenter, tager det normalt ca. en time, før disse opdateringer synkroniseres på tværs af tjenesten. Når politikopdateringer synkroniseres, evalueres elementer på målrettede enheder automatisk, næste gang de åbnes eller ændres.
 
 ## <a name="endpoint-activities-you-can-monitor-and-take-action-on"></a>Slutpunktsaktiviteter, du kan overvåge og handle på
 
-Microsoft Endpoint DLP gør det muligt at overvåge og administrere følgende typer af aktiviteter, som brugere tager på følsomme elementer, der fysisk gemmes Windows 10, Windows 11- eller macOS-enheder.
+Microsoft Endpoint DLP gør det muligt for dig at overvåge og administrere følgende typer af aktiviteter, som brugere tager på følsomme elementer, der fysisk gemmes Windows 10-, Windows 11- eller macOS-enheder.
 
 |Aktivitet |Beskrivelse  |Windows 10 1809 og nyere/ Windows 11| macOS Catalina 10.15 (forhåndsvisning) | Auditable/restrictable|
 |---------|---------|---------|---------|---------|
@@ -125,7 +125,7 @@ Onboarding og offboarding håndteres via scripts, du downloader fra Enhedens adm
 - lokalt script (op til 10 computere)
 - Gruppepolitik
 - System Center Configuration Manager (version 1610 eller nyere)
-- Administration af mobilenheder/Microsoft Intune
+- Mobil Enhedshåndtering/Microsoft Intune
 - VDI-onboardingscripts til ikke-permanente computere
 
 > [!div class="mx-imgBorder"]
@@ -133,7 +133,7 @@ Onboarding og offboarding håndteres via scripts, du downloader fra Enhedens adm
 
  Brug fremgangsmåderne i [Introduktion til Microsoft 365 slutpunkt DLP til](endpoint-dlp-getting-started.md) onboard-enheder.
 
-Hvis du har onboardede enheder [via Microsoft Defender til Slutpunkt](/windows/security/threat-protection/), vises disse enheder automatisk på listen over enheder. Du kan **aktivere enhedsovervågning for** at bruge slutpunkt DLP.
+Hvis du har onboardede enheder [via Microsoft Defender for Endpoint](/windows/security/threat-protection/), vises disse enheder automatisk på listen over enheder. Du kan **aktivere enhedsovervågning for** at bruge slutpunkt DLP.
 
 > [!div class="mx-imgBorder"]
 > ![administrerede enheder.](../media/endpoint-dlp-learn-about-2-device-list.png)
@@ -179,7 +179,7 @@ Hvis en fil f.eks. kopieres til flytbare USB-medier, vil du se disse attributter
 - enhedsnavn
 - destinationsplaceringstype
 - program, der udførte kopien
-- Microsoft Defender til slutpunktsenheds-id (hvis relevant)
+- Microsoft Defender for Endpoint enheds-id (hvis det er relevant)
 - producent af flytbare medier
 - model for flytbare medier
 - flytbare mediers serienummer
@@ -192,7 +192,8 @@ Hvis en fil f.eks. kopieres til flytbare USB-medier, vil du se disse attributter
 Nu hvor du har lært om Slutpunkt DLP, er de næste trin:
 
 1. [Onboard Windows 10 eller Windows 11 enheder i Microsoft 365 oversigt](device-onboarding-overview.md)
-1. [Onboard macOS-enheder Microsoft 365 oversigt (forhåndsvisning)](device-onboarding-macos-overview.md#onboard-macos-devices-into-microsoft-365-overview-preview)
+1. [Onboard macOS-enheder Microsoft 365 oversigt (forhåndsvisning)](device-onboarding-macos-overview.md)
+1. [Konfigurere indstillinger for forebyggelse af datatab på slutpunkt](dlp-configure-endpoint-settings.md)
 1. [Brug af forebyggelse af datatab i Microsoft Endpoint](endpoint-dlp-using.md)
 
 ## <a name="see-also"></a>Se også
@@ -202,5 +203,5 @@ Nu hvor du har lært om Slutpunkt DLP, er de næste trin:
 - [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Introduktion til Aktivitetsstifinder](data-classification-activity-explorer.md)
-- [Microsoft Defender til Slutpunkt](/windows/security/threat-protection/)
+- [Microsoft Defender for Endpoint](/windows/security/threat-protection/)
 - [Insider-risikostyring](insider-risk-management.md)

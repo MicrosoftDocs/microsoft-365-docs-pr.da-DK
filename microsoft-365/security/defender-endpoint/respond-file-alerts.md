@@ -1,5 +1,5 @@
 ---
-title: Tag svarhandlinger på en fil i Microsoft Defender til slutpunkt
+title: Tag svarhandlinger på en fil i Microsoft Defender for Endpoint
 description: Tag svarhandlinger på filrelaterede beskeder ved at stoppe og kvarte en fil eller blokere en fil og kontrollere oplysninger om aktivitet.
 keywords: svar, stop og karantæne, bloker fil, dybdegående analyse
 ms.prod: m365-security
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0e7253993a1c05bd25e6dd13865826c42dd7603a
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 5c5a457d960f7dd7906c7d26a099d242507fbe86
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63592921"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499193"
 ---
 # <a name="take-response-actions-on-a-file"></a>Udføre svarhandlinger på en fil
 
@@ -27,7 +27,9 @@ ms.locfileid: "63592921"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+- [Microsoft Defender for Endpoint plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -49,17 +51,12 @@ Du kan også sende filer til dybdegående analyse for at køre filen i en sikker
 
 Nogle handlinger kræver visse tilladelser. I følgende tabel beskrives, hvilken handling visse tilladelser kan udføre på portable eksekverbare filer (PE) og ikke-PE-filer:
 
-<br>
-
-****
-
 |Tilladelse|PE-filer|Ikke-PE-filer|
 |---|:---:|:---:|
 |Vis data|X|X|
 |Undersøgelse af beskeder|&#x2611;|X|
 |Grundlæggende om live svar|X|X|
 |Live svar avanceret|&#x2611;|&#x2611;|
-|
 
 Du kan finde flere oplysninger om roller [i Oprette og administrere roller for rollebaseret adgangskontrol](user-roles.md).
 
@@ -76,7 +73,7 @@ Du kan indeholde et angreb i organisationen ved at stoppe den ondsindede proces 
 
 Handlingen **Stop og karantæne fil** omfatter at stoppe med at køre processer, kvarte filerne og slette permanente data som registreringsdatabasenøgler.
 
-Denne handling træder i kraft på enheder med Windows 10, version 1703 eller nyere og Windows 11, hvor filen blev observeret inden for de seneste 30 dage.
+Denne handling træder i kraft på enheder med Windows 10, version 1703 eller nyere og Windows 11, hvor filen er blevet observeret inden for de seneste 30 dage.
 
 > [!NOTE]
 > Du kan når som helst gendanne filen fra karantæne.
@@ -93,15 +90,15 @@ Denne handling træder i kraft på enheder med Windows 10, version 1703 eller ny
 
 2. Gå til den øverste linje, og vælg **Stop og karantæne fil**.
 
-   ![Billede af filhandlingen stop og karantæne.](images/atp-stop-quarantine-file.png)
+   :::image type="content" source="images/atp-stop-quarantine-file.png" alt-text="Handlingen Stop og sæt i karantæne" lightbox="images/atp-stop-quarantine-file.png":::
 
 3. Angiv en årsag, og vælg derefter **Bekræft**.
 
-   ![Billede af vinduet stop og karantæne for filens modal.](images/atp-stop-quarantine.png)
+   :::image type="content" source="images/atp-stop-quarantine.png" alt-text="Siden stop og karantæne fil" lightbox="images/atp-stop-quarantine.png":::
 
    Handlingscenter viser indsendelsesoplysningerne:
 
-   ![Billede af stop- og karantænefil handlingscenter.](images/atp-stopnquarantine-file.png)
+   :::image type="content" source="images/atp-stopnquarantine-file.png" alt-text="Handlingscenter for stop- og karantænefilen" lightbox="images/atp-stopnquarantine-file.png":::
 
    - **Indsendelsestid** – Viser, hvornår handlingen blev sendt.
    - **Succes** – Viser antallet af enheder, hvor filen er blevet stoppet og sat i karantæne.
@@ -114,7 +111,7 @@ Denne handling træder i kraft på enheder med Windows 10, version 1703 eller ny
 
 Når filen fjernes fra en enhed, vises følgende meddelelse:
 
-![Billede af meddelelse på enhedsbruger.](images/atp-notification-file.png)
+:::image type="content" source="images/atp-notification-file.png" alt-text="Meddelelsen en bruger på enheden" lightbox="images/atp-notification-file.png":::
 
 På enhedens tidslinje tilføjes der en ny begivenhed for hver enhed, hvor en fil blev stoppet og sat i karantæne.
 
@@ -150,7 +147,7 @@ Hvis du **vælger Download fil** fra svarhandlingerne, kan du downloade et lokal
 
 Som standard bør du kunne downloade filer, der er i karantæne.
 
-![Billede af filhandling, der downloades.](images/atp-download-file-action.png)
+:::image type="content" source="images/atp-download-file-action.png" alt-text="Handlingen Download fil" lightbox="images/atp-download-file-action.png":::
 
 ### <a name="download-quarantined-files"></a>Download filer, der er sat i karantæne
 
@@ -173,11 +170,11 @@ Denne funktion fungerer ikke, hvis indsendelse af eksempler er slået fra. Hvis 
 > - Antivirusprogrammets version er 1.1.17300.4 eller nyere. Se [Månedlig platform og programversioner](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
 > - Skybaseret beskyttelse er aktiveret. Se [Slå skybaseret beskyttelse til](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Eksempel på indsendelse er slået til
-> - Enheder har Windows 10 version 1703 eller nyere eller Windows Server 2016 eller 2019 eller Windows Server 2022 eller Windows 11
+> - Enheder har Windows 10 version 1703 eller nyere, Windows Server 2016 eller 2019 eller Windows Server 2022 eller Windows 11
 
 ### <a name="collect-files"></a>Indsaml filer
 
-Hvis en fil ikke allerede er gemt af Microsoft Defender til slutpunkt, kan du ikke downloade den. I stedet får du vist knappen **Indsaml** fil på den samme placering. Hvis en fil ikke er blevet set i organisationen i de seneste 30 dage, **deaktiveres** Indsaml fil.
+Hvis en fil ikke allerede er gemt af Microsoft Defender for Endpoint, kan du ikke downloade den. I stedet får du vist knappen **Indsaml** fil på den samme placering. Hvis en fil ikke er blevet set i organisationen i de seneste 30 dage, **deaktiveres** Indsaml fil.
 > [!Important]
 > En fil, der var sat i karantæne som en potentiel netværkstrussel, kan muligvis ikke gendannes. Hvis en bruger forsøger at gendanne filen efter karantæne, er filen muligvis ikke tilgængelig. Dette kan skyldes, at systemet ikke længere har netværkslegitimationsoplysninger til at få adgang til filen. Dette er typisk et resultat af en midlertidig log på et system eller en delt mappe, og adgangstokensene er udløbet.
 
@@ -232,7 +229,7 @@ Se [Kontakt en Microsoft Threat Expert for at](/microsoft-365/security/defender-
 
 Alle andre relaterede oplysninger vises også, f.eks. dato/klokkeslæt for indsendelse, afsendelse af bruger, og om handlingen lykkedes eller mislykkedes.
 
-![Billede af handlingscenter med oplysninger.](images/action-center-details.png)
+:::image type="content" source="images/action-center-details.png" alt-text="Handlingscenter med oplysninger" lightbox="images/action-center-details.png":::
 
 ## <a name="deep-analysis"></a>Dybdegående analyse
 
@@ -256,10 +253,10 @@ Brug funktionen til dybdegående analyse til at undersøge detaljerne i en hvilk
 > [!NOTE]
 > Kun filer fra Windows 10 og Windows 11 kan indsamles automatisk.
 
-Du kan også sende en prøve via [Microsoft Security Center Portal](https://www.microsoft.com/security/portal/submission/submit.aspx), hvis filen ikke blev observeret på en Windows 10-enhed (eller Windows 11), og vente på, at knappen **Send** for at få en dybdegående analyse bliver tilgængelig.
+Du kan også sende en prøve via [Microsoft 365 Defender-portalen](https://www.microsoft.com/security/portal/submission/submit.aspx), hvis filen ikke blev observeret på en Windows 10-enhed (eller Windows 11), og vente på, at knappen **Send** til dybdegående analyse bliver tilgængelig.
 
 > [!NOTE]
-> På grund af backendbehandlingflows i Microsoft Security Center-portalen kan der være op til 10 minutters ventetid mellem filindsendelse og tilgængeligheden af funktionen dybdegående analyse i Defender til slutpunkt.
+> På grund af backendbehandlingsflows i Microsoft 365 Defender-portalen kan der være op til 10 minutters ventetid mellem filindsendelse og tilgængeligheden af funktionen til dybdegående analyse i Defender til slutpunkt.
 
 ### <a name="submit-files-for-deep-analysis"></a>Send filer til dybdegående analyse
 
@@ -271,7 +268,7 @@ Du kan også sende en prøve via [Microsoft Security Center Portal](https://www.
 
 2. På fanen **Deep-analyse** i filvisningen skal du vælge **Send**.
 
-   ![Du kan kun sende PE-filer i sektionen med fildetaljer.](images/submit-file.png)
+   :::image type="content" source="images/submit-file.png" alt-text="Knappen Indsend PE-filer" lightbox="images/submit-file.png":::
 
    > [!NOTE]
    > Kun PE-filer understøttes, _herunder.exe_ og _.dll_ filer.
@@ -295,7 +292,7 @@ Oplysningerne kan hjælpe dig med at undersøge, om der er indikationer af et mu
 1. Vælg den fil, du sendte til dybdegående analyse.
 2. Vælg **fanen Deep-analyse** . Hvis der er nogen tidligere rapporter, vises rapportoversigten på denne fane.
 
-    ![Den omfattende analyserapport viser detaljerede oplysninger på tværs af en række kategorier.](images/analysis-results-nothing500.png)
+   :::image type="content" source="images/analysis-results-nothing500.png" alt-text="Den omfattende analyserapport, der viser detaljerede oplysninger på tværs af en række kategorier" lightbox="images/analysis-results-nothing500.png":::
 
 #### <a name="troubleshoot-deep-analysis"></a>Fejlfinding i forbindelse med dybdegående analyse
 
@@ -318,7 +315,7 @@ Hvis du ser et problem, når du forsøger at sende en fil, kan du prøve følgen
       Value = 1 - allow sample collection
     ```
 
-5. Skift organisationsenheden via Gruppepolitik. Du kan finde flere oplysninger [under Konfigurere med Gruppepolitik](configure-endpoints-gp.md).
+5. Skift organisationsenheden via Gruppepolitik. Du kan finde flere oplysninger [i Konfigurere med Gruppepolitik](configure-endpoints-gp.md).
 
 6. Hvis disse trin ikke løser problemet, skal du kontakte support.
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Et krav til alle Microsoft Information Protection: Opret, konfigurer og udgiv følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: b5bc61de14f54d65e4ce5eb6f7ae78303626c123
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5c80147c18cff8c27f8c205ab1ed600e892f7335
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587335"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499567"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
@@ -96,13 +96,13 @@ Eksempel:
 
 - Brug *parameteren LocaleSettings* for multinationale installationer, så brugerne kan se navnet og værktøjstip på deres lokale sprog. Følgende [afsnit indeholder](#example-configuration-to-configure-a-sensitivity-label-for-different-languages) en eksempelkonfiguration, der angiver etiketnavnet og værktøjstipteksten for fransk, italiensk og tysk.
 
-- Den samlede Azure Information Protection-etiketklient understøtter en omfattende liste [](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) over avancerede indstillinger, som omfatter indstilling af en etiketfarve og anvendelse af en brugerdefineret egenskab, når der anvendes en etiket. Du kan se den komplette liste [under Tilgængelige avancerede indstillinger for navne](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) fra denne klients administratorvejledning.
+- Den samlede Azure Information Protection-etiketklient understøtter en omfattende liste over avancerede indstillinger[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations), som omfatter indstilling af en etiketfarve og anvendelse af en brugerdefineret egenskab, når der anvendes en etiket. Du kan se den komplette liste [under Tilgængelige avancerede indstillinger for navne](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) fra denne klients administratorvejledning.
 
 #### <a name="example-configuration-to-configure-a-sensitivity-label-for-different-languages"></a>Eksempelkonfiguration til konfiguration af følsomhedsmærkat for forskellige sprog
 
 Følgende eksempel viser PowerShell-konfigurationen for en etiket med navnet "Offentlig" med pladsholdertekst for værktøjstippet. I dette eksempel er navnet og værktøjstipteksten konfigureret til fransk, italiensk og tysk.
 
-Som et resultat af denne konfiguration kan brugere, der har Office, der bruger disse visningssprog, se deres navne og værktøjstip på det samme sprog. På samme måde kan brugere, der har disse sprogversioner af Windows se deres navnenavne og værktøjstip på deres lokale sprog, når de bruger højreklikshandlingerne til mærkning, hvis du har en samlet Azure Information Protection-klient.
+Som et resultat af denne konfiguration kan brugere, der har Office, der bruger disse visningssprog, se deres navne og værktøjstip på det samme sprog. På samme måde kan brugere, der har disse sprogversioner af Windows, få vist deres navnenavne og værktøjstip på deres lokale sprog, hvis du har installeret Azure Information Protection Stifinder på samme måde, når de bruger højreklikhandlingerne til mærkning.
 
 For de sprog, du skal understøtte, skal du bruge Office-sprogidentifikatorer (også kaldet sprogmærker), og angive din egen oversættelse for etiketnavnet og [værktøjstip](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers).
 
@@ -168,20 +168,17 @@ Hvis du vil redigere en eksisterende etiketpolitik, skal du markere den og deref
 
 Denne knap starter konfigurationen **Opret politik** , som gør det muligt at redigere, hvilke etiketter der er inkluderet samt navneindstillingerne. Når du har fuldført konfigurationen, replikeres eventuelle ændringer automatisk til de valgte brugere og tjenester.
 
-Når du bruger indbygget mærkning til Office-apps på Windows, macOS, iOS og Android, får brugerne vist nye etiketter inden for fire timer og inden for en time for Word, Excel og PowerPoint på internettet, når du opdaterer browseren. Der kan dog gå op til 24 timer, før ændringer replikeres til alle apps og tjenester.
-
-Andre apps og tjenester, der understøtter følsomhedsmærkater, kan blive opdateret oftere end 24 timer med deres egne opdateringsplaner og udløsere til politikopdateringer. Se deres dokumentation for at få flere oplysninger. For eksempel kan du for den samlede Azure Information Protection-etiketklient se opdateringsrækken for Politikker i de detaljerede sammenligninger [for tabellen Azure Information Protection-klienter](/azure/information-protection/rms-client/use-client#detailed-comparisons-for-the-azure-information-protection-clients).
-
-> [!TIP]
-> Husk at faktor i tidsafhængigheder, der nogle gange kan forsinke følsomhedsmærkater og etiketpolitikker i at fungere som forventet. Hvis du f.eks. udfylder ændringer af en ny gruppe og gruppemedlemskab, begrænsninger for netværksreplikering og båndbredde samt cachelagring af gruppemedlemskaber fra [Azure Information Protection-tjenesten](/azure/information-protection/prepare#group-membership-caching-by-azure-information-protection) for etiketter, der anvender kryptering.
-> 
-> Med mange eksterne afhængigheder, som hver har deres egen tidscyklus, er det en god ide at vente 24 timer, før du bruger tid på fejlfinding af etiketter og etiketpolitikker for de seneste ændringer.
-
 ### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Yderligere indstillinger for etiketpolitik med Security & Compliance Center PowerShell
 
 Yderligere indstillinger for etiketpolitik er tilgængelige med [Set-LabelPolicy-cmdlet'en](/powershell/module/exchange/set-labelpolicy) [fra Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell).
 
-Den samlede Azure Information Protection-etiketklient understøtter [](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) mange avancerede indstillinger, der omfatter overførsel fra andre mærkningsløsninger, og pop op-meddelelser i Outlook, der advarer, justerer eller blokerer mails, der sendes. Du kan finde en komplet liste [under Tilgængelige avancerede indstillinger for etiketpolitikker](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) fra denne klients administratorvejledning.
+Den samlede Azure Information Protection-etiketklient understøtter mange avancerede indstillinger[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations), som omfatter overførsel fra andre mærkningsløsninger og pop op-meddelelser i Outlook, der advarer, justerer eller blokerer mails, der sendes. Du kan finde en komplet liste [under Tilgængelige avancerede indstillinger for etiketpolitikker](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) fra denne klients administratorvejledning.
+
+## <a name="when-to-expect-new-labels-and-changes-to-take-effect"></a>Hvornår kan jeg forvente, at nye etiketter og ændringer træder i kraft?
+
+Der kan gå 24 timer, før ændringerne overføres via tjenesterne, når det kommer til indstillinger for navne- og navnepolitik. Der er mange eksterne afhængigheder, som hver har deres egne tidscyklusser, så det er en god ide at vente dette 24-timers tidsrum, før du bruger tid på fejlfinding af etiketter og etiketpolitikker for de seneste ændringer.
+
+Der er dog visse scenarier, hvor ændringer af navne- og navnepolitikken kan træder i kraft meget hurtigere eller være længere end 24 timer. For nye og slettede følsomhedsmærkater for Word, Excel og PowerPoint på internettet vil du muligvis se opdateringer replikere inden for timen. Men for konfigurationer, der afhænger af at udfylde en ny gruppe og ændringer af gruppemedlemskab eller begrænsninger for netværksreplikering og båndbredde, kan disse ændringer tage 24-48 timer.
 
 ## <a name="use-powershell-for-sensitivity-labels-and-their-policies"></a>Brug PowerShell til følsomhedsmærkater og deres politikker
 

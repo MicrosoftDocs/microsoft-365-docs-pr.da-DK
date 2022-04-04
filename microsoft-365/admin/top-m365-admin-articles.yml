@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: De 20 mest viste hjælpeartikler om administratorer denne måned
-summary: Senest opdateret 13-01-2022. Vil du vide, hvilke hjælpeartikler der er de mest populære hos administratorer? Se denne samling af de 20 mest viste hjælpeartikler, der er opdateret hver måned.
+summary: Senest opdateret 23-03-2022. Vil du vide, hvilke hjælpeartikler der er de mest populære hos administratorer? Se denne samling af de 20 mest viste hjælpeartikler, der er opdateret hver måned.
 metadata:
   title: De 20 mest viste hjælpeartikler om administratorer denne måned
   description: Se denne samling af de 20 mest populære artikler med hjælp, der er mest populære hos administratorer, og som opdateres hver måned.
@@ -8,84 +8,90 @@ metadata:
   ms.topic: landing-page
   author: SKjerland
   ms.author: sharik
-  ms.date: 10/01/2021
+  ms.date: 03/22/2022
   ms.localizationpriority: high
   ms.custom: AdminSurgePortfolio
   ms.collection: Adm_TOC
-  ms.openlocfilehash: 8bc6995e9f3d1aab0125546cb9f52c1790582165
-  ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+  ms.openlocfilehash: 115617fb4291e65b828bb8308afab1765fcab3b6
+  ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/17/2022
-  ms.locfileid: "63596984"
+  ms.lasthandoff: 03/23/2022
+  ms.locfileid: "63761516"
 landingContent:
-- title: Information
+- title: Administrere data og tjenester
   linkLists:
   - linkListType: overview
     links:
     - text: Om administratorroller
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/about-admin-roles.md
+    - text: Microsoft 365 brugsrapporter
+      url: activity-reports/activity-reports.md
   - linkListType: video
     links:
     - text: Få hjælp eller support
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: get-help-support.md
 - title: Domæner
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Tilføje DNS-poster for at forbinde dit domæne
-      url: setup/setup-business-basic.md
+      url: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
     - text: Føj et domæne til Microsoft 365
-      url: setup/setup-business-standard.md
+      url: setup/add-domain.md
 - title: Sikkerhed
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Konfigurer multifaktorgodkendelse
-      url: setup/migrate-email-and-contacts-admin.md
+      url: security-and-compliance/set-up-multi-factor-authentication.md
 - title: Fakturaer og abonnementer
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Om registreringsnumre og undergennemsynsmeddelelser
+      url: ../commerce/about-registration-numbers.md
   - linkListType: how-to-guide
     links:
     - text: Opsnuller dit abonnement
-      url: setup/setup-business-basic.md
+      url: ../commerce/subscriptions/cancel-your-subscription.md
     - text: Betal for dit abonnement
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/pay-for-your-subscription.md
     - text: Administrer betalingsmetoder
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/manage-payment-methods.md
     - text: Få vist din regning eller faktura
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/view-your-bill-or-invoice.md
 - title: Mail
   linkLists:
   - linkListType: overview
     links:
     - text: Om delte postkasser
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: email/about-shared-mailboxes.md
   - linkListType: how-to-guide
     links:
     - text: Konfigurere videresendelse af mail i Microsoft 365
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/configure-email-forwarding.md
     - text: Opret en delt postkasse
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/create-a-shared-mailbox.md
     - text: Giv postkassetilladelser til en anden bruger
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/give-mailbox-permissions-to-another-user.md
     - text: Rediger et brugernavn og en mailadresse
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/change-a-user-name-and-email-address.md
     - text: Konvertér en brugerpostkasse til en delt postkasse
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/convert-user-mailbox-to-shared-mailbox.md
 - title: Brugere, grupper og adgangskoder
   linkLists:
   - linkListType: overview
     links:
     - text: Sammenlign grupper
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: create-groups/compare-groups.md
   - linkListType: how-to-guide
     links:
     - text: Tilføje brugere og tildele licenser på samme tid
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/add-users.md
     - text: Tildel licenser til brugere
-      url: admin-overview/sign-up-for-office-365.md
+      url: manage/assign-licenses-to-users.md
     - text: Angiv udløbspolitikken for adgangskoder for organisationen
-      url: admin-overview/sign-up-for-office-365.md
-    - text: Gør det muligt for brugerne at logge på Outlook mobilapps med en QR-kode
-      url: admin-overview/sign-up-for-office-365.md
+      url: manage/set-password-expiration-policy.md
+    - text: Tillad brugere at logge på Outlook mobilapps med en QR-kode
+      url: manage/use-qr-code-download-outlook.md

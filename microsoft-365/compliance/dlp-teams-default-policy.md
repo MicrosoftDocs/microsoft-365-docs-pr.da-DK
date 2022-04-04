@@ -16,29 +16,20 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams
-ms.openlocfilehash: 61a1ea22362d9e75d605660d29116140f6708003
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 61443cdfdc116e9c25d9dad24c968876ae5d0349
+ms.sourcegitcommit: db2ed146b46ade9ea62eed9cb8efff5fea7a35e6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63602998"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64481358"
 ---
 # <a name="learn-about-the-default-data-loss-prevention-policy-in-microsoft-teams-preview"></a>Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams (forhåndsvisning)
 
 [Funktioner til forebyggelse af](dlp-learn-about-dlp.md) datatab er blevet udvidet til at omfatte Microsoft Teams chat- og kanalmeddelelser, herunder private kanalmeddelelser. Som en del af denne version har vi oprettet en DLP-standardpolitik for Microsoft Teams for første gang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
 
-## <a name="applies-to"></a>Gælder for
+## <a name="licensing"></a>Licensering
 
-Enhver lejer, der har licens til en eller flere af nedenstående licenser og har aktive Teams brugere
- 
-- ME5, 
-- MA5, 
-- E5/A5-overholdelse, 
-- IP+G, 
-- OE5, 
-- Avanceret overholdelse af O365 
-- EMS E5
-
+Du kan finde komplette licensoplysninger for DLP Microsoft Teams i [Information Protection: Forebyggelse af datatab for Teams](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-teams).
 
 ## <a name="what-does-the-default-policy-do"></a>Hvad gør standardpolitikken?
 

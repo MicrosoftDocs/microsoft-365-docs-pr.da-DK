@@ -1,7 +1,7 @@
 ---
 title: Forudsætninger for implementering af ASR-regler
 description: Giver oversigt og nødvendige vejledning om implementering af regler for reduktion af angrebsoverfladen.
-keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indtrængen, Microsoft Defender til slutpunkt, konfigurer ASR-regler
+keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indisk virus, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,20 +16,22 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 7a05d2712adb37121b1e625ab5c4774a60af3e81
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 4703867449877a35d6621b76072b9420a0cdbdec
+ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63601037"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64520545"
 ---
 # <a name="asr-rules-deployment-prerequisites"></a>Forudsætninger for implementering af ASR-regler
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Angrebsoverfladerne er alle de steder, hvor din organisation er sårbar over for cybertrusler og angreb. Din organisations angrebsoverflader omfatter alle de steder, hvor en hacker kan kompromittere din organisations enheder eller netværk. At reducere din angrebsoverflade betyder, at du beskytter din organisations enheder og netværk, hvilket efterlader hackere med færre måder at angreb på. Det kan være en hjælp at konfigurere reduktion af angrebsoverfladen – en af mange sikkerhedsfunktioner i Microsoft Defender til slutpunkt.
+Angrebsoverfladerne er alle de steder, hvor din organisation er sårbar over for cybertrusler og angreb. Din organisations angrebsoverflader omfatter alle de steder, hvor en hacker kan kompromittere din organisations enheder eller netværk. At reducere din angrebsoverflade betyder, at du beskytter din organisations enheder og netværk, hvilket efterlader hackere med færre måder at angreb på. Det kan være en hjælp at konfigurere reduktion af angrebsoverfladen – en af mange sikkerhedsfunktioner i Microsoft Defender for Endpoint – .
 
 ASR-regler målretter visse softwarefunktionsmåder, f.eks.:
 
@@ -44,9 +46,9 @@ Under din indledende forberedelse er det vigtigt, at du forstår funktionerne i 
 >[!IMPORTANT]
 >Denne vejledning indeholder billeder og eksempler, der kan hjælpe dig med at beslutte, hvordan du konfigurerer ASR-regler. Disse billeder og eksempler afspejler muligvis ikke de bedste konfigurationsindstillinger for dit miljø.
 
-Før du starter, skal du [gennemgå Oversigt](overview-attack-surface-reduction.md) over reduktion af [angrebsoverfladen og Afmystificere](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) regler for reduktion af angrebsoverfladen – del 1 for at få grundlæggende oplysninger. For at forstå dækningsområder og potentielle konsekvenser skal du gøre dig bekendt med det aktuelle sæt asr-regler. Se Reference [til regel for reduktion af angrebsoverfladen](attack-surface-reduction-rules-reference.md).
+Før du starter, skal du [gennemgå Oversigt](overview-attack-surface-reduction.md) over reduktion af [angrebsoverfladen og Afmystificere](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) regler for reduktion af angrebsoverfladen – del 1 for at få grundlæggende oplysninger. For at forstå dækningsområder og potentielle konsekvenser skal du gøre dig bekendt med det aktuelle sæt asr-regler. Se Reference [til regel for reduktion af angrebsoverfladen](attack-surface-reduction-rules-reference.md).  Mens du er fortrolig med asr-reglerne, skal du notere dig GUID-tilknytningerne pr. regel. se: [ASR-regler og GUIDs-matrix](attack-surface-reduction-rules-reference.md#asr-rules-and-guids-matrix).
 
-ASR-regler er kun én funktionalitet for reduktion af angrebsoverfladen i Microsoft Defender til slutpunkt. Dette dokument vil gå mere i detaljer med implementering af ASR-regler effektivt for at stoppe avancerede trusler som f.eks. ransomware og andre trusler.  
+ASR-regler er kun én funktionalitet for reduktion af angrebsoverfladen i Microsoft Defender for Endpoint. Dette dokument vil gå mere i detaljer med implementering af ASR-regler effektivt for at stoppe avancerede trusler som f.eks. ransomware og andre trusler.  
 
 ### <a name="rules-by-category"></a>Regler efter kategori
 
@@ -71,10 +73,10 @@ Selvom der er mulighed for flere metoder til implementering af ASR-regler, er de
 
 - Azure Active Directory
 - Microsofts slutpunktsadministration (MEM)
-- Windows 10 og Windows 11 enheder
-- Microsoft Defender til Endpoint E5 eller Windows E5-licenser
+- Windows 10 og Windows 11-enheder
+- Microsoft Defender for Endpoint E5- eller Windows E5-licenser
 
-Hvis du vil drage fuld fordel af regler og rapporter om a heltal, anbefaler vi, at du bruger en Microsoft 365 Defender E5 eller Windows E5-licens og A5. Få mere at vide: [Minimumskrav til Microsoft Defender til slutpunkt](minimum-requirements.md).
+Hvis du vil drage fuld fordel af regler og rapporter om a heltal, anbefaler vi, at du bruger en Microsoft 365 Defender E5 eller Windows E5-licens og A5. Få mere at vide: [Minimumskrav til Microsoft Defender for Endpoint](minimum-requirements.md).
 
 >[!Note]
 >Der er flere metoder til at konfigurere ASR-regler. ASR-regler kan konfigureres ved hjælp af: Microsoft Endpoint Manager (MEM), PowerShell, Gruppepolitik, Microsoft System Center Configuration Manager (SCCM), MEM OMA-URI.
@@ -120,10 +122,10 @@ Nogle regler fungerer ikke godt, hvis ikke-signerede, internt udviklet program o
 Som med alle nye, brede implementeringer, der potentielt kan påvirke dine line of business-handlinger, er det vigtigt at være metodisk i din planlægning og implementering. På grund af de effektive funktioner i asr-regler til forebyggelse af malware er nøje planlægning og installation af disse regler nødvendig for at sikre, at de fungerer bedst i forhold til dine unikke kundearbejdsprocesser. For at arbejde i dit miljø skal du planlægge, teste, implementere og drifte ASR-regler omhyggeligt.  
 
 > [!div class="mx-imgBorder"]
-> ![ASR-regler for installationsfaser](images/asr-rules-deployment-phases.png)
+> :::image type="content" source="images/asr-rules-deployment-phases.png" alt-text="ASR-reglerne for installationsfaser" lightbox="images/asr-rules-deployment-phases.png":::
 
 >[!Note]
->Til kunder, der bruger en ikke-Microsoft HIPS og skifter til Microsoft Defender til reduktionsregler for angrebsoverfladen for Slutpunkt: Microsoft anbefaler kunder at køre deres HIPS-løsning side om side med deres implementering af ASR-regler, indtil det øjeblik, du skifter fra Audit til bloktilstand. Husk, at du skal kontakte din tredjepartsleverandør af antivirus for at få anbefalinger om udelukkelse.  
+>Til kunder, der bruger en ikke-Microsoft HIPS og skifter til Microsoft Defender for Endpoint-regler for reduktion af angrebsoverfladen: Microsoft anbefaler kunder at køre deres HIPS-løsning side om side med deres implementering af ASR-regler, indtil du skifter fra Audit til Bloktilstand. Husk, at du skal kontakte din tredjepartsleverandør af antivirus for at få anbefalinger om udelukkelse.  
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Flere emner i denne installationssamling
 
@@ -161,7 +163,7 @@ Som med alle nye, brede implementeringer, der potentielt kan påvirke dine line 
 
 ### <a name="microsoft-defender"></a>Microsoft Defender
 
-[Adressere falske positive/negativer i Microsoft Defender til slutpunkt](defender-endpoint-false-positives-negatives.md)
+[Adressere falske positive/negativer i Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 [Cloud-leveret beskyttelse og -Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
 
@@ -175,7 +177,7 @@ Som med alle nye, brede implementeringer, der potentielt kan påvirke dine line 
 
 [Opret en installationsplan for Windows](/windows/deployment/update/create-deployment-plan)
 
-[Brug rollebaseret adgangskontrol (RBAC) og omfangsmærker for distribueret IT i Intune](/mem/intune/fundamentals/scope-tags)
+[Brug rollebaseret adgangskontrol og omfangsmærker for distribueret it i Intune](/mem/intune/fundamentals/scope-tags)
 
 [Tildel enhedsprofiler Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
 

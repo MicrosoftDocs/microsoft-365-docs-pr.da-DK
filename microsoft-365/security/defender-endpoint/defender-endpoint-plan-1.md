@@ -17,27 +17,27 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-overview
-ms.openlocfilehash: 50dbe395bee852601aae8e834514c6bbac3dd84d
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: d7e7f7d7c22da007187db5df8bd773dca798597c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63594610"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466295"
 ---
 # <a name="overview-of-microsoft-defender-for-endpoint-plan-1"></a>Oversigt over Microsoft Defender for Endpoint Plan 1
 
 **Gælder for**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Microsoft Defender til Slutpunkt er en sikkerhedsplatform til virksomheder, der er udviklet til at hjælpe organisationer som din til at forhindre, registrere, undersøge og reagere på avancerede trusler. Vi er glade for at kunne meddele, at Defender til slutpunkt nu er tilgængelig i to planer: 
+Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomheder, der er udviklet til at hjælpe organisationer som din til at forhindre, registrere, undersøge og reagere på avancerede trusler. Vi er glade for at kunne meddele, at Defender til slutpunkt nu er tilgængelig i to planer: 
 
 - **Defender for Endpoint Plan 1**, beskrevet i denne artikel; og 
 - **[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)**, generelt tilgængelig, og tidligere kendt som [Defender for Endpoint](microsoft-defender-endpoint.md).
 
 De grønne felter i følgende billede afbilder, hvad der er inkluderet i Defender til Endpoint Plan 1:
 
-:::image type="content" source="../../media/mde-p1/mde-p1-overview-diagram.png" alt-text="Defender for Endpoint Plan 1-diagram":::
+:::image type="content" source="../../media/mde-p1/mde-p1-overview-diagram.png" alt-text="Hvad er blevet belagt med Defender for Endpoint Plan 1" lightbox="../../media/mde-p1/mde-p1-overview-diagram.png":::
 
 Brug denne vejledning til at:
 
@@ -178,7 +178,7 @@ Portalen Microsoft 365 Defender () giver[https://security.microsoft.com](https:/
 - **Handlingscenter viser** afhjælpningshandlinger, der er blevet foretaget. Hvis en fil f.eks. sendes til karantæne, eller en URL-adresse er blokeret, vises hver handling i Handlingscenter under **fanen Oversigt** .
 - Afsnittet **Rapporter** indeholder rapporter, der viser registrerede trusler og deres status. 
 
-Du kan få mere at vide [under Introduktion til Microsoft Defender til Endpoint Plan 1](mde-plan1-getting-started.md).
+Du kan få mere at [vide under Introduktion Microsoft Defender for Endpoint plan 1](mde-plan1-getting-started.md).
 
 ### <a name="apis"></a>API'er
 
@@ -199,7 +199,7 @@ De fleste organisationer bruger forskellige enheder og operativsystemer. Defende
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Sammenlign Microsoft Defender for Endpoint Plan 1 med Plan 2](defender-endpoint-plan-1-2.md)
+- [Sammenlign Microsoft Defender for Endpoint plan 1 med Plan 2](defender-endpoint-plan-1-2.md)
 - [Konfigurere Defender til Endpoint Plan 1 og konfigurere den](mde-p1-setup-configuration.md)
 - [Kom i gang med Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 - [Administrer Defender for Endpoint Plan 1](mde-p1-maintenance-operations.md)

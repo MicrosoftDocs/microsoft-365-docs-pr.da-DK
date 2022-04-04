@@ -18,12 +18,12 @@ description: Administratorer kan få mere at vide om de overskriftsfelter, der f
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8eaf567e4cbceae66a5acd1fa1a45565f15a4804
-ms.sourcegitcommit: e09ced3e3628bf2ccb84d205d9699483cbb4b3b0
+ms.openlocfilehash: 33cebd8cfd0d61b09a5d4976baec9708082c8ca3
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "63587541"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679428"
 ---
 # <a name="anti-spam-message-headers-in-microsoft-365"></a>Antispam-brevhoveder i Microsoft 365
 
@@ -60,8 +60,6 @@ De enkelte felter og værdier er beskrevet i følgende tabel.
 > [!NOTE]
 > Overskriften **X-Forefront Antispam Report** indeholder mange forskellige felter og værdier. Felter, der ikke er beskrevet i tabellen, bruges kun af Microsofts antispamteam til diagnosticeringsformål.
 
-****
-
 |Felt|Beskrivelse|
 |---|---|
 |`ARC`|Protokollen `ARC` har følgende felter: <ul><li>`AAR`: Registrerer indholdet af overskriften **Godkendelsesresultater** fra DMARC.</li><li>`AMS`: Omfatter krypterede signaturer for meddelelsen.</li><li>`AS`: Omfatter krypterede signaturer for brevhovederne. Dette felt indeholder et mærke fra en kædevalidering `"cv="`, der kaldes , og som inkluderer resultatet af kædevalideringen som **ingen**, **bestå** eller **mislykkes**.</li></ul>|
@@ -87,18 +85,14 @@ De enkelte felter og værdier er beskrevet i følgende tabel.
 |`SFV:SPM`|Meddelelsen blev markeret som spam af spamfiltrering.|
 |`SRV:BULK`|Meddelelsen blev identificeret som massemail ved hjælp af spamfiltrering og grænseværdien for masseklager. Når _parameteret MarkAsSpamBulkMail_ `On` er (det er til som standard), markeres en massemail som spam (SCL 6). Få mere at vide under [Konfigurer antispam-politikker](configure-your-spam-filter-policies.md).|
 |`X-CustomSpam: [ASFOption]`|Meddelelsen matchede en asf-indstilling (Advanced Spam Filter). Hvis du vil have vist X-overskriftsværdien for hver ASF-indstilling, skal du se Avancerede [indstillinger for spamfilter (ASF](advanced-spam-filtering-asf-options.md)).|
-|
 
 ## <a name="x-microsoft-antispam-message-header-fields"></a>Brevhovedfelter i X-Microsoft-Antispam
 
 I følgende tabel beskrives nyttige felter i brevhovedet **X-Microsoft-Antispam** . Andre felter i denne overskrift bruges udelukkende af Microsofts antispamteam til diagnosticeringsformål.
 
-****
-
 |Felt|Beskrivelse|
 |---|---|
 |`BCL`|Meddelelsens mange klageniveau (BCL). En højere BCL indikerer, at en massemailmeddelelse er mere tilbøjelig til at generere klager (og derfor er mere tilbøjelig til at være spam). Du kan finde flere oplysninger [under Masseklageniveau (BCL)](bulk-complaint-level-values.md).|
-|
 
 ## <a name="authentication-results-message-header"></a>Meddelelsesoverskrift for godkendelsesresultater
 
@@ -151,8 +145,6 @@ Følgende liste beskriver den tekst, der føjes til overskriften **Godkendelsesr
 
 I følgende tabel beskrives felterne og de mulige værdier for hver mailgodkendelseskontrol.
 
-****
-
 |Felt|Beskrivelse|
 |---|---|
 |`action`|Angiver den handling, som spamfilteret har foretaget, baseret på resultaterne af DMARC-kontrol. Eksempel: <ul><li>**oreject** eller **o.reject**: Står for override reject. I dette tilfælde Microsoft 365 denne handling, når den modtager en meddelelse, der mislykkes for DMARC-kontrol fra et domæne, hvis DMARC TXT-post har en politik for p=afvis. I stedet for at slette eller afvise meddelelsen markerer Microsoft 365 meddelelsen som spam. Du kan finde flere oplysninger Microsoft 365, hvorfor din mailkonto er [konfigureret på denne måde, Microsoft 365 håndterer indgående mail, der ikke lykkes med DMARC](use-dmarc-to-validate-email.md#how-microsoft-365-handles-inbound-email-that-fails-dmarc).</li><li>**pct.karantæne**: Angiver, at en procentdel, der er mindre end 100 % af meddelelser, der ikke passerer DMARC, bliver leveret alligevel. Det betyder, at meddelelsen mislykkedes DMARC, og politikken blev indstillet til karantæne, men pct-feltet blev ikke angivet til 100 %, og systemet blev tilfældigt fastlagt til ikke at anvende DMARC-handlingen som angivet i det angivne domænes politik.</li><li>**pct.reject**: Angiver, at en procentdel, der er mindre end 100 % af meddelelser, der ikke passerer DMARC, vil blive leveret alligevel. Det betyder, at meddelelsen mislykkedes DMARC, og politikken blev indstillet til at afvise, men pct-feltet var ikke angivet til 100 %, og systemet blev tilfældigt besluttet ikke at anvende DMARC-handlingen som angivet i det angivne domænes politik.</li><li>**permerror**: Der opstod en permanent fejl under DMARC-evaluering, f.eks. hvis der opstod en forkert udformet DMARC TXT-post i DNS. Forsøg på at sende denne meddelelse igen vil sandsynligvis ikke slutte med et andet resultat. I stedet kan det være nødvendigt at kontakte domænets ejer for at løse problemet.</li><li>**temperror**: Der opstod en midlertidig fejl under DMARC-evaluering. Du kan muligvis anmode afsenderen om at sende meddelelsen igen senere for at behandle mailen korrekt.</li></ul>|
@@ -164,4 +156,3 @@ I følgende tabel beskrives felterne og de mulige værdier for hver mailgodkende
 |`reason`|Årsagen til, at den sammensatte godkendelse er gået eller mislykkedes. Værdien er en 3-cifret kode. Eksempel: <ul><li>**000**: Meddelelsen eksplicit godkendelse mislykkedes (`compauth=fail`). Meddelelsen modtog f.eks. en DMARC-fejl med en handling i karantæne eller afvis.</li><li>**001**: Meddelelsen mislykkedes implicit godkendelse (`compauth=fail`). Det betyder, at det afsendende domæne ikke har publicerede mailgodkendelsesposter, eller hvis de gjorde det, havde de en svag fejlpolitik (SPF soft fail eller neutral, DMARC-politik for `p=none`).</li><li>**002**: Organisationen har en politik for afsender-/domæneparret, der udtrykkeligt er forbudt at sende efterlignet mail. Denne indstilling angives manuelt af en administrator.</li><li>**010**: Meddelelsen mislykkedes DMARC med en afvisnings- eller karantænehandling, og afsenderdomænet er et af organisationens accepterede domæner (dette er en del af selv-til-egen eller intra-org, spoofing).</li><li>**1xx** eller **7xx**: Meddelelsen blev godkendt (`compauth=pass`). De sidste to cifre er interne koder, der bruges af Microsoft 365.</li><li>**2xx**: Meddelelsen blød-overført implicit godkendelse (`compauth=softpass`). De sidste to cifre er interne koder, der bruges af Microsoft 365.</li><li>**3xx**: Meddelelsen blev ikke kontrolleret for ikke-farvesepareret godkendelse (`compauth=none`).</li><li>**4xx** eller **9xx**: Meddelelsen er omgået sammensat godkendelse (`compauth=none`). De sidste to cifre er interne koder, der bruges af Microsoft 365.</li><li>**6xx**: Meddelelsen mislykkedes implicit mailgodkendelse, og afsendende domæne er et af organisationens accepterede domæner (dette er en del af selv-til-selv eller intra-org spoofing).</li></ul>|
 |`smtp.mailfrom`|Domænet for adressen `5321.MailFrom` (også kaldet MAIL FROM-adresse, P1-afsender eller konvolutafsender). Dette er den mailadresse, der bruges til rapporter om manglende levering (også kaldet rapporter om manglende levering eller meddelelser om ikke-leveret post).|
 |`spf`|Beskriver resultaterne af SPF-kontroller for meddelelsen. Mulige værdier omfatter: <ul><li>`pass (IP address)`: SPF søger efter den meddelelse, der er blevet sendt, og indeholder afsenderens IP-adresse. Klienten er autoriseret til at sende eller videresende mail på vegne af afsenderens domæne.</li><li>`fail (IP address)`: SPF-kontroller, om meddelelsen mislykkedes og indeholder afsenderens IP-adresse. Dette kaldes nogle gange for _"hard fail"_.</li><li>`softfail (reason)`: SPF-posten har udpeget værten som ikke må sende, men er i overgangsfasen.</li><li>`neutral`: SPF-posten angiver udtrykkeligt, at den ikke hævder, om IP-adressen er autoriseret til at sende.</li><li>`none`: Domænet har ikke en SPF-post, eller SPF-posten evalueres ikke til et resultat.</li><li>`temperror`: Der opstod en midlertidig fejl. Eksempelvis en DNS-fejl. Det samme tjek senere kan lykkes.</li><li>`permerror`: Der opstod en permanent fejl. Domænet har f.eks. en forudformateret SPF-post.</li></ul>|
-|

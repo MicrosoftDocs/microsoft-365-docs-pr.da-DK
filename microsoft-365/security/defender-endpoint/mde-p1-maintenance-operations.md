@@ -14,17 +14,17 @@ ms.localizationpriority: medium
 ms.reviewer: inbadian
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 69e4df29817675918873e4d13b81bfe5b00b1219
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5217cf3f8b61c4e5bc24dfc205fb78c5bde5a3b5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63594011"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466625"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-plan-1"></a>Administrer Microsoft Defender for Endpoint Plan 1
 
 **Gælder for**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Når du bruger Defender til Endpoint Plan 1 i din organisation, kan dit sikkerhedsteam tage visse trin for at opretholde din sikkerhedsløsning. Da dit sikkerhedsteam sammensætter din vedligeholdelses- og driftsplan, skal du sørge for som minimum at medtage følgende aktiviteter:
 
@@ -51,10 +51,10 @@ Du kan få mere at vide [under Administrer Defender til slutpunkt](manage-mde-po
 
 En falsk positiv er en artefakt, f.eks. en fil eller en proces, der blev registreret som skadelig, selvom det rent faktisk ikke er en trussel. En falsk negativ er en enhed, der ikke blev registreret som en trussel, selvom det rent faktisk er. Falske positive/negativer kan forekomme med alle løsninger til slutpunktsbeskyttelse, herunder Defender til slutpunkt. Der er dog trin, du kan tage for at løse disse typer problemer og finjustere din løsning, som vist på følgende billede:
 
-:::image type="content" source="../../media/defender-endpoint/false-positives-overview.png" alt-text="Oversigt over processen for falske positive og negativer":::
+:::image type="content" source="../../media/defender-endpoint/false-positives-overview.png" alt-text="Oversigt over processen for falske positive og negativer" lightbox="../../media/defender-endpoint/false-positives-overview.png":::
 
-Hvis du ser falske positive/negativer i Defender til slutpunkt, skal du se [Adresserer falske positive/negativer i Microsoft Defender til slutpunkt](defender-endpoint-false-positives-negatives.md).
+Hvis du ser falske positive/negativer i Defender til slutpunkt, skal du se [Adresserer falske positive/negativer i Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Se nyheder i Microsoft Defender til slutpunkt](whats-new-in-microsoft-defender-endpoint.md)
+- [Se nyheder i Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)

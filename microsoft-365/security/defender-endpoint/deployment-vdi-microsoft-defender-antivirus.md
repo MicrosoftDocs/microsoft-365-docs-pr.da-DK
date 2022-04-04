@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 02/11/2022
+ms.date: 03/18/2022
 ms.reviewer: jesquive
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 9ff523e55efa872002e53f74a631def4c65b9929
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: d21fab14788a0402ddc314e2598dfcdf10830924
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63599361"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679450"
 ---
 # <a name="deployment-guide-for-microsoft-defender-antivirus-in-a-virtual-desktop-infrastructure-vdi-environment"></a>Installationsvejledning til Microsoft Defender Antivirus et VDI-miljø (Virtual Desktop Infrastructure)
 
@@ -102,7 +102,7 @@ New-Item -ItemType Directory -Force -Path $vdmpath | Out-Null
 
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64' -OutFile $vdmpackage
 
-cmd /c "cd $vdmpath & c: & mpam-fe.exe /x"
+cmd /c "cd /d $vdmpath & mpam-fe.exe /x"
 ```
 
 Du kan angive, at en planlagt opgave skal køre én gang om dagen, så VM'erne modtager den nye opdatering, når pakken hentes og udpakkes.

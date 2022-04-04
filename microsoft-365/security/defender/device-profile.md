@@ -13,12 +13,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 9838d7f3ffed46c62891822c6e3761e36d49baf5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: eec3881d2fdb53bc03e4e730fecaf6f1c78c98c7
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591124"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755865"
 ---
 # <a name="device-profile-page"></a>Siden Enhedsprofil
 
@@ -36,7 +36,7 @@ Hvis enheden er tilmeldt Microsoft Defender til slutpunkt, kan du også bruge en
 
 Profilsiden er opdelt i flere brede sektioner.
 
-![Billede af enhedens profilside med (1) faneområde (2) Sidepanel og (3) Handlinger fremhævet med rødt.](../../media/mtp-device-profile/hybrid-device-overall.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-overall.png" alt-text="Siden Enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-overall.png":::
 
 Sidepanelet (1) viser grundlæggende oplysninger om enheden.
 
@@ -48,7 +48,7 @@ Hvis enheden er tilmeldt Microsoft Defender til slutpunkt, får du også vist en
 
 Sidepanelet ud for hovedindholdsområdet på enhedens profilside.
 
-![Billede af fanen sidepanel til enhedsprofil.](../../media/mtp-device-profile/azure-atp-only-device-sidebar.png)
+:::image type="content" source="../../media/mtp-device-profile/azure-atp-only-device-sidebar.png" alt-text="Fanen Sidepanel for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/azure-atp-only-device-sidebar.png":::
 
 Sidepanelet viser enhedens fulde navn og eksponeringsniveau. Den indeholder også nogle vigtige grundlæggende oplysninger i små underafsnit, som kan åbnes eller lukkes, f.eks.:
 
@@ -66,7 +66,7 @@ Sidepanelet viser enhedens fulde navn og eksponeringsniveau. Den indeholder ogs�
 
 Svarhandlinger giver en hurtig måde at beskytte dig mod og analysere trusler på.
 
-![Billede af handlingslinjen til enhedsprofil.](../../media/mtp-device-profile/hybrid-device-long-action-bar.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-long-action-bar.png" alt-text="Handlingslinjen for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-long-action-bar.png":::
 
 > [!IMPORTANT]
 > * [Svarhandlinger](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts) er kun tilgængelige, hvis enheden er tilmeldt Microsoft Defender til slutpunkt.
@@ -94,7 +94,7 @@ Enheder, der er tilmeldt Microsoft Defender til Slutpunkt, vil også vise faner,
 
 Standardfanen er **Oversigt**. Den giver et hurtigt overblik over den vigtigste sikkerhed på enheden.
 
-![Billede af fanen Oversigt for enhedsprofil.](../../media/mtp-device-profile/hybrid-device-tab-overview.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-overview.png" alt-text="Fanen Oversigt for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-overview.png":::
 
 Her kan du få et hurtigt overblik over enhedens aktive beskeder og eventuelle brugere, der er logget på i øjeblikket.
 
@@ -104,7 +104,7 @@ Hvis enheden er tilmeldt Microsoft Defender til slutpunkt, kan du også se enhed
 
 Fanen **Vigtige beskeder** indeholder en liste over beskeder, der er blevet hævet på enheden, fra både Microsoft Defender for Identity og Microsoft Defender til slutpunkt.
 
-![Billede af fanen vigtige beskeder for enhedsprofilen.](../../media/mtp-device-profile/hybrid-device-tab-alerts.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-alerts.png" alt-text="Fanen Beskeder for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-alerts.png":::
 
 Du kan tilpasse antallet af viste elementer, samt hvilke kolonner der vises for hvert element. Standardfunktionsmåden er at angive tredive elementer pr. side.
 
@@ -122,7 +122,7 @@ Fanen **Tidslinje** indeholder et interaktivt kronologisk diagram over alle hæn
 
 Under diagrammet er der en liste over begivenheder for det valgte datointerval.
 
-![Billede af fanen tidslinje for enhedsprofil.](../../media/mtp-device-profile/hybrid-device-tab-timeline.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-timeline.png" alt-text="Fanen Tidslinje for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-timeline.png":::
 
 Antallet af viste elementer og kolonnerne på listen kan begge tilpasses. Standardkolonnerne viser tidspunktet for begivenheden, den aktive bruger, handlingstypen, enheder (processer) og yderligere oplysninger om begivenheden.
 
@@ -136,7 +136,7 @@ Listen kan også eksporteres til en CSV-fil til download. Selvom filen ikke er b
 
 Fanen **Sikkerhedsanbefalinger** viser de handlinger, du kan udføre for at beskytte enheden. Når du vælger et element på denne liste, åbnes der et pop op-pop-op-element, hvor du kan få en vejledning i, hvordan du anvender det.
 
-![Billede af fanen med sikkerhedsanbefalinger for enhedsprofilen.](../../media/mtp-device-profile/hybrid-device-tab-security-recs.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-security-recs.png" alt-text="Fanen sikkerhedsanbefalinger for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-security-recs.png":::
 
 Som med de forrige faner kan antallet af elementer, der vises pr. side, samt hvilke kolonner der er synlige, tilpasses.
 
@@ -146,7 +146,7 @@ Standardvisningen indeholder kolonner, der beskriver de sikkerhedsrelaterede pro
 
 Fanen **Softwarelager viser** software, der er installeret på enheden.
 
-![Billede af fanen Softwarelager for enhedsprofil.](../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png" alt-text="Fanen Softwarelager for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png":::
 
 Standardvisningen viser softwareleverandøren, det installerede versionsnummer, antallet af kendte softwareudviklere, trusselsindsigt, produktkode og mærker. Antallet af viste elementer, og hvilke kolonner der vises, kan begge tilpasses.
 
@@ -158,7 +158,7 @@ Denne liste kan filtreres efter produktkode.
 
 Fanen **Opdagede** sårbarheder viser en liste over almindelige sårbarheder og udnyttelser (CVEs), der kan påvirke enheden.
 
-![Billede af fanen med opdagede sårbarheder for enhedsprofilen.](../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png" alt-text="Fanen Opdagede sårbarheder for enhedsprofilen i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png":::
 
 Standardvisningen viser CVE'ens alvorlighed, sikkerhedsrisikosscore (COMMON Vulnerability Score – CVS), den software, der er relateret til CVE'en, hvornår CVE'en blev offentliggjort, hvornår CVE'en sidst blev opdateret, samt trusler knyttet til CVE'en.
 
@@ -170,7 +170,7 @@ Når du vælger et element på denne liste, åbnes en pop op-pop-op, der beskriv
 
 Under **fanen Manglende KBs** vises eventuelle Microsoft-opdateringer, der endnu ikke er anvendt på enheden. De pågældende "KBs" er Knowledge [Base-artikler,](https://support.microsoft.com/help/242450/how-to-query-the-microsoft-knowledge-base-by-using-keywords-and-query) der beskriver disse opdateringer; [KB4551762](https://support.microsoft.com/help/4551762/windows-10-update-kb4551762).
 
-![Billede af manglende kbs-fane for enhedsprofil.](../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG" alt-text="Fanen Manglende KBs for enhedsprofil i Microsoft 365 Defender portal" lightbox="../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG":::
 
 Standardvisningen viser opslagsordet med opdateringer, operativsystemversion, berørte produkter, adresserede CV'er, KB-nummer og mærker.
 

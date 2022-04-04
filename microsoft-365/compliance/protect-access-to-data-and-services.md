@@ -7,7 +7,7 @@ author: brendacarter
 manager: laurawi
 ms.date: 4/17/2018
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 search.appverid:
@@ -16,12 +16,12 @@ search.appverid:
 ms.assetid: a6ef28a4-2447-4b43-aae2-f5af6d53c68e
 description: Få mere at vide om, hvordan du beskytter bruger- og enhedsadgang Microsoft 365 data og tjenester og beskytter dig mod datatab.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 121c5b8f1168e9986693fea128aa66626b3e31fe
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: 48f483422fda158c02429aec642f60e05b8c933a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63587731"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679582"
 ---
 # <a name="protect-user-and-device-access"></a>Beskyt bruger- og enhedsadgang
 

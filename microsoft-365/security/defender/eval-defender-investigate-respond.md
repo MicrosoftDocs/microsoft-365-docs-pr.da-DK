@@ -1,5 +1,5 @@
 ---
-title: Trin 6. Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
+title: Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
 description: Konfigurer angrebssimulering i Microsoft 365 Defender-prøvelaboratorium eller pilotmiljø for at afprøve sikkerhedsløsningen, der er udviklet til at lære brugerne at beskytte enheder, identitet, data og programmer.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e7dafa34daed763bc0da11e5cd11f80b791db508
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a32b6dc2fafb80905c4cba44b79fc24b7e6a3187
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63600918"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568612"
 ---
 # <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>Trin 6. Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
 
@@ -37,7 +37,7 @@ I denne artikel beskrives processen til at oprette hændelser med angrebssimuler
 
 Benyt følgende fremgangsmåde.
 
-![Trin til at udføre simuleret hændelsesrespons i Microsoft 365 Defender evalueringsmiljøet.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png)
+:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="Trinnene til at udføre simuleret hændelsesrespons i Microsoft 365 Defender evalueringsmiljøet" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
 
 I følgende tabel beskrives trinnene i illustrationen.
 

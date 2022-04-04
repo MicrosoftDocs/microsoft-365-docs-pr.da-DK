@@ -1,5 +1,5 @@
 ---
-title: Pengeskab dokumenter i Microsoft Defender til Office 365
+title: Pengeskab dokumenter i Microsoft Defender for Office 365
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -16,12 +16,12 @@ ms.collection:
 description: Få mere at vide Pengeskab dokumenter i Microsoft 365 E5/A5 eller Microsoft 365 E5/A5 Security.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: beb34c04f93fe853678b30bcd9b5f7a621f4666b
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ab5e35954cac20a18e34f418b5b9fcdc7f2fd007
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63588770"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466339"
 ---
 # <a name="safe-documents-in-microsoft-365-e5a5"></a>Pengeskab dokumenter i Microsoft 365 E5/A5
 
@@ -30,7 +30,7 @@ ms.locfileid: "63588770"
 **Gælder for**
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Pengeskab Documents er en førsteklasses funktion, der bruger cloud-backendn fra [Microsoft Defender til slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) til at scanne åbnede Office-dokumenter i [Beskyttet](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) visning eller [Application Guard for Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
+Pengeskab Dokumenter er en premium-funktion, der bruger cloud-back-enden [af Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) til at scanne åbnede Office-dokumenter i [Beskyttet](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) visning eller [Application Guard for at Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
 
 Brugere behøver ikke Defender til Slutpunkt installeret på deres lokale enheder for at få Pengeskab Dokumenter beskyttelse. Brugerne får Pengeskab-dokumentbeskyttelse, hvis alle følgende krav er opfyldt:
 
@@ -41,7 +41,7 @@ Brugere behøver ikke Defender til Slutpunkt installeret på deres lokale enhede
   - Microsoft 365 E5
   - Microsoft 365 E5 Sikkerhed
 
-  Pengeskab dokumenter er ikke inkluderet i Microsoft Defender til Office 365-licensplaner.
+  Pengeskab dokumenter er ikke inkluderet i Microsoft Defender for Office 365 licensplaner.
 
   Du kan finde flere oplysninger under [Produktnavne og serviceplanidentifikatorer til licenser](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 
@@ -67,7 +67,7 @@ Brugere behøver ikke Defender til Slutpunkt installeret på deres lokale enhede
 
 ### <a name="how-does-microsoft-handle-your-data"></a>Hvordan håndterer Microsoft dine data?
 
-For at holde dig beskyttet sender Pengeskab-dokumenter filer til [Microsoft Defender for Endpoint-skyen](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) til analyse. Oplysninger om, hvordan Microsoft Defender til Slutpunkt håndterer dine data, kan findes her: [Microsoft Defender til datalagring og beskyttelse af personlige oplysninger for Slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/data-storage-privacy).
+For at holde dig beskyttet skal Pengeskab dokumenter sende filer til skyen [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) til analyse. Oplysninger om, hvordan Microsoft Defender for Endpoint håndterer dine data, kan findes her: Microsoft Defender for Endpoint [datalagring og beskyttelse af personlige oplysninger](/windows/security/threat-protection/microsoft-defender-atp/data-storage-privacy).
 
 Filer, der Pengeskab dokumenter, bevares ikke i Defender til slutpunkt ud over den tid, der er brug for analyse (typisk mindre end 24 timer).
 
@@ -83,7 +83,7 @@ Filer, der Pengeskab dokumenter, bevares ikke i Defender til slutpunkt ud over d
 
    Klik på **Gem**, når du er færdig.
 
-   ![Pengeskab dokumenter efter du har valgt Globale indstillinger på siden Pengeskab vedhæftede filer.](../../media/safe-docs-global-settings.png)
+   :::image type="content" source="../../media/safe-docs-global-settings.png" alt-text="Dialogboksen Pengeskab Dokumenter, når du har valgt Globale indstillinger på siden Pengeskab vedhæftede filer" lightbox="../../media/safe-docs-global-settings.png":::
 
 ### <a name="use-exchange-online-powershell-to-configure-safe-documents"></a>Brug Exchange Online PowerShell til at konfigurere Pengeskab dokumenter
 
@@ -119,13 +119,13 @@ Du kan finde flere oplysninger i følgende emner:
 - [Vis Microsoft 365-kontolicens og serviceoplysninger med PowerShell](/microsoft-365/enterprise/view-account-license-and-service-details-with-microsoft-365-powershell)
 - [Produktnavne og serviceabonnement-id'er til licenser](/azure/active-directory/enterprise-users/licensing-service-plan-reference)
 
-### <a name="onboard-to-the-microsoft-defender-for-endpoint-service-to-enable-auditing-capabilities"></a>Onboard to the Microsoft Defender for Endpoint service to enable auditing capabilities
+### <a name="onboard-to-the-microsoft-defender-for-endpoint-service-to-enable-auditing-capabilities"></a>Onboard to the Microsoft Defender for Endpoint for at aktivere overvågningsfunktioner
 
-Hvis du vil aktivere overvågningsfunktioner, skal Microsoft Defender til slutpunkt være installeret på den lokale enhed. Hvis du vil installere Microsoft Defender til Slutpunkt, skal du gennemgå de forskellige implementeringsfaser. Efter onboarding kan du konfigurere overvågningsfunktioner i Microsoft 365 Defender portal.
+Hvis du vil aktivere overvågningsfunktioner, skal den lokale enhed have Microsoft Defender for Endpoint installeret. For at Microsoft Defender for Endpoint installationen skal du gennemgå de forskellige implementeringsfaser. Efter onboarding kan du konfigurere overvågningsfunktioner i Microsoft 365 Defender portal.
 
-Du kan få mere at [vide under Onboard to the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/onboarding). Hvis du har brug for yderligere hjælp, kan du [læse Fejlfinding i forbindelse med Microsoft Defender til onboarding af slutpunkter](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+Du kan få mere at [vide under Onboard to Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/onboarding). Hvis du har brug for yderligere hjælp, kan du [se Fejlfinding Microsoft Defender for Endpoint onboardingproblemer](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
 
-### <a name="how-do-i-know-this-worked"></a>Hvordan ved jeg, at det virkede?
+### <a name="how-do-i-know-this-worked"></a>Hvordan gør jeg du, at det lykkedes?
 
 For at bekræfte, at du har aktiveret og konfigureret Pengeskab dokumenter, skal du gøre et af følgende:
 

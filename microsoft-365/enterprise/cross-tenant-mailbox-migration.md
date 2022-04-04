@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: a368102b6cb4eabaadd459fd185d18e3a7dc7381
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e9ec5c27f5dabfa2df0f12ca6daecfcef860547c
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590426"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499369"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (forhåndsvisning)
 
@@ -38,7 +38,7 @@ Postkasseoverførsel på Exchange lejere i hybrid eller skyen eller enhver kombi
 Denne artikel beskriver processen for flytning af postkasser på tværs af lejere og giver vejledning til, hvordan du forbereder kilde- og mållejere til Exchange Online flytte postkasseindhold.
 
    > [!NOTE]
-   > Vi har for nylig opdateret vores konfigurationstrin til at aktivere overførsel af postkasser på tværs af lejere, så der ikke længere kræves Azure Key Vault! Hvis dette er første gang, du onboarder til dette eksempel, kræves der ingen handling, og du kan gå videre og følge trinnene i dette dokument. Hvis du er begyndt at konfigurere dine lejere ved hjælp af den forrige AKV-metode, anbefaler vi, at du stopper eller fjerner denne konfiguration for at begynde at bruge denne nye metode. Hvis du har postkasseoverflytninger i gang med den forrige AKV-metode, skal du vente, indtil dine eksisterende migrering er fuldført og følge trinnene nedenfor for at aktivere den nye forenklede metode. De påkrævede konfigurationstrin til Azure Key Vault arkiveres, men kan **[findes](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)** her som reference.
+   > Vi har for nylig opdateret vores konfigurationstrin til at aktivere overførsel af postkasser på tværs af lejere til ikke længere at kræve Azure Key Vault! Hvis dette er første gang, du onboarder til dette eksempel, kræves der ingen handling, og du kan gå videre og følge trinnene i dette dokument. Hvis du er begyndt at konfigurere dine lejere ved hjælp af den forrige AKV-metode, anbefaler vi, at du stopper eller fjerner denne konfiguration for at begynde at bruge denne nye metode. Hvis du har postkasseoverflytninger i gang med den forrige AKV-metode, skal du vente, indtil dine eksisterende migrering er fuldført og følge trinnene nedenfor for at aktivere den nye forenklede metode. De Key Vault Azure-konfigurationstrin arkiveres, men kan **[findes her](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)** som reference.
 
 ## <a name="preparing-source-and-target-tenants"></a>Forberedelse af kilde- og mållejere
 
@@ -112,7 +112,7 @@ For at få lejer-id'et for et abonnement skal du logge [på Microsoft 365 Admini
 18. I vinduet Tilføj en klienthemmelighed skal du angive en beskrivelse og konfigurere dine ønskede udløbsindstillinger.
 
       > [!NOTE]
-      > Dette er den adgangskode, der skal bruges, når du opretter overførselsslutpunktet. Det er meget vigtigt, at du kopierer denne adgangskode til udklipsholderen og kopierer denne adgangskode for at sikre/hemmelig placering for adgangskoden. Dette er det eneste tidspunkt, hvor du kan se denne adgangskode! Hvis du på en eller anden måde mister den eller har brug for at nulstille den, kan du logge på azure-portalen igen, gå til App-registreringer, finde din overførselsapp, vælge Secrets &-certifikater og oprette en ny hemmelighed for din app.
+      > Dette er den adgangskode, der skal bruges, når du opretter overførselsslutpunktet. Det er meget vigtigt, at du kopierer denne adgangskode til udklipsholderen og kopierer denne adgangskode for at sikre/hemmelig placering for adgangskoden. Dette er det eneste tidspunkt, hvor du kan se denne adgangskode! Hvis du på en eller anden måde mister den eller har brug for at nulstille den, kan du logge på vores Azure Portal igen, gå til Appregistreringer, finde din overførselsapp, vælge Hemmeligheder &-certifikater og oprette en ny hemmelighed for din app.
 
 19. Nu hvor du har oprettet overførselsprogrammet og er hemmelig, skal du give dit samtykke til programmet. For at give samtykke til programmet skal du gå tilbage til Azure Active Directory-landingssiden, klikke på Enterprise-programmer i venstre navigationsrude, finde den overførselsapp, du har oprettet, markere den og vælge Tilladelser i venstre navigationsrude.
 
@@ -148,7 +148,7 @@ For at få lejer-id'et for et abonnement skal du logge [på Microsoft 365 Admini
    
    # Enable customization if tenant is dehydrated
      $dehydrated=Get-OrganizationConfig | fl isdehydrated
-     if ($dehy -eq $true) {Enable-OrganizationCustomization}
+     if ($dehydrated -eq $true) {Enable-OrganizationCustomization}
      
    $AppId = "[guid copied from the migrations app]"
 
@@ -209,7 +209,7 @@ For at få lejer-id'et for et abonnement skal du logge [på Microsoft 365 Admini
 > [!NOTE]
 > Det lejer-id, du angiver som $sourceTenantId og $targetTenantId er GUID'et og ikke lejerdomænenavnet. Hvis du vil se et eksempel på et lejer-id og oplysninger om at finde dit lejer-id, skal du [se Finde Microsoft 365 lejer-id](/onedrive/find-your-office-365-tenant-id).
    
-### <a name="how-do-i-know-this-worked"></a>Hvordan ved jeg, at det virkede?
+### <a name="how-do-i-know-this-worked"></a>Hvordan gør jeg du, at det lykkedes?
 
 Du kan bekræfte overførselskonfigurationen for postkasser på tværs af lejere ved at køre [Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) cmdlet'en mod det slutpunkt for overførsel på tværs af lejere, som du har oprettet på din mållejer.
 
@@ -284,16 +284,16 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
      |                      |                                                                         |
 
    - Yderligere attributter kan være inkluderet i Exchange hybrid tilbageskrivning allerede. Hvis de ikke er inkluderet, skal de medtages.
-   - msExchBlockedSendersHash – skriver online-sikre og blokerede afsenderdata fra klienter til Active Directory i det lokale miljø.
-   - msExchSafeRecipientsHash – skriver onlinesikkerhedsbaserede og blokerede afsenderdata fra klienter til Active Directory i det lokale miljø.
-   - msExchSafeSendersHash – skriver online-sikre og blokerede afsenderdata fra klienter til Active Directory i det lokale miljø.
+   - msExchBlockedSendersHash – skriver online igen sikre og blokerede afsenderdata fra klienter Active Directory i det lokale miljø.
+   - msExchSafeRecipientsHash – skriver onlinesikkerhedssikrede og blokerede afsenderdata fra klienter Active Directory i det lokale miljø.
+   - msExchSafeSendersHash – skriver onlinesikkerhedssikrede og blokerede afsenderdata fra klienter Active Directory i det lokale miljø.
 
 2. Hvis kildepostkassen er på LitigationHold, og størrelsen af kildepostkassen genoprettelige elementer er større end vores databasestandard (30 GB), fortsætter flytninger ikke, da målkvoten er mindre end størrelsen på kildepostkassen. Du kan opdatere destinationsobjektet MailUser for at overgå ELC-postkasseflag fra kildemiljøet til destinationen, hvilket udløser destinationssystemet til at udvide kvoten for MailUser til 100 GB, hvilket gør det muligt at flytte til destinationen. Denne vejledning fungerer kun for hybrididentitet, der kører Azure AD Forbind, da kommandoerne til at stemple ELC-flagene ikke er blot for lejeradministratorer.
 
     > [!NOTE]
     > EKSEMPEL – SOM DET ER, INGEN GARANTI
     >
-    > Dette script forudsætter en forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationen for det lokale Active Directory (for at stemple ADUser-objektet). Hvis kilden har aktiveret procesførelse eller gendannelse af enkelte elementer, skal du angive dette på destinationskontoen.  Dette øger dumpsterstørrelsen for destinationskontoen til 100 GB.
+    > Dette script forudsætter en forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationsobjektet Active Directory i det lokale miljø (for at stemple ADUser-objektet). Hvis kilden har aktiveret procesførelse eller gendannelse af enkelte elementer, skal du angive dette på destinationskontoen.  Dette øger dumpsterstørrelsen for destinationskontoen til 100 GB.
 
     ```powershell
     $ELCValue = 0
@@ -399,7 +399,7 @@ Get-MoveRequest -Flags "CrossTenant"
 **Kan du angive eksempelscripts til kopiering af attributter, der bruges i test?**
 
 > [!NOTE]
-> EKSEMPEL – SOM DET ER, ANTAGER INGEN GARANTI Dette script forudsætter en forbindelse til både kildepostkassen (for at få kildeværdier) og destinationen på den lokale Active Directory-domæneservices (for at stemple ADUser-objektet). Hvis kilden har aktiveret procesførelse eller gendannelse af enkelte elementer, skal du angive dette på destinationskontoen.  Dette øger dumpsterstørrelsen for destinationskontoen til 100 GB.
+> EKSEMPEL – SOM DET ER, ANTAGER INGEN GARANTI Dette script forudsætter en forbindelse til både kildepostkassen (for at få kildeværdier) og destinationen Active Directory i det lokale miljø Domain Services (for at stemple ADUser-objektet). Hvis kilden har aktiveret procesførelse eller gendannelse af enkelte elementer, skal du angive dette på destinationskontoen.  Dette øger dumpsterstørrelsen for destinationskontoen til 100 GB.
 
 
 
@@ -514,7 +514,7 @@ Nej. Domænenavnene for kilde- og mållejeren skal være entydige. Eksempelvis e
 
 Ja, men vi beholder kun butikstilladelserne som beskrevet i følgende artikler:
 
-- [Microsoft Docs-| Administrer tilladelser for modtagere i Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
+- [Microsoft Docs | Administrer tilladelser for modtagere i Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
 - [Microsoft Support | Sådan tildeler Exchange og Outlook postkassetilladelser i Office 365 dedikeret](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
 
@@ -540,9 +540,9 @@ Overførsel på tværs af lejere overfører kun postkassedata og intet andet. De
 
 Da overførsel på tværs af lejere ikke eksporterer navne, og det ikke er muligt at dele navne mellem lejere, kan du kun gøre dette ved at genskabe etiketterne i destinationslejeren.
 
-**Understøtter du flytning Microsoft 365 grupper?**
+**Understøtter du flytning Microsoft 365-grupper?**
 
-I øjeblikket understøtter funktionen til overførsel af postkasser på tværs af lejere ikke overførslen Microsoft 365 Grupper.
+I øjeblikket understøtter funktionen til overførsel af postkasser på tværs af lejer ikke Microsoft 365-grupper.
 
 **Kan en kildelejeradministrator udføre en eDiscovery-søgning mod en postkasse, når postkassen er blevet overført til den nye lejer/mål?**
 
@@ -660,16 +660,16 @@ Nej, efter en overførsel af en postkasse på tværs af lejeren fungerer eDiscov
       | Exchange Online POP                              |
       | Exchange Online Protection                       |
       | Informationsbarrierer                             |
-      | Beskyttelse af oplysninger til Office 365 - Premium  |
-      | Beskyttelse af oplysninger til Office 365 - Standard |
+      | Information Protection til Office 365 - Premium  |
+      | Information Protection til Office 365 – Standard |
       | Insights af MyAnalytics                          |
       | Microsoft 365 avanceret overvågning                  |
       | Microsoft Bookings                               |
       | Microsoft Business Center                        |
       | Microsoft MyAnalytics (fuld)                     |
-      | Avanceret eDiscovery til Office 365                   |
-      | Microsoft Defender til Office 365 (Plan 1)       |
-      | Microsoft Defender til Office 365 (Plan 2)       |
+      | Office 365 Advanced eDiscovery                   |
+      | Microsoft Defender for Office 365 (Plan 1)       |
+      | Microsoft Defender for Office 365 (Plan 2)       |
       | Office 365 med adgangspriviligerede rettigheder          |
       | Premium kryptering i Office 365                 |
       |                                                  |

@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-ransomware
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 79dee9b6750e21d9b2482d4a0482d87d7fc7434b
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: e90661932880ee146b8b1b81f8412e97d674749d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "63593172"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755750"
 ---
 # <a name="hunt-for-ransomware"></a>Lede efter ransomware
 
@@ -236,7 +236,7 @@ Den konsoliderede forespørgsel returnerer følgende resultater:
 - **TotalEvidenceCount** – antal observerede tegn
 - **UniqueEvidenceCount** – antal typer af observerede tegn
 
-:::image type="content" source="../../media/advanced-hunting-ransomware-query.png" alt-text="Et eksempel på en konsolideret forespørgsel om ransomware-aktivitet i Microsoft 365 Defender-portalen":::
+:::image type="content" source="../../media/advanced-hunting-ransomware-query.png" alt-text="Et eksempel på en konsolideret forespørgsel om ransomware-aktivitet i Microsoft 365 Defender-portalen" lightbox="../../media/advanced-hunting-ransomware-query.png":::
 
 *Forespørgselsresultater, der viser påvirkede enheder og optællinger af forskellige tegn på ransomware-aktivitet*
 
@@ -254,7 +254,7 @@ Som standard viser forespørgselsresultatet kun enheder, der har mere end to typ
 - [Forstå skemaet](advanced-hunting-schema-tables.md)
 - [Anvend bedste fremgangsmåder for forespørgsler](advanced-hunting-best-practices.md)
 
-## <a name="additional-ransomware-resources"></a>Yderligere ransomware-ressourcer
+## <a name="more-ransomware-resources"></a>Flere ransomware-ressourcer
 
 Vigtige oplysninger fra Microsoft:
 
@@ -279,7 +279,7 @@ Microsoft Azure:
 - [Azure-forsvar til ransomware-angreb](https://azure.microsoft.com/resources/azure-defenses-for-ransomware-attack/)
 - [Maksimere ransomware-fleksibilitet med Azure og Microsoft 365](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
 - [Plan for sikkerhedskopiering og gendannelse for at beskytte dig mod ransomware](/security/compass/backup-plan-to-protect-against-ransomware)
-- [Hjælp med at beskytte mod ransomware Microsoft Azure sikkerhedskopiering](https://www.youtube.com/watch?v=VhLOr2_1MCg) (26 minutter video)
+- [Hjælp med at beskytte mod ransomware Microsoft Azure sikkerhedskopiering](https://www.youtube.com/watch?v=VhLOr2_1MCg) (26-minutters video)
 - [Genoprettelse af identitet efter identitet, der er identiteter, er blevet genoprettet](/azure/security/fundamentals/recover-from-identity-compromise)
 - [Avanceret registrering af multistage-angreb i Microsoft Sentinel](/azure/sentinel/fusion#ransomware)
 - [Registrering af fusion til ransomware i Microsoft Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-fusion-detection-for-ransomware/ba-p/2621373)
@@ -290,7 +290,7 @@ Microsoft Defender til skyapps:
 
 Blogindlæg for Microsoft-sikkerhedsteamet:
 
-- [3 trin til at forebygge og genoprette fra ransomware (september 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
+- [Tre trin til at forebygge og genoprette fra ransomware (september 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
 - [En vejledning i at bekæmpe human ransomware: Del 1 (september 2021)](https://www.microsoft.com/security/blog/2021/09/20/a-guide-to-combatting-human-operated-ransomware-part-1/)
 
   Vigtige trin til, hvordan Microsofts registrerings- og svarteam (AFS) udfører undersøgelser af ransomware-hændelser.

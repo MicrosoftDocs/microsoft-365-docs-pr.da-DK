@@ -17,12 +17,12 @@ ms.collection:
 description: For at bevare brugertilliden i brugen af mail har Microsoft udviklet forskellige politikker og teknologier for at beskytte vores brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2894d565a08cf500199b123a0acd738de129faf0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7af1a901bf9b3b27f08a7a3d36de69d49c2c85e9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587507"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679560"
 ---
 # <a name="services-for-non-customers-sending-mail-to-microsoft-365"></a>Tjenester for ikke-kunder, der sender mails til Microsoft 365
 
@@ -35,15 +35,12 @@ Denne oversigt indeholder oplysninger om fordele, som vi giver til din organisat
 
 ## <a name="sender-solutions"></a>Afsenderløsninger
 
-****
-
 |Tjeneste|Fordele|
 |---|---|
 |Dette online Hjælp-indhold|Indeholder: <ul><li>Et udgangspunkt for spørgsmål vedrørende levering af kommunikation til EOP-brugere.</li><li>Indeholder en enkel onlinevejledning med vores politikker og krav.</li><li>En oversigt over filtre og godkendelsesteknologier til uønsket mail, der anvendes af Microsoft.</li><ul>|
 |[Microsoft Support](#microsoft-support)|Giver understøttelse af selvhjælp og eskalering til problemer med levering.|
 |[Antispam-IP-adresselisteportal](#anti-spam-ip-delist-portal)|Et værktøj til at sende IP-anmodning om at framelde sig. Før du sender denne anmodning, er det afsenderens ansvar at sikre, at yderligere mails, der stammer fra den pågældende IP, ikke er skadelige eller skadelige.|
 |[Misbrug og spamrapportering for uønsket mail, der kommer fra Exchange Online](#abuse-and-spam-reporting-for-junk-email-originating-from-exchange-online)|Forhindrer spam og andre uønskede mails i at blive sendt Exchange Online og roder i internettet og dit mailsystem.|
-|
 
 ## <a name="microsoft-support"></a>Microsoft Support
 

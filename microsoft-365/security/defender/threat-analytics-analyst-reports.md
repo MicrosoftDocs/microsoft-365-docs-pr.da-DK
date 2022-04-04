@@ -20,12 +20,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e29ccfc963c0bfc2e730744a131a5c9485c72e42
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 364e83d03da53f5e6ffa8cecda4847e13c38f60e
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63591883"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499479"
 ---
 # <a name="understand-the-analyst-report-in-threat-analytics-in-microsoft-365-defender"></a>Forstå analytikerrapporten i trusselsanalyse i Microsoft 365 Defender
 
@@ -42,7 +42,7 @@ ms.locfileid: "63591883"
 
 Hver [trusselsanalyserapport](threat-analytics.md) indeholder dynamiske sektioner og en omfattende skriftlig sektion, der kaldes en _analytikerrapport_. For at få adgang til denne sektion skal du åbne rapporten om den registrerede trussel og vælge **fanen Analytikerrapport** .
 
-![Billede af afsnittet analytikerrapport for en rapport om trusselsanalyse.](../../media/threat-analytics/ta_analystreport_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_analystreport_mtp.png" alt-text="Afsnittet for analytikerrapporten i en trusselsanalyserapport" lightbox="../../media/threat-analytics/ta_analystreport_mtp.png":::
 
 _Afsnittet Analytikerrapport i en trusselsanalyserapport_
 
@@ -80,20 +80,20 @@ Analytikerrapporten leverer også registreringerne fra Microsoft Defender Antivi
 
 ### <a name="antivirus-detections"></a>Antivirusregistreringer
 
-Disse registreringer er tilgængelige på enheder med [Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-in-windows-10) er slået til. Når disse registreringer sker på enheder, der er blevet onboardet til Microsoft Defender til slutpunkt, udløser de også beskeder, der oplyser diagrammerne i rapporten.
+Disse registreringer er tilgængelige på enheder med [Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-in-windows-10) er slået til. Når disse registreringer sker på enheder, der er blevet onboardet til Microsoft Defender for Endpoint, udløser de også beskeder, der oplyser diagrammerne i rapporten.
 
 >[!NOTE]
 >Analytikerrapporten viser også **generiske** registreringer, der kan identificere en lang række trusler ud over komponenter eller funktionsmåder, der er specifikke for den registrerede trussel. Disse generiske registreringer afspejler ikke diagrammerne.
 
 ### <a name="endpoint-detection-and-response-edr-alerts"></a>Slutpunktsregistrering og svarbeskeder (Slutpunktsregistrering og -svar)
 
-Slutpunktsregistrering og -svar hæves for enheder[, der er onboardet til Microsoft Defender til slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure). Disse beskeder er generelt afhængige af sikkerhedssignaler, der indsamles af Microsoft Defender for Endpoint-sensoren og andre slutpunktsfunktioner , f.eks. antivirus, netværksbeskyttelse, tæmmebeskyttelse – der fungerer som effektive signalkilder.
+Slutpunktsregistrering og -svar hæves for enheder [onboardet til Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure). Disse beskeder er generelt afhængige af sikkerhedssignaler, der indsamles af Microsoft Defender for Endpoint-sensoren og andre slutpunktsfunktioner, f.eks. antivirus, netværksbeskyttelse og tæmmebeskyttelse, der fungerer som effektive signalkilder.
 
 Ligesom listen over antivirusregistreringer er nogle af disse Slutpunktsregistrering og -svar designet til generisk at markere mistænkelig adfærd, der muligvis ikke er knyttet til den registrerede trussel. I sådanne tilfælde identificerer rapporten beskeden tydeligt som "generisk", og at den ikke påvirker nogen af diagrammerne i rapporten.
 
 ### <a name="email-related-detections-and-mitigations"></a>Mailrelaterede registreringer og afhjælpninger
 
-Mailrelaterede registreringer og afhjælpninger fra Microsoft Defender for Office 365 findes i analytikerrapporter ud over de slutpunktsdata, der allerede er tilgængelige fra Microsoft Defender til Slutpunkt.
+Mailrelaterede registreringer og afhjælpninger fra Microsoft Defender for Office 365, er inkluderet i analytikerrapporter ud over de slutpunktsdata, der allerede er tilgængelige fra Microsoft Defender for Endpoint.
 
 Forhindrede mailforsøg giver dig indsigt i, om din organisation var et mål for truslerne i analytikerrapporten, selvom angrebene effektivt er blevet blokeret før levering eller leveret til mappen med uønsket mail.
 
@@ -106,7 +106,7 @@ Selvom registreringer giver dig mulighed for at identificere og stoppe den regis
 Avancerede forespørgselsforespørgsler i analytikerrapporter er blevet undersøgt af Microsoft-analytikere og er klar til at blive kørt i avanceret [forespørgselseditor](https://security.microsoft.com/advanced-hunting). Du kan også bruge forespørgslerne til at oprette [brugerdefinerede registreringsregler,](custom-detection-rules.md) der udløser beskeder om fremtidige matches.
 
 >[!NOTE]
-> Trusselsanalyse er også tilgængelig [i Microsoft Defender til slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics). Den har dog ikke dataintegrationen mellem Microsoft Defender for Office og Microsoft Defender til Slutpunkt, som Microsoft 365 Defender Threat Analytics har.
+> Trusselsanalyse er også tilgængelig i [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics). Den har dog ikke dataintegrationen mellem Microsoft Defender til Office og Microsoft Defender for Endpoint, Microsoft 365 Defender Threat Analytics har.
 
 ## <a name="related-topics"></a>Relaterede emner
 

@@ -5,7 +5,7 @@ metadata:
   author: kelleyvice-msft
   manager: laurawi
   audience: ITPro
-  ms.topic: article
+  ms.topic: faq
   ms.service: o365-administration
   ms.localizationpriority: medium
   search.appverid:
@@ -15,12 +15,12 @@ metadata:
   - NOCSH
   description: Find svar på ofte stillede spørgsmål om flytning af kernedata til et nyt Office 365 datacenter geo.
   ms.custom: seo-marvel-mar2020
-  ms.openlocfilehash: a180e6599da2ccb4f1f564c62afa894dc905b93c
-  ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+  ms.openlocfilehash: bb4090067db54ddd3e9e5726974386240cd3b3e7
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 01/12/2022
-  ms.locfileid: "63592244"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63679394"
 title: Ofte stillede spørgsmål om flytning af data
 summary: Her er svar på generelle spørgsmål om at flytte kernekundedata til et nyt datacenters geo.
 sections:

@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Endpoint Device Control Printer Protection
-description: Microsoft Defender til Endpoint Device Control Printer Protection forhindrer folk i at udskrive via ikke-virksomhedsprintere eller ikke-godkendte USB-printere.
+title: Microsoft Defender for Endpoint printerbeskyttelse til enhedsstyring
+description: Microsoft Defender for Endpoint Device Control Printer Protection forhindrer brugere i at udskrive via ikke-virksomhedsprintere eller ikke-godkendte USB-printere.
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,20 +15,20 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 496d9bf729eaaff6cf12e9734ae80eedacf98a63
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 9a700cd57b7843625f40289b43acd0e7a7eda45a
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63593897"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466669"
 ---
 # <a name="device-control-printer-protection"></a>Printerbeskyttelse til enhedsstyring
 
 **Gælder for**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Microsoft Defender til Endpoint Device Control Printer Protection forhindrer folk i at udskrive via ikke-virksomhedsprintere eller ikke-godkendte USB-printere.
+Microsoft Defender for Endpoint Device Control Printer Protection forhindrer brugere i at udskrive via ikke-virksomhedsprintere eller ikke-godkendte USB-printere.
 
 ## <a name="licensing"></a>Licensering
 
@@ -39,7 +39,7 @@ Før du går i gang med Printerbeskyttelse, skal du [bekræfte dit Microsoft 365
 
 ## <a name="permission"></a>Tilladelse
 
-For implementering af politik i Intune skal kontoen have tilladelse til at oprette, redigere, opdatere eller slette enhedskonfigurationsprofiler for at kunne installere politik via OMA-URI. Du kan oprette brugerdefinerede roller eller bruge en af de indbyggede roller med disse tilladelser:
+For udrulning af politik i Intune skal kontoen have tilladelse til at oprette, redigere, opdatere eller slette enhedskonfigurationsprofiler for at kunne installere politik via OMA-URI. Du kan oprette brugerdefinerede roller eller bruge en af de indbyggede roller med disse tilladelser:
 
 - Politik og profiladministratorrolle.
 - Eller brugerdefineret rolle med tilladelsen Opret/Rediger/Opdater/Læs/Slet/Vis rapporter aktiveret for Enhedskonfigurationsprofiler
@@ -53,14 +53,14 @@ Hvis du vil have vist rapporter om enhedskonfiguration, skal kontoen have visnin
 
 ## <a name="prepare-your-endpoints"></a>Forbered dine slutpunkter
 
-Sørg for, at Windows 10 eller Windows 11 enheder, du planlægger at udrulle Printerbeskyttelse, så de opfylder disse krav.
+Sørg for, at Windows 10 eller Windows 11, du planlægger at udrulle Printerbeskyttelse, så de opfylder disse krav.
 
 1. Følgende Windows installeres.
-    - Til Windows 1809: installer Windows [KB5003217](https://support.microsoft.com/topic/may-20-2021-kb5003217-os-build-17763-1971-preview-08687c95-0740-421b-a205-54aa2c716b46)
-    - For Windows 1909: Windows [Kb5003212](https://support.microsoft.com/topic/may-20-2021-kb5003212-os-build-18363-1593-preview-05381524-8380-4b30-b783-e330cad3d4a1)
+    - For Windows 1809: installér Windows Update [KB5003217](https://support.microsoft.com/topic/may-20-2021-kb5003217-os-build-17763-1971-preview-08687c95-0740-421b-a205-54aa2c716b46)
+    - For Windows 1909: installér Windows Update [KB5003212](https://support.microsoft.com/topic/may-20-2021-kb5003212-os-build-18363-1593-preview-05381524-8380-4b30-b783-e330cad3d4a1)
     - I Windows 2004 eller nyere
 
-2. Hvis du planlægger at implementere en politik via Gruppepolitik, skal enheden være onboardet til Microsoft Defender for Endpoint. Hvis du planlægger at implementere politik via Microsoft Endpoint Manager, skal enheden være forbundet ved hjælp af Microsoft Intune.
+2. Hvis du planlægger at implementere politik via Gruppepolitik, skal enheden være onboardet til Microsoft Defender for Endpoint. Hvis du planlægger at implementere politik via Microsoft Endpoint Manager, skal enheden være forbundet ved hjælp af Microsoft Intune.
 
 ## <a name="deploy-device-control-printer-protection-policy"></a>Implementer politik for printerbeskyttelse af enhedskontrol
 
@@ -78,11 +78,11 @@ Du kan implementere politikken via Gruppepolitik eller Intune.
 
 \* Denne politik skal bruges sammen med begrænsninger for **udskrivning af Aktivér enhedsstyring**.
 
-## <a name="deploy-policy-via-intune"></a>Implementer politik via Intune
+## <a name="deploy-policy-via-intune"></a>Installér politik via Intune
 
-For Intune understøtter printerbeskyttelse i øjeblikket kun OMA-URI.
+For Intune understøtter Enhedsstyring Printerbeskyttelse kun OMA-URI.
 
-### <a name="scenario-1-block-people-from-printing-via-any-non-corporate-printer-using-intune"></a>Scenarie 1: Bloker personer fra at udskrive via en hvilken som helst printer uden for firmaet ved hjælp af Intune
+### <a name="scenario-1-block-people-from-printing-via-any-non-corporate-printer-using-intune"></a>Scenarie 1: Bloker personer fra at udskrive via en hvilken som helst printer uden for firmaet Intune
 
 - Anvend politik over en computer:
 
@@ -94,9 +94,9 @@ For Intune understøtter printerbeskyttelse i øjeblikket kun OMA-URI.
 
 CSP-supportstrengen med `<enabled/>`:
 
-:::image type="content" source="../../media/customeditrow.png" alt-text="brugerdefineret redigeringsrække.":::
+:::image type="content" source="../../media/customeditrow.png" alt-text="Siden Brugerdefineret" lightbox="../../media/customeditrow.png":::
 
-### <a name="scenario-2-allow-specific-approved-usb-printers-using-intune"></a>Scenarie 2: Tillad bestemte godkendte USB-printere ved hjælp af Intune
+### <a name="scenario-2-allow-specific-approved-usb-printers-using-intune"></a>Scenarie 2: Tillad bestemte godkendte USB-printere at bruge Intune
 
 - Anvend politik over en computer:
 
@@ -108,13 +108,13 @@ CSP-supportstrengen med `<enabled/>`:
 
 CSP-supportstrengen med godkendte USB-printere via egenskaben "ApprovedUsbPrintDevices", eksempel `<enabled><data id="ApprovedUsbPrintDevices_List" value="03F0/0853,0351/0872"/>`:
 
-:::image type="content" source="../../media/editrow.png" alt-text="rediger række.":::
+:::image type="content" source="../../media/editrow.png" alt-text="Ruden Rediger række" lightbox="../../media/editrow.png":::
 
 ## <a name="deploy-policy-via-group-policy"></a>Implementer politik via Gruppepolitik
 
-Hvis enheden ikke er forbundet til Intune, kan du også installere politikken via Gruppepolitik.
+Hvis enheden ikke er Intune, kan du også installere politikken via Gruppepolitik.
 
-### <a name="scenario-1-block-people-from-printing-via-any-non-corporate-printer-using-group-policy"></a>Scenarie 1: Bloker personer fra at udskrive via en hvilken som helst printer uden for firmaet Gruppepolitik
+### <a name="scenario-1-block-people-from-printing-via-any-non-corporate-printer-using-group-policy"></a>Scenarie 1: Bloker personer fra at udskrive via en hvilken som helst ikke-virksomhedsprinter, der bruger Gruppepolitik
 
 - Anvend politik over en computer:
 
@@ -122,11 +122,11 @@ Hvis enheden ikke er forbundet til Intune, kan du også installere politikken vi
 
 - Anvend politik over bruger:
 
-  Administrative skabeloner i \> Kontrolpanelprintere \> for brugerkonfiguration \> : Aktivér begrænsninger for udskrivning af enhedsstyring
+  Administrative skabeloner til \> brugerkonfiguration \> Kontrolpanel printere\>: Aktivér begrænsninger for udskrivning af enheder
 
-:::image type="content" source="../../media/enable-device-ctrl-printing-restrictions.png" alt-text="aktivere begrænsninger for udskrivning på enheder.":::
+:::image type="content" source="../../media/enable-device-ctrl-printing-restrictions.png" alt-text="Ruden Aktivér begrænsninger for udskrivning af enhedsstyring" lightbox="../../media/enable-device-ctrl-printing-restrictions.png":::
 
-### <a name="scenario-2-allow-specific-approved-usb-printers-using-group-policy"></a>Scenarie 2: Tillad, at bestemte godkendte USB-printere anvender Gruppepolitik
+### <a name="scenario-2-allow-specific-approved-usb-printers-using-group-policy"></a>Scenarie 2: Tillad, at bestemte godkendte USB-printere Gruppepolitik
 
 - Anvend politik over en computer:
 
@@ -134,11 +134,11 @@ Hvis enheden ikke er forbundet til Intune, kan du også installere politikken vi
 
 - Anvend politik over bruger:
 
-  Administrative skabeloner til \> brugerkonfiguration \> Printere i kontrolpanelet \> : Liste over godkendte USB-tilsluttede udskrivningsenheder
+  Administrative skabeloner til \> brugerkonfiguration \> Kontrolpanel printere\>: Liste over godkendte USB-tilsluttede udskrivningsenheder
 
-:::image type="content" source="../../media/list-of-approved-connected-print-devices.png" alt-text="liste over godkendte USB-tilsluttede udskrivningsenheder.":::
+:::image type="content" source="../../media/list-of-approved-connected-print-devices.png" alt-text="Listen over godkendte USB-tilsluttede udskrivningsenheder" lightbox="../../media/list-of-approved-connected-print-devices.png":::
 
-## <a name="view-device-control-printer-protection-data-in-microsoft-defender-for-endpoint-portal"></a>Få vist printerbeskyttelsesdata for enhedskontrol i Microsoft Defender for Endpoint-portalen
+## <a name="view-device-control-printer-protection-data-in-microsoft-defender-for-endpoint-portal"></a>Få vist printerbeskyttelsesdata for enhedskontrol i Microsoft Defender for Endpoint portal
 
 Portalen <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender viser udskrivning</a>, der er blokeret af politikken til enhedskontrolprinterbeskyttelse ovenfor.
 
@@ -154,7 +154,7 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
- :::image type="content" source="../../media/device-control-advanced-hunting.png" alt-text="avanceret jagt.":::
+ :::image type="content" source="../../media/device-control-advanced-hunting.png" alt-text="avanceret jagt" lightbox="../../media/device-control-advanced-hunting.png":::
 
  Du kan bruge PnP-begivenheden til at finde den USB-printer, der bruges i organisationen:
 
@@ -175,4 +175,4 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
- :::image type="content" source="https://user-images.githubusercontent.com/81826151/128954383-71df3009-77ef-40db-b575-79c73fda332b.png" alt-text="avanceret jagt":::
+ :::image type="content" source="https://user-images.githubusercontent.com/81826151/128954383-71df3009-77ef-40db-b575-79c73fda332b.png" alt-text="Siden Avanceret jagt" lightbox="https://user-images.githubusercontent.com/81826151/128954383-71df3009-77ef-40db-b575-79c73fda332b.png":::

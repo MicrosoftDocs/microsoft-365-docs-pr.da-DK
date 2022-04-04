@@ -23,12 +23,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: d31fa35ddf84b63a115cf3128673794617fcc730
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: ed80d57d25fea2f3c19b6fe6363f993569c68a92
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63592889"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499439"
 ---
 # <a name="microsoft-secure-score"></a>Microsoft Secure Score
 
@@ -49,7 +49,7 @@ Watch this video for a quick overview of Secure score.
 
 Organisationer får adgang til robuste visualiseringer af målepunkter og tendenser, integration med andre Microsoft-produkter, sammenligning af resultater med lignende organisationer og meget mere. Scoren kan også afspejles, når tredjepartsløsninger har behandlet anbefalede handlinger.
 
-![Secure Score-startside.](../../media/secure-score/secure-score-home-page.png)
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Microsoft Secure Score-startsiden i Microsoft 365 Defender-portalen" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 
@@ -84,7 +84,7 @@ Der er i øjeblikket anbefalinger til følgende produkter:
 
 - Microsoft 365 (herunder Exchange Online)
 - Azure Active Directory
-- Microsoft Defender til Slutpunkt
+- Microsoft Defender for Endpoint
 - Microsoft Defender for Identity
 - Defender til skyapps
 - Microsoft Teams

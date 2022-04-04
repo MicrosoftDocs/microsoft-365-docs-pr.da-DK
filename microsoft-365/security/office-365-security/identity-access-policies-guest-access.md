@@ -19,16 +19,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 71e4b3d5f2a8cbf147a9aa50dd849be14047e27d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 28b389292ed733318e5796a1be3ed9c11d2df462
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590674"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466603"
 ---
 # <a name="policies-for-allowing-guest-access-and-b2b-external-user-access"></a>Politikker for at tillade gæsteadgang og B2B-ekstern brugeradgang
 
-I denne artikel beskrives det, hvordan du justerer de anbefalede politikker for Nul tillid til identitet og enhedsadgang for at tillade adgang for gæster og eksterne brugere, der har en Azure Active Directory -konto (Azure AD) Business-to-Business (B2B). Denne vejledning er baseret på de almindelige [politikker for identitet og enhedsadgang](identity-access-policies.md).
+I denne artikel beskrives det, hvordan du justerer de anbefalede politikker for Nul tillid-identitet og enhedsadgang for at tillade adgang for gæster og eksterne brugere, der har en Azure Active Directory-konto (Azure AD) Business-to-Business (B2B). Denne vejledning er baseret på de almindelige [politikker for identitet og enhedsadgang](identity-access-policies.md).
 
 Disse anbefalinger er designet til at gælde **for udgangspunktet** for beskyttelse. Men du kan også justere anbefalingerne ud fra dine specifikke behov for **virksomhedssikkerhed og** **særlig sikkerhedsbeskyttelse** .
 
@@ -38,7 +38,7 @@ Hvis du har oprettet en sti til B2B-konti, der skal godkendes med din Azure AD-l
 
 Dette diagram viser, hvilke politikker der skal tilføjes eller opdateres mellem de almindelige politikker for identitets- og enhedsadgang for B2B-gæster og ekstern brugeradgang.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png" alt-text="Oversigt over politikopdateringer til beskyttelse af gæsteadgang." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png" alt-text="Oversigten over politikopdateringer til beskyttelse af gæsteadgang" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png":::
 
 I følgende tabel vises de politikker, du enten skal oprette og opdatere. De fælles politikker linker til de tilknyttede konfigurationsinstruktioner i [artiklen Fælles identitets- og enhedsadgangspolitikker](identity-access-policies.md) .
 
@@ -49,7 +49,7 @@ I følgende tabel vises de politikker, du enten skal oprette og opdatere. De fæ
 
 Hvis du vil medtage eller udelade gæster og eksterne brugere i politikker for betinget adgang, skal du for Opgaver > Brugere og grupper **> Medtag** eller **Udelad** markere Alle gæster **og eksterne brugere**.
 
-![skærmbillede af kontrolelementer til udelukkelse af gæster og eksterne brugere.](../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png" alt-text="Kontrolelementerne til at udelukke gæster og eksterne brugere" lightbox="../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png":::
 
 ## <a name="more-information"></a>Flere oplysninger
 
@@ -81,12 +81,12 @@ Kun én organisation kan administrere en enhed. Hvis du ikke udelukker gæster o
 
 ## <a name="next-step"></a>Næste trin
 
-![Trin 4: Politikker for Microsoft 365 apps i skyen og Microsoft Defender til skyapps.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Politikkerne for Microsoft 365 apps og Microsoft Defender for Cloud Apps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Konfigurere Betingede adgangspolitikker for:
 
 - [Microsoft Teams](teams-access-policies.md)
 - [Exchange Online](secure-email-recommended-policies.md)
 - [SharePoint](sharepoint-file-access-policies.md)
-- [Microsoft Defender til skyapps](mcas-saas-access-policies.md)
+- [Microsoft Defender for Cloud Apps](mcas-saas-access-policies.md)
  

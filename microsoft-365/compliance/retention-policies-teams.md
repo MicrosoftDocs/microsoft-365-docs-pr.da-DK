@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder Microsoft Teams.
-ms.openlocfilehash: fc870050b8ef69a908553617d755412d95efa288
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: f2b3b5a61eabbffc50da34b14baa20e025b8da0f
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63714868"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568516"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring af Microsoft Teams
 
@@ -67,7 +67,7 @@ Disse postkasser er angivet af deres RecipientTypeDetails-attribut:
 
 Andre postkassetyper, f.eks. RoomMailbox, der Teams til mødelokaler, understøttes ikke Teams opbevaringspolitikker.
 
-Teams bruger en Azure-drevet chattjeneste som det primære lager til alle meddelelser (chats og kanalmeddelelser). Hvis du har brug for at slette Teams meddelelser af hensyn til overholdelse af regler og standarder, kan opbevaringspolitikker for Teams slette meddelelser efter en bestemt tidsperiode baseret på, hvornår de blev oprettet. Meddelelser slettes derefter permanent fra både Exchange-postkasser, hvor de lagrede til overholdelseshandlinger, og fra den primære lagerplads, der bruges af den underliggende Azure-baserede chattjeneste. Du kan finde flere oplysninger om den [underliggende arkitektur i](/MicrosoftTeams/security-compliance-overview) Sikkerhed og overholdelse Microsoft Teams og specifikt afsnittet [Information Protection Architecture](/MicrosoftTeams/security-compliance-overview#information-protection-architecture).
+Teams bruger en Azure-drevet chattjeneste som det primære lager til alle meddelelser (chats og kanalmeddelelser). Hvis du har brug for at slette Teams meddelelser af hensyn til overholdelse af regler og standarder, kan opbevaringspolitikker for Teams slette meddelelser efter en bestemt tidsperiode baseret på, hvornår de blev oprettet. Meddelelser slettes derefter permanent fra både Exchange-postkasser, hvor de lagrede til overholdelseshandlinger, og fra den primære lagerplads, der bruges af den underliggende Azure-baserede chattjeneste. Du kan finde flere oplysninger om den [underliggende](/MicrosoftTeams/security-compliance-overview) arkitektur i Sikkerhed og overholdelse Microsoft Teams og specifikt [afsnittet Information Protection arkitektur](/MicrosoftTeams/security-compliance-overview#information-protection-architecture).
 
 Selvom disse data fra Teams og kanalmeddelelser er gemt i postkasser, skal du konfigurere en opbevaringspolitik for **Teams-kanalmeddelelser** **og Teams chatplaceringer**. Teams chats og kanalmeddelelser er ikke medtaget i opbevaringspolitikker, der er konfigureret til Exchange bruger- eller gruppepostkasser. På samme måde påvirker opbevaringspolitikker Teams ikke andre mailelementer, der er gemt i postkasser.
 
@@ -100,7 +100,7 @@ For de to stier i diagrammet:
 > [!NOTE]
 > Meddelelser, der er gemt i postkasser, herunder de skjulte mapper, kan søges i af eDiscovery-værktøjer. Indtil meddelelser slettes permanent fra mappen SubstrateHolds, forbliver de søgbare via eDiscovery-værktøjer.
 
-Når meddelelser slettes permanent fra mappen SubstrateHolds, kommunikeres en sletningshandling til Backend Azure-chattjenesten, som derefter videresender den samme handling til Teams-klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugere, der er tildelt politikken i en kort periode, muligvis stadig får vist disse meddelelser i deres Teams-app, men data fra disse meddelelser returneres ikke i eDiscovery-søgninger.
+Når en opbevaringsperiode udløber og flytter en meddelelse til mappen SubstrateHolds, videregives en sletningshandling til Backend Azure-chattjenesten, som derefter videresender den samme handling til Teams-klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugerne i en kort periode fortsat får vist disse meddelelser i deres Teams-app.
 
 I dette scenarie, hvor Azure-chattjenesten modtager en slettekommando på grund af en opbevaringspolitik, slettes den tilsvarende meddelelse i Teams-klientappen for alle brugere i samtalen. Nogle af disse brugere kan være fra en anden organisation, have en opbevaringspolitik med en længere opbevaringsperiode eller ingen opbevaringspolitik tildelt. For disse brugere gemmes kopier af meddelelserne stadig i deres postkasser og forbliver søgbare efter eDiscovery, indtil meddelelserne slettes permanent af en anden opbevaringspolitik.
 
