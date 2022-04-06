@@ -2,7 +2,7 @@
 title: Microsoft Defender for Endpoint på Linux
 ms.reviewer: ''
 description: Beskriver, hvordan du installerer og bruger Microsoft Defender for Endpoint på Linux.
-keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, defender, ansible, linux, redhat, ubuntu, defender, sles, suse, centos
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, dukke, ansible, linux, redhat, ubuntu, debian, sles, suse, centos
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,175 +17,139 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2cd00befebba58dcac8411bb9aa9bce60bd02aac
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: dcc4ed070e900f9df892abb58cd05cdad2dca619
+ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507137"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64687005"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender for Endpoint på Linux
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 I dette emne beskrives det, hvordan du installerer, konfigurerer, opdaterer og bruger Microsoft Defender for Endpoint på Linux.
 
 > [!CAUTION]
-> Kørsel af andre tredjepartsslutpunktbeskyttelsesprodukter sammen med Microsoft Defender for Endpoint på Linux vil sandsynligvis føre til problemer med ydeevnen og uforudsete bivirkninger. Hvis ikke-Microsoft-slutpunktsbeskyttelse er et absolut krav i dit miljø, kan du stadig roligt drage fordel af Defender til slutpunkt på Linux Slutpunktsregistrering og -svar-funktionalitet, når du har konfigureret antivirusfunktionaliteten til at køre i [passiv tilstand](linux-preferences.md#enforcement-level-for-antivirus-engine).
+> Kørsel af andre tredjepartsbeskyttelsesprodukter til slutpunkter sammen med Microsoft Defender for Endpoint på Linux vil sandsynligvis medføre problemer med ydeevnen og uforudsigelige bivirkninger. Hvis beskyttelse af slutpunkter, der ikke er fra Microsoft, er et absolut krav i dit miljø, kan du stadig trygt drage fordel af Defender for Endpoint på Linux-Slutpunktsregistrering og -svar funktionalitet, når du har konfigureret antivirusfunktionen til at køre i [passiv tilstand](linux-preferences.md#enforcement-level-for-antivirus-engine).
 
 ## <a name="how-to-install-microsoft-defender-for-endpoint-on-linux"></a>Sådan installerer du Microsoft Defender for Endpoint på Linux
 
-Microsoft Defender for Endpoint til Linux omfatter antimalware og slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) funktioner. 
+Microsoft Defender for Endpoint til Linux indeholder funktioner til antimalware og slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar). 
 
 
 ### <a name="prerequisites"></a>Forudsætninger
 
-- Adgang til Microsoft 365 Defender portalen
-- Linux-distribution ved hjælp [af Systemd](https://systemd.io/) System Manager
-- Begynderoplevelse i Linux- og BASH-scripting
-- Administrative rettigheder på enheden (i tilfælde af manuel udrulning)
+- Adgang til Microsoft 365 Defender-portalen
+- Linux-distribution ved hjælp af [systemadministratoren](https://systemd.io/)
+- Erfaring med Linux- og BASH-scripting på begynderniveau
+- Administrative rettigheder på enheden (i tilfælde af manuel installation)
 
 > [!NOTE]
-> Microsoft Defender for Endpoint på Linux-agent er uafhængig af [OMS-agent.](/azure/azure-monitor/agents/agents-overview#log-analytics-agent) Microsoft Defender for Endpoint sin egen uafhængige telemetripipeline.
+> Microsoft Defender for Endpoint på Linux-agenten er uafhængig af [OMS-agenten](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). Microsoft Defender for Endpoint er afhængig af sin egen uafhængige telemetripipeline.
 
 
 ### <a name="installation-instructions"></a>Installationsvejledning
 
-Der er flere metoder og installationsværktøjer, du kan bruge til at installere og konfigurere Microsoft Defender for Endpoint på Linux.
+Der er flere metoder og installationsværktøjer, som du kan bruge til at installere og konfigurere Microsoft Defender for Endpoint på Linux.
 
 Generelt skal du gøre følgende:
 
-- Sørg for, at du har Microsoft Defender for Endpoint abonnement.
-- Installér Microsoft Defender for Endpoint på Linux ved hjælp af en af følgende installationsmetoder:
+- Sørg for, at du har et Microsoft Defender for Endpoint abonnement.
+- Udrul Microsoft Defender for Endpoint på Linux ved hjælp af en af følgende udrulningsmetoder:
   - Kommandolinjeværktøjet:
     - [Manuel udrulning](linux-install-manually.md)
   - Administrationsværktøjer fra tredjepart:
-    - [Installér ved hjælp af Konfigurationsstyringsværktøj til softwarekonfiguration](linux-install-with-puppet.md)
-    - [Installér ved hjælp af værktøjet Ansible Configuration Management](linux-install-with-ansible.md)
-    - [Installér ved hjælp af konfigurationsstyringsværktøjet Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+    - [Udrul ved hjælp af Værktøjet til administration af konfiguration af dukke](linux-install-with-puppet.md)
+    - [Udrul ved hjælp af Værktøjet til administration af konfiguration, der kan bruges](linux-install-with-ansible.md)
+    - [Udrul ved hjælp af Chef Configuration Management Tool](linux-deploy-defender-for-endpoint-with-chef.md)
 
 Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i Microsoft Defender for Endpoint på Linux](linux-support-install.md).
 
 > [!NOTE]
-> Det understøttes ikke at installere Microsoft Defender for Endpoint andre placeringer end standardinstallationsstien. 
+> Det understøttes ikke at installere Microsoft Defender for Endpoint på andre placeringer end standardinstallationsstien. 
 
 ### <a name="system-requirements"></a>Systemkrav
 
-- Understøttede Linux-serverdistributioner og x64-versioner (AMD64/EM64T) x86_64 versioner:
+- Understøttede Linux-serverdistributioner og x64-versioner (AMD64/EM64T) og x86_64 versioner:
 
   - Red Hat Enterprise Linux 6.7 eller nyere
   - Red Hat Enterprise Linux 7.2 eller nyere
   - Red Hat Enterprise Linux 8.x
-  - CentOS 6.7 eller nyere 
-  - CentOS 7.2 eller nyere
-  - Ubuntu 16.04 LTS eller nyere LTS
-  - 9 eller nyere
+  - CentOS 6,7 eller nyere 
+  - CentOS 7,2 eller nyere
+  - Ubuntu 16.04 LTS eller højere LTS
+  - Debian 9 eller nyere
   - SUSE Linux Enterprise Server 12 eller nyere
   - Oracle Linux 7.2 eller nyere
   - Oracle Linux 8.x
   - Amazon Linux 2
-  - 33 eller nyere
+  - Fedora 33 eller nyere
 
     > [!NOTE]
-    > Fordelinger og versioner, der ikke eksplicit er angivet, understøttes ikke (også selvom de officielt er afledt af de officielt understøttede fordelinger).
+    > Distributioner og versioner, der ikke udtrykkeligt er angivet, understøttes ikke (også selvom de er afledt af de officielt understøttede distributioner).
 
 - Liste over understøttede kerneversioner
+  - Minimumkerneversion 3.10.0-327 (for alle de understøttede Linux-distributioner, der er nævnt ovenfor undtagen Red Hat Enterprise Linux 6 og CentOS 6)
+  - Kerneindstillingen `fanotify` skal være aktiveret
   - Red Hat Enterprise Linux 6 og CentOS 6:
-    - Til 6.7: 2.6.32-573.*
+    - For 6.7: 2.6.32-573.*
     - For 6.8: 2.6.32-642.*
-    - For 6.9: 2.6.32-696.*
-    - For 6.10: 2.6.32.754.2.1.el6.x86_64 til 2.6.32-754.41.2:
+    - For 6.9: 2.6.32-696.* (undtagen 2.6.32-696.el6.x86_64)
+    - For 6.10: 2.6.32.754.2.1.el6.x86_64 til 2.6.32-754.43.1:
     
        - 2.6.32-754.10.1.el6.x86_64
        - 2.6.32-754.11.1.el6.x86_64
-       - 2.6.32-754.12.1.el6.x86_64
+       - 2.6.32 754.12.1.el6.x86_64
        - 2.6.32-754.14.2.el6.x86_64
-       - 2.6.32-754.15.3.el6.x86_64
-       - 2.6.32-754.17.1.el6.x86_64
+       - 2.6.32 754.15.3.el6.x86_64
+       - 2.6.32 754.17.1.el6.x86_64
        - 2.6.32-754.18.2.el6.x86_64
-       - 2.6.32-754.2.1.el6.x86_64
+       - 2.6.32 754.2.1.el6.x86_64
        - 2.6.32-754.22.1.el6.x86_64
        - 2.6.32-754.23.1.el6.x86_64
        - 2.6.32-754.24.2.el6.x86_64
-       - 2.6.32-754.24.3.el6.x86_64
+       - 2.6.32 754.24.3.el6.x86_64
        - 2.6.32-754.25.1.el6.x86_64
        - 2.6.32-754.27.1.el6.x86_64
-       - 2.6.32-754.28.1.el6.x86_64
-       - 2.6.32-754.29.1.el6.x86_64
-       - 2.6.32-754.29.2.el6.x86_64
+       - 2.6.32 754.28.1.el6.x86_64
+       - 2.6.32 754.29.1.el6.x86_64
+       - 2.6.32 754.29.2.el6.x86_64
        - 2.6.32-754.3.5.el6.x86_64
-       - 2.6.32-754.30.2.el6.x86_64
+       - 2.6.32 754.30.2.el6.x86_64
        - 2.6.32-754.33.1.el6.x86_64
        - 2.6.32-754.35.1.el6.x86_64
-       - 2.6.32-754.39.1.el6.x86_64
-       - 2.6.32-754.41.2.el6.x86_64
+       - 2.6.32 754.39.1.el6.x86_64
+       - 2.6.32 754.41.2.el6.x86_64
        - 2.6.32-754.43.1.el6.x86_64
-       - 2.6.32-754.6.3.el6.x86_64
+       - 2.6.32 754.6.3.el6.x86_64
        - 2.6.32-754.9.1.el6.x86_64
 
-    For Red Hat Enterprise Linux 6 og CentOS 6 er listen over understøttede kerneversioner:
-       - Til 6.7: 2.6.32-573.* 
-       - For 6.8: 2.6.32-642.* 
-       - For 6.9: 2.6.32-696.* 
-       - For 6.10: 2.6.32.754.2.1.el6.x86_64 til 2.6.32-754.41.2:
-
  > [!NOTE]
- > Når en ny pakkeversion udgives, reduceres support til de to tidligere versioner kun til teknisk support. Versioner, der er ældre end dem, der er angivet i dette afsnit, er kun med til teknisk opgraderingssupport.
+ > Når en ny pakkeversion er udgivet, reduceres understøttelsen af de to tidligere versioner til kun teknisk support. Versioner, der er ældre end dem, der er angivet i dette afsnit, er kun beregnet til teknisk opgraderingssupport.
 
-  Liste over versioner:
-
-  - 2.6.32-754.2.1.el6.x86_64 
-  - 2.6.32-754.17.1.el6.x86_64
-  - 2.6.32-754.29.1.el6.x86_64
-  - 2.6.32-754.3.5.el6.x86_64 
-  - 2.6.32-754.18.2.el6.x86_64
-  - 2.6.32-754.29.2.el6.x86_64
-  - 2.6.32-754.6.3.el6.x86_64 
-  - 2.6.32-754.22.1.el6.x86_64
-  - 2.6.32-754.30.2.el6.x86_64
-  - 2.6.32-754.9.1.el6.x86_64 
-  - 2.6.32-754.23.1.el6.x86_64
-  - 2.6.32-754.33.1.el6.x86_64
-  - 2.6.32-754.10.1.el6.x86_64
-  - 2.6.32-754.24.2.el6.x86_64
-  - 2.6.32-754.35.1.el6.x86_64
-  - 2.6.32-754.11.1.el6.x86_64
-  - 2.6.32-754.24.3.el6.x86_64
-  - 2.6.32-754.39.1.el6.x86_64
-  - 2.6.32-754.12.1.el6.x86_64
-  - 2.6.32-754.25.1.el6.x86_64
-  - 2.6.32-754.41.2.el6.x86_64
-  - 2.6.32-754.14.2.el6.x86_64
-  - 2.6.32-754.27.1.el6.x86_64
-  - 2.6.32-754.15.3.el6.x86_64
-  - 2.6.32-754.28.1.el6.x86_64       
-
-
-- Minimum kernel version 3.10.0-327
-
-- Indstillingen `fanotify` Kerne skal være aktiveret
 
   > [!CAUTION]
-  > Kørsel af Defender til slutpunkt på Linux side om side med andre `fanotify`-baserede sikkerhedsløsninger understøttes ikke. Det kan føre til uforudsigelige resultater, herunder at operativsystemet hænger.
+  > Kørsel af Defender for Endpoint på Linux side om side med andre `fanotify`-baserede sikkerhedsløsninger understøttes ikke. Det kan føre til uforudsigelige resultater, herunder hængende operativsystemet.
 
 - Diskplads: 1 GB
 
-- /opt/microsoft/mdatp/sbin/wdavdaemon kræver eksekverbar tilladelse. Du kan finde flere oplysninger under "Sørg for, at daemon har eksekverbar tilladelse" [i Fejlfinding af installationsproblemer Microsoft Defender for Endpoint på Linux](/microsoft-365/security/defender-endpoint/linux-support-install).
+- /opt/microsoft/mdatp/sbin/wdavdaemon kræver eksekverbar tilladelse. Du kan finde flere oplysninger under "Kontrollér, at daemon har eksekverbar tilladelse" i [Fejlfinding af installationsproblemer for Microsoft Defender for Endpoint på Linux](/microsoft-365/security/defender-endpoint/linux-support-install).
 
-- Kerner: 2 minimum, 4 foretrukken
+- Kerner: 2 minimum, 4 foretrækkes
 
-- Hukommelse: minimum 1 GB, 4 foretrukket
+- Hukommelse: minimum 1 GB, 4 foretrækkes
 
     > [!NOTE]
-    > Sørg for, at du har ledig diskplads i /var.
+    > Sørg for, at der er ledig diskplads i /var.
 
-- Løsningen giver i øjeblikket beskyttelse i realtid til følgende filtyper:
+- Løsningen giver i øjeblikket beskyttelse i realtid for følgende filtyper:
 
   - `btrfs`
   - `ecryptfs`
@@ -204,59 +168,59 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
   - `vfat`
   - `xfs`
 
-Når du har aktiveret tjenesten, skal du muligvis konfigurere dit netværk eller din firewall til at tillade udgående forbindelser mellem den og dine slutpunkter.
+Når du har aktiveret tjenesten, skal du muligvis konfigurere netværket eller firewallen for at tillade udgående forbindelser mellem den og dine slutpunkter.
 
-- Overvågningsstruktur (`auditd`) skal være aktiveret.
+- Overvågningsstrukturen (`auditd`) skal aktiveres.
 
   > [!NOTE]
-  > Systemhændelser registreret af regler, der `/etc/audit/rules.d/` føjes til `audit.log`, føjes til (e) og kan påvirke værtsrevision og upstream-samling. Begivenheder, der Microsoft Defender for Endpoint på Linux, mærkes med `mdatp` nøgle.
+  > Systemhændelser, der registreres af regler, der føjes til `/etc/audit/rules.d/` , føjes til `audit.log`(s) og kan påvirke værtsovervågning og upstream-samling. Hændelser, der tilføjes af Microsoft Defender for Endpoint på Linux, mærkes med `mdatp` nøglen.
 
-### <a name="configuring-exclusions"></a>Konfiguration af udeladelse
+### <a name="configuring-exclusions"></a>Konfiguration af udeladelser
 
-Når du føjer udeladelse Microsoft Defender Antivirus, skal du være opmærksom [på almindelige udeladelsesfejl for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
+Når du føjer udeladelser til Microsoft Defender Antivirus, skal du være opmærksom på [almindelige udeladelsesfejl for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
 
 ### <a name="network-connections"></a>Netværksforbindelser
 
-Følgende regneark, der kan downloades, viser de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til. Du skal sikre dig, at der ikke er nogen firewall eller regler for netværksfiltrering, der vil nægte adgang til disse URL-adresser. Hvis der er, skal du muligvis oprette en *tilladelsesregel* specifikt for dem.
+Følgende regneark, der kan downloades, viser de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til. Du skal sikre, at der ikke er nogen regler for firewall- eller netværksfiltrering, der vil nægte adgang til disse URL-adresser. Hvis der er, skal du muligvis oprette en *tilladelsesregel* specifikt for dem.
 
 <br>
 
 ****
 
-|Listen Regneark over domæner| Beskrivelse|
+|Regneark med domæneliste| Beskrivelse|
 |---|---|
-|Microsoft Defender for Endpoint URL-adresse for kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og operativsystem for kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+|Microsoft Defender for Endpoint URL-adresseliste til kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OPERATIVSYSTEM til kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
 | Microsoft Defender for Endpoint URL-adresseliste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 > [!NOTE]
-> Hvis du vil have en mere specifik URL-liste, skal [du se Konfigurer indstillinger for proxy og forbindelse til internettet](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-atp-service-urls-in-the-proxy-server).
+> Du kan se en mere specifik URL-liste under [Konfigurer indstillinger for proxy- og internetforbindelse](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-atp-service-urls-in-the-proxy-server).
 
-Defender til Slutpunkt kan finde en proxyserver ved hjælp af følgende registreringsmetoder:
+Defender for Endpoint kan finde en proxyserver ved hjælp af følgende registreringsmetoder:
 
 - Gennemsigtig proxy
-- Manuel statisk proxykonfiguration
+- Manuel konfiguration af statisk proxy
 
-Hvis en proxy eller firewall blokerer anonym trafik, skal du sørge for, at anonym trafik er tilladt i de tidligere angivne URL-adresser. For gennemsigtige proxyer kræves der ingen yderligere konfiguration for Defender til slutpunkt. For statisk proxy skal du følge trinnene i [Manuel konfiguration af statisk proxy](linux-static-proxy-configuration.md).
+Hvis en proxy eller firewall blokerer anonym trafik, skal du sørge for, at anonym trafik er tilladt i de tidligere angivne URL-adresser. For gennemsigtige proxyer er der ikke behov for yderligere konfiguration for Defender for Endpoint. I forbindelse med statisk proxy skal du følge trinnene i [Manuel konfiguration af statisk proxy](linux-static-proxy-configuration.md).
 
 > [!WARNING]
 > PAC, WPAD og godkendte proxyer understøttes ikke. Sørg for, at der kun bruges en statisk proxy eller gennemsigtig proxy.
 >
-> SSL-inspektion og skærings-proxyer understøttes heller ikke af sikkerhedsmæssige årsager. Konfigurer en undtagelse for SSL-inspektion og din proxyserver til at gå direkte gennem data fra Defender til Slutpunkt på Linux til de relevante URL-adresser uden skæring. Tilføjelse af dit skæringscertifikat til det globale lager tillader ikke skæring.
+> SSL-inspektion og opfangelse af proxyer understøttes heller ikke af sikkerhedsmæssige årsager. Konfigurer en undtagelse for SSL-inspektion og din proxyserver til at overføre data direkte fra Defender for Endpoint på Linux til de relevante URL-adresser uden opfangelse. Tilføjelse af dit aflytningscertifikat til det globale lager tillader ikke opfangelse.
 
-Du kan finde fejlfindingstrin [under Fejlfinding af forbindelsesproblemer i skyen Microsoft Defender for Endpoint på Linux](linux-support-connectivity.md).
+Du kan finde fejlfindingstrin under [Fejlfinding af problemer med cloudforbindelsen for Microsoft Defender for Endpoint på Linux](linux-support-connectivity.md).
 
 ## <a name="how-to-update-microsoft-defender-for-endpoint-on-linux"></a>Sådan opdaterer du Microsoft Defender for Endpoint på Linux
 
-Microsoft udgiver jævnligt softwareopdateringer for at forbedre ydeevnen, sikkerheden og levere nye funktioner. Du kan Microsoft Defender for Endpoint opdateringer til Linux ved at se [Installér opdateringer til Microsoft Defender for Endpoint på Linux](linux-updates.md).
+Microsoft udgiver jævnligt softwareopdateringer for at forbedre ydeevnen, sikkerheden og levere nye funktioner. Hvis du vil opdatere Microsoft Defender for Endpoint på Linux, skal du se [Installér opdateringer til Microsoft Defender for Endpoint på Linux](linux-updates.md).
 
-## <a name="how-to-configure-microsoft-defender-for-endpoint-on-linux"></a>Sådan konfigureres Microsoft Defender for Endpoint på Linux
+## <a name="how-to-configure-microsoft-defender-for-endpoint-on-linux"></a>Sådan konfigurerer du Microsoft Defender for Endpoint på Linux
 
-Vejledning til, hvordan du konfigurerer produktet i virksomhedsmiljøer, findes [i Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md).
+Vejledning til, hvordan du konfigurerer produktet i virksomhedsmiljøer, er tilgængelig under [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md).
 
 ## <a name="common-applications-to-microsoft-defender-for-endpoint-can-impact"></a>Almindelige programmer til Microsoft Defender for Endpoint kan påvirke
 
-Store I/O-arbejdsbelastninger fra visse programmer kan opleve problemer med ydeevnen, Microsoft Defender for Endpoint er installeret. Disse omfatter programmer til udviklerscenarier som Jenkins og Jira og databasearbejdsbelastninger som OracleDB og Postgres. Hvis du oplever forringet ydeevne, kan du overveje at angive udeladelse for pålidelige programmer og holde almindelige [udeladelsesfejl Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus) for øje. Du kan få yderligere vejledning ved at overveje rådgivning om antivirusfratagelser fra tredjepartsprogrammer.
+Høje I/O-arbejdsbelastninger fra visse programmer kan opleve problemer med ydeevnen, når Microsoft Defender for Endpoint installeres. Disse omfatter programmer til udviklerscenarier, f.eks. Jenkins og Jira, og databasearbejdsbelastninger som OracleDB og Postgres. Hvis der er en forringelse af ydeevnen, kan du overveje at angive undtagelser for programmer, der er tillid til, og holde øje med [Almindelige udeladelsesfejl for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus). Hvis du vil have yderligere vejledning, kan du overveje at konsultere dokumentation vedrørende antivirusudeladelser fra tredjepartsprogrammer.
 
 ## <a name="resources"></a>Ressourcer
 
-- Du kan finde flere oplysninger om logføring, fjernelse eller andre emner under [Ressourcer](linux-resources.md).
+- Du kan få flere oplysninger om logføring, fjernelse eller andre emner under [Ressourcer](linux-resources.md).

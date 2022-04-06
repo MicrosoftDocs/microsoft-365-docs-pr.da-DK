@@ -1,7 +1,7 @@
 ---
 title: Delte enheder
-description: Hvordan og hvornår skal du bruge delt enhedstilstand?
-keywords: Microsoft-administreret skrivebord, Microsoft 365, tjeneste, dokumentation
+description: Sådan og hvornår du skal bruge delt enhedstilstand
+keywords: Microsoft Managed Desktop, Microsoft 365, service, dokumentation
 ms.service: m365-md
 author: tiaraquan
 ms.author: tiaraquan
@@ -9,126 +9,136 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 5ed7373bdcf9a8f2c8eda53c0bd249c6ba825992
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: ad9cb5e69585f0c014050b51b719e539111cf9fa
+ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63594040"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64687179"
 ---
 # <a name="shared-devices"></a>Delte enheder
 
-Microsoft Managed Desktop giver dig mulighed for at registrere enheder i "delt enhedstilstand" på samme måde som tilstanden for delte enheder, som [tilbydes Microsoft Intune](/mem/intune/configuration/shared-user-device-settings).
+Microsoft Managed Desktop giver dig mulighed for at registrere enheder i "delt enhedstilstand" på samme måde som den delte enhedstilstand, der tilbydes af [Microsoft Intune](/mem/intune/configuration/shared-user-device-settings).
 
-Enheder i denne tilstand er optimeret til situationer, hvor brugere ikke er bundet til et enkelt skrivebord og ofte skifter enhed. Frontlinemedarbejdere som f.eks. banklæsere eller personale, der er til at tage sig af. Du kan anvende en hvilken som helst af De [Microsoft-administrerede skrivebordsprofiler](profiles.md) på enheder i denne tilstand. Enheder, der er registreret i denne tilstand, har nogle vigtige forskelle:
+Enheder i denne tilstand er optimeret til situationer, hvor brugerne ikke er bundet til et enkelt skrivebord og ofte ændrer enheder. Det kan f.eks. være frontlinjearbejdere, f.eks. Du kan anvende en hvilken som helst af de Microsoft Managed Desktop [profiler](profiles.md) på enheder i denne tilstand. Enheder, der er registreret i denne tilstand, har nogle vigtige forskelle:
 
 - [Enhedslager](#device-storage) er optimeret til delte brugere.
-- [Inaktive](#deletion-of-inactive-accounts) konti slettes.
+- [Inaktive konti](#deletion-of-inactive-accounts) slettes.
 - [Gæstekonti](#guest-accounts) understøttes ikke som standard.
-- [Microsoft 365 til virksomhedslicens](#microsoft-365-apps-for-enterprise) er optimeret til delte enheder.
+- [Microsoft 365 Licenser til programmer](#microsoft-365-apps-for-enterprise) til virksomheder er optimeret til delte enheder.
 
-Da du vælger at bruge delt enhedstilstand, når du registrerer dig i Microsoft Managed Desktop, skal du, hvis du vil skifte fra denne tilstand på et senere tidspunkt, afmelde den og registrere den igen.
+Da du vælger at bruge tilstanden delt enhed på registreringstidspunktet i Microsoft Managed Desktop skal du fjerne registreringen og registrere den igen, hvis du senere vil skifte fra denne tilstand.
 
-## <a name="when-to-use-shared-device-mode"></a>Hvornår skal jeg bruge delt enhedstilstand?
+## <a name="when-to-use-shared-device-mode"></a>Hvornår skal du bruge tilstanden delt enhed?
 
-Enhver situation, hvor brugerne ofte skifter enhed.
+Enhver situation, hvor brugerne ofte ændrer enheder.
 
-Det kan f.eks. være, at banklæsere administrerer indskud på ét sted, men flytter til et back office for at hjælpe kunder med et realkreditlån. På hver af disse placeringer kører enheden forskellige programmer og er optimeret til disse opgaver, selvom de bruges af flere personer.
+Bankkontører kan f.eks. være placeret ét sted, hvor de administrerer indbetalinger, men flytter til et back office for at hjælpe kunder med realkreditlån. På hver af disse placeringer kører enheden forskellige programmer og er optimeret til disse opgaver, selvom de bruges af flere personer.
 
-Personalet flytter typisk mellem lokaler og kontorer, når de interagerer med patienter. De kan logge på en arbejdsstation på et kontor, men oprette forbindelse til deres fjernskrivebord og tage noter, og gentage denne proces i et andet lokale med en anden patient.
+Plejepersonalet flytter typisk mellem lokaler og kontorer, når de interagerer med patienterne. De kan logge på en arbejdsstation på et kontor, men oprette forbindelse til deres fjernskrivebord og tage noter og gentage denne proces i et andet rum med en anden patient.
 
-## <a name="when-not-to-use-shared-device-mode"></a>Hvornår skal jeg ikke bruge delt enhedstilstand?
+## <a name="when-not-to-use-shared-device-mode"></a>Når du ikke skal bruge delt enhedstilstand
 
-Tilstanden Delt enhed er ikke et godt valg i disse situationer:
+Delt enhedstilstand er ikke et godt valg i disse situationer:
 
-- Når en brugers filer skal gemmes lokalt i stedet for i skyen
+- Når en brugers filer skal gemmes lokalt i stedet for i cloudmiljøet
 - Hvis brugeroplevelsen skal være anderledes for forskellige brugere på enheden
-- Hvis det sæt programmer, som hver bruger har brug for, er væsentligt anderledes
+- Hvis sættet af programmer, som hver bruger har brug for, varierer meget
 
-## <a name="enroll-new-devices-in-shared-device-mode"></a>Tilmeld nye enheder i delt enhedstilstand
+## <a name="register-new-devices-in-shared-device-mode"></a>Registrer nye enheder i delt enhedstilstand
 
-Uanset om du eller en partner håndterer registrering, kan du vælge at bruge delt enhedstilstand.
+Fra og med 2203, uanset om du eller en partner håndterer enhedsregistrering, kan du vælge at bruge Windows [autopilotens selvudrullende tilstandsprofil](/mem/autopilot/self-deploying) i Microsoft Managed Desktop.
 
-Hvis du selv tilmelder enheder, skal du følge trinnene i Manuel registrering og [](../get-started/manual-registration.md)derefter føje dem til gruppen Moderne enheder på arbejdspladsen **– delt enhedstilstand**.
+Hvis du selv tilmelder enheder, skal du importere nye enheder til bladet Windows Autopilot-enheder.
 
-> [!WARNING]
-> Forsøg ikke at konvertere eksisterende Microsoft-administrerede skrivebordsenheder til delt enhedstilstand ved blot at føje dem til denne gruppe. De politikker, der anvendes, kan potentielt medføre OneDrive filer går permanent tabt.
+**Sådan importerer du nye enheder til bladet Windows Autopilot-enheder:**
 
-Hvis du har en partnertilmeldingsenheder, skal du følge trinnene i [Partnerregistrering](../get-started/partner-registration.md), men føj **-** Delt til gruppemærket, som vist i følgende tabel:
+1. Indsaml [hardwarehashen](../get-started/manual-registration.md#obtain-the-hardware-hash) for de nye enheder, du vil tildele profilen Windows Autopilot Selvinstallationstilstand.
+2. Gå til [Microsoft Endpoint Manager-portalen](https://endpoint.microsoft.com).
+2. Vælg **Enheder** i navigationsmenuen til venstre.
+3. Vælg **Windows** i afsnittet **Efter platform**. Vælg derefter **Windows Tilmelding**.
+4. I afsnittet **Windows Autopilot Deployment Program** skal du vælge **Enheder**.
+5. [Importér](../get-started/manual-registration.md#register-devices-by-using-the-admin-portal) den .CSV fil, der indeholder alle de hardwarehashes, der blev indsamlet i trin #1.
+6. Når du har uploadet Windows Autopilot-enheder, skal du redigere de importerede enheders gruppemærkeattribut, så Microsoft Managed Desktop kan registrere dem ved hjælp af den selvudrullende tilstandsprofil Windows Autopilot. Nedenfor kan du se attributterne for gruppemærket. Du skal føje **-Shared** til gruppemærket, som vist i nedenstående tabel:
 
-| Enhedsprofil | Autopilot-gruppemærke (standardtilstand) | Gruppemærke (delt enhedstilstand) |
+| Enhedsprofil | Autopilotgruppemærke (standardtilstand) | Gruppekode (tilstand for delt enhed) |
 | ----- | ----- | ----- |
 | Følsomme data | Microsoft365Managed_SensitiveData |  Microsoft365Managed_SensitiveData-Shared |
-| Superbruger | Microsoft365Managed_PowerUser | Understøttes ikke |
+| Power-bruger | Microsoft365Managed_PowerUser | Understøttes ikke |
 | Standard  | Microsoft365Managed_Standard | Microsoft365Managed_Standard-Shared |
+
+> [!WARNING]
+> Prøv ikke at redigere attributten for gruppefanen ved at føje **-Shared** til enheder, der tidligere er importeret til Windows Autopilot. Enheder, der allerede er importeret til Windows Autopilot, og som bruger et af Microsoft Managed Desktop gruppemærker, der starter med *Microsoft365Managed_*, men uden **at -Shared** tilføjes i starten, er allerede en del af en anden Azure Active Directory gruppe. Denne Azure Active Directory gruppe har ikke fået tildelt den Windows autopilotens selvudrulningstilstandsprofil. Hvis du skal omforme en eksisterende enhed til at være en delt enhed, skal du slette og registrere enheden igen i Windows Autopilot igen.
+
+Hvis du har en partnertilmeldingsenheder, skal du følge trinnene i [Partnerregistrering](../get-started/partner-registration.md), men føje **-Delt** til gruppemærket, som vist i tabellen ovenfor.
 
 ## <a name="consequences-of-shared-device-mode"></a>Konsekvenser af delt enhedstilstand
 
-### <a name="device-storage"></a>Lager på enhed
+### <a name="device-storage"></a>Enhedslager
 
-Brugere af delte enheder skal have deres data sikkerhedskopieret i skyen, så de kan følge dem til andre enheder. Når du har registreret enheder i tilstanden delt enhed, skal du sørge for at aktivere OneDrive Filer [efter](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) behov og kendte [mappeomdirigeringsfunktioner](/onedrive/redirect-known-folders). Denne fremgangsmåde minimerer den effekt, som hver brugerprofil har på enhedens lager. Enheder i delt enhedstilstand sletter automatisk brugerprofiler, hvis den ledige diskplads falder til under 25 %. Denne aktivitet er planlagt til midnat på enhedens lokale tid, medmindre lagerpladsen bliver kritisk begrænset.
+Brugere af delte enheder skal have sikkerhedskopieret deres data til skyen, så de kan følge dem til andre enheder. Når du har registreret enheder i delt enhedstilstand, skal du sørge for at aktivere [omdirigeringsfunktionerne](/onedrive/redirect-known-folders) for OneDrive [filer on-demand](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) og kendte mapper. Denne fremgangsmåde minimerer den effekt, som hver brugerprofil har på enhedens lager. Enheder i delt enhedstilstand sletter automatisk brugerprofiler, hvis den ledige diskplads falder til under 25 %. Denne aktivitet er planlagt til midnat på enhedens lokale tidspunkt, medmindre lageret bliver kritisk begrænset.
 
-Microsoft Managed Desktop bruger [SharedPC](/mem/intune/configuration/shared-user-device-settings-windows) CSP til at udføre disse handlinger, så sørg for, at du ikke selv bruger disse csp'er.
+Microsoft Managed Desktop bruger [CSP'en for SharedPC](/mem/intune/configuration/shared-user-device-settings-windows) til at udføre disse handlinger, så sørg for, at du ikke selv bruger disse CSP'er.
 
 > [!IMPORTANT]
-> Træn dine brugere om, at de, når de har downloadet en stor fil, skal bekræfte, at de kan se det grønne kontrolikon på filen, før de logger af. Hvis deres konto slettes som en del af oprydningshandlingerne, og filen ikke er helt overført i OneDrive, går filen permanent tabt.
+> Oplær dine brugere, at når de har downloadet en stor fil, skal de bekræfte, at de kan se det grønne kontrolikon på filen, før de logger af. Hvis vedkommendes konto slettes som en del af oprydningshandlinger, og filen ikke uploades fuldstændigt i OneDrive, vil filen gå tabt permanent.
 
 ### <a name="deletion-of-inactive-accounts"></a>Sletning af inaktive konti
 
-Tilstanden Delt enhed fjerner alle konti, der ikke har været logget på i mere end 30 dage.
+Tilstanden Delt enhed fjerner alle konti, der ikke er logget på i mere end 30 dage.
 
 ### <a name="guest-accounts"></a>Gæstekonti
 
-Enheder i delt enhedstilstand tillader kun konti, der er forbundet til et domæne. Hvis du har brug for gæstekonti på en enhed, kan du arkivere en [ændringsanmodning](../working-with-managed-desktop/admin-support.md) for at anmode om, at de bliver aktiveret.
+Enheder i delt enhedstilstand tillader kun konti, der er tilsluttet et domæne. Hvis du har brug for gæstekonti på en enhed, kan du sende en [anmodning om ændring](../working-with-managed-desktop/admin-support.md) for at anmode om, at de aktiveres.
 
 ### <a name="microsoft-365-apps-for-enterprise"></a>Microsoft 365 Apps for enterprise
 
-[Microsoft 365 Apps for enterprise](/microsoft-365/managed-desktop/get-started/m365-apps) gør det typisk muligt for en given bruger at installere disse apps på kun fem enheder ad gangen. I tilstanden delt enhed tæller appsene ikke med i grænsen, så de kan bruge dem under roaming mellem enheder. Installation og opdateringer af Microsoft 365 Apps for enterprise fungere som normalt.
+[Microsoft 365 Apps for enterprise](/microsoft-365/managed-desktop/get-started/m365-apps) giver typisk en bestemt bruger mulighed for at installere disse apps på kun fem enheder på samme tid. I delt enhedstilstand tæller appsene ikke med i forhold til grænsen, så de kan bruge dem, mens de roaming mellem enheder. Udrulning og opdateringer af Microsoft 365 Apps for enterprise fungerer som normalt.
 
 ### <a name="device-profiles"></a>Enhedsprofiler
 
-I delt enhedstilstand kan du kun have én [enhedsprofil](profiles.md) på en given enhed. Desuden understøttes Enhedsprofilen for Power-bruger ikke i øjeblikket i delt enhedstilstand.
+I delt enhedstilstand kan du kun have én [enhedsprofil](profiles.md) på en given enhed. Power-brugerprofilen understøttes heller ikke i øjeblikket i delt enhedstilstand.
 
 ### <a name="apps-and-policies-assigned-to-users"></a>Apps og politikker, der er tildelt til brugere
 
-På delte enheder skal du tildele apps eller politikker, som du administrerer selv, til *enhedsgrupper* og ikke brugergrupper. Tildeling til enhedsgrupper sikrer, at hver enkelt bruger har en mere ensartet oplevelse. Undtagelsen er [Firmaportal](#deploying-apps-with-company-portal).
+På delte enheder skal du tildele alle apps eller politikker, som du administrerer dig selv, til *enhedsgrupper* og ikke brugergrupper. Tildeling til enhedsgrupper sikrer, at hver bruger har en mere ensartet oplevelse. Undtagelsen er [Firmaportal](#deploying-apps-with-company-portal).
 
 ## <a name="limitations-of-shared-device-mode"></a>Begrænsninger for delt enhedstilstand
 
 ### <a name="windows-hello"></a>Windows Hello
 
-Windows Hello bruger chipkort-emulering til sikker [cache](/windows/security/identity-protection/hello-for-business/hello-faq) af bruger-pinkoder, så det minimerer det antal gange, brugerne skal godkendes. Dog tillader Windows kun 10 chipkort ad gangen på en given enhed. Når en 11. bruger logger på første gang, mister en af de eksisterende konti sit chipkort. De kan logge på, men deres pinkode cachelagres ikke.
+Windows Hello bruger chipkortemulering til at [cachelagre bruger-PIN'er](/windows/security/identity-protection/hello-for-business/hello-faq) på en sikker måde, hvilket minimerer det antal gange, brugerne skal godkende. Men Windows tillader kun 10 chipkort ad gangen på en given enhed. Når en 11. bruger logger på for første gang, mister en af de eksisterende konti deres chipkort. De kan logge på, men deres pinkode cachelagres ikke.
 
-### <a name="universal-print"></a>Universaludskrift
+### <a name="universal-print"></a>Universel udskrivning
 
-Når universel udskrivning installerer en printer til en enkelt bruger på en delt enhed, bliver printeren tilgængelig for alle brugere af den pågældende enhed. Det er ikke muligt at isolere printere mellem brugere på delte enheder.
+Når Universal print installerer en printer til en enkelt bruger på en delt enhed, bliver printeren tilgængelig for alle brugere af den pågældende enhed. Det er ikke muligt at isolere printere mellem brugere på delte enheder.
 
 ## <a name="limitations-of-shared-device-mode-in-the-public-preview-release"></a>Begrænsninger for delt enhedstilstand i den offentlige prøveversion
 
 ### <a name="primary-user"></a>Primær bruger
 
-Hver Microsoft Intune enhed har en primær bruger, som tildeles, når enheden er konfigureret af Autopilot. Men når enhederne deles, kræver Intune, at den primære bruger fjernes.
+Hver Microsoft Intune enhed har en primær bruger, som tildeles, når en enhed konfigureres af Autopilot. Men når enheder deles, kræver Intune, at den primære bruger fjernes.
 
 > [!IMPORTANT]
-> Mens tilstanden delt enhed er i offentlig forhåndsvisning, skal du sørge for at fjerne den primære bruger ved at følge disse trin: Log på Microsoft Endpoint Manager Administration, vælg **EnhederAlle**> **enheder, vælg** en enhed, vælg derefter **PropertiesRemove**> primær bruger, og slet den bruger, der er angivet der.
+> Mens tilstanden for delte enheder er i offentlig prøveversion, skal du sørge for at fjerne den primære bruger ved at følge disse trin: Log på Microsoft Endpoint Manager Administration, vælg **EnhederAlle**> **enheder**, vælg en enhed, vælg derefter **EgenskaberFjern**> **primær bruger**, og slet den bruger, der er angivet der.
 
-### <a name="deploying-apps-with-company-portal"></a>Installation af apps med Firmaportal
+### <a name="deploying-apps-with-company-portal"></a>Udrulning af apps med Firmaportal
 
-Nogle apps behøver sandsynligvis ikke at være til stede på alle enheder, så det kan være, at du foretrækker, at brugerne kun installerer disse apps, når de skal bruge dem [fra Firmaportal](/mem/intune/user-help/install-apps-cpapp-windows).
+Nogle apps behøver sandsynligvis ikke at være til stede på alle enheder, så du foretrækker måske, at brugerne kun installerer disse apps, når de har brug for dem[, fra Firmaportal](/mem/intune/user-help/install-apps-cpapp-windows).
 
-Microsoft Managed Desktop deaktiverer Firmaportal som standard for enheder i delt enhedstilstand. Hvis du ønsker, at Firmaportal aktiveret, kan du arkivere en [ændringsanmodning](../working-with-managed-desktop/admin-support.md). Du skal dog være opmærksom på nogle begrænsninger i denne funktion i denne offentlige prøveversion:
+Microsoft Managed Desktop deaktiverer som standard Firmaportal for enheder i delt enhedstilstand. Hvis du vil have aktiveret Firmaportal, kan du sende en [ændringsanmodning](../working-with-managed-desktop/admin-support.md). Du skal dog være opmærksom på nogle begrænsninger i denne funktion i denne offentlige prøveversion:
 
-- Hvis du vil gøre en app tilgængelig for brugere i [Firmaportal, skal](/mem/intune/apps/apps-deploy) du tildele en brugergruppe til den pågældende app i Intune og derefter føje hver enkelt bruger til den pågældende brugergruppe.
+- Hvis du vil gøre en app tilgængelig for brugere i Firmaportal, skal [du tildele en brugergruppe](/mem/intune/apps/apps-deploy) til den pågældende app i Intune og derefter føje hver bruger til den pågældende brugergruppe.
 - Enheder kan ikke have en [primær bruger](#primary-user).
-- Hvis du vil fjerne en app, som en bruger har Firmaportal, skal du fjerne appen fra alle brugere på enheden.
+- Hvis du vil fjerne en app, som en bruger har installeret via Firmaportal, skal du fjerne appen fra alle brugere på den pågældende enhed.
 
 > [!CAUTION]
 > Firmaportal understøtter ikke programmer, der er tildelt enhedsgrupper, som tilgængelige.
 
-### <a name="redeployment-of-microsoft-365-apps-for-enterprise"></a>Ominstallation af Microsoft 365 Apps til Enterprise
+### <a name="redeployment-of-microsoft-365-apps-for-enterprise"></a>Geninstallation af Microsoft 365 Apps for Enterprise
 
-Under den offentlige prøveversion, Microsoft 365 Apps skal geninstalleres, skal brugerne kontakte deres lokale supportmedarbejdere for at anmode om at få en agent til at hæve og geninstallere Microsoft 365 Apps for enterprise på enheden.
+Hvis Microsoft 365 Apps skal geninstalleres i den offentlige prøveversion, skal brugerne kontakte deres lokale supportmedarbejdere for at anmode om at få en agent til at hæve og geninstallere Microsoft 365 Apps for enterprise på den pågældende enhed.
 
 ### <a name="microsoft-teams"></a>Microsoft Teams
 
-Når en bruger Teams første gang, bliver brugeren bedt om at opdatere appen, før han eller hun kan bruge den. Når de tillader opdateringen, Teams automatisk automatisk opdateret i baggrunden.
+Når en bruger starter Teams første gang, bliver vedkommende bedt om at opdatere appen, før vedkommende kan bruge den. Når de tillader opdateringen, holder Teams sig opdateret i baggrunden.
