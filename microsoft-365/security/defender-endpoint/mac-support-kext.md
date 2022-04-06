@@ -1,7 +1,7 @@
 ---
-title: Fejlfinding af problemer med kerneudvidelsen i Microsoft Defender til slutpunkt på macOS
-description: Fejlfinding i forbindelse med udvidelsesrelaterede problemer i Microsoft Defender til slutpunkt på macOS.
-keywords: microsoft, defender, Microsoft Defender til Slutpunkt, mac, kernel, udvidelse
+title: Fejlfinding af problemer med kerneudvidelsen Microsoft Defender for Endpoint på macOS
+description: Fejlfinding i forbindelse med udvidelsesrelaterede problemer Microsoft Defender for Endpoint på macOS.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, kernel, udvidelse
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,34 +15,34 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ba52d9587a2ac530eabeacf8c72336751a1a17d7
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 72d1aab8be071b5f4ec66988b35655571625b409
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63591824"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477275"
 ---
-# <a name="troubleshoot-kernel-extension-issues-in-microsoft-defender-for-endpoint-on-macos"></a>Fejlfinding af problemer med kerneudvidelsen i Microsoft Defender til slutpunkt på macOS
+# <a name="troubleshoot-kernel-extension-issues-in-microsoft-defender-for-endpoint-on-macos"></a>Fejlfinding af problemer med kerneudvidelsen Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
 
-- [Microsoft Defender til Slutpunkt på macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint på macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Denne artikel indeholder oplysninger om fejlfinding af problemer med kerneudvidelsen, der er installeret som en del af Microsoft Defender til slutpunkt på macOS.
+Denne artikel indeholder oplysninger om, hvordan du foretager fejlfinding af problemer med den kerneudvidelse, der er installeret som en del Microsoft Defender for Endpoint på macOS.
 
 Fra og med macOS High Sierra (10.13) kræver macOS alle kerneudvidelser for at blive eksplicit godkendt, før de må køre på enheden.
 
-Hvis du ikke godkender kerneudvidelsen under udrulning/installation af Microsoft Defender til slutpunkt på macOS, viser programmet et banner, der beder dig om at aktivere den:
+Hvis du ikke godkender kerneudvidelsen under udrulning/installation af Microsoft Defender for Endpoint på macOS, viser programmet et banner, der beder dig om at aktivere den:
 
-   ![Skærmbilledet RTP deaktiveret.](images/mdatp-32-main-app-fix.png)
+:::image type="content" source="images/mdatp-32-main-app-fix.png" alt-text="RTP deaktiveret" lightbox="images/mdatp-32-main-app-fix.png":::
 
 Du kan også køre ```mdatp health```. Den rapporterer, hvis beskyttelse i realtid er aktiveret, men ikke tilgængelig. Dette angiver, at kerneudvidelsen ikke er godkendt til at køre på din enhed.
 
@@ -71,7 +71,7 @@ Hvis der er gået mindre end 30 minutter, siden produktet blev installeret, skal
 
 Hvis du ikke kan se denne prompt, betyder det, at der er gået 30 minutter eller mere, og kerneudvidelsen stadig ikke er godkendt til at køre på din enhed:
 
-![Skærmbilledet Sikkerhed og beskyttelse af personlige oplysninger efter prompten er udløbet.](images/mdatp-33-securityprivacysettings-noprompt.png)
+:::image type="content" source="images/mdatp-33-securityprivacysettings-noprompt.png" alt-text="Vinduet Sikkerhed og beskyttelse af personlige oplysninger, når prompten er udløbet" lightbox="images/mdatp-33-securityprivacysettings-noprompt.png":::
 
 I dette tilfælde skal du udføre følgende trin for at udløse godkendelsesflowet igen.
 

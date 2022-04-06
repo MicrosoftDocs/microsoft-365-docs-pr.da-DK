@@ -17,18 +17,19 @@ ms.collection:
 - remotework
 ms.custom: admindeeplinkDEFENDER
 description: Beskyt din virksomheds mail og data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 1277d001118dda764aa9b2a968f1024d5befcac1
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 7f5c52eb0768adc4c64251ed7c3f34cccdf9cd57
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755065"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469443"
 ---
 # <a name="top-12-tasks-for-security-teams-to-support-working-from-home"></a>De 12 vigtigste opgaver for sikkerhedsteams til at understøtte hjemmearbejde
 
 Hvis du er som [Microsoft](https://www.microsoft.com/microsoft-365/blog/2020/03/10/staying-productive-while-working-remotely-with-microsoft-teams/) og pludselig understøtter en primært hjemmebaseret arbejdsstyrke, vil vi gerne hjælpe dig med at sikre, at din organisation arbejder så sikkert som muligt. Denne artikel prioriterer opgaver for at hjælpe sikkerhedsteams med at implementere de vigtigste sikkerhedsfunktioner så hurtigt som muligt.
 
-:::image type="content" source="../media/security/security-support-remote-work.png" alt-text="De 12 vigtigste opgaver for sikkerhedsteams til at understøtte hjemmearbejde" lightbox="../media/security/security-support-remote-work.png":::
+:::image type="content" source="../media/security/security-support-remote-work.png" alt-text="De vigtigste opgaver, der skal udføres for at understøtte hjemmearbejde" lightbox="../media/security/security-support-remote-work.png":::
+
 
 Hvis du er en lille eller mellemstor organisation, der bruger en af Microsofts virksomhedsplaner, kan du i stedet se disse ressourcer:
 
@@ -46,15 +47,15 @@ For kunder, der bruger vores virksomhedsplaner, anbefaler Microsoft, at du udfø
 |---|---|---|---|---|
 |1|[Aktivér Azure AD MFA (Multi-Factor Authentication)](#1-enable-azure-ad-multi-factor-authentication-mfa)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |2|[Beskyt dig mod trusler](#2-protect-against-threats)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|3|[Konfigurer Microsoft Defender til Office 365](#3-configure-microsoft-defender-for-office-365)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|3|[Konfigurer Microsoft Defender for Office 365](#3-configure-microsoft-defender-for-office-365)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |4|[Konfigurer Microsoft Defender for Identity](#4-configure-microsoft-defender-for-identity)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |5|[Slå Microsoft 365 Defender](#5-turn-on-microsoft-365-defender)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|6|[Konfigurere Intune-mobilappbeskyttelse til telefoner og tablets](#6-configure-intune-mobile-app-protection-for-phones-and-tablets)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|7|[Konfigurer MFA og betinget adgang for gæster, herunder Intune-appbeskyttelse](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|6|[Konfigurere Intune beskyttelse af mobilapps til telefoner og tablets](#6-configure-intune-mobile-app-protection-for-phones-and-tablets)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|7|[Konfigurer MFA og betinget adgang for gæster, herunder Intune appbeskyttelse](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |8|[Tilmeld pc'er til enhedsadministration og kræv kompatible pc'er](#8-enroll-pcs-into-device-management-and-require-compliant-pcs)||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |9|[Optimere dit netværk til skyforbindelse](#9-optimize-your-network-for-cloud-connectivity)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |10|[Oplære brugere](#10-train-users)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|11|[Kom i gang med Microsoft Defender til skyapps](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|11|[Introduktion til Microsoft Defender for Cloud Apps](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |12|[Hold øje med trusler, og gør noget](#12-monitor-for-threats-and-take-action)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 Før du begynder, skal [du Microsoft 365 sikker score](./defender/microsoft-secure-score.md) <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">på Microsoft 365 Defender portal</a>. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365 identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller adressering til anbefalinger med et program eller software fra en tredjepart. De anbefalede opgaver i denne artikel hæver din score.
@@ -88,11 +89,11 @@ Alle Microsoft 365 omfatter en række funktioner til trusselsbeskyttelse. Det ta
 
 Se [Beskyt mod trusler i Office 365](office-365-security/protect-against-threats.md) for at få en vejledning, du kan bruge som udgangspunkt.
 
-## <a name="3-configure-microsoft-defender-for-office-365"></a>3: Konfigurer Microsoft Defender til Office 365
+## <a name="3-configure-microsoft-defender-for-office-365"></a>3: Konfigurer Microsoft Defender for Office 365
 
-Microsoft Defender til Office 365, som følger med Microsoft 365 E5 og Office 365 E5, beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Det kan tage flere timer at konfigurere.
+Microsoft Defender for Office 365, som følger med Microsoft 365 E5 og Office 365 E5, beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Det kan tage flere timer at konfigurere.
 
-Microsoft Defender til Office 365:
+Microsoft Defender for Office 365:
 
 - Beskytter din organisation mod ukendte mailtrusler i realtid ved hjælp af intelligente systemer, der undersøger vedhæftede filer og links for skadeligt indhold. Disse automatiserede systemer omfatter en robust detonationsplatform, heuristics og maskinlæringsmodeller.
 - Beskytter din organisation, når brugere samarbejder og deler filer, ved at identificere og blokere skadelige filer på teamwebsteder og dokumentbiblioteker.
@@ -106,33 +107,31 @@ Den globale administrator kan konfigurere disse beskyttelser:
 - [Konfigurere globale indstillinger for Pengeskab links](office-365-security/configure-global-settings-for-safe-links.md)
 - [Konfigurere politikker Pengeskab vedhæftede filer](office-365-security/set-up-safe-attachments-policies.md)
 
-Du skal arbejde sammen med din Exchange Online administrator og SharePoint Online-administrator for at konfigurere Defender til Office 365 for disse arbejdsbelastninger:
+Du skal arbejde sammen med din Exchange Online og SharePoint Online-administrator for at konfigurere Defender for Office 365 for disse arbejdsbelastninger:
 
-- [Microsoft Defender til slutpunkt for SharePoint, OneDrive og Microsoft Teams](office-365-security/mdo-for-spo-odb-and-teams.md)
+- [Microsoft Defender for Endpoint til SharePoint, OneDrive og Microsoft Teams](office-365-security/mdo-for-spo-odb-and-teams.md)
 
 ## <a name="4-configure-microsoft-defender-for-identity"></a>4: Konfigurer Microsoft Defender for Identity
 
-[Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) er en skybaseret sikkerhedsløsning, der udnytter dine lokale Active Directory-signaler til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og skadelige Insider-handlinger rettet mod din organisation. Fokuser på dette næste, fordi den beskytter din on-prem og din skyinfrastruktur, ikke har afhængigheder eller forudsætninger, og kan give øjeblikkelig fordel.
+[Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) er en skybaseret sikkerhedsløsning, der udnytter dine Active Directory i det lokale miljø-signaler til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og ondsindede Insider-handlinger rettet mod din organisation. Fokuser på dette næste, fordi den beskytter din on-prem og din skyinfrastruktur, ikke har afhængigheder eller forudsætninger, og kan give øjeblikkelig fordel.
 
-- Se [Hurtigstarter til Microsoft Defender for Identity for](/azure-advanced-threat-protection/install-atp-step1) at få hurtig konfiguration
-- Se [video: Introduktion til Microsoft Defender for Identity](https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE)
-- Gennemgå de [tre faser af Microsoft Defender for Identity-installation](/azure-advanced-threat-protection/what-is-atp#whats-next)
+- Se [Microsoft Defender for Identity startvejledninger til](/azure-advanced-threat-protection/install-atp-step1) hurtig konfiguration
+- Se [Video: Introduktion til Microsoft Defender for Identity](https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE)
+- Gennemgå de [tre faser af Microsoft Defender for Identity implementering](/azure-advanced-threat-protection/what-is-atp#whats-next)
 
 ## <a name="5-turn-on-microsoft-365-defender"></a>5: Slå Microsoft 365 Defender
 
-Nu hvor du har konfigureret Microsoft Defender Office 365 Og Microsoft Defender til identitet, kan du se de kombinerede signaler fra disse egenskaber i ét dashboard. [Microsoft 365 Defender](./defender/microsoft-365-defender.md) samler beskeder, hændelser, automatisk undersøgelse og svar og avanceret jagt på tværs af arbejdsbelastninger (Microsoft Defender for Identity, Defender til Office 365, Microsoft Defender til slutpunkt og Microsoft Defender til skyapps) i en enkelt <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">rude i Microsoft 365 Defender .</a>
+Nu hvor du har Microsoft Defender for Office 365 og Microsoft Defender for Identity konfigureret, kan du se de kombinerede signaler fra disse funktioner i ét dashboard. [Microsoft 365 Defender](./defender/microsoft-365-defender.md) samler beskeder, hændelser, automatiseret undersøgelse og svar og avanceret jagt på tværs af arbejdsbelastninger (Microsoft Defender for Identity, Defender for Office 365, Microsoft Defender til Slutpunkt og Microsoft Defender for Cloud Apps) i en enkelt rude <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">i Microsoft 365 Defender portal</a>.
 
-<!--
-:::image type="content" source="../media/top-ten-security-remote-work-mtp-dashboard.png" alt-text="The MTP dashboard in the Microsoft 365 Defender portal" lightbox="../media/top-ten-security-remote-work-mtp-dashboard.png":::
---> 
+:::image type="content" source="../media/top-ten-security-remote-work-mtp-dashboard.png" alt-text="Det Microsoft 365 Defender dashboard" lightbox="../media/top-ten-security-remote-work-mtp-dashboard.png":::
 
-Når du har konfigureret en eller flere af dine Defender til Office 365, skal du aktivere MTP. Nye funktioner føjes kontinuerligt til MTP; overvej at tilmelde dig for at modtage funktioner til eksempelvisning.
+Når du har konfigureret en eller flere af dine Defender for Office 365, skal du aktivere MTP. Nye funktioner føjes kontinuerligt til MTP; overvej at tilmelde dig for at modtage funktioner til eksempelvisning.
 
 - [Få mere at vide om MTP](./defender/microsoft-365-defender.md)
 - [Slå MTP til](./defender/m365d-enable.md)
 - [Tilmeld dig visningsfunktioner](./defender/preview.md)
 
-## <a name="6-configure-intune-mobile-app-protection-for-phones-and-tablets"></a>6: Konfigurer Beskyttelse af mobilapps i Intune til telefoner og tablets
+## <a name="6-configure-intune-mobile-app-protection-for-phones-and-tablets"></a>6: Konfigurer Intune beskyttelse af mobilapps til telefoner og tablets
 
 Microsoft Intune mam (Mobile Application Management) kan du administrere og beskytte din organisations data på telefoner og tablets uden at administrere disse enheder. Sådan fungerer det:
 
@@ -148,7 +147,7 @@ For at konfigurere beskyttelse af mobilapps skal du bruge vejledningen i [Fælle
  1. Brug vejledningen [Anvend politikker til beskyttelse af app-data](./office-365-security/identity-access-policies.md#apply-app-data-protection-policies) til at oprette politikker til iOS og Android. Niveau 2 (udvidet databeskyttelse) anbefales til beskyttelse af grundlinjer.
  2. Opret en regel for betinget adgang til [Kræv godkendt apps og APP-beskyttelse](./office-365-security/identity-access-policies.md#require-approved-apps-and-app-protection).
 
-## <a name="7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection"></a>7: Konfigurer MFA og betinget adgang for gæster, herunder beskyttelse af Intune-mobilapp
+## <a name="7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection"></a>7: Konfigurer MFA og betinget adgang for gæster, herunder Intune-mobilappbeskyttelse
 
 Lad os derefter sikre, at du kan fortsætte med at samarbejde og arbejde med gæster. Hvis du bruger den nye Microsoft 365 E3, og du har implementeret MFA for alle brugere, er du klar.
 
@@ -159,7 +158,7 @@ Hvis du bruger Microsoft 365 E5-planen, og du udnytter Azure Identity Protection
 
 Brug vejledningen i Opdatering [af de](./office-365-security/identity-access-policies-guest-access.md) fælles politikker for at tillade og beskytte gæsteadgang og ekstern adgang for at forstå, hvordan gæsteadgang fungerer sammen med Azure AD, og for at opdatere de berørte politikker.
 
-De politikker for beskyttelse af intune-mobilapps, du har oprettet, gælder sammen med reglen for betinget adgang til at kræve godkendt apps og APP-beskyttelse for gæster-konti, og de er med til at beskytte din organisations data.
+Den Intune politikker for beskyttelse af mobilapps, du har oprettet, gælder sammen med reglen om betinget adgang, der kræver godkendt apps og appbeskyttelse, for gæsters konti og vil hjælpe med at beskytte din organisations data.
 
 > [!NOTE]
 > Hvis du allerede har tilmeldt pc'er til enhedsstyring for at kræve kompatible pc'er, skal du også udelade gæstekonti fra reglen om betinget adgang, der gennemtvinger enhedsoverholdelse.
@@ -177,7 +176,7 @@ Du kan også drage fordel af disse selvstudier:
 
 Når du har tilmeldt enheder, kan du bruge vejledningen i Almindelige [identitets- og enhedsadgangspolitikker](./office-365-security/identity-access-policies.md) til at oprette disse politikker:
 
-- [Definer politikker for enhedsoverholdelse](./office-365-security/identity-access-policies.md#define-device-compliance-policies) – De anbefalede indstillinger for Windows 10 omfatter krav om antivirusbeskyttelse. Hvis du har Microsoft 365 E5, kan du bruge Microsoft Defender til Slutpunkt til at overvåge medarbejdernes tilstand. Sørg for, at politikker for overholdelse af regler og standarder for andre operativsystemer omfatter antivirusbeskyttelses- og slutpunktsbeskyttelsessoftware.
+- [Definer politikker for enhedsoverholdelse](./office-365-security/identity-access-policies.md#define-device-compliance-policies) – De anbefalede indstillinger for Windows 10 omfatter krav om antivirusbeskyttelse. Hvis du har Microsoft 365 E5, skal du Microsoft Defender for Endpoint til at overvåge medarbejderenheders tilstand. Sørg for, at politikker for overholdelse af regler og standarder for andre operativsystemer omfatter antivirusbeskyttelses- og slutpunktsbeskyttelsessoftware.
 - [Kræv kompatible pc'er](./office-365-security/identity-access-policies.md#require-compliant-pcs-and-mobile-devices) – Dette er reglen for betinget adgang i Azure AD, der gennemtvinger politikker for enhedsoverholdelse.
 
 Kun én organisation kan administrere en enhed, så sørg for at udelade gæstekonti fra reglen om betinget adgang i Azure AD. Hvis du ikke udelukker gæster og eksterne brugere fra politikker, der kræver overholdelse af enhed, vil disse politikker blokere disse brugere. Få mere at vide under [Opdatering af de fælles politikker for at tillade og beskytte gæsteadgang og ekstern adgang](./office-365-security/identity-access-policies-guest-access.md).
@@ -228,15 +227,15 @@ Microsoft anbefaler også, at brugerne beskytter deres personlige mailkonti ved 
 
 - [Beskyt din Gmail-konto med totrinsbekræftelse](https://go.microsoft.com/fwlink/p/?linkid=2015688)
 
-## <a name="11-get-started-with-microsoft-defender-for-cloud-apps"></a>11: Kom i gang med Microsoft Defender til skyapps
+## <a name="11-get-started-with-microsoft-defender-for-cloud-apps"></a>11: Introduktion til Microsoft Defender for Cloud Apps
 
-[Microsoft Defender til skyapps](/cloud-app-security) giver stor synlighed, kontrol over datarejse og avancerede analyser til at identificere og bekæmpe cybertrusler på tværs af alle dine skytjenester. Når du kommer i gang med Defender til skyapps, aktiveres automatisk registreringspolitikker, men Defender til skyapps har en indledende læringsperiode på syv dage, hvor ikke alle beskeder om unormal registrering er hævet.
+[Microsoft Defender for Cloud Apps giver](/cloud-app-security) stor synlighed, kontrol over datarejse og avancerede analyser for at identificere og bekæmpe cybertrusler på tværs af alle dine skytjenester. Når du kommer i gang med Defender til skyapps, aktiveres automatisk registreringspolitikker, men Defender til skyapps har en indledende læringsperiode på syv dage, hvor ikke alle beskeder om unormal registrering er hævet.
 
 Kom i gang med Defender til skyapps nu. Senere kan du konfigurere mere avanceret overvågning og kontrolelementer.
 
 - [Hurtig start: Kom i gang med Defender til skyapps](/cloud-app-security/getting-started-with-cloud-app-security)
 - [Få øjeblikkelig adfærdsanalyse og registrering af unormalt](/cloud-app-security/anomaly-detection-policy)
-- [Få mere at vide om Microsoft Defender til skyapps](/cloud-app-security/what-is-cloud-app-security)
+- [Få mere at vide om Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)
 - [Gennemse nye funktioner og egenskaber](/cloud-app-security/release-notes)
 - [Se grundlæggende konfigurationsvejledninger](/cloud-app-security/general-setup)
 
@@ -249,6 +248,6 @@ Microsoft 365 indeholder flere måder til at overvåge status og udføre relevan
 
 ## <a name="next-steps"></a>Næste trin
 
-Tillykke! Du har hurtigt implementeret nogle af de vigtigste sikkerhedsbeskyttelse, og din organisation er meget mere sikker. Nu er du klar til at gå skridtet videre med funktioner til trusselsbeskyttelse (herunder Microsoft Defender til slutpunkt), dataklassificering og beskyttelsesfunktioner og sikring af administrative konti. Du kan finde et mere dybt, metodisk sæt sikkerhedsanbefalinger for Microsoft 365 i [Microsoft 365 Security for Business Decision Makers (BDMs) (Business Decision Makers).](Microsoft-365-security-for-bdm.md)
+Tillykke! Du har hurtigt implementeret nogle af de vigtigste sikkerhedsbeskyttelse, og din organisation er meget mere sikker. Nu er du klar til at gå skridtet videre med funktioner til trusselsbeskyttelse (herunder Microsoft Defender for Endpoint), dataklassificering og beskyttelsesfunktioner og sikring af administrative konti. Du kan finde et mere dybt, metodisk sæt sikkerhedsanbefalinger for Microsoft 365 i [Microsoft 365 Security for Business Decision Makers (BDMs) (Business Decision Makers).](Microsoft-365-security-for-bdm.md)
 
 Besøg også Microsofts nye Defender for Cloud på [docs.microsoft.com/security](/security).

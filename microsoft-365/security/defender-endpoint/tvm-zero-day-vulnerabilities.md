@@ -1,7 +1,7 @@
 ---
 title: Mindske sårbarheder uden for dagen – Håndtering af trusler og sikkerhedsrisici
 description: Få mere at vide om, hvordan du kan finde og afhjælpe sårbarheder uden for døgnet i dit miljø Håndtering af trusler og sikkerhedsrisici.
-keywords: Microsoft Defender til Endpoint tvm zero day vulnerabilities, tvm, threat & håndtering af sikkerhedsrisici, zero day, 0-day, reducer 0 dages sårbarheder, sårbar CVE
+keywords: Microsoft Defender for Endpoint hele dagen til tvm-sårbarheder, tvm, trussel & håndtering af sikkerhedsrisici, nul dages, 0-dages, kan afhjælpe 0 dages sårbarheder, sårbar CVE
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f4a3e227dd43a812bea64e227e315d207eb6fc7b
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 2de9f0a3a0d860b2513c8947a1fe92563b516444
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63593783"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476593"
 ---
 # <a name="mitigate-zero-day-vulnerabilities---threat-and-vulnerability-management"></a>Mindske sårbarheder uden for dagen – Håndtering af trusler og sikkerhedsrisici
 
@@ -29,11 +29,11 @@ ms.locfileid: "63593783"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 En sikkerhedsrisiko på nul dage er en sårbarhed i software, som der ikke er frigivet nogen officiel programrettelse eller sikkerhedsopdatering til. En softwareleverandør kan eller er muligvis ikke opmærksom på sikkerhedsrisikoen, og der er ingen offentlige oplysninger om denne risiko. Zero-day-sikkerhedsrisici har ofte høj alvorsgrad og udnyttes aktivt.
 
@@ -50,11 +50,11 @@ Når en nuldagssikkerhedsrisiko er fundet, vil oplysninger om den blive formidle
 
 Se efter anbefalinger med et nuldagsmærke i kortet "Vigtigste sikkerhedsanbefalinger".
 
-![Vigtigste anbefalinger med et nuldagsmærke.](images/tvm-zero-day-top-security-recommendations.png)
+:::image type="content" source="images/tvm-zero-day-top-security-recommendations.png" alt-text="De vigtigste anbefalinger med et nuldagsmærke" lightbox="images/tvm-zero-day-top-security-recommendations.png":::
 
 Find topsoftware med zero-day-mærket på kortet "Øverste sårbar software".
 
-![En af de mest følsomme software med et nul dages-mærke.](images/tvm-zero-day-top-software.png)
+:::image type="content" source="images/tvm-zero-day-top-software.png" alt-text="Den mest følsomme software med et tag på nul dage" lightbox="images/tvm-zero-day-top-software.png":::
 
 ### <a name="weaknesses-page"></a>Side med til at få det til at se ud
 
@@ -64,19 +64,19 @@ Se efter den navngivne nuldagssikkerhedsrisiko samt en beskrivelse og detaljer.
 
 - Hvis sikkerhedsrisikoen ikke er tildelt CVE-ID, finder du den under et internt, midlertidigt navn, der ligner "TVM-XXXX-XXXX". Navnet opdateres, når et officielt CVE-ID er blevet tildelt, men det forrige interne navn vil stadig kunne søges og findes i sidepanelet.
 
-:::image type="content" alt-text="Eksempel på nuldag for CVE-2020-17087 på siden med startsiden for nuldag." source="images/tvm-zero-day-weakness-name.png" lightbox="images/tvm-zero-day-weakness-name.png":::
+:::image type="content" source="images/tvm-zero-day-weakness-name.png" alt-text="Eksempel på nuldag for CVE-2020-17087 på siden Meddelse" lightbox="images/tvm-zero-day-weakness-name.png":::
 
 ### <a name="software-inventory-page"></a>Side for softwarelager
 
 Søg efter software med zero-day-koden. Filtrer efter mærket "nul dage" for kun at få vist software med zero-day-sårbarheder.
 
-:::image type="content" alt-text="Eksempel på nuldag Windows Server 2016 på softwarelagersiden." source="images/tvm-zero-day-software-inventory.png" lightbox="images/tvm-zero-day-software-inventory.png":::
+:::image type="content" source="images/tvm-zero-day-software-inventory.png" alt-text="Eksempel på en nuldagsversion Windows Server 2016 på siden til lager af software" lightbox="images/tvm-zero-day-software-inventory.png":::
 
 ### <a name="software-page"></a>Softwareside
 
 Kig efter et nul dages-mærke for hver software, der er blevet påvirket af sikkerhedsrisikoen uden dag.
 
-:::image type="content" alt-text="Eksempel på nuldag for Windows siden Server 2016-software." source="images/tvm-zero-day-software-page.png" lightbox="images/tvm-zero-day-software-page.png":::
+:::image type="content" source="images/tvm-zero-day-software-page.png" alt-text="Eksempel på nuldag på siden Windows Server 2016-software" lightbox="images/tvm-zero-day-software-page.png":::
 
 ### <a name="security-recommendations-page"></a>Siden med sikkerhedsanbefalinger
 
@@ -84,7 +84,7 @@ Få vist tydelige forslag til afhjælpnings- og afhjælpningsmuligheder, herunde
 
 Hvis der er software med en nuldagssikkerhedsrisiko og yderligere sårbarheder, der skal håndteres, får du én anbefaling om alle sårbarheder.
 
-:::image type="content" alt-text="Eksempel på nuldag Windows Server 2016 på siden med anbefalinger om sikkerhed." source="images/tvm-zero-day-security-recommendation.png" lightbox="images/tvm-zero-day-security-recommendation.png":::
+:::image type="content" source="images/tvm-zero-day-security-recommendation.png" alt-text="Eksempel på nuldag i Windows Server 2016 på siden med sikkerhedsanbefalinger." lightbox="images/tvm-zero-day-security-recommendation.png":::
 
 ## <a name="addressing-zero-day-vulnerabilities"></a>Adressering af sårbarheder uden dag
 
@@ -94,7 +94,7 @@ Der vil være et link til afhjælpningsindstillinger og løsninger, hvis de er t
 
 Åbn afhjælpningsindstillinger, og vælg opmærksomhedstype. En afhjælpningsindstilling, der kræver "opmærksomhed, anbefales til sårbarheder uden dagsvisning, da en opdatering ikke er blevet frigivet endnu. Du kan ikke vælge en forfaldsdato, da der ikke er nogen specifik handling at udføre. Hvis der er ældre sårbarheder for denne software, du ønsker at afhjælpe, kan du tilsidesætte afhjælpningsindstillingen "kræver opmærksomhed" og vælge "Opdater".
 
-![Eksempel på pop op-over for nuldag Windows Server 2016 på siden med sikkerhedsanbefalinger.](images/tvm-zero-day-recommendation-flyout400.png)
+:::image type="content" source="images/tvm-zero-day-recommendation-flyout400.png" alt-text="Eksemplet med pop op-pop op-pop-Windows Server 2016 på siden med sikkerhedsanbefalinger" lightbox="images/tvm-zero-day-recommendation-flyout400.png":::
 
 ## <a name="track-zero-day-remediation-activities"></a>Spor afhjælpningsaktiviteter uden dag
 

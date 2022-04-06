@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b6d085d2e3c1e9c1e032f468f56d67a393269fe1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b3b69b25f74f66a5ea0d8c63600f5eab0e780edb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683049"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477231"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen
 
@@ -33,20 +33,20 @@ ms.locfileid: "63683049"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Der findes en række rapporter på Microsoft 365 Defender-portalen, som kan hjælpe dig med at <https://security.microsoft.com> se, hvordan mailsikkerhedsfunktioner som f.eks. antispam- og antimalwarefunktioner i Microsoft 365 beskytter din organisation. Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-these-reports), kan du få vist og hente disse rapporter som beskrevet i denne artikel.
 
 > [!NOTE]
 >
-> Nogle af rapporterne på siden Rapporter **om & mailsamarbejde kræver** Microsoft Defender Office 365. Du kan finde oplysninger om disse rapporter [i View Defender for Office 365 rapporter i Microsoft 365 Defender portal](view-reports-for-mdo.md).
+> Nogle af rapporterne på siden Rapporter **om & for samarbejde kræver**, at Microsoft Defender for Office 365. Du kan få mere at vide om [disse rapporter under Defender for Office 365 rapporter på Microsoft 365 Defender portalen](view-reports-for-mdo.md).
 >
 > Rapporter, der er relateret til mailflow, findes nu i Exchange Administration. Du kan finde flere oplysninger om disse rapporter [under Mailflowrapporter i den Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
 
 ## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Ændringer i mailsikkerhedsrapporten Microsoft 365 Defender portalen
 
-Rapporterne Exchange Online Protection (EOP) og Microsoft Defender til Office 365 i Microsoft 365 Defender-portalen, der er blevet erstattet, flyttet eller frarådet, er beskrevet i følgende tabel.
+Rapporterne Exchange Online Protection (EOP) og Microsoft Defender for Office 365 på Microsoft 365 Defender-portalen, der er blevet erstattet, flyttet eller forældet, er beskrevet i følgende tabel.
 
 |Forældet rapport og cmdlet'er|Ny rapport og cmdlet'er|Meddelelsescenter-id|Dato|
 |---|---|:---:|:---:|
@@ -68,7 +68,7 @@ Rapporterne Exchange Online Protection (EOP) og Microsoft Defender til Office 36
 
 Rapporten **Kompromitterede brugere** viser antallet af brugerkonti, der er markeret som **mistænkelige** eller **begrænsede inden** for de seneste 7 dage. Konti i en af disse tilstande er problematiske eller endda kompromitterede. Med hyppig brug kan du bruge rapporten til at få øje på samlingerne, og endda tendenser, på mistænkelige eller begrænsede konti. Du kan finde flere oplysninger om kompromitterede brugere under [Svare på en kompromitteret mailkonto](responding-to-a-compromised-email-account.md).
 
-![Widget for kompromitterede brugere på siden & med samarbejdsrapporter.](../../media/compromised-users-report-widget.png)
+:::image type="content" source="../../media/compromised-users-report-widget.png" alt-text="Widgetten Kompromitterede brugere på siden med & rapporter om samarbejde" lightbox="../../media/compromised-users-report-widget.png":::
 
 Den aggregerede visning viser data for de seneste 90 dage, og detaljevisningen viser data for de seneste 30 dage.
 
@@ -96,16 +96,24 @@ Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, *
 
 På siden **Kompromitterede brugere** skal du klikke på ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ikon ![for Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om](#request-report)** rapport og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knapperne](#export-report)** Eksportér er tilgængelige.
 
-![Rapportvisning i rapporten Kompromitterede brugere.](../../media/compromised-users-report-activity-view.png)
+:::image type="content" source="../../media/compromised-users-report-activity-view.png" alt-text="Rapportvisningen i rapporten Kompromitterede brugere" lightbox="../../media/compromised-users-report-activity-view.png":::
 
 ## <a name="exchange-transport-rule-report"></a>Exchange transportregelrapport
 
+Rapporten **Exchange transportregel viser** effekten af regler for mailflow (også kaldet transportregler) på indgående og udgående meddelelser i organisationen.
+
+Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du finde** en **Exchange og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/ETRRuleReport>.
+
+:::image type="content" source="../../media/transport-rule-report-widget.png" alt-text="Widgetten Exchange transportregel på siden Mailrapporter & samarbejdsrapporter" lightbox="../../media/transport-rule-report-widget.png":::
+
+På siden **Exchange transportregel** er de tilgængelige diagrammer og data beskrevet i de følgende afsnit.
 > [!NOTE]
 > Rapporten **Exchange transportregel er** nu tilgængelig i EAC. Du kan finde flere oplysninger [Exchange rapport over transportregel i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
 
+
 ### <a name="chart-breakdown-by-direction"></a>Diagramopdeling efter retning
 
-![Visning af retning for Exchange transportregler i Exchange transportregel.](../../media/transport-rule-report-etr-direction-view.png)
+:::image type="content" source="../../media/transport-rule-report-etr-direction-view.png" alt-text="Visningen Retning for Exchange transportregler i Exchange transportregel" lightbox="../../media/transport-rule-report-etr-direction-view.png":::
 
 Hvis du vælger **Diagramopdeling efter Retning**, er følgende diagrammer tilgængelige:
 
@@ -135,7 +143,7 @@ På siden **Exchange transportregel skal** du klikke på ![ikonet Opret tidsplan
 
 ### <a name="chart-breakdown-by-severity"></a>Diagramopdeling efter alvorsgrad
 
-![Visning af alvorsgrad for Exchange for transportregler i Exchange for transportregel.](../../media/transport-rule-report-etr-severity-view.png)
+:::image type="content" source="../../media/transport-rule-report-etr-severity-view.png" alt-text="Visningen Alvorsgrad for Exchange transportregler i Exchange for transportregel" lightbox="../../media/transport-rule-report-etr-severity-view.png":::
 
 Hvis du vælger **Diagramopdeling efter alvorsgrad**, er følgende diagrammer tilgængelige:
 
@@ -175,11 +183,11 @@ På siden **Exchange transportregel skal** du klikke på ![ikonet Opret tidsplan
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender på <https://security.microsoft.com>,  \> skal du gå til **Rapporter & mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & skal du** finde **Statusoversigt for mailflow og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/mailflowStatusReport>.
 
-![Widget med statusoversigt for mailflow på siden & med samarbejdsrapporter.](../../media/mail-flow-status-report-widget.png)
+:::image type="content" source="../../media/mail-flow-status-report-widget.png" alt-text="Widget'en Statusoversigt for mailflow på siden & med samarbejdsrapporter" lightbox="../../media/mail-flow-status-report-widget.png":::
 
 ### <a name="type-view-for-the-mailflow-status-report"></a>Skrive visning for statusrapporten for mailflow
 
-![Skriv visning i statusrapporten for mailflow.](../../media/mail-flow-status-report-type-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-type-view.png" alt-text="Visningen Type i statusrapporten For mailflow" lightbox="../../media/mail-flow-status-report-type-view.png":::
 
 På siden **Statusrapport for mailflow** er **fanen Type** valgt som standard. Diagrammet viser følgende oplysninger for det angivne datointerval:
 
@@ -188,7 +196,7 @@ På siden **Statusrapport for mailflow** er **fanen Type** valgt som standard. D
 - **Malware**: Mails, der blokeres som malware af forskellige filtre.
 - **Phishingmail**: Mails, der blokeres som phishing af forskellige filtre.
 - **Spam**: Mails, der blokeres som spam af forskellige filtre.
-- **Edge-beskyttelse**: Mail, der er afvist i kanten/perimeteren, før den evalueres af EOP eller Defender for Office 365.
+- **Edge-beskyttelse**: Mails, der afvises ved kanten/perimeteren, før de evalueres af EOP eller Defender for Office 365.
 - **Regelmeddelelser**: Mails, der blev reageret på af regler for mailflow (også kaldet transportregler).
 
 Detaljetabellen under grafen viser følgende oplysninger:
@@ -226,7 +234,7 @@ På siden **Statusrapport for mailflow** skal du klikke på ![ikonet Opret tidsp
 
 ### <a name="direction-view-for-the-mailflow-status-report"></a>Visning af retning for statusrapporten For mailflow
 
-![Visning af retning i statusrapporten For mailflow.](../../media/mail-flow-status-report-direction-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-direction-view.png" alt-text="Visningen Retning i statusrapporten Mailflow" lightbox="../../media/mail-flow-status-report-direction-view.png":::
 
 Hvis du klikker på **fanen** Retning, viser diagrammet følgende oplysninger for det angivne datointerval:
 
@@ -260,11 +268,11 @@ På siden **Statusrapport for mailflow** skal du klikke på ![ikonet Opret tidsp
 
 Visningen **Mailflow viser** , hvordan Microsofts funktioner til trusselsbeskyttelse af mail filtrerer indgående og udgående mail i organisationen. Denne visning bruger et vandret rutediagram (kendt som et _Sankey-diagram_ ) til at angive oplysninger om det samlede antal mails, og hvordan de konfigurerede funktioner til trusselsbeskyttelse, herunder edge protection, antimalware, antiphishing, antispam og antispoofing, påvirker dette antal.
 
-![Mailflowvisning i statusrapporten Mailflow.](../../media/mail-flow-status-report-mailflow-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view.png" alt-text="Visningen Mailflow i statusrapporten Mailflow" lightbox="../../media/mail-flow-status-report-mailflow-view.png":::
 
 Med den aggregerede visning og detaljetabelvisningen kan der filtreres i 90 dage.
 
-Oplysningerne i diagrammet er farvekodede af **EOP** eller **Defender til Office 365** teknologier.
+Oplysningerne i diagrammet er farvekodede af **EOP** eller **Defender for Office 365** teknologier.
 
 Diagrammet er organiseret i følgende vandrette bånd:
 
@@ -278,7 +286,7 @@ Diagrammet er organiseret i følgende vandrette bånd:
   - **Phish-blok**: Meddelelser, der er identificeret som phish under behandling af forskellige filtre.<sup>\*</sup>
   - **Spamblokering**: Meddelelser, der identificeres som spam under behandling af forskellige filtre.<sup>\*</sup>
   - **Impersonation block**: Messages detected as user impersonation or domain impersonation in Defender for Office 365.<sup>\*</sup>
-  - **Detonation-blok**: Meddelelser, der registreres under fil- eller URL-detonation ved Pengeskab politikker for vedhæftede filer eller Pengeskab Links-politikker i Defender Office 365.<sup>\*</sup>
+  - **Detonation-blok**: Meddelelser, der er registreret under fil- eller URL-detonation ved Pengeskab politikker for vedhæftede filer eller Pengeskab Links-politikker Defender for Office 365.<sup>\*</sup>
   - **ZAP er** fjernet: Meddelelser, der fjernes med automatisk tømning i nul timer (ZAP).<sup>\*</sup>
   - **Leveret**: Meddelelser leveret til brugere på grund af en tilladelse.<sup>\*</sup>
 
@@ -286,7 +294,7 @@ Hvis du peger på et vandret bånd i diagrammet, får du vist antallet af relate
 
 <sup>\*</sup> Hvis du klikker på dette element, udvides diagrammet for at vise flere detaljer. Du kan finde en beskrivelse af hvert element i de udvidede noder i [Registreringsteknologier](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 
-![Oplysninger om phishingblokering i mailflowvisning i statusrapporten Mailflow.](../../media/mail-flow-status-report-mailflow-view-details.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view-details.png" alt-text="Oplysninger om phishing-blokering i mailflowvisning i statusrapporten Mailflow" lightbox="../../media/mail-flow-status-report-mailflow-view-details.png":::
 
 Detaljetabellen under diagrammet viser følgende oplysninger:
 
@@ -312,7 +320,7 @@ Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, *
 
 Tilbage på siden **Statusrapport for mailflow** kan du klikke på  Vis tendenser for at få vist tendensdiagrammer i pop **op-menuen Mailflowtendenser**, der vises.
 
-![Pop op-flowtendenser i mailflowvisning i statusrapporten Mailflow.](../../media/mail-flow-status-report-mailflow-view-show-trends.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view-show-trends.png" alt-text="Pop op-statusrapporten Mailflow i visningen Mailflow" lightbox="../../media/mail-flow-status-report-mailflow-view-show-trends.png":::
 
 På siden **Statusrapport for mailflow** skal du klikke på ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **Knappen** Eksportér er tilgængelig.
 
@@ -323,7 +331,7 @@ På siden **Statusrapport for mailflow** skal du klikke på ![ikonet Eksportér.
 
 ## <a name="mail-latency-report"></a>Rapport over mailventetid
 
-Rapporten **Mailventetid i** Defender for Office 365 indeholder oplysninger om maillevering og denonationsventetid, der kan opleves i din organisation. Få mere at vide under [Rapport over mailventetid](view-reports-for-mdo.md#mail-latency-report).
+Rapporten **Mailventetid i** Defender for Office 365 indeholder oplysninger om maillevering og deonationventetid i din organisation. Få mere at vide under [Rapport over mailventetid](view-reports-for-mdo.md#mail-latency-report).
 
 ## <a name="spam-detections-report"></a>Rapport over registrering af spam
 
@@ -338,7 +346,7 @@ I den aggregerede visning af rapporten kan der filtreres i 90 dage, mens der kun
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du** finde **Spoof-registreringer og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/SpoofMailReport>.
 
-![Widget'en Spoof-registreringer på siden & med samarbejdsrapporter.](../../media/spoof-detections-widget.png)
+:::image type="content" source="../../media/spoof-detections-widget.png" alt-text="Widget'en Spoof-registreringer på siden & med samarbejdsrapporter" lightbox="../../media/spoof-detections-widget.png":::
 
 Diagrammet viser følgende oplysninger:
 
@@ -361,7 +369,7 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
   - **Andet**
 - **Spoof-type**: **Intern** og **Ekstern**
 
-![Siden Spoof-mailrapport i Microsoft 365 Defender portal.](../../media/spoof-detections-report-page.png)
+:::image type="content" source="../../media/spoof-detections-report-page.png" alt-text="Siden Spoof-mailrapport i Microsoft 365 Defender portal" lightbox="../../media/spoof-detections-report-page.png":::
 
 Detaljetabellen under grafen viser følgende oplysninger:
 
@@ -386,7 +394,7 @@ Rapporten **Indsendelser viser** oplysninger om elementer, som administratorer h
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender på <https://security.microsoft.com>,  \> skal du gå til **Rapporter & mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du** finde **Indsendelser og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/adminSubmissionReport>. Hvis du vil gå [til administratorindsendelser i Microsoft 365 Defender, skal](admin-submission.md) du **klikke på Gå til indsendelser**. Administratorer vil kunne få vist rapporten i de seneste 30 dage.
 
-![Widgetten Indsendelser på siden & med samarbejdsrapporter.](../../media/submissions-report-widget.png)
+:::image type="content" source="../../media/submissions-report-widget.png" alt-text="Widgetten Indsendelser på siden & med samarbejdsrapporter" lightbox="../../media/submissions-report-widget.png":::
 
 Diagrammet viser følgende oplysninger:
 
@@ -418,22 +426,22 @@ Detaljetabellen under grafen viser de samme oplysninger og har de samme indstill
 
 På siden **Indsendelser** er **[knappen Eksportér](#export-report)** tilgængelig.
 
-![Rapportside for indsendelser i Microsoft 365 Defender portalen.](../../media/submissions-report-page.png)
+:::image type="content" source="../../media/submissions-report-page.png" alt-text="Siden rapport for indsendelser i Microsoft 365 Defender portal" lightbox="../../media/submissions-report-page.png":::
 
 ## <a name="threat-protection-status-report"></a>Statusrapport over trusselsbeskyttelse
 
-**Statusrapporten for trusselsbeskyttelse** er tilgængelig i både EOP og Defender Office 365, men rapporterne indeholder forskellige data. Eksempelvis kan EOP-kunder få vist oplysninger om malware, der er registreret i en mail, men ikke oplysninger om skadelige filer, der registreres af Pengeskab Vedhæftede filer [til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+**Statusrapporten for trusselsbeskyttelse** er tilgængelig i både EOP og Defender for Office 365, men rapporterne indeholder forskellige data. Eksempelvis kan EOP-kunder få vist oplysninger om malware, der er registreret i en mail, men ikke oplysninger om skadelige filer, der registreres af Pengeskab Vedhæftede filer [til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
 
-Rapporten indeholder antallet af mails med skadeligt indhold, f.eks. filer eller webadresser( URL-adresser), der blev blokeret af antimalwareprogrammet, automatisk tømning [(ZAP) og Defender til Office 365-funktioner](zero-hour-auto-purge.md) som [Pengeskab Links](safe-links.md), [Pengeskab](safe-attachments.md) vedhæftede filer og funktioner til beskyttelse mod efterligning i [antiphishing-politikker](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Du kan bruge disse oplysninger til at identificere tendenser eller afgøre, om organisationens politikker skal justeres.
+Rapporten indeholder antallet af mails med skadeligt indhold, f.eks. filer eller webadresser( URL-adresser), der blev blokeret af antimalwareprogrammet, auto-tømning [(ZAP) og Defender for Office 365-funktioner](zero-hour-auto-purge.md) som [Pengeskab Links](safe-links.md), [Pengeskab](safe-attachments.md) Vedhæftede filer og funktioner til beskyttelse mod efterligning i [antiphishing-politikker](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Du kan bruge disse oplysninger til at identificere tendenser eller afgøre, om organisationens politikker skal justeres.
 
 **Bemærk**! Det er vigtigt at forstå, at hvis en meddelelse sendes til fem modtagere, tæller vi den som fem forskellige meddelelser og ikke én meddelelse.
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & skal du** finde Status **for trusselsbeskyttelse** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne en af følgende URL-adresser:
 
-- Defender til Office 365:<https://security.microsoft.com/reports/TPSAggregateReportATP>
+- Defender for Office 365:<https://security.microsoft.com/reports/TPSAggregateReportATP>
 - EOP: <https://security.microsoft.com/reports/TPSAggregateReport>
 
-![Statuswidget for trusselsbeskyttelse på & siden Med mailrapporter.](../../media/threat-protection-status-report-widget.png)
+:::image type="content" source="../../media/threat-protection-status-report-widget.png" alt-text="Statuswidgeten for trusselsbeskyttelse på & siden Med mailrapporter" lightbox="../../media/threat-protection-status-report-widget.png":::
 
 Diagrammet viser som standard data for de seneste 7 dage. Hvis du klikker **på Filter** på siden **Statusrapport for trusselsbeskyttelse** , kan du vælge et datointerval på 90 dage (prøveabonnementer kan være begrænset til 30 dage). Detaljetabellen tillader filtrering i 30 dage.
 
@@ -441,7 +449,7 @@ De tilgængelige visninger er beskrevet i de følgende afsnit.
 
 ### <a name="view-data-by-overview"></a>Få vist data efter oversigt
 
-![Oversigtsvisning i statusrapporten for trusselsbeskyttelse.](../../media/threat-protection-status-report-overview-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-overview-view.png" alt-text="Oversigtsvisningen i statusrapporten for trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-overview-view.png":::
 
 I **visningen Vis data efter** oversigt vises følgende registreringsoplysninger i diagrammet:
 
@@ -480,14 +488,14 @@ Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, *
 
 ### <a name="view-data-by-email--phish-and-chart-breakdown-by-detection-technology"></a>Få vist data efter Mail Phish \> - og Diagramopdeling efter registreringsteknologi
 
-![Registreringsteknologivisning for phishing-mail i statusrapporten Trusselsbeskyttelse.](../../media/threat-protection-status-report-phishing-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-detection-tech-view.png" alt-text="Registreringsteknologivisningen for phishing-mail i statusrapporten Trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-phishing-detection-tech-view.png":::
 
 > [!NOTE]
 > Fra og med maj 2021 er phishingregistreringer i mails blevet opdateret til at  medtage vedhæftede meddelelser, der indeholder phishing-URL-adresser. Denne ændring kan rykke noget af registreringsmængden ud af visningen Vis **data \> via mailmalware** og i **visningen Vis data via phish\>**. Med andre ord kan vedhæftede meddelelser med phishing-URL-adresser, der traditionelt er identificeret som malware, nu identificeres som phishing i stedet.
 
 I **oversigten Vis data efter Phish-mail \>** og diagram via visningen Registreringsteknologi vises følgende oplysninger i diagrammet:
 
-- **URL-adressens skadelige**<sup>\*</sup> omdømme: Skadeligt URL-ry genereret fra Defender Office 365 deonationer i andre Microsoft 365 kunder.
+- **ONDSINDET URL-ry**<sup>\*</sup>: Ondsindet URL-ry genereret Defender for Office 365 deonationer i Microsoft 365 kunder.
 - **Avanceret filter**: Phishing-signaler baseret på maskinel indlæring.
 - **Generelt filter**: Phishing-signaler baseret på analytikerregler.
 - **Spoof intra-org**: Afsenderen forsøger at efterligne modtagerdomænet.
@@ -506,7 +514,7 @@ I **oversigten Vis data efter Phish-mail \>** og diagram via visningen Registrer
 - **Fildeonations ry**<sup>\*</sup>
 - **Kampagne**<sup>\*</sup>
 
-<sup>\*</sup>Defender kun Office 365 den
+<sup>\*</sup>Defender for Office 365 kun
 
 Følgende oplysninger er tilgængelige i detaljetabellen under diagrammet:
 
@@ -547,7 +555,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 
 ### <a name="view-data-by-email--spam-and-chart-breakdown-by-detection-technology"></a>Få vist data efter mailspam \> og diagramopdeling ud fra registreringsteknologien
 
-![Registreringsteknologivisning for spam i statusrapporten Trusselsbeskyttelse.](../../media/threat-protection-status-report-spam-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-spam-detection-tech-view.png" alt-text="Den teknologivisning af registrering af spam i statusrapporten for trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-spam-detection-tech-view.png":::
 
 I visning **af data efter mailspam \>** **og diagramoversigten** efter visningen Registreringsteknologi vises følgende oplysninger i diagrammet:
 
@@ -598,7 +606,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 
 ### <a name="view-data-by-email--malware-and-chart-breakdown-by-detection-technology"></a>Få vist data efter mailmalware \> og diagramopdeling efter registreringsteknologi
 
-![Den teknologivisning, der registreres for malware, i statusrapporten for trusselsbeskyttelse.](../../media/threat-protection-status-report-malware-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-malware-detection-tech-view.png" alt-text="Registreringsteknologivisningen for malware i statusrapporten for trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-malware-detection-tech-view.png":::
 
 > [!NOTE]
 > Fra og med maj 2021 blev registreringer af malware i mails opdateret til at medtage **skadelige URL-adresser** i vedhæftede meddelelser. Denne ændring kan rykke noget af registreringsmængden væk fra visningen Vis **data \> via Phish-mail** og i **visningen Vis data via mailmalware\>**. Med andre ord kan skadelige URL-adresser i vedhæftede filer, der traditionelt er identificeret som phishing, nu identificeres som malware i stedet.
@@ -606,7 +614,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 I visningen **Vis data efter mailmalware \>** **og diagramoversigten** ved registreringsteknologivisning vises følgende oplysninger i diagrammet:
 
 - **Fildeonation**<sup>\*</sup>: Registrering af Pengeskab vedhæftede filer.
-- **Fildeonations ry**<sup>\*</sup>: Alt skadeligt fil ry genereret af Defender for Office 365 deonationer.
+- **Fildeonations ry**<sup>\*</sup>: Alle skadelige fil ry genereres ved Defender for Office 365 deonationer.
 - **Filomseelse**
 - **Antimalwareprogrammet**<sup>\*</sup>: Registrering fra antimalware-programmer.
 - **Blokering af filtyper for antimalwarepolitik**: Disse er mails, der er filtreret fra på grund af den type skadelig fil, der identificeres i meddelelsen.
@@ -654,7 +662,7 @@ På siden **Status for beskyttelse af sikkerhed** skal du klikke på ![ikonet Op
 
 ### <a name="chart-breakdown-by-policy-type"></a>Diagramopdeling efter politiktype
 
-![Visning af politiktype for phishing-mail, spammail eller malwaremail i statusrapporten for trusselsbeskyttelse.](../../media/threat-protection-status-report-phishing-policy-type-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-policy-type-view.png" alt-text="Visningen Politiktype for phishingmail, spammail eller malwaremail i statusrapporten Trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-phishing-policy-type-view.png":::
 
 I visning **af data \> efter Phish-mail**, Vis **data \>** efter spammail eller Vis **data \>** efter mailmalwarevisninger, når  du vælger Diagramopdeling efter politiktype, vises følgende oplysninger i diagrammet:
 
@@ -680,7 +688,7 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 
 - **Dato (UTC)** **Startdato** **og Slutdato**
 - **Registrering**:
-  - **URL-adressens skadelige**<sup>\*</sup> omdømme: Skadeligt URL-ry genereret fra Defender Office 365 deonationer i andre Microsoft 365 kunder.
+  - **ONDSINDET URL-ry**<sup>\*</sup>: Ondsindet URL-ry genereret Defender for Office 365 deonationer i Microsoft 365 kunder.
   - **Avanceret filter**: Phishing-signaler baseret på maskinel indlæring.
   - **Generelt filter**: Phishing-signaler baseret på analytikerregler.
   - **Spoof intra-org**: Afsenderen forsøger at efterligne modtagerdomænet.
@@ -716,7 +724,7 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 - **Politiknavn (kun detaljetabelvisning)**: **Hele eller** den angivne politik.
 - **Modtagere**
 
-<sup>\*</sup>Defender kun Office 365 den
+<sup>\*</sup>Defender for Office 365 kun
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -724,7 +732,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 
 ### <a name="chart-breakdown-by-delivery-status"></a>Diagramoversigt efter leveringsstatus
 
-![Leveringsstatusvisning for phishing-mail og malwaremail i statusrapporten Trusselsbeskyttelse.](../../media/threat-protection-status-report-phishing-delivery-status-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-delivery-status-view.png" alt-text="Leveringsstatusvisningen for phishing-mail og malwaremail i statusrapporten Trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-phishing-delivery-status-view.png":::
 
 I Visning **af data efter Phish-mail\>**, Vis **data \>** efter Spammail eller Vis **data \>** efter mailmalwarevisninger kan du  vælge Diagramopdeling efter Leveringsstatus og vise følgende oplysninger i diagrammet:
 
@@ -753,7 +761,7 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 
 - **Dato (UTC)** **Startdato** **og Slutdato**
 - **Registrering**:
-  - **URL-adressens skadelige**<sup>\*</sup> omdømme: Skadeligt URL-ry genereret fra Defender Office 365 deonationer i andre Microsoft 365 kunder.
+  - **ONDSINDET URL-ry**<sup>\*</sup>: Ondsindet URL-ry genereret Defender for Office 365 deonationer i Microsoft 365 kunder.
   - **Avanceret filter**: Phishing-signaler baseret på maskinel indlæring.
   - **Generelt filter**: Phishing-signaler baseret på analytikerregler.
   - **Spoof intra-org**: Afsenderen forsøger at efterligne modtagerdomænet.
@@ -789,7 +797,7 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 - **Politiknavn (kun detaljetabelvisning)**: **Hele eller** den angivne politik.
 - **Modtagere**
 
-<sup>\*</sup>Defender kun Office 365 den
+<sup>\*</sup>Defender for Office 365 kun
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -797,9 +805,9 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 
 ### <a name="view-data-by-content--malware"></a>Få vist data efter indholdsmalware \>
 
-![Visning af indholdsmalware i statusrapporten trusselsbeskyttelse.](../../media/threat-protection-status-report-content-malware-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-content-malware-view.png" alt-text="Visningen Indholdsmalware i statusrapporten Trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-content-malware-view.png":::
 
-I visningen **Vis data efter indholdsmalware \>** vises følgende oplysninger i diagrammet for Microsoft Defender Office 365 organisationer:
+I visningen **Vis data efter indholdsmalware \>** vises følgende oplysninger i diagrammet for Microsoft Defender for Office 365 organisationer:
 
 - **Antimalwareprogrammet**: Skadelige filer, der er registreret i SharePoint, OneDrive og Microsoft Teams af [den indbyggede virusregistrering i Microsoft 365](virus-detection-in-spo.md).
 - **MDO-detonation**: Skadelige filer registreret [af Pengeskab vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
@@ -826,7 +834,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Opret ti
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-reason"></a>Få vist data efter Systemtilsidesættelse og Diagramopdeling efter årsag
 
-![Tilsidesættelse af meddelelse og Diagramopdeling efter Årsagsvisning i statusrapporten Trusselsbeskyttelse.](../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png)
+:::image type="content" source="../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png" alt-text="Tilsidesættelse af meddelelse og Diagramopdeling efter årsagsvisning i statusrapporten for trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png":::
 
 I **tilsidesættelse af data efter system** og **Diagramopdeling efter Årsagsvisning** vises følgende oplysninger om tilsidesættelse af årsag i diagrammet:
 
@@ -872,7 +880,7 @@ På **statussiden for Trusselsbeskyttelse** skal du klikke ![på ikonet Eksport�
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-delivery-location"></a>Få vist data efter Systemtilsidesættelse og Diagramopdeling efter leveringssted
 
-![Tilsidesættelse af meddelelse og Diagramopdeling efter visningen Leveringsplacering i statusrapporten for trusselsbeskyttelse.](../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png)
+:::image type="content" source="../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png" alt-text="Tilsidesættelsen af meddelelsen og diagramopdelingen efter visningen Leveringsplacering i statusrapporten for trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png":::
 
 I visningen **Vis data efter systemtilsidesættelse** og **Diagramopdeling** efter visningen Leveringsplacering vises følgende oplysninger om tilsidesættelse af årsag i diagrammet:
 
@@ -921,7 +929,7 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 - **Politiknavn (kun detaljetabelvisning)**: **Alle**
 - **Modtagere**
 
-<sup>\*</sup>Defender kun Office 365 den
+<sup>\*</sup>Defender for Office 365 kun
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -933,7 +941,7 @@ Den **vigtigste malwarerapport** viser de forskellige typer malware, der blev re
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du finde** **mest malware** og derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/TopMalware>.
 
-![Den mest populære malwarewidget på siden & med samarbejdsrapporter.](../../media/top-malware-report-widget.png)
+:::image type="content" source="../../media/top-malware-report-widget.png" alt-text="Den vigtigste malwarewidget på siden & med samarbejdsrapporter" lightbox="../../media/top-malware-report-widget.png":::
 
 Når du peger på en kile i cirkeldiagrammet, kan du se navnet på en type malware, og hvor mange meddelelser der blev registreret som malware.
 
@@ -946,20 +954,20 @@ Hvis du klikker **på Filter**, kan du angive et datointerval **med Startdato** 
 
 På den **øverste malwareside** skal du klikke ![på ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Ikonet Opret tidsplan](#schedule-report)** og ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knapperne](#export-report)** Eksportér er tilgængelige.
 
-![Den mest populære visning af malwarerapport.](../../media/top-malware-report-view.png)
+:::image type="content" source="../../media/top-malware-report-view.png" alt-text="Den øverste visning for malwarerapport" lightbox="../../media/top-malware-report-view.png":::
 
 ## <a name="top-senders-and-recipients-report"></a>Rapport over de mest populære afsendere og modtagere
 
-Rapporten **Bedste afsendere og modtagere** er tilgængelig både i EOP og Defender Office 365, men rapporterne indeholder forskellige data. Eksempelvis kan EOP-kunder få vist oplysninger om de mest populære modtagere af malware, spam og phishing , men ikke oplysninger om malware, der registreres af Pengeskab Vedhæftede filer eller phishing, der [registreres ved repræsentationsbeskyttelse](safe-attachments.md).[](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+Rapporten **Øverste afsendere og modtagere** er tilgængelig i både EOP og Defender for Office 365, men rapporterne indeholder forskellige data. Eksempelvis kan EOP-kunder få vist oplysninger om de mest populære modtagere af malware, spam og phishing , men ikke oplysninger om malware, der registreres af Pengeskab Vedhæftede filer eller phishing, der [registreres ved repræsentationsbeskyttelse](safe-attachments.md).[](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
 
-De **mest populære** afsendere og modtagere viser de mest populære meddelelsesafsendere i organisationen samt de øverste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365 beskyttelsesfunktioner. Rapporten viser som standard data for den seneste uge, men der er tilgængelige data for de seneste 90 dage.
+De **hyppigste** afsendere og modtagere viser de mest populære meddelelsesafsendere i organisationen samt de øverste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365-beskyttelsesfunktioner. Rapporten viser som standard data for den seneste uge, men der er tilgængelige data for de seneste 90 dage.
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender på <https://security.microsoft.com>,  \> skal du gå til **Rapporter & mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Rapporter & mailsamarbejde skal** du finde **rapporten Bedste afsendere og modtagere og** derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne en af følgende URL-adresser:
 
-- Defender til Office 365:<https://security.microsoft.com/reports/TopSenderRecipientsATP>
+- Defender for Office 365:<https://security.microsoft.com/reports/TopSenderRecipientsATP>
 - EOP: <https://security.microsoft.com/reports/TopSenderRecipient>
 
-![Widget med de mest populære afsendere og modtagere i dashboardet Rapporter.](../../media/top-senders-and-recipients-widget.png)
+:::image type="content" source="../../media/top-senders-and-recipients-widget.png" alt-text="Widgetten Bedste afsendere og modtagere i dashboardet Rapporter" lightbox="../../media/top-senders-and-recipients-widget.png":::
 
 Når du peger på en kile i cirkeldiagrammet, kan du se antallet af meddelelser til afsenderen eller modtageren.
 
@@ -985,11 +993,11 @@ Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, *
 
 På siden **Øverste afsendere og modtagere** skal du klikke på ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **Knappen** Eksportér er tilgængelig.
 
-![Vis data for Visning af de mest populære mailafsendere i rapporten Bedste afsendere og modtagere.](../../media/top-senders-and-recipients-report-view.png)
+:::image type="content" source="../../media/top-senders-and-recipients-report-view.png" alt-text="Visningen Vis data for de mest populære mailafsendere i rapporten De mest populære afsendere og modtagere" lightbox="../../media/top-senders-and-recipients-report-view.png":::
 
 ## <a name="url-protection-report"></a>Rapport over beskyttelse af URL-adresser
 
-Rapporten **om beskyttelse af URL-adresser** er kun tilgængelig i Microsoft Defender Office 365. Du kan få mere at vide under [Rapport om beskyttelse af URL-adresser](view-reports-for-mdo.md#url-protection-report).
+Rapporten **om beskyttelse af URL-adresser** er kun tilgængelig Microsoft Defender for Office 365. Du kan få mere at vide under [Rapport om beskyttelse af URL-adresser](view-reports-for-mdo.md#url-protection-report).
 
 ## <a name="user-reported-messages-report"></a>Rapport over rapporterede meddelelser
 
@@ -1000,7 +1008,7 @@ Rapporten **Bruger rapporterede meddelelser** viser oplysninger om mails, som br
 
 Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du finde** **brugerrapporterede meddelelser og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/userSubmissionReport>. Hvis du vil gå [til administratorindsendelser i Microsoft 365 Defender, skal](admin-submission.md) du **klikke på Gå til indsendelser**.
 
-![Brugeren rapporterede beskedwidget på siden & med samarbejdsrapporter.](../../media/user-reported-messages-widget.png)
+:::image type="content" source="../../media/user-reported-messages-widget.png" alt-text="Widget'en med rapporterede meddelelser på siden Mailrapporter & samarbejdsrapporter" lightbox="../../media/user-reported-messages-widget.png":::
 
 Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer** og vælge en eller flere af følgende værdier i pop op-menuen, der vises:
 
@@ -1027,7 +1035,7 @@ Hvis du vil gruppere posterne, **skal du** klikke på Grupper og vælge en af f�
 - **Genscanne resultat**
 - **Phish-simulering**
 
-![Brugeren rapporterede meddelelsesrapporten.](../../media/user-reported-messages-report.png)
+:::image type="content" source="../../media/user-reported-messages-report.png" alt-text="Rapport, der rapporteres af brugeren" lightbox="../../media/user-reported-messages-report.png":::
 
 Detaljetabellen under grafen viser følgende oplysninger:
 
@@ -1045,7 +1053,7 @@ Hvis du vil sende en meddelelse til Microsoft til analyse, skal du vælge meddel
 - **Rapportér phishing**
 - **Rapportér malware**
 - **Rapportér spam**'
-- **Undersøgelse af udløser** (Defender til Office 365)
+- **Udløser undersøgelse** (Defender for Office 365)
 
 På siden **Bruger rapporterede meddelelser** , ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knappen](#export-report)** Eksportér er tilgængelig.
 

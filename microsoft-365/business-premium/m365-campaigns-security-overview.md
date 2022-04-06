@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du beskytter din kampagne eller virksomhed ved at øge din sikkerhed Microsoft 365.
-ms.openlocfilehash: 17144ea8c361c3fb3665addd9567cfcb18ca0172
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 608bb3c6be6821c6127ae42ce294b4c20fa13ca5
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593079"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634223"
 ---
 # <a name="bump-up-security-protection-for-your-campaign-or-business"></a>Få bedre sikkerhedsbeskyttelse til din kampagne eller virksomhed
 
@@ -44,7 +44,11 @@ Se denne video for at se, hvordan du kan beskytte din kampagne eller virksomhed:
 Følg derefter trinnene for at:
 
 - [Beskyt dig mod malware og andre trusler](m365bp-increase-protection.md)
+
 - [Beskyt adgangen til dine kampagnedata ved](m365bp-conditional-access.md) at beskytte dine konti og apps
+
 - [Beskyt administratorkonti](m365bp-protect-admin-accounts.md)
+
 - [Konfigurer mobilenheder](../business/set-up-mobile-devices.md)
-- [Oplære dine brugere](m365-campaigns-users.md)
+
+- [Oplær dine brugere](m365-campaigns-users.md)

@@ -15,15 +15,15 @@ ms.custom:
 - next-gen
 - edr
 - admindeeplinkDEFENDER
-ms.date: 04/04/2022
+ms.date: 04/01/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: eb40eaee9043e81331eca98c85f1467111cc37e4
-ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
+ms.openlocfilehash: 898d6de45830068ad300a64a3312cff3d5914323
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/04/2022
-ms.locfileid: "64638350"
+ms.locfileid: "64634289"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) i bloktilstand
 
@@ -115,6 +115,10 @@ Du kan også definere en udelukkelse for Microsoft Defender Antivirus. Se [Konfi
 ### <a name="do-i-need-to-turn-edr-in-block-mode-on-if-i-have-microsoft-defender-antivirus-running-on-devices"></a>Har jeg brug for at Slutpunktsregistrering og -svar blokeringstilstand til, hvis jeg har Microsoft Defender Antivirus kører på enheder?
 
 Det primære formål med at Slutpunktsregistrering og -svar blokeringstilstand er at afhjælpe registreringer efter brud, som er blevet overset af et antivirusprodukt, som ikke er Microsoft. Der er minimal fordel ved at aktivere Slutpunktsregistrering og -svar i bloktilstand, når Microsoft Defender Antivirus er i aktiv tilstand, da beskyttelse i realtid forventes først at registrere og afhjælpe registreringer. Vi anbefaler, at Slutpunktsregistrering og -svar i bloktilstand på slutpunkter, hvor Microsoft Defender til Antivirus kører i passiv tilstand. Slutpunktsregistrering og -svar-registreringer kan automatisk afhjælpes af [PUA-beskyttelse](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) eller af automatiserede [& afhjælpningsegenskaber](automated-investigations.md) i bloktilstand.
+
+- Når Microsoft Defender Antivirus er i passiv tilstand, Slutpunktsregistrering og -svar i bloktilstand et andet lag af forsvar sammen med Microsoft Defender for Endpoint.
+
+- Når Microsoft Defender Antivirus er i aktiv tilstand, giver Slutpunktsregistrering og -svar i bloktilstand ikke ekstra scanning, men det gør det muligt for Microsoft Defender Antivirus at udføre automatiske handlinger ved efterfølgende brud, funktionsmåde Slutpunktsregistrering og -svar registreringer.
 
 ### <a name="will-edr-in-block-mode-affect-a-users-antivirus-protection"></a>Vil Slutpunktsregistrering og -svar blokeringstilstand påvirke en brugers antivirusbeskyttelse?
 

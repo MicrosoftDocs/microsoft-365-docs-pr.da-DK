@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.custom: migrationguides
-ms.date: 03/28/2022
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.technology: mde
-ms.openlocfilehash: 30218ea9b3b5ecbec20fdbc3364546d25c80bcab
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: 8334ce03bac5b7d4518433f83ab34d5f86e71339
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507508"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634157"
 ---
 # <a name="troubleshooting-issues-when-switching-to-microsoft-defender-for-endpoint"></a>Fejlfinding af problemer, når du skifter til Microsoft Defender for Endpoint
 
@@ -41,28 +41,8 @@ Når du skifter til Defender for Endpoint, starter du med din ikke-Microsoft-ant
 
 Du kan løse dette problem ved at gøre følgende:
 
-1. [Indstil registreringsdatabasenøglen DisableAntiSpyware til falsk](#set-the-disableantispyware-registry-key-to-false).
-2. [Føj Microsoft Defender for Endpoint til udeladelseslisten](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
-3. [Angiv Microsoft Defender Antivirus til passiv tilstand manuelt](#set-microsoft-defender-antivirus-to-passive-mode-manually).
-
-### <a name="set-the-disableantispyware-registry-key-to-false"></a>Indstil registreringsdatabasenøglen DisableAntiSpyware til falsk
-
-[Registreringsdatabasenøglen DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware) blev tidligere brugt til at deaktivere Microsoft Defender Antivirus og installere et andet antivirusprodukt, f.eks. McAfee,Afee,Afee eller andre. **Generelt bør du ikke have denne registreringsdatabasenøgle** på dine Windows-enheder og slutpunkter.  `DisableAntiSpyware` Men hvis du har konfigureret, kan du her se, hvordan du indstiller dens værdi til falsk:
-
-1. På din Windows Server-enhed skal du åbne Registreringseditor.
-
-2. Gå til `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`.
-
-3. I denne mappe skal du se efter en DWORD-post med **navnet DisableAntiSpyware**.
-   - Hvis du ikke kan se denne post, er du klar.
-   - Hvis du kan se **DisableAntiSpyware**, skal du gå videre til trin 4.
-
-4. Højreklik på DisableAntiSpyware DWORD, og vælg derefter **Rediger**.
-
-5. Angiv værdien til `0`. (Denne handling indstiller registreringsdatabasenøglens værdi *til falsk*).
-
-> [!TIP]
-> Du kan få mere at vide om denne registreringsdatabasenøgle [under DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware).
+1. [Føj Microsoft Defender for Endpoint til udeladelseslisten](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
+2. [Angiv Microsoft Defender Antivirus til passiv tilstand manuelt](#set-microsoft-defender-antivirus-to-passive-mode-manually).
 
 ### <a name="add-microsoft-defender-for-endpoint-to-the-exclusion-list"></a>Føje Microsoft Defender for Endpoint til udeladelseslisten
 

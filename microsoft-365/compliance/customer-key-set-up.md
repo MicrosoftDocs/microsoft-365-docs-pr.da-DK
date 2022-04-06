@@ -11,202 +11,185 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om, hvordan du konfigurerer kundenøgle til Microsoft 365.
-ms.openlocfilehash: 6a0b186b5c2648d79f1f772e8dd19f1820d5cb9d
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+description: Få mere at vide om, hvordan du konfigurerer en kundenøgle Microsoft 365.
+ms.openlocfilehash: f3d7da27e0c9a5e27f0c3e7bcc3adb48dad5d42c
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663647"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634509"
 ---
 # <a name="set-up-customer-key"></a>Konfigurer kundenøgle
 
-Med Kundenøgle kan du styre din organisations krypteringsnøgler og derefter konfigurere Microsoft 365 til at bruge dem til at kryptere inaktive data i Microsofts datacentre. Med andre ord giver Kundenøgle kunderne mulighed for at tilføje et krypteringslag, der tilhører dem, med deres nøgler.
+Med Kundenøgle kan du kontrollere organisationens krypteringsnøgler og derefter konfigurere Microsoft 365 til at bruge dem til at kryptere dine in resterede data i Microsofts datacentre. Med andre ord giver Kundenøgle kunderne mulighed for at tilføje et lag af kryptering, der tilhører dem, med deres nøgler.
 
-Konfigurer Azure, før du kan bruge Kundenøgle til Office 365. I denne artikel beskrives de trin, du skal følge for at oprette og konfigurere de påkrævede Azure-ressourcer, og den indeholder derefter trinnene til konfiguration af kundenøglen i Office 365. Når du har konfigureret Azure, bestemmer du, hvilken politik og derfor hvilke nøgler der skal tildeles for at kryptere data på tværs af forskellige Microsoft 365 arbejdsbelastninger i din organisation. Du kan få flere oplysninger om kundenøgle eller få en generel oversigt under [Tjenestekryptering med kundenøgle i Office 365](customer-key-overview.md).
+Konfigurer Azure, før du kan bruge kundenøgle til Office 365. I denne artikel beskrives de trin, du skal følge for at oprette og konfigurere de nødvendige Azure-ressourcer, og derefter angives trinnene til konfiguration af kundenøgle i Office 365. Når du har konfigureret Azure, bestemmer du, hvilken politik og derfor, hvilke nøgler, der skal tildeles for at kryptere data på tværs af Microsoft 365 arbejdsbelastninger i organisationen. Du kan finde flere oplysninger om kundenøgle eller en generel oversigt under [Tjenestekryptering med kundenøgle i Office 365](customer-key-overview.md).
   
 > [!IMPORTANT]
-> Vi anbefaler på det kraftigste, at du følger de bedste fremgangsmåder i denne artikel. Disse kaldes **tip** og **VIGTIGT**. Kundenøgle giver dig kontrol over rodkrypteringsnøgler, hvis omfang kan være så stort som hele organisationen. Det betyder, at fejl, der er foretaget med disse nøgler, kan have en bred indvirkning og kan medføre afbrydelser i tjenesten eller uigenkaldeligt tab af dine data.
+> Vi anbefaler på det kraftigste, at du følger de bedste fremgangsmåder i denne artikel. Disse kaldes for **TIP** og **VIGTIGT**. Kundenøgle giver dig kontrol over rodkrypteringsnøgler, hvis omfang kan være så stort som hele organisationen. Det betyder, at fejl, der er begået med disse nøgler, kan have en bred effekt og kan medføre afbrydelser af tjenesten eller uigenkaldelige tab af dine data.
   
-## <a name="before-you-set-up-customer-key"></a>Før du konfigurerer kundenøgle
+## <a name="before-you-set-up-customer-key"></a>Før du konfigurerer en kundenøgle
 
-Før du kommer i gang, skal du sikre dig, at du har de relevante Azure-abonnementer og M365/O365-licenser til din organisation. Du skal bruge betalte Azure-abonnementer. Abonnementer, du fik via gratis, prøveversion, sponsorater, MSDN-abonnementer og dem under ældre support, er ikke berettigede.
+Før du går i gang, skal du sikre dig, at du har de relevante Azure-abonnementer og -licenser til din organisation. Brug betalte Azure-abonnementer med enten en Enterprise Agreement eller en udbyder af skytjenester. Kreditkortbaserede betalinger accepteres ikke. Godkend og konfigurer kontobehovet til fakturering. Abonnementer, du har fået via gratis prøveversion, sponsorater, MSDN-abonnementer og dem under ældre support, er ikke berettigede.
 
-> [!IMPORTANT]
-> Gyldige M365/O365-licenser, der tilbyder M365-kundenøgle, er:
->
-> - Office 365 E5
-> - Microsoft 365 E5
-> - Microsoft 365 E5 Overholdelse
-> - SKU'er for Microsoft 365 E5 Information Protection & styring
-> - Microsoft 365 sikkerhed og overholdelse af angivne standarder for FLW
+Office 365 E5 tilbyder Microsoft 365 E5, Microsoft 365 E5 Overholdelse og Microsoft 365 E5 Information Protection & SKU'er til styring af kundenøgler. Avanceret overholdelse i Office 365 SKU er ikke længere tilgængelig til fremskaffelse af nye licenser. Eksisterende Avanceret overholdelse i Office 365-licenser understøttes fortsat.
 
-Eksisterende Avanceret overholdelse i Office 365 licenser understøttes fortsat.
-
-Hvis du vil vide mere om begreberne og procedurerne i denne artikel, [skal du gennemse dokumentationen til Azure Key Vault](/azure/key-vault/). Bliv også fortrolig med de begreber, der bruges i Azure, f.eks. [Azure AD-lejer](/previous-versions/azure/azure-services/jj573650(v=azure.100)#what-is-an-azure-ad-tenant).
+Gennemgå Azure Key Vault dokumentationen for at forstå [begreber og procedurer i denne](/azure/key-vault/) artikel. Bliv også fortrolig med de udtryk, der bruges i Azure, f.eks [. Azure AD-lejer](/previous-versions/azure/azure-services/jj573650(v=azure.100)#what-is-an-azure-ad-tenant).
   
-Hvis du har brug for mere support ud over dokumentationen, kan du kontakte Microsoft Consulting Services (MCS), Premier Field Engineering (PFE) eller en Microsoft-partner for at få hjælp. Hvis du vil give feedback om Kundenøgle, herunder dokumentationen, skal du sende dine ideer, forslag og perspektiver for at customerkeyfeedback@microsoft.com.
+Hvis du har brug for mere support ud over dokumentationen, kan du kontakte Microsoft Consulting Services (MCS), Premier Field Engineering (PFE) eller en Microsoft-partner for at få hjælp. Hvis du vil give feedback på kundenøgler, herunder dokumentationen, kan du sende dine idéer, forslag og perspektiver til customerkeyfeedback@microsoft.com.
   
-## <a name="overview-of-steps-to-set-up-customer-key"></a>Oversigt over trin til konfiguration af kundenøgle
+## <a name="overview-of-steps-to-set-up-customer-key"></a>Oversigt over trin til at konfigurere kundenøgle
 
-Hvis du vil konfigurere kundenøgle, skal du udføre disse opgaver i den angivne rækkefølge. Resten af denne artikel indeholder detaljerede instruktioner til hver opgave eller links til flere oplysninger for hvert trin i processen.
+Du kan konfigurere en kundenøgle ved at udføre disse opgaver i den angivne rækkefølge. Resten af denne artikel indeholder detaljerede instruktioner til hver opgave eller links til flere oplysninger om hvert trin i processen.
   
 **I Azure og Microsoft FastTrack:**
   
-Du udfører de fleste af disse opgaver ved at oprette fjernforbindelse til Azure PowerShell. Du opnår det bedste resultat ved at bruge version 4.4.0 eller nyere af Azure PowerShell.
+Du kommer til at udføre de fleste af disse opgaver ved at oprette fjernforbindelse til Azure PowerShell. Du opnår de bedste resultater ved at bruge version 4.4.0 eller nyere Azure PowerShell.
   
 - [Opret to nye Azure-abonnementer](#create-two-new-azure-subscriptions)
 
-- [Send en anmodning om at aktivere kundenøglen for Office 365](#submit-a-request-to-activate-customer-key-for-office-365)
-
+- [Indsend en anmodning om at aktivere kundenøgle til Office 365](#submit-a-request-to-activate-customer-key-for-office-365)
+ 
 - [Registrer Azure-abonnementer for at bruge en obligatorisk opbevaringsperiode](#register-azure-subscriptions-to-use-a-mandatory-retention-period)
 
-  Det tager fem arbejdsdage at fuldføre registreringsprocessen.
-- [Kontakt det tilsvarende Microsoft-alias for at fortsætte med processen](#contact-the-corresponding-microsoft-alias-to-proceed-with-the-process)
+  Denne registreringsproces tager fem arbejdsdage at fuldføre.
 
-- [Opret en Premium Azure-Key Vault i hvert abonnement](#create-a-premium-azure-key-vault-in-each-subscription)
+- [Opret en Premium Azure-Key Vault hvert abonnement](#create-a-premium-azure-key-vault-in-each-subscription)
 
-- [Tildel tilladelser til hver key vault](#assign-permissions-to-each-key-vault)
+- [Tildele tilladelser til hver nøgleboks](#assign-permissions-to-each-key-vault)
 
-- [Sørg for, at blød sletning er aktiveret i dine key vaults](#make-sure-soft-delete-is-enabled-on-your-key-vaults)
+- [Sørg for, at blød sletning er aktiveret på dine nøglebokse](#make-sure-soft-delete-is-enabled-on-your-key-vaults)
 
-- [Føj en nøgle til hver key vault ved enten at oprette eller importere en nøgle](#add-a-key-to-each-key-vault-either-by-creating-or-importing-a-key)
+- [Føj en nøgle til hver nøgleboks ved enten at oprette eller importere en nøgle](#add-a-key-to-each-key-vault-either-by-creating-or-importing-a-key)
 
-- [Kontrollér udløbsdatoen for dine nøgler](#verify-expiration-date-of-your-keys)
+- [Kontrollér dine nøglers genoprettelsesniveau](#check-the-recovery-level-of-your-keys)
 
-- [Kontrollér genoprettelsesniveauet for dine nøgler](#check-the-recovery-level-of-your-keys)
+- [Sikkerhedskopier Azure Key Vault](#back-up-azure-key-vault)
 
-- [Sikkerhedskopiér Azure Key Vault](#back-up-azure-key-vault)
+- [Valider Azure Key Vault konfigurationsindstillinger](#validate-azure-key-vault-configuration-settings)
 
-- [Hent URI'en for hver Azure Key Vault-nøgle](#obtain-the-uri-for-each-azure-key-vault-key)
+- [Hent URI'en for hver Azure Key Vault nøgle](#obtain-the-uri-for-each-azure-key-vault-key)
   
-## <a name="complete-tasks-in-azure-key-vault-and-microsoft-fasttrack-for-customer-key"></a>Udfør opgaver i Azure Key Vault og Microsoft FastTrack for Customer Key
+## <a name="complete-tasks-in-azure-key-vault-and-microsoft-fasttrack-for-customer-key"></a>Udfør opgaver i Azure Key Vault og Microsoft FastTrack til kundenøgle
 
-Udfør disse opgaver i Azure Key Vault. Du skal fuldføre disse trin for alle de DEP'er, du bruger med Kundenøgle.
+Fuldfør disse opgaver i Azure Key Vault. Du skal udføre disse trin for alle de løsningsprogrammer, du bruger med kundenøgle.
   
 ### <a name="create-two-new-azure-subscriptions"></a>Opret to nye Azure-abonnementer
 
-Kundenøgle kræver to Azure-abonnementer. Som bedste praksis anbefaler Microsoft, at du opretter nye Azure-abonnementer til brug sammen med Customer Key. Azure Key Vault-nøgler kan kun godkendes til programmer i den samme Azure Active Directory (Microsoft Azure Active Directory) lejer. Du skal oprette de nye abonnementer ved hjælp af den samme Azure AD-lejer, der bruges sammen med din organisation, hvor DEP'erne tildeles. Det kan f.eks. være at bruge din arbejds- eller skolekonto, der har globale administratorrettigheder i din organisation. Du kan finde detaljerede trin under [Tilmeld dig Azure som en organisation](/azure/active-directory/fundamentals/sign-up-organization).
+Kundenøgle kræver to Azure-abonnementer. Som bedste fremgangsmåde anbefaler Microsoft, at du opretter nye Azure-abonnementer til brug med kundenøgle. Azure Key Vault-nøgler kan kun godkendes til programmer i den samme Azure Active Directory-lejer (Microsoft Azure Active Directory), skal du oprette de nye abonnementer ved hjælp af den samme Azure AD-lejer, der bruges sammen med din organisation, hvor ip'erne tildeles. For eksempel ved hjælp af din arbejds- eller skolekonto, der har globale administratorrettigheder i organisationen. Hvis du vil have en detaljeret vejledning [, skal du se Tilmelde dig Azure som en organisation](/azure/active-directory/fundamentals/sign-up-organization).
   
 > [!IMPORTANT]
-> Kundenøglen kræver to nøgler til hver datakrypteringspolitik. Hvis du vil opnå dette, skal du oprette to Azure-abonnementer. Som bedste praksis anbefaler Microsoft, at du har separate medlemmer af din organisation, der konfigurerer én nøgle i hvert abonnement. Du bør kun bruge disse Azure-abonnementer til at administrere krypteringsnøgler til Office 365. Dette beskytter din organisation, hvis en af dine operatorer utilsigtet, bevidst eller ondsindet sletter eller på anden måde mismanagerer de nøgler, de er ansvarlige for.
+> Kundenøgle kræver to nøgler for hver datakrypteringspolitik (DEP). For at gøre dette skal du oprette to Azure-abonnementer. Som bedste fremgangsmåde anbefaler Microsoft, at du har separate medlemmer af organisationen konfigureret én nøgle i hvert abonnement. Du bør kun bruge disse Azure-abonnementer til at administrere krypteringsnøgler for Office 365. Dette beskytter din organisation i tilfælde af, at en af dine operatorer utilsigtet, bevidst eller ondsindet sletter eller på anden måde forkert administrerer de taster, som de har ansvaret for.
 
-Der er ingen praktisk grænse for antallet af Azure-abonnementer, som du kan oprette for din organisation. Hvis du følger disse bedste fremgangsmåder, minimeres indvirkningen af menneskelige fejl, samtidig med at du hjælper med at administrere de ressourcer, der bruges af kundenøglen.
+Der er ingen praktisk begrænsning på antallet af Azure-abonnementer, du kan oprette for organisationen. Hvis du følger disse bedste fremgangsmåder, minimeres effekten af menneskerfejl, mens det hjælper med at administrere de ressourcer, der bruges af Kundenøgle.
   
-### <a name="submit-a-request-to-activate-customer-key-for-office-365"></a>Send en anmodning om at aktivere kundenøglen for Office 365
+### <a name="submit-a-request-to-activate-customer-key-for-office-365"></a>Indsend en anmodning om at aktivere kundenøgle til Office 365
 
-Når du har oprettet de to nye Azure-abonnementer, skal du sende den relevante anmodning om kundenøgletilbud på [Microsoft FastTrack portalen](https://fasttrack.microsoft.com/). De valg, du foretager i tilbudsformularen om de godkendte betegnelser i din organisation, er vigtige og nødvendige for at fuldføre registreringen af kundenøglen. Officererne i disse valgte roller i din organisation sikrer ægtheden af enhver anmodning om at tilbagekalde og ødelægge alle nøgler, der bruges sammen med en politik for kryptering af kundenøgledata. Du skal udføre dette trin én gang for hver kundenøgledetalstype, du vil bruge til din organisation.
+Når du har oprettet de to nye Azure-abonnementer, skal du indsende den relevante anmodning om kundenøgletilbud [Microsoft FastTrack portalen](https://fasttrack.microsoft.com/). De valg, du foretager i tilbudsformularen om de autoriserede angivelser i organisationen, er vigtige og nødvendige for fuldførelsen af registrering af kundenøgler. De officerer, der er i de valgte roller i din organisation, sikrer autenticiteten af enhver anmodning om at tilbagekalde og destruere alle nøgler, der bruges med en krypteringspolitik for kundenøgledata. Du skal udføre dette trin én gang for hver datanøgletype, som du vil bruge til din organisation.
 
-**Det FastTrack team yder ikke hjælp til Kundenøgle. Office 365 bruger blot FastTrack-portalen til at sende formularen og til at hjælpe os med at spore de relevante tilbud på Kundenøgle. Når du har indsendt anmodningen om FastTrack, skal du kontakte det tilsvarende onboardingteam for kundenøglen for at starte onboardingprocessen.**
+**Teamet FastTrack ikke hjælpe med kundenøglen. Office 365 bruger blot portalen FastTrack til at give dig mulighed for at sende formularen og til at hjælpe os med at spore de relevante tilbud på kundenøgle. Når du har indsendt anmodningen FastTrack, skal du kontakte det tilsvarende kundenøgleteam for at starte onboardingprocessen.**
   
-Hvis du vil indsende et tilbud om at aktivere Kundenøgle, skal du udføre disse trin:
+Hvis du vil sende et tilbud om at aktivere kundenøgle, skal du udføre disse trin:
   
-1. Log på [Microsoft FastTrack-portalen](https://fasttrack.microsoft.com/) ved hjælp af en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation.
+1. Brug en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, til at logge på [Microsoft FastTrack-portalen](https://fasttrack.microsoft.com/).
 
 2. Når du er logget på, skal du vælge det relevante domæne.
 
-3. For det valgte domæne skal du vælge **Anmod om tjenester** på den øverste navigationslinje og gennemse listen over tilgængelige tilbud.
+3. For det valgte domæne skal du **vælge Anmod** om tjenester fra den øverste navigationslinje og gennemse listen over tilgængelige tilbud.
 
 4. Vælg oplysningskortet for det tilbud, der gælder for dig:
 
-   - **Flere Microsoft 365 arbejdsbelastninger:** Vælg **hjælpen til anmodningskrypteringsnøglen til Microsoft 365** tilbud.
+   - **Flere Microsoft 365 arbejdsbelastninger: Vælg** **Hjælp til anmod om krypteringsnøgle til Microsoft 365** tilbud.
 
-   - **Exchange Online og Skype for Business:** Vælg **hjælp til hjælp til anmodning om krypteringsnøgle til Exchange** tilbud.
+   - **Exchange Online og Skype for Business: Vælg** Hjælp til **krypteringsnøgle til Anmod om Exchange** tilbud.
 
-   - **SharePoint Online-, OneDrive- og Teams-filer:** Vælg **hjælpen til anmodning om krypteringsnøgle for at få SharePoint og OneDrive for Business** tilbud.
+   - **SharePoint Online-, OneDrive- Teams filer:** Vælg Hjælp til anmod om krypteringsnøgle **til SharePoint og OneDrive for Business** tilbud.
 
-5. Når du har gennemset oplysningerne om tilbuddet, skal du vælge **Fortsæt til trin 2**.
+5. Når du har gennemset tilbudsoplysningerne, skal du **vælge Fortsæt til trin 2**.
 
-6. Udfyld alle relevante oplysninger og de ønskede oplysninger på tilbudsformularen. Vær især opmærksom på dine valg, hvilke medarbejdere i din organisation du vil give tilladelse til at godkende permanent og uigenkaldelig destruktion af krypteringsnøgler og data. Når du har udfyldt formularen, skal du vælge **Send**.
+6. Udfyld alle relevante oplysninger og ønskede oplysninger i tilbudsformularen. Vær særlig opmærksom på dine valg, som medarbejdere i din organisation, som du vil godkende, om at godkende den permanente og uigenkaldelige sletning af krypteringsnøgler og -data. Når du har udfyldt formularen, skal du vælge **Send**.
 
 ### <a name="register-azure-subscriptions-to-use-a-mandatory-retention-period"></a>Registrer Azure-abonnementer for at bruge en obligatorisk opbevaringsperiode
 
-Det midlertidige eller permanente tab af rodkrypteringsnøgler kan være forstyrrende eller endda katastrofalt for servicehandlingen og kan medføre tab af data. Derfor kræver de ressourcer, der bruges sammen med Customer Key, stærk beskyttelse. Alle de Azure-ressourcer, der bruges sammen med Customer Key, tilbyder beskyttelsesmekanismer ud over standardkonfigurationen. Du kan tagge eller registrere Azure-abonnementer i en *obligatorisk opbevaringsperiode*. En obligatorisk opbevaringsperiode forhindrer øjeblikkelig og uigenkaldelig annullering af dit Azure-abonnement. De trin, der kræves for at registrere Azure-abonnementer i en obligatorisk opbevaringsperiode, kræver samarbejde med det Microsoft 365 team. Det tager fem arbejdsdage at fuldføre denne proces. Tidligere blev obligatorisk opbevaringsperiode nogle gange kaldt "Annuller ikke".
+Det midlertidige eller permanente tab af rodkrypteringsnøgler kan være forstyrrende eller endda ødelagt i forbindelse med tjenestehandlingen og kan medføre tab af data. Derfor kræver de ressourcer, der bruges med kundenøgle, stærk beskyttelse. Alle Azure-ressourcer, der bruges sammen med mekanismerne til kundenøgletilbudsbeskyttelse ud over standardkonfigurationen. Du kan mærke eller registrere Azure-abonnementer i en *obligatorisk opbevaringsperiode*. En obligatorisk opbevaringsperiode forhindrer øjeblikkelig og uigenkaldelig annullering af dit Azure-abonnement. De trin, der kræves for at registrere Azure-abonnementer i en obligatorisk opbevaringsperiode, kræver samarbejde Microsoft 365 team. Denne proces tager fem arbejdsdage at gennemføre. Tidligere blev obligatorisk opbevaringsperiode nogle gange kaldt for "Annuller ikke".
   
-> [!IMPORTANT]
-> Før du kontakter det Microsoft 365 team, skal du gøre følgende for **hvert** Azure-abonnement, du bruger med Customer Key. Sørg for, at [du har Azure PowerShell Az-modulet](/powershell/azure/new-azureps-module-az) installeret, før du starter.
+Før du kontakter Microsoft 365-teamet, skal du udføre følgende trin for hvert Azure-abonnement, du bruger med kundenøgle. Sørg for, at du har [installeret Azure PowerShell Az-modulet](/powershell/azure/new-azureps-module-az), før du starter.
+  
+1. Log på med Azure PowerShell. Du kan finde en vejledning [under Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
 
-1. Log på med Azure PowerShell. Du kan finde en vejledning under [Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
-
-2. Kør Register-AzProviderFeature-cmdlet'en for at registrere dine abonnementer for at bruge en obligatorisk opbevaringsperiode. Fuldfør denne handling for hvert abonnement.
+2. Kør cmdletten Register-AzProviderFeature registrere dine abonnementer for at bruge en obligatorisk opbevaringsperiode. Fuldfør denne handling for hvert abonnement.
 
    ```powershell
    Set-AzContext -SubscriptionId <SubscriptionId>
    Register-AzProviderFeature -FeatureName mandatoryRetentionPeriodEnabled -ProviderNamespace Microsoft.Resources
    ```
 
-### <a name="contact-the-corresponding-microsoft-alias-to-proceed-with-the-process"></a>Kontakt det tilsvarende Microsoft-alias for at fortsætte med processen
+3. Kontakt Microsoft for at fuldføre processen.
 
->[!NOTE]
-> Før du kontakter det tilsvarende Microsoft-alias, skal du kontrollere, at du har fuldført dine FastTrack anmodninger om M365-kundenøgle.
+   - For at aktivere kundenøgle til tildeling af DEP til individuelle Exchange Online postkasser skal du [kontakte exock@microsoft.com](mailto:exock@microsoft.com).
 
-- Kontakt [exock@microsoft.com](mailto:exock@microsoft.com), hvis du vil aktivere kundenøgle for tildeling af deaktivering af forhindring af datasupport til individuelle Exchange Online postkasser.
+   - For at aktivere kundenøgle til tildeling af IP-adresser til at kryptere SharePoint Online- og OneDrive for Business-indhold (herunder Teams-filer) for alle lejerbrugere skal du [kontakte spock@microsoft.com](mailto:spock@microsoft.com).
 
-- Kontakt [spock@microsoft.com](mailto:spock@microsoft.com) for at aktivere kundenøglen for tildeling af DEP'er for at kryptere SharePoint Online- og OneDrive for Business-indhold (herunder Teams filer) for alle lejerbrugere.
+   - For at aktivere kundenøgle til tildeling af IP-adresser til kryptering af indhold på tværs af flere Microsoft 365-arbejdsbelastninger (Exchange Online, Teams, Microsoft Information Protection) for alle lejerbrugere skal du [kontakte m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com).
 
-- Kontakt [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) for at aktivere kundenøglen til tildeling af dep'er for at kryptere indhold på tværs af flere Microsoft 365 arbejdsbelastninger (Exchange Online, Teams, MIP EDM) for alle lejerbrugere.
-
-- Medtag følgende oplysninger i din mail:
+   - Medtag følgende oplysninger i din mail:
 
      **Emne**: Kundenøgle til \<*Your tenant's fully qualified domain name*\>
 
-     **Brødtekst**: Medtag FastTrack anmodnings-id'er og abonnements-id'er for **hver** af de kundenøgletjenester, du vil onboardes til. Disse abonnements-id'er er dem, du vil fuldføre den obligatoriske opbevaringsperiode og outputtet af Get-AzProviderFeature for hvert abonnement.
+     **Brødtekst**: Medtag de abonnements-Get-AzProviderFeature for hvert abonnement, du vil fuldføre den obligatoriske opbevaringsperiode for.
 
-Serviceniveauaftalen (SLA) til fuldførelse af denne proces er fem arbejdsdage, når Microsoft har fået besked (og bekræftet), at du har registreret dine abonnementer til at bruge en obligatorisk opbevaringsperiode.
+     Serviceaftale (SLA) for fuldførelse af denne proces er fem arbejdsdage, når Microsoft er blevet underrettet (og bekræftet), at du har registreret dine abonnementer til at bruge en obligatorisk opbevaringsperiode.
 
-### <a name="verify-the-status-of-each-your-azure-subscriptions"></a>Bekræft status for hvert af dine Azure-abonnementer
-
-Når du har modtaget en meddelelse fra Microsoft om, at registreringen er fuldført, skal du kontrollere status for registreringen ved at køre kommandoen Get-AzProviderFeature på følgende måde. Hvis den Get-AzProviderFeature kommando bekræftes, returnerer den en værdi af typen **Registreret** for egenskaben **Registreringstilstand** . Fuldfør dette trin for **hvert** abonnement.
+4. Når du modtager en meddelelse fra Microsoft om, at registreringen er fuldført, skal du bekræfte status for din registrering ved at køre kommandoen Get-AzProviderFeature som følger: Hvis det bekræftes, returnerer Get-AzProviderFeature en værdi af **Registreret** for **egenskaben Registreringstilstand** . Fuldfør dette trin for hvert abonnement.
 
    ```powershell
    Set-AzContext -SubscriptionId <SubscriptionId>
    Get-AzProviderFeature -ProviderNamespace Microsoft.Resources -FeatureName mandatoryRetentionPeriodEnabled
    ```
 
-Kør kommandoen Register-AzResourceProvider for at fuldføre processen. Fuldfør dette trin for **hvert** abonnement.
+5. For at fuldføre processen skal du køre Register-AzResourceProvider kommando. Fuldfør dette trin for hvert abonnement.
 
    ```powershell
    Set-AzContext -SubscriptionId <SubscriptionId>
-   ```
-
-   ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.KeyVault
    ```
 
-> [!TIP]
-> Før du går videre, skal du sørge for, at 'RegistrationState' er angivet til 'Registreret' som på billedet nedenfor.
->
-> ![Obligatorisk opbevaringsperiode](../media/MandatoryRetentionPeriod.png)
+### <a name="create-a-premium-azure-key-vault-in-each-subscription"></a>Opret en Premium Azure-Key Vault hvert abonnement
 
-### <a name="create-a-premium-azure-key-vault-in-each-subscription"></a>Opret en Premium Azure-Key Vault i hvert abonnement
-
-Trinnene til oprettelse af en key vault er dokumenteret i [Introduktion med Azure Key Vault](/azure/key-vault/general/overview), som hjælper dig med at installere og starte Azure PowerShell, oprette forbindelse til dit Azure-abonnement, oprette en ressourcegruppe og oprette en key vault i den pågældende ressourcegruppe.
+Trinnene til at oprette en nøgleboks er dokumenteret i [Introduktion med Azure Key Vault](/azure/key-vault/general/overview), som vejleder dig gennem installation og lancering af Azure PowerShell, oprettelse af forbindelse til dit Azure-abonnement, oprettelse af en ressourcegruppe og oprettelse af en nøgleboks i den pågældende ressourcegruppe.
   
-Når du opretter en key vault, skal du vælge en SKU: enten Standard eller Premium. Standard-SKU'en gør det muligt at beskytte Azure Key Vault-nøgler med software – der er ingen HSM-nøglebeskyttelse (Hardware Security Module), og den Premium SKU gør det muligt at bruge HSM'er til beskyttelse af Key Vault nøgler. Customer Key accepterer key vaults, der bruger en af SKU'erne, selvom Microsoft på det kraftigste anbefaler, at du kun bruger den Premium SKU. Omkostningerne til handlinger med nøgler af begge typer er de samme, så den eneste forskel i omkostningerne er omkostningerne pr. måned for hver HSM-beskyttet nøgle. Se [Key Vault priser for at](https://azure.microsoft.com/pricing/details/key-vault/) få flere oplysninger.
+Når du opretter en nøgleboks, skal du vælge en SKU: enten Standard eller Premium. Standard-SKU'en gør det muligt at beskytte Azure Key Vault-nøgler med software – der er ingen HSM-nøglebeskyttelse (Hardware Security Module), og Premium-SKU'en tillader brugen af HSMs til beskyttelse af Key Vault nøgler. Kundenøgle accepterer nøgle bokse, der bruger enten SKU, selvom Microsoft anbefaler på det kraftigste, at du kun bruger Premium SKU. Driftsomkostninger med nøgler af hver type er den samme, så den eneste forskel i omkostninger er omkostningerne pr. måned for hver HSM-beskyttet nøgle. Se [Key Vault for at](https://azure.microsoft.com/pricing/details/key-vault/) få mere at vide.
   
 > [!IMPORTANT]
-> Brug de Premium SKU-nøglebokse og HSM-beskyttede nøgler til produktionsdata, og brug kun Standard SKU-nøglebokse og nøgler til test- og valideringsformål.
+> Brug Premium-nøglebokse og HSM-beskyttede nøgler til produktionsdata, og brug kun standardnøgle bokse og nøgler til test og validering.
   
-For hver Microsoft 365 tjeneste, som du skal bruge Customer Key til, skal du oprette en key vault i hvert af de to Azure-abonnementer, du har oprettet. Hvis du f.eks. vil gøre det muligt for Kundenøgle at bruge DEP'er til Exchange Online, SharePoint Online og scenarier med flere arbejdsbelastninger, skal du oprette tre par key vaults.
+For hver Microsoft 365, som du vil bruge som kundenøgle, skal du oprette en nøgleboks i hvert af de to Azure-abonnementer, du har oprettet. Hvis du f.eks. vil gøre det muligt for kundenøgler at bruge DEP'er til Exchange Online-, SharePoint Online- og scenarier med flere arbejdsbelastninger, skal du oprette tre par nøglebokse.
   
-Brug en navngivningskonvention for key vaults, der afspejler den tilsigtede brug af programmet til forhindring af dataforbindelse, som du vil knytte vaults til. Se afsnittet Bedste fremgangsmåder nedenfor for at få anbefalinger til navngivningskonventioner.
+Brug en navngivningskonvention til nøgle bokse, der afspejler den tilsigtede brug af de DATAP, som du skal knytte boksene til. Se afsnittet Bedste fremgangsmåder nedenfor for at få anbefalinger om navngivningskonventioner.
   
-Opret et separat parvis sæt vaults for hver datakrypteringspolitik. For Exchange Online vælges omfanget af en datakrypteringspolitik af dig, når du tildeler politikken til postkassen. En postkasse kan kun have én politik tildelt, og du kan oprette op til 50 politikker. Omfanget af en SharePoint Online-politik omfatter alle dataene i en organisation på en geografisk placering eller *geografisk* placering. Omfanget for en politik med flere arbejdsbelastninger omfatter alle data på tværs af de understøttede arbejdsbelastninger for alle brugere.
+Opret et separat, parret sæt bokse for hver datakrypteringspolitik. For Exchange Online vælges omfanget af en datakrypteringspolitik af dig, når du tildeler politikken til postkassen. En postkasse kan kun have én politik tildelt, og du kan oprette op til 50 politikker. Omfanget af en SharePoint Online-politik omfatter alle data i en organisation på en geografisk placering eller _geo_. Omfanget af en politik med flere arbejdsbelastninger omfatter alle data på tværs af de understøttede arbejdsbelastninger for alle brugere.
 
-Oprettelsen af key vaults kræver også oprettelse af Azure-ressourcegrupper, da key vaults har brug for lagerkapacitet (selvom de er små) og Key Vault logføring, hvis den er aktiveret, genererer også gemte data. Som bedste praksis anbefaler Microsoft at bruge separate administratorer til at administrere hver ressourcegruppe med den administration, der er justeret i forhold til det sæt administratorer, der administrerer alle relaterede kundenøgleressourcer.
+Oprettelse af vigtige bokse kræver også oprettelse af Azure-ressourcegrupper, da nøglebokse har brug for lagerkapacitet (selvom mindre), og Key Vault-logføring også genererer gemte data, hvis de er aktiveret. Som bedste fremgangsmåde anbefaler Microsoft at bruge separate administratorer til at administrere hver ressourcegruppe med den administration, der er justeret med det sæt af administratorer, der administrerer alle relaterede kundenøgleressourcer.
   
-### <a name="assign-permissions-to-each-key-vault"></a>Tildel tilladelser til hver key vault
+> [!IMPORTANT]
+> Du kan maksimere tilgængeligheden ved at placere dine nøglebokse i områder tæt på din Microsoft 365-tjeneste. Hvis f.eks. din Exchange Online-organisation er i Nordamerika, skal du placere dine nøglebokse i Nordamerika. Hvis din Exchange Online er i Europa, skal du placere dine nøglebokse i Europa.
+>
+> Brug et almindeligt præfiks til nøglebokse, og medtag en forkortelse for brugen af og omfanget af nøglenøglerne (f.eks. for Contoso SharePoint-tjenesten, hvor boksene er placeret i Nordamerika, er et muligt sæt navne Contoso-CK-SP-NA-VaultA1 og Contoso-CK-SP-NA-VaultA1 og Contoso-CK-SP-NA-VaultA2. Navne på bokse er globalt entydige strenge i Azure, så det kan være nødvendigt at prøve variationer af dine ønskede navne i tilfælde af, at de ønskede navne allerede er påstået af andre Azure-kunder. Fra og med juli 2017 kan navne på bokse ikke ændres, så den bedste fremgangsmåde er at have en skriftlig plan for konfigurationen og bruge en anden person til at bekræfte, at planen udføres korrekt.
+>
+> Hvis det er muligt, skal du oprette dine bokse i ikke-parrede områder. Parrede Azure-områder giver høj tilgængelighed på tværs af tjenestefejldomæner. Derfor kan regionale par tænkes som hinandens sikkerhedskopiområde. Det betyder, at en Azure-ressource, der er placeret i ét område, automatisk opnår fejltolerance gennem det parrede område. Valg af områder til to bokse, der bruges i en datakrypteringspolitik, hvor områder parres, betyder, at kun to områder af tilgængelighed er i brug i alt. De fleste områder har kun to områder, så det er endnu ikke muligt at vælge ikke-parrede områder. Hvis det er muligt, skal du vælge to ikke-parrede områder til de to bokse, der bruges med en politik for datakryptering. Denne fordel er på sammenlagt fire områder med tilgængelighed. Få mere at vide under [Forretningskontinuitet og genoprettelse efter nedbrud (BCDR): Azure Paired Regions](/azure/best-practices-availability-paired-regions) for en aktuel liste over regionale par.
+  
+### <a name="assign-permissions-to-each-key-vault"></a>Tildele tilladelser til hver nøgleboks
 
-Du skal definere tre separate sæt tilladelser for hver key vault, afhængigt af implementeringen. Du skal f.eks. definere ét sæt tilladelser for hver af følgende:
+Du skal definere tre separate sæt af tilladelser for hver nøgleboks, afhængigt af din implementering. Du skal f.eks. definere ét sæt tilladelser for hver af følgende:
   
-- **Key Vault-administratorer** , der udfører den daglige administration af din key vault for din organisation. Disse opgaver omfatter sikkerhedskopiering, oprettelse, hentning, import, liste og gendannelse.
+- **Vigtige administratorer af bokse** , der administrerer din organisations vigtige boks i det daglige. Disse opgaver omfatter sikkerhedskopiering, oprettelse, hent, import, liste og gendannelse.
 
   > [!IMPORTANT]
-  > Det sæt tilladelser, der er tildelt key vault-administratorer, indeholder ikke tilladelse til at slette nøgler. Dette er bevidst og en vigtig praksis. Sletning af krypteringsnøgler udføres normalt ikke, da det permanent ødelægger data. Som bedste praksis skal du ikke give denne tilladelse til key vault-administratorer som standard. Du kan i stedet reservere dette til key vault-bidragydere og kun tildele det til en administrator på kort sigt, når en klar forståelse af konsekvenserne er forstået.
+  > Det sæt tilladelser, der er tildelt administratorer af nøglebokse, omfatter ikke tilladelse til at slette nøgler. Dette er bevidst og en vigtig øvelse. Det er normalt ikke at slette krypteringsnøgler, da det vil ødelægge data permanent. Som bedste fremgangsmåde skal du ikke give denne tilladelse til nøgleadministratorer i bokse som standard. Du skal i stedet reservere dette til bidragydere til nøglevælgerne og kun tildele den til en administrator på kort tid, når man har forstået en klar forståelse af konsekvenserne.
   
-  Hvis du vil tildele disse tilladelser til en bruger i din organisation, skal du logge på dit Azure-abonnement med Azure PowerShell. Du kan finde en vejledning under [Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
+  Hvis du vil tildele disse tilladelser til en bruger i organisationen, skal du logge på dit Azure-abonnement med Azure PowerShell. Du kan finde en vejledning [under Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
 
-  - Kør Set-AzKeyVaultAccessPolicy-cmdlet'en for at tildele de nødvendige tilladelser.
+- Kør Set-AzKeyVaultAccessPolicy cmdlet'en for at tildele de nødvendige tilladelser.
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName <vault name> -UserPrincipalName <UPN of user> -PermissionsToKeys create,import,list,get,backup,restore
@@ -218,66 +201,44 @@ Du skal definere tre separate sæt tilladelser for hver key vault, afhængigt af
    Set-AzKeyVaultAccessPolicy -VaultName Contoso-CK-EX-NA-VaultA1 -UserPrincipalName alice@contoso.com -PermissionsToKeys create,import,list,get,backup,restore
    ```
 
-- **Key Vault-bidragydere**, der kan ændre tilladelser til selve Azure-Key Vault. Du skal ændre disse tilladelser, når medarbejdere forlader eller deltager i dit team. I den sjældne situation, hvor key vault-administratorer lovligt har brug for tilladelse til at slette eller gendanne en nøgle, skal du også ændre tilladelserne. Dette sæt af bidragydere til key vault skal tildeles rollen **Bidragyder** i din key vault. Du kan tildele denne rolle ved hjælp af Azure Resource Manager. Du kan finde detaljerede trin under [Brug Role-Based Access Control til at administrere adgang til dine Azure-abonnementsressourcer](/azure/active-directory/role-based-access-control-configure). Den administrator, der opretter et abonnement, har implicit denne adgang og muligheden for at tildele andre administratorer rollen Bidragyder.
+- **Nøglebidragsydere** til boks, der kan ændre tilladelser på azure-Key Vault sig selv. Du skal ændre disse tilladelser, efterhånden som medarbejdere forlader eller tilmelder sig dit team. I en sjælden situation, hvor administratorerne af nøglevælgerne har brug for tilladelse til at slette eller gendanne en nøgle, skal du også ændre tilladelserne. Dette sæt af nøgleringsbidragere skal tildeles **rollen Bidragyder** i din nøgleboks. Du kan tildele denne rolle ved hjælp af Azure Resource Manager. Hvis du vil have en detaljeret vejledning[, skal du Role-Based Access Control til at administrere adgangen til dine Azure-abonnementsressourcer](/azure/active-directory/role-based-access-control-configure). Den administrator, der opretter et abonnement, har denne adgang implicit, og muligheden for at tildele andre administratorer rollen som bidragyder.
 
-- **Tilladelser til at Microsoft 365 programmer** for hver key vault, du bruger til Kundenøgle, skal du give wrapKey, unwrapKey og få tilladelser til den tilsvarende Microsoft 365 tjenesteprincipal.
+- **Tilladelser til Microsoft 365-programmer** til hver nøgleboks, du bruger til kundenøgle, skal du give wrapKey, unwrapKey og få tilladelser til den tilsvarende Microsoft 365-tjenesteinspektør. 
 
-  Hvis du vil give tilladelse til Microsoft 365 tjenesteprincipal, skal du køre Cmdlet'en **Set-AzKeyVaultAccessPolicy** ved hjælp af følgende syntaks:
+  Hvis du vil give tilladelse Microsoft 365 Service Principal, skal du køre **Set-AzKeyVaultAccessPolicy-cmdlet'en** ved hjælp af følgende syntaks:
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName <vault name> -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName <Office 365 appID>
    ```
 
    Hvor:
-   - *vault name* er navnet på den key vault, du har oprettet.
-   - Erstat *Office 365 appID med for Exchange Online og Skype for Business*`00000002-0000-0ff1-ce00-000000000000`
-   - I forbindelse med SharePoint Online-, OneDrive for Business- og Teams-filer skal *du erstatte Office 365 appID* med`00000003-0000-0ff1-ce00-000000000000`
-   - I forbindelse med en politik med flere arbejdsbelastninger (Exchange, Teams, Microsoft Information Protection), der gælder for alle lejerbrugere, skal *du erstatte Office 365 appID* med`c066d759-24ae-40e7-a56f-027002b5d3e4`
 
-  Eksempel: Angivelse af tilladelser for Exchange Online og Skype for Business:
+   - *navnet på boksen* er navnet på den nøgleboks, du har oprettet.
+   - Ud for Exchange Online og Skype for Business du *erstatte Office 365 app-id* med`00000002-0000-0ff1-ce00-000000000000`
+   - For SharePoint Online-, OneDrive for Business og Teams skal du *Office 365 appID* med`00000003-0000-0ff1-ce00-000000000000`
+   - For politikker for flere arbejdsbelastninger (Exchange, Teams, Microsoft Information Protection), der gælder for alle *lejerbrugere, skal du erstatte Office 365 appID* med`c066d759-24ae-40e7-a56f-027002b5d3e4`
+
+  Eksempel: Indstilling af tilladelser for Exchange Online og Skype for Business:
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName Contoso-CK-EX-NA-VaultA1 -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName 00000002-0000-0ff1-ce00-000000000000
    ```
 
-  Eksempel: Angivelse af tilladelser for SharePoint Online-, OneDrive for Business- og Teams-filer:
+  Eksempel: Indstilling af tilladelser for SharePoint Online-, OneDrive for Business- og Teams filer:
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName Contoso-CK-SP-NA-VaultA1 -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName 00000003-0000-0ff1-ce00-000000000000
    ```
 
-  Bekræft *, at Get, wrapKey og unwrapKey* tildeles til **hver** key vault ved at køre *Get-AzKeyVault-cmdlet'en* .
+### <a name="make-sure-soft-delete-is-enabled-on-your-key-vaults"></a>Sørg for, at blød sletning er aktiveret på dine nøglebokse
 
-   ```powershell
-   Get-AzKeyVault -VaultName <vault name> | fl
-   ```  
-
-> [!Tip]
-> Før du går videre, skal du sørge for, at tilladelserne er konfigureret korrekt til key vault, og *at Tilladelser til nøgler* returnerer **wrapKey, unwrapKey, hent**.
-> Sørg for at rette tilladelserne til den korrekte tjeneste, du onboarder til. Vist *navn* for hver tjeneste er angivet nedenfor:  
-  >
-  > - Exchange Online og Skype for Business: *Office 365 Exchange Online*
-  > - SharePoint Online-, OneDrive- og Teams-filer: *Office 365 SharePoint Online*
-  > - Flere Microsoft 365 arbejdsbelastninger: *M365DataAtRestEncryption*
-  >  
-  > Nedenstående kodestykke er f.eks. et eksempel på at sikre, at tilladelserne er konfigureret til M365DataAtRestEncryption. I nedenstående cmdlet med en samling med navnet *mmcexchangevault* vises følgende felter.
-  >
-  > ```powershell
-  >   Get-AzKeyVault -VaultName mmcexchangevault | fl
-  >   ```  
-  >
-  >
-  > ![Krypteringsciffer til Exchange Online kundenøgle.](../media/KeyVaultPermissions.png)
-
-### <a name="make-sure-soft-delete-is-enabled-on-your-key-vaults"></a>Sørg for, at blød sletning er aktiveret i dine key vaults
-
-Når du hurtigt kan gendanne dine nøgler, er der mindre sandsynlighed for, at du oplever en længere tjenesteafbrydelse på grund af utilsigtet eller skadeligt slettede nøgler. Aktivér denne konfiguration, der kaldes Blød sletning, før du kan bruge dine nøgler med Kundenøgle. Aktivering af Blød sletning giver dig mulighed for at gendanne nøgler eller vaults inden for 90 dage efter sletning uden at skulle gendanne dem fra sikkerhedskopien.
+Når du hurtigt kan gendanne dine nøgler, vil du være mindre tilbøjelig til at opleve et længere tjenestesvigt på grund af utilsigtede eller skadelige nøgler. Aktivér denne konfiguration, der kaldes blød sletning, før du kan bruge dine nøgler med kundenøgle. Hvis du aktiverer Blød sletning, kan du gendanne nøgler eller bokse inden for 90 dage efter sletningen uden at skulle gendanne dem fra sikkerhedskopien.
   
-Hvis du vil aktivere Blød sletning i dine key vaults, skal du udføre disse trin:
+Hvis du vil aktivere Blød sletning i nøgle bokse, skal du udføre disse trin:
   
-1. Log på dit Azure-abonnement med Windows PowerShell. Du kan finde en vejledning under [Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
+1. Log på dit Azure-abonnement med Windows PowerShell. Du kan finde en vejledning [under Log på med Azure PowerShell](/powershell/azure/authenticate-azureps).
 
-2. Kør Cmdlet'en [Get-AzKeyVault](/powershell/module/az.keyvault/get-azkeyvault) . I dette eksempel er *vault-navnet* navnet på den key vault, som du aktiverer blød sletning for:
+2. Kør [Cmdlet'en Get-AzKeyVault](/powershell/module/az.keyvault/get-azkeyvault) . I dette eksempel *er boksnavnet* navnet på den nøgleboks, du aktiverer blød sletning for:
 
    ```powershell
    $v = Get-AzKeyVault -VaultName <vault name>
@@ -286,67 +247,139 @@ Hvis du vil aktivere Blød sletning i dine key vaults, skal du udføre disse tri
    Set-AzResource -ResourceId $r.ResourceId -Properties $r.Properties
    ```
 
-3. Bekræft blød sletning er konfigureret for key vault ved at køre **Get-AzKeyVault-cmdlet'en** . Hvis blød sletning er konfigureret korrekt for key vault, returnerer egenskaben *Blød sletning aktiveret* værdien **True**:
+3. Bekræft, at blød sletning er konfigureret til nøgleboksen ved at køre **Cmdlet'en Get-AzKeyVault** . Hvis blød sletning er konfigureret korrekt til nøgleboksen, returnerer _egenskaben_ Ikke-permanent sletning værdien **Sand**:
 
    ```powershell
    Get-AzKeyVault -VaultName <vault name> | fl
    ```
 
+### <a name="add-a-key-to-each-key-vault-either-by-creating-or-importing-a-key"></a>Føj en nøgle til hver nøgleboks ved enten at oprette eller importere en nøgle
+
+Der er to måder at føje nøgler til en Azure Key Vault: du kan oprette en nøgle direkte i Key Vault, eller du kan importere en nøgle. Det er mindre kompliceret at oprette Key Vault direkte i en nøgle, men hvis du importerer en nøgle, får du samlet kontrol over, hvordan nøglen genereres. Brug RSA-tasterne. Azure Key Vault ikke ombrydning og opbrud med ellipseformede kurvetaster.
+  
+For at oprette en nøgle direkte i din nøgleboks skal du køre [Cmdlet'en Add-AzKeyVaultKey](/powershell/module/az.keyvault/add-azkeyvaultkey) på følgende måde:
+  
+```powershell
+Add-AzKeyVaultKey -VaultName <vault name> -Name <key name> -Destination <HSM|Software> -KeyOps wrapKey,unwrapKey
+```
+
+Hvor:
+
+- *boksnavn* er navnet på den nøgleboks, hvor du vil oprette nøglen.
+
+- *nøglenavn* er det navn, du vil give den nye nøgle.
+
+  > [!TIP]
+  > Navnenøgler med en lignende navngivningskonvention som beskrevet ovenfor for nøglebokse. På denne måde beskriver strengen sig selv i værktøjer, der kun viser nøglenavnet.
+  
+Hvis du vil beskytte nøglen med en HSM, skal du angive **HSM** som værdien af Destinationsparameteren,  ellers skal du angive **Software**.
+
+Eksempel:
+  
+```powershell
+Add-AzKeyVaultKey -VaultName Contoso-CK-EX-NA-VaultA1 -Name Contoso-CK-EX-NA-VaultA1-Key001 -Destination HSM -KeyOps wrapKey,unwrapKey
+```
+
+Hvis du vil importere en nøgle direkte i din nøgleboks, skal du have et nCipher nShield Hardware Security Module.
+  
+Nogle organisationer foretrækker denne fremgangsmåde for at fastlægge oprindelsen af deres nøgler, og derefter giver denne metode også følgende citater:
+  
+- Værktøjerne, der bruges til import, omfatteration fra nCipher, at Nøgle Exchange Key (KEK), der bruges til at kryptere den nøgle, du genererer, ikke kan eksporteres og genereres i et ægte HSM, der er fremstillet af nCipher.
+
+- Værktøjssættet omfatter bekræftelse fra nCipher af, at Azure Key Vault-sikkerhedsverden også blev genereret på en ægte HSM fremstillet af nCipher. Denne bekræftelse beviser, at Microsoft også bruger ægte nCipher-hardware.
+
+Kontakt din sikkerhedsgruppe for at finde ud af, om ovenstående overvisninger er påkrævede. Hvis du vil have en detaljeret vejledning til at oprette en nøgle i det lokale miljø og importere den til din nøgleboks, skal du se Sådan genererer og overfører [du HSM-beskyttede nøgler til Azure Key Vault](/azure/key-vault/keys/hsm-protected-keys). Brug Azure-vejledningen til at oprette en nøgle i hver nøgleboks.
+  
+### <a name="check-the-recovery-level-of-your-keys"></a>Kontrollér dine nøglers genoprettelsesniveau
+
+Microsoft 365 kræver, at Azure Key Vault-abonnementet er indstillet til Annuller ikke, og at de nøgler, der bruges af kundenøgle, er aktiveret til blød sletning. Du kan bekræfte dine abonnementsindstillinger ved at se på gendannelsesniveauet på dine nøgler.
+  
+Hvis du vil kontrollere genoprettelsesniveauet for en nøgle i Azure PowerShell, skal du køre Get-AzKeyVaultKey cmdlet'en på følgende måde:
+  
+```powershell
+(Get-AzKeyVaultKey -VaultName <vault name> -Name <key name>).Attributes
+```
+
+Hvis egenskaben _Genoprettelsesniveau_ returnerer noget andet end en værdi af **Genoprettelig+Beskyttetabonnement**, skal du sikre dig, at du har lagt abonnementet på listen Annuller ikke, og at du har blød sletning aktiveret på hver af dine nøglebokse.
+  
+### <a name="back-up-azure-key-vault"></a>Sikkerhedskopier Azure Key Vault
+
+Udfør en sikkerhedskopiering og gem kopier af sikkerhedskopieringen, både online og offline, umiddelbart efter oprettelse eller ændring af en nøgle. Forbind ikke offlinekopier til noget netværk. Gem dem i stedet på et offline sted, f.eks. i en fysisk sikker eller kommerciel lagringsfacilitet. Mindst én kopi af sikkerhedskopien skal gemmes på en placering, der er tilgængelig, hvis der opstår nedbrud. Sikkerhedskopierings-blobs er den eneste måde at gendanne nøglemateriale på, Key Vault en nøgle ødelægges permanent eller på anden måde gengives ubrugelig. Nøgler, der er eksterne i forhold til Azure Key Vault og som importeres til Azure Key Vault, kvalificeres ikke som en sikkerhedskopi, da de metadata, der er nødvendige for, at kundenøglen kan bruge nøglen, ikke findes med den eksterne nøgle. Kun en sikkerhedskopi, der er taget fra Azure Key Vault, kan bruges til gendannelseshandlinger med Kundenøgle. Derfor skal du oprette en sikkerhedskopi af Azure Key Vault efter du har uploadet eller oprettet en nøgle.
+  
+Hvis du vil oprette en sikkerhedskopi af en Azure Key Vault-nøgle, skal du køre cmdlet'en [Backup-AzKeyVaultKey](/powershell/module/az.keyvault/backup-azkeyvaultkey) på følgende måde:
+
+```powershell
+Backup-AzKeyVaultKey -VaultName <vault name> -Name <key name>
+-OutputFile <filename.backup>
+```
+
+Sørg for, at outputfilen bruger suffikset `.backup`.
+  
+Outputfilen, der kommer fra denne cmdlet, krypteres og kan ikke bruges uden for Azure Key Vault. Sikkerhedskopieringen kan kun gendannes til det Azure-abonnement, hvorfra sikkerhedskopieringen blev taget.
+  
 > [!TIP]
-> Før du går videre, skal du sørge for, at 'Blød sletning er aktiveret?' er indstillet til 'Sand' som på billedet nedenfor.
->
-> <img src="../media/SoftDeleteEnabled.png" alt="SoftDelete" width="400"/>
+> For outputfilen skal du vælge en kombination af navn og nøgle for boksen. Dette gør filnavnet til en selvbeskrivelse. Det sikrer også, at navne på sikkerhedskopifiler ikke kolliderer.
+  
+Eksempel:
+  
+```powershell
+Backup-AzKeyVaultKey -VaultName Contoso-CK-EX-NA-VaultA1 -Name Contoso-CK-EX-NA-VaultA1-Key001 -OutputFile Contoso-CK-EX-NA-VaultA1-Key001-Backup-20170802.backup
+```
 
-### <a name="add-a-key-to-each-key-vault-either-by-creating-or-importing-a-key"></a>Føj en nøgle til hver key vault ved enten at oprette eller importere en nøgle
+### <a name="validate-azure-key-vault-configuration-settings"></a>Valider Azure Key Vault konfigurationsindstillinger
 
-Der er to måder at føje nøgler til et Azure-Key Vault på. Du kan oprette en nøgle direkte i Key Vault, eller du kan importere en nøgle. Oprettelse af en nøgle direkte i Key Vault er mindre kompliceret, men import af en nøgle giver total kontrol over, hvordan nøglen genereres. Brug RSA-nøglerne. Azure Key Vault understøtter ikke ombrydning og udpakning med elliptiske kurvetaster.
+Validering før brug af nøgler i en dep er valgfrit, men anbefales kraftigt. Hvis du bruger trinene til at konfigurere andre nøgler og bokse end dem, der er beskrevet i denne artikel, skal du validere tilstand for dine Azure Key Vault-ressourcer, før du konfigurerer kundenøgle.
+  
+Sådan kontrollerer du, at dine nøgler har `get`, `wrapKey`og at `unwrapKey` handlinger er aktiveret:
+  
+Kør [Cmdlet'en Get-AzKeyVault](/powershell/module/az.keyvault/get-azkeyvault) på følgende måde:
+  
+```powershell
+Get-AzKeyVault -VaultName <vault name>
+```
 
-Du kan finde oplysninger om, hvordan du føjer en nøgle til hver vault, under [Add-AzKeyVaultKey](/powershell/module/az.keyvault/add-azkeyvaultkey).
+I outputtet skal du se efter Access-politikken og efter Exchange Online identitet (GUID) eller SharePoint Online Identity (GUID) efter behov. Alle tre af ovenstående tilladelser skal vises under Tilladelser til nøgler.
+  
+Hvis konfigurationen af adgangspolitikken er forkert, skal du køre Set-AzKeyVaultAccessPolicy cmdlet'en på følgende måde:
+  
+```powershell
+Set-AzKeyVaultAccessPolicy -VaultName <vault name> -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName <Office 365 appID>
+```
 
- Du kan finde detaljerede trin til at oprette en nøgle i det lokale miljø og importere den i din key vault under [Sådan genererer og overfører du HSM-beskyttede nøgler til Azure Key Vault](/azure/key-vault/keys/hsm-protected-keys). Brug Azure-vejledningen til at oprette en nøgle i hver key vault.
+For eksempel til Exchange Online og Skype for Business:
+  
+```powershell
+Set-AzKeyVaultAccessPolicy -VaultName Contoso-CK-EX-NA-VaultA1 
+-PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName 00000002-0000-0ff1-ce00-000000000000
+```
 
-### <a name="verify-expiration-date-of-your-keys"></a>Kontrollér udløbsdatoen for dine nøgler
+Eksempelvis SharePoint Online og OneDrive for Business:
+  
+```powershell
+Set-AzKeyVaultAccessPolicy -VaultName Contoso-CK-SP-NA-VaultA1
+-PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName 00000003-0000-0ff1-ce00-000000000000
+```
 
-Hvis du vil kontrollere, at der ikke er angivet en udløbsdato for dine nøgler, skal du køre Cmdlet'en [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvault) på følgende måde:
+Hvis du vil bekræfte, at en udløbsdato ikke er angivet for dine nøgler, skal du køre cmdlet'en [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvault) på følgende måde:
   
 ```powershell
 Get-AzKeyVaultKey -VaultName <vault name>
 ```
 
-Kundenøglen kan ikke bruge en udløbet nøgle. Handlinger, der forsøges med en udløbet nøgle, mislykkes og medfører muligvis en tjenesteafbrydelse. Vi anbefaler på det kraftigste, at nøgler, der bruges sammen med kundenøglen, ikke har en udløbsdato. En udløbsdato, når den er angivet, kan ikke fjernes, men kan ændres til en anden dato. Hvis der skal bruges en nøgle, hvor en udløbsdato er angivet, skal du ændre udløbsværdien til 31-12-9999. Nøgler med en udløbsdato, der er angivet til en anden dato end 31-12-9999, vil ikke bestå Microsoft 365 validering.
+Kundenøgle kan ikke bruge en udløbet nøgle. Handlinger, der forsøges med en udløbet nøgle, mislykkes og kan muligvis medføre nede på tjenesten. Vi anbefaler på det kraftigste, at de nøgler, der bruges sammen med kundenøgle, ikke har en udløbsdato. En udløbsdato, når den er angivet, kan ikke fjernes, men kan ændres til en anden dato. Hvis der skal bruges en nøgle, der har en udløbsdato angivet, skal du ændre udløbsværdien til 31-12-9999. Nøgler med en udløbsdato, der er angivet til en anden dato end 31-12-9999, passerer ikke Microsoft 365 validering.
   
-Hvis du vil ændre en udløbsdato, der er angivet til en anden værdi end 31-12-9999, skal du køre [Update-AzKeyVaultKey-cmdlet'en](/powershell/module/az.keyvault/update-azkeyvaultkey) på følgende måde:
+Hvis du vil ændre en udløbsdato, der er blevet indstillet til en anden værdi end 31-12-9999, skal du køre cmdlet'en [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) på følgende måde:
   
 ```powershell
 Update-AzKeyVaultKey -VaultName <vault name> -Name <key name> -Expires (Get-Date -Date "12/31/9999")
 ```
 
 > [!CAUTION]
-> Angiv ikke udløbsdatoer for de krypteringsnøgler, du bruger sammen med kundenøglen.  
-
-### <a name="check-the-recovery-level-of-your-keys"></a>Kontrollér genoprettelsesniveauet for dine nøgler
-
-Microsoft 365 kræver, at Azure Key Vault-abonnementet er angivet til Annuller ikke, og at de nøgler, der bruges af kundenøglen, er aktiveret til blød sletning. Du kan bekræfte indstillingerne for dine abonnementer ved at se på genoprettelsesniveauet på dine nøgler.
+> Angiv ikke udløbsdatoer for de krypteringsnøgler, du bruger med kundenøgle.
   
-Hvis du vil kontrollere genoprettelsesniveauet for en nøgle, skal du køre Get-AzKeyVaultKey-cmdlet'en på følgende måde i Azure PowerShell:
-  
-```powershell
-(Get-AzKeyVaultKey -VaultName <vault name> -Name <key name>).Attributes
-```
+### <a name="obtain-the-uri-for-each-azure-key-vault-key"></a>Hent URI'en for hver Azure Key Vault nøgle
 
-> [!Tip]
-> Før du går videre, skal du sørge for, at du har registreret funktionen *MandatoryRetentionPeriodEnabled* på abonnementet, hvis egenskaben *Recovery Level* returnerer andet end værdien **Recoverable+ProtectedSubscription**, og at du har aktiveret blød sletning for hver af dine key vaults.
->
->    <img src="../media/RecoveryLevel.png" alt="drawing" width="500"/>
-
-### <a name="back-up-azure-key-vault"></a>Sikkerhedskopiér Azure Key Vault
-
-Umiddelbart efter oprettelsen eller eventuelle ændringer af en nøgle skal du udføre en sikkerhedskopiering og gemme kopier af sikkerhedskopien, både online og offline.
-Hvis du vil oprette en sikkerhedskopi af en Azure Key Vault-nøgle, skal du køre [Backup-AzKeyVaultKey-cmdlet'en](/powershell/module/az.keyvault/backup-azkeyvaultkey).
-
-### <a name="obtain-the-uri-for-each-azure-key-vault-key"></a>Hent URI'en for hver Azure Key Vault-nøgle
-
-Når du har konfigureret dine key vaults og tilføjet dine nøgler, skal du køre følgende kommando for at hente URI'en for nøglen i hver key vault. Du skal bruge disse URI'er, når du opretter og tildeler hver enkelt dep senere, så gem disse oplysninger et sikkert sted. Kør denne kommando én gang for hver key vault.
+Når du har konfigureret dine nøglebokse og tilføjet dine nøgler, skal du køre følgende kommando for at hente URI'en for nøglen i hver nøgleboks. Du skal bruge disse URI'er, når du opretter og tildeler hver deP senere, så gem disse oplysninger et sikkert sted. Kør denne kommando én gang for hver nøgleboks.
   
 I Azure PowerShell:
   
@@ -356,7 +389,7 @@ I Azure PowerShell:
 
 ## <a name="next-steps"></a>Næste trin
 
-Når du har fuldført trinnene i denne artikel, er du klar til at oprette og tildele DEP'er. Du kan finde instruktioner under [Administrer kundenøgle](customer-key-manage.md).
+Når du har gennemført trinnene i denne artikel, er du klar til at oprette og tildele DEP'er. Du kan finde en vejledning [under Administrer kundenøgle](customer-key-manage.md).
 
 ## <a name="related-articles"></a>Relaterede artikler
 

@@ -17,19 +17,19 @@ ms.date: 01/26/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 0ea2184720467b3756b5cde8c8973e8952d5b50c
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 4962537e86010fceeb2845fdd6408270c97742dc
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63593209"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469751"
 ---
 # <a name="microsoft-defender-antivirus-on-windows-server"></a>Microsoft Defender Antivirus på Windows Server
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft Defender Antivirus fås i følgende udgaver/versioner af Windows Server:
 
@@ -37,7 +37,7 @@ Microsoft Defender Antivirus fås i følgende udgaver/versioner af Windows Serve
 - Windows Server 2019
 - Windows Server, version 1803 eller nyere
 - Windows Server 2016
-- Windows Server 2012 R2 (Kræver Microsoft Defender til slutpunkt)
+- Windows Server 2012 R2 (kræver Microsoft Defender for Endpoint)
 
 I nogle tilfælde Microsoft Defender Antivirus kaldes det *Endpoint Protection*, men protectionprogrammet er det samme. Selvom funktionalitet, konfiguration og administration i høj grad er ens for [Microsoft Defender Antivirus på Windows 10](microsoft-defender-antivirus-windows.md) og Windows 11, er der nogle få vigtige forskelle på Windows Server:
 
@@ -64,7 +64,7 @@ Som standard er Microsoft Defender Antivirus installeret og funktionelt på Wind
 Hvis gui'en ikke er installeret på serveren, og du vil installere den, skal du enten bruge  guiden Tilføj roller og funktioner eller PowerShell-cmdlet'er.
 
 > [!NOTE]
-> Denne indstilling er ikke tilgængelig for Windows Server 2012 R2. Du kan finde flere oplysninger [under Indstillinger for installation af Microsoft Defender til slutpunkt](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
+> Denne indstilling er ikke tilgængelig for Windows Server 2012 R2. Du kan finde flere oplysninger [under Indstillinger for installation Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
 
 ### <a name="turn-on-the-gui-using-the-add-roles-and-features-wizard"></a>Aktivere den grafiske brugergrænseflade ved hjælp af guiden Tilføj roller og funktioner
 
@@ -74,7 +74,7 @@ Hvis gui'en ikke er installeret på serveren, og du vil installere den, skal du 
 
    I Windows Server 2016 **ser guiden Tilføj roller og funktioner** sådan ud:
 
-   ![Guiden Tilføj roller og funktioner, der viser GUI for Windows Defender indstillinger.](images/server-add-gui.png)
+   :::image type="content" source="images/server-add-gui.png" alt-text="Guiden Tilføj roller og funktioner, der viser GUI for Windows Defender indstillinger." lightbox="images/server-add-gui.png":::
 
    I Windows Server 2019 og Windows Server 2022 minder guiden Tilføj roller **og** funktioner om hinanden.
 
@@ -136,7 +136,7 @@ sc query state= all
 
 ## <a name="update-antimalware-security-intelligence"></a>Opdater antimalwaresikkerhedsintelligens
 
-For at få opdateret antimalwaresikkerhedsintelligens skal du have Windows Update-tjenesten kørende. Hvis du bruger en opdateringsstyringstjeneste, f.eks. Windows Server Update Services (WSUS), skal du sikre dig, at opdateringer til Microsoft Defender Antivirus Sikkerhedsintelligens er godkendt til de computere, du administrerer.
+For at få opdateret antimalwaresikkerhedsintelligens skal du have Windows Update tjeneste kørende. Hvis du bruger en opdateringsstyringstjeneste, f.eks. Windows Server Update Services (WSUS), skal du sikre dig, at opdateringer til Microsoft Defender Antivirus Sikkerhedsintelligens er godkendt til de computere, du administrerer.
 
 Som standard downloader Windows Update ikke opdateringer automatisk på Windows Server 2019 eller Windows Server 2022 eller Windows Server 2016. Du kan ændre denne konfiguration ved hjælp af en af følgende metoder:
 
@@ -144,14 +144,14 @@ Som standard downloader Windows Update ikke opdateringer automatisk på Windows 
 
 | Metode | Beskrivelse |
 |---|---|
-| **Windows Opdater** i Kontrolpanel | **Installation af opdateringer resulterer** automatisk i, at alle opdateringer installeres automatisk, Windows Defender sikkerhedsintelligensopdateringer. <br/><br/> **Download opdateringer, men lad mig vælge**, om jeg vil installere dem, Windows Defender at downloade og installere Sikkerhedsintelligens-opdateringer automatisk, men andre opdateringer installeres ikke automatisk. |
+| **Windows Update** i Kontrolpanel | **Installation af opdateringer resulterer** automatisk i, at alle opdateringer installeres automatisk, Windows Defender sikkerhedsintelligensopdateringer. <br/><br/> **Download opdateringer, men lad mig vælge**, om jeg vil installere dem, Windows Defender at downloade og installere Sikkerhedsintelligens-opdateringer automatisk, men andre opdateringer installeres ikke automatisk. |
 | **Gruppepolitik** | Du kan konfigurere og administrere Windows Update ved hjælp af de indstillinger, der er tilgængelige i Gruppepolitik, på følgende sti: **Administrative skabeloner\Windows Components\Windows Update\Configure Automatic Updates** |
-| **Registreringsdatabasenøglen AUOptions** | De følgende to værdier gør det muligt Windows Update automatisk at hente og installere Sikkerhedsintelligens-opdateringer: <br/><br/> **4** -  **Installér opdateringer automatisk**. Denne værdi medfører, at alle opdateringer installeres automatisk, Windows Defender sikkerhedsintelligensopdateringer. <br/><br/> **3** -  **Hent opdateringer, men lad mig vælge, om jeg vil installere dem**. Denne værdi gør Windows Defender at downloade og installere Sikkerhedsintelligens-opdateringer automatisk, men andre opdateringer installeres ikke automatisk. |
+| **Registreringsdatabasenøglen AUOptions** | Følgende to værdier gør det muligt Windows Update hente og installere Sikkerhedsintelligens-opdateringer automatisk: <br/><br/> **4** -  **Installér opdateringer automatisk**. Denne værdi medfører, at alle opdateringer installeres automatisk, Windows Defender sikkerhedsintelligensopdateringer. <br/><br/> **3** -  **Hent opdateringer, men lad mig vælge, om jeg vil installere dem**. Denne værdi gør Windows Defender at downloade og installere Sikkerhedsintelligens-opdateringer automatisk, men andre opdateringer installeres ikke automatisk. |
 
 For at sikre at beskyttelsen mod malware bevares, anbefaler vi, at du aktiverer følgende tjenester:
 
 - Windows Fejlrapportering tjeneste
-- Windows-opdateringstjeneste
+- Windows Update tjeneste
 
 I følgende tabel vises tjenesterne for Microsoft Defender Antivirus og de afhængige tjenester.
 
@@ -163,7 +163,7 @@ I følgende tabel vises tjenesterne for Microsoft Defender Antivirus og de afhæ
 | Windows Defender tjeneste (WinDefend) | `C:\Program Files\Windows Defender\MsMpEng.exe` | Dette er den primære Microsoft Defender Antivirus, der skal køre hele tiden.|
 | Windows Fejlrapportering tjeneste (Wersvc) | `C:\WINDOWS\System32\svchost.exe -k WerSvcGroup` | Denne tjeneste sender fejlrapporter tilbage til Microsoft. |
 | Windows Defender Firewall (MpsSvc) | `C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork` | Vi anbefaler, at Windows Defender Firewall-tjenesten er aktiveret. |
-| Windows Opdatering (Wuauserv) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Windows opdatering er nødvendig for at få sikkerhedsintelligensopdateringer og opdateringer til antimalwareprogrammet |
+| Windows Update (Wuauserv) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Windows Update er nødvendig for at få sikkerhedsintelligensopdateringer og opdateringer til antimalwareprogrammet |
 
 ## <a name="submit-samples"></a>Sende eksempler
 
@@ -232,13 +232,13 @@ Uninstall-WindowsFeature -Name Windows-Defender-GUI
 
 ### <a name="are-you-using-windows-server-2012-r2-or-windows-server-2016"></a>Bruger du Windows Server 2012 R2 eller Windows Server 2016?
 
-Du kan nu køre Microsoft Defender Antivirus i passiv tilstand Windows Server 2012 R2 og Windows Server 2016. Du kan finde flere oplysninger [under Indstillinger for installation af Microsoft Defender til slutpunkt](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
+Du kan nu køre Microsoft Defender Antivirus i passiv tilstand Windows Server 2012 R2 og Windows Server 2016. Du kan finde flere oplysninger [under Indstillinger for installation Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
 
 <br/><br/>
 
 | Procedure | Beskrivelse |
 |---|---|
-| Deaktiver Microsoft Defender Antivirus brug Gruppepolitik | I din Lokale Gruppepolitik-editor skal du gå til **Administrationsskabelon** >  **Windows Component** >  **Endpoint Protection** >  **Disable Endpoint Protection** og derefter **vælge EnabledOK** > . |
+| Deaktivere Microsoft Defender Antivirus ved hjælp af Gruppepolitik | I din Lokale Gruppepolitik-editor skal du gå til **Administrativ** >  **skabelon Windows Component** >  **Endpoint Protection** >  **Disable Endpoint Protection** og derefter **vælge EnabledOK** > . |
 | Deaktiver Microsoft Defender Antivirus ved hjælp af en registreringsdatabasenøgle | Hvis du vil bruge [registreringsdatabasenøglen DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware) , skal du gå til `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`og angive eller oprette en DWORD-post kaldet `DisableAntiSpyware`. Angiv dens værdi til `1` (som indstiller værdien for registreringsdatabasenøglen til *sand*). |
 | Deaktiver Microsoft Defender Antivirus hjælp af PowerShell | Brug følgende PowerShell-cmdlet: `Set-MpPreference -DisableRealtimeMonitoring $true` |
 | Fjern Microsoft Defender Antivirus ved hjælp af PowerShell | Brug følgende PowerShell-cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender` |

@@ -15,12 +15,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan du bruger Fix possible mail loop insight i Mail flow dashboard i Security & Compliance Center til at identificere og rette mailløkker i deres organisation.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a80555f438ceb9431638e727ff0b84c3268ac1c1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5a74e7cc623dffd6bae6451f7488d8f630b607b2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679692"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469135"
 ---
 # <a name="fix-possible-mail-loop-insight-in-the-security--compliance-center"></a>Ret mulig indsigt i mailløkken i Security & Compliance Center
 
@@ -28,7 +28,7 @@ ms.locfileid: "63679692"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Mailløkker er dårlige, fordi:
@@ -41,7 +41,7 @@ Fix **possible mail loop** insight in the **Recommended for you** area of the [M
 
 Dette indsigt vises kun, når betingelsen er registreret (hvis du ikke har nogen mailløkker, kan du ikke se indsigten).
 
-![Ret indsigt i regler for langsomt mailflow i området Anbefalet til dig i dashboardet for mailflow.](../../media/mfi-fix-possible-mail-loop.png)
+:::image type="content" source="../../media/mfi-fix-possible-mail-loop.png" alt-text="Du kan finde oplysninger om regler for rettelse af langsom mailflow i området Anbefalet til dig i dashboardet for mailflow" lightbox="../../media/mfi-fix-possible-mail-loop.png":::
 
 Når du klikker **på Vis detaljer** på widgetten, vises en pop op-meddelelse med flere oplysninger:
 
@@ -49,9 +49,9 @@ Når du klikker **på Vis detaljer** på widgetten, vises en pop op-meddelelse m
 - **Antal meddelelser: Du** kan klikke på  Vis eksempelmeddelelser for at få [](message-trace-scc.md) vist resultaterne for meddelelsessporing for en stikprøve af de meddelelser, der blev påvirket af løkken.
 - **Domænetype**" Eksempelvis Autoritativ eller Ikke-autoritativ.
 - **MX-post**: Værdierne **for vært (Mailserver**) **og Prioritet** for MX-posten for domænet.
-- **Årsagen til** **løkken og Sådan** løser du det: Vi identificerer de mest almindelige scenarier for mailløkker og leverer anbefalede handlinger til at rette løkken.
+- **Loop og** **Sådan løser** du problemet: Vi identificerer de mest almindelige scenarier for mailløkker og leverer anbefalede handlinger til at rette løkken.
 
-![Pop op-vindue med detaljer, der vises, når du klikker på Vis detaljer i få mere at vide om Fix possible mail loop.](../../media/mfi-fix-possible-mail-loop-details.png)
+:::image type="content" source="../../media/mfi-fix-possible-mail-loop-details.png" alt-text="Pop op-vindue med Detaljer, der vises, når du klikker på Vis detaljer i indsigten Ret mulige mailløkker" lightbox="../../media/mfi-fix-possible-mail-loop-details.png":::
 
 ## <a name="see-also"></a>Se også
 

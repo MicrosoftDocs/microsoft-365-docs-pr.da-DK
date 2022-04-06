@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: The Microsoft 365 Administration - få mere at vide om de funktioner, der blev tilføjet i denne måned.
-ms.openlocfilehash: 2a86fdaac2334bfb5b30a3ad60e875a7c9a97a3b
-ms.sourcegitcommit: 57211e8082a3429017ad33fe0e6bd9af203bb7ab
+ms.openlocfilehash: 231fdcce809834503a93eeb0a87f993f13de3d09
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63589925"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634118"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Nyheder i Microsoft 365 Administration
 
@@ -50,6 +50,18 @@ Og hvis du gerne vil vide, hvad der er nyt med andre Microsoft-skytjenester:
 - [Nyheder i SharePoint Administration](/sharepoint/what-s-new-in-admin-center)
 - [Office opdateringer](/OfficeUpdates/)
 - [Sådan kontrolleres Windows tilstand for udgivelse](/windows/deployment/update/check-release-health)
+
+## <a name="march-2022"></a>Marts 2022
+
+### <a name="microsoft-365-lighthouse-ga"></a>Microsoft 365 Lighthouse GA
+
+Små og mellemstore virksomheder er ofte afhængige af pålidelige it-partnere til at administrere deres it-miljøer. Vi gør det nemmere for partnere at sikre kunderne på en effektiv måde med den generelle tilgængelighed af [Microsoft 365 Lighthouse](https://aka.ms/March1SMBPartnerBlog), en administrationsportal for flere lejere for administrerede tjenesteudbydere. Microsoft 365 Lighthouse giver en komplet oplevelse for kunderne ved at give deres partnere mulighed for hurtigt at identificere og reagere på trusler, unormale logons og beskeder om enhedsoverholdelse for at beskytte dem.
+
+:::image type="content" source="../media/lighthouse.png" alt-text="Skærmbillede: Microsoft 365 Lighthouse-dashboard":::
+
+Microsoft 365 Lighthouse er kun en it-partnertjeneste, og den er tilgængelig for partnere, der er tilmeldt Cloud Solution Provider-programmet (CSP), og som administrerer kunder, der har op til 1000 licenserede brugere med Microsoft 365 Business Premium, Microsoft 365 E3 eller Microsoft Defender til virksomheder (i forhåndsvisning) abonnementer. Hvis du er Microsoft CSP-tilmeldt it-partner, er Microsoft 365 Lighthouse tilgængeligt for din organisation uden omkostninger og er designet til at hjælpe din virksomhed med at vokse og vokse. Se [hjælpebiblioteket Microsoft 365 Lighthouse for at](../lighthouse/m365-lighthouse-overview.md) få flere oplysninger.
+
+Se Tilmeld dig Microsoft 365 Fyrtårn for at komme i [gang med Microsoft 365 fyrtårn](../lighthouse/m365-lighthouse-sign-up.md). Hvis du vil vide mere Microsoft 365 Lighthouse, Defender for Business og Microsoft 365 Business Premium, kan du deltage i [vores webinarserie for partnere](https://aka.ms/M365MDBSeries).
 
 ## <a name="february-2022"></a>Februar 2022
 
@@ -122,7 +134,7 @@ Hvis du vil se disse opdateringer i <a href="https://go.microsoft.com/fwlink/p/?
 
 Vi har føjet et par nye kategorier til søgefunktionaliteten.
 
-- Du kan nu søge efter Microsoft 365 administratorroller i global søgning og hurtigt få vist og administrere rolletildelinger fra en hvilken som helst side. Søg f.eks. efter **Intune-administrator**.
+- Du kan nu søge efter Microsoft 365 administratorroller i global søgning og hurtigt få vist og administrere rolletildelinger fra en hvilken som helst side. Du kan f.eks. **søge Intune administrator**.
 
 - Du kan nu finde forenklede konfigurationsoplevelser via global søgning. Dette kan hjælpe dig og dit team med hurtigt at komme i gang med at bruge nye funktioner. Søg f.eks. efter **Angiv adgangskode til aldrig at udløbe**.
 
@@ -200,11 +212,11 @@ Vi har udviklet et sæt funktioner til administratorer med flere lejere, som dig
 - **Dine lejere**: Skift hurtigt mellem de lejere, du administrerer.
 - **Alle lejere**: En ny side, hvor du hurtigt kan se alle dine lejeres tjenesters tilstand, alle åbne serviceanmodninger, dine produkter og fakturering, anbefalede konfigurationsopgaver og antallet af brugere i den pågældende lejer.
 - **Konfiguration**: Siden Konfiguration af flere lejere giver dig en listevisning af installationssiden, men den er organiseret for mange lejere. Du kan se, hvilke funktioner der ikke er slået til, hvilke opgaver der er fuldført for alle lejere, opgaver, som lejere stadig skal fuldføre. Denne visning hjælper dig med at holde styr på indføring af funktioner og sikre, at de anbefalede sikkerhedskonfigurationsopgaver altid udføres.
-- **Tjenestestilstand**: Visningen Tjenestestilstand viser dig, hvis hændelser eller råd påvirker lejerne. Den vil endda fortælle dig, hvor mange af dine administrerede lejere, der påvirkes. Du skal bare vælge en hændelse for at få flere oplysninger på fanen Oversigt og derefter skifte over til fanen Lejere påvirkede for at analysere ned og understøtte den pågældende lejer.
+- **Tjenestetilstand**: Visningen Tjenestestilstand viser dig, hvis hændelser eller råd påvirker lejerne. Den vil endda fortælle dig, hvor mange af dine administrerede lejere, der påvirkes. Du skal bare vælge en hændelse for at få flere oplysninger på fanen Oversigt og derefter skifte over til fanen Lejere påvirkede for at analysere ned og understøtte den pågældende lejer.
 - **Overførsel af postkasser** på tværs af lejere er en ny tjeneste, der nu er i offentlig prøveversion, som gør det muligt at flytte postkasser mellem lejere uden behov for at offboarde og derefter onboarde postkasser. 
 - **Domænedeling på tværs af lejere**: Du kan snart deltage i en privat forhåndsvisning af funktioner, der giver dig mulighed for at dele et domæne på tværs af flere lejere. Hvis Contoso f.eks. køber Wingtip Toys, kan Contoso dele domænet med Wingtip Toys, så personer i begge lejere kan bruge "contoso.com" som deres mailadresser.
 
-![Siden Tjenestestilstand for flere lejere med en hændelse markeret og fanen Lejere berørt åben. Navigationsmenuen har Alle lejere, Konfiguration og Tjeneste sundhed som de eneste indstillinger.](../media/MAC-WN-MTinServiceHealth.png)
+![Tjenestetilstand side for flere lejere med en hændelse markeret, og fanen Lejere berørt åben. Navigationsmenuen har alle lejere, konfiguration og Tjenestetilstand de eneste indstillinger.](../media/MAC-WN-MTinServiceHealth.png)
 
 ### <a name="monitor-your-most-important-accounts"></a>Overvåg dine vigtigste konti
 
@@ -244,11 +256,11 @@ Vi er begyndt at udrulle en ny søgeoplevelse i Administration, og vi kan ikke v
 
 [Mobilappen Microsoft 365](https://www.microsoft.com/microsoft-365/business/manage-office-365-admin-app) Administration, som følger med dit abonnement, giver dig mulighed for at administrere Microsoft 365 fra din mobilenhed, så du kan komme væk fra dit skrivebord og udføre daglige opgaver. Faktisk er der mere end 90 funktioner i appen , og vi har lige tilføjet et par flere:
 
-- **Understøttelse Microsoft Intune** politikker for Administration af mobilapps og Betinget adgang: Du kan nu bruge din personlige enhed til at administrere Microsoft 365, også selvom din organisation har aktiveret Intunes politikker for administration af mobilapps og betinget adgang.
+- **Understøttelse af Microsoft Intune's** politikker for administration af mobilapps og betinget adgang: Du kan nu bruge din personlige enhed til at administrere Microsoft 365, også selvom din organisation har aktiveret Intune's politikker for administration af mobilapps og betinget adgang.
 - **Meddelelser i meddelelsescenteret**: Slå beskeder i **meddelelsescenteret** **til Indstillinger** >  Meddelelser, hvis du vil have besked om nye indlæg i meddelelsescenteret. Via meddelelser ønsker vi at sikre, at du holder dig informeret om vigtige oplysninger og begivenheder på tværs af din lejer.
 - **Faktureringsbeskeder**: Du kan også slå faktureringsbeskeder til **på Indstillinger** >  Meddelelser, hvis du vil have **faktureringsbeskeder** på din enhed, hvis et abonnement er ved at udløbe.
 - **Mørk tilstand**: Velkommen til den mørke side af mobilappen. Dette var en af vores mest ønskede funktioner. Gå til **Indstillinger** >  **Themes for** at aktivere den.
-- **Rapportér et problem**: Du kan nu rapportere et problem i appen eller få vist problemer, der er rapporteret af andre administratorer. Besøg **Tjeneste sundhed** for at tjekke det ud.
+- **Rapportér et problem**: Du kan nu rapportere et problem i appen eller få vist problemer, der er rapporteret af andre administratorer. Gå **Tjenestetilstand for** at se det.
 
 ![Siden Tilstand i Microsoft 365 med meddelelser om meddelelsescenter, tjenestestilstand og faktureringsbeskeder.](../media/MAC-WN-AdminMobileApp.png)
 
@@ -271,13 +283,13 @@ Vi kigger hele tiden på og opdaterer indholdet og værktøjerne for at holde os
 - Ændre Exchange politik for begrænsning af webtjenesten
 - Kontrollere status for klargøring Teams validering for bestemte brugere
 - Løs problemer med DKIM-konfiguration
-- Diagnosticere intune-brugerregistreringsfejl
+- Diagnosticering Intune af brugerregistreringsfejl
 
 Og vi udruller den nye og forbedrede supportoplevelse, som du allerede kan <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">se i Microsoft 365 Administration</a> til nogle af de andre administrationscentre. Teams administration og Sikkerheds- og overholdelsesadministrationscenter har allerede denne nye oplevelse. Og snart **Exchange** Administration, **SharePoint Administration** og **Office.com** sammen med denne nye hjælpoplevelse for administratorer.
 
 ### <a name="manage-changes-with-microsoft-planner"></a>Administrer ændringer med Microsoft Planner
 
-I maj annoncerede vi, at du snart vil kunne synkronisere indlæg i Meddelelsescenter til Microsoft Planner, og nu er det tilgængeligt for alle at bruge.  Du kan nu oprette opgaver fra meddelelser, tildele dem og spore dem til afslutning. Første gang du vælger **Planner-synkronisering,** skal du oprette forbindelse til den relevante plan.
+I maj annoncerede vi, at du snart vil kunne synkronisere indlæg i Meddelelsescenter til Microsoft Planner og nu er det tilgængeligt for alle at bruge.  Du kan nu oprette opgaver fra meddelelser, tildele dem og spore dem til afslutning. Første gang du vælger **Planner-synkronisering,** skal du oprette forbindelse til den relevante plan.
 
 ![Meddelelsescenter med "planlægningssynkronisering" fremhævet på kommandolinjen ud for knappen indstillinger.](../media/MAC-WN-MCPlannerSync.png)
 
@@ -355,7 +367,7 @@ Du kan få mere at vide om disse roller under [Om administratorroller](./add-use
 
 Vi har hørt fra mange administratorer, at de har brug for at dele oplysninger om grupper og deres brug til personer, der ikke har adgang til administrationscentrene. Du kan nu eksportere listen Grupper til en CSV-fil til overvågningsformål, hvilket betyder, at du kan smide det gamle PowerShell-script ud. Hvis du vil prøve det, skal **du gå** >  **til GrupperGrupper** og derefter **vælge Eksportér** grupper fra kommandolinjen.
 
-### <a name="microsoft-365-solution-and-architecture-center"></a>Microsoft 365 og arkitekturcenter
+### <a name="microsoft-365-solution-and-architecture-center"></a>Microsoft 365-løsnings- og arkitekturcenter
 
 Så denne måned udsendte vi et nyt websted på docs.microsoft.com kaldet [Microsoft 365-løsning](../solutions/index.yml) og arkitekturcenter, som samler den tekniske vejledning, du skal bruge til at forstå, planlægge og implementere integrerede Microsoft 365-løsninger til sikkert og kompatibelt samarbejde. I dette center finder du:
 
@@ -369,149 +381,3 @@ Så denne måned udsendte vi et nyt websted på docs.microsoft.com kaldet [Micro
 
 - Nyheder **i Microsoft 365-videoserien**: Denne måned dækker vi den nye supportoplevelse i Teams-administrations- og sikkerheds- og overholdelsescenter, Planner-integration med Meddelelsescenter og det nye 3x3-videolayout i Microsoft Teams. 
 - Siden [Microsoft 365 Administration hjælp-hub](./index.yml) er blevet opdateret, så du hurtigere kan finde det, du skal bruge. Og hvis du går til denne side lige nu, har vi tilføjet et kort, der informerer dig om vigtige opdateringer og ændringer.
-
-## <a name="april-2020"></a>april 2020
-
-### <a name="intune-roles-management"></a>Administration af intune-roller
-
-[april 2020](#april-2020)
-
-Vi gjorde det! Vi har taget det andet trin i retning af en samlet rolleoplevelse, og du kan nu administrere Intune-roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">i Microsoft 365 Administration</a>. Du kan også benytte funktioner som f.eks. muligheden for at søge efter roller og få vist rolletilladelser. Det betyder, at du ikke behøver to separate værktøjer til at administrere roller for Microsoft 365 og Intune. Når du logger på <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>, kan du se, at der er to pivoter på siden Roller, en for Azure AD og en for Intune.
-
-![Siden Roller med Intune-pivoten markeret.](../media/MAC-WN-IntuneRoles.png)
-
-### <a name="sync-message-center-posts-to-planner"></a>Synkroniser indlæg i Meddelelsescenter til Planner
-
-Fra og med maj begynder administratorer, der er i den målrettede udgivelsesversion, at se knappen "Planner-synkronisering" i meddelelsescenteret. Du kan nu spore meddelelser, der kræver handling, vælge den type meddelelser, du gerne vil spore, tildele meddelelser til at spore som opgaver og mærke meddelelser til senere opmærksomhed.
-
-[Deltag i den målrettede udgivelsesversion](manage/release-options-in-office-365.md) for at komme i gang!
-
-### <a name="need-help-launched-in-teams-admin-center--security-and-compliance-centers"></a>"Har du brug for hjælp?" startet Teams Administration & Security and Compliance Centers
-
-Den Teams Administration, Sikkerhedscenter og Overholdelsescenter bruger nu den samme "Har du brug for hjælp?" funktion, som <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 Administration</a> bruger til at finde hjælp og kontakte support. Vi har modtaget en masse feedback fra administratorer om, at du gerne vil have det samme niveau af hjælp og support, og det er vi glade for at fortælle dig. Prøv det, og giv os din feedback!
-
-#### <a name="need-chat"></a>Har du brug for chat?
-
-Vores supportmedarbejdere har arbejdet hjemmefra, mens de stadig tager kundesager og begrænsninger på internetbåndbredden, mens de arbejder hjemmefra, og det kan påvirke kundeopkaldskvaliteten. For at fortsætte med at yde support til dig har vi lanceret live chat-supportmulighed for kommercielle kunder <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">i Microsoft 365 Administration</a>.
-
-Når du opretter en serviceanmodning, får du nu vist chat som en valgmulighed foruden telefon og mail. Vælg chat som en foretrukken kommunikationskanal, og opret anmodningen. Når du har oprettet anmodningen, kan du starte chatten, når du er klar til at chatte med Microsoft-agenter.
-
-### <a name="teams-updates"></a>Teams opdateringer
-
-Med den øgede brug af Teams har vi tilføjet et par funktioner, der kan hjælpe dig med at administrere dem.
-
-- Et nyt anbefalingskort på startsiden i Administration viser, hvilke brugere der ikke aktivt har Teams inden for 30 dage. Du kan sende disse brugere en træningsmail for at få dem i gang med at Teams.
-- **Få folk til** at mødes med teams:  Gå til Konfiguration for at se en ny side, som hjælper dig med at aktivere Teams for licenserede brugere og tillade gæsteadgang, så du kan arbejde med eksterne kunder i Teams.
-- Et Microsoft Teams-kort er nu som standard fastgjort til din startside. Den viser, Teams er slået til, og om gæsteadgang er tilladt. Det giver dig også mulighed for at kontrollere konfigurationsstatus for nyligt licenserede Teams brugere og kontrollere, om netværksproblemer kan påvirke Teams brugere.
-- Endelig er Teams nu et trin i det indledende opsætningsflow, hvis du har købt en licens, der Teams.
-
-### <a name="productivity-score"></a>Produktivitetsscore
-
-Produktivitetsscore giver indsigt i, hvordan folk bruger Microsofts skytjenester og de teknologioplevelser, der understøtter dem. Resultatet afspejler din organisations ydeevne i forhold til målinger for medarbejder- og teknologioplevelsen og sammenligner din score med organisationer som din. Denne måned introducerer vi følgende nye koncepter til forhåndsvisningsoplevelsen:
-
-- Tendensvisning af primær indsigt på startsiden og kategoridetaljesiderne – Slutpunktsanalyse og kategorier for netværksforbindelse føjet til teknologioplevelsen
-- Relevant indsigt i teknologioplevelsen vist i kategorierne for medarbejderoplevelse
-- Kategorien Ny kommunikation som en del af medarbejderoplevelsen
-- Brugeroplysninger med organisationsmetadata i kategorierne for medarbejderoplevelse
-
-Hvis du gerne vil vide mere, kan du se bloggen: Måle og forbedre Microsoft 365 [med Microsoft Productivity Score](https://techcommunity.microsoft.com/t5/microsoft-365-blog/measure-and-improve-the-microsoft-365-experience-with-microsoft/ba-p/1348618). Produktivitetsresultatet er i øjeblikket en privat prøveversion. [Deltag i det private eksempel med Produktivitetsscore](https://aka.ms/productivityscorepreview) for at komme i gang.
-
-### <a name="groups-updates"></a>Opdateringer af grupper
-
-Vi har to opdateringer til Grupper denne måned:
-
-- Du kan nu redigere mailadresser for Office 365 grupper (også kaldet grupper i Outlook og snart blive kendt som Microsoft 365 grupper).
-- Vi har hørt din feedback, og vi har tilføjet tydeligere fejlmeddelelser om, hvorfor du ikke kan konvertere en gruppe til et Microsoft-team.
-
-### <a name="docs-videos-and-training-april"></a>Dokumenter, videoer og kurser (april)
-
-Nyheder i **Microsoft 365-videoserier**: Denne måned dækker vi tip og ressourcer, der kan hjælpe mindre virksomheder med at overgå til fjernarbejde, herunder hvordan du udruller Microsoft Teams, ressourcer til fjernarbejde til at holde forbindelsen med kunder og partnere og den nye Microsoft 365 Business Voice-plan. [Nyheder i Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=2118096)
-
-#### <a name="for-your-users"></a>For dine brugere
-
-- [Planlæg et møde](https://support.microsoft.com/office/943507a9-8583-4c58-b5d2-8ec8265e04e5)
-- [Deltage i Teams møde](https://support.microsoft.com/office/078e9868-f1aa-4414-8bb9-ee88e9236ee4)
-- [Opret et team for hele organisationen](/microsoftteams/create-an-org-wide-team)
-- [Opret et team med gæster](https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f)
-- [Deltag i et team som gæst](/microsoftteams/guest-experience)
-- [Opret en gruppemailadresse](https://support.microsoft.com/office/3f73d218-52d6-4f88-a733-9ff37073ee4c)
-
-#### <a name="for-admins-and-business-owners"></a>Til administratorer og virksomhedsejere
-
-- [Gør din lille virksomhed bedre med fjernarbejde](https://support.microsoft.com/office/9b91a85a-39b4-40a6-a590-0f9bea0ba8e6)
-- [At køre en ekstern mindre virksomhed](admin-overview/sign-up-for-office-365.md)
-- [Tilmeld dig Microsoft Business Basic]()
-- [Konfiguration af tofaktor-logon](admin-overview/sign-up-for-office-365.md)
-
-## <a name="march-2020"></a>Marts 2020
-
-### <a name="featured-feedback-fix-improve-add-user-reliability-for-licensing"></a>Udvalgt feedbackrettelse: Gør pålideligheden af "tilføj bruger" bedre for licenser
-
-Vi har modtaget en masse feedback fra administratorer om, hvor svært det er at tildele licenser, når de tilføjer brugere. Vi har foretaget den første opdatering til denne rettelse, og vi har overflyttet til en mere pålidelig bag-kulisserne-tjeneste for at behandle disse anmodninger. Og hvis noget går galt, får du nu en fejlmeddelelse, hvor du kan prøve igen.
-
-![Siden til bekræftelse af bruger med fejlen.](../media/MAC-WN-ImprovedLicensing.png)
-
-### <a name="microsoft-teams-home-page-card"></a>Microsoft Teams startsidekort
-
-Med uptick i Teams brug får nogle organisationer et fastgjort dashboardkort, der gør det Teams bliver nemmere at finde. Kortet indeholder også links til kurser og dokumenter, der kan hjælpe din organisation med overgangen til fjernarbejde. Du skal blot gå til **startsiden** for at se det nye kort.
-
-![Microsoft Teams startsidekort.](../media/MAC-WN-TeamsCard.PNG)
-
-### <a name="customize-your-organizations-sharepoint-mobile-app-theme"></a>Tilpasse organisationens SharePoint-mobilapptema
-
-Med <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration kan</a> du nu tilpasse organisationens tema i SharePoint til iOS og SharePoint-mobilappen til Android. Denne funktion giver nemt en mobil intranetappoplevelse, der kan matche din SharePoint Online for medarbejdere på farten. Tematilpasning omfatter dit logobillede, farve på navigationslinjen, tekst- og ikonfarver og markeringsfarver, hvilket gør det nemmere at genkende det.
-
-![Diagram, der knytter indstillingerne for Administration til mobilappen.](../media/MAC-WN-CustThemeSP.png)
-
-### <a name="improvements-to-the-add-a-group-wizard"></a>Forbedringer af guiden "Tilføj en gruppe"
-
-Når administratorer oprettede en ny gruppe – og gjorde den til et team samtidig, kunne de tildele ejere, der ikke har en licens, der omfatter Teams. Og det skabte nogle problemer. Vi har opdateret guiden for at bekræfte, at ejere har en Teams-licens, og hvis de ikke har mulighed for at gøre gruppen til et team, er det deaktiveret.
-
-### <a name="microsoft-365-offerings-for-small-and-medium-businesses"></a>Microsoft 365 tilbud til små og mellemstore virksomheder
-
-Vi ved, at dette er en meddelelse til næste måned, men vi vil gerne sikre os, at du er forberedt.
-
-Fra den 21. april foretager vi ændringer i forbindelse med vores Office 365-abonnementer til små og mellemstore virksomheder – og til Office 365 ProPlus. Disse produkter vil nu bruge Microsoft 365 brand.
-
-De nye produktnavne træder i kraft d. 21. april 2020. Dette er en ændring af kun produktnavnet, og der er ingen pris- eller funktionsændringer på nuværende tidspunkt.
-
-|Aktuelt navn |Nyt navn  |
-|---------|---------|
-|Office 365 Business Essentials     |   Microsoft 365 Business Basic      |
-|Office 365 Business Premium     |    Microsoft 365 Business Standard     |
-|Microsoft 365 Business     |    Microsoft 365 Business Premium     |
-|Office 365 Business     |    Microsoft 365 Apps for business       |
-|Office 365 ProPlus    |   Microsoft 365 apps til virksomheder      |
-
-### <a name="videos-training-and-docs"></a>Videoer, kurser og dokumenter
-
-Nyheder [i Microsoft 365-webserien](https://go.microsoft.com/fwlink/p/?linkid=2118096): I denne måneds episode fremhæver vi vores 3-års jubilæum Microsoft Teams og dækker nye funktioner, herunder forbedret lydkvalitet i onlinemøder, Målrettet kommunikation til Firstline Managers med Shifts-appen, Teams og Skype forbrugeres interoperabilitet og meget mere.
-
-## <a name="february-2020"></a>Februar 2020
-
-### <a name="featured-feedback-fix-multi-organization-switcher"></a>Udvalgt feedbackrettelse: Skift mellem flere organisationer
-
-Vi har modtaget en masse feedback fra partnere og administratorer om udfordringerne ved at administrere flere Microsoft-skybaserede organisationer. En af vores første funktioner til administration af flere organisationer er Organisationsskifteren **, som** giver dig mulighed for at skifte mellem de organisationer, du administrerer, med blot to klik.
-> [!TIP]
-> Du behøver ikke at gøre noget for at få organisationsskifteren vist, så længe du er registreret partner for mindst én organisation.
-
-1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration skal</a> du vælge navnet på organisationen.
-![Skærmbillede: øverst på startsiden vises navnet på organisationens profil med omskifterikonet.](../media/MAC-Organization-switcher.png)
-
-2. Vælg den organisation, du vil administrere, i organisationsskifteren.
-![Skærmbillede: Mine organisationers lejerskifter med Consolidated Messenger-lejer fremhævet.](../media/MAC-OrgSwitcherSelected.png)
-
-Det er bogstaveligt talt det!!!
-
-### <a name="groups"></a>Grupper
-
-Et par ændringer i gruppeområdet i denne måned:
-
-- **Sortér efter gruppenavn**: Du kan sortere listen over grupper alfabetisk ved at vælge **kolonnen Gruppenavn** .
-- **Gendan slettede Microsoft 365** grupper: Du behøver ikke at gå til Exchange Administration længere for at gendanne slettede Microsoft 365 grupper. Gå til **Microsoft 365 Administration** \> **Grupper** \> **Slettede grupper** \> (vælg en gruppe på listen) \> **Gendan gruppe**. Den gendanner gruppen tilbage til listen Grupper og  gendanner gruppens mail, samtaler, notesbog, filer og kalender.
-
-### <a name="videos-training-and-docs-february"></a>Videoer, kurser og dokumenter (februar)
-
-- Nyheder i **Microsoft 365-videoserien**: Denne måned fokuserer vi på brugerdefinerede søgefunktioner til SharePoint Online, administrationsfunktionen i Office "Nyheder", der gør det muligt at vise eller skjule bestemte funktioner for slutbrugere via ruden Hjælp i appen, de nyeste sikkerheds- og overholdelsesopdateringer i Yammer og meget mere. Her er den seneste episode: [Nyheder i Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=2118096)
-
-- **Flytning af dokumenter**: Vi har kombineret Office 365-administrationswebartiklerne med Microsoft 365 indhold, og du har muligvis bemærket den nye URL-adresse. Denne artikel plejede f.eks. at være hostet på: **docs.microsoft.com/Office365/Admin/whats-new-in-preview**, men URL-adressen er nu: **docs.microsoft.com/microsoft-365/admin/whats-new-in-preview**. Hvis du har bogmærket sider, bør du opdatere dine links; indholdslinks vil dog blive omdirigeret til den nye indholds-repo.

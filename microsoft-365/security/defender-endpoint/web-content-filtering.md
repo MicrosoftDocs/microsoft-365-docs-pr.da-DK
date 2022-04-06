@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 24cdf18ad510902a533834da2f3595acaa9b33d7
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: be2352ef44d8e9f7430cde39a71c7b7b1167a874
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595252"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634091"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
@@ -52,7 +52,7 @@ Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke, de
 
 Før du prøver denne funktion, skal du sikre dig, at du opfylder følgende krav:
 
-- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 + Microsoft 365 E5 Sikkerhed tilføjelsesprogrammet eller Microsoft Defender for Endpoint enkeltstående licens. 
+- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 eller Microsoft Defender for Endpoint  separat licens. 
 
 - Du har adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 
@@ -256,7 +256,7 @@ Netværksbeskyttelse understøtter i øjeblikket ikke SSL-inspektion, hvilket ka
 ## <a name="see-also"></a>Se også
 
 - [Oversigt over webbeskyttelse](web-protection-overview.md)
-- [Webtrusselsbeskyttelse](web-threat-protection.md)
+- [Beskyttelse mod webtrusler](web-threat-protection.md)
 - [Overvåge websikkerhed](web-protection-monitoring.md)
 - [Svar på webtrusler](web-protection-response.md)
 - [Krav til netværksbeskyttelse](web-content-filtering.md)

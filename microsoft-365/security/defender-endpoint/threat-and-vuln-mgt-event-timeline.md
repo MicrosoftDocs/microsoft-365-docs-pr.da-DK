@@ -1,7 +1,7 @@
 ---
 title: Tidslinje for begivenheder i Håndtering af trusler og sikkerhedsrisici
 description: Tidslinje for begivenheder er en risiko nyhedsfeed, der hjælper dig med at fortolke, hvor risikoen introduceres i organisationen, og hvilke afhjælpninger der er sket for at reducere den.
-keywords: begivenhedstidslinje, tidslinje for Microsoft Defender til slutpunktshændelse, tidslinje for Microsoft Defender for Endpoint-tvm-begivenhed, Håndtering af trusler og sikkerhedsrisici, Microsoft Defender til Slutpunkt
+keywords: tidslinje for begivenhed, Microsoft Defender for Endpoint tidslinje for begivenheder, Microsoft Defender for Endpoint tidslinje for tvm-begivenhed, Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3fe3139f12b863b54d336e52939ffbb3057df6b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 81c3a3a6d1d35551eec34d0fe12aba2f1fc6ec5e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593187"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469685"
 ---
 # <a name="event-timeline---threat-and-vulnerability-management"></a>Tidslinje for begivenhed – Håndtering af trusler og sikkerhedsrisici
 
@@ -27,17 +27,17 @@ ms.locfileid: "63593187"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Begivenhedstidslinje er en risiko nyhedsfeed, der hjælper dig med at fortolke, hvor risikoen introduceres i organisationen gennem nye sårbarheder eller udnyttelser. Du kan få vist hændelser, der kan påvirke din organisations risiko. Du kan f.eks. finde nye sårbarheder, der blev introduceret, sårbarheder, der blev udnyttet, udnyttelse, der blev føjet til en exploit kit, og meget mere.
 
 Begivenhedstidslinje fortæller også historien om din [eksponeringsscore](tvm-exposure-score.md) [og Microsoft Secure Score for](tvm-microsoft-secure-score-devices.md) enheder, så du kan bestemme årsagen til store ændringer. Begivenheder kan påvirke dine enheder eller dine scorer for enheder. Reducer din eksponering ved at adressere, hvad der skal afhjælpes, baseret på de prioriterede [sikkerhedsanbefalinger](tvm-security-recommendation.md).
 
 > [!TIP]
-> Hvis du vil have mails om nye sikkerhedsrisikohændelser, skal [du se Konfigurer mailbeskeder om sikkerhedsrisiko i Microsoft Defender til Endpoint](configure-vulnerability-email-notifications.md)
+> Hvis du vil have mails om nye sikkerhedsrisikohændelser, skal [du se Konfigurer mailbeskeder om sikkerhedsrisiko i Microsoft Defender for Endpoint](configure-vulnerability-email-notifications.md)
 
 ## <a name="navigate-to-the-event-timeline-page"></a>Gå til tidslinjesiden for begivenheden
 
@@ -53,18 +53,18 @@ I dashboardet Håndtering af trusler og sikkerhedsrisici over eksponeringsscoreg
 
 Hvis der ikke er nogen hændelser, der påvirker dine enheder eller dit resultat for enheder, vises ingen.
 
-![Eksponeringsscore hover.](images/tvm-event-timeline-exposure-score350.png) 
-![ Microsoft Secure Score for Devices hover.](images/tvm-event-timeline-device-hover360.png)
+:::image type="content" source="images/tvm-event-timeline-exposure-score350.png" alt-text="Eksponeringsscore hover" lightbox="images/tvm-event-timeline-exposure-score350.png":::
+:::image type="content" source="images/tvm-event-timeline-device-hover360.png" alt-text="Microsoft Secure Score for enheder peger" lightbox="images/tvm-event-timeline-device-hover360.png":::
 
 ### <a name="drill-down-to-events-from-that-day"></a>Analysere ned til begivenheder fra den pågældende dag
 
 Hvis du **vælger Vis alle begivenheder fra denne dag, kommer** du til tidslinjesiden for begivenheden med et brugerdefineret datointerval for den pågældende dag.
 
-![Begivenhedstidslinje valgt brugerdefineret datointerval.](images/tvm-event-timeline-drilldown.png)
+:::image type="content" source="images/tvm-event-timeline-drilldown.png" alt-text="Tidslinjesiden begivenhed" lightbox="images/tvm-event-timeline-drilldown.png":::
 
 Vælg **Brugerdefineret område** for at ændre datointervallet til en anden brugerdefineret eller et forudindstillet tidsinterval.
 
-![Indstillinger for datointerval for begivenhedstidslinje.](images/tvm-event-timeline-dates.png)
+:::image type="content" source="images/tvm-event-timeline-dates.png" alt-text="Indstillinger for begivenhedsinterval for tidslinje" lightbox="images/tvm-event-timeline-dates.png":::
 
 ## <a name="event-timeline-overview"></a>Oversigt over begivenhedstidslinje
 
@@ -78,7 +78,7 @@ Funktioner:
 
 De to store tal øverst på siden viser antallet af nye sårbarheder og sårbarheder, der kan udnyttes, ikke begivenheder. Nogle hændelser kan have flere sårbarheder, og nogle sårbarheder kan have flere hændelser.
 
-![Siden med tidslinjen for begivenheder.](images/tvm-event-timeline-overview-mixed-type.png)
+:::image type="content" source="images/tvm-event-timeline-overview-mixed-type.png" alt-text="Tidslinjen for begivenheden" lightbox="images/tvm-event-timeline-overview-mixed-type.png":::
 
 ### <a name="columns"></a>Kolonner
 
@@ -110,7 +110,7 @@ Når du har valgt en begivenhed, vises der en pop op-pop op med en liste over de
 
 Pilen under "scoretendens" hjælper dig med at afgøre, om denne hændelse potentielt kunne hæves eller sænkede din virksomheds eksponeringsscore. Højere eksponeringsscore betyder, at enheder er mere følsomme over for udnyttelse.
 
-![Pop op-pop op-billede for begivenhedstidslinje.](images/tvm-event-timeline-flyout500.png)
+:::image type="content" source="images/tvm-event-timeline-flyout500.png" alt-text="Pop op-pop op-pop op-billede for begivenhed" lightbox="images/tvm-event-timeline-flyout500.png":::
 
 Derfra skal du vælge **Gå til relateret sikkerhedsanbefaling** for at se den anbefaling, der adresserer den nye softwaresikkerhedsrisiko på [siden med sikkerhedsanbefalinger](tvm-security-recommendation.md). Når du har læst beskrivelsen og oplysningerne om sikkerhedsrisikoen i sikkerhedsanbefalingerne, kan du sende en afhjælpningsanmodning og spore anmodningen på [afhjælpningssiden](tvm-remediation.md).
 
@@ -120,11 +120,11 @@ Hvis du vil åbne en softwareside, skal du vælge en begivenhed > vælge softwar
 
 Der vises en hel side med alle oplysningerne om en bestemt software. Hold musen over grafen for at se tidslinjen for begivenheder for den pågældende software.
 
-![Softwareside med en graf over begivenhedstidslinje.](images/tvm-event-timeline-software2.png)
+:::image type="content" source="images/tvm-event-timeline-software2.png" alt-text="Softwaresiden med en graf over begivenhedstidslinje" lightbox="images/tvm-event-timeline-software2.png":::
 
 Gå til fanen med tidslinjen for begivenheden for at få vist alle de hændelser, der er relateret til den pågældende software. Du kan også se sikkerhedsanbefalinger, opdaget sårbarheder, installerede enheder og versionsfordeling.
 
-![Softwareside med tidslinjefanen Begivenhed.](images/tvm-event-timeline-software-pages.png)
+:::image type="content" source="images/tvm-event-timeline-software-pages.png" alt-text="Softwaresiden med tidslinjefanen Begivenhed" lightbox="images/tvm-event-timeline-software-pages.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 

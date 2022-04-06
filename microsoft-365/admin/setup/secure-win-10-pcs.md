@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Lær at sikre Windows 10 pc'er, når du har konfigureret Microsoft 365 Business Premium.
-ms.openlocfilehash: 03573a117658b10ee5510da1188e4a05b188d8dc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0b77a3430e4a5091409cf9fc8a4672ac7ee4472f
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593995"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635015"
 ---
 # <a name="secure-windows-10-computers"></a>Gør Windows 10 computere sikre
 
@@ -45,15 +45,21 @@ Når du har [konfigureret](business-set-up.md) Microsoft 365 Business Premium, e
 Når du har konfigureret enhedsbeskyttelse i Microsoft 365 Business, skal du følge disse trin for at beskytte dine Windows 10 computere.
 
 1. Vælg Microsoft 365 Administration under <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**menuen Konfiguration**</a>.
-1. Under **Beskyt dine Windows computere skal** du vælge **Vis**.
-1. Vælg  **Kom i gang**.
-1. Under **Who skal politikken gælde for?** skal du vælge, om dine valg skal anvendes for alle i organisationen eller for bestemte sikkerhedsgrupper.
-1. Vælg  **Gem ændringer**.
+
+2. Under **Beskyt dine Windows computere skal** du vælge **Vis**.
+
+3. Vælg  **Kom i gang**.
+
+4. Under **Who skal politikken gælde for?** skal du vælge, om dine valg skal anvendes for alle i organisationen eller for bestemte sikkerhedsgrupper.
+
+5. Vælg  **Gem ændringer**.
 
 ## <a name="to-secure-your-windows-10-computers"></a>Sådan sikrer du dine Windows 10 computere
 
 1. Log på Microsoft 365 Administration [ved](https://admin.microsoft.com) hjælp af dine globale legitimationsoplysninger. 
+
 2. I venstre navigationslinje skal **du vælge** Konfiguration og derefter under **Logon og sikkerhed vælge** **Beskyt dine Windows 10 computere**. Vælg **Vis for** at komme i gang.
+
 3. På siden **Beskyt dine Windows 10 computere** skal du læse alle oplysningerne for at forstå, hvad du slår til, og hvad brugeren påvirkes af.
 
     Øverst på siden skal du vælge **Introduktion**.
@@ -62,6 +68,6 @@ Når du har konfigureret enhedsbeskyttelse i Microsoft 365 Business, skal du fø
     
     For de fleste organisationer giver indstillingerne her et godt sikkerhedsniveau, men hvis din organisation har mere komplekse sikkerhedsbehov, kan du også bruge foruddefinerede sikkerheds oprindelige planer for at sikre dine Windows 10 enheder. Du kan finde flere oplysninger [i grundlinjer for sikkerhed for Windows 10 enheder](/mem/intune/protect/security-baselines).   
 
-1. Vælg **Anvend indstillinger**.
+5. Vælg **Anvend indstillinger**.
 
-    Disse indstillinger gælder for alle brugere i organisationen. Hvis du vil konfigurere forskellige politikker for forskellige sikkerhedsgrupper, skal du [se Angive indstillinger for enhedsbeskyttelse til Windows 10 pc'er](../devices/protection-settings-for-windows-10-pcs.md).
+    Disse indstillinger gælder for alle brugere i organisationen. Hvis du vil konfigurere forskellige politikker for forskellige sikkerhedsgrupper, skal du [se Angive indstillinger for enhedsbeskyttelse til Windows 10 pc'er](../../business-premium/m365bp-protection-settings-for-windows-10-pcs.md).

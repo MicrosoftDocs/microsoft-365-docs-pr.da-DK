@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: de9121320e339ecff2b665737a6b4ccebe5e0fd0
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5b6662a3268fa6ab83c103eb84cd1d77ab06d37d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593872"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476395"
 ---
 # <a name="threat-hunting-in-threat-explorer-for-microsoft-defender-for-office-365"></a>Trusselssøgning i Threat Explorer for Microsoft Defender for Office 365
 
@@ -38,10 +38,10 @@ I denne artikel:
 
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Hvis din organisation har [Microsoft Defender Office 365](defender-for-office-365.md), og du har tilladelserne [, kan](#required-licenses-and-permissions) du bruge **Explorer** eller registreringer i realtid til  at registrere og afhjælpe trusler.
+Hvis din organisation har [Microsoft Defender for Office 365](defender-for-office-365.md), og du har [tilladelserne,](#required-licenses-and-permissions) kan du bruge **Explorer****- eller realtidsregistreringer** til at registrere og afhjælpe trusler.
 
 I Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til **& og samarbejde** og derefter vælge **Stifinder****- eller realtidsregistreringer**. For at gå direkte til siden skal du bruge <https://security.microsoft.com/threatexplorer> eller <https://security.microsoft.com/realtimereports>.
 
@@ -56,19 +56,20 @@ Du kan få mere at vide [under Mailsikkerhed med Threat Explorer](email-security
 
 ## <a name="threat-explorer-walk-through"></a>Gennemgang af Trusselsstifinder
 
-I Microsoft Defender til Office 365 er der to abonnementsplaner – Plan 1 og Plan 2. Manuelt drevet Trussels-søgeværktøjer findes i begge planer, under forskellige navne og med forskellige egenskaber.
+I Microsoft Defender for Office 365 er der to abonnementsplaner – Plan 1 og Plan 2. Manuelt drevet Trussels-søgeværktøjer findes i begge planer, under forskellige navne og med forskellige egenskaber.
 
-Defender til Office 365 Plan 1 bruger registreringer i *realtid, som* er et undersæt af *Threat Explorer* (også kaldet *Explorer*) på jagtværktøjet i Plan 2. I denne artikelserie blev de fleste eksempler oprettet ved hjælp af den komplette Threat Explorer. Administratorer bør teste eventuelle trin i registreringer i realtid for at se, hvor de gælder.
+Defender for Office 365 Plan 1 anvender registreringer i realtid, som er et undersæt af *Trusselsstifinder* *(også* kaldet Stifinder *) på* jagtværktøjet i Plan 2. I denne artikelserie blev de fleste eksempler oprettet ved hjælp af den komplette Threat Explorer. Administratorer bør teste eventuelle trin i registreringer i realtid for at se, hvor de gælder.
 
 Når du går **til Stifinder**, kommer du som standard til siden **Malware**, men brug rullemenuen Visning til  at blive fortrolig med dine muligheder. Hvis du er på jagt efter phish eller graver dig ind i en trusselskampagne, skal du vælge disse visninger.
 
 > [!div class="mx-imgBorder"]
-> ![Vis rullemenuen i Threat Explorer.](../../media/view-drop-down.png)
+> :::image type="content" source="../../media/view-drop-down.png" alt-text="Rullemenuen Vis i Threat Explorer" lightbox="../../media/view-drop-down.png":::
 
 Når en sikkerhedshandlinger (Sec Ops) person vælger de data, de ønsker at se, uanset om omfanget er smal visning som brugerindsendelser **, eller** en bredere visning, ligesom Alle **mails, kan** de bruge knappen **Afsender** til at filtrere yderligere. Husk at vælge Opdater for at fuldføre dine filtreringshandlinger.
 
 > [!div class="mx-imgBorder"]
-> ![Knappen Afsender i Threat Explorer.](../../media/sender-drop-down.png)
+> :::image type="content" source="../../media/sender-drop-down.png" alt-text="Knappen Afsender i Threat Explorer" lightbox="../../media/sender-drop-down.png":::
+
 
 Du kan overveje at finafgrænse fokus i Stifinder eller registrering i realtid i lag. Den første er **Vis**. Den anden kan tænkes som et *filtreret fokus*. Du kan f.eks. spore de trin, du har taget i forbindelse med at finde en trussel, ved at registrere dine beslutninger således: For at finde problemet i Stifinder valgte jeg **malwarevisningen** med et modtagerfilterfokus. Dette gør det nemmere at bruge dine trin.
 
@@ -78,28 +79,28 @@ Du kan overveje at finafgrænse fokus i Stifinder eller registrering i realtid i
 Forbedringer kan foretages på datointervaller ved hjælp af kontrolelementerne for datoområde. Her kan du se Stifinder i **malwarevisning** med fokus **på filteret Registreringsteknologi** . Men det er knappen **Avanceret filter** , der giver Sec Ops-teams mulighed for at grave dybt.
 
 > [!div class="mx-imgBorder"]
-> ![Avanceret filter i Threat Explorer.](../../media/advanced-filter.png)
+> :::image type="content" source="../../media/advanced-filter.png" alt-text="Avanceret filter i Threat Explorer" lightbox="../../media/advanced-filter.png":::
 
 Når du klikker på **Avanceret filter** , vises et panel, som gør det muligt for Sec Ops selv at opbygge forespørgsler, så de kan medtage eller udelade de oplysninger, de skal se. Både diagrammet og tabellen på Stifinder-siden afspejler deres resultater.
 
 > [!div class="mx-imgBorder"]
-> ![Resultater fra en forespørgsel.](../../media/threat-explorer-chart-table.png)
+> :::image type="content" source="../../media/threat-explorer-chart-table.png" alt-text="Resultaterne fra en forespørgsel" lightbox="../../media/threat-explorer-chart-table.png":::
 
 Brug knappen **Kolonneindstillinger** for at få den type oplysninger i tabellen, der ville være mest nyttige:
 
 > [!div class="mx-imgBorder"]
-> ![Knappen Indstillinger for kolonne fremhævet.](../../media/threat-explorer-column-options.png)
+> :::image type="content" source="../../media/threat-explorer-column-options.png" alt-text="Knappen Indstillinger for kolonne fremhævet" lightbox="../../media/threat-explorer-column-options.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Tilgængelige indstillinger i Kolonner.](../../media/column-options.png)
+> :::image type="content" source="../../media/column-options.png" alt-text="De tilgængelige indstillinger i Kolonner" lightbox="../../media/column-options.png":::
 
 I samme mien skal du sørge for at teste visningsindstillingerne. Forskellige målgrupper reagerer godt på forskellige præsentationer af de samme data. For nogle brugere kan kortet **Mailoprindelse** vise, at en trussel er udbredt eller hurtigere diskret end indstillingen Kampagnevisning lige ved siden af. Sec Ops kan bruge disse skærme til bedst at fremhæve behovet for sikkerhed og beskyttelse eller til senere sammenligning for at demonstrere effektiviteten af deres handlinger.
 
 > [!div class="mx-imgBorder"]
-> ![Kort over Mail Origins.](../../media/threat-explorer-email-origin-map.png)
+> :::image type="content" source="../../media/threat-explorer-email-origin-map.png" alt-text="Kortet Mail Origins" lightbox="../../media/threat-explorer-email-origin-map.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Indstillinger for kampagnevisning.](../../media/threat-explorer-campaign-display.png)
+> :::image type="content" source="../../media/threat-explorer-campaign-display.png" alt-text="Visningsindstillingerne for Kampagne" lightbox="../../media/threat-explorer-campaign-display.png":::
 
 ### <a name="email-investigation"></a>Undersøgelse af mail
 
@@ -110,25 +111,25 @@ Siden mailenhed trækker indhold sammen, der kan findes under **Detaljer**, **Ve
 Når du når til denne fase, er siden for mailenhed afgørende for det sidste trin – *afhjælpning*.
 
 > [!div class="mx-imgBorder"]
-> ![Siden for mailenhed.](../../media/threat-explorer-email-entity-page.png)
+> :::image type="content" source="../../media/threat-explorer-email-entity-page.png" alt-text="Siden for mailenhed" lightbox="../../media/threat-explorer-email-entity-page.png":::
 
 > [!TIP]
 > Du kan få mere at vide om siden med omfattende mailenhed (se  nedenfor på fanen Analyse), herunder resultaterne af detonerede vedhæftede filer, resultater for inkluderede URL-adresser og sikker forhåndsvisning af mail ved at klikke [her](mdo-email-entity-page.md).
 
 > [!div class="mx-imgBorder"]
-> ![Fanen Analyse på siden mailenhed.](../../media/threat-explorer-analysis-tab.png)
+> :::image type="content" source="../../media/threat-explorer-analysis-tab.png" alt-text="Fanen Analyse på siden mailenhed" lightbox="../../media/threat-explorer-analysis-tab.png":::
 
 ### <a name="email-remediation"></a>Afhjælpning af mail
 
 Når en Sec Ops-person finder ud af, at en mail er en trussel, er det næste trin til registrering i Explorer eller i realtid vedrørende truslerne og afhjælpning af den. Dette kan gøres ved at gå tilbage til Threat Explorer, markere afkrydsningsfeltet for problemmailen og bruge **knappen** Handlinger.
 
 > [!div class="mx-imgBorder"]
-> ![Knappen Handlinger i Trusselsoversigt.](../../media/threat-explorer-email-actions-button.png)
+> :::image type="content" source="../../media/threat-explorer-email-actions-button.png" alt-text="Knappen Handlinger i Trusselsstifinder" lightbox="../../media/threat-explorer-email-actions-button.png":::
 
 Her kan analytikeren udføre handlinger som rapportering af mail som spam, phishing eller malware, kontakter modtagere eller yderligere undersøgelser, der kan udløse automatiseret undersøgelse og svar (eller AIR) playbooks (hvis du har Plan 2). Eller mailen kan også rapporteres som ren.
 
 > [!div class="mx-imgBorder"]
-> ![Rullemenuen Handlinger.](../../media/threat-explorer-email-actions-drop-down.png)
+> :::image type="content" source="../../media/threat-explorer-email-actions-drop-down.png" alt-text="Rullemenuen Handlinger" lightbox="../../media/threat-explorer-email-actions-drop-down.png":::
 
 ## <a name="improvements-to-threat-hunting-experience"></a>Forbedringer af trussels-jagtoplevelsen
 
@@ -139,10 +140,10 @@ Når du navigerer fra en besked til Threat Explorer, **filtreres** visningen eft
 Endelig er påmindelses-id inkluderet i URL-adressen, f.eks.: `https://https://security.microsoft.com/viewalerts`
 
 > [!div class="mx-imgBorder"]
-> ![Filtrering af besked-id.](../../media/AlertID-Filter.png)
+> :::image type="content" source="../../media/AlertID-Filter.png" alt-text="Filteret for besked-id" lightbox="../../media/AlertID-Filter.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Besked-id i pop op-pop-op-meddelelse.](../../media/AlertID-DetailsFlyout.png)
+> :::image type="content" source="../../media/AlertID-DetailsFlyout.png" alt-text="Pop op-id'et med oplysninger" lightbox="../../media/AlertID-DetailsFlyout.png":::
 
 ### <a name="extending-explorer-and-real-time-detections-data-retention-and-search-limit-for-trial-tenants"></a>Forlængelse af Stifinder-registreringer (og registreringer i realtid) af dataopbevaring og søgegrænse for prøveversionslejere
 
@@ -157,7 +158,7 @@ Antallet af mails, der kan eksporteres fra Threat Explorer, er nu 200.000 (var 9
 > [!NOTE]
 > Funktionen brugermærker er i forhåndsvisning og er muligvis ikke tilgængelig for alle. Desuden kan prøveversioner ændres uden ændringer. Du kan finde oplysninger om udgivelsesplanen i oversigten Microsoft 365 udgivelse.
 
-Brugermærker identificerer bestemte grupper af brugere i Microsoft Defender til Office 365. Du kan finde flere oplysninger om mærker, herunder licenser og konfiguration, under [Brugermærker](user-tags.md).
+Brugermærker identificerer bestemte grupper af brugere i Microsoft Defender for Office 365. Du kan finde flere oplysninger om mærker, herunder licenser og konfiguration, under [Brugermærker](user-tags.md).
 
 I Threat Explorer kan du se oplysninger om brugermærker i følgende oplevelser.
 
@@ -166,7 +167,7 @@ I Threat Explorer kan du se oplysninger om brugermærker i følgende oplevelser.
 Når analytikere ser på **kolonnen Mærker** i mailgitteret, får de vist alle mærker, der er blevet anvendt på afsender- eller modtagerpostkasser. Systemmærker som *prioritetskonti vises som* standard først.
 
 > [!div class="mx-imgBorder"]
-> ![Filtrer mærker i mailgittervisning.](../../media/tags-grid.png)
+> :::image type="content" source="../../media/tags-grid.png" alt-text="Filtermærkerne i mailgittervisning" lightbox="../../media/tags-grid.png":::
 
 #### <a name="filtering"></a>Filtrering
 
@@ -175,21 +176,21 @@ Mærker kan bruges som filtre. Gå på jagt efter prioritetskonti, eller brug be
 [![Filtermærker.](../../media/tags-filter-normal.png)](../../media/tags-filter-normal.png#lightbox)
 
 > [!div class="mx-imgBorder"]
-> ![Ikke filtrere mærker.](../../media/tags-filter-not.png)
+> :::image type="content" source="../../media/tags-filter-not.png" alt-text="De mærker, der ikke er filtreret" lightbox="../../media/tags-filter-not.png":::
 
 #### <a name="email-detail-flyout"></a>Pop op-pop op-pop-op-besked med maildetaljer
 
 Hvis du vil have vist de enkelte mærker for afsender og modtager, skal du vælge en mail for at åbne pop op-meddelelsens detaljer. På fanen **Oversigt** vises afsender- og modtagermærkerne separat. Oplysningerne om individuelle mærker for afsender og modtager kan eksporteres som CSV-data.
 
 > [!div class="mx-imgBorder"]
-> ![Mærker for Maildetaljer.](../../media/tags-flyout.png)
+> :::image type="content" source="../../media/tags-flyout.png" alt-text="Mærkerne Maildetaljer" lightbox="../../media/tags-flyout.png":::
 
 Oplysninger om mærker vises også i pop op-pop-op-menuen med URL-klik. Du kan se det ved at gå til phish- eller alle **>-webadresser** **eller fanen URL-klik** . Vælg pop op-menuen med en individuel URL-adresse for at få vist flere oplysninger om klik for den pågældende URL-adresse, herunder eventuelle mærker, der er knyttet til det pågældende klik.
 
 ### <a name="updated-timeline-view"></a>Opdateret tidslinjevisning
 
 > [!div class="mx-imgBorder"]
-> ![URL-koder.](../../media/tags-urls.png)
+> :::image type="content" source="../../media/tags-urls.png" alt-text="URL-koderne" lightbox="../../media/tags-urls.png":::
 >
 Få mere at vide ved at [se denne video](https://www.youtube.com/watch?v=UoVzN0lYbfY&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=4).
 
@@ -202,7 +203,7 @@ De mest populære **malwarefamilier viser de mest målrettede** brugere i afsnit
 Sikkerhedshandlinger brugerne kan eksportere listen over målrettede brugere, op til en grænse på 3.000, sammen med antallet af forsøg, til offlineanalyse for hver mailvisning. Hvis du vælger antallet af forsøg (f.eks. 13 forsøg på billedet nedenfor), åbnes en filtreret visning i Threat Explorer, så du kan se flere detaljer på tværs af mails og trusler for den pågældende bruger.
 
 > [!div class="mx-imgBorder"]
-> ![Mest målrettede brugere.](../../media/Top_Targeted_Users.png)
+> :::image type="content" source="../../media/Top_Targeted_Users.png" alt-text="Brugerne er mest målrettede" lightbox="../../media/Top_Targeted_Users.png":::
 
 ### <a name="exchange-transport-rules"></a>Exchange transportregler
 
@@ -223,7 +224,7 @@ Navne og GUID'er for de transportregler, der anvendes på meddelelsen, vises. An
 > I mailgitteret, pop op-billedet Detaljer og Eksporteret CSV får et Navn/GUID som vist nedenfor.
 >
 > > [!div class="mx-imgBorder"]
-> > ![Exchange transportregler.](../../media/ETR_Details.png)
+> > :::image type="content" source="../../media/ETR_Details.png" alt-text="Reglerne i Exchange Transport" lightbox="../../media/ETR_Details.png":::
 
 ### <a name="inbound-connectors"></a>Indgående forbindelser
 
@@ -232,15 +233,15 @@ Forbindelser er en samling af instruktioner, der tilpasser, hvordan dine mails f
 Søgningen efter forbindelser er en CONTAINS-forespørgsel, hvilket betyder, at delvise nøgleordssøgninger kan fungere:
 
 > [!div class="mx-imgBorder"]
-> ![Forbindelsesoplysninger.](../../media/Connector_Details.png)
+> :::image type="content" source="../../media/Connector_Details.png" alt-text="Oplysninger om forbindelse" lightbox="../../media/Connector_Details.png":::
 
 ## <a name="required-licenses-and-permissions"></a>Påkrævede licenser og tilladelser
 
-Du skal have [Microsoft Defender for Office 365](defender-for-office-365.md) at bruge Explorer- eller realtidsregistreringer.
+Du skal have [Microsoft Defender for Office 365](defender-for-office-365.md) at bruge Stifinder eller registreringer i realtid.
 
-- Explorer er inkluderet i Defender Office 365 Plan 2.
-- Registreringer af realtid er inkluderet i Defender for Office 365 Plan 1.
-- Planlæg at tildele licenser til alle brugere, der skal være beskyttet af Defender Office 365. Explorer- og realtidsregistreringer viser registreringsdata for licenserede brugere.
+- Stifinder er inkluderet Defender for Office 365 Plan 2.
+- Rapporten registreringer i realtid er inkluderet i Defender for Office 365 Plan 1.
+- Planlæg at tildele licenser til alle brugere, der skal være beskyttet af Defender for Office 365. Explorer- og realtidsregistreringer viser registreringsdata for licenserede brugere.
 
 Hvis du vil have vist og bruge Registreringer i Stifinder eller i realtid, skal du have følgende tilladelser:
 

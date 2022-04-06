@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 6effe1ffefaf7faeb90258163c539cdddcec2679
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 4425ee0a4ee9abb7c87be7ed45d9f5c94b84cdc6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569991"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477011"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Politikanbefalinger til sikring SharePoint websteder og filer
 
@@ -60,7 +60,7 @@ I følgende tabel vises de politikker, du enten skal gennemse og opdatere, eller
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Brug app-tvungne begrænsninger i SharePoint
 
-Hvis du implementerer adgangskontrolelementer i SharePoint, oprettes der politikker for Betinget adgang i Azure AD for at få Azure AD til at håndhæve de politikker, du konfigurerer i SharePoint. Denne politik gælder som standard for alle brugere, men påvirker kun adgangen til de websteder, du angiver ved hjælp af PowerShell, når du opretter adgangskontrolelementerne i SharePoint. Politikken kan også begrænses til bestemte brugere, grupper eller websteder.
+Hvis du implementerer adgangskontrolelementer i SharePoint, skal du oprette denne Politik for betinget adgang i Azure AD for at bede Azure AD om at håndhæve de politikker, du konfigurerer i SharePoint. Denne politik gælder for alle brugere, men påvirker kun adgangen til de websteder, du angiver ved hjælp af PowerShell, når du opretter adgangskontrollerne SharePoint.
 
 Hvis du vil konfigurere denne politik, skal du se "Bloker eller begræns adgangen til bestemte SharePoint grupper af websteder eller OneDrive-konti" i Kontrollere adgang fra enheder, der ikke [er administrerede](/sharepoint/control-access-from-unmanaged-devices).
 

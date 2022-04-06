@@ -1,5 +1,5 @@
 ---
-title: Stak med trinvis trusselsbeskyttelse i Microsoft Defender til Office 365
+title: Stak med trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -10,23 +10,23 @@ ms.reviewer: gigarrub
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
-description: Følg stien til en indgående meddelelse via trusselsfiltreringsstakken i Microsoft Defender for Office 365.
+description: Følg stien til en indgående meddelelse gennem trusselsfiltreringsstakken i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 62d7ac9f13f59fce3b635f6d1dace2f22ee7f503
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e7be5c66e0ca3841a8bc4fd76555feaeafb1bd17
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683817"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469025"
 ---
 # <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
 
-Stakken Microsoft Defender Office 365 beskyttelse eller filtrering kan opdeles i 4 faser, som i denne artikel. Generelt gennemgår indgående mails alle disse faser før levering, men den faktiske sti, som mailen tager, er underlagt en organisations Defender for Office 365 konfiguration.
+Stakken Microsoft Defender for Office 365 beskyttelse eller filtrering kan opdeles i 4 faser, som i denne artikel. Generelt gennemgår indgående mails alle disse faser før levering, men den faktiske sti, som mails tager, er underlagt en organisations Defender for Office 365 konfiguration.
 
 > [!TIP]
-> Hold dig klar til slutningen af denne artikel for at få  en samlet grafik af alle 4 faser af Defender Office 365 beskyttelse!
+> Hold dig klar til slutningen af denne artikel for at få *en* samlet grafik af alle 4 faser Defender for Office 365 beskyttelse!
 
 ## <a name="phase-1---edge-protection"></a>Fase 1 – Edge Protection
 
@@ -34,7 +34,7 @@ Desværre er Edge-blokke, der tidligere *var kritiske* , nu relativt simple for 
 
 Edge-blokke er designet til at være automatiske. I tilfælde af falsk positiv får afsendere besked om, hvordan problemet skal håndteres. Forbindelser fra partnere, der er tillid til, med begrænset ry kan sikre leverance, eller midlertidige tilsidesættelser kan sættes på plads, når du onboarder nye slutpunkter.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Fase 1 af filtrering i Defender til Office 365 er Edge Protection.":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Fase 1-filtrering i Defender for Office 365" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png":::
 
 1. **Netværksbegrænsning beskytter** Office 365-infrastruktur og kunder fra DOS-angreb (Denial of Service) ved at begrænse antallet af meddelelser, der kan sendes af et bestemt sæt infrastruktur.
 
@@ -52,7 +52,7 @@ Edge-blokke er designet til at være automatiske. I tilfælde af falsk positiv f
 
 Funktioner i afsenderintelligens er afgørende for at modtage spam, masse, efterligning og uautoriserede spoof-meddelelser og også faktor til registrering af phish. De fleste af disse funktioner kan konfigureres enkeltvis.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="Fase 2 af filtrering i Defender for Office 365 er Sender Intelligence.":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="Fase 2 af filtrering i Defender for Office 365 er Afsender-intelligens" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png":::
 
 1. **Udløsere og påmindelser** om registrering af konto kompromitteres, når en konto har unormal adfærd, hvilket er i overensstemmelse med kompromis. I nogle tilfælde er brugerkontoen blokeret og forhindret i at sende yderligere mails, før problemet er løst af en organisations sikkerhedsteam.
 
@@ -82,7 +82,7 @@ Funktioner i afsenderintelligens er afgørende for at modtage spam, masse, efter
 
 I denne fase begynder filtreringsstakken at håndtere det specifikke indhold i mailen, herunder dens links og vedhæftede filer.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="Fase 3 af filtrering i MDO er Indholdsfiltrering.":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="Fase-3-filtrering i MDO er Filtrering af indhold" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
 
 1. **Transportregler** (også kaldet regler for mailflow eller Exchange-transportregler) giver en administrator mulighed for at udføre en lang række handlinger, når en lige så lang række betingelser er opfyldt for en meddelelse. Alle meddelelser, der flyder gennem din organisation, evalueres i forhold til de aktiverede regler for mailflow/transport.
 
@@ -90,7 +90,7 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold i m
 
 3. Antivirusprogrammer (AV) bruges også til at skrive alle vedhæftede filer i sand tekst, så blokering af type  kan blokere alle vedhæftede filer af typer, som administratoren angiver.
 
-4. Når Microsoft Defender til Office 365 registrerer en ondsindet vedhæftet fil, føjes filens hash samt en hash hash for det aktive indhold til Exchange Online Protection (EOP)-omdømme. **Blokering af vedhæftede** filers omdømme blokerer denne fil på tværs Office 365 alle slutpunkter og slutpunkter via MSAV-skyopkald.
+4. Når Microsoft Defender for Office 365 registrerer en ondsindet vedhæftet fil, føjes filens hash og en hash med det aktive indhold til det Exchange Online Protection (EOP)-omdømme. **Blokering af vedhæftede** filers omdømme blokerer denne fil på tværs Office 365 alle slutpunkter og slutpunkter via MSAV-skyopkald.
 
 5. **Heuristisk klyngedannelse kan** afgøre, at en fil er mistænkelig baseret på leverings heuristics. Når der findes en mistænkelig vedhæftet fil, afbrydes hele kampagnen midlertidigt, og filen sandkasse. Hvis filen bliver fundet skadelig, blokeres hele kampagnen.
 
@@ -100,7 +100,7 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold i m
 
 8. **Indholds heuristics** kan registrere mistænkelige meddelelser baseret på struktur og ordfrekvens i meddelelsens brødtekst ved hjælp af maskinlæringsmodeller.
 
-9. **Pengeskab vedhæftede filer** sandkasser alle vedhæftede filer til Defender Office 365 kunder ved hjælp af dynamisk analyse til at registrere trusler, der aldrig før er set.
+9. **Pengeskab vedhæftede** filer sandkasser alle vedhæftede filer til Defender for Office 365 kunder ved hjælp af dynamisk analyse til at registrere trusler, der aldrig har været set før.
 
 10. **Sammenkædet indholdsdeonation** behandler alle URL-adresser, der linker til en fil i en mail, som en vedhæftet fil, asynkront sandkasse af filen på leveringstidspunktet.
 
@@ -110,9 +110,9 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold i m
 
 Det sidste trin finder sted efter levering af mail eller filer, hvor du handler på mail, som findes i forskellige postkasser, filer og links, der vises i klienter som Microsoft Teams.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Fase 4 af filtrering i Defender til Office 365 er beskyttelse efter levering.":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Fase 4-filtrering i Defender for Office 365 efter leveringsbeskyttelse" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
 
-1. **Pengeskab Links** er Defender Office 365 din time of click-beskyttelse. Hver webadresse i hver meddelelse ombrudt til at pege på Microsoft Pengeskab Links-servere. Når der klikkes på en URL-adresse, kontrolleres den ud fra det seneste ry, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
+1. **Pengeskab Links** Defender for Office 365 du kan altid klikke på. Hver webadresse i hver meddelelse ombrudt til at pege på Microsoft Pengeskab Links-servere. Når der klikkes på en URL-adresse, kontrolleres den ud fra det seneste ry, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
 
 2. **Automatisk tømning (ZAP) uden time for phishing** registrerer og neutraliserer med tilbagevirkende kraft skadelige phishingmeddelelser, der allerede er blevet leveret til Exchange Online postkasser.
 
@@ -134,10 +134,10 @@ Det sidste trin finder sted efter levering af mail eller filer, hvor du handler 
 
 Det endelige diagram (som med alle dele af diagrammet, der skriver det) kan ændres uden problemer, efterhånden *som produktet vokser og udvikles*. Bogmærke denne side, og brug **feedbackindstillingen** , som du finder nederst, hvis du skal spørge efter opdateringer. For dine poster er dette stakken med alle faser i rækkefølge:
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="Alle faserne af filtrering i Defender for Office 365 i rækkefølge, 1 til 4.":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="Alle faserne af filtrering i Defender for Office 365 rækkefølge, fra 1 til 4" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png":::
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Har du brug for at konfigurere Microsoft Defender til Office 365 ***lige nu** _? Brug denne stak, _now* med [denne trinvise vejledning til at](protect-against-threats.md) begynde at beskytte din organisation.
+Skal du konfigurere Microsoft Defender for Office 365 ***lige nu** _? Brug denne stak, _now* med [denne trinvise vejledning til at](protect-against-threats.md) begynde at beskytte din organisation.
 
 *Særlige tak fra MSFTTracyP og docs-skriveteamet til Giulian Garruba for dette indhold*.

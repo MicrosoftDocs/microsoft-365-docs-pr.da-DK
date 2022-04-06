@@ -1,7 +1,7 @@
 ---
 title: Tildel enhedsværdi – Håndtering af trusler og sikkerhedsrisici
 description: Få mere at vide om, hvordan du tildeler en enhed en lav, normal eller høj værdi for at hjælpe dig med at skelne mellem aktivprioriteter.
-keywords: Microsoft Defender for endpoint-enhedsværdi, Håndtering af trusler og sikkerhedsrisici enhedsværdi, enheder med høj værdi, eksponeringsscore for enhedsværdi
+keywords: Microsoft Defender for Endpoint enhedsværdi, Håndtering af trusler og sikkerhedsrisici enhedsværdi, enheder med høj værdi, eksponeringsscore for enhedsværdi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,23 +16,23 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cb8c0bd0870ea240e64c33dfac2fd6c00156def8
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: ff6d61e02ff923cc9406412c81e9a67799e6880a
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63597593"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477209"
 ---
 # <a name="assign-device-value---threat-and-vulnerability-management"></a>Tildel enhedsværdi – Håndtering af trusler og sikkerhedsrisici
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -59,10 +59,11 @@ Eksempler på enheder, der skal tildeles en høj værdi:
 
 2. Vælg **Enhedsværdi** fra tre prik ud for handlingslinjen øverst på siden.
 
-    ![Eksempel på rullemenuen Enhedsværdi.](images/tvm-device-value-dropdown.png)
+   :::image type="content" source="images/tvm-device-value-dropdown.png" alt-text="Værdiindstillingen Enhed" lightbox="images/tvm-device-value-dropdown.png":::
 
 3. Der vises en pop op-pop op-pop-op med den aktuelle enhedsværdi, og hvad det betyder. Gennemse værdien af enheden, og vælg den, der passer bedst til din enhed.
-![Eksempel på pop op-værdien for enheden.](images/tvm-device-value-flyout.png)
+
+:::image type="content" source="images/tvm-device-value-flyout.png" alt-text="Siden Enhedsværdi" lightbox="images/tvm-device-value-flyout.png":::
 
 ## <a name="how-device-value-impacts-your-exposure-score"></a>Sådan påvirker enhedsværdien din eksponeringsscore
 

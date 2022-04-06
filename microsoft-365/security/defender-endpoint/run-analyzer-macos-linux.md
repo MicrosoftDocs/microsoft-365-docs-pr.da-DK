@@ -1,6 +1,6 @@
 ---
 title: Kør klientanalyse på macOS eller Linux
-description: Få mere at vide om, hvordan du kører Microsoft Defender for Endpoint Client Analyzer på macOS eller Linux
+description: Lær, hvordan du kører Microsoft Defender for Endpoint Client Analyzer på macOS eller Linux
 keywords: klientanalyse, fejlfinding af sensor, analyse, mdeanalyzer, macos, linux, mdeanalyzer
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,25 +16,25 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: bbd4100466fbfef75363848bc5b89bbb9a769265
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: d56cbb48697c4804aa493d945ff81c52e12f86c5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63600944"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470081"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalyse på macOS og Linux
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 ## <a name="running-the-analyzer-through-gui-scenario"></a>Kørsel af analyseanalyse gennem scenariet GUI
 
 1. Download [værktøjet XMDE Client Analyzer på](https://aka.ms/XMDEClientAnalyzer) den macOS- eller Linux-computer, du skal undersøge.
 
    > [!NOTE]
-   > Den aktuelle SHA256-hash for "XMDEClientAnalyzer.zip", som downloades fra ovenstående link, er: 'B95E2E21D5A93E0AC88BA401ACB20E5F721727B409D4186147C8D17468185583'.
+   > Den aktuelle SHA256-hash for "XMDEClientAnalyzer.zip", som downloades fra ovenstående link, er: 'A9BF065DE3F2608A309BC4F5295548BB9931F107BF2F01DC42A789C5527C1308'.
 
 2. Udtræk indholdet XMDEClientAnalyzer.zip på maskinen.
 
@@ -74,7 +74,7 @@ ms.locfileid: "63600944"
 
 Eksempel:
 
-![Eksempel på kommandolinje.](images/4ca188f6c457e335abe3c9ad3eddda26.png)
+:::image type="content" source="images/4ca188f6c457e335abe3c9ad3eddda26.png" alt-text="Eksempel på kommandolinje" lightbox="images/4ca188f6c457e335abe3c9ad3eddda26.png":::
 
 Yderligere hjælp til syntaks:
 
@@ -113,7 +113,7 @@ Yderligere hjælp til syntaks:
 
 - Processes_information.txt
 
-  Beskrivelse: indeholder oplysningerne om de kørende microsoft Defender for Endpoint-relaterede processer på systemet.
+  Beskrivelse: indeholder oplysninger om de kørende Microsoft Defender for Endpoint relaterede processer i systemet.
 
 - Log.txt
 

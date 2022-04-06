@@ -1,6 +1,6 @@
 ---
 title: Undersøg forbindelseshændelser, der opstår bag fremadrettet proxyer
-description: Få mere at vide om, hvordan du bruger avanceret HTTP-niveauovervågning via netværksbeskyttelse i Microsoft Defender til slutpunkt, som viser et rigtigt mål i stedet for en proxy.
+description: Få mere at vide om, hvordan du bruger avanceret http-niveauovervågning gennem netværksbeskyttelse i Microsoft Defender for Endpoint, som viser et reelt mål i stedet for en proxy.
 keywords: proxy, netværksbeskyttelse, videressendelse af proxy, netværkshændelser, overvågning, blok, domænenavne, domæne
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,19 +15,19 @@ ms.collection:
 - m365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c0a2bdab641f0289975f1d8475627d3066ecf1f8
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 580f41c24d6d78fb9e5ac7e20eb80e6ae78a505b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593540"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469795"
 ---
 # <a name="investigate-connection-events-that-occur-behind-forward-proxies"></a>Undersøg forbindelseshændelser, der opstår bag fremadrettet proxyer
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatemachines-abovefoldlink)
@@ -58,13 +58,13 @@ Du kan få mere at vide [under Aktivér netværksbeskyttelse](enable-network-pro
 
 Når netværksbeskyttelse er slået til, kan du se, at IP-adressen på en enheds tidslinje fortsat repræsenterer proxyen, mens den rigtige måladresse vises.
 
-![Billede af netværkshændelser på enhedens tidslinje.](images/atp-proxy-investigation.png)
+:::image type="content" source="images/atp-proxy-investigation.png" alt-text="Netværkshændelser på enhedens tidslinje" lightbox="images/atp-proxy-investigation.png":::
 
 Andre hændelser, der udløses af netværksbeskyttelseslaget, er nu tilgængelige til at få vist de rigtige domænenavne selv bag en proxy.
 
 Oplysninger om begivenhed:
 
-![Billede af enkelt netværkshændelse.](images/atp-proxy-investigation-event.png)
+:::image type="content" source="images/atp-proxy-investigation-event.png" alt-text="URL-adresserne for en enkelt netværkshændelse" lightbox="images/atp-proxy-investigation-event.png":::
 
 ## <a name="hunt-for-connection-events-using-advanced-hunting"></a>Lede efter forbindelsesbegivenheder ved hjælp af avanceret jagt
 
@@ -78,7 +78,7 @@ DeviceNetworkEvents
 | take 10
 ```
 
-![Billede af avanceret forespørgsel.](images/atp-proxy-investigation-ah.png)
+:::image type="content" source="images/atp-proxy-investigation-ah.png" alt-text="Avanceret forespørgsel på forespørgsel" lightbox="images/atp-proxy-investigation-ah.png":::
 
 Du kan også filtrere de hændelser, der er relateret til forbindelsen til selve proxyen.
 

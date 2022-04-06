@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Synkroniser domænekontrollerede brugere med Microsoft 365 til virksomheder.
-ms.openlocfilehash: e49a3095cff77692e58d1b70ca1169dc8fd4802a
-ms.sourcegitcommit: bcea69bacd1b48827bd60af2880909593a1609a4
+ms.openlocfilehash: 6a00b76113a750f306ef6545f1b38fcf9f9b2202
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63593996"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634531"
 ---
 # <a name="synchronize-domain-users-to-microsoft-365"></a>Synkroniser domænebrugere Microsoft 365
 
@@ -44,7 +44,7 @@ Før du synkroniserer dine brugere og computere fra det lokale Active Directory-
    
    - Hvis Active Directory-domænet slutter med et suffiks, der ikke kan rous, f.eks. *.local* eller *.lan*, skal du i stedet for et suffiks, som f.eks. kan køres via internettet, f.eks. *.com* eller *.org*, justere UPN-suffikset [for](../../enterprise/prepare-a-non-routable-domain-for-directory-synchronization.md) de lokale brugerkonti først som beskrevet i Forberede et domæne, der ikke kan rous, til katalogsynkronisering. 
 
-Kør **IdFix i** trin fire (4) nedenfor, vil også sikre, at dit lokale Active Directory er klar til katalogsynkronisering.
+Kør **IdFix i** trin fire (4) nedenfor, vil også sikre, at din Active Directory i det lokale miljø er klar til katalogsynkronisering.
 
 ## <a name="2-install-and-configure-azure-ad-connect"></a>2. Installer og konfigurer Azure AD-Forbind
 
@@ -68,4 +68,4 @@ Når du konfigurerer indstillingerne for Azure AD Forbind, anbefaler vi, at du a
 > [!NOTE]
 > Der er nogle yderligere trin til tilbageførsel af adgangskode ud over afkrydsningsfeltet i Azure AD Forbind. Du kan finde flere oplysninger [under Sådan konfigureres tilbageførsel af adgangskode](/azure/active-directory/authentication/howto-sspr-writeback). 
 
-Hvis du også vil administrere domænebaserede Windows 10-enheder, skal du se Aktivér domæne sammenføjede [Windows 10-enheder](manage-windows-devices.md), så de administreres af Microsoft 365 Business Premium til at konfigurere en Azure AD-hybridforbindelse.
+Hvis du også vil administrere domænebaserede Windows 10-enheder, skal du se Aktivér domæne sammenføjede [Windows 10-enheder](../../business-premium/m365bp-manage-windows-devices.md), så de administreres af Microsoft 365 Business Premium til at konfigurere en Azure AD-hybridforbindelse.

@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: d8524715ad0e450671faeaeb0714992e297a02df
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: ab3b274ee07b343528c9b25f36dccc86d18e7ef8
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595174"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634993"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for overholdelse af regler og standarder i kommunikation
 
@@ -96,7 +96,7 @@ Under gennemsynsprocessen kan korrekturlæsere af kommunikationsoverholdelsen ud
 
 ![Politik for overholdelse af regler og standarder i forbindelse med kommunikation – rapporteret af brugere.](../media/communication-compliance-user-reported-messages-policy.png)
 
-Brugeren rapporterede meddelelser fra Teams-chatsamtaler er de eneste meddelelser, der behandles af politikken Brugerrapporteret meddelelse, og kun de tildelte korrekturlæsere for politikken kan ændres. Alle andre egenskaber for politikken kan ikke redigeres. Når politikken oprettes, er de første korrekturlæsere, der er tildelt politikken, alle medlemmer af rollegruppen Kommunikationsoverholdelsesadministratorer (hvis den er udfyldt med mindst én bruger) eller alle medlemmer af *organisationens* *globale* administratorrollegruppe. Opretteren af politikken er en tilfældigt udvalgt bruger fra rollegruppen Kommunikationsoverholdelsesadministratorer (hvis den er udfyldt med mindst én bruger) eller en tilfældigt udvalgt bruger fra *organisationens* globale administratorrollegruppe.  
+Brugeren rapporterede meddelelser fra Teams-chatsamtaler er de eneste meddelelser, der behandles af politikken Brugerrapporteret meddelelse, og kun de tildelte korrekturlæsere for politikken kan ændres. Alle andre politikegenskaber kan ikke redigeres. Når politikken oprettes, er de første korrekturlæsere, der er tildelt politikken, alle medlemmer af rollegruppen Kommunikationsoverholdelsesadministratorer (hvis den er udfyldt med mindst én bruger) eller alle medlemmer af *organisationens* *globale* administratorrollegruppe. Opretteren af politikken er en tilfældigt udvalgt bruger fra rollegruppen Kommunikationsoverholdelsesadministratorer (hvis den er udfyldt med mindst én bruger) eller en tilfældigt udvalgt bruger fra *organisationens* globale administratorrollegruppe.  
 
 Administratorer bør straks tildele brugerdefinerede korrekturlæsere til denne politik efter behov for organisationen. Dette kan omfatte korrekturlæsere som f.eks. din Compliance Officer, Risk Officer eller medlemmer af din HR-afdeling. Hvis du vil tilpasse korrekturlæserne for chatmeddelelser, der er sendt som brugerrapporterede meddelelser, skal du udføre følgende trin:
 
@@ -220,7 +220,7 @@ I følgende tabel beskrives flere oplysninger om hver enkelt betingelse.
 | **Meddelelsen er klassificeret med nogen af disse etiketter**  <br><br> **Meddelelsen er ikke klassificeret med nogen af disse etiketter** | Sådan anvender du politikken, når visse opbevaringsetiketter medtages eller udelades i en meddelelse. Opbevaringsnavne skal konfigureres separat, og konfigurerede etiketter vælges som en del af denne betingelse. Hver etiket, du vælger, anvendes separat (kun én af disse etiketter skal gælde, for at politikken anvendes på meddelelsen). Du kan finde flere oplysninger om opbevaringsnavne i [Få mere at vide om opbevaringspolitikker og opbevaringsnavne](retention.md).|
 | **Meddelelsen indeholder et af disse ord**  <br><br> **Meddelelsen indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en meddelelse, skal du skrive hvert ord adskilt med et komma. I forbindelse med udtryk med to eller flere ord skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du skriver, anvendes separat (kun ét ord skal anvendes, for at politikken gælder for meddelelsen). Du kan finde flere oplysninger om at indtaste ord eller udtryk i næste afsnit [Matchende ord og udtryk i mails eller vedhæftede filer](communication-compliance-policies.md#Matchwords).|
 | **Vedhæftet fil indeholder et af disse ord**  <br><br> **Vedhæftet fil indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en vedhæftet fil (f.eks. et Word-dokument), skal du angive hvert ord adskilt med et komma. I forbindelse med udtryk med to eller flere ord skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du angiver, anvendes separat (kun ét ord skal gælde, for at politikken kan anvendes på den vedhæftede fil). Du kan finde flere oplysninger om at indtaste ord eller udtryk i næste afsnit [Matchende ord og udtryk i mails eller vedhæftede filer](communication-compliance-policies.md#Matchwords).|
-| **Vedhæftet fil er en af disse filtyper**  <br><br> **Vedhæftet fil er ingen af disse filtyper** | For at overvåge kommunikation, der indeholder eller udelader bestemte typer vedhæftede filer, skal du indtaste filtypenavnene (f.eks. .exe eller .pdf). Hvis du vil medtage eller udelade flere filtypenavne, skal du angive disse på separate linjer. Kun én udvidelse til vedhæftede filer skal svare til den politik, der skal anvendes.|
+| **Vedhæftet fil er en af disse filtyper**  <br><br> **Vedhæftet fil er ingen af disse filtyper** | For at overvåge kommunikation, der indeholder eller udelader bestemte typer vedhæftede filer, skal du indtaste filtypenavnene (f.eks. .exe eller .pdf). Hvis du vil medtage eller udelade flere filtypenavne, skal du angive filtyperne adskilt af et komma (eksempel *.exe..pdf..zip*). Kun én udvidelse til vedhæftede filer skal svare til den politik, der skal anvendes.|
 | **Meddelelsesstørrelse er større end**  <br><br> **Meddelelsesstørrelse er ikke større end** | Hvis du vil gennemse meddelelser, der er baseret på en bestemt størrelse, skal du bruge disse betingelser til at angive den maksimale eller mindste størrelse, en meddelelse kan være, før den gennemgås. Hvis du f.eks.  angiver, \> at Meddelelsesstørrelse er større end **1,0 MB**, kan alle meddelelser, der er 1,01 MB og større, gennemgås. Du kan vælge byte, kilobyte, megabyte eller gigabyte for denne betingelse.|
 | **Vedhæftet fil er større end**  <br><br> **Vedhæftet fil er ikke større end** | Hvis du vil gennemse meddelelser baseret på størrelsen af deres vedhæftede filer, skal du angive den maksimale eller mindste størrelse, en vedhæftet fil kan være, før meddelelsen og dens vedhæftede filer kan gennemgås. Hvis du f.eks. angiver, at Vedhæftet fil er større end **2,0** \> MB, kan alle meddelelser med vedhæftede filer på 2,01 MB og derover gennemgås. Du kan vælge byte, kilobyte, megabyte eller gigabyte for denne betingelse.|
 

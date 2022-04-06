@@ -19,12 +19,12 @@ ms.custom: ''
 description: Få mere at vide om Threat Trackers, herunder nye Noteworthy Trackers, som kan hjælpe din organisation med at holde sig på sikkerheden.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9015e94869db88be750ca522173a0dc6d55383e7
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: d9adc6cd356187a8dbbb35719ab9b8e96499c8bd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632793"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468981"
 ---
 # <a name="threat-trackers---new-and-noteworthy"></a>Threat Trackers – nye og be noterede
 
@@ -49,9 +49,9 @@ De fleste tracker-sider omfatter de mest populære tal, der opdateres jævnligt,
 
 :::image type="content" source="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png" alt-text="Eksempel på kampagneoplysninger i Stifinder" lightbox="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png":::
 
-Trackers er blot nogle få af de mange fantastiske funktioner, du får med [Microsoft Defender for Office 365 Plan 2](office-365-ti.md). Trusselssporing [omfatter pålidelige trackere](#noteworthy-trackers), [mest populære trackere](#trending-trackers), [sporede](#tracked-queries) forespørgsler [og gemte forespørgsler](#saved-queries).
+Trackers er blot nogle få af de mange fantastiske funktioner, du får med [Microsoft Defender for Office 365 Plan 2](office-365-ti.md). Trusselssporing omfatter [Trackers til Noteworth](#noteworthy-trackers), [Mest populære trackere](#trending-trackers), Registrerede forespørgsler [og Gemte forespørgsler](#saved-queries). [](#tracked-queries)
 
-Hvis du vil se og bruge dine Threat Trackers for din organisation, skal Microsoft 365 Defender-portalen <https://security.microsoft.com>på og gå til Mail **& Threat** \> **Tracker til samarbejde**. For at gå direkte til **siden Threat tracker** skal du bruge <https://security.microsoft.com/threattrackerv2>.
+Hvis du vil se og bruge dine Threat Trackers for din organisation, skal Microsoft 365 Defender-portalen <https://security.microsoft.com>på og gå til Mail **& Threat** \> **Tracker til samarbejde**. For at gå direkte til **siden Threat tracker** skal du bruge <https://security.microsoft.com/threattracker>.
 
 > [!NOTE]
 > Hvis du vil bruge Threat Trackers, skal du være global administrator, sikkerhedsadministrator eller sikkerhedslæser. Se [Tilladelser i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md).
@@ -64,7 +64,7 @@ Typisk udgives Trackers i kun et par uger, når vi identificerer nye trusler og 
 
 ### <a name="trending-trackers"></a>Mest populære trackere
 
-De mest populære trackere (tidligere kaldet Kampagner) fremhæver nye trusler, der er modtaget i organisationens mail i den seneste uge. Visningen Mest populære trackers indeholder dynamiske vurderinger af mailtrusler, der påvirker din organisations Office 365 miljø. Denne visning viser malwaretendenser på lejerniveau, identificerer malwarefamilier i stigning, flad eller faldende og giver administratorer større indsigt i, hvilke trusler der kræver yderligere opmærksomhed.
+De mest populære trackere (tidligere kaldet Kampagner) fremhæver nye trusler, der er modtaget i organisationens mail i den seneste uge.
 
 :::image type="content" source="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png" alt-text="Eksemplet med den mest populære widget til malwarekampagner" lightbox="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png":::
 

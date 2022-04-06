@@ -1,5 +1,5 @@
 ---
-title: Kom i gang med Microsoft Defender for Endpoint Plan 1
+title: Introduktion til Microsoft Defender for Endpoint Plan 1
 description: Kom i gang med at bruge Defender til Endpoint Plan 1. Få mere at vide om, hvordan du bruger Defender til skyen, administrerer beskeder og enheder og får vist rapporter.
 search.appverid: MET150
 author: denisebmsft
@@ -17,17 +17,17 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: d4e585a7714bddc8c89de75ae49464da7bfe0305
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: c3e7f55a0dd8ad26f2b00b7e2d5840945e777a2a
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63592344"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470323"
 ---
-# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Kom i gang med Microsoft Defender for Endpoint Plan 1
+# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Introduktion til Microsoft Defender for Endpoint Plan 1
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)) giver dig mulighed for at få vist oplysninger om registrerede trusler, administrere dine beskeder og hændelser, tage eventuelle nødvendige handlinger på registrerede trusler og administrere enheder. Portalen Microsoft 365 Defender er stedet, hvor du kan komme i gang med at arbejde med de egenskaber til trusselsbeskyttelse, du får med Defender for Endpoint Plan 1. I de følgende afsnit beskrives det, hvordan du kommer i gang:
 
@@ -40,7 +40,7 @@ Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://securi
 
 Den Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) er det sted, hvor du kan få vist beskeder, administrere enheder og få vist rapporter. Når du logger på Microsoft 365 Defender, starter du med startsiden som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/m365-defender-portal.png" alt-text="Microsoft 365 Defender-portal":::
+:::image type="content" source="../../media/mde-p1/m365-defender-portal.png" alt-text="Portal for Microsoft 365 Defender" lightbox="../../media/mde-p1/m365-defender-portal.png":::
 
 På startsiden får dit sikkerhedsteam en samlet oversigt over vigtige beskeder, enhedsstatus og trusler, der registreres. Defender til skyen er konfigureret, så dit sikkerhedsteam hurtigt og nemt kan finde de oplysninger, de leder efter.
 
@@ -51,11 +51,11 @@ På startsiden får dit sikkerhedsteam en samlet oversigt over vigtige beskeder,
 
 Startsiden indeholder kort, f.eks. kortet Aktive hændelser, der er vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/active-incidents-card.png" alt-text="Kortet Aktive hændelser":::
+:::image type="content" source="../../media/mde-p1/active-incidents-card.png" alt-text="Kortet Aktive hændelser" lightbox="../../media/mde-p1/active-incidents-card.png":::
 
 Kortet giver dig et hurtigt overblik over oplysninger sammen med et link eller en knap, som du kan vælge for at få vist mere detaljerede oplysninger. Med henvisning til vores eksempel på kortet Aktive hændelser kan vi vælge Se alle **hændelser** for at navigere til vores liste over hændelser.
 
-:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Liste over hændelser":::
+:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Listen over hændelser" lightbox="../../media/mde-p1/incidents.png":::
 
 ### <a name="navigation-bar-makes-it-easy-to-find-alerts-the-action-center-and-more"></a>Navigationslinjen gør det nemt at finde beskeder, handlingscenter og meget mere
 
@@ -76,8 +76,8 @@ Navigationslinjen i venstre side af skærmen giver dig mulighed for nemt at skif
 |  **Slutpunkter** >  **Konfiguration & oprindelige planer** >  **Grundlinjer for sikkerhed** | Grundlinjer for sikkerhed er forudkonfigurerede politikker og grupper af indstillinger, der kan hjælpe dig med at anvende anbefalede sikkerhedsindstillinger effektivt. Oprindelige planer omfatter indstillinger, der er baseret på bedste praksis for branchen. Du kan beholde standardindstillingerne eller tilpasse dine oprindelige planer, så de passer til organisationens behov. <br/><br/> Du kan få mere at vide [under Brug sikkerheds oprindelige planer til at konfigurere Windows 10 enheder i Intune](/mem/intune/protect/security-baselines). |
 |  **Slutpunkter** >  **Konfiguration & oprindelige planer** >  **Konfigurationsstyring** | Navigerer til siden **Enhedskonfigurationsstyring** , hvor du kan få vist oplysninger om onboardede enheder og tage skridt til at onboarde flere enheder. |
 | **Rapporter** | Navigerer til dine rapporter, f.eks. rapporten [om trusselsbeskyttelse](threat-protection-reports.md), enhedens [tilstand og](machine-reports.md) overholdelsesrapporten og din [webbeskyttelsesrapport](web-protection-overview.md). |
-| **Tilstand** | Indeholder links til **Tjeneste sundhed og** **Meddelelsescenter**.  |
-| **Tilstand** >  **Tjeneste sundhed** | Navigerer til siden Tjenestestilstand i Microsoft 365 Administration. På denne side kan du få vist tilstandsstatussen på tværs af alle de tjenester, der er tilgængelige med organisationens abonnementer.   |
+| **Tilstand** | Indeholder links til **Tjenestetilstand** og **Meddelelsescenter**.  |
+| **Tilstand** >  **Tjenestetilstand** | Navigerer til Tjenestetilstand side i Microsoft 365 Administration. På denne side kan du få vist tilstandsstatussen på tværs af alle de tjenester, der er tilgængelige med organisationens abonnementer.   |
 | **Tilstand** >  **Meddelelsescenter** | Navigerer til Meddelelsescenter i Microsoft 365 Administration. Meddelelsescenter indeholder oplysninger om planlagte ændringer. Hver meddelelse beskriver, hvad der kommer, hvordan det kan påvirke brugere, og hvordan du administrerer ændringer. |  
 | **Tilladelser & roller** | Giver dig mulighed for at give tilladelse til at bruge Microsoft 365 Defender portal. Tilladelser tildeles gennem roller i Azure Active Directory (Azure AD). Vælg en rolle, så vises en pop op-rude. Pop op-mailen indeholder et link til Azure AD, hvor du kan tilføje eller fjerne medlemmer i en rollegruppe. <br/><br/> Du kan få mere at vide [under Administrer portaladgang ved hjælp af rollebaseret adgangskontrol](rbac.md).  |
 | **Indstillinger** | Navigerer til generelle indstillinger for din Microsoft 365 Defender-portal (angivet som **Sikkerhedscenter**) og Defender til slutpunkt (angivet **som slutpunkter**). <br/><br/> Du kan få mere at vide [under Indstillinger](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
@@ -94,7 +94,7 @@ Når du logger på Microsoft 365 Defender, skal du sørge for at få vist og adm
 
 Vælg en hændelse for at få vist detaljer om hændelsen. Detaljer omfatter, hvilke beskeder der blev udløst, hvor mange enheder og brugere, der blev påvirket, samt andre detaljer. Følgende billede viser et eksempel på oplysninger om hændelsen.
 
-:::image type="content" source="../../media/mde-p1/single-incident.png" alt-text="Oplysninger om hændelse":::
+:::image type="content" source="../../media/mde-p1/single-incident.png" alt-text="Oplysninger om en hændelse" lightbox="../../media/mde-p1/single-incident.png":::
 
 Brug **fanerne Beskeder****, Enheder** og Brugere  til at få vist flere oplysninger, f.eks. de beskeder, der blev udløst, enheder, der blev påvirket, og brugerkonti, der blev påvirket. Derfra kan du udføre manuelle svarhandlinger, f.eks. isolere en enhed, stoppe og kvarte en fil osv.
 
@@ -105,11 +105,11 @@ Brug **fanerne Beskeder****, Enheder** og Brugere  til at få vist flere oplysni
 
 Hvis du vil have vist og administrere din organisations enheder, skal du i **navigationslinjen under Slutpunkter** vælge Lager **over enheder**. Du får vist en liste over enheder som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/device-inventory.png" alt-text="Lagerenhed":::
+:::image type="content" source="../../media/mde-p1/device-inventory.png" alt-text="Lagerenhed" lightbox="../../media/mde-p1/device-inventory.png":::
 
 Listen indeholder enheder, som der blev oprettet beskeder for. Som standard er de viste data for de seneste 30 dage med de seneste elementer angivet først. Vælg en enhed for at få vist flere oplysninger om den. Der åbnes en rude med pop op-vindue som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/device-inventory-selecteddevice.png" alt-text="Oplysninger om valgt enhed":::
+:::image type="content" source="../../media/mde-p1/device-inventory-selecteddevice.png" alt-text="Oplysninger om valgt enhed" lightbox="../../media/mde-p1/device-inventory-selecteddevice.png":::
 
 Pop op-ruden viser detaljer, f.eks. alle aktive beskeder for enheden, og indeholder links til at gøre noget, f.eks. at isolere en enhed.
 
@@ -139,7 +139,7 @@ I Defender for Endpoint Plan 1 er flere rapporter tilgængelige på Microsoft 36
 
 For at få adgang til rapporten om trusselsbeskyttelse skal Microsoft 365 Defender på portalen **Rapporter** og derefter vælge **Trusselsbeskyttelse**. Rapporten Threat Protection viser beskedtendenser, status, kategorier og meget mere. Visninger er arrangeret i to kolonner: **Påmindelsestendenser** **og beskedstatus** som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/threat-protection-report.png" alt-text="Rapport om trusselsbeskyttelse":::
+:::image type="content" source="../../media/mde-p1/threat-protection-report.png" alt-text="Rapport om trusselsbeskyttelse" lightbox="../../media/mde-p1/threat-protection-report.png":::
 
 Rul ned for at se alle visningerne på hver liste.
 
@@ -153,7 +153,7 @@ Rul ned for at se alle visningerne på hver liste.
 
 Hvis du vil have adgang til din enhedstilstandsrapport, Microsoft 365 Defender du vælge **Rapporter** i portalen Enhedstilstand og derefter vælge **Enhedstilstand**. Rapporten Enhedstilstand viser tilstand og antivirus på tværs af enheder i organisationen. Ligesom rapporten [Trusselsbeskyttelse arrangeres](#threat-protection-report) visninger i to kolonner: **Enhedstendenser** **og** Enhedsoversigt, som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/device-health-report.png" alt-text="Tilstandsrapport for enhed":::
+:::image type="content" source="../../media/mde-p1/device-health-report.png" alt-text="Tilstandsrapport for enhed" lightbox="../../media/mde-p1/device-health-report.png":::
 
 Rul ned for at se alle visningerne på hver liste. Som standard viser visningerne i kolonnen  Enhedstendenser data for de seneste 30 dage, men du kan ændre en visning for at få vist data for de sidste tre måneder, sidste seks måneder eller et brugerdefineret tidsinterval (op til 180 dage). **Oversigtsvisningerne** af Enheden er øjebliksbilleder for den forrige arbejdsdag.
 
@@ -164,7 +164,7 @@ Rul ned for at se alle visningerne på hver liste. Som standard viser visningern
 
 For at få adgang til din Enhedstilstandsrapport skal Microsoft 365 Defender på portalen **Rapporter** og derefter vælge **Webbeskyttelse**. Rapporten webbeskyttelse viser registreringer over tid, f.eks. skadelige URL-adresser og forsøg på at få adgang til blokerede URL-adresser, som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/web-protection-report.png" alt-text="Rapport over webbeskyttelse":::
+:::image type="content" source="../../media/mde-p1/web-protection-report.png" alt-text="Rapport over webbeskyttelse" lightbox="../../media/mde-p1/web-protection-report.png":::
 
 Rul ned for at se alle visningerne i webbeskyttelsesrapporten. Nogle visninger indeholder links, der giver dig mulighed for at få vist flere detaljer, konfigurere dine funktioner til trusselsbeskyttelse og endda administrere indikatorer, der fungerer som undtagelser i Defender til Slutpunkt.
 
@@ -174,4 +174,4 @@ Rul ned for at se alle visningerne i webbeskyttelsesrapporten. Nogle visninger i
 ## <a name="next-steps"></a>Næste trin
 
 - [Administrer Microsoft Defender for Endpoint Plan 1](mde-p1-maintenance-operations.md)
-- [Microsoft Defender til Slutpunkt](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)

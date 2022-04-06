@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan lære, hvordan de konfigurerer en postkasse til at indsamle spam- og phishingmails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 525b761b09a68c3e44443cec7bf718d9eaa4d8d1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9a38943b492e6bdae151a7906d1c8146a649949d
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590869"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634025"
 ---
 # <a name="user-reported-message-settings"></a>Bruger rapporterede meddelelsesindstillinger
 
@@ -31,7 +31,7 @@ ms.locfileid: "63590869"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I Microsoft 365 med Exchange Online postkasser kan du angive en postkasse for at modtage meddelelser, som brugerne rapporterer som skadelige eller ikke skadelige. Når brugere rapporterer meddelelser ved hjælp af de forskellige rapporteringsmuligheder, kan du bruge denne postkasse til at opfange meddelelser (kun sende til den brugerdefinerede postkasse) eller modtage kopier af meddelelser (send til den brugerdefinerede postkasse og Microsoft). Denne funktion fungerer sammen med følgende indstillinger for rapportering af meddelelser:
@@ -55,7 +55,7 @@ Brug følgende artikler til at konfigurere de nødvendige forudsætninger for, a
 
 - [Opret en antispampolitik](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) , der omfatter den brugerdefinerede postkasse, hvor ZAP til spam og ZAP til phishing er slået **fra (** \> sektionen Automatisk tømning uden time Aktiveret automatisk tømning **uden time (ZAP)** er ikke markeret).
 
-Hvis du har Microsoft Defender Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
+Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker brugernes rapporteringsmeddelelser:
 
 - [Opret en Pengeskab-politik for links](set-up-safe-links-policies.md), der omfatter den brugerdefinerede postkasse, hvor scanning af Pengeskab Links er slået fra (Vælg handlingen **for ukendt potentielt** \> skadelige URL-adresser i meddelelsessektionen **Fra**).
 
@@ -141,8 +141,8 @@ For at identificere de oprindelige vedhæftede meddelelser korrekt skal de medde
 Hvis du vil angive den rapporterede årsag til de oprindelige vedhæftede meddelelser, skal meddelelser, der sendes til den brugerdefinerede postkasse (ikke ændrer den vedhæftede fil), starte med en af følgende præfikser i Emne (konvoluttitel):
 
 - 1| eller Uønsket:
-- 2| eller Ikke uønsket
-- 3| eller phishing
+- 2| eller Ikke uønsket:
+- 3| eller phishing:
 
 Eksempel:
 

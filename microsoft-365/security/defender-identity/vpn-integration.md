@@ -1,6 +1,6 @@
 ---
-title: Integration af Microsoft Defender for Identity VPN i Microsoft 365 Defender
-description: Få mere at vide om, hvordan du indsamler regnskabsoplysninger ved at integrere et VPN til Microsoft Defender for Identity Microsoft 365 Defender
+title: Microsoft Defender for Identity VPN-integration i Microsoft 365 Defender
+description: Lær at indsamle regnskabsoplysninger ved at integrere et VPN til Microsoft Defender for Identity i Microsoft 365 Defender
 ms.date: 06/07/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,12 +9,12 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 59ab309b4d5cbab971c161ee1b8a4abefe93be69
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: a5c45ecda43b32e37f7309b9a2de33810d60bd15
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683027"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469157"
 ---
 # <a name="defender-for-identity-vpn-integration-in-microsoft-365-defender"></a>Defender til VPN-integration af identitet i Microsoft 365 Defender
 
@@ -23,7 +23,7 @@ ms.locfileid: "63683027"
 - Microsoft 365 Defender
 - Defender for Identity
 
-Denne artikel forklarer, hvordan du integrerer et VPN [med Microsoft Defender for Identity](/defender-for-identity) [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Denne artikel forklarer, hvordan du integrerer et [VPN Microsoft Defender for Identity](/defender-for-identity) i [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 >[!IMPORTANT]
 >Som en del af dine <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> har nogle indstillinger og detaljer ændret sig fra deres placering i Defender for Identity-portalen. Læs oplysningerne nedenfor for at finde ud af, hvor du kan finde både de velkendte og nye funktioner.
@@ -60,11 +60,11 @@ Udfør følgende trin på RRAS-serveren.
 1. Højreklik på servernavnet, og vælg **Egenskaber**.
 1. På fanen **Sikkerhed** under **Regnskabsudbyder skal du** vælge **RADIUS Accounting** og vælge **Konfigurer**.
 
-    ![RADIUS-konfiguration.](../../media/defender-identity/radius-setup.png)
+   :::image type="content" source="../../media/defender-identity/radius-setup.png" alt-text="Radius-konfigurationen" lightbox="../../media/defender-identity/radius-setup.png":::
 
 1. I vinduet **Tilføj RADIUS-server** skal du skrive **Servernavnet på** den nærmeste [!INCLUDE [Product short](includes/product-short.md)] sensor (som har netværksforbindelse). Ved høj tilgængelighed kan du tilføje yderligere sensorer [!INCLUDE [Product short](includes/product-short.md)] som RADIUS-servere. **Kontrollér,** at standardværdien på 1813 er konfigureret under Port. Vælg **Rediger** , og skriv en ny delt hemmelig streng med alfanumeriske tegn. Vær opmærksom på den nye, hemmelige streng, som du skal udfylde senere under [!INCLUDE [Product short](includes/product-short.md)] konfigurationen. Markér **afkrydsningsfeltet Send RADIUS-konto til og Bogføring fra,** og **vælg OK** i alle åbne dialogbokse.
 
-    ![VPN-konfiguration.](../../media/defender-identity/vpn-set-accounting.png)
+   :::image type="content" source="../../media/defender-identity/vpn-set-accounting.png" alt-text="VPN-konfigurationen" lightbox="../../media/defender-identity/vpn-set-accounting.png":::
 
 ## <a name="configure-vpn-in-defender-for-identity"></a>Konfigurer VPN i Defender for Identity
 
@@ -74,12 +74,12 @@ Sådan konfigurerer du VPN-data [!INCLUDE [Product short](includes/product-short
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> skal du gå **til Indstillinger** og derefter **Identities**.
 
-    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter under menuelementet Indstillinger" lightbox="../../media/defender-identity/settings-identities.png":::
 
 1. Vælg **VPN**.
 1. Vælg **Aktivér radiusregnskab**, og skriv **Den Delte hemmelighed,** du konfigurerede tidligere på din RRAS VPN-server. Vælg derefter **Gem**.
 
-    ![VPN-integration.](../../media/defender-identity/vpn-integration.png)
+   :::image type="content" source="../../media/defender-identity/vpn-integration.png" alt-text="VPN-integration" lightbox="../../media/defender-identity/vpn-integration.png":::
 
 Når dette er aktiveret, lytter alle Defender til identitetssensorer på port 1813 til RADIUS-revisionshændelser, og din VPN-konfiguration er fuldført.
 

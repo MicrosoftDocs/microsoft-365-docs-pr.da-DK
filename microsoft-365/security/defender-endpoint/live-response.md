@@ -1,5 +1,5 @@
 ---
-title: Undersøg enheder på enheder, der bruger live svar i Microsoft Defender til slutpunkt
+title: Undersøg enheder på enheder, der bruger direkte svar Microsoft Defender for Endpoint
 description: Få adgang til en enhed ved hjælp af en sikker ekstern shell-forbindelse for at udføre samtidig arbejde og udføre øjeblikkelige svarhandlinger på en enhed i realtid.
 keywords: remote, shell, connection, live, response, real-time, command, script, remediate, hunt, export, log, drop, download, file,
 ms.prod: m365-security
@@ -14,19 +14,19 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 882454e00517624c3bc43e87308007b00ece9507
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 8987c5642ea48e4c7887735cc0fce0e5bfccc119
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63591166"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470389"
 ---
 # <a name="investigate-entities-on-devices-using-live-response"></a>Undersøg enheder på enheder, der bruger direkte svar
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -101,7 +101,7 @@ Før du kan starte en session på en enhed, skal du opfylde følgende krav:
 
   Du får vist følgende fejlmeddelelse:
 
-  ![Billede af fejlmeddelelse.](images/live-response-error.png)
+  :::image type="content" source="images/live-response-error.png" alt-text="Fejlmeddelelsen" lightbox="images/live-response-error.png":::
 
 - **Aktivér direkte svar usigneret scriptudførelse** (valgfrit).
 

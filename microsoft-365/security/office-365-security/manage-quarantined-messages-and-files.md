@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan lære, hvordan du får vist og administrerer meddelelser, der er sat i karantæne, for alle brugere Exchange Online Protection (EOP). Administratorer i organisationer med Microsoft Defender til Office 365 kan også administrere filer, der er sat i karantæne, i SharePoint Online, OneDrive for Business og Microsoft Teams.
+description: Administratorer kan lære, hvordan du får vist og administrerer meddelelser, der er sat i karantæne, for alle brugere Exchange Online Protection (EOP). Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer, der er sat i karantæne, i SharePoint Online, OneDrive for Business og Microsoft Teams.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7787943ad16a3ae641b475b01b7e1dd8bb7f51d2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 449886f6272c81f9947fd3e7ea869e565326578f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589560"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469641"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>Administrer meddelelser og filer, der er sat i karantæne, som administrator i EOP
 
@@ -32,7 +32,7 @@ ms.locfileid: "63589560"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser, sætter karantæne i potentielt farlig eller uønskede meddelelser. Du kan få mere at vide [under Meddelelser, der er sat i karantæne i EOP](quarantine-email-messages.md).
@@ -41,7 +41,7 @@ Administratorer kan få vist, frigive og slette alle typer af meddelelser, der e
 
 Som standard er det kun administratorer, der kan administrere meddelelser, der var i karantæne som malware, phishing med høj tillid eller som et resultat af regler for mailflow (også kaldet transportregler). Men administratorer kan bruge karantænepolitikker til at definere, hvad brugerne har tilladelse til at gøre for meddelelser, der er sat i karantæne, baseret på, hvorfor meddelelsen var i karantæne (for understøttede funktioner). Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
 
-Administratorer i organisationer med Microsoft Defender til Office 365 kan også administrere filer, der var i karantæne af Pengeskab Vedhæftede filer [for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer, der er blevet sat i karantæne af Pengeskab Vedhæftede filer [for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
 
 Du kan få vist og administrere meddelelser, der er sat i karantæne, i Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
 
@@ -63,7 +63,7 @@ Du kan få vist og administrere meddelelser, der er sat i karantæne, i Microsof
   - **Rollegruppen Skrivebeskyttet** organisationsadministration i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) også skrivebeskyttet adgang til funktionen.
   - <sup>\*</sup>Medlemmer af rollegruppen Karantæneadministrator i mail **&-samarbejdsroller** i [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md#email--collaboration-roles-in-the-microsoft-365-defender-portal) skal også være medlemmer af rollegruppen administration af medarbejdere i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) for at udføre karantæneprocedurer i Exchange Online PowerShell. 
 
-- Meddelelser, der er sat i karantæne, bevares i en standardperiode, baseret på, hvorfor de var i karantæne. Når en opbevaringsperiode udløber, slettes meddelelserne automatisk og kan ikke gendannes. Du kan få mere at vide [under Meddelelser, der er sat i karantæne i EOP og Defender Office 365](quarantine-email-messages.md).
+- Meddelelser, der er sat i karantæne, bevares i en standardperiode, baseret på, hvorfor de var i karantæne. Når en opbevaringsperiode udløber, slettes meddelelserne automatisk og kan ikke gendannes. Få mere at vide under [Meddelelser, der er sat i karantæne i EOP og Defender for Office 365](quarantine-email-messages.md).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-email-messages"></a>Brug portalen Microsoft 365 Defender til at administrere meddelelser, der er sat i karantæne
 
@@ -110,7 +110,7 @@ Du kan få vist og administrere meddelelser, der er sat i karantæne, i Microsof
      - **Transportregel** (regel for mailflow)
      - **Masse**
      - **Spam**
-     - **Malware**: Antimalwarepolitikker i EOP eller Pengeskab politikker for vedhæftede filer i Defender for Office 365. Værdien **Politiktype** angiver, hvilken funktion der blev brugt.
+     - **Malware**: Antimalwarepolitikker i EOP eller Pengeskab politikker for vedhæftede filer Defender for Office 365. Værdien **Politiktype** angiver, hvilken funktion der blev brugt.
      - **Phishing**: Spamfilteret var **phishing** - eller antiphishingbeskyttelse i karantæne for meddelelsen ([spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings) eller [beskyttelse mod efterligning](set-up-anti-phishing-policies.
      - **Phishing med høj tillid**
    - **Modtager**: **Alle brugere** eller **Kun mig**. Slutbrugere kan kun administrere meddelelser, der er sat i karantæne, som sendes til dem.
@@ -141,7 +141,7 @@ Når du har fundet en bestemt meddelelse, der er sat i karantæne, skal du marke
 
 Når du markerer en meddelelse, der er sat i karantæne, på listen, kan du finde følgende oplysninger i pop op-dialogboksen med oplysninger, der vises.
 
-![Pop op-meddelelsen med oplysninger om en meddelelse, der er sat i karantæne.](../../media/quarantine-message-details-flyout.png)
+:::image type="content" source="../../media/quarantine-message-details-flyout.png" alt-text="Pop op-meddelelsen med oplysninger om en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-message-details-flyout.png":::
 
 - **Meddelelses-id**: GUID (Globally Unique Identifier) for meddelelsen. Tilgængeligt i **brevhovedfeltet Meddelelses-id** i brevhovedet.
 - **Afsenderadresse**
@@ -152,7 +152,7 @@ Når du markerer en meddelelse, der er sat i karantæne, på listen, kan du find
 - **Politiknavn**
 - **Antal modtagere**
 - **Modtagere:** Hvis meddelelsen indeholder flere modtagere, skal du klikke på Vis meddelelse eller  Vis brevhoved  for at få vist hele listen over modtagere.
-- **Modtagermærke**: Få mere at vide under [Brugermærker i Microsoft Defender til Office 365](user-tags.md).
+- **Modtagermærke**: Få mere at vide under [Brugermærker i Microsoft Defender for Office 365](user-tags.md).
 - **Udløber**: Den dato/det klokkeslæt, hvor meddelelsen automatisk og permanent slettes fra karantæne.
 - **Udgivet** til: Alle mailadresser (hvis nogen), som meddelelsen er blevet frigivet til.
 - **Endnu ikke frigivet til**: Alle mailadresser (hvis nogen), som meddelelsen endnu ikke er blevet frigivet til.
@@ -162,13 +162,13 @@ Hvis du vil handle på meddelelsen, skal du se næste afsnit.
 > [!NOTE]
 > Hvis du vil forblive i pop op-mailen med oplysninger, men ændre den meddelelse, du kigger på i karantæne, skal du bruge pil op og pil ned øverst i pop-op-meddelelsen.
 >
-> ![Pil op og pil ned i pop op-pilene for oplysninger for en meddelelse, der er sat i karantæne.](../../media/quarantine-message-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-up-down-arrows.png" alt-text="Pil op og pil ned i pop op-siden med oplysninger om en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-message-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-email"></a>Handle på en mail, der er sat i karantæne
 
 Når du har valgt en meddelelse, der er sat i karantæne, på listen, kan du vælge følgende handlinger i pop op-menuen med oplysninger:
 
-![Tilgængelige handlinger i pop op-menuen med oplysninger for en meddelelse, der er sat i karantæne.](../../media/quarantine-message-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-message-details-flyout-actions.png" alt-text="Tilgængelige handlinger i pop op-menuen med oplysninger om en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-message-details-flyout-actions.png":::
 
 - ![Ikonet Frigiv mail.](../../media/m365-cc-sc-check-mark-icon.png) **Frigiv mail**<sup>\*</sup>: I pop op-ruden, der vises, skal du konfigurere følgende indstillinger:
   - **Føj afsender til organisationens tilladelsesliste**: Markér denne indstilling for at forhindre meddelelser fra afsenderen i at blive sat i karantæne.
@@ -234,7 +234,7 @@ Hvis du ikke frigiver eller fjerner meddelelsen, slettes den, når standardopbev
 > [!NOTE]
 > På en mobilenhed er beskrivelsesteksten ikke tilgængelig på handlingsikonerne.
 >
-> ![Oplysninger om en meddelelse i karantæne med tilgængelige handlinger fremhævet.](../../media/quarantine-message-details-flyout-mobile-actions.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-mobile-actions.png" alt-text="Oplysninger om en meddelelse i karantæne med tilgængelige handlinger fremhævet" lightbox="../../media/quarantine-message-details-flyout-mobile-actions.png":::
 >
 > Ikonerne i rækkefølge og deres tilsvarende beskrivelser opsummeres i følgende tabel:
 >
@@ -253,7 +253,7 @@ Hvis du ikke frigiver eller fjerner meddelelsen, slettes den, når standardopbev
 
 Når du markerer flere meddelelser, der er sat i karantæne, på listen (op til 100) ved at klikke i det tomme område til venstre for den første  kolonne, vises rullelisten Massehandlinger, hvor du kan udføre følgende handlinger:
 
-![Rullelisten Massehandlinger for meddelelser i karantæne.](../../media/quarantine-message-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-message-bulk-actions.png" alt-text="Rullelisten Massehandlinger for meddelelser i karantæne" lightbox="../../media/quarantine-message-bulk-actions.png":::
 
 - ![Ikonet Frigiv mail.](../../media/m365-cc-sc-check-mark-icon.png) **Udgivelsesmeddelelser**: Udgiver meddelelser til alle modtagere. I pop op-menuen, der vises, kan du vælge følgende indstillinger, som er de samme, som når du slipper en enkelt meddelelse:
   - **Føj afsender til din organisations liste over tilladte**
@@ -272,12 +272,12 @@ Når du markerer flere meddelelser, der er sat i karantæne, på listen (op til 
 - ![Ikonet Download mail.](../../media/m365-cc-sc-download-icon.png) **Download meddelelser**
 - ![Ikonet Send kun.](../../media/m365-cc-sc-create-icon.png) **Kun sende**
 
-## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365"></a>Brug portalen Microsoft 365 Defender til at administrere filer, der er sat i karantæne, i Defender Office 365
+## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365"></a>Brug portalen Microsoft 365 Defender til at administrere filer, der er sat i karantæne, i Defender for Office 365
 
 > [!NOTE]
-> Fremgangsmåderne for filer, der er sat i karantæne, i dette afsnit er kun tilgængelige for Microsoft Defender Office 365 Plan 1- eller Plan 2-abonnenter.
+> Fremgangsmåderne for filer, der er sat i karantæne i dette afsnit, er kun Microsoft Defender for Office 365 abonnenter på Plan 1 eller Plan 2.
 
-I organisationer med Defender for Office 365 kan administratorer administrere filer, der var i karantæne af Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams. Hvis du vil aktivere beskyttelse af disse filer, [skal du se aktivér Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
+I organisationer med Defender for Office 365 kan administratorer administrere filer, der er blevet sat i karantæne af Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams. Hvis du vil aktivere beskyttelse af disse filer, [skal du se aktivér Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
 
 ### <a name="view-quarantined-files"></a>Få vist filer, der er sat i karantæne
 
@@ -312,7 +312,7 @@ Når du har fundet en bestemt fil, der er sat i karantæne, skal du markere file
 
 Når du vælger en fil, der er sat i karantæne, på listen, kan du finde følgende oplysninger i pop op-menuen med oplysninger, der åbnes:
 
-![Pop op-filen med oplysninger om en fil, der er sat i karantæne.](../../media/quarantine-file-details-flyout.png)
+:::image type="content" source="../../media/quarantine-file-details-flyout.png" alt-text="Pop op-filen med oplysninger om en fil, der er sat i karantæne" lightbox="../../media/quarantine-file-details-flyout.png":::
 
 - **Filnavn**
 - **Filens** URL-adresse: URL-adresse, der definerer filens placering (f.eks. i SharePoint Online).
@@ -333,13 +333,13 @@ Hvis du vil handle på filen, skal du se næste afsnit.
 > [!NOTE]
 > Hvis du vil forblive i pop op-menuen med oplysninger, men ændre den fil, du kigger på i karantæne, skal du bruge pil op og pil ned øverst i pop op-menuen.
 >
-> ![Pil op og pil ned i pop op-menuen med oplysninger om en fil, der er sat i karantæne.](../../media/quarantine-file-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-file-details-flyout-up-down-arrows.png" alt-text="Pil op og pil ned i pop op-pilene for filer, der er sat i karantæne" lightbox="../../media/quarantine-file-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-files"></a>Tag skridtet videre på filer, der er sat i karantæne
 
 Når du har valgt en fil, der er sat i karantæne, på listen, kan du se følgende handlinger i pop op-menuen med oplysninger:
 
-![Tilgængelige handlinger i pop op-filen med oplysninger for en fil, der er sat i karantæne.](../../media/quarantine-file-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-file-details-flyout-actions.png" alt-text="Handlingerne i pop op-filen med oplysninger for en fil, der er sat i karantæne" lightbox="../../media/quarantine-file-details-flyout-actions.png":::
 
 - ![Ikon for udgivelsesfil.](../../media/m365-cc-sc-check-mark-icon.png) **Udgivelsesfil**<sup>\*</sup>: I pop op-ruden, der vises, skal du aktivere eller deaktivere **Rapportfiler til Microsoft til** analyse og derefter klikke på **Slip**.
 - ![Ikon for udgivelsesfil.](../../media/m365-cc-sc-check-mark-icon.png)
@@ -355,7 +355,7 @@ Hvis du ikke frigiver eller fjerner filen, slettes den, når standardopbevarings
 
 Når du markerer flere filer, der er sat i karantæne, på listen (op til 100) ved at klikke i det tomme område til  venstre for kolonnen Emne, vises rullelisten Massehandlinger, hvor du kan udføre følgende handlinger:
 
-![Rullelisten Massehandlinger for filer i karantæne.](../../media/quarantine-file-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-file-bulk-actions.png" alt-text="Rullelisten Massehandlinger for filer i karantæne" lightbox="../../media/quarantine-file-bulk-actions.png":::
 
 - ![Ikon for udgivelsesfil.](../../media/m365-cc-sc-check-mark-icon.png) **Udgivelsesfil**: I pop op-ruden, der vises, skal du aktivere eller deaktivere **Rapportfiler til Microsoft til** analyse og derefter klikke på **Slip**.
 - ![Ikonet Slet fra karantæne.](../../media/m365-cc-sc-delete-icon.png) **Slet fra karantæne**: Når du har **klikket på** Ja i den advarsel, der vises, slettes filen straks.

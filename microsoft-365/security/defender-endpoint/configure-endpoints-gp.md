@@ -1,7 +1,7 @@
 ---
-title: Onboard Windows enheder til Microsoft Defender til slutpunkt via Gruppepolitik
+title: Onboard Windows-enheder til Microsoft Defender for Endpoint via Gruppepolitik
 description: Brug Gruppepolitik til at installere konfigurationspakken på Windows enheder, så de er onboardet til tjenesten.
-keywords: konfigurer enheder ved hjælp af gruppepolitik, enhedsstyring, konfigurer Microsoft Defender til slutpunktsenheder, onboard Microsoft Defender til slutpunktsenheder, gruppepolitik
+keywords: konfigurer enheder ved hjælp af gruppepolitik, enhedshåndtering, konfigurer Microsoft Defender for Endpoint, onboard Microsoft Defender for Endpoint-enheder, gruppepolitik
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,14 +16,14 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 12/07/2021
 ms.technology: mde
-ms.openlocfilehash: 3b20242247e33f8550ce4d153c2f2618c64d7007
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e05927829ec680a303972090dc050514c31cdbc6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599289"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468959"
 ---
-# <a name="onboard-windows-devices-using-group-policy"></a>Onboard Windows-enheder ved hjælp af Gruppepolitik 
+# <a name="onboard-windows-devices-using-group-policy"></a>Onboard Windows enheder ved hjælp af Gruppepolitik 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "63599289"
 **Gælder for:**
 
 - Gruppepolitik
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsgp-abovefoldlink)
@@ -40,10 +40,10 @@ ms.locfileid: "63599289"
 > [!NOTE]
 > For at Gruppepolitik (GP)-opdateringer til at installere pakken skal du være på Windows Server 2008 R2 eller nyere.
 >
-> For Windows Server 2019 og Windows Server 2022 skal du muligvis erstatte NT AUTHORITY\Well-Known-System-Account med NT AUTHORITY\SYSTEM for den XML-fil, som Gruppepolitik-indstillingen opretter.
+> For Windows Server 2019 og Windows Server 2022 skal du muligvis erstatte NT AUTHORITY\Well-Known-System-Account med NT AUTHORITY\SYSTEM i den XML-fil, som Gruppepolitik-indstillingen opretter.
 
 > [!NOTE]
-> Hvis du bruger den nye, samlede Microsoft Defender for Endpoint-løsning til Windows Server 2012 R2 og 2016, skal du sørge for, at du bruger de nyeste ADMX-filer i din central butik for at få adgang til de korrekte politikindstillinger for Microsoft Defender til slutpunkt. Se Sådan opretter og administrerer du [Central Store til Gruppepolitik](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) administrative skabeloner i Windows og download de nyeste filer til brug med **Windows 10**.
+> Hvis du bruger den nye, samlede Microsoft Defender for Endpoint-løsning til Windows Server 2012 R2 og 2016, skal du sørge for, at du bruger de nyeste ADMX-filer i din central butik for at få adgang til de korrekte Microsoft Defender for Endpoint-politikindstillinger. Se Sådan opretter og administrerer du [Central Store til Gruppepolitik administrative skabeloner i Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) og download de seneste filer til brug **med Windows 10**.
 
 Se [PDF-filen](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf) eller [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) for at se de forskellige stier i udrulning af Defender til Slutpunkt.
 
@@ -59,11 +59,11 @@ Se [PDF-filen](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-
 
 2. Udtræk indholdet af .zip til en delt, skrivebeskyttet placering, der kan åbnes af enheden. Du skal have en mappe med *navnet OptionalParamsPolicy* og filen *WindowsDefenderATPOnboardingScript.cmd*.
 
-3. Hvis du vil oprette et nyt gruppepolitikobjekt, [skal du åbne Gruppepolitik Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), højreklikke på **de Gruppepolitik** objekter, du vil konfigurere, og klikke på **Ny**. Skriv navnet på det nye gruppepolitikobjekt i dialogboksen, der vises, og klik på **OK**.
+3. Hvis du vil oprette et nyt gruppepolitikobjekt, [skal du åbne Gruppepolitik Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), højreklikke **på Gruppepolitik** objekter, du vil konfigurere, og klikke på **Ny**. Skriv navnet på det nye gruppepolitikobjekt i dialogboksen, der vises, og klik på **OK**.
 
-4. Åbn Gruppepolitik [(](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) GPMC), højreklik på det Gruppepolitik objekt (GPO), du vil konfigurere, og klik på **Rediger**.
+4. Åbn Gruppepolitik [(](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)GPMC), højreklik på det Gruppepolitik objekt (GPO), du vil konfigurere, og klik på **Rediger**.
 
-5. I Gruppepolitik **administrationseditor** skal du **gå til Computerkonfiguration** **og derefter** Indstillinger og **derefter indstillinger for Kontrolpanel**.
+5. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** **og derefter** Indstillinger og **derefter indstillinger for Kontrolpanel**.
 
 6. Højreklik på Planlagte **opgaver**, peg på **Ny**, og klik derefter på **Øjeblikkelig opgave (mindst Windows 7)**.
 
@@ -96,7 +96,7 @@ Du kan bruge Gruppepolitik (GP) til at konfigurere indstillinger, f.eks. indstil
 
     - _Kopiér AtpConfiguration.adml_ _til C:\\Windows\\ PolicyDefinitionsen-US\\_
 
-    Hvis du bruger en Central Store [til Gruppepolitik administrative](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra) skabeloner, skal du kopiere følgende filer fra konfigurationspakken:
+    Hvis du bruger en Central Store [til Gruppepolitik](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra) administrative skabeloner, skal du kopiere følgende filer fra konfigurationspakken:
 
     - _Kopiér AtpConfiguration.admx til_ _\\\<forest.root\>\\\\SysVolPoliciesPolicyDefinitions\\\<forest.root\>\\\\_
 
@@ -183,7 +183,7 @@ Få den aktuelle liste over reduktionsregler for angrebsoverfladen GUID'er fra i
 
    Dette konfigurerer hver enkelt kun til overvågning.
 
-   ![Billede af konfiguration af reduktion af angrebsoverfladen.](images/asr-guid.png)
+   :::image type="content" source="images/asr-guid.png" alt-text="Konfiguration af reduktion af angrebsoverfladen" lightbox="images/asr-guid.png":::
 
 Politik|Placering|Indstilling
 ---|---|---
@@ -191,7 +191,7 @@ Konfigurere styret mappeadgang| \Windows Components\Microsoft Defender Antivirus
 
 ## <a name="run-a-detection-test-to-verify-onboarding"></a>Kør en registreringstest for at bekræfte onboarding
 
-Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at enheden er korrekt onboardet til tjenesten. Få mere at vide under [Kør en registreringstest på en nyligt onboardet Microsoft Defender til slutpunktsenhed](run-detection-test.md).
+Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at enheden er korrekt onboardet til tjenesten. Få mere at vide under [Kør en registreringstest på en nyligt onboardet Microsoft Defender for Endpoint enhed](run-detection-test.md).
 
 ## <a name="offboard-devices-using-group-policy"></a>Offboard-enheder, der bruger Gruppepolitik
 
@@ -212,9 +212,9 @@ Af sikkerhedsmæssige årsager udløber den pakke, der blev brugt til Offboard-e
 
 2. Udtræk indholdet af .zip til en delt, skrivebeskyttet placering, der kan åbnes af enheden. Du skal have en fil med *WindowsDefenderATPOffboardingScript_valid_until_YYYY-DD.cmd-mm*.
 
-3. Åbn Gruppepolitik [(](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) GPMC), højreklik på det Gruppepolitik objekt (GPO), du vil konfigurere, og klik på **Rediger**.
+3. Åbn Gruppepolitik [(](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)GPMC), højreklik på det Gruppepolitik objekt (GPO), du vil konfigurere, og klik på **Rediger**.
 
-4. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration og** **derefter Indstillinger og** **derefter indstillinger for Kontrolpanel**.
+4. I Gruppepolitik **administrationseditor** skal du **gå til Computerkonfiguration og** **derefter** Indstillinger og **derefter indstillinger for Kontrolpanel**.
 
 5. Højreklik på Planlagte **opgaver**, peg på Ny **, og** klik derefter på **Øjeblikkelig opgave**.
 
@@ -233,7 +233,7 @@ Af sikkerhedsmæssige årsager udløber den pakke, der blev brugt til Offboard-e
 
 ## <a name="monitor-device-configuration"></a>Overvåg enhedskonfiguration
 
-Med Gruppepolitik er der ikke mulighed for at overvåge implementering af politikker på enhederne. Overvågning kan udføres direkte på portalen eller ved hjælp af de forskellige installationsværktøjer.
+Med Gruppepolitik er det ikke muligt at overvåge implementering af politikker på enhederne. Overvågning kan udføres direkte på portalen eller ved hjælp af de forskellige installationsværktøjer.
 
 ## <a name="monitor-devices-using-the-portal"></a>Overvåg enheder ved hjælp af portalen
 
@@ -252,55 +252,53 @@ Opret en ny Gruppepolitik eller gruppere disse indstillinger i med de andre poli
 
 2. Gå til **Computer** **ConfigurationPoliciesAdministrative** >  >  **Templates** >  **Windows Components** >  **Microsoft Defender Antivirus** >  **Real-time Protection**.
 
-    :::image type="content" source="images/realtime-protect.png" alt-text="beskyttelse i realtid.":::
+    :::image type="content" source="images/realtime-protect.png" alt-text="Beskyttelse i realtid" lightbox="images/realtime-protect.png":::
 
 1. I mappen Karantæne skal du konfigurere fjernelse af elementer fra mappen Karantæne.
 
-    :::image type="content" source="images/removal-items-quarantine1.png" alt-text="mappen til fjernelse af elementer i karantæne.":::
+    :::image type="content" source="images/removal-items-quarantine1.png" alt-text="Fjerne elementer i karantænemappe" lightbox="images/removal-items-quarantine1.png":::
 
-    :::image type="content" source="images/config-removal-items-quarantine2.png" alt-text="konfigurations-fjernelseskarantæne.":::
+    :::image type="content" source="images/config-removal-items-quarantine2.png" alt-text="konfigurations-fjernelseskarantæne" lightbox="images/config-removal-items-quarantine2.png":::
 
 4. Konfigurer scanningsindstillingerne i mappen Scanning.
 
-    :::image type="content" source="images/gpo-scans.png" alt-text="gpo-scanninger.":::
+    :::image type="content" source="images/gpo-scans.png" alt-text="gpo-scanninger" lightbox="images/gpo-scans.png":::
 
 ### <a name="monitor-all-files-in-real-time-protection"></a>Overvåg alle filer i beskyttelse i realtid
 
 Gå til **Politikker for computerkonfiguration** \>  \> **–** \> **administrative skabeloner Windows komponenter** \> **Microsoft Defender Antivirus** \> **beskyttelse i realtid**.
 
- Da værdien for "Scan indgående og udgående filer" (standard) er 0, ændres gruppepolitikken for indstillingen "Konfigurer overvågning af indgående og udgående fil og program" for "tovejs (fuld on-access)"-indstillingen ændres til deaktiveret.
-
-:::image type="content" source="images/config-monitor-incoming-outgoing-file-act.png" alt-text="konfigurere overvågning af aktivitet for indgående udgående fil.":::
+:::image type="content" source="images/config-monitor-incoming-outgoing-file-act.png" alt-text="Konfigurere overvågning af aktivitet for indgående udgående fil" lightbox="images/config-monitor-incoming-outgoing-file-act.png":::
 
 ### <a name="configure-windows-defender-smartscreen-settings"></a>Konfigurere Windows Defender smartscreen-indstillinger
 
 1. Gå til **Politikker for computerkonfiguration** \>  \> **Administrative skabeloner** \> **Windows komponenter** \> **Windows Defender SmartScreen** \> **Explorer**.
 
-    :::image type="content" source="images/config-windows-def-smartscr-explorer.png" alt-text="Konfiguration af Windows Defender Smart-skærmstifinder.":::
+   :::image type="content" source="images/config-windows-def-smartscr-explorer.png" alt-text="Konfigurer Windows Defender Smart Screen Explorer" lightbox="images/config-windows-def-smartscr-explorer.png":::
  
 2. Gå til **Computer** **configurationPoliciesAdministrative** >  >  **Templates** >  **Windows Components** >  **Windows Defender SmartScreen** >  **Microsoft Edge**.
 
-    :::image type="content" source="images/config-windows-def-smartscr-explorer.png" alt-text="config windows defender smart screen Edge.":::
+    :::image type="content" source="images/config-windows-def-smartscr-explorer.png" alt-text="Konfigurer Windows Defender Smart Screen Edge" lightbox="images/config-windows-def-smartscr-explorer.png":::
 
 ### <a name="configure-potentially-unwanted-applications"></a>Konfigurere potentielt uønskede programmer
 
 Gå til **Politikker for computerkonfiguration** \>  \> **, Windows** \> **dokumentkomponenter** \> **Microsoft Defender Antivirus**.
 
-:::image type="content" source="images/config-potential-unwanted-apps.png" alt-text="konfiguration af en potentiel uønsket app.":::
+:::image type="content" source="images/config-potential-unwanted-apps.png" alt-text="Konfiguration af potentielt uønsket app" lightbox="images/config-potential-unwanted-apps.png":::
 
-:::image type="content" source="images/config-potential-unwanted-apps2.png" alt-text="konfigurer potentielt.":::
+:::image type="content" source="images/config-potential-unwanted-apps2.png" alt-text="konfigurer potentielt" lightbox="images/config-potential-unwanted-apps2.png":::
 
 ### <a name="configure-cloud-deliver-protection-and-send-samples-automatically"></a>Konfigurere skyleveringsbeskyttelse og sende eksempler automatisk
 
 Gå til **Politikker for computerkonfiguration** \>  \> **, Windows** \> **dokumentkomponenter** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
-:::image type="content" source="images/gpo-maps1.png" alt-text="kort.":::
+:::image type="content" source="images/gpo-maps1.png" alt-text="kort" lightbox="images/gpo-maps1.png":::
 
-:::image type="content" source="images/gpo-maps-block-atfirst-sight.png" alt-text="blok ved første øjekast.":::
+:::image type="content" source="images/gpo-maps-block-atfirst-sight.png" alt-text="Bloker ved første synsvidens" lightbox="images/gpo-maps-block-atfirst-sight.png":::
 
-:::image type="content" source="images/gpo-maps-join-ms-maps.png" alt-text="deltag i Microsoft Maps.":::
+:::image type="content" source="images/gpo-maps-join-ms-maps.png" alt-text="Deltag i Microsoft Kort" lightbox="images/gpo-maps-join-ms-maps.png":::
 
-:::image type="content" source="images/send-file-sample-further-analysis-require.png" alt-text="Send fileksempel, når yderligere analyse er påkrævet.":::
+:::image type="content" source="images/send-file-sample-further-analysis-require.png" alt-text="Send fileksempel, når yderligere analyse er påkrævet" lightbox="images/send-file-sample-further-analysis-require.png":::
 
 > [!NOTE]
 > Indstillingen **Send alle eksempler** giver den mest analyse af binære/scripts/dokumenter, hvilket øger sikkerheden.
@@ -312,23 +310,23 @@ Få mere at vide under [Aktiver skybeskyttelse i Microsoft Defender Antivirus](e
 
 Gå til **Politikker for computerkonfiguration** \>  \> **Administrative skabeloner** \> **Windows komponenter Microsoft Defender Antivirus** \>  \> **Security Intelligence-opdateringer**.
 
-:::image type="content" source="images/signature-update-1.png" alt-text="signaturopdatering.":::
+:::image type="content" source="images/signature-update-1.png" alt-text="Signaturopdatering" lightbox="images/signature-update-1.png":::
 
-:::image type="content" source="images/signature-update-2.png" alt-text="opdatering af signaturdefinition.":::
+:::image type="content" source="images/signature-update-2.png" alt-text="Opdatering af signaturdefinition" lightbox="images/signature-update-2.png":::
 
 ### <a name="configure-cloud-deliver-timeout-and-protection-level"></a>Konfigurere timeout for skyleverance og beskyttelsesniveau
 
 Gå til **Politikker for computerkonfiguration** \>  \> **Administrative skabeloner** \> **Windows komponenter** \> **Microsoft Defender Antivirus** \> **MpEngine**.
 Når du konfigurerer politik på **skybeskyttelsesniveau til Microsoft Defender Antivirus politik for blokering** af skyen, vil dette deaktivere politikken. Dette er, hvad der kræves for at angive beskyttelsesniveauet til Windows-standarden.
 
-:::image type="content" source="images/config-extended-cloud-check.png" alt-text="konfiguration af udvidet skykontrol.":::
+:::image type="content" source="images/config-extended-cloud-check.png" alt-text="Konfiguration af udvidet skykontrol" lightbox="images/config-extended-cloud-check.png":::
 
-:::image type="content" source="images/cloud-protection-level.png" alt-text="konfiguration af skybeskyttelsesniveau.":::
+:::image type="content" source="images/cloud-protection-level.png" alt-text="Konfigurer skybeskyttelsesniveau" lightbox="images/cloud-protection-level.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 - [Onboard Windows-enheder ved hjælp af Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
-- [Onboard Windows-enheder ved hjælp af værktøjer til administration af mobilenheder](configure-endpoints-mdm.md)
+- [Onboard Windows-enheder ved hjælp af mobile Enhedshåndtering værktøjer](configure-endpoints-mdm.md)
 - [Onboarde Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
 - [Onboard ikke-permanente VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
-- [Kør en registreringstest på en nyligt onboardet Microsoft Defender til slutpunktsenheder](run-detection-test.md)
-- [Fejlfinding af onboardingproblemer i Microsoft Defender til Slutpunkt](troubleshoot-onboarding.md)
+- [Kør en registreringstest på en nyligt onboardet Microsoft Defender for Endpoint-enheder](run-detection-test.md)
+- [Fejlfinding Microsoft Defender for Endpoint onboardingproblemer](troubleshoot-onboarding.md)

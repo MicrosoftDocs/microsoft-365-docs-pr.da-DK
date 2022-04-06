@@ -15,23 +15,23 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: b9af738d4b1f59705132a84239d06dc762447417
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 04e7617825a3e14eac541b296cbed9f4dd95e206
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683751"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469311"
 ---
 # <a name="customize-controlled-folder-access"></a>Tilpas styret mappeadgang
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Kontrolleret mappeadgang hjælper dig med at beskytte værdifulde data mod skadelige apps og trusler, f.eks ransomware. Kontrolleret mappeadgang understøttes på Windows Server 2019, Windows Server 2022, Windows 10 og Windows 11-klienter. I denne artikel beskrives det, hvordan du kan tilpasse funktioner for styret mappeadgang, og du kan læse følgende afsnit:
+Kontrolleret mappeadgang hjælper dig med at beskytte værdifulde data mod skadelige apps og trusler, f.eks ransomware. Kontrolleret mappeadgang understøttes Windows Server 2019, Windows Server 2022, Windows 10 og Windows 11 klienter. I denne artikel beskrives det, hvordan du kan tilpasse funktioner for styret mappeadgang, og du kan læse følgende afsnit:
 
 - [Beskyt flere mapper](#protect-additional-folders)
 - [Tilføje apps, der skal have adgang til beskyttede mapper](#allow-specific-apps-to-make-changes-to-controlled-folders)
@@ -61,7 +61,7 @@ Du kan bruge Windows Sikkerhed-appen, Gruppepolitik, PowerShell-cmdlet'er eller 
 
 4. Under sektionen **Kontrolleret mappeadgang** skal du **vælge Beskyttede mapper**.
 
-5. Vælg **Ja** i **prompten Kontrol af brugeradgang** . **Ruden Beskyttede mapper** vises.
+5. Vælg **Ja** i **Access Control** brugeroplysninger. **Ruden Beskyttede mapper** vises.
 
 6. Vælg **Tilføj en beskyttet mappe,** og følg instruktionerne for at tilføje mapper.
 
@@ -90,7 +90,7 @@ Du kan bruge Windows Sikkerhed-appen, Gruppepolitik, PowerShell-cmdlet'er eller 
     ```
 3. Gentag trin 2 for hver mappe, du vil beskytte. Mapper, der er beskyttet, er synlige i Windows Sikkerhed appen.
 
-   :::image type="content" source="images/cfa-allow-folder-ps.png" alt-text="PowerShell-vindue med cmdlet vist.":::
+   :::image type="content" source="images/cfa-allow-folder-ps.png" alt-text="PowerShell-vinduet med cmdlet vist" lightbox="images/cfa-allow-folder-ps.png":::
 
 > [!IMPORTANT]
 > Bruges `Add-MpPreference` til at tilføje eller føje apps til listen og ikke `Set-MpPreference`. Hvis du `Set-MpPreference` bruger cmdlet'en, overskrives den eksisterende liste.
@@ -120,13 +120,13 @@ Et tilladt program eller en tilladt tjeneste har kun skriveadgang til en kontrol
 
 4. Vælg **Tilføj en tilladt app,** og følg instruktionerne for at tilføje apps.
 
-   :::image type="content" source="images/cfa-allow-app.png" alt-text="Tilføj en tilladt appknap.":::
+   :::image type="content" source="images/cfa-allow-app.png" alt-text="Knappen Tilføj en tilladt app" lightbox="images/cfa-allow-app.png":::
 
 ### <a name="use-group-policy-to-allow-specific-apps"></a>Brug Gruppepolitik til at tillade bestemte apps
 
 1. På Gruppepolitik administrationsenhed skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet for **at Windows adgang til** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit** **Guard-kontrolleret**\> mappeadgang.
 
@@ -149,7 +149,7 @@ Et tilladt program eller en tilladt tjeneste har kun skriveadgang til en kontrol
 
    Fortsæt med at `Add-MpPreference -ControlledFolderAccessAllowedApplications` bruge til at føje flere apps til listen. Apps, der tilføjes ved hjælp af denne cmdlet, vises i Windows Sikkerhed appen.
 
-   :::image type="content" source="images/cfa-allow-app-ps.png" alt-text="PowerShell-cmdlet'en til at tillade en app.":::
+   :::image type="content" source="images/cfa-allow-app-ps.png" alt-text="PowerShell-cmdlet'en til at tillade et program" lightbox="images/cfa-allow-app-ps.png":::
 
 > [!IMPORTANT]
 > Bruges `Add-MpPreference` til at tilføje eller føje apps til listen. Hvis du `Set-MpPreference` bruger cmdlet'en, overskrives den eksisterende liste.
@@ -160,14 +160,14 @@ Brug [konfigurationen ./Vendor/MSFT/Policy/Config/Defender/GuardedFoldersAllowed
 
 ## <a name="allow-signed-executable-files-to-access-protected-folders"></a>Tillad signerede eksekverbare filer at få adgang til beskyttede mapper
 
-Microsoft Defender for Endpoint-certifikat og filindikatorer kan tillade signerede eksekverbare filer at få adgang til beskyttede mapper. Du kan få mere at vide [om implementeringen under Opret indikatorer, der er baseret på certifikater](indicator-certificates.md).
+Microsoft Defender for Endpoint certifikat- og filindikatorer kan tillade signerede eksekverbare filer at få adgang til beskyttede mapper. Du kan få mere at vide [om implementeringen under Opret indikatorer, der er baseret på certifikater](indicator-certificates.md).
 
 > [!Note]
 > Dette gælder ikke for scripting-søgemaskiner, herunder Powershell
 
 ## <a name="customize-the-notification"></a>Tilpasse meddelelsen
 
-Du kan finde flere oplysninger om, hvordan du tilpasser meddelelsen, når en regel udløses og blokerer en app eller fil, under Konfigurer beskeder [om beskeder i Microsoft Defender til slutpunkt](configure-email-notifications.md).
+Du kan finde flere oplysninger om tilpasning af meddelelsen, når en regel udløses og blokerer en app eller fil, under Konfigurer beskeder [om beskeder Microsoft Defender for Endpoint](configure-email-notifications.md).
 
 ## <a name="see-also"></a>Se også
 

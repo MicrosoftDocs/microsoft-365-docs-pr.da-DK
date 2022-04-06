@@ -1,7 +1,7 @@
 ---
-title: Installér opdateringer til Microsoft Defender til Slutpunkt på Mac
-description: Styr opdateringer til Microsoft Defender til Slutpunkt på Mac i virksomhedsmiljøer.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, opdateringer, installér
+title: Installér opdateringer til Microsoft Defender for Endpoint på Mac
+description: Styr opdateringer til Microsoft Defender for Endpoint på Mac i virksomhedsmiljøer.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, opdateringer, installér
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,32 +15,32 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ceff362daeb2054b6037ea0eecbeafbb9dbed4f3
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 0b9ddf9693a242b3b8c466cfa1616b62c5eb73b9
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592923"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469289"
 ---
-# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>Installer opdateringer til Microsoft Defender til Endpoint på macOS
+# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>Installér opdateringer til Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
 
-- [Microsoft Defender til Slutpunkt på macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint på macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft udgiver jævnligt softwareopdateringer for at forbedre ydeevnen, sikkerheden og levere nye funktioner.
 
-Hvis du vil opdatere Microsoft Defender til Slutpunkt på macOS, bruges et program med navnet Microsoft AutoUpdate (MAU). Som standard søger MAU automatisk efter opdateringer dagligt, men du kan ændre det til ugentligt, månedligt eller manuelt.
+Hvis du Microsoft Defender for Endpoint opdateringer på macOS, bruges et program med navnet Microsoft AutoUpdate (MAU). Som standard søger MAU automatisk efter opdateringer dagligt, men du kan ændre det til ugentligt, månedligt eller manuelt.
 
-![MAU-skærmbillede.](images/MDATP-34-MAU.png)
+:::image type="content" source="images/MDATP-34-MAU.png" alt-text="MAU" lightbox="images/MDATP-34-MAU.png":::
 
 Hvis du beslutter dig for at installere opdateringer ved hjælp af dine softwaredistributionsværktøjer, skal du konfigurere MAU til manuelt at søge efter softwareopdateringer. Du kan installere indstillinger for at konfigurere, hvordan og hvornår MAU søger efter opdateringer til Mac-computere i organisationen.
 
@@ -48,7 +48,7 @@ Hvis du beslutter dig for at installere opdateringer ved hjælp af dine software
 
 MAU indeholder et kommandolinjeværktøj kaldet *msupdate*, som er udviklet til it-administratorer, så de har mere præcis kontrol over, hvornår der anvendes opdateringer. Du kan finde en vejledning til, hvordan du bruger dette værktøj[, Office til Mac ved hjælp af msupdate](/deployoffice/mac/update-office-for-mac-using-msupdate).
 
-I MAU er programidentifikatoren for Microsoft Defender til Slutpunkt på macOS *WDAV00*. For at downloade og installere de seneste opdateringer til Microsoft Defender til Endpoint på macOS skal du udføre følgende kommando fra et Terminal-vindue:
+I MAU er programidentifikatoren for Microsoft Defender for Endpoint på macOS *WDAV00*. For at downloade og installere de seneste opdateringer til Microsoft Defender for Endpoint på macOS skal du udføre følgende kommando fra et Terminal-vindue:
 
 ```dos
 ./msupdate --install --apps wdav00
@@ -87,7 +87,7 @@ Kanalen `Current` indeholder den mest stabile version af produktet.
 |||
 
 > [!WARNING]
-> Denne indstilling ændrer kanalen for alle programmer, der opdateres via Microsoft Automatiske opdateringer. Hvis du kun vil ændre kanalen for Microsoft Defender til Endpoint på macOS, skal du udføre følgende kommando efter at have erstattet `[channel-name]` med den ønskede kanal:
+> Denne indstilling ændrer kanalen for alle programmer, der opdateres via Microsoft Automatiske opdateringer. Hvis du kun vil ændre kanalen for Microsoft Defender for Endpoint i macOS, skal du udføre følgende kommando efter at have erstattet `[channel-name]` med den ønskede kanal:
 >
 > ```bash
 > defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
@@ -276,7 +276,7 @@ Følgende konfigurationsprofil bruges til at:
 Hvis du vil konfigurere MAU, kan du installere denne konfigurationsprofil fra det administrationsværktøj, din virksomhed bruger:
 
 - Fra SYLF skal du uploade denne konfigurationsprofil og angive Præferencedomænet *til com.microsoft.autoupdate2*.
-- Upload denne konfigurationsprofil fra Intune, og angiv navnet på den brugerdefinerede konfigurationsprofil *til com.microsoft.autoupdate2*.
+- Fra Intune skal du uploade denne konfigurationsprofil og angive navnet på den brugerdefinerede konfigurationsprofil *til com.microsoft.autoupdate2*.
 
 ## <a name="resources"></a>Ressourcer
 

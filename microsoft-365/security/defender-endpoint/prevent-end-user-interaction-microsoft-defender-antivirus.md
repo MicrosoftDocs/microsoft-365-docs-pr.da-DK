@@ -16,12 +16,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: d54d8ecf2d0c365168ae636cbe85ef1da9cfb6b1
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 26a792a753b0855a12cd994256cef93a64a5a159
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593829"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469223"
 ---
 # <a name="prevent-users-from-seeing-or-interacting-with-the-microsoft-defender-antivirus-user-interface"></a>Forhindre brugere i at se eller arbejde med Microsoft Defender Antivirus brugergrænsefladen
 
@@ -29,8 +29,8 @@ ms.locfileid: "63593829"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Du kan bruge Gruppepolitik at forhindre brugere på slutpunkter i at se den Microsoft Defender Antivirus grænseflade. Du kan også forhindre dem i at sætte scanninger på pause.
 
@@ -40,18 +40,18 @@ I Windows 10 version 1703 skjuler du grænsefladen Microsoft Defender Antivirus-
 
 Med indstillingen angivet til **Aktiveret**:
 
-:::image type="content" source="../../media/wdav-headless-mode-off-1703.png" alt-text="Skærmbillede af Windows Sikkerhed uden skjoldikonet og sektionerne for virus- og trusselsbeskyttelse.":::
+:::image type="content" source="../../media/wdav-headless-mode-off-1703.png" alt-text="Skærmen Windows Sikkerhed skjoldikonet og sektionerne for virus- og trusselsbeskyttelse" lightbox="../../media/wdav-headless-mode-off-1703.png":::
 
 Med indstillingen indstillet til **Deaktiveret** eller ikke konfigureret:
 
-:::image type="content" source="../../media/wdav-headless-mode-1703.png" alt-text="Skærmbillede af Windows Sikkerhed med skjoldikon og trusselsbeskyttelsessnit.":::
+:::image type="content" source="../../media/wdav-headless-mode-1703.png" alt-text="Skærmen Windows Sikkerhed med skjoldikon og sektioner for trusselsbeskyttelse" lightbox="../../media/wdav-headless-mode-1703.png":::
 
 > [!NOTE]
-> Hvis du skjuler grænsefladen, forhindres Microsoft Defender Antivirus meddelelser i at blive vist på slutpunktet. Microsoft Defender for Endpoint-meddelelser vises stadig. Du kan også konfigurere de [meddelelser, der vises på slutpunkter, individuelt](configure-notifications-microsoft-defender-antivirus.md)
+> Hvis du skjuler grænsefladen, forhindres Microsoft Defender Antivirus meddelelser i at blive vist på slutpunktet. Microsoft Defender for Endpoint vises der stadig meddelelser. Du kan også konfigurere de [meddelelser, der vises på slutpunkter, individuelt](configure-notifications-microsoft-defender-antivirus.md)
 
 I tidligere versioner Windows 10 skjules klientgrænseflade Windows Defender n under indstillingen. Hvis brugeren forsøger at åbne den, modtager brugeren en advarsel, hvor der står "Din systemadministrator har begrænset adgang til denne app".
 
-:::image type="content" source="../../media/wdav-headless-mode-1607.png" alt-text="Advarselsmeddelelse, når tilstanden for forhovedet er aktiveret i Windows 10 versioner, der er tidligere end 1703":::
+:::image type="content" source="../../media/wdav-headless-mode-1607.png" alt-text="Advarselsmeddelelsen, når tilstanden for hovedløs er aktiveret i Windows 10 versioner, der er tidligere end 1703" lightbox="../../media/wdav-headless-mode-1607.png":::
 
 ## <a name="use-group-policy-to-hide-the-microsoft-defender-av-interface-from-users"></a>Brug Gruppepolitik til at skjule Microsoft Defender AV-grænsefladen for brugerne
 

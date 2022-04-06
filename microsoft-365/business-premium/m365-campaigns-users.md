@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan disse sikkerhedsanbefalinger Microsoft 365 Business Premium dine brugere og beskytter dine data.
-ms.openlocfilehash: cf0af6aab22c4a025a0c6b907fc3cade397d0dcc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f1c327badefcd7f5d7f1728489a8388e7e7925e8
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594143"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635147"
 ---
 # <a name="how-these-security-recommendations-affect-your-users"></a>Sådan påvirker disse sikkerhedsanbefalinger dine brugere
 
@@ -42,7 +42,9 @@ Sikkerhedsanbefalinger for Microsoft 365 denne løsning gør det meget sværere 
 Alle brugere skal være opmærksomme på og bruge disse mailvaner til at holde deres mail sikker:
 
 - Konfigurer mail til at bruge multifaktorgodkendelse med Authenticator-appen.
-- Bekræft legitime mails, og se efter sikkerhedstip fra Advanced Phishing i Defender for Office 365 Protection.
+
+- Bekræft legitime mails, og se efter sikkerhedstip fra avanceret phishingbeskyttelse (Defender for Office 365).
+
 - Åbn kun sikre links og vedhæftede filer, som bekræftet af Pengeskab Links og Pengeskab vedhæftede filer.
 
 Få mere at [vide om multifaktorgodkendelse](m365bp-multifactor-authentication.md) og [phishing og andre angreb](m365-campaigns-phishing-and-attacks.md).
@@ -54,7 +56,9 @@ Download en [infografik](m365-campaigns-protect-campaign-infographic.md) med tip
 Alle brugere, du føjer til dit miljø, skal bruge et par minutter for [at konfigurere iPhones og Android-enheder](../business/set-up-mobile-devices.md) til at fungere sikkert:
 
 - Konfigurer enheder til at bruge multifaktorgodkendelse med Authenticator-appen.
+
 - Brug Microsoft-mobilapps, herunder Outlook Mobile, Word, OneDrive og andre Microsoft-apps fra App Store. De oprindelige mailapps, der er inkluderet på iPhones og Android-enheder, understøttes ikke. 
+
 - Kræv en pinkode, for at brugerne kan låse enheden op.
 
 Når du har konfigureret disse, bliver dine brugere bedt om at bruge Authenticator-appen, når de får adgang til organisationens data på disse enheder, herunder mail.
@@ -64,6 +68,7 @@ Når du har konfigureret disse, bliver dine brugere bedt om at bruge Authenticat
 Det er også vigtigt, at brugerne holder deres primære arbejdsenhed opdateret:
 
 - Installér de nyeste versioner af Office-skrivebordsapps, og hold disse nye med opdateringer, når du bliver bedt om det.
+
 - Hold dig opdateret med opdateringer til operativsystemet, f.eks. Windows opdateringer.
 
 For [ikke-administrerede Windows 10 og Mac-enheder](m365bp-protect-pcs-macs.md) har brugerne ansvaret for at sikre, at grundlæggende sikkerhedsfunktioner er aktiveret.

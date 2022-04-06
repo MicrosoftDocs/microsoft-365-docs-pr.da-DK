@@ -1,7 +1,7 @@
 ---
 title: Blokering af klientfunktionsmåde
-description: Blokering af klientfunktionsmåden er en del af egenskaberne for blokering og inddæmmelse i Microsoft Defender til slutpunkt
-keywords: blokering af funktionsmåder, hurtig beskyttelse, klientfunktionsmåde, Microsoft Defender til slutpunkt
+description: Blokering af klientfunktionsmåden er en del af funktionaliteten til blokering af funktionsmåder og Microsoft Defender for Endpoint
+keywords: blokering af funktionsmåder, hurtig beskyttelse, klientfunktionsmåde Microsoft Defender for Endpoint
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -16,17 +16,17 @@ ms.custom:
 - edr
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: c5a738584f1705365db1c4fad61f190a42d97660
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8da3f04af66568bbe79dd6a74c38b30a8a1ab891
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593478"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470213"
 ---
 # <a name="client-behavioral-blocking"></a>Blokering af klientfunktionsmåde
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -35,7 +35,7 @@ ms.locfileid: "63593478"
 
 Blokering af klientfunktionsmåden er en komponent [af egenskaber til blokering af funktionsmåder og spærring](behavioral-blocking-containment.md) i Defender til slutpunkt. Da mistænkelige funktionsmåder registreres på enheder (også kaldet klienter eller slutpunkter), blokeres, kontrolleres og afhjælpes artefakter (f.eks. filer eller programmer) automatisk.
 
-:::image type="content" alt-text="Sky- og klientbeskyttelse." source="images/pre-execution-and-post-execution-detection-engines.png" lightbox="images/pre-execution-and-post-execution-detection-engines.png":::
+:::image type="content" source="images/pre-execution-and-post-execution-detection-engines.png" alt-text="Sky- og klientbeskyttelse" lightbox="images/pre-execution-and-post-execution-detection-engines.png":::
 
 Antivirusbeskyttelse fungerer bedst, når de parres med skybeskyttelse.
 

@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 75179fc3daf8e375ace6cc4c1566abf1e18cdfaa
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: ccb65b865afdf2a0ec0210c3593daee1cb5c09b6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63595878"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476835"
 ---
 # <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Kør og gennemse resultaterne af en Microsoft Defender Offline scanning
 
@@ -28,20 +28,20 @@ ms.locfileid: "63595878"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft Defender Offline er et scanningsværktøj til antimalware, der gør det muligt at starte og køre en scanning fra et sikkert miljø. Scanningen kører uden for den normale Windows-kerne, så den kan målrette malware, der forsøger at omgå Windows-shellen, f.eks. virus og rootkits, der inficerer eller overskriver MASTER boot-posten (MBR).
 
 Du kan bruge Microsoft Defender Offline hvis du har mistanke om malware inficeret, eller du vil bekræfte en grundig oprydning af slutpunktet efter et malwareudbrud.
 
-I Windows 10 og Windows 11 kan Microsoft Defender Offline køres med ét klik direkte [Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md). I tidligere versioner af Windows skulle en bruger installere Microsoft Defender Offline til startbare medier, genstarte slutpunktet og indlæse de opstartbare medier.
+I Windows 10 og Windows 11 kan Microsoft Defender Offline køres med ét klik direkte [fra Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md). I tidligere versioner af Windows skulle en bruger installere Microsoft Defender Offline til startbare medier, genstarte slutpunktet og indlæse de opstartbare medier.
 
 ## <a name="prerequisites-and-requirements"></a>forudsætninger og krav
 
-Microsoft Defender Offline i Windows 10 Windows 11 har de samme hardwarekrav som Windows 10.
+Microsoft Defender Offline i Windows 10 og Windows 11 har de samme hardwarekrav som Windows 10.
 
-Du kan finde flere Windows 10 og Windows 11-krav under følgende emner:
+Du kan finde flere Windows 10 og Windows 11 i følgende emner:
 
 - [Minimumskrav til hardware](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
 
@@ -69,15 +69,15 @@ Behovet for at udføre en offline scanning vil også blive afsløret i Microsoft
 
 Prompten kan forekomme via en meddelelse, der minder om følgende:
 
-:::image type="content" source="../../media/notification.png" alt-text="Meddelelse om at køre Microsoft Defender Offline.":::
+:::image type="content" source="../../media/notification.png" alt-text="Meddelelse om at køre Microsoft Defender Offline" lightbox="../../media/notification.png":::
 
 Brugeren får også besked i Windows Defender klient.
 
-I Konfigurationsstyring kan du identificere status for slutpunkter ved at gå til **Overvågningsoversigt > > Sikkerheds> Endpoint Protection status > System Center Endpoint Protection Status**.
+I Configuration Manager kan du identificere status for slutpunkter ved at gå til **Overvågningsoversigt > > Sikkerhedsstatus > Endpoint Protection status > System Center Endpoint Protection Status**.
 
 Microsoft Defender Offline er angivet under Status **for afhjælpning af malware som** **påkrævet offlinescanning**.
 
-:::image type="content" source="../../media/sccm-wdo.png" alt-text="Microsoft Defender Offline scanning er påkrævet.":::
+:::image type="content" source="../../media/sccm-wdo.png" alt-text="Indikatoren for en scanning af Microsoft Defender Offline" lightbox="../../media/sccm-wdo.png":::
 
 ## <a name="configure-notifications"></a>Konfigurer meddelelser
 

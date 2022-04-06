@@ -19,20 +19,20 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger konfigurationsanalysen til at finde og rette sikkerhedspolitikker, der er under indstillingerne i Standardbeskyttelse og Begrænset beskyttelse i foruddefinerede sikkerhedspolitikker.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0acdf6d300984c00bb1b1b060d3e36562983ebca
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 459f44f29b89b2bbca6aa0f6847d0b4636647be6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63590917"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477055"
 ---
-# <a name="configuration-analyzer-for-protection-policies-in-eop-and-microsoft-defender-for-office-365"></a>Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender til Office 365
+# <a name="configuration-analyzer-for-protection-policies-in-eop-and-microsoft-defender-for-office-365"></a>Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Konfigurationsanalyse i Microsoft 365 Defender-portalen udgør et centralt sted til at finde og rette sikkerhedspolitikker, hvor indstillingerne er under standardbeskyttelses- og strengbeskyttelsesprofilindstillingerne i foruddefinerede [sikkerhedspolitikker](preset-security-policies.md).
@@ -44,15 +44,15 @@ Følgende typer politikker analyseres af konfigurationsanalysen:
   - [Antimalwarepolitikker](configure-anti-malware-policies.md).
   - [EOP-antiphishing-politikker](set-up-anti-phishing-policies.md#spoof-settings).
 
-- **Microsoft Defender til Office 365 politikker**: Dette omfatter organisationer med Microsoft 365 E5 eller Defender Office 365-tilføjelsesabonnementer:
-  - Antiphishing-politikker i Microsoft Defender til Office 365, som omfatter:
+- **Microsoft Defender for Office 365 politikker**: Dette omfatter organisationer med Microsoft 365 E5 eller Defender for Office 365-tilføjelsesabonnementer:
+  - Antiphishing-politikker i Microsoft Defender for Office 365, som omfatter:
     - De samme [spoof-indstillinger,](set-up-anti-phishing-policies.md#spoof-settings) der er tilgængelige i EOP-antiphishing-politikkerne.
     - [Indstillinger for repræsentation](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Avancerede grænseværdier for phishing](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Pengeskab links-politikker](set-up-safe-links-policies.md).
   - [Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md).
 
-De standard- og restriktive politikindstillingsværdier, der bruges som grundlinjer, er beskrevet i Anbefalede indstillinger [for EOP og Microsoft Defender Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+De standard- og restriktive politikindstillingsværdier, der bruges som oprindelige planer, er beskrevet i Anbefalede indstillinger [for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -85,15 +85,15 @@ Siden **Konfigurationsanalyse** har tre hovedfaner:
 
 Som standard åbnes konfigurationsanalysen under **fanen Standardanbefalinger** . Du kan skifte til **fanen Restriktive** anbefalinger. Indstillingerne, layoutet og handlingerne er de samme på begge faner.
 
-![Indstillinger og anbefalinger i Konfigurationsanalyse.](../../media/configuration-analyzer-settings-and-recommendations-view.png)
+:::image type="content" source="../../media/configuration-analyzer-settings-and-recommendations-view.png" alt-text="Visningen Indstillinger og anbefalinger i Konfigurationsanalyse" lightbox="../../media/configuration-analyzer-settings-and-recommendations-view.png":::
 
 Den første del af fanen viser antallet af indstillinger i hver type politik, der skal forbedres i forhold til Standard eller Streng beskyttelse. Typerne af politikker er:
 
 - **Antispam**
 - **Antiphishing**
 - **Antimalware**
-- **Pengeskab vedhæftede filer** (hvis dit abonnement omfatter Microsoft Defender til Office 365)
-- **Pengeskab Links** (hvis dit abonnement omfatter Microsoft Defender til Office 365)
+- **Pengeskab vedhæftede filer** (hvis dit abonnement omfatter Microsoft Defender for Office 365)
+- **Pengeskab links** (hvis dit abonnement omfatter Microsoft Defender for Office 365)
 
 Hvis en politiktype og et tal ikke vises, opfylder alle dine politikker af den pågældende type de anbefalede indstillinger for Standard eller Restriktiv beskyttelse.
 
@@ -148,4 +148,4 @@ Hvis du vil eksportere resultaterne til en .csv, skal du klikke på **Eksportér
 
 Hvis du vil filtrere resultaterne efter en bestemt **værdi af Ændret** af, **Indstillingsnavn** **eller Type** , skal du bruge **feltet** Søg.
 
-![Analyse af konfigurationssyde og oversigtsvisning i Konfigurationsanalyse.](../../media/configuration-analyzer-configuration-drift-analysis-view.png)
+:::image type="content" source="../../media/configuration-analyzer-configuration-drift-analysis-view.png" alt-text="Analyse af konfigurations- og oversigtsvisning i konfigurationsanalyse" lightbox="../../media/configuration-analyzer-configuration-drift-analysis-view.png":::

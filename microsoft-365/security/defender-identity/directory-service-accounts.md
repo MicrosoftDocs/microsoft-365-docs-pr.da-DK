@@ -1,6 +1,6 @@
 ---
-title: Konfigurer directory services-konto i Microsoft Defender for Identity
-description: Få mere at vide om, hvordan du konfigurerer kontoen Microsoft Defender for Identity Directory Services i Microsoft 365 Defender
+title: Konfigurere adresselistekonto i Microsoft Defender for Identity
+description: Lær, hvordan du konfigurerer Microsoft Defender for Identity Directory Services-kontoen i Microsoft 365 Defender
 ms.date: 08/15/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,21 +9,21 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 0b7e9045ecc479c2da382979211caaa46e8a01d1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e31c226037d5d9e945350ba73e1df9abc79571e9
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683291"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469993"
 ---
-# <a name="microsoft-defender-for-identity-directory-services-account-in-microsoft-365-defender"></a>Microsoft Defender for Identity Directory Services-konto i Microsoft 365 Defender
+# <a name="microsoft-defender-for-identity-directory-services-account-in-microsoft-365-defender"></a>Microsoft Defender for Identity konto til adresseliste i Microsoft 365 Defender
 
 **Gælder for:**
 
 - Microsoft 365 Defender
 - Defender for Identity
 
-I denne artikel forklares det, hvordan [du konfigurerer kontoen Microsoft Defender for Identity](/defender-for-identity) Directory Services [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Denne artikel forklarer, hvordan du [konfigurerer Microsoft Defender for Identity](/defender-for-identity) Directory Services-kontoen [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 >[!IMPORTANT]
 >Som en del af dine Microsoft 365 Defender har nogle indstillinger og detaljer ændret sig fra deres placering i Defender for Identity-portalen. Læs oplysningerne nedenfor for at finde ud af, hvor du kan finde både de velkendte og nye funktioner.
@@ -34,22 +34,23 @@ Hvis du vil [forbinde sensoren](sensor-health.md#add-a-sensor) med dine Active D
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> skal du gå **til Indstillinger** og derefter **Identities**.
 
-    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter på Indstillinger siden" lightbox="../../media/defender-identity/settings-identities.png":::
+
 
 1. Vælg **Adresselistekonti**. Du kan se, hvilke konti der er knyttet til hvilke domæner.
 
-    ![Adresselistekonti.](../../media/defender-identity/directory-service-accounts.png)
+   :::image type="content" source="../../media/defender-identity/directory-service-accounts.png" alt-text="Menuelementet Konti til adresseliste" lightbox="../../media/defender-identity/directory-service-accounts.png":::
 
 1. Hvis du vælger en konto, åbnes en rude med indstillingerne for den pågældende konto.
 
-    ![Kontoindstillinger.](../../media/defender-identity/account-settings.png)
+   :::image type="content" source="../../media/defender-identity/account-settings.png" alt-text="Siden Kontoindstillinger" lightbox="../../media/defender-identity/account-settings.png":::
 
 1. Hvis du vil tilføje en ny konto til adresseliste, **skal du** vælge Opret ny konto **og udfylde Kontonavn****, Domæne** og **Adgangskode**. Du kan også vælge, om det er en gruppe-administreret **tjenestekonto** (gMSA), og om den tilhører et **enkelt etiketdomæne**.
 
-    ![Ny adresselistekonto.](../../media/defender-identity/new-directory-service-account.png)
+   :::image type="content" source="../../media/defender-identity/new-directory-service-account.png" alt-text="Indstillingen Opret ny konto" lightbox="../../media/defender-identity/new-directory-service-account.png":::
 
 1. Vælg **Gem**.
 
 ## <a name="see-also"></a>Se også
 
-- [Microsoft Defender til sensorens tilstand og indstillinger for identitet](sensor-health.md)
+- [Microsoft Defender for Identity og indstillinger for sensor](sensor-health.md)

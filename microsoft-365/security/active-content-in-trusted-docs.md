@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 ROBOTS: NOINDEX,NOFOLOW
 description: Administratorer kan få mere at vide om, hvordan du opretter politikker for at blokere aktivt indhold Office dokumenter
-ms.openlocfilehash: 89f2e51253d3c2fda0140dd7be8bc86b1fda2cf5
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 33d53ab14fec1b6cd16b8de95befe8bc8a898e16
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682807"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468915"
 ---
 # <a name="manage-active-content-in-office-documents"></a>Administrere aktivt indhold i Office dokumenter
 
@@ -35,7 +35,7 @@ Tidligere, når brugerne identificerede dokumenter som dokumenter, der er tillid
 
 Den opdaterede sikkerhedscenterlogik er beskrevet i følgende diagram:
 
-:::image type="content" source="../media/office-trust-center-flow.png" alt-text="Et eksempel på et rutediagram, der beskriver Logikken i Sikkerhedscenter Microsoft 365 Defender portalen" lightbox="../media/office-trust-center-flow.png":::
+:::image type="content" source="../media/office-trust-center-flow.png" alt-text="Et rutediagram, der beskriver Sikkerhedscenterlogik i Microsoft 365 Defender portal" lightbox="../media/office-trust-center-flow.png":::
 
 1. En bruger åbner et Office, der indeholder aktivt indhold.
 
@@ -45,7 +45,7 @@ Den opdaterede sikkerhedscenterlogik er beskrevet i følgende diagram:
    - Tidligere ville den næste evaluerede indstilling have været, hvis brugeren havde identificeret dette dokument som et dokument, der er tillid til. Hvis det var gjort, blev dokumentet åbnet med det aktive indhold aktiveret.
    - Om brugeren har identificeret dokumentet som et dokument, der er tillid til, behandles nu ikke her (nu på trin 8).
 
-     Dette er den grundlæggende ændring i funktionsmåden: Skypolitikker (trin 4), gruppepolitikker (trin 6) og lokale indstillinger (trin 7) kontrolleres, før  brugerangivelsen af et dokument, der er tillid til, overhovedet tages i betragtning. Hvis nogen af disse trin blokerer adgangen til det aktive indhold, og ingen af trinnene tillader brugertilsidesættelse, er brugeridentifikation af dokumentet som et dokument, der er tillid til, reelt ikke relevant.
+     Den grundlæggende ændring i funktionsmåden er beskrevet på følgende måde: Skypolitikker (trin 4), gruppepolitikker (trin 6) og lokale indstillinger (trin 7) kontrolleres,  før brugerangivelsen af et dokument, der er tillid til, overhovedet tages i betragtning. Hvis nogen af disse trin blokerer adgangen til det aktive indhold, og ingen af trinnene tillader brugertilsidesættelse, er brugeridentifikation af dokumentet som et dokument, der er tillid til, irrelevant.
 
 4. Skypolitikker kontrolleres for at se, om denne type aktivt indhold er tilladt eller blokeret. Hvis det aktive indhold ikke blokeres, fortsætter evalueringen til trin 6.
 
@@ -81,7 +81,7 @@ Du kan finde flere oplysninger i følgende artikler:
 Administratorer har mange måder at konfigurere Office i en organisation. Eksempel:
 
 - **Office skybaseret** politiktjeneste: Konfigurer en brugerbaseret politik, der gælder for en bruger på alle enheder, der får adgang til filer i Office-apps med deres Azure AD-konto. Se trinnene til at [oprette Office politikkonfiguration i skyen](/DeployOffice/overview-office-cloud-policy-service) i [Office skypolitiktjeneste](https://config.office.com/officeSettings/officePolicies).
-- Office politikker i **Intune**: Brug Intune Indstillinger-kataloget eller administrative skabeloner til at udrulle HKCU-politikker på Windows 10-pc'er: I [MEM Administration](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/configurationProfiles) under Enhedskonfigurationsprofiler  \> **.**
+- **Office** politikker i Intune: Brug kataloget Intune Indstillinger eller administrative skabeloner til at udrulle HKCU-politikker på Windows 10-pc'er: I [MEM Administration](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/configurationProfiles) under **Enhedskonfigurationsprofiler** \> **.**
   - ***Administrative skabeloner***: Se vejledningen i at bruge Windows 10 til at konfigurere [administrative skabeloner](/mem/intune/configuration/administrative-templates-windows).
   - ***Indstillinger (eksempel)***: Se vejledningen for at bruge [kataloget Indstillinger (forhåndsvisning)](/mem/intune/configuration/settings-catalog).
 - **Gruppepolitik**: Brug dit lokale Active Directory til at udrulle gruppepolitikobjekter (GPOs) til brugere og computere. Hvis du vil oprette et gruppepolitikobjekt til denne indstilling, skal du downloade de seneste administrative skabelonfiler [(ADMX/ADML) og Office-tilpasningsværktøjet til Microsoft 365 Apps for enterprise, Office 2019 og Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
@@ -92,7 +92,7 @@ Administratorer har mange måder at konfigurere Office i en organisation. Eksemp
 
 ## <a name="admin-options-for-restricting-active-content"></a>Administratorindstillinger til begrænsning af aktivt indhold
 
-Der er en stor forskel på tillidsniveauet i internt oprettet indhold vs. indhold, som brugerne downloader fra internettet. Overvej at tillade aktivt indhold i interne dokumenter og globalt ikke tillade aktivt indhold i dokumenter fra internettet.
+Der er en stor forskel på tillidsniveauet i internt oprettet indhold vs. indhold, som brugere downloader fra internettet. Overvej at tillade aktivt indhold i interne dokumenter og globalt ikke tillade aktivt indhold i dokumenter fra internettet.
 
 Hvis brugerne ikke har brug for bestemte typer aktivt indhold, er den mest sikre mulighed at bruge politikker til at deaktivere brugeradgang til det aktive indhold og tillade undtagelser efter behov.
 
@@ -143,7 +143,7 @@ Tabellerne i følgende afsnit beskriver de indstillinger, der styrer aktivt indh
 |Makroer|Excel|Scan krypterede makroer i Excel Open XML-projektmapper|**Scan krypterede makroer (standard)**|Nej|
 |Makroer|Office|Tillad, at VBA indlæser referencer efter sti fra upålidelige intranetplaceringer|**Deaktiveret**|Nej|
 |Makroer|Office|Automatiseringssikkerhed|**Brug programmakrosikkerhedsniveau**|Nej|
-|Makroer|Office|Deaktiver yderligere sikkerhedskontroller for VBA-biblioteksreferencer, der kan referere til usikre placeringer på den lokale computer|**Deaktiveret**|Nej|
+|Makroer|Office|Deaktivere andre sikkerhedskontroller for VBA-biblioteksreferencer, der kan referere til usikre placeringer på den lokale computer|**Deaktiveret**|Nej|
 |Makroer|Office|Scanningsomfang for makrokørsel|**Aktivere for alle dokumenter**|Nej|
 |Makroer|Office|Hav kun tillid til VBA-makroer, der bruger V3-signaturer|Ikke en indstilling for grundlinje for sikkerhed.|Nej|
 |Makroer|Outlook|Outlook sikkerhedstilstand|**Brug Outlook Security Gruppepolitik**|Påkrævet for at aktivere Outlook indstillingerne for gruppepolitikobjekt. <p> Nævnt som afhængighed (denne politik blokerer ikke selve indholdet).|

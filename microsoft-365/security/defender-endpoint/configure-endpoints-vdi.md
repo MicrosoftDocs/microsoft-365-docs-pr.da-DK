@@ -1,7 +1,7 @@
 ---
-title: Onboard ikke-permanente VDI-enheder (Virtual Desktop Infrastructure)
-description: Installér konfigurationspakken på en VDI-enhed (Virtual Desktop Infrastructure), så de er onboardet til Microsoft Defender for Endpoint-tjenesten.
-keywords: konfigurere VDI-enhed (Virtual Desktop Infrastructure), vdi, enhedsstyring, konfigurere Microsoft Defender til slutpunkt, slutpunkter
+title: Onboard ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)
+description: Installér konfigurationspakken på en VDI-enhed (Virtual Desktop Infrastructure), så de er onboardet til Microsoft Defender for Endpoint tjeneste.
+keywords: konfigurere VDI-enhed (Virtual Desktop Infrastructure), vdi, enhedshåndtering, konfigurere Microsoft Defender for Endpoint, slutpunkter
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,19 +18,24 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 02/14/2022
 ms.technology: mde
-ms.openlocfilehash: 7342f368063c2c9024c4942c33a2e41f28eebd36
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: e292c2f1e0d01e51e3962b71a940927078ab95ad
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63591908"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634707"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Onboard ikke-permanente VDI-enheder (Virtual Desktop Infrastructure) i Microsoft 365 Defender
+
+VDI (Virtual desktop infrastructure) er et IT-infrastrukturkoncept, der giver slutbrugere adgang til forekomster af virtuelle skriveborde i virksomheder fra næsten alle enheder (f.eks. din personlige computer, smartphone eller tablet), så organisationen eliminerer behovet for at give brugere fysiske maskiner. Brugen af VDI-enheder reducerer omkostningerne, da it-afdelinger ikke længere er ansvarlige for administration, reparation og udskiftning af fysiske slutpunkter. Autoriserede brugere kan få adgang til de samme virksomhedsservere, filer, apps og tjenester fra enhver godkendt enhed via en sikker computerklient eller browser.
+
+Som alle andre systemer i it-miljøer bør disse også have en løsning til registrering og svar på slutpunkter (Slutpunktsregistrering og -svar) og antivirus-løsninger for at beskytte dig mod avancerede trusler og angreb.
+
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - VDI-enheder (Virtual Desktop Infrastructure)
 - Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
@@ -38,25 +43,27 @@ ms.locfileid: "63591908"
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
  > [!NOTE]
-  > **Faste VDI'er** -  [Onboarding af en permanent VDI-maskine](configure-endpoints.md) i Microsoft Defender til slutpunkt håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en fast maskine. Vælg din Microsoft 365 Defender onboardingmetodehttps://security.microsoft.com) under onboarding i portalen, og følg vejledningen for den pågældende type. 
+  > **Faste VDI'er** -  [Onboarding af en permanent VDI-maskine](configure-endpoints.md) i Microsoft Defender for Endpoint håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en fast maskine. Vælg din Microsoft 365 Defender onboardingmetodehttps://security.microsoft.com) under onboarding i portalen, og følg vejledningen for den pågældende type. 
 
 ## <a name="onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices"></a>Onboarding ikke-permanente VDI-enheder (Virtual Desktop Infrastructure)
 
 Defender til Slutpunkt understøtter ikke-permanent VDI-session onboarding.
 
-Der kan være udfordringer i forbindelse med onboarding af VDIs. Følgende er typiske udfordringer i dette scenarie:
+Der kan være udfordringer i forbindelse med onboarding af VDI-forekomster. Følgende er typiske udfordringer i dette scenarie:
 
 - Øjeblikkelig tidlig onboarding af en kortvarig session, som skal være onboardet til Defender til Slutpunkt før den faktiske klargøring.
 - Enhedsnavnet genbruges typisk til nye sessioner.
 
-VDI-enheder kan vises i Defender til Endpoint-portalen som enten:
+I et VDI-miljø kan VDI-forekomster have korte levetider. VDI-enheder kan vises i Defender til Endpoint-portalen som enten:
 
-- Enkelt indtastning for hver enhed.
+
+- Enkelt portalpost for hver VDI-forekomst. Hvis VDI-forekomsten allerede var onboardet til Microsoft Defender for Endpoint og på et tidspunkt slettet og derefter genoprettet med det samme værtsnavn, oprettes DER IKKE et nyt objekt, der repræsenterer denne VDI-forekomst, i portalen. 
+
 
   > [!NOTE]
   > I dette tilfælde skal det *samme* enhedsnavn konfigureres, når sessionen oprettes, f.eks. ved hjælp af en uovervåget svarfil.
 
-- Flere poster for hver enhed – én for hver session.
+- Flere poster for hver enhed – én for hver VDI-forekomst.
 
 Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til enkelt og flere poster.
 
@@ -83,9 +90,9 @@ Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til e
     2. Hvis du implementerer en enkelt post for hver enhed, skal du kopiere både Onboard-NonPersistentMachine.ps1 og WindowsDefenderATPOnboardingScript.cmd.
 
     > [!NOTE]
-    > Hvis du ikke kan se mappen `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , kan den være skjult. Du skal vælge indstillingen Vis **skjulte filer og mapper** i Stifinder.
+    > Hvis du ikke kan se mappen `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , kan den være skjult. Du skal vælge indstillingen Vis **skjulte filer og mapper fra** Stifinder.
 
-3. Åbn et lokalt Gruppepolitik Editor-vindue, og gå til **Computerkonfiguration,** \> **Windows Indstillinger** \> **Start af scripts**\>.
+3. Åbn et lokalt Gruppepolitik Editor-vindue, og gå til **Computerkonfiguration, Windows Indstillinger** \>  \> **Start af scripts**\>.
 
    > [!NOTE]
    > Domæneadministratorer Gruppepolitik også bruges til onboarding af ikke-permanente VDI-enheder.
@@ -115,7 +122,7 @@ Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til e
 ## <a name="for-downlevel-skus-windows-server-2008-r2"></a>For SKU'er på underniveau (Windows Server 2008 R2)
 
 > [!NOTE]
-> Denne vejledning til andre Windows-serverversioner gælder også, hvis du kører den forrige Microsoft Defender til slutpunkt Windows Server 2016 og Windows Server 2012 R2, der kræver OVERENSSTEMMELSE. Instruktioner til at overføre til den nye samlede løsning findes i [Server migration scenarios in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
+> Denne vejledning til andre Windows-serverversioner gælder også, hvis du kører den forrige Microsoft Defender for Endpoint til Windows Server 2016 og Windows Server 2012 R2, der kræver OVERENSSTEMMELSE. Vejledning til at overføre til den nye samlede løsning findes i [Scenarier for serveroverførsel Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
 
 > [!NOTE]
 > Følgende registreringsdatabase er kun relevant, når formålet er at opnå en "enkelt post for hver enhed".
@@ -179,7 +186,7 @@ Hvis offline-servicering ikke er en realistisk mulighed for dit ikke-permanente 
 
 ## <a name="related-topics"></a>Relaterede emner
 - [Onboard Windows-enheder ved hjælp af Gruppepolitik](configure-endpoints-gp.md)
-- [Onboard Windows-enheder ved hjælp af Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+- [Onboard Windows-enheder ved hjælp af Microsoft Endpoint Konfigurationsstyring](configure-endpoints-sccm.md)
 - [Onboard Windows-enheder ved hjælp af værktøjer til administration af mobilenheder](configure-endpoints-mdm.md)
-- [Onboarde Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
-- [Fejlfinding af onboardingproblemer i Microsoft Defender til Slutpunkt](troubleshoot-onboarding.md)
+- [Onboard Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
+- [Fejlfinding Microsoft Defender for Endpoint onboardingproblemer](troubleshoot-onboarding.md)

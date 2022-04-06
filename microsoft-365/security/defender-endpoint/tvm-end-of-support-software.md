@@ -1,7 +1,7 @@
 ---
 title: Plan for ophør af support-software og softwareversioner
 description: Find og planlæg software- og softwareversioner, der ikke længere understøttes, og som ikke modtager sikkerhedsopdateringer.
-keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender til Endpoint tvm sikkerheds anbefaling, cybersecurity anbefaling, handlings løsning sikkerhedsanbefaling
+keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint til tvm-sikkerhed, anbefaling om cybersikkerhed, sikkerheds anbefaling, der kan handles på
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 65842d0bd56308b6a5e5476f84c089b63a04987b
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 3997e2cb372a2cbbbdb0d8e9b51c5b57bd38c7aa
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63591928"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476681"
 ---
 # <a name="plan-for-end-of-support-software-and-software-versions-with-threat-and-vulnerability-management"></a>Planlæg ophør af supportsoftware og softwareversioner med Håndtering af trusler og sikkerhedsrisici
 
@@ -29,11 +29,11 @@ ms.locfileid: "63591928"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Ophør af support (EOS), ellers kaldet slutningen af levetid (EOL), for software eller softwareversioner betyder, at de ikke længere vil blive understøttet eller serviceret, og ikke vil modtage sikkerhedsopdateringer. Når du bruger software- eller softwareversioner med ophørt support, udsætter du din organisation for sikkerhedsrisici, juridiske og økonomiske risici.
 
@@ -47,11 +47,11 @@ Det er vigtigt for sikkerhed og it-administratorer at arbejde sammen og sikre, a
 1. Fra menuen Håndtering af trusler og sikkerhedsrisici skal du gå til [**Sikkerhedsanbefalinger**](tvm-security-recommendation.md).
 2. Gå til panelet **Filtre** , og se efter mærkesektionen. Vælg en eller flere af EOS-mærkeindstillingerne. Derefter **skal du anvende**.
 
-    ![Skærmbillede af mærker, der siger EOS-software, EOS-versioner og kommende EOS-versioner.](images/tvm-eos-tag.png)
+   :::image type="content" source="images/tvm-eos-tag.png" alt-text="EOS-software, EOS-versioner og kommende EOS-versioner" lightbox="images/tvm-eos-tag.png":::
 
 3. Du får vist en liste med anbefalinger relateret til software med ophørt support, softwareversioner, der er ophør på support, eller versioner med kommende ophør af support. Disse mærker er også synlige på [softwarelagersiden](tvm-software-inventory.md) .
 
-    ![Anbefalinger med EOS-mærke.](images/tvm-eos-tags-column.png)
+   :::image type="content" source="images/tvm-eos-tags-column.png" alt-text="EOS-Anbefalinger-mærket" lightbox="images/tvm-eos-tags-column.png":::
 
 ## <a name="list-of-versions-and-dates"></a>Liste over versioner og datoer
 
@@ -59,15 +59,15 @@ Hvis du vil have vist en liste over versioner, der har nået supportens ophør e
 
 1. Der vises en meddelelse i pop op-pop-op-pop-op-meddelelsen med sikkerhedsanbefaling for software med versioner, der har nået ophør af supporten, eller snart når ophør af support.
 
-    ![Skærmbillede af versionsdistributionslink.](images/eos-upcoming-eos.png)
+   :::image type="content" source="images/eos-upcoming-eos.png" alt-text="Versionsfordelingslinket" lightbox="images/eos-upcoming-eos.png":::
 
 2. Vælg **versionsdistributionslinket** for at gå til siden til analyse af software. Her kan du se en filtreret liste over versioner med mærker, der identificerer dem som ophør af supporten eller kommende ophør af supporten.
 
-    ![Skærmbillede af siden til analyse af software med ophør af supportsoftware.](images/software-drilldown-eos.png)
+   :::image type="content" source="images/software-drilldown-eos.png" alt-text="Siden til detailudskrivning af software med oplysninger om slutningen af supportsoftwaren" lightbox="images/software-drilldown-eos.png":::
 
 3. Vælg en af versionerne i tabellen, der skal åbnes. For eksempel version 10.0.18362.1. Der vises et pop op-møde med slutdato for support.
 
-    ![Skærmbillede af slutdato for support.](images/version-eos-date.png)
+   :::image type="content" source="images/version-eos-date.png" alt-text="Visning af slutdato for support" lightbox="images/version-eos-date.png":::
 
 Når du har identificeret, hvilke software- og softwareversioner der er sårbar pga. statussen for ophør af understøttelsen, skal du beslutte, om du vil opdatere eller fjerne dem fra organisationen. Hvis du gør det, sænker det din organizations eksponering for sårbarheder og avancerede vedvarende trusler.
 

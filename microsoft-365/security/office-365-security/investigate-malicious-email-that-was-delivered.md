@@ -1,6 +1,6 @@
 ---
 title: Undersøg ondsindede mails, der blev leveret i Microsoft 365, Find og undersøg ondsindede mails
-keywords: TIMailData-Inline, Sikkerhedshændelse, Hændelse, Microsoft Defender for Endpoint PowerShell, mailmalware, kompromitterede brugere, phish mail, mailmalware, læs brevhoveder i mails, læs brevhoveder, åbne brevhoveder, særlige handlinger
+keywords: TIMailData-Inline, Sikkerhedshændelse, Hændelse, Microsoft Defender for Endpoint PowerShell, mailmalware, kompromitterede brugere, mailphish, mailmalware, læs brevhoveder i mails, læs brevhoveder, åbne brevhoveder, særlige handlinger
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4f3c992ad94d63b44d2f89acff6bb295728a0804
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 48deec7763981b10daf1d0c16cbef95d0e2dbaeb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681430"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476527"
 ---
 # <a name="investigate-malicious-email-that-was-delivered-in-microsoft-365"></a>Undersøg ondsindede mails, der blev leveret i Microsoft 365
 
@@ -34,10 +34,10 @@ ms.locfileid: "63681430"
 
 **Gælder for:**
 
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Microsoft Defender for Office 365 giver](defender-for-office-365.md) dig mulighed for at undersøge aktiviteter, der sætter personer i din organisation i fare, og til at handle for at beskytte din organisation. Hvis du f.eks. er en del af organisationens sikkerhedsteam, kan du finde og undersøge mistænkelige mails, der blev leveret. Det kan du gøre ved [hjælp af Threat Explorer (eller registreringer i realtid).](threat-explorer.md)
+[Microsoft Defender for Office 365 gør](defender-for-office-365.md) det muligt for dig at undersøge aktiviteter, der sætter personer i din organisation i fare, og at handle for at beskytte din organisation. Hvis du f.eks. er en del af organisationens sikkerhedsteam, kan du finde og undersøge mistænkelige mails, der blev leveret. Det kan du gøre ved [hjælp af Threat Explorer (eller registreringer i realtid).](threat-explorer.md)
 
 > [!NOTE]
 > Gå til afhjælpningsartikel [her](remediate-malicious-email-delivered-office-365.md).
@@ -46,7 +46,7 @@ ms.locfileid: "63681430"
 
 Sørg for, at følgende krav er opfyldt:
 
-- Din organisation har [Microsoft Defender til Office 365](defender-for-office-365.md) og [licenser tildeles til brugere](../../admin/manage/assign-licenses-to-users.md).
+- Din organisation har [Microsoft Defender for Office 365](defender-for-office-365.md) og [licenser tildeles til brugere](../../admin/manage/assign-licenses-to-users.md).
 
 - [Overvågningslogføring](../../compliance/turn-audit-log-search-on-or-off.md) er aktiveret for organisationen.
 
@@ -84,7 +84,7 @@ Threat Explorer er en effektiv rapport, der kan tjene flere formål, f.eks. find
 
 2. I menuen **Vis** skal du **vælge Mail** \> **alle** mails på rullelisten.
 
-    ![Menuen Visningen Trusselsstifinder og Mail – Malware, Phish, Indsendelser og Alle mails, også Indhold – Malware.](../../media/tp-InvestigateMalEmail-viewmenu.png)
+    :::image type="content" source="../../media/tp-InvestigateMalEmail-viewmenu.png" alt-text="Rullelisten malware" lightbox="../../media/tp-InvestigateMalEmail-viewmenu.png":::
 
     *Malwarevisningen* er i øjeblikket standardvisningen og registrerer mails, hvor der er registreret en malwaretrussel. *Phish-visningen* fungerer på samme måde for Phish.
 
@@ -104,11 +104,11 @@ Threat Explorer er en effektiv rapport, der kan tjene flere formål, f.eks. find
 
    Avanceret filtrering er en god tilføjelse til søgefunktionerne. En boolesk værdi IKKE på **filtrene modtager****-,** **afsender-** og afsenderdomæne giver administratorer mulighed for at undersøge ved at ekskludere værdier. Denne indstilling er Lig **med intet valg** . Denne indstilling giver administratorer mulighed for at udelukke uønskede postkasser fra undersøgelser (f.eks. postkasser til beskeder og standardpostkasser til svar), og det er nyttigt i tilfælde, hvor administratorer søger efter et bestemt emne (f.eks. Obs), hvor Modtageren kan indstilles til Er lig med ingen af *: defaultMail@contoso.com*. Dette er en nøjagtig værdisøgning.
 
-   ![Modtagerne - 'Indeholder ingen af' Avanceret filter.](../../media/tp-InvestigateMalEmail-AdvancedFilter.png)
+   :::image type="content" source="../../media/tp-InvestigateMalEmail-AdvancedFilter.png" alt-text="Ruden Modtagere" lightbox="../../media/tp-InvestigateMalEmail-AdvancedFilter.png":::
 
    Hvis du føjer et tidsfilter til startdatoen og slutdatoen, hjælper det dit sikkerhedsteam med hurtigt at analysere ned. Den korteste tilladte tid varer 30 minutter. Hvis du kan indsnævre den mistænkelige handling efter tidsramme (f.eks. det skete for 3 timer siden), begrænser dette konteksten og hjælper med at identificere problemet.
 
-   ![Indstillingen til filtrering efter timer for at begrænse mængden af datasikkerhedsteams, der skal behandles, og hvis korteste varighed er 30 minutter.](../../media/tp-InvestigateMalEmail-FilterbyHours.png)
+   :::image type="content" source="../../media/tp-InvestigateMalEmail-FilterbyHours.png" alt-text="Indstillingen for filtrering efter timer" lightbox="../../media/tp-InvestigateMalEmail-FilterbyHours.png":::
 
 6. **Felter i Threat Explorer**: Trusselsstifinder indeholder mange flere sikkerhedsrelaterede mailoplysninger som f.eks. *Leveringshandling, Leveringsplacering**, Særlig* *handling,* Retningalitet *, Tilsidesættelser* og *URL-trussel*. Det giver også organisationens sikkerhedsteam mulighed for at undersøge noget højere oppe.
 
@@ -190,7 +190,7 @@ Leveringssted viser resultaterne af politikker og registreringer, der kører eft
 
 [Afhjælpe skadelig mail leveret i Office 365](remediate-malicious-email-delivered-office-365.md)
 
-[Microsoft Defender til Office 365](office-365-ti.md)
+[Microsoft Defender for Office 365](office-365-ti.md)
 
 [Beskyt dig mod trusler i Office 365](protect-against-threats.md)
 

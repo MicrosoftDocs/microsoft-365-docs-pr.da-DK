@@ -13,12 +13,12 @@ description: Administratorer kan se, hvordan de kan bruge indsigt i videresendel
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 35ec1573096ecce392979cba11c6e55b1a1adcce
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 7e7f97f2f246be609db813f1d42ef6aed6a152a9
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681760"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470257"
 ---
 # <a name="new-users-forwarding-email-insight-in-the-security--compliance-center"></a>Nye brugere, der videresender mailindsigt i Security & Compliance Center
 
@@ -26,7 +26,7 @@ ms.locfileid: "63681760"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Det er mistænkeligt, når nye brugerkonti i organisationen pludselig begynder at videresende mails til eksterne domæner.
@@ -35,11 +35,11 @@ Det **nye domæne** , der videresender mailindsigt i [Security & Compliance Cent
 
 Dette indsigt vises kun, når problemet er registreret, og det vises på [rapportsiden for videresendelse](view-mail-flow-reports.md#forwarding-report) .
 
-![Nye brugere videresender mailindsigt.](../../media/mfi-new-users-forwarding-email.png)
+:::image type="content" source="../../media/mfi-new-users-forwarding-email.png" alt-text="Indsigt i videresendelse af mail til nye brugere" lightbox="../../media/mfi-new-users-forwarding-email.png":::
 
 Når du klikker på widgetten, vises en pop op-meddelelse, hvor du kan finde flere oplysninger om de videresendte meddelelser, herunder [](#forwarding-modifications-report) et link til rapporten om videresendelse af ændringer som beskrevet senere i denne artikel.
 
-![Pop op-vindue med detaljer, der vises, når du klikker på indsigt i mail, som nye brugere videresender.](../../media/mfi-new-users-forwarding-email-details.png)
+:::image type="content" source="../../media/mfi-new-users-forwarding-email-details.png" alt-text="Pop op-vindue med Detaljer, der vises, når du klikker på indsigt i videresendelse af mail til nye brugere" lightbox="../../media/mfi-new-users-forwarding-email-details.png":::
 
 Du kan også få adgang til denne detaljeside, når du vælger indsigten,  når du klikker på Vis alle i området **Top insights & anbefalinger** på (**Dashboard for** \> **rapporter eller ).** <https://protection.office.com/insightdashboard>
 
@@ -67,11 +67,11 @@ Følgende diagrammer er tilgængelige i rapportvisningen:
 
 - **Vis data for: Nye brugere af videresendelse**:
 
-  ![Visningen Nye brugere til videresendelse i rapporten Videresendelse af ændringer.](../../media/forwarding-modifications-report-new-forwarding-users.png)
+    :::image type="content" source="../../media/forwarding-modifications-report-new-forwarding-users.png" alt-text="Visningen Nye brugere til videresendelse i rapporten Videresendelse af ændringer" lightbox="../../media/forwarding-modifications-report-new-forwarding-users.png":::
 
 - **Vis data for: Nye videresendelsesdomæner**:
 
-  ![Visningen Nye videresendte domæner i rapporten Videresendelse af ændringer.](../../media/forwarding-modifications-report-new-forwarded-domains.png)
+    :::image type="content" source="../../media/forwarding-modifications-report-new-forwarded-domains.png" alt-text="Visningen Nye videresendte domæner i rapporten Videresendelse af ændringer" lightbox="../../media/forwarding-modifications-report-new-forwarded-domains.png":::
 
 Hvis du klikker **på** Filtre i en rapportvisning, kan du angive et datointerval **med Startdato** **og Slutdato**.
 
@@ -109,7 +109,7 @@ Hvis du vælger en række i tabellen, vises **pop op-dialogboksen** Detaljer med
 - **Startdato**
 - **Anbefaling**: Herfra kan du klikke på linket for at administrere brugeren i Microsoft 365 Administration.
 
-![Pop op-billede med detaljer i detaljetabellen i visningen Nye brugere til videresendelse i rapporten Videresendelse af ændringer.](../../media/mfi-forwarding-modifications-report-new-forwarding-users-view-details-table-details.png)
+  :::image type="content" source="../../media/mfi-forwarding-modifications-report-new-forwarding-users-view-details-table-details.png" alt-text="Pop op-billede med detaljer i detaljetabellen i visningen Nye brugere til videresendelse i rapporten Videresendelse af ændringer" lightbox="../../media/mfi-forwarding-modifications-report-new-forwarding-users-view-details-table-details.png":::
 
 Klik på Vis rapport for at gå tilbage til **rapportvisningen**.
 

@@ -1,7 +1,7 @@
 ---
 title: Softwarelager i Håndtering af trusler og sikkerhedsrisici
-description: Siden til softwarelager for Microsoft Defender til Endpoints Håndtering af trusler og sikkerhedsrisici viser, hvor mange sårbarheder der er registreret i software.
-keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint, Microsoft Defender for Endpoint software inventory, Microsoft Defender for Endpoint threat & håndtering af sikkerhedsrisici, Microsoft Defender for Endpoint threat & håndtering af sikkerhedsrisici softwarelager, Microsoft Defender til Endpoint tvm software inventory, tvm software inventory
+description: Siden med softwarelager til Microsoft Defender for Endpoint viser Håndtering af trusler og sikkerhedsrisici, hvor mange sårbarheder der er registreret i software.
+keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint, Microsoft Defender for Endpoint, softwarelager, Microsoft Defender for Endpoint  threat & håndtering af sikkerhedsrisici, Microsoft Defender for Endpoint & håndtering af sikkerhedsrisici software inventory, Microsoft Defender for Endpoint  tvm software inventory, tvm software inventory
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: e6bf614730caa9060a334c0a01c2dfe64b24df78
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cbd4634e779fe2bf853aaf014b59b1e7e1c1928f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591247"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470037"
 ---
 # <a name="software-inventory---threat-and-vulnerability-management"></a>Softwarelager – Håndtering af trusler og sikkerhedsrisici
 
@@ -30,7 +30,7 @@ ms.locfileid: "63591247"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -47,7 +47,7 @@ Du kan fjerne **filteret CPE Tilgængelig** for at få større synlighed og øge
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 
-Inden for discovery-området udnytter vi det samme sæt signaler, som er ansvarlig for registrering og vurdering af [sikkerhedsrisiko i Microsoft Defender](overview-endpoint-detection-response.md) med henblik på registrering og svar på slutpunkter.
+På discovery-området udnytter vi det samme sæt signaler, som er ansvarlig for registrering og vurdering af sikkerhedsrisiko Microsoft Defender for Endpoint registrerings- og [svarmuligheder](overview-endpoint-detection-response.md).
 
 Da det er i realtid, vil du på få minutter få vist oplysninger om sikkerhedsrisikoen, når de opdages. Programmet henter automatisk oplysninger fra flere sikkerhedsfeeds. Faktisk kan du se, om en bestemt software er forbundet til en direkte trusselskampagne. Den indeholder også et link til en Threat Analytics-rapport, så snart den er tilgængelig.
 
@@ -58,7 +58,7 @@ Få adgang til siden til softwarelager **ved at** vælge Håndtering af trusler 
 Få vist software på bestemte enheder på de enkelte enheder på [listen over enheder](machines-view-overview.md).
 
 > [!NOTE]
-> Hvis du søger efter software ved hjælp af global søgning i Microsoft Defender til Slutpunkt, skal du sørge for at placere et understregningstegn i stedet for et mellemrum. Du får f.eks. de bedste søgeresultater ved at skrive "windows_10" eller "windows_11" i stedet for "Windows 10" eller "Windows 11".
+> Hvis du søger efter software ved hjælp Microsoft Defender for Endpoint global søgning, skal du sørge for at placere et understregningstegn i stedet for et mellemrum. Du får f.eks. de bedste søgeresultater ved at skrive "windows_10" eller "windows_11" i stedet for "Windows 10" eller "Windows 11".
 
 ## <a name="software-inventory-overview"></a>Oversigt over softwarelager
 
@@ -66,7 +66,7 @@ Siden **Softwarelager** åbnes med en liste over software, der er installeret i 
 
 Som standard filtreres visningen efter **produktkode (CPE): Tilgængelig**. Du kan også filtrere listevisningen baseret på værdier, der findes i softwaren, trusler knyttet til dem, og mærker som f.eks. om softwaren har nået ophør af understøttelsen.
 
-:::image type="content" alt-text="Eksempel på landingssiden for softwarelager." source="images/software-inventory-page.png" lightbox="images/tvm-software-inventory.png":::
+:::image type="content" source="images/tvm-software-inventory.png" alt-text="Landingssiden for softwarelager" lightbox="images/tvm-software-inventory.png":::
 
 Vælg den software, du vil undersøge. Et pop op-panel åbnes med en mere kompakt visning af oplysningerne på siden. Du kan enten dykke dybere ned i undersøgelsen og vælge siden **Åbn software**, eller du kan markere eventuelle tekniske uoverensstemmelser ved at vælge **Rapportoplysninger**.
 
@@ -74,7 +74,7 @@ Vælg den software, du vil undersøge. Et pop op-panel åbnes med en mere kompak
 
 Software, der i øjeblikket ikke understøttes af & håndtering af sikkerhedsrisici, kan være til stede på softwarelagersiden. Da det ikke understøttes, vil kun begrænsede data være tilgængelige. Filtrer efter ikke-understøttet software med indstillingen "Ikke tilgængelig" i afsnittet "Tilsnit".
 
-:::image type="content" alt-text="Ikke-understøttet softwarefilter." source="images/tvm-unsupported-software-filter.png" lightbox="images/tvm-unsupported-software-filter.png":::
+:::image type="content" source="images/tvm-unsupported-software-filter.png" alt-text="Softwarefilteret Understøttes ikke" lightbox="images/tvm-unsupported-software-filter.png":::
 
 Følgende angiver, at software ikke understøttes:
 
@@ -97,7 +97,7 @@ Se bevis på, hvor vi har registreret en bestemt software på en enhed fra regis
 
 Vælg et softwarenavn for at åbne pop op-uddelingskopien, og se efter afsnittet "Software bevis".
 
-:::image type="content" alt-text="Eksempel på softwareeksem Windows 10 på listen over enheder, der viser stien til registreringsdatabasen for software beviser." source="images/tvm-software-evidence.png" lightbox="images/tvm-software-evidence.png":::
+:::image type="content" source="images/tvm-software-evidence.png" alt-text="Listen Windows 10 enheder" lightbox="images/tvm-software-evidence.png":::
 
 ## <a name="software-pages"></a>Softwaresider
 
@@ -117,7 +117,7 @@ Du kan få vist softwaresider på forskellige måder:
   - Enheder, der har softwaren installeret (sammen med enhedsnavn, domæne, operativsystem og meget mere).
   - Liste over softwareversioner (herunder antal enheder, versionen er installeret på, antallet af opdagede sårbarheder og navnene på de installerede enheder).
 
-    :::image type="content" alt-text="Eksempelside for software til Visual Studio 2017 med softwaredetaljer, enheder, der er eksponeret, og meget mere." source="images/tvm-software-page-example.png" lightbox="images/tvm-software-page-example.png":::
+    :::image type="content" source="images/tvm-software-page-example.png" alt-text="Data Visual Studio 2017 med softwaredetaljer, enheder, der er eksponeret, og meget mere" lightbox="images/tvm-software-page-example.png":::
 
 ## <a name="report-inaccuracy"></a>Rapportér unøjagtighed
 
@@ -142,4 +142,4 @@ Rapportér en unøjagtighed, når du ser oplysninger om sikkerhedsrisikoen og vu
 - [Oversigt over trusler håndtering af sikkerhedsrisici sikkerhed](next-gen-threat-and-vuln-mgt.md)
 - [Sikkerhedsanbefalinger](tvm-security-recommendation.md)
 - [Begivenhedstidslinje](threat-and-vuln-mgt-event-timeline.md)
-- [Få vist og organiser listen over Microsoft Defender til slutpunktsenheder](machines-view-overview.md)
+- [Få vist og organiser Microsoft Defender for Endpoint-enheder](machines-view-overview.md)

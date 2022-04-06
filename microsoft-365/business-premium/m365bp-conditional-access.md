@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan sikkerhedsstandardindstillingerne kan hjælpe med at beskytte din organisation mod identitetsrelaterede angreb ved at give forudkonfigurerede sikkerhedsindstillinger til Microsoft 365 Business Premium.
-ms.openlocfilehash: dfd0d3edff541d828b70d383641aaf66c93826b6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9684dc2be113d6f511f1a84e8865ac04a6881ecc
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63705135"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634663"
 ---
 # <a name="turn-on-security-defaults-for-microsoft-365-business-premium"></a>Slå sikkerhedsstandardindstillinger til for Microsoft 365 Business Premium
 
@@ -76,9 +76,13 @@ Sikkerhedsstandarden er tilgængelig for alle kunder, mens Betinget adgang kræv
 Hvis du vil bruge Betinget adgang til at konfigurere politikker, der svarer til dem, der er aktiveret som sikkerhedsindstillinger, kan du se følgende trinvise vejledninger:
 
 - [Kræv MFA til administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
+
 - [Kræv MFA til Azure-administration](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management)
+
 - [Bloker ældre godkendelse](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
+
 - [Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
+
 - [Kræv registrering af Azure AD MFA](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) – Kræver Azure AD Identity Protection, som er en del Azure Active Directory Premium P2
 
 Du kan få mere at vide om Betinget adgang [under Hvad er Betinget adgang?](/azure/active-directory/conditional-access/overview) Du kan finde flere oplysninger om oprettelse af betingede access-politikker [under Oprette en politik for betinget adgang](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).

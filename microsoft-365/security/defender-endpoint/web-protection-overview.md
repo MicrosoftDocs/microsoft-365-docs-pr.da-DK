@@ -1,6 +1,6 @@
 ---
 title: Webbeskyttelse
-description: Få mere at vide om webbeskyttelse i Microsoft Defender til slutpunkt, og hvordan du kan beskytte din organisation
+description: Få mere at vide om webbeskyttelse Microsoft Defender for Endpoint, og hvordan du kan beskytte din organisation
 keywords: webbeskyttelse, beskyttelse mod webtrusler, webbrowsing, sikkerhed, phishing, malware, udnyttelse, websteder, netværksbeskyttelse, Microsoft Edge, Internet Explorer, Chrome, Firefox, webbrowser, ondsindede websteder
 search.appverid: met150
 ms.prod: m365-security
@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d21fdd481ade59ca869d5cfe086e537c0c431228
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 7883ef4c7bc06c08e199af871902b26d8e46ac5e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63591190"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476571"
 ---
 # <a name="web-protection"></a>Webbeskyttelse
 
@@ -28,19 +28,19 @@ ms.locfileid: "63591190"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
 
 ## <a name="about-web-protection"></a>Om webbeskyttelse
 
-Webbeskyttelse i Microsoft Defender til slutpunkt er en funktion, der består af webtrusselsbeskyttelse, [filtrering af webindhold](web-content-filtering.md) og [brugerdefinerede indikatorer](manage-indicators.md).[](web-threat-protection.md) Med webbeskyttelse kan du beskytte dine enheder mod webtrusler og hjælpe dig med at regulere uønsket indhold. Du kan finde Web protection-rapporter i Microsoft 365 Defender portal ved at gå til **Rapporter > Web Protection**.
+Webbeskyttelse i Microsoft Defender for Endpoint er en funktion, der består af webtrusselsbeskyttelse, [filtrering af webindhold](web-content-filtering.md) og [brugerdefinerede indikatorer](manage-indicators.md).[](web-threat-protection.md) Med webbeskyttelse kan du beskytte dine enheder mod webtrusler og hjælpe dig med at regulere uønsket indhold. Du kan finde Web protection-rapporter i Microsoft 365 Defender portal ved at gå til **Rapporter > Web Protection**.
 
-:::image type="content" alt-text="Billede af alle webbeskyttelseskort." source="images/web-protection.png" lightbox="images/web-protection.png":::
+:::image type="content" source="images/web-protection.png" alt-text="Webbeskyttelseskortene" lightbox="images/web-protection.png":::
 
 ### <a name="web-threat-protection"></a>Webtrusselsbeskyttelse
 
@@ -73,7 +73,7 @@ Filtrering af webindhold omfatter **webaktivitet efter kategori**, oversigt **ov
 Filtrering af webindhold omfatter:
 
 - Brugere er forhindret i at få adgang til websteder i blokerede kategorier, uanset om de søger lokalt eller væk.
-- Du kan nemt installere forskellige politikker for forskellige sæt af brugere ved hjælp af de enhedsgrupper, der er defineret i rollebaserede adgangskontrolindstillinger [for Microsoft Defender til Slutpunkt](/microsoft-365/security/defender-endpoint/rbac).
+- Du kan nemt installere forskellige politikker for forskellige sæt af brugere ved hjælp af de enhedsgrupper, der [er defineret Microsoft Defender for Endpoint indstillingerne for rollebaseret adgangskontrol](/microsoft-365/security/defender-endpoint/rbac).
 - Du kan få adgang til webrapporter på samme centrale placering med synlighed over faktiske blokke og webforbrug.
 
 Du kan finde flere oplysninger under [Filtrering af webindhold](web-content-filtering.md).
@@ -82,7 +82,7 @@ Du kan finde flere oplysninger under [Filtrering af webindhold](web-content-filt
 
 Webbeskyttelse består af følgende komponenter, der er angivet i rangordenen. Hver af disse komponenter gennemtvinges af SmartScreen-klienten Microsoft Edge og af Network Protection-klienten i alle andre browsere og processer.
 
-- Brugerdefinerede indikatorer (IP/URL, politikker for Microsoft Defender til skyapps)
+- Brugerdefinerede indikatorer (IP/URL-adresse, Microsoft Defender for Cloud Apps politikker)
   - Tillad
   - Advar
   - Bloker
@@ -94,7 +94,7 @@ Webbeskyttelse består af følgende komponenter, der er angivet i rangordenen. H
 - WCF (Web Content Filtering)
 
 > [!NOTE]
-> Microsoft Defender til skyapps genererer i øjeblikket kun indikatorer for blokerede URL-adresser.
+> Microsoft Defender for Cloud Apps genererer i øjeblikket kun indikatorer for blokerede URL-adresser.
 
 Rækkefølgen relaterer til rækkefølgen af handlinger, som en URL- eller IP-adresse evalueres efter. Hvis du f.eks. har en politik for filtrering af webindhold, kan du oprette undtagelser via brugerdefinerede IP/URL-indikatorer. Brugerdefinerede indikatorer for forlig (IoC) er højere i rangordenen end WCF-blokke.
 
@@ -119,7 +119,7 @@ Interne IP-adresser understøttes ikke af brugerdefinerede indikatorer. For en a
 
 I alle webbeskyttelsesscenarier kan SmartScreen og netværksbeskyttelse bruges sammen for at sikre beskyttelse på tværs af både første- og tredjepartsbrowsere og -processer. SmartScreen er indbygget direkte Microsoft Edge, mens Netværksbeskyttelse overvåger trafik i tredjepartsbrowsere og -processer. Nedenstående diagram illustrerer dette koncept. Dette diagram over de to klienter, der arbejder sammen om at tilbyde flere browser-/app-dækninger, gælder nøjagtigt for alle funktioner i Web Protection (indikatorer, webtrusler, indholdsfiltrering).
 
-:::image type="content" alt-text="Brug af SmartScreen og netværksbeskyttelse sammen." source="../../media/web-protection-protect-browsers.png" lightbox="../../media/web-protection-protect-browsers.png":::
+:::image type="content" source="../../media/web-protection-protect-browsers.png" alt-text="Brug af smartScreen og netværksbeskyttelse sammen" lightbox="../../media/web-protection-protect-browsers.png":::
 
 ## <a name="troubleshoot-endpoint-blocks"></a>Fejlfinding af slutpunktsblokke
 
@@ -171,17 +171,17 @@ Hvis du vil have vist listeblokke, der skyldes andre funktioner (f.eks. Brugerde
 Hvis en bruger besøger en webside, der udgør en risiko for malware, phishing eller andre webtrusler, udløser Microsoft Edge en blokeringsside, hvor der står: "Dette websted er blevet rapporteret som usikkert" sammen med oplysninger om truslerne.
 
 > [!div class="mx-imgBorder"]
-> ![Side blokeret af Microsoft Edge.](../../media/web-protection-malicious-block.png)
+> :::image type="content" source="../../media/web-protection-malicious-block.png" alt-text="Siden blokeret af Microsoft Edge" lightbox="../../media/web-protection-malicious-block.png":::
 
 Hvis blokeret af WCF eller en brugerdefineret indikator, vises en blokside i Microsoft Edge, der fortæller brugeren, at webstedet er blokeret af deres organisation.
 
 > [!div class="mx-imgBorder"]
-> ![Side blokeret af din organisation.](../../media/web-protection-indicator-blockpage.png)
+> :::image type="content" source="../../media/web-protection-indicator-blockpage.png" alt-text="Den side, der er blokeret af din organisation" lightbox="../../media/web-protection-indicator-blockpage.png":::
 
 Under alle omstændigheder vises der ingen blokeringssider i tredjepartsbrowsere, og brugeren får vist siden "Sikker forbindelse mislykkedes" sammen med en toastbesked. Afhængigt af den politik, der er ansvarlig for blokeringen, får en bruger vist en anden meddelelse i toastbeskeden. Filtrering af webindhold viser f.eks. meddelelsen "Dette indhold er blokeret".
 
 > [!div class="mx-imgBorder"]
-> ![Side blokeret af WCF.](../../media/web-protection-np-block.png)
+> :::image type="content" source="../../media/web-protection-np-block.png" alt-text="Den side, der er blokeret af WCF" lightbox="../../media/web-protection-np-block.png":::
 
 ## <a name="report-false-positives"></a>Rapportér falske positive
 
@@ -189,7 +189,7 @@ Hvis du vil rapportere en falsk positiv for websteder, der af SmartScreen anses 
 
 For WCF kan du bestride kategorien for et domæne. Gå til fanen **Domæner i** WCF-rapporterne, og klik derefter **på Rapportaccuracy**. Der åbnes en pop op-pop op-pop-op-pop-op. Angiv prioriteten af hændelsen, og angiv nogle yderligere detaljer, f.eks. den foreslåede kategori. Du kan få mere at vide om, hvordan du aktiverer WCF, og hvordan du vælger kategorier for tvister, under [Filtrering af webindhold](web-content-filtering.md).
 
-Du kan finde flere oplysninger om, hvordan du sender falske positive/negativer, i Adressere falske [positive/negativer i Microsoft Defender til slutpunkt](defender-endpoint-false-positives-negatives.md).
+Du kan finde flere oplysninger om, hvordan du sender falske positive/negativer, i [Adressere falske positive/negativer i Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
 ## <a name="related-information"></a>Relaterede oplysninger
 

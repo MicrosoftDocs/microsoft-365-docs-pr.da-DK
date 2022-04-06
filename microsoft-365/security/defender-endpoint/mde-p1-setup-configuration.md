@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 741450f2573e0d750a1d3de5012f97cf16a0780d
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: e2a8f7166e1fa3a05b95b1a48dbf91b30ef34224
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569086"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470367"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Konfigurere og konfigurere Microsoft Defender for Endpoint Plan 1
 
@@ -53,7 +53,7 @@ I følgende tabel vises de grundlæggende krav til Defender for Endpoint Plan 1:
 
 | Krav | Beskrivelse |
 |:---|:---|
-| Licenskrav | Defender for Endpoint Plan 1 |
+| Licenskrav | Defender til Endpoint Plan 1 (tidligere kaldet Microsoft Defender for Endpoint Lite)|
 | Browserkrav | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operativsystemer | Windows 10, version 1709 eller nyere <br/>macOS: 11.5 (Big Sur), 10.15.7 (Catalina) eller 10.14.6 (Mojave) <br/>iOS <br/>Android OS  |
 | Datacenter | En af følgende datacenterplaceringer: <br/>- EU <br/>- Storbritannien <br/>- USA |

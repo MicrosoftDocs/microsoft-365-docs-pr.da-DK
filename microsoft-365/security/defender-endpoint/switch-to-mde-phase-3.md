@@ -21,14 +21,14 @@ ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
 ms.topic: article
-ms.date: 03/28/2022
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: 1397c34e8e4a7f1fcb20df192409bd57bc50f40b
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: 4f387ae01af51292667f810176970f3607b489b3
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507115"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634399"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-3-onboard"></a>Skift til Microsoft Defender for Endpoint - Fase 3: Onboard
 
@@ -80,15 +80,11 @@ Installationsmetoderne varierer alt efter operativsystem og foretrukne metoder. 
 | iOS | [Microsoft Endpoint Manager](ios-install.md)     |
 |Android  | [Microsoft Endpoint Manager](android-intune.md)  | 
 
-
 (<a id="fn1">1</a>) Windows Server 2016 og Windows Server 2012 R2 skal være onboardet ved hjælp af instruktionerne [i Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016).
-
 
 ## <a name="run-a-detection-test"></a>Kør en registreringstest
 
 Du kan kontrollere, at dine onboardede enheder er korrekt forbundet til Defender til slutpunkt, ved at køre en registreringstest.
-
-<br/><br/>
 
 |Operativsystem|Vejledning|
 |---|---|
@@ -102,8 +98,6 @@ Du kan kontrollere, at dine onboardede enheder er korrekt forbundet til Defender
 ## <a name="confirm-that-microsoft-defender-antivirus-is-in-passive-mode-on-your-endpoints"></a>Bekræft, Microsoft Defender Antivirus er i passiv tilstand på dine slutpunkter
 
 Nu, hvor dine slutpunkter er blevet onboardet til Defender for Endpoint, er det næste trin at sikre, at Microsoft Defender Antivirus kører i passiv tilstand. Du kan bruge en af flere metoder, som beskrevet i følgende tabel:
-
-<br/><br/>
 
 |Metode|Hvad kan du gøre?|
 |---|---|
@@ -120,12 +114,12 @@ Nu, hvor dine slutpunkter er blevet onboardet til Defender for Endpoint, er det 
 
 Hvis du Microsoft Defender Antivirus til passiv tilstand på Windows Server, version 1803 eller nyere eller Windows Server 2019 eller Windows Server 2022, skal du følge disse trin:
 
-1. Åbn Registreringseditor, og gå derefter til:
-
-   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+1. Åbn Registreringseditor, og gå derefter til `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
 2. Rediger (eller opret) en DWORD-post **med navnet ForceDefenderPassiveMode**, og angiv følgende indstillinger:
+
    - Angiv DWORD'ens værdi til **1**.
+
    - Under **Base skal** du vælge **Hexadecimal**.
 
 > [!NOTE]
@@ -146,6 +140,7 @@ Det er Microsoft Defender Antivirus at holde Microsoft Defender Antivirus opdate
 Der findes to typer opdateringer, der er relateret Microsoft Defender Antivirus holde dem opdateret:
 
 - Sikkerhedsintelligensopdateringer
+
 - Produktopdateringer
 
 Hvis du vil have dine opdateringer, skal du følge [vejledningen i Microsoft Defender Antivirus opdateringer og anvende oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).
@@ -155,6 +150,7 @@ Hvis du vil have dine opdateringer, skal du følge [vejledningen i Microsoft Def
 Hvis du på dette tidspunkt har:
 
 - Onboardet din organisations enheder til Defender for Endpoint, og
+
 - Microsoft Defender Antivirus er installeret og aktiveret,
 
 Derefter er det næste trin at fjerne din løsning til beskyttelse med antivirus, antimalware og slutpunkter, som ikke er Microsoft. Når du fjerner din løsning, der ikke er Microsoft, Microsoft Defender Antivirus skiftes fra passiv tilstand til aktiv tilstand. I de fleste tilfælde sker dette automatisk. 
@@ -169,7 +165,9 @@ Kontakt deres tekniske supportteam for at få hjælp til at fjerne din løsning,
 Nu hvor du har onboardet Defender til Slutpunkt, og du har fjernet din tidligere løsning, som ikke er Microsoft, er det næste trin at sikre, at Defender til Slutpunkt fungerer korrekt. En god måde at udføre denne opgave på er ved at besøge webstedet for demoscenarier for Defender for Endpoint ([https://demo.wd.microsoft.com](https://demo.wd.microsoft.com)). Prøv et eller flere af demonstrationsscenarierne på den pågældende side, herunder mindst følgende:
 
 - Cloud-leveret beskyttelse
+
 - Potentielt uønskede programmer (PUA)
+
 - Netværksbeskyttelse (NP)
 
 > [!NOTE]
@@ -180,4 +178,5 @@ Nu hvor du har onboardet Defender til Slutpunkt, og du har fjernet din tidligere
 **Tillykke**! Du har fuldført overførslen [til Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)!
 
 - [Gå til dashboardet for sikkerhedshandlinger](security-operations-dashboard.md) i Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
+
 - [Administrer Defender for Slutpunkt efter overførslen](manage-mde-post-migration.md).

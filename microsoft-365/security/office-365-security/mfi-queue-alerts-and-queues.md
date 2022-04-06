@@ -14,12 +14,12 @@ description: Administratorer kan lære at bruge widgetten Køer i dashboardet fo
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 54bff65b29555fe0c94c86141cd7a10a77c36219
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 62da2d9654174bc2572a6d7cbb3acbd638757a6c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680000"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469465"
 ---
 # <a name="queues-insight-in-the-security--compliance-center"></a>Køindsigt i Sikkerheds- & Compliance Center
 
@@ -27,7 +27,7 @@ ms.locfileid: "63680000"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Når meddelelser ikke kan sendes fra din organisation til dine lokale eller partnermailservere ved hjælp af forbindelser, står meddelelserne i kø i Microsoft 365. Almindelige eksempler, der forårsager denne betingelse, er:
@@ -43,7 +43,8 @@ Hvis mængden af mails i kø overstiger den foruddefinerede grænseværdi (stand
 
 - En besked vises i Seneste **vigtige beskeder dashboardet** Vigtige beskeder i [Security & Compliance Center](https://protection.office.com) (**Alerts** \> **Dashboard** eller <https://protection.office.com/alertsdashboard>).
 
-  ![Seneste beskeder i dashboardet Vigtige beskeder i sikkerheds- & Overholdelsescenter.](../../media/mfi-queued-messages-alert.png)
+  :::image type="content" source="../../media/mfi-queued-messages-alert.png" alt-text="De seneste beskeder i dashboardet Vigtige beskeder i security & Compliance Center" lightbox="../../media/mfi-queued-messages-alert.png":::
+
 
 - Administratorer modtager en mail, der er baseret på konfigurationen af standardpolitikken for påmindelser med navnet **Meddelelser er blevet forsinket**. Hvis du vil konfigurere indstillingerne for meddelelser for denne besked, skal du se næste afsnit.
 
@@ -57,7 +58,7 @@ Hvis mængden af mails i kø overstiger den foruddefinerede grænseværdi (stand
 
 3. I pop **op-menuen Meddelelse er** blevet forsinket, som åbnes, kan du slå beskeden til eller fra og konfigurere indstillingerne for meddelelser.
 
-   ![Meddelelser er blevet forsinket med oplysninger om politikken for sikkerhed og & overholdelsescenter.](../../media/mfi-queued-messages-alert-policy.png)
+   :::image type="content" source="../../media/mfi-queued-messages-alert-policy.png" alt-text="Oplysningerne i meddelelserne er blevet forsinket-beskeden" lightbox="../../media/mfi-queued-messages-alert-policy.png":::
 
    - **Status**: Du kan slå beskeden til eller fra.
 
@@ -70,7 +71,7 @@ Hvis mængden af mails i kø overstiger den foruddefinerede grænseværdi (stand
    - **Daglig beskedgrænse**: Standardværdien er **Ingen grænse**.
    - **Grænseværdi**: Standardværdien er 200.
 
-   ![Meddelelsesindstillinger i meddelelserne er blevet forsinkede politikoplysninger om sikkerhed og & overholdelsescenter.](../../media/mfi-queued-messages-alert-policy-notification-settings.png)
+     :::image type="content" source="../../media/mfi-queued-messages-alert-policy-notification-settings.png" alt-text="Meddelelsesindstillingerne i beskederne er blevet forsinket-beskeden" lightbox="../../media/mfi-queued-messages-alert-policy-notification-settings.png":::
 
 5. Klik på Gem og luk, når **du er** **færdig**.
 
@@ -78,7 +79,7 @@ Hvis mængden af mails i kø overstiger den foruddefinerede grænseværdi (stand
 
 Selvom mængden af meddelelser i kø ikke har overskredet grænsen og genereret en besked, kan du stadig bruge indsigten Køer i  [dashboardet for mailflow](mail-flow-insights-v2.md) til at se meddelelser, der er sat i kø i mere end en time, og gøre noget, før antallet af meddelelser i kø bliver for stort.
 
-![Widgetten Køer i dashboardet for mailflow i & Security & Compliance Center.](../../media/mfi-queues-widget.png)
+:::image type="content" source="../../media/mfi-queues-widget.png" alt-text="Widgetten Køer i dashboardet for mailflow i & Compliance Center" lightbox="../../media/mfi-queues-widget.png":::
 
 Hvis du klikker på antallet af meddelelser på widgetten, vises en pop **op-vindue** i kø med følgende oplysninger:
 
@@ -91,11 +92,11 @@ Hvis du klikker på antallet af meddelelser på widgetten, vises en pop **op-vin
 - **Sidste fejl**
 - **Sådan løser du** det: Almindelige problemer og løsninger er tilgængelige. Hvis linket **Fix it now** er tilgængeligt, skal du klikke på det for at løse problemet. Ellers skal du klikke på eventuelle links for at få flere oplysninger om fejlen og mulige løsninger.
 
-![Detaljer efter klik på indsigten Køer i dashboardet for mailflow.](../../media/mfi-queues-details.png)
+:::image type="content" source="../../media/mfi-queues-details.png" alt-text="Detaljer efter klik på indsigten Køer i dashboardet for mailflow" lightbox="../../media/mfi-queues-details.png":::
 
 Det samme pop op-billede vises, når du klikker **på Vis** kø i detaljerne for en **meddelelse er blevet forsinket** .
 
-![Meddelelser er blevet forsinkede oplysninger i Sikkerheds- & Overholdelsescenter.](../../media/mfi-queued-messages-alert-details.png)
+:::image type="content" source="../../media/mfi-queued-messages-alert-details.png" alt-text="Oplysningerne om meddelelserne er blevet forsinket i Sikkerheds- & Compliance Center" lightbox="../../media/mfi-queued-messages-alert-details.png":::
 
 ## <a name="see-also"></a>Se også
 

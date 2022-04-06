@@ -17,22 +17,43 @@ search.appverid:
 - MOE150
 - MET150
 description: Find ud af, hvad der er nyt i Compliance Manger, og hvad der er på vil komme. Læs om opdaterede bedømmelser, nye bedømmelsesskabeloner, nye handlinger og meget mere.
-ms.openlocfilehash: 48aed2e173231e3945bcdd3de73052de9f970a5b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0f368be06b33f485ff687c998615fb8578845daf
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63595937"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634201"
 ---
 # <a name="whats-new-in-microsoft-compliance-manager"></a>Nyheder i Microsoft Compliance Manager
 
 **I denne artikel:** Få mere at vide om de seneste opdateringer i Overholdelsesstyring.
 
-## <a name="february-2022"></a>Februar 2022
+## <a name="march-2022"></a>Marts 2022
+
+### <a name="new-templates-available"></a>Nye tilgængelige skabeloner
+
+Overholdelsesstyring har udgivet følgende nye bedømmelsesskabeloner:
+
+**Global**
+- ISO 37301
+- NIST 800-207 – Nul tillid arkitektur
+- SIG 2022
+
+**Den amerikanske forvaltning**
+- CMMC v2 niveau 1
+- CMMC v2 niveau 2
+
+**Nordamerika**
+- Information Security Management Act – Province of British Columbia, CA
+
+Se vores [komplette liste over bedømmelsesskabeloner](compliance-manager-templates-list.md).
 
 ### <a name="continuous-compliance-assessment-of-improvement-actions"></a>Løbende vurdering af overholdelse af forbedringshandlinger
 
 Vi tilføjer automatiseret test og bevisgenerering for mere end 35 forbedringshandlinger i Overholdelsesstyring, som ikke tidligere er omfattet af Secure Score. Med løbende vurdering af overholdelse kan du modtage opdateringer om, hvilke af disse forbedringshandlinger du har fuldført, hvis de er relevante for dine vurdering af overholdelse, og du har licens til at få adgang til de relevante løsninger. Løbende vurdering af overholdelse giver også brugerne indblik i pointlogikken i dine forbedringshandlinger og giver indsigt og bevis for, hvorfor du har modtaget et bestemt resultat. Denne funktion fungerer sammen med eksisterende integrationer Microsoft 365 Secure Score, og alle automatiserede handlinger, du tidligere har konfigureret, fungerer fortsat, som de er. Få mere at vide [om indstillinger for automatiserede test](compliance-manager-setup.md#set-up-automated-testing).
+
+## <a name="february-2022"></a>Februar 2022
+
 ### <a name="alerts-and-alert-policies"></a>Påmindelser og beskedpolitikker
 
 Brugere kan nu angive beskeder om ændringer i Overholdelsesstyring, som en organisation vil registrere. Ved hjælp af en guide til nem konfiguration kan du oprette beskedpolitikker for at oprette meddelelser, når følgende typer hændelser sker: ændring af forbedringshandlingsresultat, ændring af tildeling af forbedringshandling, en ændring af test- eller implementeringsstatus i en forbedringshandling og en filoverførsel eller sletning på fanen Dokumenter i en forbedringshandling. Få mere at vide ved at [gå til Overholdelsesstyring -beskeder og -beskedpolitikker](compliance-manager-alert-policies.md).
@@ -43,18 +64,18 @@ Din organisation kan nu få anbefalinger fra Compliance Manager om, hvilke bedø
 
 ## <a name="november-2021"></a>November 2021
 
-### <a name="zero-trust-integration-for-the-data-protection-baseline-template"></a>Integration af nultillidsværdien for skabelonen Oprindelig databeskyttelse
+### <a name="zero-trust-integration-for-the-data-protection-baseline-template"></a>Nul tillid integration af skabelonen Oprindelig databeskyttelse
 
-Zero Trust er en proaktiv, integreret tilgang til sikkerhed på tværs af alle lag af den digitale ejendom, der eksplicit og løbende bekræfter hver transaktion, hævder mindst rettigheder og er afhængig af intelligens, avanceret registrering og svar i realtid på trusler. Standardskabelonen til databeskyttelse, der medfølger til alle brugere, integrerer nu 57 nye kontrolelementer og 36 nye handlinger for Nul tillid justeret på tværs af følgende kontrolfamilier:
+Nul tillid er en proaktiv, integreret tilgang til sikkerhed på tværs af alle lag af den digitale ejendom, der eksplicit og løbende bekræfter hver transaktion, hævder de mindste rettigheder og er afhængig af intelligens, avanceret registrering og svar i realtid på trusler. Standardskabelonen til databeskyttelse, der medfølger til alle brugere, integrerer nu 57 nye kontrolelementer og 36 nye handlinger til Nul tillid justeret på tværs af følgende kontrolfamilier:
 
-- Nultillids-program
-- Vejledning til udvikling af nultillidsapp
-- Slutpunkt på nultillidspost
-- Nultillidsdata
-- Nultillidsidentitet
-- Nultillidsinfrastruktur
-- Nultillidsnetværk
-- Nultillidssynlighed, automatisering og automatisering
+- Nul tillid program
+- Nul tillid vejledning til appudvikling
+- Nul tillid slutpunkt
+- Nul tillid data
+- Nul tillid identitet
+- Nul tillid infrastruktur
+- Nul tillid netværk
+- Nul tillid synlighed, automatisering og automatisering
 
 ### <a name="new-preview-templates"></a>Nye eksempelskabeloner
 

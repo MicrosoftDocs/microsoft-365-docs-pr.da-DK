@@ -16,24 +16,24 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 513432dfb24af89451c4d8290ce5fde0951819b9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2825bc87750dc9bb130e35f9a4997283e470f869
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63596860"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469883"
 ---
 # <a name="data-collection-for-advanced-troubleshooting-on-windows"></a>Dataindsamling til avanceret fejlfinding på Windows
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Når du samarbejder med Microsofts supportmedarbejdere, kan du blive bedt om at bruge klientanalysen til at indsamle data til fejlfinding i mere komplekse scenarier. Analysescriptet understøtter andre parametre til dette formål og kan indsamle et bestemt logsæt baseret på de observerede symptomer, der skal undersøges.
 
 Kør '**MDEClientAnalyzer.cmd /?**' for at få vist listen over tilgængelige parametre og beskrivelsen af dem:
 
-![Billede af parametre for klientanalyse på kommandolinjen.](images/d89a1c04cf8441e4df72005879871bd0.png)
+:::image type="content" source="images/d89a1c04cf8441e4df72005879871bd0.png" alt-text="Parametrene for MDEClientAnalyzer.cmd" lightbox="images/d89a1c04cf8441e4df72005879871bd0.png":::
 
 > [!NOTE]
 > Når en avanceret fejlfindingsparameter bruges, ringer analysatoren også ind [ iMpCmdRun.exe](/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus) indsamle Microsoft Defender Antivirus relaterede supportlogfiler.
@@ -69,7 +69,7 @@ Kør '**MDEClientAnalyzer.cmd /?**' for at få vist listen over tilgængelige pa
 
 Analyseværktøj og alle ovenstående scenarieflag kan startes eksternt ved at køre 'RemoteMDEClientAnalyzer.cmd', som også er bundtet i analyseværktøjssættet:
 
-![Billede af kommandolinje med analyseoplysninger.](images/57cab9d82d08f672a92bf9e748ac9572.png)
+:::image type="content" source="images/57cab9d82d08f672a92bf9e748ac9572.png" alt-text="Parametrene for RemoteMDEClientAnalyzer.cmd" lightbox="images/57cab9d82d08f672a92bf9e748ac9572.png":::
 
 > [!NOTE]
 >

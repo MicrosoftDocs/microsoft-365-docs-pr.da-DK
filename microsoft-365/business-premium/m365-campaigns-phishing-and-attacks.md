@@ -24,27 +24,30 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt dig mod phishing og andre angreb med Microsoft 365.
-ms.openlocfilehash: b1a6b5a80b00df010d4733c1b7cb8ce1d16a95d9
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 09e72221e23f4f0d1e2f4a5e7dcb81abff46dcf2
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63607459"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634245"
 ---
 # <a name="protect-yourself-against-phishing-and-other-attacks"></a>Beskyt dig selv mod phishing og andre angreb
 
 Microsoft 365 Business Premium omfatter mange beskyttelser til at beskytte dig mod angreb, men der er ting, du kan gøre selv for at begrænse og minimere risikoen for onlineangreb.
 
 - **Spam eller uønsket mail** Der kan være mange årsager til, at du kan modtage uønsket mail, og ikke alle uønskede mails er ens. Du kan dog reducere, hvad der kommer igennem til dig, og dermed reducere risikoen for angreb ved at filtrere uønsket mail fra.
+
 - **Phishing** Et forsøg på phishing er en mail, der ser legitim ud, men er et forsøg på at få dine personlige oplysninger eller stjæle dine penge.
+
 - **Spoofing** Svindlere kan også bruge en teknik kaldet spoofing for at få det til at se ud som om, du har modtaget en mail fra dig selv. 
+
 - **Malware** er skadelig software, der kan installeres på computeren, normalt installeres, når du har klikket på et link eller åbnet et dokument fra en mail. Der findes forskellige typer malware (f.eks. ransomware, når computeren overtages), men du ikke vil have nogen af dem. 
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 
 ### <a name="reduce-spam-mail"></a>Reducer spammail
 
-Følg disse [10 tip til, hvordan du kan reducere spam](https://support.microsoft.com/en-us/office/10-tips-on-how-to-help-reduce-spam-55f756e8-688b-41c3-a086-8f68ccc592f6).
+Følg disse [10 tip til, hvordan du kan reducere spam](https://support.microsoft.com/office/10-tips-on-how-to-help-reduce-spam-55f756e8-688b-41c3-a086-8f68ccc592f6).
 
 ### <a name="report-it"></a>Rapportér det!
 
@@ -78,5 +81,6 @@ Download denne infografik med tip til dig og medlemmerne af dit kampagneteam:
 Få mere at vide om, hvordan du:
 
 - [Hold dine filer og din kommunikation sikker med Office](https://support.microsoft.com/en-us/office/keep-your-files-and-communications-safe-with-office-c4ddc381-7395-42da-887c-8836a3bb975f).
+
 - [Beskyt din sikkerhed og dit privatliv på arbejdet](https://support.office.com/article/stay-secure-and-private-at-work-104c7d91-b25a-453d-beee-ba64b6c6fc2d).
   

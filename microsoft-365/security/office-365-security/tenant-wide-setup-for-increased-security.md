@@ -21,12 +21,12 @@ ms.custom:
 description: I dette emne gennemgås den anbefalede konfiguration af indstillinger for hele lejeren, der påvirker sikkerheden for dit Microsoft 365 miljø.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 94da7316c5e749cf6dcc5e038c185bea4790765f
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 96f31d0fb9eb3ef9d6eaec396fdac8fe96b96c3d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682873"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476351"
 ---
 # <a name="configure-your-microsoft-365-tenant-for-increased-security"></a>Konfigurer din Microsoft 365 lejer for øget sikkerhed
 
@@ -34,7 +34,7 @@ ms.locfileid: "63682873"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I dette emne gennemgås den anbefalede konfiguration af indstillinger for hele lejeren, der påvirker sikkerheden for dit Microsoft 365 miljø. Dine sikkerhedsbehov kan kræve mere eller mindre sikkerhed. Brug disse anbefalinger som et udgangspunkt.
@@ -49,10 +49,10 @@ Portalen Microsoft 365 Defender indeholder funktioner, der beskytter dit miljø.
 
 |Område|Standardpolitik?|Anbefaling|
 |---|---|---|
-|**Antiphishing**|Ja|Konfigurer standardpolitikken for phishing som beskrevet her: Konfigurer indstillinger [for beskyttelse mod phishing i EOP og Defender for Office 365](protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Antiphishing-politikker i Microsoft 365](set-up-anti-phishing-policies.md)</li><li>[Anbefalede politikindstillinger for phishing i Microsoft Defender til Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)</li><li> [Repræsentationsindsigt](impersonation-insight.md)</li><li>[Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md)</li><li>[Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md).</li></ul>|
+|**Antiphishing**|Ja|Konfigurer standardpolitikken for phishing som beskrevet her: Konfigurer indstillinger [for beskyttelse mod phishing i EOP og Defender for Office 365](protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Antiphishing-politikker i Microsoft 365](set-up-anti-phishing-policies.md)</li><li>[Anbefalede indstillinger for antiphishing-politik i Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)</li><li> [Repræsentationsindsigt](impersonation-insight.md)</li><li>[Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md)</li><li>[Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md).</li></ul>|
 |**Antimalwareprogrammet**|Ja|Konfigurer standardpolitikken for malware som beskrevet her: [Konfigurer indstillinger for beskyttelse mod malware i EOP](protect-against-threats.md#part-1---anti-malware-protection-in-eop). <p> Flere oplysninger: <ul><li>[Beskyttelse mod malware](anti-malware-protection.md)</li><li>[Anbefalede indstillinger for antimalwarepolitik](recommended-settings-for-eop-and-office365.md#eop-anti-malware-policy-settings)</li><li>[Konfigurere antimalwarepolitikker](configure-anti-malware-policies.md)</li></ul>|
-|**Pengeskab vedhæftede filer i Defender til Office 365**|Nej|Konfigurer de globale indstillinger for Pengeskab Vedhæftede filer, og opret en politik for vedhæftede filer i Pengeskab som beskrevet her: Konfigurer Pengeskab Indstillinger for vedhæftede filer [i Microsoft Defender for Office 365](protect-against-threats.md#safe-attachments-policies-in-microsoft-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Indstillinger for anbefalede Pengeskab vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings)</li><li>[Pengeskab vedhæftede filer i Microsoft Defender til Office 365](safe-attachments.md)</li><li>[Konfigurere politikker Pengeskab vedhæftede filer](set-up-safe-attachments-policies.md)</li><li>[Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Sikre dokumenter i Microsoft 365 E5](safe-docs.md)</li></ul>|
-|**Pengeskab Links i Microsoft Defender til Office 365**|Nej|Konfigurer de globale indstillinger for Pengeskab Links, og opret en politik for Pengeskab Links som beskrevet her: Konfigurer [Pengeskab Links-indstillinger i Microsoft Defender for Office 365](protect-against-threats.md#safe-links-policies-in-microsoft-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Anbefalede indstillinger Pengeskab links](recommended-settings-for-eop-and-office365.md#safe-links-settings)</li><li>[Konfigurere Pengeskab links](set-up-safe-links-policies.md)</li><li>[Pengeskab Links i Microsoft Defender til Office 365](safe-links.md)</li><li>[Konfigurer globale indstillinger for Pengeskab Links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md)</li></ul>|
+|**Pengeskab vedhæftede filer i Defender for Office 365**|Nej|Konfigurer de globale indstillinger for Pengeskab Vedhæftede filer, og opret en politik for Pengeskab Vedhæftede filer som beskrevet her: [Konfigurer Pengeskab Indstillinger for vedhæftede filer i Microsoft Defender for Office 365](protect-against-threats.md#safe-attachments-policies-in-microsoft-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Indstillinger for anbefalede Pengeskab vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings)</li><li>[Pengeskab vedhæftede filer i Microsoft Defender for Office 365](safe-attachments.md)</li><li>[Konfigurere politikker Pengeskab vedhæftede filer](set-up-safe-attachments-policies.md)</li><li>[Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Sikre dokumenter i Microsoft 365 E5](safe-docs.md)</li></ul>|
+|**Pengeskab Links i Microsoft Defender for Office 365**|Nej|Konfigurer de globale indstillinger for Pengeskab Links, og opret en politik for Pengeskab Links som beskrevet her: Konfigurer [Pengeskab Links i Microsoft Defender for Office 365](protect-against-threats.md#safe-links-policies-in-microsoft-defender-for-office-365). <p> Flere oplysninger: <ul><li>[Anbefalede indstillinger Pengeskab links](recommended-settings-for-eop-and-office365.md#safe-links-settings)</li><li>[Konfigurere Pengeskab links](set-up-safe-links-policies.md)</li><li>[Pengeskab Links i Microsoft Defender for Office 365](safe-links.md)</li><li>[Konfigurere globale indstillinger for Pengeskab links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md)</li></ul>|
 |**Uønsket post (mailfiltrering)**|Ja|Konfigurer standardpolitikken for uønsket post som beskrevet her: [Konfigurer indstillinger for beskyttelse mod uønsket post i EOP](protect-against-threats.md#part-3---anti-spam-protection-in-eop) <p> Flere oplysninger: <ul><li>[Anbefalede indstillinger for antispampolitik](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)</li><li>[Beskyttelse mod spam i EOP](anti-spam-protection.md)</li><li>[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)</li></ul>|
 |***Mailgodkendelse***|Ja|Mailgodkendelse bruger DNS-poster til at føje oplysninger, der kan bekræftes, til mails om meddelelseskilden og afsenderen. Microsoft 365 konfigurerer automatisk mailgodkendelse for dens standarddomæne (onmicrosoft.com), men Microsoft 365-administratorer kan også konfigurere mailgodkendelse for brugerdefinerede domæner. Der bruges tre godkendelsesmetoder: <ul><li>Sender Policy Framework (eller SPF).</li><ul><li>Se Konfigurer [SPF i en Microsoft 365 for at forhindre spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md).</li></ul> <li>DomainKeys Identified Mail (DKIM).</li><ul><li>Se [Brug DKIM til at validere udgående mails, der sendes fra dit brugerdefinerede domæne](use-dkim-to-validate-outbound-email.md).</li><li>Når du har konfigureret DKIM, skal du aktivere det i Microsoft 365 Defender portal.</li></ul><li>Domænebaseret meddelelsesgodkendelse, -rapportering og -overholdelse (DMARC).</li><ul><li>Brug DMARC til at [validere mail i forbindelse med](use-dmarc-to-validate-email.md) DMARC Microsoft 365.</li></ul></ul>|
 
@@ -66,7 +66,7 @@ Besøg disse rapporter og dashboards for at få mere at vide om miljøets tilsta
 |Dashboard|Beskrivelse|
 |---|---|
 |Mailsikkerhedsrapporter|Disse rapporter er tilgængelige i Exchange Online Protection. Du kan få mere at vide [under Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md).|
-|Defender til Office 365 rapporter|Rapporterne er kun tilgængelige i Defender til Office 365. Du kan finde flere oplysninger [i View Defender for Office 365-rapporter på Microsoft 365 Defender-portalen](view-reports-for-mdo.md).|
+|Defender for Office 365 rapporter|Rapporterne er kun tilgængelige i Defender for Office 365. Du kan finde flere oplysninger [i Defender for Office 365 vist rapporter Microsoft 365 Defender portalen](view-reports-for-mdo.md).|
 |Mailflowrapporter og indsigter|Disse rapporter og indsigter er tilgængelige Exchange Administration (EAC). Få mere at vide under [Mailflowrapporter og](/exchange/monitoring/mail-flow-reports/mail-flow-reports) [Indsigt i mailflow](/exchange/monitoring/mail-flow-insights/mail-flow-insights).|
 |[Trusselsstifinder (eller registreringer i realtid)](threat-explorer.md)|Hvis du er ved at undersøge eller opleve et angreb på din lejer, skal du bruge Stifinder (eller registreringer i realtid) til at analysere trusler. Stifinder (og rapporten om registreringer i realtid) viser dig mængden af angreb over tid, og du kan analysere disse data fra trusselsfamilier, hackerinfrastruktur og meget mere. Du kan også markere alle mistænkelige mails på listen Hændelser.|
 
@@ -118,17 +118,17 @@ I mellemtiden kan du bruge en af følgende metoder til at opnå dette med ShareP
 
 Brug Office 365 Cloud App Security til at evaluere risici, til at advare om mistænkelig aktivitet og til automatisk at handle. Kræver Office 365 E5 plan.
 
-Du kan også bruge Microsoft Defender til skyapps til at få en større synlighed, selv efter du har fået adgang, omfattende kontroller og forbedret beskyttelse af alle dine skyprogrammer, herunder Office 365.
+Du kan også Microsoft Defender for Cloud Apps til at få en dybere synlighed, selv efter at der er givet adgang, omfattende kontrolelementer og forbedret beskyttelse af alle dine skyprogrammer, herunder Office 365.
 
 Da denne løsning anbefaler EMS E5-planen, anbefaler vi, at du starter med Defender til skyapps, så du kan bruge den sammen med andre SaaS-programmer i dit miljø. Start med standardpolitikker og indstillinger.
 
 Flere oplysninger:
 
 - [Installér Defender til skyapps](/cloud-app-security/getting-started-with-cloud-app-security)
-- [Flere oplysninger om Microsoft Defender til skyapps](https://www.microsoft.com/cloud-platform/cloud-app-security)
+- [Flere oplysninger om Microsoft Defender for Cloud Apps](https://www.microsoft.com/cloud-platform/cloud-app-security)
 - [Hvad er Defender til skyapps?](/cloud-app-security/what-is-cloud-app-security)
 
-![Defender for Cloud Apps dashboard.](../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png)
+:::image type="content" source="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png" alt-text="Dashboardet Defender for Cloud Apps" lightbox="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png":::
 
 ## <a name="additional-resources"></a>Yderligere ressourcer
 

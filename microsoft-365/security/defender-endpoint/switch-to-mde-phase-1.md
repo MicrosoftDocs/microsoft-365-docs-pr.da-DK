@@ -1,7 +1,7 @@
 ---
-title: Skift til Microsoft Defender til slutpunkt – Forbered
+title: Skift til Microsoft Defender for Endpoint – Forbered
 description: Gør dig klar til at skifte til Microsoft Defender for Endpoint. Opdater dine enheder, og konfigurer dine netværksforbindelser.
-keywords: overførsel, Microsoft Defender til slutpunkt, bedste praksis
+keywords: overførsel, Microsoft Defender for Endpoint, bedste fremgangsmåde
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -23,21 +23,21 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.date: 11/30/2021
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: d9d122c9d114aa135eb2a82e1168eabec2aeec7b
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: aa0bd45c1765e2aa794e00e437bf08a63d1d742f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63606791"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476725"
 ---
-# <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Skift til Microsoft Defender til slutpunkt – Fase 1: Forbered
+# <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Skift til Microsoft Defender for Endpoint – Fase 1: Forbered
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-| ![Fase 1: Forbered.](images/phase-diagrams/prepare.png)<br/>Fase 1: Forbered | [![Fase 2: Konfigurer](images/phase-diagrams/setup.png)](switch-to-mde-phase-2.md)<br/>[Fase 2: Konfigurer](switch-to-mde-phase-2.md) | [![Fase 3: Onboard](images/phase-diagrams/onboard.png)](switch-to-mde-phase-3.md)<br/>[Fase 3: Onboard](switch-to-mde-phase-3.md) |
+| ![Fase 1: Forbered.](images/phase-diagrams/prepare.png#lightbox)<br/>Fase 1: Forbered | [![Fase 2: Konfigurer](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Fase 2: Konfigurer](switch-to-mde-phase-2.md) | [![Fase 3: Onboard](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Fase 3: Onboard](switch-to-mde-phase-3.md) |
 |--|--|--|
 |*Du er her!*| | |
 
@@ -74,7 +74,7 @@ Har du brug for hjælp til at opdatere din organisations enheder? Se følgende r
 |Android|[Kontrollér, & din Android-version er opdateret](https://support.google.com/android/answer/7680439)|
 |Linux|[Linux 101: Opdatering af dit system](https://www.linux.com/training-tutorials/linux-101-updating-your-system)|
 
-## <a name="get-microsoft-defender-for-endpoint"></a>Hent Microsoft Defender til Slutpunkt
+## <a name="get-microsoft-defender-for-endpoint"></a>Få Microsoft Defender for Endpoint
 
 Nu hvor du har opdateret din organisations enheder, er næste trin at få Defender til Slutpunkt, tildele licenser og sikre, at tjenesten er klargjort.
 
@@ -99,7 +99,7 @@ Tilladelser til portalen Microsoft 365 Defender kan tildeles ved hjælp af grund
 
 1. Planlæg roller og tilladelser til sikkerhedsadministratorer og sikkerhedsoperatorer. Se [Rollebaseret adgangskontrol](prepare-deployment.md#role-based-access-control).
 
-2. Konfigurere RBAC. Vi anbefaler, at [du bruger Intune](/mem/intune/fundamentals/what-is-intune) til at konfigurere RBAC, især hvis din organisation bruger en kombination af Windows 10-, macOS-, iOS- og Android-enheder. Se [konfiguration af RBAC ved hjælp af Intune](/mem/intune/fundamentals/role-based-access-control).
+2. Konfigurere RBAC. Vi anbefaler at [Intune](/mem/intune/fundamentals/what-is-intune) til at konfigurere RBAC, især hvis din organisation bruger en kombination af Windows 10-, macOS-, iOS- og Android-enheder. Se [konfiguration af RBAC ved hjælp Intune](/mem/intune/fundamentals/role-based-access-control).
 
     Hvis din organisation kræver en anden metode end Intune, skal du vælge en af følgende indstillinger:
 

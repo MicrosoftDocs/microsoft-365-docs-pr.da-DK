@@ -1,7 +1,7 @@
 ---
 title: Implementer reduktion af angrebsoverfladen (ASR)-regler for implementering
 description: Giver vejledning til implementering af dine implementeringsregler for reduktion af angrebsoverfladen.
-keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indtrængen, Microsoft Defender til slutpunkt, konfigurer ASR-regler
+keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indisk virus, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,24 +20,25 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 2ca83735eab465e3a5ec6b25156143fde1719c0a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c85dcb985210167e04b51092d66fb59080280581
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683115"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477341"
 ---
 # <a name="step-3-implement-asr-rules"></a>Trin 3: Implementer ASR-regler
 
 Implementering af ASR-regler (Attack Surface Reduction) flytter den første testring til en aktiveret, funktionel tilstand.
 
 > [!div class="mx-imgBorder"]
-> ![Trin til implementering af ASR-regler](images/asr-rules-implementation-steps.png)
+> :::image type="content" source="images/asr-rules-implementation-steps.png" alt-text="Fremgangsmåden til implementering af ASR-regler" lightbox="images/asr-rules-implementation-steps.png":::
+  
 
 ## <a name="step-1-transition-asr-rules-from-audit-to-block"></a>Trin 1: Overgå ASR-regler fra Overvågning til Bloker
 
 1. Når alle undtagelser er fastlagt, mens du er i overvågningstilstand, skal du begynde at indstille visse asrregler til at "blokere" tilstand startende med den regel, der har færrest udløste hændelser. Se" [Aktivér regler for reduktion af angrebsoverfladen](enable-attack-surface-reduction.md).
-2. Gennemse rapporteringssiden på Microsoft 365 Defender. Se [Trusselsbeskyttelsesrapport i Microsoft Defender til slutpunkt](threat-protection-reports.md). Gennemgå også feedback fra ASR-vindere.
+2. Gennemse rapporteringssiden på Microsoft 365 Defender. Se [Trusselsbeskyttelsesrapport i Microsoft Defender for Endpoint](threat-protection-reports.md). Gennemgå også feedback fra ASR-vindere.
 3. Tilpas udeladelse, eller opret nye udeladelsesforanstaltninger efter behov.
 4. Skift problematiske regler tilbage til Overvågning.
 

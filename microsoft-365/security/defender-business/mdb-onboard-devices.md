@@ -1,13 +1,13 @@
 ---
-title: Onboard-enheder til Microsoft Defender for Business
-description: Få mere at vide om onboardingindstillinger for enheder i Microsoft Defender for Business
+title: Onboard-enheder til Microsoft Defender til virksomheder
+description: Få mere at vide om indstillinger for onboarding af enheder Microsoft Defender til virksomheder
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/01/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,33 +17,26 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 590810e7e8a5486816310da35968d6d9b3659330
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 78a8eaa5a9472a32c9615dfb7c7f5b08afe548ff
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63598578"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634729"
 ---
-# <a name="onboard-devices-to-microsoft-defender-for-business"></a>Onboard-enheder til Microsoft Defender for Business
+# <a name="onboard-devices-to-microsoft-defender-for-business"></a>Onboard-enheder til Microsoft Defender til virksomheder
 
 > [!IMPORTANT]
-> Microsoft Defender for Business udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra d. 1. marts 2022. Defender for Business som et enkeltstående abonnement er i preview, og den udrulles gradvist til kunder og [it-partnere](https://aka.ms/mdb-preview) , der tilmelder sig her for at anmode om det. [Forhåndsvisning indeholder et indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer funktioner regelmæssigt.
+> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) fra 1. marts 2022. Defender for Business som et enkeltstående abonnement er i preview, og den udrulles gradvist til kunder og [it-partnere](https://aka.ms/mdb-preview) , der tilmelder sig her for at anmode om det. [Forhåndsvisning indeholder et indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer funktioner regelmæssigt.
 > 
 > Nogle oplysninger i denne artikel relaterer til foreløbige produkter/tjenester, der kan være væsentligt ændret, før de frigives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller underforståede, for de oplysninger, du har angivet her. 
 
-Med Microsoft Defender for Business har du flere muligheder at vælge mellem til onboarding af din virksomheds enheder. Denne artikel gennemgår dine muligheder og indeholder en oversigt over, hvordan onboarding fungerer.
+Med Microsoft Defender til virksomheder har du adskillige muligheder at vælge mellem til onboarding af virksomhedens enheder. Denne artikel gennemgår dine muligheder og indeholder en oversigt over, hvordan onboarding fungerer.
 
 >
 > **Har du et minut?**
-> Tag vores korte <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">undersøgelse om Microsoft Defender for Business</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
 >
-
-## <a name="get-the-device-onboarding-guide"></a>Få onboardingvejledningen til enheden
-
-Brug følgende vejledning og oplysninger til at vælge den bedste løsning for din virksomhed.
-
-[:::image type="content" source="media/mdb-device-onboarding.png" alt-text="Skærmbillede af diagram over onboarding af enheder":::](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.pdf) <br/>
-[PDF](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.pdf) |  [Visio](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.vsdx)
 
 ## <a name="what-to-do"></a>Hvad kan du gøre?
 
@@ -52,7 +45,6 @@ Brug følgende vejledning og oplysninger til at vælge den bedste løsning for d
    - [Brug automatisk onboarding til Windows enheder, der allerede er tilmeldt Microsoft Endpoint Manager](#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager)
    - [Brug et lokalt script til at Windows eller macOS-enheder](#local-script-in-defender-for-business)
    - [Brug Microsoft Endpoint Manager til at onboarde Windows, macOS eller mobilenheder](#microsoft-endpoint-manager)
-   - [Få mere at vide om onboarding af enheder med sikkerhedskonfigurationen af Microsoft Defender for Business](#microsoft-defender-for-business-security-configuration)
 
 2. [Kør en registreringstest](#run-a-detection-test) på nyligt onboardede Windows enheder.
 
@@ -68,18 +60,16 @@ Defender for Business giver dig flere forskellige metoder til onboardingenheder,
 
 - **Lokalt script** til at onboarde Windows og macOS-enheder til Defender for Business manuelt. Du kan onboarde op til 10 enheder ad gangen ved hjælp af det lokale script. Du kan få mere at vide [under Lokalt script i Defender for Business](#local-script-in-defender-for-business).
 
-- **Microsoft Intune** eller **Microsoft Endpoint Manager** til Windows, macOS og mobilenheder. Du kan tilmelde enheder i Endpoint Manager og derefter onboarde dine enheder til Defender for Business. [Microsoft 365 Business Premium](../../business-premium/index.md) kunder allerede har [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), og Microsoft Intune administration af mobilenheder [er nu](/mem/intune/enrollment/device-enrollment) en del af Endpoint Manager. Hvis du vil bruge denne metode, skal [du se Microsoft Endpoint Manager](#microsoft-endpoint-manager).
-
-- **Sikkerhedskonfiguration af Microsoft Defender for Business** til onboardingenheder direkte i Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Hvis du vil bruge denne indstilling, skal du konfigurere visse indstillinger for at lette kommunikationen mellem Defender for Business Endpoint Manager. Derefter kan du onboarde enheder i Microsoft 365 Defender portalen ([https://security.microsoft.com](https://security.microsoft.com)) ved hjælp af en pakke, som du vælger, downloader og kører på hver enhed. Der oprettes en tillid mellem enheder og Azure Active Directory (Azure AD), og sikkerhedspolitikker for Defender for Business skubbes til enheder. Du kan få mere at vide under [Sikkerhedskonfiguration for Microsoft Defender for Business](#microsoft-defender-for-business-security-configuration). 
+- **Microsoft Intune** eller **Microsoft Endpoint Manager** til Windows, macOS og mobilenheder. Du kan tilmelde enheder i Endpoint Manager og derefter onboarde dine enheder til Defender for Business. [Microsoft 365 Business Premium kunder](../../business-premium/index.md) allerede har [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), og både Microsoft Intune og [Enhedshåndtering er](/mem/intune/enrollment/device-enrollment) nu en del af Endpoint Manager. Hvis du vil bruge denne metode, skal [du se Microsoft Endpoint Manager](#microsoft-endpoint-manager).
 
 > [!IMPORTANT]
-> Hvis noget går galt, og din onboardingproces mislykkes, skal du [se Fejlfinding i Microsoft Defender for Business](mdb-troubleshooting.yml).
+> Hvis noget går galt, og din onboardingproces mislykkes, skal [du Microsoft Defender til virksomheder fejlfinding](mdb-troubleshooting.yml).
 
 ## <a name="automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager"></a>Automatisk onboarding til Windows enheder, der er tilmeldt Microsoft Endpoint Manager
 
 Indstillingen automatisk onboarding gælder kun for Windows enheder. Automatisk onboarding er tilgængelig, hvis følgende betingelser er opfyldt:
 
-- Din virksomhed brugte allerede Microsoft Endpoint Manager, Microsoft Intune eller administration af mobilenheder (MDM) i Microsoft Intune, før du fik Defender for Business
+- Din virksomhed brugte allerede Microsoft Endpoint Manager, Microsoft Intune eller mobile Enhedshåndtering (MDM) i Microsoft Intune, før du fik Defender for Business
 
 - Du har allerede Windows enheder, der er tilmeldt Endpoint Manager
 
@@ -88,7 +78,7 @@ Hvis Windows-enheder allerede er tilmeldt Endpoint Manager, registrerer Defender
 > [!TIP]
 > Vi anbefaler, at du vælger indstillingen "Alle enheder tilmeldt". På den måde Windows enheder automatisk onboardet til Defender for Business, Endpoint Manager senere er tilmeldt. Hvis du har administreret sikkerhedspolitikker og -indstillinger i Endpoint Manager, anbefaler vi desuden, at du skifter til Microsoft 365 Defender-portalen for at administrere dine enheder, politikker og indstillinger. Du kan få mere at vide [under Vælg, hvor du vil administrere sikkerhedspolitikker og -enheder](mdb-configure-security-settings.md#choose-where-to-manage-security-policies-and-devices).
 
-Hvis du vil have mere at vide om automatisk onboarding, skal du [se trin 2 i Brug guiden til at konfigurere Microsoft Defender for Business](mdb-use-wizard.md).
+Du kan få mere at vide om automatisk onboarding i trin 2 [i Brug guiden til at konfigurere Microsoft Defender til virksomheder](mdb-use-wizard.md).
 
 ## <a name="local-script-in-defender-for-business"></a>Lokalt script i Defender for Business
 
@@ -107,32 +97,13 @@ Du kan bruge et lokalt script til at onboarde Windows- og Mac-enheder. Når du k
    | Operativsystem | Procedure |
    |---|---|
    | Windows | 1. På en Windows enhed skal du udtrække indholdet af konfigurationspakken til en placering, f.eks. mappen Skrivebord. Du bør have en fil med navnet `WindowsDefenderATPLocalOnboardingScript.cmd`. <br/><br/>2. Åbn Kommandoprompt som administrator.<br/><br/>3. Skriv placeringen af scriptfilen. Hvis du f.eks. har kopieret filen til mappen Skrivebord, skal du skrive: `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`og derefter trykke på Enter (eller vælge **OK**).<br/><br/>4. Når scriptet kører, skal du gå videre til [Kør en registreringstest](#run-a-detection-test). |
-   | macOS | 1. På en Mac-computer skal du gemme installationspakken som `wdav.pkg` en lokal mappe. <br/><br/>2. Gem onboardingpakken som i `WindowsDefenderATPOnboardingPackage.zip` den samme mappe, du brugte til installationspakken. <br/><br/>3. Brug Finder til at navigere til `wdav.pkg` det, du har gemt, og åbn det derefter.<br/><br/>4. Vælg **Fortsæt**, enig med licensvilkårene, og angiv din adgangskode, når du bliver bedt om det.<br/><br/>5. Du bliver bedt om at tillade installation af en driver fra Microsoft (enten "Systemudvidelse blokeret" eller "Installation er sat i venteposition" eller begge dele. Driveren skal være installeret. For at tillade installationen skal du **vælge Åbn sikkerhedsindstillinger** eller **Åbn systemindstillingerSikkerhedsindstillinger** > **& beskyttelse** af personlige oplysninger, og vælg derefter **Tillad**.<br/><br/>6. Brug følgende Python-kommando i Bash til at køre onboardingpakken: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`. <br/><br/>7. For at bekræfte at enheden er knyttet til dit firma, skal du bruge følgende Python-kommando i Bash: `mdatp health --field org_id`.<br/><br/>8. Hvis du bruger macOS 10.15 (Catalina) eller nyere, skal du give Defender for Business tilladelse til at beskytte din enhed. Gå til **SystemindstillingerSikkerhedsindstillinger** >  **&** **PrivacyPrivacyFull** >  >  **Disk Access**.  Vælg låseikonet for at foretage ændringer (nederst i dialogboksen), og vælg derefter Microsoft Defender for Business (eller Defender til slutpunkt, hvis det er, hvad du ser). <br/><br/>9. Hvis du vil bekræfte, at enheden er onboardet, skal du bruge følgende kommando i Bash: `mdatp health --field real_time_protection_enabled`.    |
+   | macOS | 1. På en Mac-computer skal du gemme installationspakken som `wdav.pkg` en lokal mappe. <br/><br/>2. Gem onboardingpakken som i `WindowsDefenderATPOnboardingPackage.zip` den samme mappe, du brugte til installationspakken. <br/><br/>3. Brug Finder til at navigere til `wdav.pkg` det, du har gemt, og åbn det derefter.<br/><br/>4. Vælg **Fortsæt**, enig med licensvilkårene, og angiv din adgangskode, når du bliver bedt om det.<br/><br/>5. Du bliver bedt om at tillade installation af en driver fra Microsoft (enten "Systemudvidelse blokeret" eller "Installation er sat i venteposition" eller begge dele. Driveren skal være installeret. For at tillade installationen skal du **vælge Åbn sikkerhedsindstillinger** eller **Åbn systemindstillingerSikkerhedsindstillinger** > **& beskyttelse** af personlige oplysninger, og vælg derefter **Tillad**.<br/><br/>6. Brug følgende Python-kommando i Bash til at køre onboardingpakken: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`. <br/><br/>7. For at bekræfte at enheden er knyttet til dit firma, skal du bruge følgende Python-kommando i Bash: `mdatp health --field org_id`.<br/><br/>8. Hvis du bruger macOS 10.15 (Catalina) eller nyere, skal du give Defender for Business tilladelse til at beskytte din enhed. Gå til **SystemindstillingerSikkerhedsindstillinger** >  **&** **PrivacyPrivacyFull** >  >  **Disk Access**.  Vælg låseikonet for at foretage ændringer (nederst i dialogboksen), og vælg derefter Microsoft Defender til virksomheder (eller Defender til slutpunkt, hvis det er, hvad du ser). <br/><br/>9. Hvis du vil bekræfte, at enheden er onboardet, skal du bruge følgende kommando i Bash: `mdatp health --field real_time_protection_enabled`.    |
 
 ## <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
-Hvis du allerede brugte Endpoint Manager (som omfatter Microsoft Intune og administration af mobilenheder), kan du, før du fik Defender for Business, fortsætte med at bruge Endpoint Manager til at onboarde din virksomheds enheder. Med Endpoint Manager kan du onboarde computere, tablets og telefoner, herunder iOS- og Android-enheder.
+Hvis du allerede brugte Endpoint Manager (som omfatter Microsoft Intune og Mobile Enhedshåndtering), kan du, før du fik Defender for Business, fortsætte med at bruge Endpoint Manager til at onboarde din virksomheds enheder. Med Endpoint Manager kan du onboarde computere, tablets og telefoner, herunder iOS- og Android-enheder.
 
 Se [Tilmelding til enhed Microsoft Intune](/mem/intune/enrollment/device-enrollment).
-
-## <a name="microsoft-defender-for-business-security-configuration"></a>Sikkerhedskonfiguration af Microsoft Defender for Business
-
-> [!NOTE]
-> Hvis du allerede bruger en Endpoint Manager til at administrere dine enheder og sikkerhedspolitikker, skal du springe denne metode over [og se Microsoft Endpoint Manager](#microsoft-endpoint-manager) i stedet.
-
-Sikkerhedskonfigurationen af Microsoft Defender for Business er bygget på en funktion, der kaldes [Sikkerhedsadministration for Microsoft Defender til Slutpunkt (forhåndsvisning)](/mem/intune/protect/mde-security-integration). Det gør det muligt for dig at onboarde enheder til Defender for Business i Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), uden at disse enheder skal være fuldt tilmeldt Microsoft Endpoint Manager på forhånd. 
-
-Denne metode gør det muligt for dig at onboarde enheder og administrere politikker for dit antivirusprogram og din firewall Microsoft 365 Defender portalen ([https://security.microsoft.com](https://security.microsoft.com)). Sådan fungerer det hele:
-
-1. Du downloader en onboardingpakke fra Microsoft 365 Defender-portalen og kører derefter pakken på dine enheder for at onboarde disse enheder til Defender for Business.
-
-2. Kørsel af pakken etablerer en tillid mellem hver enhed (hvis tillid ikke allerede findes), og Azure Active Directory (Azure AD). 
-
-3. Enheder kommunikerer med Endpoint Manager bruger deres Azure AD-identitet, og sikkerhedspolitikker i Defender for Business er sendt til enheder.
-
-4. Du kan se dine enheder og politikker i både Microsoft 365 Defender-portalen og Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
-
-Hvis du vil bruge denne indstilling, skal visse indstillinger konfigureres på forhånd. Du kan få mere at vide, herunder forudsætninger og understøttede operativsystemer, under [Administrer Microsoft Defender til slutpunkt på enheder med Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration).
 
 ## <a name="run-a-detection-test"></a>Kør en registreringstest
 
@@ -174,7 +145,7 @@ Hvis du vil deaktivere en enhed, skal du benytte en af følgende fremgangsmåder
 | Operativsystem | Procedure |
 |---|---|
 | Windows | 1. Gå til Microsoft 365 Defender -portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.<br/><br/>2. I navigationsruden skal **du vælge Indstillinger** og derefter **vælge Slutpunkter**.<br/><br/>3. Under **Enhedshåndtering skal** du vælge **Offboarding**.<br/><br/>4. Vælg et operativsystem, f.eks. **Windows 10 og 11**, og vælg derefter Lokalt script i sektionen Installationsmetode under  **Fraboard en enhed**. <br/><br/>5. Gennemgå oplysningerne på bekræftelsesskærmbilledet, og vælg derefter **Download for at** fortsætte.<br/><br/>6. Vælg **Download offboarding-pakke**. Vi anbefaler, at du gemmer offboarding-pakken på et flytbart drev.<br/><br/>7. Kør scriptet på hver enhed, du vil offboarde.| 
-| macOS | 1. Gå **til** **FinderApplications** > . <br/><br/>2. Højreklik på Microsoft Defender for Business, og vælg derefter Flyt **til Papirkurv**. <br/><br/>--- eller --- <br/><br/> Brug følgende kommando: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.|
+| macOS | 1. Gå **til** **FinderApplications** > . <br/><br/>2. Højreklik på Microsoft Defender til virksomheder, og vælg derefter Flyt **til Papirkurv**. <br/><br/>--- eller --- <br/><br/> Brug følgende kommando: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.|
 
 > [!IMPORTANT]
 > Offboarding af en enhed får enhederne til at holde op med at sende data til Defender for Business. Men data, der modtages før offboarding, bevares i op til seks (6) måneder.
@@ -183,6 +154,6 @@ Hvis du vil deaktivere en enhed, skal du benytte en af følgende fremgangsmåder
 
 Fortsæt til:
 
-- [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender for Business](mdb-configure-security-settings.md)
+- [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
 
-- [Kom i gang med at bruge Microsoft Defender for Business](mdb-get-started.md) 
+- [Kom i gang med at Microsoft Defender til virksomheder](mdb-get-started.md) 

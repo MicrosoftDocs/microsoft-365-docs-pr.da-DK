@@ -17,14 +17,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter et følsomhedsmærkat, kan du automatisk tildele en etiket til filer og mails, eller du kan bede brugerne om at vælge den etiket, du anbefaler.
-ms.openlocfilehash: 80f3b5c69e482301dd8c4e926959087c7149a529
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 21ee443ba9bab0ac7071377befee5d6e6143a398
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499655"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634619"
 ---
-# <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend en følsomhedsmærkat på indhold automatisk
+# <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
 >*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -275,18 +275,6 @@ Den simulerede installation kører som WhatIf-parameteren for PowerShell. Du få
 Simuleringstilstand gør det også muligt gradvist at øge omfanget af din politik for automatisk mærkatning før installationen. Du kan f.eks. starte med en enkelt placering, f.eks. et SharePoint websted, med et enkelt dokumentbibliotek. Med de iterative ændringer skal du derefter øge omfanget til flere websteder og derefter til en anden placering, f.eks. OneDrive.
 
 Endelig kan du bruge simuleringstilstand til at give en tilnærmelse af den tid, det tager at køre din politik for automatisk mærkatering, for at hjælpe dig med at planlægge og planlægge, hvornår du skal køre den uden simuleringstilstand.
-
-#### <a name="deleted-onedrive-accounts-and-simulation-results"></a>Slettede OneDrive og simuleringsresultater
-
-Forvent mulige uoverensstemmelser i simuleringsresultaterne, når OneDrive konti stadig er i [opbevaringsfasen af sletningsprocessen](/onedrive/retention-and-deletion#the-onedrive-deletion-process). En medarbejder har f.eks. forladt organisationen, og dennes leder har midlertidig adgang til brugerens OneDrive filer.
-
-I dette scenarie medtages matchede filer fra den slettede OneDrive-konto i simuleringsresultaterne, hvis OneDrive-kontoen blev angivet af URL'en i politikken for automatisk mærkning.
-
-Men hvis den OneDrive konto ikke er angivet af URL, men var inkluderet i **standardindstillingen** Alle:
-- Når placeringen SharePoint i politikken, vises matchede filer fra den slettede OneDrive-konto SharePoint elementer i simuleringsresultaterne.
-- Når placeringen SharePoint ikke er medtaget i politikken, medtages matchede filer fra den slettede OneDrive-konto ikke i simuleringsresultaterne.
-
-I alle tilfælde navnmærkes matchede filer, indtil OneDrive-kontoen slettes permanent. De viste uoverensstemmelser gælder kun for simuleringsresultaterne.
 
 ### <a name="creating-an-auto-labeling-policy"></a>Opret en politik for automatisk mærkater
 

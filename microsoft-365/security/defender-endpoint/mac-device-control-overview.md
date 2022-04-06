@@ -1,7 +1,7 @@
 ---
 title: Enhedsstyring til macOS
-description: Få mere at vide om, hvordan du konfigurerer Microsoft Defender til slutpunkt på Mac for at reducere trusler fra flytbare lager som f.eks. USB-enheder.
-keywords: microsoft, defender, Microsoft Defender til Slutpunkt, mac, enhed, kontrol, usb, flytbart, medie
+description: Få mere at vide om, Microsoft Defender for Endpoint på Mac for at reducere trusler fra flytbare lager som f.eks. USB-enheder.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, enhed, control, usb, flytbart, medie
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,23 +15,23 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 5cb41b0bd3f185237055daa2d282f0a1d6975a49
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: fbe693272a2f2893dff5f8614f3f9eff301069fd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592643"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477297"
 ---
 # <a name="device-control-for-macos"></a>Enhedsstyring til macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## <a name="requirements"></a>Krav
 
@@ -39,7 +39,7 @@ Enhedsstyring til macOS har følgende forudsætninger:
 
 > [!div class="checklist"]
 >
-> - Rettighed for Microsoft Defender til slutpunkt (kan være prøveversion)
+> - Microsoft Defender for Endpoint rettighed (kan være prøveversion)
 > - Minimumversion af OS: macOS 11 eller nyere
 > - Minimumsversion af produkt: 101.34.20
 
@@ -72,7 +72,7 @@ Politikken for enhedsstyring kan bruges til at:
 
 Når den politik for enhedsstyring, du har indført, håndhæves på en enhed (f.eks. er adgang til et flytbart medie enhed begrænset), vises der en meddelelse til brugeren.
 
-![Meddelelse om enhedsstyring.](images/mac-device-control-notification.png)
+:::image type="content" source="images/mac-device-control-notification.png" alt-text="Meddelelse om enhedsstyring" lightbox="images/mac-device-control-notification.png":::
 
 Når slutbrugere klikker på denne meddelelse, åbnes en webside i standardbrowseren. Du kan konfigurere den URL-adresse, der åbnes, når slutbrugere klikker på meddelelsen.
 
@@ -340,25 +340,26 @@ Sådan finder du leverandør-id, produkt-id og serienummer på en USB-enhed:
 1. Tilslut den USB-enhed, du vil søge efter identifikatorerne for.
 1. I menuen på macOS på øverste niveau skal du vælge **Om denne Mac**.
 
-    ![Om denne Mac.](images/mac-device-control-lookup-1.png)
+   :::image type="content" source="images/mac-device-control-lookup-1.png" alt-text="Om denne Mac-side" lightbox="images/mac-device-control-lookup-1.png":::
 
 1. Vælg **Systemrapport**.
 
-    ![Systemrapport.](images/mac-device-control-lookup-2.png)
+   :::image type="content" source="images/mac-device-control-lookup-2.png" alt-text="Systemrapporten" lightbox="images/mac-device-control-lookup-2.png":::
 
 1. Vælg USB i den venstre **kolonne**.
 
-    ![Visning af alle USB-enheder.](images/mac-device-control-lookup-3.png)
+   :::image type="content" source="images/mac-device-control-lookup-3.png" alt-text="Visningen af alle USB-enheder" lightbox="images/mac-device-control-lookup-3.png":::
+    
 
 1. Under **USB-enhedstræ** skal du gå til den USB-enhed, du har tilsluttet.
 
-    ![Detaljer om en USB-enhed.](images/mac-device-control-lookup-4.png)
+   :::image type="content" source="images/mac-device-control-lookup-4.png" alt-text="Oplysninger om en USB-enhed" lightbox="images/mac-device-control-lookup-4.png":::
 
 1. Leverandør-id, produkt-id og serienummer vises. Når du føjer leverandør-id og produkt-id til politikken for flytbare medier, skal du kun tilføje delen efter `0x`. I nedenstående billede er leverandør-id f.eks`1000`. og produkt-id .`090c`
 
 #### <a name="discover-usb-devices-in-your-organization"></a>Opdag USB-enheder i din organisation
 
-Du kan få vist mount- og unmount-hændelser og volumenændringshændelser, der stammer fra USB-enheder i Microsoft Defender til avanceret jagt på slutpunkter. Disse hændelser kan være nyttige til at identificere mistænkelig forbrugsaktivitet eller udføre interne undersøgelser.
+Du kan få vist mount, unmount og volume change events, der stammer fra USB-enheder Microsoft Defender for Endpoint avanceret jagt. Disse hændelser kan være nyttige til at identificere mistænkelig forbrugsaktivitet eller udføre interne undersøgelser.
 
 ```bash
 DeviceEvents
@@ -368,7 +369,7 @@ DeviceEvents
 
 ## <a name="device-control-policy-deployment"></a>Installation af politik for enhedsstyring
 
-Politikken for enhedsstyring skal inkluderes ud for de andre produktindstillinger, som beskrevet i Angiv indstillinger [for Microsoft Defender til Slutpunkt på macOS](mac-preferences.md).
+Politikken for enhedsstyring skal inkluderes ud for de andre produktindstillinger, som beskrevet i Angiv [indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md).
 
 Denne profil kan installeres ved hjælp af de instruktioner, der er angivet i [Konfigurationsprofilinstallation](mac-preferences.md#configuration-profile-deployment).
 

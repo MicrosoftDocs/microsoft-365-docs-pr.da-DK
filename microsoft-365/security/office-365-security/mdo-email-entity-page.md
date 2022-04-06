@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: tracyp
 author: msfttracyp
 manager: dansimp
-ms.date: 01/21/2021
+ms.date: 04/01/2022
 audience: ITPro
 ms.topic: article
 ms.prod: m365-security
@@ -17,12 +17,12 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom: ''
 description: Microsoft Defender for Office 365 E5- og P1- og P2-kunder kan nu få en 360-graders visning af hver mail med en enhedsside for mail.
-ms.openlocfilehash: d75ebd9b54fc5e7919154a4f65e0d5fc0e77e117
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1b74c4c79d05a4a52434810527c92de801b329f0
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475449"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634817"
 ---
 # <a name="the-email-entity-page"></a>Siden Mailenhed
 
@@ -88,7 +88,7 @@ Administratorer kan få vist mails i skybaserede postkasser, ***hvis*** mails st
 
 Disse detaljer er specifikke for vedhæftede filer og URL-adresser. Brugerne kan se disse detaljer ved at gå til Stifinder og  anvende det teknologifilter, der er indstillet til fildeonation eller URL-detonation. Mails, der filtreres efter fildeonation, indeholder en skadelig fil med detonationsoplysninger, og de, der filtreres efter URL-adresser, indeholder en ondsindet URL-adresse og oplysninger om detonationen.
 
-Brugerne får vist forbedrede detonationsoplysninger om kendte skadelige vedhæftede filer eller URL-adresser, der findes i deres mails, som blev detoneret for deres specifikke lejer. Den består af Detonation-kæde, Detonation-oversigt, Skærmbillede og Observerede detaljer om funktionsmåde for at hjælpe kunder med at forstå, hvorfor den vedhæftede fil eller webadressen blev betragtes som skadelig og detoneret.
+Brugerne får vist forbedrede detonationsoplysninger om kendte skadelige vedhæftede filer eller URL-adresser, der findes i deres mails, som blev detoneret for deres specifikke lejer. Den indeholder Detonation-kæden, Detonation-oversigten, skærmbilledet og observerede detaljer om funktionsmåden for at hjælpe kunderne med at forstå, hvorfor den vedhæftede fil eller URL-adressen anses for at være skadelig og detoneret.
 
 1. *Detonation-kæde*. En enkelt fil eller URL-detonation kan udløse flere detonationer. Detonation-kæden registrerer stien til detonationer, herunder den oprindelige skadelige fil eller URL-adresse, der forårsagede konklusionen, og alle andre filer eller URL-adresser, der er påvirket af detonationen. Disse URL-adresser eller vedhæftede filer er muligvis ikke direkte til stede i mailen, men herunder denne analyse er vigtig for at afgøre, hvorfor filen eller URL-adressen blev fundet skadelig.  
 
@@ -119,6 +119,14 @@ Brugerne får vist forbedrede detonationsoplysninger om kendte skadelige vedhæf
 - *Masseklageniveau (BCL)*: Meddelelsens mange klageniveau. En højere BCL indikerer, at en massemailmeddelelse er mere tilbøjelig til at generere klager (det naturlige resultat, hvis mailen sandsynligvis er spam).
 
 - *SCL (Spam Confidence Level)*: Meddelelsens tillidsniveau til spam. En højere værdi angiver, at meddelelsen er mere tilbøjelig til at være spam.
+
+- *Klienttype*: Angiver den klienttype, hvorfra mailen blev sendt som REST.
+
+- *Videresendelse*: For scenarier med autoforwaridng angiver den videresendelsesbrugeren samt videresendelsestypen som f.eks. ETR eller SMTP-videresendelse. 
+
+- *Distributionsliste*: Viser distributionslisten, hvis modtageren har gemt mailen igen som medlem af listen. Den viser distributionslisten på øverste niveau, hvis der er indlejrede distributionslister involveret.  
+
+- *Til, Cc*: Angiver de adresser, der er angivet i felterne Til, Cc i en mail. Oplysningerne i disse felter er begrænset til 5000 tegn. 
 
 - *Domænenavn*: Er afsenderens domænenavn.
 

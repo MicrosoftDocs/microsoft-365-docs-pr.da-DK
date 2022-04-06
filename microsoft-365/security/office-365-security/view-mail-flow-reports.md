@@ -19,12 +19,12 @@ description: Administratorer kan få mere at vide om de mailflowrapporter, der e
 ms.custom: ''
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c72e1b82a7e6336510c3b997d077c544f4169aea
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d1fc133a8e05541f402e35cf8d62ee9662af661b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63588434"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476219"
 ---
 # <a name="view-mail-flow-reports-in-the-reports-dashboard-in-security--compliance-center"></a>Få vist mailflowrapporter i dashboardet Rapporter i & Security & Compliance Center
 
@@ -32,7 +32,7 @@ ms.locfileid: "63588434"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Ud over de mailflowrapporter, der er tilgængelige i [dashboardet for mailflow](
 
 Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-these-reports), kan du få vist disse rapporter i Security & Compliance Center ved at <https://protection.office.com> gå til **Dashboard for rapporter**\>. Hvis du vil gå direkte til dashboardet Rapporter, skal du åbne <https://protection.office.com/insightdashboard>.
 
-![Dashboardet Rapporter i Sikkerheds- & Overholdelsescenter.](../../media/6b213d34-adbb-44af-8549-be9a7e2db087.png)
+:::image type="content" source="../../media/6b213d34-adbb-44af-8549-be9a7e2db087.png" alt-text="Dashboardet Rapporter i Security & Compliance Center" lightbox="../../media/6b213d34-adbb-44af-8549-be9a7e2db087.png":::
 
 ## <a name="connector-report"></a>Forbindelsesrapport
 
@@ -54,6 +54,12 @@ Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-th
 > Denne rapport er blevet erstattet af rapporten **Indgående meddelelser og** rapporten **over udgående meddelelser** i EAC. Få mere at vide under [Indgående meddelelser og Udgående meddelelser-rapporter i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports).
 
 ## <a name="exchange-transport-rule-report"></a>Exchange transportregelrapport
+
+Rapporten **Exchange transportregel viser** effekten af regler for mailflow (også kaldet transportregler) på indgående og udgående meddelelser i organisationen.
+
+For at få vist rapporten skal du åbne Security & Compliance Center på <https://protection.office.com>, gå til **Dashboard** **for rapporter** \> og **vælge Exchange Transportregel**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/ETRRuleReport>.
+
+:::image type="content" source="../../media/scc-transport-rule-report-widget.png" alt-text="Widgetten Exchange transportregel i dashboardet Rapporter" lightbox="../../media/scc-transport-rule-report-widget.png":::
 
 > [!NOTE]
 > Rapporten **Exchange transportregel er** nu tilgængelig i EAC. Du kan finde flere oplysninger [Exchange rapport over transportregel i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
@@ -69,7 +75,7 @@ Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-th
 
 Du kan få vist rapporten ved at åbne [Security & Compliance Center](https://protection.office.com), gå til **Dashboard for rapporter** \> og vælge **Statusrapport for mailflow**. Hvis du vil gå direkte til **statusrapporten for mailflowet**, skal du åbne <https://security.microsoft.com/reports/mailflowStatusReport>.
 
-![Widget for statusrapport for mailflow i dashboardet Rapporter.](../../media/scc-mail-flow-status-report-widget.png)
+:::image type="content" source="../../media/scc-mail-flow-status-report-widget.png" alt-text="Widget'en Statusrapport for mailflow i dashboardet Rapporter" lightbox="../../media/scc-mail-flow-status-report-widget.png":::
 
 > [!NOTE]
 > Når du klikker på widgetten for denne rapport i Security & Compliance Center (protection.office.com), kommer du nu til den fulde rapport på Microsoft 365 Defender-portalen (security.microsoft.com). Hvis du vil have mere at vide om rapporten, [skal du se Statusrapport for mailflow](view-email-security-reports.md#mailflow-status-report).
@@ -81,14 +87,14 @@ Du kan få vist rapporten ved at åbne [Security & Compliance Center](https://pr
 
 ## <a name="top-senders-and-recipients-report"></a>Rapport over de mest populære afsendere og modtagere
 
-De **mest populære** afsendere og modtagere viser de mest populære meddelelsesafsendere i organisationen samt de øverste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365 beskyttelsesfunktioner.
+De **hyppigste** afsendere og modtagere viser de mest populære meddelelsesafsendere i organisationen samt de øverste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365-beskyttelsesfunktioner.
 
 Hvis du vil have vist rapporten, skal du åbne Security & Compliance Center <https://protection.office.com>på ,  \> gå til **Dashboard** til rapporter og vælge **Øverste afsendere og modtagere**. Hvis du vil gå direkte til rapporten, skal du åbne en af følgende URL-adresser:
 
-- Defender til Office 365:<https://protection.office.com/TopSenderRecipientsATP>
+- Defender for Office 365:<https://protection.office.com/TopSenderRecipientsATP>
 - EOP: <https://protection.office.com/TopSenderRecipients>
 
-![Widget med de mest populære afsendere og modtagere i dashboardet Rapporter.](../../media/scc-top-senders-and-recipients-widget.png)
+:::image type="content" source="../../media/scc-top-senders-and-recipients-widget.png" alt-text="Widgetten Bedste afsendere og modtagere i dashboardet Rapporter" lightbox="../../media/scc-top-senders-and-recipients-widget.png":::
 
 > [!NOTE]
 > Selvom når du klikker på widgetten for denne rapport i Security & Compliance Center, kommer du til en protection.office.com-side, men sideindholdet kommer fra Microsoft 365 Defender-portalen. Hvis du vil have mere at vide om rapporten, [skal du se Rapporten Bedste afsendere og modtagere](view-email-security-reports.md#top-senders-and-recipients-report).

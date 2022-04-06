@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvorfor og hvordan du SharePoint et kommunikationswebsted til din kampagne eller virksomhed med Microsoft 365.
-ms.openlocfilehash: d2634f8793c142cc34d6c1708481aa8e4df3184b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ba0f8f559bc8843a61baca1bbb6615c596ffdc65
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594741"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634377"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>Opret et kommunikationswebsted i SharePoint
 
@@ -40,9 +40,13 @@ En god metode til at kommunikere prioriteter, dele strategidokumenter og fremhæ
 Medtag følgende elementer på kommunikationswebstedet:
 
 1. Tilføj dit logo og dine farver som et overskriftsbillede og tema.
+
 2. Led med din strategi, meddelelse, vigtige dokumenter, en mappe og ofte stillede spørgsmål i **webdelen Hero**.
+
 3. Medtag en administrerende direktør eller kandidaterklæring til teamet i **webdelen Tekst**.
+
 4. Føj begivenheder til **webdelen Begivenheder,** så alle kan se, hvad der kommer.
+
 5. Føj billeder, som folk kan bruge eller dele, til **webdelen Billedgalleri**.
 
 ![Diagram over en SharePoint kommunikationsside med plads til fælles elementer, som en kampagne har brug for.](../media/m365-democracy-comms-site.png)
@@ -58,7 +62,9 @@ Følgende links til PowerPoint pdf-filer kan downloades og udskrives i tabloidfo
 ## <a name="set-it-up"></a>Konfigurer det
 
 1. Log på https://Office.com.
+
 2. Vælg ikonet for appstarteren i øverste venstre hjørne på siden, og vælg **SharePoint** felt. Hvis du ikke kan se feltet **SharePoint**, skal du klikke på feltet Websteder eller  Alle, hvis SharePoint  ikke er synlig.
+
 3. Øverst på startsiden på SharePoint skal du klikke **på + Opret websted** og vælge **indstillingen Kommunikationswebsted**.
 
 Lær alt [om kommunikationswebsteder](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732), og hvordan [du opretter et kommunikationswebsted i SharePoint Online](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).

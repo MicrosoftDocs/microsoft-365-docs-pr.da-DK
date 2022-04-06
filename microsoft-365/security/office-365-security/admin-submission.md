@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan lære, hvordan de bruger portalen til indsendelser i Microsoft 365 Defender-portalen til at sende mistænkelige mails, mistænkelige phishingmails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer til Microsoft til genscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 34d608a6ea114fff8005069f3dc2ddc79c4be45e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: d0d699c3344cc16f3e15996139f1d2d8b608ba50
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682631"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477143"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen til indsendelser til at sende mistænkeligt spam, phish, URL-adresser og filer til Microsoft
 
@@ -30,7 +30,7 @@ ms.locfileid: "63682631"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
 
 I Microsoft 365 med Exchange Online-postkasser kan administratorer bruge portalen Indsendelser på Microsoft 365 Defender-portalen til at sende mails, URL-adresser og vedhæftede filer til Microsoft til scanning.
@@ -84,7 +84,7 @@ Du kan finde andre måder at sende mails, URL-adresser og vedhæftede filer til 
 
 3. Vælg **rullelisten Markér som og giv** besked, og vælg derefter Ingen trusler **fundet Phishing** \> eller **Uønsket**.
 
-   :::image type="content" alt-text="Send meddelelser fra portal." source="../../media/unified-submission-user-reported-message.png" lightbox="../../media/unified-submission-user-reported-message.png":::
+   :::image type="content" source="../../media/unified-submission-user-reported-message.png" alt-text="Siden Indsendelser" lightbox="../../media/unified-submission-user-reported-message.png":::
 
 Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. Der sendes automatisk en mail fra portalen til den bruger, der har rapporteret meddelelsen.
 
@@ -108,7 +108,7 @@ Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. D
 5. Klik på Send, når du er **færdig**.
 
     > [!div class="mx-imgBorder"]
-    > ![Eksempel på indsendelse af ny URL-adresse.](../../media/submission-flyout-email.png)
+    > :::image type="content" source="../../media/submission-flyout-email.png" alt-text="Processen for indsendelse af ny URL-adresse" lightbox="../../media/submission-flyout-email.png":::
 
 ### <a name="send-a-suspect-url-to-microsoft"></a>Send en mistænkelig URL-adresse til Microsoft
 
@@ -125,7 +125,7 @@ Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. D
 4. Klik på Send, når du er **færdig**.
 
     > [!div class="mx-imgBorder"]
-    > ![Eksempel på indsendelse af ny mail.](../../media/submission-url-flyout.png)
+    > :::image type="content" source="../../media/submission-url-flyout.png" alt-text="Processen for indsendelse af ny mail" lightbox="../../media/submission-url-flyout.png":::
 
 ### <a name="submit-a-suspected-email-attachment-to-microsoft"></a>Send en mistænkelig vedhæftet fil i en mail til Microsoft
 
@@ -142,7 +142,7 @@ Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. D
 4. Klik på Send, når du er **færdig**.
 
     > [!div class="mx-imgBorder"]
-    > ![Eksempel på indsendelse af ny vedhæftet fil.](../../media/submit-email-attachment-for-analysis.png)
+    > :::image type="content" source="../../media/submission-file-flyout.png" alt-text="Indsendelsesprocessen Ny vedhæftet fil" lightbox="../../media/submission-file-flyout.png":::
 
 > [!NOTE]
 > Hvis filtrering af malware har erstattet de vedhæftede filer med filen malware Alert Text.txt, skal du sende den oprindelige meddelelse fra karantæne, der indeholder de oprindelige vedhæftede filer. Du kan finde flere oplysninger om karantæne, og hvordan du frigiver meddelelser med falske malware positive, under Administrer meddelelser og filer, der er sat [i karantæne, som administrator](manage-quarantined-messages-and-files.md).
@@ -178,7 +178,7 @@ Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. D
      Klik på Anvend, når du er **færdig**.
 
      > [!div class="mx-imgBorder"]
-     > ![Ny Tilpas kolonneindstillinger for administratorindsendelser.](../../media/submit-admin-submissios-customize-columns.png)
+     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Ny Tilpas kolonneindstillinger for administratorindsendelser" lightbox="../../media/admin-submission-customize-columns.png":::
 
    - Hvis du vil filtrere posterne, skal du klikke på **Filtrer**. De tilgængelige filtre er:
      - **Indsendt dato**: **Startdato** **og slutdato**.
@@ -195,7 +195,7 @@ Den rapporterede meddelelse markeres som en falsk positiv eller falsk negativ. D
      Klik på Anvend, når du er **færdig**.
 
      > [!div class="mx-imgBorder"]
-     > ![Nye filterindstillinger for administratorindsendelser.](../../media/submit-admin-submissions-view-filters.png)
+     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Indstillinger for nyt filter til administratorindsendelser" lightbox="../../media/admin-submission-filters.png":::
 
    - Hvis du vil gruppere posterne, **skal du** klikke på Grupper og vælge en af følgende værdier på rullelisten:
      - **Ingen**
@@ -263,7 +263,7 @@ Hvis du har installeret tilføjelsesprogrammet Rapportmeddelelse[, tilføjelsesp
      Klik på Anvend, når du er **færdig**.
 
      > [!div class="mx-imgBorder"]
-     > ![Nye filterindstillinger for brugerindsendelser.](../../media/submit-user-submissions-view-filters.png)
+     > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Indstillinger for nyt filter for brugerindsendelser" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Hvis du vil gruppere posterne, **skal du** klikke på Grupper og vælge en af følgende værdier på rullelisten:
      - **Ingen**
@@ -298,4 +298,4 @@ På fanen **Bruger rapporteret** meddelelser skal du vælge en meddelelse på li
 - **Udløserundersøgelse**
 
 > [!div class="mx-imgBorder"]
-> ![Nye indstillinger på knappen Handling.](../../media/admin-submission-main-action-button.png)
+> :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Nye indstillinger på knappen Handling" lightbox="../../media/admin-submission-main-action-button.png":::

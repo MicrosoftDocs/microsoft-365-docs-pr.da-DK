@@ -17,12 +17,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få svar på ofte stillede spørgsmål om Microsoft 365 Fyrtårn.
-  ms.openlocfilehash: 4dcd34b00aed7a28edb2e8ad9b2519940c90fcef
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: 84339dd1e4dfe57765200dba42b8d8a954a41f49
+  ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63680770"
+  ms.lasthandoff: 04/04/2022
+  ms.locfileid: "64635037"
 title: Microsoft 365 Lighthouse ofte stillede spørgsmål (Ofte stillede spørgsmål)
 summary: >
   Denne artikel indeholder svar på ofte stillede spørgsmål om Microsoft 365 Lighthouse.
@@ -34,30 +34,30 @@ sections:
   questions:
   - question: Hvad er Microsoft 365 Lighthouse?
     answer: >
-      Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB),-kunder, der bruger Microsoft 365 Business Premium eller Microsoft 365 E3.  Fyrtårn forenkler onboarding af lejere ved at anbefale grundlinjer til sikkerhedskonfiguration, der er skræddersyet til SMBs, og som giver visninger med flere lejere på tværs af alle kundemiljøer. Få mere at vide under [Oversigt over Microsoft 365 Lighthouse](m365-lighthouse-overview.md).
+      Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB), der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business. Fyrtårn forenkler onboarding af lejere ved at anbefale grundlinjer til sikkerhedskonfiguration, der er skræddersyet til SMBs, og som giver visninger med flere lejere på tværs af alle kundemiljøer. Få mere at vide under [Oversigt over Microsoft 365 Lighthouse](m365-lighthouse-overview.md).
   - question: Hvad er forskellen mellem Microsoft 365 Lighthouse og Azure Lighthouse?
     answer: >
-      Microsoft 365 Lighthouse fokuserer på Microsoft 365 tjenester i stedet for Azure-tjenester. Mens Azure Lighthouse er indbygget i Azure-portalen og gør det muligt for it-partnere at administrere flere lejere til Azure, er Microsoft 365 Lighthouse en separat portal, der hjælper MSP'er med at administrere flere Microsoft 365 Business Premium- eller Microsoft 365 E3-kundelejere. Du kan finde flere oplysninger Microsoft 365 Lighthouse under [Oversigt over Microsoft 365 Lighthouse](m365-lighthouse-overview.md). Du kan finde flere oplysninger om Azure Lighthouse [under Hvad er Azure Lighthouse?](/azure/lighthouse/overview)
+      Microsoft 365 Lighthouse fokuserer på Microsoft 365 tjenester i stedet for Azure-tjenester. Mens Azure Lighthouse er indbygget i Azure Portal og gør det muligt for it-partnere at administrere flere lejere til Azure, er Microsoft 365 Lighthouse en separat portal, der hjælper MSP'er med at administrere flere Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business-kundelejere. Du kan finde flere oplysninger Microsoft 365 Lighthouse under [Oversigt over Microsoft 365 Lighthouse](m365-lighthouse-overview.md). Du kan finde flere oplysninger om Azure Lighthouse [under Hvad er Azure Lighthouse?](/azure/lighthouse/overview)
   - question: Hvor meget koster Microsoft 365 Lighthouse?
     answer: >
-      Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til at Microsoft 365 Business Premium og Microsoft 365 E3-tjenester og tilknyttede enheder. Lighthouse er tilgængelig for MSP'er, der servicerer små og mellemstore virksomheder, og som har en Cloud Solution Provider (CSP) relation til deres kunder. Bemærk, at indirekte udbydere i øjeblikket ikke understøttes af Lighthouse. Du kan finde flere oplysninger [under Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
+      Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business-tjenester og tilknyttede enheder. Lighthouse er tilgængelig for MSP'er, der servicerer små og mellemstore virksomheder, og som har en Cloud Solution Provider (CSP) relation til deres kunder. Bemærk, at indirekte udbydere i øjeblikket ikke understøttes af Lighthouse. Du kan finde flere oplysninger [under Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
   - question: Hvad er kravene til at bruge Microsoft 365 Lighthouse?
     answer: >
       Du kan finde en liste over de aktuelle krav [under Krav til Microsoft 365 fyrtårn](m365-lighthouse-requirements.md).
   - question: I hvilke lande og områder er Microsoft 365 fyrtårn tilgængeligt?
     answer: >
-      Fyrtårn er tilgængeligt i alle lande, Microsoft 365 er tilgængeligt, med undtagelse af Kina og det israelske selvstyre. Funktioner i Lighthouse, f.eks. administration af enheder og trusselsstyring, afhænger dog af Microsoft Intune, og brugeradministration afhænger af Azure Active Directory (Azure AD), og Intune og Azure AD er muligvis ikke tilgængelige i visse lande og områder. Du kan finde en komplet liste over Microsoft 365, tilgængelighed af Azure AD og Intune under [International tilgængelighed](https://www.microsoft.com/microsoft-365/business/international-availability).
+      Fyrtårn er tilgængeligt i alle lande, Microsoft 365 er tilgængeligt, med undtagelse af Kina og det israelske selvstyre. Funktioner i Lighthouse, f.eks. administration af enheder og trusselsstyring, afhænger dog af Microsoft Intune, og brugeradministration afhænger af Azure Active Directory (Azure AD), og Intune og Azure AD er muligvis ikke tilgængelige i visse lande og områder. Du kan se en komplet liste Microsoft 365, Azure AD og Intune, under [International tilgængelighed](https://www.microsoft.com/microsoft-365/business/international-availability).
 
 
       Fyrtårn er ikke tilgængeligt i nationale skyer.
-  - question: Hvordan tilmelder jeg mig Microsoft 365 Lighthouse?
+  - question: Hvordan gør jeg du tilmelde dig Microsoft 365 Lighthouse?
     answer: >
       For at tilmelde dig Lighthouse skal du være registreret i CSP-programmet. Vi kan i øjeblikket ikke understøtte indirekte udbydere. Du kan finde en vejledning til, hvordan du [tilmelder dig, under Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md). Du kan få mere at vide om CSP-programmet [i Cloud Solution Provider over programmet](/partner-center/csp-overview).
   - question: Jeg er færdig med at tilmelde mig, så hvorfor kan jeg ikke se nogen kundelejerdata?
     answer: >
       Det kan tage op til 48 timer, før kundelejerdata indlæses i Lighthouse. Hvis der er gået mere end 48 timer, siden du fuldførte onboarding, skal du kontakte vores supportteam for at få hjælp. Du skal give dem besked, når du er færdig med onboarding, og angive relevante skærmbilleder og logfiler. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
   - question: Hvorfor kan jeg se data for nogle kundelejere, men ikke for andre?
-    answer: "\nFor at kundelejerdata kan vises i Lighthouse, skal MSP'er etablere delegerede administratorrettigheder (DAP) eller detaljeret delegerede administratorprivilegiteter (GDAP) med kunder via Partnercenter. Få mere at vide under [Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst ét Microsoft 365 Business Premium-Microsoft 365 E3-abonnement og færre end 1000 brugere med licens i deres lejer. Du kan få mere at [vide under Sideoversigt Microsoft 365 requirements](m365-lighthouse-requirements.md) for [Microsoft 365 Lighthouse Microsoft 365 Lighthouse Tenants](m365-lighthouse-tenants-page-overview.md).\n"
+    answer: "For at kundelejerdata kan vises i Lighthouse, skal MSP'er etablere delegeret adgang for at administrere kundelejeren. Delegerede administratorrettigheder (DAP) kræves for at onboarde kunder til Lighthouse. Vi anbefaler, at du etablerer GDAP (Granular Delegated Admin Privileges) med dine kunder for at give en mere sikker delegeret adgang. Se [Oversigt over tilladelser i Microsoft 365 Lighthouse, hvis](m365-lighthouse-overview-of-permissions.md) du vil have mere at vide om, hvilke delegerede og partnerlejerroller der anbefales at bruge Fyrtårn. Mens DAP og GDAP coexist anvendes, har GDAP forrang for kunder, hvor begge modeller er på plads. Kunder med just GDAP (og ingen DAP) vil snart kunne onboarde til Lighthouse. Du kan finde flere oplysninger om delegeret adgang [i Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst én Microsoft 365 Business Premium-, Microsoft 365 E3- eller Windows 365 Business-licens og færre end 1000 brugere med licens i deres lejer. Du kan få mere at [vide under Sideoversigt Microsoft 365 requirements](m365-lighthouse-requirements.md) for [Microsoft 365 Lighthouse Microsoft 365 Lighthouse Tenants](m365-lighthouse-tenants-page-overview.md).  \n"
   - question: Hvad nu, hvis jeg ikke vil se bestemte lejere i Microsoft 365 Lighthouse?
     answer: >
       Hvis du ikke vil se bestemte lejere og deres data i Lighthouse, kan du deaktivere disse lejere. Hvis du vil deaktivere en lejer, skal du følge disse trin:
@@ -72,16 +72,16 @@ sections:
           > Når du har deaktiveret en lejer, kan du ikke gøre noget på lejeren, før den er blevet deaktiveret. Det kan tage op til 48 timer, før inaktiveringen er fuldført.
 
       Du kan få mere at vide om lejere [Microsoft 365 siden lejere i Lighthouse](m365-lighthouse-tenants-page-overview.md).
-  - question: Fungerer Microsoft 365 Lighthouse, hvis mine kundelejere har andre abonnementer end Microsoft 365 Business Premium eller Microsoft 365 E3?
+  - question: Fungerer Microsoft 365 Lighthouse, hvis mine kundelejere har andre abonnementer end Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business?
     answer: >
-      Lighthouse hjælper dig med at administrere kundelejere, der Microsoft 365 Business Premium eller Microsoft 365 E3 licenser på plads for deres brugere. For brugere i kundelejere, der ikke har Business Premium- eller E3-licenser, vil fyrtårnsfunktionaliteten være begrænset. Hvis en bruger f.eks. mangler en licens, der indeholder Intune, er brugerens enheder, status for enhedsoverholdelse og trusler ikke tilgængelige. Og hvis en bruger mangler en licens, der omfatter Azure AD P1, er den pågældende brugers adgangskode og administration af logon ikke tilgængelig. Du kan finde flere oplysninger [under Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
-  - question: Hvordan kvalificerer jeg mig til at administrere kundesky-pc'er Microsoft 365 Lighthouse?
+      Lighthouse hjælper dig med at administrere kundelejere, der har Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licenser for deres brugere. For brugere i kundelejere, der ikke har disse licenser, vil fyrtårnsfunktionaliteten være begrænset. Hvis en bruger f.eks. mangler en licens, der omfatter Intune, er brugerens enheder, status for enhedsoverholdelse og trusler ikke tilgængelige, og hvis en bruger mangler en licens, der omfatter Azure AD P1, vil den pågældende brugers adgangskode og administration af logon ikke være tilgængelig. Du kan finde flere oplysninger [under Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
+  - question: Hvordan gør jeg du være kvalificeret til at administrere skybaserede kunde-pc'er Microsoft 365 Lighthouse?
     answer: >
       Hvis du opfylder kravene til brug af Lighthouse, så er du kvalificeret til at administrere kundesky-pc'er i Lighthouse. Du kan finde en liste over de aktuelle krav [under Krav til Microsoft 365 fyrtårn](m365-lighthouse-requirements.md).
-  - question: Hvor kan jeg købe Windows 365 -licenser (sky-pc) til mine kunder?
+  - question: Hvor kan jeg købe Windows 365 (Cloud PC) til mine kunder?
     answer: >
-      Du kan købe Windows 365-licenser via alle tilgængelige kommercielle Microsoft-salgskanaler. Én købt licens svarer til købet af en Cloud-pc. I øjeblikket kan hver bruger kun tildeles én skybaseret pc af samme SKU-type, men de kan tildeles flere sky-pc'er, hvis de har forskellige SKU-typer. For at Windows 365-abonnementer og -priser skal du se Få [Windows 365 Cloud pc, der passer til dig](https://www.microsoft.com/windows-365/business/compare-plans-pricing).
-  - question: Hvordan får jeg hjælp og support?
+      Du kan købe Windows 365 via alle tilgængelige kommercielle Microsoft-salgskanaler. Én købt licens svarer til købet af en Cloud-pc. I øjeblikket kan hver bruger kun tildeles én skybaseret pc af samme SKU-type, men de kan tildeles flere sky-pc'er, hvis de har forskellige SKU-typer. Hvis du Windows 365 og priser, skal du [se Hent Windows 365 Cloud-pc, der passer til dine ønsker](https://www.microsoft.com/windows-365/business/compare-plans-pricing).
+  - question: Hvordan gør jeg få hjælp og support?
     answer: >
       I Fyrtårn skal du vælge **?** øverst i portalen for at åbne **ruden** Hjælp. Herfra kan du få adgang til artikler med selvhjælp eller kontakte support. Du kan finde flere oplysninger om hjælp og supportmuligheder [i Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
   - question: Hvor kan jeg sende feedback og ideer?
@@ -89,7 +89,7 @@ sections:
       Din feedback er vigtig og vigtig for os! Der er et par forskellige måder, hvorpå du kan sende feedback:
 
 
-      - Gå til [feedbacksiden Microsoft 365 Lighthouse](https://aka.ms/m365lighthouseuservoice). Du kan starte samtaler om Fyrtårn og Windows 365-funktioner, stille spørgsmål til andre partnere eller Microsoft-medarbejdere, give feedback og ideer til funktioner og meget mere.
+      - Gå til [feedbacksiden Microsoft 365 Lighthouse](https://aka.ms/m365lighthouseuservoice). Du kan starte samtaler om fyrtårne og funktioner Windows 365 funktioner, stille spørgsmål til andre partnere eller Microsoft-medarbejdere, give feedback og ideer til funktioner og meget mere.
 
       - Vælg Feedback-ikonet i øverste højre hjørne af Fyrtårn.
 

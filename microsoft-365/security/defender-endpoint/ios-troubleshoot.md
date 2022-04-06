@@ -1,7 +1,7 @@
 ---
-title: Foretag fejlfinding af problemer, og find svar på ofte stillede spørgsmål vedrørende Microsoft Defender til Slutpunkt på iOS
-description: Fejlfinding og ofte stillede spørgsmål – Microsoft Defender til Slutpunkt på iOS
-keywords: microsoft, defender, Microsoft Defender til Endpoint, ios, fejlfinding, ofte stillede spørgsmål, sådan gør du
+title: Foretag fejlfinding af problemer, og find svar på ofte stillede spørgsmål om Microsoft Defender for Endpoint på iOS
+description: Fejlfinding og ofte stillede spørgsmål – Microsoft Defender for Endpoint på iOS
+keywords: microsoft, defender, Microsoft Defender for Endpoint, ios, fejlfinding, ofte stillede spørgsmål, hvordan du
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,25 +15,25 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1119d13998510927f249288cc40a47eda45dc9ac
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: bc8cda3fb61ec9338b95eed58f5f0a70e1deb3e1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63593277"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469355"
 ---
-# <a name="troubleshoot-issues-and-find-answers-to-faqs-on-microsoft-defender-for-endpoint-on-ios"></a>Fejlfinding af problemer, og find svar på ofte stillede spørgsmål på Microsoft Defender til Slutpunkt på iOS
+# <a name="troubleshoot-issues-and-find-answers-to-faqs-on-microsoft-defender-for-endpoint-on-ios"></a>Fejlfinding af problemer, og find svar på ofte stillede spørgsmål Microsoft Defender for Endpoint i iOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Dette emne indeholder fejlfindingsoplysninger, der kan hjælpe dig med at løse de problemer, der kan opstå, når du bruger Microsoft Defender til Slutpunkt på iOS.
+Dette emne indeholder fejlfindingsoplysninger, der kan hjælpe dig med at løse de problemer, der kan opstå, når du Microsoft Defender for Endpoint på iOS.
 
 
 
@@ -48,14 +48,14 @@ Defender til Slutpunkt på iOS omfatter og aktiverer som standard funktionen til
 Mens den er aktiveret som standard, kan der være nogle tilfælde, hvor du er nødt til at deaktivere VPN. For eksempel vil du køre nogle apps, der ikke fungerer, når et VPN er konfigureret. I sådanne tilfælde kan du vælge at deaktivere VPN direkte fra Defender for Endpoint-appen eller ved at bruge følgende trin:
 
 1. På din iOS-enhed skal du åbne **Indstillinger**, klikke eller trykke **på Generelt** og derefter **VPN**.
-1. Klik eller tryk på knappen "i" for Microsoft Defender for Endpoint.
+1. Klik eller tryk på knappen "i" for at Microsoft Defender for Endpoint.
 1. Slå VPN **fra Forbind On Demand for** at deaktivere VPN.
 
     > [!div class="mx-imgBorder"]
-    > ![VPN-konfiguration af forbindelse on-demand.](images/ios-vpn-config.png)
+    > :::image type="content" source="images/ios-vpn-config.png" alt-text="Indstillingen Forbind on-demand" lightbox="images/ios-vpn-config.png":::
 
 > [!NOTE]
-> Webbeskyttelse er ikke tilgængelig, når VPN er deaktiveret. Hvis du vil genaktivere Web Protection, skal du åbne appen Microsoft Defender for Endpoint på enheden og aktivere Webbeskyttelse.
+> Webbeskyttelse er ikke tilgængelig, når VPN er deaktiveret. Hvis du vil genaktivere Webbeskyttelse, skal Microsoft Defender for Endpoint appen på enheden og Aktivere Webbeskyttelse.
 
 ## <a name="coexistence-with-multiple-vpn-profiles"></a>Sameksistens med flere VPN-profiler
 
@@ -63,19 +63,19 @@ Apple iOS understøtter ikke flere VPN **for hele enheden** for at være aktive 
 
 ## <a name="battery-consumption"></a>Batteriforbrug
 
-For at kunne yde dig hele tiden beskyttelse mod webbaserede trusler, skal Microsoft Defender til Slutpunkt køre i baggrunden hele tiden. Dette kan medføre en mindre stigning i det samlede batteriforbrug på din enhed. Hvis du oplever betydelige batteriafladninger, skal du [sende os feedback](ios-troubleshoot.md#send-in-app-feedback) , så vil vi undersøge det.
+For at kunne yde dig hele tiden beskyttelse mod webbaserede trusler skal Microsoft Defender for Endpoint køre i baggrunden hele tiden. Dette kan medføre en mindre stigning i det samlede batteriforbrug på din enhed. Hvis du oplever betydelige batteriafladninger, skal du [sende os feedback](ios-troubleshoot.md#send-in-app-feedback) , så vil vi undersøge det.
 
-Desuden viser iOS Indstillinger-appen kun batteriforbrug af apps, der kan ses af brugeren i en bestemt periode. Batteriforbruget i apps, der vises på skærmen, er kun i denne periode og beregnes af iOS baseret på en lang række faktorer, herunder CPU og netværksforbrug. Microsoft Defender til Slutpunkt bruger et lokalt/loop-tilbage-VPN i baggrunden til at kontrollere webtrafik for ondsindede websteder eller forbindelser. Netværkspakker fra en hvilken som helst app gennemgår denne kontrol, og som medfører, at batteriforbruget af Microsoft Defender til slutpunkt beregnes forkert. Det faktiske batteriforbrug af Microsoft Defender til slutpunkt er mindre end det, der vises på siden Indstillinger på enheden.
+Desuden viser iOS Indstillinger-appen kun batteriforbrug af apps, der kan ses af brugeren i en bestemt periode. Batteriforbruget i apps, der vises på skærmen, er kun i denne periode og beregnes af iOS baseret på en lang række faktorer, herunder CPU og netværksforbrug. Microsoft Defender for Endpoint bruger et lokalt/tilbage-VPN i baggrunden til at kontrollere webtrafik for ondsindede websteder eller forbindelser. Netværkspakker fra en hvilken som helst app gennemgår denne kontrol, og det medfører, at batteriforbruget for Microsoft Defender for Endpoint beregnes forkert. Det faktiske batteriforbrug for Microsoft Defender for Endpoint er mindre end det, der vises på siden Indstillinger på enheden.
 
 Bemærk, at det anvendte VPN er et lokalt VPN, og i modsætning til et traditionelt VPN sendes netværkstrafik ikke uden for enheden.
 
 ## <a name="data-usage"></a>Dataforbrug
 
-Microsoft Defender til Slutpunkt bruger et lokalt/loopback-VPN til at kontrollere webtrafik for ondsindede websteder eller forbindelser. På grund af denne grund kan dataforbrug af Microsoft Defender til slutpunkt ikke tages korrekt i betragtning. Vi har også bemærket, at hvis enheden kun er på mobilnetværket, er det dataforbrug, der rapporteres af serviceudbyder, meget tæt på det faktiske forbrug, hvorimod Apple i Indstillinger-appen viser ca. 1,5x til 2x af de faktiske forbrugte data.
+Microsoft Defender for Endpoint bruger et lokalt/loopback-VPN til at kontrollere webtrafik for ondsindede websteder eller forbindelser. På grund af denne grund Microsoft Defender for Endpoint der ikke taget forkert højde for dataforbruget. Vi har også bemærket, at hvis enheden kun er på mobilnetværket, er det dataforbrug, der rapporteres af serviceudbyder, meget tæt på det faktiske forbrug, hvorimod Apple i Indstillinger-appen viser ca. 1,5x til 2x af de faktiske forbrugte data.
 
 Vi har også lignende observationer med andre VPN-tjenester og har rapporteret dette til Apple.
 
-Det er desuden vigtigt, at Microsoft Defender for Endpoint er opdateret med vores backendtjenester for at yde bedre beskyttelse.
+Det er desuden vigtigt, at Microsoft Defender for Endpoint opdateret med vores backendtjenester for at yde bedre beskyttelse.
 
 ## <a name="report-unsafe-site"></a>Rapportér usikkert websted
 
@@ -83,12 +83,12 @@ Phishingwebsteder udgives som pålidelige websteder for at få dine personlige e
 
 ## <a name="malicious-site-detected"></a>Ondsindet websted registreret
 
-Microsoft Defender til Slutpunkt beskytter dig mod phishing eller andre webbaserede angreb. Hvis der registreres et skadeligt websted, blokeres forbindelsen, og der sendes en besked til Microsoft 365 Defender portal. Beskeden indeholder forbindelsens domænenavn, IP-ekstern adresse og oplysninger om enheden.
+Microsoft Defender for Endpoint beskytter dig mod phishing eller andre webbaserede angreb. Hvis der registreres et skadeligt websted, blokeres forbindelsen, og der sendes en besked til Microsoft 365 Defender portal. Beskeden indeholder forbindelsens domænenavn, IP-ekstern adresse og oplysninger om enheden.
 
 Desuden vises der en meddelelse på iOS-enheden. Når du trykker på meddelelsen, åbnes følgende skærmbillede, hvor brugeren kan gennemse oplysningerne.
 
 > [!div class="mx-imgBorder"]
-> ![Billede af websted, der rapporteres som usikker meddelelse.](images/ios-phish-alert.png)
+> :::image type="content" source="images/ios-phish-alert.png" alt-text="Webstedet rapporteres som usikker meddelelse" lightbox="images/ios-phish-alert.png":::
 
 ## <a name="device-not-seen-on-the-defender-for-endpoint-console-after-onboarding"></a>Enheden kan ikke ses på Defender for Endpoint-konsollen efter onboarding.
 
@@ -99,11 +99,11 @@ Efter onboarding tager det et par timer, før enheden vises på lageret for enhe
 
 ## <a name="data-and-privacy"></a>Data og beskyttelse af personlige oplysninger
 
-Hvis du vil have mere at vide om indsamlede data og beskyttelse af personlige [oplysninger, skal du se Oplysninger om beskyttelse af personlige oplysninger – Microsoft Defender til Endpoint på iOS](ios-privacy.md).
+Hvis du vil have mere at vide om data, der indsamles og [beskyttes, skal du se Oplysninger om beskyttelse Microsoft Defender for Endpoint på iOS](ios-privacy.md).
 
 ## <a name="connectivity-issue-on-cellular-network"></a>Forbindelsesproblemer på mobilnetværk
 
-Hvis du oplever problemer med forbindelsen til internettet på mobilnetværket, skal du kontrollere, om Microsoft Defender til Slutpunkt har aktiveret mobildata: Åbn Indstillinger-appen > MS Defender > sørg for, at "Mobildata" er aktiveret for MS Defender.
+Hvis du oplever problemer med forbindelsen til internettet på mobilnetværket, skal du kontrollere, om Microsoft Defender for Endpoint har aktiveret mobildata: Åbn Indstillinger-appen > MS Defender > sørg for, at "Mobildata" er aktiveret for MS Defender.
 
 Hvis du stadig har forbindelsesproblemer, kan du kontrollere, om flytilstanden til/fra hjælper med at løse problemet. Hvis problemet fortsætter, kan [du sende os logfiler](ios-troubleshoot.md#send-in-app-feedback).
 

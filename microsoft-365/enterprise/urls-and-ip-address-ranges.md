@@ -3,7 +3,7 @@ title: Office 365-URL-adresser og IP-adresseintervaller
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 02/28/2022
+ms.date: 03/28/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 'Oversigt: Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365, herunder Government Community Cloud (GCC).'
 hideEdit: true
-ms.openlocfilehash: 21d80523fc2cdba2e6a7bb9f08909bd7d6152a4b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 04522b211056b1d7c6feba08dd97fc3a2d33451a
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589778"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634861"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365-URL-adresser og IP-adresseintervaller
 
@@ -39,7 +39,7 @@ Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal v
 
 |Bemærkninger|Download|Brug|
 |---|---|---|
-|**Senest opdateret:** 28-02-2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Skift log-abonnement](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** alle påkrævede og valgfrie destinationer i én [JSON-formateret](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.|**Brug:** vores [proxy-PAC-filer](managing-office-365-endpoints.md#pacfiles)|
+|**Senest opdateret:** 28-03-2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Skift log-abonnement](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** alle påkrævede og valgfrie destinationer i én [JSON-formateret](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.|**Brug:** vores [proxy-PAC-filer](managing-office-365-endpoints.md#pacfiles)|
 |
 
 Start med [at administrere Office 365 for at forstå vores anbefalinger](managing-office-365-endpoints.md) til administration af netværksforbindelse ved hjælp af disse data. Slutpunktsdata opdateres efter behov i begyndelsen af hver måned med nye IP-adresser og URL-adresser publiceret 30 dage før de er aktive. Dette giver kunder, der endnu ikke har automatiserede opdateringer, mulighed for at fuldføre deres processer, før der kræves ny forbindelse. Slutpunkter kan også opdateres i løbet af måneden, hvis det er nødvendigt for at håndtere supporteskaleringer, sikkerhedshændelser eller andre øjeblikkelige driftskrav. De data, der vises på denne side nedenfor, genereres alle fra DE REST-baserede webtjenester. Hvis du bruger et script eller en netværksenhed til at få adgang til disse data, skal du gå direkte [til webtjenesten](microsoft-365-ip-web-service.md) .
@@ -69,9 +69,9 @@ De datakolonner, der vises, er:
 
 [Yderligere slutpunkter er ikke inkluderet i Office 365 IP-adresse og URL-webtjeneste](additional-office365-ip-addresses-and-urls.md)
 
-[Administrere Office 365 slutpunkter](managing-office-365-endpoints.md)
+[Administrere Office 365-slutpunkter](managing-office-365-endpoints.md)
 
-[Generelle Microsoft Stream-slutpunkter](/stream/network-overview#general-microsoft-stream-endpoints)
+[Generelle Microsoft Stream slutpunkter](/stream/network-overview#general-microsoft-stream-endpoints)
   
 [Overvåg Microsoft 365 forbindelse](./monitor-connectivity.md)
 
@@ -79,7 +79,7 @@ De datakolonner, der vises, er:
   
 [Klientforbindelse](https://support.office.com/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b)
   
-[Netværk, der kan levere indhold](https://support.office.com/article/content-delivery-networks-0140f704-6614-49bb-aa6c-89b75dcd7f1f)
+[Content Delivery Networks](https://support.office.com/article/content-delivery-networks-0140f704-6614-49bb-aa6c-89b75dcd7f1f)
   
 [Microsoft Azure IP-områder og tjenestemærker – Offentlig sky](https://www.microsoft.com/download/details.aspx?id=56519)
 

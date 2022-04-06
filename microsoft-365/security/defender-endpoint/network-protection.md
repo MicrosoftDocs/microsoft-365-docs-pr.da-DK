@@ -19,22 +19,22 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 7b9443cac6543ac14f6d94bd2809b5263be0a860
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 4c922ef443dbe6e4a1b55159f2c27b35926ff886
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681826"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634443"
 ---
 # <a name="protect-your-network"></a>Beskyt dit netværk
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## <a name="overview-of-network-protection"></a>Oversigt over netværksbeskyttelse
 
@@ -43,7 +43,7 @@ Netværksbeskyttelse hjælper med at beskytte enheder mod internetbaserede hænd
 Netværksbeskyttelse udvider beskyttelsen i [webbeskyttelse](web-protection-overview.md) til operativsystemniveau. Det giver funktionalitet til webbeskyttelse i Microsoft Edge til andre understøttede browsere og ikke-browserprogrammer. Derudover giver netværksbeskyttelse synlighed og blokering af indikatorer for kompromis (IOCs), når de bruges med [registrering og svar af slutpunkter](overview-endpoint-detection-response.md). Netværksbeskyttelse fungerer f.eks. med dine [brugerdefinerede](manage-indicators.md) indikatorer, som du kan bruge til at blokere bestemte domæner eller værtsnavne.
 
 > [!TIP]
-> Se webstedet microsoft Defender for Endpoint testground på demo.wd.microsoft.com [for](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) at se, hvordan netværksbeskyttelse fungerer.
+> Se webstedet Microsoft Defender for Endpoint testground [på demo.wd.microsoft.com for](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) at se, hvordan netværksbeskyttelse fungerer.
 
 > [!NOTE]
 > Defender for Endpoint-demowebstedet demo.wd.microsoft.com forældet og fjernes fremover.
@@ -72,7 +72,7 @@ Du kan finde flere oplysninger om, hvordan du aktiverer netværksbeskyttelse, **
 
 ## <a name="viewing-network-protection-events"></a>Visning af netværksbeskyttelseshændelser
 
-Netværksbeskyttelse fungerer bedst med [Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md), hvilket giver dig detaljeret rapportering om udnyttelse af beskyttelseshændelser og -blokke som en del af scenarier med [undersøgelse af beskeder](investigate-alerts.md).
+Netværksbeskyttelse fungerer bedst med [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), hvilket giver dig detaljeret rapportering om udnyttelse af beskyttelseshændelser og -blokke som en del af scenarier med [undersøgelse af beskeder](investigate-alerts.md).
 
 Når netværksbeskyttelse blokerer en forbindelse, vises der en meddelelse fra Handlingscenter. Sikkerhedsteamet kan [tilpasse meddelelsen med](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) organisationens oplysninger og kontaktoplysninger. Desuden kan individuelle reduktionsregler for angrebsoverfladen aktiveres og tilpasses til visse teknikker til overvågning.
 
@@ -80,7 +80,7 @@ Du kan også bruge [overvågningstilstand til at](audit-windows-defender.md) eva
 
 ## <a name="review-network-protection-events-in-the-microsoft-365-defender-portal"></a>Gennemse hændelser for netværksbeskyttelse i Microsoft 365 Defender portalen
 
-Microsoft Defender til Slutpunkt leverer detaljeret rapportering om hændelser og blokke som en del af scenarierne for [undersøgelsen af beskeder](investigate-alerts.md). Du kan få vist disse detaljer i Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)) i [beskedkøen eller](review-alerts.md) ved at bruge [avanceret jagt](advanced-hunting-overview.md). Hvis du bruger overvågningstilstand, [kan](audit-windows-defender.md) du bruge avanceret på jagt efter at se, hvordan indstillinger for netværksbeskyttelse vil påvirke dit miljø, hvis de blev aktiveret.
+Microsoft Defender for Endpoint giver detaljeret rapportering om hændelser og blokke som en del af scenarierne [for dens undersøgelse af beskeder](investigate-alerts.md). Du kan få vist disse detaljer i Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)) i [beskedkøen eller](review-alerts.md) ved at bruge [avanceret jagt](advanced-hunting-overview.md). Hvis du bruger overvågningstilstand, [kan](audit-windows-defender.md) du bruge avanceret på jagt efter at se, hvordan indstillinger for netværksbeskyttelse vil påvirke dit miljø, hvis de blev aktiveret.
 
 Her er en eksempelforespørgsel til avanceret jagt:
 
@@ -89,7 +89,7 @@ DeviceNetworkEvents
 |where ActionType in ('ExploitGuardNetworkProtectionAudited','ExploitGuardNetworkProtectionBlocked', 'ConnectionSuccess')
 ```
 
-## <a name="review-network-protection-events-in-windows-event-viewer"></a>Gennemse netværksbeskyttelseshændelser i Windows Event Viewer
+## <a name="review-network-protection-events-in-windows-event-viewer"></a>Gennemse netværksbeskyttelseshændelser i Windows Logbog
 
 Du kan gennemse hændelsesloggen Windows for at få vist hændelser, der oprettes, når netværksbeskyttelsesblokke (eller overvågninger) adgang til en ondsindet IP eller et ondsindet domæne:
 
@@ -142,7 +142,11 @@ I Windows 10 Enterprise 1909 og frem, der bruges i Windows Virtual Desktop på A
 
 1. Brug [Slå netværksbeskyttelse til,](enable-network-protection.md) og følg vejledningen for at anvende din politik.
 
-2. Udfør følgende PowerShell-kommando: `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
+2. Udfør følgende PowerShell-kommandoer:
+  - `Set-MpPreference -EnableNetworkProtection Enabled`
+  - `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
+  - `Set-MpPreference -AllowNetworkProtectionDownLevel 1`
+  - `Set-MpPreference -AllowDatagramProcessingOnWinServer 1`
 
 ## <a name="network-protection-troubleshooting"></a>Fejlfinding af netværksbeskyttelse
 

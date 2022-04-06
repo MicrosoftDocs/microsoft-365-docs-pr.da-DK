@@ -1,6 +1,6 @@
 ---
 title: Slå netværksbeskyttelse til
-description: Aktivér netværksbeskyttelse med Gruppepolitik, PowerShell eller administration af mobilenheder, og Konfigurationsstyring.
+description: Aktivér netværksbeskyttelse med Gruppepolitik, PowerShell eller Enhedshåndtering og Configuration Manager.
 keywords: Netværksbeskyttelse, udnyttelse, skadeligt websted, ip, domæne, domæner, aktivér, aktivér
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,20 +15,20 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: b21b2f2a69ab9a85f1f5003104969364ae9c6e78
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 4c3b74179294d0b028dd07c3a6f4f28e844237d3
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63599310"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469927"
 ---
 # <a name="turn-on-network-protection"></a>Slå netværksbeskyttelse til
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -56,15 +56,14 @@ Hvis nøglen mangler, skal du gå til **SOFTWARE** \> **Microsoft** \> **Windows
    - 1 eller **Til**
    - 2 eller **overvågningstilstand**
 
-    :::image type="content" alt-text="Registreringsdatabasenøgle til netværksbeskyttelse." source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
-    
-    
+    :::image type="content" source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Registreringsdatabasenøgle til netværksbeskyttelse" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
+
 ## <a name="enable-network-protection"></a>Aktivér netværksbeskyttelse
 
 Aktivér netværksbeskyttelse ved hjælp af en af disse metoder:
 
 - [PowerShell](#powershell)
-- [Administration af mobilenheder (MDM)](#mobile-device-management-mdm)
+- [Mobildata Enhedshåndtering (MDM)](#mobile-device-management-mdm)
 - [Microsoft Endpoint Manager](#microsoft-endpoint-manager)
 - [Gruppepolitik](#group-policy)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
@@ -122,7 +121,7 @@ Brug følgende fremgangsmåde for at aktivere netværksbeskyttelse på computere
 
     På en domæne forbundet Gruppepolitik-administrationscomputer skal du åbne [Gruppepolitik Management Console](https://technet.microsoft.com/library/cc731212.aspx), højreklikke på det Gruppepolitik-objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit** **Guard-netværksbeskyttelse**\>.
 
@@ -150,7 +149,7 @@ Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp 
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager
 
-1. Åbn Konfigurationsstyring konsol.
+1. Åbn Configuration Manager konsol.
 
 2. Gå til **Aktiver og overholdelse** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**. 
 
@@ -170,7 +169,7 @@ Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp 
 
 
 > [!IMPORTANT]
-> Når du har implementeret en Exploit Guard-politik Konfigurationsstyring, fjernes Exploit Guard-indstillingerne ikke fra klienterne, hvis du fjerner installationen. `Delete not supported` er registreret i Konfigurationsstyring ExploitGuardHandler.log, hvis du fjerner klientens Exploit Guard-installation. <!--CMADO8538577-->
+> Når du har implementeret en Exploit Guard-politik Configuration Manager, fjernes Exploit Guard-indstillingerne ikke fra klienterne, hvis du fjerner installationen. `Delete not supported`er registreret i Configuration Manager ExploitGuardHandler.log, hvis du fjerner klientens Exploit Guard-installation. <!--CMADO8538577-->
 > Følgende PowerShell-script kan køres under SYSTEM-kontekst for at fjerne disse indstillinger:<!--CMADO9907132-->
 >
 > ```powershell
