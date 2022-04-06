@@ -1,7 +1,7 @@
 ---
-title: Intune-baseret installation til Microsoft Defender til Slutpunkt på Mac
-description: Installér Microsoft Defender til slutpunkt på Mac ved hjælp Microsoft Intune.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, installation, deploy, uninstallation, intune,propf, macos, catalina, mojave, high sierra
+title: Intune-baseret installation til Microsoft Defender for Endpoint på Mac
+description: Installer Microsoft Defender for Endpoint på Mac ved hjælp af Microsoft Intune.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, installation, deploy, uninstallation, intune,propf, macos, catalina, mojave, high sierra
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,24 +15,24 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 4979ee5f3953ced1073779fdcabb7eb361d4911a
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: a511405c2d8fb4753debbadf0744d6277639648b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63591887"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475251"
 ---
-# <a name="intune-based-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Intune-baseret installation til Microsoft Defender til Endpoint på macOS
+# <a name="intune-based-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Intune-baseret installation til Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
-- [Microsoft Defender til Slutpunkt på macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint på macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-I dette emne beskrives det, hvordan du installerer Microsoft Defender til Endpoint på macOS via Intune. En vellykket installation kræver, at alle følgende trin er gennemført:
+I dette emne beskrives det, hvordan du Microsoft Defender for Endpoint på macOS via Intune. En vellykket installation kræver, at alle følgende trin er gennemført:
 
 1. [Download onboardingpakken](#download-the-onboarding-package)
 1. [Konfiguration af klientenhed](#client-device-setup)
@@ -42,11 +42,11 @@ I dette emne beskrives det, hvordan du installerer Microsoft Defender til Endpoi
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
-Før du går i gang, skal du se microsoft [Defender for Endpoint på macOS-hovedsiden](microsoft-defender-endpoint-mac.md) for en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
+Før du går i gang, skal du [se Microsoft Defender for Endpoint på macOS-siden](microsoft-defender-endpoint-mac.md) for at få en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
 
 ## <a name="overview"></a>Oversigt
 
-Følgende tabel opsummerer de trin, du skal bruge for at installere og administrere Microsoft Defender til Slutpunkt på Macs via Intune. Mere detaljerede trin er tilgængelige nedenfor.
+Følgende tabel opsummerer de trin, du skal bruge for at installere og administrere Microsoft Defender for Endpoint på Mac-computere via Intune. Mere detaljerede trin er tilgængelige nedenfor.
 
 <br>
 
@@ -55,13 +55,13 @@ Følgende tabel opsummerer de trin, du skal bruge for at installere og administr
 |Trin|Eksempel på filnavne|BundleIdentifier|
 |---|---|---|
 |[Download onboardingpakken](#download-the-onboarding-package)|WindowsDefenderATPOnboarding__MDATP_wdav.atp.xml|com.microsoft.wdav.atp|
-|[Godkend systemudvidelse til Microsoft Defender til slutpunkt](#approve-system-extensions)|MDATP_SysExt.xml|I/T|
-|[Godkend kerneludvidelse til Microsoft Defender til slutpunkt](#download-the-onboarding-package)|MDATP_KExt.xml|I/T|
-|[Giv fuld diskadgang til Microsoft Defender til Slutpunkt](#full-disk-access)|MDATP_tcc_Catalina_or_newer.xml|com.microsoft.wdav.tcc|
+|[Godkend systemudvidelse til Microsoft Defender for Endpoint](#approve-system-extensions)|MDATP_SysExt.xml|I/T|
+|[Godkend kerneludvidelse til Microsoft Defender for Endpoint](#download-the-onboarding-package)|MDATP_KExt.xml|I/T|
+|[Giv fuld diskadgang til Microsoft Defender for Endpoint](#full-disk-access)|MDATP_tcc_Catalina_or_newer.xml|com.microsoft.wdav.tcc|
 |[Politik for netværksudvidelse](#network-filter)|MDATP_NetExt.xml|I/T|
 |[Konfigurere Microsoft Automatiske opdateringer (MAU)](mac-updates.md#intune)|MDATP_Microsoft_AutoUpdate.xml|com.microsoft.autoupdate2|
-|[Konfigurationsindstillinger for Microsoft Defender til Slutpunkt](mac-preferences.md#intune-full-profile) <p> **Bemærk!** Hvis du planlægger at køre en tredjeparts AV til macOS, skal du indstille den `passiveMode` til `true`.|MDATP_WDAV_and_exclusion_settings_Preferences.xml|com.microsoft.wdav|
-|[Konfigurer Microsoft Defender til slutpunkts- og MS AutoUpdate-meddelelser (MAU)](mac-updates.md)|MDATP_MDAV_Tray_and_AutoUpdate2.mobileconfig|com.microsoft.autoupdate2 eller com.microsoft.wdav.tray|
+|[Microsoft Defender for Endpoint konfigurationsindstillinger](mac-preferences.md#intune-full-profile) <p> **Bemærk!** Hvis du planlægger at køre en tredjeparts AV til macOS, skal du indstille den `passiveMode` til `true`.|MDATP_WDAV_and_exclusion_settings_Preferences.xml|com.microsoft.wdav|
+|[Konfigurere Microsoft Defender for Endpoint meddelelser om automatiske opdateringer og MS AutoUpdate (MAU)](mac-updates.md)|MDATP_MDAV_Tray_and_AutoUpdate2.mobileconfig|com.microsoft.autoupdate2 eller com.microsoft.wdav.tray|
 |
 
 ## <a name="download-the-onboarding-package"></a>Download onboardingpakken
@@ -70,9 +70,9 @@ Download onboardingpakkerne fra Microsoft 365 Defender portal:
 
 1. I Microsoft 365 Defender, skal du gå **til Indstillinger** \> **slutpunkter onboarding** \> **til** \> **enhedshåndtering**.
 
-2. Indstil operativsystemet til **macOS** og installationsmetoden til **Administration af mobilenheder/Microsoft Intune**.
+2. Indstil operativsystemet til **macOS** og installationsmetoden til **Mobile Enhedshåndtering/Microsoft Intune**.
 
-    ![Skærmbillede af indstillinger for onboarding.](images/macos-install-with-intune.png)
+   :::image type="content" source="images/macos-install-with-intune.png" alt-text="Siden med indstillinger for onboarding" lightbox="images/macos-install-with-intune.png":::
 
 3. Vælg **Download onboarding pakke**. Gem den som _WindowsDefenderATPOnboardingPackage.zip_ i den samme mappe.
 
@@ -92,42 +92,42 @@ Download onboardingpakkerne fra Microsoft 365 Defender portal:
 
 ## <a name="create-system-configuration-profiles"></a>Opret systemkonfigurationsprofiler
 
-Det næste trin er at oprette systemkonfigurationsprofiler, som skal bruges af Microsoft Defender til slutpunkt.
+Næste trin er at oprette systemkonfigurationsprofiler, der Microsoft Defender for Endpoint behov.
 I administration [Microsoft Endpoint Manager skal du åbne](https://endpoint.microsoft.com/) **Enheders** \> **konfigurationsprofiler**.
 
 ### <a name="onboarding-blob"></a>Onboarding-blob
 
-Denne profil indeholder licensoplysninger for Microsoft Defender til slutpunkt. Uden denne profil vil Microsoft Defender til slutpunkt rapportere, at den ikke er licenseret.
+Denne profil indeholder licensoplysninger til Microsoft Defender for Endpoint. Uden denne profil Microsoft Defender for Endpoint en rapport om, at den ikke er licenseret.
 
 1. Vælg **Opret profil** under **Konfigurationsprofiler**.
 1. Vælg **PlatformmacOS**=, **ProfiltypeTemplates**=. **Skabelonnavn**= **Brugerdefineret**. Klik **på Opret**.
 
     > [!div class="mx-imgBorder"]
-    > ![Oprettelse af brugerdefineret konfigurationsprofil.](images/mdatp-6-systemconfigurationprofiles-1.png)
+    > :::image type="content" source="images/mdatp-6-systemconfigurationprofiles-1.png" alt-text="Siden Til oprettelse af brugerdefineret konfigurationsprofil" lightbox="images/mdatp-6-systemconfigurationprofiles-1.png":::
 
 1. Vælg et navn til profilen, f.eks. "Defender til cloud- eller slutpunkt-onboarding til macOS". Klik på **Næste**.
 
     > [!div class="mx-imgBorder"]
-    > ![Brugerdefineret konfigurationsprofil – navn.](images/mdatp-6-systemconfigurationprofiles-2.png)
+    > :::image type="content" source="images/mdatp-6-systemconfigurationprofiles-2.png" alt-text="Feltet Navn på brugerdefineret konfigurationsprofil" lightbox="images/mdatp-6-systemconfigurationprofiles-2.png":::
 
 1. Vælg et navn til konfigurationsprofilnavnet, f.eks. "Defender til slutpunkt-onboarding til macOS".
 1. Vælg en [installationskanal](/mem/intune/fundamentals/whats-new#new-deployment-channel-setting-for-custom-device-configuration-profiles-on-macos-devices).
 1. Vælg intune/WindowsDefenderATPOnboarding.xml, du udtrækkede fra onboardingpakken ovenfor som konfigurationsprofilfil.
 
     > [!div class="mx-imgBorder"]
-    > ![Importere en konfiguration fra en fil til brugerdefineret konfigurationsprofil.](images/mdatp-6-systemconfigurationprofiles.png)
+    > :::image type="content" source="images/mdatp-6-systemconfigurationprofiles.png" alt-text="Import af en konfiguration fra en fil til brugerdefineret konfigurationsprofil" lightbox="images/mdatp-6-systemconfigurationprofiles.png":::
 
 1. Klik på **Næste**.
 1. Tildel enheder under **fanen Opgave** . Klik på **Næste**.
 
     > [!div class="mx-imgBorder"]
-    > ![Brugerdefineret konfigurationsprofil – tildeling.](images/mdatp-6-systemconfigurationprofiles-2.png)
+    > :::image type="content" source="images/mdatp-6-systemconfigurationprofiles-2.png" alt-text="Den brugerdefinerede konfigurationsprofil – tildeling" lightbox="images/mdatp-6-systemconfigurationprofiles-2.png":::
 
 1. Gennemse og **opret**.
 1. Åbn **Enheder** \> **Konfigurationsprofiler**, du kan se din oprettede profil der.
 
     > [!div class="mx-imgBorder"]
-    > ![Brugerdefineret konfigurationsprofil – udført.](images/mdatp-6-systemconfigurationprofiles-3.png)
+    > :::image type="content" source="images/mdatp-6-systemconfigurationprofiles-3.png" alt-text="Fuldførelse af den brugerdefinerede konfigurationsprofil" lightbox="images/mdatp-6-systemconfigurationprofiles-3.png":::
 
 ### <a name="approve-system-extensions"></a>Godkend systemudvidelser
 
@@ -144,7 +144,7 @@ Denne profil er nødvendig til macOS 10.15 (Catalina) eller nyere. Den ignoreres
     |com.microsoft.wdav.netext|UBF8T346G9|
 
     > [!div class="mx-imgBorder"]
-    > ![Indstillinger for systemudvidelse.](images/mac-system-extension-intune2.png)
+    > :::image type="content" source="images/mac-system-extension-intune2.png" alt-text="Indstillingerne for systemets udvidelse" lightbox="images/mac-system-extension-intune2.png":::
 
 1. I fanen **Opgaver skal** du tildele denne profil til **Alle brugere & Alle enheder**.
 1. Gennemse og opret denne konfigurationsprofil.
@@ -163,7 +163,7 @@ Denne profil er nødvendig til macOS 10.15 (Catalina) eller ældre. Den ignorere
 1. **Indstil Team-id** **til UBF8T346G9**, og klik på **Næste**.
 
     > [!div class="mx-imgBorder"]
-    > ![Indstillinger for kerneletudvidelse.](images/mac-kernel-extension-intune2.png)
+    > :::image type="content" source="images/mac-system-extension-intune2.png" alt-text="Kerneindstillingerne for systemets filtypenavn" lightbox="images/mac-system-extension-intune2.png":::
 
 1. I fanen **Opgaver skal** du tildele denne profil til **Alle brugere & Alle enheder**.
 1. Gennemse og opret denne konfigurationsprofil.
@@ -171,9 +171,9 @@ Denne profil er nødvendig til macOS 10.15 (Catalina) eller ældre. Den ignorere
 ### <a name="full-disk-access"></a>Fuld diskadgang
 
    > [!CAUTION]
-   > macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fravær af dette samtykke kan Microsoft Defender til Slutpunkt ikke fuldt ud beskytte din enhed.
+   > macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fraværet af dette samtykke Microsoft Defender for Endpoint du ikke helt beskytte din enhed.
    >
-   > Denne konfigurationsprofil giver fuld diskadgang til Microsoft Defender til slutpunkt. Hvis du tidligere har konfigureret Microsoft Defender til slutpunkt via Intune, anbefaler vi, at du opdaterer installationen med denne konfigurationsprofil.
+   > Denne konfigurationsprofil giver fuld diskadgang til Microsoft Defender for Endpoint. Hvis du tidligere har konfigureret Microsoft Defender for Endpoint til Intune, anbefaler vi, at du opdaterer installationen med denne konfigurationsprofil.
 
 Download [**fulldisk.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) [fra GitHub lager](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
@@ -181,7 +181,7 @@ Følg vejledningen for [Onboarding blob](#onboarding-blob) ovenfra ved hjælp af
 
 ### <a name="network-filter"></a>Netværksfilter
 
-Som en del af egenskaberne Slutpunktsregistrering og Svar undersøger Microsoft Defender til slutpunkt på macOS sockettrafik og rapporterer disse oplysninger til Microsoft 365 Defender-portalen. Følgende politik gør det muligt for netværksudvidelsen at udføre denne funktionalitet.
+Som en del af egenskaberne slutpunktsregistrering og svar undersøger Microsoft Defender for Endpoint på macOS sockettrafik og rapporterer disse oplysninger til Microsoft 365 Defender portal. Følgende politik gør det muligt for netværksudvidelsen at udføre denne funktionalitet.
 
 Download [**netfilter.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) [fra GitHub lager](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
@@ -189,7 +189,7 @@ Følg vejledningen for [Onboarding blob](#onboarding-blob) ovenfra ved hjælp af
 
 ### <a name="notifications"></a>Meddelelser
 
-Denne profil bruges til at tillade, at Microsoft Defender til slutpunkt på macOS og Microsoft Automatiske opdateringer viser meddelelser i brugergrænsefladen på macOS 10.15 (Catalina) eller nyere.
+Denne profil bruges til at give Microsoft Defender for Endpoint på macOS og Microsoft Automatiske opdateringer mulighed for at vise meddelelser i brugergrænsefladen på macOS 10.15 (Catalina) eller nyere.
 
 Download [**notif.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/notif.mobileconfig) [fra GitHub lager](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
@@ -197,43 +197,43 @@ Følg vejledningen for [Onboarding blob](#onboarding-blob) ovenfra ved hjælp af
 
 ### <a name="view-status"></a>Vis status
 
-Når intune-ændringerne er overført til de tilmeldte enheder, kan du se dem angivet under Status **for** \> **skærmenhed**:
+Når ændringerne Intune til de tilmeldte enheder, kan du se dem angivet under Status **for** \> **skærmenhed**:
 
 > [!div class="mx-imgBorder"]
-> ![Visning af enhedsstatus under Skærm.](images/mdatp-7-devicestatusblade.png)
+> :::image type="content" source="images/mdatp-7-devicestatusblade.png" alt-text="Visning af enhedsstatus" lightbox="images/mdatp-7-devicestatusblade.png":::
 
 ## <a name="publish-application"></a>Publicer program
 
-Dette trin gør det muligt at udrulle Microsoft Defender til slutpunkt på tilmeldte computere.
+Dette trin gør det muligt at Microsoft Defender for Endpoint til tilmeldte computere.
 
 1. I [Microsoft Endpoint Manager Administration skal](https://endpoint.microsoft.com/) du åbne **Apps**.
 
     > [!div class="mx-imgBorder"]
-    > ![Klar til at oprette programmet.](images/mdatp-8-app-before.png)
+    > :::image type="content" source="images/mdatp-8-app-before.png" alt-text="Programmets oversigtsside" lightbox="images/mdatp-8-app-before.png":::
 
 1. Vælg Efter platform > macOS > Tilføj.
 1. Vælg **ApptypemacOS**=, og klik på **Vælg**.
 
     > [!div class="mx-imgBorder"]
-    > ![Angiv programtype.](images/mdatp-9-app-type.png)
+    > :::image type="content" source="images/mdatp-9-app-type.png" alt-text="Den specifikke programtype" lightbox="images/mdatp-9-app-type.png":::
 
 1. Bevar standardværdierne, og klik **på Næste**.
 
     > [!div class="mx-imgBorder"]
-    > ![Programegenskaber.](images/mdatp-10-properties.png)
+    > :::image type="content" source="images/mdatp-10-properties.png" alt-text="Siden programegenskaber" lightbox="images/mdatp-10-properties.png":::
 
 1. Tilføj opgaver, og klik på **Næste**.
 
     > [!div class="mx-imgBorder"]
-    > ![Skærmbillede med oplysninger om Intune-opgaver.](images/mdatp-11-assignments.png)
+    > :::image type="content" source="images/mdatp-11-assignments.png" alt-text="Siden med Intune om tildelinger" lightbox="images/mdatp-11-assignments.png":::
 
 1. Gennemse og **opret**.
 1. Du kan besøge **Apps** \> **efter platform** \> **macOS** for at se det på listen over alle programmer.
 
     > [!div class="mx-imgBorder"]
-    > ![Listen Programmer.](images/mdatp-12-applications.png)
+    > :::image type="content" source="images/mdatp-12-applications.png" alt-text="Siden med programlister" lightbox="images/mdatp-12-applications.png":::
 
-Få mere at vide under [Føj Microsoft Defender til Endpoint til macOS-enheder, der bruger Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).)
+Få mere at vide under [Føj Microsoft Defender for Endpoint til macOS-enheder, der bruger Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).)
 
    > [!CAUTION]
    > Du skal oprette alle de påkrævede konfigurationsprofiler og skubbe dem til alle maskiner, som beskrevet ovenfor.
@@ -245,11 +245,11 @@ Du behøver ikke nogen særlig klargøring til en Mac-enhed ud over Firmaportal 
 1. Bekræft administration af enheder.
 
     > [!div class="mx-imgBorder"]
-    > ![Bekræft skærmbillede af enhedshåndtering.](images/mdatp-3-confirmdevicemgmt.png)
+    > :::image type="content" source="images/mdatp-3-confirmdevicemgmt.png" alt-text="Siden Bekræft enhedshåndtering" lightbox="images/mdatp-3-confirmdevicemgmt.png":::
 
     Vælg **Åbn systemindstillinger**, **find Administrationsprofil** på listen, og vælg **Godkend...**. Din administrationsprofil blev vist som **bekræftet**:
 
-    ![Skærmbillede af administrationsprofil.](images/mdatp-4-managementprofile.png)
+    :::image type="content" source="images/mdatp-4-managementprofile.png" alt-text="Siden Administrationsprofil" lightbox="images/mdatp-4-managementprofile.png":::
 
 2. Vælg **Fortsæt** , og fuldfør tilmeldingen.
 
@@ -258,25 +258,25 @@ Du behøver ikke nogen særlig klargøring til en Mac-enhed ud over Firmaportal 
 3. I Intune skal du åbne **Administrer** \> **enheder på** \> **alle enheder**. Her kan du se din enhed blandt de viste:
 
    > [!div class="mx-imgBorder"]
-   > ![Skærmbillede af Tilføj enheder.](images/mdatp-5-alldevices.png)
+   > :::image type="content" source="images/mdatp-5-alldevices.png" alt-text="Siden Alle enheder" lightbox="images/mdatp-5-alldevices.png":::
 
 ## <a name="verify-client-device-state"></a>Bekræft klientenhedstilstand
 
 1. Når konfigurationsprofiler er installeret på dine enheder, skal du åbne **Systemindstillinger-profiler** \> på din Mac-enhed.
 
     > [!div class="mx-imgBorder"]
-    > ![Skærmbillede af Systemindstillinger.](images/mdatp-13-systempreferences.png)
+    > :::image type="content" source="images/mdatp-13-systempreferences.png" alt-text="Siden Systemindstillinger" lightbox="images/mdatp-13-systempreferences.png":::
 
-    ![Skærmbillede af Profil for systemindstillinger.](images/mdatp-14-systempreferencesprofiles.png)
+   :::image type="content" source="images/mdatp-14-systempreferencesprofiles.png" alt-text="Siden Profiler for systemindstillinger" lightbox="images/mdatp-14-systempreferencesprofiles.png":::
 
-2. Kontrollér, at følgende konfigurationsprofiler er til stede og installeret. **Administrationsprofilen** skal være Intune-systemprofilen. _Wdav-config og_ _wdav-kext_ er systemkonfigurationsprofiler, der blev tilføjet i Intune:
+2. Kontrollér, at følgende konfigurationsprofiler er til stede og installeret. **Administrationsprofilen** skal være Intune systemprofilen. _Wdav-config og_ _wdav-kext_ er systemkonfigurationsprofiler, der blev tilføjet i Intune:
 
-    ![Skærmbillede af profiler.](images/mdatp-15-managementprofileconfig.png)
+   :::image type="content" source="images/mdatp-15-managementprofileconfig.png" alt-text="Siden Profiler" lightbox="images/mdatp-15-managementprofileconfig.png":::
 
-3. Du bør også kunne se ikonet Microsoft Defender til slutpunkt i øverste højre hjørne:
+3. Du bør også kunne Microsoft Defender for Endpoint i øverste højre hjørne:
 
     > [!div class="mx-imgBorder"]
-    > ![Skærmbillede af Microsoft Defender for Slutpunkt på statuslinjen.](images/mdatp-icon-bar.png)
+    > :::image type="content" source="images/mdatp-icon-bar.png" alt-text="Ikonet for Microsoft Defender for Endpoint på statuslinjen" lightbox="images/mdatp-icon-bar.png":::
 
 ## <a name="troubleshooting"></a>Fejlfinding
 
@@ -290,4 +290,4 @@ Du kan finde flere oplysninger om, hvordan du finder den automatisk genererede l
 
 ## <a name="uninstallation"></a>Fjernelse af installation
 
-Se [Afinstallering](mac-resources.md#uninstalling) for at få mere at vide om, hvordan du fjerner Microsoft Defender til Endpoint på macOS fra klientenheder.
+Se [Afinstallering](mac-resources.md#uninstalling) for at få mere at vide om, hvordan Microsoft Defender for Endpoint på macOS fra klientenheder.

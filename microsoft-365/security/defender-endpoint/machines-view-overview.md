@@ -1,5 +1,5 @@
 ---
-title: Enhedslager
+title: Lagerenhed
 description: Få mere at vide om de tilgængelige funktioner, du kan bruge, fra listen Enheder, f.eks sortering, filtrering og eksport af listen for at forbedre undersøgelser.
 keywords: sortere, filtrere, eksportere, CSV, enhedsnavn, domæne, senest set, intern IP, tilstand, aktive beskeder, aktive malwareregistreringer, trusselskategori, gennemse beskeder, netværk, forbindelse, malware, type, adgangskodesvælger, ransomware, udnytte, trussel, generel malware, uønsket software
 ms.prod: m365-security
@@ -14,14 +14,14 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d254eee546187311a25a0e6cc433005a26ff57e6
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: a9753cdc818aefdf33411bd237327310dfc512ab
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632421"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474730"
 ---
-# <a name="device-inventory"></a>Enhedslager
+# <a name="device-inventory"></a>Lagerenhed
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -109,14 +109,14 @@ Optællingen øverst på hver fane opdateres baseret på den aktuelle visning.
 Filter | Beskrivelse
 :---|:---
 **Risikoniveau** </br> | Risikoniveauet afspejler den overordnede risikovurdering af enheden baseret på en kombination af faktorer, herunder typerne og alvorsgraderne af aktive beskeder på enheden. Løsning af aktive beskeder, godkendelse af afhjælpningsaktiviteter og undertrykke efterfølgende beskeder kan sænke risikoniveauet.
-**Eksponeringsniveau** </br> | Eksponeringsniveauet afspejler enhedens aktuelle eksponering baseret på den kumulative effekt af dens afventende sikkerhedsanbefalinger. De mulige niveauer er lave, mellem og høje. Lav eksponering betyder, at dine enheder er mindre sårbar over for udnyttelse. </br> </br> Hvis eksponeringsniveauet siger "Ingen tilgængelige data", kan det være af forskellige årsager:</br>- Enheden holdt op med at rapportere i mere end 30 dage. I dette tilfælde betragtes den som inaktiv, og eksponeringen beregnes ikke.</br>- Enhedens operativsystem understøttes ikke - [se minimumskravene til Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements).</br>- Enhed med forældet agent (usandsynligt).
+**Eksponeringsniveau** </br> | Eksponeringsniveauet afspejler enhedens aktuelle eksponering baseret på den kumulative effekt af dens afventende sikkerhedsanbefalinger. De mulige niveauer er lave, mellem og høje. Lav eksponering betyder, at dine enheder er mindre sårbar over for udnyttelse. </br> </br> Hvis eksponeringsniveauet siger "Ingen tilgængelige data", kan det være af forskellige årsager:</br>- Enheden holdt op med at rapportere i mere end 30 dage. I dette tilfælde betragtes den som inaktiv, og eksponeringen beregnes ikke.</br>- Enhedens operativsystem understøttes ikke - [se minimumskravene til Microsoft Defender for Endpoint](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/minimum-requirements.md).</br>- Enhed med forældet agent (usandsynligt).
 **Mærker** </br> | Filtrer listen ud fra den gruppering og mærkning, du har føjet til individuelle enheder. Se [Opret og administrer enhedsmærker](machine-tags.md).
 **Enhedsværdi**</br> | Filtrer listen ud fra, om enheden er markeret som høj værdi eller lav værdi.
 **Udelukkelsestilstand** </br> | Filtrer listen ud fra, om enheden er blevet udeladt eller ej. Få mere at vide under [Udelad enheder](exclude-devices.md).
 **OS-platform** </br>| Filtrer efter de OS-platforme, du er interesseret i at undersøge </br></br>(_Kun computere og mobilenheder og IoT-enheder_)
 **Set første gang** </br> | Filtrer din visning ud fra, hvornår enheden blev set i netværket første gang, eller da den første gang blev rapporteret af Microsoft Defender for Endpoint sensoren.</br></br>(_Kun computere og mobilenheder og IoT-enheder_)
 **Windows version** </br> | Filtrer efter Windows, du er interesseret i at undersøge.</br></br> (_Kun computere og mobil_)
-**Tilstandstilstanden for sensoren** </br> | Filtrer efter følgende tilstande for sensorens tilstand for enheder i gang med Microsoft Defender for Endpoint:</br> - **Aktiv**: Enheder, der aktivt rapporterer sensordata til tjenesten.</br> - **Inaktiv**: Enheder, der har stoppet med at sende signaler i mere end 7 dage. </br> - **Forkert konfigureret**: Enheder, der har nedsat kommunikation med tjenesten, eller som ikke kan sende sensordata. </br> Forkert konfigurerede enheder kan klassificeres yderligere til: </br>  - Ingen sensordata </br>  - Forringet kommunikation </br>  Du kan finde flere oplysninger om, hvordan du løser problemer på forkert konfigurerede enheder under [Løse usunde sensorer](/microsoft-365/security/defender-endpoint/fix-unhealthy-sensors).</br></br> (_Kun computere og mobil_)
+**Tilstandstilstanden for sensoren** </br> | Filtrer efter følgende tilstande for sensorens tilstand for enheder i gang med Microsoft Defender for Endpoint:</br> - **Aktiv**: Enheder, der aktivt rapporterer sensordata til tjenesten.</br> - **Inaktiv**: Enheder, der har stoppet med at sende signaler i mere end 7 dage. </br> - **Forkert konfigureret**: Enheder, der har nedsat kommunikation med tjenesten, eller som ikke kan sende sensordata. </br> Forkert konfigurerede enheder kan klassificeres yderligere til: </br>  - Ingen sensordata </br>  - Forringet kommunikation </br>  Du kan finde flere oplysninger om, hvordan du løser problemer på forkert konfigurerede enheder under [Løse usunde sensorer](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/fix-unhealthy-sensors.md).</br></br> (_Kun computere og mobil_)
 **Onboardingstatus** </br> | Onboardingstatus angiver, om enheden i øjeblikket er onboardet til Microsoft Defender for Endpoint eller ej. Du kan filtrere efter følgende tilstande: </br> - **Onboarded**: Slutpunktet er onboardet til Microsoft Defender for Endpoint.  </br> - **Kan onboardes**: Slutpunktet blev fundet i netværket som en understøttet enhed, men det er ikke i øjeblikket onboardet. Microsoft anbefaler kraftigt onboarding af disse enheder. </br> - **Ikke understøttet**: Slutpunktet blev fundet i netværket, men understøttes ikke af Microsoft Defender for Endpoint. </br> - **Utilstrækkelige oplysninger**: Systemet kunne ikke fastslå, om enheden understøttes.</br></br> (_Kun computere og mobil_)
 **Antivirusstatus** </br> | Filtrer visningen ud fra, om antivirusstatus er deaktiveret, ikke opdateret eller ukendt.</br></br> (_Kun computere og mobil_)
 **Gruppe** </br> | Filtrer listen ud fra den gruppe, du er interesseret i at undersøge. </br></br> (_Kun computere og mobil_)

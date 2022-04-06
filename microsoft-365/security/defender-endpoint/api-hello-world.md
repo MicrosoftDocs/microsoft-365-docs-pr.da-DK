@@ -1,7 +1,7 @@
 ---
-title: Hello World til Microsoft Defender til Endpoint API
+title: Hello World til Microsoft Defender for Endpoint API
 ms.reviewer: ''
-description: Opret et "Hej verden"-API-opkald til Microsoft Defender for Endpoint API.
+description: Opret et API-kald af "Hej verden"-typografi til Microsoft Defender for Endpoint API.
 keywords: apis, understøttede api'er, avanceret jagt, forespørgsel, microsoft defender atp, microsoft defender til slutpunkt
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,24 +16,24 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 55d01dfe6d0b6fd69bf32016b1b5dd585827e168
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: bd8f48e8396225fc03441cfc7c8ed69fa3f378bb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63592902"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475603"
 ---
-# <a name="microsoft-defender-for-endpoint-api---hello-world"></a>Microsoft Defender til Endpoint API – Hello World
+# <a name="microsoft-defender-for-endpoint-api---hello-world"></a>Microsoft Defender for Endpoint API – Hello World
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 
->Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+>Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -51,15 +51,15 @@ Det tager kun 5 minutter at gøre dette i to trin:
 
 ### <a name="do-i-need-a-permission-to-connect"></a>Skal jeg have tilladelse til at oprette forbindelse?
 
-For programregistreringsfasen skal du have en **Global administratorrolle** i Azure Active Directory (Azure AD).
+For programregistreringsfasen skal du have en Global administrator **rolle i** din Azure Active Directory (Azure AD).
 
 ### <a name="step-1---create-an-app-in-azure-active-directory"></a>Trin 1 – Opret en app i Azure Active Directory
 
-1. Log på [Azure med](https://portal.azure.com) din **globale administratorbruger** .
+1. Log på [Azure](https://portal.azure.com) med din **Global administrator** bruger.
 
 2. Gå til **Azure Active Directory** \> **appregistreringer** \> **Ny registrering**.
 
-   :::image type="content" alt-text="Billede af Microsoft Azure og navigation til programregistrering." source="images/atp-azure-new-app2.png" lightbox="images/atp-azure-new-app2.png":::
+   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Indstillingen Appregistreringer under ruden Administrer i Azure Active Directory portal"  lightbox="images/atp-azure-new-app2.png":::
 
 3. I registreringsformularen skal du vælge et navn til dit program og derefter klikke på **Registrer**.
 
@@ -70,11 +70,11 @@ For programregistreringsfasen skal du have en **Global administratorrolle** i Az
      > [!NOTE]
      > WindowsDefenderATP vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at få det vist.
 
-     :::image type="content" alt-text="Billede af API-adgang og API-markering1." source="images/add-permission.png" lightbox="images/add-permission.png":::
+     :::image type="content" source="images/add-permission.png" alt-text="Indstillingen API-tilladelser under ruden Administrer i Azure Active Directory portal" lightbox="images/add-permission.png":::
 
    - Vælg **Application permissions** \> **Alert.Read.All** > Klik **på Tilføj tilladelser**.
 
-     :::image type="content" alt-text="Billede af API-adgang og API-markering2." source="images/application-permissions.png" lightbox="images/application-permissions.png":::
+     :::image type="content" source="images/application-permissions.png" alt-text="Ruder for tilladelsestype og indstillinger på siden Med anmodnings-API-tilladelser" lightbox="images/application-permissions.png":::
 
      > [!IMPORTANT]
      > Du skal vælge de relevante tilladelser. "Læs alle beskeder" er kun et eksempel!
@@ -90,7 +90,7 @@ For programregistreringsfasen skal du have en **Global administratorrolle** i Az
    > [!NOTE]
    > Hver gang du tilføjer tilladelse, skal du klikke på **Giv samtykke,** før den nye tilladelse træder i kraft.
 
-   ![Billede af Giv tilladelser.](images/grant-consent.png)
+   :::image type="content" source="images/grant-consent.png" alt-text="Indstillingen til samtykke med tilladelse i Azure Active Directory portal" lightbox="images/grant-consent.png":::
 
 6. Føj en hemmelighed til programmet.
 
@@ -99,13 +99,13 @@ For programregistreringsfasen skal du have en **Global administratorrolle** i Az
     > [!IMPORTANT]
     > Når du har klikket på **Tilføj, skal du kopiere den genererede hemmelige værdi**. Du kan ikke hente noget, når du er væk!
 
-    ![Billede af Opret appnøgle.](images/webapp-create-key2.png)
+    :::image type="content" source="images/webapp-create-key2.png" alt-text="Menupunktet Certifikater & hemmeligholde i ruden Administrer i Azure Active Directory portal" lightbox="images/webapp-create-key2.png":::
 
 7. Skriv dit program-id og dit lejer-id ned.
 
    På programsiden skal du gå **til Oversigt** og kopiere følgende:
 
-   ![Billede af oprettet app-id.](images/app-and-tenant-ids.png)
+   :::image type="content" source="images/app-and-tenant-ids.png" alt-text="Detaljeruden for programmet under menuelementet Oversigt i Azure Active Directory portal" lightbox="images/app-and-tenant-ids.png":::
 
 Udført! Du har registreret et program!
 
@@ -143,7 +143,7 @@ Udført! Du har registreret et program!
   - Indsætte i feltet øverst.
   - Se efter afsnittet "Roller". Find rollen _Alert.Read.All_ .
 
-  :::image type="content" alt-text="Billede jwt.ms." source="images/api-jwt-ms.png" lightbox="images/api-jwt-ms.png":::
+  :::image type="content" source="images/api-jwt-ms.png" alt-text="Ruden Afkodet token for jwt.ms" lightbox="images/api-jwt-ms.png":::
 
 ### <a name="lets-get-the-alerts"></a>Lad os få beskederne!
 
@@ -196,6 +196,6 @@ Du er færdig! Du har lige fået:
 
 ## <a name="related-topic"></a>Relateret emne
 
-- [Microsoft Defender til endpoint-API'er](exposed-apis-list.md)
-- [Få adgang til Microsoft Defender til slutpunkt med programkontekst](exposed-apis-create-app-webapp.md)
-- [Få adgang til Microsoft Defender til slutpunkt med brugerkontekst](exposed-apis-create-app-nativeapp.md)
+- [Microsoft Defender for Endpoint API'er](exposed-apis-list.md)
+- [Access Microsoft Defender for Endpoint med programkontekst](exposed-apis-create-app-webapp.md)
+- [Access Microsoft Defender for Endpoint med brugerkontekst](exposed-apis-create-app-nativeapp.md)

@@ -1,5 +1,5 @@
 ---
-title: Mailsikkerhed med Threat Explorer i Microsoft Defender til Office 365
+title: Mailsikkerhed med Threat Explorer i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -17,14 +17,14 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3ee97c54174fc7aaa2cd6d653dcd9fdd8298376d
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: da555769cbff177fff7de4ee4a25908e1eee3782
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63606547"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475119"
 ---
-# <a name="email-security-with-threat-explorer-in-microsoft-defender-for-office-365"></a>Mailsikkerhed med Threat Explorer i Microsoft Defender til Office 365
+# <a name="email-security-with-threat-explorer-in-microsoft-defender-for-office-365"></a>Mailsikkerhed med Threat Explorer i Microsoft Defender for Office 365
 
 I denne artikel:
 
@@ -39,7 +39,7 @@ I denne artikel forklares det, hvordan du kan få vist og undersøge malware og 
 
 **Gælder for:**
 
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 ## <a name="view-malware-detected-in-email"></a>Få vist malware registreret i en mail
@@ -56,13 +56,13 @@ For at få malware registreret i mails, der er sorteret efter Microsoft 365, [**
 
 3. Klik **på Afsender**, og **vælg derefter** \> **Teknologi til grundlæggende** registrering på rullelisten.
 
-   :::image type="content" source="../../media/exploreremailmalwaredetectiontech-newimg.png" alt-text="teknologi til registrering af malware.":::
+   :::image type="content" source="../../media/exploreremailmalwaredetectiontech-newimg.png" alt-text="Teknologien til registrering af malware" lightbox="../../media/exploreremailmalwaredetectiontech-newimg.png":::
 
    Dine registreringsteknologier er nu tilgængelige som filtre til rapporten.
 
 4. Vælg en indstilling, og klik derefter på **Opdater** for at anvende filteret (opdater ikke browservinduet).
 
-   :::image type="content" source="../../media/exploreremailmalwaredetectiontech2-new.png" alt-text="valgt registreringsteknologi.":::
+   :::image type="content" source="../../media/exploreremailmalwaredetectiontech2-new.png" alt-text="valgt registreringsteknologi" lightbox="../../media/exploreremailmalwaredetectiontech2-new.png":::
 
    Rapporten opdateres for at vise de resultater, som malware registreret i en mail, ved hjælp af den teknologiindstilling, du har valgt. Herfra kan du foretage yderligere analyser.
 
@@ -79,7 +79,7 @@ Du kan bruge indstillingen **Rapportrengør** i Stifinder til at rapportere en m
 4. Rul ned på listen over indstillinger for at gå til **sektionen Start ny** indsendelse, og vælg derefter **Rapportopryd.** Der vises en pop op-meddelelse.
 
    > [!div class="mx-imgBorder"]
-   > ![Indstillingen Rapportrengør i Stifinder.](../../media/report-clean-option-explorer.png) 
+   > :::image type="content" source="../../media/report-clean-option-explorer.png" alt-text="Indstillingen Rapportrengøring i Stifinder" lightbox="../../media/report-clean-option-explorer.png":::
 
 5. Slå skyderen til **Til**. På rullelisten skal du angive det antal dage, meddelelsen skal fjernes, tilføje en note, hvis det er nødvendigt, og derefter vælge **Send**. 
 
@@ -94,13 +94,13 @@ Du kan få vist phishingforsøg via URL-adresser i en mail, herunder en liste ov
 2. På **rullelisten** Vis skal du vælge **Email** \> **Phish**.
 
    > [!div class="mx-imgBorder"]
-   > ![Menuen Vis for Stifinder i phishing-kontekst.](../../media/ExplorerViewEmailPhishMenu.png)
+   > :::image type="content" source="../../media/ExplorerViewEmailPhishMenu.png" alt-text="Menuen Vis for Stifinder i phishing-kontekst" lightbox="../../media/ExplorerViewEmailPhishMenu.png":::
 
 3. Klik **på Afsender**, og vælg derefter **URL-adresser** \> **Klik** på konklusion på rullelisten.
 
 4. I de indstillinger, der vises, skal du vælge en eller flere  indstillinger, f.eks. Blokeret og Blokeret **, og** derefter klikke på **Opdater (opdater** ikke browservinduet).
 
-    :::image type="content" source="../../media/threatexploreremailphishclickverdict-new.png" alt-text="WEBADRESSEr og klik på bedømmelser.":::
+    :::image type="content" source="../../media/threatexploreremailphishclickverdict-new.png" alt-text="URL-adresserne, og klik på bedømmelser" lightbox="../../media/threatexploreremailphishclickverdict-new.png":::
 
    Rapporten opdateres, så der vises to forskellige URL-tabeller på **fanen URL-adresser** under rapporten:
 
@@ -111,7 +111,7 @@ Du kan få vist phishingforsøg via URL-adresser i en mail, herunder en liste ov
    De to URL-tabeller viser de vigtigste URL-adresser i phishing-mails ved hjælp af leveringshandling og placering. Tabellerne viser URL-klik, der blev blokeret eller besøgt på trods af en advarsel, så du kan se, hvilke potentielt dårlige links der blev vist til brugerne, og som brugerne klikkede på. Herfra kan du foretage yderligere analyser. Eksempelvis kan du under diagrammet se de øverste URL-adresser i mails, der blev blokeret i din organisations miljø.
 
    > [!div class="mx-imgBorder"]
-   > ![Url-adresser for Stifinder, der blev blokeret.](../../media/ExplorerPhishClickVerdictURLs.png)
+   > :::image type="content" source="../../media/ExplorerPhishClickVerdictURLs.png" alt-text="URL-adresser for Stifinder, der blev blokeret" lightbox="../../media/ExplorerPhishClickVerdictURLs.png":::
 
    Vælg en URL-adresse for at få vist mere detaljerede oplysninger.
 
@@ -134,7 +134,7 @@ I pop op-menuen Mail eller URL-adresse, Øverste klik og i vores filtreringsople
 ## <a name="start-automated-investigation-and-response"></a>Start automatiseret undersøgelse og svar
 
 > [!NOTE]
-> Automatiserede undersøgelses- og svarmuligheder er tilgængelige *i Microsoft Defender Office 365 Plan 2* *og Office 365 E5*.
+> Automatiserede undersøgelses- og svarmuligheder er tilgængelige *Microsoft Defender for Office 365 Plan 2* *og Office 365 E5*.
 
 [Automatiseret undersøgelse og svar](automated-investigation-response-office.md) kan spare tid og besvær for sikkerhedsteamet, når det bruges på at undersøge og mindske cyberangreb. Ud over at konfigurere beskeder, der kan udløse en sikkerhedsspilbog, kan du starte en automatisk undersøgelses- og svarproces fra en visning i Stifinder. Du kan finde flere [oplysninger i Eksempel: En sikkerhedsadministrator udløser en undersøgelse fra Stifinder](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 

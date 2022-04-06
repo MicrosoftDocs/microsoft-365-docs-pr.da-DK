@@ -22,12 +22,12 @@ ms.localizationpriority: high
 description: Administratorer kan få mere at vide om de antipoofing-funktioner, der er tilgængelige i Exchange Online Protection (EOP), som kan hjælpe med at reducere phishingangreb fra forfalskede afsendere og domæner.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b93f2e1543a70ca7b5dde8ab5e83d48fba5f5a5e
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+ms.openlocfilehash: 140ed15b793b5d6b74b39a35b854b7432a658bc3
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63588938"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475163"
 ---
 # <a name="anti-spoofing-protection-in-eop"></a>Beskyttelse mod spoofing i EOP
 
@@ -35,7 +35,7 @@ ms.locfileid: "63588938"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser, indeholder EOP funktioner, der beskytter din organisation mod forfalskede (forfalskede) afsendere.
@@ -48,24 +48,24 @@ Følgende antispoofing-teknologier er tilgængelige i EOP:
 
   EOP analyserer og blokerer meddelelser, der ikke kan godkendes ved en kombination af standardmetode til mailgodkendelse og teknikker til afsender ry.
 
-  ![EOP-antispoofingkontroller.](../../media/eop-anti-spoofing-protection.png)
+  :::image type="content" source="../../media/eop-anti-spoofing-protection.png" alt-text="EOP-kontrol mod spoofing" lightbox="../../media/eop-anti-spoofing-protection.png":::
 
 - **Efterlignet intelligensindsigt**: Gennemse efterlignede meddelelser fra afsendere i interne og eksterne domæner i løbet af de seneste 7 dage, og tillad eller bloker disse afsendere. Du kan finde flere oplysninger [under Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md).
 
 - **Tillad eller bloker spoof-afsendere på lejerens tilladelses- eller blokeringsliste**: Når du tilsidesætter konklusionen i spoof intelligence-indsigten, bliver den spooferede afsender til en manuel tillad eller bloker post, der kun vises på fanen **Spoof** på lejerens tilladelses-/blokeringsliste. Du kan også manuelt oprette tillade eller blokere poster for spoof afsendere, før de registreres af efterlignet intelligens. Få mere at vide under [Administrer lejerens tilladelses-/blokeringsliste i EOP](tenant-allow-block-list.md).
 
-- **Antiphishing-politikker**: I EOP og Microsoft Defender for Office 365 indeholder antiphishing-politikker følgende antiphofing-indstillinger:
+- **Antiphishing-politikker**: I EOP og Microsoft Defender for Office 365 indeholder antiphishing-politikker følgende antispoofing-indstillinger:
   - Slå efterlignet intelligens til eller fra.
   - Slå ikke-godkendt afsenderidentifikation i Outlook til eller fra.
   - Angiv handlingen for blokerede efterlignede afsendere.
 
   Du kan finde flere oplysninger [under Indstillinger for spoof i antiphishing-politikker](set-up-anti-phishing-policies.md#spoof-settings).
 
-  **Bemærk**! Antiphishing-politikker i Defender til Office 365 indeholder tilføjelsesbeskyttelse, herunder **beskyttelse mod efterligning**. Du kan finde flere oplysninger [under Eksklusive indstillinger i antiphishing-politikker i Microsoft Defender Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  **Bemærk**! Antiphishing-politikker i Defender for Office 365 indeholder tilføjelsesbeskyttelse, herunder **repræsentationsbeskyttelse**. Du kan finde flere oplysninger [under Eksklusive indstillinger i antiphishing-politikker i Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 - **Rapport over spoof-registreringer**: Du kan finde flere oplysninger i [Rapporten Spoof-registreringer](view-email-security-reports.md#spoof-detections-report).
 
-  **Bemærk**! Defender for Office 365 organisationer kan også bruge registreringer i realtid (Plan 1) eller Threat Explorer (Plan 2) til at få vist oplysninger om forsøg på phishing. Du kan finde flere oplysninger [Microsoft 365 undersøgelse af trusler og svar](office-365-ti.md).
+  **Bemærk**: Defender for Office 365 organisationer kan også bruge registreringer i realtid (Plan 1) eller Threat Explorer (Plan 2) til at få vist oplysninger om forsøg på phishing. Du kan finde flere oplysninger [Microsoft 365 undersøgelse af trusler og svar](office-365-ti.md).
 
 ## <a name="how-spoofing-is-used-in-phishing-attacks"></a>Sådan bruges spoofing i phishing-angreb
 

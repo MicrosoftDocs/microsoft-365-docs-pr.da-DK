@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: b707a6f684df6b9888fb8f2d50c4bba9a6dd3195
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 71755add523b3426d144f748ab3582e3a3975dc6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597612"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475229"
 ---
-# <a name="investigate-devices-in-the-microsoft-defender-for-endpoint-devices-list"></a>Undersøg enhederne på listen Microsoft Defender for Slutpunktsenheder
+# <a name="investigate-devices-in-the-microsoft-defender-for-endpoint-devices-list"></a>Undersøg enhederne Microsoft Defender for Endpoint listen Over enheder
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatemachines-abovefoldlink)
@@ -53,7 +53,7 @@ Når du undersøger en bestemt enhed, får du vist:
 - Faner (oversigt, beskeder, tidslinje, sikkerhedsanbefalinger, lager over software, opdagede sårbarheder, manglende KBs)
 - Kort (aktive beskeder, brugere, der er logget på, sikkerhedsvurdering)
 
-![Billede af enhedsvisning.](images/specific-device.png)
+:::image type="content" source="images/specific-device.png" alt-text="Enhedsvisning" lightbox="images/specific-device.png":::
 
 > [!NOTE]
 > På grund af produktbegrænsning overvejer enhedsprofilen ikke alle cyber beviser, når tidsrammen "Sidst set" bestemmes (som det også ses på enhedens side).
@@ -91,13 +91,13 @@ Fanerne indeholder relevante oplysninger om sikkerhed og trusselsforebyggelse ve
 
 Fanen **Oversigt** viser kortene [for aktive](#cards) beskeder, brugere, der er logget på, og sikkerhedsvurdering.
 
-![Billede af fanen Oversigt på enhedssiden.](images/overview-device.png)
+:::image type="content" source="images/overview-device.png" alt-text="Fanen Oversigt på enhedssiden" lightbox="images/overview-device.png":::
 
 ### <a name="alerts"></a>Beskeder
 
 Fanen **Beskeder indeholder** en liste over beskeder, der er knyttet til enheden. Denne liste er en filtreret version af køen [Beskeder og viser](alerts-queue.md) en kort beskrivelse af beskeden, alvorsgrad (høj, mellem, lav, informationskø), status i køen (ny, i gang, løst), klassificering (ikke angivet, falsk besked, sand besked), undersøgelsestilstand, beskedkategori, hvem der adresserer beskeden, og den seneste aktivitet. Du kan også filtrere beskederne.
 
-![Billede af beskeder, der er relateret til enheden.](images/alerts-device.png)
+:::image type="content" source="images/alerts-device.png" alt-text="Fanen for de beskeder, der er relateret til enheden" lightbox="images/alerts-device.png":::
 
 Når cirkelikonet til venstre for en besked er markeret, vises en pop op-meddelelse. Fra dette panel kan du administrere beskeden og få vist flere detaljer såsom hændelsesnummer og relaterede enheder. Du kan vælge flere beskeder ad gangen.
 
@@ -118,7 +118,7 @@ Tidslinjen giver dig også mulighed for selektivt at analysere ned i hændelser,
 > - [5031](/windows/security/threat-protection/auditing/event-5031) – program blokeret fra at acceptere indgående forbindelser på netværket
 > - [5157](/windows/security/threat-protection/auditing/event-5157) – blokeret forbindelse
 
-![Billede af enhedens tidslinje med begivenheder.](images/timeline-device.png)
+:::image type="content" source="images/timeline-device.png" alt-text="Enhedens tidslinje med begivenheder" lightbox="images/timeline-device.png":::
 
 Nogle af funktionerne omfatter:
 
@@ -146,47 +146,47 @@ Vælg en begivenhed for at få vist relevante detaljer om den pågældende begiv
 
 For yderligere at undersøge begivenheden og relaterede begivenheder kan du hurtigt køre en [avanceret forespørgsel](advanced-hunting-overview.md) på en forespørgsel ved at **vælge Søge efter relaterede begivenheder**. Forespørgslen returnerer den valgte hændelse og listen over andre hændelser, der opstod omkring samme tid på samme slutpunkt.
 
-![Billede af panelet med begivenhedsdetaljer.](images/event-details.png)
+:::image type="content" source="images/event-details.png" alt-text="Panelet med begivenhedsoplysninger" lightbox="images/event-details.png":::
 
 ### <a name="security-recommendations"></a>Sikkerhedsanbefalinger
 
-**Der genereres** sikkerhedsanbefalinger fra Microsoft Defender for [Endpoints funktionalitet til & trussel mod](tvm-dashboard-insights.md) sikkerhedssikkerhedsrisiko. Når du vælger en anbefaling, vises der et panel, hvor du kan få vist relevante detaljer, f.eks. en beskrivelse af anbefalingen og de potentielle risici ved ikke at gøre det. Se [Sikkerhedsanbefaling](tvm-security-recommendation.md) for at få flere oplysninger.
+**Der genereres** sikkerhedsanbefalinger fra Microsoft Defender for Endpoint i [Administration af & af](tvm-dashboard-insights.md) trusler. Når du vælger en anbefaling, vises der et panel, hvor du kan få vist relevante detaljer, f.eks. en beskrivelse af anbefalingen og de potentielle risici ved ikke at gøre det. Se [Sikkerhedsanbefaling](tvm-security-recommendation.md) for at få flere oplysninger.
 
-![Billede af fanen med sikkerhedsanbefalinger.](images/security-recommendations-device.png)
+:::image type="content" source="images/security-recommendations-device.png" alt-text="Fanen med anbefalinger om sikkerhed" lightbox="images/security-recommendations-device.png":::
 
 ### <a name="software-inventory"></a>Lager over software
 
 Under **fanen Softwarelager** kan du få vist software på enheden sammen med eventuelle trusler eller trusler. Når du vælger navnet på softwaren, kommer du til siden med softwareoplysninger, hvor du kan få vist sikkerhedsanbefalinger, opdagede sårbarheder, installerede enheder og versionsfordeling. Se [Softwarelager for at](tvm-software-inventory.md) få flere oplysninger
 
-![Billede af fanen Lager over software.](images/software-inventory-device.png)
+:::image type="content" source="images/software-inventory-device.png" alt-text="Fanen Softwarelager" lightbox="images/software-inventory-device.png":::
 
 ### <a name="discovered-vulnerabilities"></a>Opdagede sårbarheder
 
 Fanen **Opdagede** sårbarheder viser navn, alvor og trusselsindsigt for opdagede sårbarheder på enheden. Hvis du vælger bestemte sårbarheder, vises en beskrivelse og detaljer.
 
-![Billede af fanen med opdagede sårbarheder.](images/discovered-vulnerabilities-device.png)
+:::image type="content" source="images/discovered-vulnerabilities-device.png" alt-text="Fanen Opdagede sårbarheder" lightbox="images/discovered-vulnerabilities-device.png":::
 
 ### <a name="missing-kbs"></a>Manglende KBs
 Fanen **Manglende KBs** viser de manglende sikkerhedsopdateringer til enheden.
 
-![Billede af fanen manglende kbs.](images/missing-kbs-device.png)
+:::image type="content" source="images/missing-kbs-device.png" alt-text="Fanen Manglende KBs" lightbox="images/missing-kbs-device.png":::
 
 ## <a name="cards"></a>Kort
 
 ### <a name="active-alerts"></a>Aktive beskeder
 
-**Azure Advanced Threat Protection-kortet** viser en omfattende oversigt over beskeder, der er relateret til enheden og deres risikoniveau, hvis du har aktiveret funktionen Microsoft Defender for Identity, og der er nogen aktive beskeder. Du kan finde flere oplysninger i "Besked"-detaljeadgangen.
+**Azure Advanced Threat Protection-kortet** viser en omfattende oversigt over beskeder, der er relateret til enheden og deres risikoniveau, hvis du har aktiveret Microsoft Defender for Identity-funktionen, og der er nogen aktive beskeder. Du kan finde flere oplysninger i "Besked"-detaljeadgangen.
 
-![Billede af kortet med aktive beskeder.](images/risk-level-small.png)
+:::image type="content" source="images/risk-level-small.png" alt-text="Det aktive beskedkort" lightbox="images/risk-level-small.png":::
 
 > [!NOTE]
-> Du skal aktivere integration på både Microsoft Defender for Identity og Defender for Endpoint for at bruge denne funktion. I Defender til Slutpunkt kan du aktivere denne funktion i avancerede funktioner. Du kan finde flere oplysninger om, hvordan du aktiverer avancerede funktioner, [under Slå avancerede funktioner til](advanced-features.md).
+> Du skal aktivere integrationen på både Microsoft Defender for Identity Defender for Endpoint for at bruge denne funktion. I Defender til Slutpunkt kan du aktivere denne funktion i avancerede funktioner. Du kan finde flere oplysninger om, hvordan du aktiverer avancerede funktioner, [under Slå avancerede funktioner til](advanced-features.md).
 
 ### <a name="logged-on-users"></a>Brugere, der er logget på
 
 Kortet **Brugere, der er** logget på, viser, hvor mange brugere der har logget på de seneste 30 dage sammen med de mest og mindst hyppige brugere. Hvis du vælger linket "Se alle brugere", åbnes detaljeruden, som viser oplysninger som f.eks. brugertype, logontype, og hvornår brugeren først og sidst blev set. Få mere at vide under [Undersøg brugerobjekter](investigate-user.md).
 
-![Billede af ruden brugeroplysninger.](images/logged-on-users.png)
+:::image type="content" source="images/logged-on-users.png" alt-text="Ruden med brugeroplysninger" lightbox="images/logged-on-users.png":::
 
 > [!NOTE]
 > Den "hyppigste" brugerværdi beregnes kun på baggrund af beviser for brugere, der har logget interaktivt på.
@@ -196,13 +196,13 @@ Kortet **Brugere, der er** logget på, viser, hvor mange brugere der har logget 
 
 Kortet **til sikkerhedsvurderinger** viser det overordnede eksponeringsniveau, sikkerhedsanbefalinger, installeret software og opdagede sårbarheder. En enheds eksponeringsniveau bestemmes af den kumulative effekt af dens ventende sikkerhedsanbefalinger.
 
-![Billede af kortet til sikkerhedsvurderinger.](images/security-assessments.png)
+:::image type="content" source="images/security-assessments.png" alt-text="Kortet til sikkerhedsvurderinger" lightbox="images/security-assessments.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Få vist og organiser køen for Microsoft Defender for Endpoint Alerts](alerts-queue.md)
-- [Administrer Microsoft Defender for Endpoint-beskeder](manage-alerts.md)
-- [Undersøg Microsoft Defender for at få slutpunktsbeskeder](investigate-alerts.md)
+- [Få vist og organiser Microsoft Defender for Endpoint i køen vigtige beskeder](alerts-queue.md)
+- [Administrer Microsoft Defender for Endpoint vigtige beskeder](manage-alerts.md)
+- [Undersøg Microsoft Defender for Endpoint vigtige beskeder](investigate-alerts.md)
 - [Undersøg en fil, der er knyttet til en Defender for Endpoint-besked](investigate-files.md)
 - [Undersøg en IP-adresse, der er knyttet til en Defender for Endpoint-besked](investigate-ip.md)
 - [Undersøg et domæne, der er knyttet til en Defender for Endpoint-besked](investigate-domain.md)

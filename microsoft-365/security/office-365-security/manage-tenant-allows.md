@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan lære, hvordan de konfigurerer tillader i lejerens tilladelses-/blokeringsliste i sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3823290e9f239b14e4bf97fe1ae8ef7020561697
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 755a23d7cddbeb2943809681fc90556a2adac25b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592509"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475537"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Tilføj giver tilladelse i lejerens tilladelses-/blokeringsliste
 
@@ -29,7 +29,7 @@ ms.locfileid: "63592509"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Administratorer kan ikke tilføje tilladelse direkte til lejerens tilladelses-/blokeringsliste. I stedet skal du bruge administratorindsendelsesprocessen til at sende den meddelelse, der blev blokeret, så den tilsvarende URL-adresse, fil og/eller afsendere bliver føjet til lejerens tilladelses-/blokeringsliste. Hvis en blok af filen, URL-adressen eller afsenderen ikke er sket, oprettes tillad ikke. I de fleste tilfælde, hvor meddelelsen blev fundet at være en falsk positiv, der blev blokeret forkert, bevares tilladelsen så længe, som det er nødvendigt, for at give systemet tid til at tillade dem naturligt.
@@ -55,9 +55,7 @@ Tillad afsendere (eller domæner) på **siden Indsendelser** i Microsoft 365 Def
 
 7. Klik på knappen Send, når du **er** færdig.
 
-> [!div class="mx-imgBorder"]
 > ![Send malware til Microsoft for eksempel til analyse.](../../media/admin-submission-allow-messages.png)
-
 ## <a name="add-url-allows-using-the-submissions-portal"></a>Tilføj URL-adresse gør det muligt at bruge indsendelsesportalen
 
 Tillad URL-adresser på **siden** Indsendelser i Microsoft 365 Defender.
@@ -78,7 +76,6 @@ Tillad URL-adresser på **siden** Indsendelser i Microsoft 365 Defender.
 
 > [!div class="mx-imgBorder"]
 > ![Send URL-adresse til analyse.](../../media/submit-url-for-analysis.png)
-
 ## <a name="add-file-allows-using-the-submissions-portal"></a>Tilføj fil tillader brug af indsendelsesportalen
 
 Tillad filer på **siden Indsendelser** i Microsoft 365 Defender.

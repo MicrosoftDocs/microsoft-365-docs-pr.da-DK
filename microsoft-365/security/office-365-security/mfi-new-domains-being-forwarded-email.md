@@ -13,12 +13,12 @@ description: Administratorer kan få mere at vide om, hvordan de bruger mailinds
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: df4f9e79439d435059374dd066a5298ba73d329b
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e23d63a519bf69f94ce4990d8851d673826dcb5c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679648"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475075"
 ---
 # <a name="new-domains-being-forwarded-email-insight-in-the-security--compliance-center"></a>Nye domæner, der videresendes mailindsigt i Security & Compliance Center
 
@@ -26,7 +26,7 @@ ms.locfileid: "63679648"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Der er gyldige forretningsmæssige grunde til at videresende mails til eksterne modtagere i bestemte domæner. Det er dog mistænkeligt, når brugerne i organisationen pludselig begynder at videresende meddelelser til et domæne, hvor ingen i organisationen nogensinde har videresendt meddelelser til (et nyt domæne).
@@ -37,11 +37,12 @@ De **nye domæner,** der videresendes mailindsigt [i Security & Compliance Cente
 
 Dette indsigt vises kun, når problemet er registreret, og det vises på [rapportsiden for videresendelse](view-mail-flow-reports.md#forwarding-report) .
 
-![Nye domæner, der videresendes mailindsigt.](../../media/mfi-new-domains-being-forwarded.png)
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded.png" alt-text="De nye domæner, der videresendes mailindsigt" lightbox="../../media/mfi-new-domains-being-forwarded.png":::
+
 
 Når du klikker på widgetten, vises en pop op-meddelelse, hvor du kan finde flere oplysninger om de videresendte meddelelser, herunder et link tilbage til [rapporten om videresendelse](view-mail-flow-reports.md#forwarding-report).
 
-![Pop op-vindue med detaljer, der vises, når du klikker på indsigt i nye domæner, der videresendes til mail.](../../media/mfi-new-domains-being-forwarded-details.png)
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded-details.png" alt-text="Pop op-vindue med Detaljer, der vises, når du klikker på indsigt i nye domæner, der videresendes via mail" lightbox="../../media/mfi-new-domains-being-forwarded-details.png":::
 
 Du kan også få adgang til denne detaljeside, når du vælger indsigten,  når du klikker på Vis alle i området **Top insights & anbefalinger** på (**Dashboard for** \> **rapporter eller ).** <https://protection.office.com/insightdashboard>
 

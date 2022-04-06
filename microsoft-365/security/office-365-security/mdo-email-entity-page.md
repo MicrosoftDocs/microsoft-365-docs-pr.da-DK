@@ -16,13 +16,13 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Microsoft Defender til Office 365 E5- og P1- og P2-kunder kan nu få en 360-graders visning af hver mail med en enhedsside for mail.
-ms.openlocfilehash: 263411d6f0c9931dfd03fbf8b89fd24a86c3c9e6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Microsoft Defender for Office 365 E5- og P1- og P2-kunder kan nu få en 360-graders visning af hver mail med en enhedsside for mail.
+ms.openlocfilehash: d75ebd9b54fc5e7919154a4f65e0d5fc0e77e117
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63602985"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475449"
 ---
 # <a name="the-email-entity-page"></a>Siden Mailenhed
 
@@ -32,7 +32,7 @@ ms.locfileid: "63602985"
 - [Brug sidefaner for mailenhed](#use-email-entity-page-tabs)
 - [Ny på siden mailenhed](#new-to-the-email-entity-page)
 
-Administratorer for Microsoft Defender for Office 365 E5 og Defender til Office P1 og P2 har en 360-graders visning af mail ved hjælp af siden **Mailenhed**. Denne mailside blev oprettet for at forbedre oplysningerne i pop op-vinduet [med "mailoplysninger" i Threat Explorer](threat-explorer-views.md).
+Administratorer af Microsoft Defender for Office 365 E5 og Defender for Office P1 og P2 har en 360-graders visning af mail ved hjælp af siden **Mailenhed**. Denne mailside blev oprettet for at forbedre oplysningerne i pop op-vinduet [med "mailoplysninger" i Threat Explorer](threat-explorer-views.md).
 
 ## <a name="reach-the-email-entity-page"></a>Få adgang til siden mailenhed
 
@@ -40,9 +40,9 @@ Siden med mailenhed er tilgængelig i Microsoft 365 Defender på Mailudbyder <ht
 
 I **Stifinder** skal du vælge emnet for en mail, du undersøger. En Guldbjælke vises øverst i mailen for den pågældende mail. Denne invitation til den nye side, hvor der står "Prøv vores nye side med e-mail-enheder med forbedrede data...". Vælg for at få vist den nye side.
 
-:::image type="content" source="../../media/email-entities-1-navigation-to-ee.png" alt-text="Du får vist et guldbanner med ordene * Prøv vores nye side med forbedrede data * for at navigere til den nye oplevelse.":::
+:::image type="content" source="../../media/email-entities-1-navigation-to-ee.png" alt-text="Det gyldne banner med ordene * Prøv vores nye side med forbedrede data * for at navigere til den nye oplevelse" lightbox="../../media/email-entities-1-navigation-to-ee.png":::
 
-:::image type="content" source="../../media/email-entities-2-eep.png" alt-text="Dette billede af siden mailenhed fokuserer på overskrifter, som du får vist. Bemærk, at mailoverskriften vises her.":::
+:::image type="content" source="../../media/email-entities-2-eep.png" alt-text="Grafikken på siden mailenhed, der fokuserer på overskrifter, som du får vist" lightbox="../../media/email-entities-2-eep.png":::
 
 > [!NOTE]
 > De tilladelser, der kræves for at få vist og bruge denne side, er de samme som for at få vist **Stifinder**. Administratoren skal være medlem af global administrator eller global læser eller sikkerhedsadministrator eller sikkerhedslæser. Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).
@@ -53,15 +53,15 @@ Strukturen er designet til at være nem at læse og navigere hurtigt i. Forskell
 
 1. De mest påkrævede felter er i venstre side af pop op-siden. Disse detaljer er "sticky", hvilket betyder, at de er forankret til venstre, uanset hvilken fane du navigerer til i resten af pop op-punktet.
 
-    :::image type="content" source="../../media/email-entities-3-left-panel.png" alt-text="Grafik på siden for mailenhed med venstre side fremhævet. Titlen og fakta om levering af mail findes her.":::
+    :::image type="content" source="../../media/email-entities-3-left-panel.png" alt-text="Grafikelementsiden for mailobjektet med venstre side fremhævet" lightbox="../../media/email-entities-3-left-panel.png":::
 
 2. I øverste højre hjørne finder du de handlinger, der kan udføre på en mail. Alle handlinger, der kan gøres via **Stifinder** , vil også være tilgængelige via siden mailenhed.
 
-    :::image type="content" source="../../media/email-entities-5-preview.png" alt-text="Grafik af siden mailenhed med *højre* side fremhævet denne gang. Handlinger som &quot;Forhåndsvisning af mail&quot; og &quot;Gå til karantæne&quot; er her.":::
+    :::image type="content" source="../../media/email-entities-5-preview.png" alt-text="Grafikelementsiden for mailobjektet med højre side fremhævet" lightbox="../../media/email-entities-5-preview.png":::
 
 3. En dybere analyse kan foretages ved at sortere resten af siden. Kontrollér detaljerne for registrering af mail, status for mailgodkendelse og sidehoved. Dette område skal kigges fra gang til gang, men oplysningerne i disse faner er tilgængelige for alle mails.
 
-    :::image type="content" source="../../media/email-entities-4-middle-panel.png" alt-text="Hovedpanelet på denne side indeholder mailens sidehoved og godkendelsesstatus.":::
+    :::image type="content" source="../../media/email-entities-4-middle-panel.png" alt-text="Hovedpanelet på siden, som indeholder mailens sidehoved og godkendelsesstatus" lightbox="../../media/email-entities-4-middle-panel.png":::
 
 ### <a name="use-email-entity-page-tabs"></a>Brug sidefaner for mailenhed
 
@@ -102,7 +102,7 @@ Brugerne får vist forbedrede detonationsoplysninger om kendte skadelige vedhæf
 1.  Funktionsmådedetaljer er en eksport, der viser detaljer om funktionsmåden, f.eks. nøjagtige hændelser, der fandt sted under detonationen, og observerede, der indeholder URL-adresser, IP'er, domæner og filer, der blev fundet under detonationen (og kan enten være problematiske eller bengalske). Vær opmærksom på, at der ikke er nogen detaljer om funktionsmåden:
     - Objektbeholderfiler som .zip eller .rar, der indeholder andre filer.
 
-:::image type="content" source="../../media/email-entities-6-detonation-page.png" alt-text="Skærmbillede af detonationsoversigten, der viser kæden, oversigten, deonationsdetaljerne og skærmbilledet under overskriften *Deep Analysis*.":::
+:::image type="content" source="../../media/email-entities-6-detonation-page.png" alt-text="Detonationsoversigten, der viser kæden, oversigten, deonationsdetaljerne og skærmbilledet under overskriften *Deep Analysis*" lightbox="../../media/email-entities-6-detonation-page.png":::
 
 ### <a name="other-innovations"></a>Andre innovationer
 

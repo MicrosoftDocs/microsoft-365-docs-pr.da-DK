@@ -20,12 +20,12 @@ ms.custom:
 description: I denne artikel kan du se, hvordan du kan bruge listeportalen til at fjerne dig selv fra listen Microsoft 365 afsendere af uønsket mail. Dette er det bedste svar på adresse 5.7.511 Access denied errors.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 58ddb2913ce7ecd047b1d5acb360c8f4c9ff5074
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 627e8f91c9d4730fed6a7fca275e9d53e1dfd7fd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775780"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474789"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Brug aflistingsportalen til at fjerne dig selv fra listen over blokerede afsendere og adresse 5.7.511 Adgang nægtet fejl
 
@@ -33,7 +33,7 @@ ms.locfileid: "63775780"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Får du en fejlmeddelelse, når du forsøger at sende en mail til en modtager, hvis mailadresse er i Microsoft 365 (f.eks. og adresse 5.7.511 Adgang nægtet)? Hvis du mener, at du ikke bør modtage fejlmeddelelsen, kan du bruge frameldingsportalen til at fjerne dig selv fra listen over blokerede afsendere.
@@ -65,7 +65,8 @@ Der er gode grunde til, at afsendere ender på listen over blokerede afsendere, 
 
     Portalen sender en mail til den mailadresse, du leverer. Mailen ser ud som følger:
 
-    ![Skærmbillede af mails, der modtages, når du sender en anmodning via listen over lister.](../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png)
+    :::image type="content" source="../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png" alt-text="Den mail, du modtog, da du sendte en anmodning via listen over lister" lightbox="../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png":::
+
 
 4. Klik på bekræftelseslinket i den mail, der sendes til dig fra listen over lister.
 

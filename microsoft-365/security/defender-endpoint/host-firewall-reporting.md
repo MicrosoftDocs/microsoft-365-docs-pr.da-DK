@@ -1,5 +1,5 @@
 ---
-title: Værtsfirewallrapportering i Microsoft Defender til slutpunkt
+title: Rapportering af værtsfirewall i Microsoft Defender for Endpoint
 description: Vær vært, og få vist firewallrapportering Microsoft 365 Defender portal.
 keywords: windows defender, firewall
 ms.prod: m365-security
@@ -15,19 +15,19 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: b5aaad7363b42e18a0ca21e4d56d118218cec1a9
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: e5bbdd77226f8649f2a781866fef614706e8a789
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63606579"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475273"
 ---
-# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Værtsfirewallrapportering i Microsoft Defender til slutpunkt
+# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Rapportering af værtsfirewall i Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Hvis du er administrator, kan du nu hoste firewallrapportering til [Microsoft 365 Defender-portalen](https://security.microsoft.com). Denne funktion gør det muligt at få vist Windows 10-, Windows 11-, Windows Server 2019- og Windows Server 2022-firewallrapportering fra en centraliseret placering.
@@ -35,7 +35,7 @@ Hvis du er administrator, kan du nu hoste firewallrapportering til [Microsoft 36
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Du skal køre Windows 10 eller Windows 11 eller Windows Server 2019 eller Windows Server 2022.
-- Hvis du vil onboarde enheder til Microsoft Defender for Endpoint-tjenesten, skal du se [her](onboard-configure.md).
+- Hvis du vil onboarde enheder til Microsoft Defender for Endpoint, skal du se [her](onboard-configure.md).
 - Hvis <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> skal begynde at modtage dataene, skal du aktivere **overvågningshændelser** for Windows Defender Firewall med Avanceret sikkerhed:
   - [Overvågningsfiltreringsplatformens pakkedråbe](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
   - [Overvågningsfiltreringsplatformforbindelse](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
@@ -64,7 +64,7 @@ Følgende scenarier understøttes under forhåndsvisning af Ring0.
 Her er et par eksempler på firewall-rapportsiderne. Her finder du en oversigt over indgående, udgående og programaktivitet. Du kan få adgang til denne side direkte ved at gå til <https://security.microsoft.com/firewall>.
 
 > [!div class="mx-imgBorder"]
-> ![Rapporteringsside for værtsfirewall.](\images\host-firewall-reporting-page.png)
+> :::image type="content" source="\images\host-firewall-reporting-page.png" alt-text="Rapporteringssiden for værtsfirewall" lightbox="\images\host-firewall-reporting-page.png":::
 
 Disse rapporter kan også åbnes ved at gå til **ReportsSecurity** >  **ReportDevices** >  (sektion), der er placeret nederst på kortet **Firewall blokerede indgående** forbindelser.
 
@@ -73,21 +73,21 @@ Disse rapporter kan også åbnes ved at gå til **ReportsSecurity** >  **ReportD
 Kort understøtter interaktive objekter. Du kan analysere aktiviteten for en enhed ved at klikke på enhedsnavnet, som åbner Microsoft 365 Defender-portalen på en ny fane og fører dig direkte til fanen Tidslinje **for enhed.**
 
 > [!div class="mx-imgBorder"]
-> ![Computere med blokeret forbindelse.](\images\firewall-reporting-blocked-connection.png)
+> :::image type="content" source="\images\firewall-reporting-blocked-connection.png" alt-text="Computerne med en blokeret forbindelsesside" lightbox="\images\firewall-reporting-blocked-connection.png":::
 
 Du kan nu vælge fanen **Tidslinje** , som giver dig en liste over hændelser, der er knyttet til den pågældende enhed.
 
 Når du har **klikket på** knappen Filtre i øverste højre hjørne af visningsruden, skal du vælge den ønskede begivenhedstype. I dette tilfælde skal du **vælge Firewall-hændelser** , og ruden filtreres til Firewall-hændelser.
 
 > [!div class="mx-imgBorder"]
-> ![Knappen Filtre.](\images\firewall-reporting-filters-button.png)
+> :::image type="content" source="\images\firewall-reporting-filters-button.png" alt-text="Knappen Filtre" lightbox="\images\firewall-reporting-filters-button.png":::
 
 ### <a name="drill-into-advanced-hunting-preview-refresh"></a>Analyser ind i avanceret jagt (forhåndsvisning af opdatering)
 
 Firewallrapporter understøtter at der kan analyseres fra kortet direkte **ind i Avanceret** jagt ved at klikke **på knappen Åbn avanceret jagt** . Forespørgslen udfyldes på forhånd.
 
 > [!div class="mx-imgBorder"]
-> ![Åbn avanceret jagtknap.](\images\firewall-reporting-advanced-hunting.png)
+> :::image type="content" source="\images\firewall-reporting-advanced-hunting.png" alt-text="Knappen Åbn avanceret jagt" lightbox="\images\firewall-reporting-advanced-hunting.png":::
 
 Forespørgslen kan nu udføres, og alle relaterede Firewall-hændelser fra de seneste 30 dage kan udforskes.
 
