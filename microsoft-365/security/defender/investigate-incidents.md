@@ -23,12 +23,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 776680db7b2666cc964f82e88cd6af9e6bab7558
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 8138c07ab871ab1a6a8d89df980c914983bbb58e
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500249"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666938"
 ---
 # <a name="investigate-incidents-in-microsoft-365-defender"></a>Undersøg hændelser i Microsoft 365 Defender
 
@@ -38,168 +38,168 @@ ms.locfileid: "64500249"
 
 - Microsoft 365 Defender
 
-Microsoft 365 Defender samler alle relaterede beskeder, aktiver, undersøgelser og beviser på tværs af dine enheder, brugere og postkasser i en hændelse for at give dig et omfattende indblik i hele dit angrebs brød.
+Microsoft 365 Defender samler alle relaterede beskeder, aktiver, undersøgelser og beviser på tværs af dine enheder, brugere og postkasser i en hændelse for at give dig et omfattende indblik i hele bredden af et angreb.
 
-Inden for en hændelse kan du analysere de beskeder, der påvirker dit netværk, forstå, hvad de betyder, og indsamle beviserne, så du kan udtænke en effektiv afhjælpningsplan.
+I en hændelse analyserer du de beskeder, der påvirker dit netværk, forstår, hvad de betyder, og samler beviserne, så du kan udarbejde en effektiv afhjælpningsplan.
 
 ## <a name="initial-investigation"></a>Indledende undersøgelse
 
-Før du går i gang med detaljerne, skal du se på egenskaberne for og oversigten over hændelsen.
+Før du går i detaljer, skal du se på egenskaberne og resuméet af hændelsen.
 
-Du kan starte med at vælge hændelsen fra markeringskolonnen. Her er et eksempel.
+Du kan starte med at vælge hændelsen i markeringskolonnen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Valg af en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incidents-ss-incident-select.png":::
+:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Valg af en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incidents-ss-incident-select.png":::
 
-Når du gør det, åbnes en oversigtsrude med vigtige oplysninger om hændelsen, f.eks. alvorsgrad, som den er tildelt, og [MITRE ATT&CK-kategorierne&trade;](https://attack.mitre.org/) for hændelsen. Her er et eksempel.
+Når du gør det, åbnes en oversigtsrude med vigtige oplysninger om hændelsen, f.eks. alvorsgrad, hvem den er tildelt, og [MITRE ATT-&CK-kategorierne&trade;](https://attack.mitre.org/) for hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Ruden, der viser oversigtsoplysninger om en hændelse Microsoft 365 Defender portalen." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
+:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Den rude, der viser oversigtsoplysningerne for en hændelse på Microsoft 365 Defender-portalen." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
 
-Herfra kan du vælge **Åbn hændelsesside**. Dette åbner hovedsiden for hændelsen, hvor du kan finde flere oversigtsoplysninger og faner til beskeder, enheder, brugere, undersøgelser og beviser.
+Herfra kan du vælge **Åbn hændelsesside**. Dette åbner hovedsiden for hændelsen, hvor du kan finde flere oversigtsoplysninger og faner for beskeder, enheder, brugere, undersøgelser og beviser.
 
-Du kan også åbne hovedsiden for en hændelse ved at vælge navnet på hændelsen fra hændelseskøen.
+Du kan også åbne hovedsiden for en hændelse ved at vælge hændelsesnavnet i hændelseskøen.
 
 ## <a name="summary"></a>Oversigt
 
-**Oversigtssiden** giver dig et øjebliksbillede af de vigtigste ting, du kan lægge mærke til om hændelsen.
+Siden **Oversigt** giver dig et øjebliksbillede af de vigtigste ting, du kan lægge mærke til om hændelsen.
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Oversigtsoplysninger om en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Oversigtsoplysningerne for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
 
 Oplysningerne er organiseret i disse afsnit.
 
-| Sektion | Beskrivelse |
+| Afsnit | Beskrivelse |
 |:-------|:-----|
-| Beskeder og kategorier | En visuel og numerisk visning af, hvordan avancerede angrebene har udviklet sig mod kill-kæden. Som med andre Microsoft-sikkerhedsprodukter er Microsoft 365 Defender justeret til [MITRE ATT&CK-framework&trade;](https://attack.mitre.org/). Tidslinjen for vigtige beskeder viser den kronologiske rækkefølge, hvori beskederne blev foretaget, samt deres status og navn. |
-| Omfang |  Viser antallet af på påvirkede enheder, brugere og postkasser og viser enhederne i rækkefølge efter risikoniveau og prioritet af undersøgelsen. |
+| Beskeder og kategorier | Et visuelt og numerisk billede af, hvor avanceret angrebet har udviklet sig mod kill-kæden. Som med andre Microsoft-sikkerhedsprodukter er Microsoft 365 Defender justeret i forhold til [MITRE ATT-&CK-strukturen&trade;](https://attack.mitre.org/). Tidslinjen for beskeder viser den kronologiske rækkefølge, som beskederne indtraf i, og for hver af dem deres status og navn. |
+| Omfanget |  Viser antallet af påvirkede enheder, brugere og postkasser og viser enhederne i rækkefølge efter risikoniveau og undersøgelsesprioritet. |
 | Beviser | Viser antallet af enheder, der påvirkes af hændelsen. |
 | Oplysninger om hændelse | Viser egenskaberne for hændelsen, f.eks. mærker, status og alvorsgrad. |
 |||
 
-Brug siden **Oversigt** til at vurdere den relative vigtighed af hændelsen og hurtigt få adgang til de tilknyttede beskeder og påknyttede enheder.
+Brug siden **Oversigt** til at vurdere den relative vigtighed af hændelsen og hurtigt få adgang til de tilknyttede beskeder og påvirkede enheder.
 
 ## <a name="alerts"></a>Beskeder
 
-Under fanen **Vigtige beskeder kan** du få vist beskedkøen for vigtige beskeder om hændelsen og andre oplysninger om dem, f.eks.:
+Under fanen **Beskeder** kan du få vist beskedkøen for beskeder, der er relateret til hændelsen, og andre oplysninger om dem, f.eks.:
 
-- Alvorsgrad.
+- Sværhedsgraden.
 - De enheder, der var involveret i beskeden.
-- Kilden til beskederne (Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Defender til skyapps og tilføjelsesprogrammet Appstyring).
-- Årsagen til, at de er kædet sammen.
+- Kilden til beskederne (Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Defender for Cloud Apps og tilføjelsesprogrammet til appstyring).
+- Grunden til at de var forbundet.
 
 Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alerts.png" alt-text="Ruden Beskeder om en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-alerts.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-alerts.png" alt-text="Ruden Beskeder for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-alerts.png":::
 
-Som standard er beskederne sorteret kronologisk, så du kan se, hvordan angrebene udspiller over tid. Når du vælger en besked i en hændelse, Microsoft 365 Defender en meddelelse, der er specifik for den overordnede hændelse. 
+Som standard er beskederne sorteret kronologisk, så du kan se, hvordan angrebet udspillede sig over tid. Når du vælger en besked i en hændelse, viser Microsoft 365 Defender de beskedoplysninger, der er specifikke for konteksten for den overordnede hændelse. 
 
-Du kan se hændelserne for beskeden, som andre udløste beskeder forårsagede den aktuelle besked, og alle de påvirkede enheder og aktiviteter, der er involveret i angrebene, herunder enheder, filer, brugere og postkasser.
+Du kan se hændelserne for beskeden, som andre udløste beskeder forårsagede den aktuelle besked, og alle de berørte enheder og aktiviteter, der er involveret i angrebet, herunder enheder, filer, brugere og postkasser.
 
 Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alert-example.png" alt-text="Oplysninger om en besked i en hændelse i Microsoft 365 Defender portal." lightbox="../../media/investigate-incidents/incident-alert-example.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-alert-example.png" alt-text="Oplysningerne om en besked i en hændelse på portalen Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incident-alert-example.png":::
 
-Siden besked om hændelser indeholder følgende afsnit:
+Siden med hændelsesbeskeder indeholder følgende sektioner:
 
-- Tekstenhed, som omfatter:
+- Beskedhistorie, som omfatter:
 
    - Hvad skete der
 
-   - Handlinger, der er foretaget
+   - Udførte handlinger
 
-   - Relaterede begivenheder
+   - Relaterede hændelser
 
-- Beskedegenskaber i højre rude (tilstand, detaljer, beskrivelse og andre)
+- Egenskaber for beskeder i ruden til højre (tilstand, detaljer, beskrivelse m.m.)
 
-Ikke alle vigtige beskeder har alle de angivne underafsnit i sektionen **Beskedhistorie** .
+Det er ikke alle beskeder, der har alle de viste undersektioner i afsnittet **Beskedhistorie** .
 
-Få mere at vide om, hvordan du bruger beskedkøen og [beskedsiderne under undersøg vigtige beskeder](investigate-alerts.md).
+Få mere at vide om, hvordan du bruger beskedkøen og beskedsiderne i [undersøg beskeder](investigate-alerts.md).
 
 ## <a name="devices"></a>Enheder
 
-Under **fanen** Enheder vises alle de enheder, der er relateret til hændelsen. Her er et eksempel.
+Fanen **Enheder** viser alle de enheder, der er relateret til hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices.png" alt-text="Siden Enheder for en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-devices.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-devices.png" alt-text="Siden Enheder for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-devices.png":::
 
-Du kan markere afkrydsningsfeltet for en enhed for at få vist oplysninger om enheden, biblioteksdata, aktive beskeder og brugere, der er logget på. Vælg navnet på enheden for at få vist enhedens detaljer i Defender for endpoint-enhedens lager. Her er et eksempel.
+Du kan markere afkrydsningsfeltet for en enhed for at få vist oplysninger om enheden, mappedata, aktive beskeder og brugere, der er logget på. Vælg navnet på enheden for at få vist enhedsoplysningerne i oversigten over Defender for Endpoint-enheder. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Indstillingssiden for lager for enhed i Microsoft Defender for Endpoint." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Siden Med indstillingen Enhedslager i Microsoft Defender for Endpoint." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
 
-Fra enhedssiden kan du indsamle yderligere oplysninger om enheden, f.eks. alle dens vigtige beskeder, en tidslinje og sikkerhedsanbefalinger. Fra fanen Tidslinje kan du  f.eks. rulle gennem computertidslinjen og få vist alle hændelser og funktionsmåder, der er observeret på computeren i kronologisk rækkefølge og afbrudt med beskederne hævet.
+Fra enhedssiden kan du indsamle yderligere oplysninger om enheden, f.eks. alle dens beskeder, en tidslinje og sikkerhedsanbefalinger. Fra fanen **Tidslinje** kan du f.eks. rulle gennem computerens tidslinje og få vist alle hændelser og funktionsmåder, der er observeret på computeren i kronologisk rækkefølge, og som er afbrudt af de udløste beskeder.
 
 > [!TIP]
-> Du kan udføre scanninger efter behov på en enhedsside. I Microsoft 365 Defender skal du vælge **Slutpunkter > lager over enheder**. Vælg en enhed, der har beskeder, og kør derefter en antivirus-scanning. Handlinger, f.eks. antivirusscanninger, registreres og er synlige på **lagersiden for** enheden. Du kan få mere at vide [under Kør Defender Antivirus-scanning på enheder](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
+> Du kan udføre scanninger efter behov på en enhedsside. Vælg **Slutpunkter > Enhedslager** på portalen Microsoft 365 Defender. Vælg en enhed, der har beskeder, og kør derefter en antivirusscanning. Handlinger, f.eks. antivirusscanninger, spores og er synlige på **enhedens lagerside** . Du kan få mere at vide under [Kør Defender Antivirus-scanning på enheder](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
 
 ## <a name="users"></a>Brugere
 
-Fanen **Brugere viser** alle de brugere, der er identificeret som en del af eller relateret til hændelsen. Her er et eksempel.
+Under fanen **Brugere** vises alle de brugere, der er blevet identificeret til at være en del af eller relateret til hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-users.png" alt-text="Siden Brugere i Microsoft 365 Defender portal." lightbox="../../media/investigate-incidents/incident-users.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-users.png" alt-text="Siden Brugere på Microsoft 365 Defender-portalen." lightbox="../../media/investigate-incidents/incident-users.png":::
 
-Du kan markere afkrydsningsfeltet for en bruger for at få vist oplysninger om brugerkontoens trussel, eksponering og kontaktoplysninger. Vælg brugernavnet for at få vist yderligere oplysninger om brugerkontoen.
+Du kan vælge fluebenet for en bruger for at få vist detaljer om brugerkontoens trussel, eksponering og kontaktoplysninger. Vælg brugernavnet for at få vist flere oplysninger om brugerkontoen.
 
-Få mere at vide om, hvordan du får vist yderligere brugeroplysninger og administrerer brugere af en hændelse [under undersøg brugerne](investigate-users.md).
+Få mere at vide om, hvordan du får vist yderligere brugeroplysninger og administrerer brugerne af en hændelse i [Undersøg brugere](investigate-users.md).
 
 
 ## <a name="mailboxes"></a>Postkasser
 
-Fanen **Postkasser** viser alle de postkasser, der er blevet identificeret som en del af eller relateret til hændelsen. Her er et eksempel.
+Fanen **Postkasser** viser alle de postkasser, der er blevet identificeret til at være en del af eller relateret til hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-mailboxes.png" alt-text="Siden Postkasser for en hændelse i Microsoft 365 Defender portal." lightbox="../../media/investigate-incidents/incident-mailboxes.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-mailboxes.png" alt-text="Siden Postkasser for en hændelse på portalen Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incident-mailboxes.png":::
 
-Du kan markere afkrydsningsfeltet for en postkasse for at få vist en liste over aktive beskeder. Vælg postkassenavnet for at få vist yderligere postkasseoplysninger på siden Stifinder for at Defender for Office 365.
+Du kan markere afkrydsningsfeltet for en postkasse for at få vist en liste over aktive beskeder. Vælg navnet på postkassen for at få vist flere oplysninger om postkassen på siden Stifinder for Defender for Office 365.
 
 ## <a name="investigations"></a>Undersøgelser
 
-Fanen **Undersøgelser viser** alle de automatiske [undersøgelser, der udløses](m365d-autoir.md) af beskeder om denne hændelse. Automatiserede undersøgelser vil udføre afhjælpningshandlinger eller vente på godkendelser af handlinger fra en analytiker, afhængigt af hvordan du har konfigureret dine automatiske undersøgelser til at køre i Defender til Slutpunkt og Defender for Office 365.
+Under fanen **Undersøgelser** vises alle de [automatiserede undersøgelser, der udløses](m365d-autoir.md) af beskeder i denne hændelse. Automatiserede undersøgelser udfører afhjælpningshandlinger eller venter på analytikergodkendelse af handlinger, afhængigt af hvordan du har konfigureret dine automatiserede undersøgelser til at køre i Defender for Endpoint og Defender for Office 365.
 
-:::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="Siden Undersøgelser for en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-investigations.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="Siden Undersøgelser for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-investigations.png":::
 
-Vælg en undersøgelse for at gå til dens detaljeside for at få alle oplysninger om undersøgelsens og afhjælpningsstatus. Hvis der er handlinger, der afventer godkendelse som en del af undersøgelsen, vises de på **fanen Ventende handlinger historik** . Foranstaltninger som en del af afhjælpning af hændelser.
+Vælg en undersøgelse for at navigere til siden med oplysninger for at få alle oplysninger om undersøgelses- og afhjælpningsstatus. Hvis der er handlinger, der venter på godkendelse som en del af undersøgelsen, vises de under fanen **Ventende handlingers historik** . Udfør handlinger som en del af afhjælpning af hændelser.
 
-Der er også en **Undersøgelse-graf-fane** , der viser:
+Der er også en **graffane for undersøgelse** , der viser:
 
-- Forbindelse af beskeder til de på påvirkede aktiver i organisationen.
-- Hvilke enheder er relateret til hvilke beskeder, og hvordan de er en del af historien om angrebene.
-- Beskederne om hændelsen.
+- Forbindelsen mellem beskeder og de påvirkede aktiver i din organisation.
+- Hvilke enheder er relateret til hvilke beskeder og hvordan de er en del af historien om angrebet.
+- Beskederne for hændelsen.
 
-Undersøgelsesgrafen hjælper dig med hurtigt at forstå det fulde omfang af angrebene ved at forbinde de forskellige mistænkelige enheder, der er en del af angrebene, med deres relaterede aktiver som brugere, enheder og postkasser. 
+Undersøgelsesgrafen hjælper dig med hurtigt at forstå det fulde omfang af angrebet ved at forbinde de forskellige mistænkelige enheder, der er en del af angrebet, med deres relaterede aktiver, f.eks. brugere, enheder og postkasser. 
 
-Få mere at vide under [Automatiseret undersøgelse og svar Microsoft 365 Defender](m365d-autoir.md).
+Du kan få flere oplysninger [under Automatiseret undersøgelse og svar i Microsoft 365 Defender](m365d-autoir.md).
 
 ## <a name="evidence-and-response"></a>Beviser og svar
 
-Fanen **Beviser og svar** viser alle de understøttede hændelser og mistænkelige enheder i beskederne for hændelsen. Her er et eksempel.
+Fanen **Beviser og Svar** viser alle understøttede hændelser og mistænkelige enheder i beskederne i hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incident-evidence.png" alt-text="Siden Bevis og svar for en hændelse i Microsoft 365 Defender portal" lightbox="../../media/investigate-incidents/incident-evidence.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-evidence.png" alt-text="Siden Beviser og svar for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-evidence.png":::
 
-Microsoft 365 Defender undersøger automatisk alle hændelsers understøttede begivenheder og mistænkelige enheder i beskederne og giver dig oplysninger om vigtige mails, filer, processer, tjenester, IP-adresser og meget mere. Dette hjælper dig med hurtigt at finde og blokere potentielle trusler i hændelsen.
+Microsoft 365 Defender undersøger automatisk alle hændelsers understøttede hændelser og mistænkelige enheder i beskederne, hvilket giver dig oplysninger om vigtige mails, filer, processer, tjenester, IP-adresser med mere. Dette hjælper dig med hurtigt at registrere og blokere potentielle trusler i hændelsen.
 
-Hver af de analyserede enheder er markeret med en konklusion (Ondsindet, Mistænkelig, Rens) og en afhjælpningsstatus. Dette hjælper dig med at forstå afhjælpningsstatus for hele hændelsen, og hvilke næste trin der kan tages.
+Hver af de analyserede enheder er markeret med en dom (Ondsindet, Mistænkelig, Ren) og en afhjælpningsstatus. Dette hjælper dig med at forstå afhjælpningsstatus for hele hændelsen, og hvilke næste trin der kan udføres.
 
-## <a name="graph-preview"></a>Graph (eksempel)
+## <a name="graph-preview"></a>Graph (eksempelvisning)
 
-Fanen **Graph** viser det fulde omfang af angrebene, hvordan angrebene spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt hackeren var. Det forbinder de forskellige mistænkelige enheder, der er en del af angrebene, med deres relaterede aktiver som brugere, enheder og postkasser. 
+Fanen **Graph** viser det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt angriberen gik. Den forbinder de forskellige mistænkelige enheder, der er en del af angrebet, med deres relaterede aktiver, f.eks. brugere, enheder og postkasser. 
 
-Under **Graph** kan du:
+Fra fanen **Graph** kan du:
 
-1. Afspil beskederne og noderne på grafen, når de opstod over tid, for at forstå kronologien af angrebene.
+1. Afspil beskederne og noderne på grafen, som de fandt sted over tid for at forstå kronologien af angrebet.
 
 
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-play.gif" alt-text="Afspilning af beskeder og noder på siden Graph beskeder":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-play.gif" alt-text="Afspilningen af beskeder og noder på siden Graph":::
  
 
-2. Åbn en enhedsrude, hvor du kan gennemse enhedsdetaljerne og reagere på afhjælpningshandlinger, f.eks. sletning af en fil eller isolere en enhed.
+2. Åbn en objektrude, så du kan gennemse enhedsoplysningerne og reagere på afhjælpningshandlinger, f.eks. slette en fil eller isolere en enhed.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Enhedsruden på Graph i Microsoft 365 Defender portal" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Objektruden på siden Graph på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
 
-3. Fremhæv beskederne baseret på den enhed, de er relateret til.
+3. Fremhæv de beskeder, der er baseret på det objekt, de er relateret til.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="En fremhævet besked på Graph side" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="Fremhævning af en besked på siden Graph" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
 
 ## <a name="next-steps"></a>Næste trin
 
 Efter behov:
 
-- [Undersøg beskederne om en hændelse](investigate-alerts.md)
+- [Undersøg beskeder om en hændelse](investigate-alerts.md)
 - [Undersøg brugerne af en hændelse](investigate-users.md)
 
 ## <a name="see-also"></a>Se også

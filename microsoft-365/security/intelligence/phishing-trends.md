@@ -1,8 +1,8 @@
 ---
-title: Phishingtendenser og -teknikker
+title: Phishing-tendenser og -teknikker
 ms.reviewer: ''
-description: Få mere at vide om, hvordan du spotter phishingteknikker
-keywords: sikkerhed, malware, phishing, oplysninger, svindel, social engineering, bait, tilsnende, beskyttelse, tendenser, målrettet angreb, phishing phishing, whaling
+description: Få mere at vide om, hvordan du spotte phishing-teknikker
+keywords: sikkerhed, malware, phishing, oplysninger, fidus, social engineering, agn, lokke, beskyttelse, tendenser, målrettet angreb, spyd phishing, hvalfangst
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -15,61 +15,61 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: fbd86a25b6f1224748225263103e13ca07f93166
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c56478f4dbe496f7e2080e9c73d6466df0e2c5d7
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63706185"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666740"
 ---
-# <a name="phishing-trends-and-techniques"></a>Phishingtendenser og -teknikker
+# <a name="phishing-trends-and-techniques"></a>Phishing-tendenser og -teknikker
 
-Phishing-angreb er svindel, der ofte bruger social engineering til at lokke med indhold. Kommunikation med et legitimt udseende, som regel mails, der linker til et phishingwebsted, er en af de mest almindelige metoder til phishing-angreb. Phishing-webstedet efterligner typisk logonsider, der kræver, at brugerne skal indtaste legitimationsoplysninger og kontooplysninger. Phishingwebstedet registrerer derefter de følsomme oplysninger, så snart brugeren giver dem, og giver hackere adgang til oplysningerne.
+Phishingangreb er svindel, der ofte bruger lokkemad eller lokkeindhold til social engineering. Lovligt udseende kommunikation, normalt e-mail, der linker til et phishing-websted er en af de mest almindelige metoder, der bruges i phishing-angreb. Phishingwebstedet efterligner typisk logonsider, der kræver, at brugerne angiver legitimationsoplysninger og kontooplysninger. Phishing-webstedet henter derefter de følsomme oplysninger, så snart brugeren leverer dem, hvilket giver personer med ondsindede hensigter adgang til oplysningerne.
 
-Nedenfor er nogle af de mest almindelige phishingteknikker, hackere kan anvende til at forsøge at stjæle oplysninger eller få adgang til dine enheder.
+Nedenfor er nogle af de mest almindelige phishing-teknikker, som hackere anvender til at forsøge at stjæle oplysninger eller få adgang til dine enheder.
 
-## <a name="invoice-phishing"></a>Fakturaphishing
+## <a name="invoice-phishing"></a>Phishing af faktura
 
-I dette svindelnummer forsøger hackeren at snyde dig med en mail om, at du har en udestående faktura fra en kendt leverandør eller virksomhed. De indeholder derefter et link, som du kan bruge til at få adgang til og betale din faktura. Når du åbner webstedet, vil hackeren stjæle dine personlige oplysninger og midler.
+I dette fupnummer forsøger hackeren at lokke dig med en mail, der angiver, at du har en udestående faktura fra en kendt leverandør eller virksomhed. De giver dig derefter et link, hvor du kan få adgang til og betale din faktura. Når du tilgår webstedet, er hackeren klar til at stjæle dine personlige oplysninger og midler.
 
-## <a name="paymentdelivery-scam"></a>Svindel med betaling/levering
+## <a name="paymentdelivery-scam"></a>Betalings-/leverings fupnummer
 
-Du bliver bedt om at angive et kreditkort eller andre personlige oplysninger, så dine betalingsoplysninger kan opdateres med en almindeligt kendt leverandør eller leverandør. Der anmodes om en opdatering, så du kan tage imod levering af dine bestilte varer. Generelt kan du være bekendt med virksomheden og sandsynligvis have gjort forretninger med dem tidligere. Du er dog ikke klar over nogen elementer, du for nylig har købt hos dem.
+Du bliver bedt om at angive et kreditkort eller andre personlige oplysninger, så dine betalingsoplysninger kan opdateres med en almindeligt kendt leverandør eller leverandør. Opdateringen er anmodet om, så du kan tage levering af dine bestilte varer. Generelt kan du være bekendt med virksomheden og har sandsynligvis gjort forretninger med dem i fortiden. Du er dog ikke bekendt med nogen elementer, du har købt for nylig fra dem.
 
-## <a name="tax-themed-phishing-scams"></a>Skattet phishingsvindel
+## <a name="tax-themed-phishing-scams"></a>Skattetemaet phishing
 
-Et almindeligt forsøg på phishing i IRS modtager et vigtigt mailbrev, der angiver, at du skylder penge til IRS. Mailen truer ofte juridiske handlinger, hvis du ikke får rettidig adgang til webstedet og betaler din moms. Når du åbner webstedet, kan hackerne stjæle dit personlige kreditkort eller dine bankoplysninger og tømme dine konti.
+En almindelig IRS phishing-svindel modtager en presserende e-mail brev, der angiver, at du skylder penge til IRS. Ofte e-mail truer sagsanlæg, hvis du ikke få adgang til webstedet i tide og betale dine skatter. Når du tilgår webstedet, kan angriberne stjæle dine personlige kreditkort- eller bankoplysninger og dræne dine konti.
 
 ## <a name="downloads"></a>Downloads
 
-En hacker sender en svigagtig mail, der anmoder dig om at åbne eller downloade en vedhæftet fil, f.eks. en PDF-fil. Den vedhæftede fil indeholder ofte en meddelelse, der beder dig om at logge på et andet websted, f.eks. mail eller websteder til fildeling, for at åbne dokumentet. Når du åbner disse phishingwebsteder ved hjælp af dine logonoplysninger, har hackeren nu adgang til dine oplysninger og kan få yderligere personlige oplysninger om dig.
+En person med ondsindede hensigter sender en falsk mail, hvor du bliver bedt om at åbne eller downloade en vedhæftet fil, f.eks. en PDF-fil. Den vedhæftede fil indeholder ofte en meddelelse, hvor du bliver bedt om at logge på et andet websted, f.eks. mail eller websteder til fildeling, for at åbne dokumentet. Når du tilgår disse phishing-websteder ved hjælp af dine logonoplysninger, har hackeren nu adgang til dine oplysninger og kan få yderligere personlige oplysninger om dig.
 
-## <a name="phishing-emails-that-deliver-other-threats"></a>Phishingmails, der leverer andre trusler
+## <a name="phishing-emails-that-deliver-other-threats"></a>Phishing-mails, der leverer andre trusler
 
-Phishingmails er ofte effektive, så hackere bruger dem nogle gange til at distribuere [ransomware](/security/compass/human-operated-ransomware) via links eller vedhæftede filer i mails. Når den køres, krypterer ransomware filer og viser en notat, som beder dig om at betale en sum penge for at få adgang til dine filer.
+Phishing-mails er ofte effektive, så hackere bruger dem nogle gange til at distribuere [ransomware](/security/compass/human-operated-ransomware) via links eller vedhæftede filer i mails. Når du kører, krypterer ransomware filer og viser en løsesum note, som beder dig om at betale en sum penge for at få adgang til dine filer.
 
-Vi har også set phishing-mails, der har links til [svindelwebsteder for teknisk support](support-scams.md) . Disse websteder bruger forskellige besværlige taktikker til at narre dig til at ringe til og betale for unødvendige "tekniske supporttjenester", som angiveligt løser problemer med enheder, platforme eller software.
+Vi har også set phishing-e-mails, der har links til [teknisk support fidus](support-scams.md) websteder. Disse hjemmesider bruger forskellige skræmme taktik til at narre dig til at kalde hotlines og betale for unødvendige "teknisk support tjenester", der angiveligt lave konstrueret enhed, platform, eller software problemer.
 
-## <a name="spear-phishing"></a>Phishing
+## <a name="spear-phishing"></a>Spyd phishing
 
-Phishing med phishing er et målrettet phishingangreb, der involverer meget tilpasset indhold. Hackere vil typisk genoptage deres arbejde ved at undersøge sociale medier og andre informationskilder om deres tilsigtede mål.
+Spyd phishing er et målrettet phishingangreb, der omfatter indhold, der er meget tilpasset lokkeindhold. Hackere udfører typisk rekognosceringsarbejde ved at undersøge sociale medier og andre informationskilder om deres tilsigtede mål.
 
-Phishing kan være en mulighed for at narre dig til at logge på falske websteder og dele legitimationsoplysninger. Jeg kan også lokke dig til at åbne dokumenter ved at klikke på links, der automatisk installerer malware. Når denne malware er på plads, kan hackere fjernstyre den inficeret computer.
+Spyd phishing kan omfatte narre dig til at logge på falske websteder og divulging legitimationsoplysninger. Jeg kan også lokke dig til at åbne dokumenter ved at klikke på links, der automatisk installere malware. Med denne malware på plads kan hackere fjernmanagere den inficerede computer.
 
-Den malware, der spredes, fungerer som indgangspunkt for et mere avanceret angreb, også kaldet en avanceret vedvarende trussel (APT). APT'er er designet til at etablere kontrol og stjæle data over længere perioder. Hackere kan forsøge at installere flere skjulte hackingværktøjer, flytte til andre computere senere, gå på kompromis med eller oprette privilegerede konti og jævnligt eksfiltrere oplysninger fra kompromitterede netværk.
+Den implanterede malware fungerer som indgangspunkt for et mere sofistikeret angreb, kendt som en avanceret vedvarende trussel (APT). APT'er er designet til at etablere kontrol og stjæle data over længere perioder. Hackere kan forsøge at installere mere hemmelige hackingværktøjer, flytte sidevis til andre computere, kompromittere eller oprette privilegerede konti og regelmæssigt exfiltrate oplysninger fra kompromitterede netværk.
 
-## <a name="whaling"></a>Whaling
+## <a name="whaling"></a>Hvalfangst
 
-Whaling er en form for phishing, der dirigeres til ledere på højt niveau eller i ledende virksomheder i specifikke virksomheder for at få adgang til deres legitimationsoplysninger og/eller bankoplysninger. Indholdet af mailen kan skrives som en juridisk stævning, en kundeklage eller et andet ledelsesproblem. Denne type angreb kan også føre til et APT-angreb i en organisation.
+Hvalfangst er en form for phishing rettet mod højtstående eller ledende medarbejdere i bestemte virksomheder for at få adgang til deres legitimationsoplysninger og/eller bankoplysninger. Indholdet af e-mailen kan skrives som en juridisk stævning, kundeklage eller andre administrative spørgsmål. Denne type angreb kan også føre til et APT-angreb i en organisation.
 
-## <a name="business-email-compromise"></a>Kompromis med virksomhedsmail
+## <a name="business-email-compromise"></a>Kompromitteret forretningsmail
 
-Business email compromise (BEC) er et avanceret svindelnummer, der er målrettet virksomheder, der ofte arbejder med fremmede leverandører eller gør pengeoverførsel. En af de mest almindelige systemer, der bruges af BEC-hackere, er at få adgang til en virksomheds netværk via et phishingangreb, som du ønsker at undgå. Hackeren opretter et domæne, der ligner det firma, de målretter, eller spoofs deres mail for at snyde brugere til at frigive personlige kontooplysninger ved pengeoverførsler.
+Business email kompromis (BEC) er en sofistikeret fidus, der er rettet mod virksomheder, der ofte arbejder med udenlandske leverandører eller gøre penge trådoverførsler. En af de mest almindelige ordninger, der bruges af BEC-angribere, omfatter at få adgang til en virksomheds netværk via et phishing-angreb i spyd. Hackeren opretter et domæne, der ligner det firma, de er målrettet mod, eller spoofs deres e-mail for at narre brugere til at frigive personlige kontooplysninger for pengeoverførsler.
 
 ## <a name="more-information-about-phishing-attacks"></a>Flere oplysninger om phishing-angreb
 
-Du kan finde oplysninger om de nyeste phishing-angreb, -teknikker og -tendenser ved at læse disse poster på [Microsoft Security-bloggen](https://www.microsoft.com/security/blog/product/windows/):
+Du kan få oplysninger om de seneste phishingangreb, -teknikker og -tendenser ved at læse disse poster på [Microsoft Security-bloggen](https://www.microsoft.com/security/blog/product/windows/):
 
-- [Phishere slipper simple, men effektive social engineering-teknikker ved hjælp af vedhæftede PDF-filer](https://cloudblogs.microsoft.com/microsoftsecure/2017/01/26/phishers-unleash-simple-but-effective-social-engineering-techniques-using-pdf-attachments/?source=mmpc)
-- [Tax themed phishing and malware attacks prolifeliferate during the tax filing season](https://cloudblogs.microsoft.com/microsoftsecure/2017/03/20/tax-themed-phishing-and-malware-attacks-proliferate-during-the-tax-filing-season/?source=mmpc)
-- [Phishing som mails fører til svindel med teknisk support](https://cloudblogs.microsoft.com/microsoftsecure/2017/08/07/links-in-phishing-like-emails-lead-to-tech-support-scam/?source=mmpc)
+- [Phishere udløser enkle, men effektive socialtekniske teknikker ved hjælp af vedhæftede PDF-filer](https://cloudblogs.microsoft.com/microsoftsecure/2017/01/26/phishers-unleash-simple-but-effective-social-engineering-techniques-using-pdf-attachments/?source=mmpc)
+- [Skattetema phishing og malware angreb spredes i løbet af skatteansøgning sæson](https://cloudblogs.microsoft.com/microsoftsecure/2017/03/20/tax-themed-phishing-and-malware-attacks-proliferate-during-the-tax-filing-season/?source=mmpc)
+- [Phishing som mails fører til teknisk support fupnummer](https://cloudblogs.microsoft.com/microsoftsecure/2017/08/07/links-in-phishing-like-emails-lead-to-tech-support-scam/?source=mmpc)

@@ -1,7 +1,7 @@
 ---
-title: Konfigurer dit Microsoft 365 Defender-prøvelaboratorium eller pilotmiljø
-description: Access Microsoft 365 Defender portal, og konfigurer derefter dit Microsoft 365 Defender prøvelaboratormiljø
-keywords: Microsoft 365 Defender prøveversionskonfiguration Microsoft 365 Defender prøvekonfigurationen, prøve Microsoft 365 Defender Microsoft 365 Defender konfiguration af evalueringslaboratorium
+title: Konfigurer dit Microsoft 365 Defender prøvelaboratorium eller et pilotmiljø
+description: Få adgang Microsoft 365 Defender portal, og konfigurer derefter dit Microsoft 365 Defender prøveversionslaboratorium
+keywords: Microsoft 365 Defender installation af prøveversion, Microsoft 365 Defender pilotinstallation, kan du prøve Microsoft 365 Defender Microsoft 365 Defender konfiguration af evalueringslaboratorium
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -19,14 +19,14 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 681d9798c6f16f5829bdb4e5272abc3eac719a59
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 5d516a7062d8c6f617cee2a260f27ee896689f2c
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500975"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64667334"
 ---
-# <a name="set-up-your-microsoft-365-defender-trial-in-a-lab-environment"></a>Konfigurer din Microsoft 365 Defender i et labmiljø 
+# <a name="set-up-your-microsoft-365-defender-trial-in-a-lab-environment"></a>Konfigurer din Microsoft 365 Defender prøveversion i et laboratoriemiljø 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -34,111 +34,111 @@ ms.locfileid: "64500975"
 **Gælder for:**
 - Microsoft 365 Defender 
 
-Dette emne guider dig til at konfigurere et dedikeret laboratoriemiljø. Du kan finde oplysninger om konfiguration af en prøveversion i produktion i den nye [vejledning Evaluer Microsoft 365 Defender](eval-overview.md) pilotversionen. 
+I dette emne får du hjælp til at konfigurere et dedikeret laboratoriemiljø. Du kan finde oplysninger om, hvordan du konfigurerer en prøveversion i produktion, i den nye vejledning [til evaluering og pilot Microsoft 365 Defender](eval-overview.md). 
 
 ## <a name="create-an-office-365-e5-trial-tenant"></a>Opret en Office 365 E5 prøveversionslejer
 >[!NOTE]
->Hvis du allerede har et eksisterende Office 365 eller Azure Active Directory abonnement, kan du springe de Office 365 E5 med prøveversionens lejeroprettelsestrin over.
+>Hvis du allerede har et eksisterende Office 365- eller Azure Active Directory-abonnement, kan du springe Office 365 E5 lejeroprettelsestrin over.
 
-1. Gå til Office 365 E5 [, og](https://www.microsoft.com/microsoft-365/business/office-365-enterprise-e5-business-software?activetab=pivot%3aoverviewtab) vælg **Gratis prøveversion**.
+1. Gå til [Office 365 E5 produktportal,](https://www.microsoft.com/microsoft-365/business/office-365-enterprise-e5-business-software?activetab=pivot%3aoverviewtab) og vælg **Gratis prøveversion**.
 
-   :::image type="content" source="../../media/mtp-eval-9.png" alt-text="Siden Office 365 E5 gratis prøveversion" lightbox="../../media/mtp-eval-9.png":::
+   :::image type="content" source="../../media/mtp-eval-9.png" alt-text="Siden med Office 365 E5 gratis prøveversion" lightbox="../../media/mtp-eval-9.png":::
   
-2. Fuldfør registrering af prøveversionen ved at angive din mailadresse (personlig eller virksomhed). Klik **på Konfigurer konto**.
+2. Fuldfør registreringen af prøveversionen ved at angive din mailadresse (personlig eller firma). Klik på **Konfigurer konto**.
 
-   :::image type="content" source="../../media/mtp-eval-10.png" alt-text="Siden Office 365 E5 konfiguration af prøveabonnement" lightbox="../../media/mtp-eval-10.png":::
+   :::image type="content" source="../../media/mtp-eval-10.png" alt-text="Siden til konfiguration af Office 365 E5 prøveversion" lightbox="../../media/mtp-eval-10.png":::
 
-3. Udfyld dit fornavn, efternavn, virksomhedens telefonnummer, firmanavn, virksomhedens størrelse og land eller område.  
+3. Udfyld dit fornavn, efternavn, firmatelefonnummer, firmanavn, firmastørrelse og land eller område.  
 
-   :::image type="content" source="../../media/mtp-eval-11.png" alt-text="Siden Office 365 E5 konfiguration af prøveversion, der beder om navn, telefon og firmaoplysninger" lightbox="../../media/mtp-eval-11.png":::
+   :::image type="content" source="../../media/mtp-eval-11.png" alt-text="Siden til konfiguration af Office 365 E5 prøveregistrering, hvor du bliver bedt om oplysninger om navn, telefon og firma" lightbox="../../media/mtp-eval-11.png":::
    
    > [!NOTE]
-   > Det land eller område, du angiver her, bestemmer, hvilket datacenterområde Office 365 skal hostes.
+   > Det land eller område, du angiver her, bestemmer det datacenterområde, som din Office 365 hostes for.
   
-4. Vælg din bekræftelsesindstilling: via en sms eller et opkald. Klik **på Send bekræftelseskode**. 
+4. Vælg dine kontrolindstillinger: via en sms eller et opkald. Klik på **Send bekræftelseskode**. 
 
-   :::image type="content" source="../../media/mtp-eval-12.png" alt-text="Siden Office 365 E5 konfiguration af prøveversionen, hvor du bliver bedt om at bekræfte" lightbox="../../media/mtp-eval-12.png":::
+   :::image type="content" source="../../media/mtp-eval-12.png" alt-text="Siden til konfiguration af Office 365 E5 prøveregistrering, hvor du bliver bedt om bekræftelsespræference" lightbox="../../media/mtp-eval-12.png":::
 
 5. Angiv det brugerdefinerede domænenavn for din lejer, og klik derefter på **Næste**.
 
-   :::image type="content" source="../../media/mtp-eval-13.png" alt-text="Siden Office 365 E5 konfiguration af prøveversionen, hvor du kan konfigurere dit brugerdefinerede domænenavn" lightbox="../../media/mtp-eval-13.png":::
+   :::image type="content" source="../../media/mtp-eval-13.png" alt-text="Siden til konfiguration af Office 365 E5 prøveversion, hvor du kan konfigurere dit brugerdefinerede domænenavn" lightbox="../../media/mtp-eval-13.png":::
  
-6. Konfigurer den første identitet, som skal være global administrator for lejeren. Udfyld **Navn og** **Adgangskode**. Klik **på Tilmeld dig**.
+6. Konfigurer den første identitet, som skal være global administrator for lejeren. Udfyld **Navn** og **Adgangskode**. Klik på **Tilmeld dig**.
 
-   :::image type="content" source="../../media/mtp-eval-14.png" alt-text="Siden Office 365 E5 registrering af prøveversion, hvor du kan angive din virksomhedsidentitet" lightbox="../../media/mtp-eval-14.png":::
+   :::image type="content" source="../../media/mtp-eval-14.png" alt-text="Siden til konfiguration af Office 365 E5 prøveregistrering, hvor du kan angive din virksomhedsidentitet" lightbox="../../media/mtp-eval-14.png":::
 
-7. Klik **på Gå til konfiguration** for at fuldføre Office 365 E5 prøveversionens lejer klargøring.
+7. Klik på **Gå til installationsprogrammet** for at fuldføre klargøringen af Office 365 E5 prøveversion af lejeren.
 
-   :::image type="content" source="../../media/mtp-eval-15.png" alt-text="Siden Office 365 E5 konfiguration af prøveregistrering, hvor du bliver bedt om at klikke på knappen Gå til konfiguration" lightbox="../../media/mtp-eval-15.png":::
+   :::image type="content" source="../../media/mtp-eval-15.png" alt-text="Siden til konfiguration af Office 365 E5 prøveversion, hvor du bliver bedt om at klikke på Knappen Gå til installation" lightbox="../../media/mtp-eval-15.png":::
 
-8. Forbind virksomhedens domæne til Office 365 lejer. [Valgfrit] Vælg **Forbind domæne, du allerede ejer**, og skriv dit domænenavn. Klik på **Næste**.
+8. Forbind dit virksomhedsdomæne til den Office 365 lejer. [Valgfri] Vælg **Forbind et domæne, du allerede ejer**, og skriv dit domænenavn. Klik på **Næste**.
 
    :::image type="content" source="../../media/mtp-eval-16.png" alt-text="Siden Office 365 E5 konfiguration, hvor du skal tilpasse dit logon og din mail" lightbox="../../media/mtp-eval-16.png":::
  
-9. Tilføj en TXT- eller MX-post for at bekræfte ejerskabet af domænet. Når du har føjet TXT- eller MX-posten til dit domæne, skal du vælge **Bekræft**.
+9. Tilføj en TXT- eller MX-post for at validere ejerskabet af domænet. Når du har føjet TXT- eller MX-posten til dit domæne, skal du vælge **Bekræft**.
 
    :::image type="content" source="../../media/mtp-eval-17.png" alt-text="Siden Office 365 E5 konfiguration, hvor du skal tilføje en TXT af MX-post for at bekræfte dit domæne" lightbox="../../media/mtp-eval-17.png":::
  
-10. [Valgfrit] Opret flere brugerkonti til din lejer. Du kan springe dette trin over ved at klikke på **Næste**.
+10. [Valgfri] Opret flere brugerkonti til din lejer. Du kan springe dette trin over ved at klikke på **Næste**.
 
     :::image type="content" source="../../media/mtp-eval-18.png" alt-text="Siden Office 365 E5 konfiguration, hvor du kan tilføje flere brugere" lightbox="../../media/mtp-eval-18.png":::
  
-11. [Valgfrit] Download Office apps. Klik **på Næste** for at springe dette trin over. 
+11. [Valgfri] Download Office apps. Klik på **Næste** for at springe dette trin over. 
 
     :::image type="content" source="../../media/mtp-eval-19.png" alt-text="Den Office 365 E5 side, hvor du kan installere dine Office apps" lightbox="../../media/mtp-eval-19.png":::
 
-12. [Valgfrit] Overfør mails. Du kan også springe dette trin over.
+12. [Valgfri] Overfør mailmeddelelser. Igen kan du springe dette trin over.
 
-    :::image type="content" source="../../media/mtp-eval-20.png" alt-text="Den Office 365 E5 hvor du kan angive, om du vil overføre mails eller ej" lightbox="../../media/mtp-eval-20.png":::
+    :::image type="content" source="../../media/mtp-eval-20.png" alt-text="Den Office 365 E5, hvor du kan angive, om du vil overføre mails eller ej" lightbox="../../media/mtp-eval-20.png":::
  
-13. Vælg onlinetjenester. Vælg **Exchange,** og klik på **Næste**. 
+13. Vælg onlinetjenester. Vælg **Exchange**, og klik på **Næste**. 
 
-    :::image type="content" source="../../media/mtp-eval-21.png" alt-text="Det Office 365 E5, hvor du kan vælge din onlinetjenester" lightbox="../../media/mtp-eval-21.png":::
+    :::image type="content" source="../../media/mtp-eval-21.png" alt-text="Det Office 365 E5, hvor du kan vælge dine onlinetjenester" lightbox="../../media/mtp-eval-21.png":::
 
-14. Føj MX-, CNAME- og TXT-poster til dit domæne. Vælg Bekræft, når du **er færdig**.
+14. Føj poster af typen MX, CNAME og TXT til dit domæne. Når du er færdig, skal du vælge **Bekræft**.
 
-    :::image type="content" source="../../media/mtp-eval-22.png" alt-text="Den Office 365 E5 her, kan du tilføje dine DNS-poster" lightbox="../../media/mtp-eval-22.png":::
+    :::image type="content" source="../../media/mtp-eval-22.png" alt-text="Office 365 E5 her kan du tilføje dine DNS-poster" lightbox="../../media/mtp-eval-22.png":::
  
-15. Tillykke, du har færdiggjort klargøring af din Office 365 lejer.
+15. Tillykke, du har fuldført klargøringen af din Office 365 lejer.
 
-    :::image type="content" source="../../media/mtp-eval-23.png" alt-text="Bekræftelsessiden Office 365 E5 fuldførelse af konfiguration" lightbox="../../media/mtp-eval-23.png":::
+    :::image type="content" source="../../media/mtp-eval-23.png" alt-text="Bekræftelsessiden for fuldførelse af Office 365 E5 konfiguration" lightbox="../../media/mtp-eval-23.png":::
     
 
 ## <a name="enable-microsoft-365-trial-subscription"></a>Aktivér Microsoft 365 prøveabonnement
 
 >[!NOTE]
->Når du tilmelder dig en prøveversion, får du 25 brugerlicenser til brug i en måned. Se [Prøv eller køb et Microsoft 365 for at få](../../commerce/try-or-buy-microsoft-365.md) flere oplysninger.
+>Når du tilmelder dig en prøveversion, får du 25 brugerlicenser, du kan bruge i en måned. Se [Prøv eller køb et Microsoft 365-abonnement](../../commerce/try-or-buy-microsoft-365.md) for at få flere oplysninger.
 
-1. Fra [Microsoft 365 Administration skal du](https://admin.microsoft.com/) klikke på **Fakturering** og derefter gå til **Køb tjenester**.
+1. Klik [på Fakturering fra Microsoft 365 Administration Center](https://admin.microsoft.com/), og  naviger derefter til **Køb tjenester**.
 
-2. Vælg **Microsoft 365 E5,** og klik **på Start gratis prøveversion**. 
+2. Vælg **Microsoft 365 E5**, og klik på **Start gratis prøveversion**. 
 
    :::image type="content" source="../../media/mtp-eval-24.png" alt-text="Siden Microsoft 365 E5 Start gratis prøveversion" lightbox="../../media/mtp-eval-24.png":::
 
-3. Vælg din bekræftelsesindstilling: via en sms eller et opkald. Når du har besluttet dig, skal du angive telefonnummeret og vælge **Sms mig** eller **Ring til mig** afhængigt af dit valg.
+3. Vælg dine kontrolindstillinger: via en sms eller et opkald. Når du har besluttet dig, skal du angive telefonnummeret, vælge **Tekst mig** eller **Ring til mig** afhængigt af dit valg.
 
-   :::image type="content" source="../../media/mtp-eval-25.png" alt-text="Siden Microsoft 365 E5 start gratis prøveversion, der beder om kontaktoplysninger til at sende kode for at bevise, at du ikke er en robot" lightbox="../../media/mtp-eval-25.png":::
+   :::image type="content" source="../../media/mtp-eval-25.png" alt-text="Siden Microsoft 365 E5 Start gratis prøveversion, hvor du bliver bedt om kontaktoplysninger for at sende kode for at bevise, at du ikke er en robot" lightbox="../../media/mtp-eval-25.png":::
  
-4. Angiv bekræftelseskoden, og klik **på Start din gratis prøveversion**.
+4. Angiv bekræftelseskoden, og klik på **Start din gratis prøveversion**.
 
    :::image type="content" source="../../media/mtp-eval-26.png" alt-text="Siden Microsoft 365 E5 Start gratis prøveversion, hvor du kan udfylde bekræftelseskoden, som systemet har sendt for at bevise, at du ikke er en robot" lightbox="../../media/mtp-eval-26.png":::
 
-5. Klik **på Prøv nu** for at bekræfte Microsoft 365 E5 prøveversionen.
+5. Klik på **Prøv nu** for at bekræfte din Microsoft 365 E5 prøveversion.
 
-   :::image type="content" source="../../media/mtp-eval-27.png" alt-text="Siden Microsoft 365 E5 Start gratis prøveversion, hvor du skal se knappen Prøv nu for at starte" lightbox="../../media/mtp-eval-27.png":::
+   :::image type="content" source="../../media/mtp-eval-27.png" alt-text="Siden Microsoft 365 E5 Start gratis prøveversion, hvor du skal bruge knappen Prøv nu for at starte" lightbox="../../media/mtp-eval-27.png":::
  
 6. Gå til **Microsoft 365 Administration** **CenterUsersActive-brugere** >  > . Vælg din brugerkonto, vælg **Administrer produktlicenser**, og byt derefter licensen fra Office 365 E5 til **Microsoft 365 E5**. Klik på **Gem**.
 
-   :::image type="content" source="../../media/mtp-eval-28.png" alt-text="Siden Microsoft 365 Administration Center, hvor du kan vælge Microsoft 365 E5 licens" lightbox="../../media/mtp-eval-28.png":::
+   :::image type="content" source="../../media/mtp-eval-28.png" alt-text="Siden Microsoft 365 Administration Center, hvor du kan vælge den Microsoft 365 E5 licens" lightbox="../../media/mtp-eval-28.png":::
  
-7. Vælg den globale administratorkonto igen, og klik derefter **på Administrer brugernavn**.
+7. Vælg den globale administratorkonto igen, og klik derefter på **Administrer brugernavn**.
 
    :::image type="content" source="../../media/mtp-eval-29.png" alt-text="Siden Microsoft 365 Administration Center, hvor du kan vælge Konto og Administrer brugernavn" lightbox="../../media/mtp-eval-29.png":::
 
-8. [Valgfrit] Skift domænet fra *onmicrosoft.com* dit eget domæne – afhængigt af hvad du valgte i de forrige trin. Klik på **Gem ændringer**.
+8. [Valgfri] Skift domænet fra *onmicrosoft.com* til dit eget domæne – afhængigt af hvad du valgte i de forrige trin. Klik på **Gem ændringer**.
 
-   :::image type="content" source="../../media/mtp-eval-30.png" alt-text="Siden Microsoft 365 Administration Center, hvor du kan ændre din domæneindstilling" lightbox="../../media/mtp-eval-30.png":::
+   :::image type="content" source="../../media/mtp-eval-30.png" alt-text="Siden Microsoft 365 Administration Center, hvor du kan ændre dine domæneindstillinger" lightbox="../../media/mtp-eval-30.png":::
 
 ## <a name="next-step"></a>Næste trin
-|[Fase 3: Konfigurer & onboard](config-m365d-eval.md) | Konfigurer hver Microsoft 365 Defender søjle til dit Microsoft 365 Defender-prøvelaboratorium eller pilotmiljø, og onboard dine slutpunkter.
+|[Fase 3: Konfigurer & onboard](config-m365d-eval.md) | Konfigurer hver Microsoft 365 Defender søjle for dit Microsoft 365 Defender prøvelaboratorium eller pilotmiljø, og onboarder dine slutpunkter.
 |:-------|:-----|

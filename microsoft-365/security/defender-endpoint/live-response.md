@@ -1,7 +1,7 @@
 ---
-title: Undersøg enheder på enheder, der bruger direkte svar Microsoft Defender for Endpoint
-description: Få adgang til en enhed ved hjælp af en sikker ekstern shell-forbindelse for at udføre samtidig arbejde og udføre øjeblikkelige svarhandlinger på en enhed i realtid.
-keywords: remote, shell, connection, live, response, real-time, command, script, remediate, hunt, export, log, drop, download, file,
+title: Undersøg enheder på enheder, der bruger live-svar i Microsoft Defender for Endpoint
+description: Få adgang til en enhed ved hjælp af en sikker ekstern shellforbindelse for at udføre undersøgelsesarbejde og udføre øjeblikkelige svarhandlinger på en enhed i realtid.
+keywords: fjern, shell, forbindelse, live, svar, realtid, kommando, script, afhjælpe, jage, eksportere, log, slippe, downloade, fil,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,41 +14,40 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8987c5642ea48e4c7887735cc0fce0e5bfccc119
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 5e5d2b2bd47ba30aaf152171605947bb9a627480
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470389"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666344"
 ---
-# <a name="investigate-entities-on-devices-using-live-response"></a>Undersøg enheder på enheder, der bruger direkte svar
+# <a name="investigate-entities-on-devices-using-live-response"></a>Undersøg enheder på enheder ved hjælp af live-svar
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
+> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+Live response giver teams for sikkerhedshandlinger øjeblikkelig adgang til en enhed (også kaldet en maskine) ved hjælp af en ekstern shellforbindelse. Dette giver dig mulighed for at udføre dybdegående undersøgelsesarbejde og reagere øjeblikkeligt for straks at indeholde identificerede trusler i realtid.
 
-Livesvar giver sikkerhedsteams øjeblikkelig adgang til en enhed (også kaldet en maskine), der bruger en forbindelse til en fjern shell. Dette giver dig mulighed for at udføre en dybdegående indsats og reagere omgående for at kunne inddæmme identificerede trusler i realtid.
-
-Liverespons er designet til at forbedre undersøgelser ved at give dit sikkerhedsteam mulighed for at indsamle analysere data, køre scripts, sende mistænkelige enheder til analyse, afhjælpe trusler og proaktivt lede efter nye trusler.
+Liverespons er designet til at forbedre undersøgelser ved at gøre det muligt for dit team af sikkerhedshandlinger at indsamle tekniske data, køre scripts, sende mistænkelige enheder til analyse, afhjælpe trusler og proaktivt jage efter nye trusler.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUW]
 
-Med live respons kan analytikere udføre alle følgende opgaver:
+Med direkte svar kan analytikere udføre alle følgende opgaver:
 
-- Kør grundlæggende og avancerede kommandoer for at udføre arbejdsområdet på en enhed.
-- Download filer som f.eks. malwareeksempler og resultater af PowerShell-scripts.
+- Kør grundlæggende og avancerede kommandoer for at udføre undersøgelsesarbejde på en enhed.
+- Download filer som malwareeksempler og resultater af PowerShell-scripts.
 - Download filer i baggrunden (ny!).
-- Upload et PowerShell-script eller eksekverbar til biblioteket, og kør det på en enhed fra et lejerniveau.
-- Tag eller fortryd afhjælpningshandlinger.
+- Upload et PowerShell-script eller en eksekverbar fil til biblioteket, og kør det på en enhed fra et lejerniveau.
+- Udfør eller fortryd afhjælpningshandlinger.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Før du kan starte en session på en enhed, skal du opfylde følgende krav:
+Før du kan starte en session på en enhed, skal du sørge for at opfylde følgende krav:
 
 - **Kontrollér, at du kører en understøttet version af Windows**.
 
@@ -61,71 +60,68 @@ Før du kan starte en session på en enhed, skal du opfylde følgende krav:
     - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) med [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
     - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) med [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
 
-  - **macOS** – Gælder kun for offentlig prøveversion, minimumskravet version: 101.43.84 
-  
+  - **macOS** – kun tilgængelig for offentlig prøveversion, minimumversion: 101.43.84
+
    > [!NOTE]
    > I øjeblikket understøttes kun Intel-baserede macOS-systemer.
-    
 
-  - **Linux** – Gælder kun for offentlig prøveversion, minimumskravet version: 101.45.13 
-    
+  - **Linux** – gælder kun for offentlig prøveversion, minimumversion: 101.45.13
+
   - **Windows Server 2012 R2** – med [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
-  
+
   - **Windows Server 2016** – med [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
 
   - **Windows Server 2019**
     - Version 1903 eller (med [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) senere
     - Version 1809 (med [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
-    
+
   - **Windows Server 2022**
 
-       
+- **Aktivér live-svar fra siden med avancerede indstillinger**.
 
-- **Aktivér direkte svar fra siden avancerede indstillinger**.
-
-  Du skal aktivere live svar-funktionen på siden [Avancerede funktioner.](advanced-features.md)
+  Du skal aktivere funktionen til direkte svar på siden [Avancerede funktioner.](advanced-features.md)
 
   > [!NOTE]
-  > Det er kun brugere med administratorroller til administration eller globale administratorer, der kan redigere disse indstillinger.
-  > 
-  > Automatisk undersøgelse skal være aktiveret i [indstillingerne for Avancerede funktioner](advanced-features.md) , før du aktiverer livesvar.
+  > Det er kun brugere med administrere sikkerhedsroller eller globale administratorroller, der kan redigere disse indstillinger.
+  >
+  > Automatiseret undersøgelse skal aktiveres i [indstillingerne for avancerede funktioner](advanced-features.md) , før liverespons aktiveres.
 
-- **Aktivér live-svar for servere fra siden avancerede indstillinger** (anbefales).
+- **Aktivér live-svar for servere fra siden med avancerede indstillinger** (anbefales).
 
   > [!NOTE]
-  > Det er kun brugere med administratorroller til administration eller globale administratorer, der kan redigere disse indstillinger.
+  > Det er kun brugere med administrere sikkerhedsroller eller globale administratorroller, der kan redigere disse indstillinger.
 
-- **Sørg for, at enheden har tildelt et niveau til afhjælpning af automatisering**.
+- **Sørg for, at enheden har fået tildelt et Automation Remediation-niveau**.
 
-  Du skal som minimum aktivere minimumniveauet for afhjælpning for en given enhedsgruppe. Ellers kan du ikke oprette en Direkte svarsession til et medlem af den pågældende gruppe.
+  Du skal som minimum aktivere afhjælpningsniveauet for en given enhedsgruppe. Ellers kan du ikke oprette en Live Response-session til et medlem af den pågældende gruppe.
 
-  Du får vist følgende fejlmeddelelse:
+  Du får vist følgende fejl:
 
   :::image type="content" source="images/live-response-error.png" alt-text="Fejlmeddelelsen" lightbox="images/live-response-error.png":::
 
-- **Aktivér direkte svar usigneret scriptudførelse** (valgfrit).
+- **Aktivér usigneret udførelse af live-svar-script** (valgfrit).
 
   >[!IMPORTANT]
-  >Signaturbekræftelse gælder kun for PowerShell-scripts. 
+  >Signaturbekræftelse gælder kun for PowerShell-scripts.
 
   > [!WARNING]
-  > Hvis du tillader brug af usignerede scripts, kan det øge din eksponering for trusler.
+  > Hvis du tillader brugen af usignerede scripts, kan det øge din eksponering over for trusler.
 
-  Det anbefales ikke at køre usignerede scripts, da det kan øge din eksponering for trusler. Hvis du skal bruge dem, skal du aktivere indstillingen på siden [Avancerede indstillinger for](advanced-features.md) funktioner.
+  Det anbefales ikke at køre usignerede scripts, da det kan øge din eksponering over for trusler. Hvis du skal bruge dem, skal du aktivere indstillingen på siden [Avancerede funktioner](advanced-features.md) .
 
-- **Sørg for, at du har de rette tilladelser**.
+- **Sørg for, at du har de nødvendige tilladelser**.
 
-  Kun brugere, der er blevet klargjort med de relevante tilladelser, kan starte en session. Du kan finde flere oplysninger om rolletildelinger [i Opret og administrer roller](user-roles.md).
+  Det er kun brugere, der er blevet klargjort med de relevante tilladelser, der kan starte en session. Du kan få flere oplysninger om rolletildelinger under [Opret og administrer roller](user-roles.md).
 
   > [!IMPORTANT]
-  > Muligheden for at overføre en fil til biblioteket er kun tilgængelig for brugere med tilladelsen "Administrer Indstillinger".
+  > Muligheden for at overføre en fil til biblioteket er kun tilgængelig for brugere med tilladelsen "Administrer sikkerhed Indstillinger".
   > Knappen er nedtonet for brugere, der kun har delegerede tilladelser.
 
-  Afhængigt af den rolle, du har fået tildelt, kan du køre grundlæggende eller avancerede Live Response-kommandoer. Brugertilladelser styres af den brugerdefinerede RBAC-rolle.
+  Afhængigt af den rolle, du har fået tildelt, kan du køre grundlæggende eller avancerede kommandoer til direkte svar. Brugertilladelser styres af den brugerdefinerede rolle RBAC.
 
-## <a name="live-response-dashboard-overview"></a>Oversigt over live svar-dashboard
+## <a name="live-response-dashboard-overview"></a>Oversigt over dashboard med livebesvaring
 
-Når du starter en direkte svarsession på en enhed, åbnes der et dashboard. Dashboardet indeholder oplysninger om sessionen, f.eks. følgende:
+Når du starter en live-svarsession på en enhed, åbnes et dashboard. Dashboardet indeholder oplysninger om sessionen, f.eks. følgende:
 
 - Who oprettede sessionen
 - Da sessionen startede
@@ -133,94 +129,86 @@ Når du starter en direkte svarsession på en enhed, åbnes der et dashboard. Da
 
 Dashboardet giver dig også adgang til:
 
-- Afbryd session
+- Afbryd forbindelsen til session
 - Upload filer til biblioteket
 - Kommandokonsol
 - Kommandolog
 
-## <a name="initiate-a-live-response-session-on-a-device"></a>Starte en direkte svarsession på en enhed
+## <a name="initiate-a-live-response-session-on-a-device"></a>Start en live-svarsession på en enhed
 
 1. Log på Microsoft 365 Defender portal.
 
-2. Gå til **Slutpunkter > lagerenhed, og** vælg en enhed, der skal undersøges. Siden enheder åbnes.
+2. Gå til **Slutpunkter > Enhedslager** , og vælg en enhed, der skal undersøges. Siden Enheder åbnes.
 
-3. Start den direkte svarsession ved at vælge **Påbegynde direkte svarsession**. Der vises en kommandokonsol. Vent, mens sessionen opretter forbindelse til enheden.
+3. Start live-svar-sessionen ved at vælge **Start live-svar-session**. Der vises en kommandokonsol. Vent, mens sessionen opretter forbindelse til enheden.
 
-4. Brug de indbyggede kommandoer til at udføre lige arbejde. Du kan få mere at vide [under Kommandoer for direkte svar](#live-response-commands).
+4. Brug de indbyggede kommandoer til at udføre undersøgelsesarbejde. Du kan få flere oplysninger under [Kommandoer til direkte svar](#live-response-commands).
 
-5. Når du er færdig med undersøgelsen, skal du **vælge Afbryd session** og derefter **vælge Bekræft**.
+5. Når du har fuldført din undersøgelse, skal du vælge **Afbryd session** og derefter vælge **Bekræft**.
 
-## <a name="live-response-commands"></a>Kommandoer for direkte svar
+## <a name="live-response-commands"></a>Kommandoer til direkte svar
 
-Afhængigt af den rolle, du har fået tildelt, kan du køre grundlæggende eller avancerede Live Response-kommandoer. Brugertilladelser styres af RBAC-brugerdefinerede roller. Du kan finde flere oplysninger om rolletildelinger [i Opret og administrer roller](user-roles.md).
+Afhængigt af den rolle, du har fået tildelt, kan du køre grundlæggende eller avancerede kommandoer til direkte svar. Brugertilladelser styres af brugerdefinerede RBAC-roller. Du kan få flere oplysninger om rolletildelinger under [Opret og administrer roller](user-roles.md).
 
 > [!NOTE]
-> Live-svar er en skybaseret interaktiv shell, som f.eks. kan en specifik kommandooplevelse variere i svartid afhængigt af netværkskvaliteten og systembelastningen mellem slutbrugeren og destinationsenheden.
+> Live response er en cloudbaseret interaktiv shell, da en bestemt kommandooplevelse kan variere i svartiden, afhængigt af netværkskvaliteten og systembelastningen mellem slutbrugeren og destinationsenheden.
 
 ### <a name="basic-commands"></a>Grundlæggende kommandoer
 
-Følgende kommandoer er tilgængelige for brugerroller, der får mulighed for at køre **grundlæggende** Live Response-kommandoer. Du kan finde flere oplysninger om rolletildelinger [i Opret og administrer roller](user-roles.md).
+Følgende kommandoer er tilgængelige for brugerroller, der har fået mulighed for at køre **grundlæggende** kommandoer til direkte svar. Du kan få flere oplysninger om rolletildelinger under [Opret og administrer roller](user-roles.md).
 
-<br>
-
-****
-| Kommando  | Beskrivelse  | Windows og Windows Server  | macOS  | Linux  |
+| Kommando  | Beskrivelse  | Windows og Windows Server  | Macos  | Linux  |
 |---|---|---|---|---|
-| cd  | Ændrer den aktuelle mappe.  | Y  | Y  | Y  |
-| cls  | Rydder konsolskærmen.  | Y  | Y  | Y  |
-| opret forbindelse  | Starter en direkte svarsession på enheden.  | Y  | Y  | Y  |
-| forbindelser  | Viser alle de aktive forbindelser.  | Y  | N  | N  |
-| dir  | Viser en liste over filer og undermapper i en mappe.  | Y  | Y  | Y  |
-| drivere  | Viser alle drivere, der er installeret på enheden.  | Y  | N  | N  |
-| fg `<command ID>`  | Placer det angivne job i forgrunden i forgrunden, hvilket gør det til det aktuelle job.  BEMÆRK: fg får et "kommando-id" tilgængeligt fra jobs, ikke et PID  | Y  | Y  | Y  |
-| fileinfo  | Få oplysninger om en fil.  | Y  | Y  | Y  |
-| findfile  | Finder filer efter et givet navn på enheden.  | Y  | Y  | Y  |
+| Cd  | Ændrer den aktuelle mappe.  | Y  | Y  | Y  |
+| Cls  | Rydder konsolskærmen.  | Y  | Y  | Y  |
+| Oprette forbindelse  | Starter en live-svarsession på enheden.  | Y  | Y  | Y  |
+| Forbindelser  | Viser alle de aktive forbindelser.  | Y  | N  | N  |
+| Dir  | Viser en liste over filer og undermapper i en mappe.  | Y  | Y  | Y  |
+| Drivere  | Viser alle de drivere, der er installeret på enheden.  | Y  | N  | N  |
+| Fg `<command ID>`  | Placer det angivne job i forgrunden i forgrunden, så det er det aktuelle job.  BEMÆRK! Fg tager et 'kommando-id', der er tilgængeligt fra job, ikke et PID  | Y  | Y  | Y  |
+| filinfo  | Hent oplysninger om en fil.  | Y  | Y  | Y  |
+| findfile  | Angiver filer med et givent navn på enheden.  | Y  | Y  | Y  |
 | getfile <file_path>  | Downloader en fil.  | Y  | Y  | Y  |
-| Hjælp  | Indeholder hjælpoplysninger til kommandoer til direkte svar.  | Y  | Y  | Y  |
-| jobs  | Viser aktuelt kørende job, deres id og status.  | Y  | Y  | Y  |
-| vedholdenhed  | Viser alle kendte metoder til vedholdende brug på enheden.  | Y  | N  | N  |
-| processer  | Viser alle processer, der kører på enheden.  | Y  | Y  | Y  |
-| registreringsdatabase  | Viser registreringsdatabaseværdier.  | Y  | N  | N  |
+| Hjælp  | Indeholder hjælp til kommandoer til direkte svar.  | Y  | Y  | Y  |
+| Job  | Viser job, der kører i øjeblikket, deres id og status.  | Y  | Y  | Y  |
+| Persistens  | Viser alle kendte persistensmetoder på enheden.  | Y  | N  | N  |
+| Processer  | Viser alle processer, der kører på enheden.  | Y  | Y  | Y  |
+| Registreringsdatabasen  | Viser registreringsdatabaseværdier.  | Y  | N  | N  |
 | planlagte opgaver  | Viser alle planlagte opgaver på enheden.  | Y  | N  | N  |
-| tjenester  | Viser alle tjenester på enheden.  | Y  | N  | N  |
-| startmapper  | Viser alle kendte filer i startmapper på enheden.  | Y  | N  | N  |
-| status  | Viser status og output for en bestemt kommando.  | Y  | N  | N  |
-| spor  | Indstiller terminalens logføringstilstand til fejlfinding.  | Y  | Y  | Y  |
+| Tjenester  | Viser alle tjenester på enheden.  | Y  | N  | N  |
+| startupfolders  | Viser alle kendte filer i startmapper på enheden.  | Y  | N  | N  |
+| Status  | Viser status og output for en bestemt kommando.  | Y  | N  | N  |
+| Spore  | Angiver terminalens logføringstilstand til fejlfinding.  | Y  | Y  | Y  |
 
 ### <a name="advanced-commands"></a>Avancerede kommandoer
 
-Følgende kommandoer er tilgængelige for brugerroller, der får mulighed for at køre **avancerede** Live Response-kommandoer. Du kan finde flere oplysninger om rolletildelinger [i Opret og administrer roller](user-roles.md).
+Følgende kommandoer er tilgængelige for brugerroller, der har mulighed for at køre **avancerede** kommandoer til direkte svar. Du kan få flere oplysninger om rolletildelinger under [Opret og administrer roller](user-roles.md).
 
-<br>
-
-****
-
-| Kommando  | Beskrivelse  | Windows og Windows Server  | macOS  | Linux  |
+| Kommando  | Beskrivelse  | Windows og Windows Server  | Macos  | Linux  |
 |---|---|---|---|---|
-| analysér  | Analyserer enheden med forskellige inkriminationsmotorer for at opnå en konklusion.  | Y  | N  | N  |
-| indsaml  | Indsamler pakker fra maskiner  | N  | Y  | Y  |
-| isoler  | Afbryder forbindelsen mellem enheden og netværket, mens forbindelsen til Defender for Endpoint-tjenesten bevares  | N  | Y  | N  |
-| version  | Frigør en enhed fra netværksisolation  | N  | Y  | N  |
-| kør  | Kører et PowerShell-script fra biblioteket på enheden.  | Y  | Y  | Y  |
-| bibliotek  | Viser filer, der er blevet overført til live response-biblioteket.  | Y  | Y  | Y  |
-| putfile  | Placerer en fil fra biblioteket til enheden. Filer gemmes i en arbejdsmappe og slettes, når enheden genstarter som standard.  | Y  | Y  | Y  |
-| afhjælpe  | Afhjælper en enhed på enheden. Afhjælpningshandlingen varierer afhængigt af enhedstypen: Fil: Slet Proces: stop, slet billedfiltjeneste: stop, slet billedfil Registreringsdatabasepost: slet Planlagt opgave: fjern mappeelementet Start: slet fil BEMÆRK: Denne kommando har en nødvendige kommando. Du kan bruge kommandoen -auto sammen med remediate til automatisk at køre kommandoen, der er nødvendige for at udføre forudsætningerne.  | Y  | Y  | Y  |
-| scan | Kører en antivirusscanning for at identificere og afhjælpe malware. | N | Y | Y |
-| fortryd  | Gendanner en enhed, der blev løst.  | Y  | Y  | Y  |
+| Analysere  | Analyserer enheden med forskellige incriminationsmotorer for at nå frem til en dom.  | Y  | N  | N  |
+| Indsamle  | Indsamler retsmedicinsk pakke fra maskine  | N  | Y  | Y  |
+| Isolere  | Afbryder forbindelsen mellem enheden og netværket, samtidig med at forbindelsen til Defender for Endpoint-tjenesten bevares  | N  | Y  | N  |
+| Frigivelse  | Frigiver en enhed fra netværksisolation  | N  | Y  | N  |
+| Køre  | Kører et PowerShell-script fra biblioteket på enheden.  | Y  | Y  | Y  |
+| Bibliotek  | Viser de filer, der blev overført til biblioteket med live-svar.  | Y  | Y  | Y  |
+| putfile  | Placerer en fil fra biblioteket på enheden. Filer gemmes i en arbejdsmappe og slettes som standard, når enheden genstartes.  | Y  | Y  | Y  |
+| afhjælp  | Afhjælper en enhed på enheden. Afhjælpningshandlingen varierer afhængigt af objekttypen: Fil: slet proces: stop, slet billedfilTjeneste: stop, slet billedfilpost i registreringsdatabasen: slet planlagt opgave: fjern elementet i mappen Start: slet fil BEMÆRK! Denne kommando har en nødvendig kommando. Du kan bruge kommandoen -auto sammen med remediate til automatisk at køre den påkrævede kommando.  | Y  | Y  | Y  |
+| Skan | Kører en antivirusscanning for at hjælpe med at identificere og afhjælpe malware. | N | Y | Y |
+| Fortryde  | Gendanner en enhed, der blev afhjælpet.  | Y  | Y  | Y  |
 
+## <a name="use-live-response-commands"></a>Brug direkte svar-kommandoer
 
-## <a name="use-live-response-commands"></a>Brug af live svarkommandoer
+De kommandoer, du kan bruge i konsollen, følger de samme principper som [Windows Kommandoer](/windows-server/administration/windows-commands/windows-commands#BKMK_c).
 
-De kommandoer, du kan bruge i konsollen, følger de samme principper [som Windows Kommandoer](/windows-server/administration/windows-commands/windows-commands#BKMK_c).
-
-De avancerede kommandoer giver et mere robust sæt handlinger, der giver dig mulighed for at udføre mere effektive handlinger som download og upload af en fil, køre scripts på enheden og udføre afhjælpningshandlinger på en enhed.
+De avancerede kommandoer giver dig et mere robust sæt handlinger, der giver dig mulighed for at udføre mere effektive handlinger, f.eks. downloade og uploade en fil, køre scripts på enheden og udføre afhjælpningshandlinger på en enhed.
 
 ### <a name="get-a-file-from-the-device"></a>Hent en fil fra enheden
 
-Du kan bruge kommandoen til scenarier, hvor du vil hente en fil fra en enhed, du er ved at `getfile` undersøge. Dette giver dig mulighed for at gemme filen fra enheden til yderligere undersøgelse.
+I forbindelse med scenarier, hvor du gerne vil hente en fil fra en enhed, du undersøger, kan du bruge `getfile` kommandoen . Dette giver dig mulighed for at gemme filen fra enheden til yderligere undersøgelse.
 
 > [!NOTE]
-> Følgende filstørrelsesbegrænsninger gælder:
+> Der gælder følgende grænser for filstørrelsen:
 >
 > - `getfile` grænse: 3 GB
 > - `fileinfo` grænse: 30 GB
@@ -228,11 +216,11 @@ Du kan bruge kommandoen til scenarier, hvor du vil hente en fil fra en enhed, du
 
 ### <a name="download-a-file-in-the-background"></a>Download en fil i baggrunden
 
-For at aktivere sikkerhedsteamet til at fortsætte med at undersøge en påvirket enhed kan filer nu downloades i baggrunden.
+Hvis du vil gøre det muligt for dit team af sikkerhedshandlinger at fortsætte med at undersøge en påvirket enhed, kan filer nu downloades i baggrunden.
 
-- Hvis du vil downloade en fil i baggrunden, skal du skrive i den live svarkommandokonsol.`download <file_path> &`
-- Hvis du venter på, at en fil downloades, kan du flytte den til baggrunden ved hjælp af Ctrl+Z.
-- Hvis du vil hente en fil til forgrunden, skal du skrive i den live svarkommandokonsol.`fg <command_id>`
+- Hvis du vil downloade en fil i baggrunden, skal du skrive `download <file_path> &`i kommandokonsollen med live-svar.
+- Hvis du venter på, at en fil hentes, kan du flytte den til baggrunden ved hjælp af Ctrl + Z.
+- Hvis du vil hente en fil til forgrunden, skal du skrive `fg <command_id>`i kommandokonsollen med live-svar.
 
 Her er nogle eksempler:
 
@@ -240,63 +228,63 @@ Her er nogle eksempler:
 
 ****
 
-|Kommando|Hvad den gør|
+|Kommando|Hvad gør den?|
 |---|---|
-|`getfile "C:\windows\some_file.exe" &`|Begynder at downloade en fil *some_file.exe* en fil i baggrunden.|
+|`getfile "C:\windows\some_file.exe" &`|Starter download af en fil med navnet *some_file.exe* i baggrunden.|
 |`fg 1234`|Returnerer en download med kommando-id *1234* til forgrunden.|
 |
 
-### <a name="put-a-file-in-the-library"></a>Placere en fil i biblioteket
+### <a name="put-a-file-in-the-library"></a>Placer en fil i biblioteket
 
-Live-svar har et bibliotek, hvor du kan lægge filer ind. Biblioteket lagrer filer (f.eks. scripts), der kan køres i en direkte svarsession på lejerniveau.
+Live response har et bibliotek, hvor du kan placere filer i. Biblioteket gemmer filer (f.eks. scripts), der kan køres i en live-svarsession på lejerniveau.
 
-Live-svar gør det muligt at køre PowerShell-scripts, men du skal først lægge filerne ind i biblioteket, før du kan køre dem.
+Direkte svar gør det muligt at køre PowerShell-scripts, men du skal først placere filerne i biblioteket, før du kan køre dem.
 
-Du kan have en samling af PowerShell-scripts, der kan køre på enheder, som du starter live svarsessioner med.
+Du kan have en samling PowerShell-scripts, der kan køre på enheder, som du starter live-svarsessioner med.
 
-#### <a name="to-upload-a-file-in-the-library"></a>Sådan uploader du en fil i biblioteket
+#### <a name="to-upload-a-file-in-the-library"></a>Sådan overfører du en fil i biblioteket
 
-1. Klik **Upload fil til bibliotek**.
+1. Klik **på Upload fil til bibliotek**.
 
-2. Klik **på Gennemse** , og vælg filen.
+2. Klik på **Gennemse** , og vælg filen.
 
 3. Angiv en kort beskrivelse.
 
-4. Angiv, om du vil overskrive en fil med samme navn.
+4. Angiv, om du vil overskrive en fil med det samme navn.
 
-5. Hvis du gerne vil være det, skal du vide, hvilke parametre der er nødvendige for scriptet, og markere afkrydsningsfeltet scriptparametre. Skriv et eksempel og en beskrivelse i tekstfeltet.
+5. Hvis du gerne vil være, skal du vide, hvilke parametre der er nødvendige for scriptet, og markere afkrydsningsfeltet scriptparametre. Angiv et eksempel og en beskrivelse i tekstfeltet.
 
-6. Klik **på Bekræft**.
+6. Klik på **Bekræft**.
 
-7. (Valgfrit) Kør kommandoen for at bekræfte, at filen blev overført til `library` biblioteket.
+7. (Valgfrit) Kør kommandoen for at bekræfte, at filen blev overført til biblioteket `library` .
 
 ### <a name="cancel-a-command"></a>Annuller en kommando
 
-Når du er i en session, kan du annullere en kommando ved at trykke på Ctrl+C.
+Når som helst under en session kan du annullere en kommando ved at trykke på Ctrl + C.
 
 > [!WARNING]
-> Hvis du bruger denne genvej, stoppes kommandoen ikke i agentsiden. Det vil kun annullere kommandoen i portalen. Derfor kan ændring af handlinger som f.eks. "afhjælpe" fortsætte, mens kommandoen annulleres.
+> Hvis du bruger denne genvej, stopper kommandoen ikke på agentsiden. Kommandoen i portalen annulleres kun. Derfor kan du fortsætte med at ændre handlinger, f.eks. "remediate", mens kommandoen annulleres.
 
 ## <a name="run-a-script"></a>Kør et script
 
-Før du kan køre et PowerShell/Bash-script, skal du først overføre det til biblioteket.
+Før du kan køre et PowerShell/Bash-script, skal du først uploade det til biblioteket.
 
-Når du har uploadet scriptet til biblioteket, kan du bruge `run` kommandoen til at køre scriptet.
+Når du har overført scriptet til biblioteket, skal du bruge `run` kommandoen til at køre scriptet.
 
-Hvis du planlægger at bruge et usigneret PowerShell-script i sessionen, skal du aktivere indstillingen på siden [Avancerede funktioner.](advanced-features.md)
+Hvis du planlægger at bruge et PowerShell-script uden fortegn i sessionen, skal du aktivere indstillingen på siden [Avancerede funktioner](advanced-features.md) .
 
 > [!WARNING]
-> Hvis du tillader brug af usignerede scripts, kan det øge din eksponering for trusler.
+> Hvis du tillader brugen af usignerede scripts, kan det øge din eksponering over for trusler.
 
 ## <a name="apply-command-parameters"></a>Anvend kommandoparametre
 
-- Få vist konsollens hjælp for at få mere at vide om kommandoparametre. Hvis du vil vide mere om en enkelt kommando, skal du køre:
+- Få vist hjælp til konsollen for at få mere at vide om kommandoparametre. Hvis du vil vide mere om en enkelt kommando, skal du køre:
 
   ```powershell
   help <command name>
   ```
 
-- Når du anvender parametre på kommandoer, skal du bemærke, at parametrene håndteres baseret på en fast rækkefølge:
+- Når du anvender parametre på kommandoer, skal du være opmærksom på, at parametre håndteres baseret på en fast rækkefølge:
 
   ```powershell
   <command name> param1 param2
@@ -308,13 +296,13 @@ Hvis du planlægger at bruge et usigneret PowerShell-script i sessionen, skal du
   <command name> -param2_name param2
   ```
 
-- Når du bruger kommandoer, der har nødvendige kommandoer, kan du bruge flag:
+- Når du bruger kommandoer, der har forudsætningskommandoer, kan du bruge flag:
 
   ```powershell
   <command name> -type file -id <file path> - auto
   ```
 
-  eller
+  Eller
 
   ```powershell
   remediate file <file path> - auto`
@@ -322,17 +310,17 @@ Hvis du planlægger at bruge et usigneret PowerShell-script i sessionen, skal du
 
 ## <a name="supported-output-types"></a>Understøttede outputtyper
 
-Live-svar understøtter outputtyper for tabeller og JSON-formater. For hver kommando er der en standardoutputfunktion. Du kan ændre outputtet i dit foretrukne outputformat ved hjælp af følgende kommandoer:
+Live response understøtter outputtyper i tabel- og JSON-format. Der er en standardfunktionsmåde for output for hver kommando. Du kan ændre outputtet i dit foretrukne outputformat ved hjælp af følgende kommandoer:
 
 - `-output json`
 - `-output table`
 
 > [!NOTE]
-> Færre felter vises i tabelformat på grund af den begrænsede plads. Hvis du vil se flere detaljer i outputtet, kan du bruge JSON-outputkommandoen, så der vises flere detaljer.
+> Der vises færre felter i tabelformat pga. den begrænsede plads. Hvis du vil se flere oplysninger i outputtet, kan du bruge kommandoen JSON-output, så der vises flere oplysninger.
 
-## <a name="supported-output-pipes"></a>Understøttede outputrør
+## <a name="supported-output-pipes"></a>Understøttede outputpiber
 
-Live-svar understøtter outputrør til CLI og fil. CLI er standardoutputfunktionsmåden. Du kan pipe outputtet til en fil ved hjælp af følgende kommando: [kommando] > [filnavn].txt.
+Direkte svar understøtter outputrør til kommandolinjegrænsefladen og filen. Kommandolinjegrænsefladen er standardfunktionsmåden for output. Du kan sende outputtet til en fil ved hjælp af følgende kommando: [command] > [filnavn].txt.
 
 Eksempel:
 
@@ -340,23 +328,23 @@ Eksempel:
 processes > output.txt
 ```
 
-## <a name="view-the-command-log"></a>Få vist kommandologgen
+## <a name="view-the-command-log"></a>Vis kommandologgen
 
-Vælg fanen **Kommandolog** for at se de kommandoer, der bruges på enheden under en session. Hver kommando registreres med alle oplysninger, f.eks.:
+Vælg fanen **Kommandolog** for at se de kommandoer, der bruges på enheden under en session. Hver kommando spores med komplette oplysninger, f.eks.:
 
-- Id
-- Kommandolinje
+- ID
+- Kommandolinjen
 - Varighed
-- Sidepanelet Status og input eller output
+- Sidelinje for status og input eller output
 
 ## <a name="limitations"></a>Begrænsninger
 
-- Sessioner med live svar er begrænset til 25 live svarsessioner ad gangen.
-- Værdien for inaktiv tid for live svarsession er 30 minutter.
-- Individuelle kommandoer for live svar har en tidsgrænse på 10 minutter, `getfile`med undtagelse af , `findfile``run`og , der har en grænse på 30 minutter.
+- Live-svar-sessioner er begrænset til 25 live-svarsessioner ad gangen.
+- Inaktiv timeoutværdi for live-svarsession er 30 minutter.
+- Individuelle direkte svar-kommandoer har en tidsgrænse på 10 minutter med undtagelse af `getfile`, `findfile`og `run`, som har en grænse på 30 minutter.
 - En bruger kan starte op til 10 samtidige sessioner.
 - En enhed kan kun være i én session ad gangen.
-- Følgende filstørrelsesbegrænsninger gælder:
+- Der gælder følgende grænser for filstørrelsen:
   - `getfile` grænse: 3 GB
   - `fileinfo` grænse: 10 GB
   - `library` grænse: 250 MB

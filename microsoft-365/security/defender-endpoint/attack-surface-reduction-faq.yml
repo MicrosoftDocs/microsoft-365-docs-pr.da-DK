@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: Reduktion af angrebsoverfladen ofte stillede spørgsmål (FAQ)
-  description: Find svar på ofte stillede spørgsmål om Microsoft Defender til Endpoints regler for reduktion af angrebsoverfladen.
-  keywords: Attack surface reduction rules, asr, hips, host intrusion prevention system, protection rules, anti-exploit, antiexploit, exploit, infection prevention, microsoft defender for endpoint
+  title: Reduktion af angrebsoverflade ofte stillede spørgsmål (ofte stillede spørgsmål)
+  description: Få svar på ofte stillede spørgsmål om Microsoft Defender for Endpoint regler for reduktion af angreb.
+  keywords: Angreb overfladereduktion regler, asr, hofter, vært intrusion forebyggelse system, beskyttelsesregler, anti-exploit, anti-exploit, udnytte, infektion forebyggelse, Microsoft defender for slutpunkt
   ms.pagetype: security
   ms.prod: m365-security
   ms.mktglfcycl: manage
@@ -18,223 +18,227 @@ metadata:
   ms.technology: mde
   ms.collection: m365-security-compliance
   ms.date: 1/18/2022
-  ms.openlocfilehash: fbdeee9b98a0c9a3309cf0d18436fb8508afc060
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: 7c37f4f971ea603be2bf523568c03c84f669951c
+  ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63683773"
-title: Reduktion af angrebsoverfladen ofte stillede spørgsmål (FAQ)
+  ms.lasthandoff: 04/06/2022
+  ms.locfileid: "64667158"
+title: Reduktion af angrebsoverflade ofte stillede spørgsmål (ofte stillede spørgsmål)
 summary: >
   [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
   **Gælder for:**
 
-  - [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/?linkid=2154037)
+  - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
 
   - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 sections:
 - name: Ignoreret
   questions:
   - question: >
-      Er reduktion af angrebsoverfladen en del af Windows?
+      Is attack surface reduction (ASR) part of Windows?
     answer: >
-      ASR var oprindeligt en funktion i pakken med Exploit Guard-funktioner, der blev introduceret som en større opdatering af Microsoft Defender Antivirus, Windows 10 version 1709. Microsoft Defender Antivirus er den oprindelige antimalwarekomponent af Windows. Men det fulde ASR-funktionssæt er kun tilgængeligt med en Windows Enterprise-licens. Bemærk også, at udeladelse af ASR-regler administreres separat Microsoft Defender Antivirus udeladelse.
+      ASR was originally a feature of the suite of exploit guard features introduced as a major update to Microsoft Defender Antivirus, in Windows 10, version 1709. Microsoft Defender Antivirus is the native antimalware component of Windows. However, the full ASR feature-set is only available with a Windows enterprise license. Also note that ASR rule exclusions are managed separately from Microsoft Defender Antivirus exclusions.
   - question: >
-      Skal jeg have en Enterprise-licens for at køre ASR-regler?
+      Do I need to have an enterprise license to run ASR rules?
     answer: >
-      Det komplette sæt asr-regler og funktioner understøttes kun, hvis du har en Virksomhedslicens til Windows 10 eller Windows 11. Et begrænset antal regler kan fungere uden en virksomhedslicens. Hvis du har Microsoft 365 Business, skal Microsoft Defender Antivirus som din primære sikkerhedsløsning og aktivere reglerne via PowerShell. Anvendelse af AA uden en enterprise-licens understøttes officielt ikke, og du vil ikke kunne bruge alle de samme funktioner som asr.
+      The full set of ASR rules and features is only supported if you have an enterprise license for Windows 10 or Windows 11. A limited number of rules may work without an enterprise license. If you have Microsoft 365 Business, set Microsoft Defender Antivirus as your primary security solution, and enable the rules through PowerShell. Using ASR without an enterprise license isn't officially supported and you won't be able to use the full capabilities of ASR.
 
 
-      Du kan få mere at Windows om licenser i [Windows 10 licensering](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5), og få [vejledningen volumenlicens til Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
+      To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
   - question: >
-      Understøttes AA, hvis jeg har en E3-licens?
+      Is ASR supported if I have an E3 license?
     answer: >
-      Ja. ASR understøttes for Windows Enterprise E3 og derover.
+      Yes. ASR is supported for Windows Enterprise E3 and above.
   - question: >
-      Hvilke funktioner understøttes med en E5-licens?
+      Which features are supported with an E5 license?
     answer: >
-      Alle regler, der understøttes i E3, understøttes også med E5.
+      All of the rules supported with E3 are also supported with E5.
 
 
-      E5 tilføjer større integration med Defender for Endpoint. Med E5 kan du få vist beskeder i realtid, finjustere udeladelse af regler, konfigurere asr-regler og få vist lister over hændelsesrapporter.
+      E5 adds greater integration with Defender for Endpoint. With E5, you can view alerts in real-time, fine-tune rule exclusions, configure ASR rules, and view lists of event reports.
   - question: >
-      Hvilke regler understøttes i øjeblikket i AA?
+      What are the currently supported ASR rules?
     answer: >
-      ASR understøtter i øjeblikket alle reglerne nedenfor.
+      ASR currently supports all of the rules below.
   - question: >
-      Hvilke regler skal aktiveres? Alle, eller kan jeg aktivere individuelle regler?
+      What rules to enable? All, or can I turn on individual rules?
     answer: >
-      For at hjælpe dig med at finde ud af, hvad der er bedst for dit miljø, anbefales det, at du aktiverer ASR-regler i [overvågningstilstand](audit-windows-defender.md). Med denne fremgangsmåde skal du bestemme den mulige indvirkning for organisationen. For eksempel dine line of business-programmer.
+      To help you figure out what's best for your environment, we recommended that you enable ASR rules in [audit mode](audit-windows-defender.md). With this approach, you'll determine the possible affect to your organization. For example, your line-of-business applications.
   - question: >
-      Hvordan fungerer udeladelse af ASR-regler?
+      How do ASR rules exclusions work?
     answer: >
-      Hvis du tilføjer én udeladelse for ASR-regler, påvirker det alle asr-regler.
+      For ASR rules, if you add one exclusion, it will affect every ASR rule.
 
 
-      Udeladelse af ASR-regler understøtter jokertegn, stier og miljøvariabler. Du kan finde flere oplysninger om, hvordan du bruger jokertegn i ASR-regler, under Konfigurere og validere udeladelser baseret på [filtypenavn og mappeplacering](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus).
+      ASR rules exclusions support wildcards, paths, and environmental variables. For more information on how to use wildcards in ASR rules, see [configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus).
 
 
-      Vær opmærksom på følgende elementer om udeladelse af ASR-regler (herunder jokertegn og env). variabler):
+      Be aware of the following items about ASR rules exclusions (including wildcards and env. variables):
 
 
-      - Udeladelse af ASR-regler er uafhængige af Microsoft Defender Antivirus udeladelse
+      - ASR rules exclusions are independent from Microsoft Defender Antivirus exclusions
 
-      - Jokertegn kan ikke bruges til at definere et drevbogstav
+      - Wildcards cannot be used to define a drive letter
 
-      - Hvis du vil udelade mere end én mappe i en sti, \*skal du bruge flere forekomster af \ til at angive flere indlejrede mapper (f.eks. c:\Folder\*\*\Test)
+      - If you want to exclude more than one folder, in a path, use multiple instances of \*\ to indicate multiple nested folders (for example, c:\Folder\*\*\Test)
 
-      - Microsoft Endpoint Configuration Manager *understøtter* ikke jokertegn (* eller ?)
+      - Microsoft Endpoint Configuration Manager *does not* support wildcards (* or ?)
 
-      - Hvis du vil udelade en fil, der indeholder tilfældige tegn (automatiseret filgenerering), kan du bruge symbolet '?' (f.eks. C:\Folder\fileversion?.docx)
+      - If you want to exclude a file, that contains random characters (automated file generation), you can use the '?' symbol (for example, C:\Folder\fileversion?.docx)
 
-      - ASR-udeladelse i Gruppepolitik understøtter ikke anførselstegn (programmet håndterer oprindeligt lange stier, mellemrum osv., så der er ingen grund til at bruge anførselstegn)
+      - ASR exclusions in Group Policy don't support quotes (the engine will natively handle long path, spaces, etc., so there's no need to use quotes)
 
-      - ASR-regler køres under NT AUTHORITY\SYSTEM-konto, så miljøvariabler er begrænset til maskinvariabler.
+      - ASR rules run under NT AUTHORITY\SYSTEM account, so environmental variables are limited to machine variables.
   - question: >
-      Hvordan ved jeg, hvad jeg vil udelukke?
+      How do I know what I need to exclude?
     answer: >
-      Forskellige asr-regler har forskellige beskyttelsesflows. Du skal altid tænke over, hvad asr-reglen, du konfigurerer beskytter mod, og hvordan det faktiske eksekveringsflow panorerer ud.
+      Different ASR rules will have different protection flows. Always think about what the ASR rule you are configuring protects against, and how the actual execution flow pans out.
 
 
-      Eksempel: Det kan være en sikkerhedsrisiko at blokere for, at der stjæles legitimationsoplysninger fra **undersystemet Windows** lokale sikkerhedscenter, Der læses direkte fra processen for det lokale sikkerhedscenters undersystem, Undersystem (Local Security Authority Subsystem), da det kan vise virksomhedens legitimationsoplysninger.
+      Example:
+
+      **Block credential stealing from the Windows local security authority subsystem**
+
+      Reading directly from Local Security Authority Subsystem (LSASS) process can be a security risk, since it might expose corporate credentials.
 
 
-      Denne regel forhindrer upålidelige processer i at have direkte adgang til LSASS-hukommelse. Når en proces forsøger at bruge funktionen OpenProcess() til at få adgang til LSASS med adgangsrettigheder til PROCESS_VM_READ, blokerer reglen specifikt denne adgangsregel.
+      This rule prevents untrusted processes from having direct access to LSASS memory. Whenever a process tries to use the OpenProcess() function to access LSASS, with an access right of PROCESS_VM_READ, the rule will  specifically block that access right.
 
 
-      :::image type="content" source="images/asrfaq1.png" alt-text="bloker legitimationstyvende LSASS":::
+      :::image type="content" source="images/asrfaq1.png" alt-text="block credential stealing LSASS":::
 
 
-      Hvis du i eksemplet ovenfor virkelig var nødt til at oprette en undtagelse for den proces, der blokerede adgangen til højre, ville tilføjelse af filnavnet sammen med den fulde sti udelukke det fra at blive blokeret, og efter du havde tilladelse til at få adgang til LSASS-proceshukommelsen. Værdien 0 betyder, at ASR-regler ignorerer denne fil/proces og ikke blokerer/overvåger den.
+      Looking at the above example, if you really had to create an exception for the process that the access right was blocked, adding the filename along with full path would exclude it from being blocked and after allowed to access LSASS process memory. The value of 0 means that ASR rules will ignore this file/process and not block/audit it.
 
 
-      :::image type="content" source="images/asrfaq2.png" alt-text="ekskluder filer asr":::
+      :::image type="content" source="images/asrfaq2.png" alt-text="exclude files asr":::
   - question: >
-      Hvilke regler anbefaler Microsoft at aktivere?
+      What are the rules Microsoft recommends enabling?
     answer: >
-      Vi anbefaler, at du aktiverer alle mulige regler. Der er dog visse tilfælde, hvor du ikke bør aktivere en regel. Vi anbefaler f.eks., at du ikke aktiverer blokprocesoprettelser, der stammer fra PSExec- og WMI-kommandoreglen, hvis du bruger Microsoft Endpoint Configuration Manager (eller System Center Configuration Manager - SCCM) til at administrere dine slutpunkter.
+      We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule, if you're using Microsoft Endpoint Configuration Manager (or, System Center Configuration Manager - SCCM) to manage your endpoints.
 
 
-      Vi anbefaler på det kraftigste, at du læser hver regelspecifik information og/eller advarsler, som findes i [vores offentlige dokumentation](/microsoft-365/security/defender-endpoint/attack-surface-reduction).
+      We highly recommend you that you read each rule-specific information and/or warnings, which are available in our
 
-      strække sig over flere søjler af beskyttelse, f.eks. Office, legitimationsoplysninger, scripts, mail osv. Alle ASR-regler, med undtagelse af vedholdenhed gennem WMI-hændelsesabonnement, understøttes Windows 1709 og nyere:
+      [public documentation](/microsoft-365/security/defender-endpoint/attack-surface-reduction).
+       spanning across multiple pillars of protection, like Office, Credentials, Scripts, E-Mail, etc. All ASR rules, except for Block persistence through WMI event subscription, are supported on Windows 1709 and later:
 
+      * [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
 
-      * [Bloker misbrug af udnyttet sårbar signerede drivere](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
+      * [Block executable content from email client and webmail](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)
 
-      * [Bloker eksekverbart indhold fra mailklient og webmail](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)
+      * [Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)
 
-      * [Bloker alle Office i at oprette underordnede processer](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)
+      * [Block Office applications from creating executable content](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)
 
-      * [Blokere Office programmer i at oprette eksekverbart indhold](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)
+      * [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)
 
-      * [Bloker Office programmer fra at indsætte kode i andre processer](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)
+      * [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
-      * [Bloker JavaScript eller VBScript fra at starte hentet eksekverbart indhold](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+      * [Block execution of potentially obfuscated scripts](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)
 
-      * [Bloker udførelse af potentielt slørede scripts](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)
+      * [Block Win32 API calls from Office macro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
 
-      * [Bloker Win32 API-opkald Office makro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
+      * [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)
 
-      * [Brug avanceret beskyttelse mod ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)
+      * [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) (lsass.exe)
 
-      * [Bloker, når der stjæles Windows det lokale sikkerhedscenters undersystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) (lsass.exe)
+      * [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)
 
-      * [Bloker procesoprettelser, der stammer fra PSExec- og WMI-kommandoer](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)
+      * [Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
-      * [Bloker upålidelige og usignerede processer, der køres fra USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)
+      * [Block executable files from running unless they meet a prevalence, age, or trusted list criteria](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
-      * [Bloker eksekverbare filer fra at køre, medmindre de opfylder et alders- eller pålidelige listekriterier](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
+      * [Block Office communication applications from creating child processes](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)
 
-      * [Bloker Office kommunikationsprogrammer i at oprette underordnede processer](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)
+      * [Block Adobe Reader from creating child processes](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)
 
-      * [Bloker Adobe Reader i at oprette underordnede processer](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)
-
-      * [Bloker vedholdenhed gennem WMI-hændelsesabonnementet](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+      * [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
   - question: >
-      Er undersystem for det lokale sikkerhedscenter aktiveret som standard?
+      Is Local security authority subsystem enabled by default?
     answer: >
-      Standardtilstanden for ASR-reglen (Attack Surface Reduction) "Block credential stealing from the Windows local security authority subsystem (lsass.exe)" ændres fra **Ikke** konfigureret til Konfigureret og standardtilstanden  angivet til Bloker **.** Alle andre ASR-regler forbliver i deres standardtilstand: **Ikke konfigureret**. Der er allerede indført yderligere filtreringslogik i reglen for at reducere beskeder fra slutbrugere. Kunder kan konfigurere reglen til **tilstanden Overvågning**, **Advar** eller **Deaktiveret** , som tilsidesætter standardtilstanden. Funktionaliteten for denne regel er den samme, uanset om reglen er konfigureret i standardtilstanden, eller hvis du aktiverer Bloker tilstand manuelt.  
+      The default state for the Attack Surface Reduction (ASR) rule "Block credential stealing from the Windows local security authority subsystem (lsass.exe)" will change from **Not Configured** to **Configured** and the default mode set to **Block**. All other ASR rules will remain in their default state: **Not Configured**. Additional filtering logic has already been incorporated in the rule to reduce end user notifications. Customers can configure the rule to **Audit**, **Warn** or **Disabled** modes, which will override the default mode. The functionality of this rule is the same, whether the rule is configured in the on-by-default mode, or if you enable Block mode manually.
   - question: >
-      Hvad er nogle gode anbefalinger til at komme i gang med asr.
+      What are some good recommendations for getting started with ASR?
     answer: >
-      Test, hvordan ASR-regler påvirker din organisation, før du aktiverer dem, ved at køre ASR-regler i overvågningstilstand i en kort periode. Mens du kører reglerne i overvågningstilstand, kan du identificere alle line of business-programmer, der kan blive blokeret forkert, og udelukke dem fra ASR.
+      Test how ASR rules will impact your organization before enabling them by running ASR rules in audit mode for a brief period of time. While you are running the rules in audit mode, you can identify any line-of-business applications that might get blocked erroneously, and exclude them from ASR.
 
 
-      Større organisationer bør overveje at udrulle ASR-regler i "cirkler" ved at overvåge og aktivere regler i endnu bredere delsæt af enheder. Du kan arrangere din organisations enheder i ringe ved hjælp af Intune eller et Gruppepolitik administrationsværktøj.
+      Larger organizations should consider rolling out ASR rules in "rings," by auditing and enabling rules in increasingly broader subsets of devices. You can arrange your organization's devices into rings by using Intune or a Group Policy management tool.
   - question: >
-      Hvor længe skal jeg teste en AA-regel i overvågningstilstand, før den aktiverer den?
+      How long should I test an ASR rule in audit mode before enabling it?
     answer: >
-      Hold reglen i overvågningstilstand i ca. 30 dage for at få en god oprindelig plan for, hvordan reglen fungerer, når den går live i hele organisationen. I løbet af overvågningsperioden kan du identificere alle line of business-programmer, der kan blive blokeret af reglen, og konfigurere reglen til at udelukke dem.
+      Keep the rule in audit mode for about 30 days to get a good baseline for how the rule will operate once it goes live throughout your organization. During the audit period, you can identify any line-of-business applications that might get blocked by the rule, and configure the rule to exclude them.
   - question: >
-      Jeg skifter fra en tredjepartssikkerhedsløsning til Defender for Endpoint. Er der en "nem" metode til at eksportere regler fra en anden sikkerhedsløsning til asr.
+      I'm making the switch from a third-party security solution to Defender for Endpoint. Is there an "easy" way to export rules from another security solution to ASR?
     answer: >
-      I de fleste tilfælde er det nemmere og bedre at starte med de anbefalinger til grundlinjer, [som Defender til Slutpunkt](/windows/security/threat-protection) foreslår, end at forsøge at importere regler fra en anden sikkerhedsløsning. Brug derefter værktøjer som overvågningstilstand, overvågning og analyse til at konfigurere din nye løsning, så den passer til dine unikke behov.
+      In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](/windows/security/threat-protection) than to attempt to import rules from another security solution. Then, use tools such as audit mode, monitoring, and analytics to configure your new solution to suit your unique needs.
 
 
-      Standardkonfigurationen for de fleste asr-regler, kombineret med Defender til Slutpunkts beskyttelse i realtid, beskytter mod et stort antal udnyttelser og sårbarheder.
+      The default configuration for most ASR rules, combined with Defender for Endpoint's real-time protection, will protect against a large number of exploits and vulnerabilities.
 
 
-      Fra Defender til Slutpunkt kan du opdatere dit forsvar med brugerdefinerede indikatorer for at tillade og blokere visse softwarefunktionsmåder. ASR giver også mulighed for visse tilpasninger af regler i form af fil- og mappeude udeladelse. Generelt er det bedst at overvåge en regel i en periode og konfigurere udeladelse for alle line of business-programmer, der kan blive blokeret.
+      From within Defender for Endpoint, you can update your defenses with custom indicators, to allow and block certain software behaviors. ASR also allows for some customization of rules, in the form of file and folder exclusions. As a general rule, it is best to audit a rule for a period of time, and configure exclusions for any line-of-business applications that might get blocked.
   - question: >
-      Understøtter ASR fil- eller mappeudetagelser, der inkluderer systemvariabler og jokertegn i stien?
+      Does ASR support file or folder exclusions that include system variables and wildcards in the path?
     answer: >
-      Ja. Se Ekskluder filer og mapper fra [ASR-regler](enable-attack-surface-reduction.md#exclude-files-and-folders-from-asr-rules) [for at](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) få flere oplysninger om udelukkelse af filer eller mapper fra ASR-regler og Konfigurer og valider udeladelsesreglerne baseret på filtypenavn og mappeplacering for at få mere at vide om brug af systemvariabler og jokertegn i ekskluderede filstier.
+      Yes. See [Excluding files and folders from ASR rules](enable-attack-surface-reduction.md#exclude-files-and-folders-from-asr-rules) for more details on excluding files or folders from ASR rules, and [Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) for more on using system variables and wildcards in excluded file paths.
   - question: >
-      Dækker ASR-regler alle programmer som standard?
+      Do ASR rules cover all applications by default?
     answer: >
-      Det afhænger af reglen. De fleste asr-regler dækker funktionsmåden i Microsoft Office produkter og tjenester, f.eks. Word, Excel, PowerPoint og OneNote eller Outlook. Visse ASR-regler, f.eks Bloker *udførelse af potentielt slørede scripts*, er mere generelle i omfang.
+      It depends on the rule. Most ASR rules cover the behavior of Microsoft Office products and services, such as Word, Excel, PowerPoint, and OneNote, or Outlook. Certain ASR rules, such as *Block execution of potentially obfuscated scripts*, are more general in scope.
   - question: >
-      Understøtter ASR sikkerhedsløsninger fra tredjeparter?
+      Does ASR support third-party security solutions?
     answer: >
-      ASR bruger Microsoft Defender Antivirus til at blokere programmer. Det er ikke muligt at konfigurere ASR til at bruge en anden sikkerhedsløsning til blokering på nuværende tidspunkt.
+      ASR uses Microsoft Defender Antivirus to block applications. It is not possible to configure ASR to use another security solution for blocking at this time.
   - question: >
-      Jeg har en E5-licens og har aktiveret nogle asr-regler sammen med Defender for Endpoint. Er det muligt, at en ASR-hændelse slet ikke vises i Defender til Slutpunkts begivenhedstidslinje?
+      I have an E5 license and enabled some ASR rules in conjunction with Defender for Endpoint. Is it possible for an ASR event to not show up at all in Defender for Endpoint's event timeline?
     answer: >
-      Når en meddelelse udløses lokalt af en ASR-regel, sendes der også en rapport om hændelsen til Defender for Endpoint-portalen. Hvis du har problemer med at finde begivenheden, kan du filtrere tidslinjen med begivenheder ved hjælp af søgefeltet. Du kan også få vist ASR-begivenheder ved at besøge Gå til administration af **angrebsoverfladen** på ikonet **Konfigurationsstyring** på proceslinjen Defender for Cloud. Siden til administration af angrebsoverfladen indeholder en fane til rapportregistreringer, som indeholder en komplet liste over ASR-regelhændelser, der rapporteres til Defender til slutpunktet.
+      Whenever a notification is triggered locally by an ASR rule, a report on the event is also sent to the Defender for Endpoint portal. If you're having trouble finding the event, you can filter the events timeline using the search box. You can also view ASR events by visiting **Go to attack surface management**, from the **Configuration management** icon in the Defender for Cloud taskbar. The attack surface management page includes a tab for report detections, which includes a full list of ASR rule events reported to Defender for Endpoint.
   - question: >
-      Jeg har anvendt en regel ved hjælp af gruppepolitikobjekt. Når jeg forsøger at kontrollere indekseringsindstillingerne for reglen i Microsoft Outlook får jeg vist en meddelelse om, at "Adgang nægtet".
+      I applied a rule using GPO. Now when I try to check the indexing options for the rule in Microsoft Outlook, I get a message stating, 'Access denied'.
     answer: >
-      Prøv at åbne indekseringsindstillingerne direkte Windows 10 eller Windows 11.
+      Try opening the indexing options directly from Windows 10 or Windows 11.
 
 
-      1. Vælg **ikonet Søg** på Windows proceslinjen.
+      1. Select the **Search** icon on the Windows taskbar.
 
 
-      1. Angiv **indekseringsindstillinger** i søgefeltet.
+      1. Enter **Indexing options** into the search box.
   - question: >
-      Bruges kriterierne i reglen "Bloker eksekverbare filer fra at køre, medmindre de opfylder et alders- eller listekriterium, der er tillid til", som kan konfigureres af en administrator?
+      Are the criteria used by the rule, "Block executable files from running unless they meet a prevalence, age, or trusted list criterion," configurable by an admin?
     answer: >
-      Nej. De kriterier, der bruges af denne regel, vedligeholdes af Microsofts skybeskyttelse for konstant at holde listen, der er tillid til, opdateret med data, der er indsamlet fra hele verden. Lokale administratorer har ikke skriveadgang til at ændre disse data. Hvis du vil konfigurere denne regel til at skræddersy den til din virksomhed, kan du føje visse programmer til listen over undtagelser for at forhindre, at reglen udløses.
+      No. The criteria used by this rule are maintained by Microsoft cloud protection, to keep the trusted list constantly up to date with data gathered from around the world. Local admins do not have write access to alter this data. If you are looking to configure this rule to tailor it for your enterprise, you can add certain applications to the exclusions list to prevent the rule from being triggered.
   - question: >
-      Jeg har aktiveret ASR-reglen "Bloker eksekverbare filer i at køre, medmindre de opfylder et alders-, alders- eller pålidelige listekriterium". Efter et stykke tid opdaterede jeg et stykke software, og reglen blokerer den nu, selvom den ikke gjorde før. Gik der noget galt?
+      I enabled the ASR rule, 'Block executable files from running unless they meet a prevalence, age, or trusted list criterion'. After some time, I updated a piece of software, and the rule is now blocking it, even though it didn't before. Did something go wrong?
     answer: >
-      Denne regel er afhængig af, at hvert program har et kendt ry, målt efter værdier, alder eller inklusion på en liste over apps, der er tillid til. Reglens beslutning om at blokere eller tillade et program bestemmes i sidste ende af Microsofts skybeskyttelses vurdering af disse kriterier.
+      This rule relies upon each application having a known reputation, as measured by prevalence, age, or inclusion on a list of trusted apps. The rule's decision to block or allow an application is ultimately determined by Microsoft cloud protection's assessment of these criteria.
 
 
-      Som regel kan skybeskyttelse afgøre, at en ny version af et program ligner nok til tidligere versioner, som det ikke behøver at være understøttet i længden. Det kan dog tage lidt tid, før appen opbygger et ry efter at have skiftet version, især efter en større opdatering. I mellemtiden kan du føje programmet til udeladelseslisten for at forhindre denne regel i at blokere vigtige programmer. Hvis du ofte opdaterer og arbejder med nye versioner af programmer, kan du i stedet vælge at køre denne regel i overvågningstilstand.
+      Usually, cloud protection can determine that a new version of an application is similar enough to previous versions that it does not need to be reassessed at length. However, it might take some time for the app to build reputation after switching versions, particularly after a major update. In the meantime, you can add the application to the exclusions list, to prevent this rule from blocking important applications. If you are frequently updating and working with new versions of applications, you may opt instead to run this rule in audit mode.
   - question: >
-      Jeg har for nylig aktiveret ASR-reglen "Block credential stealing from the Windows local security authority subsystem (lsass.exe)", og jeg får et stort antal meddelelser. Hvad sker der?
+      I recently enabled the ASR rule, 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)', and I am getting a large number of notifications. What is going on?
     answer: >
-      En meddelelse, der genereres af denne regel, angiver ikke nødvendigvis ondsindet aktivitet; denne regel er dog stadig nyttig til at blokere ondsindet aktivitet, da malware ofte er målrettet lsass.exe at få adgang til konti, der er adgang til. Processen lsass.exe gemmer brugerlegitimationsoplysninger i hukommelsen, når en bruger er logget på. Windows bruger disse legitimationsoplysninger til at validere brugere og anvende lokale sikkerhedspolitikker.
+      A notification generated by this rule does not necessarily indicate malicious activity; however, this rule is still useful for blocking malicious activity, since malware often targets lsass.exe to gain illicit access to accounts. The lsass.exe process stores user credentials in memory after a user has logged in. Windows uses these credentials to validate users and apply local security policies.
 
 
-      Da mange legitime processer igennem en typisk dag vil kræve lsass.exe legitimationsoplysninger, kan denne regel være særligt støjende. Hvis en kendt legitim anvendelse medfører, at denne regel genererer et stort antal meddelelser, kan du føje den til udeladelseslisten. De fleste andre asr-regler vil generere et relativt mindre antal meddelelser i forhold til dette, da opkald på lsass.exe typisk er typisk for mange programmers normale funktion.
+      Because many legitimate processes throughout a typical day will be calling on lsass.exe for credentials, this rule can be especially noisy. If a known legitimate application causes this rule to generate an excessive number of notifications, you can add it to the exclusion list. Most other ASR rules will generate a relatively smaller number of notifications, in comparison to this one, since calling on lsass.exe is typical of many applications' normal functioning.
   - question: >
-      Er det en god ide at aktivere reglen "Bloker legitimationstyveri fra det lokale Windows-undersystem (lsass.exe)" ud for LSA-beskyttelsen?
+      Is it a good idea to enable the rule, 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)', alongside LSA protection?
     answer: >
-      Aktivering af denne regel giver ikke yderligere beskyttelse, hvis du også [har LSA-beskyttelse](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection#BKMK_HowToConfigure) aktiveret. Både reglen og LSA-beskyttelsen fungerer på stort set samme måde, så det kan være overflødigt at køre begge på samme tid. Nogle gange kan du dog muligvis ikke aktivere LSA-beskyttelse. I disse tilfælde kan du aktivere denne regel til at yde tilsvarende beskyttelse mod malware, som lsass.exe.
+      Enabling this rule will not provide additional protection if you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection#BKMK_HowToConfigure) enabled as well. Both the rule and LSA protection work in much the same way, so having both running at the same time would be redundant. However, sometimes you may not be able to enable LSA protection. In those cases, you can enable this rule to provide equivalent protection against malware that target lsass.exe.
   - question: >
-      Se også
+      See also
     answer: >-
-      * [Oversigt over reduktion af angrebsoverfladen](attack-surface-reduction.md)
+      * [Attack surface reduction overview](attack-surface-reduction.md)
 
-      * [Evaluer regler for reduktion af angrebsoverfladen](evaluate-attack-surface-reduction.md)
+      * [Evaluate attack surface reduction rules](evaluate-attack-surface-reduction.md)
 
-      * [Implementering af regler for reduktion af angrebsoverfladen Trin 3: Implementer ASR-regler](attack-surface-reduction-rules-deployment-implement.md)
+      * [Attack surface reduction rules deployment Step 3: Implement ASR rules](attack-surface-reduction-rules-deployment-implement.md)
 
-      * [Aktivér regler for reduktion af angrebsoverfladen](enable-attack-surface-reduction.md)
+      * [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 
-      * [Kompatibilitet af Microsoft Defender Antivirus med anden antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)
+      * [Compatibility of Microsoft Defender Antivirus with other antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)
