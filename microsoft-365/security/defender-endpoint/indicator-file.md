@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 32de72a201dbb88c9fc0c6d7e61825bf8083fbf9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 20e120385046a333f68f4959c395c2bbb520899b
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591279"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500909"
 ---
 # <a name="create-indicators-for-files"></a>Opret indikatorer for filer
 
@@ -28,7 +28,8 @@ ms.locfileid: "63591279"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -99,7 +100,7 @@ Vælg, om der skal genereres en besked om filblokeringshændelsen, og definer in
 - Beskrivelse
 - Anbefalede handlinger
 
-![Beskedindstillinger for filindikatorer.](images/indicators-generate-alert.png)
+:::image type="content" source="images/indicators-generate-alert.png" alt-text="Beskedindstillinger for filindikatorer" lightbox="images/indicators-generate-alert.png":::
 
 > [!IMPORTANT]
 >

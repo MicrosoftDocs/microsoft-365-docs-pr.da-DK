@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste fremgangsmåder for Exchange Online Protection (EOP) og Defender til Office 365 for sikkerhed? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal du bruge, hvis du vil være mere restriktiv? Og hvad ekstra får du, hvis du også bruger Defender til Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 66d221b422236c6818ebb146babc0cc90eab1206
-ms.sourcegitcommit: f563b4229760fa099703296d1ad2c1f0264f1647
+ms.openlocfilehash: 078fbe60b18c06b46c4da0935fce3c4ad867908b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "63592346"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683707"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -56,10 +56,6 @@ Antispam, antimalware og antiphishing er EOP-funktioner, der kan konfigureres af
 
 Hvis du vil oprette og konfigurere antispam-politikker, skal [du se Konfigurer politikker for uønsket post i EOP](configure-your-spam-filter-policies.md).
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Grænseværdi for massemail & egenskaber for uønsket post**|||||
@@ -85,15 +81,10 @@ Hvis du vil oprette og konfigurere antispam-politikker, skal [du se Konfigurer p
 |Tilladte afsenderdomæner <p> _AllowedSenderDomains_|Ingen|Ingen|Ingen|Det er en meget dårlig ide at føje domæner til listen over tilladte afsendere. Hackere vil kunne sende dig mails, som ellers ville blive frafiltreret. <p> Brug efterlignet intelligensindsigt og lejerens tilladelses[-/](tenant-allow-block-list.md)blokeringsliste til at gennemse alle afsendere, der efterligner afsendermailadresser i din organisations maildomæner eller efterligner afsendermailadresser i eksterne domæner.[](learn-about-spoof-intelligence.md)|
 |Blokerede afsendere <p> _BlockedSenders_|Ingen|Ingen|Ingen||
 |Blokerede afsenderdomæner <p> _BlockedSenderDomains_|Ingen|Ingen|Ingen||
-|
 
 #### <a name="asf-settings-in-anti-spam-policies"></a>ASF-indstillinger i politikker for uønsket post
 
 Tabellen i dette afsnit beskriver de avancerede asf-indstillinger for spamfilter, der er tilgængelige i antispampolitikker. Alle disse indstillinger er slået **Fra** for både **Standard** og **Strenge** niveauer. Du kan finde flere oplysninger om ASF-indstillinger [under Avancerede indstillinger for spamfilter (ASF) i EOP](advanced-spam-filtering-asf-options.md).
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Kommenter|
 |---|---|
@@ -113,7 +104,6 @@ Tabellen i dette afsnit beskriver de avancerede asf-indstillinger for spamfilter
 |**Filtrering af afsender-id mislykkes** (_MarkAsSpamFromAddressAuthFail_)||
 |**Backscatter** (_MarkAsSpamNdrBackscatter_)||
 |**Testtilstand** (_TestModeAction_)|For ASF-indstillinger, der understøtter **Test** som en handling, kan du konfigurere handlingen for testtilstand til **Ingen**, Tilføj standardtekst i X-brevhoved eller **Send Bcc-meddelelse** (`None`, `AddXHeader`eller ). `BccMessage` Få mere at vide under [Aktivér, deaktiver eller test ASF-indstillinger](advanced-spam-filtering-asf-options.md#enable-disable-or-test-asf-settings).|
-|
 
 #### <a name="eop-outbound-spam-policy-settings"></a>Indstillinger for EOP-politik for udgående spam
 
@@ -124,10 +114,6 @@ Du kan finde flere oplysninger om standardgrænserne for afsendelse i tjenesten 
 > [!NOTE]
 > Politikker for udgående spam er ikke en del af Standard eller Faste forudindstillede sikkerhedspolitikker. Standard **-** og **Strict-værdierne** angiver vores anbefalede **værdier i** standardpolitikken for udgående spam eller brugerdefinerede politikker, du opretter.
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Angiv en ekstern meddelelsesgrænse** <p> _RecipientLimitExternalPerHour_|0|500|400|Standardværdien 0 betyder, at du bruger tjenestens standardindstillinger.|
@@ -137,15 +123,10 @@ Du kan finde flere oplysninger om standardgrænserne for afsendelse i tjenesten 
 |**Regler for automatisk videresendelse** <p> _AutoForwardingMode_|**Automatisk – systemkontrolleret** <p> `Automatic`|**Automatisk – systemkontrolleret** <p> `Automatic`|**Automatisk – systemkontrolleret** <p> `Automatic`|
 |**Sende en kopi af udgående meddelelser, der overskrider disse begrænsninger for disse brugere og grupper** <p> _BccSuspiciousOutboundMail_ <p> _BccSuspiciousOutboundAdditionalRecipients_|Ikke markeret <p> `$false` <p> Tom|Ikke markeret <p> `$false` <p> Tom|Ikke markeret <p> `$false` <p> Tom|Vi har ingen specifik anbefaling til denne indstilling. <p> Denne indstilling fungerer kun i standardpolitikken for udgående spam. Det fungerer ikke i brugerdefinerede politikker for udgående spam, som du opretter.|
 |**Giv disse brugere og grupper besked, hvis en afsender blokeres på grund af afsendelse af udgående spam** <p> _NotifyOutboundSpam_ <p> _NotifyOutboundSpamRecipients_|Ikke markeret <p> `$false` <p> Tom|Ikke markeret <p> `$false` <p> Tom|Ikke markeret <p> `$false` <p> Tom|Standardpolitikken [for påmindelse](../../compliance/alert-policies.md),  der hedder Bruger er begrænset til at sende mail, sender allerede mailbeskeder til medlemmer af **gruppen TenantAdmins** (globale administratorer), når brugere **blokeres** pga. overskrider begrænsningerne i politikken. **Vi anbefaler på det kraftigste, at du bruger** påmindelsespolitikken i stedet for denne indstilling i politikken for udgående spam til at underrette administratorer og andre brugere. Du kan finde en vejledning [i Bekræfte indstillingerne for påmindelse for brugere med begrænset adgang](removing-user-from-restricted-users-portal-after-spam.md#verify-the-alert-settings-for-restricted-users).|
-|
 
 ### <a name="eop-anti-malware-policy-settings"></a>Politikindstillinger for EOP-antimalware
 
 Hvis du vil oprette og konfigurere antimalwarepolitikker, skal [du se Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md).
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
@@ -171,15 +152,10 @@ Hvis du vil oprette og konfigurere antimalwarepolitikker, skal [du se Konfigurer
 |**Tilpasse meddelelser for meddelelser fra eksterne afsendere**||||Disse indstillinger bruges kun, hvis **Giv** eksterne afsendere besked, når meddelelser er i karantæne som malware, eller Giv besked til en administrator om ikke-leveret meddelelser fra eksterne afsendere **er markeret** .|
 |**Emne** <p> _CustomExternalSubject_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
 |**Meddelelse** <p> _CustomExternalTilpasset_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
-|
 
 ### <a name="eop-anti-phishing-policy-settings"></a>Politikindstillinger for EOP-antiphishing
 
 Du kan finde flere oplysninger om disse indstillinger [under Spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings). Se Konfigurer [antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md) for at konfigurere disse indstillinger.
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
@@ -190,7 +166,6 @@ Du kan finde flere oplysninger om disse indstillinger [under Spoof-indstillinger
 |**Vis første sikkerhedstip** <p> _EnableFirstContactSafetyTips_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Du kan få mere at vide [under Første sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
 |**Show (?) for ikke-godkendte afsendere for spoof** <p> _EnableUnauthenticatedSender_|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificeret spoof afsendere. Du kan finde flere [oplysninger under Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 |**Vis mærket "via"** <p> _EnableViaTag_|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`|Føjer et via-mærke (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis det er forskelligt fra domænet i DKIM-signaturen eller **MAIL FRA-adressen** . <p> Du kan finde flere [oplysninger under Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|
 
 ## <a name="microsoft-defender-for-office-365-security"></a>Microsoft Defender for Office 365 sikkerhed
 
@@ -214,22 +189,13 @@ EOP-kunder får grundlæggende antiphishing som beskrevet tidligere, men Defende
 
 Du kan finde flere oplysninger om denne indstilling [i Avancerede phishingtærskler i antiphishing-politikker i Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Hvis du vil konfigurere denne indstilling, [skal du se Konfigurer antiphishing-politikker i Defender Office 365](configure-mdo-anti-phishing-policies.md).
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Grænseværdi for phishingmail** <p> _PhishThresholdLevel_|**1 – Standard** <p> `1`|**2 – Aggressive** <p> `2`|**3 – mere aggressive** <p> `3`||
-|
 
 #### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Indstillinger for efterligning i antiphishing-politikker i Microsoft Defender Office 365
 
 Du kan finde flere oplysninger om disse indstillinger [under Indstillinger for repræsentation i antiphishing-politikker i Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Hvis du vil konfigurere disse indstillinger, [skal du se Konfigurer antiphishing-politikker i Defender Office 365](configure-mdo-anti-phishing-policies.md).
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
@@ -248,17 +214,12 @@ Du kan finde flere oplysninger om disse indstillinger [under Indstillinger for r
 |**Vis sikkerhedstip** <p> _EnableSimilarUsersSafetyTips_|Fra <p> `$false`|Markeret <p> `$true`|Markeret <p> `$true`||
 |**Vis sikkerhedstip** <p> _EnableSimilarDomainsSafetyTips_|Fra <p> `$false`|Markeret <p> `$true`|Markeret <p> `$true`||
 |**Vis bruger efterligning af usædvanlige tegn sikkerhedstip** <p> _EnableUnusualCharactersSafetyTips_|Fra <p> `$false`|Markeret <p> `$true`|Markeret <p> `$true`||
-|
 
 #### <a name="eop-anti-phishing-policy-settings-in-microsoft-defender-for-office-365"></a>Politikindstillinger for EOP-antiphishing i Microsoft Defender Office 365
 
 Disse er de samme indstillinger, der er tilgængelige i [politikindstillinger for uønsket post i EOP](#eop-anti-spam-policy-settings).
 
 Indstillingerne for spoof er indbyrdes forbundne, men indstillingen Vis første **kontakt sikkerhedstip** ikke afhængighed af spoof-indstillinger.
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Standard|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|---|
@@ -269,7 +230,6 @@ Indstillingerne for spoof er indbyrdes forbundne, men indstillingen Vis første 
 |**Vis første sikkerhedstip** <p> _EnableFirstContactSafetyTips_|Ikke markeret <p> `$false`|Markeret <p> `$true`|Markeret <p> `$true`|Du kan få mere at vide [under Første sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
 |**Show (?) for ikke-godkendte afsendere for spoof** <p> _EnableUnauthenticatedSender_|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificeret spoof afsendere. Du kan finde flere [oplysninger under Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 |**Vis mærket "via"** <p> _EnableViaTag_|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`|Føjer et via-mærke (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis det er forskelligt fra domænet i DKIM-signaturen eller **MAIL FRA-adressen** . <p> Du kan finde flere [oplysninger under Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|
 
 ### <a name="safe-attachments-settings"></a>Pengeskab indstillinger for vedhæftede filer
 
@@ -288,16 +248,11 @@ Hvis du vil konfigurere disse indstillinger, skal du se Pengeskab Vedhæftede [f
 
 I PowerShell bruger du [Set-AtpPolicyForO365-cmdlet'en](/powershell/module/exchange/set-atppolicyforo365) til disse indstillinger.
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard|Indbygget beskyttelse|Kommenter|
 |---|:---:|:---:|---|
 |**Slå Defender til for Office 365 for SharePoint, OneDrive og Microsoft Teams** <p> _EnableATPForSPOTeamsODB_|Fra <p> `$false`|Til <p> `$true`|Hvis du vil forhindre brugere i at hente skadelige filer, [skal du se Brug SharePoint Online PowerShell til at forhindre brugere i at hente skadelige filer](turn-on-mdo-for-spo-odb-and-teams.md#step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files).|
 |**Slå Pengeskab Dokumenter til for Office klienter** <p> _EnableSafeDocs_|Fra <p> `$false`|Til <p> `$true`|Denne funktion er kun tilgængelig og giver mening med licenser, der ikke er inkluderet i Defender Office 365 (f.eks Microsoft 365 E5 eller Microsoft 365 E5 Sikkerhed). Du kan finde flere oplysninger [Pengeskab Dokumenter i Microsoft 365 E5](safe-docs.md).|
 |**Tillad brugere at klikke gennem Beskyttet visning, selvom Pengeskab dokumenter identificeret filen som skadelige** <p> _AllowSafeDocsOpen_|Fra <p> `$false`|Fra <p> `$false`|Denne indstilling er relateret til Pengeskab Dokumenter.|
-|
 
 #### <a name="safe-attachments-policy-settings"></a>Pengeskab indstillinger for politik for vedhæftede filer
 
@@ -310,17 +265,12 @@ I PowerShell bruger du [New-SafeAttachmentPolicy](/powershell/module/exchange/ne
 >
 > **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i den nye Pengeskab politikker for vedhæftede filer, du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard i brugerdefineret|Indbygget beskyttelse|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|:---:|---|
 |**Pengeskab ukendt malwaresvar ved vedhæftede filer** <p> _Aktivér_ og _handling_|**Fra** <p> `-Enable $false` og `-Action Block`|**Bloker** <p> `-Enable $true` og `-Action Block`|**Bloker** <p> `-Enable $true` og `-Action Block`|**Bloker** <p> `-Enable $true` og `-Action Block`|Når _parameteren_ Aktivér er $false, betyder værdien for handlingsparameteren ikke noget.|
 |**Karantænepolitik** (_QuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|Når du opretter en ny Pengeskab Politik for vedhæftede filer, betyder en tom værdi standardkarantænepolitikken, der bruges til at definere de historiske egenskaber for meddelelser, der var i karantæne af Pengeskab Vedhæftede filer (AdminOnlyAccessPolicy). <p> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer flere funktioner for brugere. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).|
 |**Omdiriger vedhæftet fil med registrerede vedhæftede filer** : **Aktivér omdirigering** <p> _Omdiriger_ <p> _RedirectAddress_|Ikke markeret, og der er ikke angivet en mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Ikke markeret, og der er ikke angivet en mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Markeret, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Markeret, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Omdirigere meddelelser til en sikkerhedsadministrator til gennemsyn. <p> **Bemærk**! Denne indstilling er ikke konfigureret **i standard,** **streng eller** **indbyggede sikkerhedspolitikker.** Standard **-** og **Strict-værdierne** angiver vores **anbefalede værdier** i den nye Pengeskab vedhæftede filer-politikker, du opretter.|
 |**Anvend søges Pengeskab registreringssvar for vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)** <p> _ActionOnError_|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`|Markeret <p> `$true`||
-|
 
 ### <a name="safe-links-settings"></a>Pengeskab links
 
@@ -339,17 +289,12 @@ Hvis du vil konfigurere disse indstillinger, [skal du se Konfigurer globale inds
 
 I PowerShell bruger du [Set-AtpPolicyForO365-cmdlet'en](/powershell/module/exchange/set-atppolicyforo365) til disse indstillinger.
 
-<br>
-
-****
-
 |Navn på sikkerhedsfunktion|Standard|Indbygget beskyttelse|Kommenter|
 |---|:---:|:---:|---|
 |**Blokere følgende URL-adresser** <p> _ExcludedUrls_|Tom <p> `$null`|Tom <p> `$null`|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan finde flere oplysninger [på listen "Bloker følgende URL-adresser" for Pengeskab Links](safe-links.md#block-the-following-urls-list-for-safe-links).
 |**Brug Pengeskab Links i Office 365 apps** <p> _EnableSafeLinksForO365Clients_|Til <p> `$true`|Til <p> `$true`|Brug Pengeskab Links i understøttede Office 365 og mobilapps (iOS og Android). Du kan finde flere oplysninger [Pengeskab Indstillinger for links til Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).|
 |**Registrer ikke, når brugere klikker på beskyttede links i Office 365 apps** <p> _TrackClicks_|Til <p> `$false`|Fra <p> `$true`|Hvis du deaktiverer denne indstilling (_indstilling af TrackClicks_ til `$true`), registreres brugerklik i understøttede Office 365 apps.|
 |**Lad ikke brugere klikke igennem til den oprindelige URL-adresse i Office 365 apps** <p> _TilladKlikThrough_|Til <p> `$false`|Til <p> `$false`|Aktivering af denne indstilling (indstilling _af TilladKlikThrough_ til `$false`) forhindrer klik til den oprindelige URL-adresse i understøttede Office 365 apps.|
-|
 
 #### <a name="safe-links-policy-settings"></a>Pengeskab links til politikindstillinger
 
@@ -361,10 +306,6 @@ I PowerShell bruger du [cmdlet'erne New-SafeLinksPolicy](/powershell/module/exch
 > Som beskrevet tidligere er der ingen standardpolitik Pengeskab Links, men beskyttelse af Pengeskab Links tildeles til alle modtagere af den [**indbyggede**](preset-security-policies.md) beskyttelse foruddefinerede sikkerhedspolitik.
 >
 > **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i den nye Pengeskab Links-politikker, du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
-
-<br>
-
-****
 
 |Navn på sikkerhedsfunktion|Standard i brugerdefineret|Indbygget beskyttelse|Standard|Begrænset|Kommenter|
 |---|:---:|:---:|:---:|:---:|---|
@@ -381,7 +322,6 @@ I PowerShell bruger du [cmdlet'erne New-SafeLinksPolicy](/powershell/module/exch
 |**Undlad at omskrive følgende URL-adresser** <p> _DoNotRewriteUrls_|Ikke markeret <p> tom|Ikke markeret <p> tom|Ikke markeret <p> tom|Ikke markeret <p> tom|Vi har ingen specifik anbefaling til denne indstilling. Få mere at vide under ["Omse ikke følgende URL-adresser"-lister i Pengeskab Links-politikker](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).|
 |**Meddelelse**||||||
 |**Hvordan vil du give dine brugere besked?**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan vælge **Brug brugerdefineret meddelelsestekst** (_CustomNotificationText_) for at angive tilpasset meddelelsestekst, der skal bruges. Du kan også vælge **Brug Microsoft Oversætter til** automatisk lokalisering (_UseTranslatedNotificationText_) for at oversætte den brugerdefinerede meddelelsestekst til brugerens sprog.
-|
 
 ## <a name="related-articles"></a>Relaterede artikler
 

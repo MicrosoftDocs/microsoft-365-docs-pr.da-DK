@@ -16,13 +16,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: ''
 ms.localizationpriority: medium
-description: Få mere at vide om, hvordan du planlægger og kører et prøveprogram til SharePoint Syntex i din organisation.
-ms.openlocfilehash: 74b44c14140f26e0744aac73fd948e58d9d33e24
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du planlægger, tilmelder dig og kører et prøveprogram til SharePoint Syntex i organisationen.
+ms.openlocfilehash: fc4221b0022aca8a0564c78e64d94028f6483104
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63593936"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507093"
 ---
 # <a name="run-a-trial-of-microsoft-sharepoint-syntex"></a>Kør en prøveversion af Microsoft SharePoint Syntex
 
@@ -44,7 +44,7 @@ Du kan hente prøveversionen fra en af følgende kilder:
     2. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**BillingPurchase**</a> >  Services.
     3. Rul ned **til sektionen Tilføjelser** .
     4. På SharePoint Syntex du vælge **Detaljer**.
-    5. Vælg **Hent gratis prøveversion**.
+    5. Vælg **Start gratis prøveversion**.
     6. Følg de resterende trin i guiden for at bekræfte prøveabonnementet.
 
 Du skal være global Microsoft 365 eller faktureringsadministrator for at aktivere en prøveversion.

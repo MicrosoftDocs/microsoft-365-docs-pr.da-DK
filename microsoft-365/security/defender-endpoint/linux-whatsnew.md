@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 45b5bbcc1268c1f425b914a3f8279fe8dcc583f2
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 993820bace174d993ed81fafb7f1f3b1c7645d37
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569947"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500887"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender for Endpoint på Linux
 
@@ -46,7 +46,6 @@ ms.locfileid: "64569947"
 ## <a name="1015880-30122012158800"></a>101.58.80 (30.122012.15880.0)
 
 - Kommandolinjeværktøjet understøtter nu gendannelse af filer, der er sat i karantæne, på en anden placering end den, hvor filen oprindeligt blev fundet. Det kan du gøre via `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
-- Fra og med denne version kan netværksbeskyttelse til Linux evalueres efter behov
 - Fejlrettelser
 
 ## <a name="1015662-30121122156620"></a>101.56.62 (30.121122.15662.0)

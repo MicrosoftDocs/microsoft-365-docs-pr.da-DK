@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en Slack eDiscovery-dataforbindelse, der leveres af Microsoft til at importere og arkivere chatdata.
-ms.openlocfilehash: 2bd4df859d5bb3a4ccd048c83a864d44f81f33bc
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 7882524bb01a1d28c0f4f7c564472961d04baa07
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63594709"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501195"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Konfigurer en forbindelse til at arkivere Slack eDiscovery-data (forhåndsvisning)
 
@@ -77,7 +77,15 @@ Følgende oversigt beskriver processen med at bruge en Microsoft-dataforbindelse
 
    Når du har **klikket** på Tillad, lukkes siden Slæk, og siden Slæk i slæk for **eDiscovery-brugere Microsoft 365** brugere i forbindelsesguiden vises.
 
-## <a name="step-3-map-users-and-select-data-types-to-import"></a>Trin 3: Tilknyt brugere, og vælg de datatyper, der skal importeres
+## <a name="step-3-specify-the-users-to-import-data-for"></a>Trin 3: Angiv, hvilke brugere der skal importere data til
+
+Vælg en af følgende indstillinger for at angive, hvilke brugere med Slack eDiscovery-data du vil importere.
+
+- **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+- **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+## <a name="step-4-map-users-and-select-data-types-to-import"></a>Trin 4: Tilknyt brugere, og vælg de datatyper, der skal importeres
 
 1. Konfigurer en eller begge af følgende indstillinger for at knytte Slækbrugere til deres Microsoft 365 postkasser.
 
@@ -103,7 +111,7 @@ Følgende oversigt beskriver processen med at bruge en Microsoft-dataforbindelse
 
 3. Når du har konfigureret de datatyper, der **skal importeres**, skal du klikke på Næste, gennemse indstillingerne for forbindelsen og derefter klikke **på Udfør** for at oprette forbindelsen.
 
-## <a name="step-4-monitor-the-slack-ediscovery-connector"></a>Trin 4: Overvåg Slack eDiscovery-forbindelsen
+## <a name="step-5-monitor-the-slack-ediscovery-connector"></a>Trin 5: Overvåg Slack eDiscovery-forbindelsen
 
 Når du har oprettet Slack eDiscovery-forbindelsen, kan du få vist forbindelsens status i Microsoft 365 Overholdelsescenter.
 

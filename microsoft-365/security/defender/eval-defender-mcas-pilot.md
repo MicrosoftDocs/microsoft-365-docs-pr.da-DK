@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 9961caee57fade58581e8ddb8b9de7ea0d6aafd8
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 73601660fc4b7ee2f58748d7e59a10aa53157745
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498555"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570123"
 ---
 # <a name="pilot-microsoft-defender-for-cloud-apps-with-microsoft-365-defender"></a>Pilot Microsoft Defender for Cloud Apps med Microsoft 365 Defender
 
@@ -43,7 +43,6 @@ Brug følgende trin til at konfigurere pilotprojektet for Microsoft Defender for
 - [Trin 1. Opret pilotgruppen – Omfang af din pilotinstallation til visse brugergrupper](#step-1-create-the-pilot-groupscope-your-pilot-deployment-to-certain-user-groups)
 - [Trin 2. Konfigurere beskyttelse – Betinget adgang til appkontrol](#step-2-configure-protectionconditional-access-app-control)
 - [Trin 3. Prøv funktionerne – Gennemgå selvstudierne til beskyttelse af dit miljø](#step-3-try-out-capabilitieswalk-through-tutorials-for-protecting-your-environment) 
-
 
 ## <a name="step-1-create-the-pilot-groupscope-your-pilot-deployment-to-certain-user-groups"></a>Trin 1. Opret pilotgruppen – Omfang af din pilotinstallation til visse brugergrupper
 

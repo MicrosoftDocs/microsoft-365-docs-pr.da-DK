@@ -1,5 +1,5 @@
 ---
-title: Kom i gang med overholdelse af kommunikationsreglerne
+title: Kom i gang med kommunikationsoverholdelse
 description: Konfigurer politikker for overholdelse af kommunikation for at konfigurere brugerkommunikation til gennemsyn.
 f1.keywords:
 - NOCSH
@@ -21,14 +21,14 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 2e14e523c9aa662afc0ee38572f8a19be6f851b5
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+ms.openlocfilehash: d9d418cee35976e621c173b3563b04ee8bdce7ca
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63587332"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595296"
 ---
-# <a name="get-started-with-communication-compliance"></a>Kom i gang med overholdelse af kommunikationsreglerne
+# <a name="get-started-with-communication-compliance"></a>Kom i gang med kommunikationsoverholdelse
 
 Brug politikker for overholdelse af kommunikation til at identificere brugerkommunikation om undersøgelse foretaget af interne eller eksterne korrekturlæsere. Du kan finde flere oplysninger om, hvordan politikker for overholdelse af kommunikation kan hjælpe dig med at overvåge kommunikation i din organisation under Politikker for overholdelse af [regler og standarder i Microsoft 365](communication-compliance.md). Hvis du vil gennemgå, hvordan Contoso hurtigt konfigurerede en politik for overholdelse af kommunikation til at overvåge upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation, kan du se dette [casestudie](communication-compliance-case-study.md).
 
@@ -36,14 +36,14 @@ Brug politikker for overholdelse af kommunikation til at identificere brugerkomm
 
 Før du går i gang med overholdelse af kommunikationsreglerne, [skal du Microsoft 365 dit abonnement](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) og eventuelle tilføjelser. Din organisation skal have et af følgende abonnementer eller tilføjelser for at få adgang til og bruge kommunikationsoverholdelse:
 
-- Microsoft 365 E5/A5/G5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 E3/A3/G5 -abonnement + Microsoft 365 E5/A5/G5 Compliance-tilføjelsesprogrammet
-- Microsoft 365 E3/A3/G5-abonnement + Microsoft 365 E5/A5/G5 Insider Risk Management-tilføjelsesprogrammet
+- Microsoft 365 E5/A5/F5/G5-abonnement (betalt version eller prøveversion)
+- Microsoft 365 E3/A3/F3/G5 + tilføjelsesprogrammet Microsoft 365 E5/A5/F5/G5 Compliance
+- Microsoft 365 E3/A3/F3/G5 + Microsoft 365 E5/A5/F5/G5 Insider Risk Management-tilføjelsesprogrammet
 - Office 365 Enterprise E5-abonnement (betalt version eller prøveversion)
 - Office 365 A5 -abonnement (betalt version eller prøveversion)
 - Office 365 Enterprise E3-abonnement + tilføjelsesprogrammet Avanceret overholdelse i Office 365 (der er ikke længere tilgængeligt for nye abonnementer, se bemærk)
 
-Brugere, der er inkluderet i politikker for overholdelse af kommunikation, skal tildeles en af licenserne ovenfor.
+Brugere, der er inkluderet i politikker for overholdelse af kommunikation, skal tildeles en af licenserne ovenfor. Du kan finde flere oplysninger om abonnementer og licenser [Microsoft 365 vejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
 
 > [!IMPORTANT]
 > Kommunikationsoverholdelse er i øjeblikket tilgængelig i lejere, der er hostet i geografiske områder og lande, der understøttes af Azure-tjenesteafhængigheder. Hvis du vil kontrollere, at kommunikationsoverholdelse understøttes for din organisation, skal du [se Tilgængelighed af Azure-afhængighed efter land/område](/troubleshoot/azure/general/dependency-availability-by-country).
@@ -155,7 +155,7 @@ Brug følgende diagram som en hjælp til at konfigurere grupper i din organisati
 
 | **Medlem af politik** | **Understøttede grupper** | **Ikke-understøttede grupper** |
 |:-----|:-----|:-----|
-|Overvågede brugere <br> Ekskluderede brugere | Distributionsgrupper <br> Microsoft 365 grupper | Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper <br> Microsoft 365 grupper med dynamisk medlemskab |
+|Overvågede brugere <br> Ekskluderede brugere | Distributionsgrupper <br> Microsoft 365-grupper | Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper <br> Microsoft 365 grupper med dynamisk medlemskab |
 | Korrekturlæsere | Ingen | Distributionsgrupper <br> Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper |
 
 Når du tildeler *en distributionsgruppe* i politikken, overvåger politikken alle mails og chatsamtaler Teams hver bruger i *distributionsgruppen*. Når du tildeler en *Microsoft 365-gruppe* i politikken, overvåger politikken alle mails og Teams-chatsamtaler, der sendes til *Microsoft 365-gruppen**, ikke de individuelle mails og chats, der modtages af hvert gruppemedlem. Brug af distributionsgrupper i politikker for overholdelse af kommunikation anbefales, så individuelle mails og chatsamtaler Teams hver bruger overvåges automatisk.
@@ -194,7 +194,7 @@ For at administrere overvågede brugere i store virksomhedsorganisationer kan de
 Du kan finde flere oplysninger om konfiguration af grupper i:
 
 - [Oprette og administrere distributionsgrupper](/Exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups)
-- [Oversigt over Microsoft 365 grupper](/office365/admin/create-groups/office-365-groups)
+- [Oversigt over Microsoft 365-grupper](/office365/admin/create-groups/office-365-groups)
 
 ## <a name="step-4-optional-verify-your-yammer-tenant-is-in-native-mode"></a>Trin 4 (valgfrit): Bekræft, at Yammer lejer er i oprindelig tilstand
 

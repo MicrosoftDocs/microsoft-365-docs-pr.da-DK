@@ -1,5 +1,5 @@
 ---
-title: Tag svarhandlinger på en enhed i Microsoft Defender til slutpunkt
+title: Tag svarhandlinger på en enhed i Microsoft Defender for Endpoint
 description: Tag svarhandlinger på en enhed, f.eks. isolere enheder, indsamling af en undersøgelsespakke, administration af mærker, kørsel af av-scanning og begrænsning af udførelse af apps.
 keywords: svar, isoler, isoler enhed, indsaml undersøgelsespakke, handlingscenter, begræns, administrer mærker, av-scanning, begræns app
 ms.prod: m365-security
@@ -14,19 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 00347aabe38e4e74374f0b96d189051ebb56af3b
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: f1fa77f33988893967e71b82cc81059429e41d55
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63592788"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501283"
 ---
 # <a name="take-response-actions-on-a-device"></a>Udføre svarhandlinger på en enhed
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender til virksomheder](/microsoft-365/security/defender-business/mdb-overview)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
@@ -45,6 +46,7 @@ Svarhandlinger kører langs toppen af en bestemt enhedsside og omfatter:
 - Handlingscenter
 
 [![Billede af svarhandlinger.](images/response-actions.png)](images/response-actions.png#lightbox)
+
 
  Du kan finde enhedssider fra en af følgende visninger:
 
@@ -97,11 +99,11 @@ Alternativ måde:
 
 1. Vælg **Handlingscenter** i sektionen Svarhandlinger på enhedens side.
 
-    ![Billede af knappen handlingscenter.](images/action-center-package-collection.png)
+   :::image type="content" source="images/action-center-package-collection.png" alt-text="Indstillingen Handlingscenter" lightbox="images/action-center-package-collection.png":::
 
 2. I pop op-dialogboksen Handlingscenter skal du vælge **Pakkesamlingspakke, der kan** hentes zip-filen.
 
-    ![Billede af knappen Download pakke.](images/collect-package.png)
+   :::image type="content" source="images/collect-package.png" alt-text="Indstillingen Download pakke" lightbox="images/collect-package.png":::
 
 Pakken indeholder følgende mapper:
 
@@ -137,7 +139,7 @@ Som en del af undersøgelsen eller svarprocessen kan du starte en antivirusscann
 
 Når du har valgt **Kør antivirus-scanning**, skal du vælge den scanningstype, du vil køre (hurtig eller fuld) og tilføje en kommentar, før du bekræfter scanningen.
 
-![Billede af meddelelse til at vælge hurtig scanning eller fuld scanning og tilføje kommentar.](images/run-antivirus.png)
+:::image type="content" source="images/run-antivirus.png" alt-text="Meddelelsen om at vælge hurtig scanning eller fuld scanning og tilføje kommentar" lightbox="images/run-antivirus.png":::
 
 Handlingscenter viser scanningsoplysningerne, og tidslinjen for enheden indeholder en ny hændelse, hvilket afspejler, at en scanningshandling blev sendt på enheden. Microsoft Defender AV-beskeder afspejler eventuelle registreringer, der vises under scanningen.
 
@@ -164,13 +166,13 @@ Hvis du vil begrænse et program i at køre, anvendes en politik for kodeintegri
 
 Når du har valgt **Begræns udførelse af apps** på enhedens side, skal du skrive en kommentar og vælge **Bekræft**. Handlingscenter viser scanningsoplysningerne, og enhedens tidslinje indeholder en ny begivenhed.
 
-![Billede af meddelelse om appbegrænsning.](images/restrict-app-execution.png)
+:::image type="content" source="images/restrict-app-execution.png" alt-text="Meddelelse om programbegrænsning" lightbox="images/restrict-app-execution.png":::
 
 ### <a name="notification-on-device-user"></a>Meddelelse på enhedsbruger
 
 Når en app er begrænset, vises følgende meddelelse for at informere brugeren om, at en app begrænses i at køre:
 
-![Billede af appbegrænsning.](images/atp-app-restriction.png)
+:::image type="content" source="images/atp-app-restriction.png" alt-text="Meddelelsen om programbegrænsning" lightbox="images/atp-app-restriction.png":::
 
 >[!NOTE]
 >Meddelelsen er ikke tilgængelig på Windows Server 2016 og Windows Server 2012 R2.
@@ -182,8 +184,8 @@ Afhængigt af alvoren af angrebene og enhedens følsomhed kan det være en ide a
 >[!IMPORTANT]
 >- Denne handling understøttes i øjeblikket ikke til macOS og Linux. Brug live-svar til at køre handlingen. Du kan finde flere oplysninger om livesvar under [Undersøg enheder på enheder, der bruger live svar](live-response.md)
 >- Fuld isolation er tilgængelig for enheder på Windows 10, version 1703, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
->- Selektiv isolation er tilgængelig for enheder på Windows 10, version 1709 eller nyere og Windows 11.
->- Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder, der er bag en fuld VPN-slutpunkt, ikke nå Microsoft Defender til slutpunktsskytjenesten, når enheden er isoleret. Vi anbefaler, at du bruger et opdelt VPN til Microsoft Defender til slutpunkt og Microsoft Defender Antivirus skybaseret beskyttelsesrelateret trafik.
+>- Selektiv isolation er tilgængelig for enheder på Windows 10, version 1709 eller nyere, og Windows 11.
+>- Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder, der er bag en fuld VPN-vpn-android,, ikke oprette forbindelse til Microsoft Defender for Endpoint-skytjenesten, når enheden er isoleret. Vi anbefaler, at du bruger et opdelt VPN til Microsoft Defender for Endpoint og Microsoft Defender Antivirus skybaseret beskyttelsesrelateret trafik.
 
 Denne enhedsisolationsfunktion afbryder forbindelsen til den kompromitterede enhed fra netværket, mens du bevarer forbindelsen til Defender for Endpoint-tjenesten, som fortsætter med at overvåge enheden.
 
@@ -194,7 +196,7 @@ På Windows 10 version 1709 eller nyere har du mere kontrol over netværkisolati
 
 Når du har valgt **Isoler enhed** på enhedssiden, skal du skrive en kommentar og vælge **Bekræft**. Handlingscenter viser scanningsoplysningerne, og enhedens tidslinje indeholder en ny begivenhed.
 
-![Billede af isoler enhed.](images/isolate-device.png)
+:::image type="content" source="images/isolate-device.png" alt-text="Detaljeside for en isoleret enhed" lightbox="images/isolate-device.png":::
 
 > [!NOTE]
 > Enheden forbliver tilsluttet Defender for Endpoint-tjenesten, også selvom den er isoleret fra netværket. Hvis du har valgt at Outlook adgang Skype for Business kommunikation, vil du kunne kommunikere til brugeren, mens enheden er isoleret.
@@ -203,7 +205,7 @@ Når du har valgt **Isoler enhed** på enhedssiden, skal du skrive en kommentar 
 
 Når en enhed isoleres, vises følgende meddelelse for at informere brugeren om, at enheden isoleres fra netværket:
 
-![Billede af ingen netværksforbindelse.](images/atp-notification-isolate.png)
+:::image type="content" source="images/atp-notification-isolate.png" alt-text="Meddelelse om ingen netværksforbindelse" lightbox="images/atp-notification-isolate.png":::
 
 ## <a name="consult-a-threat-expert"></a>Kontakt en trusselsekspert
 
@@ -222,7 +224,8 @@ Se [Kontakt en Microsoft Threat Expert for at](/microsoft-365/security/defender-
 
 Alle andre relaterede oplysninger vises også, f.eks. dato/klokkeslæt for indsendelse, afsendelse af bruger, og om handlingen lykkedes eller mislykkedes.
 
-![Billede af handlingscenter med oplysninger.](images/action-center-details.png)
+:::image type="content" source="images/action-center-details.png" alt-text="Handlingscenter med oplysninger" lightbox="images/action-center-details.png":::
+
 
 ## <a name="see-also"></a>Se også
 

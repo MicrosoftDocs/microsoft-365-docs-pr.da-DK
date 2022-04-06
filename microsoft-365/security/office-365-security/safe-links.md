@@ -1,5 +1,5 @@
 ---
-title: Fuldfør Pengeskab Links-oversigt for Microsoft Defender Office 365
+title: Komplet oversigt Pengeskab links til Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -25,32 +25,32 @@ search.appverid:
 - ZPP160
 - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
-description: Få mere at Pengeskab om beskyttelse af links i Defender for Office 365 at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Pengeskab Links, og se grafik af Pengeskab Links-meddelelser.
+description: Få mere at Pengeskab om beskyttelse af links i Defender for Office 365 for at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Pengeskab Links, og se grafik af Pengeskab Links-meddelelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8bd4773d3f712adf13ac2a006f5d8450c58fc89a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 11c22239a34b731b57a8730ad1bf03d764ebb106
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682080"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507203"
 ---
-# <a name="safe-links-in-microsoft-defender-for-office-365"></a>Pengeskab Links i Microsoft Defender til Office 365
+# <a name="safe-links-in-microsoft-defender-for-office-365"></a>Pengeskab Links i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Denne artikel er beregnet til virksomhedskunder, der [har Microsoft Defender Office 365](defender-for-office-365.md). Hvis du bruger Outlook.com, Microsoft 365 Family eller Microsoft 365 Personal, og du leder efter oplysninger om Safelinks i Outlook, skal du se [Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Denne artikel er beregnet til virksomhedskunder, der [har Microsoft Defender for Office 365](defender-for-office-365.md). Hvis du bruger Outlook.com, Microsoft 365 Family eller Microsoft 365 Personal, og du leder efter oplysninger om Safelinks i Outlook, skal du se [Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Pengeskab Links er en funktion i [Defender til Office 365](defender-for-office-365.md), der giver URL-scanning og omskrivning af indgående mails i mailflow, og tids-for-klik-bekræftelse af URL-adresser og links i mails og andre placeringer. Pengeskab sker der scanning af links ud over den almindelige [antispam- og antimalwarebeskyttelse](anti-spam-and-anti-malware-protection.md) i indgående mails Exchange Online Protection (EOP). Pengeskab Links scanning kan hjælpe med at beskytte din organisation mod skadelige links, der bruges i phishing og andre angreb.
+Pengeskab Links er en funktion i [Defender for Office 365](defender-for-office-365.md), der giver URL-scanning og omskrivning af indgående mails i mailflow, og tids-for-klik-bekræftelse af URL-adresser og links i mails og andre placeringer. Pengeskab sker der scanning af links ud over den almindelige [antispam- og antimalwarebeskyttelse](anti-spam-and-anti-malware-protection.md) i indgående mails Exchange Online Protection (EOP). Pengeskab Links scanning kan hjælpe med at beskytte din organisation mod skadelige links, der bruges i phishing og andre angreb.
 
 Pengeskab Links-beskyttelse er tilgængelig på følgende placeringer:
 
-- **Mails**: Selvom der ikke er nogen standardpolitik for Pengeskab Links, giver den indbyggede beskyttelse foruddefinerede sikkerhedspolitik Pengeskab beskyttelse af links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab **Kæder-politikker**). Du kan finde flere oplysninger [i Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender Office 365](preset-security-policies.md). Du kan også oprette Pengeskab kæder, der gælder for bestemte brugere, grupper eller domæner. Du kan finde en [vejledning under Konfigurere Pengeskab Links-politikker i Microsoft Defender Office 365](set-up-safe-links-policies.md).
+- **Mails**: Selvom der ikke er nogen standardpolitik for Pengeskab Links, giver den indbyggede beskyttelse foruddefinerede sikkerhedspolitik Pengeskab beskyttelse af links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab **Kæder-politikker**). Få mere at vide under [Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md). Du kan også oprette Pengeskab kæder, der gælder for bestemte brugere, grupper eller domæner. Du kan finde en [vejledning under Konfigurere Pengeskab Links-politikker i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
 
   Du kan finde flere Pengeskab om beskyttelse af links til [mails i Pengeskab Indstillinger for links til](#safe-links-settings-for-email-messages) mails senere i denne artikel.
   
@@ -63,9 +63,9 @@ Pengeskab Links-beskyttelse er tilgængelig på følgende placeringer:
 
   Du kan finde flere Pengeskab om beskyttelse Teams links i [Pengeskab Links for](#safe-links-settings-for-microsoft-teams) Microsoft Teams senere i denne artikel.
 
-- **Office 365-apps**: Pengeskab links til Office 365-apps er tilgængelig i understøttede skrivebords-, mobil- og webapps. Du **skal** Pengeskab beskyttelse af links til Office 365 apps i den globale indstilling, der er **uden** for Pengeskab politikker for links. Du kan finde en [vejledning i Konfigurere globale indstillinger for Pengeskab Links i Microsoft Defender Office 365](configure-global-settings-for-safe-links.md).
+- **Office 365-apps**: Pengeskab links til Office 365-apps er tilgængelig i understøttede skrivebords-, mobil- og webapps. Du **skal** Pengeskab beskyttelse af links til Office 365 apps i den globale indstilling, der er **uden** for Pengeskab politikker for links. Du kan finde en vejledning [under Konfigurere globale indstillinger for Pengeskab Links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 
-  Pengeskab Beskyttelse af links til Office 365-apps anvendes for alle brugere i organisationen, der har licens til Defender til Office 365, uanset om brugerne er inkluderet i aktive Pengeskab Links-politikker eller ej.
+  Pengeskab Beskyttelse af links til Office 365-apps anvendes for alle brugere i organisationen, der har licens til Defender for Office 365, uanset om brugerne er inkluderet i aktive Pengeskab Links-politikker eller ej.
 
   Du kan finde flere oplysninger Pengeskab beskyttelse af Office 365 links i Pengeskab [Links-indstillinger for Office 365-apps](#safe-links-settings-for-office-365-apps) senere i denne artikel.
 
@@ -82,7 +82,7 @@ Denne artikel indeholder detaljerede beskrivelser af følgende typer af Pengeska
   - [Pengeskab links til Office 365 apps](#safe-links-settings-for-office-365-apps)
   - [Listen "Bloker følgende URL-adresser" for Pengeskab links](#block-the-following-urls-list-for-safe-links)
 
-I følgende tabel beskrives scenarier for Pengeskab Links i Microsoft 365- og Office 365-organisationer, der omfatter Defender for Office 365 (Bemærk, at manglende licenser aldrig er et problem i eksemplerne).
+I følgende tabel beskrives scenarier for Pengeskab-links i Microsoft 365- og Office 365-organisationer, der inkluderer Defender for Office 365 (bemærk, at manglende licenser aldrig er et problem i eksemplerne).
 
 |Scenarie|Resultat|
 |---|---|
@@ -100,34 +100,34 @@ Når Pengeskab Links en URL-adresse igen, forbliver URL-adressen omskrevet, selv
 
 Indstillingerne i Pengeskab Links, der gælder for mails, er beskrevet på følgende liste:
 
-- **Vælg handlingen for ukendte potentielt skadelige URL-adresser i** meddelelser: Aktiverer eller deaktiverer søgning Pengeskab links i mails. Den anbefalede værdi er **Til**. Hvis du slår denne indstilling til, medfører det følgende handlinger.
-
+- **Til: Pengeskab Links kontrollerer en** liste over kendte, skadelige links, når brugere klikker på links i en mail: Aktiverer eller deaktiverer scanning Pengeskab Links i mails. Den anbefalede værdi vælges (til) og resulterer i følgende handlinger:
   - Pengeskab Links-scanning er aktiveret i Outlook (C2R) på Windows.
   - URL-adresser omskrives, og brugerne distribueres via Pengeskab Links-beskyttelse, når de klikker på URL-adresser i meddelelser.
   - Når der klikkes på dem, kontrolleres URL-adresser i forhold til en liste over kendte skadelige URL-adresser og [listen "Bloker følgende URL-adresser"](#block-the-following-urls-list-for-safe-links).
   - URL-adresser, der ikke har et gyldigt ry, detoneres asynkront i baggrunden.
 
-- **Anvend URL-adressescanning** i realtid for mistænkelige links og links, der peger på filer: Gør det muligt at scanne links i realtid, herunder links i mails, der peger på indhold, der kan downloades. Den anbefalede værdi er aktiveret.
+  Følgende indstillinger er kun tilgængelige, hvis scanning Pengeskab Links er tændt i mails:
+
+  - **Anvend Pengeskab Links** til mails, der sendes i organisationen: Aktiverer eller deaktiverer Pengeskab Links, der scanner for meddelelser, der sendes mellem interne afsendere og interne modtagere i den samme Exchange Online organisation. Den anbefalede værdi er valgt (til).
+
+  - **Anvend URL-adressescanning** i realtid for mistænkelige links og links, der peger på filer: Gør det muligt at scanne links i realtid, herunder links i mails, der peger på indhold, der kan downloades. Den anbefalede værdi er valgt (til).
+
   - **Vent på, at URL-adressen scannes, før meddelelsen leveres**:
-    - Aktiveret: Meddelelser, der indeholder URL-adresser, opbevares, indtil scanningen er færdig. Meddelelser leveres først, når URL-adresserne er bekræftet som sikre. Dette er den anbefalede værdi.
-    - Deaktiveret: Hvis scanning af URL-adresser ikke kan fuldføres, skal du levere meddelelsen alligevel.
+    - Valgt (til): Meddelelser, der indeholder URL-adresser, opbevares, indtil scanningen er færdig. Meddelelser leveres først, når URL-adresserne er bekræftet som sikre. Dette er den anbefalede værdi.
+    - Ikke valgt (deaktiveret): Hvis scanning af URL-adresser ikke kan fuldføres, skal du levere meddelelsen alligevel.
 
-- **Anvend Pengeskab Links** til mails, der sendes i organisationen: Aktiverer eller deaktiverer Pengeskab Links, der scanner for meddelelser, der sendes mellem interne afsendere og interne modtagere i den samme Exchange Online organisation. Den anbefalede værdi er aktiveret.
+  - **Undlad at omskrive URL-adresser, kontroller kun via SafeLinks API: Hvis** denne indstilling er aktiveret, sker der ingen URL-ombrydning. Pengeskab Links kaldes udelukkende via API'er på tidspunktet for URL-adressen, når der klikkes på Outlook klienter, der understøtter det. Anbefal-værdien er deaktiveret.
 
-- **Registrer ikke brugerklik**: Aktiverer eller deaktiverer lagring af indhold Pengeskab klikker på data for URL-adresser, der er klikket på i mails. Den anbefalede værdi er at lade denne indstilling være fravalgt (for at spore brugerklik).
+- **Registrer brugerklik**: Aktiverer eller deaktiverer lagring af mails Pengeskab Links klikker på data for URL-adresser, der er klikket på i mails. Den anbefalede værdi er at lade denne indstilling være valgt (spor brugerklik).
 
   Url-kliksporing for links i mails, der sendes mellem interne afsendere og interne modtagere, understøttes ikke i øjeblikket.
 
-- **Tillad ikke, at brugerne klikker igennem til den oprindelige URL-adresse**: Gør det muligt eller blokerer brugere fra at klikke gennem [advarselssiden](#warning-pages-from-safe-links) til den oprindelige URL-adresse. Anbefal-værdien er aktiveret.
+- **Lad brugerne klikke igennem til den oprindelige URL-adresse**: Gør det muligt eller blokerer brugere fra at klikke gennem [advarselssiden](#warning-pages-from-safe-links) til den oprindelige URL-adresse. Anbefal-værdien er deaktiveret.
 
 - **Vise organisationens branding på sider med meddelelser** og advarsler: Denne indstilling viser organisationens branding på advarselssider. Branding hjælper brugerne med at identificere legitime advarsler, fordi Microsofts standardadvarselssider ofte bruges af hackere. Du kan finde flere oplysninger om tilpasset branding [under Tilpas Microsoft 365 tema til organisationen](../../admin/setup/customize-your-organization-theme.md).
 
-- **Undlad at omskrive følgende URL-adresser: Forlader URL-adresserne**, som de er. Opbevarer en brugerdefineret liste over sikre URL-adresser, der ikke behøver at blive scannet. Listen er entydig for hver Pengeskab links-politik. Du kan finde flere oplysninger  om listen over URL-adresser, der ikke skal omskrives, på listerne "Omstøt ikke følgende URL-adresser[" Pengeskab](#do-not-rewrite-the-following-urls-lists-in-safe-links-policies) politikker for links senere i denne artikel.
-
   Du kan finde flere oplysninger om de anbefalede værdier for Standard- og Restriktive politikindstillinger for politikker for Pengeskab Links [under Pengeskab politikindstillinger for links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
-- **Undlad at omskrive URL-adresser, kontroller kun via SafeLinks API: Hvis** denne indstilling er aktiveret, sker der ingen URL-ombrydning. Pengeskab Links kaldes udelukkende via API'er på tidspunktet for URL-adressen, når der klikkes på Outlook klienter, der understøtter det. Anbefal-værdien er deaktiveret.
-  
 - **Modtagerfiltre**: Du skal angive modtagerbetingelser og undtagelser, der bestemmer, hvem politikken gælder for. Du kan bruge disse egenskaber til betingelser og undtagelser:
   - **Modtageren er**
   - **Modtagerdomænet er**
@@ -180,7 +180,7 @@ Når du har aktiveret beskyttelse af Pengeskab-links for Microsoft Teams, kontro
 
 Hvis den bruger, der sendte linket, ikke er inkluderet i en politik for Pengeskab-links, hvor Teams-beskyttelse er aktiveret, kan brugeren klikke igennem til den oprindelige URL-adresse på sin computer eller enhed.
 
-![En Pengeskab Links til Teams, der rapporterer et skadeligt link.](../../media/tp-safe-links-for-teams-malicious.png)
+:::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="En Pengeskab Links til Teams, der rapporterer et skadeligt link" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
 
 Hvis du klikker **på knappen Gå** tilbage på advarselssiden, returneres brugeren til den oprindelige kontekst eller URL-placering. Men hvis du klikker på det oprindelige link igen, medfører det, Pengeskab Links kan scanne URL-adressen igen, så advarselssiden vises igen.
 
@@ -190,7 +190,7 @@ På et højt niveau kan du se her, hvordan Pengeskab Links-beskyttelse fungerer 
 
 1. En bruger starter Teams appen.
 
-2. Microsoft 365 bekræfter, at brugerens organisation omfatter Microsoft Defender til Office 365, og at brugeren er inkluderet i en aktiv Pengeskab Links-politik, hvor beskyttelse af Microsoft Teams er aktiveret.
+2. Microsoft 365 bekræfter, at brugerens organisation omfatter Microsoft Defender for Office 365, og at brugeren er inkluderet i en aktiv politik for Pengeskab links, hvor beskyttelse af Microsoft Teams er aktiveret.
 
 3. URL-adresser valideres på tidspunktet for klik for brugeren i chatsamtaler, gruppechats, kanaler og faner.
 
@@ -211,7 +211,7 @@ Pengeskab Links-beskyttelse til Office 365-apps har følgende klientkrav:
 
 - Brugerne er logget på med deres arbejds- eller skolekonti. Du kan få mere at [vide under Log på Office](https://support.microsoft.com/office/b9582171-fd1f-4284-9846-bdd72bb28426).
 
-Du skal Pengeskab beskyttelse af links Office 365 apps i de globale indstillinger for Pengeskab Links og ikke i Pengeskab links. Beskyttelsen gælder for alle brugere i organisationen, der har licens til Defender til Office 365, uanset om brugerne er inkluderet i aktive Pengeskab Links-politikker eller ej.
+Du skal Pengeskab beskyttelse af links Office 365 apps i de globale indstillinger for Pengeskab Links og ikke i Pengeskab links. Beskyttelsen gælder for alle brugere i organisationen, der har licens til Defender for Office 365, uanset om brugerne er inkluderet i aktive Pengeskab Links-politikker eller ej.
 
 Følgende indstillinger Pengeskab Links er tilgængelige for Office 365 apps:
 
@@ -330,33 +330,33 @@ Bemærk, at flere advarselssider er blevet opdateret. Hvis du ikke allerede kan 
 
 Den klikkede URL-adresse scannes af Pengeskab Links. Du skal muligvis vente et øjeblik, før du prøver linket igen.
 
-![Meddelelsen "Linket scannes"](../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png)
+:::image type="content" source="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="Meddelelsen om, at linket scannes" lightbox="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
 
 Den oprindelige meddelelsesside så sådan ud:
 
-![Den oprindelige meddelelse "Linket scannes"](../../media/04368763-763f-43d6-94a4-a48291d36893.png)
+:::image type="content" source="../../media/04368763-763f-43d6-94a4-a48291d36893.png" alt-text="Meddelelsen om, at linket scannes" lightbox="../../media/04368763-763f-43d6-94a4-a48291d36893.png":::
 
 ### <a name="suspicious-message-warning"></a>Advarsel om mistænkelig meddelelse
 
 Den klikkede URL-adresse var i en mail, der ligner andre mistænkelige meddelelser. Vi anbefaler, at du dobbelttjekker mailen, før du fortsætter til webstedet.
 
-![Advarslen "Der blev klikket på et link fra en mistænkelig meddelelse"](../../media/33f57923-23e3-4b0f-838b-6ad589ba897b.png)
+:::image type="content" source="../../media/33f57923-23e3-4b0f-838b-6ad589ba897b.png" alt-text="Der blev klikket på et link fra en mistænkelig meddelelsesadvarsel" lightbox="../../media/33f57923-23e3-4b0f-838b-6ad589ba897b.png":::
 
 ### <a name="phishing-attempt-warning"></a>Advarsel om forsøg på phishing
 
 Den klikkede URL-adresse var i en mail, der er identificeret som et phishingangreb. Derfor blokeres alle URL-adresser i mailen. Vi anbefaler, at du ikke fortsætter til webstedet.
 
-![Advarslen "Linket blev klikket på fra en phishing-meddelelse"](../../media/6e544a28-0604-4821-aba6-d5a57bb917e5.png)
+:::image type="content" source="../../media/6e544a28-0604-4821-aba6-d5a57bb917e5.png" alt-text="Advarslen, der viser, at der blev klikket på et link fra en phishingmeddelelse" lightbox="../../media/6e544a28-0604-4821-aba6-d5a57bb917e5.png":::
 
 ### <a name="malicious-website-warning"></a>Advarsel om ondsindet websted
 
 Den klikkede URL-adresse peger på et websted, der er identificeret som skadeligt. Vi anbefaler, at du ikke fortsætter til webstedet.
 
-![Advarslen "Dette websted er klassificeret som skadelig"](../../media/058883c8-23f0-4672-9c1c-66b084796177.png)
+:::image type="content" source="../../media/058883c8-23f0-4672-9c1c-66b084796177.png" alt-text="Advarslen, der meddeler, at webstedet er klassificeret som skadeligt" lightbox="../../media/058883c8-23f0-4672-9c1c-66b084796177.png":::
 
 Den oprindelige advarselsside så sådan ud:
 
-![Oprindelig "Dette websted er blevet klassificeret som skadelig" advarsel](../../media/b9efda09-6dd8-46ef-82cb-56e4d538b8f5.png)
+:::image type="content" source="../../media/b9efda09-6dd8-46ef-82cb-56e4d538b8f5.png" alt-text="Den oprindelige advarsel, der meddeler, at webstedet er klassificeret som skadeligt" lightbox="../../media/b9efda09-6dd8-46ef-82cb-56e4d538b8f5.png":::
 
 ### <a name="blocked-url-warning"></a>Advarsel om blokeret URL-adresse
 
@@ -364,18 +364,18 @@ Den klikkede URL-adresse er blevet blokeret manuelt af en administrator i organi
 
 Der er flere årsager til, at en administrator manuelt blokerer bestemte URL-adresser. Hvis du mener, at webstedet ikke skal blokeres, skal du kontakte din administrator.
 
-![Advarslen "Dette websted blev blokeret af din administrator"](../../media/6b4bda2d-a1e6-419e-8b10-588e83c3af3f.png)
+:::image type="content" source="../../media/6b4bda2d-a1e6-419e-8b10-588e83c3af3f.png" alt-text="Advarslen, der viser, at webstedet er blokeret af din administrator" lightbox="../../media/6b4bda2d-a1e6-419e-8b10-588e83c3af3f.png":::
 
 Den oprindelige advarselsside så sådan ud:
 
-![Den oprindelige advarsel "Dette websted er blevet blokeret ifølge organisationens URL-politik"](../../media/3d6ba028-30bf-45fc-958e-d3aad3defc83.png)
+:::image type="content" source="../../media/3d6ba028-30bf-45fc-958e-d3aad3defc83.png" alt-text="Den oprindelige advarsel angiver, at webstedet er blevet blokeret ifølge organisationens URL-politik" lightbox="../../media/3d6ba028-30bf-45fc-958e-d3aad3defc83.png":::
 
 ### <a name="error-warning"></a>Fejladvarsel
 
 Der opstod en eller anden form for fejl, og URL-adressen kan ikke åbnes.
 
-![Advarslen "Den side, du forsøger at få adgang til"](../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png)
+:::image type="content" source="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png" alt-text="Advarslen, der viser den side, du forsøger at få adgang til, kan ikke indlæses" lightbox="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png":::
 
 Den oprindelige advarselsside så sådan ud:
 
-![Den oprindelige advarsel om, at "Denne webside kunne ikke indlæses"](../../media/9aaa4383-2f23-48be-bdaa-8efbcb2acc70.png)
+:::image type="content" source="../../media/9aaa4383-2f23-48be-bdaa-8efbcb2acc70.png" alt-text="Advarslen, der meddeler, at websiden ikke kunne indlæses" lightbox="../../media/9aaa4383-2f23-48be-bdaa-8efbcb2acc70.png":::

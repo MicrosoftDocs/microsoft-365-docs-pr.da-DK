@@ -1,5 +1,5 @@
 ---
-title: Kampagnevisninger i Microsoft Defender til Office 365 plan
+title: Kampagnevisninger i Microsoft Defender for Office 365 plan
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -17,24 +17,24 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Få mere at vide om kampagnevisninger i Microsoft Defender for Office 365.
+description: Få mere at vide om kampagnevisninger Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d8fad29e82b647d309d3b7046e36bd03b64de81d
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: eb1e5e6e740accdb9c6102b798df8e60ab47dfff
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682543"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467725"
 ---
 # <a name="campaign-views-in-microsoft-defender-for-office-365"></a>Kampagnevisninger i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-Kampagnevisninger er en funktion i Microsoft Defender til Office 365 Plan 2 (f.eks. Microsoft 365 E5 eller organisationer med et Defender for Office 365 Plan 2-tilføjelsesprogrammet). Kampagnevisninger i Microsoft 365 Defender identificerer og kategoriserer phishing-angreb i tjenesten. Kampagnevisninger kan hjælpe dig med at:
+Kampagnevisninger er en funktion i Microsoft Defender for Office 365 Plan 2 (f.eks. Microsoft 365 E5 organisationer med Defender for Office 365 plan 2-tilføjelsesprogrammet). Kampagnevisninger i Microsoft 365 Defender identificerer og kategoriserer phishing-angreb i tjenesten. Kampagnevisninger kan hjælpe dig med at:
 
 - Undersøg og res responder effektivt på phishing-angreb.
 - Bedre forstå omfanget af angrebene.
@@ -59,7 +59,7 @@ En kampagne kan være kortvarig eller kan strække sig over flere dage, uger ell
 
 Kampagnevisninger er tilgængelig i Microsoft 365 Defender på Mail <https://security.microsoft.com> **og & kampagner** \> **med** samarbejde eller direkte på <https://security.microsoft.com/campaigns>.
 
-![Oversigt over kampagner i Microsoft 365 Defender portalen.](../../media/campaigns-overview.png)
+:::image type="content" source="../../media/campaigns-overview.png" alt-text="Oversigten Kampagner i Microsoft 365 Defender portal" lightbox="../../media/campaigns-overview.png":::
 
 Du kan også få adgang til kampagnevisninger fra:
 
@@ -93,7 +93,7 @@ Tabellen under grafen på oversigtssiden viser følgende oplysninger på **fanen
   - **Phish**: Hvor det er tilgængeligt, er det brand, der bliver phishet af denne kampagne. F.eks. `Microsoft`, `Unknown``365`, , `Outlook`eller `DocuSign`.
   - **Malware**: For eksempel, `HTML/PHISH` eller `HTML/<MalwareFamilyName>`.
 
-  Hvor det er tilgængeligt, vil dette brand, der bliver phishet af denne kampagne. Når registrering drives af Defender for Office 365, føjes **PRÆfikset ATP-** til undertypeværdien.
+  Hvor det er tilgængeligt, vil dette brand, der bliver phishet af denne kampagne. Når registrering er drevet af Defender for Office 365, føjes **PRÆfikset ATP-** til undertypeværdien.
 
 - **Modtagere:** Antallet af brugere, der blev målrettet af denne kampagne.
 
@@ -113,7 +113,7 @@ Fanen **Kampagneindrindelse** viser meddelelseskilder på et kort over verden.
 
 Øverst på siden Kampagne er **der flere** filter- og forespørgselsindstillinger, der kan hjælpe dig med at finde og isolere bestemte kampagner.
 
-![Kampagnefiltre.](../../media/campaign-filters-and-settings.png)
+:::image type="content" source="../../media/campaign-filters-and-settings.png" alt-text="Kampagnefiltrene" lightbox="../../media/campaign-filters-and-settings.png":::
 
 Den mest grundlæggende filtrering, du kan udføre, er startdato/-klokkeslæt og slutdato/-klokkeslæt.
 
@@ -170,7 +170,7 @@ Når du har oprettet et grundlæggende eller avanceret filter, kan du gemme det 
 
 Hvis du vil eksportere grafen eller listen over kampagner, skal du klikke **på Eksportér** og vælge **Eksportér diagramdata** eller **Eksportér kampagneliste**.
 
-Hvis du har et abonnement på Microsoft Defender til slutpunkt, kan du klikke på **MDE Indstillinger at** oprette forbindelse til eller afbryde forbindelsen mellem kampagnerne med Microsoft Defender til slutpunkt. Du kan finde flere oplysninger [under Integrer Microsoft Defender Office 365 med Microsoft Defender til slutpunkt](integrate-office-365-ti-with-mde.md).
+Hvis du har et Microsoft Defender for Endpoint abonnement, kan du klikke **på MDE-Indstillinger at** oprette forbindelse til eller afbryde forbindelsen mellem kampagneoplysningerne og Microsoft Defender for Endpoint. Du kan finde flere oplysninger [under Integrer Microsoft Defender for Office 365 med Microsoft Defender for Endpoint](integrate-office-365-ti-with-mde.md).
 
 ## <a name="campaign-details"></a>Kampagneoplysninger
 
@@ -192,7 +192,7 @@ Når du klikker på navnet på en kampagne, vises kampagneoplysningerne i en pop
 - Filtre for startdato/-klokkeslæt og slutdata/-klokkeslæt for kampagneflowet som beskrevet i næste afsnit.
 - En interaktiv tidslinje for kampagneaktivitet: Tidslinjen viser aktivitet i hele kampagnens levetid. Du kan pege på datapunkterne i grafen for at se antallet af registrerede meddelelser.
 
-![Kampagneoplysninger.](../../media/campaign-details-campaign-info.png)
+:::image type="content" source="../../media/campaign-details-campaign-info.png" alt-text="Kampagneoplysningerne" lightbox="../../media/campaign-details-campaign-info.png":::
 
 ### <a name="campaign-flow"></a>Kampagneflow
 
@@ -201,7 +201,7 @@ Midt i visningen Kampagnedetaljer vises vigtige detaljer om kampagnen i et vandr
 > [!TIP]
 > De oplysninger, der vises i rutediagrammet, styres af datoområdefilteret på tidslinjen som beskrevet i forrige afsnit.
 
-![Kampagneoplysninger, der ikke indeholder klik med brugerens URL-adresse.](../../media/campaign-details-no-recipient-actions.png)
+:::image type="content" source="../../media/campaign-details-no-recipient-actions.png" alt-text="De kampagneoplysninger, der ikke indeholder klik med brugerens URL-adresse" lightbox="../../media/campaign-details-no-recipient-actions.png":::
 
 Hvis du peger på et vandret bånd i diagrammet, får du vist antallet af relaterede meddelelser (f.eks. meddelelser fra en bestemt kilde-IP, meddelelser fra kilde-IP'en ved hjælp af det angivne afsenderdomæne osv.).
 
@@ -253,7 +253,7 @@ Hvis en bruger klikkede på WEBADRESSEn til nyttedata i phishing-meddelelsen, vi
 - **Tilladt**
 - **Blokeringsside**: Modtageren klikkede på webadressen til nyttedata, men modtagerens adgang til det skadelige websted blev blokeret af en [politik for Pengeskab links](safe-links.md) i organisationen.
 - **BlockPageOverride**: Modtageren klikkede på WEBADRESSEn til nyttedata i meddelelsen, og Pengeskab Links forsøgte at stoppe dem, men de fik tilladelse til at tilsidesætte blokeringen. Undersøg [dine Pengeskab Links-politikker](set-up-safe-links-policies.md) for at se, hvorfor brugere har tilladelse til at tilsidesætte Pengeskab Links'ens konklusion og fortsætte med det skadelige websted.
-- **PendingDetonationPage**: Pengeskab Vedhæftede filer i Microsoft Defender til Office 365 er i gang med at åbne og undersøge webadressen til nyttedata i et virtuelt computermiljø.
+- **PendingDetonationPage**: Pengeskab vedhæftede filer i Microsoft Defender for Office 365 er i gang med at åbne og undersøge WEBADRESSEn til nyttedata i et virtuelt computermiljø.
 - **PendingDetonationPageOverride**: Modtageren fik tilladelse til at tilsidesætte processen med aflæsning af nyttedata og åbne URL-adressen uden at vente på resultaterne.
 
 ### <a name="tabs"></a>Faner

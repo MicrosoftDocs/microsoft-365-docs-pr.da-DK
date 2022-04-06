@@ -1,6 +1,6 @@
 ---
 title: Installationsfaser
-description: Få mere at vide om, hvordan du installerer Microsoft Defender til slutpunkt ved at forberede, konfigurere og onboarde slutpunkter til den pågældende tjeneste
+description: Lær at installere Microsoft Defender for Endpoint ved at forberede, konfigurere og onboarding-slutpunkter til den pågældende tjeneste
 keywords: Installér, forbered, konfiguration, onboard, fase, installation, implementering, indføring, konfiguration
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -17,33 +17,33 @@ ms.collection:
 - m365solution-overview
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5715a796e0c7b78ae369f074b5edcb6ccfc8ae90
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c39ef92448317e625f3f2e6948f69a38093b1504
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63606429"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467703"
 ---
 # <a name="deployment-phases"></a>Installationsfaser
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Få mere at vide om, hvordan du installerer Microsoft Defender til slutpunkt, så din virksomhed kan drage fordel af forebyggelse, registrering af brud, automatisk undersøgelse og svar.
+Få mere at vide om, Microsoft Defender for Endpoint udrulning af data, så din virksomhed kan drage fordel af forebyggelse, registrering efter brud, automatisk undersøgelse og svar.
 
 Denne vejledning hjælper dig med at arbejde på tværs af interessenter for at forberede dit miljø og derefter implementere enheder på en metodisk måde, fra evaluering til et relevant pilotprojekt til en komplet installation.
 
 Hver sektion svarer til en separat artikel i denne løsning.
 
-![Billede af installationsfaser med oplysninger fra tabellen.](images/deployment-guide-phases.png)
+:::image type="content" source="images/deployment-guide-phases.png" alt-text="Installationsfaserne med oplysninger fra tabellen" lightbox="images/deployment-guide-phases.png":::
 
 
-![Oversigt over installationsfaser: klargør, konfiguration, onboard.](images/phase-diagrams/deployment-phases.png)
+:::image type="content" source="images/phase-diagrams/deployment-phases.png" alt-text="Oversigten over installationsfaser: klargøring, konfiguration, onboard" lightbox="images/phase-diagrams/deployment-phases.png":::
 
 <br>
 
@@ -62,7 +62,7 @@ Uanset miljøarkitekturen og installationsmetoden, du vælger, beskrevet i Vejle
 
 ## <a name="key-capabilities"></a>Vigtige funktioner
 
-Selvom Microsoft Defender til Slutpunkt indeholder mange funktioner, er det primære formål med denne installationsvejledning at komme i gang med onboardingenheder. Ud over onboarding får denne vejledning dig i gang med følgende funktioner.
+Selvom Microsoft Defender for Endpoint indeholder mange funktioner, er det primære formål med denne installationsvejledning at komme i gang med onboardingenheder. Ud over onboarding får denne vejledning dig i gang med følgende funktioner.
 
 <br>
 
@@ -71,11 +71,11 @@ Selvom Microsoft Defender til Slutpunkt indeholder mange funktioner, er det prim
 |Funktion|Beskrivelse|
 |---|---|
 |Registrering af slutpunkt og svar|Registrering af slutpunkter og svarfunktioner er blevet aktiveret for at registrere, undersøge og reagere på forsøg på indtrængen og aktive overtrædelser.|
-|Næste generations beskyttelse|For yderligere at styrke dit netværks sikkerhedsperimeter bruger Microsoft Defender til Slutpunkt næste generations beskyttelse, der er udviklet til at fange alle typer af nye trusler.|
+|Næste generations beskyttelse|For yderligere at styrke dit netværks sikkerhedsperimeter bruger Microsoft Defender for Endpoint næste generations beskyttelse designet til at fange alle typer af nye trusler.|
 |Reduktion af angrebsoverfladen|Angiv den første forsvarslinje i stakken. Ved at sikre, at konfigurationsindstillingerne er korrekt indstillet, og de teknikker til afhjælpning af udnyttelse, der anvendes, kan disse egenskaber modstå angreb og udnyttelse.|
 |
 
-Alle disse funktioner er tilgængelige for Microsoft Defender for slutbrugere af slutpunkter. Få mere at vide under [Licenskrav](minimum-requirements.md#licensing-requirements).
+Alle disse funktioner er tilgængelige for Microsoft Defender for Endpoint licensindehavere. Få mere at vide under [Licenskrav](minimum-requirements.md#licensing-requirements).
 
 ## <a name="scope"></a>Omfang
 

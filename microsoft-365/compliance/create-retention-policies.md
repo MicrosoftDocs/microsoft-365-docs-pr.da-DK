@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug en opbevaringspolitik til effektivt at holde styr på det indhold, som brugerne genererer med mail, dokumenter og samtaler. Behold det, du ønsker, og afvis det, du ikke ønsker.
-ms.openlocfilehash: 94388a375c3c50d97e696637ef6ef4ebefc96aab
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 5a57093ed4ecd5b87a62701e3c055888ed16a5ca
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63715487"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595317"
 ---
 # <a name="create-and-configure-retention-policies"></a>Opret og konfigurer opbevaringspolitikker
 
@@ -112,7 +112,7 @@ Hvis du vil have tekniske oplysninger om, hvordan opbevaring fungerer for Teams,
 
 #### <a name="additional-retention-policy-needed-to-support-teams"></a>Yderligere opbevaringspolitik er nødvendig for at Teams
 
-Teams er mere end blot chats og kanalmeddelelser. Hvis du har teams, der er oprettet fra en Microsoft 365-gruppe (tidligere Office 365-gruppe), skal du desuden konfigurere en opbevaringspolitik, der omfatter Microsoft 365-gruppen, ved hjælp af placeringen **Microsoft 365 Grupper**. Denne opbevaringspolitik gælder for indhold i gruppens postkasse, websted og filer.
+Teams er mere end blot chats og kanalmeddelelser. Hvis du har teams, der er oprettet fra en Microsoft 365-gruppe (tidligere Office 365-gruppe), skal du desuden konfigurere en opbevaringspolitik, der omfatter Microsoft 365-gruppen, ved hjælp af **Microsoft 365-grupper placering.** Denne opbevaringspolitik gælder for indhold i gruppens postkasse, websted og filer.
 
 Hvis du har teamwebsteder, der ikke er knyttet til en Microsoft 365-gruppe, skal du have en opbevaringspolitik, der omfatter **placeringerne SharePoint-websteder** eller **OneDrive-konti** for at kunne opbevare og slette filer i Teams:
 
@@ -128,7 +128,7 @@ Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365-grupper,
 ### <a name="retention-policy-for-yammer-locations"></a>Opbevaringspolitik for Yammer placeringer
 
 > [!NOTE]
-> Opbevaringspolitikker for Yammer er i forhåndsvisning og giver i øjeblikket ikke brugerne besked, når meddelelser slettes som et resultat af en opbevaringspolitik.
+> Opbevaringspolitikker for Yammer giver i øjeblikket ikke brugerne besked, når meddelelser slettes som et resultat af en opbevaringspolitik.
 >
 > Hvis du vil bruge denne funktion, Yammer dit netværk være [indbygget tilstand](/yammer/configure-your-yammer-network/overview-native-mode) og ikke hybridtilstand.
 
@@ -143,11 +143,6 @@ Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365-grupper,
     - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge en **Yammer,** men ikke Yammer **gruppemeddelelser**. 
     
     - Hvis **du vælger Statisk**: På siden  Vælg placeringer for at anvende politikken skal du vælge en eller begge placeringer for Yammer: **Yammer-communitymeddelelse** **og Yammer-brugermeddelelser**.
-        
-        > [!IMPORTANT]
-        > Selvom du kan oprette en opbevaringspolitik kun til Yammer brugermeddelelser, kan en opbevaringspolitik for denne placering slette communitymeddelelser fra Yammer-appen for alle communitymedlemmer.
-        > 
-        > Hvis du vælger denne indstilling, og opbevaringspolitikken konfigureres til at slette brugermeddelelser, skal du sikre dig, at du forstår dette. Få mere at vide under [Sådan fungerer opbevaring med Yammer](retention-policies-yammer.md#how-retention-works-with-yammer).
         
         Som standard vælges alle communities og brugere, men du kan finjustere dette ved at angive grupper og brugere, der skal medtages eller udelades.
         
@@ -165,9 +160,9 @@ Du kan finde flere oplysninger om, hvordan opbevaringspolitikker fungerer for Ya
 
 #### <a name="additional-retention-policies-needed-to-support-yammer"></a>Yderligere opbevaringspolitikker er nødvendige for at understøtte Yammer
 
-Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails til dit Yammer-netværk, skal du konfigurere en ekstra opbevaringspolitik, der omfatter alle Microsoft 365-grupper, der bruges til Yammer, ved hjælp af placeringen **Microsoft 365 Grupper**. 
+Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails til dit Yammer-netværk, skal du konfigurere en ekstra opbevaringspolitik, der omfatter alle Microsoft 365-grupper, der bruges til Yammer, ved hjælp **af Microsoft 365-grupper** placering. 
 
-Hvis du vil bevare og slette filer, der er gemt i Yammer, skal du have en opbevaringspolitik, der omfatter placeringen **Microsoft 365 grupper** eller **OneDrive-kontoplaceringer**:
+Hvis du vil bevare og slette filer, der er gemt i Yammer, skal du have en opbevaringspolitik, der  omfatter placeringen Microsoft 365-grupper eller **OneDrive-kontoplaceringer**:
 
 - Filer, der deles i private meddelelser, gemmes på OneDrive den bruger, der har delt filen. 
 
@@ -200,7 +195,7 @@ Brug følgende vejledning til opbevaringspolitikker, der gælder for en af disse
     Oplysninger, der er specifikke for placeringer:
     - [Exchange mail og Exchange offentlige mapper](retention-settings.md#configuration-information-for-exchange-email-and-exchange-public-folders)
     - [SharePoint websteder og OneDrive-konti](retention-settings.md#configuration-information-for-sharepoint-sites-and-onedrive-accounts)
-    - [Microsoft 365 grupper](retention-settings.md#configuration-information-for-microsoft-365-groups)
+    - [Microsoft 365-grupper](retention-settings.md#configuration-information-for-microsoft-365-groups)
     - [Skype for Business](retention-settings.md#configuration-information-for-skype-for-business)
 
 5. Ud **for Beslut, om du vil** bevare indhold, slette det eller begge sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold.
@@ -241,6 +236,6 @@ Nogle indstillinger kan ikke ændres, når politikken er oprettet og gemt, hvilk
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis nogle elementer til Exchange, SharePoint, OneDrive eller Microsoft 365 Grupper har brug for andre opbevaringsindstillinger end de indstillinger for opbevaringspolitik, du har konfigureret, skal du oprette [opbevaringsnavne for](create-retention-labels-information-governance.md) disse undtagelser.
+Hvis nogle elementer til Exchange, SharePoint, OneDrive eller Microsoft 365-grupper har brug for andre opbevaringsindstillinger end de indstillinger for opbevaringspolitik, du har konfigureret, skal du oprette [opbevaringsnavne for](create-retention-labels-information-governance.md) disse undtagelser.
 
 Men hvis du leder efter administration af livscyklus for elementer af høj værdi til forretningsmæssige, juridiske eller lovgivningsmæssige krav til registrering, kan du [](file-plan-manager.md)bruge filplan til at oprette og administrere opbevaringsmærkater.

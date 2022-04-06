@@ -15,19 +15,19 @@ ms.assetid: ''
 ms.collection: m365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om overvejelser i forbindelse med installation og ofte stillede spørgsmål om angrebssimulering og træning i Microsoft 365 E5 eller Microsoft Defender Office 365 Plan 2-organisationer.
+description: Administratorer kan få mere at vide om overvejelser i forbindelse med installation og ofte stillede spørgsmål om simulering af angreb og kurser i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2-organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 380241d44f667a845c47f85062d877192e1a7802
-ms.sourcegitcommit: 7b83e2605895fee5c73cd1d01f4cd16e1457a69f
+ms.openlocfilehash: 57b4d684e52fd51a2ece279cc7322389a953a17c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "63592593"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467791"
 ---
 # <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Overvejelser i forbindelse med implementering af angrebssimulering og ofte stillede spørgsmål
 
-Kurser om angrebssimulering gør det muligt for Microsoft 365 E5- eller Microsoft Defender for Office 365 Plan 2-organisationer at måle og administrere sociale risici ved at tillade oprettelse og administration af phishing-simulering, der drives af virkelige phishing-nyttedata. Hyper-målrettet uddannelse, leveret i partnerskab med Novanova-sikkerhed, hjælper med at forbedre viden og ændre medarbejdernes adfærd.
+Kursus i simulering af angreb gør det muligt for Microsoft 365 E5- eller Microsoft Defender for Office 365 Plan 2-organisationer at måle og administrere sociale risici ved at tillade oprettelse og administration af phishing-simulering, der drives af virkelige phishing-nyttedata. Hyper-målrettet uddannelse, leveret i partnerskab med Novanova-sikkerhed, hjælper med at forbedre viden og ændre medarbejdernes adfærd.
 
 Du kan finde flere oplysninger om at komme i gang med at bruge angrebssimuleringskursus [i Kom i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md).
 
@@ -39,7 +39,7 @@ Mens hele simuleringsoprettelses- og planlægningsoplevelsen er designet til at 
 
 En URL-rytjeneste kan identificere en eller flere af de URL-adresser, der bruges af angrebssimuleringstræning, som usikre. Google Pengeskab i Google Chrome blokerer nogle af de simulerede phishing-URL-adresser med en meddelelse om **, at webstedet er vil være vildledende**. Vi arbejder med mange leverandører af URL-omdømme til altid at tillade vores SIM-webadresser, men vi har ikke altid fuld dækning.
 
-![Vildledende advarsel om websted forud i Google Chrome.](../../media/attack-sim-training-faq-chrome-deceptive-site-message.png)
+:::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Advarsel om vildledende websted i Google Chrome" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
 Bemærk, at dette problem ikke påvirker Microsoft Edge.
 
@@ -96,11 +96,11 @@ Hver enkelt simuleringskampagne har en livscyklus. Når simulering blev oprettet
 
 Mens en simulering er **i den planlagte** tilstand, vil simuleringsrapporterne for det meste være tomme. I dette trin er simuleringsprogrammet i gang med at løse brugerens mailadresser, udvide distributionsgrupper, fjerne gæstebrugere fra listen osv.:
 
-![Simuleringsdetaljer, der viser simulering i den planlagte tilstand.](../../media/attack-sim-training-faq-scheduled-state.png)
+:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Simuleringsoplysninger, der viser simulering i den planlagte tilstand" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
 
 Når simuleringen går **ind i fasen** I gang, vil du bemærke oplysninger, der begynder at gå ind i rapporteringen:
 
-![Simuleringsdetaljer, der viser simulering i statussen I gang.](../../media/attack-sim-training-faq-in-progress-state.png)
+:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Simuleringsdetaljer, der viser simulering i statussen I gang" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
 
 Det kan tage op til 30 minutter, før de enkelte simuleringsrapporter opdateres efter overgangen **til den igangværende** tilstand. Rapportdataene fortsætter med at opbygge, indtil simulering når **tilstanden Fuldført** . Rapporteringsopdateringer sker med følgende intervaller:
 
@@ -166,7 +166,7 @@ Bemærk, at det kan tage op til 30 minutter at synkronisere konfigurationen på 
 
 A: Ja, det kan du! På den sidste side **i Simulering** af simulering i guiden til at oprette en ny simulering er der mulighed for **at Sende en test**. Denne indstilling sender en eksempel på phishing-simuleringsmeddelelse til den bruger, der er logget på i øjeblikket. Når du har valideret phishingmeddelelsen i din indbakke, kan du indsende simulering.
 
-![Send en testknap på siden Gennemse simulering.](../../media/attack-sim-training-simulations-review-simulation.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Knappen Send en test på simuleringssiden Gennemse" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
 
 ### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>Sp: Kan jeg målrette brugere, der tilhører en anden lejer som en del af den samme simuleringskampagne?
 

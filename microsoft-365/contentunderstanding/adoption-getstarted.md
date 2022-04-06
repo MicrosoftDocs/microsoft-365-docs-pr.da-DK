@@ -1,8 +1,8 @@
 ---
-title: 'Microsoft SharePoint Syntex implementering: Introduktion'
-description: Lær, hvordan du bruger og implementerer SharePoint Syntex i organisationen for at hjælpe dig med at løse dine forretningsmæssige problemer.
-ms.author: samanro
-author: samanro
+title: Kom i gang med at få indføringen af Microsoft SharePoint Syntex
+description: Lær at bruge og implementere SharePoint Syntex din organisation til at hjælpe dig med at strømline dine forretningsprocesser.
+ms.author: chucked
+author: chuckedmonson
 manager: pamgreen
 ms.date: ''
 audience: admin
@@ -14,14 +14,14 @@ ms.collection:
 ms.custom: Adopt
 search.appverid: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 172c0a681bc8e7c7867e4bcba1c75f94cfc12e60
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 40af6061029785705d262f3b8c5134531e76885f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591689"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467637"
 ---
-# <a name="microsoft-sharepoint-syntex-adoption-get-started"></a>Microsoft SharePoint Syntex implementering: Introduktion
+# <a name="get-started-driving-adoption-of-microsoft-sharepoint-syntex"></a>Kom i gang med at få indføringen af Microsoft SharePoint Syntex
 
 Tænk på, at de intelligente indholdstjenester i SharePoint Syntex har tre dele:
 

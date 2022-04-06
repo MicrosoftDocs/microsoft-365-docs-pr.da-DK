@@ -18,19 +18,19 @@ ms.date: 03/16/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: fd049930b7b5b922e30e49f5796a736d44038bf2
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: e8a1e08242ab3f884115c414f8a1ba80f5f2aa17
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63593208"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507071"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
 **Gælder for:**
 
 - Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -42,7 +42,7 @@ Microsoft Defender Antivirus installeres automatisk på slutpunkter, der kører 
 - Windows Server, version 1803 eller nyere
 - Windows Server 2016
 
-Hvad sker der, når der bruges en anden ikke-Microsoft antivirus-/antimalwareløsning? Kan man køre Microsoft Defender Antivirus sammen med et andet antivirusprodukt? Svarene afhænger af flere faktorer, f.eks. dit operativsystem, og om du bruger [Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md) sammen med din antivirusbeskyttelse.
+Hvad sker der, når der bruges en anden ikke-Microsoft antivirus-/antimalwareløsning? Kan man køre Microsoft Defender Antivirus sammen med et andet antivirusprodukt? Svarene afhænger af flere faktorer, f.eks. dit operativsystem, og om [du bruger Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) sammen med din antivirusbeskyttelse.
 
 I denne artikel beskrives, hvad der Microsoft Defender Antivirus og en løsning, der ikke er Microsoft-antivirus/antimalware, med og uden Defender til Slutpunkt.
 
@@ -68,7 +68,7 @@ Følgende tabel opsummerer, hvad du kan forvente:
 |Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, version 1803 eller nyere <br/> Windows Server 2016 |Microsoft Defender Antivirus|Aktiv tilstand|
 |Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803 eller nyere <br/> Windows Server 2016  |En løsning til antivirus/antimalware, der ikke er Microsoft|Deaktiveret (angivet manuelt) <sup>[[1](#fn1)]</sup>|
 
-(<a id="fn1">1</a>) Hvis du Windows et antivirusprodukt fra en server, der ikke er Microsoft, kan du fjerne disse Microsoft Defender Antivirus for at forhindre konflikter. Hvis enheden er onboardet til Microsoft Defender til slutpunkt, kan du bruge Microsoft Defender Antivirus i passiv tilstand (se nedenfor).
+(<a id="fn1">1</a>) Hvis du Windows et antivirusprodukt fra en server, der ikke er Microsoft, kan du fjerne disse Microsoft Defender Antivirus for at forhindre konflikter. Hvis enheden er onboardet til Microsoft Defender for Endpoint, kan du bruge Microsoft Defender Antivirus i passiv tilstand (se nedenfor).
 
 > [!TIP]
 > På Windows Server 2016 vises den muligvis *Windows Defender Antivirus i* stedet for *Microsoft Defender Antivirus*.
@@ -112,7 +112,7 @@ Følgende tabel opsummerer tilstanden af Microsoft Defender Antivirus i flere sc
  > [!NOTE]
  > For at passiv tilstand kan fungere på slutpunkter, der kører Windows Server 2016 og Windows Server 2012 R2, skal disse slutpunkter være onboardet med den moderne, samlede løsning, der er beskrevet i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
 
-(<a id="fn3">3</a>) Hvis du bruger et antivirusprodukt fra Windows Server 2016 eller Windows Server 2012 R2, og dette slutpunkt ikke er onboardet til Microsoft Defender til Slutpunkt, skal du deaktivere/fjerne Microsoft Defender Antivirus manuelt for at forhindre problemer, der skyldes, at der er installeret flere antivirusprodukter på en server.
+(<a id="fn3">3</a>) På Windows Server 2016 skal du Windows Server 2012 R2, Windows Server version 1803 eller nyere, Windows Server 2019 og Windows Server 2022, hvis du bruger et antivirusprodukt, der ikke er Microsoft, på et slutpunkt, der ikke er onboardet til  Microsoft Defender for Endpoint, deaktiver/fjern Microsoft Defender Antivirus manuelt for at forhindre problemer, der skyldes, at du har flere antivirusprodukter installeret på en server.
 
 > [!TIP]
 > På Windows Server 2016 vises den muligvis *Windows Defender Antivirus i* stedet for *Microsoft Defender Antivirus*.
@@ -190,7 +190,7 @@ Tabellen i dette afsnit beskriver forskellige tilstande, du kan få vist med Mic
 
  |  Stat  |  Hvad sker der?  | 
  |:---|:---| 
- |  Aktiv tilstand  |  I aktiv tilstand Microsoft Defender Antivirus bruges som antivirusapp på computeren. Indstillinger, der er konfigureret ved hjælp af Konfigurationsstyring, Gruppepolitik, Microsoft Intune eller andre administrationsprodukter, gælder. Filer scannes, trusler afhjælpes, og registreringsoplysninger rapporteres i konfigurationsværktøjet (f.eks. Konfigurationsstyring eller Microsoft Defender Antivirus-appen på selve slutpunktet).  | 
+ |  Aktiv tilstand  |  I aktiv tilstand Microsoft Defender Antivirus bruges som antivirusapp på computeren. Indstillinger, der er konfigureret ved hjælp af Configuration Manager, Gruppepolitik, Microsoft Intune eller andre administrationsprodukter, gælder. Filer scannes, trusler afhjælpes, og registreringsoplysninger rapporteres i konfigurationsværktøjet (f.eks. Configuration Manager eller Microsoft Defender Antivirus-appen på selve slutpunktet).  | 
  |  Passiv tilstand  |  I passiv tilstand Microsoft Defender Antivirus programmer ikke som antivirusapp, og trusler afhjælpes ikke af Microsoft Defender Antivirus. Trusler kan dog løses ved at [slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) i bloktilstand](edr-in-block-mode.md). <br/><br/> Filer scannes af Slutpunktsregistrering og -svar, og rapporter leveres til trusselsregistreringer, der deles med Defender for Endpoint-tjenesten. Du får muligvis vist beskeder Microsoft Defender Antivirus en kilde, selv når Microsoft Defender Antivirus er i passiv tilstand. <br/><br/> Når Microsoft Defender Antivirus er i passiv tilstand, kan du stadig administrere opdateringer [til Microsoft Defender Antivirus](manage-updates-baselines-microsoft-defender-antivirus.md), men du kan ikke flytte Microsoft Defender Antivirus  i aktiv tilstand, hvis dine enheder har et antivirusprodukt, der ikke er Microsoft, og som giver beskyttelse mod malware i realtid. <br/><br/> For optimalt sikkerhedsbeslag til forsvar og registrering af effektivitet skal du sørge for at få dine antivirus- og antimalwareopdateringer, også selvom Microsoft Defender Antivirus kører i passiv tilstand. Se [Administrere Microsoft Defender Antivirus opdateringer og anvende oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md). <br/><br/> Bemærk, at passiv tilstand kun understøttes på Windows Server 2012 R2 & 2016, når computeren er onboardet med den moderne[, samlede løsning](/microsoft-365/security/defender-endpoint/configure-server-endpoints).  | 
  |  Deaktiveret <br/><br/> eller <br/><br/> Fjernet  |  Når den er deaktiveret eller Microsoft Defender Antivirus, bruges den ikke som antivirusapp. Filer scannes ikke, og trusler bliver ikke løst. <br/><br/> Deaktivere eller fjerne Microsoft Defender Antivirus anbefales ikke generelt. Hvis det er muligt, skal du holde Microsoft Defender Antivirus i passiv tilstand, hvis du bruger en ikke-Microsoft-antimalware-/antivirusløsning. <br/><br/> I tilfælde hvor Microsoft Defender Antivirus deaktiveres automatisk, kan den aktiveres igen automatisk, hvis det ikke-Microsoft-antivirus-/antimalwareprodukt udløber eller på anden måde holder op med at levere beskyttelse i realtid mod virus, malware eller andre trusler. Den automatiske genaktivering af Microsoft Defender Antivirus hjælper med at sikre, at antivirusbeskyttelse bevares på dine slutpunkter. <br/><br/> Du kan også bruge [begrænset periodisk scanner](limited-periodic-scanning-microsoft-defender-antivirus.md), som fungerer sammen med Microsoft Defender Antivirus-programmet, så du med jævne mellemrum kan kontrollere, om der er trusler, hvis du bruger en antivirusapp, der ikke er Microsoft.  | 
 

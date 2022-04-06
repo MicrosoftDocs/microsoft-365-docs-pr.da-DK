@@ -19,16 +19,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 3057e66352b9bd658ddd4958986cbefd61e4e187
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 6effe1ffefaf7faeb90258163c539cdddcec2679
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682939"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569991"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Politikanbefalinger til sikring SharePoint websteder og filer
 
-Denne artikel beskriver, hvordan du implementerer de anbefalede politikker for nultillidsidentitet og enhedsadgang for at beskytte SharePoint og OneDrive for Business. Denne vejledning er baseret på de almindelige [politikker for identitet og enhedsadgang](identity-access-policies.md).
+Denne artikel beskriver, hvordan du implementerer de anbefalede politikker Nul tillid identitet og enhedsadgang for at beskytte SharePoint og OneDrive for Business. Denne vejledning er baseret på de almindelige [politikker for identitet og enhedsadgang](identity-access-policies.md).
 
 Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse til SharePoint-filer, der kan anvendes baseret på granulariteten af dine behov: **udgangspunkt****, virksomhed** og **særlig sikkerhed**. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede klientoperativsystemer, der refereres til i disse anbefalinger [i oversigten](microsoft-365-policies-configurations.md).
 
@@ -38,7 +38,7 @@ Ud over at implementere denne vejledning skal du sørge for at konfigurere Share
 
 For at beskytte filer i SharePoint og OneDrive viser nedenstående diagram, hvilke politikker der skal opdateres fra de fælles identitets- og enhedsadgangspolitikker.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png" alt-text="Oversigt over politikopdateringer til beskyttelse af adgang til SharePoint." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgangen til SharePoint" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png":::
 
 Hvis du med SharePoint, da du oprettede de fælles politikker, behøver du kun at oprette de nye politikker. I forbindelse med politikker for betinget adgang SharePoint følgende OneDrive.
 
@@ -60,7 +60,7 @@ I følgende tabel vises de politikker, du enten skal gennemse og opdatere, eller
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Brug app-tvungne begrænsninger i SharePoint
 
-Hvis du implementerer adgangskontrolelementer i SharePoint, skal du oprette denne Politik for betinget adgang i Azure AD for at bede Azure AD om at håndhæve de politikker, du konfigurerer i SharePoint. Denne politik gælder for alle brugere, men påvirker kun adgangen til de websteder, du angiver ved hjælp af PowerShell, når du opretter adgangskontrollerne SharePoint.
+Hvis du implementerer adgangskontrolelementer i SharePoint, oprettes der politikker for Betinget adgang i Azure AD for at få Azure AD til at håndhæve de politikker, du konfigurerer i SharePoint. Denne politik gælder som standard for alle brugere, men påvirker kun adgangen til de websteder, du angiver ved hjælp af PowerShell, når du opretter adgangskontrolelementerne i SharePoint. Politikken kan også begrænses til bestemte brugere, grupper eller websteder.
 
 Hvis du vil konfigurere denne politik, skal du se "Bloker eller begræns adgangen til bestemte SharePoint grupper af websteder eller OneDrive-konti" i Kontrollere adgang fra enheder, der ikke [er administrerede](/sharepoint/control-access-from-unmanaged-devices).
 
@@ -79,7 +79,7 @@ Det er vigtigt at forstå, SharePoint webstedstilladelser typisk er baseret på 
 
 Følgende illustration er et eksempel på, hvordan SharePoint adgangspolitikker for enheder beskytter en brugers adgang til websteder.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png" alt-text="Eksempel på, SharePoint politikker for enhedsadgang beskytter websteder." lightbox="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png" alt-text="Et eksempel på, hvordan SharePoint politikker for enhedsadgang beskytter websteder" lightbox="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png":::
 
 James har fået tildelt betingede adgangspolitikker som udgangspunkt, men han kan få adgang til SharePoint websteder med virksomheds- eller særlig sikkerhedsbeskyttelse.
 
@@ -89,7 +89,8 @@ James har fået tildelt betingede adgangspolitikker som udgangspunkt, men han ka
 
 ## <a name="next-step"></a>Næste trin
 
-![Trin 4: Politikker for Microsoft 365 skyapps.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Trin 4 – Politikker for Microsoft 365-skyapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+
 
 Konfigurere Betingede adgangspolitikker for:
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer Pengeskab Links-politikker i Microsoft Defender for Office 365
+title: Konfigurer Pengeskab links-politikker i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,40 +16,40 @@ ms.assetid: bdd5372d-775e-4442-9c1b-609627b94b5d
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan du får vist, opretter, redigerer og sletter Pengeskab Links-politikker og globale Pengeskab Links-indstillinger i Microsoft Defender Office 365.
+description: Administratorer kan få mere at vide om, hvordan du får vist, opretter, redigerer og sletter Pengeskab politikker for links og globale Pengeskab indstillinger for links Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7d4cbaccab3eca371114eec92fe1bf89b2c0e353
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7a352391a0acc595463a8363da315e8dda2758c1
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63595869"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507225"
 ---
-# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer Pengeskab Links-politikker i Microsoft Defender for Office 365
+# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer Pengeskab links-politikker i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Denne artikel er beregnet til virksomhedskunder, der [har Microsoft Defender Office 365](defender-for-office-365.md). Hvis du er privat bruger og leder efter oplysninger om Safelinks i Outlook, skal du [se Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Denne artikel er beregnet til virksomhedskunder, der [har Microsoft Defender for Office 365](defender-for-office-365.md). Hvis du er privat bruger og leder efter oplysninger om Safelinks i Outlook, skal du [se Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Pengeskab Links i [Microsoft Defender til Office 365](defender-for-office-365.md) giver URL-scanning af indgående mails i mailflow og tidspunkt for klikbekræftelse af URL-adresser og links i mails og på andre placeringer. Du kan finde flere oplysninger [Pengeskab Links i Microsoft Defender for Office 365](safe-links.md).
+Pengeskab Links i [Microsoft Defender for Office 365](defender-for-office-365.md) giver URL-scanning af indgående mails i mailflow og tid til klikbekræftelse af URL-adresser og links i mails og på andre placeringer. Du kan finde flere oplysninger [Pengeskab Links i Microsoft Defender for Office 365](safe-links.md).
 
-Selvom der ikke er nogen standardpolitik for Pengeskab Links, giver den indbyggede beskyttelse foruddefinerede sikkerhedspolitik Pengeskab Beskyttelse af links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab **Kæder-politikker**). Du kan finde flere oplysninger [i Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender Office 365](preset-security-policies.md).
+Selvom der ikke er nogen standardpolitik for Pengeskab Links, giver den indbyggede beskyttelse foruddefinerede sikkerhedspolitik Pengeskab Beskyttelse af links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab **Kæder-politikker**). Få mere at vide under [Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
 Du kan også bruge procedurerne i denne artikel til at oprette Pengeskab links-politikker, der gælder for bestemte brugere, grupper eller domæner.
 
 > [!NOTE]
 >
-> Du skal konfigurere de globale indstillinger for Pengeskab links uden for **Pengeskab** Links-politikker. Du kan finde en [vejledning i Konfigurere globale indstillinger for Pengeskab Links i Microsoft Defender Office 365](configure-global-settings-for-safe-links.md).
+> Du skal konfigurere de globale indstillinger for Pengeskab links uden for **Pengeskab** Links-politikker. Du kan finde en vejledning [i Konfigurere globale indstillinger for Pengeskab Links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 >
-> Administratorer bør overveje de forskellige konfigurationsindstillinger for Pengeskab links. En af de tilgængelige muligheder er at medtage brugeridentificerbare oplysninger i Pengeskab links. Denne funktion gør det *muligt for Security Ops-teams* at undersøge potentielle brugerforlig, afhjælpe og begrænse dyrere overtrædelser.
+> Administratorer bør overveje de forskellige konfigurationsindstillinger for Pengeskab links. En af de tilgængelige muligheder er at medtage brugeridentificerbare oplysninger i Pengeskab links. Denne funktion giver sikkerhedsteams (SecOps)mulighed for at undersøge potentielle brugerforlig, afhjælpe og begrænse omkostningstunge overtrædelser.
 
-Du kan konfigurere Pengeskab Links-politikker i Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell for berettigede Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser, men med Microsoft Defender Office 365 til tilføjelsesabonnementer).
+Du kan konfigurere Pengeskab Links-politikker i Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell for berettigede Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser, men med Microsoft Defender for Office 365-tilføjelsesabonnementer).
 
 De grundlæggende elementer i en Pengeskab links-politik er:
 
@@ -104,7 +104,7 @@ Når du opretter en brugerdefineret Pengeskab Links-politik i Microsoft 365 Defe
 
 4. På siden **Brugere og domæner, der** vises, skal du identificere de interne modtagere, som politikken gælder for (modtagerbetingelser):
    - **Brugere**: De angivne postkasser, mailbrugere eller mailkontakter i organisationen.
-   - **Grupper**: De angivne distributionsgrupper, mailaktiverede sikkerhedsgrupper eller Microsoft 365 grupper i organisationen.
+   - **Grupper**: De angivne distributionsgrupper, mailaktiverede sikkerhedsgrupper eller Microsoft 365-grupper i organisationen.
    - **Domæner:** Alle modtagere på de angivne [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i organisationen.
 
    Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi i resultaterne. Gentag denne proces så mange gange, som det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Ikonet Fjern.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
@@ -123,8 +123,8 @@ Når du opretter en brugerdefineret Pengeskab Links-politik i Microsoft 365 Defe
        - **Vent på, at URL-adressen** scannes, før meddelelsen leveres: Vælg denne indstilling for at vente på, at URL-adressen scannes i realtid, før meddelelsen leveres.
      - **Anvend Pengeskab links** til mails, der sendes i organisationen: Vælg denne indstilling for at anvende politikken Pengeskab Links på meddelelser mellem interne afsendere og interne modtagere.
    - **Vælg handlingen for ukendte eller potentielt skadelige** URL-adresser i Microsoft Teams: Vælg Til for Pengeskab aktivere  beskyttelse af links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
-   - **Registrer ikke brugerklik**: Lad denne indstilling være fravalgt for at aktivere registrering af brugerklik på URL-adresser i mails.
-   - **Tillad ikke, at brugerne klikker sig til** den oprindelige URL-adresse: Vælg denne indstilling for at forhindre brugere i at klikke igennem til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
+   - **Spor brugerklik**: Lad denne indstilling være valgt for at aktivere registrering af, at brugeren klikker på URL-adresser i mails.
+   - **Lad brugere klikke igennem til den oprindelige URL-adresse**: Fjern markeringen i denne indstilling for at forhindre brugere i at klikke igennem til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
    - **Undlad at omskrive følgende URL-adresser**: Tillader adgang til de angivne URL-adresser, som ellers ville være blokeret af Pengeskab links.
 
      Skriv den ønskede URL-adresse eller værdi i feltet, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
@@ -254,7 +254,7 @@ Oprettelse af Pengeskab links-politik i PowerShell er en proces i to trin:
 Hvis du vil oprette en politik for sikre links, skal du bruge denne syntaks:
 
 ```PowerShell
-New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-IsEnabled <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-DoNotAllowClickThrough <$true | $false>] [-DoNotTrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
+New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSafeLinksForEmail <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-AllowClickThrough <$true | $false>] [-TrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
 ```
 
 > [!NOTE]
@@ -270,11 +270,11 @@ I dette eksempel oprettes en politik for sikre links med navnet Contoso All med 
 - Slå scanning af URL-adresser, der er klikket på, til i realtid, herunder links, der peger på filer.
 - Vent på, at URL-adressen scannes, før meddelelsen leveres.
 - Slå URL-scanning og -omskrivning til for interne meddelelser.
-- Spor brugerklik, der er relateret til beskyttelse af Pengeskab Links (vi bruger ikke _parameteren DoNotTrackUserClicks_, og standardværdien er $false, hvilket betyder, at brugerklik registreres).
+- Registrere brugerklik, der er relateret Pengeskab beskyttelse af links (vi bruger ikke _parameteren TrackUserClicks_, og standardværdien er $true).
 - Tillad ikke, at brugerne klikker sig til den oprindelige URL-adresse.
 
 ```PowerShell
-New-SafeLinksPolicy -Name "Contoso All" -IsEnabled $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -DoNotAllowClickThrough $true
+New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
 ```
 
 Du kan finde detaljerede oplysninger om syntaks og parameter [i New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy).
@@ -468,7 +468,7 @@ Remove-SafeLinksRule -Identity "Marketing Department"
 
 Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-SafeLinksRule](/powershell/module/exchange/remove-safelinksrule).
 
-Kontrollér, at Pengeskab Links scanner meddelelser, ved at kontrollere den tilgængelige Microsoft Defender for Office 365 rapporter. Få mere at vide under [Få vist rapporter for Defender Office 365](view-reports-for-mdo.md) [og Brug Stifinder Microsoft 365 Defender-portalen](threat-explorer.md).
+Kontrollér, at Pengeskab Links scanner meddelelser, skal du kontrollere de tilgængelige Microsoft Defender for Office 365 rapporter. Få mere at vide under [Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md) [og Brug Stifinder i Microsoft 365 Defender portalen](threat-explorer.md).
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer fungerede?
 

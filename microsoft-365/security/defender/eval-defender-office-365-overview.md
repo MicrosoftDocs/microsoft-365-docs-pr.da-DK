@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 0fece71510237f086e6a6f499a9b6b8b76de2a0e
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 6acfec658ee7c104ae58974390ba39da8bc171f9
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500293"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569881"
 ---
 # <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Trin 3. Aktivér og Microsoft Defender for Office 365
 
@@ -42,7 +42,7 @@ Brug følgende trin til at aktivere og prøve Microsoft Defender for Office 365.
 
 I følgende tabel beskrives trinnene i illustrationen.
 
-| Serienummer|Trin  |Beskrivelse  |
+| Trinnummer | Link  |Beskrivelse  |
 |---------|---------|---------|
 |1|[Gennemgå arkitekturkrav og nøglekoncepter](eval-defender-office-365-architecture.md)    | Forstå Defender til Office, og sørg for, at dit Exchange Online opfylder arkitekturens forudsætninger.       |
 |2|[Aktivér evalueringsmiljøet](eval-defender-office-365-enable-eval.md)     |   Følg trinnene for at konfigurere evalueringsmiljøet.      |

@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 ROBOTS: NOINDEX, NOFOLLOW
 description: Administratorer kan få mere at vide om prøveversionen af Microsoft Defender til Office 365
-ms.openlocfilehash: 3d8d873a3e89b0ae3302eca0ab7d7c471fd94449
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: 40ad151dfa4ee26bf1e6177dda170cc2998c7c7e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63592766"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683861"
 ---
 # <a name="about-the-microsoft-defender-for-office-365-trial"></a>Om microsoft Defender for Office 365 prøveversion
 
@@ -40,10 +40,6 @@ Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusl
 
 En Microsoft Defender for Office 365-prøveversion er en nem måde at afprøve funktionerne i Defender til Office 365 Plan 2 gratis efter blot nogle få klik. Disse funktioner på højt niveau er beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Funktion|Beskrivelse|
 |---|---|
 |[Eksklusive indstillinger i antiphishing-politikker](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)|Få beskyttelse af bruger efterligning, beskyttelse af domæne efterligning, postkasseintelligens og avancerede tærskelværdier for phishing.|
@@ -56,7 +52,6 @@ En Microsoft Defender for Office 365-prøveversion er en nem måde at afprøve f
 |[Kampagnevisninger](campaigns.md)<sup>\*</sup>|Undersøg og svar på omfattende ondsindede mailaktiviteter.|
 |[Rapporter, der bruger Defender Office 365 funktioner](view-reports-for-mdo.md)|Få vist rapporter, herunder status for trusselsbeskyttelse, URL-trusselsbeskyttelse, mailventetid og meget mere.|
 |[Prioritetskontobeskyttelse](/microsoft-365/admin/setup/priority-accounts)<sup>\*</sup>|Brugere, som du identificerer som Prioritet-konti, mærkes i beskeder, rapporter og undersøgelser, så de skiller sig ud. Du kan også bruge mærket Prioritet i filtre.|
-|
 
 <sup>\*</sup>Denne funktion er eksklusiv for Defender Office 365 Plan 2.
 

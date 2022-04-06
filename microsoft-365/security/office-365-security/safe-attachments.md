@@ -20,12 +20,12 @@ ms.collection:
 description: Administratorer kan få mere at vide Pengeskab funktionen Vedhæftede filer i Microsoft Defender Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b65813dedcf421e8335dc2433b5befee69cc60e6
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 01721d36967413a7f939d3618340e5630c3d6007
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63593193"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683795"
 ---
 # <a name="safe-attachments-in-microsoft-defender-for-office-365"></a>Pengeskab vedhæftede filer i Microsoft Defender til Office 365
 
@@ -41,17 +41,12 @@ Pengeskab beskyttelse af vedhæftede filer i mails styres af politikkerne Penges
 
 I følgende tabel beskrives scenarier for Pengeskab Vedhæftede filer i Microsoft 365- og Office 365-organisationer, der omfatter Microsoft Defender til Office 365 (med andre ord er manglende licenser aldrig et problem i eksemplerne).
 
-<br>
-
-****
-
 |Scenarie|Resultat|
 |---|---|
 |Pats Microsoft 365 E5 har ikke konfigureret Pengeskab vedhæftede filer.|Pat er beskyttet af Pengeskab på grund af den **indbyggede** beskyttelse foruddefinerede sikkerhedspolitik, der gælder for alle modtagere, der ellers ikke er defineret i Pengeskab Vedhæftede filer politikker.|
 |Lees organisation har en Pengeskab Politik for vedhæftede filer, der kun gælder for finansmedarbejdere. Lee er medlem af salgsafdelingen.|Lee og resten af salgsafdelingen er beskyttet af Pengeskab Vedhæftede filer på grund af den **indbyggede** beskyttelse foruddefinerede sikkerhedspolitik, der gælder for alle modtagere, der ellers ikke er defineret i Pengeskab Politikker for vedhæftede filer.|
 |I går oprettede en administrator i Jean's organisation en Pengeskab politik for vedhæftede filer, der gælder for alle medarbejdere. Tidligere i dag modtog Jane en mail, der indeholdt en vedhæftet fil.|Jean er beskyttet af Pengeskab vedhæftede filer på grund af denne brugerdefinerede Pengeskab politik for vedhæftede filer. <p> Det tager som regel ca. 30 minutter, før en ny politik træder i kraft.|
 |Chris's organisation har længe arbejdet Pengeskab politikker for vedhæftede filer for alle i organisationen. Chris modtager en mail med en vedhæftet fil og videresender derefter meddelelsen til eksterne modtagere.|Chis er beskyttet af Pengeskab vedhæftede filer. <p> Hvis de eksterne modtagere i en Microsoft 365, så er de videresendte meddelelser også beskyttet af Pengeskab vedhæftede filer.|
-|
 
 Pengeskab scanning af vedhæftede filer finder sted i det samme område, Microsoft 365 dine data befinder sig. Du kan finde flere oplysninger om datacentergege områder i [Hvor er dine data placeret?](https://products.office.com/where-is-your-data-located?geo=All)
 
@@ -67,10 +62,6 @@ I dette afsnit beskrives indstillingerne i Pengeskab politikker for vedhæftede 
 
 - **Pengeskab Ukendt malwaresvar ved vedhæftede filer**: Denne indstilling styrer handlingen for scanning Pengeskab scanning af vedhæftede filers malware i mails. De tilgængelige indstillinger er beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Indstilling|Effekt|Brug følgende, når du vil:|
   |---|---|---|
   |**Fra**|Vedhæftede filer scannes ikke for malware ved hjælp af Pengeskab vedhæftede filer. Meddelelser scannes stadig for malware med [beskyttelse mod malware i EOP](anti-malware-protection.md).|Slå scanning fra for udvalgte modtagere. <p> Undgå unødvendige forsinkelser i routing af intern mail. <p> **Denne indstilling anbefales ikke til de fleste brugere. Du bør kun bruge denne indstilling til at deaktivere søgning Pengeskab scanning af vedhæftede filer for modtagere, der kun modtager meddelelser fra afsendere, der er tillid til. ZAP sætter ikke meddelelser i karantæne, Pengeskab vedhæftede filer er slået fra, og der ikke modtages et malwaresignal. Du kan få mere at [vide under Automatisk tømning uden time](zero-hour-auto-purge.md)**|
@@ -78,7 +69,6 @@ I dette afsnit beskrives indstillingerne i Pengeskab politikker for vedhæftede 
   |**Bloker**|Forhindrer meddelelser med registrerede malware vedhæftede filer i at blive leveret. <p> Meddelelser er sat i karantæne. Som standard er det kun administratorer (ikke brugere), der kan gennemse, frigive eller slette meddelelserne.<sup>\*</sup> <p> Blokerer automatisk fremtidige forekomster af meddelelser og vedhæftede filer. <p> Levering af sikre meddelelser kan være forsinket på grund af Pengeskab scanning af vedhæftede filer.|Beskytter din organisation mod gentagne angreb ved hjælp af de samme vedhæftede malware-filer. <p> Dette er standardværdien og den anbefalede værdi i Standard og Strenge [forudindstillede sikkerhedspolitikker](preset-security-policies.md).|
   |**Erstat**|Fjerner registrerede vedhæftede malwares. <p> Giver modtagere besked om, at vedhæftede filer er blevet fjernet. <p>  Meddelelser, der indeholder skadelige vedhæftede filer, er sat i karantæne. Som standard er det kun administratorer (ikke brugere), der kan gennemse, frigive eller slette meddelelserne.<sup>\*</sup> <p> Levering af sikre meddelelser kan være forsinket på grund af Pengeskab scanning af vedhæftede filer.|Gør modtagerne synlige for, at vedhæftede filer blev fjernet på grund af registreret malware.|
   |**Dynamisk levering**|Leverer meddelelser med det samme, men erstatter vedhæftede filer med pladsholdere, Pengeskab scanning af vedhæftede filer er fuldført. <p> Meddelelser, der indeholder skadelige vedhæftede filer, er sat i karantæne. Som standard er det kun administratorer (ikke brugere), der kan gennemse, frigive eller slette meddelelserne.<sup>\*</sup> <p> Du kan finde flere oplysninger [i afsnittet Dynamisk levering Pengeskab politikker for vedhæftede](#dynamic-delivery-in-safe-attachments-policies) filer senere i denne artikel.|Undgå forsinkelser i meddelelser, mens du beskytter modtagere mod skadelige filer.|
-  |
 
   <sup>\*</sup>Administratorer kan oprette og _tildele karantænepolitikker_ i Pengeskab Politikker for vedhæftede filer, der definerer, hvad brugere har tilladelse til at gøre til meddelelser, der er sat i karantæne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
 

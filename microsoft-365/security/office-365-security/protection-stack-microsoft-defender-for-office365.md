@@ -13,12 +13,13 @@ ms.localizationpriority: medium
 description: Følg stien til en indgående meddelelse via trusselsfiltreringsstakken i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9f778cba51cb9317dc5f371e12629941b23c96ae
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 62d7ac9f13f59fce3b635f6d1dace2f22ee7f503
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593199"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683817"
 ---
 # <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
 

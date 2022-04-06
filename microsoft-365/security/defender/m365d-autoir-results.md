@@ -23,12 +23,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: 05e16a32fb21f682a756c32201a69c192d398184
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5a95980147c66fa8655f5c1b2ebe8adfff9e87c0
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592781"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501261"
 ---
 # <a name="details-and-results-of-an-automated-investigation"></a>Detaljer og resultater af en automatisk undersøgelse
 
@@ -41,7 +41,7 @@ Det Microsoft 365 Defender muligt at få oplysninger [om undersøgelsen](m365d-a
 
 ## <a name="new-unified-investigation-page"></a>(NY) Siden Samlet undersøgelse
 
-Undersøgelsessiden er for nylig blevet opdateret til at omfatte oplysninger på tværs af dine enheder, mails og samarbejdsindhold. Den nye, samlede undersøgelsesside definerer et fælles sprog og giver en samlet oplevelse af automatiske undersøgelser på tværs af [Microsoft Defender til Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) og [Microsoft Defender for Office 365](../office-365-security/defender-for-office-365.md). For at få adgang til den samlede undersøgelsesside skal du vælge linket i det gule banner, du ser på:
+Undersøgelsessiden er for nylig blevet opdateret til at omfatte oplysninger på tværs af dine enheder, mails og samarbejdsindhold. Den nye, samlede undersøgelsesside definerer et fælles sprog og giver en samlet oplevelse for automatiske undersøgelser på [tværs Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) og [Microsoft Defender for Office 365](../office-365-security/defender-for-office-365.md). For at få adgang til den samlede undersøgelsesside skal du vælge linket i det gule banner, du ser på:
 
 - En side i Office 365 <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Security & Compliance Center</a>
 - En undersøgelsesside på Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
@@ -89,23 +89,23 @@ Brug en side med oplysninger om hændelser til at få vist detaljerede oplysning
 
 Her er et eksempel.
 
-:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Et eksempel på en undersøgelsesside." lightbox="../../media/mtp-incidentdetails-tabs.png":::
+:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Undersøgelsessiden på Microsoft 365 Defender portalen" lightbox="../../media/mtp-incidentdetails-tabs.png":::
 
 ## <a name="investigation-details"></a>Undersøgelsesoplysninger
 
 Brug visningen undersøgelsesdetaljer til at se tidligere, aktuelle og afventende aktiviteter i forbindelse med en undersøgelse. Her er et eksempel.
 
-:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Et eksempel på undersøgelsesoplysninger." lightbox="../../media/mtp-air-investdetails.png":::
+:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Siden med undersøgelsesoplysninger i Microsoft 365 Defender portalen" lightbox="../../media/mtp-air-investdetails.png":::
 
 I  visningen **Undersøgelsesdetaljer** kan du se oplysninger på fanerne Undersøgelse, **Beskeder, Enheder****, Identiteter**, Nøgle **fund, Enheder**, **Log** og Ventende handlinger, der er beskrevet i følgende tabel. 
 
 > [!NOTE]
-> De specifikke faner, du ser på siden med undersøgelsesoplysninger, afhænger af, hvad dit abonnement omfatter. Hvis dit abonnement f.eks. ikke omfatter Microsoft Defender Office 365 Plan 2, kan du ikke se **fanen Postkasser**.
+> De specifikke faner, du ser på siden med undersøgelsesoplysninger, afhænger af, hvad dit abonnement omfatter. Hvis dit abonnement f.eks. ikke Microsoft Defender for Office 365 plan 2, kan du ikke se fanen **Postkasser**.
 
 | Tabulator | Beskrivelse |
 |:--------|:--------|
 | **Graf for undersøgelse** | Giver en visuel repræsentation af undersøgelsen. Afbilder enheder og viser fundne trusler samt beskeder, og om der er handlinger, der afventer godkendelse.<br/>Du kan vælge et element på grafen for at få vist flere detaljer. Hvis du f.eks. **vælger ikonet** Beviser, kommer du  til fanen Beviser, hvor du kan se registrerede enheder og deres konklusion. |
-| **Beskeder** | Viser beskeder, der er knyttet til undersøgelsen. Beskeder kan komme fra funktioner til trusselsbeskyttelse på en brugers enhed, i Office apps, Microsoft Defender til skyapps og andre Microsoft 365 Defender funktioner.|
+| **Beskeder** | Viser beskeder, der er knyttet til undersøgelsen. Beskeder kan komme fra funktioner til trusselsbeskyttelse på en brugers enhed, i Office, Microsoft Defender for Cloud Apps og andre Microsoft 365 Defender funktioner.|
 | **Enheder** | Viser de enheder, der er medtaget i undersøgelsen, samt afhjælpningsniveauet. (Afhjælpningsniveauer svarer til [automatiseringsniveauet for enhedsgrupper](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups)). |
 | **Postkasser** |Viser postkasser, der er påvirket af registrerede trusler.  |
 | **Brugere**  | Viser brugerkonti, der er påvirket af registrerede trusler. |

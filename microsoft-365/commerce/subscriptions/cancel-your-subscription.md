@@ -19,21 +19,21 @@ ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 search.appverid: MET150
-description: Få mere at vide om, hvordan du annullerer din Dynamics 365, Intune, Power Platform og Microsoft 365 for business-prøveversion eller betalte abonnementer i Microsoft 365 Administration.
-ms.date: 01/20/2022
-ms.openlocfilehash: 82d579cab43b2c1edd7cc3bd898f2397bbd7a435
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du annullerer din Dynamics 365 Intune, Power Platform og Microsoft 365 for business-prøveversion eller betalte abonnementer i Microsoft 365 Administration.
+ms.date: 03/31/2022
+ms.openlocfilehash: d6b6c078c5f0d1b44143f3a9cc2d336a0a80fe03
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590726"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595274"
 ---
 # <a name="cancel-your-subscription"></a>Opsnuller dit abonnement
 
 Hvis du vil opsige dit abonnement, er den nemmeste måde at gøre det på at [slå tilbagevendende fakturering fra](renew-your-subscription.md). Når du slår tilbagevendende fakturering fra, kan du fortsætte med at bruge dit abonnement, indtil det udløber i slutningen af abonnementsperioden. Hvis du vil annullere med det samme, skal du bruge oplysningerne og trinnene i denne artikel til at gøre det.
 
 > [!IMPORTANT]
-> Denne artikel gælder kun for Dynamics 365, Intune, Power Platform Microsoft 365 for business-abonnementer. Hvis du har et Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365 abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
+> Denne artikel gælder kun for Dynamics 365, Intune, Power-platform og Microsoft 365 for Business-abonnementer. Hvis du har et Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365 abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -49,11 +49,11 @@ Hvis du vil opsige dit abonnement, er den nemmeste måde at gøre det på at [sl
 
 ### <a name="if-you-have-a-billing-profile"></a>Hvis du har en faktureringsprofil
 
-Du kan kun annullere og modtage en forholdsmæssig kredit eller refusion, hvis du annullerer inden for 72 timer efter start eller fornyelse af dit abonnement. Hvis du annullerer i denne begrænsede periode, krediteres det forholdsmæssige beløb enten over din næste faktura eller returneres til dig i den næste faktureringscyklus.
+Du kan kun annullere og modtage en forholdsmæssig kredit eller refusion, hvis du annullerer inden for syv dage efter start eller fornyelse af dit abonnement. Hvis du annullerer i denne begrænsede periode, krediteres det forholdsmæssige beløb enten over din næste faktura eller returneres til dig i den næste faktureringscyklus.
 
-Hvis du skal opsige dit abonnement inden for 72 timer efter start eller fornyelse af dit abonnement, skal du gå til Trin for at annullere dit [abonnement](#steps-to-cancel-your-subscription) senere i denne artikel.
+Hvis du har brug for at opsige det inden for syv dage efter start eller fornyelse af dit abonnement, skal du gå til Trin [for at annullere dit abonnement](#steps-to-cancel-your-subscription) senere i denne artikel.
 
-Hvis der er gået mere end 72 timer, skal [du slå tilbagevendende fakturering fra](renew-your-subscription.md). Dette forhindrer, at du bliver opkrævet betaling igen for dit abonnement, og giver dig mulighed for at bevare din adgang til dine produkter og tjenester i resten af dit abonnement.
+Hvis der er gået mere end syv dage, skal [du slå tilbagevendende fakturering fra](renew-your-subscription.md). Dette forhindrer, at du bliver opkrævet betaling igen for dit abonnement, og giver dig mulighed for at bevare din adgang til dine produkter og tjenester i resten af dit abonnement.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Hvis du ikke har en faktureringsprofil
 

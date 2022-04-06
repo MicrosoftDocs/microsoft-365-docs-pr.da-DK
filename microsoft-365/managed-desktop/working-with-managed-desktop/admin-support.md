@@ -1,7 +1,7 @@
 ---
-title: Administratorsupport til Microsoft-administreret skrivebord
+title: Administratorsupport til Microsoft Managed Desktop
 description: Sådan kan administratorer få hjælp til tjenesten
-keywords: Microsoft-administreret skrivebord, Microsoft 365, tjeneste, dokumentation
+keywords: Microsoft Managed Desktop, Microsoft 365, tjeneste, dokumentation
 ms.service: m365-md
 author: tiaraquan
 ms.localizationpriority: medium
@@ -9,16 +9,16 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: ad8ae319be7515282dc51e9dd9a519660b5d91f6
-ms.sourcegitcommit: 007822d16e332522546e948f5c216327254a4d49
+ms.openlocfilehash: 7f13c11f73d9ddbb9d074782a03fa408ef2c3ec6
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63588677"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595230"
 ---
-# <a name="admin-support-for-microsoft-managed-desktop"></a>Administratorsupport til Microsoft-administreret skrivebord
+# <a name="admin-support-for-microsoft-managed-desktop"></a>Administratorsupport til Microsoft Managed Desktop
 
-Du kan indsende supportanmodninger eller feedbackanmodninger til Microsoft ved hjælp af administrationsportalen for Microsoft-computere. Supportanmodninger prioriteres altid frem for feedbackindsendelser.
+Du kan sende supportanmodninger eller feedbackanmodninger til Microsoft via Microsoft Managed Desktop-administrationsportalen. Supportanmodninger prioriteres altid frem for feedbackindsendelser.
 
 ## <a name="open-a-new-support-request"></a>Åbn en ny supportanmodning
 
@@ -27,7 +27,7 @@ Supportanmodninger er triaged og administreres efter alvorlighed beskrevet i def
 **Sådan åbner du en ny supportanmodning:**
 
 1. Log på Microsoft Endpoint Manager [og](https://endpoint.microsoft.com/) gå til **menuen Lejeradministration**.
-2. I sektionen **Microsoft Managed Desktop skal** du vælge **Service requests**.
+2. I sektionen **Microsoft Managed Desktop** skal du vælge **Serviceanmodninger**.
 3. I sektionen **Serviceanmodninger** skal du vælge **+ Ny supportanmodning**.
 4. Vælg den **Anmodningstype,** der svarer til den hjælp, du har brug for. Tabellen nedenfor beskriver indstillingerne.
 5. Vælg **alvorsniveau** . Du kan finde flere oplysninger i [definitionstabellen for alvorsgrad](#support-request-severity-definitions).
@@ -40,8 +40,8 @@ Supportanmodninger er triaged og administreres efter alvorlighed beskrevet i def
 | Supportanmodningstype | Hvornår skal jeg bruge? |
 | ----- | ----- |
 Hændelse | Du kræver, at Microsoft Managed Desktop Operations-teamet skal undersøge et brugerproblem. Eksempelvis en omfattende påvirkning af en ændring eller tjenesteafbrydelse.
-Anmodning om oplysninger | Du planlægger en ændring i netværk, proxykonfiguration, VPN-systemer, udløb af certifikat eller har bare brug for nogle oplysninger om tjenesten. Et svar fra Microsoft Managed Desktop Operations-teamet frarådes, når du kommunikerer en ændring i din organisation.
-Skift anmodning | Du kræver, at Microsoft Managed Desktop Operations-teamet foretager en ændring, f.eks. flytning af enheder mellem opdateringsgrupper. Alle ændringsanmodninger behandles som alvorsgrad C.
+Anmodning om oplysninger | Du planlægger en ændring i netværk, proxykonfiguration, VPN-systemer, udløb af certifikat eller har bare brug for nogle oplysninger om tjenesten. Et svar fra Microsoft Managed Desktop Operations-teamet underrettes, når du kommunikerer en ændring i din organisation.
+Skift anmodning | Du kræver, Microsoft Managed Desktop Operations-teamet foretager en ændring, f.eks. flytning af enheder mellem opdateringsgrupper. Alle ændringsanmodninger behandles som alvorsgrad C.
 
 > [!IMPORTANT]
 > Når du opretter en supportanmodning, skal du angive en primær kontakt. Denne person er ansvarlig for at arbejde sammen med vores serviceteknikere for at løse problemet eller besvare eventuelle spørgsmål om en ønsket ændring. Vi kræver også, at du tidligere [har konfigureret](../get-started/add-admin-contacts.md) en administratorkontakt, som kopieres på alle meddelelser om tilfælde for deres relevante fokusområde. Denne person bliver bedt om at overtage en sag, hvis den primære kontakt i en sag ikke er tilgængelig.
@@ -57,7 +57,7 @@ Mail er den anbefalede metode til at interagere med vores team. Du kan se en ove
 **Sådan får du vist alle dine aktive sager:**
 
 1. Log [på Microsoft Endpoint Manager og](https://endpoint.microsoft.com/) gå til **menuen Lejeradministration**.
-2. I sektionen **Microsoft Managed Desktop** skal du vælge **Service request**.
+2. I sektionen **Microsoft Managed Desktop** skal du vælge **Serviceanmodning**.
 3. Fra denne visning kan du eksportere oversigtsvisningen eller vælge en hvilken som helst sag for at få vist detaljerne.
 
 ### <a name="edit-case-details"></a>Rediger sagsoplysninger
@@ -75,18 +75,21 @@ Du kan redigere oplysninger om store og små bogstaver, f.eks. opdatere kontakte
 
 Når en sag er løst, kan den ikke længere redigeres. Hvis en anmodning er blevet løst i mindre end 24 timer, får du vist muligheden for **at genaktivere i** stedet for **Rediger**. Når du har genaktiveret, kan du redigere anmodningen igen.  
 
+> [!NOTE]
+> Alvorsniveauet kan kun angives for visse supportanmodningstyper. Hvis det ikke var muligt at vælge et alvorsniveau, da du oprettede supportanmodningen, kan du ikke redigere din supportanmodning.
+
 ### <a name="provide-feedback"></a>Giv feedback
 
 Vi sætter pris på din feedback og bruger den til at forbedre administratorsupportoplevelsen.
 
-Når du er den primære kontakt på for en supportanmodning, modtager du en mail fra Microsoft Managed Desktop Operations. Mailen spørger om din oplevelse, når problemet er løst. Feedback overvåges aktivt og deles med tekniker for at forbedre tjenesten og prioritere fremtidige funktioner. Sørg for at fokusere på din oplevelse og ikke medtage personlige oplysninger i feedbackformularen. Du kan finde flere oplysninger om beskyttelse af personlige oplysninger i [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
+Når du er den primære kontakt på en supportanmodning, modtager du en mail fra Microsoft Managed Desktop Operations. Mailen spørger om din oplevelse, når problemet er løst. Feedback overvåges aktivt og deles med tekniker for at forbedre tjenesten og prioritere fremtidige funktioner. Sørg for at fokusere på din oplevelse og ikke medtage personlige oplysninger i feedbackformularen. Du kan finde flere oplysninger om beskyttelse af personlige oplysninger i [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
 
 ## <a name="support-request-severity-definitions"></a>Supportanmodningsdefinitioner for alvorsgrad
 
-Den første svartid er den periode, fra hvor du indsender din supportanmodning, indtil en Microsoft Managed Desktop-tekniker kontakter dig, og begynder at arbejde på din supportanmodning. Den oprindelige svartid varierer i forhold til den forretningsmæssige indvirkning af anmodningen. Den er baseret på anmodningens alvorlighed.
+Den første svartid er den periode, fra hvor du indsender din supportanmodning, til Microsoft Managed Desktop din supporttekniker kontakter dig og begynder at arbejde på din supportanmodning. Den oprindelige svartid varierer i forhold til den forretningsmæssige indvirkning af anmodningen. Den er baseret på anmodningens alvorlighed.
 
 > [!NOTE]
-> I denne tabel betyder "administratorsupporttimer", at Microsoft Managed Desktop-support for administratorer er tilgængelig for administratorer 24 timer i døgnet **mandag til fredag**. Alvorsgrad En problem kan arbejdes 24 timer i døgnet alle syv dage i ugen.
+> I denne tabel betyder "administratorsupporttimer", at Microsoft Managed Desktop-support til administratorer er tilgængelig for de fleste lande 24 timer i døgnet **mandag til fredag**. Alvorsgrad En problem kan arbejdes 24 timer i døgnet alle syv dage i ugen.
 
 | Alvorsniveau | Situation | Indledende svartid | Forventet svar fra dig |
 | ----- | ----- |----- | ----- |
@@ -107,6 +110,6 @@ Nedenfor er en liste over ekstra betingelser, du skal være opmærksom på, når
 
 ## <a name="more-resources"></a>Flere ressourcer
 
-- [Brugersupport til Microsoft-administreret skrivebord](end-user-support.md).
+- [Brugersupport til Microsoft Managed Desktop](end-user-support.md).
 - [Support til Microsoft Managed Desktop](../service-description/support.md).
-- Hvis du allerede abonnerer på Microsoft Managed Desktop, kan du finde detaljerede procedurer, procesflows, arbejdsinstruktioner og ofte stillede spørgsmål i Microsoft Managed Desktop-administratorvejledningen. I [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) skal du gå til sektionen Lejeradministration under Microsoft Managed Desktop, vælge Onlineressourcer og derefter vælge Andre ressourcer. Du finder administratorvejledningen her.
+- Hvis du allerede abonnerer på Microsoft Managed Desktop, kan du finde detaljerede procedurer, procesflows, arbejdsinstruktioner og ofte stillede spørgsmål i Microsoft Managed Desktop Administratorvejledning. I [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) skal du gå til sektionen Lejeradministration under Microsoft Managed Desktop vælge Onlineressourcer og derefter vælge Andre ressourcer. Du finder administratorvejledningen her.

@@ -17,12 +17,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 159b4a41d423c2a7af3d367185e29af35a378b6b
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: ed62807c0efc7003bab8fc725c2753c3d91ef1d6
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63597963"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501217"
 ---
 # <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft 365 Defender at streame avancerede rævebegivenheder til din Storage-konto
 
@@ -51,9 +51,9 @@ ms.locfileid: "63597963"
 4. I pop **op-menuen Tilføj nye Streaming API-indstillinger** , der vises, skal du konfigurere følgende indstillinger:
    1. **Navn**: Vælg et navn til de nye indstillinger.
    2. Vælg **Videressendelse af begivenheder for Azure Storage**.
-   3. I feltet **Storage for Ressourcekonto, der** vises, skal du skrive dit **Storage firmaressource-id**. Hvis du vil have **dit** Storage-kontoressource-id, skal du åbne Azure-portalen <https://portal.azure.com>på , klikke på **Storage-konti** \> \> gå til fanen Egenskaber og kopiere teksten under **Storage Kontoressource-id**.
+   3. I feltet **Storage for Ressourcekonto, der** vises, skal du skrive dit **Storage firmaressource-id**. For at få **dit** Storage-kontoressource-id skal du åbne Azure Portal ved at <https://portal.azure.com>klikke på **Storage-konti** \> \> gå til fanen Egenskaber kopiere teksten under **Storage Kontoressource-id**.
 
-      ![Billede af id for hændelseshubressourcen ID1.](../defender-endpoint/images/storage-account-resource-id.png)
+      :::image type="content" source="../defender-endpoint/images/storage-account-resource-id.png" alt-text="Et Storage kontoressource-id" lightbox="../defender-endpoint/images/storage-account-resource-id.png":::
 
    4. Tilbage i pop **op-menuen Tilføj nye Streaming API-indstillinger** skal du vælge **de hændelsestyper** , du vil streame.
 
@@ -63,7 +63,7 @@ ms.locfileid: "63597963"
 
 - Der oprettes en blobbeholder for hver hændelsestype:
 
-  ![Billede af id for hændelseshubressource-id2.](../defender-endpoint/images/storage-account-event-schema.png)
+  :::image type="content" source="../defender-endpoint/images/storage-account-event-schema.png" alt-text="Eksempel på en blobbeholder" lightbox="../defender-endpoint/images/storage-account-event-schema.png":::
 
 - Skemaet for hver række i en blob er følgende JSON:
 
@@ -98,7 +98,7 @@ For at få datatyperne for vores hændelsesegenskaber skal du gøre følgende:
 
 - Her er et eksempel på hændelsen Enhedsoplysninger:
 
-  ![Billede af id for begivenhedshubressource-id3.](../defender-endpoint/images/machine-info-datatype-example.png)
+  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Et eksempel på en enhedsoplysningerforespørgsel" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 

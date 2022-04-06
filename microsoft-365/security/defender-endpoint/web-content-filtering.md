@@ -15,26 +15,26 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 14d45f4ac22a9707b380d817cb89da1bbee562e2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 24cdf18ad510902a533834da2f3595acaa9b33d7
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597543"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595252"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Filtrering af webindhold er en del af [webbeskyttelsesfunktionerne](web-protection-overview.md) i Microsoft Defender til slutpunkt. Det giver din organisation mulighed for at spore og regulere adgangen til websteder baseret på deres indholdskategorier. Mange af disse websteder, selvom de ikke er skadelige, kan være problematiske på grund af overholdelse af regler, båndbreddeforbrug eller andre problemer.
+Filtrering af webindhold er en del af [webbeskyttelsesfunktionerne](web-protection-overview.md) i Microsoft Defender for Endpoint. Det giver din organisation mulighed for at spore og regulere adgangen til websteder baseret på deres indholdskategorier. Mange af disse websteder, selvom de ikke er skadelige, kan være problematiske på grund af overholdelse af regler, båndbreddeforbrug eller andre problemer.
 
 Konfigurer politikker på tværs af dine enhedsgrupper for at blokere bestemte kategorier. Blokering af en kategori forhindrer brugere inden for bestemte enhedsgrupper i at få adgang til URL-adresser, der er knyttet til kategorien. For enhver kategori, der ikke er blokeret, overvåges URL-adresserne automatisk. Brugerne kan få adgang til URL-adresserne uden afbrydelse, og du vil indsamle adgangsstatistik for at hjælpe med at oprette en mere brugerdefineret politikbeslutning. Brugerne får vist en meddelelse om blokering, hvis et element på den side, de får vist, foretager opkald til en blokeret ressource.
 
@@ -44,7 +44,7 @@ Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke, de
 
 - Brugere er forhindret i at få adgang til websteder i blokerede kategorier, uanset om de søger lokalt eller væk.
 
-- Dit sikkerhedsteam kan nemt udrulle politikker til grupper af brugere ved hjælp af enhedsgrupper, der er defineret i rollebaserede adgangskontrolindstillinger [for Microsoft Defender til Slutpunkt](/microsoft-365/security/defender-endpoint/rbac).
+- Sikkerhedsteamet kan nemt implementere politikker for grupper af brugere, der bruger enhedsgrupper, som [er defineret Microsoft Defender for Endpoint rollebaserede indstillinger for adgangskontrol](/microsoft-365/security/defender-endpoint/rbac).
 
 - Dit sikkerhedsteam kan få adgang til webrapporter på samme centrale placering med synlighed over faktiske blokke og webforbrug.
 
@@ -52,17 +52,17 @@ Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke, de
 
 Før du prøver denne funktion, skal du sikre dig, at du opfylder følgende krav:
 
-- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 + Microsoft 365 E5 Sikkerhed  tilføjelsesprogrammet eller den enkeltstående Licens til Microsoft Defender for Endpoint. 
+- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 + Microsoft 365 E5 Sikkerhed tilføjelsesprogrammet eller Microsoft Defender for Endpoint enkeltstående licens. 
 
 - Du har adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 
-- Din organisations enheder kører Windows 10 Jubilæumsopdatering (version 1607) eller nyere, eller Windows 11 med de nyeste [antivirus-/antimalwareopdateringer](manage-updates-baselines-microsoft-defender-antivirus.md).
+- Din organisations enheder kører Windows 10 Jubilæumsopdatering (version 1607) eller nyere, eller Windows 11 med de seneste [opdateringer til antivirus/antimalware](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 - Windows Defender SmartScreen og netværksbeskyttelse er aktiveret på organisationens enheder.
 
 ## <a name="data-handling"></a>Datahåndtering
 
-Data gemmes i det område, der blev valgt som en del af dine [indstillinger for datahåndtering i Microsoft Defender til slutpunkt](data-storage-privacy.md). Dine data forlader ikke datacenteret i det pågældende område. Derudover vil dine data ikke blive delt med tredjeparter, herunder vores dataudbydere.
+Data gemmes i det område, der blev valgt som en del af Microsoft Defender for Endpoint [indstillingerne for datahåndtering](data-storage-privacy.md). Dine data forlader ikke datacenteret i det pågældende område. Derudover vil dine data ikke blive delt med tredjeparter, herunder vores dataudbydere.
 
 ## <a name="turn-on-web-content-filtering"></a>Aktivere filtrering af webindhold
 
@@ -134,7 +134,7 @@ Politikker kan installeres til at blokere en af følgende overordnede eller unde
 
 **Chat**: Websteder, der primært er webbaserede chatrum.
 
-**Spil**: Websteder, der vedrører video- eller computerspil, herunder websteder, der promoverer spil via hosting af onlinetjenester eller oplysninger vedrørende spil.
+**Spil**: Websteder, der vedrører video- eller computerspil, herunder websteder, der promoverer spil via onlinetjenester eller oplysninger om spil.
 
 **Chat:** Websteder, der kan bruges til at downloade chatsoftware eller klientbaseret chat.
 
@@ -203,9 +203,9 @@ Der åbnes et panel, hvor du kan vælge prioriteten og tilføje flere oplysninge
 
 ### <a name="url-category-lookup"></a>Opslag i URL-kategori
 
-For at bestemme kategorien for et websted kan du bruge den URL-søgefunktion, der er tilgængelig på Microsoft 365 Defender-portalen (<https://security.microsoft.com>) under **Slutpunktssøgning**\>. I søgeresultaterne for URL-adressen vises kategorien til filtrering af webindhold under **URL-adresse/domæneoplysninger**. Administratorer kan også bestride kategorien for domænet direkte fra denne side, sådan som det er vist på følgende billede. Hvis kategoriresultatet ikke vises, er URL-adressen i øjeblikket ikke tildelt en eksisterende kategori til filtrering af webindhold.
+For at bestemme kategorien for et websted kan du bruge den URL-søgefunktion, der er tilgængelig på Microsoft 365 Defender-portalen (<https://security.microsoft.com>) under **Slutpunktssøgning**\>. I søgeresultaterne for URL-adressen vises kategorien til filtrering af webindhold under **URL-adresse/domæneoplysninger**. Hvis kategoriresultatet ikke vises, er URL-adressen i øjeblikket ikke tildelt en eksisterende kategori til filtrering af webindhold.
 
-![Billede af opslagsresultater for kategorien filtrering af webindhold.](../../media/web-content-filtering-category-lookup.png)
+<!---:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="The web content filtering category lookup results" lightbox="../../media/web-content-filtering-category-lookup.png":::--->
 
 ## <a name="web-content-filtering-cards-and-details"></a>Webindholdsfiltreringskort og detaljer
 
@@ -217,25 +217,25 @@ Dette kort viser de overordnede kategorier for webindhold med den største stign
 
 I de første 30 dage, efter du har brugt denne funktion, har din organisation muligvis ikke nok data til at vise disse oplysninger.
 
-![Billede af webaktivitet efter kategorikort.](images/web-activity-by-category600.png)
+:::image type="content" source="images/web-activity-by-category600.png" alt-text="Webaktivitet efter kategorikort" lightbox="images/web-activity-by-category600.png":::
 
 ### <a name="web-content-filtering--summary-card"></a>Oversigtskort til filtrering af webindhold
 
 Dette kort viser fordelingen af blokerede adgangsforsøg på tværs af de forskellige overordnede kategorier for webindhold. Vælg en af de farvede søjler for at få vist flere oplysninger om en bestemt overordnet webkategori.
 
-![Billede af oversigtskort til filtrering af webindhold.](images/web-content-filtering-summary.png)
+:::image type="content" source="images/web-content-filtering-summary.png" alt-text="Oversigtskort til filtrering af webindhold" lightbox="images/web-content-filtering-summary.png":::
 
 ### <a name="web-activity-summary-card"></a>Oversigtskort for webaktivitet
 
 Dette kort viser det samlede antal anmodninger om webindhold i alle URL-adresser.
 
-![Billede af oversigtskort for webaktivitet.](images/web-activity-summary.png)
+:::image type="content" source="images/web-activity-summary.png" alt-text="Oversigtskort for webaktivitet" lightbox="images/web-activity-summary.png":::
 
 ### <a name="view-card-details"></a>Vis kortdetaljer
 
 Du kan få adgang **til rapportdetaljerne** for hvert kort ved at vælge en tabelrække eller en farvet søjle fra diagrammet på kortet. Siden med rapportoplysninger for hvert kort indeholder omfattende statistiske data om kategorier af webindhold, webstedsdomæner og enhedsgrupper.
 
-![Billede af detaljer i rapport om webbeskyttelse.](images/web-protection-report-details.png)
+:::image type="content" source="images/web-protection-report-details.png" alt-text="Oplysninger om webbeskyttelsesrapport" lightbox="images/web-protection-report-details.png":::
 
 - **Webkategorier**: Viser de webindholdskategorier, der har haft adgangsforsøg i organisationen. Vælg en bestemt kategori for at åbne en oversigts pop op-out.
 

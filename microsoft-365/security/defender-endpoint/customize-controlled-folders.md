@@ -13,14 +13,14 @@ ms.reviewer: oogunrinde, dbodorin, vladiso, nixanm, anvascon
 manager: dansimp
 ms.technology: mde
 ms.topic: how-to
-ms.collection: m365initiative-m365-defender
+ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: c290ad42702ddcb815880fedfe72d9de73065b8d
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: b9af738d4b1f59705132a84239d06dc762447417
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63592926"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683751"
 ---
 # <a name="customize-controlled-folder-access"></a>Tilpas styret mappeadgang
 

@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 112bfd63a5f3667b22378790b62f3e33fba784d6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 413c4fadcc6de3527643be712713d37a1e2c346c
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592186"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501129"
 ---
 # <a name="example-of-a-phishing-email-attack"></a>Eksempel på et phishingmailangreb
 
@@ -40,25 +40,25 @@ Microsoft 365 Defender kan hjælpe med at registrere skadelige vedhæftede filer
 
 En analytiker fik f.eks. tildelt en hændelse i flere faser.
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-incident.png" alt-text="Eksempel på en hændelse i flere trin."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-incident.png" alt-text="En hændelse i flere trin" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-incident.png":::
 
-På fanen **Beskeder** for hændelsen vises beskeder fra Defender Office 365 og Microsoft Defender til skyapps. Analytikeren kan analysere ned i Defender for Office 365 vigtige beskeder ved at vælge beskeder om mails. Oplysningerne om beskeden vises i sideruden.
+På fanen **Beskeder** for hændelsen vises beskeder Defender for Office 365 og Microsoft Defender for Cloud Apps beskeder. Analytikeren kan analysere ned i Defender for Office 365 ved at vælge beskeder om mails. Oplysningerne om beskeden vises i sideruden.
 
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png" alt-text="Eksempel på en mailbesked.":::
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png" alt-text="En mailbesked" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png":::
  
 Ved at rulle længere ned vises der flere oplysninger, der viser de skadelige filer og brugere, der blev påvirket.
 
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-impact.png" alt-text="Eksempel på bruger- og filpåvirkning af en mailbesked.":::
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-impact.png" alt-text="Bruger og filpåvirkning af en mailbesked" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-impact.png":::
   
 Når du **vælger siden Åbn besked** , kommer du til den bestemte besked, hvor forskellige oplysninger kan vises mere detaljeret ved at vælge linket. Den faktiske mail kan vises ved at vælge **Vis meddelelser i Stifinder** nederst i panelet.
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png" alt-text="Eksempel på oplysninger om en besked."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png" alt-text="Oplysninger om en besked" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png"::: 
 
 Dette fører analytikeren til siden Threat Management, hvor mailen Emne, Modtager, Afsender og andre oplysninger vises. **ZAP** under **Specialhandlinger fortæller** analytikeren, at funktionen automatisk tømning uden time blev implementeret. ZAP registrerer og fjerner automatisk skadelige meddelelser og spammeddelelser fra postkasser i hele organisationen. Du kan finde flere oplysninger [under Automatisk tømning uden time (ZAP) i Exchange Online](../office-365-security/zero-hour-auto-purge.md).
 
 Du kan udføre andre handlinger på bestemte meddelelser ved at vælge **Handlinger**. 
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-actions.png" alt-text="Eksempel på de andre handlinger, der kan udføre på mails."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-actions.png" alt-text="De andre handlinger, der kan udføre på mails" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-actions.png"::: 
 
 ## <a name="next-step"></a>Næste trin
 

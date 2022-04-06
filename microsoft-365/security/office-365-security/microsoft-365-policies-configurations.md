@@ -1,6 +1,6 @@
 ---
-title: Konfigurationer af nultillidsidentitet og enhedsadgang – Microsoft 365 til virksomheder
-description: Beskriver Microsoft-anbefalinger og kernekoncepter til implementering af politikker for sikker mail, dokumenter og apps samt konfigurationer for Zero Trust.
+title: Nul tillid konfigurationer af identitet og enhedsadgang – Microsoft 365 til virksomheder
+description: Beskriver Microsoft-anbefalinger og kernekoncepter til implementering af politikker for sikker mail, dokumenter og apps samt konfigurationer af Nul tillid.
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -20,36 +20,36 @@ ms.collection:
 - m365solution-overview
 - m365solution-zero-trust
 ms.technology: mdo
-ms.openlocfilehash: 7e8fbeab380ceac3531e2a288fb5e8fb5f43e166
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 058eaded0e46a4dfe86bd2cdc5624ea0963f34ea
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682367"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474635"
 ---
-# <a name="zero-trust-identity-and-device-access-configurations"></a>Konfigurationer for nultillidsidentitet og enhedsadgang
+# <a name="zero-trust-identity-and-device-access-configurations"></a>Nul tillid identitet og enhedsadgangskonfigurationer
 
 Sikkerhedsarkitekturer, der er afhængige af netværksfirewalls og virtuelle private netværk til at isolere og begrænse adgangen til en organisations teknologiressourcer og -tjenester, er ikke længere tilstrækkelige til en arbejdsstyrke, der jævnligt kræver adgang til programmer og ressourcer, som ligger ud over de traditionelle virksomhedsnetværksgrænser.
 
-Hvis du vil tage hånd om denne nye verden af databehandling, anbefaler Microsoft på det kraftigste nultillidssikkerhedsmodellen, der er baseret på disse ledende principper:
+For at tage hånd om denne nye verden af databehandling anbefaler Microsoft kraftigt Nul tillid, som er baseret på disse ledende principper:
 
 - Bekræfte udtrykkeligt
 
-  Godkend og godkend altid baseret på alle tilgængelige datapunkter. Det er her, zero trust-identitet og politikker for enhedsadgang er afgørende for logon og løbende validering.
+  Godkend og godkend altid baseret på alle tilgængelige datapunkter. Det er her Nul tillid-identitet og politikker for enhedsadgang er afgørende for logon og løbende validering.
 
 - Brug adgang med mindst rettigheder
 
-  Begræns brugeradgang med Just-In-Time og Just-Enough-Access (JIT/JEA), risikobaserede adaptive politikker og databeskyttelse.  
+  Begræns brugeradgang med Just-In-Time og Just-Enough-Access (JIT/JEA), risikobaserede adaptive politikker og databeskyttelse.
 
 - Antag misligholdelse
 
   Minimer mængden af radius og segmentadgang. Bekræft kryptering fra ende til anden, og brug analyse til at få synlighed, køre trusselsregistrering og forbedre forsvar.
 
-Her er den overordnede arkitektur for Zero Trust.
+Her er den overordnede arkitektur for Nul tillid.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png" alt-text="Arkitekturen Microsoft Zero Trust" lightbox="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png" alt-text="Microsofts Nul tillid arkitektur" lightbox="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png":::
 
-Politikkerne Nultillidshed og enhedsadgang adresserer **Det ledende** princip for Bekræft eksplicit for:
+Nul tillid politikker for identitet og enhedsadgang adresserer **Det Bekræft eksplicit** ledende princip for:
 
 - Identiteter
 
@@ -63,9 +63,9 @@ Politikkerne Nultillidshed og enhedsadgang adresserer **Det ledende** princip fo
 
   Anvend kontrolelementer og teknologier for at opdage skygge-it, sikre relevante apptilladelser, adgangskontrol, der er baseret på analyser i realtid, overvåge for unormal adfærd, kontrollere brugerhandlinger og validere sikre konfigurationsindstillinger.
 
-I denne serie af artikler beskrives et sæt konfigurationer, der er nødvendige for identitet og enhedsadgang, og et sæt betinget adgang (Azure AD) Azure Active Directory, Microsoft Intune og andre politikker for adgang uden tillid til Microsoft 365  til virksomhedsskyapps og -tjenester, andre SaaS-tjenester og programmer i det lokale miljø, der er udgivet med Azure AD-programproxy.
+I denne serie af artikler beskrives et sæt konfigurationer, der er nødvendige for identitet og enhedsadgang, og et sæt betinget adgang (Azure AD) Azure Active Directory(Azure AD), Microsoft Intune og andre politikker for Nul tillid adgang til Microsoft 365  til virksomhedsskyapps og -tjenester, andre SaaS-tjenester og programmer i det lokale miljø, der er udgivet med Azure AD Programproxy.
 
-Indstillinger for nultillids-identitet og enhedsadgang samt politikker anbefales på tre niveauer: startpunkt, virksomhed og særlig sikkerhed for miljøer med stærkt regulerede eller klassificerede data. Disse niveauer og deres tilsvarende konfigurationer giver ensartede niveauer af nultillidsbeskyttelse på tværs af dine data, identiteter og enheder.
+Nul tillid indstillinger for identitet og enhedsadgang samt politikker anbefales på tre niveauer: startpunkt, virksomhed og særlig sikkerhed for miljøer med meget regulerede eller klassificerede data. Disse niveauer og deres tilsvarende konfigurationer giver ensartede niveauer af beskyttelse Nul tillid tværs af dine data, identiteter og enheder.
 
 Disse funktioner og deres anbefalinger:
 
@@ -90,7 +90,7 @@ Disse anbefalinger er beregnet til virksomhedsarkitekter og it-fagfolk, der er f
 
 ### <a name="customer-environment"></a>Kundemiljø
 
-De anbefalede politikker er gældende for virksomhedsorganisationer, der udelukkende arbejder i Microsoft-skyen og for kunder med hybrididentitetsinfrastruktur, som er et lokalt Active Directory-domæneservices (AD DS)-område, der er synkroniseret med en Azure AD-lejer.
+De anbefalede politikker er gældende for virksomhedsorganisationer, der udelukkende kører i Microsoft-skyen, og for kunder med hybrididentitetsinfrastruktur, som er et Active Directory i det lokale miljø Domain Services-område (AD DS), der er synkroniseret med en Azure AD-lejer.
 
 Mange af de medfølgende anbefalinger afhænger af tjenester, der kun er tilgængelige med Microsoft 365 E5, Microsoft 365 E3 med E5 Security-tilføjelsesprogrammet, EMS E5 eller Azure AD Premium P2-licenser.
 
@@ -112,9 +112,9 @@ Hver branche har også sit eget sæt specialiserede bestemmelser. I stedet for a
 - **Virksomhed**: Nogle kunder har et undersæt af data, der skal være beskyttet på højere niveauer, eller de kan kræve, at alle data skal beskyttes på et højere niveau. Du kan anvende øget beskyttelse på alle eller bestemte datasæt i dit Microsoft 365 miljø. Vi anbefaler at beskytte identiteter og enheder, der får adgang til følsomme data med tilsvarende sikkerhedsniveauer.
 - **Særlig sikkerhed**: Nogle få kunder har efter behov en lille mængde data, der er meget klassificeret, udgør forretninghemmeligheder eller er regulerede. Microsoft leverer funktioner, der kan hjælpe disse kunder med at opfylde disse krav, herunder ekstra beskyttelse af identiteter og enheder.
 
-![Sikkerheds kegle – Alle kunder > Nogle kunder > Nogle få kunder](../../media/microsoft-365-policies-configurations/M365-idquality-threetiers.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/M365-idquality-threetiers.png" alt-text="Sikkerhedskeglen" lightbox="../../media/microsoft-365-policies-configurations/M365-idquality-threetiers.png":::
 
-Denne vejledning viser, hvordan du implementerer Zero Trust-beskyttelse for identiteter og enheder for hvert af disse niveauer af beskyttelse. Brug denne vejledning som minimum for din organisation, og juster politikkerne, så de opfylder din organisations specifikke krav.
+Denne vejledning viser, hvordan du Nul tillid beskyttelse af identiteter og enheder for hvert af disse niveauer af beskyttelse. Brug denne vejledning som minimum for din organisation, og juster politikkerne, så de opfylder din organisations specifikke krav.
 
 Det er vigtigt at bruge ensartede niveauer af beskyttelse på tværs af dine identiteter, enheder og data. Beskyttelse af brugere med prioritetskonti, f.eks. ledere,&mdash; ledere og andre, omfatter f.eks. det samme beskyttelsesniveau for&mdash; deres identiteter, deres enheder og de data, de får adgang til. 
 <!--
@@ -131,18 +131,18 @@ Se desuden løsning til implementering af [beskyttelse af oplysninger for regler
 
 Implementering af enhver sikkerhedsstrategi kræver afrivning mellem sikkerhed og produktivitet. Det er nyttigt at evaluere, hvordan hver beslutning påvirker balancen i sikkerhed, funktionalitet og brugervenlighed.
 
-![Sikkerheds- og balancering af sikkerhed, funktionalitet og brugervenlighed.](../../media/microsoft-365-policies-configurations/security-triad.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/security-triad.png" alt-text="Sikkerheds- og justeringsjustering af sikkerhed, funktionalitet og brugervenlighed" lightbox="../../media/microsoft-365-policies-configurations/security-triad.png":::
 
 De angivne anbefalinger er baseret på følgende principper:
 
 - Kende dine brugere og være fleksible i forhold til deres sikkerheds- og funktionskrav.
 - Anvend en sikkerhedspolitik lige i tide, og sørg for, at den giver mening.
 
-## <a name="services-and-concepts-for-zero-trust-identity-and-device-access-protection"></a>Tjenester og koncepter for nultillidsidentitet og beskyttelse af enhedsadgang
+## <a name="services-and-concepts-for-zero-trust-identity-and-device-access-protection"></a>Tjenester og koncepter inden for beskyttelse Nul tillid identitet og enhedsadgang
 
 Microsoft 365 til virksomheder er udviklet til store organisationer for at give alle mulighed for at være kreative og samarbejde sikkert.
 
-Dette afsnit indeholder en oversigt over de Microsoft 365 og egenskaber, der er vigtige for nultillids-identitet og enhedsadgang.
+Dette afsnit indeholder en oversigt over de Microsoft 365 og egenskaber, der er vigtige for Nul tillid identitet og enhedsadgang.
 
 ### <a name="azure-ad"></a>Azure AD
 
@@ -152,23 +152,23 @@ Azure AD indeholder en komplet pakke med funktioner til identitetsadministration
 |---|---|---|
 |[MFA (Multi-Factor Authentication)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA kræver, at brugerne angiver to former for bekræftelse, f.eks. en brugeradgangskode plus en meddelelse fra Microsoft Authenticator-appen eller et telefonopkald. MFA reducerer kraftigt risikoen for, at stjålet legitimationsoplysninger kan bruges til at få adgang til dit miljø. Microsoft 365 bruger Azure AD Multi-Factor Authentication-tjenesten til MFA-baserede logons.|Microsoft 365 E3 eller E5|
 |[Betinget adgang](/azure/active-directory/conditional-access/overview)|Azure AD evaluerer betingelserne for brugerens logon og bruger politikker for betinget adgang til at bestemme den tilladte adgang. I denne vejledning viser vi dig f.eks., hvordan du opretter en Betinget adgang-politik for at kræve enhedsoverholdelse for at få adgang til følsomme data. Dette reducerer risikoen for, at en hacker med sin egen enhed og stjålne legitimationsoplysninger kan få adgang til dine følsomme data. Den beskytter også følsomme data på enhederne, fordi enhederne skal opfylde specifikke krav til tilstand og sikkerhed.|Microsoft 365 E3 eller E5|
-|[Azure AD-grupper](/azure/active-directory/fundamentals/active-directory-manage-groups)|Politikker for betinget adgang, enhedshåndtering med Intune og endda tilladelser til filer og websteder i organisationen afhænger af tildeling til brugerkonti eller Azure AD-grupper. Vi anbefaler, at du opretter Azure AD-grupper, der svarer til de niveauer af beskyttelse, du implementerer. Eksempelvis er dine ledere sandsynligvis bedre mål for hackere. Derfor giver det mening at føje brugerkontiene for disse medarbejdere til en Azure AD-gruppe og tildele denne gruppe til politikker for betinget adgang og andre politikker, der gennemtvinger et højere niveau af beskyttelse af adgang.|Microsoft 365 E3 eller E5|
-|[Tilmelding af enhed](/azure/active-directory/devices/overview)|Du tilmelder en enhed til Azure AD for at oprette en identitet for enheden. Denne identitet bruges til at godkende enheden, når en bruger logger på, og til at anvende politikker for betinget adgang, der kræver domænefortegnende eller kompatible pc'er. Til denne vejledning bruger vi enhedsregistrering til automatisk at tilmelde domænet sammen med Windows computere. Tilmelding af enheder er en forudsætning for administration af enheder med Intune.|Microsoft 365 E3 eller E5|
+|[Azure AD-grupper](/azure/active-directory/fundamentals/active-directory-manage-groups)|Betingede Access-politikker, enhedshåndtering med Intune og endda tilladelser til filer og websteder i organisationen afhænger af tildelingen til brugerkonti eller Azure AD-grupper. Vi anbefaler, at du opretter Azure AD-grupper, der svarer til de niveauer af beskyttelse, du implementerer. Eksempelvis er dine ledere sandsynligvis bedre mål for hackere. Derfor giver det mening at føje brugerkontiene for disse medarbejdere til en Azure AD-gruppe og tildele denne gruppe til politikker for betinget adgang og andre politikker, der gennemtvinger et højere niveau af beskyttelse af adgang.|Microsoft 365 E3 eller E5|
+|[Tilmelding af enhed](/azure/active-directory/devices/overview)|Du tilmelder en enhed til Azure AD for at oprette en identitet for enheden. Denne identitet bruges til at godkende enheden, når en bruger logger på, og til at anvende politikker for betinget adgang, der kræver domænefortegnende eller kompatible pc'er. Til denne vejledning bruger vi enhedsregistrering til automatisk at tilmelde domænet sammen med Windows computere. Enhedsregistrering er en forudsætning for administration af enheder med Intune.|Microsoft 365 E3 eller E5|
 |[Azure AD Identity Protection](/azure/active-directory/identity-protection/overview)|Gør det muligt at registrere potentielle sårbarheder, der påvirker organisationens identiteter, og konfigurere automatiseret afhjælpningspolitik til lav, mellem og høj logon-risiko og brugerrisici. Denne vejledning afhænger af denne risikoevaluering for at anvende betingede Access-politikker til multifaktorgodkendelse. Denne vejledning indeholder også en politik for betinget adgang, der kræver, at brugerne ændrer deres adgangskode, hvis der registreres aktivitet med høj risiko for deres konto.|Microsoft 365 E5, Microsoft 365 E3 med E5 Security-tilføjelsesprogrammet, EMS E5 eller Azure AD Premium P2-licenser|
 |[Selvbetjeningstjenesten til nulstilling af adgangskode (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Giv dine brugere mulighed for at nulstille deres adgangskoder sikkert og uden helpdesk-handling ved at levere bekræftelse af flere godkendelsesmetoder, som administratoren kan styre.|Microsoft 365 E3 eller E5|
 |[Azure AD-adgangskodebeskyttelse](/azure/active-directory/authentication/concept-password-ban-bad)|Find og bloker kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Standard globale lister over forbudte adgangskoder anvendes automatisk for alle brugere i en Azure AD-lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugere ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at håndhæve brugen af stærke adgangskoder.|Microsoft 365 E3 eller E5|
 
-Her er komponenterne for Zero Trust-identitet og enhedsadgang, herunder Intune- og Azure AD-objekter, indstillinger og undertjenester.
+Her er komponenterne for Nul tillid og enhedsadgang, herunder Intune og Azure AD-objekter, indstillinger og undertjenester.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="Komponenter af nultillidsidentitet og enhedsadgang." lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-components.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="Komponenterne i Nul tillid og enhedsadgang" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-components.png":::
 
 ### <a name="microsoft-intune"></a>Microsoft Intune
 
-[Intune](/intune/introduction-intune) er Microsofts skybaserede administrationstjeneste til mobilenheder. Denne vejledning anbefaler enhedshåndtering af Windows pc'er med Intune og anbefaler konfigurationer af politikker for enhedsoverholdelse. Intune afgør, om enhederne er kompatible og sender disse data til Azure AD til brug, når du anvender politikker for betinget adgang.
+[Intune](/intune/introduction-intune) er Microsofts skybaserede administrationstjeneste til mobilenheder. Denne vejledning anbefaler enhedshåndtering af Windows pc'er med Intune og anbefaler konfigurationer af politikker for enhedsoverholdelse. Intune afgør, om enhederne er kompatible og sender disse data til Azure AD til brug, når du anvender politikker for Betinget adgang.
 
-#### <a name="intune-app-protection"></a>Intune-appbeskyttelse
+#### <a name="intune-app-protection"></a>Intune appbeskyttelse
 
-[Intune-politikker](/intune/app-protection-policy) for appbeskyttelse kan bruges til at beskytte din organisations data i mobilapps med eller uden at tilmelde enheder til administration. Intune hjælper med at beskytte oplysninger, sikre, at dine medarbejdere stadig kan være produktive, og forhindrer tab af data. Ved at implementere politikker på appniveau kan du begrænse adgangen til virksomhedens ressourcer og holde data inden for it-afdelingens kontrol.
+[Intune politikker](/intune/app-protection-policy) for beskyttelse af apps kan bruges til at beskytte din organisations data i mobilapps med eller uden at tilmelde enheder til administration. Intune med at beskytte oplysninger, sikre, at dine medarbejdere stadig kan være produktive, og forhindre datatab. Ved at implementere politikker på appniveau kan du begrænse adgangen til virksomhedens ressourcer og holde data inden for it-afdelingens kontrol.
 
 Denne vejledning viser, hvordan du opretter anbefalede politikker til at håndhæve brugen af godkendte apps og til at bestemme, hvordan disse apps kan bruges sammen med dine virksomhedsdata.
 
@@ -186,7 +186,7 @@ Denne vejledning viser, hvordan du implementerer et sæt politikker for at besky
 
 ### <a name="windows-11-or-windows-10-with-microsoft-365-apps-for-enterprise"></a>Windows 11 eller Windows 10 med Microsoft 365 Apps for enterprise
 
-Windows 11 eller Windows 10 med Microsoft 365 Apps for enterprise er det anbefalede klientmiljø til pc'er. Vi anbefaler Windows 11 eller Windows 10, da Azure er designet til at give den bedst mulige oplevelse for både det lokale miljø og Azure AD. Windows 11 eller Windows 10 indeholder også avancerede sikkerhedsfunktioner, der kan administreres via Intune. Microsoft 365 Apps for enterprise indeholder de nyeste versioner af Office programmer. Disse bruger moderne godkendelse, hvilket er mere sikkert og et krav til Betinget adgang. Disse apps indeholder også udvidede værktøjer til overholdelse af regler og standarder og sikkerhed.
+Windows 11 eller Windows 10 med Microsoft 365 Apps for enterprise er det anbefalede klientmiljø til pc'er. Vi anbefaler Windows 11 eller Windows 10, fordi Azure er designet til at give den bedst mulige oplevelse for både det lokale miljø og Azure AD. Windows 11 eller Windows 10 indeholder også avancerede sikkerhedsfunktioner, der kan administreres via Intune. Microsoft 365 Apps for enterprise indeholder de nyeste versioner af Office programmer. Disse bruger moderne godkendelse, hvilket er mere sikkert og et krav til Betinget adgang. Disse apps indeholder også udvidede værktøjer til overholdelse af regler og standarder og sikkerhed.
 
 ## <a name="applying-these-capabilities-across-the-three-tiers-of-protection"></a>Anvendelse af disse funktioner på tværs af de tre niveauer af beskyttelse
 
@@ -196,18 +196,18 @@ Den følgende tabel opsummerer vores anbefalinger til brug af disse funktioner p
 |---|---|---|---|
 |**Gennemtving MFA**|På mellemstor eller over login-risiko|Ved lav eller over logonrisici|På alle nye sessioner|
 |**Gennemtving ændring af adgangskode**|For brugere med høj risiko|For brugere med høj risiko|For brugere med høj risiko|
-|**Gennemtving Intune-programbeskyttelse**|Ja|Ja|Ja|
-|**Gennemtving Intune-registrering for organisationejede enheder**|Kræve en kompatibel eller domæne-forbundet pc, men tillade BYOD-telefoner og -tablets (bring-your-own devices)|Kræve en kompatibel eller domæneforenet enhed|Kræve en kompatibel eller domæneforenet enhed|
+|**Gennemtving Intune programbeskyttelse**|Ja|Ja|Ja|
+|**Gennemtving Intune registrering for organisationejet enhed**|Kræve en kompatibel eller domæne-forbundet pc, men tillade BYOD-telefoner og -tablets (bring-your-own devices)|Kræve en kompatibel eller domæneforenet enhed|Kræve en kompatibel eller domæneforenet enhed|
 
 ## <a name="device-ownership"></a>Ejerskab af enhed
 
-Ovenstående tabel afspejler tendensen for mange organisationer til at understøtte en blanding af enheder, der ejes af organisationen, samt personlige eller BYOD'er for at aktivere mobilproduktivitet på tværs af medarbejderne. Intune-politikker for appbeskyttelse sikrer, at mail er beskyttet mod at blive eksfiltreret fra Outlook-mobilappen og andre Office-mobilapps – både på organisationsejede enheder og BYOD'er.
+Ovenstående tabel afspejler tendensen for mange organisationer til at understøtte en blanding af enheder, der ejes af organisationen, samt personlige eller BYOD'er for at aktivere mobilproduktivitet på tværs af medarbejderne. Intune politikker for beskyttelse af apps sikrer, at mail er beskyttet mod at blive eksfiltreret fra Outlook-mobilappen og andre Office-mobilapps – både på enheder, der ejes af organisationen, og BYOD'er.
 
-Vi anbefaler, at enheder, der ejes af organisationen, administreres af Intune eller er domænet sammenføjet for at anvende yderligere beskyttelse og kontrol. Afhængigt af datafølsomhed kan din organisation vælge ikke at tillade BYOD'er for bestemte brugergrupper eller bestemte apps.
+Vi anbefaler, at enheder, der ejes af organisationen, administreres Intune domænet for at anvende yderligere beskyttelse og kontrol. Afhængigt af datafølsomhed kan din organisation vælge ikke at tillade BYOD'er for bestemte brugergrupper eller bestemte apps.
 
 ## <a name="deployment-and-your-apps"></a>Installation og dine apps
 
-Før du konfigurerer og udruller konfigurationen af Zero Trust-identitet og enhedsadgang til dine Azure AD-integrerede apps, skal du:
+Før du konfigurerer og udruller Nul tillid og enhedsadgangskonfiguration til dine integrerede Azure AD-apps, skal du:
 
 - Beslut, hvilke apps der bruges i din organisation, du vil beskytte.
 - Analysér denne liste over apps for at bestemme de sæt af politikker, der giver passende beskyttelsesniveauer.
@@ -222,19 +222,19 @@ Du kan f.eks. konfigurere de politikker, der skal bruges til alle dine Microsoft
 
 På samme måde kan du for dine følsomme apps oprette sættet af politikker og tilføje én app ad gangen og løse eventuelle problemer, indtil de alle er inkluderet i politiksættet for følsomme apps.
 
-Microsoft anbefaler, at du ikke opretter politiksæt, der gælder for alle apps, fordi det kan medføre utilsigtede konfigurationer. Politikker, der blokerer alle apps, kan f.eks. låse dine administratorer ude af Azure-portalen, og udeladelse kan ikke konfigureres til vigtige slutpunkter som f.eks. Microsoft Graph.
+Microsoft anbefaler, at du ikke opretter politiksæt, der gælder for alle apps, fordi det kan medføre utilsigtede konfigurationer. Politikker, der blokerer alle apps, kan f.eks. låse dine administratorer ude af Azure Portal og udeladelse kan ikke konfigureres til vigtige slutpunkter som f.eks. Microsoft Graph.
 
-## <a name="steps-to-configure-zero-trust-identity-and-device-access"></a>Trin til konfiguration af nultillidsidentitet og enhedsadgang
+## <a name="steps-to-configure-zero-trust-identity-and-device-access"></a>Trin til konfiguration Nul tillid identitet og enhedsadgang
 
-![Trin til at konfigurere nultillidsidentitet og enhedsadgang.](../../media/microsoft-365-policies-configurations/identity-device-access-steps.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png" alt-text="Trinene til konfiguration af Nul tillid og enhedsadgang" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png":::
 
 1. Konfigurere nødvendige identitetsfunktioner og deres indstillinger.
 2. Konfigurer de fælles identitets- og adgangspolitikker for Betinget adgang.
 3. Konfigurer Betingede adgangspolitikker for gæster og eksterne brugere.
-4. Konfigurer betingede Access-politikker for Microsoft 365 apps&mdash;, f.eks. Microsoft Teams, Exchange og SharePoint&mdash; og politikker for Microsoft Defender til skyapps.
+4. Konfigurer betingede Access-politikker for Microsoft 365 apps&mdash;, f.eks. Microsoft Teams, Exchange og SharePoint&mdash; og Microsoft Defender for Cloud Apps politikker.
 
-Når du har konfigureret nultillidsidentitet og enhedsadgang, skal du se [Installationsvejledningen til Azure AD-funktioner](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2) for at få en trinvis tjekliste over yderligere funktioner, du skal overveje, og [Azure AD-identitetsstyring](/azure/active-directory/governance/) for at beskytte, overvåge og overvåge adgang.
+Når du har konfigureret Nul tillid-identitet og enhedsadgang, skal du se [Installationsvejledningen til Azure AD-funktioner](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2) for at få en trinvis tjekliste over yderligere funktioner, du skal overveje, og [Azure AD-identitetsstyring](/azure/active-directory/governance/) for at beskytte, overvåge og overvåge adgang.
 
 ## <a name="next-step"></a>Næste trin
 
-[Påkrævet arbejde til implementering af nultillidsidentitet og politikker for enhedsadgang](identity-access-prerequisites.md)
+[Påkrævet arbejde til implementering Nul tillid politikker for identitet og enhedsadgang](identity-access-prerequisites.md)

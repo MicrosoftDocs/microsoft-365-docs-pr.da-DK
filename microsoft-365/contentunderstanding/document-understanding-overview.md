@@ -14,12 +14,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om dokumentforståelse i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 4c4910ac2cec9688af60c6999e67e1be41701ef3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c7488fcb44116f030d538b416af1f04b33382519
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590095"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507317"
 ---
 # <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Oversigt over dokumentforståelse i Microsoft SharePoint Syntex
 
@@ -112,7 +112,8 @@ Dokumentforståelsesmodeller understøtter følgende filtyper:
 
 ### <a name="supported-languages"></a>Understøttede sprog
 
-Dokumentforståelse af modeller understøtter følgende sprog:
+Dokumentforståelsesmodeller understøtter alle de latinske sprog, herunder:
+
 - English
 - French
 - German

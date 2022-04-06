@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: e0a8293709da44dc3a46cf565ad099666e8dae24
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: 1ba846402bb2ee447ee5f38ff035c119bdc28fc1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63595885"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467681"
 ---
 # <a name="use-limited-periodic-scanning-in-microsoft-defender-antivirus"></a>Brug begrænset periodisk scanner i Microsoft Defender Antivirus
 
@@ -29,10 +29,10 @@ ms.locfileid: "63595885"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Begrænset periodisk scanning er en særlig type trusselsregistrering og afhjælpning, der kan aktiveres, når du har installeret et andet antivirusprodukt på en Windows 10 eller Windows 11-enhed.
+Begrænset periodisk scanning er en særlig type trusselsregistrering og afhjælpning, der kan aktiveres, når du har installeret et andet antivirusprodukt på en Windows 10 eller Windows 11 enhed.
 
 Den kan kun aktiveres i visse situationer. Du kan finde flere oplysninger om begrænset periodisk scanning, Microsoft Defender Antivirus fungerer med andre antivirusprodukter, [under Microsoft Defender Antivirus kompatibilitet](microsoft-defender-antivirus-compatibility.md).
 
@@ -44,7 +44,7 @@ Som standard aktiverer Microsoft Defender Antivirus sig selv på en Windows 10- 
 
 Hvis Microsoft Defender Antivirus er aktiveret, vises de sædvanlige indstillinger for at konfigurere den på den pågældende enhed:
 
-![Windows Sikkerhed, der viser Microsoft Defender AV-indstillinger, herunder scanningsindstillinger, indstillinger og opdateringsindstillinger.](images/vtp-wdav.png)
+:::image type="content" source="images/vtp-wdav.png" alt-text="Appen Windows Sikkerhed, der viser microsoft Defender AV-indstillinger, herunder indstillinger for scanning, indstillinger og opdateringsindstillinger" lightbox="images/vtp-wdav.png":::
 
 Hvis et andet antivirusprodukt er installeret og fungerer korrekt, Microsoft Defender Antivirus deaktiveres automatisk. Appen Windows Sikkerhed ændrer sektionen **virus- &-trusselsbeskyttelse** for at vise status for AV-produktet og give et link til produktets konfigurationsindstillinger.
 

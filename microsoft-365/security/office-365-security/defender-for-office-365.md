@@ -20,12 +20,12 @@ ms.custom:
 description: Microsoft Defender til Office 365 indeholder Pengeskab vedhæftede filer, Pengeskab links, avancerede antiphishing-værktøjer, rapporteringsværktøjer og funktioner til trusselsintelligens.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f78194541db8221aad1243966ddee6b6dc071d7d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b8041962ca1a696146f9a5828c66b1a6800c4b01
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591315"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683729"
 ---
 # <a name="microsoft-defender-for-office-365"></a>Microsoft Defender til Office 365
 
@@ -77,12 +77,9 @@ Klik på dette link for at [lære ved at gøre dette](protect-against-threats.md
 
 Følgende tabel opsummerer, hvad hver plan indeholder.
 
-****
-
 |Defender til Office 365 Plan 1|Defender til Office 365 Plan 2|
 |---|---|
 |Konfigurations-, beskyttelses- og registreringsfunktioner: <ul><li>[Pengeskab vedhæftede filer](safe-attachments.md)</li><li>[Sikre links](safe-links.md)</li><li>[Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Beskyttelse mod phishing i Defender til Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Registreringer i realtid](threat-explorer.md)</li></ul>|Defender for Office 365 Plan 1-funktioner <p> --- plus --- <p> Automatisering, undersøgelse, afhjælpning og uddannelsesfunktioner: <ul><li>[Threat Trackers](threat-trackers.md)</li><li>[Threat Explorer](threat-explorer.md)</li><li>[Automatiseret undersøgelse og svar](office-365-air.md)</li><li>[Kursus i angrebssimulering](attack-simulation-training.md)</li><li>[Proaktivt på jagt efter trusler med avanceret jagt på Microsoft 365 Defender](../defender/advanced-hunting-overview.md)</li><li>[Undersøg hændelser i Microsoft 365 Defender](../defender/investigate-incidents.md)</li><li>[Undersøg beskeder i Microsoft 365 Defender](../defender/investigate-alerts.md)</li></ul>|
-
 
 - Microsoft Defender til Office 365 Plan 2 er inkluderet i Office 365 E5, Office 365 A5 og Microsoft 365 E5.
 
@@ -144,10 +141,6 @@ Microsoft Defender til Office 365 Plan 2 indeholder førsteklasses trusselsunder
 ## <a name="permissions-required-to-use-microsoft-defender-for-office-365-features"></a>Tilladelser, der kræves for at bruge Microsoft Defender til Office 365 funktioner
 
 Hvis du vil have adgang til Microsoft Defender Office 365 funktioner, skal du have tildelt en passende rolle. Følgende tabel indeholder nogle eksempler:
-
-<br>
-
-****
 
 |Rolle eller rollegruppe|Ressourcer til at få mere at vide|
 |---|---|
