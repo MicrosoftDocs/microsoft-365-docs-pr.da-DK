@@ -19,12 +19,12 @@ ms.custom: ''
 description: Lær den rigtige måde at overføre fra tredjeparts beskyttelsestjenester eller enheder som Google Postini, Barracuda Spam og Virus Firewall eller Cisco IronPort til Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: af24829f8d3e4186de6e1c537d545515667627b8
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c80d9e6005b5f9f329164dbc4ba0ebfed6a05a1b
+ms.sourcegitcommit: e09ced3e3628bf2ccb84d205d9699483cbb4b3b0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682345"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "63606762"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Overfør fra en tredjepartsbeskyttelsestjeneste eller -enhed til Microsoft Defender for Office 365
 
@@ -76,11 +76,16 @@ Processen med at overføre fra en tredjepartsbeskyttelsestjeneste til Defender f
 
 ![Processen for overførsel til Defender for Office 365.](../../media/phase-diagrams/migration-phases.png)
 
+<p>
+
+****
+
 |Fase|Beskrivelse|
 |---|---|
 |[Forberede din overførsel](migrate-to-defender-for-office-365-prepare.md)|<ol><li>[Opliste indstillingerne på din eksisterende beskyttelsestjeneste](migrate-to-defender-for-office-365-prepare.md#inventory-the-settings-at-your-existing-protection-service)</li><li>[Kontrollér din eksisterende beskyttelseskonfiguration i Microsoft 365](migrate-to-defender-for-office-365-prepare.md#check-your-existing-protection-configuration-in-microsoft-365)</li><li>[Kontrollér din mailroutingkonfiguration](migrate-to-defender-for-office-365-prepare.md#check-your-mail-routing-configuration)</li><li>[Flyt funktioner, der redigerer meddelelser, Microsoft 365](migrate-to-defender-for-office-365-prepare.md#move-features-that-modify-messages-into-microsoft-365)</li><li>[Definere spam og massebrugeroplevelser](migrate-to-defender-for-office-365-prepare.md#define-spam-and-bulk-user-experiences)</li><li>[Identificer og angiv prioritetskonti](migrate-to-defender-for-office-365-prepare.md#identify-and-designate-priority-accounts)</li></ol>|
 |[Konfigurer Defender til Office 365](migrate-to-defender-for-office-365-setup.md)|<ol><li>[Opret distributionsgrupper for pilotbrugere](migrate-to-defender-for-office-365-setup.md#step-1-create-distribution-groups-for-pilot-users)</li><li>[Konfigurere brugerindsendelse til rapportering af brugermeddelelse](migrate-to-defender-for-office-365-setup.md#step-2-configure-user-submission-for-user-message-reporting)</li><li>[Vedligeholde eller oprette reglen for mailflow i SCL=-1](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule)</li><li>[Konfigurere udvidet filtrering for forbindelser](migrate-to-defender-for-office-365-setup.md#step-4-configure-enhanced-filtering-for-connectors)</li><li>[Opret pilotbeskyttelsespolitikker](migrate-to-defender-for-office-365-setup.md#step-5-create-pilot-protection-policies)</li></ol>|
 |[Onboard to Defender for Office 365](migrate-to-defender-for-office-365-onboard.md)|<ol><li>[Begynd onboardingsikkerhedsopdateringer Teams](migrate-to-defender-for-office-365-onboard.md#step-1-begin-onboarding-security-teams)</li><li>[(Valgfrit) Undtage pilotbrugere fra filtrering af din eksisterende beskyttelsestjeneste](migrate-to-defender-for-office-365-onboard.md#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)</li><li>[Finjuster efterlignet intelligens](migrate-to-defender-for-office-365-onboard.md#step-3-tune-spoof-intelligence)</li><li>[Finjustere repræsentationsbeskyttelse og postkasseintelligens](migrate-to-defender-for-office-365-onboard.md#step-4-tune-impersonation-protection-and-mailbox-intelligence)</li><li>[Brug data fra brugerindsendelser til at måle og justere](migrate-to-defender-for-office-365-onboard.md#step-5-use-data-from-user-submissions-to-measure-and-adjust)</li><li>[(Valgfrit) Føj flere brugere til dit pilotprojekt og din testning](migrate-to-defender-for-office-365-onboard.md#step-6-optional-add-more-users-to-your-pilot-and-iterate)</li><li>[Udvide Microsoft 365 beskyttelse af mail til alle brugere og deaktivere reglen for mailflow i SCL=-1](migrate-to-defender-for-office-365-onboard.md#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)</li><li>[Skifte dine MX-poster](migrate-to-defender-for-office-365-onboard.md#step-8-switch-your-mx-records)</li></ol>|
+|
 
 ## <a name="next-step"></a>Næste trin
 

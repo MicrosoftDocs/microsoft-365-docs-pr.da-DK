@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: c2ebb60d3cd5514d003991d26c5070b05e89fb37
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 69c211e02b5bea12431e17bf2256405f96977b53
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63592364"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467395"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Administrere kilderne til Microsoft Defender Antivirus opdateringer til beskyttelse
 
@@ -28,8 +28,8 @@ ms.locfileid: "63592364"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 <a id="protection-updates"></a>
 <!-- this has been used as anchor in VDI content -->
@@ -65,7 +65,7 @@ Der er fem steder, hvor du kan angive, hvor et slutpunkt skal hente opdateringer
 - [Netværksfildeling](#unc-share)
 - [Sikkerhedsintelligensopdateringer til Microsoft Defender Antivirus og anden Microsoft-antimalware](https://www.microsoft.com/wdsi/defenderupdates) <sup>[[2](#fn1)]<sup></sup>
 
-(<a id="fn1">1</a>) Intune Internal Definition Update Server – Hvis du bruger SCCM/SUP til at få definitionsopdateringer til Microsoft Defender Antivirus og har brug for at få adgang til Windows Update på blokerede klientenheder, kan du overgå til samtidig administration og aflaste arbejdsmængden for slutpunktsbeskyttelse til Intune. I den antimalwarepolitik, der er konfigureret i Intune, er der en indstilling for "intern opdateringsserver til definition", som kan konfigureres til at bruge WSUS i det lokale miljø som opdateringskilde. Dette hjælper dig med at kontrollere, hvilke opdateringer fra den officielle WU-server, der er godkendt til virksomheden, og hjælper også proxy og gemmer netværkstrafik på det officielle Windows UPdates-netværk.
+(<a id="fn1">1</a>) Intune Intern definition af opdateringsserver – Hvis du bruger SCCM/SUP til at få definitionsopdateringer til Microsoft Defender Antivirus og har brug for at få adgang til Windows Update på blokerede klientenheder, kan du overgå til samtidig administration og fjerne arbejdsbelastningen for slutpunktsbeskyttelse til Intune. I antimalwarepolitikken, der er konfigureret i Intune er der en indstilling for "intern opdateringsserver til definition", som kan konfigureres til at bruge lokale WSUS som opdateringskilde. Dette hjælper dig med at kontrollere, hvilke opdateringer fra den officielle WU-server, der er godkendt til virksomheden, og hjælper også proxy og gemmer netværkstrafik på det officielle Windows UPdates-netværk.
 
 (<a id="fn1">2</a>) Din politik og registreringsdatabasen kan have denne angivet som den Microsoft Malware Protection Center (MMPC) sikkerhedsintelligens, dens tidligere navn.
 
@@ -88,7 +88,7 @@ Hver kilde har typiske scenarier, der afhænger af, hvordan dit netværk er konf
 |Microsoft Endpoint Manager|Du bruger Microsoft Endpoint Manager til at opdatere dine slutpunkter.|
 |Sikkerheds intelligenceopdateringer til Microsoft Defender Antivirus og anden Microsoft-antimalware (tidligere kaldet MMPC)|[Sørg for, at dine enheder er opdateret til at understøtte SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus sikkerhedsintelligensopdateringer leveres via Windows Update, og fra og med mandag d. 21. oktober 2019 signeres sikkerhedsintelligensopdateringer udelukkende af SHA-2. <br/>Download de nyeste opdateringer til beskyttelse på grund af en nylig har været indfarvet eller for at klargøre et stærkt, grundlæggende billede til [VDI-installation](deployment-vdi-microsoft-defender-antivirus.md). Denne indstilling bør generelt kun bruges som en endelig reservekilde og ikke som den primære kilde. Den bruges kun, hvis opdateringer ikke kan downloades fra Windows serveropdateringstjenesten eller Microsoft Update [i et angivet antal dage](/windows/threat-protection/microsoft-defender-antivirus/manage-outdated-endpoints-microsoft-defender-antivirus#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
-Du kan administrere rækkefølgen, hvori opdateringskilder bruges med Gruppepolitik, Microsoft Endpoint Configuration Manager, PowerShell-cmdlet'er og WMI.
+Du kan administrere den rækkefølge, som opdateringskilder bruges i med Gruppepolitik, Microsoft Endpoint Configuration Manager, PowerShell-cmdlet'er og WMI.
 
 > [!IMPORTANT]
 > Hvis du angiver Windows serveropdateringstjeneste som en downloadplacering, skal du godkende opdateringerne, uanset hvilket administrationsværktøj du bruger til at angive placeringen. Du kan konfigurere en regel for automatisk godkendelse med Windows serveropdateringstjeneste, hvilket kan være nyttigt, når opdateringer ankommer mindst en gang om dagen. Du kan få mere at [vide under Synkronisere opdateringer til slutpunktsbeskyttelse i den enkeltstående Windows Serveropdateringstjeneste](/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
@@ -109,7 +109,7 @@ Fremgangsmåderne i denne artikel beskriver først, hvordan du angiver rækkefø
 
    2. Angiv rækkefølgen af kilder, adskilt af et enkelt rør, f.eks.: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, som vist på følgende skærmbillede.
 
-      :::image type="content" source="../../media/wdav-order-update-sources.png" alt-text="Indstilling for gruppepolitik med en liste over kilders rækkefølge.":::
+      :::image type="content" source="../../media/wdav-order-update-sources.png" alt-text="Gruppepolitikindstilling med en liste over kilders rækkefølge" lightbox="../../media/wdav-order-update-sources.png":::
 
    3. Vælg **OK**. Dette indstiller rækkefølgen af opdateringskilder til beskyttelse.
 
@@ -122,7 +122,7 @@ Fremgangsmåderne i denne artikel beskriver først, hvordan du angiver rækkefø
 > [!NOTE]
 > For Windows 10, version 1703 op til og med 1809, er politikstien **Windows Komponenter > Microsoft Defender Antivirus > Signaturopdateringer** til Windows 10, version 1903, politikstien er **Windows Components > Microsoft Defender Antivirus > Security Intelligence-opdateringer**
 
-## <a name="use-configuration-manager-to-manage-the-update-location"></a>Brug Konfigurationsstyring til at administrere opdateringsplaceringen
+## <a name="use-configuration-manager-to-manage-the-update-location"></a>Brug Configuration Manager til at administrere opdateringsplaceringen
 
 Se [Konfigurer sikkerhedsintelligensopdateringer til Endpoint Protection](/configmgr/protect/deploy-use/endpoint-definition-updates) for at få mere at vide om konfiguration Microsoft Endpoint Manager (aktuel forgrening).
 
@@ -155,7 +155,7 @@ Se følgende artikler for at få flere oplysninger:
 
 - [Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="use-mobile-device-management-mdm-to-manage-the-update-location"></a>Brug af administration af mobilenheder (MDM) til at administrere opdateringsplaceringen
+## <a name="use-mobile-device-management-mdm-to-manage-the-update-location"></a>Brug mobile Enhedshåndtering (MDM) til at administrere opdateringsplaceringen
 
 Se [Politik-CSP – Defender/SignatureUpdateFallbackOrder, hvis](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder) du vil have mere at vide om konfiguration af MDM.
 

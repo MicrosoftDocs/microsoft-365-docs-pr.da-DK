@@ -20,12 +20,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 364e83d03da53f5e6ffa8cecda4847e13c38f60e
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 68d6c0bed1f9484f4eed45924c57357b1c490e8f
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499479"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569372"
 ---
 # <a name="understand-the-analyst-report-in-threat-analytics-in-microsoft-365-defender"></a>Forstå analytikerrapporten i trusselsanalyse i Microsoft 365 Defender
 
@@ -106,7 +106,7 @@ Selvom registreringer giver dig mulighed for at identificere og stoppe den regis
 Avancerede forespørgselsforespørgsler i analytikerrapporter er blevet undersøgt af Microsoft-analytikere og er klar til at blive kørt i avanceret [forespørgselseditor](https://security.microsoft.com/advanced-hunting). Du kan også bruge forespørgslerne til at oprette [brugerdefinerede registreringsregler,](custom-detection-rules.md) der udløser beskeder om fremtidige matches.
 
 >[!NOTE]
-> Trusselsanalyse er også tilgængelig i [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics). Den har dog ikke dataintegrationen mellem Microsoft Defender til Office og Microsoft Defender for Endpoint, Microsoft 365 Defender Threat Analytics har.
+> Trusselsanalyse er også tilgængelig i [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics). Den har dog ikke dataintegrationen mellem Microsoft Defender for Office og Microsoft Defender for Endpoint.
 
 ## <a name="related-topics"></a>Relaterede emner
 

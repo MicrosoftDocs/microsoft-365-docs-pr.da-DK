@@ -21,12 +21,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 75aea706cdcb65752b673d32ccff968209ba74b7
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: d0add9fe000966cdeb2ffc5ce23e4ba0690bbadb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499442"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63606571"
 ---
 # <a name="microsoft-365-defender-integration-with-microsoft-sentinel"></a>Microsoft 365 Defender integration med Microsoft Sentinel
 
@@ -37,9 +37,9 @@ ms.locfileid: "64499442"
 
 Forbindelsen Microsoft 365 Defender Microsoft Sentinel (prøveversion) sender alle Microsoft 365 Defender hændelser og påmindelser til Microsoft Sentinel og holder hændelserne synkroniserede. 
 
-Når du har tilføjet forbindelsen, Microsoft 365 Defender alle tilknyttede beskeder, enheder og relevante oplysninger, der modtages&mdash; fra Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365 og Microsoft Defender for Cloud Apps&mdash; streames til Microsoft Sentinel som sikkerhedsoplysninger og oplysninger om begivenhedsstyring (SIEM), så du får kontekst til at udføre triage- og hændelsesrespons med Microsoft Sentinel. 
+Når du har tilføjet forbindelsen, skal du Microsoft 365 Defender hændelser, der omfatter alle tilknyttede beskeder, enheder og relevante oplysninger, der modtages fra Microsoft Defender til Slutpunkt, Microsoft Defender for Identity, Microsoft Defender til Office 365 og Microsoft Defender til skyapps&mdash;&mdash; streames til Microsoft Sentinel som sikkerhedsoplysninger og begivenhedsstyringsdata (SIEM), så du får kontekst til at udføre triage- og hændelsesrespons med Microsoft Sentinel. 
 
-Når hændelser er blevet sendt til Microsoft Sentinel, synkroniseres hændelser tovejs med Microsoft 365 Defender, så du kan drage fordel af både Microsoft 365 Defender-portalen og Microsoft Sentinel i Azure Portal til undersøgelse af hændelser og svar.
+Når hændelser er blevet sendt til Microsoft Sentinel, synkroniseres hændelser tovejs med Microsoft 365 Defender, så du kan drage fordel af både Microsoft 365 Defender-portalen og Microsoft Sentinel i Azure-portalen til undersøgelse af hændelser og svar.
 
 Se denne korte oversigt over Integration af Microsoft Sentinel med Microsoft 365 Defender (4 minutter).
 
@@ -50,7 +50,7 @@ Se denne korte oversigt over Integration af Microsoft Sentinel med Microsoft 365
 
 Sådan fungerer det.
 
-:::image type="content" source="../../media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png" alt-text="Flowet og delingen af hændelsesdata for Microsoft 365 Defender og Microsoft Sentinel-portaler" lightbox="../../media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png":::
+:::image type="content" source="../../media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png" alt-text="Flowet og delingen af hændelsesdata mellem Microsoft 365 Defender og Microsoft Sentinel.":::
 
 ## <a name="next-steps"></a>Næste trin
 

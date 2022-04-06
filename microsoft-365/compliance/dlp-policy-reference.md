@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: Komponent- og konfigurationsreference for DLP-politik
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 9b9658db71ea9945cedb746ec688eff5018a4ba4
-ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
+ms.openlocfilehash: d94277ac4ee3bd78feecf660e03d60a5720d1b43
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64520610"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63606692"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
@@ -107,8 +107,8 @@ En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysni
 |SharePoint onlinewebsteder   |websteder       | data-at-rest </br> data i brug | Nej|
 |OneDrive for Business konti| konto eller distributionsgruppe |data-at-rest </br> data i brug|Nej|
 |Teams chat og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
-|Microsoft Defender for Cloud Apps   | forekomst af skyapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til ikke-Microsoft-skyapps](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Microsoft Defender til skyapps   | forekomst af skyapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til ikke-Microsoft-skyapps](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
+|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurere indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
 |Lokale lager (filshares og SharePoint)    |lager         | data-at-rest         | - [Få mere at vide Microsoft 365 lokal scanner til forebyggelse af datatab](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kom i gang med den lokale scanner til forebyggelse af datatab](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
 |PowerBI| arbejdsområder | data i brug | Nej|
 
@@ -132,7 +132,7 @@ DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom 
 |OneDrive for Business konti| Ja| Ja| Ja|
 |Teams chat- og kanalmeddelelser | Ja| Nej| Nej|
 |Enheder |Ja | Ja|  Nej|
-|Microsoft Defender for Cloud Apps | Ja| Ja| Ja|
+|Microsoft Defender til skyapps | Ja| Ja| Ja|
 |Lokale lagre| Ja| Ja| Nej|
 |PowerBI|Ja | Ja| Nej|
 
@@ -297,7 +297,7 @@ De tilgængelige kontekstindstillinger ændrer sig, afhængigt af hvilken placer
 - Indhold indeholder
 - Se [Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
 
-##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser, Microsoft Defender for Cloud Apps understøtter
+##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser, som Microsoft Defender til skyapps understøtter
 
 - Indhold indeholder
 - Indhold deles fra Microsoft 365
@@ -397,54 +397,17 @@ De handlinger, der er tilgængelige i en regel, afhænger af de placeringer, der
 
 - Overvågning eller begræns aktiviteter på Windows enheder
 
-Hvis du vil bruge disse indstillinger, skal du konfigurere **indstillingerne i DLP-indstillinger** og i den politik, du vil bruge dem i. Se Begrænsede [apps og appgrupper for at](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) få flere oplysninger.
+> [!NOTE]
+> Enheder giver mulighed for at **Overvåge** en aktivitet, **Blokere** en aktivitet eller Blokere **med tilsidesættelse af** en aktivitet.
 
-Placeringen af enhederne indeholder mange underaktiver (betingelser) og handlinger. Du kan få mere at vide [under Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
+Placeringen af enhederne indeholder mange underaktiver (betingelser) og handlinger. Du kan få mere at vide [under Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on). 
 
-Når du vælger **Overvågning eller begrænser aktiviteter på Windows-enheder**, kan du begrænse brugeraktiviteterne efter tjenestedomæne eller browser og begrænse de handlinger, som DLP udføre af:
-
-- Alle apps
-- Ved hjælp af en liste over begrænsede apps, som du definerer
-- En begrænset appgruppe (eksempel), som du definerer.
-
-##### <a name="service-domain-and-browser-activities"></a>Tjenestedomæne- og browseraktiviteter
-
-Når du konfigurerer domænerne for Tillad **/** bloker skytjenesten og listen Ikke-tilladte **browsere** (se Browser- og domænebegrænsninger for følsomme [data](dlp-configure-endpoint-settings.md#browser-and-domain-restrictions-to-sensitive-data)), og en bruger forsøger at overføre en beskyttet fil til et domæne i skytjenesten eller få adgang til den fra en ikke-tilladt browser, `Audit only`kan du konfigurere politikhandlingen til , `Block with override``Block` eller aktiviteten.
-
-##### <a name="file-activities-for-all-apps"></a>Filaktiviteter for alle apps
-
-Med indstillingen **Filaktiviteter for alle apps** skal du vælge enten **Begræns ikke filaktiviteter** eller **Anvend begrænsninger på bestemte aktiviteter**. Når du vælger at anvende begrænsninger på bestemte aktiviteter, anvendes de handlinger, du vælger her, når en bruger har fået adgang til et DLP-beskyttet element. Du kan fortælle DLP til `Audit only`, `Block with override``Block` (handlingerne) for disse brugeraktiviteter:
-
-- **Kopiér til Udklipsholder**
-- **Kopiér til et USB-flytbart drev** 
-- **Kopiér til et netværksshare**
-- **Udskriv**
-- **Kopiér eller flyt ved hjælp af en Bluetooth-app**
-- **Fjernskrivebord-tjenester**
-
-
-##### <a name="restricted-app-activities"></a>Begrænsede appaktiviteter  
-
-Tidligere kaldet Ikke-tilladte apps, definerer du en liste over apps i Slutpunkt DLP-indstillinger, som du vil sætte begrænsninger på. Når en bruger forsøger at få adgang til en DLP-beskyttet fil ved hjælp af en app, der er på listen, `Audit only``Block with override`kan du enten , eller `Block` aktiviteten. DLP-handlinger, **der er defineret i Begrænsede appaktiviteter** tilsidesættes, hvis appen er medlem af begrænset appgruppe. Derefter anvendes de handlinger, der er defineret i den begrænsede appgruppe.
-
-##### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Filaktiviteter for apps i begrænsede appgrupper (forhåndsvisning)
-
-Du kan definere dine begrænsede appgrupper i Slutpunkt DLP-indstillinger og føje begrænsede appgrupper til dine politikker. Når du føjer en begrænset appgruppe til en politik, skal du vælge en af disse indstillinger:
-
-- Begræns ikke filaktivitet
-- Anvend begrænsninger på al aktivitet
-- Anvend begrænsninger på bestemt aktivitet
-
-Når du vælger en af indstillingerne  Anvend begrænsninger, og en bruger forsøger at få adgang til en DLP-beskyttet fil ved hjælp af en app, der findes i den begrænsede appgruppe, `Audit only``Block with override``Block` kan du enten , eller efter aktivitet. DLP-handlinger, som du definerer her, tilsidesætter handlinger, der er defineret **i Begrænsede appaktiviteter** og **Filaktiviteter for alle apps** til appen.
-
-Se Begrænsede [apps og appgrupper for at](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) få flere oplysninger. 
-
-#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Microsoft Defender for Cloud Apps handlinger
+#### <a name="microsoft-defender-for-cloud-apps"></a>Microsoft Defender til skyapps
 
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Begræns tredjepartsapps
 
-#### <a name="on-premises-repositories-actions"></a>Handlinger for lokale lagre
+#### <a name="on-premises-repositories"></a>Lokale lagre
 
 - Begræns adgang eller fjern lokale filer
 
@@ -480,7 +443,7 @@ Hvis du f.eks. Exchange enheder som placeringer, vil disse handlinger være tilg
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Overvågning eller begræns aktiviteter på Windows enheder
 
-Hvis du vælger Enheder Microsoft Defender for Cloud Apps, vil disse handlinger være tilgængelige:
+Hvis du vælger Enheder og Microsoft Defender til skyapps, vil disse handlinger være tilgængelige:
 
 - Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
 - Overvågning eller begræns aktiviteter på Windows enheder

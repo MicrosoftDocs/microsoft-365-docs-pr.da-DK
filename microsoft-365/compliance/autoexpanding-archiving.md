@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 37cdbb02-a24a-4093-8bdb-2a7f0b3a19ee
 description: Få mere at vide om automatisk udvidende arkivering, som indeholder ekstra arkivlager til Exchange Online postkasser.
-ms.openlocfilehash: b55c0504f04f896377c1e1b0a4dccdacdb8bbc37
-ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
+ms.openlocfilehash: 1b4b8d81868cc97fc8e8faf5b0dc449e4c07a868
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63761538"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63606713"
 ---
 # <a name="learn-about-auto-expanding-archiving"></a>Få mere at vide om automatisk udvidende arkivering
 
@@ -79,10 +79,6 @@ Følgende skærmbilleder viser en mappeliste før og efter meddelelser flyttes t
 ## <a name="outlook-requirements-for-accessing-items-in-an-auto-expanded-archive"></a>Outlook krav til adgang til elementer i et automatisk udvidet arkiv
 
 For at få adgang til meddelelser, der er gemt i et automatisk udvidet arkiv, skal brugerne bruge en af følgende Outlook-klienter:
-
-- Outlook som en del af en Microsoft 365 Apps for enterprise (tidligere kaldet Office 365 ProPlus)
-
-- Outlook som en del af Microsoft 365 Apps for business (tidligere kaldet Office 365 Business)
 
 - Outlook 2016 eller Outlook 2019 til Windows
 

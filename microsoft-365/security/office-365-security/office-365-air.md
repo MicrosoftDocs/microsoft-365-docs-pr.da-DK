@@ -1,6 +1,6 @@
 ---
-title: Automatiseret undersøgelse og svar i Microsoft Defender til Office 365
-keywords: AIR, autoIR, Microsoft Defender til slutpunkt, automatiseret, undersøgelse, svar, afhjælpning, trusler, avanceret, trussel, beskyttelse
+title: Automatiseret undersøgelse og svar i Microsoft Defender for Office 365
+keywords: AIR, autoIR, Microsoft Defender for Endpoint, automatiseret, undersøgelse, svar, afhjælpning, trusler, avanceret, trussel, beskyttelse
 f1.keywords:
 - NOCSH
 author: dansimp
@@ -16,28 +16,28 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Kom i gang med at bruge automatiseret undersøgelse og svarmuligheder i Microsoft Defender Office 365.
+description: Kom i gang med automatiseret undersøgelse og svarfunktioner Microsoft Defender for Office 365.
 ms.custom:
 - air
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 70a5eba3eb78878cc1f15bdd711a3331e9af870a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e9cd2388d3551ccc0c180d20a92ec0c513472797
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680880"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473667"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Automatiseret undersøgelse og svar (AIR) i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Microsoft Defender til Office 365](defender-for-office-365.md) indeholder effektive funktioner til automatisk undersøgelse og svar (AIR), som kan spare tid og besvær for dit sikkerhedsteam. Når der udløses beskeder, er det op til dit sikkerhedsteam at gennemse, prioritere og reagere på disse beskeder. Det kan være overvældende at holde styr på mængden af indgående beskeder. Det kan være en hjælp at automatisere nogle af disse opgaver.
+[Microsoft Defender for Office 365 indeholder](defender-for-office-365.md) effektive funktioner til automatisk undersøgelse og svar (AIR), som kan spare tid og besvær for dit sikkerhedsteam. Når der udløses beskeder, er det op til dit sikkerhedsteam at gennemse, prioritere og reagere på disse beskeder. Det kan være overvældende at holde styr på mængden af indgående beskeder. Det kan være en hjælp at automatisere nogle af disse opgaver.
 
 AIR gør det muligt for dit sikkerhedsteam at fungere mere effektivt. AIR-funktioner omfatter automatiserede undersøgelsesprocesser som reaktion på velkendte trusler, der findes i dag. Relevante afhjælpningshandlinger afventer godkendelse, så dit sikkerhedsteam kan reagere effektivt på registrerede trusler. Med AIR kan dit sikkerhedsteam fokusere på opgaver med højere prioritet, uden at de vigtige beskeder, der udløses, går tabt.
 
@@ -62,7 +62,7 @@ Der udløses en besked, og en sikkerhedsspilbog starter en automatisk undersøge
 4. Dit sikkerhedsteam gennemser [undersøgelsesresultaterne og anbefalingerne](air-view-investigation-results.md) [og godkender eller afviser afhjælpningshandlinger](air-review-approve-pending-completed-actions.md).
 5. Efterhånden som ventende afhjælpningshandlinger godkendes (eller afvises), fuldføres den automatiske undersøgelse.
 
-I Microsoft Defender Office 365 du ingen afhjælpningshandlinger automatisk. Afhjælpningshandlingerne skal kun løses, når organisationens sikkerhedsteam har godkendt det. AIR-funktioner sparer tid for sikkerhedsteamet ved at identificere afhjælpningshandlinger og angive de oplysninger, der er nødvendige for at træffe en velovervejet beslutning.
+I Microsoft Defender for Office 365 bliver der ikke foretaget nogen afhjælpningshandlinger automatisk. Afhjælpningshandlingerne skal kun løses, når organisationens sikkerhedsteam har godkendt det. AIR-funktioner sparer tid for sikkerhedsteamet ved at identificere afhjælpningshandlinger og angive de oplysninger, der er nødvendige for at træffe en velovervejet beslutning.
 
 Under og efter hver automatiseret undersøgelse kan dit sikkerhedsteam:
 
@@ -75,7 +75,7 @@ Under og efter hver automatiseret undersøgelse kan dit sikkerhedsteam:
 
 ## <a name="how-to-get-air"></a>Sådan får du AIR
 
-AIR-funktioner er inkluderet [i Microsoft Defender til Office 365](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2), hvis dine politikker og beskeder er konfigureret. Har du brug for hjælp? Følg vejledningen i [Beskyt mod trusler for](protect-against-threats.md) at konfigurere følgende beskyttelsesindstillinger:
+AIR-funktioner er inkluderet [Microsoft Defender for Office 365](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2), forudsat at dine politikker og beskeder er konfigureret. Har du brug for hjælp? Følg vejledningen i [Beskyt mod trusler for](protect-against-threats.md) at konfigurere følgende beskyttelsesindstillinger:
 
 - [Overvågningslogføring](../../compliance/turn-audit-log-search-on-or-off.md) (skal være slået til)
 - [Beskyttelse mod malware](protect-against-threats.md#part-1---anti-malware-protection-in-eop)
@@ -112,7 +112,7 @@ Tilladelser tildeles gennem bestemte roller, f.eks. dem, der er beskrevet i føl
 
 ## <a name="required-licenses"></a>Påkrævede licenser
 
-[Microsoft Defender for Office 365 Plan 2-licenser](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) bør tildeles til:
+[Microsoft Defender for Office 365 plan 2-licenser](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) skal tildeles til:
 
 - Sikkerhedsadministratorer (herunder globale administratorer)
 - Organisationens sikkerhedsteam (herunder sikkerhedslæsere og personer med rollen **Søg og Tøm** )
@@ -120,11 +120,11 @@ Tilladelser tildeles gennem bestemte roller, f.eks. dem, der er beskrevet i føl
 
 ## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Der kommer snart ændringer i din Microsoft 365 Defender-portal
 
-Hvis du allerede bruger AIR-funktioner i Microsoft Defender til Office 365, er du ved at se nogle ændringer i den [forbedrede Microsoft 365 Defender portal](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Hvis du allerede bruger AIR-funktioner i Microsoft Defender for Office 365, vil du nu se nogle ændringer i den forbedrede [Microsoft 365 Defender portal](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Samlet handlingscenter.":::
+:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Samlet handlingscenter" lightbox="../../media/m3d-action-center-unified.png":::
 
-Den nye og forbedrede Microsoft 365 Defender samler <https://security.microsoft.com> AIR-funktioner i [Microsoft Defender Office 365](defender-for-office-365.md) Og [i Microsoft Defender til slutpunkt](../defender-endpoint/automated-investigations.md). Med disse opdateringer og forbedringer kan dit sikkerhedsteam få vist oplysninger om automatiserede undersøgelser og afhjælpningshandlinger på tværs af din mail, dit samarbejdsindhold, dine brugerkonti og enheder, alt sammen på ét sted.
+Den nye og forbedrede Microsoft 365 Defender samler <https://security.microsoft.com> AIR-funktioner i [Microsoft Defender for Office 365](defender-for-office-365.md) og [Microsoft Defender for Endpoint](../defender-endpoint/automated-investigations.md). Med disse opdateringer og forbedringer kan dit sikkerhedsteam få vist oplysninger om automatiserede undersøgelser og afhjælpningshandlinger på tværs af din mail, dit samarbejdsindhold, dine brugerkonti og enheder, alt sammen på ét sted.
 
 > [!TIP]
 > Den nye Microsoft 365 Defender portal erstatter følgende administrationscentre:
@@ -136,11 +136,11 @@ Den nye og forbedrede Microsoft 365 Defender samler <https://security.microsoft.
 
 ### <a name="what-to-expect"></a>Hvad du kan forvente
 
-I følgende tabel vises ændringer og forbedringer af AIR i Microsoft Defender til Office 365.
+I følgende tabel vises ændringer og forbedringer af AIR i Microsoft Defender for Office 365.
 
 |Element|Hvad ændres?|
 |---|---|
-|**Undersøgelsesside**|Den opdaterede **side Undersøgelser er** mere i overensstemmelse med det, du ser [i Microsoft Defender til slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Du får vist nogle generelle format- og typografiændringer, der er justeret efter den nye, samlede **undersøgelsesvisning** . Undersøgelsesgrafen har f.eks. et mere ensartet format.|
+|**Undersøgelsesside**|Den opdaterede **side Undersøgelser er** mere i overensstemmelse med det, du ser [i Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Du får vist nogle generelle format- og typografiændringer, der er justeret efter den nye, samlede **undersøgelsesvisning** . Undersøgelsesgrafen har f.eks. et mere ensartet format.|
 |**Fanen** Brugere|Fanen **Brugere** er nu **fanen Postkasser** . Oplysninger om brugere er angivet på **fanen** Postkasse.|
 |**Fanen** Mail|Fanen **Mail** er blevet fjernet. gå til **fanen Enheder for** at få vist en liste over mail- og mailklyngeelementer.|
 |**Fanen Enheder**|Fanen **Enheder har** en fane i tabulatortypografi, der omfatter en oversigtsvisning, og muligheden for at filtrere efter enhedstype. Fanen **Enheder indeholder** nu indstillingen **Gå på jagt** ud over indstillingen **Åbn i Stifinder** . Du kan nu bruge enten [Stifinder](threat-explorer.md) [eller avanceret jagt](../defender-endpoint/advanced-hunting-overview.md) på at finde enheder og trusler og filtrere efter resultater.|

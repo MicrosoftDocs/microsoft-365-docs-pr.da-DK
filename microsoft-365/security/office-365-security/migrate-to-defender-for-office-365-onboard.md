@@ -1,5 +1,5 @@
 ---
-title: 'Overfør til Microsoft Defender for Office 365 Phase 3: Onboard'
+title: 'Overfør Microsoft Defender for Office 365 fase 3: Onboard'
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,24 +16,24 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Fuldfør trinnene for at overføre fra en tredjepartsbeskyttelsestjeneste eller -enhed til Microsoft Defender for Office 365 beskyttelse.
+description: Fuldfør trinnene for overførsel fra en tredjepartsbeskyttelsestjeneste eller -enhed for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3798bdb28bb44b5148574b4c09a372ff564e47e5
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 9160a6fc79ba94e4cb86fb0f96f46e565c0f613c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63594662"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467505"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Overfør til Microsoft Defender for Office 365 – Fase 3: Onboard
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Overfør til Microsoft Defender for Office 365 - Fase 3: Onboard
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
 <br>
 
-|[![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png)](migrate-to-defender-for-office-365-prepare.md) <br> [Fase 1: Forbered](migrate-to-defender-for-office-365-prepare.md)|[![Fase 2: Konfigurer.](../../media/phase-diagrams/setup.png)](migrate-to-defender-for-office-365-setup.md) <br> [Fase 2: Konfigurer](migrate-to-defender-for-office-365-setup.md)|![Fase 3: Onboard.](../../media/phase-diagrams/onboard.png) <br> Fase 3: Onboard|
+|[![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Fase 1: Forbered](migrate-to-defender-for-office-365-prepare.md)|[![Fase 2: Konfigurer.](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Fase 2: Konfigurer](migrate-to-defender-for-office-365-setup.md)|![Fase 3: Onboard.](../../media/phase-diagrams/onboard.png) <br> Fase 3: Onboard|
 |---|---|---|
 |||*Du er her!*|
 
@@ -50,7 +50,7 @@ Velkommen til **Fase 3: Onboard** af din **[overførsel til Microsoft Defender f
 
 ## <a name="step-1-begin-onboarding-security-teams"></a>Trin 1: Begynd onboardingsikkerhed Teams
 
-Hvis din organisation har et sikkerhedsresponsteam, er det på tide at begynde at integrere Microsoft Defender for Office 365 i dine svarprocesser, herunder billetsystemer. Dette er for sig selv et helt emne, men det er nogle gange overset. Når sikkerhedsresponsteamet bliver involveret tidligt, sikrer du, at din organisation er klar til at håndtere trusler, når du skifter dine MX-poster. Hændelsesrespons skal være godt udstyret til at håndtere følgende opgaver:
+Hvis din organisation har et sikkerhedsresponsteam, er det nu tid til at begynde at integrere Microsoft Defender for Office 365 i dine svarprocesser, herunder billetsystemer. Dette er for sig selv et helt emne, men det er nogle gange overset. Når sikkerhedsresponsteamet bliver involveret tidligt, sikrer du, at din organisation er klar til at håndtere trusler, når du skifter dine MX-poster. Hændelsesrespons skal være godt udstyret til at håndtere følgende opgaver:
 
 - Lær de nye værktøjer at bruge, og integrer dem i eksisterende flow. Eksempel:
   - Administratorstyring af meddelelser, der er sat i karantæne, er vigtig. Du kan finde en vejledning [i Administrere meddelelser og filer, der er sat i karantæne, som administrator](manage-quarantined-messages-and-files.md).
@@ -59,7 +59,7 @@ Hvis din organisation har et sikkerhedsresponsteam, er det på tide at begynde a
 - Finjuster og [tilpas beskeder](../../compliance/alert-policies.md) for organisatoriske processer.
 - Administrer hændelseskøen, og afhjulpet potentielle risici.
 
-Hvis din organisation har købt Microsoft Defender til Office 365 Plan 2, bør de begynde at blive fortrolige med og bruge funktioner som Threat Explorer, Avanceret ræving og Hændelser. Du kan finde relevante kurser under <https://aka.ms/mdoninja>.
+Hvis din organisation har købt Microsoft Defender for Office 365 Plan 2, bør de begynde at blive fortrolige med og bruge funktioner som Threat Explorer, Avanceret jagt og Hændelser. Du kan finde relevante kurser under <https://aka.ms/mdoninja>.
 
 Hvis dit sikkerhedssvarteam indsamler og analyserer ufiltrerede meddelelser, kan du konfigurere en SecOps-postkasse til at modtage disse ufiltrerede meddelelser. Du kan finde en vejledning [under Konfigurere SecOps-postkasser i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
@@ -72,13 +72,13 @@ Du kan finde flere oplysninger om integration med din SIEM/SOAR i følgende arti
 - [Avanceret api til jagt](/microsoft-365/security/defender/api-advanced-hunting)
 - [Api'er til hændelser](/microsoft-365/security/defender/api-incident)
 
-Hvis din organisation ikke har et sikkerhedsresponsteam eller eksisterende procesflows, kan du bruge denne gang til at gøre dig bekendt med grundlæggende jagt og svarfunktioner i Defender Office 365. Du kan få mere at vide [under Trusselsundersøgelse og -svar](office-365-ti.md).
+Hvis din organisation ikke har et sikkerhedsresponsteam eller eksisterende procesflows, kan du bruge denne gang til at gøre dig bekendt med grundlæggende jagt og svarfunktioner Defender for Office 365. Du kan få mere at vide [under Trusselsundersøgelse og -svar](office-365-ti.md).
 
 ### <a name="rbac-roles"></a>RBAC-roller
 
-Tilladelser i Defender til Office 365 er baseret på rollebaseret adgangskontrol (RBAC) og er beskrevet i Tilladelser [i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md). Dette er de vigtige punkter, du skal huske på:
+Tilladelser i Defender for Office 365 er baseret på rollebaseret adgangskontrol og er beskrevet i Tilladelser i [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md). Dette er de vigtige punkter, du skal huske på:
 
-- Azure AD-roller giver tilladelser til **alle** arbejdsbelastninger i Microsoft 365. Hvis du f.eks. føjer en bruger til sikkerhedsadministratoren i Azure-portalen, har de sikkerhedsadministratortilladelser overalt.
+- Azure AD-roller giver tilladelser til **alle** arbejdsbelastninger i Microsoft 365. Hvis du f.eks. føjer en bruger til sikkerhedsadministratoren i Azure Portal, har de overalt sikkerhedsadministratortilladelser.
 - Mail &-samarbejdsroller i Microsoft 365 Defender-portalen giver tilladelser til Microsoft 365 Defender-portalen, Microsoft 365 Overholdelsescenter og det ældre Security & Compliance Center. Hvis du f.eks. føjer en bruger til sikkerhedsadministrator i Microsoft 365 Defender-portalen, har de kun adgang til sikkerhedsadministratoren i Microsoft 365 Defender-portalen, Microsoft 365 Overholdelsescenter og Security & Compliance Center.
 - Mange funktioner i Microsoft 365 Defender-portalen er baseret på Exchange Online PowerShell-cmdlet'er og kræver derfor rollegruppemedlemskab til de tilsvarende roller (teknisk set rollegrupper) i Exchange Online (især for at få adgang til de tilsvarende Exchange Online  PowerShell-cmdlet'er).
 - Der findes roller for &-samarbejde i Microsoft 365 Defender-portalen, der ikke svarer til Azure AD-roller, og de er vigtige for sikkerhedshandlinger (f.eks. rollen Eksempel og rollen Søg og Tøm).
@@ -87,7 +87,7 @@ Typisk skal kun et undersæt af sikkerhedsmedarbejdere have yderligere rettighed
 
 ## <a name="step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service"></a>Trin 2: (Valgfrit) Undtage pilotbrugere fra filtrering af din eksisterende beskyttelsestjeneste
 
-Selvom dette trin ikke er påkrævet, bør du overveje at konfigurere dine pilotbrugere til at tilsidesætte filtrering af din eksisterende beskyttelsestjeneste. Denne handling gør det muligt for Defender Office 365 håndtere **alle** filtrerings- og beskyttelsesopgaver for pilotbrugerne. Hvis du ikke undtager dine pilotbrugere fra din eksisterende beskyttelsestjeneste, kører Defender for Office 365 faktisk kun på misser fra den anden tjeneste (filtrering af meddelelser, der allerede er blevet filtreret).
+Selvom dette trin ikke er påkrævet, bør du overveje at konfigurere dine pilotbrugere til at tilsidesætte filtrering af din eksisterende beskyttelsestjeneste. Denne handling gør Defender for Office 365 håndtere **alle filtrerings**- og beskyttelsesopgaver for pilotbrugerne. Hvis du ikke undtager dine pilotbrugere fra din eksisterende beskyttelsestjeneste, kører Defender for Office 365 faktisk kun på misses fra den anden tjeneste (filtrering af meddelelser, der allerede er blevet filtreret).
 
 > [!NOTE]
 > Dette trin er eksplicit påkrævet, hvis din aktuelle beskyttelsestjeneste leverer sammenkædning, men du vil prøvekøre Pengeskab Links-funktionalitet. Dobbeltombrydning af kæder understøttes ikke.
@@ -127,7 +127,7 @@ Når du er klar, skal du gøre følgende for at tillade postkasseintelligens at 
 
 - I antiphishing-politikken med indstillingerne for Streng beskyttelse skal du ændre værdien  af Hvis postkasseintelligens registrerer og efterligner brugeren fra til **Sæt meddelelsen i karantæne**.
 
-Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker i Defender Office 365](configure-mdo-anti-phishing-policies.md).
+Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 Når du har observeret resultaterne og foretaget eventuelle justeringer, skal du gå videre til næste afsnit for at sætte meddelelser, der er registreret af brugeren, i karantæne.
 
@@ -137,7 +137,7 @@ I begge dine antiphishing-politikker, der er baseret på Standard og Restriktive
 
 Kontrollér [repræsentationsindsigtet for](impersonation-insight.md) at se, hvad der blokeres som forsøg på bruger efterligning.
 
-Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker i Defender Office 365](configure-mdo-anti-phishing-policies.md).
+Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 Når du har observeret resultaterne og foretaget eventuelle justeringer, skal du gå videre til næste afsnit for at sætte meddelelser, der er registreret af domænepersonation, i karantæne.
 
@@ -147,7 +147,7 @@ I begge dine antiphishing-politikker, der er baseret på standardindstillinger o
 
 Kontrollér [repræsentationsindsigtet for](impersonation-insight.md) at se, hvad der blokeres som forsøg på domæne efterligning.
 
-Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker i Defender Office 365](configure-mdo-anti-phishing-policies.md).
+Hvis du vil ændre politikkerne, [skal du se Konfigurer antiphishing-politikker Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 Se resultaterne, og foretag eventuelle justeringer efter behov.
 
@@ -155,12 +155,12 @@ Se resultaterne, og foretag eventuelle justeringer efter behov.
 
 Når dine pilotbrugere rapporterer falske positive og falske negativer, vises meddelelserne på siden Indsendte [Microsoft 365 Defender portalen](admin-submission.md). Du kan rapportere de misidentificerede meddelelser til Microsoft til analyse og bruge oplysningerne til at justere indstillingerne og undtagelserne i dine pilotmetoder efter behov.
 
-Brug følgende funktioner til at overvåge og genaktivere indstillingerne for beskyttelse i Defender Office 365:
+Brug følgende funktioner til at overvåge og genaktivere indstillingerne for beskyttelse i Defender for Office 365:
 
 - [Karantæne](manage-quarantined-messages-and-files.md)
 - [Threat Explorer](email-security-in-microsoft-defender.md)
 - [Mailsikkerhedsrapporter](view-email-security-reports.md)
-- [Defender til Office 365 rapporter](view-reports-for-mdo.md)
+- [Defender for Office 365 rapporter](view-reports-for-mdo.md)
 - [Indsigt i mailflow](/exchange/monitoring/mail-flow-insights/mail-flow-insights)
 - [Mailflowrapporter](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 
@@ -192,7 +192,7 @@ Gør trinnene i dette afsnit, når du er klar til at skifte dine MX-poster, så 
 
 2. Slå reglen SCL=-1-mailflow fra (du kan deaktivere den uden at slette den).
 
-3. Kontrollér, at de tidligere ændringer er blevet aktiveret, og at Defender til Office 365 nu er aktiveret korrekt for alle brugere. På nuværende tidspunkt har alle beskyttelsesfunktionerne fra Defender for Office 365 nu tilladelse til at handle på mail for alle modtagere, men denne mail er allerede blevet scannet af din eksisterende beskyttelsestjeneste.
+3. Kontrollér, at de tidligere ændringer er blevet aktiveret, og at Defender for Office 365 nu er aktiveret korrekt for alle brugere. På nuværende tidspunkt har alle beskyttelsesfunktionerne i Defender for Office 365 nu tilladelse til at handle på mail for alle modtagere, men den pågældende mail er allerede blevet scannet af din eksisterende beskyttelsestjeneste.
 
 Du kan standse midlertidigt på dette tidspunkt for at få en mere omfattende dataoptagelse og -justering.
 
@@ -225,8 +225,8 @@ Du er velkommen til at sætte på pause og evaluere her på et hvilket som helst
 
 Tillykke! Du har fuldført overførslen [til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)! Da du har fulgt trinnene i denne overførselsvejledning, bør de første par dage, hvor mail leveres direkte i Microsoft 365 være meget mere jævnere.
 
-Nu kan du starte den normale drift og vedligeholdelse af Defender for Office 365. Overvåg og hold øje med problemer, der ligner det, du har oplevet under pilotprojektet, men på en større skala. [Efterlignet intelligensindsigt](learn-about-spoof-intelligence.md) og [repræsentationsindsigt](impersonation-insight.md) vil være mest nyttigt, men overvej at gøre følgende aktiviteter til en almindelig forekomst:
+Nu kan du begynde den normale drift og vedligeholdelse af Defender for Office 365. Overvåg og hold øje med problemer, der ligner det, du har oplevet under pilotprojektet, men på en større skala. [Efterlignet intelligensindsigt](learn-about-spoof-intelligence.md) og [repræsentationsindsigt](impersonation-insight.md) vil være mest nyttigt, men overvej at gøre følgende aktiviteter til en almindelig forekomst:
 
-- Gennemse brugerindsendelser, især [phishingmeddelelser, der er rapporteret af brugerne](https://docs.microsoft.com/microsoft-365/security/office-365-security/automated-investigation-response-office)
+- Gennemse brugerindsendelser, især [phishingmeddelelser, der er rapporteret af brugerne](automated-investigation-response-office.md)
 - Gennemse tilsidesættelser i [statusrapporten for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).
 - Brug [avancerede jagtforespørgsler](/microsoft-365/security/defender/advanced-hunting-example) til at søge efter tilpasningsmuligheder og risikabelt meddelelser.

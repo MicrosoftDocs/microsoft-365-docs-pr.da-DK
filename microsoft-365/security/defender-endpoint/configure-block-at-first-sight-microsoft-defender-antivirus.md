@@ -15,19 +15,19 @@ ms.date: 10/18/2021
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 48a411d836669a47479daa68a83a96c3e65b949f
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: c955ab15640a8c3154e14ba0201946e109f832a9
+ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473227"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "63606509"
 ---
 # <a name="turn-on-block-at-first-sight"></a>Slå blok ved første syn til
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 I denne artikel beskrives en antivirus-/antimalwarefunktion, der kaldes "blok ved første syn", og det beskrives, hvordan du aktiverer blok ved første syn for organisationen.
 
@@ -50,10 +50,10 @@ Når Microsoft Defender Antivirus støder på en mistænkelig, men ikke-registre
 
 Microsoft Defender Antivirus bruger flere registrerings- og forebyggelsesteknologier til at levere nøjagtig, intelligent og beskyttelse i realtid.
 
-:::image type="content" source="images/microsoft-defender-atp-next-generation-protection-engines.png" alt-text="Listen over Microsoft Defender AV-programmer" lightbox="images/microsoft-defender-atp-next-generation-protection-engines.png":::
+![Liste over Microsoft Defender AV-programmer.](images/microsoft-defender-atp-next-generation-protection-engines.png)  
 
 > [!TIP]
-> Du kan få mere at [vide under (Blog) Lær de avancerede teknologier at kende som kernen Microsoft Defender for Endpoint næste generations beskyttelse](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/).
+> Du kan få mere [at vide under (Blog)](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/) Lær de avancerede teknologier at kende som kernen i næste generations beskyttelse af Microsoft Defender til Endpoint.
 
 ## <a name="a-few-things-to-know-about-block-at-first-sight"></a>Et par ting, du bør vide om blok ved første synsviden
 
@@ -83,15 +83,15 @@ Microsoft Defender Antivirus bruger flere registrerings- og forebyggelsesteknolo
    - **Tidsudvidelse til scanning af filer i skyen**: 50
    - **Spørg brugerne før eksempelindsendelse**: Send alle data uden at spørge
 
-   :::image type="content" source="../../media/intune-block-at-first-sight.png" alt-text="Intune konfigurationsblok ved første synsviden" lightbox="../../media/intune-block-at-first-sight.png":::
+   :::image type="content" source="../../media/intune-block-at-first-sight.png" alt-text="Intune config blok ved første synsviden.":::
 
 4. Gem dine indstillinger.
 
 > [!TIP]
 >
 > - Indstilling af filblokeringsniveauet **til Høj** anvender et stærkt registreringsniveau. I det usandsynlige tilfælde at filblokering medfører en falsk positiv registrering af legitime filer, kan dit sikkerhedsteam gendanne filer, [der er sat i karantæne](./restore-quarantined-files-microsoft-defender-antivirus.md).
-> - Du kan finde flere oplysninger Microsoft Defender Antivirus konfiguration af enhedsbegrænsninger i Intune i [Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure).
-> - Du kan finde en Microsoft Defender Antivirus over begrænsninger for Intune under [Enhedsbegrænsning for Windows 10 (og nyere) indstillinger i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
+> - Du kan finde flere oplysninger Microsoft Defender Antivirus konfiguration af enhedsbegrænsninger i Intune under Konfigurer indstillinger [for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure).
+> - Du kan finde en Microsoft Defender Antivirus af begrænsninger for enheder i Intune under [Enhedsbegrænsning for Windows 10 (og nyere) indstillinger i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 ## <a name="turn-on-block-at-first-sight-with-microsoft-endpoint-manager"></a>Slå blok ved første syn til med Microsoft Endpoint Manager
 
@@ -108,18 +108,18 @@ Microsoft Defender Antivirus bruger flere registrerings- og forebyggelsesteknolo
    - **Beskyttelsesniveau, der leveres i skyen**: Høj
    - **Microsoft Defender Antivirus udvidet timeout i sekunder**: 50
 
-   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Bloker indstillinger for første syn i Microsoft Endpoint Manager portal" lightbox="images/endpointmgr-antivirus-cloudprotection.png":::
+   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Bloker indstillinger for første syn Endpoint Manager.":::
 
 4. Anvend Microsoft Defender Antivirus på en gruppe, f.eks. **Alle brugere**, **Alle enheder** eller **Alle brugere og enheder**.
 
-## <a name="turn-on-block-at-first-sight-with-group-policy"></a>Aktivér blok ved første syn med Gruppepolitik
+## <a name="turn-on-block-at-first-sight-with-group-policy"></a>Slå blok ved første syn til med Gruppepolitik
 
 > [!NOTE]
-> Vi anbefaler, at Intune eller Microsoft Endpoint Manager at slå blok til ved første øjekast.
+> Vi anbefaler, at du bruger Intune eller Microsoft Endpoint Manager at slå blok til ved første øjekast.
 
 1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. Ved hjælp **Gruppepolitik Administrationseditor skal** du **gå til Computerkonfiguration** \> **Administrative skabeloner** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **MAPS**.
+2. Ved hjælp **Gruppepolitik Administrationseditor** skal du **gå til Computerkonfiguration** \> **Administrative** \> **skabeloner Windows Components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
 3. I sektionen KORT skal du dobbeltklikke på Konfigurer funktionen **"Blok** ved første syn", angive den til **Aktiveret** og derefter vælge **OK**.
 
@@ -138,14 +138,14 @@ Du kan bekræfte, at blok ved første syn er aktiveret på individuelle klienten
 
 2. Vælg **Virus- & trusselsbeskyttelse**, og vælg **derefter & Administrer Indstillinger** under Indstillinger for **Indstillinger**.
 
-   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Indstillingsnavnet & for virusbeskyttelse i Windows Sikkerhed appen" lightbox="../../media/wdav-protection-settings-wdsc.png":::
+   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Skærmbillede af indstillingsnavnet & for virusbeskyttelse i Windows Sikkerhed appen":::
 
 3. Bekræft, **at cloud-leveret beskyttelse** **og automatisk indsendelse af eksempler** begge er slået til.
 
 > [!NOTE]
 >
-> - Hvis indstillingerne for forudsætninger er konfigureret og installeret ved hjælp Gruppepolitik, bliver de indstillinger, der er beskrevet i dette afsnit, nedtonet og ikke tilgængelige til brug på individuelle slutpunkter.
-> - Ændringer, der er foretaget via Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger.
+> - Hvis indstillingerne for forudsætninger er konfigureret og installeret ved hjælp af Gruppepolitik, vil de indstillinger, der er beskrevet i dette afsnit, være nedtonede og ikke tilgængelige til brug på individuelle slutpunkter.
+> - Ændringer, der er foretaget Gruppepolitik et Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger.
 
 ## <a name="validate-block-at-first-sight-is-working"></a>Valider, at blok ved første syn virker
 
@@ -181,11 +181,11 @@ Du kan vælge at deaktivere blok ved første syn, hvis du vil bevare indstilling
 
 6. Gennemse og gem dine indstillinger.
 
-### <a name="turn-off-block-at-first-sight-with-group-policy"></a>Slå blok ved første syn Gruppepolitik
+### <a name="turn-off-block-at-first-sight-with-group-policy"></a>Slå blok ved første øjekast fra med Gruppepolitik
 
 1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik-objekt, du vil konfigurere, og derefter vælge **Rediger**.
 
-2. Ved hjælp **Gruppepolitik Administration skal du** gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. Når du bruger **Gruppepolitik, skal du** gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet via **Windows Microsoft Defender Antivirus** \>  \> **MAPS**.
 
@@ -202,7 +202,7 @@ Hvis du ikke er virksomhedsadministrator eller it-administrator, Pro du har spø
 
 Hvis du har en personlig enhed, der ikke administreres af en organisation, undrer du dig måske over, hvordan du kan slå bloker ved første syn til eller fra. Du kan bruge Windows Sikkerhed til at administrere blok ved første øjekast.
 
-1. På din Windows 10 eller Windows 11 computer skal du åbne Windows Sikkerhed appen.
+1. På din Windows 10 eller Windows 11 computer skal du åbne Windows Sikkerhed app.
 
 2. Vælg **Virus- & trusselsbeskyttelse**.
 

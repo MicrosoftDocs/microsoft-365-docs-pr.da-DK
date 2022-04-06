@@ -13,14 +13,14 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan lære, hvordan simulering af angreb på Microsoft 365 Defender-portalen påvirker brugere og kan få indsigt fra simulering og kursusresultater.
 ms.technology: mdo
-ms.openlocfilehash: c06cea01fcc7bb8fdc9c869fe8117f85eb627685
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: a360343fd4406dc79d072927fef41369bbe21ed8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589848"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473887"
 ---
-# <a name="insights-and-reports-for-attack-simulation-training-in-defender-for-office-365"></a>Insights og rapporter for angrebssimuleringskursus i Defender Office 365
+# <a name="insights-and-reports-for-attack-simulation-training-in-defender-for-office-365"></a>Insights og rapporter for angrebssimuleringskursus i Defender for Office 365
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
@@ -49,9 +49,9 @@ Du kan vælge en simulering for at få vist detaljer.
 
 Hvis du **vælger Vis alle simuleringer,** kommer du til **fanen Simuleringer** .
 
-Når du vælger **Start en simulering** , startes guiden til oprettelse af simulering. Du kan få mere at vide [under Simulere et phishingangreb i Defender Office 365](attack-simulation-training.md).
+Når du vælger **Start en simulering** , startes guiden til oprettelse af simulering. Du kan finde flere oplysninger [i Simulere et phishingangreb Defender for Office 365](attack-simulation-training.md).
 
-![Seneste simuleringskort på fanen Oversigt i Kursus i angrebssimulering på Microsoft 365 Defender portal.](../../media/attack-sim-training-overview-recent-simulations-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-recent-simulations-card.png" alt-text="De seneste simuleringer på fanen Oversigt i Kursus i angrebssimulering på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-overview-recent-simulations-card.png":::
 
 ### <a name="behavior-impact-on-compromise-rate-card"></a>Funktionsmådepåvirkning på forligssatskort
 
@@ -69,7 +69,7 @@ Følgende oversigtsoplysninger vises også på kortet:
 - **Brugere mindre følsomme over for phishing**: Forskellen mellem det faktiske antal brugere, der er kompromitteret ved den simulerede angreb og den forventede forfaldshastighed. Dette antal brugere er mindre tilbøjelige til at blive kompromitteret af lignende angreb i fremtiden.
 - **x % bedre end forventet rente**: Angiver, hvordan brugerne generelt gjorde det i modsætning til den forventede forligssats.
 
-![Adfærdspåvirkning på forfaldskortet på fanen Oversigt i Angrebssimuleringskursus i Microsoft 365 Defender portal.](../../media/attack-sim-training-overview-behavior-impact-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-behavior-impact-card.png" alt-text="Funktionsmådepåvirkningen på kompromitteret hastighedskort på fanen Oversigt i kursus i angrebssimulering Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-overview-behavior-impact-card.png":::
 
 Hvis du vil have vist en mere detaljeret rapport, skal **du klikke på Vis simulering og rapporten over undervisningsfuldhed**. Denne rapport forklares [senere i denne artikel](#training-efficacy-tab-for-the-attack-simulation-report).
 
@@ -77,11 +77,11 @@ Hvis du vil have vist en mere detaljeret rapport, skal **du klikke på Vis simul
 
 Kortet **Simulerings** dækning  under fanen Oversigt viser procentdelen af brugere i organisationen, som har modtaget en simulering **(** Simulerede brugere) i forhold til dem, der ikke har modtaget en simulering (**ikke-simulerede brugere**). Du kan pege på en sektion i diagrammet for at få vist det faktiske antal brugere i hver kategori.
 
-Når du **vælger Start simulering for ikke-simulerede** brugere, starter guiden til oprettelse af simulering, hvor de brugere, der ikke har modtaget simulering, automatisk vælges på **siden Målbruger** . Du kan få mere at vide [under Simulere et phishingangreb i Defender Office 365](attack-simulation-training.md).
+Når du **vælger Start simulering for ikke-simulerede** brugere, starter guiden til oprettelse af simulering, hvor de brugere, der ikke har modtaget simulering, automatisk vælges på **siden Målbruger** . Du kan finde flere oplysninger [i Simulere et phishingangreb Defender for Office 365](attack-simulation-training.md).
 
 Hvis du vælger **Vis simulerings dækningsrapport** , kommer du til [fanen Bruger dækning for angrebssimuleringsrapporten](#user-coverage-tab-for-the-attack-simulation-report).
 
-![Simulerings dækningskort på fanen Oversigt i Kursus i angrebssimulering Microsoft 365 Defender portalen.](../../media/attack-sim-training-overview-sim-coverage-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-sim-coverage-card.png" alt-text="Simulerings dækningskortet på fanen Oversigt i Kursus i angrebssimulering på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-overview-sim-coverage-card.png":::
 
 ### <a name="training-completion-card"></a>Fuldførelseskort for kurser
 
@@ -114,9 +114,9 @@ Hvis du vælger **Vis gentagelse-rapport, kommer** du til [fanen Gentag gentagel
 
 Kortet **Anbefalinger** oversigt **foreslår forskellige typer** simulering at køre.
 
-Når du vælger **Start, starter** du nu guiden til oprettelse af simulering med den angivne simuleringstype valgt automatisk på **siden Vælg** teknik. Du kan få mere at vide [under Simulere et phishingangreb i Defender Office 365](attack-simulation-training.md).
+Når du vælger **Start, starter** du nu guiden til oprettelse af simulering med den angivne simuleringstype valgt automatisk på **siden Vælg** teknik. Du kan finde flere oplysninger [i Simulere et phishingangreb Defender for Office 365](attack-simulation-training.md).
 
-![Anbefalinger på fanen Oversigt i Kursus i angrebssimulering på Microsoft 365 Defender portal.](../../media/attack-sim-training-overview-recommendations-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-recommendations-card.png" alt-text="Kortet Anbefalinger på fanen Oversigt i Kursus i angrebssimulering på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-overview-recommendations-card.png":::
 
 ### <a name="attack-simulation-report"></a>Rapport over angrebssimulering
 
@@ -126,7 +126,7 @@ Du kan åbne **simuleringsrapporten** for angreb **fra** fanen Oversigt ved at k
 
 På siden **Rapport for angrebssimulering** **er fanen Kursusfuldhed** valgt som standard. Denne fane indeholder de samme oplysninger, der er tilgængelige i Funktionsmådepåvirkning på kortet Forligssats med yderligere kontekst fra simulering selv.
 
-![Fanen Til uddannelse af effektivitet i angrebssimuleringsrapporten Microsoft 365 Defender portalen.](../../media/attack-sim-report-training-efficacy-view.png)
+:::image type="content" source="../../media/attack-sim-report-training-efficacy-view.png" alt-text="Fanen For Oplærings effektivitet i angrebssimuleringsrapporten på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-report-training-efficacy-view.png":::
 
 Diagrammet viser den forventede **forligssats** og **den faktiske kompromitterede rente**. Hvis du peger på en sektion i diagrammet, vises de faktiske procentværdier.
 
@@ -150,7 +150,7 @@ Hvis du klikker på ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.p
 
 #### <a name="user-coverage-tab-for-the-attack-simulation-report"></a>Fanen Bruger dækning for angrebssimuleringsrapporten
 
-![Fanen Brugerdækning i angrebssimuleringsrapporten Microsoft 365 Defender portalen.](../../media/attack-sim-report-user-coverage-view.png)
+:::image type="content" source="../../media/attack-sim-report-user-coverage-view.png" alt-text="Fanen Bruger dækning i angrebssimuleringsrapporten i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-report-user-coverage-view.png":::
 
 På fanen **Bruger dækning** viser diagrammet Simulerede brugere **og** **Ikke-simulerede brugere**. Hvis du peger på et datapunkt i diagrammet, vises de faktiske værdier.
 
@@ -174,7 +174,7 @@ Hvis du klikker på ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.p
 
 #### <a name="training-completion-tab-for-the-attack-simulation-report"></a>Fanen Til fuldførelse af kursus for angrebssimuleringsrapporten
 
-![Fanen Til fuldførelse af kurser i angrebssimuleringsrapporten Microsoft 365 Defender portalen.](../../media/attack-sim-report-training-completion-view.png)
+:::image type="content" source="../../media/attack-sim-report-training-completion-view.png" alt-text="Fanen For fuldførelse af kurser i angrebssimuleringsrapporten på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-report-training-completion-view.png":::
 
 På fanen **Fuldførelse af** kurser viser diagrammet antallet af **fuldførte,** **igangværende og** **ufuldstændige** simulering. Hvis du peger på en sektion i diagrammet, vises de faktiske værdier.
 
@@ -207,7 +207,7 @@ Hvis du klikker på ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.p
 
 #### <a name="repeat-offenders-tab-for-the-attack-simulation-report"></a>Fane med gentagelser for angrebssimuleringsrapporten
 
-![Gentag fanen med gentagelser i angrebssimuleringsrapporten Microsoft 365 Defender portalen.](../../media/attack-sim-report-repeat-offenders-view.png)
+:::image type="content" source="../../media/attack-sim-report-repeat-offenders-view.png" alt-text="Fanen Gentag på simuleringsrapporten i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-report-repeat-offenders-view.png":::
 
 En _gentagelse er en_ bruger, der er blevet kompromitteret af flere simuleringer efter hinanden. Standardtallet af fortløbende simuleringer er <https://security.microsoft.com/attacksimulator?viewid=setting>to, men du kan ændre værdien på fanen **Indstillinger** i Angrebssimulering på .
 
@@ -261,11 +261,11 @@ Afsnittet **Om Simuleringspåvirkning** på siden med simuleringsoplysninger vis
 
 - Links: **Indtastede legitimationsoplysninger** **og Indtastede ikke legitimationsoplysninger**.
 
-  ![Sektionen Simuleringspåvirkning for linkrelaterede simuleringsoplysninger.](../../media/attack-sim-training-sim-details-sim-impact-links.png)
+  :::image type="content" source="../../media/attack-sim-training-sim-details-sim-impact-links.png" alt-text="Afsnittet Om Simuleringspåvirkning for linkrelaterede simuleringsoplysninger" lightbox="../../media/attack-sim-training-sim-details-sim-impact-links.png":::
 
 - Vedhæftede filer: **Åbnet vedhæftet fil og** Har **ikke åbnet vedhæftet fil**.
 
-  ![Afsnittet Simulering af virkning for simuleringsrelaterede simuleringsoplysninger.](../../media/attack-sim-training-sim-details-sim-impact-attachments.png)
+  :::image type="content" source="../../media/attack-sim-training-sim-details-sim-impact-attachments.png" alt-text="Afsnittet Om Simuleringspåvirkning for oplysninger om vedhæftede filers relaterede simulering" lightbox="../../media/attack-sim-training-sim-details-sim-impact-attachments.png":::
 
 Hvis du peger på en sektion i diagrammet, vises de faktiske tal for hver kategori.
 
@@ -279,24 +279,24 @@ Sektionen **Alle brugeraktivitet på** siden med simuleringsdetaljer viser tal f
   - **EmailLinkKlik: Hvor** mange brugere der klikkede på linket i simuleringsmeddelelsen.
   - **CredSupplied**: Når du har klikket på linket, hvor mange brugere har angivet deres legitimationsoplysninger.
 
-    ![Sektionen Alle brugeraktivitet for linkrelaterede simuleringsoplysninger.](../../media/attack-sim-training-sim-details-all-user-activity-links.png)
+    :::image type="content" source="../../media/attack-sim-training-sim-details-all-user-activity-links.png" alt-text="Sektionen Alle brugeraktivitet for linkrelaterede simuleringsoplysninger" lightbox="../../media/attack-sim-training-sim-details-all-user-activity-links.png":::
 
 - Vedhæftede filer:
   - **Vedhæftet filÅbnet**: Hvor mange brugere der åbnede den vedhæftede fil i simuleringsmeddelelsen.
 
-    ![Sektionen Alle brugeraktiviteter til simuleringsrelaterede simuleringsoplysninger.](../../media/attack-sim-training-sim-details-all-user-activity-attachments.png)
+    :::image type="content" source="../../media/attack-sim-training-sim-details-all-user-activity-attachments.png" alt-text="Sektionen Alle brugeraktivitet for oplysninger om simulering relateret til vedhæftede filer" lightbox="../../media/attack-sim-training-sim-details-all-user-activity-attachments.png":::
 
 ### <a name="training-completion-section"></a>Sektionen Fuldførelse af kurser
 
 Afsnittet **Om fuldførelse** af kurser på siden med simuleringsdetaljer viser de kurser, der kræves til simulering, og hvor mange brugere der har fuldført kurserne.
 
-![Sektionen Til fuldførelse af uddannelse til simuleringsrelaterede simuleringsoplysninger.](../../media/attack-sim-training-sim-details-training-completed.png)
+:::image type="content" source="../../media/attack-sim-training-sim-details-training-completed.png" alt-text="Afsnittet Til fuldførelse af kurser til simuleringsrelaterede simuleringsoplysninger for vedhæftede filer" lightbox="../../media/attack-sim-training-sim-details-training-completed.png":::
 
 ## <a name="recommended-actions-section"></a>Sektionen Anbefalede handlinger
 
 Afsnittet **Anbefalede handlinger** på siden med simuleringsoplysninger viser anbefalede handlinger fra [Microsoft Secure Score](../defender/microsoft-secure-score.md) og den effekt, handlingen har på din Secure Score. Disse anbefalinger er baseret på den nyttebelastning, der blev brugt i simulering, og hjælper med at beskytte dine brugere og dit miljø. Når du vælger **en forbedringshandling** på listen, kommer du til placeringen for at implementere den foreslåede handling.
 
-![Sektionen Anbefalingshandlinger på kursus i angrebssimulering.](../../media/attack-sim-training-sim-details-recommended-actions.png)
+:::image type="content" source="../../media/attack-sim-training-sim-details-recommended-actions.png" alt-text="Afsnittet Anbefalingshandlinger på kursus i angrebssimulering" lightbox="../../media/attack-sim-training-sim-details-recommended-actions.png":::
 
 ## <a name="related-links"></a>Relaterede links
 

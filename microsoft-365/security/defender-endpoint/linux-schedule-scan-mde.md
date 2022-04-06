@@ -1,7 +1,7 @@
 ---
-title: Sådan planlægger du scanninger med Microsoft Defender til slutpunkt (Linux)
-description: Få mere at vide om, hvordan du planlægger en automatisk scanningstid for Microsoft Defender til Slutpunkt (Linux) for bedre at beskytte din organisations aktiver.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, linux, scanninger, antivirus, microsoft defender til slutpunkt (linux)
+title: Sådan planlægger du scanninger med Microsoft Defender for Endpoint (Linux)
+description: Få mere at vide om, hvordan du planlægger en automatisk scanningstid for Microsoft Defender for Endpoint (Linux) for bedre at beskytte din organisations aktiver.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, scans, antivirus, microsoft defender til slutpunkt (linux)
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,17 +14,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ddb02d67866e675febda59fac15e8e494188a47f
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 05e8fccc200b39a606fa67a857631e215c8d4b1c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63594696"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467615"
 ---
-# <a name="schedule-scans-with-microsoft-defender-for-endpoint-linux"></a>Planlæg scanninger med Microsoft Defender til slutpunkt (Linux)
+# <a name="schedule-scans-with-microsoft-defender-for-endpoint-linux"></a>Planlæg scanninger med Microsoft Defender for Endpoint (Linux)
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 
 Hvis du vil køre en scanning til Linux, skal [du se Understøttede kommandoer](/microsoft-365/security/defender-endpoint/linux-resources#supported-commands).
@@ -95,7 +95,7 @@ Skriv "`:wq`" uden de dobbelte anførselstegn.
 
 Hvis du vil have vist dine cron-job, skal du skrive `sudo crontab -l`
 
-:::image type="content" source="../../media/linux-mdatp-1.png" alt-text="linux mdatp.":::
+:::image type="content" source="../../media/linux-mdatp-1.png" alt-text="Linux mdatp-siden" lightbox="../../media/linux-mdatp-1.png":::
 
 #### <a name="to-inspect-cron-job-runs"></a>Sådan undersøger du kørslen af cron-job
 

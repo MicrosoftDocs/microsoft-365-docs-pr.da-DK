@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: b969efd9d83fa34ded01f8be7db7aaf4db971128
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 8991c2aca277d2a08e5f8924a5e5cb354df6dc1f
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498630"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569425"
 ---
 # <a name="assess-your-security-posture-with-microsoft-secure-score"></a>Vurder din sikkerhedsstilling med Microsoft Secure Score
 
@@ -80,7 +80,7 @@ Når du vælger en bestemt forbedringshandling, vises en pop op-meddelelse på h
 
 For at fuldføre handlingen har du nogle få muligheder:
 
-- Vælg **Administrer** for at gå til konfigurationsskærmen og foretage ændringen. Du får derefter de point, som handlingen er værd, synlig i pop op-handling. Det tager som regel ca. 24 timer, før point er opdateret.
+- Vælg **Administrer i Microsoft 365 Defender** for at gå til konfigurationsskærmen og foretage ændringen. Du får derefter de point, som handlingen er værd, synlig i pop op-pop-op-pop-op-uddelingen. Det tager som regel ca. 24 timer, før point er opdateret.
 
 - Vælg **Del** for at kopiere det direkte link til forbedringshandlingen. Du kan også vælge platformen for at dele linket, f.eks. mail, Microsoft Teams eller Microsoft Planner.
 
@@ -123,5 +123,5 @@ Hvis du har problemer, kan du fortælle os om det ved at slå et indlæg op i [c
 
 - [Oversigt over Microsoft Secure Score](microsoft-secure-score.md)
 - [Spor din Microsoft Secure Score-historik, og opfylder mål](microsoft-secure-score-history-metrics-trends.md)
-- [Hvad der kommer](microsoft-secure-score-whats-coming.md)
+- [Hvad kommer der](microsoft-secure-score-whats-coming.md)
 - [Nyheder](microsoft-secure-score-whats-new.md)

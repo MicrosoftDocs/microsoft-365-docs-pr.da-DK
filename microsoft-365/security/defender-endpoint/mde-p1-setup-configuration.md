@@ -1,5 +1,5 @@
 ---
-title: Konfigurere Microsoft Defender til Endpoint Plan 1
+title: Konfigurere og konfigurere Microsoft Defender for Endpoint Plan 1
 description: Få mere at vide om, hvordan du konfigurerer Defender til Endpoint Plan 1. Gennemse kravene, planlæg din udrulning, og konfigurer dit miljø.
 search.appverid: MET150
 author: denisebmsft
@@ -16,23 +16,23 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: b169910c9f0ae96b68711b065af4e6147ddd3ae2
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: 741450f2573e0d750a1d3de5012f97cf16a0780d
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63594611"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569086"
 ---
-# <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Konfigurere Microsoft Defender til Endpoint Plan 1
+# <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Konfigurere og konfigurere Microsoft Defender for Endpoint Plan 1
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Denne artikel beskriver, hvordan du konfigurerer Defender for Endpoint Plan 1. Uanset om du har hjælp, eller du gør det selv, kan du bruge denne artikel som vejledning i hele installationen.  
 
 ## <a name="the-setup-and-configuration-process"></a>Konfigurationsprocessen
 
-:::image type="content" source="images/mde-p1-deploymentflow.png" alt-text="Konfigurations- og installationsflow for Microsoft Defender til Endpoint Plan 1":::
+:::image type="content" source="images/mde-p1-deploymentflow.png" alt-text="Konfigurations- og installationsflow Microsoft Defender for Endpoint Plan 1" lightbox="images/mde-p1-deploymentflow.png":::
 
 Den generelle konfigurations- og konfigurationsproces for Defender til Endpoint Plan 1 er som følger: <br/><br/>
 
@@ -53,7 +53,7 @@ I følgende tabel vises de grundlæggende krav til Defender for Endpoint Plan 1:
 
 | Krav | Beskrivelse |
 |:---|:---|
-| Licenskrav | Defender for Endpoint Plan 1 (tidligere kaldet Microsoft Defender for Endpoint Lite)|
+| Licenskrav | Defender for Endpoint Plan 1 |
 | Browserkrav | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operativsystemer | Windows 10, version 1709 eller nyere <br/>macOS: 11.5 (Big Sur), 10.15.7 (Catalina) eller 10.14.6 (Mojave) <br/>iOS <br/>Android OS  |
 | Datacenter | En af følgende datacenterplaceringer: <br/>- EU <br/>- Storbritannien <br/>- USA |
@@ -65,9 +65,9 @@ Når du planlægger din installation, kan du vælge mellem flere forskellige ark
 
 | Metode | Beskrivelse |
 |:---|:---|
-| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) (inkluderet i Microsoft Endpoint Manager) | Brug Intune til at administrere slutpunkter i et oprindeligt skymiljø |
-| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Konfigurationsstyring](/mem/configmgr/core/understand/introduction) (findes i Microsoft Endpoint Manager) | Brug Intune og Konfigurationsstyring til at administrere slutpunkter og arbejdsbelastninger, der strækker sig over et lokalt miljø og et skymiljø |
-| [Konfigurationsstyring](/mem/configmgr/core/understand/introduction) | Brug Konfigurationsstyring til at beskytte slutpunkter i det lokale miljø med den skybaserede styrke fra Defender til Slutpunkt |
+| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) (inkluderet i Microsoft Endpoint Manager) | Brug Intune til at administrere slutpunkter i et indbygget skymiljø |
+| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Configuration Manager](/mem/configmgr/core/understand/introduction) (findes i Microsoft Endpoint Manager) | Brug Intune og Configuration Manager til at administrere slutpunkter og arbejdsbelastninger, der strækker sig over et lokalt miljø og et skymiljø |
+| [Konfigurationsstyring](/mem/configmgr/core/understand/introduction) | Brug Configuration Manager til at beskytte slutpunkter i det lokale miljø med den skybaserede styrke fra Defender til Slutpunkt |
 | Lokalt script downloadet fra Microsoft 365 Defender Portal | Brug lokale scripts på slutpunkter til at køre et pilotprojekt eller onboard blot nogle få enheder |
 
 Hvis du vil have mere at vide om dine installationsindstillinger, [skal du se Planlæg din Defender til slutpunktsinstallation](deployment-strategy.md). Hent derefter følgende plakat: 
@@ -77,7 +77,7 @@ Hvis du vil have mere at vide om dine installationsindstillinger, [skal du se Pl
 **[Hent installationsplakaten](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)**
 
 > [!TIP]
-> Du kan finde flere oplysninger om planlægning af din installation i [Planlæg din Microsoft Defender til slutpunktsinstallation](deployment-strategy.md).
+> Du kan finde mere detaljerede oplysninger om planlægning af din installation [i Planlæg Microsoft Defender for Endpoint installation](deployment-strategy.md).
 
 ## <a name="set-up-your-tenant-environment"></a>Konfigurer dit lejermiljø
 
@@ -119,8 +119,8 @@ Når du er klar til at onboarde din organisations slutpunkter, kan du vælge mel
 
 |Slutpunktsoperativsystemet | Onboardingmetoder|
 |---|---|
-| Windows 10 | [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/ Mobilenhedshåndtering](configure-endpoints-mdm.md) <br> [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md)  |
-| macOS | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [SYLTEF Pro](mac-install-with-jamf.md) <br> [Administration af mobilenheder](mac-install-with-other-mdm.md) |
+| Windows 10 | [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/Mobile-Enhedshåndtering](configure-endpoints-mdm.md) <br> [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md)  |
+| macOS | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [SYLTEF Pro](mac-install-with-jamf.md) <br> [Mobildata Enhedshåndtering](mac-install-with-other-mdm.md) |
 | iOS |[Appbaseret](ios-install.md) |
 | Android | [Microsoft Endpoint Manager](android-intune.md) |
 
@@ -130,7 +130,7 @@ Fortsæt derefter med at konfigurere din næste generations beskyttelse og reduk
 
 Vi anbefaler at [Microsoft Endpoint Manager](/mem) til at administrere organisationens enheder og sikkerhedsindstillinger, som vist på følgende billede:
  
-:::image type="content" source="../../media/mde-p1/endpoint-policies.png" alt-text="Slutpunktssikkerhedspolitikker i MEM":::
+:::image type="content" source="../../media/mde-p1/endpoint-policies.png" alt-text="Sikkerhedspolitikker for slutpunkter i Micorosft Endpoint Manager portal" lightbox="../../media/mde-p1/endpoint-policies.png":::
 
 Hvis du vil konfigurere din næste generations beskyttelse i Microsoft Endpoint Manager, skal du følge disse trin:
 
@@ -163,7 +163,7 @@ Reduktion af angrebsoverfladen handler om at reducere antallet af steder og måd
 
 Regler for reduktion af angrebsoverfladen er tilgængelige på enheder, der Windows. Vi anbefaler at Microsoft Endpoint Manager, som vist på følgende billede:
 
-:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Regler for reduktion af angrebsoverfladen i Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Regler for reduktion af angrebsoverfladen i Microsoft Endpoint Manager portal" lightbox="../../media/mde-p1/mem-asrpolicies.png":::
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på.
 
@@ -199,7 +199,7 @@ Du får afhjælpning af ransomware gennem [styret mappeadgang](controlled-folder
 
 Vi anbefaler, at Microsoft Endpoint Manager til at konfigurere styret mappeadgang.
 
-:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="ASR-politikker i Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="ASR-politikker i Microsoft Endpoint Manager portal" lightbox="../../media/mde-p1/mem-asrpolicies.png":::
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på. 
 
@@ -231,7 +231,7 @@ Vi anbefaler, at Microsoft Endpoint Manager til at konfigurere styret mappeadgan
 
 Du kan konfigurere Defender til slutpunkt til at blokere eller tillade flytbare enheder og filer på flytbare enheder. Vi anbefaler, at Microsoft Endpoint Manager til at konfigurere indstillingerne for enhedsstyring.
 
-:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Microsoft Endpoint Manager administrative skabeloner":::
+:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Microsoft Endpoint Manager administrative skabeloner" lightbox="../../media/mde-p1/mem-admintemplates.png":::
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på. 
 
@@ -258,13 +258,13 @@ Du kan konfigurere Defender til slutpunkt til at blokere eller tillade flytbare 
 10. På fanen **Gennemse + Opret** skal du gennemgå indstillingerne for din politik og derefter vælge **Opret**. Politikken vil blive anvendt på alle slutpunkter, der blev onboardet til Defender for Endpoint inden længe.
 
 > [!TIP]
-> Få mere at vide under [Sådan styrer du USB-enheder og andre flytbare medier ved hjælp af Microsoft Defender til slutpunkt](control-usb-devices-using-intune.md).
+> Få mere at vide under [Sådan styrer du USB-enheder og andre flytbare medier ved hjælp Microsoft Defender for Endpoint](control-usb-devices-using-intune.md).
 
 ### <a name="network-protection"></a>Netværksbeskyttelse
 
 Med netværksbeskyttelse kan du beskytte din organisation mod skadelige domæner, der kan hoste forsøg på phishing, udnyttelse og andet skadeligt indhold på internettet. Vi anbefaler, at Microsoft Endpoint Manager til at slå netværksbeskyttelse til.
 
-:::image type="content" source="../../media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Endpoint Protection-profil i Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Endpoint Protection-profil i Microsoft Endpoint Manager portalen" lightbox="../../media/mde-p1/mem-endpointprotectionprofile.png":::
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på. 
 
@@ -352,7 +352,7 @@ Med webbeskyttelse kan du beskytte din organisations enheder mod webtrusler og u
 
 Netværksfirewall er med til at reducere risikoen for sikkerhedstrusler på netværket. Dit sikkerhedsteam kan angive regler, der bestemmer, hvilken trafik der må flyde til eller fra din organisations enheder. Vi anbefaler, at Microsoft Endpoint Manager til at konfigurere din netværksfirewall. 
 
-:::image type="content" source="../../media/mde-p1/mem-firewallpolicy.png" alt-text="Firewallpolitik i Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-firewallpolicy.png" alt-text="Firewallpolitik i Microsoft Endpoint Manager portalen" lightbox="../../media/mde-p1/mem-firewallpolicy.png":::
 
 Hvis du vil konfigurere grundlæggende firewall-indstillinger, skal du følge disse trin:
 

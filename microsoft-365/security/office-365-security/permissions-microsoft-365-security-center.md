@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4e819a9de9d5ccd66caab4bc13d8b11c1a95ab03
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: bd76eed421f4d926a956508961dc44a643dbb125
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681716"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467087"
 ---
 # <a name="permissions-in-the-microsoft-365-defender-portal"></a>Tilladelser i Microsoft 365 Defender portalen
 
@@ -33,7 +33,7 @@ ms.locfileid: "63681716"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Du skal administrere sikkerhedsscenarier, der strækker sig over alle Microsoft 365 tjenester. Og du har brug for fleksibilitet til at give de rette administratortilladelser til de rette personer i organisationen.
@@ -55,7 +55,7 @@ En **rollegruppe** er et sæt roller, der gør det muligt for folk at udføre de
 
 Portalen Microsoft 365 Defender indeholder> standardrollegrupper til de mest almindelige opgaver og funktioner, du skal tildele. Generelt anbefaler vi, at du blot føjer individuelle brugere **som** medlemmer til standardrollegrupperne.
 
-![Diagram, der viser relationen mellem rollegrupper og roller og medlemmer.](../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png)
+:::image type="content" source="../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png" alt-text="Forholdet mellem en rollegruppe og dens roller og medlemmer" lightbox="../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png":::
 
 ## <a name="roles-and-role-groups-in-the-microsoft-365-defender-portal"></a>Roller og rollegrupper i Microsoft 365 Defender portalen
 
@@ -65,7 +65,7 @@ Følgende typer af roller og rollegrupper er tilgængelige på siden **& roller*
 
 - **Mail & samarbejdsroller**: Det er de samme rollegrupper, der er tilgængelige i Security & Compliance Center, men du kan administrere dem direkte i Microsoft 365 Defender-portalen. De tilladelser, du tildeler her, er specifikke for Microsoft 365 Defender-portalen, Microsoft 365 Overholdelsescenter og Security & Compliance Center og dækker ikke alle de tilladelser, der er nødvendige i andre Microsoft 365-arbejdsbelastninger.
 
-![Tilladelser & rolleside i Microsoft 365 Defender portalen.](../../media/m365-sc-permissions-and-roles-page.png)
+:::image type="content" source="../../media/m365-sc-permissions-and-roles-page.png" alt-text="Siden Tilladelser & roller i Microsoft 365 Defender portal" lightbox="../../media/m365-sc-permissions-and-roles-page.png":::
 
 ### <a name="azure-ad-roles-in-the-microsoft-365-defender-portal"></a>Azure AD-roller i Microsoft 365 Defender portal
 
@@ -73,7 +73,7 @@ Når du åbner Microsoft 365 Defender-portalen <https://security.microsoft.com> 
 
 Når du vælger en rolle, vises der en pop op-vindue med oplysninger, der indeholder en beskrivelse af rollen og brugertildelingerne. Men hvis du vil administrere disse opgaver, skal du klikke på **Administrer medlemmer i Azure AD** i pop op-menuen med oplysninger.
 
-![Link til at administrere tilladelser i Azure Active Directory.](../../media/permissions-manage-in-azure-ad-link.png)
+:::image type="content" source="../../media/permissions-manage-in-azure-ad-link.png" alt-text="Linket til at administrere tilladelser i Azure Active Directory" lightbox="../../media/permissions-manage-in-azure-ad-link.png":::
 
 Få mere at vide under [Få vist og tildel administratorroller Azure Active Directory](/azure/active-directory/users-groups-roles/directory-manage-roles-portal).
 
@@ -85,7 +85,7 @@ Få mere at vide under [Få vist og tildel administratorroller Azure Active Dire
 |**Sikkerhedsoperatør**|Få vist, undersøg og svar på aktive trusler mod Microsoft 365 brugere, enheder og indhold. Du kan finde flere oplysninger under [Sikkerhedsoperator](/azure/active-directory/roles/permissions-reference#security-operator).|
 |**Sikkerhedslæser**|Få vist og undersøg aktive trusler mod dine Microsoft 365-brugere, enheder og indhold, men (i modsætning til sikkerhedsoperatøren) har de ikke tilladelse til at reagere ved at gøre noget. Du kan finde flere oplysninger under [Sikkerhedslæser](/azure/active-directory/roles/permissions-reference#security-reader).|
 |**Sikkerhedsadministrator**|Styr din organisations overordnede sikkerhed ved at administrere sikkerhedspolitikker, gennemse sikkerhedsanalyser og rapporter på tværs af Microsoft 365-produkter og holde dig i gang med at arbejde i trusselsbilledet. Du kan finde flere oplysninger under [Sikkerhedsadministrator](/azure/active-directory/roles/permissions-reference#security-administrator).|
-|**Global læser**|Den skrivebeskyttede version af **rollen Global** administrator. Få vist alle indstillinger og administrative oplysninger på tværs Microsoft 365. Du kan finde flere oplysninger [under Global læser](/azure/active-directory/roles/permissions-reference#global-reader).|
+|**Global læser**|Den skrivebeskyttede version af **Global administrator** rolle. Få vist alle indstillinger og administrative oplysninger på tværs Microsoft 365. Du kan finde flere oplysninger [under Global læser](/azure/active-directory/roles/permissions-reference#global-reader).|
 |**Angrebssimuleringsadministrator**|Opret og administrer alle aspekter af oprettelse [af angreb](attack-simulation-training.md) , start/planlægning af en simulering og gennemgang af simuleringsresultater. Du kan få mere at vide under [Administrator for angrebssimulering](/azure/active-directory/roles/permissions-reference#attack-simulation-administrator).|
 |**Forfatter til angrebsindlæsning**|Opret angrebsbelastninger, men start eller planlæg dem ikke rent faktisk. Få mere at vide under [Forfatter til angrebsindlæsning](/azure/active-directory/roles/permissions-reference#attack-payload-author).|
 

@@ -1,6 +1,6 @@
 ---
-title: Skift fra ikke-Microsoft-slutpunktsbeskyttelse til Microsoft Defender for Endpoint
-description: Skift til en Microsoft Defender for Endpoint, som omfatter Microsoft Defender Antivirus til din løsning til slutpunktsbeskyttelse.
+title: Skift fra ikke-Microsoft-slutpunktsbeskyttelse til Microsoft Defender til slutpunkt
+description: Skift til Microsoft Defender til slutpunkt, som omfatter Microsoft Defender Antivirus for din løsning til slutpunktsbeskyttelse.
 keywords: overførsel, windows defender, avanceret slutpunktsbeskyttelse, antivirus, antimalware, passiv tilstand, aktiv tilstand
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -23,21 +23,21 @@ ms.custom: migrationguides
 ms.date: 11/29/2021
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.technology: mde
-ms.openlocfilehash: e93e762501b942a67cef35a95bb2a9a2b1113e3a
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: eb0971c6f5b8fd8bf37f3d33cb65cff8d331e0d0
+ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465855"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "63606789"
 ---
-# <a name="make-the-switch-from-non-microsoft-endpoint-protection-to-microsoft-defender-for-endpoint"></a>Skift fra ikke-Microsoft-slutpunktsbeskyttelse til Microsoft Defender for Endpoint
+# <a name="make-the-switch-from-non-microsoft-endpoint-protection-to-microsoft-defender-for-endpoint"></a>Skift fra ikke-Microsoft-slutpunktsbeskyttelse til Microsoft Defender til slutpunkt
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804) Hvis du overvejer at skifte fra en løsning, der ikke er Microsoft-slutpunktsbeskyttelse, til [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender til slutpunkt), eller du er i planlægningsfasen, kan du bruge denne artikel som vejledning. I denne artikel beskrives den overordnede proces med at flytte til Defender for Endpoint.
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804) Hvis du overvejer at skifte fra en løsning, der ikke er Microsoft-slutpunktsbeskyttelse, til [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender til slutpunkt), eller hvis du er i planlægningsfasen, kan du bruge denne artikel som vejledning. I denne artikel beskrives den overordnede proces med at flytte til Defender for Endpoint.
 
-:::image type="content" source="images/nonms-mde-migration.png" alt-text="Overførselsprocessen til at skifte din slutpunktsbeskyttelsesløsning til Defender for Endpoint" lightbox="images/nonms-mde-migration.png":::
+:::image type="content" source="images/nonms-mde-migration.png" alt-text="Skift din løsning til slutpunktsbeskyttelse til Defender til slutpunkt.":::
 
 Når du skifter til Defender for Endpoint, starter du med din ikke-Microsoft-antivirus-/antimalwarebeskyttelse i aktiv tilstand. Derefter skal du konfigurere Microsoft Defender Antivirus i passiv tilstand og onboarde dine enheder til Defender til Slutpunkt. Derefter skal du konfigurere dine funktioner til slutpunktsbeskyttelse, Microsoft Defender Antivirus til aktiv tilstand, og kontrollere, at alt fungerer korrekt. Til sidst skal du fjerne den løsning, der ikke er fra Microsoft.
 
@@ -45,8 +45,7 @@ Når du skifter til Defender for Endpoint, starter du med din ikke-Microsoft-ant
 
 Processen med at overføre til Defender til slutpunkt kan opdeles i tre faser, som beskrevet i følgende tabel:
 
-:::image type="content" source="images/phase-diagrams/migration-phases.png" alt-text="MDE-overførselsprocessen" lightbox="images/phase-diagrams/migration-phases.png":::
-
+![MDE-overførselsproces.](images/phase-diagrams/migration-phases.png)
 
 <br/><br/>
 
@@ -56,7 +55,7 @@ Processen med at overføre til Defender til slutpunkt kan opdeles i tre faser, s
 |[Konfigurer Defender til Slutpunkt](switch-to-mde-phase-2.md)|Under [**konfigurationsfasen**](switch-to-mde-phase-2.md): <br/>1. Aktivér/geninstaller Microsoft Defender Antivirus, og indstil den til passiv tilstand.<br/>2. Konfigurer Defender til slutpunkt.<br/>3. Føj Defender til slutpunkt til udeladelseslisten for din eksisterende løsning.<br/>4. Føj din eksisterende løsning til udeladelseslisten for Microsoft Defender Antivirus.<br/>5. Konfigurer dine enhedsgrupper, samlinger og organisationsenheder.<br/>6. Konfigurer dine antimalwarepolitikker og indstillinger for beskyttelse i realtid.|
 |[Onboard to Defender til Slutpunkt](switch-to-mde-phase-3.md)|I [**onboard-fasen**](switch-to-mde-phase-3.md): <br/>1. Onboard dine enheder til Defender for Endpoint.<br/>2. Kør en registreringstest.<br/>3. Bekræft, Microsoft Defender Antivirus kører i passiv tilstand.<br/>4. Hent opdateringer til Microsoft Defender Antivirus.<br/>5. Fjern din eksisterende løsning til slutpunktsbeskyttelse.<br/>6. Sørg for, at Defender til Slutpunkt fungerer korrekt.|
 
-## <a name="whats-included-in-microsoft-defender-for-endpoint"></a>Hvad er inkluderet i Microsoft Defender for Endpoint?
+## <a name="whats-included-in-microsoft-defender-for-endpoint"></a>Hvad er inkluderet i Microsoft Defender til slutpunkt?
 
 I denne overførselsvejledning fokuserer vi på næste [generations beskyttelse](microsoft-defender-antivirus-in-windows-10.md) [og slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) som et udgangspunkt for at flytte til Defender for Endpoint. Men Defender til Slutpunkt indeholder meget mere end antivirus- og slutpunktsbeskyttelse. Defender til Slutpunkt er en samlet platform til forebyggelse af beskyttelse, registrering efter brud, automatisk undersøgelse og svar. Følgende tabel opsummerer funktioner og egenskaber i Defender til slutpunkt.
 

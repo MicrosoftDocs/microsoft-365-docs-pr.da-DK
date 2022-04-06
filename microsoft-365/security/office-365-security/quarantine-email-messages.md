@@ -22,12 +22,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om karantæne i Exchange Online Protection (EOP), der indeholder potentielt skadelige eller uønskede meddelelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 509e093d1618cf17d8f5f880aa82a2c54e8204bf
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: ac2d1bf550fd340c1e94ed5f3503352b40ba6556
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63587933"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682763"
 ---
 # <a name="quarantined-email-messages-in-eop-and-defender-for-office-365"></a>Sendte mails i karantæne i EOP og Defender for Office 365
 
@@ -40,7 +40,7 @@ ms.locfileid: "63587933"
 
 I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser er karantæne tilgængelig for potentielt farlig eller uønskede meddelelser.
 
-Antimalwarepolitikker sætter automatisk en meddelelse i karantæne *, hvis* der findes vedhæftede filer, der indeholder malware. Få mere at vide under [Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md).
+Antimalwarepolitikker sætter automatisk en meddelelse i karantæne _, hvis_ der findes vedhæftede filer, der indeholder malware. Få mere at vide under [Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md).
 
 Antispam har som standard sat phishing i karantæne og phishingmeddelelser med høj tillid til samt levering af spam, spam og massemails til brugerens mappe til uønsket mail. Men du kan også oprette og tilpasse antispampolitikker for at sætte spam i karantæne, spam med høj tillid og massemails. Få mere at vide under [Konfigurer antispam-politikker i EOP](configure-your-spam-filter-policies.md).
 
@@ -58,10 +58,6 @@ Både brugere og administratorer kan arbejde med meddelelser, der er sat i karan
 
 - Hvor længe meddelelser, der er sat i karantæne, før de udløber, varierer, afhængigt af hvorfor meddelelsen blev sat i karantæne. De funktioner, der sætter meddelelser i karantæne og deres tilsvarende opbevaringsperioder, er beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Årsagen til karantæne|Standardopbevaringsperiode|Kan du tilpasse?|Kommentarer|
   |---|---|:---:|---|
   |Meddelelser, der er sat i karantæne af antispampolitikker: spam, spam, phishing, phishing med høj tillid eller massemails.|15 dage: <ul><li>I standardpolitikken for uønsket post.</li><li>I antispam-politikker, som du opretter i PowerShell.</li></ul> <p> 30 dage i politikker for uønsket post, som du opretter i Microsoft 365 Defender-portalen.|Ja|Du kan konfigurere (lavere) denne værdi i antispampolitikker. Du kan finde flere oplysninger i **indstillingen Behold spam** i karantæne for dette antal dage (_KarantæneRetentionPeriod_) i [Konfigurer antispampolitikker](configure-your-spam-filter-policies.md).|
@@ -70,7 +66,6 @@ Både brugere og administratorer kan arbejde med meddelelser, der er sat i karan
   |Meddelelser, der er sat i karantæne Pengeskab politikker for vedhæftede filer i Defender Office 365 (malwaremeddelelser).|15 dage|Nej||
   |Meddelelser, der er sat i karantæne efter regler for mailflow: handlingen er Lever **meddelelsen til den værtsbaserede karantæne** (_karantæne_).|30 dage|Nej||
   |Filer, der er sat i Pengeskab af Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams (malwarefiler).|15 dage|Nej||
-  |
 
   Når en meddelelse udløber fra karantæne, kan du ikke gendanne den.
 

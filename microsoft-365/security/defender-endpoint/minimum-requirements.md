@@ -1,5 +1,5 @@
 ---
-title: Minimumskrav til Microsoft Defender til slutpunkt
+title: Minimumskrav til Microsoft Defender for Endpoint
 description: Forstå licenskrav og krav til onboardingenheder til tjenesten
 keywords: minimumskrav, licenser, sammenligningstabel
 ms.prod: m365-security
@@ -16,33 +16,33 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 03ac5ed0d63fb88639e9b7e1b55987bf328476e1
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 754537d11a4c183cd1057b94d583a31543d9e4a5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63593434"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467351"
 ---
-# <a name="minimum-requirements-for-microsoft-defender-for-endpoint"></a>Minimumskrav til Microsoft Defender til slutpunkt
+# <a name="minimum-requirements-for-microsoft-defender-for-endpoint"></a>Minimumskrav til Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
 
 Der er nogle minimumskrav til onboardingenheder til tjenesten. Få mere at vide om licens-, hardware- og softwarekrav og andre konfigurationsindstillinger for onboardingenheder til tjenesten.
 
 > [!TIP]
 >
-> - I denne artikel beskrives minimumskravene til Microsoft Defender for Endpoint Plan 2. Hvis du leder efter oplysninger om Defender for Endpoint Plan 1, skal du se [Krav til Defender til Endpoint Plan 1](mde-p1-setup-configuration.md#review-the-requirements).
+> - I denne artikel beskrives minimumskravene til Microsoft Defender for Endpoint plan 2. Hvis du leder efter oplysninger om Defender for Endpoint Plan 1, skal du se [Krav til Defender til Endpoint Plan 1](mde-p1-setup-configuration.md#review-the-requirements).
 > - Få mere at vide om de nyeste forbedringer i Defender til Endpoint: [Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/Windows-Defender-Advanced-Threat/ct-p/WindowsDefenderAdvanced).
 > - Defender til Slutpunkt demonstrerede brancheførende optik og registreringsfunktioner i den seneste MITRE-evaluering. Læs: [Insights fra den MITRE ATT&CK-baserede evaluering](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 
 ## <a name="licensing-requirements"></a>Licenskrav
-Du kan finde oplysninger om licenskrav til Microsoft Defender til Slutpunkt under [Oplysninger om microsoft Defender til slutpunktslicenser](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
+Du kan finde oplysninger om Microsoft Defender for Endpoint du skal se [Microsoft Defender for Endpoint om licenser](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
 
 
 Du kan finde detaljerede licensoplysninger på webstedet [med produktvilkår og](https://www.microsoft.com/licensing/terms/) arbejde sammen med dit kontoteam for at få mere at vide om vilkårene og betingelserne.
@@ -76,7 +76,7 @@ Access to Defender for Endpoint is done through a browser, supporting the follow
 - Windows 10 Enterprise IoT
 
     >[!NOTE]
-    >Selvom Windows 10 IoT Enterprise er et understøttet operativsystem i Microsoft Defender til slutpunkt og gør det muligt for OEMs/ODMs at distribuere det som en del af deres produkt eller løsning, skal kunder følge OEM/ODM's vejledning vedrørende værtsbaseret installeret software og supportbarhed.
+    >Selvom Windows 10 IoT Enterprise er et understøttet operativsystem i Microsoft Defender for Endpoint og gør det muligt for OEMs/ODMs at distribuere det som en del af deres produkt eller løsning, skal kunderne følge OEM/ODM's vejledning vedrørende værtsbaseret installeret software og supportbarhed.
 
 - Windows 10 Education
 - Windows 10 Pro
@@ -101,11 +101,11 @@ Du kan finde flere oplysninger om understøttede Windows 10 i (/windows/release-
 > [!NOTE]
 > Computere, der kører mobilversioner Windows (f.eks. Windows CE og Windows 10 Mobile), understøttes ikke.
 >
-> Virtuelle maskiner, der Windows 10 Enterprise 2016 LTSB kan støde på problemer med ydeevnen, hvis de køres på ikke-Microsoft-virtualiseringsplatforme.
+> Virtual Machines kører Windows 10 Enterprise 2016 LTSB kan støde på problemer med ydeevnen, hvis den køres på ikke-Microsoft-virtualiseringsplatforme.
 >
 > Til virtuelle miljøer anbefaler vi, at du bruger Windows 10 Enterprise LTSC 2019 eller nyere.
 
-Når komponenter er opdaterede på Microsoft Windows-operativsystemer, følger Microsoft Defender til slutpunktssupport det pågældende operativsystems livscyklus. Du kan få mere at vide under Ofte [stillede spørgsmål om livscyklus](/lifecycle/faq/general-lifecycle). Nye funktioner eller funktioner leveres typisk kun på operativsystemer, der endnu ikke har nået slutningen af deres livscyklus. Sikkerhedsintelligensopdateringer (definition og programopdateringer) og registreringslogik vil fortsat være tilgængelige indtil mindst:
+Når komponenter er opdaterede på Microsoft Windows-operativsystemer, følger Microsoft Defender for Endpoint support det pågældende operativsystems livscyklus. Du kan få mere at vide under Ofte [stillede spørgsmål om livscyklus](/lifecycle/faq/general-lifecycle). Nye funktioner eller funktioner leveres typisk kun på operativsystemer, der endnu ikke har nået slutningen af deres livscyklus. Sikkerhedsintelligensopdateringer (definition og programopdateringer) og registreringslogik vil fortsat være tilgængelige indtil mindst:
 
 - Slutdato [for support](/lifecycle/products/) (for operativsystemer, der ikke har et udvidet sikkerhedsopdateringsprogram (ESU).
 - Slutningen [af ESU-datoen](/lifecycle/faq/extended-security-updates) (for operativsystemer, der har et ESU-program).
@@ -124,17 +124,17 @@ Når komponenter er opdaterede på Microsoft Windows-operativsystemer, følger M
 
 ### <a name="network-and-data-storage-and-configuration-requirements"></a>Krav til netværks- og datalagring og konfiguration
 
-Når du kører onboardingguiden for første gang, skal du vælge, hvor dine Microsoft Defender til slutpunkt-relaterede oplysninger skal gemmes: i EU, Storbritannien eller USA's datacenter.
+Når du kører onboardingguiden for første gang, skal du vælge, hvor dine Microsoft Defender for Endpoint-relaterede oplysninger gemmes: i EU, Storbritannien eller USA datacenter.
 
 > [!NOTE]
 >
 > - Du kan ikke ændre din datalagringsplacering efter første gang, du har konfigureret den.
-> - Gennemse [datalagring og beskyttelse af personlige oplysninger for Microsoft Defender til Slutpunkt](data-storage-privacy.md) for at få flere oplysninger om, hvor og hvordan Microsoft gemmer dine data.
+> - Gennemgå oplysningerne Microsoft Defender for Endpoint [datalagring og beskyttelse af personlige oplysninger](data-storage-privacy.md) for at få flere oplysninger om, hvor og hvordan Microsoft gemmer dine data.
 
 ### <a name="diagnostic-data-settings"></a>Indstillinger for diagnostiske data
 
 > [!NOTE]
-> Microsoft Defender til Slutpunkt kræver ikke et bestemt diagnosticeringsniveau, så længe det er aktiveret.
+> Microsoft Defender for Endpoint kræver ikke et bestemt diagnosticeringsniveau, så længe det er aktiveret.
 
 Sørg for, at den diagnostiske datatjeneste er aktiveret på alle enheder i organisationen.
 Denne tjeneste er som standard aktiveret. Det er god praksis at kontrollere, at du får sensordata fra dem.
@@ -153,7 +153,7 @@ Denne tjeneste er som standard aktiveret. Det er god praksis at kontrollere, at 
 
    Hvis tjenesten er aktiveret, bør resultatet se ud som på følgende skærmbillede:
 
-   ![Resultat af sc-forespørgselskommandoen for diagtrack.](images/windefatp-sc-qc-diagtrack.png)
+   :::image type="content" source="images/windefatp-sc-qc-diagtrack.png" alt-text="Resultat af sc-forespørgselskommandoen for diagtrack" lightbox="images/windefatp-sc-qc-diagtrack.png":::
 
 Du skal indstille tjenesten til at starte automatisk, hvis **START_TYPE ikke er** indstillet til **AUTO_START**.
 
@@ -183,7 +183,7 @@ Defender for Endpoint-sensoren kan bruge en daglig gennemsnitlig båndbredde på
 
 Du kan finde flere oplysninger om yderligere konfigurationsindstillinger for proxy i [Konfigurer indstillinger for enhedsproxy og Internetforbindelse](configure-proxy-internet.md).
 
-Før du onboarder enheder, skal diagnosticeringsdatatjenesten være aktiveret. Tjenesten er som standard aktiveret i Windows 10 Windows 11.
+Før du onboarder enheder, skal diagnosticeringsdatatjenesten være aktiveret. Tjenesten er som standard aktiveret i Windows 10 og Windows 11.
 
 ## <a name="microsoft-defender-antivirus-configuration-requirement"></a>Microsoft Defender Antivirus konfigurationskrav
 
@@ -204,9 +204,9 @@ Hvis du onboardingservere, og Microsoft Defender Antivirus ikke er den aktive an
 
 Hvis du kører Microsoft Defender Antivirus det primære antimalwareprodukt på dine enheder, onboarder Defender til Endpoint-agenten.
 
-Hvis du kører en tredjeparts antimalwareklient og bruger løsninger til administration af mobilenheder eller Microsoft Endpoint Manager (aktuel forgrening), skal du sikre dig, at Microsoft Defender Antivirus ELAM-driveren er aktiveret. Du kan finde flere oplysninger [under Sørg for, Microsoft Defender Antivirus ikke er deaktiveret af politikken](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+Hvis du kører en tredjeparts antimalwareklient og bruger Mobile Enhedshåndtering-løsninger eller Microsoft Endpoint Manager (aktuel forgrening), skal du sikre dig, at Microsoft Defender Antivirus ELAM-driveren er aktiveret. Du kan finde flere oplysninger [under Sørg for, Microsoft Defender Antivirus ikke er deaktiveret af politikken](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Konfigurer Microsoft Defender til udrulning af Slutpunkt](production-deployment.md)
+- [Konfigurer Microsoft Defender for Endpoint installation](production-deployment.md)
 - [Onboard-enheder](onboard-configure.md)

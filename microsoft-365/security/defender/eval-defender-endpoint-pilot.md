@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 4fff094b06dfa265f9fc44c568216582083ce1d9
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: adaf1a7798c9e2e7b016a85577c1f62995a7a78e
+ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755463"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "63606631"
 ---
 # <a name="pilot-microsoft-defender-for-endpoint"></a>Pilot af Microsoft Defender til slutpunkt
 
@@ -34,7 +34,7 @@ Denne artikel guider dig i gang med at køre et pilotprojekt for Microsoft Defen
 
 Brug følgende trin til at konfigurere pilotprojektet for Microsoft Defender til slutpunkt. 
 
-:::image type="content" source="../../media/defender/m365-defender-endpoint-pilot-steps.png" alt-text="Trinnene til at føje Microsoft Defender for Identity til Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-endpoint-pilot-steps.png":::
+![Trin til at føje Microsoft Defender for Identity til evalueringsmiljøet for Defender.](../../media/defender/m365-defender-endpoint-pilot-steps.png)
 
 - Trin 1. Bekræft pilotgruppe
 - Trin 2. Prøv funktioner

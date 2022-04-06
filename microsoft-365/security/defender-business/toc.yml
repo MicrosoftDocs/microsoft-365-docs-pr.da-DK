@@ -1,0 +1,79 @@
+- name: Microsoft Defender for Business
+  href: index.yml
+  items:
+    - name: Oversigt
+      items:
+        - name: Hvad er Microsoft Defender for Business?
+          href: mdb-overview.md
+        - name: Den forenklede konfigurationsproces
+          href: mdb-simplified-configuration.md
+        - name: Sammenlign planer for små og mellemstore virksomheder
+          href: compare-mdb-m365-plans.md
+        - name: Integration med Microsoft 365 fyrtårn
+          href: mdb-lighthouse-integration.md
+    - name: Kom i gang
+      items:
+        - name: Få Defender for Business
+          href: get-defender-business.md
+        - name: Brug konfigurationsguiden
+          href: mdb-use-wizard.md
+        - name: Kom i gang med at bruge portalen
+          href: mdb-get-started.md
+        - name: Få vist håndtering af sikkerhedsrisici dashboard
+          href: mdb-view-tvm-dashboard.md
+        - name: Prøv selvstudier og simulering
+          href: mdb-tutorials.md
+    - name: Konfigurere Defender for Business
+      items:
+        - name: Oversigt over konfiguration
+          href: mdb-setup-configuration.md
+        - name: Trin 1 – Gennemgå kravene
+          href: mdb-requirements.md
+        - name: Trin 2 – Tildel roller og tilladelser
+          href: mdb-roles-permissions.md
+        - name: Trin 3– Konfigurer mailbeskeder
+          href: mdb-email-notifications.md
+        - name: Trin 4 – Onboard-enheder
+          href: mdb-onboard-devices.md
+        - name: 'Trin 5: Konfigurer dine sikkerhedspolitikker'
+          href: mdb-configure-security-settings.md
+    - name: Få vist og reagere på registrerede trusler
+      items:
+        - name: Få vist og administrer hændelser
+          href: mdb-view-manage-incidents.md
+        - name: Reagere på og afhjælpe trusler
+          href: mdb-respond-mitigate-threats.md
+        - name: Gennemse afhjælpningshandlinger
+          href: mdb-review-remediation-actions.md
+        - name: Få vist og bruge rapporter
+          href: mdb-reports.md
+    - name: Administrere sikkerhedspolitikker
+      items:
+        - name: 'Få vist, redigere og oprette politikker'
+          href: mdb-view-edit-create-policies.md
+        - name: Politikrækkefølge
+          href: mdb-policy-order.md
+        - name: Indstillinger for næste generations beskyttelse
+          href: mdb-next-gen-configuration-settings.md
+        - name: Firewall-indstillinger
+          href: mdb-firewall.md
+        - name: Administrere regler for firewallpolitikker
+          href: mdb-custom-rules-firewall.md
+    - name: Administrer enheder
+      items:
+        - name: Få vist og administrer enheder
+          href: mdb-manage-devices.md
+        - name: Opret enhedsgrupper
+          href: mdb-create-edit-device-groups.md
+    - name: Referenceoplysninger
+      items:
+        - name: Sådan får du hjælp eller kontakter support
+          href: mdb-get-help.md
+        - name: Ofte stillede spørgsmål
+          href: mdb-faq.yml
+        - name: Fejlfinding
+          href: mdb-troubleshooting.yml
+        - name: Microsoft 365 Business Premium
+          href: /microsoft-365/business-premium
+        - name: Microsoft 365 fyrtårn
+          href: /microsoft-365/lighthouse/m365-lighthouse-overview

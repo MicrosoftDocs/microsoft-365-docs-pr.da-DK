@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du finder ressourcer til Microsoft SharePoint Syntex.
-ms.openlocfilehash: 3b8c85cfd405e68884df844c502473cdd95a4fa5
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
-ms.translationtype: MT
+ms.openlocfilehash: 1b57283b5818a7fa502e112d903f873863a6e1b6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63590441"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682058"
 ---
 # <a name="introduction-to-microsoft-sharepoint-syntex"></a>Introduktion til Microsoft SharePoint Syntex
 
@@ -41,7 +41,7 @@ Ressourcerne på denne side er designet til at komme i gang med at lære mere om
 
 ## <a name="get-started"></a>Kom i gang
 
-Ressourcerne i dette afsnit hjælper dig med at lære mere om de tre metoder til dataklassificering og udtrækning, der bruges af SharePoint Syntex: dokumentforståelse, formularbehandling og færdigbehandling.
+Ressourcerne i dette afsnit hjælper dig med at få mere at vide om metoderne til dataklassificering og udtrækning, der bruges SharePoint Syntex. Der findes to brugerdefinerede modeltyper [– dokumentforståelse](document-understanding-overview.md) [og](form-processing-overview.md) formularbehandling – og [en færdigbyggede](prebuilt-overview.md) modeltype.
 
 > [!NOTE]
 > Du kan komme i gang SharePoint Syntex uden at købe licenser ved at oprette et [indholdscenter SharePoint Administration](create-a-content-center.md). Brugere uden licens kan oprette dokumentforståelse for modeller, men de kan ikke anvende dem i et dokumentbibliotek.

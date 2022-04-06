@@ -1,6 +1,6 @@
 ---
-title: Almindelige politikker for nultillids identitet og enhedsadgang – Microsoft 365 til | Microsoft Docs
-description: Beskriver de anbefalede almindelige nultillidsidentitets- og enhedsadgangspolitikker og -konfigurationer.
+title: Almindelige Nul tillid politikker for identitet og enhedsadgang – Microsoft 365 til | Microsoft Docs
+description: Beskriver de anbefalede almindelige Nul tillid politikker og konfigurationer for enhedsadgang og -konfigurationer.
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 36df54090e80de180ffa16f41641daa6b6966eb9
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 2a12a4198b91ab6ec91e0b49b9de3647e25d0be0
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681320"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473843"
 ---
-# <a name="common-zero-trust-identity-and-device-access-policies"></a>Fælles politikker for nultillids identitet og enhedsadgang
+# <a name="common-zero-trust-identity-and-device-access-policies"></a>Almindelige Nul tillid politikker for identitet og enhedsadgang
 
-I denne artikel beskrives de almindelige anbefalede politikker for nultillidsidentitet og enhedsadgang til sikring af adgang til Microsoft 365-skytjenester, herunder programmer i det lokale miljø, der er publiceret med Azure Active Directory-programproxy (Azure AD).
+I denne artikel beskrives de anbefalede politikker for Nul tillid-identitet og enhedsadgang til sikring af adgang til Microsoft 365-skytjenester, herunder programmer i det lokale miljø, der er publiceret med Azure Active Directory (Azure AD) Programproxy.
 
 Denne vejledning beskriver, hvordan du installerer de anbefalede politikker i et nyligt klargjort miljø. Konfiguration af disse politikker i et separat laboratoriemiljø giver dig mulighed for at forstå og evaluere de anbefalede politikker, før du sætter kørslen i gang med dine præprodukt- og produktionsmiljøer. Dit nye klargjorte miljø kan være kun skybaseret eller hybridt for at afspejle dine evalueringsbehov.
 
@@ -37,7 +37,7 @@ Denne vejledning beskriver, hvordan du installerer de anbefalede politikker i et
 
 Følgende diagram illustrerer det anbefalede sæt politikker. Den viser, hvilket niveau af beskyttelse hver politik gælder for, og om politikkerne gælder for pc'er eller telefoner og tablets eller begge kategorier af enheder. Den angiver også, hvor du konfigurerer disse politikker.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-policies-byplan.png" alt-text="Almindelige politikker til konfiguration af nultillidsidentitet og enhedsadgang." lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-policies-byplan.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-policies-byplan.png" alt-text="De almindelige politikker til konfiguration af Nul tillid identitet og enhedsadgang." lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-policies-byplan.png":::
 
 
 <!--
@@ -52,7 +52,7 @@ Here's a one-page PDF summary:
 I resten af denne artikel beskrives det, hvordan disse politikker konfigureres.
 
 > [!NOTE]
-> Det anbefales, at du kræver brug af multifaktorgodkendelse (MFA), før du tilmelder enheder i Intune for at sikre, at enheden er i den tilsigtede brugers adgang. Du skal tilmelde enheder i Intune, før du kan gennemtvinge politikker for enhedsoverholdelse.
+> Det anbefales, at du kræver brug af multifaktorgodkendelse (MFA), før du tilmelder enheder i Intune for at sikre, at enheden er i den tilsigtede brugers adgang. Du skal tilmelde enheder i en Intune du kan gennemtvinge politikker for overholdelse af regler og standarder for enheder.
 
 For at give dig tid til at udføre disse opgaver anbefaler vi, at du implementerer startpolitikkerne i den rækkefølge, der er angivet i denne tabel. Men MFA-politikkerne for virksomhedssikkerhed og specialiserede sikkerhedsniveauer kan gennemføres når som helst.
 
@@ -61,11 +61,11 @@ For at give dig tid til at udføre disse opgaver anbefaler vi, at du implementer
 |**Udgangspunkt**|[Kræv MFA, når logonrisici er *mellem* eller *høj*](#require-mfa-based-on-sign-in-risk)||Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Sikkerhed|
 ||[Blokere klienter, der ikke understøtter moderne godkendelse](#block-clients-that-dont-support-multi-factor)|Klienter, der ikke bruger moderne godkendelse, kan tilsidesætte Betingede adgangspolitikker, så det er vigtigt at blokere disse.|Microsoft 365 E3 eller E5|
 ||[Brugere med høj risiko skal ændre adgangskode](#high-risk-users-must-change-password)|Tvinger brugerne til at ændre deres adgangskode, når de logger på, hvis der registreres aktivitet med høj risiko for deres konto.|Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Sikkerhed|
-||[Anvend politikker for programbeskyttelse (APP) databeskyttelse](#apply-app-data-protection-policies)|One Intune-politik for appbeskyttelse pr. platform (Windows, iOS/iPadOS, Android).|Microsoft 365 E3 eller E5|
+||[Anvend politikker for programbeskyttelse (APP) databeskyttelse](#apply-app-data-protection-policies)|Én Intune politik for appbeskyttelse pr. platform (Windows, iOS/iPadOS, Android).|Microsoft 365 E3 eller E5|
 ||[Kræv godkendte apps og appbeskyttelse](#require-approved-apps-and-app-protection)|Gennemtvinger beskyttelse af mobilapps til telefoner og tablets ved hjælp af iOS, iPadOS eller Android.|Microsoft 365 E3 eller E5|
 |**Enterprise**|[Kræv MFA, når risikoen for *at logge på er* *lav, mellem* eller *høj*](#require-mfa-based-on-sign-in-risk)||Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Sikkerhed|
 ||[Definer politikker for enhedsoverholdelse](#define-device-compliance-policies)|Én politik for hver platform.|Microsoft 365 E3 eller E5|
-||[Kræv kompatible pc'er og mobilenheder](#require-compliant-pcs-and-mobile-devices)|Gennemtvinger Intune-administration for både pc'er (Windows eller macOS) og telefoner eller tablets (iOS, iPadOS eller Android).|Microsoft 365 E3 eller E5|
+||[Kræv kompatible pc'er og mobilenheder](#require-compliant-pcs-and-mobile-devices)|Gennemtvinger Intune administration af både pc'er (Windows eller macOS) og telefoner eller tablets (iOS, iPadOS eller Android).|Microsoft 365 E3 eller E5|
 |**Speciel sikkerhed**|[*Kræv* altid MFA](#assigning-policies-to-groups-and-users)||Microsoft 365 E3 eller E5|
 
 ## <a name="assigning-policies-to-groups-and-users"></a>Tildele politikker til grupper og brugere
@@ -76,7 +76,7 @@ Det anbefales, at du opretter en Azure AD-gruppe til udelukkelse af betinget adg
 
 Her er et eksempel på gruppetildeling og udeladelse af krav til MFA.
 
-![Eksempel på gruppetildeling og udeladelse af MFA-politikker.](../../media/microsoft-365-policies-configurations/identity-access-policies-assignment.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-policies-assignment.png" alt-text="Eksempel på gruppetildeling og udeladelse for MFA-politikker" lightbox="../../media/microsoft-365-policies-configurations/identity-access-policies-assignment.png":::
 
 Her er resultaterne:
 
@@ -94,7 +94,7 @@ Vær forsigtig, når du anvender højere beskyttelsesniveauer for grupper og bru
 
 Alle Azure AD-grupper, der er oprettet som en del af disse anbefalinger, skal oprettes Microsoft 365 grupper. Dette er vigtigt for udrulningen af følsomhedsmærkater, når du sikrer dokumenter i Microsoft Teams og SharePoint.
 
-![Eksempel på oprettelse af Microsoft 365 gruppe.](../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png" alt-text="Oprette en Microsoft 365 gruppe" lightbox="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png":::
 
 ## <a name="require-mfa-based-on-sign-in-risk"></a>Kræv MFA baseret på logonrisici
 
@@ -102,7 +102,7 @@ Du skal lade dine brugere registrere MFA, før du kræver, at de bruges. Hvis du
 
 Når brugerne er registreret, kan du kræve MFA for at logge på med en ny politik for betinget adgang.
 
-1. Gå til [Azure-portalen](https://portal.azure.com), og log på med dine legitimationsoplysninger.
+1. Gå [til Azure Portal,](https://portal.azure.com) og log på med dine legitimationsoplysninger.
 2. På listen over Azure-tjenester skal du vælge **Azure Active Directory**.
 3. På listen **Administrer** skal du vælge **Sikkerhed** og derefter vælge **Betinget adgang**.
 4. Vælg **Ny politik** , og skriv navnet på den nye politik.
@@ -213,7 +213,7 @@ Rammen for app-databeskyttelse er organiseret i tre forskellige konfigurationsni
 
 Hvis du vil have vist specifikke anbefalinger for hvert konfigurationsniveau og minimumskravene til apps, der skal beskyttes, skal du gennemgå [Rammen for databeskyttelse ved hjælp af politikker for beskyttelse af apps](/mem/intune/apps/app-protection-framework).
 
-Med udgangspunkt i de principper, der er beskrevet i [Konfigurationer af Zero Trust-identitet](microsoft-365-policies-configurations.md) og enhedsadgang, knyttes udgangspunktet og Enterprise Protection-niveauerne tæt sammen med niveau 2-niveauerne for virksomhedens forbedrede indstillinger for databeskyttelse. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-indstillingerne for virksomhedssikkerhed.
+På grund af de principper, der er beskrevet [i konfigurationerne Nul tillid](microsoft-365-policies-configurations.md) identitet og enhedsadgang, knyttes udgangspunktet og Enterprise Protection-niveauerne tæt sammen med niveau 2-niveauerne for forbedret databeskyttelse for virksomheder. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-indstillingerne for virksomhedssikkerhed.
 
 |Beskyttelsesniveau|Politik for appbeskyttelse|Flere oplysninger|
 |---|---|---|
@@ -224,15 +224,15 @@ Med udgangspunkt i de principper, der er beskrevet i [Konfigurationer af Zero Tr
 Hvis du vil oprette en ny politik for beskyttelse af apps til hver platform (iOS og Android) inden for Microsoft Endpoint Manager brug af indstillingerne for databeskyttelse, kan du:
 
 1. Opret politikkerne manuelt ved at følge trinnene i [Sådan oprettes og installeres politikker for appbeskyttelse Microsoft Intune](/mem/intune/apps/app-protection-policies).
-2. Importér eksempler på [JSON-skabeloner for Intune App Protection Policy Configuration Framework](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) [med Intunes PowerShell-scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+2. Importér [eksempelskabelonerne Intune JSON-skabeloner til konfigurationspolitik](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) for [appbeskyttelse med Intune PowerShell-scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## <a name="require-approved-apps-and-app-protection"></a>Kræv godkendte apps og APP-beskyttelse
 
-Hvis du vil gennemtvinge de politikker for appbeskyttelse, du har anvendt i Intune, skal du oprette en politik for Betinget adgang, så der kræves godkendte klientapps og de betingelser, der er angivet i appbeskyttelsespolitikkerne.
+Hvis du vil gennemtvinge de Appbeskyttelse-politikker, du har anvendt i Intune, skal du oprette en politik for Betinget adgang, så der kræves godkendte klientapps og de betingelser, der er angivet i appbeskyttelsespolitikkerne.
 
-Gennemtvingelse af politikker for appbeskyttelse kræver et sæt af politikker, der er beskrevet i [Kræv appbeskyttelsespolitik for appadgang i skyen med Betinget adgang](/azure/active-directory/conditional-access/app-protection-based-conditional-access). Disse politikker er hver især inkluderet i dette anbefalede sæt identitets- og adgangskonfigurationspolitikker.
+Gennemtvingelse af Appbeskyttelse politikker kræver et sæt af politikker, der er beskrevet i Kræv [appbeskyttelsespolitik for appadgang til skyen med Betinget adgang](/azure/active-directory/conditional-access/app-protection-based-conditional-access). Disse politikker er hver især inkluderet i dette anbefalede sæt identitets- og adgangskonfigurationspolitikker.
 
-Hvis du vil oprette politikken Betinget adgang, der kræver godkendt apps og appbeskyttelse, skal du følge trinnene i Kræv godkendte klientapps eller appbeskyttelsespolitik med mobilenheder[, som](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices) kun tillader konti i mobilapps beskyttet af politikker for appbeskyttelse at få adgang til Microsoft 365-slutpunkter.
+Hvis du vil oprette politikken Betinget adgang, der kræver godkendt apps og appbeskyttelse, skal du følge trinnene i Kræv godkendte klientapps eller appbeskyttelsespolitik med mobilenheder[, som](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices) kun tillader konti i mobilapps beskyttet af Appbeskyttelse-politikker at få adgang til Microsoft 365-slutpunkter.
 
    > [!NOTE]
    > Denne politik sikrer, at mobilbrugere kan få adgang til Microsoft 365 slutpunkter ved hjælp af de relevante apps.
@@ -260,7 +260,7 @@ With Conditional Access, organizations can restrict access to approved (modern a
 
 ## <a name="define-device-compliance-policies"></a>Definer politikker for enhedsoverholdelse
 
-Politikker for enhedsoverholdelse definerer de krav, som enhederne skal opfylde for at kunne overholde kravene. Du kan oprette Politikker for overholdelse af enhed i Intune i Microsoft Endpoint Manager Administration.
+Politikker for enhedsoverholdelse definerer de krav, som enhederne skal opfylde for at kunne overholde kravene. Du opretter Intune politikker for overholdelse af enhed fra Microsoft Endpoint Manager Administration.
 
 Du skal oprette en politik for hver pc, telefon eller tabletplatform:
 
@@ -275,7 +275,7 @@ Hvis du vil oprette politikker for enhedsoverholdelse, [skal du logge på Micros
 
 For at politikker for enhedsoverholdelse skal installeres, skal de tildeles til brugergrupper. Du tildeler en politik, efter du har oprettet og gemt den. Vælg politikken i Administration, og vælg derefter **Opgaver**. Når du har valgt de grupper, du vil modtage politikken for, skal du vælge **Gem** for at gemme gruppetildelingen og implementere politikken.
 
-Du kan finde en trinvis vejledning til oprettelse af overholdelsespolitikker i Intune under Opret en politik for overholdelse [af regler og standarder Microsoft Intune](/mem/intune/protect/create-compliance-policy) i Intune-dokumentationen.
+Du kan finde en trinvis vejledning til oprettelse af politikker for Intune overholdelse af regler og [standarder i Microsoft Intune](/mem/intune/protect/create-compliance-policy) i Intune regler og standarder.
 
 ### <a name="recommended-settings-for-ios"></a>Anbefalede indstillinger for iOS
 
@@ -298,7 +298,7 @@ Til overvågede enheder:
 - Øget sikkerhed (niveau 2) – Microsoft anbefaler denne konfiguration til enheder, hvor brugere får adgang til følsomme eller fortrolige oplysninger. Denne konfiguration kontrollerer datadeling og blokerer adgang til USB-enheder. Denne konfiguration gælder for de fleste mobilbrugere, der har adgang til arbejds- eller skoledata på en enhed.
 - Høj sikkerhed (niveau 3) – Microsoft anbefaler denne konfiguration til enheder, der bruges af bestemte brugere eller grupper, som hver især har en høj risiko (brugere, der håndterer meget følsomme data, hvor uautoriseret videregivelse medfører betydelige materialetab for organisationen). Denne konfiguration har stærkere adgangskodepolitikker, deaktiverer visse enhedsfunktioner, håndhæver yderligere begrænsninger for dataoverførsel og kræver, at apps installeres via Apples volumenkøbsprogram.
 
-Med udgangspunkt i de principper, der er beskrevet i [Konfigurationer af Zero Trust-identitet](microsoft-365-policies-configurations.md) og enhedsadgang, knyttes udgangspunktet og Enterprise Protection-niveauerne tæt sammen med niveau 2-forbedrede sikkerhedsindstillinger. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-sikkerhedsindstillingerne.
+Med udgangspunkt i principperne for [Nul tillid identitet og enhedsadgangskonfigurationer knyttes](microsoft-365-policies-configurations.md) udgangspunktet og Enterprise Protection-niveauerne tæt sammen med niveau 2-udvidede sikkerhedsindstillinger. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-sikkerhedsindstillingerne.
 
 |Beskyttelsesniveau  |Enhedspolitik |Flere oplysninger  |
 |---------|---------|---------|
@@ -320,15 +320,15 @@ Sikkerhedskonfigurationsrammen for Android Enterprise er organiseret i flere for
 Til Android Enterprise-arbejdsprofilenheder:
 
 - Øget sikkerhed på arbejdsprofil (niveau 2) – Microsoft anbefaler denne konfiguration som minimumsikkerhedskonfigurationen for personlige enheder, hvor brugere får adgang til arbejds- eller skoledata. Denne konfiguration introducerer krav til adgangskoder, adskiller arbejds- og personlige data og validerer Android-enhedens udtale.
-- Arbejdsprofil høj sikkerhed (niveau 3) – Microsoft anbefaler denne konfiguration til enheder, der bruges af bestemte brugere eller grupper, som hver især har en høj risiko (brugere, der håndterer meget følsomme data, hvor uautoriseret videregivelse medfører betydelige materialetab for organisationen). Denne konfiguration introducerer beskyttelse mod mobilenheder eller Microsoft Defender til slutpunkt, indstiller minimumversionen af Android, indfører stærkere adgangskodepolitikker og begrænser yderligere arbejdsadskillelse og personlig adskillelse.
+- Arbejdsprofil høj sikkerhed (niveau 3) – Microsoft anbefaler denne konfiguration til enheder, der bruges af bestemte brugere eller grupper, som hver især har en høj risiko (brugere, der håndterer meget følsomme data, hvor uautoriseret videregivelse medfører betydelige materialetab for organisationen). Denne konfiguration introducerer beskyttelse mod mobiltrusler eller Microsoft Defender for Endpoint, angiver minimumversionen af Android, indfører stærkere adgangskodepolitikker og begrænser yderligere arbejdsadskillelse og personlig adskillelse.
 
 Til Android Enterprise-enheder, der er fuldt administreret:
 
 - Fuldstændig administreret grundlæggende sikkerhed (niveau 1) – Microsoft anbefaler denne konfiguration som minimumsikkerhedskonfigurationen for en virksomhedsenhed. Denne konfiguration gælder for de fleste mobilbrugere, der har adgang til arbejds- eller skoledata. Denne konfiguration introducerer krav til adgangskode, angiver minimumversionen af Android og indfører visse enhedsbegrænsninger.
 - Fuldt administreret udvidet sikkerhed (niveau 2) – Microsoft anbefaler denne konfiguration til enheder, hvor brugere får adgang til følsomme eller fortrolige oplysninger. Denne konfiguration aktiverer stærkere adgangskodepolitikker og deaktiverer egenskaber for bruger/konto.
-- Fuldt administreret høj sikkerhed (niveau 3) – Microsoft anbefaler denne konfiguration for enheder, der bruges af bestemte brugere eller grupper, som hver især har en høj risiko (brugere, der håndterer meget følsomme data, hvor uautoriseret videregivelse medfører betydelige materialetab for organisationen). Denne konfiguration øger minimumversionen af Android, introducerer mobiltrusler eller Microsoft Defender til slutpunkt og håndhæver yderligere enhedsbegrænsninger.
+- Fuldt administreret høj sikkerhed (niveau 3) – Microsoft anbefaler denne konfiguration for enheder, der bruges af bestemte brugere eller grupper, som hver især har en høj risiko (brugere, der håndterer meget følsomme data, hvor uautoriseret videregivelse medfører betydelige materialetab for organisationen). Denne konfiguration øger minimumversionen af Android, introducerer forsvar mod mobiltrusler eller Microsoft Defender for Endpoint og håndhæver yderligere enhedsbegrænsninger.
 
-Ved hjælp af de principper, der er beskrevet i [Konfigurationer af Zero Trust-identitet](microsoft-365-policies-configurations.md) og enhedsadgang, knyttes startniveau og Enterprise Protection-niveau tæt sammen med niveau 1-grundlæggende sikkerhed for personligt ejet enheder og niveau 2-udvidede sikkerhedsindstillinger for fuldt administrerede enheder. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-sikkerhedsindstillingerne.
+Med udgangspunkt i de principper, der er beskrevet i [konfigurationer af Nul tillid-identitet](microsoft-365-policies-configurations.md) og enhedsadgang, knyttes startniveau og Enterprise Protection-niveau tæt sammen med niveau 1-grundlæggende sikkerhed for personligt ejet enheder og niveau 2-udvidede sikkerhedsindstillinger for fuldt administrerede enheder. Det specialiserede sikkerhedsbeskyttelsesniveau er tæt forbundet med niveau 3-sikkerhedsindstillingerne.
 
 Til Android Enterprise-arbejdsprofilenheder:
 
@@ -356,7 +356,7 @@ Du **kan finde flere > Windows om evalueringsregler for enhedstilstand i** denne
 
 For **Enhedsegenskaber skal** du angive relevante værdier for operativsystemversioner baseret på it og sikkerhedspolitikker.
 
-Vælg **Kræv Konfigurationsstyring** for at sikre **overholdelse af regler og standarder**.
+Vælg **Kræv Configuration Manager** for at sikre **overholdelse af regler og standarder**.
 
 Du **kan se Systemsikkerhed** i denne tabel.
 
@@ -379,11 +379,11 @@ Du **kan se Systemsikkerhed** i denne tabel.
 ||Microsoft Defender Antimalware-signatur opdateret|Kræv|Vælg|
 ||Beskyttelse i realtid|Kræv|Vælg <p> Understøttes kun til Windows 10 og nyere computere|
 
-#### <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender til Slutpunkt
+#### <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint
 
 |Type|Egenskaber|Værdi|Handling|
 |---|---|---|---|
-|Microsoft Defender for Endpoint-regler Microsoft Endpoint Manager Administration|[Kræv, at enheden er på eller under scoren for maskinrisici](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level)|Mellem|Vælg|
+|Microsoft Defender for Endpoint regler i Microsoft Endpoint Manager Administration|[Kræv, at enheden er på eller under scoren for maskinrisici](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level)|Mellem|Vælg|
 
 <!--
 ## Require compliant PCs (but not compliant phones and tablets)
@@ -420,7 +420,7 @@ To require compliant PCs:
 
 Sådan kræver du overholdelse for alle enheder:
 
-1. Gå til [Azure-portalen](https://portal.azure.com), og log på med dine legitimationsoplysninger.
+1. Gå [til Azure Portal,](https://portal.azure.com) og log på med dine legitimationsoplysninger.
 2. På listen over Azure-tjenester skal du vælge **Azure Active Directory**.
 3. På listen **Administrer** skal du vælge **Sikkerhed** og derefter vælge **Betinget adgang**.
 4. Vælg **Ny politik** , og skriv navnet på den nye politik.
@@ -442,6 +442,6 @@ Sådan kræver du overholdelse for alle enheder:
 
 ## <a name="next-step"></a>Næste trin
 
-[![Trin 3: Politikker for gæster og eksterne brugere.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-3.png)](identity-access-policies-guest-access.md)
+[![Trin 3: Politikker for gæster og eksterne brugere.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-3.png#lightbox)](identity-access-policies-guest-access.md)
 
 [Få mere at vide om politikanbefalinger for gæster og eksterne brugere](identity-access-policies-guest-access.md)

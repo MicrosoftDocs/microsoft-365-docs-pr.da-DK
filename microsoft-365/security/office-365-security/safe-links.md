@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Få mere at Pengeskab om beskyttelse af links i Defender for Office 365 at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Pengeskab Links, og se grafik af Pengeskab Links-meddelelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 736efeb805e45170ec6471b57fc35005d0a12311
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8bd4773d3f712adf13ac2a006f5d8450c58fc89a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592345"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682080"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Pengeskab Links i Microsoft Defender til Office 365
 
@@ -84,10 +84,6 @@ Denne artikel indeholder detaljerede beskrivelser af følgende typer af Pengeska
 
 I følgende tabel beskrives scenarier for Pengeskab Links i Microsoft 365- og Office 365-organisationer, der omfatter Defender for Office 365 (Bemærk, at manglende licenser aldrig er et problem i eksemplerne).
 
-<br>
-
-****
-
 |Scenarie|Resultat|
 |---|---|
 |Jane er medlem af marketingafdelingen. Pengeskab Links-beskyttelse for Office 365-apps er slået til i de globale indstillinger for Pengeskab Links, og der findes en Pengeskab Links-politik, der gælder for medlemmer af marketingafdelingen. Jean åbner PowerPoint i en mail og klikker derefter på en URL-adresse i præsentationen.|Jean er beskyttet af Pengeskab Links. <p> Jean er inkluderet i en Pengeskab Links-politik, og Pengeskab Links-beskyttelse til Office 365-apps er slået til. <p> Du kan finde flere oplysninger om kravene til beskyttelse af Pengeskab Links i Office 365-apps i [afsnittet indstillinger for Pengeskab Links til Office 365-apps](#safe-links-settings-for-office-365-apps) senere i denne artikel.|
@@ -95,7 +91,6 @@ I følgende tabel beskrives scenarier for Pengeskab Links i Microsoft 365- og Of
 |I Pats organisation har ingen administratorer oprettet nogen Pengeskab Links-politikker, men Pengeskab Links-beskyttelse for Office 365-apps er slået til. Pat åbner et Word-dokument og klikker på en URL-adresse i filen.|Pat er ikke beskyttet af Pengeskab Links. <p> Selvom Pengeskab Links-beskyttelse for Office 365-apps er slået til globalt, er Pat ikke inkluderet i nogen aktiv Pengeskab Links-politikker, så beskyttelsen kan ikke anvendes.|
 |I Lees organisation er konfigureret `https://tailspintoys.com` på listen **Bloker følgende URL-adresser** i de globale indstillinger for Pengeskab Links. En Pengeskab links-politik, der omfatter Lee, findes allerede. Lee modtager en mail, der indeholder URL-adressen `https://tailspintoys.com/aboutus/trythispage`. Lee klikker på URL-adressen.|URL-adressen kan blive blokeret automatisk for Lee; det afhænger af URL-posten på listen, og den mailklient Lee har brugt. Du kan finde flere oplysninger i [listen "Bloker følgende URL-adresser" for Pengeskab Links](#block-the-following-urls-list-for-safe-links) senere i denne artikel.|
 |Jamie og Ane arbejder begge for contoso.com. For lang tid siden konfigurerede administratorer Pengeskab Links, der gælder for både Jamie og Bai. Jamie sender en mail til Bell uden at vide, at mailen indeholder en skadelig URL-adresse.|Indhold er beskyttet af **Pengeskab Links,** hvis politikken Pengeskab Links, der gælder for hende, er konfigureret til at gælde for meddelelser mellem interne modtagere. Du kan finde flere oplysninger [Pengeskab indstillinger for links til mails](#safe-links-settings-for-email-messages) senere i denne artikel.|
-|
 
 ## <a name="safe-links-settings-for-email-messages"></a>Pengeskab links til mails
 
@@ -281,17 +276,12 @@ Du skal konfigurere listen over URL-adresser i de globale indstillinger for Peng
 
 Eksempler på de værdier, du kan angive, og deres resultater er beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Værdi|Resultat|
 |---|---|
 |`contoso.com` <p> eller <p> `*contoso.com*`|Blokerer domænet, underdomæner og stier. f.eks. `https://www.contoso.com`, `https://sub.contoso.com`og blokeres `https://contoso.com/abc` .|
 |`https://contoso.com/a`|Blokke `https://contoso.com/a` , men ikke yderligere underpather som `https://contoso.com/a/b`.|
 |`https://contoso.com/a*`|Blokke `https://contoso.com/a` og yderligere underpather som `https://contoso.com/a/b`.|
 |`https://toys.contoso.com*`|Blokerer et underdomæne (i dette`toys` eksempel), men tillader klik til andre domæne-URL-adresser (f.eks. `https://contoso.com` eller `https://home.contoso.com`).|
-|
 
 ## <a name="do-not-rewrite-the-following-urls-lists-in-safe-links-policies"></a>"Undlad at omskrive følgende URL-adresser"-lister i Pengeskab Links-politikker
 
@@ -323,17 +313,12 @@ Hvis du vil føje poster til listen i nye eller eksisterende Pengeskab links-pol
 
 Eksempler på de værdier, du kan angive, og deres resultater er beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Værdi|Resultat|
 |---|---|
 |`contoso.com`|Tillader adgang til `https://contoso.com` , men ikke underdomæner eller stier.|
 |`*.contoso.com/*`|Giver adgang til et domæne, underdomæner og stier (f.eks. `https://www.contoso.com`, `https://www.contoso.com`, `https://maps.contoso.com`eller `https://www.contoso.com/a`). <p> Denne post er forbundet med bedre end `*contoso.com*`, fordi den ikke tillader potentielt svigagtige websteder, `https://www.falsecontoso.com` såsom eller `https://www.false.contoso.completelyfalse.com`|
 |`https://contoso.com/a`|Tillader adgang til `https://contoso.com/a`, men ikke understier som `https://contoso.com/a/b`|
 |`https://contoso.com/a/*`|Giver adgang til `https://contoso.com/a` og underpather som f.1. `https://contoso.com/a/b`|
-|
 
 ## <a name="warning-pages-from-safe-links"></a>Advarselssider fra Pengeskab Links
 

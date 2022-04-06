@@ -14,18 +14,19 @@ ms.collection:
 ms.custom:
 - AdminSurgePortfolio
 description: Tilmeld dig for at Microsoft 365 Apps for business.
-ms.openlocfilehash: 4b0dab60a8deaa5b8e2b945877906bfc6331f044
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: f174cf24f3b546bc53f7b2cb588eacf0b964c8e9
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63594100"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569108"
 ---
 # <a name="sign-up-for-a-microsoft-365-apps-for-business-subscription"></a>Tilmeld dig et Microsoft 365 Apps for business abonnement
 
 Vil du tilmelde dig et Microsoft 365 Apps for business abonnement?
 
 Der er et par måder at komme i gang på:
+
 - **[Køb](https://go.microsoft.com/fwlink/?linkid=2181424) Microsoft 365 Apps for business og fuldfør din egen konfiguration**. Hvis du vil Microsoft 365 Apps for business, [skal du følge trinnene nedenfor](#sign-up-steps).
 - **Microsoft-partnere**: Hvis du er partner, skal du [se Hent Microsoft 365 Business](../../business/get-microsoft-365-business.md).
 
@@ -47,8 +48,8 @@ Hvis du vil tilmelde dig og Microsoft 365 Apps for business, skal du udføre fø
 2. På siden **Du har valgt Microsoft 365 Apps for business** skal du angive en mailadresse, du allerede bruger. Det kan være en hvilken som helst adresse, som Microsoft skal bruge til at kommunikere med dig under installationen. Det er også den adresse, hvor vi sender dig oplysninger om din regning og fornyelser. Vælg derefter **Konfigurer konto**.
 3. Angiv dit navn, virksomhedens telefonnummer, virksomhedens størrelse, firmanavn og placering. Vælg **Næste**.
 
-> [!NOTE]
-> Vi viser dit firmanavn i Administration. Det er her, du administrerer Microsoft 365, licenser og andre funktioner og tjenester. Vi medtager det også i eventuelle interne SharePoint websteds-URL-adresser.
+   > [!NOTE]
+   > Vi viser dit firmanavn i Administration. Det er her, du administrerer Microsoft 365, licenser og andre funktioner og tjenester. Vi medtager det også i eventuelle interne SharePoint websteds-URL-adresser.
 
 4. Hjælp os med at sikre, at det er dig. Angiv et nummer, som vi kan bruge til at kontakte dig, og vælg **Send bekræftelseskode**. Du modtager en tekst. Angiv din kode, og vælg **Bekræft**.
 
@@ -66,11 +67,11 @@ Når du tilmelder dig Microsoft 365 Apps for Business, har du to muligheder for 
 
 Tabellen nedenfor beskriver hver valgmulighed.
 
-||**Mulighed 1** – Log på med en Outlook, Hotmail, Yahoo, Gmail eller en anden mailkonto|**Mulighed 2** – Tilføj et forretningsdomæne |
-|:-----|:-----|:-----|
-|Tilgængelige apps og tjenester  <br/> |Brug Word, Excel, PowerPoint, OneDrive, Teams, Access. Dette sæt apps er bedst til meget små virksomheder, der ikke har brug for brandet mail med det samme, eller som allerede bruger brandet mail fra en anden udbyder og ikke ønsker at skifte til at bruge Microsoft Exchange.  Du skal bruge Outlook med din eksisterende mailkonto (det være sig outlook.com, Hotmail, Yahoo, Gmail eller anden).  <br/> |Brug Word, Excel, PowerPoint, OneDrive, Teams, Access. Mulighed 2 giver dig også adgang til en lang række yderligere tjenester: Planlægning af Bookings-aftaler og mødeoptagelser. <br/> |
-|Påkrævet viden  <br/> |Lad os komme i gang uden teknisk viden.  <br/> |Kræver, at du køber et domæne eller ejer et domæne.  Du skal muligvis have teknisk viden for at bevise ejerskabet af domænet. <br/> |
-|Datahåndtering  <br/> |Findes i tillæg til [Microsoft-serviceaftalen](https://go.microsoft.com/fwlink/p/?linkid=2180702) og egner sig bedst til virksomheder, der ønsker fjernarbejde og samarbejdsværktøjer og er fortrolige med Microsoft, der fungerer som controller for dine data i henhold til [Microsofts](https://go.microsoft.com/fwlink/?LinkId=521839) erklæring om beskyttelse af personlige oplysninger. Abonnenter på tjenester, der bruger denne indstilling, har ikke adgang til en persons brugerindhold eller data, før et domæne er vedhæftet. Abonnenter bør evaluere overvejelser vedrørende dataejerskab og immaterielle rettigheder baseret på deres behov. Hvis du f.eks. arbejder sammen med andre brugere på et dokument, der er gemt på deres konto, kan de vælge at gøre disse dokumenter utilgængelige for dig. Derfor bør du evaluere overvejelser i forbindelse med dataejerskab og immaterielle rettigheder.  Brugerne kan vælge ikke at overføre dokumenter i deres Forenklet Sign-Up-konto til dit domænekontoabonnement separat, selv efter at du har inviteret dem til at gøre det. Det betyder, at deres dokumenter muligvis heller ikke er tilgængelige for dig, selvom du senere tilføjer en domænekonto  <br/> |Tilgængelig under [Microsoft Online-abonnementsaftale](https://go.microsoft.com/fwlink/p/?linkid=2180430) og egner sig bedst til virksomheder, der har brug for, at Microsoft fungerer som processor for deres [](https://go.microsoft.com/fwlink/p/?linkid=2180314) data i henhold til Microsofts tilføjelse til databeskyttelse og har brug for vores fulde pakke med værktøjer til fjernarbejde og samarbejde. Abonnenter, der er i regulerede brancher eller søger mere kontrol, både over dine medarbejderes brug af tjenesterne og over behandling af relaterede data fra Microsoft, bør vælge Valgmulighed 2 og vedhæfte et domæne og tilmelde sig under Enterprise-aftalen for domænekontoen. <br/> |
+|&nbsp;|**Mulighed 1** – Log på med en Outlook, Hotmail, Yahoo, Gmail eller en anden mailkonto|**Mulighed 2** – Tilføj et forretningsdomæne |
+|---|---|---|
+|Tilgængelige apps og tjenester|Brug Word, Excel, PowerPoint, OneDrive, Teams, Access. Dette sæt apps er bedst til meget små virksomheder, der ikke har brug for brandet mail med det samme, eller som allerede bruger brandet mail fra en anden udbyder og ikke ønsker at skifte til at bruge Microsoft Exchange. Du skal bruge Outlook med din eksisterende mailkonto (det være sig outlook.com, Hotmail, Yahoo, Gmail eller anden).|Brug Word, Excel, PowerPoint, OneDrive, Teams, Access. Mulighed 2 giver dig også adgang til en lang række yderligere tjenester: planlægning Bookings aftaler og mødeoptagelser.|
+|Påkrævet viden|Lad os komme i gang uden teknisk viden.|Kræver, at du køber et domæne eller ejer et domæne. Du skal muligvis have teknisk viden for at bevise ejerskabet af domænet.|
+|Datahåndtering|Findes i tillæg til [Microsoft-serviceaftalen](https://go.microsoft.com/fwlink/p/?linkid=2180702) og egner sig bedst til virksomheder, der ønsker fjernarbejde og samarbejdsværktøjer og er fortrolige med Microsoft, der fungerer som controller for dine data i henhold til [Microsofts](https://go.microsoft.com/fwlink/?LinkId=521839) erklæring om beskyttelse af personlige oplysninger. Abonnenter på tjenester, der bruger denne indstilling, har ikke adgang til en persons brugerindhold eller data, før et domæne er vedhæftet. Abonnenter bør evaluere overvejelser vedrørende dataejerskab og immaterielle rettigheder baseret på deres behov. Hvis du f.eks. arbejder sammen med andre brugere på et dokument, der er gemt på deres konto, kan de vælge at gøre disse dokumenter utilgængelige for dig. Derfor bør du evaluere overvejelser i forbindelse med dataejerskab og immaterielle rettigheder. Brugerne kan vælge ikke at overføre dokumenter i deres Forenklet Sign-Up-konto til dit domænekontoabonnement separat, selv efter at du har inviteret dem til at gøre det. Det betyder, at deres dokumenter muligvis heller ikke er tilgængelige for dig, selvom du senere tilføjer en domænekonto|Tilgængelig under [Microsoft Online-abonnementsaftale](https://go.microsoft.com/fwlink/p/?linkid=2180430) og egner sig bedst til virksomheder, der har brug for, at Microsoft fungerer som processor for deres [](https://go.microsoft.com/fwlink/p/?linkid=2180314) data i henhold til Microsofts tilføjelse til databeskyttelse og har brug for vores fulde pakke med værktøjer til fjernarbejde og samarbejde. Abonnenter, der er i regulerede brancher eller søger mere kontrol, både over dine medarbejderes brug af tjenesterne og over behandling af relaterede data fra Microsoft, bør vælge Valgmulighed 2 og vedhæfte et domæne og tilmelde sig under Enterprise-aftalen for domænekontoen.|
 
 Brug disse tre faktorer til at afgøre, hvilken af de to muligheder der bedst opfylder virksomhedens behov.
 
@@ -86,13 +87,13 @@ Dette gælder for Microsoft 365 Business Standard og Microsoft 365 Apps til virk
 
 3. På siden **Bekræftelsesoplysninger** giver vi dig nogle flere oplysninger om dit abonnement. Du kan nu gå til Microsoft 365 Administration for at tilføje brugere, installere Office-apps, invitere dit team til at bruge Microsoft 365 og meget mere. Vi sender dig også en mail med konfigurerede trin til Microsoft 365 Business Standard.
 
-Husk, at denne indstilling ikke leverer brandet mail, administratorkontrol til andre brugeres brug af tjenesterne eller branchespecifik understøttelse af overholdelse.  Abonnenter har ikke adgang til eller kontrol over andre brugeres (medarbejderes) brug af eller dokumenter under denne indstilling. Brugere kan vælge ikke at overføre data, der er oprettet i lagerplads, f.eks. OneDrive til din opgraderede domænekonto på virksomhedsniveau, hvis du ikke vælger **Valgmulighed 2**.
+Husk, at denne indstilling ikke leverer brandet mail, administratorkontrol til andre brugeres brug af tjenesterne eller branchespecifik understøttelse af overholdelse. Abonnenter har ikke adgang til eller kontrol over andre brugeres (medarbejderes) brug af eller dokumenter under denne indstilling. Brugere kan vælge ikke at overføre data, der er oprettet i lagerplads, f.eks. OneDrive til din opgraderede domænekonto på virksomhedsniveau, hvis du ikke vælger **Valgmulighed 2**.
 
 <!--This option isn't recommended for larger businesses, including specialty industries such as healthcare or legal.-->
 
 Du kan når som helst tilføje et virksomhedsdomæne for at få adgang til resten af funktionaliteten i dit abonnement på Apps til virksomheder, herunder:
 
-- Planlægning af Bookings-aftale og mødeoptagelser
+- Bookings planlægning af aftaler og mødeoptagelser
 - Delt dokumentlagring med OneDrive
 
 Følg disse trin for [at afslutte konfigurationen](setup-apps-for-business.md) af dit Microsoft 365 Apps for business abonnement. Du kan også [tilføje et domæne](../setup/add-domain.md) , når du er klar.
@@ -103,8 +104,6 @@ Hvis du vil have en vejledning til at købe eller tilføje et domæne, [skal du 
 
 ### <a name="next-steps"></a>Næste trin
 
-
-
 ## <a name="terms-of-service-update-for-simplified-sign-up-mode"></a>Serviceopdatering til Forenklet Sign-Up tilstand
 
 **Gælder for: Eksisterende abonnenter på Microsoft 365 Apps for business, der tidligere har købt via Forenklet tilmeldingstilstand**.
@@ -113,7 +112,7 @@ Hvis du tidligere har brugt Forenklet tilmeldingstilstand til at købe et virkso
 
 De forenklede Sign-Up vilkår for anvendelse er for nylig blevet opdateret, og det betyder, at de tydeliggører licensering og dataejerskab for abonnementer på flere brugere. For fortsat service af dit virksomhedsabonnement kan du enten besøge Microsoft 365 Administration og fortsætte med at bruge Forenklet tilmelding (og acceptere at bruge de opdaterede vilkår for **Microsoft-serviceaftalen**) eller besøge Administration og tilføje et **domæne (og** bruge serviceaftalen for Microsoft Online-tjenester i virksomhedsklassen). Du kan finde ud af, hvilken af disse to tilstande der bedst opfylder dine behov, ved at se tabellen øverst i denne artikel.
 
-Hvis du vælger ikke at acceptere vilkårene, vil dit abonnement ikke blive fornyet automatisk, og ved udløbet af din nuværende abonnementskontrakt mister du adgangen til Office apps.  Dine OneDrive bevares i 90 dage, så du kan tage kopier af dem, og derefter slettes de.
+Hvis du vælger ikke at acceptere vilkårene, vil dit abonnement ikke blive fornyet automatisk, og ved udløbet af din nuværende abonnementskontrakt mister du adgangen til Office apps. Dine OneDrive bevares i 90 dage, så du kan tage kopier af dem, og derefter slettes de.
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 

@@ -1,6 +1,6 @@
 ---
 title: Fejlfinding af problemer med ydeevnen
-description: Fejlfinding af højt CPU-forbrug relateret til beskyttelse i realtid i Microsoft Defender til slutpunkt.
+description: Fejlfinding af højt CPU-forbrug relateret til beskyttelse i realtid i Microsoft Defender for Endpoint.
 keywords: fejlfinding, ydeevne, høj CPU-udnyttelse, højt CPU-forbrug, fejl, rettelse, overholdelse af regler og standarder, oms, skærm, rapport, Microsoft Defender Antivirus
 search.appverid: met150
 ms.prod: m365-security
@@ -16,12 +16,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 1dfe480f36d99acfdc9dcb36e63d2eed4f22054a
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: acd778b614128dc4927766e329f8d63fcd3fad54
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63595899"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467175"
 ---
 # <a name="troubleshoot-performance-issues-related-to-real-time-protection"></a>Fejlfinding af problemer med ydeevnen i forbindelse med beskyttelse i realtid
 
@@ -30,9 +30,9 @@ ms.locfileid: "63595899"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Hvis dit system har problemer med høj CPU-brug eller ydeevne relateret til beskyttelse i realtid i Microsoft Defender til slutpunkt, kan du sende en anmodning til Microsoft-support. Følg trinnene i [Indsaml Microsoft Defender Antivirus diagnostiske data](collect-diagnostic-data.md).
+Hvis dit system har problemer med høj CPU-brug eller ydeevne relateret til beskyttelse i realtid i Microsoft Defender for Endpoint, kan du sende en anmodning til Microsoft-support. Følg trinnene i [Indsaml Microsoft Defender Antivirus diagnostiske data](collect-diagnostic-data.md).
 
 Som administrator kan du også selv foretage fejlfinding af disse problemer.
 
@@ -87,7 +87,7 @@ Process Monitor (ProcMon) er et avanceret overvågningsværktøj, der kan vise p
     1. Markér afkrydsningsfeltet ud for **Fjern blokering**.
     1. Vælg **Anvend**.
 
-    ![Fjern MOTW.](images/procmon-motw.png)
+    :::image type="content" source="images/procmon-motw.png" alt-text="Siden Fjern MOTW" lightbox="images/procmon-motw.png":::
 
 3. Udpakke filen, så `C:\temp` mappestien bliver `C:\temp\ProcessMonitor`.
 
@@ -100,21 +100,21 @@ Process Monitor (ProcMon) er et avanceret overvågningsværktøj, der kan vise p
 
         Da logføring starter automatisk, skal du vælge forstørrelsesglasikonet for at stoppe det aktuelle skærmklip eller bruge **tastaturgenvejen Ctrl+E**.
 
-        ![Forstørrelsesglasikon.](images/procmon-magglass.png)
+        :::image type="content" source="images/procmon-magglass.png" alt-text="Ikonet for forstørrelsesglasset" lightbox="images/procmon-magglass.png":::
 
         Kontrollér, om forstørrelsesglasikonet nu vises med et rødt X, for at bekræfte, at du har stoppet denne optagelse.
 
-        ![rød skråstreg.](images/procmon-magglass-stop.png)
+        :::image type="content" source="images/procmon-magglass-stop.png" alt-text="Den røde skråstreg" lightbox="images/procmon-magglass-stop.png":::
 
         Vælg derefter viskelæderikonet for at rydde den tidligere optagelse.
 
-        ![ryd ikon.](images/procmon-eraser-clear.png)
+        :::image type="content" source="images/procmon-eraser-clear.png" alt-text="Ikonet Ryd" lightbox="images/procmon-eraser-clear.png":::
 
         Eller brug tastaturgenvejen **Ctrl+X**.
 
     2. Den anden måde er at køre **kommandolinjen som** administrator og derefter køre fra stien Procesovervågning:
 
-        ![cmd procmon.](images/cmd-procmon.png)
+       :::image type="content" source="images/cmd-procmon.png" alt-text="Cmd procmon" lightbox="images/cmd-procmon.png":::
 
         ```console
         Procmon.exe /AcceptEula /Noconnect /Profiling
@@ -123,11 +123,11 @@ Process Monitor (ProcMon) er et avanceret overvågningsværktøj, der kan vise p
         > [!TIP]
         > Gør vinduet ProcMon så lille som muligt, når du henter data, så du nemt kan starte og stoppe sporingen.
         >
-        > ![Minimer Procmon.](images/procmon-minimize.png)
+        > :::image type="content" source="images/procmon-minimize.png" alt-text="Den side, der viser en minimeret procmon" lightbox="images/procmon-minimize.png":::
 
 7. Når du har fulgt en af procedurerne i trin 6, får du derefter vist en indstilling til at angive filtre. Vælg **OK**. Du kan altid filtrere resultaterne, når du er færdig med skærmbilledet.
 
-    ![Filtrering af procesnavn er Systemudeluk.](images/procmon-filter-options.png)
+   :::image type="content" source="images/procmon-filter-options.png" alt-text="Den side, hvor Systemudeluk vælges som Filter ud-procesnavn" lightbox="images/procmon-filter-options.png":::
 
 8. Hvis du vil starte hentningerne, skal du vælge forstørrelsesglasikonet igen.
 
@@ -140,7 +140,7 @@ Process Monitor (ProcMon) er et avanceret overvågningsværktøj, der kan vise p
 
 11. Hvis du vil gemme et billede med et entydigt navn og med .pml-formatet, skal **du vælge Filer** og derefter **vælge Gem...**. Sørg for at vælge alternativknapperne **Alle hændelser** og **PML -format (Native Process Monitor Format).**
 
-    ![gemme indstillinger.](images/procmon-savesettings1.png)
+    :::image type="content" source="images/procmon-savesettings1.png" alt-text="Siden med indstillinger for lagring" lightbox="images/procmon-savesettings1.png":::
 
 12. Du kan forbedre sporingen ved at ændre standardstien fra `C:\temp\ProcessMonitor\LogFile.PML` sted `C:\temp\ProcessMonitor\%ComputerName%_LogFile_MMDDYEAR_Repro_of_issue.PML` til sted:
     - `%ComputerName%` er enhedsnavnet
@@ -171,35 +171,36 @@ Du kan også bruge kommandolinjeværktøjet *tilwpr.exe*, der er tilgængeligt i
 
 2. Under *Windows-pakker* skal du højreklikke **Windows Performance Recorder**.
 
-    ![menuen Start.](images/wpr-01.png)
+   :::image type="content" source="images/wpr-01.png" alt-text="Den menuen Start" lightbox="images/wpr-01.png":::
 
     Vælg **Flere**. Vælg **Kør som administrator**.
 
 3. Når dialogboksen Kontrol af brugerkonti vises, skal du vælge **Ja**.
 
-    ![UAC.](images/wpt-yes.png)
+   :::image type="content" source="images/wpt-yes.png" alt-text="Siden UAC" lightbox="images/wpt-yes.png":::
 
-4. Derefter skal du downloade [analyseprofilen microsoft Defender for Endpoint](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) og gemme som `MDAV.wprp` i en mappe som f.eks `C:\temp`. .
+4. Derefter skal du downloade [Microsoft Defender for Endpoint analyseprofilen](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) og gemme som `MDAV.wprp` i en mappe som f.eks`C:\temp`. .
 
 5. I dialogboksen WPR skal du vælge **Flere indstillinger**.
 
-    ![Vælg flere indstillinger.](images/wpr-03.png)
+   :::image type="content" source="images/wpr-03.png" alt-text="Den side, hvor du kan vælge flere indstillinger" lightbox="images/wpr-03.png":::
+
 
 6. Vælg **Tilføj profiler ...** og gå til stien til `MDAV.wprp` filen.
 
-7. Derefter bør du kunne se et nyt profilsæt under *Brugerdefinerede mål* med navnet *Microsoft Defender til slutpunktsanalyse* nedenunder.
+7. Derefter bør du se et nyt profilsæt under *Brugerdefinerede mål* med *Microsoft Defender for Endpoint under* analyse under den.
 
-    ![i filen.](images/wpr-infile.png)
+   :::image type="content" source="images/wpr-infile.png" alt-text="Filen i" lightbox="images/wpr-infile.png":::
 
     > [!WARNING]
     > Hvis din Windows Server har 64 GB RAM eller mere, skal du bruge det brugerdefinerede mål `Microsoft Defender for Endpoint analysis for large servers` i stedet for `Microsoft Defender for Endpoint analysis`. Ellers kan systemet forbruge en stor mængde ikke-sidet puljehukommelse eller buffere, hvilket kan føre til systemne ustabil. Du kan vælge, hvilke profiler der skal tilføjes, ved at **udvide Ressourceanalyse**.
     Denne brugerdefinerede profil giver den nødvendige kontekst til dybdegående ydeevneanalyse.
 
-8. Sådan bruges den brugerdefinerede måling Microsoft Defender til slutpunkt detaljeret analyseprofil i WPR-brugergrænsefladen:
+8. Sådan bruges den brugerdefinerede Microsoft Defender for Endpoint detaljeret analyseprofil i WPR-brugergrænsefladen:
 
     1. Sørg for, at der ikke er valgt nogen profiler under *grupperne Triage* på første niveau, *Ressourceanalyse* *og Scenarieanalyse* .
     2. Vælg **Brugerdefinerede mål**.
-    3. Vælg **Microsoft Defender til slutpunktsanalyse**.
+    3. Vælg **Microsoft Defender for Endpoint analyse**.
     4. Vælg **Detaljeret** under *Detaljeniveau* .
     5. Vælg **Filer eller** **Hukommelse** under Logføringstilstand.
 
@@ -208,14 +209,14 @@ Du kan også bruge kommandolinjeværktøjet *tilwpr.exe*, der er tilgængeligt i
 
 9. Nu er du klar til at indsamle data. Afslut alle de programmer, der ikke er relevante for at genskabe ydelsesproblemet. Du kan vælge **Skjul indstillinger** for at holde pladsen optaget af WPR-vinduet lille.
 
-    ![Skjul indstillinger.](images/wpr-08.png)
+   :::image type="content" source="images/wpr-08.png" alt-text="Indstillinger for Skjul" lightbox="images/wpr-08.png":::
 
     > [!TIP]
     > Prøv at starte sporingen ved et helt antal sekunder. Eksempel: 01:30:00. Dette gør det nemmere at analysere dataene. Prøv også at holde styr på tidsstemplet på netop det tidspunkt, hvor problemet genskabes.
 
 10. Vælg **Start**.
 
-    ![Vælg starten af sporingen.](images/wpr-09.png)
+    :::image type="content" source="images/wpr-09.png" alt-text="Siden Med registrering af systemoplysninger" lightbox="images/wpr-09.png":::
 
 11. Genskab problemet.
 
@@ -224,38 +225,38 @@ Du kan også bruge kommandolinjeværktøjet *tilwpr.exe*, der er tilgængeligt i
 
 12. Vælg **Gem**.
 
-    ![Vælg Gem.](images/wpr-10.png)
+    :::image type="content" source="images/wpr-10.png" alt-text="Indstillingen Gem" lightbox="images/wpr-10.png":::
 
 13. Udfyld Skriv **en detaljeret beskrivelse af problemet: med oplysninger** om problemet, og hvordan du har genskabet problemet.
 
-    ![Udfyld detaljer.](images/wpr-12.png)
+    :::image type="content" source="images/wpr-12.png" alt-text="Den rude, hvor du udfylder" lightbox="images/wpr-12.png":::
 
     1. Vælg **Filnavn: for** at bestemme, hvor din sporingsfil skal gemmes. Som standard gemmes den på `%user%\Documents\WPR Files\`.
     1. Vælg **Gem**.
 
 14. Vent, mens sporingen flettes.
 
-    ![WPR indsamler generel sporing.](images/wpr-13.png)
+    :::image type="content" source="images/wpr-13.png" alt-text="WPR-indsamling af generel sporing" lightbox="images/wpr-13.png":::
 
 15. Når sporingen er gemt, skal du **vælge Åbn mappe**.
 
-    ![WPR-sporing gemt.](images/wpr-14.png)
+    :::image type="content" source="images/wpr-14.png" alt-text="Den side, der viser meddelelsen om, at WPR-sporingen er blevet gemt" lightbox="images/wpr-14.png":::
 
     Medtag både filen og mappen i din indsendelse til Microsoft Support.
 
-    ![Fil og mappe.](images/wpr-15.png)
+    :::image type="content" source="images/wpr-15.png" alt-text="Oplysninger om filen og mappen" lightbox="images/wpr-15.png":::
 
 ### <a name="capture-performance-logs-using-the-wpr-cli"></a>Registrere ydeevnelogfiler ved hjælp af WPR CLI
 
 Kommandolinjeværktøjet til *wpr.exe* er en del af operativsystemet, der starter Windows 8. Sådan indsamler du en WPR-sporing ved hjælp af kommandolinjeværktøjet wpr.exe:
 
-1. Download **[Microsoft Defender for Endpoint-analyseprofilen](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** for ydeevnespor til en fil, der er navngivet `MDAV.wprp` i en lokal mappe, f.eks `C:\traces`. .
+1. Download **[Microsoft Defender for Endpoint analyseprofil for](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** ydeevnesporing til en fil, der er navngivet i `MDAV.wprp` en lokal mappe, f.eks`C:\traces`. .
 
 2. Højreklik på ikonet **for menuen Start**, og vælg **Windows PowerShell (administrator)** eller Kommandoprompt **(administrator)** for at åbne et vindue med en administratorkommandoprompt.
 
 3. Når dialogboksen Kontrol af brugerkonti vises, skal du vælge **Ja**.
 
-4. Ved den hævede prompt skal du køre følgende kommando for at starte en Microsoft Defender for Endpoint-ydeevnesporing:
+4. Ved den hævede prompt skal du køre følgende kommando for at starte en Microsoft Defender for Endpoint af ydeevnen:
 
     ```console
     wpr.exe -start C:\traces\MDAV.wprp!WD.Verbose -filemode

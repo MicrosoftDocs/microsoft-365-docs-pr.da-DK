@@ -15,12 +15,12 @@ ms.custom:
 description: Administratorer kan lære, hvordan de bruger kortet Mailflow i dashboardet Mailflow i Security & Compliance Center til at visualisere og registrere, hvordan mailflows til og fra deres organisation over forbindelser og uden brug af forbindelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 53c86584680f14c68b8d69ac0a0c2fc51933db28
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: bd8df34c9484b7a2b8aa2bdd57d160e22f71d247
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680132"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473799"
 ---
 # <a name="mail-flow-map-in-the-security--compliance-center"></a>Mailflowoversigt i Security & Compliance Center
 
@@ -28,12 +28,12 @@ ms.locfileid: "63680132"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 **Mailflowoversigten** i [dashboardet Mailflow](mail-flow-insights-v2.md) i [Security & Compliance Center](https://protection.office.com) giver indsigt i, hvordan mail flyder gennem din organisation. Du kan bruge disse oplysninger til at lære mønstre, identificere anomalies og løse problemer, når de opstår.
 
-![Widget for mailflowkort i dashboardet mailflow i & Compliance Center.](../../media/mfi-mail-flow-map-widget.png)
+:::image type="content" source="../../media/mfi-mail-flow-map-widget.png" alt-text="Widget'en Mailflow map i dashboardet for mailflow i & Compliance Center" lightbox="../../media/mfi-mail-flow-map-widget.png":::
 
 Widgetten viser som standard mønsteret for mailflow fra den forrige dag i et diagram kaldet et *Sankey-diagram* . Du kan bruge venstre pil ![Venstre pil.](../../media/scc-left-arrow.png) og højre pil ![Højre pil for](../../media/scc-right-arrow.png) at vise oplysninger fra forskellige dage. Hver forskellig farve repræsenterer mailflow over en forskellig indgående eller udgående forbindelse (eller uden brug af forbindelser). Hvis du peger på en bestemt farve, vises antallet af meddelelser for den pågældende type forbindelse.
 
@@ -45,11 +45,11 @@ Følgende diagrammer er tilgængelige i rapportvisningen:
 
 - **Vis data for: Oversigt**: Dette er grundlæggende en større visning af widgetten. Hvis du peger på en bestemt farve, vises antallet af meddelelser for den pågældende type forbindelse.
 
-  ![Oversigtsvisning i rapporten Tilknyt mailflow.](../../media/mfi-mail-flow-map-report-overview.png)
+    :::image type="content" source="../../media/mfi-mail-flow-map-report-overview.png" alt-text="Visningen Oversigt i rapporten Tilknyt mailflow" lightbox="../../media/mfi-mail-flow-map-report-overview.png":::
 
 - **Vis data for: Detaljer**: Denne visning viser detaljer om forbindelser og destinationsdomæner. De øverste afsender- og modtagerdomæner vises, og resten er angivet i **Andre**. Hvis du peger på en bestemt farve og sektion, vises antallet af meddelelser.
 
-  ![Detaljevisning i rapporten Tilknyt mailflow.](../../media/mfi-mail-flow-map-report-detail.png)
+    :::image type="content" source="../../media/mfi-mail-flow-map-report-detail.png" alt-text="Detaljevisning i rapporten Tilknyt mailflow" lightbox="../../media/mfi-mail-flow-map-report-detail.png":::
 
 Hvis du klikker **på** Filtre i en rapportvisning, kan du angive et datointerval **med Startdato** **og Slutdato**.
 
@@ -71,7 +71,7 @@ Hvis du klikker **på** Filtre i en detaljeret tabelvisning, kan du angive et da
 
 Hvis du vælger en række, vises der lignende detaljer i en pop op-pop-op-uddeling:
 
-![Pop op-meddelelse med detaljer fra detaljetabellen i oversigten over mailflow.](../../media/mfi-mail-flow-map-view-details-table-details.png)
+:::image type="content" source="../../media/mfi-mail-flow-map-view-details-table-details.png" alt-text="Pop op-pop op-pop-op-mailen med oplysninger i detaljetabellen i mailflowoversigten" lightbox="../../media/mfi-mail-flow-map-view-details-table-details.png":::
 
 Hvis du vil sende rapporten for et bestemt datointerval til en eller flere modtagere, skal du klikke på **Anmod om download**.
 

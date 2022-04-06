@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 6/29/2018
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 f1.keywords:
@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: 4307bdbf-6097-458d-9a6a-048112695c59
 description: Som administrator kan du finde hjælp til at konfigurere dele af Skype for Business Online, herunder dit netværk, møder og chat samt ekstern adgang for brugere.
-ms.openlocfilehash: 00ddd9072fccf07d7d0d5d2c148950112d40e075
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3be6eaaf5d39ebb62dcc4a7cc090633147681301
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590324"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682124"
 ---
 # <a name="skype-for-business-online-in-office-365---admin-help"></a>Skype for Business Online i Office 365 – Hjælp til administratorer
 

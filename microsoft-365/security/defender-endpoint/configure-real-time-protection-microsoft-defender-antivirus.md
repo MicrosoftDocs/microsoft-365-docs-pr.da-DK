@@ -15,20 +15,20 @@ ms.date: 10/22/2021
 manager: dansimp
 ms.custom: nextgen
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9af87907c476b637ddc484bbb3357b143219107e
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 245aad5498793d951de68e5bf4c3e91510c7d774
+ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473205"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "63606493"
 ---
 # <a name="enable-and-configure-microsoft-defender-antivirus-always-on-protection-in-group-policy"></a>Aktivér og konfigurer Microsoft Defender Antivirus altid-on-beskyttelse i Gruppepolitik
 
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Altid on-beskyttelse består af beskyttelse i realtid, overvågning af funktionsmåder og heuristics til at identificere malware baseret på kendte mistænkelige og skadelige aktiviteter.
 
@@ -36,19 +36,19 @@ Disse aktiviteter omfatter hændelser, f.eks. processer, der foretager usædvanl
 
 ## <a name="enable-and-configure-always-on-protection-in-group-policy"></a>Aktivér og konfigurer altid-on-beskyttelse i Gruppepolitik
 
-Du kan bruge **Lokal Gruppepolitik Editor** til at aktivere og konfigurere Microsoft Defender Antivirus indstillingerne for altid on-on-beskyttelse.
+Du kan bruge **Local Gruppepolitik Editor** til at aktivere Microsoft Defender Antivirus indstillingerne for altid on-on-beskyttelse.
 
 Sådan aktiveres og konfigureres altid-on-beskyttelse:
 
 1. Åbn **Editor Gruppepolitik lokal tekst** som følger:
 
-    1. Skriv **gpedit** Windows 11 Windows 10 søgefeltet i søgefeltet på proceslinjen.
+    1. Skriv gpedit Windows 10 Windows søgefeltet på 11 **proceslinje i søgefeltet**.
 
-    2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte Lokal Gruppepolitik Editor**.
+    2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte lokal Gruppepolitik Editor**.
     
-       :::image type="content" source="images/gpedit-search.png" alt-text="Søgeresultatet for GPEdit-proceslinjen i Kontrolpanelet" lightbox="images/gpedit-search.png":::
+       ![SØGEresultat for GPEdit på proceslinjen.](images/gpedit-search.png)
 
-2. I venstre rude i **Editor til Gruppepolitik lokal konfiguration** skal du udvide træet til Administrative skabeloner for **computerkonfiguration** \> \> **Windows Komponenter** \> **Microsoft Defender Antivirus**.
+2. I venstre rude i **Editor til Gruppepolitik lokal konfiguration** skal du udvide træet til Administrative skabeloner **for computerkonfiguration** \> \> **Windows Komponenter** \> **Microsoft Defender Antivirus**.
 
 3. Konfigurer Microsoft Defender Antivirus for antimalwaretjeneste.
 
@@ -86,11 +86,11 @@ Sådan aktiveres og konfigureres altid-on-beskyttelse:
 |Slå rå meddelelser om lydstyrke til <p> Oplysninger om rå volumenskrivninger analyseres ved hjælp af overvågning af funktionsmåder.|Aktiveret|
 |Slå processcanning til, når beskyttelse i realtid er aktiveret <p> Du kan uafhængigt aktivere Microsoft Defender Antivirus til at scanne kører processer for mistænkelige ændringer eller funktionsmåder. Dette er nyttigt, hvis du midlertidigt har deaktiveret beskyttelse i realtid og automatisk vil scanne processer, der startede, da den var deaktiveret.|Aktiveret|
 |Definer den maksimale størrelse på downloadede filer og vedhæftede filer, der skal scannes <p> Du kan definere størrelsen i kilobyte.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for at aktivere overvågning af funktionsmåder <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af funktionsmåder. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik en prioritet over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for scanning af alle downloadede filer og vedhæftede filer <p> Konfigurer en lokal tilsidesættelse for konfiguration af scanning for alle downloadede filer og vedhæftede filer. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik en prioritet over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af fil- og programaktivitet på computeren <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning for fil- og programaktivitet på computeren. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik en prioritet over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurer tilsidesættelse af lokale indstillinger for at aktivere beskyttelse i realtid <p> Konfigurer en lokal tilsidesættelse for konfigurationen for at aktivere beskyttelse i realtid. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik en prioritet over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af indgående og udgående filaktivitet <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af indgående og udgående filaktivitet. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik en prioritet over indstillingen for den lokale indstilling.|Aktiveret|
+|Konfigurere tilsidesættelse af lokale indstillinger for at aktivere overvågning af funktionsmåder <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af funktionsmåder. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
+|Konfigurere tilsidesættelse af lokale indstillinger for scanning af alle downloadede filer og vedhæftede filer <p> Konfigurer en lokal tilsidesættelse for konfiguration af scanning for alle downloadede filer og vedhæftede filer. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
+|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af fil- og programaktivitet på computeren <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning for fil- og programaktivitet på computeren. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
+|Konfigurer tilsidesættelse af lokale indstillinger for at aktivere beskyttelse i realtid <p> Konfigurer en lokal tilsidesættelse for konfigurationen for at aktivere beskyttelse i realtid. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
+|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af indgående og udgående filaktivitet <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af indgående og udgående filaktivitet. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
 |Konfigurere overvågning af indgående og udgående fil- og programaktivitet <p> Angiv, om overvågning skal udføres på indgående, udgående, begge eller ingen retning. Denne handling er relevant for Windows Server-installationer, hvor du har defineret bestemte servere eller serverroller, der kun ser store mængder filændringer i én retning, og du vil forbedre netværkets ydeevne. Fuldt opdaterede slutpunkter (og servere) på et netværk vil kun få mindre indflydelse på ydeevnen uanset antallet eller retningen af filændringer.|Aktiveret (begge retninger)|
 
 ## <a name="disable-real-time-protection-in-group-policy"></a>Deaktiver beskyttelse i realtid i Gruppepolitik
@@ -104,10 +104,10 @@ Den primære funktion til beskyttelse i realtid er aktiveret som standard, men d
 
 1. Åbn **Lokal Gruppepolitik Editor**.
 
-   1. Skriv **gpedit** Windows 11 Windows 10 søgefeltet i søgefeltet på proceslinjen.
-   2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte Lokal Gruppepolitik Editor**.
+   1. Skriv gpedit Windows 10 Windows søgefeltet på 11 **proceslinje i søgefeltet**.
+   2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte lokal Gruppepolitik Editor**.
 
-2. I venstre rude i  **Local Gruppepolitik Editor** skal du udvide træet til Administrative skabeloner til **computerkonfiguration** \> \> **Windows Komponenter** \> **Microsoft Defender Antivirus** \> **Beskyttelse i realtid**.
+2. I venstre  rude i **Local Gruppepolitik Editor** skal du udvide træet til Administrative skabeloner til **computerkonfiguration** \> \> **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Beskyttelse i realtid**.
 
 3. I **detaljeruden Beskyttelse i realtid** til højre skal du dobbeltklikke på **Slå beskyttelse i realtid fra**.
 

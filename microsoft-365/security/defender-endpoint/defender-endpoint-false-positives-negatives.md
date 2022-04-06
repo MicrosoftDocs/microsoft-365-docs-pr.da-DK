@@ -23,12 +23,12 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: 214aafec22e26e5c69b40021eecb185a8dbfcbb2
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 0352fde9756efce3011db24c915f287c358f313b
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681628"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63606432"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Adressere falske positive/negativer i Microsoft Defender til slutpunkt
 
@@ -182,7 +182,7 @@ Du kan rulle en fil tilbage og fjerne den fra karantæne, hvis du har besluttet,
 2. Angiv følgende kommando, og tryk på **Enter**:
 
     ```console
-    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+    "ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
     ```
 
     > [!IMPORTANT]

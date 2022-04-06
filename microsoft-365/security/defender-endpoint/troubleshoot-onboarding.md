@@ -1,6 +1,6 @@
 ---
-title: Fejlfinding af onboardingproblemer i Microsoft Defender til Slutpunkt
-description: Fejlfinding af problemer, der kan opstå under onboarding af enheder eller til Microsoft Defender for Endpoint-tjenesten.
+title: Fejlfinding Microsoft Defender for Endpoint onboardingproblemer
+description: Foretag fejlfinding af problemer, der kan opstå under onboarding af enheder eller Microsoft Defender for Endpoint-tjenesten.
 keywords: fejlfinding af onboarding, onboardingproblemer, logføring, dataindsamling og eksempel builds, sensordata og diagnosticering
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,28 +14,28 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: 06e0b66a9682f076fcf9a23969328971c784723d
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 9813857bffe62ab26d377d49b2830f55d0f38f93
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63591872"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473491"
 ---
-# <a name="troubleshoot-microsoft-defender-for-endpoint-onboarding-issues"></a>Fejlfinding af onboardingproblemer i Microsoft Defender til Slutpunkt
+# <a name="troubleshoot-microsoft-defender-for-endpoint-onboarding-issues"></a>Fejlfinding Microsoft Defender for Endpoint onboardingproblemer
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Windows Server 2012 R2
 - Windows Server 2016
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
-Du skal muligvis foretage fejlfinding af onboardingprocessen for Microsoft Defender til Slutpunkt, hvis du støder på problemer.
+Du skal muligvis foretage fejlfinding af Microsoft Defender for Endpoint onboardingprocessen, hvis du støder på problemer.
 Denne side indeholder detaljerede trin til fejlfinding af onboardingproblemer, der kan opstå, når du installerer med et af installationsværktøjerne, og almindelige fejl, der kan opstå på enhederne.
 
 Før du går i gang med fejlfinding af problemer med onboardingværktøjer, er det vigtigt at kontrollere, om minimumskravene er opfyldt for onboardingenheder til tjenesterne. [Få mere at vide om krav til licenser, hardware og software for onboardingenheder til tjenesten](minimum-requirements.md).
@@ -44,7 +44,7 @@ Før du går i gang med fejlfinding af problemer med onboardingværktøjer, er d
 
 Hvis du har fuldført onboardingprocessen og ikke kan se enheder på listen Enheder efter [](investigate-machines.md) en time, kan det angive et problem med onboarding eller forbindelse.
 
-### <a name="troubleshoot-onboarding-when-deploying-with-group-policy"></a>Fejlfinding af onboarding ved implementering med Gruppepolitik
+### <a name="troubleshoot-onboarding-when-deploying-with-group-policy"></a>Fejlfinding i forbindelse med onboarding, når du installerer med Gruppepolitik
 
 Installation med Gruppepolitik udføres ved at køre onboarding-scriptet på enhederne. Den Gruppepolitik konsol angiver ikke, om installationen er fuldført eller ej.
 
@@ -54,13 +54,13 @@ Hvis scriptet er fuldført korrekt, skal du [se Fejlfinding af onboardingproblem
 
 ### <a name="troubleshoot-onboarding-issues-when-deploying-with-microsoft-endpoint-configuration-manager"></a>Fejlfinding af onboardingproblemer ved installation med Microsoft Endpoint Configuration Manager
 
-Når du onboarder enheder ved hjælp af følgende versioner af Konfigurationsstyring:
+Når du onboarder enheder ved hjælp af følgende versioner af Configuration Manager:
 
 - Microsoft Endpoint Configuration Manager
-- System Center 2012 Konfigurationsstyring
-- System Center 2012 R2 Konfigurationsstyring
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 Configuration Manager
 
-Installation med de ovennævnte versioner af Konfigurationsstyring udføres ved at køre onboarding-scriptet på enhederne. Du kan spore installationen i Konfigurationsstyring Konsol.
+Installation med de ovennævnte versioner af Configuration Manager udføres ved at køre onboarding-scriptet på enhederne. Du kan spore installationen i Configuration Manager Konsol.
 
 Hvis installationen mislykkes, kan du kontrollere outputtet fra scriptet på enhederne.
 
@@ -70,7 +70,7 @@ Hvis onboarding blev gennemført uden problemer, men enhederne ikke vises på li
 
 **Kontrollér resultatet af scriptet på enheden:**
 
-1. Klik **på Start**, skriv **Log på**, og tryk på **Enter**.
+1. Klik **på Start**, **skriv Logbog**, og tryk på **Enter**.
 
 2. Gå **til Windows Logføring**\>.
 
@@ -107,7 +107,7 @@ Brug følgende tabeller til at forstå de mulige årsager til problemer under on
 
 - Microsoft Intune fejlkoder og OMA-URIs tabel
 - Kendte problemer med ikke-overholdelsestabel
-- Tabel med hændelseslogfiler til administration af mobilenheder (MDM)
+- Tabel med Enhedshåndtering for hændelseslogfiler (mobile Enhedshåndtering)
 
 Hvis ingen af hændelseslogfilerne og fejlfindingstrinnene fungerer, skal du  downloade det lokale script fra sektionen Enhedshåndtering på portalen og køre det i en kommandoprompt med administrator administrator.
 
@@ -120,10 +120,10 @@ Hvis ingen af hændelseslogfilerne og fejlfindingstrinnene fungerer, skal du  do
 |Fejlkode hex|Fejlkode dec|Fejlbeskrivelse|OMA-URI|Mulige trin til årsag og fejlfinding|
 |:---:|---|---|---|---|
 |0x87D1FDE8|-2016281112|Afhjælpning mislykkedes|Onboarding <p> Offboarding|**Mulig årsag:** Onboarding eller offboarding mislykkedes på en forkert blob: forkert signatur eller manglende PreviousOrgIds-felter. <p> **Fejlfindingstrin:** <p> Kontrollér hændelses-iD'erne i [sektionen Vis onboarding af agent i sektionen Enhedshændelseslog](#view-agent-onboarding-errors-in-the-device-event-log) . <p> Kontrollér MDM-hændelseslogfilerne i følgende tabel, eller følg vejledningen i [Diagnosticere MDM-fejl Windows](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).|
-||||Onboarding <p> Offboarding <p> Eksempeldeling|**Mulig årsag:** Registreringsdatabasenøglen Microsoft Defender for Endpoint Policy findes ikke, eller OMA DM-klienten har ikke tilladelse til at skrive til den. <p> **Fejlfindingstrin:** Sørg for, at følgende registreringsdatabasenøgle findes: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <p> Hvis den ikke findes, skal du åbne en kommando med administrator og tilføje nøglen.|
+||||Onboarding <p> Offboarding <p> Eksempeldeling|**Mulig årsag:** Microsoft Defender for Endpoint en registreringsdatabasenøgle til politik findes ikke, eller OMA DM-klienten har ikke tilladelse til at skrive til den. <p> **Fejlfindingstrin:** Sørg for, at følgende registreringsdatabasenøgle findes: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <p> Hvis den ikke findes, skal du åbne en kommando med administrator og tilføje nøglen.|
 ||||SenseIsRunning <p> OnboardingState <p> OrgId|**Mulig årsag:** Et forsøg på at afhjælpe dette i skrivebeskyttet egenskab. Onboarding mislykkedes. <p> **Fejlfindingstrin:** Se fejlfindingstrinnene [i Fejlfinding af onboardingproblemer på enheden](#troubleshoot-onboarding-issues-on-the-device). <p> Kontrollér MDM-hændelseslogfilerne i følgende tabel, eller følg vejledningen i [Diagnosticere MDM-fejl Windows](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).|
-||||Alle|**Mulig årsag:** Forsøg at installere Microsoft Defender til slutpunkt på ikke-understøttet SKU/platform, især Holographic SKU. <p> Aktuelt understøttede platforme: <p> Enterprise, Education og Professional.<p> Serveren understøttes ikke.|
-|0x87D101A9|-2016345687|SyncML(425): Den anmodede kommando mislykkedes, fordi afsenderen ikke har tilstrækkelige adgangskontroltilladelser (ACL) på modtageren.|Alle|**Mulig årsag:** Forsøg at installere Microsoft Defender til slutpunkt på ikke-understøttet SKU/platform, især Holographic SKU.<p> Aktuelt understøttede platforme: <p> Enterprise, Education og Professional.|
+||||Alle|**Mulig årsag:** Forsøg at installere Microsoft Defender for Endpoint på ikke-understøttet SKU/platform, især Holographic SKU. <p> Aktuelt understøttede platforme: <p> Enterprise, Education og Professional.<p> Serveren understøttes ikke.|
+|0x87D101A9|-2016345687|SyncML(425): Den anmodede kommando mislykkedes, fordi afsenderen ikke har tilstrækkelige adgangskontroltilladelser (ACL) på modtageren.|Alle|**Mulig årsag:** Forsøg at installere Microsoft Defender for Endpoint på ikke-understøttet SKU/platform, især Holographic SKU.<p> Aktuelt understøttede platforme: <p> Enterprise, Education og Professional.|
 |
 
 #### <a name="known-issues-with-non-compliance"></a>Kendte problemer med manglende overholdelse
@@ -141,7 +141,7 @@ Den følgende tabel indeholder oplysninger om problemer med manglende overholdel
 |`3`|Enheden er ikke-kompatibel|**Fejlfindingstrin:** Sørg for, at politikker for onboarding og offboarding ikke installeres på den samme enhed på samme tid.|
 |
 
-#### <a name="mobile-device-management-mdm-event-logs"></a>Hændelseslogfiler til administration af mobilenheder (MDM)
+#### <a name="mobile-device-management-mdm-event-logs"></a>Hændelseslogfiler Enhedshåndtering mobildata (MDM)
 
 Få vist MDM-hændelseslogfilerne for at foretage fejlfinding af problemer, der kan opstå under onboarding:
 
@@ -155,7 +155,7 @@ Kanalnavn: Administrator
 
 |Id|Alvorsgrad|Beskrivelse af hændelse|Fejlfindingstrin|
 |---|---|---|---|
-|1819|Error|Microsoft Defender for Endpoint CSP: Kunne ikke indstille Nodes værdi. NodeId: (%1), TokenName: (%2), Result: (%3).|Download den [kumulative opdatering til Windows 10, 1607](https://go.microsoft.com/fwlink/?linkid=829760).|
+|1819|Error|Microsoft Defender for Endpoint CSP: Nodes værdi blev ikke angivet. NodeId: (%1), TokenName: (%2), Result: (%3).|Download den [kumulative opdatering til Windows 10, 1607](https://go.microsoft.com/fwlink/?linkid=829760).|
 |
 
 ## <a name="troubleshoot-onboarding-issues-on-the-device"></a>Fejlfinding af onboardingproblemer på enheden
@@ -170,12 +170,12 @@ Hvis de anvendte installationsværktøjer ikke angiver en fejl i onboardingproce
 
 ### <a name="view-agent-onboarding-errors-in-the-device-event-log"></a>Få vist onboardingfejl for agent i enhedshændelsesloggen
 
-1. Klik **på Start**, skriv **Log på**, og tryk på **Enter**.
+1. Klik **på Start**, **skriv Logbog**, og tryk på **Enter**.
 
 2. I **ruden Logbog (lokal) skal** du udvide **Program- og tjenestelogfiler** \> **Microsoft** \> **Windows** \> **SENSE**.
 
    > [!NOTE]
-   > SENSE er det interne navn, der bruges til at referere til den funktionalitets sensor, der bruges til at styrke Microsoft Defender til slutpunkt.
+   > SENSE er det interne navn, der bruges til at referere til den funktionsmåde sensor, der har Microsoft Defender for Endpoint.
 
 3. Vælg **Drift** for at indlæse logfilen.
 
@@ -183,7 +183,7 @@ Hvis de anvendte installationsværktøjer ikke angiver en fejl i onboardingproce
 
 5. På fanen **Filter** under Hændelsesniveau **: vælg Kritisk**, Advarsel **og** **Fejl,** og klik på **OK**.
 
-   ![Billede af logfilter for Logbog.](images/filter-log.png)
+   :::image type="content" source="images/filter-log.png" alt-text="Det Logbog logfilter" lightbox="images/filter-log.png":::
 
 6. Hændelser, der kan angive, at problemerne vises i **ruden** Drift. Du kan forsøge at foretage fejlfinding af dem baseret på løsningerne i følgende tabel:
 
@@ -193,17 +193,17 @@ Hvis de anvendte installationsværktøjer ikke angiver en fejl i onboardingproce
 
    |Hændelses-id|Meddelelse|Trin til løsning|
    |:---:|---|---|
-   |`5`|Tjenesten Microsoft Defender for Endpoint kunne ikke oprette forbindelse til serveren på _variablen_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection).|
-   |`6`|Microsoft Defender til slutpunktstjenesten er ikke onboardet, og der blev ikke fundet nogen onboardingparametre. Fejlkode: _variabel_|[Kør onboarding-scriptet igen](configure-endpoints-script.md).|
-   |`7`|Microsoft Defender for Endpoint-tjenesten kunne ikke læse onboardingparametrene. Fejlkode: _variabel_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection), og kør derefter hele onboardingprocessen igen.|
-   |`9`|Tjenesten Microsoft Defender for Endpoint kunne ikke ændre starttypen. Fejlkode: variabel|Hvis hændelsen skete under onboarding, skal du genstarte og forsøge at køre onboardingscriptet igen. Få mere at vide under [Kør onboarding-scriptet igen](configure-endpoints-script.md). <br><br>Hvis hændelsen skete under offboarding, skal du kontakte support.|
+   |`5`|Microsoft Defender for Endpoint tjeneste kunne ikke oprette forbindelse til serveren på _variabel_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection).|
+   |`6`|Microsoft Defender for Endpoint ikke onboardingtjeneste, og der blev ikke fundet nogen onboardingparametre. Fejlkode: _variabel_|[Kør onboarding-scriptet igen](configure-endpoints-script.md).|
+   |`7`|Microsoft Defender for Endpoint kunne ikke læse onboardingparametrene. Fejlkode: _variabel_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection), og kør derefter hele onboardingprocessen igen.|
+   |`9`|Microsoft Defender for Endpoint kunne ikke ændre starttypen. Fejlkode: variabel|Hvis hændelsen skete under onboarding, skal du genstarte og forsøge at køre onboardingscriptet igen. Få mere at vide under [Kør onboarding-scriptet igen](configure-endpoints-script.md). <br><br>Hvis hændelsen skete under offboarding, skal du kontakte support.|
    |`10`|Microsoft Defender for Endpoint-tjenesten kunne ikke bevare onboardingoplysningerne. Fejlkode: variabel|Hvis hændelsen skete under onboarding, skal du forsøge at køre onboardingscriptet igen. Få mere at vide under [Kør onboarding-scriptet igen](configure-endpoints-script.md). <br><br>Hvis problemet fortsætter, skal du kontakte support.|
-   |`15`|Microsoft Defender til Slutpunkt kan ikke starte kommandokanal med URL:- _variabel: variabel_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection).|
-   |`17`|Tjenesten Microsoft Defender for Endpoint kunne ikke ændre placeringen af forbundne brugeroplevelser og telemetritjenesten. Fejlkode: variabel|[Kør onboarding-scriptet igen](configure-endpoints-script.md). Hvis problemet fortsætter, skal du kontakte support.|
-   |`25`|Microsoft Defender for Endpoint-tjenesten kunne ikke nulstille tilstandsstatus i registreringsdatabasen. Fejlkode: _variabel_|Kontakt support.|
-   |`27`|Det lykkedes ikke at aktivere Microsoft Defender til slutpunktstilstand i Windows Defender. Onboardingprocessen mislykkedes. Fejlkode: variabel|Kontakt support.|
+   |`15`|Microsoft Defender for Endpoint kan ikke starte kommandokanal med URL-adresse: _variabel_|[Kontrollér, at enheden har internetadgang](#ensure-the-device-has-an-internet-connection).|
+   |`17`|Microsoft Defender for Endpoint tjeneste kunne ikke ændre placeringen af forbundne brugeroplevelser og telemetritjenesten. Fejlkode: variabel|[Kør onboarding-scriptet igen](configure-endpoints-script.md). Hvis problemet fortsætter, skal du kontakte support.|
+   |`25`|Microsoft Defender for Endpoint kunne ikke nulstille tilstandsstatussen i registreringsdatabasen. Fejlkode: _variabel_|Kontakt support.|
+   |`27`|Det lykkedes ikke at Microsoft Defender for Endpoint i Windows Defender. Onboardingprocessen mislykkedes. Fejlkode: variabel|Kontakt support.|
    |`29`|Kunne ikke læse offboarding-parametrene. Fejltype: %1, fejlkode: %2, Beskrivelse: %3|Kontrollér, at enheden har internetadgang, og kør derefter hele offboarding-processen igen.|
-   |`30`|Det lykkedes ikke at deaktivere tilstanden $(build.sense.productDisplayName) i Microsoft Defender til slutpunkt. Fejlkode: %1|Kontakt support.|
+   |`30`|Det lykkedes ikke at deaktivere tilstanden $(build.sense.productDisplayName) Microsoft Defender for Endpoint. Fejlkode: %1|Kontakt support.|
    |`32`|Tjenesten $(build.sense.productDisplayName) kunne ikke anmode om at stoppe sig selv efter offboarding-processen. Fejlkode: %1|Kontrollér, at tjenestens starttype er manuel, og genstart enheden.|
    |`55`|Autologgeret Secure ETW kunne ikke oprettes. Fejlkode: %1|Genstart enheden.|
    |`63`|Opdaterer starttypen for den eksterne tjeneste. Navn: %1, faktisk starttype: %2, forventet starttype: %3, udgangskode: %4|Identificer, hvad der forårsager ændringer i starttypen for den nævnte tjeneste. Hvis udgangskoden ikke er 0, kan du indstille starttypen manuelt til den forventede starttype.|
@@ -212,7 +212,7 @@ Hvis de anvendte installationsværktøjer ikke angiver en fejl i onboardingproce
    |`69`|Tjenesten er stoppet. Tjenestenavn: %1|Start den nævnte tjeneste. Kontakt support, hvis problemet fortsætter.|
    |
 
-Der er flere komponenter på enheden, som Microsoft Defender for Endpoint-agenten afhænger af for at fungere korrekt. Hvis der ikke er nogen onboardingrelaterede fejl i hændelsesloggen For Microsoft Defender for Endpoint-agent, skal du fortsætte med følgende trin for at sikre, at de ekstra komponenter er konfigureret korrekt.
+Der er flere komponenter på enheden, som den Microsoft Defender for Endpoint, afhænger af for at fungere korrekt. Hvis der ikke er nogen onboardingrelaterede fejl i Microsoft Defender for Endpoint-agenthændelsesloggen, skal du fortsætte med følgende trin for at sikre, at de ekstra komponenter er konfigureret korrekt.
 
 <span id="ensure-the-diagnostics-service-is-enabled" />
 
@@ -240,7 +240,7 @@ Først skal du kontrollere, at tjenesten er indstillet til at starte automatisk,
 
    Hvis tjenesten er aktiveret, bør resultatet se ud som på følgende skærmbillede:
 
-   ![Resultat af sc-forespørgselskommandoen for diagtrack.](images/windefatp-sc-qc-diagtrack.png)
+   :::image type="content" source="images/windefatp-sc-qc-diagtrack.png" alt-text="Resultatet af sc-forespørgselskommandoen for diagtrack" lightbox="images/windefatp-sc-qc-diagtrack.png":::
 
    Hvis den `START_TYPE` ikke er angivet til `AUTO_START`, skal du indstille tjenesten til at starte automatisk.
 
@@ -272,11 +272,11 @@ Først skal du kontrollere, at tjenesten er indstillet til at starte automatisk,
 
 ### <a name="ensure-the-device-has-an-internet-connection"></a>Kontrollér, at enheden har forbindelse til internettet
 
-Microsoft Defender for Endpoint-sensoren kræver Microsoft Windows HTTP (WinHTTP) for at rapportere sensordata og kommunikere med Microsoft Defender til slutpunktstjenesten.
+Sensoren Microsoft Defender for Endpoint Microsoft Windows HTTP (WinHTTP) for at rapportere sensordata og kommunikere med Microsoft Defender for Endpoint-tjenesten.
 
 WinHTTP er uafhængig af internetbrowsing-proxyindstillingerne og andre brugerkontekstprogrammer og skal kunne registrere de proxyservere, der er tilgængelige i dit specifikke miljø.
 
-Hvis du vil sikre dig, at sensoren har forbindelse til tjenesten, skal du følge trinnene, der er beskrevet i emnet Bekræft klientforbindelsen til [URL-adresser for Microsoft Defender for Endpoint-tjenesten](configure-proxy-internet.md#verify-client-connectivity-to-microsoft-defender-for-endpoint-service-urls) .
+Hvis du vil sikre dig, at sensoren har forbindelse til tjenesten, skal du følge trinnene, der er beskrevet i emnet Bekræft [klientforbindelsen Microsoft Defender for Endpoint url-adresser](configure-proxy-internet.md#verify-client-connectivity-to-microsoft-defender-for-endpoint-service-urls) for tjenesten.
 
 Hvis bekræftelsen mislykkes, og dit miljø bruger en proxy til at oprette forbindelse til internettet, skal du følge trinnene beskrevet i emnet Konfigurer [indstillinger for proxy og internetforbindelse](configure-proxy-internet.md) .
 
@@ -287,7 +287,7 @@ Hvis bekræftelsen mislykkes, og dit miljø bruger en proxy til at oprette forbi
 >
 > Opdateringen sikrer, at Microsoft Defender Antivirus ikke kan deaktiveres på klientenheder via systempolitik.
 
-**Problem**: Microsoft Defender for Endpoint-tjenesten starter ikke efter onboarding.
+**Problem**: Tjenesten Microsoft Defender for Endpoint ikke efter onboarding.
 
 **Symptom**: Onboarding fuldføres, men du får vist fejl 577 eller fejl 1058, når du forsøger at starte tjenesten.
 
@@ -298,7 +298,7 @@ Hvis bekræftelsen mislykkes, og dit miljø bruger en proxy til at oprette forbi
   - DisableAntiSpyware
   - DisableAntiVirus
 
-  Eksempelvis bør der Gruppepolitik for eksempel ingen poster som f.eks. følgende værdier:
+  Eksempelvis bør der Gruppepolitik være nogen poster som f.eks. følgende værdier:
 
   - `<Key Path="SOFTWARE\Policies\Microsoft\Windows Defender"><KeyValue Value="0" ValueKind="DWord" Name="DisableAntiSpyware"/></Key>`
   - `<Key Path="SOFTWARE\Policies\Microsoft\Windows Defender"><KeyValue Value="0" ValueKind="DWord" Name="DisableAntiVirus"/></Key>`
@@ -310,7 +310,7 @@ Hvis bekræftelsen mislykkes, og dit miljø bruger en proxy til at oprette forbi
 
 - Du kan også kontrollere de tidligere registreringsdatabasenøgleværdier for at bekræfte, at politikken er deaktiveret ved at åbne registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`.
 
-    ![Billede af registreringsdatabasenøgle til Microsoft Defender Antivirus.](images/atp-disableantispyware-regkey.png)
+  :::image type="content" source="images/atp-disableantispyware-regkey.png" alt-text="Registreringsdatabasenøglen til Microsoft Defender Antivirus" lightbox="images/atp-disableantispyware-regkey.png":::
 
    > [!NOTE]
    > Alle Windows Defender (wdboot, wdfilter, wdnisdrv, wdnissvc og windefend) bør være i standardtilstand. Ændring af start af disse tjenester understøttes ikke, og det kan tvinge dig til at genimage systemet.
@@ -333,19 +333,19 @@ Hvis du støder på problemer under onboarding af en server, skal du gennemgå f
 
 Du skal muligvis også kontrollere følgende:
 
-- Kontrollér, at der kører en Microsoft Defender for Endpoint-tjeneste **under fanen** Processer **i Jobliste**. Eksempel:
+- Kontrollér, at der kører Microsoft Defender for Endpoint tjeneste under **fanen** Processer **i Jobliste**. Eksempel:
 
-    ![Billede af procesvisning med Microsoft Defender for Endpoint Service kørende.](images/atp-task-manager.png)
+  :::image type="content" source="images/atp-task-manager.png" alt-text="Procesvisningen med Microsoft Defender for Endpoint tjeneste, der kører" lightbox="images/atp-task-manager.png":::
 
-- Kontrollér **Handlingsstyring** \> **for Logbog- og** **tjenestelogfiler** \> for at se, om der er nogen fejl.
+- Kontrollér **Logbog** \> **Applications and Services Logs** \> **Operation Manager** for at se, om der er nogen fejl.
 
 - Under **Tjenester** kan du kontrollere, **om Microsofts overvågningsagent** kører på serveren. For eksempel
 
-    ![Billede af Tjenester.](images/atp-services.png)
+  :::image type="content" source="images/atp-services.png" alt-text="Tjenesterne" lightbox="images/atp-services.png":::
 
 - I **OMS (Microsoft Monitoring Agent** \> **Azure Log Analytics)** skal du kontrollere arbejdsområderne og kontrollere, at statussen kører.
 
-    ![Billede af egenskaberne for Microsoft Overvågningsagent.](images/atp-mma-properties.png)
+  :::image type="content" source="images/atp-mma-properties.png" alt-text="Egenskaberne for Microsofts overvågningsagent" lightbox="images/atp-mma-properties.png":::
 
 - Kontrollér, at enhederne afspejles **på listen Enheder** i portalen.
 
@@ -365,126 +365,127 @@ Nedenstående trin giver vejledning til følgende scenarie:
 
 
 > [!NOTE]
-> Følgende trin er kun relevante, når du bruger Microsoft Endpoint Configuration Manager. Du kan finde flere oplysninger om onboarding ved Microsoft Endpoint Configuration Manager i [Microsoft Defender til slutpunkt](/mem/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).
+> Følgende trin er kun relevante, når du bruger Microsoft Endpoint Configuration Manager. Du kan finde flere oplysninger om onboarding ved Microsoft Endpoint Configuration Manager under [Microsoft Defender for Endpoint](/mem/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).
 
 1. Opret et program Microsoft Endpoint Configuration Manager.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration1.](images/mecm-1.png)
+   :::image type="content" source="images/mecm-1.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-1" lightbox="images/mecm-1.png":::
 
 2. Vælg **Angiv programoplysningerne manuelt**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager configuration2.](images/mecm-2.png)
+   :::image type="content" source="images/mecm-2.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-2" lightbox="images/mecm-2.png":::
 
 3. Angiv oplysninger om programmet, og vælg derefter **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration3.](images/mecm-3.png)
+   :::image type="content" source="images/mecm-3.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-3" lightbox="images/mecm-3.png":::
 
 4. Angiv oplysninger om softwarecenteret, og vælg derefter **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration4.](images/mecm-4.png)
+   :::image type="content" source="images/mecm-4.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-4" lightbox="images/mecm-4.png":::
 
 5. Vælg **Tilføj i Installationstyper**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager configuration5.](images/mecm-5.png)
+   :::image type="content" source="images/mecm-5.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-5" lightbox="images/mecm-5.png":::
 
 6. Vælg **Angiv oplysninger om installationstype manuelt**, og vælg derefter **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration6.](images/mecm-6.png)
+   :::image type="content" source="images/mecm-6.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-6" lightbox="images/mecm-6.png":::
 
 7. Angiv oplysninger om installationstypen, og vælg derefter **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration7.](images/mecm-7.png)
+   :::image type="content" source="images/mecm-7.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-7" lightbox="images/mecm-7.png":::
 
 8. I **Installationsprogram** \> **til indhold** skal du angive kommandoen: `net start sense`.
 
-    ![Billede af Microsoft Endpoint Configuration Manager configuration8.](images/mecm-8.png)
+   :::image type="content" source="images/mecm-8.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-8" lightbox="images/mecm-8.png":::
 
 9. I **Registreringsmetode skal** du vælge **Konfigurer regler for at registrere tilstedeværelsen af denne installationstype** og derefter vælge **Tilføj delsætning**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration9.](images/mecm-9.png)
+   :::image type="content" source="images/mecm-9.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-9" lightbox="images/mecm-9.png":::
 
 10. Angiv følgende oplysninger om registreringsreglen, og vælg derefter **OK**:
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration10.](images/mecm-10.png)
+    :::image type="content" source="images/mecm-10.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-10" lightbox="images/mecm-10.png":::
 
 11. Vælg **Næste under** **Registreringsmetode**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration11.](images/mecm-11.png)
+    :::image type="content" source="images/mecm-11.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-11" lightbox="images/mecm-11.png":::
 
 12. Angiv **følgende oplysninger** i Brugeroplevelse, og vælg derefter **Næste**:
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration12.](images/mecm-12.png)
+    :::image type="content" source="images/mecm-12.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-12" lightbox="images/mecm-12.png":::
 
 13. Vælg **Næste** under **Krav**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration13.](images/mecm-13.png)
+    :::image type="content" source="images/mecm-13.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-13" lightbox="images/mecm-13.png":::
 
 14. Vælg **Næste under** **Afhængigheder**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration14.](images/mecm-14.png)
+    :::image type="content" source="images/mecm-14.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-14" lightbox="images/mecm-14.png":::
 
 15. I **Oversigt skal** du vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration15.](images/mecm-15.png)
+    :::image type="content" source="images/mecm-15.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-15" lightbox="images/mecm-15.png":::
 
 16. Vælg **Luk** under **Fuldførelse**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration16.](images/mecm-16.png)
+    :::image type="content" source="images/mecm-16.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-16" lightbox="images/mecm-16.png":::
 
 17. Vælg **Næste under** **Installationstyper**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration17.](images/mecm-17.png)
+    :::image type="content" source="images/mecm-17.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-17" lightbox="images/mecm-17.png":::
 
 18. I **Oversigt skal** du vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration18.](images/mecm-18.png)
+    :::image type="content" source="images/mecm-18.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-18" lightbox="images/mecm-18.png":::
 
-    Status vises derefter: Billede af ![en Microsoft Endpoint Configuration Manager konfiguration19.](images/mecm-19.png)
+    Status vises derefter: Den :::image type="content" source="images/mecm-19.png" alt-text="Microsoft Endpoint Configuration Manager configuration-19" lightbox="images/mecm-19.png":::
 
 19. Vælg **Luk** under **Fuldførelse**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager configuration20.](images/mecm-20.png)
+    :::image type="content" source="images/mecm-20.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-20" lightbox="images/mecm-20.png":::
 
 20. Du kan nu installere programmet ved at højreklikke på appen og vælge **Installér**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration21.](images/mecm-21.png)
+    :::image type="content" source="images/mecm-21.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-21" lightbox="images/mecm-21.png":::
 
 21. I **Generelt skal** du **vælge Fordel automatisk indhold for afhængigheder** og **Gennemse**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration22.](images/mecm-22.png)
+    :::image type="content" source="images/mecm-22.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-22" lightbox="images/mecm-22.png":::
 
 22. I **Indhold skal** du **vælge Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration23.](images/mecm-23.png)
+    :::image type="content" source="images/mecm-23.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-23" lightbox="images/mecm-23.png":::
 
 23. I **Installationsindstillinger skal** du vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration24.](images/mecm-24.png)
+    :::image type="content" source="images/mecm-24.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-24" lightbox="images/mecm-24.png":::
 
 24. I **Planlægning** skal **du vælge Så tidligt som muligt efter den tilgængelige tid** og derefter vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration25.](images/mecm-25.png)
+    :::image type="content" source="images/mecm-25.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-25" lightbox="images/mecm-25.png":::
 
 25. I **Brugeroplevelse skal** du **vælge Be bekræftelse af ændringer ved deadline eller under et vedligeholdelsesvindue (kræver genstart)** og derefter vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration26.](images/mecm-26.png)
+    :::image type="content" source="images/mecm-26.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-26" lightbox="images/mecm-26.png":::
 
 26. I **Beskeder skal** du vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration27.](images/mecm-27.png)
+    :::image type="content" source="images/mecm-27.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-27" lightbox="images/mecm-27.png":::
 
 27. I **Oversigt skal** du vælge **Næste**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager konfiguration28.](images/mecm-28.png)
+    :::image type="content" source="images/mecm-28.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-28" lightbox="images/mecm-28.png":::
+      
 
-    Status vises derefter Billede af ![en Microsoft Endpoint Configuration Manager konfiguration29.](images/mecm-29.png)
+    Status vises derefter Den Microsoft Endpoint Configuration Manager :::image type="content" source="images/mecm-29.png" alt-text="konfiguration-29" lightbox="images/mecm-29.png":::
 
 28. Vælg **Luk** under **Fuldførelse**.
 
-    ![Billede af Microsoft Endpoint Configuration Manager configuration30.](images/mecm-30.png)
+    :::image type="content" source="images/mecm-30.png" alt-text="Den Microsoft Endpoint Configuration Manager configuration-30" lightbox="images/mecm-30.png":::
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Fejlfinding af Microsoft Defender til slutpunkt](troubleshoot-mdatp.md)
+- [Fejlfinding af Microsoft Defender for Endpoint](troubleshoot-mdatp.md)
 - [Onboard-enheder](onboard-configure.md)
 - [Konfigurere indstillinger for enhedsproxy og internetforbindelse](configure-proxy-internet.md)

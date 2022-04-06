@@ -1,0 +1,16 @@
+- name: M365 Office LTI
+  href: index.md
+- name: Lærredsintegration
+  items:
+    - name: Brug Microsoft OneDrive LTI med lærred
+      href: onedrive-lti.md
+    - name: Brug Microsoft Teams klasser med Lærred
+      href: teams-classes-with-canvas.md
+    - name: Brug Microsoft Teams møder med Lærred
+      href: teams-meetings-with-canvas.md
+- name: Blackboard-integrationer
+  items:
+    - name: Brug Microsoft OneDrive LTI med Blackboard
+      href: onedrive-lti-blackboard.md
+    - name: Brug Microsoft Teams klasser med Blackboard Learn Ultra
+      href: teams-classes-with-blackboard.md

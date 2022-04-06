@@ -15,12 +15,12 @@ f1.keywords:
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 description: I denne artikel kan du lære, hvordan du tilføjer satellitplaceringer og konfigurerer din lejer Microsoft 365 Multi-Geo.
-ms.openlocfilehash: 9842ff2295a64f544940f579d732c688735ae341
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2bd0db24b364c642255ef2e902abad0495d24337
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63601577"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568872"
 ---
 # <a name="microsoft-365-multi-geo-tenant-configuration"></a>Microsoft 365 multi-geo-lejerkonfiguration
 
@@ -54,13 +54,13 @@ Sådan tilføjes en satellitplacering
 
 1. Vælg **Luk**.
 
-Klargøring kan tage fra et par timer op til 72 timer, afhængigt af størrelsen på din lejer. Når klargøring af en satellitplacering er fuldført, modtager du en bekræftelse via mail. Når den nye geoplacering vises med blåt på kortet under fanen **Geo-placeringer** i OneDrive Administration, kan du fortsætte med at angive brugernes foretrukne dataplacering til den pågældende geoplacering. 
+Klargøring kan tage fra et par timer op til 72 timer, afhængigt af størrelsen på din lejer. Når klargøring af en satellitplacering er fuldført, modtager du en bekræftelse via mail. Når den nye geoplacering vises med blåt på kortet under fanen **Geo-placeringer** i OneDrive Administration, kan du fortsætte med at angive brugernes foretrukne dataplacering til den pågældende geoplacering.
 
 > [!IMPORTANT]
 > Din nye satellitplacering konfigureres med standardindstillinger. Det gør det muligt at konfigurere satellitplaceringen efter behov, der passer til dine lokale overholdelsesbehov.
 
 ## <a name="setting-users-preferred-data-location"></a>Angive brugernes foretrukne dataplacering
-<span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span> 
+<span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span>
 
 Når du har aktiveret de nødvendige satellitplaceringer, kan du opdatere dine brugerkonti til at bruge den relevante foretrukne dataplacering. Vi anbefaler, at du angiver en foretrukken dataplacering for hver bruger, også selvom brugeren forbliver på den centrale placering.
 
@@ -72,32 +72,36 @@ Når du har aktiveret de nødvendige satellitplaceringer, kan du opdatere dine b
 
 I Azure Active Directory (Azure AD) findes der to typer brugerobjekter: kun brugere i skyen og synkroniserede brugere. Følg de relevante instruktioner for din type bruger.
 
-### <a name="synchronize-users-preferred-data-location-using-azure-ad-connect"></a>Synkroniser brugerens foretrukne dataplacering ved hjælp af Azure AD-Forbind 
+### <a name="synchronize-users-preferred-data-location-using-azure-ad-connect"></a>Synkroniser brugerens foretrukne dataplacering ved hjælp af Azure AD-Forbind
 
-Hvis virksomhedens brugere synkroniseres fra et lokalt Active Directory-system til Azure AD, skal deres PreferredDataLocation udfyldes i AD og synkroniseres med Azure AD.
+Hvis virksomhedens brugere synkroniseres fra et Active Directory i det lokale miljø-system til Azure AD, skal deres ForetrukneDataplacering udfyldes i AD og synkroniseres med Azure AD.
 
-Følg processen i Azure Active Directory Forbind-synkronisering: Konfigurer foretrukken [dataplacering for Microsoft 365-ressourcer for](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) at konfigurere foretrukken dataplaceringssynkronisering fra din lokale Active Directory-domæneservices (AD DS) til Azure AD.
+Følg processen i Azure Active Directory Forbind-synkronisering: Konfigurer foretrukken [dataplacering for Microsoft 365-ressourcer for](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) at konfigurere foretrukken dataplaceringssynkronisering fra din Active Directory i det lokale miljø Domain Services (AD DS) til Azure AD.
 
 Vi anbefaler, at du medtager konfiguration af brugerens foretrukne dataplacering som en del af den almindelige arbejdsproces for oprettelse af brugere.
 
 > [!IMPORTANT]
 > For nye brugere uden OneDrive klargjort skal du licensere kontoen og vente mindst 48 timer efter, at en brugers PDL synkroniseres med Azure AD, før ændringerne overføres, før brugeren logger på OneDrive for Business. (Indstilling af den foretrukne dataplacering, før brugeren logger på for at klargøre deres OneDrive for Business sikrer, at brugerens nye OneDrive klargøres på den korrekte placering).
 
-### <a name="setting-preferred-data-location-for-cloud-only-users"></a>Indstilling af foretrukken dataplacering kun for brugere i skyen 
+### <a name="setting-preferred-data-location-for-cloud-only-users"></a>Indstilling af foretrukken dataplacering kun for brugere i skyen
 
-Hvis virksomhedens brugere ikke synkroniseres fra et lokalt Active Directory-system til Azure AD, hvilket betyder, at de er oprettet i Microsoft 365 eller Azure AD, skal PDL'en konfigureres ved hjælp af Microsoft Azure Active Directory-modulet til Windows PowerShell.
+Hvis virksomhedens brugere ikke synkroniseres fra et Active Directory i det lokale miljø-system til Azure AD, hvilket betyder, at de er oprettet i Microsoft 365 eller Azure AD, skal PDL'en indstilles ved hjælp af Microsoft Azure Active Directory-modulet til Windows PowerShell.
 
 Fremgangsmåderne i dette afsnit kræver, [at Microsoft Azure Active Directory-modul til Windows PowerShell modul](https://www.powershellgallery.com/packages/MSOnline/1.1.166.0). Hvis du allerede har dette modul installeret, skal du sørge for at opdatere til den nyeste version.
 
-1.  [Forbind og logge på](/powershell/connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell) med et sæt globale administratorlegitimationsoplysninger for din lejer.
+1. [Forbind og logge på](/powershell/connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell) med et sæt globale administratorlegitimationsoplysninger for din lejer.
 
-2.  Brug [Cmdlet'en Set-MsolUser](/powershell/msonline/v1/set-msoluser) til at angive den foretrukne dataplacering for hver af dine brugere. Eksempel:
+2. Brug [Cmdlet'en Set-MsolUser](/powershell/msonline/v1/set-msoluser) til at angive den foretrukne dataplacering for hver af dine brugere. Eksempel:
 
-    `Set-MsolUser -userprincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR`
+   ```powershell
+   Set-MsolUser -UserPrincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR
+   ```
 
     Du kan kontrollere, at den foretrukne dataplacering er blevet opdateret korrekt ved hjælp af Get-MsolUser cmdlet. Eksempel:
 
-    `(Get-MsolUser -userprincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation`
+   ```powershell
+   (Get-MsolUser -UserPrincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation
+   ```
 
 ![Skærmbillede af PowerShell-vinduet, der viser set-msoluser.](../media/multi-geo-tenant-configuration-image3.png)
 
@@ -122,11 +126,8 @@ Din multi-geo-lejer har samlede søgefunktioner, så en søgeforespørgsel kan r
 Som standard returnerer søgninger fra disse indgangspunkter aggregatresultater, selvom hvert søgeindeks er placeret inden for dets relevante geoplacering:
 
 - OneDrive for Business
-
 - Delve
-
 - SharePoint startside
-
 - Søgecenter
 
 Desuden kan søgning i flere geografiske områder konfigureres til dine brugerdefinerede søgeprogrammer, der bruger søge-SharePoint-søge-API.
@@ -137,22 +138,22 @@ Gennemse Konfigurer [søgning efter OneDrive for Business Multi-Geo](configure-s
 
 Nedenfor er nogle eksempler på grundlæggende use cases, som du kan medtage i din valideringsplan, før det Microsoft 365 udrulles Multi-Geo til din virksomhed. Når du har gennemført disse test og eventuelle yderligere use cases, der er relevante for din virksomhed, kan du vælge at gå videre til at tilføje brugerne i din indledende pilotgruppe.
 
-**OneDrive for Business**
+**OneDrive for Business**:
 
 Vælg OneDrive fra Microsoft 365-appstarteren, og bekræft, at du automatisk bliver omdirigeret til den relevante geoplacering for brugeren baseret på brugerens PDL. OneDrive for Business nu begynde klargøring på den pågældende placering. Når nogle dokumenter er klargjort, kan du prøve at overføre og hente dem.
 
-**OneDrive mobilapp**
+**OneDrive mobilapp**:
 
 Log på din OneDrive-mobilapp med dine legitimationsoplysninger til testkontoen. Bekræft, at du kan se OneDrive for Business filer og kan interagere med dem fra din mobilenhed.
 
-**OneDrive-synkronisering klient**
+**OneDrive-synkronisering klient**:
 
 Bekræft, at OneDrive-synkronisering-klienten automatisk registrerer din OneDrive for Business geografiske placering ved logon. Hvis du vil downloade synkroniseringsklienten, kan du klikke på **Synkroniser** i OneDrive bibliotek.
 
-**Office programmer**
+**Office programmer**:
 
-Bekræft, at du kan OneDrive for Business adgang ved at logge på fra Office, f.eks. Word. Åbn Office, og vælg "OneDrive – <TenantName>". Office registrerer din OneDrive placering og viser dig de filer, som du kan åbne.
+Bekræft, at du kan OneDrive for Business adgang ved at logge på fra Office, f.eks. Word. Åbn Office, og vælg "OneDrive – \<TenantName\>". Office registrerer din OneDrive placering og viser dig de filer, som du kan åbne.
 
-**Deling**
+**Deling**:
 
 Prøv at OneDrive filer. Bekræft, at vælgeren personer viser dig alle dine SharePoint onlinebrugere uanset deres geografiske placering.

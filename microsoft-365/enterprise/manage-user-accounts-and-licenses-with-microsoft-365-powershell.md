@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 11/13/2020
 audience: ITPro
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: Ent_O365
@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 26b9ff81-93b0-4251-beaf-3c9f1d7c80c8
 description: Få mere at vide om, Microsoft 365 administrere brugerkonti, licenser og grupper med PowerShell.
-ms.openlocfilehash: f3b1e3b98449a39027356d628d13abd575de3d44
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: b003f46ef9d93f5ea2b25286581b43f16b6911be
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591629"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681992"
 ---
 # <a name="manage-microsoft-365-user-accounts-licenses-and-groups-with-powershell"></a>Administrer Microsoft 365 brugerkonti, licenser og grupper med PowerShell
 

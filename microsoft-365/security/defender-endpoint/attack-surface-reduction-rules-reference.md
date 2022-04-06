@@ -1,7 +1,7 @@
 ---
 title: Reference til begrænsningsregler for angrebsoverfladen
 description: Viser detaljer om regler for reduktion af angrebsoverfladen på regelbasis.
-keywords: Regler for reduktion af angrebsoverfladen, ASR-regler, asr-regler, hips, beskyttelsesregler for indtrængen, regler for forebyggelse af indtrængen, antiexploit, udnyttelsesregler, regler for forebyggelse af infning, Microsoft Defender for Endpoint, konfigurer ASR-regler, beskrivelse af ASR-regel
+keywords: Regler for reduktion af angrebsoverfladen, ASR-regler, asr-regler, hips, beskyttelsesregler for indtrængen, regler for forebyggelse af indtrængen, antiexploit, udnyttelsesregler, regler for forebyggelse af infning, Microsoft Defender til slutpunkt, konfigurer ASR-regler, beskrivelse af ASR-regel
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -17,19 +17,19 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: b9655189759707e9c4463d3c53a3b0b9fd20e730
-ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
+ms.openlocfilehash: 5ffbe15fe9fa06e7c06546f9452d6c4f2bddfc39
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64520567"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63606811"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til begrænsningsregler for angrebsoverfladen
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Denne artikel indeholder oplysninger om regler for reduktion af angreb:
@@ -37,10 +37,9 @@ Denne artikel indeholder oplysninger om regler for reduktion af angreb:
 - [Understøttede operativsystemversioner](#supported-operating-systems)
 - [Understøttede konfigurationsstyringssystemer](#supported-configuration-management-systems)
 - [Besked og beskedoplysninger for de forskellige regler](#per-rule-alert-and-notification-details)
-- [ASR-regler og GUIDs-matrix](#asr-rules-and-guids-matrix)
-- [ASR-regeltilstande](#asr-rule-modes)
 - [Beskrivelser efter regel](#per-rule-descriptions)
   - Regelbeskrivelser
+  - GUID'er
   - Navne på konfigurationsstyringssystemregel
 
 ## <a name="public-preview-supported-operating-systems"></a>Offentlig eksempelvisning: Understøttede operativsystemer
@@ -113,7 +112,7 @@ Links til oplysninger om konfigurationsstyringssystemversioner, der refereres ti
 
 |Regelnavn | Intune | Microsoft Endpoint Manager |Microsoft Endpoint Configuration Manager |<sup>Gruppepolitik[[1](#fn1)]<sup></sup> | PowerShell<sup>[[1](#fn1)]<sup></sup>  |
 |---|:---:|:---:|:---:|:---:|:---:|
-|[Bloker misbrug af udnyttet sårbar signerede drivere](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y  | Y MEM OMA-URI |   | Y  |  Y  |
+|[Bloker misbrug af udnyttet sårbar signerede drivere](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y  | Y MEM OMA-URI |   | Y  |  Y |
 |[Bloker Adobe Reader i at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y |   | Y | Y  | Y  |
 |[Bloker alle Office i at oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y |   |Y <br><br> CB 1710 | Y  | Y  |
 |[Bloker for, at legitimations stjæler Windows det lokale sikkerhedscenters undersystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y  |   | Y <br><br>CB 1802 | Y  | Y  |
@@ -133,8 +132,8 @@ Links til oplysninger om konfigurationsstyringssystemversioner, der refereres ti
 
   (<a id="fn1">1</a>) Du kan konfigurere regler for reduktion af angrebsoverfladen pr. regel ved hjælp af en regels GUID.
 
-- [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
-- [Configuration Manager CB 1802](/configmgr/core/servers/manage/updates)
+- [Konfigurationsstyring CB 1710](/configmgr/core/servers/manage/updates)
+- [Konfigurationsstyring CB 1802](/configmgr/core/servers/manage/updates)
 - [Microsoft Endpoint Manager CB 1710](/configmgr/core/servers/manage/updates)
 - [System Center Configuration Manager (SCCM) CB 1710](/configmgr/core/servers/manage/updates) <br>_SCCM er nu Microsoft Endpoint Configuration Manager._
 
@@ -144,7 +143,7 @@ Toastbeskeder genereres for alle regler i bloktilstand. Regler i en anden tilsta
 
 For regler, hvor "Regeltilstand" er angivet:
 
-- ASR-regler \<ASR Rule, Rule State\> med kombinationer bruges til at få vist beskeder (toastbeskeder) Microsoft Defender for Endpoint på enheder med høj cloud-blokniveau. Enheder, der ikke er på højt skyblokniveau, vil ikke generere beskeder for <ASR-regel,> kombinationer af regeltilstand
+- ASR-regler \<ASR Rule, Rule State\> med kombinationer bruges kun til at få besked (toastbeskeder) på Microsoft Defender til slutpunkter på højt skybaseret blokniveau. Enheder, der ikke er på højt skyblokniveau, vil ikke generere beskeder for <ASR-regel,> kombinationer af regeltilstand
 - Slutpunktsregistrering og -svar genereres for ASR-regler i de angivne tilstande, men kun for enheder med høj cloud-blok.
 
 | Regelnavn: | Regeltilstand: | Genererer beskeder i Slutpunktsregistrering og -svar? <br> (Ja&nbsp;\|&nbsp;Nej) | Genererer toastbeskeder? <br> (Ja&nbsp;\|&nbsp;Nej) |
@@ -168,27 +167,6 @@ For regler, hvor "Regeltilstand" er angivet:
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokeringsniveau i høj skyen  | N \| Y <br> Kræver enhed på blokeringsniveau i høj skyen |
 |   |   |   |   |
   
-## <a name="asr-rules-and-guids-matrix"></a>ASR-regler og GUIDs-matrix
-
-| Regelnavn | Regel-GUID |
-|:-----|:-----|
-| Bloker misbrug af udnyttet sårbar signerede drivere | 56a863a9-875e-4185-98a7-b882c64b5ce5 |
-| Bloker Adobe Reader i at oprette underordnede processer | 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c |
-| Bloker alle Office i at oprette underordnede processer | d4f940ab-401b-4efc-aadc-ad5f3c50688a |
-| Bloker for, at legitimations stjæler Windows det lokale sikkerhedscenters undersystem (lsass.exe) | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 |
-| Bloker eksekverbart indhold fra mailklient og webmail | be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 |
-| Bloker eksekverbare filer fra at køre, medmindre de opfylder et alders-, alders- eller pålidelige listekriterium | 01443614-cd74-433a-b99e-2ecdc07bfc25 |
-| Bloker udførelse af potentielt slørede scripts | 5beb7efe-fd9a-4556-801d-275e5ffc04cc |
-| Bloker JavaScript eller VBScript fra at starte hentet eksekverbart indhold | d3e037e1-3eb8-44c8-a917-57927947596d |
-| Blokere Office programmer i at oprette eksekverbart indhold | 3b576869-a4ec-4529-8536-b80a7769e899 |
-| Bloker Office programmer fra at indsætte kode i andre processer | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 |
-| Bloker Office kommunikationsprogrammet i at oprette underordnede processer | 26190899-1602-49e8-8b27-eb1d0a1ce869 |
-| Bloker vedholdenhed gennem WMI-hændelsesabonnementet <br>* Udeladelse af filer og mapper understøttes ikke. | e6db77e5-3df2-4cf1-b95a-636979351e5b |
-| Bloker procesoprettelser, der stammer fra PSExec- og WMI-kommandoer | d1e49aac-8f56-4280-b9ba-993a6d77406c |
-| Bloker upålidelige og usignerede processer, der køres fra USB | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 |
-| Bloker Win32 API-opkald Office makroer | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
-| Brug avanceret beskyttelse mod ransomware | c1db55ab-c21a-4637-bb3f-a12568109d35 |
-
 ## <a name="asr-rule-modes"></a>ASR-regeltilstande
 
 - **Ikke konfigureret** eller **deaktiveret**: Dette er den tilstand, hvor ASR-reglen ikke er aktiveret eller er blevet deaktiveret. Koden for denne stat = 0.
@@ -225,9 +203,9 @@ Reglen **Bloker misbrug af udnyttet sårbar signerede drivere** blokerer ikke en
 <!--The above link is the 'only link' that exists for having drivers examined. The 'en-us' component is required to make the link work. Any alterations to this link will result in a 404.
 -->
 
-Intune Navn: `Block abuse of exploited vulnerable signed drivers` (endnu ikke tilgængelig)
+Intune Name: `Block abuse of exploited vulnerable signed drivers` (endnu ikke tilgængelig)
 
-Configuration Manager navn: Endnu ikke tilgængelig
+Konfigurationsstyring navn: Endnu ikke tilgængelig
   
 GUID:  `56a863a9-875e-4185-98a7-b882c64b5ce5`
 
@@ -236,7 +214,7 @@ Advanced hunting action type:
 -->
 
 <!-- 
-Dependencies: none provided by engineering
+Dependencies:
 -->
 
 ### <a name="block-adobe-reader-from-creating-child-processes"></a>Bloker Adobe Reader i at oprette underordnede processer
@@ -245,9 +223,9 @@ Denne regel forhindrer angreb ved at blokere Adobe Reader i at oprette processer
 
 Malware kan via social engineering eller udnyttelse downloade og starte nyttedata og bryde ud af Adobe Reader. Ved at blokere børns processer i at blive genereret af Adobe Reader forhindres malware i at forsøge at bruge det som en vektor i at sprede sig.
 
-Intune navn:`Process creation from Adobe Reader (beta)`
+Intune-navn: `Process creation from Adobe Reader (beta)`
 
-Configuration Manager navn: Endnu ikke tilgængelig
+Konfigurationsstyring navn: Endnu ikke tilgængelig
 
 GUID: `7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c`
 
@@ -262,11 +240,11 @@ Afhængigheder: MDAV
 
 Denne regel blokerer Office oprette underordnede processer. Office omfatter Word, Excel, PowerPoint, OneNote og Access.
 
-Oprettelse af skadelige børns processer er en almindelig strategi for malware. Malware, der misbruger Office som en vektor, kører ofte VBA-makroer og udnytter kode til at downloade og forsøge at køre flere nyttedata. Nogle legitime line of business-programmer kan dog også generere børneprocesser til gode formål; f.eks. konfiguration af en kommandoprompt eller brug af PowerShell til at konfigurere indstillinger i registreringsdatabasen.
+Oprettelse af skadelige børns processer er en almindelig strategi for malware. Malware, som Office som en vektor, kører ofte VBA-makroer og udnytter kode til at downloade og forsøge at køre flere nyttedata. Nogle legitime line of business-programmer kan dog også generere børneprocesser til gode formål; f.eks. konfiguration af en kommandoprompt eller brug af PowerShell til at konfigurere indstillinger i registreringsdatabasen.
 
-Intune navn:`Office apps launching child processes`
+Intune-navn: `Office apps launching child processes`
 
-Configuration Manager navn:`Block Office application from creating child processes`
+Konfigurationsstyring navn: `Block Office application from creating child processes`
 
 GUID: `d4f940ab-401b-4efc-aadc-ad5f3c50688a`
 
@@ -289,9 +267,9 @@ LSASS godkender brugere, der logger på en Windows computer. Microsoft Defender 
 > [!IMPORTANT]
 > Standardtilstanden for ASR-reglen (Attack Surface Reduction) "Block credential stealing from the Windows local security authority subsystem (lsass.exe)" ændres fra **Ikke** konfigureret til Konfigureret og standardtilstanden  angivet til Bloker **.** Alle andre ASR-regler forbliver i deres standardtilstand: **Ikke konfigureret**. Der er allerede indført yderligere filtreringslogik i reglen for at reducere beskeder fra slutbrugere. Kunder kan konfigurere reglen til **tilstanden Overvågning**, **Advar** eller **Deaktiveret** , som tilsidesætter standardtilstanden. Funktionaliteten for denne regel er den samme, uanset om reglen er konfigureret i standardtilstanden, eller hvis du aktiverer Bloker tilstand manuelt.  
 
-Intune navn:`Flag credential stealing from the Windows local security authority subsystem`
+Intune-navn: `Flag credential stealing from the Windows local security authority subsystem`
 
-Configuration Manager navn:`Block credential stealing from the Windows local security authority subsystem`
+Konfigurationsstyring navn: `Block credential stealing from the Windows local security authority subsystem`
 
 GUID: `9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2`
 
@@ -309,7 +287,7 @@ Denne regel blokerer følgende filtyper fra at starte fra mails, der er åbnet i
 - Eksekverbare filer (f.eks. .exe, .dll eller .scr)
 - Scriptfiler (f.eks. en PowerShell.ps- Visual Basic .vbs- eller JavaScript-.js fil)
 
-Intune navn:`Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
+Intune-navn: `Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
 Microsoft Endpoint Manager navn:`Block executable content from email client and webmail`
 
@@ -325,7 +303,7 @@ Afhængigheder: MDAV
 > [!NOTE]
 > Reglen **Bloker eksekverbart indhold fra mailklienten og webmail** har følgende alternative beskrivelser, afhængigt af hvilket program du bruger:
 >
-> - Intune (Konfigurationsprofiler): Udførelse af eksekverbart indhold (exe, dll, ps, js, vbs osv.) er blevet afbrudt fra mail (webmail/mailklient) (ingen undtagelser).
+> - Intune (Konfigurationsprofiler): Udførelse af eksekverbart indhold (exe, dll, ps, js, vbs osv.) er tabt fra mail (webmail/mailklient) (ingen undtagelser).
 > - Endpoint Manager: Bloker hentning af eksekverbart indhold fra mail- og webmailklienter.
 > - Gruppepolitik: Bloker eksekverbart indhold fra mailklient og webmail.
 
@@ -340,9 +318,9 @@ Denne regel blokerer eksekverbare filer, f.eks. .exe, .dll eller .scr, i at star
 >
 > Du kan angive individuelle filer eller mapper (ved hjælp af mappestier eller fuldt kvalificerede ressourcenavne), men du kan ikke angive, hvilke regler eller undtagelser, der gælder for.
 
-Intune navn:`Executables that don't meet a prevalence, age, or trusted list criteria`
+Intune-navn: `Executables that don't meet a prevalence, age, or trusted list criteria`
 
-Configuration Manager navn:`Block executable files from running unless they meet a prevalence, age, or trusted list criteria`
+Konfigurationsstyring navn: `Block executable files from running unless they meet a prevalence, age, or trusted list criteria`
 
 GUID: `01443614-cd74-433a-b99e-2ecdc07bfc25`
 
@@ -359,9 +337,9 @@ Denne regel registrerer mistænkelige egenskaber i et obskøn script.
 
 Script er en almindelig teknik, som både malwareforfattere og legitime programmer bruger til at skjule intellektuel ejendom eller mindske scriptindlæsningstiderne. Malwareforfattere bruger også forvirring til at gøre skadelig kode sværere at læse, hvilket forhindrer nøje gransker i mennesker og sikkerhedssoftware.
 
-Intune navn:`Obfuscated js/vbs/ps/macro code`
+Intune-navn: `Obfuscated js/vbs/ps/macro code`
 
-Configuration Manager navn:`Block execution of potentially obfuscated scripts`
+Konfigurationsstyring navn: `Block execution of potentially obfuscated scripts`
 
 GUID: `5beb7efe-fd9a-4556-801d-275e5ffc04cc`
 
@@ -378,9 +356,9 @@ Denne regel forhindrer scripts i at starte potentielt skadeligt hentet indhold. 
 
 Selvom det ikke er almindeligt, bruger line of business-programmer nogle gange scripts til at downloade og starte installationsprogrammer.
 
-Intune navn:`js/vbs executing payload downloaded from Internet (no exceptions)`
+Intune-navn: `js/vbs executing payload downloaded from Internet (no exceptions)`
 
-Configuration Manager navn:`Block JavaScript or VBScript from launching downloaded executable content`
+Konfigurationsstyring navn: `Block JavaScript or VBScript from launching downloaded executable content`
 
 GUID: `d3e037e1-3eb8-44c8-a917-57927947596d`
 
@@ -397,7 +375,7 @@ Denne regel forhindrer, at Office-apps, herunder Word, Excel og PowerPoint, kan 
 
 Malware, der misbruger Office en vektor, kan forsøge at bryde ud af Office og gemme skadelige komponenter på disken. Disse skadelige komponenter vil stadig kunne genstarte computeren og blive ved med at være i systemet. Derfor beskytter denne regel sig mod en fælles vedholdenhedsteknik.
 
-Intune navn:`Office apps/macros creating executable content`
+Intune-navn: `Office apps/macros creating executable content`
 
 SCCM-navn: `Block Office applications from creating executable content`
 
@@ -420,9 +398,9 @@ Der er ingen kendte legitime forretningsformål ved indførslen af koder.
 
 Denne regel gælder for Word, Excel og PowerPoint.
 
-Intune navn:`Office apps injecting code into other processes (no exceptions)`
+Intune-navn: `Office apps injecting code into other processes (no exceptions)`
 
-Configuration Manager navn:`Block Office applications from injecting code into other processes`
+Konfigurationsstyring navn: `Block Office applications from injecting code into other processes`
 
 GUID: `75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84`
 
@@ -442,9 +420,9 @@ Denne regel beskytter mod social engineering-angreb og forhindrer udnyttelse af 
 > [!NOTE]
 > Denne regel blokerer tips til DLP-politikker og værktøjstip Outlook. Denne regel gælder kun for Outlook og Outlook.com.
 
-Intune navn:`Process creation from Office communication products (beta)`
+Intune-navn: `Process creation from Office communication products (beta)`
 
-Configuration Manager navn: Ikke tilgængelig
+Konfigurationsstyring navn: Ikke tilgængelig
 
 GUID: `26190899-1602-49e8-8b27-eb1d0a1ce869`
 
@@ -464,9 +442,9 @@ Denne regel forhindrer malware i at misbruge WMI for at opnå vedholdenhed på e
 
 Filløse trusler anvender forskellige taktikker for at forblive skjulte, for at undgå at blive set i filsystemet og for at opnå periodiske kontrolforanstaltninger. Nogle trusler kan misbruge WMI-lageret og begivenhedsmodellen for at forblive skjult.
 
-Intune navn: Ikke tilgængelig
+Intune-navn: Ikke tilgængelig
 
-Configuration Manager navn: Ikke tilgængelig
+Konfigurationsstyring navn: Ikke tilgængelig
 
 GUID: `e6db77e5-3df2-4cf1-b95a-636979351e5b`
 
@@ -482,11 +460,11 @@ Afhængigheder: MDAV, RPC
 Denne regel blokerer processer, der er [oprettet via PsExec](/sysinternals/downloads/psexec) og [WMI](/windows/win32/wmisdk/about-wmi) , fra at køre. Både PsExec og WMI kan udføre kode eksternt, så der er en risiko for malware, som misbruger denne funktionalitet af kommando- og kontrolformål eller for at sprede en inficerethed i hele organisationens netværk.
 
 > [!WARNING]
-> Brug kun denne regel, hvis du administrerer dine [enheder med Intune](/intune) eller en anden MDM-løsning. Denne regel er ikke kompatibel med administration via [Microsoft Endpoint Configuration Manager](/configmgr), fordi denne regel blokerer WMI-kommandoer, som Configuration Manager klient bruger til at fungere korrekt.
+> Brug kun denne regel, hvis du administrerer dine enheder med [Intune eller](/intune) en anden MDM-løsning. Denne regel er ikke kompatibel med administration via [Microsoft Endpoint Configuration Manager](/configmgr), fordi denne regel blokerer WMI-kommandoer, som Konfigurationsstyring-klienten bruger til at fungere korrekt.
 
-Intune navn:`Process creation from PSExec and WMI commands`
+Intune-navn: `Process creation from PSExec and WMI commands`
 
-Configuration Manager navn: Ikke relevant
+Konfigurationsstyring navn: Ikke relevant
 
 GUID: `d1e49aac-8f56-4280-b9ba-993a6d77406c`
 
@@ -501,9 +479,9 @@ Afhængigheder: MDAV
 
 Med denne regel kan administratorer forhindre usignerede eller upålidelige eksekverbare filer i at køre fra USB-flytbare drev, herunder SD-kort. Blokerede filtyper indeholder eksekverbare filer (f.eks. .exe, .dll eller .scr)
 
-Intune navn:`Untrusted and unsigned processes that run from USB`
+Intune-navn: `Untrusted and unsigned processes that run from USB`
 
-Configuration Manager navn:`Block untrusted and unsigned processes that run from USB`
+Konfigurationsstyring navn: `Block untrusted and unsigned processes that run from USB`
 
 GUID: `b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`
 
@@ -525,11 +503,11 @@ Understøttede operativsystemer:
 - [Windows 10, version 1709](/windows/whats-new/whats-new-windows-10-version-1709)
 - [Windows Server, version 1809](/windows-server/get-started/whats-new-in-windows-server-1809)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
-- [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
+- [Konfigurationsstyring CB 1710](/configmgr/core/servers/manage/updates)
 
-Intune navn:`Win32 imports from Office macro code`
+Intune-navn: `Win32 imports from Office macro code`
 
-Configuration Manager navn:`Block Win32 API calls from Office macros`
+Konfigurationsstyring navn: `Block Win32 API calls from Office macros`
 
 GUID: `92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b`
 
@@ -553,9 +531,9 @@ Reglen er ofte vær forsigtig for at forhindre ransomware.
 > [!NOTE]
 > Du skal [aktivere skybaseret leveringsbeskyttelse for](enable-cloud-protection-microsoft-defender-antivirus.md) at bruge denne regel.
 
-Intune navn:`Advanced ransomware protection`
+Intune-navn: `Advanced ransomware protection`
 
-Configuration Manager navn:`Use advanced protection against ransomware`
+Konfigurationsstyring navn: `Use advanced protection against ransomware`
 
 GUID: `c1db55ab-c21a-4637-bb3f-a12568109d35`
 

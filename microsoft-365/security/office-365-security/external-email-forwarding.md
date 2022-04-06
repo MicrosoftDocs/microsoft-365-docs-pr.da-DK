@@ -16,12 +16,12 @@ ms.custom:
 description: Denne artikel omhandler emner, herunder ekstern videresendelse af mail, automatisk videresendelse, 5.7.520 Adgang nægtet meddelelser, deaktivering af ekstern videresendelse, "Din administrator har deaktiveret ekstern videresendelse"-meddelelser samt politikken for udgående uønsket post.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 14b41f21efe3608096636444afd4b36de3742a85
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8df0ff9902fe22fd44a0d15f7f01e13e791c7b12
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681408"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473601"
 ---
 # <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>Kontrollere automatisk videresendelse af eksterne mails Microsoft 365
 
@@ -29,7 +29,7 @@ ms.locfileid: "63681408"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Som administrator kan du komme ud for firmakrav, der begrænser eller styrer automatisk videresendte meddelelser til eksterne modtagere (modtagere uden for organisationen). Videresendelse af mail kan være nyttigt, men kan også udgøre en sikkerhedsrisiko på grund af den potentielle offentliggørelse af oplysninger. Hackere kan bruge disse oplysninger til at angreb din organisation eller partnere.
@@ -84,14 +84,15 @@ Følgende oplysninger er nødvendige for at oprette reglen for mailflow i Exchan
   - **Sidehovednavn**: `X-MS-Exchange-Inbox-Rules-Loop`
   - **Overskriftsværdi**: `.`
 
-  Betingelsen ser sådan ud: **'X-MS-Exchange-Inbox-Rules-Loop'-** sidehoved **svarer til '.'**
+  Betingelsen ser sådan ud: **'X-MS-Exchange-Inbox-Rules-Loop'** '**.'**
 
   Denne betingelse matcher enhver værdi for sidehovedet.
 
 - (Valgfrit) **Gør følgende** (handling): Du kan konfigurere en valgfri handling. Du kan f.eks.  \> bruge handlingen Rediger meddelelsesegenskaberne til at angive et brevhoved **med overskriften** **X-Videresendt** og værdien **Sand**. Men det er ikke nødvendigt at konfigurere en handling.
 - **Indstil Oversig denne rue med alvorsniveau** til **værdien Lav**, Mellem eller **Høj**.  Denne indstilling gør det muligt at bruge [Exchange transportregelrapport til](view-email-security-reports.md#exchange-transport-rule-report) at få oplysninger om brugere, der videresender.
 
-![Egenskaber for mailflowregel i EAC for en regel til at identificere videresendte meddelelser.](../../media/mail-flow-rule-for-forwarded-messages.png)
+:::image type="content" source="../../media/mail-flow-rule-for-forwarded-messages.png" alt-text="Egenskaber for regel for mailflow i EAC for en regel til at identificere videresendte meddelelser" lightbox="../../media/mail-flow-rule-for-forwarded-messages.png":::
+
 
 ## <a name="blocked-email-forwarding-messages"></a>Blokerede videresendelse af mails
 

@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 6ab6ff7c043dcceacfbb07d0f6fec5e974999204
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b4b47b5cd5b7f345d21f2fa60deec736d931c62f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682433"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473425"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>Politikanbefalinger til sikring af mail
 
-Denne artikel beskriver, hvordan du implementerer de anbefalede politikker for nultillids identitet og enhedsadgang for at beskytte organisatoriske mails og mailklienter, der understøtter moderne godkendelse og betinget adgang. Denne vejledning bygger på politikkerne [Fælles identitet og Enhedsadgang](identity-access-policies.md) og indeholder også et par yderligere anbefalinger.
+Denne artikel beskriver, hvordan du implementerer de anbefalede politikker for Nul tillid identitet og enhedsadgang for at beskytte organisatoriske mails og mailklienter, der understøtter moderne godkendelse og betinget adgang. Denne vejledning bygger på politikkerne [Fælles identitet og Enhedsadgang](identity-access-policies.md) og indeholder også et par yderligere anbefalinger.
 
 Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse, der kan anvendes baseret på granulariteten af dine behov **: udgangspunkt**, **virksomhed** **og specialiseret sikkerhed**. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede klientoperativsystemer, der refereres til i disse anbefalinger i introduktionen til anbefalede [sikkerhedspolitikker og -konfigurationer](microsoft-365-policies-configurations.md).
 
@@ -39,7 +39,7 @@ Disse anbefalinger kræver, at dine brugere bruger moderne mailklienter, Outlook
 
 For at beskytte mail illustrerer følgende diagram, hvilke politikker der skal opdateres fra de fælles politikker for identitet og enhedsadgang.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png" alt-text="Oversigt over politikopdateringer til beskyttelse af adgang til Exchange." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgang til Microsoft Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png":::
 
 Bemærk tilføjelsen af en ny politik for Exchange Online blokere ActiveSync-klienter. Dette tvinger brugen af Outlook mobile.
 
@@ -60,7 +60,7 @@ Hvis du Exchange Online og Outlook politikkerne, da du konfigurerede dem, skal d
 
 Exchange ActiveSync kan bruges til at synkronisere meddelelses- og kalenderdata på stationære computere og mobilenheder.
 
-For mobilenheder blokeres moderne godkendelses-kompatible Exchange ActiveSync-klienter, der ikke understøtter Intune-politikker for appbeskyttelse (eller understøttede klienter, som ikke er defineret i appbeskyttelsespolitikken), og Exchange ActiveSync-klienter, der bruger grundlæggende godkendelse, blokeres på baggrund af den politik for betinget adgang, der er oprettet i Kræv godkendte [apps og appbeskyttelse](identity-access-policies.md#require-approved-apps-and-app-protection).
+For mobilenheder blokeres moderne godkendelses-kompatible Exchange ActiveSync-klienter, der ikke understøtter Intune-politikker for appbeskyttelse (eller understøttede klienter, som ikke er defineret i appbeskyttelsespolitikken), og Exchange ActiveSync-klienter[, der bruger grundlæggende godkendelse, blokeres på baggrund af den politik for betinget adgang, der er oprettet i Kræv godkendte apps og APP-beskyttelse](identity-access-policies.md#require-approved-apps-and-app-protection).
 
 Hvis du vil blokere Exchange ActiveSync grundlæggende godkendelse på andre enheder, skal du følge trinnene i Bloker [Exchange ActiveSync](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#block-exchange-activesync-on-all-devices) på alle enheder, hvilket forhindrer Exchange ActiveSync-klienter, der bruger grundlæggende godkendelse på ikke-mobilenheder, i at oprette forbindelse til Exchange Online.
 
@@ -86,7 +86,7 @@ Sådan gør du:
    Set-OwaMailboxPolicy -Identity Default -ConditionalAccessPolicy ReadOnlyPlusAttachmentsBlocked
    ```
 
-5. I Azure-portalen skal du oprette en ny politik for betinget adgang med disse indstillinger:
+5. I menuen Azure Portal du oprette en ny politik for betinget adgang med disse indstillinger:
 
    **Opgaver** \> **Brugere og grupper**: Vælg relevante brugere og grupper, der skal medtages og udelades.
 
@@ -102,13 +102,13 @@ Se trinnene til konfiguration af denne politik i [Administrere adgang til meddel
 
 ## <a name="set-up-message-encryption"></a>Konfigurere meddelelseskryptering
 
-Med de nye Office 365-meddelelseskryptering (OME)-funktioner, som udnytter beskyttelsesfunktionerne i Azure Information Protection, kan din organisation nemt dele beskyttet mail med hvem som helst på en hvilken som helst enhed. Brugere kan sende og modtage beskyttede meddelelser med andre Microsoft 365 organisationer samt ikke-kunder, der bruger Outlook.com, Gmail og andre mailtjenester.
+Med de Office 365 OME-funktioner (Message Encryption), som udnytter beskyttelsesfunktionerne i Azure Information Protection, kan din organisation nemt dele beskyttet mail med alle på en hvilken som helst enhed. Brugere kan sende og modtage beskyttede meddelelser med andre Microsoft 365 organisationer samt ikke-kunder, der bruger Outlook.com, Gmail og andre mailtjenester.
 
-Du kan få mere at [vide under Konfigurer Office 365-meddelelseskryptering egenskaber](../../compliance/set-up-new-message-encryption-capabilities.md).
+Du kan få mere at [vide under Konfigurer Office 365 egenskaber for meddelelseskryptering](../../compliance/set-up-new-message-encryption-capabilities.md).
 
 ## <a name="next-steps"></a>Næste trin
 
-![Trin 4: Politikker for Microsoft 365 skyapps.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Politikkerne for Microsoft 365-apps i skyen" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Konfigurere Betingede adgangspolitikker for:
 

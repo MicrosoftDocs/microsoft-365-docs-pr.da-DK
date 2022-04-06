@@ -15,14 +15,16 @@ audience: ITPro
 ms.custom: asr
 ms.topic: conceptual
 ms.technology: mde
-ms.collection: m365initiative-m365-defender
+ms.collection:
+- m365initiative-m365-defender
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 78fdd5c6c02990943874807c285f8e5eb60ad6ad
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 9c489d28467582e0f95f3fde7440ff43022c44e1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63593421"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682036"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Forstå og brug reduktionsfunktioner til angrebsoverfladen
 

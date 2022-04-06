@@ -6,7 +6,7 @@ ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
 audience: Admin
-ms.topic: landing-page
+ms.topic: hub-page
 ms.service: O365-seccomp
 ms.collection: m365-security-compliance
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft 365 prøveversion af løsninger til overholdelse af regler og standarder.
-ms.openlocfilehash: e0d48ba9c4a5ca50869b64d6312fe845ef9bf50c
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: fc04e5d745997e31799511d4a9edb7e7207f4088
+ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679890"
+ms.lasthandoff: 02/06/2022
+ms.locfileid: "63606783"
 ---
 # <a name="trial-playbook-microsoft-365-compliance-solutions"></a>Prøvespilbog: Microsoft 365 løsninger til overholdelse af regler og standarder
 
