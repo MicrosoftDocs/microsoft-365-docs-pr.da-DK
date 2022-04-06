@@ -1,5 +1,5 @@
 ---
-title: Rapport om trusselsbeskyttelse i Microsoft Defender til Slutpunkt
+title: Trusselsbeskyttelsesrapport i Microsoft Defender for Endpoint
 description: Registrere registreringer af beskeder, kategorier og alvorsgrad ved hjælp af rapporten om trusselsbeskyttelse
 keywords: registrering af beskeder, kilde, besked efter kategori, alvorsgrad for besked, beskedklassifikation, bestemmelse
 ms.prod: m365-security
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 84893d7f015ec354bc27ac706c00e864705a42e5
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 55a620343aa7cda05def64acc9027925aaa96a1e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63592712"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472589"
 ---
-# <a name="threat-protection-report-in-microsoft-defender-for-endpoint"></a>Rapport om trusselsbeskyttelse i Microsoft Defender til Slutpunkt
+# <a name="threat-protection-report-in-microsoft-defender-for-endpoint"></a>Trusselsbeskyttelsesrapport i Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
@@ -36,7 +36,7 @@ Rapporten om trusselsbeskyttelse indeholder detaljerede oplysninger om vigtige b
 
 Dashboardet er struktureret i to sektioner:
 
-![Billede af rapporten om trusselsbeskyttelse.](images/threat-protection-reports.png)
+:::image type="content" source="images/threat-protection-reports.png" alt-text="Rapporten om trusselsbeskyttelse" lightbox="images/threat-protection-reports.png":::
 
 Sektion|Beskrivelse
 ---|---
@@ -69,7 +69,7 @@ Selvom tendenserne for påmindelsestendenser viser de mest populære oplysninger
 
 Rapporten består af kort, der viser følgende beskedattributter:
 
-- **Registreringskilder**: viser oplysninger om de sensor- og registreringsteknologier, der leverer de data, der bruges af Microsoft Defender til slutpunkt til at udløse beskeder.
+- **Registreringskilder**: viser oplysninger om de sensor- og registreringsteknologier, der leverer de data, der Microsoft Defender for Endpoint til at udløse beskeder.
 - **Trusselskategorier**: Viser typerne af trussels- eller angrebsaktivitet, der udløste beskeder, hvilket angiver mulige fokusområder for dine sikkerhedshandlinger.
 - **Alvorsgrad**: Viser alvorsniveauet for beskeder, der angiver den kollektive potentielle virkning af trusler i organisationen og det svarniveau, der skal bruges for at håndtere dem.
 - **Status**: Viser opløsningsstatus for beskeder, der angiver effektiviteten af dine manuelle beskedsvar og automatiseret afhjælpning (hvis det er aktiveret).

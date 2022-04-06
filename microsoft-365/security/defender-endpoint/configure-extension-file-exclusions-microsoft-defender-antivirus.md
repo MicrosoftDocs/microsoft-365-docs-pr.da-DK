@@ -15,19 +15,19 @@ ms.reviewer: ''
 manager: dansimp
 ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: be22c80e51551b5de2a2aeed2f0dff0db9a8481f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: da5add0e1f37a813e6962accbc391be6efba1cb1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599350"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472985"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurere og validere udeladelse baseret på filtypenavn og mappeplacering
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 Du kan definere undtagelser for Microsoft Defender Antivirus, der gælder for planlagte scanninger[, scanninger](schedule-antivirus-scans.md) efter [](run-scan-microsoft-defender-antivirus.md)behov og altid [on-on, beskyttelse og overvågning i realtid](configure-real-time-protection-microsoft-defender-antivirus.md). **Generelt skal du ikke anvende udeladelse**. Hvis du har brug for at anvende udeladelse, kan du vælge mellem flere forskellige typer:
@@ -36,8 +36,8 @@ Du kan definere undtagelser for Microsoft Defender Antivirus, der gælder for pl
 - [Udeladelse af filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus undtagelser gælder ikke for andre Microsoft Defender for Endpoint-funktioner, herunder [slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar),](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response)regler for reduktion af angrebsoverfladen [og](/microsoft-365/security/defender-endpoint/attack-surface-reduction) kontrolleret [mappe adgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig Slutpunktsregistrering og -svar vigtige beskeder og andre registreringer.
-> Hvis du vil udelukke filer bredt, skal du føje dem til de brugerdefinerede indikatorer for Microsoft Defender [for Endpoint](/microsoft-365/security/defender-endpoint/manage-indicators).
+> Microsoft Defender Antivirus undtagelser gælder ikke for andre Microsoft Defender for Endpoint, herunder slutpunktsregistrering og -svar [( Slutpunktsregistrering og -svar)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [ASR-regler (Attack Surface Reduction)](/microsoft-365/security/defender-endpoint/attack-surface-reduction) og [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig Slutpunktsregistrering og -svar vigtige beskeder og andre registreringer.
+> Hvis du vil udelade filer bredt, skal du føje dem til Microsoft Defender for Endpoint [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators).
 
 ## <a name="before-you-begin"></a>Inden du går i gang...
 
@@ -77,7 +77,7 @@ I følgende tabel vises nogle eksempler på udeladelse baseret på filtypenavn o
 
 - Udeladelse gælder [for planlagte scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md), [on-demand-scanninger](run-scan-microsoft-defender-antivirus.md) og [](configure-real-time-protection-microsoft-defender-antivirus.md)beskyttelse i realtid, men ikke på tværs af Defender til slutpunkt. Hvis du vil definere udeladelse på tværs af Defender til Slutpunkt, skal du bruge [brugerdefinerede indikatorer](manage-indicators.md).
 
-- Lokale ændringer af listerne (af brugere med administratorrettigheder, herunder ændringer, der er foretaget med PowerShell og WMI) flettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Konfigurationsstyring eller Intune. Listerne Gruppepolitik rangfølges, når der opstår konflikter. Desuden kan udeladelseslisten, der er foretaget Gruppepolitik, ses i [Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md).
+- Lokale ændringer af listerne (af brugere med administratorrettigheder, herunder ændringer foretaget med PowerShell og WMI) sammenflettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Configuration Manager eller Intune. Listerne Gruppepolitik rangfølges, når der opstår konflikter. Desuden kan ændringer i udeladelseslisten, der Gruppepolitik ændringer i Gruppepolitik, ses [i Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md).
 
 - Hvis du vil tillade lokale ændringer at tilsidesætte administrerede installationsindstillinger, skal [du konfigurere, hvordan lokalt og globalt definerede udeladelseslister flettes](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists).
 
@@ -92,18 +92,18 @@ Se følgende artikler:
 - [Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure)
 - [Microsoft Defender Antivirus indstillinger for enhedsbegrænsning for Windows 10 i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus)
 
-### <a name="use-configuration-manager-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Konfigurationsstyring til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-configuration-manager-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Configuration Manager til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
 
 Se [Sådan oprettes og installeres antimalwarepolitikker: Udeladelsesindstillinger](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for at få mere at vide om konfiguration Microsoft Endpoint Manager (aktuel forgrening).
 
-### <a name="use-group-policy-to-configure-folder-or-file-extension-exclusions"></a>Brug Gruppepolitik til at konfigurere udeladelse af mapper eller filtypenavnet
+### <a name="use-group-policy-to-configure-folder-or-file-extension-exclusions"></a>Brug Gruppepolitik til at konfigurere udeladelse af mapper eller filtypenavn
 
 > [!NOTE]
 > Hvis du angiver en fuldt kvalificeret sti til en fil, er det kun den pågældende fil, der udelades. Hvis en mappe er defineret i udelukkelsen, udelades alle filer og undermapper under den pågældende mappe.
 
 1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik skal** du **gå til Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I Gruppepolitik **skal du gå** til **Computerkonfiguration og** vælge **Administrative skabeloner**.
 
 3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **udeladelse.**
 
@@ -303,7 +303,7 @@ Du kan hente elementerne på udeladelseslisten ved hjælp af en af følgende met
 > [!IMPORTANT]
 > Udeladelseslisten over ændringer, Gruppepolitik **har,** vises på listerne [i Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md).
 >
-> De ændringer, der Windows Sikkerhed i **appen Gruppepolitik**, vises ikke.
+> De ændringer, der Windows Sikkerhed i **appen, vises ikke** på Gruppepolitik lister.
 
 Hvis du bruger PowerShell, kan du hente listen på to måder:
 
@@ -334,7 +334,7 @@ Get-MpPreference
 
 I følgende eksempel er elementerne på listen `ExclusionExtension` fremhævet:
 
-:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output til Get-MpPreference.":::
+:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output til Get-MpPreference" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
 
 Få mere at vide under [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/).
 
@@ -350,7 +350,7 @@ $WDAVprefs.ExclusionPath
 
 I følgende eksempel er listen opdelt i nye linjer for hver brug af `Add-MpPreference` cmdlet'en:
 
-:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output, der kun viser posterne på udeladelseslisten.":::
+:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output, der kun viser posterne på udeladelseslisten" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
 
 Få mere at vide under [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/).
 

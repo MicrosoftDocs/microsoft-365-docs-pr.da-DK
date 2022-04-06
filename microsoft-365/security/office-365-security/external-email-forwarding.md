@@ -8,6 +8,7 @@ manager: dansimp
 ms.date: 11/17/2021
 audience: ITPro
 ms.topic: overview
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
@@ -15,12 +16,12 @@ ms.custom:
 description: Denne artikel omhandler emner, herunder ekstern videresendelse af mail, automatisk videresendelse, 5.7.520 Adgang nægtet meddelelser, deaktivering af ekstern videresendelse, "Din administrator har deaktiveret ekstern videresendelse"-meddelelser samt politikken for udgående uønsket post.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 228bb4402fd67ba8e56dd84b270c64977667ff2d
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 14b41f21efe3608096636444afd4b36de3742a85
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63589474"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681408"
 ---
 # <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>Kontrollere automatisk videresendelse af eksterne mails Microsoft 365
 
@@ -65,16 +66,11 @@ Som administrator har du muligvis allerede konfigureret andre kontrolelementer t
 
 Når en indstilling tillader ekstern videresendelse, men en anden indstilling blokerer ekstern videresendelse, vinder blokken typisk. Eksempler er beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Scenarie|Resultat|
 |---|---|
 |<ul><li>Du skal konfigurere eksterne domæneindstillinger for at tillade automatisk videresendelse.</li><li>Automatisk videresendelse i politikken for udgående spamfilter er indstillet til **Fra**.</li></ul>|Automatisk videresendte meddelelser til modtagere i de berørte domæner blokeres.|
 |<ul><li>Du skal konfigurere eksterne domæneindstillinger for at tillade automatisk videresendelse.</li><li>Automatisk videresendelse i politikken for udgående spamfilter er indstillet **til Automatisk – Systemkontrolleret**.</li></ul>|Automatisk videresendte meddelelser til modtagere i de berørte domæner blokeres. <p> Som beskrevet tidligere **blev Automatisk – Systemkontrolleret** brugt til at vise " **Til",** men indstillingen har ændret sig med tiden til at betyde **Fra** i alle organisationer. <p> For at gøre den absolutte klarhed skal du konfigurere din politik for udgående spamfilter **til Til** eller **Fra**.|
 |<ul><li>Automatisk videresendelse i politikken for udgående spamfilter er indstillet til **Til**</li><li>Du bruger regler for mailflow eller eksterne domæner til at blokere automatisk videresendte mails.</li></ul>|Automatisk videresendte meddelelser til berørte modtagere blokeres af regler for mailflow eller eksterne domæner.|
-|
 
 Du kan bruge denne funktionsmåde (f.eks. til at tillade automatisk videresendelse af politikker for indgående spamfilter, men bruge eksterne domæner til at styre de eksterne domæner, som brugere kan videresende meddelelser til.
 

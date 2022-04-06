@@ -13,20 +13,20 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om de vigtigste forskelle mellem en dokumentforståelsesmodel og en formularbehandlingsmodel.
-ms.openlocfilehash: 0605beb2b034343cc53e32058905870f75f811a4
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: e5de4c55cc8a559ad03d722b1f7235797db76e07
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63590096"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681276"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem dokumentforståelse og modeller til formularbehandling 
 
-Indholdsforståelse i Microsoft SharePoint Syntex giver dig mulighed for at identificere og klassificere dokumenter, der uploades til SharePoint-dokumentbiblioteker, og udtrække relevante oplysninger fra hver enkelt fil.  Når filer eksempelvis uploades til et SharePoint-dokumentbibliotek, klassificeres alle filer, der identificeres som  indkøbsordrer, som sådan, og de vises derefter i en brugerdefineret visning af dokumentbiblioteket. Desuden kan du trække bestemte oplysninger fra hver fil (f.eks. *IP-nummer* og *Total*) og få det vist som en kolonne i visningen af dokumentbiblioteket. 
+Indholdsforståelse i Microsoft SharePoint Syntex giver dig mulighed for at identificere og klassificere dokumenter, der uploades til SharePoint-dokumentbiblioteker, og derefter udtrække relevante oplysninger fra hver fil. Når filer eksempelvis uploades til et SharePoint-dokumentbibliotek, klassificeres alle filer, der identificeres som  indkøbsordrer, som sådan, og de vises derefter i en brugerdefineret visning af dokumentbiblioteket. Desuden kan du trække bestemte oplysninger fra hver fil (f.eks. *IP-nummer* og *Total*) og få det vist som en kolonne i visningen af dokumentbiblioteket. 
 
 Med indholdsforståelse kan *du oprette* modeller til at identificere og udtrække de oplysninger, du har brug for. Modeller har værdi i at hjælpe med at løse forretningsmæssige problemer i forbindelse med søgning, forretningsprocesser, overholdelse af regler og standarder og mange andre.
 
-Der er to modeltyper, du kan bruge:
+Der er to brugerdefinerede modeltyper, du kan bruge:
 
 - [Dokumentforståelsesmodeller](document-understanding-overview.md)
 - [Modeller til behandling af formular](form-processing-overview.md)
@@ -52,7 +52,7 @@ Dokumentforståelsesmodeller oprettes og administreres på SharePoint indholdsce
 > [!NOTE]
 > Du kan finde flere oplysninger om inputdokumenter under [Krav og begrænsninger for formularbehandlingsmodel](/ai-builder/form-processing-model-requirements). 
 
-Modeller til formularbehandling oprettes Power Apps [AI Builder](/ai-builder/overview), men oprettelsen starter direkte fra et SharePoint dokumentbibliotek. Et dokumentbibliotek skal have oprettelse af en formularbehandlingsmodel aktiveret, før en bruger kan oprette en formularbehandlingsmodel for den. Administratorer kan aktivere oprettelse af formularbehandlingsmodel i indholdsforståelse af administratorindstillinger. Modeller til formularbehandling bruger PowerAutomateflows til at behandle filer, når de uploades til dokumentbiblioteket.
+Modeller til formularbehandling oprettes Power Apps [AI Builder](/ai-builder/overview), men oprettelsen starter direkte fra et SharePoint dokumentbibliotek. Et dokumentbibliotek skal have oprettelse af en formularbehandlingsmodel aktiveret, før en bruger kan oprette en formularbehandlingsmodel for den. Administratorer kan aktivere oprettelse af formularbehandlingsmodel i indholdsforståelse af administratorindstillinger. Modeller til formularbehandling bruger Power Automate til at behandle filer, når de uploades til dokumentbiblioteket.
 
 Når du opretter en dokumentforståelsesmodel, opretter du en [ny SharePoint indholdstype](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978), der gemmes i galleriet SharePoint indholdstyper. Eller du kan bruge eksisterende indholdstyper til at definere din model, hvis det er nødvendigt.
 

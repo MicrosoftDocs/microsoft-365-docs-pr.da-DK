@@ -16,20 +16,20 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: d8ff1b5946ccdcbc35a219bc0e656c2e23d6f3ea
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b62ff851cbee58cf3b29a2b4dde6fb1b6107dd85
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63595832"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472809"
 ---
 # <a name="enable-controlled-folder-access"></a>Aktivér styret mappeadgang
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -40,14 +40,14 @@ Du kan aktivere styret mappeadgang ved hjælp af en af disse metoder:
 
 - [Windows Sikkerhed app *](#windows-security-app)
 - [Microsoft Endpoint Manager](#endpoint-manager)
-- [Administration af mobilenheder (MDM)](#mobile-device-management-mdm)
+- [Mobildata Enhedshåndtering (MDM)](#mobile-device-management-mdm)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
 - [Gruppepolitik](#group-policy)
 - [PowerShell](#powershell)
 
 [I overvågningstilstand](evaluate-controlled-folder-access.md) kan du teste, hvordan funktionen fungerer (og gennemse hændelser), uden at det påvirker den normale brug af enheden.
 
-Gruppepolitik, der deaktiverer fletning af lokale administratorlisten, tilsidesætter indstillinger for styret mappeadgang. De tilsidesætter også beskyttede mapper og tilladte apps, der er angivet af den lokale administrator via styret mappeadgang. Disse politikker omfatter:
+Gruppepolitik, der deaktiverer fletning af lokale administratorlisten, tilsidesætter indstillinger for kontrolleret mappeadgang. De tilsidesætter også beskyttede mapper og tilladte apps, der er angivet af den lokale administrator via styret mappeadgang. Disse politikker omfatter:
 
 - Microsoft Defender Antivirus Konfigurer **den lokale administrators flettefunktionsmåde for lister**
 - System Center Endpoint Protection **Tillad brugere at tilføje udeladelse og tilsidesættelser**
@@ -94,7 +94,7 @@ Du kan finde flere oplysninger om deaktivering af lokal listefletning [under For
     > [!NOTE]
     > Jokertegn understøttes for programmer, men ikke for mapper. Undermapper er ikke beskyttede. Tilladte apps fortsætter med at udløse hændelser, indtil de genstartes.
 
-## <a name="mobile-device-management-mdm"></a>Administration af mobilenheder (MDM)
+## <a name="mobile-device-management-mdm"></a>Mobildata Enhedshåndtering (MDM)
 
 Brug [konfigurationen ./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender) serviceudbyder (CSP) til at tillade, at apps foretager ændringer i beskyttede mapper.
 
@@ -119,7 +119,7 @@ Brug [konfigurationen ./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtecte
 
 1. På Gruppepolitik administrationsenhed skal du åbne [Gruppepolitik Administrationskonsol](https://technet.microsoft.com/library/cc731212.aspx), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet til **at Windows komponenter > Microsoft Defender Antivirus > Windows Defender Exploit Guard > kontrolleret mappeadgang**.
 
@@ -130,10 +130,10 @@ Brug [konfigurationen ./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtecte
    - **Bloker kun diskændringer** – Forsøg fra upålidelige apps på at skrive til diskudførte enheder logføres Windows hændelsesloggen. Disse logfiler kan findes i Logfiler **for** \> programmer og tjenester, som Microsoft \> Windows \> Windows Defender-drifts-id \> \> 1123.
    - **Kun overvåge diskændringer** – Det er kun forsøg på at skrive til beskyttet disk, der skal **registreres i hændelsesloggen** \> i Windows (under Programmer **og** \> tjenestelogfiler **Microsoft** \> Windows **Windows Defender** \> **drifts-id** \> **1124**). Forsøg på at ændre eller slette filer i beskyttede mapper optages ikke.
 
-      ![Skærmbillede af gruppepolitikindstillingen Aktiveret og Overvågningstilstand valgt på rullelisten.](../../media/cfa-gp-enable.png)
+    :::image type="content" source="../../media/cfa-gp-enable.png" alt-text="Indstillingen Gruppepolitik aktiveret og Overvågningstilstand valgt" lightbox="../../media/cfa-gp-enable.png":::
 
 > [!IMPORTANT]
-> Hvis du vil aktivere styret mappeadgang fuldt ud, skal Gruppepolitik indstillingen til Aktiveret  og **vælge Bloker** i rullemenuen med indstillinger.
+> For at aktivere styret mappeadgang fuldt ud skal du angive indstillingen Gruppepolitik aktiveret og vælge  Bloker i  rullemenuen med indstillinger.
 
 ## <a name="powershell"></a>PowerShell
 
@@ -153,4 +153,4 @@ Bruges `Disabled` til at deaktivere funktionen.
 
 - [Beskyt vigtige mapper med styret mappeadgang](controlled-folders.md)
 - [Tilpas styret mappeadgang](customize-controlled-folders.md)
-- [Evaluer Microsoft Defender til slutpunkt](evaluate-mde.md)
+- [Evaluer Microsoft Defender for Endpoint](evaluate-mde.md)

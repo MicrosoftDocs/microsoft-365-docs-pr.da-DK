@@ -18,12 +18,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om de tilgængelige og foretrukne indstillinger til at tillade indgående meddelelser Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b1edcbba31075e9880b8ea2034f4ffde50bb71e9
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 0370b72ccf29469bd88679d589d715d8897c921f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465723"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681672"
 ---
 # <a name="create-safe-sender-lists-in-eop"></a>Opret lister over afsendere, der er tillid til i EOP
 
@@ -31,7 +31,7 @@ ms.locfileid: "64465723"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Hvis du er Microsoft 365-kunde med postkasser i Exchange Online eller en enkeltstående Exchange Online Protection-kunde (EOP) uden Exchange Online-postkasser, tilbyder EOP flere måder at sikre, at brugerne modtager mail fra afsendere, der er tillid til. Disse indstillinger omfatter Exchange regler for mailflow (også kaldet transportregler), Outlook Pengeskab-afsendere, LISTEN over tilladte IP-adresser (filtrering af forbindelse) og tilladte lister over afsendere eller tilladte domæner i antispampolitikker. Samlet kan du overveje disse indstillinger som lister over afsendere, der _er tillid til_.
@@ -101,8 +101,7 @@ I følgende eksempel antages det, at du skal bruge mail contoso.com for at sprin
 
       Når en meddelelse springer spamfiltrering over på grund af en regel for mailflow, `SFV:SKN` stemples værdien i **overskriften X-Forefront Antispam Report** . Hvis meddelelsen kommer fra en kilde, der er på listen over tilladte IP-adresser, tilføjes `IPV:CAL` værdien også. Disse værdier kan hjælpe dig med fejlfinding.
 
-      :::image type="content" source="../../media/1-AllowList-SkipFilteringFromContoso.png" alt-text="Indstillinger for mailflowregel i EAC til at tilsidesætte spamfiltrering" lightbox="../../media/1-AllowList-SkipFilteringFromContoso.png":::
-
+![Indstillinger for mailflowregel i EAC til at tilsidesætte spamfiltrering.](../../media/1-AllowList-SkipFilteringFromContoso.png)
 
 ## <a name="use-outlook-safe-senders"></a>Brug Outlook Pengeskab afsendere
 

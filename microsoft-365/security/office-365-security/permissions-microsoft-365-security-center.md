@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 74e9f6e0ae60b322ed4ec50c5b1a9db278dbb2e6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 4e819a9de9d5ccd66caab4bc13d8b11c1a95ab03
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593894"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681716"
 ---
 # <a name="permissions-in-the-microsoft-365-defender-portal"></a>Tilladelser i Microsoft 365 Defender portalen
 
@@ -77,10 +77,6 @@ Når du vælger en rolle, vises der en pop op-vindue med oplysninger, der indeho
 
 Få mere at vide under [Få vist og tildel administratorroller Azure Active Directory](/azure/active-directory/users-groups-roles/directory-manage-roles-portal).
 
-<br>
-
-****
-
 |Rolle|Beskrivelse|
 |---|---|
 |**Global administrator**|Adgang til alle administrative funktioner i Microsoft 365 tjenester. Kun globale administratorer kan tildele andre administratorroller. Du kan finde flere oplysninger [under Global administrator/virksomhedsadministrator](/azure/active-directory/roles/permissions-reference#global-administrator--company-administrator).|
@@ -92,7 +88,6 @@ Få mere at vide under [Få vist og tildel administratorroller Azure Active Dire
 |**Global læser**|Den skrivebeskyttede version af **rollen Global** administrator. Få vist alle indstillinger og administrative oplysninger på tværs Microsoft 365. Du kan finde flere oplysninger [under Global læser](/azure/active-directory/roles/permissions-reference#global-reader).|
 |**Angrebssimuleringsadministrator**|Opret og administrer alle aspekter af oprettelse [af angreb](attack-simulation-training.md) , start/planlægning af en simulering og gennemgang af simuleringsresultater. Du kan få mere at vide under [Administrator for angrebssimulering](/azure/active-directory/roles/permissions-reference#attack-simulation-administrator).|
 |**Forfatter til angrebsindlæsning**|Opret angrebsbelastninger, men start eller planlæg dem ikke rent faktisk. Få mere at vide under [Forfatter til angrebsindlæsning](/azure/active-directory/roles/permissions-reference#attack-payload-author).|
-|
 
 ### <a name="email--collaboration-roles-in-the-microsoft-365-defender-portal"></a>Mail & med samarbejdsroller i Microsoft 365 Defender-portalen
 

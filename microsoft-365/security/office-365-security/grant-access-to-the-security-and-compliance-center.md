@@ -10,8 +10,8 @@ audience: Admin
 ms.topic: how-to
 f1_keywords:
 - ms.o365.cc.PermissionsHelp
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
-ms.collection: Strat_O365_IP
 search.appverid:
 - MOE150
 - MET150
@@ -20,12 +20,12 @@ description: Brugere skal have tildelt tilladelser i Microsoft 365 Security & Co
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2dcab8a14df6266bea87b3ae876ed9bac8eea1d7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5af3d045b174c4405dc2060fea1db22b3b4066ac
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588707"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680681"
 ---
 # <a name="give-users-access-to-the-security--compliance-center"></a>Giv brugere adgang til Security & Compliance Center
 

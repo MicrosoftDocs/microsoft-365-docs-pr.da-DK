@@ -7,6 +7,7 @@ author: chrisda
 manager: dansimp
 audience: ITPro
 ms.topic: how-to
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: 3e64f99d-ac33-4aba-91c5-9cb4ca476803
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Administratorer kan bruge linket til meddelelsessporing i portalen til Microsoft 365 Defender at finde ud af, hvad der er sket med meddelelser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 934a8a0cf3c6eb0b828e334252707043d0d87e03
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d09470e37c066202d49d7d79788c12853ed42e21
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587939"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679736"
 ---
 # <a name="message-trace-in-the-microsoft-365-defender-portal"></a>Meddelelsessporing i Microsoft 365 Defender portalen
 

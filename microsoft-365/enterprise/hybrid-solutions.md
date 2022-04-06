@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 09/30/2020
 audience: ITPro
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-solutions
 ms.localizationpriority: medium
 search.appverid:
@@ -18,12 +18,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: e9b8e065-2750-4534-9d39-aafd51a2a4e2
 description: Indeholder en liste over links til nyttige oplysninger til installation Office serverarbejdsbelastninger i Microsoft Azure.
-ms.openlocfilehash: a7891e05da6af23f5847d91c21c25f8c9d73cee5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e4f4ddf41174a9bd1a3b4cef9e43087825ee4bbc
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590602"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681584"
 ---
 # <a name="hybrid-solutions"></a>Hybridløsninger
 

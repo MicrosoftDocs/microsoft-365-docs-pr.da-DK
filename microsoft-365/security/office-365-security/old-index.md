@@ -16,12 +16,12 @@ ms.collection:
 description: Sikkerhed i Office 365, fra EOP til Defender for Office 365 Plans 1 og 2, Standard vs. Strenge sikkerhedskonfigurationer og meget mere. Forstå, hvad du har, og lær, hvordan du sikrer dine egenskaber.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cbcdf83423b8a6d4e40f34a96282059b44c9df3e
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 688fe6bf984da77c7d53e647ec52b412e053852d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63591314"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680548"
 ---
 # <a name="office-365-security"></a>Office 365 sikkerhed
 
@@ -54,7 +54,6 @@ Du er måske vant til at se disse tre komponenter diskuteret på denne måde:
 |EOP|Microsoft Defender til Office 365 P1|Microsoft Defender til Office 365 P2|
 |---|---|---|
 |Forhindrer generelle, volumenbaserede, kendte angreb.|Beskytter mails og samarbejde mod malware på nul dage, phish og virksomhedsmail.|Tilføjer undersøgelse efter brud, jagt og svar samt automatisering og simulering (til uddannelse).|
-|
 
 Men med hensyn til arkitektur, så lad os starte med at tænke på hvert enkelt stykke som kumulativt lag af sikkerhed, hver med fokus på sikkerhed. Mere som dette:
 
@@ -92,7 +91,6 @@ Start med **Exchange Online Protection**:
 |Prevent/Detect|Undersøg|Svar|
 |---|---|---|
 |Teknologier omfatter:<ul><li>spam</li><li>phish</li><li>malware</li><li>masseforsendelser</li><li>efterlignet intelligens</li><li>Registrering af efterligning</li><li>Administratorkarantæne</li><li>Administrator- og brugerindsendelser af falske positive og falske negativer</li><li>Tillad/bloker for URL-adresser og filer</li><li>Rapporter</li></ul>|<li>Søgning i overvågningslogfil</li><li>Meddelelsessporing</li>|<li>Automatisk tømning (ZAP) uden time</li><li>Forbedring og test af tilladelses- og blokeringslister</li>|
-|
 
 Hvis du vil gå til EOP, kan **[du gå til denne artikel](exchange-online-protection-overview.md)**.
 
@@ -132,7 +130,6 @@ Denne hurtige reference hjælper dig med at forstå, hvilke muligheder der er me
 |Defender til Office 365 Plan 1|Defender til Office 365 Plan 2|
 |---|---|
 |Konfigurations-, beskyttelses- og registreringsfunktioner: <ul><li>[Pengeskab vedhæftede filer](safe-attachments.md)</li><li>[Sikre links](safe-links.md)</li><li>[Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Beskyttelse mod phishing i Defender til Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Registreringer i realtid](threat-explorer.md)</li></ul>|Defender for Office 365 Plan 1-funktioner <p> --- plus --- <p> Automatisering, undersøgelse, afhjælpning og uddannelsesfunktioner: <ul><li>[Threat Trackers](threat-trackers.md)</li><li>[Threat Explorer](threat-explorer.md)</li><li>[Automatiseret undersøgelse og svar](office-365-air.md)</li><li>[Angrebstunge](attack-simulator.md)</li></ul>|
-|
 
 - Microsoft Defender til Office 365 Plan 2 er inkluderet i Office 365 E5, Office 365 A5 og Microsoft 365 E5.
 

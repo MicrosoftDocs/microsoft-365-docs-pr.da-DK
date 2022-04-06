@@ -1,7 +1,7 @@
 ---
 title: Beskeder om tjenesten eksterne modtagere
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: markjjo
+author: markjjo
 manager: scotv
 ms.date: ''
 audience: Admin
@@ -19,18 +19,18 @@ ms.custom:
 f1.keywords:
 - NOCSH
 description: Brug beskeder fra tjenesten eksterne modtagere til at overvåge postkasser i venteposition, der når deres postkassekvote.
-ms.openlocfilehash: 8db8e090ec5430f13153bc3edf5b3315c041d9cf
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 931be51ee51bd5557633415004eed9a1c7e77888
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568000"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63705215"
 ---
 # <a name="service-alerts-for-messages-pending-delivery-to-external-recipients-in-exchange-online-monitoring"></a>Tjenestebeskeder om meddelelser, der afventer levering til eksterne modtagere Exchange Online overvågning
 
 Tjenesten informerer administratorer om kø til eksterne modtagere uden for Exchange Online. Disse beskeder kræver muligvis afhjælpningshandlinger, der er uden for Microsoft, men de kan give dig de oplysninger, der er nødvendige for at afhjælpe dem.
 
-Disse serviceadvarsler vises i Microsoft 365 Administration. Hvis du vil have vist disse tjenesteadvarsler > , <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**skal Tjenestetilstand**</a> >  **Exchange Online** og derefter klikke **på fanen Aktive** problemer. Navnet på disse serviceadvarsler er "Meddelelse i kø til eksterne modtagere over tærskelværdier".
+Disse serviceadvarsler vises i Microsoft 365 Administration. For at få vist disse serviceadvarsler skal du **gå til HealthService** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**health**</a> >  **Exchange Online** og derefter klikke på **fanen Aktive** problemer. Navnet på disse serviceadvarsler er "Meddelelse i kø til eksterne modtagere over tærskelværdier".
 
 ![Tjenestebesked for meddelelser, der venter på levering til eksterne modtagere, der vises i Exchange Online dashboardet for overvågning.](../media/microsoft-365-exchange-monitoring/ExternalRecipientsServiceAlerts1.png)
 

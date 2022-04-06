@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: I denne artikel defineres metadatafelterne for dokumenter i et gennemsynssæt i en sag Advanced eDiscovery i Microsoft 365.
-ms.openlocfilehash: a1ce1cf43cb2b5d741731948288ab60f48cf5352
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e07afbcfff0c6cae748ac6104879ec25f046cbf5
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63587882"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680725"
 ---
 # <a name="document-metadata-fields-in-advanced-ediscovery"></a>Felter til dokumentmetadata Advanced eDiscovery
 
@@ -66,7 +66,7 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |Teams meddelelsestitel|TeamsAnnouncementTitle|TeamsAnnouncementTitle|Titel fra en [teammeddelelse](https://support.microsoft.com/office/send-an-announcement-to-a-channel-8f244ea6-235a-4dcc-9143-9c5b801b4992).|
 |||Converted_file_path|Stien til den konverterede eksportfil. Kun til intern brug af Microsoft.|
 |Øvøvrisk|Øvøvrisk|Øvøvrisk|Navnet på den, der blev tilknyttet elementet.|
-|Dato|Dato|Dato|Dato er et beregnet felt, der afhænger af filtypen.<p>Mail: Dato for afsendt<br>Vedhæftede filer i mails: Dato for seneste ændring af dokumentet. Hvis det ikke er tilgængeligt, er forælderens Dato for sendt<br>Integrerede dokumenter: Dato for seneste ændring af dokumentet. Hvis den ikke er tilgængelig, kan du se den overordnedes dato for seneste ændring<br>SPO-dokumenter (omfatter moderne vedhæftede filer): SharePoint dato for seneste ændring. Hvis den ikke er tilgængelig, dato for seneste ændring af dokumenterne<br>Ikke-Office 365 dokumenter: Dato for seneste ændring<br>Møder: Mødets startdato<br>Telefonsvarer: Dato for afsendt post<br>Chat: Dato for afsendt<br>Teams: Dato for afsendt|
+|Dato|Dato|Dato|Dato er et beregnet felt, der afhænger af filtypen.<p>**Mail**: Dato for afsendt<br>**Vedhæftede filer** i mails: Dato for seneste ændring af dokumentet. hvis den ikke er tilgængelig, sendes den forælders dato for afsendt<br>**Integrerede dokumenter**: Dato for seneste ændring af dokumentet. Hvis den ikke er tilgængelig, kan du se den overordnedes dato for seneste ændring<br>**SPO-dokumenter (indeholder moderne vedhæftede filer)**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, SharePoint dato for seneste ændring<br>**Ikke-Office 365 dokumenter**: Dato for seneste ændring<br>**Møder**: Mødets startdato<br>**Telefonsvarer**: Dato for afsendt post<br>**Chat**: Dato for afsendt<br>**Teams**: Dato for sendt|
 |Dokumentkommentarer|DocComments|Doc_comments|Kommentarer fra dokumentets metadata.|
 |Dokumentvirksomhed||Doc_company|Firma fra dokumentets metadata.|
 |Dokumentdato oprettet|CreatedTime|Doc_date_created|Oprette dato ud fra dokumentmetadata.|

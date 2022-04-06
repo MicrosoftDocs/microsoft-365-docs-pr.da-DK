@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e01fe2bdc5765c77500ae98e9c8177a35c683fca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 70a5eba3eb78878cc1f15bdd711a3331e9af870a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587935"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680880"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Automatiseret undersøgelse og svar (AIR) i Microsoft Defender for Office 365
 
@@ -89,10 +89,6 @@ Desuden skal du sørge for [at gennemse organisationens advarselspolitikker](../
 
 Microsoft 365 indeholder mange indbyggede politikker for påmindelser, som hjælper med at identificere Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler samt risiko for informationsstyring. Flere af [standardbeskedpolitikker kan](../../compliance/alert-policies.md#default-alert-policies) udløse automatiserede undersøgelser. I følgende tabel beskrives de beskeder, der udløser automatiserede undersøgelser, deres alvorsgrad i Microsoft 365 Defender, og hvordan de genereres:
 
-<br>
-
-****
-
 |Besked|Alvorsgrad|Sådan genereres beskeden|
 |---|---|---|
 |Der blev fundet et potentielt ondsindet klik på webadressen|**Høj**|Denne besked genereres, når et af følgende sker: <ul><li>En bruger, der [er Pengeskab links](safe-links.md) i organisationen, klikker på et skadeligt link</li><li>Ændringer af konklusion for URL-adresser identificeres af Microsoft Defender for Office 365</li><li>Brugere tilsidesætter Pengeskab Links-advarselssider (baseret på [organisationens politik Pengeskab Links](set-up-safe-links-policies.md).</li></ul> <p> Du kan finde flere oplysninger om hændelser, der udløser denne besked, [under Konfigurer Pengeskab links-politikker](set-up-safe-links-policies.md).|
@@ -101,7 +97,6 @@ Microsoft 365 indeholder mange indbyggede politikker for påmindelser, som hjæl
 |Mails, der indeholder phish URL-adresser, fjernes efter levering|**Information**|Denne besked genereres, når alle meddelelser, der indeholder phish, leveres til postkasser i organisationen. Hvis denne hændelse sker, fjerner Microsoft de inficeret meddelelser fra Exchange Online postkasser ved hjælp af [ZAP](zero-hour-auto-purge.md).|
 |Mistænkelige e-mail-afsendelsesmønstre registreres|**Mellem**|Denne besked genereres, når en person i organisationen har sendt mistænkelige mails og er i risiko for at blive begrænset fra at sende mails. Beskeden er en tidlig advarsel for adfærd, der kan betyde, at kontoen er kompromitteret, men ikke alvorlig nok til at begrænse brugeren. <p> Selvom det er sjældent, kan en besked, der genereres af denne politik, være en anomali. Det er dog en god ide at [kontrollere, om brugerkontoen er kompromitteret](responding-to-a-compromised-email-account.md).|
 |En bruger er begrænset i at kunne sende mails|**Høj**|Denne besked genereres, når en person i organisationen er begrænset i at kunne sende udgående mail. Denne påmindelse giver typisk resultater, når [en mailkonto er kompromitteret](responding-to-a-compromised-email-account.md). <p> Du kan finde flere oplysninger om begrænsede brugere [i Fjern blokerede brugere fra portalen Begrænsede brugere Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
-|
 
 > [!TIP]
 > Du kan få mere at vide om beskedpolitikker eller redigere standardindstillingerne under [Beskedpolitikker i Microsoft 365 Overholdelsescenter](../../compliance/alert-policies.md).
@@ -109,10 +104,6 @@ Microsoft 365 indeholder mange indbyggede politikker for påmindelser, som hjæl
 ## <a name="required-permissions-to-use-air-capabilities"></a>Påkrævede tilladelser til at bruge AIR-funktioner
 
 Tilladelser tildeles gennem bestemte roller, f.eks. dem, der er beskrevet i følgende tabel:
-
-<br>
-
-****
 
 |Opgave|Rolle(er) påkrævet|
 |---|---|
@@ -147,10 +138,6 @@ Den nye og forbedrede Microsoft 365 Defender samler <https://security.microsoft.
 
 I følgende tabel vises ændringer og forbedringer af AIR i Microsoft Defender til Office 365.
 
-<br>
-
-****
-
 |Element|Hvad ændres?|
 |---|---|
 |**Undersøgelsesside**|Den opdaterede **side Undersøgelser er** mere i overensstemmelse med det, du ser [i Microsoft Defender til slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Du får vist nogle generelle format- og typografiændringer, der er justeret efter den nye, samlede **undersøgelsesvisning** . Undersøgelsesgrafen har f.eks. et mere ensartet format.|
@@ -161,7 +148,6 @@ I følgende tabel vises ændringer og forbedringer af AIR i Microsoft Defender t
 |**Fanen** Beviser|En ny **fane med** Beviser viser de vigtigste resultater i forbindelse med handlinger. Handlinger, der er relateret til hvert enkelt beviser, kan godkendes (eller afvises) i en siderude, der åbnes, når du vælger en afventende handling.|
 |**Handlingscenter**|Det opdaterede **handlingscenter** (<https://security.microsoft.com/action-center>) samler afventende og fuldførte handlinger på tværs af mail, enheder og identiteter. Du kan få mere at vide i Handlingscenter. Hvis du vil have mere at vide, [skal du se Handlingscenter](../defender/m365d-action-center.md).|
 |**Siden Hændelser**|Siden **Hændelser korrelerer** nu flere undersøgelser i fællesskab for at give en bedre konsolideret visning af undersøgelser. ([Få mere at vide om hændelser](../defender/incidents-overview.md)).|
-|
 
 ## <a name="next-steps"></a>Næste trin
 

@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b3ff937b014eae69c501812ac542f6537b25f8d
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 4f3c992ad94d63b44d2f89acff6bb295728a0804
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63587288"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681430"
 ---
 # <a name="investigate-malicious-email-that-was-delivered-in-microsoft-365"></a>Undersøg ondsindede mails, der blev leveret i Microsoft 365
 
@@ -58,16 +58,11 @@ Sørg for, at følgende krav er opfyldt:
 
 Hvis du vil udføre visse handlinger, f.eks. visning af brevhoveder eller hentning af mailindhold, skal rollen Eksempel være føjet til en anden relevant rollegruppe. Følgende tabel giver et billede af de påkrævede roller og tilladelser.
 
-<br>
-
-****
-
 |Aktivitet|Rollegruppe|Skal du have en eksempelrolle?|
 |---|---|---|
 |Brug Trusselsoversigt (og registreringer i realtid) til at analysere trusler|Global Administrator <p> Sikkerhedsadministrator <p> Sikkerhedslæser|Nej|
 |Brug Trusselsstifinder (og registreringer i realtid) til at få vist brevhoveder for mails samt forhåndsvisning og download af mails, der er sat i karantæne|Global Administrator <p> Sikkerhedsadministrator <p> Sikkerhedslæser|Nej|
 |Brug Threat Explorer til at få vist brevhoveder, gennemse mail (kun på siden mailenhed) og hente mails, der leveres til postkasser|Global Administrator <p> Sikkerhedsadministrator <p> Sikkerhedslæser <p> Eksempel|Ja|
-|
 
 > [!NOTE]
 > **Eksempel** er en rolle og ikke en rollegruppe. Eksempelrollen skal føjes til en eksisterende rollegruppe eller en ny rollegruppe i Microsoft 365 Defender portalen. Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).
@@ -138,10 +133,6 @@ Threat Explorer er en effektiv rapport, der kan tjene flere formål, f.eks. find
 
     **Tilsidesættelser**: Dette filter tager oplysninger, der vises på fanen med mailoplysninger, og bruger det til at vise, hvor organisatoriske eller brugerpolitikker, der bruges til at tillade og blokere mails, er blevet *tilsidesat*. Det vigtigste ved dette filter er, at det hjælper organisationens sikkerhedsteam med at se, hvor mange mistænkelige mails, der blev leveret på grund af konfigurationen. Dette giver dem mulighed for at redigere tillader og blokerer efter behov. Dette resultatsæt af dette filter kan eksporteres til regneark.
 
-    <br>
-
-    ****
-
     |Tilsidesættelser af Threat Explorer|Hvad de betyder|
     |---|---|
     |Tilladt af organisationspolitik|Mail blev tilladt i postkassen, som angivet af organisationens politik.|
@@ -149,7 +140,6 @@ Threat Explorer er en effektiv rapport, der kan tjene flere formål, f.eks. find
     |Filtypenavn, der er blokeret af Org-politik|Filen blev blokeret fra levering til postkassen, som angivet af organisationens politik.|
     |Tilladt af brugerpolitik|Mail blev tilladt i postkassen, som angivet af brugerpolitikken.|
     |Blokeret af brugerpolitik|Mail blev blokeret fra levering til postkassen, som angivet af brugerpolitikken.|
-    |
 
     **URL-trussel**: Url-trusselsfeltet er blevet medtaget på detaljefanen i en mail for at angive den trussel, der blev præsenteret af en URL-adresse. Trusler, der præsenteres af en URL-adresse, kan omfatte *Malware*, *Phish* eller *Spam*, og  en URL-adresse uden trusler vil *sige Ingen i* afsnittet om trusler.
 

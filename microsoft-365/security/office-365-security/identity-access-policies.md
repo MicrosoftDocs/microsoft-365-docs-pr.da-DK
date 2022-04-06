@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 27d45b46944a624abde48a37affad285092bc44d
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 36df54090e80de180ffa16f41641daa6b6966eb9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775472"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681320"
 ---
 # <a name="common-zero-trust-identity-and-device-access-policies"></a>Fælles politikker for nultillids identitet og enhedsadgang
 

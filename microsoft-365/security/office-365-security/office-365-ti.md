@@ -21,12 +21,12 @@ ms.custom:
 description: Få mere at vide om muligheder for trusselsundersøgelse og svar i Microsoft Defender Office 365 Plan.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ce7541010999b87e49880446594a79593a16a30a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 91a366b8169c783671145b73f66b0fde93b5fffe
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587320"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680659"
 ---
 # <a name="threat-investigation-and-response"></a>Trusselsundersøgelse og -svar
 
@@ -113,10 +113,6 @@ Microsoft Defender til Office 365 bruger rollebaseret adgangskontrol. Tilladelse
 > - [Tilladelser i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md)
 > - [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)
 
-<br>
-
-****
-
 |Aktivitet|Roller og tilladelser|
 |---|---|
 |Brug dashboardet til & til håndtering af sikkerhedsrisiko (eller det [nye dashboard Sikkerhed)](security-dashboard.md) <p> Få vist oplysninger om de seneste eller aktuelle trusler|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
@@ -124,7 +120,6 @@ Microsoft Defender til Office 365 bruger rollebaseret adgangskontrol. Tilladelse
 |Få vist hændelser (også kaldet undersøgelser) <p> Føj mails til en hændelse|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
 |Udløse mailhandlinger i en hændelse <p> Find og slet mistænkelige mails|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator** plus **rollen Søg og Tøm**</li></ul> <p> **Rollerne Global** administrator **og sikkerhedsadministrator** kan tildeles i enten Azure Active Directory (<https://portal.azure.com>) eller Microsoft 365 Administration (<https://admin.microsoft.com>). <p> Rollen **Søg og tøm** skal være tildelt i & **i** samarbejdsrollerne i Microsoft 36 Defender-portalen (<https://security.microsoft.com>).|
 |Integrer Microsoft Defender Office 365 Plan 2 med Microsoft Defender til Slutpunkt <p> Integrer Microsoft Defender Office 365 Plan 2 med en SIEM-server|Enten den **globale administrator** eller den **sikkerhedsadministratorrolle**, der er tildelt i Azure Active Directory (<https://portal.azure.com>) eller Microsoft 365 Administration (<https://admin.microsoft.com>). <p> --- **plus** --- <p> En passende rolle, der er tildelt i flere programmer ([f.eks. Microsoft Defender Security Center](/windows/security/threat-protection/microsoft-defender-atp/user-roles) eller din SIEM-server).|
-|
 
 ## <a name="next-steps"></a>Næste trin
 

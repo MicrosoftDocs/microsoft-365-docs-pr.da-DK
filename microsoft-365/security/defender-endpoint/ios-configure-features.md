@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3179ab18ab27bb41f5c0b1577d73ff48b3470b98
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 85ddada93e20e36648fccdb0fe9b2b34ab473212
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593513"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681474"
 ---
 # <a name="configure-microsoft-defender-for-endpoint-on-ios-features"></a>Konfigurer Microsoft Defender til slutpunkt på iOS-funktioner
 
@@ -143,6 +143,24 @@ Defender til Slutpunkt på iOS giver administratorer mulighed for også at konfi
 
 > [!NOTE]
 > Defender til Slutpunkt på iOS understøtter kun oprettelse af brugerdefinerede indikatorer for IP-adresser og URL-adresser/domæner.
+
+## <a name="configure-option-to-send-in-app-feedback"></a>Konfigurere indstillingen til at sende feedback i appen 
+
+Kunder har nu mulighed for at konfigurere muligheden for at sende feedbackdata til Microsoft i Defender for Endpoint-appen. Feedbackdata hjælper Microsoft med at forbedre produkter og foretage fejlfinding af problemer.
+
+> [!NOTE]
+> For skykunder i det amerikanske offentlige er indsamling af feedback **som standard** deaktiveret. 
+
+Brug følgende trin til at konfigurere indstillingen til at sende feedbackdata til Microsoft:
+
+1. I [Microsoft Endpoint Manager Administration skal du](https://go.microsoft.com/fwlink/?linkid=2109431) gå **til Konfigurationspolitikker** **for** AppsAppAddManaged-enheder > . >  > 
+1. Giv politikken et navn, **Platform > iOS/iPadOS**, vælg profiltypen.
+1. Vælg **Microsoft Defender til slutpunkt** som destinationsappen.
+1. På Indstillinger skal du vælge **Brug konfigurationsdesigner** og tilføje **DefenderSendFeedback** som nøglen og værditypen som **boolesk**
+   - Hvis du vil fjerne slutbrugernes mulighed for at give feedback, skal du angive værdien som og `false` tildele denne politik til brugerne. Denne værdi er som standard angivet til `true`. For kunder inden for det amerikanske offentlige myndigheder er standardværdien angivet til "falsk".
+   - For brugere `true`med tastesæt som , er der mulighed for at sende feedbackdata til Microsoft i appen (Menu > Hjælp & feedback > Send feedback til Microsoft)
+1. Klik **på Næste** , og tildel denne profil til målrettede enheder/brugere.
+
 
 ## <a name="report-unsafe-site"></a>Rapportér usikkert websted
 

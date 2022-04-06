@@ -19,12 +19,12 @@ description: Under og efter en automatiseret undersøgelse af Microsoft 365, kan
 ms.date: 01/29/2021
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 54b9389d323c1e775b50bf63beaa33b0c4b0cae6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: bf9fe34a88444d9d8ec6dccf4b22a507e55dfb00
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588871"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680792"
 ---
 # <a name="details-and-results-of-an-automated-investigation-in-microsoft-365"></a>Detaljer og resultater af en automatisk undersøgelse i Microsoft 365
 
@@ -41,10 +41,6 @@ Når en [automatisk undersøgelse](office-365-air.md) finder sted [i Microsoft D
 
 Status for undersøgelsen angiver status for analysen og handlingerne. I løbet af undersøgelsen ændres status for at angive, om der blev fundet trusler, og om handlingerne er blevet godkendt.
 
-<br>
-
-****
-
 |Status|Beskrivelse|
 |---|---|
 |**Starter**|Undersøgelsen er blevet udløst og venter på at begynde at køre.|
@@ -58,7 +54,6 @@ Status for undersøgelsen angiver status for analysen og handlingerne. I løbet 
 |**Mislykkedes**|Mindst én undersøgelsesanalyse stødte på et problem, hvor den ikke kunne fuldføres korrekt. <p> **BEMÆRK!** Hvis en undersøgelse mislykkes, efter afhjælpningshandlingerne er blevet godkendt, kan afhjælpningshandlingerne muligvis stadig være fuldført. Se undersøgelsesdetaljerne.|
 |**I kø ved begrænsning**|En undersøgelse opbevares i en kø. Når andre undersøgelser er afsluttet, starter undersøgelser i kø. Begrænsning hjælper med at undgå dårlig tjenesteydeevne.  <p> **Tip**: Ventende handlinger kan begrænse, hvor mange nye undersøgelser, der kan køre. Sørg for at [godkende (eller afvise) afventende handlinger](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions).|
 |**Afsluttet ved begrænsning**|Hvis en undersøgelse opbevares i køen for længe, stopper den. <p> **Tip**: Du kan [starte en undersøgelse fra Threat Explorer](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).|
-|
 
 ## <a name="view-details-of-an-investigation"></a>Få vist oplysninger om en undersøgelse
 

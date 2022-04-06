@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 1dbcfbff2a45cd3dfbc453f84eaa73e178174aee
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 445cb497abfaa0e7e4322268a761aafbaa0e31d6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590442"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680902"
 ---
 # <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Påkrævet arbejde til implementering af nultillidsidentitet og politikker for enhedsadgang
 
@@ -54,7 +54,6 @@ Følgende tabel indeholder oplysninger om de nødvendige funktioner og deres kon
 |[Aktivér Azure Active Directory-identitetsbeskyttelse](/azure/active-directory/identity-protection/overview-identity-protection). Azure AD Identity Protection gør det muligt at registrere potentielle sårbarheder, der påvirker organisationens identiteter, og konfigurere en automatisk afhjælpningspolitik til lav, mellem og høj logon-risiko og brugerrisici.||Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Sikkerhed|
 |**Aktivér moderne** godkendelse [for Exchange Online](/Exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) og for [Skype for Business Online](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). Moderne godkendelse er en forudsætning for brug af MFA. Moderne godkendelse er som standard aktiveret for Office 2016- og 2019-klienter, -SharePoint og OneDrive for Business.||Microsoft 365 E3 eller E5|
 |[Aktivér kontinuerlig adgangsevaluering](microsoft-365-continuous-access-evaluation.md) for Azure AD. Løbende evaluering af adgang afslutter proaktivt aktive brugersessioner og gennemtvinger ændringer i lejerpolitikken næsten i realtid.||Microsoft 365 E3 eller E5|
-|
 
 ## <a name="recommended-client-configurations"></a>Anbefalede klientkonfigurationer
 
@@ -87,7 +86,6 @@ Følgende mailklienter understøtter moderne godkendelse og Betinget adgang.
 |**Android**|Outlook til Android|[Seneste](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook&hl=en)|
 |**macOS**|Outlook|2019 og 2016|
 |**Linux**|Understøttes ikke||
-|
 
 ### <a name="recommended-client-platforms-when-securing-documents"></a>Anbefalede klientplatforme ved sikring af dokumenter
 
@@ -101,7 +99,6 @@ Følgende klienter anbefales, når der er anvendt en politik for sikre dokumente
 |iOS|Understøttet|Understøttet|Understøttet|Understøttet|I/T|
 |macOS|Understøttet|Understøttet|I/T|I/T|Understøttes ikke|
 |Linux|Understøttes ikke|Understøttes ikke|Understøttes ikke|Understøttes ikke|Understøttes ikke|
-|
 
 ### <a name="microsoft-365-client-support"></a>Microsoft 365 klientsupport
 

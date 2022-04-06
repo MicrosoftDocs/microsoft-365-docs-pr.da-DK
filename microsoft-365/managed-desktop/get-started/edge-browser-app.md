@@ -10,12 +10,12 @@ audience: ITpro
 ms.topic: article
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-ms.openlocfilehash: aab02ec260f0131ab32d28834152f50b84abce21
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 6c012b97c3d318e18dda9eb7eaee4336058b792d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63590080"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680470"
 ---
 # <a name="microsoft-edge"></a>Microsoft Edge
 
@@ -75,7 +75,7 @@ Grundlinjen sikkerhed for brugere Microsoft Edge Microsoft Managed Desktop-enhed
 
 | Indstilling | Standardværdi | Beskrivelse
 | ------ | ------ | ------ |
-| Aktivér lagring af adgangskoder til adgangskodestyring | Deaktiveret | Adgangskodestyring er som standard deaktiveret. Hvis du vil have denne funktion aktiveret, kan du arkivere en supportanmodning, så kan vores serviceteknikere aktivere indstillingen i dit miljø. |
+| Aktivér lagring af adgangskoder til adgangskodestyring | Deaktiveret | Adgangskodestyring er som standard deaktiveret. Hvis du vil have denne funktion aktiveret, kan du arkivere en supportanmodning, så kan vores teknikere aktivere indstillingen i dit miljø. |
 
 ### <a name="internet-explorer-mode-in-microsoft-edge"></a>Internet Explorer-tilstand i Microsoft Edge
 

@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan du opretter brugerdefinerede nyttedata til simulering af angreb i Microsoft Defender Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: df939ac031035f8771314bc1941bf44535d65610
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d670236aa81f4b5086263a75bbeceb8ca7e1e25f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63591114"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679758"
 ---
 # <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Opret brugerdefinerede nyttedata til dine angrebssimuleringskurser i Defender Office 365
 
@@ -174,10 +174,6 @@ Klik på **Tilføj indikator** på siden **Tilføj symboler**. I pop op-menuen, 
 
 - **Indikatornavn** **og Indikatorplacering**: Disse værdier er indbyrdes forbundne. Hvor du kan placere indikatoren, afhænger af selve indikatoren. De tilgængelige værdier er beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Indikatornavn|Indikatorplacering|
   |---|---|
   |**Type af vedhæftet fil**|Meddelelsestekst|
@@ -203,7 +199,6 @@ Klik på **Tilføj indikator** på siden **Tilføj symboler**. I pop op-menuen, 
   |**Upprofessionalt udseende design eller formatering**|Meddelelsestekst|
   |**Link til URL-adresse**|Meddelelsestekst|
   |**Du er speciel**|Meddelelsestekst|
-  |
   
   Denne liste er curated to contain the most common clues that appear in phishing messages.
 

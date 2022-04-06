@@ -8,7 +8,7 @@ metadata:
   manager: dansimp
   ms.date: 
   audience: ITPro
-  ms.topic: troubleshooting
+  ms.topic: faq
   ms.localizationpriority: medium
   search.appverid:
   - MET150
@@ -20,12 +20,12 @@ metadata:
   ms.custom: seo-marvel-apr2020
   ms.technology: mdo
   ms.prod: m365-security
-  ms.openlocfilehash: 839469f1aa872ff89c4dd488ed441cf51c911a8d
-  ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+  ms.openlocfilehash: ff5b1e7367491e307df0468b49ba8891558275e9
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 01/12/2022
-  ms.locfileid: "63597944"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63680924"
 title: Ofte stillede spørgsmål om meddelelser i karantæne
 summary: >
   [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]

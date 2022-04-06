@@ -13,17 +13,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - m365solution-scenario
+- M365-security-compliance
 ms.topic: conceptual
 ms.custom: migrationguides
 ms.date: 01/11/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.technology: mde
-ms.openlocfilehash: 6729d136da90c674c0d726f2bfe7321a75bdb79a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 180adaff84f4154034d8bda04b6a6cbf6ceadc2e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63596961"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680448"
 ---
 # <a name="troubleshooting-issues-when-switching-to-microsoft-defender-for-endpoint"></a>Fejlfinding af problemer, når du skifter til Microsoft Defender til Slutpunkt
 

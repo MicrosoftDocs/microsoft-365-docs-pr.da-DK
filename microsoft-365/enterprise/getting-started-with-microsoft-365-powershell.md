@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 07/17/2020
 audience: ITPro
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: Ent_O365
@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 4712d6fd-d9c7-4ec2-88c1-3ad9201cbb7f
 description: 'Oversigt: Forstå værdien af PowerShell til Microsoft 365, hvordan du får forbindelse til din Microsoft 365-lejer, og hvor du kan få hjælp.'
-ms.openlocfilehash: 8c0d2020235c1f00797a28bab3e30dca7c8a2198
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: f75e93d503a2cdb002178be16e6fb4c246fe7ae8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590372"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681144"
 ---
 # <a name="get-started-with-powershell-for-microsoft-365"></a>Introduktion til PowerShell til Microsoft 365
 

@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 932d57c0-1520-4f0f-8ec9-9966d646480f
 description: Få mere at vide om, Microsoft 365 administrere brugere, licenser og 365-apps med PowerShell.
-ms.openlocfilehash: 298955f37e3f29843a7efeaf1bdf8ce6f40862fc
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 2fedef0edc9effc73ffbfbd678905e0b8276df8f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591386"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681232"
 ---
 # <a name="manage-microsoft-365-with-powershell"></a>Administrer Microsoft 365 med PowerShell
 

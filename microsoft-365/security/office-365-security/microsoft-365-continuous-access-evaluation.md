@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 22927fbf85d9dab424c8b546b7e837bf035d8a2f
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: e265fd09fa7442b24868ad7f001701ef567e32bd
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775340"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681562"
 ---
 # <a name="continuous-access-evaluation-for-microsoft-365"></a>Løbende evaluering af adgang til Microsoft 365
 

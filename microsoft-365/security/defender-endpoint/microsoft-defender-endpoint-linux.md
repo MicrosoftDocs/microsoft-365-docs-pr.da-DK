@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ebcfea808e64c89772f36fb22f5dfd75e6e8e27f
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 805f857a95fab03f8356c5162db1509122e7250a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63592715"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680814"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender til slutpunkt på Linux
 
@@ -40,6 +40,9 @@ I dette emne beskrives det, hvordan du installerer, konfigurerer, opdaterer og b
 > Hvis du kører andre slutpunktsbeskyttelsesprodukter fra tredjepart sammen med Microsoft Defender til slutpunkt på Linux, vil det sandsynligvis føre til problemer med ydeevnen og uforudsete bivirkninger. Hvis ikke-Microsoft-slutpunktsbeskyttelse er et absolut krav i dit miljø, kan du stadig roligt drage fordel af Defender til slutpunkt på Linux Slutpunktsregistrering og -svar-funktionalitet, når du har konfigureret antivirusfunktionaliteten til at køre i [passiv tilstand](linux-preferences.md#enforcement-level-for-antivirus-engine).
 
 ## <a name="how-to-install-microsoft-defender-for-endpoint-on-linux"></a>Sådan installerer du Microsoft Defender til slutpunkt på Linux
+
+Microsoft Defender til Slutpunkt til Linux indeholder antimalware og slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) funktioner. 
+
 
 ### <a name="prerequisites"></a>Forudsætninger
 

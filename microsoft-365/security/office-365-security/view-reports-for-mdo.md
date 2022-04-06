@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fb48e432d20067f3c6ca1913349152154c57e81
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: de0dd5b7c0466a722a788ee3fe4e6c843d70f5eb
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63599335"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680968"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Få vist Defender for Office 365 rapporter i Microsoft 365 Defender-portalen
 
@@ -211,22 +211,13 @@ På hovedrapportsiden er ikonet ![Opret tidsplan.](../../media/m365-cc-sc-create
 
 Ud over de rapporter, der er beskrevet i denne artikel, er flere andre rapporter tilgængelige som beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Rapport|Emne|
 |---|---|
 |**Explorer** (Microsoft Defender Office 365 Plan 2) eller registreringer i **realtid** (Microsoft Defender Office 365 Plan 1)|[Trusselsstifinder (og registreringer i realtid)](threat-explorer.md)|
 |Mailsikkerhedsrapporter, der ikke kræver Defender for Office 365|[Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md)|
 |Mailflowrapporter i Exchange Administration (EAC)|[Mailflowrapporter i den nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
-|
 
 PowerShell-rapporterings-cmdlet'er:
-
-<br>
-
-****
 
 |Rapport|Emne|
 |---|---|
@@ -237,7 +228,6 @@ PowerShell-rapporterings-cmdlet'er:
 |Kompromitterede brugere|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
 |Status for mailflow|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
 |Spoofed brugere|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
-|
 
 ## <a name="what-permissions-are-needed-to-view-the-defender-for-office-365-reports"></a>Hvilke tilladelser er nødvendige for at få vist Defender til Office 365 rapporter?
 

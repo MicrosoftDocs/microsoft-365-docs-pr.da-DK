@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du anvender et følsomhedsmærkat på en model SharePoint Syntex.
-ms.openlocfilehash: 624b441084b418d2bcfc3ab6b623da0f5a969fe8
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: 189db9314e01a52618890daf6b0e5d4e81317de9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63592434"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681694"
 ---
 # <a name="apply-a-sensitivity-label-to-a-model-in-microsoft-sharepoint-syntex"></a>Anvend et følsomhedsmærkat på en model i Microsoft SharePoint Syntex
 
@@ -26,7 +26,7 @@ Du kan nemt anvende et [følsomhedsmærkat til](../compliance/sensitivity-labels
 
 Følsomhedsmærkater gør det muligt at anvende kryptering på de dokumenter, som dine modeller identificerer. Du ønsker f.eks., at din model ikke blot identificerer eventuelle økonomiske dokumenter, der indeholder bankkontonumre eller kreditkortnumre, der overføres til dit dokumentbibliotek, men også at anvende en følsomhedsmærkat, der er konfigureret med krypteringsindstillinger, for at begrænse, hvem der kan få adgang til indholdet, og hvordan det kan bruges. SharePoint Syntex-modellerne [overholde](../compliance/apply-sensitivity-label-automatically.md#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label) reglerne for navnerækkefølgen og overskriver heller ikke en eksisterende etiket, der er blevet anvendt manuelt af en bruger på filen. 
 
-Du kan anvende en eksisterende følsomhedsmærkat til din model via dine modelindstillinger på modellens startside. Etiketten skal allerede være publiceret, for at den kan vælges mellem modelindstillinger.
+Du kan anvende en eksisterende følsomhedsmærkat til din model via dine modelindstillinger på modellens startside. Etiketten skal allerede være publiceret, for at den kan vælges mellem modelindstillinger. Etiketter gælder for Office filer i Word (.docx), PowerPoint (.pptx) og Excel (.xlsx). 
 
 > [!Important]
 > For at følsomhedsmærkater kan anvendes på dine dokumentforståelsesmodeller, skal de oprettes og publiceres [i Microsoft 365 Compliance Center](../admin/security-and-compliance/set-up-compliance.md).

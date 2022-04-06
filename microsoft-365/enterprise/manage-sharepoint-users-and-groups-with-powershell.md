@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 07/17/2020
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: I denne artikel kan du lære at bruge PowerShell til Microsoft 365 at administrere SharePoint Online-brugere, -grupper og -websteder.
-ms.openlocfilehash: 10991c2ac065331ab8eff3e782cecbdbcc5d034b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e2166753b1be56c19011a1fc7e20d1584a5d3004
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590591"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681188"
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-powershell"></a>Administrer SharePoint onlinebrugere og -grupper med PowerShell
 
@@ -33,7 +33,7 @@ ms.locfileid: "63590591"
 
 Hvis du er en SharePoint Online-administrator, der arbejder med store lister over brugerkonti eller grupper og ønsker en nemmere måde at administrere dem på, kan du bruge PowerShell til Microsoft 365.
 
-Inden du begynder, kræver fremgangsmåderne i dette emne, at du opretter forbindelse til SharePoint Online. Du kan finde en [vejledning Forbind at SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+Inden du begynder, kræver fremgangsmåderne i denne artikel, at du opretter forbindelse til SharePoint Online. Du kan finde en [vejledning Forbind at SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 ## <a name="get-a-list-of-sites-groups-and-users"></a>Få en liste over websteder, grupper og brugere
 
@@ -134,7 +134,7 @@ Nogle gange skal du fjerne en bruger fra et websted eller endda alle websteder. 
 
 Men ved at bruge SharePoint Online Management Shell- og CSV-filer er dette hurtigt og nemt. I denne opgave skal du bruge en Windows PowerShell at fjerne en bruger fra en sikkerhedsgruppe af websteder. Derefter skal du bruge en CSV-fil og fjerne mange brugere fra forskellige websteder.
 
-Vi bruger cmdlet'en "Remove-SPOUser" til at fjerne en enkelt Microsoft 365-bruger fra en gruppe af websteder, blot så vi kan se kommandosyntaksen. Sådan ser syntaksen ud:
+Vi bruger cmdlet'en "Remove-SPOUser" til at fjerne en enkelt Microsoft 365-bruger fra en gruppe af websteder, så vi kan se kommandosyntaksen. Sådan ser syntaksen ud:
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -167,11 +167,11 @@ Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUse
 
 ## <a name="automate-management-of-large-lists-of-users-and-groups"></a>Automatiser administrationen af store lister over brugere og grupper
 
-Hvis du vil føje et stort antal konti til SharePoint-websteder og give dem tilladelser, kan du bruge Microsoft 365 Administration, individuelle PowerShell-kommandoer eller PowerShell en CSV-fil. Csv-filen er den hurtigste måde at automatisere denne opgave på.
+Hvis du vil føje et stort antal konti til SharePoint-websteder og give dem tilladelser, kan du bruge Microsoft 365 Administration, individuelle PowerShell-kommandoer eller PowerShell- og en CSV-fil. Csv-filen er den hurtigste måde at automatisere denne opgave på.
 
 Den grundlæggende proces er at oprette en CSV-fil med overskrifter (kolonner), der svarer til de parametre, som Windows PowerShell behov for. Du kan nemt oprette en sådan liste i Excel og derefter eksportere den som en CSV-fil. Derefter skal du bruge et Windows PowerShell-script til at iterere gennem poster (rækker) i CSV-filen og føje brugerne til grupper og grupper til websteder.
 
-Lad os f.eks. oprette en CSV-fil til at definere en gruppe af grupper af websteder, grupper og tilladelser. Derefter opretter vi en CSV-fil til at udfylde grupper med brugere. Endelig opretter og kører vi et simpelt Windows PowerShell script, der opretter og udfylder grupperne.
+Lad os f.eks. oprette en CSV-fil til at definere en gruppe af grupper af websteder, grupper og tilladelser. Derefter opretter vi en CSV-fil til at udfylde grupper med brugere. Til sidst opretter og kører vi et Windows PowerShell script, der opretter og udfylder grupperne.
 
 Den første CSV-fil føjer en eller flere grupper til en eller flere grupper af websteder og får denne struktur:
 
@@ -236,7 +236,7 @@ Import-Csv C:\O365Admin\GroupsAndPermissions.csv | ForEach {New-SPOSiteGroup -Gr
 Import-Csv C:\O365Admin\Users.csv | ForEach {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
 ```
 
-Scriptet importerer indholdet af CSV-filen og bruger værdierne i kolonnerne til at udfylde parametrene for **New-SPOSiteGroup** - og **Add-SPOUser-kommandoerne** . I vores eksempel gemmer vi den iO365Admin-mappen på C-drevet, men du kan gemme den, hvor du vil.
+Scriptet importerer indholdet af CSV-filen og bruger værdierne i kolonnerne til at udfylde parametrene for **New-SPOSiteGroup** - og **Add-SPOUser-kommandoerne** . I vores eksempel gemmer vi denne fil i O365Admin-mappen på drev C, men du kan gemme den, hvor du vil.
 
 Lad os nu fjerne en gruppe personer for flere grupper på forskellige websteder ved hjælp af den samme CSV-fil. Her er en eksempelkommando:
 
@@ -246,7 +246,7 @@ Import-Csv C:\O365Admin\Users.csv | ForEach {Remove-SPOUser -LoginName $_.LoginN
 
 ## <a name="generate-user-reports"></a>Generere brugerrapporter
 
-Det kan være en god ide at få en simpel rapport for nogle få websteder og vise brugerne for disse websteder, deres tilladelsesniveau og andre egenskaber. Sådan ser syntaksen ud:
+Det kan være en god ide at hente en rapport for nogle få websteder og vise brugerne for disse websteder, deres tilladelsesniveau og andre egenskaber. Sådan ser syntaksen ud:
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -254,7 +254,7 @@ $site = "<site name>"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | select * | Format-table -Wrap -AutoSize | Out-File c\UsersReport.txt -Force -Width 360 -Append
 ```
 
-Dette fanger dataene for disse tre websteder og skriver dem til en tekstfil på dit lokale drev. Bemærk, at parameteren –Tilføj føjer nyt indhold til en eksisterende fil.
+Dette fanger dataene for disse tre websteder og skriver dem til en tekstfil på dit lokale drev. Parameteren –Tilføjelse føjer nyt indhold til en eksisterende fil.
 
 Lad os f.eks. køre en rapport på ContosoTest-, TeamSite01- og Project01-webstederne for Contoso1-lejeren:
 
@@ -268,7 +268,7 @@ $site = "Project01"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
 ```
 
-Bemærk, at vi kun skulle **ændre $site** variablen. **Variablen $tenant** sin værdi gennem alle tre løb af kommandoen.
+Vi var nødt til kun at **ændre $site** variablen. **Variablen $tenant** sin værdi gennem alle tre løb af kommandoen.
 
 Men hvad nu, hvis du gerne vil gøre dette for alle websteder? Du kan gøre dette uden at skulle skrive alle webstederne ved hjælp af denne kommando:
 

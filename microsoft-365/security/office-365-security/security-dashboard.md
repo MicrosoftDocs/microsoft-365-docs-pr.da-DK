@@ -19,12 +19,12 @@ ms.custom:
 description: Brug det nye Sikkerhedsdashboard til at Office 365 status for trusselsbeskyttelse og få vist og handle på sikkerhedsadvarsler.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 977fc897ecee859648fb1097e573cd0a8289768e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 1f9706a92cf07f23656e6865fe69f11b04d58544
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589144"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680514"
 ---
 # <a name="security-dashboard-in-the-security--compliance-center"></a>Sikkerhedsdashboard i Sikkerheds- & Compliance Center
 
@@ -54,14 +54,9 @@ Widgetten Oversigt over trusselsadministration fortæller dig hurtigt, hvordan o
 
 De oplysninger, du får vist i Threat Management Summary, afhænger af, hvad dit abonnement indeholder. I følgende tabel beskrives, hvilke oplysninger der er medtaget for Office 365 E3 og Office 365 E5.
 
-<br>
-
-****
-
 |Office 365 E3|Office 365 E5|
 |---|---|
 |Malwaremeddelelser blokeret<br>Blokerede phishingmeddelelser<br>Meddelelser rapporteret af brugere<br><br><br><br>|Malwaremeddelelser blokeret<br>Blokerede phishingmeddelelser<br>Meddelelser rapporteret af brugere<br>Malware blokeret på nul dage<br>Avancerede phishingmeddelelser registreres<br>Skadelige URL-adresser blokeret|
-|
 
 For at få vist eller få adgang til widgetten Threat Management Summary skal du have tilladelse til at få vist Defender Office 365 rapporter. Du kan få mere at [vide under Hvilke tilladelser er nødvendige for at få vist Defender Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
 
@@ -73,15 +68,10 @@ Statuswidget'en Threat Protection viser effektiviteten af trusselsbeskyttelse me
 
 Oplysningerne afhænger af, om dit Microsoft 365 -[abonnement Exchange Online Protection](exchange-online-protection-overview.md) (EOP) med eller uden [Microsoft Defender Office 365](defender-for-office-365.md).
 
-<br>
-
-****
-
 |Hvis dit abonnement omfatter...|Du får vist disse oplysninger|
 |---|---|
 |EOP, men ikke Microsoft Defender til Office 365|Ondsindede mails, der blev registreret og blokeret af EOP.<p> Se [Statusrapport over trusselsbeskyttelse (EOP)](view-email-security-reports.md#threat-protection-status-report).|
 |Microsoft Defender til Office 365|Skadeligt indhold og skadelig mail registreret og blokeret af EOP og Defender for Office 365 <p> Samlet antal unikke mails med skadeligt indhold blokeret af antimalwareprogrammet, automatisk tømning uden time og Defender til [Office 365-funktioner](zero-hour-auto-purge.md) (herunder [Pengeskab Links](safe-links.md), [Pengeskab](safe-attachments.md) vedhæftede filer og [antiphishing i Defender til Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)). <p> Se [Statusrapport over trusselsbeskyttelse](view-reports-for-mdo.md#threat-protection-status-report).|
-|
 
 For at få vist eller få adgang til widget'en Status for Trusselsbeskyttelse skal du have tilladelse til at få vist Defender Office 365 rapporter. Du kan få mere at vide [under Hvilke tilladelser er nødvendige for at få vist Defender til Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports)
 
@@ -93,17 +83,12 @@ Widget'en Globale ugentlige trusselsregistreringer viser, hvor mange trusler der
 
 Metrikværdierne beregnes som beskrevet i følgende tabel:
 
-<br>
-
-****
-
 |Metrisk|Sådan beregnes det|
 |---|---|
 |Meddelelser scannet|Antal scannede mails ganget med antallet af modtagere|
 |Trusler er stoppet|Antal mails, der er identificeret som indeholdende malware ganget med antallet af modtagere|
 |Blokeret [af Defender for Office 365](defender-for-office-365.md)|Antal mails, der er blokeret af Defender Office 365 ganget med antallet af modtagere|
 |Fjernet efter levering|Antal meddelelser, der er [blevet fjernet med automatisk tømning uden time (ZAP)](zero-hour-auto-purge.md) ganget med antallet af modtagere|
-|
 
 ## <a name="malware"></a>Malware
 

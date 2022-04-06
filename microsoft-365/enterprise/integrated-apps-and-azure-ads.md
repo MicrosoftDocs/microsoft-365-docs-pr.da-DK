@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 f1.keywords:
@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: cb2250e3-451e-416f-bf4e-363549652c2a
 description: Få mere at vide om, hvordan du registrerer Office 365 administrerer integrerede apps i Azure AD, hvilket muliggør appgodkendelser på **Azure AD DC-administratorniveau** eller **globalt administratorniveau**.
-ms.openlocfilehash: 78092ae817708f0af19eaa85648c35a9c413d3fb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: ddb22c6e1be3d337fe7b54f27cae6a197f823c71
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590598"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681254"
 ---
 # <a name="integrated-apps-and-azure-ad-for-microsoft-365-administrators"></a>Integrerede apps og Azure AD til Microsoft 365 administratorer
 

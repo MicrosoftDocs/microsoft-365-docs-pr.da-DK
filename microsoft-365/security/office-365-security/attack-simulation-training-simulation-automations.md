@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan lære, hvordan du opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der starter, når de angivne betingelser er opfyldt i Microsoft Defender Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 327091706ed7c8c2a6f1f1180af7888ed67c1a57
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 3ad24a8b6d2be18fb7ef5fd49be7f2197b3be3a7
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63596920"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680946"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Simulerings automatisering til simulering af angreb
 
@@ -230,15 +230,10 @@ På **landingssiden** skal du konfigurere den webside, brugeren bliver ført til
 
 - **Vælg landingssideindstilling**: De tilgængelige værdier afhænger af dine tidligere valg på siden Vælg [nyttedata](#select-payloads) som beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Valg på siden Vælg nyttedata|Tilgængelige værdier for Indstillingen Vælg landingsside|
   |---|---|
   |Vælg manuelt|Brug Microsofts standardlandingsside <p> Opret din egen landingsside <p> Brug en brugerdefineret URL-adresse <p> **Bemærk**! Værdien **Brug en brugerdefineret URL-adresse** er ikke tilgængelig, hvis du tidligere har valgt vedhæftet **malware** eller **Link til malware** på [siden Vælg social engineering-teknikker](#select-one-or-more-social-engineering-techniques) .|
   |Randomiser|Brug Microsofts standardlandingsside|
-  |
 
   De tilgængelige **Select landing Page preference-værdier** og deres tilknyttede indstillinger er beskrevet på følgende liste:
 

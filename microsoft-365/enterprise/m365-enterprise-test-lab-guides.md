@@ -7,7 +7,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 11/20/2019
 audience: ITPro
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-solutions
 ms.localizationpriority: medium
 ms.collection:
@@ -18,12 +18,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Brug disse Test Lab-vejledninger til at konfigurere demonstration, koncepttest eller udviklings-/testmiljøer for Microsoft 365 til virksomheder.
-ms.openlocfilehash: 71be198b6ad96b6131680c41130a2debfd89693c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 18b243a0fea9cb4864a0375740c4ebadcc44d6c3
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589494"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681650"
 ---
 # <a name="microsoft-365-for-enterprise-test-lab-guides"></a>Microsoft 365 til Enterprise Test Lab-vejledninger
 

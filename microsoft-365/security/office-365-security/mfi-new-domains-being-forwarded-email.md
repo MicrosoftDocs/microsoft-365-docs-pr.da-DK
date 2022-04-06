@@ -12,12 +12,13 @@ ms.assetid: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger mailindsigt om nye domæner i mailflowdashboardet i Security & Compliance Center til at undersøge, hvornår deres brugere videresender meddelelser til eksterne domæner, der aldrig er blevet videresendt til.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ecc3c00f40d702f74681e9cbc194e83bd27f5df2
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.collection: M365-security-compliance
+ms.openlocfilehash: df4f9e79439d435059374dd066a5298ba73d329b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63591329"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679648"
 ---
 # <a name="new-domains-being-forwarded-email-insight-in-the-security--compliance-center"></a>Nye domæner, der videresendes mailindsigt i Security & Compliance Center
 

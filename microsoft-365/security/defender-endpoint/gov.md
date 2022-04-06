@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b9a083404da3ad4edc3ccf2f88e1c459dc6f08e2
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 03d4d22bdce9f18b4883437215ea5cba50b3868e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63592102"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681342"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender til slutpunkt for kunder inden for det amerikanske offentlige
 
@@ -118,8 +118,8 @@ Windows 7 SP1 Enterprise (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|
 Windows 7 SP1 Pro (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Linux|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 macOS|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Android|![Nej.](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling
-iOS|![Nej.](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling
+Android|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
+iOS|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
 |
 
 > [!NOTE]
@@ -194,3 +194,23 @@ Disse er de kendte mellemrum:
 |Netværksregistrering|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
 |Rapporter: Enhedshåndtering, Enhedstilstand, Firewall|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
 |Filtrering af webindhold|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
+  
+
+Disse er de funktioner og kendte mellemrum for [Mobile Threat Defense (Microsoft Defender til Slutpunkt på Android & iOS)](mtd.md):
+
+<br />
+
+****
+
+|Funktionsnavn|GCC|GCC høj|DoD|
+|---|:---:|:---:|:---:|
+|Webbeskyttelse (antiphishing og brugerdefinerede indikatorer)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
+|Malwarebeskyttelse (kun Android)|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
+|Jailbreak-registrering (kun iOS)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
+|Betinget adgang/betinget start|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
+|Understøttelse af MAM|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
+|Kontrolelementer til beskyttelse af personlige oplysninger|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
+|Administration af trusler og sikkerhedsrisiko (TVM)|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
+|Filtrering af webindhold|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
+  
+

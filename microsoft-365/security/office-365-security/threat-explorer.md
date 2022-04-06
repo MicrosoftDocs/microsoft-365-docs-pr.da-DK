@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: de26921b0067cbcb5ad6019e0da62d6e5511d440
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: b3ff79ead1e337bb78772109e57d34836d0f4ec9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589145"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681606"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Registreringer af Trusselsstifinder og i realtid
 
@@ -35,14 +35,9 @@ ms.locfileid: "63589145"
 
 Hvis din organisation har [Microsoft Defender til Office 365](defender-for-office-365.md), og du har de nødvendige tilladelser, har du enten **Explorer**- eller [realtidsregistreringer](#required-licenses-and-permissions) (tidligere rapporter i *realtid – se* [nyheder! ).](#new-features-in-threat-explorer-and-real-time-detections) I Security & Compliance Center skal du gå til **Trusselsadministration** og derefter vælge **Stifinder**  **eller Registreringer i realtid**.
 
-<br>
-
-****
-
 |Med Microsoft Defender til Office 365 Plan 2 kan du se:|Med Microsoft Defender til Office 365 Plan 1 kan du se:|
 |---|---|
 |![Trusselsstifinder.](../../media/threatmgmt-explorer.png)|![Registreringer i realtid](../../media/threatmgmt-realtimedetections.png)|
-|
 
 Explorer- eller registreringer i realtid hjælper dit sikkerhedsteam med at undersøge og reagere effektivt på trusler. Rapporten ligner følgende billede:
 
@@ -374,26 +369,16 @@ Hvordan gøres dette? Leveringsstatus er nu opdelt i to kolonner:
 
 *Leveringshandling* er den handling, der er foretaget på en mail på grund af eksisterende politikker eller registreringer. Her er de mulige handlinger for en mail:
 
-<br>
-
-****
-
 |Leveret|Uønsket|Blokeret|Erstattet|
 |---|---|---|---|
 |Mail blev leveret til indbakken eller mappen for en bruger, og brugeren kan få adgang til den.|Mail blev sendt til brugerens mappe Uønsket eller Slettet, og brugeren kan få adgang til den.|Mails, der er i karantæne, som mislykkedes eller er blevet tabt. Disse mails er utilgængelige for brugeren.|Mails havde ondsindede vedhæftede filer erstattet af .txt, der viser, at den vedhæftede fil var skadelig.|
-|
 
 Her er, hvad brugeren kan se og ikke kan se:
-
-<br>
-
-****
 
 |Tilgængelig for slutbrugere|Utilgængeligt for slutbrugere|
 |---|---|
 |Leveret|Blokeret|
 |Uønsket|Erstattet|
-|
 
 **Leveringssted** viser resultaterne af politikker og registreringer, der kører efter levering. Det er sammenkædet med **_handlingen Levering_**. Dette er de mulige værdier:
 

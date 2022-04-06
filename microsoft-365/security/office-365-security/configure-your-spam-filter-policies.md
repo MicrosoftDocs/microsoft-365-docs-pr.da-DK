@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan lære, hvordan de får vist, opretter, redigerer og sletter antispampolitikker i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1ac240f402d230362cb33ea818e62c1e0629eb39
-ms.sourcegitcommit: 966344e1aa442a4d10a0fb05f56badd38c833bb2
+ms.openlocfilehash: 8550d55553b1c406fa21ce362e201a8bbe3d5aea
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/19/2022
-ms.locfileid: "63587910"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681298"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>Konfigurer antispampolitikker i EOP
 
@@ -148,10 +148,6 @@ Når du opretter en brugerdefineret politik for uønsket post i Microsoft 365 De
      - En markering ( ![Markering.](../../media/checkmark.png)) angiver, at handlingen er tilgængelig (ikke alle handlinger er tilgængelige for alle bedømmelser).
      - En stjerne ( ) efter <sup>\*</sup> markeringen angiver standardhandlingen for vurdering af spamfiltrering.
 
-     <br>
-
-     ****
-
      |Handling|Spam|Høj<br>tillid<br>spam|Phishing|Høj<br>tillid<br>phishing|Masse|
      |---|:---:|:---:|:---:|:---:|:---:|
      |**Flyt meddelelsen til mappen Uønsket** mail: Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. <sup>1</sup>|![Markering.](../../media/checkmark.png)<sup>\*</sup>|![Markering.](../../media/checkmark.png)<sup>\*</sup>|![Markering.](../../media/checkmark.png)|![Markering](../../media/checkmark.png)|![Markering](../../media/checkmark.png)<sup>\*</sup>|
@@ -161,7 +157,6 @@ Når du opretter en brugerdefineret politik for uønsket post i Microsoft 365 De
      |**Slet meddelelse**: Sletter automatisk hele meddelelsen, inklusive alle vedhæftede filer.|![Markering.](../../media/checkmark.png)|![Markering](../../media/checkmark.png)|![Markering](../../media/checkmark.png)||![Markering](../../media/checkmark.png)|
      |**Karantænemeddelelse**: Sender meddelelsen til karantæne i stedet for de tilsigtede modtagere. <p> Du angiver, hvor længe meddelelsen skal holdes i karantæne senere i **feltet Karantæne** . <p> Du angiver den [karantænepolitik,](quarantine-policies.md) der gælder for meddelelser, der er sat i karantæne, for spamfilterets konklusion i **feltet Vælg en** politik, der vises. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md). <sup>3</sup>|![Markering.](../../media/checkmark.png)|![Markering](../../media/checkmark.png)|![Markering](../../media/checkmark.png)<sup>\*</sup>|![Markering](../../media/checkmark.png)<sup>\*</sup>|![Markering](../../media/checkmark.png)|
      |**Ingen handling**|||||![Markering](../../media/checkmark.png)|
-     |
 
      > <sup>1</sup> EOP bruger nu sin egen agent til levering af mailflow til at distribuere meddelelser til mappen Uønsket mail i stedet for at bruge reglen om uønsket mail. _Parameteren_ Enabled på **cmdlet'en Set-MailboxJunkEmailConfiguration** har ikke længere nogen indflydelse på mailflowet. Du kan finde flere oplysninger [under Konfigurere indstillinger for uønsket mail Exchange Online postkasser](configure-junk-email-settings-on-exo-mailboxes.md).
      >

@@ -17,14 +17,16 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.technology: mde
 ms.topic: article
-ms.collection: m365initiative-m365-defender
+ms.collection:
+- m365initiative-m365-defender
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 3f3daaa068f067c8d4ffbbf40a4d8ba1d32d04b9
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 53f338ec713038841ab5cc089c12cebf7fe46131
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63599293"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680615"
 ---
 # <a name="attack-surface-reduction-rules-overview"></a>Oversigt over regler for reduktion af angrebsoverfladen
 

@@ -1,5 +1,5 @@
 ---
-title: Vælg Microsoft Information Protection (MIP) indbygget mærkning af Office apps over Azure Information Protection-tilføjelsesprogrammet (AIP)
+title: Vælg Microsoft Information Protection (MIP) indbygget mærkning af Office apps over tilføjelsesprogrammet Azure Information Protection (AIP)
 f1.keywords:
 - CSH
 ms.author: cabailey
@@ -16,19 +16,19 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Når du bruger den samlede AIP-klient (Azure Information Protection), skal du forstå fordelene ved at bruge indbygget mærkning til Office-apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 38aee57720f38793f4f61cc871a9bee556e28690
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+description: Når du bruger en samlet AIP-klient (Azure Information Protection), skal du forstå fordelene ved at bruge indbygget mærkning til Office-apps i stedet for AIP-tilføjelsesprogrammet.
+ms.openlocfilehash: 88849422d295cc7caf2eb39837f7f1bb82b7a378
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498599"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63704725"
 ---
 # <a name="why-choose-mip-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge Indbygget MIP-mærkning over AIP-tilføjelsesprogrammet til Office apps
 
 >*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Når du bruger [](sensitivity-labels.md) følsomhedsmærkater i Microsoft 365 Apps på Windows-computere, har du mulighed for at bruge mærkning, der er indbygget i Office-apps, eller et tilføjelsesprogrammet fra [Den samlede AIP-klient (Azure Information Protection](/azure/information-protection/rms-client/aip-clientv2)). 
+Når du bruger [](sensitivity-labels.md) følsomhedsmærkater i Microsoft 365 Apps på Windows-computere, har du mulighed for at bruge mærkning, der er indbygget i Office-apps, eller et tilføjelsesprogrammet fra [AIP (Azure Information Protection) samlet etiketklient](/azure/information-protection/rms-client/aip-clientv2). 
 
 Den indbyggede mærkning udgør hjørnestenene i en [Microsoft Information Protection-installation (MIP](information-protection-solution.md)), fordi denne mærkningsteknologi strækker sig over platforme (Windows, macOS, iOS, Android og internettet) samt på tværs af Microsoft-apps og -tjenester og længere væk. Den indbyggede mærkning er også udviklet til at fungere sammen med andre MIP-funktioner, f.eks. dataklassificering og forebyggelse af datatab (DLP).
 
@@ -38,7 +38,7 @@ Som standard er indbygget mærkning slået fra i Office for Windows apps, når A
 
 Når du beholder AIP-klienten installeret, men deaktiveret i Office apps, forbliver de andre funktioner i AIP-klienten understøttet:
 
-- Højrekliksindstillinger i dialogboksen Stifinder brugerne mulighed for at anvende navne på alle filtyper.
+- Højrekliksindstillinger i Stifinder, så brugerne kan anvende navne på alle filtyper.
 
 - En fremviser til at vise krypterede filer for tekst, billeder eller PDF-dokumenter.
 
@@ -48,7 +48,7 @@ Når du beholder AIP-klienten installeret, men deaktiveret i Office apps, forbli
 
 Du kan finde flere oplysninger om disse funktioner, der udvider mærkning ud over Office-apps, i [Azure Information Protection Unified Labeling Client Administrator guide](/azure/information-protection/rms-client/clientv2-admin-guide) fra AIP-dokumentationen.
 
-Uafhængigt af mærkningen kan du fortsætte med at bruge [AIPService](/powershell/module/aipservice) PowerShell-modulet til administration af krypteringstjenesten på lejerniveau. Konfigurer f.eks. superbrugeradgang, når du har brug for at fjerne kryptering til gendannelse af data, spor og tilbagekald dokumenter, der er blevet åbnet af AIP-klienten, og konfigurer anvendelseslicensens gyldighedsperiode for offlineadgang. Få mere at vide under [Administration af beskyttelse mod Azure Information Protection ved hjælp af PowerShell](/azure/information-protection/administer-powershell).
+Uafhængigt af mærkningen kan du fortsætte med at bruge [AIPService](/powershell/module/aipservice) PowerShell-modulet til administration af krypteringstjenesten på lejerniveau. Konfigurer f.eks. superbrugeradgang, når du har brug for at fjerne kryptering til gendannelse af data, spor og tilbagekald dokumenter, der er blevet åbnet af AIP-klienten, og konfigurer anvendelseslicensens gyldighedsperiode for offlineadgang. Få mere at vide under [Administration af beskyttelse fra Azure Information Protection ved hjælp af PowerShell](/azure/information-protection/administer-powershell).
 
 ## <a name="decide-whether-to-use-built-in-labeling-for-office-apps-or-the-aip-add-in"></a>Beslut, om du vil bruge indbygget mærkning Office apps eller AIP-tilføjelsesprogrammet
 
@@ -71,7 +71,7 @@ Brug kun AIP-tilføjelsesprogrammet til dine Windows Office-apps, hvis du allere
 Nogle funktioner understøttes kun af indbygget mærkning af Office-apps og understøttes ikke af AIP-tilføjelsesprogrammet. Disse omfatter:
 
 - Til automatisk og anbefalet mærkat:
-    - Adgang til intelligente klassificeringstjenester, [der](classifier-learn-about.md) omfatter trænbare klassificeringer, nøjagtigt [datamatch (EDM)](sit-learn-about-exact-data-match-based-sits.md) og [navngivne enheder](named-entities-learn.md)
+    - Adgang til intelligente klassificeringstjenester, der omfatter trænbare [klassificeringer](classifier-learn-about.md), nøjagtigt [data match (EDM)](sit-learn-about-exact-data-match-based-sits.md) og [navngivne enheder](named-entities-learn.md)
     - Registrering af følsomme oplysninger, mens brugere skriver
     - I Word kan brugerne gennemse og fjerne det identificerede følsomme indhold
 - For etiketter, som brugerne kan tildele tilladelser, kan forskellige tilladelser (Læs eller Rediger) tildeles til brugere eller grupper
@@ -88,7 +88,7 @@ Hvis du vil holde dig informeret, når nye mærkningsfunktioner bliver tilgænge
 
 ## <a name="how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps"></a>Sådan deaktiverer du tilføjelsesprogrammet AIP for at bruge indbygget mærkning til Office apps
 
-Når du har installeret AIP-klienten til at udvide mærkning ud over Office-apps, men vil forhindre, at **klientens tilføjelsesprogrammer indlæses i Office-apps**, skal du bruge indstillingen Gruppepolitik-indstilling Liste over administrerede tilføjelsesprogrammer som dokumenteret i Indlæste tilføjelsesprogrammer uden tilføjelsesprogrammer på grund af gruppepolitikindstillinger [for Office 2013- og Office 2016-programmer](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+Når du har installeret AIP-klienten til at udvide mærkning ud over Office-apps, men vil forhindre, at **klientens tilføjelsesprogrammer indlæses i Office-apps**, skal du bruge indstillingen Gruppepolitik-indstilling Liste over administrerede tilføjelsesprogrammer som dokumenteret i Ingen tilføjelsesprogrammer indlæst på grund af gruppepolitikindstillinger [for Office 2013- og Office 2016-programmer](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
 Til dine Windows Office-apps, der understøtter indbygget mærkning, skal du bruge konfigurationen til Microsoft Word 2016, Excel 2016, PowerPoint 2016 og Outlook 2016 ved at angive følgende programidentifikatorer (ProgID) for AIP-klienten og **angive indstillingen til 0: Tilføjelsesprogrammet er altid deaktiveret (blokeret)**
 
@@ -105,7 +105,7 @@ Installér denne indstilling ved Gruppepolitik eller ved hjælp af Office [skypo
 > [!IMPORTANT]
 > Hvis du bruger Gruppepolitik-indstillingen Brug funktionen Følsomhed i **Office** til at anvende og få vist følsomhedsmærkater og angive denne til **1**, er der visse situationer, hvor tilføjelsesprogrammet AIP stadig kan indlæses i Office-apps. Blokering af tilføjelsesprogrammet i at blive indlæst i hver app forhindrer dette.
 
-Alternativt kan du deaktivere eller fjerne **tilføjelsesprogrammet Microsoft Azure Information Protection** Office interaktivt fra Word, Excel, PowerPoint og Outlook. Denne metode egner sig til en enkelt computer og ad hoc-test. Du kan finde en [vejledning i Få vist, administrer og installer tilføjelsesprogrammer i Office programmer](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
+Du kan også deaktivere eller fjerne **tilføjelsesprogrammet Microsoft Azure Microsoft Azure beskyttelse** af oplysninger Office interaktivt fra Word, Excel, PowerPoint og Outlook. Denne metode egner sig til en enkelt computer og ad hoc-test. Du kan finde en [vejledning i Få vist, administrer og installer tilføjelsesprogrammer i Office programmer](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
 
 Uanset hvilken metode du vælger, træder ændringerne i kraft, når Office apps genstarter.
 
