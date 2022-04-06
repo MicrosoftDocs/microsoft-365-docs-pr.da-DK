@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: be2352ef44d8e9f7430cde39a71c7b7b1167a874
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: 2535845c52285b1ce28fbe142709089778503c09
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634091"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469575"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
@@ -52,7 +52,7 @@ Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke, de
 
 Før du prøver denne funktion, skal du sikre dig, at du opfylder følgende krav:
 
-- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 eller Microsoft Defender for Endpoint  separat licens. 
+- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 + Microsoft 365 E5 Sikkerhed tilføjelsesprogrammet eller Microsoft Defender for Endpoint enkeltstående licens. 
 
 - Du har adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 
@@ -203,9 +203,9 @@ Der åbnes et panel, hvor du kan vælge prioriteten og tilføje flere oplysninge
 
 ### <a name="url-category-lookup"></a>Opslag i URL-kategori
 
-For at bestemme kategorien for et websted kan du bruge den URL-søgefunktion, der er tilgængelig på Microsoft 365 Defender-portalen (<https://security.microsoft.com>) under **Slutpunktssøgning**\>. I søgeresultaterne for URL-adressen vises kategorien til filtrering af webindhold under **URL-adresse/domæneoplysninger**. Hvis kategoriresultatet ikke vises, er URL-adressen i øjeblikket ikke tildelt en eksisterende kategori til filtrering af webindhold.
+For at bestemme kategorien for et websted kan du bruge den URL-søgefunktion, der er tilgængelig på Microsoft 365 Defender-portalen (<https://security.microsoft.com>) under **Slutpunktssøgning**\>. I søgeresultaterne for URL-adressen vises kategorien til filtrering af webindhold under **URL-adresse/domæneoplysninger**. Administratorer kan også bestride kategorien for domænet direkte fra denne side, sådan som det er vist på følgende billede. Hvis kategoriresultatet ikke vises, er URL-adressen i øjeblikket ikke tildelt en eksisterende kategori til filtrering af webindhold.
 
-<!---:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="The web content filtering category lookup results" lightbox="../../media/web-content-filtering-category-lookup.png":::--->
+:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="Opslagsresultater for kategorien til filtrering af webindhold" lightbox="../../media/web-content-filtering-category-lookup.png":::
 
 ## <a name="web-content-filtering-cards-and-details"></a>Webindholdsfiltreringskort og detaljer
 
@@ -256,7 +256,7 @@ Netværksbeskyttelse understøtter i øjeblikket ikke SSL-inspektion, hvilket ka
 ## <a name="see-also"></a>Se også
 
 - [Oversigt over webbeskyttelse](web-protection-overview.md)
-- [Beskyttelse mod webtrusler](web-threat-protection.md)
+- [Webtrusselsbeskyttelse](web-threat-protection.md)
 - [Overvåge websikkerhed](web-protection-monitoring.md)
 - [Svar på webtrusler](web-protection-response.md)
 - [Krav til netværksbeskyttelse](web-content-filtering.md)

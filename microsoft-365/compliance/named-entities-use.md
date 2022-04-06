@@ -1,5 +1,5 @@
 ---
-title: Brug navngivne enheder i dine politikker til forebyggelse af datatab (forhåndsvisning)
+title: Brug navngivne enheder i dine politikker til forebyggelse af datatab (prøveversion)
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -15,109 +15,109 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
-description: Brug disse procedurer til at drage fordel af navngivne enheder i politikkerne til forebyggelse af datatab
-ms.openlocfilehash: 5adb410689e597395f1b13152ed62af75fa111d6
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+description: Brug disse procedurer til at drage fordel af navngivne enheder i dine politikker til forebyggelse af datatab
+ms.openlocfilehash: 9b3a8899ef4b64c682289e29df19648a00d4f048
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63594647"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665156"
 ---
-# <a name="use-named-entities-in-your-data-loss-prevention-policies-preview"></a>Brug navngivne enheder i dine politikker til forebyggelse af datatab (forhåndsvisning)
+# <a name="use-named-entities-in-your-data-loss-prevention-policies-preview"></a>Brug navngivne enheder i dine politikker til forebyggelse af datatab (prøveversion)
 
 > [!IMPORTANT]
-> Den navngivne enheder-funktion udrulles og vises i din lejer, når den er tilgængelig for dig. Kontrollér for dem i indholdsstifinder og i flowet til forebyggelse af datatab (DLP)-politik. 
+> Funktionen navngivne enheder udrulles og vises i din lejer, når den er tilgængelig for dig. Kontrollér, om de er i Indholdsoversigt og i DLP-flowet (forebyggelse af datatab). 
 
-Læs Få [mere at vide om navngivne enheder (eksempel),](named-entities-learn.md) før du begynder at bruge dem.
+Læs [mere om navngivne enheder (prøveversion),](named-entities-learn.md) før du begynder at bruge dem.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonnementslicenser
+### <a name="skusubscriptions-licensing"></a>LICENSER TIL SKU/abonnementer
 
 Du skal have et af disse abonnementer
 
-- Beskyttelse og styring af oplysninger
+- Information Protection og styring
 - Microsoft 365 E5 Overholdelse
 - Office 365 E5
 - Microsoft 365 E5
 
-Se tjenestebeskrivelsen for at [få flere licensoplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-classification-analytics-overview-content--activity-explorer).
+Du kan finde alle licensoplysninger [i tjenestebeskrivelsen](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-classification-analytics-overview-content--activity-explorer).
 
 ### <a name="permissions"></a>Tilladelser
 
-Den konto, du bruger til at oprette og redigere politikker til forebyggelse af datatab (DLP), skal have **tilladelsen DLP Compliance Management** . Få mere at vide under [Giv brugere adgang til Office 365 Overholdelsescenter](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md)
+Den konto, du bruger til at oprette og redigere DLP-politikker (forebyggelse af datatab), skal have rolletilladelserne **DLP Compliance Management** . Du kan få flere oplysninger under [Giv brugere adgang til Office 365 Compliance Center](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md)
 
 
 ## <a name="supported-locations"></a>Understøttede placeringer
 
-Du kan bruge navngivne enheds-SIT'er og forbedrede politikker til at registrere og beskytte følsomme elementer på disse placeringer:
+Du kan bruge navngivne objekt-SIT'er og forbedrede politikker til at registrere og beskytte følsomme elementer på disse placeringer:
 
 - SharePoint websteder
 - OneDrive konti
-- Teams chat og kanalmeddelelser
+- Teams chat- og kanalmeddelelser
 - Enheder (Windows 10 slutpunktsenheder)
 
-Navngivne ENHEDS-SIT'er og forbedrede politikker understøttes ikke for:
+Navngivne objekt-SIT'er og forbedrede politikker understøttes ikke for:
 
 
-- Lokale lagre
+- Lagre i det lokale miljø
 - Power BI
 
-## <a name="create-and-edit-enhanced-policies"></a>Oprette og redigere udvidede politikker
+## <a name="create-and-edit-enhanced-policies"></a>Opret og rediger forbedrede politikker
 
-Hvis du vil oprette eller redigere en DLP-politik, skal du bruge fremgangsmåderne i [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md).
+Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i [Opret, test og juster en DLP-politik](create-test-tune-dlp-policy.md).
 
 ## <a name="workloads-and-services-that-support-named-entities"></a>Arbejdsbelastninger og tjenester, der understøtter navngivne enheder
 
 
-- **Microsoft 3655 eDiscovery** understøtter brug af navngivne enheder i Understrate-tjenester.
-- **Microsoft Defender til skyapps** understøtter brug af navngivne enheder i politikkerne for Defender til skyapps.
-- **Insider Risk Management** understøtter brug af navngivne enheder i Understrate-tjenester.
-- **Kommunikationsoverholdelse** understøtter ikke brugen af navngivne enheder Exchange transportregler og data-at-rest.
-- **Microsofts styring** af oplysninger (MIG) understøtter ikke brugen af navngivne enheder i Exchange-transportregler og data-at-rest.
+- **Microsoft 3655 eDiscovery** understøtter brugen af navngivne enheder i Substrate-tjenester.
+- **Microsoft Defender for Cloud Apps** understøtter brugen af navngivne objekter i Defender for Cloud Apps-politikker.
+- **Insider Risk Management** understøtter brugen af navngivne objekter i Substrate-tjenester.
+<!--- **Communication Compliance** doesn't support the use of named entities in Exchange transport rules and data-at-rest.
+- **Microsoft Information Governance** (MIG) doesn't support the use of named entities in Exchange transport rules and data-at-rest.-->
  
-### <a name="unified-dlp"></a>Samlet DLP
+### <a name="unified-dlp"></a>Unified DLP
 
-|Arbejdsbelastning/tjenester  |Understøttelse af offentlig eksempelvisning for navngivne enheder  |
+|Arbejdsbelastning/tjenester  |Understøttelse af offentlig prøveversion af navngivne enheder  |
 |---------|---------|
-|Office tip til politik for Win32-klienter    |understøttes ikke  |
-|Office til WAC-klienter    |understøttet         |
+|politiktip til Office Win32-klienter    |understøttes ikke  |
+|politiktip til Office WAC-klienter    |Understøttes         |
 |Tip til OWA-politik     |understøttes ikke         |
 |Outlook politiktip     |understøttes ikke |
-|Slutpunkter (Windows 10 enheder)     |understøttet  |
+|Slutpunkter (Windows 10 enheder)     |Understøttes  |
 |Exchange transportregler     |understøttes ikke |
-|OneDrive for Business data-at-rest     |understøttet         |
-|SharePoint Online data-at-rest     |understøttet         |
-|Teams data-at-rest     |understøttet         |
-|E-mail-data-at-rest     |understøttes ikke         |
-|Microsoft Defender til skyapps     |understøttet         |
+|OneDrive for Business hviledata     |Understøttes         |
+|SharePoint Online-data-at-rest     |Understøttes         |
+|Teams hviledata     |Understøttes         |
+|Data-at-rest i mails     |understøttes ikke         |
+|Microsoft Defender for Cloud Apps     |Understøttes         |
 
-### <a name="autolabeling"></a>Automatisk mærkning
+### <a name="autolabeling"></a>Automatisk navngivning
 
-|Arbejdsbelastning/tjenester |Understøttelse af offentlig eksempelvisning for navngivne enheder  |
+|Arbejdsbelastning/tjenester |Understøttelse af offentlig prøveversion af navngivne enheder  |
 |---------|---------|
-|Office Win32-klienter offline   |understøttet, skal brugeren vælge etiket og anvende manuelt |
-|Online Office Win32-klienter online|understøttet med gammel tillidsplan |
-|Outlook online   |understøttet med gammel tillidsplan  |
-|Office WAC-klient     |understøttet |
-|OWA     |understøttet |
+|Office Win32-klienter offline   |understøttes, skal brugeren vælge mærkat og anvende det manuelt |
+|Online Office Win32-klienter online|understøttet med gamle tillidsskemaer |
+|Outlook online   |understøttet med gamle tillidsskemaer  |
+|Office WAC-klient     |Understøttes |
+|OWA     |Understøttes |
 |Exchange transport     |understøttes ikke |
-|OneDrive for Business data-at-rest     |understøttet |
-|SharePoint Online data-at-rest|understøttet|
-|Azure Information Protection -scanner (AIP)|understøttes ikke|
+|OneDrive for Business hviledata     |Understøttes |
+|SharePoint Online-data-at-rest|Understøttes|
+|AIP-scanner (Azure Information Protection)|understøttes ikke|
 
 ## <a name="known-issues"></a>Kendte problemer
 
-|Problem  |Virkning  |
+|Spørgsmål  |Indvirkning  |
 |---------|---------|
-|Tip til DLP-politik (OWA-, Outlook-, Office Win32-klienter)     |   Politiktip med enhedsbetingelse resulterer i "intet match"      |
-| Understøttelse af asiatiske sprog for personnavn (kinesisk, japansk, koreansk)    | Navngivne enheder, der kun understøttes til latinske tegnsæt (det vil sige, at kanji ikke understøttes) til personens navn        |
-|Lokale lagre    | Understøttes ikke som en arbejdsbelastning|
+|Tip til DLP-politik (OWA, Outlook, Office Win32-klienter)     |   Politiktip med objektbetingelse resulterer i "intet match"      |
+| Understøttelse af asiatisk sprog for personnavn (kinesisk, japansk, koreansk)    | Navngivne enheder, der kun understøttes for latinsk baserede tegnsæt (dvs. kanji understøttes ikke) for personnavn        |
+|Lagre i det lokale miljø    | Understøttes ikke som en arbejdsbelastning|
 
 <!--|Devices workload (Endpoint)     | Not supported as a workload – authoring policy with named entities will not be allowed        |-->
 
-## <a name="for-further-information"></a>Du kan finde flere oplysninger
+## <a name="for-further-information"></a>Yderligere oplysninger
 <!-- - [Sensitive information type entity definitions](sensitive-information-type-entity-definitions.md)-->
-- [Få mere at vide om navngivne enheder (eksempel)](named-entities-learn.md).
+- [Få mere at vide om navngivne enheder (prøveversion).](named-entities-learn.md)
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Opret en DLP-politik ud fra en skabelon](create-a-dlp-policy-from-a-template.md)

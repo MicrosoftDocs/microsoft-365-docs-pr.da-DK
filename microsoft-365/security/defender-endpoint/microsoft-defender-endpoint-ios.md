@@ -1,8 +1,8 @@
 ---
-title: Microsoft Defender til Slutpunkt på iOS
+title: Microsoft Defender for Endpoint på iOS
 ms.reviewer: ''
-description: Beskrivelse af, hvordan du installerer og bruger Microsoft Defender til Slutpunkt på iOS
-keywords: microsoft, defender, Microsoft Defender til Endpoint, ios, overview, installation, deploy, uninstallation, intune
+description: Beskriver, hvordan du installerer og bruger Microsoft Defender for Endpoint på iOS
+keywords: microsoft, defender, Microsoft Defender for Endpoint, ios, overview, installation, deploy, uninstallation, intune
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,84 +17,84 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: c144eb3cd0cec2d96f20294475618e7e9c49c816
-ms.sourcegitcommit: 007822d16e332522546e948f5c216327254a4d49
+ms.openlocfilehash: dcc67b2d2a9ad03dc1235eebd577e3525ab07a03
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63603146"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665926"
 ---
-# <a name="microsoft-defender-for-endpoint-on-ios"></a>Microsoft Defender til Slutpunkt på iOS
+# <a name="microsoft-defender-for-endpoint-on-ios"></a>Microsoft Defender for Endpoint på iOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-**Microsoft Defender til Slutpunkt på iOS tilbyder** beskyttelse mod phishing og usikre netværksforbindelser fra websteder, mails og apps. Alle beskeder vil være tilgængelige via en enkelt rude med glas i Microsoft 365 Defender portal. Portalen giver sikkerhedsteams et centralt overblik over trusler på iOS-enheder sammen med andre platforme.
+**Microsoft Defender for Endpoint på iOS** giver beskyttelse mod phishing og usikre netværksforbindelser fra websteder, mails og apps. Alle beskeder vil være tilgængelige via en enkelt rude i Microsoft 365 Defender-portalen. Portalen giver sikkerhedsteams en central visning af trusler på iOS-enheder sammen med andre platforme.
 
 > [!CAUTION]
-> Hvis du kører andre slutpunktsbeskyttelsesprodukter fra tredjepart sammen med Defender for Endpoint på iOS, kan det sandsynligvis medføre problemer med ydeevnen og uforudsete systemfejl.
+> Kørsel af andre tredjepartsbeskyttelsesprodukter til slutpunkter sammen med Defender for Endpoint på iOS vil sandsynligvis medføre problemer med ydeevnen og uforudsigelige systemfejl.
 
 ## <a name="pre-requisites"></a>Forudsætninger
 
-**For slutbrugere**
+**Til slutbrugere**
 
-- Microsoft Defender for Endpoint-licens tildelt slutbrugeren/slutbrugerne af appen. Se [Licenskrav til Microsoft Defender til Slutpunkt](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
+- Microsoft Defender for Endpoint licens, der er tildelt slutbrugerne af appen. Se [Microsoft Defender for Endpoint licenskrav](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
 
 - **For tilmeldte enheder**:
-    - Enheder er tilmeldt via [appen Intune-firmaportal](/mem/intune/user-help/enroll-your-device-in-intune-ios) at gennemtvinge politikker for overholdelse af enhed i Intune. Dette kræver, at slutbrugeren er tildelt en Microsoft Intune licens.
-    - Intune-firmaportal-appen kan downloades fra [Apple App-Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
+    - Enheder [tilmeldes](/mem/intune/user-help/enroll-your-device-in-intune-ios) via appen Intune-firmaportal for at gennemtvinge Intune politikker for enhedsoverholdelse. Dette kræver, at slutbrugeren tildeles en Microsoft Intune licens.
+    - Intune-firmaportal app kan downloades fra [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
     
     >[!NOTE]
-    >Apple tillader ikke, at brugere omdirigeres for at downloade andre apps fra App Store, så dette trin skal udføres af brugeren, før onboarding til Microsoft Defender for Endpoint-appen.
+    >Apple tillader ikke, at omdirigering af brugere downloader andre apps fra appbutikken, så dette trin skal udføres af brugeren, før brugeren onboarder til Microsoft Defender for Endpoint app.)
     
-    - Enheder er registreret hos Azure Active Directory. Dette kræver, at slutbrugeren er logget på [Microsoft Authenticator-appen](https://apps.apple.com/app/microsoft-authenticator/id983156458).
+    - Enheder er registreret i Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
-- **For enheder, der ikke er tilmeldt**: Enheder er registreret med Azure Active Directory. Dette kræver, at slutbrugeren er logget på [Microsoft Authenticator-appen](https://apps.apple.com/app/microsoft-authenticator/id983156458).
+- **For ikke-tilmeldte enheder**: Enheder er registreret med Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
-- Du kan finde flere oplysninger om, hvordan du tildeler licenser, [under Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
+- Du kan få flere oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
 
-**For administratorer**
+**Til administratorer**
 
-- Adgang til Microsoft 365 Defender portalen.
+- Adgang til Microsoft 365 Defender-portalen.
 
-- Adgang [Microsoft Endpoint Manager Administration til](https://go.microsoft.com/fwlink/?linkid=2109431) at:
-   - Installér appen til tilmeldte brugergrupper i organisationen.
-   - Konfigurer risikosignaler for Microsoft Defender til slutpunkt i appbeskyttelsespolitik (MAM)
+- Adgang til [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) til:
+   - Udrul appen til tilmeldte brugergrupper i din organisation.
+   - Konfigurer Microsoft Defender for Endpoint risikosignaler i MAM (App Protection Policy)
 
 
     > [!NOTE]
-    > - Microsoft Defender til slutpunkt udvider nu beskyttelsen til en organisations data i et administreret program for dem, der ikke bruger administration af mobilenheder (MDM), men bruger Intune til at administrere mobilprogrammer. Det udvider også denne support til kunder, der bruger andre enterprise mobility management-løsninger, mens de stadig bruger Intune til [administration af mobilapps (MAM).](/mem/intune/apps/mam-faq)
-    > - Desuden understøtter Microsoft Defender til slutpunkt allerede enheder, der er tilmeldt ved hjælp af Administration af mobilenheder i Intune (MDM).  
+    > - Microsoft Defender for Endpoint nu udvider beskyttelsen til en organisations data i et administreret program for dem, der ikke bruger MDM (Mobile Device Management), men bruger Intune til at administrere mobilapps. Denne support udvides også til kunder, der bruger andre løsninger til administration af virksomhedsmobilitet, mens de stadig bruger Intune til [administration af mobilapps (MAM).](/mem/intune/apps/mam-faq)
+    > - Derudover understøtter Microsoft Defender for Endpoint allerede enheder, der er tilmeldt ved hjælp af Intune administration af mobilenheder (MDM).  
 
 **Systemkrav**
 
-- iOS-enhed, der kører iOS 12.0 og derover. iPads understøttes også. *Bemærk, at fra 31-marts 2022 vil det mindste understøttede iOS-version af Microsoft Defender til Slutpunkt være iOS 13.0.*
+- iOS-enhed, der kører iOS 12.0 og nyere. iPads understøttes også. *Bemærk, at fra den 31. marts 2022 er den mindste understøttede iOS-version fra Microsoft Defender for Endpoint iOS 13.0.*
 
-- Enheden er enten tilmeldt appen Intune-firmaportal [eller](https://apps.apple.com/us/app/intune-company-portal/id719171358) er registreret hos Azure Active Directory via [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) med den samme konto.
+- Enheden er enten tilmeldt [Intune-firmaportal-appen](https://apps.apple.com/us/app/intune-company-portal/id719171358), eller den er registreret i Azure Active Directory via [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) med den samme konto.
 
 ## <a name="installation-instructions"></a>Installationsvejledning
 
-Installation af Microsoft Defender til slutpunkt på iOS kan udføres via Microsoft Endpoint Manager (MEM), og både overvågede og ikke-overvågede enheder understøttes. Slutbrugere kan også installere appen direkte fra [Apple App Store](https://aka.ms/mdatpiosappstore).
+Installation af Microsoft Defender for Endpoint på iOS kan udføres via Microsoft Endpoint Manager (MEM), og både overvågede og ikke-overvågede enheder understøttes. Slutbrugere kan også installere appen direkte fra [Apple App Store](https://aka.ms/mdatpiosappstore).
 
-- Du kan finde oplysninger om installation på tilmeldte enheder via Microsoft Endpoint Manager eller Intune under [Deploy Microsoft Defender for Endpoint på iOS](ios-install.md).
-- Du kan finde oplysninger om brug af Defender til slutpunkt i appbeskyttelsespolitik (MAM) i Konfigurer beskyttelsespolitik for apps til at medtage [Defender til slutpunkt-risikosignaler (MAM)](ios-install-unmanaged.md)
+- Du kan få oplysninger om udrulning på tilmeldte enheder via Microsoft Endpoint Manager eller Intune under [Installér Microsoft Defender for Endpoint på iOS](ios-install.md).
+- Du kan finde oplysninger om brug af Defender for Endpoint i MAM (App Protection Policy) under [Konfigurer beskyttelsespolitik for apps til at inkludere MAM (Defender for Endpoint Risk Signals)](ios-install-unmanaged.md)
 
 ## <a name="resources"></a>Ressourcer
 
-- Få besked om kommende udgivelser [ved at gå til Nyheder i Microsoft Defender til endpoint på iOS](ios-whatsnew.md) eller vores [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
+- Hold dig orienteret om kommende udgivelser ved at gå til [Nyheder i Microsoft Defender for Endpoint på iOS](ios-whatsnew.md) eller på vores [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
 
-- Giv feedback via feedbacksystemet i appen eller via den [samlede sikkerhedskonsol](https://security.microsoft.com)
+- Giv feedback via et feedbacksystem i appen eller via [den samlede sikkerhedskonsol](https://security.microsoft.com)
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Installér Microsoft Defender til Slutpunkt på iOS via Intune til tilmeldte enheder](ios-install.md)
-- [Konfigurer politik for appbeskyttelse til at medtage Defender til slutpunkt-risikosignaler (MAM)](ios-install-unmanaged.md)
-- [Konfigurer Microsoft Defender til slutpunkt på iOS-funktioner](ios-configure-features.md)
-- [Konfigurer betinget Access-politik baseret på risikoscore for enheder fra Microsoft Defender til Slutpunkt](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios)
-- [Grundlæggende funktioner til administration af mobilapps (MAM)](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
+- [Udrul Microsoft Defender for Endpoint på iOS via Intune til tilmeldte enheder](ios-install.md)
+- [Konfigurer beskyttelsespolitikken for apps, så den omfatter Defender for Endpoint-risikosignaler (MAM)](ios-install-unmanaged.md)
+- [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
+- [Konfigurer politik for betinget adgang baseret på enhedens risikoscore fra Microsoft Defender for Endpoint](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios)
+- [Grundlæggende om administration af mobilapps (MAM)](/mem/intune/apps/app-management#mobile-application-management-mam-basics)

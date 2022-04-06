@@ -1,7 +1,7 @@
 ---
-title: Trin 5. Udvikle og teste use cases
-description: Grundlæggende om udvikling og test af use cases ved integrering Microsoft 365 Defender dine sikkerhedshandlinger.
-keywords: hændelser, beskeder, undersøge, korrelation, angreb, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365, hændelsesrespons, cyberangreb, secops, sikkerhedshandlinger, soc
+title: Trin 5. Udvikl og test use cases
+description: Det grundlæggende ved udvikling og test af use cases, når du integrerer Microsoft 365 Defender i dine sikkerhedshandlinger.
+keywords: hændelser, beskeder, undersøge, korrelation, angreb, enheder, brugere, identitet, identitet, postkasse, mail, 365, microsoft, m365, svar på hændelser, cyberangreb, secops, sikkerhedshandlinger, soc
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -22,129 +22,129 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 6621ca47356f87edd47a905e4edeb592d9b556ff
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 732b10bceaa3509f28f607228dc20ad6e941cb2f
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499083"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664452"
 ---
-# <a name="step-5-develop-and-test-use-cases"></a>Trin 5. Udvikle og teste use cases
+# <a name="step-5-develop-and-test-use-cases"></a>Trin 5. Udvikl og test use cases
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-De anbefalede metoder til at installere Microsoft 365 Defender i Security Operations Center (SOC) afhænger af SOC-teamets aktuelle sæt af værktøjer, processer og færdigheder. Vedligeholdelse af cyberangreb på tværs af platforme kan være udfordrende på grund af den enorme mængde data, der kommer fra dusin, hvis ikke hundredvis af sikkerhedskilder. 
+De anbefalede metoder til udrulning af Microsoft 365 Defender i dit SOC (Security Operations Center) afhænger af SOC-teamets aktuelle sæt værktøjer, processer og færdigheder. Det kan være en udfordring at opretholde cyberhygiejne på tværs af platforme på grund af den enorme mængde data, der kommer fra snesevis, hvis ikke hundredvis af sikkerhedskilder. 
 
-Sikkerhedsværktøjer er indbyrdes forbundne. Hvis du slår én funktion til i en sikkerhedsteknologi eller ændrer en proces, kan det medføre, at en anden funktion brydes. Af denne grund anbefaler Microsoft, at dit SOC-team formaliserer en metode til at definere og prioritere use cases. Use cases hjælper med at definere krav og testprocesser for SOC-handlinger på tværs af forskellige teams. Der oprettes en metode til registrering af målepunkter for at afgøre, om de rigtige roller og blandinger af opgaver er justeret med det rigtige team med de rette færdigheder. 
+Sikkerhedsværktøjer er indbyrdes forbundne. Hvis du aktiverer en funktion i en sikkerhedsteknologi eller ændrer en proces, kan det også ødelægge en anden funktion. Derfor anbefaler Microsoft, at dit SOC-team formaliserer en metode til definition og prioritering af use cases. Use cases hjælper med at definere krav og testprocesser for SOC-handlinger på tværs af forskellige teams. Den opretter en metode til registrering af målepunkter for at bestemme, om de rigtige roller og en blanding af opgaver er justeret i forhold til det rigtige team med de rette færdigheder. 
 
-## <a name="develop-and-formalize-use-case-process"></a>Udvikle og formalisere case-processen
+## <a name="develop-and-formalize-use-case-process"></a>Udvikl og formaliser processen for use case
 
-SOC bør definere en standard og proces på højt niveau for udvikling af brugstilfælde, som vil blive regulerede af SOC-oversigtsteamet. SOC-oversigtsteamet bør arbejde med din virksomhed, it, juridiske afdeling, HR og andre grupper for at prioritere use cases for SOC,som med tiden vil gøre deres vej til SOC-teamets kørselsbøger og playbooks. Prioriteten af use cases er baseret på målsætninger som f.eks. overholdelse af regler og standarder eller beskyttelse af personlige oplysninger.
+SOC bør definere en standard og en proces på højt niveau for udvikling af use cases, som skal reguleres af SOC-tilsynsteamet. SOC Tilsynsteamet bør arbejde med din virksomhed, it, juridiske, HR og andre grupper for at prioritere use cases for SOC, der i sidste ende vil gøre deres vej ind i SOC-teamets runbooks og playbooks. Prioriteten af use cases er baseret på målsætninger, f.eks. overholdelse af angivne standarder eller beskyttelse af personlige oplysninger.
 
-SOC-oversigtsaktiviteter relateret til udvikling af use case omfatter: 
+SOC Tilsynsaktiviteter i forbindelse med udvikling af use case omfatter: 
 
 - Krav
-- Behov for personale eller uddannelse
+- Personale- eller uddannelsesbehov
 - Softwarelicenser
-- Leverandørkontrakter
-- Administrer plan
-- Vedligeholdelse af registreringsdatabasen for use case
-- Vedligeholde/opdatere skabeloner
+- Leverandørkontr.
+- Administration af plan
+- Vedligeholdelse af use case-registreringsdatabasen
+- Vedligeholdelse/opdatering af skabeloner
 
-For at lette processerne for oprettelse af runbook og playbook skal du oprette et beslutningstræ for use case. I figuren nedenfor vises et eksempel.
+For at facilitere processerne for oprettelse af runbook og playbook skal du oprette et beslutningstræ for use case. Dette tal viser et eksempel.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Processen for beslutningstagning i use-case" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Beslutningsprocessen for use case" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
 
-Når en use case-standard på højt niveau er blevet defineret og godkendt, er næste trin at oprette og teste en faktisk use case. I de følgende afsnit bruges scenarier med scanning af antiphishing og trussel og sikkerhedsrisiko som eksempler.
+Når der er defineret og godkendt en standard for use case på højt niveau, er det næste trin at oprette og teste en faktisk use case. I følgende afsnit bruges scenarier til anti-phishing og trussels- og sårbarhedsscanning som eksempler.
 
-## <a name="use-case-example-1-new-phishing-variant"></a>Use case example 1: Ny phishingvariant
+## <a name="use-case-example-1-new-phishing-variant"></a>Eksempel på brugseksempel 1: Ny phishing-variant
 
-Det første trin til at oprette en use case er at oprette en disposition for arbejdsprocessen ved hjælp af et story board. Her er et eksempel på et story board på højt niveau for en ny meddelelse om phishing-udnyttelse til et Threat Intelligence-team.
+Det første trin i oprettelsen af en use case er at skitsere arbejdsprocessen ved hjælp af et historieforum. Her er et eksempel på et historieforum på højt niveau for en ny meddelelse om phishing-udnyttelse til et Threat Intelligence-team.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Arbejdsprocessen for en use case for en antiphishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Arbejdsprocessen for en use case til en anti-phishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
 
-### <a name="invoke-the-use-case-workflow-for-example-1"></a>Aktivere arbejdsprocessen for use case for eksempel 1
+### <a name="invoke-the-use-case-workflow-for-example-1"></a>Aktivér arbejdsprocessen for use case, f.eks. 1
 
-Når story boardet er blevet godkendt, er næste trin at fremkalde arbejdsprocessen for use case-sager. Her er et eksempel på en proces til antiphishing-kampagner. 
+Når tekstenhedstavlen er blevet godkendt, er det næste trin at aktivere arbejdsprocessen for use case. Her er et eksempel på en proces til anti-phishing-kampagne. 
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="En detaljeret arbejdsproces for use case for en antiphishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="En detaljeret arbejdsproces til brug af en anti-phishing-kampagne" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
 
-## <a name="use-case-example-2-threat-and-vulnerability-scanning"></a>Use case example 2: Scanning af trussel og sikkerhedsrisiko
+## <a name="use-case-example-2-threat-and-vulnerability-scanning"></a>Eksempel 2 i brugseksempel: Scanning af trusler og sårbarheder
 
-Et andet scenarie, hvor der kunne benyttes en use case, er ved scanning af trusler og sikkerhedsrisiko. I dette eksempel kræver SOC, at trusler og sårbarheder afhjælpes mod aktiver via godkendte processer, der omfatter scanning af aktiver. 
+Et andet scenarie, hvor der kan bruges en use case, er til scanning af trusler og sårbarheder. I dette eksempel kræver SOC, at trusler og sårbarheder afhjælpes mod aktiver via godkendte processer, der omfatter scanning af aktiver. 
 
-Her er et eksempel på et storyboard på højt niveau til Håndtering af trusler og sikkerhedsrisici af aktiver.
+Her er et eksempel på et storyboard på højt niveau for Håndtering af trusler og sikkerhedsrisici af aktiver.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="En arbejdsproces for use-case til Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="En arbejdsproces for anvendelse af Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
 
-### <a name="invoke-the-use-case-workflow-for-example-2"></a>Aktivere arbejdsprocessen for use case for eksempel 2
+### <a name="invoke-the-use-case-workflow-for-example-2"></a>Aktivér arbejdsprocessen for use case, f.eks. 2
 
-Her er en eksempelproces til scanning af trusler og sikkerhedsrisiko.
+Her er et eksempel på en proces til scanning af trusler og sårbarheder.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="En detaljeret arbejdsproces for use case til Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="En detaljeret arbejdsproces for use case for Håndtering af trusler og sikkerhedsrisici" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
  
-### <a name="analyze-the-use-case-output-and-lessons-learned"></a>Analysér output fra use case og indlærte lektioner
+### <a name="analyze-the-use-case-output-and-lessons-learned"></a>Analysér outputtet fra use case og de erfaringer, du har lært
 
-Når en use case er blevet godkendt og testet, skal mellemrum mellem dine sikkerhedsteams identificeres sammen med personer, processer og Microsoft 365 Defender teknologierne. Microsoft 365 Defender-teknologier bør analyseres for at afgøre, om de kan opnå de ønskede resultater. Disse kan spores via en tjekliste eller en matrix. 
+Når en use case er blevet godkendt og testet, skal der identificeres huller blandt dine sikkerhedsteams sammen med personer, processer og de involverede Microsoft 365 Defender teknologier. Microsoft 365 Defender teknologier bør analyseres for at afgøre, om de er i stand til at opnå de ønskede resultater. Disse kan spores via en tjekliste eller en matrix. 
 
-I eksemplet med antiphishingscenariet kunne SOC-grupperne f.eks. have foretaget opdagelserne i denne tabel.
+I eksemplet med anti-phishing-scenariet kunne SOC-teams f.eks. have gjort opdagelserne i denne tabel.
 
 
-| SOC-team | Krav | Personer, der opfylder kravet | Proces for at opfylde krav | Relevant teknologi | Mellemrum identificeret | Use case change log | Undtaget (Y/N) |
+| SOC-team | Krav | Personer, der skal opfylde kravet | Behandl for at opfylde kravet | Relevant teknologi | Identificeret mellemrum | Ændringslog for use case | Undtaget (Y/N) |
 |:-------|:-----|:-------|:-------|:-------|:-----|:-------|:-------|
-| Threat Intelligence and Analytics-team | Datakilder føder trusselsintelligens-motoren korrekt. | Threat Intelligence-analytiker/-tekniker | Etablerede krav til datafeed, trusselsintelligens udløsere fra godkendte kilder | Microsoft Defender for Identity. Microsoft Defender for Endpoint | Threat Intelligence-teamet brugte ikke automationsscript til at sammenkæde Microsoft 365 Defender API med trussels-Intel-søgemaskiner | Føj Microsoft 365 Defender som datakilder til trusselsmotorer <BR> <BR> Opdatere kørselsbog for use case | N |
-| Overvågningsteam | Datakilder fødningen af overvågningsdashboardsene korrekt | Niveau 1,2 SOC-analytiker– & vigtige beskeder | Arbejdsproces til rapportering af Security & Compliance Center Secure Score | [Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts)  <br><br> Sikker scoreovervågning  | Ingen mekanisme for SOC-analytikere til at rapportere en vellykket registrering af phishingvarianter for at forbedre Secure Score <br><br> [Rapportering i Security & Compliance Center](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)| Føj en proces til registrering af secure score-forbedring til rapportering af arbejdsprocesser | N | 
-| Teknisk team og SecOps-team | Opdateringer til styring af ændringer foretages i SOC-teamets kørselsbøger | Niveau 2 SOC Engineer | Skift kontrolmeddelelsesprocedure for SOC-teamkørselsbøger | Godkendte ændringer af sikkerhedsenheder | Ændringer af Microsoft 365 Defender forbindelse til SOC-sikkerhedsteknologi kræver godkendelse | Føj Microsoft Defender for Cloud Apps, Defender for Identity, Defender til slutpunkt, Security & Compliance Center til SOC-runbooks | Y |
+| Threat Intelligence- og Analytics-team | Datakilder fodrer trusselsintelligensmotorerne korrekt. | Threat Intelligence-analytiker/-tekniker | Fastsatte krav til datafeeds, udløser trusselsintelligens fra godkendte kilder | Microsoft Defender for Identity, Microsoft Defender for Endpoint | Threat Intelligence-teamet brugte ikke automatiseringsscript til at linke Microsoft 365 Defender API til trussels-Intel-motorer | Føj Microsoft 365 Defender som datakilder til trusselsprogrammer <BR> <BR> Opdater kørselsbog for use case | N |
+| Overvågningsteam | Datakilder forsyner overvågningsdashboards korrekt | Niveau 1,2 SOC-analytiker – overvågning & beskeder | Arbejdsproces til rapportering af sikker score for Security & Compliance Center | [Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts)  <br><br> Overvågning af sikker score  | Soc-analytikere kan ikke rapportere en vellykket ny phishing-variantregistrering for at forbedre Sikker score <br><br> [Rapportering i Security & Compliance Center](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)| Føj en proces til sporing af sikker scoreforbedring til arbejdsprocesser i rapportering | N | 
+| Teknisk team og SecOps-team | Ændringskontrolopdateringer foretages i SOC-teamets runbooks | Niveau 2 SOC-tekniker | Meddelelsesprocedure for ændring af kontrol for SOC-team runbooks | Godkendte ændringer af sikkerhedsenheder | Ændringer af Microsoft 365 Defender forbindelse til SOC-sikkerhedsteknologi kræver godkendelse | Føj Microsoft Defender for Cloud Apps, Defender for Identity, Defender for Endpoint, Security & Compliance Center til SOC-runbooks | Y |
 |||||||||
 
-Desuden kan SOC-grupperne have gjort de opdagelser, der er beskrevet i tabellen nedenfor, i forhold til det Håndtering af trusler og sikkerhedsrisici, der er beskrevet ovenfor:
+Derudover kunne SOC-holdene have foretaget de opdagelser, der er beskrevet i nedenstående tabel, med hensyn til det Håndtering af trusler og sikkerhedsrisici scenarie, der er beskrevet ovenfor:
 
-| SOC-team | Krav | Personer, der opfylder kravet | Proces for at opfylde krav | Relevant teknologi | Mellemrum identificeret | Use case change log | Undtaget (Y/N) |
+| SOC-team | Krav | Personer, der skal opfylde kravet | Behandl for at opfylde kravet | Relevant teknologi | Identificeret mellemrum | Ændringslog for use case | Undtaget (Y/N) |
 |:-------|:-----|:-------|:-------|:-------|:-----|:-------|:-------|
-| SOC-oversigt | Alle aktiver, der har forbindelse til godkendte netværk, identificeres og kategoriseres | SOC-oversigt, BU-ejere, programejere, ejere af it-aktiver osv. | Centraliseret administration af aktiver for at finde og opliste aktivkategorien og -attributter baseret på risiko. | ServiceNow eller andre aktiver. <br><br>[Microsoft 365 lagerenhed](/security/defender-endpoint/device-discovery) | Der er kun fundet 70 % af aktiverne. Microsoft 365 Defender kun effektiv afhjælpningssporing for kendte aktiver | Modne tjenester for aktivlivscyklus for at Microsoft 365 Defender en dækning på 100 % | N |
-| Teknisk & SecOps Teams | Stor påvirkning og kritiske sårbarheder i aktiver afhjælpes i henhold til politikken | SecOps-teknikere, SOC-analytikere: & Compliance, Security Engineering | Defineret proces til kategorisering af høj risiko og kritiske sikkerhedsrisici | [Dashboards til administration af trusler og sikkerhedsrisiko](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt) | Defender til Slutpunkt har identificeret enheder med høj effekt og høj besked uden afhjælpningsplan eller implementering af anbefalet aktivitet fra Microsoft | Tilføj en arbejdsproces for at underrette ejere af aktiver, når afhjælpningsaktivitet er påkrævet inden for 30 dage pr. politik. Implementer et billetsystem for at underrette ejere af aktiver om afhjælpningstrin. | N |
-| Overvågning Teams | Status af trussel og sikkerhedsrisiko rapporteres via virksomhedens intranetportal | Niveau 2 SOC-analytiker | Automatisk genererede rapporter fra Microsoft 365 Defender viser afhjælpning af status for aktiver | [Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <br><br> Sikker scoreovervågning | Der videregives ingen visninger eller dashboardrapporter til aktivejere angående aktivers trussel og sikkerhedsrisiko. | Opret et automatiseringsscript for at udfylde organisationens status for afhjælpning af høj risiko og kritisk aktivsikkerhedsrisiko. | N |
+| SOC-tilsyn | Alle aktiver, der er forbundet til godkendte netværk, identificeres og kategoriseres | SOC Tilsyn, BU ejere, programejere, it-aktiv ejere, osv. | Centraliseret system til administration af aktiver for at finde og vise aktivkategori og -attributter baseret på risiko. | ServiceNow eller andre aktiver. <br><br>[Microsoft 365 enhedsoversigt](/security/defender-endpoint/device-discovery) | Kun 70% af aktiverne er blevet opdaget. Microsoft 365 Defender afhjælpningssporing, der kun gælder for kendte aktiver | Ældre tjenester til administration af aktivlivscyklus for at sikre, at Microsoft 365 Defender har 100 % dækning | N |
+| & SecOps-Teams | Høj indvirkning og kritiske sårbarheder i aktiver afhjælpes i henhold til politikken | SecOps-teknikere, SOC-analytikere: Sårbarhed & overholdelse af angivne standarder, sikkerhedskonstruktion | Defineret proces til kategorisering af høj risiko og kritiske sikkerhedsrisici | [Dashboards til administration af trusler og sårbarheder](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt) | Defender for Endpoint har identificeret høj indvirkning, enheder med høj besked uden afhjælpningsplan eller implementering af Microsofts anbefalede aktivitet | Tilføj en arbejdsproces for at give aktivejere besked, når afhjælpningsaktivitet er påkrævet inden for 30 dage pr. politik. Implementer et billetsystem for at give aktivejere besked om afhjælpningstrin. | N |
+| Overvågning Teams | Trussels- og sårbarhedsstatus rapporteres via virksomhedens intranetportal | Soc-analytiker på niveau 2 | Automatisk genererede rapporter fra Microsoft 365 Defender, der viser status for afhjælpning af aktiver | [Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <br><br> Overvågning af sikker score | Der kommunikeres ingen visninger eller dashboardrapporter til aktivejere vedrørende aktivernes trussels- og sårbarhedsstatus. | Opret et automatiseringsscript for at udfylde status for afhjælpning af høj risiko og alvorlig sårbarhed i forbindelse med aktiver i organisationen. | N |
 |||||||||
 
-I disse eksempler viser testene, at der er flere huller i SOC-teamets krav, der blev fastlagt som grundlinjer for hvert teams ansvarsområder. Tjeklisten for use case kan være så omfattende som nødvendigt for at sikre, at SOC-teamet er forberedt til Microsoft 365 Defender integration med nye eller eksisterende SOC-krav. Da dette vil være en iterativ proces, vil processen til udvikling af use case og indholdet af use case-output naturligt fungere med at opdatere og modne SOC's kørselsbøger med indlærte lektioner.
+I disse use cases viste testen flere huller i SOC-teamets krav, der blev fastlagt som basispunkter for de enkelte teams ansvarsområder. Brugscasens tjekliste kan være lige så omfattende som nødvendigt for at sikre, at SOC-teamet er forberedt til Microsoft 365 Defender integration med nye eller eksisterende SOC-krav. Da dette vil være en iterativ proces, vil udviklingsprocessen for use case og indholdet af use case-output naturligvis tjene til at opdatere og modne SOC's runbooks med erfaringer.
 
-## <a name="update-production-runbooks-and-playbooks"></a>Opdater produktions-runbooks og -playbooks
+## <a name="update-production-runbooks-and-playbooks"></a>Opdater produktions runbooks og playbooks
 
-Når casetests af use case er blevet løst for alle huller, kan de indlærte lektioner og målepunkter, der indsamles i dem, indarbejdes i dit SOC-teams produktions runbooks (operativsystemer) og playbooks (hændelsessvar og eskaleringsprocedurer). 
+Når use case-test er blevet afhjælpet for alle huller, kan de erfaringer og målepunkter, der indsamles i dem, inkorporeres i dit SOC-teams produktions-runbooks (operativsystemer) og playbooks (hændelsessvar og eskaleringsprocedurer). 
 
-Vedligeholdelse af SOC-teamets kørselsbøger og playbooks kan organiseres på mange forskellige måder. Hvert SOC-team kan være ansvarlig for sit eget, eller der kan være en enkelt centraliseret version, som alle teams kan dele i et centralt lager. Administration af kørsels- og opgavebøger for den enkelte organisation er baseret på størrelse, færdigheder, roller og opdeling af pligter. Når en kørselsbog er blevet opdateret, bør opdateringsprocessen for lærebogen følge. 
+Vedligeholdelse af SOC-teamets runbooks og playbooks kan organiseres på mange måder. Hvert SOC-team kan være ansvarlig for deres egne, eller der kan være en enkelt centraliseret version, som alle teams kan dele i et centralt lager. Administration af runbooks og strategibøger for de enkelte organisationer er baseret på størrelse, kompetencer, roller og opdeling af opgaver. Når en runbook er blevet opdateret, bør opdateringsprocessen for playbook følge. 
 
 ## <a name="use-a-standard-framework-for-escalation"></a>Brug en standardstruktur til eskalering
 
-Playbooks er de trin, SOC-teams skal følge, når en reel begivenhed indtræffer, baseret på en vellykket integration og test af use case. Det er derfor af afgørende betydning, at SOC følger en formaliseret tilgang til hændelsesrespons, f.eks [. NIST-standarden](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) for hændelsesrespons, der er blevet en af de førende branchestandarder for hændelsesrespons.
+Playbooks er de trin, SOC-holdene skal følge, når der opstår en reel begivenhed, baseret på vellykket integration og test af use case. Det er derfor altafgørende, at SOC følger en formaliseret tilgang til svar på hændelser, f.eks [. NIST Incident Response Standard](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) , der er blevet en af de førende branchestandarder for svar på hændelser.
 
-Svarprocessen for NIST-hændelser i fire trin omfatter fire faser:
+NIST-processen for svar på fire trin indeholder fire faser:
 
-1.  Forberedelse
+1.  Under forberedelse
 2.  Registrering og analyse
-3.  Inddæmmelse, ar og genoprettelse
+3.  Opbevaring, udryddelse og genopretning
 4.  Aktivitet efter hændelse
 
-### <a name="example-tracking-preparation-phase-activity"></a>Eksempel: Sporing af forberedelsesfaseaktivitet
+### <a name="example-tracking-preparation-phase-activity"></a>Eksempel: Sporing af aktivitet i forberedelsesfasen
 
-En af de grundlæggende grundsten i en eskaleringsspilbog er at sikre, at der er mindre tvetydighed omkring, hvad hvert SOC-team skal gøre før, under og efter en begivenhed eller hændelse. Derfor er det god praksis at opliste trinvise instruktioner. 
+Et af de centrale fundamenter for en eskalering playbook er at sikre, at der er lidt flertydighed med hensyn til, hvad hver SOC team formodes at gøre før, under, og efter en begivenhed eller hændelse. Det er derfor god praksis at angive trinvise instruktioner. 
 
-Forberedelsesfasen kan f.eks. omfatte en hvis-derefter- eller XoR-matrix af opgaver. I forbindelse med det nye eksempel på brug af phishingvarianter kunne en sådan matrix se således ud:
+Forberedelsesfasen kan f.eks. indeholde en if/then- eller XoR-matrix med opgaver. I tilfælde af brugseksempel på den nye phishing-variant kan en sådan matrix se sådan ud:
 
-| Hvorfor garanteres eskalering? | Næste trin |
+| Hvorfor er eskalering berettiget? | Næste trin |
 |:-------|:-----|
-| Besked i SOC-overvågning klassificeret **som** kritisk udløst > **500/time** | Gå til Lærebog A, sektion 2, aktivitet 5 (med et link til sektionen om lærebogen) |
-| eCommerce rapporterede potentielle DDoS-angreb | Invoke Playbook B-Section C, Activity 19 (with a link to the playbook section) |
-| Ledelsen har rapporteret en mistænkelig mail som forsøg på phishing | Gå til Lærebog 5, sektion 2, aktivitet 5 (med et link til sektionen om lærebogen) |
+| Advarsel i SOC-overvågning, der er klassificeret som **kritisk** udløst > **500 pr. time** | Gå til Playbook A, Sektion 2, Aktivitet 5 (med et link til playbook-sektionen) |
+| eCommerce rapporterede potentielle DDoS-angreb | Aktivér Playbook B-sektion C, Aktivitet 19 (med et link til playbook-sektionen) |
+| Direktør rapporterede en mistænkelig e-mail som et forsøg på phishing i spyd | Gå til Playbook 5, Sektion 2, Aktivitet 5 (med et link til playbook-sektionen) |
 |||
 
-Når fasen Forberedelse er udført, skal organisationer fremkalde de resterende faser som beskrevet af NIST:
+Når du har kørt forberedelsesfasen, skal organisationer aktivere de resterende faser som beskrevet af NIST:
 
 - Registrering og analyse
-- Inddæmmelse, ar og genoprettelse
+- Opbevaring, udryddelse og genopretning
 - Aktivitet efter hændelse 
 
 ## <a name="next-step"></a>Næste trin

@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Identity-meddelelser i Microsoft 365 Defender
-description: Få mere at vide om, hvordan du indstiller Microsoft Defender til identitetsmeddelelser Microsoft 365 Defender.
+title: Microsoft Defender for Identity meddelelser i Microsoft 365 Defender
+description: Få mere at vide om, Microsoft Defender for Identity konfigurerer meddelelser Microsoft 365 Defender.
 ms.date: 05/20/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,12 +9,12 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: fa740b483cd1a9591f7d4f7ef1961c5e96d4d44b
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 89ed7ae50bf89c28bde81ea02e8905d0056ede53
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682234"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470917"
 ---
 # <a name="defender-for-identity-notifications-in-microsoft-365-defender"></a>Defender til identitetsmeddelelser i Microsoft 365 Defender
 
@@ -23,7 +23,7 @@ ms.locfileid: "63682234"
 - Microsoft 365 Defender
 - Defender for Identity
 
-Denne artikel forklarer, hvordan du arbejder [med Microsoft Defender for Identity-meddelelser](/defender-for-identity) [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Denne artikel forklarer, hvordan du arbejder [med Microsoft Defender for Identity](/defender-for-identity) meddelelser [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 > [!IMPORTANT]
 > Som en del af dine Microsoft 365 Defender har nogle indstillinger og detaljer ændret sig fra deres placering i Defender for Identity-portalen. Læs oplysningerne nedenfor for at finde ud af, hvor du kan finde både de velkendte og nye funktioner.
@@ -34,17 +34,18 @@ I Microsoft 365 Defender kan du tilføje modtagere for mailbeskeder om tilstands
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> skal du gå **til Indstillinger** og derefter **Identities**.
 
-    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+  :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter i kolonnen Navn" lightbox="../../media/defender-identity/settings-identities.png":::
+
 
 1. Vælg **Meddelelser om tilstandsproblemer**.
 
 1. Angiv modtagerens mailadresse. Vælg **Tilføj**.
 
-    ![Angiv mailadressen til tilstandsproblemer.](../../media/defender-identity/health-email-recipient.png)
+   :::image type="content" source="../../media/defender-identity/health-email-recipient.png" alt-text="Undermenuelementet Beskeder om tilstandsproblemer" lightbox="../../media/defender-identity/health-email-recipient.png":::
 
 1. Når Defender for Identity registrerer et tilstandsproblem, modtager modtagerne en mail med oplysningerne.
 
-    ![Eksempel på mail om sundhedsproblem.](../../media/defender-identity/health-email.png)
+   :::image type="content" source="../../media/defender-identity/health-email.png" alt-text="Mail om tilstandsproblem" lightbox="../../media/defender-identity/health-email.png":::
 
     > [!NOTE]
     > Mailen indeholder to links til yderligere oplysninger om problemet. Du kan enten gå til **MDI Health Center eller** det nye **Sundhedscenter i M365D**.
@@ -55,13 +56,13 @@ I Microsoft 365 Defender kan du tilføje modtagere for mailbeskeder om registrer
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> skal du gå **til Indstillinger** og derefter **Identities**.
 
-    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter" lightbox="../../media/defender-identity/settings-identities.png":::
 
 1. Vælg **Vigtige beskeder**.
 
 1. Angiv modtagerens mailadresse. Vælg **Tilføj**.
 
-    ![Angiv mailadressen for registrerede beskeder.](../../media/defender-identity/alert-email-recipient.png)
+   :::image type="content" source="../../media/defender-identity/alert-email-recipient.png" alt-text="Undermenuelementet Beskedbeskeder" lightbox="../../media/defender-identity/alert-email-recipient.png":::
 
 ## <a name="syslog-notifications"></a>Syslog-meddelelser
 
@@ -72,17 +73,17 @@ Defender for Identity kan give dig besked, når den registrerer mistænkelige ak
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> skal du gå **til Indstillinger** og derefter **Identities**.
 
-    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter i kolonnen Navn" lightbox="../../media/defender-identity/settings-identities.png":::
 
 1. Vælg **Syslog-meddelelser**.
 
 1. Hvis du vil aktivere syslog-meddelelsen, skal **du indstille Syslog-tjenesten** til **positionen Til** .
 
-    ![Slå syslog-tjenesten til.](../../media/defender-identity/syslog-service.png)
+   :::image type="content" source="../../media/defender-identity/syslog-service.png" alt-text="Indstillingen Syslog-tjeneste, der kan aktiveres" lightbox="../../media/defender-identity/syslog-service.png":::
 
 1. Vælg **Konfigurer tjeneste**. Der åbnes en rude, hvor du kan angive oplysninger om syslog-tjenesten.
 
-    ![Angiv oplysninger om syslog-tjenesten.](../../media/defender-identity/syslog-sensor.png)
+   :::image type="content" source="../../media/defender-identity/syslog-sensor.png" alt-text="Den side, hvor du angiver oplysninger om Syslog-tjenesten" lightbox="../../media/defender-identity/syslog-sensor.png":::
 
 1. Angiv følgende oplysninger:
 
@@ -97,7 +98,7 @@ Defender for Identity kan give dig besked, når den registrerer mistænkelige ak
 
 1. Når du har konfigureret **Syslog-tjenesten**, kan du vælge, hvilke typer meddelelser (beskeder eller tilstandsproblemer) der skal sendes til Syslog-serveren.
 
-    ![Syslog-tjeneste konfigureret.](../../media/defender-identity/syslog-configured.png)
+   :::image type="content" source="../../media/defender-identity/syslog-configured.png" alt-text="Indstillingen Syslog-tjeneste er konfigureret markeret" lightbox="../../media/defender-identity/syslog-configured.png":::
 
 ## <a name="see-also"></a>Se også
 

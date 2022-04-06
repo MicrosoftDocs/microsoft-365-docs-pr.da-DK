@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cb92b67b3f19c578d12eb9673d2f80d5fadd131f
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c8a96f3dba51de09a7237279b4053b9f4ed9b4a7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63591867"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470477"
 ---
 # <a name="grant-managed-security-service-provider-mssp-access-preview"></a>Tildele administreret serviceudbyder sikkerhedsadgang (MSSP) (preview)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mssp-support-abovefoldlink)
@@ -43,7 +43,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
 3. Administrer adgangsanmodninger og - [revisioner i Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
 
-## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint"></a>Aktivér rollebaserede adgangskontrolelementer i Microsoft Defender til slutpunkt
+## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint"></a>Aktivér rollebaserede adgangskontrolelementer i Microsoft Defender for Endpoint
 
 1. **Opret adgangsgrupper for MSSP-ressourcer i AAD: Grupper**
 
@@ -57,7 +57,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     For at aktivere RBAC i kundeportalen til Microsoft 365 Defender skal du få adgang til **Indstillinger >-tilladelser >-roller** og "Aktivér roller" fra en brugerkonto med globale administrator- eller sikkerhedsadministratorrettigheder.
 
-    ![Billede af MSSP-adgang.](images/mssp-access.png)
+    :::image type="content" source="images/mssp-access.png" alt-text="MSSP-adgang" lightbox="images/mssp-access.png":::
 
     Opret derefter RBAC-roller, så de opfylder behovet for MSSP SOC-niveau. Sammenkæd disse roller med de oprettede brugergrupper via "Tildelte brugergrupper".
 
@@ -87,7 +87,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Det gør du ved i kundens AD-lejer at få adgang til styring af identitet: kataloger og tilføje **Nyt katalog**. I vores eksempel kalder vi det **MSSP Accesses**.
 
-    ![Billede af nyt katalog.](images/goverance-catalog.png)
+    :::image type="content" source="images/goverance-catalog.png" alt-text="Den nye katalogside" lightbox="images/goverance-catalog.png":::
 
     Få mere at vide under [Opret et katalog med ressourcer](/azure/active-directory/governance/entitlement-management-catalog-create).
 
@@ -103,7 +103,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
     - Access udløber automatisk efter 365 dage
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af ny adgangspakke.](images/new-access-package.png)
+    > :::image type="content" source="images/new-access-package.png" alt-text="Siden Ny adgangspakke" lightbox="images/new-access-package.png":::
 
     Få mere at vide under [Opret en ny adgangspakke](/azure/active-directory/governance/entitlement-management-access-package-create).
 
@@ -112,7 +112,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
     Linket til min Access-portal bruges af MSSP SOC-analytikere til at anmode om adgang via de adgangspakker, der oprettes. Linket er robust, hvilket betyder, at det samme link kan bruges over tid til nye analytikere. Analytikeranmodningen går ind i en kø til godkendelse af **MSSP-analytikergodkenderne**.
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af egenskaber for adgang.](images/access-properties.png)
+    > :::image type="content" source="images/access-properties.png" alt-text="Siden Egenskaber" lightbox="images/access-properties.png":::
 
     Linket er placeret på oversigtssiden for hver adgangspakke.
 
@@ -126,7 +126,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Eksempel: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
-2. Godkend eller afvis anmodninger **i sektionen** Godkendelser i brugergrænsefladen.
+2. Godkend eller afvis anmodninger **Godkendelser** i brugergrænsefladen.
 
     På dette tidspunkt er analytikeradgang blevet klargjort, og hver enkelt analytiker bør kunne få adgang til kundens Microsoft 365 Defender portal:`https://security.microsoft.com/?tid=<CustomerTenantId>`
 

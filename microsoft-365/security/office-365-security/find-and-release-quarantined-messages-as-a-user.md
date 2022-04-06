@@ -20,12 +20,12 @@ ms.custom:
 description: Brugerne kan lære, hvordan de får vist og administrerer meddelelser, der er sat i Exchange Online Protection (EOP), der skulle være blevet leveret til dem.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 35aa801d0d981f68de5c62a1928e1f85d82ee95d
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 44b1d86d441be5582b8c4b3381a383b2e03417a1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682389"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471533"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>Find og slip meddelelser, der er sat i karantæne, som en bruger i EOP
 
@@ -33,7 +33,7 @@ ms.locfileid: "63682389"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser, sætter karantæne i potentielt farlig eller uønskede meddelelser. Du kan få mere at vide [under Karantæne i EOP](quarantine-email-messages.md).
@@ -52,10 +52,10 @@ Som en almindelig bruger (ikke en administrator) er  de standardfunktioner, der 
 |Efterlignet intelligensbeskyttelse i EOP|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
 |Efterligning af brugerbeskyttelse i Defender for Office 365|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
 |Efterligning af domænebeskyttelse i Defender for Office 365|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|Postkasseintelligensbeskyttelse i Defender til Office 365|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
+|Postkasseintelligensbeskyttelse i Defender for Office 365|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
 |**Antimalwarepolitikker**||||
 |Mails med vedhæftede filer, der er sat i karantæne som malware.||||
-|**Pengeskab vedhæftede filer i Defender til Office 365**||||
+|**Pengeskab vedhæftede filer i Defender for Office 365**||||
 |Pengeskab politikker for vedhæftede filer, der sætter mails i karantæne med skadelige vedhæftede filer som malware.||||
 |Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams, der sætter skadelige filer i karantæne som malware.||||
 |**Regler for mailflow (transportregler)**||||
@@ -142,7 +142,7 @@ Når du har fundet en bestemt meddelelse, der er sat i karantæne, skal du marke
 
 Når du markerer en meddelelse, der er sat i karantæne, på listen, kan du finde følgende oplysninger i pop op-dialogboksen med oplysninger, der vises.
 
-![Pop op-meddelelsen med oplysninger om en meddelelse, der er sat i karantæne.](../../media/quarantine-user-message-details.png)
+:::image type="content" source="../../media/quarantine-user-message-details.png" alt-text="Pop op-meddelelsen med oplysninger om en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-user-message-details.png":::
 
 Når du vælger en mail på listen, vises følgende meddelelsesoplysninger i pop **op-ruden** Detaljer:
 
@@ -161,7 +161,7 @@ Hvis du vil handle på meddelelsen, skal du se næste afsnit.
 > [!NOTE]
 > Hvis du vil forblive i pop op-mailen med oplysninger, men ændre den meddelelse, du kigger på i karantæne, skal du bruge pil op og pil ned øverst i pop-op-meddelelsen.
 >
-> ![Pil op og pil ned i pop op-pilene for oplysninger for en meddelelse, der er sat i karantæne.](../../media/quarantine-message-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-up-down-arrows.png" alt-text="Pil op og pil ned i pop op-siden med oplysninger om en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-message-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-email"></a>Handle på en mail, der er sat i karantæne
 
@@ -170,7 +170,7 @@ Hvis du vil handle på meddelelsen, skal du se næste afsnit.
 
 Når du har valgt en meddelelse, der er sat i karantæne, på listen, kan du vælge følgende handlinger i pop op-menuen med oplysninger:
 
-![Tilgængelige handlinger i pop op-menuen med oplysninger for en meddelelse, der er sat i karantæne.](../../media/quarantine-user-message-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-user-message-details-flyout-actions.png" alt-text="De tilgængelige handlinger i pop op-menuen med oplysninger for en meddelelse, der er sat i karantæne" lightbox="../../media/quarantine-user-message-details-flyout-actions.png":::
 
 - ![Ikonet Frigiv mail.](../../media/m365-cc-sc-check-mark-icon.png) **Frigiv**<sup>\*</sup> mail: Leverer meddelelsen til din indbakke.
 
@@ -197,7 +197,8 @@ Hvis du ikke frigiver eller fjerner meddelelsen, slettes den, når standardopbev
 > [!NOTE]
 > På en mobilenhed er beskrivelsesteksten ikke tilgængelig på handlingsikonerne.
 >
-> ![Oplysninger om en meddelelse i karantæne med tilgængelige handlinger fremhævet.](../../media/quarantine-user-message-details-flyout-mobile-actions.png)
+> :::image type="content" source="../../media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Oplysningerne om en meddelelse i karantæne med tilgængelige handlinger fremhævet" lightbox="../../media/quarantine-user-message-details-flyout-mobile-actions.png":::
+
 >
 > Ikonerne i rækkefølge og deres tilsvarende beskrivelser opsummeres i følgende tabel:
 >
@@ -213,7 +214,7 @@ Hvis du ikke frigiver eller fjerner meddelelsen, slettes den, når standardopbev
 
 Når du markerer flere meddelelser, der er sat i karantæne, på listen (op til 100) ved at klikke i det tomme område til venstre for den første  kolonne, vises rullelisten Massehandlinger, hvor du kan udføre følgende handlinger:
 
-![Rullelisten Massehandlinger for meddelelser i karantæne.](../../media/quarantine-user-message-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-user-message-bulk-actions.png" alt-text="Rullelisten med massehandlinger for meddelelser i karantæne" lightbox="../../media/quarantine-user-message-bulk-actions.png":::
 
 - ![Ikonet Frigiv mail.](../../media/m365-cc-sc-check-mark-icon.png) **Frigiv** meddelelser: Leverer meddelelserne til din indbakke.
 - ![Ikonet Fjern fra karantæne.](../../media/m365-cc-sc-delete-icon.png) **Slet meddelelser**: Når du har **klikket** på Ja i den advarsel, der vises, fjernes meddelelserne straks fra karantæne, uden at de sendes til de oprindelige modtagere.

@@ -1,8 +1,8 @@
 ---
-title: Installer Microsoft Defender for Endpoint på Linux manuelt
+title: Udrul Microsoft Defender for Endpoint på Linux manuelt
 ms.reviewer: ''
-description: Beskrivelse af, hvordan du Microsoft Defender for Endpoint på Linux manuelt fra kommandolinjen.
-keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, installations, ansible, linux, redhat, ubuntu, defender, sles, suse, centos, amazon linux 2
+description: Beskriver, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt fra kommandolinjen.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, dukke, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,80 +16,80 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 4d66dad57fa7b045062a0300327b76030c33dfab
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: a0f499a08288735d5f0d75e7111ec0b6360908a8
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64468165"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664518"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Installer Microsoft Defender for Endpoint på Linux manuelt
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Udrul Microsoft Defender for Endpoint på Linux manuelt
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
-Denne artikel beskriver, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt. En vellykket installation kræver, at alle følgende opgaver er gennemført:
+I denne artikel beskrives det, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt. En vellykket installation kræver fuldførelse af alle følgende opgaver:
 
   - [Forudsætninger og systemkrav](#prerequisites-and-system-requirements)
   - [Konfigurer Linux-softwarelageret](#configure-the-linux-software-repository)
-    - [RHEL og varianter (CentOS, Linux, Oracle Linux og Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
+    - [RHEL og varianter (CentOS, Fedora, Oracle Linux og Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
     - [SLES og varianter](#sles-and-variants)
-    - [Ubuntu- og Ink- systemer](#ubuntu-and-debian-systems)
+    - [Ubuntu- og Debian-systemer](#ubuntu-and-debian-systems)
   - [Programinstallation](#application-installation)
   - [Download onboardingpakken](#download-the-onboarding-package)
   - [Klientkonfiguration](#client-configuration)
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
-Før du går i gang, [Microsoft Defender for Endpoint på Linux for at](microsoft-defender-endpoint-linux.md) få en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
+Før du går i gang, skal du se [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md) for at få en beskrivelse af forudsætninger og systemkrav til den aktuelle softwareversion.
 
 > [!WARNING]
-> Opgradering af operativsystemet til en ny, større version efter produktinstallationen kræver, at produktet geninstalleres. Du skal fjerne [den](linux-resources.md#uninstall) eksisterende Defender til slutpunkt på Linux, opgradere operativsystemet og derefter konfigurere Defender til Endpoint på Linux ved at følge nedenstående trin.
+> Opgradering af operativsystemet til en ny overordnet version, efter at produktinstallationen kræver, at produktet geninstalleres. Du skal [fjerne](linux-resources.md#uninstall) det eksisterende Defender for Endpoint på Linux, opgradere operativsystemet og derefter omkonfigurere Defender for Endpoint på Linux ved at følge nedenstående trin.
 
 ## <a name="configure-the-linux-software-repository"></a>Konfigurer Linux-softwarelageret
 
-Defender til slutpunkt på Linux kan installeres fra en af følgende kanaler (angivet nedenfor som *[kanal]*): *Insiders-fast*, *Insiders-slow* eller *prod*. Hver af disse kanaler svarer til et Linux-softwarelager. Instruktioner til konfiguration af din enhed til at bruge et af disse lager er angivet nedenfor.
+Defender for Endpoint på Linux kan udrulles fra en af følgende kanaler (angivet nedenfor som *[channel]*): *insiders-fast*, *insiders-slow* eller *prod*. Hver af disse kanaler svarer til et Linux-softwarelager. Du kan finde en vejledning i, hvordan du konfigurerer enheden til at bruge et af disse lagre, nedenfor.
 
-Valget af kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes din enhed. Enheder i *Insiders-fast* er de første, der modtager opdateringer og nye funktioner, efterfulgt senere af *Insiders-slow* og til sidst *af professionelle*.
+Valget af kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes til din enhed. Enheder i *insiders-fast* er de første til at modtage opdateringer og nye funktioner, efterfulgt senere af *insiders-langsom* og til sidst af *prod*.
 
-For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer nogle enheder i din virksomhed til at bruge enten *Insiders-fast* eller *Insiders-slow*.
+For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer nogle enheder i din virksomhed til at bruge enten *insiders-fast* eller *insiders-slow*.
 
 > [!WARNING]
-> Hvis du skifter kanal efter den indledende installation, skal produktet geninstalleres. Sådan skifter du produktkanalen: Fjern den eksisterende pakke, konfigurer enheden igen til at bruge den nye kanal, og følg trinnene i dette dokument for at installere pakken fra den nye placering.
+> Hvis du skifter kanal efter den første installation, skal produktet geninstalleres. Hvis du vil skifte produktkanal: Fjern den eksisterende pakke, genkonfigurer enheden, så den bruger den nye kanal, og følg trinnene i dette dokument for at installere pakken fra den nye placering.
 
-### <a name="rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2"></a>RHEL og varianter (CentOS, Linux, Oracle Linux og Amazon Linux 2)
+### <a name="rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2"></a>RHEL og varianter (CentOS, Fedora, Oracle Linux og Amazon Linux 2)
 
-- Installér `yum-utils` , hvis den endnu ikke er installeret:
+- Installér `yum-utils` , hvis den ikke er installeret endnu:
 
     ```bash
     sudo yum install yum-utils
     ```
 
   > [!NOTE]
-  > Din fordeling og version samt identificere den nærmeste post (efter hovedpost, derefter underordnet) for den under `https://packages.microsoft.com/config/rhel/`.
+  > Din distribution og version, og identificer den nærmeste post (efter overordnet og derefter underordnet) for den under `https://packages.microsoft.com/config/rhel/`.
 
-    Brug følgende tabel som hjælp til at finde pakken:
+    Brug følgende tabel til at hjælpe dig med at finde pakken:
 
     <br>
 
     ****
 
-    |Distributionsversion & version|Pakke|
+    |Distro & version|Pakke|
     |---|---|
-    |For RHEL/Centos/Oracle 8.0-8.5|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |Til RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
+    |Til RHEL/Centos/Oracle 8.0-8.5|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
+    |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
     |For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|
-    |Til den 33. Ane|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
-    |Til Den 34- eller anden 34-2016|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
+    |Til Fedora 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
+    |Til Fedora 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
-    I de følgende kommandoer skal du erstatte *[version]* og *[kanal]* med de oplysninger, du har identificeret:
+    I følgende kommandoer skal du erstatte *[version]* og *[channel]* med de oplysninger, du har identificeret:
 
 
     ```bash
@@ -99,19 +99,19 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     > [!TIP]
     > Brug kommandoen hostnamectl til at identificere systemrelaterede oplysninger, herunder version *[version]*.
 
-    Hvis du f.eks. kører CentOS 7 og vil installere Defender til Slutpunkt på Linux fra *den professionelle* kanal:
+    Hvis du f.eks. kører CentOS 7 og vil installere Defender for Endpoint på Linux fra *produktionskanalen* :
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
     ```
 
-    Eller hvis du vil udforske nye funktioner på udvalgte enheder, kan det være en ide at installere Microsoft Defender for Endpoint på Linux til *insiders-fast-kanalen*:
+    Eller hvis du vil udforske nye funktioner på udvalgte enheder, kan det være en god idé at udrulle Microsoft Defender for Endpoint på Linux til *en kanal*, der er hurtig for insidere:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
     ```
 
-- Installér den offentlige Microsoft GPG-nøgle:
+- Installér den offentlige nøgle til Microsoft GPG:
 
     ```bash
     sudo rpm --import http://packages.microsoft.com/keys/microsoft.asc
@@ -120,47 +120,47 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
 ### <a name="sles-and-variants"></a>SLES og varianter
 
 > [!NOTE]
-> Din fordeling og version samt identificere den nærmeste post (efter hovedpost, derefter underordnet) for den under `https://packages.microsoft.com/config/sles/`.
+> Din distribution og version, og identificer den nærmeste post (efter overordnet og derefter underordnet) for den under `https://packages.microsoft.com/config/sles/`.
 
-   I de følgende kommandoer skal du erstatte *[distro]* *og [version]* med de oplysninger, du har identificeret:
+   I følgende kommandoer skal du erstatte *[distro]* og *[version]* med de oplysninger, du har identificeret:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-[channel] https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
    ```
 
    > [!TIP]
-   > Brug kommandoen SPident til at identificere systemrelaterede oplysninger, herunder udgivelse *[version]*.
+   > Brug kommandoen SPident til at identificere systemrelaterede oplysninger, herunder version *[version]*.
 
-   Hvis du f.eks. kører SLES 12 og ønsker at installere Microsoft Defender for Endpoint på Linux fra *den professionelle* kanal:
+   Hvis du f.eks. kører SLES 12 og ønsker at udrulle Microsoft Defender for Endpoint på Linux fra *produktionskanalen*:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
-- Installér den offentlige Microsoft GPG-nøgle:
+- Installér den offentlige nøgle til Microsoft GPG:
 
     ```bash
     sudo rpm --import http://packages.microsoft.com/keys/microsoft.asc
     ```
 
-### <a name="ubuntu-and-debian-systems"></a>Ubuntu- og Ink- systemer
+### <a name="ubuntu-and-debian-systems"></a>Ubuntu- og Debian-systemer
 
-- Installér `curl` , hvis den endnu ikke er installeret:
+- Installér `curl` , hvis den ikke er installeret endnu:
 
     ```bash
     sudo apt-get install curl
     ```
 
-- Installér `libplist-utils` , hvis den endnu ikke er installeret:
+- Installér `libplist-utils` , hvis den ikke er installeret endnu:
 
     ```bash
     sudo apt-get install libplist-utils
     ```
 
 > [!NOTE]
-> Din fordeling og version samt identificere den nærmeste post (efter hovedpost, derefter underordnet) for den under `https://packages.microsoft.com/config/[distro]/`.
+> Din distribution og version, og identificer den nærmeste post (efter overordnet og derefter underordnet) for den under `https://packages.microsoft.com/config/[distro]/`.
 
-   I kommandoen nedenfor skal du *erstatte [distro]* *og [version]* med de oplysninger, du har identificeret:
+   I kommandoen nedenfor skal du erstatte *[distro]* og *[version]* med de oplysninger, du har identificeret:
 
    ```bash
     curl -o microsoft.list https://packages.microsoft.com/config/[distro]/[version]/[channel].list
@@ -169,37 +169,37 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
    > [!TIP]
    > Brug kommandoen hostnamectl til at identificere systemrelaterede oplysninger, herunder version *[version]*.
 
-   Hvis du f.eks. kører Ubuntu 18.04 og ønsker at installere Microsoft Defender for Endpoint på Linux fra *den professionelle* kanal:
+   Hvis du f.eks. kører Ubuntu 18.04 og ønsker at installere Microsoft Defender for Endpoint på Linux fra *produktionskanalen*:
 
    ```bash
    curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
    ```
 
-- Installer lagerkonfigurationen:
+- Installér lagerkonfigurationen:
 
     ```bash
     sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
     ```
 
-    Hvis du f.eks. har *valgt professionel* kanal:
+    Hvis du f.eks. vælger *prod-kanal* :
 
     ```bash
     sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
     ```
 
-- Installer pakken `gpg` , hvis den ikke allerede er installeret:
+- Installér pakken, hvis den `gpg` ikke allerede er installeret:
 
     ```bash
     sudo apt-get install gpg
     ```
 
-  Hvis det `gpg` ikke er tilgængeligt, skal du installere `gnupg`.
+  Hvis `gpg` ikke er tilgængelig, skal du installere `gnupg`.
 
     ```bash
     sudo apt-get install gnupg
     ```
 
-- Installér den offentlige Microsoft GPG-nøgle:
+- Installér den offentlige nøgle til Microsoft GPG:
 
     ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -226,7 +226,7 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     ```
 
     > [!NOTE]
-    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik for, hvilket lager pakken skal installeres fra. Følgende eksempel viser, hvordan du installerer pakken fra kanalen `production` , hvis du også har `insiders-fast` konfigureret lagerkanalen på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed. Afhængigt af fordelingen og versionen af din server kan aliasset for lageret være anderledes end i følgende eksempel.
+    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik om, hvilket lager pakken skal installeres fra. I følgende eksempel kan du se, hvordan du installerer pakken fra `production` kanalen, hvis lagerkanalen `insiders-fast` også er konfigureret på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed. Afhængigt af distributionen og versionen af din server kan lagerets alias være anderledes end det i følgende eksempel.
 
     ```bash
     # list all repositories
@@ -252,7 +252,7 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     ```
 
     > [!NOTE]
-    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik for, hvilket lager pakken skal installeres fra. Følgende eksempel viser, hvordan du installerer pakken fra kanalen `production` , hvis du også har `insiders-fast` konfigureret lagerkanalen på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed.
+    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik om, hvilket lager pakken skal installeres fra. I følgende eksempel kan du se, hvordan du installerer pakken fra `production` kanalen, hvis lagerkanalen `insiders-fast` også er konfigureret på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed.
 
     ```bash
     zypper repos
@@ -271,14 +271,14 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     sudo zypper install packages-microsoft-com-prod:mdatp
     ```
 
-- System med Ubuntu og Ubuntu og 2016:
+- Ubuntu og Debian-system:
 
     ```bash
     sudo apt-get install mdatp
     ```
 
     > [!NOTE]
-    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik for, hvilket lager pakken skal installeres fra. Følgende eksempel viser, hvordan du installerer pakken fra kanalen `production` , hvis du også har `insiders-fast` konfigureret lagerkanalen på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed.
+    > Hvis du har flere Microsoft-lagre konfigureret på din enhed, kan du være specifik om, hvilket lager pakken skal installeres fra. I følgende eksempel kan du se, hvordan du installerer pakken fra `production` kanalen, hvis lagerkanalen `insiders-fast` også er konfigureret på denne enhed. Denne situation kan opstå, hvis du bruger flere Microsoft-produkter på din enhed.
 
     ```bash
     cat /etc/apt/sources.list.d/*
@@ -298,15 +298,15 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
 Download onboardingpakken fra Microsoft 365 Defender portal.
 
 > [!IMPORTANT]
-> Hvis du ikke udfører dette trin, vises der en advarselsmeddelelse om, at produktet ikke har licens. Kommandoen returnerer `mdatp health` også en værdi på `false`.
+> Hvis du går glip af dette trin, viser en kommando, der udføres, en advarsel om, at produktet er uden licens. `mdatp health` Kommandoen returnerer også værdien .`false`
 
-1. I Microsoft 365 Defender skal du gå **til Indstillinger > slutpunkter > administration af > onboarding**.
-2. I den første rullemenu skal du vælge **Linux Server** som operativsystem. I den anden rullemenu skal du vælge **Lokalt script som** installationsmetode.
-3. Vælg **Download onboarding pakke**. Gem filen som WindowsDefenderATPOnboardingPackage.zip.
+1. På Microsoft 365 Defender-portalen skal du gå til **Indstillinger > Slutpunkter > Enhedshåndtering > Onboarding**.
+2. Vælg **Linux Server** som operativsystem i den første rullemenu. I den anden rullemenu skal du vælge **Lokalt script** som installationsmetode.
+3. Vælg **Download onboarding-pakke**. Gem filen som WindowsDefenderATPOnboardingPackage.zip.
 
-   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Download en onboardingpakke i Microsoft 365 Defender-portalen" lightbox="images/portal-onboarding-linux.png":::
+   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Download af en onboardingpakke på Microsoft 365 Defender-portalen" lightbox="images/portal-onboarding-linux.png":::
 
-4. I en kommandoprompt skal du bekræfte, at du har filen og udtrække indholdet af arkivet:
+4. Kontrollér, at du har filen, i en kommandoprompt, og udtræk indholdet af arkivet:
 
     ```bash
     ls -l
@@ -331,7 +331,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 1. Kopiér MicrosoftDefenderATPOnboardingLinuxServer.py til destinationsenheden.
 
     > [!NOTE]
-    > Til at starte med er klientenheden ikke knyttet til en organisation, og *orgId-attributten* er tom.
+    > Indledningsvist er klientenheden ikke knyttet til en organisation, og attributten *orgId* er tom.
 
     ```bash
     mdatp health --field org_id
@@ -340,7 +340,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 2. Kør MicrosoftDefenderATPOnboardingLinuxServer.py.
 
     > [!NOTE]
-    > For at køre denne kommando skal du have eller `python` `python3` installeret på enheden afhængigt af disto og version. Hvis det er nødvendigt, [skal du se Trinvis instruktion til installation af Python på Linux](https://opensource.com/article/20/4/install-python-linux).
+    > Hvis du vil køre denne kommando, skal du have `python`  eller `python3` installeret på enheden, afhængigt af disto og versionen. Hvis det er nødvendigt, skal du se [Trinvis vejledning til installation af Python på Linux](https://opensource.com/article/20/4/install-python-linux).
     
     Hvis du kører RHEL 8.x eller Ubuntu 20.04 eller nyere, skal du bruge `python3`.
 
@@ -348,36 +348,36 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
     sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
 
-    For resten af distributioner og versioner skal du bruge `python`.
+    I resten af distributioner og versioner skal du bruge `python`.
     
     ```bash
     sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
     
-3. Kontrollér, at enheden nu er knyttet til organisationen, og rapporterer et gyldigt organisations-id:
+3. Bekræft, at enheden nu er knyttet til din organisation, og rapporterer et gyldigt organisations-id:
 
     ```bash
     mdatp health --field org_id
     ```
 
-4. Kontrollér produktets tilstand ved at køre følgende kommando. En returværdi for `1` denoter, der angiver, at produktet fungerer som forventet:
+4. Kontrollér status for produktet ved at køre følgende kommando. En returværdi for `1` angiver, at produktet fungerer som forventet:
 
     ```bash
     mdatp health --field healthy
     ```
 
     > [!IMPORTANT]
-    > Når produktet starter for første gang, downloader det de seneste antimalwaredefinitioner. Dette kan tage op til et par minutter, afhængigt af netværksforbindelsen. I dette tidsrum returnerer kommandoen ovenfor en værdi på `false`. Du kan kontrollere status for definitionsopdateringen ved hjælp af følgende kommando:
+    > Når produktet starter for første gang, downloades de nyeste antimalwaredefinitioner. Dette kan tage op til et par minutter, afhængigt af netværksforbindelsen. I denne periode returnerer ovenstående kommando en værdi af typen `false`. Du kan kontrollere status for definitionsopdateringen ved hjælp af følgende kommando:
     >
     > ```bash
     > mdatp health --field definitions_status
     > ```
     >
-    > Bemærk, at du muligvis også skal konfigurere en proxy, når den første installation er fuldført. Se [Konfigurer Defender til slutpunkt på Linux for statisk proxyregistrering: Konfiguration efter installation](linux-static-proxy-configuration.md#post-installation-configuration).
+    > Bemærk, at du muligvis også skal konfigurere en proxy, når du har fuldført den første installation. Se [Konfigurer Defender for Endpoint på Linux for at få oplysninger om registrering af statisk proxy: Konfiguration efter installation](linux-static-proxy-configuration.md#post-installation-configuration).
 
-5. Kør en test til registrering af lyd/lyd for at bekræfte, at enheden er korrekt onboardet og rapporterer til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
+5. Kør en av-registreringstest for at bekræfte, at enheden er onboardet korrekt, og rapportering til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
 
-    - Sørg for, at beskyttelse i realtid er aktiveret (angivet af et resultat af at `1` køre følgende kommando):
+    - Sørg for, at beskyttelse i realtid er aktiveret (angivet af et resultat af `1` at køre følgende kommando):
 
         ```bash
         mdatp health --field real_time_protection_enabled
@@ -389,35 +389,35 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
         mdatp config real-time-protection --value enabled
         ```
 
-    - Åbn et Terminal-vindue, og udfør følgende kommando:
+    - Åbn et terminalvindue, og udfør følgende kommando:
 
         ``` bash
         curl -o /tmp/eicar.com.txt https://www.eicar.org/download/eicar.com.txt
         ```
 
-    - Filen skulle være sat i karantæne af Defender for Endpoint på Linux. Brug følgende kommando til at få vist en liste over alle registrerede trusler:
+    - Filen skulle være sat i karantæne af Defender for Endpoint på Linux. Brug følgende kommando til at få vist alle registrerede trusler:
 
         ```bash
         mdatp threat list
         ```
 
-6. Kør en Slutpunktsregistrering og -svar registreringstest, og simulere en registrering for at bekræfte, at enheden er korrekt onboardet og rapporterer til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
+6. Kør en Slutpunktsregistrering og -svar registreringstest, og simuler en registrering for at bekræfte, at enheden er onboardet korrekt, og rapportere til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
 
-    - Kontrollér, at den onboardede Linux-server vises i Microsoft 365 Defender. Hvis dette er den første onboarding af computeren, kan det tage op til 20 minutter, før den vises.
+    - Bekræft, at den onboardede Linux-server vises i Microsoft 365 Defender. Hvis dette er den første onboarding af maskinen, kan det tage op til 20 minutter, indtil det vises.
 
-    - Download og udtræk [scriptfilen](https://aka.ms/LinuxDIY) til en onboarded Linux-server, og kør følgende kommando: `./mde_linux_edr_diy.sh`
+    - Download og udpak [scriptfilen](https://aka.ms/LinuxDIY) til en onboardet Linux-server, og kør følgende kommando: `./mde_linux_edr_diy.sh`
 
-    - Efter et par minutter skal en registrering være hævet i Microsoft 365 Defender.
+    - Efter et par minutter skal en registrering opløftes i Microsoft 365 Defender.
 
-    - Kig på detaljerne, tidslinjen på computeren, og udfør dine typiske undersøgelsestrin.
+    - Se beskedoplysningerne, computerens tidslinje, og udfør dine typiske undersøgelsestrin.
 
-## <a name="installer-script"></a>Installer script
+## <a name="installer-script"></a>Installationsscript
 
-Alternativt kan du bruge et automatiseret [installerings-bash-script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh), der [leveres i vores offentlige GitHub-lager](https://github.com/microsoft/mdatp-xplat/).
-Scriptet identificerer distributionen og versionen, forenkler valget af det rigtige lager, konfigurerer enheden til at trække den nyeste pakke og kombinerer produktinstallations- og onboardingtrinnene.
+Du kan også bruge et automatiseret [bash-installationsscript](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) i vores [offentlige GitHub lager](https://github.com/microsoft/mdatp-xplat/).
+Scriptet identificerer distributionen og versionen, forenkler valget af det rigtige lager, konfigurerer enheden til at trække den nyeste pakke og kombinerer produktinstallationen og onboardingtrinnene.
 
 ```bash
-❯ ./mde_installer.sh --help
+> ./mde_installer.sh --help
 usage: basename ./mde_installer.sh [OPTIONS]
 Options:
 -c|--channel      specify the channel from which you want to install. Default: insiders-fast
@@ -435,19 +435,19 @@ Options:
 
 Læs mere [her](https://github.com/microsoft/mdatp-xplat/tree/master/linux/installation).
 
-## <a name="log-installation-issues"></a>Problemer med installation af logfil
+## <a name="log-installation-issues"></a>Problemer med loginstallation
 
-Se [Problemer med installation af logfiler](linux-resources.md#log-installation-issues) for at få flere oplysninger om, hvordan du finder den automatisk oprettede log, der oprettes af installationsprogrammet, når der opstår en fejl.
+Se [Problemer med installation af logfil](linux-resources.md#log-installation-issues) for at få flere oplysninger om, hvordan du finder den automatisk genererede log, der oprettes af installationsprogrammet, når der opstår en fejl.
 
-## <a name="how-to-migrate-from-insiders-fast-to-production-channel"></a>Sådan overføres fra Insiders-Fast til produktionskanalen
+## <a name="how-to-migrate-from-insiders-fast-to-production-channel"></a>Sådan overfører du fra Insiders-Fast til en produktionskanal
 
-1. Fjern "Insiders-Fast-kanal"-versionen af Defender til Slutpunkt på Linux.
+1. Fjern versionen "Insiders-Fast channel" af Defender for Endpoint på Linux.
 
     ```bash
     sudo yum remove mdatp
     ```
 
-1. Deaktiver Defender for Endpoint på Linux Insiders-Fast repo
+1. Deaktiver Defender for Endpoint på Linux-Insiders-Fast lager
 
     ```bash
     sudo yum repolist
@@ -460,11 +460,11 @@ Se [Problemer med installation af logfiler](linux-resources.md#log-installation-
     sudo yum-config-manager --disable packages-microsoft-com-fast-prod
     ```
 
-1. Reployer Microsoft Defender for Endpoint på Linux ved hjælp af "Produktionskanalen".
+1. Geninstaller Microsoft Defender for Endpoint på Linux ved hjælp af "Produktionskanal".
 
-## <a name="uninstallation"></a>Fjernelse af installation
+## <a name="uninstallation"></a>Uninstallation
 
-Se [Fjern](linux-resources.md#uninstall) for at få mere at vide om, hvordan du fjerner Defender for Endpoint på Linux fra klientenheder.
+Se [Fjern](linux-resources.md#uninstall) for at få oplysninger om, hvordan du fjerner Defender for Endpoint på Linux fra klientenheder.
 
 ## <a name="see-also"></a>Se også
 

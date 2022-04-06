@@ -1,5 +1,5 @@
 ---
-title: Skybeskyttelse og eksempelindsendelse i Microsoft Defender Antivirus
+title: Skybeskyttelse og indsendelse af eksempler på Microsoft Defender Antivirus
 description: Få mere at vide om beskyttelse og beskyttelse i skyen Microsoft Defender Antivirus
 keywords: Microsoft Defender Antivirus, næste generations teknologier, indsendelse af antiviruseksempel, næste generations av, maskinlæring, antimalware, sikkerhed, defender, skybaseret beskyttelse leveret i skyen
 ms.prod: m365-security
@@ -15,32 +15,32 @@ ms.technology: mde
 ms.topic: article
 ms.date: 02/24/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9df9c387f24671d6790d9219590eeac490f2f1aa
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a647617de3706481c2e12f4e1772f5bc609db6fc
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593978"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470675"
 ---
-# <a name="cloud-protection-and-sample-submission-in-microsoft-defender-antivirus"></a>Skybeskyttelse og eksempelindsendelse i Microsoft Defender Antivirus
+# <a name="cloud-protection-and-sample-submission-at-microsoft-defender-antivirus"></a>Skybeskyttelse og indsendelse af eksempler på Microsoft Defender Antivirus
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 Microsoft Defender Antivirus bruger mange intelligente mekanismer til at registrere malware. En af de mest effektive funktioner er muligheden for at anvende skyens styrke til at registrere malware og foretage hurtige analyser. Cloud protection and automatic sample submission work together with Microsoft Defender Antivirus to help protect against new and emerging threats. 
 
 Hvis der registreres en mistænkelig eller skadelig fil, sendes en prøve til analyse i skytjenesten, Microsoft Defender Antivirus filer blokeres. Så snart der foretages en bestemmelse, som sker hurtigt, frigives eller blokeres filen enten af Microsoft Defender Antivirus. 
 
-Denne artikel indeholder en oversigt over skybeskyttelse og automatisk indsendelse af eksempler Microsoft Defender Antivirus. Du kan få mere at vide om [skybeskyttelse under Skybeskyttelse og Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
+Denne artikel indeholder en oversigt over skybeskyttelse og automatisk indsendelse af eksempler på Microsoft Defender Antivirus. Du kan få mere at vide om [skybeskyttelse under Skybeskyttelse og Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
 ## <a name="how-cloud-protection-and-sample-submission-work-together"></a>Sådan fungerer skybeskyttelse og indsendelse af eksempler sammen
 
-For at forstå, hvordan skybeskyttelse fungerer sammen med indsendelse af eksempler, kan det være nyttigt at forstå, hvordan Defender til Slutpunkt beskytter mod trusler. Microsoft Intelligent Security-Graph overvåger trusselsdata fra et enormt netværk af sensorer. Microsoft-lag skybaserede maskinlæringsmodeller, der kan vurdere filer baseret på signaler fra klienten og det enorme netværk af sensorer og data i den intelligente sikkerhedsmodel, Graph. Denne fremgangsmåde giver Defender til Slutpunkt mulighed for at blokere for mange aldrig før så trusler. 
+For at forstå, hvordan skybeskyttelse fungerer sammen med indsendelse af eksempler, kan det være nyttigt at forstå, hvordan Defender til Slutpunkt beskytter mod trusler. Microsoft Intelligent Security-Graph overvåger trusselsdata fra et enormt netværk af sensorer. Microsoft lag skybaserede maskinlæringsmodeller, der kan vurdere filer baseret på signaler fra klienten og det enorme netværk af sensorer og data i den intelligente sikkerhedsmodel Graph. Denne fremgangsmåde giver Defender til Slutpunkt mulighed for at blokere for mange aldrig før så trusler. 
 
 Følgende billede afbilder strømmen af beskyttelse i skyen og eksempelindsendelse med Microsoft Defender Antivirus:
 
-:::image type="content" source="images/cloud-protection-flow.png" alt-text="Cloud-leveret beskyttelse flow":::
+:::image type="content" source="images/cloud-protection-flow.png" alt-text="Cloud-leveret beskyttelse flow" lightbox="images/cloud-protection-flow.png":::
 
 Microsoft Defender Antivirus og skybeskyttelse blokerer automatisk de fleste nye, aldrig før så store trusler ved første syn ved hjælp af følgende metoder:
 
@@ -80,14 +80,14 @@ Microsoft Defender Antivirus og skybeskyttelse blokerer automatisk de fleste nye
          - "Send ikke" svarer til indstillingen "Deaktiveret" i macOS-politik
          - Metadata sendes til registreringer, selv når eksempelindsendelse er deaktiveret
 
-   3. Når metadata og/eller filer er blevet indsendt til skybeskyttelse, kan du bruge **eksempler,** **detonation** eller læringsmodeller til big **data analysis** machine learning til at opnå en konklusion. Hvis du slår beskyttelse i skyen fra, begrænses analyser til kun det, klienten kan levere via lokale maskinlæringsmodeller og lignende funktioner.
+   3. Når metadata og/eller filer er blevet indsendt til skybeskyttelse, kan du bruge **eksempler,** **detonation** eller modeller til maskinlæring af store **dataanalyser** for at opnå en konklusion. Hvis du slår beskyttelse i skyen fra, begrænses analyser til kun det, klienten kan levere via lokale maskinlæringsmodeller og lignende funktioner.
 
 > [!IMPORTANT]
 > [Bloker ved første syn (BAFS) giver](configure-block-at-first-sight-microsoft-defender-antivirus.md) detonation og analyse til at afgøre, om en fil eller proces er sikker. BAFS kan forsinke åbning af en fil kortvarigt, indtil der opnås en konklusion. Hvis du deaktiverer eksempelindsendelse, deaktiveres BAFS også, og filanalyse er begrænset til kun metadata. Vi anbefaler, at du holder eksempelindsendelse og BAFS aktiveret. Du kan få mere at vide [under Hvad er "blok ved første syn"?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)
 
 ## <a name="cloud-protection-levels"></a>Skybeskyttelsesniveauer
 
-Skybeskyttelse er som standard aktiveret i Microsoft Defender Antivirus. Vi anbefaler, at du holder skybeskyttelse aktiveret, selvom du kan konfigurere beskyttelsesniveauet for din organisation. Se [Angive beskyttelsesniveauet, der leveres i skyen, for Microsoft Defender Antivirus](specify-cloud-protection-level-microsoft-defender-antivirus.md).
+Skybeskyttelse er som standard aktiveret Microsoft Defender Antivirus. Vi anbefaler, at du holder skybeskyttelse aktiveret, selvom du kan konfigurere beskyttelsesniveauet for din organisation. Se [Angive beskyttelsesniveauet, der leveres i skyen, for Microsoft Defender Antivirus](specify-cloud-protection-level-microsoft-defender-antivirus.md).
 
 ## <a name="sample-submission-settings"></a>Eksempel på indstillinger for indsendelse
 
@@ -97,11 +97,11 @@ Ud over at konfigurere dit skybeskyttelsesniveau kan du konfigurere dine eksempe
 - **Send alle eksempler automatisk**  
 - **Send ikke eksempler**  
 
-Du kan finde oplysninger om konfigurationsindstillinger ved hjælp af Intune, Konfigurationsstyring, gruppepolitikobjekt eller PowerShell under Slå [skybeskyttelse til Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md).
+Du kan finde oplysninger om konfigurationsindstillinger ved Intune, Configuration Manager, gruppepolitikobjekt eller PowerShell under Aktiver [skybeskyttelse Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md).
 
 ## <a name="examples-of-metadata-sent-to-the-cloud-protection-service"></a>Eksempler på metadata, der sendes til skybeskyttelsestjenesten
 
-:::image type="content" source="images/cloud-protection-metadata-sample.png" alt-text="billede, der viser eksempler på metadata, der er sendt til skybeskyttelse i Microsoft Defender Antivirus":::
+:::image type="content" source="images/cloud-protection-metadata-sample.png" alt-text="Eksempler på metadata, der sendes til skybeskyttelse i Microsoft Defender Antivirus-portalen" lightbox="images/cloud-protection-metadata-sample.png":::
 
 I følgende tabel vises eksempler på metadata, der er sendt til analyse af skybeskyttelse:
 
@@ -120,17 +120,17 @@ Derudover har Defender til Endpoint modtaget flere kompatibilitetscertificeringe
 - ISO 27001
 - ISO 27018
 - SOC I, II, III
-- og FLERE.
+- 1. 1
 
 Du kan finde flere oplysninger i følgende ressourcer:
 
 - [Azure Compliance Offerings](/azure/storage/common/storage-compliance-offerings) 
 - [Service Trust Portal](https://servicetrust.microsoft.com)
-- [Microsoft Defender til lagring af data i slutpunktet og beskyttelse af personlige oplysninger](data-storage-privacy.md#data-storage-location)
+- [Microsoft Defender for Endpoint datalagring og beskyttelse af personlige oplysninger](data-storage-privacy.md#data-storage-location)
 
 ## <a name="other-file-sample-submission-scenarios"></a>Andre scenarier for indsendelse af filekseler
 
-Der er to scenarier mere, hvor Defender til Slutpunkt muligvis anmoder om en filprøve, der ikke er relateret til skybeskyttelsen i Microsoft Defender Antivirus. Disse scenarier er beskrevet i følgende tabel:
+Der er to scenarier mere, hvor Defender til Slutpunkt muligvis anmoder om en filprøve, der ikke er relateret til skybeskyttelsen Microsoft Defender Antivirus. Disse scenarier er beskrevet i følgende tabel:
 
 | Scenarie | Beskrivelse |
 |:---|:---|

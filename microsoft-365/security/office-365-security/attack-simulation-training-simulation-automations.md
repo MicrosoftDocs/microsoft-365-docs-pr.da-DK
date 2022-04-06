@@ -10,14 +10,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Administratorer kan lære, hvordan du opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der starter, når de angivne betingelser er opfyldt i Microsoft Defender Office 365 Plan 2.
+description: Administratorer kan lære, hvordan du opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der starter, når de angivne betingelser er opfyldt Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 3ad24a8b6d2be18fb7ef5fd49be7f2197b3be3a7
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e1e71fc5a901612a132d57afd663364f9a10daf4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680946"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472435"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Simulerings automatisering til simulering af angreb
 
@@ -33,7 +33,7 @@ Hvis du vil oprette en automatisering af simulering, skal du gøre følgende:
 
 2. På fanen **Simulerings automatisering** skal du vælge ![Opret automatiseringsikon.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
 
-   ![Opret automatiseringsknappen på fanen Simulerings automatisering i Kursus i angrebssimulering Microsoft 365 Defender portalen.](../../media/attack-sim-training-sim-automations-create.png)
+   :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Knappen Opret simulering på fanen Simulerings automatisering i Kursus i angrebssimulering Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
 3. Guiden til oprettelse åbnes. Resten af denne artikel beskriver siderne og de indstillinger, de indeholder.
 
@@ -61,7 +61,7 @@ På siden **Vælg social engineering techniques** skal du vælge en eller flere 
 
 Hvis du klikker på **linket** Vis detaljer i beskrivelsen, åbnes en pop op-vindue med detaljer, der beskriver den teknik og de simuleringstrin, der er resultatet af metoden.
 
-![Pop op-pop op-pop-op-oplysninger for teknik til indsamling af legitimationsoplysninger på siden Vælg social engineering-teknikker.](../../media/attack-sim-training-simulations-select-technique-sim-steps.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Pop op-pop op-dialogboksen Detaljer for teknik til indsamling af legitimationsoplysninger på siden Vælg social engineering-teknikker" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
 
 Klik på Næste, når du er **færdig**.
 
@@ -110,7 +110,7 @@ Hvis du vælger en nyttedata fra listen ved at klikke på navnet, vises oplysnin
 - Fanen **Oversigt** indeholder et eksempel og andre oplysninger om nyttedata.
 - Fanen **Simulering er** startet indeholder **Simuleringsnavn**, **Klikhastighed**, **Kompromitteret** hastighed og **Handling**.
 
-![Pop op-flyv ind-oplysninger om nyttedata i angrebssimuleringskursus Microsoft 365 Defender portalen.](../../media/attack-sim-training-simulations-select-payload-details.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Pop op-siden med oplysninger om nyttedata i angrebssimuleringskursus Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
 
 Klik på Næste, når du er **færdig**.
 
@@ -140,7 +140,7 @@ På siden **Målbrugere skal** du vælge, hvem der skal modtage simulering. Konf
         - Markér **hele titlen**
         - Vælg eksisterende titelværdier.
 
-      ![Brugerfiltrering på siden Målbrugere i Kursus i angrebssimulering i Microsoft 365 Defender portal.](../../media/attack-sim-training-simulations-target-users-filter-by-category.png)
+      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Brugerfiltrering på siden Målbrugere i kursus i angrebssimulering i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
       Når du har identificeret dine kriterier, vises de berørte brugere i  sektionen Brugerliste, der vises, hvor du kan vælge nogle eller alle de modtagere, der opdages.
 
@@ -178,7 +178,7 @@ På siden **Tildel** kursus kan du tildele kurser til simulering. Vi anbefaler, 
       - **7 dage efter simulering slutter**
   - **Intet kursus**: Hvis du vælger denne værdi, er den eneste indstilling på siden knappen **Næste, der** fører dig til [**landingssiden**](#landing-page) .
 
-![Tilføj anbefalede kurser på siden Undervisning i angrebssimulering i Microsoft 365 Defender portal.](../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Muligheden for at tilføje de anbefalede kurser på siden Træningstildeling i Angrebssimuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
 
 ### <a name="training-assignment"></a>Kursustildeling
 
@@ -220,7 +220,7 @@ For hvert kursus på listen skal du vælge, hvem der får træningen, ved at væ
 
 Hvis du ikke vil bruge et kursus, der vises, skal du klikke på Slet ![ikon.](../../media/m365-cc-sc-delete-icon.png) **Slet**.
 
-![Kursusopgaveside i Angrebssimuleringskursus i Microsoft 365 Defender portal.](../../media/attack-sim-training-training-assignment.png)
+:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Siden Training assignment i Attack-simuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-training-assignment.png":::
 
 Klik på Næste, når du er **færdig**.
 

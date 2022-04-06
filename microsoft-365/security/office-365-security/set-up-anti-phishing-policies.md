@@ -14,15 +14,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om de antiphishing-politikker, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender Office 365.
+description: Administratorer kan få mere at vide om de antiphishing-politikker, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a0f491c099e5a3b67866738267215e79ff6cbeb0
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5389e83634bc92dd01908b16e8ca0a76dd76c765
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679538"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475691"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Antiphishing-politikker i Microsoft 365
 
@@ -30,21 +30,21 @@ ms.locfileid: "63679538"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Politikker til konfiguration af antiphishing-beskyttelse er tilgængelige i Microsoft 365-organisationer med Exchange Online-postkasser, enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser og Microsoft Defender til Office 365 organisationer.
+Politikker til konfiguration af antiphishing-beskyttelse er tilgængelige i Microsoft 365-organisationer med Exchange Online-postkasser, enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online postkasser og Microsoft Defender for Office 365 organisationer.
 
-Eksempler på Microsoft Defender til Office 365 organisationer omfatter:
+Eksempler Microsoft Defender for Office 365 organisationer omfatter:
 
 - Microsoft 365 Enterprise E5, Microsoft 365 Education A5 osv.
 - [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home)
 - [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft Defender til Office 365 som et tilføjelsesprogrammet](https://products.office.com/exchange/advance-threat-protection)
+- [Microsoft Defender for Office 365 som et tilføjelsesprogrammet](https://products.office.com/exchange/advance-threat-protection)
 
-De høje forskelle mellem antiphishing-politikker i EOP og antiphishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
+De store forskelle mellem antiphishing-politikker i EOP og antiphishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
 
-|Funktion|Antiphishing-politikker i EOP|Antiphishing-politikker i Defender til Office 365|
+|Funktion|Antiphishing-politikker i EOP|Antiphishing-politikker i Defender for Office 365|
 |---|:---:|:---:|
 |Automatisk oprettet standardpolitik|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
 |Opret brugerdefinerede politikker|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
@@ -59,13 +59,13 @@ De høje forskelle mellem antiphishing-politikker i EOP og antiphishing-politikk
 Hvis du vil konfigurere antiphishing-politikker, skal du se følgende artikler:
 
 - [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)
-- [Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)
+- [Konfigurer antiphishing-politikker i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
 
-Resten af denne artikel beskriver de indstillinger, der er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365.
+I resten af denne artikel beskrives de indstillinger, der er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365.
 
 ## <a name="common-policy-settings"></a>Almindelige politikindstillinger
 
-Følgende politikindstillinger er tilgængelige i antiphishing-politikker i EOP og Defender til Office 365:
+Følgende politikindstillinger er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365:
 
 - **Navn**: Du kan ikke omdøbe standardpolitikken for phishing. Når du har oprettet en brugerdefineret politik for phishing, kan du ikke omdøbe politikken i Microsoft 365 Defender portal.
 
@@ -85,13 +85,13 @@ Følgende politikindstillinger er tilgængelige i antiphishing-politikker i EOP 
     - **Domæner**
 
   > [!NOTE]
-  > Der kræves mindst ét valg i indstillingerne brugere, grupper og domæner i brugerdefinerede antiphishing-politikker for at identificere de **meddelelsesmodtagere**,  <u>som politikken gælder for</u>. Antiphishing-politikker i Defender til Office 365 har også <u>repræsentationsindstillinger</u>, hvor du kan angive mailadresser eller afsenderdomæner til individuelle afsendere, der skal beskyttes efterligning som beskrevet senere i denne artikel.[](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+  > Der kræves mindst ét valg i indstillingerne brugere, grupper og domæner i brugerdefinerede antiphishing-politikker for at identificere de **meddelelsesmodtagere**,  <u>som politikken gælder for</u>. Antiphishing-politikker i Defender for Office 365 har også [](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) indstillinger for repræsentation, hvor du kan angive mailadresser eller afsenderdomæner, der modtager <u>repræsentationsbeskyttelse</u>, som beskrevet senere i denne artikel.
 
 ## <a name="spoof-settings"></a>Spoof-indstillinger
 
 Spoofing er, når Fra-adressen i en mail (afsenderadressen, der vises i mailklienter) ikke stemmer overens med domænet for mailkilden. Du kan finde flere oplysninger om spoofing [under Beskyttelse mod spoofing Microsoft 365](anti-spoofing-protection.md).
 
-Følgende spoof-indstillinger er tilgængelige i antiphishing-politikker i EOP og Defender Office 365:
+Følgende spoof-indstillinger er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365:
 
 - **Aktivér efterlignet intelligens**: Slår efterlignet intelligens til eller fra. Vi anbefaler, at du lader den være slået til.
 
@@ -118,7 +118,7 @@ Følgende spoof-indstillinger er tilgængelige i antiphishing-politikker i EOP o
 
 ### <a name="unauthenticated-sender"></a>Ikke-godkendt afsender
 
-Meddelelser om ikke-godkendte afsendere er en del af [Spoof-indstillingerne](#spoof-settings), der er tilgængelige i antiphishing-politikker i EOP og Defender Office 365 som beskrevet i forrige afsnit. Følgende indstillinger er kun tilgængelige, når efterlignet intelligens er slået til:
+Meddelelser om ikke-godkendte afsendere er en del af [Spoof-indstillingerne](#spoof-settings), der er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365 som beskrevet i forrige afsnit. Følgende indstillinger er kun tilgængelige, når efterlignet intelligens er slået til:
 
 - **Vis (?) for** ikke-godkendte afsendere for spoof: Denne meddelelse føjer et spørgsmålstegn til afsenderens billede i feltet Fra, hvis meddelelsen ikke passerer SPF- eller DKIM-kontroller, og meddelelsen ikke  passerer DMARC eller [ikke-sammensat godkendelse](email-validation-and-authentication.md#composite-authentication). Når denne indstilling er slået fra, føjes spørgsmålstegnet ikke til afsenderens billede.
 
@@ -135,14 +135,14 @@ Få mere at vide under [Identificer mistænkelige meddelelser på Outlook.com og
 
 ## <a name="first-contact-safety-tip"></a>Første kontakt sikkerhedstip
 
-Indstillingerne **vis første kontaktoplysninger sikkerhedstip** findes i EOP og Defender til Office 365-organisationer og er ikke afhængig af efterlignet intelligens eller indstillinger for repræsentationsbeskyttelse. Den sikkerhedstip vises til modtagerne i følgende scenarier:
+Indstillingerne **vis første kontaktoplysninger sikkerhedstip** tilgængelige i EOP og Defender for Office 365-organisationer og er ikke afhængig af efterlignet intelligens eller indstillinger for repræsentationsbeskyttelse. Den sikkerhedstip vises til modtagerne i følgende scenarier:
 
 - Første gang der vises en meddelelse fra en afsender
 - De modtager ikke ofte meddelelser fra afsenderen.
 
-![Første kontakt sikkerhedstip meddelelser med én modtager.](../../media/safety-tip-first-contact-one-recipient.png)
+:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Første kontakt sikkerhedstip meddelelser med én modtager" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
 
-![Første kontakt sikkerhedstip meddelelser med flere modtagere.](../../media/safety-tip-first-contact-multiple-recipients.png)
+:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="The First contact sikkerhedstip for messages with with multiple recipients" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
 
 Denne funktion tilføjer et ekstra lag af sikkerhedsbeskyttelse mod potentielle efterligning angreb, så vi anbefaler, at du slår den til.
 
@@ -151,14 +151,14 @@ Den første kontakt sikkerhedstip erstatter også behovet for at oprette regler 
 > [!NOTE]
 > Hvis meddelelsen har flere modtagere, om tippet vises, og til hvem der er baseret på en flertalsmodel. Hvis størstedelen af modtagerne aldrig eller ikke ofte modtager meddelelser fra afsenderen, modtager de påvirkede modtagere tippet Nogle, der har modtaget **denne meddelelse.** Hvis du er bekymret for, at denne adfærd blotlægger den ene modtagers kommunikationsvaner til en anden, bør du ikke aktivere den første sikkerhedstip og fortsætte med at bruge regler for mailflow i stedet.
 
-## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Eksklusive indstillinger i antiphishing-politikker i Microsoft Defender til Office 365
+## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Eksklusive indstillinger i antiphishing-politikker i Microsoft Defender for Office 365
 
-I dette afsnit beskrives de politikindstillinger, der kun er tilgængelige i antiphishing-politikker i Defender Office 365.
+I dette afsnit beskrives de politikindstillinger, der kun er tilgængelige i antiphishing-politikker i Defender for Office 365.
 
 > [!NOTE]
-> Standardpolitikken for phishing i Defender til Office 365 giver [efterlignet beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) og postkasseintelligens til alle modtagere. Men de andre tilgængelige funktioner [til repræsentationsbeskyttelse](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og [avancerede indstillinger](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) er ikke konfigureret eller aktiveret i standardpolitikken. Hvis du vil aktivere alle beskyttelsesfunktioner, skal du ændre standardpolitikken for phishing eller oprette flere antiphishing-politikker.
+> Standardpolitikken for phishing i Defender for Office 365 giver [efterlignet beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) og postkasseintelligens til alle modtagere. Men de andre tilgængelige funktioner [til repræsentationsbeskyttelse](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og [avancerede indstillinger](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) er ikke konfigureret eller aktiveret i standardpolitikken. Hvis du vil aktivere alle beskyttelsesfunktioner, skal du ændre standardpolitikken for phishing eller oprette flere antiphishing-politikker.
 
-### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Indstillinger for efterligning i antiphishing-politikker i Microsoft Defender Office 365
+### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Indstillinger for repræsentation i antiphishing-politikker i Microsoft Defender for Office 365
 
 Efterligning er der, hvor afsenderen eller afsenderens maildomæne i en meddelelse ligner en rigtig afsender eller et rigtigt domæne:
 
@@ -170,7 +170,7 @@ Efterligning er der, hvor afsenderen eller afsenderens maildomæne i en meddelel
 
 Et efterligning af domæne kan ellers betragtes som legitimt (registreret domæne, konfigurerede mailgodkendelsesposter osv.), bortset fra at dets formål er at bedrage modtagere.
 
-Følgende repræsentationsindstillinger er kun tilgængelige i antiphishing-politikker i Defender til Office 365:
+Følgende repræsentationsindstillinger er kun tilgængelige i antiphishing-politikker i Defender for Office 365:
 
 - **Giv brugerne mulighed for at** beskytte: Forhindrer, at de angivne interne eller eksterne mailadresser bliver **efterligning som meddelelsesafsendere**. Du modtager f.eks. en mail fra vicedirektøren for din virksomhed, der beder dig sende hende nogle interne firmaoplysninger. Ville du gøre det? Mange personer ville sende svaret uden at tænke dig om.
 
@@ -229,13 +229,13 @@ Følgende repræsentationsindstillinger er kun tilgængelige i antiphishing-poli
 
 - **Tilføj afsendere og domæner, der er tillid til**: Undtagelser til indstillingerne for repræsentationsbeskyttelse. Meddelelser fra de angivne afsendere og afsenderdomæner klassificeres aldrig som efterligningsbaserede angreb af politikken. Med andre ord anvendes handlingen for beskyttede afsendere, beskyttede domæner eller postkassens intelligensbeskyttelse ikke på disse afsendere eller afsenderdomæner, der er tillid til. Den maksimale grænse for disse lister er 1024 poster.
 
-### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Avancerede grænseværdier for phishing i antiphishing-politikker i Microsoft Defender Office 365
+### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Avancerede grænseværdier for phishing i antiphishing-politikker i Microsoft Defender for Office 365
 
-Følgende avancerede grænseværdier for phishing er kun tilgængelige i antiphishing-politikker i Defender til Office 365. Disse grænseværdier styrer følsomheden ved anvendelse af maskinlæringsmodeller på meddelelser for at afgøre, om phishingen skal afgøres:
+Følgende avancerede grænseværdier for phishing er kun tilgængelige i antiphishing-politikker i Defender for Office 365. Disse grænseværdier styrer følsomheden ved anvendelse af maskinlæringsmodeller på meddelelser for at afgøre, om phishingen skal afgøres:
 
 - **1 – Standard**: Dette er standardværdien. Alvorsgraden af den handling, der er foretaget på meddelelsen, afhænger af graden af tillid til, at meddelelsen er phishing (lav, mellem, høj eller meget høj). Meddelelser, der identificeres som phishing med en meget høj grad af tillid, har f.eks. de mest alvorlige handlinger anvendt, mens meddelelser, der identificeres som phishing med en lav grad af tillid, har anvendt mindre alvorlige handlinger.
 - **2 – Aggressive**: Meddelelser, der identificeres som phishing med høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 - **3 – Mere aggressive**: Meddelelser, der identificeres som phishing med en medium eller høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 - **4 – Mest aggressive**: Meddelelser, der identificeres som phishing med lav, mellem eller høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 
-Risikoen for falske positive (gode meddelelser, der er markeret som dårlige) øges, når du øger denne indstilling. Du kan finde oplysninger om de anbefalede indstillinger [i antiphishing-politikken i Microsoft Defender for Office 365 indstillinger](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+Risikoen for falske positive (gode meddelelser, der er markeret som dårlige) øges, når du øger denne indstilling. Du kan finde oplysninger om de anbefalede indstillinger [under Antiphishing-politik Microsoft Defender for Office 365 indstillinger](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).

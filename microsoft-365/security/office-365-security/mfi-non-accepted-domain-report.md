@@ -15,12 +15,12 @@ ms.custom:
 description: Administratorer kan se, hvordan de bruger rapporten over ikke-accepterede domæner i dashboardet for mailflow i Security & Compliance Center til at overvåge meddelelser fra din lokale organisation, hvor afsenderens domæne ikke er konfigureret i Microsoft 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 25a8b1adb882aa83861e936d48534fc0a5f826e4
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8f16dfbafa12080058cd1784120e4bc2157e0cff
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679670"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470829"
 ---
 # <a name="non-accepted-domain-report-in-the-security--compliance-center"></a>Rapport om ikke-accepteret domæne i Security & Compliance Center
 
@@ -28,14 +28,14 @@ ms.locfileid: "63679670"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Rapporten **Ikke-accepteret** domæne i [dashboardet for mailflow](mail-flow-insights-v2.md) i [Security & Compliance Center](https://protection.office.com) viser oplysninger om meddelelser fra din lokale mailorganisation, hvor afsenderens domæne ikke er konfigureret som et accepteret domæne i din Microsoft 365-organisation.
 
 Microsoft 365 begrænser muligvis disse meddelelser, hvis vi har data, der beviser, at formålet med disse meddelelser er skadeligt. Det er derfor vigtigt, at du forstår, hvad der sker, og løser problemet.
 
-![Widget for ikke-accepteret domæne i mailflowdashboardet i & Compliance Center.](../../media/mfi-non-accepted-domain-report-widget.png)
+:::image type="content" source="../../media/mfi-non-accepted-domain-report-widget.png" alt-text="Widgetten Ikke-accepteret domæne i dashboardet for mailflow i & Compliance Center" lightbox="../../media/mfi-non-accepted-domain-report-widget.png":::
 
 ## <a name="report-view-for-the-non-accepted-domain-report"></a>Rapportvisning for rapporten om det ikke-accepterede domæne
 
@@ -45,7 +45,7 @@ Som standard vises aktiviteten for alle berørte forbindelser. Hvis du klikker *
 
 Hvis du peger på et datapunkt (dag) i diagrammet, får du vist det samlede antal meddelelser for forbindelsen.
 
-![Rapportvisning i rapporten om ikke-accepteret domæne.](../../media/mfi-non-accepted-domain-report-overview-view.png)
+:::image type="content" source="../../media/mfi-non-accepted-domain-report-overview-view.png" alt-text="Rapportvisningen i rapporten om det ikke-accepterede domæne" lightbox="../../media/mfi-non-accepted-domain-report-overview-view.png":::
 
 ## <a name="details-table-view-for-the-non-accepted-domain-report"></a>Detaljetabelvisning for rapporten om det ikke-accepterede domæne
 
@@ -69,7 +69,7 @@ Når du markerer en række i tabellen, vises en pop op-meddelelse med følgende 
 - **Antal meddelelser**
 - **Eksempelmeddelelser**: Du kan klikke på **Vis eksempelmeddelelser for** at få vist [resultaterne af meddelelsessporing](message-trace-scc.md) for et eksempel på de påvirkede meddelelser.
 
-![Pop op-billede med detaljer efter valg af en række i tabelvisningen Detaljer i rapporten Ikke-accepteret domæne.](../../media/mfi-non-accepted-domain-report-details-flyout.png)
+:::image type="content" source="../../media/mfi-non-accepted-domain-report-details-flyout.png" alt-text="Pop op-dialogboksen Detaljer efter valg af en række i tabelvisningen Detaljer i rapporten ikke-accepteret domæne" lightbox="../../media/mfi-non-accepted-domain-report-details-flyout.png":::
 
 Klik på Vis rapport for at gå tilbage til **rapportvisningen**.
 

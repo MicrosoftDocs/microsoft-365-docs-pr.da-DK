@@ -14,22 +14,22 @@ ms.custom: ''
 description: Få mere at vide om, hvordan du gennemser meddelelser, der rapporteres, og giver feedback til dine brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2cb979260bde62903e97a4726083924101b8711a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 44476e7a8ad3bad9b21e82a9528593ceb350257d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63595947"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470895"
 ---
 # <a name="admin-review-for-reported-messages"></a>Administratorgennemsyn for rapporterede meddelelser
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 med Exchange Online-postkasser og Microsoft Defender til Office 365 kan administratorer nu sende skabelonmeddelelser tilbage til slutbrugere, efter de har gennemset rapporterede meddelelser. Skabelonerne kan tilpasses til din organisation og baseres også på din administrators konklusion.
+I Microsoft 365 med Exchange Online postkasser og Microsoft Defender for Office 365 kan administratorer nu sende skabelonmeddelelser tilbage til slutbrugere, efter de har gennemset rapporterede meddelelser. Skabelonerne kan tilpasses til din organisation og baseres også på din administrators konklusion.
 
 Funktionen er designet til at give feedback til dine brugere, men ændrer ikke konklusionen af meddelelser i systemet. For at hjælpe Microsoft med at opdatere og forbedre filtrene skal du sende meddelelser til analyse ved hjælp af [administratorindsendelse](admin-submission.md).
 
@@ -56,7 +56,7 @@ Du vil kun kunne markere og give brugere besked om korrekturresultater, hvis med
 3. Vælg **rullelisten Markér som og giv** besked, og vælg derefter **Ingen trusler** fundet, **Phishing** eller **Uønsket**.
 
    > [!div class="mx-imgBorder"]
-   > ![Send meddelelser fra portal.](../../media/admin-review-send-message-from-portal.png)
+   > :::image type="content" source="../../media/admin-review-send-message-from-portal.png" alt-text="Den side, der viser de brugerrapporterede meddelelser" lightbox="../../media/admin-review-send-message-from-portal.png":::
 
 Den rapporterede meddelelse markeres som enten falsk positiv eller falsk negativ, og en mail sendes automatisk fra portalen og underretter den bruger, der rapporterede meddelelsen.
 
@@ -74,6 +74,6 @@ Den rapporterede meddelelse markeres som enten falsk positiv eller falsk negativ
     - Sidefod
 
     > [!div class="mx-imgBorder"]
-    > ![Tilpasse meddelelser, der sendes til brugere.](../../media/admin-review-customize-message.png)
+    > :::image type="content" source="../../media/admin-review-customize-message.png" alt-text="Siden Med bekræftelsesmeddelelsen Tilpas" lightbox="../../media/admin-review-customize-message.png":::
 
 4. Klik på **Gem**, når du er færdig. Hvis du vil rydde disse værdier, skal **du klikke på** Slet **på siden Brugerindsendelser** .

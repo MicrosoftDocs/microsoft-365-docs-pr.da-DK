@@ -1,6 +1,6 @@
 ---
-title: Forstå politikrækkefølgen i Microsoft Defender for Business
-description: Få mere at vide om prioritetsrækkefølgen med politikker i Microsoft Defender for Business
+title: Forstå politikrækkefølgen i Microsoft Defender til virksomheder
+description: Få mere at vide om prioritetsrækkefølgen med politikker i Microsoft Defender til virksomheder
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,34 +16,34 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 373f3eb821e00f903837f98896ed5dab0588e946
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 13e803666cc7af14af52031eb86a2f86edf06f80
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63593050"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666300"
 ---
-# <a name="understand-policy-order-in-microsoft-defender-for-business"></a>Forstå politikrækkefølgen i Microsoft Defender for Business
+# <a name="understand-policy-order-in-microsoft-defender-for-business"></a>Forstå politikrækkefølgen i Microsoft Defender til virksomheder
 
 > [!IMPORTANT]
-> Microsoft Defender for Business udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra d. 1. marts 2022. Defender for Business som et enkeltstående abonnement er i preview, og den udrulles gradvist til kunder og [it-partnere](https://aka.ms/mdb-preview) , der tilmelder sig her for at anmode om det. [Forhåndsvisning indeholder et indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer funktioner regelmæssigt.
+> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
 > 
-> Nogle oplysninger i denne artikel relaterer til foreløbige produkter/tjenester, der kan være væsentligt ændret, før de frigives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller underforståede, for de oplysninger, du har angivet her. 
+> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
 
-## <a name="policy-order-in-microsoft-defender-for-business"></a>Politikrækkefølge i Microsoft Defender for Business
+## <a name="policy-order-in-microsoft-defender-for-business"></a>Politikrækkefølge i Microsoft Defender til virksomheder
 
-Microsoft Defender for Business indeholder foruddefinerede politikker, der er med til at sikre, at de enheder, dine medarbejdere bruger, er beskyttede. Dit sikkerhedsteam kan også tilføje nye politikker. Antag f.eks., at du vil anvende visse indstillinger på visse enheder og andre indstillinger på andre enheder. Det kan du gøre ved at tilføje politikker, f.eks. næste generations beskyttelsespolitikker eller firewallpolitikker.
+Microsoft Defender til virksomheder indeholder foruddefinerede politikker, der hjælper med at sikre, at de enheder, dine medarbejdere bruger, er beskyttet. Dit sikkerhedsteam kan også tilføje nye politikker. Lad os f.eks. antage, at du vil anvende visse indstillinger på nogle enheder og andre indstillinger på andre enheder. Det kan du gøre ved at tilføje politikker, f.eks. næste generations beskyttelsespolitikker eller firewallpolitikker.
 
-Når politikker tilføjes, vil du bemærke, at der er tildelt en prioritetsrækkefølge. Du kan redigere prioritetsrækkefølgen for de politikker, du definerer, men du kan ikke ændre prioritetsrækkefølgen for standardpolitikker. Antag f.eks., at du har tre Windows næste generations beskyttelsespolitikker til dine Windows klientenheder. I dette tilfælde er standardpolitikken nummer 3 i prioritet. Du kan ændre rækkefølgen af dine politikker, der er nummereret 1 og 2, men standardpolitikken forbliver nummer 3 på listen. 
+Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge. Du kan redigere prioritetsrækkefølgen for de politikker, du definerer, men du kan ikke ændre prioritetsrækkefølgen for standardpolitikker. Lad os f.eks. antage, at du har tre beskyttelsespolitikker i næste generation for dine Windows klientenheder. I dette tilfælde er din standardpolitik nummer 3 i prioritet. Du kan ændre rækkefølgen af dine politikker med nummer 1 og 2, men standardpolitikken forbliver nummer 3 på listen. 
 
-**Det vigtige at huske om flere politikker er, at enhederne kun modtager den første anvendte politik.** Når vi henviser til vores tidligere eksempel på tre næste generations politikker, så forestil dig, at du har enheder, der er målrettet af alle tre politikker. I dette tilfælde modtager disse enheder politik nummer 1, men modtager ikke politikker med nummer 2 og 3. 
+**Det vigtigste at huske på ved flere politikker er, at enheder kun modtager den første anvendte politik.** Med henvisning til vores tidligere eksempel på tre næste generations politikker kan du antage, at du har enheder, der er målrettet af alle tre politikker. I dette tilfælde modtager disse enheder politiknummer 1, men modtager ikke politikker nummer 2 og 3. 
 
 >
-> **Har du et minut?**
-> Tag vores korte <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">undersøgelse om Microsoft Defender for Business</a>. Vi vil meget gerne høre fra dig!
+> **Har du et øjeblik?**
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
 >
 
-## <a name="key-points-to-remember-about-policy-order"></a>Vigtige punkter, du skal huske om rækkefølgen af politikker
+## <a name="key-points-to-remember-about-policy-order"></a>Vigtige punkter at huske om politikrækkefølge
 
 - Politikker tildeles en prioritetsrækkefølge.
 
@@ -59,8 +59,8 @@ Når politikker tilføjes, vil du bemærke, at der er tildelt en prioritetsrækk
 
 - [Administrer enheder](mdb-manage-devices.md)
 
-- [Få vist og administrer hændelser i Microsoft Defender for Business](mdb-view-manage-incidents.md)
+- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
 
-- [Re besvare og afhjælpe trusler i Microsoft Defender for Business](mdb-respond-mitigate-threats.md)
+- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
 
-- [Gennemse afhjælpningshandlinger i Handlingscenter](mdb-review-remediation-actions.md)
+- [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

@@ -14,18 +14,18 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 91dd3dc8563e7bd443362c47190139101a5ede61
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: b5d9346746dba3b7b4c75909cb8e36e47c3c9d99
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63598485"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472501"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Ydeevneanalyse til Microsoft Defender Antivirus
 
 **Gælder for**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 **Hvad er Microsoft Defender Antivirus ydeevneanalyse?**
 
@@ -74,7 +74,7 @@ Du kan finde flere oplysninger om kommandolinjeparametre og -indstillinger i [Ne
 
 Baseret på forespørgslen vil brugeren kunne få vist data for scanningsantal, varighed (total/min/gennemsnit/max/median), sti, proces og årsag til scanningen. Billedet nedenfor viser eksempeloutput for en simpel forespørgsel om de øverste 10 filer til scanningspåvirkning. 
 
-:::image type="content" source="images/example-output.png" alt-text="Eksempeloutput for en grundlæggende TopFiles-forespørgsel":::
+:::image type="content" source="images/example-output.png" alt-text="Eksempeloutput for en grundlæggende TopFiles-forespørgsel" lightbox="images/example-output.png":::
 
 ### <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Yderligere funktionalitet: eksport og konvertering til CSV og JSON
 
@@ -120,7 +120,7 @@ Cmdlet'en `New-MpPerformanceRecording` indsamler en ydeevneoptagelse af Microsof
 
 Denne `New-MpPerformanceRecording` cmdlet giver indsigt i problematiske filer, der kan medføre en forringelse af ydeevnen for Microsoft Defender Antivirus. Dette værktøj leveres "som det er og er" og har ikke til formål at give forslag til udeladelse. Udeladelse kan reducere beskyttelsesniveauet på dine slutpunkter. Eventuelle undtagelser skal defineres med forsigtighed.
 
-Du kan finde flere oplysninger om ydeevneanalyse i [Dokumenter til ydeevneanalyse](/windows-hardware/test/wpt/windows-performance-analyzer) .
+Du kan finde flere oplysninger om ydeevneanalyse i [Effektivitetsanalyse](/windows-hardware/test/wpt/windows-performance-analyzer) dokumenter.
 
 > [!IMPORTANT]
 > Denne cmdlet kræver administratorrettigheder.
@@ -217,7 +217,7 @@ Cmdlet'en `Get-MpPerformanceReport` analyserer en tidligere indsamlet [Microsoft
 
 Ydeevneanalyse giver indsigt i problematiske filer, der kan medføre en forringelse af ydeevnen for Microsoft Defender Antivirus. Dette værktøj leveres "SOM det er og er" og har ikke til formål at give forslag til udeladelse. Udeladelse kan reducere beskyttelsesniveauet på dine slutpunkter. Eventuelle undtagelser skal defineres med forsigtighed.
 
-Du kan finde flere oplysninger om ydeevneanalyse i [Dokumenter til ydeevneanalyse](/windows-hardware/test/wpt/windows-performance-analyzer) .
+Du kan finde flere oplysninger om ydeevneanalyse i [Effektivitetsanalyse](/windows-hardware/test/wpt/windows-performance-analyzer) dokumenter.
 
 **Understøttede os-versioner**
 

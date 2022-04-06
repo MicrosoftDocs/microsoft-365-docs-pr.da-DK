@@ -1,7 +1,7 @@
 ---
-title: Oversigt over enhedsregistrering
-description: Få mere at vide om, hvordan du kan udnytte slutpunktsregistrering Microsoft 365 Defender at finde ikke-administrerede enheder i dit netværk
-keywords: enhedsregistrering, find, passiv, proaktiv, netværk, synlighed, server, arbejdsstation, onboard, ikke-administrerede enheder
+title: Oversigt over enhedssøgning
+description: Få mere at vide om, hvordan du udnytter registrering af slutpunkter i Microsoft 365 Defender til at finde ikke-administrerede enheder i dit netværk
+keywords: enhedsregistrering, finde, passiv, proaktiv, netværk, synlighed, server, arbejdsstation, onboard, ikke-administrerede enheder
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -20,115 +20,115 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 926d23cb4e9abcecd9d34e976dee60851471613b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: f6046576fcea2fe961e73e88168c6254a2d95a40
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472919"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665046"
 ---
-# <a name="device-discovery-overview"></a>Oversigt over enhedsregistrering
+# <a name="device-discovery-overview"></a>Oversigt over enhedssøgning
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Beskyttelse af dit miljø kræver, at du lageropgørelser over de enheder, der er i dit netværk. Men tilknytningsenheder i et netværk kan ofte være dyre, udfordrende og tidskrævende.
+Beskyttelse af dit miljø kræver, at du opretter en oversigt over de enheder, der findes i dit netværk. Tilknytning af enheder i et netværk kan dog ofte være dyrt, udfordrende og tidskrævende.
 
-Microsoft Defender for Endpoint en funktion til registrering af enheder, der hjælper dig med at finde enheder, der ikke er administrerede, og som er sluttet til virksomhedens netværk uden behov for ekstra hvidevarer eller besværlige procesændringer. Enhedsregistrering bruger onboardede slutpunkter i dit netværk til at indsamle, undersøge eller scanne dit netværk for at finde ikke-administrerede enheder. Registreringsfunktionaliteten for enheder gør det muligt at finde:
+Microsoft Defender for Endpoint indeholder en enhedsregistreringsfunktion, der hjælper dig med at finde ikke-administrerede enheder, der er tilsluttet virksomhedens netværk, uden at der er behov for ekstra apparater eller besværlige procesændringer. Enhedsregistrering bruger onboardede slutpunkter i dit netværk til at indsamle, undersøge eller scanne dit netværk for at finde ikke-administrerede enheder. Funktionen til enhedsregistrering giver dig mulighed for at finde:
 
-- Enterprise-slutpunkter (arbejdsstationer, servere og mobilenheder), der endnu ikke er onboardet Microsoft Defender for Endpoint
-- Netværksenheder som routere og skift
+- Virksomhedsslutpunkter (arbejdsstationer, servere og mobilenheder), der endnu ikke er onboardet til Microsoft Defender for Endpoint
+- Netværksenheder som routere og kontakter
 - IoT-enheder som printere og kameraer
 
-Ukendte og ikke-administrerede enheder indebærer betydelige risici i dit netværk – uanset om det er en ikke-sendt printer, netværksenheder med svage sikkerhedskonfigurationer eller en server uden sikkerhedskontrolelementer. Når enhederne findes, kan du:
+Ukendte og ikke-administrerede enheder medfører betydelige risici for dit netværk – uanset om det er en ikke-opdateret printer, netværksenheder med svage sikkerhedskonfigurationer eller en server uden sikkerhedskontroller. Når enhederne er fundet, kan du:
 
-- Onboard ikke-administrerede slutpunkter i tjenesten, hvilket øger synligheden af sikkerheden på dem.
-- Reducer angrebsoverfladen ved at identificere og vurdere sårbarheder og opdage konfigurationsproblemer.
+- Onboarde ikke-administrerede slutpunkter til tjenesten, hvilket øger sikkerhedens synlighed på dem.
+- Reducer angrebsoverfladen ved at identificere og vurdere sikkerhedsrisici og registrere konfigurationshuller.
 
-Se denne video for at få et hurtigt overblik over, hvordan opdagelse af enheder:
+Se denne video for at få et hurtigt overblik over, hvordan enhedsregistrering:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWORdQ]
 
-Sammen med denne funktion er en sikkerhedsanbefaling til onboardingenheder Microsoft Defender for Endpoint tilgængelig som en del af den eksisterende Håndtering af trusler og sikkerhedsrisici oplevelse.
+I forbindelse med denne funktion findes der en sikkerhedsanbefaling til onboarding af enheder til Microsoft Defender for Endpoint som en del af den eksisterende Håndtering af trusler og sikkerhedsrisici oplevelse.
 
 ## <a name="discovery-methods"></a>Registreringsmetoder
 
-Du kan vælge registreringstilstanden, der skal bruges af dine onboardede enheder. Tilstanden styrer det synlighedsniveau, du kan få for enheder, der ikke er administrerede i virksomhedens netværk.
+Du kan vælge den registreringstilstand, der skal bruges af dine onboardede enheder. Tilstanden styrer det synlighedsniveau, du kan få for ikke-administrerede enheder på virksomhedens netværk.
 
-Der findes to metoder til opdagelse:
+Der er to tilgængelige registreringstilstande:
 
-- **Grundlæggende opdagelse**: I denne tilstand indsamler slutpunkter passivt hændelser i dit netværk og udtrækker enhedsoplysninger fra dem. Grundlæggende opdagelse bruger binær SenseNDR.exe til indsamling af passive netværksdata, og netværkstrafik startes ikke. Slutpunkter udtrækker ganske enkelt data fra hver enkelt netværkstrafik, der ses af en onboarded enhed. Med grundlæggende opdagelse får du kun begrænset synlighed af ikke-administrerede slutpunkter i dit netværk.
+- **Grundlæggende registrering**: I denne tilstand indsamler slutpunkter passivt hændelser i dit netværk og udtrækker enhedsoplysninger fra dem. Grundlæggende søgning bruger den binære SenseNDR.exe til indsamling af passive netværksdata, og der vil ikke blive startet netværkstrafik. Slutpunkter udtrækker blot data fra hver netværkstrafik, der ses af en onboardet enhed. Med grundlæggende registrering får du kun begrænset synlighed af ikke-administrerede slutpunkter i dit netværk.
 
-- **Standardregistrering** (anbefales): Med denne tilstand kan slutpunkter aktivt finde enheder i dit netværk til at forbedre indsamlede data og finde flere enheder – hvilket hjælper dig med at opbygge et pålideligt og sammenhængende lager over enheder. Ud over enheder, der er blevet observeret ved hjælp af den passive metode, udnytter standardtilstand også almindelige registreringsprotokoller, der bruger multicast-forespørgsler på netværket til at finde endnu flere enheder. Standardtilstand anvender smart, aktiv sonde til at finde yderligere oplysninger om observerede enheder til at forbedre eksisterende enhedsoplysninger. Når standardtilstanden er aktiveret, kan minimal og tilsigtet netværksaktivitet, der genereres af Discovery-sensoren, observeres af netværksværktøjer i organisationen.
+- **Standardregistrering** (anbefales): Denne tilstand gør det muligt for slutpunkter aktivt at finde enheder på dit netværk for at forbedre indsamlede data og finde flere enheder – hvilket hjælper dig med at opbygge en pålidelig og sammenhængende enhedsoversigt. Ud over enheder, der blev observeret ved hjælp af den passive metode, bruger standardtilstand også almindelige registreringsprotokoller, der bruger multicast-forespørgsler i netværket, til at finde endnu flere enheder. Standardtilstand bruger intelligente, aktive sondering til at finde yderligere oplysninger om observerede enheder for at forbedre eksisterende enhedsoplysninger. Når Standardtilstand er aktiveret, kan minimal og ubetydelig netværksaktivitet, der genereres af registreringssensoren, blive observeret af værktøjer til netværksovervågning i din organisation.
 
-Du kan ændre og tilpasse dine registreringsindstillinger for at få mere at vide under [Konfigurer enhedsregistrering](configure-device-discovery.md).
+Du kan ændre og tilpasse dine registreringsindstillinger. Du kan finde flere oplysninger under [Konfigurer enhedsregistrering](configure-device-discovery.md).
 
 > [!IMPORTANT]
-> Standardregistrering er standardtilstanden for alle kunder fra den 19. juli 2021. Du kan vælge at ændre denne konfiguration til grundlæggende via siden med indstillinger. Hvis du vælger grundlæggende tilstand, får du kun begrænset synlighed af ikke-administrerede slutpunkter i dit netværk.
+> Standardregistrering er standardtilstanden for alle kunder fra den 19. juli 2021. Du kan vælge at ændre denne konfiguration til grundlæggende via indstillingssiden. Hvis du vælger grundlæggende tilstand, får du kun begrænset synlighed af ikke-administrerede slutpunkter i dit netværk.
 
 > [!NOTE]
-> Discovery-programmet skelner mellem netværkshændelser, der modtages i virksomhedens netværk kontra uden for virksomhedens netværk. Enheder, der ikke har forbindelse til virksomhedens netværk, vil ikke blive fundet eller anført på listen over enheder.
+> Registreringsprogrammet skelner mellem netværkshændelser, der modtages i virksomhedens netværk i forhold til uden for virksomhedens netværk. Enheder, der ikke har forbindelse til virksomhedens netværk, bliver ikke fundet eller angivet i enhedsoversigten.
 
-## <a name="device-inventory"></a>Lagerenhed
+## <a name="device-inventory"></a>Enhedslager
 
-Enheder, der er blevet fundet, men endnu ikke er blevet onboardet og sikret af Microsoft Defender for Endpoint, vil blive vist på enhedens lager under fanen Computere og mobil.
+Enheder, der er blevet fundet, men endnu ikke er blevet onboardet og sikret af Microsoft Defender for Endpoint, vises i enhedsoversigten under fanen Computere og mobil.
 
-For at vurdere disse enheder kan du bruge et filter på lagerlisten for enheder med navnet Onboardingstatus, som kan have en af følgende værdier:
+Hvis du vil vurdere disse enheder, kan du bruge et filter på enhedens lagerliste kaldet Onboarding-status, som kan have en af følgende værdier:
 
-- Onboarded: Slutpunktet er onboardet til Microsoft Defender for Endpoint.
-- Kan onboardes: Slutpunktet blev fundet i netværket, og operativsystemet blev identificeret som et, der understøttes af Microsoft Defender for Endpoint, men det er ikke i øjeblikket onboardet. Vi anbefaler stærkt, at du onboarder disse enheder.
+- Onboardet: Slutpunktet er onboardet til Microsoft Defender for Endpoint.
+- Kan onboardes: Slutpunktet blev opdaget i netværket, og operativsystemet blev identificeret som et, der understøttes af Microsoft Defender for Endpoint, men det er i øjeblikket ikke onboardet. Vi anbefaler på det kraftigste, at du onboarder disse enheder.
 - Ikke understøttet: Slutpunktet blev fundet på netværket, men understøttes ikke af Microsoft Defender for Endpoint.
-- Utilstrækkelige oplysninger: Systemet kunne ikke fastslå, om enheden understøttes. Aktivering af standardregistrering på flere enheder i netværket kan forbedre de fundne attributter.
+- Utilstrækkelige oplysninger: Systemet kunne ikke fastslå, om enheden understøttes. Aktivering af standardregistrering på flere enheder i netværket kan forbedre de registrerede attributter.
 
-:::image type="content" source="images/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="Dashboard for lagerenhed" lightbox="images/2b62255cd3a9dd42f3219e437b956fb9.png":::
+:::image type="content" source="images/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="Enhedens lagerdashboard" lightbox="images/2b62255cd3a9dd42f3219e437b956fb9.png":::
 
 > [!TIP]
-> Du kan altid anvende filtre for at udelukke enheder, der ikke er administrerede, fra listen over enheders lager. Du kan også bruge kolonnen onboardingstatus på API-forespørgsler til at frafiltrere enheder, der ikke er administrerede.
+> Du kan altid anvende filtre for at udelade ikke-administrerede enheder fra enhedslagerlisten. Du kan også bruge kolonnen med onboardingstatus i API-forespørgsler til at filtrere ikke-administrerede enheder fra.
 
-Du kan få mere at vide under [Lager over enheder](machines-view-overview.md).
+Du kan få flere oplysninger under [Enhedsoversigt](machines-view-overview.md).
 
 ## <a name="network-device-discovery"></a>Registrering af netværksenhed
 
-Det store antal ikke-administrerede netværksenheder, der er installeret i en organisation, opretter et stort angrebsområde på overfladen og udgør en betydelig risiko for hele virksomheden. Microsoft Defender for Endpoint med netværksregistrering hjælper dig med at sikre, at netværksenheder opdages, klassificeres nøjagtigt og føjes til aktivlageret.
+Det store antal ikke-administrerede netværksenheder, der er installeret i en organisation, opretter et stort angrebsområde og udgør en betydelig risiko for hele virksomheden. Microsoft Defender for Endpoint netværksregistreringsfunktioner hjælper dig med at sikre, at netværksenheder registreres, klassificeres nøjagtigt og føjes til aktivlageret.
 
-Netværksenheder administreres ikke som almindelige slutpunkter, da Defender til slutpunkt ikke har en sensor indbygget i selve netværksenhederne. Disse typer enheder kræver en agentløs tilgang, hvor en fjernscanning henter de nødvendige oplysninger fra enhederne. For at gøre dette skal en Microsoft Defender for Endpoint enhed bruges på hvert netværkssegment til at udføre periodiske godkendte scanninger af forudkonfigurerede netværksenheder. Når De opdages, giver Defender for Endpoints Håndtering af trusler og sikkerhedsrisici-funktioner integrerede arbejdsprocesser til at sikre switche, routere, WLAN-controllere, firewalls og VPN-gateways.
+Netværksenheder administreres ikke som standardslutpunkter, da Defender for Endpoint ikke har en sensor indbygget i selve netværksenhederne. Disse typer enheder kræver en agentløs tilgang, hvor en fjernscanning henter de nødvendige oplysninger fra enhederne. For at gøre dette bruges en angivet Microsoft Defender for Endpoint enhed på hvert netværkssegment til at udføre periodiske godkendte scanninger af forudkonfigurerede netværksenheder. Når funktionerne i Defender for Endpoint er opdaget, leverer de funktioner til Håndtering af trusler og sikkerhedsrisici integrerede arbejdsprocesser, der sikrer fundne parametre, routere, WLAN-controllere, firewalls og VPN-gateways.
 
-Du kan finde flere oplysninger [under Netværksenheder](network-devices.md).
+Du kan få flere oplysninger under [Netværksenheder](network-devices.md).
 
-## <a name="device-discovery-integrations"></a>Integration af enhedsregistrering
+## <a name="device-discovery-integrations"></a>Integrationer af enhedsregistrering
 
-For at løse udfordringen med at få tilstrækkelig synlighed til at finde, identificere og sikre dit komplette lager over OT/IOT-aktiver Microsoft Defender for Endpoint understøtter nu følgende integrationer:
+Hvis du vil løse udfordringen med at få tilstrækkelig synlighed til at finde, identificere og sikre hele ot/IOT-aktivlageret, Microsoft Defender for Endpoint understøtter nu følgende integrationer:
 
-- **Corelight**: Microsoft har indgået partnerskab med Corelight for at modtage data fra Corelight-netværkskabe. Dette giver Microsoft 365 Defender øget synlighed i netværksaktiviteterne for enheder, der ikke er administrerede, herunder kommunikation med andre enheder, der ikke er administrerede, eller eksterne netværk. Få mere at vide under [Aktivér Corelight-dataintegration](corelight-integration.md).
+- **Corelight**: Microsoft har indgået partnerskab med Corelight for at modtage data fra Corelight-netværksapparater. Dette giver Microsoft 365 Defender med øget synlighed i netværksaktiviteterne for ikke-administrerede enheder, herunder kommunikation med andre ikke-administrerede enheder eller eksterne netværk. Du kan få flere oplysninger under [Aktivér corelight-dataintegration](corelight-integration.md).
 
-- **Microsoft Defender til IoT**: Denne integration kombinerer Microsoft Defender for Endpoint's enhedsregistreringsfunktioner med de agentfri overvågningsfunktioner i Microsoft Defender til IoT for at sikre virksomhedens IoT-enheder, der er sluttet til et it-netværk (f.eks. VoIP (Voice over Internet Protocol), printere og smart-tv). Få mere at vide under [Aktivér Microsoft Defender til IoT-integration](enable-microsoft-defender-for-iot-integration.md).
+- **Microsoft Defender for IoT**: Denne integration kombinerer Microsoft Defender for Endpoint enheds registreringsfunktioner med de agentløse overvågningsfunktioner i Microsoft Defender til IoT for at sikre virksomheds-IoT-enheder, der er forbundet til et it-netværk (f.eks. VoIP (Voice over Internet Protocol), printere og intelligente tv'er). Du kan få flere oplysninger under [Aktivér Microsoft Defender for IoT-integration](enable-microsoft-defender-for-iot-integration.md).
 
-## <a name="vulnerability-assessment-on-discovered-devices"></a>Vurdering af sikkerhedsrisiko på enheder, der opdages
+## <a name="vulnerability-assessment-on-discovered-devices"></a>Vurdering af sårbarheder på registrerede enheder
 
-Sårbarheder og risici på dine enheder samt andre enheder, der ikke er administrerede i netværket, er en del af de aktuelle TVM-flows under "Security Anbefalinger" og er repræsenteret på enhedssider på tværs af portalen.
-Søg efter "SSH"-relaterede sikkerhedsanbefalinger for at finde SSH-sårbarheder, der er relateret til ikke-administrerede og administrerede enheder.
+Sikkerhedsrisici og risici på dine enheder samt andre registrerede ikke-administrerede enheder i netværket er en del af de aktuelle TVM-flow under "Sikkerheds Anbefalinger" og vises på enhedssider på tværs af portalen.
+Søg efter "SSH"-relaterede sikkerhedsanbefalinger for at finde SSH-sikkerhedsrisici, der er relateret til ikke-administrerede og administrerede enheder.
 
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Dashboardet med sikkerhedsanbefalinger" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::
 
 
-## <a name="use-advanced-hunting-on-discovered-devices"></a>Brug Avanceret jagt på enheder, der opdages
+## <a name="use-advanced-hunting-on-discovered-devices"></a>Brug Avanceret jagt på registrerede enheder
 
-Du kan bruge avanceret jagtforespørgsler til at opnå synlighed på enheder, der opdages.
-Find oplysninger om fundne slutpunkter i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
+Du kan bruge Forespørgsler om avanceret jagt til at få indsigt på registrerede enheder.
+Find oplysninger om registrerede slutpunkter i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
 
-:::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Den avancerede jagtside, hvor forespørgsler kan bruges" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
+:::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Siden Avanceret jagt, hvor forespørgsler kan bruges" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
-Enhedsregistrering udnytter Microsoft Defender for Endpoint onboardede enheder som en netværksdatakilde til at attributaktiviteter til ikke-onboardede enheder. Det betyder, at hvis en Microsoft Defender for Endpoint onboarded enhed kommunikeret med en ikke-onboardet enhed, kan aktiviteter på den ikke-onboardede enhed ses på tidslinjen og via tabellen Avanceret på jagt efter DeviceNetworkEvents.
+Enhedsregistrering udnytter Microsoft Defender for Endpoint onboardede enheder som en netværksdatakilde til at tildele aktiviteter til ikke-onboardede enheder. Det betyder, at hvis en Microsoft Defender for Endpoint onboardet enhed kommunikeres med en ikke-onboardet enhed, kan aktiviteter på den ikke-onboardede enhed ses på tidslinjen og via tabellen Advanced hunting DeviceNetworkEvents.
 
-Nye hændelser er TCP-forbindelser (Transmission Control Protocol) og vil passe til det aktuelle DeviceNetworkEvents-skema. TCP-Microsoft Defender for Endpoint fra en ikke-aktiveret Microsoft Defender for Endpoint.
+Nye hændelser er TCP-forbindelser (Transmission Control Protocol) og passer til det aktuelle DeviceNetworkEvents-skema. TCP-indgående data til den Microsoft Defender for Endpoint aktiverede enhed fra en ikke-Microsoft Defender for Endpoint aktiveret.
 
 Følgende handlingstyper er også blevet tilføjet:
 
 - ConnectionAttempt – Et forsøg på at oprette en TCP-forbindelse (syn)
-- ConnectionAckendt – En bekræftelse af, at en TCP-forbindelse blev accepteret (syn\ack)
+- ConnectionAcknowledged – En bekræftelse på, at en TCP-forbindelse blev accepteret (syn\ack)
 
 Du kan prøve denne eksempelforespørgsel:
 
@@ -140,5 +140,5 @@ DeviceNetworkEvents
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Konfigurer enhedsregistrering](configure-device-discovery.md)
+- [Konfigurer enhedssøgning](configure-device-discovery.md)
 - [Ofte stillede spørgsmål om enhedsregistrering](device-discovery-faq.md)

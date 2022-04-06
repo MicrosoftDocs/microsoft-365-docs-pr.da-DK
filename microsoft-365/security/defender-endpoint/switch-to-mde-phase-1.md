@@ -21,14 +21,14 @@ ms.topic: article
 ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
-ms.date: 11/30/2021
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: aa0bd45c1765e2aa794e00e437bf08a63d1d742f
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 33ad09cb87c80aecbaa72ebe9fb2b6523962498f
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476725"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634421"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Skift til Microsoft Defender for Endpoint – Fase 1: Forbered
 
@@ -63,8 +63,6 @@ Har du brug for hjælp? Se løsningsudbyderens dokumentation.
 ### <a name="make-sure-your-organizations-devices-are-up-to-date"></a>Sørg for, at din organisations enheder er opdateret
 
 Har du brug for hjælp til at opdatere din organisations enheder? Se følgende ressourcer:
-
-<br/><br/>
 
 |OPERATIVSYSTEM|Ressource|
 |---|---|
@@ -104,7 +102,9 @@ Tilladelser til portalen Microsoft 365 Defender kan tildeles ved hjælp af grund
     Hvis din organisation kræver en anden metode end Intune, skal du vælge en af følgende indstillinger:
 
     - [Konfigurationsstyring](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration)
+
     - [Avanceret Gruppepolitik administration](/microsoft-desktop-optimization-pack/agpm)
+    
     - [Windows Administration](/windows-server/manage/windows-admin-center/overview)
 
 3. Giv adgang til Microsoft 365 Defender portalen. (Har du brug for hjælp? Se [Administrer portaladgang ved hjælp af RBAC](rbac.md).
@@ -113,17 +113,14 @@ Tilladelser til portalen Microsoft 365 Defender kan tildeles ved hjælp af grund
 
 For at aktivere kommunikation mellem dine enheder og Defender til Slutpunkt skal du konfigurere proxy- og internetindstillinger. Følgende tabel indeholder links til ressourcer, du kan bruge til at konfigurere din proxy og dine internetindstillinger for forskellige operativsystemer og funktioner:
 
-<br/><br/>
-
 |Funktioner|Operativsystem|Ressourcer|
 |---|---|---|
 |[Registrering af slutpunkt og svar](overview-endpoint-detection-response.md) (Slutpunktsregistrering og -svar)|[Windows 10](/windows/release-health/release-information) eller nyere<br/><br/>Windows Server 2022 <br/><br/>[Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/>[Windows Server 1803 eller nyere](/windows-server/get-started/whats-new-in-windows-server-1803)|[Konfigurere indstillinger for computerproxy og internetforbindelse](configure-proxy-internet.md)|
 |Slutpunktsregistrering og -svar|[Windows Server 2016](/windows/release-health/status-windows-10-1607-and-windows-server-2016)<br/><br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/><br/>[Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)<br/><br/>[Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/><br/>[Windows 7 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)|[Konfigurere indstillinger for proxy og forbindelse til internettet](onboard-downlevel.md#configure-proxy-and-internet-connectivity-settings)|
 |Slutpunktsregistrering og -svar|macOS (se [Systemkrav)](microsoft-defender-endpoint-mac.md)|[Defender til Slutpunkt på macOS: Netværksforbindelser](microsoft-defender-endpoint-mac.md#network-connections)|
-|[Microsoft Defender Antivirus](microsoft-defender-antivirus-in-windows-10.md)|[Windows 10](/windows/release-health/release-information) <br/><br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/> Windows Server 2022 <br/><br/> [Windows Server 1803 eller nyere](/windows-server/get-started/whats-new-in-windows-server-1803) <br/><br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)|[Konfigurere og validere Microsoft Defender Antivirus netværksforbindelser](configure-network-connections-microsoft-defender-antivirus.md)|
+|[Microsoft Defender Antivirus](microsoft-defender-antivirus-in-windows-10.md)|[Windows 10](/windows/release-health/release-information) eller nyere <br/><br/>Windows Server 2022 <br/><br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/> [Windows Server 1803 eller nyere](/windows-server/get-started/whats-new-in-windows-server-1803) <br/><br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)|[Konfigurer og valider Microsoft Defender Antivirus netværksforbindelser](configure-network-connections-microsoft-defender-antivirus.md)|
 |Antivirus|macOS (se [Systemkrav)](microsoft-defender-endpoint-mac.md)|[Defender til Slutpunkt på macOS: Netværksforbindelser](microsoft-defender-endpoint-mac.md#network-connections)|
 |Antivirus|Linux (se [Systemkrav](microsoft-defender-endpoint-linux.md#system-requirements))|[Defender til slutpunkt på Linux: Netværksforbindelser](microsoft-defender-endpoint-linux.md#network-connections)|
-
 
 ## <a name="next-step"></a>Næste trin
 

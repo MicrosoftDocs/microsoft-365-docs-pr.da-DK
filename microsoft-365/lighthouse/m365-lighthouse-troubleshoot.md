@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
-ms.openlocfilehash: 1bd98a90af19d60aba2e0891c3f993e77523a12c
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: 24f282420bb69188106178cefc6fb89968f4fcf6
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632355"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645028"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Fejlfind og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
 
@@ -54,7 +54,7 @@ I denne artikel beskrives fejlmeddelelser og problemer, du kan støde på, når 
 **Årsag:** Dine kundelejere opfylder ikke følgende kriterier:
 
   - Skal have konfigureret delegeret adgang for den administrerede tjenesteudbyder for at kunne administrere kundelejeren*
-  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 licens eller Windows 365 Business licens
+  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens
   - Ikke må have mere end 1000 brugere med licens 
 
 **Løsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og forklarer, hvordan du løser dem.
@@ -137,4 +137,4 @@ Hvis data stadig ikke vises på siderne Enhedsoverholdelse og Trusselsadministra
 
 [Kendte problemer med Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) (artikel)\
 [Microsoft 365 ofte stillede spørgsmål om Fyrtårn](m365-lighthouse-faq.yml) (artikel)\
-[Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (artikel)
+[Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (artikel)

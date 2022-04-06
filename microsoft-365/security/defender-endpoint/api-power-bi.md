@@ -1,7 +1,7 @@
 ---
-title: Api'er fra Microsoft Defender til Slutpunkt til Power BI
+title: Microsoft Defender for Endpoint API-forbindelse til Power BI
 ms.reviewer: ''
-description: Opret en Power Business Intelligence-rapport (BI) oven på Microsoft Defender til slutpunkt-API'er.
+description: Opret en Power Business Intelligence-rapport (BI) oven på Microsoft Defender for Endpoint API'er.
 keywords: API'er, understøttede api'er, Power BI, rapporter
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,43 +16,43 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 765af5e4a2e880aa9b6c1208495537ad8cf5f26b
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 4cad6fd5188745773ce561d1db697989598a1dc5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63592716"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472149"
 ---
 # <a name="create-custom-reports-using-power-bi"></a>Oprette brugerdefinerede rapporter ved hjælp af Power BI
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
-- Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+- Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-I dette afsnit kan du se, hvordan du opretter Power BI rapport oven på Defender til endpoint-API'er.
+I dette afsnit lærer du at oprette en rapport Power BI oven på Defender til endpoint-API'er.
 
 Det første eksempel viser, hvordan du forbinder Power BI til Avanceret api, og det andet eksempel viser en forbindelse til vores OData-API'er, f.eks. Maskinhandlinger eller Beskeder.
 
 ## <a name="connect-power-bi-to-advanced-hunting-api"></a>Forbind Power BI til Avanceret api
 
-- Åbn Microsoft Power BI
+- Åbn Microsoft Power BI.
 
-- Klik **på Hent tom** **dataforespørgsel** \>
+- Klik **på Hent tom** **dataforespørgsel**\>.
 
-  ![Billede af opret tom forespørgsel.](images/power-bi-create-blank-query.png)
+  :::image type="content" source="images/power-bi-create-blank-query.png" alt-text="Indstillingen Tom forespørgsel under menuelementet Hent data" lightbox="images/power-bi-create-blank-query.png":::
 
-- Klik **på Avanceret editor**
+- Klik **Avanceret editor**.
 
-  ![Billede af Åbn Avanceret editor.](images/power-bi-open-advanced-editor.png)
+  :::image type="content" source="images/power-bi-open-advanced-editor.png" alt-text="Det Avanceret editor menupunkt" lightbox="images/power-bi-open-advanced-editor.png":::
 
 - Kopiér nedenstående, og indsæt det i editoren:
 
@@ -94,23 +94,24 @@ Det første eksempel viser, hvordan du forbinder Power BI til Avanceret api, og 
     in Table
 ```
 
-- Klik **på Udført**
+- Klik **på Udført**.
 
-- Klik **på Rediger legitimationsoplysninger**
+- Klik **på Rediger legitimationsoplysninger**.
 
-    ![Billede af rediger legitimationsoplysninger0.](images/power-bi-edit-credentials.png)
+    :::image type="content" source="images/power-bi-edit-credentials.png" alt-text="Menupunktet Rediger legitimationsoplysninger" lightbox="images/power-bi-edit-credentials.png":::
+    
 
-- Vælg **Organisationskonto** \> **Log på**
+- Vælg **Organisationskonto** \> **Log på**.
 
-    ![Billede af angiv legitimationsoplysninger1.](images/power-bi-set-credentials-organizational.png)
+    :::image type="content" source="images/power-bi-set-credentials-organizational.png" alt-text="Indstillingen Log på i menuelementet Organisationskonto" lightbox="images/power-bi-set-credentials-organizational.png":::
 
-- Angiv dine legitimationsoplysninger, og vent på at være logget på
+- Angiv dine legitimationsoplysninger, og vent på, at du er logget på.
 
-- Klik **Forbind**
+- Klik **Forbind**.
 
-    ![Billede af sæt af legitimationsoplysninger2.](images/power-bi-set-credentials-organizational-cont.png)
+    :::image type="content" source="images/power-bi-set-credentials-organizational-cont.png" alt-text="Bekræftelsesmeddelelsen om logon i menuelementet Organisationskonto" lightbox="images/power-bi-set-credentials-organizational-cont.png":::
 
-- Nu vises resultaterne af forespørgslen som en tabel, og du kan begynde at bygge visualiseringer oven på den!
+- Nu vises resultaterne af forespørgslen som en tabel, og du kan begynde at opbygge visualiseringer oven på den!
 
 - Du kan duplikere denne tabel, omdøbe den og redigere forespørgslen Avanceret jagt inde for at få alle data, du ønsker.
 
@@ -131,7 +132,7 @@ Det første eksempel viser, hvordan du forbinder Power BI til Avanceret api, og 
 ```
 
 - Du kan gøre det samme for **beskeder** og **maskiner**.
-- Du kan også bruge OData-forespørgsler til forespørgselsfiltre under Brug [af OData-forespørgsler](exposed-apis-odata-samples.md)
+- Du kan også bruge OData-forespørgsler til forespørgselsfiltre under Brug [af OData-forespørgsler](exposed-apis-odata-samples.md).
 
 ## <a name="power-bi-dashboard-samples-in-github"></a>Power BI dashboardeksempler i GitHub
 
@@ -139,7 +140,7 @@ Du kan finde flere oplysninger [i Power BI rapportskabeloner](https://github.com
 
 ## <a name="sample-reports"></a>Eksempelrapporter
 
-Få vist eksempler på rapporter for Microsoft Defender Power BI slutpunkter. Du kan finde flere oplysninger [i Gennemse kodeeksempler](/samples/browse/?products=mdatp).
+Få vist Microsoft Defender for Endpoint Power BI rapporteksempler. Du kan finde flere oplysninger [i Gennemse kodeeksempler](/samples/browse/?products=mdatp).
 
 ## <a name="related-topics"></a>Relaterede emner
 

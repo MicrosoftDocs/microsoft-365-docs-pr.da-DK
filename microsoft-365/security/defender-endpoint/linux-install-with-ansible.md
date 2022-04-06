@@ -1,8 +1,8 @@
 ---
-title: Installer Microsoft Defender til slutpunkt på Linux med Ansible
+title: Installér Microsoft Defender for Endpoint på Linux med Ansible
 ms.reviewer: ''
-description: Beskriver, hvordan du installerer Microsoft Defender til slutpunkt på Linux ved hjælp af Ansible.
-keywords: microsoft, defender, Microsoft Defender til Slutpunkt, linux, installation, deploy, uninstallation, defender, ansible, linux, redhat, ubuntu, defender, sles, suse, centos, amazon linux 2
+description: Beskriver, hvordan du installerer Microsoft Defender for Endpoint på Linux ved hjælp af Ansible.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, installations, ansible, linux, redhat, ubuntu, defender, sles, suse, centos, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,20 +16,20 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 6a2c29d27814b4ed8c199b7a4db1ee10ce37b86c
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 57f0687fce422f26b76fc8b98a06ce0566f90f60
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63592065"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476065"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-ansible"></a>Installer Microsoft Defender til slutpunkt på Linux med Ansible
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-ansible"></a>Installér Microsoft Defender for Endpoint på Linux med Ansible
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
@@ -75,7 +75,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal:
 2. I den første rullemenu skal du vælge **Linux Server** som operativsystem. I den anden rullemenu skal du vælge Dit **foretrukne Linux-konfigurationsstyringsværktøj** som installationsmetode.
 3. Vælg **Download onboarding pakke**. Gem filen som WindowsDefenderATPOnboardingPackage.zip.
 
-    ![Microsoft 365 Defender portalskærm.](images/portal-onboarding-linux-2.png)
+   :::image type="content" source="images/portal-onboarding-linux-2.png" alt-text="Indstillingen Download onboarding package" lightbox="images/portal-onboarding-linux-2.png":::
 
 4. Kontrollér, at du har filen, i en kommandoprompt. Udtræk indholdet af arkivet:
 

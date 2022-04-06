@@ -1,6 +1,6 @@
 ---
-title: Trin 3. Udfør en gennemgang efter hændelsen af din første hændelse
-description: Sådan udfører du en gennemgang af din første hændelse Microsoft 365 Defender.
+title: Trin 3. Udfør en gennemgang efter en hændelse af din første hændelse
+description: Sådan udfører du en gennemgang af din første hændelse i Microsoft 365 Defender.
 keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
@@ -22,40 +22,40 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 3139cab64a967ed65a16867b53ad57a6913afd2c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: d2d137ea2a97bb183187ca83eb12a34ab336bc53
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597915"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665992"
 ---
-# <a name="step-3-perform-a-post-incident-review-of-your-first-incident"></a>Trin 3. Udfør en gennemgang efter hændelsen af din første hændelse
+# <a name="step-3-perform-a-post-incident-review-of-your-first-incident"></a>Trin 3. Udfør en gennemgang efter en hændelse af din første hændelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-NIST (National Institute of Standards and Technology) anbefaler, at når alle trin er blevet taget for at genoprette efter angrebene, skal organisationer gennemgå hændelsen for at lære af den og forbedre sikkerhedsstilling eller processer. Vurdering af de forskellige aspekter af hændelseshåndtering bliver vigtigt i forbindelse med forberedelse til den næste hændelse.
+NIST (National Institute of Standards and Technology) anbefaler, at når alle trin er taget for at komme sig efter angrebet, skal organisationer gennemgå hændelsen for at lære af den og forbedre sikkerhedsholdning eller -processer. Det bliver vigtigt at vurdere de forskellige aspekter af håndteringen af hændelser i forbindelse med forberedelsen af den næste hændelse.
 
-Microsoft 365 Defender kan hjælpe med at udføre aktiviteter efter hændelsen ved at give en organisation besked, der er i overensstemmelse med [MITRE ATT&CK Framework](https://attack.mitre.org/). Alle Microsoft Defender-løsninger mærker angreb i overensstemmelse med en ATT&CK-taktik eller -teknik.
+Microsoft 365 Defender kan hjælpe med at udføre aktiviteter efter hændelser ved at give en organisation beskeder, der er i overensstemmelse med [MITRE ATT&CK Framework](https://attack.mitre.org/). Alle Microsoft Defender-løsningers mærkatangreb i overensstemmelse med en ATT-&CK-taktik eller -teknik.
 
-Ved at tilknytte beskeder til denne branchestruktur kan du:
+Ved at knytte beskeder til denne branchestruktur kan du:
 
-- Udføre en analyse af huller i sikkerhedsdækning.
-- Fastsæt adversær attribut og kampagnetilskrivelse.
-- Udfør en tendensanalyse.
-- Identificer kompetenceforskelle i opmærksomhed omkring angrebsmetoden.
-- Opret en Power Automate lærebog for hurtigere afhjælpning.
+- Foretag en analyse af hullerne i sikkerhedsdækningen.
+- Bestem modparten og kampagnetilskrivelsen.
+- Udfør tendensanalyse.
+- Identificer kvalifikationshuller i kendskabet til angrebsmetoder.
+- Opret en Power Automate Playbook for at få hurtigere afhjælpning.
 
-Gennemgangsaktiviteter efter hændelser kan også resultere i finjustering af sikkerhedskonfigurationen og sikkerhedsteamets processer for at strømline din organisations svarmuligheder.
+Gennemgangsaktivitet efter hændelse kan også resultere i finjustering af din sikkerhedskonfiguration og sikkerhedsteamets processer for at strømline organisationens svarfunktioner.
 
 ## <a name="next-step"></a>Næste trin
 
 Se disse yderligere undersøgelsesstier:
 
 - [Phishing-mail](first-incident-path-phishing.md)
-- [Identitetsbaserede angreb](first-incident-path-identity.md)
+- [Identitetsbaseret angreb](first-incident-path-identity.md)
 
 
 ## <a name="see-also"></a>Se også

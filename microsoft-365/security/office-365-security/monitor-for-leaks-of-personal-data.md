@@ -19,12 +19,12 @@ search.appverid:
 description: Få mere at vide om tre værktøjer, du kan bruge til at overvåge for lækager af personlige data.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ba164fde38be1e8eed53b71ab568124140deaac5
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 4024640173d6cbbf6817d3fa2b1c24cb7264833c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682697"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470851"
 ---
 # <a name="monitor-for-leaks-of-personal-data"></a>Hold øje med lækager af personlige data
 
@@ -33,7 +33,7 @@ ms.locfileid: "63682697"
 
 Der er mange værktøjer, der kan bruges til at overvåge brugen og transport af personlige data. I dette emne beskrives tre værktøjer, der fungerer godt.
 
-![Værktøjer til at overvåge brugen og transport af personlige data.](../../media/Monitor-for-leaks-of-personal-data-image1.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image1.png" alt-text="Værktøjer til overvågning af brug og transport af personlige data" lightbox="../../media/Monitor-for-leaks-of-personal-data-image1.png":::
 
 I illustrationen:
 
@@ -41,7 +41,7 @@ I illustrationen:
 
 - Brug derefter påmindelsespolitikker og overvågningsloggen til at overvåge aktivitet på tværs af tjenester. Konfigurer løbende overvågning, eller søg i overvågningsloggen for at undersøge en hændelse. Overvågningsloggen fungerer på tværs af tjenester – Sway, Power BI, eDiscovery, Dynamics 365, Power Automate, Microsoft Teams, administratoraktivitet, OneDrive for Business, SharePoint Online, in transit- og postkasser. Skype samtaler medtages i in hvilende postkasser.
 
-- Til sidst skal du bruge Microsoft Defender til skyapps til at overvåge filer med følsomme data i andre SaaS-udbydere. Muligheden for at bruge følsomme oplysningstyper og samlede etiketter på tværs af Azure Information Protection og Office med Defender til skyapps kommer snart. Du kan konfigurere politikker, der gælder for alle dine SaaS-apps eller bestemte apps (f.eks. Box). Defender til skyapps finder ikke filer i Exchange Online, herunder filer, der er vedhæftet mail.
+- Til sidst skal Microsoft Defender for Cloud Apps til at overvåge filer med følsomme data i andre SaaS-udbydere. Kommer snart muligheden for at bruge følsomme oplysningstyper og samlede etiketter på tværs af Azure Information Protection Office med Defender til skyapps. Du kan konfigurere politikker, der gælder for alle dine SaaS-apps eller bestemte apps (f.eks. Box). Defender til skyapps finder ikke filer i Exchange Online, herunder filer, der er vedhæftet mail.
 
 ## <a name="data-loss-prevention-reports"></a>Rapporter om forebyggelse af datatab
 
@@ -62,7 +62,7 @@ DLP-rapporter er i Microsoft 365 Overholdelsescenter. Gå til **sektionen Rappor
 
 Få mere at vide under [Få vist rapporter for forebyggelse af datatab](../../compliance/view-the-dlp-reports.md).
 
-![Rapport, der viser opfylder DLP-politik.](../../media/Monitor-for-leaks-of-personal-data-image2.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image2.png" alt-text="Rapporten, der viser DLP-politik match" lightbox="../../media/Monitor-for-leaks-of-personal-data-image2.png":::
 
 ## <a name="audit-log-and-alert-policies"></a>Politikker for overvågningslog og besked
 
@@ -88,17 +88,17 @@ Flere oplysninger om beskedpolitikker og søgning i overvågningsloggen:
 - [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) (cmdlet)
 - [Detaljerede egenskaber i overvågningsloggen](../../compliance/detailed-properties-in-the-office-365-audit-log.md)
 
-## <a name="microsoft-defender-for-cloud-apps"></a>Microsoft Defender til skyapps
+## <a name="microsoft-defender-for-cloud-apps"></a>Microsoft Defender for Cloud Apps
 
-Microsoft Defender til skyapps hjælper dig med at opdage andre SaaS-apps i brug på tværs af dine netværk og følsomme data, der sendes til og fra disse apps.
+Microsoft Defender for Cloud Apps hjælper dig med at opdage andre SaaS-apps i brug på tværs af dine netværk og følsomme data, der sendes til og fra disse apps.
 
-Microsoft Defender til skyapps er en omfattende tjeneste, der giver stor synlighed, granularkontrolelementer og forbedret trusselsbeskyttelse til dine skyapps. Den identificerer mere end 15.000 skyprogrammer i dit netværk fra alle enheder og giver risikoscore og løbende risikovurdering og analyse. Der kræves ingen agenter: Oplysninger indsamles fra dine firewalls og proxyer for at give dig komplet synlighed og kontekst til skybrug og skygge IT.
+Microsoft Defender for Cloud Apps er en omfattende tjeneste, der giver stor synlighed, granularkontrolelementer og forbedret trusselsbeskyttelse til dine skyapps. Den identificerer mere end 15.000 skyprogrammer i dit netværk fra alle enheder og giver risikoscore og løbende risikovurdering og analyse. Der kræves ingen agenter: Oplysninger indsamles fra dine firewalls og proxyer for at give dig komplet synlighed og kontekst til skybrug og skygge IT.
 
 For bedre at forstå dit skymiljø giver funktionen Defender for Cloud Apps-undersøgelse stor synlighed i alle aktiviteter, filer og konti for godkendt og administrerede apps. Du kan få detaljerede oplysninger om et filniveau og finde ud af, hvor data rejses i skyappsene.
 
 Følgende illustration viser f.eks. to politikker for Defender for Cloud Apps, som kan hjælpe med GDPR.
 
-![Eksempel på politikker for Defender til skyapps.](../../media/Monitor-for-leaks-of-personal-data-image3.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image3.png" alt-text="Politikkerne for Defender for Cloud Apps" lightbox="../../media/Monitor-for-leaks-of-personal-data-image3.png":::
 
 Den første politikbeskeder, når filer med en foruddefineret PII-attribut eller et brugerdefineret udtryk, som du vælger, deles uden for organisationen fra de SaaS-apps, du vælger.
 
@@ -107,22 +107,22 @@ Den anden politik blokerer overførsler af filer til enhver ikke-administreret e
 Disse attributtyper kommer snart til Defender til skyapps:
 
 - Typer af følsomme oplysninger
-- Samlede etiketter på tværs Microsoft 365 Og Azure Information Protection
+- Samlede etiketter på tværs Microsoft 365 og Azure Information Protection
 
 ### <a name="defender-for-cloud-apps-dashboard"></a>Dashboardet Defender til skyapps
 
 Hvis du endnu ikke er begyndt at bruge Defender til skyapps, kan du starte med at starte det. Sådan får du adgang til Defender til skyapps: <https://portal.cloudappsecurity.com>.
 
 > [!NOTE]
-> Sørg for at aktivere "Scan automatisk filer efter klassificeringsetiketter til Azure Information Protection" (under Generelle indstillinger), når du går i gang med Defender til skyapps, eller før du tildeler navne. Efter konfigurationen scanner Defender til skyapps ikke eksisterende filer igen, før de er blevet ændret.
+> Sørg for at aktivere "Scan automatisk filer til Azure Information Protection klassificeringsetiketter" (under Generelle indstillinger), når du går i gang med Defender til skyapps, eller før du tildeler navne. Efter konfigurationen scanner Defender til skyapps ikke eksisterende filer igen, før de er blevet ændret.
 
-![Dashboard, der viser oplysninger om beskeder.](../../media/Monitor-for-leaks-of-personal-data-image4.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image4.png" alt-text="Dashboardet med oplysninger om beskeder" lightbox="../../media/Monitor-for-leaks-of-personal-data-image4.png":::
 
 Flere oplysninger:
 
 - [Installér Defender til skyapps](/cloud-app-security/getting-started-with-cloud-app-security)
-- [Flere oplysninger om Microsoft Defender til skyapps](https://www.microsoft.com/cloud-platform/cloud-app-security)
-- [Bloker downloads af følsomme oplysninger ved hjælp af proxyen for Microsoft Defender til skyapps](/cloud-app-security/use-case-proxy-block-session-aad)
+- [Flere oplysninger om Microsoft Defender for Cloud Apps](https://www.microsoft.com/cloud-platform/cloud-app-security)
+- [Bloker overførsler af følsomme oplysninger ved hjælp Microsoft Defender for Cloud Apps proxy](/cloud-app-security/use-case-proxy-block-session-aad)
 
 ## <a name="example-file-and-activity-policies-to-detect-sharing-of-personal-data"></a>Eksempel på fil- og aktivitetspolitikker til at registrere deling af personlige data
 
@@ -163,7 +163,7 @@ Bemærkninger:
 |Politikkens alvorsgrad|Høj|
 |Kategori|Delingskontrol|
 |Der skal handles på|Enkelt aktivitet|
-|Filterindstillinger|Aktivitetstype = Upload fil <p> App = Microsoft OneDrive for Business og Box <p> Classification Label (currently in private preview): Azure Information Protection = Customer Data, HUMAN Resources —Salary Data, HUMAN Resources — Employee Data|
+|Filterindstillinger|Aktivitetstype = Upload fil <p> App = Microsoft OneDrive for Business og Box <p> Classification Label (currently in private preview): Azure Information Protection = Customer Data, HUMAN Resources — Salary Data, HUMAN Resources — Employee Data|
 |Beskeder|Opret en besked: markeret <p> Grænse for daglig besked: 1000 <p> Vælg en besked som mail: markeret <p> Hvis du vil: infosec@contoso.com|
 |Styring|Alle apps <p> Sæt bruger i karantæne: tjek <p> Alle andre indstillinger: ikke markeret <p> Office 365 <p> Sæt bruger i karantæne: tjek <p> Alle andre indstillinger: ikke markeret|
 

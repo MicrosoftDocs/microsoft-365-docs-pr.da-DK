@@ -1,7 +1,7 @@
 ---
-title: Manuel installation af Microsoft Defender til Endpoint på macOS
-description: Installer Microsoft Defender til Slutpunkt på macOS manuelt fra kommandolinjen.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, installation, deploy, uninstallation, intune,propf, macos, catalina, mojave, high sierra
+title: Manuel installation til Microsoft Defender for Endpoint på macOS
+description: Installer Microsoft Defender for Endpoint på macOS manuelt fra kommandolinjen.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, installation, deploy, uninstallation, intune,propf, macos, catalina, mojave, high sierra
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,25 +16,25 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1fce7aa103de9fb90cafa88a286cbf33bc753456
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 7793a367b591490f3b70055bc5b437eec798cb28
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592640"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475977"
 ---
-# <a name="manual-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Manuel installation af Microsoft Defender til Endpoint på macOS
+# <a name="manual-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Manuel installation til Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink).
 
-I dette emne beskrives det, hvordan du installerer Microsoft Defender til Endpoint på macOS manuelt. En vellykket installation kræver, at alle følgende trin er gennemført:
+I dette emne beskrives det, hvordan du Microsoft Defender for Endpoint på macOS manuelt. En vellykket installation kræver, at alle følgende trin er gennemført:
 
 - [Download installations- og onboardingpakker](#download-installation-and-onboarding-packages)
 - [Programinstallation (macOS 10.15)](#application-installation-macos-1015)
@@ -43,7 +43,7 @@ I dette emne beskrives det, hvordan du installerer Microsoft Defender til Endpoi
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
-Før du går i gang, skal du se microsoft [Defender for Endpoint på macOS-hovedsiden](microsoft-defender-endpoint-mac.md) for en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
+Før du går i gang, skal du [se Microsoft Defender for Endpoint på macOS-siden](microsoft-defender-endpoint-mac.md) for at få en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
 
 ## <a name="download-installation-and-onboarding-packages"></a>Download installations- og onboardingpakker
 
@@ -54,7 +54,7 @@ Download installations- og onboardingpakkerne fra Microsoft 365 Defender portal:
 3. I sektion 2 på siden skal du vælge **Download installationspakke**. Gem den som wdav.pkg til en lokal mappe.
 4. I sektion 2 på siden skal du vælge **Download onboardingpakke**. Gem den som WindowsDefenderATPOnboardingPackage.zip i den samme mappe.
 
-    ![Microsoft 365 Defender portalskærm.](images/portal-onboarding-macos.png)
+   :::image type="content" source="images/portal-onboarding-macos.png" alt-text="Mulighederne for at downloade installations- og onboardingpakker" lightbox="images/portal-onboarding-macos.png":::
 
 5. I en kommandoprompt skal du bekræfte, at du har de to filer.
 
@@ -64,28 +64,28 @@ Du skal have administratorrettigheder på enheden for at fuldføre denne proces.
 
 1. Gå til den downloadede wdav.pkg i Finder, og åbn den.
 
-    ![Skærmbillede af installation af app1.](images/mdatp-28-appinstall.png)
+   :::image type="content" source="images/mdatp-28-appinstall.png" alt-text="Installationen af programmet" lightbox="images/mdatp-28-appinstall.png":::
 
 2. Vælg **Fortsæt**, enig med licensvilkårene, og angiv adgangskoden, når du bliver bedt om det.
 
-    ![Skærmbillede af installation af app2.](images/mdatp-29-appinstalllogin.png)
+   :::image type="content" source="images/mdatp-29-appinstalllogin.png" alt-text="Programinstallationen" lightbox="images/mdatp-29-appinstalllogin.png":::
 
    > [!IMPORTANT]
    > Du bliver bedt om at tillade, at en driver fra Microsoft bliver installeret (enten "Systemudvidelse blokeret" eller "Installation er sat i venteposition" eller begge dele. Driveren skal være installeret.
 
-   ![Skærmbillede af installation af app3.](images/mdatp-30-systemextension.png)
+     :::image type="content" source="images/mdatp-30-systemextension.png" alt-text="Programmets installation" lightbox="images/mdatp-30-systemextension.png":::
 
 3. Vælg **Åbn sikkerhedsindstillinger, eller** **åbn Systemindstillinger, > sikkerhedsoplysninger & beskyttelse af personlige oplysninger**. Vælg **Tillad**:
 
-    ![Skærmbillede af vinduet Sikkerhed og beskyttelse af personlige oplysninger.](images/mdatp-31-securityprivacysettings.png)
+   :::image type="content" source="images/mdatp-31-securityprivacysettings.png" alt-text="Vinduet Sikkerhed og beskyttelse af personlige oplysninger" lightbox="images/mdatp-31-securityprivacysettings.png":::
 
    Installationen fortsætter.
 
    > [!CAUTION]
-   > Hvis du ikke vælger **Tillad**, fortsætter installationen efter 5 minutter. Microsoft Defender til slutpunkt indlæses, men nogle funktioner, f.eks beskyttelse i realtid, deaktiveres. Se [Fejlfinding af problemer med kerneudvidelse](mac-support-kext.md) for at få oplysninger om, hvordan du løser dette.
+   > Hvis du ikke vælger **Tillad**, fortsætter installationen efter 5 minutter. Microsoft Defender for Endpoint indlæses, men visse funktioner, f.eks beskyttelse i realtid, deaktiveres. Se [Fejlfinding af problemer med kerneudvidelse](mac-support-kext.md) for at få oplysninger om, hvordan du løser dette.
 
 > [!NOTE]
-> macOS anmoder muligvis om at genstarte enheden ved den første installation af Microsoft Defender til slutpunkt. Beskyttelse i realtid er ikke tilgængelig, før enheden genstartes.
+> macOS anmoder muligvis om at genstarte enheden ved den første installation af Microsoft Defender for Endpoint. Beskyttelse i realtid er ikke tilgængelig, før enheden genstartes.
 
 ## <a name="application-installation-macos-11-and-newer-versions"></a>Programinstallation (macOS 11 og nyere versioner)
 
@@ -93,31 +93,31 @@ Du skal have administratorrettigheder på enheden for at fuldføre denne proces.
 
 1. Gå til den downloadede wdav.pkg i Finder, og åbn den.
 
-    ![Skærmbillede af installation af app4.](images/monterey-install-1.png)
+   :::image type="content" source="images/monterey-install-1.png" alt-text="Installationsprocessen for programmet" lightbox="images/monterey-install-1.png":::
 
 2. Vælg **Fortsæt**, enig med licensvilkårene, og angiv adgangskoden, når du bliver bedt om det.
 
 3. Når installationen er slut, bliver du promoveret til at godkende de systemudvidelser, der bruges af produktet. Vælg **Åbn sikkerhedsindstillinger**.
 
-    ![Godkendelse af systemudvidelse.](images/monterey-install-2.png)
+   :::image type="content" source="images/monterey-install-2.png" alt-text="Godkendelse af systemudvidelse" lightbox="images/monterey-install-2.png":::
 
 4. Vælg **Tillad & vinduet** Sikkerhed og **beskyttelse af personlige oplysninger**.
 
-    ![Sikkerhedsindstillinger for systemudvidelse1.](images/monterey-install-3.png)
+   :::image type="content" source="images/monterey-install-3.png" alt-text="Sikkerhedsindstillinger for systemudvidelse1" lightbox="images/monterey-install-3.png":::
 
-5. Gentag trin 3 & 4 for alle systemudvidelser, der distribueres med Microsoft Defender til slutpunkt på Mac.
+5. Gentag trin 3 & 4 for alle systemudvidelser, der er distribueret Microsoft Defender for Endpoint på Mac.
 
-6. Som en del af egenskaberne Slutpunktsregistrering og Svar undersøger Microsoft Defender til slutpunkt på Mac socket-trafik og rapporterer disse oplysninger til Microsoft 365 Defender portalen. Når du bliver bedt om at give Microsoft Defender for Endpoint-tilladelser til at filtrere netværkstrafik, skal du vælge **Tillad**.
+6. Som en del af egenskaberne slutpunktsregistrering og svar undersøger Microsoft Defender for Endpoint på Mac sockettrafik og rapporterer disse oplysninger til Microsoft 365 Defender portalen. Når du bliver bedt om Microsoft Defender for Endpoint give tilladelse til at filtrere netværkstrafik, skal du vælge **Tillad**.
 
-    ![Sikkerhedsindstillinger for systemudvidelse2.](images/monterey-install-4.png)
+   :::image type="content" source="images/monterey-install-4.png" alt-text="Sikkerhedsindstillinger for systemudvidelse2" lightbox="images/monterey-install-4.png":::
 
 7. Åbn **Systemindstillinger Sikkerhed** \> **&** beskyttelse af personlige oplysninger, og gå til  fanen Beskyttelse af personlige oplysninger. Giv fuld **diskadgangstilladelse** til **Microsoft Defender** **og Microsoft Defenders Endpoint Security Extension**.
 
-    ![Fuld diskadgang.](images/monterey-install-5.png)
+   :::image type="content" source="images/monterey-install-5.png" alt-text="Fuld diskadgang" lightbox="images/monterey-install-5.png":::
 
 ## <a name="client-configuration"></a>Klientkonfiguration
 
-1. Kopiér wdav.pkg MicrosoftDefenderATPOnboardingMacOs.py til den enhed, hvor du installerer Microsoft Defender til Slutpunkt på macOS.
+1. Kopiér wdav.pkg MicrosoftDefenderATPOnboardingMacOs.py til den enhed, hvor du installerer Microsoft Defender for Endpoint på macOS.
 
     Klientenheden er ikke knyttet til org_id. Bemærk, at *org_id* er tom.
 
@@ -140,14 +140,14 @@ Du skal have administratorrettigheder på enheden for at fuldføre denne proces.
     Efter installationen får du vist Microsoft Defender-ikonet på macOS-statuslinjen i øverste højre hjørne.
 
     > [!div class="mx-imgBorder"]
-    > ![Skærmbillede af Microsoft Defender-ikon på statuslinjen.](images/mdatp-icon-bar.png)
+    > :::image type="content" source="images/mdatp-icon-bar.png" alt-text="Microsoft Defender-ikonet på statuslinjen" lightbox="images/mdatp-icon-bar.png":::
 
 ## <a name="how-to-allow-full-disk-access"></a>Sådan tillader du fuld diskadgang
 
 > [!CAUTION]
-> macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fravær af dette samtykke kan Microsoft Defender til Slutpunkt ikke fuldt ud beskytte din enhed.
+> macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fraværet af dette samtykke Microsoft Defender for Endpoint du ikke helt beskytte din enhed.
 
-1. Hvis du vil give samtykke, skal **du åbne Sikkerhedsindstillinger** \> **& fuld** \> **diskadgang til beskyttelse** \> **af personlige oplysninger**. Klik på låseikonet for at foretage ændringer (nederst i dialogboksen). Vælg Microsoft Defender som slutpunkt.
+1. Hvis du vil give samtykke, skal **du åbne Sikkerhedsindstillinger** \> **& fuld** \> **diskadgang til beskyttelse** \> **af personlige oplysninger**. Klik på låseikonet for at foretage ændringer (nederst i dialogboksen). Vælg Microsoft Defender for Endpoint.
 
 2. Kør en test til registrering af lyd/lyd for at bekræfte, at enheden er korrekt onboardet og rapporterer til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
 
@@ -206,7 +206,7 @@ Du skal have administratorrettigheder på enheden for at fuldføre denne proces.
 
     Systemet bør vise følgende meddelelse:
 
-    > Microsoft Defender til Slutpunkt – macOS Slutpunktsregistrering og -svar DIY-testfil<br/>
+    > Microsoft Defender for Endpoint – macOS Slutpunktsregistrering og -svar DIY-testfil<br/>
     > Tilsvarende besked vil være tilgængelig i MDATP-portalen.
 
 10. Klik **på Åbn**.
@@ -217,7 +217,7 @@ Du skal have administratorrettigheder på enheden for at fuldføre denne proces.
 
 12. Gå til beskedkøen.
 
-    :::image type="content" source="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="Eksempel på en macOS-Slutpunktsregistrering og -svar, der viser alvorsgrad, kategori, registreringskilde og en skjult menu med handlinger.":::
+    :::image type="content" source="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="En macOS-Slutpunktsregistrering og -svar, der viser alvorsgrad, kategori, registreringskilde og en skjult menu med handlinger" lightbox="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png":::
 
     Kig på oplysningerne om beskeden og tidslinjen for enheden, og udfør de regelmæssige undersøgelsestrin.
 
@@ -227,4 +227,4 @@ Se [Problemer med logføring](mac-resources.md#logging-installation-issues) af i
 
 ## <a name="uninstallation"></a>Fjernelse af installation
 
-Se [Afinstallering](mac-resources.md#uninstalling) for at få mere at vide om, hvordan du fjerner Microsoft Defender til Endpoint på macOS fra klientenheder.
+Se [Afinstallering](mac-resources.md#uninstalling) for at få mere at vide om, hvordan Microsoft Defender for Endpoint på macOS fra klientenheder.

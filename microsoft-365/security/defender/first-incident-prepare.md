@@ -1,6 +1,6 @@
 ---
-title: Forbered din sikkerhed på din første hændelse
-description: Konfigurer din Microsoft 365 lejers sikkerhedsstilling for din første hændelse i Microsoft 365 Defender.
+title: Forbered din sikkerhedsholdning til din første hændelse
+description: Konfigurer din Microsoft 365 lejers sikkerhedsholdning for din første hændelse i Microsoft 365 Defender.
 keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
@@ -22,72 +22,72 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 92b7efdad61a4738310d5fb469400033f78363a8
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 0dbff9e88ed00dd8aa08fd64543266c3aef75d79
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570145"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664078"
 ---
-# <a name="prepare-your-security-posture-for-your-first-incident"></a>Forbered din sikkerhed på din første hændelse
+# <a name="prepare-your-security-posture-for-your-first-incident"></a>Forbered din sikkerhedsholdning til din første hændelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-Forberedelse til hændelseshåndtering indebærer konfiguration af tilstrækkelig beskyttelse af en organisations netværk fra forskellige typer sikkerhedshændelser. For at reducere risikoen for sikkerhedshændelser anbefaler NIST (National Institute of Standards and Technology) flere sikkerhedsmetoder, herunder risikovurdering, hardening af værtssikkerhed, konfiguration af netværk på sikker måde og forhindring af malware. 
+Forberedelse til håndtering af hændelser omfatter konfiguration af tilstrækkelig beskyttelse af en organisations netværk mod forskellige typer sikkerhedshændelser. For at reducere risikoen for sikkerhedshændelser anbefaler NIST (National Institute of Standards and Technology) flere sikkerhedspraksisser, herunder risikovurderinger, hærdning af værtssikkerhed, konfiguration af netværk sikkert og forebyggelse af malware.
 
-Microsoft 365 Defender kan hjælpe med at tage hånd om flere aspekter af forebyggelse af hændelser: 
+Microsoft 365 Defender kan hjælpe med at håndtere flere aspekter af forebyggelse af hændelser:
 
-- Implementering af [Nul tillid](/security/zero-trust/) struktur
-- Fastslå din sikkerhedsmæssige stilling ved at tildele en score med [Microsoft Secure Score](microsoft-secure-score.md)
-- Forhindring af trusler via vurdering af sikkerhedsrisiko i administration [af trusler og sikkerhedsrisiko](../defender-endpoint/next-gen-threat-and-vuln-mgt.md)
-- Forstå de nyeste sikkerhedstrusler, så du kan forberede dig på dem med [trusselsanalyse](threat-analytics.md)
+- Implementering af en [Nul tillid](/security/zero-trust/) ramme
+- Fastlæggelse af din sikkerhedsholdning ved at tildele en score med [Microsoft Secure Score](microsoft-secure-score.md)
+- Forebyggelse af trusler via sårbarhedsvurderinger i [administration af trusler og sårbarheder](../defender-endpoint/next-gen-threat-and-vuln-mgt.md)
+- Forstå de nyeste sikkerhedstrusler, så du kan forberede dig på dem med [trusselsanalyser](threat-analytics.md)
 
-## <a name="step-1-implement-zero-trust"></a>Trin 1. Implementere Nul tillid
+## <a name="step-1-implement-zero-trust"></a>Trin 1. Implementer Nul tillid
 
-[Nul tillid](/security/zero-trust/) er en integreret sikkerhedsintegreret og ende-til-ende-strategi, der tager højde for et moderne miljøs komplekse karakter, herunder den mobile arbejdsstyrke og brugere, enheder, programmer og data, uanset hvor de befinder sig. Hvis du har en enkelt rude med glas til at administrere alle registreringer på en ensartet måde, kan Microsoft 365 Defender gøre det nemmere for dit sikkerhedsteam at implementere de [](/security/zero-trust/#guiding-principles-of-zero-trust) styrende principper for Nul tillid. 
+[Nul tillid](/security/zero-trust/) er en integreret sikkerhedsfilosofi og en samlet strategi, der tager højde for alle moderne miljøers komplekse karakter, herunder mobilarbejdsstyrken og brugerne, enheder, programmer og data, uanset hvor de befinder sig. Ved at levere en enkelt glasrude til at administrere alle registreringer på en ensartet måde kan Microsoft 365 Defender gøre det nemmere for dit sikkerhedsteam at implementere de [ledende principper](/security/zero-trust/#guiding-principles-of-zero-trust) for Nul tillid.
 
-Komponenter af Microsoft 365 Defender kan vise overtrædelser af regler, der er blevet implementeret for at oprette betingede Access-politikker for Nul tillid ved at integrere data fra Microsoft Defender for Endpoint  eller andre leverandører af mobilsikkerhed som en informationskilde til politikker for enhedsoverholdelse og implementering af enhedsbaserede politikker for betinget adgang. 
+Komponenter i Microsoft 365 Defender kan vise overtrædelser af regler, der er implementeret for at oprette politikker for betinget adgang til Nul tillid ved at integrere data fra Microsoft Defender for Endpoint  eller andre leverandører af mobilsikkerhed som en informationskilde for politikker for enhedens overholdelse af angivne standarder og implementering af enhedsbaserede politikker for betinget adgang.
 
-Risiko for enheder påvirker direkte, hvilke ressourcer der vil være tilgængelige for brugeren af den pågældende enhed. Afvisning af adgang til ressourcer, der er baseret på bestemte kriterier, er hovedtemaet i Nul tillid, og Microsoft 365 Defender indeholder oplysninger, der skal bruges til at bestemme kriterierne for tillidsniveau. Eksempelvis kan Microsoft 365 Defender levere softwareversionsniveauet for en enhed via siden til administration af trussel og sikkerhedsrisiko, mens politikker for betinget adgang begrænser enheder, der har forældede eller følsomme versioner.
+Enhedsrisikoen påvirker direkte, hvilke ressourcer brugeren af den pågældende enhed har adgang til. Nægtelse af adgang til ressourcer, der er baseret på bestemte kriterier, er hovedtemaet for Nul tillid, og Microsoft 365 Defender indeholder oplysninger, der er nødvendige for at bestemme kriterierne på tillidsniveau. Microsoft 365 Defender kan f.eks. levere softwareversionsniveauet for en enhed via siden Administration af trusler og sårbarheder, mens politikker for betinget adgang begrænser enheder, der har forældede eller sårbare versioner.
 
-Automatisering er en vigtig del af at implementere og vedligeholde et Nul tillid-miljø og samtidig reducere antallet af beskeder, der potentielt kan føre til hændelser med hændelsesrespons. Komponenter i Microsoft 365 Defender kan være automatiserede såsom afhjælpningshandlinger [(også](m365d-autoir.md) kaldet undersøgelser af en hændelse på Microsoft 365 Defender-portalen), meddelelseshandlinger og endda oprettelse af supportbilletter som f.eks. [i ServiceNow](https://microsoft.service-now.com/sp/).
+Automatisering er en vigtig del af implementeringen og vedligeholdelsen af et Nul tillid miljø, samtidig med at antallet af beskeder, der potentielt kan føre til hændelser med svar på hændelser med hændelsessvar , reduceres. Komponenter i Microsoft 365 Defender kan automatiseres, f.eks. [afhjælpningshandlinger](m365d-autoir.md) (kendt som undersøgelser af en hændelse på Microsoft 365 Defender portalen), meddelelseshandlinger og endda oprettelse af supportanmodninger, f.eks. i [ServiceNow](https://microsoft.service-now.com/sp/).
 
-## <a name="step-2-determine-your-organizations-security-posture"></a>Trin 2. Bestem din organisations sikkerhedsfunktioner
+## <a name="step-2-determine-your-organizations-security-posture"></a>Trin 2. Bestem organisationens sikkerhedsholdning
 
-Derefter kan organisationer bruge [Microsoft Secure Score](microsoft-secure-score.md) i Microsoft 365 Defender til at bestemme din aktuelle sikkerhed og overveje anbefalinger til, hvordan du kan forbedre den. Jo højere pointen er, jo flere sikkerhedsanbefalinger og forbedringshandlinger har organisationen foretaget. Secure Score-anbefalinger kan tages på tværs af forskellige produkter og give organisationer mulighed for at øge deres pointtal endnu højere. 
+Organisationer kan derefter bruge [Microsoft Secure Score](microsoft-secure-score.md) i Microsoft 365 Defender til at bestemme din aktuelle sikkerhedsholdning og overveje anbefalinger til, hvordan de kan forbedre den. Jo højere scoren er, jo flere sikkerhedsanbefalinger og forbedringshandlinger har organisationen taget. Secure Score-anbefalinger kan tages på tværs af forskellige produkter og give organisationer mulighed for at hæve deres scorer endnu højere.
 
-:::image type="content" source="../../media/first-incident-prepare/first-incident-secure-score.png" alt-text="Siden Microsoft Secure Score i Microsoft 365 Defender portal" lightbox="../../media/first-incident-prepare/first-incident-secure-score.png":::
- 
-## <a name="step-3-assess-your-organizations-vulnerability-exposure"></a>Trin 3. Vurder din organisations eksponering for sikkerhedsrisikoen
+:::image type="content" source="../../media/first-incident-prepare/first-incident-secure-score.png" alt-text="Siden Microsoft Secure Score på portalen Microsoft 365 Defender" lightbox="../../media/first-incident-prepare/first-incident-secure-score.png":::
 
-At forhindre hændelser kan hjælpe med at strømline sikkerhedshandlinger for at fokusere på den on-going critical and important security incidents. Softwaresårbarheder er ofte et indgangspunkt, der kan forhindre angreb, der kan føre til datatyveri, datatab eller driftsafbrydelser. Hvis der ikke sker nogen angreb, skal sikkerhedshandlingerne forsøge at opnå og opretholde et acceptabelt niveau af [eksponering for](../defender-endpoint/tvm-exposure-score.md) sikkerhedsrisikoen i organisationen.
+## <a name="step-3-assess-your-organizations-vulnerability-exposure"></a>Trin 3. Vurder din organisations sårbarhedseksponering
 
-Hvis du vil se status for softwarerettelser, [](../defender-endpoint/next-gen-threat-and-vuln-mgt.md) skal du gå til siden til administration af trussel og sikkerhedsrisiko i Defender til slutpunkt, som du kan få adgang Microsoft 365 Defender via **fanen Flere** ressourcer.
+Forebyggelse af hændelser kan hjælpe med at strømline indsatsen for sikkerhedshandlinger for at fokusere på igangværende kritiske og vigtige sikkerhedshændelser. Softwaresårbarheder er ofte et forhindreligt indgangspunkt for angreb, der kan føre til datatyveri, datatab eller afbrydelse af forretningshandlinger. Hvis ingen angreb er i gang, skal sikkerhedshandlinger stræbe efter at opnå og opretholde et acceptabelt niveau af [sårbarhedseksponering](../defender-endpoint/tvm-exposure-score.md) i deres organisation.
 
-:::image type="content" source="../../media/first-incident-prepare/first-incident-vulnerability.png" alt-text="Siden med trusler og sikkerhedsrisiko i Microsoft 365 Defender portal" lightbox="../../media/first-incident-prepare/first-incident-vulnerability.png"::: 
- 
-## <a name="4-understand-emerging-threats"></a>4. Forstå fremspirende trusler
+Hvis du vil kontrollere statussen for din softwarerettelse, skal du gå til siden [Administration af trusler og sårbarheder](../defender-endpoint/next-gen-threat-and-vuln-mgt.md) i Defender for Endpoint, som du kan få adgang til fra Microsoft 365 Defender via fanen **Flere ressourcer**.
 
-Brug [trusselsanalyser](threat-analytics.md) i Microsoft 365 Defender for at holde dig opdateret om det aktuelle liggende sikkerhedstrusler. Ekspert Microsoft-sikkerhedseksperter laver rapporter, der beskriver de seneste cybertrusler i detaljer, så du kan forstå, hvordan de kan påvirke dit Microsoft 365 abonnement, enheder og brugere. Disse rapporter kan omfatte:
+:::image type="content" source="../../media/first-incident-prepare/first-incident-vulnerability.png" alt-text="Siden Trussel og sårbarhed på portalen Microsoft 365 Defender" lightbox="../../media/first-incident-prepare/first-incident-vulnerability.png":::
 
-- Aktive trusler og deres kampagner
+## <a name="4-understand-emerging-threats"></a>4. Forstå nye trusler
+
+Brug [trusselsanalyser](threat-analytics.md) på Microsoft 365 Defender-portalen for at holde dig ajour med det aktuelle sikkerhedstrusselslandskab. Microsofts sikkerhedsforskere, der er eksperter i sikkerhed, opretter rapporter, der beskriver de nyeste cybertrusler i detaljer, så du kan forstå, hvordan de kan påvirke dit Microsoft 365 abonnement, dine enheder og dine brugere. Disse rapporter kan omfatte:
+
+- Aktive trusselsaktører og deres kampagner
 - Populære og nye angrebsteknikker
-- Kritiske sårbarheder
+- Kritiske sikkerhedsrisici
 - Almindelige angrebsoverflader
-- Mest udbredte malware
+- Udbredt malware
 
-Trusselsanalyse ser også på din konfiguration og beskeder for at afgøre, hvor risiko du er, og om der er aktive beskeder, der er relevante for en rapport.
+Trusselsanalyse ser også på din konfiguration og dine beskeder for at finde ud af, hvor udsatte du er, og om der er aktive beskeder, der gælder for en rapport.
 
-Du kan implementere anbefalingerne fra en fremspirende trussel for at styrke din sikkerhed og minimere dit angrebsområde.
+Du kan implementere anbefalingerne fra en spirende trussel for at styrke din sikkerhedsholdning og minimere dit angrebsområde.
 
-Sørg for, at du har tid i din tidsplan til [regelmæssigt at tjekke afsnittet Threat Analytics](threat-analytics.md) på Microsoft 365 Defender-portalen. Se eksemplet [med sikkerhedshandlinger for at få Microsoft 365 Defender](incidents-overview.md#example-security-operations-for-microsoft-365-defender) få mere at vide.
+Tag dig tid til din tidsplan, så du regelmæssigt kan se sektionen [Threat Analytics](threat-analytics.md) på Microsoft 365 Defender-portalen. Se [eksemplet på sikkerhedshandlinger for Microsoft 365 Defender](incidents-overview.md#example-security-operations-for-microsoft-365-defender) for at få flere oplysninger.
 
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide [om, hvordan du triager og analyserer hændelser](first-incident-analyze.md).
+Få mere at vide om, hvordan [du kan triage og analysere hændelser](first-incident-analyze.md).
 
 ## <a name="see-also"></a>Se også
 

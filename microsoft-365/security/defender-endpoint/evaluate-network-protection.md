@@ -17,20 +17,20 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: c43fdfe746575837e8e5c8f36992f5fa6e2fec96
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: df79062d1dafcd8d82dfa4ff9b9847ff4fad1775
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679494"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476131"
 ---
 # <a name="evaluate-network-protection"></a>Evaluer netværksbeskyttelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [Netværksbeskyttelse hjælper](network-protection.md) med at forhindre medarbejdere i at bruge et hvilket som helst program til at få adgang til skadelige domæner, der kan hoste forsøg på phishing, udnyttelse og andet skadeligt indhold på internettet.
@@ -62,14 +62,14 @@ Aktivér netværksbeskyttelse i overvågningstilstand for at se, hvilke IP-adres
 
     Netværksforbindelsen tillades, og der vises en testmeddelelse.
     
-    ![Eksempel på meddelelse om, at forbindelsen blev blokeret: Din it-administrator Windows Sikkerhed at blokere denne netværksforbindelse. Kontakt din it-helpdesk.](images/np-notif.png)
+    :::image type="content" source="images/np-notif.png" alt-text="Meddelelse om blokering af forbindelse" lightbox="images/np-notif.png":::
 
 > [!NOTE]
 > Netværksforbindelser kan blive gennemført, selvom et websted er blokeret af netværksbeskyttelse. Du kan få mere at [vide under Netværksbeskyttelse og TCP trevejs-handshake](network-protection.md#network-protection-and-the-tcp-three-way-handshake).
 
-## <a name="review-network-protection-events-in-windows-event-viewer"></a>Gennemse netværksbeskyttelseshændelser i Windows Event Viewer
+## <a name="review-network-protection-events-in-windows-event-viewer"></a>Gennemse netværksbeskyttelseshændelser i Windows Logbog
 
-Hvis du vil gennemse apps, der ville være blevet blokeret, skal du åbne Logbog og filtrere efter Hændelses-id 1125 i Microsoft-Windows-Windows Defender/Driftslog. I følgende tabel vises alle netværksbeskyttelseshændelser.
+Hvis du vil gennemse apps, der ville være blevet blokeret, skal du åbne Logbog og filtrere efter Hændelses-id 1125 i Microsoft-Windows-Windows Defender/driftsloggen. I følgende tabel vises alle netværksbeskyttelseshændelser.
 
 | Hændelses-id | Angiv/kilde | Beskrivelse |
 |---|---|---|

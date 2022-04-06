@@ -1,7 +1,7 @@
 ---
 title: Eksponeringsscore i Håndtering af trusler og sikkerhedsrisici
 description: Eksponeringsresultatet Håndtering af trusler og sikkerhedsrisici, hvor sårbar din organisation er over for cybersikkerhedstrusler.
-keywords: eksponeringsscore, Microsoft Defender for endpoint-eksponeringsscore, Microsoft Defender til tvm-eksponeringsscore for slutpunkt, virksomhedens eksponeringsscore, Håndtering af trusler og sikkerhedsrisici, Microsoft Defender til slutpunkt
+keywords: eksponeringsscore, Microsoft Defender for Endpoint en eksponeringsscore Microsoft Defender for Endpoint tvm-eksponeringsscore, virksomhedens eksponeringsscore, Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a82d49e7ac6f87847e7ac61cc4451ad63c2bdeef
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: f65b48f37d1cf141611af075e55328226db6c6bd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593176"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471577"
 ---
 # <a name="exposure-score---threat-and-vulnerability-management"></a>Eksponeringsscore – Håndtering af trusler og sikkerhedsrisici
 
@@ -29,11 +29,11 @@ ms.locfileid: "63593176"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Din eksponeringsscore er synlig [i dashboardet håndtering af sikkerhedsrisici trussel og](tvm-dashboard-insights.md) eksponering på Microsoft 365 Defender-portalen. Det afspejler, hvor sårbar din organisation er over for cybersikkerhedstrusler. Lav eksponeringsscore betyder, at dine enheder er mindre sårbar over for udnyttelse.
 
@@ -43,7 +43,7 @@ Din eksponeringsscore er synlig [i dashboardet håndtering af sikkerhedsrisici t
 
 Kortet giver dig en oversigt over dine eksponeringsscoretendenser over tid. En samling i diagrammet giver dig en visuel indikation af en eksponering med høj cybertrussel, som du kan undersøge yderligere.
 
-![Eksponeringsscore- kort.](images/tvm_exp_score.png)
+:::image type="content" source="images/tvm_exp_score.png" alt-text="Eksponeringsscorecardet" lightbox="images/tvm_exp_score.png":::
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 

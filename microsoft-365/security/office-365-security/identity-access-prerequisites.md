@@ -1,6 +1,6 @@
 ---
 title: Nødvendige arbejde til implementering af politikker for identitet og enhedsadgang – Microsoft 365 til | Microsoft Docs
-description: I denne artikel beskrives de forudsætninger, du skal opfylde for at bruge nultillidsidentitet og politikker og konfigurationer for enhedsadgang.
+description: I denne artikel beskrives de forudsætninger, du skal opfylde for at kunne bruge Nul tillid politikker og konfigurationer for enhedsadgang og -identitet.
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -19,20 +19,20 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 445cb497abfaa0e7e4322268a761aafbaa0e31d6
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8123b3602569ec1effcbf79cb12d242ab19d960e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680902"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472347"
 ---
-# <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Påkrævet arbejde til implementering af nultillidsidentitet og politikker for enhedsadgang
+# <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Påkrævet arbejde til implementering Nul tillid politikker for identitet og enhedsadgang
 
-I denne artikel beskrives de forudsætninger, som administratorer skal opfylde for at kunne bruge anbefalede politikker for nultillidsidentitet og enhedsadgang og for at bruge Betinget adgang. Den gennemgår også de anbefalede standarder til konfiguration af klientplatforme for at få den bedste single sign-on-oplevelse (SSO).
+I denne artikel beskrives de forudsætninger, som administratorer skal opfylde for at kunne bruge anbefalede politikker Nul tillid identitet og enhedsadgang, og for at bruge Betinget adgang. Den gennemgår også de anbefalede standarder til konfiguration af klientplatforme for at få den bedste single sign-on-oplevelse (SSO).
 
 ## <a name="prerequisites"></a>Forudsætninger
 
-Før du bruger politikkerne Nul tillid til identitet og enhedsadgang, der anbefales, skal din organisation opfylde forudsætningerne. Kravene er forskellige for de forskellige identitets- og godkendelsesmodeller, der er angivet:
+Før du bruger Nul tillid og politikker for enhedsadgang, der anbefales, skal din organisation opfylde forudsætningerne. Kravene er forskellige for de forskellige identitets- og godkendelsesmodeller, der er angivet:
 
 - Kun i skyen
 - Hybrid med godkendelse af adgangskodehashsynkronisering (PHS)
@@ -61,9 +61,9 @@ I dette afsnit beskrives standardkonfigurationerne for platformsklienten, som vi
 
 ### <a name="windows-devices"></a>Windows enheder
 
-Vi anbefaler Windows 11 eller Windows 10 (version 2004 eller nyere), da Azure er designet til at give den bedst mulige SSO-oplevelse for både det lokale miljø og Azure AD. Enheder, der er udstedt til arbejde eller skole, skal konfigureres til at deltage direkte i Azure AD, eller hvis organisationen bruger en lokal AD-domæneforbindelse, skal disse enheder konfigureres til automatisk og automatisk at registrere sig i [Azure AD](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup).
+Vi anbefaler Windows 11 eller Windows 10 (version 2004 eller nyere), da Azure er udviklet til at give den mest jævne SSO-oplevelse, der er mulig for både det lokale miljø og Azure AD. Enheder, der er udstedt til arbejde eller skole, skal konfigureres til at deltage direkte i Azure AD, eller hvis organisationen bruger en lokal AD-domæneforbindelse, skal disse enheder konfigureres til automatisk og automatisk at registrere sig i [Azure AD](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup).
 
-Brugere kan Windows Tilføje arbejds- eller skolekonto til **BYOD-enheder**. Bemærk, at brugere af Google Chrome-browseren på Windows 11- eller Windows 10-enheder skal installere en udvidelse for at [](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji?utm_source=chrome-app-launcher-info-dialog) få den samme jævne logonoplevelse som Microsoft Edge brugere. Hvis din organisation har domæne-tilmeldte Windows 8- eller 8.1-enheder, kan du også installere Microsoft Workplace Join til ikke-Windows 10 computere. [Download pakken for at registrere](https://www.microsoft.com/download/details.aspx?id=53554) enhederne med Azure AD.
+Brugere kan Windows Tilføje arbejds- eller skolekonto til **BYOD-enheder**. Bemærk, at brugere af Google Chrome-browseren på Windows 11- eller Windows 10-enheder skal installere en udvidelse for [](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji?utm_source=chrome-app-launcher-info-dialog) at få den samme jævne logonoplevelse som Microsoft Edge brugere. Hvis din organisation har domæne-tilmeldte Windows 8- eller 8.1-enheder, kan du også installere Microsoft Workplace Join til ikke-Windows 10 computere. [Download pakken for at registrere](https://www.microsoft.com/download/details.aspx?id=53554) enhederne med Azure AD.
 
 ### <a name="ios-devices"></a>iOS-enheder
 
@@ -71,7 +71,7 @@ Vi anbefaler, at du installerer [Microsoft Authenticator-appen](/azure/multi-fac
 
 ### <a name="android-devices"></a>Android-enheder
 
-Vi anbefaler, at brugerne [installerer Intune-firmaportal-appen](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en) [og Microsoft Authenticator,](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) før politikker for Betinget adgang installeres, eller når det kræves under visse godkendelsesforsøg. Efter appinstallationen kan brugerne blive bedt om at registrere sig i Azure AD eller tilmelde deres enhed med Intune. Dette afhænger af den konfigurerede politik for betinget adgang.
+Vi anbefaler, at brugerne [installerer Intune-firmaportal-appen](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en) [og Microsoft Authenticator,](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) før politikker for Betinget adgang installeres, eller når det kræves under visse godkendelsesforsøg. Efter appinstallationen kan brugerne blive bedt om at registrere sig med Azure AD eller tilmelde deres enhed Intune. Dette afhænger af den konfigurerede politik for betinget adgang.
 
 Vi anbefaler også, at enheder, der ejes af organisationer, standardiseres på OEMs og versioner, der understøtter Android til arbejde eller Samsung Knox for at tillade mailkonti, administreres og beskyttes af Intune MDM-politik.
 
@@ -122,6 +122,6 @@ Her er nogle flere anbefalinger:
 
 ## <a name="next-step"></a>Næste trin
 
-[![Trin 2: Konfigurer de fælles nultillidsidentitet og få adgang til betingede adgangspolitikker.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-2.png)](identity-access-policies.md)
+[![Trin 2: Konfigurer de fælles Nul tillid og få adgang til betingede adgangspolitikker.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-2.png#lightbox)](identity-access-policies.md)
 
-[Konfigurere de fælles politikker for nultillidsidentitet og enhedsadgang](identity-access-policies.md)
+[Konfigurere de fælles politikker Nul tillid identitet og enhedsadgang](identity-access-policies.md)

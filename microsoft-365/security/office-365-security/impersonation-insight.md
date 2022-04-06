@@ -20,19 +20,19 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0d9d8ee89aaa551c5fecf7c38fe0dbba97ed7fc8
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: dbaf395f10eaac7ff508b03f6f079f94bdd6cebd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63592221"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475801"
 ---
-# <a name="impersonation-insight-in-defender-for-office-365"></a>Repræsentationsindsigt i Defender til Office 365
+# <a name="impersonation-insight-in-defender-for-office-365"></a>Repræsentationsindsigt i Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -45,7 +45,7 @@ Efterligning er der, hvor afsenderen af en mail ligner meget en rigtig eller for
 
 Domæne efterligning er anderledes end [domænespoofing](anti-spoofing-protection.md), fordi det efterlignede domæne typisk er et rigtigt, registreret domæne. Meddelelser fra afsendere i det efterligne domæne kan og ofte bestå almindelige kontroller til godkendelse af mails, som ellers ville identificere spoofingforsøg (SPF, DKIM og DMARC).
 
-Beskyttelse mod efterligning er en del af politikindstillingerne for antiphishing, der er forbeholdt Microsoft Defender Office 365. Du kan finde flere oplysninger om disse indstillinger [under Indstillinger for repræsentation i antiphishing-politikker i Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+Beskyttelse mod efterligning er en del af politikindstillingerne for phishing, der er eksklusive Microsoft Defender for Office 365. Du kan finde flere oplysninger om disse indstillinger [under Indstillinger for repræsentation i antiphishing-politikker Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 Du kan bruge repræsentationsindsigtet i Microsoft 365 Defender-portalen til hurtigt at identificere meddelelser fra efterligninger af afsendere eller afsenderdomæner, som du har konfigureret til repræsentationsbeskyttelse.
 
@@ -63,7 +63,7 @@ Du kan bruge repræsentationsindsigtet i Microsoft 365 Defender-portalen til hur
 
   **Bemærk**! Når du føjer brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser i _Microsoft 365 Defender-portalen og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
-- Du aktiverer og konfigurerer repræsentationsbeskyttelse i antiphishing-politikker i Microsoft Defender til Office 365. Repræsentationsbeskyttelse er ikke aktiveret som standard. Få mere at vide under [Konfigurer antiphishing-politikker i Microsoft Defender Office 365](configure-mdo-anti-phishing-policies.md).
+- Du aktiverer og konfigurerer repræsentationsbeskyttelse i antiphishing-politikker i Microsoft Defender for Office 365. Repræsentationsbeskyttelse er ikke aktiveret som standard. Få mere at vide under [Konfigurer antiphishing-politikker Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 ## <a name="open-the-impersonation-insight-in-the-microsoft-365-defender-portal"></a>Åbn repræsentationsindsigtet i Microsoft 365 Defender portalen
 
@@ -71,7 +71,7 @@ Du kan bruge repræsentationsindsigtet i Microsoft 365 Defender-portalen til hur
 
 2. På siden **Antiphishing** ser efterligningsindsigt således ud:
 
-   ![Repræsentationsindsigt og efterlignet intelligens på siden for antiphishing-politik.](../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png)
+   :::image type="content" source="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png" alt-text="Repræsentationsindsigt og efterlignet intelligens på siden med antiphishing-politik" lightbox="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png":::
 
    Indsigten har to tilstande:
 

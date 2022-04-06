@@ -21,19 +21,19 @@ ms.custom:
 ms.technology: mdo
 ms.prod: m365-security
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 62be716a9663820f90d5c4f125f4634b3b399547
-ms.sourcegitcommit: bcea69bacd1b48827bd60af2880909593a1609a4
+ms.openlocfilehash: f433c93d9bba13822cf84ff8740f86d95cf2befe
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63588731"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471335"
 ---
 # <a name="manage-spoofed-senders-using-the-spoof-intelligence-policy-and-spoof-intelligence-insight-in-eop"></a>Administrer efterlignede afsendere ved hjælp af efterlignet intelligenspolitik og efterlignet intelligensindsigt i EOP
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ Du kan administrere efterlignet intelligens i Microsoft 365 Defender-portalen el
 - Du kan aktivere, deaktivere og konfigurere indstillingerne for efterlignet intelligens i antiphishing-politikker. Du kan finde instruktioner, der er baseret på dit abonnement, under et af følgende emner:
 
   - [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md).
-  - [Konfigurer antiphishing-politikker i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
+  - [Konfigurer antiphishing-politikker Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 - For vores anbefalede indstillinger for efterlignet intelligens skal du se [Politikindstillinger for EOP-antiphishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
 
@@ -87,7 +87,7 @@ Der er to måder at tillade og blokere efterlignede afsendere:
 
 2. På siden **Antispam-politikker** skal du **vælge Efterlignet intelligencepolitik** ved at klikke på navnet.
 
-   ![Vælg efterlignet intelligencepolitik.](../../media/anti-spam-settings-spoof-intelligence-policy.png)
+   :::image type="content" source="../../media/anti-spam-settings-spoof-intelligence-policy.png" alt-text="Indstillingen til at vælge efterlignet intelligencepolitik" lightbox="../../media/anti-spam-settings-spoof-intelligence-policy.png":::
 
 3. I pop **op-vindue med efterlignet** intelligenspolitik, der vises, skal du foretage et af følgende valg:
    - **Vis mig afsendere, jeg allerede har gennemgået**
@@ -101,7 +101,7 @@ Der er to måder at tillade og blokere efterlignede afsendere:
    - **Ja**: Tillad spoof-afsenderen.
    - **Nej**: Markér meddelelsen som efterlignet. Handlingen styres af standardpolitikken for phishing eller brugerdefinerede antiphishing-politikker. Du kan finde flere oplysninger [under Indstillinger for spoof i antiphishing-politikker](set-up-anti-phishing-policies.md#spoof-settings).
 
-   ![Skærmbillede, der viser pop op-billedet af spoof-afsendere, og om afsenderen har tilladelse til at spoof.](../../media/spoof-allow-block-flyout.png)
+   :::image type="content" source="../../media/spoof-allow-block-flyout.png" alt-text="Pop op-filen spoof afsendere, og om afsenderen har tilladelse til at spoof" lightbox="../../media/spoof-allow-block-flyout.png":::
 
    De kolonner og værdier, du kan se, er forklaret på følgende liste:
 
@@ -196,7 +196,7 @@ Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-PhishFilterP
 
 3. Indsigten på dashboardet viser dig oplysninger som dette:
 
-   ![Skærmbillede af efterlignet intelligensindsigt.](../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png)
+   :::image type="content" source="../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png" alt-text="Efterlignet intelligensindsigt" lightbox="../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png":::
 
    Dette indsigt har to tilstande:
 
@@ -232,7 +232,7 @@ Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-PhishFilterP
 
    Herfra kan du også vælge at tilføje eller fjerne infrastrukturparret for domæne/afsendelse fra listen Tilladt tilladt for **spoof-afsender** . Du skal blot indstille til/fra-knappen tilsvarende.
 
-   ![Skærmbillede af et domæne i detaljeruden efterlignet intelligensindsigt.](../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png)
+   :::image type="content" source="../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png" alt-text="Et domæne i detaljeruden efterlignet intelligensindsigt" lightbox="../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png":::
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer fungerede?
 

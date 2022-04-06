@@ -15,18 +15,18 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 95abb603983ea16192d93b12757cde6fba026047
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 78f992e20ee0c0c2505777295ca3ba34a5c4ea66
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63592166"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470631"
 ---
 # <a name="turn-on-cloud-protection-in-microsoft-defender-antivirus"></a>Slå skybeskyttelse til i Microsoft Defender Antivirus
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 [Skybeskyttelse i Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) leverer nøjagtig, realtid og intelligent beskyttelse. Skybeskyttelse bør være aktiveret som standard. du kan dog konfigurere skybeskyttelse, så den passer til din organisations behov.
@@ -35,7 +35,7 @@ ms.locfileid: "63592166"
 
 Du kan slå Microsoft Defender Antivirus skybeskyttelse til eller fra ved hjælp af en af flere forskellige metoder:
 
-- Microsoft Endpoint Manager, som omfatter Microsoft Intune og Konfigurationsstyring
+- Microsoft Endpoint Manager, som omfatter Microsoft Intune og Configuration Manager
 - Gruppepolitik
 - PowerShell-cmdlet'er
 
@@ -44,7 +44,7 @@ Du kan også slå skybeskyttelse til eller fra for individuelle slutpunkter ved 
 Du kan finde flere oplysninger om de specifikke krav til netværksforbindelser for at sikre, at dine slutpunkter kan oprette forbindelse til [skybeskyttelsestjenesten under Konfigurere og validere netværksforbindelser](configure-network-connections-microsoft-defender-antivirus.md).
 
 > [!NOTE]
-> I Windows 10 og Windows 11 er der ingen forskel mellem de Grundlæggende og **Avancerede** rapporteringsmuligheder, der  er beskrevet i denne artikel. Dette kan skelne mellem ældre og valg af begge indstillinger medfører det samme niveau af skybeskyttelse. Der er ingen forskel på typen eller mængden af oplysninger, der deles. Du kan finde flere oplysninger om, hvad vi indsamler, i [Microsofts erklæring om beskyttelse af personlige oplysninger](https://go.microsoft.com/fwlink/?linkid=521839).
+> I Windows 10 og Windows 11 er der ingen forskel mellem de grundlæggende **og avancerede rapporteringsmuligheder**, der er  beskrevet i denne artikel. Dette kan skelne mellem ældre og valg af begge indstillinger medfører det samme niveau af skybeskyttelse. Der er ingen forskel på typen eller mængden af oplysninger, der deles. Du kan finde flere oplysninger om, hvad vi indsamler, i [Microsofts erklæring om beskyttelse af personlige oplysninger](https://go.microsoft.com/fwlink/?linkid=521839).
 
 ## <a name="use-intune-to-turn-on-cloud-protection"></a>Brug Intune til at aktivere skybeskyttelse
 
@@ -60,7 +60,7 @@ Du kan finde flere oplysninger om de specifikke krav til netværksforbindelser f
 
 6. Vælg Send **alle data automatisk på rullelisten** Spørg brugere før **eksempelindsendelse**.
 
-Du kan finde flere oplysninger om Intune-enhedsprofiler, herunder hvordan du opretter og konfigurerer deres indstillinger, [under Hvad Microsoft Intune på enhedsprofiler?](/intune/device-profiles)
+Du kan finde flere Intune om enhedsprofiler, herunder hvordan du opretter og konfigurerer deres indstillinger, [under Hvad Microsoft Intune på enhedsprofiler?](/intune/device-profiles)
 
 ## <a name="use-microsoft-endpoint-manager-to-turn-on-cloud-protection"></a>Brug Microsoft Endpoint Manager til at aktivere skybeskyttelse
 
@@ -109,7 +109,7 @@ Du kan finde flere oplysninger om konfiguration Microsoft Endpoint Configuration
 
    >[!NOTE]
    > Indstillingen **Send sikre eksempler** (1) betyder, at de fleste eksempler sendes automatisk. Filer, der sandsynligvis indeholder personlige oplysninger, vil stadig blive bedt om det og kræver yderligere bekræftelse.
-   > Hvis du vælger **Spørg altid** (0), sænkes enhedens beskyttelsestilstand. Hvis du angiver **den til Send aldrig** (2), betyder det, [at funktionen Bloker](configure-block-at-first-sight-microsoft-defender-antivirus.md) ved første syn i Microsoft Defender til slutpunkt ikke fungerer.
+   > Hvis du vælger **Spørg altid** (0), sænkes enhedens beskyttelsestilstand. Hvis du angiver **den til Send** aldrig (2), betyder det, [at](configure-block-at-first-sight-microsoft-defender-antivirus.md) funktionen Bloker ved første syn Microsoft Defender for Endpoint ikke fungerer.
 
 7. Vælg **OK**.
 
@@ -126,7 +126,7 @@ Du kan finde flere oplysninger om, hvordan du bruger PowerShell Microsoft Defend
 
 > [!IMPORTANT]
 > Du kan angive **-SubmitSamplesConsent** til `SendSafeSamples` (standardindstillingen, den anbefalede indstilling) `NeverSend`eller `AlwaysPrompt`. Indstillingen `SendSafeSamples` betyder, at de fleste eksempler sendes automatisk. Filer, der sandsynligvis indeholder personlige oplysninger, medfører, at du bliver bedt om at fortsætte, og det kræver en bekræftelse.
-> Og `NeverSend` indstillingerne `AlwaysPrompt` sænker beskyttelsesniveauet på enheden. Desuden betyder indstillingen `NeverSend` , [at funktionen Bloker ved første](configure-block-at-first-sight-microsoft-defender-antivirus.md) syn i Microsoft Defender til slutpunkt ikke fungerer.
+> Og `NeverSend` indstillingerne `AlwaysPrompt` sænker beskyttelsesniveauet på enheden. Desuden betyder `NeverSend` indstillingen, [at funktionen Blok ved første](configure-block-at-first-sight-microsoft-defender-antivirus.md) syn Microsoft Defender for Endpoint ikke fungerer.
 
 ## <a name="use-windows-management-instruction-wmi-to-turn-on-cloud-protection"></a>Brug Windows -administrationsvejledning (WMI) til at aktivere skybeskyttelse
 
@@ -142,16 +142,18 @@ Du kan finde flere oplysninger om tilladte parametre [under Windows Defender WMI
 ## <a name="turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app"></a>Aktivere skybeskyttelse på individuelle klienter med Windows Sikkerhed appen
 
 > [!NOTE]
-> Hvis indstillingen Konfigurer lokal indstilling til rapportering **af Microsoft MAPS** Gruppepolitik er indstillet til Deaktiveret **, vil** indstillingen for Skybaseret beskyttelse i Windows Indstillinger være nedtonet og ikke tilgængelig. Ændringer, der er foretaget Gruppepolitik et Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger.
+> Hvis indstillingen Konfigurer lokal indstilling til rapportering **af Microsoft MAPS** Gruppepolitik er indstillet til Deaktiveret **, vil** indstillingen for skybaseret beskyttelse i Windows Indstillinger være nedtonet og ikke tilgængelig. Ændringer, der er foretaget via Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger.
 
 1. Åbn Windows Sikkerhed-appen ved at vælge skjoldikonet på proceslinjen eller ved at søge i menuen Start efter **Windows Sikkerhed**.
 
 2. Vælg **flisen Virusbeskyttelse &** (eller skjoldikonet på venstre menulinje), og vælg derefter indstillinger for **& mod trusler under Administrer indstillinger**.
 
-3. Bekræft **, at skybaseret beskyttelse** **og automatisk indsendelse af eksempler** begge er slået **Til**.
+   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Indstillingerne for & mod trusler" lightbox="../../media/wdav-protection-settings-wdsc.png":::
+
+3. Bekræft **, at skybaseret beskyttelse** **og automatisk indsendelse af eksempler** er slået **Til**.
 
    > [!NOTE]
-   > Hvis automatisk indsendelse af eksempler er blevet konfigureret med Gruppepolitik vil indstillingen være nedtonet og ikke tilgængelig.
+   > Hvis der er konfigureret automatisk indsendelse af eksempler Gruppepolitik er indstillingen nedtonet og ikke tilgængelig.
 
 ## <a name="see-also"></a>Se også
 

@@ -1,7 +1,7 @@
 ---
-title: Brug Microsoft Defender til endpoint-API'er
+title: Brug Microsoft Defender for Endpoint API'er
 ms.reviewer: ''
-description: Få mere at vide om, hvordan du designer Windows-appen, så du kan få programadgang til Microsoft Defender til slutpunkt uden en bruger.
+description: Lær at designe en indbygget Windows app for at få programmeringsadgang til Microsoft Defender for Endpoint uden en bruger.
 keywords: apis, graph api, understøttede API'er, agent, beskeder, enhed, bruger, domæne, ip, fil, avanceret jagt, forespørgsel
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,22 +16,22 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: f6cc0ea9cac46fa2e6ad2b5fe56422683d4a3e28
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 752e08d3fddb28b7d30122281009e54fc235b129
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63597587"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471203"
 ---
-# <a name="use-microsoft-defender-for-endpoint-apis"></a>Brug Microsoft Defender til endpoint-API'er
+# <a name="use-microsoft-defender-for-endpoint-apis"></a>Brug Microsoft Defender for Endpoint API'er
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -39,11 +39,11 @@ ms.locfileid: "63597587"
 
 Denne side beskriver, hvordan du opretter et program for at få programadgang til Defender for Endpoint på vegne af en bruger.
 
-Hvis du har brug for programmeringsadgang til Microsoft Defender til slutpunkt uden en bruger, skal du se [Access Microsoft Defender til Slutpunkt med programkontekst](exposed-apis-create-app-webapp.md).
+Hvis du har brug for programmeringsadgang Microsoft Defender for Endpoint en bruger, skal du [se Access Microsoft Defender for Endpoint med programkontekst](exposed-apis-create-app-webapp.md).
 
 Hvis du ikke er sikker på, hvilken adgang du skal bruge, kan du læse [siden Introduktion](apis-intro.md).
 
-Microsoft Defender til Slutpunkt fremviser mange af sine data og handlinger via et sæt programmatiske API'er. Disse API'er gør det muligt at automatisere pengestrømme og udvikle baseret på Microsoft Defender til slutpunktsfunktioner. API-adgang kræver OAuth2.0-godkendelse. Du kan finde flere oplysninger [under OAuth 2.0-godkendelseskode Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft Defender for Endpoint blotlægger mange af sine data og handlinger via et sæt programmerings-API'er. Disse API'er gør det muligt at automatisere pengestrømme og forny baseret på Microsoft Defender for Endpoint funktioner. API-adgang kræver OAuth2.0-godkendelse. Du kan finde flere oplysninger [under OAuth 2.0-godkendelseskode Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
 Generelt skal du følge disse trin for at bruge API'er:
 
@@ -51,11 +51,11 @@ Generelt skal du følge disse trin for at bruge API'er:
 - Få et adgangstoken ved hjælp af dette program
 - Brug tokenet til at få adgang til Defender for Endpoint API
 
-Denne side forklarer, hvordan du opretter AAD-program, får et adgangstoken til Microsoft Defender til Slutpunkt og validerer tokenet.
+Denne side forklarer, hvordan du opretter AAD et program, får et adgangstoken til at Microsoft Defender for Endpoint og validere tokenet.
 
 > [!NOTE]
-> Når du tilgår Microsoft Defender for Endpoint API på vegne af en bruger, skal du have de korrekte programtilladelser og brugertilladelser.
-> Hvis du ikke har kendskab til brugertilladelser på Microsoft Defender til slutpunkt, kan du se [Administrer portaladgang ved hjælp af rollebaseret adgangskontrol](rbac.md).
+> Når du Microsoft Defender for Endpoint api'en på vegne af en bruger, skal du have de korrekte programtilladelser og brugertilladelser.
+> Hvis du ikke har kendskab til brugertilladelser på Microsoft Defender for Endpoint, skal du se [Administrere portaladgang ved hjælp af rollebaseret adgangskontrol](rbac.md).
 
 > [!TIP]
 > Hvis du har tilladelse til at udføre en handling på portalen, har du tilladelse til at udføre handlingen i API'en.
@@ -66,7 +66,7 @@ Denne side forklarer, hvordan du opretter AAD-program, får et adgangstoken til 
 
 2. Gå til **Azure Active Directory** \> **appregistreringer** \> **Ny registrering**.
 
-   :::image type="content" alt-text="Billede af Microsoft Azure og navigation til programregistrering." source="images/atp-azure-new-app2.png" lightbox="images/atp-azure-new-app2.png":::
+   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Siden Appregistreringer i Microsoft Azure portal" lightbox="images/atp-azure-new-app2.png":::
 
 3. Når siden **Registrer et** program vises, skal du angive registreringsoplysningerne for dit program:
    - **Navn** – Angiv et beskrivende programnavn, der vises for brugere af appen.
@@ -90,7 +90,7 @@ Denne side forklarer, hvordan du opretter AAD-program, får et adgangstoken til 
 
      Når du er færdig, skal du **vælge Registrer**.
 
-4. Giv dit program adgang til Microsoft Defender til Slutpunkt, og tildel den "Læse vigtige beskeder"-tilladelse:
+4. Giv dit program adgang til Microsoft Defender for Endpoint og tildel "Læse vigtige beskeder"-tilladelse:
 
    - På programsiden skal  du vælge **API-tilladelser** Tilføj **tilladelses-API'er** \> \>, som min organisation bruger > type **WindowsDefenderATP** og vælge **på WindowsDefenderATP**.
 
@@ -101,7 +101,7 @@ Denne side forklarer, hvordan du opretter AAD-program, får et adgangstoken til 
 
    - Vælg **Delegated permissions** \> **Alert.Read** > **vælg Add permissions**.
 
-      :::image type="content" alt-text="programtilladelser." source="images/application-permissions-public-client.png" lightbox="images/application-permissions-public-client.png":::
+      :::image type="content" source="images/application-permissions-public-client.png" alt-text="Ruder for programtype og tilladelser" lightbox="images/application-permissions-public-client.png":::
 
    > [!IMPORTANT]
    > Vælg de relevante tilladelser. Vigtige beskeder om læsning er kun et eksempel.
@@ -117,13 +117,13 @@ Denne side forklarer, hvordan du opretter AAD-program, får et adgangstoken til 
       > [!NOTE]
       > Hver gang du tilføjer tilladelse, skal du vælge Giv **samtykke,** før den nye tilladelse træder i kraft.
 
-      ![Billede af Giv tilladelser.](images/grant-consent.png)
+      :::image type="content" source="images/grant-consent.png" alt-text="Indstillingen Godkendelse af hovedadministrator" lightbox="images/grant-consent.png":::
 
 5. Skriv dit program-id og dit lejer-id ned.
 
     På programsiden skal du gå **til Oversigt** og kopiere følgende oplysninger:
 
-    :::image type="content" alt-text="Billede af oprettet app-id." source="images/app-and-tenant-ids.png" lightbox="images/app-and-tenant-ids.png":::
+    :::image type="content" source="images/app-and-tenant-ids.png" alt-text="Det oprettede app-id"  lightbox="images/app-and-tenant-ids.png":::
 
 ## <a name="get-an-access-token"></a>Få et adgangstoken
 
@@ -180,11 +180,11 @@ Kontrollér, at du har fået et korrekt token:
 - Valider, at du får et "scp"-krav med de ønskede apptilladelser.
 - I skærmbilledet nedenfor kan du se et afkodet token, der er erhvervet fra appen, i selvstudiet:
 
-  :::image type="content" alt-text="Billede af tokenvalidering." source="images/nativeapp-decoded-token.png" lightbox="images/nativeapp-decoded-token.png":::
+  :::image type="content" source="images/nativeapp-decoded-token.png" alt-text="Siden til validering af token" lightbox="images/nativeapp-decoded-token.png":::
 
 ## <a name="use-the-token-to-access-microsoft-defender-for-endpoint-api"></a>Brug tokenet til at få adgang til Microsoft Defender for Endpoint API
 
-- Vælg den API, du vil bruge – [Understøttet Microsoft Defender til endpoint-API'er](exposed-apis-list.md).
+- Vælg den API, du vil bruge – [understøttes Microsoft Defender for Endpoint API'er](exposed-apis-list.md).
 - Angiv godkendelseshovedet i DEN HTTP-anmodning, du sender til "Bearer {token}" (Bearer er godkendelsesskemaet).
 - Udløbsdatoen for tokenet er 1 time (du kan sende mere end én anmodning med samme token).
 
@@ -204,5 +204,5 @@ Kontrollér, at du har fået et korrekt token:
 
 ## <a name="see-also"></a>Se også
 
-- [Microsoft Defender til endpoint-API'er](exposed-apis-list.md)
-- [Få adgang til Microsoft Defender til slutpunkt med programkontekst](exposed-apis-create-app-webapp.md)
+- [Microsoft Defender for Endpoint API'er](exposed-apis-list.md)
+- [Access Microsoft Defender for Endpoint med programkontekst](exposed-apis-create-app-webapp.md)

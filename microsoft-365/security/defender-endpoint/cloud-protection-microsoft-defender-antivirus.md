@@ -15,22 +15,22 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 013b189dca95fc63dc8d189d020fcf3f7727cf82
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 881ae2de7a6c752c2be9bfc5ccdbe350050f340b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "63606499"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471995"
 ---
 # <a name="cloud-protection-and-microsoft-defender-antivirus"></a>Skybeskyttelse og -Microsoft Defender Antivirus
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 Næste generations teknologier i Microsoft Defender Antivirus giver øjeblikkelig, automatiseret beskyttelse mod nye og nye trusler. For at identificere nye trusler på dynamisk vis arbejder næste generations teknologier med store sæt indbyrdes forbundne data i Microsoft Intelligent Security Graph og effektive kunstig intelligenssystemer, der drives af avancerede modeller for maskinel indlæring. Skybeskyttelse arbejder sammen med Microsoft Defender Antivirus at levere nøjagtig, realtid og intelligent beskyttelse. 
 
-[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Diagram, der viser, hvordan skybeskyttelse fungerer sammen med Microsoft Defender Antivirus":::](enable-cloud-protection-microsoft-defender-antivirus.md)
+[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Diagram, der viser, hvordan skybeskyttelse fungerer sammen med Microsoft Defender Antivirus" lightbox="images/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 > [!TIP]
 > Vi anbefaler, at du holder skybeskyttelse slået til. Du kan få mere at vide [under Hvorfor skybeskyttelse skal aktiveres for Microsoft Defender Antivirus](why-cloud-protection-should-be-on-mdav.md). 
@@ -41,7 +41,7 @@ Microsoft Defender Antivirus problemfrit med Microsofts skytjenester. Disse skyb
 
 Følgende blogindlæg illustrerer, hvordan skybeskyttelse fungerer:
 
-- [Bliv bekendt med de avancerede teknologier i kernen i Microsoft Defender til næste generations beskyttelse i Endpoint](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
+- [Bliv bekendt med de avancerede teknologier i kernen Microsoft Defender for Endpoint næste generations beskyttelse](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
 
 - [Hvorfor Microsoft Defender Antivirus er den mest installerede i virksomheden](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
 

@@ -1,7 +1,7 @@
 ---
 title: Dashboardindsigt – Håndtering af trusler og sikkerhedsrisici
 description: Dashboardet Håndtering af trusler og sikkerhedsrisici hjælpe SecOps og sikkerhedsadministratorer med at håndtere cybertrusler og opbygge deres organisations sikkerhedsrobusthed.
-keywords: Microsoft Defender til Endpoint-tvm, Microsoft Defender til Endpoint-tvm-dashboard, trussel & håndtering af sikkerhedsrisici, Håndtering af trusler og sikkerhedsrisici, risikobaseret trussel & håndtering af sikkerhedsrisici , sikkerhedskonfiguration, Microsoft Secure Score til enheder, eksponeringsscore
+keywords: Microsoft Defender for Endpoint-tvm-, Microsoft Defender for Endpoint-tvm-dashboard, & håndtering af sikkerhedsrisici, Håndtering af trusler og sikkerhedsrisici, risikobaseret trusselsanalyse& håndtering af sikkerhedsrisici sikkerhedskonfiguration, Microsoft Secure Score til enheder, eksponeringsscore
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: fb93b179b9d342a4a0d098ddb889a94371fbabc4
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 76eedd78e6bc6a95450a50c04d4f85b0de46db8e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63593792"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472479"
 ---
 # <a name="dashboard-insights---threat-and-vulnerability-management"></a>Dashboardindsigt – Håndtering af trusler og sikkerhedsrisici
 
@@ -30,7 +30,7 @@ ms.locfileid: "63593792"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -58,7 +58,7 @@ Se denne video for at få en hurtig oversigt over, hvad der er i Håndtering af 
 
 ## <a name="threat-and-vulnerability-management-dashboard"></a>Trussels- håndtering af sikkerhedsrisici dashboard
 
-:::image type="content" source="../../media/tvmdashboard.png" lightbox="../../media/tvmdashboard.png" alt-text="Dashboard til administration af trusler og sikkerhedsrisiko for enheder.":::
+:::image type="content" source="../../media/tvmdashboard.png" alt-text="Dashboard til administration af trusler og sikkerhedsrisiko for enheder" lightbox="../../media/tvmdashboard.png":::
 
 <br>
 
@@ -76,7 +76,7 @@ Se denne video for at få en hurtig oversigt over, hvad der er i Håndtering af 
 |**Mest synlige enheder**|Få vist eksponerede enhedsnavne og deres eksponeringsniveau. Vælg et enhedsnavn på listen for at gå til siden enhed, hvor du kan se vigtige beskeder, risici, hændelser, sikkerhedsanbefalinger, installeret software og opdagede sårbarheder, der er knyttet til de eksponerede enheder. Vælg **Vis mere** for at se resten af listen over de eksponerede enheder. På listen over enheder kan du administrere mærker, starte automatiserede undersøgelser, starte en direkte svarsession, samle en undersøgelsespakke, køre antivirusscanning, begrænse udførelse af apps og isolere enheden.|
 |
 
-Du kan finde flere oplysninger om de ikoner, der bruges i hele [portalen, under Ikoner for Microsoft Defender til slutpunkt](portal-overview.md#microsoft-defender-for-endpoint-icons).
+Du kan finde flere oplysninger om de ikoner, der bruges i hele [portalen, Microsoft Defender for Endpoint ikoner](portal-overview.md#microsoft-defender-for-endpoint-icons).
 
 ## <a name="related-topics"></a>Relaterede emner
 

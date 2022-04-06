@@ -1,5 +1,5 @@
 ---
-title: Spor og svar på nye trusler med Microsoft Defender til trusselsanalyse i Slutpunkt
+title: Spor og svar på nye trusler med Microsoft Defender for Endpoint trusselsanalyse
 ms.reviewer: ''
 description: Forstå fremspirende trusler og angrebsteknikker, og hvordan du stopper dem. Vurder deres indvirkning på din organisation, og vurder din organisatoriske fleksibilitet.
 keywords: trusselsanalyse, risikoevaluering, afhjælpning af operativsystemet, afhjælpning af mikrokoder, status for afhjælpning
@@ -19,22 +19,22 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1c86dad2f303df149921efab87d3ffd026e0f93d
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0ca4aea3281d6bb375e7b5ff5223cb40e9a980ac
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63606472"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471071"
 ---
 # <a name="track-and-respond-to-emerging-threats-through-threat-analytics"></a>Spore og reagere på nye trusler via trusselsanalyse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Med mere avancerede adversar og nye trusler, der opstår ofte og med stor grad, er det vigtigt at kunne hurtigt:
 
@@ -66,7 +66,7 @@ Dashboardet Trusselsanalyse er et godt udgangspunkt for at få adgang til de rap
 
 Vælg en trussel fra dashboardet for at få vist rapporten for den pågældende trussel.
 
-![Billede af dashboard for trusselsanalyse.](images/ta_dashboard.png)
+:::image type="content" source="images/ta_dashboard.png" alt-text="Dashboardet Trusselsanalyse" lightbox="images/ta_dashboard.png":::
 
 ## <a name="view-a-threat-analytics-report"></a>Få vist en rapport over trusselsanalyse
 
@@ -76,8 +76,8 @@ Hver trusselsanalyserapport indeholder oplysninger i tre **sektioner: Oversigt**
 
 Afsnittet **Oversigt** giver et eksempel på den detaljerede analytikerrapport. Den indeholder også diagrammer, der fremhæver virkningen af trussel mod din organisation og din eksponering via forkert konfigurerede og ikke-kompatible enheder.
 
-![Billede af afsnittet Oversigt i en rapport over trusselsanalyse.](images/ta-overview.png)
- _Afsnittet Oversigt i en rapport over trusselsanalyse_
+:::image type="content" source="images/ta-overview.png" alt-text="Afsnittet Oversigt i en rapport over trusselsanalyse" lightbox="images/ta-overview.png":::
+_Afsnittet Oversigt i en rapport over trusselsanalyse_
 
 #### <a name="assess-the-impact-to-your-organization"></a>Vurder påvirkningen af din organisation
 
@@ -112,7 +112,8 @@ I afsnittet **Afhjælpninger** skal du gennemgå listen over specifikke anbefali
 
 Oplysninger om afhjælpning i dette afsnit indeholder data [fra Håndtering af trusler og sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md), som også indeholder detaljerede oplysninger om afhjælpning fra forskellige links i rapporten.
 
-![Billede af afsnittet afhjælpninger i en rapport over trusselsanalyse.](images/ta-mitigations.png)
+:::image type="content" source="images/ta-mitigations.png" alt-text="Afsnittet afhjælpninger i en rapport over trusselsanalyse" lightbox="images/ta-mitigations.png":::
+
 
 _Afsnittet afhjælpninger i en rapport over trusselsanalyse_
 

@@ -20,12 +20,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om efterlignet intelligens indsigt i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5bf0ed143f5bfb78ff1d6af4005a4b5ec64fd90e
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ba31c5022cb8f449ce9e1e1a4ba65e87afd0b464
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63588924"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471445"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>Efterlignet intelligensindsigt i EOP
 
@@ -33,7 +33,7 @@ ms.locfileid: "63588924"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Resten af denne artikel forklarer, hvordan du kan bruge efterlignet intelligensi
   > - Hvis du føjer brugere til den Azure Active Directory rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser og tilladelser til andre  funktioner Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
   > - **Rollegruppen Skrivebeskyttet** organisationsadministration i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) også skrivebeskyttet adgang til funktionen.
 
-- Du aktiverer og deaktiverer efterlignet intelligens i antiphishing-politikker i EOP og Microsoft Defender Office 365. Efterlignet intelligens er aktiveret som standard. Få mere at vide under [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md) eller [Konfigurer antiphishing-politikker i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
+- Du aktiverer og deaktiverer efterlignet intelligens i antiphishing-politikker i EOP og Microsoft Defender for Office 365. Efterlignet intelligens er aktiveret som standard. Få mere at vide under [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md) eller [Konfigurer antiphishing-politikker Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 - For vores anbefalede indstillinger for efterlignet intelligens skal du se [Politikindstillinger for EOP-antiphishing](recommended-settings-for-eop-and-office365-atp.md#eop-anti-phishing-policy-settings).
 
@@ -96,7 +96,7 @@ Resten af denne artikel forklarer, hvordan du kan bruge efterlignet intelligensi
 
 2. På siden **Lejers tilladelses-/** bloklister ser efterlignet intelligensindsigt således ud:
 
-   ![Efterlignet intelligens indsigt på siden antiphishing-politik.](../../media/m365-sc-spoof-intelligence-insight.png)
+   :::image type="content" source="../../media/m365-sc-spoof-intelligence-insight.png" alt-text="Spoof-intelligensindsigt på siden med antiphishing-politik" lightbox="../../media/m365-sc-spoof-intelligence-insight.png":::
 
    Indsigten har to tilstande:
 
@@ -123,7 +123,7 @@ På siden **Spoof intelligence insight** , der vises, når du klikker på Vis **
   - **Ekstern**: Spoof-afsenderen er i et eksternt domæne.
 - **Handling**: Denne værdi er Tilladt **eller** **Blokeret**:
   - **Tilladt**: Domænet mislykkedes eksplicit mailgodkendelse [kontrollerer SPF](how-office-365-uses-spf-to-prevent-spoofing.md), [DKIM](use-dkim-to-validate-outbound-email.md) og [DMARC](use-dmarc-to-validate-email.md). Men domænet bestod vores implicitte mailgodkendelseskontroller ([sammensat godkendelse](email-validation-and-authentication.md#composite-authentication)). Derfor blev der ikke taget nogen antispoofinghandling på meddelelsen.
-  - **Blokeret**: Meddelelser fra kombinationen af det efterlignede domæne og _den_ afsendende infrastruktur er markeret som dårlige af efterlignet intelligens. Den handling, der er foretaget på forfalskede meddelelser, styres af standardpolitikken for phishing eller brugerdefinerede antiphishing-politikker (standardværdien er Flyt meddelelsen til mappen Uønsket **mail**). Få mere at vide under [Konfigurer antiphishing-politikker i Microsoft Defender Office 365](configure-mdo-anti-phishing-policies.md).
+  - **Blokeret**: Meddelelser fra kombinationen af det efterlignede domæne og _den_ afsendende infrastruktur er markeret som dårlige af efterlignet intelligens. Den handling, der er foretaget på forfalskede meddelelser, styres af standardpolitikken for phishing eller brugerdefinerede antiphishing-politikker (standardværdien er Flyt meddelelsen til mappen Uønsket **mail**). Få mere at vide under [Konfigurer antiphishing-politikker Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 Du kan klikke på markerede kolonneoverskrifter for at sortere resultaterne.
 
@@ -143,7 +143,7 @@ Når du vælger en post på listen, vises der en pop op-meddelelse med oplysning
 - Det skal du gøre.
 - En domæneoversigt, der indeholder de fleste af de samme oplysninger fra den primære efterlignede intelligensside.
 - WhoIs data about the sender.
-- Et link til at [åbne Threat Explorer](threat-explorer.md) for at se yderligere oplysninger om afsenderen under **View** \> **Phish** i Microsoft Defender for Office 365.
+- Et link til at [åbne Threat Explorer](threat-explorer.md) for at få vist flere oplysninger om **afsenderen under View** \> **Phish** Microsoft Defender for Office 365.
 - Lignende meddelelser, vi har set i din lejer fra den samme afsender.
 
 ### <a name="about-allowed-spoofed-senders"></a>Om tilladte spoof-afsendere

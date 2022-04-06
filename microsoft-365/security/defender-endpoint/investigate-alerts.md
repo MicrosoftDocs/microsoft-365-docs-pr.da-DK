@@ -1,5 +1,5 @@
 ---
-title: Undersøg Microsoft Defender for at få slutpunktsbeskeder
+title: Undersøg Microsoft Defender for Endpoint vigtige beskeder
 description: Brug undersøgelsesmulighederne til at få oplysninger om vigtige beskeder påvirker dit netværk, hvad de betyder, og hvordan du kan løse dem.
 keywords: undersøge, undersøge, enheder, enhed, kø af beskeder, dashboard, IP-adresse, fil, indsende, indsendelser, dybdegående analyse, tidslinje, søgning, domæne, URL, IP
 ms.prod: m365-security
@@ -17,20 +17,20 @@ ms.collection:
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: f228d0ca44589b9c140226c2b39984c717c7d9f8
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: e2ebdffa171266fdc0ec77047c9fecc5be9e56ba
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592944"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471159"
 ---
-# <a name="investigate-alerts-in-microsoft-defender-for-endpoint"></a>Undersøg vigtige beskeder i Microsoft Defender til slutpunkt
+# <a name="investigate-alerts-in-microsoft-defender-for-endpoint"></a>Undersøg beskeder i Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatealerts-abovefoldlink)
@@ -39,7 +39,7 @@ Undersøg beskeder, der påvirker dit netværk, forstå, hvad de betyder, og hvo
 
 Vælg en besked fra køen med vigtige beskeder for at gå til siden med vigtige beskeder. Denne visning indeholder beskedens titel, de berørte aktiver, sideruden med detaljer og beskedens historie.
 
-Start din undersøgelse på påmindelsessiden ved at vælge de påvirkede aktiver eller enhederne under trævisningen af beskedhistorien. Detaljeruden udfyldes automatisk med yderligere oplysninger om, hvad du har valgt. Hvis du vil se, hvilke oplysninger du kan få vist her, [skal du læse Gennemse vigtige beskeder i Microsoft Defender til slutpunkt](/microsoft-365/security/defender-endpoint/review-alerts).
+Start din undersøgelse på påmindelsessiden ved at vælge de påvirkede aktiver eller enhederne under trævisningen af beskedhistorien. Detaljeruden udfyldes automatisk med yderligere oplysninger om, hvad du har valgt. Hvis du vil se, hvilken slags oplysninger du kan få vist her, [skal du læse Gennemse beskeder Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/review-alerts).
 
 ## <a name="investigate-using-the-alert-story"></a>Undersøg ved hjælp af beskedens tekstenhed
 
@@ -52,7 +52,7 @@ Udvid enheder for at få et hurtigt overblik over detaljer. Når du vælger en e
 > [!NOTE]
 > Sektionen med besked tekstenhed kan indeholde mere end én besked, hvor flere vigtige beskeder om det samme eksekveringstræ vises før eller efter den besked, du har valgt.
 
-![Et eksempel på en historie med en besked i fokus og nogle udvidede kort.](images/alert-story-tree.png)
+:::image type="content" source="images/alert-story-tree.png" alt-text="En historie med en besked i fokus og nogle udvidede kort" lightbox="images/alert-story-tree.png":::
 
 ## <a name="take-action-from-the-details-pane"></a>Tag skridtet ud fra detaljeruden
 
@@ -62,19 +62,19 @@ Når du er færdig med at undersøge sagen, skal du gå tilbage til den besked, 
 
 Hvis du klassificerer den som en sand besked, kan du også vælge en bestemmelse, sådan som det er vist på billedet nedenfor.
 
-![Et kodestykke af detaljeruden med en løst besked og determinations-rullemenuen udvidet.](images/alert-details-resolved-true.png)
+:::image type="content" source="images/alert-details-resolved-true.png" alt-text="Detaljeruden med en løst besked og rullelisten til bestemmelse udvidet" lightbox="images/alert-details-resolved-true.png":::
 
 Hvis du oplever en falsk besked med en line of business-applikation, kan du oprette en undertrykkende regel for at undgå denne type besked i fremtiden.
 
-![handlinger og klassificering i detaljeruden med skjulereglen fremhævet.](images/alert-false-suppression-rule.png)
+:::image type="content" source="images/alert-false-suppression-rule.png" alt-text="Handlingerne og klassificeringen i detaljeruden med skjulereglen fremhævet" lightbox="images/alert-false-suppression-rule.png":::
 
 > [!TIP]
 > Hvis du oplever problemer, der ikke er beskrevet ovenfor, kan du bruge 🙂 knappen til at give feedback eller åbne en supportbillet.
 
 
 ## <a name="related-topics"></a>Relaterede emner
-- [Få vist og organiser køen for Microsoft Defender for Endpoint Alerts](alerts-queue.md)
-- [Administrer Microsoft Defender for Endpoint-beskeder](manage-alerts.md)
+- [Få vist og organiser Microsoft Defender for Endpoint i køen vigtige beskeder](alerts-queue.md)
+- [Administrer Microsoft Defender for Endpoint vigtige beskeder](manage-alerts.md)
 - [Undersøg en fil, der er knyttet til en Defender for Endpoint-besked](investigate-files.md)
 - [Undersøg enhederne på listen Defender for Endpoint-enheder](investigate-machines.md)
 - [Undersøg en IP-adresse, der er knyttet til en Defender for Endpoint-besked](investigate-ip.md)

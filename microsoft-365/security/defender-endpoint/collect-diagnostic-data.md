@@ -17,12 +17,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 73f07a7346edbaebe7e53cd4e17e29a5e6764073
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 099bd5c458a863576c8030a86d6923065228e307
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "63599356"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470719"
 ---
 # <a name="collect-microsoft-defender-antivirus-diagnostic-data"></a>Indsaml Microsoft Defender Antivirus diagnostiske data
 
@@ -31,8 +31,8 @@ ms.locfileid: "63599356"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 I denne artikel beskrives det, hvordan du indsamler diagnostiske data, der kan bruges af Microsoft Support og tekniske teams til at foretage fejlfinding af problemer, der kan opstå, når du bruger Microsoft Defender Antivirus.
 
@@ -117,23 +117,24 @@ Når parameteret SupportLogLocation bruges, oprettes en mappestruktur som følge
 
 ## <a name="specify-location-where-diagnostic-data-is-created"></a>Angiv den placering, hvor diagnostiske data oprettes
 
-Du kan også angive, hvor den .cab fil skal oprettes ved hjælp Gruppepolitik et gruppepolitikobjekt.
+Du kan også angive, hvor .cab filen skal oprettes ved hjælp Gruppepolitik et gruppepolitikobjekt.
 
 1. Åbn Editor til Gruppepolitik lokale placering, og find Gruppepolitikobjekt til SupportLogLocation på: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SupportLogLocation`.
 
 2. Vælg **Definer mappestien for at kopiere understøttede logfiler**.
 
-   ![Skærmbillede af redigeringsprogram til lokal gruppepolitik](images/GPO1-SupportLogLocationDefender.png)
+   :::image type="content" source="images/GPO1-SupportLogLocationDefender.png" alt-text="Redigeringsprogram til lokal gruppepolitik" lightbox="images/GPO1-SupportLogLocationDefender.png":::
 
-   ![Skærmbillede af indstillingen Definer sti til logfiler](images/GPO2-SupportLogLocationGPPage.png)
+   :::image type="content" source="images/GPO2-SupportLogLocationGPPage.png" alt-text="Indstillingen Definer sti til logfiler" lightbox="images/GPO2-SupportLogLocationGPPage.png":::
 
-    ![Skærmbillede af redigeringsprogrammet til lokal gruppepolitik.](images/GPO1-SupportLogLocationDefender.png)  
+   :::image type="content" source="images/GPO1-SupportLogLocationDefender.png" alt-text="Redigeringsprogram til lokal gruppepolitik" lightbox="images/GPO1-SupportLogLocationDefender.png"::: 
         
-     ![Skærmbillede af indstillingen Definer sti til logfiler.](images/GPO2-SupportLogLocationGPPage.png)  
+   :::image type="content" source="images/GPO2-SupportLogLocationGPPage.png" alt-text="Definere stien til konfiguration af indstillingen for logfiler" lightbox="images/GPO2-SupportLogLocationGPPage.png":::
+ 
 3. I politikeditoren skal du vælge **Aktiveret**.
 
 4. Angiv den mappesti, hvor du vil kopiere supportlogfilerne i **feltet** Indstillinger.
-     ![Skærmbillede af brugerdefineret indstilling for Aktiveret mappesti.](images/GPO3-SupportLogLocationGPPageEnabledExample.png) 
+   :::image type="content" source="images/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="Brugerdefineret indstilling for mappesti aktiveret" lightbox="images/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 5. Vælg **OK** eller **Anvend**.
 
 ## <a name="see-also"></a>Se også

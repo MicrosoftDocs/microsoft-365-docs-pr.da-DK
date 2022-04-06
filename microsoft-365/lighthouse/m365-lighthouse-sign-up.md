@@ -17,16 +17,16 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: For administrerede tjenesteudbydere kan du se, hvordan du tilmelder dig Microsoft 365 Lighthouse.
-ms.openlocfilehash: 2607a131908a06ec4b7072cbf718739e1db00ad7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 25ad88edc63d53e3c9110062a64285bbb759a775
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599477"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645174"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Tilmeld dig Microsoft 365 fyrtårn
 
-Denne artikel indeholder en vejledning til, hvordan du tilmelder dig Microsoft 365 Lighthouse. Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB),-kunder, der bruger Microsoft 365 Business Premium eller Microsoft 365 E3. 
+Denne artikel indeholder en vejledning til, hvordan du tilmelder dig Microsoft 365 Lighthouse. Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB), der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business. 
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -68,4 +68,4 @@ Denne artikel indeholder en vejledning til, hvordan du tilmelder dig Microsoft 3
 
 [Oversigt over Microsoft 365 fyrtårn](m365-lighthouse-overview.md) (artikel)   
 [Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)   
-[Microsoft 365 Lighthouse og Microsoft Defender for Business](../security/defender-business/mdb-lighthouse-integration.md) (artikel)
+[Microsoft 365 fyrtårn og Microsoft Defender til virksomheder](../security/defender-business/mdb-lighthouse-integration.md) (artikel)

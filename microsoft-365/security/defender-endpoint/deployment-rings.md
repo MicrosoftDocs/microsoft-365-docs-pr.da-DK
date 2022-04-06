@@ -1,6 +1,6 @@
 ---
-title: Installer Microsoft Defender til slutpunkt i ringe
-description: Få mere at vide om, hvordan du installerer Microsoft Defender til slutpunkt i ringe
+title: Installér Microsoft Defender for Endpoint i ringe
+description: Få mere at vide om, hvordan Microsoft Defender for Endpoint installeres i ringe
 keywords: Deploy, rings, evaluate, pilot, insider fast, insider slow, setup, onboard, phase, deployment, deploying, adoption, configuring
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,24 +16,24 @@ ms.collection:
 - m365solution-endpointprotect
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: a7a9673591f4d77197390541a58169a58b04fe91
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 116960ed6e7d4a765479f0c76715e48ec8312e3b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63597522"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472083"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-in-rings"></a>Installer Microsoft Defender til slutpunkt i ringe
+# <a name="deploy-microsoft-defender-for-endpoint-in-rings"></a>Installér Microsoft Defender for Endpoint i ringe
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Installation af Microsoft Defender til Slutpunkt kan udføres ved hjælp af en ringbaseret installations tilgang.
+Implementering af Microsoft Defender for Endpoint kan udføres ved hjælp af en ringbaseret udrulningsmetode.
 
 Installationsringene kan anvendes i følgende scenarier:
 
@@ -42,7 +42,7 @@ Installationsringene kan anvendes i følgende scenarier:
 
 ## <a name="new-deployments"></a>Nye installationer
 
-![Billede af installationsringe.](images/deployment-rings.png)
+:::image type="content" source="images/deployment-rings.png" alt-text="Installationsringene" lightbox="images/deployment-rings.png":::
 
 En ringbaseret metode er en metode til at identificere et sæt slutpunkter til onboarding og bekræftelse af, at visse kriterier er opfyldt, før du fortsætter med at installere tjenesten på et større sæt enheder. Du kan definere udgangskriterierne for hver ring og sikre, at de er opfyldt, før du går videre til den næste ring.
 
@@ -78,14 +78,14 @@ Identificer et lille antal testmaskine i dit miljø for at onboarde tjenesten. I
 
 ### <a name="pilot"></a>Pilot
 
-Microsoft Defender til Slutpunkt understøtter en række slutpunkter, som du kan få adgang til tjenesten på. I denne ring skal du identificere flere enheder til onboarding og baseret på de exitkriterier, du definerer, beslutte at fortsætte til den næste installationsring.
+Microsoft Defender for Endpoint understøtter en række slutpunkter, som du kan onboarde til tjenesten. I denne ring skal du identificere flere enheder til onboarding og baseret på de exitkriterier, du definerer, beslutte at fortsætte til den næste installationsring.
 
 Følgende tabel viser de understøttede slutpunkter og det tilsvarende værktøj, du kan bruge til at onboarde enheder til tjenesten.
 
 | Slutpunkt     | Udrulningsværktøj                       |
 |--------------|------------------------------------------|
-| **Windows**  |  [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br> BEMÆRK! Hvis du vil installere mere end 10 enheder i et produktionsmiljø, skal du bruge Gruppepolitik-metoden i stedet eller de andre understøttede værktøjer, der er angivet nedenfor.<br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/ Mobilenhedshåndtering](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender til skyen](configure-server-endpoints.md#integration-with-azure-defender)  |
-| **macOS**    | [Lokalt script](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [SYLTEF Pro](mac-install-with-jamf.md) <br> [Administration af mobilenheder](mac-install-with-other-mdm.md) |
+| **Windows**  |  [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br> BEMÆRK! Hvis du vil installere mere end 10 enheder i et produktionsmiljø, skal du bruge Gruppepolitik-metoden i stedet eller de andre understøttede værktøjer, der er angivet nedenfor.<br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/Mobile-Enhedshåndtering](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender til skyen](configure-server-endpoints.md#integration-with-azure-defender)  |
+| **macOS**    | [Lokalt script](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [SYLTEF Pro](mac-install-with-jamf.md) <br> [Mobildata Enhedshåndtering](mac-install-with-other-mdm.md) |
 | **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Eller Eller](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
 | **iOS**      | [Microsoft Endpoint Manager](ios-install.md)                                |
 | **Android**  | [Microsoft Endpoint Manager](android-intune.md)               |
@@ -94,11 +94,11 @@ Følgende tabel viser de understøttede slutpunkter og det tilsvarende værktøj
 
 På dette tidspunkt kan du bruge [planlægningsinstallationsmaterialet](deployment-strategy.md) til at hjælpe dig med at planlægge din installation.
 
-Brug følgende materiale til at vælge den relevante Microsoft Defender til slutpunktsarkitektur, der passer bedst til din organisation.
+Brug følgende materiale til at vælge den rette Microsoft Defender for Endpoint, der passer bedst til din organisation.
 
 |**Element**|**Beskrivelse**|
 |:-----|:-----|
-|[![Thumb image for Microsoft Defender for Endpoint deployment strategy.](images/mde-deployment-strategy.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/security/defender-endpoint/downloads/mdatp-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   | Det arkitektoniske materiale hjælper dig med at planlægge din installation for følgende arkitekturer: <ul><li> Skybaseret </li><li> Medadministration </li><li> Lokalt miljø</li><li>Evaluering og lokal onboarding</li></ul>
+|[:::image type="content" source="images/mde-deployment-strategy.png" alt-text="Strategi for Microsoft Defender for Endpoint implementering" lightbox="images/mde-deployment-strategy.png":::](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/security/defender-endpoint/downloads/mdatp-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   | Det arkitektoniske materiale hjælper dig med at planlægge din installation for følgende arkitekturer: <ul><li> Skybaseret </li><li> Medadministration </li><li> Lokalt miljø</li><li>Evaluering og lokal onboarding</li></ul>
 
 ## <a name="existing-deployments"></a>Eksisterende installationer
 
@@ -120,7 +120,8 @@ Med macOS og Linux kan du tage et par systemer og køre i Beta-kanalen.
 
 Valget af kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes din enhed. Enheder i beta er de første, der modtager opdateringer og nye funktioner, efterfulgt af Forhåndsvisning senere og til sidst af Aktuel.
 
-![Billede af Insider-ringe.](images/insider-rings.png)
+:::image type="content" source="images/insider-rings.png" alt-text="Insider-ringene" lightbox="images/insider-rings.png":::
+
 
 For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer nogle enheder i din virksomhed til at bruge enten Beta eller Preview.
 

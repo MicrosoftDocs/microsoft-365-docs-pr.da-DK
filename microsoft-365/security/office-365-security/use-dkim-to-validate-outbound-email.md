@@ -20,12 +20,12 @@ ms.custom:
 description: Lær at bruge DomainKeys Identified Mail (DKIM) med Microsoft 365 til at sikre, at meddelelser, der sendes fra dit brugerdefinerede domæne, er pålidelige i destinationens mailsystemer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 25333a1616bb1f4e4e529c17813bdd58f4c768b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: fd236ff616ab585909b210c9c1b9a8f12b2e9fe2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587264"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472259"
 ---
 # <a name="use-dkim-to-validate-outbound-email-sent-from-your-custom-domain"></a>Brug DKIM til at validere udgående mails, der sendes fra dit brugerdefinerede domæne
 
@@ -33,7 +33,7 @@ ms.locfileid: "63587264"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
  Denne artikel viser trinnene til at bruge DomainKeys Identified Mail (DKIM) med Microsoft 365 til at sikre, at destinationsmailsystemer har tillid til meddelelser, der sendes udgående fra dit brugerdefinerede domæne.
@@ -89,13 +89,15 @@ Når dit domæne er tilføjet, skal du følge trinnene som vist nedenfor for at 
 
 Trin 1: Klik på det domæne, du ønsker at konfigurere DKIM på DKIM-siden (https://security.microsoft.com/dkimv2 eller https://protection.office.com/dkimv2).
 
-![DKIM-siden i Microsoft 365 Defender med et domæne markeret.](../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png)
+:::image type="content" source="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png" alt-text="DKIM-siden i Microsoft 365 Defender med et domæne markeret" lightbox="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png":::
 
 Trin 2: Skub til/fra-knappen for at **aktivere**. Du får vist et pop op-vindue med en besked om, at du skal tilføje CNAME-poster.
 
-![Skub til/fra-knappen til Aktiveret for at aktivere DKIM.](../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png)
+:::image type="content" source="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png" alt-text="Pop op-knappen Domæneoplysninger med knappen Opret DKIM-nøgler" lightbox="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png":::
 
 Trin 3: Kopiér de CNAMES, der vises i pop op-vinduet
+
+:::image type="content" source="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png" alt-text="Pop op-vinduet Publicer CNAMEs, der indeholder de to CNAME-poster, der skal kopieres" lightbox="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png":::
 
 Trin 4: Publicer de kopierede CNAME-poster til din DNS-serviceudbyder.
 
@@ -110,7 +112,7 @@ TTL: 3600 (or your provider default)
 
 Trin 5: Vend tilbage til DKIM-siden for at aktivere DKIM.
 
-![Skub til/fra-knappen til Aktiveret for at aktivere DKIM.](../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png)
+:::image type="content" source="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png" alt-text="Til/fra-knappen til at aktivere DKIM" lightbox="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png":::
 
 Hvis du ser, at CNAME-posten ikke findes, kan det skyldes:
 
@@ -248,7 +250,7 @@ Når du har publiceret CNAME-posterne i DNS, er du klar til at aktivere DKIM-sig
 #### <a name="to-enable-dkim-signing-for-your-custom-domain-by-using-powershell"></a>Sådan aktiverer du DKIM-signering for dit brugerdefinerede domæne ved hjælp af PowerShell
 
 > [!IMPORTANT]
-> :::image type="content" source="../../media/dkim.png" alt-text="Fejlen &quot;Ingen DKIM-nøgler gemt for dette domæne&quot;.":::
+> :::image type="content" source="../../media/dkim.png" alt-text="Ingen DKIM-nøgler gemt for denne domænefejl" lightbox="../../media/dkim.png":::
 > Hvis du konfigurerer DKIM for første gang og får vist fejlen "Ingen DKIM-nøgler gemt for dette domæne", `Set-DkimSigningConfig -Identity contoso.com -Enabled $true`skal du fuldføre kommandoen i trin 2 nedenfor (f.eks. ) for at få vist nøglen.
 
 1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
@@ -408,4 +410,5 @@ Læs derefter Brug [**DMARC til at validere mail**](use-dmarc-to-validate-email.
 
 Nøglerotation via PowerShell: [Roter-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
 
-[Brug DMARC til at validere mail](use-dmarc-to-validate-email.md)
+[Brug DMARC til at validere mail](/microsoft-365/security/office-365-security/use-dmarc-to-validate-email?view=o365-worldwide&preserve-view=true)
+

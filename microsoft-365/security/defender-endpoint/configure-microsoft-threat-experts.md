@@ -18,19 +18,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 28533f2ad3fcf547cab95812048b3de8af3bcb9a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 152c0c54138841d9159c7230fc043307979e4546
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592630"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471819"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities"></a>Konfigurere og Microsoft-trusselseksperter egenskaber
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -52,15 +52,15 @@ Hvis du allerede er Defender for Endpoint-kunde, kan du anvende den Microsoft 36
 
 2. Klik på **Anvend**.
 
-    ![Billede af Microsoft-trusselseksperter indstillinger.](images/mte-collaboratewithmte.png)
+   :::image type="content" source="images/mte-collaboratewithmte.png" alt-text="De Microsoft-trusselseksperter indstillinger" lightbox="images/mte-collaboratewithmte.png":::
 
 3. Angiv dit navn og din mailadresse, så Microsoft kan vende tilbage til dig i din ansøgning.
 
-    ![Billede af Microsoft-trusselseksperter program.](images/mte-apply.png)
+   :::image type="content" source="images/mte-apply.png" alt-text="Feltet Navn på Microsoft-trusselseksperter programside" lightbox="images/mte-apply.png":::
 
 4. Læs erklæringen [om beskyttelse af personlige](https://privacy.microsoft.com/privacystatement) oplysninger, og **klik derefter på Send** , når du er færdig. Du modtager en velkomstmail, når din ansøgning er godkendt.
 
-    ![Billede af Microsoft-trusselseksperter programbekræftelse.](images/mte-applicationconfirmation.png)
+   :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="Bekræftelsesmeddelelse Microsoft-trusselseksperter program" lightbox="images/mte-applicationconfirmation.png":::
 
 Når den er accepteret, modtager du en velkomstmail, og du  vil se knappen Anvend på en til/fra-knap, der er "til". Hvis du vil tage dig selv ud af tjenesten Målrettede angrebsmeddelelser, skal du skubbe til/fra-knappen "fra" og klikke på Gem indstillinger nederst på siden.
 
@@ -105,15 +105,15 @@ Du kan samarbejde med Microsoft-trusselseksperter, der kan være engageret direk
 
 2. I menuen øverst til højre skal du klikke på **?** . Vælg derefter Kontakt **en trusselsekspert**.
 
-    ![Billede Microsoft-trusselseksperter Eksperter efter behov i menuen.](images/mte-eod-menu.png)
+    :::image type="content" source="images/mte-eod-menu.png" alt-text="Menupunktet Microsoft-trusselseksperter Eksperter on Demand" lightbox="images/mte-eod-menu.png":::
 
     Der åbnes et pop op-skærmbillede. Følgende skærmbillede vises, når du har et prøveabonnement.
 
-    ![Billede af Microsoft-trusselseksperter Experts on Demand-skærmen.](images/mte-eod.png)
+    :::image type="content" source="images/mte-eod.png" alt-text="Siden Microsoft-trusselseksperter Eksperter on Demand" lightbox="images/mte-eod.png":::
 
     Følgende skærmbillede viser, når du har et fuldt Microsoft-trusselseksperter - Eksperter on-Demand-abonnement.
 
-    ![Billede af Microsoft-trusselseksperter Med eksperter i fuld abonnementsvisning.](images/mte-eod-fullsubscription.png)
+    :::image type="content" source="images/mte-eod-fullsubscription.png" alt-text="Siden Microsoft-trusselseksperter med det fulde abonnement på Experts on Demand" lightbox="images/mte-eod-fullsubscription.png":::
 
     **Emnefeltet Forespørg** er på forhånd udfyldt med linket til den relevante side for din undersøgelsesanmodning. Eksempelvis et link til den hændelse, besked eller side med enhedsoplysninger, du var ved, da du indtalingsanmodningen.
 

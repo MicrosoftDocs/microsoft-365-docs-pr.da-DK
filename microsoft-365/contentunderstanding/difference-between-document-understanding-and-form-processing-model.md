@@ -1,5 +1,5 @@
 ---
-title: Forskelle mellem dokumentforståelse og modeller til formularbehandling
+title: Forskelle mellem modeller til dokumentforståelse og formularbehandling
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,86 +12,86 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Få mere at vide om de vigtigste forskelle mellem en dokumentforståelsesmodel og en formularbehandlingsmodel.
-ms.openlocfilehash: e5de4c55cc8a559ad03d722b1f7235797db76e07
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Få mere at vide om vigtige forskelle mellem en model til dokumentforståelse og en formularbehandlingsmodel.
+ms.openlocfilehash: ee51b60b69bc2ec489f074a73555cbc6f1a17143
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681276"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664629"
 ---
-# <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem dokumentforståelse og modeller til formularbehandling 
+# <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem modeller til dokumentforståelse og formularbehandling 
 
-Indholdsforståelse i Microsoft SharePoint Syntex giver dig mulighed for at identificere og klassificere dokumenter, der uploades til SharePoint-dokumentbiblioteker, og derefter udtrække relevante oplysninger fra hver fil. Når filer eksempelvis uploades til et SharePoint-dokumentbibliotek, klassificeres alle filer, der identificeres som  indkøbsordrer, som sådan, og de vises derefter i en brugerdefineret visning af dokumentbiblioteket. Desuden kan du trække bestemte oplysninger fra hver fil (f.eks. *IP-nummer* og *Total*) og få det vist som en kolonne i visningen af dokumentbiblioteket. 
+Indholdsforståelse i Microsoft SharePoint Syntex giver dig mulighed for at identificere og klassificere dokumenter, der uploades til SharePoint dokumentbiblioteker, og derefter udtrække relevante oplysninger fra hver fil. Da filer f.eks. uploades til et SharePoint dokumentbibliotek, klassificeres alle filer, der er identificeret som *indkøbsordrer*, som sådanne og vises derefter i en brugerdefineret dokumentbiblioteksvisning. Derudover kan du hente bestemte oplysninger fra hver fil (f.eks *. po-nummer* og *total*) og få dem vist som en kolonne i dokumentbibliotekets visning. 
 
-Med indholdsforståelse kan *du oprette* modeller til at identificere og udtrække de oplysninger, du har brug for. Modeller har værdi i at hjælpe med at løse forretningsmæssige problemer i forbindelse med søgning, forretningsprocesser, overholdelse af regler og standarder og mange andre.
+Med indholdsforståelse kan du oprette *modeller* for at identificere og udtrække de oplysninger, du har brug for. Modeller har værdi i at hjælpe med at løse forretningsproblemer i forbindelse med søgning, forretningsprocesser, overholdelse af angivne standarder og mange andre.
 
-Der er to brugerdefinerede modeltyper, du kan bruge:
+Du kan bruge to brugerdefinerede modeltyper:
 
 - [Dokumentforståelsesmodeller](document-understanding-overview.md)
-- [Modeller til behandling af formular](form-processing-overview.md)
+- [Formularbehandlingsmodeller](form-processing-overview.md)
 
-Mens begge modeller generelt bruges til det samme formål, påvirker de væsentligste forskelle nedenfor, hvilke af dem du kan bruge.
-
-> [!NOTE]
-> Se SharePoint Syntex[: Introduktion for at få mere at](./adoption-getstarted.md) vide om eksempler på formularbehandling og dokumentforståelsesscenarier.
-
-## <a name="structured-versus-unstructured-and-semi-structured-content"></a>Struktureret kontra ustruktureret og semistruktureret indhold
-
-Brug dokumentforståelsesmodeller til at identificere og udtrække data fra ustrukturerede dokumenter, f.eks. breve eller kontrakter, hvor de tekstenheder, du vil udtrække, findes i sætninger eller bestemte områder i dokumentet. Et ustruktureret dokument kan f.eks. være et brev til fornyelse af kontrakt, der kan skrives på forskellige måder. Der findes dog konsekvent oplysninger i brødteksten i hvert dokument til fornyelse af kontrakt, f.eks. startdatoen for tekststrengtjenesten *efterfulgt af* en faktisk dato.
-
-Brug modeller til behandling af formularer til at identificere filer og udtrække data fra strukturerede eller semistrukturerede dokumenter, f.eks. formularer eller fakturaer. Modeller til behandling af formular er uddannet i at forstå layoutet i din formular fra eksempeldokumenter og lærer at søge efter de data, du skal bruge til at udtrække fra lignende placeringer. Formularer har som regel et mere struktureret layout, hvor enheder er på samme placering (f.eks. et CPR-nummer i en skatteformular).
+Selvom begge modeller generelt bruges til samme formål, påvirker de nøgleforskelle, der er angivet nedenfor, hvilke du kan bruge.
 
 > [!NOTE]
-> Du skal have adgang til et indholdscenterwebsted for at oprette en dokumentforståelsesmodel eller for at anvende et SharePoint et dokumentbibliotek. 
+> Se [SharePoint Syntex: Introduktionsvejledning](./adoption-getstarted.md) for at få flere oplysninger om formularbehandling og eksempler på scenarieforståelse.
+
+## <a name="structured-versus-unstructured-and-semi-structured-content"></a>Struktureret i forhold til ustruktureret og semi-struktureret indhold
+
+Brug modeller til dokumentforståelse til at identificere og udtrække data fra ustrukturerede dokumenter, f.eks. breve eller kontrakter, hvor de tekstenheder, du vil udtrække, findes i sætninger eller bestemte områder i dokumentet. Et ustruktureret dokument kan f.eks. være et kontraktfornyelsesbrev, der kan skrives på forskellige måder. Oplysningerne findes dog konsekvent i brødteksten i hvert kontraktfornyelsesdokument, f.eks. tekststrengens *startdato for Tjenesten efterfulgt af* en faktisk dato.
+
+Brug modeller til formularbehandling til at identificere filer og udtrække data fra strukturerede eller semi-strukturerede dokumenter, f.eks. formularer eller fakturaer. Modeller til formularbehandling oplæres til at forstå layoutet af din formular fra eksempeldokumenter og lære at søge efter de data, du skal bruge til at udtrække fra lignende placeringer. Formularer har normalt et mere struktureret layout, hvor enheder befinder sig samme sted (f.eks. et cpr-nummer i en skatteformular).
+
+> [!NOTE]
+> Du skal have adgang til et indholdscenterwebsted for at kunne oprette en model til dokumentforståelse eller anvende en på et SharePoint dokumentbibliotek. 
 
 ## <a name="where-models-are-created"></a>Hvor modeller oprettes
 
-Dokumentforståelsesmodeller oprettes og administreres på SharePoint indholdscenterwebsted. 
+Modeller til dokumentforståelse oprettes og administreres på et SharePoint indholdscenterwebsted. 
 
 > [!NOTE]
-> Du kan finde flere oplysninger om inputdokumenter under [Krav og begrænsninger for formularbehandlingsmodel](/ai-builder/form-processing-model-requirements). 
+> Du kan få flere oplysninger om inputdokumenter under [Krav og begrænsninger for formularbehandlingsmodel](/ai-builder/form-processing-model-requirements). 
 
-Modeller til formularbehandling oprettes Power Apps [AI Builder](/ai-builder/overview), men oprettelsen starter direkte fra et SharePoint dokumentbibliotek. Et dokumentbibliotek skal have oprettelse af en formularbehandlingsmodel aktiveret, før en bruger kan oprette en formularbehandlingsmodel for den. Administratorer kan aktivere oprettelse af formularbehandlingsmodel i indholdsforståelse af administratorindstillinger. Modeller til formularbehandling bruger Power Automate til at behandle filer, når de uploades til dokumentbiblioteket.
+Formularbehandlingsmodeller oprettes i Power Apps [AI Builder](/ai-builder/overview), men oprettelsen starter direkte fra et SharePoint dokumentbibliotek. Oprettelse af en formularbehandlingsmodel skal være aktiveret for et dokumentbibliotek, før en bruger kan oprette en formularbehandlingsmodel til det. Administratorer kan aktivere oprettelse af en formularbehandlingsmodel i det indhold, der forstår administratorindstillingerne. Formularbehandlingsmodeller bruger Power Automate flow til at behandle filer, når de uploades til dokumentbiblioteket.
 
-Når du opretter en dokumentforståelsesmodel, opretter du en [ny SharePoint indholdstype](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978), der gemmes i galleriet SharePoint indholdstyper. Eller du kan bruge eksisterende indholdstyper til at definere din model, hvis det er nødvendigt.
+Når du opretter en model til dokumentforståelse, opretter du en ny [SharePoint indholdstype](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978), der gemmes i galleriet med SharePoint indholdstyper. Du kan også bruge eksisterende indholdstyper til at definere din model, hvis det er nødvendigt.
 
-Når en indholdstype er oprettet og knyttet til en model, kan du også referere til den pågældende model fra **egenskabspanelet Webstedsindholdstype** .
+Når en indholdstype er oprettet og knyttet til en model, kan du også referere til denne model fra **egenskabspanelet Webstedsindholdstype** .
 
-![Skærmbillede af panelet Webstedsindholdstype, der viser, at Dokumentforståelsesmodellen er fremhævet.](../media/content-understanding/site-content-type-panel.png)
+![Skærmbillede af panelet Webstedsindholdstype, der viser modellen til dokumentforståelse fremhævet.](../media/content-understanding/site-content-type-panel.png)
 
-Modeller til formularbehandling opretter også [SharePoint indholdstyper](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978) og gemmes også i galleriet SharePoint indholdstyper.
+Formularbehandlingsmodeller opretter også nye [SharePoint indholdstyper](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978) og gemmes også i galleriet med SharePoint indholdstyper.
 
 ## <a name="where-they-can-be-applied"></a>Hvor de kan anvendes
 
-Du kan anvende dokumentforståelsesmodeller SharePoint dokumentbiblioteker, du har adgang til. Brug indholdscenter til at oprette en dokumentforståelsesmodel, og anvend den på forskellige dokumentbiblioteker. Indholdscenter giver dig en mere central kontrol over, hvordan dokumentforståelsesmodeller bruges, og hvor de anvendes. Bemærk, at disse oplysninger også skal vises i et indholdscenter.
+Du kan anvende modeller til dokumentforståelse til SharePoint dokumentbiblioteker, du har adgang til. Brug indholdscenteret til at oprette en model til dokumentforståelse og anvende den på forskellige dokumentbiblioteker. Indholdscenteret giver dig et mere centralt kontrolelement til, hvordan modeller til dokumentforståelse bruges, og hvor de anvendes. Bemærk, at disse oplysninger også skal rulles op til et indholdscenter.
 
-Modeller til formularbehandling kan i øjeblikket kun anvendes på det SharePoint dokumentbibliotek, hvorfra du har oprettet dem. Dette giver licenserede brugere med adgang til webstedet mulighed for at oprette en formularbehandlingsmodel. Bemærk, at en administrator skal aktivere behandling af formular på SharePoint dokumentbibliotek, for at det er tilgængeligt for brugere med licens.
+Formularbehandlingsmodeller kan i øjeblikket kun anvendes på det SharePoint dokumentbibliotek, du har oprettet dem ud fra. Dette giver brugere med licens adgang til webstedet mulighed for at oprette en formularbehandlingsmodel. Bemærk, at en administrator skal aktivere formularbehandling på et SharePoint dokumentbibliotek, for at det er tilgængeligt for brugere med licens.
 
 ## <a name="comparison-of-forms-processing-and-document-understanding"></a>Sammenligning af formularbehandling og dokumentforståelse
 
-Brug tabellen nedenfor til at forstå, hvornår du skal bruge behandling af formularer, og hvornår du skal bruge dokumentforståelse.
+Brug følgende tabel til at forstå, hvornår du skal bruge formularbehandling, og hvornår du skal bruge dokumentforståelse.
 
-| Funktion | Behandling af formularer | Dokumentforståelse |
+| Funktion | Formularbehandling | Dokumentforståelse |
 | ------- | ------- | ------- |
-| Modeltype – hvornår du skal bruge hver | Bruges til semistrukturerede filformater, f.eks. PDF-filer til formularindhold som fakturaer eller indkøbsordrer, hvor layout og formatering er ens.  | Bruges til semistrukturerede filformater – f.eks. Office dokumenter, hvor der er forskelle i layoutet, men stadig lignende oplysninger, der skal udtrækkes. |
-| Oprettelse af modeller | Model oprettet i AI Builder med problemfri adgang fra SharePoint dokumentbibliotek.| Model oprettet i SharePoint på et nyt websted, indholdscenter. |
-| Klassificeringstype| Angiv en klassificering, der kan indstilles, bruges til at give tip til systemet om, hvilke data der skal udtrækkes.| Trænbar klassificering med valgfrie udtræksorer ved hjælp af maskinlæring til at tildele dokumentplacering for hvilke data, der skal udtrækkes.|
-| Placeringer | Trænet i et enkelt dokumentbibliotek.| Kan anvendes på flere biblioteker.|
-| Understøttede filtyper| Træn på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Træn på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider.|
-| Integrer med administrerede metadata | Nej | Ja, efter undervisningsenhedsudtrækning eller henvisning til et konfigureret felt med administrerede metadata.|
-| Integration af overholdelsesfunktion, når Microsoft Information Protection er aktiveret | Angiv publicerede Opbevaringsnavne.<br>Angiv følsomhedsmærkater. | Angiv publicerede Opbevaringsnavne.<br>Angiv publicerede følsomhedsmærkater. |
-| Understøttede områder| Formularbehandling afhænger af Power Platform. Du kan finde oplysninger om global tilgængelighed for Power Platform og AI Builder under [Tilgængelighed af Power Platform](https://dynamics.microsoft.com/geographic-availability/). | Tilgængelig i alle områder.|
-| Transaktionsomkostninger | Bruger AI Builder-kredit.<br>Kreditter kan købes i batches af 1M.<br>1M-kredit er inkluderet, når der er købt over 300 SharePoint Syntex licenser.<br>1M-kredit tillader behandling af 2.000 filsider.<br>| I/T |
-| Kapacitet | Bruger standardmiljøet for Power Platform (brugerdefinerede miljøer med dataversdatabase understøttet). | Har ikke kapacitetsbegrænsninger.|
-| Understøttede sprog| English <br>Kommer senere i 2022: sprog med latinsk alfabet | Modeller fungerer på alle latinske alfabetsprog. Ud over engelsk: tysk, svensk, fransk, spansk, italiensk og portugisisk.|
+| Modeltype – hvornår skal hver enkelt bruges? | Bruges til semi-strukturerede filformater, f.eks. PDF-filer til formularindhold, f.eks. fakturaer eller indkøbsordrer, hvor layoutet og formateringen er den samme.  | Bruges til semi-strukturerede filformater – f.eks. Office dokumenter, hvor der er forskelle i layoutet, men stadig lignende oplysninger, der skal udtrækkes. |
+| Oprettelse af model | Model, der er oprettet i AI Builder med problemfri adgang fra SharePoint dokumentbibliotek.| Model, der er oprettet i SharePoint på et nyt websted, indholdscenteret. |
+| Klassificeringstype| Settable classifier bruges til at give et fingerpeg til systemet om, hvilke data der skal udtrækkes.| Klassificering, der kan oplæres, med valgfrie udtrækninger ved hjælp af maskinundervisning til at tildele dokumentplacering for, hvilke data der skal udtrækkes.|
+| Steder | Oplært i et enkelt dokumentbibliotek.| Kan anvendes på flere biblioteker.|
+| Understøttede filtyper| Oplær på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Oplær på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider.|
+| Integrer med administrerede metadata | Nej | Ja, ved at udtrække enheder, der refererer til et konfigureret felt for administrerede metadata.|
+| Integration af overholdelsesfunktion, når Microsoft Information Protection er aktiveret | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
+| Understøttede områder| Formularbehandling er afhængig af Power Platform. Du kan få oplysninger om global tilgængelighed for Power Platform og AI Builder under [Tilgængelighed af Power Platform](https://dynamics.microsoft.com/geographic-availability/). | Tilgængelig i alle områder.|
+| Transaktionsomkostninger | Bruger AI Builder-kreditter.<br>Kreditter kan købes i batches på 1 mio.<br>Kreditter på 1 mio. er inkluderet, når der købes mere end 300 SharePoint Syntex licenser.<br>Kreditter på 1 mio. tillader behandling af 2.000 filsider.<br>| NIELSEN |
+| Kapacitet | Bruger Power Platform-standardmiljøet (brugerdefinerede miljøer med understøttet Dataverse-database). | Har ikke kapacitetsbegrænsninger.|
+| Understøttede sprog| Understøttelse af sprog for mere [end 73 sprog](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support). | Modeller fungerer på alle latinske alfabetsprog. Ud over engelsk: tysk, svensk, fransk, spansk, italiensk og portugisisk.|
 
 ## <a name="see-also"></a>Se også
 
-[Kursus: Forbedr virksomhedens ydeevne med AI Builder](/learn/paths/improve-business-performance-ai-builder/?source=learn)
+[Oplæring: Øg virksomhedens ydeevne med AI Builder](/learn/paths/improve-business-performance-ai-builder/?source=learn)
 
 [Oversigt over dokumentforståelse](document-understanding-overview.md)
 
-[Oversigt over behandling af formular](form-processing-overview.md)
+[Oversigt over formularbehandling](form-processing-overview.md)
 
 [Introduktion til SharePoint Syntex](index.md)

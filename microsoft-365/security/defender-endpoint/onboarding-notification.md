@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 36713496b5885866dd21a3402dcfe66b4af5b76e
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0208e21394e350c2b5ffffdca6f8e14ebba227c8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593423"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476021"
 ---
 # <a name="create-a-notification-rule-when-a-local-onboarding-or-offboarding-script-is-used"></a>Opret en meddelelsesregel, når der bruges et lokalt onboarding- eller offboarding-script
 
@@ -28,11 +28,11 @@ ms.locfileid: "63593423"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -54,18 +54,19 @@ Du skal have adgang til:
 
 2. Gå til **Mine flow > Ny > Planlagt – fra tom**.
 
-    ![Billede af flow.](images/new-flow.png)
+   :::image type="content" source="images/new-flow.png" alt-text="Flowet" lightbox="images/new-flow.png":::
+
 
 3. Opbyg et planlagt flow.
    1. Angiv et flownavn.
    2. Angiv start- og klokkeslæt.
    3. Angiv hyppigheden. For eksempel hvert 5. minut.
 
-    ![Billede af meddelelsesflowet.](images/build-flow.png)
+   :::image type="content" source="images/build-flow.png" alt-text="Meddelelsesflowet" lightbox="images/build-flow.png":::
 
 4. Vælg knappen + for at tilføje en ny handling. Den nye handling bliver en HTTP-anmodning til Defender for Endpoint Security Center-enheden(e) API'en.. Du kan også erstatte den med "WDATP-forbindelse" (handling: "Maskiner – Hent liste over maskiner").
 
-    ![Billede af gentagelse og tilføj handling.](images/recurrence-add.png)
+   :::image type="content" source="images/recurrence-add.png" alt-text="Gentagelsen og tilføjelsen" lightbox="images/recurrence-add.png":::
 
 5. Angiv følgende HTTP-felter:
 
@@ -78,19 +79,19 @@ Du skal have adgang til:
    - Legitimationstype: Vælg "Hemmelig".
    - Hemmelig: Log på, og naviger https://portal.azure.com til **Azure Active Directory >-appregistreringerne**, og få værdien lejer-id.
 
-    ![Billede af HTTP-betingelserne.](images/http-conditions.png)
+    :::image type="content" source="images/http-conditions.png" alt-text="HTTP-betingelserne" lightbox="images/http-conditions.png":::
 
 6. Tilføj et nyt trin ved at vælge **Tilføj ny handling,** søg derefter efter **Datahandlinger** , og **vælg Parse JSON**.
 
-    ![Billede af datahandlinger.](images/data-operations.png)
+   :::image type="content" source="images/data-operations.png" alt-text="Posten med datahandlinger" lightbox="images/data-operations.png":::
 
 7. Tilføj brødtekst i **feltet** Indhold.
 
-    ![Billede af fortolkning af JSON.](images/parse-json.png)
+   :::image type="content" source="images/parse-json.png" alt-text="Afsnittet fortolke JSON" lightbox="images/parse-json.png":::
 
 8. Vælg linket **Brug eksempel på nyttedata til at generere skema** .
 
-    ![Billede af parse json med nyttedata.](images/parse-json-schema.png)
+   :::image type="content" source="images/parse-json-schema.png" alt-text="Parse JSON med nyttedata" lightbox="images/parse-json-schema.png":::
 
 9. Kopiér og indsæt følgende JSON-kodestykke:
 
@@ -179,22 +180,22 @@ Du skal have adgang til:
     - Hvis ja, udløses der ingen meddelelse
     - Hvis nej, vil den eller de nye onboardede enheder blive registreret på SharePoint, og der sendes en meddelelse til administratoren for Defender til slutpunktet
 
-    ![Billede af anvend på hver enkelt.](images/flow-apply.png)
+    :::image type="content" source="images/flow-apply.png" alt-text="Anvendelse af flowet på hvert element" lightbox="images/flow-apply.png":::
 
-    ![Billede af anvend på hver med Hent elementer.](images/apply-to-each.png)
+    :::image type="content" source="images/apply-to-each.png" alt-text="Anvendelse af flowet på elementet Hent elementer" lightbox="images/apply-to-each.png":::
 
 11. Under **Betingelse** skal du tilføje følgende udtryk: "længde(brødtekst('Get_items')?[' værdi'])" og angive betingelsen til lig med 0.
 
-    ![Billede af anvend på hver betingelse.](images/apply-to-each-value.png)
-    ![ Billede af betingelse1.](images/conditions-2.png)
-    ![ Billede af betingelse2.](images/condition3.png)
-    ![ Billede af Send mail.](images/send-email.png)
+    :::image type="content" source="images/apply-to-each-value.png" alt-text="Anvendelse af flowet på hver betingelse" lightbox="images/apply-to-each-value.png":::
+    :::image type="content" source="images/conditions-2.png" alt-text="Betingelsen-1" lightbox="images/conditions-2.png":::
+    :::image type="content" source="images/condition3.png" alt-text="Betingelsen-2" lightbox="images/condition3.png":::
+    :::image type="content" source="images/send-email.png" alt-text="Afsnittet Send en mail" lightbox="images/send-email.png":::
 
 ## <a name="alert-notification"></a>Meddelelse om besked
 
 Følgende billede er et eksempel på en mailmeddelelse.
 
-![Billede af meddelelse via mail.](images/alert-notification.png)
+:::image type="content" source="images/alert-notification.png" alt-text="Skærmbilledet med besked om mail" lightbox="images/alert-notification.png":::
 
 ## <a name="tips"></a>Tips
 

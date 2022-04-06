@@ -1,7 +1,7 @@
 ---
 title: Brug regler for reduktion af angrebsoverfladen til at forhindre malware inficeret
 description: Regler for reduktion af angrebsoverfladen kan hjælpe med at forhindre udnyttelse i at bruge apps og scripts til at inficere enheder med malware.
-keywords: Regler for reduktion af angrebsoverfladen, asr, hips, forebyggelse af indtrængen, beskyttelsesregler, antieksploit, udnyttelse, forebyggelse af indtrængen, Microsoft Defender til slutpunkt
+keywords: Regler for reduktion af angrebsoverfladen, asr, hips, forebyggelse af indtrængen, beskyttelsesregler, antieksploit, udnyttelse, forebyggelse af indtrængen, Microsoft Defender for Endpoint
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -21,23 +21,23 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 53f338ec713038841ab5cc089c12cebf7fe46131
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c09405043caeea57fdad1c241dfcd70e47ccd6f1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680615"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470726"
 ---
 # <a name="attack-surface-reduction-rules-overview"></a>Oversigt over regler for reduktion af angrebsoverfladen
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 ## <a name="why-attack-surface-reduction-rules-are-important"></a>Derfor er begrænsningsregler for angrebsoverfladen vigtige
 
-Din organisations angrebsoverflade omfatter alle de steder, hvor en hacker kan kompromittere din organisations enheder eller netværk. At reducere din angrebsoverflade betyder, at du beskytter din organisations enheder og netværk, hvilket efterlader hackere med færre måder at udføre angreb på. Konfiguration af regler for reduktion af angrebsoverfladen i Microsoft Defender til slutpunkt kan hjælpe!
+Din organisations angrebsoverflade omfatter alle de steder, hvor en hacker kan kompromittere din organisations enheder eller netværk. At reducere din angrebsoverflade betyder, at du beskytter din organisations enheder og netværk, hvilket efterlader hackere med færre måder at udføre angreb på. Konfiguration af regler for reduktion af angrebsoverfladen i Microsoft Defender for Endpoint kan hjælpe!
 
 Regler for reduktion af angrebsoverfladen målretter visse softwarefunktionsmåder, f.eks.:
 
@@ -53,7 +53,7 @@ Du kan finde flere oplysninger om konfiguration af regler for reduktion af angre
 
 Du kan vurdere, hvordan en reduktionsregel for angrebsoverfladen kan påvirke dit netværk ved at åbne sikkerhedsanbefalingen for den [pågældende regel Håndtering af trusler og sikkerhedsrisici](/windows/security/threat-protection/#tvm).
 
-:::image type="content" source="images/asrrecommendation.png" alt-text="Sikkerheds-reco for begrænsningsregel for angrebsoverfladen.":::
+:::image type="content" source="images/asrrecommendation.png" alt-text="Asr-anbefaling" lightbox="images/asrrecommendation.png":::
 
 I detaljeruden på anbefalingen skal du kontrollere, om der er brugerpåvirkning for at afgøre, hvilken procentdel af dine enheder, der kan acceptere en ny politik, som aktiverer reglen i blokeringstilstand uden at påvirke produktiviteten negativt.
 
@@ -88,7 +88,7 @@ Du kan finde flere oplysninger om og få dine opdateringer [under Opdatering til
 
 ### <a name="cases-where-warn-mode-is-not-supported"></a>Tilfælde, hvor advarselstilstand ikke understøttes
 
-Advarselstilstand understøttes ikke for tre regler for reduktion af angrebsoverfladen, når du konfigurerer dem Microsoft Endpoint Manager. (Hvis du bruger en Gruppepolitik konfigurere dine regler for reduktion af angrebsoverfladen, understøttes advarselstilstand). De tre regler, der ikke understøtter advarselstilstand, når du konfigurerer dem i Microsoft Endpoint Manager er som følger:
+Advarselstilstand understøttes ikke for tre regler for reduktion af angrebsoverfladen, når du konfigurerer dem Microsoft Endpoint Manager. Hvis du bruger en Gruppepolitik konfigurere dine reduktionsregler for angrebsoverfladen, understøttes advarselstilstand. De tre regler, der ikke understøtter advarselstilstand, når du konfigurerer dem i Microsoft Endpoint Manager er som følger:
 
 - [Bloker JavaScript eller VBScript fra at starte hentet eksekverbart indhold](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) (GUID `d3e037e1-3eb8-44c8-a917-57927947596d`)
 - [Bloker vedholdenhed gennem WMI-hændelsesabonnement](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription) (GUID `e6db77e5-3df2-4cf1-b95a-636979351e5b`)
@@ -133,7 +133,7 @@ Selvom regler for reduktion af angrebsoverfladen ikke kræver [en Windows E5-lic
 - Overvågning, analyse og arbejdsprocesser, der er tilgængelige i [Defender til Slutpunkt](microsoft-defender-endpoint.md)
 - Rapporterings- og konfigurationsfunktionerne [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-Disse avancerede funktioner er ikke tilgængelige med en Windows Professional eller Windows E3-licens. Men hvis du har disse licenser, kan du bruge Logbog og Microsoft Defender Antivirus til at gennemse dine reduktionshændelser for angrebsoverfladen.
+Disse avancerede funktioner er ikke tilgængelige med en Windows Professional eller Windows E3-licens. Men hvis du har disse licenser, kan du bruge Logbog og Microsoft Defender Antivirus til at gennemgå dine hændelser for reduktion af reglen for angrebsoverfladen.
 
 ## <a name="review-attack-surface-reduction-events-in-the-microsoft-365-defender-portal"></a>Gennemse hændelser til reduktion af angrebsoverfladen i Microsoft 365 Defender-portalen
 
@@ -148,13 +148,13 @@ DeviceEvents
 | where ActionType startswith 'Asr'
 ```
 
-## <a name="review-attack-surface-reduction-events-in-windows-event-viewer"></a>Gennemse hændelser til reduktion af angrebsoverfladen i Windows Event Viewer
+## <a name="review-attack-surface-reduction-events-in-windows-event-viewer"></a>Gennemse hændelser til reduktion af angrebsoverfladen i Windows Logbog
 
 Du kan gennemse hændelsesloggen Windows for at få vist hændelser, der genereres af regler for reduktion af angrebsoverfladen:
 
 1. Download [evalueringspakken](https://aka.ms/mp7z2w) , og udtræk *filencfa-events.xml* en lettilgængelig placering på enheden.
 
-2. Skriv ordene, *Logvisning, i* menuen Start for at åbne Windows Log på.
+2. Skriv ordene, *Logbog*, i menuen Start for at åbne Windows Logbog.
 
 3. Under **Handlinger skal** du vælge **Importér brugerdefineret visning...**.
 
@@ -170,4 +170,4 @@ Du kan oprette en brugerdefineret visning, der filtrerer hændelser til kun at v
 |1121|Hændelse, når reglen udløses i bloktilstand|
 |1122|Hændelse, når reglen udløses i overvågningstilstand|
 
-Den "programversion", der er angivet for hændelser til reduktion af angrebsoverfladen i hændelsesloggen, genereres af Defender til Slutpunkt, ikke af operativsystemet. Defender til Slutpunkt er integreret med Windows 10 Windows 11, så denne funktion fungerer på alle enheder med Windows 10 eller Windows 11 installeret.
+Den "programversion", der er angivet for hændelser til reduktion af angrebsoverfladen i hændelsesloggen, genereres af Defender til Slutpunkt, ikke af operativsystemet. Defender til Slutpunkt er integreret med Windows 10 og Windows 11, så denne funktion fungerer på alle enheder med Windows 10 eller Windows 11 installeret.
