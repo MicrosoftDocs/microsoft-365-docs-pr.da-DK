@@ -20,12 +20,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Forbered og installer Microsoft Overholdelsesudvidelsen.
-ms.openlocfilehash: 5ffd04ee0b89c2e920f55c3e6fbefbab4c82983e
-ms.sourcegitcommit: db2ed146b46ade9ea62eed9cb8efff5fea7a35e6
+ms.openlocfilehash: 1c4c0a79f65f8a58ed30a9170256ef93b2bb4cef
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64481380"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681804"
 ---
 # <a name="get-started-with-microsoft-compliance-extension"></a>Kom i gang med Microsoft-udvidelse til overholdelse af regler og standarder
 
@@ -42,7 +42,7 @@ Hvis du vil bruge Microsoft Overholdelsesudvidelse, skal enheden være onboardet
 - [Få mere at vide om forebyggelse af datatab på slutpunkt](endpoint-dlp-learn-about.md)
 - [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md)
 - [Onboardingværktøjer og metoder til Windows 10 enheder](device-onboarding-overview.md)
-- [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection)
+- [Konfigurere indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection)
 - [Brug af forebyggelse af datatab på slutpunkt](endpoint-dlp-using.md)
 
 ### <a name="skusubscriptions-licensing"></a>SKU/abonnementslicenser
@@ -60,7 +60,7 @@ Du kan finde detaljerede [licenseringsvejledning Microsoft 365 vejledning i lice
 
 - Din organisation skal have licens til Endpoint DLP
 - Dine enheder skal køre i Windows 10 x64 build 1809 eller nyere.
-- Enheden skal have antimalwareklientversion 4.18.2202.x eller nyere. Kontrollér din aktuelle version ved at **Windows Sikkerhed** appen, vælge **ikonet Indstillinger** og derefter vælge **Om**.
+- Enheden skal have antimalwareklientversion 4.18.2101.9 eller nyere. Kontrollér din aktuelle version ved at **Windows Sikkerhed** appen, vælge **ikonet Indstillinger** og derefter vælge **Om**.
 
 
 ### <a name="permissions"></a>Tilladelser
@@ -81,18 +81,18 @@ Eksempelvisningen har roller og rollegrupper, som du kan teste for at finjustere
 
 Her er en liste over de Microsoft Information Protection (MIP)-roller, der er i forhåndsvisning. Du kan få mere at vide om [dem under Roller i & Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection administrator
-- Information Protection analytiker
-- Information Protection 2010
+- Administratoren for informationsbeskyttelse
+- Information Protection-analytiker
+- Information Protection Investigator
 - Information Protection Reader
 
 Her er en liste over MIP-rollegrupper, der er i forhåndsvisning. Du kan få mere at vide om [dette under Rollegrupper i & Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Information Protection
-- Information Protection Administratorer
-- Information Protection analytikere
-- Information Protection, 2010
-- Information Protection læsere
+- Beskyttelse af oplysninger
+- Administratorer for informationsbeskyttelse
+- Information Protection-analytikere
+- Beskyttelse af oplysninger
+- Læsere til informationsbeskyttelse
 
 ### <a name="overall-installation-workflow"></a>Overordnet installationsarbejdsproces
 
@@ -114,20 +114,47 @@ Hvis du udruller Microsoft-overholdelsesudvidelsen på alle de overvågede Windo
 
 1. Brug fremgangsmåderne i disse emner til at onboarde dine enheder:
     1. [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md)
-    1. [Onboarding-Windows 10- og Windows 11 enheder](device-onboarding-overview.md)
-    1. [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection)
+    1. [Onboarding Windows 10 og Windows 11 enheder](device-onboarding-overview.md)
+    1. [Konfigurere indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection)
 
 ### <a name="basic-setup-single-machine-selfhost"></a>Grundlæggende konfiguration af egenvært på en enkelt computer
 
 Dette er den anbefalede metode.
 
-1. Gå til [Microsoft Overholdelsesudvidelse - Chrome Webshop (google.com)](https://chrome.google.com/webstore/detail/microsoft-compliance-exte/echcggldkblhodogklpincgchnpgcdco).
+1. Log på den Windows 10 computer, hvor du vil installere Microsoft Overholdelsesudvidelse på, og kør dette PowerShell-script som administrator.
 
-2. Installér udvidelsen ved at følge vejledningen på Chrome Webshop side.
+   ```powershell
+   Get-Item -path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Miscellaneous Configuration" | New-ItemProperty -Name DlpDisableBrowserCache -Value 0 -Force
+   ```
+
+2. Gå til [Microsoft Overholdelsesudvidelse - Chrome Webshop (google.com)](https://chrome.google.com/webstore/detail/microsoft-compliance-exte/echcggldkblhodogklpincgchnpgcdco).
+
+3. Installér udvidelsen ved at følge vejledningen på Chrome Webshop side.
 
 ### <a name="deploy-using-microsoft-endpoint-manager"></a>Installér ved hjælp Microsoft Endpoint Manager
 
 Brug denne konfigurationsmetode til installationer i hele organisationen.
+
+##### <a name="enabling-required-registry-value-via-microsoft-endpoint-manager"></a>Aktivering af påkrævet registreringsdatabaseværdi via Microsoft Endpoint Manager
+
+1. Opret et PowerShell-script med følgende indhold:
+
+    ```powershell
+    Get-Item -path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Miscellaneous Configuration" | New-ItemProperty -Name DlpDisableBrowserCache -Value 0 -Force
+    ```
+
+2. Log på [Microsoft Endpoint Manager Administration](https://endpoint.microsoft.com).
+
+3. Gå til **EnhederScripts** > , og vælg **Tilføj**.
+
+4. Gå til placeringen for det script, der blev oprettet, når du bliver bedt om det.
+
+5. Vælg følgende indstillinger:
+    1. Kør dette script ved hjælp af legitimationsoplysningerne, der er logget på: NEJ
+    1. Gennemtving kontrol af scriptsignatur: NEJ
+    1. Kør script i 64-bit PowerShell-vært: JA
+
+6. Vælg de rette enhedsgrupper, og anvend politikken.
 
 #### <a name="microsoft-endpoint-manager-force-install-steps"></a>Microsoft Endpoint Manager gennemtving installationstrin
 
@@ -159,11 +186,43 @@ Før du føjer Microsoft-udvidelse til listen over force-installerede udvidelser
 
 ### <a name="deploy-using-group-policy"></a>Installér ved hjælp Gruppepolitik
 
-Hvis du ikke vil bruge en Microsoft Endpoint Manager, kan du bruge gruppepolitikker til at installere Microsoft Overholdelsesudvidelse i hele organisationen.
+Hvis du ikke vil bruge en microsoft-Microsoft Endpoint Manager, kan du bruge gruppepolitikker til at installere Microsoft Overholdelsesudvidelse i hele organisationen
+
+1. Dine enheder skal kunne administreres via Gruppepolitik, og du skal importere alle Chrome ADMX'er i Gruppepolitik Central Store. Få mere at vide under [Sådan opretter og administrerer du den centrale Store til Gruppepolitik administrative skabeloner i Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+
+2. Opret et PowerShell-script ved hjælp af denne PowerShell-kommando:
+
+    ```powershell
+    Get-Item -path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Miscellaneous Configuration" | New-ItemProperty -Name DlpDisableBrowserCache -Value 0 -Force
+    ```
+
+3. Åbn Gruppepolitik **administrationskonsollen,** og gå til din organisationsenhed ( OU).
+
+4. Højreklik, og vælg Opret **et gruppepolitikobjekt for dette domæne, og sammenkæd det her**. Når du bliver bedt om det, skal du tildele dette gruppepolitikobjekt et beskrivende navn og afslutte oprettelsen af det.
+
+5. Højreklik på gruppepolitikobjektet, og vælg **Rediger**.
+
+6. Gå til **ComputerKonfigurationPræferencerKontrolpanel** >  >  **Indstillinger** >  **Planlagte opgaver**.
+
+7. Opret en ny øjeblikkelig opgave ved at vælge Højreklik og vælge **NewImmediate** >  **Task (mindst Windows 7)**.
+
+8. Navngive opgaven & beskrivelse.
+
+9. Vælg den tilsvarende konto for at køre den øjeblikkelige opgave, f.eks. NT Authority
+
+10. Vælg **Kør med højeste rettigheder**.
+
+11. Konfigurer politikken for Windows 10.
+
+12. På fanen **Handlinger** skal du vælge handlingen **Start et program**.
+
+13. Angiv stien til det program/script, der blev oprettet i trin 1.
+
+14. Vælg **Anvend**.
 
 #### <a name="adding-the-chrome-extension-to-the-forceinstall-list"></a>Tilføjelse af Chrome-udvidelsen til ForceInstall-listen
 
-1. I Gruppepolitik Administration skal du gå til din OU.
+1. I administrationseditoren Gruppepolitik du gå til din OU.
 
 2. Udvid følgende sti **Computer/** BrugerkonfigurationPoliciesAdministrative  > **skabelonerKlassiske** >  >  **administrative** >  **skabelonerGoogleGoogle** >  **ChromeExtensions** > . Denne sti kan variere afhængigt af din konfiguration.
 
@@ -234,7 +293,7 @@ Nu hvor du har onboardede enheder og kan få vist aktivitetsdata i Aktivitetsove
 - [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Introduktion til Aktivitetsstifinder](data-classification-activity-explorer.md)
-- [Microsoft Defender for Endpoint](/windows/security/threat-protection/)
+- [Microsoft Defender til Slutpunkt](/windows/security/threat-protection/)
 - [Onboardingværktøjer og metoder til Windows 10 computere](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints)
 - [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
 - [Enheder, der er forbundet til Azure AD](/azure/active-directory/devices/concept-azure-ad-join)

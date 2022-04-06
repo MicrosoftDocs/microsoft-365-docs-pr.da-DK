@@ -20,12 +20,12 @@ ms.custom:
 description: Brugerne kan lære, hvordan de får vist og administrerer meddelelser, der er sat i Exchange Online Protection (EOP), der skulle være blevet leveret til dem.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1cfdd441cff8481ef1ec7ea5ef3cabc54f062694
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 35aa801d0d981f68de5c62a1928e1f85d82ee95d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589126"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682389"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>Find og slip meddelelser, der er sat i karantæne, som en bruger i EOP
 
@@ -39,10 +39,6 @@ ms.locfileid: "63589126"
 I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser, sætter karantæne i potentielt farlig eller uønskede meddelelser. Du kan få mere at vide [under Karantæne i EOP](quarantine-email-messages.md).
 
 Som en almindelig bruger (ikke en administrator) er  de standardfunktioner, der er tilgængelige for dig som modtager af en meddelelse i karantæne, beskrevet i følgende tabel:
-
-<br>
-
-****
 
 |Årsagen til karantæne|Vis|Udgivelse|Slet|
 |---|:---:|:---:|:---:|
@@ -64,7 +60,6 @@ Som en almindelig bruger (ikke en administrator) er  de standardfunktioner, der 
 |Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams, der sætter skadelige filer i karantæne som malware.||||
 |**Regler for mailflow (transportregler)**||||
 |Regler for mailflow, der sætter mails i karantæne.||||
-|
 
 _Karantænepolitikker_ definerer, hvad brugere har tilladelse til at gøre til meddelelser, der er sat i karantæne, baseret på, hvorfor meddelelsen var i karantæne i [understøttede funktioner](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). Standardkarantænepolitikker gennemtvinger de historiske egenskaber som beskrevet i den forrige tabel. Administratorer kan oprette og anvende brugerdefinerede karantænepolitikker, der definerer mindre restriktive eller mere restriktive funktioner for brugere i understøttede funktioner. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
 

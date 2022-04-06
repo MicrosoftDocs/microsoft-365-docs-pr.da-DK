@@ -1,7 +1,7 @@
 ---
-title: Adressere falske positive/negativer i Microsoft Defender for Endpoint
-description: Få mere at vide om, hvordan du håndterer falske positive eller falske negativer Microsoft Defender for Endpoint.
-keywords: antivirus, undtagelse, udelukkelse, Microsoft Defender for Endpoint, falsk positiv, falsk negativ, blokeret fil, blokeret URL-adresse
+title: Adressere falske positive/negativer i Microsoft Defender til slutpunkt
+description: Få mere at vide om, hvordan du håndterer falske positive eller falske negativer i Microsoft Defender til slutpunkt.
+keywords: antivirus, undtagelse, udelukkelse, Microsoft Defender til slutpunkt, falsk positiv, falsk negativ, blokeret fil, blokeret URL-adresse
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -23,24 +23,24 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: 160108e123f5ba38a7c7af8c36ebb17431e860ad
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 214aafec22e26e5c69b40021eecb185a8dbfcbb2
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472963"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681628"
 ---
-# <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Adressere falske positive/negativer i Microsoft Defender for Endpoint
+# <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Adressere falske positive/negativer i Microsoft Defender til slutpunkt
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-I slutpunktsbeskyttelsesløsninger er en falsk positiv en enhed, f.eks. en fil eller en proces, der blev registreret og identificeret som skadelig, selvom enheden faktisk ikke er en trussel. En falsk negativ er en enhed, der ikke blev registreret som en trussel, selvom den faktisk er skadelig. Falske positive/negativer kan forekomme med enhver trusselsbeskyttelsesløsning, [herunder Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+I slutpunktsbeskyttelsesløsninger er en falsk positiv en enhed, f.eks. en fil eller en proces, der blev registreret og identificeret som skadelig, selvom enheden faktisk ikke er en trussel. En falsk negativ er en enhed, der ikke blev registreret som en trussel, selvom den faktisk er skadelig. Falske positive/negativer kan forekomme med enhver trusselsbeskyttelsesløsning, herunder [Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md).
 
-:::image type="content" source="images/false-positives-overview.png" alt-text="Definitionen af falske positive og negativer i Microsoft Defender for Endpoint portal" lightbox="images/false-positives-overview.png":::
+![Definition af falske positive og negativer i Defender for Slutpunkt.](images/false-positives-overview.png)
 
 Der kan heldigvis tages skridt til at løse og reducere disse typer problemer. Hvis du ser falske positive/negativer [i Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender), kan dine sikkerhedshandlinger tage skridt til at løse dem ved hjælp af følgende proces:
 
@@ -52,10 +52,10 @@ Der kan heldigvis tages skridt til at løse og reducere disse typer problemer. H
 
 Du kan få hjælp, hvis du stadig har problemer med falske positive/negativer efter at have udført de opgaver, der er beskrevet i denne artikel. Se [Har du stadig brug for hjælp?](#still-need-help)
 
-:::image type="content" source="images/false-positives-step-diagram.png" alt-text="Trinene til at løse falske positive og negativer" lightbox="images/false-positives-step-diagram.png":::
+![Trin til at løse falske positive og negativer.](images/false-positives-step-diagram.png)
 
 > [!NOTE]
-> Denne artikel er beregnet som vejledning for sikkerhedsoperatorer og sikkerhedsadministratorer, der [bruger Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+> Denne artikel er beregnet som vejledning for sikkerhedsoperatorer og sikkerhedsadministratorer, der [bruger Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md).
 
 ## <a name="part-1-review-and-classify-alerts"></a>Del 1: Gennemse og klassificer beskeder
 
@@ -71,19 +71,19 @@ Før du klassificerer eller undertrykker en besked, skal du afgøre, om beskeden
 
 2. Vælg køen Beskeder i **navigationsruden**.
 
-3. Vælg en besked for at få flere oplysninger om beskeden. (Se [Gennemse beskeder Microsoft Defender for Endpoint](review-alerts.md).)
+3. Vælg en besked for at få flere oplysninger om beskeden. (Se [Gennemse beskeder i Microsoft Defender til Slutpunkt](review-alerts.md)).
 
 4. Afhængigt af beskedens status skal du følge de trin, der er beskrevet i følgende tabel:
 
    |Beskedstatus|Hvad kan du gøre?|
    |---|---|
    |Beskeden er nøjagtig|Tildel beskeden, og [undersøg den](investigate-alerts.md) derefter yderligere.|
-   |Beskeden er falsk positiv|1. [Klassificer beskeden](#classify-an-alert) som en falsk positiv.<br/><br/>2. [Undertryk beskeden](#suppress-an-alert).<br/><br/>3. [Opret en indikator](#indicators-for-microsoft-defender-for-endpoint) for Microsoft Defender for Endpoint.<br/><br/>4. [Indsend en fil til Microsoft til analyse](#part-4-submit-a-file-for-analysis).|
+   |Beskeden er falsk positiv|1. [Klassificer beskeden](#classify-an-alert) som en falsk positiv.<br/><br/>2. [Undertryk beskeden](#suppress-an-alert).<br/><br/>3. [Opret en indikator](#indicators-for-microsoft-defender-for-endpoint) for Microsoft Defender til slutpunkt.<br/><br/>4. [Indsend en fil til Microsoft til analyse](#part-4-submit-a-file-for-analysis).|
    |Beskeden er nøjagtig, men benlig (ikke-vigtig)|[Klassificer](#classify-an-alert) beskeden som en sand positiv, [og undertryk derefter beskeden](#suppress-an-alert).|
 
 ### <a name="classify-an-alert"></a>Klassificer en besked
 
-Beskeder kan klassificeres som falske positive eller sande positive i Microsoft 365 Defender. Klassificering af beskeder hjælper med at Microsoft Defender for Endpoint, så du med tiden får vist mere sande beskeder og færre falske beskeder.
+Beskeder kan klassificeres som falske positive eller sande positive i Microsoft 365 Defender. Klassificering af beskeder hjælper med at træne Microsoft Defender til slutpunkt, så du med tiden får vist flere sande beskeder og færre falske beskeder.
 
 1. Gå til Microsoft 365 Defender -portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
@@ -94,7 +94,7 @@ Beskeder kan klassificeres som falske positive eller sande positive i Microsoft 
 4. I sektionen **Administrer besked** skal du vælge enten **Sand besked** eller **Falsk besked**. (Brug **falsk besked** til at klassificere en falsk positiv).
 
 > [!TIP]
-> Du kan finde flere oplysninger om at skjule beskeder [i Microsoft Defender for Endpoint vigtige beskeder](/microsoft-365/security/defender-endpoint/manage-alerts). Og hvis din organisation bruger en sikkerhedsoplysninger og en SIEM-server (event management), skal du sørge for også at definere en undertrykkende regel der.
+> Du kan finde flere oplysninger om at undertrykke beskeder i [Administrer Microsoft Defender for Endpoint-beskeder](/microsoft-365/security/defender-endpoint/manage-alerts). Og hvis din organisation bruger en sikkerhedsoplysninger og en SIEM-server (event management), skal du sørge for også at definere en undertrykkende regel der.
 
 ### <a name="suppress-an-alert"></a>Skjule en besked
 
@@ -162,7 +162,7 @@ Når du er færdig med at gennemse og fortryde handlinger, der er foretaget som 
 ### <a name="remove-a-file-from-quarantine-across-multiple-devices"></a>Fjern en fil fra karantæne på tværs af flere enheder
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/autoir-quarantine-file-1.png" alt-text="Karantænefilen" lightbox="images/autoir-quarantine-file-1.png":::
+> ![Karantænefil.](images/autoir-quarantine-file-1.png)
 
 1. I venstre navigationsrude på Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">skal du</a> klikke på **Handlingscenter**.
 
@@ -194,21 +194,21 @@ Du kan rulle en fil tilbage og fjerne den fra karantæne, hvis du har besluttet,
 
 ## <a name="part-3-review-or-define-exclusions"></a>Del 3: Gennemse eller definer udeladelse
 
-En udelukkelse er en enhed, f.eks. en fil eller en URL-adresse, som du angiver som en undtagelse for afhjælpningshandlinger. Den ekskluderede enhed kan stadig findes, men der bliver ikke foretaget nogen afhjælpningshandlinger på den pågældende enhed. Det vil sige, at den registrerede fil eller proces ikke stoppes, sendes til karantæne, fjernes eller på anden måde ændres Microsoft Defender for Endpoint.
+En udelukkelse er en enhed, f.eks. en fil eller en URL-adresse, som du angiver som en undtagelse for afhjælpningshandlinger. Den ekskluderede enhed kan stadig findes, men der bliver ikke foretaget nogen afhjælpningshandlinger på den pågældende enhed. Det vil sige, at den registrerede fil eller proces ikke stoppes, sendes til karantæne, fjernes eller på anden måde ændres af Microsoft Defender til slutpunkt.
 
-Hvis du vil definere udeladelse på Microsoft Defender for Endpoint, skal du udføre følgende opgaver:
+Hvis du vil definere udeladelse på tværs af Microsoft Defender for Endpoint, skal du udføre følgende opgaver:
 
 - [Definere udeladelse for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
-- [Opret "tillad"-indikatorer for Microsoft Defender for Endpoint](#indicators-for-microsoft-defender-for-endpoint)
+- [Opret "tillad"-indikatorer for Microsoft Defender til slutpunkt](#indicators-for-microsoft-defender-for-endpoint)
 
 > [!NOTE]
-> Microsoft Defender Antivirus undtagelser gælder kun for antivirusbeskyttelse, ikke på tværs af Microsoft Defender for Endpoint funktioner. For at udelade filer bredt skal du bruge udeladelse for Microsoft Defender Antivirus og [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators) for Microsoft Defender for Endpoint.
+> Microsoft Defender Antivirus gælder kun for antivirusbeskyttelse, ikke på tværs af andre Microsoft Defender for Endpoint-funktioner. Hvis du vil udelade filer bredt, skal du bruge udeladelse for Microsoft Defender Antivirus og [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators) for Microsoft Defender til slutpunkt.
 
 Fremgangsmåderne i dette afsnit beskriver, hvordan du definerer udeladelse og indikatorer.
 
 ### <a name="exclusions-for-microsoft-defender-antivirus"></a>Udeladelse for Microsoft Defender Antivirus
 
-Generelt bør du ikke være nødt til at definere udeladelse for Microsoft Defender Antivirus. Sørg for, at du definerer udeladelse med måde, og at du kun medtager de filer, mapper, processer og proces åbne filer, der resulterer i falske positive. Desuden skal du sørge for at gennemgå dine definerede undtagelser regelmæssigt. Vi anbefaler, [at Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at definere eller redigere dine antivirus udelukkelser, men du kan bruge andre metoder, f.eks [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se [Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md).
+Generelt bør du ikke være nødt til at definere udeladelse for Microsoft Defender Antivirus. Sørg for, at du definerer udeladelse med måde, og at du kun medtager de filer, mapper, processer og proces åbne filer, der resulterer i falske positive. Desuden skal du sørge for at gennemgå dine definerede undtagelser regelmæssigt. Vi anbefaler, [at Microsoft Endpoint Manager](/mem/endpoint-manager-overview) bruges til at definere eller redigere dine antivirus udelukkelser, men du kan bruge andre metoder, f.eks[. Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se Administrer [Microsoft Defender til slutpunkt](manage-mde-post-migration.md)).
 
 > [!TIP]
 > Har du brug for hjælp til udelukkelse af antivirus? Se [Konfigurere og validere udeladelse for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md).
@@ -245,11 +245,11 @@ Generelt bør du ikke være nødt til at definere udeladelse for Microsoft Defen
 
 9. Gennemgå indstillingerne **under fanen Gennemse** + opret, og vælg derefter **Opret**.
 
-### <a name="indicators-for-microsoft-defender-for-endpoint"></a>Symboler for Microsoft Defender for Endpoint
+### <a name="indicators-for-microsoft-defender-for-endpoint"></a>Indikatorer for Microsoft Defender til slutpunkt
 
-[Symboler](/microsoft-365/security/defender-endpoint/manage-indicators) (specifikt indikatorer for kompromis eller IoCs) gør det muligt for dit sikkerhedsteam at definere registrering, forebyggelse og udelukkelse af enheder. Du kan f.eks. angive bestemte filer, der skal udelades fra scanninger og afhjælpningshandlinger i Microsoft Defender for Endpoint. Eller indikatorer kan bruges til at generere beskeder for bestemte filer, IP-adresser eller URL-adresser.
+[Symboler](/microsoft-365/security/defender-endpoint/manage-indicators) (specifikt indikatorer for kompromis eller IoCs) gør det muligt for dit sikkerhedsteam at definere registrering, forebyggelse og udelukkelse af enheder. Du kan f.eks. angive bestemte filer, der skal udelades fra scanninger og afhjælpningshandlinger i Microsoft Defender til slutpunkt. Eller indikatorer kan bruges til at generere beskeder for bestemte filer, IP-adresser eller URL-adresser.
 
-Hvis du vil angive enheder som undtagelser for Microsoft Defender for Endpoint, skal du oprette "tillad"-indikatorer for disse enheder. Disse "tillad"-indikatorer Microsoft Defender for Endpoint gældende for næste [generations beskyttelse](microsoft-defender-antivirus-in-windows-10.md), [slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) og [automatiserede undersøgelser, & afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
+Hvis du vil angive enheder som undtagelser for Microsoft Defender til slutpunkt, skal du oprette "tillad"-indikatorer for disse enheder. Sådanne "tillad"-indikatorer i Microsoft Defender for Endpoint gælder for næste [generations beskyttelse](microsoft-defender-antivirus-in-windows-10.md), [slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) og [automatiseret undersøgelse, & afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
 
 Der kan oprettes "Tillad"-indikatorer for:
 
@@ -257,7 +257,7 @@ Der kan oprettes "Tillad"-indikatorer for:
 - [IP-adresser, URL-adresser og domæner](#indicators-for-ip-addresses-urls-or-domains)
 - [Programcertifikater](#indicators-for-application-certificates)
 
-:::image type="content" source="images/false-positives-indicators.png" alt-text="Indikatortyperne" lightbox="images/false-positives-indicators.png":::
+![Diagram over indikatortyper.](images/false-positives-indicators.png)
 
 #### <a name="indicators-for-files"></a>Indikatorer for filer
 
@@ -267,7 +267,7 @@ Før du opretter indikatorer for filer, skal du kontrollere, at følgende krav e
 
 - Microsoft Defender Antivirus er konfigureret med skybaseret beskyttelse aktiveret (se [Administrer skybaseret beskyttelse](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
 - Antimalware-klientversion er 4.18.1901.x eller nyere
-- Enheder kører Windows 10, version 1703 eller nyere eller Windows 11; Windows Server 2016 eller Windows Server 2019 eller Windows Server 2022
+- Enheder kører Windows 10 version 1703 eller nyere eller Windows 11; Windows Server 2016 eller Windows Server 2019 eller Windows Server 2022
 - Funktionen [Bloker eller tillad er slået til](/microsoft-365/security/defender-endpoint/advanced-features)
 
 #### <a name="indicators-for-ip-addresses-urls-or-domains"></a>Indikatorer for IP-adresser, URL-adresser eller domæner
@@ -290,7 +290,7 @@ Før du opretter indikatorer for programcertifikater, skal du kontrollere, at f�
 
 - Microsoft Defender Antivirus er konfigureret med skybaseret beskyttelse aktiveret (se [Administrer skybaseret beskyttelse](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware-klientversion er 4.18.1901.x eller nyere
-- Enheder kører Windows 10, version 1703 eller nyere eller Windows 11; Windows Server 2016 eller Windows Server 2019 eller Windows Server 2022
+- Enheder kører Windows 10 version 1703 eller nyere eller Windows 11; Windows Server 2016 eller Windows Server 2019 eller Windows Server 2022
 - Definitioner af virus- og trusselsbeskyttelse er opdateret
 
 > [!TIP]
@@ -298,7 +298,7 @@ Før du opretter indikatorer for programcertifikater, skal du kontrollere, at f�
 
 ## <a name="part-4-submit-a-file-for-analysis"></a>Del 4: Indsend en fil til analyse
 
-Du kan sende enheder, f.eks. filer og filløse registreringer, til analyse hos Microsoft. Microsofts sikkerhedseksperter analyserer alle indsendelser, og deres resultater hjælper med at informere Microsoft Defender for Endpoint funktioner til trusselsbeskyttelse. Når du logger på indsendelseswebstedet, kan du spore dine indsendelser.
+Du kan sende enheder, f.eks. filer og filløse registreringer, til analyse hos Microsoft. Microsofts sikkerhedseksperter analyserer alle indsendelser, og deres resultater hjælper med at informere Microsoft Defender om egenskaber for trusselsbeskyttelse i Microsoft Defender. Når du logger på indsendelseswebstedet, kan du spore dine indsendelser.
 
 ### <a name="submit-a-file-for-analysis"></a>Sende en fil til analyse
 
@@ -310,7 +310,7 @@ Hvis du har en fil, der blev fundet forkert som skadelig, eller som blev overset
 
 ### <a name="submit-a-fileless-detection-for-analysis"></a>Sende en registrering uden fil til analyse
 
-Hvis noget blev registreret som malware baseret på adfærd, og du ikke har en fil, kan du sende din fil `Mpsupport.cab` til analyse. Du kan hente *.cab* ved hjælp af værktøjet Microsoft Malware Protection Command-Line Utility (MPCmdRun.exe) på Windows 10 eller Windows 11.
+Hvis noget blev registreret som malware baseret på adfærd, og du ikke har en fil, kan du sende din fil `Mpsupport.cab` til analyse. Du kan hente *.cab* fil ved hjælp af værktøjet Microsoft Malware Protection Command-Line Utility (MPCmdRun.exe) på Windows 10 eller Windows 11.
 
 1. Gå til ` C:\ProgramData\Microsoft\Windows Defender\Platform\<version>`, og kør `MpCmdRun.exe` derefter som administrator.
 
@@ -339,7 +339,7 @@ Hvis du vil søge efter opdateringer vedrørende din indsendelse, skal du logge 
 
 ## <a name="part-5-review-and-adjust-your-threat-protection-settings"></a>Del 5: Gennemse og juster indstillingerne for trusselsbeskyttelse
 
-Microsoft Defender for Endpoint tilbyder en lang række indstillinger, herunder muligheden for at finjustere indstillingerne for forskellige funktioner og funktioner. Hvis du får mange falske positive, skal du sørge for at gennemgå organisationens indstillinger for trusselsbeskyttelse. Det kan være nødvendigt at foretage nogle justeringer af:
+Microsoft Defender til Slutpunkt tilbyder en lang række indstillinger, herunder muligheden for at finjustere indstillingerne for forskellige funktioner og egenskaber. Hvis du får mange falske positive, skal du sørge for at gennemgå organisationens indstillinger for trusselsbeskyttelse. Det kan være nødvendigt at foretage nogle justeringer af:
 
 - [Cloud-leveret beskyttelse](#cloud-delivered-protection)
 - [Afhjælpning af potentielt uønskede programmer](#remediation-for-potentially-unwanted-applications)
@@ -352,7 +352,7 @@ Kontrollér dit beskyttelsesniveau, der leveres i skyen, for Microsoft Defender 
 > [!TIP]
 > Du kan få mere at vide om konfiguration af beskyttelsen, der leveres i skyen, [under Angive beskyttelsesniveauet, der leveres i skyen](/windows/security/threat-protection/microsoft-defender-antivirus/specify-cloud-protection-level-microsoft-defender-antivirus).
 
-Vi anbefaler at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at redigere eller angive dine skybaserede beskyttelsesindstillinger, men du kan bruge andre metoder, f.eks[. Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se [Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md).
+Vi anbefaler, [at Microsoft Endpoint Manager](/mem/endpoint-manager-overview) bruges til at redigere eller angive dine skybaserede beskyttelsesindstillinger, men du kan bruge andre metoder, f.eks. [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se Administrer [Microsoft Defender til slutpunkt](manage-mde-post-migration.md)).
 
 #### <a name="use-microsoft-endpoint-manager-to-review-and-edit-cloud-delivered-protection-settings-for-existing-policies"></a>Brug Microsoft Endpoint Manager til at gennemse og redigere beskyttelsesindstillinger, der leveres i skyen (for eksisterende politikker)
 
@@ -396,7 +396,7 @@ Potentielt uønskede programmer er en kategori af software, der kan få enheder 
 
 Afhængigt af de apps, din organisation bruger, får du muligvis falske positive som et resultat af indstillingerne for PUA-beskyttelse. Hvis det er nødvendigt, kan du overveje at køre PUA-beskyttelse i overvågningstilstand i et stykke tid eller anvende PUA-beskyttelse på et undersæt af enheder i organisationen. PUA-beskyttelse kan konfigureres til Microsoft Edge og til Microsoft Defender Antivirus.
 
-Vi anbefaler at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at redigere eller angive indstillinger for PUA-beskyttelse. Du kan dog bruge andre metoder, f.eks [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se [Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md).
+Vi anbefaler, [at du Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at redigere eller angive indstillinger for PUA-beskyttelse. Du kan dog bruge andre metoder, f.eks. [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se Administrer [Microsoft Defender til slutpunkt](manage-mde-post-migration.md)).
 
 #### <a name="use-microsoft-endpoint-manager-to-edit-pua-protection-for-existing-configuration-profiles"></a>Brug Microsoft Endpoint Manager til at redigere PUA-beskyttelse (for eksisterende konfigurationsprofiler)
 
@@ -456,6 +456,6 @@ Hvis du har gennemarbejdet alle trinnene i denne artikel og stadig har brug for 
 
 ## <a name="see-also"></a>Se også
 
-[Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md)
+[Administrer Microsoft Defender til Slutpunkt](manage-mde-post-migration.md)
 
 [Oversigt over Microsoft 365 Defender portal](/microsoft-365/security/defender-endpoint/use)

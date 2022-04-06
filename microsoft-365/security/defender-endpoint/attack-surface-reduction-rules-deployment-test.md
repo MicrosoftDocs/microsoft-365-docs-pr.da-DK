@@ -16,14 +16,16 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: ed529a999a20e6caacac2a8bfe03d320dbdc025d
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: 85d1400f390d9666c39ef13ffb484d17cad4a4c8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63593070"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682190"
 ---
 # <a name="step-2-test-asr-rules"></a>Trin 2: Test ASR-regler
 

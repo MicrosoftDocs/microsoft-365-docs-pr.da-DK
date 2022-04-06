@@ -7,7 +7,7 @@ metadata:
   author: chrisda
   manager: dansimp
   audience: ITPro
-  ms.topic: troubleshooting
+  ms.topic: faq
   ms.localizationpriority: medium
   search.appverid:
   - MET150
@@ -20,12 +20,12 @@ metadata:
   description: Administratorer kan få vist ofte stillede spørgsmål og svar om beskyttelse mod uønsket post i Exchange Online Protection (EOP).
   ms.technology: mdo
   ms.prod: m365-security
-  ms.openlocfilehash: 6932c56b79f03f142c8551c9fdf7661765f194bf
-  ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+  ms.openlocfilehash: a1a9c2b4930634520961286ac97e88d3473f9608
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 02/06/2022
-  ms.locfileid: "63592217"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63682587"
 title: Ofte stillede spørgsmål om beskyttelse mod spam
 summary: >
   [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]

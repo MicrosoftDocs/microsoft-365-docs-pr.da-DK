@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsetiketter til at beskytte indhold SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: b5eb295e83e2a87a538201fe58c221f3f9400f97
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 759f7a6403eb41a6a853ed1f9b844ebd1ef679cc
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63714911"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500007"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsetiketter til at beskytte indhold Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -190,14 +190,16 @@ Brug følgende vejledning til, når du opretter, redigerer eller sletter følsom
 
 ### <a name="creating-and-publishing-labels-that-are-configured-for-sites-and-groups"></a>Oprette og publicere etiketter, der er konfigureret til websteder og grupper
 
-Når et nyt følsomhedsmærkat oprettes og publiceres, er det synligt for brugere i teams, grupper og websteder inden for en time. Men hvis du ændrer en eksisterende etiket, kan der gå op til 24 timer. Brug følgende vejledning til at publicere et navn til dine brugere, når den pågældende etiket er konfigureret til websteds- og gruppeindstillinger:
+Brug følgende vejledning til at publicere et navn til dine brugere, når den pågældende etiket er konfigureret til websteds- og gruppeindstillinger:
 
 1. Når du har oprettet og konfigureret følsomhedsmærkatet, kan du føje denne etiket til en etiketpolitik, der kun gælder for nogle få testbrugere.
 
 2. Vent på, at ændringen replikeres:
-
-   - Ny etiket: Vent en time.
-   - Eksisterende etiket: Vent i 24 timer.
+    
+   - Ny etiket: Vent i mindst en time.
+   - Eksisterende etiket: Vent i mindst 24 timer.
+    
+    Du kan finde flere oplysninger om tidsplanen for etiketter under [Hvornår du kan forvente, at nye etiketter og ændringer træder i kraft](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect).
 
 3. Efter denne ventetid skal du bruge en af testbrugerkontiene til at oprette et team, en Microsoft 365-gruppe eller et SharePoint-websted med den etiket, du oprettede i trin 1.
 
@@ -205,7 +207,7 @@ Når et nyt følsomhedsmærkat oprettes og publiceres, er det synligt for bruger
 
 ### <a name="modifying-published-labels-that-are-configured-for-sites-and-groups"></a>Ændring af publicerede navne, der er konfigureret for websteder og grupper
 
-Som bedste fremgangsmåde skal du ikke ændre websteds- og gruppeindstillingerne for en følsomhedsmærkat, når etiketten er blevet anvendt på teams, grupper eller websteder. Hvis du gør det, skal du huske at vente i 24 timer på, at ændringerne replikeres til alle beholdere, hvor etiketten er anvendt.
+Som bedste fremgangsmåde skal du ikke ændre websteds- og gruppeindstillingerne for en følsomhedsmærkat, når etiketten er blevet anvendt på teams, grupper eller websteder. Hvis du gør det, skal du huske at vente i mindst 24 timer på, at ændringerne replikeres til alle beholdere, hvor etiketten er anvendt.
 
 Hvis dine ændringer omfatter adgangsindstillingen **Eksterne brugere** , skal du desuden gøre følgende:
 
@@ -219,7 +221,7 @@ Hvis du sletter et følsomhedsmærkat, der har websteds- og gruppeindstillingern
 
 1. Fjern følsomhedsmærkatet fra alle etiketpolitikker, der omfatter mærkaten.
 
-2. Vent en time.
+2. Vent mindst en time.
 
 3. Efter denne ventetid kan du prøve at oprette et team, en gruppe eller et websted og bekræfte, at navnet ikke længere er synligt.
 
@@ -240,11 +242,11 @@ Du kan bruge PowerShell, hvis du har brug [for at anvende en følsomhedsmærkat 
 
 Du er nu klar til at anvende følsomhedsmærkatet eller -mærkaterne på Microsoft 365 grupper. Gå tilbage til Azure AD-dokumentationen for at få vejledning:
 
-- [Tildel en etiket til en ny gruppe i Azure-portalen](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
+- [Tildel en etiket til en ny gruppe i Azure Portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
 
-- [Tildel en etiket til en eksisterende gruppe i Azure-portalen](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
+- [Tildele en etiket til en eksisterende gruppe i Azure Portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
 
-- [Fjern en etiket fra en eksisterende gruppe i Azure-portalen](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
+- [Fjern en etiket fra en eksisterende gruppe Azure Portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
 
 ### <a name="apply-a-sensitivity-label-to-a-new-team"></a>Anvend et følsomhedsmærkat på et nyt team
 

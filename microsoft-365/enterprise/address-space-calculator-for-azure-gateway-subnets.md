@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 01/07/2021
 audience: ITPro
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: Ent_O365
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 - seo-marvel-apr2020
 description: 'Oversigt: Beregn adresserummet for et Azure gateway-undernet med C3, Python eller PowerShell.'
-ms.openlocfilehash: 2f782cfcb699a15ad9c1ac2d9546c8b83e1512c9
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 129c64e4484110517edf3640861636324e59de57
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63594292"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681782"
 ---
 # <a name="address-space-calculator-for-azure-gateway-subnets"></a>Adressepladsberegner til Azure gateway-undernet
 

@@ -7,6 +7,7 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Administratorer kan lære, hvordan de bruger SMTP Auth-indsigt og -rapport i Mailflow-dashboardet i Security & Compliance Center til at overvåge mailafsendere i deres organisation, der bruger godkendt SMTP (SMTP AUTH) til at sende mails.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30e3ff41068b80ad7c308fcb8163cb2748118e11
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e21e9fae80880b479070b1920379b925bf7074c7
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587321"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681122"
 ---
 # <a name="smtp-auth-clients-insight-and-report-in-the-security--compliance-center"></a>SMTP Auth-klienters indsigt og rapport i Security & Compliance Center
 

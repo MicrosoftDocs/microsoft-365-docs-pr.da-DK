@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: få mere at vide om DLP-politikbetingelser og -undtagelser
-ms.openlocfilehash: 771674b82e50987397fc1ae754f0b96719a04ae5
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 9b735d139950399fb80e9063e7d9fdd1176c2d2b
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63594361"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500051"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP-politikbetingelser, undtagelser og handlinger
 
@@ -154,7 +154,7 @@ For at konfigurere afsenderens adresseplacering på et DLP-regelniveau er parame
 |Med prioritet|betingelse: *WithImportance* <br/> undtagelse: *ExceptIfWithImportance*|Prioritet|Meddelelser, der er markeret med det angivne prioritetsniveau.|
 |Indholdstegnsæt indeholder ord|betingelse: *ContentCharacterSetContainsWords* <br/> *ExceptIfContentCharacterSetContainsWords*|Tegnsæt|Meddelelser, der har et eller flere af de angivne tegnsætnavne.|
 |Har afsender tilsidesættelse|betingelse: *HasSenderOverride* <br/> undtagelse: *ExceptIfHasSenderOverride*|i/t|Meddelelser, hvor afsenderen har valgt at tilsidesætte en politik til forebyggelse af datatab (DLP). Du kan finde flere oplysninger om DLP-politikker [under Få mere at vide om forebyggelse af datatab](./dlp-learn-about-dlp.md)|
-|Meddelelsestype svarer til|betingelse: *MessageTypeMatches* <br/> undtagelse: *ExceptIfMessageTypeMatches*|MessageType|Meddelelser af den angivne type.|
+|Meddelelsestype svarer til|betingelse: *MessageTypeMatches* <br/> undtagelse: *ExceptIfMessageTypeMatches*|MessageType|Meddelelser af den angivne type. **Bemærk**! De tilgængelige meddelelsestyper er Autosvar, Automatisk videresendelse, Krypteret (S/MIME), Kalender, Tilladelsesstyret (rettighedsstyring), Telefonsvarer, Signeret, Kvittering for læsning og Godkendelsesanmodning. |
 |Meddelelsens størrelse er større end eller lig med|betingelse: *MessageSizeOver* <br/> undtagelse: *ExceptIfMessageSizeOver*|`Size`|Meddelelser, hvor den samlede størrelse (meddelelse plus vedhæftede filer) er større end eller lig med den angivne værdi. **Bemærk**! Begrænsninger på meddelelsesstørrelser for postkasser evalueres før regler for mailflow. En meddelelse, der er for stor til en postkasse, afvises, før en regel med denne betingelse kan handle på meddelelsen.|
 |
 
@@ -177,7 +177,7 @@ I denne tabel beskrives de handlinger, der er tilgængelige i DLP.
 |Tilføj afsenderens overordnede som modtager|AddRecipients|Første egenskab: *AddedManagerAction*</br>Anden egenskab: *Felt*|Føjer afsenderens overordnede til meddelelsen som den angivne modtagertype (Til, Cc, Bcc) eller omdirigerer meddelelsen til afsenderens chef uden at underrette afsenderen eller modtageren. Denne handling virker kun, hvis afsenderens Manager-attribut er defineret i Active Directory. Denne parameter bruger syntaksen: @{AddManagerAsRecipientType = "<To \|Cc \|Bcc>"}|
 Forudindstillet emne|PrependSubject|String|Føjer den angivne tekst til starten af feltet Emne i meddelelsen. Overvej at bruge et mellemrum eller et kolon (:) som det sidste tegn i den angivne tekst for at adskille den fra den oprindelige emnetekst.</br>Hvis du vil forhindre, at den samme streng føjes til meddelelser, der allerede indeholder teksten i emnet (f.eks. svar), skal du tilføje undtagelsen "Emnet indeholder ord" (ExceptIfSubjectContainsWords) til reglen.|
 |Anvend HTML-ansvarsfraskrivelse|ApplyHtmlDisclaimer|Første egenskab: *Tekst*</br>Anden egenskab: *Placering*</br>Tredje egenskab: *Fallback-handling*|Anvender den angivne HTML-ansvarsfraskrivelse på den nødvendige placering af meddelelsen.</br>Denne parameter bruger syntaksen: @{ Text = " " ; Placering = <Tilføjelse \|>; FallbackAction = <Ombryd \|Ignorer \|afvis> }|
-|Fjern Office 365-meddelelseskryptering og rettighedsbeskyttelse|RemoveRMSTemplate|i/t|Fjerner Office 365, der anvendes på en mail|
+|Fjern Office 365 kryptering af meddelelser og rettighedsbeskyttelse|RemoveRMSTemplate|i/t|Fjerner Office 365, der anvendes på en mail|
 |Levere meddelelsen til den tilknyttede karantæne |_Karantæne_|i/t| Denne handling findes i øjeblikket **i offentlig prøveversion**. I denne fase vil mails, der er sat i karantæne af DLP-politikker, vise politiktype som ExchangeLager.</br> Leverer meddelelsen til karantæne i EOP. Du kan få mere at vide [under Meddelelser, der er sat i karantæne i EOP](/microsoft-365/security/office-365-security/quarantine-email-messages).|
 |
 

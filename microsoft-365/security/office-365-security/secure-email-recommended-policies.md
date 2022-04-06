@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: b708d7aa993bdcd74b6fe00f633e3f7933ff04b8
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 6ab6ff7c043dcceacfbb07d0f6fec5e974999204
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594345"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682433"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>Politikanbefalinger til sikring af mail
 
@@ -55,7 +55,6 @@ Hvis du Exchange Online og Outlook politikkerne, da du konfigurerede dem, skal d
 |**Enterprise**|[Kræv MFA, når risikoen for at logge *på er* *lav, mellem* eller *høj*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Medtag Exchange Online i tildelingen af skyapps|
 ||[Kræv kompatible *pc'er* og mobilenheder](identity-access-policies.md#require-compliant-pcs-and-mobile-devices)|Medtag Exchange Online på listen over skyapps|
 |**Speciel sikkerhed**|[*Kræv* altid MFA](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Medtag Exchange Online i tildelingen af skyapps|
-|
 
 ## <a name="block-activesync-clients"></a>Bloker ActiveSync-klienter
 

@@ -20,12 +20,12 @@ ms.custom: ''
 description: Få mere at vide om kampagnevisninger i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 479963323dad613f3a17a527f94bbd5963487f76
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d8fad29e82b647d309d3b7046e36bd03b64de81d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63589586"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682543"
 ---
 # <a name="campaign-views-in-microsoft-defender-for-office-365"></a>Kampagnevisninger i Microsoft Defender for Office 365
 
@@ -211,10 +211,6 @@ Diagrammet indeholder følgende oplysninger:
 - **Afsenderdomæner**
 - **Filterovergange**: Vurderingsværdier er relateret til de tilgængelige advarsler i forbindelse med phishing og spamfiltrering, som beskrevet i [antispammeddelelsesoverskrifter](anti-spam-message-headers.md). De tilgængelige værdier er beskrevet i følgende tabel:
 
-  <br>
-
-  ****
-
   |Værdi|Spamfilterets konklusion|Beskrivelse|
   |---|---|---|
   |**Tilladt**|`SFV:SKN` <p> `SFV:SKI`|Meddelelsen blev markeret som ikke spam og/eller sprunget filtrering over, før den blev evalueret af spamfiltrering. Meddelelsen blev f.eks. markeret som ikke spam af en regel for mailflow (også kaldet en transportregel). <p> Meddelelsen ignorerede spamfiltrering af andre årsager. Afsenderen og modtageren ser f.eks. ud til at være i samme organisation.|
@@ -227,7 +223,6 @@ Diagrammet indeholder følgende oplysninger:
   |**Bruger tillade**<sup>\*</sup>|`SFV:SFE`|Meddelelsen ignorerede spamfiltrering, fordi afsenderen var på en brugers liste Pengeskab Afsendere.|
   |**Brugerblok**<sup>\*\*</sup>|`SFV:BLK`|Meddelelsen blev blokeret af spamfiltrering, fordi afsenderen var på en brugers liste over blokerede afsendere.|
   |**ZAP**|i/t|[En nul-timers automatisk tømning (ZAP)](zero-hour-auto-purge.md) flyttede den sendte meddelelse til mappen uønsket mail eller karantæne. Du konfigurerer handlingen i [antispam-politikker](configure-your-spam-filter-policies.md).|
-  |
 
   <sup>\*</sup> Gennemse dine antispampolitikker, da den tilladte meddelelse sandsynligvis er blevet blokeret af tjenesten.
 

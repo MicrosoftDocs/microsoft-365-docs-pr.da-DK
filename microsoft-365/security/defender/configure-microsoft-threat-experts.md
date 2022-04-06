@@ -17,12 +17,12 @@ ms.topic: article
 ms.collection:
 - M365-security-compliance
 - m365initiative-m365-defender
-ms.openlocfilehash: 8a8de691ff08b50b56c34ed9e779cc97d48c5fcd
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 0bf6a6ecf48889228391688e41fb79070c3194a1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755826"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682212"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities-through-microsoft-365-defender"></a>Konfigurere og Microsoft-trusselseksperter egenskaber via Microsoft 365 Defender
 
@@ -52,15 +52,15 @@ Hvis du allerede har Microsoft Defender til slutpunkt og Microsoft 365 Defender,
 
 2. Vælg **Anvend**.
 
-    :::image type="content" source="../../media/mte/mte-collaboratewithmte.png" alt-text="Siden Microsoft-trusselseksperter indstillinger i Microsoft 365 Defender portal" lightbox="../../media/mte/mte-collaboratewithmte.png":::
+    ![Billede af Microsoft-trusselseksperter indstillinger.](../../media/mte/mte-collaboratewithmte.png)
 
 3. Angiv dit navn og din mailadresse, så Microsoft kan kontakte dig vedrørende dit program.
 
-    :::image type="content" source="../../media/mte/mte-apply.png" alt-text="Siden Microsoft-trusselseksperter program i Microsoft 365 Defender portal" lightbox="../../media/mte/mte-apply.png":::
-  
+    ![Billede af Microsoft-trusselseksperter program.](../../media/mte/mte-apply.png)
+
 4. Læs erklæringen [om beskyttelse af personlige](https://privacy.microsoft.com/en-us/privacystatement) oplysninger, og **vælg derefter Send** , når du er færdig. Du modtager en velkomstmail, når din ansøgning er godkendt.
 
-    :::image type="content" source="../../media/mte/mte-applicationconfirmation.png" alt-text="Bekræftelse Microsoft-trusselseksperter program i Microsoft 365 Defender portal" lightbox="../../media/mte/mte-applicationconfirmation.png":::
+    ![Billede af Microsoft-trusselseksperter programbekræftelse.](../../media/mte/mte-applicationconfirmation.png)
 
 5. Når du har modtaget din velkomstmail, begynder du automatisk at modtage meddelelser om målrettede angreb.
 
@@ -105,13 +105,13 @@ Du kan kontakte Microsoft-trusselseksperter, der kommer fra Microsoft 365 Defend
 
 2. I den øverste menu skal du vælge **? Kontakt en trusselsekspert**.
 
-    :::image type="content" source="../../media/mte/incidents-action-mte-highlighted.png" alt-text="Den Microsoft-trusselseksperter Eksperter on Demand fra menuen i Microsoft 365 Defender portal" lightbox="../../media/mte/incidents-action-mte-highlighted.png":::
+    ![Billede Microsoft-trusselseksperter Eksperter efter behov i menuen.](../../media/mte/incidents-action-mte-highlighted.png)
 
     Der åbnes et pop op-skærmbillede.
 
     Sidehovedet angiver, om du er på et prøveabonnement, eller et fuldt Microsoft-trusselseksperter - Eksperter on-Demand-abonnement.
 
-    :::image type="content" source="../../media/mte/mte-trial.png" alt-text="Skærmbilledet Microsoft-trusselseksperter med prøveversionen af Eksperter on Demand på Microsoft 365 Defender portal" lightbox="../../media/mte/mte-trial.png":::
+    ![Billede af Microsoft-trusselseksperter med prøveversionen af Experts on Demand.](../../media/mte/mte-trial.png)
 
     Feltet **Undersøgelsesemne** er allerede udfyldt med linket til den relevante side for din anmodning.
 

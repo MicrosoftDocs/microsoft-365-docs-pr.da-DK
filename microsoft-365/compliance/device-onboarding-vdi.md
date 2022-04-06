@@ -14,12 +14,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Installér konfigurationspakken på en VDI-enhed (Virtual Desktop Infrastructure), så de er onboardet til Microsoft 365 endpoint-tjenesten til forebyggelse af datatab.
-ms.openlocfilehash: 6ac13edde066319a5174234450dac67c29209b1b
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+ms.openlocfilehash: 00804c93022f21715e3604eeb45c22caa4745f91
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "63594679"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682146"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-devices"></a>Onboard ikke-permanente virtuelle desktop-infrastrukturenheder
 
@@ -42,7 +42,7 @@ Microsoft 365 understøtter ikke-permanent VDI-session (Virtual Desktop Infrastr
 
 Der kan være udfordringer i forbindelse med onboarding af VDIs. Følgende er typiske udfordringer i dette scenarie:
 
-- Øjeblikkelig tidlig onboarding af en kortvarig sessioner, som skal onboardes til en Microsoft 365 før den faktiske klargøring.
+- Øjeblikkelig tidlig onboarding af kortvarige sessioner, som skal onboardes til en Microsoft 365 før den faktiske klargøring.
 - Enhedsnavnet genbruges typisk til nye sessioner.
 
 VDI-enheder kan vises i Microsoft 365 Compliance Center som enten:
@@ -64,7 +64,7 @@ Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til e
 
 4. Klik **på Download** pakke, og gem .zip fil.
 
-5. Kopiér filerne fra mappen DeviceCompliancePackage, der er hentet fra .zip til billedet `golden/master` under stien `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
+5. Kopiér filerne fra mappen DeviceCompliancePackage, der er hentet fra .zip til billedet `golden` under stien `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
 
 6. Hvis du ikke implementerer en enkelt post for hver enhed, skal du kopiere DeviceComplianceOnboardingScript.cmd.
 
@@ -90,8 +90,8 @@ Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til e
 
 10. Test din løsning:
     1. Opret en gruppe med én enhed.
-    1. Logon på enhed.
-    1. Logoff fra enhed.
+    1. Log på enheden.
+    1. Log af enheden.
     1. Log på enheden med en anden bruger.
     1. **Ved enkelt indtastning for hver enhed**: Kontrollér kun én post Microsoft Defender Security Center.
        **For flere poster for hver enhed**: Kontrollér flere poster i Microsoft Defender Security Center.
@@ -102,7 +102,7 @@ Følgende trin fører dig gennem onboarding VDI-enheder og fremhæver trin til e
 
 ## <a name="updating-non-persistent-virtual-desktop-infrastructure-vdi-images"></a>Opdatering af ikke-permanente VDI-billeder (Virtual Desktop Infrastructure)
 
-Som bedste fremgangsmåde anbefaler vi, at du bruger offline-serviceværktøjer til at rette golden-/masterbilleder.
+Som bedste fremgangsmåde anbefaler vi, at du bruger offline-serviceværktøjer til at rette gyldne billeder.
 
 Du kan f.eks. bruge nedenstående kommandoer til at installere en opdatering, mens billedet forbliver offline:
 
@@ -120,7 +120,7 @@ For more information on DISM commands and offline servicing, please to the artic
 
 Hvis offline-servicering ikke er en realistisk mulighed for dit ikke-permanente VDI-miljø, skal du følge disse trin for at sikre ensartethed og sensortilstand:
 
-1. Når du har startet masterbilledet med henblik på online-service eller programrettelser, skal du køre et offboarding-script for at Microsoft 365 enhedens overvågnings sensor fra. Få mere at vide under [Offboard-enheder, der bruger et lokalt script](device-onboarding-script.md#offboard-devices-using-a-local-script).
+1. Når du har startet det gyldne billede for online-service eller programrettelser, skal du køre et offboarding-script for at deaktivere Microsoft 365 enhedens overvågnings sensor. Få mere at vide under [Offboard-enheder, der bruger et lokalt script](device-onboarding-script.md#offboard-devices-using-a-local-script).
 
 2. Kontrollér, at sensoren er stoppet ved at køre kommandoen nedenfor i et CMD-vindue:
 
@@ -140,7 +140,7 @@ Hvis offline-servicering ikke er en realistisk mulighed for dit ikke-permanente 
     exit
     ```
 
-5. Luk det gyldne/masterbillede igen, som du normalt ville gøre det.
+5. Luk det gyldne billede igen, som du normalt ville gøre.
 
 ## <a name="related-topics"></a>Relaterede emner
 

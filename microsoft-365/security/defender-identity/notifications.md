@@ -8,12 +8,13 @@ ms.author: dacurwin
 ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
-ms.openlocfilehash: 4e8969e51673676ecf13dc579ae304622e23e75d
-ms.sourcegitcommit: 1de72e5fd8af0ebc4a0dc91f47d2243498cfe5b9
+ms.collection: M365-security-compliance
+ms.openlocfilehash: fa740b483cd1a9591f7d4f7ef1961c5e96d4d44b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63598037"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682234"
 ---
 # <a name="defender-for-identity-notifications-in-microsoft-365-defender"></a>Defender til identitetsmeddelelser i Microsoft 365 Defender
 

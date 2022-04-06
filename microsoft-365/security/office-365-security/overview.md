@@ -16,12 +16,12 @@ ms.collection:
 description: Sikkerhed i Office 365, fra EOP til Defender for Office 365 Plans 1 og 2, Standard vs. Strenge sikkerhedskonfigurationer og meget mere. Forstå, hvad du har, og hvordan du sikrer dine egenskaber.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 20bb1dcf9c34f0f7507d8fec7c9025de03461533
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 31eaa1c2ae44799c15a782d121ad2068eaa40c25
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593800"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681100"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Oversigt over Microsoft Defender Office 365 sikkerhed
 
@@ -52,7 +52,6 @@ Du er måske vant til at se disse tre komponenter diskuteret på denne måde:
 |EOP|Microsoft Defender til Office 365 P1|Microsoft Defender til Office 365 P2|
 |---|---|---|
 |Forhindrer generelle, volumenbaserede, kendte angreb.|Beskytter mails og samarbejde mod malware på nul dage, phish og virksomhedsmail.|Tilføjer undersøgelse efter brud, jagt og svar samt automatisering og simulering (til uddannelse).|
-|
 
 Men med hensyn til arkitektur, så lad os starte med at tænke på hvert enkelt stykke som kumulativt lag af sikkerhed, hver med fokus på sikkerhed. Mere som dette:
 
@@ -86,7 +85,6 @@ Start med **Exchange Online Protection**:
 |Prevent/Detect|Undersøg|Svar|
 |---|---|---|
 |Teknologier omfatter:<ul><li>spam</li><li>phish</li><li>malware</li><li>masseforsendelser</li><li>efterlignet intelligens</li><li>Registrering af efterligning</li><li>Administratorkarantæne</li><li>Administrator- og brugerindsendelser af falske positive og falske negativer</li><li>Tillad/bloker for URL-adresser og filer</li><li>Rapporter</li></ul>|<li>Søgning i overvågningslogfil</li><li>Meddelelsessporing</li>|<li>Automatisk tømning (ZAP) uden time</li><li>Forbedring og test af tilladelses- og blokeringslister</li>|
-|
 
 Hvis du vil gå til EOP, kan **[du gå til denne artikel](exchange-online-protection-overview.md)**.
 

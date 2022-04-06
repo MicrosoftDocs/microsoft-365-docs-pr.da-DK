@@ -18,12 +18,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om de avancerede indstillinger for spamfilter (ASF), der er tilgængelige i politikker for uønsket post i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 71eeaec20ab64b5faa535ddb2f9e688b9b9192d9
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 6a34507866be90a197fcbed7bd1038cbcec61c84
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "63589170"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682301"
 ---
 # <a name="advanced-spam-filter-asf-settings-in-eop"></a>Avancerede indstillinger for spamfilter (ASF) i EOP
 
@@ -68,25 +68,16 @@ For hver ASF-indstilling er følgende indstillinger tilgængelige i antispampoli
 
 Følgende **forøg spamscore** ASF-indstillinger angiver spamtillidsniveauet (SCL) for registrerede meddelelser til 5 eller 6, hvilket svarer til en vurdering af **spamfilteret** og den tilsvarende handling i antispampolitikker.
 
-<br>
-
-****
-
 |Indstilling for antispampolitik|Beskrivelse|X-sidehoved tilføjet|
 |---|---|---|
 |**Billedlinks til eksterne websteder** <p> *IncreaseScoreWithImageLinks*|Meddelelser, der indeholder `<Img>` HTML-kodelinks til eksterne websteder (f.eks. ved hjælp af http), markeres som spam.|`X-CustomSpam: Image links to remote sites`|
 |**Numerisk IP-adresse i URL-adresse** <p> *IncreaseScoreWithNumericIps*|Meddelelser, der indeholder numeriske URL-adresser (typisk IP-adresser), markeres som spam.|`X-CustomSpam: Numeric IP in URL`|
 |**URL-adresse, der omdirigeres til en anden port** <p> *IncreaseScoreWithRedirectToOtherPort*|Meddelelse, der indeholder links, der omdirigerer til andre TCP-porte end 80 (HTTP), 8080 (alternativt HTTP) eller 443 (HTTPS), markeres som spam.|`X-CustomSpam: URL redirect to other port`|
 |**Links til .biz- eller .info-websteder** <p> *IncreaseScoreWithBizOrInfoUrls*|Meddelelser, der `.biz` indeholder eller `.info` links i meddelelsens brødtekst, markeres som spam.|`X-CustomSpam: URL to .biz or .info websites`|
-|
 
 ## <a name="mark-as-spam-settings"></a>Markér som spamindstillinger
 
 Følgende indstillinger **for Markér som spam** ASF indstiller SCL for registrerede meddelelser til 9, hvilket svarer til en vurdering af **spamfilteret** med høj tillid og den tilsvarende handling i antispampolitikker.
-
-<br>
-
-****
 
 |Indstilling for antispampolitik|Beskrivelse|X-sidehoved tilføjet|
 |---|---|---|
@@ -99,16 +90,10 @@ Følgende indstillinger **for Markér som spam** ASF indstiller SCL for registre
 |**Objektkoder i HTML** <p> *MarkAsSpamObjectTagsInHtml*|Meddelelser, der indeholder `<object>` HTML-koder, er markeret som spam med høj tillid. <p> Dette mærke gør det muligt for plug-ins eller programmer at køre i et HTML-vindue.|`X-CustomSpam: Object tag in html`|
 |**Følsomme ord** <p> *MarkAsSpamSensitiveWordList*|Microsoft vedligeholder en dynamisk, men ikke-redigerbar liste over ord, der er knyttet til potentielt stødende meddelelser. <p> Meddelelser, der indeholder ord fra listen over følsomme ord i emnet eller meddelelsesteksten, markeres som spam med høj tillid.|`X-CustomSpam: Sensitive word in subject/body`|
 |**SPF-post: Hard Fail** <p> *MarkAsSpamSpfRecordHardFail*|Meddelelser, der sendes fra en IP-adresse, der ikke er angivet i SPF SPF(Sender Policy Framework)-posten (SPF) i DNS for kildemaildomænet, markeres som spam med høj overensstemmelse. <p> Testtilstand er ikke tilgængelig for denne indstilling.|`X-CustomSpam: SPF Record Fail`|
-|
 
 Følgende indstillinger **for Markér som spam** ASF indstiller SCL for registrerede meddelelser til 6, hvilket svarer til en **spamfilters** konklusion og den tilsvarende handling i politikker for uønsket post.
-
-<br>
-
-****
 
 |Indstilling for antispampolitik|Beskrivelse|X-sidehoved tilføjet|
 |---|---|---|
 |**Filtrering af afsender-id mislykkedes** <p> *MarkAsSpamFromAddressAuthFail*|Meddelelser, der ikke kan kontrolleres via betinget afsender-id, markeres som spam. <p> Denne indstilling kombinerer en SPF-kontrol med en Afsender-id-kontrol for at beskytte mod brevhoveder, der indeholder forfalskede afsendere. <p> Testtilstand er ikke tilgængelig for denne indstilling.|`X-CustomSpam: SPF From Record Fail`|
 |**Backscatter** <p> *MarkAsSpamNdrBackscatter*|*Backscatter er* ubrugelige rapporter om manglende levering (også kaldet NDR'er eller meddelelser om ikke-leveret post), der er forårsaget af forfalskede afsendere i mails. Du kan finde flere oplysninger [i Backscatter-meddelelser og EOP](backscatter-messages-and-eop.md). <p> Du behøver ikke at konfigurere denne indstilling i følgende miljøer, da legitime NDR'er leveres, og backscatter markeres som spam: <ul><li>Microsoft 365 med Exchange Online postkasser.</li><li>Lokale mailorganisationer, hvor du distribuerer *udgående mail* via EOP.</li></ul> <p> I enkeltstående EOP-miljøer, der beskytter indgående mail til lokale postkasser, har følgende resultat, hvis du slår denne indstilling til eller fra: <ul><li> **Til**: Legitime NDR'er leveres, og backscatter markeres som spam.</li><li>**Fra**: Legitime NDR'er og backscatter gennemgår normal spamfiltrering. De mest legitime NDR'er vil blive leveret til den oprindelige meddelelsesafsender. Nogle, men ikke alle, backscatter er markeret som spam. Backscatter kan pr. definition kun leveres til den spoofed afsender, ikke til den oprindelige afsender.</li></ul> <p> Testtilstand er ikke tilgængelig for denne indstilling.|`X-CustomSpam: Backscatter NDR`|
-|

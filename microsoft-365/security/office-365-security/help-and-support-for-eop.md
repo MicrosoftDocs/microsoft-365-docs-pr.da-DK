@@ -13,12 +13,13 @@ ms.assetid: 64535a0a-1044-413f-8bc2-ed8e8a0bc54c
 description: Microsoft yder hjælp til EOP på en række forskellige steder og metoder, herunder selvsupport og assisteret support.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f4db5851edcbb4daa2a0be1fa36770b7bb2d4b94
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 080a61b0ed20843d5962f1901b8d8fece73d8f4b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63589125"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681034"
 ---
 # <a name="help-and-support-for-eop"></a>Hjælp og support til EOP
 
@@ -77,8 +78,6 @@ Du kan finde flere oplysninger om, hvordan Premier Support kan hjælpe din organ
 
 Microsoft leverer lokale eller gratis telefonnumre til produktsupport over hele verden. Mange af disse supportcentre yder hjælp på dit lokale sprog i arbejdstiden eller engelsk 24 timer i døgnet, hver dag. Hvis du ikke kan se din placering nedenfor, kan du bruge den virtuelle agent som beskrevet ovenfor til at finde dit lokale supporttelefonnummer.
 
-****
-
 |Land eller område|Spørgsmål om forudkøb og fakturering|Spørgsmål om teknisk support|
 |---|---|---|
 |Brasilien|Gratis: 08007621146 <br> Lokal: 1147001999|Samme|
@@ -89,7 +88,6 @@ Microsoft leverer lokale eller gratis telefonnumre til produktsupport over hele 
 |Spanien|Gratis: 900 814 197 <br> Lokal: 912 718 160|Samme|
 |Storbritannien|Gratis: 0800 032 6417 <br> Lokal: 0203 450 6455|Samme|
 |USA|Gratis: 1-877-913-2707|Gratis: 1-800-865-9408|
-|
 
 ## <a name="for-more-information-about-eop-documentation"></a>Du kan finde flere oplysninger om EOP-dokumentation
 

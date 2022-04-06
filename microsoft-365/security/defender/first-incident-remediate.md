@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 2837b6009c143ea724d8c13d2548eeeca80e431d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 827b22ea2fb5e0864157dfae6748aa97ee4baf29
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593857"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499941"
 ---
 # <a name="step-2-remediate-your-first-incident"></a>Trin 2. Afhjælp din første hændelse
 
@@ -42,7 +42,7 @@ Microsoft 365 Defender tilbyder flere afhjælpningshandlinger, som analytikere k
 
 ## <a name="actions-on-devices"></a>Handlinger på enheder
 
-- **Isoler enheden** – Denne aktivitet blokerer straks al netværkstrafik (internet og intern) for at minimere malwares spredning og tillade, at analytikere fortsætter analyser, uden at en ondsindet agent kan fortsætte et angreb. Den eneste forbindelse, der er tilladt, er microsoft Defender for Identity-tjenesteskyen, så Microsoft Defender for Identity fortsat kan overvåge enheden. 
+- **Isoler enheden** – Denne aktivitet blokerer straks al netværkstrafik (internet og intern) for at minimere malwares spredning og tillade, at analytikere fortsætter analyser, uden at en ondsindet agent kan fortsætte et angreb. Den eneste forbindelse, der er tilladt, er Microsoft Defender for Identity-tjenesteskyen, så Microsoft Defender for Identity fortsætte med at overvåge enheden. 
 - **Begræns** eksekvering af apps – Hvis du vil begrænse kørsel af et program, anvendes en politik for kodeintegritet, der kun tillader, at filer kan køres, hvis de er signeret af et certifikat, der er udstedt af Microsoft. Denne metode til begrænsning kan hjælpe med at forhindre en hacker i at styre kompromitterede enheder og udføre yderligere ondsindede aktiviteter.
 - **Kør antivirusscanning** – en Microsoft Defender Antivirus scanning kan køre sammen med andre antivirusløsninger, uanset om Defender Antivirus er den aktive antivirusløsning eller ej. Hvis et andet antivirusleverandørprodukt er den primære løsning til slutpunktsbeskyttelse, kan du køre Defender Antivirus i passiv tilstand.
 - **Initier automatiseret** undersøgelse – Du kan starte en ny, generel, automatisk undersøgelse af enheden. Mens en undersøgelse kører, føjes alle andre beskeder, der genereres fra enheden, til en igangværende automatisk undersøgelse, indtil undersøgelsen er afsluttet. Hvis den samme trussel kan ses på andre enheder, føjes disse enheder til undersøgelsen.
@@ -64,11 +64,11 @@ I eksemplet med [Registrer, triage og analysér](first-incident-analyze.md#analy
 3. Kontrollér, at den skadelige fil blev sat i karantæne fra SharePoint
 4. Kontrollér, hvilke slutpunkter der er blevet påvirket af malware
 5. Genopbyg systemer
-6. Kontrollér, om der er tilsvarende Microsoft Defender for skyapps-beskeder for andre brugere
-7. Opret en brugerdefineret indikator i Microsoft Defender til slutpunkt for at blokere en Tor IP-adresse
-8. Opret en styringshandling i Microsoft Defender til skyapps for denne type besked, f.eks. dem, der er vist på følgende billede:
+6. Kontrollér, om der er Microsoft Defender for Cloud Apps beskeder for andre brugere
+7. Opret en brugerdefineret indikator i en Microsoft Defender for Endpoint at blokere en TOR IP-adresse
+8. Opret en styringshandling i Microsoft Defender for Cloud Apps for denne type besked, f.eks. dem, der er vist på følgende billede:
 
-   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Eksempel på styringshandlinger i portalen Microsoft Defender for Cloud Apps.":::
+   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Styringshandlinger i Microsoft Defender for Cloud Apps portalen" lightbox="../../media/first-incident-remediate/first-incident-mcas-governance.png":::
 
 De fleste af afhjælpningshandlingerne kan anvendes og registreres i Microsoft 365 Defender.
 
@@ -85,7 +85,7 @@ Playbooks bruger Power Automate til at oprette brugerdefinerede automationsflows
 
 Her er et eksempel.
  
-:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Eksempel på et Power Automate brugerdefineret proces automatiseringsflow."::: 
+:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Et Power Automate brugerdefineret proces automatiseringsflow" lightbox="../../media/first-incident-remediate/first-incident-power-automate.png"::: 
  
 Der kan også oprettes playbooks under gennemgang efter [hændelsen for](first-incident-post.md) at oprette afhjælpningshandlinger fra løste hændelser. 
 

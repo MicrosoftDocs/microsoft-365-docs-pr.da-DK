@@ -15,12 +15,13 @@ ms.custom:
 description: Administratoren kan få mere at vide om indstillingerne for konfiguration af mailflow og -routing Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1d7bca416a6144e2745a2c5d631c3e634e935ff4
-ms.sourcegitcommit: 3140e2866de36d57a27d27f70d47e8167c9cc907
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 296cd8aaa92005f094de2ee7d1c9f8bb9427df16
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "63587878"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681012"
 ---
 # <a name="mail-flow-in-eop"></a>Mailflow i EOP
 

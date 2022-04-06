@@ -15,14 +15,16 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: overview
-ms.collection: m365initiative-m365-defender
+ms.collection:
+- m365initiative-m365-defender
+- M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: b94e7f959c44e44e5b61dfd0536b3c1077d0edc5
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 7b9443cac6543ac14f6d94bd2809b5263be0a860
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63591142"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681826"
 ---
 # <a name="protect-your-network"></a>Beskyt dit netværk
 

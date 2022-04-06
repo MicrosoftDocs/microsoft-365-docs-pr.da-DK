@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 25cdc0610f11d1bcd7e8c27faa1cdc9453677d51
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 233c9993c8cd5978bcdfcbb54db8b9688c3ac056
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591123"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500029"
 ---
 # <a name="incident-response-with-microsoft-365-defender"></a>Hændelsesrespons med Microsoft 365 Defender
 
@@ -73,7 +73,7 @@ Du administrerer hændelser **fra hændelser & beskeder > hændelser** i hurtig 
 
 Når du vælger et hændelsesnavn, vises en oversigt over hændelsen, og du får adgang til faner med yderligere oplysninger. Her er et eksempel.
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Eksempel på oversigtssiden for en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Oversigtssiden for en hændelse i Microsoft 365 Defender-portalen" lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
 
 De ekstra faner for en hændelse er:
 
@@ -113,7 +113,7 @@ Her er forholdet mellem en hændelse og dens data og fanerne for en hændelse i 
 
 Her er et eksempel på en arbejdsproces til at besvare hændelser Microsoft 365 med Microsoft 365 Defender-portalen.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-workflow.png" alt-text="Eksempel på en arbejdsproces for hændelsesrespons for Microsoft 365." lightbox="../../media/incidents-overview/incidents-example-workflow.png":::
+:::image type="content" source="../../media/incidents-overview/incidents-example-workflow.png" alt-text="Et eksempel på en arbejdsproces for hændelsesrespons for Microsoft 365 Defender-portalen." lightbox="../../media/incidents-overview/incidents-example-workflow.png":::
 
 Identificer løbende de hændelser, der har den højeste prioritet, for analyse og løsning i hændelseskøen, og gør dem klar til svar. Dette er en kombination af:
 
@@ -153,7 +153,7 @@ Du kan finde flere oplysninger om hændelsesrespons på tværs af Microsoft-prod
 
 Her er et eksempel på sikkerhedshandlinger (SecOps) for Microsoft 365 Defender.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-operations.png" alt-text="Et eksempel på sikkerhedshandlinger for Microsoft 365 Defender." lightbox="../../media/incidents-overview/incidents-example-operations.png":::
+:::image type="content" source="../../media/incidents-overview/incidents-example-operations.png" alt-text="Et eksempel på sikkerhedshandlinger for Microsoft 365 Defender" lightbox="../../media/incidents-overview/incidents-example-operations.png":::
 
 Daglige opgaver kan omfatte:
 
@@ -215,7 +215,7 @@ Følg disse trin for at oprette en ny regel og tilpasse indstillinger for mailbe
     - **Medtag organisationsnavn i mailen** – Vælg, om din organisations navn skal vises i mailmeddelelsen.
     - **Medtag lejerspecifik portallink** – Vælg, om du vil tilføje et link til lejer-id'et i mailmeddelelsen om adgang til en bestemt Microsoft 365 lejer.
 
-    :::image type="content" source="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png" alt-text="Indstillinger for meddelelser om hændelsesmail." lightbox="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png":::
+    :::image type="content" source="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png" alt-text="Siden Meddelelsesindstillinger for beskeder om hændelsesmail i Microsoft 365 Defender-portalen." lightbox="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png":::
 
 5. Vælg **Næste**. På siden **Modtagere skal** du tilføje de mailadresser, der modtager beskeder om hændelser. Vælg **Tilføj,** når du har skrevet hver ny mailadresse. Hvis du vil teste meddelelser og sikre, at modtagerne modtager dem i indbakkerne, skal du vælge **Send testmail**. 
 6. Vælg **Næste**. Gennemgå **reglens indstillinger** på siden Gennemse regel, og vælg derefter **Opret regel**. Modtagerne begynder at modtage beskeder om hændelser via mail baseret på indstillingerne.

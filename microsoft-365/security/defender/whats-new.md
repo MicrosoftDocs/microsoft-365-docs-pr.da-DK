@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: edaa7398b8d3213479c9b81af248b928f7b3f3e0
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: aebf7a82a886540374176c06535e9f0097e73a03
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63593171"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499809"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -40,12 +40,18 @@ https://docs.microsoft.com/api/search/rss?search=%22Lists+the+new+features+and+f
 
 Du kan finde flere oplysninger om nyheder i forbindelse med andre Microsoft Defender-sikkerhedsprodukter her:
 
-- [Nyheder i Microsoft Defender til Office 365](../office-365-security/whats-new-in-defender-for-office-365.md)
-- [Nyheder i Microsoft Defender til slutpunkt](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
+- [Nyheder i Microsoft Defender for Office 365](../office-365-security/whats-new-in-defender-for-office-365.md)
+- [Nyheder i Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
 - [Nyheder i Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [Nyheder i Microsoft Defender til skyapps](/cloud-app-security/release-notes)
+- [Nyheder i Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescenteret](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
+
+
+
+## <a name="march-2022"></a>Marts 2022
+
+- (Eksempel) Hændelseskøen er blevet forbedret med flere funktioner, der er udviklet til at hjælpe dine undersøgelser. Forbedringerne omfatter funktioner som f.eks. mulighed for at søge efter hændelser efter id eller navn, angive et brugerdefineret tidsinterval og andre.
 
 ## <a name="december-2021"></a>December 2021
 
@@ -63,15 +69,15 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 ## <a name="september-2021"></a>September 2021
 
-- (GA) Microsoft Defender for Office 365-hændelsesdata er tilgængelige i den Microsoft 365 Defender-hændelsesstreaming-API. Du kan se tilgængeligheden og status for hændelsestyper i de [understøttede Microsoft 365 Defender i streaming-API'en](supported-event-types.md).
-- (GA) Microsoft Defender til Office 365 data, der er tilgængelige i avanceret jagt, er nu generelt tilgængelige.
+- (GA) Microsoft Defender for Office 365 tilgængelige begivenhedsdata i den Microsoft 365 Defender-hændelsesstreaming-API. Du kan se tilgængeligheden og status for hændelsestyper i de [understøttede Microsoft 365 Defender i streaming-API'en](supported-event-types.md).
+- (GA) Microsoft Defender for Office 365 tilgængelige i avanceret jagt er nu generelt tilgængelige.
 - (GA) Tildel hændelser og beskeder til brugerkonti
 
   Du kan tildele en hændelse og alle de beskeder, der er knyttet til den, til en brugerkonto fra Tildel til **:** i  ruden Administrer hændelse for en hændelse eller ruden  Administrer beskeder for en besked.
 
 ## <a name="august-2021"></a>August 2021
 
-- (Eksempel) Microsoft Defender til Office 365 data, der er tilgængelige i avanceret jagt
+- (Eksempel) Microsoft Defender for Office 365 tilgængelige i avanceret jagt
 
   Nye kolonner i mailtabeller kan give mere indsigt i mailbaserede trusler til mere grundige undersøgelser ved hjælp af avanceret jagt. Du kan nu medtage kolonnen `AuthenticationDetails` i [EmailEvents](./advanced-hunting-emailevents-table.md), `FileSize` [i EmailAttachmentInfo](./advanced-hunting-emailattachmentinfo-table.md)`ThreatTypes` `DetectionMethods` og i [tabellerne EmailPostDeliveryEvents](./advanced-hunting-emailpostdeliveryevents-table.md).
 
@@ -121,11 +127,11 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 - Microsoft 365 Defender
 
-  Den forbedrede [Microsoft 365 Defender](https://security.microsoft.com) portal er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem til at administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyhederne](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
+  Den forbedrede [Microsoft 365 Defender](https://security.microsoft.com) portal er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender for Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem til at administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyhederne](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
 
 - [Microsoft 365 Defender rapport over trusselsanalyse](threat-analytics.md)
 
-  Trusselsanalyse hjælper dig med at reagere på og minimere effekten af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der blokeres af Microsoft 365 Defender løsninger og udføre sikkerhedsforanstaltninger, der reducerer risikoen for yderligere eksponering og øger fleksibiliteten. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for Microsoft Defender til slutpunkt og Microsoft Defender til Office E5-licensindehavere.
+  Trusselsanalyse hjælper dig med at reagere på og minimere effekten af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der blokeres af Microsoft 365 Defender løsninger og udføre sikkerhedsforanstaltninger, der reducerer risikoen for yderligere eksponering og øger fleksibiliteten. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for Microsoft Defender for Endpoint og Microsoft Defender Office E5-licensindehavere.
 
 ## <a name="march-2021"></a>Marts 2021
 
@@ -133,8 +139,3 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
   Find oplysninger om begivenheder i forskellige skyapps og -tjenester, der er dækket Microsoft Cloud App Security. Denne tabel indeholder også oplysninger, der tidligere er tilgængelige i `AppFileEvents` tabellen.
 
-## <a name="february-2021"></a>I februar 2021
-
-- (Eksempel) Den forbedrede [Microsoft 365 Defender portal (https://security.microsoft.com)](https://security.microsoft.com) er nu tilgængelig i offentlig prøveversion. Denne nye oplevelse bringer Defender for Endpoint og Defender Office 365 direkte i midten. [Få mere at vide om, hvad der er ændret](microsoft-365-defender.md#the-microsoft-365-defender-portal).
-
-- **[(Eksempel) Microsoft 365 Defender API'er](api-overview.md)** – API'er på øverste Microsoft 365 Defender gør det muligt at automatisere arbejdsprocesser baseret på den delte hændelse og avancerede søgetabeller.

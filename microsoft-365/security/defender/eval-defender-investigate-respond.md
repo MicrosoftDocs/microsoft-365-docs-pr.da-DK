@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: a32b6dc2fafb80905c4cba44b79fc24b7e6a3187
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: b382b1cd096f57f5667db7661b1ef4b69acc1451
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568612"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499897"
 ---
 # <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>Trin 6. Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
 

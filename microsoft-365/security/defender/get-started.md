@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: intro-get-started
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 747f8e389b90e20aad7162277b3e62b0a80ae3c7
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+ms.openlocfilehash: 4429226eaebc254676fac5589a2a25ca51acdeb6
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63592663"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499919"
 ---
 # <a name="get-started-with-microsoft-365-defender"></a>Introduktion til Microsoft 365 Defender
 
@@ -38,7 +38,7 @@ Microsoft 365 Defender er en samlet oplevelse, hvor du kan overvåge og administ
 
 Uanset om du er ny bruger af Microsoft-pakken med sikkerhedsprodukter eller kender til individuelle arbejdsprocesser, kan du i dette emne se de enkle trin, du skal bruge for at komme i gang med Microsoft 365 Defender.
 
-![Billede af introduktion til Microsoft 365 Defender trin.](../../media/mtp/get-started-m365d.png)
+:::image type="content" source="../../media/mtp/get-started-m365d.png" alt-text="Trinnene til at komme i gang med Microsoft 365 Defender portal" lightbox="../../media/mtp/get-started-m365d.png":::
 
 Generelt skal du følge disse trin for at komme i gang:
 
@@ -57,7 +57,7 @@ Hvis du Microsoft 365 Defender funktioner og udrulning af tjenester, får du adg
 
 | Funktion | Beskrivelse |
 | ------ | ------ |
-| Microsoft Defender til Slutpunkt | Endpoint-beskyttelsespakken, som er opbygget omkring effektive adfærdssensorer, skyanalyse og trusselsintelligens |
-|Microsoft Defender til Office 365 | Avanceret beskyttelse af dine apps og data i Office 365 herunder mail og andre samarbejdsværktøjer |
+| Microsoft Defender for Endpoint | Endpoint-beskyttelsespakken, som er opbygget omkring effektive adfærdssensorer, skyanalyse og trusselsintelligens |
+|Microsoft Defender for Office 365 | Avanceret beskyttelse af dine apps og data i Office 365 herunder mail og andre samarbejdsværktøjer |
 | Microsoft Defender for Identity | Forsvar dig mod avancerede trusler, kompromitterede identiteter og ondsindede insidere ved hjælp af korrelerede Active Directory-signaler |
-| Microsoft Defender til skyapps | Identificer og bekæmpe cybertrusler på tværs af dine Microsoft- og tredjepartsskytjenester |
+| Microsoft Defender for Cloud Apps | Identificer og bekæmpe cybertrusler på tværs af dine Microsoft- og tredjepartsskytjenester |

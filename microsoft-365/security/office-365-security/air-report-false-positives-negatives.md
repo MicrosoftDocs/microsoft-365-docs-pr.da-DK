@@ -22,12 +22,12 @@ ms.topic: how-to
 ms.custom:
 - autoir
 ms.technology: mdo
-ms.openlocfilehash: 98164fd42a0ed2e2d79e2319823363057d15e7d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4b1de0e19cbf241936aa02f957cdd0920f2a580a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588648"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682477"
 ---
 # <a name="how-to-report-false-positivesnegatives-in-automated-investigation-and-response-capabilities"></a>Sådan rapporterer du falske positive/negativer i automatiseret undersøgelse og svarmuligheder
 
@@ -68,15 +68,10 @@ Hvis der i de fleste tilfælde er blevet foretaget en afhjælpningshandling på 
 
 Med Threat Explorer kan dit sikkerhedsteam finde en mail, der påvirkes af en handling, og potentielt fortryde handlingen.
 
-<br>
-
-****
-
 |Scenarie|Fortryd indstillinger|Lær mere|
 |---|---|---|
 |En mail blev distribueret til en brugers mappe med uønsket mail|<ul><li>Flytte meddelelsen til brugerens mappe Slettet post</li><li>Flytte meddelelsen til brugerens indbakke</li><li>Slet meddelelsen</li></ul>|[Find og undersøg ondsindede mails, der blev leveret i Office 365](investigate-malicious-email-that-was-delivered.md)|
 |En mail eller en fil blev sat i karantæne|<ul><li>Slip mailen eller filen</li><li> Slet mailen eller filen</li></ul>|[Administrere meddelelser, der er sat i karantæne, som administrator](manage-quarantined-messages-and-files.md)|
-|
 
 ### <a name="undo-an-action-in-the-action-center"></a>Fortryde en handling i Handlingscenter
 

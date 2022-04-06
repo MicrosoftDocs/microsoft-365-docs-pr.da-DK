@@ -15,12 +15,13 @@ ms.assetid: c29f75e5-c16e-409e-a123-430691e38276
 description: Administratorer kan få mere at vide om de fejlkoder, der er knyttet til levering af meddelelser ved hjælp af forbindelser (også kaldet mailflow intelligence).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 57d8a9ec9bb40961ecf0b53f52198bde00e8bc03
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 2536120dfc336145ec9fdba1db34a8da1f56c1b4
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587286"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680990"
 ---
 # <a name="mail-flow-intelligence-in-eop"></a>Mailflow intelligence i EOP
 

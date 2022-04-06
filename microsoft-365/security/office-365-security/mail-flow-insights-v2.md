@@ -7,18 +7,19 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: overview
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: beb6acaa-6016-4d54-ba7e-3d6d035e2b46
 description: Administratorer kan få mere at vide om indsigter og rapporter, der er tilgængelige i dashboardet for mailflow i Security & Compliance Center.
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 81313744f8c5f14abed59b77182f64e410f9d588
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 176681b5fe780f0aeb4a0c8502b3e919e7ebcadc
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587897"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682521"
 ---
 # <a name="mail-flow-insights-in-the-security--compliance-center"></a>Indsigt i mailflow i Security & Compliance Center
 

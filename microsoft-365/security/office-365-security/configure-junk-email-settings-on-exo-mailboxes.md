@@ -17,12 +17,12 @@ ms.collection:
 description: Administratorer kan lære, hvordan de konfigurerer indstillingerne for uønsket mail Exchange Online postkasser. Mange af disse indstillinger er tilgængelige for brugere i Outlook eller Outlook på internettet.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d3a55b1f49430d3c2a61b0db44e3ce8f8a060093
-ms.sourcegitcommit: 3140e2866de36d57a27d27f70d47e8167c9cc907
+ms.openlocfilehash: 9e2db8fc6c88e3945081d3b2800aa5ea9cd57a11
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "63588610"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682455"
 ---
 # <a name="configure-junk-email-settings-on-exchange-online-mailboxes"></a>Konfigurere indstillinger for uønsket mail Exchange Online postkasser
 
@@ -65,17 +65,12 @@ Administratorer kan bruge Exchange Online PowerShell til at konfigurere poster i
 
 Samlingen med sikre lister på en postkasse Pengeskab listen over afsendere, listen Pengeskab modtagere og listen over blokerede afsendere. Som standard kan brugerne konfigurere samlingen af sikre lister på deres egen postkasse i Outlook eller Outlook på internettet. Administratorer kan bruge de tilsvarende parametre på **Set-MailboxJunkEmailConfiguration-cmdlet'en** til at konfigurere samlingen af sikre lister i en brugers postkasse. Disse parametre er beskrevet i følgende tabel.
 
-<br>
-
-****
-
 |Parameter på Set-MailboxJunkEmailConfiguration|Outlook på internettet indstilling|
 |---|---|
 |_BlockedSendersAndDomains_|**Flyt mail fra disse afsendere eller domæner til mappen Uønsket mail**|
 |_ContactsTrusted_|**Hav tillid til mail fra mine kontakter**|
 |_TrustedListsOnly_|**Hav kun tillid til mails fra adresser Pengeskab listen over afsendere og domæner og Pengeskab adresselister**|
 |_TrustedSendersAndDomains_<sup>\*</sup>|**Flyt ikke mail fra disse afsendere til mappen Uønsket mail**|
-|
 
 <sup>\*</sup>**Bemærkninger**:
 

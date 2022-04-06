@@ -8,6 +8,7 @@ manager: dansimp
 ms.date: ''
 audience: ITPro
 ms.topic: overview
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: f40253f2-50a1-426e-9979-be74ba74cb61
 ms.custom:
@@ -15,12 +16,12 @@ ms.custom:
 description: I denne artikel får du mere at vide om rapporter og fejlfindingsværktøjer, der er tilgængelige for Microsoft Exchange Online Protection-administratorer (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d4f0289054baec0e5bcedf4e9e3d434ab51ef92b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 929fce14a9e128b724b4aa69d88e4a3062ed5640
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587476"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682411"
 ---
 # <a name="reporting-and-message-trace-in-eop"></a>Rapporterings- og meddelelsessporing i EOP
 
@@ -71,16 +72,11 @@ Registrerer bestemte ændringer, der er foretaget af administratorer i din organ
 
 I følgende tabel beskrives det, hvornår EOP-rapporterings- og meddelelsessporingsdata er tilgængelige og i hvor lang tid.
 
-<br>
-
-****
-
 |Rapporttype|Tilgængelige data (efter udløbsperiode)|Ventetid|
 |---|---|---|
 |Oversigtsrapporter for mailbeskyttelse|90 dage|Sammenlægning af meddelelsesdata er for det meste fuldført inden for 24-48 timer. Nogle mindre trinvise aggregerede ændringer kan forekomme i op til 5 dage.|
 |Detaljerede rapporter om mailbeskyttelse|90 dage|For detaljerede data, der er mindre end 7 dage gamle, bør data blive vist inden for 24 timer, men de er muligvis først fuldførte efter 48 timer. Nogle mindre trinvise ændringer kan forekomme i op til 5 dage. <p> Hvis du vil have vist detaljerede rapporter for meddelelser, der er mere end 7 dage gamle, kan det tage op til et par timer, før resultaterne vises.|
 |Meddelelsessporingsdata|90 dage|Når du kører en meddelelsessporing for meddelelser, der er mindre end 7 dage gamle, bør meddelelserne blive vist inden for 5-30 minutter.<p> Når du kører en meddelelsessporing for meddelelser, der er mere end 7 dage gamle, kan det tage op til et par timer.|
-|
 
 > [!NOTE]
 > Datatilgængelighed og ventetid er den samme, uanset om du bliver bedt om det via Administration eller Remote PowerShell.

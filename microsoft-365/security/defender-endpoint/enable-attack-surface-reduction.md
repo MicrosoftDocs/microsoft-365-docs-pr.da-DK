@@ -19,18 +19,18 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 14dfd8bd911be9eb3932f7664225532e493e8a80
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 929ecd109d110c9a4578b39fbc69ed65c0b7d116
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465371"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682609"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverfladen
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -58,7 +58,7 @@ Hvis du vil bruge hele funktionssættet af reduktionsregler for angrebsoverflade
 - [Beskyttelse mod skylevering på](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) (visse regler kræver dette)
 - Windows 10 Enterprise E5- eller E3-licens
 
-Selvom regler for reduktion af angrebsoverfladen ikke kræver en [Windows E5-licens](/windows/deployment/deploy-enterprise-licenses) med en Windows E5-licens, får du avancerede administrationsfunktioner, herunder overvågning, analyse og arbejdsprocesser, der er tilgængelige i Defender til slutpunkt samt rapporterings- og konfigurationsfunktioner i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. Disse avancerede funktioner er ikke tilgængelige med en E3-licens, men du kan stadig bruge Logbog til at gennemgå hændelser for reduktion af angrebsoverfladen.
+Selvom regler for reduktion af angrebsoverfladen ikke kræver en [Windows E5-licens](/windows/deployment/deploy-enterprise-licenses) med en Windows E5-licens, får du avancerede administrationsfunktioner, herunder overvågning, analyse og arbejdsprocesser, der er tilgængelige i Defender til slutpunkt samt rapporterings- og konfigurationsfunktioner i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. Disse avancerede funktioner er ikke tilgængelige med en E3-licens, men du kan stadig bruge Event Viewer til at gennemse hændelser til reduktion af angrebsoverfladen.
 
 Hver ASR-regel indeholder én af fire indstillinger:
 
@@ -70,7 +70,7 @@ Hver ASR-regel indeholder én af fire indstillinger:
 > [!IMPORTANT]
 > Tilstanden Advarsel understøttes i øjeblikket ikke for tre ASR-regler, når du konfigurerer ASR-regler i Microsoft Endpoint Manager (MEM). Du kan få mere at vide under [Tilfælde, hvor advarselstilstand ikke understøttes](attack-surface-reduction.md#cases-where-warn-mode-is-not-supported).
 
-Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende licenserings-SKU) for at drage fordel af de avancerede overvågnings- og rapporteringsfunktioner, der er tilgængelige i [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender til slutpunkt). Men hvis du har en anden licens, f.eks. Windows Professional eller Windows E3, som ikke omfatter avancerede overvågnings- og rapporteringsfunktioner, kan du udvikle dine egne overvågnings- og rapporteringsværktøjer ud over de hændelser, der genereres på hvert slutpunkt, når der udløses ASR-regler (f.eks. Hændelses videresendelse).
+Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende licenserings-SKU) for at drage fordel af de avancerede overvågnings- og rapporteringsfunktioner, der er tilgængelige i [Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md) (Defender til slutpunkt). Men hvis du har en anden licens, f.eks. Windows Professional eller Windows E3, som ikke omfatter avancerede overvågnings- og rapporteringsfunktioner, kan du udvikle dine egne overvågnings- og rapporteringsværktøjer ud over de hændelser, der genereres på hvert slutpunkt, når der udløses ASR-regler (f.eks. Hændelses videresendelse).
 
 > [!TIP]
 > Du kan få mere at Windows om licenser i [Windows 10 licensering](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5), og få [vejledningen volumenlicens til Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
@@ -78,12 +78,12 @@ Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende l
 Du kan aktivere regler for reduktion af angrebsoverfladen ved hjælp af en af disse metoder:
 
 - [Microsoft Intune](#intune)
-- [Mobildata Enhedshåndtering (MDM)](#mdm)
+- [Administration af mobilenheder (MDM)](#mdm)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
 - [Gruppepolitik](#group-policy)
 - [PowerShell](#powershell)
 
-Virksomhedsadministration som f.eks. Intune eller Microsoft Endpoint Manager anbefales. Enterprise-level management vil overskrive eventuelle modstridende indstillinger Gruppepolitik PowerShell-indstillinger ved opstart.
+Virksomhedsstyring som f.eks. Intune eller Microsoft Endpoint Manager anbefales. Enterprise-level management vil overskrive eventuelle modstridende Gruppepolitik eller PowerShell-indstillinger ved opstart.
 
 ## <a name="exclude-files-and-folders-from-asr-rules"></a>Udelad filer og mapper fra ASR-regler
 
@@ -158,7 +158,7 @@ Du kan bruge Microsoft Endpoint Manager (MEM) OMA-URI til at konfigurere brugerd
 1. Åbn Microsoft Endpoint Manager Administration (MEM). I menuen **Hjem skal** du klikke  **på Enheder**, vælge **Konfigurationsprofiler** og derefter klikke på **Opret profil**.
 
    > [!div class="mx-imgBorder"]
-   >  :::image type="content" source="images/mem01-create-profile.png" alt-text="Siden Opret profil på Microsoft Endpoint Manager Administration" lightbox="images/mem01-create-profile.png":::
+   > ![MEM Opret profil.](images/mem01-create-profile.png)
 
 2. Vælg **følgende i** Opret en profil på følgende to rullelister:
 
@@ -169,17 +169,17 @@ Du kan bruge Microsoft Endpoint Manager (MEM) OMA-URI til at konfigurere brugerd
    Vælg **Brugerdefineret**, og vælg derefter **Opret**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem02-profile-attributes.png" alt-text="Attributterne for regelprofilen Microsoft Endpoint Manager administrationscenterets portal" lightbox="images/mem02-profile-attributes.png":::
+   > ![Profilattributter for MEM-regel.](images/mem02-profile-attributes.png)
 
 3. Værktøjet Brugerdefineret skabelon åbnes til trin **1 Grundlæggende.** I **1 Grundlæggende skal** du i **Navn** skrive et navn til skabelonen, og i **Beskrivelse** kan du skrive en beskrivelse (valgfrit).
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem03-1-basics.png" alt-text="De grundlæggende attributter i Microsoft Endpoint Manager Administration" lightbox="images/mem03-1-basics.png":::
+   > ![GRUNDLÆGGENDE MEM-attributter.](images/mem03-1-basics.png)
 
 4. Klik på **Næste**. Trin **2 Konfigurationsindstillinger** åbnes. For OMA-URI-Indstillinger du klikke på **Tilføj**. Der vises nu to muligheder: **Tilføj** og **Eksportér**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem04-2-configuration-settings.png" alt-text="Konfigurationsindstillingerne på Microsoft Endpoint Manager Administration" lightbox="images/mem04-2-configuration-settings.png":::
+   > ![Mem-konfigurationsindstillinger.](images/mem04-2-configuration-settings.png)
 
 5. Klik **på Tilføj** igen. **Tilføjelsesrækken OMA-URI Indstillinger** åbnes. Gør **følgende** i Tilføj række:
 
@@ -195,7 +195,7 @@ Du kan bruge Microsoft Endpoint Manager (MEM) OMA-URI til at konfigurere brugerd
      - 6: Advar (Aktivér ASR-reglen, men tillad slutbrugeren at tilsidesætte blokeringen)
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem05-add-row-oma-uri.png" alt-text="OMA-URI-konfigurationen i Microsoft Endpoint Manager Administration" lightbox="images/mem05-add-row-oma-uri.png":::
+   > ![MEM OMA-URI-konfiguration.](images/mem05-add-row-oma-uri.png)
 
 6. Vælg **Gem**. **Tilføj række** lukkes. I **Brugerdefineret** skal du vælge **Næste**. I trin **3 Omfangsmærker** er omfangsmærker valgfrie. Gør et af følgende:
 
@@ -209,7 +209,7 @@ Du kan bruge Microsoft Endpoint Manager (MEM) OMA-URI til at konfigurere brugerd
    - **Tilføj alle enheder**
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem06-4-assignments.png" alt-text="Opgaverne på Microsoft Endpoint Manager Administration" lightbox="images/mem06-4-assignments.png":::
+   > ![MEM-opgaver.](images/mem06-4-assignments.png)
 
 8. I **grupperne Udeladt** skal du vælge de grupper, som du vil udelukke fra denne regel, og derefter vælge **Næste**.
 
@@ -220,12 +220,12 @@ Du kan bruge Microsoft Endpoint Manager (MEM) OMA-URI til at konfigurere brugerd
    - I **Værdi skal** du angive den relevante værdi eller værdiområdet
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem07-5-applicability-rules.png" alt-text="Regler for anvendelse i portalen Microsoft Endpoint Manager Administration" lightbox="images/mem07-5-applicability-rules.png":::
+   > ![MEM-anvendelsesregler.](images/mem07-5-applicability-rules.png)
 
 10. Vælg **Næste**. I trin **6 Gennemgå + opret** skal du gennemgå de indstillinger og oplysninger, du har valgt og angivet, og derefter vælge **Opret**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/mem08-6-review-create.png" alt-text="Indstillingen Gennemse og opret på Microsoft Endpoint Manager Administration" lightbox="images/mem08-6-review-create.png":::
+    > ![Gennemse og opret i MEM.](images/mem08-6-review-create.png)
 
     > [!NOTE]
     > Regler er aktive og live inden for få minutter.
@@ -282,11 +282,11 @@ Eksempel:
 ### <a name="group-policy"></a>Gruppepolitik
 
 > [!WARNING]
-> Hvis du administrerer dine computere og enheder med Intune, Configuration Manager eller andre administrationsplatformer på virksomhedsniveau, overskriver administrationssoftwaren eventuelle modstridende Gruppepolitik indstillingerne ved opstart.
+> Hvis du administrerer dine computere og enheder med Intune, Konfigurationsstyring eller andre virksomhedsadministrationsplatform, overskriver administrationssoftwaren eventuelle modstridende Gruppepolitik indstillingerne ved opstart.
 
 1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik Administrationskonsol](https://technet.microsoft.com/library/cc731212.aspx), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **administrationseditoren Gruppepolitik** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard reduktion af** \> **angrebsoverfladen**.
 
@@ -297,7 +297,7 @@ Eksempel:
    - 2: Overvågning (Evaluer, hvordan ASR-reglen påvirker din organisation, hvis den er aktiveret)
    - 6: Advar (Aktivér ASR-reglen, men tillad slutbrugeren at tilsidesætte blokeringen)
 
-   :::image type="content" source="images/asr-rules-gp.png" alt-text="ASR-regler i Gruppepolitik" lightbox="images/asr-rules-gp.png":::
+   :::image type="content" source="images/asr-rules-gp.png" alt-text="ASR-regler i Gruppepolitik.":::
 
 5. Hvis du vil udelade filer og mapper fra ASR-regler, skal du vælge indstillingen Udeluk filer og stier fra reduktionsregler for **angrebsoverfladen** og angive indstillingen til **Aktiveret**. Vælg **Vis** , og angiv hver enkelt fil eller mappe i **kolonnen Værdinavn** . Angiv **0** i **kolonnen Værdi** for hvert element.
 
@@ -307,12 +307,12 @@ Eksempel:
 ### <a name="powershell"></a>PowerShell
 
 > [!WARNING]
-> Hvis du administrerer dine computere og enheder med Intune, Configuration Manager eller en anden administrationsplatform på virksomhedsniveau, overskriver administrationssoftwaren eventuelle modstridende PowerShell-indstillinger ved opstart. For at give brugerne mulighed for at definere værdien ved hjælp af PowerShell skal du bruge indstillingen "Brugerdefineret" for reglen på administrationsplatformen.
+> Hvis du administrerer dine computere og enheder med Intune, Konfigurationsstyring eller en anden administrationsplatform på virksomhedsniveau, overskriver administrationssoftwaren eventuelle modstridende PowerShell-indstillinger ved opstart. For at give brugerne mulighed for at definere værdien ved hjælp af PowerShell skal du bruge indstillingen "Brugerdefineret" for reglen på administrationsplatformen.
 > "Brugerdefineret" gør det muligt for en lokal administratorbruger at konfigurere reglen.
 > Indstillingsindstillingen Brugerdefineret vises i følgende figur.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/asr-user-defined.png" alt-text="Indstillingen Aktivér for sikkerhed for legitimationsoplysninger" lightbox="images/asr-user-defined.png":::
+> ![ASR aktiverer "Brugerdefineret"](images/asr-user-defined.png)
 
 1. Skriv **powershell** i menuen Start, **højreklik på Windows PowerShell** og vælg **Kør som administrator**.
 

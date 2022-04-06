@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan lære, hvordan de bruger portalen til indsendelser i Microsoft 365 Defender-portalen til at sende mistænkelige mails, mistænkelige phishingmails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer til Microsoft til genscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6a897ba6973dfba86e3d0628088bad419c61c04c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 34d608a6ea114fff8005069f3dc2ddc79c4be45e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589570"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682631"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen til indsendelser til at sende mistænkeligt spam, phish, URL-adresser og filer til Microsoft
 
@@ -51,10 +51,10 @@ Du kan finde andre måder at sende mails, URL-adresser og vedhæftede filer til 
 
 - Du åbner Microsoft 365 Defender på <https://security.microsoft.com/>. For at gå direkte til siden **Indsendelser** skal du bruge <https://security.microsoft.com/reportsubmission>.
 
-- Hvis du vil sende meddelelser og filer til Microsoft, skal du være medlem af en af følgende rollegrupper:
+- Hvis du vil sende meddelelser og filer til Microsoft, skal du have en af følgende roller:
   - **Sikkerhedsadministrator** **eller Sikkerhedslæser** [i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md).
   
-    Bemærk, at medlemskab af denne rollegruppe er påkrævet for [at Få vist brugerindsendelser til den brugerdefinerede postkasse](#view-user-submissions-to-microsoft) som beskrevet senere i denne artikel.
+    Bemærk, at en af disse roller er påkrævet [for at Få vist brugerindsendelser til den brugerdefinerede postkasse](#view-user-submissions-to-microsoft) som beskrevet senere i denne artikel.
 
 - Administratorer kan sende meddelelser som gamle som 30 dage, hvis den stadig er tilgængelig i postkassen og ikke bliver fjernet af brugeren eller en anden administrator.
 

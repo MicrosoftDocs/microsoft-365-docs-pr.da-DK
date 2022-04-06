@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter et følsomhedsmærkat, kan du automatisk tildele en etiket til filer og mails, eller du kan bede brugerne om at vælge den etiket, du anbefaler.
-ms.openlocfilehash: 166905abb1dc08bcf9fe34e80c3ff3f44813501b
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 80f3b5c69e482301dd8c4e926959087c7149a529
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63589520"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499655"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend en følsomhedsmærkat på indhold automatisk
 
@@ -45,7 +45,7 @@ Der er to forskellige metoder til automatisk at anvende en følsomhedsmærkat p�
 
 - **Mærkning på klientsiden**, når brugere redigerer dokumenter eller skriver (også svar eller videresender) mails: Brug en etiket, der er konfigureret til automatisk mærkning af filer og mails (omfatter Word, Excel, PowerPoint og Outlook).
 
-    Denne metode understøtter anbefaling af et navn til brugerne og til automatisk anvendelse af en etiket. Men i begge tilfælde beslutter brugeren, om han eller hun skal acceptere eller afvise etiketten for at sikre korrekt mærkat for indholdet. Denne etiket på klientsiden har minimal forsinkelse for dokumenter, da etiketten kan anvendes, selv før dokumentet gemmes. Det er dog ikke alle klientapps, der understøtter automatisk mærkning. Denne funktion understøttes af indbygget mærkning med nogle versioner [af Office](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) og også den samlede Azure Information Protection-etiketklient.
+    Denne metode understøtter anbefaling af et navn til brugerne og til automatisk anvendelse af en etiket. Men i begge tilfælde beslutter brugeren, om han eller hun skal acceptere eller afvise etiketten for at sikre korrekt mærkat for indholdet. Denne etiket på klientsiden har minimal forsinkelse for dokumenter, da etiketten kan anvendes, selv før dokumentet gemmes. Det er dog ikke alle klientapps, der understøtter automatisk mærkning. Denne funktion understøttes af indbygget mærkning med nogle versioner [af Office](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) og også Azure Information Protection samlet etiketklient.
 
     Du kan finde [konfigurationsinstruktioner under Sådan konfigureres automatisk mærkater Office-apps](#how-to-configure-auto-labeling-for-office-apps) på denne side.
 
@@ -70,8 +70,8 @@ Der er to forskellige metoder til automatisk at anvende en følsomhedsmærkat p�
     Specifik for automatisk mærkat for Exchange:
     
     - I modsætning til manuel mærkat eller automatisk mærkater med Office-apps scannes vedhæftede PDF-filer samt vedhæftede Office også for de betingelser, du angiver i din politik for automatisk mærkatmærkning. Når der er et match, mærkes mailen, men ikke den vedhæftede fil.
-        - For PDF-filer, hvis etiketten anvender kryptering, krypteres disse filer ved hjælp af [Office 365-meddelelseskryptering om (OME](ome.md)), når din lejer er aktiveret [til vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-).
-        - Disse Office filer, Word, PowerPoint og Excel understøttes. Hvis etiketten anvender kryptering, krypteres de ved hjælp af [Office 365-meddelelseskryptering (OME)](ome.md).
+        - For PDF-filer, hvis etiketten anvender kryptering, krypteres disse filer ved hjælp [af ome Office 365 (Message Encryption),](ome.md) når din lejer er aktiveret til [vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-).
+        - Disse Office filer, Word, PowerPoint og Excel understøttes. Hvis etiketten anvender kryptering, krypteres de ved hjælp Office 365 [ome (Message Encryption](ome.md)).
     - Hvis du har Exchange regler for mailflow eller forebyggelse af datatab (DLP), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes etiketten. Hvis den etiket anvender kryptering, ignoreres IRM-indstillingerne Exchange regler for mailflow eller DLP-politikker. Men hvis den pågældende etiket ikke anvender kryptering, anvendes IRM-indstillingerne fra regler for mailflow eller DLP-politikker ud over navnet.
     - Mail, der har IRM-kryptering uden etiket, erstattes af en etiket med nogen krypteringsindstillinger, når der findes et match, ved hjælp af automatisk mærkat.
     - Indgående mail mærkes, når der er et match med dine betingelser for automatisk mærkat. Hvis denne etiket er konfigureret [til kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Som standard anvendes denne kryptering ikke, når afsenderen er uden for organisationen, men kan anvendes ved at konfigurere Flere indstillinger **for** mail og angive en ejer af Rights Management.
@@ -140,7 +140,7 @@ Den konfigurerbare indstilling for politikker for automatisk mærkatering af mai
 
 For indbygget mærkning i Office skal du kontrollere [minimumversionerne](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps), der kræves for automatisk mærkning i Office apps.
 
-Den samlede Azure Information Protection-etiketklient understøtter kun automatisk mærkning for indbyggede og brugerdefinerede følsomme oplysningstyper og understøtter ikke klassificeringer, der kan trænes, eller følsomme oplysningstyper, der bruger Exact Data Match (EDM) eller navngivne enheder.
+Azure Information Protection samlet mærkatklient understøtter kun automatisk mærkning for indbyggede og brugerdefinerede følsomme oplysningstyper og understøtter ikke klassificeringer, der kan trænes, eller følsomme oplysningstyper, der bruger Nøjagtig dataoverensstemmelse (EDM) eller navngivne enheder.
 
 Indstillingerne for automatisk mærkatering for Office apps er tilgængelige, når du [opretter eller redigerer en følsomhedsmærkat](create-sensitivity-labels.md). Sørg for **, & filer og** mails er markeret ud for etikettens omfang:
 
@@ -199,13 +199,13 @@ Hvis du foretrækker det, kan du anbefale brugerne, at de anvender etiketten. Me
 
 ![Indstilling til at anbefale et følsomhedsmærkat til brugere.](../media/Sensitivity-labels-Recommended-label-option.png)
 
-Her er et eksempel på en prompt fra den samlede Azure Information Protection-etiketklient, når du konfigurerer en betingelse til at anvende en etiket som en anbefalet handling med et brugerdefineret politiktip. Du kan vælge, hvilken tekst der skal vises i politiktip.
+Her er et eksempel på en prompt fra Azure Information Protection samlet etiketklient, når du konfigurerer en betingelse for at anvende en etiket som en anbefalet handling med et brugerdefineret politiktip. Du kan vælge, hvilken tekst der skal vises i politiktip.
 
-![Spørg, om der skal anvendes en anbefalet etiket.](../media/Sensitivity-label-Prompt-for-required-label.png)
+![Spørg, om der skal anvendes en anbefalet etiket.](../media/Sensitivity-label-prompt-for-required-label.png)
 
 ### <a name="when-automatic-or-recommended-labels-are-applied"></a>Når der anvendes automatiske eller anbefalede etiketter
 
-Implementeringen af automatisk og anbefalet mærkning i Office-apps afhænger af, om du bruger mærkning, der er indbygget i Office, eller den samlede Azure Information Protection-etiketklient. Men i begge tilfælde:
+Implementeringen af automatisk og anbefalet mærkning i Office-apps afhænger af, om du bruger mærkning, der er indbygget i Office, eller Azure Information Protection unified labeling client. Men i begge tilfælde:
 
 - Du kan ikke bruge automatisk mærkning til dokumenter og mails, der tidligere var manuelt mærket, eller tidligere automatisk mærket med en højere følsomhed. Husk, at du kun kan anvende en enkelt følsomhedsmærkat i et dokument eller en mail (ud over en enkelt opbevaringsmærkat).
 
@@ -219,7 +219,7 @@ Specifikt for indbygget mærkning:
 
 - Hvis du vil have mere at vide om, hvordan disse etiketter anvendes i Office-apps, eksempelskærme, og hvordan følsomme oplysninger registreres, skal du se Anvend eller anbefal automatisk følsomhedsmærkater på dine filer og mails [i Office](https://support.microsoft.com/office/automatically-apply-or-recommend-sensitivity-labels-to-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1).
 
-Specifikt for den samlede Azure Information Protection-etiketklient:
+Specifikt for azure-Information Protection samlet etiketklient:
 
 - Automatisk og anbefalet mærkning gælder for Word, Excel og PowerPoint, når du gemmer et dokument, og for at Outlook, når du sender en mail.
 
@@ -235,7 +235,7 @@ Sørg for, at du er opmærksom på forudsætningerne, før du konfigurerer polit
 
 - Simuleringstilstand:
   - Overvågning for Microsoft 365 skal være slået til. Hvis du har brug for at aktivere overvågning, eller hvis du ikke er sikker på, om overvågning allerede er aktiveret, skal du se Slå søgning i [overvågningslog til eller fra](turn-audit-log-search-on-or-off.md).
-  - Hvis du vil have vist fil- eller mailindhold i kildevisningen, skal du  have rollen **Dataklassificering** af indholdsvisning, som er medtaget i rollegruppen **Indholdsvisning i Indholdsoversigt** eller rollegrupperne Beskyttelse af oplysninger og beskyttelse af oplysninger (i øjeblikket i forhåndsvisning). Uden den påkrævede rolle kan du ikke se indholdsruden, når du vælger et element på **fanen Matchede** elementer. Globale administratorer har ikke denne rolle som standard.
+  - Hvis du vil have vist fil- eller mailindhold i kildevisningen, skal du have rollen **Indholdsvisning** af dataklassificering, som er medtaget i rollegruppen **indholdsvisning i Indholdsoversigt** eller **i Information Protection**- og Information Protection-rollegrupper (i øjeblikket i forhåndsvisning). Uden den påkrævede rolle kan du ikke se indholdsruden, når du vælger et element på **fanen Matchede** elementer. Globale administratorer har ikke denne rolle som standard.
 
 - Sådan navnmærkes filer automatisk SharePoint og OneDrive:
   - Du har [aktiveret følsomhedsetiketter til Office filer SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
@@ -395,7 +395,7 @@ Når du først aktiverer politikken, ser du i første omgang en værdi på 0 for
 Du kan også se resultaterne af din politik for automatisk mærkatering ved hjælp af [indholdsstifinder](data-classification-content-explorer.md) , når du har [de relevante tilladelser](data-classification-content-explorer.md#permissions):
 
 - **Med rollegruppen Listevisning** i Indholdsoversigt kan du se en fils navn, men ikke filens indhold.
-- **Indholdsoversigtens** rollegruppe indholdsvisning og rollegrupperne **Information Protection** og **Information Protection (i øjeblikket i forhåndsvisning** ) giver dig mulighed for at se filens indhold.
+- **Indholdsoversigtens** rollegruppe Indholdsvisning og **Information Protection** og **Information Protection Grupper af indholdsgrupper** (i øjeblikket i forhåndsvisning) giver dig mulighed for at se filens indhold.
 
 > [!TIP]
 > Du kan også bruge indholdsstifinder til at identificere placeringer, der indeholder dokumenter med følsomme oplysninger, men som ikke er navnmærket. Med disse oplysninger bør du overveje at føje disse placeringer til din politik for automatisk mærkning og medtage de identificerede typer af følsomme oplysninger som regler.
@@ -447,7 +447,7 @@ Selvom automatisk mærkning er en af de mest effektive måder at klassificere, n
 
 - Med SharePoint Syntex kan du anvende en følsomhedsmærkat på en dokumentforståelsesmodel, så identificerede dokumenter i et SharePoint-bibliotek automatisk mærkes.[](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)
 
-- Når du bruger [den samlede Azure Information Protection-etiketklient](/azure/information-protection/rms-client/aip-clientv2):
+- Når du bruger [Azure Information Protection samlet etiketklient](/azure/information-protection/rms-client/aip-clientv2):
 
   - For filer i lokale datalagre, f.eks. netværksshares og SharePoint Server-biblioteker: Brug [scanneren](/azure/information-protection/deploy-aip-scanner) til at finde følsomme oplysninger i disse filer, og mærkater dem korrekt. Hvis du planlægger at overføre eller uploade disse filer til en SharePoint i Microsoft 365, skal du bruge scanneren til at navnmærke filerne, før du flytter dem til skyen.
 

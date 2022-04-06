@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Administratorer kan aktivere understøttelse af følsomhedsmærkater for Word-, Excel- PowerPoint-filer i SharePoint og OneDrive.
-ms.openlocfilehash: 08c3daab9195e98c3b099255f1e7fb38a2324c33
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 12180dcc748764b1d73f6ad8a5c0ef7c77cd2b27
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587758"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499963"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>Aktivér følsomhedsetiketter Office filer i SharePoint og OneDrive
 
@@ -67,7 +67,7 @@ Hvis du i øjeblikket beskytter dokumenter i SharePoint ved hjælp af SharePoint
 
 ## <a name="requirements"></a>Krav
 
-Disse nye funktioner fungerer kun med [følsomhedsmærkater](sensitivity-labels.md) . Hvis du aktuelt har Azure Information Protection-etiketter, skal du først overføre dem til følsomhedsmærkater, så du kan aktivere disse funktioner for nye filer, du overfører. Du kan finde en vejledning [i Sådan overfører du Azure Information Protection-etiketter til samlede følsomhedsmærkater](/azure/information-protection/configure-policy-migrate-labels).
+Disse nye funktioner fungerer kun med [følsomhedsmærkater](sensitivity-labels.md) . Hvis du aktuelt har Azure Information Protection, skal du først overføre dem til følsomhedsmærkater, så du kan aktivere disse funktioner for nye filer, du overfører. Du kan finde en [vejledning under Sådan overfører du Azure Information Protection til samlede følsomhedsmærkater](/azure/information-protection/configure-policy-migrate-labels).
 
 Brug OneDrive-synkronisering-appversionen 19.002.0121.0008 eller nyere på Windows og version 19.002.0107.0008 eller nyere på Mac. Begge disse versioner blev udgivet 28. januar 2019 og er i øjeblikket udgivet i alle ringe. Du kan finde flere oplysninger [i OneDrive produktbemærkninger](https://support.office.com/article/845dcf18-f921-435e-bf28-4e24b95e5fc0). Når du har aktiveret følsomhedsetiketter for Office-filer i SharePoint og OneDrive, bliver brugere, der kører en ældre version af synkroniseringsappen, bedt om at opdatere den.
 
@@ -77,9 +77,9 @@ Brug OneDrive-synkronisering-appversionen 19.002.0121.0008 eller nyere på Windo
 
     For disse filer skal du enten anvende en etiket uden kryptering, så de senere kan åbnes i Office på internettet, eller du kan bede brugerne om at åbne filerne i deres skrivebordsapps. Filer, der kun er mærket og krypteret Office på internettet filer påvirkes ikke.
 
-- SharePoint og OneDrive anvender ikke automatisk følsomhedsmærkater på eksisterende filer, du allerede har krypteret med Azure Information Protection-etiketter. For at funktionerne skal fungere efter, at du har aktiveret følsomhedsmærkater for filer Office filer i SharePoint og OneDrive, skal du i stedet udføre disse opgaver:
+- SharePoint og OneDrive anvender ikke automatisk følsomhedsmærkater på eksisterende filer, du allerede har krypteret med Azure Information Protection navne. For at funktionerne skal fungere efter, at du har aktiveret følsomhedsmærkater for filer Office filer i SharePoint og OneDrive, skal du i stedet udføre disse opgaver:
 
-    1. Sørg for, at [du har overført Azure Information Protection-etiketterne](/azure/information-protection/configure-policy-migrate-labels) til følsomhedsmærkater [og publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) dem fra Microsoft 365 Overholdelsescenter.
+    1. Sørg for, at [du har overført Azure Information Protection-etiketterne](/azure/information-protection/configure-policy-migrate-labels) til følsomhedsmærkater og [publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) dem fra Microsoft 365 Overholdelsescenter.
     2. Download de mærkede filer, og upload dem derefter til deres oprindelige placering i SharePoint eller OneDrive.
 
 - SharePoint og OneDrive ikke kan behandle krypterede filer, når den etiket, der anvendte krypteringen, har en af følgende [konfigurationer til kryptering](encryption-sensitivity-labels.md#configure-encryption-settings):
@@ -93,7 +93,7 @@ Brug OneDrive-synkronisering-appversionen 19.002.0121.0008 eller nyere på Windo
 
 - Hvis et dokument navngives, mens det er tjekket ud i [SharePoint](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de), vises etiketnavnet  ikke i kolonnen Følsomhed i dokumentbiblioteket, før dokumentet er tjekket ind og derefter åbnet i SharePoint.
 
-- Hvis et mærket og krypteret dokument downloades fra SharePoint eller OneDrive af en app eller tjeneste, der bruger en tjenestes hovednavn, og derefter uploades igen med en etiket, der anvender forskellige krypteringsindstillinger, mislykkes overførslen. Et eksempelscenarie er Microsoft Defender til skyapps ændrer et følsomhedsmærkat på en  fil fra Fortroligt til Meget fortroligt eller fra **Fortroligt** til **Generelt**.
+- Hvis et mærket og krypteret dokument downloades fra SharePoint eller OneDrive af en app eller tjeneste, der bruger en tjenestes hovednavn, og derefter uploades igen med en etiket, der anvender forskellige krypteringsindstillinger, mislykkes overførslen. Et eksempelscenarie er Microsoft Defender for Cloud Apps ændrer en følsomhedsmærkat på en fil fra Fortroligt **til Meget** fortroligt eller **fra Fortrolig** til **Generelt**.
     
     Overførslen mislykkes ikke, hvis appen eller tjenesten først kører [Unlock-SPOSensitivityLabelEncryptedFile-cmdlet'en](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) , som beskrevet i afsnittet Fjern kryptering [for](#remove-encryption-for-a-labeled-document) et mærket dokument. Eller før overførslen slettes den oprindelige fil, eller filnavnet ændres.
 
@@ -190,11 +190,9 @@ Når du bruger følsomhedsmærkater med SharePoint og OneDrive, skal du huske p�
 
 For eksempel: Du opretter og publicerer en ny følsomhedsmærkat, der anvender kryptering, og den vises meget hurtigt i en brugers skrivebordsapp. Brugeren anvender denne etiket på et dokument og uploader det derefter til SharePoint eller OneDrive. Hvis replikeringen af etiketter ikke er fuldført for tjenesten, anvendes de nye funktioner ikke på det pågældende dokument, når overførslen er fuldført. Det betyder, at dokumentet ikke returneres i søgninger eller efter eDiscovery, og dokumentet kan ikke åbnes i Office på internettet.
 
-Følgende ændringer replikeres inden for en time: Nye og slettede følsomhedsmærkater samt indstillinger for følsomhedsetiketter, der omfatter, hvilke etiketter der er i politikken.
+Du kan finde flere oplysninger om tidsplanen for etiketter under [Hvornår du kan forvente, at nye etiketter og ændringer træder i kraft](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect).
 
-Følgende ændringer replikeres inden for 24 timer: Ændringer i følsomhedsetiketindstillinger for eksisterende navne.
-
-Da replikeringsforsinkelsen kun er én time for nye følsomhedsmærkater, vil du sandsynligvis ikke komme ind i scenariet i eksemplet. Men for en sikkerhedsforanstaltning anbefaler vi at udgive nye etiketter til blot nogle få testbrugere først, vente i en time og derefter bekræfte etiketfunktionsmåden på SharePoint og OneDrive. Som det sidste trin skal du gøre navnet tilgængeligt for flere brugere ved enten at føje flere brugere til den eksisterende etiketpolitik eller føje navnet til en eksisterende etiketpolitik for dine standardbrugere. På det tidspunkt, hvor standardbrugerne får vist etiketten, er den allerede synkroniseret SharePoint og OneDrive.
+For en sikkerhedsforanstaltning anbefaler vi at udgive nye etiketter til blot nogle få testbrugere først, vente i mindst en time og derefter bekræfte etiketfunktionsmåden på SharePoint og OneDrive. Vent mindst en dag, før etiketten bliver tilgængelig for flere brugere ved enten at føje flere brugere til den eksisterende etiketpolitik eller føje navnet til en eksisterende etiketpolitik for dine standardbrugere. På det tidspunkt, hvor standardbrugerne ser etiketten, er den allerede synkroniseret med SharePoint og OneDrive.
 
 ## <a name="sharepoint-information-rights-management-irm-and-sensitivity-labels"></a>SharePoint IRM (Information Rights Management) og følsomhedsmærkater
 
@@ -215,7 +213,6 @@ Du kan dog bruge begge beskyttelsesløsninger sammen, og funktionaliteten er som
 - Hvis du har aktiveret en af de ekstra indstillinger for IRM-biblioteket, som omfatter at forhindre brugere i at overføre dokumenter, der ikke understøtter IRM, gennemtvinges disse indstillinger.
 
 Med denne funktionsmåde kan du være sikker på, at alle Office- og PDF-filer er beskyttet mod uautoriseret adgang, hvis de downloades, også selvom de ikke er markeret. Men mærkede filer, der uploades, vil ikke drage fordel af de nye funktioner.
-
 
 ## <a name="search-for-documents-by-sensitivity-label"></a>Søg efter dokumenter efter følsomhedsmærkat
 
@@ -245,7 +242,7 @@ Du kan finde flere oplysninger om brug af administrerede [egenskaber under Admin
 
 ## <a name="remove-encryption-for-a-labeled-document"></a>Fjern kryptering for et mærket dokument
 
-Der kan være sjældne tilfælde, hvor en SharePoint administrator skal fjerne kryptering fra et dokument, der er gemt SharePoint. Alle brugere, der har [rettigheden Til](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) rettighedsstyring og eksport eller fuld kontrol tildelt til dem for det pågældende dokument, kan fjerne kryptering, der blev anvendt af Azure Rights Management-tjenesten, fra Azure Information Protection. Brugere med en af disse brugsrettigheder kan f.eks. erstatte en etiket, der anvender kryptering med en etiket uden kryptering. En [superbruger](/azure/information-protection/configure-super-users) kan også downloade filen og gemme en lokal kopi uden kryptering.
+Der kan være sjældne tilfælde, hvor en SharePoint administrator skal fjerne kryptering fra et dokument, der er gemt SharePoint. Alle brugere, der har [rettigheden Rights Management-brug](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) for Eksport eller Fuld kontrol tildelt til dem for det pågældende dokument, kan fjerne kryptering, der blev anvendt af Azure Rights Management-tjenesten, fra Azure Information Protection. Brugere med en af disse brugsrettigheder kan f.eks. erstatte en etiket, der anvender kryptering med en etiket uden kryptering. En [superbruger](/azure/information-protection/configure-super-users) kan også downloade filen og gemme en lokal kopi uden kryptering.
 
 Som et alternativ kan en global administrator eller [](/sharepoint/sharepoint-admin-role) [SharePoint-administrator køre Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet, som fjerner både følsomhedsetiketten og krypteringen. Denne cmdlet kører, selvom administratoren ikke har adgangstilladelser til webstedet eller filen, eller hvis tjenesten Azure Rights Management ikke er tilgængelig.
 
@@ -261,7 +258,7 @@ Krav:
 
 - Krypteringen er blevet anvendt af en følsomhedsmærkat med administratordefinerede [krypteringsindstillinger (Tildel tilladelser nu etiketindstillinger](encryption-sensitivity-labels.md#assign-permissions-now) ). [Kryptering med dobbelt nøgle](encryption-sensitivity-labels.md#double-key-encryption) understøttes ikke for denne cmdlet.
 
-Justeringsteksten føjes til overvågningshændelsen for Fjernet følsomhedsmærkat fra **filen, og** dekrypteringshandlingen registreres også i logføring af beskyttelse brug [for Azure Information Protection](/azure/information-protection/log-analyze-usage).[](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities)
+Justeringsteksten føjes til overvågningshændelsen for Fjernet følsomhedsmærkat fra **fil, og** dekrypteringshandlingen registreres også i logføring af beskyttelse brug [for Azure Information Protection](/azure/information-protection/log-analyze-usage).[](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities)
 
 ## <a name="how-to-disable-sensitivity-labels-for-sharepoint-and-onedrive-opt-out"></a>Sådan deaktiverer du følsomhedsmærkater for SharePoint og OneDrive (fravalg)
 

@@ -21,35 +21,39 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: ce75fff753acfa9d5e183154e09805b04d7523da
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c09a3880a9f117d0ce5ce6e5edf3736192fc9c95
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597471"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499853"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg beskeder i Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
+
 - Microsoft 365 Defender
+
+>[!Note]
+>I denne artikel beskrives sikkerhedsadvarsler i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende beskeder via mail til dig selv eller andre administratorer, når brugere udfører bestemte aktiviteter i Microsoft 365. Få mere at vide under [Opret aktivitetsbeskeder – Microsoft 365 overholdelse | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Beskeder er grundlaget for alle hændelser og angiver forekomsten af skadelige eller mistænkelige hændelser i dit miljø. Beskeder er typisk en del af et bredere angreb og giver fingerpeg om en hændelse.
 
-I Microsoft 365 Defender sammenlægges relaterede beskeder for at danne [hændelser](incidents-overview.md). Hændelser vil altid give et bredere perspektiv på et angreb, men analyse af beskeder kan være værdifuld, når en dybere analyse er påkrævet. 
+I Microsoft 365 Defender sammenlægges relaterede beskeder for at danne [hændelser](incidents-overview.md). Hændelser vil altid give et bredere perspektiv på et angreb, men analyse af beskeder kan være værdifuld, når en dybere analyse er påkrævet.
 
-**Køen Beskeder** viser det aktuelle sæt af beskeder. Du får adgang til køen med beskeder **fra & og > vigtige** beskeder, når den hurtige start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>.
+**Køen Beskeder** viser det aktuelle sæt af beskeder. Du får adgang til køen med beskeder **fra & og > vigtige** beskeder, når den hurtige start af [Microsoft 365 Defender-portalen](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Eksempel på advarselskøen i Microsoft 365 Defender portal":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Afsnittet Beskeder i Microsoft 365 Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png":::
 
-Beskeder fra forskellige Microsoft-sikkerhedsløsninger som f.eks. Microsoft Defender til Slutpunkt, Microsoft Defender Office 365, og Microsoft 365 Defender vises her.
+Beskeder fra forskellige Microsoft-sikkerhedsløsninger som f.Microsoft Defender for Endpoint, Microsoft Defender for Office 365 og Microsoft 365 Defender vises her.
 
 Som standard viser køen til beskeder i Microsoft 365 Defender portal de nye og igangværende beskeder fra de seneste 30 dage. Den seneste besked er øverst på listen, så du kan se den først. 
 
 Fra standardkøen til beskeder kan du vælge **Filtrer** for at få vist en **Filter-rude** , hvorfra du kan angive et undersæt af beskederne. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Eksempel på ruden filtre for beskedkøen i Microsoft 365 Defender portal":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Sektionen Filtre i Microsoft 365 Defender portal." lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png":::
 
 Du kan filtrere beskeder efter disse kriterier:
 
@@ -59,9 +63,9 @@ Du kan filtrere beskeder efter disse kriterier:
 - Enheder (de på påvirkede aktiver)
 - Automatiseret undersøgelsestilstand
 
-## <a name="required-roles-for-defender-for-office-365-alerts"></a>Påkrævede roller for Defender Office 365 vigtige beskeder
+## <a name="required-roles-for-defender-for-office-365-alerts"></a>Påkrævede roller for Defender for Office 365 vigtige beskeder
 
-Du skal have en af følgende roller for at få adgang til Microsoft Defender for at Office 365 vigtige beskeder:
+Du skal have en af følgende roller for at få adgang til Microsoft Defender for Office 365 vigtige beskeder:
 
 - For Azure Active Directory globale roller (Azure AD):
 
@@ -87,7 +91,9 @@ Du skal have en af følgende roller for at få adgang til Microsoft Defender for
 
 Hvis du vil se den primære beskedside, skal du vælge navnet på beskeden. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Eksempel på detaljesiden for en besked i Microsoft 365 Defender portal":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Oplysninger om en besked i Microsoft 365 Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png":::
+
+Du kan også vælge handlingen **Åbn den primære beskedside** fra **ruden Administrer** besked.
 
 En beskedside består af disse sektioner: 
 
@@ -98,7 +104,7 @@ I hele siden med beskeder kan du vælge ellipserne (**...**) ud for en enhed for
 
 ### <a name="alert-sources"></a>Beskedkilder
 
-Microsoft 365 Defender vigtige beskeder kan komme fra løsninger som f.eks. Microsoft Defender til Slutpunkt, Microsoft Defender til Office 365, Microsoft Defender til skyapps og tilføjelsesprogrammet til appstyring til Microsoft Defender til skyapps. Du bemærker muligvis beskeder med tegn, der allerede er blevet brug for, i beskeden. Den følgende tabel giver en vejledning til, hvordan du kan forstå tilknytningen af beskedkilder baseret på det foranstillede tegn i beskeden.
+Microsoft 365 Defender vigtige beskeder kan komme fra løsninger som f.Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps og tilføjelsesprogrammet appstyring til Microsoft Defender for Cloud Apps. Du bemærker muligvis beskeder med tegn, der allerede er blevet brug for, i beskeden. Den følgende tabel giver en vejledning til, hvordan du kan forstå tilknytningen af beskedkilder baseret på det foranstillede tegn i beskeden.
 
 > [!NOTE]
 > - De forhåndsinstallerede GUID'er er kun specifikke for samlede oplevelser som samlet kø for beskeder, samlet beskedside, samlet undersøgelse og samlet hændelse.
@@ -106,10 +112,10 @@ Microsoft 365 Defender vigtige beskeder kan komme fra løsninger som f.eks. Micr
 
 | Advarselskilde | Forudindstillet tegn |
 | :---|:--- |
-| Microsoft Defender til Office 365 | `fa{GUID}` <br> Eksempel: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Defender til Slutpunkt | `da` eller `ed` for brugerdefinerede registreringsbeskeder <br> |
+| Microsoft Defender for Office 365 | `fa{GUID}` <br> Eksempel: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Endpoint | `da` eller `ed` for brugerdefinerede registreringsbeskeder <br> |
 | Microsoft Defender for Identity | `aa{GUID}` <br> Eksempel: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Defender til skyapps |`ca{GUID}` <br> Eksempel: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> Eksempel: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 
 ### <a name="analyze-affected-assets"></a>Analysér påvirkede aktiver
 
@@ -134,7 +140,7 @@ Når du har valgt en enhed af interesse, ændres detaljesiden for at vise oplysn
 
 Hvis du vil administrere en besked, **skal du vælge** Administrer besked i sektionen med oversigtsoplysninger på påmindelsessiden. Her er et eksempel på ruden Administrer vigtige beskeder for **en enkelt besked** .
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Eksempel på ruden Administrer påmindelse i Microsoft 365 Defender portal":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Afsnittet Administrer påmindelse i Microsoft 365 Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png":::
 
 I **ruden Administrer** besked kan du få vist eller angive:
 
@@ -153,7 +159,7 @@ I **ruden Administrer** besked kan du få vist eller angive:
 - En kommentar til beskeden.
 
 > [!NOTE]
-> En måde at administrere beskeder på via brug af mærker. Mærkningsfunktionaliteten for Microsoft Defender til Office 365 rulles gradvist ud og er i øjeblikket i forhåndsvisning. <br>
+> En måde at administrere beskeder på via brug af mærker. Mærkningsfunktionaliteten for en Microsoft Defender for Office 365 rulles trinvist ud og er i øjeblikket i forhåndsvisning. <br>
 > I øjeblikket anvendes ændrede kodenavne kun på beskeder, der er *oprettet* efter opdateringen. Beskeder, der blev oprettet før ændringen, afspejler ikke det opdaterede mærkenavn. 
 
 Hvis du vil *administrere et sæt* vigtige beskeder, der ligner en bestemt besked, skal du vælge Vis lignende beskeder i feltet **INSIGHT** i sektionen med oversigtsoplysninger på beskedsiden.
@@ -190,9 +196,9 @@ Moderne sikkerhedsteams (SecOps) skal bruge automatisering for at kunne fungere 
 
 Hvis begge er sande, markerer SecOps beskeden som legitim rejse og løser den. Der sendes en meddelelse i Microsoft Teams, når beskeden er løst.
 
-### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Forbind Power Automate til Microsoft Defender til skyapps
+### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Forbind Power Automate til Microsoft Defender for Cloud Apps
 
-Hvis du vil oprette automatiseringen, skal du bruge et API-token, før du kan Power Automate forbindelse til Microsoft Defender til skyapps.
+Hvis du vil oprette automatiseringen, skal du bruge et API-token, før du kan Power Automate til Microsoft Defender for Cloud Apps.
 
 1. Klik **Indstillinger**, vælg **Sikkerhedsudvidelser**, og klik derefter **på Tilføj token** på **fanen API-tokens**.
 

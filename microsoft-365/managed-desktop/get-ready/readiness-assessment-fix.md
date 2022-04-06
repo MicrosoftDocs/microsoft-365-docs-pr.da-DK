@@ -10,12 +10,12 @@ ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: badf2d65f2b29e265a1312cb1d5f4802a44f3cb3
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 8457331f0895c66d1aa0ad54cfc43cd001a9bd9e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63594354"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681078"
 ---
 # <a name="fix-issues-found-by-the-readiness-assessment-tool"></a>Løs problemer, der er fundet af værktøjet til vurdering af parathed
 
@@ -68,7 +68,7 @@ Politikker for betinget adgang kan ikke forhindre Microsoft Managed Desktop i at
 
 | Resultat  | Betydning |
 | ----- | ----- |
-| Ikke klar | Du har mindst én politik for betinget adgang, der er målrettet alle brugere. <br><br> Under tilmelding udelader vi Microsoft Managed Desktop-tjenestekonti fra relevante politikker for betinget adgang og anvender nye politikker for betinget adgang for at begrænse adgangen til disse konti. <br><br> Efter tilmelding kan du gennemse politikken for betinget adgang til Microsoft Managed Desktop Microsoft Endpoint Manager. Du kan finde flere oplysninger om disse tjenestekonti under [Standardoperativsystemer](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
+| Ikke klar | Du har mindst én politik for betinget adgang, der er målrettet alle brugere. <br><br> Under tilmeldingen vil vi forsøge at udelukke Microsoft Managed Desktop-tjenestekonti fra relevante politikker for betinget adgang og anvende nye politikker for betinget adgang for at begrænse adgangen til disse konti. Men hvis vi ikke kan se, kan dette medføre fejl under din tilmeldingsoplevelse. Du får den bedste fremgangsmåde ved at oprette en opgave, der er målrettet en bestemt Azure AD-gruppe, som ikke omfatter Microsoft Managed Desktop-tjenestekonti. <br><br> Efter tilmelding kan du gennemse politikken for betinget adgang til Microsoft Managed Desktop Microsoft Endpoint Manager. Du kan finde flere oplysninger om disse tjenestekonti under [Standardoperativsystemer](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
 | Vejledning | Du har politikker for betinget adgang, der kan forhindre Microsoft Managed Desktop i at administrere Microsoft Managed Desktop-tjenesten. <br><br> Under tilmelding udelader vi Microsoft Managed Desktop-tjenestekonti fra relevante politikker for betinget adgang og anvender nye politikker for betinget adgang for at begrænse adgangen til disse konti. <br><br> Du kan finde flere oplysninger om disse tjenestekonti under [Standardoperativsystemer](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
 | Error | Intune-administratorrollen har ikke tilstrækkelige tilladelser til denne kontrol. Du skal også have tildelt disse Azure AD-roller for at køre denne kontrol: <ul><li>Sikkerhedslæser</li><li>Sikkerhedsadministrator</li><li>Administrator for betinget adgang</li><li>Global læser</li><li>Enheders administrator</li></ul>
 ### <a name="device-compliance-policies"></a>Politikker for enhedsoverholdelse
