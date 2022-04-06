@@ -19,14 +19,14 @@ ms.collection:
 - m365solution-symantecmigrate
 ms.topic: article
 ms.custom: migrationguides
-ms.date: 11/30/2021
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: 79c56345177b84cd6acbfa6c9a694ab56bc76c1c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 5dd5c78c366a708104b4662be86d71056d6a726a
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64466647"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632705"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-2-setup"></a>Skift til Microsoft Defender for Endpoint – Fase 2: Konfiguration
 
@@ -52,34 +52,14 @@ ms.locfileid: "64466647"
 På visse versioner af Windows blev Microsoft Defender Antivirus fjernet eller deaktiveret, da din ikke-Microsoft-antivirus-/antimalwareløsning blev installeret. Når slutpunkter, der Windows, er onboardet til Defender til slutpunkt, kan Microsoft Defender Antivirus køre i passiv tilstand sammen med en ikke-Microsoft-antivirusløsning. Du kan få mere at vide [under Antivirusbeskyttelse med Defender til slutpunkt](microsoft-defender-antivirus-compatibility.md#antivirus-protection-without-defender-for-endpoint).
 
 Når du skifter til Defender for Endpoint, skal du muligvis foretage visse trin for at geninstallere eller aktivere Microsoft Defender Antivirus. I følgende tabel beskrives det, hvad du skal gøre på Windows klienter og servere.
-<br/> <br/>
 
 |Slutpunktstype|Hvad kan du gøre?|
 |---|---|
-|Windows klienter (f.eks. slutpunkter, der kører Windows 10 og Windows 11)|Generelt behøver du ikke at udføre en handling for Windows kunder (medmindre Microsoft Defender Antivirus er blevet fjernet). Her er årsagen: <br/><br/> Microsoft Defender Antivirus stadig være installeret, men er højst sandsynligt deaktiveret på dette tidspunkt i overførselsprocessen. <br/><br/> Når en ikke-Microsoft antivirus-/antimalwareløsning er installeret, og klienterne endnu ikke er onboardet til Defender til Slutpunkt, deaktiveres Microsoft Defender Antivirus automatisk. <br/><br/> Senere, når klientslutpunkterne er onboardet til Defender for Endpoint, går Microsoft Defender Antivirus i passiv tilstand, hvis disse slutpunkter kører en ikke-Microsoft-antivirusløsning. <br/><br/> Hvis antivirusløsningen, der ikke er Microsoft, fjernes, Microsoft Defender Antivirus automatisk i aktiv tilstand.|
-|Windows-servere|På Windows Server skal du geninstallere Microsoft Defender Antivirus og indstille den til passiv tilstand manuelt. På Windows servere, når der er installeret et antivirusprogram/antimalware, Microsoft Defender Antivirus køre sammen med den antivirusløsning, der ikke er Microsoft. I disse tilfælde er Microsoft Defender Antivirus deaktiveret eller fjernet manuelt. <br/><br/> For at geninstallere eller Microsoft Defender Antivirus på Windows Server skal du udføre følgende opgaver: <br/>- [Set DisableAntiSpyware to false on Windows Server](#set-disableantispyware-to-false-on-windows-server) (only if necessary)<br/>- [Geninstaller Microsoft Defender Antivirus på Windows Server 2016](#re-enable-microsoft-defender-antivirus-on-windows-server-2016)<br/>- [Geninstaller Microsoft Defender Antivirus på Windows Server, version 1803 eller nyere](#re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later)<br/>- [Indstil Microsoft Defender Antivirus til passiv tilstand på Windows Server](#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) <br/><br/>Hvis du får problemer med at geninstallere eller genaktivere Microsoft Defender Antivirus på Windows Server, skal du se Fejlfinding: Microsoft Defender Antivirus bliver fjernet [på Windows Server](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-is-getting-uninstalled-on-windows-server).|
+|Windows klienter (f.eks. slutpunkter, der kører Windows 10 og Windows 11)|Generelt behøver du ikke at udføre en handling for Windows kunder (medmindre Microsoft Defender Antivirus er blevet fjernet). Generelt bør Microsoft Defender Antivirus være installeret, men er højst sandsynligt deaktiveret på dette tidspunkt i overførselsprocessen. <br/><br/> Når en ikke-Microsoft antivirus-/antimalwareløsning er installeret, og klienterne endnu ikke er onboardet til Defender til Slutpunkt, deaktiveres Microsoft Defender Antivirus automatisk. Senere, når klientslutpunkterne er onboardet til Defender for Endpoint, går Microsoft Defender Antivirus i passiv tilstand, hvis disse slutpunkter kører en ikke-Microsoft-antivirusløsning. <br/><br/> Hvis antivirusløsningen, der ikke er Microsoft, fjernes, Microsoft Defender Antivirus automatisk i aktiv tilstand.|
+|Windows-servere|På Windows Server skal du geninstallere Microsoft Defender Antivirus og indstille den til passiv tilstand manuelt. På Windows servere, når der er installeret et antivirusprogram/antimalware, Microsoft Defender Antivirus køre sammen med den antivirusløsning, der ikke er Microsoft. I disse tilfælde er Microsoft Defender Antivirus deaktiveret eller fjernet manuelt. <br/><br/> For at geninstallere eller Microsoft Defender Antivirus på Windows Server skal du udføre følgende opgaver: <br/>- [Geninstaller Microsoft Defender Antivirus på Windows Server 2016](#re-enable-microsoft-defender-antivirus-on-windows-server-2016)<br/>- [Geninstaller Microsoft Defender Antivirus på Windows Server, version 1803 eller nyere](#re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later)<br/>- [Indstil Microsoft Defender Antivirus til passiv tilstand på Windows Server](#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) <br/><br/>Hvis du får problemer med at geninstallere eller genaktivere Microsoft Defender Antivirus på Windows Server, skal du se Fejlfinding: Microsoft Defender Antivirus bliver fjernet [på Windows Server](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-is-getting-uninstalled-on-windows-server).|
 
 > [!TIP]
 > Du kan få mere at Microsoft Defender Antivirus om tilstande med ikke-Microsoft-antivirusbeskyttelse [under Microsoft Defender Antivirus kompatibilitet](microsoft-defender-antivirus-compatibility.md).
-
-### <a name="set-disableantispyware-to-false-on-windows-server"></a>Set DisableAntiSpyware to false on Windows Server
-
-[Registreringsdatabasenøglen DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware) blev tidligere brugt til at deaktivere Microsoft Defender Antivirus og installere et andet antivirusprodukt, f.eks. McAfee,Afee,Afee eller andre. **Generelt bør du ikke have denne registreringsdatabasenøgle** på dine Windows-enheder og slutpunkter.  `DisableAntiSpyware` Men hvis du har konfigureret, kan du her se, hvordan du indstiller dens værdi til falsk:
-
-1. På din Windows Server-enhed skal du åbne Registreringseditor.
-
-2. Gå til `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`.
-
-3. I denne mappe skal du se efter en DWORD-post med **navnet DisableAntiSpyware**.
-   - Hvis du ikke kan se denne post, er du klar.
-   - Hvis du kan se **DisableAntiSpyware**, skal du gå videre til trin 4.
-
-4. Højreklik på DisableAntiSpyware DWORD, og vælg derefter **Rediger**.
-
-5. Angiv værdien til `0`. (Denne handling indstiller registreringsdatabasenøglens værdi *til falsk*).
-
-> [!TIP]
-> Du kan få mere at vide om denne registreringsdatabasenøgle [under DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware).
 
 ### <a name="re-enable-microsoft-defender-antivirus-on-windows-server-2016"></a>Genaktiver Microsoft Defender Antivirus på Windows Server 2016
 
@@ -91,13 +71,12 @@ Du kan bruge værktøjet [malwarebeskyttelse Command-Line at](command-line-argum
 
 3. Genstart enheden.
 
-
 ### <a name="re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later"></a>Genaktiver Microsoft Defender Antivirus på Windows Server, version 1803 eller nyere
 
 > [!IMPORTANT]
 > Følgende procedure gælder kun for slutpunkter eller enheder, der kører følgende versioner af Windows:
-> - Windows Server 2019
 > - Windows Server 2022
+> - Windows Server 2019
 > - Windows Server, version 1803 (kun i kernetilstand)
 
 1. Som lokal administrator på serveren skal du åbne Windows PowerShell.
@@ -128,15 +107,12 @@ Du kan bruge værktøjet [malwarebeskyttelse Command-Line at](command-line-argum
 > [!TIP]
 > Du kan nu køre Microsoft Defender Antivirus i passiv tilstand Windows Server 2012 R2 og 2016. Du kan finde flere oplysninger [under Indstillinger for installation Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
 
-1. Åbn registreringseditoren, og gå derefter til
-
-   ```text
-   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
-   ```
+1. Åbn Registreringseditor, og gå derefter til `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
 2. Rediger (eller opret) en DWORD-post **med navnet ForceDefenderPassiveMode**, og angiv følgende indstillinger:
 
    - Angiv DWORD'ens værdi til **1**.
+
    - Under **Base skal** du vælge **Hexadecimal**.
 
 > [!NOTE]
@@ -149,7 +125,6 @@ Du kan nu køre Microsoft Defender Antivirus i passiv tilstand Windows Server 20
 ## <a name="configure-defender-for-endpoint"></a>Konfigurer Defender til Slutpunkt
 
 Dette trin i overførselsprocessen omfatter konfiguration Microsoft Defender Antivirus for dine slutpunkter. Vi anbefaler at Intune, men du kan bruge en af de metoder, der er angivet i følgende tabel:
-<br/><br/>
 
 |Metode|Hvad kan du gøre?|
 |---|---|
@@ -178,8 +153,7 @@ De specifikke undtagelser, der skal konfigureres, afhænger af, hvilken version 
 
 ## <a name="add-your-existing-solution-to-the-exclusion-list-for-microsoft-defender-antivirus"></a>Føj din eksisterende løsning til udeladelseslisten for Microsoft Defender Antivirus
 
-I dette trin af konfigurationsprocessen skal du føje din eksisterende løsning til Microsoft Defender Antivirus udeladelseslisten. Du kan vælge mellem flere forskellige metoder for at føje dine Microsoft Defender Antivirus, sådan som det er angivet i følgende tabel:
-<br/><br/>
+I dette trin af konfigurationsprocessen skal du føje din eksisterende løsning til Microsoft Defender Antivirus udeladelseslisten. Du kan vælge mellem flere forskellige metoder for at føje dine Microsoft Defender Antivirus, sådan som det er angivet i følgende tabel: 
 
 |Metode|Hvad kan du gøre?|
 |---|---|
@@ -196,14 +170,16 @@ Når du [føjer udeladelse til Microsoft Defender Antivirus scanninger](/windows
 Husk følgende punkter:
 
 - *Stiudelse udelader* bestemte filer, og uanset hvad disse filer har adgang til.
+
 - *Procesudetagelser* udelukker det, som en proces rører ved, men udelukker ikke selve processen.
+
 - Opliste dine procesudetagelser ved hjælp af deres fulde sti og ikke kun efter deres navn. Metoden kun med navne er mindre sikker.
+
 - Hvis du oplister hver eksekverbar (.exe) som både en stiudeladelse og en procesudeladelse, udelades processen, og hvad den rører ved.
 
 ## <a name="set-up-your-device-groups-device-collections-and-organizational-units"></a>Konfigurer dine enhedsgrupper, enhedssamlinger og organisationsenheder
 
 Enhedsgrupper, enhedssamlinger og organisationsenheder gør det muligt for dit sikkerhedsteam at administrere og tildele sikkerhedspolitikker effektivt. I følgende tabel beskrives hver af disse grupper, og hvordan de konfigureres. Din organisation bruger muligvis ikke alle tre samlingstyper.
-<br/><br/>
 
 |Samlingstype|Hvad kan du gøre?|
 |---|---|

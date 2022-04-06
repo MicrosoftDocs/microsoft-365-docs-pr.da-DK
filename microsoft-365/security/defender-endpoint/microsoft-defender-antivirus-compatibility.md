@@ -18,12 +18,12 @@ ms.date: 03/16/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: e8a1e08242ab3f884115c414f8a1ba80f5f2aa17
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: be29874a087936c7131492bde1a3f541e7d00f43
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507071"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645072"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -146,7 +146,7 @@ Tabellen i dette afsnit opsummerer de funktioner og funktioner, der aktivt funge
 > [!IMPORTANT]
 > Den følgende tabel er beregnet til kun at være til orientering. **Deaktiver** ikke egenskaber som beskyttelse i realtid, beskyttelse i skyen eller begrænset periodisk scanner, hvis du bruger Microsoft Defender Antivirus i passiv tilstand, eller hvis du bruger [Slutpunktsregistrering og -svar](edr-in-block-mode.md) i bloktilstand, som bruges i baggrunden til at registrere og afhjælpe skadelige komponenter, der er blevet registreret efter brud.
 
- | Beskyttelse | Microsoft Defender Antivirus <br/>(*Aktiv tilstand*) | Microsoft Defender Antivirus <br/>(*Passiv tilstand*) | Microsoft Defender Antivirus <br/>(*Deaktiveret eller fjernet*) | [Slutpunktsregistrering og -svar i bloktilstand](edr-in-block-mode.md) | 
+ | Beskyttelse | Microsoft Defender Antivirus <br/>(*Aktiv tilstand*) | Microsoft Defender Antivirus <br/>(*Passiv tilstand*) | Microsoft Defender Antivirus <br/>(*Deaktiveret eller fjernet*) | [EDR i bloktilstand](edr-in-block-mode.md) | 
  |:---|:---|:---|:---|:---| 
  | [Beskyttelse i realtid](configure-real-time-protection-microsoft-defender-antivirus.md) | Ja | Se bemærkning <sup>[[4](#fn4)]</sup> | Nej | Nej | 
  | [Cloud-leveret beskyttelse](enable-cloud-protection-microsoft-defender-antivirus.md) | Ja | Nej  | Nej | Nej | 
@@ -161,7 +161,7 @@ Tabellen i dette afsnit opsummerer de funktioner og funktioner, der aktivt funge
 
 (<a id="fn5">5</a>) Når Microsoft Defender Antivirus i passiv tilstand, planlægges scanninger ikke.
 
-(<a id="fn6">6</a>) Når Microsoft Defender Antivirus er i passiv tilstand, afhjælper det ikke trusler. Trusler kan dog afhjælpes ved at [slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) i bloktilstand](edr-in-block-mode.md). I dette tilfælde vises beskeder muligvis som Microsoft Defender Antivirus som en kilde, også selvom Microsoft Defender Antivirus er i passiv tilstand.
+(<a id="fn6">6</a>) Når Microsoft Defender Antivirus er i passiv tilstand, afhjælper det ikke trusler. Trusler kan dog afhjælpes ved at registrere [og reagere på slutpunkter (Slutpunktsregistrering og -svar) i blokeringstilstand](edr-in-block-mode.md). I dette tilfælde vises beskeder muligvis som Microsoft Defender Antivirus som en kilde, også selvom Microsoft Defender Antivirus er i passiv tilstand.
 
 > [!NOTE]
 > [Microsoft 365 beskyttelse mod datatab på](/microsoft-365/compliance/endpoint-dlp-learn-about) slutpunkter fungerer fortsat normalt, når Microsoft Defender Antivirus er i enten aktiv eller passiv tilstand.
@@ -199,5 +199,5 @@ Tabellen i dette afsnit beskriver forskellige tilstande, du kan få vist med Mic
 
 - [Microsoft Defender Antivirus på Windows klienter](microsoft-defender-antivirus-in-windows-10.md)
 - [Microsoft Defender Antivirus på Windows Server](microsoft-defender-antivirus-on-windows-server.md)
-- [Slutpunktsregistrering og -svar i bloktilstand](edr-in-block-mode.md)
+- [EDR i bloktilstand](edr-in-block-mode.md)
 - [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](/microsoft-365/compliance/endpoint-dlp-learn-about)

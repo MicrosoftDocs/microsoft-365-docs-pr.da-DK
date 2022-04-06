@@ -1,6 +1,6 @@
 ---
 title: Konfigurere indstillinger for enhedsproxy og internetforbindelse
-description: Konfigurer proxy- og internetindstillingerne for Microsoft Defender for Endpoint for at aktivere kommunikation med skytjenesten.
+description: Konfigurer proxy- Microsoft Defender for Endpoint og internetindstillinger for at aktivere kommunikation med skytjenesten.
 keywords: konfigurer, proxy, internet, internetforbindelse, indstillinger, proxyindstillinger, netsh, winhttp, proxyserver
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -18,19 +18,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d687273a3029f3de080f06f328d4d40853142353
-ms.sourcegitcommit: 9f0e84835121ce6228fdc69182c24be7ad1cb20e
+ms.openlocfilehash: cf68afff79a2d719435e9df3d53400584f162618
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63599288"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507339"
 ---
 # <a name="configure-device-proxy-and-internet-connectivity-settings"></a>Konfigurere indstillinger for enhedsproxy og internetforbindelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
@@ -65,7 +65,7 @@ Indstillingen WinHTTP-konfiguration er uafhængig af den Windows-internetbrowsin
 Konfigurer en registreringsbaseret statisk proxy for Defender til registrering og svar (Slutpunktsregistrering og -svar)-sensor til at rapportere diagnostiske data og kommunikere med Defender til slutpunktstjenester, hvis en computer ikke har tilladelse til at oprette forbindelse til internettet.
 
 > [!NOTE]
-> Når du bruger denne indstilling på Windows 10 eller Windows 11 eller Windows Server 2019 eller Windows Server 2022, anbefales følgende (eller nyere) build og kumulativ opdateringspakke:
+> Når du bruger denne indstilling på Windows 10, Windows 11 eller Windows Server 2019 eller Windows Server 2022, anbefales det, at du har følgende (eller nyere) build og kumulativ opdateringspakke:
 >
 > - Windows 11
 > - Windows 10, version 1809 eller Windows Server 2019 eller Windows Server 2022 –<https://support.microsoft.com/kb/5001384>
@@ -81,13 +81,13 @@ Den statiske proxy kan konfigureres via gruppepolitik ( GP), og begge indstillin
 
   Angiv den til **Aktiveret** , og **vælg Deaktiver godkendt proxybrug**.
 
-  ![Billede af Gruppepolitik indstilling1.](images/atp-gpo-proxy1.png)
+  :::image type="content" source="images/atp-gpo-proxy1.png" alt-text="Statusruden Gruppepolitik indstilling1" lightbox="images/atp-gpo-proxy1.png":::
 
 - **Administrative skabeloner > Windows komponenter > dataindsamling og eksempel builds > Konfigurer forbundne brugeroplevelser og telemetri**:
 
   Konfigurer proxyen.
 
-  ![Billede af Gruppepolitik indstilling2.](images/atp-gpo-proxy2.png)
+  :::image type="content" source="images/atp-gpo-proxy2.png" alt-text="Den Gruppepolitik indstilling2-statusrude" lightbox="images/atp-gpo-proxy2.png":::
 
 
 | Gruppepolitik | Registreringsdatabasenøgle | Posten i registreringsdatabasen | Værdi |
@@ -99,13 +99,13 @@ Den statiske proxy kan konfigureres via gruppepolitik ( GP), og begge indstillin
 
 Microsoft Defender Antivirus [skybaseret beskyttelse giver](cloud-protection-microsoft-defender-antivirus.md) øjeblikkelig, automatisk beskyttelse mod nye og fremspirende trusler. Bemærk, at forbindelsen er påkrævet for [brugerdefinerede indikatorer](manage-indicators.md) , når Defender Antivirus er din aktive antimalwareløsning. For [Slutpunktsregistrering og -svar i bloktilstand har](edr-in-block-mode.md) primær antimalwareløsning, når du bruger en løsning, der ikke er Microsoft.
 
-Konfigurer den statiske proxy ved hjælp af Gruppepolitik der er tilgængelige i administrative skabeloner:
+Konfigurer den statiske proxy ved hjælp Gruppepolitik der er tilgængelige i administrative skabeloner:
 
 1. **Administrative skabeloner > Windows komponenter > Microsoft Defender Antivirus > Definer proxyserver til at oprette forbindelse til netværket**. 
 
 2. Indstil den **til Aktiveret** , og definer proxyserveren. Bemærk, at URL-adressen skal have http:// eller https://. Du kan finde understøttede https:// i [Administrer Microsoft Defender Antivirus opdateringer](manage-updates-baselines-microsoft-defender-antivirus.md).
 
-   :::image type="content" source="images/proxy-server-mdav.png" alt-text="Proxyserver for Microsoft Defender Antivirus.":::
+   :::image type="content" source="images/proxy-server-mdav.png" alt-text="Proxyserveren for Microsoft Defender Antivirus" lightbox="images/proxy-server-mdav.png":::
 
 3. Under registreringsdatabasenøglen `HKLM\Software\Policies\Microsoft\Windows Defender`indstiller politikken registreringsdatabaseværdien `ProxyServer` som REG_SZ. 
 
@@ -121,7 +121,7 @@ Konfigurer den statiske proxy ved hjælp af Gruppepolitik der er tilgængelige i
 >
 > Af hensyn til fleksibilitet og beskyttelse i realtid af skybaseret levering vil Microsoft Defender Antivirus cachelagre den senest kendte arbejdsproxy. Sørg for, at din proxyløsning ikke udfører SSL-inspektion. Dette vil bryde den sikre skyforbindelse. 
 >
-> Microsoft Defender Antivirus bruger ikke den statiske proxy til at oprette forbindelse til Windows Update eller Microsoft Update til at hente opdateringer. I stedet bruges en proxy for hele systemet, hvis den er konfigureret til at bruge Windows Update eller den konfigurerede interne opdateringskilde i henhold til den [konfigurerede fallback-rækkefølge](manage-protection-updates-microsoft-defender-antivirus.md). 
+> Microsoft Defender Antivirus bruger ikke den statiske proxy til at oprette forbindelse til Windows Update eller Microsoft Update til at hente opdateringer. I stedet bruges en proxy for hele systemet, hvis den er konfigureret til at bruge Windows Update, eller den konfigurerede interne opdateringskilde i henhold til den [konfigurerede fallback-rækkefølge](manage-protection-updates-microsoft-defender-antivirus.md). 
 >
 > Hvis det er nødvendigt, kan **du bruge administrative skabeloner > Windows komponenter > Microsoft Defender Antivirus > .pac til** at oprette forbindelse til netværket i Definer automatisk konfiguration af proxy. Hvis du skal konfigurere avancerede konfigurationer med flere proxyer, skal du bruge **administrative skabeloner > Windows Komponenter > Microsoft Defender Antivirus > Definer** adresser til at tilsidesætte proxyserveren og forhindre Microsoft Defender Antivirus i at bruge en proxyserver for disse destinationer. 
 >
@@ -133,7 +133,7 @@ Konfigurer den statiske proxy ved hjælp af Gruppepolitik der er tilgængelige i
 
 > [!NOTE]
 > Hvis du vil bruge proxyen korrekt, skal du konfigurere disse tre forskellige proxyindstillinger:
->  - Microsoft Defender til slutpunkt (MDE)
+>  - Microsoft Defender for Endpoint (MDE)
 >  - AV (antivirus)
 >  - Registrering af slutpunkt og svar (Slutpunktsregistrering og -svar)
 
@@ -166,7 +166,7 @@ netsh winhttp reset proxy
 
 Se [Netsh-kommandosyntaksen, kontekster og formatering for at](/windows-server/networking/technologies/netsh/netsh-contexts) få mere at vide.
 
-## <a name="enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server"></a>Aktivér adgang til URL-adresser for Microsoft Defender for Endpoint-tjenesten på proxyserveren
+## <a name="enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server"></a>Aktivere adgang til Microsoft Defender for Endpoint url-adresser på proxyserveren
 
 Hvis en proxy eller firewall som standard blokerer al trafik og kun tillader bestemte domæner, skal du føje de domæner, der er angivet i arket, der kan downloades, til listen over tilladte domæner.
 
@@ -174,14 +174,13 @@ Følgende regneark, der kan downloades, viser de tjenester og deres tilknyttede 
 
 <br>
 
-**** 
 |Listen Regneark over domæner| Beskrivelse|
 |---|---|
-|URL-adresseliste for Microsoft Defender til slutpunkt for kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og operativsystem for kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
-| URL-adresseliste for Microsoft Defender til slutpunkt for Gov/GCC/DoD-kunder | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
+|Microsoft Defender for Endpoint URL-adresse for kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og operativsystem for kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+| Microsoft Defender for Endpoint URL-adresseliste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 Hvis en proxy eller firewall har HTTPS-scanning (SSL-inspektion) aktiveret, skal du udelade de domæner, der er angivet i ovenstående tabel, fra HTTPS-scanning.
-I din firewall skal du åbne alle URL-adresserne, hvor kolonnen geografi er WW. For rækker, hvor geografikolonnen ikke er WW, skal du åbne URL-adresserne til din specifikke dataplacering. Hvis du vil bekræfte indstillingen for din dataplacering, [skal du se Bekræft datalagringsplacering og opdater indstillingerne for dataopbevaring for Microsoft Defender til Slutpunkt](/microsoft-365/security/defender-endpoint/data-retention-settings).
+I din firewall skal du åbne alle URL-adresserne, hvor kolonnen geografi er WW. For rækker, hvor geografikolonnen ikke er WW, skal du åbne URL-adresserne til din specifikke dataplacering. Hvis du vil bekræfte indstillingen for din dataplacering, [skal du se Bekræft datalagringsplacering og opdater indstillinger for dataopbevaring for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/data-retention-settings).
 
 > [!NOTE]
 > Windows enheder, der kører med version 1803 eller tidligere behov`settings-win.data.microsoft.com`.  <br>
@@ -210,7 +209,7 @@ Oplysningerne på listen over konfigurationsoplysninger for proxy og firewall er
 |*.azure-automation.net|Port 443|Udgående|Ja|
 
 > [!NOTE]
-> *Disse forbindelseskrav gælder for den forrige Microsoft Defender til slutpunktet Windows Server 2016 og Windows Server 2012 R2, der kræver OVERENSSTEMMELSE. Instruktioner til onboarding af disse operativsystemer med den nye samlede løsning er på [Onboard Windows-servere](configure-server-endpoints.md), eller overfør til den nye samlede løsning på [Server migration scenarios i Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
+> *Disse forbindelseskrav gælder for den forrige Microsoft Defender for Endpoint Windows Server 2016 og Windows Server 2012 R2, der kræver OVERENSSTEMMELSE. Instruktioner til at onboarde disse operativsystemer med den nye samlede løsning er på [Onboard Windows-servere](configure-server-endpoints.md), eller overfør til den nye samlede løsning på Scenarier for [serveroverførsel i Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
 
 > [!NOTE]
 > Ip-området kan ændres som en skybaseret løsning. Det anbefales, at du flytter til DNS og løser indstillingen.
@@ -225,9 +224,9 @@ Oplysningerne på listen over konfigurationsoplysninger for proxy og firewall er
 
 3. Kør værktøjet TestCloudConnection.exe fra "C:\Program Files\Microsoft Monitoring Agent\Agent" for at validere forbindelsen og for at få de nødvendige URL-adresser til dit specifikke arbejdsområde.
 
-4. Kontrollér listen med URL-adresser for Microsoft Defender til slutpunkt for at se en komplet liste over krav til dit område (se regnearket med tjenestens [URL-adresser](https://download.microsoft.com/download/8/a/5/8a51eee5-cd02-431c-9d78-a58b7f77c070/mde-urls.xlsx)).
+4. Se listen Microsoft Defender for Endpoint URL-adresser for at se en komplet liste over krav til dit område (se regnearket med tjenestens [URL-adresser](https://download.microsoft.com/download/8/a/5/8a51eee5-cd02-431c-9d78-a58b7f77c070/mde-urls.xlsx)).
 
-    ![Billede af administrator i Windows PowerShell.](images/admin-powershell.png)
+   :::image type="content" source="images/admin-powershell.png" alt-text="Administratoren i Windows PowerShell" lightbox="images/admin-powershell.png":::
 
 Jokertegnene (\*), \*der bruges i slutpunkterne .ods.opinsights.azure.com, \*.oms.opinsights.azure.com og \*.agentsvc.azure-automation.net URL, kan erstattes med dit specifikke arbejdsområde-id. Arbejdsområde-id'et er specifikt for dit miljø og arbejdsområde. Den findes i onboardingsektionen i din lejer på Microsoft 365 Defender-portalen.
 
@@ -236,11 +235,11 @@ Url-blob.core.windows.net-slutpunktet \*kan erstattes med de URL-adresser, der e
 > [!NOTE]
 > I forbindelse med onboarding via Microsoft Defender til cloud kan du bruge flere arbejdsområder. Du skal udføre TestCloudConnection.exe-proceduren på onboardingmaskine fra hvert arbejdsområde (for at afgøre, om der er nogen ændringer i *.blob.core.windows.net-webadresserne mellem arbejdsområderne).
 
-## <a name="verify-client-connectivity-to-microsoft-defender-for-endpoint-service-urls"></a>Bekræft klientforbindelsen til URL-adresser for Microsoft Defender for Endpoint-tjenesten
+## <a name="verify-client-connectivity-to-microsoft-defender-for-endpoint-service-urls"></a>Bekræft klientforbindelsen for at Microsoft Defender for Endpoint URL-adresser for tjenesten
 
 Kontrollér, at proxykonfigurationen er fuldført. WinHTTP kan derefter finde og kommunikere via proxyserveren i dit miljø, og derefter tillader proxyserveren trafik til URL-adresserne for Defender for Endpoint-tjenesten.
 
-1. Download [værktøjet Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/mdeanalyzer) på pc'en, hvor Defender for Endpoint-sensoren kører på. Til servere med downlevel skal du bruge den nyeste prøveversion, der kan [downloades betaversionen af Microsoft Defender til Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer).
+1. Download værktøjet [Microsoft Defender for Endpoint Client Analyzer på](https://aka.ms/mdeanalyzer) pc'en, hvor Defender for Endpoint-sensoren kører på. Til servere med downlevel skal du bruge den nyeste prøveversion, der kan downloades [Microsoft Defender for Endpoint Client Analyzer Tool Beta](https://aka.ms/BetaMDEAnalyzer).
 
 2. Udtræk indholdet MDEClientAnalyzer.zip enhedens indhold.
 
@@ -282,10 +281,10 @@ Men hvis resultaterne af forbindelseskontrollen angiver en fejl, vises der en HT
 > [!NOTE]
 > Værktøjet Forbindelsesanalyses forbindelseskontroller i skyen er ikke kompatible med blokprocesoprettelser af angrebsoverfladen, der stammer fra [PSExec- og WMI-kommandoer.](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands) Du skal deaktivere denne regel midlertidigt for at køre forbindelsesværktøjet. Du kan også midlertidigt tilføje [ASR-udeladelse, når](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) du kører analyseatoren.
 >
-> Når TelemetryProxyServer er angivet i registreringsdatabasen eller via Gruppepolitik, vil Defender til slutpunkt falde tilbage, og den får ikke adgang til den definerede proxy.
+> Når TelemetryProxyServer er angivet i registreringsdatabasen eller via Gruppepolitik, vil Defender til slutpunkt falde tilbage, men får ikke adgang til den definerede proxy.
 
 ## <a name="related-articles"></a>Relaterede artikler
 
 - [Brug Gruppepolitik til at konfigurere og administrere Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
 - [Onboard Windows-enheder](configure-endpoints.md)
-- [Fejlfinding af onboardingproblemer i Microsoft Defender til Slutpunkt](troubleshoot-onboarding.md)
+- [Fejlfinding Microsoft Defender for Endpoint onboardingproblemer](troubleshoot-onboarding.md)

@@ -15,12 +15,12 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Få mere at vide om, hvordan du gennemser og administrerer trusler, der registreres af Microsoft Defender Antivirus på Windows 10 enheder.
-ms.openlocfilehash: e0e0613ad7805b8c4bde221aa2192c788fb75106
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c836554445f56a9a915885d55a4490c6bb5bd1a9
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63606678"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64633210"
 ---
 # <a name="review-detected-threats-and-take-action"></a>Gennemse registrerede trusler, og reaktion
 
@@ -32,7 +32,7 @@ Microsoft Defender Antivirus registrerer og beskytter mod følgende slags trusle
 - Forsøg på phishing
 - Datatyveriforsøg
 
-Som it-fagperson/administrator kan du få vist oplysninger om trusselsregistreringer på tværs Windows 10 enheder, der er tilmeldt [Intune](/mem/intune/enrollment/device-enrollment) i Microsoft 365 Administration. Du får vist oversigtsoplysninger, f.eks.:
+Som it-fagperson/administrator kan du få vist oplysninger om trusselsregistreringer på [tværs Windows 10](/mem/intune/enrollment/device-enrollment) enheder, der er Intune i Microsoft 365 Administration. Du får vist oversigtsoplysninger, f.eks.:
 
 - Hvor mange enheder, der skal beskyttes mod antivirus
 - Hvor mange enheder, der ikke overholder sikkerhedspolitikkerne
@@ -86,7 +86,7 @@ Når du får vist detaljer om specifikke trusler eller enheder, får du vist anb
 
 ## <a name="manage-threat-detections-in-microsoft-endpoint-manager"></a>Administrer trusselsregistreringer i Microsoft Endpoint Manager
 
-Du kan bruge Microsoft Endpoint Manager til at administrere trusselsregistreringer. Windows 10 enheder skal være [tilmeldt Intune (en](/mem/intune/enrollment/windows-enrollment-methods) del af Microsoft Endpoint Manager).
+Du kan bruge Microsoft Endpoint Manager til at administrere trusselsregistreringer. Windows 10-enheder skal [være tilmeldt Intune (en](/mem/intune/enrollment/windows-enrollment-methods) del af Microsoft Endpoint Manager).
 
 1. Gå til Microsoft Endpoint Manager Administration, <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a> og log på.
 
@@ -105,7 +105,7 @@ I følgende tabel beskrives de handlinger, du kan se i Microsoft Endpoint Manage
 | Genstart | Tvinger en Windows 10 til at genstarte inden for fem minutter.<br><br>**VIGTIGT:** Ejeren af enheden eller brugeren får ikke automatisk besked om genstart og kan miste ikke-gemt arbejde. |
 | Hurtig scanning | Starter en hurtig antivirusscanning på enheden, fokuserer på almindelige steder, hvor malware kan være registreret, f.eks registreringsdatabasenøgler og kendte Windows startmapper. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
 | Fuld scanning | Starter en komplet antivirusscanning på enheden, fokuserer på fælles steder, hvor der kan registreres malware, og herunder alle filer og mapper på enheden. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
-| Synkroniser | Kræver, at du har en enhed til at tjekke ind med Intune (en del Microsoft Endpoint Manager). Når enheden tjekker ind, modtager enheden alle ventende handlinger eller politikker, der er tildelt enheden. |
+| Synkroniser | Kræver, at du har en enhed til at tjekke Intune (en del Microsoft Endpoint Manager). Når enheden tjekker ind, modtager enheden alle ventende handlinger eller politikker, der er tildelt enheden. |
 | Opdater signaturer | Kræver, at enheden henter [sikkerhedsintelligensopdateringer](https://go.microsoft.com/fwlink/?linkid=2149926) til antivirus- og antimalwarebeskyttelse. |
 
 > [!TIP]
@@ -117,6 +117,6 @@ Hvis du har en fil, du mener er gået glip af eller fejlagtigt klassificeret som
 
 ## <a name="see-also"></a>Se også
 
-[De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](secure-your-business-data.md)
+[De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](../../admin/security-and-compliance/secure-your-business-data.md)
 
-[Oversigt over Microsoft Defender for Business](../../security/defender-business/mdb-overview.md) (Defender for Business udrulles til Microsoft 365 Business Premium fra 1. marts 2022)
+[Oversigt over Microsoft Defender til virksomheder](../../security/defender-business/mdb-overview.md) (Defender for Business rulles ud til Microsoft 365 Business Premium kunder fra 1. marts 2022)

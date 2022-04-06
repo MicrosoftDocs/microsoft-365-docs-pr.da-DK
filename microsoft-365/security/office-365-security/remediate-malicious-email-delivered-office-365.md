@@ -14,21 +14,21 @@ search.appverid: MET150
 description: Trussels afhjælpning
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 49cd5f532f41fd05090592136e28ca2462a9efd6
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 3ba8564ef5ecbd261dc47b2f0a48d6d4d77d620a
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681166"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638294"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Afhjælpe skadelig mail leveret i Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-Afhjælpning betyder, at du skal tage en bestemt handling mod en trussel. Ondsindede mails, der sendes til din organisation, kan ryddes op enten af systemet, via automatisk tømning i nul timer (ZAP) eller af sikkerhedsteams via afhjælpningshandlinger som f.eks. flytning til *indbakke, flytning* til uønsket *mail, flytning* til slettede *elementer, blød* sletning eller hård *sletning.* Microsoft Defender for Office 365 Plan 2/E5 gør det muligt for sikkerhedsteams at løse trusler i mail og samarbejdsfunktionalitet via manuel og automatisk undersøgelse.
+Afhjælpning betyder, at du skal tage en bestemt handling mod en trussel. Ondsindede mails, der sendes til din organisation, kan ryddes op enten af systemet, via automatisk tømning i nul timer (ZAP) eller af sikkerhedsteams via afhjælpningshandlinger som f.eks. flytning til *indbakke, flytning* til uønsket *mail, flytning* til slettede *elementer, blød* sletning eller hård *sletning.* Microsoft Defender for Office 365 Plan 2/E5 gør det muligt for sikkerhedsteams at løse trusler i mail- og samarbejdsfunktionalitet via manuel og automatisk undersøgelse.
 
 > [!NOTE]
 > For at afhjælpe ondsindede mails skal sikkerhedsteams have *tildelt rollen Søg* og Tøm. Rolletildelingen udføres [via tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).
@@ -42,19 +42,21 @@ Administratorer kan udføre nødvendige handlinger på mails, men for at få god
 *Manuel jagt* sker, når sikkerhedsteams identificerer trusler manuelt ved hjælp af søge- og filtreringsfunktionerne i Stifinder. Manuel mailløsning kan udløses via en hvilken som helst mailvisning (*Malware*, *Phish* eller Alle *mails), når* du har identificeret et sæt mails, der skal afhjælpes.
 
 > [!div class="mx-imgBorder"]
-> [![Manuel jagt på Office 365 Threat Explorer efter dato.](../../media/tp-RemediationArticle1.png)](../../media/tp-RemediationArticle1.png#lightbox)
+> [![Skærmbillede af manuel Office 365 efter dato i Threat Explorer.](../../media/tp-RemediationArticle1.png)](../../media/tp-RemediationArticle1.png#lightbox)
 
 Sikkerhedsteams kan bruge Stifinder til at vælge mails på flere måder:
 
 - Vælg mails i hånden: Brug filtre i forskellige visninger. Vælg op til 100 mails, der skal afhjælpes.
 
-- Forespørgselsvalg: Markér en hel forespørgsel ved hjælp af knappen **Markér alt øverst** . Den samme forespørgsel vises også i handlingscenter med oplysninger om mailindsendelse.
+- Forespørgselsvalg: Markér en hel forespørgsel ved hjælp af knappen **Markér alt øverst** . Den samme forespørgsel vises også i handlingscenter med oplysninger om mailindsendelse. Kunder kan sende maksimalt 200.000 mails fra Threat Explorer.  
 
 - Udvælgelse af forespørgsler med udeladelse: Nogle gange kan sikkerhedsteams have brug for at løse mails ved at vælge en hel forespørgsel og udelukke bestemte mails fra forespørgslen manuelt. Det gør en administrator ved at bruge afkrydsningsfeltet **Markér alt** og rulle ned for at udelade mails manuelt. Forespørgslen kan maksimalt indeholde 1.000 mails. Det maksimale antal undtagelser er 100.
 
 Når mails er markeret via Stifinder, kan du begynde at løse dem ved at gøre noget direkte eller ved at i kø til mails for en handling:
 
-- Direkte godkendelse: Når handlinger som f.eks. flytning til *indbakke, flytning* til uønsket *mail, flytning* til slettede  *elementer, blød* sletning eller hård sletning vælges af sikkerhedsmedarbejdere, der har de rette tilladelser, og de næste trin i afhjælpningen følges, begynder afhjælpningsprocessen at udføre den valgte handling. En midlertidig pop op-pop-op viser afhjælpningen, der er i gang.
+- Direkte godkendelse: Når handlinger som f.eks. flytning til *indbakke, flytning* til uønsket *mail, flytning* til slettede  *elementer, blød* sletning eller hård sletning vælges af sikkerhedsmedarbejdere, der har de rette tilladelser, og de næste trin i afhjælpningen følges, begynder afhjælpningsprocessen at udføre den valgte handling.
+> [!NOTE]
+>Efterhånden som afhjælpningen bliver kickstartet, genererer den en advarsel og en undersøgelse parallelt. Besked vises i køen til vigtige beskeder med navnet "Administrativ handling, der er indsendt af en administrator", der foreslår, at sikkerhedsmedarbejdere har løst en enhed. Den viser oplysninger som f.eks. navnet på den person, der udførte handlingen, linket til understøttende undersøgelse, klokkeslæt osv. Det fungerer rigtig godt at vide, hver gang en øjeblikkelig handling som afhjælpning udføres på enheder. Alle disse handlinger kan vises under fanen Handlinger & **HandlingscenterHistory** \>   ->  (offentlig eksempelvisning).
 
 - Totrinsgodkendelse: En "Føj til afhjælpning"-handling kan udføres af administratorer, der ikke har de rette tilladelser, eller som skal vente på at udføre handlingen. I dette tilfælde føjes de målrettede mails til en afhjælpningsbeholder. Der kræves godkendelse, før afhjælpningen udføres.
 
@@ -63,19 +65,27 @@ Når mails er markeret via Stifinder, kan du begynde at løse dem ved at gøre n
 > [!div class="mx-imgBorder"]
 > [![Mail med malware på siden "Zapped", der viser tidspunktet for udførelse af Zap.](../../media/tp-RemediationArticle3.png)](../../media/tp-RemediationArticle3.png#lightbox)
 
-Alle afhjælpninger (enten direkte godkendelse eller totrinsgodkendelse), der er oprettet i Stifinder, samt godkendte handlinger, der kommer fra automatiserede undersøgelser, vises i handlingscenteret. Få adgang til disse via navigationspanelet i venstre side under **Handlingscenter** \> **for gennemse**.
+Alle afhjælpninger (direkte godkendelser), der er oprettet i Stifinder, Avanceret jagt eller via Automatiseret undersøgelse, vises i Handlingscenter. Få adgang til disse via venstre **navigationspanel under & fanen Handlingshandlinger** \>   -> **i handlingscenterHistory**.
 
-> [!div class="mx-imgBorder"]
-> [![Handlingscenter med en liste over trusler efter dato og alvorsgrad.](../../media/tp-RemediationArticle4.png)](../../media/tp-RemediationArticle4.png#lightbox)
+Alle afhjælpninger (direkte godkendelser), der er oprettet i Explorer eller Avanceret jagt eller via Automatiseret undersøgelse, vises i Handlingscenter. Få adgang til disse via venstre **navigationspanel under & fanen Handlingshandlinger** \>   -> **i handlingscenterHistory**. 
 
-Handlingscenter viser alle afhjælpningshandlinger for de seneste 30 dage. Handlinger, der er foretaget via Stifinder, er angivet med det navn, som sikkerhedsteamet havde angivet, da afhjælpningen blev oprettet. Handlinger, der er foretaget gennem automatiserede undersøgelser, har titler, der starter med den tilhørende besked, der udløste undersøgelsen, f.eks. "Zap email cluster... ."
+Manuelle handlinger, der afventer godkendelse ved hjælp af totrinsgodkendelsesprocessen (1. add to remediation by one security operation team member, 2. gennemgået og godkendt af et andet medlem af sikkerhedsteamet) kan kun ses i det ældre Defender for Office 365  \> handlingscenter **Gennemse handlingscenter** og ikke i hændelser/undersøgelser og i Unified Action Center.
 
-Åbn et afhjælpningselement for at få vist oplysninger om det, herunder navn, oprettelsesdato, beskrivelse, alvorlighed af trusler og status. Den viser også følgende to faner.
+> [!NOTE]
+> Totrinsgodkendelse: Handlinger, der kun er tilgængelige i Office Handlingscenter  **, Gennemse** \> **handlingscenter**
 
-- **Fanen Mailindsendelse** : Viser antallet af mails, der er sendt via Threat Explorer, eller automatiserede undersøgelser, der skal afhjælpes. Der kan gøres noget ved disse mails, eller der kan ikke gøres noget ved dem.
+:::image type="content" source="../../media/microsoft-365-defender-action-center-history.png" alt-text="Det samlede handlingscenter viser dig 30 dages afhjælpningshandlinger.":::
+
+Samlet handlingscenter viser afhjælpningshandlinger for de seneste 30 dage. Handlinger, der er foretaget via Stifinder, angives efter det navn, som sikkerhedsteamet leverede, da afhjælpningen blev oprettet, samt godkendelses-id, undersøgelses-id. Handlinger, der udføres via automatiserede undersøgelser, har titler, der starter med den tilhørende besked, der udløste undersøgelsen, f.eks *. Zap-mailklynge*.
+
+Åbn et afhjælpningselement for at få vist oplysninger om det, herunder dets afhjælpningsnavn, godkendelses-id, undersøgelses-id, oprettelsesdato, beskrivelse, status, handlingskilde, handlingstype, besluttet efter, status. Det åbner også en siderude med handlingsdetaljer, oplysninger om mailklynge, påmindelser og hændelsesoplysninger.
+
+- *Siden Åben undersøgelse* åbner en administratorundersøgelse, der indeholder færre detaljer og faner. Den viser detaljer som f.eks.: relateret besked, enhed valgt til afhjælpning, foranstaltninger, der er taget, afhjælpningsstatus, enhedsantal, logfiler, godkender af handling. Denne undersøgelse holder styr på undersøgelsen, som udføres af administratoren manuelt, og indeholder detaljer til valg foretaget af administratoren, hvilket kaldes undersøgelse af administratorhandling. Der er ingen grund til at reagere på undersøgelsen og give besked om, at den allerede er i godkendt tilstand.   
+- *Antal mails* Viser antallet af mails, der er sendt via Threat Explorer. Der kan gøres noget ved disse mails, eller der kan ikke gøres noget ved dem. 
+- *Handlingslogfiler* Viser oplysninger om afhjælpningsstatus som vellykket/mislykket/ er allerede i destinationen
 
   > [!div class="mx-imgBorder"]
-  > [![Handlingscenter med brugbare og ikke-brugbare trusler.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
+  > [![Skærmbillede af handlingscenteret med trusler, der kan handles på og ikke kan handle på.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
 
   - **Det kan der** gøres noget ved: Mails på følgende skybaserede postkasseplaceringer kan reageres på og flyttes:
     - Indbakke
@@ -107,14 +117,8 @@ Handlingscenter viser alle afhjælpningshandlinger for de seneste 30 dage. Handl
 
   Administratorer kan foretage handlinger på mails, der er i karantæne, hvis det er nødvendigt, men disse mails udløber uden for karantæne, hvis de ikke bliver fjernet manuelt. Som standard er mails, der er sat i karantæne på grund af skadeligt indhold, ikke tilgængelige for brugerne, så sikkerhedsmedarbejdere behøver ikke at gøre noget for at fjerne trusler i karantæne. Hvis disse mails er lokale eller eksterne, kan brugeren kontaktes for at adressere den mistænkelige mail. Eller administratorer kan bruge separate mailserver-/sikkerhedsværktøjer til fjernelse. Disse mails kan identificeres ved at anvende *det eksterne filter leveringsplacering = i* Stifinder. For mislykkede eller mislykkede mails eller mails, der ikke er tilgængelige for brugere, vil der ikke være nogen mails at reducere, da disse mails ikke når postkassen.
 
-  Følgende billede viser, hvordan en indsendelse ser ud i Handlingscenter. En afhjælpning kan indeholde flere indsendelser. Hvis flere handlinger bliver godkendt gennem én automatiseret undersøgelse, vises hver mail- eller mailklyngehandling i den samme afhjælpning som en anden indsendelse.
-
-  > [!div class="mx-imgBorder"]
-  > [![Pop op-panel med mailklynge i ZAP.](../../media/tp-RemediationArticle6.png)](../../media/tp-RemediationArticle6.png#lightbox)
-
-  Vælg et mailindsendelseselement for at få vist detaljerne for den pågældende afhjælpning, f.eks. forespørgslen (når afhjælpning udløses gennem automatiserede undersøgelser eller Stifinder ved at vælge en forespørgsel) og start- og sluttidspunktet for afhjælpningen. Den viser også en liste over meddelelser, der blev sendt til afhjælpning. Efterhånden som meddelelser flyttes ud af Stifinders opbevaringsperiode, forsvinder meddelelserne fra denne liste. Listen viser også individuelle meddelelser, der kan afhjælpes.
-
-- **Handlingslogfiler**: Denne fane viser de afhjælpede meddelelser, herunder godkendt dato, administrator, der godkendte handlingen, handlingen, status og optællingen.
+ 
+- **Handlingslogfiler**: Dette viser de meddelelser, der afhjælpes, er gennemført, mislykkedes, allerede i destinationen.
 
   Status kan være:
 
@@ -139,5 +143,9 @@ Du kan kun udføre handlinger for meddelelser i mapperne Indbakke, Uønsket, Sle
 Vælg et element i handlingsloggen for at få vist afhjælpningsdetaljer. Hvis der står "vellykket" eller "blev ikke fundet i postkassen", er elementet allerede blevet fjernet fra postkassen. Nogle gange er der en systemfejl under afhjælpning. I disse tilfælde er det en god ide at prøve afhjælpningshandlingen igen.
 
 Hvis du vil afhjælpe store batches af mails, skal du eksportere de meddelelser, der er sendt til afhjælpning via mailindsendelse, og meddelelser, der er løst via handlingslogfiler. Eksportgrænsen øges til 100.000 poster.
+
+ Administratorer kan udføre afhjælpningshandlinger som f.eks. at flytte mails til mappen Uønsket mail, Indbakke eller Slettet post og slette handlinger som f.eks. blød sletning eller hård sletning fra avancerede rodsider.
+
+:::image type="content" source="../../media/microsoft-365-defender-advanced-hunting-actions-pane.png" alt-text="Panelet Avanceret jagt, Gennemtag handlinger med dit valg af handlinger.":::
 
 Afhjælpning afhjælper trusler, adresserer mistænkelige mails og hjælper med at holde en organisation sikker.

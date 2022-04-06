@@ -11,30 +11,30 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan du opretter brugerdefinerede nyttedata til simulering af angreb i Microsoft Defender Office 365 Plan 2.
+description: Administratorer kan lære, hvordan de opretter brugerdefinerede nyttedata til kursus i simulering af angreb Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: d670236aa81f4b5086263a75bbeceb8ca7e1e25f
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8aa81a1940e564e9877af6a1848ff439aea58d8e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679758"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468495"
 ---
-# <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Opret brugerdefinerede nyttedata til dine angrebssimuleringskurser i Defender Office 365
+# <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Opret brugerdefinerede nyttedata til simulering af angreb i Defender for Office 365
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-I kursus i _angrebssimulering er_ en nyttedata phishingmail og websider, der præsenteres for brugere i simulering. Kursus om angrebssimulering i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2 har et robust, indbygget nyttedatakatalog til de tilgængelige social engineering-teknikker. Det kan dog være en ide at oprette brugerdefinerede nyttedata, der fungerer bedre for din organisation.
+I kursus i _angrebssimulering er_ en nyttedata phishingmail og websider, der præsenteres for brugere i simulering. Kursus i angrebssimulering Microsoft 365 E5 Microsoft Defender for Office 365 Plan 2 har et robust, indbygget nyttedatakatalog til de tilgængelige social engineering-teknikker. Det kan dog være en ide at oprette brugerdefinerede nyttedata, der fungerer bedre for din organisation.
 
 Denne artikel beskriver, hvordan du opretter dine egne nyttedata i simulering af angreb. Du kan oprette brugerdefinerede nyttedata på følgende placeringer:
 
 - Fanen **Nyttedata**: I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til fanen **Mail & til** \>  \> simulering af **angrebssimulering af nyttedata**. For at gå direkte til **fanen Nyttedata skal** du bruge <https://security.microsoft.com/attacksimulator?viewid=payload>.
-- Under oprettelse af simulering: Du kan oprette brugerdefinerede nyttedata på siden Vælg en nyttedata (tredje side) i guiden til oprettelse af simulering. Du kan få mere at vide [under Simulere et phishingangreb i Defender Office 365](attack-simulation-training.md).
+- Under oprettelse af simulering: Du kan oprette brugerdefinerede nyttedata på siden Vælg en nyttedata (tredje side) i guiden til oprettelse af simulering. Du kan finde flere oplysninger [i Simulere et phishingangreb Defender for Office 365](attack-simulation-training.md).
 
 Du kan finde oplysninger om kursus i at simulere angreb i [Kom i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md).
 
 > [!NOTE]
-> Visse varemærker, logoer, symboler, insignias og andre kildeidentifikatorer får en bedre beskyttelse i henhold til lokale, statslige og føderale love. Uautoriseret brug af sådanne indikatorer kan gøre det ulovligt for brugerne, herunder kriminelle fines. Selvom det ikke er en omfattende liste, omfatter dette selektorer, Der er tilsnørlige, vice-, sele sæler, CIA, SOCIAL Security, Medicare og Medicaid, UNITED States Internal Revenue Service og OL. Ud over disse kategorier af varemærker har anvendelse og ændring af tredjeparts varemærker en forbundet risiko. Det vil være mindre risikabelt at anvende dine egne varemærker og logoer i en nyttelast, især hvis din organisation tillader brug. Hvis du har yderligere spørgsmål om, hvad der er eller ikke er relevant at bruge, når du opretter eller konfigurerer en nyttedata, skal du rådføre dig med dine juridiske rådgivere.
+> Visse varemærker, logoer, symboler, insignias og andre kildeidentifikatorer får en bedre beskyttelse i henhold til lokale, statslige og føderale love. Uautoriseret brug af sådanne indikatorer kan gøre det ulovligt for brugerne, herunder kriminelle fines. Selvom det ikke er en omfattende liste, omfatter dette selektorer, FYSyd, Vice- og Menhedske sæler, CIA, SOCIAL Security, Medicare og Medicaid, USA Internal Revenue Service og OL. Ud over disse kategorier af varemærker har anvendelse og ændring af tredjeparts varemærker en forbundet risiko. Det vil være mindre risikabelt at anvende dine egne varemærker og logoer i en nyttelast, især hvis din organisation tillader brug. Hvis du har yderligere spørgsmål om, hvad der er eller ikke er relevant at bruge, når du opretter eller konfigurerer en nyttedata, skal du rådføre dig med dine juridiske rådgivere.
 
 ## <a name="create-a-payload"></a>Opret en nyttedata
 
@@ -147,7 +147,7 @@ På siden **Konfigurer nyttedata** er det tid til at opbygge din nyttedata. Mang
       - **Indsæt navn**: Den værdi, der tilføjes i meddelelsens brødtekst, er `${userName}`.
       - **Indsæt mail**: Den værdi, der tilføjes i meddelelsens brødtekst, er `${emailAddress}`.
 
-      ![Afsnittet Mail på siden Konfigurer nyttedata i guiden til oprettelse af nyttedata i Kursus i angrebssimulering i Microsoft Defender for Office 365.](../../media/attack-sim-training-payloads-configure-payload-email-message.png)
+      :::image type="content" source="../../media/attack-sim-training-payloads-configure-payload-email-message.png" alt-text="Afsnittet Mail på siden Konfigurer nyttedata i guiden til oprettelse af nyttedata i Kursus i angrebssimulering Microsoft Defender for Office 365" lightbox="../../media/attack-sim-training-payloads-configure-payload-email-message.png":::
 
       **Kontrolelement for phishinglink** : Dette kontrolelement er kun tilgængeligt **, hvis** du har valgt Indsamling af legitimationsoplysninger **, Link** i vedhæftet fil eller **Drev efter URL på** **siden Udvælgelsesteknik** . Brug dette kontrolelement til at indsætte den URL-adresse, du tidligere har valgt i **afsnittet Phishing-link** .
 
@@ -204,7 +204,7 @@ Klik på **Tilføj indikator** på siden **Tilføj symboler**. I pop op-menuen, 
 
   Hvis du vælger mailens emne eller brødteksten som placering for indikatoren, er **knappen Markér** tekst tilgængelig. Klik på denne knap for at markere teksten i meddelelsens emne eller brødtekst, hvor indikatoren skal vises. Klik på Vælg, når du er **færdig**.
 
-  ![Markeret tekstplacering i meddelelsesteksten, som skal føjes til en indikator i guiden til oprettelse af nyttedata i guiden til simulering af angreb.](../../media/attack-sim-training-payloads-add-indicators-select-location.png)
+  :::image type="content" source="../../media/attack-sim-training-payloads-add-indicators-select-location.png" alt-text="Den valgte tekstplacering i meddelelsesteksten, der skal føjes til en indikator i guiden til oprettelse af nyttedata i kursus i simulering af angreb" lightbox="../../media/attack-sim-training-payloads-add-indicators-select-location.png":::
 
   - **Indikatorbeskrivelse**: Du kan acceptere standardbeskrivelsen for indikatoren, eller du kan tilpasse den.
 
@@ -232,7 +232,7 @@ På hovedsiden **Gennemse nyttedata** kan du vælge **Rediger** i hver sektion f
 
 Klik på Send, når du er **færdig**. Klik på Udført på bekræftelsessiden, der **vises**.
 
-![Gennemse siden med nyttedata i simulering af angreb i Microsoft 365 Defender portal.](../../media/attack-sim-training-payloads-review-payload.png)
+:::image type="content" source="../../media/attack-sim-training-payloads-review-payload.png" alt-text="Siden Gennemse nyttedata i angrebssimuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-payloads-review-payload.png":::
 
 > [!IMPORTANT]
 > Nyttedata, du har oprettet, får værdien **Lejer** for **egenskaben** Kilde. Når du opretter simuleringer og vælger nyttedata, skal du sørge for, at du ikke filtrerer **kildeværdilejeren** **fra**.

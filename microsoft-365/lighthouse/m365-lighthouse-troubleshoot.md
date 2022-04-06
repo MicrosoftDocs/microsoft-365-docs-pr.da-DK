@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
-ms.openlocfilehash: e39eea66222852d8f331aa6bc68b386bea3da763
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: 1bd98a90af19d60aba2e0891c3f993e77523a12c
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63705435"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632355"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Fejlfind og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
 
@@ -53,17 +53,20 @@ I denne artikel beskrives fejlmeddelelser og problemer, du kan støde på, når 
 
 **Årsag:** Dine kundelejere opfylder ikke følgende kriterier:
 
-  - Skal have delegerede (DAP) eller detaljerede delegerede administratorrettigheder (GDAP) konfigureret for den administrerede tjenesteudbyder (MSP)
-  - Skal have mindst én Microsoft 365 Business Premium eller Microsoft 365 E3 licens
+  - Skal have konfigureret delegeret adgang for den administrerede tjenesteudbyder for at kunne administrere kundelejeren*
+  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 licens eller Windows 365 Business licens
   - Ikke må have mere end 1000 brugere med licens 
 
-**Løsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og forklarer, hvordan du løser dem.<br><br>
+**Løsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og forklarer, hvordan du løser dem.
+
+*Delegerede administratorrettigheder (DAP) er påkrævet for at onboarde kunder til Lighthouse. Vi anbefaler også, at du etablerer detaljerede delegerede administratorrettigheder (GDAP) med dine kunder for at give en mere sikker delegeret adgang. Mens DAP og GDAP coexist anvendes, har GDAP forrang for kunder, hvor begge modeller er på plads. Kunder med just GDAP (og ingen DAP) vil snart kunne onboarde til Lighthouse.
+
 
 | Status | Beskrivelse | Løsning |
 |--|--|--|
 | Inaktiv | Lejeren blev udlejet på anmodning af MSP'en og administreres ikke længere i Fyrtårn. | Du skal genaktivere lejeren. På siden **Lejere** skal du vælge de tre prik (flere handlinger) ud for den lejer, du vil genaktivere, og derefter vælge **Aktivér lejer**. Det kan tage 24-48 timer, før indledende kundedata vises i Lighthouse. |
 | Ikke berettiget – DAP eller GDAP er ikke konfigureret | Du har ikke DAP- eller GDAP-administratorrettigheder konfigureret med lejeren, hvilket kræves af Lighthouse. | Konfigurer DAP- eller GDAP-administratorrettigheder i Microsoft Partnercenter. |
-| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium eller Microsoft 365 E3 licens. | Sørg for, at lejeren har tildelt mindst Microsoft 365 Business Premium en Microsoft 365 E3 licens. |
+| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. | Sørg for, at lejeren har mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business tildelt. |
 | Ikke berettiget – Antal brugere er overskredet | Lejeren har mere end de maksimalt 1000 brugere med licens, som Lighthouse tillader. | Bekræft, at lejeren ikke har mere end 1000 brugere med licens. |
 | Ikke berettiget – Geo-kontrol mislykkedes | Du og din kunde bor ikke i det samme geografiske område, som kræves af Lighthouse. | Kontrollér, at kunden er placeret i dit geografiske område. Hvis ikke, kan du ikke administrere lejeren i Lighthouse. |
 | I gang | Fyrtårn har fundet lejeren, men er stadig i gang med at onboarde dem. | Tillad, at Fyrtårn 48 timer gennemfører onboarding af lejeren. |
@@ -76,7 +79,7 @@ Hvis du har bekræftet, at din kundelejer opfylder onboardingkriterierne, og de 
 
 **Årsag:** Du hører ikke til den korrekte sikkerhedsgruppe i Azure AD, eller du har ikke fået tildelt den korrekte rolle i Partnercenter for at få adgang til Fyrtårn.
 
-**Løsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, [skal du se Konfigurer Microsoft 365 Lighthouse Portal Security](m365-lighthouse-configure-portal-security.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Løsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, skal du se Oversigt [over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
 
 For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som administrator eller Helpdesk-agent i Partnercenter. Hvis du vil have en detaljeret beskrivelse af alle partnercenterroller og -tilladelser, skal [du se Tildel roller og tilladelser til brugere](/partner-center/permissions-overview).
 
@@ -84,7 +87,7 @@ For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som
 
 **Årsag:** Du har begrænset GDAP-adgang baseret på de roller, der er tildelt den Azure AD-sikkerhedsgruppe, du er i.
 
-**Løsning:** Sørg for, at en administrator fra din partnerlejer med de rette tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, [skal du se Konfigurer Microsoft 365 Lighthouse Portal Security](m365-lighthouse-configure-portal-security.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Løsning:** Sørg for, at en administrator fra din partnerlejer med de rette tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, skal du se Oversigt [over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="customer-tenant-management"></a>Administration af kundelejer  
 
@@ -104,7 +107,7 @@ For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som
 
 **Årsag:** Du har ikke fuldført konfigurationen af Microsoft Intune i kundelejeren.
 
-**Løsning:** Kontrollér, at du har gennemført de grundlæggende konfigurationstrin for Intune inden for kundelejeren. Hvis problemet fortsætter, efter du har kontrolleret, at Intune-konfigurationen er fuldført for kundelejeren, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Løsning:** Kontrollér, at du har gennemført de grundlæggende konfigurationstrin for Intune i kundelejeren. Hvis problemet fortsætter, efter du har kontrolleret, at Intune er fuldført for kundelejeren, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Kan ikke få adgang til partnerlejerdata i Fyrtårn
 
@@ -116,9 +119,9 @@ For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som
 
 ### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Jeg kan ikke se nogen kundelejerdata på siderne enhedsoverholdelse og trusselsadministration i Lighthouse
 
-**Årsag 1:** Kundelejeren har ikke færdiggjort onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne enhedsoverholdelse eller trusselsadministration i Lighthouse, før kundelejeren har færdiggjort onboarding til Intune.
+**Årsag 1:** Kundelejeren har ikke færdiggjort onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne til enhedsoverholdelse eller trusselsadministration i Lighthouse, før kundelejeren har færdiggjort onboarding til Intune.
 
-**Løsning:** Kontrollér, at den kundelejer, du forsøger at få vist data for, har færdiggjort onboarding til Intune. Når onboarding er fuldført i Intune, skal der gå 4 timer, før enhedens data vises i Fyrtårn.
+**Løsning:** Kontrollér, at den kundelejer, du forsøger at få vist data for, har færdiggjort onboarding til Intune. Når onboarding er fuldført i Intune, skal du bruge 4 timer, før enhedens data vises i Fyrtårn.
 
 **Årsag 2:** Kundelejeren blev for nylig onboardet til Lighthouse, og data indlæses stadig i Lighthouse.
 

@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Få den nyeste hardwarebaserede isolation. Undgå aktuelle og nye angreb som udnyttelse eller ondsindede links i at forstyrre medarbejdernes produktivitet og virksomhedens sikkerhed.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: da61ee2f5e29501e033ad44bc3fdb04ee2c042f0
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1a8f752fd05499c9fec0d0c337c9ffee430f154f
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473315"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638065"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Application Guard til Office til administratorer
 
@@ -51,7 +51,7 @@ Hvis du vil vide mere Office om opdateringskanaler, [skal du se Oversigt over op
 * Microsoft 365 E5 eller Microsoft 365 E5 Sikkerhed
 
 > [!NOTE]
-> Microsoft 365 Apps for enterprise med den enhedsbaserede licens, har ikke adgang til Application Guard til Office.
+> Microsoft 365 Apps for enterprise med aktivering af delte computere eller enhedsbaserede licenser har ikke adgang til Application Guard Office.
 
 ## <a name="deploy-application-guard-for-office"></a>Installér Application Guard til Office
 

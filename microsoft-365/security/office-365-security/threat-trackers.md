@@ -1,5 +1,5 @@
 ---
-title: Threat Trackers – nye og be noterede
+title: Threat Trackers – ny og bemærkelsesværdig
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -16,98 +16,98 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Få mere at vide om Threat Trackers, herunder nye Noteworthy Trackers, som kan hjælpe din organisation med at holde sig på sikkerheden.
+description: Få mere at vide om Threat Trackers, herunder nye Bemærkelsesværdige Trackers, for at hjælpe din organisation med at holde styr på sikkerhedsproblemer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fc73604d6ea24de9c8a66a8586c6bbced0113421
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ba038f94e711470242995a8ea0f082cd6d82dcda
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63588741"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663242"
 ---
-# <a name="threat-trackers---new-and-noteworthy"></a>Threat Trackers – nye og be noterede
+# <a name="threat-trackers---new-and-noteworthy"></a>Threat Trackers – ny og bemærkelsesværdig
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Office 365 for trusselsundersøgelse og](office-365-ti.md) svar gør det muligt for organisationens sikkerhedsteam at opdage og reagere på trusler mod cybersikkerhed. Office 365 funktioner til trusselsundersøgelse og svar omfatter Threat Tracker-funktioner, herunder Noteworthy trackers. Læs denne artikel for at få et overblik over disse nye funktioner og næste trin.
+[funktionerne Office 365 Threat Investigation og Response](office-365-ti.md) gør det muligt for organisationens sikkerhedsteam at opdage og gribe ind over for cybersikkerhedstrusler. Office 365 Threat Investigation- og Response-funktioner omfatter Threat Tracker-funktioner, herunder Bemærkelsesværdige trackere. Læs denne artikel for at få en oversigt over disse nye funktioner og de næste trin.
 
 > [!IMPORTANT]
-> Office 365 Threat Intelligence er nu Microsoft Defender til Office 365 plan 2 samt yderligere funktioner til trusselsbeskyttelse. Du kan få mere at [vide under Microsoft Defender til Office 365-abonnementer](https://products.office.com/exchange/advance-threat-protection) og -priser og [Beskrivelse af Microsoft Defender Office 365-tjenesten](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+> Office 365 Threat Intelligence er nu Microsoft Defender for Office 365 Plan 2 sammen med yderligere trusselsbeskyttelsesfunktioner. Du kan få mere at vide [under Microsoft Defender for Office 365 planer og priser](https://products.office.com/exchange/advance-threat-protection) og beskrivelsen [af Microsoft Defender for Office 365-tjenesten](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
 ## <a name="what-are-threat-trackers"></a>Hvad er Threat Trackers?
 
-Threat Trackers er informative widgets og visninger, der giver dig intelligens til forskellige cybersecurity-problemer, der kan påvirke din virksomhed. Du kan f.eks. få vist oplysninger om populære malwarekampagner ved hjælp af Threat Trackers.
+Threat Trackers er informative widgets og visninger, der giver dig intelligens på forskellige cybersikkerhedsproblemer, der kan påvirke din virksomhed. Du kan f.eks. få vist oplysninger om populære malwarekampagner ved hjælp af Threat Trackers.
 
-![Eksempel på Threat Tracker, der viser malwarekampagner.](../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png)
+:::image type="content" source="../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png" alt-text="Eksemplet på Threat Tracker, der viser malwarekampagner" lightbox="../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png":::
 
-De fleste tracker-sider omfatter de mest populære tal, der opdateres jævnligt, widgets, der hjælper dig med at forstå, hvilke problemer der er størst eller har vokser mest, og et hurtigt link i kolonnen Handlinger, der fører dig til Stifinder, hvor du kan få vist mere detaljerede oplysninger.
+De fleste trackersider omfatter populære tal, der opdateres jævnligt, widgets, der hjælper dig med at forstå, hvilke problemer der er størst eller er vokset mest, og et hurtigt link i kolonnen **Handlinger** , der fører dig til Stifinder, hvor du kan få vist mere detaljerede oplysninger.
 
-![Eksempel på kampagneoplysninger i Stifinder.](../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png)
+:::image type="content" source="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png" alt-text="Eksemplet på kampagneoplysninger i Stifinder" lightbox="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png":::
 
-Trackers er blot nogle få af de mange fantastiske funktioner, du får med [Microsoft Defender Office 365 Plan 2](office-365-ti.md). Trusselssporing omfatter [Trackers til Noteworth](#noteworthy-trackers), [Mest populære trackere](#trending-trackers), Registrerede forespørgsler [og Gemte forespørgsler](#saved-queries). [](#tracked-queries)
+Trackers er blot nogle af de mange fantastiske funktioner, du får med [Microsoft Defender for Office 365 Plan 2](office-365-ti.md). Threat Trackers omfatter [bemærkelsesværdige sporingsmaskiner](#noteworthy-trackers), [trendingsporingsforespørgsler](#trending-trackers), [sporede forespørgsler](#tracked-queries) og [gemte forespørgsler](#saved-queries).
 
-Hvis du vil se og bruge dine Threat Trackers for din organisation, skal Microsoft 365 Defender-portalen <https://security.microsoft.com>på og gå til Mail **& Threat** \> **Tracker til samarbejde**. For at gå direkte til **siden Threat tracker** skal du bruge <https://security.microsoft.com/threattracker>.
+Hvis du vil have vist og bruge dine Threat Trackers for din organisation, skal du åbne Microsoft 365 Defender-portalen på <https://security.microsoft.com>og gå til **Mail & collaboration** \> **Threat Tracker**. Hvis du vil gå direkte til siden **Trusselssporing** , skal du bruge <https://security.microsoft.com/threattrackerv2>.
 
 > [!NOTE]
-> Hvis du vil bruge Threat Trackers, skal du være global administrator, sikkerhedsadministrator eller sikkerhedslæser. Se [Tilladelser i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md).
+> Hvis du vil bruge Threat Trackers, skal du være global administrator, sikkerhedsadministrator eller sikkerhedslæser. Se [Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-### <a name="noteworthy-trackers"></a>Pålidelige trackere
+### <a name="noteworthy-trackers"></a>Bemærkelsesværdige trackere
 
-Vigtigste trackere er det sted, hvor du finder store og mindre trusler og risici, som vi mener, du bør kende til. Vigtige trackere hjælper dig med at finde ud af, om disse problemer findes i dit Microsoft 365-miljø, samt et link til artikler (som denne), der giver dig flere oplysninger om, hvad der sker, og hvordan de påvirker din organisations brug af Office 365. Uanset om det er en stor ny trussel (f.eks. Wannacry, Petya) eller en eksisterende trussel, der kan skabe nogle nye udfordringer (f.eks. vores andet inaugural Noteworthy-element - Nemucod), er det her, du finder vigtige nye elementer, som du og dit sikkerhedsteam bør gennemgå og undersøge med jævne mellemrum.
+Bemærkelsesværdige trackere er der, hvor du kan finde store og mindre trusler og risici, som vi mener, du bør kende til. Bemærkelsesværdige trackere hjælper dig med at finde ud af, om disse problemer findes i dit Microsoft 365 miljø, plus et link til artikler (som denne), der giver dig flere oplysninger om, hvad der sker, og hvordan de påvirker din organisations brug af Office 365. Uanset om det er en stor ny trussel (f.eks. Wannacry, Petya) eller en eksisterende trussel, der kan skabe nogle nye udfordringer (som vores andet indledende bemærkelsesværdige element - Nemucod), er det her, du finder vigtige nye ting, som du og dit sikkerhedsteam skal gennemgå og undersøge med jævne mellemrum.
 
-Typisk udgives Trackers i kun et par uger, når vi identificerer nye trusler og tror, at du måske har brug for den ekstra synlighed, som denne funktion giver. Når den største risiko for en trussel er overskredet, vil vi fjerne det interessant element. På denne måde kan vi holde listen opdateret med andre relevante nye elementer.
+Bemærkelsesværdige trackere slås op i blot et par uger, når vi identificerer nye trusler og mener, at du muligvis har brug for den ekstra synlighed, som denne funktion giver. Når den største risiko for en trussel er overstået, fjerner vi det bemærkelsesværdige element. På denne måde kan vi holde listen opdateret med andre relevante nye elementer.
 
 ### <a name="trending-trackers"></a>Mest populære trackere
 
-De mest populære trackere (tidligere kaldet Kampagner) fremhæver nye trusler, der er modtaget i organisationens mail i den seneste uge.
+Populære trackere (tidligere kaldet kampagner) fremhæver nye trusler, der er modtaget i din organisations mail i den seneste uge. Visningen Trending Trackers indeholder dynamiske vurderinger af mailtrusler, der påvirker organisationens Office 365 miljø. Denne visning viser malwaretendenser på lejerniveau, identificerer malwarefamilier, der stiger, er flade eller faldende, hvilket giver administratorer større indsigt i, hvilke trusler der kræver yderligere opmærksomhed.
 
-![Eksempel på populære widget til malwarekampagner.](../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png)
+:::image type="content" source="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png" alt-text="Eksemplet på widgetten trending malwarekampagner" lightbox="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png":::
 
-De mest populære trackere giver dig en ide om nye trusler, du bør gennemgå for at sikre, at dit bredere virksomhedsmiljø er forberedt på angreb.
+Trending trackers giver dig en idé om nye trusler, du bør gennemgå for at sikre, at dit bredere virksomhedsmiljø er forberedt mod angreb.
 
-### <a name="tracked-queries"></a>Registrerede forespørgsler
+### <a name="tracked-queries"></a>Sporede forespørgsler
 
-Registrerede forespørgsler udnytter dine gemte forespørgsler til jævnligt at vurdere Microsoft 365 i organisationen. Dette giver dig tendensen for begivenheden, og der kommer flere i de kommende måneder. Registrerede forespørgsler kører automatisk, hvilket giver dig opdaterede oplysninger uden at skulle huske at køre dine forespørgsler igen.
+Sporede forespørgsler udnytter dine gemte forespørgsler til jævnligt at vurdere Microsoft 365 aktivitet i din organisation. Dette giver dig begivenhedstendens med mere at komme i de kommende måneder. Sporede forespørgsler kører automatisk, hvilket giver dig opdaterede oplysninger uden at skulle huske at køre dine forespørgsler igen.
 
-![Eksempel på registrerede forespørgsler med en markeret.](../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png)
+:::image type="content" source="../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png" alt-text="Eksemplet på sporede forespørgsler med én valgt" lightbox="../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png":::
 
 ### <a name="saved-queries"></a>Gemte forespørgsler
 
-Gemte forespørgsler findes også i sektionen Trackers. Du kan bruge Gemte forespørgsler til at gemme de almindelige stifindersøgninger, du vil gå tilbage til hurtigere og gentagne gange uden at skulle oprette søgningen igen hver gang.
+Gemte forespørgsler findes også i afsnittet Trackers. Du kan bruge Gemte forespørgsler til at gemme de almindelige Stifinder-søgninger, som du vil vende tilbage til hurtigere og gentagne gange, uden at du skal genoprette søgningen hver gang.
 
-![Eksempel på gemte forespørgsler med en markeret.](../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png)
+:::image type="content" source="../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png" alt-text="Listen over sporede forespørgsler med én valgt" lightbox="../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png":::
 
-Du kan altid gemme en interessant tracker-forespørgsel eller en af dine egne Stifinder-forespørgsler ved  hjælp af knappen Gem forespørgsel øverst på stifindersiden. Alt, hvad der er gemt der, vises **på listen Gemte** forespørgsler på siden Sporing.
+Du kan altid gemme en Bemærkelsesværdig tracker-forespørgsel eller en af dine egne Explorer-forespørgsler ved hjælp af knappen **Gem forespørgsel** øverst på siden Stifinder. Alt, der er gemt der, vises på listen **Gemte forespørgsler** på siden Tracker.
 
-## <a name="trackers-and-explorer"></a>Trackers og Stifinder
+## <a name="trackers-and-explorer"></a>Trackers og Explorer
 
-Uanset om du gennemser mail, indhold eller Office (kommer snart), arbejder Explorer og Trackers sammen for at hjælpe dig med at undersøge og spore sikkerhedsrisici og trusler. Trackers giver dig alle sammen oplysninger, der beskytter dine brugere, ved at fremhæve nye, mærkbare og ofte gennemsøgte problemer – hvilket sikrer, at din virksomhed beskyttes bedre, når den flyttes til skyen.
+Uanset om du gennemgår mail, indhold eller Office aktiviteter (kommer snart), arbejder Explorer og Trackers sammen for at hjælpe dig med at undersøge og spore sikkerhedsrisici og trusler. Alt i alt giver Trackers dig oplysninger, der beskytter dine brugere ved at fremhæve nye, bemærkelsesværdige og ofte søgte problemer – så du sikrer, at din virksomhed er bedre beskyttet, når den flyttes til cloudmiljøet.
 
-Og husk, at du altid kan give os feedback på denne eller andre Microsoft 365 ved at klikke på **knappen Feedback** i nederste højre hjørne.
+Og husk, at du altid kan give os feedback om dette eller andre Microsoft 365 sikkerhedsfunktioner ved at klikke på knappen **Feedback** i nederste højre hjørne.
 
-![Microsoft 365 Defender portal.](../../media/microsoft-365-defender-portal.png)
+:::image type="content" source="../../media/microsoft-365-defender-portal.png" alt-text="Portalen Microsoft 365 Defender" lightbox="../../media/microsoft-365-defender-portal.png":::
 
-## <a name="trackers-and-microsoft-defender-for-office-365"></a>Trackers og Microsoft Defender til Office 365
+## <a name="trackers-and-microsoft-defender-for-office-365"></a>Sporings- og Microsoft Defender for Office 365
 
-Med vores inaugural Noteworthy-trussel fremhæver vi avancerede malwaretrusler, der registreres af [Pengeskab vedhæftede filer](safe-attachments.md). Hvis du er Office 365 Enterprise E5-kunde, og du ikke bruger [Microsoft Defender til Office 365](defender-for-office-365.md), skal du være det – det er inkluderet i dit abonnement. Defender til Office 365 giver værdi, selvom du har andre sikkerhedsværktøjer til filtrering af mailflow med dine Office 365 tjenester. Antispam- og Pengeskab [Links-funktioner](safe-links.md) fungerer dog bedst, når din primære sikkerhedsløsning for mail er via Office 365.
+Med vores første bemærkelsesværdige trussel fremhæver vi avancerede malwaretrusler, der er registreret af [Pengeskab Attachments](safe-attachments.md). Hvis du er Office 365 Enterprise E5-kunde, og du ikke bruger [Microsoft Defender for Office 365](defender-for-office-365.md), skal du være – den er inkluderet i dit abonnement. Defender for Office 365 giver værdi, selvom du har andre sikkerhedsværktøjer, der filtrerer mailflow med dine Office 365 tjenester. Funktionerne anti-spam og [Pengeskab Links](safe-links.md) fungerer dog bedst, når din primære sikkerhedsløsning til mail er via Office 365.
 
-![Microsoft Defender til Office 365 i Microsoft 365 Defender portalen.](../../media/policies.png)
+:::image type="content" source="../../media/policies.png" alt-text="Microsoft Defender for Office 365 på Microsoft 365 Defender-portalen" lightbox="../../media/policies.png":::
 
-I nutidens trusselsbeskyttede verden betyder kørsel af kun traditionelle antimalware-scanninger, at du ikke er beskyttet godt nok mod angreb. Nutidens mere avancerede hackere bruger ofte tilgængelige værktøjer til at oprette nye, obskøne eller forsinkede angreb, der ikke bliver genkendt af traditionelle signaturebaserede antimalware-programmer. Funktionen Pengeskab vedhæftede filer tager vedhæftede filer i mails og deonarer dem i et virtuelt miljø for at afgøre, om de er sikre eller skadelige. Denne detonationsproces åbner hver fil i et virtuelt computermiljø og ser derefter, hvad der sker, når filen åbnes. Uanset om det er en PDF-fil og en komprimeret fil eller et Office-dokument, kan skadelig kode skjules i en fil, og kun aktivering, når offeret åbner den på sin computer. Ved at detonere og analysere filen i mailflowet finder Defender til Office 365-egenskaberne disse trusler baseret på funktionsmåder, fil ry og en række heuristiske regler.
+I dagens trussel-riddled verden, kører kun traditionelle anti-malware scanninger betyder, at du ikke er beskyttet godt nok mod angreb. Nutidens mere avancerede angribere bruger almindeligt tilgængelige værktøjer til at oprette nye, slørede eller forsinkede angreb, der ikke genkendes af traditionelle signaturbaserede antimalwareprogrammer. Funktionen Pengeskab vedhæftede filer tager vedhæftede filer i mails og detonerer dem i et virtuelt miljø for at afgøre, om de er sikre eller skadelige. Denne detonationsproces åbner hver fil i et virtuelt computermiljø og ser derefter, hvad der sker, når filen åbnes. Uanset om det er en PDF-fil og en komprimeret fil eller et Office dokument, kan skadelig kode skjules i en fil og aktiveres kun, når offeret åbner det på deres computer. Ved at detonere og analysere filen i mailflowet finder Defender for Office 365 funktioner disse trusler baseret på adfærd, filomdømme og en række heuristiske regler.
 
-Det nye Vigtige trusselsfilter fremhæver elementer, der for nylig blev registreret via Pengeskab vedhæftede filer. Disse registreringer repræsenterer elementer, der er nye skadelige filer, der ikke tidligere er fundet af Microsoft 365 i enten dit mailflow eller andre kunders mail. Vær opmærksom på elementerne i Den Udvalgte Threat Tracker, se, hvem der blev målrettet af dem, og gennemse de detonationsdetaljer, der vises på fanen Avanceret analyse (findes ved at klikke på emnet for mailen i Stifinder). Bemærk, at du kun finder denne fane på mails, der registreres af funktionen Pengeskab Vedhæftede filer – denne Vigtige tracker omfatter dette filter, men du kan også bruge filteret til andre søgninger i Stifinder.
+Det nye Bemærkelsesværdige trusselsfilter fremhæver elementer, der for nylig blev registreret via Pengeskab Vedhæftede filer. Disse registreringer repræsenterer elementer, der er nye skadelige filer, som ikke tidligere blev fundet af Microsoft 365 i enten dit mailflow eller andre kunders mail. Vær opmærksom på elementerne i Bemærkelsesværdige Threat Tracker, se, hvem der blev målrettet af dem, og gennemse de oplysninger om detonation, der vises under fanen Avanceret analyse (findes ved at klikke på emnet i mailen i Stifinder). Bemærk, at du kun finder denne fane i mails, der er registreret af funktionen Pengeskab Attachments – denne bemærkelsesværdige tracker indeholder dette filter, men du kan også bruge dette filter til andre søgninger i Stifinder.
 
 ## <a name="next-steps"></a>Næste trin
 
-- Hvis din organisation ikke allerede har disse Office 365 funktionalitet til trusselsundersøgelse og svar, skal du se Hvordan får vi [Office 365 funktionalitet til trusselsundersøgelse og svar](office-365-ti.md)?
+- Hvis din organisation ikke allerede har disse funktioner til Office 365 Threat Investigation og Response, skal [du se Hvordan får vi Office 365 Threat Investigation- og Response-funktioner?](office-365-ti.md).
 
-- Sørg for, at dit sikkerhedsteam har de korrekte roller og tilladelser. Du skal være global administrator eller have sikkerhedsadministratoren eller rollen Søg og tømning tildelt i Microsoft 365 Defender portal. Se [Tilladelser i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md).
+- Sørg for, at sikkerhedsteamet har de korrekte roller og tilladelser tildelt. Du skal være global administrator eller have tildelt rollen Sikkerhedsadministrator eller Søg og Fjern på Microsoft 365 Defender-portalen. Se [Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-- Se efter, om de nye Trackers vises i dit Microsoft 365 miljø. Når de er tilgængelige, finder du dine Trackers på **siden Threat tracker** på Microsoft 365 Defender på <https://security.microsoft.com/threattracker>.
+- Hold øje med, at de nye trackere vises i dit Microsoft 365 miljø. Når det er muligt, kan du finde dine Trackers på siden **Threat tracker** på portalen Microsoft 365 Defender på <https://security.microsoft.com/threattracker>.
 
-- Hvis du ikke allerede har gjort det, kan du få mere at vide om og konfigurere [Microsoft Defender Office 365](defender-for-office-365.md) til din organisation, herunder [Pengeskab links](safe-links.md) [og Pengeskab vedhæftede filer](safe-attachments.md).
+- Hvis du ikke allerede har gjort det, kan du få mere at vide om og konfigurere [Microsoft Defender for Office 365](defender-for-office-365.md) for din organisation, herunder [Pengeskab links](safe-links.md) og [Pengeskab Vedhæftede filer](safe-attachments.md).

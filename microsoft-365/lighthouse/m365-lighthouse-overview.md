@@ -1,5 +1,5 @@
 ---
-title: Oversigt over Microsoft 365 fyrtårn
+title: Oversigt over Microsoft 365 Lighthouse
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -17,22 +17,22 @@ ms.custom:
 - intro-overview
 search.appverid: MET150
 description: For administrerede tjenesteudbydere kan du se, hvordan Microsoft 365 Lighthouse kan hjælpe dig med at sikre og administrere kundelejere på ét sted.
-ms.openlocfilehash: 88b6a3b1afff0905458f5ade7e4e91136b2c9d38
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: fde2ee27692b1d8fb53d46077cf58deb6d9a0550
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63598012"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645050"
 ---
-# <a name="overview-of-microsoft-365-lighthouse"></a>Oversigt over Microsoft 365 fyrtårn
+# <a name="overview-of-microsoft-365-lighthouse"></a>Oversigt over Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB),-kunder, der bruger Microsoft 365 Business Premium eller Microsoft 365 E3. 
+Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB), der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business. 
 
-Lighthouse forenkler onboarding af Microsoft 365 Business Premium- og Microsoft 365 E3-lejere ved at anbefale grundlinjer til sikkerhedskonfiguration skræddersyet til SMB-kunder og give visninger med flere lejere på tværs af alle kundemiljøer. Med Lighthouse kan MSP'er skalere administrationen af deres kunder, fokusere på det vigtigste, hurtigt finde og undersøge risici og reagere på at få deres kunder til en sund og sikker tilstand.
+Fyrtårn forenkler onboarding af Microsoft 365 Business Premium-, Microsoft 365 E3- og Windows 365 Business-lejere ved at anbefale grundlinjer for sikkerhedskonfiguration skræddersyet til SMB-kunder og give visninger med flere lejere på tværs af alle kundemiljøer. Med Lighthouse kan MSP'er skalere administrationen af deres kunder, fokusere på det vigtigste, hurtigt finde og undersøge risici og reagere på at få deres kunder til en sund og sikker tilstand.
 
-Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til Microsoft 365 styre tjenester og tilsluttede enheder. Fyrtårn er tilgængeligt for MSP'er, der er tilmeldt Cloud Solution Provider-programmet (CSP), og som betjener SMB-kunder med et Microsoft 365 Business Premium eller Microsoft 365 E3 abonnement.
+Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til Microsoft 365 styre tjenester og tilsluttede enheder. Fyrtårn er tilgængeligt for MSP'er, der er tilmeldt Cloud Solution Provider-programmet (CSP), og som betjener SMB-kunder med et Microsoft 365 Business Premium-, Microsoft 365 E3- eller Windows 365 Business abonnement.
 
-Brug af Lighthouse af Microsoft CSP-kanalpartnere, der har kunder, der Microsoft 365 Business Premium eller Microsoft 365 E3 understøttes. Dette omfatter CSP-partnere, der transager direkte med Microsoft, og dem, der transager via en indirekte udbyder (distributor). 
+Brug af Lighthouse af Microsoft CSP-kanalpartnere, der har kunder, der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business, understøttes. Dette omfatter CSP-partnere, der transager direkte med Microsoft, og dem, der transager via en indirekte udbyder (distributor). 
 
 > [!IMPORTANT] 
 > Hvis du vil bruge Lighthouse, skal MSP'er og deres kundelejere opfylde de krav, der er Microsoft 365 [til fyrtårnet](m365-lighthouse-requirements.md).     
@@ -68,4 +68,4 @@ Fyrtårn hjælper MSP'er med at sikre og administrere Microsoft 365 og tilknytte
 [Microsoft 365 oversigt over lejere i](m365-lighthouse-tenants-page-overview.md) Lighthouse (artikel)   
 [Microsoft 365 oversigt over overholdelsessiden for fyrtårne](m365-lighthouse-device-compliance-page-overview.md) (artikel)   
 [Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)   
-[Microsoft Defender for Business](../security/defender-business/index.yml) (linkside)
+[Microsoft Defender til virksomheder](../security/defender-business/index.yml) (linkside)

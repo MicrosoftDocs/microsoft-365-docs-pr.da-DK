@@ -1,9 +1,9 @@
-- name: Microsoft 365 Administration hjælp
+- name: Hjælp til Microsoft 365 Administration
   href: index.yml
   items:
     - name: De 20 mest populære artikler med hjælp til administratorer
       href: top-m365-admin-articles.yml
-    - name: Videobibliotek for administratorkurser
+    - name: Videobibliotek til administratorkursus
       href: admin-video-library.yml
     - name: Kom i gang
       items:
@@ -13,7 +13,7 @@
           href: ../commerce/try-or-buy-microsoft-365.md
         - name: Planlæg din konfiguration af Microsoft 365 til virksomheder
           href: setup/plan-your-setup.md
-        - name: Tilmeld dig for at Microsoft 365 Business Premium
+        - name: Tilmeld dig Microsoft 365 Business Premium
           items:
             - name: Tilmeld dig
               href: ../business/sign-up.md
@@ -21,43 +21,43 @@
               href: ../business/set-up.md
             - name: Microsoft 365 Business Premium (video)
               href: admin-overview/what-is-microsoft-365.md
-        - name: Tilmeld dig for at Microsoft 365 Business Standard
+        - name: Tilmeld dig Microsoft 365 Business Standard
           items:
-            - name: Tilmeld dig for at Microsoft 365 Business Standard
+            - name: Tilmeld dig Microsoft 365 Business Standard
               href: ../admin/simplified-signup/signup-business-standard.md
             - name: Konfigurer Microsoft 365 Business Standard
               href: ../admin/setup/setup-business-standard.md
             - name: Inviter brugere til Microsoft 365 Business Standard
               href: ../admin/simplified-signup/admin-invite-business-standard.md
-            - name: Acceptér invitation via mail til Microsoft 365 Business Standard
+            - name: Acceptér mailinvitation til Microsoft 365 Business Standard
               href: ../admin/simplified-signup/user-invite-business-standard.md
-            - name: 'Acceptér en invitation via mail til en Microsoft 365 Business Standard-abonnementsorganisation ved hjælp Outlook, Yahoo, Gmail eller en anden konto'
+            - name: 'Acceptér en mailinvitation til en Microsoft 365 Business Standard-abonnementsorganisation ved hjælp af en Outlook-, Yahoo-, Gmail-konto eller en anden konto.'
               href: ../admin/simplified-signup/user-invite-msa-nodomain-join.md
-            - name: Overfør data til mit Microsoft 365 Business Standard abonnement
+            - name: Migrer data til mit Microsoft 365 Business Standard-abonnement
               href: ../admin/simplified-signup/migrate-data-business-standard.md
-        - name: Tilmeld dig Microsoft Apps til virksomheder
+        - name: Tilmeld dig Microsoft Apps for business
           items:
-            - name: Tilmeld dig for at Microsoft 365 Apps for business
+            - name: Tilmeld dig Microsoft 365 Apps for business
               href: setup/signup--apps-business.md
             - name: Konfigurer til Microsoft 365 Apps for business
               href: setup/setup-apps-for-business.md
-        - name: Konfigurer Microsoft 365 Business Basic
+        - name: Konfigurer Microsoft 365 Business Basic.
           items:
             - name: Microsoft 365 Business Basic
               href: setup/setup-business-basic.md
-        - name: Udforsk siden Konfiguration og guiden
+        - name: Udforsk konfigurations-siden og -guiden
           href: setup/o365-setup-wizard-and-setup-page.md
-        - name: Gør Windows 10 computere sikre
+        - name: Beskyt Windows 10-computere
           href: setup/secure-win-10-pcs.md
-        - name: Download software- og produktnøgler
+        - name: Download software og produktnøgler
           href: setup/download-software-licenses-csp.md
-        - name: Installér Office apps
+        - name: Installér Office-apps
           href: setup/install-applications.md
-        - name: Konfigurer Windows-enheder
+        - name: Konfigurer windows-enheder
           href: setup/set-up-windows-devices.md
         - name: Konfigurer mobilenheder
           href: setup/set-up-mobile-devices.md
-        - name: Konfigurere mail Outlook til Microsoft 365 til virksomheder (video)
+        - name: Konfigurere Outlook til Microsoft 365 for business-mail (video)
           href: setup/setup-outlook.md
         - name: Flyt filer til OneDrive (video)
           href: setup/files-to-onedrive.md
@@ -75,17 +75,15 @@
           href: setup/customize-sign-in-page.md
         - name: Tilpas organisationens tema
           href: setup/customize-your-organization-theme.md
-        - name: Få adgang til lokale brugere og ressourcer
+        - name: Opnå adgang til lokale brugere og ressourcer
           items:
-            - name: Synkroniser domænebrugere Microsoft 365
+            - name: Synkroniser domænebrugere til Microsoft 365
               href: setup/manage-domain-users.md
-            - name: 'Aktivér domænets Windows 10 enheder, der skal administreres'
-              href: setup/manage-windows-devices.md
-            - name: 'Få adgang til ressourcer fra en enhed, der er forbundet med Azure AD'
+            - name: Opnå adgang til ressourcer fra en Azure AD-tilsluttet enhed
               href: setup/access-resources.md
     - name: Oversigt over Microsoft 365 Administration
       items:
-        - name: Oversigt over Administration
+        - name: Oversigt over Administrationen
           href: admin-overview/admin-center-overview.md
         - name: Om administratorroller
           href: add-users/about-admin-roles.md
@@ -95,19 +93,19 @@
           href: whats-new-in-preview.md
         - name: Søg i Microsoft 365 Administration
           href: manage/search-in-the-mac.md
-        - name: Hold dig på forandringer
+        - name: Hold styr på ændringer
           href: manage/stay-on-top-of-updates.md
         - name: Administrer flere lejere
           href: multi-tenant/manage.md
     - name: Office 365 drevet af 21Vianet
       items:
-        - name: About Office 365 drevet af 21Vianet
+        - name: Om Office 365 drevet af 21Vianet
           href: services-in-china/services-in-china.md
-        - name: Download Office-app til Android til Office 365 drevet af 21Vianet
+        - name: Download Office-appen til Android til Office 365 drevet af 21Vianet
           href: services-in-china/download-office-app-for-Android.md
-        - name: Download Office-app til iOS til Office 365 drevet af 21Vianet
+        - name: Download Office-appen til iOS til Office 365 drevet af 21Vianet
           href: services-in-china/download-office-app-for-iOS.md
-        - name: An anvend en Fapiao
+        - name: Ansøg om en Fapiao
           href: services-in-china/apply-for-a-fapiao.md
         - name: Azure Information Protection-support
           href: services-in-china/parity-between-azure-information-protection.md
@@ -119,15 +117,15 @@
               href: add-users/add-users.md
             - name: Tilføj en ny medarbejder
               href: add-users/add-new-employee.md
-            - name: Tildel licenser til brugere
+            - name: Tildel licenser til brugerne
               href: manage/assign-licenses-to-users.md
             - name: Tildel administratorroller
               href: add-users/assign-admin-roles.md
-            - name: Fjern tildeling af licenser fra brugere
+            - name: Fjern licenser fra brugere
               href: manage/remove-licenses-from-users.md
             - name: Gæstebrugere
               href: add-users/about-guest-users.md
-            - name: Føj gæstebrugere til en Microsoft 365 gruppe
+            - name: Føj gæstebrugere til en Microsoft 365-gruppe
               href: create-groups/manage-guest-access-in-groups.md
             - name: Rediger et brugernavn og en mailadresse
               href: add-users/change-a-user-name-and-email-address.md
@@ -141,25 +139,25 @@
           items:
             - name: Oversigt
               href: add-users/remove-former-employee.md
-            - name: Trin 1. Forhindre en medarbejder i at logge på og blokere adgangen til Microsoft 365-tjenester
+            - name: Trin 1. Forhindre en medarbejder i at logge på og blokere adgang til Microsoft 365-tjenester
               href: add-users/remove-former-employee-step-1.md
-            - name: Trin 2. Gemme indholdet af en tidligere medarbejders postkasse
+            - name: Trin 2. Gem indholdet af en tidligere medarbejders postkasse
               href: add-users/remove-former-employee-step-2.md
-            - name: Trin 3. Slette og blokere en tidligere medarbejders mobilenhed
+            - name: Trin 3. Slet og bloker en tidligere medarbejders mobilenhed
               href: add-users/remove-former-employee-step-3.md
-            - name: Trin 4. Videresende en tidligere medarbejders mail til en anden medarbejder eller konvertere den til en delt postkasse
+            - name: 'Trin 4. Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér til en delt postkasse'
               href: add-users/remove-former-employee-step-4.md
-            - name: Trin 5. Giv en anden medarbejder adgang til OneDrive og Outlook data
+            - name: Trin 5. Giv en anden medarbejder adgang til OneDrive- og Outlook-data
               href: add-users/remove-former-employee-step-5.md
-            - name: Trin 6. Fjerne licensen Microsoft 365 fra en tidligere medarbejder
+            - name: Trin 6. Fjern Microsoft 365-licensen fra en tidligere medarbejder
               href: add-users/remove-former-employee-step-6.md
-            - name: Trin 7. Slette en tidligere medarbejders brugerkonto
+            - name: Trin 7. Slet en tidligere medarbejders brugerkonto
               href: add-users/remove-former-employee-step-7.md
         - name: Grupper
           items:
             - name: Oversigt over grupper
               href: create-groups/office-365-groups.md
-            - name: Sammenlign grupper
+            - name: Sammenligne grupper
               href: create-groups/compare-groups.md
             - name: Opret en gruppe
               href: create-groups/create-groups.md
@@ -177,11 +175,11 @@
           items:
             - name: Nulstil adgangskoder
               href: add-users/reset-passwords.md
-            - name: Lad brugere nulstille adgangskoder
+            - name: Lad brugerne nulstille adgangskoder
               href: add-users/let-users-reset-passwords.md
             - name: Indstil adgangskoder til aldrig at udløbe
               href: add-users/set-password-to-never-expire.md
-            - name: Sende brugeradgangskoder igen
+            - name: Send brugeradgangskoder igen
               href: add-users/resend-user-password.md
             - name: Slå stærke adgangskoder fra
               href: add-users/strong-password.md
@@ -191,17 +189,17 @@
       items:
         - name: Om indstillinger for brugermail
           href: email/office-365-user-email-settings.md
-        - name: Tilføje et andet mailalias for en bruger
+        - name: Føj et andet mailalias til en bruger
           href: email/add-another-email-alias-for-a-user.md
         - name: Brug dit brugerdefinerede domæne
           href: email/change-email-address.md
-        - name: Overfør mails og kontakter til Microsoft 365
+        - name: Migrer mail og kontakter til Microsoft 365
           href: setup/migrate-email-and-contacts-admin.md
         - name: Opret signaturer og ansvarsfraskrivelser
           href: setup/create-signatures-and-disclaimers.md
-        - name: 'Oprette, redigere eller slette en sikkerhedsgruppe'
+        - name: 'Opret, rediger eller slet en sikkerhedsgruppe'
           href: email/create-edit-or-delete-a-security-group.md
-        - name: Konfigurere videresendelse af mail
+        - name: Konfigurer videresendelse af mail
           href: email/configure-email-forwarding.md
         - name: Delte postkasser
           items:
@@ -209,19 +207,19 @@
               href: email/about-shared-mailboxes.md
             - name: Opret en delt postkasse
               href: email/create-a-shared-mailbox.md
-            - name: Konfigurere indstillinger for delt postkasse
+            - name: Konfigurer indstillinger for delt postkasse
               href: email/configure-a-shared-mailbox.md
             - name: Konvertér en brugerpostkasse til en delt postkasse
               href: email/convert-user-mailbox-to-shared-mailbox.md
-            - name: Fjerne en licens fra en delt postkasse
+            - name: Fjern en licens fra en delt postkasse
               href: email/remove-license-from-shared-mailbox.md
-            - name: Løse problemer med delte postkasser
+            - name: Løs problemer med delte postkasser
               href: email/resolve-issues-with-shared-mailboxes.md
         - name: Konfigurer Fokuseret indbakke
           href: setup/configure-focused-inbox.md
         - name: Føj bruger eller kontakt til distributionsgruppe
           href: email/add-user-or-contact-to-distribution-list.md
-        - name: Administrer Rod i din organisation
+        - name: Administrer Clutter for din organisation
           href: email/configure-clutter.md
     - name: Administrer domæner
       items:
@@ -233,26 +231,26 @@
           href: get-help-with-domains/remove-a-domain.md
         - name: Overfør et domæne fra Microsoft 365 til en anden vært
           href: get-help-with-domains/transfer-a-domain-from-microsoft-to-another-host.md
-        - name: Prøve Microsoft 365 fra mit brugerdefinerede domæne
+        - name: Prøv Microsoft 365 fra mit brugerdefinerede domæne
           href: misc/pilot-microsoft-365-from-my-custom-domain.md
         - name: Ofte stillede spørgsmål om domæner
           href: setup/domains-faq.yml
         - name: DNS-instruktioner
           items:
-            - name: Ændre navneservere på enhver DNS-vært
+            - name: Rediger navneservere på en hvilken som helst DNS-vært
               href: get-help-with-domains/change-nameservers-at-any-domain-registrar.md
-            - name: Oprette DNS-poster hos enhver DNS-vært
+            - name: Opret DNS-poster hos en hvilken som helst DNS-vært
               href: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
         - name: Fejlfinding af domæneproblemer
           href: get-help-with-domains/find-and-fix-issues.md
     - name: Administrer dine data og tjenester
       items:
-        - name: Overvåg Microsoft 365 aktivitet ved hjælp af rapporter
+        - name: Overvåg Microsoft 365-aktivitet ved hjælp af rapporter
           href: activity-reports/activity-reports.md
         - name: Microsoft Productivity Score – oversigt
           href: productivity/productivity-score.md
           items:
-            - name: Indholdsamarbejde
+            - name: Samarbejd om indhold
               href: productivity/content-collaboration.md
             - name: Kommunikation
               href: productivity/communication.md
@@ -262,11 +260,11 @@
               href: productivity/teamwork.md
             - name: Møder
               href: productivity/meetings.md
-            - name: Microsoft 365 Apps tilstand
+            - name: Tilstanden af Microsoft 365 Apps
               href: productivity/apps-health.md
-            - name: Endpoint Analytics
+            - name: Slutpunktsanalyse
               href: /mem/analytics/productivity-score
-        - name: Ændre kontaktoplysninger for din organisation
+        - name: Rediger din organisations kontaktoplysninger
           href: manage/change-address-contact-and-more.md
         - name: Opdater dine administratorkontaktoplysninger
           href: manage/update-phone-number-and-email-address.md
@@ -278,19 +276,19 @@
           href: setup/upgrade-users-to-latest-office-client.md
         - name: Integrerede apps
           href: manage/test-and-deploy-microsoft-365-apps.md
-        - name: Centraliseret udrulning af tilføjelses-ins
+        - name: Centraliseret udrulning af tilføjelsesprogrammer
           items:
-            - name: Krav til centraliseret udrulning af tilføjelses-ins
+            - name: Krav til centraliseret udrulning af tilføjelsesprogrammer
               href: manage/centralized-deployment-of-add-ins.md
             - name: Udrul tilføjelsesprogrammer i administrationen
               href: manage/manage-deployment-of-add-ins.md
-            - name: Administrer tilføjelser i Administration
+            - name: Administrer tilføjelsesprogrammer i Administration
               href: manage/manage-addins-in-the-admin-center.md
             - name: Ofte stillede spørgsmål om Centraliseret udrulning
               href: manage/centralized-deployment-faq.yml
         - name: Administrer branchenyheder
           href: manage/manage-industry-news.md
-        - name: Administrere Office scripts
+        - name: Administrer indstillinger for Office-scripts
           href: manage/manage-office-scripts-settings.md
         - name: Find en partner eller en sælger igen
           href: manage/find-your-partner-or-reseller.md
@@ -300,35 +298,35 @@
           href: manage/release-options-in-office-365.md
         - name: Vis eller skjul nye funktioner
           href: manage/show-hide-new-features.md
-        - name: Power BI til forbrugsanalyse
+        - name: Power BI-forbrugsanalyse
           items:
             - name: Om forbrugsanalyse
               href: usage-analytics/usage-analytics.md
             - name: Aktivér forbrugsanalyse
               href: usage-analytics/enable-usage-analytics.md
-            - name: Hent den nyeste version af forbrugsanalyse
+            - name: Få den nyeste version af forbrugsanalyse
               href: usage-analytics/get-the-latest-version-of-usage-analytics.md
-            - name: Naviger i og brug rapporter
+            - name: Naviger og brug rapporter
               href: usage-analytics/navigate-and-utilize-reports.md
             - name: Om aktive brugere i forbrugsrapporter
               href: usage-analytics/active-user-in-usage-reports.md
-            - name: Tilpasse rapporter
+            - name: Tilpas rapporter
               href: usage-analytics/customize-reports.md
             - name: Forbrugsanalyse med Microsoft 365 GCC
               href: usage-analytics/connect-to-gcc-data-with-usage-analytics.md
             - name: Om datamodellen for forbrugsanalyse
               href: usage-analytics/usage-analytics-data-model.md
-            - name: Foretag fejlfinding i forbindelse med forbrugsanalyse
+            - name: Fejlfinding af fejl i forbrugsanalyse
               href: usage-analytics/usage-analytics-errors.md
-        - name: Microsoft 365 supportintegration med ServiceNow-konfigurationsvejledning
+        - name: Microsoft 365-supportintegration med ServiceNow-konfigurationsvejledning
           items:
             - name: Konfigurationsoversigt
               href: manage/servicenow-overview.md
-            - name: Konfigurere grundlæggende godkendelse
+            - name: Konfigurer basisgodkendelse
               href: manage/servicenow-basic-authentication.md
-            - name: Konfigurere med Azure AD-godkendelsestoken
+            - name: Konfigurer med Azure AD Auth Token
               href: manage/servicenow-aad-oauth-token.md
-            - name: Test af konfigurationen
+            - name: Tester konfigurationen
               href: manage/servicenow-testing-the-configuration.md
             - name: Fejlfinding
               href: manage/servicenow-troubleshooting.md
@@ -336,83 +334,73 @@
       href: ../commerce/index.yml
     - name: Beskyt din organisation
       items:
-        - name: De 10 mest populære måder at beskytte dine data på
+        - name: De 10 bedste måder at sikre dine data på
           href: security-and-compliance/secure-your-business-data.md
         - name: Multifaktorgodkendelse til Microsoft 365
           href: security-and-compliance/multi-factor-authentication-microsoft-365.md
         - name: Konfigurer multifaktorgodkendelse
           href: security-and-compliance/set-up-multi-factor-authentication.md
-        - name: Administrere og overvåge prioritetskonti
+        - name: Administrer og overvåg prioritetskonti
           href: setup/priority-accounts.md
-        - name: Slå timeout for Inaktiv session til
+        - name: Slå timeout for inaktiv session til
           href: manage/idle-session-timeout-web-apps.md
-        - name: Aktivér moderne godkendelse Office 2013
+        - name: Aktivér moderne godkendelse for Office 2013
           href: security-and-compliance/enable-modern-authentication.md
         - name: Forudsætninger for databeskyttelse
-          href: security-and-compliance/pre-requisites-for-data-protection.md
-        - name: Forøg trusselsbeskyttelse
+          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection.md
+        - name: Øg trusselsbeskyttelsen
           href: security-and-compliance/increase-threat-protection.md
-        - name: 'Trusler, der registreres af Microsoft Defender Antivirus'
+        - name: Trusler registreret af Microsoft Defender Antivirus
           href: security-and-compliance/threats-detected-defender-av.md
-        - name: 'Gennemse registrerede trusler, og reaktion'
+        - name: 'Gennemgå registrerede trusler, og udfør handlinger'
           href: security-and-compliance/review-threats-take-action.md
-        - name: Konfigurer overholdelsesfunktioner
-          href: security-and-compliance/set-up-compliance.md
-        - name: Sikker score
+        - name: Konfigurer funktioner til overholdelse af angivne standarder
+          href: /microsoft-365/business-premium/m365bp-set-up-compliance.md
+        - name: Secure Score
           href: /microsoft-365/security/defender/microsoft-secure-score
-        - name: En vejledning i overholdelse af GDPR
+        - name: En vejledning til overholdelse af GDPR
           href: security-and-compliance/gdpr-compliance.md
-    - name: Administrer enheder og appdata
+    - name: Administrer enheds- og appdata
       items:
-        - name: Metoder til beskyttelse af enhed og app
+        - name: Metoder til beskyttelse af enheds- og appdata
           href: devices/choose-device-security.md
-        - name: Microsoft Intune dokumentation
+        - name: Microsoft Intune-dokumentation
           href: /mem/intune/
-        - name: Få vist og redigere politikker og enheder
-          href: devices/view-policies-and-devices.md
+        - name: Få vist og rediger politikker og enheder
+          href: /microsoft-365/business-premium/view-policies-and-devices.md
         - name: Fjern virksomhedsdata
-          href: devices/remove-company-data.md
+          href: /microsoft-365/business-premium/m365bp-remove-company-data.md
         - name: Nulstil enheder til fabriksindstillingerne
           href: devices/reset-devices-to-factory-settings.md
-        - name: Knytte beskyttelsesfunktioner til indstillinger i Intune
-          href: devices/map-protection-features-to-intune-settings.md
+        - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
+          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings.md
         - name: Enhedens tilstande
           href: devices/device-states.md
-        - name: Indstillinger for appbeskyttelse til Windows 10 pc'er
+        - name: Indstillinger for appbeskyttelse til Windows 10-pc'er
           href: devices/protection-settings-for-windows-10-devices.md
-        - name: Angiv indstillinger for appbeskyttelse til Android og iOS
-          href: devices/app-protection-settings-for-android-and-ios.md
-          items:
-            - name: Valider indstillinger på Android eller iOS
-              href: devices/validate-settings-on-android-or-ios.md
-        - name: Rediger eller opret indstillinger for enhedsbeskyttelse til Windows 10 pc'er
-          href: devices/protection-settings-for-windows-10-pcs.md
-          items:
-            - name: Valider indstillinger på Windows 10 pc'er
-              href: devices/validate-settings-on-windows-10-pcs.md
+        - name: Valider indstillinger på Android eller iOS
+          href: devices/validate-settings-on-android-or-ios.md
+        - name: Valider indstillinger på Windows 10-pc'er
+          href: devices/validate-settings-on-windows-10-pcs.md
         - name: Autopilot
           items:
-            - name: Tilføj Autopilot-enheder og -profil
-              href: devices/add-autopilot-devices-and-profile.md
             - name: Opret og rediger AutoPilot-profiler
-              href: devices/create-and-edit-autopilot-profiles.md
+              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles.md
             - name: Opret og rediger AutoPilot-enheder
               href: devices/create-and-edit-autopilot-devices.md
-            - name: Profilindstillinger for AutoPilot
-              href: devices/autopilot-profile-settings.md
-        - name: Microsoft 365 til virksomhedsdokumentation
+        - name: Microsoft 365 for enterprise-dokumentation
           href: ../enterprise/index.yml
-        - name: Grundlæggende mobilitet og sikkerhed
+        - name: Basic Mobility og Security
           items:
-            - name: Oversigt over Grundlæggende mobilitet og sikkerhed
+            - name: Oversigt over Basic Mobility og Security
               href: basic-mobility-security/overview.md
-            - name: Sammenlign Grundlæggende mobilitet og sikkerhed og Intune
+            - name: Sammenlign Basic Mobility og Security og Intune
               href: basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md
-            - name: Grundlæggende mobilitet og sikkerhed
+            - name: Funktioner i Basic Mobility og Security
               href: basic-mobility-security/capabilities.md
-            - name: Konfigurer Grundlæggende mobilitet og sikkerhed
+            - name: Konfigurer Basic Mobility og Security
               href: basic-mobility-security/set-up.md
-            - name: Opret sikkerhedspolitikker for enheder
+            - name: Opret politikker for enhedssikkerhed
               href: basic-mobility-security/create-device-security-policies.md
             - name: Opret et APNs-certifikat til iOS-enheder
               href: basic-mobility-security/create-an-apns-certificate-for-ios-devices.md
@@ -428,9 +416,9 @@
               href: basic-mobility-security/privacy-and-security.md
             - name: Ofte stillede spørgsmål
               href: basic-mobility-security/frequently-asked-questions.yml
-            - name: Slette mobilenheder
+            - name: Ryd mobilenheder helt
               href: basic-mobility-security/wipe-mobile-device.md
-            - name: Slå Grundlæggende mobilitet og sikkerhed fra
+            - name: Slå Basic Mobility og Security fra
               href: basic-mobility-security/turn-off.md
             - name: Fejlfinding
               href: basic-mobility-security/troubleshoot.md
@@ -440,19 +428,19 @@
           href: moveto-microsoft-365/move-from-google-workspace-overview.md
         - name: Tilmeld dig Microsoft 365
           href: admin-overview/sign-up-for-office-365.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: Konfigurer Microsoft 365 til Google-overførsel
+        - name: Konfigurer Microsoft 365 til Google-migrering
           href: moveto-microsoft-365/set-up-microsoft-365-forgoogle.md
         - name: Konfigurere sikkerhedspolitikker for Windows enheder
           href: setup/secure-win-10-pcs.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: Tilføje et Google Workspace-domæne
+        - name: Tilføj Google Workspace-domæne
           href: moveto-microsoft-365/add-google-domain.md
-        - name: Installer Office apps og Microsoft Teams
+        - name: Installer Office-apps og Microsoft Teams
           href: setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: 'Overfør mail, kalender og kontakter til Microsoft 365'
+        - name: 'Migrer mail, kalender og kontakter til Microsoft 365'
           href: moveto-microsoft-365/migrate-email.md
         - name: Forbind dit domæne til Microsoft 365
           href: moveto-microsoft-365/connect-domain-tom365.md
-        - name: Brug Overførselsstyring til at flytte alles data
+        - name: Brug Migreringsstyring til at flytte alles data
           href: moveto-microsoft-365/migrate-files-migration-manager.md
         - name: Annuller Google Workspace
           href: moveto-microsoft-365/cancel-google.md
@@ -462,11 +450,11 @@
           href: manage/share-sites-with-external-users.md
         - name: Del kalendere med gæstebrugere
           href: manage/share-calendars-with-external-users.md
-        - name: Opret et team med gæstebrugere
+        - name: Opret et Team med gæstebrugere
           href: 'https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f'
-        - name: Planlæg et Teams med gæstebrugere
+        - name: Planlæg et Teams-møde med gæstebrugere
           href: 'https://support.microsoft.com/office/943507a9-8583-4c58-b5d2-8ec8265e04e5'
-        - name: Deltag i Teams møde med gæstebrugere
+        - name: Deltag i et Teams-møde med gæstebrugere
           href: 'https://support.microsoft.com/office/c6efc38f-4e03-4e79-b28f-e65a4c039508'
     - name: Fejlfinding
       href: /office/troubleshoot/

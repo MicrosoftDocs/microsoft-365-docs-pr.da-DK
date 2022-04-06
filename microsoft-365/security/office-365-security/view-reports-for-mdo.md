@@ -1,5 +1,5 @@
 ---
-title: Få vist Defender for Office 365 rapporter
+title: Vis Defender for Office 365 rapporter
 f1.keywords:
 - CSH
 ms.author: chrisda
@@ -16,27 +16,27 @@ ms.assetid: e47e838c-d99e-4c0b-b9aa-e66c4fae902f
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Administratorer kan få mere at vide om, hvordan de finder og bruger Defender til Office 365 rapporter, der er tilgængelige i Microsoft 365 Defender portal.
+description: Administratorer kan lære, hvordan de finder og bruger de Defender for Office 365 rapporter, der er tilgængelige i Microsoft 365 Defender portal.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: de0dd5b7c0466a722a788ee3fe4e6c843d70f5eb
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: bcc77aaac71c8f8b4c3d3635b596a56ac12a3d7d
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680968"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507485"
 ---
-# <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Få vist Defender for Office 365 rapporter i Microsoft 365 Defender-portalen
+# <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Få Defender for Office 365 vist rapporter i Microsoft 365 Defender portal
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft Defender for Office 365-organisationer (f.eks. Microsoft 365 E5-abonnementer eller Microsoft Defender til Office 365 Plan 1 eller Microsoft Defender til Office 365 Plan 2-tilføjelser) indeholder en række sikkerhedsrelaterede rapporter. Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), kan du få vist og downloade disse rapporter i Microsoft 365 Defender portal.
+Microsoft Defender for Office 365 organisationer (f.eks. Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 1 eller Microsoft Defender for Office 365 Plan 2-tilføjelser) indeholder en række sikkerhedsrelaterede rapporter. Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), kan du få vist og downloade disse rapporter i Microsoft 365 Defender portal.
 
 ## <a name="view-and-download-reports"></a>Få vist og hente rapporter
 
@@ -50,11 +50,11 @@ Microsoft Defender for Office 365-organisationer (f.eks. Microsoft 365 E5-abonne
 
 1. I portalen Microsoft 365 Defender skal du <https://security.microsoft.com>gå til **ReportsEmail** >  **& Collaboration** \> **Reports for download**. For at gå direkte til siden **Rapporter til overførsel** skal du bruge <https://security.microsoft.com/ReportsForDownload?viewid=custom>.
 
-![Siden & for mailsamarbejde på Microsoft 365 Defender portal.](../../media/email-collaboration-download-reports.png)
+:::image type="content" source="../../media/email-collaboration-download-reports.png" alt-text="Siden Rapporter & mailsamarbejde i Microsoft 365 Defender portal" lightbox="../../media/email-collaboration-download-reports.png":::
 
 > [!NOTE]
 >
-> Mailsikkerhedsrapporter, der ikke kræver Defender for Office 365, er beskrevet i Få vist [mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md).
+> Mailsikkerhedsrapporter, der ikke kræver, at Defender for Office 365, er beskrevet i Få vist [mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md).
 >
 > Rapporter, der er relateret til mailflow, findes nu i Exchange Administration (EAC). Du kan finde flere oplysninger om disse rapporter [under Mailflowrapporter i den Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
 
@@ -78,7 +78,8 @@ Hvis du vil have vist rapporten, skal Microsoft 365 Defender-portalen <https://s
 
 På siden **Mailrapporter & skal du** finde **Rapport over mailventetid** og derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du bruge <https://security.microsoft.com/mailLatencyReport>.
 
-![Widget for rapport for ventetid for mail på siden & med samarbejdsrapporter.](../../media/mail-latency-report-widget.png)
+
+:::image type="content" source="../../media/mail-latency-report-widget.png" alt-text="Widgetten Rapport over mailventetid på siden & med samarbejdsrapporter" lightbox="../../media/mail-latency-report-widget.png":::
 
 På siden **Rapport over mailventetid** er følgende faner tilgængelige på **rapportsiden Mailventetid** :
 
@@ -88,47 +89,50 @@ På siden **Rapport over mailventetid** er følgende faner tilgængelige på **r
 
 Uanset hvilken fane du vælger, viser diagrammet meddelelser organiseret i følgende kategorier:
 
-- **Ventetid for levering af mail**
-- **Detonations**
+- **Generelt**
+- **Detonation**
 
 Når du peger på en kategori i diagrammet, kan du se en oversigt over ventetiden i hver kategori.
 
-![50. fraktilvisning af rapporten Mailventetid.](../../media/mail-latency-report-50th-percentile-view.png)
+:::image type="content" source="../../media/mail-latency-report-50th-percentile-view.png" alt-text="Den 50. fraktilvisning af rapporten Mailventetid" lightbox="../../media/mail-latency-report-50th-percentile-view.png":::
 
 Hvis du klikker **på** Filter, kan du filtrere både diagrammet og detaljetabellen efter følgende værdier:
 
 - **Dato (UTC)**: **Startdato** **og slutdato**
 - **Meddelelsesvisning**: En af følgende værdier:
   - **Alle meddelelser**
-  - **Meddelelser, der indeholder vedhæftede filer eller URL-adresser**
-  - **Meddelelser, der er blevet fjernet**
+  - **Meddelelser, der er** blevet fjernet: En af følgende værdier:
+    - **Indbygget detonation**: Omfatter meddelelser, der er helt testet før levering.
+    - **Asynkron detonation**
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
 Følgende oplysninger er tilgængelige i detaljetabellen under diagrammet:
 
 - **Dato (UTC)**
-- **Fraktiler**: **50**, **90** eller **99**
+- **Ventetid**
 - **Antal meddelelser**
-- **Samlet ventetid**
+- **50. fraktil**
+- **90. fraktil**
+- **99. fraktil**
 
 På hovedrapportsiden er ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knappen](view-email-security-reports.md#export-report)** Eksportér er tilgængelig.
 
 ## <a name="threat-protection-status-report"></a>Statusrapport over trusselsbeskyttelse
 
-**Statusrapporten for trusselsbeskyttelse** er en enkelt visning, der samler oplysninger om skadeligt indhold og skadelig mail, der er registreret og blokeret af [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) og Microsoft Defender for Office 365. Du kan få mere at vide [under Statusrapport for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).
+**Statusrapporten for trusselsbeskyttelse** er en enkelt visning, der samler oplysninger om skadeligt indhold og skadelig mail, der registreres og blokeres [af Exchange Online Protection](exchange-online-protection-overview.md) (EOP) og Microsoft Defender for Office 365. Du kan få mere at vide [under Statusrapport for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).
 
 ## <a name="top-senders-and-recipients-report"></a>Rapport over de mest populære afsendere og modtagere
 
-Rapporten **Øverste afsendere og modtagere viser** de øverste modtagere af EOP og Defender til Office 365 beskyttelsesfunktioner. Du kan finde flere oplysninger [i Rapporten Vigtigste afsendere og modtagere](view-email-security-reports.md#top-senders-and-recipients-report).
+Rapporten **Øverste afsendere og modtagere viser** de øverste modtagere af EOP og Defender for Office 365-beskyttelsesfunktioner. Du kan finde flere oplysninger [i Rapporten Vigtigste afsendere og modtagere](view-email-security-reports.md#top-senders-and-recipients-report).
 
 ## <a name="url-protection-report"></a>Rapport over beskyttelse af URL-adresser
 
-Rapporten **beskyttelse af URL-adresser** indeholder oversigts- og tendensvisninger for registrerede trusler og handlinger, der er foretaget på URL-klik som en del [Pengeskab Links](safe-links.md). Denne rapport indeholder ikke klik på data fra brugere, hvor politikken Pengeskab Kæder har valgt indstillingen Registrer **ikke brugerklik**.
+Rapporten **beskyttelse af URL-adresser** indeholder oversigts- og tendensvisninger for registrerede trusler og handlinger, der er foretaget på URL-klik som en del [Pengeskab Links](safe-links.md). Denne rapport indeholder ikke klik på data fra brugere, hvor politikken Pengeskab kæder blev anvendt, når indstillingen Spor **brugerklik** ikke er valgt.
 
 For at få vist rapporten skal [du åbne Microsoft 365 Defender](https://security.microsoft.com) portalen,  \> gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du finde** beskyttelse mod **URL-adresser og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/URLProtectionActionReport>.
 
-![Widget for URL-beskyttelsesrapport på siden & for samarbejdsrapporter.](../../media/url-protection-report-widget.png)
+:::image type="content" source="../../media/url-protection-report-widget.png" alt-text="Widgetten URL-beskyttelsesrapport på siden & med samarbejdsrapporter" lightbox="../../media/url-protection-report-widget.png":::
 
 De tilgængelige visninger på **siden til beskyttelse af** URL-adresser er beskrevet i de følgende afsnit.
 
@@ -137,7 +141,7 @@ De tilgængelige visninger på **siden til beskyttelse af** URL-adresser er besk
 
 ### <a name="view-data-by-url-click-protection-action"></a>Vis data efter URL-adresse Klik på beskyttelse
 
-![Klik på handlingsvisningen URL-adresse i rapporten om beskyttelse af URL-adresser.](../../media/url-threat-protection-report-url-click-protection-action-view.png)
+:::image type="content" source="../../media/url-threat-protection-report-url-click-protection-action-view.png" alt-text="Visningen , der er en klikbeskyttelseshandling for URL-adresse, i rapporten om beskyttelse af URL-adresser" lightbox="../../media/url-threat-protection-report-url-click-protection-action-view.png":::
 
 Klik **på beskyttelseshandlingsvisningen Vis** data efter URL-adresse viser antallet af URL-klik fra brugerne i organisationen og resultaterne af klikket:
 
@@ -180,7 +184,7 @@ På hovedrapportsiden er ikonet ![Opret tidsplan.](../../media/m365-cc-sc-create
 
 ### <a name="view-data-by-url-click-by-application"></a>Få vist data efter URL-adresse Klik efter program
 
-![Klik på URL-adressen efter programvisning i rapporten om beskyttelse af URL-adresser.](../../media/url-threat-protection-report-url-click-by-application-view.png)
+:::image type="content" source="../../media/url-threat-protection-report-url-click-by-application-view.png" alt-text="Klik på handlingsvisningen URL-adresse i rapporten om beskyttelse af URL-adresser" lightbox="../../media/url-threat-protection-report-url-click-by-application-view.png":::
 
 Klik **på Vis data efter URL-adresse for programvisning** viser antallet af klik på URL-adresser i apps, der understøtter Pengeskab links:
 
@@ -213,7 +217,7 @@ Ud over de rapporter, der er beskrevet i denne artikel, er flere andre rapporter
 
 |Rapport|Emne|
 |---|---|
-|**Explorer** (Microsoft Defender Office 365 Plan 2) eller registreringer i **realtid** (Microsoft Defender Office 365 Plan 1)|[Trusselsstifinder (og registreringer i realtid)](threat-explorer.md)|
+|**Explorer** (Microsoft Defender for Office 365 Plan 2) **eller registreringer** i realtid (Microsoft Defender for Office 365 Plan 1)|[Trusselsstifinder (og registreringer i realtid)](threat-explorer.md)|
 |Mailsikkerhedsrapporter, der ikke kræver Defender for Office 365|[Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen](view-email-security-reports.md)|
 |Mailflowrapporter i Exchange Administration (EAC)|[Mailflowrapporter i den nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
 
@@ -229,7 +233,7 @@ PowerShell-rapporterings-cmdlet'er:
 |Status for mailflow|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
 |Spoofed brugere|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
 
-## <a name="what-permissions-are-needed-to-view-the-defender-for-office-365-reports"></a>Hvilke tilladelser er nødvendige for at få vist Defender til Office 365 rapporter?
+## <a name="what-permissions-are-needed-to-view-the-defender-for-office-365-reports"></a>Hvilke tilladelser er nødvendige for at få vist Defender for Office 365 rapporter?
 
 For at få vist og bruge de rapporter, der er beskrevet i denne artikel, skal du være medlem af en af følgende rollegrupper på Microsoft 365 Defender portal:
 
@@ -244,7 +248,7 @@ Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](p
 
 ## <a name="what-if-the-reports-arent-showing-data"></a>Hvad nu, hvis rapporterne ikke viser data?
 
-Hvis du ikke kan se data i din Defender for Office 365, skal du kontrollere, at dine politikker er konfigureret korrekt. Din organisation skal have [Pengeskab Links-politikker](set-up-safe-links-policies.md) [og Pengeskab](set-up-safe-attachments-policies.md) Politikker for vedhæftede filer defineret, for at Defender Office 365 beskyttelse er på plads. Se også [Beskyttelse mod spam og antimalware](anti-spam-and-anti-malware-protection.md).
+Hvis du ikke kan se data i dine Defender for Office 365, skal du kontrollere, at dine politikker er konfigureret korrekt. Din organisation skal have [Pengeskab politikker](set-up-safe-links-policies.md) for [links Pengeskab](set-up-safe-attachments-policies.md) politikker for vedhæftede filer, der er defineret, Defender for Office 365 sikre beskyttelsen på plads. Se også [Beskyttelse mod spam og antimalware](anti-spam-and-anti-malware-protection.md).
 
 ## <a name="related-topics"></a>Relaterede emner
 

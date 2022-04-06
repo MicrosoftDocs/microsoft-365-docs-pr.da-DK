@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: Lær, Microsoft 365 for business kan hjælpe dig med Persondataforordningen (GDPR).
-ms.openlocfilehash: 7c8a2c402e362ede4eb9b2f4ec221dd8556052db
-ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
+ms.openlocfilehash: d5c24fe2f2295e99798fcc5382dc284cec01d385
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "64403632"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632399"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR forenklet: En vejledning til din mindre virksomhed
 
@@ -134,7 +134,7 @@ Hvis du vælger at gemme personlige data i skyen, f.eks. via Microsoft 365, har 
 
 #### <a name="microsoft-365-features-that-can-help"></a>Microsoft 365 funktioner, der kan hjælpe
 
-Du kan bruge [Konfigurer overholdelsesfunktioner til](set-up-compliance.md) at beskytte virksomhedens følsomme oplysninger. Overholdelsesstyring kan hjælpe dig med at komme i gang med det samme! Du kan f.eks. [konfigurere en DLP-politik](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) , der bruger [GDPR-skabelonen](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
+Du kan bruge [Konfigurer overholdelsesfunktioner til](../../business-premium/m365bp-set-up-compliance.md) at beskytte virksomhedens følsomme oplysninger. Overholdelsesstyring kan hjælpe dig med at komme i gang med det samme! Du kan f.eks. [konfigurere en DLP-politik](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) , der bruger [GDPR-skabelonen](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
 
 ### <a name="step-5-keep-documentation-on-your-data-processing-activities"></a>Trin 5: Hold dokumentationen om dine databehandlingsaktiviteter
 

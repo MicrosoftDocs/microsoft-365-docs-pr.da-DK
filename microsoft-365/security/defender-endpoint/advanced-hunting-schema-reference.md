@@ -15,19 +15,19 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.date: 01/14/2020
 ms.technology: mde
-ms.openlocfilehash: 290d302f815de38c4cd84f417118205ed6504fe2
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 2e45a4ae78d0beb9bc57b72a59b9cf1376ac7da7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63592717"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468341"
 ---
-# <a name="understand-the-advanced-hunting-schema-in-microsoft-defender-for-endpoint"></a>Forstå det avancerede jagtskema i Microsoft Defender til slutpunkt
+# <a name="understand-the-advanced-hunting-schema-in-microsoft-defender-for-endpoint"></a>Forstå det avancerede Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedhuntingref-abovefoldlink)
 
@@ -41,14 +41,14 @@ Under opbygning af forespørgsler kan du bruge den indbyggede skemareference til
 
 - **Beskrivelse af** tabeller: Typen af data, der er indeholdt i tabellen og kilden til de pågældende data.
 - **Kolonner**: Alle kolonnerne i tabellen.
-- **Handlingstyper**: Mulige værdier i kolonnen, der `ActionType` repræsenterer de hændelsestyper, der understøttes af tabellen. Dette gælder kun for tabeller, der indeholder hændelsesoplysninger.
+- **Handlingstyper**: Mulige værdier i kolonnen, der `ActionType` repræsenterer de hændelsestyper, der understøttes af tabellen. Disse værdier leveres kun for tabeller, der indeholder hændelsesoplysninger.
 - **Eksempelforespørgsel**: Eksempelforespørgsler, der viser, hvordan tabellen kan bruges.
 
 ### <a name="access-the-schema-reference"></a>Få adgang til skemareferencen
 
 Hvis du hurtigt vil have adgang til skemareferencen, skal **du vælge handlingen Vis reference** ud for tabelnavnet i skemarepræsentationen. Du kan også vælge **Skemareference for** at søge efter en tabel.
 
-![Billede, der viser, hvordan du får adgang til skemareference i portalen.](images/ah-reference.png)
+:::image type="content" source="images/ah-reference.png" alt-text="Den avancerede jagtside" lightbox="images/ah-reference.png":::
 
 ## <a name="learn-the-schema-tables"></a>Lær skematabellerne at vide
 
@@ -81,9 +81,9 @@ Tabel- og kolonnenavne er også angivet i Microsoft 365 Defender, i skemarepræs
 |
 
 > [!TIP]
-> Brug [avanceret jagt på Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview) til at lede efter trusler ved hjælp af data fra Defender til Slutpunkt, Microsoft Defender til Office 365, Microsoft Defender til skyapps og Microsoft Defender for Identity. [Slå Microsoft 365 Defender til](/microsoft-365/security/defender/m365d-enable).
+> Brug [avanceret jagt Microsoft 365 Defender at](/microsoft-365/security/defender/advanced-hunting-overview) lede efter trusler ved hjælp af data fra Defender til slutpunkt, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps og Microsoft Defender for Identity. [Slå Microsoft 365 Defender til](/microsoft-365/security/defender/m365d-enable).
 
-Få mere at vide om, hvordan du flytter dine avancerede arbejdsprocesser på jagt fra Microsoft Defender til Microsoft 365 Defender i [Overfør avancerede forespørgselsforespørgsler fra Microsoft Defender til slutpunkt](/microsoft-365/security/defender/advanced-hunting-migrate-from-mde).
+Få mere at vide om, hvordan du flytter dine avancerede arbejdsprocesser Microsoft Defender for Endpoint til Microsoft 365 Defender i [Overfør avancerede forespørgselsforespørgsler fra Microsoft Defender for Endpoint](/microsoft-365/security/defender/advanced-hunting-migrate-from-mde).
 
 ## <a name="related-topics"></a>Relaterede emner
 

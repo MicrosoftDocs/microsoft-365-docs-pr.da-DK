@@ -1,7 +1,7 @@
 ---
 title: Optimer installation og registrering af ASR-regler
 description: Optimer dine AA-regler (Attack Surface Reduction) for at identificere og forhindre typiske malwareudbytninger.
-keywords: onboard, Intune-administration, Microsoft Defender til Slutpunkt, Microsoft Defender, Windows Defender, reduktion af angrebsoverfladen, ASR, sikkerhedslinje
+keywords: onboard, Intune management, Microsoft Defender for Endpoint, Microsoft Defender, Windows Defender, reduktion af angrebsoverfladen, ASR, sikkerheds baseline
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: bd5b88c5d43f2ec20c200ee55458e2ef204775ae
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: d2bf9a6fa1f874e7d550d0d0f7a42742a07665eb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63592086"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468253"
 ---
 # <a name="optimize-asr-rule-deployment-and-detections"></a>Optimer installation og registrering af ASR-regler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
@@ -36,7 +36,7 @@ ms.locfileid: "63592086"
 [ASR-regler (Attack Surface Reduction)](./attack-surface-reduction.md) identificerer og forhindrer typiske malwareudbytninger. De styrer, hvornår og hvordan potentielt skadelig kode kan køre. De kan f.eks. forhindre JavaScript eller VBScript i at starte en downloadet eksekverbar fil, blokere Win32 API-opkald fra Office-makroer og blokere processer, der køres fra USB-drev.
 
 
-:::image type="content" source="../../media/attack-surface-mgmt.png" alt-text="Administrationskort til angrebsoverfladen.":::
+:::image type="content" source="../../media/attack-surface-mgmt.png" alt-text="Administrationskort til angrebsoverfladen" lightbox="../../media/attack-surface-mgmt.png":::
 <br>
 *Administrationskort til angrebsoverfladen*
 
@@ -48,7 +48,7 @@ ms.locfileid: "63592086"
 
 Vælg **Gå til rapporter om reduktion af angrebsoverfladens** \>  \> **angrebsoverfladen, og** \> **tilføj udeladelse.** Derfra kan du navigere til andre sektioner i Microsoft 365 Defender portal.
 
-![Tilføj fanen udeladelse på siden Regler for reduktion af angrebsoverfladen Microsoft 365 Defender portalen.](images/secconmgmt_asr_m365exlusions.png)<br>
+:::image type="content" source="images/secconmgmt_asr_m365exlusions.png" alt-text="Tilføj fanen udeladelse på siden Med reduktionsregler for angrebsoverfladen på Microsoft 365 Defender portal" lightbox="images/secconmgmt_asr_m365exlusions.png":::<br>
 Fanen ***Tilføj udeladelse på** siden Regler for reduktion af angrebsoverfladen i Microsoft 365 Defender portal*
 
 > [!NOTE]
@@ -59,5 +59,5 @@ Du kan finde flere oplysninger om installation af <a href="https://go.microsoft.
 **Relaterede emner**
 
 * [Sørg for, at dine enheder er konfigureret korrekt](configure-machines.md)
-* [Få enheder onboardet til Microsoft Defender til Slutpunkt](configure-machines-onboarding.md)
-* [Overvåg overholdelse af angivne standarder for sikkerhedslinjen i Microsoft Defender for Endpoint](configure-machines-security-baseline.md)
+* [Få enheder onboardet til Microsoft Defender for Endpoint](configure-machines-onboarding.md)
+* [Overvåg overholdelse Microsoft Defender for Endpoint den oprindelige sikkerhed](configure-machines-security-baseline.md)

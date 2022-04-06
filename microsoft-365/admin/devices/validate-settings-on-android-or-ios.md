@@ -24,17 +24,17 @@ search.appverid:
 - MET150
 ms.assetid: f3433b6b-02f7-447f-9d62-306bf03638b0
 description: Få mere at vide om, hvordan du Microsoft 365 Business Premium indstillingerne for appbeskyttelse på dine Android- eller iOS-enheder.
-ms.openlocfilehash: 85d98a4741299327c0e88735cb9593e129fdc929
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b760b49c59d8033e4587cedd67f024f983547179
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63596868"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632443"
 ---
 # <a name="validate-app-protection-settings-on-android-or-ios-devices"></a>Valider indstillinger for appbeskyttelse på Android- eller iOS-enheder
 
 > [!NOTE]
-> Microsoft Defender for Business udrulles til Microsoft 365 Business Premium fra 1. marts 2022. Dette tilbud indeholder yderligere sikkerhedsfunktioner til enheder. [Få mere at vide om Defender for Business](../../security/defender-business/mdb-overview.md).
+> Microsoft Defender til virksomheder udrulles til Microsoft 365 Business Premium kunder fra d. 1. marts 2022. Dette tilbud indeholder yderligere sikkerhedsfunktioner til enheder. [Få mere at vide om Defender for Business](../../security/defender-business/mdb-overview.md).
 
 Følg vejledningen i de følgende afsnit for at validere indstillingerne for appbeskyttelse på Android- eller iOS-enheder.
   
@@ -42,7 +42,7 @@ Følg vejledningen i de følgende afsnit for at validere indstillingerne for app
   
 ### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Kontrollér, at indstillingerne for appbeskyttelse fungerer på brugerenheder
 
-Når du [har konfigureret appkonfigurationer for Android-enheder for](app-protection-settings-for-android-and-ios.md) at beskytte apps, kan du følge disse trin for at bekræfte, at de valgte indstillinger fungerer. 
+Når du [har angivet indstillinger for appbeskyttelse til Android- eller iOS-enheder for](../../business-premium/m365bp-app-protection-settings-for-android-and-ios.md) at beskytte appsene, kan du følge disse trin for at validere, om de valgte indstillinger fungerer. 
   
 Først skal du kontrollere, at politikken gælder for den app, du vil validere den i.
   
@@ -129,9 +129,9 @@ I ruden  Rediger politik skal du vælge  Rediger ud for Beskyttelse mod mistede 
   
 ## <a name="ios"></a>iOS
   
-### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Kontrollér, at indstillingerne for appbeskyttelse fungerer på brugerenheder
+### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Kontrollér, at Appbeskyttelse fungerer på brugerenheder
 
-Når du [har konfigureret appkonfigurationer for iOS-enheder for](app-protection-settings-for-android-and-ios.md) at beskytte apps, kan du følge disse trin for at validere, om de valgte indstillinger fungerer. 
+Når du [har konfigureret appkonfigurationer for iOS-enheder for](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md) at beskytte apps, kan du følge disse trin for at validere, om de valgte indstillinger fungerer. 
   
 Først skal du kontrollere, at politikken gælder for den app, du vil validere den i.
   

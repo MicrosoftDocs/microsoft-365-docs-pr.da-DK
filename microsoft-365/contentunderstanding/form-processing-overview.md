@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du bruger AI Build til at oprette modeller til formularbehandling i Microsoft SharePoint Syntex.
-ms.openlocfilehash: d04de2fc71b0b393e560e354253be42053725416
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: a3a3d1fa0e160b96d487a5eeb03c69f9e4fe7fb3
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63588260"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507383"
 ---
 # <a name="form-processing-overview-in-microsoft-sharepoint-syntex"></a>Oversigt over formularbehandling i Microsoft SharePoint Syntex
 
@@ -46,6 +46,10 @@ En Office 365 administrator skal aktivere behandling af [formular for SharePoint
 ### <a name="file-limitations"></a>Filbegrænsninger
 
 Når du bruger modeller til formularbehandling, skal du huske [at notere krav og begrænsninger for filforbrug](/ai-builder/form-processing-model-requirements).
+
+### <a name="supported-languages"></a>Understøttede sprog
+
+Formularbehandling understøtter dokumenter på mere end 73 sprog. Du kan finde en liste over sprog i [Understøttelse af sprog til behandling af formular](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support).
 
 ### <a name="multi-geo-environments"></a>Multi-Geo-miljøer
 

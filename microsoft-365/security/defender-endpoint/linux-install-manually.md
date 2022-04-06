@@ -1,8 +1,8 @@
 ---
-title: Installer Microsoft Defender til slutpunkt på Linux manuelt
+title: Installer Microsoft Defender for Endpoint på Linux manuelt
 ms.reviewer: ''
-description: Beskriver, hvordan du manuelt installerer Microsoft Defender til slutpunkt på Linux fra kommandolinjen.
-keywords: microsoft, defender, Microsoft Defender til Slutpunkt, linux, installation, deploy, uninstallation, defender, ansible, linux, redhat, ubuntu, defender, sles, suse, centos, amazon linux 2
+description: Beskrivelse af, hvordan du Microsoft Defender for Endpoint på Linux manuelt fra kommandolinjen.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, installation, deploy, uninstallation, installations, ansible, linux, redhat, ubuntu, defender, sles, suse, centos, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,26 +16,26 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: da05d702a2cb074ece2fec74371e7b5f560cb1ed
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: 4d66dad57fa7b045062a0300327b76030c33dfab
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63603097"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468165"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Installer Microsoft Defender til slutpunkt på Linux manuelt
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Installer Microsoft Defender for Endpoint på Linux manuelt
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
-Denne artikel beskriver, hvordan du installerer Microsoft Defender til slutpunkt på Linux manuelt. En vellykket installation kræver, at alle følgende opgaver er gennemført:
+Denne artikel beskriver, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt. En vellykket installation kræver, at alle følgende opgaver er gennemført:
 
   - [Forudsætninger og systemkrav](#prerequisites-and-system-requirements)
   - [Konfigurer Linux-softwarelageret](#configure-the-linux-software-repository)
@@ -48,7 +48,7 @@ Denne artikel beskriver, hvordan du installerer Microsoft Defender til slutpunkt
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
-Før du går i gang, skal du [se Microsoft Defender til slutpunkt på Linux](microsoft-defender-endpoint-linux.md) for at få en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
+Før du går i gang, [Microsoft Defender for Endpoint på Linux for at](microsoft-defender-endpoint-linux.md) få en beskrivelse af forudsætningerne og systemkravene for den aktuelle softwareversion.
 
 > [!WARNING]
 > Opgradering af operativsystemet til en ny, større version efter produktinstallationen kræver, at produktet geninstalleres. Du skal fjerne [den](linux-resources.md#uninstall) eksisterende Defender til slutpunkt på Linux, opgradere operativsystemet og derefter konfigurere Defender til Endpoint på Linux ved at følge nedenstående trin.
@@ -105,7 +105,7 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
     ```
 
-    Eller hvis du vil udforske nye funktioner på udvalgte enheder, kan det være en ide at installere Microsoft Defender til Slutpunkt på Linux *til insiders-fast-kanalen* :
+    Eller hvis du vil udforske nye funktioner på udvalgte enheder, kan det være en ide at installere Microsoft Defender for Endpoint på Linux til *insiders-fast-kanalen*:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
@@ -131,7 +131,7 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
    > [!TIP]
    > Brug kommandoen SPident til at identificere systemrelaterede oplysninger, herunder udgivelse *[version]*.
 
-   Hvis du f.eks. kører SLES 12 og ønsker at installere Microsoft Defender til Slutpunkt på Linux fra *den professionelle* kanal:
+   Hvis du f.eks. kører SLES 12 og ønsker at installere Microsoft Defender for Endpoint på Linux fra *den professionelle* kanal:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
@@ -169,7 +169,7 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
    > [!TIP]
    > Brug kommandoen hostnamectl til at identificere systemrelaterede oplysninger, herunder version *[version]*.
 
-   Hvis du f.eks. kører Ubuntu 18.04 og ønsker at installere Microsoft Defender til Slutpunkt på Linux fra *prod-kanalen* :
+   Hvis du f.eks. kører Ubuntu 18.04 og ønsker at installere Microsoft Defender for Endpoint på Linux fra *den professionelle* kanal:
 
    ```bash
    curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
@@ -304,7 +304,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 2. I den første rullemenu skal du vælge **Linux Server** som operativsystem. I den anden rullemenu skal du vælge **Lokalt script som** installationsmetode.
 3. Vælg **Download onboarding pakke**. Gem filen som WindowsDefenderATPOnboardingPackage.zip.
 
-    ![Microsoft 365 Defender portalskærm.](images/portal-onboarding-linux.png)
+   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Download en onboardingpakke i Microsoft 365 Defender-portalen" lightbox="images/portal-onboarding-linux.png":::
 
 4. I en kommandoprompt skal du bekræfte, at du har filen og udtrække indholdet af arkivet:
 
@@ -460,7 +460,7 @@ Se [Problemer med installation af logfiler](linux-resources.md#log-installation-
     sudo yum-config-manager --disable packages-microsoft-com-fast-prod
     ```
 
-1. Reploy Microsoft Defender for Endpoint på Linux ved hjælp af "Production channel".
+1. Reployer Microsoft Defender for Endpoint på Linux ved hjælp af "Produktionskanalen".
 
 ## <a name="uninstallation"></a>Fjernelse af installation
 

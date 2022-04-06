@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-overview
-ms.openlocfilehash: 381b9cafe50f8a9aa3788e17668d642b291d5279
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 351c0842de5bd4483ad594ad628e119b00437aa6
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594856"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638218"
 ---
 # <a name="insider-risk-solutions-in-microsoft-365"></a>Insider-risikoløsninger i Microsoft 365
 
@@ -67,9 +67,9 @@ Insider-risikostyring hjælper med at minimere interne risici ved at give dig mu
 
 Insider-risikostyring er tilgængelig i følgende abonnementer:
 
-- Microsoft 365 E5/A5/G5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 E3/A3/G3 -abonnement + Microsoft 365 E5/A5/G5 Compliance-tilføjelsesprogrammet
-- Microsoft 365 E3/A3/G3-abonnement + Microsoft 365 E5/A5/G5 Insider Risk Management-tilføjelsesprogrammet
+- Microsoft 365 E5/A5/F5/G5-abonnement (betalt version eller prøveversion)
+- Microsoft 365 E3/A3/F3/G3 + tilføjelsesprogrammet Microsoft 365 E5/A5/F5/G5 Compliance
+- Microsoft 365 E3/A3/F3/G3 -abonnement + Microsoft 365 E5/A5/F5/G5 Insider Risk Management-tilføjelsesprogrammet
 - Office 365 E3 -abonnement + Enterprise Mobility and Security E3 + Microsoft 365 E5 Overholdelse-tilføjelsesprogrammet
 
 ### <a name="information-barriers"></a>Informationsbarrierer

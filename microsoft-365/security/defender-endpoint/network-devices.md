@@ -17,36 +17,36 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2affbe19484348a511487930d034da6799ca348c
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: f6092800de89ebfdeed35230b1ade296e0396a85
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63592148"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468771"
 ---
 # <a name="network-device-discovery-and-vulnerability-management"></a>Registrering og registrering af netværksenhed håndtering af sikkerhedsrisici
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 > [!NOTE]
 > Blog [om](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) \(registrering af netværksenhed og sikkerhedsrisiko er udgivet 04-13-2021 \) og giver indsigt i de nye funktioner til registrering af netværksenhed i Defender til Slutpunkt. Denne artikel indeholder en oversigt over den udfordring,  som netværksenhedsregistrering er designet til at tage hånd om, og detaljerede oplysninger om, hvordan du kommer i gang med at bruge disse nye funktioner.
 
 Funktioner til netværksregistrering er tilgængelige i **sektionen Lager over** enheder på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a> og Microsoft 365 Defender konsoller.
 
-En udpeget Microsoft Defender til slutpunktsenhed skal bruges på hvert netværkssegment til at udføre periodiske godkendte scanninger af forudkonfigurerede netværksenheder. Når De opdages, giver Defender for Endpoints Håndtering af trusler og sikkerhedsrisici-funktioner integrerede arbejdsprocesser til at sikre switche, routere, WLAN-controllere, firewalls og VPN-gateways.
+En angivet Microsoft Defender for Endpoint enhed vil blive brugt i hvert netværkssegment til at udføre periodiske godkendte scanninger af forudkonfigurerede netværksenheder. Når De opdages, giver Defender for Endpoints Håndtering af trusler og sikkerhedsrisici-funktioner integrerede arbejdsprocesser til at sikre switche, routere, WLAN-controllere, firewalls og VPN-gateways.
 
 Når netværksenhederne opdages og klassificeres, vil sikkerhedsadministratorer kunne modtage de seneste sikkerhedsanbefalinger og gennemgå de senest opdagede sårbarheder på netværksenheder, der er installeret på tværs af deres organisationer.
 
 ## <a name="approach"></a>Fremgangsmåde
 
-Netværksenheder administreres ikke som almindelige slutpunkter, da Defender til Slutpunkt ikke har en sensor indbygget i selve netværksenhederne. Disse typer enheder kræver en agentløs tilgang, hvor en fjernscanning henter de nødvendige oplysninger fra enhederne. Afhængigt af netværkets topologi og egenskaber udfører en enkelt enhed eller nogle få enheder, der er onboardet til Microsoft Defender til slutpunkt, godkendte scanninger af netværksenheder ved hjælp af SNMP (skrivebeskyttet).
+Netværksenheder administreres ikke som almindelige slutpunkter, da Defender til Slutpunkt ikke har en sensor indbygget i selve netværksenhederne. Disse typer enheder kræver en agentløs tilgang, hvor en fjernscanning henter de nødvendige oplysninger fra enhederne. Afhængigt af netværkets topologi og egenskaber vil en enkelt enhed eller nogle få enheder, der er onboardet til Microsoft Defender for Endpoint, udføre godkendte scanninger af netværksenheder ved hjælp af SNMP (skrivebeskyttet).
 
 Der er to typer enheder, du skal huske på:
 
@@ -108,7 +108,7 @@ For at konfigurere bedømmelsesjob er følgende brugertilladelse påkrævet: **A
 2. Download netværksscanneren, og installér den på den angivne Defender for Endpoint-bedømmelsesenhed.
 
     > [!div class="mx-imgBorder"]
-    > ![Knappen Download scanner.](images/assessment-jobs-download-scanner.png)
+    > :::image type="content" source="images/assessment-jobs-download-scanner.png" alt-text="Knappen Download scanner" lightbox="images/assessment-jobs-download-scanner.png":::
 
 ## <a name="network-scanner-installation--registration"></a>Installation af netværksscanner & registrering
 
@@ -132,7 +132,7 @@ På siden Bedømmelsesjob i **Indstillinger** du vælge **Tilføj netværksvurde
 Hvis du vil forhindre duplikering af enheder på netværkets lager, skal du sørge for, at hver IP-adresse kun er konfigureret én gang på tværs af flere bedømmelsesenheder.
 
 > [!div class="mx-imgBorder"]
-> ![Knappen Tilføj netværksvurderingsjob.](images/assessment-jobs-add.png)
+> :::image type="content" source="images/assessment-jobs-add.png" alt-text="Knappen Tilføj job til netværksvurdering" lightbox="images/assessment-jobs-add.png":::
 
 Tilføje et netværksvurderingsjobtrin:
 
@@ -162,7 +162,7 @@ Når resultaterne vises, kan du vælge, hvilke enheder der skal medtages i den p
 Nyligt fundne enheder vises under den nye **fane Netværksenheder** på **lagersiden for** enheder. Det kan tage op til to timer, efter du har tilføjet et bedømmelsesjob, før enhederne er opdateret.
 
 > [!div class="mx-imgBorder"]
-> ![Sektionen Netværksenheder i lagerenhed.](images/assessment-jobs-device-inventory.png)
+> :::image type="content" source="images/assessment-jobs-device-inventory.png" alt-text="Afsnittet Netværksenheder i lager for enhed" lightbox="images/assessment-jobs-device-inventory.png":::
 
 ## <a name="troubleshooting"></a>Fejlfinding
 

@@ -1,7 +1,7 @@
 ---
-title: Onboard-enheder, og konfigurer Microsoft Defender til slutpunktsfunktioner
-description: Onboard Windows 10 enheder, servere, ikke-Windows-enheder, og få mere at vide om, hvordan du kører en registreringstest.
-keywords: onboarding, Microsoft Defender til slutpunkt-onboarding, sccm, gruppepolitik, mdm, lokalt script, registreringstest
+title: Onboard enheder, og konfigurer Microsoft Defender for Endpoint-funktioner
+description: Onboarde Windows 10 enheder, servere, ikke-Windows enheder, og få mere at vide om, hvordan du kører en registreringstest.
+keywords: onboarding, Microsoft Defender for Endpoint onboarding, sccm, gruppepolitik, mdm, lokalt script, registreringstest
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,14 +16,14 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 0922c827330fff25d7da1bbc69147c7a50f474df
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 4489709312470d44994828f7f39da72c2a714e08
+ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63591985"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64651449"
 ---
-# <a name="onboard-devices-and-configure-microsoft-defender-for-endpoint-capabilities"></a>Onboard-enheder, og konfigurer Microsoft Defender til slutpunktsfunktioner
+# <a name="onboard-devices-and-configure-microsoft-defender-for-endpoint-capabilities"></a>Onboard enheder, og konfigurer Microsoft Defender for Endpoint-funktioner
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -33,83 +33,83 @@ ms.locfileid: "63591985"
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
+> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
-Installation af Microsoft Defender til Slutpunkt er en proces i to trin.
+Udrulning af Microsoft Defender for Endpoint er en proces med to trin.
 
-- Onboard-enheder til tjenesten
-- Konfigurere tjenestens funktioner
+- Onboarder enheder til tjenesten
+- Konfigurer funktioner for tjenesten
 
-![Illustration af onboarding- og konfigurationsprocessen](images/deployment-steps.png)
+:::image type="content" source="images/deployment-steps.png" alt-text="Onboarding- og konfigurationsprocessen" lightbox="images/deployment-steps.png":::
 
-## <a name="onboard-devices-to-the-service"></a>Onboard-enheder til tjenesten
-Du skal gå til onboardingsektionen i Defender for Endpoint-portalen for at onboarde en af de understøttede enheder. Afhængigt af enheden bliver du vejledt med de relevante trin og de administrations- og installationsværktøjsindstillinger, der passer til enheden. 
+## <a name="onboard-devices-to-the-service"></a>Onboarder enheder til tjenesten
+Du skal gå til onboardingsektionen på Defender for Endpoint-portalen for at onboarde en hvilken som helst af de understøttede enheder. Afhængigt af enheden får du vejledning med de relevante trin og de indstillinger for administrations- og udrulningsværktøj, der passer til enheden. 
 
-Generelt til onboard enheder til tjenesten:
+Generelt for at onboarde enheder til tjenesten:
 
-- Kontrollér, at enheden opfylder [minimumskravene](minimum-requirements.md)
-- Afhængigt af enheden skal du følge de konfigurationstrin, der er angivet i onboardingsektionen i Defender for Endpoint-portalen
-- Brug det relevante administrationsværktøj og installationsmetode til dine enheder
-- Kør en registreringstest for at bekræfte, at enhederne er korrekt onboardet og rapporterer til tjenesten
+- Bekræft, at enheden opfylder [minimumskravene](minimum-requirements.md)
+- Afhængigt af enheden skal du følge de konfigurationstrin, der er angivet i onboardingafsnittet på Defender for Endpoint-portalen
+- Brug det relevante administrationsværktøj og den relevante installationsmetode til dine enheder
+- Kør en registreringstest for at bekræfte, at enhederne er onboardet korrekt, og at de rapporterer til tjenesten
 
 
 
 ## <a name="onboarding-and-configuration-tool-options"></a>Indstillinger for onboarding- og konfigurationsværktøj
-I følgende tabel vises de tilgængelige værktøjer baseret på det slutpunkt, du skal bruge til onboarding.
+I følgende tabel vises de tilgængelige værktøjer, der er baseret på det slutpunkt, du skal onboarde.
 
 | Slutpunkt     | Værktøjsindstillinger                       |
 |--------------|------------------------------------------|
-| **Windows**  |  [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/ Mobilenhedshåndtering](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender til skyen](configure-server-endpoints.md#integration-with-azure-defender)  |
-| **macOS**    | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [SYLTEF Pro](mac-install-with-jamf.md) <br> [Administration af mobilenheder](mac-install-with-other-mdm.md) |
-| **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Eller Eller](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
-| **iOS**      | [Microsoft Endpoint Manager](ios-install.md)               |
+| **Windows**  |  [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Enhedshåndtering Microsoft Endpoint Manager/Mobil](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-azure-defender)  |
+| **Macos**    | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Enhedshåndtering](mac-install-with-other-mdm.md) |
+| **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Marionet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
+| **Ios**      | [Microsoft Endpoint Manager](ios-install.md)               |
 | **Android**  | [Microsoft Endpoint Manager](android-intune.md)            | 
 
 
-I følgende tabel vises de tilgængelige værktøjer baseret på det slutpunkt, du skal bruge til onboarding.
+I følgende tabel vises de tilgængelige værktøjer, der er baseret på det slutpunkt, du skal onboarde.
 
-## <a name="configure-capabilities-of-the-service"></a>Konfigurere tjenestens funktioner
-Onboardingenheder aktiverer effektivt slutpunktsregistrering og -svar funktion af Micorosft Defender til slutpunkt.
+## <a name="configure-capabilities-of-the-service"></a>Konfigurer funktioner for tjenesten
+Onboardingenheder muliggør effektivt Microsoft Defender for Endpoint slutpunktsregistrering og -svar funktionalitet.
 
-Når du har onboardet enhederne, skal du derefter konfigurere de andre funktioner i tjenesten. I følgende tabel vises de funktioner, du kan konfigurere for at få den bedste beskyttelse af dit miljø.
+Når du har onboardet enhederne, skal du derefter konfigurere tjenestens andre funktioner. I følgende tabel vises de funktioner, du kan konfigurere for at få den bedste beskyttelse af dit miljø.
 
-| Funktion | Beskrivelse |
+| Kapacitet | Beskrivelse |
 |-|-|
-| [Konfigurere TVM (Threat & Vulnerability Management)](tvm-prerequisites.md) | Threat & Vulnerability Management er en komponent i Microsoft Defender til slutpunkt og giver både sikkerhedsadministratorer og sikkerhedsteams unik værdi, herunder: <br><br> - Indsigt i realtid slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) korreleret med slutpunktssårbarheder. <br><br> - Uvurderlig enhedssikkerhedsrisiko under hændelsesundersøgelse. <br><br> - Indbyggede afhjælpningsprocesser via Microsoft Intune og Microsoft System Center Configuration Manager.  |
-| [Konfigurer næste generations beskyttelse (NGP)](configure-microsoft-defender-antivirus-features.md) | Microsoft Defender Antivirus er en indbygget antimalwareløsning, der giver næste generations beskyttelse til stationære computere, bærbare computere og servere. Microsoft Defender Antivirus indeholder:<br> <br>Cloud-leveret beskyttelse til øjeblikkelig registrering og blokering af nye og nye trusler. Ud over maskinlæring og intelligent sikkerheds Graph er cloud-leveret beskyttelse en del af den næste generation af teknologier, der Microsoft Defender Antivirus.<br> <br> - Scanning altid ved hjælp af avanceret overvågning af fil- og procesfunktionsmåder og andre heuristiske funktioner (også kaldet "beskyttelse i realtid").<br><br> - Dedicated protection updates based on machine learning, human and automated big-data analysis, and in-depth threat resistance research. |
-| [Konfigurer reduktion af angrebsoverfladen (ASR)](overview-attack-surface-reduction.md) | Funktioner til reduktion af angrebsoverfladen i Microsoft Defender til Slutpunkt hjælper med at beskytte enheder og programmer i organisationen mod nye og fremspirende trusler. |
-| [Konfigurere funktioner til automatisk & afhjælpning (AIR)](configure-automated-investigations-remediation.md) | Microsoft Defender til Slutpunkt bruger automatiserede undersøgelser til at reducere mængden af beskeder, der skal undersøges individuelt. Funktionen Automatiseret undersøgelse udnytter forskellige inspektionsalgoritmer og processer, der bruges af analytikere (f.eks. playbooks), til at undersøge vigtige beskeder og omgående afhjælpe eventuelle overtrædelser. Dette reducerer mængden af beskeder betydeligt, så sikkerhedseksperter kan fokusere på mere avancerede trusler og andre initiativer med høj værdi. |
-| [Konfigurere Microsoft-trusselseksperter (MTE)](configure-microsoft-threat-experts.md) | Microsoft-trusselseksperter er en administreret jagttjeneste, der leverer SECURITY Operation Centers (SOCs) med ekspertniveauovervågning og -analyse for at hjælpe dem med at sikre, at kritiske trusler i deres unikke miljøer ikke overser.      |
+| [Konfigurer trussel & administration af sårbarheder (TVM)](tvm-prerequisites.md) | Administration af trussel & sårbarheder er en komponent i Microsoft Defender for Endpoint og giver både sikkerhedsadministratorer og sikkerhedshandlinger en entydig værdi, herunder: <br><br> – Indsigter i slutpunktsregistrering og -svar i realtid (Slutpunktsregistrering og -svar) er korreleret med sårbarheder i forbindelse med slutpunkter. <br><br> – Kontekst for uvurderlig sårbarhed over for enheder under efterforskning af hændelser. <br><br> - Indbyggede afhjælpningsprocesser via Microsoft Intune og Microsoft System Center Configuration Manager.  |
+| [Konfigurer næste generation af beskyttelse (NGP)](configure-microsoft-defender-antivirus-features.md) | Microsoft Defender Antivirus er en indbygget antimalwareløsning, der yder næste generations beskyttelse af stationære computere, bærbare computere og servere. Microsoft Defender Antivirus omfatter:<br> <br>–Skybaseret beskyttelse til næsten øjeblikkelig registrering og blokering af nye og nye trusler. Sammen med maskinel indlæring og intelligent sikkerhed Graph er cloudbaseret beskyttelse en del af de næste teknologier, der styrer Microsoft Defender Antivirus.<br> <br> - Altid ved scanning ved hjælp af avanceret overvågning af fil- og procesadfærd og andre heuristik (også kendt som "beskyttelse i realtid").<br><br> – Dedikerede beskyttelsesopdateringer baseret på maskinel indlæring, analyse af menneskelige og automatiserede big data og dybdegående forskning i trusselsresistens. |
+| [Konfigurer reduktion af angrebsoverflade (ASR)](overview-attack-surface-reduction.md) | Reduktion af angrebsoverfladen i Microsoft Defender for Endpoint hjælpe med at beskytte enheder og programmer i organisationen mod nye og nye trusler. |
+| [Konfigurer air-funktioner (Auto Investigation & Remediation)](configure-automated-investigations-remediation.md) | Microsoft Defender for Endpoint bruger automatiserede undersøgelser til at reducere mængden af beskeder, der skal undersøges individuelt. Funktionen Automatiseret undersøgelse udnytter forskellige inspektionsalgoritmer og processer, der bruges af analytikere (f.eks. playbooks), til at undersøge beskeder og foretage øjeblikkelig afhjælpning for at løse brud. Dette reducerer alarmmængden betydeligt, hvilket giver eksperter i sikkerhedsoperationer mulighed for at fokusere på mere avancerede trusler og andre initiativer med høj værdi. |
+| [Konfigurer funktioner for Microsoft-trusselseksperter (MTE)](configure-microsoft-threat-experts.md) | Microsoft-trusselseksperter er en administreret jagttjeneste, der leverer sikkerhedsoperationscentre med overvågning og analyse på ekspertniveau for at hjælpe dem med at sikre, at kritiske trusler i deres unikke miljøer ikke overses.      |
 
 
-## <a name="supported-capabilities-for-windows-devices"></a>Understøttede funktioner til Windows enheder
+## <a name="supported-capabilities-for-windows-devices"></a>Understøttede funktioner for Windows enheder
 
 |Operativsystem  |Windows 10 & 11  |Windows Server 2012 R2 <sup>[[1](#fn1)]<sup></sup>  |Windows Server 2016<sup>[[1](#fn1)]<sup></sup>   |Windows Server 2019 & 2022|Windows Server 1803+|
 |---------|---------|---------|---------|---------|---------|
 |**Forebyggelse**    |         |         |         |         |         |
-|Regler for reduktion af angrebsoverfladen     |    Y     |   Y      |    Y     |    Y     |    Y     |
-|Enhedshåndtering     |     Y    |    N     |    N     |    N     |    N     |  
+|Regler for reduktion af angrebsoverflade     |    Y     |   Y      |    Y     |    Y     |    Y     |
+|Enhedskontrol     |     Y    |    N     |    N     |    N     |    N     |  
 |Firewall     |      Y   |    Y     |     Y    |    Y    |    Y   |
 |Netværksbeskyttelse     |      Y   |    Y     |     Y    |    Y    |    Y   |
 |Næste generations beskyttelse     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Beskyttelse mod tamper     |        Y   |    Y     |     Y    |    Y    |    Y   |
+|Ændringsbeskyttelse     |        Y   |    Y     |     Y    |    Y    |    Y   |
 |Webbeskyttelse     |       Y   |    Y     |     Y    |    Y    |    Y   |
 |||||||
-|**Registrering**     |         |         |         |||
+|**Påvisning**     |         |         |         |||
 |Avanceret jagt     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Indikatorer for brugerdefinerede filer     |      Y   |    Y     |     Y    |    Y    |    Y   |
+|Brugerdefinerede filindikatorer     |      Y   |    Y     |     Y    |    Y    |    Y   |
 |Brugerdefinerede netværksindikatorer     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Slutpunktsregistrering og -svar blokeret & passiv tilstand     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Sensor til registrering af sans     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Registrering af & slutpunkt på netværksenhed     |      Y   |    N     |     N    |    N    |    N   |
+|Slutpunktsregistrering og -svar bloker & passiv tilstand     |      Y   |    Y     |     Y    |    Y    |    Y   |
+|Sanseregistreringssensor     |      Y   |    Y     |     Y    |    Y    |    Y   |
+|Slutpunkt & netværksenhedsregistrering     |      Y   |    N     |     N    |    N    |    N   |
 |||||||
 |**Svar**     |         |         |         |||
 |Automatiseret undersøgelse & svar (AIR)    |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Funktionalitet for enhedsrespons: isolation, indsamling af undersøgelsespakke, kør AV-scanning     |      Y   |    Y     |     Y    |    Y    |    Y   |
-|Egenskaber for filsvar: indsamle filer, dybdegående analyse, blokere fil, stoppe og sætte processer i karantæne     |      Y   |    Y     |     Y    |    Y    |    Y   |
+|Enhedssvarfunktioner: isolation, indsaml undersøgelsespakke, kør AV-scanning     |      Y   |    Y     |     Y    |    Y    |    Y   |
+|Funktioner til filsvar: Indsaml fil-, detaljeret analyse-, bloker fil-, stop- og karantæneprocesser     |      Y   |    Y     |     Y    |    Y    |    Y   |
 |Live-svar    |      Y   |    Y     |     Y    |    Y    |    Y   |
 
-(<a id="fn1">1</a>) Henviser til den moderne, samlede løsning til Windows Server 2012 R2 og 2016. Få mere at vide under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
+(<a id="fn1">1</a>) Henviser til den moderne, samlede løsning til Windows Server 2012 R2 og 2016. Du kan finde flere oplysninger under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
 
 >[!NOTE]
->Windows 7, 8.1, Windows Server 2008 R2 omfatter understøttelse af Slutpunktsregistrering og -svar-sensoren og AV, der bruger System Center Endpoint Protection (SCEP).
+>Windows 7, 8.1, Windows Server 2008 R2 omfatter understøttelse af den Slutpunktsregistrering og -svar sensor og AV ved hjælp af System Center Endpoint Protection (SCEP).

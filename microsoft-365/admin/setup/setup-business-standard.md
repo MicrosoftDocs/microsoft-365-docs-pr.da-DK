@@ -27,18 +27,22 @@ search.appverid:
 - MOE150
 - BEA160
 description: Når du køber Microsoft 365 Business Standard, har du mulighed for at bruge et domæne, du ejer, eller at købe et under tilmeldingen.
-ms.openlocfilehash: 51f88847a1e0ca04e216044172dbacf572fb82e3
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 791f719f50809f2aa178ca2ab72471aea534e111
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63590271"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638021"
 ---
 # <a name="set-up-microsoft-365-business-standard-with-a-new-or-existing-domain"></a>Konfigurer Microsoft 365 Business Standard med et nyt eller eksisterende domæne
 
 Når du køber Microsoft 365 Business Standard, har du mulighed for at tilføje et domæne, som du ejer, eller at købe et. Se [Tilmeld dig et Microsoft 365 Business Standard abonnement](../simplified-signup/signup-business-standard.md).
 
 I denne artikel vil vi hjælpe dig med at tilføje et eksisterende domæne, som du allerede ejer, eller købe et nyt. Hvis du har købt et nyt domæne, da du tilmeldte dig, er dit domæne helt konfigureret, og du kan flytte [til Tilføj brugere og tildele licenser](#add-users-and-assign-licenses).
+
+## <a name="set-up-microsoft-365-for-business"></a>Konfigurer Microsoft 365 til virksomheder
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ]
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -84,7 +88,7 @@ Hvis du vil konfigurere tjenester, skal du opdatere poster hos din DNS-vært ell
   
 1. Konfigurationsguiden registrerer typisk din registrator og giver dig et link til trinvise instruktioner om opdatering af NS-posterne på registratorens websted. Hvis det ikke sker, skal [du ændre navneservere for at konfigurere Office 365 med en domæneregistrator](../get-help-with-domains/change-nameservers-at-any-domain-registrar.md).
 
-    - Hvis du har eksisterende DNS-poster, f.eks. et eksisterende websted, men din DNS-vært er aktiveret [til domæne](/office365/admin/get-help-with-domains/domain-connect) connect, skal du **vælge Tilføj poster for mig**. På siden **Vælg dine onlinetjenester** skal du acceptere alle standardindstillingerne og vælge **Næste** og vælge **Godkend** på DNS-værtens side.
+    - Hvis du har eksisterende DNS-poster, f.eks. et eksisterende websted, men din DNS-vært er aktiveret [til domæne](/office365/admin/get-help-with-domains/domain-connect) connect, skal du **vælge Tilføj poster for mig**. På siden **Vælg din onlinetjenester** skal du acceptere alle standardindstillingerne og vælge **Næste** og vælge **Godkend** på DNS-værtens side.
     - Hvis du har eksisterende DNS-poster med andre DNS-værter (ikke aktiveret til domæneforbindelser), skal du administrere dine egne DNS-poster for at sikre, at de eksisterende tjenester forbliver forbundet. Se [grundlæggende om domæner for at](/office365/admin/get-help-with-domains/dns-basics) få flere oplysninger.
 
 2. Følg trinnene i guiden, og mail og andre tjenester konfigureres for dig.

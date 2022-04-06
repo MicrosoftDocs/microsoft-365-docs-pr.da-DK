@@ -1,6 +1,6 @@
 ---
-title: Fejlfinding af problemer, når du skifter til Microsoft Defender til Slutpunkt
-description: Få mere at vide om, hvordan du foretager fejlfinding af problemer, når du skifter til Microsoft Defender til Slutpunkt.
+title: Fejlfinding af problemer, når du skifter til Microsoft Defender for Endpoint
+description: Få mere at vide om, hvordan du foretager fejlfinding af problemer, når du skifter til Microsoft Defender for Endpoint.
 keywords: overførsel, windows defender, avanceret slutpunktsbeskyttelse, antivirus, antimalware, passiv tilstand, aktiv tilstand, fejlfinding
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,24 +16,24 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.custom: migrationguides
-ms.date: 01/11/2022
+ms.date: 03/28/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.technology: mde
-ms.openlocfilehash: 180adaff84f4154034d8bda04b6a6cbf6ceadc2e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 30218ea9b3b5ecbec20fdbc3364546d25c80bcab
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680448"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507508"
 ---
-# <a name="troubleshooting-issues-when-switching-to-microsoft-defender-for-endpoint"></a>Fejlfinding af problemer, når du skifter til Microsoft Defender til Slutpunkt
+# <a name="troubleshooting-issues-when-switching-to-microsoft-defender-for-endpoint"></a>Fejlfinding af problemer, når du skifter til Microsoft Defender for Endpoint
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Denne artikel indeholder fejlfindingsoplysninger til sikkerhedsadministratorer, der oplever problemer, når de skifter fra en ikke-Microsoft-slutpunktsbeskyttelsesløsning til Microsoft Defender til Slutpunkt.
+Denne artikel indeholder fejlfindingsoplysninger til sikkerhedsadministratorer, der oplever problemer, når de skifter fra en ikke-Microsoft-løsning til Microsoft Defender for Endpoint.
 
 ## <a name="microsoft-defender-antivirus-is-getting-uninstalled-on-windows-server"></a>Microsoft Defender Antivirus bliver fjernet på Windows Server
 
@@ -42,7 +42,7 @@ Når du skifter til Defender for Endpoint, starter du med din ikke-Microsoft-ant
 Du kan løse dette problem ved at gøre følgende:
 
 1. [Indstil registreringsdatabasenøglen DisableAntiSpyware til falsk](#set-the-disableantispyware-registry-key-to-false).
-2. [Føj Microsoft Defender til slutpunkt til udeladelseslisten](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
+2. [Føj Microsoft Defender for Endpoint til udeladelseslisten](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
 3. [Angiv Microsoft Defender Antivirus til passiv tilstand manuelt](#set-microsoft-defender-antivirus-to-passive-mode-manually).
 
 ### <a name="set-the-disableantispyware-registry-key-to-false"></a>Indstil registreringsdatabasenøglen DisableAntiSpyware til falsk
@@ -64,7 +64,7 @@ Du kan løse dette problem ved at gøre følgende:
 > [!TIP]
 > Du kan få mere at vide om denne registreringsdatabasenøgle [under DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware).
 
-### <a name="add-microsoft-defender-for-endpoint-to-the-exclusion-list"></a>Føj Microsoft Defender til slutpunkt til udeladelseslisten
+### <a name="add-microsoft-defender-for-endpoint-to-the-exclusion-list"></a>Føje Microsoft Defender for Endpoint til udeladelseslisten
 
 Visse undtagelser for Defender til slutpunkt skal defineres i din eksisterende løsning til ikke-Microsoft-slutpunktsbeskyttelse. Sørg for at tilføje følgende udeladelse:
 
@@ -96,6 +96,21 @@ Værdi: `1`
 > For at passiv tilstand kan fungere på slutpunkter, der kører Windows Server 2016 og Windows Server 2012 R2, skal disse slutpunkter være onboardet ved hjælp af instruktionerne i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016).
 
 Du kan finde flere oplysninger [Microsoft Defender Antivirus på Windows Server](microsoft-defender-antivirus-on-windows-server.md).
+
+## <a name="microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode"></a>Microsoft Defender Antivirus ser ud til at være gået i stå i passiv tilstand
+
+Hvis Microsoft Defender Antivirus sidder fast i passiv tilstand, kan du indstille den til aktiv tilstand manuelt ved at følge disse trin:
+
+1. På din Windows skal du åbne Registreringseditor som administrator.
+
+2. Gå til `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+
+3. Angiv eller definer **en REG_DWORD** , der hedder `ForceDefenderPassiveMode`, og angiv dens værdi til `0`.
+
+4. Genstart enheden.
+
+> [!IMPORTANT]
+> Hvis du stadig har problemer med at konfigurere Microsoft Defender Antivirus aktiv tilstand, efter du har fulgt denne procedure, skal du [kontakte support](../../admin/get-help-support.md).
 
 ## <a name="i-am-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016"></a>Jeg har problemer med at genaktivere Microsoft Defender Antivirus på Windows Server 2016
 

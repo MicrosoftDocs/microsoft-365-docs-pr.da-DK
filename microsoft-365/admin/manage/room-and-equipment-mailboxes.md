@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9f518a6d-1e2c-4d44-93f3-e19013a1552b
 description: 'Opret et lokale eller en udstyrspostkasse, så alle i organisationen kan reservere det til møder eller begivenheder ved hjælp Outlook. '
-ms.openlocfilehash: 38df6be558c3f590e851460f8065712d73dbf4b0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: afd24a2780478718cb74fdd6681d53a905f96b57
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588100"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64633255"
 ---
 # <a name="room-and-equipment-mailboxes"></a>Lokale- og udstyrspostkasser
 
@@ -63,7 +63,7 @@ Hvis du vil bruge lokale- eller udstyrspostkasser, Outlook du åbne dem på comp
   
 7. Skriv en meddelelse, der beskriver formålet, og vedhæft eventuelle filer, hvis det er nødvendigt.
     
-8. Hvis du vil give andre tilladelse til at deltage online eller ringe til mødet, skal **du Skype Møde**.
+8. Hvis du vil give andre tilladelse til at deltage online eller ringe til mødet, skal **du Teams Mødet**.
     
 9. For at sikre, at lokalet, udstyret og personerne, du har inviteret, er tilgængelige, **skal Planlægningsassistent** øverst. Vælg derefter en tilgængelig tid i kalenderen.
 
@@ -96,7 +96,7 @@ Hvis du vil konfigurere en lokale- eller udstyrspostkasse, skal du <a href="http
     
    - **Placering**: lokalenummeret eller placeringen af lokalet i en bygning eller et område.
     
-   - **Telefon tal**: nummeret på lokalet. Dette er forskelligt fra det mødetelefonnummer, der genereres, når du bruger Skype for Business.
+   - **Telefon tal**: nummeret på lokalet. Dette er forskelligt fra det mødetelefonnummer, der genereres, når du bruger Microsoft Teams.
     
 4. Vælg **Tilføj**.
     

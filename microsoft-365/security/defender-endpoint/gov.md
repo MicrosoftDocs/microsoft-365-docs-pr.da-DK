@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender til slutpunkt for kunder inden for det amerikanske offentlige
-description: Få mere at vide om de kundekrav og egenskaber, der er tilgængelige for Microsoft Defender til Slutpunkt for det amerikanske offentlige
+title: Microsoft Defender for Endpoint for kunder i det amerikanske offentlige
+description: Få mere at vide Microsoft Defender for Endpoint af kundekrav og funktioner, der er tilgængelige for kunder i det amerikanske Microsoft Defender for Endpoint det amerikanske miljø
 keywords: government, gcc, high, requirements, capabilities, defender, Microsoft Defender for Endpoint, endpoint, dod
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -16,20 +16,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 03d4d22bdce9f18b4883437215ea5cba50b3868e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b6c9594112e347439945d3c21f61f9272edb935f
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681342"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507361"
 ---
-# <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender til slutpunkt for kunder inden for det amerikanske offentlige
+# <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender for Endpoint for kunder i det amerikanske offentlige
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Microsoft Defender til slutpunkt for kunder i det amerikanske offentlige miljø, der er indbygget i Azure US Government-miljøet, bruger de samme underliggende teknologier som Defender til slutpunkt i Azure Commercial.
+Microsoft Defender for Endpoint for kunder inden for det amerikanske offentlige miljø, der er indbygget i Azure US Government-miljøet, bruger de samme underliggende teknologier som Defender til slutpunkt i Azure Commercial.
 
 Dette tilbud er tilgængeligt for GCC-, GCC High- og DoD-kunder og er baseret på den samme forebyggelse, registrering, undersøgelse og afhjælpning som den kommercielle version. Der er dog nogle forskelle i tilgængeligheden af funktioner for dette tilbud.
 
@@ -38,7 +38,7 @@ Dette tilbud er tilgængeligt for GCC-, GCC High- og DoD-kunder og er baseret p�
 
 ## <a name="licensing-requirements"></a>Licenskrav
 
-Microsoft Defender til Slutpunkt for kunder i det amerikanske offentlige myndigheder kræver et af følgende Microsoft-volumenlicenstilbud:
+Microsoft Defender for Endpoint kunder i det amerikanske offentlige myndigheder kræver et af følgende Microsoft-volumenlicenstilbud:
 
 ### <a name="desktop-licensing"></a>Skrivebordslicenser
 
@@ -50,7 +50,7 @@ Microsoft Defender til Slutpunkt for kunder i det amerikanske offentlige myndigh
 |---|---|---|
 |Microsoft 365 GCC G5|Microsoft 365 E5 til GCC Høj|Microsoft 365 G5 til DOD|
 |Microsoft 365 G5-sikkerheds GCC|Microsoft 365 G5-sikkerhed til GCC High|Microsoft 365 G5-sikkerhed til DOD|
-|Microsoft Defender til slutpunkt – GCC|Microsoft Defender til slutpunkt for GCC High|Microsoft Defender til slutpunkt for DOD|
+|Microsoft Defender for Endpoint – GCC|Microsoft Defender for Endpoint til GCC Høj|Microsoft Defender for Endpoint til DOD|
 |Windows 10 Enterprise E5-GCC|Windows 10 Enterprise E5 til GCC Høj|Windows 10 Enterprise E5 til DOD|
 |
 
@@ -62,13 +62,13 @@ Microsoft Defender til Slutpunkt for kunder i det amerikanske offentlige myndigh
 
 |GCC|GCC høj|DoD|
 |---|---|---|
-|Microsoft Defender for Endpoint Server GCC|Microsoft Defender for Endpoint Server til GCC High|Microsoft Defender for Endpoint Server for DOD|
+|Microsoft Defender for Endpoint Server GCC|Microsoft Defender for Endpoint Server til GCC High|Microsoft Defender for Endpoint server til DOD|
 |Microsoft Defender til servere|Microsoft Defender til servere – Government|Microsoft Defender til servere – Government|
 |
 
 ## <a name="portal-urls"></a>Url-adresser for portaler
 
-Følgende er URL-adresserne på Microsoft Defender for Endpoint-portalen for kunder i det amerikanske offentlige:
+Følgende er URL-adresser Microsoft Defender for Endpoint portal for kunder i det amerikanske offentlige:
 
 <br />
 
@@ -81,7 +81,7 @@ Følgende er URL-adresserne på Microsoft Defender for Endpoint-portalen for kun
 |DoD|<https://security.microsoft.us>|
 |
 > [!NOTE]
-> Hvis du er GCC-kunde og er i gang med at flytte fra microsoft Defender til slutpunkt kommerciel til GCC, https://transition.security.microsoft.com kan du bruge til at få adgang til dine kommercielle Microsoft Defender for Endpoint-data.
+> Hvis du er GCC kunde og er i gang med at flytte fra Microsoft Defender for Endpoint kommerciel til GCC, https://transition.security.microsoft.com kan du bruge til at få adgang Microsoft Defender for Endpoint kommercielle data.
 
 ## <a name="endpoint-versions"></a>Slutpunktsversioner
 
@@ -154,7 +154,8 @@ Følgende regneark, der kan downloades, viser de tjenester og de tilknyttede URL
 
 |Listen Regneark over domæner| Beskrivelse|
 |---|---|
-| URL-adresseliste for Microsoft Defender til slutpunkt for Gov/GCC/DoD-kunder | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
+|Microsoft Defender for Endpoint URL-adresse for kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og operativsystem for kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+| Microsoft Defender for Endpoint URL-adresseliste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 Få mere at vide under Konfigurer [indstillinger for enhedsproxy og Internetforbindelse](configure-proxy-internet.md).
 
@@ -196,7 +197,7 @@ Disse er de kendte mellemrum:
 |Filtrering af webindhold|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
   
 
-Disse er de funktioner og kendte mellemrum for [Mobile Threat Defense (Microsoft Defender til Slutpunkt på Android & iOS)](mtd.md):
+Disse er de funktioner og kendte mellemrum til [Mobile Threat Defense (Microsoft Defender for Endpoint på Android & iOS)](mtd.md):
 
 <br />
 

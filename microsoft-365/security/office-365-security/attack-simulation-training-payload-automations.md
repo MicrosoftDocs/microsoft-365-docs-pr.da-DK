@@ -10,20 +10,20 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Administratorer kan lære at bruge automatisering af nyttedata (indsamling af nyttedata) til at indsamle og starte automatiserede simuleringskurser til simulering af angreb i Microsoft Defender Office 365 Plan 2.
+description: Administratorer kan lære, hvordan de bruger automatisering af nyttedata (indsamling af nyttedata) til at indsamle og starte automatiserede simuleringskurser til simulering af angreb Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 13215b76646c5358bc9a043b91d3dbd403818684
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: aa223ab1abda110e32a9b9dc55e9dc76a1983321
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63593624"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468429"
 ---
 # <a name="payload-automations-for-attack-simulation-training"></a>Automatisering af nyttedata til simulering af angreb
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-I kursus i angrebssimulering i Microsoft 365 E5 eller Microsoft Defender til Office 365 Plan 2 indsamler automatiseringer af nyttedata (også kaldet indsamling af nyttedata) oplysninger fra virkelige phishingmeddelelser, der er rapporteret af brugere i organisationen. Selvom antallet af disse meddelelser sandsynligvis er lavt i din organisation, kan du angive de betingelser, der skal søges efter i phishing-angreb (f.eks. modtagere, social teknik, afsenderoplysninger osv.). Kursus i angrebssimulering efterligner derefter meddelelser og nyttedata, der bruges i angreb, for automatisk at starte uskadelige simuleringssessioner til målrettede brugere.
+I kursus i angrebssimulering i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2 indsamler automatiseringer af nyttedata (også kaldet indsamling af nyttedata) oplysninger fra virkelige phishingmeddelelser, der er rapporteret af brugere i organisationen. Selvom antallet af disse meddelelser sandsynligvis er lavt i din organisation, kan du angive de betingelser, der skal søges efter i phishing-angreb (f.eks. modtagere, social teknik, afsenderoplysninger osv.). Kursus i angrebssimulering efterligner derefter meddelelser og nyttedata, der bruges i angreb, for automatisk at starte uskadelige simuleringssessioner til målrettede brugere.
 
 Hvis du vil oprette en automatisering af nyttedata, skal du gøre følgende:
 
@@ -33,7 +33,7 @@ Hvis du vil oprette en automatisering af nyttedata, skal du gøre følgende:
 
 2. På fanen **Automatisering af nyttedata** skal du vælge ![Opret automatiseringsikon.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
 
-   ![Opret automatiseringsknappen på fanen Automatisering af nyttedata i kursus i angrebssimulering Microsoft 365 Defender portalen.](../../media/attack-sim-training-payload-automations-create.png)
+   :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Knappen Opret simulering på fanen Automatisering af nyttedata i Kursus i angrebssimulering Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
 3. Guiden til oprettelse åbnes. Resten af denne artikel beskriver siderne og de indstillinger, de indeholder.
 

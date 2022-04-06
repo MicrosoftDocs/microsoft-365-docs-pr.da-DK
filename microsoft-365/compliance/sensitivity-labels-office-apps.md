@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger, som it-administratorer kan bruge til at administrere følsomhedsmærkater Office apps til computer, mobil og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2bfd7dfd0cf56c8546cd21e5127bc8ef432e1cc5
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 0ca67ecb87b48d551ec4fb740e8732b8196c872c
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594768"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64637912"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -98,7 +98,7 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |[Lad brugere tildele tilladelser: <br /> - Videresende ikke](encryption-sensitivity-labels.md#let-users-assign-permissions)                     | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+                 | 4.7.1+         | 4.0.39+           | Ja               |
 |[Giv brugere tilladelse til at tildele tilladelser: <br /> - Kun krypteret](encryption-sensitivity-labels.md#let-users-assign-permissions)  | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.48+ <sup>\*</sup> | 4.2112.0+  | 4.2112.0+ | Ja |
 |[Kræv, at brugerne anvender en etiket på deres mails og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig virksomhedskanal: 2101+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                    | 4.2111+            | 4.2111+                | Ja                |
-|[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities) | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2022+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Ja |
+|[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities) | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Ja |
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ <sup>\*</sup>                    | Under gennemgang           | Under gennemgang               | Ja |
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
 |[Forskellige indstillinger for standardetiket og obligatorisk mærkning](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Ja |

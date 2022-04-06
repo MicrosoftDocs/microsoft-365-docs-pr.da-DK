@@ -1,7 +1,7 @@
 ---
 title: Slutpunktsregistrering og -svar i blokeringstilstand
 description: Få mere at slutpunktsregistrering og -svar i bloktilstand
-keywords: Microsoft Defender til slutpunkt, mde, Slutpunktsregistrering og -svar blokeret tilstand, blokering af passiv tilstand
+keywords: Microsoft Defender for Endpoint, mde, Slutpunktsregistrering og -svar blokeret tilstand, blokering af passiv tilstand
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -15,20 +15,20 @@ ms.custom:
 - next-gen
 - edr
 - admindeeplinkDEFENDER
-ms.date: 03/18/2022
+ms.date: 04/04/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 6e6bf499ab348d05cba237fa69b205cb495dccb0
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: eb40eaee9043e81331eca98c85f1467111cc37e4
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681056"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638350"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) i bloktilstand
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -48,18 +48,18 @@ ms.locfileid: "63681056"
 
 Slutpunktsregistrering og -svar i bloktilstand er integreret med [& håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md). Organisationens sikkerhedsteam får en sikkerhedsanbefaling for at Slutpunktsregistrering og -svar blokeringstilstand til, hvis det ikke allerede er aktiveret.[](tvm-security-recommendation.md)
 
-:::image type="content" source="images/edrblockmode-TVMrecommendation.png" alt-text="anbefaling om at Slutpunktsregistrering og -svar i bloktilstand.":::
+:::image type="content" source="images/edrblockmode-TVMrecommendation.png" alt-text="Anbefaling om at slå blokering Slutpunktsregistrering og -svar til" lightbox="images/edrblockmode-TVMrecommendation.png":::
 
 > [!TIP]
-> Du får den bedste beskyttelse ved at installere **[Microsoft Defender som grundlinje for Slutpunkt](configure-machines-security-baseline.md)**.
+> For at få den bedste beskyttelse skal du sørge for **[at installere Microsoft Defender for Endpoint oprindelige planer](configure-machines-security-baseline.md)**.
 
 ## <a name="what-happens-when-something-is-detected"></a>Hvad sker der, når der registreres noget?
 
-Når Slutpunktsregistrering og -svar bloktilstand er slået til, og en skadelig artefakt registreres, blokerer og afhjælper Microsoft Defender til slutpunkt den pågældende artefakt. Dit sikkerhedsteam vil få vist registreringsstatus som **Blokeret** **eller Forhindret** i [handlingscenter](respond-machine-alerts.md#check-activity-details-in-action-center) angivet som fuldførte handlinger.
+Når Slutpunktsregistrering og -svar bloktilstand er slået til, og en skadelig artefakt registreres, blokerer Microsoft Defender for Endpoint og afhjælper den pågældende artefakt. Dit sikkerhedsteam vil få vist registreringsstatus som **Blokeret** **eller Forhindret** i [handlingscenter](respond-machine-alerts.md#check-activity-details-in-action-center) angivet som fuldførte handlinger.
 
 Følgende billede viser en forekomst af uønsket software, der blev registreret og blokeret via Slutpunktsregistrering og -svar i blokeringstilstand:
 
-:::image type="content" source="images/edr-in-block-mode-detection.png" alt-text="Slutpunktsregistrering og -svar registreret noget i bloktilstand.":::
+:::image type="content" source="images/edr-in-block-mode-detection.png" alt-text="Registrering af Slutpunktsregistrering og -svar i bloktilstand" lightbox="images/edr-in-block-mode-detection.png":::
 
 
 ## <a name="enable-edr-in-block-mode"></a>Aktivér Slutpunktsregistrering og -svar i bloktilstand
@@ -93,7 +93,7 @@ I følgende tabel vises krav til Slutpunktsregistrering og -svar i bloktilstand:
 |---|---|
 |Tilladelser|Du skal have enten den globale administrator- eller sikkerhedsadministratorrolle tildelt [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal). Du kan finde flere oplysninger [under Grundlæggende tilladelser](basic-permissions.md).|
 |Operativsystem|Enheder skal køre en af følgende versioner af Windows: <br/>- Windows 11 <br/>- Windows 10 (alle versioner)<br/>- Windows Server 2022 <br/>- Windows Server 2019<br/>- Windows Server, version 1803 eller nyere<br/>- Windows Server 2016 og Windows Server 2012 R2 (med den [nye samlede klientløsning](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution-preview))<sup>[[1](#fn1)]</sup>  |
-|Microsoft Defender til Slutpunkt|Enheder skal være onboardet til Defender til Slutpunkt. Se følgende artikler: <br/>- [Minimumskrav til Microsoft Defender til slutpunkt](minimum-requirements.md)<br/>- [Onboard-enheder, og konfigurer Microsoft Defender til slutpunktsfunktioner](onboard-configure.md)<br/>- [Onboard Windows-servere til Defender for Endpoint-tjenesten](configure-server-endpoints.md)<br/>- [Ny Windows server 2012 R2- og 2016-funktionalitet i den moderne samlede løsning (Preview)](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution-preview) |
+|Microsoft Defender for Endpoint|Enheder skal være onboardet til Defender til Slutpunkt. Se følgende artikler: <br/>- [Minimumskrav til Microsoft Defender for Endpoint](minimum-requirements.md)<br/>- [Onboard enheder og konfigurer Microsoft Defender for Endpoint egenskaber](onboard-configure.md)<br/>- [Onboard Windows-servere til Defender for Endpoint-tjenesten](configure-server-endpoints.md)<br/>- [Ny Windows server 2012 R2- og 2016-funktionalitet i den moderne samlede løsning (Preview)](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution-preview) |
 |Microsoft Defender Antivirus|Enheder skal have Microsoft Defender Antivirus installeret og køre i enten aktiv eller passiv tilstand. [Bekræft Microsoft Defender Antivirus er i aktiv eller passiv tilstand](#how-do-i-confirm-microsoft-defender-antivirus-is-in-active-or-passive-mode).|
 |Cloud-leveret beskyttelse|Microsoft Defender Antivirus skal konfigureres sådan, at [beskyttelse, der leveres i skyen, er aktiveret](enable-cloud-protection-microsoft-defender-antivirus.md).|
 |Microsoft Defender Antivirus platform|Enheder skal være opdateret. For at bekræfte, at du bruger PowerShell, skal [du køre Get-MpComputerStatus-cmdlet'en](/powershell/module/defender/get-mpcomputerstatus) som administrator. I linjen **AMProductVersion** skal du se **4.18.2001.10** eller derover. <p> Du kan få mere at vide [under Administrere Microsoft Defender Antivirus opdateringer og anvende oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).|
@@ -102,7 +102,7 @@ I følgende tabel vises krav til Slutpunktsregistrering og -svar i bloktilstand:
 (<a id="fn1">1</a>) Se [Understøttes Slutpunktsregistrering og -svar bloktilstand på Windows Server 2016 og Windows Server 2012 R2?](#is-edr-in-block-mode-supported-on-windows-server-2016-and-windows-server-2012-r2)
 
 > [!IMPORTANT]
-> For at få den bedste beskyttelsesværdi skal du sørge for, at din antivirusløsning er konfigureret til at modtage regelmæssige opdateringer og vigtige funktioner, og at dine undtagelser [er konfigureret](configure-exclusions-microsoft-defender-antivirus.md). Slutpunktsregistrering og -svar i bloktilstand respekterer undtagelser, der er defineret for Microsoft Defender Antivirus, men ikke indikatorer, der er defineret [](manage-indicators.md) for Microsoft Defender til slutpunkt.
+> For at få den bedste beskyttelsesværdi skal du sørge for, at din antivirusløsning er konfigureret til at modtage regelmæssige opdateringer og vigtige funktioner, og at dine undtagelser [er konfigureret](configure-exclusions-microsoft-defender-antivirus.md). Slutpunktsregistrering og -svar bloktilstand respekterer undtagelser, der er defineret for Microsoft Defender Antivirus, men ikke indikatorer, der er defineret for Microsoft Defender for Endpoint[](manage-indicators.md).
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
@@ -114,11 +114,7 @@ Du kan også definere en udelukkelse for Microsoft Defender Antivirus. Se [Konfi
 
 ### <a name="do-i-need-to-turn-edr-in-block-mode-on-if-i-have-microsoft-defender-antivirus-running-on-devices"></a>Har jeg brug for at Slutpunktsregistrering og -svar blokeringstilstand til, hvis jeg har Microsoft Defender Antivirus kører på enheder?
 
-Det primære formål med at Slutpunktsregistrering og -svar blokeringstilstand er at afhjælpe registreringer efter brud, som er blevet overset af et antivirusprodukt, som ikke er Microsoft. Vi anbefaler dog, at Slutpunktsregistrering og -svar bloktilstand er slået til, uanset om Microsoft Defender Antivirus kører i passiv tilstand eller i aktiv tilstand.
-
-- Når Microsoft Defender Antivirus er i passiv tilstand, Slutpunktsregistrering og -svar i bloktilstand et andet lag af forsvar sammen med Microsoft Defender til slutpunkt.
-
-- Når Microsoft Defender Antivirus er i aktiv tilstand, giver Slutpunktsregistrering og -svar i bloktilstand ikke ekstra scanning, men det gør det muligt for Microsoft Defender Antivirus at udføre automatiske handlinger ved efterfølgende brud, funktionsmåde Slutpunktsregistrering og -svar registreringer.
+Det primære formål med at Slutpunktsregistrering og -svar blokeringstilstand er at afhjælpe registreringer efter brud, som er blevet overset af et antivirusprodukt, som ikke er Microsoft. Der er minimal fordel ved at aktivere Slutpunktsregistrering og -svar i bloktilstand, når Microsoft Defender Antivirus er i aktiv tilstand, da beskyttelse i realtid forventes først at registrere og afhjælpe registreringer. Vi anbefaler, at Slutpunktsregistrering og -svar i bloktilstand på slutpunkter, hvor Microsoft Defender til Antivirus kører i passiv tilstand. Slutpunktsregistrering og -svar-registreringer kan automatisk afhjælpes af [PUA-beskyttelse](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) eller af automatiserede [& afhjælpningsegenskaber](automated-investigations.md) i bloktilstand.
 
 ### <a name="will-edr-in-block-mode-affect-a-users-antivirus-protection"></a>Vil Slutpunktsregistrering og -svar blokeringstilstand påvirke en brugers antivirusbeskyttelse?
 
@@ -137,11 +133,11 @@ Skybeskyttelse er nødvendig for at aktivere funktionen på enheden. Cloud Prote
 For slutpunkter, der kører Windows 10, Windows 11, Windows Server, version 1803 eller nyere, Windows Server 2019 eller Windows Server 2022, når Microsoft Defender Antivirus er i aktiv tilstand, bruges det som det primære antivirusprogram på enheden. Når du kører i passiv tilstand, Microsoft Defender Antivirus ikke det primære antivirusprodukt. I dette tilfælde afhjælpes trusler ikke af Microsoft Defender Antivirus i realtid.
 
 > [!NOTE]
-> Microsoft Defender Antivirus kan kun køre i passiv tilstand, når enheden er onboardet til Microsoft Defender til Slutpunkt.
+> Microsoft Defender Antivirus kan kun køre i passiv tilstand, når enheden er onboardet til Microsoft Defender for Endpoint.
 
 Du kan finde flere oplysninger [Microsoft Defender Antivirus kompatibilitet.](microsoft-defender-antivirus-compatibility.md)
 
-### <a name="how-do-i-confirm-microsoft-defender-antivirus-is-in-active-or-passive-mode"></a>Hvordan kan jeg bekræfte Microsoft Defender Antivirus der er i aktiv eller passiv tilstand?
+### <a name="how-do-i-confirm-microsoft-defender-antivirus-is-in-active-or-passive-mode"></a>Hvordan gør jeg bekræfte, Microsoft Defender Antivirus er i aktiv eller passiv tilstand?
 
 Hvis du vil bekræfte Microsoft Defender Antivirus kører i aktiv eller passiv tilstand, kan du bruge Kommandoprompt eller PowerShell på en enhed, der Windows.
 
@@ -150,7 +146,7 @@ Hvis du vil bekræfte Microsoft Defender Antivirus kører i aktiv eller passiv t
 |PowerShell|1. Vælg menuen Start, begynd at skrive `PowerShell`, og åbn Windows PowerShell i resultaterne.<br/><br/>2. Skriv `Get-MpComputerStatus`.<br/><br/>3. På listen over resultater i rækken **AMRunningMode** skal du søge efter en af følgende værdier:<br/>- `Normal`<br/>- `Passive Mode`<br/><br/>Du kan få mere at vide [under Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus).|
 |Kommandoprompt|1. Vælg menuen Start, begynd at skrive`Command Prompt`, og åbn Windows Kommandoprompt i resultaterne.<br/><br/>2. Skriv `sc query windefend`.<br/><br/>3. På listen over resultater i rækken **STAT** skal du bekræfte, at tjenesten kører. |
 
-### <a name="how-do-i-confirm-that-edr-in-block-mode-is-turned-on-with-microsoft-defender-antivirus-in-passive-mode"></a>Hvordan kan jeg bekræfte, Slutpunktsregistrering og -svar blokeringstilstand er slået til med Microsoft Defender Antivirus passiv tilstand?
+### <a name="how-do-i-confirm-that-edr-in-block-mode-is-turned-on-with-microsoft-defender-antivirus-in-passive-mode"></a>Hvordan gør jeg du bekræfte, Slutpunktsregistrering og -svar blokeringstilstand er slået til, når Microsoft Defender Antivirus i passiv tilstand?
 
 Du kan bruge PowerShell til at bekræfte, Slutpunktsregistrering og -svar blokeringstilstand er slået til, når Microsoft Defender Antivirus kører i passiv tilstand.
 
@@ -187,4 +183,4 @@ Hvis du vælger at Slutpunktsregistrering og -svar i bloktilstand, kan det tage 
 
 - [Tech Community-blog: Introduktion Slutpunktsregistrering og -svar blokeringstilstand: Stoppe angreb på deres spor](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/introducing-edr-in-block-mode-stopping-attacks-in-their-tracks/ba-p/1596617)
 
-- [Blokering og inddæmmelse af funktionsmåder](behavioral-blocking-containment.md)
+- [Blokering og opbevaring af funktionsmåder](behavioral-blocking-containment.md)

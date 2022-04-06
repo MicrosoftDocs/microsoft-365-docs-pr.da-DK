@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Identity-enhedsmærker i Microsoft 365 Defender
-description: Få mere at vide om, hvordan du anvender Microsoft Defender til identitetsenhedsmærker i Microsoft 365 Defender
+title: Microsoft Defender for Identity enhedsmærker i Microsoft 365 Defender
+description: Få mere at vide om, hvordan Microsoft Defender for Identity anvender enhedsmærker i Microsoft 365 Defender
 ms.date: 06/08/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,12 +9,12 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 1d589f2eb34a66dda47532394b987bd4b00b86bf
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c960f0cc1726155e733a0e88386fa7788cfc35e0
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683269"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468055"
 ---
 # <a name="defender-for-identity-entity-tags-in-microsoft-365-defender"></a>Defender for Identity-enhedsmærker i Microsoft 365 Defender
 
@@ -23,7 +23,7 @@ ms.locfileid: "63683269"
 - Microsoft 365 Defender
 - Defender for Identity
 
-I denne artikel forklares det, [hvordan du anvender Microsoft Defender for Identity-enhedsmærker](/defender-for-identity) [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Denne artikel forklarer, hvordan [du Microsoft Defender for Identity enhedsmærker](/defender-for-identity) i [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 >[!IMPORTANT]
 >Som en del af dine Microsoft 365 Defender har nogle indstillinger og detaljer ændret sig fra deres placering i Defender for Identity-portalen. Læs oplysningerne nedenfor for at finde ud af, hvor du kan finde både de velkendte og nye funktioner.
@@ -34,11 +34,11 @@ I Microsoft 365 Defender kan du angive tre typer Defender for Identity-enhedsmæ
 
 Hvis du vil angive disse mærker <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">, Microsoft 365 Defender</a> du gå **til Indstillinger** og derefter **Identities**.
 
-![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
+:::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter under kolonnen Navn på Indstillinger side" lightbox="../../media/defender-identity/settings-identities.png":::
 
 Mærkeindstillingerne vises under **Enhedsmærker**.
 
-![Typer af mærkeindstillinger.](../../media/defender-identity/tag-settings.png)
+:::image type="content" source="../../media/defender-identity/tag-settings.png" alt-text="Ruden Enhedsmærker" lightbox="../../media/defender-identity/tag-settings.png":::
 
 Følg vejledningen nedenfor for at angive hver type mærke.
 
@@ -50,15 +50,15 @@ Du kan også manuelt markere brugere, enheder eller grupper som følsomme.
 
 1. Vælg **Følsom**. Du får derefter vist de eksisterende **følsomme brugere****, enheder** og **grupper**.
 
-    ![Følsomme enheder.](../../media/defender-identity/sensitive-entities.png)
+   :::image type="content" source="../../media/defender-identity/sensitive-entities.png" alt-text="Fanen Enheder i menuelementet Følsomme enheder" lightbox="../../media/defender-identity/sensitive-entities.png":::
 
 1. Under hver kategori skal du **vælge Tag...** for at mærke den pågældende type enhed. Under Grupper skal **du f.eks**. **vælge Tag grupper.** En rude åbnes med de grupper, du kan vælge at mærke. Hvis du vil søge efter en gruppe, skal du skrive dens navn i søgefeltet.
 
-    ![Tilføj grupper.](../../media/defender-identity/add-groups.png)
+   :::image type="content" source="../../media/defender-identity/add-groups.png" alt-text="Muligheden for at tilføje en gruppe" lightbox="../../media/defender-identity/add-groups.png":::
 
 1. Vælg din gruppe, og klik på **Tilføj markering.**
 
-    ![Tilføj markering.](../../media/defender-identity/add-selection.png)
+   :::image type="content" source="../../media/defender-identity/add-selection.png" alt-text="Indstillingen Tilføj markering" lightbox="../../media/defender-identity/add-selection.png":::
 
 ## <a name="honeytoken-tags"></a>Honeytoken-mærker
 
@@ -72,11 +72,11 @@ Du kan mærke brugere eller enheder med **mærket Honeytoken** på samme måde, 
 
 1. Under hver kategori skal du **vælge Tag...** for at mærke den pågældende type enhed. Eksempelvis skal du under **Brugere** vælge **Tag brugere.** En rude åbnes med de grupper, du kan vælge at mærke. Hvis du vil søge efter en gruppe, skal du skrive dens navn i søgefeltet.
 
-    ![Tilføj brugere.](../../media/defender-identity/add-users.png)
+   :::image type="content" source="../../media/defender-identity/add-users.png" alt-text="Muligheden for at tilføje brugere" lightbox="../../media/defender-identity/add-users.png":::
 
 1. Vælg din bruger, og klik på **Tilføj markering.**
 
-    ![Tilføj valgt bruger.](../../media/defender-identity/add-selected-user.png)
+   :::image type="content" source="../../media/defender-identity/add-selected-user.png" alt-text="Muligheden for at tilføje en valgt bruger" lightbox="../../media/defender-identity/add-selected-user.png":::
 
 ## <a name="exchange-server-tags"></a>Exchange servermærker
 
@@ -84,15 +84,15 @@ Defender for Identity opfatter Exchange-servere som aktiver med høj værdi og m
 
 1. Vælg **Exchange server**. Du får derefter vist de eksisterende enheder med navnet Exchange **servermærket**.
 
-    ![Exchange-servere.](../../media/defender-identity/exchange-servers.png)
+   :::image type="content" source="../../media/defender-identity/exchange-servers.png" alt-text="Menupunktet Exchange server" lightbox="../../media/defender-identity/exchange-servers.png":::
 
 1. Hvis du vil mærke en enhed som Exchange server, skal du vælge **Tag enheder**.  En rude åbnes med de enheder, du kan vælge at mærke. Hvis du vil søge efter en enhed, skal du skrive dens navn i søgefeltet.
 
-    ![Tilføj enheder.](../../media/defender-identity/add-devices.png)
+   :::image type="content" source="../../media/defender-identity/add-devices.png" alt-text="Muligheden for at tilføje en enhed" lightbox="../../media/defender-identity/add-devices.png":::
 
 1. Vælg din enhed, og klik **på Tilføj markering.**
 
-    ![Vælg enhed.](../../media/defender-identity/select-device.png)
+   :::image type="content" source="../../media/defender-identity/select-device.png" alt-text="Valg af en enhed" lightbox="../../media/defender-identity/select-device.png":::
 
 ## <a name="see-also"></a>Se også
 

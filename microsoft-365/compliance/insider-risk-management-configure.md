@@ -1,5 +1,5 @@
 ---
-title: Kom i gang med insider-risikostyring
+title: Kom i gang med styring af insider-risiko
 description: Konfigurer insider-risikostyring i din organisation.
 keywords: Microsoft 365, insider-risikostyring, risikostyring, overholdelse af regler og standarder
 ms.localizationpriority: medium
@@ -16,14 +16,14 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: cdd368e7e78458067b9f363d41f7931ac5a2c0cd
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 05375332df6542cd87e986bba68ef7c6753f8e36
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754214"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64637956"
 ---
-# <a name="get-started-with-insider-risk-management"></a>Kom i gang med insider-risikostyring
+# <a name="get-started-with-insider-risk-management"></a>Kom i gang med styring af insider-risiko
 
 Brug insider-politikker til risikostyring til at identificere risikabelt aktivitet og administrationsværktøjer til at handle på risikoadvarsler i din organisation. Udfør følgende trin for at konfigurere forudsætninger og konfigurere en insider-politik for risikostyring.
 
@@ -36,9 +36,9 @@ Du kan finde flere oplysninger om, hvordan insider-risikopolitikker kan hjælpe 
 
 Før du går i gang med insider-risikostyring, skal du [bekræfte Microsoft 365 dit abonnement](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) og eventuelle tilføjelser. For at få adgang til og bruge Insider Risk Management skal din organisation have et af følgende abonnementer eller tilføjelser:
 
-- Microsoft 365 E5/A5/G5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 E3/A3/G3 -abonnement + Microsoft 365 E5/A5/G5 Compliance-tilføjelsesprogrammet
-- Microsoft 365 E3/A3/G3-abonnement + Microsoft 365 E5/A5/G5 Insider Risk Management-tilføjelsesprogrammet
+- Microsoft 365 E5/A5/F5/G5-abonnement (betalt version eller prøveversion)
+- Microsoft 365 E3/A3/F3/G3 + tilføjelsesprogrammet Microsoft 365 E5/A5/F5/G5 Compliance
+- Microsoft 365 E3/A3/F3/G3 -abonnement + Microsoft 365 E5/A5/F5/G5 Insider Risk Management-tilføjelsesprogrammet
 - Office 365 E3 -abonnement + Enterprise Mobility and Security E3 + Microsoft 365 E5 Overholdelse-tilføjelsesprogrammet
 
 Brugere, der er inkluderet i politikker for insider-risikostyring, skal tildeles en af licenserne ovenfor.
@@ -221,13 +221,13 @@ Insider-risikostyring understøtter import af bruger- og logdata fra fysiske kon
 
 Se artiklen [Konfigurer en](import-physical-badging-data.md) forbindelse for at importere fysiske ugyldige data, hvis du vil have en trinvis vejledning til konfiguration af en Fysisk ugyldig forbindelse for organisationen. Når du har konfigureret forbindelsen, skal du vende tilbage til disse konfigurationstrin.
 
-### <a name="configure-microsoft-defender-for-endpoint-optional"></a>Konfigurer Microsoft Defender til slutpunkt (valgfrit)
+### <a name="configure-microsoft-defender-for-endpoint-optional"></a>Konfigurer Microsoft Defender for Endpoint (valgfrit)
 
-[Microsoft Defender til Slutpunkt er en](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) sikkerhedsplatform til virksomheder, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler. For at få bedre overblik over sikkerhedsbrud i organisationen kan du importere og filtrere Defender for Endpoint-beskeder for aktiviteter, der bruges i politikker, der er oprettet ud fra politikskabeloner til insider-risikostyringssikkerhedsbrud.
+[Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) er en sikkerhedsplatform til virksomheder, der er udviklet med henblik på at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler. For at få bedre overblik over sikkerhedsbrud i organisationen kan du importere og filtrere Defender for Endpoint-beskeder for aktiviteter, der bruges i politikker, der er oprettet ud fra politikskabeloner til insider-risikostyringssikkerhedsbrud.
 
-Hvis du opretter sikkerhedsfejlspolitikker, skal du konfigurere Microsoft Defender til slutpunkt i din organisation og aktivere Defender for Endpoint for insider-integration af risikostyring i Defender Security Center for at kunne importere sikkerhedsbrudsbeskeder. Du kan finde flere oplysninger om krav i [artiklen Minimumkrav til Microsoft Defender til](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) slutpunkt.
+Hvis du opretter sikkerhedsfejlspolitikker, skal du have Microsoft Defender for Endpoint konfigureret i din organisation og aktivere Defender for Endpoint for insider-integration af risikostyring i Defender Security Center for at kunne importere sikkerhedsbrudsbeskeder. Du kan finde flere oplysninger om krav [i artiklen Minimumskrav til Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) artikel.
 
-Se artiklen [Konfigurer avancerede funktioner i Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/advanced-features#share-endpoint-alerts-with-microsoft-compliance-center) for en trinvis vejledning til konfiguration af Defender til Endpoint for integration af insider-risikostyring. Når du har konfigureret Microsoft Defender til slutpunkt, skal du vende tilbage til disse konfigurationstrin.
+Se artiklen [Konfigurer avancerede funktioner i Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/advanced-features#share-endpoint-alerts-with-microsoft-compliance-center) for en trinvis vejledning til konfiguration af Defender til Endpoint for integration af insider-risikostyring. Når du har konfigureret konfigurationen, Microsoft Defender for Endpoint du vende tilbage til disse konfigurationstrin.
 
 ## <a name="step-5-required-configure-insider-risk-settings"></a>Trin 5 (påkrævet): Konfigurer indstillinger for insider-risiko
 
@@ -247,7 +247,7 @@ Inden du konfigurerer en politik, skal du definere følgende insider-risikoindst
     - [Udeladelse af filtyper](insider-risk-management-settings.md#file-type-exclusions)
     - [Minimum antal daglige begivenheder for at øge scoren for usædvanlig aktivitet](insider-risk-management-settings.md#minimum-number-of-daily-events-to-boost-score-for-unusual-activity)
     - [Besked om lydstyrkeniveau](insider-risk-management-settings.md#alert-volume)
-    - [Beskedstatus for Microsoft Defender til Slutpunkt](insider-risk-management-settings.md#microsoft-defender-for-endpoint-preview)
+    - [Microsoft Defender for Endpoint beskedstatus](insider-risk-management-settings.md#microsoft-defender-for-endpoint-preview)
     - [Domæneindstillinger](insider-risk-management-settings.md#domains)
 6. På siden **Eksportér beskeder skal du** aktivere eksport af insider risk alert-oplysninger ved hjælp Office 365 Administrations-API'er, hvis det er nødvendigt.
 7. På siden **Prioritetsbrugergrupper** skal du oprette en prioriteret brugergruppe og tilføje brugere, hvis de ikke blev oprettet **i trin 3**.

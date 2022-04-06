@@ -1,5 +1,5 @@
 ---
-title: Mailanalyse i undersøgelser af Microsoft Defender til Office 365
+title: Mailanalyse i undersøgelser vedrørende Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 author: dansimp
@@ -21,19 +21,19 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5737a2d1974805dc55b85b7ff8f4117cbc1da898
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 49a244e948da14e328ab3db64dc495ab6e5d6dd4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63596001"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468011"
 ---
-# <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>Mailanalyse i undersøgelser af Microsoft Defender til Office 365
+# <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>Mailanalyse i undersøgelser vedrørende Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Under den automatiserede undersøgelse af beskeder analyserer Microsoft Defender for Office 365 den oprindelige mail for trusler og identificerer andre mails, der er relateret til den oprindelige mail og potentielt en del af et angreb. Denne analyse er vigtig, fordi mailangreb sjældent består af en enkelt mail.
@@ -74,7 +74,7 @@ For at sikre, at undersøgelseshandlinger er opdaterede, vil en undersøgelse me
 
 Mailbaserede beviser i **fanen Beviser og Svar** for en hændelse viser nu følgende oplysninger.
 
-:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example.png" alt-text="Eksempel på mailanalyseoplysninger i Beviser og Svar." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example.png":::
+:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example.png" alt-text="Oplysningerne om mailanalyse i beviser og svar" lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example.png":::
 
 Fra de nummereredeforklaringer i figuren:
 
@@ -91,7 +91,7 @@ Fra de nummereredeforklaringer i figuren:
 
 For mails eller mailklynger  i fanen Enheder for en hændelse betyder **Forhindret, at** der ikke var nogen skadelige mails i postkassen for dette element (mail eller klynge). Her er et eksempel.
 
-:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png" alt-text="Eksempel på en forhindret mail." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png":::
+:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png" alt-text="En forhindret mail." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png":::
 
 I dette eksempel er mailen skadelig, men ikke i en postkasse.
 

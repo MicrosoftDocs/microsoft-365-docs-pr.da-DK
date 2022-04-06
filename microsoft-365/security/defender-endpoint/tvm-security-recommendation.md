@@ -1,7 +1,7 @@
 ---
 title: Sikkerhedsanbefalinger af Håndtering af trusler og sikkerhedsrisici
 description: Få konkrete sikkerhedsanbefalinger, der er prioriteret efter trussel, sandsynligheden for, at de bliver brudt, og værdi, Håndtering af trusler og sikkerhedsrisici.
-keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender til Endpoint tvm sikkerheds anbefaling, cybersecurity anbefaling, handlings løsning sikkerhedsanbefaling
+keywords: Håndtering af trusler og sikkerhedsrisici, Microsoft Defender for Endpoint til tvm-sikkerhed, anbefaling om cybersikkerhed, sikkerheds anbefaling, der kan handles på
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 57c1909ff54fea6b9151e212f465abb75bab48f8
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e7ff7a98e8550996068686b5b0805ea3a72cd6ae
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63603114"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468561"
 ---
 # <a name="security-recommendations---threat-and-vulnerability-management"></a>Sikkerhedsanbefalinger – Håndtering af trusler og sikkerhedsrisici
 
@@ -29,18 +29,18 @@ ms.locfileid: "63603114"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Trussel og håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Cybertrusler, der identificeres i din organisation, er tilknyttet brugbare sikkerhedsanbefalinger og prioriteret af deres virkning. Prioriteret anbefalinger hjælper med at afkorte tiden til at afhjælpe eller afhjælpe sårbarheder og fremme overholdelse af regler og standarder.
 
 Hver sikkerhedsanbefaling omfatter afhjælpningstrin, der kan afhjælpes. Som en hjælp til opgavestyring kan anbefalingen også sendes ved hjælp af Microsoft Intune og Microsoft Endpoint Configuration Manager. Når trusselsbilledet ændrer sig, ændres anbefalingen også, da den løbende indsamler oplysninger fra dit miljø.
 
 > [!TIP]
-> Hvis du vil have mails om nye sikkerhedsrisikohændelser, skal [du se Konfigurer mailbeskeder om sikkerhedsrisiko i Microsoft Defender til Endpoint](configure-vulnerability-email-notifications.md)
+> Hvis du vil have mails om nye sikkerhedsrisikohændelser, skal [du se Konfigurer mailbeskeder om sikkerhedsrisiko i Microsoft Defender for Endpoint](configure-vulnerability-email-notifications.md)
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 
@@ -70,7 +70,8 @@ Gå til **navigationsmenuen til administration af** sikkerhedsrisiko, og **vælg
 
 I en given dag som sikkerhedsadministrator kan du se nærmere på [Håndtering af trusler og sikkerhedsrisici-dashboardet](tvm-dashboard-insights.md) for at se din [eksponeringsscore](tvm-exposure-score.md) side om side med [din Microsoft Secure Score for Enheder](tvm-microsoft-secure-score-devices.md). Målet er **at mindske** organisationens eksponering for sårbarheder og øge organisationens  enhedssikkerhed, så den er mere robust over for cyberangreb. Den øverste liste med sikkerhedsanbefalinger kan hjælpe dig med at opnå dette mål.
 
-![Eksempel på kortet med Topsikkerhedsanbefalinger med fire sikkerhedsanbefalinger.](images/top-security-recommendations350.png)
+:::image type="content" source="images/top-security-recommendations350.png" alt-text="Kortet Vigtigste sikkerhedsanbefalinger" lightbox="images/top-security-recommendations350.png":::
+
 
 De øverste sikkerhedsanbefalinger viser de forbedrede muligheder, der er prioriteret ud fra de vigtige faktorer, der er nævnt i forrige afsnit – trusler, sandsynlighed for brud og værdi. Hvis du vælger en anbefaling, kommer du til siden med sikkerhedsanbefalinger med flere oplysninger.
 
@@ -81,9 +82,9 @@ Få vist anbefalinger, antallet af fundne resultater, relaterede komponenter, tr
 Farven på grafen **Oversatte enheder** ændres i løbet af tendensen. Hvis antallet af enheder, der vises, stiger, ændres farven til rød. Hvis der er et fald i antallet af enheder, der vises, ændres grafens farve til grøn.
 
 > [!NOTE]
-> Trussels- håndtering af sikkerhedsrisici viser enheder, der blev brugt for op til **30 dage** siden. Dette er forskelligt fra resten af Microsoft Defender til slutpunkt, hvor hvis en enhed ikke har været i brug i mere end syv dage, har den statussen "Inaktiv".
+> Trussels- håndtering af sikkerhedsrisici viser enheder, der blev brugt for op til **30 dage** siden. Dette er forskelligt fra resten af Microsoft Defender for Endpoint, hvor hvis en enhed ikke har været i brug i mere end syv dage, har den statussen "Inaktiv".
 
-![Eksempel på landingssiden for sikkerhedsanbefalinger.](images/tvmsecrec-updated.png)
+:::image type="content" source="images/tvmsecrec-updated.png" alt-text="Landingssiden for sikkerhedsanbefalinger" lightbox="images/tvmsecrec-updated.png":::
 
 ### <a name="icons"></a>Ikoner
 
@@ -97,7 +98,7 @@ Nyttige ikoner gør også hurtigt opmærksom på følgende:
 
 Vælg den sikkerhedsanbefaling, du vil undersøge eller behandle.
 
-:::image type="content" alt-text="Eksempel på en pop op-side med en sikkerhedsanbefaling." source="images/secrec-flyouteolsw.png" lightbox="images/secrec-flyouteolsw.png":::
+:::image type="content" source="images/secrec-flyouteolsw.png" alt-text="Pop op-siden med en sikkerhedsanbefaling" lightbox="images/secrec-flyouteolsw.png":::
 
 I pop op-menuen kan du vælge en af følgende indstillinger:
 
@@ -122,7 +123,7 @@ Hvis der er et stort spring i antallet af enheder, der eksponeres, eller en skar
 
 ## <a name="request-remediation"></a>Anmod om afhjælpning
 
-Afhjælpnings Håndtering af trusler og sikkerhedsrisici broer mellem sikkerhed og it-administratorer via arbejdsprocessen for afhjælpningsanmodninger. Sikkerhedsadministratorer som dig kan anmode it-administratoren om at afhjælpe en sikkerhedsrisiko fra siden **med anbefaling om sikkerhed** til Intune. [Få mere at vide om afhjælpningsindstillinger](tvm-remediation.md)
+Afhjælpnings Håndtering af trusler og sikkerhedsrisici broer mellem sikkerhed og it-administratorer via arbejdsprocessen for afhjælpningsanmodninger. Sikkerhedsadministratorer som dig kan anmode it-administratoren om at afhjælpe en sikkerhedsrisiko fra siden **med** anbefaling om sikkerhed til at Intune. [Få mere at vide om afhjælpningsindstillinger](tvm-remediation.md)
 
 ### <a name="how-to-request-remediation"></a>Sådan anmoder du om afhjælpning
 
@@ -140,7 +141,7 @@ Når der oprettes en undtagelse for en anbefaling, er anbefalingen ikke længere
 
 Vælg en sikkerhedsanbefaling, du vil oprette en undtagelse for, og vælg derefter **Undtagelsesindstillinger**.
 
-![Viser, hvor knappen for "undtagelsesindstillinger" er placeringen i et pop op-pop op-billede med en sikkerhedsanbefaling.](images/tvm-exception-options.png)
+:::image type="content" source="images/tvm-exception-options.png" alt-text="Knappen indstillinger for undtagelse i pop op-menuen med sikkerhedsanbefaling" lightbox="images/tvm-exception-options.png":::
 
 Udfyld formularen, og send. Hvis du vil have vist alle dine undtagelser (nuværende og tidligere), [](tvm-remediation.md) skal du gå til siden Afhjælpning under menuen **Administration af trussel &-sikkerhedsrisiko** og vælge  fanen Undtagelser. Få mere at vide om, hvordan du opretter en [undtagelse](tvm-exception.md#create-an-exception)
 
@@ -152,7 +153,7 @@ Du kan rapportere en falsk positiv, når der vises uklare, unøjagtige, ufuldst�
 
 2. Vælg de tre prik ud for den sikkerhedsanbefaling, du vil rapportere, og vælg **derefter Rapport unøjagtighed**.
 
-    ![Viser, hvor knappen "Rapport unøjagtighed" er i et pop op-pop op-billede med en sikkerhedsanbefaling.](images/report-inaccuracy500.png)
+   :::image type="content" source="images/report-inaccuracy500.png" alt-text="Knappen Rapport unøjagtighed" lightbox="images/report-inaccuracy500.png":::
 
 3. I pop op-ruden skal du vælge kategorien unøjagtighed i rullemenuen, udfylde din mailadresse og oplysninger om unøjagtigheden.
 

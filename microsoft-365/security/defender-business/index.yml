@@ -14,13 +14,13 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.date: 03/10/2022
-  ms.openlocfilehash: e2b38e4900b1b3509b30751e72496581bc5f3541
-  ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
+  ms.date: 04/04/2022
+  ms.openlocfilehash: 996b96f7df1ccd89a62bdeafb19035832e856079
+  ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/24/2022
-  ms.locfileid: "64403633"
+  ms.lasthandoff: 04/04/2022
+  ms.locfileid: "64638262"
 landingContent:
 - title: Oversigt
   linkLists:
@@ -113,6 +113,6 @@ landingContent:
     - text: Fejlfinding
       url: mdb-troubleshooting.yml
     - text: Microsoft 365 Business Premium
-      url: /microsoft-365/business-premium/index.md
+      url: /microsoft-365/business-premium/
     - text: Microsoft 365 Lighthouse
       url: /microsoft-365/lighthouse/m365-lighthouse-overview

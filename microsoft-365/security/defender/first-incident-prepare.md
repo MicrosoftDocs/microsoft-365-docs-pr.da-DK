@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: c31a6e43e66b6e1ffeace75ac2d8419cc764174f
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 92b7efdad61a4738310d5fb469400033f78363a8
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499127"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570145"
 ---
 # <a name="prepare-your-security-posture-for-your-first-incident"></a>Forbered din sikkerhed på din første hændelse
 
@@ -86,8 +86,6 @@ Du kan implementere anbefalingerne fra en fremspirende trussel for at styrke din
 Sørg for, at du har tid i din tidsplan til [regelmæssigt at tjekke afsnittet Threat Analytics](threat-analytics.md) på Microsoft 365 Defender-portalen. Se eksemplet [med sikkerhedshandlinger for at få Microsoft 365 Defender](incidents-overview.md#example-security-operations-for-microsoft-365-defender) få mere at vide.
 
 ## <a name="next-step"></a>Næste trin
-
-[![Trin 1: Lær, hvordan du triager og analyserer hændelser.](../../media/first-incident-overview/first-incident-path-step1.png)](first-incident-analyze.md)
 
 Få mere at vide [om, hvordan du triager og analyserer hændelser](first-incident-analyze.md).
 

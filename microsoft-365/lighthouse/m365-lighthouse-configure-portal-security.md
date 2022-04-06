@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du konfigurerer portalsikkerhed.
-ms.openlocfilehash: 4d12755ca1b02988dff3f5ba6be6dd0d8da172ad
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 532ce9d6e90ea4d502c6898a105702d525f05a1b
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594746"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632683"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Konfigurere Microsoft 365 Lighthouse-portalens sikkerhed
 
@@ -39,11 +39,11 @@ Når brugere første gang får adgang til Lighthouse, bliver de bedt om at konfi
 
 Rollebaseret adgangskontrol giver adgang til ressourcer eller oplysninger baseret på brugerroller. Adgang til kundelejerdata og indstillinger i Lighthouse er begrænset til bestemte roller fra Cloud Solution Provider (CSP)-programmet. Hvis du vil konfigurere RBAC-roller i Lighthouse, anbefaler vi, at du bruger GDAP (Granular Delegated Admin Privileges) til at implementere granulartildelinger for brugere. Delegerede administratorrettigheder (DAP) er stadig påkrævet, for at lejeren kan komme i gang, men kun GDAP-kunder vil snart kunne onboarde uden at være afhængige af DAP. GDAP-tilladelser har forrang, når DAP og GDAP anvendes for en kunde. 
 
-Se Oversigt over tilladelser i Microsoft 365 Lighthouse for at [komme i gang med GDAP](m365-lighthouse-overview-of-permissions.md).
+Hvis du vil konfigurere en GDAP-relation, [skal du se Få detaljerede administratortilladelser til at administrere en kundes tjeneste](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). Hvis du vil have mere at vide om, hvilke roller vi anbefaler, skal [du se Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
 MSP-teknikere kan også få adgang til Lighthouse ved hjælp af administratoragent- eller Helpdesk-agentroller via Delegerede administratorrettigheder (DAP).
 
-For ikke-kundelejerrelaterede handlinger i Lighthouse (f.eks. onboarding, deaktivering/genaktivering af kunden, administration af mærker, gennemgang af logfiler) skal MSP-teknikere have en tildelt rolle i partnerlejeren. Linket i den forrige artikel indeholder oplysninger om roller og deres tilladelser i Fyrtårn.
+For ikke-kundelejerrelaterede handlinger i Lighthouse (f.eks. onboarding, deaktivering/genaktivering af kunden, administration af mærker, gennemgang af logfiler) skal MSP-teknikere have en tildelt rolle i partnerlejeren. Se [Oversigt over tilladelser i Microsoft 365 Lighthouse, hvis](m365-lighthouse-overview-of-permissions.md) du vil have mere at vide om partnerlejerroller.
 
 ## <a name="set-up-azure-ad-privileged-identity-management-pim"></a>Konfigurer Azure AD Privileged Identity Management (PIM)
 

@@ -16,18 +16,18 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 5ad0d64ff2f296d0e8282afb02cbe7fc2bb21470
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 1c5177946ff3d54ab64c78e9013a8e0c07b0fd11
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593822"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468121"
 ---
 # <a name="microsoft-defender-antivirus-in-the-windows-security-app"></a>Microsoft Defender Antivirus i Windows Sikkerhed appen
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 I Windows 10 version 1703 og nyere er Windows Defender en del af Windows Sikkerhed.
 
@@ -42,11 +42,11 @@ Indstillinger, der tidligere var en del af Windows Defender-klienten og hoved Wi
 
 Se artiklen [Windows Sikkerhed, hvis](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) du vil have mere at vide Windows andre sikkerhedsfunktioner, der kan overvåges i appen.
 
-Appen Windows Sikkerhed er en klientgrænseflade på Windows 10, version 1703 og nyere. Det er ikke den Microsoft 365 Defender, der bruges til at gennemse og administrere [Microsoft Defender til Slutpunkt](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
+Appen Windows Sikkerhed er en klientgrænseflade på Windows 10, version 1703 og nyere. Det er ikke den Microsoft 365 Defender, der bruges til at gennemse og administrere [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
 ## <a name="review-virus-and-threat-protection-settings-in-the-windows-security-app"></a>Gennemse indstillingerne for virus- og trusselsbeskyttelse i Windows Sikkerhed appen
 
-:::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Indstillinger for virus- og trusselsbeskyttelse Windows Sikkerhed appen.":::
+:::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Indstillinger for virus- og trusselsbeskyttelse Windows Sikkerhed appen" lightbox="../../media/wdav-protection-settings-wdsc.png":::
 
 1. Åbn Windows Sikkerhed-appen ved at klikke på skjoldet på proceslinjen eller søge i menuen Start efter **Windows Sikkerhed**.
 
@@ -55,7 +55,7 @@ Appen Windows Sikkerhed er en klientgrænseflade på Windows 10, version 1703 og
 I de følgende afsnit beskrives det, hvordan du udfører nogle af de mest almindelige opgaver, når du gennemser eller interagerer med den trusselsbeskyttelse, der leveres Microsoft Defender Antivirus i Windows Sikkerhed-appen.
 
 > [!NOTE]
-> Hvis disse indstillinger er konfigureret og installeret ved hjælp Gruppepolitik, bliver de indstillinger, der er beskrevet i dette afsnit, nedtonet og utilgængelige til brug på individuelle slutpunkter. Ændringer, der er foretaget Gruppepolitik et Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger. I [emnet Konfigurer slutbrugerinteraktion med Microsoft Defender Antivirus](configure-end-user-interaction-microsoft-defender-antivirus.md) beskrives det, hvordan indstillinger for tilsidesættelse af lokal politik kan konfigureres.
+> Hvis disse indstillinger er konfigureret og installeret ved hjælp af Gruppepolitik, bliver de indstillinger, der er beskrevet i dette afsnit, nedtonet og utilgængelige til brug på individuelle slutpunkter. Ændringer, der er foretaget via Gruppepolitik-objekt, skal først installeres til individuelle slutpunkter, før indstillingen opdateres Windows Indstillinger. I [emnet Konfigurer slutbrugerinteraktion med Microsoft Defender Antivirus](configure-end-user-interaction-microsoft-defender-antivirus.md) beskrives det, hvordan indstillinger for tilsidesættelse af lokal politik kan konfigureres.
 
 ## <a name="run-a-scan-with-the-windows-security-app"></a>Kør en scanning med Windows Sikkerhed appen
 
@@ -67,7 +67,7 @@ I de følgende afsnit beskrives det, hvordan du udfører nogle af de mest almind
 
 ## <a name="review-the-security-intelligence-update-version-and-download-the-latest-updates-in-the-windows-security-app"></a>Gennemse sikkerheds intelligence-opdateringsversionen, og download de seneste opdateringer i Windows Sikkerhed appen
 
-:::image type="content" source="../../media/wdav-wdsc-defs.png" alt-text="Sikkerhedsintelligens versionsnummer.":::
+:::image type="content" source="../../media/wdav-wdsc-defs.png" alt-text="Sikkerhedsintelligens versionsnummer" lightbox="../../media/wdav-wdsc-defs.png":::
 
 1. Åbn appen Windows Sikkerhed ved at søge efter Sikkerhed i menuen *Start, og* **vælg Windows Sikkerhed.**
 
