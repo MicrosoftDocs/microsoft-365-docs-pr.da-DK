@@ -17,16 +17,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan du kan bruge karantænepolitikker til at styre, hvad brugerne kan gøre for meddelelser, der er sat i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5133b98609c29e54361b8fe108e8810858f0d8c8
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 0e5f1ea75a24d84f0b6d6b9e003a0123928ac49a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467109"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682829"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitikker
 
-Karantænepolitikker (tidligere kaldet karantænemærker _) i_ Exchange Online Protection (EOP) og Microsoft Defender for Office 365 giver administratorer mulighed for at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne, baseret på, hvorfor meddelelsen var i karantæne.
+Karantænepolitikker (tidligere kaldet karantænemærker _) i_ Exchange Online Protection (EOP) og Microsoft Defender til Office 365 giver administratorer mulighed for at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne, baseret på, hvorfor meddelelsen var i karantæne.
 
 Traditionelt har brugere fået tilladelses- eller afvist niveauer for interaktivitet for meddelelser, der er sat i karantæne, baseret på, hvorfor meddelelsen blev sat i karantæne. Brugere kan f.eks. få vist og frigive meddelelser, der er sat i karantæne af antispamfiltrering som spam eller massemails, men de kan ikke få vist eller slippe meddelelser, der var i karantæne, så meget phishing eller malware er i karantæne.
 
@@ -193,7 +193,7 @@ I _understøttede_ beskyttelsesfunktioner, som sætter mails i karantæne, kan d
 |Funktion|Understøttes karantænepolitikker?|Standardkarantænepolitikker anvendt|
 |---|:---:|---|
 |[Antispampolitikker](configure-your-spam-filter-policies.md): <ul><li>**Spam** (_SpamAction_)</li><li>**Spam med høj tillid** (_HighConfidenceSpamAction_)</li><li>**Phishing** (_PhishSpamAction_)</li><li>**Phishing med høj tillid** (_HighConfidencePhishAction_)</li><li>**Masse** (_BulkSpamAction_)</li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>AdminOnlyAccessPolicy (Ingen adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li></ul>|
-|Antiphishing-politikker: <ul><li>[Spoof intelligence protection](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Repræsentationsbeskyttelse i Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**Hvis meddelelsen registreres som en efterligning af en bruger** (_TargetedUserProtectionAction_)</li><li>**Hvis meddelelsen registreres som et efterligning af domæne** (_TargetedDomainProtectionAction_)</li><li>**Hvis postkasseintelligens registrerer og efterligner en bruger** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>Repræsentationsbeskyttelse:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li></ul></li></ul>|
+|Antiphishing-politikker: <ul><li>[Spoof intelligence protection](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Repræsentationsbeskyttelse i Defender til Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**Hvis meddelelsen registreres som en efterligning af en bruger** (_TargetedUserProtectionAction_)</li><li>**Hvis meddelelsen registreres som et efterligning af domæne** (_TargetedDomainProtectionAction_)</li><li>**Hvis postkasseintelligens registrerer og efterligner en bruger** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>Repræsentationsbeskyttelse:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li></ul></li></ul>|
 |[Antimalwarepolitikker](configure-anti-malware-policies.md): Alle registrerede meddelelser er altid i karantæne.|Ja|AdminOnlyAccessPolicy (Ingen adgang)|
 |[Pengeskab beskyttelse af vedhæftede filer](safe-attachments.md): <ul><li>Mails med vedhæftede filer, der er sat i karantæne som malware Pengeskab politikker for vedhæftede filer (_Aktivér_ og _handling_)</li><li>Filer, der er sat i karantæne [som malware, Pengeskab vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Ja</li><li>Nej</li></ul>|<ul><li>AdminOnlyAccessPolicy (Ingen adgang)</li><li>i/t</li></ul>|
 |[Regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kaldet transportregler) med handlingen: **Levere meddelelsen til den tilknyttede karantæne** (_karantæne_).|Nej|i/t|
@@ -225,7 +225,7 @@ Standardkarantænepolitikker, foruddefinerede tilladelsesgrupper og tilladelser 
 
    **Bemærk**! Når du opretter en ny politik, angiver en  tom værdi for Vælg karantænepolitik standardkarantænepolitikken for den pågældende beslutning. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantænepolitiknavne som beskrevet i den forrige tabel.
 
-   :::image type="content" source="../../media/quarantine-tags-in-anti-spam-policies.png" alt-text="Valg for karantænepolitik i en antispampolitik" lightbox="../../media/quarantine-tags-in-anti-spam-policies.png":::
+   ![An karantæne af politikvalg i en antispampolitik.](../../media/quarantine-tags-in-anti-spam-policies.png)
 
 Alle instruktioner til oprettelse og ændring af antispampolitikker er beskrevet i [Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md).
 
@@ -276,7 +276,7 @@ Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-HostedConten
 
 ### <a name="anti-phishing-policies"></a>Antiphishing-politikker
 
-Efterlignet intelligens er tilgængelig i EOP og Defender for Office 365. Bruger efterligningsbeskyttelse, domæneefterligning og postkasseintelligens er kun tilgængelige i Defender for Office 365. Du kan finde flere oplysninger [i Antiphishing-politikker Microsoft 365](set-up-anti-phishing-policies.md).
+Spoof-intelligens er tilgængelig i EOP og Defender Office 365. Bruger efterligningsbeskyttelse, domæneefterligning og postkasseintelligens er kun tilgængelig i Defender Office 365. Du kan finde flere oplysninger [i Antiphishing-politikker Microsoft 365](set-up-anti-phishing-policies.md).
 
 1. I Microsoft 365 Defender [skal](https://security.microsoft.com) du gå til **& politikker** \> for **samarbejde & regler** \>  \> for trussel **mod phishing** i **sektionen** Politikker.
 
@@ -305,12 +305,12 @@ Efterlignet intelligens er tilgængelig i EOP og Defender for Office 365. Bruger
 
    **Bemærk**! Når du opretter en ny politik, angiver en  tom værdi for Anvend karantænepolitik standardkarantænepolitikken for den pågældende handling. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantænepolitiknavne som beskrevet i den forrige tabel.
 
-   :::image type="content" source="../../media/quarantine-tags-in-anti-phishing-policies.png" alt-text="Valg for karantænepolitik i en antiphishingpolitik" lightbox="../../media/quarantine-tags-in-anti-phishing-policies.png":::
+   ![An karantæne af politikvalg i en antiphishingpolitik.](../../media/quarantine-tags-in-anti-phishing-policies.png)
 
 Du kan finde komplette instruktioner om oprettelse og ændring af antiphishing-politikker i følgende emner:
 
 - [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)
-- [Konfigurer antiphishing-politikker i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
+- [Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)
 
 #### <a name="anti-phishing-policies-in-powershell"></a>Antiphishing-politikker i PowerShell
 
@@ -435,7 +435,7 @@ Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-MalwareFilte
 
    **Bemærk**! Når du opretter en ny politik, angiver **en tom** politikværdi for Karantæne standardkarantænepolitikken. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardpolitiknavn for karantæne, sådan som det er beskrevet i den forrige tabel.
 
-Fulde instruktioner til oprettelse og redigering Pengeskab Politikker for vedhæftede filer er beskrevet i Konfigurer [Pengeskab Politikker](set-up-safe-attachments-policies.md) for vedhæftede filer Microsoft Defender for Office 365.
+Fulde instruktioner til oprettelse og redigering Pengeskab Politikker for vedhæftede filer er beskrevet i [Konfigurer Pengeskab Politikker for vedhæftede filer i Microsoft Defender til Office 365](set-up-safe-attachments-policies.md).
 
 #### <a name="safe-attachments-policies-in-powershell"></a>Pengeskab politikker for vedhæftede filer i PowerShell
 
@@ -493,7 +493,7 @@ De globale indstillinger for karantænepolitikker giver dig mulighed for at tilp
 
      Følgende skærmbillede viser det tilpassede viste navn i en besked om karantæne:
 
-     :::image type="content" source="../../media/quarantine-tags-esn-customization-display-name.png" alt-text="Et tilpasset afsendernavn i en besked om karantæne" lightbox="../../media/quarantine-tags-esn-customization-display-name.png":::
+     ![Et tilpasset afsendervisningsnavn i en besked i karantæne.](../../media/quarantine-tags-esn-customization-display-name.png)
 
    - **Ansvarsfraskrivelse**: Føj en brugerdefineret ansvarsfraskrivelse til bunden af meddelelser i karantæne. Den oversatte tekst, **En ansvarsfraskrivelse fra din organisation:** medtages altid først efterfulgt af den tekst, du angiver.
 
@@ -501,19 +501,19 @@ De globale indstillinger for karantænepolitikker giver dig mulighed for at tilp
 
      Følgende skærmbillede viser den tilpassede ansvarsfraskrivelse i en karantænemeddelelse:
 
-     :::image type="content" source="../../media/quarantine-tags-esn-customization-disclaimer.png" alt-text="En brugerdefineret ansvarsfraskrivelse nederst i en besked om karantæne" lightbox="../../media/quarantine-tags-esn-customization-disclaimer.png":::
+     ![En brugerdefineret ansvarsfraskrivelse nederst i en besked om karantæne.](../../media/quarantine-tags-esn-customization-disclaimer.png)
 
    - **Vælg sprog**: Meddelelser om karantæne lokaliseres allerede baseret på modtagerens sprogindstillinger. Du kan angive brugerdefineret tekst på forskellige sprog for **værdierne Vist navn** og **Ansvarsfraskrivelse** .
 
      Vælg mindst ét sprog fra det første sprogfelt, og klik derefter på **Tilføj**. Du kan markere flere sprog ved at klikke **på** Tilføj efter hvert sprog. Et sektionssprogfelt viser alle de sprog, du har valgt:
 
-     :::image type="content" source="../../media/quarantine-tags-esn-customization-selected-languages.png" alt-text="De valgte sprog i det andet sprogfelt i de globale indstillinger for meddelelser om karantæne i karantænepolitikker" lightbox="../../media/quarantine-tags-esn-customization-selected-languages.png":::
+     ![Valgte sprog i det andet sprogfelt i de globale indstillinger for meddelelser om karantæne i karantænepolitikker.](../../media/quarantine-tags-esn-customization-selected-languages.png)
 
    - **Brug mit firmalogo**: Vælg denne indstilling for at erstatte Microsoft-standardlogoet, der bruges øverst i karantænemeddelelser. Før du gør dette, skal du følge vejledningen i Tilpasse Microsoft 365 [til organisationen for at](../../admin/setup/customize-your-organization-theme.md) overføre dit brugerdefinerede logo.
 
      Følgende skærmbillede viser et brugerdefineret logo i en besked om karantæne:
 
-     :::image type="content" source="../../media/quarantine-tags-esn-customization-logo.png" alt-text="Et brugerdefineret logo i en besked om karantæne" lightbox="../../media/quarantine-tags-esn-customization-logo.png":::
+     ![Et brugerdefineret logo i en besked om karantæne.](../../media/quarantine-tags-esn-customization-logo.png)
 
    - **Send beskeder om spam til slutbruger hver (dage)**: Vælg hyppigheden for beskeder i karantæne.
 
@@ -648,14 +648,14 @@ Hvis karantænepolitikken tildeler **tilladelsen Begrænset** adgang, får bruge
   - **Fjern fra karantæne**
   - **Bloker afsender**
 
-  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-limited-access.png" alt-text="De tilgængelige knapper i oplysninger om meddelelser i karantæne, hvis karantænepolitikken giver brugeren begrænsede adgangstilladelser" lightbox="../../media/quarantine-tags-quarantined-message-details-limited-access.png":::
+  ![Tilgængelige knapper i oplysningerne om meddelelser, der er sat i karantæne, hvis karantænepolitikken giver brugeren tilladelsen Begrænset adgang.](../../media/quarantine-tags-quarantined-message-details-limited-access.png)
 
 - **Karantænemeddelelser**: Der er følgende knapper tilgængelige:
   - **Bloker afsender**
   - **Anmod om frigivelse**
   - **Gennemse**
 
-  :::image type="content" source="../../media/quarantine-tags-esn-limited-access.png" alt-text="De tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren begrænsede adgangstilladelser" lightbox="../../media/quarantine-tags-esn-limited-access.png":::
+  ![Tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren tilladelsen Begrænset adgang.](../../media/quarantine-tags-esn-limited-access.png)
 
 #### <a name="full-access"></a>Fuld adgang
 
@@ -668,14 +668,14 @@ Hvis karantænepolitikken tildeler **tilladelsen Fuld** adgang (alle tilgængeli
   - **Fjern fra karantæne**
   - **Bloker afsender**
 
-  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-full-access.png" alt-text="De tilgængelige knapper i oplysninger om meddelelser i karantæne, hvis karantænepolitikken giver brugeren fuld adgangstilladelser" lightbox="../../media/quarantine-tags-quarantined-message-details-full-access.png":::
+  ![Tilgængelige knapper i oplysningerne om meddelelser, der er sat i karantæne, hvis karantænepolitikken giver brugeren tilladelsen Fuld adgang.](../../media/quarantine-tags-quarantined-message-details-full-access.png)
 
 - **Karantænemeddelelser**: Der er følgende knapper tilgængelige:
   - **Bloker afsender**
   - **Udgivelse**
   - **Gennemse**
 
-  :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="De tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren fuld adgangstilladelser" lightbox="../../media/quarantine-tags-esn-full-access.png":::
+  ![Tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren tilladelsen Fuld adgang.](../../media/quarantine-tags-esn-full-access.png)
 
 ### <a name="individual-permissions"></a>Individuelle tilladelser
 

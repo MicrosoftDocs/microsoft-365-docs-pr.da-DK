@@ -1,7 +1,7 @@
 ---
-title: Evaluer Microsoft Defender til slutpunkt
+title: Evaluer Microsoft Defender for Endpoint
 ms.reviewer: ''
-description: Evaluer de forskellige sikkerhedsfunktioner i Microsoft Defender til Slutpunkt.
+description: Evaluer de forskellige sikkerhedsfunktioner i Microsoft Defender for Endpoint.
 keywords: reduktion af angrebsoverfladen, evaluer, næste generation, beskyttelse
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -17,35 +17,34 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 49d6ee473f84b86f17482c00e254e96b64ec0bf7
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 727a35b5d5b34fa567b399fcc81ccb0c05ded106
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593803"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500410"
 ---
-# <a name="evaluate-microsoft-defender-for-endpoint"></a>Evaluer Microsoft Defender til slutpunkt 
+# <a name="evaluate-microsoft-defender-for-endpoint"></a>Evaluer Microsoft Defender for Endpoint 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
-[Microsoft Defender til slutpunkt er](https://go.microsoft.com/fwlink/?linkid=2154037) en samlet platform til forebyggelse af beskyttelse, registrering efter brud, automatisk undersøgelse og svar.
+[Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037) er en samlet platform til forebyggelse af beskyttelse, registrering efter brud, automatisk undersøgelse og svar.
 
-Du kan evaluere Microsoft Defender til slutpunkt i din organisation ved at [starte din gratis prøveversion](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial).
+Du kan evaluere Microsoft Defender for Endpoint din organisation ved at [starte din gratis prøveversion](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial).
 
-Du kan også evaluere de forskellige sikkerhedsfunktioner i Microsoft Defender til slutpunkt ved at følge denne vejledning.
+Du kan også evaluere de forskellige sikkerhedsfunktioner i Microsoft Defender for Endpoint ved hjælp af følgende instruktioner.
 
 ## <a name="evaluate-attack-surface-reduction"></a>Evaluer reduktion af angrebsoverfladen
 
 Disse funktioner er med til at forhindre angreb og udnyttelse i at inficere din organisation.
 
-- [Evaluer reduktion af angrebsoverfladen](./evaluate-attack-surface-reduction.md)
 - [Evaluer udnyttelsesbeskyttelse](./evaluate-exploit-protection.md)
 - [Evaluer netværksbeskyttelse](./evaluate-exploit-protection.md)
 - [Evaluer styret mappeadgang](./evaluate-controlled-folder-access.md)
@@ -60,4 +59,4 @@ Næste genbeskyttelse hjælper med at opdage og blokere de nyeste trusler.
 
 ## <a name="see-also"></a>Se også
 
-[Oversigt over Microsoft Defender til slutpunkt](microsoft-defender-endpoint.md)
+[Microsoft Defender for Endpoint oversigt](microsoft-defender-endpoint.md)

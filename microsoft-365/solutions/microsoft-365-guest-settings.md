@@ -20,22 +20,22 @@ ms.custom:
 ms.localizationpriority: high
 recommendations: false
 description: Få mere at vide om de indstillinger for gæstedeling, der er tilgængelige Microsoft 365, der kan påvirke deling med personer uden for organisationen.
-ms.openlocfilehash: 2b6aac7a02c6c7c5feda041a2b06147c67dfa285
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9cb6eb52c523bba624af5f830c3c34c4edaf86b8
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590030"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594834"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Reference for Microsoft 365-gæstedelingsindstillinger
 
-Denne artikel indeholder en reference til de forskellige indstillinger, der kan påvirke deling med personer uden for organisationen i forbindelse med Microsoft 365-arbejdsbelastninger: Teams, Microsoft 365 Grupper, SharePoint og OneDrive. Disse indstillinger findes i Azure Active Directory, Microsoft 365, Teams og SharePoint Administration.
+Denne artikel indeholder en reference til de forskellige indstillinger, der kan påvirke deling med personer uden for organisationen i forbindelse med Microsoft 365-arbejdsbelastninger: Teams, Microsoft 365-grupper, SharePoint og OneDrive. Disse indstillinger findes i Azure Active Directory, Microsoft 365, Teams og SharePoint Administration.
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
 **Administratorrolle:** Global administrator
 
-Azure Active Directory er den katalogtjeneste, der bruges af Microsoft 365. Indstillingerne Azure Active Directory Organisationsrelationer påvirker direkte deling i Teams, Microsoft 365 grupper, SharePoint og OneDrive.
+Azure Active Directory er den katalogtjeneste, der bruges af Microsoft 365. Indstillingerne Azure Active Directory organisationsrelationer påvirker direkte deling i Teams, Microsoft 365-grupper, SharePoint og OneDrive.
 
 > [!NOTE]
 > Disse indstillinger påvirker kun SharePoint når [SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) er blevet konfigureret. Nedenstående tabel forudsætter, at dette er konfigureret.
@@ -59,7 +59,7 @@ Disse indstillinger påvirker, hvordan brugere inviteres til kataloget. De påvi
 
 **Administratorrolle:** Global administrator
 
-Gruppen Microsoft 365 Administration indstillinger på organisationsniveau for deling og for Microsoft 365 grupper.
+Den Microsoft 365 Administration har indstillinger på organisationsniveau for deling og for Microsoft 365-grupper.
 
 ### <a name="sharing"></a>Deling
 
@@ -71,16 +71,16 @@ Gruppen Microsoft 365 Administration indstillinger på organisationsniveau for d
 |:-----|:-----|:-----|
 |Lad brugere føje nye gæster til organisationen|Til|Når den er **indstillet til** Ja, kan Azure AD-medlemmer invitere gæster via Azure AD. når den er **indstillet til Nej**, kan de ikke. Når den er indstillet til **Ja, kan** Microsoft 365-gruppemedlemmer invitere gæster med ejergodkendelse. Når den er indstillet til **Nej, kan** Microsoft 365-gruppemedlemmer invitere gæster med ejergodkendelse, men ejere skal være globale administratorer for at godkende. <p> Bemærk, **at medlemmer kan** invitere henviser til medlemmer i Azure AD (i modsætning til gæster) og ikke til websteds- eller gruppemedlemmer i Microsoft 365. <p> Dette er identisk med **indstillingen Medlemmer kan invitere** Azure Active Directory indstillingerne for organisationsrelationer.|
 
-### <a name="microsoft-365-groups"></a>Microsoft 365 grupper
+### <a name="microsoft-365-groups"></a>Microsoft 365-grupper
 
-**Navigation:** [Microsoft 365 Administration](https://admin.microsoft.com) >  **Indstillinger** >  **Org-indstillinger** > Microsoft 365 Grupper
+**Navigation:** [Microsoft 365 Administration](https://admin.microsoft.com) >  **Indstillinger** >  **Org-indstillinger** > Microsoft 365-grupper
 
-![Skærmbillede af Microsoft 365 i Grupper i Microsoft 365 Administration.](../media/office-365-groups-guest-settings.png)
+![Skærmbillede Microsoft 365-grupper af indstillingerne for gæster i Microsoft 365 Administration.](../media/office-365-groups-guest-settings.png)
 
 | Indstilling | Standard | Beskrivelse |
 |:-----|:-----|:-----|
-|Lad gruppemedlemmer uden for organisationen få adgang til gruppeindhold|Til|Når den er **indstillet til Til**, kan gæster få adgang til gruppeindhold; når indstillet **til Fra**, kan de ikke. Denne indstilling skal være **Til** i alle scenarier, hvor gæster interagerer med Microsoft 365 Grupper eller Teams.|
-|Lad gruppeejere føje personer uden for organisationen til grupper|Til|Når **den** er til, kan Microsoft 365 grupper eller Teams invitere nye gæster til gruppen. Når **de er** slået Fra, kan de ikke. Denne indstilling skal være **Til** i alle scenarier, hvor gæster skal føjes til grupper.|
+|Lad gruppemedlemmer uden for organisationen få adgang til gruppeindhold|Til|Når den er **indstillet til Til**, kan gæster få adgang til gruppeindhold; når indstillet **til Fra**, kan de ikke. Denne indstilling skal være **Til** i alle scenarier, hvor gæster interagerer med Microsoft 365-grupper eller Teams.|
+|Lad gruppeejere føje personer uden for organisationen til grupper|Til|Når **den er** til, Microsoft 365-grupper eller Teams invitere nye gæster til gruppen. Når **de er** slået Fra, kan de ikke. Denne indstilling skal være **Til** i alle scenarier, hvor gæster skal føjes til grupper.|
 
 Disse indstillinger er på organisationsniveau. Se [Opret indstillinger for en bestemt gruppe for at](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#create-settings-for-a-specific-group) få oplysninger om, hvordan du ændrer disse indstillinger på gruppeniveau ved hjælp af PowerShell.
 
@@ -143,13 +143,13 @@ Kontakten Teams for gæsteadgang, Tillad gæsteadgang **i Teams**, skal være **
 
 **Administratorrolle:** SharePoint administrator
 
-Disse indstillinger påvirker alle websteder i organisationen. De påvirker ikke Microsoft 365 Grupper eller Teams direkte, men vi anbefaler, at du justerer disse indstillinger efter indstillingerne for Microsoft 365 Groups og Teams for at undgå problemer med brugeroplevelsen. (Hvis gæstedeling f.eks. er tilladt i Teams men ikke i SharePoint, så har gæster i Teams ikke adgang til fanen Filer, fordi Teams-filer gemmes i SharePoint).
+Disse indstillinger påvirker alle websteder i organisationen. De påvirker ikke Microsoft 365-grupper eller Teams direkte, men vi anbefaler, at du justerer disse indstillinger efter indstillingerne for Microsoft 365-grupper og Teams for at undgå problemer med brugeroplevelsen. (Hvis gæstedeling f.eks. er tilladt i Teams men ikke i SharePoint, så har gæster i Teams ikke adgang til fanen Filer, fordi Teams-filer gemmes i SharePoint).
 
 ### <a name="sharepoint-and-onedrive-sharing-settings"></a>SharePoint og OneDrive indstillinger for deling
 
 Da OneDrive er et hierarki af websteder i SharePoint, påvirker indstillingerne for deling på organisationsniveau direkte OneDrive samme måde, som de gør andre SharePoint websteder.
 
-**Navigation:** SharePoint Administration > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling**</a>
+**Navigation:** SharePoint Administration > **Omdeling** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**af politikker**</a>
 
 ![Skærmbillede af SharePoint af indstillinger for deling på organisationsniveau.](../media/external-sharing.png)
 
@@ -160,14 +160,14 @@ Da OneDrive er et hierarki af websteder i SharePoint, påvirker indstillingerne 
 
 ### <a name="sharepoint-and-onedrive-advanced-sharing-settings"></a>SharePoint og OneDrive avancerede indstillinger for deling
 
-**Navigation:** SharePoint Administration > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling**</a>
+**Navigation:** SharePoint Administration > **Omdeling** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**af politikker**</a>
 
 ![Skærmbillede af SharePoint af flere delingsindstillinger på organisationsniveau.](../media/external-sharing.png)
 
 | Indstilling | Standard | Beskrivelse |
 |:-----|:-----|:-----|
 |Begræns ekstern deling efter domæne|Fra|Med denne indstilling kan du angive en liste over tilladte eller blokerede domæner til deling. Når tilladte domæner er angivet, kan delingsinvitationer kun sendes til disse domæner. Når nægtede domæner er angivet, kan invitationer til deling ikke sendes til disse domæner. <p> Denne indstilling påvirker alle SharePoint og OneDrive websteder i organisationen.|
-|Tillad kun brugere i bestemte sikkerhedsgrupper at dele eksternt|Fra|Hvis du vil begrænse, hvem der kan dele med gæster i SharePoint og OneDrive, kan du gøre det ved at begrænse deling til personer i bestemte sikkerhedsgrupper. Disse indstillinger påvirker ikke deling via Microsoft 365 Grupper eller Teams. Gæster, der inviteres via en gruppe eller et team, har også adgang til det tilknyttede websted, selvom dokument- og mappedeling kun kan udføres af personer i de angivne sikkerhedsgrupper. <p> For hver angivet gruppe kan du vælge, hvilke af disse brugere der kan dele med Alle-links.|
+|Tillad kun brugere i bestemte sikkerhedsgrupper at dele eksternt|Fra|Hvis du vil begrænse, hvem der kan dele med gæster i SharePoint og OneDrive, kan du gøre det ved at begrænse deling til personer i bestemte sikkerhedsgrupper. Disse indstillinger påvirker ikke deling via Microsoft 365-grupper eller Teams. Gæster, der inviteres via en gruppe eller et team, har også adgang til det tilknyttede websted, selvom dokument- og mappedeling kun kan udføres af personer i de angivne sikkerhedsgrupper. <p> For hver angivet gruppe kan du vælge, hvilke af disse brugere der kan dele med Alle-links.|
 |Gæster skal logge på med den samme konto, som invitationer til deling sendes til|Fra|Forhindrer gæster i at indløse invitationer til webstedsdeling med en anden mailadresse end invitationen blev sendt til. <p> [SharePoint og OneDrive-integration med Azure AD B2B (Preview)](/sharepoint/sharepoint-azureb2b-integration-preview) bruger ikke denne indstilling, da alle gæster føjes til kataloget baseret på den mailadresse, invitationen blev sendt til. Alternative mailadresser kan ikke bruges til at få adgang til webstedet.|
 |Tillad gæster at dele elementer, de ikke ejer|Til|Når **den er** på, kan gæster dele elementer, de ikke ejer, med andre brugere eller gæster. når **Fra kan** de ikke. Gæster kan altid dele elementer, de har fuld kontrol over.|
 |Personer, der bruger en bekræftelseskode, skal genautate efter dette antal dage|Fra|Med denne indstilling kan du kræve, at brugere, der godkender med en engangs adgangskode, skal genautatere efter et bestemt antal dage.|
@@ -177,7 +177,7 @@ Da OneDrive er et hierarki af websteder i SharePoint, påvirker indstillingerne 
 
 Når filer og mapper deles i SharePoint og OneDrive, sendes et link med tilladelser til filen eller mappen i stedet for at få direkte adgang til selve filen eller mappen. Der findes flere typer links, og du kan vælge den standardlinktype, der vises til brugerne, når de deler en fil eller mappe. Du kan også angive tilladelser og udløbsindstillinger for *alle links* .
 
-**Navigation:** SharePoint Administration > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling**</a>
+**Navigation:** SharePoint Administration > **Omdeling** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**af politikker**</a>
 
 ![Skærmbillede af SharePoint af filer og mapper på organisationsniveau.](../media/sharepoint-organization-files-folders-sharing-settings.png)
 
@@ -234,7 +234,7 @@ Tabellen nedenfor viser standardindstillingen for deling for hver webstedstype.
 |:-----|:-----|
 |Classic|**Kun personer i din organisation**|
 |OneDrive|**Alle**|
-|Gruppeforbundne websteder (herunder Teams)|**Nye og eksisterende gæster**, hvis indstillingen Microsoft 365 Grupper **Lad gruppeejere** føje personer uden for organisationen til grupper er **til,** ellers **er Eksisterende gæster kun til**|
+|Gruppeforbundne websteder (herunder Teams)|**Nye og eksisterende gæster**, hvis indstillingen Microsoft 365-grupper **Lad gruppeejere** føje personer uden for organisationen til grupper er **til,** ellers **er Kun eksisterende gæster**|
 |Kommunikation|**Kun personer i din organisation**|
 |Moderne websteder uden nogen gruppe (#STS3 TeamSite)|**Kun personer i din organisation**|
 
@@ -247,4 +247,4 @@ Tabellen nedenfor viser standardindstillingen for deling for hver webstedstype.
 
 [Gæsteadgang i Microsoft Teams](/MicrosoftTeams/guest-access)
 
-[Føj gæster til Microsoft 365 Grupper](https://support.office.com/article/bfc7a840-868f-4fd6-a390-f347bf51aff6)
+[Tilføjelse af gæster til Microsoft 365-grupper](https://support.office.com/article/bfc7a840-868f-4fd6-a390-f347bf51aff6)

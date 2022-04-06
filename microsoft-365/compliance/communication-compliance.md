@@ -20,12 +20,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: c82514fda095d91ea4daa798450954fb9f5dac61
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 7690b93646c9b60467ca898c6167d72a7e819bb4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63587330"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594790"
 ---
 # <a name="learn-about-communication-compliance-in-microsoft-365"></a>Få mere at vide om overholdelse af kommunikation i Microsoft 365
 
@@ -117,7 +117,7 @@ Nye interaktive dashboards til vigtige beskeder, politik matches, handlinger og 
 
 Politikker for overholdelse af kommunikation scanner og registrerer meddelelser på tværs af flere kommunikationskanaler for at hjælpe dig med hurtigt at gennemse og løse problemer med overholdelse af regler og standarder:
 
-- **Microsoft Teams**: Chatkommunikation for offentlige og private [Microsoft Teams-kanaler](/MicrosoftTeams/Teams-overview) og individuelle chats understøttes i overholdelse af kommunikation som enkeltstående kanalkilde eller med andre Microsoft 365-tjenester. Du skal manuelt tilføje individuelle brugere, distributionsgrupper eller bestemte Microsoft Teams-kanaler, når du vælger brugere og grupper til overvågning af en politik for overholdelse af kommunikation.
+- **Microsoft Teams**: Chatkommunikation for offentlige og private [Microsoft Teams-kanaler](/MicrosoftTeams/Teams-overview) og individuelle chats understøttes i overholdelse af kommunikation som enkeltstående kanalkilde eller med andre Microsoft 365-tjenester. Du skal manuelt tilføje individuelle brugere, distributionsgrupper eller bestemte Microsoft Teams-kanaler, når du vælger brugere og grupper til overvågning af en politik for overholdelse af kommunikation. Teams kan også selv rapportere upassende meddelelser i private kanaler og gruppekanaler og chats, så de kan gennemse og rette dem.
 - **Exchange Online**: Alle postkasser, der hostes [Exchange Online](/Exchange/exchange-online) i din Microsoft 365, kan scannes. Mails og vedhæftede filer, der matcher politikker for overholdelse af kommunikation, er øjeblikkeligt tilgængelige for overvågning og rapporter om overholdelse af regler og standarder. Exchange Online nu en valgfri kildekanal og er ikke længere nødvendig i politikker for overholdelse af kommunikation.
 - **Yammer: Private** meddelelser og offentlige community-samtaler i Yammer [understøttes](/yammer/yammer-landing-page) i politikker for overholdelse af kommunikation. Yammer er en valgfri kanal og skal være i indbygget [tilstand](/yammer/configure-your-yammer-network/overview-native-mode) for at understøtte scanning af meddelelser og vedhæftede filer.
 - **Skype for Business Online**: Politikker for overholdelse af kommunikation understøtter scanning af chatkommunikation og tilknyttede [vedhæftede filer Skype for Business Online](/SkypeForBusiness/skype-for-business-online).
@@ -148,6 +148,7 @@ Du kan vælge mellem følgende politikskabeloner i Microsoft 365 Overholdelsesce
 - **Hold øje med overholdelse af finansielle lovgivning**: Brug denne skabelon til hurtigt at oprette en politik for at scanne kommunikation for referencer til almindelige finansielle vilkår, der er knyttet til lovmæssige standarder.
 - **Hold øje med interessekonflikter**: Brug denne skabelon til hurtigt at oprette en politik til overvågning af kommunikation mellem to grupper eller to brugere for at undgå konflikter af interesse.
 - **Brugerdefineret** politik: Brug denne skabelon til at konfigurere bestemte kommunikationskanaler, individuelle registreringsbetingelser og mængden af indhold, der skal overvåges og gennemgås i din organisation.
+- **Politik for brugerrapporterede meddelelser**: Denne systempolitik understøtter brugerrapporterede meddelelser fra kanaler, grupper og private chatmeddelelser. Aktiveret som standard Teams Administration.
 
 >[!TIP]
 >Brug [anbefalede handlinger til](communication-compliance-configure.md#recommended-actions-preview) at hjælpe dig med at afgøre, om du har brug for en politik for følsomme oplysninger, eller om du har brug for at opdatere eksisterende upassende indholdspolitikker.
@@ -162,7 +163,7 @@ I dette trin ser du nærmere på de registrerede problemer som matchning af dine
 - **Gennemgang af historik for brugeraktivitet**: Få vist historikken for brugermeddelelsesaktiviteter og afhjælpningshandlinger, f.eks. tidligere meddelelser og eskaleringer, for politik match.
 - **Filtre**: Brug filtre som afsender, modtager, dato og emne for hurtigt at indskrænke de meddelelsesbeskeder, du vil gennemse.
 
-### <a name="remediate"></a>Afhjælpe
+### <a name="remediate"></a>Afhjælp
 
 Næste trin er at løse problemer med overholdelse af kommunikation, som du har undersøgt, ved hjælp af følgende indstillinger:
 

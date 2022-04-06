@@ -6,21 +6,21 @@ ms.author: chrisda
 author: chrisda
 manager: dansimp
 audience: Admin
-ms.topic: hub-page
-ms.service: O365-seccomp
+ms.topic: conceptual
 ms.collection: m365-security-compliance
 ms.localizationpriority: high
 ROBOTS: NOINDEX, NOFOLLOW
+ms.prod: m365-security
 search.appverid:
 - MOE150
 - MET150
 description: Playbook med prøveversionen Office 365 Microsoft Defender for Office 365-løsninger.
-ms.openlocfilehash: 8e0ae58983321d16051e8fc5e0a0d1210d937353
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: b8a0fedd01a3769f2ccf8952bd9e7bce0974a2f0
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63594118"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683203"
 ---
 # <a name="trial-playbook-microsoft-defender-for-office-365"></a>Prøvespilbog: Microsoft Defender til Office 365
 

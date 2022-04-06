@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan administratorer kan konfigurere og bruge en dataforbindelse til at importere og arkivere data fra Chatværktøjet Instant Bloomberg i Microsoft 365.
-ms.openlocfilehash: 14495a219ce73b8d0cd4e937b4feae9aa2210da1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4205c678a6445203e4a057aab3b7c9d2c1acd1d8
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589120"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569969"
 ---
 # <a name="set-up-a-connector-to-archive-instant-bloomberg-data"></a>Konfigurer en forbindelse til at arkivere Instant Bloomberg-data
 
@@ -135,9 +135,15 @@ Det sidste trin er at oprette en Hurtig bloomberg-forbindelse i Microsoft 365 Ov
 
     - **SFTP-port:** Portnummeret for Bloomberg SFTP-webstedet. Forbindelsen bruger denne port til at oprette forbindelse til SFTP-webstedet.
 
-5. På siden **Vælg datatyper, der skal importeres** skal du vælge de nødvendige datatyper, der skal importeres, fra hinanden i **Meddelelser**
+5. På siden **Definer bruger** skal du vælge en af følgende indstillinger for at angive de brugere, hvis data du vil importere.
 
-6. På siden **Map Instant Bloomberg-brugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og levere brugerdefineret brugertilknytning efter behov
+    - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+    - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+6. På siden **Vælg datatyper, der skal importeres** skal du vælge de nødvendige datatyper, der skal importeres, fra hinanden i **Meddelelser**
+
+7. På siden **Map Instant Bloomberg-brugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og levere brugerdefineret brugertilknytning efter behov
 
    > [!NOTE]
    > Forbindelsen importerer chatmeddelelseselementerne til en bestemt brugers postkasse. Der oprettes en **ny mappe med navnet InstantBloomberg** i den specifikke brugers postkasse, og elementerne importeres til den. Forbindelsen gør ved hjælp af værdien af *egenskaben CorporateEmailAddress* . Alle chatbeskeder indeholder denne egenskab, og egenskaben udfyldes med mailadressen for hver deltager i chatmeddelelsen. Ud over automatisk brugertilknytning med værdien af *egenskaben CorporateEmailAddress* kan du også definere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Tilknytningsfilen skal indeholde Bloomberg UUID og den tilhørende Microsoft 365-postkasseadresse for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning, vil forbindelsen for hvert chatelement først se på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers Bloomberg UUID, vil forbindelsen bruge *egenskaben CorporateEmailAddress* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *CorporateEmailAddress* for chatelementet, importeres elementet ikke.
@@ -215,11 +221,17 @@ Når dit Bloomberg SFTP-websted er konfigureret, er næste trin at oprette en Hu
 
 7. Klik på Næste, når forbindelsen er blevet **valideret**.
 
-8. På siden **Map Instant Bloomberg-brugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
+8. På siden **Definer bruger** skal du vælge en af følgende indstillinger for at angive de brugere, hvis data du vil importere.
+
+    - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+    - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+9. På siden **Map Instant Bloomberg-brugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
 
    > [!NOTE]
    > Forbindelsen importerer chatmeddelelseselementerne til en bestemt brugers postkasse. Der oprettes en **ny mappe med navnet InstantBloomberg** i den specifikke brugers postkasse, og elementerne importeres til den. Forbindelsen gør ved hjælp af værdien af *egenskaben CorporateEmailAddress* . Alle chatbeskeder indeholder denne egenskab, og egenskaben udfyldes med mailadressen for hver deltager i chatmeddelelsen. Ud over automatisk brugertilknytning med værdien af *egenskaben CorporateEmailAddress* kan du også definere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Tilknytningsfilen skal indeholde Bloomberg UUID og den tilhørende Microsoft 365-postkasseadresse for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning, vil forbindelsen for hvert chatelement først se på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers Bloomberg UUID, vil forbindelsen bruge *egenskaben CorporateEmailAddress* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *CorporateEmailAddress* for chatelementet, importeres elementet ikke.
 
-9. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
+10. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
 
-10. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
+11. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.

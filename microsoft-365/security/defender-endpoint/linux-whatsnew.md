@@ -1,7 +1,7 @@
 ---
-title: Nyheder i Microsoft Defender til slutpunkt på Linux
-description: Liste over større ændringer for Microsoft Defender til slutpunkt på Linux.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, linux, whatsnew, release
+title: Nyheder i Microsoft Defender for Endpoint på Linux
+description: Liste over større ændringer for Microsoft Defender for Endpoint på Linux.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, linux, whatsnew, release
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,19 +15,24 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 48b278d23cd724cade823d2a6b052b11d02a3a13
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 45b5bbcc1268c1f425b914a3f8279fe8dcc583f2
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63591168"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569947"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender til slutpunkt på Linux
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender for Endpoint på Linux
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1016274-30122022162740"></a>101.62.74 (30.122022.16274.0)
+
+- Vi har løst et problem, hvor produktet fejlagtigt blokerede adgangen til filer, der er større end 2 GB, når det kørte på ældre kerneversioner
+- Fejlrettelser
 
 ## <a name="1016093-30122012160930"></a>101.60.93 (30.122012.16093.0)
 
@@ -41,6 +46,7 @@ ms.locfileid: "63591168"
 ## <a name="1015880-30122012158800"></a>101.58.80 (30.122012.15880.0)
 
 - Kommandolinjeværktøjet understøtter nu gendannelse af filer, der er sat i karantæne, på en anden placering end den, hvor filen oprindeligt blev fundet. Det kan du gøre via `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- Fra og med denne version kan netværksbeskyttelse til Linux evalueres efter behov
 - Fejlrettelser
 
 ## <a name="1015662-30121122156620"></a>101.56.62 (30.121122.15662.0)
@@ -53,7 +59,7 @@ ms.locfileid: "63591168"
 
 ## <a name="1015257-30121092152570"></a>101.52.57 (30.121092.15257.0)
 
-- Vi har tilføjet en funktion til at registrere følsomme log4j-jars, der bruges af Java-programmer. Maskinen undersøges med jævne mellemrum for at køre Java-processer med indlæste log4j-jars. Oplysningerne rapporteres til backend'en Microsoft Defender for Endpoint og blotlægges i området til administration af sikkerhedsrisikoen på portalen.
+- Vi har tilføjet en funktion til at registrere følsomme log4j-jars, der bruges af Java-programmer. Maskinen undersøges med jævne mellemrum for at køre Java-processer med indlæste log4j-jars. Oplysningerne rapporteres til Microsoft Defender for Endpoint backend og eksponeres i området til administration af sikkerhedsrisiko på portalen.
 
 ## <a name="1014776-30121092147760"></a>101.47.76 (30.121092.14776.0)
 
@@ -62,7 +68,7 @@ ms.locfileid: "63591168"
 
 ## <a name="1014513-30121082145130"></a>101.45.13 (30.121082.14513.0)
 
-- Fra og med denne version giver vi microsoft Defender for Endpoint-understøttelse til følgende distributionspunkter: 
+- Fra og med denne version giver vi Microsoft Defender for Endpoint support til følgende fremgangsmåder: 
   - RHEL6.7-6.10- og CentOS6.7-6.10-versioner.
   - Amazon Linux 2
   - 33 eller nyere
@@ -95,8 +101,8 @@ ms.locfileid: "63591168"
 
 ## <a name="1012572-30121022125630"></a>101.25.72 (30.121022.12563.0)
 
-- Microsoft Defender til Slutpunkt på Linux er nu tilgængelig i prøveversion for kunder i det amerikanske offentlige. Du kan finde flere oplysninger [under Microsoft Defender til slutpunkt for kunder i det amerikanske offentlige.](gov.md)
-- Rettede et problem, hvor brugen af Microsoft Defender til slutpunkt på Linux på systemer med OFREY-filsystemer fik OS til at hænge
+- Microsoft Defender for Endpoint på Linux er nu tilgængelig i prøveversion for kunder i det amerikanske offentlige. Du kan finde flere oplysninger [Microsoft Defender for Endpoint kunder i det amerikanske offentlige.](gov.md)
+- Rettede et problem, hvor brugen af Microsoft Defender for Endpoint på Linux på systemer med HJÆLP-filsystemer fik OS til at hænge
 - Forbedring af ydeevnen & andre fejlrettelser
 
 ## <a name="1012563-30121022125630"></a>101.25.63 (30.121022.12563.0)

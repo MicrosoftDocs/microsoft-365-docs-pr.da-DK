@@ -17,12 +17,12 @@ description: Få mere at vide om, hvordan du bruger Threat Explorer og registrer
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 959d3d676f07a7816b622d5db53252c846340d2a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: d21773694e1dc9472a9a8ac566c8eaacc00fcab8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589563"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682851"
 ---
 # <a name="views-in-threat-explorer-and-real-time-detections"></a>Visninger i Trusselsstifinder og registreringer i realtid
 
@@ -42,8 +42,6 @@ ms.locfileid: "63589563"
 
 Når du åbner Stifinder (eller rapporten over registreringer i realtid), viser standardvisningen registreringer af malware i mails for de seneste 7 dage. Denne rapport kan også vise Microsoft Defender til Office 365 registreringer, f.eks ondsindede URL-adresser, der registreres af [Pengeskab Links](safe-links.md), og skadelige filer, der [registreres af Pengeskab vedhæftede filer](safe-attachments.md). Denne rapport kan ændres til at vise data for de seneste 30 dage (med et Microsoft Defender for Office 365 P2-betalt abonnement). Prøveabonnementer indeholder kun data for de seneste syv dage.
 
-****
-
 |Abonnement|Hjælpeprogram|Dage med data|
 |---|---|---|
 |Microsoft Defender for Office 365 P1-prøveversion|Registreringer i realtid|7|
@@ -51,7 +49,6 @@ Når du åbner Stifinder (eller rapporten over registreringer i realtid), viser 
 |Microsoft Defender for Office 365 P1 betalte test af Defender for Office 365 P2-prøveversion|Threat Explorer|7|
 |Microsoft Defender for Office 365 P2-prøveversion|Threat Explorer|7|
 |Microsoft Defender for Office 365 P2 betalt|Threat Explorer|30|
-|
 
 > [!NOTE]
 > Vi vil snart udvide grænsen for dataopbevaring og søgning i Stifinder (og realtid) for lejere til prøveversioner fra 7 til 30 dage. Denne ændring registreres som en del af oversigtselement nr. 70544 og er i øjeblikket i en udrulningsfase.

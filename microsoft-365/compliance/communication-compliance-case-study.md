@@ -23,12 +23,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 7532051d649be4d0e9320a372c53686879c31972
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: 7235bbdfb956369eebe960568921bc4bba86651a
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63588193"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595120"
 ---
 # <a name="case-study---contoso-quickly-configures-an-inappropriate-text-policy-for-microsoft-teams-exchange-and-yammer-communications"></a>Casestudie – Contoso konfigurerer hurtigt en upassende tekstpolitik for Microsoft Teams, Exchange og Yammer meddelelser
 
@@ -56,19 +56,14 @@ Contoso-it-administratorer og overholdelsesspecialister deltog i onlinewebinar o
 
 Det første trin er at bekræfte, at Contosos licens Microsoft 365 omfatter understøttelse af løsningen til overholdelse af kommunikation. For at få adgang til og bruge kommunikationsoverholdelse skal Contoso-it-administratorer kontrollere, at Contoso har et af følgende:
 
-- Microsoft 365 E5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 E3-abonnement + Microsoft 365 E5 Overholdelse-tilføjelsesprogrammet
-- Microsoft 365 E3 -abonnement + Microsoft 365 E5 Insider Risk Management-tilføjelsesprogrammet
-- Microsoft 365 A5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 A3+tilføjelsesprogrammet Microsoft 365 A5 overholdelse af regler og standarder
-- Microsoft 365 A3 +Microsoft 365 A5 Insider Risk Management-tilføjelsesprogrammet
-- Microsoft 365 G5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 G5-abonnement + Microsoft 365 tilføjelsesprogrammet G5 Compliance
-- Microsoft 365 G5-abonnement + Microsoft 365 G5 Insider Risk Management-tilføjelsesprogrammet
+- Microsoft 365 E5/A5/F5/G5-abonnement (betalt version eller prøveversion)
+- Microsoft 365 E3/A3/F3/G5 + tilføjelsesprogrammet Microsoft 365 E5/A5/F5/G5 Compliance
+- Microsoft 365 E3/A3/F3/G5 + Microsoft 365 E5/A5/F5/G5 Insider Risk Management-tilføjelsesprogrammet
 - Office 365 Enterprise E5-abonnement (betalt version eller prøveversion)
+- Office 365 A5 -abonnement (betalt version eller prøveversion)
 - Office 365 Enterprise E3-abonnement + tilføjelsesprogrammet Avanceret overholdelse i Office 365 (der er ikke længere tilgængeligt for nye abonnementer, se bemærk)
 
-De skal også bekræfte, at brugere, der er inkluderet i politikker for overholdelse af kommunikation, skal tildeles en af licenserne ovenfor.
+Brugere, der er inkluderet i politikker for overholdelse af kommunikation, skal tildeles en af licenserne ovenfor. Du kan finde flere oplysninger om abonnementer og licenser [Microsoft 365 vejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
 
 > [!IMPORTANT]
 > Avanceret overholdelse i Office 365 sælges ikke længere som enkeltstående abonnement. Når aktuelle abonnementer udløber, skal kunder overgå til et af abonnementerne ovenfor, som indeholder de samme eller yderligere funktioner til overholdelse af regler og standarder.

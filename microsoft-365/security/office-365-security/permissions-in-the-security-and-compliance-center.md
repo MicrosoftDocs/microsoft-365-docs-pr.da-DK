@@ -10,8 +10,8 @@ audience: Admin
 ms.topic: conceptual
 f1_keywords:
 - ms.o365.cc.AdminRoleGroups
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
-ms.collection: Strat_O365_IP
 search.appverid:
 - MOE150
 - MET150
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 47ee051ab30669241a3283f1fb3f8fe86cf67f65
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: c451266d8cc11fc877f1c6c9f1c214959fe41938
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63587528"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683159"
 ---
 # <a name="permissions-in-the-security--compliance-center"></a>Tilladelser i Sikkerheds- & Compliance Center
 
@@ -62,10 +62,6 @@ Hvis du vil se, hvordan du giver adgang til Security & Compliance Center, skal d
 
 > [!NOTE]
 > Hvis du vil **have vist** fanen Tilladelser i Security & Compliance Center, skal du være administrator. Du skal specifikt være tildelt rollestyringsrollen, og denne rolle er kun tildelt rollegruppen organisationsadministration i Sikkerheds- og overholdelsescenteret & som standard.  **Rollestyringsrollen giver** desuden brugerne mulighed for at få vist, oprette og redigere rollegrupper.
-
-<br>
-
-****
 
 |Rollegruppe|Beskrivelse|Standardroller tildelt|
 |---|---|---|
@@ -117,7 +113,6 @@ Hvis du vil se, hvordan du giver adgang til Security & Compliance Center, skal d
 |**Tjenestesikringsbruger**|Medlemmer kan få adgang til sektionen Tjenestesikring i & Security & Compliance Center. Tjenestesikring leverer rapporter og dokumenter, der beskriver Microsofts sikkerhedspraksis for kundedata, der er gemt i Microsoft 365. Den leverer også uafhængige overvågningsrapporter fra tredjeparter Microsoft 365. Du kan finde flere [oplysninger i Tjenestesikring i & Security & Compliance Center](../../compliance/service-assurance.md).|Tjenestesikringsvisning|
 |**Administratorer af anmodning om emnerettigheder**|Opret anmodninger om emnerettigheder.|Sagsadministration <p> Administrator af anmodning om emnerettigheder <p> View-Only store og små bogstaver|
 |**Kontrolvurdering**|Medlemmer kan oprette og administrere de politikker, der definerer, hvilken kommunikation der skal gennemgås i en organisation. Få mere at vide under Konfigurer [politikker for overholdelse af regler og standarder for kommunikation for organisationen](../../compliance/communication-compliance-configure.md).|Administrator for kontrolvurdering|
-|
 
 > [!NOTE]
 > <sup>1</sup> Denne rollegruppe tildeler ikke medlemmer de nødvendige tilladelser til at søge i overvågningsloggen eller bruge eventuelle rapporter, der kan omfatte Exchange-data, f.eks. DLP eller Defender til Office 365 rapporter. Hvis du vil søge i overvågningsloggen eller få vist alle rapporter, skal en bruger have tildelt tilladelser i Exchange Online. Dette skyldes, at den underliggende cmdlet, der bruges til at søge i overvågningsloggen, er en Exchange Online cmdlet. Globale administratorer kan søge i overvågningsloggen og få vist alle rapporter, fordi de automatisk tilføjes som medlemmer af rollegruppen Organisationsadministration Exchange Online. Du kan finde flere [oplysninger i Søge i overvågningsloggen i & Security & Compliance Center](../../compliance/search-the-audit-log-in-security-and-compliance.md).
@@ -169,10 +164,6 @@ Bemærk, at følgende roller ikke tildeles rollegruppen Organisationsadministrat
 - Administrator af anmodning om emnerettigheder
 - Administrator for kontrolvurdering
 - Tenant AllowBlockList Manager
-
-<br>
-
-****
 
 |Rolle|Beskrivelse|Standardtildelinger for rollegrupper|
 |---|---|---|
@@ -252,4 +243,3 @@ Bemærk, at følgende roller ikke tildeles rollegruppen Organisationsadministrat
 |**Kun visningsmodtagere**|Få vist oplysninger om brugere og grupper.|Overholdelsesadministrator <p> Dataadministrator for overholdelse af regler og standarder <p> Global læser <p> MailFlow-administrator <p> Organisationsadministration|
 |**Kun visningsstyring af poster**|Få vist konfigurationen af funktionen til datastyring.|Overholdelsesadministrator <p> Dataadministrator for overholdelse af regler og standarder <p> <p> Global læser <p> Organisationsadministration|
 |**Kun visningsstyring for opbevaring**|Få vist konfigurationen af opbevaringspolitikker, opbevaringsmærkater og politikker for opbevaringsetiketter.|Overholdelsesadministrator <p> Dataadministrator for overholdelse af regler og standarder <p> Global Administrator <p> Organisationsadministration|
-|

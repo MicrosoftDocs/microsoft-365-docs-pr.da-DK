@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Overvåge og administrere afhændelse af indhold, når du bruger en dispositionsgennemgang, eller elementer, der er markeret som poster, slettes automatisk i overensstemmelse med de indstillinger, du har konfigureret.
-ms.openlocfilehash: 2d078eb00ffa6d2dd8279c7e5eb65a8fcfb6fa53
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: dbc713c665367bb973fb8faded24015ad6c2d5c3
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63590045"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594812"
 ---
 # <a name="disposition-of-content"></a>Disposition af indhold
 
@@ -187,14 +187,16 @@ Som du kan se i det viste eksempel, er de understøttede handlinger:
   
 - **Godkend afhændelse**:
     - Når denne handling er valgt for en midlertidig dispositionsgennemgang (du har konfigureret flere faser): Elementet flyttes til den næste dispositionsfase.
-    - Når denne handling er valgt til den sidste fase af gennemgangen af dispositionen, eller der kun er én dispositionsfase: Elementet markeres som berettiget til permanent sletning, hvilket derefter sker inden for 7 dage.
+    - Når denne handling er valgt til den sidste fase af gennemgangen af dispositionen, eller der kun er én dispositionsfase: Elementet markeres som berettiget til permanent sletning, som et timerjob derefter handlingerer inden for 7 dage. Den nøjagtige tidsindstilling for det element, der skal slettes permanent, afhænger af arbejdsmængden. Få mere at vide under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) [og Hvordan fungerer opbevaring for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
+
 - **Relabel**:
     - Når denne handling er valgt, afslutter elementet gennemgangen af dispositionen for den oprindelige etiket. Elementet er derefter underlagt opbevaringsindstillingerne for den nyligt valgte opbevaringsmærkat.
+
 - **Udvid**:
     - Når denne handling er valgt, suspenderes dispositionsgennemsyn effektivt indtil slutningen af den udvidede periode, og derefter udløses dispositionsgennemsyn igen fra første fase.
+
 - **Tilføj korrekturlæsere**:
     - Når denne handling er markeret, bliver brugeren bedt om at angive og tilføje andre brugere til gennemsyn.
-    
     > [!NOTE]
     > Denne handling giver ikke automatisk de nødvendige [tilladelser til de](#permissions-for-disposition) brugere, der er tilføjet. Hvis de ikke har disse tilladelser, kan de ikke deltage i gennemgangen af dispositionen.
 

@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 827b22ea2fb5e0864157dfae6748aa97ee4baf29
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: b6872fb13ba1a32f081b5fcc82fd590f2c196a6c
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499941"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569551"
 ---
 # <a name="step-2-remediate-your-first-incident"></a>Trin 2. Afhjælp din første hændelse
 
@@ -90,8 +90,6 @@ Her er et eksempel.
 Der kan også oprettes playbooks under gennemgang efter [hændelsen for](first-incident-post.md) at oprette afhjælpningshandlinger fra løste hændelser. 
 
 ## <a name="next-step"></a>Næste trin
-
-[![Trin 3: Lær, hvordan du udfører en vurdering af en hændelse efter hændelsen.](../../media/first-incident-overview/first-incident-path-step3.png)](first-incident-post.md)
 
 Få mere at vide [om, hvordan du udfører en vurdering efter hændelsen af en hændelse](first-incident-post.md).
 

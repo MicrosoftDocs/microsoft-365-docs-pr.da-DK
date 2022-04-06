@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om, hvordan du forhindrer gæster i at blive føjet til en bestemt gruppe
-ms.openlocfilehash: 8a8a62b2a320fe000580651a2577f625a9ce1b90
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 4b9ebc6366934db52c30d51091ac9991ff82d8c3
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63591547"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570057"
 ---
 # <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Forhindre gæster i at blive føjet til en bestemt Microsoft 365 gruppe eller Microsoft Teams team
 
@@ -44,7 +44,7 @@ Du skal bruge prøveversionen af [Azure Active Directory PowerShell til Graph](/
 > [!NOTE]
 > Du skal have globale administratorrettigheder for at køre disse kommandoer. 
 
-Kør følgende script, og skift */<GroupName/>* til navnet på den gruppe, hvor du vil blokere gæsteadgang.
+Kør følgende script, og skift *\<GroupName\>* til navnet på den gruppe, hvor du vil blokere gæsteadgang.
 
 ```PowerShell
 $GroupName = "<GroupName>"

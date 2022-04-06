@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du konfigurerer portalsikkerhed.
-ms.openlocfilehash: 8f8ec851d2ce6795565530e120f3704128336ea2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4d12755ca1b02988dff3f5ba6be6dd0d8da172ad
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599479"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594746"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Konfigurere Microsoft 365 Lighthouse-portalens sikkerhed
 
@@ -37,9 +37,9 @@ Når brugere første gang får adgang til Lighthouse, bliver de bedt om at konfi
 
 ## <a name="set-up-role-based-access-control"></a>Konfigurere rollebaseret adgangskontrol
 
-Rollebaseret adgangskontrol giver adgang til ressourcer eller oplysninger baseret på brugerroller. Adgang til kundelejerdata og indstillinger i Lighthouse er begrænset til bestemte roller fra Cloud Solution Provider (CSP)-programmet. Hvis du vil konfigurere RBAC-roller i Lighthouse, anbefaler vi, at du bruger GDAP (Granular Delegated Admin Privileges) til at implementere granulartildelinger for brugere.
+Rollebaseret adgangskontrol giver adgang til ressourcer eller oplysninger baseret på brugerroller. Adgang til kundelejerdata og indstillinger i Lighthouse er begrænset til bestemte roller fra Cloud Solution Provider (CSP)-programmet. Hvis du vil konfigurere RBAC-roller i Lighthouse, anbefaler vi, at du bruger GDAP (Granular Delegated Admin Privileges) til at implementere granulartildelinger for brugere. Delegerede administratorrettigheder (DAP) er stadig påkrævet, for at lejeren kan komme i gang, men kun GDAP-kunder vil snart kunne onboarde uden at være afhængige af DAP. GDAP-tilladelser har forrang, når DAP og GDAP anvendes for en kunde. 
 
-Se Konfigurer roller til at administrere kundelejere for at [komme i gang med](m365-lighthouse-set-up-roles.md) GDAP.
+Se Oversigt over tilladelser i Microsoft 365 Lighthouse for at [komme i gang med GDAP](m365-lighthouse-overview-of-permissions.md).
 
 MSP-teknikere kan også få adgang til Lighthouse ved hjælp af administratoragent- eller Helpdesk-agentroller via Delegerede administratorrettigheder (DAP).
 

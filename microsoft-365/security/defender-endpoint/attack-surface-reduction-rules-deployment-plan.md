@@ -16,14 +16,16 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 1d85eb2c2736b604cde56e42737e951ddee46cdc
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: e76ca3c1efd3ceb1cbb0f80cba4867988da51e1e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63601086"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683071"
 ---
 # <a name="step-1-plan-asr-rules-deployment"></a>Trin 1: Planlægge udrulning af ASR-regler
 

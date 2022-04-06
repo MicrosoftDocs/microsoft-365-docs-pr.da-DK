@@ -13,12 +13,13 @@ ms.technology: mdb
 ms.localizationpriority: medium
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
-ms.openlocfilehash: 2e2c12a84e23290592c5b53156b747d39f6a3131
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.collection: M365-security-compliance
+ms.openlocfilehash: bf11ed140d2e0609f2d12d1da3bcc448ff733235
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63606799"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683137"
 ---
 # <a name="set-up-email-notifications"></a>Konfigurer mailbeskeder
 

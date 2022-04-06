@@ -8,12 +8,13 @@ ms.author: dacurwin
 ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
-ms.openlocfilehash: 9f542d2b5a25a8274d74e0ee3dbfc40fdc119926
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 59ab309b4d5cbab971c161ee1b8a4abefe93be69
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63596845"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683027"
 ---
 # <a name="defender-for-identity-vpn-integration-in-microsoft-365-defender"></a>Defender til VPN-integration af identitet i Microsoft 365 Defender
 

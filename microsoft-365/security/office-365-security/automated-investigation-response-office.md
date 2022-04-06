@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 41ba3bcf31725cd5a9fb8b25bc22b6c8bb591363
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 7173d45fed25fe1d0d1e93dbcc259046c1f221cd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569262"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474261"
 ---
 # <a name="how-automated-investigation-and-response-works-in-microsoft-defender-for-office-365"></a>Sådan fungerer automatiseret undersøgelse og svar i Microsoft Defender for Office 365
 
@@ -77,7 +77,7 @@ Afhjælpning er den sidste fase af spilbogen. I denne fase tages der afhjælpnin
 
 ## <a name="example-a-security-administrator-triggers-an-investigation-from-threat-explorer"></a>Eksempel: En sikkerhedsadministrator udløser en undersøgelse fra Threat Explorer
 
-Ud over automatiserede undersøgelser, der udløses af en besked, kan din organisations sikkerhedsteam udløse en automatisk undersøgelse fra en visning i [Threat Explorer](threat-explorer.md). Denne undersøgelse opretter også en alarm, så Microsoft 365 Defender og eksterne SIEM-værktøjer kan se, at denne undersøgelse er blevet udløst.
+Ud over automatiserede undersøgelser, der udløses af en besked, kan din organisations sikkerhedsteam udløse en automatisk undersøgelse fra en visning i [Threat Explorer](threat-explorer.md).  Denne undersøgelse opretter også en alarm, så Microsoft 365 Defender og eksterne SIEM-værktøjer kan se, at denne undersøgelse er blevet udløst.
 
 Antag f.eks., at du bruger **visningen Malware** i Stifinder. Ved hjælp af fanerne under diagrammet vælger du **fanen** Mail. Hvis du vælger et eller flere elementer på listen, **aktiveres knappen +** Handlinger.
 

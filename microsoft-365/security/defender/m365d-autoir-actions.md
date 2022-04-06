@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 ms.technology: m365d
-ms.openlocfilehash: 775781a5df9149ae99f1a051303f5d55c23f1bab
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a77a64e2323cc836df9b19694deb5c32ee877fb8
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63603136"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500799"
 ---
 # <a name="view-and-manage-actions-in-the-action-center"></a>Få vist og administrer handlinger i Handlingscenter
 
@@ -57,7 +57,7 @@ Det er vigtigt at godkende (eller afvise) afventende handlinger så hurtigt som 
 
 3. Vælg et element på listen **under fanen** Afventer i Handlingscenter. Pop op-ruden åbnes. Her er et eksempel.
 
-   :::image type="content" source="../../media/air-actioncenter-itemselected.png" alt-text="Eksempel på godkendelse eller afvisning af en handling." lightbox="../../media/air-actioncenter-itemselected.png":::
+   :::image type="content" source="../../media/air-actioncenter-itemselected.png" alt-text="Indstillingerne for at godkende eller afvise en handling" lightbox="../../media/air-actioncenter-itemselected.png":::
 
 4. Gennemse oplysningerne i pop op-ruden, og gør derefter et af følgende:
    - Vælg **siden Åbn undersøgelse for** at få vist flere oplysninger om undersøgelsen.

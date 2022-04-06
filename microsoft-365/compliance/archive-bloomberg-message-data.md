@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataforbindelse til at importere og arkivere data fra Bloomberg-mailværktøjet i Microsoft 365. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere organisationens tredjepartsdata.
-ms.openlocfilehash: 3897909c185aabad48483db9b42fcf6b552a68a3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5b1f32760542bf9ace2adaa8640571f665ba3ffb
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588655"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569859"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Konfigurer en forbindelse til at arkivere Bloomberg-meddelelsesdata
 
@@ -145,14 +145,20 @@ Det sidste trin er at oprette en Bloomberg Message-forbindelse i Microsoft 365 O
 
 7. Klik på Næste, når forbindelsen er blevet **valideret**.
 
-8. På siden **Bloomberg-meddelelsesbrugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
+8. På siden **Definer bruger** skal du angive de brugere, der skal importere data til.
+
+     - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+     - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+9. På siden **Bloomberg-meddelelsesbrugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
 
    > [!NOTE]
    > Forbindelsen importerer meddelelseselementer til en bestemt brugers postkasse. Der oprettes en **ny mappe med navnet BloombergMessage** i den specifikke brugers postkasse, og elementerne importeres til den. Forbindelsen gør ved hjælp af værdien af *egenskaben CorporateEmailAddress* . Alle chatbeskeder indeholder denne egenskab, og egenskaben udfyldes med mailadressen for hver deltager i chatmeddelelsen. Ud over automatisk brugertilknytning med værdien af *egenskaben CorporateEmailAddress* kan du også definere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Tilknytningsfilen skal indeholde Bloomberg UUID og den tilhørende Microsoft 365-postkasseadresse for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning, vil forbindelsen for hvert meddelelseselement først se på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers Bloomberg UUID, vil forbindelsen bruge *egenskaben CorporateEmailAddress* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *CorporateEmailAddress* for meddelelseselementet, importeres elementet ikke.
 
-9. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
+10. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
 
-10. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
+11. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
 
 ## <a name="set-up-a-connector-using-private-keys"></a>Konfigurer en forbindelse ved hjælp af private taster
 
@@ -223,14 +229,20 @@ Når du har konfigureret dit Bloomberg SFTP-websted, er næste trin at oprette e
 
 7. Klik på Næste, når forbindelsen er blevet **valideret**.
 
-8. På siden **Bloomberg-meddelelsesbrugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
+8. På siden **Definer bruger** skal du angive de brugere, der skal importere data for
+
+     - **Alle brugere i organisationen**. Markér denne indstilling for at importere data for alle brugere.
+
+     - **Kun brugere, der er i retslig venteposition**. Markér denne indstilling for kun at importere data for brugere, hvis postkasser er placeret i retslig venteposition. Denne indstilling importerer data til brugerpostkasser, der har egenskaben LitigationHoldEnabled angivet til Sand. Få mere at vide under [Opret en retslig venteposition](create-a-litigation-hold.md).
+
+9. På siden **Bloomberg-meddelelsesbrugere til Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning og angive brugerdefineret brugertilknytning efter behov.
 
    > [!NOTE]
    > Forbindelsen importerer meddelelseselementer til en bestemt brugers postkasse. Der oprettes en **ny mappe med navnet BloombergMessage** i den specifikke brugers postkasse, og elementerne importeres til den. Forbindelsen gør ved hjælp af værdien af *egenskaben CorporateEmailAddress* . Alle chatbeskeder indeholder denne egenskab, og egenskaben udfyldes med mailadressen for hver deltager i chatmeddelelsen. Ud over automatisk brugertilknytning med værdien af *egenskaben CorporateEmailAddress* kan du også definere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Tilknytningsfilen skal indeholde Bloomberg UUID og den tilhørende Microsoft 365-postkasseadresse for hver bruger. Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytning, vil forbindelsen for hvert meddelelseselement først se på brugerdefineret tilknytningsfil. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers Bloomberg UUID, vil forbindelsen bruge *egenskaben CorporateEmailAddress* for chatelementet. Hvis forbindelsen ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *CorporateEmailAddress* for meddelelseselementet, importeres elementet ikke.
 
-9. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
+10. Klik **på** Næste, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette forbindelsen.
 
-10. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
+11. Gå til siden **Dataforbindelser for** at se status for importprocessen for den nye forbindelse. Klik på forbindelsen for at få vist pop op-siden, der indeholder oplysninger om forbindelsen.
 
 ## <a name="known-issues"></a>Kendte problemer
 

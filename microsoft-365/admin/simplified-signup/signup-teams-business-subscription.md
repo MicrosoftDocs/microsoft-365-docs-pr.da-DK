@@ -14,12 +14,12 @@ ms.collection:
 ms.custom:
 - AdminSurgePortfolio
 description: Følg trinnene i denne artikel for at tilmelde dig Microsoft Teams som en del af et virksomhedsabonnement.
-ms.openlocfilehash: 75d1cdd4af19fb9986c034545b345b06401d0f82
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: c011419f499d832ea383bc9b5f8f61a7cea5c430
+ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568976"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "63606793"
 ---
 # <a name="sign-up-for-microsoft-teams-as-part-of-a-business-subscription"></a>Tilmeld dig en Microsoft Teams som en del af et virksomhedsabonnement
 
@@ -37,11 +37,11 @@ Når du søger at købe Microsoft Teams Premium-møde- og opkaldsfunktionalitet,
 
 Se nedenstående tabel for at se tilmeldingsmuligheder og de tjenester, der gælder for dit valg.
 
-|&nbsp;|**Mulighed 1 - Microsoft Teams Essentials** |**Mulighed 2 - Microsoft 365 Business Basic** |
-|---|---|---|
-|Tilgængelige apps og tjenester|Log på med din eksisterende mailkonto (Hotmail, Gmail, Yahoo) ved hjælp af den nye Business Standard-tilmeldingsproces. Microsoft Teams med skylagring i OneDrive. Gratis webversioner af Word, Excel, PowerPoint på Office.com for at redigere filer, der deles Teams. <br/><br/> **Dette sæt apps er bedst til meget små virksomheder, der har brug for at samarbejde effektivt via videomøder og chat**. |Microsoft Teams og OneDrive. Microsoft Exchange, SharePoint, Bookings, Planner og Lister. Premium Office webversioner af Word, Excel, PowerPoint på Office.com. <br/><br/> **Microsoft 365 Business Basic giver dig også adgang til en lang række webbaserede tjenester**: <ul><li>Nye, brandede virksomhedsmailkonti med Outlook, delte kalendere i din virksomhed.</li><li>Bookings, planlægning af aftaler og mødeoptagelser.</li><li>Delt dokumentlagring og -SharePoint websteder.</li><li> Microsoft Planner og Microsoft Lister.</li></ul> <br/> Microsoft 365 Business Basic tilbyder yderligere tjenester inden Teams med tilmelding til domænekonto: <ul><li>Mødeoptagelser og anonym opkaldsadgang i Microsoft Teams.</li><li>Nemmere dokumentdeling inden for din virksomhed.</li><li>Understøttelse af overholdelsesbehovet for din branche.</li><li>Få adgang til og kontrol over dine medarbejderes brug af tjenester.</li><li>Det bredeste udvalg af integrationer af ikke-Microsoft-apps (f.eks. Salesforce, Adobe), der fungerer inden for Teams og Office.</li></ul>|
-|Påkrævet viden|Lad os komme i gang, uden at der kræves teknisk viden for at køre et domæne.|Kræver, at du køber et domæne eller ejer et domæne. Hvis du vil bruge et eksisterende domæne, skal du have adgangslegitimationsoplysninger for domænet, og du skal muligvis have teknisk viden for at bevise ejerskabet.|
-|Gældende aftale og datahåndtering|Findes i tillæg til [Microsoft-serviceaftalen](https://go.microsoft.com/fwlink/p/?linkid=2180702) og egner sig bedst til virksomheder, der ønsker fjernarbejde og samarbejdsværktøjer og er fortrolige med Microsoft, der fungerer som **controller** for dine data i henhold til [Microsofts](https://go.microsoft.com/fwlink/?LinkId=521839) erklæring om beskyttelse af personlige oplysninger. Abonnenter ("dig") til tjenester, der bruger denne indstilling, har ikke adgang til indhold eller data fra en anden inviteret bruger ("inviterede brugere). <br/><br/> Hvis du f.eks. arbejder sammen med andre inviterede brugere på et dokument, der er gemt på deres konto, kan de vælge at gøre disse dokumenter utilgængelige for dig. <br/><br> Inviterede brugere kan vælge ikke at overføre dokumenter på deres Forenklet Sign-Up-konto til dit domænekontoabonnement, selv efter at du har inviteret dem til at gøre det. Det betyder, at deres dokumenter muligvis heller ikke er tilgængelige for dig, selvom du tilføjer en domænekonto senere. Derfor bør du evaluere overvejelser i forbindelse med dataejerskab og immaterielle rettigheder.|Tilgængelig under [Microsoft Online-abonnementsaftale](https://go.microsoft.com/fwlink/p/?linkid=2180430) og egner sig bedst til virksomheder, der har brug **for, at Microsoft** fungerer som en [](https://go.microsoft.com/fwlink/p/?linkid=2180314) processor for deres data i henhold til vores Tilføjelse til databeskyttelse og har brug for vores fulde pakke med værktøjer til fjernarbejde og samarbejde. Abonnenter, der er i regulerede brancher eller søger mere kontrol, både over dine medarbejderes brug af tjenesterne og over behandling af relaterede data fra Microsoft, skal vælge Domænekonto tilmelde sig **hos Microsoft Business Business Basic** og tilmelde sig under Enterprise-niveau-aftalen for domænekontoen.|
+||**Mulighed 1 – Microsoft Teams Essentials** |**Mulighed 2 - Microsoft 365 Business Basic** |
+|:-----|:-----|:-----|
+|Tilgængelige apps og tjenester  <br/> |Log på med din eksisterende mailkonto (Hotmail, Gmail, Yahoo) ved hjælp af den nye Business Standard-tilmeldingsproces. Microsoft Teams med skylagring i OneDrive. Gratis webversioner af Word, Excel, PowerPoint på Office.com for at redigere filer, der deles Teams. <br/> **Dette sæt apps er bedst til meget små virksomheder, der har brug for at samarbejde effektivt via videomøder og chat**. |Microsoft Teams og OneDrive. Microsoft Exchange, SharePoint, Bookings, Planner og Lister. Premium Office webversioner af Word, Excel, PowerPoint på Office.com. <br/> **Microsoft 365 Business Basic giver dig også adgang til en lang række webbaserede tjenester**: <br/> <br/> - Nye, brandede virksomhedsmailkonti med Outlook, delte kalendere i din virksomhed. <br/> - Bookings, planlægning af aftaler og mødeoptagelser. <br/> - Delt dokumentlagring og -SharePoint websteder. <br/> - Microsoft Planner og Microsoft Lister. <br/> Microsoft 365 Business Basic tilbyder yderligere tjenester inden Teams med tilmelding til domænekonto: <br/> - Mødeoptagelser og anonym opkaldsadgang i Microsoft Teams. <br/> - Nemmere dokumentdeling inden for din virksomhed. <br/> - Understøttelse af overholdelsesbehovet for din branche. <br/> - Få adgang til og kontrol over dine medarbejderes brug af tjenester. <br/> - Det bredeste udvalg af integrationer af ikke-Microsoft-apps (f.eks. Salesforce, Adobe), der fungerer inden for Teams og Office. <br/> |
+|Påkrævet viden  <br/> |Lad os komme i gang, uden at der kræves teknisk viden for at køre et domæne.  <br/> |Kræver, at du køber et domæne eller ejer et domæne. Hvis du vil bruge et eksisterende domæne, skal du have adgangslegitimationsoplysninger for domænet, og du skal muligvis have teknisk viden for at bevise ejerskabet. <br/> |
+|Gældende aftale og datahåndtering  <br/> |Findes i tillæg til [Microsoft-serviceaftalen](https://go.microsoft.com/fwlink/p/?linkid=2180702) og egner sig bedst til virksomheder, der ønsker fjernarbejde og samarbejdsværktøjer og er fortrolige med Microsoft, der fungerer som **controller** for dine data i henhold til [Microsofts](https://go.microsoft.com/fwlink/?LinkId=521839) erklæring om beskyttelse af personlige oplysninger. Abonnenter ("dig") til tjenester, der bruger denne indstilling, har ikke adgang til indhold eller data fra en anden inviteret bruger ("inviterede brugere). <br/> Hvis du f.eks. arbejder sammen med andre inviterede brugere på et dokument, der er gemt på deres konto, kan de vælge at gøre disse dokumenter utilgængelige for dig. <br/> Inviterede brugere kan vælge ikke at overføre dokumenter på deres Forenklet Sign-Up-konto til dit domænekontoabonnement, selv efter at du har inviteret dem til at gøre det. Det betyder, at deres dokumenter muligvis heller ikke er tilgængelige for dig, selvom du tilføjer en domænekonto senere. Derfor bør du evaluere overvejelser i forbindelse med dataejerskab og immaterielle rettigheder. <br/> |Tilgængelig under [Microsoft Online-abonnementsaftale](https://go.microsoft.com/fwlink/p/?linkid=2180430) og egner sig bedst til virksomheder, der har brug **for, at Microsoft** fungerer som en [](https://go.microsoft.com/fwlink/p/?linkid=2180314) processor for deres data i henhold til vores Tilføjelse til databeskyttelse og har brug for vores fulde pakke med værktøjer til fjernarbejde og samarbejde. Abonnenter, der er i regulerede brancher eller søger mere kontrol, både over dine medarbejderes brug af tjenesterne og over behandling af relaterede data fra Microsoft, skal vælge Domænekonto tilmelde sig **hos Microsoft Business Business Basic** og tilmelde sig under Enterprise-niveau-aftalen for domænekontoen. <br/> |
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
@@ -49,7 +49,7 @@ Se nedenstående tabel for at se tilmeldingsmuligheder og de tjenester, der gæl
 
 En virksomhedsmail er en mail, der bruger dit eget domænenavn. Hvis du f.eks `contoso.com`. ejer domænenavnet , kan du oprette et websted ved hjælp af URL-adressen `www.contoso.com`, men du kan også have en brugerdefineret mailadresse som f.eks. yourname@contoso.com. Dette kaldes en brandet virksomhedsmail, da den giver dine mails et professionelt udseende.
 
-### <a name="how-do-i-get-a-new-business-email-address"></a>Hvordan gør jeg får du en ny virksomhedsmailadresse?
+### <a name="how-do-i-get-a-new-business-email-address"></a>Hvordan får jeg en ny virksomhedsmailadresse?
 
 Der er tre muligheder for at få en virksomhedsmail.
 
@@ -67,4 +67,6 @@ Når Tilbagevendende fakturering er den, vil dit abonnement fortsat blive faktur
 
 ### <a name="what-do-i-do-if-i-want-to-change-my-business-name"></a>Hvad gør jeg, hvis jeg vil ændre mit firmanavn?
 
+
 Kontakt vores supporteksperter til små virksomheder, som kan hjælpe dig med at ændre virksomhedens navn. Få mere at vide  [påFå support](../get-help-support.md).
+

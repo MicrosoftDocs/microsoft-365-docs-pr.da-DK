@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: ec4aa28c25982ea81662ff26fa19f615d13cd314
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: b659853d9323b4a1503cd75cff66a83cbd06e85e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465393"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682895"
 ---
 # <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Politikanbefalinger til sikring Teams chats, grupper og filer
 
-I denne artikel beskrives det, hvordan du implementerer de anbefalede politikker for Nul tillid identitet og enhedsadgang for at beskytte Microsoft Teams chatsamtaler, grupper og indhold som f.eks. filer og kalendere. Denne vejledning bygger på de [almindelige politikker for identitet og](identity-access-policies.md) enhedsadgang med yderligere oplysninger, der Teams specifikke. Da Teams med vores andre produkter, kan du også se Politikanbefalinger [til sikring af SharePoint-websteder](sharepoint-file-access-policies.md) og -filer og [Politikanbefalinger til sikring af mail](secure-email-recommended-policies.md).
+I denne artikel beskrives det, hvordan du implementerer de anbefalede politikker for nultillidsidentitet og enhedsadgang for at beskytte Microsoft Teams, chatsamtaler, grupper og indhold som f.eks. filer og kalendere. Denne vejledning bygger på de [almindelige politikker for identitet og](identity-access-policies.md) enhedsadgang med yderligere oplysninger, der Teams specifikke. Da Teams med vores andre produkter, kan du også se Politikanbefalinger [til sikring af SharePoint-websteder](sharepoint-file-access-policies.md) og -filer og [Politikanbefalinger til sikring af mail](secure-email-recommended-policies.md).
 
 Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse til Teams, der kan anvendes baseret på granulariteten af dine behov: udgangspunkt, virksomhed og særlig sikkerhed. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede politikker, der refereres til i disse anbefalinger i [Konfigurationer for identitets- og enhedsadgang](microsoft-365-policies-configurations.md).
 
@@ -49,7 +49,7 @@ Du behøver ikke at aktivere afhængige tjenester for at komme i gang med Micros
 
 For at beskytte chat, grupper og indhold i Teams viser nedenstående diagram, hvilke politikker der skal opdateres fra de fælles politikker for identitet og enhedsadgang. For at opdatere hver politik skal du sørge for, Teams og afhængige tjenester er inkluderet i tildelingen af skyapps.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgang til Teams og dens afhængige tjenester" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Oversigt over politikopdateringer til beskyttelse af Teams og dens afhængige tjenester." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
 
 Disse tjenester er de afhængige tjenester, der medtages i tildelingen af skyapps til Teams:
 
@@ -58,7 +58,7 @@ Disse tjenester er de afhængige tjenester, der medtages i tildelingen af skyapp
 - Exchange Online
 - Skype for Business Online
 - Microsoft Stream (mødeoptagelser)
-- Microsoft Planner (Planner-opgaver, og planlæg data)
+- Microsoft Planner (Planner-opgaver og planlæg data)
 
 I denne tabel vises de politikker, der skal revideres[, og](identity-access-policies.md) links til hver politik i de fælles politikker for identitet og adgang til enheder, som har den bredere politik angivet for alle Office programmer.
 
@@ -77,7 +77,7 @@ I denne tabel vises de politikker, der skal revideres[, og](identity-access-poli
 
 Følgende diagram illustrerer de tjenester, som Teams afhænger af. Du kan finde flere oplysninger og illustrationer [Microsoft Teams produktivitetstjenester og relaterede produktivitetstjenester Microsoft 365 IT-arkitekter](../../solutions/productivity-illustrations.md).
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diagrammet viser Teams af SharePoint, OneDrive for Business og Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diagram, Teams af afhængigheder SharePoint, OneDrive for Business og Exchange." lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
 
 ## <a name="guest-and-external-access-for-teams"></a>Gæsteadgang og ekstern adgang til Teams
 
@@ -140,7 +140,7 @@ Hvis du vil have mere at vide om tilladelsespolitikker for apps, skal [du se Adm
 
 ## <a name="next-steps"></a>Næste trin
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Trin 4: Politikker for Microsoft 365 skyapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+![Trin 4: Politikker for Microsoft 365 skyapps.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
 
 Konfigurere Betingede adgangspolitikker for:
 

@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: Brug PowerShell til Microsoft 365 at administrere Skype for Business Online-politikker, politikker pr. bruger og mødeindstillinger.
-ms.openlocfilehash: 40fc030c957fee2d31c18ea95f1939e3d9f0937b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: cb546a7e4130509d7acd0021b3cb78df23c1819f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590363"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474466"
 ---
 # <a name="manage-skype-for-business-online-with-powershell"></a>Administrer Skype for Business Online med PowerShell
 
@@ -30,7 +30,10 @@ Skype for Business Online-administratorer er ansvarlige for administration af po
 ## <a name="before-you-start"></a>Før du starter
 
 > [!NOTE]
-> Skype for Business Online Connector er i øjeblikket en del af det nyeste Teams PowerShell-modul. Hvis du bruger den nyeste Teams offentlige PowerShell-udgivelse, behøver du ikke at installere Skype for Business Online Connector.
+> Skype for Business Online Connector er i øjeblikket en del af det nyeste Teams PowerShell-modul. Hvis du bruger den nyeste **Teams offentlige PowerShell-udgivelse**, behøver du ikke at installere Skype for Business Online Connector.
+
+> [!NOTE]
+> Skype for Business Online-administratorer kan administrere politikker **for Teams** **onlineapps Skype for Business Online-appen** via PowerShell.
 
 Installer Teams [PowerShell-modulet](/microsoftteams/teams-powershell-install).
 

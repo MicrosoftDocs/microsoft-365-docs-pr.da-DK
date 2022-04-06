@@ -19,12 +19,12 @@ ms.custom:
 description: Få mere at vide om, hvordan du opdaterer en DNS-post (Domain Name Service) til at bruge SPF (Sender Policy Framework) med dit brugerdefinerede domæne Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ab7bd0e579bfe26236eb009dc09689ddb90f2782
-ms.sourcegitcommit: 43adb0d91af234c34e22d450a9c1d26aa745c2ca
+ms.openlocfilehash: a25efbce5b9f8141575a88baa3fdd85b099dfbd6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "63589180"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682961"
 ---
 # <a name="set-up-spf-to-help-prevent-spoofing"></a>Konfigurer SPF for at forhindre spoofing
 
@@ -77,10 +77,6 @@ SPF TXT-posten for Office 365 oprettes i ekstern DNS for eventuelle brugerdefine
 
 1. Sørg for, at du kender SPF-syntaksen i følgende tabel.
 
-    <br>
-
-    ****
-
     |Element|Hvis du bruger...|Er det almindeligt for kunder?|Tilføj dette...|
     |---|---|---|---|
     |1|Ethvert mailsystem (påkrævet)|Almindeligt. Alle SPF TXT-poster starter med denne værdi|`v=spf1`|
@@ -90,7 +86,6 @@ SPF TXT-posten for Office 365 oprettes i ekstern DNS for eventuelle brugerdefine
     |5|Tredjepartsmailsystem|Ikke almindeligt|`include:<domain_name>` <p> \<domain_name\> er domænet for tredjepartsmailsystemet.|
     |6|Lokalt mailsystem. Eksempelvis kan Exchange Online Protection plus et andet mailsystem|Ikke almindeligt|Brug en af disse til hvert ekstra mailsystem: <p> `ip4:<IP_address>` <br> `ip6:<IP_address>` <br> `include:<domain_name>` <p> \<IP_address\> og \<domain_name\> er IP-adressen og domænet for det andet mailsystem, der sender mail på vegne af dit domæne.|
     |7|Ethvert mailsystem (påkrævet)|Almindeligt. Alle SPF TXT-poster slutter med denne værdi|`<enforcement rule>` <p> Dette kan være en af flere værdier. Vi anbefaler værdien `-all`.|
-    |
 
 2. Hvis du ikke allerede har gjort det, skal du danne din SPF TXT-post ved hjælp af syntaksen fra tabellen.
 

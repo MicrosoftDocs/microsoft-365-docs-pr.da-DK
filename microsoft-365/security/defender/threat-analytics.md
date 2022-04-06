@@ -2,7 +2,7 @@
 title: Trusselsanalyse i Microsoft 365 Defender
 ms.reviewer: ''
 description: Få mere at vide om nye trusler og angrebsteknikker, og hvordan du stopper dem. Vurder deres indvirkning på din organisation, og vurder din organisatoriske fleksibilitet.
-keywords: trusselsanalyse, risikoevaluering, Microsoft 365 Defender, M365D, afhjælpningsstatus, sikker konfiguration, Microsoft Defender til Office 365, Microsoft Defender til Office 365-trusselsanalyse, MDO-trusselsanalyse, integrerede MDE- og MDO-trusselsanalysedata, integration af trusselsanalysedata, integreret Microsoft 365 Defender trusselsanalyse
+keywords: trusselsanalyse, risikoevaluering, Microsoft 365 Defender, M365D, afhjælpningsstatus, sikker konfiguration, Microsoft Defender for Office 365, Microsoft Defender for Office 365  trusselsanalyse, MDO-trusselsanalyse, integrerede MDE- og MDO-trusselsanalysedata, integration af trusselsanalysedata, integreret Microsoft 365 Defender trusselsanalyse
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5cb9f0db07ad29618e0dc9d053f4904a70ca52f6
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 40e14f0bb6e38a6923e5e1d454981d49932f7ea1
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63606453"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500689"
 ---
 # <a name="threat-analytics-in-microsoft-365-defender"></a>Trusselsanalyse i Microsoft 365 Defender
 
@@ -53,7 +53,7 @@ Se denne korte video for at få mere at vide om, hvordan trusselsanalyse kan hj�
 
 Du kan få adgang til trusselsanalyse enten fra den øverste venstre side af Microsoft 365-sikkerhedsportalens navigationslinje eller fra et dedikeret dashboardkort, der viser de vigtigste trusler mod din organisation, både med hensyn til påvirkning og eksponering.
 
-![Billede af dashboardet for trusselsanalyse.](../../media/threat-analytics/ta_inlandingpage_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Landingssiden for trusselsanalyser" lightbox="../../media/threat-analytics/ta_inlandingpage_mtp.png":::
 
 Trusler med høj effekt har størst risiko for at forvolde skade, mens høje eksponeringstrusler er dem, som aktiverne er mest følsomme over for. Få overblik over aktive eller igangværende kampagner og viden om, hvad du skal gøre, via trusselsanalyse, kan hjælpe dit sikkerhedsteam med at træffe velovervejede beslutninger.
 
@@ -79,7 +79,7 @@ Dashboardet trusselsanalyse ([security.microsoft.com/threatanalytics3](https://s
 
 Vælg en trussel fra dashboardet for at få vist rapporten for den pågældende trussel.
 
-![Skærmbillede af dashboard for trusselsanalyse.](../../media/threat-analytics/ta_dashboard_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_dashboard_mtp.png" alt-text="Dashboardet Trusselsanalyse" lightbox="../../media/threat-analytics/ta_dashboard_mtp.png":::
 
 _Dashboard for trusselsanalyse. Du kan også vælge feltet Søg, som skal have en nøgle i et nøgleord, der er relateret til rapporten om trusselsanalyse, som du gerne vil læse._
 
@@ -98,7 +98,7 @@ Hver trusselsanalyserapport indeholder oplysninger i flere sektioner:
 
 Afsnittet **Oversigt** giver et eksempel på den detaljerede analytikerrapport. Den indeholder også diagrammer, der fremhæver virkningen af truslen mod din organisation og din eksponering via forkert konfigurerede og ikke-kompatible enheder.
 
-![Billede af afsnittet Oversigt i en rapport over trusselsanalyse.](../../media/threat-analytics/ta_overview_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_overview_mtp.png" alt-text="Afsnittet Oversigt i en trusselsanalyserapport" lightbox="../../media/threat-analytics/../../media/threat-analytics/ta_overview_mtp.png":::
 
 _Afsnittet Oversigt i en rapport over trusselsanalyse_
 
@@ -139,15 +139,15 @@ Microsoft Threat Intelligence-teamet har føjet trusselsmærker til hver trussel
   - Gruppen Aktivitet
 - Trusselsmærker vises øverst på siden Trusselsanalyse. Der er tællere for antallet af tilgængelige rapporter under hver kode.
 
-  ![trusselsmærker.](../../media/threat-analytics/ta-threattags-mtp.png)
+  :::image type="content" source="../../media/threat-analytics/ta-threattags-mtp.png" alt-text="Trusselsmærkerne" lightbox="../../media/threat-analytics/ta-threattags-mtp.png":::
 
 - Listen kan også sorteres efter trusselsmærker:
 
-  ![lister.](../../media/threat-analytics//ta-taglist-mtp.png)
+  :::image type="content" source="../../media/threat-analytics//ta-taglist-mtp.png" alt-text="Afsnittet Trusselsmærker" lightbox="../../media/threat-analytics//ta-taglist-mtp.png":::
 
 - Filtre er tilgængelige pr. trusselsmærke og rapporttype:
 
-  ![filtre.](../../media/threat-analytics/ta-threattag-filters-mtp.png)
+  :::image type="content" source="../../media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Siden Filtre" lightbox="../../media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 ### <a name="analyst-report-get-expert-insight-from-microsoft-security-researchers"></a>Analytikerrapport: Få ekspertindsigt fra Microsoft-sikkerhedseksperter
 
@@ -157,9 +157,9 @@ I sektionen **Analyst report** skal du læse opskrivningen af den detaljerede ek
 
 ### <a name="related-incidents-view-and-manage-related-incidents"></a>Relaterede hændelser: Få vist og administrer relaterede hændelser
 
-Fanen **Relaterede hændelser indeholder** en liste over alle hændelser, der er relateret til den registrerede trussel. Du kan tildele hændelser eller administrere beskeder, der er knyttet til hver hændelse.
+Fanen **Relaterede hændelser indeholder** en liste over alle hændelser, der er relateret til den registrerede trussel. Du kan tildele hændelser eller administrere beskeder, der er knyttet til hver hændelse. 
 
-![Billede af sektionen relaterede hændelser i en rapport over trusselsanalyse.](../../media/threat-analytics/ta_related_incidents_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Afsnittet relaterede hændelser i en trusselsanalyserapport" lightbox="../../media/threat-analytics/ta_related_incidents_mtp.png":::
 
 _Sektionen Relaterede hændelser i en trusselsanalyserapport_
 
@@ -167,10 +167,10 @@ _Sektionen Relaterede hændelser i en trusselsanalyserapport_
 
 Et aktiv anses for at være påvirket, hvis det påvirkes af en aktiv, ikke-fundet besked. Fanen **På påvirkede** aktiver viser følgende typer af på påvirkede aktiver:
 
-- **Påsatte enheder** – slutpunkter, der ikke har fundet Microsoft Defender for slutpunktsbeskeder. Disse beskeder udløses typisk på observationer af kendte trusselsindikatorer og aktiviteter.
-- **På påvirkede postkasser** – postkasser, der har modtaget mails, som har udløst Microsoft Defender Office 365 vigtige beskeder. Mens de fleste meddelelser, der udløser beskeder, typisk blokeres, kan politikker på bruger- eller organisationsniveau tilsidesætte filtre.
+- **Påsatte enheder** – slutpunkter, der ikke har Microsoft Defender for Endpoint vigtige beskeder. Disse beskeder udløses typisk på observationer af kendte trusselsindikatorer og aktiviteter.
+- **På påvirkede postkasser** – postkasser, der har modtaget mails, som har Microsoft Defender for Office 365 vigtige beskeder. Mens de fleste meddelelser, der udløser beskeder, typisk blokeres, kan politikker på bruger- eller organisationsniveau tilsidesætte filtre.
 
-![Billede af afsnittet om påvirkningte aktiver i en rapport over trusselsanalyse.](../../media/threat-analytics/ta_impacted_assets_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Afsnittet om påvirkningte aktiver i en trusselsanalyserapport" lightbox="../../media/threat-analytics/ta_impacted_assets_mtp.png":::
 
 _Afsnittet På påvirkede aktiver i en trusselsanalyserapport_
 
@@ -178,9 +178,9 @@ _Afsnittet På påvirkede aktiver i en trusselsanalyserapport_
 
 Microsoft Defender for Office 365 blokerer typisk mails med kendte trusselsindikatorer, herunder ondsindede links eller vedhæftede filer. I nogle tilfælde vil proaktive filtreringsmekanismer, der kontrollerer mistænkeligt indhold, i stedet sende mails med trusler til mappen med uønsket mail. I begge tilfælde reduceres risikoen for at starte malwarekode på enheden.
 
-Fanen **Forhindrede mailforsøg** viser alle de mails, der enten er blevet blokeret før levering eller sendt til mappen med uønsket mail af Microsoft Defender Office 365.
+Fanen **Forhindrede mailforsøg** viser alle de mails, der enten er blevet blokeret før levering eller sendt til mappen med uønsket mail Microsoft Defender for Office 365.
 
-![Billede af afsnittet forhindrede mailforsøg i en trusselsanalyserapport.](../../media/threat-analytics/ta_prevented_email_attempts_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_prevented_email_attempts_mtp.png" alt-text="Afsnittet om forhindrede mailforsøg i en trusselsanalyserapport" lightbox="../../media/threat-analytics/ta_prevented_email_attempts_mtp.png":::
 
 _Afsnittet forsøg på mail forhindret i en trusselsanalyserapport_
 
@@ -196,9 +196,9 @@ I afsnittet **afhjælpninger & eksponering skal** du gennemgå listen over speci
 
 Oplysninger om afhjælpning i dette afsnit indeholder data [fra Håndtering af trusler og sikkerhedsrisici](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt), som også indeholder detaljerede oplysninger om afhjælpning fra forskellige links i rapporten.
 
-![Billede af afsnittet afhjælpninger i en rapport over trusselsanalyse, der viser sikre konfigurationsoplysninger.](../../media/threat-analytics/ta_mitigations_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_mitigations_mtp.png" alt-text="Afsnittet om afhjælpninger i en rapport over trusler, der viser sikre konfigurationsoplysninger" lightbox="../../media/threat-analytics/ta_mitigations_mtp.png":::
 
-![Billede af afsnittet om afhjælpninger i en rapport over trusselsanalyse, der viser oplysninger om sikkerhedsrisikoen.](../../media/threat-analytics/ta_mitigations_mtp2.png)
+:::image type="content" source="../../media/threat-analytics/ta_mitigations_mtp2.png" alt-text="Afsnittet om afhjælpninger i en rapport over trusler, der viser oplysninger om sikkerhedsrisiko" lightbox="../../media/threat-analytics/ta_mitigations_mtp2.png":::
 
 _Afsnittet & afhjælpninger af eksponering i en rapport om trusselsanalyse_
 
@@ -246,15 +246,15 @@ Du kan konfigurere mailbeskeder til trusselsanalyserapporter ved at udføre føl
 ## <a name="additional-report-details-and-limitations"></a>Yderligere rapportdetaljer og -begrænsninger
 
 > [!NOTE]
-> Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig ikke kun for Microsoft Defender til Slutpunkt, men også for Microsoft Defender til Office E5-licensholdere.
+> Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig ikke kun for Microsoft Defender for Endpoint, men også for Microsoft Defender til Office E5-licensholdere.
 >
-> Hvis du ikke bruger Microsoft 365-sikkerhedsportalen (Microsoft 365 Defender), kan du også se rapportoplysningerne (uden Microsoft Defender til Office-data) på Microsoft Defender Security Center-portalen (Microsoft Defender til slutpunkt).
+> Hvis du ikke bruger Microsoft 365-sikkerhedsportalen (Microsoft 365 Defender), kan du også se rapportoplysningerne (uden Microsoft Defender til Office-data) på Microsoft Defender Security Center-portalen ( Microsoft Defender for Endpoint).
 
 For at få adgang til rapporter om trusselsanalyse skal du have bestemte roller og tilladelser. Se [Brugerdefinerede roller i rollebaseret adgangskontrol for at få Microsoft 365 Defender](custom-roles.md) for at få mere at vide.
 
-- Hvis du vil have vist vigtige beskeder, hændelser eller påvirkede data om aktiver, skal du have tilladelser til Microsoft Defender til Office- eller Microsoft Defender for Endpoint-beskeddata eller begge dele.
+- Hvis du vil have vist vigtige beskeder, hændelser eller påvirkede data om aktiver, skal du have tilladelser til Microsoft Defender til Office eller Microsoft Defender for Endpoint eller begge dele.
 - Hvis du vil have vist forhindrede mailforsøg, skal du have tilladelse til at Microsoft Defender til at Office data.
-- For at få vist afhjælpninger skal du have tilladelse til at Håndtering af trusler og sikkerhedsrisici data i Microsoft Defender til Slutpunkt.
+- For at få vist afhjælpninger skal du have tilladelse til at Håndtering af trusler og sikkerhedsrisici data i Microsoft Defender for Endpoint.
 
 Når du ser på dataene fra trusselsanalyser, skal du huske følgende faktorer:
 

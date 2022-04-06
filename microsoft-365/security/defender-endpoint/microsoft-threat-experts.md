@@ -1,7 +1,7 @@
 ---
 title: Microsoft-trusselseksperter
 ms.reviewer: ''
-description: Microsoft-trusselseksperter giver et ekstra lag af ekspertise til Microsoft Defender til slutpunkt.
+description: Microsoft-trusselseksperter giver et ekstra lag ekspertise til at Microsoft Defender for Endpoint.
 keywords: administreret trusselssøgningstjeneste, administreret trusselssøgning, administreret registrering og svartjeneste (MDR), MTE, Microsoft-trusselseksperter, MTE-TAN, meddelelse om målrettet angreb, målrettet angrebsmeddelelse
 search.product: Windows 10
 ms.prod: m365-security
@@ -18,22 +18,22 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: cc9f0f4410e3f62a6f787efd01d899250cd67a93
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 82fbe21e4d18a741da4a098b8e24a303f4d47008
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63597493"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473953"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft-trusselseksperter
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft-trusselseksperter er en administreret trusselssøgningstjeneste, der leverer dine SIKKERHEDS-operationscentre (SOCs) med ekspertniveauovervågning og -analyse for at hjælpe dem med at sikre, at kritiske trusler i dine unikke miljøer ikke overser.
 
@@ -73,19 +73,19 @@ Muligheden for at **kontakte en trusselsekspert** er tilgængelig flere steder i
 
 - ***Menuen Hjælp og support***
 
-  ![Skærmbillede af MTE-EOD-menuindstillingen.](images/mte-eod-menu.png)
+  :::image type="content" source="images/mte-eod-menu.png" alt-text="Menupunktet MTE-EOD" lightbox="images/mte-eod-menu.png":::
 
 - ***Menuen Enhedssidehandlinger***
 
-  ![Skærmbillede af handlingsmenuindstillingen MTE-EOD-enhed.](images/mte-eod-machines.png)
+  :::image type="content" source="images/mte-eod-machines.png" alt-text="Handlingsmenuindstillingen MTE-EOD-enhed" lightbox="images/mte-eod-machines.png":::
 
 - ***Menuen med beskedsidehandlinger***
 
-  ![Skærmbillede af handlingsmenuindstillingen MTE-EOD-beskedside.](images/mte-eod-alerts.png)
+  :::image type="content" source="images/mte-eod-alerts.png" alt-text="Handlingsmenuindstillingen MTE-EOD-påmindelsesside" lightbox="images/mte-eod-alerts.png":::
 
 - ***Menuen Filsidehandlinger***
 
-  ![Skærmbillede af handlingsmenuindstillingen MTE-EOD-filside.](images/mte-eod-file.png)
+  :::image type="content" source="images/mte-eod-file.png" alt-text="Handlingsmenuindstillingen MTE-EOD-filside" lightbox="images/mte-eod-file.png":::
 
 > [!NOTE]
 > Hvis du vil spore status for dine Experts on Demand-sager via Microsoft Services Hub, skal du kontakte din Kundesucces-account manager.

@@ -1,7 +1,7 @@
 ---
-title: Fejlfinding af problemer med ydeevnen for Microsoft Defender til Endpoint på macOS
-description: Fejlfinding af problemer med ydeevnen i Microsoft Defender til Slutpunkt på macOS.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, ydeevne
+title: Fejlfinding af problemer med ydeevnen for Microsoft Defender for Endpoint på macOS
+description: Fejlfinding af problemer med ydeevnen Microsoft Defender for Endpoint på macOS.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, ydeevne
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,42 +15,43 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1d39bd46afae270fc7ac2a9fab8b5f4a2b4aaeb2
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: e83400e444d4c8c733bea5552a31954bb019e358
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63597511"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474041"
 ---
-# <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-macos"></a>Fejlfinding af problemer med ydeevnen for Microsoft Defender til Endpoint på macOS
+# <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-macos"></a>Fejlfinding af problemer med ydeevnen for Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
 
-- [Microsoft Defender til Slutpunkt på macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint på macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Dette emne indeholder nogle generelle trin, der kan bruges til at indskrænke problemer med ydeevnen i forbindelse med Microsoft Defender til Slutpunkt på macOS.
+Dette emne indeholder nogle generelle trin, der kan bruges til at indskrænke problemer med ydeevnen, der er relateret Microsoft Defender for Endpoint på macOS.
 
-Beskyttelse i realtid (RTP) er en funktion i Microsoft Defender til slutpunkt på macOS, der hele tiden overvåger og beskytter din enhed mod trusler. Den består af fil- og procesovervågning og anden heuristics.
+Beskyttelse i realtid (RTP) er en funktion i Microsoft Defender for Endpoint i macOS, der løbende overvåger og beskytter din enhed mod trusler. Den består af fil- og procesovervågning og anden heuristics.
 
-Afhængigt af de programmer, du kører, og dine enhedsegenskaber kan du opleve en underoptimal ydeevne, når du kører Microsoft Defender til Slutpunkt på macOS. Især programmer eller systemprocesser, der får adgang til mange ressourcer over en kort periode, kan føre til problemer med ydeevnen i Microsoft Defender til Slutpunkt på macOS.
+Afhængigt af de programmer, du kører, og dine enhedsegenskaber kan du opleve underoptimal ydeevne, når du kører Microsoft Defender for Endpoint på macOS. Især programmer eller systemprocesser, der får adgang til mange ressourcer over en kort periode, kan føre til problemer med ydeevnen Microsoft Defender for Endpoint på macOS.
 
 Følgende trin kan bruges til at foretage fejlfinding af og afhjælpe disse problemer:
 
-1. Deaktiver beskyttelse i realtid ved hjælp af en af følgende metoder, og se, om ydeevnen forbedres. Denne fremgangsmåde hjælper med at indskrænke, om Microsoft Defender til slutpunkt på macOS bidrager til problemer med ydeevnen.
+1. Deaktiver beskyttelse i realtid ved hjælp af en af følgende metoder, og se, om ydeevnen forbedres. Denne fremgangsmåde hjælper med at indskrænke, Microsoft Defender for Endpoint på macOS bidrager til problemer med ydeevnen.
 
       Hvis din enhed ikke administreres af din organisation, kan beskyttelse i realtid deaktiveres ved hjælp af en af følgende indstillinger:
 
-    - Fra brugergrænsefladen. Åbn Microsoft Defender til Slutpunkt på macOS, og gå til **Administrer indstillinger**.
+    - Fra brugergrænsefladen. Åbn Microsoft Defender for Endpoint i macOS, og gå til **Administrer indstillinger**.
 
-      ![Administrer skærmbilledet beskyttelse i realtid.](images/mdatp-36-rtp.png)
+      :::image type="content" source="images/mdatp-36-rtp.png" alt-text=" Siden Administrer beskyttelse i realtid" lightbox="images/mdatp-36-rtp.png":::
+      
 
     - Fra terminalen. Af sikkerhedsmæssige årsager kræver denne handling udvidelse.
 
@@ -58,7 +59,7 @@ Følgende trin kan bruges til at foretage fejlfinding af og afhjælpe disse prob
       mdatp config real-time-protection --value disabled
       ```
 
-      Hvis din enhed administreres af din organisation, kan beskyttelse i realtid deaktiveres af din administrator ved hjælp af instruktionerne i Angiv indstillinger [for Microsoft Defender for Endpoint på macOS](mac-preferences.md).
+      Hvis din enhed administreres af din organisation, kan beskyttelse i realtid deaktiveres af din administrator ved hjælp af vejledningen i Angiv indstillinger [for Microsoft Defender for Endpoint på macOS](mac-preferences.md).
 
       Hvis ydelsesproblemet fortsætter, mens beskyttelse i realtid er slået fra, kan problemets oprindelse være slutpunktsregistrering og -svar komponenten. I dette tilfælde skal du kontakte kundesupport for yderligere instruktioner og afhjælpning.
 
@@ -153,6 +154,6 @@ Følgende trin kan bruges til at foretage fejlfinding af og afhjælpe disse prob
       > [!NOTE]
       > Programmet lagrer statistik i hukommelsen og holder kun styr på filaktivitet, siden det blev startet, og beskyttelse i realtid blev aktiveret. Processer, der blev startet før eller i perioder, hvor beskyttelse i realtid var slået fra, tælles ikke. Desuden tælles kun hændelser, der udløste scanninger, med.
       >
-6. Konfigurer Microsoft Defender til Slutpunkt på macOS med udeladelse for de processer eller diskplaceringer, der bidrager til problemer med ydeevnen, og genaktiver beskyttelse i realtid.
+6. Konfigurer Microsoft Defender for Endpoint på macOS med undtagelser for de processer eller diskplaceringer, der bidrager til problemer med ydeevnen, og genaktiver beskyttelse i realtid.
 
-     Se [Konfigurer og valider udeladelse af Microsoft Defender for Endpoint på macOS](mac-exclusions.md) , hvis du vil have mere at vide.
+     Se [Konfigurer og valider udeladelse for Microsoft Defender for Endpoint på macOS](mac-exclusions.md), hvis du vil have mere at vide.

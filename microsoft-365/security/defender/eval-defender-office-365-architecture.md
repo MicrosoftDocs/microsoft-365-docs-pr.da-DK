@@ -1,6 +1,6 @@
 ---
 title: Gennemgå arkitekturkrav og planlægningskoncepter for Microsoft Defender for Office 365
-description: Det tekniske diagram for Microsoft Defender for Office 365 i Microsoft 365 Defender hjælper dig med at forstå identitet i Microsoft 365, før du opbygger dit prøvelaboratorium eller pilotmiljø.
+description: Det tekniske diagram for Microsoft Defender for Office 365 i Microsoft 365 Defender hjælper dig med at forstå identiteten på et Microsoft 365 før du opbygger dit prøvelaboratorium eller pilotmiljø.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: b0f12d50cd37832a5c9055fdabcffa0968645682
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 0ce03f919d3a4012952ab7d2056b33f2eeb71926
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498951"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569463"
 ---
 # <a name="review-microsoft-defender-for-office-365-architecture-requirements-and-key-concepts"></a>Gennemgå Microsoft Defender for Office 365 arkitekturkrav og nøglekoncepter
 
@@ -77,7 +77,7 @@ I følgende tabel identificeres nøglekoncepter, som er vigtige at forstå, når
 
 Du kan finde flere oplysninger om de funktioner, der følger med Microsoft Defender Office, Microsoft Defender for Office 365 [beskrivelse af tjenesten](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
-## <a name="review-architecture-requirements"></a>Gennemgå arkitekturkrav
+## <a name="review-architecture-requirements"></a>Gennemse arkitekturkrav
 En vellykket MDO-evaluering eller produktionspilot forudsætter følgende forudsætninger:
 - Alle dine modtagerpostkasser befinder sig i øjeblikket i Exchange Online.
 - Din offentlige MX-post sendes direkte til EOP eller en TREDJEPARTS SMTP-gateway, som derefter videresender indgående eksterne mails direkte til EOP.

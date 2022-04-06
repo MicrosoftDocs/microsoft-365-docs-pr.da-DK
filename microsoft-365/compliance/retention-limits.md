@@ -18,12 +18,12 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Forstå det maksimale antal politikker og elementer pr. politik for opbevaringspolitikker og opbevaringsmærkatpolitikker
-ms.openlocfilehash: 4cd8fc5f141f9e039a271e8534e156e4df0582e9
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 4c175a9e43440c58f74da334a38bc73dae5b76e4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63591959"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595010"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Begrænsninger for opbevaringspolitikker og opbevaringsetiketpolitikker
 
@@ -76,7 +76,7 @@ Hvis du bruger statiske områder og den valgfri konfiguration til at medtage ell
 Maksimale antal elementer pr. politik for opbevaring for statiske områder:
 
 - Exchange postkasser: 1.000
-- Microsoft 365 grupper: 1.000
+- Microsoft 365-grupper: 1.000
 - Teams kanalmeddelelser: 1.000
 - Teams chatsamtaler: 1.000
 - Yammer gruppemeddelelser: 1.000
@@ -116,8 +116,16 @@ SharePoint eksempel:
 
 Når du [skal være opmærksom på dispositionen](disposition.md) af indhold, er der nogle begrænsninger, du skal være opmærksom på:
 
-- 1.000.000 elementer, der afventer disposition pr. fase for hver opbevaringsetiket
-
-- Dispositionsbevis i op til syv år, efter at varen er blevet fjernet, med en begrænsning på 1.000.000 elementer pr. opbevaringsmærkat for den pågældende periode. 
+- Maksimale tal pr. lejer:
     
-Hvis du har brug for en disposition, der er højere end denne grænse på 1.000.000 for elementer, der er markeret som poster, skal du kontakte [Microsoft Support](../admin/get-help-support.md).
+    - 16.000.000 elementer i en af følgende tilstande for dispositionsgennemsyn: ventende disposition eller godkendt disposition
+        
+    - 16.000.000 elementer, der er markeret som poster, afhændes automatisk (ingen gennemgang af dispositionen)
+
+- Maksimale tal for hver opbevaringsetiket:
+    
+    - 1.000.000 elementer, der afventer disposition pr. fase for hver opbevaringsetiket
+    
+    - Dispositionsbevis i op til syv år, efter at varen er blevet fjernet, med en begrænsning på 1.000.000 elementer pr. opbevaringsmærkat for den pågældende periode. 
+        
+        Hvis du har brug for en disposition, der er højere end denne grænse på 1.000.000 for elementer, der er markeret som poster, skal du kontakte [Microsoft Support](../admin/get-help-support.md).

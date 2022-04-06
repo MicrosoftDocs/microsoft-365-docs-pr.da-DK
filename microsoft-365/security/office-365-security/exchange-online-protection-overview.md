@@ -16,12 +16,12 @@ ms.custom:
 description: Lær, Exchange Online Protection (EOP) kan hjælpe med at beskytte din lokale mailorganisation i enkeltstående og hybride miljøer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fb49a24ae378be990efd727450a06889cc50679
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 319b20d548ad83cbf57043909a8dc2ce840db5cd
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473359"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682653"
 ---
 # <a name="exchange-online-protection-overview"></a>Exchange Online Protection oversigt
 
@@ -29,7 +29,7 @@ ms.locfileid: "64473359"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Exchange Online Protection (EOP) er den skybaserede filtreringstjeneste, der beskytter din organisation mod spam, malware og andre mailtrusler. EOP er inkluderet i alle Microsoft 365 med Exchange Online postkasser.
@@ -37,7 +37,7 @@ Exchange Online Protection (EOP) er den skybaserede filtreringstjeneste, der bes
 > [!NOTE]
 > EOP er også tilgængelig for sig selv til at beskytte postkasser i det lokale miljø og i hybridmiljøer for at beskytte lokale Exchange postkasser. Du kan finde flere oplysninger [under Enkeltstående Exchange Online Protection](/exchange/standalone-eop/standalone-eop).
 
-Trinnene til at konfigurere EOP-sikkerhedsfunktioner og en sammenligning af den ekstra sikkerhed, du får Microsoft Defender for Office 365, se [Beskyt dig mod trusler](protect-against-threats.md). De anbefalede indstillinger for EOP-funktioner er tilgængelige [i Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+Trinnene til at konfigurere EOP-sikkerhedsfunktioner og en sammenligning med den ekstra sikkerhed, du får i Microsoft Defender til Office 365, se Beskyt [dig mod trusler](protect-against-threats.md). De anbefalede indstillinger for EOP-funktioner er tilgængelige [i Anbefalede indstillinger for EOP og Microsoft Defender Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 
 I resten af denne artikel forklares det, hvordan EOP fungerer, og hvilke funktioner der er tilgængelige i EOP.
 
@@ -45,7 +45,7 @@ I resten af denne artikel forklares det, hvordan EOP fungerer, og hvilke funktio
 
 For at forstå, hvordan EOP fungerer, hjælper det at se, hvordan det behandler indgående mail:
 
-:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="Grafik af mail fra internettet eller kundefeedback, der videregives til EOP og via Forbindelse, antimalware, filtrering af regler for mailflow og filtrering af indhold, før du afslutter enten uønsket mail eller karantæne eller leveringen af mails til slutbrugeren" lightbox="../../media/tp_emailprocessingineopt3.png":::
+:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="Grafik af mail fra internettet eller kundefeedback, der går ind i EOP og via Forbindelse, antimalware, filtrering af regler for mailflow og filtrering af indhold, før du afslutter enten uønsket mail eller karantæne eller leveringen af mails til slutbrugeren.":::
 
 1. Når en indgående meddelelse kommer ind i EOP, gennemgår den til at begynde med filtrering af forbindelsen, hvilket kontrollerer afsenderens ry. Størstedelen af spam stoppes på nuværende tidspunkt og afvises af EOP. Du kan finde flere oplysninger [under Konfigurere filtrering af forbindelse](configure-the-connection-filter-policy.md).
 
@@ -79,7 +79,7 @@ Du kan finde oplysninger om krav, vigtige begrænsninger og tilgængelighed af f
 - EOP bruger en stor liste over domæner, der er kendt for at sende spam.
 - EOP bruger flere antimalware programmer til automatisk at beskytte vores kunder hele tiden.
 - EOP undersøger den aktive nyttedata i meddelelsens brødtekst og alle vedhæftede filer for malware.
-- Du kan finde anbefalede værdier for beskyttelsespolitikker i [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+- Du kan finde anbefalede værdier for beskyttelsespolitikker [i Anbefalede indstillinger for EOP og Microsoft Defender Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 - Du kan finde en hurtig vejledning i, hvordan du [konfigurerer beskyttelsespolitikker, under Beskyt dig mod trusler](protect-against-threats.md).
 
 |Funktion|Kommentarer|
@@ -92,7 +92,7 @@ Du kan finde oplysninger om krav, vigtige begrænsninger og tilgængelighed af f
 |Antiphishing|[Antiphishing-politikker i Microsoft 365](set-up-anti-phishing-policies.md) <p> [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)|
 |Beskyttelse mod spoofing|[Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md) <p> [Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md)|
 |Nul-timers automatisk tømning (ZAP) for leveret malware, spam og phishing-meddelelser|[ZAP i Exchange Online](zero-hour-auto-purge.md)|
-|Forudindstillede sikkerhedspolitikker|[Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md) <p> [Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)|
+|Forudindstillede sikkerhedspolitikker|[Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender Office 365](preset-security-policies.md) <p> [Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender til Office 365](configuration-analyzer-for-security-policies.md)|
 |Lejers tilladelses-/blokeringsliste|[Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md)|
 |Blokere lister for meddelelsesafsendere|[Opret lister over blokerede afsendere i EOP](create-block-sender-lists-in-office-365.md)|
 |Tilladelseslister for meddelelsesafsendere|[Opret lister over afsendere, der er tillid til i EOP](create-safe-sender-lists-in-office-365.md)|
@@ -123,5 +123,5 @@ Du kan finde oplysninger om krav, vigtige begrænsninger og tilgængelighed af f
 |**Andre funktioner**||
 |Et geo redundant globalt netværk af servere|EOP kører på et verdensomspændende netværk af datacentre, der er designet til at hjælpe med at levere den bedste tilgængelighed. Du kan finde flere oplysninger i [afsnittet EOP-datacentre](#eop-datacenters) tidligere i denne artikel.|
 |Meddelelseskø, når den lokale server ikke kan acceptere mail|Meddelelser, der udskydes, forbliver i vores køer i en dag. Gentagne forsøg på meddelelse er baseret på den fejl, vi får tilbage fra modtagerens mailsystem. I gennemsnit foreprøves meddelelser igen hvert 5. minut. Få mere at vide under [Ofte stillede spørgsmål om EOP i kø, udskudt og afvist meddelelse](eop-queued-deferred-and-bounced-messages-faq.yml).|
-|Office 365 tilgængelig meddelelseskryptering som et tilføjelsesprogrammet|Du kan finde flere oplysninger [under Kryptering i Office 365](../../compliance/encryption.md).|
+|Office 365-meddelelseskryptering tilgængelig som et tilføjelsesprogrammet|Du kan finde flere oplysninger [under Kryptering i Office 365](../../compliance/encryption.md).|
 |||

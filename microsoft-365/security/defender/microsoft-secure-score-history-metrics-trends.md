@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 22a8c8cdd5ebcaa8038c37b73aeeb6c5f80d4267
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d740ab4fb999697edc9ce7c8f662f6d5c6681fdf
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63592891"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500491"
 ---
 # <a name="track-your-microsoft-secure-score-history-and-meet-goals"></a>Spor din Microsoft Secure Score-historik, og opfylder mål
 
@@ -40,13 +40,13 @@ Få vist en graf over organisationens resultat over tid på **fanen** Historik.
 
 Under grafen finder du en liste over alle de handlinger, der er foretaget i det valgte tidsinterval og deres attributter, f.eks. resulterende punkter og kategori. Du kan tilpasse et datointerval og filtrere efter kategori.
 
-![Aktivitetsoversigt.](../../media/secure-score/secure-score-history-activity.png)
+:::image type="content" source="../../media/secure-score/secure-score-history-activity.png" alt-text="Et eksempel på den side, der beskriver aktivitetsoversigten i Microsoft 365 Defender portal" lightbox="../../media/secure-score/secure-score-history-activity.png":::
 
 Hvis du vælger den forbedringshandling, der er knyttet til en aktivitet, vises pop op-handlingen til fuld forbedring.
 
 Hvis du vil have vist hele oversigten for den pågældende forbedringshandling, skal du vælge historiklinket i pop op-pop-op-pop-op-dialogboksen.
 
-![Handlingsoversigt for forbedring.](../../media/secure-score/secure-score-history-flyout.png)
+:::image type="content" source="../../media/secure-score/secure-score-history-flyout.png" alt-text="Ruden Oversigt vedrørende forbedringshandling i Microsoft 365 Defender portal" lightbox="../../media/secure-score/secure-score-history-flyout.png":::
 
 ## <a name="discover-trends-and-set-goals"></a>Opdag tendenser, og angiv mål
 
@@ -66,7 +66,7 @@ Der er to steder, du kan se, hvordan din score er sammenlignet med organisatione
 
 Det liggende søjlediagram til sammenligning findes på **fanen** Oversigt. Hold markøren hen over diagrammet for at se pointtal og pointmulighed. 
 
-**Organisationer som din er** en gennemsnitlig score for andre lejere i samme område (hvis vi har mindst fem eller flere lejere at sammenligne) med en lignende organisationsstørrelse til din.
+:::image type="content" source="../../media/secure-score/secure-score-comparison-bar.png" alt-text="Et eksempel på søjlediagrammet over lignende organisationsresultater i Microsoft 365 Defender portal" lightbox="../../media/secure-score/secure-score-comparison-bar.png":::
 
 Sammenligningsdataene anonymiseres, så vi ved ikke præcis, hvilke andre lejere er i mixet.
 
@@ -76,7 +76,7 @@ Sammenligningsdataene anonymiseres, så vi ved ikke præcis, hvilke andre lejere
 
 På fanen **Metrics & kan** du se, hvordan din organisations Secure Score klarer sig i forhold til andre over tid.
 
-![Linjediagram over ensartede organisationsresultater over tid.](../../media/secure-score/secure-score-comparison-trend.png)
+:::image type="content" source="../../media/secure-score/secure-score-comparison-trend.png" alt-text="Et eksempel på en linjegraf over organisationens resultater over tid i Microsoft 365 Defender portal" lightbox="../../media/secure-score/secure-score-comparison-trend.png":::
 
 ## <a name="we-want-to-hear-from-you"></a>Vi vil gerne høre fra dig
 

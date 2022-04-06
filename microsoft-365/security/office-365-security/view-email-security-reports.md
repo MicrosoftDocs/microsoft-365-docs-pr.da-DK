@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b1d7d3dab26d4f9034294b2780875d33cb2fbef3
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: b6d085d2e3c1e9c1e032f468f56d67a393269fe1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63587550"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683049"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter Microsoft 365 Defender portalen
 
@@ -48,10 +48,6 @@ Der findes en række rapporter på Microsoft 365 Defender-portalen, som kan hjæ
 
 Rapporterne Exchange Online Protection (EOP) og Microsoft Defender til Office 365 i Microsoft 365 Defender-portalen, der er blevet erstattet, flyttet eller frarådet, er beskrevet i følgende tabel.
 
-<br>
-
-****
-
 |Forældet rapport og cmdlet'er|Ny rapport og cmdlet'er|Meddelelsescenter-id|Dato|
 |---|---|:---:|:---:|
 |**URL-sporing** <p> Get-URLTrace|[Rapport over beskyttelse af URL-adresser](view-reports-for-mdo.md#url-protection-report) <p> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Juni 2021|
@@ -62,9 +58,8 @@ Rapporterne Exchange Online Protection (EOP) og Microsoft Defender til Office 36
 |**Malware registreret i mailrapport** <p> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport for trusselsbeskyttelse: Vis data efter mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Juni 2021|
 |**Rapport over registrering af spam** <p> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Statusrapport over trusselsbeskyttelse: Få vist data efter mailspam \>](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Oktober 2021|
 |Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|TBA|Maj 2022|
-|**Exchange transportregelrapport** <p> Get-MailTrafficPolicyReport <br> Get-MailDetailTransportRuleReport|[Exchange transportregelrapport i EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> ingen cmdlet'er|MC316157|April 2022|
+|**Exchange transportregelrapport** <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailMailRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Exchange transportregelrapport i EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailMailRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|April 2022|
 |Get-MailTrafficTopReport|[Statusrapport for trusselsbeskyttelse: Vis data efter mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <p> **Bemærk**! Der findes ingen erstatning for krypterings rapporteringsfunktionerne i Get-MailTrafficTopReport.|MC315742|April 2022|
-|
 
 ## <a name="compromised-users-report"></a>Rapport over kompromitterede brugere
 
@@ -341,7 +336,7 @@ Rapporten **Spoof-registreringer** viser oplysninger om meddelelser, der blev bl
 
 I den aggregerede visning af rapporten kan der filtreres i 90 dage, mens der kun kan filtreres i ti dage i detaljevisningen.
 
-Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du** finde **Spoof-registreringer og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/SpoofMailReportV2>.
+Hvis du vil have vist rapporten i Microsoft 365 Defender,  \> skal du gå til **& mailsamarbejde** \> **& samarbejdsrapporter**. På siden **Mailrapporter & du** finde **Spoof-registreringer og** derefter klikke på **Vis detaljer**. For at gå direkte til rapporten skal du åbne <https://security.microsoft.com/reports/SpoofMailReport>.
 
 ![Widget'en Spoof-registreringer på siden & med samarbejdsrapporter.](../../media/spoof-detections-widget.png)
 

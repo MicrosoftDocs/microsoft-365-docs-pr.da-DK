@@ -1,5 +1,5 @@
 ---
-title: Tilstands- og overholdelsesrapport for enheder i Microsoft Defender til Slutpunkt
+title: Tilstands- og overholdelsesrapport for enheder i Microsoft Defender for Endpoint
 description: Registrer registreringer af enhedens tilstand, antivirusstatus, OPERATIVSYSTEM-platform Windows 10 versioner ved hjælp af tilstands- og overholdelsesrapporten for enheder
 keywords: tilstand, antivirus, styresystemplatform, windows 10-version, version, tilstand, overholdelse, tilstand
 ms.prod: m365-security
@@ -14,29 +14,29 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: eaa9d05fd62127949e6a0b40de8d42a79c446d4d
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: bf89c0e57cbe14980b15ecf6f5a88f6db2b83e84
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "63597554"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474019"
 ---
-# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Tilstands- og overholdelsesrapport for enheder i Microsoft Defender til Slutpunkt
+# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Tilstands- og overholdelsesrapport for enheder i Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Enhedsstatusrapporten indeholder detaljerede oplysninger om enhederne i organisationen. Rapporten indeholder de mest populære oplysninger, der viser sensorens tilstand, antivirusstatus, OS-platforme Windows 10 (og Windows 11).
+Enhedsstatusrapporten indeholder detaljerede oplysninger om enhederne i organisationen. Rapporten indeholder de mest populære oplysninger, der viser sensorens tilstand, antivirusstatus, OS-platforme Windows 10 (og Windows 11) versioner.
 
 Dashboardet er struktureret i to sektioner:
 
-:::image type="content" alt-text="Billede af enhedsrapporten." source="images/device-reports.png" lightbox="images/device-reports.png":::
+:::image type="content" source="images/device-reports.png" alt-text="Enhedsrapporten" lightbox="images/device-reports.png":::
 
 
 <br>

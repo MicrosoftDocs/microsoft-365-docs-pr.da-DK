@@ -22,12 +22,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: b64cbc55a975ee02bd1bd5d41d30330e8729d4be
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e4ac7636b019b0e8c1d00487e95335ede4600d85
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63606454"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570035"
 ---
 # <a name="the-action-center"></a>Handlingscenter
 
@@ -57,12 +57,12 @@ Eksempel:
 - Hvis du brugte handlingscenter i Microsoft Defender Security Center ([https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)), kan du prøve det samlede handlingscenter på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 - Hvis du allerede bruger <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender,</a> vil du se flere forbedringer i Handlingscenter ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)).
 
-Det samlede Handlingscenter samler afhjælpningshandlinger på tværs af Defender for Endpoint og Defender Office 365. Den definerer et fælles sprog for alle afhjælpningshandlinger og giver en samlet undersøgelsesoplevelse. Sikkerhedsteamet har en oplevelse med "enkelt rude af glas" til at få vist og administrere afhjælpningshandlinger.  
+Det samlede handlingscenter samler afhjælpningshandlinger på tværs af Defender for slutpunkt og Defender for Office 365. Den definerer et fælles sprog for alle afhjælpningshandlinger og giver en samlet undersøgelsesoplevelse. Sikkerhedsteamet har en oplevelse med "enkelt rude af glas" til at få vist og administrere afhjælpningshandlinger.  
 
 Du kan bruge det samlede handlingscenter, hvis du har de rette tilladelser og ét eller flere af følgende abonnementer:
 
-- [Defender til Slutpunkt](../defender-endpoint/microsoft-defender-endpoint.md)
-- [Defender til Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
+- [Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md)
+- [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
 - [Microsoft 365 Defender](microsoft-365-defender.md)
 
 > [!TIP]
@@ -82,7 +82,7 @@ Når du besøger Handlingscenter, vises der to faner: **Ventende handlinger** og
 
 Du kan tilpasse, sortere, filtrere og eksportere data i Handlingscenter.
 
-:::image type="content" source="../../media/m3d-action-center-columnsfilters.png" alt-text="Sortering, filtrering og tilpasning af egenskaberne for handlingscenter." lightbox="../../media/m3d-action-center-columnsfilters.png":::
+:::image type="content" source="../../media/m3d-action-center-columnsfilters.png" alt-text="Sortering, filtrering og tilpasning af egenskaberne for handlingscenter" lightbox="../../media/m3d-action-center-columnsfilters.png":::
 
 - Vælg en kolonneoverskrift for at sortere elementerne i stigende eller faldende rækkefølge.
 - Brug tidsfilteret til at få vist data for den seneste dag, uge, 30 dage eller 6 måneder.
@@ -115,12 +115,12 @@ Ud over afhjælpningshandlinger, der er foretaget automatisk som et resultat af 
 |:-----|:---|
 | **Manuel enhedshandling** | En manuel handling, der er foretaget på en enhed. Eksempler kan være [enhedsisolation eller](../defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) [filkarantæne](../defender-endpoint/respond-file-alerts.md#stop-and-quarantine-files). |
 | **Manuel mailhandling** | En manuel handling, der er foretaget på mail. Et eksempel omfatter blød sletning af mails eller [afhjælpning af en mail](../office-365-security/remediate-malicious-email-delivered-office-365.md). |
-| **Automatiseret enhedshandling** | En automatisk handling, der er foretaget på en enhed, f.eks. en fil eller proces. Eksempler på automatiserede handlinger omfatter at sende en fil til karantæne, stoppe en proces og fjerne en registreringsdatabasenøgle. (Se [Afhjælpningshandlinger i Microsoft Defender til Slutpunkt](../defender-endpoint/manage-auto-investigation.md#remediation-actions)). |
+| **Automatiseret enhedshandling** | En automatisk handling, der er foretaget på en enhed, f.eks. en fil eller proces. Eksempler på automatiserede handlinger omfatter at sende en fil til karantæne, stoppe en proces og fjerne en registreringsdatabasenøgle. (Se [Afhjælpningshandlinger i Microsoft Defender for Endpoint](../defender-endpoint/manage-auto-investigation.md#remediation-actions).) |
 | **Automatiseret mailhandling** | En automatisk handling, der er foretaget på mailindhold, f.eks. en mail, en vedhæftet fil eller URL-adresse. Eksempler på automatiserede handlinger omfatter blød sletning af mails, blokering af URL-adresser og de slå ekstern videresendelse af mails fra. (Se [Afhjælpningshandlinger i Microsoft Defender for Office 365](../office-365-security/air-remediation-actions.md).) |
 | **Avanceret jagthandling** | Handlinger, der er foretaget på enheder eller mail med [avanceret jagt](./advanced-hunting-overview.md). |
 | **Stifinder-handling** | Handlinger, der er foretaget på mailindhold med [Stifinder](../office-365-security/threat-explorer.md). |
 | **Manuel live svarhandling** | Handlinger, der er foretaget på en enhed [med direkte svar](../defender-endpoint/live-response.md). Eksempler kan være at slette en fil, stoppe en proces og fjerne en planlagt opgave. |
-| **Live response-handling** | Handlinger, der er foretaget på en enhed [med Microsoft Defender til endpoint-API'er](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis). Eksempler på handlinger omfatter at isolere en enhed, køre en antivirus-scanning og få oplysninger om en fil. |
+| **Live response-handling** | Handlinger, der er foretaget på en enhed [med Microsoft Defender for Endpoint API'er](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis). Eksempler på handlinger omfatter at isolere en enhed, køre en antivirus-scanning og få oplysninger om en fil. |
 
 ## <a name="required-permissions-for-action-center-tasks"></a>Påkrævede tilladelser for handlingscenteropgaver
 
@@ -128,8 +128,8 @@ Hvis du vil udføre opgaver, f.eks. godkende eller afvise afventende handlinger 
 
 |Afhjælpningshandling |Påkrævede roller og tilladelser |
 |--|----|
-|Afhjælpning af Microsoft Defender til Slutpunkt (enheder) |**Sikkerhedsadministratorrolle** tildelt i Azure Active Directory (Azure AD) ([https://portal.azure.com](https://portal.azure.com)) eller Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- eller ---<br/>**Aktive afhjælpningshandlinger,** der er tildelt i Microsoft Defender til slutpunkt <br/> <br/> Du kan få mere at vide i følgende ressourcer: <br/>- [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)<br/>- [Opret og administrer roller for rollebaseret adgangskontrol (Microsoft Defender til slutpunkt)](../defender-endpoint/user-roles.md)  |
-|Microsoft Defender til Office 365 afhjælpning (Office indhold og mail)  |**Sikkerhedsadministratorrolle** tildelt i enten Azure AD ([https://portal.azure.com](https://portal.azure.com)) eller Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- og --- <br/>**Den rolle, der er** tildelt i Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) <br/><br/>**VIGTIGT**! Hvis du kun har  fået tildelt rollen som sikkerhedsadministrator i Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), kan du ikke få adgang til handlingscenter eller Microsoft 365 Defender funktioner. Du skal have **sikkerhedsadministratorens rolle** tildelt i Azure AD eller Microsoft 365 Administration. <br/><br/>Du kan få mere at vide i følgende ressourcer: <br/>- [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)<br/>- [Tilladelser i Sikkerheds- & Compliance Center](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) |
+|Microsoft Defender for Endpoint afhjælpning (enheder) |**Sikkerhedsadministratorrolle** tildelt i Azure Active Directory (Azure AD) ([https://portal.azure.com](https://portal.azure.com)) eller Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- eller ---<br/>**Aktive afhjælpningshandlinger, der** er tildelt i Microsoft Defender for Endpoint <br/> <br/> Du kan få mere at vide i følgende ressourcer: <br/>- [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)<br/>- [Oprette og administrere roller for rollebaseret adgangskontrol (Microsoft Defender for Endpoint)](../defender-endpoint/user-roles.md)  |
+|Microsoft Defender for Office 365 afhjælpning (Office indhold og mail)  |**Sikkerhedsadministratorrolle** tildelt i enten Azure AD ([https://portal.azure.com](https://portal.azure.com)) eller Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- og --- <br/>**Den rolle, der er** tildelt i Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) <br/><br/>**VIGTIGT**! Hvis du kun har  fået tildelt rollen som sikkerhedsadministrator i Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), kan du ikke få adgang til handlingscenter eller Microsoft 365 Defender funktioner. Du skal have **sikkerhedsadministratorens rolle** tildelt i Azure AD eller Microsoft 365 Administration. <br/><br/>Du kan få mere at vide i følgende ressourcer: <br/>- [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)<br/>- [Tilladelser i Sikkerheds- & Compliance Center](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) |
 
 > [!TIP]
 > Brugere, der har **fået tildelt rollen** Global administrator i Azure AD, kan godkende eller afvise alle afventende handlinger i Handlingscenter. Men som en bedste fremgangsmåde bør din organisation begrænse antallet af personer, der har fået **tildelt rollen som** global administrator. Vi anbefaler, at du **bruger sikkerhedsadministratoren****, aktive** afhjælpningshandlinger  og søge- og fjerneroller, der er angivet i den foregående tabel, for handlingscentertilladelser.

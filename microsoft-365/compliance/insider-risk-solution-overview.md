@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-overview
-ms.openlocfilehash: de4fb39219674c23b35672d6d12a8b124e748866
-ms.sourcegitcommit: 7e59802f251da96ec639fb09534aa96acf5d6ce7
+ms.openlocfilehash: 381b9cafe50f8a9aa3788e17668d642b291d5279
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "63592554"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594856"
 ---
 # <a name="insider-risk-solutions-in-microsoft-365"></a>Insider-risikoløsninger i Microsoft 365
 
@@ -31,7 +31,7 @@ Insider-risici er en af de største bekymringer for sikkerheds- og overholdelses
 
 Microsoft 365 funktioner til forebyggelse af risici er designet og indbygget i vores Insider Risk-produkter og -løsninger. Disse løsninger fungerer sammen og bruger avanceret tjeneste og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikoaktivitet. De fleste løsninger giver en omfattende registrering, påmindelses- og afhjælpningsarbejdsproces, som dine dataanalytikere og databaserne kan bruge til hurtigt at reagere på og minimere disse risici.
 
-| Risikoikon | Risici | Kommunikationsoverholdelse | Insider-risikostyring | Informationsbarrierer | Adgangsstyring med rettigheder |
+| Risikoikon | Risici | Kommunikationsoverholdelse | Styring af insider-risiko | Informationsbarrierer | Privileged Access Management |
 | :---- | :-------- | :--------------------------- | :-------------------------- |:-------------------------| :--------------------------------|
 | ![Ikon for overløb for data.](../media/ir-risk-data-spillage.png)| Dataudløb | ![Understøttet](../media/check-mark.png) | ![Understøttet](../media/check-mark.png) |  |  |
 | ![Ikon for fortrolighedsfejl.](../media/ir-risk-confidentiality-violations.png)| Fortrolighedsfejl | ![Understøttet](../media/check-mark.png) | ![Understøttet](../media/check-mark.png) | ![Understøttet](../media/check-mark.png) |  |
@@ -46,7 +46,7 @@ Microsoft 365 funktioner til forebyggelse af risici er designet og indbygget i v
 | ![Ikon for sikkerhedsbrud.](../media/ir-risk-security-violations.png)| Sikkerhedsbrud |  | ![Understøttet](../media/check-mark.png) |  | ![Understøttet](../media/check-mark.png) |
 | ![Ikon for overholdelse af lovgivning.](../media/ir-risk-regulatory-compliance-violations.png)| Brud på overholdelse af lovgivning | ![Understøttet](../media/check-mark.png) | ![Understøttet](../media/check-mark.png) | ![Understøttet](../media/check-mark.png) |  |
 
-## <a name="microsoft-365-insider-risk-solutions"></a>Microsoft 365 insider-risikoløsninger
+## <a name="microsoft-365-insider-risk-solutions"></a>Microsoft 365-løsninger til insider-risiko
 
 For at beskytte din organisation mod insider-risici skal du Microsoft 365 funktioner og funktioner.
 
@@ -54,14 +54,14 @@ For at beskytte din organisation mod insider-risici skal du Microsoft 365 funkti
 
 Kommunikationsoverholdelse hjælper dig med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i organisationen. Kommunikationsoverholdelse er tilgængelig i følgende abonnementer:
 
-- Microsoft 365 E5/A5/G5-abonnement (betalt version eller prøveversion)
-- Microsoft 365 E3/A3/G5 -abonnement + Microsoft 365 E5/A5/G5 Compliance-tilføjelsesprogrammet
-- Microsoft 365 E3/A3/G5-abonnement + Microsoft 365 E5/A5/G5 Insider Risk Management-tilføjelsesprogrammet
+- Microsoft 365 E5/A5/F5/G5-abonnement (betalt version eller prøveversion)
+- Microsoft 365 E3/A3/F3/G5 + tilføjelsesprogrammet Microsoft 365 E5/A5/F5/G5 Compliance
+- Microsoft 365 E3/A3/F3/G5 + Microsoft 365 E5/A5/F5/G5 Insider Risk Management-tilføjelsesprogrammet
 - Office 365 Enterprise E5-abonnement (betalt version eller prøveversion)
 - Office 365 A5 -abonnement (betalt version eller prøveversion)
-- Office 365 Enterprise E3-abonnement + Avanceret overholdelse i Office 365 (ikke længere tilgængelig for nye abonnementer)
+- Office 365 Enterprise E3-abonnement + tilføjelsesprogrammet Avanceret overholdelse i Office 365 (der er ikke længere tilgængeligt for nye abonnementer, se bemærk)
 
-### <a name="insider-risk-management"></a>Insider-risikostyring
+### <a name="insider-risk-management"></a>Styring af insider-risiko
 
 Insider-risikostyring hjælper med at minimere interne risici ved at give dig mulighed for at registrere, undersøge og handle på ondsindede og utilsigtede aktiviteter i organisationen.
 
@@ -84,7 +84,7 @@ Informationsbarrierer er tilgængelige i følgende abonnementer:
 - Microsoft 365 E3/A3/A1 +Microsoft 365 E5/A5 Compliance-tilføjelsesprogrammet
 - Microsoft 365 E3/A3/A1 -abonnement + Microsoft 365 E5/A5 Insider Risk Management-tilføjelsesprogrammet
 
-### <a name="privileged-access-management"></a>Adgangsstyring med rettigheder
+### <a name="privileged-access-management"></a>Privileged Access Management
 
 Administration af adgang med rettigheder giver mulighed for detaljeret adgangskontrol over Exchange Online administratoropgaver på Office 365. Det kan hjælpe med at beskytte din organisation mod brud på brugen af eksisterende privilegerede administratorkonti med stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger.
 
@@ -95,9 +95,9 @@ Administration af adgang med rettigheder er tilgængelig i følgende abonnemente
 - Office 365 Enterprise E5-abonnement (betalt version eller prøveversion)
 - Office 365 A5 -abonnement (betalt version eller prøveversion)
 - Microsoft 365 E3-abonnement + Microsoft 365 E5 Overholdelse-tilføjelsesprogrammet
-- Microsoft 365 E3 -abonnement + Microsoft 365 E5 tilføjelsesprogrammet Beskyttelse af oplysninger og styring
+- Microsoft 365 E3+tilføjelsesprogrammet Microsoft 365 E5 Information Protection administration og styring
 - Microsoft 365 A3+tilføjelsesprogrammet Microsoft 365 A5 overholdelse af regler og standarder
-- Microsoft 365 A3 -abonnement + Microsoft 365 A5 tilføjelsesprogrammet Beskyttelse af oplysninger og styring
+- Microsoft 365 A3-abonnement + Microsoft 365 A5 Information Protection og styring-tilføjelsesprogrammet
 
 ## <a name="deploy-microsoft-365-insider-risk-solutions"></a>Installér Microsoft 365 Insider Risk-løsninger
 
@@ -116,7 +116,7 @@ For at hjælpe dig med at planlægge en integreret strategi for implementering a
 
 | Element | Beskrivelse |
 |:-----|:------------|
-|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af regler og standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> [Download som PDF-fil](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [Download som Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Opdateret oktober 2020|Omfatter: <ul><li>  Microsoft-beskyttelse af oplysninger og forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsnavne </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insider-risikostyring</li><li>Tredjepartsdataindtrindelse</li>|
+|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af regler og standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> [Download som PDF-fil](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [Download som Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Opdateret oktober 2020|Omfatter: <ul><li>  Beskyttelse af Microsoft-oplysninger og forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsnavne </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Styring af insider-risiko</li><li>Tredjepartsdataindtrindelse</li>|
 
 ## <a name="training"></a>Kurser
 
@@ -128,6 +128,6 @@ Microsoft 365 indeholder følgende ressourcer, der kan hjælpe med at informere 
 |:------------------|:--------------|
 | Administrer insider-risiko i Microsoft 365 |[Komplet læringssti](/learn/paths/m365-compliance-insider) <br> Denne læringssti omfatter alle de individuelle løsningsmoduler til kommunikationsoverholdelse, insider-risikostyring, informationsbarrierer og privilegeret adgangsstyring. Vælg denne læringssti for at fuldføre alle modulerne. |
 | Kommunikationsoverholdelse | [Learning modul: Klargør kommunikationsoverholdelse i Microsoft 365](/learn/modules/m365-compliance-insider-prepare-communication-compliance) <br> Dette modul hjælper dig med at lære det grundlæggende om, hvordan du identificerer og afhjælper overtrædelser af adfærdskodeks for kommunikation, dækker de nødvendige forudsætninger, før du opretter politikker for overholdelse af kommunikation, og få mere at vide om de typer af indbyggede, foruddefinerede politikskabeloner i kommunikationsoverholdelse. |
-| Insider-risikostyring | [Learning modul: Insider-risikostyring i Microsoft 365](/learn/modules/m365-compliance-insider-manage-insider-risk) <br> Dette modul hjælper dig med at lære, hvordan insider-risikostyring i Microsoft 365 kan hjælpe med at forebygge, registrere og indeholde interne risici i en organisation, lære om de typer indbyggede, foruddefinerede politikskabeloner, forstå de grundlæggende forudsætninger, der er nødvendige, før du opretter insider-risikopolitikker, og forklarer de typer handlinger, du kan udføre på Insider-risikohåndteringssager. |
+| Styring af insider-risiko | [Learning modul: Insider-risikostyring i Microsoft 365](/learn/modules/m365-compliance-insider-manage-insider-risk) <br> Dette modul hjælper dig med at lære, hvordan insider-risikostyring i Microsoft 365 kan hjælpe med at forebygge, registrere og indeholde interne risici i en organisation, lære om de typer indbyggede, foruddefinerede politikskabeloner, forstå de grundlæggende forudsætninger, der er nødvendige, før du opretter insider-risikopolitikker, og forklarer de typer handlinger, du kan udføre på Insider-risikohåndteringssager. |
 | Informationsbarrierer | [Learning modul: Planlæg informationsbarrierer](/learn/modules/m365-compliance-insider-plan-information-barriers) <br> Dette modul hjælper dig med at finde ud af, hvordan informationsbarrierepolitikker kan hjælpe organisationen med at overholde relevante branchestandarder og -bestemmelser, en liste over de typer af situationer, hvor informationsbarrierer kan være relevante, hjælper med at forklare processen med at oprette en politik for informationsbarrierer og hjælper med at forklare, hvordan du foretager fejlfinding af uventede problemer, når informationsbarriererne er på plads. |
-| Adgangsstyring med rettigheder | [Learning-modul: Implementer adgangsstyring med rettigheder](/learn/modules/m365-compliance-insider-implement-privileged-access-management) <br> Dette modul hjælper dig med at forstå forskellen mellem styring af adgangspriviligation og administration af privilegeret adgang, forstå processen for adgangsstyring med rettigheder og de grundlæggende oplysninger om, hvordan du konfigurerer og aktiverer administration af adgangsrettigheder. |
+| Privileged Access Management | [Learning-modul: Implementer adgangsstyring med rettigheder](/learn/modules/m365-compliance-insider-implement-privileged-access-management) <br> Dette modul hjælper dig med at forstå forskellen mellem styring af adgangspriviligation og administration af privilegeret adgang, forstå processen for adgangsstyring med rettigheder og de grundlæggende oplysninger om, hvordan du konfigurerer og aktiverer administration af adgangsrettigheder. |

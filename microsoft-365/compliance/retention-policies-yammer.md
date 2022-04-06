@@ -17,19 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Yammer.
-ms.openlocfilehash: 3759f39a9ef2067d9719d4cf83d73ee7b67ef125
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 48b7f00df2f01d1b84af1962d91551752334c8b1
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63591675"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595098"
 ---
 # <a name="learn-about-retention-for-yammer"></a>Få mere at vide om opbevaring af Yammer
 
 >*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-> [!NOTE]
-> Denne funktion er i forhåndsvisning og kan ændres uden ændringer.
 
 Oplysningerne i denne artikel tillæg Få [mere at vide om opbevaring](retention.md), fordi de indeholder oplysninger, der er specifikke for Yammer.
 
@@ -61,11 +58,6 @@ Du kan bruge en opbevaringspolitik til at bevare data fra communitymeddelelser o
 Kopier af communitymeddelelser kan også gemmes i den skjulte mappe med brugerpostkasser, når de @omtaler brugere eller underretter brugeren om et svar. Selvom disse meddelelser stammer som en communitymeddelelse, vil en opbevaringspolitik for Yammer ofte indeholde kopier af communitymeddelelser. Derfor er brugermeddelelser ikke begrænset til private meddelelser.
 
 Disse skjulte mapper er ikke designet til at være direkte tilgængelige for brugere eller administratorer, men i stedet gemme data, som overholdelsesadministratorer kan søge med eDiscovery-værktøjer.
-
-> [!IMPORTANT]
-> Da kopier af communitymeddelelser også kan gemmes i brugerpostkasser, kan en opbevaringspolitik med en sletningshandling for Yammer-brugermeddelelser medføre, at den oprindelige communitymeddelelse ikke længere er synlig for brugere i Yammer-appen.
-> 
-> Men en kopi af den oprindelige meddelelse er stadig tilgængelig i den skjulte mappe i community-gruppepostkassen og tilgængelig med eDiscovery-søgninger med henblik på overholdelse af regler og standarder.
 
 Selvom de er gemt i Exchange, er Yammer-meddelelser kun inkluderet i en opbevaringspolitik, der er konfigureret til **Yammer-communitymeddelelser** eller Yammer-brugermeddelelsersplaceringer.
 
@@ -185,7 +177,7 @@ Hvis brugeren har gemt filer i en Yammer, skal du se [det tilsvarende afsnit](re
 
 ## <a name="limitations"></a>Begrænsninger
 
-Yammer opbevaringspolitikker er i øjeblikket en prøveversion, og vi arbejder hele tiden på optimering af opbevaringsfunktionalitet. I mellemtiden skal du være opmærksom på følgende begrænsning, når du bruger opbevaring til Yammer communitymeddelelser og brugermeddelelser:
+Vær opmærksom på følgende begrænsning, når du bruger opbevaring til Yammer communitymeddelelser og brugermeddelelser:
 
 - Når du vælger **Rediger** for placeringen Yammer **brugermeddelelser**, får du muligvis vist gæster og brugere uden postkasse. Opbevaringspolitikker er ikke udviklet til disse brugere, så du skal ikke markere dem.
 

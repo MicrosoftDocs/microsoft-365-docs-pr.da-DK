@@ -1,7 +1,7 @@
 ---
 title: Angiv administreret serviceudbyder sikkerhedsadgang (MSSP)
 description: Få mere at vide om ændringer Microsoft Defender Security Center til Microsoft 365 Defender portalen
-keywords: Introduktion til Microsoft 365 Defender-portalen, Microsoft Defender for Office 365, Microsoft Defender til Slutpunkt, MDO, MDE, enkelt rude med glas, konvergeret portal, sikkerhedsportal, defender security portal
+keywords: Introduktion til Microsoft 365 Defender-portalen, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, MDO, MDE, enkelt rude med glas, konvergeret portal, sikkerhedsportal, defender security portal
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-ms.openlocfilehash: 641636528d35c148ceaa41827721e841dfafd4ec
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: f0148a8bfe18c7636e95ceae7b268cc70b2e58ed
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63593520"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500405"
 ---
 # <a name="provide-managed-security-service-provider-mssp-access"></a>Angiv administreret serviceudbyder sikkerhedsadgang (MSSP) 
 
@@ -33,7 +33,7 @@ ms.locfileid: "63593520"
 **Gælder for:**
 
 - [Microsoft 365 Defender](microsoft-365-defender.md)
-- [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, skal du gøre følgende:
 
@@ -43,7 +43,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
 3. Administrer adgangsanmodninger og - [revisioner i Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
 
-## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Aktivér rollebaserede adgangskontrolelementer i Microsoft Defender til slutpunkt i Microsoft 365 Defender portal
+## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Aktivere rollebaserede adgangskontrolelementer Microsoft Defender for Endpoint i Microsoft 365 Defender portal
 
 1. **Opret adgangsgrupper for MSSP-ressourcer i AAD: Grupper**
 
@@ -57,7 +57,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Hvis du vil aktivere RBAC i kundeportalen til Microsoft 365 Defender, skal du åbne **tilladelsesroller > slutpunkter & grupper >** Roller med en brugerkonto med globale administrator- eller sikkerhedsadministratorrettigheder.
 
-    ![Billede af MSSP-adgang.](../../media/mssp-access.png)
+    :::image type="content" source="../../media/mssp-access.png" alt-text="Oplysninger om MSSP-adgang i Microsoft 365 Defender-portalen" lightbox="../../media/mssp-access.png":::
 
     Opret derefter RBAC-roller, så de opfylder behovet for MSSP SOC-niveau. Sammenkæd disse roller med de oprettede brugergrupper via "Tildelte brugergrupper".
 
@@ -85,7 +85,8 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Det gør du ved i kundens AD-lejer at få adgang til styring af identitet: kataloger og tilføje **Nyt katalog**. I vores eksempel kalder vi det **MSSP Accesses**.
 
-    ![Billede af nyt katalog.](../../media/goverance-catalog.png)
+    :::image type="content" source="../../media/goverance-catalog.png" alt-text="Et nyt katalog i Microsoft 365 Defender portalen" lightbox="../../media/goverance-catalog.png":::
+
 
     Få mere at vide under [Opret et katalog med ressourcer](/azure/active-directory/governance/entitlement-management-catalog-create).
 
@@ -100,7 +101,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
     - Brugere i MSSP SOC-lejeren kan kun anmode om det
     - Access udløber automatisk efter 365 dage
 
-    ![Billede af ny adgangspakke.](../../media/new-access-package.png)
+    :::image type="content" source="../../media/new-access-package.png" alt-text="Oplysninger om en ny adgangspakke i Microsoft 365 Defender-portalen" lightbox="../../media/new-access-package.png":::
 
     Få mere at vide under [Opret en ny adgangspakke](/azure/active-directory/governance/entitlement-management-access-package-create).
 
@@ -108,7 +109,7 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Linket til min Access-portal bruges af MSSP SOC-analytikere til at anmode om adgang via de adgangspakker, der oprettes. Linket er robust, hvilket betyder, at det samme link kan bruges over tid til nye analytikere. Analytikeranmodningen går ind i en kø til godkendelse af **MSSP-analytikergodkenderne**.
 
-    ![Billede af egenskaber for adgang.](../../media/access-properties.png)
+    :::image type="content" source="../../media/access-properties.png" alt-text="Adgangsegenskaberne i Microsoft 365 Defender portalen" lightbox="../../media/access-properties.png":::
 
     Linket er placeret på oversigtssiden for hver adgangspakke.
 
@@ -122,11 +123,11 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
     Eksempel: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
-2. Godkend eller afvis anmodninger **i sektionen** Godkendelser i brugergrænsefladen.
+2. Godkend eller afvis anmodninger **Godkendelser** i brugergrænsefladen.
 
      På dette tidspunkt er analytikeradgang blevet klargjort, og hver enkelt analytiker bør kunne få adgang til kundens Microsoft 365 Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` med de tilladelser og roller, de blev tildelt.
 
 > [!IMPORTANT]
-> Delegeret adgang til Microsoft Defender til slutpunkt i Microsoft 365 Defender-portalen giver i øjeblikket adgang til en enkelt lejer pr. browservindue.
+> Delegeret adgang til Microsoft Defender for Endpoint i Microsoft 365 Defender-portalen giver i øjeblikket adgang til en enkelt lejer pr. browservindue.

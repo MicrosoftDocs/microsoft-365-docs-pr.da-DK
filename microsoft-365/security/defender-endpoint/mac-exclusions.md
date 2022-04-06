@@ -1,7 +1,7 @@
 ---
-title: Konfigurer og valider udeladelse for Microsoft Defender til Slutpunkt på Mac
-description: Angiv og valider udeladelse af Microsoft Defender til Slutpunkt på Mac. Udeladelse kan angives for filer, mapper og processer.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, udeladelse, scanninger, antivirus
+title: Konfigurere og validere udeladelse for Microsoft Defender for Endpoint på Mac
+description: Angiv og valider udeladelse for Microsoft Defender for Endpoint på Mac. Udeladelse kan angives for filer, mapper og processer.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, udeladelse, scanninger, antivirus
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,21 +15,21 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a069e3dd3ef99f094f96318277e077c56b7cb974
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: bc16b601181775b3b12f1db0fcceecaa2bca33a8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592827"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474085"
 ---
-# <a name="configure-and-validate-exclusions-for-microsoft-defender-for-endpoint-on-macos"></a>Konfigurer og valider udeladelse for Microsoft Defender til Endpoint på macOS
+# <a name="configure-and-validate-exclusions-for-microsoft-defender-for-endpoint-on-macos"></a>Konfigurer og valider udeladelse af Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
@@ -71,13 +71,13 @@ Jokertegn|Beskrivelse|Eksempel|Matcher|Er ikke ens
 
 ### <a name="from-the-management-console"></a>Fra administrationskonsollen
 
-Du kan finde flere oplysninger om, hvordan du konfigurerer udeladelse fra SYLF, Intune eller en anden administrationskonsol under Angiv indstillinger [for Defender til Slutpunkt på Mac](mac-preferences.md).
+Du kan finde flere oplysninger om, hvordan du konfigurerer udeladelse fra SYLF, Intune eller en anden administrationskonsol, under Angiv indstillinger [for Defender til Slutpunkt på Mac](mac-preferences.md).
 
 ### <a name="from-the-user-interface"></a>Fra brugergrænsefladen
 
 Åbn programmet Defender til slutpunkt, og gå til **Administrer indstillinger Tilføj** \> **eller fjern udelukkelse...**, som vist på følgende skærmbillede:
 
-![Skærmbillede af Administrer udeladelse.](images/mdatp-37-exclusions.png)
+:::image type="content" source="images/mdatp-37-exclusions.png" alt-text="Siden Administrer udeladelse" lightbox="images/mdatp-37-exclusions.png":::
 
 Vælg den type udeladelse, du vil tilføje, og følg instruktionerne.
 

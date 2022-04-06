@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: f024f9d93b44e6d6a679311af914330f0e3db37c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3057e66352b9bd658ddd4958986cbefd61e4e187
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589835"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682939"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Politikanbefalinger til sikring SharePoint websteder og filer
 
@@ -57,7 +57,6 @@ I følgende tabel vises de politikker, du enten skal gennemse og opdatere, eller
 ||[SharePoint politik for adgangskontrol](#sharepoint-access-control-policies): Tillad kun browseradgang til bestemte SharePoint fra enheder, der ikke er administrerede.|Dette forhindrer redigering og hentning af filer. Brug PowerShell til at angive websteder.|
 |**Speciel sikkerhed**|[*Kræv* altid MFA](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Medtag SharePoint i tildelingen af skyapps.|
 ||[SharePoint for adgangskontrol](#use-app-enforced-restrictions-in-sharepoint): Bloker adgangen til bestemte SharePoint fra enheder, der ikke er administrerede.|Brug PowerShell til at angive websteder.|
-|
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Brug app-tvungne begrænsninger i SharePoint
 

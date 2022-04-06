@@ -19,12 +19,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om det tillidsniveau til spam, der anvendes til meddelelser i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a5a7bfd34fdb23b0bef94119f53adaa9ecc0c4a1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7783eb0655a6e3b0457a45057b920c87388e4c05
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587538"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682917"
 ---
 # <a name="spam-confidence-level-scl-in-eop"></a>SCL (Spam confidence level) i EOP
 
@@ -39,15 +39,12 @@ I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange O
 
 Hvad SCL betyder, og hvad standardhandlingerne, der er foretaget på meddelelser, er beskrevet i følgende tabel. Du kan finde flere oplysninger om handlinger, du kan udføre på meddelelser baseret på vurdering af spamfiltrering, under Konfigurer [politikker for uønsket post i EOP](configure-your-spam-filter-policies.md).
 
-****
-
 |SCL|Definition|Standardhandling|
 |:---:|---|---|
 |-1|Meddelelsen ignorerede spamfiltrering. Meddelelsen er f.eks. fra en afsender, der er tillid til, er blevet sendt til en modtager, der er tillid til, eller er fra en mailkildeserver på listen over tilladte IP-adresser. Få mere at vide under [Opret lister over afsendere, der er tillid til i EOP](create-safe-sender-lists-in-office-365.md).|Levering af meddelelsen til modtagernes indbakke.|
 |0, 1|Spamfiltrering fandt, at meddelelsen ikke var spam.|Levering af meddelelsen til modtagernes indbakke.|
 |5, 6|Spamfiltrering har markeret meddelelsen som **spam**|Levering af meddelelsen til modtagernes mappe med uønsket mail.|
 |9|Spamfiltrering markerede meddelelsen som Spam **med høj fortrolighed**|Levering af meddelelsen til modtagernes mappe med uønsket mail.|
-|
 
 Du vil bemærke, at SCL 2, 3, 4, 7 og 8 ikke bruges til spamfiltrering.
 

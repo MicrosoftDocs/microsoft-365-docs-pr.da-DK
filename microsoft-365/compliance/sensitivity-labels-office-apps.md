@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger, som it-administratorer kan bruge til at administrere følsomhedsmærkater Office apps til computer, mobil og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 4a2b68e3e85b2c621a002ce762b7ec59ce31c891
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 2bfd7dfd0cf56c8546cd21e5127bc8ef432e1cc5
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712746"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594768"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -35,7 +35,7 @@ Brug oplysningerne i denne artikel som en hjælp til at administrere følsomheds
 
 Hvis du vil bruge følsomhedsmærkater, der er indbygget Office skrivebordsapps til Windows og Mac, skal du bruge en abonnementsversion af Office. Denne etiketklient understøtter ikke enkeltstående udgaver af Office, også kaldet "Office tidsubetiske".
 
-Hvis du ikke kan opgradere til Microsoft 365 Apps for enterprise for abonnementsversionerne af Office til Windows-computere, kan du bruge [Den samlede Azure Information Protection-etiketklient](/azure/information-protection/rms-client/aip-clientv2).
+Hvis du ikke kan opgradere til Microsoft 365 Apps for enterprise for abonnementsversionerne af Office til Windows-computere, kan du bruge [Azure Information Protection samlet etiketklient](/azure/information-protection/rms-client/aip-clientv2).
 
 ## <a name="support-for-sensitivity-label-capabilities-in-apps"></a>Understøttelse af følsomhedsmærkatfunktioner i apps
 
@@ -47,7 +47,7 @@ Nye funktioner, der findes i privat eksempelvisning, er ikke inkluderet i tabell
 
 Office til iOS og Office til Android: Følsomhedsmærkater er indbygget i [Office-app](https://www.microsoft.com/en-us/microsoft-365/blog/2020/02/19/new-office-app-android-ios-available/).
 
-Yderligere funktioner er tilgængelige, når du installerer den samlede Azure Information Protection-etiketklient, som kun kører på Windows computere. For at få mere at vide [skal du se Sammenligne etiketterne klienter for Windows computere](/azure/information-protection/rms-client/use-client#compare-the-labeling-clients-for-windows-computers).
+Yderligere funktioner er tilgængelige, når du installerer Azure Information Protection samlet etiketklient, som kun kører på Windows computere. For at få mere at vide [skal du se Sammenligne etiketterne klienter for Windows computere](/azure/information-protection/rms-client/use-client#compare-the-labeling-clients-for-windows-computers).
 
 > [!TIP]
 > Når du sammenligner minimumversionerne i tabellerne med de versioner, du har, skal du huske den almindelige fremgangsmåde for udgivelsesversioner til at udelade foranstillede nuller.
@@ -65,7 +65,7 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |-----------|-------:|----|----|--------|----|
 |[Anvende, ændre eller fjerne etiket manuelt](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)| Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Anvende en standardetiket](sensitivity-labels.md#what-label-policies-can-do) på nye dokumenter                                         | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md)                                                        |
-|[Anvende en standardetiket](sensitivity-labels.md#what-label-policies-can-do) på eksisterende dokumenter | Forhåndsvisning: [Udrulning til aktuel kanal (forhåndsvisning)](https://office.com/insider) | Forhåndsvisning: [Udrulning til aktuel kanal (forhåndsvisning)](https://office.com/insider) | Under gennemgang | Under gennemgang | Udrulning: [Ja - tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Anvende en standardetiket](sensitivity-labels.md#what-label-policies-can-do) på eksisterende dokumenter | Forhåndsvisning: [Udrulning til aktuel kanal (forhåndsvisning)](https://office.com/insider) | Forhåndsvisning: [Udrulning til aktuel kanal (forhåndsvisning)](https://office.com/insider) | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Kræve en justering for at ændre en etiket](sensitivity-labels.md#what-label-policies-can-do)                     | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+  <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Give hjælp-link til en brugerdefineret side i Hjælp](sensitivity-labels.md#what-label-policies-can-do)                       | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Markér indholdet](sensitivity-labels.md#what-sensitivity-labels-can-do)                                              | Aktuel kanal: 1910+ <br /><br> Månedlig virksomhedskanal: 1910+ <br /><br> Semi-Annual virksomhedskanal: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
@@ -74,8 +74,8 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |[Lad brugere tildele tilladelser: <br /> - Spørg brugerne](encryption-sensitivity-labels.md#let-users-assign-permissions)                     |Aktuel kanal: 2004+ <br /><br> Månedlig virksomhedskanal: 2004+ <br /><br> Semi-Annual virksomhedskanal: 2008+ | 16.35+   | Under gennemgang   | Under gennemgang         | Under gennemgang                                                        |
 |[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities)                      | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ | 2.46+ | 16.0.13628+ | Ja |
 |[Kræv, at brugerne anvender en etiket på deres mails og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig virksomhedskanal: 2101+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.45+         | 2.47+ | 16.0.13628+ | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md)                                            
-|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
-|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Understøttelse af samtidig redigering og automatisk lagring af](sensitivity-labels-coauthoring.md) mærkede og krypterede dokumenter | Aktuel kanal: 2107+ <br /><br> Månedlig virksomhedskanal: 2107+ <br /><br> Semi-Annual virksomhedskanal: 2202+ |  16.51+ | Forhåndsvisning: 2,58 +, [når du tilmelder dig](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | Forhåndsvisning: 16.0.14931+, når [du tilmelder dig](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | [Ja – tilmeld dig](sensitivity-labels-sharepoint-onedrive-files.md) |
 
 
@@ -99,8 +99,8 @@ De angivne tal er minimumskravet Office programversioner, der kræves til hver f
 |[Giv brugere tilladelse til at tildele tilladelser: <br /> - Kun krypteret](encryption-sensitivity-labels.md#let-users-assign-permissions)  | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.48+ <sup>\*</sup> | 4.2112.0+  | 4.2112.0+ | Ja |
 |[Kræv, at brugerne anvender en etiket på deres mails og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig virksomhedskanal: 2101+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                    | 4.2111+            | 4.2111+                | Ja                |
 |[Overvåge etiketrelateret brugeraktivitet](#auditing-labeling-activities) | Aktuel kanal: 2011+ <br /><br> Månedlig virksomhedskanal: 2011+ <br /><br> Semi-Annual virksomhedskanal: 2022+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Ja |
-|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ <sup>\*</sup>                    | Under gennemgang           | Under gennemgang               | Ja |
-|[Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
+|[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme oplysningstyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig virksomhedskanal: 2009+ <br /><br> Semi-Annual virksomhedskanal: 2102+ | 16.44+ <sup>\*</sup>                    | Under gennemgang           | Under gennemgang               | Ja |
+|[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassekammerater, der kan trænes                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
 |[Forskellige indstillinger for standardetiket og obligatorisk mærkning](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Aktuel kanal: 2105+ <br /><br> Månedlig enterprise-kanal: 2105+ <br /><br> Semi-Annual virksomhedskanal: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Ja |
 |
 
@@ -127,7 +127,7 @@ Da denne indstilling er specifik for Windows Office-apps, har den ingen indflyde
 
 ### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>Office indbyggede etiketklient og Azure Information Protection-klienten
 
-Hvis brugerne har [AIP-klienten (Azure Information Protection)](/azure/information-protection/rms-client/aip-clientv2) installeret på deres Windows-computere, deaktiveres indbyggede navne som standard i [Windows Office-apps, der understøtter dem](#labeling-client-for-desktop-apps). Da indbyggede etiketter ikke bruger et tilføjelse Office, som det bruges af AIP-klienten, har de fordelen af mere stabilitet og bedre ydeevne. De understøtter også de nyeste funktioner, f.eks. avancerede klassificeringer.
+Hvis brugerne har [AIP-klienten (Azure Information Protection)](/azure/information-protection/rms-client/aip-clientv2) installeret på deres Windows-computere, deaktiveres indbyggede navne som standard i [Windows Office-apps](#labeling-client-for-desktop-apps), der understøtter dem. Da indbyggede etiketter ikke bruger et tilføjelse Office, som det bruges af AIP-klienten, har de fordelen af mere stabilitet og bedre ydeevne. De understøtter også de nyeste funktioner, f.eks. avancerede klassificeringer.
 
 Du kan få mere at vide om valg af navne med AIP-klienten under Hvorfor vælge [Indbygget MIP-mærkning over AIP-tilføjelsesprogrammet til Office apps](sensitivity-labels-aip.md).
 
@@ -135,13 +135,13 @@ Du kan få mere at vide om valg af navne med AIP-klienten under Hvorfor vælge [
 
 Office-apps, der har indbygget mærkning til Word-, Excel- og PowerPoint-filer, understøtter Open XML-formatet (f.eks. .docx og .xlsx), men ikke Microsoft Office 97-2003-formatet (f.eks. .doc- og .xls), Åbn dokumentformat (f.eks. .odt og .ods) eller andre formater. Når en filtype ikke understøttes til indbygget mærkning **, er knappen** Følsomhed ikke tilgængelig i Office-app.
 
-Den samlede Azure Information Protection-etiketklient understøtter både Open XML-formatet og Microsoft Office 97-2003-format. Få mere at vide under [Filtyper, der understøttes af Azure Information Protection Unified Labeling Client](/azure/information-protection/rms-client/clientv2-admin-guide-file-types) fra den pågældende klients administratorvejledning.
+Den samlede Information Protection Azure-etiketklient understøtter både Open XML-formatet og Microsoft Office 97-2003-format. Få mere at vide under [Filtyper, der understøttes af Azure Information Protection samlet](/azure/information-protection/rms-client/clientv2-admin-guide-file-types) etiketklient fra den pågældende klients administratorvejledning.
 
 For andre etiketløsninger skal du kontrollere deres dokumentation for understøttede filtyper.
 
 ## <a name="protection-templates-and-sensitivity-labels"></a>Beskyttelsesskabeloner og følsomhedsmærkater
 
-Administratordefinerede [beskyttelsesskabeloner](/azure/information-protection/configure-policy-templates), f.eks dem, du definerer for Office 365-meddelelseskryptering, er ikke synlige i Office-apps, når du bruger indbygget mærkning. Denne forenklede oplevelse afspejler, at der ikke er behov for at vælge en skabelon til beskyttelse, da de samme indstillinger er inkluderet i følsomhedsmærkater, der har kryptering aktiveret.
+Administratordefinerede [beskyttelsesskabeloner](/azure/information-protection/configure-policy-templates), f.eks dem, du definerer til Office 365-meddelelseskryptering, er ikke synlige i Office-apps, når du bruger indbygget mærkning. Denne forenklede oplevelse afspejler, at der ikke er behov for at vælge en skabelon til beskyttelse, da de samme indstillinger er inkluderet i følsomhedsmærkater, der har kryptering aktiveret.
 
 Du kan konvertere en eksisterende skabelon til et følsomhedsmærkat, når du bruger [New-Label-cmdlet'en](/powershell/module/exchange/new-label) med *parameteren EncryptionTemplateId* .
 
@@ -175,7 +175,7 @@ Du kan få en mere ensartet etiketoplevelse med meningsfuld rapportering ved at 
 - Overvej at deaktivere IRM-indstillinger for at forhindre brugere i at vælge dem:
     - Outlook til Windows: 
         - Registreringsdatabasenøgler (DWORD:00000001) *DisableDNF* og *DisableEO* HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM
-        - Sørg for, at indstillingen Gruppepolitik **Konfigurer standardkrypteringsindstilling for knappen Kryptér** ikke er konfigureret
+        - Kontrollér, at indstillingen Gruppepolitik **Konfigurer standardkrypteringsindstilling for knappen Kryptér** ikke er konfigureret
     - Outlook til Mac: 
         - Keys *DisableEncryptOnly* and *DisableDoNotForward* security settings documented in [Set preferences for Outlook til Mac](/DeployOffice/mac/preferences-outlook)
     - Outlook på internettet: 
@@ -204,7 +204,7 @@ Eksempler på nedarvning af navne, hvor **navnet Fortroligt** anvender krypterin
 
 **Med RMS-distribuerede apps**: Hvis du åbner et mærket og krypteret dokument eller mail i et [RMS-programmer](/azure/information-protection/requirements-applications#rms-enlightened-applications) , der ikke understøtter følsomhedsmærkater, gennemtvinger appen stadig kryptering og rettighedsstyring.
 
-**Med Azure Information Protection-klienten**: Du kan få vist og ændre følsomhedsmærkater, som du anvender på dokumenter og mails med den indbyggede Office-etiketklient ved hjælp af Azure Information Protection-klienten, og omvendt.
+**Med Azure Information Protection-klienten**: Du kan få vist og ændre følsomhedsmærkater, som du anvender på dokumenter og mails med den indbyggede Office-etiketklient ved hjælp af Azure Information Protection-klienten og omvendt.
 
 **Med andre versioner af Office**: Alle autoriserede brugere kan åbne dokumenter og mails med mærkater i andre versioner Office. Du kan dog kun se eller ændre navnet i understøttede Office versioner eller ved hjælp af Azure Information Protection-klienten. Understøttede Office-app versioner er angivet i [forrige afsnit](#support-for-sensitivity-label-capabilities-in-apps).
 
@@ -252,13 +252,13 @@ Den automatiske gæstekonto oprettes dog ikke med det samme i dette scenarie på
 
 ### <a name="conditional-access-policies"></a>Politikker for betinget adgang
 
-Hvis din organisation har implementeret [Azure Active Directory, skal](/azure/active-directory/conditional-access/overview) du kontrollere konfigurationen af disse politikker. Hvis politikkerne omfatter **Microsoft Azure Information Protection**, og politikken udvides til eksterne brugere, skal disse eksterne brugere have en gæstekonto i din lejer, selvom de har en Azure AD-konto i deres egen lejer.
+Hvis din organisation har implementeret [Azure Active Directory, skal](/azure/active-directory/conditional-access/overview) du kontrollere konfigurationen af disse politikker. Hvis politikkerne omfatter **Microsoft Azure Information Protection**, og politikken udvides til eksterne brugere, skal disse eksterne brugere have en gæstekonto i din lejer, også selvom de har en Azure AD-konto i deres egen lejer.
 
 Uden denne gæstekonto kan de ikke åbne det krypterede dokument og få vist en fejlmeddelelse. Meddelelsesteksten kan informere dem om, at deres konto skal tilføjes som ekstern bruger i lejeren med den forkerte instruktion til dette scenarie for at logge af og logge på igen med en **anden Azure Active Directory-brugerkonto**.
 
-Hvis du ikke kan oprette og konfigurere gæstekonti i din lejer for eksterne brugere, der skal åbne dokumenter, der er krypteret med dine etiketter, skal du enten fjerne Azure Information Protection fra politikkerne for Betinget adgang eller udelukke eksterne brugere fra politikkerne.
+Hvis du ikke kan oprette og konfigurere gæstekonti i din lejer for eksterne brugere, der skal åbne dokumenter, der er krypteret med dine etiketter, skal du enten fjerne Azure Information Protection fra politikkerne for Betinget adgang eller udelade eksterne brugere fra politikkerne.
 
-Du kan finde flere oplysninger om Betinget adgang og Azure Information Protection, som er den krypteringstjeneste, der bruges af følsomhedsmærkater, under det ofte stillede spørgsmål. Jeg kan se [Azure Information Protection](/azure/information-protection/faqs#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work) er angivet som en tilgængelig skyapp til betinget adgang – hvordan fungerer det?
+Hvis du vil have mere at vide om Betinget adgang og Azure Information Protection, som er den krypteringstjeneste, der bruges af følsomhedsmærkater, skal du se det ofte stillede spørgsmål. Azure Information Protection er angivet som en tilgængelig [skyapp](/azure/information-protection/faqs#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work) til betinget adgang – hvordan fungerer det?
 
 ## <a name="when-office-apps-apply-content-marking-and-encryption"></a>Når Office anvender apps indholdsmærkning og -kryptering
 
@@ -273,17 +273,17 @@ Office apps anvender indholdsmærkning og kryptering med en følsomhedsmærkat a
 
 Løsninger, der anvender følsomhedsetiketter på filer Office apps gør det ved at anvende mærkning af metadata på filen. I dette scenarie indsættes indholdsmærkning fra etikettens konfiguration ikke i filen, men krypteringen anvendes. 
 
-Når disse filer åbnes i en Office-skrivebordsapp, anvendes indholdsmærkninger automatisk af den samlede Azure Information Protection-etiketklient, når filen gemmes første gang. Indholdsmærkning anvendes ikke automatisk, når du bruger indbygget mærkning til skrivebords-, mobil- eller webapps.
+Når disse filer åbnes i en Office-skrivebordsapp, anvendes indholdsmærkningerne automatisk af Azure Information Protection Unified LabelIng Client, når filen gemmes første gang. Indholdsmærkning anvendes ikke automatisk, når du bruger indbygget mærkning til skrivebords-, mobil- eller webapps.
 
 Scenarier, der omfatter anvendelse af et følsomhedsmærkat uden for Office apps, omfatter:
 
-- Scanneren, Stifinder og PowerShell fra Azure Information Protection Unified Labeling Client 
+- Scanner, Stifinder og PowerShell fra Azure Information Protection samlet etiketklient 
 
 - Politikker for automatisk mærkatering for SharePoint og OneDrive
 
 - Eksporterede mærkede og krypterede data fra Power BI
 
-- Microsoft Defender til skyapps
+- Microsoft Defender for Cloud Apps
 
 I disse situationer kan en bruger med indbygget mærkning anvende etikettens indholdsmærkninger ved at fjerne eller erstatte den aktuelle etiket og derefter anvende den oprindelige etiket igen ved hjælp af deres Office-apps.
 
@@ -292,7 +292,7 @@ I disse situationer kan en bruger med indbygget mærkning anvende etikettens ind
 > [!IMPORTANT]
 > Hvis dine Office-apps ikke understøtter denne funktion, anvender de markeringerne som den oprindelige tekst, der er angivet i etiketkonfigurationen, i stedet for at løse variablerne.
 > 
-> Azure Information Protection Unified Labeling Client understøtter dynamiske mærkninger. Du kan finde oplysninger om at Office i tabellerne i sektionen med egenskaber på denne [](#support-for-sensitivity-label-capabilities-in-apps) side for minimumversioner, der understøttes.
+> Azure Information Protection samlet etiketklient understøtter dynamiske mærkninger. Du kan finde oplysninger om at Office i tabellerne i sektionen med egenskaber på denne [](#support-for-sensitivity-label-capabilities-in-apps) side for minimumversioner, der understøttes.
 
 Når du konfigurerer et følsomhedsmærkat for indholdsmærkning, kan du bruge følgende variabler i tekststrengen til dit sidehoved, din sidefod eller dit vandmærke:
 
@@ -344,7 +344,7 @@ Eksempler:
 
 > [!IMPORTANT]
 > 
-> Azure [Information Protection Unified Labeling Client understøtter](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) denne konfiguration, der også kaldes obligatorisk mærkning. Hvis du vil have oplysninger om at Office indbygget i apps, skal du se [tabellerne](#support-for-sensitivity-label-capabilities-in-apps) i sektionen med egenskaber på denne side for minimumversioner.
+> Azure [Information Protection samlet etiketklient understøtter](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) denne konfiguration, der også kaldes obligatorisk mærkning. Hvis du vil have oplysninger om at Office indbygget i apps, skal du se [tabellerne](#support-for-sensitivity-label-capabilities-in-apps) i sektionen med egenskaber på denne side for minimumversioner.
 >
 > Hvis du vil bruge obligatorisk mærkning til dokumenter, men ikke mails, skal du se instruktionerne i næste afsnit, som forklarer, Outlook konfigurerer bestemte indstillinger.
 > 
@@ -352,7 +352,7 @@ Eksempler:
 
 Når politikindstillingen **Kræv** , at brugere anvender en etiket på deres mail og dokumenter er markeret, skal de brugere, der er tildelt politikken, vælge og anvende en følsomhedsmærkat under følgende scenarier:
 
-- For den samlede Azure Information Protection-etiketklient:
+- Til Azure Information Protection samlet etiketklient:
     - For dokumenter (Word, Excel, PowerPoint): Når et dokument uden navn gemmes, eller brugere lukker dokumentet.
     - For mails (Outlook): På det tidspunkt sender brugerne en meddelelse uden navn.
 
@@ -371,13 +371,13 @@ Du kan finde en vejledning til, hvornår du skal bruge denne indstilling, i oply
 > [!NOTE]
 > Hvis du bruger standardindstillingen for etiketpolitik for dokumenter og mails ud over obligatorisk mærkning: 
 >
-> Standardetiketten prioriteres altid frem for obligatorisk mærkning. Men for dokumenter anvender Azure Information Protection samlet etiketklient standardmærkaten på alle dokumenter uden navn, hvorimod indbygget mærkning anvender standardnavnet på nye dokumenter og ikke på eksisterende dokumenter, der ikke er navnmærket. Denne forskel i funktionsmåden betyder, at når du bruger obligatorisk mærkning med standardetiketindstillingen, vil brugerne sandsynligvis blive bedt om at anvende et følsomhedsmærkat oftere, når de bruger indbygget mærkning, end når de bruger Azure Information Protection Samlet mærkningsklient.
+> Standardetiketten prioriteres altid frem for obligatorisk mærkning. Men for dokumenter anvender Azure Information Protection unified labeling-klienten standardnavnet på alle dokumenter uden navn, hvorimod indbygget mærkning anvender standardnavnet på nye dokumenter og ikke på eksisterende dokumenter, der ikke er navnmærket. Denne forskel i funktionsmåden betyder, at når du bruger obligatorisk mærkning med standardmærkatindstillingen, vil brugerne sandsynligvis blive bedt om at anvende et følsomhedsmærkat oftere, når de bruger indbygget mærkning, end når de bruger Azure Information Protection Unified Labeling-klienten.
 > 
 > Nu udrulles: Office, der bruger indbygget mærkning og understøtter en standardmærkat for eksisterende dokumenter. Du kan finde flere [oplysninger i tabellen med](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) egenskaber for Word, Excel og PowerPoint.
 
 ## <a name="outlook-specific-options-for-default-label-and-mandatory-labeling"></a>Outlook specifikke indstillinger for standardetiket og obligatorisk mærkning
 
-For indbygget mærkning skal du identificere minimumversionerne af Outlook, der understøtter disse funktioner, ved hjælp af tabellen med egenskaber [for Outlook](#sensitivity-label-capabilities-in-outlook) på denne side og rækken Forskellige indstillinger **for** standardetiket og obligatorisk mærkning. Alle versioner af den samlede Azure Information Protection-etiketklient understøtter Outlook specifikke indstillinger.
+For indbygget mærkning skal du identificere minimumversionerne af Outlook, der understøtter disse funktioner, ved hjælp af tabellen med egenskaber [for Outlook](#sensitivity-label-capabilities-in-outlook) på denne side og rækken Forskellige indstillinger **for** standardetiket og obligatorisk mærkning. Alle versioner af den samlede Information Protection Azure-etiketklient understøtter Outlook specifikke indstillinger.
 
 Når appen Outlook understøtter en standardetiketindstilling, der er forskellig fra standardetiketindstillingen for dokumenter:
 
@@ -394,7 +394,7 @@ Når Outlook-appen ikke understøtter de aktivering af obligatorisk mærkning: H
 > [!NOTE]
 > Hvis du har konfigureret avancerede indstillinger for PowerShell **outlookDefaultLabel** og **DisableMandatoryInOutlook** ved hjælp af [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) - eller [New-LabelPolicy-cmdlet'erne](/powershell/module/exchange/new-labelpolicy) :
 > 
-> Dine valgte værdier for disse PowerShell-indstillinger afspejles i konfigurationen af etiketpolitikken i overholdelsescenteret, og de fungerer automatisk for Outlook-apps, der understøtter disse indstillinger. De andre avancerede PowerShell-indstillinger understøttes fortsat kun for Azure Information Protection Unified Labeling Client.
+> Dine valgte værdier for disse PowerShell-indstillinger afspejles i konfigurationen af etiketpolitikken i overholdelsescenteret, og de fungerer automatisk for Outlook-apps, der understøtter disse indstillinger. De andre avancerede PowerShell-indstillinger understøttes fortsat kun for Azure Information Protection samlet etiketklient.
 
 ## <a name="auditing-labeling-activities"></a>Overvågning af etiketaktiviteter
 

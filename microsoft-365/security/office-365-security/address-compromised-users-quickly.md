@@ -1,6 +1,6 @@
 ---
 title: Håndtere kompromitterede brugerkonti med automatiseret undersøgelse og svar
-keywords: AIR, autoIR, Microsoft Defender til slutpunkt, automatiseret, undersøgelse, svar, afhjælpning, trusler, avanceret, trussel, beskyttelse, kompromitteret
+keywords: AIR, autoIR, Microsoft Defender for Endpoint, automatiseret, undersøgelse, svar, afhjælpning, trusler, avanceret, trussel, beskyttelse, kompromitteret
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -13,25 +13,25 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: ''
 ms.date: 06/10/2021
-description: Få mere at vide om, hvordan du hurtigere registrerer og adresserer kompromitterede brugerkonti med automatiseret undersøgelse og svarmuligheder i Microsoft Defender Office 365 Plan 2.
+description: Få mere at vide om, hvordan du hurtigere registrerer og adresserer kompromitterede brugerkonti med automatiseret undersøgelse og svarmuligheder Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cbc3c6c8a81d59bebbd5272e13e0f96de2257623
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c1488598eb3a198a70997e755fe77a8a0c97e1c0
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63590718"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474356"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Håndtere kompromitterede brugerkonti med automatiseret undersøgelse og svar
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 
-[Microsoft Defender til Office 365 Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) omfatter effektive funktioner [til automatisk undersøgelse](office-365-air.md) og svar (AIR). Disse funktioner kan gemme dit sikkerhedsteam en masse tid og besvær i forbindelse med trusler. Microsoft fortsætter med at forbedre sikkerhedsfunktionerne. For nylig blev AIR-egenskaberne forbedret med en kompromitteret brugersikkerhedsspilbog (i øjeblikket i forhåndsvisning). Læs denne artikel for at få mere at vide om spilbogen for kompromitteret brugersikkerhed. Og se blogindlægget Få hurtigere tid til at registrere og reagere på brugerforlig og begrænse omfanget af brud med [Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) for at få flere oplysninger.
+[Microsoft Defender for Office 365 Plan 2 omfatter](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) effektive [funktioner til automatisk undersøgelse og](office-365-air.md) svar (AIR). Disse funktioner kan gemme dit sikkerhedsteam en masse tid og besvær i forbindelse med trusler. Microsoft fortsætter med at forbedre sikkerhedsfunktionerne. For nylig blev AIR-egenskaberne forbedret med en kompromitteret brugersikkerhedsspilbog (i øjeblikket i forhåndsvisning). Læs denne artikel for at få mere at vide om spilbogen for kompromitteret brugersikkerhed. Og se blogindlægget [Hurtigere at registrere](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) og svare på brugerforlig og begrænse omfanget af brud med Microsoft Defender for Office 365 for at få flere oplysninger.
 
 ![Automatiseret undersøgelse af en kompromitteret bruger.](/microsoft-365/media/office365atp-compduserinvestigation.jpg)
 
@@ -43,7 +43,7 @@ Den kompromitterede sikkerhedsplan for brugerne gør det muligt for organisation
 
 ## <a name="compromised-user-alerts"></a>Kompromitterede brugerbeskeder
 
-Når en brugerkonto er kompromitteret, opstår der atypiske eller unormale funktionsmåder. Eksempelvis sendes phishing- og spammeddelelser muligvis internt fra en pålidelig brugerkonto. Defender for Office 365 kan registrere sådanne anomalies i mailmønstre og samarbejdsaktivitet i Office 365. Når dette sker, udløses beskeder, og processen til afhjælpning af trusler starter.
+Når en brugerkonto er kompromitteret, opstår der atypiske eller unormale funktionsmåder. Eksempelvis sendes phishing- og spammeddelelser muligvis internt fra en pålidelig brugerkonto. Defender for Office 365 kan registrere sådanne anomaler i mailmønstre og samarbejdsaktivitet inden for Office 365. Når dette sker, udløses beskeder, og processen til afhjælpning af trusler starter.
 
 Her er f.eks. en alarm, der blev udløst på grund af mistænkelig afsendelse af mails:
 
@@ -72,11 +72,11 @@ Du har nogle få muligheder for at navigere til en liste over brugere med begræ
 
 2. På siden **Beskeder skal du** filtrere resultaterne efter tidsperiode og politikken Bruger begrænset fra **at sende mail**.
 
-   ![Siden Vigtige beskeder i Microsoft 365 Defender filtreret for brugere med begrænset adgang.](../../media/m365-sc-alerts-page-with-restricted-user.png)
+   :::image type="content" source="../../media/m365-sc-alerts-page-with-restricted-user.png" alt-text="Siden Vigtige beskeder i Microsoft 365 Defender filtreret for brugere med begrænset adgang" lightbox="../../media/m365-sc-alerts-page-with-restricted-user.png":::
 
 3. Hvis du vælger posten ved at klikke på navnet, åbnes en bruger, der ikke kan sende mails, med yderligere oplysninger, som du kan gennemse. Ud for knappen **Administrer besked** kan du klikke på ikonet ![Flere indstillinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere indstillinger** og derefter vælge **Vis begrænsede brugeroplysninger** for at gå til **siden Begrænsede** brugere, hvor du kan [frigive den begrænsede bruger](removing-user-from-restricted-users-portal-after-spam.md).
 
-   ![Brugeren har begrænset sig til at kunne sende mail fra beskedcenteret.](../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png)
+  :::image type="content" source="../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png" alt-text="Brugeren har begrænset sin mulighed for at sende mailside" lightbox="../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png":::
 
 ### <a name="view-details-about-automated-investigations"></a>Få vist detaljer om automatiserede undersøgelser
 
@@ -98,6 +98,6 @@ Du kan få mere at vide [under Få vist oplysninger om en undersøgelse](air-vie
 
 - [Find og undersøg ondsindede mails i Office 365](investigate-malicious-email-that-was-delivered.md)
 
-- [Få mere at vide om AIR i Microsoft Defender til Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
+- [Få mere at vide om AIR Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
 
 - [Besøg Oversigt Microsoft 365 for at se, hvad der snart kommer og rulles ud](https://www.microsoft.com/microsoft-365/roadmap?filters=)

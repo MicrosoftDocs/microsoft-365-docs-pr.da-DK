@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret opbevaringspolitikker for automatisk mærkning, så du automatisk kan anvende etiketter for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: d1060bb4330c2dbb23c241cb3095f3b30869b58a
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 2d141ef349c456b9e8397ea1c96a4e450eaa73fc
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63590089"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500432"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk et opbevaringsnavn for at bevare eller slette indhold
 
@@ -145,13 +145,13 @@ Desuden understøttes SharePoint, der er i kladde, eller som aldrig er blevet pu
 > [!IMPORTANT]
 > For mails, du automatisk anvender ved at identificere følsomme oplysninger, medtages alle postkasser automatisk, hvilket omfatter postkasser fra Microsoft 365 grupper.
 > 
-> Selvom gruppepostkasser normalt ville være inkluderet ved at vælge **placeringen Microsoft 365 Grupper** for denne specifikke politikkonfiguration, omfatter gruppeplaceringen kun SharePoint websteder, der er forbundet til en Microsoft 365 gruppe.
+> Selvom gruppepostkasser normalt ville være inkluderet ved at vælge **Microsoft 365-grupper-placeringen**, omfatter gruppeplaceringen kun de SharePoint, der er knyttet til en Microsoft 365 gruppe.
 
 Når du opretter politikker for automatisk anvendelse af opbevaringsetiket til følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en politik til forebyggelse af datatab (DLP). Hver skabelon er forudkonfigureret til at søge efter bestemte typer af følsomme oplysninger. I følgende eksempel er typerne af følsomme oplysninger fra kategorien Beskyttelse  af personlige oplysninger og dataskabelonen USA Personidentificerbare oplysninger **(PII**):
 
 ![Politikskabeloner med typer af følsomme oplysninger.](../media/sensitive-info-configuration.png)
 
-Du kan få mere at vide om typer af følsomhedsoplysninger under [Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types). I øjeblikket [understøttes Få mere at vide om nøjagtige datamatchede følsomme](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) oplysningstyper og dokument fingeraftryk ikke i dette scenarie.[](document-fingerprinting.md)
+Du kan få mere at vide om typer af følsomhedsoplysninger under [Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types). I øjeblikket [understøttes nøjagtige datamatchingsbaserede følsomme](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) [oplysningstyper](document-fingerprinting.md) og dokument fingeraftryk ikke i dette scenarie.
 
 Når du har valgt en politikskabelon, kan du tilføje eller fjerne typer af følsomme oplysninger, og du kan ændre tillidsniveauet og antallet af forekomster. I det forrige eksempelskærmbillede er disse indstillinger blevet ændret, så et opbevaringsnavn kun anvendes automatisk, når:
   
@@ -313,7 +313,7 @@ Når du vælger en etiket, der skal bruges til automatisk anvendelse af opbevari
 Når du konfigurerer placeringerne for denne indstilling, kan du vælge:
 
 - **SharePoint websteder** til delte filer, der er gemt SharePoint kommunikationswebsteder, teamwebsteder, der ikke er forbundet Microsoft 365 grupper, og klassiske websteder. 
-- **Microsoft 365 grupper for delte** filer, der er gemt på teamwebsteder, der er forbundet Microsoft 365 grupper.
+- **Microsoft 365-grupper** for delte filer, der er gemt på teamwebsteder, der er forbundet Microsoft 365 grupper.
 - **OneDrive konti** for delte filer, der er gemt i OneDrive.
 
 Du skal oprette separate opbevaringspolitikker, hvis du vil bevare eller slette de oprindelige filer, mails eller Teams meddelelser.

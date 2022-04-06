@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Identity registreringsudelse i Microsoft 365 Defender
-description: Lær, hvordan du konfigurerer Microsoft Defender for Identity registreringsudetagelser i Microsoft 365 Defender.
+title: Udeladelse af Microsoft Defender til identitetsregistrering i Microsoft 365 Defender
+description: Få mere at vide om, hvordan du konfigurerer udeladelse af Microsoft Defender til identitetsregistrering Microsoft 365 Defender.
 ms.date: 11/02/2021
 ms.topic: how-to
 author: dcurwin
@@ -8,12 +8,12 @@ ms.author: dacurwin
 ms.service: microsoft-defender-for-identity
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e2df92e44b323bd0555407d72ebd48a7e050c9a5
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 98ead1d0bde488cee0b35e11b477ea5fe81fe66e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473909"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683005"
 ---
 # <a name="configure-defender-for-identity-detection-exclusions-in-microsoft-365-defender"></a>Konfigurer udeladelse af Defender til identitetsregistrering i Microsoft 365 Defender
 
@@ -22,7 +22,7 @@ ms.locfileid: "64473909"
 - Microsoft 365 Defender
 - Defender for Identity
 
-Denne artikel forklarer, hvordan [du konfigurerer Microsoft Defender for Identity](/defender-for-identity) registreringsudetagelser [i Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+I denne artikel forklares det, hvordan [du kan konfigurere udeladelse af registrering af Microsoft Defender](/defender-for-identity) [til identitet Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 > [!IMPORTANT]
 > Som en del af dine Microsoft 365 Defender har nogle indstillinger og detaljer ændret sig fra deres placering i Defender for Identity-portalen. Læs oplysningerne nedenfor for at finde ud af, hvor du kan finde både de velkendte og nye funktioner.
@@ -38,11 +38,11 @@ Eksempelvis kan en **DNS-rekognoseringsbesked** blive udløst af en sikkerhedssc
 
 1. I [Microsoft 365 Defender](https://security.microsoft.com/) skal du gå **til Indstillinger** og derefter **Identities**.
 
-   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Indstillingen Identiteter i kolonnen Navn" lightbox="../../media/defender-identity/settings-identities.png":::
+    ![Gå til Indstillinger og derefter Identities.](../../media/defender-identity/settings-identities.png)
 
 1. Du får derefter vist **ekskluderede** enheder i menuen til venstre.
 
-   :::image type="content" source="../../media/defender-identity/excluded-entities.png" alt-text="Ruden Udeladte enheder" lightbox="../../media/defender-identity/excluded-entities.png":::
+    ![Enheder, der er udeladt.](../../media/defender-identity/excluded-entities.png)
 
 Du kan derefter angive udeladelsesmetoder ved hjælp af to metoder: **Udeladelse ved registrering af regel** **og globale udeladte enheder**.
 
@@ -50,37 +50,37 @@ Du kan derefter angive udeladelsesmetoder ved hjælp af to metoder: **Udeladelse
 
 1. I menuen til venstre skal du vælge **Udeladelse ved registreringsregel**. Du får vist en liste over registreringsregler.
 
-   :::image type="content" source="../../media/defender-identity/exclusions-by-detection-rule.png" alt-text="Indstillingen Udelader ved registrering af regel i elementet Udeladte enheder i ruden til venstre" lightbox="../../media/defender-identity/exclusions-by-detection-rule.png":::
+    ![Udeladelse ved registreringsregel.](../../media/defender-identity/exclusions-by-detection-rule.png)
 
 1. For hver registrering, du vil konfigurere, skal du gøre følgende:
 
     1. Vælg reglen. Du kan søge efter registreringer ved hjælp af søgelinjen. Når denne indstilling er markeret, åbnes en rude med oplysninger om registreringsreglen.
 
-       :::image type="content" source="../../media/defender-identity/detection-rule-details.png" alt-text="Oplysninger om en registreringsregel" lightbox="../../media/defender-identity/detection-rule-details.png":::
+        ![Oplysninger om registreringsregel.](../../media/defender-identity/detection-rule-details.png)
 
     1. Hvis du vil tilføje en udeladelse, skal **du vælge knappen** Udeladte enheder og derefter vælge udeladelsestypen. Forskellige ekskluderede enheder er tilgængelige for hver regel. De omfatter brugere, enheder, domæner og IP-adresser. I dette eksempel er valgmulighederne **Ekskluder enheder og** **Udelad IP-adresser**.
 
-       :::image type="content" source="../../media/defender-identity/exclude-devices-or-ip-addresses.png" alt-text="Muligheden for at udelade enheder eller IP-adresser" lightbox="../../media/defender-identity/exclude-devices-or-ip-addresses.png":::
+        ![Udelad enheder eller IP-adresser.](../../media/defender-identity/exclude-devices-or-ip-addresses.png)
 
     1. Når du har valgt udeladelsestypen, kan du tilføje udelukkelsen. I den rude, der åbnes, skal du vælge **+** knappen for at tilføje udeladelse.
 
-       :::image type="content" source="../../media/defender-identity/add-exclusion.png" alt-text="Muligheden for at tilføje en udeladelse" lightbox="../../media/defender-identity/add-exclusion.png":::
+        ![Tilføj en udeladelse.](../../media/defender-identity/add-exclusion.png)
 
     1. Tilføj derefter den enhed, der skal udelades. Vælg **+ Tilføj** for at føje enheden til listen.
 
-       :::image type="content" source="../../media/defender-identity/add-excluded-entity.png" alt-text="Muligheden for at tilføje en enhed, der skal udelukkes" lightbox="../../media/defender-identity/add-excluded-entity.png":::
+        ![Tilføj en enhed, der skal udelades.](../../media/defender-identity/add-excluded-entity.png)
 
     1. Vælg derefter **Udelad IP-adresser** (i dette eksempel) for at fuldføre udeladelse.
 
-       :::image type="content" source="../../media/defender-identity/exclude-ip-addresses.png" alt-text="Muligheden for at udelade IP-adresser" lightbox="../../media/defender-identity/exclude-ip-addresses.png":::
+        ![Udelad IP-adresser.](../../media/defender-identity/exclude-ip-addresses.png)
 
     1. Når du har tilføjet udeladelse, kan du eksportere listen eller fjerne udeladelserne ved at gå tilbage til knappen **Udeladte** enheder. I dette eksempel har vi returneret til **Udelad enheder**. Hvis du vil eksportere listen, skal du vælge pil ned-knappen.
 
-       :::image type="content" source="../../media/defender-identity/return-to-exclude-devices.png" alt-text="Indstillingen Tilbage til udelad enheder" lightbox="../../media/defender-identity/return-to-exclude-devices.png":::
+        ![Gå tilbage til Udelad enheder.](../../media/defender-identity/return-to-exclude-devices.png)
 
     1. Hvis du vil slette en udeladelse, skal du vælge udelukkelsen og vælge papirkurvsikonet.
 
-       :::image type="content" source="../../media/defender-identity/delete-exclusion.png" alt-text="Indstillingen Slet en udeladelse" lightbox="../../media/defender-identity/delete-exclusion.png":::
+        ![Slet en udeladelse.](../../media/defender-identity/delete-exclusion.png)
 
 ## <a name="global-excluded-entities"></a>Globale udeladte enheder
 
@@ -88,23 +88,23 @@ Du kan nu også konfigurere udeladelse fra udeladelse fra **globale ekskluderede
 
 1. I menuen til venstre skal du vælge **Globale ekskluderede enheder**. Du får vist de kategorier af enheder, som du kan udelukke.
 
-   :::image type="content" source="../../media/defender-identity/global-excluded-entities.png" alt-text="Undermenuelementet Globale udeladte enheder" lightbox="../../media/defender-identity/global-excluded-entities.png":::
+    ![Globale udeladte enheder.](../../media/defender-identity/global-excluded-entities.png)
 
 1. Vælg en udeladelsestype. I dette eksempel har vi valgt **Udelad domæner**.
 
-   :::image type="content" source="../../media/defender-identity/exclude-domains.png" alt-text="Fanen Domæner" lightbox="../../media/defender-identity/exclude-domains.png":::
+    ![Udelad domæner.](../../media/defender-identity/exclude-domains.png)
 
 1. Der åbnes en rude, hvor du kan tilføje et domæne, der skal udelades. Tilføj det domæne, du vil udelade.
 
-   :::image type="content" source="../../media/defender-identity/add-excluded-domain.png" alt-text="Muligheden for at tilføje et domæne, der skal udelades" lightbox="../../media/defender-identity/add-excluded-domain.png":::
+    ![Tilføj et domæne, der skal udelades.](../../media/defender-identity/add-excluded-domain.png)
 
 1. Domænet føjes til listen. Vælg **Udelad domæner for** at fuldføre udelukkelsen.
 
-   :::image type="content" source="../../media/defender-identity/select-exclude-domains.png" alt-text="Muligheden for at vælge domæner, der skal udelades" lightbox="../../media/defender-identity/select-exclude-domains.png":::
+    ![Vælg udelad domæner.](../../media/defender-identity/select-exclude-domains.png)
 
 1. Du får derefter vist domænet på listen over enheder, der skal udelukkes fra alle registreringsregler. Du kan eksportere listen eller fjerne enhederne ved at markere dem og klikke på **knappen** Fjern.
 
-   :::image type="content" source="../../media/defender-identity/global-excluded-entries-list.png" alt-text="Listen over poster, der er udeladt globalt" lightbox="../../media/defender-identity/global-excluded-entries-list.png":::
+    ![Liste over poster, der er udeladt globalt.](../../media/defender-identity/global-excluded-entries-list.png)
 
 ## <a name="see-also"></a>Se også
 

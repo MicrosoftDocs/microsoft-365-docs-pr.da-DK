@@ -11,20 +11,20 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Administratorer kan lære at simulere phishingangreb og træne deres brugere i forebyggelse af phishing ved hjælp af kursus i angrebssimulering i Microsoft Defender Office 365 Plan 2.
+description: Administratorer kan lære at simulere phishingangreb og træne deres brugere i forebyggelse af phishing ved hjælp af kursus i Microsoft Defender for Office 365 plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 5ce7b58410ea53e4f11d746ebc4583b125f1ade6
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 924fef8e5aba8a797cf6754b6c507624e51a64c2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63601720"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474305"
 ---
-# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simulere et phishingangreb med kursus i at simulere angreb i Defender Office 365
+# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simulere et phishingangreb med kursus i at simulere angreb Defender for Office 365
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-Med angrebssimulering i Microsoft Defender Office 365 Plan 2 eller Microsoft 365 E5 kan du køre benign cyberattacks i din organisation. Disse simulering test dine sikkerhedspolitikker og -fremgangsmåder, samt træn dine medarbejdere til at øge deres opmærksomhed og mindske deres følsomhed over for angreb. I denne artikel kan du se, hvordan du opretter simulerede phishingangreb ved hjælp af simulering af angreb.
+Kursus i angrebssimulering Microsoft Defender for Office 365 plan 2 eller Microsoft 365 E5 du køre bengalsk cyberangrebssimulering i din organisation. Disse simulering test dine sikkerhedspolitikker og -fremgangsmåder, samt træn dine medarbejdere til at øge deres opmærksomhed og mindske deres følsomhed over for angreb. I denne artikel kan du se, hvordan du opretter simulerede phishingangreb ved hjælp af simulering af angreb.
 
 Du kan finde oplysninger om kursus i at simulere angreb i [Kom i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md).
 
@@ -36,7 +36,7 @@ Hvis du vil starte et simuleret phishingangreb, skal du gøre følgende:
 
 2. På fanen **Simuleringer skal** du vælge Start et ![simuleringsikon.](../../media/m365-cc-sc-create-icon.png) **Start en simulering**.
 
-   ![Start en simuleringsknap på fanen Simulering i Kursus i angrebssimulering Microsoft 365 Defender portalen.](../../media/attack-sim-training-simulations-launch.png)
+   :::image type="content" source="../../media/attack-sim-training-simulations-launch.png" alt-text="Knappen Start en simulering under fanen Simulering i Angrebssimulering i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-launch.png":::
 
 3. Guiden til oprettelse af simulering åbnes. Resten af denne artikel beskriver siderne og de indstillinger, de indeholder.
 
@@ -55,7 +55,7 @@ På siden **Select technique** skal du vælge en tilgængelig social engineering
 
 Hvis du klikker på **linket** Vis detaljer i beskrivelsen, åbnes en pop op-vindue med detaljer, der beskriver den teknik og de simuleringstrin, der er resultatet af metoden.
 
-![Pop op-dialogboksen Detaljer for teknik til indsamling af legitimationsoplysninger på siden Vælg teknik.](../../media/attack-sim-training-simulations-select-technique-sim-steps.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Pop op-pop op-pop-op-dialogboksen Detaljer for teknik til indsamling af legitimationsoplysninger på siden Vælg teknik" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
 
 Klik på Næste, når du er **færdig**.
 
@@ -102,14 +102,14 @@ Hvis du klikker **på Filter**, er følgende filtre tilgængelige:
 
 Når du er færdig med at konfigurere filtrene, skal du klikke **på Anvend**, **Annuller** eller **Ryd filtre**.
 
-![Vælg side med nyttedata i simuleringskursus til angreb Microsoft 365 Defender portalen.](../../media/attack-sim-training-simulations-select-payload.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Siden Vælg nyttedata i angrebssimuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
 
 Hvis du vælger en nyttedata fra listen, vises oplysninger om nyttedata i en pop op-pop-op-pop-op:
 
 - Fanen **Oversigt** indeholder et eksempel og andre oplysninger om nyttedata.
 - Fanen **Simulering er** startet indeholder **Simuleringsnavn**, **Klikhastighed**, **Kompromitteret** hastighed og **Handling**.
 
-![Pop op-flyv ind-oplysninger om nyttedata i angrebssimuleringskursus Microsoft 365 Defender portalen.](../../media/attack-sim-training-simulations-select-payload-details.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Pop op-siden med oplysninger om nyttedata i angrebssimuleringskursus Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
 
 Hvis du vælger en nyttedata fra listen ved at klikke på navnet, så vises ikonet ![Send en test med nyttedata.](../../media/m365-cc-sc-create-icon.png) **Knappen Send en test** vises på hovedsiden, hvor du kan sende en kopi af din nyttedatamail til dig selv (den bruger, der er logget på i øjeblikket) til inspektion.
 
@@ -138,7 +138,7 @@ På siden **Målbrugere skal** du vælge, hvem der skal modtage simulering. Konf
         - **Brugere ikke målrettet af en simulering inden for de sidste tre måneder**
         - **Gentag gentagelser**
 
-      - **Brugermærker**: Brugermærker er identifikatorer for bestemte grupper af brugere (f.eks. Prioritetskonti). Du kan få mere at [vide under Brugermærker i Microsoft Defender Office 365](user-tags.md).
+      - **Brugermærker**: Brugermærker er identifikatorer for bestemte grupper af brugere (f.eks. Prioritetskonti). Du kan finde flere oplysninger [under Brugermærker i Microsoft Defender for Office 365](user-tags.md).
 
           Brug følgende indstillinger:
 
@@ -156,7 +156,7 @@ På siden **Målbrugere skal** du vælge, hvem der skal modtage simulering. Konf
         - Markér **hele titlen**
         - Vælg eksisterende titelværdier.
 
-      ![Brugerfiltrering på siden Målbrugere i Kursus i angrebssimulering i Microsoft 365 Defender portal.](../../media/attack-sim-training-simulations-target-users-filter-by-category.png)
+      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Brugerfiltrering på siden Målbrugere i kursus i angrebssimulering på Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
       Når du har identificeret dine kriterier, vises de berørte brugere i  sektionen Brugerliste, der vises, hvor du kan vælge nogle eller alle de modtagere, der opdages.
 
@@ -194,7 +194,7 @@ På siden **Tildel** kursus kan du tildele kurser til simulering. Vi anbefaler, 
       - **7 dage efter simulering slutter**
   - **Intet kursus**: Hvis du vælger denne værdi, er den eneste indstilling på siden knappen **Næste, der** fører dig til [**landingssiden**](#landing-page) .
 
-![Tilføj anbefalede kurser på siden Undervisning i angrebssimulering i Microsoft 365 Defender portal.](../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Muligheden for at tilføje de anbefalede kurser på siden Træningstildeling i Angrebssimuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
 
 ### <a name="training-assignment"></a>Kursustildeling
 
@@ -236,7 +236,7 @@ For hvert kursus på listen skal du vælge, hvem der får træningen, ved at væ
 
 Hvis du ikke vil bruge et kursus, der vises, skal du klikke på Slet ![kursusikon.](../../media/m365-cc-sc-delete-icon.png) **Slet**.
 
-![Kursusopgaveside i Angrebssimuleringskursus i Microsoft 365 Defender portal.](../../media/attack-sim-training-training-assignment.png)
+:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Siden Training assignment i Attack-simuleringskursus i Microsoft 365 Defender portal" lightbox="../../media/attack-sim-training-training-assignment.png":::
 
 Klik på Næste, når du er **færdig**.
 
@@ -280,7 +280,7 @@ Microsoft-installerede landingssider er tilgængelige på 12 sprog: kinesisk (fo
 Klik på Næste, når du er **færdig**.
 
 > [!NOTE]
-> Visse varemærker, logoer, symboler, insignias og andre kildeidentifikatorer får en bedre beskyttelse i henhold til lokale, statslige og føderale love. Uautoriseret brug af sådanne indikatorer kan gøre det ulovligt for brugerne, herunder kriminelle fines. Selvom det ikke er en omfattende liste, omfatter dette selektorer, Der er tilsnørlige, vice-, sele sæler, CIA, SOCIAL Security, Medicare og Medicaid, UNITED States Internal Revenue Service og OL. Ud over disse kategorier af varemærker har anvendelse og ændring af tredjeparts varemærker en forbundet risiko. Det vil være mindre risikabelt at anvende dine egne varemærker og logoer i en nyttelast, især hvis din organisation tillader brug. Hvis du har yderligere spørgsmål om, hvad der er eller ikke er relevant at bruge, når du opretter eller konfigurerer en nyttedata, skal du rådføre dig med dine juridiske rådgivere.
+> Visse varemærker, logoer, symboler, insignias og andre kildeidentifikatorer får en bedre beskyttelse i henhold til lokale, statslige og føderale love. Uautoriseret brug af sådanne indikatorer kan gøre det ulovligt for brugerne, herunder kriminelle fines. Selvom det ikke er en omfattende liste, omfatter dette selektorer, FYSyd, Vice- og Menhedske sæler, CIA, SOCIAL Security, Medicare og Medicaid, USA Internal Revenue Service og OL. Ud over disse kategorier af varemærker har anvendelse og ændring af tredjeparts varemærker en forbundet risiko. Det vil være mindre risikabelt at anvende dine egne varemærker og logoer i en nyttelast, især hvis din organisation tillader brug. Hvis du har yderligere spørgsmål om, hvad der er eller ikke er relevant at bruge, når du opretter eller konfigurerer en nyttedata, skal du rådføre dig med dine juridiske rådgivere.
 
 ## <a name="select-end-user-notification"></a>Vælg meddelelse til slutbruger
 
@@ -374,4 +374,4 @@ Du kan vælge **Rediger** i hver sektion for at ændre indstillingerne i sektion
 
 Klik på Send, når du er **færdig**.
 
-![Gennemse simuleringssiden i angrebssimuleringskurser Microsoft 365 Defender portalen.](../../media/attack-sim-training-simulations-review-simulation.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Siden Gennemse simulering i angrebssimulering i Microsoft 365 Defender portalen" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::

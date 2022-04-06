@@ -3,7 +3,6 @@ title: Anbefalede politikker for Microsoft Defender til skyapps til SaaS-apps â€
 description: Beskriver anbefalede politikker for integration med Microsoft Defender til skyapps.
 author: BrendaCarter
 manager: laurawi
-ms.prod: microsoft-365-enterprise
 ms.topic: article
 audience: Admin
 ms.author: bcarter
@@ -15,12 +14,13 @@ ms.custom:
 ms.collection:
 - M365-identity-device-management
 - M365-security-compliance
-ms.openlocfilehash: 8d94207be88bd7c9e070057ac1790845a3be17ca
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+ms.prod: m365-security
+ms.openlocfilehash: 95b46e1c92354015ce6f8d9c5b1fa4b6e9642785
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63592064"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683313"
 ---
 # <a name="recommended-microsoft-defender-for-cloud-apps-policies-for-saas-apps"></a>Anbefalede politikker for Microsoft Defender til skyapps til SaaS-apps
 

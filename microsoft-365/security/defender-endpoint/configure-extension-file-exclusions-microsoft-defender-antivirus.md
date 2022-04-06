@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: da5add0e1f37a813e6962accbc391be6efba1cb1
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 9a67b05f089fd25e26f22508cbedb8f4b3ce086a
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472985"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595076"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurere og validere udeladelse baseret på filtypenavn og mappeplacering
 
@@ -39,7 +39,7 @@ Du kan definere undtagelser for Microsoft Defender Antivirus, der gælder for pl
 > Microsoft Defender Antivirus undtagelser gælder ikke for andre Microsoft Defender for Endpoint, herunder slutpunktsregistrering og -svar [( Slutpunktsregistrering og -svar)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [ASR-regler (Attack Surface Reduction)](/microsoft-365/security/defender-endpoint/attack-surface-reduction) og [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig Slutpunktsregistrering og -svar vigtige beskeder og andre registreringer.
 > Hvis du vil udelade filer bredt, skal du føje dem til Microsoft Defender for Endpoint [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators).
 
-## <a name="before-you-begin"></a>Inden du går i gang...
+## <a name="before-you-begin"></a>Før du begynder
 
 Se En [Anbefalinger definition af udeladelseslister, før](configure-exclusions-microsoft-defender-antivirus.md) du definerer dine udeladelseslister.
 
@@ -52,8 +52,7 @@ Hvis du vil udelade bestemte filer Microsoft Defender Antivirus scanninger, skal
 >
 > Automatisk udeladelse gælder kun for Windows Server 2016 og nyere. Disse undtagelser er ikke synlige i Windows Sikkerhed-appen og i PowerShell.
 
-I følgende tabel vises nogle eksempler på udeladelse baseret på filtypenavn og mappeplacering. 
-<br/><br/>
+I følgende tabel vises nogle eksempler på udeladelse baseret på filtypenavn og mappeplacering.
 
 |Udeladelse|Eksempler|Udeladelsesliste|
 |---|---|---|
@@ -111,7 +110,7 @@ Se [Sådan oprettes og installeres antimalwarepolitikker: Udeladelsesindstilling
     1. Angiv indstillingen til **Aktiveret**.
     2. Under sektionen **Indstillinger** skal du vælge **Vis**.
     3. Angiv hver mappe på sin egen linje under **kolonnen Værdinavn** .
-    4. Hvis du angiver en fil, skal du sikre dig, at du angiver en fuldt kvalificeret sti til filen, herunder drevbogstavet, mappestien, filnavnet og filtypenavnet. 
+    4. Hvis du angiver en fil, skal du sikre dig, at du angiver en fuldt kvalificeret sti til filen, herunder drevbogstavet, mappestien, filnavnet og filtypenavnet.
     5. Angiv **0** i **kolonnen** Værdi.
 
 5. Vælg **OK**.
@@ -138,8 +137,6 @@ Formatet for cmdletterne er som følger:
 
 I følgende tabel vises de cmdlet'er, som du kan bruge i den `<cmdlet>` del af PowerShell-cmdlet'en:
 
-<br/><br/>
-
 |Konfigurationshandling|PowerShell-cmdlet|
 |:---|:---|
 |Oprette eller overskrive listen|`Set-MpPreference`|
@@ -147,8 +144,6 @@ I følgende tabel vises de cmdlet'er, som du kan bruge i den `<cmdlet>` del af P
 |Fjern element fra listen|`Remove-MpPreference`|
 
 I følgende tabel vises værdier, som du kan bruge i den del `<exclusion list>` af PowerShell-cmdlet'en:
-
-<br/><br/>
 
 |Udeladelsestype|PowerShell-parameter|
 |---|---|
@@ -225,8 +220,6 @@ I følgende tabel beskrives det, hvordan jokertegnene kan bruges, og der er nogl
 
 Følgende tabel viser og beskriver miljøvariablerne for systemkontoen.
 
-<br/><br/>
-
 |Denne systemmiljøvariabel...|Omdirigerer til dette|
 |---|---|
 |`%APPDATA%`|`C:\Users\UserName.DomainName\AppData\Roaming`|
@@ -296,8 +289,8 @@ Du kan hente elementerne på udeladelseslisten ved hjælp af en af følgende met
 
 - [Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
 - [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies)
-- MpCmdRun
-- PowerShell
+- [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
+- [PowerShell](/powershell/module/defender)
 - [Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md)
 
 > [!IMPORTANT]

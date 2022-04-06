@@ -1,7 +1,7 @@
 ---
-title: Nyheder i Microsoft Defender til Slutpunkt på Mac
-description: Få mere at vide om de større ændringer for tidligere versioner af Microsoft Defender til Slutpunkt på Mac.
-keywords: microsoft, defender, Microsoft Defender til Endpoint, mac, installation, macos, whatsnew
+title: Nyheder i Microsoft Defender for Endpoint på Mac
+description: Få mere at vide om de større ændringer for tidligere versioner Microsoft Defender for Endpoint på Mac.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, installation, macos, whatsnew
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,22 +15,26 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 80245af54aa6f7a3328515257fe6e6e73f0739b0
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: d8b2c7725354facb01f8b12af502aae19856afe8
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63591204"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500733"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Nyheder i Microsoft Defender til Slutpunkt på Mac
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Nyheder i Microsoft Defender for Endpoint på Mac
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="1016169-20122022161690"></a>101.61.69 (20.122022.16169.0)
+
+- Fejlrettelser
 
 ## <a name="1016091-20122021160910"></a>101.60.91 (20.122021.16091.0)
 
@@ -39,8 +43,8 @@ ms.locfileid: "63591204"
 ## <a name="1015950-20122021159500"></a>101.59.50 (20.122021.15950.0)
 
 - Denne version tilføjer understøttelse af macOS 12.3. Fra og med macOS 12.3 [fjerner Apple Python 2.7](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). Der vil ikke være nogen Python-version forudinstalleret på macOS som standard. **HANDLING PÅKRÆVET**: 
-  - Brugere skal opdatere Microsoft Defender til Slutpunkt til Mac til version 101.59.50 (eller nyere), før de opdaterer deres enheder til macOS Monterey 12.3 (eller nyere). Denne minimale version 101.59.50 er en forudsætning for at eliminere Python-relaterede problemer med Microsoft Defender til Slutpunkt til Mac på macOS Monterey.
-  - For fjerninstallationer skal eksisterende MDM-konfigurationer opdateres til Microsoft Defender for Endpoint til Mac version 101.59.50 (eller nyere). Hvis du skubber via MDM en ældre version af Microsoft Defender til Endpoint til Mac til macOS Monterey 12.3 (eller nyere), så opstår der en installationsfejl.
+  - Brugere skal opdatere Microsoft Defender for Endpoint til Mac til version 101.59.50 (eller nyere), før de opdaterer deres enheder til macOS Monterey 12.3 (eller nyere). Denne minimale version 101.59.50 er en forudsætning for at eliminere Python-relaterede problemer med Microsoft Defender for Endpoint til Mac på macOS Monterey.
+  - For fjerninstallationer skal eksisterende MDM-konfigurationer opdateres til Microsoft Defender for Endpoint til Mac version 101.59.50 (eller nyere). Hvis du skubber via MDM en ældre Microsoft Defender for Endpoint til Mac-version til macOS Monterey 12.3 (eller nyere), medfører det en installationsfejl.
 
 ## <a name="1015910-20122012159100"></a>101.59.10 (20.122012.15910.0)
 
@@ -58,10 +62,10 @@ ms.locfileid: "63591204"
 - Programmet er blevet omdøbt fra "Microsoft Defender ATP" til "Microsoft Defender". Slutbrugerne vil overholde følgende ændringer:
   - Programinstallationsstien er blevet ændret fra `/Application/Microsoft Defender ATP.app` til `/Applications/Microsoft Defender.app`.
   - I brugeroplevelsen er forekomster af "Microsoft Defender ATP" blevet erstattet af "Microsoft Defender"
-- Vi har løst et problem, hvor nogle VPN-programmer ikke kunne oprette forbindelse på grund af netværksindholdsfilteret, der er distribueret med Microsoft Defender til Slutpunkt til Mac
+- Vi har løst et problem, hvor nogle VPN-programmer ikke kunne oprette forbindelse på grund af netværksindholdsfilteret, der er distribueret Microsoft Defender for Endpoint til Mac
 - Vi har løst et problem, der blev fundet i macOS 12.2 beta 2, hvor installationspakken ikke kunne åbnes på grund af en ændring i operativsystemet (OS), der forhindrer installation af pakker med visse egenskaber. Selvom det ser ud til, at denne ændring af operativsystemet ikke er inkluderet i den endelige version af macOS 12.2, vil den sandsynligvis blive genført i en fremtidig macOS-version. Derfor opfordrer vi alle virksomhedsadministratorer til at opdatere pakken Microsoft Defender for Endpoint i deres administrationskonsol til denne produktversion (eller en nyere version).
 - Vi har løst et problem på nogle M1-enheder, hvor produktet sidder fast med ugyldige antimalwaredefinitioner og ikke kunne opdateres korrekt til et fungerende sæt definitioner.
-- `mdatp health` output er blevet udvidet med `full_disk_access_enabled` en ekstra attribut kaldet, der kan bruges til at afgøre, om Fuld diskadgang er blevet tildelt til alle komponenter i Microsoft Defender til Slutpunkt til Mac.
+- `mdatp health`output er blevet udvidet med en ekstra attribut kaldet, `full_disk_access_enabled` der kan bruges til at afgøre, om fuld diskadgang er blevet tildelt til alle komponenter i Microsoft Defender for Endpoint til Mac.
 - Forbedringer af ydeevnen & fejlrettelser
 
 ## <a name="1015416-20121111154160"></a>101.54.16 (20.121111.15416.0)
@@ -117,7 +121,7 @@ ms.locfileid: "63591204"
 
 ## <a name="1013269-20121042132690"></a>101.32.69 (20.121042.13269.0)
 
-- Vi har rettet et problem, hvor samtidig adgang til nøgleringen fra Microsoft Defender til slutpunktet og andre programmer kan føre til beskadigelse af nøglering.
+- Vi har rettet et problem, hvor samtidig adgang til nøgleringen fra Microsoft Defender for Endpoint og andre programmer kan føre til beskadigelse af nøglering.
 
 ## <a name="1012964-20121042129640"></a>101.29.64 (20.121042.12964.0)
 
@@ -133,7 +137,7 @@ ms.locfileid: "63591204"
 
 ## <a name="1012569-20121022125690"></a>101.25.69 (20.121022.12569.0)
 
-- Microsoft Defender til Endpoint på macOS er nu tilgængelig i prøveversionen for kunder i det amerikanske offentlige. Du kan finde flere oplysninger [under Microsoft Defender til slutpunkt for kunder i det amerikanske offentlige.](gov.md)
+- Microsoft Defender for Endpoint på macOS er nu tilgængelig i prøveversionen for kunder i det amerikanske offentlige. Du kan finde flere oplysninger [Microsoft Defender for Endpoint kunder i det amerikanske offentlige.](gov.md)
 - Forbedringer af ydeevnen (specifikt for situationen, når appen XCodeRettelser bruges) & fejlrettelser.
 
 ## <a name="1012364-20121021123640"></a>101.23.64 (20.121021.12364.0)
@@ -154,7 +158,7 @@ ms.locfileid: "63591204"
 > [!NOTE]
 > Den gamle syntaks for kommandolinjeværktøjet frarådes i denne version. Du kan finde oplysninger om den nye syntaks i [Ressourcer](mac-resources.md#configuring-from-the-command-line).
 
-- Der er tilføjet en ny kommandolinjeskifter for at deaktivere netværksudvidelsen: `mdatp system-extension network-filter disable`. Denne kommando kan være nyttig til fejlfinding af netværksproblemer, der kan være relateret til Microsoft Defender til slutpunkt på Mac
+- Der er tilføjet en ny kommandolinjeskifter for at deaktivere netværksudvidelsen: `mdatp system-extension network-filter disable`. Denne kommando kan være nyttig til fejlfinding af netværksproblemer, der kan være relateret Microsoft Defender for Endpoint på Mac
 - Forbedringer af ydeevnen & fejlrettelser
 
 ## <a name="1011921-20120101119210"></a>101.19.21 (20.120101.11921.0)
@@ -169,7 +173,7 @@ ms.locfileid: "63591204"
 
 ## <a name="1011375-20120101113750"></a>101.13.75 (20.120101.11375.0)
 
-- Fjernede betingelser, når Microsoft Defender til slutpunkt udløste en macOS 11-fejl (Big Sur), der opstår som en grund til panik
+- Fjernede betingelser, Microsoft Defender for Endpoint udløste en macOS 11 (Big Sur)-fejl, der opstår som grund til panik i kerne
 - Vi har rettet en hukommelseslækage i Endpoint Security-systemudvidelsen, når den kørte på mac 11 (Big Sur)
 - Fejlrettelser
 
@@ -187,7 +191,7 @@ ms.locfileid: "63591204"
 
 - Denne produktversion er blevet valideret på macOS Big Sur 11 beta 9
 
-- Den nye syntaks `mdatp` for kommandolinjeværktøjet er nu standard. Du kan finde flere oplysninger om den nye [syntaks i Resources for Microsoft Defender for Endpoint på macOS](mac-resources.md#configuring-from-the-command-line)
+- Den nye syntaks `mdatp` for kommandolinjeværktøjet er nu standard. Du kan finde flere oplysninger om den nye [syntaks i Ressourcer til Microsoft Defender for Endpoint på macOS](mac-resources.md#configuring-from-the-command-line)
 
   > [!NOTE]
   > Den gamle syntaks for kommandolinjeværktøj fjernes fra produktet d. **1. januar 2021**.
@@ -244,15 +248,15 @@ ms.locfileid: "63591204"
 
 ## <a name="1010031"></a>101.00.31
 
-- Forbedret [onboardingoplevelse for Intune-brugere](/mem/intune/apps/apps-advanced-threat-protection-macos)
+- Forbedret [produkt onboardingoplevelse for Intune brugere](/mem/intune/apps/apps-advanced-threat-protection-macos)
 - [Antivirusudetagelser understøtter nu jokertegn](mac-exclusions.md#supported-exclusion-types)
-- Vi har tilføjet muligheden for at udløse antivirusscanninger fra genvejsmenuen i macOS. Du kan nu højreklikke på en fil eller mappe i Finder og vælge **Scan med Microsoft Defender til Slutpunkt**
+- Vi har tilføjet muligheden for at udløse antivirusscanninger fra genvejsmenuen i macOS. Du kan nu højreklikke på en fil eller mappe i Finder og vælge **Scan med Microsoft Defender for Endpoint**
 - Nedgradering af produkter direkte er nu eksplicit tilladt af installationsprogrammet. Hvis du vil nedgradere, skal du først fjerne den eksisterende version og omkonfigurere din enhed
 - Andre forbedringer af ydeevnen & fejlrettelser
 
 ## <a name="1009027"></a>100.90.27
 
-- Du kan nu [angive en opdateringskanal](mac-updates.md#set-the-channel-name) for Microsoft Defender til Slutpunkt på macOS, der er anderledes end den systembaserede opdateringskanal
+- Du kan nu [indstille en opdateringskanal](mac-updates.md#set-the-channel-name) til Microsoft Defender for Endpoint på macOS, der er anderledes end den systembaserede opdateringskanal
 - Ikon for nyt produkt
 - Andre forbedringer af brugeroplevelsen
 - Fejlrettelser
@@ -289,7 +293,7 @@ ms.locfileid: "63591204"
 
 ## <a name="1007942"></a>100.79.42
 
-- Rettede et problem, hvor Microsoft Defender til slutpunkt på Mac nogle gange forstyrrede Time Machine
+- Rettede et problem, Microsoft Defender for Endpoint på Mac nogle gange forstyrrede Time Machine
 - Der er blevet føjet en ny parameter til kommandolinjeværktøjet til test af forbindelsen med backendtjenesten
 
   ```bash
@@ -305,7 +309,7 @@ ms.locfileid: "63591204"
 
 ## <a name="1007099"></a>100.70.99
 
-- Vi har rettet et problem, der påvirker nogle brugeres mulighed for at opgradere til macOS Catalina, når beskyttelse i realtid er aktiveret. Dette sporadisk problem blev forårsaget af Microsoft Defender til slutpunktslåsning af filer i Catalina-opgraderingspakken, mens du scanner dem for trusler, hvilket har ført til fejl i opgraderingssekvensen.
+- Vi har rettet et problem, der påvirker nogle brugeres mulighed for at opgradere til macOS Catalina, når beskyttelse i realtid er aktiveret. Dette sporadisk problem blev forårsaget af Microsoft Defender for Endpoint låsefiler i Catalina-opgraderingspakken, mens du scanner dem for trusler, hvilket har ført til fejl i opgraderingssekvensen.
 
 ## <a name="1006899"></a>100.68.99
 
@@ -317,9 +321,9 @@ ms.locfileid: "63591204"
 - Understøttelse af macOS Catalina er blevet tilføjet
 
   > [!CAUTION]
-  > macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fravær af dette samtykke kan Microsoft Defender til Slutpunkt ikke fuldt ud beskytte din enhed.
+  > macOS 10.15 (Catalina) indeholder nye forbedringer af sikkerhed og beskyttelse af personlige oplysninger. Fra og med denne version kan programmer som standard ikke få adgang til bestemte placeringer på disken (f.eks Dokumenter, Overførsler, Skrivebord osv.) uden udtrykkeligt samtykke. I fraværet af dette samtykke Microsoft Defender for Endpoint du ikke helt beskytte din enhed.
   >
-  > Mekanismen til at give dette samtykke afhænger af, hvordan du har installeret Microsoft Defender til slutpunkt:
+  > Mekanismen til at give dette samtykke afhænger af, hvordan du implementerede Microsoft Defender for Endpoint:
   >
   > - For manuelle installationer skal du se de opdaterede instruktioner i [emnet Manuel](mac-install-manually.md#how-to-allow-full-disk-access) installation.
   > - For administrerede installationer skal du se de opdaterede instruktioner i [de SYLF-baserede installations](mac-install-with-jamf.md)- [Microsoft Intune-baserede installationsemner](mac-install-with-intune.md#create-system-configuration-profiles).

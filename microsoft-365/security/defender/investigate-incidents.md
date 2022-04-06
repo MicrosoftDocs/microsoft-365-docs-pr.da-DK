@@ -23,12 +23,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 4bba9797572193199dba0bd4c928693d94bf00de
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 776680db7b2666cc964f82e88cd6af9e6bab7558
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569152"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500249"
 ---
 # <a name="investigate-incidents-in-microsoft-365-defender"></a>Undersøg hændelser i Microsoft 365 Defender
 
@@ -52,7 +52,7 @@ Du kan starte med at vælge hændelsen fra markeringskolonnen. Her er et eksempe
 
 Når du gør det, åbnes en oversigtsrude med vigtige oplysninger om hændelsen, f.eks. alvorsgrad, som den er tildelt, og [MITRE ATT&CK-kategorierne&trade;](https://attack.mitre.org/) for hændelsen. Her er et eksempel.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Ruden, der viser oversigtsoplysninger om en hændelse i Microsoft 365 Defender portal." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
+:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Ruden, der viser oversigtsoplysninger om en hændelse Microsoft 365 Defender portalen." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
 
 Herfra kan du vælge **Åbn hændelsesside**. Dette åbner hovedsiden for hændelsen, hvor du kan finde flere oversigtsoplysninger og faner til beskeder, enheder, brugere, undersøgelser og beviser.
 

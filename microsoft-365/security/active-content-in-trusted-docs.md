@@ -7,20 +7,20 @@ author: chrisda
 manager: dansimp
 audience: Admin
 ms.topic: tutorial
-ms.service: O365-seccomp
 ms.localizationpriority: medium
+ms.prod: m365-security
 ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
 ROBOTS: NOINDEX,NOFOLOW
 description: Administratorer kan få mere at vide om, hvordan du opretter politikker for at blokere aktivt indhold Office dokumenter
-ms.openlocfilehash: 5bc187caaeac2fb83cb7d5a8026af2e1548c5622
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 89f2e51253d3c2fda0140dd7be8bc86b1fda2cf5
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63598495"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682807"
 ---
 # <a name="manage-active-content-in-office-documents"></a>Administrere aktivt indhold i Office dokumenter
 

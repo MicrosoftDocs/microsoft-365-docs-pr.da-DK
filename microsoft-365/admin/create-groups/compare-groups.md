@@ -24,18 +24,18 @@ search.appverid:
 - MOE150
 ms.assetid: 758759ad-63ee-4ea9-90a3-39f941897b7d
 description: Microsoft 365-medlemmer får en gruppemail og et delt arbejdsområde til samtaler, filer og kalenderbegivenheder, Stream og en Planner.
-ms.openlocfilehash: cc70fdf534b7240fd914c42f01b2c89843d1372f
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 72da8af8acd0725a5d7509b84f08e4220f7772d4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63588875"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594703"
 ---
 # <a name="compare-groups"></a>Sammenlign grupper
 
 I sektionen <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**Grupper**</a> i Microsoft 365 Administration kan du oprette og administrere disse typer af grupper: 
 
-- **Microsoft 365 grupper** bruges til samarbejde mellem brugere, både i og uden for virksomheden. De omfatter samarbejdstjenester som f.SharePoint og Planner.
+- **Microsoft 365-grupper** bruges til samarbejde mellem brugere, både i og uden for virksomheden. De omfatter samarbejdstjenester som f.SharePoint og Planner.
 - **Distributionsgrupper** bruges til at sende mailbeskeder til en gruppe af personer.
 - **Sikkerhedsgrupper** bruges til at give adgang til ressourcer, f.eks. SharePoint websteder.
 - **Mailaktiverede sikkerhedsgrupper** bruges til at give adgang til ressourcer som f.eks SharePoint mailbeskeder og mailbeskeder til disse brugere.
@@ -44,26 +44,28 @@ I sektionen <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="
 
 Nogle grupper tillader dynamisk medlemskab eller mail.
 
-||Microsoft 365 grupper|Distributionsgrupper|Sikkerhedsgrupper|Mailaktiverede sikkerhedsgrupper|Delte postkasser|Dynamiske distributionsgrupper|
+||Microsoft 365-grupper|Distributionsgrupper|Sikkerhedsgrupper|Mailaktiverede sikkerhedsgrupper|Delte postkasser|Dynamiske distributionsgrupper|
 |:----|:----|:----|:----|:----|:----|:----|
 |**Mailaktiveret**|Ja|Ja|Nej|Ja|Ja|Ja|
 |**Dynamisk medlemskab i Azure AD**|Ja|Nej|Ja|Nej|Nej|Nej|
 
 Alle disse gruppetyper kan bruges sammen med Power Automate.
 
-## <a name="microsoft-365-groups"></a>Microsoft 365 grupper
+## <a name="microsoft-365-groups"></a>Microsoft 365-grupper
 
-Microsoft 365 grupper bruges til samarbejde mellem brugere, både i og uden for virksomheden. For hver Microsoft 365 gruppe får medlemmer en gruppemail og et delt arbejdsområde til samtaler, filer og kalenderbegivenheder, Stream og en Planner.
+Microsoft 365-grupper bruges til samarbejde mellem brugere, både i og uden for virksomheden. For hver Microsoft 365 gruppe får medlemmer en gruppemail og et delt arbejdsområde til samtaler, filer og kalenderbegivenheder, Stream og en Planner.
 
 Du kan føje personer uden for organisationen til en gruppe, så længe dette er blevet [aktiveret af administratoren](manage-guest-access-in-groups.md). Du kan også tillade eksterne afsendere at sende mails til gruppens mailadresse.
 
-Microsoft 365 grupper kan konfigureres til dynamisk medlemskab i [Azure Active Directory](/azure/active-directory/users-groups-roles/groups-change-type), så gruppemedlemmer kan tilføjes eller fjernes automatisk baseret på brugerattributter som f.eks. afdeling, placering, titel osv.
+Microsoft 365-grupper kan konfigureres til dynamisk medlemskab af [Azure Active Directory](/azure/active-directory/users-groups-roles/groups-change-type), så gruppemedlemmer kan tilføjes eller fjernes automatisk baseret på brugerattributter som f.eks. afdeling, placering, titel osv.
 
-Microsoft 365 grupper kan tilgås via mobilapps som f.eks. Outlook til iOS og Outlook til Android.
+Microsoft 365-grupper kan tilgås via mobilapps som f.eks. Outlook til iOS og Outlook til Android.
 
 Gruppemedlemmer kan sende som eller sende på vegne af gruppens mailadresse, hvis dette er [blevet aktiveret af administratoren](../../solutions/allow-members-to-send-as-or-send-on-behalf-of-group.md).
 
-Microsoft 365 grupper understøtter ikke indlejring med andre Microsoft 365 grupper eller med distributions- eller sikkerhedsgrupper.
+Microsoft 365-grupper ikke indlejring med andre Microsoft 365-grupper eller med distributions- eller sikkerhedsgrupper.
+
+Microsoft 365-grupper kan føjes til en af de tre SharePoint grupper (Ejere, Medlemmer eller Gæster) for at give personer tilladelser til webstedet.
 
 ## <a name="distribution-groups"></a>Distributionsgrupper
 
@@ -71,11 +73,11 @@ Microsoft 365 grupper understøtter ikke indlejring med andre Microsoft 365 grup
 
 Distributionsgrupper er bedst til de situationer, hvor du har brug for at udsende oplysninger til en gruppe af personer, f.eks. "Personer i bygning A" eller "Alle i Contoso".
 
-Distributionsgrupper kan [opgraderes til Microsoft 365 grupper](../manage/upgrade-distribution-lists.md).
+Distributionsgrupper kan [opgraderes til Microsoft 365-grupper](../manage/upgrade-distribution-lists.md).
 
 Distributionsgrupper kan føjes til et team Microsoft Teams gruppemedlemmer, men kun medlemmerne tilføjes og ikke selve gruppen.
 
-Microsoft 365 grupper kan ikke være medlemmer af distributionsgrupper.
+Microsoft 365-grupper kan ikke være medlemmer af distributionsgrupper.
 
 ## <a name="dynamic-distribution-groups"></a>Dynamiske distributionsgrupper 
 
@@ -93,7 +95,7 @@ Sikkerhedsgrupper kan konfigureres til dynamisk medlemskab af [Azure Active Dire
 
 Sikkerhedsgrupper kan føjes til et team.
 
-Microsoft 365 grupper kan ikke være medlemmer af sikkerhedsgrupper.
+Microsoft 365-grupper kan ikke være medlemmer af sikkerhedsgrupper.
 
 ## <a name="mail-enabled-security-groups"></a>Mailaktiverede sikkerhedsgrupper
 
@@ -117,8 +119,8 @@ Det er ikke muligt at overføre en delt postkasse til en Microsoft 365 gruppe.
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Få mere at vide Microsoft 365 grupper](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
+[Få mere at vide Microsoft 365-grupper](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
 
-[Opgrader distributionslister Microsoft 365 grupper i Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists)
+[Opgrader distributionslister Microsoft 365-grupper i Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists)
 
 [Derfor skal du opgradere dine distributionslister til grupper i Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)

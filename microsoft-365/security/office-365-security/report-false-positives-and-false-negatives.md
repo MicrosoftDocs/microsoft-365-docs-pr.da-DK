@@ -13,12 +13,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du rapporterer falske positive og falske Outlook ved hjælp af funktionen Rapportmeddelelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f2181df44f8d193f8c19c508451733773bd20708
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: e5539525b6d752223c4895fc62ff49a90768a5b5
+ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473498"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "63606526"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Rapportér falske positive og falske negativer i Outlook
 
@@ -26,7 +26,7 @@ ms.locfileid: "64473498"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -69,9 +69,9 @@ For meddelelser i indbakken eller en anden mailmappe, undtagen Uønsket mail, sk
 
 1. Vælg **ellipserne** Flere handlinger i øverste højre hjørne af den markerede meddelelse, vælg Rapportmeddelelse i rullemenuen, og vælg derefter **Uønsket** eller **Phishing**.
 
-   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Ikonet Flere handlinger" lightbox="../../media/report-message-more-actions.png":::
+   ![Rapportmeddelelse – Flere handlinger.](../../media/report-message-more-actions.png)
 
-   :::image type="content" source="../../media/report-message-junk-phishing.png" alt-text="Indstillingen Uønsket og phishing i ruden Rapportmeddelelse" lightbox="../../media/report-message-junk-phishing.png":::
+   ![Rapportmeddelelse – Uønsket og Phishing.](../../media/report-message-junk-phishing.png)
 
 2. De valgte meddelelser sendes til Microsoft til analyse og:
    - Flyttet til mappen Uønsket mail, hvis de blev rapporteret som spam.
@@ -81,9 +81,9 @@ For meddelelser i indbakken eller en anden mailmappe, undtagen Uønsket mail, sk
 
 1. Vælg **ellipserne** Flere handlinger i øverste højre hjørne af den markerede meddelelse, vælg Rapportmeddelelse i rullemenuen, og vælg derefter **Ikke uønsket**.
 
-   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Ikonet, der indeholder flere handlinger" lightbox="../../media/report-message-more-actions.png":::
+   ![Rapportmeddelelse – Flere handlinger.](../../media/report-message-more-actions.png)
 
-   :::image type="content" source="../../media/report-message-not-junk.png" alt-text="Indstillingen Ikke uønsket under ruden Rapportmeddelelse" lightbox="../../media/report-message-not-junk.png":::
+   ![Rapportmeddelelse – Ikke uønsket.](../../media/report-message-not-junk.png)
 
 2. Den markerede meddelelse sendes til Microsoft til analyse og flyttes til Indbakke eller en anden angivet mappe.
 
