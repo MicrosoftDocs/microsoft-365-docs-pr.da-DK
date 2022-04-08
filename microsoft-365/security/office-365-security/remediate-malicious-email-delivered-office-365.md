@@ -14,12 +14,12 @@ search.appverid: MET150
 description: Trusselsafhjælpning
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dbb86061ddd7d94cf37a38d21d99d75eaaa44fae
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 98b425c39cd12aea55714e9ade192e2e770b26cd
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704879"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714835"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Afhjælp skadelige mails, der er leveret i Office 365
 
@@ -42,10 +42,6 @@ Administratorer kan udføre de nødvendige handlinger på mails, men for at få 
 *Manuel jagt* finder sted, når sikkerhedsteams identificerer trusler manuelt ved hjælp af søge- og filtreringsfunktionerne i Stifinder. Manuel mailafhjælpning kan udløses via en hvilken som helst mailvisning (*malware*, *phish* eller *alle mails*), når du har identificeret et sæt mails, der skal afhjælpes.
 
 :::image type="content" source="../../media/microsoft-365-defender-threat-explorer-manual-remediation.png" alt-text="Skærmbillede af manuel jagt i Office 365 Explorer efter dato.":::
-
-*Handlingslogge* Viser detaljer om afhjælpningsstatus, f.eks. vellykket, mislykket og allerede i destinationen.
-
-:::image type="content" source="../../media/microsoft-365-defender-action-center-history.png" alt-text="I Løsningscenter vises detaljer om afhjælpningsstatus, f.eks. vellykket, mislykket og allerede i destinationen.":::
 
 Sikkerhedsteams kan bruge Stifinder til at vælge mails på flere måder:
 
@@ -83,12 +79,11 @@ Unified Action Center viser afhjælpningshandlinger for de seneste 30 dage. Hand
 
 Åbn et afhjælpningselement for at få vist detaljer om det, herunder afhjælpningsnavn, godkendelses-id, undersøgelses-id, oprettelsesdato, beskrivelse, status, handlingskilde, handlingstype, bestemt af, status. Der åbnes også en siderude med handlingsdetaljer, oplysninger om mailklynge, beskeder og oplysninger om hændelser.
 
-- *Siden Åbn undersøgelse* åbner en administratorundersøgelse, der indeholder færre detaljer og faner. Den viser detaljer som: relateret besked, enhed, der er valgt til afhjælpning, udført handling, afhjælpningsstatus, antal enheder, logge, godkender af handling. Denne undersøgelse holder styr på den undersøgelse, som administratoren udfører manuelt, og indeholder oplysninger om valg foretaget af administratoren, og derfor kaldes den undersøgelse af administratorhandlinger. Ingen grund til at handle på undersøgelsen og alarm sin allerede i godkendt tilstand.   
-- *Antal mails* Viser antallet af mails, der er sendt via Threat Explorer. Disse mails kan være handlingsbare eller ikke handlingsvenlige. 
-- *Handlingslogge* Viser oplysninger om afhjælpningsstatus, f.eks. vellykket/mislykket/allerede i destinationen
+- *Siden Åbn undersøgelse* åbner en administratorundersøgelse, der indeholder færre detaljer og faner. Den viser detaljer som: relateret besked, enhed, der er valgt til afhjælpning, udført handling, afhjælpningsstatus, antal enheder, logge, godkender af handling. Denne undersøgelse holder styr på den undersøgelse, som administratoren udfører manuelt, og indeholder oplysninger om valg foretaget af administratoren, og derfor kaldes den undersøgelse af administratorhandlinger. Ingen grund til at handle på undersøgelsen og alarm sin allerede i godkendt tilstand.
+- *Antal mails* Viser antallet af mails, der er sendt via Threat Explorer. Disse mails kan være handlingsbare eller ikke handlingsvenlige.
+- *Handlingslogge* Vis detaljer om afhjælpningsstatusser som f.eks. vellykket, mislykket og allerede på destinationen.
 
-  > [!div class="mx-imgBorder"]
-  > [![Skærmbillede af Handlingscenter med trusler, der kan handles på, og som ikke kan handles på.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
+:::image type="content" source="../../media/microsoft-365-defender-action-center-history-panel.png" alt-text="Løsningscenter med indstillingen Flyt til indbakke åben.":::
 
   - **Handlingsbaseret**: Mails på følgende placeringer i en cloudpostkasse kan reageres på og flyttes:
     - Indbakke

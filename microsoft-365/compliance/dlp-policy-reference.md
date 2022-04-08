@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: d6bc24f313d1998979a460bcd41e87ccbe8abc5c
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 169fb93f7343fd038af9e7b8ae789dabc871c6aa
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704917"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713993"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
@@ -202,8 +202,6 @@ I eksemplet nedenfor har regel 1 forrang frem for de andre matchende regler, da 
 - Regel 4: Ingen håndhævelse
 
 Alle de andre regler evalueres, men deres handlinger gennemtvinges ikke. Overvågningslogge viser den mest restriktive regel, der anvendes på filen. Hvis der er mere end én regel, der stemmer overens, og de er lige restriktive, styrer politik- og regelprioritet, hvilken regel der anvendes på filen.
-
-For slutpunkter kan du konfigurere de handlinger, som DLP kræver for alle understøttede aktiviteter, i en enkelt regel for et bestemt sæt medtagelsesbetingelser.
 
 ### <a name="conditions"></a>Betingelser
 

@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Logføring af overvågning af postkasser er som standard slået til i Microsoft 365 (også kaldet standardovervågning af postkasser eller overvågning af postkasser er som standard slået til). Det betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres i en overvågningslog for postkassen, hvor du kan søge efter aktiviteter, der udføres i postkassen.
-ms.openlocfilehash: 1f566ee46520047e1bc125e505d53911fb07c912
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 9b3c08850ff0cce14fdce13d496642239e817096
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705335"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714323"
 ---
 # <a name="manage-mailbox-auditing"></a>Administrer overvågning af postkasse
 
@@ -62,10 +62,6 @@ Hvis du vil holde overvågning af postkassen deaktiveret for bestemte postkasser
 
 I følgende tabel vises de postkassetyper, der i øjeblikket understøttes af overvågning af postkasser som standard:
 
-<br>
-
-****
-
 |Postkassetype|Understøttes|
 |---|:---:|
 |Brugerpostkasser|![Markeret.](../media/checkmark.png)|
@@ -73,7 +69,6 @@ I følgende tabel vises de postkassetyper, der i øjeblikket understøttes af ov
 |Microsoft 365 gruppepostkasser|![Markeret.](../media/checkmark.png)|
 |Ressourcepostkasser||
 |Postkasser i offentlige mapper||
-|
 
 ## <a name="logon-types-and-mailbox-actions"></a>Logontyper og postkassehandlinger
 
@@ -98,10 +93,6 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 - En stjerne ( <sup>\*</sup> ), når markeringen angiver, at postkassehandlingen som standard er logført for logontypen.
 - Husk, at en administrator med tilladelsen Fuld adgang til en postkasse betragtes som stedfortræder.
 
-<br>
-
-****
-
 |Postkassehandling|Beskrivelse|Admin|Uddelegere|Ejer|
 |---|---|:---:|:---:|:---:|
 |**AddFolderPermissions**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
@@ -111,15 +102,15 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 |**Mappebind**|Der blev åbnet en postkassemappe. Denne handling logføres også, når administratoren eller stedfortræderen åbner postkassen. <br/><br/> **Bemærk**! Overvåg poster for handlinger for mappebindinger, der udføres af stedfortrædere, konsolideres. Der genereres én overvågningspost for individuel mappeadgang inden for en 24-timers periode.|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
 |**HardDelete**|En meddelelse blev fjernet fra mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|
 |**MailboxLogin**|Brugeren loggede på sin postkasse.|||![Markeret](../media/checkmark.png)|
-|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <p> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
-|**Meddelelsebind**|**Bemærk**! Denne værdi er kun tilgængelig for E3-brugere (brugere uden abonnementer på tilføjelsesprogrammer til E5- eller E5-overholdelse). <p> En meddelelse blev vist i indholdsruden eller åbnet af en administrator.|![Markeret](../media/checkmark.png)|||
+|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**Meddelelsebind**|**Bemærk**! Denne værdi er kun tilgængelig for E3-brugere (brugere uden abonnementer på tilføjelsesprogrammer til E5- eller E5-overholdelse). <br/><br/> En meddelelse blev vist i indholdsruden eller åbnet af en administrator.|![Markeret](../media/checkmark.png)|||
 |**RedigerMapperTilladelser**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
 |**Flytte**|En meddelelse blev flyttet til en anden mappe.|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**FlyttilDeletedItems**|En meddelelse blev slettet og flyttet til mappen Slettet post.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Postsletning**|Et element, der er mærket som en post, blev slettet med blød sletning (flyttet til mappen Genoprettelige elementer). Elementer, der er mærket som poster, kan ikke slettes permanent (fjernes fra mappen Gendanbare elementer).|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**RemoveFolderPermissions**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
-|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <p> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
-|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <p> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
+|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Send som**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendAs. Det betyder, at en anden bruger sendte meddelelsen, som om den kom fra ejeren af postkassen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**SendOnBehalf**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf. Det betyder, at en anden bruger sendte meddelelsen på vegne af ejeren af postkassen. Meddelelsen angiver til modtageren, hvem meddelelsen blev sendt på vegne af, og hvem der rent faktisk sendte meddelelsen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**Blød sletning**|En meddelelse blev slettet eller slettet permanent fra mappen Slettet post. Elementer, der er slettet med blød sletning, flyttes til mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
@@ -128,7 +119,6 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 |**UpdateComplianceTag**|Der anvendes en anden opbevaringsmærkat på et postelement (der kan kun tildeles én opbevaringsmærkat til et element).|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**UpdateFolderPermissions**|En mappetilladelse blev ændret. Mappetilladelser styrer, hvilke brugere i din organisation der kan få adgang til mapper i en postkasse og de meddelelser, der er placeret i disse mapper.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**UpdateInboxRules**|Der blev tilføjet, fjernet eller ændret en indbakkeregel. Indbakkeregler bruges til at behandle meddelelser i brugerens indbakke baseret på de angivne betingelser og udføre handlinger, når betingelserne i en regel er opfyldt, f.eks. at flytte en meddelelse til en angivet mappe eller slette en meddelelse.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
-|
 
 > [!IMPORTANT]
 > Hvis du har tilpasset de postkassehandlinger, der skal overvåges for en hvilken som helst logontype, *før* overvågning af postkassen som standard blev aktiveret i din organisation, bevares de brugerdefinerede indstillinger i postkassen og overskrives ikke af standardhandlingerne for postkassen, som beskrevet i dette afsnit. Hvis du vil gendanne handlingerne i overvågningspostkassen til deres standardværdier (hvilket du kan gøre når som helst), skal du se afsnittet [Gendan handlinger for standardpostkassen](#restore-the-default-mailbox-actions) senere i denne artikel.
@@ -141,10 +131,6 @@ I følgende tabel beskrives de postkassehandlinger, der som standard logføres p
 
 Husk, at en administrator med tilladelsen Fuld adgang til en Microsoft 365 gruppepostkasse betragtes som stedfortræder.
 
-<br>
-
-****
-
 |Postkassehandling|Beskrivelse|Admin|Uddelegere|Ejer|
 |---|---|:---:|:---:|:---:|
 |**Opret**|Oprettelse af et kalenderelement. Oprettelse, afsendelse eller modtagelse af en meddelelse overvåges ikke.|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
@@ -154,7 +140,6 @@ Husk, at en administrator med tilladelsen Fuld adgang til en Microsoft 365 grupp
 |**SendOnBehalf**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf.|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**Blød sletning**|En meddelelse blev slettet eller slettet permanent fra mappen Slettet post. Elementer, der er slettet med blød sletning, flyttes til mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Opdater**|En meddelelse eller en af dens egenskaber blev ændret.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
-|
 
 ### <a name="verify-that-default-mailbox-actions-are-being-logged-for-each-logon-type"></a>Bekræft, at der logføres standardpostkassehandlinger for hver logontype
 
@@ -342,13 +327,13 @@ Værdien **Sand** angiver, at logføring af overvågning af postkasser tilsides�
   - Aktivér overvågning af postkasser manuelt på individuelle postkasser (kør kommandoen `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`, ). Når du har gjort dette, kan du bruge søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til Office 365 managementaktivitet.
 
     > [!NOTE]
-    > Hvis overvågning af postkassen allerede ser ud til at være aktiveret i postkassen, men dine søgninger ikke returnerer nogen resultater, skal du ændre værdien af parameteren _AuditEnabled_ til `$false` og derefter tilbage til `$true`.
+    > Hvis overvågning af postkassen allerede ser ud til at være aktiveret i postkassen, men dine søgninger ikke returnerer nogen resultater, skal du ændre værdien af parameteren *AuditEnabled* til `$false` og derefter tilbage til `$true`.
 
   - Brug følgende cmdlet'er i Exchange Online PowerShell:
     - [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) for at søge i postkassens overvågningslog for bestemte brugere.
     - [New-MailboxAuditLogSearch](/powershell/module/exchange/new-mailboxauditlogsearch) til at søge i postkassens overvågningslog for bestemte brugere og få resultaterne sendt via mail til angivne modtagere.
 
-  - Brug <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> i Exchange Online til at udføre følgende handlinger:
+  - Brug Exchange Administration (EAC) i Exchange Online til at udføre følgende handlinger:
     - [Eksportér overvågningslogge for postkasse](/Exchange/security-and-compliance/exchange-auditing-reports/export-mailbox-audit-logs)
     - [Kør en rapport over adgang til en postkasse, der ikke er ejer](/Exchange/security-and-compliance/exchange-auditing-reports/non-owner-mailbox-access-report)
 

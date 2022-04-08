@@ -1,0 +1,129 @@
+### YamlMime:Landing
+title: Dokumentation til Microsoft Defender for Office 365
+summary: Få mere at vide om de robuste sikkerhedsløsninger i Defender for Office 365, så du bedre kan beskytte dine mail- og samarbejdsværktøjer.
+metadata:
+  title: Dokumentation til Microsoft Defender for Office 365-sikkerhed
+  description: Få mere at vide om de robuste sikkerhedsløsninger i Defender for Office 365, så du bedre kan beskytte dine mail- og samarbejdsværktøjer.
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: mdo
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 04/13/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: 531e7466c831bef63d29bf7c33ad7bd9de9c3587
+  ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 04/07/2022
+  ms.locfileid: "64705159"
+landingContent:
+- title: Defender for Office 365 og Exchange Online Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Oversigt over Office 365 Sikkerhed
+      url: overview.md
+    - text: Konfigurer med forudindstillede sikkerhedspolitikker i EOP og Defender for Office 365
+      url: preset-security-policies.md
+- title: Introduktion til Defender for Office 365
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Beskyt mod trusler
+      url: protect-against-threats.md
+    - text: Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
+      url: preset-security-policies.md
+    - text: Nyheder i Microsoft Defender for Office 365
+      url: whats-new-in-defender-for-office-365.md
+- title: Aktivering af Defender for Office 365
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Prøv Defender for Office 365
+      url: try-microsoft-defender-for-office-365.md
+    - text: Migrer til Defender for Office 365
+      url: migrate-to-defender-for-office-365.md
+- title: Konfiguration af beskyttelse mod mailgodkendelse
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurer SPF for at forhindre forfalskning
+      url: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+    - text: Brug DKIM til at validere udgående mails, der sendes fra dit brugerdefinerede domæne
+      url: use-dkim-to-validate-outbound-email.md
+    - text: Brug DMARC til at validere mail
+      url: use-dmarc-to-validate-email.md
+- title: Konfigurer Exchange Online Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Oversigt over Exchange Online Protection
+      url: exchange-online-protection-overview.md
+    - text: Anbefalede indstillinger for EOP og Microsoft Defender for Office 365-sikkerhed til konfiguration
+      url: recommended-settings-for-eop-and-office365.md
+- title: Forhindr
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Konfigurer din Microsoft 365 lejer for at øge sikkerheden
+      url: tenant-wide-setup-for-increased-security.md
+    - text: Configuration Analyzer i EOP og Defender for Office 365
+      url: configuration-analyzer-for-security-policies.md
+    - text: Få indsigt via kursus i angrebssimulering
+      url: attack-simulation-training-insights.md
+- title: Registrer
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Regler for mailflow (transportregler) i Exchange Online
+      url: /exchange/security-and-compliance/mail-flow-rules/mail-flow-rules
+    - text: Trusselssporinger
+      url: threat-trackers.md
+    - text: Smarte rapporter og indsigt i Security & Compliance Center
+      url: reports-and-insights-in-security-and-compliance.md
+- title: Undersøg
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visninger i Trusselsoversigt og registreringer i realtid
+      url: threat-explorer-views.md
+    - text: Kampagnevisninger i Microsoft Defender for Office 365
+      url: campaigns.md
+    - text: Undersøg skadelig mail, der blev leveret i Office 365
+      url: investigate-malicious-email-that-was-delivered.md
+    - text: Få vist Defender for Office 365-rapporter
+      url: view-reports-for-mdo.md
+- title: Undersøg i EOP
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Rapportering og meddelelsessporing i EOP
+      url: reporting-and-message-trace-in-exchange-online-protection.md
+    - text: Få vist administratorens overvågningslog
+      url: /exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log
+- title: Besvar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Afhjælp skadelig mail leveret i Office 365
+      url: remediate-malicious-email-delivered-office-365.md
+    - text: Besvar en kompromitteret mailkonto
+      url: responding-to-a-compromised-email-account.md
+    - text: Afhjælp Outlook-regler og angreb på brugerdefinerede formularinjiceringer
+      url: detect-and-remediate-outlook-rules-forms-attack.md
+    - text: Indsend falske positive/falske negativer
+      url: admin-submission.md
+- title: Automatiser
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Sådan fungerer AIR (Automatiserede undersøgelser og svar) i Defender for Office 365
+      url: automated-investigation-response-office.md
+    - text: Start her med Automatiserede undersøgelser og svar i Defender for Office 365
+      url: office-365-air.md
+    - text: Håndter kompromitterede brugerkonti med Automatiserede undersøgelser og svar
+      url: address-compromised-users-quickly.md
