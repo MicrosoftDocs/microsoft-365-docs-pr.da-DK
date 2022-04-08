@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: dcc4ed070e900f9df892abb58cd05cdad2dca619
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 5f04933d54bf02732fea34df25b25e3996e23932
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687005"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705077"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender for Endpoint på Linux
 
@@ -48,6 +48,10 @@ Microsoft Defender for Endpoint til Linux indeholder funktioner til antimalware 
 
 - Adgang til Microsoft 365 Defender-portalen
 - Linux-distribution ved hjælp af [systemadministratoren](https://systemd.io/)
+
+  >[!NOTE]
+  >Linux-distribution ved hjælp af systemadministrator med undtagelse af RHEL/CentOS 6.x understøtter både SystemV og Upstart.
+
 - Erfaring med Linux- og BASH-scripting på begynderniveau
 - Administrative rettigheder på enheden (i tilfælde af manuel installation)
 

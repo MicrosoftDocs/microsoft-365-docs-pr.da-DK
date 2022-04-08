@@ -1,7 +1,7 @@
 ---
-title: Planlæg ASR-regler for reduktion af implementeringsregler for angrebsoverfladen
-description: Giver vejledning i at planlægge udrulning af regler for reduktion af angrebsoverfladen.
-keywords: Implementering af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, beskyttelsessystem til forebyggelse af indtrængen, beskyttelsesregler, anti exploit, udnyttelsesregler, regler for forebyggelse af indisk virus, Microsoft Defender for Endpoint, konfigurer ASR-regler
+title: Planlæg installation af ASR-regler (Attack Surface Reduction)
+description: Indeholder en vejledning i, hvordan du planlægger udrulningen af asr-regler (Attack Surface Reduction).
+keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,72 +20,74 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 9342e4b3868e5bc0d5701b4a0cfa2e8f0a56937b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 07388ab8f1aac89991423c07fb442017aafb73e6
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64477319"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705291"
 ---
-# <a name="step-1-plan-asr-rules-deployment"></a>Trin 1: Planlægge udrulning af ASR-regler
+# <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Planlæg installation af ASR-regler (Attack Surface Reduction)
 
-Når du tester reduktion af angrebsoverfladen (ASR), er det vigtigt at starte med den rigtige forretningsenhed. Du bør starte med en lille gruppe personer i en bestemt forretningsenhed. Du kan identificere nogle ASR-vindere inden for en bestemt forretningsenhed, som kan give den virkelige påvirkning af asr-reglerne, og hjælpe dig med at finjustere implementeringen.
+Når du tester ASR-regler (Attack Surface Reduction), er det vigtigt at starte med den rigtige forretningsenhed. Du skal starte med en lille gruppe personer i en bestemt afdeling. Du kan identificere nogle ASR-mestre i en bestemt forretningsenhed, der kan give virkelige verden indflydelse på ASR-reglerne og hjælpe dig med at tilpasse implementeringen.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-rules-planning-steps.png" alt-text="Planlægningstrinnene for ASR-regler" lightbox="images/asr-rules-planning-steps.png":::
 
-## <a name="start-with-the-right-business-unit"></a>Start med den rigtige forretningsenhed
+## <a name="start-with-the-right-business-unit"></a>Start med den rigtige afdeling
 
-Hvordan du vælger den forretningsenhed, der skal implementeres i din implementering af ASR-reglerne, afhænger af faktorer som f.eks.:
+Den måde, du vælger forretningsenheden for at udrulle udrulningen af ASR-regler på, afhænger af faktorer som:
 
-- Størrelse på forretningsenhed
-- Tilgængelighed af ASR-regler for vindere  
-- Fordeling og brug af:
+- Afdelingsstørrelse
+- Tilgængelighed af asr-regel mestre  
+- Distribution og brug af:
   - Software
   - Delte mapper
   - Brug af scripts
   - Office makroer
-  - Andre enheder, der er påvirket af ASR-regler
+  - Andre enheder, der påvirkes af ASR-regler
 
-Afhængigt af dine forretningsmæssige behov kan du vælge at medtage flere forretningsenheder for at få et bredt udvalg af software, delte mapper, scripts, makroer osv. Omvendt kan du beslutte at begrænse omfanget af dine første AA-reglers udrulning til en enkelt forretningsenhed og derefter gentage udrulningen af alle AA-regler til dine andre forretningsenheder én ad gangen.
+Afhængigt af dine forretningsbehov kan du vælge at inkludere flere forretningsenheder for at få et bredt udsnit af software, delte mapper, scripts, makroer osv. Omvendt kan du vælge at begrænse omfanget af udrulningen af dine første ASR-regler til en enkelt afdeling og derefter gentage udrulningsprocessen for hele ASR-reglerne til dine andre afdelinger én ad gangen.
 
-## <a name="identify-asr--rules-champions"></a>Identificer ASR rules champions
+## <a name="identify-asr--rules-champions"></a>Identificer asr-regler for mestre
 
-Asr rules champions are members in your organization that will help with your initial ASR rules rollout during the preliminary testing and implementation phases. Dine vindere er typisk medarbejdere, som er mere teknisk dygtige, og som ikke afspores af forbitiske arbejdsafbrydelser. The champions' involvement will continue throughout the broader expansion of ASR rules deployment to your organization. Dine regler for asr-regler bliver de bedste til at opleve hvert niveau af udrulningen af ASR-reglerne.
+ASR-regler mestre er medlemmer i din organisation, der hjælper med den indledende udrulning af ASR-regler i de indledende test- og implementeringsfaser. Dine mestre er typisk medarbejdere, der er mere teknisk dygtige, og som ikke afspores af forbigående afbrydelser i arbejdsflowet. Mestrenes engagement vil fortsætte i hele den bredere udvidelse af ASR-regler udrulning til din organisation. Mestrene af dine ASR-regler er de første til at opleve hvert niveau af udrulningen af ASR-regler.
 
-Det er vigtigt at give en feedback- og svarkanal, så dine ASR-regelmestre kan give dig besked om asr-regelrelaterede arbejdsafbrydelser og modtage ASR-regler udrulning af relateret kommunikation.
+Det er vigtigt at give en feedback- og svarkanal til dine asr-regler, som mestrer for at advare dig om asr-regelrelaterede arbejdsforstyrrelser og modtage asr-regeludrulningsrelateret kommunikation.
 
-## <a name="get-inventory-of-line-of-business-apps-and-understand-the-business-unit-processes"></a>Få oversigt over line of business-apps, og få et forståelse af processer for forretningsenheder
+## <a name="get-inventory-of-line-of-business-apps-and-understand-the-business-unit-processes"></a>Få en oversigt over line of business-apps, og forstå forretningsprocesforløbene
 
-At have en fuld forståelse for de programmer og processer pr. forretningsenhed, der bruges i hele organisationen, er afgørende for en vellykket installation af ASR-regler. Det er desuden af afgørende betydning, at du forstår, hvordan disse apps bruges inden for de forskellige forretningsenheder i organisationen.
-Til at begynde med bør du få en oversigt over de apps, der er godkendt til brug på tværs af brødet i organisationen. Du kan bruge værktøjer som f.eks Microsoft 365 Apps Administration til at hjælpe dig med lagersoftwareprogrammer. Læs: [Oversigt over lageret Microsoft 365 Apps Administration](/deployoffice/admincenter/inventory).
+Det er afgørende for en vellykket installation af ASR-regler, at du har en fuld forståelse af de programmer og processer pr. afdeling, der bruges på tværs af organisationen. Derudover er det vigtigt, at du forstår, hvordan disse apps bruges i de forskellige forretningsenheder i din organisation.
+Til at starte med skal du få en oversigt over de apps, der er godkendt til brug på tværs af hele organisationen. Du kan bruge værktøjer som f.eks. Microsoft 365 Apps Administration til at hjælpe dig med at udarbejde softwareprogrammer. Se: [Oversigt over lagerbeholdning i Microsoft 365 Apps Administration](/deployoffice/admincenter/inventory).
 
-## <a name="define-reporting-and-response-team-roles-and-responsibilities"></a>Definer rapporterings- og svarteamroller og -ansvarsområder
+## <a name="define-reporting-and-response-team-roles-and-responsibilities"></a>Definer rollerne og ansvarsområderne for rapporterings- og svarteamet
 
-Det er tydeligt, at roller og ansvarsområder for personer, der er ansvarlige for overvågning og kommunikation af ASR-reglers status og aktivitet, er en vigtig aktivitet i asr-vedligeholdelse. Det er derfor vigtigt at fastlægge:
+En klar formuleret rolle og ansvar for de personer, der er ansvarlige for overvågning og kommunikation af ASR-reglers status og aktivitet, er en central aktivitet i asr-vedligeholdelsen. Det er derfor vigtigt at fastslå:
 
 - Den person eller det team, der er ansvarlig for indsamling af rapporter
-- Hvordan og med hvem rapporter deles
+- Sådan og med hvem rapporter deles
 - Hvordan eskalering håndteres for nyligt identificerede trusler eller uønskede blokeringer forårsaget af ASR-regler
 
 Typiske roller og ansvarsområder omfatter:
 
-- It-administratorer: Implementer ASR-regler, administrer udeladelse. Arbejd med forskellige forretningsenheder på apps og processer. Samler og deler rapporter til interessenter
-- Csoc-analytiker (Certified Security Operations Center): Ansvarlig for at investere højprioritetsbaserede, blokerede processer for at afgøre, om truslerne er gyldige eller ej
-- Chief Information Security Officer (CISO): Ansvarlig for organisationens overordnede sikkerhed og tilstand
+- It-administratorer: Implementer ASR-regler, administrer undtagelser. Arbejd med forskellige forretningsenheder i apps og processer. Samle og dele rapporter med interessenter
+- Csoc-analytiker (Certified Security Operations Center): Ansvarlig for at investere i blokerede processer med høj prioritet for at fastslå, om truslen er gyldig eller ej
+- CISO (Chief Information Security Officer): Ansvarlig for organisationens overordnede sikkerhedsholdning og sundhed
 
-## <a name="ring-deployment"></a>Ringinstallation
+## <a name="ring-deployment"></a>Ring udrulning
 
-Til store virksomheder anbefaler Microsoft at udrulle ASR-regler i "ringe". Ringe er grupper af enheder, der visuelt er repræsenteret som koncentriske cirkler, der udad som ikke-overlappende træringe. Når den inderste ring er installeret, kan du skifte den næste ring til testfasen. Grundig vurdering af dine forretningsenheder, ASR-regler for vindere, apps og processer er afgørende for at definere dine ringe.
-I de fleste tilfælde vil din organisation have designede installationsringe til faseopderede implementeringer af Windows opdateringer. Du kan bruge dit eksisterende ringdesign til at implementere ASR-regler.
-Se: [Oprette en udrulningsplan for Windows](/windows/deployment/update/create-deployment-plan)
+For store virksomheder anbefaler Microsoft at implementere ASR-regler i "ringe". Ringe er grupper af enheder, der visuelt repræsenteres som koncentriske cirkler, der udstråler udad som ikke-overlappende træringe. Når den inderste ring er udrullet, kan du overføre den næste ring til testfasen. En grundig vurdering af dine forretningsenheder, mestre, apps og processer i ASR-regler er altafgørende for at definere dine ringe.
+I de fleste tilfælde har din organisation designet udrulningsringe til faseinddelte udrulninger af Windows opdateringer. Du kan bruge dit eksisterende ringdesign til at implementere ASR-regler.
+Se: [Opret en udrulningsplan for Windows](/windows/deployment/update/create-deployment-plan)
 
-## <a name="additional-topics-in-this-deployment-collection"></a>Flere emner i denne installationssamling
+## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Forudsætninger for implementering af ASR-regler](attack-surface-reduction-rules-deployment.md)
+[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
 
-[Trin 2: Test ASR-regler](attack-surface-reduction-rules-deployment-test.md)
+[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
 
-[Trin 3: Implementer ASR-regler](attack-surface-reduction-rules-deployment-implement.md)
+[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
 
-[Trin 4: At drifte ASR-regler](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+
+[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)

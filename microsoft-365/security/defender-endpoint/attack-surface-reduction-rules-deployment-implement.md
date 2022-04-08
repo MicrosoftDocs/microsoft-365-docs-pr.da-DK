@@ -1,5 +1,5 @@
 ---
-title: Implementer installation af ASR-regler (Attack Surface Reduction)
+title: Aktivér ASR-regler (Attack Surface Reduction)
 description: Indeholder en vejledning i, hvordan du implementerer udrulningen af regler for reduktion af angrebsoverfladen.
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -20,14 +20,14 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 675d881c3737b67cfdc0207be85285f71455d65c
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 19e654c979428e25d1365cbab5b6f75b39adbdb3
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666960"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705510"
 ---
-# <a name="step-3-implement-asr-rules"></a>Trin 3: Implementer ASR-regler
+# <a name="enable-attack-surface-reduction-asr-rules"></a>Aktivér ASR-regler (Attack Surface Reduction)
 
 Implementering af ASR-regler (Attack Surface Reduction) flytter den første testring til en aktiveret, funktionel tilstand.
 
@@ -131,10 +131,12 @@ Du kan tilpasse meddelelsen, når en regel udløses, og blokerer en app eller fi
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Forudsætninger for udrulning af ASR-regler](attack-surface-reduction-rules-deployment.md)
+[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
 
-[Trin 1: Planlæg udrulning af ASR-regler](attack-surface-reduction-rules-deployment-plan.md)
+[Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md)
 
-[Trin 2: Test ASR-regler](attack-surface-reduction-rules-deployment-test.md)
+[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
 
-[Trin 4: Operationaliser ASR-regler](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+
+[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)

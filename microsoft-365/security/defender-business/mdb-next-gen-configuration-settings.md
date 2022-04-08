@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: a5ffc97c6b2cfd1016da1f218ab2a16c153a5528
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a39a0a55592ba8f76403f9e8d9aaf7416cb35228
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666278"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714235"
 ---
 # <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business"></a>Om næste generations konfigurationsindstillinger i Microsoft Defender til virksomheder
 
@@ -88,7 +88,7 @@ I følgende tabel beskrives indstillinger, der er forudkonfigureret til Defender
 | [Scan netværksfiler](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) | [AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) er som standard ikke aktiveret, og netværksfiler scannes ikke. |
 | [Scan mails](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) | [AllowEmailScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) er som standard ikke aktiveret, og mails scannes ikke. |
 | [Antal dage (0-90) til at holde malware i karantæne](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) | Indstillingen [DaysToRetainCleanedMalware](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) er som standard angivet til nul (0) dage. Artefakter, der er i karantæne, fjernes ikke automatisk.  |
-| [Indsend eksempelsamtykke](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) | [SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) er som standard et for automatisk at sende sikre eksempler. Eksempler på sikre eksempler omfatter `.bat`, `.scr`, `.dll`og `.exe` filer, der ikke indeholder personidentificerbare oplysninger. Hvis en fil indeholder pii, modtager brugeren en anmodning om, at eksempelafsendelsen kan fortsætte.<br/><br/>[Få mere at vide om cloudbeskyttelse og indsendelse af eksempler](../defender-endpoint/cloud-protection-microsoft-antivirus-sample-submission.md) |
+| [Indsend eksempelsamtykke](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) | [SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) er som standard angivet til automatisk at sende sikre eksempler. Eksempler på sikre eksempler omfatter `.bat`, `.scr`, `.dll`og `.exe` filer, der ikke indeholder personidentificerbare oplysninger. Hvis en fil indeholder pii, modtager brugeren en anmodning om, at eksempelafsendelsen kan fortsætte.<br/><br/>[Få mere at vide om cloudbeskyttelse og indsendelse af eksempler](../defender-endpoint/cloud-protection-microsoft-antivirus-sample-submission.md) |
 | [Scan flytbare drev](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) | [AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) er som standard konfigureret til at scanne flytbare drev, f.eks. USB-tommelfingerdrev på enheder.<br/><br/>[Få mere at vide om politikindstillinger for antimalware](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#list-of-antimalware-policy-settings)   |
 | [Kør daglig hurtigsøgningstid](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) | [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) er som standard angivet til 02:00.<br/><br/>[Få mere at vide om scanningsindstillinger](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).   |
 | [Søg efter signaturopdateringer, før du kører scanningen](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan) | [CheckForSignaturesBeforeRunningScan](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan) er som standard konfigureret til at søge efter sikkerhedsintelligensopdateringer, før der køres antivirus-/antimalwarescanninger.<br/><br/>[Få mere at vide om scanningsindstillinger](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings) og [sikkerhedsintelligensopdateringer](../defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus.md#security-intelligence-updates).   |

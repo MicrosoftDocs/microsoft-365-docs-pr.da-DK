@@ -8,25 +8,28 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 271f43e4-b8f7-4d63-8059-b5747679bb7e
-description: Angiv buffertid før eller efter en aftale i Microsoft Bookings for at tillade tid til oprydning eller nulstilling af udstyr.
-ms.openlocfilehash: a33159b0b5f168bbb61c88bc9b4181e05c8abbb1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Angiv buffertid før eller efter en aftale i Microsoft Bookings for at give tid til oprydning eller nulstilling af udstyr.
+ms.openlocfilehash: 28d4c7feb76770cb40f5a780c2d406dc3bfeef8d
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590634"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714697"
 ---
 # <a name="set-buffer-time-in-microsoft-bookings"></a>Angiv buffertid i Microsoft Bookings
 
-Nogle af dine aftaler kan kræve tid før eller efter, at du mødes med din kunde for at konfigurere, rydde op eller nulstille dit lokale og udstyr. Eller hvis du er på farten mellem kundeaftaler, skal du muligvis bruge tid til at sikre, at du og dit team kan rejse mellem aftaler uden at vente med kunden.
+> [!NOTE]
+> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
-Du kan angive buffertid, før aftaler starter, når dine aftaler er slut, eller begge dele for at give medarbejderne den ekstra tid, de skal bruge til at forberede sig på den næste aftale.
+Nogle af dine aftaler kan kræve tid før eller efter, at du mødes med kunden for at konfigurere, rydde op eller nulstille dit værelse og udstyr. Eller hvis du er på vej mellem kundeaftaler, skal du muligvis bruge tid til at sikre, at du og dit team kan rejse mellem aftaler uden at få kunden til at vente.
 
-## <a name="set-buffer-time-defaults"></a>Angive standardindstillinger for buffertid
+Du kan angive buffertid, før aftaler starter, efter aftaler er afsluttet, eller begge dele for at give medarbejderne den ekstra tid, de skal bruge for at forberede sig på deres næste aftale.
 
-Standardindstillingerne for buffertid er angivet på **siden Tjenesteoplysninger** i Bookings. Som alle tjenestestandardindstillinger på denne side kan disse standarder redigeres af dig, så en bestemt booking kan opfylde specifikke kundebehov.
+## <a name="set-buffer-time-defaults"></a>Angiv standarder for buffertid
 
-Indstillingen for buffertid kan findes lige under **vælgerne for Standardvarighed** på siden **Oplysninger om** tjeneste. Før den kan indstilles for en given tjeneste, skal du aktivere indstillingen for buffertid ved at vælge til/fra-knappen for buffertid. Dette medfører,  at rullelisten Før og Efter vises, som bruges til at vælge den standardtid, der skal ventes før og efter hver booking, som vist her:
+Buffertidsstandarden angives på siden **Tjenesteoplysninger** i Bookings. Som alle tjenestestandarder, der er angivet på denne side, kan disse standarder redigeres af dig for en bestemt booking, der opfylder specifikke kundebehov.
+
+Du kan finde buffertidsindstillingen på siden **Tjenesteoplysninger** . Før den kan angives for en given tjeneste, skal du aktivere buffertidsindstillingen ved at vælge buffertidsindstillingen. Dette medfører, at rullemenuerne **Før** og **Efter** vises, som bruges til at vælge den standardmængde af tid, der skal bevares før og efter hver booking, som vist her:
 
    ![Billede af Bookings med buffertid aktiveret.](../media/bookings-buffertime.png)
 
@@ -39,8 +42,8 @@ Note that the event itself (on the left in the image below) shows lighter shadin
    ![Image of Bookings appointment call-out with buffer time showing.](../media/bookings-buffertime-callout.png)
 -->
 
-## <a name="buffer-time-and-availability"></a>Buffertid og tilgængelighed
+## <a name="buffer-time-and-availability"></a>Buffertid og -tilgængelighed
 
-Dine kunder kan ikke se og kan ikke ændre de buffertider, du angiver. Men da buffertid bruges til at beregne den samlede tjenestevarighed, vil kunder se dig og dine relevante medarbejdere som reserveret på både buffer- og almindelige aftaletider. Kunder kan også kun se tilgængeligheden for dig og dine medarbejdere, hvis der er tilstrækkelig tid til både aftalen og dens buffertid.
+Dine kunder kan ikke se og kan ikke ændre de buffertider, du har angivet. Men da buffertiden bruges til at beregne den samlede servicevarighed, ser kunderne dig og dine relevante medarbejdere som booket under både buffer- og almindelige aftaletider. Kunderne kan også kun se tilgængeligheden for dig og dine medarbejdere, hvis der er tid nok til både aftalen og dens buffertid.
 
-Som et eksempel kræver en en-timers aftale med en 15-minutters buffertid før aftalen en tilgængelig tidsblok på mindst 1 time og 15 minutter. En aftale for denne tjeneste udfylder derfor en 75-minutters periode i din kalender og skal bruge 75 minutters tilgængelighed for at reservere uden konflikt.
+En aftale på én time med buffertid på 15 minutter før aftalen kræver f.eks. en tilgængelig tidsblok på mindst 1 time og 15 minutter. En aftale for denne service vil derfor fylde 75 minutters tid i kalenderen og skal bruge 75 minutters tilgængelighed for at booke uden konflikt.

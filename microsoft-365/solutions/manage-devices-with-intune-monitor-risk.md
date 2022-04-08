@@ -20,38 +20,32 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: e64006873c3419b9c6d93d3b367a5753f5478738
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: b8f15212916566e169efa63556b897600f7092a3
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651405"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705231"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>Trin 6. Overvåg enhedens risiko og overholdelse af regler og standarder i forhold til sikkerhedsbaseline
 
 Når din organisation har udrullet Microsoft Defender for Endpoint, kan du få større indsigt i og beskyttelse af dine enheder ved at integrere Microsoft Intune med Defender for Endpoint. For mobilenheder omfatter dette muligheden for at overvåge enhedsrisikoen som en betingelse for adgang. For Windows enheder kan du overvåge disse enheders overholdelse af grundlæggende sikkerhedsgrundlinjer. 
 
-Bemærk! Udrulning af Microsoft Defender for Endpoint omfatter onboardingslutpunkter. Du kan få flere oplysninger om onboarding af enheder til Microsoft 365 funktioner under [Tilmelding af enheder i forhold til onboarding af enheder](manage-devices-with-intune-overview.md#enrolling-devices-vs-onboarding-devices).  
+Udrulning af Microsoft Defender for Endpoint omfatter onboarding af slutpunkter. Hvis du har brugt Intune til at onboarde slutpunkter (anbefales), har du allerede oprettet forbindelse Microsoft Intune til Defender for Endpoint. Hvis du har brugt en anden metode til at onboarde slutpunkter til Defender for Endpoint, skal du se [Konfigurer Microsoft Defender for Endpoint i Intune](/mem/intune/protect/advanced-threat-protection-configure) for at sikre, at du har konfigureret service til tjeneste-forbindelsen mellem Intune og Microsoft Defender for Endpoint. 
+
 
 ![Illustration af integration af Defender for Endpoint og Microsoft Intune](../media/devices/devices-defender-for-endpoint-steps.png#lightbox)
 
 I denne illustration:
 - Microsoft Defender for Endpoint øger i høj grad den sofistikerede trusselsbeskyttelse for enheder. 
 - Selvom Microsoft Intune giver dig mulighed for at angive politikker for appbeskyttelse og administrere enheder (herunder konfigurationsændringer), overvåger Defender for Endpoint løbende dine enheder for trusler og kan udføre automatiserede handlinger for at afhjælpe angreb. 
-- Du kan bruge Intune til at føje enheder til Defender for Endpoint. Når du gør det, aktiverer du også disse enheder til at arbejde med Microsoft 365 funktionalitet til overholdelse af angivne standarder, herunder forebyggelse af datatab for slutpunkter (DLP).
+- Du kan oprette forbindelse Microsoft Intune til Defender for Endpoint for at overvåge enhedens risiko og overholdelse af sikkerhedsgrundlinjer.
 
 Denne artikel indeholder følgende trin:
-- Forbind Microsoft Intune til Defender for Endpoint
 - Overvåg enhedsrisiko
 - Overvåg overholdelse af sikkerhedsgrundlinjer
 
 Hvis Defender for Endpoint ikke allerede er konfigureret, kan du samarbejde med administratoren af trusselsbeskyttelse om at [konfigurere evaluerings- og pilotmiljøet](../security/defender/eval-defender-endpoint-overview.md). Du kan samarbejde med pilotgruppen om at afprøve funktionerne i denne artikel.
-
-## <a name="connect-microsoft-intune-to-defender-for-endpoint"></a>Forbind Microsoft Intune til Defender for Endpoint
-
-Det er nemt at konfigurere integration af Microsoft Intune med Defender for Endpoint. Brug denne artikel: [Konfigurer Microsoft Defender for Endpoint i Intune](/mem/intune/protect/advanced-threat-protection-configure). 
-
-![Forbind Intune til Microsoft Defender for Endpoint](../media/devices/connect-intune-to-microsoft-defender.png#lightbox)
 
 ## <a name="monitor-device-risk-as-a-condition-for-access"></a>Overvåg enhedsrisiko som en betingelse for adgang
 
@@ -84,7 +78,7 @@ Hvis du vil installere grundlæggende sikkerhedsindstillinger og overvåge overh
 |2     |  Installer Windows indstillinger for grundlæggende sikkerhedsindstillinger for Intune. Du har muligvis allerede gennemført dette, hvis du har fulgt vejledningen i [trin 5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md).        |
 |3    |  Installer defender for Endpoint baseline settings for Intune. Se [Administrer profiler for grundlæggende sikkerhedsgrundlinjer i Microsoft Intune](/mem/intune/protect/security-baselines-configure) for at oprette profilen og vælge den oprindelige version.<br><br>Du kan også følge vejledningen her: [Gennemse, og tildel Microsoft Defender for Endpoint grundlæggende sikkerhedsplan](../security/defender-endpoint/configure-machines-security-baseline.md#review-and-assign-the-microsoft-defender-for-endpoint-security-baseline).     |
 |4     | I Defender for Endpoint skal du gennemse [kortet Security baseline i administration af enhedskonfiguration](../security/defender-endpoint/configure-machines.md).          |
-| | |
+
 
 ## <a name="next-steps"></a>Næste trin
 Gå til [trin 7. Implementer DLP med funktioner til beskyttelse af oplysninger på slutpunkter](manage-devices-with-intune-dlp-mip.md).

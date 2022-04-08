@@ -1,5 +1,5 @@
 ---
-title: Forudsætninger for udrulning af ASR-regler
+title: Oversigt over installation af asr-regler (Attack surface reduction)
 description: Indeholder en oversigt over og en forudsætning for udrulning af ASR-regler (Attack Surface Reduction).
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -20,16 +20,14 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 0180bfcef9d478dcf8e334a180ea3df993585e00
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 8743d13939e73e25cefd08724d9a2f8d5a7fa410
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666410"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705532"
 ---
-# <a name="asr-rules-deployment-prerequisites"></a>Forudsætninger for udrulning af ASR-regler
-
-## <a name="before-you-begin"></a>Før du begynder
+# <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Oversigt over installation af asr-regler (Attack surface reduction)
 
 Angrebsoverflader er alle de steder, hvor din organisation er sårbar over for cybertrusler og angreb. Din organisations angrebsoverflader omfatter alle de steder, hvor en hacker kan kompromittere organisationens enheder eller netværk. Reduktion af angrebsoverfladen betyder beskyttelse af organisationens enheder og netværk, hvilket efterlader hackere med færre måder at angribe på. Det kan hjælpe at konfigurere ASR-regler (Attack Surface Reduction) – en af de mange sikkerhedsfunktioner, der findes i Microsoft Defender for Endpoint.
 
@@ -40,6 +38,8 @@ ASR-regler er målrettet bestemte softwarefunktioner, f.eks.:
 - Funktionsmåder, som apps normalt ikke optræder under normalt dag-til-dag-arbejde
 
 Ved at reducere de forskellige angrebsoverflader kan du hjælpe med at forhindre angreb i at ske i første omgang.
+
+## <a name="before-you-begin"></a>Før du begynder
 
 Under den indledende forberedelse er det vigtigt, at du forstår funktionerne i de systemer, du skal indføre. Hvis du forstår funktionerne, kan det hjælpe dig med at finde ud af, hvilke ASR-regler der er vigtigst for at beskytte din organisation. Derudover er der flere forudsætninger, som du skal være opmærksom på som forberedelse til din ASR-udrulning.
 
@@ -129,13 +129,13 @@ Som med enhver ny implementering i stor skala, der potentielt kan påvirke din l
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Fase 1: Plan](attack-surface-reduction-rules-deployment-plan.md)
+[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
 
-[Fase 2: Test](attack-surface-reduction-rules-deployment-test.md)
+[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
 
-[Fase 3: Implementer](attack-surface-reduction-rules-deployment-implement.md)
+[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Fase 4: Operationaliser](attack-surface-reduction-rules-deployment-operationalize.md)
+[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
 
 ## <a name="reference"></a>Reference
 
@@ -155,7 +155,7 @@ Som med enhver ny implementering i stor skala, der potentielt kan påvirke din l
 
 [Brug regler for reduktion af angrebsoverfladen for at forhindre malware-infektion](attack-surface-reduction.md)
 
-[Aktivér regler for reduktion af angrebsoverflade](enable-attack-surface-reduction.md)
+[Aktivér regler for reduktion af angrebsoverflade – alternative konfigurationer](enable-attack-surface-reduction.md)
 
 [Reference til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)
 

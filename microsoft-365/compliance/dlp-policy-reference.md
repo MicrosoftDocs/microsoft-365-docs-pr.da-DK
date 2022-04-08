@@ -17,127 +17,127 @@ ms.collection:
 - M365-security-compliance
 - SPO_Content
 recommendations: false
-description: Komponent- og konfigurationsreference for DLP-politik
+description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: d94277ac4ee3bd78feecf660e03d60a5720d1b43
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: d6bc24f313d1998979a460bcd41e87ccbe8abc5c
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63606692"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64704917"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
-Politikker for forebyggelse af datatab (DLP) har mange komponenter, der skal konfigureres. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret oversigt over en DLP-politik.
+Politikker til forebyggelse af datatab (DLP) har mange komponenter, der skal konfigureres. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
 
 ## <a name="policy-templates"></a>Politikskabeloner 
 
-DLP-politikskabeloner er sorteret på forhånd i fire kategorier:
+DLP-politikskabeloner er forudsorteret i fire kategorier:
 
-- Dem, der kan registrere og beskytte typer **af finansielle** oplysninger.
-- Dem, der kan registrere og beskytte typer **af medicinske og sundhedsoplysninger** .
-- Dem, der kan registrere og beskytte **typer af personlige** oplysninger.
-- En **brugerdefineret** skabelon, du kan bruge til at opbygge din egen politik, hvis en af de andre ikke opfylder behovene i din organisation.
+- Dem, der kan registrere og beskytte typer af **finansielle** oplysninger.
+- Dem, der kan opdage og beskytte typer af **medicinsk og sundhedsoplysninger** .
+- Dem, der kan registrere og beskytte typer af **oplysninger om beskyttelse af personlige oplysninger** .
+- En **brugerdefineret** skabelon, som du kan bruge til at oprette din egen politik, hvis en af de andre ikke opfylder dine organisations behov.
 
-Denne tabel viser alle politikskabeloner og de følsomme oplysningstyper (SIT), som de dækker. 
+I denne tabel vises alle politikskabeloner og de følsomme informationstyper (SIT), som de dækker. 
 
 opdateret: 23-06-2021
 
-|Kategori| Skabelon | SIT |
+|Kategori| Skabelon | SIDDE |
 |---------|---------|---------|
-|Finansiel| Finansielle data fra Australien| - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Australiens momsfilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens bankkontonummer](sensitive-information-type-entity-definitions.md#australia-bank-account-number) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
-|Finansiel| Finansielle data for Canada |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number)|
-|Finansiel| Finansielle data for Frankrig |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
-|Finansiel| Finansielle data fra Tyskland |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
-|Finansiel| Israels finansielle data |- [Israels bankkontonummer](sensitive-information-type-entity-definitions.md#israel-bank-account-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
-|Finansiel| Finansielle data for Japan |- [Japans bankkontonummer](sensitive-information-type-entity-definitions.md#japan-bank-account-number) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
-|Finansiel| FUNKTIONER DatasikkerhedsstandardEN FOR 2010 (FUNKTIONER DSS)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
-|Finansiel| Anti cyberkriminsk lov i Saudi-Arabien|- [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Nummer på international bankkonto (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban) |
-|Finansiel| Finansielle data for Saudi-Arabien |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Nummer på international bankkonto (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban)|
-|Finansiel| Finansielle data i Storbritannien|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
-|Finansiel| Amerikanske finansielle data|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA-registreringsnummer](sensitive-information-type-entity-definitions.md#aba-routing-number)|
-|Finansiel| Amerikanske nationale forbrugerregler (Federal Trade Commission, FTC)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA-registreringsnummer](sensitive-information-type-entity-definitions.md#aba-routing-number)|
-|Finansiel| AMERIKANSK Gramm-Leach-Bliley Act (GLBA) Enhanced|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> -[USA kørekortnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Finansiel| USA Gramm-Leach-Bliley Act (GLBA)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Medicin og sundhed| Australia Health Records Act (HRIP Act) Enhanced |- [Australiens momsfilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens medicinske kontonummer](sensitive-information-type-entity-definitions.md#australia-medical-account-number) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Fysiske adresser i Australien](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
-|Medicin og sundhed| Australia Health Records Act (HRIP Act)|- [Australiens momsfilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens medicinske kontonummer](sensitive-information-type-entity-definitions.md#australia-medical-account-number)|
-|Medicin og sundhed| Canada Health Information Act (PLATFORM) |- [Canada pasnummer](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Medicin og sundhed| Canada Personal Health Information Act (PHIA) Manitoba|- [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Medicin og sundhed| Canada Personal Health Act (PHIPA) Ontario |- [Canada pasnummer](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Medicin og sundhed| Storbritannien Adgang til Medical Reports Act|- [Storbritannien Nationalt sundhedstjenestenummer](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [Storbritannien Nationalt forsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino)|
-|Medicin og sundhed| USA Health Insurance Act (HIPAA) Enhanced|</br> - [International klassificering af klassifikationer (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [International klassificering af klassifikationer (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Medicin og sundhed| USA Health Insurance Act (HIPAA)| - [International klassificering af klassifikationer (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [International klassificering af klassifikationer (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm)|
-|Beskyttelse af personlige oplysninger| Australia Privacy Act Enhanced|- [Australiens kørekortnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Australiens pasnummer](sensitive-information-type-entity-definitions.md#australia-passport-number) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Fysiske adresser i Australien](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
-|Beskyttelse af personlige oplysninger| Australia Privacy Act|- [Australiens kørekortnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Australiens pasnummer](sensitive-information-type-entity-definitions.md#australia-passport-number)|
-|Beskyttelse af personlige oplysninger| Data om personlige oplysninger (PII) i Australien|- [Australiens momsfilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens kørekortnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number)|
-|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger (PII) i Canada|- [Canada-kørekortnummer](sensitive-information-type-entity-definitions.md#canada-drivers-license-number)</br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Canada pasnummer](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Beskyttelse af personlige oplysninger| Canada Personal Information Protection Act (PIPA)|- [Canada pasnummer](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Beskyttelse af personlige oplysninger| Canada Personal Information Protection Act (PIPEDA)|- [Canada-kørekortnummer](sensitive-information-type-entity-definitions.md#canada-drivers-license-number) </br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Canada pasnummer](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada Social Insurance Number](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Canada health service number](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canada Personal Health Identification Number](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Beskyttelse af personlige oplysninger| France Data Protection Act|- [Frankrigs nationale id-kort (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni) </br> - [Frankrigs CPR-nummer (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)|
-|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger (PII) i Frankrig|- [Frankrigs CPR-nummer (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee) </br> - [Frankrigs kørekortnummer](sensitive-information-type-entity-definitions.md#france-drivers-license-number) </br> - [Frankrigs pasnummer](sensitive-information-type-entity-definitions.md#france-passport-number) </br> - [Frankrigs nationale id-kort (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)|
-|Beskyttelse af personlige oplysninger| Generel forordning om databeskyttelse (GDPR) Enhanced|- [Fysiske adresser i Østrig](sensitive-information-type-entity-definitions.md#austria-physical-addresses) </br> - [Fysiske adresser i Belgien](sensitive-information-type-entity-definitions.md#belgium-physical-addresses)</br> - [Fysiske adresser i Bulgarien](sensitive-information-type-entity-definitions.md#bulgaria-physical-addresses)</br> - [Fysiske adresser i Kroatien](sensitive-information-type-entity-definitions.md#croatia-physical-addresses)</br> - [Fysiske adresser i Cypern](sensitive-information-type-entity-definitions.md#cyprus-physical-addresses)</br> - [Fysiske adresser for Tjekkiet](sensitive-information-type-entity-definitions.md#czech-republic-physical-addresses)</br> - [Fysiske adresser for Danmark](sensitive-information-type-entity-definitions.md#denmark-physical-addresses)</br> - [Fysiske adresser i Estland](sensitive-information-type-entity-definitions.md#estonia-physical-addresses)</br> - [Finlands fysiske adresser](sensitive-information-type-entity-definitions.md#finland-physical-addresses)</br> - [Fysiske adresser i Frankrig](sensitive-information-type-entity-definitions.md#france-physical-addresses)</br> - [Fysiske adresser i Tyskland](sensitive-information-type-entity-definitions.md#germany-physical-addresses)</br> - [Fysiske adresser i Grækenland](sensitive-information-type-entity-definitions.md#greece-physical-addresses)</br> - [Fysiske adresser i Ungarn](sensitive-information-type-entity-definitions.md#hungary-physical-addresses)</br> - [Fysiske adresser i Irland](sensitive-information-type-entity-definitions.md#ireland-physical-addresses)</br> - [Fysiske adresser i Italien](sensitive-information-type-entity-definitions.md#italy-physical-addresses)</br> - [Fysiske adresser i Letland](sensitive-information-type-entity-definitions.md#latvia-physical-addresses)</br> - [Fysiske adresser i Litauen](sensitive-information-type-entity-definitions.md#lithuania-physical-addresses)</br> - [Fysiske adresser i Luxembourg](sensitive-information-type-entity-definitions.md#luxemburg-physical-addresses)</br> - [Fysiske adresser i Malta](sensitive-information-type-entity-definitions.md#malta-physical-addresses)</br> - [Nederlandske fysiske adresser](sensitive-information-type-entity-definitions.md#netherlands-physical-addresses)</br> - [Polens fysiske adresser](sensitive-information-type-entity-definitions.md#poland-physical-addresses)</br> - [Fysiske portugisiske adresser](sensitive-information-type-entity-definitions.md#portugal-physical-addresses)</br> - [Fysiske adresser i Rumænien](sensitive-information-type-entity-definitions.md#romania-physical-addresses)</br> - [Fysiske adresser i Slovakiet](sensitive-information-type-entity-definitions.md#slovakia-physical-addresses)</br> - [Fysiske adresser i Slovenien](sensitive-information-type-entity-definitions.md#slovenia-physical-addresses)</br> - [Fysiske adresser i Spanien](sensitive-information-type-entity-definitions.md#spain-physical-addresses)</br> - [Fysiske adresser i Sverige](sensitive-information-type-entity-definitions.md#sweden-physical-addresses)</br> - [Østrigs CPR-nummer](sensitive-information-type-entity-definitions.md#austria-social-security-number)</br> - [France Social Security Number (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)</br> - [Grækenlands CPR-nummer (AMKA)](sensitive-information-type-entity-definitions.md#greece-social-security-number-amka)</br> - [Ungarsk CPR-nummer (DEN UNGARSKE CPR-NUMMER)](sensitive-information-type-entity-definitions.md#hungary-social-security-number-taj)</br> - [CPR-nummer (Spain Social Security Number)](sensitive-information-type-entity-definitions.md#spain-social-security-number-ssn)</br> - [Østrigs identitetskort](sensitive-information-type-entity-definitions.md#austria-identity-card)</br> - [Cypernsidentitetskort](sensitive-information-type-entity-definitions.md#cyprus-identity-card)</br> - [Tysklands identitetskortnummer](sensitive-information-type-entity-definitions.md#germany-identity-card-number)</br> - [Maltas identitetskortnummer](sensitive-information-type-entity-definitions.md#malta-identity-card-number)</br> - [France National ID Card (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)</br> - [Grækenlands nationale id-kort](sensitive-information-type-entity-definitions.md#greece-national-id-card)</br> - [Finlands nationale id](sensitive-information-type-entity-definitions.md#finland-national-id)</br> - [Polens nationale id (PESEL)](sensitive-information-type-entity-definitions.md#poland-national-id-pesel)</br> - [Sveriges nationale id](sensitive-information-type-entity-definitions.md#sweden-national-id)</br> - [OIB-nummer (Croatia Personal Identification)](sensitive-information-type-entity-definitions.md#croatia-personal-identification-oib-number)</br> - [Tjekkisk personligt identitetsnummer](sensitive-information-type-entity-definitions.md#czech-personal-identity-number)</br> - [Danmark Personligt identifikationsnummer](sensitive-information-type-entity-definitions.md#denmark-personal-identification-number)</br> - [Estlands personlige identifikationskode](sensitive-information-type-entity-definitions.md#estonia-personal-identification-code)</br> - [Ungarns personlige identifikationsnummer](sensitive-information-type-entity-definitions.md#hungary-personal-identification-number)</br> - [Luxemburgs nationale identifikationsnummer (fysiske personer)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-natural-persons)</br> - [Luxemburgs nationale identifikationsnummer (ikke-naturlige personer)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-non-natural-persons)</br> - [Italiens regnskabskode](sensitive-information-type-entity-definitions.md#italy-fiscal-code)</br> - [Letlands personlige kode](sensitive-information-type-entity-definitions.md#latvia-personal-code)</br> - [Litauens personlige kode](sensitive-information-type-entity-definitions.md#lithuania-personal-code)</br> - [Rumæniens personlige numeriske kode (CNP)](sensitive-information-type-entity-definitions.md#romania-personal-numeric-code-cnp)</br> - [Nederlandske borgeres servicenummer](sensitive-information-type-entity-definitions.md#netherlands-citizens-service-bsn-number)</br> - [Ireland Personal Public Service-nummer (PPS)](sensitive-information-type-entity-definitions.md#ireland-personal-public-service-pps-number)</br> - [Bulgariens uniformsnummer](sensitive-information-type-entity-definitions.md#bulgaria-uniform-civil-number)</br> - [Belgiens nationale nummer](sensitive-information-type-entity-definitions.md#belgium-national-number)</br> - [Spain DNI](sensitive-information-type-entity-definitions.md#spain-dni)</br> - [Sloveniens entydige masternummer for borgere](sensitive-information-type-entity-definitions.md#slovenia-unique-master-citizen-number)</br> - [Slovakiets personlige nummer](sensitive-information-type-entity-definitions.md#slovakia-personal-number)</br> - [Portugals borgeres kortnummer](sensitive-information-type-entity-definitions.md#portugal-citizen-card-number)</br> - [Maltas skatte-id](sensitive-information-type-entity-definitions.md#malta-tax-identification-number)</br> - [Skatte-id for Østrig](sensitive-information-type-entity-definitions.md#austria-tax-identification-number)</br> - [Cyperns skatte-id](sensitive-information-type-entity-definitions.md#cyprus-tax-identification-number)</br> - [France Tax Identification Number (numéro SPI.)](sensitive-information-type-entity-definitions.md#france-tax-identification-number)</br> - [Tysklands skatte-id](sensitive-information-type-entity-definitions.md#germany-tax-identification-number)</br> - [Græsk skatte-id](sensitive-information-type-entity-definitions.md#greece-tax-identification-number)</br> - [Ungarns skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#hungary-tax-identification-number)</br> - [Nederlandsk skatte-id](sensitive-information-type-entity-definitions.md#netherlands-tax-identification-number)</br> - [Polens skatte-id](sensitive-information-type-entity-definitions.md#poland-tax-identification-number)</br> - [Portugals skatte-id](sensitive-information-type-entity-definitions.md#portugal-tax-identification-number)</br> - [Sloveniens skatte-id](sensitive-information-type-entity-definitions.md#slovenia-tax-identification-number)</br> - [Spaniens skatte-id](sensitive-information-type-entity-definitions.md#spain-tax-identification-number)</br> - [Sveriges skatte-id](sensitive-information-type-entity-definitions.md#sweden-tax-identification-number)</br> - [Østrigs kørekort](sensitive-information-type-entity-definitions.md#austria-drivers-license-number)</br> - [Belgiens kørekortnummer](sensitive-information-type-entity-definitions.md#belgium-drivers-license-number)</br> - [Bulgariens kørekortnummer](sensitive-information-type-entity-definitions.md#bulgaria-drivers-license-number)</br> - [Kroatiens kørekortnummer](sensitive-information-type-entity-definitions.md#croatia-drivers-license-number)</br> - [Cyperns kørekortnummer](sensitive-information-type-entity-definitions.md#cyprus-drivers-license-number)</br> - [Tjekkisk kørekortnummer](sensitive-information-type-entity-definitions.md#czech-drivers-license-number)</br> - [Danmark Kørekortnummer](sensitive-information-type-entity-definitions.md#denmark-drivers-license-number)</br> - [Estlands kørekortnummer](sensitive-information-type-entity-definitions.md#estonia-drivers-license-number)</br> - [Finlands kørekortnummer](sensitive-information-type-entity-definitions.md#finland-drivers-license-number)</br> - [Frankrigs kørekortnummer](sensitive-information-type-entity-definitions.md#france-drivers-license-number)</br> - [Tysk kørekortnummer](sensitive-information-type-entity-definitions.md#germany-drivers-license-number)</br> - [Grækenlands kørekortnummer](sensitive-information-type-entity-definitions.md#greece-drivers-license-number)</br> - [Ungarns kørekortnummer](sensitive-information-type-entity-definitions.md#hungary-drivers-license-number)</br> - [Irlands kørekortnummer](sensitive-information-type-entity-definitions.md#ireland-drivers-license-number)</br> - [Italiens kørekortnummer](sensitive-information-type-entity-definitions.md#italy-drivers-license-number)</br> - [Letland Kørekortnummer](sensitive-information-type-entity-definitions.md#latvia-drivers-license-number)</br> - [Litauens kørekortnummer](sensitive-information-type-entity-definitions.md#lithuania-drivers-license-number)</br> - [Luxemburg kørekortnummer](sensitive-information-type-entity-definitions.md#luxemburg-drivers-license-number)</br> - [Maltas kørekortnummer](sensitive-information-type-entity-definitions.md#malta-drivers-license-number)</br> - [Nederlandsk kørekortnummer](sensitive-information-type-entity-definitions.md#netherlands-drivers-license-number)</br> - [Polens kørekortnummer](sensitive-information-type-entity-definitions.md#poland-drivers-license-number)</br> - [Portugal Kørekortnummer](sensitive-information-type-entity-definitions.md#portugal-drivers-license-number)</br> - [Rumæniens kørekortnummer](sensitive-information-type-entity-definitions.md#romania-drivers-license-number)</br> - [Slovakiets kørekortnummer](sensitive-information-type-entity-definitions.md#slovakia-drivers-license-number)</br> - [Sloveniens kørekortnummer](sensitive-information-type-entity-definitions.md#slovenia-drivers-license-number)</br> - [Spanien-kørekortnummer](sensitive-information-type-entity-definitions.md#spain-drivers-license-number)</br> - [Sveriges kørekortnummer](sensitive-information-type-entity-definitions.md#sweden-drivers-license-number)</br> - [Østrigs pasnummer](sensitive-information-type-entity-definitions.md#austria-passport-number)</br> - [Belgiens pasnummer](sensitive-information-type-entity-definitions.md#belgium-passport-number)</br> - [Bulgariens pasnummer](sensitive-information-type-entity-definitions.md#bulgaria-passport-number)</br> - [Kroatiens pasnummer](sensitive-information-type-entity-definitions.md#croatia-passport-number)</br> - [Cyperns pasnummer](sensitive-information-type-entity-definitions.md#cyprus-passport-number)</br> - [Tjekkisk pasnummer](sensitive-information-type-entity-definitions.md#czech-passport-number)</br> - [Danmark pasnummer](sensitive-information-type-entity-definitions.md#denmark-passport-number)</br> - [Estlands pasnummer](sensitive-information-type-entity-definitions.md#estonia-passport-number)</br> - [Finland-pasnummer](sensitive-information-type-entity-definitions.md#finland-passport-number)</br> - [Frankrigs pasnummer](sensitive-information-type-entity-definitions.md#france-passport-number)</br> - [Tysk pasnummer](sensitive-information-type-entity-definitions.md#germany-passport-number)</br> - [Grækenlands pasnummer](sensitive-information-type-entity-definitions.md#greece-passport-number)</br> - [Ungarns pasnummer](sensitive-information-type-entity-definitions.md#hungary-passport-number)</br> - [Irlands pasnummer](sensitive-information-type-entity-definitions.md#ireland-passport-number)</br> - [Italiens pasnummer](sensitive-information-type-entity-definitions.md#italy-passport-number)</br> - [Letlands pasnummer](sensitive-information-type-entity-definitions.md#latvia-passport-number)</br> - [Litauens pasnummer](sensitive-information-type-entity-definitions.md#lithuania-passport-number)</br> - [Luxemburg pasnummer](sensitive-information-type-entity-definitions.md#luxemburg-passport-number)</br> - [Maltas pasnummer](sensitive-information-type-entity-definitions.md#malta-passport-number)</br> - [Nederlandsk pasnummer](sensitive-information-type-entity-definitions.md#netherlands-passport-number)</br> - [Polens pas](sensitive-information-type-entity-definitions.md#poland-passport-number)</br> - [Portugal-pasnummer](sensitive-information-type-entity-definitions.md#portugal-passport-number)</br> - [Rumæniens pasnummer](sensitive-information-type-entity-definitions.md#romania-passport-number)</br> - [Slovakiets pasnummer](sensitive-information-type-entity-definitions.md#slovakia-passport-number)</br> - [Sloveniens pasnummer](sensitive-information-type-entity-definitions.md#slovenia-passport-number)</br> - [Spaniens pasnummer](sensitive-information-type-entity-definitions.md#spain-passport-number)</br> - [Sveriges pasnummer](sensitive-information-type-entity-definitions.md#sweden-passport-number)</br> - [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)|
-|Beskyttelse af personlige oplysninger| Persondataforordningen (GDPR)|- [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [EU-kørekortnummer](sensitive-information-type-entity-definitions.md#eu-drivers-license-number) </br> - [EU-national identifikationsnummer](sensitive-information-type-entity-definitions.md#eu-national-identification-number)</br> - [EU-pasnummer](sensitive-information-type-entity-definitions.md#eu-passport-number) </br> - [EU-nummer til personnummer eller tilsvarende identifikation](sensitive-information-type-entity-definitions.md#eu-social-security-number-or-equivalent-identification)</br> - [EU-skatte-id](sensitive-information-type-entity-definitions.md#eu-tax-identification-number)|
-|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger (PII) i Tyskland|- [Tysklands kørekortnummer](sensitive-information-type-entity-definitions.md#germany-drivers-license-number) </br> - [Tysklands pasnummer](sensitive-information-type-entity-definitions.md#germany-passport-number)| 
-|Beskyttelse af personlige oplysninger| Israel personidentificerbare oplysninger (PII)-data|- [Israels nationale identifikationsnummer](sensitive-information-type-entity-definitions.md#israel-national-identification-number)| 
-|Beskyttelse af personlige oplysninger| Israels beskyttelse af personlige oplysninger|- [Israels nationale identifikationsnummer](sensitive-information-type-entity-definitions.md#israel-national-identification-number)</br> - [Israels bankkontonummer](sensitive-information-type-entity-definitions.md#israel-bank-account-number)|
-|Beskyttelse af personlige oplysninger| Data, der er forbedret af personlige oplysninger (Japan Personally Identifiable Information)|- [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)</br> - [Mit nummer i Japan – personlig](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japan pasnummer](sensitive-information-type-entity-definitions.md#japan-passport-number)</br> - [Japansk kørekortnummer](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Fysiske adresser i Japan](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
-|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger (PII)-data (Japan Personally Identifiable Information)|- [Japans registreringsnummer for iboende](sensitive-information-type-entity-definitions.md#japan-resident-registration-number) </br> - [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
-|Beskyttelse af personlige oplysninger| Forbedret beskyttelse af personlige oplysninger i Japan|- [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin) </br> - [Mit nummer i Japan – personlig](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japan pasnummer](sensitive-information-type-entity-definitions.md#japan-passport-number) </br> - [Japansk kørekortnummer](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Fysiske adresser i Japan](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
-|Beskyttelse af personlige oplysninger| Beskyttelse af personlige oplysninger i Japan|- [Japans registreringsnummer for iboende](sensitive-information-type-entity-definitions.md#japan-resident-registration-number)</br> - [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
-|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger (PII) i Saudi-Arabien|- [Saudi-Arabiens nationale id](sensitive-information-type-entity-definitions.md#saudi-arabia-national-id)|
-|Beskyttelse af personlige oplysninger| Storbritannien Lov om databeskyttelse|- [Storbritannien Nationalt forsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
-|Beskyttelse af personlige oplysninger| Storbritannien Bestemmelser om beskyttelse af personlige oplysninger og elektronisk kommunikation|- [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
-|Beskyttelse af personlige oplysninger| Storbritannien Personidentificerbare oplysninger (PII)-data|- [Storbritannien Nationalt forsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
-|Beskyttelse af personlige oplysninger| Storbritannien Praksis for brug af PIOCP (Personal Information Online Code of Practice)|- [Storbritannien Nationalt forsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [Storbritannien Nationalt sundhedstjenestenummer](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
-|Beskyttelse af personlige oplysninger| USA Act Enhanced|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Beskyttelse af personlige oplysninger| USA Den amerikanske 2016-act|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Beskyttelse af personlige oplysninger| USA Personidentificerbare oplysninger (PII)-data forbedret|- [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Beskyttelse af personlige oplysninger| USA Personidentificerbare oplysninger (PII)-data|- [USA Id-nummer for individuelle skatteydere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
-|Beskyttelse af personlige oplysninger| USA Statslige love om meddelelse om sikkerhedsbrud er blevet udvidet|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[USA kørekortnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [USA/Storbritannien pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions)|
-|Beskyttelse af personlige oplysninger| USA Statslige love om meddelelse om sikkerhedsbrud|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AMERIKANSK bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[USA kørekortnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Beskyttelse af personlige oplysninger| USA Statslige love om hemmeligholdelse af CPR-nummer|- [USA CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Finansielle| Økonomiske data i Australien| - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Australiens skattefilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens bankkontonummer](sensitive-information-type-entity-definitions.md#australia-bank-account-number) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
+|Finansielle| Finansielle data for Canada |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number)|
+|Finansielle| Frankrig Finansielle data |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-betalingskortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
+|Finansielle| Finansielle data for Tyskland |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-betalingskortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
+|Finansielle| Økonomiske data for Israel |- [Israels bankkontonummer](sensitive-information-type-entity-definitions.md#israel-bank-account-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
+|Finansielle| Økonomiske data for Japan |- [Japans bankkontonummer](sensitive-information-type-entity-definitions.md#japan-bank-account-number) </br> - [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
+|Finansielle| PCI Data Security Standard (PCI DSS)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number)|
+|Finansielle| Saudi-Arabiens lov om bekæmpelse af cyberkriminalitet|- [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Internationalt bankkontonummer (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban) |
+|Finansielle| Saudi-Arabiens finansielle data |- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Internationalt bankkontonummer (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban)|
+|Finansielle| Finansielle data for Storbritannien|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [EU-betalingskortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
+|Finansielle| Finansielle data for USA|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA-routingnummer](sensitive-information-type-entity-definitions.md#aba-routing-number)|
+|Finansielle| FTC-forbrugerregler (U.S. Federal Trade Commission)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA-routingnummer](sensitive-information-type-entity-definitions.md#aba-routing-number)|
+|Finansielle| U.S. Gramm-Leach-Bliley Act (GLBA) Enhanced|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> -[Amerikansk kørekortsnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Finansielle| U.S. Gramm-Leach-Bliley Act (GLBA)|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Medicinsk og sundhed| Australia Health Records Act (HRIP Act) Enhanced |- [Australiens skattefilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Medicinsk kontonummer i Australien](sensitive-information-type-entity-definitions.md#australia-medical-account-number) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Fysiske adresser i Australien](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
+|Medicinsk og sundhed| Australia Health Records Act (HRIP Act)|- [Australiens skattefilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Medicinsk kontonummer i Australien](sensitive-information-type-entity-definitions.md#australia-medical-account-number)|
+|Medicinsk og sundhed| Canada Health Information Act (HIA) |- [Pasnummer til Canada](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Medicinsk og sundhed| Canada Personal Health Information Act (PHIA) Manitoba|- [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Medicinsk og sundhed| Canada Personal Health Act (PHIPA) Ontario |- [Pasnummer til Canada](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Medicinsk og sundhed| STORBRITANNIEN. Lov om adgang til lægerapporter|- [Det britiske nationale sundhedstjenestenummer](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [Det britiske nationalforsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino)|
+|Medicinsk og sundhed| HIPAA (U.S. Health Insurance Act) Enhanced|</br> - [International klassificering af sygdomme (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [International klassificering af sygdomme (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Medicinsk og sundhed| HIPAA (U.S. Health Insurance Act)| - [International klassificering af sygdomme (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [International klassificering af sygdomme (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm)|
+|Beskyttelse af personlige oplysninger| Udvidet lov om beskyttelse af personlige oplysninger i Australien|- [Australiens kørekortsnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Australiens pasnummer](sensitive-information-type-entity-definitions.md#australia-passport-number) </br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Fysiske adresser i Australien](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
+|Beskyttelse af personlige oplysninger| Australiens lov om beskyttelse af personlige oplysninger|- [Australiens kørekortsnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Australiens pasnummer](sensitive-information-type-entity-definitions.md#australia-passport-number)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger i Australien|- [Australiens skattefilnummer](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Australiens kørekortsnummer](sensitive-information-type-entity-definitions.md#australia-drivers-license-number)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger om Canada|- [Canadas kørekortsnummer](sensitive-information-type-entity-definitions.md#canada-drivers-license-number)</br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Pasnummer til Canada](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Beskyttelse af personlige oplysninger| PIPA (Canada Personal Information Protection Act)|- [Pasnummer til Canada](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Beskyttelse af personlige oplysninger| Pipeda (Canada Personal Information Protection Act)|- [Canadas kørekortsnummer](sensitive-information-type-entity-definitions.md#canada-drivers-license-number) </br> - [Canadas bankkontonummer](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Pasnummer til Canada](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Canada socialforsikringsnummer](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Nummer på sundhedstjenesten i Canada](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Canadas personidentifikationsnummer](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Beskyttelse af personlige oplysninger| Den franske lov om databeskyttelse|- [Nationalt id-kort for Frankrig (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni) </br> - [Det sociale sikringsnummer i Frankrig (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger i Frankrig|- [Det sociale sikringsnummer i Frankrig (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee) </br> - [Frankrigs kørekortsnummer](sensitive-information-type-entity-definitions.md#france-drivers-license-number) </br> - [Pasnummer for Frankrig](sensitive-information-type-entity-definitions.md#france-passport-number) </br> - [Nationalt id-kort for Frankrig (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)|
+|Beskyttelse af personlige oplysninger| Generel forordning om databeskyttelse (GDPR) forbedret|- [Fysiske adresser i Østrig](sensitive-information-type-entity-definitions.md#austria-physical-addresses) </br> - [Fysiske adresser for Belgien](sensitive-information-type-entity-definitions.md#belgium-physical-addresses)</br> - [Fysiske adresser for Bulgarien](sensitive-information-type-entity-definitions.md#bulgaria-physical-addresses)</br> - [Fysiske adresser for Kroatien](sensitive-information-type-entity-definitions.md#croatia-physical-addresses)</br> - [Fysiske adresser for Cypern](sensitive-information-type-entity-definitions.md#cyprus-physical-addresses)</br> - [Fysiske adresser for Tjekkiet](sensitive-information-type-entity-definitions.md#czech-republic-physical-addresses)</br> - [Fysiske adresser i Danmark](sensitive-information-type-entity-definitions.md#denmark-physical-addresses)</br> - [Fysiske adresser i Estland](sensitive-information-type-entity-definitions.md#estonia-physical-addresses)</br> - [Fysiske adresser for Finland](sensitive-information-type-entity-definitions.md#finland-physical-addresses)</br> - [Fysiske adresser i Frankrig](sensitive-information-type-entity-definitions.md#france-physical-addresses)</br> - [Fysiske adresser i Tyskland](sensitive-information-type-entity-definitions.md#germany-physical-addresses)</br> - [Fysiske adresser for Grækenland](sensitive-information-type-entity-definitions.md#greece-physical-addresses)</br> - [Fysiske adresser til Ungarn](sensitive-information-type-entity-definitions.md#hungary-physical-addresses)</br> - [Fysiske adresser for Irland](sensitive-information-type-entity-definitions.md#ireland-physical-addresses)</br> - [Fysiske adresser for Italien](sensitive-information-type-entity-definitions.md#italy-physical-addresses)</br> - [Fysiske adresser i Letland](sensitive-information-type-entity-definitions.md#latvia-physical-addresses)</br> - [Fysiske adresser for Litauen](sensitive-information-type-entity-definitions.md#lithuania-physical-addresses)</br> - [Fysiske adresser i Luxembourg](sensitive-information-type-entity-definitions.md#luxemburg-physical-addresses)</br> - [Fysiske adresser på Malta](sensitive-information-type-entity-definitions.md#malta-physical-addresses)</br> - [Fysiske adresser i Nederlandene](sensitive-information-type-entity-definitions.md#netherlands-physical-addresses)</br> - [Fysiske adresser i Polen](sensitive-information-type-entity-definitions.md#poland-physical-addresses)</br> - [Portugisiske fysiske adresser](sensitive-information-type-entity-definitions.md#portugal-physical-addresses)</br> - [Fysiske adresser i Rumænien](sensitive-information-type-entity-definitions.md#romania-physical-addresses)</br> - [Fysiske adresser i Slovakiet](sensitive-information-type-entity-definitions.md#slovakia-physical-addresses)</br> - [Fysiske adresser i Slovenien](sensitive-information-type-entity-definitions.md#slovenia-physical-addresses)</br> - [Fysiske adresser i Spanien](sensitive-information-type-entity-definitions.md#spain-physical-addresses)</br> - [Fysiske adresser i Sverige](sensitive-information-type-entity-definitions.md#sweden-physical-addresses)</br> - [Det østrigske cpr-nummer](sensitive-information-type-entity-definitions.md#austria-social-security-number)</br> - [Det franske cpr-nummer (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)</br> - [Det græske cpr-nummer (AMKA)](sensitive-information-type-entity-definitions.md#greece-social-security-number-amka)</br> - [Ungarsk cpr-nummer (TAJ)](sensitive-information-type-entity-definitions.md#hungary-social-security-number-taj)</br> - [Spanien Cpr-nummer (SSN)](sensitive-information-type-entity-definitions.md#spain-social-security-number-ssn)</br> - [Østrigs identitetskort](sensitive-information-type-entity-definitions.md#austria-identity-card)</br> - [Cyperns identitetskort](sensitive-information-type-entity-definitions.md#cyprus-identity-card)</br> - [Tysklands identitetskortnummer](sensitive-information-type-entity-definitions.md#germany-identity-card-number)</br> - [Maltas identitetskortnummer](sensitive-information-type-entity-definitions.md#malta-identity-card-number)</br> - [Nationalt id-kort for Frankrig (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)</br> - [Nationalt id-kort for Grækenland](sensitive-information-type-entity-definitions.md#greece-national-id-card)</br> - [Finlands nationale id](sensitive-information-type-entity-definitions.md#finland-national-id)</br> - [Nationalt id for Polen (PESEL)](sensitive-information-type-entity-definitions.md#poland-national-id-pesel)</br> - [Nationalt id for Sverige](sensitive-information-type-entity-definitions.md#sweden-national-id)</br> - [Personidentifikationsnummer for Kroatien (OIB)](sensitive-information-type-entity-definitions.md#croatia-personal-identification-oib-number)</br> - [Tjekkisk personligt id-nummer](sensitive-information-type-entity-definitions.md#czech-personal-identity-number)</br> - [Danmark Personidentifikationsnummer](sensitive-information-type-entity-definitions.md#denmark-personal-identification-number)</br> - [Personidentifikationskode for Estland](sensitive-information-type-entity-definitions.md#estonia-personal-identification-code)</br> - [Ungarns personidentifikationsnummer](sensitive-information-type-entity-definitions.md#hungary-personal-identification-number)</br> - [Luxembourgs nationale identifikationsnummer (fysiske personer)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-natural-persons)</br> - [Luxembourgs nationale identifikationsnummer (ikke-fysiske personer)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-non-natural-persons)</br> - [Italiens regnskabskode](sensitive-information-type-entity-definitions.md#italy-fiscal-code)</br> - [Letlands personlige kodeks](sensitive-information-type-entity-definitions.md#latvia-personal-code)</br> - [Litauens personlige kode](sensitive-information-type-entity-definitions.md#lithuania-personal-code)</br> - [Rumæniens personlige numeriske kode (CNP)](sensitive-information-type-entity-definitions.md#romania-personal-numeric-code-cnp)</br> - [BSN-nummer (Netherlands Citizen's Service)](sensitive-information-type-entity-definitions.md#netherlands-citizens-service-bsn-number)</br> - [Irlands personlige offentlige tjeneste (PPS)-nummer](sensitive-information-type-entity-definitions.md#ireland-personal-public-service-pps-number)</br> - [Bulgariens ensartede civilnummer](sensitive-information-type-entity-definitions.md#bulgaria-uniform-civil-number)</br> - [Belgiens nationale nummer](sensitive-information-type-entity-definitions.md#belgium-national-number)</br> - [Spanien DNI](sensitive-information-type-entity-definitions.md#spain-dni)</br> - [Sloveniens entydige masterborgernummer](sensitive-information-type-entity-definitions.md#slovenia-unique-master-citizen-number)</br> - [Slovakiets personlige nummer](sensitive-information-type-entity-definitions.md#slovakia-personal-number)</br> - [Nummer på portugals borgerkort](sensitive-information-type-entity-definitions.md#portugal-citizen-card-number)</br> - [Maltas skatte-id-nummer](sensitive-information-type-entity-definitions.md#malta-tax-identification-number)</br> - [Østrigs skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#austria-tax-identification-number)</br> - [Cyperns skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#cyprus-tax-identification-number)</br> - [Frankrigs skatteidentifikationsnummer (numéro SPI.)](sensitive-information-type-entity-definitions.md#france-tax-identification-number)</br> - [Tysklands skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#germany-tax-identification-number)</br> - [Græsk skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#greece-tax-identification-number)</br> - [Ungarn Skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#hungary-tax-identification-number)</br> - [Nederlandsk skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#netherlands-tax-identification-number)</br> - [Polens skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#poland-tax-identification-number)</br> - [Portugals skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#portugal-tax-identification-number)</br> - [Sloveniens skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#slovenia-tax-identification-number)</br> - [Spaniens skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#spain-tax-identification-number)</br> - [Sveriges skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#sweden-tax-identification-number)</br> - [Østrigs kørekort](sensitive-information-type-entity-definitions.md#austria-drivers-license-number)</br> - [Belgiens kørekortsnummer](sensitive-information-type-entity-definitions.md#belgium-drivers-license-number)</br> - [Bulgariens kørekortsnummer](sensitive-information-type-entity-definitions.md#bulgaria-drivers-license-number)</br> - [Kroatiens kørekortsnummer](sensitive-information-type-entity-definitions.md#croatia-drivers-license-number)</br> - [Cyperns kørekortsnummer](sensitive-information-type-entity-definitions.md#cyprus-drivers-license-number)</br> - [Tjekkisk kørekortsnummer](sensitive-information-type-entity-definitions.md#czech-drivers-license-number)</br> - [Danmarks kørekortsnummer](sensitive-information-type-entity-definitions.md#denmark-drivers-license-number)</br> - [Estlands kørekortsnummer](sensitive-information-type-entity-definitions.md#estonia-drivers-license-number)</br> - [Finlands kørekortsnummer](sensitive-information-type-entity-definitions.md#finland-drivers-license-number)</br> - [Frankrigs kørekortsnummer](sensitive-information-type-entity-definitions.md#france-drivers-license-number)</br> - [Tysk kørekortsnummer](sensitive-information-type-entity-definitions.md#germany-drivers-license-number)</br> - [Grækenlands kørekortsnummer](sensitive-information-type-entity-definitions.md#greece-drivers-license-number)</br> - [Ungarns kørekortsnummer](sensitive-information-type-entity-definitions.md#hungary-drivers-license-number)</br> - [Irlands kørekortsnummer](sensitive-information-type-entity-definitions.md#ireland-drivers-license-number)</br> - [Italiens kørekortsnummer](sensitive-information-type-entity-definitions.md#italy-drivers-license-number)</br> - [Letlands kørekortsnummer](sensitive-information-type-entity-definitions.md#latvia-drivers-license-number)</br> - [Litauens kørekortsnummer](sensitive-information-type-entity-definitions.md#lithuania-drivers-license-number)</br> - [Luxemburg-kørekortsnummer](sensitive-information-type-entity-definitions.md#luxemburg-drivers-license-number)</br> - [Maltas kørekortsnummer](sensitive-information-type-entity-definitions.md#malta-drivers-license-number)</br> - [Nederlandsk kørekortsnummer](sensitive-information-type-entity-definitions.md#netherlands-drivers-license-number)</br> - [Polens kørekortsnummer](sensitive-information-type-entity-definitions.md#poland-drivers-license-number)</br> - [Portugals kørekortsnummer](sensitive-information-type-entity-definitions.md#portugal-drivers-license-number)</br> - [Rumæniens kørekortsnummer](sensitive-information-type-entity-definitions.md#romania-drivers-license-number)</br> - [Slovakiets kørekortsnummer](sensitive-information-type-entity-definitions.md#slovakia-drivers-license-number)</br> - [Sloveniens kørekortsnummer](sensitive-information-type-entity-definitions.md#slovenia-drivers-license-number)</br> - [Spaniens kørekortsnummer](sensitive-information-type-entity-definitions.md#spain-drivers-license-number)</br> - [Sveriges kørekortsnummer](sensitive-information-type-entity-definitions.md#sweden-drivers-license-number)</br> - [Pasnummer for Østrig](sensitive-information-type-entity-definitions.md#austria-passport-number)</br> - [Belgien Passport-nummer](sensitive-information-type-entity-definitions.md#belgium-passport-number)</br> - [Bulgariens pasnummer](sensitive-information-type-entity-definitions.md#bulgaria-passport-number)</br> - [Kroatiens pasnummer](sensitive-information-type-entity-definitions.md#croatia-passport-number)</br> - [Cyperns pasnummer](sensitive-information-type-entity-definitions.md#cyprus-passport-number)</br> - [Pasnummer for Tjekkiet](sensitive-information-type-entity-definitions.md#czech-passport-number)</br> - [Danmark Passport-nummer](sensitive-information-type-entity-definitions.md#denmark-passport-number)</br> - [Estisk pasnummer](sensitive-information-type-entity-definitions.md#estonia-passport-number)</br> - [Finlands pasnummer](sensitive-information-type-entity-definitions.md#finland-passport-number)</br> - [France Passport-nummer](sensitive-information-type-entity-definitions.md#france-passport-number)</br> - [Tysk pasnummer](sensitive-information-type-entity-definitions.md#germany-passport-number)</br> - [Grækenlands pasnummer](sensitive-information-type-entity-definitions.md#greece-passport-number)</br> - [Ungarn Pasnummer](sensitive-information-type-entity-definitions.md#hungary-passport-number)</br> - [Irlands pasnummer](sensitive-information-type-entity-definitions.md#ireland-passport-number)</br> - [Pasnummer til Italien](sensitive-information-type-entity-definitions.md#italy-passport-number)</br> - [Letlands pasnummer](sensitive-information-type-entity-definitions.md#latvia-passport-number)</br> - [Litauens pasnummer](sensitive-information-type-entity-definitions.md#lithuania-passport-number)</br> - [Luxemburg Passport-nummer](sensitive-information-type-entity-definitions.md#luxemburg-passport-number)</br> - [Maltas pasnummer](sensitive-information-type-entity-definitions.md#malta-passport-number)</br> - [Nederlandsk pasnummer](sensitive-information-type-entity-definitions.md#netherlands-passport-number)</br> - [Polens pas](sensitive-information-type-entity-definitions.md#poland-passport-number)</br> - [Pasnummer til Portugal](sensitive-information-type-entity-definitions.md#portugal-passport-number)</br> - [Rumænien Passport-nummer](sensitive-information-type-entity-definitions.md#romania-passport-number)</br> - [Slovakiets pasnummer](sensitive-information-type-entity-definitions.md#slovakia-passport-number)</br> - [Sloveniens pasnummer](sensitive-information-type-entity-definitions.md#slovenia-passport-number)</br> - [Spaniens pasnummer](sensitive-information-type-entity-definitions.md#spain-passport-number)</br> - [Sveriges pasnummer](sensitive-information-type-entity-definitions.md#sweden-passport-number)</br> - [EU-debetkortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)|
+|Beskyttelse af personlige oplysninger| Generel forordning om databeskyttelse (GDPR)|- [EU-betalingskortnummer](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [EU-kørekortsnummer](sensitive-information-type-entity-definitions.md#eu-drivers-license-number) </br> - [EU-nationalt identifikationsnummer](sensitive-information-type-entity-definitions.md#eu-national-identification-number)</br> - [EU-pasnummer](sensitive-information-type-entity-definitions.md#eu-passport-number) </br> - [EU-cpr-nummer eller tilsvarende identifikation](sensitive-information-type-entity-definitions.md#eu-social-security-number-or-equivalent-identification)</br> - [EU-skatteidentifikationsnummer](sensitive-information-type-entity-definitions.md#eu-tax-identification-number)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger i Tyskland|- [Tysklands kørekortsnummer](sensitive-information-type-entity-definitions.md#germany-drivers-license-number) </br> - [Tysklands pasnummer](sensitive-information-type-entity-definitions.md#germany-passport-number)| 
+|Beskyttelse af personlige oplysninger| Personidentificerbare israelsk-oplysninger|- [Israels nationale identifikationsnummer](sensitive-information-type-entity-definitions.md#israel-national-identification-number)| 
+|Beskyttelse af personlige oplysninger| Israel beskyttelse af privatlivets fred|- [Israels nationale identifikationsnummer](sensitive-information-type-entity-definitions.md#israel-national-identification-number)</br> - [Israels bankkontonummer](sensitive-information-type-entity-definitions.md#israel-bank-account-number)|
+|Beskyttelse af personlige oplysninger| Forbedrede pii-data (Personligt identificerbare oplysninger) i Japan|- [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)</br> - [Japan Mit nummer - personlig](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Pasnummer til Japan](sensitive-information-type-entity-definitions.md#japan-passport-number)</br> - [Japans kørekortsnummer](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Fysiske adresser i Japan](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare oplysninger i Japan|- [Registreringsnummer for beboere i Japan](sensitive-information-type-entity-definitions.md#japan-resident-registration-number) </br> - [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
+|Beskyttelse af personlige oplysninger| Forbedret beskyttelse af personlige oplysninger i Japan|- [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin) </br> - [Japan Mit nummer - personlig](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Pasnummer til Japan](sensitive-information-type-entity-definitions.md#japan-passport-number) </br> - [Japans kørekortsnummer](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Fysiske adresser i Japan](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
+|Beskyttelse af personlige oplysninger| Japan Beskyttelse af personlige oplysninger|- [Registreringsnummer for beboere i Japan](sensitive-information-type-entity-definitions.md#japan-resident-registration-number)</br> - [Japan Social Insurance Number (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
+|Beskyttelse af personlige oplysninger| Personidentificerbare Saudi-Arabien-data|- [Saudi-Arabiens nationale id](sensitive-information-type-entity-definitions.md#saudi-arabia-national-id)|
+|Beskyttelse af personlige oplysninger| STORBRITANNIEN. Databeskyttelseslov|- [Det britiske nationalforsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
+|Beskyttelse af personlige oplysninger| STORBRITANNIEN. Bestemmelser om beskyttelse af personlige oplysninger og elektronisk kommunikation|- [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
+|Beskyttelse af personlige oplysninger| STORBRITANNIEN. Personidentificerbare oplysninger|- [Det britiske nationalforsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
+|Beskyttelse af personlige oplysninger| STORBRITANNIEN. Piocp (Personal Information Online Code of Practice)|- [Det britiske nationalforsikringsnummer (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [Det britiske nationale sundhedstjenestenummer](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [SWIFT-kode](sensitive-information-type-entity-definitions.md#swift-code)|
+|Beskyttelse af personlige oplysninger| U.S Patriot Act Enhanced|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Beskyttelse af personlige oplysninger| U.S. Patriot Act|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Beskyttelse af personlige oplysninger| Udvidede personidentificerbare oplysninger (PII)-data (U.S. Personligt identificerbart)|- [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Amerikanske fysiske adresser](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Beskyttelse af personlige oplysninger| Amerikanske personidentificerbare oplysninger (PII-data)|- [Id-nummer for individuelle amerikanske skatteborgere (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
+|Beskyttelse af personlige oplysninger| Udvidede love om anmeldelse af brud på amerikanske stater|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[Amerikansk kørekortsnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Alle fulde navne](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Amerikansk/britisk pasnummer](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Alle medicinske vilkår og betingelser](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions)|
+|Beskyttelse af personlige oplysninger| U.S. State Breach Notification Laws|- [Kreditkortnummer](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Amerikansk bankkontonummer](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[Amerikansk kørekortsnummer](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Beskyttelse af personlige oplysninger| Den amerikanske stat Love om fortrolighed af cpr-nummer|- [AMERIKANSK CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
 
-## <a name="locations"></a>Placeringer
+## <a name="locations"></a>Steder
 
 En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysninger på tværs af flere placeringer.
 
-|Placering  |Medtag/udelad omfang  |Datatilstand  |Yderligere forudsætninger |
+|Placering  |Medtag/udelad område  |Datatilstand  |Yderligere forudsætninger |
 |---------|---------|---------|---------|
 |Exchange mail online |distributionsgruppe | data i bevægelse| Nej |
-|SharePoint onlinewebsteder   |websteder       | data-at-rest </br> data i brug | Nej|
+|SharePoint onlinewebsteder   |Websteder       | data-at-rest </br> data i brug | Nej|
 |OneDrive for Business konti| konto eller distributionsgruppe |data-at-rest </br> data i brug|Nej|
-|Teams chat og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
-|Microsoft Defender til skyapps   | forekomst af skyapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til ikke-Microsoft-skyapps](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at Microsoft 365 om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurere indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
-|Lokale lager (filshares og SharePoint)    |lager         | data-at-rest         | - [Få mere at vide Microsoft 365 lokal scanner til forebyggelse af datatab](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kom i gang med den lokale scanner til forebyggelse af datatab](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
-|PowerBI| arbejdsområder | data i brug | Nej|
+|Teams chat- og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
+|Microsoft Defender for Cloud Apps   | forekomst af cloudapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til cloudapps, der ikke er fra Microsoft](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
+|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at vide om Microsoft 365 forebyggelse af datatab i Slutpunkt](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab i Slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurer indstillingerne for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Lagre i det lokale miljø (filshares og SharePoint)    |Repository         | data-at-rest         | - [Få mere at vide om Microsoft 365 forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kom i gang med forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
+|PowerBI| Arbejdsområder | data i brug | Nej|
 
-Hvis du vælger at medtage bestemte distributionsgrupper i Exchange, begrænses DLP-politikken kun til medlemmer af den pågældende gruppe. På samme måde udelukker en distributionsgruppe alle medlemmer af den pågældende distributionsgruppe fra evaluering af politikker. Du kan vælge at begrænse en politik til medlemmer af distributionslister, dynamiske distributionsgrupper og sikkerhedsgrupper. En DLP-politik kan højst indeholde 50 af sådanne medtagelser og udeladelse.
+Hvis du vælger at inkludere bestemte distributionsgrupper i Exchange, begrænses DLP-politikken kun til medlemmerne af den pågældende gruppe. På samme måde udelukker udeladelse af en distributionsgruppe alle medlemmer af den pågældende distributionsgruppe fra politikevaluering. Du kan vælge at tilpasse en politik til medlemmer af distributionslister, dynamiske distributionsgrupper og sikkerhedsgrupper. En DLP-politik kan ikke indeholde mere end 50 sådanne medtagelser og udeladelser.
 
-Hvis du vælger at medtage eller udelade bestemte SharePoint-websteder eller OneDrive-konti, kan en DLP-politik højst indeholde 100 f.eks. inklusioner og udeladelse. Selvom denne grænse findes, kan du overskride denne grænse ved enten at anvende en politik for hele organisationen eller en politik, der gælder for hele placeringer.
+Hvis du vælger at inkludere eller udelade bestemte SharePoint websteder eller OneDrive konti, kan en DLP-politik ikke indeholde mere end 100 sådanne medtagelser og udeladelser. Selvom denne grænse findes, kan du overskride denne grænse ved at anvende enten en politik for hele organisationen eller en politik, der gælder for hele placeringer.
 
-Hvis du vælger at medtage eller udelade bestemte OneDrive-konti eller grupper, kan en DLP-politik højst indeholde 100 brugerkonti eller 50 grupper som inklusion eller udelukkelse.
+Hvis du vælger at inkludere eller udelade bestemte OneDrive konti eller grupper, kan en DLP-politik ikke indeholde mere end 100 brugerkonti eller 50 grupper som medtagelse eller udeladelse.
 
-### <a name="location-support-for-how-content-can-be-defined"></a>Placeringssupport til, hvordan indhold kan defineres
+### <a name="location-support-for-how-content-can-be-defined"></a>Understøttelse af placering for, hvordan indhold kan defineres
 
-DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom oplysningstype (SIT), eller til en følsomhedsmærkat eller et opbevaringsnavn. Hver placering understøtter forskellige metoder til at definere følsomt indhold. Når du kombinerer placeringer i en politik, kan den måde, som indholdet kan defineres på, ændres fra den måde, det kan defineres på af en enkelt placering. 
+DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom informationstype (SIT) eller med en følsomhedsmærkat eller en opbevaringsmærkat. Hver placering understøtter forskellige metoder til definition af følsomt indhold. Når du kombinerer placeringer i en politik, kan den måde, indholdet kan defineres på, ændres, fra hvordan det kan defineres af en enkelt placering. 
 
 > [!IMPORTANT]
-> Når du vælger flere placeringer for en politik, tilsidesætter en "nej"-værdi for en indholdsdefinitionskategori "ja"-værdi. Når du f.eks. vælger SharePoint websteder, understøtter politikken registrering af følsomme elementer efter en eller flere SIT-elementer, efter følsomhedsmærkat eller efter opbevaringsmærkat. Men når du vælger ***SharePoint websteder og*** Teams chat- og kanalbeskedplaceringer, understøtter politikken kun registrering af følsomme elementer efter SIT.
+> Når du vælger flere placeringer for en politik, har en "nej"-værdi for en indholdsdefinitionskategori højere prioritet end værdien "ja". Når du f.eks. kun vælger SharePoint websteder, understøtter politikken registrering af følsomme elementer af et eller flere AFS, følsomhedsmærkat eller opbevaringsmærkat. Men når du vælger SharePoint websteder ***og*** Teams placering af chat- og kanalmeddelelser, understøtter politikken kun registrering af følsomme elementer af SIT.
 
-|Placering| Indhold kan defineres af SIT| Indhold kan defineres som følsomhedsmærkat| Indhold kan defineres ved hjælp af en opbevaringsetiket|
+|Placering| Indhold kan defineres af SIT| Indhold kan defineres som følsomhedsmærkat| Indhold kan defineres af opbevaringsmærkat|
 |---------|---------|---------|---------|
 |Exchange mail online|Ja| Ja| Nej|
 |SharePoint onlinewebsteder| Ja| Ja| Ja|
 |OneDrive for Business konti| Ja| Ja| Ja|
 |Teams chat- og kanalmeddelelser | Ja| Nej| Nej|
 |Enheder |Ja | Ja|  Nej|
-|Microsoft Defender til skyapps | Ja| Ja| Ja|
-|Lokale lagre| Ja| Ja| Nej|
+|Microsoft Defender for Cloud Apps | Ja| Ja| Ja|
+|Lagre i det lokale miljø| Ja| Ja| Nej|
 |PowerBI|Ja | Ja| Nej|
 
 > [!NOTE]
-> DLP understøtter registrering af følsomhedsetiketter på mails og vedhæftede filer Se Brug [følsomhedsmærkater som betingelser i DLP-politikker](dlp-sensitivity-label-as-condition.md#use-sensitivity-labels-as-conditions-in-dlp-policies).
+> DLP understøtter registrering af følsomhedsmærkater på mails og vedhæftede filer Se [Brug følsomhedsmærkater som betingelser i DLP-politikker](dlp-sensitivity-label-as-condition.md#use-sensitivity-labels-as-conditions-in-dlp-policies).
 
 ## <a name="rules"></a>Regler
 
@@ -149,313 +149,366 @@ DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom 
 - How do I tune the behavior of a Policy through the tuning of rules
 - what's in a rule-->
 
-Regler er forretningslogik i DLP-politikker. De består af:
+Regler er forretningslogikken i DLP-politikker. De består af:
 
-- [**Betingelser,**](#conditions) der udløser politikken, når de matches
-- [**Undtagelser**](#exceptions) til betingelserne
+- [**Betingelser**](#conditions) , der udløser politikken, når den matches
+- [**Undtagelser**](#exceptions) fra betingelserne
 - [**Handlinger**](#actions) , der skal udføres, når politikken udløses
-- [**Brugerbeskeder**](#user-notifications-and-policy-tips) til at informere brugerne, når de gør noget, der udløser en politik, og som hjælper med at informere dem om, hvordan din organisation ønsker, at følsomme oplysninger behandles
-- [**Bruger tilsidesætter,**](#user-overrides) når den konfigureres af en administrator, kan brugerne vælge at tilsidesætte en blokeringshandling
+- [**Brugermeddelelser**](#user-notifications-and-policy-tips) , der informerer dine brugere, når de foretager sig noget, der udløser en politik, og hjælper med at oplære dem i, hvordan din organisation ønsker følsomme oplysninger behandlet
+- [**Bruger tilsidesætter**](#user-overrides) , når den er konfigureret af en administrator, og giver brugerne mulighed for selektivt at tilsidesætte en blokeringshandling
 - [**Hændelsesrapporter**](#incident-reports) , der giver administratorer og andre vigtige interessenter besked, når der opstår et regelmatch
-- [**Flere indstillinger**](#additional-options) , som definerer prioriteten for regelevaluering og kan stoppe yderligere behandling af regler og politikker.
+- [**Yderligere indstillinger**](#additional-options) , der definerer prioriteten for regelevaluering og kan stoppe yderligere behandling af regler og politikker.
 
- En politik indeholder en eller flere regler. Regler udføres sekventielt, startende med reglen med højeste prioritet i hver politik.
+ En politik indeholder en eller flere regler. Regler udføres sekventielt, startende med den højeste prioritetsregel i hver politik.
 
 ### <a name="the-priority-by-which-rules-are-processed"></a>Den prioritet, som regler behandles efter
 
-#### <a name="hosted-service-workloads"></a>Arbejdsbelastninger for hostede tjenester
+#### <a name="hosted-service-workloads"></a>Hostede tjenestearbejdsbelastninger
 
-For de tilknyttede tjenestebelastninger, f.eks. Exchange Online, SharePoint Online og OneDrive for Business, tildeles hver regel en prioritet i den rækkefølge, som den oprettes i. Det betyder, at den regel, der oprettes først, har førsteprioritet, den regel, der blev oprettet som den anden, har en anden prioritet osv. 
+For de hostede tjenestearbejdsbelastninger, f.eks. Exchange Online, SharePoint Online og OneDrive for Business, tildeles hver regel en prioritet i den rækkefølge, den oprettes i. Det betyder, at den regel, der oprettes først, har første prioritet, den regel, der er oprettet i den anden, har anden prioritet osv. 
   
-![Regler i prioritetsrækkefølge](../media/dlp-rules-in-priority-order.png)
+![Regler i prioriteret rækkefølge](../media/dlp-rules-in-priority-order.png)
 
-Når indhold evalueres i forhold til regler, behandles reglerne i prioritetsrækkefølgen. Hvis indhold matcher flere regler, evalueres den første regel, der har den *mest restriktive* handling. Hvis indhold f.eks. svarer til alle følgende regler, håndhæves regel *3* , fordi det er den højeste, mest restriktive regel:
+Når indhold evalueres i forhold til regler, behandles reglerne i prioriteret rækkefølge. Hvis indhold stemmer overens med flere regler, gennemtvinges den første regel, der evalueres, og som har den *mest* restriktive handling. Hvis indhold f.eks. stemmer overens med alle følgende regler, gennemtvinges *regel 3* , fordi det har den højeste prioritet, mest restriktive regel:
   
-- Regel 1: giver kun brugerne besked
-- Regel 2: giver brugerne besked, begrænser adgang og tillader brugertilsidesættelser
-- *Regel 3: giver brugere besked, begrænser adgang og tillader ikke, at brugeren tilsidesætter*
+- Regel 1: Giver kun brugere besked
+- Regel 2: Giver brugerne besked, begrænser adgangen og tillader brugertilsidesættelser
+- *Regel 3: Giver brugerne besked, begrænser adgangen og tillader ikke brugertilsidesættelser*
 - Regel 4: Begrænser adgangen
 
-Regler 1, 2 og 4 evalueres, men anvendes ikke. I dette eksempel registreres match for alle reglerne i overvågningslogfilerne og vises i DLP-rapporterne, selvom kun den mest restriktive regel anvendes.
+Regel 1, 2 og 4 ville blive evalueret, men ikke anvendt. I dette eksempel registreres matches for alle reglerne i overvågningsloggene og vises i DLP-rapporterne, selvom det kun er den mest restriktive regel, der anvendes.
 
-Du kan bruge en regel til at opfylde et bestemt beskyttelseskrav og derefter bruge en DLP-politik til at samle fælles beskyttelseskrav, f.eks. alle de regler, der er nødvendige for at overholde en bestemt lovgivning.
+Du kan bruge en regel til at opfylde et specifikt beskyttelseskrav og derefter bruge en DLP-politik til at gruppere fælles beskyttelseskrav, f.eks. alle de regler, der er nødvendige for at overholde en bestemt forordning.
   
-Du kan f.eks. have en DLP-politik, der hjælper dig med at registrere tilstedeværelse af oplysninger, der er underlagt HIPAA (Health Insurance Portability and Accountability Act). Denne DLP-politik kan hjælpe med at beskytte HIPAA-data (hvad) på tværs af alle SharePoint-onlinewebsteder og alle OneDrive for Business-websteder (hvor) ved at finde et dokument, der indeholder disse følsomme oplysninger, som deles med personer uden for organisationen (betingelserne), og derefter blokere adgangen til dokumentet og sende en meddelelse (handlingerne). Disse krav gemmes som individuelle regler og grupperes som en DLP-politik for at forenkle administration og rapportering.
+Du kan f.eks. have en DLP-politik, der hjælper dig med at registrere tilstedeværelsen af oplysninger, der er underlagt HIPAA (Health Insurance Portability and Accountability Act). Denne DLP-politik kan hjælpe med at beskytte HIPAA-data (hvad) på tværs af alle SharePoint Online-websteder og alle OneDrive for Business websteder (hvor) ved at finde et hvilket som helst dokument, der indeholder disse følsomme oplysninger, som deles med personer uden for din organisation (betingelserne) og derefter blokere adgangen til dokumentet og sende en meddelelse (handlingerne). Disse krav gemmes som individuelle regler og grupperes som en DLP-politik for at forenkle administration og rapportering.
   
-![Diagrammet viser, at DLP-politikken indeholder placeringer og regler](../media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
+![Diagram, der viser, at DLP-politikken indeholder placeringer og regler](../media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
 
 #### <a name="for-endpoints"></a>For slutpunkter
 
-Prioritet for regler på slutpunkter tildeles også i overensstemmelse med den rækkefølge, reglerne er oprettet i. Det betyder, at den regel, der oprettes først, har førsteprioritet, den regel, der blev oprettet som den anden, har en anden prioritet osv. 
+Prioriteten for regler for slutpunkter tildeles også i henhold til den rækkefølge, som det er oprettet i. Det betyder, at den regel, der oprettes først, har første prioritet, den regel, der er oprettet i den anden, har anden prioritet osv. 
 
-Når en fil på et slutpunkt svarer til flere DLP-politikker, er den første regel, der er aktiveret med begrænsninger, den, der håndhæves på indholdet. Hvis indhold f.eks. opfylder alle følgende regler, gennemtvinges regel 2, fordi det er reglen med højeste prioritet, der er konfigureret *med en begrænsning*.
-  
-- Regel 1: giver kun brugerne besked
-- *Regel 2: giver brugerne besked, begrænser adgang og tillader brugertilsidesættelser*
-- Regel 3: giver brugere besked, begrænser adgang og tillader ikke, at brugeren tilsidesætter
-- Regel 4: Begrænser adgangen
+Når en fil på et slutpunkt stemmer overens med flere DLP-politikker, er den første regel, der aktiveres med mest restriktiv håndhævelse af [slutpunktsaktiviteterne](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on) , den, der gennemtvinges for indholdet. Hvis indhold f.eks. stemmer overens med alle følgende regler, så har regel 2 forrang over de andre regler, da det er den mest restriktive.
 
-Regler 1, 3 og 4 evalueres, men anvendes ikke. I dette eksempel registreres match for alle reglerne i overvågningslogfilerne og vises i DLP-rapporterne, selvom kun den første regel med en begrænsning anvendes.
+- Regel 1: Kun overvågning af alle aktiviteter 
+- *Regel 2: blokerer for al aktivitet*
+- Regel 3: Blokerer alle aktiviteter med mulighed for, at slutbrugeren kan tilsidesætte
 
-For regler, der anvendes på slutpunkter, kan du udnytte muligheden for at ændre rækkefølgen af reglens prioritet for at sikre, at de ønskede begrænsninger anvendes.
+I eksemplet nedenfor har regel 1 forrang frem for de andre matchende regler, da det er den mest restriktive.
+
+- *Regel 1: Blokerer aktivitet og tillader ikke brugertilsidesættelse*
+- Regel 2: Blokerer aktivitet og tillader brugertilsidesættelser
+- Regel 3: Overvåger kun alle aktiviteter
+- Regel 4: Ingen håndhævelse
+
+Alle de andre regler evalueres, men deres handlinger gennemtvinges ikke. Overvågningslogge viser den mest restriktive regel, der anvendes på filen. Hvis der er mere end én regel, der stemmer overens, og de er lige restriktive, styrer politik- og regelprioritet, hvilken regel der anvendes på filen.
+
+For slutpunkter kan du konfigurere de handlinger, som DLP kræver for alle understøttede aktiviteter, i en enkelt regel for et bestemt sæt medtagelsesbetingelser.
 
 ### <a name="conditions"></a>Betingelser
 
-Betingelser er inkluderende og er det sted, hvor du definerer, hvad reglen skal søge efter, og den kontekst, hvori disse elementer bruges. De fortæller reglen &#8212;, når du finder et element, der ser sådan her ud, og som bruges *sådan &#8212; er* det et match, og resten af handlingerne i politikken bør blive anvendt på det. Du kan bruge betingelser til at tildele forskellige handlinger til forskellige risikoniveauer. Eksempelvis kan følsomt indhold, der deles internt, være lavere risiko og kræve færre handlinger end følsomt indhold, der deles med personer uden for organisationen.
+Betingelser er inklusive, og det er her, du definerer, hvad reglen skal søge efter, og hvilken kontekst disse elementer bruges i. De fortæller reglen &#8212;, når du finder et element, der ser ud som *dette* og bruges på den måde *,* &#8212; er det et match, og resten af handlingerne i politikken skal udføres på det. Du kan bruge betingelser til at tildele forskellige handlinger til forskellige risikoniveauer. Følsomt indhold, der f.eks. deles internt, kan være lavere risiko og kræve færre handlinger end følsomt indhold, der deles med personer uden for organisationen.
 
 > [!NOTE]
-> Brugere, der har konti uden gæster i en værtsorganisations Active Directory- eller Azure Active Directory-lejer, behandles som personer i organisationen. 
+> Brugere, der har ikke-gæstekonti i en værtsorganisations Active Directory eller Azure Active Directory lejer, betragtes som personer i organisationen. 
 
-#### <a name="content-contains"></a>Indhold indeholder
+#### <a name="content-contains"></a>Indholdet indeholder
 
- Alle placeringer understøtter indholdet **indeholder** betingelse. Du kan vælge flere forekomster af hver indholdstype og yderligere indskrænke betingelserne ved hjælp af Alle **disse (logiske** ELLER) eller **Alle** disse (logiske OG) operatorer:
+ Alle placeringer understøtter, at **indholdet indeholder** en betingelse. Du kan vælge flere forekomster af hver indholdstype og yderligere tilpasse betingelserne ved hjælp af operatorerne **En af disse** (logisk OR) eller **Alle disse** (logiske AND):
 
-- [typer af følsomme oplysninger](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types)
+- [følsomme oplysningstyper](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types)
 - [følsomhedsmærkater](sensitivity-labels.md)
-- [opbevaringsetiketter](retention.md#using-a-retention-label-as-a-condition-in-a-dlp-policy)
+- [opbevaringsmærkater](retention.md#using-a-retention-label-as-a-condition-in-a-dlp-policy)
 
-afhængigt af [den eller de placeringer](#location-support-for-how-content-can-be-defined) , du vælger at anvende politikken på. 
+afhængigt af den [eller de placeringer](#location-support-for-how-content-can-be-defined) , du vælger at anvende politikken på. 
 
-Reglen søger kun efter tilstedeværelsen af følsomhedsmærkater **og** opbevaringsetiketter **, du** vælger. 
+Reglen søger kun efter tilstedeværelsen af eventuelle **følsomhedsmærkater** og **opbevaringsmærkater** , du vælger. 
 
-SIT'er har et foruddefineret [**tillidsniveau, som**](https://www.microsoft.com/videoplayer/embed/RE4Hx60) du kan ændre, hvis det er nødvendigt. Få mere at vide under [Mere om tillidsniveauer](sensitive-information-type-learn-about.md#more-on-confidence-levels). 
+SIT'er har et foruddefineret [**konfidensniveau**](https://www.microsoft.com/videoplayer/embed/RE4Hx60) , som du kan ændre, hvis det er nødvendigt. Du kan få flere oplysninger under [Mere om tillidsniveauer](sensitive-information-type-learn-about.md#more-on-confidence-levels). 
 
 > [!IMPORTANT]
-> SIT'er har to forskellige metoder til at definere parametrene for det maksimale antal entydige forekomster. Du kan få mere at vide under [Forekomstantal understøttede værdier for SIT](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit).
+> SIT'er har to forskellige måder at definere de maksimale antal parametre for entydige forekomster på. Hvis du vil vide mere, skal du se [Antal understøttede værdier for SIT.](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit)
 
 #### <a name="condition-context"></a>Betingelseskontekst
 
-De tilgængelige kontekstindstillinger ændrer sig, afhængigt af hvilken placering du vælger. Hvis du vælger flere placeringer, er kun de betingelser, som placeringerne har til fælles, tilgængelige.
+De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering du vælger. Hvis du vælger flere placeringer, er det kun de betingelser, som placeringerne har til fælles, der er tilgængelige.
 
-##### <a name="conditions-exchange-supports"></a>Betingelser, Exchange understøtter
+##### <a name="conditions-exchange-supports"></a>Betingelser Exchange understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 - Indhold deles fra Microsoft 365
 - Indhold modtages fra
-- Afsenders IP-adresse er
+- Afsenderens IP-adresse er
 - Har afsenderen tilsidesat politiktip
 - Afsenderen er
-- Afsenderdomæne er
-- Afsenderadresse indeholder ord
-- Afsenderadresse indeholder mønstre
-- Attributten Afsender-AD indeholder ord eller udtryk
-- Afsenderens AD-attribut matcher mønstre
+- Afsenderdomænet er
+- Afsenderadressen indeholder ord
+- Afsenderadressen indeholder mønstre
+- Afsender-AD-attribut indeholder ord eller udtryk
+- Afsender-AD-attributten matcher mønstre
 - Afsenderen er medlem af
-- Indholdet af vedhæftede filer i mails kan ikke scannes
-- Scanningen af eventuelle vedhæftede filers indhold blev ikke fuldført
-- Vedhæftet fil er beskyttet med adgangskode
+- Indhold fra en vedhæftet fil kunne ikke scannes
+- Indholdet af en vedhæftet fil i en hvilken som helst mail blev ikke scannet
+- Den vedhæftede fil er beskyttet med adgangskode
 - Filtypenavnet er
 - Modtageren er medlem af
-- Modtagerdomæne er
+- Modtagerdomænet er
 - Modtageren er
-- Modtageradresse indeholder ord
-- Modtageradresse matcher mønstre
-- Modtager-AD-attribut indeholder ord eller udtryk
-- Modtagerens AD-attribut matcher mønstre
-- Dokumentnavn indeholder ord eller udtryk
-- Dokumentnavn matcher mønstre
-- Dokumentegenskab er
-- Dokumentstørrelse er lig med eller større end
+- Modtageradressen indeholder ord
+- Modtageradressen stemmer overens med mønstre
+- Modtager-AD-attributten indeholder ord eller udtryk
+- Modtager-AD-attributten matcher mønstre
+- Dokumentnavnet indeholder ord eller udtryk
+- Dokumentnavnet stemmer overens med mønstre
+- Dokumentegenskaben er
+- Dokumentstørrelsen er lig med eller større end
 - Dokumentindhold indeholder ord eller udtryk
-- Dokumentindhold matcher mønstre
-- Emnet indeholder ord eller udtryk
-- Emnet matcher mønstre
-- Emne eller Brødtekst indeholder ord eller udtryk
-- Emne eller brødtekst svarer til mønstre
+- Dokumentindhold stemmer overens med mønstre
+- Emne indeholder ord eller udtryk
+- Emne matcher mønstre
+- Emne eller brødtekst indeholder ord eller udtryk
+- Mønstre for match af emne eller brødtekst
 - Indholdstegnsæt indeholder ord
 - Sidehovedet indeholder ord eller udtryk
-- Sidehoved matcher mønstre
-- Meddelelsesstørrelse er lig med eller større end
-- Meddelelsestype er
+- Header matcher mønstre
+- Meddelelsesstørrelsen er lig med eller større end
+- Meddelelsestypen er
 - Meddelelsens prioritet er
 
-##### <a name="conditions-sharepoint-supports"></a>Betingelser, SharePoint understøtter
+##### <a name="conditions-sharepoint-supports"></a>Betingelser SharePoint understøtter
  
-- Indhold indeholder
+- Indholdet indeholder
 - Indhold deles fra Microsoft 365
+- Dokument oprettet af
+- Dokument oprettet af medlem af
+- Dokumentnavnet indeholder ord eller udtryk
+- Dokumentnavnet stemmer overens med mønstre
+- Dokumentstørrelse over
+- Dokumentegenskaben er
 - Filtypenavnet er
-- Dokumentegenskab er
 
-##### <a name="conditions-onedrive-accounts-supports"></a>Betingelser, OneDrive konti understøtter
+##### <a name="conditions-onedrive-accounts-supports"></a>Betingelser OneDrive konti understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 - Indhold deles fra Microsoft 365
+- Dokument oprettet af
+- Dokument oprettet af medlem af
+- Dokumentnavnet indeholder ord eller udtryk
+- Dokumentnavnet stemmer overens med mønstre
+- Dokumentstørrelse over
+- Dokumentegenskaben er
 - Filtypenavnet er
-- Dokumentegenskab er
 
-##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Betingelser, Teams chat- og kanalmeddelelser understøtter
+##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Betingelser Teams chat- og kanalmeddelelser understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 - Indhold deles fra Microsoft 365
-- Afsenderen er (eksempel)
-- Afsenderdomæne er (forhåndsvisning)
-- Modtagerdomæne er (forhåndsvisning)
-- Modtageren er (forhåndsvisning)
+- Afsenderen er 
+- Afsenderdomænet er 
+- Modtagerdomænet er 
+- Modtageren er 
 
-##### <a name="conditions-devices-supports"></a>Betingelser Enheder understøtter
+##### <a name="conditions-devices-supports"></a>Betingelser, enheder understøtter
 
-- Indhold indeholder
-- Se [Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
+- Indholdet indeholder
+- Se [Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
 
-##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser, som Microsoft Defender til skyapps understøtter
+##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser Microsoft Defender for Cloud Apps understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 - Indhold deles fra Microsoft 365
 
-##### <a name="conditions-on-premises-repositories-supports"></a>Betingelser i lokale lagre understøtter
+##### <a name="conditions-on-premises-repositories-supports"></a>Betingelser, som lagre i det lokale miljø understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 - Filtypenavnet er
-- Dokumentegenskab er
+- Dokumentegenskaben er
 
 ##### <a name="conditions-powerbi-supports"></a>Betingelser, som PowerBI understøtter
 
-- Indhold indeholder
+- Indholdet indeholder
 
 #### <a name="condition-groups"></a>Betingelsesgrupper
 
-Nogle gange har du brug for en regel til kun at identificere én ting, f.eks. alt indhold, der indeholder et amerikansk CPR-nummer, som er defineret af et enkelt SIT. Men i mange scenarier, hvor de typer elementer, du forsøger at identificere, er mere komplekse og derfor sværere at definere, kræves der mere fleksibilitet til at definere betingelser.
+Nogle gange har du brug for en regel for kun at identificere én ting, f.eks. alt indhold, der indeholder et AMERIKANSK CPR-nummer, som er defineret af et enkelt SIT. Men i mange scenarier, hvor de typer elementer, du forsøger at identificere, er mere komplekse og derfor sværere at definere, kræves der større fleksibilitet i definitionen af betingelser.
 
-Hvis du f.eks. vil identificere indhold, der er underlagt DEN amerikanske HEALTH Insurance Act (HIPAA), skal du kigge efter:
+Hvis du f.eks. vil identificere indhold, der er underlagt DEN AMERIKANSKE sundhedsforsikringslov (HIPAA), skal du søge efter:
   
-- Indhold, der indeholder bestemte typer af følsomme oplysninger, f.eks. et amerikansk CPR-nummer eller cpr-nummer.
+- Indhold, der indeholder bestemte typer følsomme oplysninger, f.eks. et CPR-nummer eller ETA-nummer (Drug Enforcement Agency).
     
-    AND
+    OG
     
-- Indhold, der er sværere at identificere, f.eks. kommunikation om en patients pasning eller beskrivelser af den lægepleje, der gives. Identificering af dette indhold kræver matchende nøgleord fra lister med store nøgleord, f.eks. International klassificering af indhold (ICD-9-CM eller ICD-10-CM).
+- Indhold, der er vanskeligere at identificere, f.eks. kommunikation om en patients pleje eller beskrivelser af de leverede medicinske tjenester. Identificering af dette indhold kræver matchende nøgleord fra store nøgleordslister, f.eks. INTERNATIONAL Classification of Diseases (ICD-9-CM eller ICD-10-CM).
     
 Du kan identificere denne type data ved at gruppere betingelser og bruge logiske operatorer (AND, OR) mellem grupperne.
     
-For USA **Health Insurance Act (HIPPA)** grupperes betingelserne sådan her:
+For **U.S. Health Insurance Act (HIPPA)**, er betingelserne grupperet som dette:
 
 ![HIPPA-politikbetingelser](../media/dlp-rules-condition-groups-booleans.png)
 
-Den første gruppe indeholder de SIT'er, der identificerer og individuelle, og den anden gruppe indeholder de SIT'er, der identificerer medicinsk diagnose.
+Den første gruppe indeholder de SIT'er, der identificerer og individuelle, og den anden gruppe indeholder de SIT'er, der identificerer medicinsk diagnosticering.
 
 ### <a name="exceptions"></a>Undtagelser
 
-I regler definerer undtagelser betingelser, der bruges til at udelukke et element fra politikken. Logisk set eksklusive betingelser, der evalueres efter de inkluderende betingelser og konteksten. De fortæller reglen &#8212;, når du finder et element, der ser således ud,  og som bruges sådan, at  det er et match, og resten af handlingerne i politikken bør anvendes på det, undtagen ***hvis ... &#8212;*** 
+I regler definerer undtagelser betingelser, der bruges til at udelade et element fra politikken. Logisk set er eksklusive betingelser, der evalueres efter de inkluderende betingelser og konteksten. De fortæller reglen &#8212; når du finder et element, der *ser sådan ud* , og som bruges, som om det er et match *,* og resten af handlingerne i politikken skal udføres på det ***, medmindre***... &#8212; 
 
-I tråd med HIPPA-politikken kan vi f.eks. ændre reglen, så et element, der indeholder et Belgien-kørekortnummer, udelades, således:
+I overensstemmelse med HIPPA-politikken kan vi f.eks. ændre reglen, så alle elementer, der indeholder et belgisk kørekortsnummer, udelades, f.eks.:
 
-![HIPPA-politik med udeladelse](../media/dlp-rule-exceptions.png)
+![HIPPA-politik med udeladelser](../media/dlp-rule-exceptions.png)
 
-De undtagelser, der understøttes af placering, er identiske med alle inklusionsbetingelserne, hvor den eneste forskel er den foreløbige af "Undtagen hvis" for hver understøttet betingelse. Hvis en regel kun indeholder undtagelser, gælder den for alle mails eller filer, der ikke opfylder udelukkelseskriterierne.
+De undtagelser, der understøttes af placering, er identiske med alle medtagelsesbetingelserne, hvor den eneste forskel er præpendingen af "Except if" til hver understøttet betingelse. Hvis en regel kun indeholder undtagelser, gælder den for alle mails eller filer, der ikke opfylder kriterierne for udelukkelse.
 
 På samme måde som alle placeringer understøtter den inkluderende betingelse:
 
-- Indhold indeholder
+- Indholdet indeholder
 
 undtagelsen ville være:
 
-- **Undtagen hvis indhold** indeholder 
+- **Undtagen, hvis** indholdet indeholder 
 
 ### <a name="actions"></a>Handlinger 
 
-Ethvert element, der gør det gennem de inkluderende ***betingelser** _ _**_ og eksklusive undtagelser, vil _**_ have de handlinger, der er defineret i den regel, der anvendes på det. Du skal konfigurere de påkrævede indstillinger for at understøtte handlingen. Hvis du f.eks. vælger Exchange med handlingen _ *Begræns adgang eller kryptere indholdet i Microsoft 365-placeringer**, skal du vælge mellem disse indstillinger:
+Alle elementer, der foretager det via de inklusive ***betingelser** _ og eksklusive _*_undtagelser_*_ , har alle _*_handlinger_*_ , der er defineret i reglen, anvendt på det. Du skal konfigurere de påkrævede indstillinger for at understøtte handlingen. Hvis du f.eks. vælger Exchange med handlingen _ *Begræns adgang eller krypterer indholdet på Microsoft 365 placeringer**, skal du vælge mellem følgende indstillinger:
 
-- Bloker brugere i at få adgang til SharePoint, OneDrive og Teams indhold
-    - Bloker alle. Kun ejeren af indholdet, den sidste ændring og webstedsadministratoren vil fortsat have adgang
-    - Bloker kun personer uden for organisationen. Brugere inden for organisationen vil fortsat have adgang.
+- Bloker brugere, så de ikke kan få adgang til delt SharePoint, OneDrive og Teams indhold
+    - Bloker alle. Det er kun indholdsejeren, den sidste ændringsadministrator og webstedsadministratoren, der fortsat har adgang
+    - Bloker kun personer uden for din organisation. Brugere i organisationen vil fortsat have adgang.
 - Kryptér mails (gælder kun for indhold i Exchange)
 
-De handlinger, der er tilgængelige i en regel, afhænger af de placeringer, der er markeret. Hvis du kun vælger én placering, som politikken skal anvendes på, vises de tilgængelige handlinger nedenfor.
+De handlinger, der er tilgængelige i en regel, afhænger af de valgte placeringer. Hvis du kun vælger én placering for den politik, der skal anvendes på, vises de tilgængelige handlinger nedenfor.
 
 > [!IMPORTANT]
-> For SharePoint Online- og OneDrive for Business-placeringer blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet er delt eller ej, for alle eksterne brugere, mens interne brugere fortsat har adgang til dokumentet.
+> For SharePoint Online og OneDrive for Business blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet er delt eller ej, for alle eksterne brugere, mens interne brugere fortsat vil have adgang til dokumentet.
 
-#### <a name="exchange-location-actions"></a>Exchange placeringshandlinger
+#### <a name="exchange-location-actions"></a>handlinger for Exchange placering
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
-- Angive sidehoveder
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Angiv overskrifter
 - Fjern sidehoved
 - Omdiriger meddelelsen til bestemte brugere
-- Videresende meddelelsen til godkendelse til afsenderens leder
-- Videresende meddelelsen til godkendelse til bestemte godkendere
-- Føj modtager til feltet Til
-- Føj modtager til feltet Cc
-- Føj modtager til feltet Bcc
-- Tilføj afsenderens overordnede som modtager
-- O365-meddelelseskryptering og rettighedsbeskyttelse er blevet fjernet
-- Forudindstillet mail-emne
-- Rediger mailens emne
+- Videresend meddelelsen til godkendelse til afsenderens chef
+- Videresend meddelelsen til godkendelse til bestemte godkendere
+- Føj modtageren til feltet Til
+- Føj modtageren til feltet Cc
+- Føj modtageren til feltet Bcc
+- Tilføj afsenderens chef som modtager
+- Fjernede O365-meddelelseskryptering og rettighedsbeskyttelse
+- Forudindstillet mailemne
+- Rediger emne i mail
 - Tilføj HTML-ansvarsfraskrivelse
 
-#### <a name="sharepoint-sites-location-actions"></a>SharePoint handlinger for placering af websteder
+#### <a name="sharepoint-sites-location-actions"></a>handlinger for placering af SharePoint websteder
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 
-#### <a name="onedrive-account-location-actions"></a>OneDrive handlinger for kontoplacering
+#### <a name="onedrive-account-location-actions"></a>handlinger for OneDrive kontoplacering
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 
-#### <a name="teams-chat-and-channel-messages-actions"></a>Teams for chat og kanalmeddelelser
+#### <a name="teams-chat-and-channel-messages-actions"></a>handlinger Teams chat og kanalmeddelelser
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 
-#### <a name="devices-actions"></a>Enheders handlinger
+#### <a name="devices-actions"></a>Enhedshandlinger
 
-- Overvågning eller begræns aktiviteter på Windows enheder
+- Overvåg eller begræns aktiviteter på Windows enheder
 
-> [!NOTE]
-> Enheder giver mulighed for at **Overvåge** en aktivitet, **Blokere** en aktivitet eller Blokere **med tilsidesættelse af** en aktivitet.
+Hvis du vil bruge disse indstillinger, skal du konfigurere indstillinger i **DLP-indstillinger** og i den politik, hvor du vil bruge dem. Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) for at få flere oplysninger.
 
-Placeringen af enhederne indeholder mange underaktiver (betingelser) og handlinger. Du kan få mere at vide [under Slutpunktsaktiviteter, du kan overvåge og handle på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on). 
+Enhedens placering indeholder mange underaktiviteter (betingelser) og handlinger. Du kan få mere at vide under [Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 
-#### <a name="microsoft-defender-for-cloud-apps"></a>Microsoft Defender til skyapps
+Når du vælger **Overvåg eller begræns aktiviteter på Windows enheder**, kan du begrænse brugeraktiviteterne efter tjenestedomæne eller browser og omfanget af de handlinger, som DLP udfører, ved at:
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
+- Alle apps
+- Af en liste over begrænsede apps, som du definerer
+- En begrænset appgruppe (prøveversion), som du definerer.
+
+##### <a name="service-domain-and-browser-activities"></a>Tjenestedomæne- og browseraktiviteter
+
+Når du konfigurerer **domæner for Tillad/Bloker cloudtjenester** og listen **Over ikke-tilladte browsere** (se [Browser- og domænebegrænsninger for følsomme data](dlp-configure-endpoint-settings.md#browser-and-domain-restrictions-to-sensitive-data)), og en bruger forsøger at overføre en beskyttet fil til et cloudtjenestedomæne eller få adgang til den fra en ikke-tilladt browser, kan du konfigurere politikhandlingen til `Audit only`, `Block with override`eller `Block` aktiviteten.
+
+##### <a name="file-activities-for-all-apps"></a>Filaktiviteter for alle apps
+
+Med indstillingen **Filaktiviteter for alle apps** vælger du enten **Begræns ikke filaktiviteter** eller **Anvend begrænsninger på bestemte aktiviteter**. Når du vælger at anvende begrænsninger på bestemte aktiviteter, anvendes de handlinger, du vælger her, når en bruger har åbnet et DLP-beskyttet element. Du kan fortælle DLP til `Audit only`, `Block with override`, `Block` (handlingerne) for disse brugeraktiviteter:
+
+- **Kopiér til Udklipsholder**
+- **Kopiér til et flytbart USB-drev** 
+- **Kopiér til et netværksshare**
+- **Udskrive**
+- **Kopiér eller flyt ved hjælp af en ikke-tilladt Bluetooth app**
+- **Fjernskrivebord-tjenester**
+
+
+##### <a name="restricted-app-activities"></a>Begrænsede appaktiviteter  
+
+Du har tidligere kaldt Ikke-tilladte apps og definerer en liste over apps i DLP-indstillinger for slutpunkt, som du vil angive begrænsninger for. Når en bruger forsøger at få adgang til en DLP-beskyttet fil ved hjælp af en app, der findes på listen, kan du enten `Audit only`, `Block with override`eller `Block` aktiviteten. DLP-handlinger, der er defineret i **Begrænsede appaktiviteter** , tilsidesættes, hvis appen er medlem af en begrænset appgruppe. Derefter anvendes de handlinger, der er defineret i den begrænsede appgruppe.
+
+##### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Filaktiviteter for apps i begrænsede appgrupper (prøveversion)
+
+Du definerer dine begrænsede appgrupper under DLP-indstillinger for slutpunkter og føjer begrænsede appgrupper til dine politikker. Når du føjer en begrænset appgruppe til en politik, skal du vælge en af disse indstillinger:
+
+- Begræns ikke filaktivitet
+- Anvend begrænsninger på alle aktiviteter
+- Anvend begrænsninger på bestemte aktiviteter
+
+Når du vælger en af indstillingerne *for Anvend begrænsninger* , og en bruger forsøger at få adgang til en DLP-beskyttet fil ved hjælp af en app, der er i den begrænsede appgruppe, kan du enten `Audit only`, `Block with override`eller `Block` efter aktivitet. DLP-handlinger, som du definerer her, tilsidesætter de handlinger, der er defineret i **Begrænsede appaktiviteter** og **Filaktiviteter for alle apps** for appen.
+
+Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) for at få flere oplysninger. 
+
+#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Microsoft Defender for Cloud Apps handlinger
+
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 - Begræns tredjepartsapps
 
-#### <a name="on-premises-repositories"></a>Lokale lagre
+#### <a name="on-premises-repositories-actions"></a>Handlinger for lagre i det lokale miljø
 
-- Begræns adgang eller fjern lokale filer
+- Begræns adgang til eller fjern filer i det lokale miljø
 
 #### <a name="powerbi-actions"></a>PowerBI-handlinger
 
-- Giv brugere besked med mail og politiktip
+- Giv brugerne besked med mail- og politiktips
 - Send beskeder til administrator
 
 #### <a name="actions-available-when-you-combine-locations"></a>Handlinger, der er tilgængelige, når du kombinerer placeringer
 
-Hvis du vælger Exchange og en anden enkelt placering for politikken, der skal anvendes på, vil
+Hvis du vælger Exchange og en hvilken som helst anden enkelt placering for den politik, der skal anvendes på,
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 
-og
+Og
 
-- Alle handlinger for den ikke-Exchange placering
-
-handlinger vil være tilgængelige.
-
-Hvis du vælger to eller flere ikke-Exchange placeringer, som politikken skal anvendes på, vil
-
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
-
-AND
-
-- Alle handlinger for ikke-Exchange placeringer 
+- alle handlinger for den placering, der ikke er Exchange
 
 handlinger vil være tilgængelige.
 
-Hvis du f.eks. Exchange enheder som placeringer, vil disse handlinger være tilgængelige:
+Hvis du vælger to eller flere placeringer, der ikke er Exchange for den politik, der skal anvendes på,
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
-- Overvågning eller begræns aktiviteter på Windows enheder
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
 
-Hvis du vælger Enheder og Microsoft Defender til skyapps, vil disse handlinger være tilgængelige:
+OG
 
-- Begræns adgang, eller kryptér indholdet Microsoft 365 placeringer
-- Overvågning eller begræns aktiviteter på Windows enheder
+- alle handlinger for placeringer, der ikke er Exchange 
+
+handlinger vil være tilgængelige.
+
+Hvis du f.eks. vælger Exchange og Enheder som placeringer, vil disse handlinger være tilgængelige:
+
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Overvåg eller begræns aktiviteter på Windows enheder
+
+Hvis du vælger Enheder og Microsoft Defender for Cloud Apps, vil disse handlinger være tilgængelige:
+
+- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Overvåg eller begræns aktiviteter på Windows enheder
 - Begræns tredjepartsapps
 
-Om en handling træder i kraft eller ej, afhænger af, hvordan du konfigurerer politikkens tilstand. Du kan vælge at køre politikken i testtilstand med eller uden at vise politiktip ved at **vælge indstillingen Test det først** . Du vælger at køre politikken så snart som en time efter, den er oprettet, ved at vælge  indstillingen Slå den til med det samme, eller du kan vælge blot at gemme den og vende tilbage til den senere ved at vælge **indstillingen** Slå den fra. 
+Om en handling træder i kraft eller ej, afhænger af, hvordan du konfigurerer politikkens tilstand. Du kan vælge at køre politikken i testtilstand med eller uden at vise politiktip ved at vælge indstillingen **Test den først** . Du vælger at køre politikken, så snart en time efter den er oprettet, ved at vælge indstillingen **Slå den til med det samme** , eller du kan vælge blot at gemme den og vende tilbage til den senere ved at vælge indstillingen **Hold den fra** . 
 
 
 <!-- This section needs to explain that the actions available depend on the locations selected AND that the observed behavior of a policy is produced through an interaction of the configured actions AND the configured status (off, test, apply) of a policy. It will detail the purpose of each of the available actions and the location/desired outcome interaction and provide examples eg. how to use the Restrict Third Party apps in the context of a policy that is applied to endpoints so that users can't use a upload content to a third party site or the interaction of on-premises scanner with restrict access or remove on-premises files.  Also what happens when I select multiple locations? provide abundant examples for most common scenarios-->
 
 
-### <a name="user-notifications-and-policy-tips"></a>Tip til brugerbeskeder og politikker
+### <a name="user-notifications-and-policy-tips"></a>Brugermeddelelser og politiktip
 
 <!--This section introduces the business need for user notifications, what they are, their benefit, how to use them, how to customize them, and links out to 
 
@@ -466,81 +519,81 @@ for where they are used/expected behavior-->
 
 <!--You can use notifications and overrides to educate your users about DLP policies and help them remain compliant without blocking their work. For example, if a user tries to share a document containing sensitive information, a DLP policy can both send them an email notification and show them a policy tip in the context of the document library that allows them to override the policy if they have a business justification.-->
 
-Når en bruger forsøger en handling på et følsomt element i en kontekst, der opfylder betingelserne og undtagelserne for en regel, kan du fortælle vedkommende om det via mail om brugerbeskeder og i pop op-vindue med kontekstpolitiktip. Disse meddelelser er nyttige, fordi de øger folks opmærksomhed og hjælper med at informere personer om organisationens DLP-politikker.
+Når en bruger forsøger at udføre en handling på et følsomt element i en kontekst, der opfylder betingelserne og undtagelserne for en regel, kan du fortælle brugeren om det via mail med brugermeddelelser og i pop op-vinduet med kontekstpolitiktip. Disse meddelelser er nyttige, fordi de øger bevidstheden og hjælper med at uddanne personer i organisationens DLP-politikker.
 
-Indhold som f.eks. Excel projektmappe på et OneDrive for Business websted, der indeholder personlige id-oplysninger (PII), og som deles med en gæst.
+Indhold som f.eks. en Excel projektmappe på et OneDrive for Business websted, der indeholder personidentificerbare oplysninger og deles med en gæst.
 
 ![Meddelelseslinjen viser politiktip i Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
 > [!NOTE]
 > Meddelelsesmails sendes ubeskyttet.
 
-Du kan også give personer mulighed for at tilsidesætte [politikken, så](#user-overrides) de ikke blokeres, hvis de har et gyldigt forretnings behov, eller hvis politikken registrerer en falsk positiv.
+Du kan også give personer mulighed for at [tilsidesætte politikken](#user-overrides), så de ikke blokeres, hvis de har et gyldigt forretningsbehov, eller hvis politikken registrerer et falsk positivt.
 
-Konfigurationsindstillingerne for brugerbeskeder og politiktip varierer afhængigt af de overvågningsplaceringer, du har valgt. Hvis du har valgt:
+Konfigurationsindstillinger for brugermeddelelser og politiktip varierer afhængigt af de valgte overvågningsplaceringer. Hvis du har valgt:
 
 - Exchange
 - SharePoint
 - OneDrive
-- Teams chat og kanal
-- Defender til skyapps
+- Teams Chat og kanal
+- Defender for Cloud Apps
 
 
-Du kan aktivere/deaktivere brugerbeskeder for forskellige Microsoft-apps under Reference [til politiktip til forebyggelse af datatab](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
+Du kan aktivere/deaktivere brugermeddelelser for forskellige Microsoft-apps. [Se reference til tip til forebyggelse af datatab](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
 
-- Du kan aktivere/deaktivere **Underrette brugere i Office 365 med** et politiktip.
-    - mailbeskeder til den bruger, der har sendt, delt eller senest ændret indholdet ELLER
-    - underrette bestemte personer
+- Du kan aktivere/deaktivere **Giv brugere i Office 365-tjenesten besked** med et politiktip.
+    - mailmeddelelser til den bruger, der har sendt, delt eller senest ændret indholdet ELLER
+    - giv bestemte personer besked
 
-og tilpasse mailteksten, emnet og politiktipteksten.
+og tilpas mailteksten, emnet og teksten til politiktip.
 
-![Konfigurationsindstillinger for brugerbeskeder og politiktip, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og Kanal og Defender til skyapps](../media/dlp-user-notification-non-devices.png)
+![Konfigurationsindstillinger for brugermeddelelser og politiktip, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og kanal og Defender for Cloud Apps](../media/dlp-user-notification-non-devices.png)
 
-Hvis du valgte Kun enheder, får du alle de samme indstillinger, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og Kanal og Defender til skyapps samt muligheden for at tilpasse meddelelsens titel og indhold, der vises på Windows 10-enheden.
+Hvis du kun har valgt Enheder, får du alle de samme indstillinger, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og Kanal og Defender for Cloud Apps samt muligheden for at tilpasse meddelelsestitel og indhold, der vises på Windows 10 enhed.
 
-![Konfigurationsindstillinger for brugerbeskeder og politiktip, der er tilgængelige for enheder](../media/dlp-user-notification-devices.png)  
+![Konfigurationsindstillinger for brugermeddelelser og politiktip, der er tilgængelige for enheder](../media/dlp-user-notification-devices.png)  
 
-Du kan tilpasse titlen og brødteksten ved hjælp af disse parametre. Brødteksten understøtter følgende:
+Du kan tilpasse tekstens titel og brødtekst ved hjælp af disse parametre. Brødteksten understøtter disse:
 
 |Almindeligt navn  |Parameter  |Eksempel
 |---------|---------|---------|
-|filnavn     |%%FileName%% | Contoso doc 1 |
+|filnavn     |%%Filnavn%% | Contoso-dokument 1 |
 |procesnavn     |%%ProcessName%% | Word |
-|politiknavn     |%%PolicyName%%| Contoso meget fortrolig |
-|handling | %%AppliedActions%% | Indsætte dokumentindhold fra Udklipsholder i en anden app |
+|politiknavn     |%%PolicyName%%| Contoso meget fortroligt |
+|Handling | %%AppliedActions%% | indsætter dokumentindhold fra Udklipsholder i en anden app |
 
-**%%AppliedActions%%** erstatter disse værdier i meddelelsesteksten:
+**%%AppliedActions%%** erstatter disse værdier i meddelelsens brødtekst:
 
 
-|almindeligt handlingsnavn |værdi erstattet af %%AppliedActions%%-parameteren |
+|fælles handlingsnavn |værdi, der erstattes med parameteren %%AppliedActions%% |
 |---------|---------|
-|kopiér til lager, der kan fjernes    |*skrivning til flytbart lager*         |
-|kopiér til netværksshare     |*skrive til et netværksshare*         |
-|udskriv     |*udskrivning*         |
-|Indsæt fra Udklipsholder  |*Indsætte fra Udklipsholder*         |
+|kopiér til lager, der kan fjernes    |*skriver til flytbart lager*         |
+|kopiér til netværksshare     |*skriver til et netværksshare*         |
+|Udskrive     |*Udskrivning*         |
+|indsæt fra Udklipsholder  |*indsætte fra Udklipsholder*         |
 |kopiér via bluetooth   |*overførsel via Bluetooth*         |
-|åbn med en app, der ikke er tilladt     |*åbne med denne app*         |
-|kopiér til en fjernskrivebord (RDP)     |*overførsel til fjernskrivebord*         |
-|overførsel til et websted, der ikke er tilladt     |*uploader til dette websted*         |
-|få adgang til elementet via en ikke-tilladt browser     |*åbne med denne browser*         |
+|åbn med en ikke-tilladt app     |*åbner med denne app*         |
+|kopiér til et fjernskrivebord (RDP)     |*overfører til fjernskrivebord*         |
+|uploader til et websted, der ikke er tilladt     |*uploader til dette websted*         |
+|adgang til elementet via en ikke-tilladt browser     |*åbner med denne browser*         |
 
 Brug af denne brugerdefinerede tekst
 
-*%%AppliedActions%% Filnavn %%FileName%% via %%ProcessName%% er ikke tilladt af din organisation. Klik på "Tillad", hvis du vil springe politikken %%PolicyName%% over* 
+*%%AppliedActions%% Filnavn %%FileName%% via %%ProcessName%% er ikke tilladt af din organisation. Klik på 'Tillad', hvis du vil tilsidesætte politikken %%PolicyName%%* 
 
-producerer denne tekst i den tilpassede meddelelse:
+opretter denne tekst i den brugerdefinerede meddelelse:
 
-*indsætte fra udklipsholderens filnavn: Contoso-dokument 1 via WINWORD.EXE er ikke tilladt af din organisation. Klik på knappen "Tillad", hvis du vil tilsidesætte politikken Contoso meget fortrolig*
+*Indsætning fra udklipsholderens filnavn: Contoso-dokument 1 via WINWORD.EXE er ikke tilladt af din organisation. Klik på knappen 'Tillad', hvis du vil tilsidesætte politikken Contoso meget fortroligt*
  
 
 > [!NOTE]
-> Brugerbeskeder og politiktip er ikke tilgængelige for placeringen i det lokale miljø
+> Brugermeddelelser og politiktip er ikke tilgængelige for placeringen i det lokale miljø
 
 > [!NOTE]
-> Kun politiktip fra den højeste, mest restriktive regel vises. Eksempelvis vises et politiktip fra en regel, der blokerer adgang til indhold, over et politiktip fra en regel, der blot sender en meddelelse. Dette forhindrer brugere i at se en kaskade af politiktip.
+> Kun politiktip fra den højeste prioritet, mest restriktive regel vises. Et politiktip fra en regel, der blokerer adgang til indhold, vises f.eks. via et politiktip fra en regel, der blot sender en meddelelse. Dette forhindrer folk i at se en overlappende række af politiktips.
 
-Hvis du vil have mere at vide om konfiguration og brug af politiktip, herunder hvordan du tilpasser meddelelsen og tipteksten, skal du se 
-- [Send mailbeskeder, og vis politiktip til DLP-politikker](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies).
+Hvis du vil vide mere om konfiguration og brug af brugermeddelelser og politiktip, herunder hvordan du tilpasser meddelelsen og tipteksten, skal du se 
+- [Send mailmeddelelser, og vis politiktip til DLP-politikker](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies).
   
 <!--The email can notify the person who sent, shared, or last modified the content and, for site content, the primary site collection administrator and document owner. In addition, you can add or remove whomever you choose from the email notification.
   
@@ -566,24 +619,24 @@ Here's what a policy tip looks like in a OneDrive for Business account.
 
 ### <a name="user-overrides"></a>Bruger tilsidesætter
 
-Formålet med brugerens  tilsidesættelse er at give brugerne en metode til at tilsidesætte, med begrundelse, DLP-politikblokeringshandlinger for følsomme elementer i Exchange, SharePoint, OneDrive eller Teams, så de kan fortsætte deres arbejde. Brugertilsidesættelser aktiveres kun, når Giv brugere besked i **Office 365-tjenester** med et politiktip er aktiveret, så brugertilsidesættelser går hånd i hånd med tip til meddelelser og politikker. 
+Hensigten med **brugertilsidesættelser** er at give brugerne mulighed for med begrundelse at tilsidesætte DLP-politikblokeringshandlinger på følsomme elementer i Exchange, SharePoint, OneDrive eller Teams, så de kan fortsætte deres arbejde. Brugertilsidesættelser er kun aktiveret, når **Giv brugere i Office 365 tjenester med et politiktip** er aktiveret, så brugertilsidesættelser går hånd i hånd med meddelelser og politiktips. 
 
 ![Indstillinger for brugertilsidesættelse for en DLP-politik](../media/dlp-user-overrides.png)
 
 > [!NOTE]
-> Brugertilsidesættelser er ikke tilgængelige for placeringen af det lokale lager.
+> Brugertilsidesættelser er ikke tilgængelige for lagerplaceringen i det lokale miljø.
 
-Brugertilsidesættelser er typisk nyttige, når organisationen først udruller en politik. Den feedback, du får fra eventuelle tilsidesættelsesberettigelser og identificerer falske positive, hjælper med at justere politikken. 
+Brugertilsidesættelser er typisk nyttige, når din organisation udruller en politik første gang. Den feedback, du får fra eventuelle tilsidesættelsesberettigelser og identificering af falske positiver, hjælper med at justere politikken. 
 
 <!-- This section covers what they are and how to best use them in conjunction with Test/Turn it on right away and link out to where to find the business justification for the override (DLP reports?  https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide)  https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide#view-the-justification-submitted-by-a-user-for-an-override-->
 
-- Hvis politiktip i den mest restriktive regel tillader brugere at tilsidesætte reglen, tilsidesætter tilsidesættelsen af denne regel også andre regler, som indholdet har matchet.
+- Hvis politiktips i den mest restriktive regel tillader, at andre tilsidesætter reglen, tilsidesætter tilsidesættelse af denne regel også andre regler, som indholdet matchede.
  
 <!--![User notifications and user overrides sections of DLP rule editor](../media/37b560d4-6e4e-489e-9134-d4b9daf60296.png)-->
  
-Du kan få mere at vide om brugertilsidesættelser under:
+Hvis du vil vide mere om brugertilsidesættelser, skal du se:
 
-- [Få vist den begrundelse, der er indsendt af en bruger for en tilsidesættelse](view-the-dlp-reports.md#view-the-justification-submitted-by-a-user-for-an-override)
+- [Få vist den begrundelse, der er sendt af en bruger for en tilsidesættelse](view-the-dlp-reports.md#view-the-justification-submitted-by-a-user-for-an-override)
 
 ### <a name="incident-reports"></a>Hændelsesrapporter
 
@@ -593,21 +646,21 @@ Du kan få mere at vide om brugertilsidesættelser under:
 https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide
 https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-configure-view-alerts-policies?view=o365-worldwide-->
 
-Når en regel matches, kan du sende en hændelsesrapport til din compliance officer (eller personer, du vælger) med oplysninger om begivenheden. Rapporten indeholder oplysninger om det element, der blev matchet, det faktiske indhold, der matchede reglen, og navnet på den person, der senest har ændret indholdet. For mails indeholder rapporten også som en vedhæftet fil den oprindelige meddelelse, der svarer til en DLP-politik.
+Når en regel matches, kan du sende en hændelsesrapport til din overholdelsesansvarlige (eller alle personer, du vælger) med oplysninger om hændelsen. Rapporten indeholder oplysninger om det element, der blev matchet, det faktiske indhold, der matchede reglen, og navnet på den person, der senest ændrede indholdet. I forbindelse med mails inkluderer rapporten også den oprindelige meddelelse, der svarer til en DLP-politik, som en vedhæftet fil.
 
-Oplysninger om DLP-feeds med andre Microsoft 365 inden for beskyttelse af oplysninger, f.eks. [Insider Risk management Microsoft 365](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365). For at få oplysninger om hændelser til Insider Risk Management skal du angive alvorsniveauet **for hændelsesrapporter** til **Høj**.
+DLP sender oplysninger om hændelser til andre Microsoft 365 tjenester til beskyttelse af oplysninger, [f.eks. styring af insiderrisiko i Microsoft 365](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365). Hvis du vil have oplysninger om hændelser til styring af insiderrisiko, skal du angive alvorsgraden af **hændelsesrapporterne** til **Høj**.
 
 <!--![Page for configuring incident reports](../media/31c6da0e-981c-415e-91bf-d94ca391a893.png)-->
 
-Beskeder kan sendes, hver gang en aktivitet svarer til en regel, som kan være støjende, eller de kan aggregeres til færre beskeder baseret på antallet af matches eller mængden af elementer i en bestemt tidsperiode.
+Beskeder kan sendes, hver gang en aktivitet stemmer overens med en regel, hvilket kan være støjende, eller de kan samles i færre beskeder baseret på antallet af matches eller mængden af elementer over en bestemt tidsperiode.
 
-![send en besked, hver gang en regel stemmer overens med eller sammenlægges over tid, i færre rapporter](../media/dlp-incident-reports-aggregation.png)
+![send en besked, hver gang en regel stemmer overens eller samles over tid i færre rapporter](../media/dlp-incident-reports-aggregation.png)
 
-DLP scanner mails anderledes, end det gør SharePoint Online eller OneDrive for Business elementer. I SharePoint Online og OneDrive for Business scanner DLP eksisterende elementer samt nye og genererer en hændelsesrapport, når der findes et match. I Exchange Online scanner DLP kun nye mails og genererer en rapport, hvis der er et match for politikken. DLP ***scanner eller matcher*** ikke tidligere eksisterende mailelementer, der er gemt i en postkasse eller et arkiv.
+DLP scanner mail på en anden måde, end den gør SharePoint Online eller OneDrive for Business elementer. I SharePoint Online og OneDrive for Business scanner DLP eksisterende elementer samt nye og genererer en hændelsesrapport, når der findes et match. I Exchange Online scanner DLP kun nye mails og genererer en rapport, hvis der er et politikmatch. DLP scanner eller matcher ***ikke*** tidligere eksisterende mailelementer, der er gemt i en postkasse eller et arkiv.
 
 ### <a name="additional-options"></a>Yderligere indstillinger
 
-Hvis du har flere regler i en politik, kan du bruge flere  indstillinger til at styre den videre behandling af regler, hvis der er et match til den regel, du redigerer, samt angive prioriteten for evaluering af reglen.
+Hvis du har flere regler i en politik, kan du bruge **Yderligere indstillinger** til at styre yderligere behandling af regler, hvis der er et match til den regel, du redigerer, samt angive prioriteten for evaluering af reglen.
 
 ## <a name="see-also"></a>Se også
 

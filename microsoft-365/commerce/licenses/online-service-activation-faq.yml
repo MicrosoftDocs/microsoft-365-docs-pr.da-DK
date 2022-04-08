@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
+  title: Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer
   author: cmcatee-MSFT
   ms.author: cmcatee
   manager: scotv
@@ -11,66 +11,66 @@ metadata:
   ms.service: o365-administration
   ms.custom: commerce_vl
   ms.localizationpriority: medium
-  description: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
-  ms.openlocfilehash: d123714434896c559473769af30106833db83eb0
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  description: Aktivering af onlinetjeneste for Ofte stillede spørgsmål i forbindelse med Open-programmet
+  ms.openlocfilehash: 9bc7be1d04c28ad2f4a67e4bd6eb76461f7eb258
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63679978"
-title: Aktivering af onlinetjenester for Ofte stillede spørgsmål om Open program
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64713773"
+title: Aktivering af onlinetjeneste for Ofte stillede spørgsmål i forbindelse med Open-programmet
 summary: ''
 sections:
 - name: Generel
   questions:
   - question: >
-      Hvordan aktiverer jeg onlinetjenester, der er købt via Open-programmerne (Open, Open Value og Open Value-abonnementet)?
+      Hvordan gør jeg aktivere onlinetjenester, der er købt via Open-programmerne (Open, Open Value og Open Value Subscription)?
     answer: >
       Åbne kunder kan aktivere onlinetjenester på to måder:
 
-      - Når du har bestillet dine onlinetjenester gennem Open-programfamilien, modtager du en mail med et link og en vejledning til at aktivere dine tjenester.
+      - Når du har bestilt din onlinetjenester via Open-programfamilien, modtager du en mail med et link og instruktioner til aktivering af dine tjenester.
 
       ELLER
 
-      - Open program [customers from the Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/Servicecenter/default.aspx) Open program customers can go to the Online Service Activation section and select the license to manage:
+      - Fra [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/Servicecenter/default.aspx) Open program kan kunder gå til afsnittet Aktivering af onlinetjeneste og vælge den licens, der skal administreres:
 
 
-      1. Vælg linket Administrer aktivering, og vælg derefter Start aktivering. Et vindue til produktaktivering åbnes, og nøglen udfyldes på forhånd.
+      1. Vælg linket Administrer aktivering, og vælg derefter Start aktivering. Der åbnes et vindue til produktaktivering, og nøglen udfyldes på forhånd.
 
       2. Fortsæt de resterende aktiveringstrin for at fuldføre produktaktivering.
 
 
-      En vellykket aktivering er fuldført inden for 48 timer på webstedet til aktivering af onlinetjenester med volumenlicens.
+      Vellykket aktivering fuldføres inden for 48 timer på webstedet til aktivering af volume licensing-onlinetjenesten.
 
-      Du kan finde oplysninger om Microsoft Azure i [Kom i gang med Azure i Open Licensing](https://azure.microsoft.com/offers/ms-azr-0111p/).
+      Du kan få oplysninger om aktivering af Microsoft Azure under [Kom i gang med Azure i Open Licensing](https://azure.microsoft.com/offers/ms-azr-0111p/).
   - question: >
       Jeg kan ikke se min Azure-ordre. Hvad skal jeg gøre?
     answer: >
-      Azure-ordrer aktiveres via nøgler. Hent dine nøgler via fanen Downloads og nøgler i VLSC, og angiv nøglen på siden Kom i gang [Azure i Open Licensing](https://azure.microsoft.com/offers/azure-open/).
+      Azure-ordrer aktiveres via nøgler. Få dine nøgler via fanen Downloads og nøgler i VLSC, og angiv nøglen på Kom i gang med [Azure på siden Open Licensing](https://azure.microsoft.com/offers/azure-open/).
   - question: >
-      Hvad er en arbejds- eller skolekonto, og hvorfor skal jeg bruge en til at aktivere onlinetjenester?
+      Hvad er en arbejds- eller skolekonto, og hvorfor skal jeg bruge en for at aktivere onlinetjenester?
     answer: >
-      En arbejds- eller skolekonto er beregnet til, at brugerne logger på organisationen Microsoft-tjenester. Logon'et bruger typisk formularen til username@orgname.com eller username@orgname.onmicrosoft.com, hvor *orgname* er deres organisations maildomænenavn.
+      En arbejds- eller skolekonto er beregnet til, at brugerne kan logge på organisationens Microsoft-tjenester. Logon bruger typisk formularen username@orgname.com eller username@orgname.onmicrosoft.com, hvor *organisationsnavn* er organisationens mailadressedomænenavn.
   - question: >
-      Hvordan ved jeg, om min organisation allerede har en konto?
-    answer: "Det organisationsnavn, der er knyttet til din arbejds- eller skolekonto, tages fra licens-id'et for den tjeneste, du aktiverer. Hvis der findes en konto, er organisationsnavnet udfyldt på forhånd i organisationskontoen og er allerede knyttet til din organisation fra den oprindelige onlinetjenesterækkefølge. Registreringsprocessen validerer, om din organisation har en konto. \n\nHvis feltet for **Firma er** tilgængeligt, skal du afslutte registreringsprocessen for at logge på og aktivere tjenesten. Hvis dette felt ikke er tilgængeligt, skal du registrere organisationen. Du skal være global administrator for at registrere en organisation til en konto.\n\nNår du anmoder om en arbejds- eller skolekonto, sendes din anmodning til din organisation Lejeradministrator, der giver eller afviser din registreringsanmodning. Brug denne arbejds- eller skolekonto, når du logger på Aktivering af Microsoft VLSC Online-tjenesten.\n"
+      Hvordan gør jeg vide, om min organisation allerede har en konto?
+    answer: "Det organisationsnavn, der er knyttet til din arbejds- eller skolekonto, hentes fra licens-id'et for den tjeneste, du aktiverer. Hvis der findes en konto, udfyldes organisationsnavnet på forhånd i organisationskontoens konfiguration og er allerede knyttet til din organisation fra den oprindelige onlineserviceordre. Registreringsprocessen validerer, om din organisation har en konto. \n\nHvis feltet **For Firma** er tilgængeligt, skal du afslutte registreringsprocessen for at logge på og aktivere tjenesten. Hvis dette felt ikke er tilgængeligt, skal du registrere organisationen. Du skal være en Global administrator for at registrere en organisation for en konto.\n\nNår du anmoder om en arbejds- eller skolekonto, sendes din anmodning til din organisations lejeradministrator, der tildeler eller afviser din registreringsanmodning. Brug denne arbejds- eller skolekonto, når du logger på Aktivering af Microsoft VLSC-onlinetjeneste.\n"
   - question: >
-      Hvorfor logger aktiveringsportalen mig ud, når jeg aktiverer en onlinetjeneste?
-    answer: "Ved aktivering af onlinetjenester i henhold til open license-programmet aktiveres hver aftale separat. For at sikre at licenser ikke aktiveres på den forkerte lejer, håndteres hver aktivering i en separat session. \n"
+      Hvorfor logger aktiveringsportalen mig af, når jeg har aktiveret en onlinetjeneste?
+    answer: "Når du aktiverer onlinetjenester under open license-programmet, aktiveres hver aftale separat. For at sikre at licenser ikke aktiveres på den forkerte lejer, håndteres hver aktivering i en separat session. \n"
   - question: >
-      Hvordan fungerer aktivering af onlinetjenester ved open license-køb?
+      Hvordan fungerer onlinetjenesteaktivering for køb af åben licens?
     answer: >
-      Microsoft Online Services til åbne aftaler er flyttet til en nøgleløs aktiveringsmodel for håndtering. Når du bestiller Åbn onlinetjenester, modtager du en mail med et link og instruktioner til at aktivere dine tjenester.
+      Microsoft Online Services for Open Agreements er flyttet til en nøgleløs håndteringsaktiveringsmodel. Når du har bestilt Open onlinetjenester, modtager du en mail med et link og instruktioner til aktivering af dine tjenester.
   - question: >
-      Hvad nu, hvis jeg vil tildele mit køb til en anden organisation?
+      Hvad gør jeg, hvis jeg vil tildele mit køb til en anden organisation?
     answer: >
-      Hvis du vil tildele produkter til en ny organisation, skal du gennemgå tilmeldingstrinnene for at oprette en ny organisation. Derfra kan du tildele sæder eller produkter, du har købt.
+      Hvis du vil tildele produkter til en ny organisation, skal du gennemgå tilmeldingstrinnene for at oprette en ny organisation. Derfra kan du tildele alle sæder eller produkter, du har købt.
   - question: >
       Jeg har lige aktiveret min onlinetjeneste. Hvorfor står der stadig, at jeg skal aktivere min tjeneste på siden Administrer aktiveringer i Volume Licensing Service Center?
     answer: >
-      Det kan tage op til 24 timer, før den tjeneste, du har aktiveret, vises **som status** Aktiveret på **siden Administrer aktiveringer** .
+      Det kan tage op til 24 timer, før den tjeneste, du har aktiveret, vises som status **aktiveret** på siden **Administrer aktiveringer** .
   - question: >
-      Hvordan kontakter jeg support?
+      Hvordan gør jeg kontakt support?
     answer: >
-      Hvis du har brug for support til en telefon eller web, skal [du se Kontakt os](/licensing/contact-us). Microsoft svarer på webformularindsendelser inden for 24 timer.
-additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Ofte stillede spørgsmål om produktnøgler](product-keys-faq.yml)\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)"
+      Hvis du har brug for support på telefon eller internettet, skal [du se Kontakt os](/licensing/contact-us). Microsoft besvarer indsendelser af webformularer inden for 24 timer.
+additionalContent: "\n## <a name=\"additional-resources\"></a>Flere ressourcer\n\n- [Ofte stillede spørgsmål om produktnøgler](product-keys-faq.yml)\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)"

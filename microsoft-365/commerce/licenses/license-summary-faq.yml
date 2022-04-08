@@ -12,12 +12,12 @@ metadata:
   ms.custom: commerce_vl
   ms.localizationpriority: medium
   description: Ofte stillede spørgsmål om Microsoft 365 Administration licenskontrakter.
-  ms.openlocfilehash: a38bf6fb9a327ccda557986264d8b9a56454f6f2
-  ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+  ms.openlocfilehash: 16b6abd5d49b1b72fb93f981762140a98105b297
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/12/2022
-  ms.locfileid: "63705315"
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64714147"
 title: Ofte stillede spørgsmål om kontrakter
 summary: ''
 sections:
@@ -29,102 +29,102 @@ sections:
       Du kan se listen Kontrakter, hvis du er en gyldig VL-bruger (Volume Licensing). Du er VL-bruger, hvis du opfylder et af følgende krav:
 
 
-      - Du er angivet som kontakt for aftalen i en juridisk volumenlicensprogramformular. Kontakttyper omfatter Primær kontakt, Meddelelsesreager, Onlineadgangskontakt, Software Assurance Manager, Online Services Manager eller Subscriptions Manager.
+      - Du er angivet som kontakt for aftalerne i en juridisk volumenlicensprogramformular. Kontakttyper omfatter primær kontakt, meddelelseskorrespondent, onlineadgangskontakt, Software Assurance Manager, Online Services Manager eller Subscriptions Manager.
 
-      - Du er administrator og har adgang til aftalen.
+      - Du er administrator og har adgang til aftalerne.
   - question: >
       Hvad er et licens-id?
     answer: >
-      Et licens-id identificerer det programniveau, hvor ordrer kan afgivet af en organisation. Den kan repræsentere et af følgende:
+      Et licens-id identificerer det programniveau, hvor ordrer kan afgives af en organisation. Den kan repræsentere en af følgende:
 
 
-      - Tilmelding (Enterprise eller Vælg programmer)
+      - Tilmelding (Enterprise- eller Select-programmer)
 
-      - Aftale (Open Value-program)
+      - Aftale (open value program)
 
-      - Licens (open license program)
+      - Licens (åbn licensprogram)
 
-      - Offentligt kundenummer (PCN) (Vælg plus-program)
+      - Offentligt kundenummer (PCN) (Select Plus-program)
 
 
-      Rettigheder og webstedstilladelser bestemmes af de licens-jeg'er, der er tilgængelige for din organisation.
+      Rettigheder og webstedstilladelser bestemmes af de licens-id'er, der er tilgængelige for din organisation.
   - question: >
       Hvor er mine MPSA-kontrakter?
     answer: >
-      Licensoplysninger om Microsoft-produkter og -serviceaftale (MPSA) administreres i [Microsoft Business Center](https://businessaccount.microsoft.com/Customer) [eller Microsoft Store til Virksomheder](https://businessstore.microsoft.com/store). Der vises ingen MPSA-oplysninger på denne liste over kontrakter. [Få mere at vide om MPSA](https://www.microsoft.com/Licensing/MPSA/default.aspx).
+      Licensoplysninger om MPSA (Microsoft Products and Services Agreement) administreres i [Microsoft Business Center](https://businessaccount.microsoft.com/Customer) eller [Microsoft Store til Virksomheder](https://businessstore.microsoft.com/store). Der vises ingen MPSA-oplysninger på denne liste over kontrakter. [Få mere at vide om MPSA](https://www.microsoft.com/Licensing/MPSA/default.aspx).
   - question: >
       Hvorfor vises nogle licens-id'er for min organisation ikke på listen?
     answer: >
-      Der vises kun et licens-id, hvis den bruger, der er logget på, har tilladelse til at få vist oplysninger om licens-id'et. Tilladelse til at få vist et bestemt licens-id på vegne af din organisation får dig til at opfylde et af følgende kriterier:
+      Et licens-id vises kun, hvis den bruger, der er logget på, har tilladelse til at få vist oplysninger om licens-id'et. Tilladelse til at få vist et bestemt licens-id på vegne af din organisation tildeles dig, som opfylder et af følgende kriterier:
 
 
-      - Du er angivet som kontakt for aftalen i en juridisk volumenlicensprogramformular. Kontakttyper omfatter Primær kontakt, Meddelelsesreager, Onlineadgangskontakt, Software Assurance Manager, Online Services Manager eller Subscriptions Manager.
+      - Du er angivet som kontakt for aftalerne i en juridisk volumenlicensprogramformular. Kontakttyper omfatter primær kontakt, meddelelseskorrespondent, onlineadgangskontakt, Software Assurance Manager, Online Services Manager eller Subscriptions Manager.
 
-      - Du er administrator med adgang til aftalen.
+      - Du er administrator med adgang til aftalerne.
 
 
-      Du kan finde flere oplysninger om VL-tilladelsesroller og deres tilladte handlinger i Ofte [stillede spørgsmål om tilladelser](https://docs.microsoft.com/licensing/permissions-faq).
+      Du kan få flere oplysninger om VL-tilladelsesroller og deres tilladte handlinger under [Ofte stillede spørgsmål om tilladelser](https://docs.microsoft.com/licensing/permissions-faq).
   - question: >
-      Hvor lang tid tager det for nye licensordrer at blive vist på listen over kontrakter?
-    answer: "Nyligt købte licenser vises typisk på listen inden for 10 timer efter, at Microsoft har modtaget din ordre fra Microsoft-partneren. Forsinkelser på et par dage til et par uger kan forekomme, hvis din partner forsinker videresendelse af indkøbsordren til Microsoft. Licenser vises i oversigten, når dækningsperioden for ordren er opfyldt for alle programmer undtagen Open License.\n\nFølgende data findes på listen over kontakter:\n\n|**Kolonnens navn**|**Beskrivelse**|\n|:-----|:-----|\n|Licens-id |Nøglekontakter og relaterede licenser i din organisation ved hjælp af et specifikt licens-id |\n|Oplysninger om overordnet program |Nøglekontakter og relaterede licenserings-ide'er til din organisation via licensprogram |\n|Mbsa-detaljer |Vigtige kontakter og relaterede licenserings-ide'er for din organisation, som er knyttet til en Microsoft Business and Services Agreement (MBSA) | \n|Organisation | Licensorganisationen|\n|Placering |Kombinationen af by og region for licensorganisationen |\n|Slutdato |Licensens slutdato |    \n|Status |Status for licensen| \n"
+      Hvor lang tid tager det, før nye licensordrer vises på listen over kontrakter?
+    answer: "Senest købte licenser vises typisk på listen inden for 10 timer, efter At Microsoft har modtaget din ordre fra Microsoft-partneren. Der kan opstå forsinkelser på et par dage til et par uger, hvis din partner forsinker videresendelsen af indkøbsordren til Microsoft. Licenser vises i oversigten, når ordrens Dækningsstartperiode er opfyldt for alle programmer undtagen Åben licens.\n\nFølgende data er tilgængelige på listen over kontakter:\n\n|**Navnet på kolonnen**|**Beskrivelse**|\n|:-----|:-----|\n|Licens-id |Vigtige kontakter og relaterede licenser i din organisation efter specifikt licens-id |\n|Oplysninger om overordnet program |Vigtige kontakter og relaterede licens-id'er for din organisation efter licensprogram |\n|MBSA-oplysninger |Vigtige kontakter og relaterede licens-id'er for din organisation, der er knyttet til en Microsoft Business and Services-aftale (MBSA) | \n|Organisation | Licensorganisationen|\n|Placering |Kombinationen af by og amt i licensorganisationen |\n|Slutdato |Slutdatoen for licensen |    \n|Status |Licensens status| \n"
   - question: >
       Hvad er licensoversigten?
     answer: >
-      Licensoversigten viser rettighederne for volumenlicens i realtid pr. Microsoft-produktfamilie og -version for alle aktive og inaktive licens-id'er i dit tilladelsessæt.
+      Licensoversigten viser volumenlicensrettigheder i realtid pr. Microsoft-produktfamilie og -version for alle aktive og inaktive licens-id'er i dit tilladelsessæt.
 
 
-      I licensoversigten vises købsoplysninger, der er relateret til traditionelle Microsoft Volumenlicens-programmer fra og med 1994. Disse programmer omfatter, men er ikke begrænset til, Åbn, Åbn værdi, Vælg, Vælg Plus og Enterprise.
+      Licensoversigten viser købsoplysninger, der er relateret til traditionelle Microsoft Volume License-programmer fra og med 1994. Disse programmer omfatter, men er ikke begrænset til, Open, Open Value, Select, Select Plus og Enterprise.
 
 
-      Licenser, der er købt i henhold til MPSA-programmet, er ikke medtaget i VLSC-relationsoversigten og kan vises separat i [Microsoft Business Center](https://businessaccount.microsoft.com/customer).
+      Licenser, der er købt under MPSA-programmet, er ikke inkluderet i oversigten over VLSC-relationer og kan ses separat i [Microsoft Business Center](https://businessaccount.microsoft.com/customer).
 
 
       Få adgang til og opret licensoversigten
 
       1.  Log på Microsoft 365 Administration.
 
-      2.  Gå til **BillingYour** >  **productsVolume** >  **licensingContracts** > .
+      2.  Gå til **FaktureringFå** >  **dine** **produkterVolume-licenserKontrakter** >  > .
 
 
       Filtrer licens-id'erne, så de vises i licensoversigten
 
-      1.  Brug afkrydsningsfelterne til at markere de licens-id'er, der skal medtages i denne oversigt.
+      1.  Brug afkrydsningsfelterne til at vælge de licens-id'er, der skal inkluderes i denne oversigt.
 
       2.  Vælg **Opret licensoversigt**. Licensoversigten genereres kun for de valgte licens-id'er.
-- name: Forstå licensoversigten
+- name: Om licensoversigten
   questions:
   - question: >
       Hvad er en licensberettigelse?
     answer: >
       En licensberettigelse repræsenterer din ret til at installere og bruge softwareprodukter som beskrevet i licensaftalen.
   - question: >
-      Hvad er den effektive mængde?
+      Hvad er ikrafttrædelsesmængden?
     answer: >
-      Den effektive mængde er antallet af licensrettigheder pr. produkt og version med opgraderinger. Det bruges til at afgøre, om din organisation har licens til mangler eller overskud efter produkt og version.
+      Effective Quantity er antallet af licensrettigheder pr. produkt og version med opgraderinger. Den bruges til at afgøre, om din organisation har licensunderskud eller overskud efter produkt og version.
   - question: >
-      Hvad er mængden af Active SA (Software Assurance) ?
+      Hvad er antallet af Aktive SA (Software Assurance)?
     answer: >
-      Det aktive SA-antal vises i licensoversigten. Det repræsenterer antallet af licenser, der er dækket af Software Assurance (version opgraderingsbeskyttelse) på tværs af alle Microsofts volumenlicensprogrammer. Den aktive SA-mængde indeholder alle typer Software Assurance, herunder:
+      Den aktive SA-mængde vises i licensoversigten. Det repræsenterer antallet af licenser, der er omfattet af Software Assurance (beskyttelse mod versionsopgradering) på tværs af alle Microsoft Volume License-programmer. Active SA Quantity omfatter alle typer Software Assurance, herunder:
 
-      - Licens og Software Assurance (L&SA)
+      - License and Software Assurance (L&SA)
 
       - Software Assurance (SA)
 
       - SA-Step-Up
   - question: >
-      Hvorfor får jeg vist Effektivt antal og/eller Aktivt SA-antal som "0"?
-    answer: "Licensoversigten er beregnet til at vise de licenser, din organisation har ret til at installere og bruge. \n\nHvis den effektive mængde i den genererede licenserklæring vises som nul, betyder det, at din organisation ikke er berettiget til at bruge licensen i henhold til vilkårene i det sæt licenserings-id'er, der er valgt for den pågældende erklæring. \n\nHvis Active SA Quantity vises som nul, betyder det, at licenser under det sæt licens-id'er, der bruges til at generere erklæringen, ikke har nogen gyldig eller aktiv Software Assurance-dækning. \n\n**BEMÆRK!** For licenser til onlinetjenester er det aktive SA-antal altid nul, fordi onlinetjenester ikke har SAs knyttet til dem. \n"
+      Hvorfor får jeg vist Effective Quantity og/eller Active SA Quantity som '0'?
+    answer: "Licensoversigten er beregnet til at vise de licenser, din organisation er berettiget til at udrulle og bruge. \n\nHvis Effective Quantity i den genererede licenssætning vises som nul, betyder det, at din organisation ikke er berettiget til at bruge licensen i henhold til vilkårene i det sæt licens-id'er, der er valgt for denne sætning. \n\nHvis Active SA Quantity vises som nul, betyder det, at licenserne under det sæt licens-id'er, der bruges til at generere erklæringen, ikke har nogen gyldig eller aktiv Software Assurance-dækning. \n\n>[!NOTE]\n>For Online Services-licenser er den aktive SA Quantity altid nul, fordi onlinetjenester ikke har tilknyttede SA'er. \n"
   - question: >
-      Omfatter licensoversigten oplysninger om originalproducent (OEM) eller detaillicens?
+      Indeholder licensoversigten oplysninger om producent af originalt udstyr (OEM) eller detaillicens?
     answer: >
-      Nej. Licensoversigten viser kun licenser, der er erhvervet af din organisation via Volumenlicens-programmer.
+      Nej. I licensoversigten vises kun licenser, der er erhvervet af din organisation via volumenlicensprogrammer.
   - question: "Viser licensoversigten, hvilken software der er installeret i min organisation? \n"
     answer: >
-      Nej. Det er ikke muligt for Microsoft at angive en liste over produktinstallationsoplysninger i licensoversigten. Licensoversigten viser dig den software, din organisation har ret til at installere og bruge, men ikke den software, der aktuelt er implementeret.
+      Nej. Det er ikke muligt for Microsoft at angive en liste over produktinstallationsoplysninger i licensoversigten. I licensoversigten kan du se, hvilken software din organisation er berettiget til at installere og bruge, men ikke hvad der er installeret i øjeblikket.
   - question: >
       Hvad er en produktpulje?
     answer: >
-      En licensgruppe grupperer licenser efter produkttype. Microsoft Volumenlicens organiserer produkter i tre puljer:
+      En licensgruppe grupperer licenser efter produkttype. Microsoft Volume Licensing organiserer produkter i tre puljer:
 
 
       - Programmer (f.eks. udgaver af Office)
@@ -134,11 +134,11 @@ sections:
       - Servere (f.eks. Exchange Server, SQL Server og Windows Server)
   - question: >
       Hvad er en licenstildeling?
-    answer: "Nogle gange tilbyder Microsoft volumenlicens en kampagne, hvor køb af et bestemt produkt giver kunden mulighed for at bruge et andet produkt. Salgsfremstød er typisk betinget af aktiv Software Assurance- eller Upgrade Advantage-dækning på det købte produkt. Eksempel:\n\n- En kunde køber 1 licens til Exchange Server 2016.\n- Transaktionen har en aktiv Software Assurance- eller Upgrade Advantage-dækning under tilbuddet.\n- Microsoft tilbyder en kampagne for 1 licens til Skype for Business Server med et køb af Exchange Server 2016.\n\nThe License Grant is what entitles, or \"grants\", the customer to use the promotional product. I eksemplet ovenfor tildeles kunden brug af Skype for Business Server.\n\nDu kan finde flere oplysninger om licenstildelinger i [Microsoft-produktvilkårene](https://www.microsoft.com/licensing/terms/welcome/welcomepage). \n"
+    answer: "Indimellem tilbyder Microsoft Volume Licensing en kampagne, hvor køb af et bestemt produkt giver kunden ret til at bruge et andet produkt. Kampagner er typisk betinget af aktiv Software Assurance- eller Upgrade Advantage-dækning på det købte produkt. Eksempel:\n\n- En kunde køber 1 licens for Exchange Server 2016.\n- Transaktionen har aktiv Software Assurance- eller Upgrade Advantage-dækning under tilbuddet.\n- Microsoft tilbyder en kampagne for 1 licens af Skype for Business Server med et køb af Exchange Server 2016.\n\nLicenstildelingen giver kunden ret til at bruge kampagneproduktet, eller \"tilskud\". I ovenstående eksempel tildeles kunden brugen af Skype for Business Server.\n\nDu kan finde flere oplysninger om licenstilskud under [Microsofts produktvilkår](https://www.microsoft.com/licensing/terms/welcome/welcomepage). \n"
   - question: >
-      Hvordan kan jeg se mine licenstildelinger?
+      Hvordan kan jeg se mine licenstilskud?
     answer: >
-      Licenstildelinger afspejles i listen Kontrakter og i Downloads & Nøgler. På produktlisten vises produkter, der er modtaget fra licenstildelinger, med en stjerne (*) for at angive, at de ikke var en del af det oprindelige køb.
+      Licenstilskud afspejles på listen Kontrakter og i Downloads & Nøgler. På produktlisten vises produkter, der er modtaget fra Licenstilskud, med en stjerne (*) for at angive, at de ikke var en del af det oprindelige køb.
   - question: >
       Kontakt assisteret support
-    answer: Kunder kan også [kontakte os](https://docs.microsoft.com/licensing/contact-us) via telefon eller webformular. Microsoft svarer på webformularindsendelser inden for 24 timer.
+    answer: Kunderne kan også [kontakte os](https://docs.microsoft.com/licensing/contact-us) via telefon eller webformular. Microsoft besvarer indsendelser af webformularer inden for 24 timer.

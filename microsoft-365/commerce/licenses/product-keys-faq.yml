@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Produktnøgler ofte stillede spørgsmål
+  title: Ofte stillede spørgsmål om produktnøgler
   author: cmcatee-MSFT
   ms.author: cmcatee
   manager: scotv
@@ -11,14 +11,14 @@ metadata:
   ms.service: o365-administration
   ms.custom: commerce_vl
   ms.localizationpriority: medium
-  description: Produktnøgler ofte stillede spørgsmål
-  ms.openlocfilehash: da5e623e2e8bf318217dfb26224037fa81ac4270
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  description: Ofte stillede spørgsmål om produktnøgler
+  ms.openlocfilehash: e42553a7ae588464481bc1573442016f8ce15b55
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63680492"
-title: Produktnøgler ofte stillede spørgsmål
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64715203"
+title: Ofte stillede spørgsmål om produktnøgler
 summary: ''
 sections:
 - name: Generel
@@ -26,178 +26,178 @@ sections:
   - question: >
       Hvad er produktnøgler?
     answer: >
-      En produktnøgle giver dig mulighed for at bruge et softwareprodukt, du har licenseret i henhold til et bestemt volumenlicensprogram. De produktnøgler, der er angivet i Microsoft 365 Administration, bør kun bruges sammen med volumenlicensprodukter og er kun beregnet til brug af din organisation.
+      En produktnøgle giver dig mulighed for at bruge et softwareprodukt, du har givet licens til under et bestemt volumenlicensprogram. De produktnøgler, der er angivet i Microsoft 365 Administration, må kun bruges sammen med volumenlicensprodukter og er kun beregnet til brug af din organisation.
 
 
-      En OSA-nøgle (Online Service Activation) er en produktnøgle til engangsbrug, der bruges til at aktivere abonnementer på Microsoft Online Services.
+      En OSA-nøgle (Online Service Activation) er en engangsproduktnøgle, der bruges til at aktivere abonnementer på Microsoft Online Services.
 
 
-      Du kan finde flere oplysninger under [Ofte stillede spørgsmål om onlinetjenesteaktivering af åbne programmer](/licensing/online-service-activation-faq).
+      Du kan få flere oplysninger under [Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer](/licensing/online-service-activation-faq).
   - question: >
-      Hvordan finder jeg produktnøgler i Microsoft 365 Administration?
-    answer: "1. Log på Microsoft 365 Administration. \n2. Gå til BillingYour-produkterVolume-licenseringDownloader  >  >  > **& produktnøgler**, > holder markøren over produktet, og vælg **Vis nøgler**.\n\nDu kan finde oplysninger om produktnøgler for hvert produkt, licenstypen (volumenlicensnøgle, KMS (nøgleadministrationstjeneste) og multiaktiveringsnøgle (MAK)) samt antallet af anvendte og tilgængelige MAK-aktiveringer.\n\nVælg **Download alle produktnøgler for** at downloade de taster, der vises for en licens til et lokalt drev.\n"
+      Hvordan gør jeg finde produktnøgler i Microsoft 365 Administration?
+    answer: "1. Log på Microsoft 365 Administration. \n2. Gå til **FaktureringFå** >  **dine** **produkterVolume-licenserDownloads** >  >  **& nøgler**, > peg på produktet, og vælg **Vis nøgler**.\n\nDu kan finde produktnøgleoplysninger for hvert produkt, licenstypen (Volume Licensing Key, KMS (Key Management Service) og MAK (Multiple Activation Key) og antallet af anvendte og tilgængelige MAK-aktiveringer.\n\nVælg **Download alle produktnøgler** for at downloade de nøgler, der vises for en licens til et lokalt drev.\n"
   - question: >
-      Hvordan finder jeg SQL Server produktnøgler?
+      Hvordan gør jeg finde SQL Server produktnøgler?
     answer: >
-      Nøglen SQL-licensen er integreret i guiden til aktivering af softwaren i stedet for at blive vist i Administration og registreres automatisk under installationen. Du kan finde flere oplysninger [SQL Server Installationsvejledning](/sql/database-engine/install-windows/install-sql-server).
+      Den SQL licensnøgle er integreret i softwarens aktiveringsguide i stedet for at blive vist i Administration og registreres automatisk under installationen. Du kan få flere oplysninger i [Installationsvejledning til SQL Server](/sql/database-engine/install-windows/install-sql-server).
 
 
-      Du kan også finde nøglen ved at downloade SQL ISO-filen fra Administration > .. \x64 folder > DefaultSetup.ini file. Sørg for at sikkerhedskopiere en eksisterende version, før du installerer eller opgraderer SQL versioner. Hvis du har brug for hjælp til fejlfinding af tekniske problemer under produktinstallation eller aktivering af onlinetjenester, skal du kontakte Microsofts tekniske support ved at sende [en anmodning til teknisk support](https://support.microsoft.com/oas).
+      Du kan også finde nøglen ved at hente SQL ISO-filen fra Administration > .. \x64-mappe > DefaultSetup.ini fil. Sørg for at sikkerhedskopiere alle eksisterende versioner, før du installerer eller opgraderer SQL udgaver. Hvis du har brug for hjælp til fejlfinding af tekniske problemer under produktinstallation eller onlinetjenesteaktivering, skal du kontakte Microsoft Teknisk Support ved at indsende en [teknisk supportanmodning](https://support.microsoft.com/oas).
   - question: >
-      Hvordan finder jeg en produktnøgle til køb med volumenlicens?
-    answer: "Hvis din aftale tillader adgang til et produkt, der kræver en nøgle, kan du finde disse nøgler ved at gå til **BillingYour-produkterVolume-licenseringDownloads** >  >  >  **& nøgler**. \n\nNogle produkter kræver dog ikke en produktnøgle. Disse oplysninger er angivet i produktbeskrivelsen i kataloget Downloads og nøgler.\n\nHvis du vil finde ud af, om dit produkt kræver en nøgle, skal du [gå til Produktaktivering og nøgleoplysninger](https://licensingapps.microsoft.com/product-activation). Under Find produkter skal du vælge et produkt eller søge efter dit produktnavn.\n"
+      Hvordan gør jeg finde en produktnøgle til volumenlicenskøb?
+    answer: "Hvis din aftale giver adgang til et produkt, der kræver en nøgle, kan du finde disse nøgler ved at gå til **BillingYour** >  **productsVolume** >  **licensingDownloads** >  & nøgler. \n\nNogle produkter kræver dog ikke en produktnøgle. Disse oplysninger er angivet i produktbeskrivelsen i kataloget Downloads og nøgler.\n\nHvis du vil finde ud af, om dit produkt kræver en nøgle, skal du gå til [Produktaktivering og nøgleoplysninger](https://licensingapps.microsoft.com/product-activation). Under Find produkter skal du vælge et produkt eller søge efter dit produktnavn.\n"
   - question: >
       Hvad er en konfigurationsnøgle?
     answer: >
-      Der bruges en konfigurationsnøgle til hver kombination af produkt/version for at låse produktet op ved at tilsidesætte aktiveringen. Du kan få en konfigurationsnøgle på en af to måder:
+      Der bruges en installationsnøgle til hver produkt-/versionskombination til at låse produktet op ved at omgå aktiveringen. Du kan få en konfigurationsnøgle på to måder:
 
-        - **Fysisk indfrielse** For produkter, der er erhvervet via fysisk fuldførelse, udskrives konfigurationsnøglen på mediebåndet.
-        - **Fuldførelse af download** For produkter, der er erhvervet ved download fra Administration, vises konfigurationsnøglen på downloadskærmen og kan ledsages af følgende tekst: Nogle produkter, der kan downloades, kræver konfigurationstaster. Bemærk konfigurationsnøglen, da den er nødvendig under produktinstallationen. Du kan få mere at vide om konfigurationstaster [under KMS-klientkonfigurationstaster](/windows-server/get-started/kmsclientkeys).
+        - **Fysisk opfyldelse** For produkter, der er erhvervet via fysisk opfyldelse, udskrives installationsnøglen på mediemuffet.
+        - **Download opfyldelse** For produkter, der er erhvervet ved download fra Administration, vises installationsnøglen på downloadskærmen og kan ledsages af følgende tekst: Nogle produkter, der kan downloades, kræver konfigurationsnøgler. Bemærk installationsnøglen, da den er nødvendig under produktinstallationen. Du kan få mere at vide om konfigurationsnøgler under [Konfigurationsnøgler til KMS-klient](/windows-server/get-started/kmsclientkeys).
   - question: >
       Hvad bestemmer, hvilke produktnøgler der er knyttet til mine aftaler?
     answer: >
-      Der leveres produktnøgler til volumenlicens for hvert licens-id, der er angivet i [oversigten over Microsoft-relationer](/licensing/license-faq). Denne relationsoversigt findes i Volume Licensing Service Center. Du kan finde flere oplysninger [under Hvad er et licens-id](/licensing/license-faq#what-is-a-licensing-id). Du kan have flere licenserings-ide'er:
+      Der er angivet volumenlicensproduktnøgler for hvert licens-id, der er angivet i oversigten [over Microsoft-relationer](/licensing/license-faq). Denne relationsoversigt findes i Volume Licensing Service Center. Du kan få flere oplysninger under [Hvad er et licens-id](/licensing/license-faq#what-is-a-licensing-id). Du kan have flere licens-id'er:
 
-        - Enterprise Agreement (EA) og Select Plus-kunder modtager produktnøgler pr. produktpulje (systemer, servere og programmer).
-        - Vælg Aftale-kunder modtager produktnøgler pr. produktpulje (systemer, servere og programmer) baseret på deres indkøbsprognoser.
-        - Open License customers and Open Value customers receive applicable product keys based on their license purchases.
+        - Enterprise Agreement (EA) og Select Plus-kunder modtager produktnøgler pr. produktgruppe (systemer, servere og programmer).
+        - Udvalgte aftalekunder modtager produktnøgler pr. produktpulje (systemer, servere og programmer) baseret på deres indkøbsprognoser.
+        - Kunder med åben licens og Kunder med åben værdi modtager relevante produktnøgler baseret på deres licenskøb.
 
-      Du kan finde flere oplysninger i De ofte [stillede spørgsmål om licensoversigt.](/licensing/license-faq)
+      Du kan få flere oplysninger under [Ofte stillede spørgsmål om licensoversigt](/licensing/license-faq).
 
 
       > [!NOTE]
 
-      > Alle kunder har ret til at bruge produktnøgler til afbildnings- og nedgraderingsformål igen. Vælg Plus, Enterprise Agreement (EA), og Vælg kunder har begrænsede evalueringsrettigheder til uddannelse og sikkerhedskopier. Du kan finde flere oplysninger [i Korte oplysninger om produktlicenser](/licensing/learn-more/volume-licensing-briefs).
-- name: Volumenaktivering
+      > Alle kunder har ret til at bruge produktnøgler til re-imaging- og nedgraderingsformål. Vælg Plus, Enterprise Agreement (EA) og Select-kunder har begrænsede evalueringsrettigheder til oplæring og sikkerhedskopiering. Du kan få flere oplysninger under [Produktlicensoplysninger](/licensing/learn-more/volume-licensing-briefs).
+- name: Aktivering af diskenhed
   questions:
   - question: >
-      Hvad er volumenaktivering?
+      Hvad er aktivering af diskenhed?
     answer: >
-      Volumenaktivering er en konfigurerbar løsning, der hjælper med at automatisere og administrere produktaktiveringsprocessen på computere, der kører Windows-operativsystemer, der er licenseret under et volumenlicensprogram. Volumenaktivering bruges også med anden software fra Microsoft, herunder Office-pakkerne, der sælges i henhold til volumenlicensaftaler, og som understøtter volumenaktivering. Du kan finde flere oplysninger under:
+      Volumenaktivering er en konfigurerbar løsning, der hjælper med at automatisere og administrere produktaktiveringsprocessen på computere, der kører Windows operativsystemer, der er licenseret under et volumenlicensprogram. Volumenaktivering bruges også med anden software fra Microsoft, herunder Office-pakker, der sælges under volumenlicensaftaler, og som understøtter volumenaktivering. Du kan finde flere oplysninger under:
         - [Værktøjer til at administrere volumenaktivering af Office](/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)
-        - [Volumenaktivering af Windows 10](/windows/deployment/volume-activation/volume-activation-windows-10)
+        - [Aktivering af diskenhed for Windows 10](/windows/deployment/volume-activation/volume-activation-windows-10)
 
-      Volumenaktivering gælder kun for systemer, der er dækket af et volumenlicensprogram, og de anvendes udelukkende som et værktøj til aktivering. Det er ikke knyttet til fakturerings- eller faktureringslicens.
+      Volumenaktivering gælder kun for systemer, der er omfattet af et volumenlicensprogram, og bruges udelukkende som et værktøj til aktivering. Det er ikke bundet til fakturering eller fakturering af licenser.
 
 
-      Du kan bruge volumenaktivering på to måder til at fuldføre volumenaktivering. En af eller begge nøgletyper kan bruges af kunder til at aktivere systemer i organisationen:
-        - Nøgleadministrationstjenesten (KMS) giver organisationer mulighed for at aktivere systemer inden for deres eget netværk.
-        - Multiaktiveringsnøgle (MAK) aktiverer systemer én gang ved hjælp af Microsofts hostede aktiveringstjenester.
+      Volumenaktivering giver to måder at fuldføre aktivering af diskenheder på. En eller begge nøgletyper kan bruges af kunder til at aktivere systemer i deres organisation:
+        - KMS (Key Management Service) gør det muligt for organisationer at aktivere systemer i deres eget netværk.
+        - Flere aktiveringsnøgler (MAK) aktiverer systemer på én gang ved hjælp af Microsoft-hostede aktiveringstjenester.
   - question: >
-      Hvad er nøgleadministrationstjenesten (KMS)?
+      Hvad er KMS (Key Management Service)?
     answer: >
-      KMS er en aktiveringstjeneste, der giver organisationer mulighed for at aktivere systemer på deres eget netværk ved at eliminere behovet for, at individuelle computere opretter forbindelse til Microsoft for produktaktivering. Det kræver ikke et dedikeret system og kan være hostet på et system, der leverer andre tjenester.
+      KMS er en aktiveringstjeneste, der giver organisationer mulighed for at aktivere systemer i deres eget netværk ved at fjerne behovet for, at individuelle computere opretter forbindelse til Microsoft for produktaktivering. Det kræver ikke et dedikeret system og kan hostes sammen på et system, der leverer andre tjenester.
 
 
-      KMS kræver et minimum antal fysiske eller virtuelle computere i et netværksmiljø. Disse minimumsgrænser, kaldet aktiveringstærskler, er indstillet, så de nemt kan opfyldes af virksomhedskunder.
+      KMS kræver et minimumantal af enten fysiske eller virtuelle computere i et netværksmiljø. Disse minimumværdier, kaldet aktiveringstærskler, er angivet, så virksomhedskunder nemt kan opfylde dem.
 
         - Aktiveringstærskler for Windows
-          - Din organisation skal have mindst fem computere til at aktivere servere, der kører Windows Server.
-          - Din organisation skal have mindst 25 computere til at aktivere klientsystemer, der kører Windows.
+          - Organisationen skal have mindst fem computere for at aktivere servere, der kører Windows Server.
+          - Organisationen skal have mindst 25 computere for at aktivere klientsystemer, der kører Windows.
         - Aktiveringstærskler for Office
-          - Din organisation skal have mindst fem computere, der kører en udgave af Office, for at du kan aktivere installerede Office ved hjælp af KMS.
+          - Organisationen skal have mindst fem computere, der kører en version af Office for at aktivere installerede Office produkter ved hjælp af KMS.
 
-      Du kan finde flere oplysninger om aktiveringstærskler i [planlægningsvejledningen til aktivering af volumen](/windows/deployment/volume-activation/volume-activation-windows-10).
+      Du kan få flere oplysninger om aktiveringstærskler i [Planlægningsvejledning til volumenaktivering](/windows/deployment/volume-activation/volume-activation-windows-10).
   - question: >
       Hvad er en KMS-værtsnøgle?
     answer: >
-      Der bruges en KMS-nøgle til at aktivere KMS-værtscomputeren med en Microsoft-aktiveringsserver og kan aktivere op til 6 KMS-værter med 10 aktiveringer pr. vært. Hver KMS-vært kan aktivere et ubegrænset antal computere.
+      En KMS-nøgle bruges til at aktivere KMS-værtscomputeren med en Microsoft-aktiveringsserver og kan aktivere op til 6 KMS-værter med 10 aktiveringer pr. vært. Hver KMS-vært kan aktivere et ubegrænset antal computere.
   - question: >
-      Hvorfor vises der ikke nogen KMS-nøgle Microsoft 365 Administration kunder med åben licens?
-    answer: "KMS-nøgler tildeles ikke længere open-aftaler på forhånd, da brug af multiaktiveringsnøglen (MAK) er den foretrukne aktiveringsmetode.\n\nKSM-nøgler kan tildeles til åbne kunder, der opfylder minimumsgrænsen for KMS-aktivering for Windows Server, operativsystem og Office. Hvis du vil anmode om en undtagelse, skal du sende en anmodning om webformular til Microsoft Support.\n\nHvis du vil anmode om en undtagelse, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller nøglevisningsvisning og angive følgende oplysninger:\n  \n  - Aftale/registreringsnummer eller licens-id og autorisation.\n  - Produktnavn (herunder version og version).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer, der kræves.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
+      Hvorfor vises der ingen KMS-nøgle på Microsoft 365 Administration for open license-kunder?
+    answer: "KMS-nøgler er ikke længere forudtildelt til åbne aftaler, da brug af MAK (Multiple Activation Key) er den foretrukne metode til aktivering.\n\nKSM-nøgler kan undtagelsesvis tildeles til Open-kunder, der opfylder minimumgrænsen for KMS-aktivering for Windows server, operativsystem og Office. Hvis du vil anmode om en undtagelse, skal du sende en webformularanmodning til Microsoft Support.\n\nHvis du vil anmode om en undtagelse, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller nøglefremviser og angive følgende oplysninger:\n  \n  - Aftale/tilmeldingsnummer eller licens-id og autorisation.\n  - Produktnavn (herunder version og udgave).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer er påkrævet.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
   - question: >
-      Hvad gør jeg, hvis jeg skal bruge flere KMS-værter?
-    answer: "Hvis du kræver yderligere KMS-aktiveringer til aktivering af mere end 6 KMS-værter, skal du sende en anmodning om webformular til at Microsoft 365 Administration support. \n\nHvis du vil anmode om en undtagelse, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller nøglevisningsvisning og angive følgende oplysninger:\n  \n  - Aftale/registreringsnummer eller licens-id og autorisation.\n  - Produktnavn (herunder version og version).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer, der kræves.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
+      Hvad gør jeg, hvis jeg har brug for flere KMS-værter?
+    answer: "Hvis du har brug for yderligere KMS-aktiveringer for at aktivere mere end 6 KMS-værter, skal du sende en webformularanmodning for at Microsoft 365 Administration support. \n\nHvis du vil anmode om en undtagelse, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller nøglefremviser og angive følgende oplysninger:\n  \n  - Aftale/tilmeldingsnummer eller licens-id og autorisation.\n  - Produktnavn (herunder version og udgave).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer er påkrævet.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
   - question: >
-      Hvad er en multiaktiveringsnøgle (MAK)?
+      Hvad er en MAK (Multiple Activation Key)?
     answer: >
-      En multiaktiveringsnøgle (MAK) aktiverer systemer én gang ved hjælp af Microsofts hostede aktiveringstjenester, der kræver forbindelse til en Microsoft-aktiveringsserver. Når computere er aktiveret, kræves der ingen yderligere kommunikation med Microsoft.
+      En MAK (Multiple Activation Key) aktiverer systemer på én gang ved hjælp af Aktiveringstjenester, der hostes af Microsoft, og som kræver forbindelse til en Microsoft-aktiveringsserver. Når computere er aktiveret, kræves der ikke yderligere kommunikation med Microsoft.
 
 
-      **Vigtigt** Antallet af tilladte MAK-aktiveringer er baseret på din Volumenlicens-aftale.
+      **Vigtigt** Antallet af tilladte aktiveringer af MAK er baseret på din volumenlicensaftale.
   - question: >
-      Hvorfor svarer antallet af mak-aktiveringer ikke til det antal licenser, vi har købt?
+      Hvorfor stemmer antallet af angivne MAK-aktiveringer ikke overens med antallet af licenser, vi har købt?
     answer: >
-      Vi anbefaler, at kunderne bruger KMS til at aktivere flere aktiveringsnøgler (MAK). KMS er den foretrukne aktiveringsmetode til installationer i stor skala. Mange faktorer bestemmer antallet af aktiveringer, der er knyttet til hver MAK, herunder købte licenser, kundens prisniveau for indkøb og deres volumenlicensprogram.
+      Vi anbefaler, at kunderne bruger KMS til at aktivere flere aktiveringsnøgler (MAK). KMS er den foretrukne aktiveringsmetode for udrulninger i stor skala. Mange faktorer bestemmer antallet af aktiveringer, der er knyttet til hver MAK, herunder købte licenser, prisniveauet for kundekøb og deres volumenlicensprogram.
 
 
       Antallet af aktiveringer, der er tilgængelige for et produkt, svarer ikke altid til antallet af købte licenser. Normalt modtager du flere aktiveringer, hvis du har brug for at geninstallere og aktivere nogle af dine produkter. Se afsnittet Licensoversigt i din aftale for at få vist antallet af licenser.
   - question: >
-      Hvordan kan jeg anmode om en forøgelse af MAK-aktiveringsbegrænsningerne?
-    answer: "Øger mængden af MAK-aktiveringer kan anmodes via webformular og tildeles med undtagelse af undtagelser. For Canada og USA skal du indsende anmodninger [om volumenlicenssupport](https://support.microsoft.com/supportrequestform/2afa6f15-b710-db46-909a-8346017c802f). For alle andre lande skal du sende en [Supportwebformular](/licensing/contact-us). \n\nHvis du vil anmode om en MAK-aktiveringsgrænse, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller nøglevisningsadministrator og angive følgende oplysninger:\n\n  - Aftale/registreringsnummer eller Licens-id og autorisation.\n  - Produktnavn (herunder version og version).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer, der kræves.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
+      Hvordan gør jeg anmode om en stigning til MAK-aktiveringsgrænser?
+    answer: "Der kan anmodes om forøgelser af aktiveringsantallet for MAK via webformularen og tildeles som en undtagelse. For Canada og USA skal du indsende [anmodninger om support til volumenlicens](https://support.microsoft.com/supportrequestform/2afa6f15-b710-db46-909a-8346017c802f). Send en [webformular til support](/licensing/contact-us) for alle andre lande. \n\nHvis du vil anmode om en aktiveringsgrænse for MAK, skal du have tilladelser som VLSC-administrator, nøgleadministrator eller Nøglefremviser og angive følgende oplysninger:\n\n  - Aftale/tilmeldingsnummer eller licens-id og autorisation.\n  - Produktnavn (herunder version og udgave).\n  - De sidste 5 tegn i produktnøglen.\n  - Antallet af værtsaktiveringer er påkrævet.\n  - Forretningsberettigelse eller årsag til udrulning.\n"
   - question: >
-      Hvordan aktiverer jeg licenser ved hjælp af en multiaktiveringsnøgle (MAK)?
+      Hvordan gør jeg aktivere licenser ved hjælp af en MAK (Multiple Activation Key)?
     answer: >
-      Du kan aktivere licenser på en af to måder ved hjælp af MAK:
+      Du kan aktivere licenser på to måder ved hjælp af MAK:
 
-        - MAKUafhængig aktivering Hver computer opretter individuelt forbindelse til Microsoft ved hjælp af internettet eller telefonen for at fuldføre aktiveringen.
-        - Mak-proxyaktivering En centraliseret aktiveringsanmodning foretages på vegne af flere computere med en enkelt forbindelse til Microsoft online eller pr. telefon. Denne metode bruger VAMT (Volume Activation Management Tool), som er en del af Windows Automated Installation Kit (WAIK). VAMT giver it-fagfolk mulighed for at automatisere og administrere processen til aktivering af volumen centralt ved hjælp af MAK og indeholder en kontrol af antallet af aktiveringer på MAK.
+        - MAK Uafhængig aktivering Hver computer opretter individuelt forbindelse til Microsoft ved hjælp af internettet eller telefon for at fuldføre aktiveringen.
+        - MAK Proxy Activation One centraliseret aktiveringsanmodning foretages på vegne af flere computere med en enkelt forbindelse til Microsoft online eller telefonisk. Denne metode bruger VAMT (Volume Activation Management Tool), som er en del af WAIK (Windows Automated Installation Kit). VAMT gør det muligt for it-fagfolk at automatisere og centralt administrere volumenaktiveringsprocessen ved hjælp af MAK og inkluderer en kontrol af antallet af aktiveringer på MAK.
   - question: >
-      Hvad er værktøjet til styring af volumenaktivering (VAMT)?
+      Hvad er volume Activation Management Tool (VAMT)?
     answer: >
-      VAMT (Volume Activation Management Tool) er et værktøj, der gør det muligt for netværksadministratorer og andre it-fagfolk at automatisere og centralt administrere processen til aktivering af volumen og detail til Windows, Microsoft Office og vælge andre Microsoft-produkter. VAMT kan administrere volumenaktivering ved hjælp af flere aktiveringsnøgler (MAKs) eller Windows Nøgleadministrationstjeneste (KMS). VAMT er en Microsoft Management Console -snap-in (MMC), der kræver Microsoft Management Console (MMC) 3,0.
+      VAMT (Volume Activation Management Tool) er et værktøj, der gør det muligt for netværksadministratorer og andre it-medarbejdere at automatisere og centralt administrere volumen- og detailaktiveringsprocessen for Windows, Microsoft Office og vælge andre Microsoft-produkter. VAMT kan administrere aktivering af diskenhed ved hjælp af flere aktiveringsnøgler (MAKs) eller KMS (Windows Key Management Service). VAMT er et MMC-snap-in (Microsoft Management Console), der kræver MMC (Microsoft Management Console) 3.0.
 
 
-      Du kan finde oplysninger om VAMT i:
+      Du kan få oplysninger om VAMT under:
 
-        - [Værktøj til styring af volumenaktivering (VAMT) Teknisk reference](/windows/deployment/volume-activation/volume-activation-management-tool)
-        - [Administrere aktivering ved hjælp af værktøjet til styring af volumenaktivering (VAMT)](/previous-versions/tn-archive/ff686876(v=technet.10))
-        - Download [værktøj til styring af volumenaktivering (VAMT)](https://www.microsoft.com/download/details.aspx?id=11936)
+        - [VaMT (Volume Activation Management Tool) Teknisk reference](/windows/deployment/volume-activation/volume-activation-management-tool)
+        - [Administration af aktivering ved hjælp af volume Activation Management Tool (VAMT)](/previous-versions/tn-archive/ff686876(v=technet.10))
+        - Download [VAMT (Volume Activation Management Tool)](https://www.microsoft.com/download/details.aspx?id=11936)
   - question: >
-      Hvad skal jeg vide om at Windows KMS-serveren som KMS-vært for at aktivere Windows-klienter?
-    answer: "Hvis du installerer Windows du bruger KMS (Key Management Service) som aktiveringsmetode, skal du bemærke, at:\n  \n  - Windows-server understøttes ikke som en KMS-vært til at aktivere Windows.\n  - Der Windows en kms-nøgle til serveren for at få en programrettelse, der gør det muligt Windows klientcomputere. Du kan finde den seneste programrettelse [under Konfigurere en KMS-værtscomputer for at aktivere volumenlicensversioner af Office](/deployoffice/vlactivation/configure-a-kms-host-computer-for-office). \n\nHvis du bruger en Windows KMS-vært, kan du:\n  \n  - Opgrader KMS-værtscomputeren til Windows Server.\n  - Nedgrader computeren til Windows Server 2003.\n  - Kør KMS-værten på en Windows volumenversionsmaskine.\n  - Kør en Windows Server-virtuel maskine.\n"
+      Hvad skal jeg vide om at bruge Windows Server som KMS-værten til at aktivere Windows klienter?
+    answer: "Hvis du installerer Windows ved hjælp af KMS (Key Management Service) som aktiveringsmetode, skal du være opmærksom på følgende:\n  \n  - Windows Server understøttes ikke som KMS-vært for at aktivere Windows.\n  - Der kræves en KMS-nøgle til Windows server for at få en programrettelse for at tillade aktivering af Windows klientcomputere. Du kan se den seneste programrettelse under [Konfigurer en KMS-værtscomputer for at aktivere volumenlicenserede versioner af Office](/deployoffice/vlactivation/configure-a-kms-host-computer-for-office). \n\nHvis du bruger Windows Server som KMS-vært, kan du:\n  \n  - Opgrader KMS-værtscomputeren til Windows-serveren.\n  - Nedgrader computeren til Windows Server 2003.\n  - Kør KMS-værten på en computer med Windows volumenudgave.\n  - Kør en virtuel Windows Server-maskine.\n"
   - question: >
-      Hvad skal jeg vide om volumenaktivering til Office, Project og Visio?
+      Hvad skal jeg vide om volumenaktivering for Office, Project og Visio?
     answer: >
-      Følgende ændringer i volumenaktivering er relateret til Office, Project og Visio:
-        - Office KMS Host aktiverer alle Office pakke eller program.
-        - Der bør kun Office KMS-nøgle installeres og bruges til aktivering.
+      Følgende ændringer af volumenaktivering er relateret til Office, Project og Visio:
+        - Office KMS-vært aktiverer alle Office-pakker eller -programmer.
+        - Der skal kun installeres og bruges én Office KMS-nøgle til aktivering.
 
-      Hvis du installerer Office du bruger KMS (Key Management Service) som aktiveringsmetode, skal du bemærke, at:
-        - Du kan ikke aktivere en Office kms, hvis du bruger en Windows som KMS-vært.
-        - Der findes ikke en programrettelse, der kan tillade aktivering af Office klienter.
+      Hvis du installerer Office ved hjælp af KMS (Key Management Service) som aktiveringsmetode, skal du være opmærksom på følgende:
+        - Du kan ikke aktivere Office ved hjælp af KMS, hvis du bruger Windows Server som KMS-vært.
+        - Der findes ikke en programrettelse, der tillader aktivering af Office klienter.
 
-      Hvis du bruger en Windows Server 2008 som KMS-vært, kan du:
-        - Opgrader KMS-værtscomputeren til Windows Server.
+      Hvis du bruger Windows Server 2008 som KMS-vært, kan du:
+        - Opgrader KMS-værtscomputeren til Windows-serveren.
         - Nedgrader computeren til en ældre version af Windows Server.
         - Kør KMS-værten på en Windows pc.
-        - Kør en Windows server virtuel maskine på en nyere version af Windows Server.
+        - Kør en virtuel Windows Server-maskine på en nyere version af Windows Server.
   - question: >
-      Hvordan aktiverer jeg Windows Terminal Og RDS (Remote Desktop Service)?
+      Hvordan gør jeg aktivere Windows Terminal Server og RDS (Remote Desktop Service)?
     answer: >
-      Når du har hentet dine servermedier fra VLSC, kan du aktivere det ved hjælp af guiden til produktaktivering. Du behøver ikke at finde en nøgle til volumenlicens eller produktnøgle i VLSC. Når alle trin til aktiveringsguiden fuldføres, bliver serveren bedt om at oprette forbindelse til Microsoft Clearing House via internettet for at validere dataene. Alternativt kan aktiveringsguiden tilbyde telefon- eller webaktivering for offlineservere.
+      Når du har downloadet servermediet fra VLSC, kan du aktivere det ved hjælp af guiden til produktaktivering. Du behøver ikke at finde en volumenlicensnøgle eller en produktnøgle i VLSC. Når du fuldfører alle trin i aktiveringsguiden, bliver serveren bedt om at oprette forbindelse til Microsoft Clearing House via internettet for at validere dataene. For offlineservere tilbyder aktiveringsguiden telefon- eller webaktivering.
 
 
-      For at komme i gang skal du tildele en Licens til fjernskrivebord-rolle for serveren (**StartAdministrative** >  **ToolsServer** >  Manager) og derefter aktivere RDS-tjenesten fra Remote Desktop License Manager. Vælg **StartAdministrative** >  **ToolsRemote** >  Desktop Services, og vælg derefter **Fjernskrivebord/Terminal License Manager**.
+      Til at begynde med skal du tildele serveren en licensrolle til Fjernskrivebord (**StartAdministrative** >  **ToolsServer** >  Manager) og derefter aktivere RDS-tjenesten fra Licensstyring til Fjernskrivebord. Vælg **StartAdministrative** >  **værktøjerFjern** >  skrivebordstjenester, og vælg derefter **Fjernskrivebord/Terminal License Manager**.
 
 
-      Under aktiveringen bliver du bedt om at vælge licensprogrammet og aftalenummeret. For Open License-kunder skal du angive dit godkendelsesnummer. For MPSA skal du angive dit købskontonummer (ikke MPSA-aftalenummeret). Hvis du ikke er sikker på programtypen for det licens-id, der bruges til at købe dine CAL-licenser, skal du gå til **Oversigt over VLSC-relationer** og referere til kolonnen **Overordnet program** .
+      Under aktiveringen bliver du bedt om at vælge licensprogrammet og aftalenummeret. For Open License-kunder skal du angive dit autorisationsnummer. For MPSA skal du angive dit købskontonummer (ikke MPSA-aftalenummeret). Hvis du er usikker på programtypen for det licens-id, der bruges til at købe dine CAL-licenser, skal du gå til **oversigt over VLSC-relationer** og se kolonnen **Overordnet program** .
 
 
-      Du kan finde oplysninger om licenser til Terminal Server i [Terminal Server-licensering](/troubleshoot/windows-server/remote/terminal-server-licensing). Hvis du vil have mere at vide om, hvordan du installerer licensrollen til fjernskrivebord og aktiverer licensserveren, skal du se Aktivere licensserveren til Fjernskrivebord-tjenester og Kan ikke oprette forbindelse til RDS, fordi der ikke er nogen tilgængelige [RD-licensservere](/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server).[](/windows-server/remote/remote-desktop-services/rds-activate-license-server)
+      Du kan få oplysninger om licensering af Terminal Server under [Terminal Server-licenser](/troubleshoot/windows-server/remote/terminal-server-licensing). Du kan få oplysninger om, hvordan du installerer rollen som fjernskrivebordslicens og aktiverer licensserveren, under [Aktivér licensserveren til Fjernskrivebord-tjenester](/windows-server/remote/remote-desktop-services/rds-activate-license-server) og  [Kan ikke oprette forbindelse til RDS, fordi der ikke er nogen tilgængelige RD-licenseringsservere](/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server).
   - question: >
-      Kan organisationer inden for samme ejerskabsstruktur bruge den samme nøgle til at installere et produkt?
+      Kan organisationer inden for samme ejerskabsstruktur bruge den samme nøgle til at udrulle et produkt?
     answer: >
-      Licensoverholdelse og aktivstyring er uafhængige af nøgleaktivering. Kunder behøver ikke at bruge de nøgler, der leveres under et specifikt licens-id (aftale, registrering, tilknytning eller licens). Hvis en overordnet organisation har en individuel aftale, kan den bruge den samme nøgle til at installere et produkt på tværs af overordnede og underordnede organisationer. Denne fleksibilitet giver kunderne mulighed for at administrere deres installationsbillede centralt ved at bruge enten nøgler, der er specifikke for aftaler/licenser eller ét sæt nøgler for alle.
+      Licensoverholdelse og administration af aktiver er uafhængig af nøgleaktivering. Kunder behøver ikke at bruge de nøgler, der er angivet under et bestemt licens-id (aftale, tilmelding, partner eller licens). Hvis en overordnet organisation har en individuel aftale, kan den bruge den samme nøgle til at udrulle et produkt på tværs af overordnede og underordnede organisationer. Denne fleksibilitet giver kunderne mulighed for centralt at administrere deres udrulningsafbildning ved hjælp af enten nøgler, der er specifikke for aftaler/licenser eller et sæt nøgler for alle.
   - question: >
-      Kan jeg bruge mine volumenlicensnøgler til at udnytte mine billedrettigheder igen?
+      Kan jeg bruge mine volumenlicensnøgler til at udøve mine rettigheder til genbehandling?
     answer: >
-      Ja. Re-imaging rights are granted to all Microsoft Volume Licensing customers. I henhold til disse rettigheder kan kunder genbilleder fra OEM (Original Equipment Manufacturer) eller kopier med fuldpakket produkt (FPP) ved hjælp af medier, der leveres i henhold til deres aftale, hvis de kopier, der er foretaget fra medier med volumenlicens, er identiske med det oprindelige licenserede produkt. Som volumenlicenskunde kan du finde volumenlicensnøglerne på siden med produktnøglen eller anmode om dine nøgler via et [Microsoft-aktiveringscenter](https://licensingapps.microsoft.com/product-activation).
+      Ja. Re-imaging-rettigheder tildeles til alle Microsoft Volume Licensing-kunder. Under disse rettigheder kan kunder genbilled originalt udstyr Producent (OEM) eller Full Packaged Product (FPP) licenseret kopier ved hjælp af medier, der leveres i henhold til deres aftale, hvis kopierne fra Volume Licensing medier er identiske med den oprindelige licens produkt. Som volumenlicenskunde kan du finde volumenlicensnøglerne på produktnøglesiden eller anmode om dine nøgler via et [Microsoft Activation Center](https://licensingapps.microsoft.com/product-activation).
 
 
       > [!NOTE]
 
-      > Hvis du er kunde med en åben licens, skal du købe mindst én enhed af det produkt, du vil genbillede, for at få adgang til produktmedierne og modtage en produktnøgle.
+      > Hvis du er open license-kunde, skal du købe mindst én enhed af produktet, som du vil gentegne for at få adgang til produktmediet og modtage en produktnøgle.
 
 
-      Du kan finde flere oplysninger om billedrettigheder i [Produktlicens- kort](/licensing/learn-more/volume-licensing-briefs).
+      Du kan finde flere oplysninger om rettigheder til genbehandling under [Produktlicensvejledninger](/licensing/learn-more/volume-licensing-briefs).
   - question: >
-      Hvordan downloader jeg mine nøgler til en lokal fil?
-    answer: "Den Microsoft 365 Administration mulighed for at downloade produktnøgler til en lokal fil til senere brug. Når du downloader produktnøgler fra siden Downloads og nøgler, indeholder filen alle volumenlicensnøgler, der er knyttet til aftaler i din profil i Administration. Men hvis du henter nøgler fra visningen Licens-id på siden Relationsoversigt, indeholder filen kun de nøgler, der er knyttet til det licens-id, du får vist.\n\nEn produktnøglefil, der kan downloades, er i et tabulatorsepareret format og kan åbnes i Excel eller en teksteditor til at sortere og få vist nøgler. Disse er de kolonner, der er inkluderet i filen: **Licens-id**, Overordnet **program****, Organisation****, Produkt****, Produktnøgle**, **Type** og **MAK-aktiveringer -brugt/tilgængelig, sæder og OSA-status**. \n\nHvis du vil åbne en downloadet fil Excel, skal du udføre disse trin:\n  1. Åbn Microsoft Excel.\n  2. Vælg **Filåbner** > , og vælg derefter den hentede CSV-fil.\n  3. Vælg **Afgrænset** (standard), og vælg derefter **Tabulatorsepareret** (for at forhindre visning af alle data i en enkelt kolonne).\n  4. Vælg **Udfør**. \n\nFilen .CSV i Excel, og dataene vises i separate kolonner.\n"
+      Hvordan gør jeg downloade mine nøgler til en lokal fil?
+    answer: "Med Microsoft 365 Administration kan du downloade produktnøgler til en lokal fil til senere brug. Når du downloader produktnøgler fra siden Downloads og nøgler, indeholder filen alle volumenlicensnøgler, der er knyttet til aftaler i din administratorprofil. Men hvis du downloader nøgler fra visningen Licenserings-id på siden Relationsoversigt, indeholder filen kun de nøgler, der er knyttet til det licens-id, du får vist.\n\nEn produktnøglefil, der kan downloades, er i tabulatorsepareret format og kan åbnes i Excel eller en teksteditor til sortering og visning af nøgler. Dette er de kolonner, der er inkluderet i filen: **Licens-id**, **Overordnet program**, **Organisation**, **Produkt**, **Produktnøgle**, **Type** og **MAK Activations-Used/Available, Seats og OSA Status**. \n\nHvis du vil åbne en downloadet fil i Excel, skal du udføre disse trin:\n  1. Åbn Microsoft Excel.\n  2. Vælg **FilerÅbn** > , og vælg derefter den downloadede CSV-fil.\n  3. Vælg **Afgrænset** (standard), og vælg derefter **Tabulatorsepareret** (for at forhindre, at alle data vises i en enkelt kolonne).\n  4. Vælg **Udfør**. \n\nDen .CSV fil åbnes i Excel, og dataene vises i separate kolonner.\n"
 - name: Support
   questions:
   - question: >
-      Hvordan kontakter jeg support?
+      Hvordan gør jeg kontakt support?
     answer: >
-      Microsoft 365 Administration-kunder kan kontakte support via telefon eller webformular. Microsoft svarer på webformularindsendelser inden for 24 timer. Hvis du vil kontakte support, skal du [se Kontakt os](/licensing/contact-us).
-additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)\n\n- [Ofte stillede spørgsmål om aktivering af onlinetjenester for åbne programmer](online-service-activation-faq.yml)"
+      Microsoft 365 Administration kunder kan kontakte support via telefon eller webformular. Microsoft besvarer indsendelser af webformularer inden for 24 timer. Hvis du vil kontakte support, skal du se [Kontakt os](/licensing/contact-us).
+additionalContent: "\n## <a name=\"additional-resources\"></a>Flere ressourcer\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)\n\n- [Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer](online-service-activation-faq.yml)"

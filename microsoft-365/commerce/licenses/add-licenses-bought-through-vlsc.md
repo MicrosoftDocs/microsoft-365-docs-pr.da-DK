@@ -1,5 +1,5 @@
 ---
-title: Føj licenser til et abonnement, der er købt via Volume Licensing Service Center
+title: Føj licenser til et VLSC-abonnement
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,29 +18,29 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX
-description: Få mere at vide om, hvordan du føjer licenser Microsoft 365 dit abonnement, der er købt via tredjepartspartneren, og som genkendes af Microsoft.
+description: Få mere at vide om, hvordan du føjer licenser til dit Microsoft 365 abonnement, der er købt via tredjepartspartneren, som genkendes af Microsoft.
 ms.date: 08/27/2021
-ms.openlocfilehash: 9d2b8881be15cdbed1354c5f70e1dc4f4cacc8c3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 56779a263a42ef385b1d6cf4df608b2243495e9a
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588540"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713817"
 ---
 # <a name="add-licenses-to-a-subscription-purchased-through-the-volume-licensing-service-center"></a>Føj licenser til et abonnement, der er købt via Volume Licensing Service Center
 
-Hvis du har købt Microsoft 365 til virksomheder eller Office 365 Enterprise en tredjepartspartner, skal du købe yderligere licenser via denne partner. Hvis partneren, som abonnementet blev købt hos, er kendt af Microsoft, kan du finde ud af, hvordan du kontakter din partner, ved at benytte følgende fremgangsmåde.
+Hvis du har købt din Microsoft 365 til virksomheder eller Office 365 Enterprise plan via en tredjepartspartner, skal du købe yderligere licenser via den pågældende partner. Hvis den partner, som abonnementet er købt hos, er kendt af Microsoft, kan du finde ud af, hvordan du kontakter din partner ved hjælp af følgende procedure.
   
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til **siden Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">dine</a> produkter.
+1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. I Administration skal du gå til **siden Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">dine</a> produkter.
+1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">af dine produkter</a> .
 ::: moniker-end
 
-2. Vælg det abonnement, som du vil føje licenser til, og vælg derefter **linket Volume Licensing Service Center (VLSC** ).
+2. Vælg det abonnement, du vil føje licenser til, og vælg derefter linket **Volume Licensing Service Center (VLSC).**
 
-3. Følg trinnene i VLSC for at fuldføre dit køb.
+3. Følg trinnene i VLSC for at gennemføre dit køb.

@@ -233,6 +233,8 @@
           href: get-help-with-domains/transfer-a-domain-from-microsoft-to-another-host.md
         - name: Prøv Microsoft 365 fra mit brugerdefinerede domæne
           href: misc/pilot-microsoft-365-from-my-custom-domain.md
+        - name: Tilføj eller erstat dit onmicrosoft.com domæne
+          href: setup/add-or-replace-your-onmicrosoftcom-domain.md
         - name: Ofte stillede spørgsmål om domæner
           href: setup/domains-faq.yml
         - name: DNS-instruktioner
