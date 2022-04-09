@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: tugu, jmueller
+ms.reviewer: mijeffer, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,25 +14,25 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 search.appverid: MET150
-description: 'Find ud af, hvor meget moms du skal betale for Microsoft 365 for business-abonnement i forskellige områder. '
 ms.custom:
 - commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
 - AdminTemplateSet
+description: Find ud af, hvor meget skat du vil blive opkrævet for dit Microsoft 365 for virksomhedsabonnement i forskellige områder.
 ms.date: 03/17/2021
-ms.openlocfilehash: 421abe7b69323be783831d9ce5de45c21ec98536
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 35442bc495b6179a844bdbe3a6b98a4f58556140
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588398"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731223"
 ---
-# <a name="tax-information"></a>Momsoplysninger
+# <a name="tax-information"></a>Skatteoplysninger
 
-Når du køber Microsoft 365-produkter og -tjenester, bestemmes de afgifter, du betaler, af en af to ting: din virksomhedsadresse eller din leveringsadresse, hvis den er forskellig. Hvis din organisation er i USA, skal du angive et federal employer identification number (FEIN).
+Når du køber Microsoft 365 produkter og tjenester, bestemmes de skatter, du betaler, af en af to ting: din virksomhedsadresse eller din leveringsadresse, hvis det er anderledes. Hvis din organisation befinder sig i USA, skal du angive et FEIN (Federal Employer Identification Number).
 
-Virksomheder i følgende lande kan angive deres momsnummer eller tilsvarende lokalt:
+Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvivalente:
 
 :::row:::
     :::column:::
@@ -73,7 +73,7 @@ Virksomheder i følgende lande kan angive deres momsnummer eller tilsvarende lok
 - Malaysia
 - Malta
 - Mexico
-- 17.
+- Monaco
 - Holland
 - New Zealand
 - Norge
@@ -95,34 +95,34 @@ Virksomheder i følgende lande kan angive deres momsnummer eller tilsvarende lok
     :::column-end:::
 :::row-end:::
 
-*For de fleste af de lande, der er angivet, er det valgfrit, om du vil angive et momsnummer eller en lokal ækvivalent. For Brasilien og Indien er moms-id-nummeret påkrævet.
+*For de fleste af de lande, der er angivet, er det valgfrit at angive et momsnummer eller en lokal ækvivalent. For Brasilien og Indien kræves moms-id-nummeret.
 
 > [!Note]
-> Hvis du har brug for at kontakte support, skal du have dit FEIN-, momsnummer eller lokale tilsvarende klar til at give til supportmedarbejderen.
+> Hvis du har brug for at kontakte support, skal du have din FEIN, dit momsnummer eller dit lokale ækvivalent klar til at give til supportagenten.
 
 ## <a name="europe-the-middle-east-and-africa-emea"></a>Europa, Mellemøsten og Afrika (EMEA)
 
-Når du køber Microsoft 365 i EMEA-området, kan købet være underlagt Value-Added moms.
+Når du køber Microsoft 365 tjenester i EMEA-området, kan dette køb være underlagt Value-Added moms.
   
-- Hvis du befinder dig i et EU-medlemsland, Armen, Hviderusland, Norge, Tyrkiet eller De Forenede Arabiske Emirater, og du ikke angiver dit gyldige momsnummer for det område, anvender Microsoft Ireland Operations Ltd. den gældende momssats for det område baseret på det faktureringsland, som din konto er oprettet i.
+- Hvis du befinder dig i en EU-medlemsstat, Armenien, Belarus, Norge, Tyrkiet eller De Forenede Arabiske Emirater, og du ikke angiver dit gyldige lokale moms-id, anvender Microsoft Ireland Operations Ltd. den aktuelle lokale momssats baseret på det faktureringsland, din konto er angivet til.
 
-- Hvis du befinder dig i Liechtenstein, Rusland, Serbien, Sydafrika eller Schweiz, anvendes momsen, uanset om du angiver dit momsnummer eller ej.
+- Hvis du befinder dig i Liechtenstein, Rusland, Serbien, Sydafrika eller Schweiz, anvendes momsen, uanset om du angiver dit moms-id eller ej.
 
-- Før vi kan validere dit moms-id for EU-kunder, skal det være tilgængeligt i systemet til Exchange momsoplysninger (VIES). Hvis dit moms-id ikke kan bekræftes, skal du kontakte din lokale skattemyndighed.
+- For EU-kunder skal det være tilgængeligt til bekræftelse i VIES (Vat Information Exchange System), før vi kan validere dit moms-id. Hvis dit moms-id ikke kan bekræftes, skal du kontakte din lokale skattemyndighed.
 
-Du kan være berettiget til nulbedømmelse af moms, hvis:
+Du kan kvalificere dig til nul-momsklassifikation, hvis:
   
-- **Du er i et EU-medlemsland uden for Irland:** Du kan angive dit gyldige momsnummer for lokal moms. På den måde kan Microsoft Ireland Operations Ltd. udføre transaktionen uden moms. Du kan dog have en lokal forpligtelse til at betale moms. Hvis du har nogen betænkeligheder, skal du tale med din skattemyndighed. Du kan finde en vejledning [under Tilføj dit moms-id](#add-your-vat-id).
+- **Du er i en EU-medlemsstat uden for Irland:** Du kan angive dit gyldige lokale moms-id. Dette gør det muligt for Microsoft Ireland Operations Ltd. at momse nulsatsen for transaktionen. Du kan dog have en lokal momsregnskabsforpligtelse. Hvis du har bekymringer, skal du kontakte dine skatterådgivere. Du kan finde en vejledning under [Tilføj dit moms-id](#add-your-vat-id).
 
-- **Du er i Irland og har den relevante gyldige dokumentation for momsfritagelse:** Microsoft Ireland Operations Ltd. kan være berettiget til fritage transaktionen fra moms. Hvis du ikke gør det, anvender Microsoft Ireland Operations Ltd. den gældende irsk moms, uanset om du angiver et momsnummer.
+- **Du er i Irland og har den relevante gyldige certificering af momsfritagelse:** Microsoft Ireland Operations Ltd. kan være berettiget til at fritage transaktionen for moms. Hvis du ikke gør det, anvender Microsoft Ireland Operations Ltd. den aktuelle irske momssats, uanset om du angiver et moms-id eller ej.
 
-- **Du er i De Forenede Arabiske Emirater, Hviderusland, Norge, Tyrkiet eller De Forenede Arabiske Emirater:** Du kan angive dit momsnummer for det lokale momsnummer. Dette giver Microsoft Ireland Operations Ltd. ret til en transaktion uden moms. Du kan dog have en lokal forpligtelse til at betale moms, så kontakt din skatterådgiver, hvis du har nogen betænkeligheder. Du kan finde en vejledning [under Tilføj dit moms-id](#add-your-vat-id).
+- **Du er i Armenien, Belarus, Norge, Tyrkiet eller De Forenede Arabiske Emirater:** Du kan angive dit lokale moms-id. Dette giver Microsoft Ireland Operations Ltd. ret til at momse nulsatsen for transaktionen. Du kan dog have en lokal momsregnskabsforpligtelse, så kontakt dine skatterådgivere, hvis du har bekymringer. Du kan finde en vejledning under [Tilføj dit moms-id](#add-your-vat-id).
 
-## <a name="asia-pacific-countries-apac"></a>Asien/Stillehavsområdet (APAC)
+## <a name="asia-pacific-countries-apac"></a>Lande i Asien og Stillehavsområdet (APAC)
 
-Hvis du bliver faktureret af Microsoft Regional Sales Office, "Microsoft Regional Sales Pte. Ltd." vises på din faktura, og du kan blive opkrævet for alle gældende momssats, salgsværdier eller lignende afgifter.
+Hvis du faktureres af Microsoft Regional Sales-kontoret, "Microsoft Regional Sales Pte. Ltd." vises på din faktura, og du kan blive opkrævet for alle gældende momser, salg eller lignende afgifter.
   
-Hvis du bliver faktureret fra en af følgende placeringer, anvendes den gældende momssats lokalt. Placeringen er inkluderet [på din faktura](view-your-bill-or-invoice.md):
+Hvis du faktureres fra en af følgende placeringer, anvendes den aktuelle lokale moms. Placeringen er inkluderet [på din faktura](view-your-bill-or-invoice.md):
   
 - Indien
 - Japan
@@ -130,47 +130,47 @@ Hvis du bliver faktureret fra en af følgende placeringer, anvendes den gældend
 - Singapore
 - Taiwan
 
-## <a name="north-central-and-south-america"></a>Nord-, Central- og Sydamerika
+## <a name="north-central-and-south-america"></a>Nord-, Mellem- og Sydamerika
 
-I USA, Canada, Mexico, Chile og Colombia er der forskellige momssatser alt efter produktets art og placering.
+I USA, Canada, Mexico, Chile og Colombia gælder der forskellige skattesatser afhængigt af produktets art og din placering.
   
-Hvis din fakturering er udført af Microsoft [Corporation (se](view-your-bill-or-invoice.md) din faktura, og du tilmeldte dig Microsoft 365 uden for USA, Canada, Puerto Rico, Chile og Colombia, opkræves moms som regel ikke.
+Hvis din fakturering sker af Microsoft Corporation ([se din faktura](view-your-bill-or-invoice.md), og du har tilmeldt dig Microsoft 365 uden for USA, Canada, Puerto Rico, Chile og Colombia, opkræves der normalt ikke skat.
 
 ## <a name="add-your-vat-id"></a>Tilføj dit moms-id
 
-1. I Administration skal du gå til **siden Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">dine</a> produkter.
-2. Vælg **det abonnement** , du vil opdatere, under fanen Produkter.
-3. På siden med abonnementsoplysninger i sektionen **Tjenestebrugsadresse skal** du vælge **Rediger tjenestens brugsadresse**.
-4. I **ruden Rediger tjenestens** brugsadresse skal du  i feltet Momsnummer angive dit moms-id, herunder præfikset, og uden mellemrum.
+1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+2. Vælg det abonnement, du vil opdatere, under fanen **Produkter** .
+3. Vælg **Rediger tjenesteanvendelsesadresse** i afsnittet **Tjenesteanvendelsesadresse** på siden med abonnementsoplysninger.
+4. Angiv dit moms-id, herunder præfikset, og uden mellemrum, i feltet **Momsnummer** i ruden **Rediger tjenesteforbrugsadresse**.
 5. Vælg **Gem**.
 
-## <a name="how-taxes-are-calculated"></a>Sådan beregnes afgifter
+## <a name="how-taxes-are-calculated"></a>Sådan beregnes skatter
 
-Moms beregnes på basis af enhedsprisen og sammenlægges derefter.
+Moms beregnes i forhold til enhedsprisen og aggregeres derefter.
 
 Eksempel:
 
->*(enhedspris X moms) X-antal = moms i alt*
+>*(enhedspris X momssats) X quantity = total sales tax*
 
-– eller –
+-eller-
 
->(DKK 1,29 X 0,095) X 100 = DKK 12,25
+>(1,29 USD X 0,095) X 100 = $12,25
 
-## <a name="apply-for-tax-exempt-status"></a>An ansøge om momsfritagelse
+## <a name="apply-for-tax-exempt-status"></a>Ansøg om momsfritagelse
 
-Hvis du er berettiget til skattefritagelsesstatus på dit marked, skal du oprette en [serviceanmodning](../../admin/get-help-support.md) for at få skattefritagelsesstatus for din organisation.
+Hvis du kvalificerer dig til momsfritagelse på dit marked, [skal du starte en serviceanmodning for](../../admin/get-help-support.md) at få status som momsfritagelse for din organisation.
 
-|Land eller land | Dokumentation |
+|Land eller landestandard | Dokumentation |
 |------------------|----------------|
-| Canada | Certifikat for afgiftsfritagelse (eller tilsvarende godkendelsesbrev) |
+| Canada | Certifikat for fritagelse (eller tilsvarende godkendelsesbrev) |
 | Chile | IVA-status/RUT (Registro Unico Tributario) |
 | Colombia | IVA-status/RUT (Registro Unico Tributario) |
-| Internationale organisationer, der er fritaget for moms | Bekræftelse af certificering/brev fra lokale skattemyndigheder |
-| Irland | 13B/56A Tax Tax Certificate|
-| USA | Momsfritagelsescertifikat |
+| Internationale organisationer med skattefritagelse | Certificering/brevbekræftelse fra lokale skattemyndigheder |
+| Irland | 13B/56A Tax Exemption Certificate|
+| USA | Certifikat til momsfritagelse |
 | Puerto Rico | Certificado de Compras Exentas |
   
 ## <a name="related-content"></a>Relateret indhold
   
-[Få vist din regning eller faktura](view-your-bill-or-invoice.md) (artikel)\
-[Forstå din regning eller faktura](understand-your-invoice.md) (artikel)
+[Få vist din faktura](view-your-bill-or-invoice.md) (artikel)\
+[Forstå din faktura](understand-your-invoice.md) (artikel)

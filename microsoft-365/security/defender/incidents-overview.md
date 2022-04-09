@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 15b540f9993e8f2163f464379aca9496bec4cca7
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 70f75fd5986a5d837e33b3caf0b7cb23239ddce5
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665376"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731586"
 ---
 # <a name="incident-response-with-microsoft-365-defender"></a>Svar på hændelse med Microsoft 365 Defender
 
@@ -37,9 +37,6 @@ ms.locfileid: "64665376"
 
 **Gælder for:**
 - Microsoft 365 Defender
-
-> Vil du opleve Microsoft 365 Defender? Du kan [evaluere det i et laboratoriemiljø](m365d-evaluation.md?ocid=cx-docs-MTPtriallab) eller [køre dit pilotprojekt i produktion](m365d-pilot.md?ocid=cx-evalpilot).
->
 
 En hændelse i Microsoft 365 Defender er en samling af korrelerede beskeder og tilknyttede data, der udgør historien om et angreb.
 

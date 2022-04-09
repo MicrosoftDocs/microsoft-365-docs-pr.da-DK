@@ -1,7 +1,7 @@
 ---
 title: Nyheder i Microsoft 365 Defender
-description: Viser de nye funktioner og funktionalitet i Microsoft 365 Defender
-keywords: nyheder i Microsoft 365 Defender, ga, generelt tilgængelige, funktioner, tilgængelige, nye
+description: Viser de nye funktioner og funktioner i Microsoft 365 Defender
+keywords: nyheder i Microsoft 365 Defender, ga, offentligt tilgængelig, funktioner, tilgængelige, nye
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -17,20 +17,18 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: aebf7a82a886540374176c06535e9f0097e73a03
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 053326cacaeb2b4110f71edaa290ed10454aa720
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499809"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731642"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-> Vil du gerne Microsoft 365 Defender? Du kan [evaluere det i et labmiljø](m365d-evaluation.md?ocid=cx-docs-MTPtriallab) eller [køre dit pilotprojekt i produktion](m365d-pilot.md?ocid=cx-evalpilot).
-
-Følgende funktioner er i forhåndsvisning eller generelt tilgængelige (GA) i den seneste version af Microsoft 365 Defender.
+>Følgende funktioner er tilgængelige som prøveversion eller offentligt tilgængelige i den seneste version af Microsoft 365 Defender.
 
 RSS-feed: Få besked, når denne side opdateres, ved at kopiere og indsætte følgende URL-adresse i din feedlæser:
 
@@ -38,7 +36,7 @@ RSS-feed: Få besked, når denne side opdateres, ved at kopiere og indsætte fø
 https://docs.microsoft.com/api/search/rss?search=%22Lists+the+new+features+and+functionality+in+Microsoft+365+defender%22&locale=en-us
 ```
 
-Du kan finde flere oplysninger om nyheder i forbindelse med andre Microsoft Defender-sikkerhedsprodukter her:
+Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedsprodukter under:
 
 - [Nyheder i Microsoft Defender for Office 365](../office-365-security/whats-new-in-defender-for-office-365.md)
 - [Nyheder i Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
@@ -51,91 +49,91 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 ## <a name="march-2022"></a>Marts 2022
 
-- (Eksempel) Hændelseskøen er blevet forbedret med flere funktioner, der er udviklet til at hjælpe dine undersøgelser. Forbedringerne omfatter funktioner som f.eks. mulighed for at søge efter hændelser efter id eller navn, angive et brugerdefineret tidsinterval og andre.
+- (eksempelvisning) Hændelseskøen er blevet forbedret med flere funktioner, der er designet til at hjælpe dine undersøgelser. Forbedringer omfatter funktioner som f.eks. mulighed for at søge efter hændelser efter id eller navn, angive et brugerdefineret tidsinterval og andre.
 
 ## <a name="december-2021"></a>December 2021
 
-- (GA) Tabellen `DeviceTvmSoftwareEvidenceBeta` blev tilføjet på kort tid ved avanceret jagt for at give dig mulighed for at få vist beviser for, hvor en bestemt software blev registreret på en enhed.
+- (GA) Tabellen `DeviceTvmSoftwareEvidenceBeta` blev tilføjet på kort sigt i avanceret jagt for at give dig mulighed for at se beviser på, hvor en bestemt software blev registreret på en enhed.
 
 ## <a name="november-2021"></a>November 2021
 
-- (Eksempel) Tilføjelsesprogrammet Programstyring til Defender for Cloud Apps er nu tilgængelig i Microsoft 365 Defender. Appstyring giver adgang til sikkerheds- og politikstyringsfunktionalitet, der er udviklet til OAuth-aktiverede apps, som Microsoft 365 adgang til data via Microsoft Graph API'er. Appstyring giver fuld synlighed, afhjælpning og styring i, hvordan disse apps og deres brugere får adgang til, bruger og deler dine følsomme data, der er gemt i Microsoft 365 via brugbar indsigt og automatiserede politikbeskeder og handlinger. [Få mere at vide om programstyring](/cloud-app-security/app-governance-manage-app-governance).
-- (Eksempel) [Den avancerede](advanced-hunting-overview.md) jagtside har nu understøttelse af flere faner, intelligent rulning, strømlinede skemafaner, hurtige redigeringsindstillinger for forespørgsler, en indikator for brug af forespørgselsressourcer og andre forbedringer, der gør forespørgsler mere jævne og nemmere at finjustere.
-- (Eksempel) Du kan nu bruge [linket](advanced-hunting-link-to-incident.md) til hændelsesfunktionen til at medtage hændelser eller poster fra de avancerede forespørgselsresultater direkte til en ny eller eksisterende hændelse, som du undersøger.
+- (eksempelvisning) Tilføjelsesprogrammet programstyring til Defender for Cloud Apps er nu tilgængeligt i Microsoft 365 Defender. Appstyring indeholder en funktionalitet til administration af sikkerhed og politik, der er udviklet til OAuth-aktiverede apps, der har adgang til Microsoft 365 data via Microsoft Graph API'er. Appstyring giver fuld synlighed, afhjælpning og styring af, hvordan disse apps og deres brugere får adgang til, bruger og deler dine følsomme data, der er gemt i Microsoft 365, via handlingsbaseret indsigt og automatiserede politikbeskeder og handlinger. [Få mere at vide om programstyring](/cloud-app-security/app-governance-manage-app-governance).
+- (eksempelvisning) Den [avancerede jagtside](advanced-hunting-overview.md) understøtter nu flere faner, smart rulning, strømlinede skemafaner, indstillinger for hurtig redigering af forespørgsler, en indikator for ressourceforbrug for forespørgsler og andre forbedringer for at gøre forespørgslerne mere jævne og nemmere at finjustere.
+- (eksempelvisning) Du kan nu bruge [funktionen link til hændelse](advanced-hunting-link-to-incident.md) til at inkludere hændelser eller poster fra de avancerede resultater af jagtforespørgslen direkte i en ny eller eksisterende hændelse, som du er ved at undersøge.
 
 ## <a name="october-2021"></a>Oktober 2021
 
-- (GA) I avanceret jagt er der blevet tilføjet flere kolonner [i tabellen CloudAppEvents](advanced-hunting-cloudappevents-table.md) . Du kan nu `AccountType`medtage `IsExternalUser`, `IsImpersonated`, `IPTags`, `IPCategory`, og `UserAgentTags` til dine forespørgsler.
+- (GA) I avanceret jagt blev der tilføjet flere kolonner i tabellen [CloudAppEvents](advanced-hunting-cloudappevents-table.md) . Du kan nu inkludere `AccountType`, `IsExternalUser`, `IsImpersonated`, `IPTags`, `IPCategory`og `UserAgentTags` i dine forespørgsler.
 
 ## <a name="september-2021"></a>September 2021
 
-- (GA) Microsoft Defender for Office 365 tilgængelige begivenhedsdata i den Microsoft 365 Defender-hændelsesstreaming-API. Du kan se tilgængeligheden og status for hændelsestyper i de [understøttede Microsoft 365 Defender i streaming-API'en](supported-event-types.md).
-- (GA) Microsoft Defender for Office 365 tilgængelige i avanceret jagt er nu generelt tilgængelige.
+- (GA) Microsoft Defender for Office 365 hændelsesdata er tilgængelige i API'en til Microsoft 365 Defender hændelsesstreaming. Du kan se tilgængeligheden og status for [hændelsestyper i Understøttede Microsoft 365 Defender hændelsestyper i streaming-API'en](supported-event-types.md).
+- (GA) Microsoft Defender for Office 365 data, der er tilgængelige inden for avanceret jagt, er nu offentligt tilgængelige.
 - (GA) Tildel hændelser og beskeder til brugerkonti
 
-  Du kan tildele en hændelse og alle de beskeder, der er knyttet til den, til en brugerkonto fra Tildel til **:** i  ruden Administrer hændelse for en hændelse eller ruden  Administrer beskeder for en besked.
+  Du kan tildele en hændelse og alle de beskeder, der er knyttet til den, til en brugerkonto fra **Tildel til:** i ruden **Administrer hændelse** for en hændelse eller ruden **Administrer besked** for en besked.
 
 ## <a name="august-2021"></a>August 2021
 
-- (Eksempel) Microsoft Defender for Office 365 tilgængelige i avanceret jagt
+- (eksempelvisning) Microsoft Defender for Office 365 data, der er tilgængelige i avanceret jagt
 
-  Nye kolonner i mailtabeller kan give mere indsigt i mailbaserede trusler til mere grundige undersøgelser ved hjælp af avanceret jagt. Du kan nu medtage kolonnen `AuthenticationDetails` i [EmailEvents](./advanced-hunting-emailevents-table.md), `FileSize` [i EmailAttachmentInfo](./advanced-hunting-emailattachmentinfo-table.md)`ThreatTypes` `DetectionMethods` og i [tabellerne EmailPostDeliveryEvents](./advanced-hunting-emailpostdeliveryevents-table.md).
+  Nye kolonner i mailtabeller kan give mere indsigt i mailbaserede trusler for at få mere grundige undersøgelser ved hjælp af avanceret jagt. Du kan nu inkludere kolonnen `AuthenticationDetails` i [EmailEvents](./advanced-hunting-emailevents-table.md), `FileSize` i [EmailAttachmentInfo](./advanced-hunting-emailattachmentinfo-table.md) og `ThreatTypes` `DetectionMethods` i tabellerne [EmailPostDeliveryEvents](./advanced-hunting-emailpostdeliveryevents-table.md) .
 
-- (Eksempel) Graf over hændelser
+- (eksempelvisning) Hændelsesgraf
 
-  En ny **Graph** under fanen Oversigt over en hændelse  viser det fulde omfang af angrebene, hvordan angrebene spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt hackeren er gået.
+  En ny **Graph** fane under fanen **Oversigt** i en hændelse viser det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt hackeren gik.
 
 ## <a name="july-2021"></a>Juli 2021
 
 - [Katalog over professionelle tjenester](https://sip.security.microsoft.com/interoperability/professional_services)
 
-  Gør registrering, undersøgelse og trusselsintelligens bedre for platformen med understøttede partnerforbindelser.
+  Gør platformens registrering, undersøgelse og trusselsintelligens bedre med understøttede partnerforbindelser.
 
 ## <a name="june-2021"></a>Juni 2021
 
-- (Eksempel) [Få vist rapporter pr. trusselsmærker](threat-analytics.md#view-reports-per-threat-tags)
+- (eksempelvisning) [Få vist rapporter pr. trusselstags](threat-analytics.md#view-reports-per-threat-tags)
 
-  Trusselsmærker hjælper dig med at fokusere på bestemte trusselskategorier og gennemse de mest relevante rapporter.
+  Trusselstags hjælper dig med at fokusere på specifikke trusselskategorier og gennemse de mest relevante rapporter.
 
-- (Eksempel) [Streaming-API](../defender-endpoint/raw-data-export.md)
+- (eksempelvisning) [Streaming-API](../defender-endpoint/raw-data-export.md)
 
-  Microsoft 365 Defender understøtter streaming af alle de hændelser, der er tilgængelige via Avanceret jagt på en Event Hubs og/eller Azure-lagerkonto.
+  Microsoft 365 Defender understøtter streaming af alle de hændelser, der er tilgængelige via Advanced Hunting, til en Event Hubs- og/eller Azure Storage-konto.
 
-- (Eksempel) [Tag skridtet videre i avanceret jagt](advanced-hunting-take-action.md)
+- (eksempelvisning) [Handle i avanceret jagt](advanced-hunting-take-action.md)
 
-  Indeholder hurtigt trusler eller adresserer kompromitterede aktiver, som du finder i [avanceret jagt](advanced-hunting-overview.md).
+  Hurtigt indeholde trusler eller løse kompromitterede aktiver, som du finder i [avanceret jagt](advanced-hunting-overview.md).
 
-- (Eksempel) [Skemareference for portal](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)
+- (eksempelvisning) [Skemareference i portalen](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)
 
-  Få oplysninger om avancerede skematabeller direkte i sikkerhedscenteret. Ud over tabel- og kolonnebeskrivelser omfatter denne reference understøttede hændelsestyper (`ActionType` værdier) og eksempelforespørgsler.
+  Få oplysninger om avancerede jagtskematabeller direkte i Security Center. Ud over beskrivelser af tabeller og kolonner indeholder denne reference understøttede hændelsestyper (`ActionType` værdier) og eksempelforespørgsler.
 
-- (Eksempel) [DeviceFromIP() function](advanced-hunting-devicefromip-function.md)
+- (eksempelvisning) [Funktionen DeviceFromIP()](advanced-hunting-devicefromip-function.md)
 
-  Få oplysninger om, hvilke enheder der har fået tildelt en bestemt IP-adresse eller adresser i et givet tidsinterval.
+  Få oplysninger om, hvilke enheder der er blevet tildelt en bestemt IP-adresse eller -adresser inden for et bestemt tidsinterval.
 
 ## <a name="may-2021"></a>Maj 2021
 
-- [Siden Ny besked i Microsoft 365 Defender portal](https://techcommunity.microsoft.com/t5/microsoft-365-defender/easily-find-anomalies-in-incidents-and-alerts/ba-p/2339243)
+- [Ny beskedside på Microsoft 365 Defender-portalen](https://techcommunity.microsoft.com/t5/microsoft-365-defender/easily-find-anomalies-in-incidents-and-alerts/ba-p/2339243)
 
-  Indeholder forbedrede oplysninger om konteksten i et angreb. Du kan se, hvilke andre udløste beskeder, der forårsagede den aktuelle besked og alle de berørte enheder og aktiviteter, der er involveret i angrebene, herunder filer, brugere og postkasser. Se [Undersøg beskeder for at](/microsoft-365/security/defender/investigate-alerts) få flere oplysninger.
+  Indeholder forbedrede oplysninger om konteksten i et angreb. Du kan se, hvilke andre udløste beskeder der forårsagede den aktuelle besked, og alle de berørte enheder og aktiviteter, der er involveret i angrebet, herunder filer, brugere og postkasser. Se [Undersøg beskeder](/microsoft-365/security/defender/investigate-alerts) for at få flere oplysninger.
 
-- [Tendensdiagram over hændelser og beskeder i Microsoft 365 Defender-portalen](https://techcommunity.microsoft.com/t5/microsoft-365-defender/new-alert-page-for-microsoft-365-defender-incident-detections/ba-p/2350425)
+- [Tendensgraf for hændelser og beskeder på Microsoft 365 Defender-portalen](https://techcommunity.microsoft.com/t5/microsoft-365-defender/new-alert-page-for-microsoft-365-defender-incident-detections/ba-p/2350425)
 
-  Afgør, om der er flere beskeder for en enkelt hændelse, eller om din organisation er under angreb med flere forskellige hændelser. Se [Prioriter hændelser for at](/microsoft-365/security/defender/incident-queue) få flere oplysninger.
+  Find ud af, om der er flere beskeder for en enkelt hændelse, eller om din organisation er under angreb med flere forskellige hændelser. Se [Prioriter hændelser](/microsoft-365/security/defender/incident-queue) for at få flere oplysninger.
 
 ## <a name="april-2021"></a>I april 2021
 
 - Microsoft 365 Defender
 
-  Den forbedrede [Microsoft 365 Defender](https://security.microsoft.com) portal er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender for Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem til at administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyhederne](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
+  Den forbedrede [Microsoft 365 Defender-portal](https://security.microsoft.com) er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender for Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem, hvor du kan administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyheder](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
 
-- [Microsoft 365 Defender rapport over trusselsanalyse](threat-analytics.md)
+- [rapport over Microsoft 365 Defender trusselsanalyse](threat-analytics.md)
 
-  Trusselsanalyse hjælper dig med at reagere på og minimere effekten af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der blokeres af Microsoft 365 Defender løsninger og udføre sikkerhedsforanstaltninger, der reducerer risikoen for yderligere eksponering og øger fleksibiliteten. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for Microsoft Defender for Endpoint og Microsoft Defender Office E5-licensindehavere.
+  Trusselsanalyser hjælper dig med at reagere på og minimere virkningen af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der er blokeret af Microsoft 365 Defender løsninger, og træffe forebyggende foranstaltninger, der afhjælper risikoen for yderligere eksponering og øger robusthed. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for Microsoft Defender for Endpoint og Microsoft Defender for Office E5-licensindehavere.
 
 ## <a name="march-2021"></a>Marts 2021
 
 - [Tabellen CloudAppEvents](advanced-hunting-cloudappevents-table.md)
 
-  Find oplysninger om begivenheder i forskellige skyapps og -tjenester, der er dækket Microsoft Cloud App Security. Denne tabel indeholder også oplysninger, der tidligere er tilgængelige i `AppFileEvents` tabellen.
+  Find oplysninger om hændelser i forskellige cloudapps og -tjenester, der er omfattet af Microsoft Cloud App Security. Denne tabel indeholder også oplysninger, der tidligere er tilgængelige i tabellen `AppFileEvents` .
 

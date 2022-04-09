@@ -1,5 +1,5 @@
 ---
-title: Trin 5. Installér enhedsprofiler i Microsoft Intune
+title: Trin 5. Udrul enhedsprofiler i Microsoft Intune
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -8,7 +8,7 @@ f1.keywords:
 - customize configuration profiles
 manager: dougeby
 audience: ITPro
-description: Kom i gang med konfigurationsprofiler for at gennemtvinge sikre indstillinger på enheder med Intune for at overgå disse sikkerhedskontrolelementer til skyen.
+description: Kom i gang med konfigurationsprofiler for at gennemtvinge sikre indstillinger på enheder ved hjælp af Intune til at overføre disse sikkerhedskontroller til cloudmiljøet.
 ms.topic: article
 ms.prod: microsoft-365-enterprise
 ms.localizationpriority: high
@@ -18,77 +18,77 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: d44d70c50db5c086e24af575677d5d51e1b33357
-ms.sourcegitcommit: 23166424125b80b2d615643f394a3c023cba641d
+ms.openlocfilehash: dfdffc95c39d471e071db8f83e88b9ba67e143e8
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "63593031"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731543"
 ---
-# <a name="step-5-deploy-device-profiles-in-microsoft-intune"></a>Trin 5. Installér enhedsprofiler i Microsoft Intune
+# <a name="step-5-deploy-device-profiles-in-microsoft-intune"></a>Trin 5. Udrul enhedsprofiler i Microsoft Intune
 
 Microsoft Intune indeholder indstillinger og funktioner, du kan aktivere eller deaktivere på forskellige enheder i organisationen. Disse indstillinger og funktioner føjes til "konfigurationsprofiler". Du kan oprette profiler til forskellige enheder og forskellige platforme, herunder iOS/iPadOS, Android-enhedsadministrator, Android Enterprise og Windows. Brug derefter Intune til at anvende eller "tildele" profilen til enhederne.
 
-Denne artikel indeholder vejledning til at komme i gang med konfigurationsprofiler. 
+Denne artikel indeholder en vejledning i at komme i gang med konfigurationsprofiler. 
 
 
 ![Trin til administration af enheder](../media/devices/intune-mdm-step-4.png#lightbox)
 
-Konfigurationsprofiler giver dig mulighed for at konfigurere vigtig beskyttelse og bringe enheder i overholdelse af regler og standarder, så de kan få adgang til dine ressourcer. Tidligere blev disse typer konfigurationsændringer konfigureret ved hjælp Gruppepolitik indstillingerne i Active Directory-domæneservices. En moderne sikkerhedsstrategi omfatter flytning af sikkerhedskontrolelementer til skyen, hvor håndhævelsen af disse kontrolelementer ikke er afhængig af lokale ressourcer og adgang. Intune-konfigurationsprofiler er den måde, hvorpå disse sikkerhedskontrolelementer kan overgå til skyen. 
+Konfigurationsprofiler giver dig mulighed for at konfigurere vigtig beskyttelse og sikre overholdelse af angivne standarder for enheder, så de kan få adgang til dine ressourcer. Tidligere blev disse konfigurationsændringer konfigureret ved hjælp af Gruppepolitik indstillinger i Active Directory-domæneservices. En moderne sikkerhedsstrategi omfatter flytning af sikkerhedskontroller til cloudmiljøet, hvor håndhævelse af disse kontrolelementer ikke er afhængig af ressourcer og adgang i det lokale miljø. Intune konfigurationsprofiler er den måde, hvorpå du kan overføre disse sikkerhedskontroller til cloudmiljøet. 
 
-Hvis du vil give dig en ide om den type konfigurationsprofiler, du kan oprette, skal du se Anvend funktioner og indstillinger på dine enheder ved hjælp af [enhedsprofiler Microsoft Intune](/mem/intune/configuration/device-profiles).
+Hvis du vil have en idé om, hvilken type konfigurationsprofiler du kan oprette, skal du se [Anvend funktioner og indstillinger på dine enheder ved hjælp af enhedsprofiler i Microsoft Intune](/mem/intune/configuration/device-profiles).
 
-## <a name="deploy-windows-security-baselines-for-intune"></a>Installér Windows for Intune
+## <a name="deploy-windows-security-baselines-for-intune"></a>Installer Windows grundlæggende sikkerhedsgrundlinjer for Intune
 
-Hvis du som udgangspunkt vil justere dine enhedskonfigurationer efter Microsofts sikkerheds oprindelige planer, anbefaler vi, at grundlinjerne for sikkerheden er inden for Microsoft Endpoint Manager. Fordelen ved denne fremgangsmåde er, at du kan stole på, at Microsoft holder grundlinjerne opdateret, så der Windows 10 og 11 funktioner udgives. 
+Hvis du vil justere dine enhedskonfigurationer i forhold til Microsofts grundlinjer for sikkerhed, anbefaler vi som udgangspunkt de grundlæggende sikkerhedslinjer inden for Microsoft Endpoint Manager. Fordelen ved denne fremgangsmåde er, at du kan stole på, at Microsoft holder grundlinjerne opdateret, efterhånden som Windows 10 og 11 funktioner udgives. 
 
-For at installere Windows for Intune, der er tilgængelige for Windows 10 og Windows 11. Se [Brug oprindelige planer for sikkerhed til at konfigurere Windows i Intune for](/mem/intune/protect/security-baselines) at få mere at vide om de tilgængelige grundlinjer.
+Hvis du vil udrulle de Windows grundlæggende sikkerhedsgrundlinjer for Intune, skal du være tilgængelig for Windows 10 og Windows 11. Se [Brug grundlæggende sikkerhedslinjer til at konfigurere Windows enheder i Intune](/mem/intune/protect/security-baselines) for at få mere at vide om de tilgængelige grundlinjer.
 
-Lige nu skal du blot installere den mest relevante mdm-sikkerhedslinje. Se [Administrere profiler for oprindelige planer for sikkerhed Microsoft Intune ](/mem/intune/protect/security-baselines-configure)at oprette profilen og vælge den oprindelige version.
+I øjeblikket skal du blot installere den mest relevante MDM-sikkerhedsbaselinje. Se [Administrer profiler for grundlæggende sikkerhedsgrundlinjer i Microsoft Intune ](/mem/intune/protect/security-baselines-configure)for at oprette profilen og vælge den oprindelige version.
 
-Senere, når Microsoft Defender til slutpunkt er konfigureret, og du har forbindelse til Intune, skal du udrulle grundlinjerne for Defender til slutpunkter. Dette emne er dækket i den næste artikel i denne serie: [Trin 6. Overvåg enhedsrisici og overholdelse af sikkerheds oprindelige planer](manage-devices-with-intune-monitor-risk.md).
+Når Microsoft Defender for Endpoint er konfigureret senere, og du har oprettet forbindelse Intune, skal du installere Defender for Endpoint baselines. Dette emne behandles i den næste artikel i denne serie: [Trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer](manage-devices-with-intune-monitor-risk.md).
 
-Det er vigtigt at forstå, at disse grundlinjer for sikkerhed ikke overholder CIS eller NIST, men afspejler deres anbefalinger nøje. Du kan finde flere oplysninger [i Er INS- eller NIST-standarderne for Intune-sikkerhedsmæssige grundlinjer kompatible](/mem/intune/protect/security-baselines)?
+Det er vigtigt at forstå, at disse sikkerhedsbaser ikke er CIS- eller NIST-kompatible, men nøje afspejler deres anbefalinger. Du kan få flere oplysninger under [Er cis- eller NIST-Intune-sikkerhedsbaser kompatible?](/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
 
-## <a name="customize-configuration-profiles-for-your-organization"></a>Tilpasse konfigurationsprofiler for din organisation
+## <a name="customize-configuration-profiles-for-your-organization"></a>Tilpas konfigurationsprofiler for din organisation
 
-Ud over at installere de forudkonfigurerede grundlinjer implementerer mange virksomhedsorganisationer konfigurationsprofiler for at få mere detaljeret kontrol. Denne konfiguration er med til at reducere afhængigheden af Gruppepolitik objekter i det lokale Active Directory-miljø og flytte sikkerhedskontrolelementer til skyen. 
+Ud over at udrulle de forudkonfigurerede grundlinjer implementerer mange virksomheder konfigurationsprofiler for at få mere detaljeret kontrol. Denne konfiguration hjælper med at reducere afhængigheden af Gruppepolitik objekter i det Active Directory i det lokale miljø miljø og flytte sikkerhedskontroller til cloudmiljøet. 
 
 De mange indstillinger, du kan konfigurere ved hjælp af konfigurationsprofiler, kan grupperes i fire kategorier, som vist nedenfor.
 
-![Profilkategorier for Intune-enhed](../media/devices/intune-device-profile-categories.png#lightbox)
+![Intune enhedsprofilkategorier](../media/devices/intune-device-profile-categories.png#lightbox)
 
 I følgende tabel beskrives illustrationen.
 
 
 |Kategori |Beskrivelse |Eksempler  |
 |---------|---------|---------|
-|Enhedsfunktioner     | Kontrolelementer på enheden. Denne kategori gælder kun for iOS-/iPadOS- og macOS-enheder.        | Airprint, meddelelser, låseskærmmeddelelser        |
-|Enhedsbegrænsninger     | Styrer sikkerhed, hardware, datadeling og flere indstillinger på enhederne        | Kræve en pinkode, datakryptering        |
-|Access-konfiguration     |  Konfigurerer en enhed til at få adgang til organisationens ressourcer        | Mailprofiler, VPN-profiler, Wi-Fi indstillinger, certifikater        |
-|Brugerdefineret     | Angive brugerdefineret konfiguration eller udføre brugerdefinerede konfigurationshandlinger       | Angiv OEM-indstillinger, udfør PowerShell-scripts        |
+|Enhedsfunktioner     | Styrer funktioner på enheden. Denne kategori gælder kun for iOS-/iPadOS- og macOS-enheder.        | Lufttryk, meddelelser, låseskærmsmeddelelser        |
+|Enhedsbegrænsninger     | Styrer sikkerhed, hardware, datadeling og flere indstillinger på enhederne        | Kræv en pinkode, datakryptering        |
+|Adgangskonfiguration     |  Konfigurerer en enhed til at få adgang til organisationens ressourcer        | Mailprofiler, VPN-profiler, Wi-Fi indstillinger, certifikater        |
+|Brugerdefinerede     | Angiv brugerdefineret konfiguration, eller udfør brugerdefinerede konfigurationshandlinger       | Angiv OEM-indstillinger, udfør PowerShell-scripts        |
 |    |         |         |
 
-Når du tilpasser konfigurationsprofiler for organisationen, skal du bruge følgende vejledning:
-- Forenkificer din strategi for sikkerhedsstyring ved at holde det overordnede antal politikker små.
-- Gruppeindstillinger i de kategorier, der er angivet ovenfor, eller kategorier, der giver mening for din organisation.
-- Når du flytter sikkerhedskontrolelementer fra Gruppepolitik-objekter til Intune-konfigurationsprofiler, skal du overveje, om de indstillinger, der er konfigureret af hvert gruppepolitikobjekt, stadig er relevante og nødvendige for at bidrage til din overordnede skysikkerhedsstrategi. Betinget adgang og de mange politikker, der kan konfigureres på tværs af skytjenester, herunder Intune, giver mere avanceret beskyttelse, end der kunne konfigureres i et lokalt miljø, hvor brugerdefinerede GPOs oprindeligt blev udviklet.
-- Brug Gruppepolitik Analytics til at sammenligne og knytte dine aktuelle gruppepolitikobjektindstillinger til funktioner inden for Microsoft Endpoint Manager. Se [Analysér dine objekter for gruppepolitik i det lokale miljø ved hjælp Gruppepolitik analyser](/mem/intune/configuration/group-policy-analytics) i Microsoft Endpoint Manager.
-- Når du bruger brugerdefinerede konfigurationsprofiler, skal du sørge for at bruge vejledningen her: [Opret en profil med brugerdefinerede indstillinger i Intune](/mem/intune/configuration/custom-settings-configure).
+Når du tilpasser konfigurationsprofiler for din organisation, skal du bruge følgende vejledning:
+- Gør din strategi for styring af sikkerhed mere enkel ved at begrænse det samlede antal politikker.
+- Gruppér indstillinger i de kategorier, der er angivet ovenfor, eller kategorier, der giver mening for din organisation.
+- Når du flytter sikkerhedskontrolelementer fra Gruppepolitik Objekter til Intune konfigurationsprofiler, skal du overveje, om de indstillinger, der er konfigureret af hvert gruppepolitikobjekt, stadig er relevante og nødvendige for at bidrage til din overordnede cloudsikkerhedsstrategi. Betinget adgang og de mange politikker, der kan konfigureres på tværs af cloudtjenester, herunder Intune, giver mere avanceret beskyttelse, end det kunne konfigureres i et lokalt miljø, hvor brugerdefinerede gruppepolitikobjekter oprindeligt blev designet.
+- Brug Gruppepolitik Analytics til at sammenligne og knytte dine aktuelle GPO-indstillinger til funktioner i Microsoft Endpoint Manager. Se [Analysér dine gruppepolitikobjekter i det lokale miljø ved hjælp af Gruppepolitik analyser](/mem/intune/configuration/group-policy-analytics) i Microsoft Endpoint Manager.
+- Når du bruger brugerdefinerede konfigurationsprofiler, skal du bruge vejledningen her: [Opret en profil med brugerdefinerede indstillinger i Intune](/mem/intune/configuration/custom-settings-configure).
 
-## <a name="additional-resources"></a>Yderligere ressourcer
+## <a name="additional-resources"></a>Flere ressourcer
 
 Hvis du ikke er sikker på, hvor du skal starte med enhedsprofiler, kan følgende hjælpe:
 
-- [Guidede scenarier](/mem/intune/fundamentals/guided-scenarios-overview) 
-- [Grundlinjer for sikkerhed](/mem/intune/protect/security-baselines)
+- [Automatiserede scenarier](/mem/intune/fundamentals/guided-scenarios-overview) 
+- [Grundlæggende sikkerhedslinjer](/mem/intune/protect/security-baselines)
 
-Hvis dit miljø indeholder gpos i det direkte miljø, er følgende funktioner en god overgang til skyen:
+Hvis dit miljø indeholder gruppepolitikobjekter i det lokale miljø, er følgende funktioner en god overgang til cloudmiljøet:
 
-- [Gruppepolitik analyser](/mem/intune/configuration/group-policy-analytics)
+- [Gruppepolitik analyse](/mem/intune/configuration/group-policy-analytics)
 - [Administratorskabeloner (ADMX)](/mem/intune/configuration/administrative-templates-windows)
 - [Indstillinger katalog](/mem/intune/configuration/settings-catalog)
 
 
 ## <a name="next-steps"></a>Næste trin
-Gå til [Trin 6. Overvåg enhedsrisici og overholdelse af sikkerheds oprindelige planer](manage-devices-with-intune-monitor-risk.md).
+Gå til [trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer](manage-devices-with-intune-monitor-risk.md).
