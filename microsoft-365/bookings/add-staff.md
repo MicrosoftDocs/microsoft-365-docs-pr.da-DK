@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Brug denne side til at oprette din personaleliste og til at administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse.
-ms.openlocfilehash: 2df48efe321a91c1eb2df712e954033eb28357aa
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: ca938acf4bfb567d366c7ffd684e8bce8c9eea74
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713927"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746788"
 ---
 # <a name="add-staff-to-bookings"></a>Føj medarbejdere til Bookings
 
@@ -58,7 +58,7 @@ Selvom Bookings er en funktion i Microsoft 365, er det ikke alle dine medarbejde
 
     Hvis en medarbejder f.eks. har et teammøde eller en personlig aftale, der er planlagt til kl. 15 på en onsdag, viser Bookings, at medarbejderen ikke er tilgængelig til at blive booket inden for dette tidsrum. Dette klokkeslæt vises som optaget eller foreløbigt i Bookings kalendervisning, som vist i nedenstående eksempel.
 
-    :::image type="content" source="media/bookings-busy-tentative-view.jpg" alt-text="En visning af en Bookings kalender.":::
+    :::image type="content" source="media/bookings-busy-tentative-view-2.png" alt-text="En visning af en Bookings kalender.":::
 
 > [!IMPORTANT]
 > Vi anbefaler på det kraftigste, at du lader denne indstilling være slået til (den er slået til som standard) for at undgå dobbeltbookinger og for at optimere tilgængeligheden af dine medarbejdere.

@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: dfdffc95c39d471e071db8f83e88b9ba67e143e8
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: fe137e626d5199f1709504d025411586965ae9fd
+ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731543"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737415"
 ---
 # <a name="step-5-deploy-device-profiles-in-microsoft-intune"></a>Trin 5. Udrul enhedsprofiler i Microsoft Intune
 
@@ -48,7 +48,7 @@ I øjeblikket skal du blot installere den mest relevante MDM-sikkerhedsbaselinje
 
 Når Microsoft Defender for Endpoint er konfigureret senere, og du har oprettet forbindelse Intune, skal du installere Defender for Endpoint baselines. Dette emne behandles i den næste artikel i denne serie: [Trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer](manage-devices-with-intune-monitor-risk.md).
 
-Det er vigtigt at forstå, at disse sikkerhedsbaser ikke er CIS- eller NIST-kompatible, men nøje afspejler deres anbefalinger. Du kan få flere oplysninger under [Er cis- eller NIST-Intune-sikkerhedsbaser kompatible?](/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
+Det er vigtigt at forstå, at disse sikkerhedsbaser ikke er CIS- eller NIST-kompatible, men nøje afspejler deres anbefalinger. Du kan få flere oplysninger under [Er cis- eller NIST-Intune-sikkerhedsbaser kompatible?](https://docs.microsoft.com/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
 
 ## <a name="customize-configuration-profiles-for-your-organization"></a>Tilpas konfigurationsprofiler for din organisation
 

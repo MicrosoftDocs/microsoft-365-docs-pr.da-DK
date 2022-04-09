@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Følg disse instruktioner for at oprette en aftale og tildele en medarbejder via appen Microsoft Bookings.
-ms.openlocfilehash: d30d9ba7fe00305ef370a554fc53ebebc5b5d284
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 0428c697def774a67384b14c4d9b2c48e2851794
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715313"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747242"
 ---
 # <a name="create-a-manual-booking"></a>Opret en manuel booking
 
@@ -25,7 +25,7 @@ Bookings kan planlægges og bemandes på to forskellige måder. Den første måd
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
-   ![Billede af Bookings i appstarteren.](../media/bookings-applauncher.png)
+    :::image type="content" source="../media/bookings-applauncher.png" alt-text="Bookings i Appstarter.":::
 
 1. Vælg **Kalender** \> **Ny booking** i navigationsruden.
 
@@ -49,4 +49,4 @@ Bookings kan planlægges og bemandes på to forskellige måder. Den første måd
 
    Her er et eksempel på en mail med den påmindelse, som din kunde modtager:
 
-:::image type="content" source="../media/bookings-confirmed-email.png" alt-text="Skærmbillede: Eksempel på bekræftelsesmail fra en manuel reservation":::
+   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="Skærmbillede: Eksempel på bekræftelsesmail fra en manuel reservation":::

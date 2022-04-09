@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
 description: Angiv medarbejdernes arbejdstimer og tilgængelighed i Microsoft Bookings.
-ms.openlocfilehash: 533cf3075c01753061f153d6dcf16bdb02bfa5a3
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: f87a5f13ace9689cd838942e6558529659671238
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714785"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747264"
 ---
 # <a name="employee-working-hours-in-microsoft-bookings"></a>Medarbejdernes arbejdstid i Microsoft Bookings
 
@@ -27,19 +27,19 @@ På siden **Personale** kan du tilpasse medarbejdernes arbejdstid, så de passer
 
 Hvis du vil booke fri for medarbejdere, så kunderne ikke kan booke dem, mens de ikke er på kontoret, skal du se [Planlæg forretningslukninger, fridag og ferietid](schedule-closures-time-off-vacation.md) for at få vejledning.
 
-## <a name="customize-employee-working-hours"></a>Tilpas medarbejdernes arbejdstid
+## <a name="watch-set-employee-working-hours"></a>Se: Angiv arbejdstimer for medarbejdere
 
 Se denne video, eller følg nedenstående trin for at angive en medarbejders arbejdstid.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuXUq]
 
+## <a name="customize-employee-working-hours"></a>Tilpas medarbejdernes arbejdstid
+
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
-1. Vælg din kalender. 
+1. Vælg din kalender.
 
 1. Vælg **Personale** i navigationsruden, og vælg derefter den medarbejder, hvis timer du vil angive.
-
-   ![Billede af Bookings personaleskærm med navnet fremhævet.](../media/bookings-staff-name-highlight.png)
 
 1. Under Arbejdstimer skal du fjerne markeringen i afkrydsningsfeltet **Brug åbningstider** .
 

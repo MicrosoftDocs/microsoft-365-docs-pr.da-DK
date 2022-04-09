@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Instruktioner til angivelse af oplysninger om servicetilbud, herunder tjenestenavn, beskrivelse, placering, varighed og priser. Du kan også mærke de medarbejdere, der er kvalificerede til at levere tjenesten.
-ms.openlocfilehash: 7d4bd5d8e75610785176f8c527576b0609cf71a4
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 576babc8a1cc64734c3d11f761b3b848d3fb2639
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714389"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746666"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>Definer dine servicetilbud i Bookings
 
@@ -89,8 +89,6 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
 4. På siden **Tilgængelighedsindstillinger** kan du se de indstillinger, du har valgt, **på siden Booking** for din planlægningspolitik og tilgængelighed for dine medarbejdere. Du kan få flere oplysninger under [Angiv dine planlægningspolitikker](set-scheduling-policies.md).
 
-    :::image type="content" source="media/bookings-maximum-attendees.jpg" alt-text="Eksempel på angivelse af det maksimale antal deltagere i Bookings.":::
-
 5. **Standardpris**  Dette er den pris, der vises på siden Self-Service. Hvis **Price ikke er angivet** , vises der ingen pris eller reference til omkostninger eller priser.
 
 6. **Noter** Dette felt vises i bookingbegivenheden for det reserverede personale samt i den begivenhed, der vises under fanen Kalender i Bookings webapp.
@@ -101,7 +99,7 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
 8. På siden **Påmindelser og bekræftelser** kan du konfigurere påmindelser og meddelelser, du sender. Påmindelser og meddelelser sendes til kunder, medarbejdere eller begge dele på et angivet tidspunkt før aftalen. Der kan oprettes flere meddelelser for hver aftale, afhængigt af dine præferencer.
 
-   :::image type="content" source="media/bookings-remind-confirm.jpg" alt-text="En bekræftelsesmail fra Bookings.":::
+   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="En bekræftelsesmail fra Bookings.":::
 
    Du kan medtage eventuel yderligere tekst, du vil have her, f.eks. oplysninger om omplanlægning, eller hvad kunderne skal medbringe til aftalen. Følgende er et eksempel på brugerdefineret tekst, der er føjet til den oprindelige bekræftelsesmail, i feltet **Yderligere oplysninger om mailbekræftelse** :
 

@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 21dbcdebbb640e15ef4023c0bf0cfdaf4739fdb7
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: d943f91685e3ee9d6bf12c3a47fbf68e5966dc9d
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686963"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738487"
 ---
 # <a name="use-shared-queries-in-advanced-hunting"></a>Brug delte forespørgsler i avanceret jagt
 
@@ -73,10 +73,11 @@ Hvis du vil oprette et link, der åbner din forespørgsel direkte i den avancere
 ## <a name="access-community-queries-in-the-github-repo"></a>Få adgang til communityforespørgsler i det GitHub lager  
 Microsofts sikkerhedsforskere deler jævnligt avancerede jagtforespørgsler i et [udpeget offentligt lager på GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender). Bidrag til dette lager gennemses, før de publiceres. Hvis du vil bidrage, [skal du tilmelde dig GitHub gratis](https://github.com/).
 
-Du kan også nemt finde disse forespørgsler på rullelisten **Communityforespørgsler** .
+Du kan også nemt finde disse forespørgsler i rullemenuen **Communityforespørgsler** .
 
 :::image type="content" source="../../media/advanced-hunting-shared-queries-2.png" alt-text="Den nye forespørgsel, der skal til at blive gemt på Microsoft 365 Defender-portalen" lightbox="../../media/advanced-hunting-shared-queries-2.png":::
 
+Communityforespørgsler er grupperet i mapper som *f.eks. kampagner*, *samling*, *forsvarunddragelse* og lignende. Yderligere oplysninger om forespørgslen leveres som indbyggede kommentarer i selve forespørgslen. 
 
 >[!tip]
 >Microsofts sikkerhedsforskere leverer også avancerede jagtforespørgsler, som du kan bruge til at finde aktiviteter og indikatorer, der er forbundet med nye trusler. Disse forespørgsler leveres som en del af [trusselsanalyserapporterne](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) i Microsoft 365 Defender.

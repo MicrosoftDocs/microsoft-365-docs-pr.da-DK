@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
 description: Planlæg kontorlukninger og fridage for medarbejdere fra Bookings kalender, så medarbejderne markeres som utilgængelige for bookinger på de angivne tidspunkter.
-ms.openlocfilehash: 138079643c9fbc86918a071f935ebe96d7989e68
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 1f20a28fa56f57680c547981f1c4d8357d75728e
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714763"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747291"
 ---
 # <a name="schedule-business-closures-time-off-and-vacation-time"></a>Planlæg forretningslukninger, fridage og ferietid
 
@@ -23,9 +23,11 @@ ms.locfileid: "64714763"
 
 Nogle gange vil du lukke din virksomhed til ferier eller teambegivenheder, eller dine medarbejdere skal have fri, når de er syge, på ferie eller utilgængelige af andre årsager. Du kan planlægge fridage fra Microsoft Bookings kalender, og medarbejderen vil ikke være tilgængelig for bookinger i løbet af det angivne tidspunkt. Når virksomheden genåbner, eller medarbejderne vender tilbage til arbejdet, vises alle på bookingsiden i henhold til deres fastsatte arbejdstid.
 
-Se denne video, eller følg nedenstående trin for at planlægge lukninger af virksomheder eller medarbejdere slået fra.
+## <a name="watch-enter-business-hours-and-time-off-for-employees"></a>Se: Angiv åbningstider og fridag for medarbejdere
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2TxDC]
+
+Planlæg lukninger eller medarbejdere slået fra.
 
 ## <a name="schedule-ad-hoc-business-closures"></a>Planlæg ad hoc-forretningslukninger
 
@@ -35,7 +37,7 @@ Se denne video, eller følg nedenstående trin for at planlægge lukninger af vi
 
 1. Vælg **Tilføj fridag** i den øverste navigationsrude.
 
-   ![Billede af Bookings kalendervisning og knappen Fridag.](../media/bookings-calendar-timeoff.png)
+   :::image type="content" source="../media/bookings-calendar-timeoff-2.png" alt-text="Bookings kalendervisning og knappen Fridag.":::
 
 1. Udfyld oplysningerne, herunder en titel, start- og slutdato og -klokkeslæt, placering og ekstra noter.
 
@@ -53,13 +55,13 @@ Når en kunde forsøger at planlægge service på en dag, hvor kontoret er lukke
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
-   ![Billede af appstarter.](../media/bookings-applauncher.png)
+   :::image type="content" source="../media/bookings-applauncher.png" alt-text="Appstarter.":::
 
 1. Vælg din kalender.
 
 1. Vælg **Tilføj fridag** i den øverste navigationsrude.
 
-   ![Billede af Bookings kalendervisning og knappen Fridag.](../media/bookings-calendar-timeoff.png)
+   :::image type="content" source="../media/bookings-calendar-timeoff-2.png" alt-text="Bookings kalendervisning og knappen Fridag.":::
 
 1. Udfyld oplysningerne, herunder en titel, start- og slutdato og -klokkeslæt, placering og flere noter. Hvis medarbejderen vil være væk i en hel dag eller i flere dage, skal du vælge **Hele dagen begivenhed**.
 

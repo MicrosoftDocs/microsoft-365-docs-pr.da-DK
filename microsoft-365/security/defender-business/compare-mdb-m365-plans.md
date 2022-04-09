@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: d7651e9ec4ec3cfbf3fe8e853b6de1de9e50dae1
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 76e47f1d4ebb7aa32c65f235ee9b2ede9a051a2d
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714675"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746596"
 ---
 # <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium
 
@@ -87,9 +87,9 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 | [Næste generations beskyttelse](../defender-endpoint/next-generation-protection.md) | Ja | Ja | Ja |
 | [Slutpunktsregistrering og -svar](../defender-endpoint/overview-endpoint-detection-response.md) | Ja <sup>[[2](#fn2)]</sup> | Nej | Ja |
 | [Automatiseret undersøgelse og svar](../defender-endpoint/automated-investigations.md) | Ja <sup>[[2](#fn2)]</sup> | Nej | Ja |
-| [Trusselsjagt](../defender-endpoint/advanced-hunting-overview.md) og seks måneders dataopbevaring | Nej | Nej | Ja |
+| [Trusselsjagt](../defender-endpoint/advanced-hunting-overview.md) og seks måneders dataopbevaring <sup>[[3](#fn3)]</sup> | Nej | Nej | Ja |
 | [Trusselsanalyse](../defender-endpoint/threat-analytics.md) | Ja <sup>[[2](#fn2)]</sup> | Nej | Ja |
-| [Understøttelse på tværs af platforme](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS og Android OS) | Ja <sup>[[3](#fn3)]</sup> | Ja | Ja |
+| [Understøttelse på tværs af platforme](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS og Android OS) | Ja <sup>[[4](#fn4)]</sup> | Ja | Ja |
 | [Microsoft Threat Experts](../defender-endpoint/microsoft-threat-experts.md) | Nej | Nej | Ja |
 | Partner-API'er | Ja | Ja | Ja |
 | [integration af Microsoft 365 fyrtårn](../../lighthouse/m365-lighthouse-overview.md) <br/>(Til visning af sikkerhedshændelser på tværs af kundelejere) | Ja | Nej | Nej |
@@ -98,7 +98,9 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 
 (<a id="fn2">2</a>) Disse funktioner er optimeret til små og mellemstore virksomheder.
 
-(<a id="fn3">3</a>) I løbet af prøveversionsprogrammet understøttes Windows klientenheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)).
+(<a id="fn3">3</a>) Der er ingen tidslinjefane i Defender for Business.
+
+(<a id="fn4">4</a>) I løbet af prøveversionsprogrammet understøttes Windows klientenheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)).
 
 ## <a name="next-steps"></a>Næste trin
 

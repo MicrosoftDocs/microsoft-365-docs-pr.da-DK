@@ -25,12 +25,12 @@ ms.custom:
 search.appverid: MET150
 description: Tilføj fillager i dit Microsoft 365-abonnement. Med ekstra fillager kan du gemme mere indhold i SharePoint.
 ms.date: 04/02/2021
-ms.openlocfilehash: 687233ed91e358c3f48332a0b07aa3213734b71b
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: da66bac2bde52f5bcd899b73e5927008b40227dc
+ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731521"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737466"
 ---
 # <a name="add-more-sharepoint-storage-to-your-subscription"></a>Føj mere SharePoint lagerplads til dit abonnement
 
@@ -112,4 +112,4 @@ Ekstra fillager til Office 365 er tilgængelig for følgende abonnementer:
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Administrer grænser for webstedslager](/sharepoint/manage-site-collection-storage-limits) (artikel)
+[Administrer lagergrænser for websteder](/sharepoint/manage-site-collection-storage-limits) (artikel)\

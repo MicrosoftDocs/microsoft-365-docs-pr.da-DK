@@ -321,6 +321,8 @@
       items:
         - name: Office 2013
           items:
+            - name: Opgrader fra Office 2013-klienter og -servere
+              href: upgrade-office-2013-clients-servers.md
             - name: Skrivebordsversionen af Office 2013
               href: /DeployOffice/endofsupport/plan-upgrade-older-versions-office
             - name: Exchange Server 2013

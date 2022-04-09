@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 94af3e22-aca6-4e91-8b91-1cd5a02a9ea8
 description: Rediger indstillingerne for sprog og tidszone i Microsoft Bookings. Hvis der oprettes bookinger på det forkerte tidspunkt, kan Bookings være angivet for den forkerte tidszone.
-ms.openlocfilehash: 1f319ae91b635bf7c45542d2872c92763d1426f7
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: cb6735640f85456568f0d0492a265046ab127e9c
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715357"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746962"
 ---
 # <a name="set-language-and-time-zones-in-microsoft-bookings"></a>Angiv sprog- og tidszoner i Microsoft Bookings
 
@@ -33,7 +33,7 @@ Sådan angiver du sprog og tidszone for bookingkalenderen:
 
 1. Log på Microsoft 365, og vælg feltet Outlook på landingssiden (som vist på skærmbilledet nedenfor) eller i Microsoft 365 AppStarter.
 
-   ![Billede af Outlook felt på Microsoft 365 landingsside.](../media/bookings-outlook-tile.png)
+   :::image type="content" source="../media/bookings-outlook-tile.png" alt-text="Outlook på Microsoft 365 landingsside.":::
 
 1. Når Outlook åbnes, skal du vælge **tandhjulsikonet** i øverste højre hjørne af skærmen for at åbne dine personlige indstillinger og kontoindstillinger og derefter søge efter "tidszone" i søgefeltet i panelet **Indstillinger**. Panelet opdateres for at vise dine aktuelle personlige sprog- og tidszoneindstillinger for denne konto. Som nævnt ovenfor styrer denne indstilling også sprog og tidszone i bookingkalenderen.
 
@@ -49,6 +49,6 @@ Sådan angiver du sprog og tidszone for bookingkalenderen:
 
    ![Skærmbillede: Skift link til indstillinger for sprog og tidszone.](../media/bookings-region-language-timezone-settings.png)
 
-1. Vælg dit sprog og den aktuelle tidszone, og vælg OK.
+1. Vælg dit sprog og den aktuelle tidszone, og vælg **OK**.
 
-   ![Skærmbillede: Indstillinger for sprog og tidszone.](../media/bookings-region-timezone-settings.png)
+   :::image type="content" source="../media/bookings-region-timezone-settings-1.png" alt-text="Indstillinger for sprog og tidszone.":::

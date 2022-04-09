@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: cb85f5391a6ee6c25d4f82f6f6819132bb8d3b02
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 830149a1592aa2985b603d2e9f317250c7c2606a
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663044"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746525"
 ---
 # <a name="get-microsoft-defender-for-business"></a>Hent Microsoft Defender til virksomheder
 
@@ -115,27 +115,16 @@ Når du modtager din acceptmail, kan du aktivere dit prøveabonnement på følge
 
 3. Når du logger på for første gang, skal du gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)). Se [Oversigt over Microsoft 365 Administration](../../admin/admin-overview/admin-center-overview.md).
 
-4. Benyt en af følgende fremgangsmåder:
+4. Benyt en af følgende fremgangsmåder:<br/>
 
-   - Hvis du konfigurerer et Microsoft 365 abonnement første gang, skal du vælge **Gå til automatiseret konfiguration** og fuldføre følgende trin:
-
-      a. Du skal enten installere dine Office apps nu eller vælge **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.
-
-      b. Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.
-
-      c. Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](../../admin/add-users/add-users.md).
-
-   - Hvis du føjer en prøveversion til en eksisterende Microsoft 365 lejer, skal du følge disse trin for at tildele dine nye licenser til brugere:
-
-      a. Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.
-
-      b. Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. 
-
-      c. Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md).
+   | Scenario | Procedure |
+   |:---|:---|
+   | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<br/><br/>1. Installér dine Office apps nu, eller vælg **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.<br/><br/>2. Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.<br/><br/>3. Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](../../admin/add-users/add-users.md). |
+   | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | 1. Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.<br/><br/>2. Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. <br/><br/>3. Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md). |
 
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Konfigurer og konfigurer Microsoft Defender til virksomheder](mdb-setup-configuration.md).
+1. [Brug installationsguiden i Microsoft Defender til virksomheder](mdb-use-wizard.md) eller [Se konfigurationsprocessen for Defender for Business](mdb-setup-configuration.md).
 
-- [Få mere at vide om, hvordan du får hjælp og support til Microsoft Defender til virksomheder](mdb-get-help.md)
+2. [Se, hvordan du får hjælp og support til Defender for Business](mdb-get-help.md) (bare i tilfælde af at du har brug for hjælp)

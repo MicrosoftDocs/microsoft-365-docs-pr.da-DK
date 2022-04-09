@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Få mere at vide om, hvordan du får adgang til funktionen Bookings i Microsoft 365.
-ms.openlocfilehash: e399540711cdf0f5e9556ac1ac8aeed32d00db52
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: fd81b64916b1798982470ad8e6aa6e28b0a14fdf
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714257"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746739"
 ---
 # <a name="get-access-to-microsoft-bookings"></a>Få adgang til Microsoft Bookings
 
@@ -33,7 +33,7 @@ Første gang du bruger [Bookings](https://outlook.office.com/bookings/onboarding
 
 1. Hvis dette ikke er første gang på denne side, kan du vælge en anden bookingkalender eller foretage en søgning efter en anden bookingkalender.
 
-2. Angiv dit firmanavn og din virksomhedstype, og vælg **Fortsæt**.
+1. Angiv dit firmanavn og din virksomhedstype, og vælg **Fortsæt**.
 
 Du er nu klar til at konfigurere Bookings for din organisation. Du kan gå til den Bookings side med dette [link](https://outlook.office.com/bookings/onboarding), fra appstarteren eller fra office.com. Brug følgende emner til at fortsætte med at konfigurere dine Bookings-funktioner.
 

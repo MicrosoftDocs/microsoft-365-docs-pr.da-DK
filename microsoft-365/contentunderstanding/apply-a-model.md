@@ -1,5 +1,5 @@
 ---
-title: Anvend en dokumentforståelsesmodel i Microsoft SharePoint Syntex
+title: Anvend en model til dokumentforståelse i Microsoft SharePoint Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Få mere at vide om, hvordan du anvender en publiceret model SharePoint et dokumentbibliotek i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 0edb87faacc3518179b8bd1a4d41d7e3834394c3
-ms.sourcegitcommit: 9f0e84835121ce6228fdc69182c24be7ad1cb20e
+description: Få mere at vide om, hvordan du anvender en publiceret model på et SharePoint dokumentbibliotek i Microsoft SharePoint Syntex.
+ms.openlocfilehash: 6be3a1b0badaecf1196545c313adcce51f3d2b55
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63591533"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738459"
 ---
-# <a name="apply-a-document-understanding-model-in-microsoft-sharepoint-syntex"></a>Anvend en dokumentforståelsesmodel i Microsoft SharePoint Syntex
+# <a name="apply-a-document-understanding-model-in-microsoft-sharepoint-syntex"></a>Anvend en model til dokumentforståelse i Microsoft SharePoint Syntex
 
 </br>
 
@@ -28,7 +28,7 @@ ms.locfileid: "63591533"
 
 </br>
 
-Når du har publicere dokumentets forståelsesmodel, kan du anvende den på en eller flere SharePoint dokumentbiblioteker i din Microsoft 365 lejer.
+Når du har udgivet din model til dokumentforståelse, kan du anvende den på et eller flere SharePoint dokumentbiblioteker i din Microsoft 365 lejer.
 
 > [!NOTE]
 > Du kan kun anvende modellen på dokumentbiblioteker, som du har adgang til.
@@ -38,121 +38,109 @@ Når du har publicere dokumentets forståelsesmodel, kan du anvende den på en e
 
 Sådan anvender du din model på et SharePoint dokumentbibliotek:
 
-1. På modellens startside skal du **vælge Anvend** model i feltet Anvend model på **biblioteker**. Eller i sektionen **Hvor modellen anvendes skal du** vælge **+Tilføj bibliotek**.
+1. På modellens startside skal du på feltet **Anvend model på biblioteker** vælge **Anvend model**. Du kan også vælge **+Tilføj bibliotek** i afsnittet **Hvor modellen anvendes**.
 
     ![Skærmbillede af sektionen Hvor modellen anvendes med indstillingen Tilføj bibliotek fremhævet.](../media/content-understanding/apply-to-library.png)
 
-2. Du kan derefter vælge det SharePoint, der indeholder det dokumentbibliotek, du vil anvende modellen på. Hvis webstedet ikke vises på listen, kan du bruge søgefeltet til at finde det.
+2. Du kan derefter vælge det SharePoint websted, der indeholder det dokumentbibliotek, du vil anvende modellen på. Hvis webstedet ikke vises på listen, kan du bruge søgefeltet til at finde det.
 
     ![Vælg et websted.](../media/content-understanding/site-search.png)
 
     > [!NOTE]
-    > Du skal have *tilladelse til* at administrere liste *eller redigere* rettigheder til det dokumentbibliotek, du anvender modellen på.
+    > Du skal have *tilladelserne Administrer liste* eller *Rediger* til det dokumentbibliotek, du anvender modellen på.
 
-3. Når du har valgt webstedet, skal du vælge det dokumentbibliotek, som du vil anvende modellen på. I eksemplet skal du vælge *dokumentdokumentbiblioteket* Dokumenter fra *webstedet Contoso-sagssporing* .
+3. Når du har valgt webstedet, skal du vælge det dokumentbibliotek, du vil anvende modellen på. I eksemplet skal du vælge dokumentbiblioteket *Dokumenter* på webstedet *Contoso-sagssporing* .
 
     ![Vælg et dokumentbibliotek.](../media/content-understanding/select-doc-library.png)
 
-4. Da modellen er knyttet til en indholdstype, tilføjer den indholdstypen og opdaterer standardvisningen med de etiketter, du udtrækker, og vises som kolonner, når du anvender den på biblioteket. Du kan dog **vælge Avancerede indstillinger** for eventuelt at bevare den aktuelle biblioteksvisning eller at bruge en ny visning med modeloplysninger og filminiaturer. Hvis du vælger at beholde den aktuelle biblioteksvisning, er de nye visninger med modeloplysninger stadig tilgængelige under bibliotekets visningsmenu.
+4. Da modellen er knyttet til en indholdstype, tilføjer den indholdstypen og opdaterer standardvisningen med de etiketter, du udtrækkede, og viser den som kolonner, når du anvender den på biblioteket. Du kan dog vælge **Avancerede indstillinger** for eventuelt at vælge at bevare den aktuelle biblioteksvisning eller at bruge en ny visning med modeloplysninger og filminiaturer. Hvis du vælger at beholde den aktuelle biblioteksvisning, er de nye visninger med modeloplysninger stadig tilgængelige i bibliotekets visningsmenu.
 
     ![Skærmbillede af avancerede indstillinger, der viser biblioteksvisningerne.](../media/content-understanding/library-view.png)
 
-    Du kan finde flere oplysninger [i Ændre visningen i et dokumentbibliotek](#change-the-view-in-a-document-library) senere i denne artikel.
+    Du kan få flere oplysninger under [Skift visningen i et dokumentbibliotek](#change-the-view-in-a-document-library) senere i denne artikel.
 
 5. Vælg **Tilføj** for at anvende modellen på biblioteket.
 
-6. På modellens startside skal du i **sektionen Hvor modellen anvendes** kunne se navnet på det websted, SharePoint på listen.
+6. På modellens startside i afsnittet **Hvor modellen anvendes** kan du se navnet på det SharePoint websted, der er angivet.
 
-7. Gå til dit dokumentbibliotek, og sørg for, at du er i modellens dokumentbiblioteksvisning. Vælg **AutomateView** >  **dokumentforståelse af modeller**.
+7. Gå til dokumentbiblioteket, og sørg for, at du er i modellens dokumentbiblioteksvisning. Vælg **AutomateView-dokumentforståelse** >  af modeller.
 
-8. På siden **Gennemse modeller og anvend nye** skal du vælge fanen **Anvendt** for at få vist de modeller, der anvendes til dokumentbiblioteket.
+8. På siden **Gennemse modeller og anvend nye** skal du vælge fanen **Anvendt** for at se de modeller, der er anvendt på dokumentbiblioteket.
 
     ![Skærmbillede, der viser fanen Anvendt valgt og de anvendte modeller.](../media/content-understanding/applied-models.png) 
 
-9. Vælg **Vis modeldetaljer** for at få vist oplysninger om en model, f.eks. en beskrivelse af modellen, hvem der har publiceret modellen, og hvis modellen anvender opbevarings- eller følsomhedsmærkater på de filer, den klassificerer.
+9. Vælg **Vis modeldetaljer** for at få vist oplysninger om en model, f.eks. en beskrivelse af modellen, hvem der har publiceret modellen, og om modellen anvender opbevarings- eller følsomhedsmærkater på de filer, den klassificerer.
 
 Når du har anvendt modellen på dokumentbiblioteket, kan du begynde at overføre dokumenter til webstedet og se resultaterne.
 
-Modellen identificerer filer og mapper med modellens tilknyttede indholdstype og viser dem i din visning. Hvis modellen har nogen udtræk, viser visningen kolonner for de data, du udtrækker fra hver enkelt fil eller mappe.
+Modellen identificerer alle filer og mapper med modellens tilknyttede indholdstype og viser dem i visningen. Hvis din model har udtrækninger, vises der kolonner for de data, du udtrækker fra hver fil eller mappe, i visningen.
 
 > [!NOTE]
-> Hvis der anvendes to eller flere dokumentforståelsesmodeller i det samme bibliotek, klassificeres den uploadede fil ved hjælp af den model, der har det højeste gennemsnitlige tillidsresultat. De udtrukne enheder vil kun være fra den anvendte model. <br><br>Hvis der anvendes en brugerdefineret formularbehandlingsmodel og dokumentforståelsesmodel på det samme bibliotek, klassificeres filen ved hjælp af dokumentforståelsesmodellen og eventuelle uddannede udtræk for den pågældende model. Hvis der er tomme kolonner, der svarer til formularbehandlingsmodellen, udfyldes kolonnerne ved hjælp af de udtrukne værdier.
+> Hvis to eller flere modeller til dokumentforståelse anvendes på det samme bibliotek, klassificeres den overførte fil ved hjælp af den model, der har den højeste gennemsnitlige konfidensscore. De udtrukne enheder kommer kun fra den anvendte model. <br><br>Hvis der anvendes en model til behandling af en brugerdefineret formular og en model til dokumentforståelse for det samme bibliotek, klassificeres filen ved hjælp af modellen til dokumentforståelse og eventuelle oplærte udtrækninger for den pågældende model. Hvis der er tomme kolonner, der svarer til formularens behandlingsmodel, udfyldes kolonnerne med disse udtrukne værdier.
 
-## <a name="sync-changes-to-one-or-more-libraries"></a>Synkroniser ændringer til et eller flere biblioteker
+## <a name="sync-changes-to-one-or-more-libraries"></a>Synkroniser ændringer i et eller flere biblioteker
 
-Når du publicerer en model til flere dokumentbiblioteker og derefter opdaterer modellen, f.eks. at tilføje eller fjerne en extractor, skal du skubbe opdateringen til alle de biblioteker, som modellen er blevet anvendt.
+Når du publicerer en model til flere dokumentbiblioteker og derefter opdaterer modellen, f.eks. tilføjelse eller fjernelse af en udtrækningsmaskine, skal du pushoverføre opdateringen til alle de biblioteker, som modellen er anvendt på.
 
-Sådan synkroniserer du ændringer til alle anvendte biblioteker:
+Sådan synkroniserer du ændringer i alle anvendte biblioteker:
 
-1. På modellens startside skal du i **sektionen Hvor modellen anvendes** vælge **Synkroniser alle**.
+1. Vælg **Synkroniser alle** i sektionen **Hvor modellen anvendes** på modellens startside.
 
-    ![Skærmbillede, der viser sektionen Hvor modellen anvendes, og knappen Synkroniser alle fremhævet.](../media/content-understanding/sync-all-button.png) 
+    ![Skærmbillede, der viser sektionen Hvor modellen anvendes og knappen Synkroniser alle fremhævet.](../media/content-understanding/sync-all-button.png) 
 
-Sådan synkroniserer du ændringer til ét eller kun udvalgte biblioteker:
+Sådan synkroniserer du ændringer i et eller kun valgte biblioteker:
 
-1. På modellens startside skal du i **sektionen Hvor modellen** anvendes vælge det eller de biblioteker, du vil anvende ændringerne på.
+1. På modellens startside skal du i afsnittet **Hvor modellen anvendes** vælge det eller de biblioteker, du vil anvende ændringerne på.
 
 2. Vælg **Synkroniser**.
 
-    ![Skærmbillede, der viser sektionen Hvor modellen anvendes, og knappen Synkroniser fremhævet.](../media/content-understanding/sync-button.png) 
+    ![Skærmbillede, der viser sektionen Hvor modellen anvendes og knappen Synkroniser fremhævet.](../media/content-understanding/sync-button.png) 
 
 ## <a name="apply-the-model-to-files-and-folder-content-already-in-the-document-library"></a>Anvend modellen på filer og mappeindhold, der allerede findes i dokumentbiblioteket
 
-Mens en anvendt model behandler alle filer og mappeindhold, der er overført til dokumentbiblioteket, efter den er anvendt, kan du også gøre følgende for at køre modellen på filer og mappeindhold, der allerede findes i dokumentbiblioteket, før den model, der anvendes:
+Mens en anvendt model behandler alt fil- og mappeindhold, der er overført til dokumentbiblioteket, når det er anvendt, kan du også gøre følgende for at køre modellen på filer og mappeindhold, der allerede findes i dokumentbiblioteket, før modellen anvendes:
 
-1. I dit dokumentbibliotek skal du vælge de filer og mapper, der skal behandles af din model.
+1. Vælg de filer og mapper, du vil behandle af din model, i dokumentbiblioteket.
 
-2. Når du har valgt dine filer og mapper, **vises Klassificer** og udtræk på båndet i dokumentbiblioteket. Vælg **Klassificer og udtræk**.
+2. Når du har valgt dine filer og mapper, vises **Klassificer og udpak** på båndet i dokumentbiblioteket. Vælg **Klassificer og udtræk**.
 
       ![Skærmbillede, der viser indstillingen Klassificer og udtræk.](../media/content-understanding/extract-classify.png) 
 
 3. De filer og mapper, du har valgt, føjes til den kø, der skal behandles.
 
     > [!NOTE]
-    > Du modtager en meddelelse om, hvor lang tid klassificeringen kan tage. Hvis du kun har valgt filer, kan klassificeringen tage op til 30 minutter. Hvis du har valgt en eller flere mapper, kan klassificeringen tage op til 24 timer.
+    > Du modtager en meddelelse, der angiver, hvor lang tid klassificeringen kan tage. Hvis du kun har valgt filer, kan klassificering tage op til 30 minutter. Hvis du har valgt en eller flere mapper, kan klassificering tage op til 24 timer.
 
 ### <a name="classification-date-field"></a>Feltet Klassificeringsdato
 
-Når der SharePoint Syntex et dokuments forståelsesmodel (eller en formularbehandlingsmodel) til et dokumentbibliotek, medtages feltet Klassificeringsdato i biblioteksskemaet. Dette felt er som standard tomt. Men når dokumenter behandles og klassificeres efter en model, opdateres dette felt med et dato-tidsstempel for færdiggørelse. 
+Når der anvendes en SharePoint Syntex model til dokumentforståelse (eller en formularbehandlingsmodel) på et dokumentbibliotek, medtages feltet **Klassificeringsdato** i biblioteksskemaet. Dette felt er som standard tomt. Når dokumenter behandles og klassificeres af en model, opdateres dette felt dog med et dato/klokkeslætsstempel for færdiggørelse. 
 
    ![Skærmbillede af et dokumentbibliotek, der viser kolonnen Klassificeringsdato.](../media/content-understanding/class-date-column.png) 
 
-Feltet **Klassificeringsdato** bruges af udløseren Når [](/connectors/sharepointonline/#when-a-file-is-classified-by-a-content-understanding-model) en fil er klassificeret af en indholdsforståelsesmodel til at køre et Power Automate-flow, når en model er færdig med at behandle indholdet af en fil eller mappe, og  den har opdateret feltet Klassificeringsdato.
+Feltet **Klassificeringsdato** bruges af udløseren [**Når en fil klassificeres af en model til forståelse af indhold**](/connectors/sharepointonline/#when-a-file-is-classified-by-a-content-understanding-model) til at køre et Power Automate flow, når en model er færdig med at behandle indholdet af en fil eller mappe og har opdateret feltet **Klassificeringsdato**.
 
    ![Flow udløser.](../media/content-understanding/trigger.png)
 
-**Udløseren Når en fil er** klassificeret af en indholdsforståelsesmodel, kan derefter bruges til at starte et flow ved hjælp af eventuelle udpakkede oplysninger fra filen eller mappen.
+Udløseren **Når en fil klassificeres af en model, der forstår indhold** , kan derefter bruges til at starte et flow ved hjælp af eventuelle udpakkede oplysninger fra filen eller mappen.
 
-Som et eksempel kan du bruge Send en mail, når **SharePoint Syntex** behandler et filflow **, når** en model er blevet stemplet med Klassificeringsdato, til at give brugerne besked om, at en ny fil er blevet behandlet og klassificeret af en model i SharePoint-dokumentbiblioteket.
+Når en model stemples med **klassificeringsdatoen**, kan du f.eks. bruge **Send en mail, når SharePoint Syntex behandler et filflow**, til at give brugerne besked om, at en ny fil er blevet behandlet og klassificeret af en model i SharePoint dokumentbibliotek.
 
 Sådan kører du flowet:
 
-1. Vælg en fil, og vælg derefter **Integrer** >  **Power Automate** >  **Oprette et flow**.
+1. Vælg en fil, og vælg derefter **Integrer** >  **Power Automate** >  **Opret et flow**.
 
-2. I Opret **et flowpanel skal** du vælge **Send en mail, når SharePoint Syntex behandler en fil**.
+2. På panelet **Opret et flow** skal du vælge **Send en mail, når SharePoint Syntex behandler en fil**.
 
     ![Skærmbillede, der viser indstillingen Opret et flowpanel og flow fremhævet.](../media/content-understanding/integrate-create-flow.png) 
 
-## <a name="change-the-view-in-a-document-library"></a>Ændre visningen i et dokumentbibliotek
+## <a name="change-the-view-in-a-document-library"></a>Skift visningen i et dokumentbibliotek
 
-Der er flere måder at få vist, hvordan du kan se oplysningerne i SharePoint dokumentbibliotek. Du kan ændre visningen i dit dokumentbibliotek, så den passer til dine behov eller præferencer.
-
-Hvis du vil ændre visningen på bibliotekssiden, skal du vælge rullemenuen for visning for at få vist indstillingerne og derefter vælge den visning, du vil bruge.
-
-   ![Skærmbillede af en rullemenu for visning, der viser visningsindstillingerne.](../media/content-understanding/document-library-view-menu.png) 
-
-Hvis du f.eks **. vælger Felter** på listen, vises siden som vist.
-
-   ![Skærmbillede af et dokumentbibliotek, der viser visningen Felter.](../media/content-understanding/document-library-tiles-view.png) 
-
-Visningen **Felter viser** op til otte brugeroprettede felter. Hvis der er færre end otte, vises op til fire systemgenererede felter: Følsomhed (hvis det er tilgængeligt), Opbevaring (hvis det er tilgængeligt), Indholdstype, Dato for ændring, Ændret af og Klassificeringsdato.
-
-Hvis du vil redigere en aktuel visning, skal du vælge Rediger aktuel visning **i rullemenuen visning**.
+[!INCLUDE [Change the view in a document library](../includes/change-library-view.md)]
 
 ## <a name="see-also"></a>Se også
 
 [Opret en klassificering](create-a-classifier.md)
 
-[Opret en extractor](create-an-extractor.md)
+[Opret en udtrækningsmaskine](create-an-extractor.md)
 
 [Oversigt over dokumentforståelse](document-understanding-overview.md)

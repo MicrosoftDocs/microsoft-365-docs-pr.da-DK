@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om vigtige forskelle mellem en model til dokumentforståelse og en formularbehandlingsmodel.
-ms.openlocfilehash: ee51b60b69bc2ec489f074a73555cbc6f1a17143
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a3f36adbf261ef290aada8efe1c0643ee1ce570f
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664629"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738410"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem modeller til dokumentforståelse og formularbehandling 
 
@@ -85,6 +85,7 @@ Brug følgende tabel til at forstå, hvornår du skal bruge formularbehandling, 
 | Transaktionsomkostninger | Bruger AI Builder-kreditter.<br>Kreditter kan købes i batches på 1 mio.<br>Kreditter på 1 mio. er inkluderet, når der købes mere end 300 SharePoint Syntex licenser.<br>Kreditter på 1 mio. tillader behandling af 2.000 filsider.<br>| NIELSEN |
 | Kapacitet | Bruger Power Platform-standardmiljøet (brugerdefinerede miljøer med understøttet Dataverse-database). | Har ikke kapacitetsbegrænsninger.|
 | Understøttede sprog| Understøttelse af sprog for mere [end 73 sprog](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support). | Modeller fungerer på alle latinske alfabetsprog. Ud over engelsk: tysk, svensk, fransk, spansk, italiensk og portugisisk.|
+
 
 ## <a name="see-also"></a>Se også
 

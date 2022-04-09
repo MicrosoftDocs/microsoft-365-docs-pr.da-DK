@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
 description: Følg disse instruktioner for at oprette siden Om os, herunder firmanavn, adresse, telefonnummer, URL-adresse til websted, logo og åbningstider i Microsoft Bookings.
-ms.openlocfilehash: 9931a5c00147a6f6b9b0cd4ef9550d783b8771fd
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 5d0505b0b23515bef0bdcc94206d8f3b856479c4
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715335"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746860"
 ---
 # <a name="enter-your-business-information"></a>Angiv dine virksomhedsoplysninger
 
@@ -25,7 +25,7 @@ I Microsoft Bookings indeholder siden Firmaoplysninger i webappen alle de oplysn
 
 De oplysninger, du angiver her, vises på den side, kunder og klienter bruger til at booke aftaler (kendt som bookingsiden) og i meddelelser og påmindelser, der sendes til dem af Bookings. Et eksempel på disse oplysninger på bookingsiden er fremhævet nedenfor.
 
-   ![Billede af sideeksempel på siden Firmaoplysninger i Microsoft Bookings.](../media/bookings-business-info.png)
+   ![Billede af sideeksempel på siden Firmaoplysninger i Microsoft Bookings.](../media/bookings-business-info-2.png)
 
 > [!NOTE]
 > For at komme i gang skal du se [Få adgang til Microsoft Bookings](get-access.md). Hvis du vil slå Bookings til eller fra, skal du se [Slå Bookings til eller fra for din organisation](turn-bookings-on-or-off.md).
@@ -34,7 +34,7 @@ De oplysninger, du angiver her, vises på den side, kunder og klienter bruger ti
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
-1. I navigationsruden skal du vælge **Din** **kalenderForretningsoplysninger** ->  i venstre rude.
+1. I navigationsruden skal du vælge **Din** **kalenderForretningsoplysninger** >  i venstre rude.
 
 1. I afsnittet **Grundlæggende oplysninger** skal du angive dit firmanavn, din adresse og dit telefonnummer, som du vil bruge til din Bookings kalender.
 
@@ -66,11 +66,11 @@ Du har f.eks. personalemøder hver torsdag fra kl. 14.00 til 02.30 og vil gerne 
 
 1. Vælg **+** at oprette en ny række for torsdag.
 
-   ![Billede af brugergrænsefladen for åbningstider.](../media/bookings-split-shift.png)
+   ![Billede af brugergrænsefladen for åbningstider.](../media/bookings-split-shift-1.png)
 
 1. Vælg 2:30 i den nye række. for starttidspunktet og kl. 18.00. for sluttidspunktet.
 
-   ![Billede af brugergrænsefladen for åbningstider med tilføjede timer.](../media/bookings-split-shift-hours.png)
+   ![Billede af brugergrænsefladen for åbningstider med tilføjede timer.](../media/bookings-split-shift-hours-1.png)
 
 1. Vælg Gem.
 
