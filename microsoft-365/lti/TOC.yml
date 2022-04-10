@@ -1,16 +1,24 @@
-- name: M365 Office LTI
+- name: Microsoft 365 LTI
   href: index.md
-- name: Lærredsintegration
+- name: Microsoft OneLTI-administration
+  href: manage-microsoft-one-lti.md
+- name: Lærredsintegrationer
   items:
     - name: Brug Microsoft OneDrive LTI med lærred
       href: onedrive-lti.md
-    - name: Brug Microsoft Teams klasser med Lærred
+    - name: Brug Microsoft Teams-hold med lærred
       href: teams-classes-with-canvas.md
-    - name: Brug Microsoft Teams møder med Lærred
+    - name: Brug Microsoft Teams-møder med lærred
       href: teams-meetings-with-canvas.md
-- name: Blackboard-integrationer
+- name: Tavleintegrationer
   items:
-    - name: Brug Microsoft OneDrive LTI med Blackboard
+    - name: Brug Microsoft OneDrive LTI med tavle
       href: onedrive-lti-blackboard.md
-    - name: Brug Microsoft Teams klasser med Blackboard Learn Ultra
+    - name: Brug Microsoft Teams-hold med Blackboard Learn Ultra
       href: teams-classes-with-blackboard.md
+- name: Moodle-integrationer
+  items:
+    - name: Konfigurer Moodle-plugin
+      href: moodle-plugin-configuration.md
+    - name: Brug Microsoft Teams-hold og -møder med Moodle
+      href: teams-classes-meetings-with-moodle.md

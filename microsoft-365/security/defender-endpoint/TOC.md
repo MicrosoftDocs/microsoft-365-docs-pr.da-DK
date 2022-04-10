@@ -406,7 +406,7 @@
 ### [Slutpunktsregistrering og -svar]()
 #### [Oversigt over slutpunktsregistrering og svar](overview-endpoint-detection-response.md)
 #### [Dashboard til sikkerhedshandlinger](security-operations-dashboard.md)
-#### [Indsend mistænkelige filer](admin-submissions-mde.md)
+#### [Indsend filer](admin-submissions-mde.md)
 #### [Kø over hændelser]()
 ##### [Få vist og organiser hændelseskøer](view-incidents-queue.md)
 ##### [Administrer hændelser](manage-incidents.md)
