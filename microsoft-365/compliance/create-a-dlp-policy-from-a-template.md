@@ -19,72 +19,72 @@ search.appverid:
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
-description: I denne artikel får du mere at vide om, hvordan du opretter DLP-politikker ved hjælp af en af de skabeloner, der er inkluderet Office 365.
-ms.openlocfilehash: 965e5198887ec64072efffd35ffa7739c90af6a4
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+description: I denne artikel får du mere at vide om, hvordan du opretter DLP-politikker ved hjælp af en af de skabeloner, der er inkluderet i Office 365.
+ms.openlocfilehash: 3617e1f067f4b29470feedcf7381b41a400887f9
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63589113"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759097"
 ---
 # <a name="create-a-dlp-policy-from-a-template"></a>Opret en DLP-politik ud fra en skabelon
 
-Den nemmeste og mest almindelige måde at komme i gang med DLP-politikker på er at bruge en af de skabeloner, der er inkluderet i Microsoft 365 Compliance Center. Du kan bruge en af disse skabeloner, som den er, eller du kan tilpasse reglerne, så de opfylder din organisations specifikke krav til overholdelse af regler og standarder.
+Den nemmeste og mest almindelige måde at komme i gang med DLP-politikker på er at bruge en af skabelonerne i Microsoft 365 Compliance Center. Du kan bruge en af disse skabeloner, som den er, eller tilpasse reglerne, så de opfylder organisationens specifikke krav til overholdelse af angivne standarder.
 
-Microsoft 365 indeholder mere end 40 skabeloner, der er klar til brug, som kan hjælpe dig med at opfylde en lang række almindelige lovmæssige og forretningsmæssige behov. Se; [Politikskabeloner](dlp-policy-reference.md#policy-templates) til en komplet liste. 
+Microsoft 365 indeholder over 40 brugsklare skabeloner, der kan hjælpe dig med at opfylde en lang række almindelige lovgivnings- og forretningspolitiske behov. Se; [Politikskabeloner](dlp-policy-reference.md#policy-templates) for en komplet liste. 
 
-Du kan finjustere en skabelon ved at ændre dens eksisterende regler eller tilføje nye. Du kan f.eks. føje nye typer af følsomme oplysninger til en regel, ændre antallet i en regel for at gøre det sværere eller nemmere at udløse, give brugerne mulighed for at tilsidesætte handlingerne i en regel ved at give en forretningsberettigelse eller ændre, hvem meddelelser og hændelsesrapporter sendes til. En DLP-politikskabelon er et fleksibelt udgangspunkt for mange almindelige scenarier for overholdelse af regler og standarder.
+Du kan finjustere en skabelon ved at ændre en af dens eksisterende regler eller tilføje nye. Du kan f.eks. føje nye typer følsomme oplysninger til en regel, ændre antallet i en regel for at gøre det sværere eller nemmere at udløse, give personer tilladelse til at tilsidesætte handlingerne i en regel ved at angive en forretningsberettigelse eller ændre, hvem meddelelser og hændelsesrapporter sendes til. En DLP-politikskabelon er et fleksibelt udgangspunkt for mange almindelige scenarier for overholdelse af angivne standarder.
 
-Du kan også vælge skabelonen Brugerdefineret, som ikke har nogen standardregler, og konfigurere din DLP-politik fra bunden, så den opfylder de specifikke overholdelseskrav for organisationen.
+Du kan også vælge den brugerdefinerede skabelon, som ikke har nogen standardregler, og konfigurere din DLP-politik fra bunden for at opfylde de specifikke krav til overholdelse af angivne standarder for din organisation.
 
 ## <a name="permissions"></a>Tilladelser
 
-Medlemmer af dit overholdelsesteam, der opretter DLP-politikker, skal have tilladelse til Overholdelsescenter. Som standard har din lejeradministrator adgang til at give dem, der er dem, der overholder regler og standarder, adgang. Følg disse trin:
+Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have tilladelser til Overholdelsescenter. Som standard kan din lejeradministrator få adgang til at give overholdelsesansvarlige og andre personer adgang. Følg disse trin:
   
-1. Opret en gruppe i Microsoft 365 og tilføj compliance officers til den.
+1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
     
-2. Opret en rollegruppe på siden **Tilladelser i** Security &amp; Compliance Center. 
+2. Opret en rollegruppe på siden **Tilladelser** i Security &amp; Compliance Center. 
 
-3. Når du opretter rollegruppen, skal du bruge **sektionen Vælg** roller for at føje følgende rolle til rollegruppen: **DLP-overholdelsesstyring**.
+3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
-4. Brug sektionen **Vælg medlemmer** for at tilføje den Microsoft 365 gruppe, du har oprettet før, til rollegruppen.
+4. Brug afsnittet **Vælg medlemmer** til at føje den Microsoft 365 gruppe, du oprettede før, til rollegruppen.
 
-Brug rollen **View-Only DLP Compliance Management** til at oprette en rollegruppe med visningsrettigheder til DLP-politikker og DLP-rapporter.
+Brug rollen **Vis kun DLP-overholdelsesstyring** til at oprette en rollegruppe med skrivebeskyttede rettigheder til DLP-politikker og DLP-rapporter.
 
-Få mere at vide under [Giv brugere adgang til Office 365 Overholdelsescenter](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Du kan få flere oplysninger under [Giv brugere adgang til Office 365 Compliance Center](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
   
-Disse tilladelser er nødvendige for at oprette og anvende en DLP-politik for ikke at gennemtvinge politikker.
+Disse tilladelser kræves for at oprette og anvende en DLP-politik for ikke at gennemtvinge politikker.
 
-### <a name="roles-and-role-groups-in-preview"></a>Roller og rollegrupper i forhåndsvisning
+### <a name="roles-and-role-groups-in-preview"></a>Roller og rollegrupper som prøveversion
 
-Eksempelvisningen har roller og rollegrupper, som du kan teste for at finjustere dine adgangskontrolelementer.
+Der er roller og rollegrupper som prøveversion, som du kan teste for at finjustere dine adgangskontrolelementer.
 
-Her er en liste over de Microsoft Information Protection (MIP)-roller, der er i forhåndsvisning. Du kan få mere at vide om [dem under Roller i & Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Her er en liste over Microsoft Information Protection (MIP) roller, der er i prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Administratoren for informationsbeskyttelse
-- Information Protection-analytiker
-- Information Protection Investigator
-- Information Protection Reader
+- Information Protection administrator
+- Information Protection analytiker
+- Information Protection investigator
+- Information Protection-læser
 
-Her er en liste over MIP-rollegrupper, der er i forhåndsvisning. Du kan få mere at vide om [dette under Rollegrupper i & Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
+Her er en liste over MIP-rollegrupper, der findes som prøveversion. Du kan få mere at vide om under [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Beskyttelse af oplysninger
-- Administratorer for informationsbeskyttelse
-- Information Protection-analytikere
-- Beskyttelse af oplysninger
-- Læsere til informationsbeskyttelse
+- Information Protection
+- Information Protection administratorer
+- Information Protection analytikere
+- Information Protection efterforskere
+- Information Protection læsere
 
-### <a name="create-the-dlp-policy-from-a-template"></a>Opret DLP-politikken fra en skabelon
+### <a name="create-the-dlp-policy-from-a-template"></a>Opret DLP-politikken ud fra en skabelon
 
 1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
 
-2. Venstre navigationslinje løsninger \> til \> **forebyggelse af** \> **datatab** \>  \> + Opret politik i **Center for overholdelse af regler og standarder**.
+2. I Overholdelsescenter \> til venstre **navigationsløsninger** \> \> **Politikker til** \> **forebyggelse af** \> datatab **+ Opret politik**.
 
-    ![Knappen Opret en politik.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
+    ![Opret en politikknap.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
           
-3. Vælg skabelonen DLP-politik, der beskytter de typer af følsomme oplysninger, du skal bruge \> **Næste**.
+3. Vælg den DLP-politikskabelon, der beskytter de typer følsomme oplysninger, du skal bruge \> **Næste**.
 
-4. Navngive politikken \> **Næste**.
+4. Navngiv politikken \> **Næste**.
  
 <!--In this example, you'll select **Privacy** \> **U.S. Personally Identifiable Information (PII) Data** because it already includes most of the types of sensitive information that you want to protect - you'll add a couple later.
 
@@ -92,38 +92,38 @@ Her er en liste over MIP-rollegrupper, der er i forhåndsvisning. Du kan få mer
 
     ![Page for choosing a DLP policy template.](../media/775266f6-ad87-4080-8d7c-97f2e7403b30.png)-->
 
-5. For at vælge de placeringer, du vil have DLP-politikken til at beskytte, og enten acceptere standardområdet for hver placering eller tilpasse omfanget. Se Placeringer [for angivelse](dlp-policy-reference.md#locations) af områdeindstillinger.
+5. Hvis du vil vælge de placeringer, som DLP-politikken skal beskytte, skal du enten acceptere standardområdet for hver placering eller tilpasse området. Se [Placeringer](dlp-policy-reference.md#locations) for indstillinger for område.
 
 6. Vælg \> **Næste**.
  
 1. Gør et af følgende:
 
    - Vælg **Alle placeringer i Office 365** \> **Næste**.
-   - Vælg **Lad mig vælge specifikke placeringer** \> **Næste**. I dette eksempel skal du vælge dette.
+   - Vælg **Lad mig vælge bestemte placeringer** \> **Næste**. I dette eksempel skal du vælge dette.
 
-   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange mailkonti eller alle OneDrive-konti, skal du slå **status** for den pågældende placering til eller fra.
+   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange mail eller alle OneDrive konti, skal du slå **Status** for den pågældende placering til eller fra.
 
-   Hvis du kun vil SharePoint bestemte websteder eller OneDrive for Business-konti, skal du slå **Status** til og derefter klikke på linkene **under** Medtag for at vælge bestemte websteder eller konti. Når du anvender en politik på et websted, anvendes de regler, der er konfigureret i den pågældende politik, automatisk på alle underordnede websteder på webstedet.
+   Hvis du kun vil medtage bestemte SharePoint websteder eller OneDrive for Business konti, skal du skifte **status** til til og derefter klikke på linkene under **Medtag** for at vælge bestemte websteder eller konti. Når du anvender en politik på et websted, anvendes de regler, der er konfigureret i den pågældende politik, automatisk på alle underordnede websteder på det pågældende websted.
 
-   ![Indstillinger for placeringer, hvor der kan anvendes en DLP-politik.](../media/all-locations.png)
+   ![Indstillinger for placeringer, hvor en DLP-politik kan anvendes.](../media/all-locations.png)
 
-   I dette eksempel skal du deaktivere **Status** for både **Exchange-mail**- og **SharePoint-websteder** for at beskytte følsomme oplysninger, der er gemt på alle OneDrive for Business-konti, og lade **Status** være slået til for **OneDrive-konti**.
+   I dette eksempel skal du deaktivere **Status** for både **Exchange mail**- og **SharePoint-websteder** for at beskytte følsomme oplysninger, der er gemt på alle OneDrive for Business konti, og lade **Status** være aktiveret for **OneDrive konti**.
 
-7. Vælg **Gennemse, og tilpas standardindstillingerne fra skabelonen** \> **Næste**.
+7. Vælg **Gennemse, og tilpas standardindstillingerne i skabelonen** \> **Næste**.
 
-8. En DLP-politikskabelon indeholder foruddefinerede regler med betingelser og handlinger, der registrerer og reagerer på bestemte typer af følsomme oplysninger. Du kan redigere, slette eller deaktivere en af de eksisterende regler eller tilføje nye. Klik på Næste, når du **er færdig**.
+8. En DLP-politikskabelon indeholder foruddefinerede regler med betingelser og handlinger, der registrerer og reagerer på bestemte typer følsomme oplysninger. Du kan redigere, slette eller deaktivere en af de eksisterende regler eller tilføje nye. Klik på **Næste**, når du er færdig.
 
-    ![Regler udvidet i politikskabelonen amerikanske pii.](../media/3bc9f1b6-f8ad-4334-863a-24448bb87687.png)
+    ![Regler udvidet i den amerikanske pii-politikskabelon.](../media/3bc9f1b6-f8ad-4334-863a-24448bb87687.png)
 
-9. Vælg at registrere, når dette indhold deles i din organisation eller uden for organisationen, hvis du har valgt en af disse placeringer:
+9. Vælg at registrere, hvornår dette indhold deles i din organisation eller uden for organisationen, hvis du har valgt en af disse placeringer:
     1. Exchange
     1. SharePoint
     1. OneDrive
-    1. Teams chat og kanalmeddelelser 
+    1. Teams chat- og kanalmeddelelser 
 
 10. Vælg **Næste**.
 
-11. På siden **Beskyttelseshandlinger** kan du tilpasse meddelelser om politiktip og meddelelser. **Aktivér Når indhold opfylder politikbetingelserne, vis politiktip** til brugere, og send dem en mailmeddelelse, og vælg **derefter Tilpas tip og mail**.
+11. Hvis du vil, kan du tilpasse meddelelser om politiktip og meddelelsesmails på siden **Beskyttelseshandlinger** . Aktivér **Når indhold stemmer overens med politikbetingelserne, skal du vise politiktip til brugerne og sende dem en mail** og derefter vælge **Tilpas tip og mail**.
 12. Vælg **Næste**.
 
 
@@ -215,7 +215,7 @@ Here are the different statuses and what they mean.
 
 |Status|Explanation|
 |---|---|
-|**Turning on…**|The policy is being deployed to the content sources that it includes. The policy is not yet enforced on all sources.|
+|**Turning on...**|The policy is being deployed to the content sources that it includes. The policy is not yet enforced on all sources.|
 |**Testing, with notifications**|The policy is in test mode. The actions in a rule are not applied, but policy matches are collected and can be viewed by using the DLP reports. Notifications about policy matches are sent to the specified recipients.|
 |**Testing, without notifications**|The policy is in test mode. The actions in a rule are not applied, but policy matches are collected and can be viewed by using the DLP reports. Notifications about policy matches are not sent to the specified recipients.|
 |**On**|The policy is active and enforced. The policy was successfully deployed to all its content sources.|

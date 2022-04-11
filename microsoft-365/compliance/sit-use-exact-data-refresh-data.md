@@ -1,5 +1,5 @@
 ---
-title: Opdatere kildetabelfilen for oplysninger, der svarer nøjagtigt til dine data
+title: Opdater den nøjagtige datamatchfølsom tabelfil til informationskilden
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -15,37 +15,37 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Opdater kildetabelfilen med følsomme oplysninger.
+description: Opdater din tabelfil med følsomme oplysninger.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 347ff88391a19cb3d8688b1142e524a163159b6f
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: fe72fac43d3cc9a568d8aa1c5d985d34f8477a4d
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63598545"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760839"
 ---
-# <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Opdatere den nøjagtige datakilde, der svarer til kildetabelfilen med følsomme oplysninger 
+# <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Opdater den nøjagtige datamatchtabelfil til følsomme oplysninger 
 
-Du kan opdatere databasen med følsomme oplysninger op til 5 gange i hver 24-timers periode. Du er nødt til at overføre din kildetabel med følsomme oplysninger.
+Du kan opdatere din følsomme informationsdatabase op til 5 gange i hver 24-timers periode. Du skal gemme og uploade din følsomme informationskildetabel igen.
 
-1. Eksportér de følsomme data til en app, f.eks. Microsoft Excel, og gem filen i afgrænset .csv-, .tsv- eller pipe-format (|). Behold det samme filnavn og den placering, du brugte, da du tidligere har gemt og uploadet filen. Se Eksportér [kildedata for at få](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) en nøjagtig dataoverensstemmelsesbaseret følsom oplysningstype for at få mere at vide om at eksportere dine følsomme data og få dem i det korrekte format.
+1. Eksportér de følsomme data til en app, f.eks. Microsoft Excel, og gem filen i .csv, .tsv-format eller pipeformat (|) afgrænset format. Behold det samme filnavn og den placering, du brugte, da du tidligere hashkodede og overførte filen. Se [Eksportér kildedata for præcise datamatch baseret på følsomme oplysninger for](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) at få oplysninger om eksport af dine følsomme data og om at få dem til det korrekte format.
 
       > [!NOTE]
-      > Hvis der ikke er nogen ændringer i strukturen (feltnavnene) på kildetabelfilen med følsomme oplysninger, behøver du ikke at foretage nogen ændringer i databaseskemafilen, når du opdaterer dataene. Men hvis du skal foretage ændringer, skal du sørge for at redigere databaseskemaet og regelpakken i overensstemmelse hermed. Se Administrer [dit nøjagtige data matchskema for trinnene](sit-use-exact-data-manage-schema.md#manage-your-exact-data-match-schema) til at redigere eller fjerne et skema. Se Oprette [en pakke med følsomme oplysninger](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) , der svarer nøjagtigt til typen af følsomme oplysninger/regelpakke for trinnene til at redigere eller fjerne din EDM SIT/regelpakke.
+      > Hvis der ikke er nogen ændringer af strukturen (feltnavne) i den følsomme informationskildetabelfil, behøver du ikke at foretage ændringer i databaseskemafilen, når du opdaterer dataene. Men hvis du skal foretage ændringer, skal du sørge for at redigere databaseskemaet og regelpakken i overensstemmelse hermed. Se [Administrer det nøjagtige datamatchskema](sit-use-exact-data-manage-schema.md#manage-your-exact-data-match-schema) for trinnene til redigering eller fjernelse af et skema. Se [Opret præcise data, der stemmer overens med typen af følsomme oplysninger/regelpakke](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) for trinnene til redigering eller fjernelse af din EDM SIT/rule-pakke.
 
-2. Brug fremgangsmåderne i [Hash, og overfør](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) kildetabellen med følsomme oplysninger for nøjagtigt at matche følsomme oplysningstyper for at overføre din følsomme tabelkildefil med følsomme oplysninger.
+2. Brug procedurerne i [Hash, og upload den følsomme datakildetabel for at få præcise data til at matche følsomme oplysningstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) for at uploade kildefilen til tabellen med følsomme oplysninger.
 
-2. Du kan bruge [Opgavestyring til at](/windows/desktop/TaskSchd/task-scheduler-start-page) automatisere hashtagget og overføre kildetabellen med følsomme oplysninger for nøjagtigt, [hvordan data matcher procedurer for følsomme oplysningstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) . Du kan planlægge opgaver ved hjælp af flere forskellige metoder:
+3. Du kan bruge [Opgavestyring](/windows/desktop/TaskSchd/task-scheduler-start-page) til at automatisere [hashværdien og uploade den følsomme informationskildetabel for at få præcise data til at matche følsomme oplysningstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) . Du kan planlægge opgaver ved hjælp af flere metoder:
 
-   |Metode|Hvad kan du gøre?|
+   |Metode|Sådan gør du|
    |---|---|
-   |Windows PowerShell|Se [dokumentationen ScheduledTasks](/powershell/module/scheduledtasks/) og eksemplet [PowerShell-script](#example-powershell-script-for-task-scheduler) i denne artikel|
-   |API'en Opgavestyring|Se [dokumentationen til Opgavestyring](/windows/desktop/TaskSchd/using-the-task-scheduler)|
-   |Windows brugergrænsefladen|I Windows skal du **klikke på Start** og skrive Opgavestyring. Højreklik derefter på Opgavestyring på listen **over resultater,** og vælg **Kør som administrator**.|
+   |Windows PowerShell|Se dokumentationen [til ScheduledTasks](/powershell/module/scheduledtasks/) og [eksemplet med PowerShell-scriptet](#example-powershell-script-for-task-scheduler) i denne artikel|
+   |Opgavestyrings-API|Se dokumentationen til [Opgavestyring](/windows/desktop/TaskSchd/using-the-task-scheduler)|
+   |Windows brugergrænseflade|Klik på **Start** i Windows, og skriv Opgavestyring. Højreklik derefter på **Opgavestyring** på listen over resultater, og vælg **Kør som administrator**.|
 
 ### <a name="example-powershell-script-for-task-scheduler"></a>Eksempel på PowerShell-script til Opgavestyring 
 
-Dette afsnit indeholder et eksempel på et PowerShell-script, du kan bruge til at planlægge dine opgaver til hashing af data og overførsel af hashtagdata:
+Dette afsnit indeholder et eksempel på et PowerShell-script, som du kan bruge til at planlægge dine opgaver for hashing af data og uploade de hashkodede data:
 
 #### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Planlæg hashing og upload i et kombineret trin
 

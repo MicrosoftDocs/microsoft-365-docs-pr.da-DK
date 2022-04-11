@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til at arkivere Bloomberg-data Microsoft 365
+title: Konfigurer en connector til arkivering af Bloomberg-data i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,74 +11,74 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Bloomberg DataParser-forbindelse til at importere og arkivere Bloomberg-data Microsoft 365.
-ms.openlocfilehash: eaf9a79ebfb073de7f0707cf98a53a266ac95ee0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Bloomberg DataParser-connector til at importere og arkivere Bloomberg-data i Microsoft 365.
+ms.openlocfilehash: 0f9581f4761450d7867c82fccaa588526b11d520
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592457"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64762227"
 ---
-# <a name="set-up-a-connector-to-archive-bloomberg-data"></a>Konfigurer en forbindelse til at arkivere Bloomberg-data
+# <a name="set-up-a-connector-to-archive-bloomberg-data"></a>Konfigurer en connector til arkivering af Bloomberg-data
 
-Brug [Bloomberg DataParser](https://www.17a-4.com/Bloomberg-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Bloomberg til brugerpostkasser i Microsoft 365 organisation. DataParser har en Bloomberg-forbindelse, der er konfigureret til at hente elementer fra en tredjeparts datakilde og importere disse elementer til Microsoft 365. Forbindelsen Bloomberg DataParser konverterer Bloomberg-data til et mailmeddelelsesformat og importerer derefter disse elementer til brugerpostkasser Microsoft 365.
+Brug [Bloomberg DataParser](https://www.17a-4.com/Bloomberg-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Bloomberg til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Bloomberg-connector, der er konfigureret til at hente elementer fra en datakilde fra tredjepart og importere disse elementer til Microsoft 365. Bloomberg DataParser-connectoren konverterer Bloomberg-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når Bloomberg-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner som f.eks Retslig tilbageholdelse, eDiscovery, opbevaringspolitikker og opbevaringsetiketter samt overholdelse af regler og standarder i forbindelse med kommunikation. Hvis du bruger en Bloomberg-forbindelse til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Bloomberg-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Hvis du bruger en Bloomberg-connector til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-bloomberg-data"></a>Oversigt over arkivering af Bloomberg-data
 
-Følgende oversigt beskriver processen med at bruge en dataforbindelse til at arkivere Bloomberg-data Microsoft 365.
+I følgende oversigt forklares processen med at bruge en dataconnector til at arkivere Bloomberg-data i Microsoft 365.
 
 ![Arkiveringsarbejdsproces for Bloomberg-data fra 17a-4.](../media/BloombergDataParserConnectorWorkflow.png)
 
-1. Din organisation arbejder med 17a-4 til at konfigurere Bloomberg DataParser.
+1. Din organisation arbejder sammen med 17a-4 om at konfigurere Bloomberg DataParser.
 
-2. Bloomberg-elementer indsamles regelmæssigt af DataParser. Dataparser konverterer også indholdet af en meddelelse til et mailformat.
+2. Bloomberg-varer indsamles regelmæssigt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. Bloomberg DataParser-forbindelsen, som du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til DataParser og overfører meddelelserne til en sikker placering Azure Storage Microsoft-skyen.
+3. Den Bloomberg DataParser-connector, du opretter i Microsoft 365 Overholdelsescenter opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. En undermappe i mappen Indbakke **med navnet Bloomberg DataParser oprettes** i brugerpostkassen, og Bloomberg-elementerne importeres til den pågældende mappe. Forbindelsen bestemmer, hvilken postkasse der skal importeres elementer til, ud fra værdien *af egenskaben Mail* . Alle Bloomberg-elementer indeholder denne egenskab, som er udfyldt med mailadressen på hver deltager.
+4. Der oprettes en undermappe i mappen Indbakke med navnet **Bloomberg DataParser** i brugerpostkasserne, og Bloomberg-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hvert Bloomberg-element indeholder denne ejendom, som udfyldes med mailadressen på hver enkelt deltager.
 
-## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en forbindelse
+## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 
-- Opret en DataParser-konto til Microsoft-forbindelser. For at gøre dette skal du [kontakte 17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter forbindelsen i trin 1.
+- Opret en DataParser-konto til Microsoft-connectors. For at gøre dette skal du kontakte [17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter forbindelsen Bloomberg DataParser i trin 1 (og fuldfører den i trin 3), skal have tildelt rollen Dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Bloomberg DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataforbindelse er tilgængelig i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="step-1-set-up-a-bloomberg-dataparser-connector"></a>Trin 1: Konfigurer en Bloomberg DataParser-forbindelse
+## <a name="step-1-set-up-a-bloomberg-dataparser-connector"></a>Trin 1: Konfigurer en Bloomberg DataParser-connector
 
-Det første trin er at få adgang til siden Dataforbindelser i Microsoft 365 Overholdelsescenter og oprette en 17a-4-forbindelse til Bloomberg-data.
+Det første trin er at få adgang til siden Dataconnectors i Microsoft 365 Overholdelsescenter og oprette en 17a-4-connector til Bloomberg-data.
 
-1. Gå til <https://compliance.microsoft.com> og klik derefter **på DataforbindelserBloomberg** >  **DataParser**.
+1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsBloomberg** >  **DataParser**.
 
-2. På siden **Bloomberg DataParser-produktbeskrivelse** skal du klikke **på Tilføj forbindelse**.
+2. Klik på **Tilføj connector** på siden **Bloomberg DataParser-produktbeskrivelse**.
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. Angiv et entydigt navn, der identificerer forbindelsen, og klik derefter på **Næste**.
+4. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**.
 
-5. Log på din 17a-4-konto, og fuldfør trinnene i Bloomberg DataParser-forbindelsesguiden.
+5. Log på din 17a-4-konto, og fuldfør trinnene i guiden Bloomberg DataParser-forbindelse.
 
-## <a name="step-2-configure-the-bloomberg-dataparser-connector"></a>Trin 2: Konfigurer Bloomberg DataParser-forbindelsen
+## <a name="step-2-configure-the-bloomberg-dataparser-connector"></a>Trin 2: Konfigurer Bloomberg DataParser-connectoren
 
-Arbejd med understøttelse af 17a-4 for at konfigurere Bloomberg DataParser-forbindelsen.
+Arbejd med understøttelse af 17a-4 for at konfigurere Bloomberg DataParser-connectoren.
 
 ## <a name="step-3-map-users"></a>Trin 3: Tilknyt brugere
 
-Bloomberg DataParser-forbindelsen vil automatisk knytte brugere til deres Microsoft 365 mailadresser, før der importeres data Microsoft 365.
+Bloomberg DataParser-connectoren knytter automatisk brugere til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
 
-## <a name="step-4-monitor-the-bloomberg-dataparser-connector"></a>Trin 4: Overvåg Bloomberg DataParser-forbindelsen
+## <a name="step-4-monitor-the-bloomberg-dataparser-connector"></a>Trin 4: Overvåg Bloomberg DataParser-connectoren
 
-Når du har oprettet en Bloomberg DataParser-forbindelse, kan du få vist forbindelsesstatus på Microsoft 365 Overholdelsescenter.
+Når du har oprettet en Bloomberg DataParser-connector, kan du få vist connectorstatussen i Microsoft 365 Overholdelsescenter.
 
-1. Gå til og <https://compliance.microsoft.com> klik **på Dataforbindelser** i venstre navigationslinje.
+1. Gå til , <https://compliance.microsoft.com> og klik på **Dataconnectors** i venstre navigationsrude.
 
-2. Klik på **fanen Forbindelser** , og vælg derefter den Bloomberg DataParser-forbindelse, du har oprettet, for at få vist pop op-siden, der indeholder egenskaber og oplysninger om forbindelsen.
+2. Klik på fanen **Forbindelser,** og vælg derefter den Bloomberg DataParser-connector, du har oprettet, for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde skal** du klikke **på linket Hent log** for at åbne (eller gemme) statusloggen for forbindelsen. Denne logfil indeholder data, der er blevet importeret til Microsoft-skyen.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.

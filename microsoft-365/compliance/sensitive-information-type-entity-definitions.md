@@ -19,12 +19,12 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: Der er mange følsomme oplysningstyper, der er klar til brug i dine DLP-politikker. I denne artikel vises alle disse typer følsomme oplysninger, og du kan se, hvad en DLP-politik søger efter, når hver type registreres.
-ms.openlocfilehash: 298b756a1cdfd63406992c18bf8281375f7f9370
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 69c47a717b63f8d9ac4e30f3b97fd228399bf21c
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746508"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760396"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Enhedsdefinitioner for type af følsomme oplysninger
 
@@ -32,10 +32,10 @@ I denne artikel vises alle objektdefinitioner for følsomme oplysninger. Hver de
 
 > [!NOTE]
 > Tilknytning af konfidensniveau (høj/mellem/lav) med tal for nøjagtighed (numerisk værdi på 1 til 100)
+>
 > - Lav konfidens: 65 eller under
 > - Medium konfidens: 75
 > - Høj genkendelsessikkerhed: 85
-
 
 ## <a name="aba-routing-number"></a>ABA-routingnummer
 
@@ -52,7 +52,6 @@ ni cifre, der kan være i et formateret eller uformateret mønster
 - en valgfri bindestreg
 - et ciffer
 
-
 ### <a name="checksum"></a>Checksum
 
 Ja
@@ -60,10 +59,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_aba_routing finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_ABA_Routing.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_aba_routing finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -99,7 +100,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - Routing #
 - HØJRE MOD HØJRE
 
-
 ## <a name="all-full-names"></a>Alle fulde navne
 
 Alle fulde navne er et bundtet navngivet objekt. Den registrerer fulde navne for personer fra alle understøttede lande/områder, som omfatter Australien, Kina, Japan, USA og lande i EU. Brug dette SIT til at registrere alle mulige forekomster af fulde navne.
@@ -120,9 +120,9 @@ Nej.
 
 Dette navngivne objekt SIT matcher personlige navne, som et menneske ville identificere som et navn med høj genkendelsessikkerhed. Hvis der f.eks. findes en streng, der består af et givet navn og efterfølges af et familienavn, oprettes der et match med høj genkendelsessikkerhed. Der bruges tre primære ressourcer:
 
--   En ordbog med givne navne.
--   En ordbog med familienavne.
--   Mønstre for, hvordan navne dannes.
+- En ordbog med givne navne.
+- En ordbog med familienavne.
+- Mønstre for, hvordan navne dannes.
 
 De tre ressourcer er forskellige for hvert land.  Strengene *Olivia Wilson* udløser et match. Almindelige givne/familienavne får en højere genkendelsessikkerhed end sjældnere navne. Mønsteret tillader dog også delvise matches. Hvis der findes et givent navn fra ordbogen, og det efterfølges af et familienavn, der ikke findes i ordbogen, udløses der et delvist match. For eksempel ville *Tomas Richard* udløse en delvis match. Delvise matches får lavere genkendelsessikkerhed.
 
@@ -159,7 +159,6 @@ Hertil kommer, at mønstre, som et menneske ville se som tegn på navne, også m
 - Swedish
 - Turkish
 
-
 ## <a name="all-medical-terms-and-conditions"></a>Alle medicinske vilkår og betingelser
 
 Alle medicinske vilkår og betingelser er en samlet navngiven enhed, der registrerer medicinske vilkår og medicinske tilstande. Den registrerer kun engelske ord. Brug dette SIT til at registrere alle mulige match af medicinske vilkår og betingelser.
@@ -188,7 +187,7 @@ Dette bundtede navngivne objekt matcher tekst, der omtaler medicinske tilstande,
 
 Dette bundtede navngivne objekt SIT indeholder disse individuelle SIT'er.
 
-- Vilkår for blodprøve 
+- Vilkår for blodprøve
 - Typer af medicin
 - Sygdomme
 - Generiske medicinnavne
@@ -198,7 +197,6 @@ Dette bundtede navngivne objekt SIT indeholder disse individuelle SIT'er.
 - Medicinske specialiteter
 - Kirurgiske procedurer
 - Navne på mærkemedicin
-
 
 ## <a name="all-physical-addresses"></a>Alle fysiske adresser
 
@@ -220,10 +218,10 @@ Nej
 
 Matchning af gadeadresser er designet til at matche strenge, som et menneske ville identificere som en adresse. Det gør den ved at bruge flere primære ressourcer:
 
--   En ordbog over bosættelser, amter og områder.
--   En ordbog over gadesuffikser, f.eks. Road, Street eller Avenue.
--   Mønstre for postnumre.
--   Mønstre for adresseformater.
+- En ordbog over bosættelser, amter og områder.
+- En ordbog over gadesuffikser, f.eks. Road, Street eller Avenue.
+- Mønstre for postnumre.
+- Mønstre for adresseformater.
 
 Ressourcerne er forskellige for hvert land. De primære ressourcer er mønstre for adresseformater, der bruges i et bestemt land. Der vælges forskellige formater for at sikre, at så mange adresser som muligt matches. Disse formater giver fleksibilitet, f.eks. kan en adresse udelade postnummeret eller udelade et bynavn eller have en gade uden gadesuffiks. I alle tilfælde bruges sådanne matches til at øge tilliden til kampen.
 
@@ -303,7 +301,6 @@ Dette bundtede navngivne sit-objekt indeholder disse individuelle SIT'er:
 - Swedish
 - Turkish
 
-
 ## <a name="argentina-national-identity-dni-number"></a>Argentinas nationale identitet (DNI) nummer
 
 ### <a name="format"></a>Format
@@ -313,6 +310,7 @@ Otte cifre med eller uden punktummer
 ### <a name="pattern"></a>Mønster
 
 Otte cifre:
+
 - to cifre
 - en valgfri periode
 - tre cifre
@@ -326,6 +324,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_argentina_national_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_argentina_national_id.
 
@@ -353,7 +352,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - registro nacional de las personas
 - rnp
 
-
 ## <a name="argentina-unique-tax-identification-key-cuitcuil"></a>Argentinas entydige skatteidentifikationsnøgle (CUIT/CUIL)
 
 ### <a name="format"></a>Format
@@ -363,6 +361,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 11 cifre med en tankestreg:
+
 - to cifre i 20, 23, 24, 27, 30, 33 eller 34
 - en bindestreg (-)
 - otte cifre
@@ -376,10 +375,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_Argentina_Unique_Tax_Key` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_Argentina_Unique_Tax_Key` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_Argentina_Unique_Tax_Key` finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -401,7 +402,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 - Clave Unica de Identificacion Tributaria
 - CUIT
-- entydig kode for identifikation af arbejde 
+- entydig kode for identifikation af arbejde
 - Clave Única de Identificación Tributaria
 - entydig kode til identifikation af arbejde
 - CUIL
@@ -436,7 +437,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Número de Identificación Fiscal
 - número de contribuyente
 
-
 ## <a name="australia-bank-account-number"></a>Australiens bankkontonummer
 
 ### <a name="format"></a>Format
@@ -448,6 +448,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 Kontonummeret er 6 til 10 cifre.
 
 Forgreningsnummeret for den australske bankstat:
+
 - tre cifre
 - en bindestreg
 - tre cifre
@@ -459,11 +460,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_australia_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_australia_bank_account_number.
 - Det regulære udtryk Regex_australia_bank_account_number_bsb finder indhold, der svarer til mønsteret.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_australia_bank_account_number finder indhold, der svarer til mønsteret.
 
 - Der blev fundet et nøgleord fra Keyword_australia_bank_account_number.
@@ -501,7 +504,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - fulde navne
 - Iaea
 
-
 ## <a name="australia-business-number"></a>Australiens forretningsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
@@ -535,10 +537,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_australian_business_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_australian_business_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_australian_business_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -565,7 +569,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Abn
 - businessno #
 
-
 ## <a name="australia-company-number"></a>Australiens firmanummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
@@ -590,7 +593,6 @@ ni cifre med afgrænsere:
 - et mellemrum
 - tre cifre
 
-
 ### <a name="checksum"></a>Checksum
 
 Ja
@@ -598,10 +600,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_Australian_Company_Number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Australian_Company_Number.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_Australian_Company_Number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -627,7 +631,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - australsk firma nr.
 - australsk firma nr. #
 - australsk firmanummer
-
 
 ## <a name="australia-drivers-license-number"></a>Australiens kørekortsnummer
 
@@ -659,6 +662,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_australia_drivers_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_australia_drivers_license_number.
 - Der blev ikke fundet et nøgleord fra Keyword_australia_drivers_license_number_exclusions.
@@ -780,7 +784,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Kørekort #
 - Driverlicenser #
 
-
 ## <a name="australia-medical-account-number"></a>Medicinsk kontonummer i Australien
 
 ### <a name="format"></a>Format
@@ -790,6 +793,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10-11 cifre:
+
 - Det første ciffer er mellem 2 og 6
 - Niende ciffer er et kontrolciffer
 - Det tiende ciffer er problemcifferet
@@ -802,10 +806,10 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_australian_medical_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Australia_Medical_Account_Number.
 - Kontrolsummen passerer.
-
 
 ```xml
   <!-- Australia Medical Account Number -->
@@ -831,7 +835,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - lokal tjeneste
 - Medicare
 
-
 ## <a name="australia-passport-number"></a>Australiens pasnummer
 
 ### <a name="format"></a>Format
@@ -850,10 +853,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_australia_passport_number` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_australia_passport_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk `Regex_australia_passport_number` finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -891,14 +896,12 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - rejsedokument
 - udstedende myndighed
 
-
-## <a name="australia-physical-addresses"></a>Fysiske adresser i Australien 
+## <a name="australia-physical-addresses"></a>Fysiske adresser i Australien
 
 Ubundtet navngivet enhed registrerer mønstre, der er relateret til fysisk adresse fra Australien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
 
 ### <a name="confidence-level"></a>Konfidensniveau
 Medium
-
 
 ## <a name="australia-tax-file-number"></a>Australiens skattefilnummer
 
@@ -909,6 +912,7 @@ otte til ni cifre
 ### <a name="pattern"></a>Mønster
 
 8-9 cifre vises typisk med mellemrum på følgende måde:
+
 - tre cifre
 - et valgfrit mellemrum
 - tre cifre
@@ -922,6 +926,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_australian_tax_file_number finder indhold, der svarer til mønsteret.
 - Der blev ikke fundet nøgleord fra Keyword_Australia_Tax_File_Number eller Keyword_number_exclusions.
 - Kontrolsummen passerer.
@@ -950,7 +955,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - skattefilnummer
 - Tfn
 
-
 ## <a name="austria-drivers-license-number"></a>Østrigs kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -969,8 +973,8 @@ Nej
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_austria_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_austria_eu_driver's_license_number` findes.
+- Det regulære udtryk `Regex_austria_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_austria_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Austria Driver's License Number -->
@@ -1086,7 +1090,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -1108,7 +1112,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_austria_eu_drivers_license_number"></a>Keywords_austria_eu_driver er s_license_number
 
 - fuhrerschein
@@ -1117,10 +1120,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Führerscheinnummer
 - Führerscheinnummern
 
-
 ## <a name="austria-identity-card"></a>Østrigs identitetskort
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -1135,7 +1138,7 @@ En kombination af bogstaver, cifre og specialtegn på 24 tegn
 
 24 tegn:
 
--  22 bogstaver (skelner ikke mellem store og små bogstaver), cifre, omvendte skråstreger, skråstreger eller plustegn
+- 22 bogstaver (skelner ikke mellem store og små bogstaver), cifre, omvendte skråstreger, skråstreger eller plustegn
 
 - to bogstaver (skelner ikke mellem store og små bogstaver), cifre, omvendte skråstreger, skråstreger, plustegn eller lighedstegn
 
@@ -1147,8 +1150,8 @@ Ikke relevant
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_austria_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_austria_eu_national_id_card` .
+- Det regulære udtryk `Regex_austria_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_austria_eu_national_id_card` .
 
 ```xml
       <!-- Austria Identity Card -->
@@ -1167,7 +1170,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - id-nummer
 - nationalt id
 - personalausweis republik österreich
-
 
 ## <a name="austria-passport-number"></a>Pasnummer for Østrig
 
@@ -1190,13 +1192,15 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_austria_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_austria_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_austria_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_austria_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_austria_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_austria_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_austria_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_austria_eu_passport_number` findes.
 
 ```xml
       <!-- Austria Passport Number -->
@@ -1252,7 +1256,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="austria-physical-addresses"></a>Fysiske adresser i Østrig
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Østrig. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -1260,7 +1263,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="austria-social-security-number"></a>Det østrigske cpr-nummer
 
@@ -1283,11 +1285,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_austria_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
-- der findes et nøgleord fra  `Keywords_austria_eu_ssn_or_equivalent` .
+
+- Funktionen `Func_austria_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
+- der findes et nøgleord fra `Keywords_austria_eu_ssn_or_equivalent` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_austria_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_austria_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Austria Social Security Number -->
@@ -1334,7 +1338,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - versicherungsnummer
 - zdravstveno zavarovanje
 
-
 ## <a name="austria-tax-identification-number"></a>Østrigs skatteidentifikationsnummer
 
 ### <a name="format"></a>Format
@@ -1358,11 +1361,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_austria_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_austria_eu_tax_file_number` .
+
+- Funktionen `Func_austria_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_austria_eu_tax_file_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_austria_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_austria_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Austria Tax Identification Number -->
@@ -1402,10 +1407,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - Tin #
 - momsnummer
 
-
 ## <a name="austria-value-added-tax"></a>Moms i Østrig
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -1438,10 +1443,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_Austria_Value_Added_Tax finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Austria_Value_Added_Tax.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_Austria_Value_Added_Tax finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -1476,7 +1483,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - atu-nummer
 - uid-tal
 
-
 ## <a name="azure-documentdb-auth-key"></a>Godkendelsesnøgle til Azure DocumentDB
 
 ### <a name="format"></a>Format
@@ -1498,6 +1504,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureDocumentDBAuthKey finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
 
@@ -1529,7 +1536,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-iaas-database-connection-string-and-azure-sql-connection-string"></a>Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng
 
 ### <a name="format"></a>Format
@@ -1559,6 +1565,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureConnectionString finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
 
@@ -1590,7 +1597,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-iot-connection-string"></a>Azure IoT-forbindelsesstreng
 
 ### <a name="format"></a>Format
@@ -1620,6 +1626,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureIoTConnectionString finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
 
@@ -1651,7 +1658,6 @@ Denne type følsomme oplysninger identificerer disse nøgleord ved hjælp af et 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-publish-setting-password"></a>Adgangskode til udgivelsesindstilling i Azure
 
 ### <a name="format"></a>Format
@@ -1671,9 +1677,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzurePublishSettingPasswords finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
-
 
 ```xml
 <!--Azure Publish Setting Password-->
@@ -1703,7 +1709,6 @@ Denne type følsomme oplysninger identificerer disse nøgleord ved hjælp af et 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-redis-cache-connection-string"></a>Forbindelsesstreng til Azure Redis-cache
 
 ### <a name="format"></a>Format
@@ -1728,6 +1733,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureRedisCacheConnectionString finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
 
@@ -1759,7 +1765,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-sas"></a>Azure SAS
 
 ### <a name="format"></a>Format
@@ -1783,6 +1788,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureSAS finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -1823,6 +1829,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureServiceBusConnectionString finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
 
@@ -1854,7 +1861,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-storage-account-key"></a>Azure Storage-kontonøgle
 
 ### <a name="format"></a>Format
@@ -1882,6 +1888,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureStorageAccountKey finder indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_AzureEmulatorStorageAccountFilter kan ikke finde indhold, der svarer til mønsteret.
 - Det regulære udtryk CEP_CommonExampleKeywords kan ikke finde indhold, der svarer til mønsteret.
@@ -1921,7 +1928,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="azure-storage-account-key-generic"></a>Azure Storage kontonøgle (generisk)
 
 ### <a name="format"></a>Format
@@ -1941,6 +1947,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_AzureStorageAccountKeyGeneric finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -1951,7 +1958,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
   </Pattern>
 </Entity>
 ```
-
 
 ## <a name="belgium-drivers-license-number"></a>Belgiens kørekortsnummer
 
@@ -1970,7 +1976,8 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_belgium_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+
+- Det regulære udtryk `Regex_belgium_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_belgium_eu_driver's_license_number` findes.
 
 ```xml
@@ -2087,7 +2094,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -2123,7 +2130,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - permis de conduire
 - numéro permis conduire
 
-
 ## <a name="belgium-national-number"></a>Belgiens nationale nummer
 
 ### <a name="format"></a>Format
@@ -2133,6 +2139,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 11 cifre plus afgrænsere:
+
 - seks cifre og to valgfrie punktummer i formatet YY. DD for fødselsdato
 - En valgfri afgrænser fra punktum, tankestreg, mellemrum
 - tre sekventielle cifre (ulige for hanner, selv for kvinder)
@@ -2146,11 +2153,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_belgium_national_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_belgium_national_number.
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_belgium_national_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -2228,7 +2237,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="belgium-passport-number"></a>Belgiens pasnummer
 
 ### <a name="format"></a>Format
@@ -2246,13 +2254,15 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
  En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_belgium_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_belgium_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_belgium_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_belgium_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date2` finder dato i formatet DD MM ÅÅ eller et nøgleord fra `Keywords_eu_passport_date` eller `Keywords_belgium_eu_passport_number` findes
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_belgium_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_belgium_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_belgium_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_belgium_eu_passport_number` findes.
 
 ```xml
       <!-- Belgium Passport Number -->
@@ -2313,7 +2323,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="belgium-physical-addresses"></a>Fysiske adresser i Belgien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysiske adresser fra Belgien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -2322,10 +2331,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="belgium-value-added-tax-number"></a>Belgiens momsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -2356,10 +2365,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_belgium_value_added_tax_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_belgium_value_added_tax_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_belgium_value_added_tax_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -2389,7 +2400,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Btw #
 - Moms #
 
-
 ## <a name="blood-test-terms"></a>Vilkår for blodprøve
 
 Denne ubundtede navngivne enhed registrerer termer, der er relateret til blodprøver, f.eks. *hCG*. Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -2406,7 +2416,6 @@ Denne ubundtede navngivne enhed registrerer navne på mærkemedicin, såsom *Tyl
 
 Høj
 
-
 ## <a name="brazil-cpf-number"></a>BrasilienS CPF-nummer
 
 ### <a name="format"></a>Format
@@ -2416,6 +2425,7 @@ Høj
 ### <a name="pattern"></a>Mønster
 
 Formateret:
+
 - tre cifre
 - et punktum
 - tre cifre
@@ -2425,6 +2435,7 @@ Formateret:
 - to cifre, der er kontrolcifre
 
 Uformateret:
+
 - 11 cifre, hvor de sidste to cifre er kontrolcifre
 
 ### <a name="checksum"></a>Checksum
@@ -2434,11 +2445,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_brazil_cpf finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_brazil_cpf.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_brazil_cpf finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -2469,7 +2482,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Inscrição
 - Receita
 
-
 ## <a name="brazil-legal-entity-number-cnpj"></a>Juridisk enhedsnummer for Brasilien (CNPJ)
 
 ### <a name="format"></a>Format
@@ -2497,11 +2509,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_brazil_cnpj finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_brazil_cnpj.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_brazil_cnpj finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -2542,7 +2556,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Inscrição
 - Empresa
 
-
 ## <a name="brazil-national-identification-card-rg"></a>Nationalt id-kort for Brasilien (RG)
 
 ### <a name="format"></a>Format
@@ -2554,6 +2567,7 @@ Registro de Identidade (RIC) (nyt format): 11 cifre
 ### <a name="pattern"></a>Mønster
 
 Registro Geral (gammelt format):
+
 - to cifre
 - et punktum
 - tre cifre
@@ -2563,6 +2577,7 @@ Registro Geral (gammelt format):
 - et ciffer, der er et kontrolciffer
 
 Registro de Identidade (RIC) (nyt format):
+
 - 10 cifre
 - en bindestreg
 - et ciffer, der er et kontrolciffer
@@ -2574,10 +2589,10 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_brazil_rg finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_brazil_rg.
 - Kontrolsummen passerer.
-
 
 ```xml
       <!-- Brazil National ID Card (RG) -->
@@ -2601,7 +2616,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - registro geral
 - RG (dette nøgleord skelner mellem store og små bogstaver)
 - RIC (dette nøgleord skelner mellem store og små bogstaver)
-
 
 ## <a name="brazil-physical-addresses"></a>Fysiske adresser i Brasilien
 
@@ -2628,8 +2642,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_bulgaria_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_bulgaria_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_bulgaria_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_bulgaria_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Bulgaria Driver's License Number -->
@@ -2745,7 +2760,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -2775,7 +2790,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - шофьорска книжка
 - шофьорски книжки
 
-
 ## <a name="bulgaria-passport-number"></a>Bulgariens pasnummer
 
 ### <a name="format"></a>Format
@@ -2793,13 +2807,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_bulgaria_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_bulgaria_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_bulgaria_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_bulgaria_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_bulgaria_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_bulgaria_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_bulgaria_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_bulgaria_eu_passport_number` findes.
 
 ```xml
       <!-- Bulgaria Passport Number -->
@@ -2850,7 +2866,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="bulgaria-physical-addresses"></a>Fysiske adresser for Bulgarien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Bulgarien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -2861,6 +2876,7 @@ Medium
 
 ## <a name="bulgaria-uniform-civil-number"></a>Bulgariens ensartede civilnummer
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -2887,11 +2903,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_bulgaria_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_bulgaria_eu_national_id_card` .
+
+- Funktionen `Func_bulgaria_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_bulgaria_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_bulgaria_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_bulgaria_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Bulgaria Uniform Civil Number -->
@@ -2957,7 +2975,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - униформгражданскиid #
 - униформгражданскине. #
 
-
 ## <a name="canada-bank-account-number"></a>Canadas bankkontonummer
 
 ### <a name="format"></a>Format
@@ -2969,6 +2986,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 Et Canada-bankkontonummer er 7 eller 12 cifre.
 
 Et canadask bankkontotransitnummer er:
+
 - fem cifre
 - en bindestreg
 - tre cifre OR
@@ -2982,11 +3000,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_canada_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_canada_bank_account_number.
 - Det regulære udtryk Regex_canada_bank_account_transit_number finder indhold, der svarer til mønsteret.
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_canada_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_canada_bank_account_number.
 
@@ -3031,7 +3051,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - bankoplysninger
 - direkte indbetaling
 
-
 ## <a name="canada-drivers-license-number"></a>Canadas kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -3041,6 +3060,7 @@ Varierer efter provins
 ### <a name="pattern"></a>Mønster
 
 Forskellige mønstre, der dækker:
+
 - Alberta
 - British Columbia
 - Manitoba
@@ -3059,6 +3079,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_[province_name]_drivers_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_[province_name]_drivers_license_name.
 - Der blev fundet et nøgleord fra Keyword_canada_drivers_license.
@@ -3259,7 +3280,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - id-kort #
 - Identifikation #
 
-
 ## <a name="canada-health-service-number"></a>Nummer på sundhedstjenesten i Canada
 
 ### <a name="format"></a>Format
@@ -3277,6 +3297,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_canada_health_service_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_canada_health_service_number.
 
@@ -3306,7 +3327,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - løn til arbejdstagere
 - Handicap
 
-
 ## <a name="canada-passport-number"></a>Pasnummer til Canada
 
 ### <a name="format"></a>Format
@@ -3324,6 +3344,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_canada_passport_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_canada_passport_number eller Keyword_passport.
 
@@ -3374,7 +3395,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - PasseportNon
 - Passeportn °
 
-
 ## <a name="canada-personal-health-identification-number-phin"></a>Id-nummer for personlig sundhed i Canada (PHIN)
 
 ### <a name="format"></a>Format
@@ -3392,6 +3412,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_canada_phin finder indhold, der svarer til mønsteret.
 - Der findes mindst to nøgleord fra Keyword_canada_phin eller Keyword_canada_provinces.
 
@@ -3445,7 +3466,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Prince Edward Island
 - Canada
 
-
 ## <a name="canada-physical-addresses"></a>Fysiske adresser i Canada
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Canada. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -3453,7 +3473,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="canada-social-insurance-number"></a>Canada socialforsikringsnummer
 
@@ -3464,6 +3483,7 @@ ni cifre med valgfri bindestreger eller mellemrum
 ### <a name="pattern"></a>Mønster
 
 Formateret:
+
 - tre cifre
 - en bindestreg eller et mellemrum
 - tre cifre
@@ -3479,6 +3499,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_canadian_sin finder indhold, der svarer til mønsteret.
 - Mindst to af følgende mønstre:
     - Der blev fundet et nøgleord fra Keyword_sin.
@@ -3487,6 +3508,7 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_unformatted_canadian_sin finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_sin.
 - Kontrolsummen passerer.
@@ -3538,7 +3560,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Fødselsdag
 - Fødselsdag
 
-
 ## <a name="chile-identity-card-number"></a>Chiles identitetskortnummer
 
 ### <a name="format"></a>Format
@@ -3548,6 +3569,7 @@ syv til otte cifre plus afgrænsere et kontrolciffer eller et bogstav
 ### <a name="pattern"></a>Mønster
 
 syv til otte cifre plus afgrænsere:
+
 - et til to cifre
 - en valgfri periode
 - tre cifre
@@ -3563,11 +3585,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_chile_id_card finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_chile_id_card.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_chile_id_card finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -3625,7 +3649,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - R.U.T
 - R.U.N
 
-
 ## <a name="china-resident-identity-card-prc-number"></a>Kina resident id-kort (PRC) nummer
 
 ### <a name="format"></a>Format
@@ -3635,6 +3658,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 18 cifre:
+
 - seks cifre, der er en adressekode
 - cifre i formatet YYYYMMDD, som er fødselsdatoen
 - tre cifre, der er en ordrekode
@@ -3647,11 +3671,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_china_resident_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_china_resident_id.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_china_resident_id finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -3683,7 +3709,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 居民 身份證
 - 鑑定
 
-
 ## <a name="credit-card-number"></a>Kreditkortnummer
 
 ### <a name="format"></a>Format
@@ -3701,14 +3726,16 @@ Ja, luhn-kontrollen
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_credit_card finder indhold, der svarer til mønsteret.
 - Et af følgende er sandt:
-    - Der blev fundet et nøgleord fra Keyword_cc_verification.
-    - Der blev fundet et nøgleord fra Keyword_cc_name.
-    - Funktionen Func_expiration_date finder en dato i det rigtige datoformat.
+  - Der blev fundet et nøgleord fra Keyword_cc_verification.
+  - Der blev fundet et nøgleord fra Keyword_cc_name.
+  - Funktionen Func_expiration_date finder en dato i det rigtige datoformat.
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_credit_card finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -3833,6 +3860,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - Kreditkort
 - Cc #
 - cc#:
+
 - Udløbsdato
 - udløbsdato
 - Udløbsdato
@@ -3988,7 +4016,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - 中国银联
 - 银联
 
-
 ## <a name="croatia-drivers-license-number"></a>Kroatiens kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -4007,7 +4034,7 @@ Nej
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_croatia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Det regulære udtryk `Regex_croatia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_croatia_eu_driver's_license_number` findes.
 
 ```xml
@@ -4124,7 +4151,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -4146,14 +4173,13 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_croatia_eu_drivers_license_number"></a>Keywords_croatia_eu_driver er s_license_number
 
 - vozačka dozvola
 - vozačke dozvole
 
-
 ## <a name="croatia-identity-card-number"></a>Kroatiens identitetskortnummer
+
 Denne enhed er omfattet af eu's type følsomme oplysninger om nationalt identifikationsnummer. Den er tilgængelig som et separat objekt af typen af følsomme oplysninger.
 
 ### <a name="format"></a>Format
@@ -4171,6 +4197,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_croatia_id_card finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_croatia_id_card.
 
@@ -4217,7 +4244,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="croatia-passport-number"></a>Kroatiens pasnummer
 
 ### <a name="format"></a>Format
@@ -4235,13 +4261,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_croatia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_croatia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_croatia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_croatia_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_croatia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_croatia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_croatia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_croatia_eu_passport_number` findes.
 
 ```xml
       <!-- Croatia Passport Number -->
@@ -4266,6 +4294,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
         </Pattern>
       </Entity>
 ```
+
 ### <a name="keywords"></a>Søgeord
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
@@ -4296,6 +4325,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 11 cifre:
+
 - 10 cifre
 - det endelige ciffer er et kontrolciffer
 
@@ -4306,11 +4336,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_croatia_oib_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_croatia_eu_tax_file_number.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_croatia_oib_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -4360,7 +4392,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="croatia-physical-addresses"></a>Fysiske adresser for Kroatien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Kroatien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -4368,7 +4399,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="cyprus-drivers-license-number"></a>Cyperns kørekortsnummer
 
@@ -4387,8 +4417,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_cyprus_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_cyprus_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_cyprus_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_cyprus_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Cyprus Driver's License Number -->
@@ -4504,7 +4535,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -4532,10 +4563,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - αριθμό άδειας οδήγησης
 - άδειες οδήγησης
 
-
 ## <a name="cyprus-identity-card"></a>Cyperns identitetskort
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -4557,8 +4588,9 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_cyprus_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_cyprus_eu_national_id_card` .
+
+- Det regulære udtryk `Regex_cyprus_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_cyprus_eu_national_id_card` .
 
 ```xml
       <!-- Cyprus Identity Card -->
@@ -4581,7 +4613,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - personligt id-nummer
 - ταυτοτητασ
 
-
 ## <a name="cyprus-passport-number"></a>Cyperns pasnummer
 
 ### <a name="format"></a>Format
@@ -4599,13 +4630,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_cyprus_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_cyprus_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_cyprus_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_cyprus_eu_passport_number` findes.
 - Det regulære udtryk `Regex_cyprus_eu_passport_date` finder datoen i formatet DD/MM/ÅÅÅÅ, eller der findes et nøgleord fra `Keywords_cyprus_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_cyprus_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_cyprus_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_cyprus_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_cyprus_eu_passport_number` findes.
 
 ```xml
       <!-- Cyprus Passport Number -->
@@ -4665,7 +4698,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udløber den
 - udstedt den
 
-
 ## <a name="cyprus-physical-addresses"></a>Fysiske adresser for Cypern
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Cypern. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -4675,7 +4707,9 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 Medium
 
 ## <a name="cyprus-tax-identification-number"></a>Cyperns skatteidentifikationsnummer
+
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -4701,11 +4735,13 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_cyprus_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_cyprus_eu_tax_file_number` .
+
+- Funktionen `Func_cyprus_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_cyprus_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_cyprus_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_cyprus_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Cyprus Tax Identification Number -->
@@ -4750,7 +4786,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - φορολογική ταυτότητα
 - φορολογικού κωδικού
 
-
 ## <a name="czech-drivers-license-number"></a>Tjekkisk kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -4773,8 +4808,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_czech_republic_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_czech_republic_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_czech_republic_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_czech_republic_eu_driver's_license_number` findes.
 
 ```xml
       <Entity id="86b40d3b-d8ea-4c36-aab0-ef9416a6769c" patternsProximity="300" recommendedConfidence="75">
@@ -4890,7 +4926,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -4919,7 +4955,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - číslo řidičského průkazu
 - čísla řidičských průkazů
 
-
 ## <a name="czech-passport-number"></a>Tjekkisk pasnummer
 
 ### <a name="format"></a>Format
@@ -4937,13 +4972,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_czech_republic_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_czech_republic_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_czech_republic_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_czech_republic_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_czech_republic_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_czech_republic_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_czech_republic_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_czech_republic_eu_passport_number` findes.
 
 ```xml
       <!-- Czech Republic Passport Number -->
@@ -4997,21 +5034,24 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="czech-personal-identity-number"></a>Tjekkisk personligt id-nummer
 
 ### <a name="format"></a>Format
 
-ni cifre med valgfri skråstreg (gammelt format) 10 cifre med valgfri skråstreg (nyt format)
+ni cifre med valgfri skråstreg (gammelt format)
+
+10 cifre med valgfri skråstreg (nyt format)
 
 ### <a name="pattern"></a>Mønster
 
 ni cifre (gammelt format):
+
 - seks cifre, der repræsenterer fødselsdato
 - en valgfri skråstreg
 - tre cifre
 
 10 cifre (nyt format):
+
 - seks cifre, der repræsenterer fødselsdato
 - en valgfri skråstreg
 - fire cifre, hvor sidste ciffer er et kontrolciffer
@@ -5097,7 +5137,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Tin #
 - entydigt identifikationsnummer
 
-
 ## <a name="czech-republic-physical-addresses"></a>Fysiske adresser for Tjekkiet
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Tjekkiet. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -5123,8 +5162,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_denmark_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_denmark_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_denmark_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_denmark_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Denmark Driver's License Number -->
@@ -5240,7 +5280,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -5267,7 +5307,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - kørekort
 - kørekortnummer
 
-
 ## <a name="denmark-passport-number"></a>Danmark pasnummer
 
 ### <a name="format"></a>Format
@@ -5285,13 +5324,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_denmark_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_denmark_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_denmark_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_denmark_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date2` finder datoen i formatet DD MM ÅÅ, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_denmark_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_denmark_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_denmark_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_denmark_eu_passport_number` findes.
 
 ```xml
       <!-- Denmark Passport Number -->
@@ -5344,7 +5385,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="denmark-personal-identification-number"></a>Personidentifikationsnummer for Danmark
 
 ### <a name="format"></a>Format
@@ -5354,6 +5394,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10 cifre:
+
 - seks cifre i formatet DDMMYY, som er fødselsdatoen
 - et valgfrit mellemrum eller en bindestreg
 - fire cifre, hvor det endelige ciffer er et kontrolciffer
@@ -5365,11 +5406,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Func_denmark_eu_tax_file_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_denmark_id.
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Func_denmark_eu_tax_file_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -5461,7 +5504,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - sygesikringsnr
 - sygesikringsnummer
 
-
 ## <a name="denmark-physical-addresses"></a>Fysiske adresser i Danmark
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Danmark. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -5470,7 +5512,6 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 
 Medium
 
-
 ## <a name="diseases"></a>Sygdomme
 
 Denne ubundtede navngivne enhed registrerer tekst, der svarer til sygdomsnavne, f.eks. *diabetes*. Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -5478,7 +5519,6 @@ Denne ubundtede navngivne enhed registrerer tekst, der svarer til sygdomsnavne, 
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="drug-enforcement-agency-dea-number"></a>Dea-nummer (Drug Enforcement Agency)
 
@@ -5489,6 +5529,7 @@ to bogstaver efterfulgt af syv cifre
 ### <a name="pattern"></a>Mønster
 
 Mønsteret skal indeholde alle følgende:
+
 - ét bogstav (skelner ikke mellem store og små bogstaver) fra dette sæt af mulige bogstaver: A/B/F/G/M/P/R, som er en registrantkode
 - ét bogstav (ikke forskel på store og små bogstaver), som er det første bogstav i registrantens efternavn eller ciffer '9'
 - syv cifre, hvoraf det sidste er kontrolcifferet
@@ -5500,11 +5541,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_dea_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_dea_number`
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_dea_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -5537,7 +5580,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - administration af narkotikamisbrug
 - drug enforcement agency
 
-
 ## <a name="estonia-drivers-license-number"></a>Estisk kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -5558,8 +5600,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_estonia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_estonia_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_estonia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_estonia_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Estonia Driver's License Number -->
@@ -5675,7 +5718,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -5704,7 +5747,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - juhiloa-nummer
 - juhiluba
 
-
 ## <a name="estonia-passport-number"></a>Estisk pasnummer
 
 ### <a name="format"></a>Format
@@ -5722,13 +5764,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_estonia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_estonia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_estonia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_estonia_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_estonia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_estonia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_estonia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_estonia_eu_passport_number` findes.
 
 ```xml
       <!-- Estonia Passport Number -->
@@ -5778,10 +5822,10 @@ eesti kodaniku passi number passinumbrid document number document no dokumendi n
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="estonia-personal-identification-code"></a>Personidentifikationskode for Estland
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -5808,11 +5852,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_estonia_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_estonia_eu_national_id_card` .
+
+- Funktionen `Func_estonia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_estonia_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_estonia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_estonia_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Estonia Personal Identification Code -->
@@ -5866,7 +5912,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="estonia-physical-addresses"></a>Fysiske adresser i Estland
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Estland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -5874,7 +5919,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="eu-debit-card-number"></a>EU-betalingskortnummer
 
@@ -5893,6 +5937,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_eu_debit_card finder indhold, der svarer til mønsteret.
 - Mindst et af følgende udsagn er sandt:
     - Der blev fundet et nøgleord fra Keyword_eu_debit_card.
@@ -6225,7 +6270,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - vto
 - válido hasta
 
-
 ## <a name="eu-drivers-license-number"></a>EU-kørekortsnummer
 
 Disse enheder findes i EU-kørekortsnummeret og er følsomme informationstyper.
@@ -6259,7 +6303,6 @@ Disse enheder findes i EU-kørekortsnummeret og er følsomme informationstyper.
 - [Sverige](#sweden-drivers-license-number)
 - [STORBRITANNIEN.](#uk-drivers-license-number)
 
-
 ## <a name="eu-national-identification-number"></a>EU-nationalt identifikationsnummer
 
 Disse enheder findes i EU's nationale identifikationsnummer og er følsomme informationstyper.
@@ -6291,7 +6334,6 @@ Disse enheder findes i EU's nationale identifikationsnummer og er følsomme info
 - [Slovenien](#slovenia-unique-master-citizen-number)
 - [Spanien](#spain-dni)
 - [STORBRITANNIEN.](#uk-national-insurance-number-nino)
-
 
 ## <a name="eu-passport-number"></a>EU-pasnummer
 
@@ -6326,7 +6368,6 @@ Disse enheder findes i EU-passets nummer og er følsomme oplysningstyper. Disse 
 - [Sverige](#sweden-passport-number)
 - [Amerikansk/britisk pasnummer](#usuk-passport-number)
 
-
 ## <a name="eu-social-security-number-or-equivalent-identification"></a>EU-cpr-nummer eller tilsvarende identifikation
 
 Det er enheder, der befinder sig i EU's cpr-nummer eller tilsvarende identifikation og er følsomme informationstyper.
@@ -6344,7 +6385,6 @@ Det er enheder, der befinder sig i EU's cpr-nummer eller tilsvarende identifikat
 - [Portugal](#portugal-citizen-card-number)
 - [Spanien](#spain-social-security-number-ssn)
 - [Sverige](#sweden-national-id)
-
 
 ## <a name="eu-tax-identification-number"></a>EU-skatteidentifikationsnummer
 
@@ -6379,7 +6419,6 @@ Disse enheder er i EU's type af følsomme oplysninger om skatteidentifikationsnu
 - [Sverige](#sweden-tax-identification-number)
 - [STORBRITANNIEN.](#uk-unique-taxpayer-reference-number)
 
-
 ## <a name="finland-drivers-license-number"></a>Finlands kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -6402,8 +6441,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_finland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_finland_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_finland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_finland_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Finland Driver's License Number -->
@@ -6519,7 +6559,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -6541,7 +6581,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_finland_eu_drivers_license_number"></a>Keywords_finland_eu_driver er s_license_number
 
 - ajokortti
@@ -6554,10 +6593,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - ajokortit
 - ajokortin numerot
 
-
 ## <a name="finland-european-health-insurance-number"></a>Finland europæisk sygesikringsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -6583,6 +6622,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Regex-Regex_Finland_European_Health_Insurance_Number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Finland_European_Health_Insurance_Number.
 
@@ -6615,7 +6655,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - suomen sairausvakuutuskortti
 - terveyskortti
 
-
 ## <a name="finland-national-id"></a>Finlands nationale id
 
 ### <a name="format"></a>Format
@@ -6625,6 +6664,7 @@ seks cifre plus et tegn, der angiver et århundrede plus tre cifre plus et kontr
 ### <a name="pattern"></a>Mønster
 
 Mønsteret skal indeholde alle følgende:
+
 - seks cifre i formatet DDMMYY, som er en fødselsdato
 - century-mærke (enten '-', '+' eller 'a')
 - trecifret personligt id-nummer
@@ -6637,11 +6677,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - funktionen Func_finnish_national_id finder indhold, der svarer til mønsteret
 - der blev fundet et nøgleord fra Keyword_finnish_national_id
 - kontrolsummen passerer
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - funktionen Func_finnish_national_id finder indhold, der svarer til mønsteret
 - kontrolsummen passerer
 
@@ -6708,7 +6750,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - verotunniste
 - verotunnus
 
-
 ## <a name="finland-passport-number"></a>Finlands pasnummer
 
 Denne enhed er tilgængelig i den følsomme informationstype for EU-pasnummer og er tilgængelig som en separat enhed med følsomme oplysninger.
@@ -6717,7 +6758,9 @@ Denne enhed er tilgængelig i den følsomme informationstype for EU-pasnummer og
 kombination af ni bogstaver og cifre
 
 ### <a name="pattern"></a>Mønster
+
 kombination af ni bogstaver og cifre:
+
 - to bogstaver (skelner ikke mellem store og små bogstaver)
 - syv cifre
 
@@ -6728,11 +6771,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk `Regex_finland_passport_number` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_finland_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_finland_passport_number` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_finland_passport_number` findes.
 
@@ -6789,7 +6834,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="finland-physical-addresses"></a>Fysiske adresser i Finland
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Finland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -6797,7 +6841,6 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="france-drivers-license-number"></a>Frankrigs kørekortsnummer
 
@@ -6818,6 +6861,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - funktionen Func_french_drivers_license finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_french_drivers_license.
 
@@ -6932,7 +6976,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -6960,10 +7004,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - licensnumre
 - numéros de licence
 
-
 ## <a name="france-health-insurance-number"></a>Frankrig sygesikringsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -6984,7 +7028,6 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 - et valgfrit mellemrum
 - et ciffer
 
-
 ### <a name="checksum"></a>Checksum
 
 Nej
@@ -6992,6 +7035,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - regex-Regex_France_Health_Insurance_Number finder indhold, der svarer til mønsteret.
 - der blev fundet et nøgleord fra Keyword_France_Health_Insurance_Number.
 
@@ -7012,7 +7056,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - carte vitale
 - carte d'assuré social
 
-
 ## <a name="france-national-id-card-cni"></a>Nationalt id-kort for Frankrig (CNI)
 
 ### <a name="format"></a>Format
@@ -7030,6 +7073,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_france_cni finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_france_eu_national_id_card.
 
@@ -7059,7 +7103,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - numéro d'assurance maladie
 - numéro de carte vitale
 
-
 ## <a name="france-passport-number"></a>Pasnummer for Frankrig
 
 Denne enhed er tilgængelig i EU Passport Number følsomme oplysninger type. Den er også tilgængelig som et separat objekt af typen følsomme oplysninger.
@@ -7071,6 +7114,7 @@ ni cifre og bogstaver
 ### <a name="pattern"></a>Mønster
 
 ni cifre og bogstaver:
+
 - to cifre
 - to bogstaver (skelner ikke mellem store og små bogstaver)
 - fem cifre
@@ -7082,14 +7126,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_fr_passport` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_france_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date3` finder datoen i formatet DD MM ÅÅÅÅ, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_fr_passport` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_france_eu_passport_number` findes.
-
 
 ```xml
     <!-- France Passport Number -->
@@ -7152,7 +7197,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="france-physical-addresses"></a>Fysiske adresser i Frankrig
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Frankrig. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -7160,7 +7204,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="france-social-security-number-insee"></a>Det sociale sikringsnummer i Frankrig (INSEE)
 
@@ -7171,8 +7214,11 @@ Medium
 ### <a name="pattern"></a>Mønster
 
 Skal matche et af to mønstre:
-- 13 cifre efterfulgt af et mellemrum efterfulgt af to cifre<br/>
-Eller
+
+- 13 cifre efterfulgt af et mellemrum efterfulgt af to cifre
+
+  Eller
+
 - 15 cifre i træk
 
 ### <a name="checksum"></a>Checksum
@@ -7182,11 +7228,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_french_insee` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_fr_insee.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_french_insee eller Func_fr_insee finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -7237,7 +7285,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - kode for social sikring
 - cpr-nummer
 
-
 ## <a name="france-tax-identification-number"></a>Frankrigs skatteidentifikationsnummer
 
 ### <a name="format"></a>Format
@@ -7259,7 +7306,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Et mellemrum (valgfrit)
 - Tre kontrolcifre
 
-
 ### <a name="checksum"></a>Checksum
 
 Ja
@@ -7267,11 +7313,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_france_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_france_eu_tax_file_number` .
+
+- Funktionen `Func_france_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_france_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_france_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_france_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- France Tax Identification Number (numéro SPI.) -->
@@ -7313,10 +7361,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="france-value-added-tax-number"></a>Momsnummer for Frankrig
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -7348,10 +7396,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_france_value_added_tax_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_france_value_added_tax_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_france_value_added_tax_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -7381,7 +7431,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - numéro de tva
 - numéro d'identification sirene
 
-
 ## <a name="generic-medication-names"></a>Generiske medicinnavne
 
 Denne ubundtede navngivne enhed registrerer navne på generiske lægemidler, f.eks *acetaminophen*. Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -7389,7 +7438,6 @@ Denne ubundtede navngivne enhed registrerer navne på generiske lægemidler, f.e
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="germany-drivers-license-number"></a>Tysklands kørekortsnummer
 
@@ -7402,6 +7450,7 @@ kombination af 11 cifre og bogstaver
 ### <a name="pattern"></a>Mønster
 
 11 cifre og bogstaver (skelner ikke mellem store og små bogstaver):
+
 - et ciffer eller bogstav
 - to cifre
 - seks cifre eller bogstaver
@@ -7415,6 +7464,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_german_drivers_license finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_german_drivers_license_number.
 - Kontrolsummen passerer.
@@ -7444,9 +7494,9 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - führerscheinnummer
 - fuhrerscheinnummer
 - fuehrerscheinnummer
-- führerschein- 
-- fuhrerschein- 
-- fuehrerschein- 
+- führerschein-
+- fuhrerschein-
+- fuehrerschein-
 - führerscheinnummernr
 - fuhrerscheinnummernr
 - fuehrerscheinnummernr
@@ -7560,7 +7610,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -7580,7 +7630,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - kørekort
 - dlno
 
-
 ## <a name="germany-identity-card-number"></a>Tysklands identitetskortnummer
 
 ### <a name="format"></a>Format
@@ -7598,6 +7647,7 @@ siden 1. november 2010: 9 til 11 tegn alfanumerisk mønster
 - Valgfri d/D
 
 fra 1. april 1987 til 31. oktober 2010:
+
 - 10 cifre
 
 ### <a name="checksum"></a>Checksum
@@ -7607,34 +7657,36 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_german_id_card_with_check` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_germany_id_card` .
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_germany_id_card` finder indhold, der svarer til mønsteret (9 tegn uden kontrolciffer udstedt før 2010 eller 10 cifre udstedt i 2010).
 - Der blev fundet et nøgleord fra Keyword_germany_id_card.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_german_id_card_with_check` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
-
 ```xml
       <!-- Germany Identity Card Number -->
-      <Entity id="e577372f-c42e-47a0-9d85-bebed1c237d4" patternsProximity="300" recommendedConfidence="75"> 
+      <Entity id="e577372f-c42e-47a0-9d85-bebed1c237d4" patternsProximity="300" recommendedConfidence="75">
         <Pattern confidenceLevel="75">
-         <IdMatch idRef="Regex_germany_id_card" /> 
-         <Match idRef="Keyword_germany_id_card" /> 
+         <IdMatch idRef="Regex_germany_id_card" />
+         <Match idRef="Keyword_germany_id_card" />
         </Pattern>
-        <Version minEngineVersion="15.20.4545.000"> 
+        <Version minEngineVersion="15.20.4545.000">
           <Pattern confidenceLevel="85">
            <IdMatch idRef="Func_german_id_card_with_check" />
-            <Match idRef="Keyword_germany_id_card" /> 
-          </Pattern> 
+            <Match idRef="Keyword_germany_id_card" />
+          </Pattern>
           <Pattern confidenceLevel="65">
-           <IdMatch idRef="Func_german_id_card_with_check" /> 
-          </Pattern> 
+           <IdMatch idRef="Func_german_id_card_with_check" />
+          </Pattern>
         </Version>
       </Entity>
 ```
@@ -7657,7 +7709,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - persönliche identifikationsnummer
 - persönliche-id-nummer
 
-
 ## <a name="germany-passport-number"></a>Tysklands pasnummer
 
 ### <a name="format"></a>Format
@@ -7678,15 +7729,18 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_german_passport_checksum` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keyword_german_passport` eller `Keywords_eu_passport_number_common` findes.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_german_passport` finder indhold, der svarer til mønsteret på ni tegn (uden kontrolcifre og valgfri d/D).
 - Et nøgleord fra `Keyword_german_passport` eller `Keywords_eu_passport_number_common` findes.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_german_passport_checksum` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -7742,7 +7796,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - passportnumbers
 - pasnumre
 
-
 ## <a name="germany-physical-addresses"></a>Fysiske adresser i Tyskland
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Tyskland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -7750,7 +7803,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="germany-tax-identification-number"></a>Tysklands skatteidentifikationsnummer
 
@@ -7778,11 +7830,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_germany_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_germany_eu_tax_file_number` .
+
+- Funktionen `Func_germany_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_germany_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_germany_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_germany_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Germany Tax Identification Number -->
@@ -7825,10 +7879,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Zinn
 - zinnnummer
 
-
 ## <a name="germany-value-added-tax-number"></a>Momsnummer for Tyskland
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -7859,10 +7913,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_germany_value_added_tax_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_germany_value_added_tax_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_germany_value_added_tax_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -7889,7 +7945,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - mehrwertsteuer identifikationsnummer
 - mehrwertsteuer nummer
 
-
 ## <a name="greece-drivers-license-number"></a>Grækenlands kørekortsnummer
 
 Denne enhed er inkluderet i den følsomme informationstype for EU-kørekortsnummer. Den er også tilgængelig som en separat enhed af typen følsomme oplysninger.
@@ -7909,8 +7964,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_greece_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_greece_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_greece_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_greece_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Greece Driver's License Number -->
@@ -8026,7 +8082,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -8048,14 +8104,12 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_greece_eu_drivers_license_number"></a>Keywords_greece_eu_driver er s_license_number
 
 - δεια οδήγησης
 - Adeia odigisis
 - Άδεια οδήγησης
 - Δίπλωμα οδήγησης
-
 
 ## <a name="greece-national-id-card"></a>Nationalt id-kort for Grækenland
 
@@ -8066,11 +8120,13 @@ Kombination af 7-8 bogstaver og tal plus en streg
 ### <a name="pattern"></a>Mønster
 
 Syv bogstaver og tal (gammelt format):
+
 - Et bogstav (ethvert bogstav i det græske alfabet)
 - En streg
 - Seks cifre
 
 Otte bogstaver og tal (nyt format):
+
 - To bogstaver, hvis store bogstaver forekommer i både det græske og det latinske alfabet (ABEZHIKMNOPTYX)
 - En streg
 - Seks cifre
@@ -8082,10 +8138,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_greece_id_card finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_greece_id_card.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_greece_id_card finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -8114,7 +8172,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - ταυτότητα
 - ταυτότητας
 
-
 ## <a name="greece-passport-number"></a>Pasnummer for Grækenland
 
 ### <a name="format"></a>Format
@@ -8132,13 +8189,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_greece_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_greece_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_greece_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_greece_eu_passport_number` findes.
 - Det regulære udtryk `Regex_greece_eu_passport_date` finder dato i formatet DD MMM YY (f.eks. 28. august 19), eller der findes et nøgleord fra `Keywords_greece_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_greece_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_greece_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_greece_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_greece_eu_passport_number` findes.
 
 ```xml
       <!-- Greece Passport Number -->
@@ -8185,7 +8244,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - αριθμούς διαβατηρίου
 - αριθμός διαβατηριο
 
-
 ## <a name="greece-physical-addresses"></a>Fysiske adresser for Grækenland
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Grækenland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -8197,6 +8255,7 @@ Medium
 ## <a name="greece-social-security-number-amka"></a>Det græske cpr-nummer (AMKA)
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -8220,11 +8279,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_greece_eu_ssn` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_greece_eu_ssn_or_equivalent` .
+
+- Funktionen `Func_greece_eu_ssn` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_greece_eu_ssn_or_equivalent` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_greece_eu_ssn` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_greece_eu_ssn` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Greece Social Security Number (AMKA) -->
@@ -8252,10 +8313,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - a.m.k.a.
 - Αριθμού Μητρώου Κοινωνικής Ασφάλισης
 
-
 ## <a name="greece-tax-identification-number"></a>Grækenlands skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -8278,8 +8339,8 @@ Ikke relevant
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_greece_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_greece_eu_tax_file_number` .
+- Det regulære udtryk `Regex_greece_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_greece_eu_tax_file_number` .
 
 ```xml
       <!-- Greek Tax Identification Number -->
@@ -8322,7 +8383,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - τον αριθμό φορολογικού μητρώου
 - φορολογικού μητρώου νο
 
-
 ## <a name="hong-kong-identity-card-hkid-number"></a>HONGKONG-id-nummer (HKID)
 
 ### <a name="format"></a>Format
@@ -8332,6 +8392,7 @@ Kombination af 8-9 bogstaver og tal plus valgfri parenteser omkring det endelige
 ### <a name="pattern"></a>Mønster
 
 Kombination af 8-9 bogstaver:
+
 - 1-2 bogstaver (skelner ikke mellem store og små bogstaver)
 - Seks cifre
 - valgfri plads
@@ -8344,11 +8405,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_hong_kong_id_card finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_hong_kong_id_card.
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_hong_kong_id_card finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -8407,7 +8470,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - 香港特別行政區非永久性居民身分證
 - 香港特別行政區非永久性居民身分証
 
-
 ## <a name="hungary-drivers-license-number"></a>Ungarns kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -8429,8 +8491,8 @@ Nej
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_hungary_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_hungary_eu_driver's_license_number` findes.
+- Det regulære udtryk `Regex_hungary_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_hungary_eu_driver's_license_number` findes.
 
 ```xml
       <Entity id="9d31c46b-6e6b-444c-aeb1-6dd7e604bb24" patternsProximity="300" recommendedConfidence="75">
@@ -8545,7 +8607,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -8567,13 +8629,11 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_hungary_eu_drivers_license_number"></a>Keywords_hungary_eu_driver s_license_number
 
 - vezetoi engedely
 - vezetői engedély
 - vezetői engedélyek
-
 
 ## <a name="hungary-passport-number"></a>Pasnummer til Ungarn
 
@@ -8592,13 +8652,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_hungary_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_hungary_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_hungary_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_hungary_eu_passport_number` findes.
 - Det regulære udtryk `Regex_hungary_eu_passport_date` finder dato i formatet DD MMM/MMM YYY (f.eks. 01 MÁR/MAR 12), eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_hungary_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_hungary_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_hungary_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_hungary_eu_passport_number` findes.
 
 ```xml
       <!-- Hungary Passport Number -->
@@ -8649,10 +8711,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="hungary-personal-identification-number"></a>Ungarns personidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -8680,12 +8742,12 @@ Ja
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_hungary_eu_national_id_card` .
+- Funktionen `Func_hungary_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_hungary_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Funktionen `Func_hungary_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Hungary Personal Identification Number -->
@@ -8716,7 +8778,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - személyazonosító igazolvány
 - személyi igazolvány
 
-
 ## <a name="hungary-physical-addresses"></a>Fysiske adresser til Ungarn
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Ungarn. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -8724,7 +8785,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="hungary-social-security-number-taj"></a>Ungarn cpr-nummer (TAJ)
 
@@ -8744,12 +8804,12 @@ Ja
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_hungary_eu_ssn_or_equivalent` .
+- Funktionen `Func_hungary_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_hungary_eu_ssn_or_equivalent` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
+- Funktionen `Func_hungary_eu_ssn_or_equivalent` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Hungarian Social Security Number (TAJ) -->
@@ -8786,10 +8846,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - áfa szám
 - magyar áfa szám
 
-
 ## <a name="hungary-tax-identification-number"></a>Ungarns skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -8816,12 +8876,12 @@ Ja
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_hungary_eu_tax_file_number` .
+- Funktionen `Func_hungary_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_hungary_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Funktionen  `Func_hungary_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Funktionen `Func_hungary_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Hungary Tax Identification Number -->
@@ -8868,10 +8928,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Tin #
 - momsnummer
 
-
 ## <a name="hungary-value-added-tax-number"></a>Momsnummer for Ungarn
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -8934,7 +8994,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - hozzáadottérték adó
 - áfa szám
 
-
 ## <a name="iceland-physical-addresses"></a>Fysiske adresser på Island
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Island. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -8951,7 +9010,6 @@ Denne ubundtede navngivne enhed registrerer navne på handicap, der er opført i
 
 Høj
 
-
 ## <a name="india-drivers-license-number"></a>Indiens kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -8961,6 +9019,7 @@ Alfanumerisk mønster på 15 tegn
 ### <a name="pattern"></a>Mønster
 
 15 bogstaver eller cifre:
+
 - to bogstaver, der angiver statskode
 - valgfri mellemrum eller tankestreg
 - to cifre, der angiver bykode
@@ -8976,12 +9035,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk `Regex_india_driving_license` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keywords_eu_driver's_license_number_common` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk `Regex_india_driving_license` finder indhold, der svarer til mønsteret.
 
+- Det regulære udtryk `Regex_india_driving_license` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- India Driver's License Number -->
@@ -9097,7 +9157,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -9119,8 +9179,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
-
 ## <a name="india-gst-number"></a>IndienST-nummer
 
 ### <a name="format"></a>Format
@@ -9130,9 +9188,10 @@ Alfanumerisk mønster på 15 tegn
 ### <a name="pattern"></a>Mønster
 
 15 bogstaver eller cifre:
+
 - to cifre, der repræsenterer gyldig tilstandskode
 - et valgfrit mellemrum eller en streg
-- ti tegn, der repræsenterer permanent kontonummer (PAN) 
+- ti tegn, der repræsenterer permanent kontonummer (PAN)
 - et bogstav eller et ciffer
 - et valgfrit mellemrum eller en streg
 - et bogstav 'z' eller 'Z'
@@ -9146,12 +9205,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_india_gst_number` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_india_gst_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen `Func_india_gst_number` finder indhold, der svarer til mønsteret.
 
+- Funktionen `Func_india_gst_number` finder indhold, der svarer til mønsteret.
 
 ```xml
     <!-- India GST number  -->
@@ -9175,7 +9235,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - skat på varer og tjenesteydelser
 - vare- og tjenesteskat
 
-
 ## <a name="india-permanent-account-number-pan"></a>Permanent kontonummer for Indien (PAN)
 
 ### <a name="format"></a>Format
@@ -9185,6 +9244,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10 bogstaver eller cifre:
+
 - Tre bogstaver (skelner ikke mellem store og små bogstaver)
 - Et bogstav i C, P, H, F, A, T, B, L, J, G (ikke forskel på store og små bogstaver)
 - Et bogstav
@@ -9198,12 +9258,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_india_permanent_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_india_permanent_account_number.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk Regex_india_permanent_account_number finder indhold, der svarer til mønsteret.
 
+- Det regulære udtryk Regex_india_permanent_account_number finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- India Permanent Account Number -->
@@ -9236,6 +9297,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 ### <a name="pattern"></a>Mønster
 
 12 cifre:
+
 - Et ciffer, der ikke er 0 eller 1
 - Tre cifre
 - Et valgfrit mellemrum eller en streg
@@ -9250,6 +9312,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_india_aadhaar finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_india_aadhar.
 - Kontrolsummen passerer.
@@ -9281,7 +9344,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - आधार
 - uidai
 
-
 ## <a name="india-voter-id-card"></a>Vælger-id-kort til Indien
 
 ### <a name="format"></a>Format
@@ -9291,6 +9353,7 @@ Alfanumerisk mønster på 10 tegn
 ### <a name="pattern"></a>Mønster
 
 10 bogstaver eller cifre:
+
 - tre bogstaver
 - syv cifre
 
@@ -9301,12 +9364,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_india_voter_id_card` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_india_voter_id_card` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk `Regex_india_voter_id_card` finder indhold, der svarer til mønsteret.
 
+- Det regulære udtryk `Regex_india_voter_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- India Voter Id Card  -->
@@ -9334,7 +9398,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - HEV
 - valgkommission
 
-
 ## <a name="indonesia-identity-card-ktp-number"></a>Indonesiens identitetskortnummer (KTP)
 
 ### <a name="format"></a>Format
@@ -9344,6 +9407,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 ### <a name="pattern"></a>Mønster
 
 16 cifre:
+
 - Tocifret provinskode
 - Et punktum (valgfrit)
 - Tocifret regency eller bykode
@@ -9482,7 +9546,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 
 Ingen
 
-
 ## <a name="international-classification-of-diseases-icd-10-cm"></a>International klassificering af sygdomme (ICD-10-CM)
 
 ### <a name="format"></a>Format
@@ -9500,10 +9563,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Der blev fundet et nøgleord fra Dictionary_icd_10_updated.
 - Der blev fundet et nøgleord fra Dictionary_icd_10_codes.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Der blev fundet et nøgleord fra Dictionary_icd_10_ opdaterede.
 
 ```xml
@@ -9525,7 +9590,6 @@ Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_updated, som er baseret
 
 Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_codes, som er baseret på [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). Denne type søger kun efter forsikringskoder og ikke beskrivelsen.
 
-
 ## <a name="international-classification-of-diseases-icd-9-cm"></a>International klassificering af sygdomme (ICD-9-CM)
 
 ### <a name="format"></a>Format
@@ -9543,10 +9607,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Der blev fundet et nøgleord fra Dictionary_icd_9_updated.
 - Der blev fundet et nøgleord fra Dictionary_icd_9_codes.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Der blev fundet et nøgleord fra Dictionary_icd_9_updated.
 
 ```xml
@@ -9586,19 +9652,22 @@ Nej
 ### <a name="definition"></a>Definition
 
 For IPv6 har en DLP-politik stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger på 300 tegn:
+
 - Det regulære udtryk Regex_ipv6_address finder indhold, der svarer til mønsteret.
 - Der blev ikke fundet et nøgleord fra Keyword_ipaddress.
 
 For IPv4 har en DLP-politik stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_ipv4_address finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_ipaddress.
 
 For IPv6 har en DLP-politik stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger på 300 tegn:
+
 - Det regulære udtryk Regex_ipv6_address finder indhold, der svarer til mønsteret.
 - Der blev ikke fundet et nøgleord fra Keyword_ipaddress.
 
 ```xml
-    <!-- IP Address --> 
+    <!-- IP Address -->
     <Entity id="1daa4ad5-e2dd-4ca4-a788-54722c09efb2" patternsProximity="300" recommendedConfidence="85">
       <Pattern confidenceLevel="85">
         <IdMatch idRef="Regex_ipv6_address" />
@@ -9631,7 +9700,6 @@ For IPv6 har en DLP-politik stor tillid til, at den har registreret denne type f
 - internetprotokol
 - IP-כתובת ה
 
-
 ## <a name="ip-address-v4"></a>IP-adresse v4
 
 ### <a name="format"></a>Format
@@ -9640,7 +9708,6 @@ Komplekst mønster, der står for formaterede (punktummer) og ikke-formaterede (
 
 ### <a name="pattern"></a>Mønster
 
-
 ### <a name="checksum"></a>Checksum
 
 Nej
@@ -9648,15 +9715,16 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk `Regex_ipv4_address` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_ipaddress` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_ipv4_address` finder indhold, der svarer til mønsteret.
 
-
 ```xml
-      <!-- IP Address v4--> 
+      <!-- IP Address v4-->
       <Entity id="a7dd5e5f-e7f9-4626-a2c6-86a8cb6830d2" patternsProximity="300" recommendedConfidence="75" relaxProximity="true">
         <Pattern confidenceLevel="85">
           <IdMatch idRef="Regex_ipv4_address" />
@@ -9678,7 +9746,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - internetprotokol
 - IP-כתובת ה
 
-
 ## <a name="ip-address-v6"></a>IP-adresse v6
 
 ### <a name="format"></a>Format
@@ -9687,7 +9754,6 @@ Komplekst mønster, der står for formaterede IPv6-tal (herunder kolon)
 
 ### <a name="pattern"></a>Mønster
 
-
 ### <a name="checksum"></a>Checksum
 
 Nej
@@ -9695,12 +9761,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk `Regex_ipv6_address` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_ipaddress` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk `Regex_ipv6_address` finder indhold, der svarer til mønsteret.
 
+- Det regulære udtryk `Regex_ipv6_address` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- IP Address v6-->
@@ -9725,7 +9792,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - internetprotokol
 - IP-כתובת ה
 
-
 ## <a name="ireland-drivers-license-number"></a>Irlands kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -9747,8 +9813,8 @@ Nej
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
 
-- Det regulære udtryk  `Regex_ireland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_ireland_eu_driver's_license_number` findes.
+- Det regulære udtryk `Regex_ireland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_ireland_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Ireland Driver's License Number -->
@@ -9864,7 +9930,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -9885,7 +9951,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dl nej
 - dlno
 - dl-nummer
-
 
 #### <a name="keywords_ireland_eu_drivers_license_number"></a>Keywords_ireland_eu_driver er s_license_number
 
@@ -9912,13 +9977,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_ireland_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_ireland_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_ireland_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_ireland_eu_passport_number` findes.
 - Det regulære udtryk `Regex_ireland_eu_passport_date` finder dato i formatet DD MMM/MMM YYYY (f.eks. 01 BEA/MAJ 1988), eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_ireland_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_ireland_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_ireland_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_ireland_eu_passport_number` findes.
 
 ```xml
       <!-- Ireland Passport Number -->
@@ -9974,24 +10041,27 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="ireland-personal-public-service-pps-number"></a>Irlands personlige offentlige tjeneste (PPS)
 
 ### <a name="format"></a>Format
 
 Gammelt format (indtil 31. december 2012):
+
 - syv cifre efterfulgt af 1-2 bogstaver
 
 Nyt format (1. januar 2013 og efter):
+
 - syv cifre efterfulgt af to bogstaver
 
 ### <a name="pattern"></a>Mønster
 
 Gammelt format (indtil 31. december 2012):
+
 - syv cifre
 - et til to bogstaver (skelner ikke mellem store og små bogstaver)
 
 Nyt format (1. januar 2013 og efter):
+
 - syv cifre
 - et bogstav (ikke forskel på store og små bogstaver), som er et alfabetisk kontrolciffer
 - Et valgfrit bogstav i området A-I eller "W"
@@ -10003,11 +10073,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_ireland_pps finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_ireland_eu_national_id_card.
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_ireland_pps finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -10071,7 +10143,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="ireland-physical-addresses"></a>Fysiske adresser for Irland
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Irland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -10079,7 +10150,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="israel-bank-account-number"></a>Israels bankkontonummer
 
@@ -10090,6 +10160,7 @@ Medium
 ### <a name="pattern"></a>Mønster
 
 Formateret:
+
 - to cifre
 - en streg
 - tre cifre
@@ -10097,6 +10168,7 @@ Formateret:
 - otte cifre
 
 Uformateret:
+
 - 13 cifre i træk
 
 ### <a name="checksum"></a>Checksum
@@ -10106,6 +10178,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_israel_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_israel_bank_account_number.
 
@@ -10130,7 +10203,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Kontonummer
 - מספר חשבון בנק
 
-
 ## <a name="israel-national-identification-number"></a>Israels nationale identifikationsnummer
 
 ### <a name="format"></a>Format
@@ -10148,6 +10220,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_israeli_national_id_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Israel_National_ID.
 - Kontrolsummen passerer.
@@ -10168,23 +10241,22 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 #### <a name="keyword_israel_national_id"></a>Keyword_Israel_National_ID
 
--   מספר זהות
--   מספר זיה וי
--   מספר זיהוי ישר אלי      
--   זהותישר אלית
--   هو ية اسرائيل ية عدد
--   هوية إسرائ يلية
--   رقم الهوية
--   عدد هوية فريدة من نوعها
--   idnumber #
--   id-nummer
--   identitet nr.        
--   identitynumber #
--   id-nummer
--   israeliidentitynumber       
--   personligt id
--   entydigt id  
-
+- מספר זהות
+- מספר זיה וי
+- מספר זיהוי ישר אלי
+- זהותישר אלית
+- هو ية اسرائيل ية عدد
+- هوية إسرائ يلية
+- رقم الهوية
+- عدد هوية فريدة من نوعها
+- idnumber #
+- id-nummer
+- identitet nr.
+- identitynumber #
+- id-nummer
+- israeliidentitynumber
+- personligt id
+- entydigt id
 
 ## <a name="italy-drivers-license-number"></a>Italiens kørekortsnummer
 
@@ -10197,6 +10269,7 @@ en kombination af 10 bogstaver og cifre
 ### <a name="pattern"></a>Mønster
 
 en kombination af 10 bogstaver og cifre:
+
 - ét bogstav (skelner ikke mellem store og små bogstaver)
 - bogstavet "A" eller "V" (skelner ikke mellem store og små bogstaver)
 - syv cifre
@@ -10209,6 +10282,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk `Regex_italy_drivers_license_number` finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keyword_italy_drivers_license_number` findes.
 
@@ -10326,7 +10400,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -10356,9 +10430,9 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - patenti di guida
 - patenti guida
 
-
 ## <a name="italy-fiscal-code"></a>Regnskabskode for Italien
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -10372,6 +10446,7 @@ en kombination af bogstaver og cifre på 16 tegn i det angivne mønster
 ### <a name="pattern"></a>Mønster
 
 En kombination af bogstaver og cifre på 16 tegn:
+
 - tre bogstaver, der svarer til de første tre konsonanter i familiens navn
 - tre bogstaver, der svarer til første, tredje og fjerde konsonanter i fornavnet
 - to cifre, der svarer til de sidste cifre i fødselsåret
@@ -10387,11 +10462,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_italy_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_italy_eu_national_id_card` .
+
+- Funktionen `Func_italy_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_italy_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_italy_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_italy_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Italy Fiscal Code -->
@@ -10443,7 +10520,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="italy-passport-number"></a>Pasnummer for Italien
 
 ### <a name="format"></a>Format
@@ -10464,13 +10540,15 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_italy_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_italy_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_italy_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_italy_eu_passport_number` findes.
 - Det regulære udtryk `Regex_italy_eu_passport_date` finder dato i formatet DD MMM/MMM YYYY (f.eks. 01 GEN/JAN 1988), eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_italy_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_italy_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_italy_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_italy_eu_passport_number` findes.
 
 ```xml
       <!-- Italy Passport Number -->
@@ -10526,7 +10604,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="italy-physical-addresses"></a>Fysiske adresser for Italien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Italien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -10535,10 +10612,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="italy-value-added-tax-number"></a>Italien momsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -10565,10 +10642,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_italy_value_added_tax_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_italy_value_added_tax_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_italy_value_added_tax_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -10594,7 +10673,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Iva
 - Iva #
 
-
 ## <a name="japan-bank-account-number"></a>Japans bankkontonummer
 
 ### <a name="format"></a>Format
@@ -10604,8 +10682,10 @@ syv eller otte cifre
 ### <a name="pattern"></a>Mønster
 
 bankkontonummer:
+
 - syv eller otte cifre
 - forgreningskode for bankkonto:
+
 - fire cifre
 - et mellemrum eller en streg (valgfrit)
 - tre cifre
@@ -10617,13 +10697,16 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_jp_bank_account finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_bank_account.
 - Et af følgende er sandt:
+
 - Funktionen Func_jp_bank_account_branch_code finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_bank_branch_code.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_jp_bank_account finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_bank_account.
 
@@ -10715,6 +10798,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_jp_drivers_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_drivers_license_number.
 
@@ -10768,10 +10852,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 免許証 #
 - 免許 #
 
-
 ## <a name="japan-my-number---corporate"></a>Japan Mit nummer - Firma
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -10796,10 +10880,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_japanese_my_number_corporate finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_japanese_my_number_corporate.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_japanese_my_number_corporate finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -10830,10 +10916,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 法人番号
 - 指定通知書
 
-
 ## <a name="japan-my-number---personal"></a>Japan Mit nummer - personlig
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -10861,10 +10947,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_japanese_my_number_personal finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_japanese_my_number_personal.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_japanese_my_number_personal finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -10895,7 +10983,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - 個人識別ナンバー
 - 通知カード
 
-
 ## <a name="japan-passport-number"></a>Pasnummer til Japan
 
 ### <a name="format"></a>Format
@@ -10913,6 +11000,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_jp_passport finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_passport.
 
@@ -10945,7 +11033,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 旅券番号♯
 - 旅券ナンバー
 
-
 ## <a name="japan-residence-card-number"></a>Opholdskortnummer for Japan
 
 ### <a name="format"></a>Format
@@ -10955,6 +11042,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 12 bogstaver og cifre:
+
 - to bogstaver (skelner ikke mellem store og små bogstaver)
 - otte cifre
 - to bogstaver (skelner ikke mellem store og små bogstaver)
@@ -10966,6 +11054,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_jp_residence_card_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_residence_card_number.
 
@@ -11007,6 +11096,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_jp_resident_registration_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_resident_registration_number.
 
@@ -11035,7 +11125,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 登録番号
 - 外国人登録証
 
-
 ## <a name="japan-social-insurance-number-sin"></a>Japan socialforsikring nummer (SIN)
 
 ### <a name="format"></a>Format
@@ -11045,6 +11134,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 7-12 cifre:
+
 - fire cifre
 - en bindestreg (valgfrit)
 - seks cifre ELLER
@@ -11057,10 +11147,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_jp_sin finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_sin.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_jp_sin_pre_1997 finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_jp_sin.
 
@@ -11101,7 +11193,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 厚生年金
 - 厚生年金被保険者整理番号
 
-
 ## <a name="lab-test-terms"></a>Testbetingelser for laboratorie
 
 Denne ubundtede navngivne enhed registrerer begreber, der er relateret til laboratorietests, f.eks *. Insulin C-peptid.* Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -11109,7 +11200,6 @@ Denne ubundtede navngivne enhed registrerer begreber, der er relateret til labor
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="latvia-drivers-license-number"></a>Letlands kørekortsnummer
 
@@ -11131,8 +11221,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_latvia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_latvia_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_latvia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_latvia_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Latvia Driver's License Number -->
@@ -11248,7 +11339,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -11270,13 +11361,11 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_latvia_eu_drivers_license_number"></a>Keywords_latvia_eu_driver er s_license_number
 
 - autovadītāja apliecība
 - autovadītāja apliecības
 - vadītāja apliecība
-
 
 ## <a name="latvia-passport-number"></a>Letlands pasnummer
 
@@ -11298,13 +11387,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_latvia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_latvia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_latvia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_latvia_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_latvia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_latvia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_latvia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_latvia_eu_passport_number` findes.
 
 ```xml
       <!-- Latvia Passport Number -->
@@ -11359,7 +11450,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="latvia-personal-code"></a>Letlands personlige kode
 
 ### <a name="format"></a>Format
@@ -11391,11 +11481,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_latvia_eu_national_id_card` eller regex `Regex_latvia_eu_national_id_card_new_format` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_latvia_eu_national_id_card` .
+
+- Funktionen `Func_latvia_eu_national_id_card` eller regex `Regex_latvia_eu_national_id_card_new_format` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_latvia_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_latvia_eu_national_id_card` eller regex `Regex_latvia_eu_national_id_card_new_format` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_latvia_eu_national_id_card` eller regex `Regex_latvia_eu_national_id_card_new_format` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Latvia Personal Code -->
@@ -11491,7 +11583,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Tin #
 - vælgerens nummer
 
-
 ## <a name="latvia-physical-addresses"></a>Letlands fysiske adresser
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Letland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -11500,15 +11591,13 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 
 Medium
 
-
 ## <a name="liechtenstein-physical-addresses"></a>Fysiske adresser i Liechtenstein
 
-Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Liechtenstein. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT. 
+Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Liechtenstein. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
 
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="lifestyles-that-relate-to-medical-conditions"></a>Livsstil, der er relateret til medicinske tilstande
 
@@ -11517,7 +11606,6 @@ Denne ubundtede navngivne enhed registrerer begreber relateret til livsstile, de
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="lithuania-drivers-license-number"></a>Litauens kørekortsnummer
 
@@ -11536,8 +11624,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_lithuania_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_lithuania_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_lithuania_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_lithuania_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Lithuania Driver's License Number -->
@@ -11653,7 +11742,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -11675,17 +11764,16 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_lithuania_eu_drivers_license_number"></a>Keywords_lithuania_eu_driver er s_license_number
 
 - vairuotojo pažymėjimas
 - vairuotojo pažymėjimo numeris
 - vairuotojo pažymėjimo numeriai
 
-
 ## <a name="lithuania-personal-code"></a>Personlig kode for Litauen
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -11712,11 +11800,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_lithuania_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_lithuania_eu_tax_file_number` .
+
+- Funktionen `Func_lithuania_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_lithuania_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_lithuania_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_lithuania_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Lithuania Personal Code -->
@@ -11772,7 +11862,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - entydigt id-nummer
 - uniqueidentityno #
 
-
 ## <a name="lithuania-physical-addresses"></a>Fysiske adresser for Litauen
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Litauen. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -11780,7 +11869,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="lithuania-passport-number"></a>Litauens pasnummer
 
@@ -11799,13 +11887,15 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_lithuania_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_lithuania_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_lithuania_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_lithuania_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date3` finder datoen i formatet DD MM ÅÅÅÅ, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_lithuania_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_lithuania_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_lithuania_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_lithuania_eu_passport_number` findes.
 
 ```xml
       <!-- Lithuania Passport Number -->
@@ -11857,7 +11947,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="luxemburg-drivers-license-number"></a>Luxemburg-kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -11875,8 +11964,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_luxemburg_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_luxemburg_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_luxemburg_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_luxemburg_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Luxemburg Driver's License Number -->
@@ -11992,7 +12082,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -12014,7 +12104,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_luxemburg_eu_drivers_license_number"></a>Keywords_luxemburg_eu_driver er s_license_number
 
 - fahrerlaubnis
@@ -12023,6 +12112,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ## <a name="luxemburg-national-identification-number-natural-persons"></a>Det nationale identifikationsnummer for Luxembourg (fysiske personer)
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -12047,12 +12137,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_luxemburg_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_luxemburg_eu_national_id_card` .
+
+- Funktionen `Func_luxemburg_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_luxemburg_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_luxemburg_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
+- Funktionen `Func_luxemburg_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Luxemburg National Identification Number (Natural persons) -->
@@ -12096,7 +12187,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - entydig identitet
 - uniqueidkey #
 
-
 ## <a name="luxemburg-national-identification-number-non-natural-persons"></a>Luxembourgs nationale identifikationsnummer (ikke-fysiske personer)
 
 ### <a name="format"></a>Format
@@ -12123,11 +12213,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_luxemburg_eu_tax_file_number_non_natural` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_luxemburg_eu_tax_file_number` .
+
+- Funktionen `Func_luxemburg_eu_tax_file_number_non_natural` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_luxemburg_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_luxemburg_eu_tax_file_number_non_natural` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_luxemburg_eu_tax_file_number_non_natural` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Luxemburg National Identification Number (Non-natural persons) -->
@@ -12188,7 +12280,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Zinn
 - zinnzahl
 
-
 ## <a name="luxemburg-passport-number"></a>Luxemburg pasnummer
 
 ### <a name="format"></a>Format
@@ -12206,13 +12297,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_luxemburg_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_luxemburg_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_luxemburg_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_luxemburg_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date3` finder datoen i formatet DD MM ÅÅÅÅ, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_luxemburg_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_luxemburg_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_luxemburg_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_luxemburg_eu_passport_number` findes.
 
 ```xml
       <!-- Luxemburg Passport Number -->
@@ -12275,7 +12368,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="luxemburg-physical-addresses"></a>Fysiske adresser til Luxemburg
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Luxemburg. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -12283,7 +12375,6 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="malaysia-identification-card-number"></a>Malaysias id-kortnummer
 
@@ -12294,6 +12385,7 @@ Medium
 ### <a name="pattern"></a>Mønster
 
 12 cifre:
+
 - seks cifre i formatet YYMMDD, som er fødselsdatoen
 - en streg (valgfrit)
 - fødselskode på to bogstaver
@@ -12308,6 +12400,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_malaysia_id_card_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_malaysia_id_card_number.
 
@@ -12351,7 +12444,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - nric
 - personligt id-kort
 
-
 ## <a name="malta-drivers-license-number"></a>Maltas kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -12375,8 +12467,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_malta_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_malta_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_malta_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_malta_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Malta Driver's License Number -->
@@ -12492,7 +12585,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -12514,16 +12607,15 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_malta_eu_drivers_license_number"></a>Keywords_malta_eu_driver er s_license_number
 
 - liċenzja tas-sewqan
 - liċenzji tas-sewwieq
 
-
 ## <a name="malta-identity-card-number"></a>Maltas identitetskortnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -12548,11 +12640,13 @@ Ikke relevant
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_malta_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_malta_eu_national_id_card` .
+
+- Det regulære udtryk `Regex_malta_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_malta_eu_national_id_card` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_malta_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Det regulære udtryk `Regex_malta_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Malta Identity Card Number -->
@@ -12586,7 +12680,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - entydigt id-nummer
 - uniqueidentityno #
 
-
 ## <a name="malta-passport-number"></a>Pasnummer til Malta
 
 ### <a name="format"></a>Format
@@ -12604,13 +12697,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_malta_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_malta_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_malta_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_malta_eu_passport_number` findes.
 - Der blev fundet et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_malta_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_malta_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_malta_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_malta_eu_passport_number` findes.
 
 ```xml
       <!-- Malta Passport Number -->
@@ -12659,7 +12754,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="malta-physical-addresses"></a>Fysiske adresser på Malta
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Malta. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -12668,15 +12762,16 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="malta-tax-identification-number"></a>Maltas skatteidentifikationsnummer
 
 ### <a name="format"></a>Format
 
 For maltesiske statsborgere:
+
 - syv cifre og ét bogstav i det angivne mønster
 
 Ikke maltesiske statsborgere og maltesiske enheder:
+
 - ni cifre
 
 ### <a name="pattern"></a>Mønster
@@ -12697,11 +12792,13 @@ Ikke relevant
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Regex  `Regex_malta_eu_tax_file_number`  eller `Regex_malta_eu_tax_file_number_non_maltese_national` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_malta_eu_tax_file_number` .
+
+- Regex `Regex_malta_eu_tax_file_number`  eller `Regex_malta_eu_tax_file_number_non_maltese_national` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_malta_eu_tax_file_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Regex  `Regex_malta_eu_tax_file_number` eller `Regex_malta_eu_tax_file_number_non_maltese_national` finder indhold, der svarer til mønsteret.
+
+- Regex `Regex_malta_eu_tax_file_number` eller `Regex_malta_eu_tax_file_number_non_maltese_national` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Malta Tax ID Number -->
@@ -12793,11 +12890,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_mbi_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keyword_mbi_card` .
+
+- Det regulære udtryk `Regex_mbi_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keyword_mbi_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_mbi_card` finder indhold, der svarer til mønsteret.
+
+- Det regulære udtryk `Regex_mbi_card` finder indhold, der svarer til mønsteret.
 
 ```xml
     <!-- Medicare Beneficiary Identifier (MBI) card -->
@@ -12824,7 +12923,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - medicare modtagernummer
 - medicare-modtager #
 
-
 ## <a name="mexico-unique-population-registry-code-curp"></a>Curp (Mexico Unique Population Registry Code)
 
 ### <a name="format"></a>Format
@@ -12848,11 +12946,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_mexico_population_registry_code` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keyword_mexico_population_registry_code` .
+
+- Funktionen `Func_mexico_population_registry_code` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keyword_mexico_population_registry_code` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_mexico_population_registry_code` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_mexico_population_registry_code` finder indhold, der svarer til mønsteret.
 
 ```xml
     <!-- Mexico Unique Population Registry Code (CURP) -->
@@ -12873,7 +12973,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 - Clave Única de Registro de Población
 - Clave Unica de Registro de Poblacion
-- Entydig population-registreringsdatabasekode 
+- Entydig population-registreringsdatabasekode
 - entydig populationskode
 - CURP
 - Personligt id
@@ -12890,7 +12990,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - claveunica
 - clavepersonalIdentidad
 
-
 ## <a name="netherlands-citizens-service-bsn-number"></a>Nederlandsk borgerservicenummer (BSN)
 
 ### <a name="format"></a>Format
@@ -12900,6 +12999,7 @@ otte eller ni cifre, der indeholder valgfrie mellemrum
 ### <a name="pattern"></a>Mønster
 
 otte-ni cifre:
+
 - tre cifre
 - et mellemrum (valgfrit)
 - tre cifre
@@ -12913,6 +13013,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_netherlands_bsn finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_netherlands_bsn.
 - Kontrolsummen passerer.
@@ -12953,7 +13054,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - entydigt id-nummer
 - uniqueidentityno #
 
-
 ## <a name="netherlands-drivers-license-number"></a>Nederlandsk kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -12971,8 +13071,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_netherlands_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_netherlands_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_netherlands_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_netherlands_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Netherlands Driver's License Number -->
@@ -13088,7 +13189,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -13110,7 +13211,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_netherlands_eu_drivers_license_number"></a>Keywords_netherlands_eu_driver er s_license_number
 
 - permis de conduire
@@ -13119,7 +13219,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - rijbewijzen
 - rijbewijs nummer
 - rijbewijsnummers
-
 
 ## <a name="netherlands-passport-number"></a>Nederlandsk pasnummer
 
@@ -13138,13 +13237,15 @@ ikke tilgængelig
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_netherlands_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_netherlands_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_netherlands_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_netherlands_eu_passport_number` findes.
 - Det regulære udtryk `Regex_netherlands_eu_passport_date` finder dato i formatet DD MMM/MMM ÅÅÅÅ (eksempel - 26 MAA/MAR 2012)
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_netherlands_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_netherlands_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_netherlands_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_netherlands_eu_passport_number` findes.
 
 ```xml
       <!-- Netherlands Passport Number -->
@@ -13189,7 +13290,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - paspoortnummer
 - paspoort nr.
 
-
 ## <a name="netherlands-physical-addresses"></a>Fysiske adresser i Nederlandene
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Holland. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -13198,10 +13298,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="netherlands-tax-identification-number"></a>Nederlandsk skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13223,11 +13323,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_netherlands_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_netherlands_eu_tax_file_number` .
+
+- Funktionen `Func_netherlands_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_netherlands_eu_tax_file_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_netherlands_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_netherlands_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Netherlands Tax Identification Number -->
@@ -13282,10 +13384,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="netherlands-value-added-tax-number"></a>Nederlandsk momsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13315,10 +13417,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_netherlands_value_added_tax_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_netherlands_value_added_tax_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_netherlands_value_added_tax_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -13345,10 +13449,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - btw nûmer
 - btw-nummer
 
-
 ## <a name="new-zealand-bank-account-number"></a>New Zealands bankkontonummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13379,10 +13483,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_new_zealand_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_new_zealand_bank_account_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_new_zealand_bank_account_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -13408,10 +13514,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - bank_acct_branch
 - bank_acct_nbr
 
-
 ## <a name="new-zealand-drivers-license-number"></a>New Zealands kørekortsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13436,10 +13542,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_newzealand_driver_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_newzealand_driver_license_number.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_newzealand_driver_license_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -13524,10 +13632,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - nz bil forening
 - new zealandsk bil forening
 
-
 ## <a name="new-zealand-inland-revenue-number"></a>Indtaegter for New Zealand
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13555,10 +13663,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_new_zealand_inland_revenue_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_new_zealand_inland_revenue_number.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_new_zealand_inland_revenue_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -13585,7 +13695,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - ird-nummer
 - indlandsomsætningsnummer
 
-
 ## <a name="new-zealand-ministry-of-health-number"></a>New Zealands sundhedsministerium nummer
 
 ### <a name="format"></a>Format
@@ -13604,11 +13713,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_new_zealand_ministry_of_health_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_nz_terms.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_new_zealand_ministry_of_health_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -13635,7 +13746,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - NHI #
 - Nationalt sundhedsindeks #
 
-
 ## <a name="new-zealand-physical-addresses"></a>Fysiske adresser for New Zealand
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra New Zealand. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -13644,10 +13754,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="new-zealand-social-welfare-number"></a>Velfærdsnummer for New Zealand
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -13675,10 +13785,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_newzealand_social_welfare_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_newzealand_social_welfare_number.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_newzealand_social_welfare_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -13705,7 +13817,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - cpr-nummer
 - swn #
 
-
 ## <a name="norway-identification-number"></a>Norges identifikationsnummer
 
 ### <a name="format"></a>Format
@@ -13715,6 +13826,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 ### <a name="pattern"></a>Mønster
 
 11 cifre:
+
 - seks cifre i formatet DDMMYY, som er fødselsdatoen
 - trecifret individuelt tal
 - to kontrolcifre
@@ -13726,11 +13838,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_norway_id_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_norway_id_number.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_norway_id_numbe finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -13758,7 +13872,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Personnummer
 - Fødselsnummer
 
-
 ## <a name="norway-physical-addresses"></a>Fysiske adresser i Norge
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Norge. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -13766,7 +13879,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="philippines-unified-multi-purpose-identification-number"></a>Filippinerne unified multi-purpose identifikationsnummer
 
@@ -13777,6 +13889,7 @@ Medium
 ### <a name="pattern"></a>Mønster
 
 12 cifre:
+
 - fire cifre
 - en bindestreg
 - syv cifre
@@ -13790,6 +13903,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_philippines_unified_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_philippines_id.
 
@@ -13811,7 +13925,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - UMID
 - Identitetskort
 - Pinag-isang Multi-Layunin ID
-
 
 ## <a name="poland-drivers-license-number"></a>Polens kørekortsnummer
 
@@ -13836,8 +13949,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_poland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_poland_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_poland_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_poland_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Poland Driver's License Number -->
@@ -13953,7 +14067,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -13975,12 +14089,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_poland_eu_drivers_license_number"></a>Keywords_poland_eu_driver er s_license_number
 
 - prawo jazdy
 - prawa jazdy
-
 
 ## <a name="poland-identity-card"></a>Polens identitetskort
 
@@ -13999,6 +14111,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_polish_national_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_polish_national_id_passport_number.
 - Kontrolsummen passerer.
@@ -14025,7 +14138,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Dowód Tożsamości
 - Dow. os.
 
-
 ## <a name="poland-national-id-pesel"></a>Nationalt id for Polen (PESEL)
 
 ### <a name="format"></a>Format
@@ -14045,11 +14157,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_pesel_identification_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_pesel_identification_number.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_pesel_identification_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -14080,7 +14194,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - pesel
 - tożsamości narodowej
 
-
 ## <a name="poland-passport-number"></a>Polens pasnummer
 
 Denne enhed af typen følsomme oplysninger er inkluderet i eu-passportnummer-typen med følsomme oplysninger. Den er også tilgængelig som et separat objekt af typen følsomme oplysninger.
@@ -14100,17 +14213,20 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_polish_passport_number_v2` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_polish_national_passport_number` findes.
 - Der blev fundet et nøgleord fra `Keywords_eu_passport_date` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_polish_passport_number_v2` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_polish_national_passport_number` findes.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_polish_passport_number_v2` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -14169,7 +14285,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="poland-physical-addresses"></a>Fysiske adresser i Polen
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Polen. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -14178,10 +14293,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="poland-regon-number"></a>Polens REGON-nummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -14208,10 +14323,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_polish_regon_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_polish_regon_number.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_polish_regon_number finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -14245,10 +14362,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - numerstatystyczny #
 - numeruregon #
 
-
 ## <a name="poland-tax-identification-number"></a>Polens skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -14270,9 +14387,9 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_poland_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_poland_eu_tax_file_number` .
 
+- Funktionen `Func_poland_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_poland_eu_tax_file_number` .
 
 ```xml
       <!-- Poland Tax Identification Number -->
@@ -14316,7 +14433,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - vatid
 - vatno #
 
-
 ## <a name="portugal-citizen-card-number"></a>Kortnummer for portugalsborger
 
 ### <a name="format"></a>Format
@@ -14334,6 +14450,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_portugal_citizen_card finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_portugal_citizen_card.
 
@@ -14369,7 +14486,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - número do documento
 - portugal bi-nummer
 
-
 ## <a name="portugal-drivers-license-number"></a>Portugals kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -14379,6 +14495,7 @@ to mønstre – to bogstaver efterfulgt af 5-8 cifre med specialtegn
 ### <a name="pattern"></a>Mønster
 
 Mønster 1: To bogstaver efterfulgt af 5/6 med specialtegn:
+
 - To bogstaver (skelner ikke mellem store og små bogstaver)
 - En bindestreg
 - Fem eller seks cifre
@@ -14386,12 +14503,12 @@ Mønster 1: To bogstaver efterfulgt af 5/6 med specialtegn:
 - Et ciffer
 
 Mønster 2: Ét bogstav efterfulgt af 6/8 cifre med specialtegn:
+
 - Ét bogstav (skelner ikke mellem store og små bogstaver)
 - En bindestreg
 - Seks eller otte cifre
 - Et mellemrum
 - Et ciffer
-
 
 ### <a name="checksum"></a>Checksum
 
@@ -14400,8 +14517,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_portugal_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_portugal_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_portugal_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_portugal_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Portugal Driver's License Number -->
@@ -14517,7 +14635,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -14539,7 +14657,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_portugal_eu_drivers_license_number"></a>Keywords_portugal_eu_driver er s_license_number
 
 - carteira de motorista
@@ -14552,7 +14669,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - permissão condução
 - Licença condução Portugal
 - carta de condução
-
 
 ## <a name="portugal-passport-number"></a>Pasnummer for Portugal
 
@@ -14574,13 +14690,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_portugal_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_portugal_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_portugal_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_portugal_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_portugal_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_portugal_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_portugal_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_portugal_eu_passport_number` findes.
 
 ```xml
       <!-- Portugal Passport Number -->
@@ -14639,7 +14757,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="portugal-physical-addresses"></a>Fysiske adresser i Portugal
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Portugal. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -14647,7 +14764,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="portugal-tax-identification-number"></a>Portugals skatteidentifikationsnummer
 
@@ -14670,11 +14786,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_portugal_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_portugal_eu_tax_file_number` .
+
+- Funktionen `Func_portugal_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_portugal_eu_tax_file_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_portugal_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_portugal_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Portugal Tax Identification Number -->
@@ -14716,7 +14834,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="romania-drivers-license-number"></a>Rumæniens kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -14726,6 +14843,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 ### <a name="pattern"></a>Mønster
 
 ét tegn efterfulgt af otte cifre:
+
 - et bogstav (skelner ikke mellem store og små bogstaver) eller et ciffer
 - otte cifre
 
@@ -14736,8 +14854,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_romania_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_romania_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_romania_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_romania_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Romania Driver's License Number -->
@@ -14853,7 +14972,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -14884,7 +15003,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - permisele conducere
 - permis conducere
 
-
 ## <a name="romania-passport-number"></a>Pasnummer til Rumænien
 
 ### <a name="format"></a>Format
@@ -14902,13 +15020,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_romania_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_romania_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_romania_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_romania_eu_passport_number` findes.
 - Det regulære udtryk `Regex_romania_eu_passport_date` finder dato i formatet DD MMM/MMM YYY (f.eks. 01 FEB/FEB 10), eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_romania_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_romania_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_romania_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_romania_eu_passport_number` findes.
 
 ```xml
       <!-- Romania Passport Number -->
@@ -14958,10 +15078,10 @@ numărul pașaportului numarul pasaportului numerele pașaportului Pașaport nr
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="romania-personal-numeric-code-cnp"></a>Rumæniens personlige numeriske kode (CNP)
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -14986,11 +15106,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_romania_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_romania_eu_national_id_card` .
+
+- Funktionen `Func_romania_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_romania_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_romania_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_romania_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Romania Personal Numerical Code (CNP) -->
@@ -15058,7 +15180,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - uniqueidentityno #
 - uniqueidentityno
 
-
 ## <a name="romania-physical-addresses"></a>Fysiske adresser i Rumænien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Rumænien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -15067,10 +15188,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="russia-passport-number-domestic"></a>Rusland pasnummer indenlandsk
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -15098,6 +15219,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Regex-Regex_Russian_Passport_Number_Domestic finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Russian_Passport_Number.
 
@@ -15130,10 +15252,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - номер паспорта
 - номерпаспорта #
 
-
 ## <a name="russia-passport-number-international"></a>Rusland pasnummer international
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -15159,6 +15281,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Regex-Regex_Russian_Passport_Number_International finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Russian_Passport_Number.
 
@@ -15191,7 +15314,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - номер паспорта
 - номерпаспорта #
 
-
 ## <a name="saudi-arabia-national-id"></a>Saudi-Arabiens nationale id
 
 ### <a name="format"></a>Format
@@ -15209,6 +15331,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_saudi_arabia_national_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_saudi_arabia_national_id.
 
@@ -15233,7 +15356,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Id-nummer
 - الوطنية الهوية بطاقة رقم
 
-
 ## <a name="singapore-national-registration-identity-card-nric-number"></a>Nric-nummer (national registration identity card) for Singapore
 
 ### <a name="format"></a>Format
@@ -15243,6 +15365,7 @@ ni bogstaver og cifre
 ### <a name="pattern"></a>Mønster
 
 - ni bogstaver og cifre:
+
 - bogstavet "F", "G", "M", "S" eller "T" (skelner ikke mellem store og små bogstaver)
 - syv cifre
 - et alfabetisk kontrolciffer
@@ -15254,11 +15377,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk Regex_singapore_nric finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_singapore_nric.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_singapore_nric finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -15288,7 +15413,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 身份证
 - 身份證
 
-
 ## <a name="slovakia-drivers-license-number"></a>Slovakiets kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -15309,8 +15433,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_slovakia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_slovakia_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_slovakia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_slovakia_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Slovakia Driver's License Number -->
@@ -15426,7 +15551,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -15448,14 +15573,12 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_slovakia_eu_drivers_license_number"></a>Keywords_slovakia_eu_driver er s_license_number
 
 - vodičský preukaz
 - vodičské preukazy
 - vodičského preukazu
 - vodičských preukazov
-
 
 ## <a name="slovakia-passport-number"></a>Slovakiets pasnummer
 
@@ -15474,13 +15597,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_slovakia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_slovakia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_slovakia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_slovakia_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_slovakia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_slovakia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_slovakia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_slovakia_eu_passport_number` findes.
 
 ```xml
       <!-- Slovakia Passport Number -->
@@ -15534,10 +15659,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="slovakia-personal-number"></a>Slovakiets personlige nummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -15562,11 +15687,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_slovakia_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_slovakia_eu_national_id_card` .
+
+- Funktionen `Func_slovakia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_slovakia_eu_national_id_card` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_slovakia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_slovakia_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Slovakia Personal Number -->
@@ -15631,7 +15758,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="slovakia-physical-addresses"></a>Fysiske adresser i Slovakiet
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Slovakiet. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -15639,7 +15765,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="slovenia-drivers-license-number"></a>Sloveniens kørekortsnummer
 
@@ -15658,8 +15783,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_slovenia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_slovenia_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_slovenia_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_slovenia_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Slovenia Driver's License Number -->
@@ -15775,7 +15901,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -15805,7 +15931,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - številka vozniškega dovoljenja
 - številke vozniških dovoljenj
 
-
 ## <a name="slovenia-passport-number"></a>Pasnummer for Slovenien
 
 ### <a name="format"></a>Format
@@ -15827,13 +15952,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_slovenia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_slovenia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_slovenia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_slovenia_eu_passport_number` findes.
 - Det regulære udtryk `Regex_eu_passport_date1` finder datoen i formatet DD.MM.YYYY, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_slovenia_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_slovenia_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_slovenia_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_slovenia_eu_passport_number` findes.
 
 ```xml
       <!-- Slovenia Passport Number -->
@@ -15888,7 +16015,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="slovenia-physical-addresses"></a>Fysiske adresser i Slovenien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Slovenien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -15897,10 +16023,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="slovenia-tax-identification-number"></a>Sloveniens skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -15924,11 +16050,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_slovenia_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_slovenia_eu_tax_file_number` .
+
+- Funktionen `Func_slovenia_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_slovenia_eu_tax_file_number` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_slovenia_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_slovenia_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Slovenia Tax Identification Number -->
@@ -15969,10 +16097,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - tin no
 - Tin #
 
-
 ## <a name="slovenia-unique-master-citizen-number"></a>Sloveniens entydige masterborgernummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -15999,11 +16127,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_slovenia_eu_national_id_card` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_slovenia_eu_national_id_card` .
+
+- Funktionen `Func_slovenia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_slovenia_eu_national_id_card` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_slovenia_eu_national_id_card` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_slovenia_eu_national_id_card` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Slovenia Unique Master Citizen Number -->
@@ -16048,7 +16178,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - uniqueidentityno #
 - uniqueidentityno #
 
-
 ## <a name="south-africa-identification-number"></a>Sydafrikas identifikationsnummer
 
 ### <a name="format"></a>Format
@@ -16058,6 +16187,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 13 cifre:
+
 - seks cifre i formatet YYMMDD, som er fødselsdatoen
 - fire cifre
 - en encifret indikator for medborgerskab
@@ -16071,6 +16201,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_south_africa_identification_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_south_africa_identification_number.
 - Kontrolsummen passerer.
@@ -16093,7 +16224,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - ID
 - Identifikation
 
-
 ## <a name="south-korea-resident-registration-number"></a>Registreringsnummer for beboere i Sydkorea
 
 ### <a name="format"></a>Format
@@ -16103,6 +16233,7 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 ### <a name="pattern"></a>Mønster
 
 13 cifre:
+
 - seks cifre i formatet YYMMDD, som er fødselsdatoen
 - en bindestreg
 - ét ciffer bestemt af århundredet og køn
@@ -16117,11 +16248,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_south_korea_resident_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_south_korea_resident_number.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_south_korea_resident_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -16148,10 +16281,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - RRN
 - 주민등록번호
 
-
 ## <a name="spain-dni"></a>Spanien DNI
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -16177,12 +16310,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_spain_eu_national_id_card"` .
+
+- Funktionen `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_spain_eu_national_id_card"` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
 
+- Funktionen `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Spain DNI -->
@@ -16230,7 +16364,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - entydigt id-nummer
 - uniqueid #
 
-
 ## <a name="spain-drivers-license-number"></a>Spaniens kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -16251,11 +16384,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_spain_eu_driver's_license_number` findes.
+
+- Funktionen `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_spain_eu_driver's_license_number` findes.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_spain_eu_DL_and_NI_number_citizen` eller `Func_spain_eu_DL_and_NI_number_foreigner` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Spain Driver's License Number -->
@@ -16384,7 +16519,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -16406,7 +16541,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_spain_eu_drivers_license_number"></a>Keywords_spain_eu_driver s_license_number
 
 - permiso de conducción
@@ -16421,7 +16555,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - carnet de conducir
 - licencia de manejo
 - licencia manejo
-
 
 ## <a name="spain-passport-number"></a>Spaniens pasnummer
 
@@ -16444,13 +16577,15 @@ Ikke relevant
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Det regulære udtryk  `Regex_spain_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_spain_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_spain_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_spain_eu_passport_number` findes.
 - Det regulære udtryk `Regex_spain_eu_passport_date` finder datoen i formatet DD-MM-ÅÅÅÅ, eller der findes et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_spain_eu_passport_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_passport_number` eller `Keywords_spain_eu_passport_number` findes.
+
+- Det regulære udtryk `Regex_spain_eu_passport_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_spain_eu_passport_number` findes.
 
 ```xml
       <!-- Spain Passport Number -->
@@ -16511,7 +16646,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="spain-physical-addresses"></a>Fysiske adresser i Spanien
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Spanien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -16520,9 +16654,7 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="spain-social-security-number-ssn"></a>Spanien cpr-nummer (SSN)
-
 
 ### <a name="format"></a>Format
 
@@ -16531,6 +16663,7 @@ Medium
 ### <a name="pattern"></a>Mønster
 
 11-12 cifre:
+
 - to cifre
 - en skråstreg (valgfrit)
 - syv til otte cifre
@@ -16544,11 +16677,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_spanish_social_security_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
-- - Der blev fundet et nøgleord fra  `Keywords_spain_eu_ssn_or_equivalent` .
+- - Der blev fundet et nøgleord fra `Keywords_spain_eu_ssn_or_equivalent` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_spanish_social_security_number finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -16576,10 +16711,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - CPR-nummer
 - número de la seguridad social
 
-
 ## <a name="spain-tax-identification-number"></a>Skatteidentifikationsnummer for Spanien
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -16628,11 +16763,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_spain_eu_tax_file_number` eller `Func_spain_eu_DL_and_NI_number_citizen` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_spain_eu_tax_file_number` .
+
+- Funktionen `Func_spain_eu_tax_file_number` eller `Func_spain_eu_DL_and_NI_number_citizen` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_spain_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_spain_eu_tax_file_number` eller `Func_spain_eu_DL_and_NI_number_citizen` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_spain_eu_tax_file_number` eller `Func_spain_eu_DL_and_NI_number_citizen` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Spain Tax Identification Number -->
@@ -16687,7 +16824,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="sql-server-connection-string"></a>SQL Server forbindelsesstreng
 
 ### <a name="format"></a>Format
@@ -16711,6 +16847,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Det regulære udtryk CEP_Regex_SQLServerConnectionString finder indhold, der svarer til mønsteret.
 - Der blev ikke fundet et nøgleord fra CEP_GlobalFilter.
 - Det regulære udtryk CEP_PasswordPlaceHolder kan ikke finde indhold, der svarer til mønsteret.
@@ -16764,7 +16901,6 @@ Denne type følsomme oplysninger identificerer disse nøgleord ved hjælp af et 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-
 ## <a name="surgical-procedures"></a>Kirurgiske procedurer
 
 Denne ubundtede navngivne enhed registrerer begreber, der er relateret til kirurgiske procedurer, f.eks *. appendectomy*.  Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -16772,7 +16908,6 @@ Denne ubundtede navngivne enhed registrerer begreber, der er relateret til kirur
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="sweden-drivers-license-number"></a>Sveriges kørekortsnummer
 
@@ -16795,8 +16930,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Det regulære udtryk  `Regex_sweden_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
-- Et nøgleord fra  `Keywords_eu_driver's_license_number` eller `Keywords_sweden_eu_driver's_license_number` findes.
+
+- Det regulære udtryk `Regex_sweden_eu_driver's_license_number` finder indhold, der svarer til mønsteret.
+- Et nøgleord fra `Keywords_eu_driver's_license_number` eller `Keywords_sweden_eu_driver's_license_number` findes.
 
 ```xml
       <!-- Sweden Driver's License Number -->
@@ -16912,7 +17048,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -16934,7 +17070,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - dlno
 - dl-nummer
 
-
 #### <a name="keywords_sweden_eu_drivers_license_number"></a>Keywords_sweden_eu_driver er s_license_number
 
 - ajokortti
@@ -16944,11 +17079,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - drivere lic.
 - körkort
 - numărul permisului de conducere
--  שאָפער דערלויבעניש נומער
+- שאָפער דערלויבעניש נומער
 - förare lic.
--  דריווערס דערלויבעניש
+- דריווערס דערלויבעניש
 - körkortsnummer
-
 
 ## <a name="sweden-national-id"></a>Nationalt id for Sverige
 
@@ -16959,6 +17093,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10 eller 12 cifre og en valgfri afgrænser:
+
 - to cifre (valgfrit)
 - Seks cifre i datoformat YYYMMDD
 - afgrænser for "-" eller "+" (valgfrit)
@@ -16971,14 +17106,15 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_swedish_national_identifier` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keywords_swedish_national_identifier`
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_swedish_national_identifier` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
-
 
 ```xml
     <!-- Sweden National ID -->
@@ -17014,7 +17150,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - personnummer
 - skatteidentifikationsnummer
 
-
 ## <a name="sweden-passport-number"></a>Sveriges pasnummer
 
 ### <a name="format"></a>Format
@@ -17032,14 +17167,15 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - det regulære udtryk Regex_sweden_passport_number finder indhold, der svarer til mønsteret.
 - et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_sweden_passport` findes.
 - det regulære udtryk `Regex_sweden_eu_passport_date` finder en dato i formatet DD MMM/MMM YYY (01 JAN/JAN 12), eller der findes et nøgleord fra `Keywords_eu_passport_date` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - det regulære udtryk Regex_sweden_passport_number finder indhold, der svarer til mønsteret.
 - et nøgleord fra `Keywords_eu_passport_number` eller `Keyword_sweden_passport` findes.
-
 
 ```xml
     <!-- Sweden Passport Number -->
@@ -17107,7 +17243,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - udstedelsesdato
 - udløbsdato
 
-
 ## <a name="sweden-physical-addresses"></a>Fysiske adresser i Sverige
 
 Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adresse fra Sverige. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -17116,10 +17251,10 @@ Denne ubundtede navngivne enhed registrerer mønstre relateret til fysisk adress
 
 Medium
 
-
 ## <a name="sweden-tax-identification-number"></a>Sveriges skatteidentifikationsnummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -17148,11 +17283,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
-- Funktionen  `Func_sweden_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_sweden_eu_tax_file_number` .
+
+- Funktionen `Func_sweden_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_sweden_eu_tax_file_number` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_sweden_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+
+- Funktionen `Func_sweden_eu_tax_file_number` finder indhold, der svarer til mønsteret.
 
 ```xml
       <!-- Sweden Tax Identification Number -->
@@ -17199,7 +17336,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="swift-code"></a>SWIFT-kode
 
 ### <a name="format"></a>Format
@@ -17209,6 +17345,7 @@ fire bogstaver efterfulgt af 5-31 bogstaver eller cifre
 ### <a name="pattern"></a>Mønster
 
 fire bogstaver efterfulgt af 5-31 bogstaver eller cifre:
+
 - bankkode på fire bogstaver (skelner ikke mellem store og små bogstaver)
 - et valgfrit mellemrum
 - 4-28 bogstaver eller cifre (det grundlæggende bankkontonummer (BBAN))
@@ -17222,6 +17359,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_swift finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_swift.
 
@@ -17259,7 +17397,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - le numéro de swift
 - swift numéro d'acheminement
 - le numéro BIC
-- # <a name="bic"></a>BIC
+- \# BIC
 - code identificateur de banque
 - SWIFTコード
 - SWIFT番号
@@ -17273,7 +17411,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 金融機関コード
 - 銀行コード
 
-
 ## <a name="switzerland-physical-addresses"></a>Fysiske adresser i Schweiz
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Schweiz. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -17282,10 +17419,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="switzerland-ssn-ahv-number"></a>Schweiz SSN AHV-nummer
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -17315,10 +17452,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_swiss_social_security_number_ahv finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keywords_swiss_social_security_number_ahv.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_swiss_social_security_number_ahv finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -17357,7 +17496,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - identifikationspersonale-id
 - numéro de sécurité sociale
 
-
 ## <a name="taiwan-national-identification-number"></a>Taiwans nationale identifikationsnummer
 
 ### <a name="format"></a>Format
@@ -17367,6 +17505,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 ét bogstav (på engelsk) efterfulgt af ni cifre:
+
 - ét bogstav (på engelsk, ikke forskel på store og små bogstaver)
 - cifferet "1" eller "2"
 - otte cifre
@@ -17378,11 +17517,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_taiwanese_national_id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_taiwanese_national_id.
 - Kontrolsummen passerer.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_taiwanese_national_id finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -17418,7 +17559,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 簽名或蓋章
 - 簽章
 
-
 ## <a name="taiwan-passport-number"></a>Pasnummer til Taiwan
 
 ### <a name="format"></a>Format
@@ -17428,10 +17568,12 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 ### <a name="pattern"></a>Mønster
 biometrisk pasnummer:
+
 - tegnet "3"
 - otte cifre
 
 ikke-biometrisk pasnummer:
+
 - ni cifre
 
 ### <a name="checksum"></a>Checksum
@@ -17441,6 +17583,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_taiwan_passport finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_taiwan_passport.
 
@@ -17467,7 +17610,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 中華民國護照
 - Zhzhnghuá Mínguó hùzhào
 
-
 ## <a name="taiwan-resident-certificate-arctarc-number"></a>Taiwan-resident certificate (ARC/TARC) nummer
 
 ### <a name="format"></a>Format
@@ -17477,6 +17619,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10 bogstaver og cifre:
+
 - to bogstaver (skelner ikke mellem store og små bogstaver)
 - otte cifre
 
@@ -17487,6 +17630,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_taiwan_resident_certificate finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_taiwan_resident_certificate.
 
@@ -17516,7 +17660,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - 外僑居留證
 - 台灣地區居留證
 
-
 ## <a name="thai-population-identification-code"></a>Thai population-id-kode
 
 ### <a name="format"></a>Format
@@ -17526,6 +17669,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 13 cifre:
+
 - det første ciffer ikke er nul eller ni
 - 12 cifre
 
@@ -17536,10 +17680,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_Thai_Citizen_Id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Thai_Citizen_Id.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_Thai_Citizen_Id finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -17583,10 +17729,12 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_Turkish_National_Id finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Turkish_National_Id.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_Turkish_National_Id finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -17611,7 +17759,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Vatandaşlık numarası
 - Vatandaşlık nej
 
-
 ## <a name="turkey-physical-addresses"></a>Fysiske adresser for Tyrkiet
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Tyrkiet. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -17620,7 +17767,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
 ## <a name="types-of-medication"></a>Typer af medicin
 
 Denne ubundtede navngivne enhed registrerer medicinnavne, f.eks. *insulin*.  Det understøtter kun engelske ord. Det er også inkluderet i [alle medicinske vilkår og betingelser](#all-medical-terms-and-conditions) , der er bundtet med navnet entity SIT.
@@ -17628,7 +17774,6 @@ Denne ubundtede navngivne enhed registrerer medicinnavne, f.eks. *insulin*.  Det
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Høj
-
 
 ## <a name="uk-drivers-license-number"></a>STORBRITANNIEN. kørekortsnummer
 
@@ -17639,6 +17784,7 @@ Kombination af 18 bogstaver og cifre i det angivne format
 ### <a name="pattern"></a>Mønster
 
 18 bogstaver og cifre:
+
 - Fem bogstaver (skelner ikke mellem store og små bogstaver) eller cifferet "9" i stedet for et bogstav.
 - Et ciffer.
 - Fem cifre i datoformatet MMDDY for fødselsdato. Det syvende tegn forøges med 50, hvis faktoren er kvindelig. f.eks. 51 til 62 i stedet for 01 til 12.
@@ -17652,11 +17798,13 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen `Func_uk_drivers_license` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keywords_eu_driver's_license_number` .
 - Kontrolsummen passerer.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_uk_drivers_license` finder indhold, der svarer til mønsteret.
 - Kontrolsummen passerer.
 
@@ -17774,7 +17922,7 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - driverlicenser #
 - kørekort #
 - kørekort #
-- Kørekort 
+- Kørekort
 - kørekort
 - dlno #
 - driv lic
@@ -17796,7 +17944,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - dlno
 - dl-nummer
 
-
 ## <a name="uk-electoral-roll-number"></a>STORBRITANNIEN. valglister
 
 ### <a name="format"></a>Format
@@ -17814,6 +17961,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_uk_electoral finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_uk_electoral.
 
@@ -17838,7 +17986,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - valgregister
 - valglister
 
-
 ## <a name="uk-national-health-service-number"></a>STORBRITANNIEN. nummer på det nationale sundhedsvæsen
 
 ### <a name="format"></a>Format
@@ -17848,6 +17995,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 ### <a name="pattern"></a>Mønster
 
 10-17 cifre:
+
 - enten 3 eller 10 cifre
 - et mellemrum
 - tre cifre
@@ -17861,6 +18009,7 @@ Ja
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_uk_nhs_number finder indhold, der svarer til mønsteret.
 - Et af følgende er sandt:
     - Der blev fundet et nøgleord fra Keyword_uk_nhs_number.
@@ -17906,7 +18055,6 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - Fødselsdag
 - Fødselsdato
 
-
 ## <a name="uk-national-insurance-number-nino"></a>STORBRITANNIEN. det nationale forsikringsnummer (NINO)
 
 Denne enhed af typen af følsomme oplysninger er omfattet af eu's nationale identifikationsnummer med følsomme oplysninger. Den er også tilgængelig som et separat objekt af typen følsomme oplysninger.
@@ -17942,10 +18090,12 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_uk_nino finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_uk_nino.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_uk_nino finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -17985,7 +18135,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - national forsikring #
 - det nationale forsikringsnummer
 
-
 ## <a name="uk-physical-addresses"></a>STORBRITANNIEN. fysiske adresser
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra Storbritannien. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -17994,11 +18143,10 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 
 Medium
 
-
-
 ## <a name="uk-unique-taxpayer-reference-number"></a>STORBRITANNIEN. Entydigt referencenummer for skatteborger
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -18008,7 +18156,6 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 ### <a name="format"></a>Format
 
 10 cifre uden mellemrum og afgrænsere
-
 
 ### <a name="pattern"></a>Mønster
 
@@ -18021,8 +18168,9 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
-- Funktionen  `Func_uk_eu_tax_file_number` finder indhold, der svarer til mønsteret.
-- Der blev fundet et nøgleord fra  `Keywords_uk_eu_tax_file_number` .
+
+- Funktionen `Func_uk_eu_tax_file_number` finder indhold, der svarer til mønsteret.
+- Der blev fundet et nøgleord fra `Keywords_uk_eu_tax_file_number` .
 
 ```xml
       <!-- U.K. Unique Taxpayer Reference Number -->
@@ -18056,7 +18204,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - tin no
 - Tin #
 
-
 ## <a name="us-bank-account-number"></a>Amerikansk bankkontonummer
 
 ### <a name="format"></a>Format
@@ -18074,6 +18221,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Det regulære udtryk Regex_usa_bank_account_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_usa_Bank_Account.
 
@@ -18119,7 +18267,6 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - Debetkontonr.
 - Debetkontonr.
 
-
 ## <a name="us-drivers-license-number"></a>Amerikansk kørekortsnummer
 
 ### <a name="format"></a>Format
@@ -18129,6 +18276,7 @@ Afhænger af staten
 ### <a name="pattern"></a>Mønster
 
 afhænger af staten – f.eks. New York:
+
 - ni cifre formateret som ddd ddd ddd vil matche.
 - ni cifre som ddddddddd vil ikke matche.
 
@@ -18139,11 +18287,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_new_york_drivers_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_[state_name]_drivers_license_name.
 - Der blev fundet et nøgleord fra Keyword_us_drivers_license.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_new_york_drivers_license_number finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_[state_name]_drivers_license_name.
 - Der blev fundet et nøgleord fra Keyword_us_drivers_license_abbreviations.
@@ -18267,12 +18417,10 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - identifikationskort #
 - id-kort #
 
-
 #### <a name="keyword_state_name_drivers_license_name"></a>Keyword_[state_name]_drivers_license_name
 
 - forkortelse for stater (f.eks. "NY")
 - state name (f.eks. "New York")
-
 
 ## <a name="us-individual-taxpayer-identification-number-itin"></a>Id-nummer for individuelle skatteborgere i USA (ITIN)
 
@@ -18283,6 +18431,7 @@ ni cifre, der starter med et "9" og indeholder et "7" eller "8" som det fjerde c
 ### <a name="pattern"></a>Mønster
 
 Formateret:
+
 - cifferet "9"
 - to cifre
 - et mellemrum eller en streg
@@ -18292,6 +18441,7 @@ Formateret:
 - fire cifre
 
 Uformateret:
+
 - cifferet "9"
 - to cifre
 - en "7" eller "8"
@@ -18304,14 +18454,17 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_formatted_itin finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_itin.
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_unformatted_itin finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_itin.
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_formatted_itin eller Func_unformatted_itin finder indhold, der svarer til mønsteret.
 
 ```xml
@@ -18351,7 +18504,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - taxid
 - individuel skatteborger
 
-
 ## <a name="us-physical-addresses"></a>Amerikanske fysiske adresser
 
 Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysisk adresse fra USA. Den er også inkluderet i [alle fysiske adresser](#all-physical-addresses) , der er bundtet med navnet entity SIT.
@@ -18359,7 +18511,6 @@ Denne ubundtede navngivne enhed registrerer mønstre, der er relateret til fysis
 ### <a name="confidence-level"></a>Konfidensniveau
 
 Medium
-
 
 ## <a name="us-social-security-number-ssn"></a>AMERIKANSK CPR-nummer (SSN)
 
@@ -18373,6 +18524,7 @@ ni cifre, som kan være i et formateret eller uformateret mønster
 ### <a name="pattern"></a>Mønster
 
 fire funktioner søger efter SSN'er i fire forskellige mønstre:
+
 - Func_ssn finder SSN'er med stærk formatering fra før 2011, der er formateret med tankestreger eller mellemrum (ddd-dd-dddd ELLER ddd dd dddd)
 - Func_unformatted_ssn finder SSN'er med stærk formatering fra før 2011, der ikke er formateret som ni cifre efter hinanden (ddddddddd)
 - Func_randomized_formatted_ssn finder SSN'er efter 2011, der er formateret med tankestreger eller mellemrum (ddd-dd-dddd ELLER ddd dd dddd)
@@ -18385,17 +18537,19 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_ssn` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_ssn` .
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_unformatted_ssn' finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_ssn` .
 
 En DLP-politik har lav tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen `Func_randomized_formatted_ssn` eller `Func_randomized_unformatted_ssn` finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra `Keyword_ssn` .
-
 
 ```xml
 <!-- U.S. Social Security Number (SSN) -->
@@ -18436,7 +18590,6 @@ En DLP-politik har lav tillid til, at den har registreret denne type følsomme o
 - SS #
 - SSID
 
-
 ## <a name="usuk-passport-number"></a>Storbritannien pasnummer
 
 ### <a name="format"></a>Format
@@ -18455,11 +18608,13 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
+
 - Funktionen Func_usa_uk_passport finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_uk_eu_passport_number` findes.
 - Der blev fundet et nøgleord fra `Keywords_eu_passport_date`
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Funktionen Func_usa_uk_passport finder indhold, der svarer til mønsteret.
 - Et nøgleord fra `Keywords_eu_passport_number` eller `Keywords_uk_eu_passport_number` findes.
 
@@ -18504,10 +18659,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - britisk pas
 - britisk pas
 
-
 ## <a name="ukraine-passport-domestic"></a>Ukraine pas indland
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -18529,6 +18684,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Regex-Regex_Ukraine_Passport_Domestic finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Ukraine_Passport_Domestic.
 
@@ -18553,10 +18709,10 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - номер паспорта
 - персональний
 
-
 ## <a name="ukraine-passport-international"></a>Ukraine passport international
 
 Denne type følsomme oplysninger er kun tilgængelig til brug i:
+
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
 - informationstyring
@@ -18570,6 +18726,7 @@ alfanumerisk mønster med otte tegn
 ### <a name="pattern"></a>Mønster
 
 alfanumerisk mønster med otte tegn:
+
 - to bogstaver eller cifre
 - seks cifre
 
@@ -18580,6 +18737,7 @@ Nej
 ### <a name="definition"></a>Definition
 
 En DLP-politik har mellem tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger inden for en nærhed af 300 tegn:
+
 - Regex-Regex_Ukraine_Passport_International finder indhold, der svarer til mønsteret.
 - Der blev fundet et nøgleord fra Keyword_Ukraine_Passport_International.
 
@@ -18602,5 +18760,3 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 - pasnr.
 - паспорт України
 - номер паспорта
-
-

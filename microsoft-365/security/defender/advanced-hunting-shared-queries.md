@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: d943f91685e3ee9d6bf12c3a47fbf68e5966dc9d
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: 2e86d733304eeaa0e5e16f3ce1bfde87c21258d4
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738487"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761605"
 ---
 # <a name="use-shared-queries-in-advanced-hunting"></a>Brug delte forespørgsler i avanceret jagt
 
@@ -39,7 +39,7 @@ ms.locfileid: "64738487"
 Under fanen Forespørgsler i avanceret jagt kan du finde rullemenuerne for **Delte forespørgsler**, **Mine forespørgsler** og **Community-forespørgsler**. Du kan vælge en pil, der peger nedad, for at udvide en menu.
 
 
-:::image type="content" source="../../media/advanced-hunting-shared-queries-1.png" alt-text="Oplysningerne om delte forespørgsler på Microsoft 365 Defender-portalen" lightbox="../../media/advanced-hunting-shared-queries-1.png":::
+:::image type="content" source="../../media/advanced-hunting-shared-queries-1.png" alt-text="Delte forespørgsler, Mine forespørgsler og Communityforespørgsler på portalen Microsoft 365 Defender" lightbox="../../media/advanced-hunting-shared-queries-1.png":::
 
 
 
@@ -63,7 +63,7 @@ Du kan gemme en ny eller eksisterende forespørgsel, så den kun er tilgængelig
 ## <a name="delete-or-rename-a-query"></a>Slet eller omdøb en forespørgsel
 1. Vælg de tre prikker til højre for en forespørgsel, du vil omdøbe eller slette.
 
-    :::image type="content" source="../../media/shared-query-3.png" alt-text="Indstillingerne for en delt forespørgsel på siden Avanceret jagt på Microsoft 365 Defender-portalen" lightbox="../../media/shared-query-3.png":::
+    :::image type="content" source="../../media/advanced-hunting-del-save-query.png" alt-text="Omdøb eller slet en forespørgsel på siden Avanceret jagt på portalen Microsoft 365 Defender" lightbox="../../media/advanced-hunting-del-save-query.png":::
 
 2. Vælg **Slet** , og bekræft sletning. Eller vælg **Omdøb** , og angiv et nyt navn til forespørgslen.
 
@@ -75,7 +75,7 @@ Microsofts sikkerhedsforskere deler jævnligt avancerede jagtforespørgsler i et
 
 Du kan også nemt finde disse forespørgsler i rullemenuen **Communityforespørgsler** .
 
-:::image type="content" source="../../media/advanced-hunting-shared-queries-2.png" alt-text="Den nye forespørgsel, der skal til at blive gemt på Microsoft 365 Defender-portalen" lightbox="../../media/advanced-hunting-shared-queries-2.png":::
+:::image type="content" source="../../media/advanced-hunting-shared-queries-2.png" alt-text="Communityforespørgsler organiseret efter mappe på Microsoft 365 Defender-portalen" lightbox="../../media/advanced-hunting-shared-queries-2.png":::
 
 Communityforespørgsler er grupperet i mapper som *f.eks. kampagner*, *samling*, *forsvarunddragelse* og lignende. Yderligere oplysninger om forespørgslen leveres som indbyggede kommentarer i selve forespørgslen. 
 

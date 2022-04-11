@@ -1,5 +1,5 @@
 ---
-title: Sådan Exchange Online du bruger TLS (Transport Layer Security) til at sikre mailforbindelser
+title: Sådan bruger Exchange Online TLS (Transport Layer Security) til at sikre mailforbindelser
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -17,69 +17,69 @@ ms.assetid: 4cde0cda-3430-4dc0-b489-f2c0736c929f
 ms.collection:
 - M365-security-compliance
 - Strat_O365_IP
-description: Lær, Exchange Online og Microsoft 365 bruger TLS (Transport Layer Security) og fremadrettet social sikring til sikker mailkommunikation. Få også oplysninger om det certifikat, der er udstedt af Microsoft til Exchange Online.
-ms.openlocfilehash: 1caf4a8425f4a8e7c340e8a52d785027e99a1618
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Få mere at vide om, hvordan Exchange Online og Microsoft 365 bruge TLS (Transport Layer Security) og FS (Forward Secrecy) til at sikre mailkommunikation. Få også oplysninger om det certifikat, der er udstedt af Microsoft til Exchange Online.
+ms.openlocfilehash: 7f6d4cb20299e98fc186409977c8ef7b36d329ca
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63588928"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760817"
 ---
-# <a name="how-exchange-online-uses-tls-to-secure-email-connections"></a>Sådan Exchange Online du bruger TLS til at sikre mailforbindelser
+# <a name="how-exchange-online-uses-tls-to-secure-email-connections"></a>Sådan bruger Exchange Online TLS til at sikre mailforbindelser
 
-Lær, Exchange Online og Microsoft 365 bruger TLS (Transport Layer Security) og fremadrettet social sikring til sikker mailkommunikation. Indeholder også oplysninger om det certifikat, der er udstedt af Microsoft til Exchange Online.
+Få mere at vide om, hvordan Exchange Online og Microsoft 365 bruge TLS (Transport Layer Security) og FS (Forward Secrecy) til at sikre mailkommunikation. Indeholder også oplysninger om det certifikat, der er udstedt af Microsoft til Exchange Online.
   
-## <a name="tls-basics-for-microsoft-365-and-exchange-online"></a>Grundlæggende om TLS til Microsoft 365 og Exchange Online
+## <a name="tls-basics-for-microsoft-365-and-exchange-online"></a>Grundlæggende om TLS for Microsoft 365 og Exchange Online
 
-Transport Layer Security (TLS) og SSL, der kom før TLS, er krypterede protokoller, som sikrer kommunikationen via et netværk ved hjælp af sikkerhedscertifikater til at kryptere en forbindelse mellem computere. TLS erstatter Secure Sockets Layer (SSL) og kaldes ofte SSL 3.1. Exchange Online bruger TLS til at kryptere forbindelserne mellem Exchange-servere og forbindelserne mellem Exchange-servere og andre servere, f.eks. dine lokale Exchange-servere eller modtagernes mailservere. Når forbindelsen er krypteret, sendes alle data, der sendes via den pågældende forbindelse, via den krypterede kanal. Men hvis du videresender en meddelelse, der blev sendt via en TLS-krypteret forbindelse, er den pågældende meddelelse ikke nødvendigvis krypteret. TLS krypterer ikke meddelelsen, kun forbindelsen.
+TLS (Transport Layer Security) og SSL, der kom før TLS, er kryptografiske protokoller, der sikrer kommunikation via et netværk ved hjælp af sikkerhedscertifikater til at kryptere en forbindelse mellem computere. TLS tilsidesætter SSL (Secure Sockets Layer) og kaldes ofte SSL 3.1. Exchange Online bruger TLS til at kryptere forbindelserne mellem Exchange servere og forbindelserne mellem Exchange servere og andre servere, f.eks. dine lokale Exchange-servere eller modtagernes mailservere. Når forbindelsen er krypteret, sendes alle data, der sendes via den pågældende forbindelse, via den krypterede kanal. Men hvis du videresender en meddelelse, der blev sendt via en TLS-krypteret forbindelse, krypteres meddelelsen ikke nødvendigvis. TLS krypterer ikke meddelelsen, kun forbindelsen.
   
-Hvis du vil kryptere meddelelsen, skal du bruge en krypteringsteknologi, der krypterer meddelelsens indhold. Du kan f.eks. bruge Office eller S/MIME. Se [Mailkryptering i Office 365](email-encryption.md) [og Office 365-meddelelseskryptering (OME),](ome.md) hvis du vil have mere at vide om meddelelseskryptering Office 365.
+Hvis du vil kryptere meddelelsen, skal du bruge en krypteringsteknologi, der krypterer meddelelsens indhold. Du kan f.eks. bruge Office meddelelseskryptering eller S/MIME. Se [Mailkryptering i Office 365](email-encryption.md) og [Office 365 OME (Message Encryption)](ome.md) for at få oplysninger om meddelelseskryptering i Office 365.
   
-Brug TLS i situationer, hvor du vil oprette en sikker kanal for korrespondance mellem Microsoft og din lokale organisation eller en anden organisation, f.eks. en partner. Exchange Online altid forsøger at bruge TLS først for at sikre din mail, men kan ikke, hvis den anden part ikke tilbyder TLS-sikkerhed. Læs videre for at finde ud af, hvordan du kan sikre alle mails til dine lokale servere eller vigtige partnere ved hjælp *af forbindelser*.
+Brug TLS i situationer, hvor du vil konfigurere en sikker kanal til korrespondance mellem Microsoft og din lokale organisation eller en anden organisation, f.eks. en partner. Exchange Online forsøger altid at bruge TLS først til at sikre din mail, men kan ikke, hvis den anden part ikke tilbyder TLS-sikkerhed. Fortsæt med at læse for at finde ud af, hvordan du kan sikre alle mails til dine lokale servere eller vigtige partnere ved hjælp af *connectors*.
 
-For at levere den bedste i klassen-kryptering til vores kunder har Microsoft forældet TLS-versionerne (Transport Layer Security) 1.0 og 1.1 [i Office 365](tls-1.0-and-1.1-deprecation-for-office-365.md) [og Office 365 GCC](tls-1-2-in-office-365-gcc.md). Du kan dog fortsætte med at bruge en ikke-krypteret SMTP-forbindelse uden nogen TLS. Vi anbefaler ikke mailoverførsel uden kryptering.  
+Microsoft har udfaset TLS-version 1.0 og 1.1 i [Office 365](tls-1.0-and-1.1-deprecation-for-office-365.md) og [Office 365 GCC](tls-1-2-in-office-365-gcc.md) for at levere den bedste kryptering til vores kunder. Du kan dog fortsætte med at bruge en ukrypteret SMTP-forbindelse uden nogen TLS. Vi anbefaler ikke overførsel af mail uden kryptering.  
   
-## <a name="how-exchange-online-uses-tls-between-exchange-online-customers"></a>Sådan Exchange Online TLS mellem Exchange Online kunder
+## <a name="how-exchange-online-uses-tls-between-exchange-online-customers"></a>Sådan bruger Exchange Online TLS mellem Exchange Online kunder
 
-Exchange Online-servere krypterer altid forbindelser til Exchange Online servere i vores datacentre med TLS 1.2. Når du sender en meddelelse til en modtager, der er inden for din organisation, Exchange Online automatisk meddelelsen via en krypteret forbindelse ved hjælp af TLS. Exchange Online sender også mails, som du sender til andre kunder via krypterede forbindelser ved hjælp af TLS, der er sikret ved hjælp af videresendte mails.
+Exchange Online servere krypterer altid forbindelser til andre Exchange Online servere i vores datacentre med TLS 1.2. Når du sender en meddelelse til en modtager i din organisation, sender Exchange Online automatisk meddelelsen via en krypteret forbindelse ved hjælp af TLS. Exchange Online sender også mail, som du sender til andre kunder, via krypterede forbindelser ved hjælp af TLS, der er sikret ved hjælp af Videresendelseshemmelighed.
   
-## <a name="how-microsoft-365-uses-tls-between-microsoft-365-and-external-trusted-partners"></a>Sådan Microsoft 365 TLS mellem Microsoft 365 og eksterne partnere, der er tillid til
+## <a name="how-microsoft-365-uses-tls-between-microsoft-365-and-external-trusted-partners"></a>Sådan bruger Microsoft 365 TLS mellem Microsoft 365 og eksterne partnere, der er tillid til
 
-Som standard Exchange Online altid *opportunistisk TLS*. Opportunistisk TLS betyder, at Exchange Online altid forsøger at kryptere forbindelser med den mest sikre version af TLS først og derefter arbejder sig nedad på listen over TLS-krypteringer, indtil den finder en, som begge parter kan acceptere. Medmindre du har konfigureret Exchange Online til at sikre, at meddelelser til den pågældende modtager skal bruge sikre forbindelser, sendes meddelelsen som standard uden kryptering, hvis modtagerens organisation ikke understøtter TLS-kryptering. Opportunistic TLS er tilstrækkelig for de fleste virksomheder. Men for virksomheder, der har overholdelseskrav, som f.eks. læge-, bank- eller offentlige organisationer, kan du konfigurere Exchange Online til at kræve eller gennemtvinge TLS. Du kan finde en vejledning [i Konfigurere mailflow ved hjælp af forbindelser Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+Som standard bruger Exchange Online altid *opportunistisk TLS*. Opportunistisk TLS betyder, at Exchange Online altid forsøger at kryptere forbindelser med den mest sikre version af TLS først og derefter arbejder sig ned ad listen over TLS-ciffer, indtil den finder en, som begge parter kan blive enige om. Medmindre du har konfigureret Exchange Online til at sikre, at meddelelser til den pågældende modtager skal bruge sikre forbindelser, sendes meddelelsen som standard uden kryptering, hvis modtagerorganisationen ikke understøtter TLS-kryptering. Opportunistisk TLS er tilstrækkeligt for de fleste virksomheder. Men for virksomheder, der har overholdelseskrav, f.eks. medicinske, bankmæssige eller offentlige organisationer, kan du konfigurere Exchange Online til at kræve eller gennemtvinge TLS. Du kan finde en vejledning [under Konfigurer mailflow ved hjælp af connectors i Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
   
-Hvis du beslutter dig for at konfigurere TLS mellem din organisation og en pålidelig partnerorganisation, kan Exchange Online bruge gennemtvungne *TLS* til at oprette kommunikationskanaler, der er tillid til. Tvungne TLS kræver, at din partnerorganisation godkender Exchange Online med et sikkerhedscertifikat for at sende mails til dig. Din partner skal administrere deres egne certifikater. Exchange Online bruger forbindelser til at beskytte meddelelser, du sender fra uautoriseret adgang, før de ankommer til modtagerens mailudbyder. Du kan finde oplysninger om brug af forbindelser til at konfigurere mailflow i [Konfigurer mailflow ved hjælp af forbindelser Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+Hvis du beslutter at konfigurere TLS mellem din organisation og en partnerorganisation, der er tillid til, kan Exchange Online bruge *tvungen TLS* til at oprette kommunikationskanaler, der er tillid til. Tvungen TLS kræver, at din partnerorganisation godkender for at Exchange Online med et sikkerhedscertifikat for at sende mail til dig. Din partner skal administrere sine egne certifikater. Exchange Online bruger forbindelser til at beskytte meddelelser, som du sender fra uautoriseret adgang, før de ankommer til modtagerens mailudbyder. Du kan få oplysninger om, hvordan du bruger forbindelser til at konfigurere mailflow, under [Konfigurer mailflow ved hjælp af forbindelser i Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
   
-## <a name="tls-and-hybrid-exchange-server-deployments"></a>TLS- og Exchange Server installationer
+## <a name="tls-and-hybrid-exchange-server-deployments"></a>TLS- og hybridinstallationer Exchange Server
 
-Hvis du administrerer en hybrid Exchange-installation, skal din lokale Exchange-server godkende til Microsoft 365 ved hjælp af et sikkerhedscertifikat til at sende mails til de modtagere, hvis postkasser kun er i Office 365. Derfor skal du administrere dine egne sikkerhedscertifikater til dine lokale Exchange servere. Du skal også sikkert gemme og vedligeholde disse servercertifikater. Du kan finde flere oplysninger om administration af certifikater i hybridinstallationer [under Certifikatkrav til hybridinstallationer](/exchange/certificate-requirements).
+Hvis du administrerer en hybrid Exchange installation, skal din lokale Exchange-server godkende Microsoft 365 ved hjælp af et sikkerhedscertifikat til at sende mail til modtagere, hvis postkasser kun er i Office 365. Derfor skal du administrere dine egne sikkerhedscertifikater for dine lokale Exchange servere. Du skal også gemme og vedligeholde disse servercertifikater på en sikker måde. Du kan få flere oplysninger om administration af certifikater i hybridinstallationer under [Certifikatkrav til hybridinstallationer](/exchange/certificate-requirements).
   
-## <a name="how-to-set-up-forced-tls-for-exchange-online-in-office-365"></a>Sådan konfigurerer du gennemtvungne TLS til Exchange Online i Office 365
+## <a name="how-to-set-up-forced-tls-for-exchange-online-in-office-365"></a>Sådan konfigurerer du tvungen TLS for Exchange Online i Office 365
 
-For Exchange Online brugere skal du konfigurere mere end én forbindelse, der kræver TLS, for at tvungne TLS kan arbejde for at sikre alle dine sendte og modtagne mails. Du skal bruge én forbindelse til meddelelser, der sendes til brugerpostkasser, og en anden forbindelse til meddelelser, der sendes fra brugerpostkasser. Opret disse forbindelser i Exchange Administration i Office 365. Du kan finde en vejledning [i Konfigurere mailflow ved hjælp af forbindelser Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+For Exchange Online kunder skal du konfigurere mere end én connector, der kræver TLS, for at tvinge TLS til at arbejde for at sikre alle dine sendte og modtagne mails. Du skal bruge én connector til meddelelser, der er sendt til brugerpostkasser, og en anden connector til meddelelser, der er sendt fra brugerpostkasser. Opret disse connectorer i Exchange Administration i Office 365. Du kan finde en vejledning [under Konfigurer mailflow ved hjælp af connectors i Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
 
-## <a name="tls-certificate-information-for-exchange-online"></a>Oplysninger om TLS-certifikat til Exchange Online
+## <a name="tls-certificate-information-for-exchange-online"></a>TLS-certifikatoplysninger for Exchange Online
 
-De certifikatoplysninger, der anvendes Exchange Online, er beskrevet i følgende tabel. Hvis din forretningspartner konfigurerer tvungne TLS på deres mailserver, skal du give disse oplysninger til dem. Af sikkerhedsmæssige årsager ændres vores certifikater fra tid til anden. Det aktuelle certifikat er gyldigt fra d. 24. september 2020.
+De certifikatoplysninger, der bruges af Exchange Online, er beskrevet i følgende tabel. Hvis din forretningspartner konfigurerer tvungne TLS på deres mailserver, skal du give dem disse oplysninger. Af sikkerhedsmæssige årsager ændres vores certifikater fra tid til anden. Det aktuelle certifikat er gyldigt fra den 24. september 2020.
 
-### <a name="current-certificate-information-valid-from-september-24-2020"></a>Aktuelle certifikatoplysninger gyldige fra 24. september 2020
+### <a name="current-certificate-information-valid-from-september-24-2020"></a>Aktuelle certifikatoplysninger, der er gyldige fra den 24. september 2020
   
 | Attribut | Værdi |
 |:-----|:-----|
-|Rodudstedende nøglecenter|DigiCert CA – 1|
+|Rodudsteder for nøglecenter|DigiCert CA – 1|
 |Certifikatnavn|mail.protection.outlook.com|
 |Organisation|Microsoft Corporation|
 |Organisationsenhed|www.digicert.com|
-|Nøglestyrke for certifikat|2048|
+|Certifikatnøglestyrke|2048|
 
-## <a name="get-more-information-about-tls-certificates-and-microsoft-365-and-download-certificates"></a>Få mere at vide om TLS, certifikater og Microsoft 365 og download certifikater
+## <a name="get-more-information-about-tls-certificates-and-microsoft-365-and-download-certificates"></a>Få flere oplysninger om TLS, certifikater og Microsoft 365 og download certifikater
 
-[Microsoft 365 krypteringskæder og downloads af certifikater](encryption-office-365-certificate-chains.md)
+[Microsoft 365 krypteringskæder og certifikatoverførsler](encryption-office-365-certificate-chains.md)
 
-[Microsoft 365 krypteringskæder og downloads af certifikater - DOD og GCC High](encryption-office-365-certificate-chains-itar.md)
+[Microsoft 365 krypteringskæder og certifikatoverførsler – DOD og GCC High](encryption-office-365-certificate-chains-itar.md)
 
-Du kan finde en liste over understøttede krypteringspakker under [Oplysninger om teknisk reference om kryptering](technical-reference-details-about-encryption.md).
+Du kan finde en liste over understøttede krypteringspakker under [Oplysninger om kryptering i teknisk reference](technical-reference-details-about-encryption.md).
   
-[Konfigurer forbindelser til sikker mailflow med en partnerorganisation](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-for-secure-mail-flow-with-a-partner)
+[Konfigurer forbindelser til et sikkert mailflow med en partnerorganisation](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-for-secure-mail-flow-with-a-partner)
   
 [Forbindelser med forbedret mailsikkerhed](/previous-versions/exchange-server/exchange-150/dn942516(v=exchg.150))
   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til at arkivere Salesforce Chatter-data i Microsoft 365
+title: Konfigurer en connector til arkivering af Salesforce Chatter-data i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,82 +11,82 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en forbindelse til at importere og arkivere Salesforce Chatter-data fra Veritas til Microsoft 365. Med denne forbindelse kan du arkivere data fra tredjeparts datakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge overholdelsesfunktioner som f.eks. retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: bb52bd95d11a93c2bbb6816ed189ef5e0594ffac
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Administratorer kan konfigurere en connector til at importere og arkivere Salesforce Chatter-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: 8d86b4fcddcdf4a0f9b169b32df152873e8211c7
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594382"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758613"
 ---
-# <a name="set-up-a-connector-to-archive-salesforce-chatter-data"></a>Konfigurer en forbindelse til at arkivere Salesforce Chatter-data
+# <a name="set-up-a-connector-to-archive-salesforce-chatter-data"></a>Konfigurer en connector til arkivering af Salesforce Chatter-data
 
-Brug en Veritas-forbindelse i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra Salesforce Chatter-platformen til brugerpostkasser i Microsoft 365 organisation. Veritas har [en Salesforce Chatter-forbindelse](http://globanet.com/chatter/), der henter elementer fra datakilden fra tredjeparten og importerer disse elementer Microsoft 365. Forbindelsen konverterer indholdet som chatsamtaler, vedhæftede filer og indlæg fra Salesforce Chatter til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
+Brug en Veritas-connector i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra Salesforce Chatter-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Salesforce Chatter-connector](http://globanet.com/chatter/), der henter elementer fra tredjepartsdatakilden og importerer disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. chats, vedhæftede filer og indlæg fra Salesforce Chatter, til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når Salesforce Chatter-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner som f.eks Retslig tilbageholdelse, eDiscovery, opbevaringspolitikker og opbevaringsetiketter. Hvis du bruger en Salesforce Chatter-forbindelse til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Salesforce Chatter-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Salesforce Chatter-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-salesforce-chatter-data"></a>Oversigt over arkivering af Salesforce Chatter-data
 
-Følgende oversigt forklarer processen med at bruge en forbindelse til at arkivere Salesforce Chatter-dataene Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere Salesforce Chatter-dataene i Microsoft 365.
 
 ![Arkivering af arbejdsproces for Salesforce Chatter-data.](../media/SalesforceChatterConnectorWorkflow.png)
 
 1. Din organisation arbejder sammen med Salesforce Chatter om at konfigurere et Salesforce Chatter-websted.
 
-2. Én gang i døgnet kopieres Salesforce Chatter-elementer til webstedet Veritas Merge1. Forbindelsen også Salesforce Chatter-elementer til et mailformat.
+2. En gang hver 24 timer kopieres Salesforce Chatter-elementer til Veritas Merge1-webstedet. Connectoren også Salesforce Chatter-elementer til et mailmeddelelsesformat.
 
-3. Den Salesforce Chatter-forbindelse, som du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til webstedet Veritas Merge1 hver dag og overfører Chatter-indholdet til et sikkert Azure Storage placering i Microsoft-skyen.
+3. Den Salesforce Chatter-connector, du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører Chatter-indholdet til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Forbindelsen importerer de konverterede elementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben  Mail for den automatiske brugertilknytning som beskrevet [i trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Salesforce Chatter** i brugerpostkasserne, og elementer importeres til den pågældende mappe. Forbindelsen bestemmer, hvilken postkasse der skal importeres elementer til, ud fra værdien *af egenskaben Mail* . Alle Chatter-elementer indeholder denne egenskab, som er udfyldt med mailadressen for hver deltager i elementet.
+4. Connectoren importerer de konverterede elementer til postkasserne for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Salesforce Chatter** i brugerpostkasserne, og elementer importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle Chatter-elementer indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Opret en Flet1-konto til Microsoft-forbindelser. Kontakt [Veritas kundesupport for at oprette en konto](https://www.veritas.com/content/support/). Du skal logge på denne konto, når du opretter forbindelsen i trin 1.
+- Opret en Flet1-konto til Microsoft-connectors. Hvis du vil oprette en konto, skal du kontakte [Veritas Kundesupport](https://www.veritas.com/content/support/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Opret et Salesforce-program, og få et token på [https://salesforce.com](https://salesforce.com). Du skal logge på Salesforce-kontoen som administrator og have et personligt brugertoken for at importere data. Desuden skal udløsere publiceres på Chatter-webstedet for at registrere opdateringer, sletninger og redigeringer. Disse udløsere opretter et indlæg på en kanal, og Flet1 registrerer oplysningerne fra kanalen. Du kan finde en trinvis vejledning til, hvordan du opretter programmet og køber tokenet, under Brugervejledning til forbindelser [fra tredjepart](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
+- Opret et Salesforce-program, og hent et token på [https://salesforce.com](https://salesforce.com). Du skal logge på Salesforce-kontoen som administrator og få et personligt brugertoken til at importere data. Udløsere skal også publiceres på Chatter-webstedet for at registrere opdateringer, sletninger og redigeringer. Disse udløsere opretter et indlæg på en kanal, og Merge1 henter oplysningerne fra kanalen. Hvis du vil have en trinvis vejledning i, hvordan du opretter programmet og henter tokenet, skal du se [Brugervejledning til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
 
-- Den bruger, der opretter forbindelseskomponent til Salesforce Chatter i trin 1 (og fuldfører den i trin 3), skal have tildelt rollen som dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Salesforce Chatter-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataforbindelse er i offentlig prøveversion i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="step-1-set-up-the-salesforce-chatter-connector"></a>Trin 1: Konfigurer Salesforce Chatter-forbindelsen
+## <a name="step-1-set-up-the-salesforce-chatter-connector"></a>Trin 1: Konfigurer Connectoren Salesforce Chatter
 
-Det første trin er at få adgang til **siden Dataforbindelser i** Microsoft 365 Overholdelsescenter og oprette en forbindelse til Chatter-data.
+Det første trin er at få adgang til siden **Dataconnectors** i Microsoft 365 Overholdelsescenter og oprette en connector til Chatter-data.
 
-1. Gå til [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter **på DataforbindelserSalgsforce** >  **Chatter**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsSalesforce** >  **Chatter**.
 
-2. Klik på **Tilføj forbindelse på siden produktbeskrivelse for Salesforce Chatter****.**
+2. Klik på **Tilføj connector** på siden **Salesforce Chatter-produktbeskrivelse**.
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. Angiv et entydigt navn, der identificerer forbindelsen, og klik derefter på **Næste**.
+4. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**.
 
-5. Log på din Flet1-konto for at konfigurere forbindelsen.
+5. Log på din Merge1-konto for at konfigurere connectoren.
 
-## <a name="step-2-configure-the-salesforce-chatter-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer Salesforce Chatter på webstedet Veritas Merge1
+## <a name="step-2-configure-the-salesforce-chatter-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer Salesforce Chatter på Veritas Merge1-webstedet
 
-Det andet trin er at konfigurere Salesforce Chatter-forbindelsen på Veritas Merge1-webstedet. Hvis du vil have mere at vide om, hvordan du konfigurerer Salesforce Chatter-forbindelsen, skal du se [Brugervejledning til forbindelse fra tredjepart](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
+Det andet trin er at konfigurere Salesforce Chatter-connectoren på Veritas Merge1-webstedet. Du kan få mere at vide om, hvordan du konfigurerer Salesforce Chatter-connectoren, i [Brugervejledningen til Flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
 
-Når du har **klikket &,** vises siden Brugertilknytning i Microsoft 365 Overholdelsescenter forbindelse.
+Når du klikker på **Gem & Udfør,** vises siden **Brugertilknytning** i connectorguiden i Microsoft 365 Overholdelsescenter.
 
-## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør konfigurationen af forbindelsen
+## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Hvis du vil tilknytte brugere og fuldføre konfigurationen af forbindelsen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
+Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
 
-1. På siden **Tilknyt Salesforce Chatter-brugere Microsoft 365 brugere** skal du aktivere automatisk brugertilknytning. Salesforce Chatter-elementer indeholder en egenskab kaldet *Mail*, som indeholder mailadresser for brugere i organisationen. Hvis forbindelsen kan knytte denne adresse til Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Map Salesforce Chatter for at Microsoft 365 brugere**. Salesforce Chatter-elementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
 
-2. Klik **på** Næste, gennemgå dine indstillinger, og gå derefter til siden **Dataforbindelser** for at se status for importprocessen for den nye forbindelse.
+2. klik på **Næste**, gennemse dine indstillinger, og gå derefter til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 
-## <a name="step-4-monitor-the-salesforce-chatter-connector"></a>Trin 4: Overvåg Forbindelseskomponent til Salesforce Chatter
+## <a name="step-4-monitor-the-salesforce-chatter-connector"></a>Trin 4: Overvåg Connectoren Salesforce Chatter
 
-Når du har oprettet forbindelseslinjen Salesforce Chatter, kan du få vist forbindelsens status Microsoft 365 Overholdelsescenter.
+Når du har oprettet connectoren Salesforce Chatter, kan du få vist connectorstatussen i Microsoft 365 Overholdelsescenter.
 
-1. Gå til og [https://compliance.microsoft.com](https://compliance.microsoft.com/) klik **på Dataforbindelser** i venstre navigationslinje.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik på **Dataconnectors** i venstre navigationsrude.
 
-2. Klik på **fanen Forbindelser** , og klik derefter på **Salesforce Chatter-forbindelsen** for at få vist pop op-siden, som indeholder egenskaber og oplysninger om forbindelsen.
+2. klik på fanen **Forbindelser,** og klik derefter på connectoren **Salesforce Chatter** for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde skal** du klikke **på linket Hent log** for at åbne (eller gemme) statusloggen for forbindelsen. Denne logfil indeholder data, der er blevet importeret til Microsoft-skyen.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.

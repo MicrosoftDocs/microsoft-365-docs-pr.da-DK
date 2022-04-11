@@ -1,5 +1,5 @@
 ---
-title: Brug et script til at føje brugere til en venteposition i en Core eDiscovery-sag
+title: Brug et script til at føje brugere til venteposition i en Kerne-eDiscovery-sag
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -22,20 +22,20 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
 description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter.
-ms.openlocfilehash: fd11ccb6c262cd0e31a65d2a1f95d5dbcd92869c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a678649ebd15a34bdfe5765449d41feae1b14901
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589148"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761235"
 ---
-# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Brug et script til at føje brugere til en venteposition i en Core eDiscovery-sag
+# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Brug et script til at føje brugere til venteposition i en Kerne-eDiscovery-sag
 
-Security & Compliance Center PowerShell indeholder cmdlet'er, der gør det muligt at automatisere tidskrævende opgaver i forbindelse med oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge Core eDiscovery-Microsoft 365 Overholdelsescenter til at placere et stort antal afiansk indholdsplaceringer i venteposition. Før du opretter en venteposition, skal du f.eks. indsamle URL-adressen for hvert OneDrive for Business, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
+Security & Compliance Center PowerShell indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge eDiscovery-kernecasen i Microsoft 365 Overholdelsescenter til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
   
-Scriptet beder dig om navnet på din organisations domæne Mit websted ( `contoso` f.eks. i URL-adressen https://contoso-my.sharepoint.com), navnet på en eksisterende eDiscovery-sag, navnet på den nye venteposition, der er knyttet til sagen, en liste over mailadresser på de brugere, du vil sætte i venteposition, og en søgeforespørgsel, der kan bruges, hvis du vil oprette en forespørgselsbaseret venteposition. Scriptet henter derefter URL-adressen til OneDrive for Business-webstedet for hver bruger på listen, opretter den nye venteposition og tilføjer derefter postkassen og OneDrive for Business-webstedet for hver bruger på listen i venteposition. Scriptet genererer også logfiler, der indeholder oplysninger om den nye venteposition.
+Scriptet beder dig om navnet på organisationens Mit websted-domæne (f.eks `contoso` . i URL-adressen https://contoso-my.sharepoint.com), navnet på en eksisterende eDiscovery-sag, navnet på den nye venteposition, der er knyttet til sagen, en liste over mailadresser på de brugere, du vil sætte i venteposition, og en søgeforespørgsel, der skal bruges, hvis du vil oprette en forespørgselsbaseret venteposition. Scriptet henter derefter URL-adressen for det OneDrive for Business websted for hver bruger på listen, opretter den nye venteposition og føjer derefter postkassen og OneDrive for Business websted for hver bruger på listen til ventepositionen. Scriptet genererer også logfiler, der indeholder oplysninger om den nye venteposition.
   
-Her er trinnene, der skal til for at gøre dette:
+Her er de trin, du skal udføre for at få dette til at ske:
   
 [Trin 1: Installér SharePoint Online Management Shell](#step-1-install-the-sharepoint-online-management-shell)
   
@@ -45,55 +45,55 @@ Her er trinnene, der skal til for at gøre dette:
   
 ## <a name="before-you-add-users-to-a-hold"></a>Før du føjer brugere til en venteposition
 
-- Du skal være medlem af eDiscovery Manager-rollegruppen i Microsoft 365 Overholdelsescenter og en SharePoint Online-administrator for at køre scriptet i trin 3. Få mere at vide under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
+- Du skal være medlem af rollegruppen eDiscovery Manager i Microsoft 365 Overholdelsescenter og være SharePoint Online-administrator for at køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
 
-- Maksimalt 1.000 postkasser og 100 websteder kan føjes til en venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter. Hvis alle brugere, du vil placere i venteposition, har et OneDrive for Business-websted, kan du maksimalt føje 100 brugere til en venteposition ved hjælp af scriptet i denne artikel.
+- Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
 
-- Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 til den samme mappe. Det gør det nemmere at køre scriptet.
+- Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 i den samme mappe. Det vil gøre det nemmere at køre scriptet.
 
-- Scriptet føjer listen over brugere til en ny venteposition, der er knyttet til en eksisterende sag. Sørg for, at den sag, du vil knytte ventepositionen til, er oprettet, før du kører scriptet.
+- Scriptet føjer listen over brugere til en ny venteposition, der er knyttet til en eksisterende sag. Sørg for, at det tilfælde, du vil knytte ventepositionen til, oprettes, før du kører scriptet.
 
-- Scriptet i denne artikel understøtter moderne godkendelse, når du opretter forbindelse til Security & Compliance Center PowerShell SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er Microsoft 365 eller Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at køre det korrekt. Du skal redigere `Connect-IPPSSession` linjen og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance Center PowerShell. Du kan finde flere oplysninger i eksemplerne [Forbind Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Scriptet i denne artikel understøtter moderne godkendelse, når der oprettes forbindelse til Security & Compliance Center PowerShell og SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance Center PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
 - Scriptet afbryder automatisk forbindelsen til Security & Compliance Center PowerShell og SharePoint Online Management Shell.
 
-- Scriptet indeholder minimal fejlhåndtering. Dens primære formål er hurtigt og nemt at placere postkassen og OneDrive for Business for hver bruger i venteposition.
+- Scriptet indeholder minimal fejlhåndtering. Dens primære formål er hurtigt og nemt at placere postkassen og OneDrive for Business websted for hver bruger i venteposition.
 
-- De eksempelscripts, der er angivet i dette emne, understøttes ikke i nogen Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptene leveres som de er, uden garantier af nogen art. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, men ikke begrænset til stiltiende garantier for salgbarhed eller egnethed til bestemte formål. Den samlede risiko ved anvendelse eller ydeevne af eksempelscripts og dokumentation forbliver hos dig. I intet tilfælde kan Microsoft, dets forfattere eller andre involverede i oprettelse, produktion eller levering af scripts holdes ansvarlige for erstatning (herunder, men ikke begrænset til, erstatning for tabt forretningsfortjenester, driftstab, tabt erhvervsinformation eller andre økonomiske tab) som følge af brug af eller manglende mulighed for at bruge eksempelscripts eller dokumentation,  også selvom Microsoft er blevet underrettet om risikoen for sådanne skader.
+- De eksempelscripts, der er angivet i dette emne, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
 ## <a name="step-1-install-the-sharepoint-online-management-shell"></a>Trin 1: Installér SharePoint Online Management Shell
 
-Det første trin er at installere SharePoint Online Management Shell, hvis den ikke allerede er installeret på din lokale computer. Du behøver ikke at bruge shell i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at få URL-adresserne til OneDrive for Business websteder.
+Det første trin er at installere SharePoint Online Management Shell, hvis den ikke allerede er installeret på din lokale computer. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
   
-Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
+Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell miljø](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
 
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en venteposition, der er knyttet til en eDiscovery-sag, og tilføjelsen af postkasser og OneDrive for Business-websteder med en liste over brugere i venteposition. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i trin 3).
+Scriptet i trin 3 opretter en venteposition, der er knyttet til en eDiscovery-sag, og tilføjer postkasserne og OneDrive for Business websteder på en liste over brugere i venteposition. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få vist en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
   
-Her er en PowerShell-kommando (som du kører ved hjælp af Remote PowerShell forbundet med din Exchange Online-organisation) til at hente en liste over mailadresser for alle brugere i organisationen og gemme den i en tekstfil med navnet HoldUsers.txt.
+Her er en PowerShell-kommando (som du kører ved hjælp af Ekstern PowerShell med forbindelse til din Exchange Online organisation) for at få en liste over mailadresser til alle brugere i din organisation og gemme den i en tekstfil med navnet HoldUsers.txt.
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > HoldUsers.txt
 ```
 
-Når du har kørt denne kommando, skal du åbne tekstfilen og fjerne det sidehoved, der indeholder egenskabsnavnet. `PrimarySmtpAddress` Fjern derefter alle mailadresser undtagen dem for de brugere, du vil føje til ventepositionen, som du opretter i trin 3. Sørg for, at der ikke er nogen tomme rækker før eller efter listen over mailadresser.
+Når du har kørt denne kommando, skal du åbne tekstfilen og fjerne den header, der indeholder egenskabsnavnet . `PrimarySmtpAddress` Fjern derefter alle mailadresser undtagen adresserne for de brugere, du vil føje til den venteposition, du opretter i trin 3. Sørg for, at der ikke er tomme rækker før eller efter listen over mailadresser.
   
 ## <a name="step-3-run-the-script-to-create-a-hold-and-add-users"></a>Trin 3: Kør scriptet for at oprette en venteposition og tilføje brugere
 
-Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for, at disse oplysninger er klar, før du kører scriptet.
+Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for at have disse oplysninger klar, før du kører scriptet.
   
-- **Dine brugerlegitimationsoplysninger:** Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til Security & Compliance Center med PowerShell. Den vil også bruge disse legitimationsoplysninger til at SharePoint Online til at hente OneDrive for Business URL-adresser for listen over brugere.
+- **Dine brugerlegitimationsoplysninger:** Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til Security & Compliance Center med PowerShell. Den bruger også disse legitimationsoplysninger til at få adgang SharePoint Online til at få OneDrive for Business URL-adresser til listen over brugere.
 
-- **Navnet på dit SharePoint-domæne:** Scriptet beder dig om at angive dette navn, så <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">det kan oprette forbindelse SharePoint Administration</a>. Den anvender også domænenavnet til OneDrive i organisationen. Hvis URL-adressen `https://contoso-admin.sharepoint.com` til administration f.eks. er, og URL-adressen for OneDrive er `https://contoso-my.sharepoint.com`, `contoso` skal du angive, når scriptet beder dig om dit domænenavn.
+- **Navnet på dit SharePoint domæne:** Scriptet beder dig om at angive dette navn, så det kan oprette forbindelse til <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>. Det bruger også domænenavnet til OneDrive URL-adresser i din organisation. Hvis URL-adressen for dit administration f.eks. er `https://contoso-admin.sharepoint.com` , og URL-adressen for OneDrive er `https://contoso-my.sharepoint.com`, skal du angive `contoso` , når scriptet beder dig om dit domænenavn.
 
-- **Navnet på sagen:** Navnet på en eksisterende sag. Scriptet opretter en ny venteposition, der er knyttet til denne sag.
+- **Navn på sag:** Navnet på en eksisterende sag. Scriptet opretter en ny venteposition, der er knyttet til denne sag.
 
 - **Navnet på ventepositionen:** Navnet på den venteposition, som scriptet opretter og knytter til den angivne sag.
 
-- **Søgeforespørgsel til forespørgselsbaseret venteposition:** Du kan oprette en forespørgselsbaseret venteposition, så kun det indhold, der opfylder de angivne søgekriterier, er sat i venteposition. Hvis du vil placere alt indhold i venteposition, skal du blot trykke **på Enter** , når du bliver bedt om at angive en søgeforespørgsel.
+- **Søgeforespørgsel efter en forespørgselsbaseret venteposition:** Du kan oprette en forespørgselsbaseret venteposition, så det kun er det indhold, der opfylder de angivne søgekriterier, der sættes i venteposition. Hvis du vil placere alt indhold i venteposition, skal du blot trykke på **Enter** , når du bliver bedt om at angive en søgeforespørgsel.
 
-- **Aktivering af ventepositionen eller ej:** Du kan få scriptet til at aktivere ventepositionen, når det er oprettet, eller du kan få scriptet til at oprette ventepositionen uden at aktivere det. Hvis du ikke har scriptet aktiveret i venteposition, kan du aktivere det senere i Microsoft 365 Overholdelsescenter eller ved at køre følgende PowerShell-kommandoer:
+- **Aktivering af ventepositionen eller ej:** Du kan få scriptet til at aktivere ventepositionen, når det er oprettet, eller du kan få scriptet til at oprette ventepositionen uden at aktivere det. Hvis du ikke har aktiveret scriptet, kan du aktivere det senere i Microsoft 365 Overholdelsescenter eller ved at køre følgende PowerShell-kommandoer:
 
   ```powershell
   Set-CaseHoldPolicy -Identity <name of the hold> -Enabled $true
@@ -103,11 +103,11 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
   Set-CaseHoldRule -Identity <name of the hold> -Disabled $false
   ```
 
-- **Navnet på tekstfilen med** listen over brugere – navnet på tekstfilen fra trin 2, der indeholder listen over brugere, der skal føjes til ventepositionen. Hvis denne fil er placeret i den samme mappe som scriptet, skal du blot skrive navnet på filen (f.eksHoldUsers.txt). Hvis tekstfilen er i en anden mappe, skal du skrive hele filens stinavn.
+- **Navnet på tekstfilen med listen over brugere** – Navnet på tekstfilen fra trin 2, der indeholder listen over brugere, der skal føjes til ventepositionen. Hvis filen er placeret i samme mappe som scriptet, skal du blot skrive navnet på filen (f.eks. HoldUsers.txt). Hvis tekstfilen er i en anden mappe, skal du skrive filens fulde stinavn.
 
-Når du har indsamlet de oplysninger, som scriptet vil bede dig om, er det sidste trin at køre scriptet for at oprette den nye venteposition og føje brugere til den.
+Når du har indsamlet de oplysninger, som scriptet beder dig om, er det sidste trin at køre scriptet for at oprette den nye venteposition og føje brugere til den.
   
-1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnsuffiks af `.ps1`. F.eks. `AddUsersToHold.ps1`.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af suffikset filnavn til `.ps1`. For eksempel `AddUsersToHold.ps1`.
 
 ```powershell
 #script begin
@@ -273,9 +273,9 @@ Write-host "Script complete!" -foregroundColor Yellow
 #script end
 ```
 
-2. Åbn Scriptet på din lokale Windows PowerShell og gå til den mappe, hvor du gemte scriptet.
+2. Åbn Windows PowerShell på din lokale computer, og gå til den mappe, hvor du gemte scriptet.
 
-3. Kør scriptet. for eksempel:
+3. Kør scriptet. f.eks.:
 
    ```powershell
    .\AddUsersToHold.ps1
@@ -283,14 +283,14 @@ Write-host "Script complete!" -foregroundColor Yellow
 
 4. Angiv de oplysninger, som scriptet beder dig om.
 
-   Scriptet opretter forbindelse til Security & Compliance Center PowerShell og opretter derefter den nye venteposition i eDiscovery-sagen og tilføjer postkasser og OneDrive for Business til brugerne på listen. Du kan gå til sagen på **eDiscovery-siden** i Microsoft 365 Overholdelsescenter for at få vist den nye venteposition.
+   Scriptet opretter forbindelse til Security & Compliance Center PowerShell og opretter derefter den nye venteposition i eDiscovery-sagen og tilføjer postkasserne og OneDrive for Business for brugerne på listen. Du kan gå til sagen på **eDiscovery-siden** i Microsoft 365 Overholdelsescenter for at få vist den nye venteposition.
 
-Når scriptet er færdigt med at køre, oprettes følgende logfiler, og de gemmes i den mappe, hvor scriptet er placeret.
+Når scriptet er færdigt, oprettes følgende logfiler, og de gemmes i den mappe, hvor scriptet er placeret.
   
-- **LocationsOnHold.txt:** Indeholder en liste over postkasser og OneDrive for Business, som scriptet er sat i venteposition.
+- **LocationsOnHold.txt:** Indeholder en liste over postkasser og OneDrive for Business websteder, som scriptet har sat i venteposition.
 
-- **LocationsNotOnHold.txt:** Indeholder en liste over postkasser og OneDrive for Business websteder, som scriptet ikke placerede i venteposition. Hvis en bruger har en postkasse, men ikke et OneDrive for Business-websted, medtages brugeren på listen over OneDrive for Business-websteder, der ikke er sat i venteposition.
+- **LocationsNotOnHold.txt:** Indeholder en liste over postkasser og OneDrive for Business websteder, som scriptet ikke har sat i venteposition. Hvis en bruger har en postkasse, men ikke et OneDrive for Business websted, medtages brugeren på listen over OneDrive for Business websteder, der ikke er sat i venteposition.
 
-- **GetCaseHoldPolicy.txt:** Indeholder output fra **Get-CaseHoldPolicy-cmdlet'en** for den nye venteposition, som scriptet kørte efter oprettelse af den nye venteposition. De oplysninger, der returneres af denne cmdlet, omfatter en liste over brugere, hvis postkasser og OneDrive for Business er sat i venteposition, og om ventepositionen er aktiveret eller deaktiveret. 
+- **GetCaseHoldPolicy.txt:** Indeholder outputtet af **Get-CaseHoldPolicy-cmdlet'en** for den nye venteposition, som scriptet kørte efter oprettelse af den nye venteposition. De oplysninger, der returneres af denne cmdlet, indeholder en liste over brugere, hvis postkasser og OneDrive for Business websteder blev sat i venteposition, og om ventepositionen er aktiveret eller deaktiveret. 
 
-- **GetCaseHoldRule.txt:** Indeholder output fra **Get-CaseHoldRule-cmdlet'en** for den nye venteposition, som scriptet kørte efter oprettelse af den nye venteposition. De oplysninger, der returneres af denne cmdlet, omfatter søgeforespørgslen, hvis du har brugt scriptet til at oprette en forespørgselsbaseret venteposition.
+- **GetCaseHoldRule.txt:** Indeholder outputtet af **Get-CaseHoldRule-cmdlet'en** for den nye venteposition, som scriptet kørte efter oprettelse af den nye venteposition. De oplysninger, der returneres af denne cmdlet, omfatter søgeforespørgslen, hvis du brugte scriptet til at oprette en forespørgselsbaseret venteposition.
