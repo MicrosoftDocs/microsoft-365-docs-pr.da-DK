@@ -1,5 +1,5 @@
 ---
-title: En oversigt til LTI-apps
+title: En oversigt over Microsoft LTI-apps
 ms.author: heidip
 author: MicrosoftHeidi
 manager: serdars
@@ -12,68 +12,82 @@ search.appverid: ''
 ms.collection:
 - M365-modern-desktop
 ms.localizationpriority: ''
-description: Få mere at vide om Learning Tools Interoperability (LTI) Office-apps i M365, og hvordan de kan hjælpe undervisere, når de integrerer Office-apps i deres Learning Management System (LMS).
-ms.openlocfilehash: d6fbce11bf583a168f6b0d71f9aa15f144179515
-ms.sourcegitcommit: b71a8fdda2746f18fde2c94d188be89f9cab45f2
+description: Få mere at vide om Microsoft LTI-apps (Learning Tools Interoperability), og hvordan de kan hjælpe undervisere, når de integrerer Microsoft-apps i deres LMS (Learning Management System).
+ms.openlocfilehash: 8140b89b4bfeb26f64e8949f6d7835ca59645cbe
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/21/2021
-ms.locfileid: "63597992"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746755"
 ---
-# <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Integration af Microsoft-produkter med Learning Management System (LMS)
+# <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Integration af Microsoft-produkter med dit Learning Management System (LMS)
 
-- [OneDrive LTI med lærred](#onedrive-lti-with-canvas)
-- [Teams møder lti med lærred](#teams-meetings-lti-with-canvas)
-- [Teams klasser LTI](#teams-classes-lti)
+Microsoft Education og vores tredjepartspartnere forstår, at flowet for undervisning og læring altid krydser løsningsgrænser. Vi arbejder på at levere mere problemfrie oplevelser, så undervisere og elever kan fokusere på deres mål i stedet for at skulle jonglere med værktøjer. Vi integrerer Microsoft-produkter, uanset hvor undervisning og læring finder sted, herunder i og sammen med LMS (Learning Management Systems).
 
-Microsoft Education og vores tredjepartspartnere forstår, at strømmen af undervisning og læring uforanderligt går på tværs af løsningsgrænser. Vi arbejder på at give mere problemfrie oplevelser, holde undervisere og elever fokuseret på deres mål i stedet for at skulle jonglere med værktøjerne. Vi integrerer Microsoft-produkter, uanset hvor undervisning og læring forekommer, herunder i og sammen med Learning Management Systems (LMS). Vi har arbejdet sammen med vores LMS-partnere om at oprette en pakke med værktøjer ved hjælp af [standarden Learning Tools Interoperability (LTI),](https://www.imsglobal.org/activity/learning-tools-interoperability) der leverer det bedste fra Microsoft direkte til dit LMS.
+Vi har arbejdet sammen med vores LMS-partnere om at oprette en pakke med værktøjer ved hjælp af [LTI-standarden (Learning Tools Interoperability),](https://www.imsglobal.org/activity/learning-tools-interoperability) der giver dig det bedste fra Microsoft direkte i dit LMS.
 
-Disse værktøjer omfatter en ny OneDrive LTI-app, en ny Teams Meetings LTI-app og en ny LTI-app Teams Klassemøder. Disse nye værktøjer er meget sikre og fuldt kompatible med LTI 1.3- og LTI Advantage-standarder. LTI OneDrive appen giver undervisere og studerende mulighed for at hente OneDrive-skylager og Office 365-filer direkte i arbejdsprocesser for tildeling og oprettelse af indhold i en LMS. LTI Teams-appen Møder giver undervisere og studerende mulighed for at administrere, planlægge og få adgang til deres Teams-møder fra en mødehub i deres LMS. Med LTI-Teams Klasseliste kan undervisere oprette et team til deres kursus i deres LMS ved hjælp af LMS-kursuslisten med daglige opdateringer af deltagerlister. Studerende kan derefter få adgang til teamet direkte fra LMS. Vi er glade for at kunne tilbyde kunderne disse nye værktøjer og fortsætte med at forbedre vores løsninger i henhold til din feedback.
+Disse værktøjer omfatter:
 
-## <a name="onedrive-lti-with-canvas"></a>OneDrive LTI med lærred
+- [OneDrive LTI](#onedrive-lti-apps)
+- [Teams-møder LTI](#teams-meetings-lti)
+- [Teams-hold LTI](#teams-classes-lti)
 
-Få mere at vide Microsoft OneDrive brug af Learning dit Learning (LMS).
+Du kan få generelle oplysninger om administration af Microsoft OneLTI-værktøjer under [Administrer Microsoft OneLTI for alle LMS](manage-microsoft-one-lti.md).
 
-- **Bringer Microsoft Office 365 direkte ind i dine arbejdsprocesser**
+## <a name="onedrive-lti-apps"></a>OneDrive LTI-apps
 
-LTI Microsoft OneDrive appen integreres med din LMS for at hente Microsoft OneDrive og Microsoft Office 365 direkte i dine vigtigste arbejdsprocesser, som omfatter:
+Få mere at vide om brug af Microsoft OneDrive med dit Learning Management System (LMS).
 
-- Vedhæftning af ressourcer og organisering af indhold.
-- Starte samarbejdsdokumenter.
-- Oprettelse og karaktertildeling af opgaver.
+- **Giver Microsoft 365 direkte adgang til dine arbejdsprocesser**
 
-- **Secure and fully compliant with latest LTI standards**
+Microsoft OneDrive LTI-appen integreres med dit LMS for at få Microsoft OneDrive og Microsoft 365 direkte i dine vigtigste arbejdsprocesser, der omfatter:
 
-LTI Microsoft OneDrive appen er kompatibel med LTI 1.3 og LTI Advantage. Denne fordel giver en meget sikker og tæt integreret brugeroplevelse.
+- Tilknytning af ressourcer og organisering af indhold.
+- Starter samarbejdsdokumenter.
+- Oprettelse og karaktergivning af opgaver.
+
+- **Sikker og fuldt kompatibel med de nyeste LTI-standarder**
+
+Microsoft OneDrive LTI-appen er kompatibel med LTI 1.3 og LTI Advantage, hvilket giver en sikker og integreret brugeroplevelse.
 
 - **Moderne og omfattende brugeroplevelse**
 
-LTI Microsoft OneDrive appen giver dig det bedste fra Microsoft direkte til din LMS-oplevelse. Vi forbedrer den eksisterende Office 365-integration i din LMS ved at levere en mere moderne brugeroplevelse, komplet med en ny og udvidet Microsoft OneDrive-filvælger og mere omfattende redigeringsoplevelser til Office-filer. Microsoft vil også helt eje Microsoft OneDrive LTI-appen fremover, hvilket betyder, at du altid får den nyeste og bedste fra Microsoft automatisk.
+Vi forbedrer den eksisterende Microsoft 365-integration i dit LMS ved at levere en moderne brugeroplevelse, komplet med en udvidet Microsoft OneDrive-filvælger og omfattende redigeringsoplevelser til Office-filer.
 
-I Microsoft OneDrive LTI-appen kan du:
+Microsoft ejer OneDrive LTI-appen, hvilket betyder, at du automatisk altid får de seneste opdateringer fra Microsoft.
 
-- Vedhæft Office 365 filer, herunder Word-dokumenter, PowerPoint præsentationer og Excel fra RTF-editoren.
-- Distribuer Office 365 opgaver i skyen.
-- Få vist og organiser dine personlige og Microsoft OneDrive filer.
-- Opret samarbejder, hvor kursusmedlemmer kan samarbejde om delte dokumenter i realtid.
-- Få adgang til Microsoft OneDrive-konti, herunder personlige konti og skolekonti.
-- Integrer Office 365 filer med dine kursusmoduler.
-- Brug din Microsoft-konto til enkelt log på med din LMS.
+Med Microsoft OneDrive LTI-appen kan du:
 
-Se konfigurationstrinnene [i Integrer Microsoft OneDrive LTI med Lærred](onedrive-lti.md).
+- Vedhæft Microsoft 365-filer, herunder Word-dokumenter, PowerPoint-præsentationer og Excel fra RTF-editoren.
+- Distribuer Microsoft 365-cloudopgaver.
+- Få vist og organiser dine Microsoft OneDrive-filer, både personlige og fra kursus.
+- Opret samarbejde, hvor kursusmedlemmer kan arbejde sammen på delte dokumenter i realtid.
+- Få adgang til flere Microsoft OneDrive-konti, herunder personlige konti og skolekonti.
+- Integrer Microsoft 365-filer med dine kursusmoduler.
+- Brug din Microsoft-konto til enkeltlogon med dit LMS.
+
+Du kan se konfigurationstrin under:
+
+- [Microsoft OneDrive LTI med Lærred](onedrive-lti.md).
+- [Microsoft OneDrive LTI med Blackboard](onedrive-lti-blackboard.md).
 
 ## <a name="teams-lti-apps"></a>Teams LTI-apps
 
-### <a name="teams-meetings-lti-with-canvas"></a>Teams møder lti med lærred
+### <a name="teams-meetings-lti"></a>Teams-møder LTI
 
-Microsoft Teams møder LTI-appen hjælper administratorer med at inkorporere Teams møder i deres uddannelsesinstitutionens LMS-kursus. Undervisere og studerende kan se tidligere og kommende møder, planlægge individuelle eller tilbagevendende møder og deltage i teammøder relateret til kurset, alt sammen direkte fra deres LMS.
+LTI-appen til Microsoft Teams-møder inkorporerer Teams-møder i LMS-kurser. Undervisere og studerende kan få vist tidligere og kommende møder, planlægge individuelle eller tilbagevendende møder og deltage i teammøder, der er relateret til kurset, alt sammen fra deres LMS.
 
-Du kan se [konfigurationstrinnene i Microsoft Teams med Lærred](teams-meetings-with-canvas.md).
+Du kan se konfigurationstrin under:
 
-### <a name="teams-classes-lti"></a>Teams klasser LTI
+- [Microsoft Teams-møder med Lærred](teams-meetings-with-canvas.md).
+- [Microsoft Teams-møder med Moodle](teams-classes-meetings-with-moodle.md).
 
-LTI Microsoft Teams klasseklasse hjælper undervisere og studerende med at navigere mellem deres LMS og Teams. Brugere kan få adgang til deres klasseteams, der er knyttet til deres kursus, direkte fra deres LMS. Du kan finde konfigurationstrinnene nedenfor:
+### <a name="teams-classes-lti"></a>Teams-hold LTI
 
-- **Teams klasser LTI med Lærred** [Brug Microsoft Teams klasser med Lærred](teams-classes-with-canvas.md).
+LTI-appen til Microsoft Teams-hold hjælper undervisere og studerende med at navigere mellem deres LMS og Teams. Brugerne kan få adgang til deres holdteams, der er knyttet til deres kursus, i deres LMS.
 
-- **Teams klasser LTI med Blackboard** [Brug Microsoft Teams klasser med Blackboard Learn Ultra](teams-classes-with-blackboard.md)
+Du kan se konfigurationstrin under:
+
+- [Teams-hold LTI med Lærred](teams-classes-with-canvas.md).
+- [Teams-hold LTI med Blackboard](teams-classes-with-blackboard.md).
+- [Teams-hold LTI med Moodle](teams-classes-meetings-with-moodle.md).
