@@ -1,5 +1,5 @@
 ---
-title: Administrer indstillinger for enhedsadgang i Grundlæggende mobilitet og sikkerhed
+title: Administrer indstillinger for enhedsadgang i Basic Mobility og Security
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -17,33 +17,33 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Grundlæggende mobilitet og sikkerhed kan hjælpe dig med at sikre og administrere mobilenheder.
-ms.openlocfilehash: ef74aba7398867ad97748feba45647e7cf4aa609
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Basic Mobility og Security kan hjælpe dig med at sikre og administrere mobilenheder.
+ms.openlocfilehash: fbd8df7bff6ffa24d2a951d86a85d699e0b1699f
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591439"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781023"
 ---
-# <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Administrer indstillinger for enhedsadgang i Grundlæggende mobilitet og sikkerhed
+# <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Administrer indstillinger for enhedsadgang i Basic Mobility og Security
 
-Hvis du bruger Grundlæggende mobilitet og sikkerhed, kan der være enheder, som du ikke kan administrere med Grundlæggende mobilitet og Sikkerhed. Hvis det er ja, bør du blokere Exchange ActiveSync appadgang til mails Microsoft 365 til mobilenheder, der ikke understøttes af Grundlæggende mobilitet og sikkerhed. Dette er med til at sikre dine organisationsoplysninger på tværs af flere enheder.
+Hvis du bruger Basic Mobility og Security, kan der være enheder, som du ikke kan administrere med Basic Mobility og Security. Hvis det er tilfældet, skal du blokere Exchange ActiveSync appadgang til Microsoft 365 mail til mobilenheder, der ikke understøttes af Basic Mobility og Security. Dette hjælper med at sikre dine organisationsoplysninger på tværs af flere enheder.
 
-Benyt følgende fremgangsmåde:
+Brug disse trin:
 
-1. Log på Microsoft 365 med din globale administratorkonto.
+1. Log på for at Microsoft 365 med din globale administratorkonto.
 
-2. Skriv følgende i din browser: [https://protection.office.com](https://protection.office.com/)
+2. I din browser skal du skrive: [https://protection.office.com](https://protection.office.com/).
 
     > [!IMPORTANT]
-    > Hvis det er første gang, du bruger Basic Mobility and Security til Microsoft 365 Business Standard, skal du aktivere det her: [Aktivér Grundlæggende sikkerhed og mobilitet](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Når du har aktiveret det, skal du administrere dine enheder med [Office 365 Security & Compliance](https://protection.office.com/).
+    > Hvis det er første gang, du bruger Basic Mobility and Security til Microsoft 365 Business Standard, skal du aktivere den her: [Aktivér grundlæggende sikkerhed og mobilitet](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Når du har aktiveret den, kan du administrere dine enheder med [Office 365 Security & Compliance](https://protection.office.com/).
 
-3. Gå til Beskyttelse mod datatab > **politikker for** > enhedshåndtering **, og** vælg Administration af adgangsindstillinger for  **hele organisationen**.
+3. Gå til Forebyggelse af datatab > **EnhedshåndteringDevice-politikker** > , og vælg **Administrer indstillinger for enhedsadgang for hele organisationen**.
 
-4.  **VælgBlock**.
+4. Vælg **Blok**.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Afkrydsningsfeltet Adgangsblokering for grundlæggende mobilitet og sikkerhed.":::
+    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Afkrydsningsfeltet Grundlæggende mobilitet og sikkerhed blokerer adgang.":::
 
-5.  **VælgSave**.
+5. Vælg **Gem**.
 
-Hvis du vil vide, hvilke enheder Basic Mobility og Security understøtter, skal du  [seCapabilities of Basic Mobility and Security](capabilities.md).
+Hvis du vil vide mere om, hvilke enheder Basic Mobility og Security understøtter, skal du se [Egenskaber for grundlæggende mobilitet og sikkerhed](capabilities.md).

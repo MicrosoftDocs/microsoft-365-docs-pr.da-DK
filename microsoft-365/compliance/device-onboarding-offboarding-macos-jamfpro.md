@@ -1,5 +1,5 @@
 ---
-title: Onboard og offboard macOS-enheder i Microsoft 365 overholdelsesløsninger ved hjælp af SYLF Pro (preview)
+title: Onboarde og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -13,84 +13,85 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder Microsoft 365 overholdelsesløsninger ved hjælp af SYLF Pro (preview)
-ms.openlocfilehash: e66c9ba88e7c829af3695675a72e264da17e7dc4
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
+ms.openlocfilehash: 44e57e482c08b486563200010671b5c79329f7b2
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63606755"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783815"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview"></a>Onboard og offboard macOS-enheder i Microsoft 365 overholdelsesløsninger ved hjælp af SYLF Pro (preview)
+# <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview"></a>Onboarde og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
 
-Du kan bruge SYLF-Pro til at onboarde macOS-enheder Microsoft 365 løsninger til overholdelse af regler og standarder som f.eks. forebyggelse af datatab på slutpunkter.
+Du kan bruge JAMF-Pro til at onboarde macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder, f.eks. forebyggelse af datatab i Slutpunkt.
 
 > [!IMPORTANT]
-> Brug denne fremgangsmåde, hvis ***du ikke har*** Installeret Microsoft Defender for Endpoint (MDE) på dine macOS-enheder
+> Brug denne fremgangsmåde, hvis du ***ikke*** har installeret Microsoft Defender for Endpoint (MDE) på dine macOS-enheder
 
 **Gælder for:**
 
-- [Microsoft 365 forebyggelse af datatab på slutpunkter (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider-risikostyring](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Microsoft 365 Endpoint DLP (forebyggelse af datatab)](./endpoint-dlp-learn-about.md)
+- [Styring af insider-risiko](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Sørg for, at [dine macOS-enheder administreres via SYLF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD forbundet UPN) via JAMF Forbind eller Intune.
-- Installér browseren v95+ Edge på dine macOS-enheder 
+- Sørg for, at dine [macOS-enheder administreres via JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD joinforbundet UPN) via JAMF-Forbind eller Intune.
+- Installér v95+ Edge-browseren på dine macOS-enheder
 
-## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>Onboard-enheder til Microsoft 365 løsninger til overholdelse af regler og standarder ved hjælp af SYLF Pro
+## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>Onboarder enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro
 
 1. Du skal bruge disse filer til denne procedure.
 
-|Fil, der skal bruges til |Kilde |
-|---------|---------|
-|Onboardingpakke    |Downloadet fra **onboardingpakken til overholdelsesportalen**, *filnavnet DeviceComplianceOnboarding.plist* |
-|tilgængelighed |[accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig)|
-fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig)|
+|Filen skal bruges til|Kilde|
+|---|---|
+|Onboarding-pakke|Downloadet fra **onboardingpakken til overholdelsesportalen**, filnavn *DeviceComplianceOnboarding.plist*|
+|Tilgængelighed|[accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig)|
+fuld diskadgang|[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig)|
 |Netværksfilter| [netfilter.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig)
-|Systemudvidelser |[sysext.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/sysext.mobileconfig)
-|MDE-indstilling     |[schema.json](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/data_loss_prevention/schema.json)|
-|MAU-indstilling|[com.microsoft.autoupdate2.plist](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.plist)|
-|Installationspakke     |downloadet fra installationspakken **til overholdelsesportalen**, *filnavnet\* wdav.pkg*\* |
+|Systemudvidelser|[sysext.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/sysext.mobileconfig)
+|MDE-indstillinger|[schema.json](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/data_loss_prevention/schema.json)|
+|MAU-indstillinger|[com.microsoft.autoupdate2.plist](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.plist)|
+|Installationspakke|downloadet fra **installationspakken** til overholdelsesportalen, filnavn *\*wdav.pkg*\*|
 
 > [!TIP]
-> Du kan downloade *.mobileconfig-filerne* enkeltvis eller i [en enkelt kombineret fil,](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/combined/mdatp-nokext.mobileconfig) der indeholder:
+> Du kan downloade *.mobileconfig-filerne* enkeltvist eller i [en enkelt kombineret fil](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/combined/mdatp-nokext.mobileconfig) , der indeholder:
+>
 > - accessibility.mobileconfig
 > - fulldisk.mobileconfig
 > - netfilter.mobileconfig
 > - sysext.mobileconfig
 >
->Hvis nogen af disse individuelle filer opdateres, skal du enten hente den kombinerede fil igen eller den enkelt opdaterede fil enkeltvis.
+>Hvis nogen af disse individuelle filer opdateres, skal du enten downloade den kombinerede fil igen eller den enkelte opdaterede fil enkeltvist.
 
-Onboarding af en macOS-enhed til løsninger til overholdelse af regler og standarder er en proces i flere trin.
+Onboarding af en macOS-enhed i overholdelsesløsninger er en proces med fleresfaser.
 
 ### <a name="get-the-device-onboarding-package"></a>Hent onboardingpakken til enheden
 
-1. I **Overholdelsescenter** skal **du** **Indstillinger-onboarding** >  og vælge **Onboarding**.
- 
-1. Vælg macOS **for at vælge operativsystem for at starte** **onboardingprocessen**
- 
-1. **Udrulningsmetode** **vælger Administration/Microsoft Intune**
- 
-1. Vælg **Download onboardingpakke**
- 
-1. Udtræk indholdet af onboardingpakken til enheden. I mappen SYLF bør du kunne se filen *DeviceComplainceOnboarding.plist* .
+1. I **Compliance Center** skal **du åbne Indstillinger** >  **Device Onboarding** og vælge **Onboarding**.
 
-### <a name="create-a-jamf-pro-configuration-profile-for-the-onboarding-package"></a>Opret en SYLF-Pro konfigurationsprofil for onboardingpakken
+1. **Vælg macOS for Vælg operativsystem for at starte onboardingprocessen** 
 
-1. Opret en ny konfigurationsprofil i SYLF Pro. Se guide til [SYLF Pro administratorer](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
+1. Vælg **Mobile Enhedshåndtering/Microsoft Intune** for **installationsmetode**
+
+1. Vælg **Download onboarding-pakke**
+
+1. Udpak indholdet af enhedens onboardingpakke. I mappen JAMF kan du se filen *DeviceComplainceOnboarding.plist* .
+
+### <a name="create-a-jamf-pro-configuration-profile-for-the-onboarding-package"></a>Opret en JAMF-Pro konfigurationsprofil til onboardingpakken
+
+1. Opret en ny konfigurationsprofil i JAMF-Pro. Se [administratorvejledningen til JAMF-Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
     - Navn: `MDATP onboarding for macOS`
     - Beskrivelse: `MDATP EDR onboarding for macOS`
     - Kategori: `none`
     - Distributionsmetode: `install automatically`
     - Niveau: `computer level`
 
-2. Vælg Overfør og tilføj Pro > **af & AFSPILTEP** I  **PRO-konsollens brugerdefinerede indstillinger**. Brug denne værdi:
-    - Preference-domæne: `com.microsoft.wdav.atp`
+2. I JAMF-Pro konsollen > **Program & Brugerdefinerede indstillinger** skal du vælge **Upload** og derefter **tilføje**. Brug denne værdi:
+    - Præferencedomæne: `com.microsoft.wdav.atp`
 
-3. Vælg **Overfør** , og vælg onboardingfilen **DeviceComplianceOnboarding.plist**.
+3. Vælg **upload,** og vælg onboardingfilen **DeviceComplianceOnboarding.plist**.
 
-4. Vælg **fanen Omfang** .
+4. Vælg fanen **Område** .
 
 5. Vælg destinationscomputerne.
 
@@ -98,56 +99,55 @@ Onboarding af en macOS-enhed til løsninger til overholdelse af regler og standa
 
 7. Vælg **Udført**.
 
-### <a name="configure-preference-domain-using-the-jamf-pro-console"></a>Konfigurere præferencedomæne ved hjælp af SYLF PRO-konsollen
+### <a name="configure-preference-domain-using-the-jamf-pro-console"></a>Konfigurer domænet Indstillinger ved hjælp af JAMF PRO-konsollen
 
 > [!IMPORTANT]
-> Du skal bruge ***com.microsoft.wdav** _ som præferencedomæneværdi. Microsoft Defender til Slutpunkt bruger dette navn og _ *_com.microsoft.wdav.ext_** til at indlæse de administrerede indstillinger.
+> Du skal bruge ***com.microsoft.wdav** _ som værdien for præferencedomænet. Microsoft Defender for Endpoint bruger dette navn og _ *_com.microsoft.wdav.ext_** til at indlæse de administrerede indstillinger.
 
-1. Opret en ny konfigurationsprofil i SYLF Pro. Se guide til [SYLF Pro administratorer](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
+1. Opret en ny konfigurationsprofil i JAMF-Pro. Se [administratorvejledningen til JAMF-Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
     - Navn: `MDATP MDAV configuration settings`
     - Beskrivelse: Lad dette være tomt
     - Kategori: `none`
     - Distributionsmetode: `install automatically`
     - Niveau: `computer level`
 
-1. På fanen **Program & brugerdefineret Indstillinger** skal du vælge **Eksterne programmer**, vælge Tilføj og vælge **Brugerdefineret skema** for præferencedomænet. Brug denne værdi:
+1. På fanen **Program & Brugerdefineret Indstillinger** skal du vælge **Eksterne programmer**, vælge **Tilføj** og vælge **Brugerdefineret skema for præferencedomænet**. Brug denne værdi:
     - Præferencedomæne: `com.microsoft.wdav`
 
-1. Vælg **Tilføj skema** og **Upload** at overføre *filen schema.json*.
+1. Vælg **Tilføj skema**, og **Upload** for at overføre filen *schema.json*.
 
 1. Vælg **Gem**.
 
-1. Vælg **disse indstillinger under Egenskaber for** præferencedomæne
-    - Funktioner 
-        - Brug systemudvidelser: `enabled` - påkrævet til netværksudvidelser på Catalina
+1. Under **Indstillinger for domæneegenskaber** skal du vælge disse indstillinger
+    - Funktioner
+        - Brug systemudvidelser: `enabled` – påkrævet til netværksudvidelser på Catalina
         - Brug forebyggelse af datatab: `enabled`
-    - Antivirusprogram > passiv tilstand: `true|false`. Brug `true`, hvis du kun installerer DLP. Brug `false` eller tildel ikke en værdi, hvis du installerer DLP og Microsoft Defender for Endpoint (MDE).
+    - Antivirusprogram > passiv tilstand: `true|false`. Bruges `true`kun, hvis der installeres DLP. Brug `false` eller tildel ikke en værdi, hvis du installerer DLP og Microsoft Defender for Endpoint (MDE).
 
-1. Vælg **fanen** Omfang.
+1. Vælg fanen **Område** .
 
-1. Vælg de grupper, du vil installere denne konfigurationsprofil på.
+1. Vælg de grupper, denne konfigurationsprofil skal installeres i.
 
-1. Vælg **Gem**. 
+1. Vælg **Gem**.
 
+### <a name="create-and-deploy-a-configuration-profile-for-microsoft-autoupdate-mau"></a>Opret og udrul en konfigurationsprofil til Microsoft Automatiske opdateringer (MAU)
 
-### <a name="create-and-deploy-a-configuration-profile-for-microsoft-autoupdate-mau"></a>Oprette og installere en konfigurationsprofil for Microsoft Automatiske opdateringer (MAU)
-
-1. Opret en SYLF-Pro konfigurationsfil ved hjælp **af com.microsoft.autoupdate2.plist**. Se guide til [SYLF Pro administratorer](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
+1. Opret en JAMF-Pro konfigurationsfil ved hjælp af **com.microsoft.autoupdate2.plist**. Se [administratorvejledningen til JAMF-Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
     - Navn: `MDATP MDAV MAU settings`
     - Beskrivelse: `Microsoft AutoUPdate settings for MDATP for macOS`
     - Kategori: `none`
     - Distributionsmetode: `install automatically`
     - Niveau: `computer level`
 
-1. I **Program & Brugerdefineret Indstillinger** du **Upload** og **Tilføj**.
+1. I **& Brugerdefineret Indstillinger** skal du vælge **Upload** og **Tilføj**.
 
-1. I **Indstillinger Domæne** skal du `com.microsoft.autoupdate2` indtaste og derefter **Upload**.
+1. Angiv **i Indstillinger Domæne**, `com.microsoft.autoupdate2` og vælg derefter **Upload**.
 
 1. Vælg filen **com.microsoft.autoupdate2.plist** .
 
 1. Vælg **Gem**.
 
-1. Vælg **fanen** Omfang.
+1. Vælg fanen **Område** .
 
 1. Vælg destinationscomputerne.
 
@@ -155,29 +155,28 @@ Onboarding af en macOS-enhed til løsninger til overholdelse af regler og standa
 
 1. Vælg **Udført**.
 
+### <a name="create-and-deploy-a-configuration-profile-for-grant-full-disk-access"></a>Opret og installér en konfigurationsprofil for Tildel fuld diskadgang
 
-### <a name="create-and-deploy-a-configuration-profile-for-grant-full-disk-access"></a>Opret og implementer en konfigurationsprofil for At tildele fuld diskadgang
+1. Brug filen **fulldisk.mobileconfig** .
 
-1. Brug **filen fulldisk.mobileconfig** .
+1. Upload filen **fulldisk.mobileconfig** til JAMF. Se [Udrulning af brugerdefinerede konfigurationsprofiler ved hjælp af JAMF-Pro](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html).
 
-1. Upload **filen fulldisk.mobileconfig** til JAMF. Se Implementering [af brugerdefinerede konfigurationsprofiler ved hjælp af SYLF Pro](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html).
+### <a name="create-and-deploy-a-configuration-profile-for-system-extensions"></a>Opret og udrul en konfigurationsprofil til systemudvidelser
 
-### <a name="create-and-deploy-a-configuration-profile-for-system-extensions"></a>Oprette og installere en konfigurationsprofil for systemudvidelser
-
-1. Opret en SYLF Pro-konfigurationsfil ved hjælp af procedurerne i [JAMF Pro vejledning for administratorer](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
+1. Opret en JAMF-Pro konfigurationsfil ved hjælp af procedurerne i [administratorvejledningen til JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/). Brug disse værdier:
     - Navn: `MDATP MDAV System Extensions`
     - Beskrivelse: `MDATP system extensions`
     - Kategori: `none`
     - Distributionsmetode: `install automatically`
     - Niveau: `computer level`
 
-1. I **profilen for** Systemudvidelser skal du angive disse værdier:
-    - Visningsnavn: `Microsoft Corp. System Extensions`
+1. Angiv følgende værdier i **profilen Systemudvidelser** :
+    - Vist navn: `Microsoft Corp. System Extensions`
     - Systemudvidelsestyper: `Allowed System Extensions`
-    - Team-id: `UBF8T346G9`
-    - Tilladte systemudvidelser: `com.microsoft.wdav.epsext`og `com.microsoft.wdav.netext`
+    - Gruppe-id: `UBF8T346G9`
+    - Tilladte systemudvidelser: `com.microsoft.wdav.epsext`, og `com.microsoft.wdav.netext`
 
-1. Vælg **fanen** Omfang.
+1. Vælg fanen **Område** .
 
 1. Vælg destinationscomputerne.
 
@@ -185,68 +184,67 @@ Onboarding af en macOS-enhed til løsninger til overholdelse af regler og standa
 
 1. Vælg **Udført**.
 
-### <a name="configure-network-extension"></a>Konfigurere netværksudvidelse
+### <a name="configure-network-extension"></a>Konfigurer netværksudvidelse
 
-1.  Brug filen **netfilter.mobileconfig**, som du hentede fra GitHub.
+1. Brug den **netfilter.mobileconfig-fil**, du har downloadet fra GitHub.
 
-2.  Upload til SYLF som beskrevet i [Udrul brugerdefinerede konfigurationsprofiler ved hjælp af Sylf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+2. Upload til JAMF som beskrevet i [Udrulning af brugerdefinerede konfigurationsprofiler ved hjælp af Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-### <a name="grant-accessibility-access-to-dlp"></a>Giv tilgængelighedsadgang til DLP
+### <a name="grant-accessibility-access-to-dlp"></a>Tildel tilgængelighedsadgang til DLP
 
-1. Brug filen **accessibility.mobileconfig**, som du hentede fra GitHub.
+1. Brug den **accessibility.mobileconfig-fil**, du har downloadet fra GitHub.
 
-2.  Upload til SYLF som beskrevet i [Udrul brugerdefinerede konfigurationsprofiler ved hjælp af Sylf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+2. Upload til JAMF som beskrevet i [Udrulning af brugerdefinerede konfigurationsprofiler ved hjælp af Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
 ### <a name="get-the-installation-package"></a>Hent installationspakken
 
-1. I **Overholdelsescenter** skal **du** **Indstillinger-onboarding** >  og vælge **Onboarding**.
- 
-1. Vælg macOS **for at vælge operativsystem for at starte** **onboardingprocessen**
- 
-1. **Udrulningsmetode** **vælger Administration/Microsoft Intune**
- 
-1. Vælg **Download installationspakke**. Dette giver dig *filen wdav.pkg* .
+1. I **Compliance Center** skal **du åbne Indstillinger** >  **Device Onboarding** og vælge **Onboarding**.
 
+1. **Vælg macOS for Vælg operativsystem for at starte onboardingprocessen** 
 
-### <a name="deploy-the-installation-package"></a>Installér installationspakken
+1. Vælg **Mobile Enhedshåndtering/Microsoft Intune** for **installationsmetode**
 
-1. Gå til det sted, hvor du gemte `wdav.pkg` filen.
+1. Vælg **Download installationspakke**. Dette giver dig filen *wdav.pkg* .
 
-1. Åbn SYLEF Pro dashboardet.
+### <a name="deploy-the-installation-package"></a>Installer installationspakken
 
-1. Vælg din computer, og klik på tandhjulet øverst, og vælg derefter **Computeradministration**.
+1. Naviger til det placering, hvor du gemte `wdav.pkg` filen.
 
-1. I **Pakker skal** du **vælge + Ny**. Angiv disse oplysninger:
-    - Visningsnavn: Lad feltet være tomt, da den nulstilles, når du vælger .pkg-filen.
+1. Åbn JAMF-dashboardet Pro.
+
+1. Vælg computeren, og klik på tandhjulet øverst, og vælg derefter **Computeradministration**.
+
+1. I **Pakker** skal du vælge **+Ny**. Angiv disse oplysninger:
+    - Vist navn: Lad argumentet være tomt, da det nulstilles, når du vælger .pkg-filen.
     - Kategori: Ingen (standard)
     - Filnavn: Vælg fil, i dette tilfælde `wdav.pkg` filen.
 
-1. Vælg **Åbn**. Angiv:
-    - **Visningsnavn**: `Microsoft Endpoint Technology`
+1. Vælg **Åbn**. Sæt:
+    - **Vist navn**: `Microsoft Endpoint Technology`
     - **Manifestfil**: ikke påkrævet
-    - **Fanen Indstillinger**: Lad standardværdierne være
-    - **Fanen Begrænsninger**: Lad standardværdierne være
+    - **Fanen Indstillinger**: Behold standardværdier
+    - **Fanen Begrænsninger**: Behold standardværdier
 
-1. Vælg **Gem**. Dette uploader pakken til SYLF Pro.
+1. Vælg **Gem**. Dette uploader pakken til JAMF-Pro.
 
-1. Åbn **siden** Politikker.
+1. Åbn siden **Politikker** .
 
 1. Vælg **+Ny** for at oprette en ny politik.
 
 1. Angiv disse værdier
-    - **Visningsnavn**: `MDATP Onboarding200329 v100.86.92 or later`
+    - **Vist navn**: `MDATP Onboarding200329 v100.86.92 or later`
 
 1. Vælg **Tilbagevendende indtjekning**.
 
 1. Vælg **Gem**.
 
-1. Vælg **PackagesConfigure** > .
+1. Vælg **PakkerKonfigurer** > .
 
 1. Vælg **Tilføj**.
 
-1. Vælg **Gem**. 
+1. Vælg **Gem**.
 
-1. Vælg **fanen** Omfang.
+1. Vælg fanen **Område** .
 
 1. Vælg destinationscomputerne.
 
@@ -256,28 +254,28 @@ Onboarding af en macOS-enhed til løsninger til overholdelse af regler og standa
 
 1. Vælg **Udført**.
 
-### <a name="check-the-macos-device"></a>Kontrollér macOS-enheden 
+### <a name="check-the-macos-device"></a>Kontrollér macOS-enheden
 
 1. Genstart macOS-enheden.
 
 1. Åbn **SystemindstillingerProfiler** > .
 
-1. Du bør se:
+1. Du burde kunne se:
     - Accessiblity
     - Fuld diskadgang
     - MAU
-    - MDATP Onboarding
+    - MDATP-onboarding
     - MDE-indstillinger
     - Administrationsprofil
     - Netværksfilter
-    - Systemudvidelsesprofil
+    - Profil for systemudvidelse
 
-## <a name="offboard-macos-devices-using-jamf-pro"></a>Offboard macOS-enheder, der bruger SYLF Pro
+## <a name="offboard-macos-devices-using-jamf-pro"></a>MacOS-enheder, der bruger JAMF-Pro
 
 1. Fjern programmet (hvis det ikke bruger MDE)
-    1. Se JAMF Pro Docs - Pakkeinstallation - [JAMF Pro-administratorer vejledning](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) Pro Administratorvejledning
+    1. Se JAMF Pro Docs – Package Deployment – [JAMF Pro administratorvejledningJamf](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) Pro Administratorvejledning
 
-1. Genstart macOS-enheden – nogle programmer kan miste udskrivningsfunktionalitet, indtil de genstartes
+1. Genstart macOS-enheden – nogle programmer kan miste udskrivningsfunktionaliteten, indtil de genstartes
 
 > [!IMPORTANT]
-> Offboarding får enheden til at holde op med at sende sensordata til portalen, men data fra enheden, herunder reference til eventuelle beskeder, enheden har haft, bevares i op til seks måneder.
+> Offboarding medfører, at enheden stopper med at sende sensordata til portalen, men data fra enheden, herunder reference til eventuelle beskeder, den har haft, bevares i op til seks måneder.

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3103ab5332045da58609b048d637da30d287ed10
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 0a6f53b0723d7f3e9b4761aa83238e618d947e55
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666564"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783419"
 ---
 # <a name="troubleshooting-issues-on-microsoft-defender-for-endpoint-on-android"></a>Fejlfinding af problemer på Microsoft Defender for Endpoint på Android
 
@@ -144,24 +144,25 @@ Gå tilbage til Microsoft Defender for Endpoint onboardingskærm, vælg **Tillad
 
 Hvis en bruger står over for et problem, der ikke allerede er behandlet i ovenstående afsnit, eller som ikke kan løse ved hjælp af de angivne trin, kan brugeren give **feedback i appen** sammen med **diagnosticeringsdata**. Vores team kan derefter undersøge loggene for at levere den rigtige løsning. Brugerne kan følge disse trin for at gøre det samme:
 
-1.  Åbn **MDE-programmet** på din enhed, og klik på **profilikonet** i øverste venstre hjørne.
+1. Åbn **MDE-programmet** på din enhed, og klik på **profilikonet** i øverste venstre hjørne.
 
     :::image type="content" source="images/select-profile-icon-1.jpg" alt-text="Profilikonet på Microsoft Defender for Endpoint-portalen" lightbox="images/select-profile-icon-1.jpg":::
 
-2.  Vælg "Hjælp & feedback".
+2. Vælg "Hjælp & feedback".
 
     :::image type="content" source="images/selecthelpandfeedback2.png" alt-text="Indstillingen Hjælp & feedback, der kan vælges på portalen Microsoft Defender for Endpoint" lightbox="images/selecthelpandfeedback2.png":::
 
-3.  Vælg "Send feedback til Microsoft".
+3. Vælg "Send feedback til Microsoft".
 
     :::image type="content" alt-text="Vælg Send feedback til Microsoft" source="images/send-feedback-to-microsoft-3.jpg":::
 
-4.  Vælg mellem de angivne indstillinger. Hvis du vil rapportere et problem, skal du vælge "Jeg vil rapportere et problem".
+4. Vælg mellem de angivne indstillinger. Hvis du vil rapportere et problem, skal du vælge "Jeg vil rapportere et problem".
 
     :::image type="content" source="images/report-issue-4.jpg" alt-text="Indstillingen Jeg vil rapportere et problem" lightbox="images/report-issue-4.jpg":::
 
-5.  Angiv oplysninger om det problem, du står over for, og kontrollér "Send diagnosticeringsdata". Vi anbefaler, at du markerer "Medtag din mailadresse", så teamet kan kontakte dig med en løsning eller en opfølgning.
+5. Angiv oplysninger om det problem, du står over for, og kontrollér "Send diagnosticeringsdata". Vi anbefaler, at du markerer "Medtag din mailadresse", så teamet kan kontakte dig med en løsning eller en opfølgning.
 
     :::image type="content" source="images/finalsubmit5.png" alt-text="Den rude, hvor du kan tilføje detaljer og vedhæfte diagnosticeringsdata" lightbox="images/finalsubmit5.png":::
 
-6.  Klik på "Send" for at sende feedbacken.
+6. Klik på "Send" for at sende feedbacken.
+

@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 49ee543e68ed9f54b0009efeb90bddc9de29c091
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 1eee7e482423e2292e9fe9db42333db481d44175
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761389"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783751"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
@@ -45,7 +45,7 @@ Denne artikel indeholder oplysninger om regler for reduktion af angreb:
 
 ## <a name="supported-operating-systems"></a>Understøttede operativsystemer
 
-I følgende tabel vises de understøttede operativsystemer til regler, der i øjeblikket er offentligt tilgængelige. Reglerne er angivet i alfabetisk rækkefølge.
+I følgende tabel vises de understøttede operativsystemer til regler, der i øjeblikket er offentligt tilgængelige. Reglerne vises alfabetisk i denne tabel.
 
 > [!Note]
 >
@@ -53,26 +53,26 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 >
 > Regler for reduktion af angrebsoverfladen i Windows&nbsp; Server2012R2&nbsp;&nbsp; og Windows&nbsp; Server2016&nbsp; er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Regelnavn|&nbsp;Windows 10 | &nbsp;Windows Server 2019 | &nbsp;Windows Server | &nbsp;Windows Server 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server 2012R2&nbsp;<sup> [[1, 2](#fn1)]<sup></sup> |
+| Regelnavn|Windows 10 | Windows Server 2019 | &nbsp;Windows Server | Windows Server 2016 <sup>[[1, 2](#fn1)]<sup></sup> | Windows Server 2012&nbsp; R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig kanal) eller nyere |  Y | Y |
-| [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y version 1809 eller nyere | Y | Y |  Y | Y |
-| [Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y | Y | Y |  Y | Y |
-| [Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y <br> version 1803 eller nyere | Y  | Y |  Y | Y |
+| [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig kanal) eller nyere | Y | Y |
+| [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y version 1809 eller nyere | Y | Y | Y | Y |
+| [Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y | Y | Y | Y | Y |
+| [Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y <br> version 1803 eller nyere | Y | Y | Y | Y |
 | [Bloker eksekverbart indhold fra mailklient og webmail](#block-executable-content-from-email-client-and-webmail) | Y | Y | Y | Y | Y |
-| [Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | Y <br> version 1803 eller nyere | Y | Y |  Y | Y |
-| [Bloker udførelse af potentielt slørede scripts](#block-execution-of-potentially-obfuscated-scripts) | Y | Y  | Y | Y | Y |
-| [Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Y | Y | Y  | N | N |
+| [Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | Y <br> version 1803 eller nyere | Y | Y | Y | Y |
+| [Bloker udførelse af potentielt slørede scripts](#block-execution-of-potentially-obfuscated-scripts) | Y | Y | Y | Y | Y |
+| [Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Y | Y | Y | N | N |
 | [Bloker Office programmer, så de ikke kan oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) | Y | Y | Y | Y | Y |
-| [Bloker Office programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  | Y | Y  | Y |  Y | Y |
+| [Bloker Office programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  | Y | Y | Y | Y | Y |
 | [Bloker Office kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) | Y | Y | Y | Y | Y |
-| [Bloker vedholdenhed via WMI-hændelsesabonnement](#block-persistence-through-wmi-event-subscription) <br> \*_Fil- og mappeudeladelser understøttes ikke._ | Y <br> version 1903 (build 18362) eller nyere | Y | Y <br> version 1903 (build 18362) eller nyere |  N | N |
-| [Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y <br> version 1803 eller nyere | Y | Y  |  Y | Y |
-| [Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y |  Y | Y |
+| [Bloker vedholdenhed via WMI-hændelsesabonnement](#block-persistence-through-wmi-event-subscription) <br> \*_Fil- og mappeudeladelser understøttes ikke._ | Y <br> version 1903 (build 18362) eller nyere | Y | Y <br> version 1903 (build 18362) eller nyere | N | N |
+| [Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y <br> version 1803 eller nyere | Y | Y | Y | Y |
+| [Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y | Y | Y |
 | [Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) | Y | Y | Y | N | N |
 | [Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 eller nyere | Y | Y | Y | Y |
 
-(<a id="fn1">1</a>) Refererer til den moderne, samlede løsning til Windows Server 2012 og 2016. Du kan finde flere oplysninger under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
+(<a id="fn1">1</a>) Refererer til den moderne samlede løsning til Windows Server 2012 og 2016. Du kan finde flere oplysninger under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
 
 (<a id="fn1">2</a>) For Windows&nbsp; Server 2016 og Windows&nbsp; Server 2012R2&nbsp; er den version af Microsoft Endpoint Configuration Manager, der som minimum kræves, version 2111.
 

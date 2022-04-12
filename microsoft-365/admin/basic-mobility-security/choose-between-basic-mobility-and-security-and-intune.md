@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility and Security er en del af Microsoft 365 planer.
-ms.openlocfilehash: 0c1c61181d7e8bd5eb0ee000e29285c32a454692
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 36190be6345188503e7ba5147b72918a342aba73
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713839"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781177"
 ---
 # <a name="choose-between-basic-mobility-and-security-or-intune"></a>Vælg mellem grundlæggende mobilitet og sikkerhed eller Intune
 
@@ -86,20 +86,20 @@ Grundlæggende handlinger i forbindelse med mobilitet og sikkerhed omfatter tilb
 Med Intune har du følgende handlinger:
 
 - [Autopilotnulstilling](/mem/autopilot/windows-autopilot-reset) (kun Windows)
-- [Bitlocker-nøglegendannelse](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6)  (kun Windows)
+- [Bitlocker-nøglegendannelse](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6) (kun Windows)
 - [Brug sletning, tilbagetrækning eller manuel framelding af enheden](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal)
-- [Deaktiver aktiveringslås](/mem/intune/remote-actions/device-activation-lock-disable)  (kun iOS)
-- [Ny start](/mem/intune/remote-actions/device-fresh-start)  (kun Windows)
-- [Fuld scanning](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)  (kun Windows 10)
-- [Find enhed](/mem/intune/remote-actions/device-locate)  (kun iOS)
-- [Mistet tilstand](/mem/intune/remote-actions/device-lost-mode)  (kun iOS)- [Hurtig scanning](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) (kun Windows 10)
+- [Deaktiver aktiveringslås](/mem/intune/remote-actions/device-activation-lock-disable) (kun iOS)
+- [Frisk start](/mem/intune/remote-actions/device-fresh-start) (kun Windows)
+- [Fuld scanning](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) (kun Windows 10)
+- [Find enhed](/mem/intune/remote-actions/device-locate) (kun iOS)
+- [Mistet tilstand](/mem/intune/remote-actions/device-lost-mode) (kun iOS)- [Hurtig scanning](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) (kun Windows 10)
 - [Fjernstyring til Android](/mem/intune/remote-actions/teamviewer-support)
 - [Fjernlås](/mem/intune/remote-actions/device-remote-lock)
 - [Omdøb enhed](/mem/intune/remote-actions/device-rename)
-- [Nulstil](/mem/intune/remote-actions/device-passcode-reset) [adgangskodegenstart](/mem/intune/remote-actions/device-restart)  (kun Windows)
+- [Nulstil](/mem/intune/remote-actions/device-passcode-reset) [adgangskodegenstart](/mem/intune/remote-actions/device-restart) (kun Windows)
 - [Opdater Windows Defender Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates) (kun Windows)
 - [Windows 10 nulstilling af pinkode](/windows/security/identity-protection/hello-for-business/hello-feature-pin-reset) (kun Windows)
-- [Send brugerdefinerede meddelelser](/mem/intune/remote-actions/custom-notifications#send-a-custom-notification-to-a-single-device)  (Android, iOS, iPad OS)
+- [Send brugerdefinerede meddelelser](/mem/intune/remote-actions/custom-notifications#send-a-custom-notification-to-a-single-device) (Android, iOS, iPad OS)
 - [Synkroniser enhed](/mem/intune/remote-actions/device-sync)
 
 Du kan få flere oplysninger om Intune handlinger [i dokumentationen til Microsoft Intune](/mem/intune/).

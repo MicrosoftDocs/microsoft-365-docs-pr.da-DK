@@ -1,5 +1,5 @@
 ---
-title: Slå Grundlæggende mobilitet og sikkerhed fra
+title: Slå Basic Mobility og Security fra
 f1.keywords: NOCSH
 ms.author: kwekua
 author: kwekua
@@ -14,45 +14,45 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Fjern grupper eller politikker for at deaktivere Grundlæggende mobilitet og sikkerhed.
-ms.openlocfilehash: ff3fe72e1ca3a6445aa29ac18404aae139a70f8a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c3c82c040e688977a68e06639e87c8f733bc8c38
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63594307"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780759"
 ---
-# <a name="turn-off-basic-mobility-and-security"></a>Slå Grundlæggende mobilitet og sikkerhed fra
+# <a name="turn-off-basic-mobility-and-security"></a>Slå Basic Mobility og Security fra
 
-Hvis du effektivt vil deaktivere Standardmobilitet og sikkerhed, skal du fjerne grupper af personer, der er defineret af sikkerhedsgrupper, fra politikkerne for enhedsadministration eller fjerne selve politikkerne.
+Hvis du vil slå Grundlæggende mobilitet og sikkerhed fra effektivt, skal du fjerne grupper af personer, der er defineret af sikkerhedsgrupper, fra politikkerne for enhedshåndtering eller fjerne selve politikkerne.
 
 - Fjern grupper af brugere ved at fjerne brugersikkerhedsgrupper fra de enhedspolitikker, du har oprettet.
 
-- Deaktiver Grundlæggende mobilitet og sikkerhed for alle ved at fjerne alle politikker for standardmobilitet og sikkerhedsenhed.
+- Deaktiver Grundlæggende mobilitet og sikkerhed for alle ved at fjerne alle politikker for grundlæggende mobilitet og sikkerhedsenheder.
 
-Disse indstillinger fjerner håndhævelsen af Grundlæggende mobilitet og sikkerhed for enheder i organisationen. Desværre kan du ikke bare fjerne "unprovision" Basic Mobility and Security, når du har konfigureret den.
+Disse indstillinger fjerner Basic Mobility og Security-håndhævelse for enheder i din organisation. Du kan desværre ikke blot "annullere klargøringen" Basic Mobility og Security, når du har konfigureret den.
 
 > [!IMPORTANT]
-> Vær opmærksom på virkningen på brugernes enheder, når du fjerner brugersikkerhedsgrupper fra politikker eller fjerner selve politikkerne. Eksempelvis kan mailprofiler og cachelagrede mails blive fjernet afhængigt af enheden. Du kan få mere at vide   [underHvad sker der, når du sletter en politik eller fjerner en bruger fra politikken?](../../admin/basic-mobility-security/create-device-security-policies.md)
+> Vær opmærksom på indvirkningen på brugernes enheder, når du fjerner brugersikkerhedsgrupper fra politikker eller fjerner selve politikkerne. Mailprofiler og cachelagrede mails kan f.eks. blive fjernet, afhængigt af enheden. Du kan finde flere oplysninger under [Hvad sker der, når du sletter en politik eller fjerner en bruger fra politikken?](../../admin/basic-mobility-security/create-device-security-policies.md)
 
-## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Fjern brugersikkerhedsgrupper fra politikkerne Standardmobilitet og Sikkerhedsenhed
+## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Fjern brugersikkerhedsgrupper fra politikker for grundlæggende mobilitet og sikkerhedsenheder
 
-1. I din browsertype: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. I din browser skal du skrive: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
 
 2. Vælg en enhedspolitik, og vælg **Rediger politik**.
 
-3. På  **installationssiden**  skal du vælge **Fjern**.
+3. Vælg **Fjern** på siden **Installation**.
 
-4. Vælg   **en sikkerhedsgruppe** under Grupper.
+4. Under **Grupper** skal du vælge en sikkerhedsgruppe.
 
-5. Vælg  **Fjern**, og vælg **Gem**.
+5. Vælg **Fjern**, og vælg **Gem**.
 
-## <a name="remove-basic-mobility-and-security-device-policies"></a>Fjern politikkerne for standardmobilitet og -sikkerhed
+## <a name="remove-basic-mobility-and-security-device-policies"></a>Fjern enhedspolitikker for grundlæggende mobilitet og sikkerhed
 
-1. I din browsertype: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. I din browser skal du skrive: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
 
-2. Vælg en enhedspolitik, og vælg derefter  **Slet politik**.
+2. Vælg en enhedspolitik, og vælg derefter **Slet politik**.
 
-3. I dialogboksen Advarsel skal du vælge **Ja**.
+3. Vælg **Ja** i dialogboksen Advarsel.
 
 > [!NOTE]
-> Du kan finde flere trin til at fjerne blokeringen af enheder, hvis organisationens enheder stadig er i blokeret tilstand, i blogindlægget [Fjerne adgangskontrol fra Mobilenhedshåndtering til Office 365](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Removing-Access-Control-from-Mobile-Device-Management-for-Office/ba-p/279934).
+> Du kan finde flere trin til at fjerne blokeringen af enheder, hvis dine organisationsenheder stadig er i blokeret tilstand, i blogindlægget [Fjernelse af Access Control fra Mobilenhedshåndtering til Office 365](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Removing-Access-Control-from-Mobile-Device-Management-for-Office/ba-p/279934).

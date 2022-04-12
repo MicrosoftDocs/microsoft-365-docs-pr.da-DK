@@ -21,12 +21,12 @@ ms.date: 04/07/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: a9092ebb941806324646fffd86dd00b54fa87cc6
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: ccf72b1f7e5625f3b3b9599a50d734a7316b8659
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714961"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780253"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Beskyt sikkerhedsindstillinger med manipulationsbeskyttelse
 
@@ -48,7 +48,8 @@ Tamperbeskyttelse er tilgængelig for enheder, der kører en af følgende versio
 - Windows Server 2012 R2
 
 > [!NOTE]
-> Manipulationsbeskyttelse i Windows Server 2012 R2 er tilgængelig for enheder, der er onboardet til Microsoft Defender for Endpoint ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Tamper-beskyttelse i Windows Server 2012 R2 er tilgængelig til enheder, der er onboardet ved hjælp af den moderne unified løsningspakke. Du kan få flere oplysninger under [Onboard Windows-servere til tjenesten Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
+
 
 ## <a name="overview"></a>Oversigt
 
@@ -174,7 +175,7 @@ Hvis din organisation bruger Microsoft Endpoint Manager (MEM), kan du slå ændr
 Hvis du bruger [version 2006 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006), kan du administrere indstillinger for beskyttelse af Windows 10, Windows 10 Enterprise flere sessioner, Windows 11, Windows 11 Enterprise flere sessioner Windows  Server 2012 R2, Windows Server 2016, Windows Server 2019 og Windows Server 2022 ved hjælp af en metode, der kaldes *lejertilknyt.* Vedhæfting af lejer kan du synkronisere dine Configuration Manager enheder, der kun er i det lokale miljø, til Microsoft Endpoint Manager Administration og derefter levere politikker for konfiguration af slutpunktssikkerhed til samlinger i det lokale miljø & enheder.
 
 > [!NOTE]
-> Proceduren kan bruges til at udvide beskyttelse mod manipulation til enheder, der kører Windows 10, Windows 10 Enterprise multisession, Windows 11, Windows 11 Enterprise multisession, Windows Server 2019 og Windows Server 2022. Sørg for at gennemse forudsætningerne og andre oplysninger i de ressourcer, der er nævnt i denne procedure.
+> Proceduren kan bruges til at udvide beskyttelse mod manipulation til enheder, der kører Windows 10, Windows 10 Enterprise multisession, Windows 11, Windows 11 Enterprise multisession, Windows Server 2019 og Windows Server 2022. Sørg for at gennemse forudsætningerne og andre oplysninger i de ressourcer, der er nævnt i denne procedure. For Windows Server 2012 R2 kræves den moderne, samlede løsning [version 2203 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
 
 1. Konfigurer tilknytning af lejer. Du kan få mere at vide under [Kom i gang: Opret og installer sikkerhedspolitikker for slutpunkter fra Administration](/mem/configmgr/tenant-attach/endpoint-security-get-started).
 
@@ -211,9 +212,9 @@ Her er, hvad du kan se i appen Windows Sikkerhed:
 
 3. Indstil **Tamper Protection** til **Til** eller **Fra**.
 
-## <a name="are-you-using-windows-server-2016-or-windows-version-1709-1803-or-1809"></a>Bruger du Windows Server 2016 eller Windows version 1709, 1803 eller 1809?
+## <a name="are-you-using-windows-server-2012-r2-2016-or-windows-version-1709-1803-or-1809"></a>Bruger du Windows Server 2012 R2, 2016 eller Windows version 1709, 1803 eller 1809?
 
-Hvis du bruger Windows Server 2016, Windows 10 version 1709, 1803 eller [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), kan du ikke se **Tamper Protection** i Windows Sikkerhed-appen. Du kan i stedet bruge PowerShell til at afgøre, om beskyttelse mod ændring er aktiveret.
+Hvis du bruger Windows Server 2012 R2 ved hjælp af den moderne samlede løsning, Windows Server 2016, Windows 10 version 1709, 1803 eller [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), kan du ikke se **Tamper Protection** i Windows Sikkerhed-appen. Du kan i stedet bruge PowerShell til at afgøre, om beskyttelse mod ændring er aktiveret.
 
 På Windows Server 2016 afspejler appen Indstillinger ikke nøjagtigt status for beskyttelse i realtid, når beskyttelse mod ændring er aktiveret.
 

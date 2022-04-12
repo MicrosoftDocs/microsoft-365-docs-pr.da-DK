@@ -13,50 +13,50 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Administrer iOS-enheder i Grundlæggende mobilitet og sikkerhed.
-ms.openlocfilehash: f2539ac1c27bd63c13766e197fc12fafc3906f07
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Administrer iOS-enheder i Basic Mobility og Security.
+ms.openlocfilehash: 99aa909bf9adab1464ad3858cfac4a04cc541609
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590404"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781155"
 ---
 # <a name="create-an-apns-certificate-for-ios-devices"></a>Opret et APNs-certifikat til iOS-enheder
 
-For at administrere iOS-enheder som iPads og iPhones i Basic Mobility and Security skal du oprette et APNS-certifikat.
+Hvis du vil administrere iOS-enheder, f.eks. iPads og iPhones i Basic Mobility og Security, skal du oprette et APN-certifikat.
 
-1. Log på Microsoft 365 med din globale administratorkonto.
+1. Log på for at Microsoft 365 med din globale administratorkonto.
 
-2. Skriv i din browser <https://protection.office.com/>.
+2. Skriv i din browser <https://protection.office.com/>.
 
-3. Vælg  **Data loss**  **preventionDevice** > management, og vælg **APNs Certificate for iOS devices**.
+3. Vælg **Enhedshåndtering til forebyggelse af** \> datatab, og vælg **APN-certifikat til iOS-enheder**.
 
-4. På siden Apple Push Notification Certificate Indstillinger du  **vælgeNext**.
+4. Vælg **Næste** på siden Certifikat til Apple Push-meddelelse Indstillinger.
 
-5. Vælg Download din CSR-fil, og gem anmodningen om certifikatunder signering et sted på din computer, som du kan huske.   **VælgNæste**.
+5. Vælg Download din CSR-fil, og gem anmodningen om certifikatsignering et sted på din computer, som du vil huske. Vælg **Næste**.
 
-6. På siden Opret et APNs-certifikat:
+6. På siden Opret et APN-certifikat:
 
-    1. Vælg Apple APNS Portal for at åbne Apple Push Certificates Portal.
+    1. Vælg Apple APNS-portalen for at åbne Portal til Apple Push-certifikater.
 
     2. Log på med et Apple-id.
 
        > [!IMPORTANT]
-       > Brug virksomhedens Apple-id, der er knyttet til en mailkonto, som forbliver hos din organisation, også selvom den bruger, der administrerer kontoen, forlader virksomheden. Gem dette id, da du skal bruge det samme id, når certifikatet skal fornys.
+       > Brug et Apple-firma-id, der er knyttet til en mailkonto, som forbliver hos din organisation, selvom den bruger, der administrerer kontoen, forlader kontoen. Gem dette id, fordi du skal bruge det samme id, når det er tid til at forny certifikatet.
 
-    3.   **VælgOprette et certifikat**  og acceptere Vilkår for anvendelse.
+    3. Vælg **Opret et certifikat** , og acceptér Vilkår for anvendelse.
 
-    4. Gå til den anmodning om signering af certifikat, du har downloadet til computeren fra Microsoft 365, og **vælg Upload**.
+    4. Gå til den anmodning om signering af certifikat, du har downloadet til din computer fra Microsoft 365, og vælg **Upload**.
 
-       Download det APNs-certifikat, der er oprettet af Apple Push Certificate Portal, til computeren.
+       Download det APN-certifikat, der er oprettet af Apple Push-certifikatportalen, til din computer.
 
        > [!TIP]
        > Hvis du har problemer med at downloade certifikatet, skal du opdatere din browser.
 
-7. Gå tilbage til Microsoft 365, og vælg **Næste**  for at få   **Upload APNS-certifikatsiden** .
+7. Gå tilbage til Microsoft 365, og vælg **Næste** for at gå til siden **med Upload APNS-certifikat**.
 
-8. Gå til det APN-certifikat, du har downloadet fra Apple Push Certificates Portal.
+8. Gå til det APN-certifikat, du har downloadet fra Portal til Apple Push-certifikater.
 
-9.   **VælgFind**.
+9. Vælg **Udfør**.
 
-For at fuldføre konfigurationen skal du gå tilbage til Security & Compliance Center > **SikkerhedspolitikkerAdministration** >  **af** >  **administration Af administrere indstillinger**.
+Hvis du vil fuldføre installationen, skal du gå tilbage til Security & Compliance Center \> **Sikkerhedspolitikker** \> **Administration af enheder** \> **Administrationsindstillinger**.

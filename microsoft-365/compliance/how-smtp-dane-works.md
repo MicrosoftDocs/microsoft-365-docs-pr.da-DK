@@ -14,12 +14,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan SMTP DNS-baseret godkendelse af navngivne enheder (DANE) fungerer til at sikre mailkommunikation mellem mailservere.
-ms.openlocfilehash: 2af2a166ff73bbe7888ed9265ec8733105eb2007
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: b5f9337457556dda53b5b2f982480a4c2501fcc9
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759429"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782847"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Sådan fungerer SMTP DNS-baseret godkendelse af navngivne enheder (DANE)
 
@@ -196,8 +196,8 @@ Når du foretager fejlfinding, kan nedenstående fejlkoder blive genereret:
 
 Dette angiver normalt et problem med destinationsmailserveren. Den mailserver, som Remote Connectivity Analyzer tester oprettelse af forbindelse til. Der er generelt to scenarier, der genererer denne kode:
 
-1.  Destinationsmailserveren understøtter slet ikke sikker kommunikation, og almindelig, ikke-krypteret kommunikation skal bruges.
-2.  Destinationsserveren er konfigureret forkert og ignorerer STARTTLS-kommandoen.
+1. Destinationsmailserveren understøtter slet ikke sikker kommunikation, og almindelig, ikke-krypteret kommunikation skal bruges.
+2. Destinationsserveren er konfigureret forkert og ignorerer STARTTLS-kommandoen.
 
 Efter modtagelse af meddelelsen:
 

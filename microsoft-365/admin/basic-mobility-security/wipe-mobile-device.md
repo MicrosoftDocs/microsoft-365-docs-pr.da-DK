@@ -1,5 +1,5 @@
 ---
-title: Slet en mobilenhed i Standardmobilitet og -sikkerhed
+title: Slet en mobilenhed i Basic Mobility and Security
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -18,39 +18,39 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid:
 - MET150
-description: Brug indbygget grundlæggende mobilitet og sikkerhed til at fjerne oplysninger fra tilmeldte enheder.
-ms.openlocfilehash: d5f610e2a9180f1d147f68e6aabf4a7291787033
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Brug indbygget basic mobility og sikkerhed til at fjerne oplysninger fra tilmeldte enheder.
+ms.openlocfilehash: 932380b735e3fea2543832417e7911e9216f70fc
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63591641"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780781"
 ---
-# <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Slet en mobilenhed i Standardmobilitet og -sikkerhed
+# <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Slet en mobilenhed i Basic Mobility and Security
 
-Du kan bruge indbygget grundlæggende mobilitet og sikkerhed til Microsoft 365 til kun at fjerne virksomhedsoplysninger eller til at udføre en nulstilling til fabriksindstilling for at slette alle oplysninger fra en mobilenhed og gendanne den til fabriksindstillingerne.
+Du kan bruge indbygget grundlæggende mobilitet og sikkerhed til Microsoft 365 til kun at fjerne organisationsoplysninger eller til at udføre en fabriksnulstilling for at slette alle oplysninger fra en mobilenhed og gendanne den til fabriksindstillingerne.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Mobilenheder kan lagre følsomme virksomhedsoplysninger og give adgang til organisationens Microsoft 365 ressourcer. For at beskytte din organisations oplysninger kan du udføre nulstilling eller Fjern virksomhedsdata fra fabriksindstillingerne:
+Mobilenheder kan gemme følsomme organisationsoplysninger og give adgang til organisationens Microsoft 365 ressourcer. Du kan hjælpe med at beskytte din organisations oplysninger ved at nulstille fabriksnulstilling eller fjerne firmadata:
 
-- **Nulstil** til fabriksindstillingerne: Sletter alle data på en brugers mobilenhed, herunder installerede programmer, billeder og personlige oplysninger. Når sletningen er fuldført, gendannes enheden til fabriksindstillingerne.
+- **Nulstilling af fabrik**: Sletter alle data på en brugers mobilenhed, herunder installerede programmer, billeder og personlige oplysninger. Når sletningen er fuldført, gendannes enheden til fabriksindstillingerne.
 
-- **Fjern virksomhedsdata**: Fjerner kun virksomhedsdata og efterlader installerede programmer, billeder og personlige oplysninger på en brugers mobilenhed.
+- **Fjern firmadata**: Fjerner kun organisationsdata og efterlader installerede programmer, billeder og personlige oplysninger på en brugers mobilenhed.
 
-- **Når en enhed slettes (nulstilling eller fjern firmadata fra** fabriksindstillingerne), fjernes enheden fra listen over administrerede enheder.
-    
-- **Nulstil automatisk en** enhed: Du kan konfigurere en standardpolitik for mobilitet og sikkerhedspolitik, som automatisk nulstiller en enhed til fabriksindstilling, når brugeren uden held forsøger at angive adgangskoden til enheden et bestemt antal gange. For at gøre dette skal du følge trinnene  [iOprette sikkerhedspolitikker for enheder inden for grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).
-    
-- **Hvis du vil kende brugeroplevelsen, når** du slette enheden, skal du seHvad   [påvirker brugeren og enheden?](#whats-the-user-and-device-impact).
+- **Når en enhed slettes (fabriksnulstilling eller fjern firmadata),** fjernes enheden fra listen over administrerede enheder.
 
-## <a name="wipe-a-mobile-device"></a>Slette en mobilenhed
+- **Nulstil automatisk en enhed**: Du kan konfigurere en Basic Mobility and Security-politik, der automatisk nulstiller en enhed fra fabriksindstillingerne, når brugeren uden held forsøger at angive enhedens adgangskode et bestemt antal gange. Det gør du ved at følge trinnene i [Opret politikker for enhedssikkerhed i grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).
 
-1. Gå til  [Microsoft 365 Administration](../../admin/admin-overview/about-the-admin-center.md).
+- **Hvis du vil vide mere om brugeroplevelsen** , når du sletter sin enhed, skal du se [Hvad er brugerens og enhedens indvirkning?](#whats-the-user-and-device-impact).
 
-2. Skriv Administration af mobilenheder i søgefeltet, og vælg **Administration af** mobilenheder på listen over resultater.
+## <a name="wipe-a-mobile-device"></a>Slet en mobilenhed
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Indstilling for administration af grundlæggende mobilitet og brugeradministration af mobilenheder.":::
+1. Gå til [Microsoft 365 Administration](../../admin/admin-overview/about-the-admin-center.md).
+
+2. Skriv Mobile Enhedshåndtering i søgefeltet, og vælg **Mobile Enhedshåndtering** på listen over resultater.
+
+    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Grundlæggende administration af mobilitet og secruity for mobilenheder.":::
 
 3. Vælg **Administrer enheder**.
 
@@ -58,35 +58,35 @@ Mobilenheder kan lagre følsomme virksomhedsoplysninger og give adgang til organ
 
 5. Vælg **Administrer**.
 
-6. Vælg den type fjernsletning, du vil udføre.
+6. Vælg den type fjernsletning, du vil foretage.
 
-    - Hvis du vil udføre en komplet sletning og gendanne enheden til fabriksindstillingerne, skal du vælge **Nulstilling til fabriksindstilling**.
-    - Hvis du vil udføre en selektiv sletning og kun slette Microsoft 365 firmaoplysninger, skal du **vælge Fjern virksomhedsdata**.
-    - Hvis du vil fjerne enheden fra din organisation, skal du **vælge Fjern enhed**.
+    - Hvis du vil foretage en komplet sletning og gendanne enheden til fabriksindstillingerne, skal du vælge **Nulstil fabrik**.
+    - Hvis du vil foretage en selektiv sletning og kun slette Microsoft 365 organisationsoplysninger, skal du vælge **Fjern firmadata**.
+    - Hvis du vil fjerne enheden fra din organisation, skal du vælge **Fjern enhed**.
 
-7. Vælg **Ja for** at bekræfte.
+7. Vælg **Ja** for at bekræfte.
 
-## <a name="how-do-i-know-it-worked"></a>Hvordan ved jeg, det virkede?
+## <a name="how-do-i-know-it-worked"></a>Hvordan gør jeg ved, det virkede?
 
 Du kan ikke længere se mobilenheden på listen over administrerede enheder.
 
-## <a name="why-would-you-want-to-wipe-a-device"></a>Hvorfor skulle du slette en enhed?
+## <a name="why-would-you-want-to-wipe-a-device"></a>Hvorfor vil du slette en enhed?
 
 Slet en enhed af følgende årsager:
 
-- Mobilenheder som smartphones og tablets bliver hele tiden mere fuldt udvalgte. Det betyder, at det er nemmere for dine brugere at gemme følsomme virksomhedsoplysninger som f.eks. personlig identifikation eller fortrolig kommunikation og få adgang til den på farten. Hvis en af disse mobilenheder mistes eller bliver stjålet, kan aftørring af enheden hjælpe med at forhindre, at din organisations oplysninger ender i de forkerte hænder.
-- Når en bruger forlader organisationen med en personlig enhed, der er tilmeldt Grundlæggende mobilitet og sikkerhed, kan du hjælpe med at forhindre, at den pågældende bruger tager virksomhedsoplysninger med sig ved at udføre en nulstilling til fabriksindstillinger.
-- Hvis din organisation giver brugere mobilenheder, kan det også være nødvendigt at tildele enhederne igen fra tid til anden. Hvis du udfører en nulstilling til fabriksindstillingerne på en enhed, før du tildeler den til en ny bruger, sikrer du, at følsomme oplysninger fra den tidligere ejer slettes.
+- Mobilenheder som smartphones og tablets bliver hele tiden mere komplette. Det betyder, at det er nemmere for dine brugere at gemme følsomme virksomhedsoplysninger, f.eks. personligt id eller fortrolig kommunikation, og få adgang til dem, når de er på farten. Hvis en af disse mobilenheder mistes eller bliver stjålet, kan det forhindre, at organisationens oplysninger ender i de forkerte hænder.
+- Når en bruger forlader organisationen med en personlig enhed, der er tilmeldt Basic Mobility and Security, kan du hjælpe med at forhindre, at organisationsoplysninger følger med den pågældende bruger ved at udføre en fabriksnulstilling.
+- Hvis din organisation leverer mobilenheder til brugere, skal du muligvis omfordele enheder fra tid til anden. Hvis du foretager en fabriksnulstilling på en enhed, før du tildeler den til en ny bruger, hjælper det med at sikre, at alle følsomme oplysninger fra den tidligere ejer slettes.
 
-## <a name="whats-the-user-and-device-impact"></a>Hvad påvirker brugeren og enheden?
+## <a name="whats-the-user-and-device-impact"></a>Hvad er brugerens og enhedens indvirkning?
 
-Sletningen sendes straks til mobilenheden, og enheden er markeret som ikke kompatibel i Azure Active Directory. Mens alle data fjernes, når en enhed nulstilles til fabriksindstillinger, beskriver den følgende tabel, hvilket indhold der fjernes for hver enhedstype, når du fjerner virksomhedsdata fra en enhed.
+Sletningen sendes straks til mobilenheden, og enheden er markeret som ikke-kompatibel i Azure Active Directory. Selvom alle data fjernes, når en enhed nulstilles til fabriksstandarden, beskrives det i følgende tabel, hvilket indhold der fjernes for hver enhedstype, når en enhed fjernes, når du fjerner virksomhedsdata.
 
-|**Påvirkning af indhold**|**iOS**|**Android**|
-|:-----|:-----|:-----|
-|Microsoft 365 slettes alle appdata, hvis enheden er beskyttet af politikkerne for Intune App Protection. Appsene fjernes ikke. For enheder, der ikke er beskyttet af politikker for administration af mobilapps (MAM), fjerner Outlook og OneDrive ikke cachelagrede data.<br/>**Bemærk!** Hvis du vil anvende Beskyttelsespolitikker for Intune-apps, skal du have en Intune-licens.|Ja|Ja|
-|Politikindstillinger, der anvendes af Standardmobilitet og Sikkerhed på enheder, håndhæves ikke længere; kan brugerne ændre indstillingerne.|Ja|Ja|
-|Mailprofiler, der er oprettet ved hjælp af Grundlæggende mobilitet og sikkerhed, fjernes, og cachelagrede mails på enheden slettes.|Ja|I/T|
+|Indholdseffekt|Ios|Android|
+|---|---|---|
+|Microsoft 365 appdata slettes, hvis enheden er beskyttet af Intune politikker for appbeskyttelse. Appsene fjernes ikke. For enheder, der ikke er beskyttet af MAM-politikker (Mobile Application Management), fjerner Outlook og OneDrive ikke cachelagrede data.<br/>**Bemærk** Hvis du vil anvende Intune Appbeskyttelse politikker, skal du have en Intune licens.|Ja|Ja|
+|Politikindstillinger, der anvendes af Basic Mobility og Security på enheder, gennemtvinges ikke længere. brugere kan ændre indstillingerne.|Ja|Ja|
+|Mailprofiler, der er oprettet af Basic Mobility og Security, fjernes, og cachelagrede mails på enheden slettes.|Ja|NIELSEN|
 
 > [!NOTE]
-> Firmaportal-appen er tilgængelig på appen Store til iOS og appen Play Store til Android-enheder.
+> Firmaportal app er tilgængelig på App Store til iOS- og Store til Android-enheder.

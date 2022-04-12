@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 61bd82e3b4012e7e191971faf768cf8d7cbba4f2
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: e14c438858d5e57dca6ecab0573014171a0c6fb7
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758635"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783309"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
@@ -502,7 +502,7 @@ Yderligere oplysninger om bestemte placeringer:
 
   - Hvis opbevaringspolitikken implicit anvendes på en postkasse, og den konfigurerede opbevaringshandling skal bevares, gælder opbevaringspolitikken fortsat, og en inaktiv postkasse bliver aldrig berettiget til automatisk sletning. Når opbevaringshandlingen ikke længere gælder, fordi opbevaringsperioden er udløbet, kan den Exchange administrator nu [slette den inaktive postkasse manuelt](delete-an-inactive-mailbox.md)
 
-        An implicit retention policy requires a static policy scope with the **All recipients** (for Exchange email) or **All groups** (for Microsoft 365 Groups) configuration.
+    En implicit opbevaringspolitik kræver et statisk politikområde med konfigurationen **Alle modtagere** (for Exchange mail) eller **Alle grupper** (for Microsoft 365-grupper).
 
     Du kan finde flere oplysninger om inaktive postkasser, hvor der er anvendt opbevaringspolitikker, under [Inaktive postkasser og Microsoft 365 opbevaring](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention).
 

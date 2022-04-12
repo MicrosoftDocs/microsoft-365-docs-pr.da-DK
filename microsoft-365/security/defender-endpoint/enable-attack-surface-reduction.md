@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: f8f6865bc65662cbbfd5a9276d95abc405f5a64b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: dfe5567edbe86279ad5a5b0645cb3ea6c54c1174
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664232"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783602"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverflade
 
@@ -93,7 +93,7 @@ Du kan også udelade ASR-regler fra udløsere baseret på certifikat- og filhash
 
 > [!IMPORTANT]
 > Hvis du udelader filer eller mapper, kan det reducere beskyttelsen af ASR-regler alvorligt. Udeladte filer får tilladelse til at køre, og der registreres ingen rapport eller hændelse.
-> Hvis ASR-regler registrerer filer, som du mener ikke bør registreres, skal du [først bruge overvågningstilstanden til at teste reglen](evaluate-attack-surface-reduction.md).
+> Hvis ASR-regler registrerer filer, som du mener ikke bør registreres, skal du [først bruge overvågningstilstanden til at teste reglen](attack-surface-reduction-rules-deployment-test.md#step-1-test-asr-rules-using-audit).
 
 Du kan angive individuelle filer eller mapper (ved hjælp af mappestier eller fuldt kvalificerede ressourcenavne), men du kan ikke angive, hvilke regler undtagelserne skal gælde for. En udeladelse anvendes kun, når det udeladte program eller den udeladte tjeneste starter. Hvis du f.eks. tilføjer en udeladelse for en opdateringstjeneste, der allerede kører, vil opdateringstjenesten fortsat udløse hændelser, indtil tjenesten stoppes og genstartes.
 

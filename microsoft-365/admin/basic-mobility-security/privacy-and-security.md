@@ -1,5 +1,5 @@
 ---
-title: Beskyttelse af personlige oplysninger og sikkerhed i Grundlæggende mobilitet og sikkerhed
+title: Beskyttelse af personlige oplysninger og sikkerhed i forbindelse med grundlæggende mobilitet og sikkerhed
 f1.keywords: NOCSH
 ms.author: kwekua
 author: kwekua
@@ -13,16 +13,16 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Når du har aktiveret Grundlæggende mobilitet og sikkerhed, kan du oprette politikker for administration af mobilenheder.
-ms.openlocfilehash: 288ffe44610a68193ca6d96543e97a02e334f57d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Når du har aktiveret Basic Mobility og Security, kan du oprette politikker for administration af mobilenheder.
+ms.openlocfilehash: 713cedb61c8519cf735b47fafa1e58c33170e683
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589801"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780731"
 ---
-# <a name="privacy-and-security-in-basic-mobility-and-security"></a>Beskyttelse af personlige oplysninger og sikkerhed i Grundlæggende mobilitet og sikkerhed
+# <a name="privacy-and-security-in-basic-mobility-and-security"></a>Beskyttelse af personlige oplysninger og sikkerhed i forbindelse med grundlæggende mobilitet og sikkerhed
 
-Grundlæggende mobilitet og sikkerhed er en skybaseret tjeneste, der leveres af Microsoft Intune, der hjælper dig med at administrere og sikre mobilenheder i din organisation. Når du har aktiveret Grundlæggende mobilitet og sikkerhed, kan du oprette politikker for administration af mobilenheder. Disse politikker kan derefter installeres på mobilenheder, der er tilmeldt af licenserede Microsoft 365 brugere i organisationen.
+Basic Mobility and Security er en cloudbaseret tjeneste, der drives af Microsoft Intune, som hjælper dig med at administrere og sikre mobilenheder i din organisation. Når du har aktiveret Basic Mobility og Security, kan du oprette politikker for administration af mobilenheder. Disse politikker kan derefter installeres på mobilenheder, der er tilmeldt af licenserede Microsoft 365 brugere i din organisation.
 
-Microsoft Intune sender oplysninger til Microsoft 365 om overholdelsesstatus for hver administreret enhed, og derefter kan du generere rapporter, der viser, om administrerede enheder i organisationen overholder de angivne politikker. Du kan få mere at vide om Microsofts indsats i forbindelse med beskyttelse af personlige oplysninger og sikkerhed  [iMicrosoft Center for sikkerhed og beskyttelse af personlige oplysninger](https://www.microsoft.com/trust-center).
+Microsoft Intune sender oplysninger for at Microsoft 365 om overholdelsesstatus for hver administreret enhed, og du kan derefter generere rapporter, der viser, om administrerede enheder i organisationen overholder angivne standarder, baseret på de politikker, der er angivet. Du kan få mere at vide om Microsofts forpligtelse til beskyttelse af personlige oplysninger og sikkerhed i [Microsoft Center for sikkerhed og rettighedsadministration](https://www.microsoft.com/trust-center).

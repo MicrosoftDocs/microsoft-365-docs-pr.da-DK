@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 911deac49606116ca7aece9d37a9aa3d7164fe3f
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 51d5814d718c1422d493f5227b311a58f99f7a82
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665310"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783265"
 ---
 # <a name="microsoft-virus-initiative"></a>Microsoft Virus Initiative
 
@@ -31,28 +31,28 @@ Du kan anmode om medlemskab, hvis du er repræsentant for en organisation, der u
 
 Hvis du vil kvalificere dig til MVI-programmet, skal din organisation opfylde alle følgende krav:
 
-1)  Din sikkerhedsløsning erstatter eller supplerer Microsoft Defender Antivirus.
+1. Din sikkerhedsløsning erstatter eller supplerer Microsoft Defender Antivirus.
 
-2)  Din organisation er ansvarlig for både at udvikle og distribuere appopdateringer til slutbrugere, der håndterer kompatibilitet med Windows.
+2. Din organisation er ansvarlig for både at udvikle og distribuere appopdateringer til slutbrugere, der håndterer kompatibilitet med Windows.
 
-3)  Din organisation skal være aktiv i antimalwarebranchen og have et positivt omdømme, som det fremgår af deltagelse i branchekonferencer eller gennemgang i en branchestandardrapport, f.eks. AV-Comparatives, OPSWAT eller Gartner.
+3. Din organisation skal være aktiv i antimalwarebranchen og have et positivt omdømme, som det fremgår af deltagelse i branchekonferencer eller gennemgang i en branchestandardrapport, f.eks. AV-Comparatives, OPSWAT eller Gartner.
 
-4)  Din organisation skal underskrive en fortrolighedsaftale (NDA) med Microsoft.
+4. Din organisation skal underskrive en fortrolighedsaftale (NDA) med Microsoft.
 
-5)  Din organisation skal signere en programlicensaftale. Vedligeholdelse af denne licensaftale kræver, at du overholder alle programkrav til antimalwareapps. Disse krav definerer funktionsmåden for antimalwareapps, der er nødvendige for at sikre korrekt interaktion med Windows.
+5. Din organisation skal signere en programlicensaftale. Vedligeholdelse af denne licensaftale kræver, at du overholder alle programkrav til antimalwareapps. Disse krav definerer funktionsmåden for antimalwareapps, der er nødvendige for at sikre korrekt interaktion med Windows.
 
-6)  Du skal indsende din app til Microsoft for at få testet den periodiske ydeevne og gennemgå funktionen.
+6. Du skal indsende din app til Microsoft for at få testet den periodiske ydeevne og gennemgå funktionen.
 
-7)  Din løsning skal certificeres via uafhængig test af mindst én branchestandardorganisation, og den årlige certificering skal vedligeholdes.
+7. Din løsning skal certificeres via uafhængig test af mindst én branchestandardorganisation, og den årlige certificering skal vedligeholdes.
 
-Testudbyder | Laboratorietesttype | Minimumniveau/score
-------------- |---------------|----------------------
-AV-Comparatives | beskyttelsestesten Real-World </br> https://www.av-comparatives.org/testmethod/real-world-protection-tests/ |Bedømmelse af "Godkendt" fra AV Comparatives
-AV-Test | Skal bestå test for Windows. Certificeringer til Mac og Linux accepteres ikke </br> https://www.av-test.org/en/about-the-institute/certification/ | Opnå "AV-TEST Certified" (for private brugere) eller "AV-TEST Approved" (for virksomhedsbrugere)
-ICSA Labs | Slutpunkt for registrering af antimalware </br> https://www.icsalabs.com/technology-program/anti-virus/criteria |PASS/Certified
-SKD Labs | Certificeringskrav Produkt: Antivirus eller Antimalware </br> http://www.skdlabs.com/html/english/ </br> http://www.skdlabs.com/cert/ |CERTIFICERINGskrav til SKD Labs Star Check Pass >= 98,5 % med On Demand-, On Access- og Total Detection-test 
-VB 100 |    VB100 Certification Test V1.1 </br> https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1/ | VB100-certificering
-Laboratorier for vestkysten |   Markering certificeret </br> http://www.checkmarkcertified.com/sme/  | "A"-bedømmelse af produktsikkerhedsydeevne
+|Testudbyder|Laboratorietesttype|Minimumniveau/score|
+|-------------|---------------|----------------------|
+|AV-Comparatives|beskyttelsestesten Real-World </br> <https://www.av-comparatives.org/testmethod/real-world-protection-tests/>|Bedømmelse af "Godkendt" fra AV Comparatives|
+|AV-Test|Skal bestå test for Windows. Certificeringer til Mac og Linux accepteres ikke </br> <https://www.av-test.org/en/about-the-institute/certification/>|Opnå "AV-TEST Certified" (for private brugere) eller "AV-TEST Approved" (for virksomhedsbrugere)|
+|ICSA Labs|Slutpunkt for registrering af antimalware </br> <https://www.icsalabs.com/technology-program/anti-virus/criteria>|PASS/Certified|
+|SKD Labs|Certificeringskrav Produkt: Antivirus eller Antimalware </br> <http://www.skdlabs.com/html/english/> </br> <http://www.skdlabs.com/cert/>|CERTIFICERINGskrav til SKD Labs Star Check Pass >= 98,5 % med On Demand-, On Access- og Total Detection-test|
+|VB 100|VB100 Certification Test V1.1 </br> <https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1/>|VB100-certificering|
+|Laboratorier for vestkysten|Markering certificeret </br> <http://www.checkmarkcertified.com/sme/>|"A"-bedømmelse af produktsikkerhedsydeevne|
 
 ## <a name="apply-now"></a>Anvend nu
 

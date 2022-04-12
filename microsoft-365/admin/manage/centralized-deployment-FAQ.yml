@@ -20,49 +20,49 @@ metadata:
   - BCS160
   - MET150
   - MOE150
-  description: Gennemse svarene på ofte stillede spørgsmål om Centraliseret udrulning fra Microsoft 365 Administration.
-  ms.openlocfilehash: 6ac70b49a563dad62b824df8933843adb9daeaeb
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  description: Gennemse svarene på ofte stillede spørgsmål om central installation fra Microsoft 365 Administration.
+  ms.openlocfilehash: 1433b1d0c5eee508ed1908908d90c75e26b4aa76
+  ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63680044"
+  ms.lasthandoff: 04/12/2022
+  ms.locfileid: "64782429"
 title: Ofte stillede spørgsmål om Centraliseret udrulning
-summary: Centraliseret udrulning er den anbefalede metode for en Office 365-administrator til at installere Office-tilføjelsesprogrammet (Word, Excel, PowerPoint og Outlook) til brugere og grupper i en organisation, forudsat at organisationen opfylder alle krav til brug af Centraliseret udrulning som beskrevet i denne artikel.
+summary: Centraliseret installation er den anbefalede måde, hvorpå en Office 365 administrator kan installere Office tilføjelsesprogrammer (Word, Excel, PowerPoint og Outlook) til brugere og grupper i en organisation, forudsat at organisationen opfylder alle krav til brug af central installation som beskrevet i denne artikel.
 sections:
 - name: Ignoreret
   questions:
   - question: >
-      Hvordan ved jeg, om min organisation er konfigureret til Centraliseret udrulning?
-    answer: "Centraliseret udrulning af tilføjelser kræver, at brugerne bruger Microsoft 365 Apps for enterprise (og er logget på Office ved hjælp af deres organisatoriske logonoplysninger) og har Exchange Online postkasser. Dit abonnementskatalog skal enten være i eller være medlem af et organisationsnetværk Azure Active Directory. \n \nCentraliseret udrulning understøttes kun for onlinepostkasser. Den understøtter ikke installation på lokale Exchange postkasser.\n\nDu kan bruge [kompatibilitetskontrollen til Centraliseret udrulning til at](centralized-deployment-of-add-ins.md#centralized-deployment-compatibility-checker)  afgøre, om dit abonnement er berettiget. \n  \n"
+      Hvordan gør jeg vide, om min organisation er konfigureret til central installation?
+    answer: "Central installation af tilføjelsesprogrammer kræver, at brugerne bruger Microsoft 365 Apps for enterprise (og er logget på Office ved hjælp af deres organisationslog-legitimationsoplysninger) og har Exchange Online postkasser. Din abonnementsmappe skal enten være i eller sammenkædet med Azure Active Directory. \n \nCentral installation understøttes kun for onlinepostkasser. Den understøtter ikke udrulning i Exchange postkasser i det lokale miljø.\n\nDu kan bruge [Centraliseret kontrol af udrulningskompatibilitet](centralized-deployment-of-add-ins.md#centralized-deployment-compatibility-checker) til at bestemme, om dit abonnement er berettiget. \n  \n"
   - question: >
-      Hvordan målretter man brugertildelinger til tilføjelsesprogrammet med Centraliseret udrulning?
-    answer: "Centraliseret udrulning understøtter tildelinger til individuelle brugere, grupper og alle i lejeren. Centraliseret udrulning kan bruges til brugere i grupper på øverste niveau eller grupper uden overordnede grupper, men ikke til brugere i indlejrede grupper eller grupper, der har overordnede grupper. Centraliseret udrulning er også en del af de Azure Active Directory grupper, herunder Office 365 grupper, distributionslister og sikkerhedsgrupper. \n\nDet er bedre at bruge gruppetildelinger i stedet for individuelle brugertildelinger for nemmere administration.\n \nDu kan få mere at vide [under Bruger- og gruppetildelinger](./centralized-deployment-of-add-ins.md?view=o365-worldwide#user-and-group-assignments).\n \n"
-  - question: "Hvor lang tid tager det for tilføjelses-ins at blive vist for alle brugere? \n"
-    answer: "Det kan tage op til 24 timer, før et tilføjelsesprogrammet vises for alle brugere. Det kan tage den samme mængde tid for opdateringer til tilføjelsesprogrammet, ændringer fra at slå det til eller fra eller fjernelse af tilføjelsesprogrammet. \n"
+      Hvordan målretter du brugertildelinger med central installation til tilføjelsesprogrammet?
+    answer: "Central installation understøtter tildelinger til individuelle brugere, grupper og alle i lejeren. Centraliseret installation kan bruges til brugere i grupper på øverste niveau eller grupper uden overordnede grupper, men ikke til brugere i indlejrede grupper eller grupper, der har overordnede grupper. Centraliseret udrulning er også en del af de fleste Azure Active Directory grupper, herunder Office 365 grupper, distributionslister og sikkerhedsgrupper. \n\nDet er bedre at bruge grupperingstildelinger i stedet for individuelle brugertildelinger for at lette administrationen.\n \nDu kan finde flere oplysninger under [Bruger- og gruppetildelinger](./centralized-deployment-of-add-ins.md?view=o365-worldwide#user-and-group-assignments).\n \n"
+  - question: "Hvor lang tid tager det, før tilføjelsesprogrammer vises for alle brugere? \n"
+    answer: "Det kan tage op til 24 timer, før et tilføjelsesprogram vises for alle brugere. Det kan tage den samme mængde tid for opdateringer af tilføjelsesprogrammer, ændringer fra slå til eller fra eller fjernelse af tilføjelsesprogrammer. \n"
   - question: >
-      Hvordan administrerer jeg som administrator brugerens adgang til tilføjelses ins for min organisation?
+      Hvordan administrerer jeg som administrator brugeradgangen til tilføjelsesprogrammer for min organisation?
     answer: >
-      For nem udrulning af tilføjelsesprogrammet til brugere, grupper eller til hele organisationen anbefaler vi, at administratorer bruger Centraliseret udrulning.
+      For at gøre det nemt at installere tilføjelsesprogrammer til brugere, grupper eller til hele organisationen anbefaler vi administratorer at bruge Central installation.
 
 
-      Du kan finde flere oplysninger om administration af brugeradgang i:
-       - [Undgå downloads af tilføjelsesprogrammet ved at deaktivere tilføjelsesprogrammets Office Store på tværs af alle klienter (undtagen Outlook)](./manage-addins-in-the-admin-center.md#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook)
-       - [Angive de administratorer og brugere, der kan installere og administrere tilføjelsesprogrammet for Outlook](/Exchange/specify-who-can-install-and-manage-add-ins-2013-help)
-  - question: "Vil Centraliseret udrulning give administratorer fleksibilitet til at vælge installationsmetode Outlook tilføjelsesprogrammet? \n"
-    answer: "Ja. Centraliseret udrulning giver administratorer fleksibilitet til at vælge en af to installationsmetoder til Outlook tilføjelsesprogrammet under installationen af tilføjelsesprogrammet:\n         \n**Tilgængelig** Brugerne kan installere tilføjelsesprogrammet i Outlook vælge Home > Hent flere tilføjelse > **Administrator-administreret**.\n \n**Valgfrit** Tilføjelsesprogrammet installeres automatisk til de tildelte brugere, men de kan vælge at fjerne det.\n    \n"
-  - question: "Kan administratorer opdatere Line of Business-tilføjelsesprogrammet (LOB) ? \n"
-    answer: "Ja. Administratorer kan uploade et nyt manifest for at understøtte ændringer af metadata for administratorrullede LOB-tilføjelsesprogrammet. Tilføjelsesprogrammet opdateres, næste gang Office programmer starter. Webprogrammet kan ændres når som helst.\n \nDu kan finde flere [oplysninger i line of business-tilføjelsesprogrammet](./manage-addins-in-the-admin-center.md).  \n"
-  - question: "Kan administratorer slå tilføjelser fra? \n"
+      Du kan få flere oplysninger om administration af brugeradgang i:
+       - [Undgå downloads af tilføjelsesprogrammer ved at deaktivere Office Store på tværs af alle klienter (undtagen Outlook)](./manage-addins-in-the-admin-center.md#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook)
+       - [Angiv de administratorer og brugere, der kan installere og administrere tilføjelsesprogrammer til Outlook](/Exchange/specify-who-can-install-and-manage-add-ins-2013-help)
+  - question: "Giver centraliseret installation administratorer fleksibiliteten til at vælge installationsmetoden for Outlook tilføjelsesprogrammer? \n"
+    answer: "Ja. Centraliseret installation giver administratorer fleksibiliteten til at vælge en af to udrulningsmetoder til Outlook tilføjelsesprogrammer under udrulning af tilføjelsesprogrammer:\n         \n**Tilgængelige** Brugerne kan installere tilføjelsesprogrammet Outlook ved at vælge **Hjem > Hent flere tilføjelsesprogrammer > administreret af administratoren**.\n \n**Valgfri** Tilføjelsesprogrammet udrulles automatisk til de tildelte brugere, men de kan vælge at fjerne det.\n    \n"
+  - question: "Kan administratorer opdatere LOB-tilføjelsesprogrammer (Line-of-Business)? \n"
+    answer: "Ja. Administratorer kan uploade en ny manifestfil for at understøtte ændringer af metadata for administratorudrullede LOB-tilføjelsesprogrammer. Tilføjelsesprogrammet opdateres, næste gang Office programmer starter. Webprogrammet kan ændres når som helst.\n \nDu kan få flere oplysninger under [line of business-tilføjelsesprogram](./manage-addins-in-the-admin-center.md).  \n"
+  - question: "Kan administratorer slå tilføjelsesprogrammer fra? \n"
     answer: >
-      Ja. Administratorer kan aktivere eller deaktivere de tilføjelser, de installerer for alle brugere fra Microsoft Administration.
+      Ja. Administratorer kan aktivere eller deaktivere de tilføjelsesprogrammer, de installerer for alle brugere fra Microsoft Administration.
 
 
-      Du kan finde flere oplysninger [i Tilføjelsesprogrammets tilstande](./manage-addins-in-the-admin-center.md#add-in-states).
+      Du kan få flere oplysninger [under Tilstande for tilføjelsesprogrammer](./manage-addins-in-the-admin-center.md#add-in-states).
   - question: >
-      Kan administratorer slette eller fjerne tilføjelser?
-    answer: "Ja. Administratorer kan slette tilføjelsesprogrammet, de har installeret for alle brugere fra Microsoft Administration.\n\nDu kan få mere at [vide under Slet et tilføjelsesprogrammet](./manage-addins-in-the-admin-center.md#delete-an-add-in). \n  \n"
-  - question: "Kan administratorer installere betalte tilføjelsesprogrammet fra Office Store ved hjælp af Centraliseret udrulning? \n"
-    answer: "Nej. Du kan ikke installere betalte tilføjelser fra Office Store ved hjælp af Centraliseret udrulning på nuværende tidspunkt. \n \nVi anbefaler, at du kontakte ISV Developer for det betalte tilføjelsesprogrammet for at anmode om en manifestfil eller en URL-adresse. Lejeradministratoren kan derefter installere tilføjelsesprogrammet som et LOB-tilføjelsesprogrammet ved hjælp af Centraliseret udrulning.\n   \n"
-  - question: "Hvilken administratorrolle skal jeg bruge for at administrere tilføjelses ins for min organisation? \n"
-    answer: "Global administrator er den anbefalede rolle med fuld adgang til livscyklus for administration af tilføjelsesprogrammet. Hvis du er den person, der har købt dit Microsoft 365 Business-abonnement, er du den globale administrator.\n\nDit abonnement leveres med et sæt administratorroller, som du kan tildele til andre brugere i organisationen. Hver administratorrolle tilknyttes almindelige forretningsfunktioner og giver personer i organisationen tilladelse til at udføre bestemte opgaver i Microsoft 365 Administration.  \n \nFå mere at vide under [Tildel administratorroller](../add-users/assign-admin-roles.md?view=o365-worldwide)."
+      Kan administratorer slette eller fjerne tilføjelsesprogrammer?
+    answer: "Ja. Administratorer kan slette tilføjelsesprogrammer, de har installeret for alle brugere, fra Microsoft Administration.\n\nDu kan få flere oplysninger under [Slet et tilføjelsesprogram](./manage-addins-in-the-admin-center.md#delete-an-add-in). \n  \n"
+  - question: "Kan administratorer installere betalte tilføjelsesprogrammer fra Office Store ved hjælp af central installation? \n"
+    answer: "Nej. Du kan ikke installere betalte tilføjelsesprogrammer fra Office Store ved hjælp af Central installation på nuværende tidspunkt. \n \nVi anbefaler, at du kontakte ISV-udvikleren for det betalte tilføjelsesprogram for at anmode om en manifestfil eller en URL-adresse. Lejeradministratoren kan derefter installere tilføjelsesprogrammet som et LOB-tilføjelsesprogram ved hjælp af Central installation.\n   \n"
+  - question: "Hvilken administratorrolle skal jeg bruge for at administrere tilføjelsesprogrammer for min organisation? \n"
+    answer: "Global administrator er den anbefalede rolle med fuld adgang til livscyklussen for administration af tilføjelsesprogrammer. Hvis du er den person, der har købt dit Microsoft 365 Business-abonnement, er du global administrator.\n\nDit abonnement leveres med et sæt administratorroller, som du kan tildele til andre brugere i din organisation. Hver administratorrolle knyttes til almindelige forretningsfunktioner og giver personer i din organisation tilladelse til at udføre bestemte opgaver i Microsoft 365 Administration.  \n \nDu kan få flere oplysninger under [Tildel administratorroller](../add-users/assign-admin-roles.md?view=o365-worldwide)."
