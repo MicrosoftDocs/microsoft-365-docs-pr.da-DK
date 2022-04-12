@@ -21,12 +21,12 @@ ms.date: 04/07/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: ccf72b1f7e5625f3b3b9599a50d734a7316b8659
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: bcdf933de412a8141f0abc208f06cc55609f12c5
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780253"
+ms.locfileid: "64788936"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Beskyt sikkerhedsindstillinger med manipulationsbeskyttelse
 
@@ -34,6 +34,10 @@ ms.locfileid: "64780253"
 
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 Tamperbeskyttelse er tilgængelig for enheder, der kører en af følgende versioner af Windows:
 
@@ -312,6 +316,16 @@ Dit team af sikkerhedshandlinger kan også bruge jagtforespørgsler, f.eks. føl
 `AlertInfo|where Title == "Tamper Protection bypass"`
 
 [Vis oplysninger om forsøg på manipulation](#view-information-about-tampering-attempts).
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="see-also"></a>Se også
 

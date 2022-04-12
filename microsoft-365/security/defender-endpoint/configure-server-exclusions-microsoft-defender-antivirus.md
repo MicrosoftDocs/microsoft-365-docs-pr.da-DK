@@ -1,9 +1,9 @@
 ---
-title: Konfigurere Microsoft Defender Antivirus udeladelse på Windows Server
+title: Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server
 ms.reviewer: pahuijbr
 manager: dansimp
-description: Windows Server omfatter automatisk udeladelse baseret på serverrolle. Du kan også tilføje brugerdefinerede udeladelser.
-keywords: udeladelse, server, automatisk udeladelse, automatisk, brugerdefineret, scanninger, Microsoft Defender Antivirus
+description: Windows Server indeholder automatiske udeladelser baseret på serverrolle. Du kan også tilføje brugerdefinerede udeladelser.
+keywords: udeladelser, server, automatisk udeladelse, automatisk, brugerdefineret, scanninger, Microsoft Defender Antivirus
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -16,14 +16,14 @@ ms.topic: article
 ms.custom: nextgen
 ms.date: 02/04/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 442172afc9caf5dbd2af8c91cda531494fabd05d
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 487c253adc422d69be5ce011ffef1fc1a014474b
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63606492"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789772"
 ---
-# <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Konfigurere Microsoft Defender Antivirus udeladelse på Windows Server
+# <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server
 
 
 **Gælder for:**
@@ -31,68 +31,71 @@ ms.locfileid: "63606492"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus på Windows Server 2016 og Windows Server 2019 automatisk dig i visse undtagelser som defineret af din angivne serverrolle. Disse udeladelseslister vises ikke på de standard udeladelseslister, der vises [i Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md).
+**Platforme**
+- Windows
 
-Ud over automatisk udeladelse af serverroller kan du tilføje eller fjerne brugerdefinerede udeladelser. Det gør du ved at læse følgende artikler:
-- [Konfigurere og validere udeladelse baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse af filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+Microsoft Defender Antivirus på Windows Server 2016 og Windows Server 2019 tilmelder dig automatisk i visse undtagelser, som defineret af din angivne serverrolle. Disse udeladelser vises ikke på de standardlister over udeladelser, der vises i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md).
 
-## <a name="a-few-points-to-keep-in-mind"></a>Et par point at huske på
+Ud over serverrolledefinerede automatiske udeladelser kan du tilføje eller fjerne brugerdefinerede udeladelser. Det gør du ved at læse disse artikler:
+- [Konfigurer og valider udeladelser baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
-Husk følgende vigtige punkter:
+## <a name="a-few-points-to-keep-in-mind"></a>Et par punkter, du skal være opmærksom på
 
-- Brugerdefinerede udeladelser tilsidesætter automatiske udeladelser.
-- Automatisk udeladelse gælder kun for scanning i realtid (RTP). Automatiske udeladelser bliver ikke imødekommet under en fuld, hurtig eller on-demand-scanning.
-- Brugerdefinerede og dublerede udeladelseskonflikter er ikke modstridende med automatiske udeladelser.
-- Microsoft Defender Antivirus bruger DISM-værktøjerne (Deployment Image Servicing and Management) til at bestemme, hvilke roller der er installeret på computeren.
-- Windows Server 2012 R2 ikke har en Microsoft Defender Antivirus som en funktion, der kan installeres. Når du onboarder disse servere til Defender til Slutpunkt, skal du installere Windows Defender Antivirus, og standard udeladelse af operativsystemfiler anvendes. Udeladelse af serverroller (som angivet nedenfor) gælder dog ikke automatisk, og du bør konfigurere disse undtagelser efter behov. Du kan få mere at [vide Windows onboard Windows serverne til Microsoft Defender for Endpoint-tjenesten](configure-server-endpoints.md).
+Vær opmærksom på følgende vigtige punkter:
 
-Denne artikel indeholder en oversigt over udeladelse af Microsoft Defender Antivirus på Windows Server 2016 eller nyere.
+- Brugerdefinerede udeladelser har forrang frem for automatiske udeladelser.
+- Automatiske undtagelser gælder kun for RTP-scanning (Real-Time Protection). Automatiske udeladelser anvendes ikke under en fuld, hurtig eller on-demand-scanning.
+- Brugerdefinerede og duplikerede udeladelser er ikke i konflikt med automatiske udeladelser.
+- Microsoft Defender Antivirus bruger DISM-værktøjer (Deployment Image Servicing and Management) til at bestemme, hvilke roller der er installeret på computeren.
+- Windows Server 2012 R2 har ikke Microsoft Defender Antivirus som en installerbar funktion. Når du onboarder disse servere til Defender for Endpoint, installerer du Windows Defender Antivirus, og der anvendes standardudeladelser for operativsystemfiler. Udeladelser for serverroller (som angivet nedenfor) gælder dog ikke automatisk, og du skal konfigurere disse udeladelser efter behov. Du kan få mere at vide under [Onboard Windows servere til tjenesten Microsoft Defender for Endpoint](configure-server-endpoints.md).
 
-Da Microsoft Defender Antivirus er indbygget i Windows Server 2016 og nyere, sker udeladelse af operativsystemfiler og serverroller automatisk. Du kan dog definere brugerdefinerede undtagelser. Du kan også fravælge automatisk udeladelse, hvis det er nødvendigt.
+Denne artikel indeholder en oversigt over undtagelser for Microsoft Defender Antivirus på Windows Server 2016 eller nyere.
+
+Da Microsoft Defender Antivirus er indbygget i Windows Server 2016 og nyere, sker udeladelser for operativsystemfiler og serverroller automatisk. Du kan dog definere brugerdefinerede udeladelser. Du kan også fravælge automatiske undtagelser, hvis det er nødvendigt.
 
 Denne artikel indeholder følgende afsnit:
 
 <br/><br/>
 
-|Sektion|Beskrivelse|
+|Afsnit|Beskrivelse|
 |---|---|
-|[Automatisk udeladelse på Windows Server 2016 eller nyere](#automatic-exclusions-on-windows-server-2016-or-later)|Beskriver de to vigtigste typer automatiske udeladelse og indeholder en detaljeret liste over automatiske udeladelsestyper|
-|[Framelde dig automatiske udeladelse](#opting-out-of-automatic-exclusions)|Omfatter vigtige overvejelser og procedurer, der beskriver, hvordan du fravælger automatiske udeladelser|
-|[Definition af brugerdefinerede udeladelses undtagelser](#defining-custom-exclusions)|Indeholder links til trinvise oplysninger til at definere brugerdefinerede udeladelser|
+|[Automatiske udeladelser på Windows Server 2016 eller nyere](#automatic-exclusions-on-windows-server-2016-or-later)|Beskriver de to primære typer automatiske udeladelser og indeholder en detaljeret liste over automatiske udeladelser|
+|[Fravalg af automatiske udeladelser](#opting-out-of-automatic-exclusions)|Indeholder vigtige overvejelser og procedurer, der beskriver, hvordan du fravælger automatiske undtagelser|
+|[Definition af brugerdefinerede udeladelser](#defining-custom-exclusions)|Indeholder links til oplysninger om, hvordan du definerer brugerdefinerede udeladelser|
 
-## <a name="automatic-exclusions-on-windows-server-2016-or-later"></a>Automatisk udeladelse på Windows Server 2016 eller nyere
+## <a name="automatic-exclusions-on-windows-server-2016-or-later"></a>Automatiske udeladelser på Windows Server 2016 eller nyere
 
-På Windows Server 2016 eller nyere, bør du ikke behøver at definere følgende undtagelser:
+På Windows Server 2016 eller nyere skal du ikke definere følgende undtagelser:
 
 - Operativsystemfiler
-- Serverroller og alle filer, der tilføjes via serverroller
+- Serverroller og eventuelle filer, der tilføjes via serverroller
 
-Da Microsoft Defender Antivirus er indbygget, kræver det ikke undtagelser for operativsystemfiler på Windows Server 2016 eller nyere. Når du kører Windows Server 2016 eller nyere og installerer en rolle, inkluderer Microsoft Defender Antivirus desuden automatiske udeladelser for serverrollen og alle filer, der tilføjes, når du installerer rollen.
+Da Microsoft Defender Antivirus er indbygget, kræver det ikke undtagelser for operativsystemfiler på Windows Server 2016 eller nyere. Når du kører Windows Server 2016 eller nyere og installerer en rolle, indeholder Microsoft Defender Antivirus desuden automatiske udeladelser for serverrollen og eventuelle filer, der tilføjes under installationen af rollen.
 
-Udeladelse af operativsystem og udeladelse af serverroller vises ikke på de standard udeladelseslister, der vises [i Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md).
-
-> [!NOTE]
-> Automatisk udeladelse for serverroller og operativsystemfiler gælder ikke for Windows Server 2012. Automatisk udeladelse kan gælde, hvis dine servere, Windows Server 2012 R2 er onboardet til Defender til Slutpunkt. (Se [Onboard Windows-servere til Microsoft Defender for Endpoint-tjenesten](configure-server-endpoints.md)).
-
-
-### <a name="the-list-of-automatic-exclusions"></a>Listen over automatiske udeladelse
-
-De følgende afsnit indeholder udeladelsestyper, der leveres med automatisk udeladelse af filstier og filtyper.
-
-#### <a name="default-exclusions-for-all-roles"></a>Standard udeladelse for alle roller
-
-I dette afsnit vises standard udeladelsesindstillingerne for alle roller i Windows Server 2016, Windows Server 2019 og Windows Server 2022.
+Udeladelser fra operativsystemet og udeladelser af serverroller vises ikke på de standardlister over undtagelser, der vises i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md).
 
 > [!NOTE]
-> Standardplaceringerne kan være forskellige fra dem, der er angivet i denne artikel.
+> Automatiske udeladelser for serverroller og operativsystemfiler gælder ikke for Windows Server 2012. Automatiske udeladelser kan gælde, hvis dine servere, der kører Windows Server 2012 R2, er onboardet til Defender for Endpoint. (Se [Onboard Windows-servere til Microsoft Defender for Endpoint-tjenesten](configure-server-endpoints.md)).
 
-##### <a name="windows-tempedb-files"></a>Windows "temp.edb"-filer
+
+### <a name="the-list-of-automatic-exclusions"></a>Listen over automatiske udeladelser
+
+De følgende afsnit indeholder de udeladelser, der leveres med filstier og filtyper til automatiske udeladelser.
+
+#### <a name="default-exclusions-for-all-roles"></a>Standardudeladelser for alle roller
+
+I dette afsnit vises standardudeladelser for alle roller i Windows Server 2016, Windows Server 2019 og Windows Server 2022.
+
+> [!NOTE]
+> Standardplaceringerne kan være anderledes end dem, der er angivet i denne artikel.
+
+##### <a name="windows-tempedb-files"></a>Windows filer af typen "temp.edb"
 
 - `%windir%\SoftwareDistribution\Datastore\*\tmp.edb`
 - `%ProgramData%\Microsoft\Search\Data\Applications\Windows\windows.edb`
 
-##### <a name="windows-update-files-or-automatic-update-files"></a>Windows opdater filer eller automatiske opdateringsfiler
+##### <a name="windows-update-files-or-automatic-update-files"></a>Windows Update filer eller filer med automatisk opdatering
 
 - `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
@@ -122,30 +125,30 @@ I dette afsnit vises standard udeladelsesindstillingerne for alle roller i Windo
 - `%systemroot%\System32\LogFiles\`
 - `%systemroot%\SysWow64\LogFiles\`
 
-##### <a name="file-replication-service-frs-exclusions"></a>Udeladelse af Filreplikeringstjeneste (FRS)
+##### <a name="file-replication-service-frs-exclusions"></a>Frs-udeladelser (File Replication Service)
 
-- Filer i arbejdsmappen File Replication Service (FRS). Arbejdsmappen FRS er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Working Directory`
+- Filer i frs-arbejdsmappen (File Replication Service). FRS-arbejdsmappen er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Working Directory`
 
   - `%windir%\Ntfrs\jet\sys\*\edb.chk`
   - `%windir%\Ntfrs\jet\*\Ntfrs.jdb`
   - `%windir%\Ntfrs\jet\log\*\*.log`
 
-- FRS-databaselogfiler. Logfilmappen for FRS-databasen er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Ntfrs\Parameters\DB Log File Directory`
+- FRS-databaselogfiler. Mappen med FRS-databaselogfilen er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Ntfrs\Parameters\DB Log File Directory`
 
   - `%windir%\Ntfrs\*\Edb\*.log`
 
-- Mappen til opsætning af FRS. Mappen til opsætning er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID\Replica Set Stage`
+- Den midlertidige FRS-mappe. Den midlertidige mappe er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID\Replica Set Stage`
 
   - `%systemroot%\Sysvol\*\Ntfrs_cmp*\`
 
-- Mappen for forudinstallering af FRS. Denne mappe er angivet af mappen `Replica_root\DO_NOT_REMOVE_NtFrs_PreInstall_Directory`
+- Frs-forudinstallationsmappen. Denne mappe er angivet i mappen `Replica_root\DO_NOT_REMOVE_NtFrs_PreInstall_Directory`
 
   - `%systemroot%\SYSVOL\domain\DO_NOT_REMOVE_NtFrs_PreInstall_Directory\*\Ntfrs*\`
 
-- Distributed File System Replication (DFSR)-databasen og arbejdsmapper. Disse mapper er angivet af registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DFSR\Parameters\Replication Groups\GUID\Replica Set Configuration File`
+- DFSR-databasen (Distributed File System Replication) og arbejdsmapper. Disse mapper er angivet af registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DFSR\Parameters\Replication Groups\GUID\Replica Set Configuration File`
 
   > [!NOTE]
-  > For brugerdefinerede placeringer skal du [se Frameld automatisk udeladelse](#opting-out-of-automatic-exclusions).
+  > Hvis du vil se brugerdefinerede placeringer, skal [du se Fravalg af automatiske udeladelser](#opting-out-of-automatic-exclusions).
 
   - `%systemdrive%\System Volume Information\DFSR\$db_normal$`
   - `%systemdrive%\System Volume Information\DFSR\FileIDTable_*`
@@ -160,18 +163,18 @@ I dette afsnit vises standard udeladelsesindstillingerne for alle roller i Windo
   - `%systemdrive%\System Volume Information\DFSR\Fsr*.jrs`
   - `%systemdrive%\System Volume Information\DFSR\Tmp.edb`
 
-##### <a name="process-exclusions"></a>Procesudetagelser
+##### <a name="process-exclusions"></a>Behandl udeladelser
 
 - `%systemroot%\System32\dfsr.exe`
 - `%systemroot%\System32\dfsrs.exe`
 
-##### <a name="hyper-v-exclusions"></a>Hyper-V-udeladelse
+##### <a name="hyper-v-exclusions"></a>Hyper-V-udeladelser
 
-I følgende tabel vises udeladelse af filtyper, mappeude udeladelse og procesudetagelser, der leveres automatisk, når du installerer Hyper-V-rollen.
+I følgende tabel vises de filtypeudeladelser, mappeudeladelser og procesudeladelser, der leveres automatisk, når du installerer Hyper-V-rollen.
 
 <br><br/>
 
-|Udeladelsestype|Specifikke oplysninger|
+|Udeladelsestype|Detaljerne|
 |---|---|
 |Filtyper|`*.vhd` <br/> `*.vhdx` <br/> `*.avhd` <br/> `*.avhdx` <br/> `*.vsv` <br/> `*.iso` <br/> `*.rct` <br/> `*.vmcx` <br/> `*.vmrs`|
 |Mapper|`%ProgramData%\Microsoft\Windows\Hyper-V` <br/> `%ProgramFiles%\Hyper-V` <br/> `%SystemDrive%\ProgramData\Microsoft\Windows\Hyper-V\Snapshots` <br/> `%Public%\Documents\Hyper-V\Virtual Hard Disks`|
@@ -190,9 +193,9 @@ I følgende tabel vises udeladelse af filtyper, mappeude udeladelse og procesude
 - `%systemroot%\Sysvol\Domain\Oscfilter.ini`
 
 
-#### <a name="active-directory-exclusions"></a>Active Directory-udeladelse
+#### <a name="active-directory-exclusions"></a>Active Directory-udeladelser
 
-I dette afsnit vises de udeladelsestegn, der leveres automatisk, når du Active Directory-domæneservices (AD DS).
+I dette afsnit vises de udeladelser, der leveres automatisk, når du installerer Active Directory-domæneservices (AD DS).
 
 ##### <a name="ntds-database-files"></a>NTDS-databasefiler
 
@@ -201,7 +204,7 @@ Databasefilerne er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\Sy
 - `%windir%\Ntds\ntds.dit`
 - `%windir%\Ntds\ntds.pat`
 
-##### <a name="the-ad-ds-transaction-log-files"></a>Den AD DS transaktionslogfiler
+##### <a name="the-ad-ds-transaction-log-files"></a>AD DS-transaktionslogfilerne
 
 Transaktionslogfilerne er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\Database Log Files Path`
 
@@ -211,21 +214,21 @@ Transaktionslogfilerne er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MAC
 - `%windir%\Ntds\Ntds*.pat`
 - `%windir%\Ntds\TEMP.edb`
 
-##### <a name="the-ntds-working-folder"></a>Arbejdsmappen NTDS
+##### <a name="the-ntds-working-folder"></a>NTDS-arbejdsmappen
 
 Denne mappe er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\DSA Working Directory`
 
 - `%windir%\Ntds\Temp.edb`
 - `%windir%\Ntds\Edb.chk`
 
-##### <a name="process-exclusions-for-ad-ds-and-ad-ds-related-support-files"></a>Procesudetagelser for AD DS og AD DS relaterede supportfiler
+##### <a name="process-exclusions-for-ad-ds-and-ad-ds-related-support-files"></a>Behandl udeladelser for AD DS- og AD DS-relaterede supportfiler
 
 - `%systemroot%\System32\ntfrs.exe`
 - `%systemroot%\System32\lsass.exe`
 
-#### <a name="dhcp-server-exclusions"></a>Udeladelse af DHCP-server
+#### <a name="dhcp-server-exclusions"></a>DHCP-serverudeladelser
 
-I dette afsnit vises udeladelserne, der leveres automatisk, når du installerer DHCP-serverrollen. Placeringerne af DHCP-serveren er angivet af parametrene *DatabasePath*, *DhcpLogFilePath* og *BackupDatabasePath* i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters`
+I dette afsnit vises de udeladelser, der leveres automatisk, når du installerer DHCP-serverrollen. DHCP-serverfilplaceringerne angives af parametrene *DatabasePath*, *DhcpLogFilePath* og *BackupDatabasePath* i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters`
 
 - `%systemroot%\System32\DHCP\*\*.mdb`
 - `%systemroot%\System32\DHCP\*\*.pat`
@@ -233,53 +236,53 @@ I dette afsnit vises udeladelserne, der leveres automatisk, når du installerer 
 - `%systemroot%\System32\DHCP\*\*.chk`
 - `%systemroot%\System32\DHCP\*\*.edb`
 
-#### <a name="dns-server-exclusions"></a>Udeladelse af DNS Server
+#### <a name="dns-server-exclusions"></a>Udeladelser fra DNS-server
 
-I dette afsnit vises de fil- og mappeudetagelser og de procesudetagelser, der leveres automatisk, når du installerer DNS Server-rollen.
+I dette afsnit vises de fil- og mappeudeladelser og de procesudeladelser, der leveres automatisk, når du installerer DNS-serverrollen.
 
-##### <a name="file-and-folder-exclusions-for-the-dns-server-role"></a>Fil- og mappeude udeladelse for DNS Server-rollen
+##### <a name="file-and-folder-exclusions-for-the-dns-server-role"></a>Fil- og mappeudeladelser for DNS-serverrollen
 
 - `%systemroot%\System32\Dns\*\*.log`
 - `%systemroot%\System32\Dns\*\*.dns`
 - `%systemroot%\System32\Dns\*\*.scc`
 - `%systemroot%\System32\Dns\*\BOOT`
 
-##### <a name="process-exclusions-for-the-dns-server-role"></a>Procesudetagelser for DNS Server-rollen
+##### <a name="process-exclusions-for-the-dns-server-role"></a>Behandl udeladelser for DNS-serverrollen
 
 - `%systemroot%\System32\dns.exe`
 
-#### <a name="file-and-storage-services-exclusions"></a>Fil- Storage og tjenesteude udeladelse
+#### <a name="file-and-storage-services-exclusions"></a>Fil- og Storage Services-udeladelser
 
-I dette afsnit vises de fil- og mappeude udeladelsestegn, der leveres automatisk, når du installerer rollen Filer og Storage-tjenester. De undtagelser, der er angivet nedenfor, inkluderer ikke udeladelse for klyngerollen.
+I dette afsnit vises de fil- og mappeudeladelser, der leveres automatisk, når du installerer rollen Filer og Storage Tjenester. De undtagelser, der er angivet nedenfor, omfatter ikke udeladelser for klyngerollen.
 
 - `%SystemDrive%\ClusterStorage`
 - `%clusterserviceaccount%\Local Settings\Temp`
 - `%SystemDrive%\mscs`
 
-#### <a name="print-server-exclusions"></a>Udeladelse af Print Server
+#### <a name="print-server-exclusions"></a>Udskrivningsserverudeladelser
 
-I dette afsnit vises udeladelse af filtyper, mappeudetagelser og de procesudetagelser, der leveres automatisk, når du installerer printserverrollen.
+I dette afsnit vises de filtypeudeladelser, mappeudeladelser og procesudeladelser, der leveres automatisk, når du installerer rollen Udskriftsserver.
 
-##### <a name="file-type-exclusions"></a>Udeladelse af filtyper
+##### <a name="file-type-exclusions"></a>Undtagelser for filtype
 
 - `*.shd`
 - `*.spl`
 
-##### <a name="folder-exclusions"></a>Udeladelse af mapper
+##### <a name="folder-exclusions"></a>Mappeudeladelser
 
 Denne mappe er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers\DefaultSpoolDirectory`
 
 - `%system32%\spool\printers\*`
 
-##### <a name="process-exclusions"></a>Procesudetagelser
+##### <a name="process-exclusions"></a>Behandl udeladelser
 
 - `spoolsv.exe`
 
-#### <a name="web-server-exclusions"></a>Udeladelse af webserver
+#### <a name="web-server-exclusions"></a>Webserverudeladelser
 
-I dette afsnit finder du en oversigt over mappeudetagelser og de procesudetagelser, der leveres automatisk, når du installerer Web Server-rollen.
+I dette afsnit vises de mappeudeladelser og procesudeladelser, der leveres automatisk, når du installerer rollen Webserver.
 
-##### <a name="folder-exclusions"></a>Udeladelse af mapper
+##### <a name="folder-exclusions"></a>Mappeudeladelser
 
 - `%SystemRoot%\IIS Temporary Compressed Files`
 - `%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files`
@@ -287,20 +290,20 @@ I dette afsnit finder du en oversigt over mappeudetagelser og de procesudetagels
 - `%systemDrive%\inetpub\logs`
 - `%systemDrive%\inetpub\wwwroot`
 
-##### <a name="process-exclusions"></a>Procesudetagelser
+##### <a name="process-exclusions"></a>Behandl udeladelser
 
 - `%SystemRoot%\system32\inetsrv\w3wp.exe`
 - `%SystemRoot%\SysWOW64\inetsrv\w3wp.exe`
 - `%SystemDrive%\PHP5433\php-cgi.exe`
 
-##### <a name="turning-off-scanning-of-files-in-the-sysvolsysvol-folder-or-the-sysvol_dfsrsysvol-folder"></a>De deaktiverer scanning af filer i mappen Sysvol\Sysvol eller mappen SYSVOL_DFSR\Sysvol
+##### <a name="turning-off-scanning-of-files-in-the-sysvolsysvol-folder-or-the-sysvol_dfsrsysvol-folder"></a>Deaktiver scanning af filer i mappen Sysvol\Sysvol eller mappen SYSVOL_DFSR\Sysvol
 
-Den aktuelle placering af mappen `Sysvol\Sysvol` og `SYSVOL_DFSR\Sysvol` alle undermapper er filsystemets genparse destination for replikeringssætroden. Mapperne `Sysvol\Sysvol` `SYSVOL_DFSR\Sysvol` og disse bruger som standard følgende placeringer:
+Den aktuelle placering af `Sysvol\Sysvol` mappen eller `SYSVOL_DFSR\Sysvol` og alle undermapperne er filsystemets genfortolkningsmål for replikasætroden. Mapperne `Sysvol\Sysvol` og `SYSVOL_DFSR\Sysvol` bruger som standard følgende placeringer:
 
 - `%systemroot%\Sysvol\Domain`
 - `%systemroot%\Sysvol_DFSR\Domain`
 
-Der refereres til stien til den `SYSVOL` aktive i øjeblikket aktive del af NETLOGON-delingen og kan bestemmes af værdien SysVol i følgende undernøgle: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Netlogon\Parameters`
+Der refereres til stien til det aktive `SYSVOL` i øjeblikket af NETLOGON-sharet og kan bestemmes af værdien SysVol i følgende undernøgle: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Netlogon\Parameters`
 
 Udelad følgende filer fra denne mappe og alle dens undermapper:
 
@@ -315,37 +318,37 @@ Udelad følgende filer fra denne mappe og alle dens undermapper:
 - `*.ins`
 - `Oscfilter.ini`
 
-#### <a name="windows-server-update-services-exclusions"></a>Windows Server Update Services udeladelse
+#### <a name="windows-server-update-services-exclusions"></a>Windows Server Update Services undtagelser
 
-I dette afsnit vises de mappeudetagelser, der leveres automatisk, når du installerer Windows Server Update Services (WSUS). WSUS-mappen er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup`
+I dette afsnit vises de mappeudeladelser, der leveres automatisk, når du installerer rollen Windows Server Update Services (WSUS). Mappen WSUS er angivet i registreringsdatabasenøglen `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup`
 
 - `%systemroot%\WSUS\WSUSContent`
 - `%systemroot%\WSUS\UpdateServicesDBFiles`
 - `%systemroot%\SoftwareDistribution\Datastore`
 - `%systemroot%\SoftwareDistribution\Download`
 
-## <a name="opting-out-of-automatic-exclusions"></a>Framelde dig automatiske udeladelse
+## <a name="opting-out-of-automatic-exclusions"></a>Fravalg af automatiske udeladelser
 
-I Windows Server 2016 og nyere udelader de foruddefinerede udeladelsesindstillinger, der leveres af Sikkerhedsintelligens-opdateringer, kun standardstierne for en rolle eller funktion. Hvis du har installeret en rolle eller funktion i en brugerdefineret sti, eller hvis du manuelt vil styre udeladelsessættet, skal du sørge for at fravælge de automatiske udeladelsesindstillinger, der leveres i Sikkerhedsintelligens-opdateringer. Men husk på, at de undtagelser, der leveres automatisk, er optimeret til Windows Server 2016 og nyere. Se En [Anbefalinger definition af udeladelseslister, før](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) du definerer dine udeladelseslister.
+I Windows Server 2016 og nyere udelukker de foruddefinerede udeladelser, der leveres af opdateringer til Security Intelligence, kun standardstierne for en rolle eller funktion. Hvis du har installeret en rolle eller funktion i en brugerdefineret sti, eller du vil styre sættet af udeladelser manuelt, skal du sørge for at fravælge de automatiske udeladelser, der leveres i Opdateringer til Security Intelligence. Men vær opmærksom på, at de undtagelser, der leveres automatisk, er optimeret til Windows Server 2016 og nyere. Se [Anbefalinger for at definere udeladelser, før du definerer dine udeladelseslister](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions).
 
 > [!WARNING]
-> Frameld automatisk udeladelse kan have en negativ effekt på ydeevnen eller medføre beskadigelse af data. Udeladelserne, der leveres automatisk, er optimeret til Windows Server 2016, Windows Server 2019 og Windows Server 2022-roller.
+> Hvis du fravalger automatiske undtagelser, kan det påvirke ydeevnen negativt eller medføre beskadigelse af data. De undtagelser, der leveres automatisk, er optimeret til Windows Server 2016, Windows Server 2019 og Windows Server 2022-roller.
 
-Da foruddefinerede undtagelser kun udelader standardstier **, skal** du tilføje udeladelse manuelt, hvis du flytter NTDS- og SYSVOL-mapper til et andet drev eller en anden sti end den oprindelige sti. Se [Konfigurer listen over udeladelses undtagelser baseret på mappenavn eller filtypenavn](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
+Da foruddefinerede udeladelser kun **udelader standardstier**, skal du tilføje udeladelser manuelt, hvis du flytter NTDS- og SYSVOL-mapper til et andet drev eller en anden sti end *den oprindelige sti*. Se [Konfigurer listen over undtagelser baseret på mappenavn eller filtypenavn](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
 
-Du kan deaktivere listerne over automatiske udeladelse med Gruppepolitik, PowerShell-cmdlet'er og WMI.
+Du kan deaktivere de automatiske udeladelseslister med Gruppepolitik, PowerShell-cmdlet'er og WMI.
 
-### <a name="use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022"></a>Brug Gruppepolitik til at deaktivere listen til automatisk udeladelse Windows Server 2016, Windows Server 2019 og Windows Server 2022
+### <a name="use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022"></a>Brug Gruppepolitik til at deaktivere listen over automatisk udeladelser på Windows Server 2016, Windows Server 2019 og Windows Server 2022
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik administrationskonsollen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
+1. Åbn [administrationskonsollen for Gruppepolitik på administrationscomputeren til Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
 
-2. På fanen **Gruppepolitik skal du** gå **til Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
+2. I **Gruppepolitik Administrationseditor** skal du gå til **Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
 
-3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **udeladelse.**
+3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Udeladelser**.
 
-4. Dobbeltklik på Slå **automatisk udeladelse fra**, og angiv indstillingen til **Aktiveret**. Vælg derefter **OK**.
+4. Dobbeltklik på **Slå Automatisk udeladelse fra**, og angiv indstillingen til **Aktiveret**. Vælg derefter **OK**.
 
-### <a name="use-powershell-cmdlets-to-disable-the-auto-exclusions-list-on-windows-server"></a>Brug PowerShell-cmdlet'er til at deaktivere listen til automatisk udeladelse på Windows Server
+### <a name="use-powershell-cmdlets-to-disable-the-auto-exclusions-list-on-windows-server"></a>Brug PowerShell-cmdlet'er til at deaktivere listen over automatiske udeladelser på Windows Server
 
 Brug følgende cmdlet'er:
 
@@ -356,11 +359,11 @@ Set-MpPreference -DisableAutoExclusions $true
 Du kan få mere at vide i følgende ressourcer:
 
 - [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md).
-- [Brug PowerShell med Microsoft Defender Antivirus](/powershell/module/defender/).
+- [Brug PowerShell sammen med Microsoft Defender Antivirus](/powershell/module/defender/).
 
-### <a name="use-windows-management-instruction-wmi-to-disable-the-auto-exclusions-list-on-windows-server"></a>Brug Windows (WMI) til at deaktivere listen over automatiske udeladelser Windows Server
+### <a name="use-windows-management-instruction-wmi-to-disable-the-auto-exclusions-list-on-windows-server"></a>Brug WMI (Windows Management Instruction) til at deaktivere listen med automatiske udeladelser på Windows Server
 
-Brug **metoden Angiv** for [MSFT_MpPreference](/previous-versions/windows/desktop/defender/msft-mppreference) til følgende egenskaber:
+Brug metoden **Set** for klassen [MSFT_MpPreference](/previous-versions/windows/desktop/defender/msft-mppreference) til følgende egenskaber:
 
 ```WMI
 DisableAutoExclusions
@@ -368,20 +371,30 @@ DisableAutoExclusions
 
 Se følgende for at få flere oplysninger og tilladte parametre:
 
-- [Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="defining-custom-exclusions"></a>Definition af brugerdefinerede udeladelses undtagelser
+## <a name="defining-custom-exclusions"></a>Definition af brugerdefinerede udeladelser
 
-Hvis det er nødvendigt, kan du tilføje eller fjerne brugerdefinerede udeladelser. Det gør du i følgende artikler:
+Hvis det er nødvendigt, kan du tilføje eller fjerne brugerdefinerede udeladelser. Det gør du ved at se følgende artikler:
 
-- [Konfigurere og validere udeladelse baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse af filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="see-also"></a>Se også
 
-- [Konfigurere og validere udeladelse for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse af filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
-- [Almindelige fejl at undgå, når du definerer udeladelse](common-exclusion-mistakes-microsoft-defender-antivirus.md)
-- [Tilpas, initier og gennemse resultaterne Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- [Almindelige fejl, der skal undgås, når du definerer udeladelser](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Tilpas, start og gennemse resultaterne af Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

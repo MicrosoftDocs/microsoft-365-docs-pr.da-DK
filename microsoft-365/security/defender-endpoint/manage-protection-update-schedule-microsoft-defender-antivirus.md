@@ -16,12 +16,12 @@ ms.reviewer: pahuijbr
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 566b79c534ed13bbdf5f1d66e6ffdbc5ab43a5b2
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: cca49b5bdcfae0f7c0ed910b6d0df9ec0448aff5
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714984"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789401"
 ---
 # <a name="manage-the-schedule-for-when-protection-updates-should-be-downloaded-and-applied"></a>Administrer tidsplanen for, hvornår beskyttelsesopdateringer skal downloades og anvendes
 
@@ -31,6 +31,10 @@ ms.locfileid: "64714984"
 **Gælder for:**
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 Microsoft Defender Antivirus giver dig mulighed for at bestemme, hvornår den skal søge efter og downloade opdateringer.
 
@@ -99,6 +103,16 @@ SignatureUpdateInterval
 Se følgende for at få flere oplysninger og tilladte parametre:
 
 - [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-articles"></a>Relaterede artikler
 

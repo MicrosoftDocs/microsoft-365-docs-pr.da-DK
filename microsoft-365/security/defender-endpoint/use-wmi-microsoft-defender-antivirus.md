@@ -1,7 +1,7 @@
 ---
-title: Konfigurere Microsoft Defender Antivirus med WMI
-description: Få mere at vide om, hvordan du konfigurerer Microsoft Defender Antivirus administrerer filer ved hjælp af WMI-scripts til at hente, redigere og opdatere indstillinger i Microsoft Defender til slutpunkt.
-keywords: wmi, scripts, windows management instrumentation, konfiguration
+title: Konfigurer Microsoft Defender Antivirus med WMI
+description: Få mere at vide om, hvordan du konfigurerer og administrerer Microsoft Defender Antivirus ved hjælp af WMI-scripts til at hente, redigere og opdatere indstillinger i Microsoft Defender for Endpoint.
+keywords: wmi, scripts, instrumentering af Windows-styring, konfiguration
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -17,35 +17,49 @@ ms.technology: mde
 audience: ITPro
 ms.topic: how-to
 ms.collection: m365-security-compliance
-ms.openlocfilehash: c8057a971576d5511440ac009acd6eab55b302e9
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: a525deb526f61f8500f42cc918380fdfa9c52861
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63597886"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787622"
 ---
-# <a name="use-windows-management-instrumentation-wmi-to-configure-and-manage-microsoft-defender-antivirus"></a>Brug Windows WMI (Management Instrumentation) til at konfigurere og administrere Microsoft Defender Antivirus
+# <a name="use-windows-management-instrumentation-wmi-to-configure-and-manage-microsoft-defender-antivirus"></a>Brug WMI (Windows Management Instrumentation) til at konfigurere og administrere Microsoft Defender Antivirus
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Windows Management Instrumentation (WMI) er en scriptinggrænseflade, der gør det muligt at hente, ændre og opdatere indstillinger.
+**Platforme**
+- Windows
 
-Læs mere om WMI i [microsoft Developer Network System Administration-biblioteket](/windows/win32/wmisdk/wmi-start-page).
+WMI (Windows Management Instrumentation) er en scriptgrænseflade, der giver dig mulighed for at hente, redigere og opdatere indstillinger.
 
-Microsoft Defender Antivirus har en række bestemte WMI-klasser, der kan bruges til at udføre de fleste af de samme funktioner som Gruppepolitik og andre administrationsværktøjer. Mange af klasserne svarer til [Defender for Cloud PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md).
+Læs mere om WMI i [biblioteket Microsoft Developer Network System Administration](/windows/win32/wmisdk/wmi-start-page).
 
-[MSDN-Windows Defender WMIv2-providerreferencebiblioteket](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) viser de tilgængelige WMI-klasser for Microsoft Defender Antivirus og indeholder eksempelscripts.
+Microsoft Defender Antivirus har en række specifikke WMI-klasser, der kan bruges til at udføre de fleste af de samme funktioner som Gruppepolitik og andre administrationsværktøjer. Mange af klasserne er analoge med [Defender for Cloud PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md).
 
-Ændringer, der er foretaget med WMI, påvirker lokale indstillinger på slutpunktet, hvor ændringerne installeres eller foretages. Det betyder, at politikinstallationer med Gruppepolitik, Microsoft Endpoint Configuration Manager eller Microsoft Intune kan overskrive ændringer, der er foretaget med WMI. 
+[Referencebiblioteket for MSDN Windows Defender WMIv2 Provider](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) viser de tilgængelige WMI-klasser til Microsoft Defender Antivirus og indeholder eksempelscripts.
 
-Du kan [konfigurere, hvilke indstillinger der kan tilsidesættes lokalt med tilsidesætter lokal politik](configure-local-policy-overrides-microsoft-defender-antivirus.md).
+Ændringer, der foretages med WMI, påvirker lokale indstillinger på det slutpunkt, hvor ændringerne installeres eller foretages. Det betyder, at udrulninger af politikker med Gruppepolitik, Microsoft Endpoint Configuration Manager eller Microsoft Intune kan overskrive ændringer, der er foretaget med WMI. 
+
+Du kan [konfigurere, hvilke indstillinger der kan tilsidesættes lokalt med tilsidesættelser af lokale politikker](configure-local-policy-overrides-microsoft-defender-antivirus.md).
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Referenceemner til administration og konfigurationsværktøjer](configuration-management-reference-microsoft-defender-antivirus.md)
+- [Referenceemner om administration og konfigurationsværktøjer](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

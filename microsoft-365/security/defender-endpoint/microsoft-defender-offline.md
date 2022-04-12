@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender Offline i Windows
-description: Du kan bruge Microsoft Defender Offline direkte fra Windows Defender Antivirus app. Du kan også administrere, hvordan det installeres i dit netværk.
+description: Du kan bruge Microsoft Defender Offline direkte fra appen Windows Defender Antivirus. Du kan også administrere, hvordan den installeres på dit netværk.
 keywords: scan, defender, offline
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: ccb65b865afdf2a0ec0210c3593daee1cb5c09b6
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: ea7d316a7fc31724466dcd459ed72792cea817fd
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476835"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787682"
 ---
 # <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Kør og gennemse resultaterne af en Microsoft Defender Offline scanning
 
@@ -29,72 +29,76 @@ ms.locfileid: "64476835"
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Microsoft Defender Offline er et scanningsværktøj til antimalware, der gør det muligt at starte og køre en scanning fra et sikkert miljø. Scanningen kører uden for den normale Windows-kerne, så den kan målrette malware, der forsøger at omgå Windows-shellen, f.eks. virus og rootkits, der inficerer eller overskriver MASTER boot-posten (MBR).
+**Platforme**
+- Windows
 
-Du kan bruge Microsoft Defender Offline hvis du har mistanke om malware inficeret, eller du vil bekræfte en grundig oprydning af slutpunktet efter et malwareudbrud.
+Microsoft Defender Offline er et antimalwarescanningsværktøj, der giver dig mulighed for at starte og køre en scanning fra et miljø, du har tillid til. Scanningen kører uden for den normale Windows kerne, så den kan målrette malware, der forsøger at omgå Windows shell, såsom virus og rootkits, der inficerer eller overskriver master boot record (MBR).
 
-I Windows 10 og Windows 11 kan Microsoft Defender Offline køres med ét klik direkte [fra Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md). I tidligere versioner af Windows skulle en bruger installere Microsoft Defender Offline til startbare medier, genstarte slutpunktet og indlæse de opstartbare medier.
+Du kan bruge Microsoft Defender Offline hvis du har mistanke om en malware infektion, eller du ønsker at bekræfte en grundig ren af slutpunktet efter et malware udbrud.
+
+I Windows 10 og Windows 11 kan Microsoft Defender Offline køres med et enkelt klik direkte fra [appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md). I tidligere versioner af Windows skulle en bruger installere Microsoft Defender Offline til startmedier, genstarte slutpunktet og indlæse det startbare medie.
 
 ## <a name="prerequisites-and-requirements"></a>forudsætninger og krav
 
 Microsoft Defender Offline i Windows 10 og Windows 11 har de samme hardwarekrav som Windows 10.
 
-Du kan finde flere Windows 10 og Windows 11 i følgende emner:
+Du kan få flere oplysninger om krav til Windows 10 og Windows 11 i følgende emner:
 
-- [Minimumskrav til hardware](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
+- [Minimumkrav til hardware](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
 
 - [Retningslinjer for hardwarekomponenter](/windows-hardware/design/component-guidelines/components)
 
 > [!NOTE]
-> Microsoft Defender Offline ikke på maskiner med ARM eller processorer på Windows Server Stock Keeping Units.
+> Microsoft Defender Offline understøttes ikke på maskiner med ARM-processorer eller på Windows serverlagerenheder.
 
-For at Microsoft Defender Offline fra slutpunktet skal brugeren være logget på med administratorrettigheder.
+Hvis du vil køre Microsoft Defender Offline fra slutpunktet, skal brugeren være logget på med administratorrettigheder.
 
 ## <a name="microsoft-defender-offline-updates"></a>Microsoft Defender Offline opdateringer
 
-Microsoft Defender Offline bruger de nyeste sikkerhedsopdateringer, der er tilgængelige på slutpunktet. De opdateres, når Windows Defender Antivirus opdateres.
+Microsoft Defender Offline bruger de nyeste tilgængelige beskyttelsesopdateringer på slutpunktet. De opdateres, når Windows Defender Antivirus opdateres.
 
 > [!NOTE]
-> Før du kører en offline-scanning, skal du forsøge at opdatere Microsoft Defender AV-beskyttelse. Du kan enten gennemtvinge en opdatering med Gruppepolitik, eller hvordan du normalt installerer opdateringer på slutpunkter, eller du kan manuelt downloade og installere de nyeste sikkerhedsopdateringer [fra Microsoft Malware Protection Center](https://www.microsoft.com/security/portal/definitions/adl.aspx).
+> Før du kører en offlinescanning, skal du forsøge at opdatere Microsoft Defender AV-beskyttelse. Du kan enten gennemtvinge en opdatering med Gruppepolitik eller på den måde, du normalt installerer opdateringer på slutpunkter på, eller du kan manuelt downloade og installere de nyeste beskyttelsesopdateringer fra [Microsoft Malware Protection Center](https://www.microsoft.com/security/portal/definitions/adl.aspx).
 
-Se emnet [Administrer Microsoft Defender Antivirus security intelligence-opdateringer](manage-protection-updates-microsoft-defender-antivirus.md) for at få flere oplysninger.
+Se emnet [Administrer Microsoft Defender Antivirus Opdateringer til sikkerhedsintelligens](manage-protection-updates-microsoft-defender-antivirus.md) for at få flere oplysninger.
 
-## <a name="usage-scenarios"></a>Anvendelsesscenarier
+## <a name="usage-scenarios"></a>Forbrugsscenarier
 
-I Windows 10 version 1607 kan du manuelt gennemtvinge en offlinescanning. Alternativt, hvis Windows Defender finder ud af, Microsoft Defender Offline skal køre, bliver brugeren bedt om at køre på slutpunktet.
+I Windows 10 version 1607 kan du gennemtvinge en offlinescanning manuelt. Hvis Windows Defender bestemmer, at Microsoft Defender Offline skal køre, bliver brugeren også bedt om at angive slutpunktet.
 
-Behovet for at udføre en offline scanning vil også blive afsløret i Microsoft Endpoint Manager, hvis du bruger den til at administrere dine slutpunkter.
+Behovet for at udføre en offlinescanning vises også i Microsoft Endpoint Manager hvis du bruger den til at administrere dine slutpunkter.
 
-Prompten kan forekomme via en meddelelse, der minder om følgende:
+Prompten kan forekomme via en meddelelse, der ligner følgende:
 
-:::image type="content" source="../../media/notification.png" alt-text="Meddelelse om at køre Microsoft Defender Offline" lightbox="../../media/notification.png":::
+:::image type="content" source="../../media/notification.png" alt-text="Meddelelse om kørsel af Microsoft Defender Offline" lightbox="../../media/notification.png":::
 
-Brugeren får også besked i Windows Defender klient.
+Brugeren får også besked i den Windows Defender klient.
 
-I Configuration Manager kan du identificere status for slutpunkter ved at gå til **Overvågningsoversigt > > Sikkerhedsstatus > Endpoint Protection status > System Center Endpoint Protection Status**.
+I Configuration Manager kan du identificere status for slutpunkter ved at gå til **Overvågning > Oversigt > Sikkerhed > Endpoint Protection Status > System Center Endpoint Protection Status**.
 
-Microsoft Defender Offline er angivet under Status **for afhjælpning af malware som** **påkrævet offlinescanning**.
+Microsoft Defender Offline scanninger er angivet under **Afhjælpningsstatus for malware**, da **offlinescanning er påkrævet**.
 
-:::image type="content" source="../../media/sccm-wdo.png" alt-text="Indikatoren for en scanning af Microsoft Defender Offline" lightbox="../../media/sccm-wdo.png":::
+:::image type="content" source="../../media/sccm-wdo.png" alt-text="Indikatoren for en scanning efter Microsoft Defender Offline" lightbox="../../media/sccm-wdo.png":::
 
 ## <a name="configure-notifications"></a>Konfigurer meddelelser
 
-Microsoft Defender Offline meddelelser er konfigureret i den samme politikindstilling som andre Microsoft Defender AV-meddelelser.
+Microsoft Defender Offline meddelelser konfigureres i den samme politikindstilling som andre Microsoft Defender AV-meddelelser.
 
-Du kan finde flere oplysninger Windows Defender meddelelser i Windows Defender [i emnet Konfigurer de meddelelser, der vises på slutpunkter](configure-notifications-microsoft-defender-antivirus.md).
+Du kan finde flere oplysninger om meddelelser i Windows Defender i emnet [Konfigurer de meddelelser, der vises på slutpunkter](configure-notifications-microsoft-defender-antivirus.md).
 
 ## <a name="run-a-scan"></a>Kør en scanning
 
 > [!IMPORTANT]
-> Før du bruger Microsoft Defender Offline, skal du sørge for at gemme alle filer og lukke kørende programmer. Det Microsoft Defender Offline 15 minutter at køre scanningen. Det genstarter slutpunktet, når scanningen er fuldført. Scanningen udføres uden for det sædvanlige Windows i driftsmiljøet. Brugergrænsefladen ser anderledes ud end en normal scanning, der udføres ved Windows Defender. Når scanningen er fuldført, genstartes slutpunktet, og Windows indlæses normalt.
+> Før du bruger Microsoft Defender Offline, skal du sørge for at gemme filer og lukke kørende programmer. Det tager ca. 15 minutter at køre den Microsoft Defender Offline scanning. Det genstarter slutpunktet, når scanningen er fuldført. Scanningen udføres uden for det sædvanlige Windows driftsmiljø. Brugergrænsefladen ser anderledes ud end en normal scanning, der udføres af Windows Defender. Når scanningen er fuldført, genstartes slutpunktet, og Windows indlæses normalt.
 
 Du kan køre en Microsoft Defender Offline scanning med følgende:
 
 - PowerShell
-- Windows WMI (Management Instrumentation)
-- Den Windows Sikkerhed app
+- WMI (Windows Management Instrumentation)
+- Appen Windows Sikkerhed
 
 
 
@@ -106,13 +110,13 @@ Brug følgende cmdlet'er:
 Start-MpWDOScan
 ```
 
-Se [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få mere at vide om, hvordan du bruger PowerShell Microsoft Defender Antivirus.
+Se [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
 
-### <a name="use-windows-management-instruction-wmi-to-run-an-offline-scan"></a>Brug Windows (WMI) til at køre en offlinescanning
+### <a name="use-windows-management-instruction-wmi-to-run-an-offline-scan"></a>Brug WMI (Windows Management Instruction) til at køre en offlinescanning
 
 Brug klassen [**MSFT_MpWDOScan**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til at køre en offlinescanning.
 
-Følgende WMI-scriptstykke kører straks en Microsoft Defender Offline-scanning, hvilket får slutpunktet til at genstarte, køre offlinescanningen og derefter genstarte og starte Windows.
+Følgende WMI-scriptstykke kører straks en Microsoft Defender Offline scanning, som medfører, at slutpunktet genstartes, kører offlinescanningen og derefter genstarter og starter i Windows.
 
 ```console
 wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
@@ -120,24 +124,34 @@ wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
 
 Se følgende for at få flere oplysninger:
 
-- [Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-### <a name="use-the-windows-defender-security-app-to-run-an-offline-scan"></a>Brug appen Windows Defender til at køre en offlinescanning
+### <a name="use-the-windows-defender-security-app-to-run-an-offline-scan"></a>Brug Windows Defender Security-appen til at køre en offlinescanning
 
-1. Åbn Windows Sikkerhed-appen ved at klikke på skjoldet på proceslinjen eller søge i startmenuen efter **Defender for Cloud**.
+1. Åbn appen Windows Sikkerhed ved at klikke på skjoldikonet på proceslinjen eller ved at søge i menuen Start efter **Defender for Cloud**.
 
-2. Klik på **feltet & for trusselsbeskyttelse** (eller skjoldikonet på den venstre menulinje) og derefter på **etiketten Avanceret** scanning:
+2. Klik på feltet **Virus & threat protection** (eller skjoldikonet på menulinjen til venstre) og derefter på etiketten **Avanceret scanning** :
 
-3. Vælg **Microsoft Defender Offline scanningen,** og klik på **Scan nu**.
+3. Vælg **Microsoft Defender Offline scanne**, og klik på **Scan nu**.
 
     > [!NOTE]
-    > I Windows 10 version 1607 kan offlinescanningen køres under **Windows Indstillinger** \> **Update & sikkerhedsdata** \> **Windows Defender** eller fra Windows Defender klienten.
+    > I Windows 10 version 1607 kan offlinescanningen køres fra under **Windows Indstillinger** \> **& sikkerheds-Windows Defender** \> eller fra den Windows Defender klient.
 
 ## <a name="review-scan-results"></a>Gennemse scanningsresultater
 
-Microsoft Defender Offline vises i sektionen [Scanningsoversigt i appen Windows Sikkerhed scanning](microsoft-defender-security-center-antivirus.md).
+Microsoft Defender Offline scanningsresultater vises i [sektionen Scanningsoversigt i appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md).
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Tilpas, initier og gennemse resultaterne af scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Tilpas, start og gennemse resultaterne af scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

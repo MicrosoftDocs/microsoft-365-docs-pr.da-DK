@@ -1,7 +1,7 @@
 ---
 title: Slå netværksbeskyttelse til
-description: Aktivér netværksbeskyttelse med Gruppepolitik, PowerShell eller Enhedshåndtering og Configuration Manager.
-keywords: Netværksbeskyttelse, udnyttelse, skadeligt websted, ip, domæne, domæner, aktivér, aktivér
+description: Aktivér netværksbeskyttelse med Gruppepolitik, PowerShell eller mobile Enhedshåndtering og Configuration Manager.
+keywords: Netværksbeskyttelse, udnyttelser, skadeligt websted, ip, domæne, domæner, aktivere, slå til
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 4c3b74179294d0b028dd07c3a6f4f28e844237d3
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: d37723e45c5c4049e913422b2500b74d36c701eb
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469927"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789706"
 ---
 # <a name="turn-on-network-protection"></a>Slå netværksbeskyttelse til
 
@@ -28,49 +28,53 @@ ms.locfileid: "64469927"
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 > [!TIP]
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-[Netværksbeskyttelse hjælper](network-protection.md) med at forhindre medarbejdere i at bruge et hvilket som helst program til at få adgang til skadelige domæner, der kan hoste forsøg på phishing, udnyttelse og andet skadeligt indhold på internettet. Du kan [overvåge netværksbeskyttelse i et](evaluate-network-protection.md) testmiljø for at se, hvilke apps der blev blokeret, før du aktiverer det.
+[Netværksbeskyttelse](network-protection.md) hjælper med at forhindre medarbejdere i at bruge alle programmer til at få adgang til farlige domæner, der kan hoste phishing-svindel, udnyttelser og andet skadeligt indhold på internettet. Du kan [overvåge netværksbeskyttelse](evaluate-network-protection.md) i et testmiljø for at få vist, hvilke apps der blokeres, før du aktiverer den.
 
 [Få mere at vide om konfigurationsindstillinger for netværksfiltrering.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
 ## <a name="check-if-network-protection-is-enabled"></a>Kontrollér, om netværksbeskyttelse er aktiveret
 
-Kontrollér, om netværksbeskyttelse er aktiveret på en lokal enhed ved hjælp af registreringseditoren.
+Kontrollér, om netværksbeskyttelse er blevet aktiveret på en lokal enhed ved hjælp af Registreringseditor.
 
-1. Vælg knappen **Start** på proceslinjen, og skriv **regedit for at** åbne Registreringseditor.
+1. Vælg knappen **Start** på proceslinjen, og skriv **regedit** for at åbne Registreringseditor.
 
 2. Vælg **HKEY_LOCAL_MACHINE** i sidemenuen.
 
-3. Naviger gennem de indlejrede menuer til **SOFTWARE-politikker** \>  \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit** **Guard-netværksbeskyttelse**\>.
+3. Naviger gennem de indlejrede menuer til **SOFTWAREpolitikker** \>  \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
-Hvis nøglen mangler, skal du gå til **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+Hvis nøglen mangler, skal du navigere til **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
-4. Vælg **EnableNetworkProtection for** at få vist den aktuelle tilstand for netværksbeskyttelse på enheden:
+4. Vælg **EnableNetworkProtection** for at se den aktuelle tilstand af netværksbeskyttelse på enheden:
 
    - 0 eller **Fra**
    - 1 eller **Til**
    - 2 eller **overvågningstilstand**
 
-    :::image type="content" source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Registreringsdatabasenøgle til netværksbeskyttelse" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
+    :::image type="content" source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Registreringsdatabasenøglen Network Protection" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
 
 ## <a name="enable-network-protection"></a>Aktivér netværksbeskyttelse
 
 Aktivér netværksbeskyttelse ved hjælp af en af disse metoder:
 
 - [PowerShell](#powershell)
-- [Mobildata Enhedshåndtering (MDM)](#mobile-device-management-mdm)
+- [Mobil Enhedshåndtering (MDM)](#mobile-device-management-mdm)
 - [Microsoft Endpoint Manager](#microsoft-endpoint-manager)
 - [Gruppepolitik](#group-policy)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
 
 ### <a name="powershell"></a>PowerShell
 
-1. Skriv **powershell** i menuen Start, **højreklik på Windows PowerShell** og vælg **Kør som administrator**.
+1. Skriv **powershell** i menuen Start, højreklik **Windows PowerShell**, og vælg **Kør som administrator**.
 
 2. Angiv følgende cmdlet:
 
@@ -84,13 +88,13 @@ Aktivér netværksbeskyttelse ved hjælp af en af disse metoder:
     Set-MpPreference -EnableNetworkProtection AuditMode
     ```
 
-    Brug `Disabled` i stedet `AuditMode` for `Enabled` eller til at deaktivere funktionen.
+    Brug `Disabled` i stedet for `AuditMode` eller `Enabled` til at deaktivere funktionen.
 
 ### <a name="mobile-device-management-mdm"></a>Administration af mobilenheder (MDM)
 
-Brug [konfigurationskonfigurationen ./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) serviceudbyder (CSP) til at aktivere eller deaktivere netværksbeskyttelse eller aktivere overvågningstilstand.
+Brug [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) CSP (Configuration Service Provider) til at aktivere eller deaktivere netværksbeskyttelse eller overvågningstilstand.
 
-[Opdater Microsoft Defender-antimalwareplatformen til den nyeste version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) , før du aktiverer eller deaktiverer netværksbeskyttelse eller aktiverer overvågningstilstand.
+[Opdater Microsoft Defender Antimalware-platformen til den nyeste version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) , før du aktiverer eller deaktiverer netværksbeskyttelse eller aktiverer overvågningstilstand.
 
 
 ### <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
@@ -99,77 +103,77 @@ Brug [konfigurationskonfigurationen ./Vendor/MSFT/Policy/Config/Defender/EnableN
 
 2. Gå til **EnhederKonfigurationsprofilerOpret** >  >  **profil**.
 
-3. I pop **op-menuen Opret** en profil skal **du vælge Platform** og **vælge Profiltype** som **skabeloner**.
+3. I pop op-vinduet **Opret en profil** skal du vælge **Platform** og vælge **Profiltype** som **skabeloner**.
 
-4. Vælg **Slutpunktsbeskyttelse** fra **listen over skabeloner** under Skabelonnavn, og vælg derefter **Opret**.
+4. Vælg **Endpoint Protection** på listen over skabeloner i **skabelonnavnet**, og vælg derefter **Opret**.
 
 4. Gå til **Endpoint** **protectionBasics** > , angiv et navn til din profil, og vælg derefter **Næste**.
 
-5. I sektionen **Konfigurationsindstillinger** skal du gå **til Microsoft Defender Exploit Guard** >  **Network-filtreringNetwork** >  **protectionEnable** >  eller **Audit**. Vælg **Næste**.
+5. I afsnittet **Konfigurationsindstillinger** skal du gå til **Microsoft Defender Exploit Guard** >  **NetværksfiltreringNetværksbeskyttelseEnable** >  >  eller **Audit**. Vælg **Næste**.
 
-6. Vælg de relevante **omfangsmærker**, **tildelinger** og **regler for anvendelse, som** kræves af din organisation. Administratorer kan angive flere krav.
+6. Vælg de relevante **områdekoder**, **tildelinger** og **anvendelighedsregler** , som kræves af din organisation. Administratorer kan angive flere krav.
 
 7. Gennemse alle oplysningerne, og vælg derefter **Opret**.
 
 ### <a name="group-policy"></a>Gruppepolitik
 
-Brug følgende fremgangsmåde for at aktivere netværksbeskyttelse på computere, der er medlem af et domæne eller på en enkeltstående computer.
+Brug følgende procedure til at aktivere netværksbeskyttelse på domænetilsluttede computere eller på en separat computer.
 
-1. Gå til Start på en enkeltstående computer **, og** skriv og vælg **Rediger gruppepolitik**.
+1. På en separat computer skal du gå til **Start** og derefter skrive og vælge **Rediger gruppepolitik**.
 
-    *– eller –*
+    *-Eller-*
 
-    På en domæne forbundet Gruppepolitik-administrationscomputer skal du åbne [Gruppepolitik Management Console](https://technet.microsoft.com/library/cc731212.aspx), højreklikke på det Gruppepolitik-objekt, du vil konfigurere, og vælge **Rediger**.
+    Åbn [Gruppepolitik-administrationskonsollen](https://technet.microsoft.com/library/cc731212.aspx) på en domænetilsluttet Gruppepolitik administrationscomputer, højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg **Rediger**.
 
-2. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit** **Guard-netværksbeskyttelse**\>.
+3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
    > [!NOTE]
-   > I ældre versioner af Windows kan der i stien til gruppepolitikken være "Windows Defender Antivirus" i stedet for "Microsoft Defender Antivirus".
+   > I ældre versioner af Windows står der muligvis "Windows Defender Antivirus" i gruppepolitikken i stedet for "Microsoft Defender Antivirus".
 
-4. Dobbeltklik på indstillingen Undgå **, at brugere og apps får adgang til skadelige websteder** , og angiv indstillingen til **Aktiveret**. I sektionen Indstillinger skal du angive en af følgende indstillinger:
-    - **Bloker** – Brugere kan ikke få adgang til skadelige IP-adresser og domæner.
-    - **Deaktiver (standard)** – Funktionen netværksbeskyttelse virker ikke. Brugere vil ikke blive blokeret fra at få adgang til skadelige domæner.
-    - **Overvågningstilstand** – Hvis en bruger besøger en ondsindet IP-adresse eller et domæne, registreres en hændelse i Windows hændelsesloggen. Brugeren vil dog ikke blive blokeret fra at besøge adressen.
+4. Dobbeltklik på indstillingen **Forbyd brugere og apps at få adgang til farlige websteder** , og angiv indstillingen til **Aktiveret**. I afsnittet indstillinger skal du angive en af følgende indstillinger:
+    - **Block** – Brugerne kan ikke få adgang til skadelige IP-adresser og domæner.
+    - **Deaktiver (standard)** – Funktionen Netværksbeskyttelse fungerer ikke. Brugere blokeres ikke fra at få adgang til skadelige domæner.
+    - **Overvågningstilstand** – Hvis en bruger besøger en skadelig IP-adresse eller et skadeligt domæne, registreres en hændelse i Windows hændelsesloggen. Brugeren blokeres dog ikke for at besøge adressen.
 
    > [!IMPORTANT]
-   > For at aktivere netværksbeskyttelse fuldt ud skal Gruppepolitik indstillingen til Aktiveret og også vælge  Bloker i rullemenuen med indstillinger.
+   > Hvis du vil aktivere netværksbeskyttelse fuldt ud, skal du angive indstillingen Gruppepolitik til **Aktiveret** og også vælge **Bloker** i rullemenuen med indstillinger.
 
-Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp af registreringseditoren:
+Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp af Registreringseditor:
 
-1. Vælg **Start, og** skriv **regedit for** at åbne **Registreringseditor**.
+1. Vælg **Start** , og skriv **regedit** for at åbne **Registreringseditor**.
 
-2. Naviger **tilHKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection**
+2. Naviger til **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection**
 
-3. Vælg **EnableNetworkProtection** , og bekræft værdien:
-   - 0 =Fra
-   - 1 =Til
+3. Vælg **EnableNetworkProtection,** og bekræft værdien:
+   - 0=Fra
+   - 1=Slået til
    - 2=Overvågning
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager
 
-1. Åbn Configuration Manager konsol.
+1. Åbn Configuration Manager-konsollen.
 
-2. Gå til **Aktiver og overholdelse** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**. 
+2. Gå til **Assets and Compliance** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**. 
 
 3. Vælg **Opret Exploit Guard-politik** på båndet for at oprette en ny politik.
-   - Hvis du vil redigere en eksisterende politik, skal du vælge **politikken** og derefter vælge Egenskaber enten på båndet eller i genvejsmenuen. Rediger indstillingen **Konfigurer netværksbeskyttelse** på **fanen Netværksbeskyttelse** .  
+   - Hvis du vil redigere en eksisterende politik, skal du vælge politikken og derefter vælge **Egenskaber** på båndet eller i genvejsmenuen. Rediger indstillingen **Konfigurer netværksbeskyttelse** under fanen **Netværksbeskyttelse** .  
 
-4. Angiv et **navn** til den nye politik på siden Generelt, og bekræft, at **indstillingen Netværksbeskyttelse** er aktiveret. 
+4. Angiv et navn til den nye politik på siden **Generelt** , og kontrollér, at indstillingen **Netværksbeskyttelse** er aktiveret. 
 
-5. På siden **Netværksbeskyttelse** skal du vælge en af følgende indstillinger for **indstillingen Konfigurer netværksbeskyttelse** :
+5. På siden **Netværksbeskyttelse** skal du vælge en af følgende indstillinger for indstillingen **Konfigurer netværksbeskyttelse** :
    - **Bloker**
-   - **Overvågning**
+   - **Revision**
    - **Deaktiveret**
    
-6. Udfør resten af trinnene, og gem politikken. 
+6. Fuldfør resten af trinnene, og gem politikken. 
 
-7. Vælg Installér på båndet **for** at installere politikken i en samling.
+7. På båndet skal du vælge **Installér** for at installere politikken i en samling.
 
 
 > [!IMPORTANT]
-> Når du har implementeret en Exploit Guard-politik Configuration Manager, fjernes Exploit Guard-indstillingerne ikke fra klienterne, hvis du fjerner installationen. `Delete not supported`er registreret i Configuration Manager ExploitGuardHandler.log, hvis du fjerner klientens Exploit Guard-installation. <!--CMADO8538577-->
+> Når du har udrullet en Exploit Guard-politik fra Configuration Manager, fjernes indstillingerne for Exploit Guard ikke fra klienterne, hvis du fjerner installationen. `Delete not supported`registreres i Configuration Manager klientens ExploitGuardHandler.log, hvis du fjerner klientens Exploit Guard-installation. <!--CMADO8538577-->
 > Følgende PowerShell-script kan køres under SYSTEM-kontekst for at fjerne disse indstillinger:<!--CMADO9907132-->
 >
 > ```powershell
@@ -191,8 +195,8 @@ Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp 
 
 - [Netværksbeskyttelse](network-protection.md)
 
-- [Netværksbeskyttelse og TCP trevejs-handshake](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
+- [Netværksbeskyttelse og TCP-trevejs-håndtryk](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
 
 - [Evaluer netværksbeskyttelse](evaluate-network-protection.md)
 
-- [Fejlfinding af netværksbeskyttelse](troubleshoot-np.md)
+- [Foretag fejlfinding af netværksbeskyttelse](troubleshoot-np.md)

@@ -1,7 +1,7 @@
 ---
-title: Konfigurere afhjælpning af Microsoft Defender Antivirus registreringer
-description: Konfigurer, Microsoft Defender Antivirus skal gøre, når der registreres en trussel, og hvor længe filer, der er i karantæne, skal opbevares i karantænemappen
-keywords: afhjælpning, løse, fjerne, trusler, sætte i karantæne, scanne, gendanne
+title: Konfigurer afhjælpning af Microsoft Defender Antivirus registreringer
+description: Konfigurer, hvad Microsoft Defender Antivirus skal gøre, når der registreres en trussel, og hvor længe karantænefiler skal opbevares i karantænemappen
+keywords: afhjælpning, rettelse, fjernelse, trusler, karantæne, scanning, gendannelse
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -16,36 +16,40 @@ ms.date: 10/18/2021
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 182e0b39c1a9c7795fbdd716fc2e260d06d5c451
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: 257a3bfc4fc9dcb6353bb158bc3cd4296891ae76
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63593204"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790146"
 ---
-# <a name="configure-remediation-for-microsoft-defender-antivirus-detections"></a>Konfigurere afhjælpning af Microsoft Defender Antivirus registreringer
+# <a name="configure-remediation-for-microsoft-defender-antivirus-detections"></a>Konfigurer afhjælpning af Microsoft Defender Antivirus registreringer
 
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Når Microsoft Defender Antivirus kører en scanning, forsøger den at afhjælpe eller fjerne de registrerede trusler. Du kan konfigurere, Microsoft Defender Antivirus skal håndtere bestemte trusler, om der skal oprettes et gendannelsespunkt, før afhjælpningen fjernes, og hvornår trusler skal fjernes.
+**Platforme**
+- Windows
 
-Denne artikel beskriver, hvordan du konfigurerer disse indstillinger ved hjælp Gruppepolitik, men du kan også bruge [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies#threat-overrides-settings) og [Microsoft Intune](/intune/device-restrictions-configure).
+Når Microsoft Defender Antivirus kører en scanning, forsøger den at afhjælpe eller fjerne de trusler, der registreres. Du kan konfigurere, hvordan Microsoft Defender Antivirus skal håndtere visse trusler, om der skal oprettes et gendannelsespunkt, før du afhjælper, og hvornår trusler skal fjernes.
 
-Du kan også bruge [`Set-MpPreference` PowerShell-cmdlet'en eller](/powershell/module/defender/set-mppreference) [`MSFT_MpPreference` WMI-klassen](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) til at konfigurere disse indstillinger.
+I denne artikel beskrives det, hvordan du konfigurerer disse indstillinger ved hjælp af Gruppepolitik, men du kan også bruge [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies#threat-overrides-settings) og [Microsoft Intune](/intune/device-restrictions-configure).
 
-## <a name="configure-remediation-options"></a>Konfigurere afhjælpningsindstillinger
+Du kan også bruge [PowerShell-cmdlet'en`Set-MpPreference`](/powershell/module/defender/set-mppreference) eller [`MSFT_MpPreference` WMI-klassen](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) til at konfigurere disse indstillinger.
 
-1. På Gruppepolitik administrationscomputer skal du åbne Gruppepolitik [Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og klikke på **Rediger**.
+## <a name="configure-remediation-options"></a>Konfigurer afhjælpningsindstillinger
 
-2. I **administrationseditoren Gruppepolitik skal** du **gå til Computerkonfiguration** og vælge **Administrative skabeloner**.
+1. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklik på det Gruppepolitik objekt, du vil konfigurere, og klik på **Rediger**.
 
-3. Udvid træet for **at Windows flere** \> **Microsoft Defender Antivirus**.
+2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-4. Brug tabellen nedenfor til at vælge en placering, og rediger derefter politikken efter behov.
+3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus**.
+
+4. Vælg en placering i tabellen nedenfor, og rediger derefter politikken efter behov.
 
 5. Vælg **OK**.
 
@@ -53,28 +57,38 @@ Du kan også bruge [`Set-MpPreference` PowerShell-cmdlet'en eller](/powershell/m
 
 |Placering|Indstilling|Beskrivelse|Standardindstilling (hvis den ikke er konfigureret)|
 |---|---|---|---|
-|Scan|Opret et systemgendannelsespunkt|Der oprettes et systemgendannelsespunkt hver dag, før der forsøges på at rydde op eller scanne systemet|Deaktiveret|
-|Scan|Slå fjernelse af elementer fra mappen med scanningsoversigten til|Angiv, hvor mange dage elementer skal gemmes i scanningsoversigten|30 dage|
-|Rod|Slå rutinemæssig afhjælpning fra|Du kan angive, Microsoft Defender Antivirus automatisk afhjælper trusler, eller om slutpunktsbrugeren skal spørge, hvad der skal gøres.|Deaktiveret (trusler afhjælpes automatisk)|
-|Karantæne|Konfigurere fjernelse af elementer fra karantænemappen|Angiv, hvor mange dage elementer skal opbevares i karantæne, før de fjernes|90 dage|
-|Trusler|Angive niveauer for besked om trusler, hvor standardhandlingen ikke skal tages, når den registreres|Enhver trussel, der registreres af Microsoft Defender Antivirus, tildeles et trusselsniveau (lav, mellem, høj eller alvorlig). Du kan bruge denne indstilling til at definere, hvordan alle trusler for hvert af trusselsniveauerne skal afhjælpes (sat i karantæne, fjernes eller ignoreres)|Ikke relevant|
-|Trusler|Angive trusler, som standardhandlingen ikke skal anvendes på, når den registreres|Angiv, hvordan bestemte trusler (ved hjælp af deres trussels-id) skal afhjælpes. Du kan angive, om den specifikke trussel skal være i karantæne, fjernet eller ignoreret|Ikke relevant|
+|Skan|Opret et systemgendannelsespunkt|Der oprettes et systemgendannelsespunkt hver dag, før der gøres forsøg på at rense eller scanne|Deaktiveret|
+|Skan|Slå fjernelse af elementer til fra mappen med scanningsoversigten|Angiv, hvor mange dage elementer skal gemmes i scanningsoversigten|30 dage|
+|Rod|Deaktiver rutinemæssig afhjælpning|Du kan angive, om Microsoft Defender Antivirus automatisk afhjælper trusler, eller om brugeren af slutpunktet skal spørge, hvad der skal gøres.|Deaktiveret (trusler afhjælpes automatisk)|
+|Karantæne|Konfigurer fjernelse af elementer fra karantænemappen|Angiv, hvor mange dage elementer skal holdes i karantæne, før de fjernes|90 dage|
+|Trusler|Angiv niveauer for trusselsbeskeder, hvor standardhandlingen ikke skal udføres, når den registreres|Alle trusler, der opdages af Microsoft Defender Antivirus, tildeles et trusselsniveau (lavt, mellem, højt eller alvorligt). Du kan bruge denne indstilling til at definere, hvordan alle trusler for hvert trusselsniveau skal afhjælpes (sættes i karantæne, fjernes eller ignoreres)|Ikke relevant|
+|Trusler|Angiv trusler, som standardhandlingen ikke skal udføres på, når den registreres|Angiv, hvordan specifikke trusler (ved hjælp af deres trussels-id) skal afhjælpes. Du kan angive, om den specifikke trussel skal sættes i karantæne, fjernes eller ignoreres|Ikke relevant|
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus registrerer og afhjælper filer baseret på mange faktorer. Nogle gange kræver afhjælpning en genstart. Selvom registrering senere vurderes som en falsk positiv, skal genstart udføres for at sikre, at alle yderligere afhjælpningstrin er fuldført.
+> Microsoft Defender Antivirus registrerer og afhjælper filer baseret på mange faktorer. Nogle gange kræver fuldførelse af en afhjælpning en genstart. Selvom registreringen senere bestemmes til at være en falsk positiv, skal genstarten fuldføres for at sikre, at alle yderligere afhjælpningstrin er fuldført.
 >
-> Hvis du er sikker på Microsoft Defender Antivirus har sat en fil i karantæne baseret på en falsk positiv, kan du gendanne filen fra karantæne, når enheden genstarter. Se [Gendan filer, der er i karantæne, Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md).
+> Hvis du er sikker på, Microsoft Defender Antivirus sat en fil i karantæne baseret på et falsk positivt element, kan du gendanne filen fra karantæne, når enheden genstarter. Se [Gendan filer, der er sat i karantæne i Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md).
 >
-> For at undgå dette problem i fremtiden kan du udelade filer fra scanningerne. Se [Konfigurere og validere udeladelse for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md).
+> Hvis du vil undgå dette problem i fremtiden, kan du udelade filer fra scanningerne. Se [Konfigurer og valider udeladelser for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md).
 
-Se også [Konfigurer planlagte fulde scanninger Microsoft Defender Antivirus afhjælpning for at få mere afhjælpningsrelaterede](scheduled-catch-up-scans-microsoft-defender-antivirus.md#remed) indstillinger.
+Se også [Konfigurer de nødvendige planlagte komplette Microsoft Defender Antivirus scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md#remed) for at få flere afhjælpningsrelaterede indstillinger.
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="see-also"></a>Se også
 
-- [Konfigurere Microsoft Defender Antivirus indstillinger for scanning](configure-advanced-scan-types-microsoft-defender-antivirus.md)
-- [Konfigurere planlagte Microsoft Defender Antivirus scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md)
-- [Konfigurere og køre on-demand-Microsoft Defender Antivirus scanninger](run-scan-microsoft-defender-antivirus.md)
-- [Konfigurere de meddelelser, der vises på slutpunkter](configure-notifications-microsoft-defender-antivirus.md)
-- [Konfigurere slutbrugerens Microsoft Defender Antivirus interaktion](configure-end-user-interaction-microsoft-defender-antivirus.md)
-- [Tilpas, initier og gennemse resultaterne Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Konfigurer scanningsindstillinger for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)
+- [Konfigurer planlagte Microsoft Defender Antivirus scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md)
+- [Konfigurer og kør scanninger efter behov Microsoft Defender Antivirus](run-scan-microsoft-defender-antivirus.md)
+- [Konfigurer de meddelelser, der vises på slutpunkter,](configure-notifications-microsoft-defender-antivirus.md)
+- [Konfigurer slutbrugerens Microsoft Defender Antivirus interaktion](configure-end-user-interaction-microsoft-defender-antivirus.md)
+- [Tilpas, start og gennemse resultaterne af Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

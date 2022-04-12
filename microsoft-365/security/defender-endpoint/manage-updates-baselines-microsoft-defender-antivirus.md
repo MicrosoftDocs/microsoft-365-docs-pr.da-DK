@@ -15,22 +15,25 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 04/07/2022
+ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 346f806129afc30ec5543c99bce3709af60cee73
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 48ab00c97559ecbbfe430b89c3742b8914c224ba
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64730634"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788474"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint plan 1 og 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 Det er vigtigt at holde Microsoft Defender Antivirus opdateret for at sikre, at dine enheder har den nyeste teknologi og de funktioner, der er nødvendige for at beskytte mod ny malware og angrebsteknikker. Sørg for at opdatere antivirusbeskyttelsen, selvom Microsoft Defender Antivirus kører i [passiv tilstand](microsoft-defender-antivirus-compatibility.md). Der er to typer opdateringer, der er relateret til at holde Microsoft Defender Antivirus opdateret:
 
@@ -88,7 +91,7 @@ Alle vores opdateringer indeholder
 <summary>Marts-2022 (platform: 4.18.2203.5 | Motor: 1.1.19100.5)</summary>
 
 &ensp;Version af sikkerhedsintelligensopdatering: **1.361.1449.0**<br/>
-&ensp;Udgivet: **7. marts 2022**<br/>
+&ensp;Udgivet: **7. april 2022**<br/>
 &ensp;Platform: **4.18.2203.5**<br/>
 &ensp;Motor: **1.1.19100.5**<br/>
 &ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
@@ -987,3 +990,13 @@ Du kan få flere oplysninger under [Microsoft Defender-opdatering til Windows af
 |[Administrer begivenhedsbaserede gennemtvungne opdateringer](manage-event-based-updates-microsoft-defender-antivirus.md) | Du kan angive, at beskyttelsesopdateringer skal downloades ved start eller efter visse skybaserede beskyttelseshændelser. |
 |[Administrer opdateringer til mobilenheder og virtuelle maskiner (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| Du kan angive indstillinger, f.eks. om opdateringer skal forekomme på batteristrøm, som især er nyttige til mobilenheder og virtuelle maskiner. |
 | [Microsoft Defender for Endpoint opdatering til Slutpunktsregistrering og -svar sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | Du kan opdatere den Slutpunktsregistrering og -svar sensor (MsSense.exe), der er inkluderet i den nye Microsoft Defender for Endpoint samlede løsningspakke, der blev udgivet i 2021.   |
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)

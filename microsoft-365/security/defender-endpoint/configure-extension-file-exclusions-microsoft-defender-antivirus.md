@@ -1,7 +1,7 @@
 ---
-title: Konfigurere og validere udeladelse baseret på udvidelse, navn eller placering
-description: Udelad filer Microsoft Defender Antivirus alle scanninger baseret på deres filtypenavn, filnavn eller placering.
-keywords: udeladelse, filer, filtypenavn, filtype, mappenavn, filnavn, scanninger
+title: Konfigurer og valider udeladelser baseret på filtypenavn, navn eller placering
+description: Udelad filer fra Microsoft Defender Antivirus scanninger baseret på filtypenavnet, filnavnet eller placeringen.
+keywords: udeladelser, filer, filtypenavn, filtype, mappenavn, filnavn, scanninger
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -15,210 +15,213 @@ ms.reviewer: ''
 manager: dansimp
 ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9a67b05f089fd25e26f22508cbedb8f4b3ce086a
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: e8c2b464b7a4559ba316826400cfd0ad308d8786
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595076"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790212"
 ---
-# <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurere og validere udeladelse baseret på filtypenavn og mappeplacering
+# <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurer og valider udeladelser baseret på filtypenavn og mappeplacering
 
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
-Du kan definere undtagelser for Microsoft Defender Antivirus, der gælder for planlagte scanninger[, scanninger](schedule-antivirus-scans.md) efter [](run-scan-microsoft-defender-antivirus.md)behov og altid [on-on, beskyttelse og overvågning i realtid](configure-real-time-protection-microsoft-defender-antivirus.md). **Generelt skal du ikke anvende udeladelse**. Hvis du har brug for at anvende udeladelse, kan du vælge mellem flere forskellige typer:
+**Platforme**
+- Windows
 
-- Udeladelse baseret på filtypenavne og mappeplaceringer (beskrevet i denne artikel)
-- [Udeladelse af filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+Du kan definere udeladelser for Microsoft Defender Antivirus, der gælder for [planlagte scanninger](schedule-antivirus-scans.md), [efter behovsscanninger](run-scan-microsoft-defender-antivirus.md) og [altid aktiveret beskyttelse og overvågning i realtid](configure-real-time-protection-microsoft-defender-antivirus.md). **Generelt skal du ikke anvende undtagelser**. Hvis du har brug for at anvende undtagelser, kan du vælge mellem flere forskellige typer:
+
+- Undtagelser baseret på filtypenavne og mappeplaceringer (beskrevet i denne artikel)
+- [Udeladelser for filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus undtagelser gælder ikke for andre Microsoft Defender for Endpoint, herunder slutpunktsregistrering og -svar [( Slutpunktsregistrering og -svar)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [ASR-regler (Attack Surface Reduction)](/microsoft-365/security/defender-endpoint/attack-surface-reduction) og [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig Slutpunktsregistrering og -svar vigtige beskeder og andre registreringer.
+> Microsoft Defender Antivirus undtagelser gælder ikke for andre funktioner i Microsoft Defender for Endpoint, herunder [slutpunktsregistrering og -svar ( Slutpunktsregistrering og -svar)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [ASR-regler (attack surface reduction)](/microsoft-365/security/defender-endpoint/attack-surface-reduction) og [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig udløse Slutpunktsregistrering og -svar beskeder og andre registreringer.
 > Hvis du vil udelade filer bredt, skal du føje dem til Microsoft Defender for Endpoint [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Se En [Anbefalinger definition af udeladelseslister, før](configure-exclusions-microsoft-defender-antivirus.md) du definerer dine udeladelseslister.
+Se [Anbefalinger for at definere udeladelser, før du definerer dine udeladelseslister](configure-exclusions-microsoft-defender-antivirus.md).
 
-## <a name="exclusion-lists"></a>Udeladelseslister
+## <a name="exclusion-lists"></a>Lister over udeladelser
 
-Hvis du vil udelade bestemte filer Microsoft Defender Antivirus scanninger, skal du ændre dine udeladelseslister. Microsoft Defender Antivirus indeholder mange automatiske udeladelsesforanstaltninger, der er baseret på kendte funktionsmåder i operativsystemet og typiske administrationsfiler, f.eks. dem, der bruges i virksomhedsadministration, databaseadministration og andre virksomhedsscenarier og -situationer.
+Hvis du vil udelade visse filer fra Microsoft Defender Antivirus scanninger, skal du ændre dine udeladelseslister. Microsoft Defender Antivirus omfatter mange automatiske undtagelser, der er baseret på kendte funktionsmåder i operativsystemet og typiske administrationsfiler, f.eks. dem, der bruges i virksomhedsadministration, databaseadministration og andre virksomhedsscenarier og -situationer.
 
 > [!NOTE]
-> Undtagelser gælder også for potentielt uønskede appregistreringer.
+> Undtagelser gælder også for potentielt uønskede apps(PUA)-registreringer.
 >
-> Automatisk udeladelse gælder kun for Windows Server 2016 og nyere. Disse undtagelser er ikke synlige i Windows Sikkerhed-appen og i PowerShell.
+> Automatiske udeladelser gælder kun for Windows Server 2016 og nyere. Disse udeladelser er ikke synlige i appen Windows Sikkerhed og i PowerShell.
 
-I følgende tabel vises nogle eksempler på udeladelse baseret på filtypenavn og mappeplacering.
+I følgende tabel vises nogle eksempler på undtagelser, der er baseret på filtypenavnet og mappeplaceringen.
 
-|Udeladelse|Eksempler|Udeladelsesliste|
+|Udelukkelse|Eksempler|Udeladelsesliste|
 |---|---|---|
-|Enhver fil med et bestemt filtypenavn|Alle filer med det angivne filtypenavn, hvor som helst på computeren. <p> Gyldig syntaks: `.test` og `test`|Udeladelse af udvidelse|
-|En fil under en bestemt mappe|Alle filer under `c:\test\sample` mappen|Udeladelse af filer og mapper|
-|En bestemt fil i en bestemt mappe|Kun filen `c:\sample\sample.test`|Udeladelse af filer og mapper|
-|En bestemt proces|Den eksekverbare fil `c:\test\process.exe`|Udeladelse af filer og mapper|
+|Alle filer med et bestemt filtypenavn|Alle filer med den angivne udvidelse, hvor som helst på maskinen. <p> Gyldig syntaks: `.test` og `test`|Undtagelser for filtypenavne|
+|Alle filer under en bestemt mappe|Alle filer under mappen `c:\test\sample`|Fil- og mappeudeladelser|
+|En bestemt fil i en bestemt mappe|Kun filen `c:\sample\sample.test`|Fil- og mappeudeladelser|
+|En bestemt proces|Den eksekverbare fil `c:\test\process.exe`|Fil- og mappeudeladelser|
 
-## <a name="characteristics-of-exclusion-lists"></a>Karakteristika ved udeladelseslister
+## <a name="characteristics-of-exclusion-lists"></a>Egenskaber for udeladelseslister
 
-- Mappeudetagelser gælder for alle filer og mapper under den pågældende mappe, medmindre undermappen er et genparspunkt. Undermapper til genopsparing af point skal udelades separat.
+- Mappeudeladelser gælder for alle filer og mapper under den pågældende mappe, medmindre undermappen er et genfortolkningspunkt. Undermapper til genfortolkning af punkt skal udelades separat.
 - Filtypenavne gælder for alle filnavne med det definerede filtypenavn, hvis der ikke er defineret en sti eller mappe.
 
-## <a name="important-notes-about-exclusions-based-on-file-extensions-and-folder-locations"></a>Vigtige noter om udeladelse baseret på filtypenavne og mappeplaceringer
+## <a name="important-notes-about-exclusions-based-on-file-extensions-and-folder-locations"></a>Vigtige noter om undtagelser baseret på filtypenavne og mappeplaceringer
 
-- Hvis du bruger jokertegn, f.eks. stjernen (\*), ændres fortolkningen af udeladelsesreglerne. Se afsnittet [Brug jokertegn](#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) i filnavnet og mappestien eller udeladelseslister for filtypenavnet for at få vigtige oplysninger om, hvordan jokertegn fungerer.
+- Hvis du bruger jokertegn, f.eks. stjernen (\*), ændres den måde, som udeladelsesreglerne fortolkes på. Se afsnittet [Brug jokertegn i filnavnet og mappestien eller liste over udeladelser af filtypenavne](#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) for at få vigtige oplysninger om, hvordan jokertegn fungerer.
 
-- Du må ikke udelade tilknyttede netværksdrev. Angiv den faktiske netværkssti.
+- Undlad at udelade tilknyttede netværksdrev. Angiv den faktiske netværkssti.
 
-- Mapper, der er omoprettede punkter, der er oprettet, efter Microsoft Defender Antivirus-tjenesten starter, og som er føjet til udeladelseslisten, medtages ikke. Genstart tjenesten (ved at genstarte Windows), så nye genparspunkter genkendes som et gyldigt udelukkelsesmål.
+- Mapper, der er genfortolkningspunkter, som oprettes, når tjenesten Microsoft Defender Antivirus starter, og som er føjet til listen over undtagelser, medtages ikke. Genstart tjenesten (ved at genstarte Windows), så nye genfortolkningspunkter genkendes som en gyldig destination for udeladelse.
 
-- Udeladelse gælder [for planlagte scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md), [on-demand-scanninger](run-scan-microsoft-defender-antivirus.md) og [](configure-real-time-protection-microsoft-defender-antivirus.md)beskyttelse i realtid, men ikke på tværs af Defender til slutpunkt. Hvis du vil definere udeladelse på tværs af Defender til Slutpunkt, skal du bruge [brugerdefinerede indikatorer](manage-indicators.md).
+- Undtagelser gælder for [planlagte scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md), [efter behovsscanninger](run-scan-microsoft-defender-antivirus.md) og [beskyttelse i realtid](configure-real-time-protection-microsoft-defender-antivirus.md), men ikke på tværs af Defender for Endpoint. Hvis du vil definere udeladelser på tværs af Defender for Endpoint, skal du bruge [brugerdefinerede indikatorer](manage-indicators.md).
 
-- Lokale ændringer af listerne (af brugere med administratorrettigheder, herunder ændringer foretaget med PowerShell og WMI) sammenflettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Configuration Manager eller Intune. Listerne Gruppepolitik rangfølges, når der opstår konflikter. Desuden kan ændringer i udeladelseslisten, der Gruppepolitik ændringer i Gruppepolitik, ses [i Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md).
+- Lokale ændringer, der foretages af listerne (af brugere med administratorrettigheder, herunder ændringer foretaget med PowerShell og WMI), flettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Configuration Manager eller Intune. De Gruppepolitik lister har forrang, når der er konflikter. Desuden er ændringer af listen over udeladelser, der er foretaget med Gruppepolitik, synlige i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md).
 
-- Hvis du vil tillade lokale ændringer at tilsidesætte administrerede installationsindstillinger, skal [du konfigurere, hvordan lokalt og globalt definerede udeladelseslister flettes](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists).
+- Hvis du vil tillade, at lokale ændringer tilsidesætter administrerede installationsindstillinger, [skal du konfigurere, hvordan lister over lokalt og globalt definerede udeladelser flettes](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists).
 
-## <a name="configure-the-list-of-exclusions-based-on-folder-name-or-file-extension"></a>Konfigurer listen over udeladelses undtagelser baseret på mappenavn eller filtypenavn
+## <a name="configure-the-list-of-exclusions-based-on-folder-name-or-file-extension"></a>Konfigurer listen over udeladelser baseret på mappenavn eller filtypenavn
 
-Du kan vælge mellem flere forskellige metoder til at definere undtagelser for Microsoft Defender Antivirus.
+Du kan vælge mellem flere metoder til at definere udeladelser for Microsoft Defender Antivirus.
 
-### <a name="use-intune-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Intune til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-intune-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Intune til at konfigurere undtagelser for filnavn, mappe eller filtypenavn
 
 Se følgende artikler:
 
 - [Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure)
 - [Microsoft Defender Antivirus indstillinger for enhedsbegrænsning for Windows 10 i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus)
 
-### <a name="use-configuration-manager-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Configuration Manager til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-configuration-manager-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Configuration Manager til at konfigurere undtagelser for filnavn, mappe eller filtypenavn
 
-Se [Sådan oprettes og installeres antimalwarepolitikker: Udeladelsesindstillinger](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for at få mere at vide om konfiguration Microsoft Endpoint Manager (aktuel forgrening).
+Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for udeladelse for at](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) få oplysninger om konfiguration af Microsoft Endpoint Manager (aktuel forgrening).
 
-### <a name="use-group-policy-to-configure-folder-or-file-extension-exclusions"></a>Brug Gruppepolitik til at konfigurere udeladelse af mapper eller filtypenavn
+### <a name="use-group-policy-to-configure-folder-or-file-extension-exclusions"></a>Brug Gruppepolitik til at konfigurere udeladelser for mapper eller filtypenavne
 
 > [!NOTE]
-> Hvis du angiver en fuldt kvalificeret sti til en fil, er det kun den pågældende fil, der udelades. Hvis en mappe er defineret i udelukkelsen, udelades alle filer og undermapper under den pågældende mappe.
+> Hvis du angiver en fuldt kvalificeret sti til en fil, er det kun den pågældende fil, der udelades. Hvis der er defineret en mappe i udeladelsesmappen, udelades alle filer og undermapper under den pågældende mappe.
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og vælge **Rediger**.
+1. Åbn [administrationskonsollen Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) Gruppepolitik, højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg **Rediger**.
 
-2. I Gruppepolitik **skal du gå** til **Computerkonfiguration og** vælge **Administrative skabeloner**.
+2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** \> **udeladelse.**
+3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Udeladelser**.
 
-4. Åbn indstillingen **For undtagelser til** sti til redigering, og tilføj dine udeladelsesindstillinger.
+4. Åbn indstillingen **Stiudeladelser** til redigering, og tilføj dine udeladelser.
     1. Angiv indstillingen til **Aktiveret**.
-    2. Under sektionen **Indstillinger** skal du vælge **Vis**.
-    3. Angiv hver mappe på sin egen linje under **kolonnen Værdinavn** .
-    4. Hvis du angiver en fil, skal du sikre dig, at du angiver en fuldt kvalificeret sti til filen, herunder drevbogstavet, mappestien, filnavnet og filtypenavnet.
-    5. Angiv **0** i **kolonnen** Værdi.
+    2. Under afsnittet **Indstillinger** skal du vælge **Vis**.
+    3. Angiv hver mappe på sin egen linje under kolonnen **Værdinavn** .
+    4. Hvis du angiver en fil, skal du sørge for at angive en fuldt gyldig sti til filen, herunder drevbogstavet, mappestien, filnavnet og filtypenavnet.
+    5. Angiv **0** i kolonnen **Værdi** .
 
 5. Vælg **OK**.
 
-6. Åbn indstillingen **Udeladelse af udvidelse** for at redigere, og tilføj dine udeladelsesindstillinger.
+6. Åbn indstillingen **Filtypenavneudeladelser** til redigering, og tilføj dine udeladelser.
     1. Angiv indstillingen til **Aktiveret**.
-    2. Under sektionen **Indstillinger** skal du vælge **Vis**.
-    3. Angiv hvert filtypenavn på sin egen linje under **kolonnen Værdinavn** .
-    4. Angiv **0** i **kolonnen** Værdi.
+    2. Under afsnittet **Indstillinger** skal du vælge **Vis**.
+    3. Angiv hvert filtypenavn på sin egen linje under kolonnen **Værdinavn** .
+    4. Angiv **0** i kolonnen **Værdi** .
 
 7. Vælg **OK**.
 
 <a id="ps"></a>
 
-### <a name="use-powershell-cmdlets-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug PowerShell-cmdlet'er til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-powershell-cmdlets-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug PowerShell-cmdlet'er til at konfigurere undtagelser for filnavn, mappe eller filtypenavn
 
-Brug af PowerShell til at tilføje eller fjerne udeladelse af filer, der er baseret på filtypenavnet, placeringen eller filnavnet kræver brug af en kombination af tre cmdlet'er og den relevante parameter for udeladelseslisten. Cmdlet'erne er alle i [Defender-modulet](/powershell/module/defender/).
+Brug af PowerShell til at tilføje eller fjerne udeladelser for filer, der er baseret på filtypenavnet, placeringen eller filnavnet, kræver brug af en kombination af tre cmdlet'er og den relevante parameter for udeladelseslisten. Cmdlet'erne er alle i [Defender-modulet](/powershell/module/defender/).
 
-Formatet for cmdletterne er som følger:
+Formatet for cmdlet'erne er som følger:
 
 ```PowerShell
 <cmdlet> -<exclusion list> "<item>"
 ```
 
-I følgende tabel vises de cmdlet'er, som du kan bruge i den `<cmdlet>` del af PowerShell-cmdlet'en:
+I følgende tabel vises de cmdlet'er, du kan bruge i delen `<cmdlet>` af PowerShell-cmdlet'en:
 
 |Konfigurationshandling|PowerShell-cmdlet|
 |:---|:---|
-|Oprette eller overskrive listen|`Set-MpPreference`|
+|Opret eller overskriv listen|`Set-MpPreference`|
 |Føj til listen|`Add-MpPreference`|
 |Fjern element fra listen|`Remove-MpPreference`|
 
-I følgende tabel vises værdier, som du kan bruge i den del `<exclusion list>` af PowerShell-cmdlet'en:
+I følgende tabel vises de værdier, du kan bruge i delen `<exclusion list>` af PowerShell-cmdlet'en:
 
 |Udeladelsestype|PowerShell-parameter|
 |---|---|
-|Alle filer med et bestemt filtypenavn|`-ExclusionExtension`|
+|Alle filer med et angivet filtypenavn|`-ExclusionExtension`|
 |Alle filer under en mappe (herunder filer i undermapper) eller en bestemt fil|`-ExclusionPath`|
 
 > [!IMPORTANT]
-> Hvis du har oprettet en liste, vil brug `Set-MpPreference` af `Add-MpPreference``Set-MpPreference` cmdlet'en, enten med eller , overskrive den eksisterende liste.
+> Hvis du har oprettet en liste, enten med `Set-MpPreference` eller `Add-MpPreference`, overskrives den eksisterende liste ved hjælp af `Set-MpPreference` cmdlet'en igen.
 
-Følgende kodestykke medfører f.eks., at Microsoft Defender Antivirus alle filer med filtypenavnet udelades`.test`:
+Følgende kodestykke vil f.eks. medføre, at Microsoft Defender Antivirus scanninger udelader alle filer med filtypenavnet`.test`:
 
 ```PowerShell
 Add-MpPreference -ExclusionExtension ".test"
 ```
 
 > [!TIP]
-> Få mere at vide under [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/).
+> Du kan få flere oplysninger under [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/).
 
-### <a name="use-windows-management-instrumentation-wmi-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug Windows WMI (Management Instrumentation) til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-windows-management-instrumentation-wmi-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug WMI (Windows Management Instrumentation) til at konfigurere udeladelser for filnavn, mappe eller filtypenavn
 
-Brug [metoderne Indstil, Tilføj og Fjern for MSFT_MpPreference](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
+Brug [metoderne Set, Add og Remove for klassen MSFT_MpPreference](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) for følgende egenskaber:
 
 ```WMI
 ExclusionExtension
 ExclusionPath
 ```
 
-Brug **af Set**, **Add** og **Remove** svarer til deres modparter i PowerShell: `Set-MpPreference`, `Add-MpPreference`og `Remove-MpPreference`.
+Brug af **Set**, **Add** og **Remove** svarer til deres kolleger i PowerShell: `Set-MpPreference`, `Add-MpPreference`og `Remove-MpPreference`.
 
 > [!TIP]
-> Du kan finde flere oplysninger [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+> Du kan få flere oplysninger [under Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
 <a id="man-tools"></a>
 
-### <a name="use-the-windows-security-app-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug appen Windows Sikkerhed til at konfigurere udeladelse af filnavn, mappe eller filtypenavn
+### <a name="use-the-windows-security-app-to-configure-file-name-folder-or-file-extension-exclusions"></a>Brug appen Windows Sikkerhed til at konfigurere undtagelser for filnavn, mappe eller filtypenavn
 
-Se [Tilføj udeladelse i appen Windows Sikkerhed for at få](microsoft-defender-security-center-antivirus.md) vejledning.
+Se [Tilføj udeladelser i appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md) for at få en vejledning.
 
 <a id="wildcards"></a>
 
-## <a name="use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists"></a>Brug jokertegn i filnavnet og mappestien eller udeladelseslisterne for filtypenavnet
+## <a name="use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists"></a>Brug jokertegn i filnavnet og mappestien eller udvidelsesudeladelseslisterne
 
-Du kan bruge `*`stjerne, `?`spørgsmålstegn eller miljøvariabler ( `%ALLUSERSPROFILE%`f.eks. ) som jokertegn, når du definerer elementer i udeladelseslisten for filnavnet eller mappestien. Den måde, hvorpå disse jokertegn fortolkes, er forskellig fra deres sædvanlige brug i andre apps og sprog. Sørg for at læse dette afsnit for at forstå deres specifikke begrænsninger.
+Du kan bruge stjernen `*`, spørgsmålstegnet `?`eller miljøvariabler (f.eks. `%ALLUSERSPROFILE%`) som jokertegn, når du definerer elementer på listen over undtagelser for filnavnet eller mappestien. Den måde, hvorpå disse jokertegn fortolkes, adskiller sig fra deres normale brug i andre apps og sprog. Sørg for at læse dette afsnit for at forstå deres specifikke begrænsninger.
 
 > [!IMPORTANT]
-> Der er vigtige begrænsninger og brugsscenarier for disse jokertegn:
+> Der er vigtige begrænsninger og forbrugsscenarier for disse jokertegn:
 >
-> - Anvendelse af miljøvariabler er begrænset til maskinvariabler og dem, der gælder for processer, der kører som en NT AUTHORITY\SYSTEM-konto.
-> - Du kan kun bruge op til seks jokertegn pr. post.
+> - Brug af miljøvariabler er begrænset til computervariabler og dem, der gælder for processer, der kører som en NT AUTHORITY\SYSTEM-konto.
+> - Du kan højst bruge seks jokertegn pr. post.
 > - Du kan ikke bruge et jokertegn i stedet for et drevbogstav.
-> - En stjerne i en `*` mappeudeudelse står for en enkelt mappe. Brug flere forekomster af `\*\` til at angive flere indlejrede mapper med uspecificeret navne.
-> - Aktuelt understøtter Microsoft Endpoint Configuration Manager ikke jokertegn (f.eks. `*` eller `?`).
+> - En stjerne `*` i en mappeudeladelse står på plads for en enkelt mappe. Brug flere forekomster af `\*\` til at angive flere indlejrede mapper med uspecificerede navne.
+> - I øjeblikket understøtter Microsoft Endpoint Configuration Manager ikke jokertegn (f.eks. `*` eller `?`).
     
-I følgende tabel beskrives det, hvordan jokertegnene kan bruges, og der er nogle eksempler.
+I følgende tabel beskrives, hvordan jokertegnene kan bruges, og der vises nogle eksempler.
 
 <br/><br/>
 
-|Jokertegn|Eksempler|
+|Wildcard|Eksempler|
 |---|---|
-|`*` (stjerne) <p> I **forbindelse** med medtagelse af filnavn og filtypenavn erstatter stjernen et vilkårligt antal tegn og gælder kun for filer i den sidste mappe, der er defineret i argumentet. <p> I **mappeudetagelser** erstatter stjernen en enkelt mappe. Brug flere `*` med mappe skråstreger `\` til at angive flere indlejrede mapper. Når du har matcher antallet af jokertegn og navngivne mapper, medtages alle undermapper også.|`C:\MyData\*.txt` omfatter `C:\MyData\notes.txt` <p> `C:\somepath\*\Data` omfatter en hvilken som helst `C:\somepath\Archives\Data` fil i og dens undermapper og `C:\somepath\Authorized\Data` dens undermapper <p> `C:\Serv\*\*\Backup` omfatter en hvilken som helst fil `C:\Serv\Primary\Denied\Backup` i og dens undermapper `C:\Serv\Secondary\Allowed\Backup` og undermapper|
-|`?` (spørgsmålstegn)  <p> Ved **medtagelse af filnavn og** filtypenavn erstatter spørgsmålstegnet et enkelt tegn og gælder kun for filer i den sidste mappe, der er defineret i argumentet. <p> I **mappeudetagelser** erstatter spørgsmålstegnet et enkelt tegn i et mappenavn. Når du har matcher antallet af jokertegn og navngivne mapper, medtages alle undermapper også.|`C:\MyData\my?.zip` omfatter `C:\MyData\my1.zip` <p> `C:\somepath\?\Data` omfatter en hvilken som helst fil `C:\somepath\P\Data` i og dens undermapper  <p> `C:\somepath\test0?\Data` ville medtage en hvilken som helst fil `C:\somepath\test01\Data` i og dens undermapper|
-|Miljøvariabler <p> Den definerede variabel udfyldes som en sti, når udelukkelsen evalueres.|`%ALLUSERSPROFILE%\CustomLogFiles` ville omfatte `C:\ProgramData\CustomLogFiles\Folder1\file1.txt`|
+|`*` (stjerne) <p> I **medtagelser af filnavn og filtypenavn** erstatter stjernen et vilkårligt antal tegn og gælder kun for filer i den sidste mappe, der er defineret i argumentet. <p> I **mappeudeladelser** erstatter stjernen en enkelt mappe. Brug flere `*` med mappestreger `\` til at angive flere indlejrede mapper. Når antallet af jokertegn og navngivne mapper er matchet, medtages alle undermapper også.|`C:\MyData\*.txt` Omfatter `C:\MyData\notes.txt` <p> `C:\somepath\*\Data` inkluderer alle filer i `C:\somepath\Archives\Data` og dens undermapper og `C:\somepath\Authorized\Data` dens undermapper <p> `C:\Serv\*\*\Backup` inkluderer alle filer i `C:\Serv\Primary\Denied\Backup` og dens undermapper og `C:\Serv\Secondary\Allowed\Backup` dens undermapper|
+|`?` (spørgsmålstegn)  <p> I **medtagelser af filnavn og filtypenavn** erstatter spørgsmålstegnet et enkelt tegn og gælder kun for filer i den sidste mappe, der er defineret i argumentet. <p> I **mappeudeladelser** erstatter spørgsmålstegnet et enkelt tegn i et mappenavn. Når antallet af jokertegn og navngivne mapper er matchet, medtages alle undermapper også.|`C:\MyData\my?.zip` Omfatter `C:\MyData\my1.zip` <p> `C:\somepath\?\Data` inkluderer alle filer i `C:\somepath\P\Data` og dens undermapper  <p> `C:\somepath\test0?\Data` indeholder alle filer i `C:\somepath\test01\Data` og dens undermapper|
+|Miljøvariabler <p> Den definerede variabel udfyldes som en sti, når udeladelse evalueres.|`%ALLUSERSPROFILE%\CustomLogFiles` omfatter `C:\ProgramData\CustomLogFiles\Folder1\file1.txt`|
 
 > [!IMPORTANT]
-> Hvis du blander et argument til udeladelse af en fil med et argument til udeladelse af en mappe, stopper reglerne ved filargumentet match i den matchede mappe og søger ikke efter filmatches i nogen undermapper.
+> Hvis du blander et argument for filudeladelse med et mappeudeladelsesargument, stopper reglerne ved filargumentet i den tilsvarende mappe og søger ikke efter filforekomster i nogen undermapper.
 >
-> Du kan f.eks. udelade alle filer, der starter med "dato" i mapperne `c:\data\final\marked` og ved `c:\data\review\marked` hjælp af argumentet regel `c:\data\*\marked\date*`.
+> Du kan f.eks. udelade alle filer, der starter med "dato" i mapperne `c:\data\final\marked` og `c:\data\review\marked` ved hjælp af regelargumentet `c:\data\*\marked\date*`.
 >
-> Dette argument svarer dog ikke til nogen filer i undermapper under `c:\data\final\marked` eller `c:\data\review\marked`.
+> Dette argument stemmer dog ikke overens med nogen filer i undermapper under `c:\data\final\marked` eller `c:\data\review\marked`.
 
 <a id="review"></a>
 
-### <a name="system-environment-variables"></a>Variabler for systemmiljø
+### <a name="system-environment-variables"></a>Systemmiljøvariabler
 
-Følgende tabel viser og beskriver miljøvariablerne for systemkontoen.
+I følgende tabel vises og beskrives miljøvariabler for systemkontoen.
 
 |Denne systemmiljøvariabel...|Omdirigerer til dette|
 |---|---|
@@ -283,9 +286,9 @@ Følgende tabel viser og beskriver miljøvariablerne for systemkontoen.
 |`%USERPROFILE%\AppData\LocalLow`|`C:\Users\UserName\AppData\LocalLow`|
 |`%USERPROFILE%\AppData\Roaming`|`C:\Users\UserName\AppData\Roaming`|
 
-## <a name="review-the-list-of-exclusions"></a>Gennemse listen over udeladelses undtagelser
+## <a name="review-the-list-of-exclusions"></a>Gennemse listen over udeladelser
 
-Du kan hente elementerne på udeladelseslisten ved hjælp af en af følgende metoder:
+Du kan hente elementerne på listen over undtagelser ved hjælp af en af følgende metoder:
 
 - [Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
 - [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies)
@@ -294,18 +297,18 @@ Du kan hente elementerne på udeladelseslisten ved hjælp af en af følgende met
 - [Windows Sikkerhed app](microsoft-defender-security-center-antivirus.md)
 
 > [!IMPORTANT]
-> Udeladelseslisten over ændringer, Gruppepolitik **har,** vises på listerne [i Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md).
+> Ændringer af listen over udeladelser, der er foretaget med Gruppepolitik **, vises** på listerne i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md).
 >
-> De ændringer, der Windows Sikkerhed i **appen, vises ikke** på Gruppepolitik lister.
+> Ændringer, der er foretaget i Windows Sikkerhed-appen, **vises ikke** på Gruppepolitik-listerne.
 
 Hvis du bruger PowerShell, kan du hente listen på to måder:
 
 - Hent status for alle Microsoft Defender Antivirus indstillinger. Hver liste vises på separate linjer, men elementerne på hver liste kombineres til den samme linje.
-- Skriv status for alle indstillinger til en variabel, og brug variablen til kun at kalde den specifikke liste, du er interesseret i. Hver brug af `Add-MpPreference` skrives på en ny linje.
+- Skriv status for alle indstillinger til en variabel, og brug denne variabel til kun at kalde den bestemte liste, du er interesseret i. Hver brug af skrives `Add-MpPreference` til en ny linje.
 
-### <a name="validate-the-exclusion-list-by-using-mpcmdrun"></a>Valider udeladelseslisten ved hjælp af MpCmdRun
+### <a name="validate-the-exclusion-list-by-using-mpcmdrun"></a>Valider listen over undtagelser ved hjælp af MpCmdRun
 
-Hvis du vil kontrollere udeladelse af det [dedikerede kommandolinjeværktøj mpcmdrun.exe](./command-line-arguments-microsoft-defender-antivirus.md), skal du bruge følgende kommando:
+Hvis du vil kontrollere udeladelser med det dedikerede [kommandolinjeværktøj mpcmdrun.exe](./command-line-arguments-microsoft-defender-antivirus.md), skal du bruge følgende kommando:
 
 ```console
 Start, CMD (Run as admin)
@@ -315,9 +318,9 @@ MpCmdRun.exe -CheckExclusion -path <path>
 ```
 
 > [!NOTE]
-> Kontrol af udeladelse med MpCmdRun kræver Microsoft Defender Antivirus CAMP version 4.18.2111-5.0 (udgivet i december 2021) eller nyere.
+> Kontrol af udeladelser med MpCmdRun kræver Microsoft Defender Antivirus CAMP version 4.18.2111-5.0 (udgivet i december 2021) eller nyere.
 
-### <a name="review-the-list-of-exclusions-alongside-all-other-microsoft-defender-antivirus-preferences-by-using-powershell"></a>Gennemse listen over udeladelsesindstillinger sammen med alle Microsoft Defender Antivirus ved hjælp af PowerShell
+### <a name="review-the-list-of-exclusions-alongside-all-other-microsoft-defender-antivirus-preferences-by-using-powershell"></a>Gennemse listen over undtagelser sammen med alle andre indstillinger for Microsoft Defender Antivirus ved hjælp af PowerShell
 
 Brug følgende cmdlet:
 
@@ -325,15 +328,15 @@ Brug følgende cmdlet:
 Get-MpPreference
 ```
 
-I følgende eksempel er elementerne på listen `ExclusionExtension` fremhævet:
+I følgende eksempel er elementerne på `ExclusionExtension` listen fremhævet:
 
 :::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output til Get-MpPreference" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
 
-Få mere at vide under [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/).
+Du kan få flere oplysninger under [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/).
 
-### <a name="retrieve-a-specific-exclusions-list-by-using-powershell"></a>Hent en bestemt udeladelsesliste ved hjælp af PowerShell
+### <a name="retrieve-a-specific-exclusions-list-by-using-powershell"></a>Hent en bestemt liste over udeladelser ved hjælp af PowerShell
 
-Brug følgende kodestykke (angiv hver linje som en separat kommando); **erstat WDAVprefs** med det navn, du vil navngive variablen:
+Brug følgende kodestykke (angiv hver linje som en separat kommando). erstat **WDAVprefs** med den etiket, du vil navngive variablen:
 
 ```PowerShell
 $WDAVprefs = Get-MpPreference
@@ -341,27 +344,27 @@ $WDAVprefs.ExclusionExtension
 $WDAVprefs.ExclusionPath
 ```
 
-I følgende eksempel er listen opdelt i nye linjer for hver brug af `Add-MpPreference` cmdlet'en:
+I følgende eksempel opdeles listen i nye linjer for hver brug af cmdlet'en `Add-MpPreference` :
 
-:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output, der kun viser posterne på udeladelseslisten" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
+:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell-output, der kun viser posterne på listen over undtagelser" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
 
-Få mere at vide under [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/).
+Du kan få flere oplysninger under [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/).
 
 <a id="validate"></a>
 
 ## <a name="validate-exclusions-lists-with-the-eicar-test-file"></a>Valider udeladelseslister med EICAR-testfilen
 
-Du kan validere, at dine udeladelseslister fungerer ved at bruge PowerShell `Invoke-WebRequest` med enten cmdlet'en eller .NET WebClient-klassen for at hente en testfil.
+Du kan validere, at dine udeladelseslister fungerer ved hjælp af PowerShell med enten `Invoke-WebRequest` cmdlet'en eller .NET WebClient-klassen til at downloade en testfil.
 
-I det følgende PowerShell-kodestykke skal du erstatte `test.txt` med en fil, der overholder dine udeladelsesregler. Hvis du f.eks. har udeladt udvidelsen `.testing` , skal du erstatte `test.txt` med `test.testing`. Hvis du tester en sti, skal du sikre dig, at du kører cmdlet'en inden for den pågældende sti.
+I følgende PowerShell-kodestykke skal du erstatte `test.txt` med en fil, der overholder dine udelukkelsesregler. Hvis du f.eks. har udeladt filtypenavnet `.testing` , skal du erstatte `test.txt` med `test.testing`. Hvis du tester en sti, skal du sikre dig, at du kører cmdlet'en i den pågældende sti.
 
 ```PowerShell
 Invoke-WebRequest "http://www.eicar.org/download/eicar.com.txt" -OutFile "test.txt"
 ```
 
-Hvis Microsoft Defender Antivirus rapporter om malware, fungerer reglen ikke. Hvis der ikke er nogen rapport om malware, og den downloadede fil findes, fungerer udelukkelsen. Du kan åbne filen for at bekræfte, at indholdet er det samme som det, der beskrives på [webstedet for EICAR-testfilen](http://www.eicar.org/86-0-Intended-use.html).
+Hvis Microsoft Defender Antivirus rapporterer malware, fungerer reglen ikke. Hvis der ikke er nogen rapport over malware, og den downloadede fil findes, fungerer udelukkelsen. Du kan åbne filen for at bekræfte, at indholdet er det samme som det, der er beskrevet på [webstedet for EICAR-testfilen](http://www.eicar.org/86-0-Intended-use.html).
 
-Du kan også bruge følgende PowerShell-kode, der kalder .NET WebClient-klassen for at downloade testfilen `Invoke-WebRequest` – som med cmdlet'en; `c:\test.txt` erstat med en fil, der overholder den regel, du validerer:
+Du kan også bruge følgende PowerShell-kode, der kalder klassen .NET WebClient for at downloade testfilen – ligesom med cmdlet'en `Invoke-WebRequest` . Erstat `c:\test.txt` med en fil, der overholder den regel, du validerer:
 
 ```PowerShell
 $client = new-object System.Net.WebClient
@@ -376,9 +379,19 @@ Hvis du ikke har internetadgang, kan du oprette din egen EICAR-testfil ved at sk
 
 Du kan også kopiere strengen til en tom tekstfil og forsøge at gemme den med filnavnet eller i den mappe, du forsøger at udelade.
 
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
+
 ## <a name="see-also"></a>Se også
 
-- [Konfigurere og validere udeladelse i Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse af filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere Microsoft Defender Antivirus udeladelse på Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
-- [Almindelige fejl at undgå, når du definerer udeladelse](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser i Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
+- [Almindelige fejl, der skal undgås, når du definerer udeladelser](common-exclusion-mistakes-microsoft-defender-antivirus.md)

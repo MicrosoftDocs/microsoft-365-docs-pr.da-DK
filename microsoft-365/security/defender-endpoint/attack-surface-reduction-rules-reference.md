@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 1eee7e482423e2292e9fe9db42333db481d44175
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 64162b83376facddbdeffd1c3079baa49f9d8924
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783751"
+ms.locfileid: "64788012"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
@@ -31,6 +31,10 @@ ms.locfileid: "64783751"
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 Denne artikel indeholder oplysninger om regler for reduktion af angreb:
 

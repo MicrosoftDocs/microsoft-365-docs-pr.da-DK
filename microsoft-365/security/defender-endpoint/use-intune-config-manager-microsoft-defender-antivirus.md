@@ -1,7 +1,7 @@
 ---
-title: Konfigurere Microsoft Defender Antivirus ved hjælp af Microsoft Endpoint Manager
+title: Konfigurer Microsoft Defender Antivirus ved hjælp af Microsoft Endpoint Manager
 description: Brug Microsoft Endpoint Manager og Microsoft Intune til at konfigurere Microsoft Defender Antivirus og Endpoint Protection
-keywords: scep, intune, endpoint protection, konfiguration
+keywords: scep, intune, slutpunktsbeskyttelse, konfiguration
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -17,12 +17,12 @@ ms.technology: mde
 audience: ITPro
 ms.topic: how-to
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 1eb126481cc9872c42906e0311d1c771da44c693
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: b25e57ee28ae0ef3f219a9adda1ff3f860d063db
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63592160"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789288"
 ---
 # <a name="use-microsoft-endpoint-manager-to-configure-and-manage-microsoft-defender-antivirus"></a>Brug Microsoft Endpoint Manager til at konfigurere og administrere Microsoft Defender Antivirus
 
@@ -31,10 +31,14 @@ ms.locfileid: "63592160"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Du kan bruge [Microsoft Endpoint Manager til](/mem/endpoint-manager-overview) at konfigurere Microsoft Defender Antivirus scanninger. [Microsoft Intune og](/mem/intune/fundamentals/what-is-intune) [Konfigurationsstyring er](/mem/configmgr/core/understand/introduction) nu en del af Endpoint Manager.
+**Platforme**
+- Windows
+
+Du kan bruge [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at konfigurere Microsoft Defender Antivirus scanninger. [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Configuration Manager](/mem/configmgr/core/understand/introduction) er nu en del af Endpoint Manager.
 
 ## <a name="configure-microsoft-defender-antivirus-scans-in-endpoint-manager"></a>Konfigurer Microsoft Defender Antivirus scanninger i Endpoint Manager
 
@@ -42,25 +46,35 @@ Du kan bruge [Microsoft Endpoint Manager til](/mem/endpoint-manager-overview) at
 
 2. Gå til **Slutpunktssikkerhed**.
 
-3. Vælg **Antivirus** under **Administrer**.
+3. Under **Administrer** skal du vælge **Antivirus**.
 
 4. Vælg din Microsoft Defender Antivirus politik.
 
-5. Vælg **Egenskaber** under **Administrer**.
+5. Under **Administrer** skal du vælge **Egenskaber**.
 
 6. Ud for **Konfigurationsindstillinger** skal du vælge **Rediger**.
 
    > [!IMPORTANT]
-   > AllowOnAccessProtection og AllowIntrusionPreventionSystem antivirusindstillinger frarådes officielt og kan derfor ikke konfigureres. 
+   > Indstillingerne allowOnAccessProtection og AllowIntrusionPreventionSystem frarådes officielt og kan derfor ikke konfigureres. 
 
-7. Udvid **sektionen Scanning** , og gennemse eller rediger dine scanningsindstillinger.
+7. Udvid afsnittet **Scan** , og gennemse eller rediger dine scanningsindstillinger.
 
 8. Vælg **Gennemse + gem**.
 
 > [!TIP]
 > Har du brug for hjælp? Se [Administrer slutpunktssikkerhed i Microsoft Intune](/mem/intune/protect/endpoint-security).
 
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
+
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Referenceartikler til administration og konfigurationsværktøjer](configuration-management-reference-microsoft-defender-antivirus.md)
+- [Referenceartikler om administration og konfigurationsværktøjer](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

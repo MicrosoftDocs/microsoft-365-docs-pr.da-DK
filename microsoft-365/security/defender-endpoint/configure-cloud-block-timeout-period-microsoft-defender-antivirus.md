@@ -1,7 +1,7 @@
 ---
-title: Konfigurere tidsperioden Microsoft Defender Antivirus skyblokering
-description: Du kan konfigurere, hvor længe Microsoft Defender Antivirus vil forhindre en fil i at køre, mens du venter på en bestemmelse i skyen.
-keywords: Microsoft Defender Antivirus, antimalware, sikkerhed, defender, sky, timeout, blok, periode, sekunder
+title: Konfigurer timeoutperioden for Microsoft Defender Antivirus cloudblokering
+description: Du kan konfigurere, hvor længe Microsoft Defender Antivirus blokerer en fil fra at køre, mens du venter på en cloudbestemmelse.
+keywords: Microsoft Defender Antivirus, antimalware, sikkerhed, defender, cloud, timeout, blok, periode, sekunder
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -16,59 +16,71 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 1acd1a95ddc3aa679f0e5f1295e14cf33b4f97a0
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 9669bb17b8e970427fb9c35c5f24d35e247b720b
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63599354"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790564"
 ---
-# <a name="configure-the-cloud-block-timeout-period"></a>Konfigurere tidsperioden for skyblokering
+# <a name="configure-the-cloud-block-timeout-period"></a>Konfigurer timeoutperioden for skyblokering
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Når Microsoft Defender Antivirus finder en mistænkelig fil, kan den forhindre filen i at køre, mens den forespørger [på Microsoft Defender Antivirus skytjenesten](cloud-protection-microsoft-defender-antivirus.md).
+**Platforme**
+- Windows
 
-Standardperioden for, at filen [blokeres,](configure-block-at-first-sight-microsoft-defender-antivirus.md) er 10 sekunder. Hvis du er sikkerhedsadministrator, kan du angive mere tid, der skal ventes, før filen får tilladelse til at køre. En forlængelse af tidsperioden for skyen kan hjælpe med at sikre, at der er tilstrækkelig tid til at modtage en passende bestemmelse Microsoft Defender Antivirus skytjenesten.
+Når Microsoft Defender Antivirus finder en mistænkelig fil, kan det forhindre filen i at køre, mens den forespørger [Microsoft Defender Antivirus cloudtjenesten](cloud-protection-microsoft-defender-antivirus.md).
 
-## <a name="prerequisites-to-use-the-extended-cloud-block-timeout"></a>Forudsætninger for at bruge den udvidede timeout for skyblokering
+Standardperioden for, at filen [er blokeret](configure-block-at-first-sight-microsoft-defender-antivirus.md) , er 10 sekunder. Hvis du er sikkerhedsadministrator, kan du angive, at der skal ventes mere, før filen kan køre. Hvis du forlænger timeoutperioden for cloudblokering, kan det hjælpe med at sikre, at der er tilstrækkelig tid til at modtage en korrekt bestemmelse fra Microsoft Defender Antivirus cloudtjenesten.
 
-[Bloker ved første syn](configure-block-at-first-sight-microsoft-defender-antivirus.md) og dens forudsætninger skal aktiveres, før du kan angive en udvidet timeoutperiode.
+## <a name="prerequisites-to-use-the-extended-cloud-block-timeout"></a>Forudsætninger for at bruge den udvidede timeout for cloudblokering
 
-## <a name="specify-the-extended-timeout-period-using-microsoft-endpoint-manager"></a>Angiv den udvidede timeoutperiode med Microsoft Endpoint Manager
+[Blok ved første øjekast](configure-block-at-first-sight-microsoft-defender-antivirus.md) , og dens forudsætninger skal være aktiveret, før du kan angive en udvidet timeoutperiode.
 
-Du kan angive tidsperioden for skyblokering med [en slutpunktssikkerhedspolitik i Microsoft Endpoint Manager](/mem/intune/protect/endpoint-security-policy).
+## <a name="specify-the-extended-timeout-period-using-microsoft-endpoint-manager"></a>Angiv den forlængede timeoutperiode ved hjælp af Microsoft Endpoint Manager
+
+Du kan angive timeoutperioden for skyblokering med en [sikkerhedspolitik for slutpunkter i Microsoft Endpoint Manager](/mem/intune/protect/endpoint-security-policy).
 
 1. Gå til Endpoint Manager Administration ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)), og log på.
 
-2. Vælg **Slutpunktssikkerhed**, og vælg **derefter** **Antivirus under Administrer**.
+2. Vælg **Slutpunktssikkerhed**, og vælg derefter **Antivirus** under **Administrer**.
 
 3. Vælg (eller opret) en antiviruspolitik.
 
-4. I sektionen **Konfigurationsindstillinger** skal du udvide **Skybeskyttelse**. I feltet Microsoft Defender Antivirus **Timeout** i sekunder skal du angive mere tid, i sekunder, fra 1 sekund til 50 sekunder. Det, du angiver, føjes til de 10 standardsekunder.
+4. I afsnittet **Konfigurationsindstillinger** skal du udvide **Cloudbeskyttelse**. I feltet **udvidet timeout i sekunder i Microsoft Defender Antivirus** skal du derefter angive, hvor lang tid der skal gå, i sekunder, fra 1 sekund til 50 sekunder. Uanset hvad du angiver, føjes til standarden 10 sekunder.
 
-5. (Dette trin er valgfrit) Foretag andre ændringer af din antiviruspolitik. (Har du brug for hjælp? Se [Indstillinger for Microsoft Defender Antivirus politik i Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows)).
+5. (Dette trin er valgfrit) Foretag andre ændringer af antiviruspolitikken. (Har du brug for hjælp? Se [Indstillinger for Microsoft Defender Antivirus politik i Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
 
-6. Vælg **Næste**, og afslut konfigurationen af din politik.
+6. Vælg **Næste**, og afslut konfigurationen af politikken.
 
-## <a name="specify-the-extended-timeout-period-using-group-policy"></a>Angiv den udvidede timeoutperiode med Gruppepolitik
+## <a name="specify-the-extended-timeout-period-using-group-policy"></a>Angiv den forlængede timeoutperiode ved hjælp af Gruppepolitik
 
-Du kan bruge Gruppepolitik til at angive en udvidet timeout for skykontroller.
+Du kan bruge Gruppepolitik til at angive en udvidet timeout for cloudkontroller.
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik administrationskonsollen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11))
+1. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11))
 
 2. Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
 
-3. I **administrationseditoren Gruppepolitik** skal du gå **til Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
+3. I **Gruppepolitik Management Editor** skal du gå til **Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
 
-3. Udvid træet til **Windows komponenter** \> **Microsoft Defender Antivirus** \> **MpEngine**.
+3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **MpEngine**.
 
-4. Dobbeltklik på Konfigurer **udvidet skykontrol, og** sørg for, at indstillingen er aktiveret. 
+4. Dobbeltklik på **Konfigurer udvidet skykontrol** , og kontrollér, at indstillingen er aktiveret. 
 
-   Angiv den ekstra tid, der skal være for at forhindre filen i at køre, mens du venter på en bestemmelse i skyen. Angiv den ekstra tid i sekunder fra 1 sekund til 50 sekunder. Det, du angiver, føjes til de 10 standardsekunder.
+   Angiv den ekstra mængde tid, der skal til for at forhindre, at filen kører, mens der afventes en bestemmelse i skyen. Angiv den ekstra tid i sekunder fra 1 sekund til 50 sekunder. Uanset hvad du angiver, føjes til standarden 10 sekunder.
 
 5. Vælg **OK**.
 
- 
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md) 

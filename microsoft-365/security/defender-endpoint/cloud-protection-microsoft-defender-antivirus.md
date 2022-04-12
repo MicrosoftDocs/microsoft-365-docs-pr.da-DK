@@ -1,7 +1,7 @@
 ---
-title: Skybeskyttelse og -Microsoft Defender Antivirus
-description: Få mere at vide om skybeskyttelse og -Microsoft Defender Antivirus
-keywords: Microsoft Defender Antivirus, næste generation af teknologier, næste generations av, maskinel indlæring, antimalware, sikkerhed, defender, cloud, skybeskyttelse
+title: Skybeskyttelse og Microsoft Defender Antivirus
+description: Få mere at vide om skybeskyttelse og Microsoft Defender Antivirus
+keywords: Microsoft Defender Antivirus, næste generations teknologier, næste generation af av, maskinel indlæring, antimalware, sikkerhed, defender, cloud, cloudbeskyttelse
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,58 +15,72 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 881ae2de7a6c752c2be9bfc5ccdbe350050f340b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 0cba725ed27d652366e681adccdec8dbefa68ecd
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64471995"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788078"
 ---
-# <a name="cloud-protection-and-microsoft-defender-antivirus"></a>Skybeskyttelse og -Microsoft Defender Antivirus
+# <a name="cloud-protection-and-microsoft-defender-antivirus"></a>Skybeskyttelse og Microsoft Defender Antivirus
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
-Næste generations teknologier i Microsoft Defender Antivirus giver øjeblikkelig, automatiseret beskyttelse mod nye og nye trusler. For at identificere nye trusler på dynamisk vis arbejder næste generations teknologier med store sæt indbyrdes forbundne data i Microsoft Intelligent Security Graph og effektive kunstig intelligenssystemer, der drives af avancerede modeller for maskinel indlæring. Skybeskyttelse arbejder sammen med Microsoft Defender Antivirus at levere nøjagtig, realtid og intelligent beskyttelse. 
+**Platforme**
+- Windows
+
+Næste generations teknologier i Microsoft Defender Antivirus giver næsten øjeblikkelig, automatiseret beskyttelse mod nye og nye trusler. For at identificere nye trusler dynamisk arbejder næste generation af teknologier med store sæt forbundne data i Microsoft Intelligent Security-Graph og effektive AI-systemer (kunstig intelligens), der er baseret på avancerede modeller til maskinel indlæring. Cloudbeskyttelse arbejder sammen med Microsoft Defender Antivirus om at levere nøjagtig, realtids- og intelligent beskyttelse. 
 
 [:::image type="content" source="images/mde-cloud-protection.png" alt-text="Diagram, der viser, hvordan skybeskyttelse fungerer sammen med Microsoft Defender Antivirus" lightbox="images/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 > [!TIP]
-> Vi anbefaler, at du holder skybeskyttelse slået til. Du kan få mere at vide [under Hvorfor skybeskyttelse skal aktiveres for Microsoft Defender Antivirus](why-cloud-protection-should-be-on-mdav.md). 
+> Vi anbefaler, at skybeskyttelse er slået til. Du kan få mere at vide under [Hvorfor cloudbeskyttelse skal aktiveres for Microsoft Defender Antivirus](why-cloud-protection-should-be-on-mdav.md). 
 
-## <a name="how-cloud-protection-works"></a>Sådan fungerer skybeskyttelse
+## <a name="how-cloud-protection-works"></a>Sådan fungerer cloudbeskyttelse
 
-Microsoft Defender Antivirus problemfrit med Microsofts skytjenester. Disse skybeskyttelsestjenester, der også kaldes Microsoft Advanced Protection Service (MAPS), forbedrer standard beskyttelse i realtid. Med skybeskyttelse giver næste generations teknologier hurtig identifikation af nye trusler, nogle gange endda før et enkelt slutpunkt er inficeret. 
+Microsoft Defender Antivirus fungerer problemfrit sammen med Microsofts cloudtjenester. Disse cloudbeskyttelsestjenester, også kaldet Microsoft Advanced Protection Service (MAPS), forbedrer standardbeskyttelse i realtid. Med cloudbeskyttelse giver næste generations teknologier hurtig identifikation af nye trusler, nogle gange endda før et enkelt slutpunkt er inficeret. 
 
-Følgende blogindlæg illustrerer, hvordan skybeskyttelse fungerer:
+Følgende blogindlæg illustrerer, hvordan cloudbeskyttelse fungerer:
 
-- [Bliv bekendt med de avancerede teknologier i kernen Microsoft Defender for Endpoint næste generations beskyttelse](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
+- [Lær de avancerede teknologier at kende i kernen af Microsoft Defender for Endpoint næste generations beskyttelse](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
 
-- [Hvorfor Microsoft Defender Antivirus er den mest installerede i virksomheden](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
+- [Hvorfor Microsoft Defender Antivirus er den mest udrullede i virksomheden](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
 
-- [Overvågning af adfærd kombineret med maskinel indlæring ødelægger en kampagne med enormt kronemining](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign)
+- [Overvågning af adfærd kombineret med maskinel indlæring ødelægger en massiv møntudvindingskampagne](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign)
 
-- [Sådan stoppede kunstig intelligens et "humørikon"](https://www.microsoft.com/security/blog/2018/02/14/how-artificial-intelligence-stopped-an-emotet-outbreak)
+- [Hvordan kunstig intelligens stoppede et "Emotet"-udbrud](https://www.microsoft.com/security/blog/2018/02/14/how-artificial-intelligence-stopped-an-emotet-outbreak)
 
-- [Detonating en dårlig dag: Microsoft Defender Antivirus og maskinlæring i lag](https://www.microsoft.com/security/blog/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses)
+- [Detonering af en dårlig kanin: Microsoft Defender Antivirus og lagdelt forsvar til maskinel indlæring](https://www.microsoft.com/security/blog/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses)
 
-- [Microsoft Defender Antivirus skybeskyttelsestjeneste: Avanceret forsvar i realtid mod malware, der aldrig før er set](https://www.microsoft.com/security/blog/2017/07/18/windows-defender-antivirus-cloud-protection-service-advanced-real-time-defense-against-never-before-seen-malware) 
+- [Microsoft Defender Antivirus cloudbeskyttelsestjeneste: Avanceret forsvar i realtid mod aldrig før set malware](https://www.microsoft.com/security/blog/2017/07/18/windows-defender-antivirus-cloud-protection-service-advanced-real-time-defense-against-never-before-seen-malware) 
 
 
 > [!NOTE]
-> Skytjenesten Microsoft Defender Antivirus en mekanisme til at levere opdateret beskyttelse til dit netværk og dine slutpunkter. Som en skybaseret tjeneste er det ikke blot beskyttelse af filer, der er gemt i skyen; I stedet bruger skytjenesten distribuerede ressourcer og maskinlæring til at beskytte dine slutpunkter i en hastighed, der er langt hurtigere end traditionelle sikkerhedsintelligensopdateringer.
+> Den Microsoft Defender Antivirus cloudtjeneste er en mekanisme til levering af opdateret beskyttelse til dit netværk og dine slutpunkter. Som en cloudtjeneste er det ikke blot beskyttelse af filer, der er gemt i cloudmiljøet. Cloudtjenesten bruger i stedet distribuerede ressourcer og maskinel indlæring til at levere beskyttelse til dine slutpunkter i en hastighed, der er langt hurtigere end traditionelle sikkerhedsintelligensopdateringer.
 
-## <a name="how-to-get-cloud-protection"></a>Sådan får du skybeskyttelse 
+## <a name="how-to-get-cloud-protection"></a>Sådan får du cloudbeskyttelse 
 
-Skybeskyttelse er aktiveret som standard. Det kan dog være nødvendigt at aktivere det igen, hvis det er blevet deaktiveret som en del af den tidligere organisationspolitikker. Du kan få mere at vide [under Aktivere skybeskyttelse](enable-cloud-protection-microsoft-defender-antivirus.md).
+Cloudbeskyttelse er aktiveret som standard. Det kan dog være nødvendigt at aktivere den igen, hvis den er blevet deaktiveret som en del af tidligere organisatoriske politikker. Du kan få mere at vide under [Slå skybeskyttelse til](enable-cloud-protection-microsoft-defender-antivirus.md).
 
-Hvis dit abonnement omfatter Windows 10 E5, kan du drage fordel af dynamiske intelligensopdateringer til nødstilfælde, som giver næsten beskyttelse i realtid mod nye trusler. Når du aktiverer skybeskyttelse, kan løsninger på malwareproblemer leveres via skyen inden for få minutter i stedet for at vente på den næste opdatering. Se [Konfigurer Microsoft Defender Antivirus til automatisk at modtage nye sikkerhedsopdateringer baseret på rapporter fra vores skytjeneste](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates).
+Hvis dit abonnement omfatter Windows 10 E5, kan du drage fordel af dynamiske efterretningsopdateringer i nødstilfælde, som giver beskyttelse næsten i realtid mod nye trusler. Når du slår cloudbeskyttelse til, kan rettelser til malwareproblemer leveres via clouden inden for få minutter i stedet for at vente på den næste opdatering. Se [Konfigurer Microsoft Defender Antivirus til automatisk at modtage nye beskyttelsesopdateringer, der er baseret på rapporter fra vores cloudtjeneste](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates).
 
 ## <a name="next-steps"></a>Næste trin
 
-Nu hvor du har et overblik over skybeskyttelse i Microsoft Defender Antivirus, er her nogle næste trin:
+Nu, hvor du har et overblik over skybeskyttelse i Microsoft Defender Antivirus, er her nogle af de næste trin:
 
-1. Se [Derfor skal skybeskyttelse være aktiveret for Microsoft Defender Antivirus](why-cloud-protection-should-be-on-mdav.md).
+1. Se [Hvorfor cloudbeskyttelse skal aktiveres for Microsoft Defender Antivirus](why-cloud-protection-should-be-on-mdav.md).
 
-2. Fortsæt for at [aktivere skybeskyttelse](enable-cloud-protection-microsoft-defender-antivirus.md)
+2. Fortsæt til [Aktivér skybeskyttelse](enable-cloud-protection-microsoft-defender-antivirus.md)
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)

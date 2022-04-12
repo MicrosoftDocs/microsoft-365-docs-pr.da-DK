@@ -18,18 +18,22 @@ ms.custom:
 ms.date: 04/04/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 655681820633b0f53ba29de49052690018cab1e7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 5a9441a41db2dfbe53bfb280152c038e9dbc383e
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783705"
+ms.locfileid: "64789838"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Registrering af slutpunkt og svar (Slutpunktsregistrering og -svar) i bloktilstand
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 > Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 

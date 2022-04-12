@@ -1,7 +1,7 @@
 ---
 title: Evaluer Microsoft Defender Antivirus
-description: Virksomheder i alle størrelser kan bruge denne vejledning til at evaluere og teste den beskyttelse, der tilbydes Microsoft Defender Antivirus i Windows.
-keywords: Microsoft Defender Antivirus, skybeskyttelse, sky, antimalware, sikkerhed, defender, evaluer, test, beskyttelse, sammenlign, beskyttelse i realtid
+description: Virksomheder i alle størrelser kan bruge denne vejledning til at evaluere og teste den beskyttelse, der tilbydes af Microsoft Defender Antivirus i Windows.
+keywords: Microsoft Defender Antivirus, cloudbeskyttelse, cloud, antimalware, sikkerhed, forsvarer, evaluere, test, beskyttelse, sammenligne, beskyttelse i realtid
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 4dd25a599f144a60bfd2ebeb3e9bb8b1876bd3c6
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8c7ced9c85ec7c6075b44970d25e34ba5594404e
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63597891"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787621"
 ---
 # <a name="evaluate-microsoft-defender-antivirus"></a>Evaluer Microsoft Defender Antivirus
 
@@ -28,39 +28,54 @@ ms.locfileid: "63597891"
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+
+- Microsoft Defender Antivirus
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
-Brug denne vejledning til at bestemme, hvor Microsoft Defender Antivirus beskytter dig mod virus, malware og potentielt uønskede programmer.
+**Platforme**
+- Windows
+
+Brug denne vejledning til at finde ud af, hvor godt Microsoft Defender Antivirus beskytter dig mod virus, malware og potentielt uønskede programmer.
 
 > [!TIP]
->Du kan også besøge demowebstedet for Microsoft Defender til Endpoint [på demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at følgende funktioner virker, og se, hvordan de fungerer:
+>Du kan også besøge webstedet for Microsoft Defender for Endpoint demo på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at følgende funktioner fungerer, og se, hvordan de fungerer:
 >
-> - Cloud-leveret beskyttelse
-> - Hurtig læring (herunder Blok ved første synsviden)
+> - Skybaseret beskyttelse
+> - Hurtig læring (herunder Blok ved første øjekast)
 > - Potentielt uønsket programblokering
 
 > [!NOTE]
-> Defender for Endpoint-demowebstedet demo.wd.microsoft.com forældet og fjernes fremover.
+> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
 
-I den forklares de vigtige funktioner til næste generations beskyttelse af Microsoft Defender Antivirus, der er tilgængelige for både små og store virksomheder, og hvordan de øger registrering af malware og beskyttelse på tværs af dit netværk.
+Det forklarer de vigtige næste generations beskyttelsesfunktioner i Microsoft Defender Antivirus tilgængelige for både små og store virksomheder, og hvordan de øger registrering og beskyttelse af malware på tværs af dit netværk.
 
-Du kan vælge at konfigurere og evaluere hver indstilling enkeltvis eller alle på én gang. Vi har grupperet lignende indstillinger baseret på typiske evalueringsscenarier og indeholder instruktioner om brug af PowerShell til at aktivere indstillingerne.
+Du kan vælge at konfigurere og evaluere hver indstilling uafhængigt af hinanden eller på én gang. Vi har grupperet lignende indstillinger baseret på typiske evalueringsscenarier og indeholder instruktioner til, hvordan du bruger PowerShell til at aktivere indstillingerne.
 
 Vejledningen er tilgængelig i PDF-format til offlinevisning:
 
 - [Download vejledningen i PDF-format](https://www.microsoft.com/download/details.aspx?id=54795)
 
-Du kan også downloade en PowerShell, der automatisk aktiverer alle de indstillinger, der er beskrevet i vejledningen. Du kan hente scriptet sammen med PDF-downloaden ovenfor eller individuelt fra PowerShell Gallery:
+Du kan også downloade en PowerShell, der automatisk aktiverer alle de indstillinger, der er beskrevet i vejledningen. Du kan hente scriptet sammen med pdf-downloaden ovenfor eller individuelt fra PowerShell-galleriet:
 
-- [Download PowerShell-scriptet for at konfigurere indstillingerne automatisk](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings)
+- [Download PowerShell-scriptet for automatisk at konfigurere indstillingerne](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings)
 
 > [!IMPORTANT]
-> Vejledningen er i øjeblikket beregnet til evaluering af Microsoft Defender Antivirus. Aktivering af alle indstillingerne i denne vejledning er muligvis ikke egnet til den virkelige installation.
+> Vejledningen er i øjeblikket beregnet til evaluering af Microsoft Defender Antivirus på en enkelt maskine. Aktivering af alle indstillingerne i denne vejledning er muligvis ikke egnet til installation i den virkelige verden.
 >
-> Du kan finde de nyeste anbefalinger til den virkelige installation og overvågning af Microsoft Defender Antivirus på tværs af et netværk under [Installér Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md).
+> Du kan se de seneste anbefalinger til installation og overvågning af Microsoft Defender Antivirus på tværs af et netværk i [Installér Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md).
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-topics"></a>Relaterede emner
 
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)
-- [Installér Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Installer Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)

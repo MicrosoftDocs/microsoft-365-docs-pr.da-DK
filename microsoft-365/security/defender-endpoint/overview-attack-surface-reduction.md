@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 5b71134f9a7d33880e9762701e825c3fbf708f6b
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 5c3724989db1bd8e6389b8a70ba591ce4e109390
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705076"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787704"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Forstå og brug funktioner til reduktion af angrebsoverfladen
 
@@ -35,6 +35,10 @@ ms.locfileid: "64705076"
 - [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 > [!TIP]
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -114,11 +118,11 @@ Du kan aktivere overvågningstilstand ved hjælp af Gruppepolitik, PowerShell og
 
 ASR-regler (Attack Surface Reduction) er foruddefinerede for at hærde almindelige kendte angrebsoverflader. Der er flere metoder, du kan bruge til at implementere regler for reduktion af angrebsoverfladen. Den foretrukne metode er dokumenteret i følgende emner om installation af asr-regler (attack surface reduction):
 
-- [Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
-- [Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md)
-- [Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
-- [Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
-- [Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Udrulningsoversigt til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md)
+- [Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md)
+- [Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md)
+- [Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md)
+- [Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md)
 
 ## <a name="view-attack-surface-reduction-events"></a>Få vist hændelser for reduktion af angrebsoverfladen
 
@@ -294,14 +298,14 @@ Som nævnt i videoen indeholder Defender for Endpoint flere funktioner til reduk
 |:---|:---|
 | [Hardwarebaseret isolation](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) | Beskyt og bevar integriteten af et system, efterhånden som det starter, og mens det kører. Valider systemintegritet via lokal og ekstern attestation. Brug objektbeholderisolation til Microsoft Edge som en hjælp til at beskytte mod skadelige websteder. |
 | [Programkontrolelement](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) | Brug programkontrolelementet, så dine programmer skal have tillid til at kunne køre. |
-| [Styret mappeadgang](controlled-folders.md) | Hjælp med at forhindre skadelige eller mistænkelige apps (herunder filkryptering af ransomware malware) i at foretage ændringer af filer i dine centrale systemmapper (kræver Microsoft Defender Antivirus) |
-| [Netværksbeskyttelse](network-protection.md) | Udvid beskyttelsen til netværkstrafik og -forbindelse på organisationens enheder. (Kræver Microsoft Defender Antivirus) |
+| [Styret mappeadgang](controlled-folders.md) | Hjælp med at forhindre skadelige eller mistænkelige apps (herunder filkryptering af ransomware malware) i at foretage ændringer af filer i dine centrale systemmapper (kræver Microsoft Defender Antivirus). |
+| [Netværksbeskyttelse](network-protection.md) | Udvid beskyttelsen til netværkstrafik og -forbindelse på organisationens enheder. (Kræver Microsoft Defender Antivirus). |
 | [Exploit Protection](exploit-protection.md) | Hjælp med at beskytte de operativsystemer og apps, din organisation bruger, så de ikke kan udnyttes. Udnyttelse af beskyttelse fungerer også med antivirusløsninger fra tredjepart. |
 | [Enhedsstyring](device-control-report.md) | Beskytter mod tab af data ved at overvåge og styre medier, der bruges på enheder, f.eks. flytbart lager og USB-drev, i din organisation. |
-| [Udrulningsvejledning til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md) | Præsenterer oversigtsoplysninger og forudsætninger for installation af regler for reduktion af angrebsoverfladen |
-| [Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md) | Viser de anbefalede trin til installation af regler for reduktion af angrebsoverflade |
-| [Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md) | Indeholder trin til at bruge overvågningstilstand til at teste regler for reduktion af angrebsoverfladen. |
-| [Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md) | Viser trinnene til overgang af regler for reduktion af angrebsoverfladen fra testtilstand (overvågning) til aktiv, aktiveret (bloktilstand) |
-| [Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md) | Indeholder oplysninger om daglige gennemgangs- og vedligeholdelsesaktiviteter. |
-| [Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md) | Indeholder oplysninger om hver regel for reduktion af angrebsoverfladen. |
+| [Udrulningsvejledning til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md) | Præsenterer oversigtsoplysninger og forudsætninger for installation af regler for reduktion af angrebsoverfladen. |
+| [Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md) | Viser de anbefalede trin til installation af regler for reduktion af angrebsoverfladen. |
+| [Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md) | Indeholder trin til at bruge overvågningstilstand til at teste regler for reduktion af angrebsoverfladen. |
+| [Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md) | Viser trinnene til overgang af regler for reduktion af angrebsoverfladen fra testtilstand (overvågning) til aktiv, aktiveret tilstand (bloktilstand). |
+| [Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md) | Indeholder oplysninger om daglige gennemgangs- og vedligeholdelsesaktiviteter. |
+| [Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md) | Indeholder oplysninger om hver regel for reduktion af angrebsoverfladen. |
 | [Regler for reduktion af angrebsoverflade](attack-surface-reduction.md) | Reducer sikkerhedsrisici (angrebsoverflader) i dine programmer med intelligente regler, der hjælper med at stoppe malware. (Kræver Microsoft Defender Antivirus). |

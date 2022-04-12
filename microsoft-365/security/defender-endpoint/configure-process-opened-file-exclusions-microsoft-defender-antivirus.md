@@ -1,7 +1,7 @@
 ---
-title: Konfigurere udeladelse af filer, der er åbnet af bestemte processer
-description: Du kan udelukke filer fra scanninger, hvis de har været åbnet af en bestemt proces.
-keywords: Microsoft Defender Antivirus, proces, udelukkelse, filer, scanninger
+title: Konfigurer udeladelser for filer, der er åbnet af bestemte processer
+description: Du kan udelade filer fra scanninger, hvis de er blevet åbnet af en bestemt proces.
+keywords: Microsoft Defender Antivirus, proces, udeladelse, filer, scanninger
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -15,79 +15,83 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 034ad1312497652554c9a59d51ba18f6bddc9d83
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: e8cf075c0a35095f72d847a17f1fb48d590ad385
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63593206"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788980"
 ---
-# <a name="configure-exclusions-for-files-opened-by-processes"></a>Konfigurere udeladelse af filer, der er åbnet af processer
+# <a name="configure-exclusions-for-files-opened-by-processes"></a>Konfigurer udeladelser for filer, der er åbnet af processer
 
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Du kan udelade filer, der er blevet åbnet af bestemte processer, Microsoft Defender Antivirus scanninger. Se En [Anbefalinger definition af udeladelseslister, før](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) du definerer dine udeladelseslister.
+**Platforme**
+- Windows 
 
-I denne artikel beskrives det, hvordan du kan konfigurere udeladelseslister.
+Du kan udelade filer, der er blevet åbnet af bestemte processer, fra Microsoft Defender Antivirus scanninger. Se [Anbefalinger for at definere udeladelser, før du definerer dine udeladelseslister](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions).
 
-## <a name="examples-of-exclusions"></a>Eksempler på udeladelse
+I denne artikel beskrives det, hvordan du konfigurerer lister over undtagelser.
+
+## <a name="examples-of-exclusions"></a>Eksempler på udeladelser
 
 <br/><br/>
 
-|Udeladelse|Eksempel|
+|Udelukkelse|Eksempel|
 |---|---|
-|En hvilken som helst fil på den computer, der åbnes af en proces med et bestemt filnavn|Angivelse `test.exe` af, om filer, der er åbnet ved hjælp af: <p>`c:\sample\test.exe` <p> `d:\internal\files\test.exe`|
-|Enhver fil på den computer, der åbnes af en proces under en bestemt mappe|Angivelse `c:\test\sample\*` af, om filer, der er åbnet ved hjælp af: <p> `c:\test\sample\test.exe` <p> `c:\test\sample\test2.exe` <p> `c:\test\sample\utility.exe`|
-|Enhver fil på den computer, der åbnes af en bestemt proces i en bestemt mappe|Angivelse vil `c:\test\process.exe` udelukke filer, der kun åbnes af `c:\test\process.exe`|
+|Alle filer på computeren, der åbnes af en proces med et bestemt filnavn|Hvis du angiver `test.exe` , udelades filer, der er åbnet af: <p>`c:\sample\test.exe` <p> `d:\internal\files\test.exe`|
+|Alle filer på computeren, der åbnes af en proces under en bestemt mappe|Hvis du angiver `c:\test\sample\*` , udelades filer, der er åbnet af: <p> `c:\test\sample\test.exe` <p> `c:\test\sample\test2.exe` <p> `c:\test\sample\utility.exe`|
+|Alle filer på computeren, der åbnes af en bestemt proces i en bestemt mappe|Hvis du angiver `c:\test\process.exe` , udelades filer, der kun er åbnet af `c:\test\process.exe`|
 
-Når du føjer en proces til listen over udeladelse af proces, scanner Microsoft Defender Antivirus ikke filer, der er åbnet af denne proces, uanset hvor filerne er placeret. Selve processen scannes dog, medmindre den også er blevet føjet til listen til [udeladelse af filer](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+Når du føjer en proces til listen over procesudeladelser, scanner Microsoft Defender Antivirus ikke filer, der er åbnet af den pågældende proces, uanset hvor filerne er placeret. Selve processen scannes dog, medmindre den også er føjet til [filudeladelseslisten](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
-Undtagelserne gælder kun for [beskyttelse og overvågning i realtid, der altid er i realtid](configure-real-time-protection-microsoft-defender-antivirus.md). De gælder ikke for planlagte scanninger eller scanninger efter behov.
+Undtagelserne gælder kun [for realtidsbeskyttelse og -overvågning](configure-real-time-protection-microsoft-defender-antivirus.md). De gælder ikke for planlagte scanninger eller scanninger efter behov.
 
-Ændringer, der Gruppepolitik med **udeladelseslisterne, vises** på listerne [i Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md). De ændringer, der er foretaget Windows Sikkerhed appen **, vises dog ikke** på Gruppepolitik lister.
+Ændringer, der er foretaget med Gruppepolitik af udeladelseslisterne **, vises** på listerne i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md). Ændringer, der er foretaget i Windows Sikkerhed app **, vises dog ikke** på de Gruppepolitik lister.
 
-Du kan tilføje, fjerne og gennemse listerne over udeladelser i Gruppepolitik, Microsoft Endpoint Configuration Manager, Microsoft Intune og med Windows Sikkerhed-appen, og du kan bruge jokertegn til yderligere at tilpasse listerne.
+Du kan tilføje, fjerne og gennemse listerne for udeladelser i Gruppepolitik, Microsoft Endpoint Configuration Manager, Microsoft Intune og med Windows Sikkerhed-appen, og du kan bruge jokertegn til yderligere at tilpasse listerne.
 
-Du kan også bruge PowerShell-cmdlet'er og WMI til at konfigurere udeladelseslisterne, herunder gennemsyn af dine lister.
+Du kan også bruge PowerShell-cmdlet'er og WMI til at konfigurere udeladelseslisterne, herunder gennemse dine lister.
 
-Lokale ændringer af listerne (af brugere med administratorrettigheder; ændringer, der er foretaget med PowerShell og WMI) flettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Konfigurationsstyring eller Intune. De Gruppepolitik lister har forrang i tilfælde af konflikter.
+Lokale ændringer af listerne (af brugere med administratorrettigheder, ændringer foretaget med PowerShell og WMI) flettes som standard med listerne som defineret (og installeret) af Gruppepolitik, Configuration Manager eller Intune. De Gruppepolitik lister har forrang i tilfælde af konflikter.
 
-Du kan [konfigurere, hvordan lokalt og globalt definerede udeladelseslister flettes](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) for at tillade, at lokale ændringer tilsidesætter administrerede installationsindstillinger.
+Du kan [konfigurere, hvordan lister over undtagelser, der er defineret lokalt og globalt, flettes](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) , så lokale ændringer kan tilsidesætte administrerede udrulningsindstillinger.
 
-## <a name="configure-the-list-of-exclusions-for-files-opened-by-specified-processes"></a>Konfigurere listen over udeladelse af filer, der åbnes af angivne processer
+## <a name="configure-the-list-of-exclusions-for-files-opened-by-specified-processes"></a>Konfigurer listen over udeladelser for filer, der er åbnet af angivne processer
 
-### <a name="use-microsoft-intune-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Microsoft Intune til at udelukke filer, der har været åbnet af angivne processer, fra scanninger
+### <a name="use-microsoft-intune-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Microsoft Intune til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-Se [Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure) Microsoft Defender Antivirus [indstillinger for enhedsbegrænsning for at Windows 10 i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus) for at få mere at vide.
+Se [Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure) og [Microsoft Defender Antivirus indstillinger for enhedsbegrænsning for at få Windows 10 i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus) for at få flere oplysninger.
 
-### <a name="use-microsoft-endpoint-manager-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Microsoft Endpoint Manager til at udelukke filer, der har været åbnet af angivne processer, fra scanninger
+### <a name="use-microsoft-endpoint-manager-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Microsoft Endpoint Manager til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-Se [Sådan oprettes og installeres antimalwarepolitikker: Udeladelsesindstillinger](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for at få mere at vide om konfiguration Microsoft Endpoint Manager (aktuel forgrening).
+Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for udeladelse for at](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) få oplysninger om konfiguration af Microsoft Endpoint Manager (aktuel forgrening).
 
-### <a name="use-group-policy-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Gruppepolitik til at udelukke filer, der har været åbnet af angivne processer, fra scanninger
+### <a name="use-group-policy-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Gruppepolitik til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-1. På Gruppepolitik administrationscomputer skal du åbne Gruppepolitik [Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og klikke på **Rediger**.
+1. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklik på det Gruppepolitik objekt, du vil konfigurere, og klik på **Rediger**.
 
-2. I menuen **Gruppepolitik skal du** gå til **Computerkonfiguration og** klikke på **Administrative skabeloner**.
+2. I **redigeringseditoren til Gruppepolitik** skal du gå til **Computerkonfiguration** og klikke på **Administrative skabeloner**.
 
-3. Udvid træet for **at Windows komponenter \> Microsoft Defender Antivirus \> udeladelse.**
+3. Udvid træet for at **Windows komponenter \> Microsoft Defender Antivirus \> Udeladelser**.
 
-4. Dobbeltklik på **Procesude udeladelse,** og tilføj udeladelserne:
+4. Dobbeltklik på **Behandl udeladelser,** og tilføj udeladelser:
     1. Angiv indstillingen til **Aktiveret**.
-    2. Under sektionen **Indstillinger** skal du klikke **på Vis...**.
-    3. Angiv hver proces på sin egen linje under **kolonnen Værdinavn** . Se eksempeltabellen for de forskellige typer procesudetagelser. Angiv **0** i **kolonnen Værdi** for alle processer.
+    2. Under afsnittet **Indstillinger** skal du klikke på **Vis...**.
+    3. Angiv hver proces på sin egen linje under kolonnen **Værdinavn** . Se eksempeltabellen for de forskellige typer procesudeladelser. Angiv **0** i kolonnen **Værdi** for alle processer.
 
 5. Klik på **OK**.
 
-### <a name="use-powershell-cmdlets-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug PowerShell-cmdlet'er til at udelukke filer, der har været åbnet af angivne processer, fra scanninger
+### <a name="use-powershell-cmdlets-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug PowerShell-cmdlet'er til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-Brug af PowerShell til at tilføje eller fjerne udeladelse af filer, der har været åbnet af processer, kræver brug af en kombination af tre cmdlet'er med `-ExclusionProcess` parameteren. Cmdlet'erne er alle i [Defender-modulet](/powershell/module/defender/).
+Brug af PowerShell til at tilføje eller fjerne udeladelser for filer, der er blevet åbnet af processer, kræver brug af en kombination af tre cmdlet'er med `-ExclusionProcess` parameteren . Cmdlet'erne er alle i [Defender-modulet](/powershell/module/defender/).
 
-Formatet for cmdletterne er:
+Formatet for cmdlet'erne er:
 
 ```PowerShell
 <cmdlet> -ExclusionProcess "<item>"
@@ -99,73 +103,73 @@ Følgende er tilladt som \<cmdlet\>:
 
 |Konfigurationshandling|PowerShell-cmdlet|
 |---|---|
-|Oprette eller overskrive listen|`Set-MpPreference`|
+|Opret eller overskriv listen|`Set-MpPreference`|
 |Føj til listen|`Add-MpPreference`|
 |Fjern elementer fra listen|`Remove-MpPreference`|
 
 > [!IMPORTANT]
-> Hvis du har oprettet en liste, vil brug `Set-MpPreference` af `Add-MpPreference``Set-MpPreference` cmdlet'en, enten med eller , overskrive den eksisterende liste.
+> Hvis du har oprettet en liste, enten med `Set-MpPreference` eller `Add-MpPreference`, overskrives den eksisterende liste ved hjælp af `Set-MpPreference` cmdlet'en igen.
 
-Det følgende kodestykke ville f.eks. få Microsoft Defender AV-scanninger til at udelukke enhver fil, der åbnes af den angivne proces:
+Følgende kodestykke vil f.eks. medføre, at Microsoft Defender AV-scanninger udelukker alle filer, der åbnes af den angivne proces:
 
 ```PowerShell
 Add-MpPreference -ExclusionProcess "c:\internal\test.exe"
 ```
 
-Du kan finde flere oplysninger om, hvordan du bruger PowerShell Microsoft Defender Antivirus, under Administrer antivirus med [PowerShell-cmdlet'er og Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender).
+Du kan få flere oplysninger om, hvordan du bruger PowerShell sammen med Microsoft Defender Antivirus, under Administrer antivirus med PowerShell-cmdlet'er og [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender).
 
-### <a name="use-windows-management-instruction-wmi-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug Windows management instruction (WMI) til at udelukke filer, der har været åbnet af angivne processer fra scanninger
+### <a name="use-windows-management-instruction-wmi-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug WMI (Windows Management Instruction) til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-Brug [**metoderne** **Indstil**, Tilføj **og** Fjern for **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
+Brug [metoderne **Set**, **Add** og **Remove** for klassen **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) for følgende egenskaber:
 
 ```WMI
 ExclusionProcess
 ```
 
-Brug af **Set**, **Add** og **Remove svarer** til deres modparter i PowerShell: `Set-MpPreference`, `Add-MpPreference`og `Remove-MpPreference`.
+Brugen af **Set**, **Add** og **Remove** svarer til deres kolleger i PowerShell: `Set-MpPreference`, `Add-MpPreference`og `Remove-MpPreference`.
 
-Du kan finde flere oplysninger og tilladte parametre [under Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+Du kan få flere oplysninger og tilladte parametre [under Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
-### <a name="use-the-windows-security-app-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug appen Windows Sikkerhed til at udelukke filer, der har været åbnet af angivne processer, fra scanninger
+### <a name="use-the-windows-security-app-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans"></a>Brug appen Windows Sikkerhed til at udelade filer, der er blevet åbnet af angivne processer, fra scanninger
 
-Se [Tilføj udeladelse i appen Windows Sikkerhed for at få](microsoft-defender-security-center-antivirus.md) vejledning.
+Se [Tilføj udeladelser i appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md) for at få en vejledning.
 
-## <a name="use-wildcards-in-the-process-exclusion-list"></a>Brug jokertegn på listen over udeladelse af proces
+## <a name="use-wildcards-in-the-process-exclusion-list"></a>Brug jokertegn på listen over procesudeladelser
 
-Brugen af jokertegn på listen over udeladelse af proces er anderledes end brugen af dem på andre udeladelseslister.
+Brugen af jokertegn på listen over procesudeladelser adskiller sig fra brugen af dem på andre lister over undtagelser.
 
-Du kan især ikke bruge jokertegnet spørgsmålstegn (`?`), og jokertegnet stjerne (`*`) kan kun bruges i slutningen af en komplet sti. Du kan stadig bruge miljøvariabler (f.eks `%ALLUSERSPROFILE%`. ) som jokertegn, når du definerer elementer på listen over udeladelse af proces.
+Du kan især ikke bruge spørgsmålstegnet (`?`) jokertegn, og stjerne jokertegnet (`*`) kan kun bruges i slutningen af en fuldstændig sti. Du kan stadig bruge miljøvariabler (f.eks. `%ALLUSERSPROFILE%`) som jokertegn, når du definerer elementer på listen over procesudeladelser.
 
-I følgende tabel beskrives det, hvordan jokertegnene kan bruges på listen over udeladelse af proces:
+I følgende tabel beskrives det, hvordan jokertegnene kan bruges på listen over procesudeladelser:
 
 <br/><br/>
 
-|Jokertegn|Eksempel på brug|Eksempel på match|
+|Wildcard|Eksempel på brug|Eksempler på forekomster|
 |---|---|---|
-|`*` (stjerne) <p> Erstatter et vilkårligt antal tegn|`C:\MyData\*`|Enhver fil, der åbnes af `C:\MyData\file.exe`|
-|Miljøvariabler <p> Den definerede variabel udfyldes som en sti, når udelukkelsen evalueres|`%ALLUSERSPROFILE%\CustomLogFiles\file.exe`|Enhver fil, der åbnes af `C:\ProgramData\CustomLogFiles\file.exe`|
+|`*` (stjerne) <p> Erstatter et vilkårligt antal tegn|`C:\MyData\*`|En hvilken som helst fil, der er åbnet af `C:\MyData\file.exe`|
+|Miljøvariabler <p> Den definerede variabel udfyldes som en sti, når udeladelse evalueres|`%ALLUSERSPROFILE%\CustomLogFiles\file.exe`|En hvilken som helst fil, der er åbnet af `C:\ProgramData\CustomLogFiles\file.exe`|
 
-## <a name="review-the-list-of-exclusions"></a>Gennemse listen over udeladelses undtagelser
+## <a name="review-the-list-of-exclusions"></a>Gennemse listen over udeladelser
 
-Du kan hente elementerne på udeladelseslisten med MpCmdRun, PowerShell, [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/intune/device-restrictions-configure) [eller Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md).
+Du kan hente elementerne på listen over undtagelser med MpCmdRun, PowerShell, [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/intune/device-restrictions-configure) eller [appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md).
 
 Hvis du bruger PowerShell, kan du hente listen på to måder:
 
 - Hent status for alle Microsoft Defender Antivirus indstillinger. Hver af listerne vises på separate linjer, men elementerne på hver liste kombineres til den samme linje.
-- Skriv status for alle indstillinger til en variabel, og brug variablen til kun at kalde den specifikke liste, du er interesseret i. Hver brug af `Add-MpPreference` skrives på en ny linje.
+- Skriv status for alle indstillinger til en variabel, og brug denne variabel til kun at kalde den bestemte liste, du er interesseret i. Hver brug af skrives `Add-MpPreference` til en ny linje.
 
-### <a name="validate-the-exclusion-list-by-using-mpcmdrun"></a>Valider udeladelseslisten ved hjælp af MpCmdRun
+### <a name="validate-the-exclusion-list-by-using-mpcmdrun"></a>Valider listen over undtagelser ved hjælp af MpCmdRun
 
-Hvis du vil kontrollere udeladelse af det [dedikerede kommandolinjeværktøj mpcmdrun.exe](./command-line-arguments-microsoft-defender-antivirus.md?branch=v-anbic-wdav-new-mpcmdrun-options), skal du bruge følgende kommando:
+Hvis du vil kontrollere udeladelser med det dedikerede [kommandolinjeværktøj mpcmdrun.exe](./command-line-arguments-microsoft-defender-antivirus.md?branch=v-anbic-wdav-new-mpcmdrun-options), skal du bruge følgende kommando:
 
 ```DOS
 MpCmdRun.exe -CheckExclusion -path <path>
 ```
 
 > [!NOTE]
-> Kontrol af udeladelse med MpCmdRun kræver Microsoft Defender Antivirus CAMP version 4.18.1812.3 (udgivet i december 2018) eller nyere.
+> Kontrol af udeladelser med MpCmdRun kræver Microsoft Defender Antivirus CAMP version 4.18.1812.3 (udgivet i december 2018) eller nyere.
 
-### <a name="review-the-list-of-exclusions-alongside-all-other-microsoft-defender-antivirus-preferences-by-using-powershell"></a>Gennemse listen over udeladelsesindstillinger sammen med alle Microsoft Defender Antivirus ved hjælp af PowerShell
+### <a name="review-the-list-of-exclusions-alongside-all-other-microsoft-defender-antivirus-preferences-by-using-powershell"></a>Gennemse listen over undtagelser sammen med alle andre indstillinger for Microsoft Defender Antivirus ved hjælp af PowerShell
 
 Brug følgende cmdlet:
 
@@ -173,24 +177,34 @@ Brug følgende cmdlet:
 Get-MpPreference
 ```
 
-Se [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus- [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender) for at få mere at vide om, hvordan du bruger PowerShell Microsoft Defender Antivirus.
+Se [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) og [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
 
-### <a name="retrieve-a-specific-exclusions-list-by-using-powershell"></a>Hent en bestemt udeladelsesliste ved hjælp af PowerShell
+### <a name="retrieve-a-specific-exclusions-list-by-using-powershell"></a>Hent en bestemt liste over udeladelser ved hjælp af PowerShell
 
-Brug følgende kodestykke (angiv hver linje som en separat kommando); **erstat WDAVprefs** med det navn, du vil navngive variablen:
+Brug følgende kodestykke (angiv hver linje som en separat kommando). erstat **WDAVprefs** med den etiket, du vil navngive variablen:
 
 ```PowerShell
 $WDAVprefs = Get-MpPreference
 $WDAVprefs.ExclusionProcess
 ```
 
-Se [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus- [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender) for at få mere at vide om, hvordan du bruger PowerShell Microsoft Defender Antivirus.
+Se [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) og [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Konfigurere og validere udeladelse i Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere og validere udeladelse baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Konfigurere Microsoft Defender Antivirus udeladelse på Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
-- [Almindelige fejl at undgå, når du definerer udeladelse](common-exclusion-mistakes-microsoft-defender-antivirus.md)
-- [Tilpas, initier og gennemse resultaterne Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser i Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer og valider udeladelser baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
+- [Almindelige fejl, der skal undgås, når du definerer udeladelser](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Tilpas, start og gennemse resultaterne af Microsoft Defender Antivirus scanninger og afhjælpning](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

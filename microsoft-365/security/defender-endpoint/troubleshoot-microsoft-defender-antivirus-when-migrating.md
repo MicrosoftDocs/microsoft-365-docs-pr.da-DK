@@ -1,7 +1,7 @@
 ---
-title: Fejlfinding Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning
-description: Foretag fejlfinding af almindelige fejl under overførsel til Microsoft Defender Antivirus
-keywords: hændelse, fejlkode, logføring, fejlfinding, microsoft defender antivirus, windows defender antivirus, overførsel
+title: Fejlfinding af Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning
+description: Foretag fejlfinding af almindelige fejl ved overførsel til Microsoft Defender Antivirus
+keywords: hændelse, fejlkode, logføring, fejlfinding, Microsoft Defender antivirus, Windows Defender antivirus, overførsel
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,101 +15,104 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: c1b60b66977c4f93591bce20a5cf6ace0b7fc567
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 74843a71131ae8f10628dac96086e68e25acb2b0
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63595886"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788430"
 ---
-# <a name="troubleshoot-microsoft-defender-antivirus-while-migrating-from-a-third-party-solution"></a>Fejlfinding Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning
+# <a name="troubleshoot-microsoft-defender-antivirus-while-migrating-from-a-third-party-solution"></a>Fejlfinding af Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
+**Platforme**
+- Windows
 
-Du kan finde hjælp her, hvis du støder på problemer under overførsel fra en tredjeparts sikkerhedsløsning for at Microsoft Defender Antivirus.
+Du kan finde hjælp her, hvis du oplever problemer under overførsel fra en sikkerhedsløsning fra en tredjepart for at Microsoft Defender Antivirus.
 
-## <a name="review-event-logs"></a>Gennemse hændelseslogfiler
+## <a name="review-event-logs"></a>Gennemse hændelseslogge
 
-1. Åbn appen Logvisning ved at vælge ikonet **Søg på** proceslinjen og søge efter *Log på*.
+1. Åbn appen Logbog ved at vælge ikonet **Søg** på proceslinjen og søge efter *Logbog*.
 
-    Oplysninger om Microsoft Defender Antivirus kan findes under Program **- og tjenestelogfiler,** \> **som Microsoft** \> **Windows** \> **Windows Defender**.
+    Du kan finde oplysninger om Microsoft Defender Antivirus under **Logfiler for** \> programmer og tjenester **Microsoft** \> **Windows** \> **Windows Defender**.
 
-1. Derfra skal du **vælge Åbn** under **Drift**.
+1. Herfra skal du vælge **Åbn** under **Drift**.
 
-    Hvis du vælger en begivenhed i detaljeruden, vises der flere oplysninger om en begivenhed i den nederste rude under **fanerne Generelt** **og** Detaljer.
+    Hvis du vælger en hændelse i detaljeruden, får du vist flere oplysninger om en hændelse i den nederste rude under fanerne **Generelt** og **Detaljer** .
 
 ## <a name="microsoft-defender-antivirus-wont-start"></a>Microsoft Defender Antivirus starter ikke
 
-Dette problem kan manifestt i form af flere forskellige hændelses-jeg-sider, som alle har samme underliggende årsag.
+Dette problem kan manifesteres i form af flere forskellige hændelses-id'er, som alle har den samme underliggende årsag.
 
-### <a name="associated-event-ids"></a>Tilknyttede hændelses-iD'er
+### <a name="associated-event-ids"></a>Tilknyttede hændelses-id'er
 
 Hændelses-id|Lognavn|Beskrivelse|Kilde
 ---|---|---|---
-15|Program|Opdateret Windows Defender status til at SECURITY_PRODUCT_STATE_OFF.|Security Center
-5007|Microsoft-Windows-Windows Defender/drift|Windows Defender Antivirus konfigurationen er ændret. Hvis dette er en uventet hændelse, skal du gennemse indstillingerne, da dette kan være resultatet af malware. <p> **Gammel værdi:** Default\IsServiceRunning = 0x0 <p> **Ny værdi:** HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1|Windows Defender
-5010|Microsoft-Windows-Windows Defender/drift|Windows Defender Antivirus scanning for spyware, og anden potentielt uønsket software deaktiveres.|Windows Defender
+15|Program|Status for Windows Defender blev opdateret til SECURITY_PRODUCT_STATE_OFF.|Security Center
+5007|Microsoft-Windows-Windows Defender/Operationelt|Windows Defender Antivirus Konfiguration er ændret. Hvis dette er en uventet hændelse, skal du gennemse indstillingerne, da dette kan være resultatet af malware. <p> **Gammel værdi:** Default\IsServiceRunning = 0x0 <p> **Ny værdi:** HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1|Windows Defender
+5010|Microsoft-Windows-Windows Defender/Operationelt|Windows Defender Antivirus scanning efter spyware og anden potentielt uønsket software er deaktiveret.|Windows Defender
 
-### <a name="how-to-tell-if-microsoft-defender-antivirus-wont-start-because-a-third-party-antivirus-is-installed"></a>Hvordan ser jeg, Microsoft Defender Antivirus et antivirusprogram ikke starter, fordi der er installeret et antivirusprogram fra en tredjepart
+### <a name="how-to-tell-if-microsoft-defender-antivirus-wont-start-because-a-third-party-antivirus-is-installed"></a>Sådan kan du se, om Microsoft Defender Antivirus ikke starter, fordi der er installeret et antivirusprogram fra en tredjepart
 
-Hvis du Windows 10 en Windows 11-enhed, og du ikke bruger Microsoft Defender til slutpunkt, og du har et antivirusprogram fra tredjepart installeret, vil Microsoft Defender Antivirus automatisk blive slået fra. Hvis du bruger Microsoft Defender til slutpunkt med et tredjeparts antivirusprogram installeret, starter Microsoft Defender Antivirus i passiv tilstand med begrænset funktionalitet.
+Hvis du ikke bruger Microsoft Defender for Endpoint på en Windows 10 eller Windows 11 enhed, og du har installeret et antivirusprogram fra tredjepart, vil Microsoft Defender Antivirus automatisk blive slået fra. Hvis du bruger Microsoft Defender for Endpoint, hvor der er installeret et antivirusprogram fra tredjepart, starter Microsoft Defender Antivirus i passiv tilstand med reduceret funktionalitet.
 
 > [!TIP]
-> Det scenarie, der netop er beskrevet, gælder kun for Windows 10 og Windows 11. Andre versioner af Windows har [forskellige svar](microsoft-defender-antivirus-compatibility.md) på Microsoft Defender Antivirus der køres sammen med tredjepartssikkerhedssoftware.
+> Det netop beskrevne scenarie gælder kun for Windows 10 og Windows 11. Andre versioner af Windows har [forskellige svar på](microsoft-defender-antivirus-compatibility.md) Microsoft Defender Antivirus, der køres sammen med tredjepartssikkerhedssoftware.
 
-#### <a name="use-services-app-to-check-if-microsoft-defender-antivirus-is-turned-off"></a>Brug services-appen til at kontrollere, Microsoft Defender Antivirus er slået fra
+#### <a name="use-services-app-to-check-if-microsoft-defender-antivirus-is-turned-off"></a>Brug tjenesteappen til at kontrollere, om Microsoft Defender Antivirus er slået fra
 
-Hvis du vil åbne appen Tjenester, skal du **vælge** ikonet Søg fra proceslinjen og søge efter *tjenester*. Du kan også åbne appen fra kommandolinjen ved at skrive *services.msc*.
+Hvis du vil åbne appen Tjenester, skal du vælge ikonet **Søg** på proceslinjen og søge efter *tjenester*. Du kan også åbne appen fra kommandolinjen ved at skrive *services.msc*.
 
-Oplysninger om Microsoft Defender Antivirus vises i Services-appen under **Windows Defender** \> **drift**. Navnet på antivirustjenesten *er Windows Defender Antivirus Tjeneste*.
+Oplysninger om Microsoft Defender Antivirus vises i appen Tjenester under **Windows Defender** \> **Drift**. Navnet på antivirustjenesten er *Windows Defender Antivirus Service*.
 
-Når du tjekker appen, kan du se, at *Windows Defender Antivirus-tjenesten* er indstillet til manuel, men når du forsøger at starte tjenesten manuelt, får du vist en advarsel, hvor der står Windows Defender Antivirus-tjenesten på lokal computer er startet og derefter stoppet *. Nogle tjenester stopper automatisk, hvis de ikke bruges af andre tjenester eller programmer.*
+Når du kontrollerer appen, kan du se, at *Windows Defender Antivirus Service* er angivet til manuel, men når du forsøger at starte denne tjeneste manuelt, får du vist en advarsel om, at *tjenesten Windows Defender Antivirus service på den lokale computer startede og derefter stoppede. Nogle tjenester stopper automatisk, hvis de ikke bruges af andre tjenester eller programmer.*
 
-Dette angiver, Microsoft Defender Antivirus automatisk er slået fra for at bevare kompatibilitet med et tredjeparts antivirusprogram.
+Dette angiver, at Microsoft Defender Antivirus er blevet automatisk deaktiveret for at bevare kompatibilitet med et antivirusprogram fra tredjepart.
 
-#### <a name="generate-a-detailed-report"></a>Generere en detaljeret rapport
+#### <a name="generate-a-detailed-report"></a>Generér en detaljeret rapport
 
-Du kan generere en detaljeret rapport om aktive gruppepolitikker ved at åbne en kommandoprompt i Kør som **administratortilstand** og derefter angive følgende kommando:
+Du kan generere en detaljeret rapport om aktive gruppepolitikker ved at åbne en kommandoprompt i **kør som administratortilstand** og derefter angive følgende kommando:
 
 ```console
 GPresult.exe /h gpresult.html
 ```
 
-Dette genererer en rapport placeret på *./gpresult.html*. Åbn denne fil, så får du muligvis vist følgende resultater, afhængigt af Microsoft Defender Antivirus blev slået fra.
+Dette genererer en rapport, der er placeret på *./gpresult.html*. Åbn denne fil, og du kan få vist følgende resultater, afhængigt af hvordan Microsoft Defender Antivirus blev slået fra.
 
 ##### <a name="group-policy-results"></a>Gruppepolitikresultater
 
-##### <a name="if-security-settings-are-implemented-via-group-policy-gpo-at-the-domain-or-local-level-or-though-system-center-configuration-manager-sccm"></a>Hvis sikkerhedsindstillinger implementeres via gruppepolitik på domænet eller lokalt niveau, eller hvis System Center Configuration Manager (SCCM)
+##### <a name="if-security-settings-are-implemented-via-group-policy-gpo-at-the-domain-or-local-level-or-though-system-center-configuration-manager-sccm"></a>Hvis sikkerhedsindstillinger implementeres via gruppepolitik (GPO) på domæne- eller lokalt niveau, eller via System Center Configuration Manager (SCCM)
 
-I GPResults-rapporten under overskriften Windows *Components/Windows Defender Antivirus* får du muligvis vist noget i retning af følgende post, der angiver, at Microsoft Defender Antivirus er slået fra.
+I GPResults-rapporten under overskriften *Windows Komponenter/Windows Defender Antivirus* kan du se noget i stil med følgende post, der angiver, at Microsoft Defender Antivirus er slået fra.
 
 Politik|Indstilling|Vindende gruppepolitikobjekt
 ---|---|---
-Slå Windows Defender Antivirus fra|Aktiveret|Win10-Workstations
+Deaktiver Windows Defender Antivirus|Aktiveret|Win10-Workstations
 
-###### <a name="if-security-settings-are-implemented-via-group-policy-preference-gpp"></a>Hvis sikkerhedsindstillinger implementeres via gruppepolitikindstillingen (GPP)
+###### <a name="if-security-settings-are-implemented-via-group-policy-preference-gpp"></a>Hvis sikkerhedsindstillinger implementeres via Gruppepolitikindstillinger
 
-Under overskriften element i *registreringsdatabasen (Nøglesti: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender, Værdinavn: DisableAntiSpyware)* kan du se noget i retning af følgende post, der angiver, at Microsoft Defender Antivirus er slået fra.
+Under overskriften *Registry item (Key path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender, Value name: DisableAntiSpyware)* kan du se noget i stil med følgende post, der angiver, at Microsoft Defender Antivirus er slået fra.
 
 DisableAntiSpyware|-
 ---|---
 Vindende gruppepolitikobjekt|Win10-Workstations
-Resultat: Succes|
+Resultat: Udført|
 **Generel**|
 Handling|Opdater
 **Egenskaber**|
 Hive|HKEY_LOCAL_MACHINE
 Nøglesti|SOFTWARE\Policies\Microsoft\Windows Defender
-Værdiens navn|DisableAntiSpyware
+Værdinavn|DisableAntiSpyware
 Værditype|REG_DWORD
 Værdidata|0x1 (1)
 
-###### <a name="if-security-settings-are-implemented-via-registry-key"></a>Hvis sikkerhedsindstillinger implementeres via registreringsdatabasenøgle
+###### <a name="if-security-settings-are-implemented-via-registry-key"></a>Hvis sikkerhedsindstillingerne implementeres via registreringsdatabasenøglen
 
 Rapporten kan indeholde følgende tekst, der angiver, at Microsoft Defender Antivirus er slået fra:
 
@@ -117,25 +120,36 @@ Rapporten kan indeholde følgende tekst, der angiver, at Microsoft Defender Anti
 >
 > HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender DisableAntiSpyware (dword) 1 (hex)
 
-###### <a name="if-security-settings-are-set-in-windows-or-your-windows-server-image"></a>Hvis sikkerhedsindstillingerne er angivet i Windows eller Windows Server
+###### <a name="if-security-settings-are-set-in-windows-or-your-windows-server-image"></a>Hvis sikkerhedsindstillingerne er angivet i Windows eller Windows Server-afbildningen
 
-Din indbildningsadministrator har muligvis angivet sikkerhedspolitiken **[DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware)** lokalt via *GPEdit.exe*, *LGPO.exe* eller ved at ændre registreringsdatabasen i deres opgavesekvens. Du kan konfigurere [et billed-id, der er tillid](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender) til, Microsoft Defender Antivirus.
+Din indbildske administrator kan have angivet sikkerhedspolitikken **[DisableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware)** lokalt via *GPEdit.exe*, *LGPO.exe* eller ved at ændre registreringsdatabasen i opgavesekvensen. Du kan [konfigurere et billed-id, der er tillid](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender) til, for Microsoft Defender Antivirus.
 
 ### <a name="turn-microsoft-defender-antivirus-back-on"></a>Slå Microsoft Defender Antivirus til igen
 
-Microsoft Defender Antivirus automatisk, hvis intet andet antivirusprogram er aktivt i øjeblikket. Du skal slå tredjeparts antivirusprogrammet helt fra for at sikre, at Microsoft Defender Antivirus kan køre med fuld funktionalitet.
+Microsoft Defender Antivirus aktiveres automatisk, hvis ingen andre antivirusprogrammer er aktive i øjeblikket. Du skal slå tredjeparts antivirus helt fra for at sikre, at Microsoft Defender Antivirus kan køre med fuld funktionalitet.
 
 > [!WARNING]
-> Løsninger, der foreslår, at  du redigerer Windows Defender-startværdierne for *wdboot*, *wdfilter*, *wdnisdrv*, *wdnissvc* og *windefend* i HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services understøttes ikke, og kan tvinge dig til at genafbilde dit system.
+> Løsninger, der foreslår, at du redigerer *startværdierne for Windows Defender* for *wdboot*, *wdfilter*, *wdnisdrv*, *wdnissvc* og *windefend* i HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services ikke understøttes, og kan tvinge dig til at genbillede dit system.
 
-Passiv tilstand er tilgængelig, hvis du begynder at bruge Microsoft Defender til slutpunkt og et antivirusprogram fra tredjepart sammen med Microsoft Defender Antivirus. Passiv tilstand gør Microsoft Defender Antivirus at scanne filer og opdatere sig selv, men det afhjælper ikke trusler. Desuden er overvågning af funktionsmåder via [Beskyttelse](configure-real-time-protection-microsoft-defender-antivirus.md) i realtid ikke tilgængelig under passiv tilstand, medmindre forebyggelse af [datatab på slutpunkter (DLP)](/microsoft-365/security/defender-endpoint/information-protection-in-windows-overview) er implementeret.
+Passiv tilstand er tilgængelig, hvis du begynder at bruge Microsoft Defender for Endpoint og et antivirusprogram fra tredjepart sammen med Microsoft Defender Antivirus. Passiv tilstand gør det muligt for Microsoft Defender Antivirus at scanne filer og opdatere sig selv, men det afhjælper ikke trusler. Desuden er overvågning af funktionsmåde via [Realtidsbeskyttelse](configure-real-time-protection-microsoft-defender-antivirus.md) ikke tilgængelig i passiv tilstand, medmindre [DLP (Endpoint Forebyggelse af datatab)](/microsoft-365/security/defender-endpoint/information-protection-in-windows-overview) er installeret.
 
-En anden funktion, der [kaldes begrænset periodisk scanner](limited-periodic-scanning-microsoft-defender-antivirus.md), er tilgængelig for slutbrugere, når Microsoft Defender Antivirus indstillet til automatisk at blive deaktiveret. Denne funktion gør Microsoft Defender Antivirus at scanne filer med jævne mellemrum sammen med et tredjeparts antivirusprogram ved hjælp af et begrænset antal registreringer.
+En anden funktion, der kaldes [begrænset periodisk scanning](limited-periodic-scanning-microsoft-defender-antivirus.md), er tilgængelig for slutbrugere, når Microsoft Defender Antivirus er indstillet til automatisk at slå fra. Denne funktion gør det muligt for Microsoft Defender Antivirus jævnligt at scanne filer sammen med et antivirusprogram fra tredjepart ved hjælp af et begrænset antal registreringer.
 
 > [!IMPORTANT]
-> Begrænset periodisk scanner anbefales ikke i virksomhedsmiljøer. Registrerings-, administrations- og rapporteringsfunktionerne, der er tilgængelige, når Microsoft Defender Antivirus i denne tilstand, reduceres i forhold til aktiv tilstand.
+> Begrænset periodisk scanning anbefales ikke i virksomhedsmiljøer. De registrerings-, administrations- og rapporteringsfunktioner, der er tilgængelige, når du kører Microsoft Defender Antivirus i denne tilstand, reduceres sammenlignet med aktiv tilstand.
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
+
 
 ### <a name="see-also"></a>Se også
 
 - [Microsoft Defender Antivirus kompatibilitet](microsoft-defender-antivirus-compatibility.md)
-- [Microsoft Defender Antivirus i Windows Sikkerhed appen](microsoft-defender-security-center-antivirus.md)
+- [Microsoft Defender Antivirus i appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md)

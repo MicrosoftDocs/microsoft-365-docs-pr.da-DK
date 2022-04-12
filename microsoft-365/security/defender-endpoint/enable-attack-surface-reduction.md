@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: dfe5567edbe86279ad5a5b0645cb3ea6c54c1174
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 03cdc163c1f560462fa12f18d4e6101665d766de
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783602"
+ms.locfileid: "64788144"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverflade
 
@@ -32,6 +32,10 @@ ms.locfileid: "64783602"
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Antivirus
+
+**Platforme**
+- Windows
 
 > [!TIP]
 > Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)

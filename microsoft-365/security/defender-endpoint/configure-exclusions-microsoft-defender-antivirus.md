@@ -1,6 +1,6 @@
 ---
-title: Konfigurere udeladelse for Microsoft Defender Antivirus scanninger
-description: Du kan udelade filer (herunder filer, der er ændret af angivne processer), og mapper kan ikke scannes af Microsoft Defender Antivirus. Valider dine undtagelser med PowerShell.
+title: Konfigurer udeladelser for Microsoft Defender Antivirus scanninger
+description: Du kan udelade filer (herunder filer, der er ændret af angivne processer) og mapper fra at blive scannet af Microsoft Defender Antivirus. Valider dine udeladelser med PowerShell.
 keywords: ''
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,48 +15,61 @@ ms.technology: mde
 ms.audience: ITPro
 ms.topic: how-to
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 6ef9cfcec1c54cf9754d7152c098d7ef5b67b456
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c9796f4e5154fd46d1479f0cbfa25f2afaf4e9bb
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599362"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787506"
 ---
-# <a name="configure-and-validate-exclusions-for-microsoft-defender-antivirus-scans"></a>Konfigurere og validere udeladelse for Microsoft Defender Antivirus scanninger
+# <a name="configure-and-validate-exclusions-for-microsoft-defender-antivirus-scans"></a>Konfigurer og valider udeladelser for Microsoft Defender Antivirus scanninger
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
+**Platforme**
+- Windows
 
-Du kan udelade visse filer, mapper, processer og procesåbnede filer fra Microsoft Defender Antivirus scanninger. Disse undtagelser gælder for [planlagte scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md), [scanninger](run-scan-microsoft-defender-antivirus.md) efter behov og altid beskyttelse og overvågning [i realtid](configure-real-time-protection-microsoft-defender-antivirus.md). Udeladelse for proces åbne filer gælder kun for beskyttelse i realtid.
+Du kan udelade visse filer, mapper, processer og procesåbnede filer fra Microsoft Defender Antivirus scanninger. Sådanne undtagelser gælder for [planlagte scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md), [efter behovsscanninger](run-scan-microsoft-defender-antivirus.md) og altid i [realtid beskyttelse og overvågning](configure-real-time-protection-microsoft-defender-antivirus.md). Undtagelser for procesåbnede filer gælder kun for beskyttelse i realtid.
 
-## <a name="configure-and-validate-exclusions"></a>Konfigurere og validere udeladelse
+## <a name="configure-and-validate-exclusions"></a>Konfigurer og valider udeladelser
 
-Hvis du vil konfigurere og validere udeladelse, skal du se følgende:
+Hvis du vil konfigurere og validere udeladelser, skal du se følgende:
 
-- [Konfigurer og valider udeladelse baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md). Du kan udelade filer fra Microsoft Defender Antivirus scanninger baseret på deres filtypenavn, filnavn eller placering.
+- [Konfigurer og valider udeladelser baseret på filnavn, filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md). Du kan udelade filer fra Microsoft Defender Antivirus scanninger baseret på filtypenavnet, filnavnet eller placeringen.
 
-- [Konfigurer og valider udeladelse af filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md). Du kan udelukke filer fra scanninger, der har været åbnet af en bestemt proces.
+- [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md). Du kan udelade filer fra scanninger, der er blevet åbnet af en bestemt proces.
 
-## <a name="recommendations-for-defining-exclusions"></a>Anbefalinger definition af udeladelse
+## <a name="recommendations-for-defining-exclusions"></a>Anbefalinger til definition af udeladelser
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus indeholder mange automatiske udeladelsesforanstaltninger, der er baseret på kendte funktionsmåder i operativsystemet og typiske administrationsfiler, f.eks. dem, der bruges i virksomhedsadministration, databaseadministration og andre virksomhedsscenarier og -situationer.
+> Microsoft Defender Antivirus omfatter mange automatiske undtagelser, der er baseret på kendte funktionsmåder i operativsystemet og typiske administrationsfiler, f.eks. dem, der bruges i virksomhedsadministration, databaseadministration og andre virksomhedsscenarier og -situationer.
 >
-> Hvis du definerer udeladelse, sænkes den beskyttelse, der tilbydes Microsoft Defender Antivirus. Du bør altid evaluere de risici, der er forbundet med implementering af udeladelse, og du bør kun udelade filer, som du er sikker på ikke er skadelige.
+> Definition af udeladelser reducerer den beskyttelse, der tilbydes af Microsoft Defender Antivirus. Du bør altid evaluere de risici, der er forbundet med implementering af undtagelser, og du bør kun ekskludere filer, som du er sikker på ikke er skadelige.
 
-Husk følgende punkter, når du definerer udeladelse:
+Vær opmærksom på følgende punkter, når du definerer udeladelser:
 
-- Udeladelse er rent teknisk et sikkerheds hul. Overvej alle dine muligheder, når du definerer udeladelse. Andre indstillinger kan være noget så enkelt som at sørge for, at den ekskluderede placering har de relevante adgangskontrollister (ACLs) eller at indstille politikker til overvågningstilstand i starten.
+- Udelukkelser er teknisk set et beskyttelsesgab. Overvej alle dine muligheder, når du definerer udeladelser. Andre indstillinger kan være lige så enkle som at sikre, at den udeladte placering har de relevante adgangskontrollister (ACL'er) eller at angive politikker til overvågningstilstand i første omgang.
 
-- Gennemse udeladelse med jævne mellemrum. Gentjek og genhåndhævning af afhjælpninger som en del af din gennemgangsproces.
+- Gennemse undtagelserne jævnligt. Kontrollér og gennemtving afhjælpninger igen som en del af korrekturprocessen.
 
-- Ideelt set bør du undgå at definere udeladelse i et forsøg på at være proaktiv. Du skal f.eks. ikke udelukke noget, blot fordi du tror, at det kan være et problem i fremtiden. Brug kun udeladelse for bestemte problemer, f.eks. vedrørende ydeevne eller programkompatibilitet, som udeladelse kan reducere.
+- Ideelt set bør du undgå at definere undtagelser i et forsøg på at være proaktive. Du skal f.eks. ikke udelade noget, bare fordi du mener, at det kan være et problem i fremtiden. Brug kun undtagelser til specifikke problemer, f.eks. problemer, der vedrører ydeevne eller programkompatibilitet, som udeladelser kan afhjælpe.
 
-- Gennemse og overhold ændringer af din liste over udeladelses medtagelser. Dit sikkerhedsteam bør bevare konteksten omkring, hvorfor en bestemt udelukkelse blev tilføjet for at undgå forvirring senere. Dit sikkerhedsteam bør kunne give specifikke svar på spørgsmål om, hvorfor udeladelse findes.
+- Gennemse og overvåg ændringer af listen over undtagelser. Dit sikkerhedsteam bør bevare konteksten omkring, hvorfor en bestemt udelukkelse blev tilføjet for at undgå forvirring senere. Dit sikkerhedsteam bør kunne give specifikke svar på spørgsmål om, hvorfor der findes undtagelser.
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="see-also"></a>Se også
 
-- [Microsoft Defender Antivirus udeladelse på Windows Server 2016](configure-server-exclusions-microsoft-defender-antivirus.md)
-- [Almindelige fejl at undgå, når du definerer udeladelse](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Microsoft Defender Antivirus udeladelser på Windows Server 2016](configure-server-exclusions-microsoft-defender-antivirus.md)
+- [Almindelige fejl, der skal undgås, når du definerer udeladelser](common-exclusion-mistakes-microsoft-defender-antivirus.md)

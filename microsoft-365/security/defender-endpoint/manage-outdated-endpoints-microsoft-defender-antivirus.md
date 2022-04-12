@@ -1,7 +1,7 @@
 ---
-title: Anvend opdateringer til Microsoft Defender AV-beskyttelse på forældede slutpunkter
-description: Definer, hvornår og hvordan opdateringer skal anvendes for slutpunkter, der ikke er opdateret i et stykke tid.
-keywords: opdateringer, beskyttelse, forældede, forældede, gamle, seneste opdateringer
+title: Anvend opdateringer til Microsoft Defender AV Protection på forældede slutpunkter
+description: Definer, hvornår og hvordan opdateringer skal anvendes for slutpunkter, der ikke er blevet opdateret i et stykke tid.
+keywords: opdateringer, beskyttelse, forældet, forældet, gammel, indhente
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -16,60 +16,64 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: a708bf6ef34767b338c40cf8004e4c497658fc36
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0f7f42662bf698f6e3a092539e58a8a9de529b24
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593823"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789464"
 ---
-# <a name="manage-microsoft-defender-antivirus-updates-and-scans-for-endpoints-that-are-out-of-date"></a>Administrere Microsoft Defender Antivirus opdateringer og scanninger for slutpunkter, der er forældede
+# <a name="manage-microsoft-defender-antivirus-updates-and-scans-for-endpoints-that-are-out-of-date"></a>Administrer Microsoft Defender Antivirus opdateringer og scanninger for slutpunkter, der er forældede
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus kan du definere, hvor lang tid et slutpunkt kan undgå en opdatering, eller hvor mange scanninger det kan overse, før det er nødvendigt at opdatere og scanne sig selv. Dette er især nyttigt i miljøer, hvor enheder ikke ofte har forbindelse til virksomhedens eller eksterne netværk eller enheder, der ikke bruges dagligt.
+**Platforme**
+- Windows
 
-En medarbejder, der bruger en bestemt pc, er f.eks. på pause i tre dage og logger ikke på sin pc i den periode.
+Microsoft Defender Antivirus giver dig mulighed for at definere, hvor længe et slutpunkt kan undgå en opdatering, eller hvor mange scanninger det kan gå glip af, før det er nødvendigt at opdatere og scanne sig selv. Dette er især nyttigt i miljøer, hvor enheder ikke ofte er forbundet til en virksomheds eller et eksternt netværk, eller enheder, der ikke bruges dagligt.
 
-Når brugeren vender tilbage til arbejde og logger på sin pc, søger Microsoft Defender Antivirus straks efter og downloader de nyeste opdateringer til beskyttelse, og kører en scanning.
+En medarbejder, der bruger en bestemt pc, er f.eks. på pause i tre dage og ikke logger på sin pc i den pågældende periode.
 
-## <a name="set-up-catch-up-protection-updates-for-endpoints-that-havent-updated-for-a-while"></a>Konfigurere opdateringer til catch-up-beskyttelse for slutpunkter, der ikke er opdateret i et stykke tid
+Når brugeren vender tilbage til arbejdet og logger på sin pc, kontrollerer og downloader Microsoft Defender Antivirus straks de seneste beskyttelsesopdateringer og kører en scanning.
 
-Hvis Microsoft Defender Antivirus har hentet beskyttelsesopdateringer i en bestemt periode, kan du konfigurere den til automatisk at kontrollere og hente den seneste opdatering ved næste logon. Dette er nyttigt, hvis du [har globalt deaktiveret downloads af automatiske opdateringer ved start](manage-event-based-updates-microsoft-defender-antivirus.md).
+## <a name="set-up-catch-up-protection-updates-for-endpoints-that-havent-updated-for-a-while"></a>Konfigurer opdateringer til registrering af beskyttelse for slutpunkter, der ikke er opdateret i et stykke tid
 
-### <a name="use-configuration-manager-to-configure-catch-up-protection-updates"></a>Brug Konfigurationsstyring til at konfigurere opdateringer til beskyttelse af oplysninger
+Hvis Microsoft Defender Antivirus ikke har downloadet beskyttelsesopdateringer for en bestemt periode, kan du konfigurere den til automatisk at kontrollere og downloade den seneste opdatering ved næste logon. Dette er nyttigt, hvis du [globalt har deaktiveret downloads af automatiske opdateringer ved start](manage-event-based-updates-microsoft-defender-antivirus.md).
 
-1. På din Microsoft Endpoint Manager-konsol skal du åbne den antimalwarepolitik, du vil ændre (klik på  Aktiver og overholdelse af regler og standarder i navigationsruden til venstre,  \> og udvid derefter træet til Oversigt **Endpoint Protection** \> **Antimalwarepolitikker**)
+### <a name="use-configuration-manager-to-configure-catch-up-protection-updates"></a>Brug Configuration Manager til at konfigurere opdateringer til opfanget beskyttelse
 
-2. Gå til sektionen **Sikkerhedsintelligensopdateringer** , og konfigurer følgende indstillinger:
+1. Åbn den antimalwarepolitik, du vil ændre, på din Microsoft Endpoint Manager konsol (klik på **Assets and Compliance** i navigationsruden til venstre, og udvid derefter træet til **Overview** \> **Endpoint Protection** \> **Antimalware Policies**)
 
-    1. Angiv **Gennemtving en sikkerhedsintelligensopdatering, hvis klientcomputeren er offline i mere end to fortløbende planlagte opdateringer** til **Ja**.
-    2. Ud for  **hvis Konfigurationsstyring** bruges som en kilde til sikkerhedsintelligensopdateringer..., skal du angive de timer, før de sikkerhedsopdateringer, der leveres af Konfigurationsstyring, skal betragtes som forældede. Dette medfører, at den næste opdateringsplacering bruges baseret på den definerede [fallback-kilderækkefølge](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order).
+2. Gå til afsnittet **Opdateringer til sikkerhedsintelligens** , og konfigurer følgende indstillinger:
+
+    1. Angiv **Gennemtving en sikkerhedsintelligensopdatering, hvis klientcomputeren er offline i mere end to efterfølgende planlagte opdateringer** , til **Ja**.
+    2. For **If Configuration Manager bruges som en kilde til sikkerhedsintelligensopdateringer...**, skal du angive, inden hvilke timer de beskyttelsesopdateringer, der leveres af Configuration Manager, skal anses for at være forældede. Dette medfører, at den næste opdateringsplacering bruges baseret på den definerede [reservekilderækkefølge](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order).
 
 3. Klik på **OK**.
 
-4. [Installér den opdaterede politik som normalt](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
+4. [Installer den opdaterede politik som normalt](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
-### <a name="use-group-policy-to-enable-and-configure-the-catch-up-update-feature"></a>Brug Gruppepolitik til at aktivere og konfigurere funktionen til opdatering af opdateringer
+### <a name="use-group-policy-to-enable-and-configure-the-catch-up-update-feature"></a>Brug Gruppepolitik til at aktivere og konfigurere funktionen til opfanging af opdateringer
 
-1. På Gruppepolitik administrationscomputer skal du åbne Gruppepolitik [Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og klikke på **Rediger**.
+1. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklik på det Gruppepolitik objekt, du vil konfigurere, og klik på **Rediger**.
 
-2. I Gruppepolitik **skal du** gå til **Computerkonfiguration**.
+2. Gå til **Computerkonfiguration** i **administrationseditoren Gruppepolitik**.
 
-3. Klik **på Politikker** og **derefter på Administrative skabeloner**.
+3. Klik på **Politikker** og derefter **Administrative skabeloner**.
 
-4. Udvid træet for **at Windows komponenter > Microsoft Defender Antivirus > signaturopdateringer**.
+4. Udvid træet for at **Windows komponenter > Microsoft Defender Antivirus > Signaturopdateringer**.
 
-5. Dobbeltklik på indstillingen **Definer det antal** dage, efter hvilken en sikkerhedsintelligensopdatering er påkrævet, og angiv indstillingen til **Aktiveret**. Angiv det antal dage, efter hvilken Microsoft Defender AV skal søge efter, og download den seneste opdatering til beskyttelse.
+5. Dobbeltklik på indstillingen **Definer det antal dage, hvorefter der kræves en opdatering til sikkerhedsintelligens** , og angiv indstillingen til **Aktiveret**. Angiv det antal dage, hvorefter Microsoft Defender AV skal søge efter og downloade den seneste beskyttelsesopdatering.
 
 6. Klik på **OK**.
 
-### <a name="use-powershell-cmdlets-to-configure-catch-up-protection-updates"></a>Brug PowerShell-cmdlet'er til at konfigurere opdateringer til catch-up-beskyttelse
+### <a name="use-powershell-cmdlets-to-configure-catch-up-protection-updates"></a>Brug PowerShell-cmdlet'er til at konfigurere opdateringer til opfangningsbeskyttelse
 
 Brug følgende cmdlet'er:
 
@@ -77,11 +81,11 @@ Brug følgende cmdlet'er:
 Set-MpPreference -SignatureUpdateCatchupInterval
 ```
 
-Se [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at konfigurere og køre Microsoft Defender Antivirus- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få mere at vide om, hvordan du bruger PowerShell Microsoft Defender Antivirus.
+Se [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
 
-### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates"></a>Brug Windows (WMI) til at konfigurere opdateringer til catch-up-beskyttelse
+### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates"></a>Brug WMI (Windows Management Instruction) til at konfigurere opdateringer til opfanget beskyttelse
 
-Brug [**metoden Angiv** for **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
+Brug [metoden **Set** for klassen **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
 
 ```WMI
 SignatureUpdateCatchupInterval
@@ -89,63 +93,63 @@ SignatureUpdateCatchupInterval
 
 Se følgende for at få flere oplysninger og tilladte parametre:
 
-- [Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="set-the-number-of-days-before-protection-is-reported-as-out-of-date"></a>Angiv antallet af dage, før beskyttelsen rapporteres som forældet
+## <a name="set-the-number-of-days-before-protection-is-reported-as-out-of-date"></a>Angiv antallet af dage, før beskyttelse rapporteres som forældet
 
-Du kan også angive antallet af dage, Microsoft Defender Antivirus beskyttelse betragtes som gammel eller forældet. Efter det angivne antal dage rapporterer klienten sig selv som forældet og viser en fejl til brugeren af pc'en. Det kan også medføre Microsoft Defender Antivirus forsøger at hente en opdatering fra andre kilder (baseret på den definerede [fallback-kilderækkefølge](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order)), f.eks. når du bruger MMPC som en sekundær kilde efter indstilling af WSUS eller Microsoft Update som den første kilde.
+Du kan også angive det antal dage, hvorefter Microsoft Defender Antivirus beskyttelse betragtes som gammel eller forældet. Efter det angivne antal dage rapporterer klienten sig selv som forældet og viser en fejl til brugeren af pc'en. Det kan også medføre, at Microsoft Defender Antivirus forsøger at downloade en opdatering fra andre kilder (baseret på den definerede [reservekilderækkefølge](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order)), f.eks. når du bruger MMPC som sekundær kilde, efter at WSUS eller Microsoft Update er angivet som den første kilde.
 
-### <a name="use-group-policy-to-specify-the-number-of-days-before-protection-is-considered-out-of-date"></a>Brug Gruppepolitik til at angive, hvor mange dage før beskyttelsen betragtes som forældet
+### <a name="use-group-policy-to-specify-the-number-of-days-before-protection-is-considered-out-of-date"></a>Brug Gruppepolitik til at angive antallet af dage, før beskyttelse anses for at være forældet
 
-1. På din Gruppepolitik administrationsmaskine skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og klikke på **Rediger**.
+1. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklik på det Gruppepolitik objekt, du vil konfigurere, og klik på **Rediger**.
 
-2. I Gruppepolitik **skal du** gå til **Computerkonfiguration**.
+2. Gå til **Computerkonfiguration** i **administrationseditoren Gruppepolitik**.
 
-3. Klik **på Politikker** og **derefter på Administrative skabeloner**.
+3. Klik på **Politikker** og derefter **Administrative skabeloner**.
 
-4. Udvid træet for **at Windows komponenter > Microsoft Defender Antivirus > signaturopdateringer**, og konfigurer følgende indstillinger:
+4. Udvid træet for at **Windows komponenter > Microsoft Defender Antivirus > Signaturopdateringer**, og konfigurer følgende indstillinger:
 
-    1. Dobbeltklik på **Definer antallet af dage, før spywaredefinitioner betragtes som forældede, og** angiv indstillingen til **Aktiveret**. Angiv det antal dage, efter du ønsker, at Microsoft Defender AV skal overveje, at spywareSikkerhedsintelligens er forældet.
+    1. Dobbeltklik på **Definer antallet af dage, før spyware-definitioner anses for at være forældede** , og angiv indstillingen til **Aktiveret**. Angiv det antal dage, hvorefter Microsoft Defender AV skal betragte spyware Security Intelligence som forældet.
 
     2. Klik på **OK**.
 
-    3. Dobbeltklik på **Definer antallet af dage, før virusdefinitioner opfattes som forældede, og** angiv indstillingen til **Aktiveret**. Angiv det antal dage, hvorefter Microsoft Defender AV skal overveje, at virussikkerhedsintelligens skal være forældede.
+    3. Dobbeltklik på **Definer antallet af dage, før virusdefinitioner anses for at være forældede** , og angiv indstillingen til **Aktiveret**. Angiv det antal dage, hvorefter Microsoft Defender AV skal betragte virussikkerhedsintelligens som forældet.
 
     4. Klik på **OK**.
 
-## <a name="set-up-catch-up-scans-for-endpoints-that-have-not-been-scanned-for-a-while"></a>Konfigurere indfangningsscanninger for slutpunkter, der ikke er scannet i et stykke tid
+## <a name="set-up-catch-up-scans-for-endpoints-that-have-not-been-scanned-for-a-while"></a>Konfigurer opsummeringsscanninger for slutpunkter, der ikke er blevet scannet i et stykke tid
 
-Du kan angive antallet af efterfølgende planlagte scanninger, der kan overse, Microsoft Defender Antivirus efterfølgende vil gennemtvinge en scanning.
+Du kan angive antallet af efterfølgende planlagte scanninger, der kan gå glip af, før Microsoft Defender Antivirus gennemtvinger en scanning.
 
-Processen for aktivering af denne funktion er:
+Processen til aktivering af denne funktion er:
 
-1. Konfigurer mindst én planlagt scanning (se emnet [Planlægge scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md) ).
-2. Aktivér funktionen til indfangning af scanning.
-3. Definer antallet af scanninger, der kan springes over, før en opscanning finder sted.
+1. Konfigurer mindst én planlagt scanning (se emnet [Planlæg scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md) ).
+2. Aktivér funktionen til opfangning af scanning.
+3. Definer det antal scanninger, der kan springes over, før der opstår en opsummeringsscanning.
 
-Denne funktion kan aktiveres for både fulde og hurtige scanninger.
+Denne funktion kan aktiveres for både komplette og hurtige scanninger.
 
-### <a name="use-group-policy-to-enable-and-configure-the-catch-up-scan-feature"></a>Brug Gruppepolitik til at aktivere og konfigurere funktionen til scanning af indfangning
+### <a name="use-group-policy-to-enable-and-configure-the-catch-up-scan-feature"></a>Brug Gruppepolitik til at aktivere og konfigurere funktionen til opfangning af scanning
 
 1. Sørg for, at du har konfigureret mindst én planlagt scanning.
 
-2. På din Gruppepolitik administrationsmaskine skal du åbne [Gruppepolitik Administrationskonsol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklikke på det Gruppepolitik objekt, du vil konfigurere, og klikke på **Rediger**.
+2. Åbn [administrationskonsollen Gruppepolitik Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), højreklik på det Gruppepolitik objekt, du vil konfigurere, og klik på **Rediger**.
 
-3. I Gruppepolitik **skal du** gå til **Computerkonfiguration**.
+3. Gå til **Computerkonfiguration** i **administrationseditoren Gruppepolitik**.
 
-4. Klik **på Politikker** og **derefter på Administrative skabeloner**.
+4. Klik på **Politikker** og derefter **Administrative skabeloner**.
 
-5. Udvid træet for **Windows komponenter > Microsoft Defender Antivirus > Scan**, og konfigurer følgende indstillinger:
+5. Udvid træet for at **Windows komponenter > Microsoft Defender Antivirus > Scan**, og konfigurer følgende indstillinger:
 
-    1. Hvis du har konfigureret planlagte hurtige scanninger, skal du dobbeltklikke  på indstillingen Slå hurtig scanning til og angive indstillingen til **Aktiveret**.
-    2. Hvis du har konfigureret planlagte fulde scanninger, skal du dobbeltklikke  på indstillingen Slå fuld scanning til og angive indstillingen til **Aktiveret**. Klik på **OK**.
-    3. Dobbeltklik på indstillingen **Definer det antal** dage, en opscanning er gennemtvunget, og angiv indstillingen til **Aktiveret**.
-    4. Angiv antallet af scanninger, der kan gå glip af, før en scanning køres automatisk, når brugeren næste gang logger på pc'en. Typen af scanning, der køres, bestemmes af Angiv den scanningstype, der skal bruges til en planlagt **scanning (se** emnet [Tidsplan for scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md) ). Klik på **OK**.
+    1. Hvis du har konfigureret planlagte hurtigscanninger, skal du dobbeltklikke på indstillingen **Slå hurtigsøgning** til og angive indstillingen til **Aktiveret**.
+    2. Hvis du har konfigureret planlagte komplette scanninger, skal du dobbeltklikke på indstillingen **Aktivér indfangning af fuld scanning** og angive indstillingen til **Aktiveret**. Klik på **OK**.
+    3. Dobbeltklik på indstillingen **Definer det antal dage, hvorefter en indfangningsscanning gennemtvinges** , og angiv indstillingen til **Aktiveret**.
+    4. Angiv det antal scanninger, der kan gås glip af, før en scanning køres automatisk, når brugeren næste logger på pc'en. Den type scanning, der køres, bestemmes af emnet **Angiv den scanningstype, der skal bruges til en planlagt scanning** (se emnet [Planlæg scanninger](scheduled-catch-up-scans-microsoft-defender-antivirus.md) ). Klik på **OK**.
 
 > [!NOTE]
-> Titlen Gruppepolitik indstilling henviser til antallet af dage. Indstillingen anvendes dog på antallet af scanninger (ikke dage), før indfangningsscanningen skal køres.
+> Den Gruppepolitik indstillingstitel refererer til antallet af dage. Indstillingen anvendes dog på antallet af scanninger (ikke dage), før indfangningsscanningen køres.
 
-### <a name="use-powershell-cmdlets-to-configure-catch-up-scans"></a>Brug PowerShell-cmdlet'er til at konfigurere indfangningsscanninger
+### <a name="use-powershell-cmdlets-to-configure-catch-up-scans"></a>Brug PowerShell-cmdlet'er til at konfigurere opfangningsscanninger
 
 Brug følgende cmdlet'er:
 
@@ -155,11 +159,11 @@ Set-MpPreference -DisableCatchupQuickScan
 
 ```
 
-Se [Brug PowerShell-cmdlet'er](use-powershell-cmdlets-microsoft-defender-antivirus.md) til at administrere Microsoft Defender Antivirus[- og Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få mere at vide om, hvordan du bruger PowerShell Microsoft Defender Antivirus.
+Se [Brug PowerShell-cmdlet'er til at administrere Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)- og [Defender Antivirus-cmdlet'er](/powershell/module/defender/) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
 
-### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-scans"></a>Brug Windows administrationsvejledning (WMI) til konfiguration af opsnævningsscanninger
+### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-scans"></a>Brug WMI (Windows Management Instruction) til at konfigurere opfangningsscanninger
 
-Brug [**metoden Angiv** for **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
+Brug [metoden **Set** for klassen **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) til følgende egenskaber:
 
 ```WMI
 DisableCatchupFullScan
@@ -168,23 +172,33 @@ DisableCatchupQuickScan
 
 Se følgende for at få flere oplysninger og tilladte parametre:
 
-- [Windows Defender WMIv2-API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [Windows Defender WMIv2 API'er](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-### <a name="use-configuration-manager-to-configure-catch-up-scans"></a>Brug Konfigurationsstyring til at konfigurere indfangningsscanninger
+### <a name="use-configuration-manager-to-configure-catch-up-scans"></a>Brug Configuration Manager til at konfigurere opfangningsscanninger
 
-1. På din Microsoft Endpoint Manager-konsol skal du åbne den antimalwarepolitik, du vil ændre (klik på  Aktiver og overholdelse af regler og standarder i navigationsruden til venstre,  \> og udvid derefter træet til Oversigt **Endpoint Protection** \> **Antimalwarepolitikker**)
+1. Åbn den antimalwarepolitik, du vil ændre, på din Microsoft Endpoint Manager konsol (klik på **Assets and Compliance** i navigationsruden til venstre, og udvid derefter træet til **Overview** \> **Endpoint Protection** \> **Antimalware Policies**)
 
-2. Gå til sektionen **Planlagte scanninger** , og **gennemtving en scanning af den valgte scanningstype, hvis klientcomputeren er offline...** til **Ja**.
+2. Gå til afsnittet **Planlagte scanninger** og **Gennemtving en scanning af den valgte scanningstype, hvis klientcomputeren er offline...** til **Ja**.
 
 3. Klik på **OK**.
 
-4. [Installér den opdaterede politik som normalt](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
+4. [Installer den opdaterede politik som normalt](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Installér Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
-- [Administrere Microsoft Defender Antivirus opdateringer og anvende oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md)
-- [Administrer, hvornår sikkerhedsopdateringer skal downloades og anvendes](manage-protection-update-schedule-microsoft-defender-antivirus.md)
+- [Installer Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md)
+- [Administrer, hvornår beskyttelsesopdateringer skal downloades og anvendes](manage-protection-update-schedule-microsoft-defender-antivirus.md)
 - [Administrer begivenhedsbaserede gennemtvungne opdateringer](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Administrer opdateringer til mobilenheder og virtuelle maskiner (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-in-windows-10.md)

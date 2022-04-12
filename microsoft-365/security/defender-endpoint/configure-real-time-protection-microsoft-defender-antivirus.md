@@ -1,7 +1,7 @@
 ---
-title: Aktivere og Microsoft Defender Antivirus egenskaber for beskyttelse
-description: Aktivér og konfigurer Microsoft Defender Antivirus funktioner til beskyttelse i realtid, f.eks. overvågning af funktionsmåder, heuristics og maskinlæring
-keywords: antivirus, beskyttelse i realtid, rtp, maskinlæring, overvågning af adfærd, heuristics
+title: Aktivér og konfigurer funktioner til Microsoft Defender Antivirus beskyttelse
+description: Aktivér og konfigurer Microsoft Defender Antivirus beskyttelsesfunktioner i realtid, f.eks. overvågning af funktionsmåde, heuristik og maskinel indlæring
+keywords: antivirus, beskyttelse i realtid, rtp, maskinel indlæring, adfærdsovervågning, heuristik
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -15,52 +15,55 @@ ms.date: 10/22/2021
 manager: dansimp
 ms.custom: nextgen
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 245aad5498793d951de68e5bf4c3e91510c7d774
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 744aaa887bfbfafd29b9e3bedb8dc49791b43137
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63606493"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790168"
 ---
-# <a name="enable-and-configure-microsoft-defender-antivirus-always-on-protection-in-group-policy"></a>Aktivér og konfigurer Microsoft Defender Antivirus altid-on-beskyttelse i Gruppepolitik
-
+# <a name="enable-and-configure-microsoft-defender-antivirus-always-on-protection-in-group-policy"></a>Aktivér og konfigurer Microsoft Defender Antivirus altid-aktive beskyttelse i Gruppepolitik
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-Altid on-beskyttelse består af beskyttelse i realtid, overvågning af funktionsmåder og heuristics til at identificere malware baseret på kendte mistænkelige og skadelige aktiviteter.
+**Platforme**
+- Windows
 
-Disse aktiviteter omfatter hændelser, f.eks. processer, der foretager usædvanlige ændringer af eksisterende filer, ændring eller oprettelse af automatiske registreringsdatabasenøgler og startplaceringer (også kaldet automatisk startende udvidelsespunkter eller ASEP'er) og andre ændringer af filsystemet eller filstrukturen.
+Always-on protection består af beskyttelse i realtid, overvågning af adfærd og heuristik til at identificere malware baseret på kendte mistænkelige og ondsindede aktiviteter.
 
-## <a name="enable-and-configure-always-on-protection-in-group-policy"></a>Aktivér og konfigurer altid-on-beskyttelse i Gruppepolitik
+Disse aktiviteter omfatter hændelser, f.eks. processer, der foretager usædvanlige ændringer af eksisterende filer, ændring eller oprettelse af automatiske startregistreringsdatabasenøgler og startplaceringer (også kendt som udvidelsespunkter for automatisk start eller ASEP'er) og andre ændringer af filsystemet eller filstrukturen.
 
-Du kan bruge **Local Gruppepolitik Editor** til at aktivere Microsoft Defender Antivirus indstillingerne for altid on-on-beskyttelse.
+## <a name="enable-and-configure-always-on-protection-in-group-policy"></a>Aktivér og konfigurer altid aktiveret beskyttelse i Gruppepolitik
 
-Sådan aktiveres og konfigureres altid-on-beskyttelse:
+Du kan bruge **Lokal Gruppepolitik Editor** til at aktivere og konfigurere Microsoft Defender Antivirus beskyttelsesindstillinger, der altid er aktiveret.
 
-1. Åbn **Editor Gruppepolitik lokal tekst** som følger:
+Sådan aktiveres og konfigureres always-on-beskyttelse:
 
-    1. Skriv gpedit Windows 10 Windows søgefeltet på 11 **proceslinje i søgefeltet**.
+1. Åbn **Editor til lokale Gruppepolitik** på følgende måde:
 
-    2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte lokal Gruppepolitik Editor**.
+    1. Skriv **gpedit** i søgefeltet Windows 10 eller Windows 11 proceslinjen.
+
+    2. Under **Bedste match** skal du vælge **Rediger gruppepolitik** for at starte **Lokal Gruppepolitik Editor**.
     
-       ![SØGEresultat for GPEdit på proceslinjen.](images/gpedit-search.png)
+       :::image type="content" source="images/gpedit-search.png" alt-text="Søgeresultatet på proceslinjen GPEdit i Kontrolpanel" lightbox="images/gpedit-search.png":::
 
-2. I venstre rude i **Editor til Gruppepolitik lokal konfiguration** skal du udvide træet til Administrative skabeloner **for computerkonfiguration** \> \> **Windows Komponenter** \> **Microsoft Defender Antivirus**.
+2. I venstre rude i **Editor til lokal Gruppepolitik** skal du udvide træet til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows Komponenter** \> **Microsoft Defender Antivirus**.
 
-3. Konfigurer Microsoft Defender Antivirus for antimalwaretjeneste.
+3. Konfigurer politikindstillingen Microsoft Defender Antivirus antimalwaretjeneste.
 
-   I **detaljeruden Microsoft Defender Antivirus** til højre skal du dobbeltklikke på Tillad **antimalwaretjeneste** at starte med normal prioritet, og indstil den til **Aktiveret**.
+   Dobbeltklik på **Tillad, at antimalwaretjenesten starter med normal prioritet** i ruden **med Microsoft Defender Antivirus** detaljer til højre, og angiv den til **Aktiveret**.
 
    Vælg derefter **OK**.
 
-4. Konfigurer Microsoft Defender Antivirus indstillinger for beskyttelsespolitik i realtid på følgende måde:
+4. Konfigurer indstillingerne for Microsoft Defender Antivirus beskyttelsespolitik i realtid på følgende måde:
 
-    1. I **ruden Microsoft Defender Antivirus** detaljer skal du **dobbeltklikke på Beskyttelse i realtid**. Du kan også vælge **Microsoft Defender Antivirus** realtidsbeskyttelse i venstre **rude**.
+    1. Dobbeltklik på **Beskyttelse i realtid** i ruden **med Microsoft Defender Antivirus** detaljer. Du kan også vælge **Beskyttelse i realtid** i **træet Microsoft Defender Antivirus** til venstre.
 
-    2. I **detaljeruden Beskyttelse i** realtid til højre skal du dobbeltklikke på politikindstillingen som angivet i Indstillinger for beskyttelsespolitik i [realtid (senere](#real-time-protection-policy-settings) i denne artikel).
+    2. Dobbeltklik på politikindstillingen i ruden **Beskyttelse** i realtid til højre som angivet i [Indstillinger for beskyttelsespolitik i realtid](#real-time-protection-policy-settings) (senere i denne artikel).
 
     3. Konfigurer indstillingen efter behov, og vælg **OK**.
 
@@ -68,54 +71,64 @@ Sådan aktiveres og konfigureres altid-on-beskyttelse:
 
 5. Konfigurer politikindstillingen Microsoft Defender Antivirus scanning på følgende måde:
 
-    1. Vælg **scan Microsoft Defender Antivirus** i venstre rude i **opgavetræet**.
+    1. Vælg **Scan** **i Microsoft Defender Antivirus** træ til venstre.
     
-   2. I **detaljeruden** Scanning til højre skal du dobbeltklikke på **Aktivér heuristics** og indstille den til **Aktiveret**. 
+   2. Dobbeltklik på **Slå heuristik** til i ruden **Scan** details til højre, og angiv den til **Enabled**. 
 
    3. Vælg **OK**.
 
-6. Luk **Lokal Gruppepolitik Editor**.
+6. Luk **Editor til lokal Gruppepolitik**.
 
 ### <a name="real-time-protection-policy-settings"></a>Indstillinger for beskyttelsespolitik i realtid
 
-|Indstilling|Standardindstilling|
+|Indstilling|Standardindstillingen|
 |---|---|
-|Aktiver overvågning af funktionsmåder <p> Antivirusprogrammet overvåger filprocesser, ændringer i filer og registreringsdatabasen og andre hændelser på dine slutpunkter for mistænkelig og kendt ondsindet aktivitet.|Aktiveret|
-|Scan alle downloadede filer og vedhæftede filer <p> Downloadede filer og vedhæftede filer scannes automatisk. Denne scanning fungerer ud over det Windows Defender SmartScreen-filter, som scanner filer før og under overførslen.|Aktiveret|
-|Overvåg fil- og programaktivitet på din computer <p> Programprogrammet Microsoft Defender Antivirus notere eventuelle filændringer (filskrivninger, f.eks. flytninger, kopier eller ændringer) og generel programaktivitet (programmer, der åbnes eller kører, og som medfører, at andre programmer kører).|Aktiveret|
-|Slå rå meddelelser om lydstyrke til <p> Oplysninger om rå volumenskrivninger analyseres ved hjælp af overvågning af funktionsmåder.|Aktiveret|
-|Slå processcanning til, når beskyttelse i realtid er aktiveret <p> Du kan uafhængigt aktivere Microsoft Defender Antivirus til at scanne kører processer for mistænkelige ændringer eller funktionsmåder. Dette er nyttigt, hvis du midlertidigt har deaktiveret beskyttelse i realtid og automatisk vil scanne processer, der startede, da den var deaktiveret.|Aktiveret|
-|Definer den maksimale størrelse på downloadede filer og vedhæftede filer, der skal scannes <p> Du kan definere størrelsen i kilobyte.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for at aktivere overvågning af funktionsmåder <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af funktionsmåder. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for scanning af alle downloadede filer og vedhæftede filer <p> Konfigurer en lokal tilsidesættelse for konfiguration af scanning for alle downloadede filer og vedhæftede filer. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af fil- og programaktivitet på computeren <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning for fil- og programaktivitet på computeren. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurer tilsidesættelse af lokale indstillinger for at aktivere beskyttelse i realtid <p> Konfigurer en lokal tilsidesættelse for konfigurationen for at aktivere beskyttelse i realtid. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere tilsidesættelse af lokale indstillinger for overvågning af indgående og udgående filaktivitet <p> Konfigurer en lokal tilsidesættelse for konfigurationen af overvågning af indgående og udgående filaktivitet. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres den lokale indstilling frem for Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, Gruppepolitik prioriteten over indstillingen for den lokale indstilling.|Aktiveret|
-|Konfigurere overvågning af indgående og udgående fil- og programaktivitet <p> Angiv, om overvågning skal udføres på indgående, udgående, begge eller ingen retning. Denne handling er relevant for Windows Server-installationer, hvor du har defineret bestemte servere eller serverroller, der kun ser store mængder filændringer i én retning, og du vil forbedre netværkets ydeevne. Fuldt opdaterede slutpunkter (og servere) på et netværk vil kun få mindre indflydelse på ydeevnen uanset antallet eller retningen af filændringer.|Aktiveret (begge retninger)|
+|Slå overvågning af funktionsmåde til <p> Antivirusprogrammet overvåger filprocesser, ændringer i filer og registreringsdatabasen og andre hændelser på dine slutpunkter for mistænkelig og kendt skadelig aktivitet.|Aktiveret|
+|Scan alle downloadede filer og vedhæftede filer <p> Downloadede filer og vedhæftede filer scannes automatisk. Denne scanning fungerer ud over det Windows Defender SmartScreen-filter, der scanner filer før og under download.|Aktiveret|
+|Overvåg fil- og programaktivitet på computeren <p> Det Microsoft Defender Antivirus program noterer sig eventuelle filændringer (filskrivninger, f.eks. flytninger, kopier eller ændringer) og generel programaktivitet (programmer, der åbnes eller kører, og som medfører, at andre programmer kører).|Aktiveret|
+|Slå rå meddelelser om skrivning af diskenhed til <p> Oplysninger om rå diskenhedsskrivninger analyseres af overvågning af funktionsmåde.|Aktiveret|
+|Slå processcanning til, når beskyttelse i realtid er aktiveret <p> Du kan uafhængigt aktivere Microsoft Defender Antivirus-programmet for at scanne kørende processer for mistænkelige ændringer eller funktionsmåder. Dette er nyttigt, hvis du har deaktiveret beskyttelse i realtid midlertidigt og vil scanne processer, der startede, mens de blev deaktiveret, automatisk.|Aktiveret|
+|Definer den maksimale størrelse af downloadede filer og vedhæftede filer, der skal scannes <p> Du kan definere størrelsen i kilobyte.|Aktiveret|
+|Konfigurer tilsidesættelse af lokal indstilling for aktivering af overvågning af funktionsmåde <p> Konfigurer en lokal tilsidesættelse af konfigurationen af overvågning af funktionsmåde. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres indstillingen for lokale indstillinger over Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, har Gruppepolitik højere prioritet end indstillingen for lokale indstillinger.|Aktiveret|
+|Konfigurer tilsidesættelse af lokale indstillinger for scanning af alle downloadede filer og vedhæftede filer <p> Konfigurer en lokal tilsidesættelse af konfigurationen af scanning for alle downloadede filer og vedhæftede filer. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres indstillingen for lokale indstillinger over Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, har Gruppepolitik højere prioritet end indstillingen for lokale indstillinger.|Aktiveret|
+|Konfigurer tilsidesættelse af lokal indstilling for overvågning af fil- og programaktivitet på computeren <p> Konfigurer en lokal tilsidesættelse af konfigurationen af overvågning for fil- og programaktivitet på computeren. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres indstillingen for lokale indstillinger over Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, har Gruppepolitik højere prioritet end indstillingen for lokale indstillinger.|Aktiveret|
+|Konfigurer tilsidesættelse af lokal indstilling for at aktivere beskyttelse i realtid <p> Konfigurer en lokal tilsidesættelse af konfigurationen for at aktivere beskyttelse i realtid. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres indstillingen for lokale indstillinger over Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, har Gruppepolitik højere prioritet end indstillingen for lokale indstillinger.|Aktiveret|
+|Konfigurer tilsidesættelse af lokal indstilling for overvågning for indgående og udgående filaktivitet <p> Konfigurer en lokal tilsidesættelse af konfigurationen af overvågning for indgående og udgående filaktivitet. Denne indstilling kan kun angives af Gruppepolitik. Hvis du aktiverer denne indstilling, prioriteres indstillingen for lokale indstillinger over Gruppepolitik. Hvis du deaktiverer eller ikke konfigurerer denne indstilling, har Gruppepolitik højere prioritet end indstillingen for lokale indstillinger.|Aktiveret|
+|Konfigurer overvågning for indgående og udgående fil- og programaktivitet <p> Angiv, om overvågning skal finde sted på indgående, udgående, begge eller ingen af retninger. Denne handling er relevant for Windows Server-installationer, hvor du har defineret bestemte servere eller serverroller, der kun ser store mængder filændringer i én retning, og du vil forbedre netværkets ydeevne. Fuldt opdaterede slutpunkter (og servere) på et netværk vil kun få ringe indvirkning på ydeevnen, uanset antallet eller retningen af filændringer.|Aktiveret (begge retninger)|
 
 ## <a name="disable-real-time-protection-in-group-policy"></a>Deaktiver beskyttelse i realtid i Gruppepolitik
 
 > [!WARNING]
-> Deaktivering af beskyttelse i realtid reducerer beskyttelsen på dine slutpunkter markant og anbefales ikke.
+> Hvis du deaktiverer beskyttelse i realtid, reduceres beskyttelsen på dine slutpunkter drastisk, og det anbefales ikke.
 
-Den primære funktion til beskyttelse i realtid er aktiveret som standard, men du kan deaktivere den ved hjælp af **lokal Gruppepolitik Editor**.
+Den primære funktion til beskyttelse i realtid er aktiveret som standard, men du kan deaktivere den ved hjælp af **Lokal Gruppepolitik Editor**.
 
 ### <a name="to-disable-real-time-protection-in-group-policy"></a>Sådan deaktiverer du beskyttelse i realtid i gruppepolitik
 
-1. Åbn **Lokal Gruppepolitik Editor**.
+1. Åbn **Editor til lokal Gruppepolitik**.
 
-   1. Skriv gpedit Windows 10 Windows søgefeltet på 11 **proceslinje i søgefeltet**.
-   2. Under **Bedste match skal** du vælge **Rediger gruppepolitik for** at **starte lokal Gruppepolitik Editor**.
+   1. Skriv **gpedit** i søgefeltet Windows 10 eller Windows 11 proceslinjen.
+   2. Under **Bedste match** skal du vælge **Rediger gruppepolitik** for at starte **Lokal Gruppepolitik Editor**.
 
-2. I venstre  rude i **Local Gruppepolitik Editor** skal du udvide træet til Administrative skabeloner til **computerkonfiguration** \> \> **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Beskyttelse i realtid**.
+2. I venstre rude i **Lokal Gruppepolitik Editor** skal du udvide træet til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows Komponenter** \> **Microsoft Defender Antivirus** \> **Beskyttelse i realtid**.
 
-3. I **detaljeruden Beskyttelse i realtid** til højre skal du dobbeltklikke på **Slå beskyttelse i realtid fra**.
+3. Dobbeltklik på **Slå beskyttelse i realtid fra** i ruden Med oplysninger om **beskyttelse** i realtid til højre.
 
-4. I vinduet **Deaktiver beskyttelse i realtid skal** du angive indstillingen til **Aktiveret**.
+4. I vinduet **Slå beskyttelse i realtid** fra skal du angive indstillingen til **Aktiveret**.
    
-5. skal **du vælge OK**.
+5. vælg **OK**.
 
-6. Luk **Lokal Gruppepolitik Editor**.
+6. Luk **Editor til lokal Gruppepolitik**.
+
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 ## <a name="see-also"></a>Se også
 

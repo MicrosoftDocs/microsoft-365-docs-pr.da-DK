@@ -1,6 +1,6 @@
 ---
-title: Konfigurere Microsoft Defender Antivirus meddelelser
-description: Få mere at vide om, hvordan du konfigurerer og tilpasser både standardmeddelelser Microsoft Defender Antivirus andre meddelelser på slutpunkter.
+title: Konfigurer meddelelser om Microsoft Defender Antivirus
+description: Få mere at vide om, hvordan du konfigurerer og tilpasser både standard- og andre Microsoft Defender Antivirus-meddelelser på slutpunkter.
 keywords: meddelelser, defender, antivirus, slutpunkt, administration, administrator
 ms.prod: m365-security
 ms.technology: mde
@@ -16,100 +16,113 @@ ms.date: 10/18/2021
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 287e49a92032e725153065ef3d996e2b5c14baf9
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: e38a8e9de3bef132dfdf3d2a088190a5038a2941
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63606507"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790190"
 ---
-# <a name="configure-microsoft-defender-antivirus-notifications-that-appear-on-endpoints"></a>Konfigurere Microsoft Defender Antivirus meddelelser, der vises på slutpunkter
+# <a name="configure-microsoft-defender-antivirus-notifications-that-appear-on-endpoints"></a>Konfigurer Microsoft Defender Antivirus meddelelser, der vises på slutpunkter
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Antivirus
 
-I Windows 10 og Windows 11 er programmeddelelser om registrering og afhjælpning af malware mere robuste, ensartede og kortfattede. Microsoft Defender Antivirus meddelelser på slutpunkter, når scanningerne er fuldført, og trusler registreres. Meddelelser følger både planlagte og manuelt udløste scanninger. Disse meddelelser vises også i **Meddelelsescenter**, og en oversigt over scanninger og trusselsregistreringer vises med jævne mellemrum.
+**Platforme**
+- Windows
 
-Hvis du er en del af organisationens sikkerhedsteam, kan du konfigurere, hvordan meddelelser vises på slutpunkter, f.eks. meddelelser, der beder om en genstart af systemet, eller som indikerer, at en trussel er blevet registreret og afhjulpet.
+I Windows 10 og Windows 11 er programmeddelelser om registrering og afhjælpning af malware mere robuste, konsistente og præcise. Microsoft Defender Antivirus meddelelser vises på slutpunkter, når scanningerne er fuldført, og der registreres trusler. Meddelelser følger både planlagte og manuelt udløste scanninger. Disse meddelelser vises også i **Meddelelsescenter**, og der vises en oversigt over scanninger og trusselsregistreringer med jævne tidsintervaller.
 
-## <a name="configure-antivirus-notifications-using-group-policy-or-the-windows-security-app"></a>Konfigurere antivirusmeddelelser ved Gruppepolitik appen Windows Sikkerhed computeren
+Hvis du er en del af organisationens sikkerhedsteam, kan du konfigurere, hvordan meddelelser vises på slutpunkter, f.eks. meddelelser, der beder om en genstart af systemet, eller som angiver, at der er registreret og afhjælpet en trussel.
 
-Du kan konfigurere visningen af yderligere meddelelser, f.eks. de seneste oversigter over trusselsregistrering, [i appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md) og med Gruppepolitik.
+## <a name="configure-antivirus-notifications-using-group-policy-or-the-windows-security-app"></a>Konfigurer antivirusmeddelelser ved hjælp af Gruppepolitik eller Windows Sikkerhed-appen
+
+Du kan konfigurere visningen af yderligere meddelelser, f.eks. de seneste oversigter over trusselsregistrering, i [appen Windows Sikkerhed](microsoft-defender-security-center-antivirus.md) og med Gruppepolitik.
 
 > [!NOTE]
-> I Windows 10 version 1607 kaldes funktionen **Udvidede** meddelelser og blev konfigureret under **Windows Indstillinger** \> **Opdatering & sikkerhedsindstillinger** \> **Windows Defender**. I Gruppepolitik for alle versioner af Windows 10 og Windows 11, kaldes meddelelsesfunktionen **Forbedrede meddelelser**.
+> I Windows 10 version 1607 blev funktionen kaldt **Udvidede meddelelser** og blev konfigureret under **Windows Indstillinger** \> **opdatering & sikkerheds Windows Defender**\>. I Gruppepolitik indstillinger for alle versioner af Windows 10 og Windows 11 kaldes meddelelsesfunktionen **Udvidede meddelelser**.
 
 ### <a name="use-group-policy-to-disable-additional-notifications"></a>Brug Gruppepolitik til at deaktivere yderligere meddelelser
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik administrationskonsollen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. Åbn [administrationskonsollen for Gruppepolitik på administrationscomputeren til Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
 2. Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
 
-3. I Gruppepolitik **skal du** gå til **Computerkonfiguration**.
+3. Gå til **Computerkonfiguration** i **administrationseditoren Gruppepolitik**.
 
 4. Vælg **Administrative skabeloner**.
 
-5. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus** >  **Rapportering**.
+5. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** >  **Rapportering**.
 
-6. Dobbeltklik på **Deaktiver udvidede meddelelser**, og angiv indstillingen til **Aktiveret**. Vælg derefter **OK**. Dette forhindrer, at der vises yderligere meddelelser.
+6. Dobbeltklik på **Slå udvidede meddelelser fra**, og angiv indstillingen til **Aktiveret**. Vælg derefter **OK**. Dette forhindrer, at yderligere meddelelser vises.
 
 > [!IMPORTANT]
-> Deaktivering af yderligere meddelelser deaktiverer ikke vigtige meddelelser, f.eks. trusselsregistrering og afhjælpningsadvarsler.
+> Deaktivering af yderligere meddelelser deaktiverer ikke kritiske meddelelser, f.eks. trusselsregistrering og afhjælpningsbeskeder.
 
 ### <a name="use-the-windows-security-app-to-disable-additional-notifications"></a>Brug appen Windows Sikkerhed til at deaktivere yderligere meddelelser
 
-1. Åbn appen Windows Sikkerhed ved at klikke på skjoldet på proceslinjen eller søge i menuen Start for **Sikkerhed**.
+1. Åbn appen Windows Sikkerhed ved at klikke på skjoldikonet på proceslinjen eller ved at søge i menuen Start for **Sikkerhed**.
 
-2. Vælg **flisen & virusbeskyttelse** (eller skjoldikonet på den venstre menulinje), og vælg derefter **indstillinger for & af trusselsbeskyttelse**
+2. Vælg Feltet **Virus & threat protection** (eller skjoldikonet på menulinjen til venstre), og vælg derefter **Indstillinger for virus & trusselsbeskyttelse**
 
-3. Rul til sektionen **Meddelelser** , og vælg **Skift indstillinger for meddelelser**.
+3. Rul til sektionen **Meddelelser,** og vælg **Skift meddelelsesindstillinger**.
 
-4. Skub knappen til Fra **eller Til** **for at** deaktivere eller aktivere yderligere meddelelser.
+4. Skub kontakten til **Fra** eller **Til** for at deaktivere eller aktivere yderligere meddelelser.
 
 > [!IMPORTANT]
-> Deaktivering af yderligere meddelelser deaktiverer ikke vigtige meddelelser, f.eks. trusselsregistrering og afhjælpningsadvarsler.
+> Deaktivering af yderligere meddelelser deaktiverer ikke kritiske meddelelser, f.eks. trusselsregistrering og afhjælpningsbeskeder.
 
 ## <a name="configure-standard-notifications-on-endpoints-using-group-policy"></a>Konfigurer standardmeddelelser på slutpunkter ved hjælp af Gruppepolitik
 
 Du kan bruge Gruppepolitik til at:
 
-- Vis yderligere, brugerdefineret tekst på slutpunkter, når brugeren skal udføre en handling
+- Vis yderligere brugerdefineret tekst på slutpunkter, når brugeren skal udføre en handling
 - Skjul alle meddelelser på slutpunkter
 - Skjul genstartsmeddelelser på slutpunkter
 
-Det kan være nyttigt at skjule meddelelser i situationer, hvor du ikke kan skjule hele Microsoft Defender Antivirus brugergrænsefladen. Se [Forebyd, at brugere kan se eller arbejde Microsoft Defender Antivirus brugergrænsefladen](prevent-end-user-interaction-microsoft-defender-antivirus.md), hvis du vil have mere at vide. Når du skjuler meddelelser, sker det kun på slutpunkter, som politikken er installeret på. Meddelelser, der er relateret til handlinger, der skal foretages (f.eks. en genstart), vises [stadig på Microsoft Endpoint Manager Endpoint Protection dashboard og rapporter for overvågning](/configmgr/protect/deploy-use/monitor-endpoint-protection). 
+Det kan være nyttigt at skjule meddelelser i situationer, hvor du ikke kan skjule hele grænsefladen Microsoft Defender Antivirus. Se [Undgå, at brugerne får vist eller interagerer med den Microsoft Defender Antivirus brugergrænseflade](prevent-end-user-interaction-microsoft-defender-antivirus.md) for at få flere oplysninger. Skjulning af meddelelser sker kun på slutpunkter, som politikken er blevet installeret på. Meddelelser, der er relateret til handlinger, der skal udføres (f.eks. en genstart), vises stadig på [Microsoft Endpoint Manager Endpoint Protection overvågningsdashboard og -rapporter](/configmgr/protect/deploy-use/monitor-endpoint-protection). 
 
-Hvis du vil føje brugerdefinerede kontaktoplysninger til slutpunktsmeddelelser, skal [du se Windows Sikkerhed appen til organisationen](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
+Hvis du vil føje brugerdefinerede kontaktoplysninger til meddelelser om slutpunkter, skal du se [Tilpas appen Windows Sikkerhed for din organisation](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
 
 ### <a name="use-group-policy-to-hide-notifications"></a>Brug Gruppepolitik til at skjule meddelelser
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik administrationskonsollen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. Åbn [administrationskonsollen for Gruppepolitik på administrationscomputeren til Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
 2. Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
 
-3. På fanen **Gruppepolitik skal du** gå til **Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
+3. I **Gruppepolitik Administrationseditor** skal du gå til **Computerkonfiguration** og derefter vælge **Administrative skabeloner**.
 
-4. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus klientgrænseflade**\>. 
+4. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **klientgrænsefladen**. 
 
-5. Dobbeltklik på Suppress **all notifications and** set the option to **Enabled**. 
+5. Dobbeltklik på **Skjul alle meddelelser** , og angiv indstillingen til **Aktiveret**. 
 
-6. Vælg **OK**. Dette forhindrer, at der vises yderligere meddelelser.
+6. Vælg **OK**. Dette forhindrer, at yderligere meddelelser vises.
 
-### <a name="use-group-policy-to-hide-reboot-notifications"></a>Brug Gruppepolitik til at skjule genstartsmeddelelser
+### <a name="use-group-policy-to-hide-reboot-notifications"></a>Brug Gruppepolitik til at skjule meddelelser om genstart
 
-1. På Gruppepolitik administrationscomputer skal du åbne [Gruppepolitik administrationskonsollen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. Åbn [administrationskonsollen for Gruppepolitik på administrationscomputeren til Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
 2. Højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg derefter **Rediger**.
 
-2. I Gruppepolitik **skal du** gå til **Computerkonfiguration**.
+2. Gå til **Computerkonfiguration** i **administrationseditoren Gruppepolitik**.
 
-3. Klik **på Administrative skabeloner**.
+3. Klik på **Administrative skabeloner**.
 
-4. Udvid træet for **at Windows komponenter** \> **Microsoft Defender Antivirus klientgrænseflade**\>.
+4. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **klientgrænsefladen**.
 
-5. Dobbeltklik på **Undertrykker genstartsmeddelelser,** og angiv indstillingen til **Aktiveret**. 
+5. Dobbeltklik på **Undertrykker meddelelser om genstart** og angiver indstillingen til **Aktiveret**. 
 
-5. Vælg **OK**. Dette forhindrer, at der vises yderligere meddelelser.
+5. Vælg **OK**. Dette forhindrer, at yderligere meddelelser vises.
 
+> [!TIP]
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
+> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
