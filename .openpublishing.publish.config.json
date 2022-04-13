@@ -35,12 +35,6 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "main",
-      "branch_mapping": {}
-    },
-    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/MicrosoftDocs/microsoft-365-docs-pr",
       "branch": "live",
@@ -48,6 +42,12 @@
         "live": "live",
         "main": "main"
       }
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
@@ -72,5 +72,7 @@
   },
   "docs_build_engine": {},
   "contribution_branch_mappings": {},
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/microsoft-365-docs",
+  "git_repository_branch_open_to_public_contributors": "public"
 }
