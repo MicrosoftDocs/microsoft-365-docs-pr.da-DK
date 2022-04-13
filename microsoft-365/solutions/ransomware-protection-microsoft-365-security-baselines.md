@@ -1,5 +1,5 @@
 ---
-title: Trin 1. Konfigurere grundlinjer for sikkerhed
+title: Trin 1. Konfigurer grundlæggende sikkerhedsoplysninger
 author: dansimp
 f1.keywords:
 - NOCSH
@@ -15,77 +15,76 @@ ms.collection:
 - ransomware
 - m365solution-ransomware
 ms.custom: seo-marvel-jun2020
-keywords: ransomware, ransomware drevet af mennesker, ransomware drevet af mennesker, HumOR, extortionsangreb, ransomware-angreb, kryptering, cryptovirologi, nultillids
-description: Brug grundlinjer med sikkerhed til at beskytte dine Microsoft 365 mod ransomware-angreb.
-ms.openlocfilehash: 22092994765e9015421c21f2ee057c63463d594d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+keywords: ransomware, menneskelig drevet ransomware, menneskelig drevet ransomware, HumOR, extortion attack, ransomware angreb, kryptering, kryptovirologi, nul tillid
+description: Brug sikkerhedsbasepunkter til at beskytte dine Microsoft 365 ressourcer mod ransomware-angreb.
+ms.openlocfilehash: 925a64e1d7852aeed6f596e99b20dbff8b34d1be
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63598493"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64825096"
 ---
-# <a name="step-1-configure-security-baselines"></a>Trin 1. Konfigurere grundlinjer for sikkerhed
+# <a name="step-1-configure-security-baselines"></a>Trin 1. Konfigurer grundlæggende sikkerhedsoplysninger
 
-Som det første trin til at forhindre ransomware-hackere skal du konfigurere følgende Microsoft-definerede sikkerhedsscenarier:
+Som et første skridt til at imødegå ransomware angribere, skal du konfigurere følgende Microsoft-definerede sikkerhedsbase baselines:
 
-- [Microsoft 365 sikkerhed](#microsoft-365-security-baseline)
-- [Exchange af mail](#exchange-email-management-baseline)
-- [Yderligere grundlinjer for Windows-enheder og klientsoftware](#additional-baselines)
+- [Microsoft 365-sikkerhed](#microsoft-365-security-baseline)
+- [Exchange mailadministration](#exchange-email-management-baseline)
+- [Yderligere grundlinjer for Windows enheder og klientsoftware](#additional-baselines)
 
-Disse grundlinjer indeholder konfigurationsindstillinger og regler, som er kendt af hackere, og hvis fravær hurtigt opdages og udnyttes ofte.
+Disse grundlinjer indeholder konfigurationsindstillinger og regler, der er velkendte for personer med ondsindede hensigter, hvis fravær opdages hurtigt og ofte udnyttes.
 
-## <a name="microsoft-365-security-baseline"></a>Microsoft 365 grundlinje over sikkerhed
+## <a name="microsoft-365-security-baseline"></a>Microsoft 365 grundlæggende sikkerhedsplan
 
-Først skal du vurdere og måle din sikkerhedsstilling ved hjælp [af Microsoft Secure Score og](/microsoft-365/security/defender/microsoft-secure-score) følge vejledningen for at forbedre den efter behov.
+Først skal du vurdere og måle din sikkerhedsholdning ved hjælp af [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score) og følge vejledningen for at forbedre den efter behov.
 
-Dernæst skal du bruge [regler for reduktion af angrebsoverfladen](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment) til at blokere mistænkelig aktivitet og sårbar indhold. Disse regler omfatter at forhindre:
+Derefter skal du bruge [regler for reduktion af angrebsoverfladen](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment) som en hjælp til at blokere mistænkelig aktivitet og sårbart indhold. Disse regler omfatter forebyggelse af:
 
 - Alle Office programmer fra oprettelse af underordnede processer
 - Eksekverbart indhold fra mailklient og webmail
-- Eksekverbare filer fra at køre, medmindre de opfylder et alders- eller pålidelige listekriterium
+- Eksekverbare filer kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til
 - Udførelse af potentielt slørede scripts
-- JavaScript eller VBScript fra at starte hentet eksekverbart indhold
-- Office programmer ved oprettelse af eksekverbart indhold
-- Office programmer fra indsætte kode i andre processer
-- Office af oprettelse af børneprocesser
-- Upålidelige og usignerede processer, der kører fra USB
-- Vedholdenhed gennem Windows WMI -hændelsesabonnement (Management Interface)
-- Legitimationstyveri fra Windows det lokale sikkerhedscenter (lsass.exe)
-- Procesoprettelser, der stammer fra PSExec- og WMI-kommandoer
+- JavaScript eller VBScript fra start af downloadet eksekverbart indhold
+- Office programmer fra oprettelse af eksekverbart indhold
+- Office programmer fra indsprøjtning af kode i andre processer
+- Office kommunikationsprogram fra oprettelse af underordnede processer
+- Processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB
+- Fastholdelse via WMI-hændelsesabonnement (Windows Management Interface)
+- Legitimationsoplysninger, der stjæles fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)
+- Behandl oprettelser, der stammer fra kommandoerne PSExec og WMI
 
-## <a name="exchange-email-management-baseline"></a>Exchange oprindelig plan for administration af mail 
+## <a name="exchange-email-management-baseline"></a>Exchange baseline for mailadministration
 
-Hjælp med at forhindre indledende adgang til din lejer fra et mailbaseret angreb med disse Exchange oprindelige indstillinger for mail:
+Hjælp med at forhindre indledende adgang til din lejer fra et mailbaseret angreb med disse Exchange grundlæggende indstillinger for mail:
 
-- [Aktivér Microsoft Defender Antivirus scanning af mails](/microsoft-365/security/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus).
-- Brug Microsoft Defender til Office 365 beskyttelse [mod phishing](/microsoft-365/security/office-365-security/anti-phishing-protection) og dækning mod nye trusler og polymorphicvarianter.
-- Kontrollér dine Office 365 for mailfiltrering for at sikre, at du blokerer falske mails, spam og mails med malware. Brug Defender til Office 365 for forbedret beskyttelse mod phishing og dækning mod nye trusler og polymorphicvarianter. Konfigurer Defender for Office 365 at kontrollere links igen, når du [klikker](/microsoft-365/security/office-365-security/atp-safe-links) på og [sletter sendte mails](/microsoft-365/security/office-365-security/zero-hour-auto-purge) som svar på nyligt erhvervet trusselsintelligens.
-- Gennemse og opdater de  [senesteankomprimerede indstillinger for EOP og Defender for Office 365 sikkerhed](/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
-- Konfigurer Defender for Office 365 at kontrollere [links igen](/microsoft-365/security/office-365-security/set-up-safe-links-policies), når du klikker på og sletter sendte mails som svar på nyligt erhvervet trusselsintelligens.
+- Aktivér [Microsoft Defender Antivirus mailscanning](/microsoft-365/security/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus).
+- Brug Microsoft Defender for Office 365 til [forbedret phishing-beskyttelse](/microsoft-365/security/office-365-security/anti-phishing-protection) og -dækning mod nye trusler og polymorfe varianter.
+- Kontrollér dine Office 365 indstillinger for filtrering af mails for at sikre, at du blokerer forfalskede mails, spam og mails med malware. Brug Defender for Office 365 til forbedret phishing-beskyttelse og -dækning mod nye trusler og polymorfe varianter. Konfigurer Defender for Office 365 til at [kontrollere links igen ved klik](/microsoft-365/security/office-365-security/atp-safe-links) og [slet leverede mails](/microsoft-365/security/office-365-security/zero-hour-auto-purge) som svar på nyerhvervede trusselsintelligens.
+- Gennemse og opdater de seneste [anbefalede indstillinger for EOP og Defender for Office 365 sikkerhed](/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
+- Konfigurer Defender for Office 365 til at [kontrollere links igen, når du klikker og](/microsoft-365/security/office-365-security/set-up-safe-links-policies) sletter leverede mails som svar på nyerhvervede trusselsintelligens.
 
 ## <a name="additional-baselines"></a>Yderligere oprindelige planer
 
-Anvend [grundlinjer for sikkerheden](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) for:
+Anvend [sikkerhedsgrundlinjer](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) for:
 
 - Microsoft Windows 11 eller 10
-- Microsoft 365 Apps til store virksomheder
+- Microsoft 365 Apps for Enterprise
 - Microsoft Edge
 
-## <a name="impact-on-users-and-change-management"></a>Indvirkning på brugere og administration af ændringer
+## <a name="impact-on-users-and-change-management"></a>Indvirkning på brugere og ændringsstyring
 
-Som en bedste fremgangsmåde for en reduktionsregel for angrebsoverfladen skal du vurdere, hvordan en regel kan påvirke dit netværk ved at åbne sikkerhedsanbefalingen for den pågældende regel Håndtering af trusler og sikkerhedsrisici. Detaljeruden til anbefaling beskriver brugerpåvirkningen, som du kan bruge til at bestemme, hvilken procentdel af dine enheder, der kan acceptere en ny politik, der aktiverer reglen i blokeringstilstand uden at påvirke brugernes produktivitet negativt.
+Som bedste praksis for en regel for reduktion af angrebsoverfladen skal du vurdere, hvordan en regel kan påvirke dit netværk, ved at åbne sikkerhedsanbefalingerne for den pågældende regel i Håndtering af trusler og sikkerhedsrisici. Ruden med anbefalinger beskriver brugerpåvirkningen, som du kan bruge til at bestemme, hvilken procentdel af dine enheder der kan acceptere en ny politik, der aktiverer reglen i blokeringstilstand, uden at det påvirker brugerproduktiviteten negativt.
 
-Desuden kan Exchange oprindelige indstillinger for mail blokere indgående mail og forhindre afsendelse af mail eller klik på links i mail. Underdan dine medarbejdere denne adfærd og årsagen til, at disse forholdsregler bliver taget.
+Derudover kan Exchange indstillinger for baseline for mail blokere indgående mail og forhindre afsendelse af mail eller klik på links i mail. Oplær dine medarbejdere i denne adfærd og årsagen til, at disse forholdsregler træffes.
 
 ## <a name="resulting-configuration"></a>Resulterende konfiguration
 
-Her er beskyttelse mod ransomware for din lejer efter dette trin.
+Her er ransomware beskyttelse for din lejer efter dette trin.
 
-![Beskyttelse mod ransomware for din Microsoft 365 lejer efter trin 1](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-architecture-step1.png)
-
+![Ransomware-beskyttelse til din Microsoft 365 lejer efter Trin 1](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-architecture-step1.png)
 
 ## <a name="next-step"></a>Næste trin
 
-[![Trin 2 for ransomware-beskyttelse med Microsoft 365](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-step2.png)](ransomware-protection-microsoft-365-attack-detection-response.md)
+[![Trin 2 til beskyttelse af ransomware med Microsoft 365](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-step2.png)](ransomware-protection-microsoft-365-attack-detection-response.md)
 
-Fortsæt med [trin 2](ransomware-protection-microsoft-365-attack-detection-response.md) for at implementere registrering af angreb og svarfunktioner for din Microsoft 365 lejer.
+Fortsæt med [trin 2](ransomware-protection-microsoft-365-attack-detection-response.md) for at installere funktioner til registrering af angreb og svar for din Microsoft 365 lejer.

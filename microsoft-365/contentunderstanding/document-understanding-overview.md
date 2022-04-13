@@ -14,49 +14,49 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om dokumentforståelse i Microsoft SharePoint Syntex.
-ms.openlocfilehash: c7488fcb44116f030d538b416af1f04b33382519
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: 639decf383e534253b014366d9d8c51a83a76675
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507317"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822732"
 ---
 # <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Oversigt over dokumentforståelse i Microsoft SharePoint Syntex
 
 
 </br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4CSu7] 
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4CSu7]
 
 </br>
 
-Dokumentforståelse bruger kunstig intelligens til at automatisere klassificeringen af filer og udtræk af oplysninger. Det fungerer bedst med ustrukturerede dokumenter, f.eks. breve eller kontrakter. Disse dokumenter skal have tekst, der kan identificeres ud fra udtryk eller mønstre. Den identificerede tekst angiver både den filtype, den er (klassificering), og hvad du gerne vil udtrække (dens udtræk).
+Dokumentforståelse bruger AI-modeller (artificial intelligence) til at automatisere klassificering af filer og udtrækning af oplysninger. Den fungerer bedst sammen med ustrukturerede dokumenter, f.eks. breve eller kontrakter. Disse dokumenter skal have tekst, der kan identificeres på baggrund af udtryk eller mønstre. Den identificerede tekst angiver både den filtype, den er (dens klassificering), og hvad du gerne vil udtrække (dens udtrækninger).
 
 > [!NOTE]
-> Se SharePoint Syntex [introduktion: Introduktion for at få mere at](./adoption-getstarted.md) vide om eksempler på dokumentforståelsesscenarier.
+> Se [SharePoint Syntex implementering: Introduktionsvejledning](./adoption-getstarted.md) for at få flere oplysninger om eksempler på scenarier, der kan bruges til dokumentforståelse.
 
-Dokumentforståelsesmodeller oprettes og administreres i en type SharePoint, der kaldes et *indholdscenter*. Når den anvendes på SharePoint, er modellen knyttet til en indholdstype kolonner til at gemme de oplysninger, der udtrækkes. Den indholdstype, du opretter, gemmes i SharePoint indholdstype. Du kan også vælge at bruge eksisterende indholdstyper til at bruge deres skema.
+Modeller til dokumentforståelse oprettes og administreres i en type SharePoint websted, der kaldes et *indholdscenter*. Når modellen anvendes på et SharePoint dokumentbibliotek, er den knyttet til en indholdstype, hvor der er kolonner til lagring af de oplysninger, der udtrækkes. Den indholdstype, du opretter, gemmes i galleriet med SharePoint indholdstyper. Du kan også vælge at bruge eksisterende indholdstyper til at bruge deres skema.
 
 > [!NOTE]
-> Skrivebeskyttede eller lukkede indholdstyper kan ikke opdateres, så de kan ikke bruges i en model.
+> Skrivebeskyttede eller forseglede indholdstyper kan ikke opdateres, så de kan ikke bruges i en model.
 
-Tilføj *klassificeringer og udtræk* *til dit* dokuments forståelse af modeller for at udføre følgende handlinger: 
+Føj *klassificeringer* og *udtrækninger* til dit dokument og forstå modeller for at udføre følgende handlinger:
 
-- Klassificeringer bruges til at identificere og klassificere dokumenter, der overføres til dokumentbiblioteket. En klassificering kan f.eks. "trænes" til at identificere alle dokumenter til *kontraktfornyelse* , der overføres til biblioteket. Indholdstypen for kontraktfornyelse defineres af dig, når du opretter din klassificering.
+- Klassificeringer bruges til at identificere og klassificere dokumenter, der uploades til dokumentbiblioteket. En klassificering kan f.eks. "oplæres" til at identificere alle *kontraktfornyelsesdokumenter* , der uploades til biblioteket. Indholdstypen for kontraktfornyelse defineres af dig, når du opretter klassificeringen.
 
-- Udtrækkere henter oplysninger fra disse dokumenter. For hvert dokument til fornyelse af kontrakt, der er identificeret i dit dokumentbibliotek, vises kolonnerne, der viser *tjenestens* startdato *og klient* for hvert dokument. 
+- Udtrækker oplysninger fra disse dokumenter. For hvert kontraktfornyelsesdokument, der er identificeret i dokumentbiblioteket, vises der f.eks. kolonner, der viser *tjenestens startdato* og *klient* for hvert dokument. 
 
-Du kan bruge eksempelfiler til at træne og teste dine klassificeringer og udtræk i modellen. Eksempelfiler indeholder modelekseler på, hvad du skal lede efter, når du forsøger at identificere og udtrække data fra filer. Du ville f.eks. træne dine klassificeringer og uddrag af din kontraktfornyelse med eksempler på dokumenter til fornyelse af kontrakt, som din virksomhed arbejder sammen med. Du kan også bruge eksempelfiler til at teste effektiviteten af modellen.
+Du kan bruge eksempelfiler til at oplære og teste dine klassificeringer og udtrækninger i din model. Eksempelfiler giver dine modeleksempler på, hvad du skal søge efter, når du forsøger at identificere og udtrække data fra filer. Du kan f.eks. oplære dine klassificeringer og udtræk af kontraktfornyelse med eksempler på kontraktfornyelsesdokumenter, som din virksomhed arbejder med. Du kan også bruge eksempelfiler til at teste modellens effektivitet.
 
-Efter publicering af modellen skal du bruge indholdscenteret til at anvende det på SharePoint dokumentbibliotek, du har adgang til.  
+Når du har publicerer din model, kan du bruge indholdscenteret til at anvende det på alle SharePoint dokumentbibliotek, du har adgang til.  
 
 ## <a name="file-limitations"></a>Filbegrænsninger
 
-Dokumentforståelsesmodeller bruger Optical Character Recognition-teknologi (OCR) til at scanne PDF-filer, billeder og TIFF-filer. Filer scannes, når du oplærer en model med eksempelfiler, og når du kører modellen i forhold til filer i et dokumentbibliotek.
+Modeller til dokumentforståelse bruger OCR-teknologien (Optical Character Recognition) til at scanne PDF-filer, billeder og TIFF-filer. Filer scannes, når du oplærer en model med eksempelfiler, og når du kører modellen mod filer i et dokumentbibliotek.
 
 Bemærk følgende forskelle om Microsoft Office tekstbaserede filer og OCR-scannede filer (PDF, billede eller TIFF):
 
-- Office filer: Afkortet med 64.000 tegn (i kursus, og når der er filer i et dokumentbibliotek).
+- Office filer: Afkortes med 64.000 tegn (under oplæring, og når de køres mod filer i et dokumentbibliotek).
 
 - OCR-scannede filer: Der er en grænse på 20 sider.  
 
@@ -64,55 +64,59 @@ Bemærk følgende forskelle om Microsoft Office tekstbaserede filer og OCR-scann
 
 OCR-behandling fungerer bedst på dokumenter, der opfylder følgende krav:
 
-- JPG-, PNG- eller PDF-format (tekst eller scannet). Tekst integrerede PDF-filer er bedre, fordi der ikke vil være nogen fejl i tegnudtrækning og placering.
+- JPG-, PNG- eller PDF-format (tekst eller scannet). Tekst-integrerede PDF-filer er bedre, fordi der ikke vil være nogen fejl i tegnudtrækning og placering.
 
-- Hvis dine PDF-filer er låst med adgangskode, skal du fjerne låsen, før du sender dem.
+- Hvis dine PDF-filer er låst med adgangskode, skal du fjerne låsen, før du indsender dem.
 
-- Den kombinerede filstørrelse på de dokumenter, der bruges til uddannelse pr. samling, må ikke overstige 50 MB, og PDF-dokumenter må ikke have mere end 500 sider.
+- Den kombinerede filstørrelse for de dokumenter, der bruges til oplæring pr. samling, må ikke overstige 50 MB, og PDF-dokumenter må ikke have mere end 500 sider.
 
-- For billeder skal dimensionerne være mellem 50 × 50 og 10.000 × 10.000 pixel.
+- For billeder skal dimensioner være mellem 50 x 50 og 10.000 x 10.000 pixel.
    > [!NOTE]
-   > Billeder, der er meget brede eller har underlige dimensioner (f.eks. plantegninger), kan blive afkortet i OCR-processen og miste nøjagtigheden.
- 
-- For PDF-filer skal størrelsen være højst 17 x 17 tommer, svarende til juridiske eller A3 papirstørrelser og mindre.
+   > Billeder, der er meget brede eller har ulige dimensioner (f.eks. plantegninger), afkortes muligvis i OCR-processen og mister nøjagtigheden.
 
-- Hvis det scannes fra papirdokumenter, skal scanninger være billeder i høj kvalitet.
+- For PDF-filer skal dimensionerne højst være 17 x 17 tommer, svarende til juridiske eller A3-papirstørrelser og mindre.
+
+- Hvis der scannes fra papirdokumenter, bør scanninger være billeder i høj kvalitet.
 
 - Skal bruge det latinske alfabet (engelske tegn).
 
 > [!NOTE]
-> AI Builder understøtter i øjeblikket ikke følgende typer inputdata for formularbehandling:<br>- Afkrydsningsfelter eller alternativknapper<br>- Signaturer<br>- Udfyldbare PDF-filer
+> AI Builder understøtter i øjeblikket ikke følgende typer inputdata til formularbehandling:
+>
+> - Afkrydsningsfelter eller alternativknapper
+> - Signaturer
+> - PDF-filer, der kan udfyldes
 
 ### <a name="supported-file-types"></a>Understøttede filtyper
 
-Dokumentforståelsesmodeller understøtter følgende filtyper:
+Modeller til dokumentforståelse understøtter følgende filtyper:
 
-- dokument
-- docx
-- eml
+- Doc
+- Docx
+- Eml
 - heic
 - heif
-- htm
-- html
-- jpeg
-- jpg
+- Htm
+- Html
+- Jpeg
+- Jpg
 - markdown
-- md
-- msg
-- pdf
-- png
-- ppt
-- pptx
+- Md
+- Msg
+- Pdf
+- Png
+- Ppt
+- Pptx
 - rtf
-- tif
-- tiff
-- txt
-- xls
-- xlsx
+- Tif
+- Tiff
+- Txt
+- Xls
+- Xlsx
 
 ### <a name="supported-languages"></a>Understøttede sprog
 
-Dokumentforståelsesmodeller understøtter alle de latinske sprog, herunder:
+Modeller til dokumentforståelse understøtter *alle* de latinske sprog, herunder:
 
 - English
 - French
@@ -120,20 +124,20 @@ Dokumentforståelsesmodeller understøtter alle de latinske sprog, herunder:
 - Italian
 - Spanish
 
-
 ## <a name="see-also"></a>Se også
+
 [Opret en klassificering](create-a-classifier.md)
 
-[Opret en extractor](create-an-extractor.md)
+[Opret en udtrækningsmaskine](create-an-extractor.md)
 
 [Opret et indholdscenter](create-a-content-center.md)
 
-[Oprette en formularbehandlingsmodel](create-a-form-processing-model.md)
+[Opret en formularbehandlingsmodel](create-a-form-processing-model.md)
 
-[Anvend en model](apply-a-model.md)   
+[Anvend en model](apply-a-model.md)
 
-[Forskellen mellem et dokuments forståelse og en formularbehandlingsmodel](difference-between-document-understanding-and-form-processing-model.md)
+[Forskel mellem en dokumentforståelse og en formularbehandlingsmodel](difference-between-document-understanding-and-form-processing-model.md)
   
-[Oversigt over behandling af formular](form-processing-overview.md)
+[Oversigt over formularbehandling](form-processing-overview.md)
 
 [SharePoint Syntex hjælp til handicappede](accessibility-mode.md)

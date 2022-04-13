@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
 description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter.
-ms.openlocfilehash: a678649ebd15a34bdfe5765449d41feae1b14901
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 10a605b422178e5006d8a027a697ca6745f82b98
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761235"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824482"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Brug et script til at føje brugere til venteposition i en Kerne-eDiscovery-sag
 
@@ -47,7 +47,7 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 - Du skal være medlem af rollegruppen eDiscovery Manager i Microsoft 365 Overholdelsescenter og være SharePoint Online-administrator for at køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
 
-- Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
+- Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en Core eDiscovery-sag i Microsoft 365 Overholdelsescenter. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
 
 - Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 i den samme mappe. Det vil gøre det nemmere at køre scriptet.
 

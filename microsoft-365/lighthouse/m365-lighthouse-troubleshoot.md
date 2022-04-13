@@ -1,5 +1,5 @@
 ---
-title: Fejlfind og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
+title: Foretag fejlfinding af og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,126 +15,125 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
-ms.openlocfilehash: 24f282420bb69188106178cefc6fb89968f4fcf6
-ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
+ms.openlocfilehash: 1126db76129a0f3cf6b65921a6e731f02d7311d3
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64645028"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824064"
 ---
-# <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Fejlfind og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
+# <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Foretag fejlfinding af og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
 
-I denne artikel beskrives fejlmeddelelser og problemer, du kan støde på, når du bruger Microsoft 365 Lighthouse, og den indeholder fejlfindingstrin, du kan udføre for at løse dem.
+I denne artikel beskrives fejlmeddelelser og problemer, der kan opstå, når du bruger Microsoft 365 Lighthouse, og den indeholder fejlfindingstrin, du kan udføre for at løse dem.
 
 ## <a name="partner-onboarding"></a>Partner onboarding
 
-### <a name="message-when-trying-to-access-lighthouse-microsoft-365-lighthouse-doesnt-support-indirect-providers-at-this-time-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Meddelelse, når du forsøger at få adgang til Lighthouse: "Microsoft 365 Lighthouse understøtter ikke indirekte udbydere på nuværende tidspunkt, du skal være indirekte forhandler eller direkte fakturapartner for at bruge denne tjeneste"
+### <a name="message-when-trying-to-access-lighthouse-microsoft-365-lighthouse-doesnt-support-indirect-providers-at-this-time-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Meddelelse, når du forsøger at få adgang til Lighthouse: "Microsoft 365 Lighthouse understøtter ikke indirekte udbydere på nuværende tidspunkt, skal du være en indirekte forhandler eller direkte fakturapartner for at bruge denne tjeneste"
 
-**Årsag:** Du har forsøgt at få adgang til Lighthouse som indirekte fakturapartner. På nuværende tidspunkt understøtter Lighthouse kun indirekte forhandlere og direkte fakturerede partnere.
+**Forårsage:** Du forsøgte at få adgang til Lighthouse som en indirekte fakturapartner. Lighthouse understøtter i øjeblikket kun indirekte forhandlere og partnere med direkte fakturering.
 
-**Løsning:** Du kan finde en komplet liste over kvalifikationer og krav [under Krav til Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Hvis du ikke er en indirekte udbyder, og du mener, at du har modtaget denne meddelelse ved en fejl, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Opløsning:** Du kan se en komplet liste over kvalifikationer og krav under [Krav til Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Hvis du ikke er indirekte udbyder og mener, at du har modtaget denne meddelelse ved en fejl, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
-### <a name="message-when-trying-to-access-lighthouse-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Meddelelse, når du forsøger at få adgang til Lighthouse: "Du skal være indirekte forhandler eller direkte fakturapartner for at bruge denne tjeneste"
+### <a name="message-when-trying-to-access-lighthouse-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Meddelelse, når du forsøger at få adgang til Lighthouse: "Du skal være indirekte forhandler eller direct-bill-partner for at bruge denne tjeneste"
 
-**Årsag:** Du har forsøgt at få adgang til Lighthouse og er ikke Microsoft-partner. Du skal være tilmeldt programmet Cloud Solution Provider (CSP) som en indirekte forhandler eller direkte faktureret partner for at bruge Lighthouse.
+**Forårsage:** Du forsøgte at få adgang til Lighthouse og er ikke Microsoft-partner. Du skal være tilmeldt programmet Cloud Solution Provider (CSP) som indirekte forhandler eller direct-bill-partner for at bruge Lighthouse.
 
-**Løsning:** Du kan finde en komplet liste over kvalifikationer og krav [under Krav til Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Hvis du er kvalificeret til at få adgang til Lighthouse, og du mener, at du har modtaget denne meddelelse ved en fejl, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Opløsning:** Du kan se en komplet liste over kvalifikationer og krav under [Krav til Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Hvis du kvalificerer dig til at få adgang til Lighthouse og mener, at du har modtaget denne meddelelse ved en fejl, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ### <a name="message-when-signing-in-to-lighthouse-accept-the-partner-amendment"></a>Meddelelse, når du logger på Lighthouse: "Acceptér partnerændringen"
 
-**Årsag:** Du har forsøgt at få adgang til Lighthouse, før en global administrator i partnerlejeren har underskrevet partnerændringen.
+**Forårsage:** Du forsøgte at få adgang til Lighthouse, før en global administrator i partnerlejer har signeret partnerændringen.
 
-**Løsning:** En global administrator skal logge på Lighthouse og acceptere partnerændringen, før du kan få adgang til og arbejde i Fyrtårn. Hvis fejlen fortsætter, efter en global administrator har underskrevet ændringen, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Opløsning:** En global administrator skal logge på Lighthouse og acceptere partnerændringen, før du kan få adgang til og arbejde i Lighthouse. Hvis fejlen fortsætter, når en global administrator har signeret ændringen, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="customer-tenant-onboarding"></a>Onboarding af kundelejer  
 
 ### <a name="customer-tenants-show-a-status-other-than-active-in-the-tenant-list"></a>Kundelejere viser en anden status end "Aktiv" på lejerlisten  
 
-**Årsag:** Dine kundelejere opfylder ikke følgende kriterier:
+**Forårsage:** Dine kundelejere opfylder ikke følgende kriterier:
 
-  - Skal have konfigureret delegeret adgang for den administrerede tjenesteudbyder for at kunne administrere kundelejeren*
-  - Skal have mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens
-  - Ikke må have mere end 1000 brugere med licens 
+- Der skal være konfigureret uddelegeret adgang for MSP'en (Managed Service Provider) for at kunne administrere kundelejer*
+- Der skal være mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens
+- Der må ikke være mere end 1000 licenserede brugere 
 
-**Løsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og forklarer, hvordan du løser dem.
+**Opløsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og det forklares, hvordan du løser dem.
 
-*Delegerede administratorrettigheder (DAP) er påkrævet for at onboarde kunder til Lighthouse. Vi anbefaler også, at du etablerer detaljerede delegerede administratorrettigheder (GDAP) med dine kunder for at give en mere sikker delegeret adgang. Mens DAP og GDAP coexist anvendes, har GDAP forrang for kunder, hvor begge modeller er på plads. Kunder med just GDAP (og ingen DAP) vil snart kunne onboarde til Lighthouse.
+*Der kræves delegerede administratorrettigheder (DAP) for at onboarde kunder til Lighthouse. Vi anbefaler også, at du opretter GDAP (Granular Delegated Admin Privileges) sammen med dine kunder for at muliggøre mere sikker delegeret adgang. Mens DAP og GDAP eksisterer, har GDAP forrang for kunder, hvor begge modeller er på plads. Snart vil kunder med kun GDAP (og ingen DAP) kunne onboarde til Lighthouse.
 
-
-| Status | Beskrivelse | Løsning |
+| Status | Beskrivelse | Opløsning |
 |--|--|--|
-| Inaktiv | Lejeren blev udlejet på anmodning af MSP'en og administreres ikke længere i Fyrtårn. | Du skal genaktivere lejeren. På siden **Lejere** skal du vælge de tre prik (flere handlinger) ud for den lejer, du vil genaktivere, og derefter vælge **Aktivér lejer**. Det kan tage 24-48 timer, før indledende kundedata vises i Lighthouse. |
-| Ikke berettiget – DAP eller GDAP er ikke konfigureret | Du har ikke DAP- eller GDAP-administratorrettigheder konfigureret med lejeren, hvilket kræves af Lighthouse. | Konfigurer DAP- eller GDAP-administratorrettigheder i Microsoft Partnercenter. |
-| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. | Sørg for, at lejeren har mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business tildelt. |
-| Ikke berettiget – Antal brugere er overskredet | Lejeren har mere end de maksimalt 1000 brugere med licens, som Lighthouse tillader. | Bekræft, at lejeren ikke har mere end 1000 brugere med licens. |
-| Ikke berettiget – Geo-kontrol mislykkedes | Du og din kunde bor ikke i det samme geografiske område, som kræves af Lighthouse. | Kontrollér, at kunden er placeret i dit geografiske område. Hvis ikke, kan du ikke administrere lejeren i Lighthouse. |
-| I gang | Fyrtårn har fundet lejeren, men er stadig i gang med at onboarde dem. | Tillad, at Fyrtårn 48 timer gennemfører onboarding af lejeren. |
+| Inaktive | Lejeren blev offboardet på anmodning af MSP'en og administreres ikke længere i Lighthouse. | Du skal genaktivere lejeren. På siden **Lejere** skal du vælge de tre prikker (flere handlinger) ud for den lejer, du vil genaktivere, og derefter vælge **Aktivér lejer**. Det kan tage 24-48 timer, før de første kundedata vises i Lighthouse. |
+| Ikke berettiget – DAP eller GDAP er ikke konfigureret | Du har ikke rettigheder som DAP- eller GDAP-administrator konfigureret med lejeren, hvilket er påkrævet af Lighthouse. | Konfigurer DAP- eller GDAP-administratorrettigheder i Microsoft Partnercenter. |
+| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. | Sørg for, at lejeren har tildelt mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. |
+| Ikke kvalificeret - Antallet af brugere er overskredet | Lejeren har mere end maksimalt 1000 licenserede brugere tilladt af Lighthouse. | Kontrollér, at lejeren ikke har mere end 1000 licenserede brugere. |
+| Ikke berettiget - Geo-kontrol mislykkedes | Du og din kunde bor ikke i det samme geografiske område, hvilket er påkrævet af Lighthouse. | Kontrollér, at kunden er placeret i dit geografiske område. Hvis ikke, kan du ikke administrere lejeren i Lighthouse. |
+| I gang | Lighthouse opdagede lejeren, men er stadig i gang med at onboarde dem. | Tillad, at Lighthouse 48 timer fuldfører onboarding af lejeren. |
 
-Hvis du har bekræftet, at din kundelejer opfylder onboardingkriterierne, og de stadig ikke vises som **Aktive** i Lighthouse, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+Hvis du har bekræftet, at din kundelejer opfylder onboardingkriterierne, og de stadig ikke vises som **Aktive** i Lighthouse, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="access-and-permissions"></a>Adgang og tilladelser
 
-### <a name="message-when-trying-to-access-lighthouse-not-authorized-or-insufficient-privileges-or-access-restriction-insufficient-or-lack-of-permissions-is-causing-access-restriction"></a>Meddelelse, når du forsøger at få adgang til Lighthouse: "Ikke godkendt" eller "Utilstrækkelige rettigheder" eller "Adgangsbegrænsning: Utilstrækkelige eller manglende tilladelser forårsager adgangsbegrænsning" 
+### <a name="message-when-trying-to-access-lighthouse-not-authorized-or-insufficient-privileges-or-access-restriction-insufficient-or-lack-of-permissions-is-causing-access-restriction"></a>Meddelelse, når der gøres forsøg på at få adgang til Lighthouse: "Not Authorized" or "Insufficient privileges" eller "Access Restriction: Insufficient or lack of permissions is causing access restriction" 
 
-**Årsag:** Du hører ikke til den korrekte sikkerhedsgruppe i Azure AD, eller du har ikke fået tildelt den korrekte rolle i Partnercenter for at få adgang til Fyrtårn.
+**Forårsage:** Du tilhører ikke den korrekte sikkerhedsgruppe i Azure AD, eller du har ikke fået tildelt den korrekte rolle i Partnercenter for at få adgang til Lighthouse.
 
-**Løsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, skal du se Oversigt [over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede Roller i Azure AD og tilladelser til GDAP [i indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
 
-For kunder med DAP-relationer skal partneradministratoren tildele dig rollen som administrator eller Helpdesk-agent i Partnercenter. Hvis du vil have en detaljeret beskrivelse af alle partnercenterroller og -tilladelser, skal [du se Tildel roller og tilladelser til brugere](/partner-center/permissions-overview).
+For kunder med DAP-relationer skal partneradministratoren tildele dig rollen Administrator eller Helpdesk-agent i Partnercenter. Du kan finde en detaljeret beskrivelse af alle Partnercenter-roller og -tilladelser under [Tildel roller og tilladelser til brugere](/partner-center/permissions-overview).
 
-### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Jeg kan ikke se fuldstændige data i bestemte områder af Lighthouse, eller jeg kan ikke udføre bestemte opgaver, eller jeg kan ikke få adgang til bestemte lejere
+### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Jeg kan ikke se komplette data i visse områder af Lighthouse, eller jeg kan ikke udføre visse opgaver, eller jeg kan ikke få adgang til visse lejere
 
-**Årsag:** Du har begrænset GDAP-adgang baseret på de roller, der er tildelt den Azure AD-sikkerhedsgruppe, du er i.
+**Forårsage:** Du har begrænset GDAP-adgang baseret på de roller, der er tildelt den Azure AD-sikkerhedsgruppe, du er i.
 
-**Løsning:** Sørg for, at en administrator fra din partnerlejer med de rette tilladelser har tildelt dig den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også, at nogle handlinger i Lighthouse kræver, at du er global administrator. Hvis du vil vide mere om GDAP-rollerne, og hvad hver rolle kan gøre, skal du se Oversigt [over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede roller og tilladelser for GDAP i de [indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede Roller i Azure AD og tilladelser til GDAP [i indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="customer-tenant-management"></a>Administration af kundelejer  
 
-### <a name="customer-tenant-has-no-data-showing-in-lighthouse"></a>Kundelejeren har ingen data vist i Fyrtårn
+### <a name="customer-tenant-has-no-data-showing-in-lighthouse"></a>Kundelejer har ingen data, der vises i Lighthouse
 
-**Årsag:** Du forsøger at få vist data i Lighthouse, før lejerens onboarding er fuldført.
+**Forårsage:** Du forsøger at få vist data i Lighthouse, før onboarding af lejeren er fuldført.
 
-**Løsning:** Det kan tage 24-48 timer, før indledende kundedata vises i Lighthouse. Hvis der er gået mere end 48 timer, siden du onboardede lejeren, og du stadig ikke kan få vist eller indlæse lejerdata, eller du ikke kan få vist eller indlæse data, som du tidligere har haft mulighed for, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Vær klar til at levere relevante netværkslogfiler og en liste over de indstillinger, der kan være blevet ændret.
+**Opløsning:** Det kan tage 24-48 timer, før de første kundedata vises i Lighthouse. Hvis der er gået mere end 48 timer, siden du onboardede lejeren, og du stadig ikke kan få vist eller indlæse lejerdata, eller hvis du ikke kan få vist eller indlæse data, som du tidligere har været i stand til, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Vær forberedt på at levere relevante netværkslogge og en liste over eventuelle indstillinger, der kan være blevet ændret.
 
-### <a name="customer-tenant-data-isnt-updating-after-making-changes-in-the-customer-tenant"></a>Kundelejerdata opdateres ikke, efter der er foretaget ændringer i kundelejeren
+### <a name="customer-tenant-data-isnt-updating-after-making-changes-in-the-customer-tenant"></a>Kundelejerdata opdateres ikke, når der er foretaget ændringer i kundelejer
 
-**Årsag:** Der kan gå op til 4 timer, før ændringer, du foretager inden for kundelejeren, synkroniseres med kundelejerdataene i Lighthouse.
+**Forårsage:** Det kan tage op til fire timer, før ændringer, du foretager i kundelejer, synkroniseres med kundelejerdataene i Lighthouse.
 
-**Løsning:** Hvis der er gået mere end 4 timer, og kundelejerdataene stadig ikke opdateres i Lighthouse, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Vær klar til at give kundelejeroplysninger.
+**Opløsning:** Hvis der er gået mere end fire timer, og kundelejerdataene stadig ikke opdateres i Lighthouse, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Vær forberedt på at angive kundelejeroplysninger.
 
-### <a name="message-when-applying-a-baseline-to-a-customer-tenant-process-error-occurred"></a>Meddelelse, når du anvender en oprindelig plan på en kundelejer: "Der opstod en procesfejl"  
+### <a name="message-when-applying-a-baseline-to-a-customer-tenant-process-error-occurred"></a>Meddelelse, når der anvendes en oprindelig plan på en kundelejer: "Der opstod en procesfejl"  
 
-**Årsag:** Du har ikke fuldført konfigurationen af Microsoft Intune i kundelejeren.
+**Forårsage:** Du fuldførte ikke konfigurationen af Microsoft Intune i kundelejer.
 
-**Løsning:** Kontrollér, at du har gennemført de grundlæggende konfigurationstrin for Intune i kundelejeren. Hvis problemet fortsætter, efter du har kontrolleret, at Intune er fuldført for kundelejeren, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Opløsning:** Kontrollér, at du har fuldført de grundlæggende konfigurationstrin for Intune i kundelejer. Hvis problemet fortsætter, efter at du har kontrolleret, at Intune konfiguration er fuldført for kundelejer, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
-### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Kan ikke få adgang til partnerlejerdata i Fyrtårn
+### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Der er ikke adgang til partnerlejerdata i Lighthouse
 
-**Årsag**: Lighthouse understøtter kun visning og administration *af kundelejere* . Det understøtter i øjeblikket ikke visning og administration af *partnerlejere* .
+**Årsag**: Lighthouse understøtter kun visning og administration af *kundelejere* . Det understøtter i øjeblikket ikke visning og administration af *partnerlejere* .
 
-**Løsning:** Fortsæt med at bruge den metode, du har brugt til at få vist og administrere din partnerlejer.
+**Opløsning:** Fortsæt med at bruge den metode, du har brugt til at få vist og administrere din partnerlejer.
 
 ## <a name="device-and-threat-management"></a>Administration af enheder og trusler 
 
-### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Jeg kan ikke se nogen kundelejerdata på siderne enhedsoverholdelse og trusselsadministration i Lighthouse
+### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Jeg kan ikke se nogen kundelejerdata på siderne for enhedsoverholdelse og trusselsstyring i Lighthouse
 
-**Årsag 1:** Kundelejeren har ikke færdiggjort onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne til enhedsoverholdelse eller trusselsadministration i Lighthouse, før kundelejeren har færdiggjort onboarding til Intune.
+**Årsag 1:** Kundelejer har ikke fuldført onboarding til Intune. Kundelejerdata vil ikke være tilgængelige på siderne om enhedsoverholdelse eller trusselsstyring i Lighthouse, før kundelejer har fuldført onboarding til Intune.
 
-**Løsning:** Kontrollér, at den kundelejer, du forsøger at få vist data for, har færdiggjort onboarding til Intune. Når onboarding er fuldført i Intune, skal du bruge 4 timer, før enhedens data vises i Fyrtårn.
+**Opløsning:** Bekræft, at den kundelejer, du forsøger at få vist data for, er blevet onboardet til Intune. Når onboarding er fuldført i Intune, kan enhedsdata vises i Lighthouse i 4 timer.
 
 **Årsag 2:** Kundelejeren blev for nylig onboardet til Lighthouse, og data indlæses stadig i Lighthouse.
 
-**Løsning:** Når en kundelejer er onboardet til Lighthouse, skal der gå 24-48 timer, før de indledende kundedata vises.
+**Opløsning:** Når en kundelejer er onboardet til Lighthouse, kan de første kundedata vises i 24-48 timer.
 
-**Årsag 3:** Kundens lejerenhed er ny, og enhedens data indlæses stadig i Lighthouse.
+**Årsag 3:** Kundens lejerenhed er ny, og enhedsdataene indlæses stadig i Lighthouse.
 
-**Løsning:** Når der tilføjes en lejerenhed, kan der gå 4 timer, før enhedens data vises i Fyrtårn.
+**Opløsning:** Når der tilføjes en lejerenhed, kan enhedsdataene vises i Lighthouse i 4 timer.
 
-Hvis data stadig ikke vises på siderne Enhedsoverholdelse og Trusselsadministration efter at have fulgt instruktionerne til løsning, skal du kontakte Support. Få mere at vide under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+Hvis data stadig ikke vises på siderne for enhedsoverholdelse og trusselsstyring efter at have fulgt løsningsvejledningen, skal du kontakte Support. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Kendte problemer med Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) (artikel)\
-[Microsoft 365 ofte stillede spørgsmål om Fyrtårn](m365-lighthouse-faq.yml) (artikel)\
-[Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (artikel)
+[Microsoft 365 Ofte stillede spørgsmål om Fyrtårn](m365-lighthouse-faq.yml) (artikel)\
+[Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (artikel)

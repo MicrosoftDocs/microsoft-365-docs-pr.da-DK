@@ -1,5 +1,5 @@
 ---
-title: Eksempelkonfigurationer for installation og opdatering af kanal
+title: Konfigurationer af eksempel på udrulning og opdatering af kanal
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
@@ -14,48 +14,38 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-subscription-management
 ms.custom: ''
-description: Hvordan organisationer udruller og opdaterer ved hjælp af kanaler.
-ms.openlocfilehash: 4e4ebfef9c505f3a6ac27726da9b1f6e5ebb932a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Sådan udruller og opdaterer organisationer f.eks. ved hjælp af kanaler.
+ms.openlocfilehash: 4616d424c49a1348d374fa01d705e0483822eb90
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63594181"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823976"
 ---
-# <a name="deployment-and-update-channel-example-configurations"></a>Eksempelkonfigurationer for installation og opdatering af kanal
+# <a name="deployment-and-update-channel-example-configurations"></a>Konfigurationer af eksempel på udrulning og opdatering af kanal
 
-At vælge, hvilke opdateringskanaler der skal bruges til Windows 10 og Microsoft 365 Apps kan afhænge af din organisationstype, og hvor på udviklingscyklussen du vil udrulle og bruge nye funktioner og egenskaber. Find de foreløbige kanaler og produktionskanaler, der passer bedst til dine behov.
+Valg af de opdateringskanaler, der skal bruges til Windows 10 og Microsoft 365 Apps, kan afhænge af din type organisation, og hvor af den udviklingscyklus du vil udrulle og bruge nye funktioner og funktioner. Find de foreløbige udgivelses- og produktionskanaler, der passer bedst til dine behov.
 
 ## <a name="pre-release-channels"></a>Foreløbige kanaler
 
-<br>
-
-****
-
-|Kunde-/kanaltilbud|Windows 10|Microsoft 365 Apps til Enterprise (Windows 10)|
-|:-------|:-------|:-----|
-|Ret til meget tekniske brugere og udviklere. <p> Vær den første til at få adgang til de seneste builds tidligst i udviklingsprocessen med den nyeste kode. <p> Der vil være uslebne kanter og noget ustabilt.|Dev|I/T|
-|Ret til tidlige brugere og it-fagfolk, der ønsker mere pålidelige builds, der stadig er under udvikling. <p> Se, hvad der er på vej, og hjælp med at validere nye funktioner.|Beta-kanal|Beta-kanal|
-|Til dem, der ønsker tidlig adgang til kommende udgivelser. <p> Hvor virksomheder gennemser og validerer kommende udgivelser før bred udrulning. <p> Disse understøttes.|Release Preview|Aktuel kanal (forhåndsvisning) <p> Semi-Annual virksomhedskanal (forhåndsvisning)|
-|
+|Kunde-/kanaltilbud|Windows 10|Microsoft 365 Apps for Enterprise (Windows 10)|
+|---|---|---|
+|Til yderst tekniske brugere og udviklere. <br/><br/> Vær den første til at få adgang til de nyeste builds tidligst i udviklingscyklussen med den nyeste kode. <br/><br/> Der vil være ujævne kanter og ustabilitet.|Dev|NIELSEN|
+|Lige til de tidlige brugere og it-teknikere, der ønsker mere pålidelige builds, der stadig er under udvikling. <br/><br/> Se næste trin, og hjælp med at validere nye funktioner.|Betakanal|Betakanal|
+|Lige for dem, der ønsker tidlig adgang til kommende udgivelser. <br/><br/> Her får firmaer forhåndsvist og validerer kommende udgivelser før en bred udrulning. <br/><br/> Disse understøttes.|Udgivelseseksempel|Aktuel kanal (prøveversion) <br/><br/> Semi-Annual Enterprise-kanal (prøveversion)|
 
 ## <a name="production-channels-for-broad-deployment"></a>Produktionskanaler til bred udrulning
 
-Klik på linket i kolonnen **Eksempel for** at gennemgå installationsfaser og grupper for en eksempelorganisation.
+Klik på linket i kolonnen **Eksempel** for at gennemgå udrulningsfaser og -grupper for en eksempelorganisation.
 
-<br>
-
-****
-
-|Kunde-/kanaltilbud|Windows 10|Microsoft 365 Apps til Enterprise (Windows 10)|Eksempel|
-|:-------|:-------|:-----|:-------|
-|Til de kunder, der vil have de nyeste versioner, så snart de er klar.|Semi-Annual kanal|[Aktuel kanal](/deployoffice/overview-update-channels#current-channel-overview)|[Seneste udgivelser](deploy-update-channels-examples-rapid-deploy.md)|
-|Til virksomheder, der ønsker den nyeste version med mere forudsigelighed.|Semi-Annual kanal|[Månedlig virksomhedskanal](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview)||
-|Højre for virksomheder med behov for omfattende it-test før hver opdatering.|Semi-Annual kanal|[Halvårlige virksomhedskanal](/deployoffice/overview-update-channels#semi-annual-enterprise-channel-overview)||
-|
+|Kunde-/kanaltilbud|Windows 10|Microsoft 365 Apps for Enterprise (Windows 10)|Eksempel|
+|---|---|---|---|
+|Lige til kunder, der vil have de nyeste udgivelser, så snart de er klar.|Semi-Annual kanal|[Aktuel kanal](/deployoffice/overview-update-channels#current-channel-overview)|[Seneste udgivelser](deploy-update-channels-examples-rapid-deploy.md)|
+|Lige til virksomheder, der ønsker den nyeste version med mere forudsigelighed.|Semi-Annual kanal|[Månedlig Enterprise-kanal](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview)||
+|Det er rigtigt for virksomheder med behov for omfattende it-test før hver opdatering.|Semi-Annual kanal|[Halvårlig virksomhedskanal](/deployoffice/overview-update-channels#semi-annual-enterprise-channel-overview)||
 
 ## <a name="see-also"></a>Se også
 
-[Microsoft 365 for Enterprise-oversigt](microsoft-365-overview.md)
+[Microsoft 365 til virksomhedsoversigt](microsoft-365-overview.md)
 
-[Test labvejledninger](m365-enterprise-test-lab-guides.md)
+[Vejledninger til testlaboratorier](m365-enterprise-test-lab-guides.md)

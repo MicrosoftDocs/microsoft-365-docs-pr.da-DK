@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 47403d64-a067-4754-9ae9-00157244c27d
 description: En oversigt over Microsoft Bookings-appen, som omfatter en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender og give dine kunder fleksibilitet til at booke aftaler.
-ms.openlocfilehash: 90f298c2947796a06fe67fc3fd1f190282639024
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 6cb20104e9fa51023b6a828cfd70291cd0797037
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715181"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822666"
 ---
 # <a name="microsoft-bookings"></a>Microsoft Bookings
 
@@ -45,7 +45,7 @@ Microsoft Bookings er tilgængelig i følgende abonnementer:
 
 ## <a name="watch-introducing-microsoft-bookings"></a>Se: Introduktion til Microsoft Bookings
 
-> [!VIDEO https://youtu.be/G2HOsM767Sw]
+> [VIDEO](https://www.youtube.com/watch?v=G2HOsM767Sw)
 
 Bookings gør det nemmere for små virksomheder at planlægge og administrere aftaler med deres kunder.
 

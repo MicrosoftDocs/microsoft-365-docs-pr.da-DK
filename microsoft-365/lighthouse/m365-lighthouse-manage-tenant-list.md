@@ -15,49 +15,49 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365, kan du få mere at vide om, hvordan du administrerer din lejerliste.
-ms.openlocfilehash: 3c62761bdb5fbed08be07e909d465aa0a790ff97
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer din lejerliste.
+ms.openlocfilehash: 2f9d38bad24d20c53a1bafe44b1b831369957b71
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593029"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824372"
 ---
 # <a name="manage-your-tenant-list"></a>Administrer din lejerliste
 
-For at hjælpe dig med at administrere din lejerliste Microsoft 365 Lighthouse kan du anvende brugerdefinerede mærker til dine lejere. Disse mærker kan bruges til at organisere dine lejere og kan også hjælpe dig med at filtrere de eksisterende visninger og indsigter, der er tilgængelige for relevante grupper af lejere. Du kan administrere dine mærker fra siden Lejere. Når du har oprettet og tildelt, kan du filtrere dataene i lejere, brugere, enheder, trusselsadministration og Windows 365 sider baseret på et mærke.
+Du kan hjælpe dig med at administrere din lejerliste i Microsoft 365 Lighthouse ved at anvende brugerdefinerede mærker på dine lejere. Disse mærker kan bruges til at organisere dine lejere og kan også hjælpe dig med at filtrere de eksisterende visninger og indsigter, der er tilgængelige for relevante sæt lejere. Du kan administrere dine mærker fra siden Lejere. Når dataene er oprettet og tildelt, kan du filtrere dataene på siderne Lejere, Brugere, Enheder, Trusselsstyring og Windows 365 baseret på et tag.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-For at administrere lejermærker skal du:
+Hvis du vil administrere lejerkoder, skal du:
 
 - Opfylder [kravene til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
 
-- Fuldfør de processer, der er beskrevet [i artiklen Tilmeld Microsoft 365 Fyrtårn](m365-lighthouse-sign-up.md).
+- Fuldfør de processer, der er beskrevet i artiklen [Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
-- Fuldfør de processer, der er beskrevet [i sikkerhedsartikel Microsoft 365 Lighthouse-portalen](m365-lighthouse-configure-portal-security.md).
+- Fuldfør de processer, der er beskrevet i sikkerhedsartiklen [Konfigurer Microsoft 365 Lighthouse Portal](m365-lighthouse-configure-portal-security.md).
 
-- Vær global administrator for partnerlejeren.
+- Vær global administrator af partnerlejer.
 
 ## <a name="create-a-tag"></a>Opret et mærke
 
-1. Vælg Lejere i venstre navigationsrude **i Fyrtårn**.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg **Administrer mærker**.
 
-3. I **ruden Administrer mærker** skal du vælge **Tilføj mærke**.
+3. I ruden **Administrer mærker** skal du vælge **Tilføj mærke**.
 
 4. Angiv et navn og en beskrivelse.
 
 5. Vælg **Gem**.
 
-## <a name="edit-a-tag"></a>Redigere et mærke
+## <a name="edit-a-tag"></a>Rediger et mærke
 
-1. Vælg Lejere i venstre navigationsrude **i Fyrtårn**.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg **Administrer mærker**.
 
-3. Vælg det **mærke** , du vil redigere, i ruden Administrer mærker.
+3. Vælg det mærke, du vil redigere, i ruden **Administrer mærker** .
 
 4. Rediger navnet og/eller beskrivelsen efter behov.
 
@@ -65,47 +65,45 @@ For at administrere lejermærker skal du:
 
 ## <a name="assign-a-tag"></a>Tildel et mærke
 
-1. Vælg Lejere i venstre navigationsrude **i Fyrtårn**.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
-2. På lejerlisten skal du vælge de tre prik (flere handlinger) ud for den lejer, du vil mærke.
+2. Vælg de tre prikker (flere handlinger) ud for den lejer, du vil tagge, på lejerlisten.
 
 3. Vælg **Mærker**.
 
 4. Vælg et mærke på listen. Du kan kun vælge ét mærke ad gangen.
 
-Mærker, der allerede er tildelt til lejeren, har en markering til højre for kodenavnet. Du kan også tildele et mærke til flere lejere ved at markere afkrydsningsfeltet ud for hver lejer på listen, vælge Tildel mærker og derefter vælge et mærke på listen.
+Mærker, der allerede er tildelt lejeren, har en markering til højre for kodenavnet. Du kan også tildele et mærke til flere lejere ved at markere afkrydsningsfeltet ud for hver lejer på listen, vælge **Tildel mærker** og derefter vælge et mærke på listen.
 
 > [!NOTE]
-> Du kan oprette op til 30 entydige Mærker og tildele dem til så mange lejere, som det er nødvendigt.
+> Du kan oprette op til 30 entydige mærker og tildele dem til lige så mange lejere efter behov.
 
-## <a name="delete-a-tag"></a>Slette et mærke
+## <a name="delete-a-tag"></a>Slet et mærke
 
-1. Vælg Lejere i venstre navigationsrude **i Fyrtårn**.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg **Administrer mærker**.
 
-3. Vælg det **mærke** , du vil slette, i ruden Administrer mærker.
+3. Vælg det mærke, du vil slette, i ruden **Administrer mærker** .
 
 4. Vælg **Slet mærke**.
 
 ## <a name="remove-a-tag"></a>Fjern et mærke
 
-1. Vælg Lejere i venstre navigationsrude **i Fyrtårn**.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
-2. På lejerlisten skal du vælge de tre prik (flere handlinger) ud for den lejer, du vil redigere.
+2. Vælg de tre prikker (flere handlinger) ud for den lejer, du vil redigere, på lejerlisten.
 
 3. Vælg **Mærker**.
 
-4. Markér det mærke, du vil fjerne.
+4. Vælg det mærke, du vil fjerne.
 
-Mærker, der aktuelt er tildelt, har en markering til højre for navnet. Du kan også fjerne et mærke fra flere lejere ved at markere afkrydsningsfeltet ud for hver lejer på listen, vælge Tildel mærker og derefter vælge et markeret mærke på listen.
+Mærker, der i øjeblikket er tildelt, har en markering til højre for navnet. Du kan også fjerne et mærke fra flere lejere ved at markere afkrydsningsfeltet ud for hver lejer på listen, vælge **Tildel mærker** og derefter vælge et markeret mærke på listen.
 
 ## <a name="next-steps"></a>Næste trin
 
-Når du har oprettet og tildelt mærker, kan du bruge dem til at filtrere dine lejere. Gå til en af de andre sider (Brugere, Enheder, Trusselsadministration eller Windows 365), og vælg et eller flere mærker fra filteret Lejer. Du kan oprette nye mærker til at understøtte bestemte visninger baseret på hver side.
+Når du har oprettet og tildelt mærker, kan du bruge dem til at filtrere dine lejere. Gå til en af de andre sider (brugere, enheder, trusselsstyring eller Windows 365), og vælg et eller flere mærker fra lejerfilteret. Du kan oprette nye mærker for at understøtte bestemte visninger, der er baseret på hver side.
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Tilmeld dig Microsoft 365 fyrtårn](m365-lighthouse-sign-up.md) (artikel)  
-[Microsoft 365 oversigt over overholdelsessiden for fyrtårne](m365-lighthouse-device-compliance-page-overview.md) (artikel)  
-[Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel) [Microsoft 365 siden med overholdelse af angivne standarder for lighthouse-enheder](m365-lighthouse-device-compliance-page-overview.md) (artikel) [Microsoft 365 Ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)

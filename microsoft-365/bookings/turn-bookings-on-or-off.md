@@ -10,12 +10,12 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Få mere at vide om, hvordan du får adgang til Microsoft Bookings i Microsoft 365.
-ms.openlocfilehash: a2ab25b3b187ba45dfe460991b91e77d70a2bb70
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 28398faba7c21b6d3cce84063934268dad11fd64
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715269"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823074"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Slå Microsoft Bookings til eller fra
 
@@ -33,7 +33,7 @@ Bookings kan slås til eller fra for hele organisationen eller for bestemte brug
 
 1. Log på Microsoft 365 Administration som global administrator.
 
-2. Gå til  **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Organisationsindstillinger**</a> i Administration.
+2. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Organisationsindstillinger**</a>.
 
 3. Markér afkrydsningsfeltet **for Tillad, at din organisation bruger Bookings** til at aktivere eller deaktivere Bookings for din organisation.
 

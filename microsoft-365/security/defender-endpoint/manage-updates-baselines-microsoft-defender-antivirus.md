@@ -19,12 +19,12 @@ ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 48ab00c97559ecbbfe430b89c3742b8914c224ba
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 596616328a02182b39c67f58137d43ab626e1756
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788474"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823306"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
 
@@ -75,7 +75,7 @@ Du kan få flere oplysninger under [Administrer kilderne til Microsoft Defender 
 > - Denne artikel indeholder en liste over ændringer, der er inkluderet i den brede udgivelseskanal. [Se den seneste brede kanalversion her](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
 > - Hvis du vil vide mere om processen for gradvis udrulning og se flere oplysninger om den næste version, skal du se [Administrer den gradvise udrulningsproces for Microsoft Defender-opdateringer](manage-gradual-rollout.md).
 > - Hvis du vil vide mere om opdateringer til sikkerhedsintelligens, skal du se [Opdateringer til sikkerhedsintelligens for Microsoft Defender Antivirus og andet Microsoft-antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
-> - Hvis du leder efter en liste over Microsoft **[Defender-processer, skal du downloade projektmappen med mde-URL-adresser](https://download.microsoft.com/download/8/a/5/8a51eee5-cd02-431c-9d78-a58b7f77c070/mde-urls.xlsx)** og derefter vælge regnearket **Microsoft Defender-processer** . Projektmappen med mde-URL-adresser viser også de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til, som beskrevet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](configure-proxy-internet.md).
+> - Hvis du leder efter en liste over Microsoft **[Defender-processer, skal du downloade projektmappen med mde-URL-adresser](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)** og derefter vælge regnearket **Microsoft Defender-processer** . Projektmappen med mde-URL-adresser viser også de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til, som beskrevet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](configure-proxy-internet.md).
 
 ## <a name="monthly-platform-and-engine-versions"></a>Månedlige platform- og programversioner
 

@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 48d6ef27e71f89f6a81ac3c77ea17cf60dc90ee1
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 95c4d77014e31c748cc4bd6662a148810c01f79a
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664562"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64825184"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Nyheder i Microsoft Defender for Endpoint på Android
 
@@ -31,9 +31,18 @@ ms.locfileid: "64664562"
 
 Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+>[!NOTE]
+>Microsoft Defender understøttes ikke længere for versioner under 1.0.3011.0302. Brugerne anmodes om at opgradere til de nyeste versioner for at holde deres enheder sikre.
+Brugerne kan bruge følgende trin til at opdatere:
+>1. På din arbejdsprofil skal du gå til Administreret afspilning Store.
+>2. Tryk på profilikonet i øverste højre hjørne, og vælg "Administrer apps og enhed".
+>3. Find MDE under tilgængelige opdateringer, og vælg opdater.
+>
+>Hvis du støder på problemer, [kan du sende feedback i appen](/security/defender-endpoint/android-support-signin#send-in-app-feedback).
+
 ## <a name="microsoft-defender-for-endpoint-is-now-microsoft-defender-in-the-play-store"></a>Microsoft Defender for Endpoint er nu Microsoft Defender i Play-butikken
 
-Microsoft Defender for Endpoint er nu tilgængelig som **Microsoft Defender** i afspilningslageret. Med denne opdatering vil appen være tilgængelig som prøveversion for **forbrugere i området USA** – afhængigt af hvordan du logger på appen med din arbejdskonto eller personlige konto, har du adgang til funktioner til Microsoft Defender for Endpoint eller funktioner til Microsoft Defender for enkeltpersoner. Se [denne blog](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals) for at få flere oplysninger.
+Microsoft Defender for Endpoint er nu tilgængelig som **Microsoft Defender** i afspilningslageret. Med denne opdatering vil appen være tilgængelig som prøveversion for **forbrugere i området USA** – afhængigt af hvordan du logger på appen med din arbejdskonto eller personlige konto, har du adgang til funktioner til Microsoft Defender for Endpoint eller funktioner til Microsoft Defender for enkeltpersoner. Se [denne blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals) for at få flere oplysninger.
 
 ## <a name="threat-and-vulnerability-management"></a>Trussels- og sårbarhedsstyring
 

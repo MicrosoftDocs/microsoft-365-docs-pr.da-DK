@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Ofte stillede spørgsmål om flytning af data
+  title: Generelle ofte stillede spørgsmål om dataflytning
   ms.author: kvice
   author: kelleyvice-msft
   manager: laurawi
@@ -13,27 +13,27 @@ metadata:
   ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
   f1.keywords:
   - NOCSH
-  description: Find svar på ofte stillede spørgsmål om flytning af kernedata til et nyt Office 365 datacenter geo.
+  description: Få svar på ofte stillede spørgsmål om flytning af kernedata til et nyt Office 365 datacenter geo.
   ms.custom: seo-marvel-mar2020
-  ms.openlocfilehash: bb4090067db54ddd3e9e5726974386240cd3b3e7
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: c39f0c122d2c004a330b9b14f43bc65274f1c98d
+  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63679394"
-title: Ofte stillede spørgsmål om flytning af data
-summary: Her er svar på generelle spørgsmål om at flytte kernekundedata til et nyt datacenters geo.
+  ms.lasthandoff: 04/13/2022
+  ms.locfileid: "64823490"
+title: Generelle ofte stillede spørgsmål om dataflytning
+summary: Her er svar på generelle spørgsmål om flytning af inaktive kernekundedata til et nyt datacenter geo.
 sections:
 - name: Ignoreret
   questions:
   - question: >
       Hvilke kunder er berettiget til at anmode om en flytning?
     answer: >
-      Eksisterende Microsoft 365 kunder, der valgte et land, der var berettiget til det nye datacenter geo, vil kunne anmode om en flytning. Programmet findes kun for lejere med en berettiget landekode tildelt Microsoft 365-lejeren til at overføre kernekundedata i hvile for berettigede arbejdsbelastninger til det tilsvarende Microsoft 365-datacenter geo. Se siden Sådan anmoder [du om flytning af dine data](request-your-data-move.md) for at bekræfte, at du er berettigelse til dit land. 
+      Eksisterende Microsoft 365 kommercielle kunder, der har valgt et land, der er berettiget til det nye datacenter Geo, kan anmode om en flytning. Programmet findes kun for lejere med en berettiget landekode, der er tildelt den Microsoft 365 lejer, til at overføre centrale kundedata som inaktive data for berettigede arbejdsbelastninger til det tilsvarende Microsoft 365 datacenter geo. Se siden [Sådan anmoder du om flytning af data](request-your-data-move.md) for at bekræfte landets berettigelse.
   - question: >
-      Hvordan definerer vi centrale kundedata?
+      Hvordan definerer vi kernekundedata?
     answer: >
-      Kernekundedata er et udtryk, der refererer til et undersæt af kundedata defineret i [Vilkårene for Microsoft Online Services](https://aka.ms/ost):
+      Kernekundedata er et begreb, der refererer til et undersæt af kundedata, der er defineret i [vilkårene for Microsoft Online Services](https://aka.ms/ost):
 
       - Exchange Online postkasseindhold (brødtekst, kalenderposter og indholdet af vedhæftede filer i mails)
 
@@ -41,113 +41,114 @@ sections:
 
       - Filer, der er overført til OneDrive for Business
   - question: >
-      Hvad er området for Teams overførsel?
+      Hvad er omfanget for Teams migrering?
     answer: >
-      Ud over at Exchange Online, SharePoint Online og OneDrive for Business; Microsoft vil Teams data til det lokale datacenter.
+      Ud over Exchange Online SharePoint Online og OneDrive for Business. Microsoft overfører Teams data til det lokale datacenter.
 
-      - Teams chatbeskeder, herunder private beskeder og kanalmeddelelser.
+      - Teams chatbeskeder, herunder private meddelelser og kanalmeddelelser.
 
-      - Teams billeder, der bruges i chatsamtaler.
+      - Teams billeder, der bruges i chats.
 
 
-      Teams filer gemmes i SharePoint Online, Teams chatfiler gemmes i OneDrive for Business. Telefonsvarer, kalender og kontakter gemmes i Exchange Online. I mange tilfælde bruges Exchange Online, SharePoint Online og OneDrive for Business allerede af kunden i det lokale datacenter geo og er også en del af Microsoft 365-overførselsprogrammet for berettigede kundelande.
+      Teams filer gemmes i SharePoint Online, og Teams chatfiler gemmes i OneDrive for Business. Talebesked, kalender og kontakter gemmes i Exchange Online. I mange tilfælde bruges Exchange Online, SharePoint Online og OneDrive for Business allerede af kunden i det lokale datacenter Geo og er også en del af Microsoft 365 migrationsprogrammet for berettigede kundelande.
   - question: >
-      På hvilket tidspunkt er min overførsel fuldført, så min lejers kernekundedata gemmes in hvilende i mit nye geo?
+      Hvornår er min migrering fuldført, så min lejers kernekundedata gemmes inaktivt i mit nye geo?
     answer: >
-      På grund af delte afhængigheder Exchange Online og SharePoint Online/OneDrive for Business kan en overførsel ikke betragtes som fuldført, før begge tjenester er overført. Exchange Online og SharePoint Online/OneDrive for Business overføres ofte på separate tidspunkter og uafhængigt af hinanden. Kundelejeradministratorer modtager en bekræftelse i Meddelelsescenter, når hver tjenesteoverførsel er fuldført, og de kan når som helst få vist dataplaceringskortet i Administration for at bekræfte de grundlæggende kundedata på den in restplacering for hver tjeneste.
+      På grund af delte afhængigheder mellem Exchange Online og SharePoint Online/OneDrive for Business kan enhver overførsel ikke betragtes som fuldført, før begge tjenester er migreret. Exchange Online og SharePoint Online/OneDrive for Business ofte overføres på separate tidspunkter og uafhængigt af hinanden. Kundelejeradministratorer modtager bekræftelse i Meddelelsescenter, når hver tjenesteoverførsel er fuldført, og kan når som helst få vist dataplaceringskortet i Administration for at bekræfte de centrale kundedata på inaktiv placering for hver tjeneste.
   - question: >
       Hvordan sikrer du, at mine kundedata er sikre under flytningen, og at jeg ikke oplever nedetid?
     answer: >
-      Databevægelser er en back-end-tjenestehandling med minimal indvirkning for slutbrugere. Funktioner, der kan påvirkes, er angivet i [Under og efter, at dine data flyttes](during-and-after-your-data-move.md). Vi overholder [Serviceaftale (Service Level Agreement) for Microsoft Online Services for](https://go.microsoft.com/fwlink/p/?LinkId=523897) tilgængelighed, så der er intet, kunderne skal forberede sig på eller overvåge under flytningen.
+      Dataflytninger er en back end-tjenestehandling med minimal indvirkning på slutbrugerne. De funktioner, der kan påvirkes, er angivet i [Under og efter dine data flyttes](during-and-after-your-data-move.md). Vi overholder [Serviceniveauaftalen for Microsoft Online Services,](https://go.microsoft.com/fwlink/p/?LinkId=523897) så der ikke er noget, som kunderne behøver at forberede sig på eller overvåge under flytningen.
 
 
-      Alle Microsoft 365-tjenester kører de samme versioner i datacentrene, så du kan være sikker på ensartet funktionalitet. Din tjeneste understøttes fuldt ud i hele processen.
+      Alle Microsoft 365 tjenester kører de samme versioner i datacentrene, så du kan være sikker på, at funktionaliteten er ensartet. Din tjeneste understøttes fuldt ud under hele processen.
   - question: >
-      Hvad betyder det at have forskellige tjenester placeret i forskellige geos?
+      Hvad er virkningen af at have forskellige tjenester placeret i forskellige geografiske områder?
     answer: >
-      Nogle af Microsoft 365-tjenesterne kan være placeret i forskellige geos for nogle eksisterende kunder og for kunder, der er midt i flytteprocessen. Vores tjenester kører uafhængigt af hinanden, og det påvirker ikke brugeroplevelsen, hvis det er tilfældet.Men med henblik på dataopbevaring kan en lejeroverførsel ikke betragtes som fuldstændig, før både Exchange Online og SharePoint Online/OneDrive for Business er overført til det samme datacenter geografiske datacenter.
+      Nogle af de Microsoft 365 tjenester kan være placeret i forskellige geografiske områder for nogle eksisterende kunder og for kunder, der er midt i flytteprocessen. Vores tjenester kører uafhængigt af hinanden, og der er ingen indvirkning på brugeroplevelsen, hvis det er tilfældet. I forbindelse med dataopbevaring kan en lejeroverførsel dog ikke betragtes som fuldført, før både Exchange Online og SharePoint Online/OneDrive for Business migreres til det samme datacenter geo.
   - question: >
       Hvor er mine kernekundedata placeret?
     answer: >
-      Kundelejeradministratorer kan når som helst få vist dataplaceringskortet i Administration for at bekræfte de grundlæggende kundedata på de in restplaceringer for hver tjeneste, især for deres lejer.Vi publicerer også placeringen af datacenter geografiske datacentre, datacentre og placeringen af  [Office 365-kundedata på de interaktive datacenterkort](https://office.com/datamaps) Microsoft 365 som en reference til de aktuelle standard kernekundedata på restplaceringer for nye lejere. Du kan bekræfte, hvor dine kundedata ligger, via sektionen Dataplacering under din organisationsprofil i Microsoft 365 Administration.  
+      Kundelejeradministratorer kan når som helst få vist dataplaceringskortet i Administration for at bekræfte de vigtigste kundedata på inaktiv placering for hver tjeneste, især for deres lejer. Vi publicerer også placeringen af datacenter-geos, datacentre og placering af Office 365 kundedata på [de Microsoft 365 interaktive datacenterkort](https://office.com/datamaps) som en reference til de aktuelle standardkundedata på inaktive placeringer for nye lejere. Du kan bekræfte placeringen af dine inaktive kundedata via afsnittet Dataplacering under din organisationsprofil i Microsoft 365 Administration.
   - question: >
       Hvornår kan jeg anmode om en flytning?
     answer: >
-      Se siden Hvordan [du anmoder om flytning af dine data](request-your-data-move.md) for understøttede tidsrammer for dit datacenters geo.
+      Se siden [Sådan anmoder du om flytning af data](request-your-data-move.md) for understøttede tidsrammer for dit datacenter geo.
   - question: >
       Hvordan kan jeg anmode om at blive flyttet?
     answer: >
-      Berettigede kunder får vist en side i deres [Microsoft 365 Administration](https://admin.microsoft.com/). Se Sådan anmoder [du om flytning af dine data for at](request-your-data-move.md) få en vejledning i, hvordan du anmoder om en flytning.
+      Berettigede kunder får vist en side i deres [Microsoft 365 Administration](https://admin.microsoft.com/). Se [Sådan anmoder du om flytning af dine data for at](request-your-data-move.md) få en vejledning i, hvordan du anmoder om en flytning.
   - question: >
-      Kan jeg ændre mit valg, efter jeg har anmodet om en flytning?
+      Kan jeg ændre mit valg, når jeg har anmodet om en flytning?
     answer: >
       Det er ikke muligt for os at fjerne dig fra processen, når du har indsendt din anmodning.
   - question: >
-      Hvad sker der, hvis jeg ikke anmoder om en flytning inden deadline?
+      Hvad sker der, hvis jeg ikke anmoder om en flytning inden fristens udløb?
     answer: >
       Vi kan ikke acceptere anmodninger om overførsel efter den åbne tilmeldingsperiode.
   - question: >
-      Hvad nu, hvis jeg vil flytte mine data for at få en bedre netværksydeevne?
+      Hvad gør jeg, hvis jeg vil flytte mine data for at opnå bedre netværksydeevne?
     answer: >
-      Fysisk afstand til et Microsoft 365 et datacenter er ikke en garanti for en bedre netværksydeevne. Der er mange faktorer og komponenter, der påvirker netværkets ydeevne mellem slutbrugeren og Microsoft 365 tjeneste. Du kan finde flere oplysninger om denne og justering af ydeevnen [under Netværksplanlægning og justering af ydeevnen for Microsoft 365](network-planning-and-performance.md).
+      Fysisk nærhed til et Microsoft 365 datacenter er ikke en garanti for en bedre netværksydeevne. Der er mange faktorer og komponenter, der påvirker netværkets ydeevne mellem slutbrugeren og Microsoft 365-tjenesten. Du kan få flere oplysninger om dette og justering af ydeevnen under [Netværksplanlægning og justering af ydeevnen for Microsoft 365](network-planning-and-performance.md).
   - question: >
-      Flytter alle tjenesterne deres data på samme dag?
+      Flytter alle tjenesterne deres data samme dag?
     answer: >
-      Hver tjeneste flytter sig uafhængigt og flytter sandsynligvis deres data på forskellige tidspunkter.
+      Hver tjeneste flyttes uafhængigt og flytter sandsynligvis deres data på forskellige tidspunkter.
   - question: >
       Kan jeg vælge, hvornår mine data skal flyttes?
     answer: >
       Kunder kan ikke vælge en bestemt dato, de kan ikke forsinke deres flytning, og vi kan ikke dele en bestemt dato eller tidsramme for flytningen.
   - question: >
-      Kan du dele, hvornår mine data skal flyttes?
+      Kan du dele, når mine data flyttes?
     answer: >
-      Databevægelser er en back-end-handling med minimal indvirkning for slutbrugere. Den kompleksitet, præcision og skalering, hvorpå vi skal udføre databevægelser inden for et globalt styret og automatiseret miljø, forhindrer os i at dele, når der forventes en data flytte for din lejer eller en anden enkelt lejer. Kunder modtager én bekræftelse i Meddelelsescenter pr. deltagende tjeneste, når dataover flytningen er fuldført.
+      Dataflytninger er en back end-handling, der har minimal indvirkning på slutbrugerne. Den kompleksitet, præcision og skalering, hvor vi skal udføre dataflytninger i et globalt drevet og automatiseret miljø, forhindrer os i at dele, når en dataflytning forventes at blive fuldført for din lejer eller en anden enkelt lejer. Kunderne modtager én bekræftelse i Meddelelsescenter pr. deltagertjeneste, når dataflytningen er fuldført.
   - question: >
-      Hvad sker der, hvis brugerne får adgang til tjenester, mens dataene flyttes?
+      Hvad sker der, hvis brugerne tilgår tjenester, mens dataene flyttes?
     answer: >
-      Se [Under og efter flytning af dine data](during-and-after-your-data-move.md) for at få en komplet liste over funktioner, der kan være begrænset under dele af dataenes flytning for hver tjeneste.
+      Se [Under og efter dine data flyttes](during-and-after-your-data-move.md) for at få vist en komplet liste over funktioner, der kan være begrænset under dele af dataflytningen for hver tjeneste.
   - question: >
-      Hvordan ved jeg, at flytningen er fuldført?
+      Hvordan gør jeg vide, at flytningen er fuldført?
     answer: >
-      Se Microsoft 365 meddelelsescenter for at få bekræftet, at flytningen af hver tjenestes data er fuldført. Når hver tjenestes data flyttes, slår vi en meddelelse om fuldførelse op, så du får tre meddelelser om fuldførelse: én hver for Exchange Online, SharePoint Online og Skype for Business Online. Du kan også bekræfte, hvor dine kundedata ligger, via sektionen Dataplacering under din organisationsprofil i Microsoft 365 Administration.  
+      Se Microsoft 365 Meddelelsescenter for at få bekræftet, at flytningen af hver tjenestes data er fuldført. Når hver tjenestes data flyttes, sender vi en meddelelse om fuldførelse, så du får tre meddelelser om fuldførelse: én for Exchange Online, SharePoint Online og Skype for Business Online. Du kan også bekræfte placeringen af dine inaktive kundedata via afsnittet Dataplacering under din organisationsprofil i Microsoft 365 Administration.
   - question: >
-      Jeg er Microsoft 365 kunde i et af de nye datacenter-geos, men da jeg tilmeldte mig, valgte jeg et andet land. Hvordan kan jeg flyttes til det nye datacenters geo?
+      Jeg er Microsoft 365 kunde i et af de nye datacenter geos, men da jeg tilmeldte mig, valgte jeg et andet land. Hvordan kan jeg flyttes til det nye datacenter Geo?
     answer: >
-      Det er ikke muligt at ændre det tilmeldingsland, der er knyttet til din lejer. I stedet skal du oprette en ny Microsoft 365-lejer med et nyt abonnement og manuelt flytte dine brugere og data til den nye lejer.
+      Det er ikke muligt at ændre det tilmeldingsland, der er knyttet til din lejer. Du skal i stedet oprette en ny Microsoft 365 lejer med et nyt abonnement og manuelt flytte dine brugere og data til den nye lejer.
   - question: >
-      Hvad sker der, hvis vi er i gang med at sende maildata til Microsoft 365 under Exchange Online overførsel?
+      Hvad sker der, hvis vi er i gang med at overføre maildata til Microsoft 365 under flytningen af Exchange Online?
     answer: >
-      Dette er et meget almindeligt scenarie og understøttes fuldt ud.  Cloud migration between datacenter geos does not interfere with any on-premises to cloud mailbox migrations.
+      Dette er et meget almindeligt scenarie og understøttes fuldt ud. Cloudmigrering mellem datacenter-geos forstyrrer ikke migrering af cloudpostkasser i det lokale miljø.
   - question: >
-      Kan jeg prøve nogle brugere?
+      Kan jeg styre nogle brugere?
     answer: >
-      Du kan oprette en separat prøvelejer for at teste forbindelsen, men prøvelejeren kan ikke kombineres på nogen måde med din eksisterende lejer.
+      Du kan oprette en separat prøveversionslejer for at teste forbindelsen, men prøveversionslejer kan ikke kombineres på nogen måde med din eksisterende lejer.
   - question: >
-      Jeg vil ikke vente på, at Microsoft flytter mine data. Kan jeg bare oprette en ny lejer og flytte mig selv?
+      Jeg vil ikke vente på, at Microsoft flytter mine data. Kan jeg blot oprette en ny lejer og flytte mig selv?
     answer: >
-      Ja, men processen bliver ikke så problemfri, som hvis Microsoft udfører flytningen af dataene.
+      Ja, processen vil dog ikke være så problemfri, som hvis Microsoft skulle udføre dataflytningen.
 
 
-      Hvis du opretter en ny lejer, efter det nye datacenter geo er tilgængeligt, vil den nye lejer være hostet i det nye geo. Denne nye lejer er helt adskilt fra din tidligere lejer, og du er ansvarlig for at flytte alle brugerpostkasser, webstedsindhold, domænenavne og alle andre data. Bemærk, at du ikke kan flytte lejernavnet fra én lejer til en anden. Vi anbefaler, at du venter på det flytteprogram, der leveres af Microsoft, da vi vil sørge for at flytte alle indstillinger, data og abonnementer til dine brugere.
+      Hvis du opretter en ny lejer, når det nye datacenter Geo er tilgængeligt, hostes den nye lejer i den nye geo. Denne nye lejer er helt adskilt fra din tidligere lejer, og du vil være ansvarlig for at flytte alle brugerpostkasser, webstedsindhold, domænenavne og andre data. Bemærk, at du ikke kan flytte lejernavnet fra én lejer til en anden. Vi anbefaler, at du venter på det flytteprogram, der leveres af Microsoft, da vi sørger for at flytte alle indstillinger, data og abonnementer for dine brugere.
   - question: >
-      Mine kundedata er allerede blevet flyttet til et nyt datacenters geocenter. Kan jeg gå tilbage?
+      Mine kundedata er allerede blevet flyttet til et nyt datacenter geo. Kan jeg flytte tilbage?
     answer: >
-      Nej, det er ikke muligt. Kunder, der er blevet flyttet til nye geodatacentre, kan ikke flyttes tilbage. Som kunde i et hvilket som helst geo vil du opleve den samme tjenestekvalitet, ydeevne og sikkerhedskontrolelementer, som du havde før. [Microsoft 365 Multi Geo](https://aka.ms/multi-geo) er tilgængeligt for nogle kunder som et tilføjelsesprogrammet og gør det muligt for en enkelt lejer at oprette flere satellit geos og flytte brugerdata til disse geos med dataopbevaringsforpligtelser.
+      Nej, det er ikke muligt. Kunder, der er blevet flyttet til nye geo-datacentre, kan ikke flyttes tilbage. Som kunde i et hvilket som helst geografisk område vil du opleve den samme kvalitet af service-, ydeevne- og sikkerhedskontroller, som du gjorde før. [Microsoft 365 Multi Geo](https://aka.ms/multi-geo) er tilgængelig for nogle kunder som et tilføjelsesprogram og gør det muligt for en enkelt lejer at oprette flere satellit-geos og flytte brugerdata til disse geografiske områder med forpligtelser til dataopbevaring.
   - question: >
-      Vil Microsoft 365 lejere, der er hostet i de nye datacentre, være tilgængelige for brugere uden for landet?
+      Vil Microsoft 365 lejere, der hostes i de nye datacentre, være tilgængelige for brugere uden for landet?
     answer: >
-      Ja. Microsoft vedligeholder et stort globalt netværk med offentlige internetforbindelser på mere end 130 placeringer i 35 lande over hele verden med peeringaftaler med mere end 2.700 internetudbydere. Brugerne vil kunne få adgang til datacentrene, uanset hvor de er på internettet.
+      Ja. Microsoft har et stort globalt netværk med offentlige internetforbindelser på mere end 130 placeringer i 35 lande over hele verden med peeringaftaler med mere end 2.700 internetudbydere. Brugerne kan få adgang til datacentrene, uanset hvor de er på internettet.
   - question: >
-      Min lejer har konfigureret tilføjelsesprogrammet Multi Geo. Kan jeg stadig tilmelde mig min lejer i Microsoft 365 Move Program? for at ændre min standard-geo og flytte en bruger, der ikke er i et satellitområde, til det nye standard-geo?
+      Min lejer har konfigureret Multi Geo-tilføjelsesprogrammet. Kan jeg stadig tilmelde mig min lejer i Microsoft 365 Flyt program? for at ændre min geostandard og flytte alle brugere, der ikke er i et satellitområde, til det nye geostandardområde?
     answer: >
-      Ja, din lejer er berettiget til at tilmelde sig, men der er væsentlige overvejelser, da flytning på lejerniveau ikke understøttes fuldt ud for kunder, der har konfigureret [Multi-Geo](https://aka.ms/multi-geo).
+      Ja, din lejer er berettiget til at tilmelde sig, men der er betydelige overvejelser, da flytning på lejerniveau ikke understøttes fuldt ud for kunder, der har konfigureret [Multi-Geo](https://aka.ms/multi-geo).
 
 
-      SharePoint Online og OneDrive for Business kan ikke overføres til det nye datacenters geo-område på lejerniveau via dette program. Kundeadministratoren kan konfigurere OneDrive for Business-delinger til at flytte til et tilgængeligt område ved hjælp af Multi-Geo, men standardplaceringen for lejeren kan ikke ændres, når multi-geo er blevet konfigureret for en lejer.
+      SharePoint Online og OneDrive for Business kan ikke overføres til det nye datacenter geo på lejerniveau via dette program. Kundeadministratoren kan konfigurere OneDrive for Business shares til at flytte til et hvilket som helst tilgængeligt område ved hjælp af Multi-Geo, men standardplaceringen for lejeren kan ikke ændres, når Multi-Geo er konfigureret for en lejer.
 
 
-      Kunder, der tilmelder sig overførslen, flytter alle Exchange Online-postkasser fra dit aktuelle standard-geo til dit nye lokale datacenters geo og opdaterer standard-Exchange Online-området. Vi flytter ikke EXO-postkasser, der er konfigureret i multi geo-satellitområder, for fortsat at respektere dataopbevaring fra satellitområdet, som du havde til hensigt.  Teams for lejeroverførsel til chattjenesten for kunder med en Multi Geo-konfiguration opfører sig på samme måde Exchange Online.
-  - question: "Jeg har offentlige mapper, der er installeret i min lejer. Hvad vil påvirke adgang til offentlige mapper under eller efter flytningen? \n"
+      For kunder, der tilmelder sig migrering – flytter vi alle Exchange Online postkasser fra din aktuelle standard-geo til dit nye lokale datacenter geo og opdaterer standardområdet for Exchange Online. Vi flytter ikke nogen EXO-postkasser, der er konfigureret i Multi Geo-satellitområder, for fortsat at respektere dataopbevaring af satellitområder, som du har til hensigt.  Teams lejermigrering for chattjenester for kunder med en Multi Geo-konfiguration fungerer på samme måde som Exchange Online.
+  - question: >
+      Jeg har udrullet offentlige mapper i min lejer. Hvad vil påvirke adgangen til offentlige mapper under eller efter flytningen?
     answer: >
-      Det påvirker ikke slutbrugere, der får adgang til offentlige mapper under eller efter flytning af offentlige mapper. Dog er offentlige mapper muligvis ikke tilgængelige til administration i værktøjet Exchange Administration, før alle postkasser i offentlige mapper flyttes til samme område. Se denne [artikel for at](https://aka.ms/pfxrf) få flere oplysninger.
-additionalContent: "\n## <a name=\"related-topics\"></a>Relaterede emner\n  [Flytning af kernedata til Microsoft 365 datacenter geos](moving-data-to-new-datacenter-geos.md)\n\n  [Sådan anmoder du om, at dine data flyttes](request-your-data-move.md)\n\n  [Microsoft 365 Multi Geo](https://aka.ms/multi-geo)\n\n  [Microsoft 365 interaktivt datacenterkort](https://office.com/datamaps)\n\n  [Microsoft 365 support](../admin/get-help-support.md)\n\n  [Nye datacenter-geos til Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)\n\n  [Azure-tjenester efter område](https://azure.microsoft.com/regions/)"
+      Det påvirker ikke slutbrugere, der tilgår offentlige mapper under eller efter flytning af offentlige mapper. De offentlige mapper er dog muligvis ikke tilgængelige til administration i værktøjet Exchange Administration, før alle postkasser i offentlige mapper flyttes i samme område. Du kan finde flere oplysninger i [denne artikel](https://aka.ms/pfxrf) .
+additionalContent: "\n## <a name=\"related-topics\"></a>Relaterede emner\n  [Flytning af kernedata til nye Microsoft 365 geos for datacentre](moving-data-to-new-datacenter-geos.md)\n\n  [Sådan anmoder du om flytning af dine data](request-your-data-move.md)\n\n  [Microsoft 365 Multi Geo](https://aka.ms/multi-geo)\n\n  [Microsoft 365 interaktivt datacenterkort](https://office.com/datamaps)\n\n  [Microsoft 365 support](../admin/get-help-support.md)\n\n  [Nyt datacenter-geos til Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)\n\n  [Azure-tjenester efter område](https://azure.microsoft.com/regions/)"

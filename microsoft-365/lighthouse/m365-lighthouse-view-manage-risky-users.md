@@ -1,5 +1,5 @@
 ---
-title: Få vist og administrer risikabelt bruger
+title: Få vist og administrer risikable brugere
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,66 +15,66 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365, kan du få mere at vide om, hvordan du får vist og administrerer risikabele brugere.
-ms.openlocfilehash: 708fc0576c85d9b8511ac6b31ed0398fae1b20d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist og administrerer risikable brugere.
+ms.openlocfilehash: 0b7567404b909927a80b69184299baae131f8eb7
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704915"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824262"
 ---
-# <a name="view-and-manage-risky-users"></a>Få vist og administrer risikabelt bruger
+# <a name="view-and-manage-risky-users"></a>Få vist og administrer risikable brugere
 
-Microsoft indsamler og analyserer hver dag trillioner af bruger login-signaler. Disse signaler bruges til at opbygge gode adfærdsmønstre for logon og identificere potentielle risiko for forsøg på at logge på. Azure Active Directory (Azure AD) Identity Protection bruger disse signaler til at gennemse brugeres logonforsøg og handle, hvis der er mistænkelig aktivitet.
+Microsoft indsamler og analyserer billioner af brugerlogonsignaler hver dag. Disse signaler bruges til at hjælpe med at skabe gode funktionsmådemønstre for brugerlogon og identificere potentielle risikable logonforsøg. Azure Active Directory (Azure AD) Identity Protection bruger disse signaler til at gennemse brugerlogonforsøg og udføre handlinger, hvis der er mistænkelig aktivitet.
 
-Microsoft 365 Lighthouse hjælper med at administrere risici, der registreres af Azure AD Identity Protection, ved at give en enkelt visning af risikabelde brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikabelt brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365 konto. Du kan også få vist indsigter for bedre at forstå en brugers risiko og fastlægge de næste trin.
+Microsoft 365 Lighthouse hjælper med at administrere de risici, der registreres af Azure AD Identity Protection, ved at levere en enkelt visning af risikable brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikable brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365 konto. Du kan også få vist indsigt for bedre at forstå en brugers risiko og fastlægge de næste trin.
 
 Azure AD Identity Protection identificerer risici af mange typer, herunder:
 
-- Lækerede legitimationsoplysninger
+- Lækkede legitimationsoplysninger
 - Anonym brug af IP
-- Atypisk rejse
-- Logge på fra enheder, der er inficeret
-- Logge på fra IP-adresser med mistænkelig aktivitet
-- Logge på fra ukendte placeringer
+- Atypiske rejser
+- Logger på fra inficerede enheder
+- Logon fra IP-adresser med mistænkelig aktivitet
+- Logon fra ukendte placeringer
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Følgende betingelser skal være opfyldt, før brugere kan vises på listen over risikabele brugere:
+Følgende betingelser skal være opfyldt, før brugerne kan blive vist på listen over risikable brugere:
 
-- Kundelejeren skal have en Azure AD Premium licens for hver bruger. Du kan finde flere oplysninger om, hvilke licenser der understøtter Azure AD Identity Protection, [under Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)
+- Kundelejer skal have en Azure AD Premium licens for hver bruger. Du kan få flere oplysninger om, hvilke licenser der understøtter Azure AD Identity Protection, under [Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- Kundelejeren skal være aktiv i Microsoft 365 Fyrtårn. Du kan finde ud af, om en lejer er aktiv[, Microsoft 365 oversigten over lejere i Lighthouse](m365-lighthouse-tenant-list-overview.md).
+- Kundelejer skal være aktiv i Microsoft 365 Lighthouse. Hvis du vil finde ud af, om en lejer er aktiv, skal du se [sideoversigten over Microsoft 365 Fyrtårnslejere](m365-lighthouse-tenant-list-overview.md).
 
-## <a name="review-detected-risks-and-take-action"></a>Gennemse registrerede risici og reaktion
+## <a name="review-detected-risks-and-take-action"></a>Gennemse registrerede risici, og udfør handlinger
 
-I Azure AD Identity Protection omfatter risikoregistreringer alle identificerede mistænkelige handlinger relateret til brugerkonti i Azure AD.
+I Azure AD Identity Protection omfatter risikoregistreringer alle identificerede mistænkelige handlinger, der er relateret til brugerkonti i Azure AD.
 
-1. Vælg Brugere i venstre navigationsrude i **Fyrtårn**.
+1. Vælg **Brugere** i navigationsruden til venstre i Lighthouse.
 
-2. Vælg **fanen Risikabelt bruger** .
+2. Vælg fanen **Risikable brugere** .
 
-3. Gennemse brugerne på listen med risikotilstanden **I risiko**.
+3. Gennemse brugerne på listen med **risikotilstanden Risiko.**
 
-4. Vælg **Vis risikoregistreringer for** at få detaljerede oplysninger om de registrerede risici for hver bruger. Du kan finde flere oplysninger om risikotyper og [registrering under Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
+4. Vælg **Vis risikoregistreringer** for at få detaljerede oplysninger om de registrerede risici for hver bruger. Du kan få flere oplysninger om risikotyper og registrering under [Hvad er risikoen?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
 
 5. For hver bruger skal du vurdere risikoregistreringerne og vælge en af følgende handlinger efter behov:
 
-    - Nulstil adgangskode – rediger eller nulstil brugerens adgangskode.
+    - Nulstil adgangskode – skift eller nulstil brugeradgangskoden.
 
     - Bloker logon – undgå, at nogen logger på som denne bruger.
 
-    - Bekræft, at brugeren er kompromitteret – sæt risikotilstanden til bekræftet kompromitteret.
+    - Bekræft, at brugeren er kompromitteret – angiv risikotilstanden til bekræftet kompromitteret.
 
-    - Afvis brugerrisici – sæt risikotilstanden til afvist.
+    - Afvis brugerrisiko – angiv risikotilstanden til afvist.
 
-## <a name="take-action-on-multiple-user-accounts-at-once"></a>Gør noget på flere brugerkonti på én gang
+## <a name="take-action-on-multiple-user-accounts-at-once"></a>Udfør handlinger på flere brugerkonti på én gang
 
-Sådan kan du gøre noget for flere påvirkede brugere på én gang:
+Sådan reagerer du på flere berørte brugere på én gang:
 
-1. Vælg **det sæt af** brugere, du vil handle på, under fanen Risikabelt bruger.
+1. Vælg det sæt af brugere, du vil foretage en handling på, under fanen **Risikable brugere** .
 
-2. Vælg en af følgende handlinger, du vil udføre:
+2. Vælg en af følgende handlinger, der skal udføres:
 
     - Nulstil adgangskode
 
@@ -82,12 +82,12 @@ Sådan kan du gøre noget for flere påvirkede brugere på én gang:
 
     - Bekræft, at brugeren er kompromitteret
 
-    - Afvis brugerrisici
+    - Afvis brugerrisiko
 
 > [!NOTE]
-> Hvis den organisation, du administrerer, har en Azure AD Premium P2-licens, anbefales det, at du aktiverer risikobaserede politikker for betinget adgang for brugerne. Få mere at vide under [Betinget adgang: Bruger risikobaseret betinget adgang](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user).
+> Hvis den organisation, du administrerer, har en Azure AD Premium P2-licens, anbefales det, at du aktiverer politikker for betinget adgang baseret på brugerrisiko. Du kan få flere oplysninger under [Betinget adgang: Brugerrisikobaseret betinget adgang](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user).
 
 ## <a name="related-content"></a>Relateret indhold
-[Selvstudium: Brug risikoregistreringer til brugeradgang til at udløse Azure AD-multifaktorgodkendelse](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) eller ændringer af adgangskode (artikel)\
+[Selvstudium: Brug risikoregistreringer for brugerlogon til at udløse Azure AD Multi-Factor Authentication eller adgangskodeændringer](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (artikel)\
 [Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks) (artikel) \
-[Afhjælpe risici og fjerne blokeringen af brugere](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) (artikel)
+[Afhjælpning af risici og fjernelse af blokering af brugere](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) (artikel)

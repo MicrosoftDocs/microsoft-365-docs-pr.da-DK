@@ -15,51 +15,51 @@ ms.collection:
 ms.custom: admindeeplinkMAC
 f1.keywords:
 - NOCSH
-description: Brug Microsoft 365 overvågning for oplysninger om hændelser eller rådgivning i Microsoft 365.
-ms.openlocfilehash: 2d78bcae258730e1b48c7d6cc77fa5ae2b200b07
-ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
+description: Brug Microsoft 365 overvågning for at få oplysninger om hændelser eller gode råd i Microsoft 365.
+ms.openlocfilehash: 47f54859d7dd0973814a0ad9229a902bddcb8587
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64520811"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824841"
 ---
-# <a name="learn-about-microsoft-365-monitoring"></a>Få mere at vide Microsoft 365 overvågning
+# <a name="learn-about-microsoft-365-monitoring"></a>Få mere at vide om overvågning af Microsoft 365
 
-Du kan bruge dashboards [i Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) til at overvåge forskellige Microsoft-tjenester for din organisations Microsoft 365 abonnement. Denne funktion blev oprindeligt startet med Exchange Online og udvides nu til andre Microsoft-tjenester f.eks. Microsoft Teams, Microsoft 365 Apps og mere tjeneste i fremtiden. Overvågning giver dig oplysninger om hændelser og råd, der indsamles i disse kategorier:
+Du kan bruge dashboards i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) til at overvåge tilstanden for forskellige Microsoft-tjenester for din organisations Microsoft 365 abonnement. Denne funktion blev oprindeligt startet med Exchange Online og blev nu udvidet til andre Microsoft-tjenester, f.eks. Microsoft Teams, Microsoft 365 Apps og mere tjeneste i fremtiden. Overvågning giver dig oplysninger om hændelser og gode råd, der indsamles i disse kategorier:
 
-- **Infrastruktur**. Problemet registreres i den Microsoft 365, som Microsoft ejer til at levere regelmæssige opdateringer og løse problemet. Brugere kan f.eks. ikke få adgang Exchange Online på grund af problemer med Exchange eller anden Microsoft 365 skyinfrastruktur.
+- **Infrastruktur**. Der registreres et problem i den Microsoft 365 infrastruktur, som Microsoft ejer for at levere regelmæssige opdateringer og løse problemet. Brugerne kan f.eks. ikke få adgang til Exchange Online på grund af problemer med Exchange eller andre Microsoft 365 cloudinfrastruktur.
 
-- **Tredjepartsinfrastruktur**. Problemet registreres i tredjepartsinfrastruktur, som organisationen har taget afhængighed af og kræver handling fra din organisation for at løse problemet. Eksempelvis bliver brugergodkendelsestransaktioner begrænser af en tredjeparts STS-udbyder (security token service), der forhindrer brugere i at oprette forbindelse til Exchange Online.
+- **Tredjepartsinfrastruktur**. Der registreres et problem i tredjepartsinfrastrukturen, som din organisation har taget en afhængighed af, og som kræver handling fra din organisation for at løse problemet. Brugergodkendelsestransaktioner begrænses f.eks. af en TREDJEPARTSUDBYDER af sikkerhedstokentjenester, der forhindrer brugerne i at oprette forbindelse til Exchange Online.
 
-- **Kundeinfrastruktur**. Problemet registreres i organisationens infrastruktur og kræver handling fra din organisation for at løse problemet. Brugere kan f.eks. ikke få adgang til Exchange Online, fordi de ikke kan hente et godkendelsestoken fra STS-udbyderen, der er hostet af din organisation på grund af et udløbet certifikat.
+- **Kundeinfrastruktur**. Problemet er registreret i organisationens infrastruktur og kræver handling fra din organisation for at løse problemet. Brugerne kan f.eks. ikke få adgang til Exchange Online, fordi de ikke kan hente et godkendelsestoken fra STS-udbyderen, der hostes af din organisation, på grund af et udløbet certifikat.
 
-Her er et eksempel på **siden Tjenestetilstand** i Microsoft 365 Administration,  >  der findes på Health **Tjenestetilstand** for organisationsscenarier og prioritetskontoscenarier.[](../admin/setup/priority-accounts.md)
+Her er et eksempel på siden **Tjenestetilstand** i Microsoft 365 Administration, som er tilgængelig på **Tilstand** >  **Tjenestetilstand** for scenarier med organisationsscenarier og [prioritetskonto](../admin/setup/priority-accounts.md).
 
 ![Siden Tjenestetilstand i Microsoft 365 Administration.](../media/microsoft-365-exchange-monitoring/service-health-dashboard-example.png)
 
-**Problemer i din organisation kan** identificeres og bruges af overvågning og prioritet af kontoovervågning på organisationsniveau.
+**Problemer i din organisation** identificeres og bruges af overvågning på organisationsniveau og prioriteret kontoovervågning.
 
-Værdien af kolonnen **Tilstand under Problemer** i organisationen angiver, om organisationens infrastruktur eller tredjepartssoftware påvirker tjenesteoplevelsen for organisationens brugere og/eller prioritetskonti i Exchange Online. Rådgivning eller hændelser kræver, at du løser dine handlinger.
+Værdien af kolonnen **Sundhed** under **Problemer i din organisation** angiver, om organisationens infrastruktur eller tredjepartssoftware påvirker tjenestetilstandsoplevelsen for organisationens brugere og/eller prioritetskonti i Exchange Online. Rådgivere eller hændelser kræver, at dine handlinger løses.
 
-Værdien af kolonnen **Tilstand** under **Microsofts tjeneste** sundhed angiver, at tjenesten er sund eller har gode råd eller hændelser baseret på de skytjenester, som Microsoft vedligeholder.
+Værdien af kolonnen **Tilstand** under **Microsofts tjenestetilstand** angiver, at tjenesten er sund, eller at den indeholder rådgivere eller hændelser, der er baseret på de cloudtjenester, som Microsoft vedligeholder.
 
-Her er et eksempel på siden Exchange Online-overvågning i Microsoft 365 Administration, der viser stilstanden for scenarier med organisations- og prioritetskonti > , der er tilgængelige **fra Tilstand Tjenestetilstand** >  **Exchange Online**.
+Her er et eksempel på den Exchange Online overvågningsside i Microsoft 365 Administration, der viser tilstanden af scenarier på organisationsniveau og prioritetskonti, som er tilgængelige fra **Tilstand** >  **Tjenestetilstand** >  **Exchange Online**.
 
-![Scenarier på organisationsniveau for Exchange Online overvågnings.](../media/microsoft-365-exchange-monitoring/exchange-monitoring-org-scenarios.png)
+![Scenarier på organisationsniveau til Exchange Online overvågning.](../media/microsoft-365-exchange-monitoring/exchange-monitoring-org-scenarios.png)
 
-Med scenarielistesiden kan du se, om Microsoft-tjenesten er sund eller ej, og om der er tilknyttet hændelser eller gode råd. Med Exchange Online kan du f.eks. se på tjenestestilstanden for bestemte mailscenarier og få vist næsten realtidslydesignaler for at bestemme påvirkningen efter scenarie på organisationsniveau. Du kan også se scenarier for prioritetskontoens tilstand, hvis de er tilgængelige.
+På scenarielistesiden kan du se, om Microsoft-tjenesten er sund eller ej, og om der er nogen tilknyttede hændelser eller rådgivere. Med Exchange Online overvågning kan du f.eks. se på tjenestetilstanden for bestemte mailscenarier og få vist signaler i næsten realtid for at bestemme virkningen efter scenariet på organisationsniveau. Du kan også se tilstanden for prioriterede kontoscenarier, hvis de er tilgængelige.
 
 ## <a name="requirements-for-monitoring"></a>Krav til overvågning
 
-Eksempelvisningen er aktiveret for kunder, der opfylder følgende krav:
+Denne prøveversion er aktiveret for kunder, der opfylder følgende krav:
 
-- Din organisation skal have en licenstælling på mindst 5.000 fra én eller en kombination af disse produkter: Office 365 E3, Microsoft 365 E3, Office 365 E5 eller Microsoft 365 E5.
+- Din organisation skal have et licensantal på mindst 5.000 fra et eller en kombination af disse produkter: Office 365 E3, Microsoft 365 E3, Office 365 E5 eller Microsoft 365 E5.
 
-   Din organisation kan f.eks. have 3.000 Office 365 E3-licenser og 2.500 Microsoft 365 E5, i alt 5.500 licenser fra de kvalificerende produkter.
+   Din organisation kan f.eks. have 3.000 Office 365 E3 licenser og 2.500 Microsoft 365 E5 i alt 5.500 licenser fra de kvalificerende produkter.
 
-- Din organisation skal have mindst 50 månedlige aktive brugere for en eller flere centrale Microsoft 365-tjenester, som omfatter Microsoft Teams, OneDrive for Business, SharePoint Online, Exchange Online og Office apps.
+- Din organisation skal have mindst 50 aktive brugere om måneden for en eller flere centrale Microsoft 365-tjenester, herunder Microsoft Teams, OneDrive for Business, SharePoint Online, Exchange Online og Office Apps.
 
-- Alle roller med tilladelser på Dashboard for tjenestetilstand kan få adgang Exchange Online Overvågnings. Hvis du vil have flere oplysninger, skal du se [Sådan kontrollerer du tjenestetilstanden for Microsoft 365](view-service-health.md).
+- Alle roller med tilladelser til dashboardniveau for tjenestetilstand kan få adgang Exchange Online overvågning. Hvis du vil have flere oplysninger, skal du se [Sådan kontrollerer du tjenestetilstanden for Microsoft 365](view-service-health.md).
 
 ## <a name="additional-monitoring-for-microsoft-services"></a>Yderligere overvågning af Microsoft-tjenester
 
@@ -75,44 +75,44 @@ Tjenestespecifik overvågning er også aktiveret for følgende Microsoft-tjenest
 
 Du kan give feedback på to måder:
 
-- Brug indstillingen **Giv feedback**, der er tilgængelig på hver side Microsoft 365 Administration.
+- Brug indstillingen **Giv feedback** tilgængelig på alle sider i Microsoft 365 Administration.
 
-- Send feedback ved hjælp af **Er dette indlæg nyttigt? link til en bestemt hændelse eller vejledning.
+- Send feedback ved hjælp af **Er dette indlæg nyttigt? et link til en bestemt hændelse eller rådgivning.
 
-  !["Er dette indlæg nyttigt?" link til en bestemt hændelse eller vejledning.](../media/microsoft-365-exchange-monitoring/exchange-monitoring-example-incident-feedback.png)
+  !["Er dette indlæg nyttigt?" et link til en bestemt hændelse eller rådgivning.](../media/microsoft-365-exchange-monitoring/exchange-monitoring-example-incident-feedback.png)
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-### <a name="1-why-dont-i-see-view-link-under-organizational-monitoring-column-in-the-microsoft-365-admin-center-inside-service-health"></a>1. Hvorfor kan jeg ikke se linket "vis" under kolonnen Organisatorisk overvågning på Microsoft 365 Administration i Tjeneste sundhed?
+### <a name="1-why-dont-i-see-view-link-under-organizational-monitoring-column-in-the-microsoft-365-admin-center-inside-service-health"></a>1. Hvorfor kan jeg ikke se linket "vis" under kolonnen Organisationsovervågning i Microsoft 365 Administration i Service Health?
 
-Først skal du kontrollere, at du har aktiveret den nye Administration på **siden** Startside for [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339).
+Først skal du sørge for, at du har aktiveret det nye Administration **på startsiden** for [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 
-Kontrollér derefter, at du opfylder begge følgende krav:
+Sørg derefter for, at du opfylder begge følgende krav:
 
-- Din organisation skal have en licenstælling på mindst 5.000 fra én eller en kombination af disse produkter: Office 365 E3, Microsoft 365 E3, Office 365 E5 eller Microsoft 365 E5.
+- Din organisation skal have et licensantal på mindst 5.000 fra et eller en kombination af disse produkter: Office 365 E3, Microsoft 365 E3, Office 365 E5 eller Microsoft 365 E5.
 
-- Din organisation skal have mindst 50 månedlige aktive brugere for en eller flere centrale Microsoft 365-tjenester, som omfatter Microsoft Teams, OneDrive for Business, SharePoint Online, Exchange Online og Office apps.
+- Din organisation skal have mindst 50 aktive brugere om måneden for en eller flere centrale Microsoft 365-tjenester, herunder Microsoft Teams, OneDrive for Business, SharePoint Online, Exchange Online og Office Apps.
 
-Hvis antallet af licenser for din organisation falder til under 5.000 brugere, og de månedlige aktive brugere falder til under 50 brugere i kernetjenesterne, bliver Exchange Online-overvågning ikke aktiveret, før disse krav er opfyldt.
+Hvis licensantallet for din organisation falder til under 5.000 brugere, og de månedlige aktive brugere falder under 50 brugere i kernetjenesterne, aktiveres Exchange Online overvågning ikke, før disse krav er opfyldt.
 
 ### <a name="2-will-there-be-other-monitoring-scenarios-for-other-services-in-future"></a>2. Vil der i fremtiden være andre overvågningsscenarier for andre tjenester?
 
-Ja. Vi har et par flere tjenester i offentlig prøveversion nu. Vi fortsætter med at arbejde på at udvide aftrykket til andre tjenester.
+Ja. Vi har et par flere tjenester i offentlig prøveversion nu. Vi vil fortsætte med at arbejde på at udvide fodaftrykket til andre tjenester.
 
-### <a name="3-what-is-the-plan-for-general-availability-of-this-experience"></a>3. Hvad er planen for generel tilgængelighed af denne oplevelse?
+### <a name="3-what-is-the-plan-for-general-availability-of-this-experience"></a>3. Hvad er planen for offentlig tilgængelighed af denne oplevelse?
 
-Microsofts plan er at indsamle din feedback på forhåndsvisningsoplevelsen og derefter definere vores plan for generel tilgængelighed.
+Microsofts plan er at indsamle din feedback om prøveversionsoplevelsen og derefter definere vores plan for generel tilgængelighed.
 
 ### <a name="4-is-this-a-free-included-or-paid-extra-feature"></a>4. Er dette en gratis (inkluderet) eller betalt (ekstra) funktion?
 
-Dette er en gratis funktion, der er i preview og kun tilgængelig for kunder, der opfylder de krav, der er spørgsmål 1. Der er ikke en betalt mulighed for at modtage dette indhold.
+Dette er en gratis funktion, der er tilgængelig som prøveversion og kun tilgængelig for kunder, der opfylder kravene i spørgsmål 1. Der er ikke en betalt mulighed for at modtage dette indhold.
 
 ### <a name="5-how-do-i-provide-feedback"></a>5. Hvordan gør jeg give feedback?
 
-Du kan få generel feedback **ved at bruge** ikonet Giv feedback i nederste højre hjørne på overvågningssiden.
+Hvis du vil have generel feedback, skal du bruge ikonet **Giv feedback** nederst til højre på overvågningssiden.
 
-Hvis du vil have feedback på hændelser eller gode råd, kan du bruge **Er dette indlæg nyttigt? .
+Hvis du vil have feedback om hændelser eller gode råd, skal du bruge **Er dette indlæg nyttigt? Link.
 
-### <a name="6-are-there-any-privacy-concerns"></a>6. Er der nogen bekymringer vedrørende beskyttelse af personlige oplysninger?
+### <a name="6-are-there-any-privacy-concerns"></a>6. Er der nogen bekymringer om beskyttelse af personlige oplysninger?
 
 Overvågning fokuserer på tjenestemetadata, og brugerindhold overvåges ikke.

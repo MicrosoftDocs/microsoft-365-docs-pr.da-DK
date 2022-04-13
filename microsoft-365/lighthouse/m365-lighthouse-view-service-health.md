@@ -15,50 +15,51 @@ ms.custom:
 - AdminSurgePortfolib
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist lejertjenestens tilstand.
-ms.openlocfilehash: 21315d0ea616fcd2865879d9d8aec66b17830208
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist tilstanden for lejertjenesten.
+ms.openlocfilehash: 5c15e004108606ce00a90e0fa3d675d00806b430
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597007"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822710"
 ---
 # <a name="view-tenant-service-health"></a>Få vist lejertjenestens tilstand
 
-Du kan få vist tjenestestilstanden for de lejere, du administrerer i Microsoft 365 Lighthouse. Tjeneste sundhed omfatter hændelser og rådgivning for flere tjenester, herunder Microsoft Intune, Azure Active Directory (Azure AD) identitetstjenester og administration af mobilenheder (MDM)-skytjenester. Du kan også se, hvor mange af dine administrerede lejere, der påvirkes af hændelser. Hvis en af dine lejere f.eks. oplever problemer, kan du tjekke siden Tjeneste sundhed for at afgøre, om det er et kendt problem med en igangværende løsning, eller om en nylig ændring kan påvirke dem. Dette kan spare dig tid på fejlfinding og reducere supportopkald.
+Du kan få vist tjenestetilstanden for de lejere, du administrerer i Microsoft 365 Lighthouse. Tjenestetilstand omfatter hændelser og gode råd til flere tjenester, herunder Microsoft Intune, identitetstjenester for Azure Active Directory (Azure AD) og MDM-cloudtjenester (Mobile Device Management). Du kan også se, hvor mange af dine administrerede lejere der påvirkes af hændelser. Hvis en af dine lejere f.eks. oplever problemer, kan du kontrollere siden Tjenestetilstand for at finde ud af, om det er et kendt problem med en igangværende løsning, eller om en nylig ændring kan påvirke dem. Det kan spare dig tid ved fejlfinding og reducere supportopkald.
 
-Hvis du ikke kan logge på Lighthouse, kan du bruge statussiden for [Microsoft 365-tjenestetilstand](https://status.office365.com/) til at kontrollere, om der er kendte problemer, der forhindrer dig i at logge på din partnerlejer. Du kan også tilmelde dig for [at @MSFT365status](https://twitter.com/MSFT365Status) på Twitter for at se oplysninger om bestemte tjenestehændelser.
+Hvis du ikke kan logge på Lighthouse, kan du bruge [siden Microsoft 365 tjenestetilstandsstatus](https://status.office365.com/) til at kontrollere, om der er kendte problemer, der forhindrer dig i at logge på din partnerlejer. Du kan også tilmelde dig for at følge [@MSFT365status](https://twitter.com/MSFT365Status) på Twitter for at få vist oplysninger om specifikke tjenestehændelser.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-For at få vist tjeneste sundhed, skal du have en Azure AD-rolle i partnerlejeren med følgende egenskabssæt: **microsoft.office365.serviceHealth/allEntities/allTasks**. Du kan finde en liste over roller i Azure [AD under Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+Hvis du vil have vist tjenestetilstand, skal du have en Azure AD-rolle i partnerlejer med følgende **egenskabssæt: microsoft.office365.serviceHealth/allEntities/allTasks**. Du kan se en liste over Azure [AD-roller under Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
 
-## <a name="view-service-health-status-for-all-tenants"></a>Få vist tjenestetilstandsstatus for alle lejere
+## <a name="view-service-health-status-for-all-tenants"></a>Vis tjenestetilstandsstatus for alle lejere
 
-1. I venstre navigationsrude i Fyrtårn skal du vælge **Tjeneste sundhed**.
+1. Vælg **Tjenestetilstand** i navigationsruden til venstre i Lighthouse.
 
-2. På siden **Tjenestetilstand** skal du gennemgå den aktuelle tjenestetilstandsstatus, herunder:
+2. Gennemse den aktuelle tjenestetilstandsstatus på siden **Tjenestetilstand**, herunder:
 
-   -   Samlet antal hændelser
-   -   Samlet antal råd, der påvirker nogen af de administrerede lejere
-   -   Antal tjenester med aktive hændelser.
+   - Samlet antal hændelser
+   - Det samlede antal rådgivere, der påvirker nogen af de administrerede lejere
+   - Antal tjenester med aktive hændelser.
 
-3. Gennemse problemer **efter tjeneste** under fanen Alle tjenester.
+3. Gennemse problemer efter tjeneste under fanen **Alle tjenester** .
 
-4. Gennemgå **alle aktuelle problemer** under fanen Alle problemer.
+4. Gennemse alle aktuelle problemer under fanen **Alle problemer** .
 
 ## <a name="review-issue-details"></a>Gennemse oplysninger om problem
 
-1. I venstre navigationsrude i Fyrtårn skal du vælge **Tjeneste sundhed**.
+1. Vælg **Tjenestetilstand** i navigationsruden til venstre i Lighthouse.
 
-2. På siden **Tjenestestilstand** skal du vælge **fanen Alle** tjenester **eller Alle** problemer.
+2. På siden **Tjenestetilstand** skal du vælge fanen **Alle tjenester** eller **Alle problemer**.
 
 3. Vælg et problem på listen.
 
-4. I ruden med oplysninger om problemet skal du gennemgå detaljerede oplysninger, herunder problemtype, påvirkede lejere, brugerpåvirkning og problemoversigt.
+4. Gennemse detaljerede oplysninger i ruden med problemoplysninger, herunder problemtype, berørte lejere, brugerpåvirkning og problemhistorik.
 
-På den **påvirkede** fane Lejere kan du eksportere en liste over berørte lejere til en fil med kommaseparerede værdier (.csv), så du kan dele den med dine supportteams.
+Under fanen **Berørte lejere** kan du eksportere en liste over berørte lejere til en fil med kommaseparerede værdier (.csv), så du kan dele den med dine supportteams.
 
 ## <a name="related-content"></a>Relateret indhold
-[Sådan kontrolleres Microsoft 365 tjeneste sundhed](/microsoft-365/enterprise/view-service-health) (artikel)\
-[Kendte problemer med Microsoft 365 fyrtårn](m365-lighthouse-known-issues.md) (artikel)
+
+[Sådan kontrollerer du Microsoft 365 tjenestetilstand](/microsoft-365/enterprise/view-service-health) (artikel)\
+[Kendte problemer med Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) (artikel)

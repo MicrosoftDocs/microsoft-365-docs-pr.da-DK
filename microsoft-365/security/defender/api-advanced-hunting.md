@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 Defender avanceret API
-description: Få mere at vide om, hvordan du kører avancerede forespørgselsforespørgsler ved hjælp Microsoft 365 Defender avanceret api på jagt
+title: Microsoft 365 Defender API til avanceret jagt
+description: Få mere at vide om, hvordan du kører avancerede jagtforespørgsler ved hjælp af Microsoft 365 Defender avancerede jagt-API
 keywords: Avanceret jagt, API'er, api, M365 Defender, Microsoft 365 Defender
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
@@ -21,14 +21,14 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 05957fcf7cf2b3b03fbc757fc8b21e67156b285a
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: d01cdacc40b58eb940b2773606221b4fdbe18728
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500821"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823184"
 ---
-# <a name="microsoft-365-defender-advanced-hunting-api"></a>Microsoft 365 Defender avanceret api
+# <a name="microsoft-365-defender-advanced-hunting-api"></a>api til avanceret jagt Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -37,9 +37,9 @@ ms.locfileid: "64500821"
 - Microsoft 365 Defender
 
 > [!IMPORTANT]
-> Nogle oplysninger relaterer til foreløbige produkter, som kan ændres væsentligt, før det frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
+> Nogle oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-[Avanceret](advanced-hunting-overview.md) jagt er et værktøj til [trusselssøgning](advanced-hunting-query-language.md), der bruger specialkonstruerede forespørgsler til at undersøge de seneste 30 dages begivenhedsdata Microsoft 365 Defender. Du kan bruge avancerede forespørgselsforespørgsler til at undersøge usædvanlig aktivitet, opdage mulige trusler og endda reagere på angreb. Den avancerede jagt-API gør det muligt at forespørge på hændelsesdata automatisk.
+[Avanceret jagt](advanced-hunting-overview.md) er et værktøj til trusselsjagt, der bruger [særligt konstruerede forespørgsler](advanced-hunting-query-language.md) til at undersøge de seneste 30 dages hændelsesdata i Microsoft 365 Defender. Du kan bruge avancerede jagtforespørgsler til at inspicere usædvanlig aktivitet, registrere mulige trusler og endda reagere på angreb. Den avancerede jagt-API giver dig mulighed for at sende en programatisk forespørgsel om hændelsesdata.
 
 ## <a name="quotas-and-resource-allocation"></a>Kvoter og ressourceallokering
 
@@ -49,26 +49,26 @@ Følgende betingelser er relateret til alle forespørgsler.
 2. Resultaterne kan returnere op til 100.000 rækker.
 3. Du kan foretage op til 45 opkald pr. minut pr. lejer.
 4. Forespørgsler blokeres, hvis lejeren har nået 100 % indtil efter den næste 15-minutters cyklus.
-5. Hvis en enkelt anmodning kører i mere end 10 minutter, får den time out og returnerer en fejl.
-6. En `429` HTTP-svarkode angiver, at du har nået en kvote, enten efter antal anmodninger, der er sendt, eller efter tildelt kørselstid. Læs svarteksten for at forstå den grænse, du har nået. 
+5. Hvis en enkelt anmodning kører i mere end 10 minutter, får den timeout og returnerer en fejl.
+6. En `429` HTTP-svarkode angiver, at du har nået en kvote, enten efter antal anmodninger, der er sendt, eller af den tildelte kørselstid. Læs svarteksten for at forstå den grænse, du har nået. 
 
 > [!NOTE]
-> Alle kvoter, der er angivet ovenfor (f.eks. 15 opkald pr. minut), er pr. lejerstørrelse. Disse kvoter er minimum.
+> Alle kvotaer, der er angivet ovenfor (f.eks. 15 opkald pr. min.), er pr. lejerstørrelse. Disse kvoter er minimum.
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde den avancerede jagt-API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, [under Access Microsoft 365 Defender Api'er til beskyttelse](api-access.md)
+En af følgende tilladelser er påkrævet for at kalde API'en for avanceret jagt. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Få adgang til API'er til beskyttelse af Microsoft 365 Defender](api-access.md)
 
-Tilladelsestype | Tilladelse | Visningsnavn for tilladelse
+Tilladelsestype | Tilladelse | Vist navn for tilladelse
 -|-|-
-Program | AdvancedQuery.Read.All| Køre avancerede forespørgsler
-Delegeret (arbejds- eller skolekonto) | AdvancedQuery.Read | Køre avancerede forespørgsler
+Program | AdvancedHunting.Read.All| Kør avancerede forespørgsler
+Uddelegeret (arbejds- eller skolekonto) | AdvancedHunting.Read | Kør avancerede forespørgsler
 
 >[!Note]
-> Når du får et token med brugerlegitimationsoplysninger:
+> Når du henter et token ved hjælp af brugerlegitimationsoplysninger:
 >
->- Brugeren skal have AD-rollen "Vis data"
->- Brugeren skal have adgang til enheden baseret på indstillingerne for gruppen af enheder.
+>- Brugeren skal have AD-rollen 'Vis data'
+>- Brugeren skal have adgang til enheden baseret på indstillingerne for enhedsgruppe.
 
 ## <a name="http-request"></a>HTTP-anmodning
 
@@ -76,16 +76,16 @@ Delegeret (arbejds- eller skolekonto) | AdvancedQuery.Read | Køre avancerede fo
 POST https://api.security.microsoft.com/api/advancedhunting/run
 ```
 
-## <a name="request-headers"></a>Anmod om brevhoveder
+## <a name="request-headers"></a>Anmodningsheadere
 
-Sidehoved | Værdi
+Header | Værdi
 -|-
-Godkendelse | Bearer {token} **-note: påkrævet**
-Indholdstype | application/json
+Tilladelse | Ihændehaver {token} **Bemærk! påkrævet**
+Indholdstype | program/json
 
-## <a name="request-body"></a>Anmodningstekst
+## <a name="request-body"></a>Brødtekst i anmodning
 
-I brødteksten til anmodningen skal du angive et JSON-objekt med følgende parametre:
+Angiv følgende parametre for et JSON-objekt i anmodningens brødtekst:
 
 Parameter | Type | Beskrivelse
 -|-|-
@@ -93,13 +93,13 @@ Forespørgsel | Tekst | Den forespørgsel, der skal køres. **Bemærk! påkræve
 
 ## <a name="response"></a>Svar
 
-Hvis det lykkes, returnerer denne metode `200 OK`, og et _Forespørgselsrespons-objekt_ i brødteksten.
+Hvis det lykkes, returnerer `200 OK`denne metode og et _QueryResponse-objekt_ i svarbrødteksten.
 
 Svarobjektet indeholder tre egenskaber på øverste niveau:
 
-1. Statistik – En ordbog til statistik for forespørgselsydeevne.
-2. Skema – Skemaet for svaret, en liste over Name-Type par for hver kolonne.
-3. Resultater – en liste over avancerede jagtbegivenheder.
+1. Statistik – en ordbog over statistik for forespørgselsydeevne.
+2. Schema – Skemaet for svaret, en liste over Name-Type par for hver kolonne.
+3. Results – En liste over avancerede jagtbegivenheder.
 
 ## <a name="example"></a>Eksempel
 
@@ -180,7 +180,7 @@ I følgende eksempel sender en bruger forespørgslen nedenfor og modtager et API
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Få adgang til Microsoft 365 Defender API'er](api-access.md)
-- [Få mere at vide om API-begrænsninger og licenser](api-terms.md)
+- [Få adgang til de Microsoft 365 Defender API'er](api-access.md)
+- [Få mere at vide om API-grænser og -licenser](api-terms.md)
 - [Forstå fejlkoder](api-error-codes.md)
-- [Avanceret jagtoversigt](advanced-hunting-overview.md)
+- [Oversigt over avanceret jagt](advanced-hunting-overview.md)

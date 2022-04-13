@@ -1,5 +1,5 @@
 ---
-title: Krav til Microsoft 365 fyrtårn
+title: Krav til Microsoft 365 Lighthouse
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,55 +15,54 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere skal du få en liste over krav til brug af Microsoft 365 fyrtårn.
-ms.openlocfilehash: b26eb34c728121b4c6f2474dd52aa2a6824d92d6
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+description: For MSP'er (Managed Service Providers) skal du få en liste over krav til brug af Microsoft 365 Lighthouse.
+ms.openlocfilehash: d5f04c39cbce9726fefa4b410be63cd5ee4e959d
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775406"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823668"
 ---
-# <a name="requirements-for-microsoft-365-lighthouse"></a>Krav til Microsoft 365 fyrtårn
+# <a name="requirements-for-microsoft-365-lighthouse"></a>Krav til Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for kunder i små og mellemstore virksomheder (SMB).  
+Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers).
 
-MSP'er skal være tilmeldt Cloud Solution Provider (CSP)-programmet som en indirekte forhandler eller direkte fakturapartner for at bruge Lighthouse.  
+MSP'er skal være tilmeldt programmet Cloud Solution Provider (CSP) som indirect reseller eller Direct Bill-partner for at bruge Lighthouse.
 
-Desuden skal hver MSP-kundelejer være kvalificeret til Lighthouse ved at opfylde følgende krav:
- 
-- Skal have konfigureret delegeret adgang for den administrerede tjenesteudbyder for at kunne administrere kundelejeren*
-- Skal have mindst én Microsoft 365 Business Premium-, Microsoft 365 E3- eller Windows 365 Business-licens
-- Ikke må have mere end 1000 brugere med licens
+Desuden skal hver MSP-kundelejer kvalificere sig til Lighthouse ved at opfylde følgende krav:
 
-*Delegerede administratorrettigheder (DAP) er påkrævet for at onboarde kunder til Lighthouse. Vi anbefaler også, at du etablerer detaljerede delegerede administratorrettigheder (GDAP) med dine kunder for at give en mere sikker delegeret adgang. Mens DAP og GDAP coexist anvendes, har GDAP forrang for kunder, hvor begge modeller er på plads. Kunder med just GDAP (og ingen DAP) vil snart kunne onboarde til Lighthouse.
+- Der skal være konfigureret uddelegeret adgang for MSP'en (Managed Service Provider) for at kunne administrere kundelejer*
+- Der skal være mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens
+- Der må ikke være mere end 1000 licenserede brugere
 
-## <a name="requirements-for-enablingdevice-management"></a>Krav til aktivering af enhedshåndtering
+*Der kræves delegerede administratorrettigheder (DAP) for at onboarde kunder til Lighthouse. Vi anbefaler også, at du opretter GDAP (Granular Delegated Admin Privileges) sammen med dine kunder for at muliggøre mere sikker delegeret adgang. Mens DAP og GDAP eksisterer, har GDAP forrang for kunder, hvor begge modeller er på plads. Snart vil kunder med kun GDAP (og ingen DAP) kunne onboarde til Lighthouse.
 
-Hvis du vil have vist kundelejerenheder på siderne til enhedsstyring, skal en MSP:
+## <a name="requirements-for-enabling-device-management"></a>Krav til aktivering af enhedshåndtering
 
-- Tilmeld alle kundeenheder i Microsoft Endpoint Manager (MEM).Få mere at vide under [Tilmeld enheder i Microsoft Intune](/mem/intune/enrollment/).
-- Tildel overholdelsespolitikker til alle kundeenheder.Få mere at vide under [Opret en politik for overholdelse af regler og Microsoft Intune](/mem/intune/protect/create-compliance-policy).
+Hvis du vil have vist kundelejerenheder på siderne til enhedshåndtering, skal en MSP:
 
-## <a name="requirements-for-enabling-usermanagement"></a>Krav til aktivering af brugeradministration
+- Tilmeld alle kundeenheder i Microsoft Endpoint Manager (MEM). Du kan få flere oplysninger under [Tilmeld enheder i Microsoft Intune](/mem/intune/enrollment/).
+- Tildel overholdelsespolitikker til alle kundeenheder. Du kan få flere oplysninger under [Opret en politik for overholdelse af regler og standarder i Microsoft Intune](/mem/intune/protect/create-compliance-policy).
 
-For at kundedata kan vises i rapporter på brugeradministrationssider, herunder risikabelt brugere, multifaktorgodkendelse og nulstilling af adgangskode, skal kundelejere have licenser til Azure Active Directory Premium P1 eller nyere. Azure AD Premium P1 er inkluderet i Microsoft 365 Business Premium og Microsoft 365 E3.
+## <a name="requirements-for-enabling-user-management"></a>Krav til aktivering af brugeradministration
 
-## <a name="requirements-for-enablingthreat-management"></a>Krav til aktivering af administration af trusler
+Kundens data skal have licens til Azure Active Directory Premium P1 eller nyere, før kundedata vises i rapporter på sider til brugeradministration, herunder risikoberigede brugere, multifaktorgodkendelse og nulstilling af adgangskode. Azure AD Premium P1 er inkluderet i Microsoft 365 Business Premium og Microsoft 365 E3.
 
-Hvis du vil have vist enheder og trusler for kundelejeren på siderne til administration af trusler, skal du tilmelde alle kundelejerenheder i Microsoft Endpoint Manager (MEM) og beskytte dem ved at køre Microsoft Defender Antivirus.  
+## <a name="requirements-for-enabling-threat-management"></a>Krav til aktivering af trusselsstyring
 
-Få mere at vide under [Tilmeld enheder i Microsoft Intune](/mem/intune/enrollment/).  
+Hvis du vil have vist kundelejerenheder og trusler på siderne til trusselsstyring, skal du tilmelde alle kunders lejerenheder i Microsoft Endpoint Manager (MEM) og beskytte dem ved at køre Microsoft Defender Antivirus.
 
-Microsoft Defender Antivirus er en del af Windows og er som standard aktiveret på enheder, der kører Windows 10.  
+Du kan få flere oplysninger under [Tilmeld enheder i Microsoft Intune](/mem/intune/enrollment/).
+
+Microsoft Defender Antivirus er en del af Windows operativsystem og er som standard aktiveret på enheder, der kører Windows 10.
 
 > [!NOTE]
-> Hvis du bruger en antivirusløsning, der ikke er Microsoft, og ikke Microsoft Defender Antivirus, Microsoft Defender Antivirus automatisk deaktiveret. Når du fjerner den ikke-Microsoft-antivirusløsning, Microsoft Defender Antivirus automatisk for at beskytte dine Windows mod trusler.
+> Hvis du bruger en antivirusløsning, der ikke er fra Microsoft, og ikke Microsoft Defender Antivirus, deaktiveres Microsoft Defender Antivirus automatisk. Når du fjerner den antivirusløsning, der ikke er Microsoft, aktiveres Microsoft Defender Antivirus automatisk for at beskytte dine Windows enheder mod trusler.
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Konfigurer Microsoft 365 Lighthouse Portal Security](m365-lighthouse-configure-portal-security.md) (artikel)\
-[Microsoft 365 oversigt over siden til overholdelse af fyrtårnsenhed](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
-[Microsoft 365 oversigt over lighthousebrugere](m365-lighthouse-users-page-overview.md) (artikel)\
-[Microsoft 365 oversigt over siden til administration af fyrtårne](m365-lighthouse-threat-management-page-overview.md) (artikel)\
-[Microsoft 365 ofte stillede spørgsmål om](m365-lighthouse-faq.yml)  fyrtårn(artikel)
-
+[Konfigurer sikkerhed Microsoft 365 Lighthouse Portal](m365-lighthouse-configure-portal-security.md) (artikel)\
+[oversigt over Microsoft 365 lighthouse-enhedens overholdelse af angivne standarder](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
+[Microsoft 365 Oversigt over fyrtårnsbrugere](m365-lighthouse-users-page-overview.md) (artikel)\
+[oversigt over Microsoft 365 lighthouse threat management (](m365-lighthouse-threat-management-page-overview.md)artikel)\
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

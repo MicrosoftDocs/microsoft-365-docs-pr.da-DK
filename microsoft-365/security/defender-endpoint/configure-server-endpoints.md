@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f6e1efe1a5c5f87e0a71c5e96b28498a6faf296c
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: f06ed934f1ba1a24ba16fe3919d37e10526a3a2f
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783727"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823844"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -183,7 +183,7 @@ Du skal downloade både **installations** - og **onboardingpakker** fra portalen
    > [!NOTE]
    > På Windows Server 2012R2 installeres Microsoft Defender Antivirus af installationspakken, og den vil være aktiv, medmindre du angiver den til passiv tilstand. På Windows Server 2016 skal Microsoft Defender Antivirus installeres som en funktion (se [Skift til MDE](/microsoft-365/security/defender-endpoint/switch-to-mde-phase-2#re-enable-microsoft-defender-antivirus-on-windows-server-2016)) først og opdateres fuldt ud, før du fortsætter med installationen.
    > 
-   > Hvis du kører en antimalwareløsning, der ikke er fra Microsoft, skal du sikre, at du føjer udeladelser for Microsoft Defender Antivirus ([fra denne liste over Microsoft Defender-processer under fanen Defender-processer](https://download.microsoft.com/download/8/a/5/8a51eee5-cd02-431c-9d78-a58b7f77c070/mde-urls.xlsx)) til den løsning, der ikke er Microsoft, før installationen.  Det anbefales også at føje sikkerhedsløsninger, der ikke er fra Microsoft, til listen over undtagelser fra Defender Antivirus.
+   > Hvis du kører en antimalwareløsning, der ikke er fra Microsoft, skal du sikre, at du føjer udeladelser for Microsoft Defender Antivirus ([fra denne liste over Microsoft Defender-processer under fanen Defender-processer](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)) til den løsning, der ikke er Microsoft, før installationen.  Det anbefales også at føje sikkerhedsløsninger, der ikke er fra Microsoft, til listen over undtagelser fra Defender Antivirus.
 
 
 **Installationspakken** indeholder en MSI-fil, der installerer den Microsoft Defender for Endpoint agent.

@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: b515e50cf5ff22d77076017526f59ccd5f3779b7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 7f77ca2f53e05291533395d3de5a860e9444732c
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782099"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824020"
 ---
 # <a name="insider-risk-management-policies"></a>Politikker for styring af insiderrisiko
 
@@ -104,9 +104,9 @@ Du skal have Microsoft Defender for Endpoint konfigureret i din organisation og 
 
 Beskyttelse af data i sundhedssektoren og forebyggelse af misbrug af patientoplysninger er et vigtigt problem for organisationer i sundhedssektoren. Dette misbrug kan omfatte fortrolige datalækager til uautoriserede personer, svigagtig ændring af patientjournaler eller tyveri af patientjournaler. Forebyggelse af dette misbrug af patientdata, enten på grund af manglende opmærksomhed, uagtsomhed eller svig fra brugernes side, er også en vigtig komponent i at opfylde de lovmæssige krav i hipaa-loven (Health Insurance Portability and Accountability Act) og hitech-loven (Health Information Technology for Economic and Clinical Health). Begge disse handlinger fastlægger kravene til sikring af patientbeskyttede sundhedsoplysninger (PHI).
 
-Denne politikskabelon muliggør risikoscore for interne brugere, der registrerer mistænkelige aktiviteter, der er knyttet til poster, der hostes på eksisterende EMR-systemer (Electronic Medical Record). Registrering fokuserer på uautoriseret adgang, visning, ændring og eksport af patientdata. Du skal konfigurere en connector ( [Microsoft Healthcare-connectoren](import-healthcare-data.md) eller [Epic-connectoren](import-epic-data.md) for at understøtte registrering af adgangs-, eksfiltrations- eller sløringsaktiviteter i dit EMR-system.
+Denne politikskabelon muliggør risikoscore for interne brugere, der registrerer mistænkelige aktiviteter, der er knyttet til poster, der hostes på eksisterende EMR-systemer (Electronic Medical Record). Registrering fokuserer på uautoriseret adgang, visning, ændring og eksport af patientdata. Du skal konfigurere en connector [til Microsoft Healthcare-connectoren](import-healthcare-data.md) eller [Epic-connectoren](import-epic-data.md) for at understøtte registrering af adgangs-, eksfiltrations- eller sløringsaktiviteter i dit EMR-system.
 
-Når du bruger denne skabelon, skal du også konfigurere en Microsoft 365 HR-connector for jævnligt at importere organisationsprofildata for brugere i din organisation. Se artiklen Importér data med HR-connectoren for at få en trinvis vejledning til, hvordan du konfigurerer Microsoft 365 HR-connectoren for din organisation.
+Når du bruger denne skabelon, skal du også konfigurere en Microsoft 365 HR-connector for jævnligt at importere organisationsprofildata for brugere i din organisation. Se artiklen [Konfigurer en connector til import af HR-data](/microsoft-365/compliance/import-hr-data) for at få en trinvis vejledning til, hvordan du konfigurerer Microsoft 365 HR-connectoren for din organisation.
 
 ### <a name="security-policy-violations-by-departing-users-preview"></a>Sikkerhedspolitikovertrædelser af afgåede brugere (prøveversion)
 
