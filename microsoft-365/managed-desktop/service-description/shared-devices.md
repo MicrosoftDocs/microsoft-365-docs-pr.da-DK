@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: ad9cb5e69585f0c014050b51b719e539111cf9fa
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 8c8d79313ee858ebcac8754b96046b517a3f614a
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687179"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64835968"
 ---
 # <a name="shared-devices"></a>Delte enheder
 
@@ -31,7 +31,7 @@ Da du vælger at bruge tilstanden delt enhed på registreringstidspunktet i Micr
 
 ## <a name="when-to-use-shared-device-mode"></a>Hvornår skal du bruge tilstanden delt enhed?
 
-Enhver situation, hvor brugerne ofte ændrer enheder.
+Brug tilstanden delt enhed i situationer, hvor brugerne ofte ændrer enheder.
 
 Bankkontører kan f.eks. være placeret ét sted, hvor de administrerer indbetalinger, men flytter til et back office for at hjælpe kunder med realkreditlån. På hver af disse placeringer kører enheden forskellige programmer og er optimeret til disse opgaver, selvom de bruges af flere personer.
 
@@ -41,19 +41,37 @@ Plejepersonalet flytter typisk mellem lokaler og kontorer, når de interagerer m
 
 Delt enhedstilstand er ikke et godt valg i disse situationer:
 
-- Når en brugers filer skal gemmes lokalt i stedet for i cloudmiljøet
-- Hvis brugeroplevelsen skal være anderledes for forskellige brugere på enheden
-- Hvis sættet af programmer, som hver bruger har brug for, varierer meget
+- Når en brugers filer skal gemmes lokalt i stedet for i cloudmiljøet.
+- Hvis brugeroplevelsen skal være anderledes for forskellige brugere på enheden.
+- Hvis sættet af programmer, som hver bruger har brug for, varierer meget.
 
-## <a name="register-new-devices-in-shared-device-mode"></a>Registrer nye enheder i delt enhedstilstand
+## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile-in-microsoft-managed-desktop"></a>Registrer nye enheder ved hjælp af profilen til selvudrulning af Windows Autopilot i Microsoft Managed Desktop
 
-Fra og med 2203, uanset om du eller en partner håndterer enhedsregistrering, kan du vælge at bruge Windows [autopilotens selvudrullende tilstandsprofil](/mem/autopilot/self-deploying) i Microsoft Managed Desktop.
+Uanset om du eller en partner håndterer enhedsregistrering, kan du vælge at bruge profilen [Windows Autopilot til selvudrulningstilstand](/mem/autopilot/self-deploying) i Microsoft Managed Desktop.
 
-Hvis du selv tilmelder enheder, skal du importere nye enheder til bladet Windows Autopilot-enheder.
+### <a name="before-you-begin"></a>Før du begynder
+
+Gennemse kravene til selvudrulning af Windows Autopilot:
+
+> [!IMPORTANT]
+> Du kan ikke automatisk tilmelde en enhed via Autopilot efter en indledende udrulning i selvudrulningstilstand. Slet i stedet enhedsposten i [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431). Hvis du vil slette enhedsposten fra Administration, skal du vælge **EnhederAlle** >  **enheder** > vælge de enheder, du vil slette, > **Slet**.  Du kan få flere oplysninger under [Opdateringer til Windows autopilotlogon og -udrulningsoplevelse](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+
+#### <a name="trusted-platform-module"></a>Platformmodul, der er tillid til
+
+Selvudrulningstilstand bruger en enheds TPM 2.0-hardware til at godkende enheden i en organisations Azure Active Directory lejer. Enheder uden TPM 2.0 kan derfor ikke bruge denne tilstand. Enheder skal også understøtte attestation af TPM-enheder. Alle nye Windows enheder skal opfylde disse krav. TPM-attestationsprocessen kræver også adgang til et sæt HTTPS-URL-adresser, der er entydige for hver TPM-udbyder. Du kan få flere oplysninger i indstillingen autopilot selvudrulningstilstand og præklargøring af Autopilot i [Netværkskrav](/mem/autopilot/self-deploying#requirements). Du kan få flere oplysninger om krav til Windows Autopilot-software under [Windows Krav til Autopilot-software](/mem/autopilot/software-requirements).
+
+> [!TIP]
+> Hvis du forsøger at installere selvudrulningstilstand på en enhed, der ikke understøtter TPM 2.0, eller den er på en virtuel maskine, mislykkes processen, når du bekræfter enheden med følgende fejl: 0x800705B4 timeoutfejl (Virtuelle Hyper-V-TPM'er understøttes ikke). Bemærk også, at der kræves Windows 10 version 1903 eller nyere for at bruge selvudrulningstilstand på grund af problemer med attestation af TPM-enheder i Windows 10 version 1809. Da Windows 10 Enterprise 2019 LTSC er baseret på Windows 10 version 1809, understøttes selvudrulningstilstand heller ikke på Windows 10 Enterprise 2019 LTSC.
+>
+> Du kan finde flere oplysninger om andre kendte problemer og gennemse løsninger [under Windows Kendte problemer på Autopilot](/mem/autopilot/known-issues) og [Foretag fejlfinding af import og tilmelding af Autopilot-enheder](/mem/autopilot/troubleshoot-device-enrollment).
+
+### <a name="steps-to-register-devices-to-use-the-windows-autopilot-self-deploying-mode-profile"></a>Trin til registrering af enheder til brug af selvudrulningstilstandsprofilen Windows Autopilot
+
+Hvis du selv registrerer enheder, skal du importere nye enheder til bladet Windows Autopilot-enheder.
 
 **Sådan importerer du nye enheder til bladet Windows Autopilot-enheder:**
 
-1. Indsaml [hardwarehashen](../get-started/manual-registration.md#obtain-the-hardware-hash) for de nye enheder, du vil tildele profilen Windows Autopilot Selvinstallationstilstand.
+1. Indsaml [hardwarehashen](../get-started/manual-registration.md#obtain-the-hardware-hash) for nye enheder, du vil tildele profilen Windows Autopilot Selvinstallationstilstand.
 2. Gå til [Microsoft Endpoint Manager-portalen](https://endpoint.microsoft.com).
 2. Vælg **Enheder** i navigationsmenuen til venstre.
 3. Vælg **Windows** i afsnittet **Efter platform**. Vælg derefter **Windows Tilmelding**.
@@ -76,7 +94,7 @@ Hvis du har en partnertilmeldingsenheder, skal du følge trinnene i [Partnerregi
 
 ### <a name="device-storage"></a>Enhedslager
 
-Brugere af delte enheder skal have sikkerhedskopieret deres data til skyen, så de kan følge dem til andre enheder. Når du har registreret enheder i delt enhedstilstand, skal du sørge for at aktivere [omdirigeringsfunktionerne](/onedrive/redirect-known-folders) for OneDrive [filer on-demand](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) og kendte mapper. Denne fremgangsmåde minimerer den effekt, som hver brugerprofil har på enhedens lager. Enheder i delt enhedstilstand sletter automatisk brugerprofiler, hvis den ledige diskplads falder til under 25 %. Denne aktivitet er planlagt til midnat på enhedens lokale tidspunkt, medmindre lageret bliver kritisk begrænset.
+Brugere af delte enheder skal have sikkerhedskopieret deres data i skyen, så de kan følge dem til andre enheder. Når du har registreret enheder i delt enhedstilstand, skal du sørge for at aktivere [omdirigeringsfunktionerne](/onedrive/redirect-known-folders) for OneDrive [filer on-demand](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) og kendte mapper. Denne fremgangsmåde minimerer den effekt, som hver brugerprofil har på enhedens lager. Enheder i delt enhedstilstand sletter automatisk brugerprofiler, hvis den ledige diskplads falder til under 25 %. Denne aktivitet er planlagt til midnat på enhedens lokale tidspunkt, medmindre lageret bliver kritisk begrænset.
 
 Microsoft Managed Desktop bruger [CSP'en for SharedPC](/mem/intune/configuration/shared-user-device-settings-windows) til at udføre disse handlinger, så sørg for, at du ikke selv bruger disse CSP'er.
 

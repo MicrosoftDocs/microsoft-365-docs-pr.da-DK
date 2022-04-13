@@ -6,7 +6,7 @@ ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: security
-ms.localizationpriority: medium
+ms.localizationpriority: high
 audience: ITPro
 ms.topic: article
 author: denisebmsft
@@ -19,12 +19,12 @@ ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 596616328a02182b39c67f58137d43ab626e1756
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: cc2032c547cbd9c75a73da2f47f7baed21e7438e
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823306"
+ms.locfileid: "64835925"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
 
@@ -134,7 +134,7 @@ Version af sikkerhedsintelligensopdatering: 1.361.14.0 <br/>
 - Forbedret trafikoutput, når SmartScreen-tjenesten ikke er tilgængelig 
 - Forbedringer af forbindelsen for kunder, der bruger proxyer med godkendelseskrav
 - Fast fejl ved opdatering af VDI-enhed for netværksfilshares 
-- Slutpunktsregistrering og -svar i bloktilstand understøtter nu detaljeret enhedsdestination med nye CSP'er. Se [Registrering af slutpunkt og svar (Slutpunktsregistrering og -svar) i blokeringstilstand](edr-in-block-mode.md).
+- Slutpunktsregistrering og -svar i bloktilstand understøtter nu detaljeret enhedsmålretning med nye CSP'er. Se [Registrering af slutpunkt og svar (Slutpunktsregistrering og -svar) i blokeringstilstand](edr-in-block-mode.md).
 
 ### <a name="known-issues"></a>Kendte problemer
 

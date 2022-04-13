@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: Slå en indstilling til, der muliggør samtidig redigering og automatisk lagring i skrivebordsapps for navngivne og krypterede dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: baa2236915d37917e4ed69e5356db31262795d57
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 0fee934af5e2dfb01c681c9b2e415ef538312367
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687201"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64836100"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater
 
@@ -74,7 +74,7 @@ Sørg for at forstå følgende forudsætninger, før du aktiverer denne funktion
 - Følsomhedsmærkater skal [være aktiveret for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) for lejeren. Hvis denne funktion ikke allerede er aktiveret, aktiveres den automatisk, når du vælger indstillingen for at aktivere samtidig redigering af filer med følsomhedsmærkater.
 
 - Microsoft 365 Apps for enterprise:
-    - **Windows**: Minimumversion 2107 fra Current Channel eller Monthly Enterprise Channel eller minimumversion 2202 fra Semi-Annual Enterprise Channel
+    - **Windows**: Minimumversion 2107 fra Current Channel eller Monthly Enterprise Channel eller minimumversion 2202 fra Semi-Annual Enterprise Channel (prøveversion)
     - **macOS**: Minimumversion 16.51
     - **iOS**: Nu som prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimum version 2.58
     - **Android**: Nu i prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimum version 16.0.14931

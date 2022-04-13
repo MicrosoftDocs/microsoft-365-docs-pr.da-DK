@@ -4,7 +4,7 @@ ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
 audience: admin
-ms.reviewer: anrasto
+ms.reviewer: anrasto, shrganguly
 ms.topic: article
 ms.prod: microsoft-365-enterprise
 search.appverid: ''
@@ -12,13 +12,13 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Få mere at vide om, hvordan du automatisk opretter dokumenter og andet indhold ved hjælp af indholdsassemblyen i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 906118458688d40c392cc9333357f1b8c946910b
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Få mere at vide om, hvordan du automatisk opretter dokumenter og andet indhold ved hjælp af en moderne skabelon i Microsoft SharePoint Syntex.
+ms.openlocfilehash: 83ef526504073ae739a82c599663a3d284aaf51c
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823206"
+ms.locfileid: "64836214"
 ---
 # <a name="create-documents-using-content-assembly-in-microsoft-sharepoint-syntex"></a>Opret dokumenter ved hjælp af indholdsassembly i Microsoft SharePoint Syntex
 
@@ -55,16 +55,17 @@ Følg disse trin for at oprette en moderne skabelon.
 5. Opret pladsholdere for al dynamisk tekst i dokumentet, som brugerne måske vil ændre fra ét dokument til et andet. Det kan f.eks. være, at du vil oprette en pladsholder for input, f.eks. firmanavn, klientnavn, adresse, telefonnummer eller dato.
 
     Hvis du vil oprette en pladsholder, skal du markere teksten (f.eks. datoen). Panelet **Alle pladsholdere** åbnes, hvor du giver pladsholderen et relevant navn og vælger den type input, du vil knytte til pladsholderen.
+ 
+   ![Skærmbillede af skabelonfremviseren, der viser et fremhævet felt og panelet Alle pladsholdere.](../media/content-understanding/content-assembly-create-template-4b.png)
 
-   ![Skærmbillede af skabelonfremviseren, der viser et fremhævet felt og panelet Alle pladsholdere.](../media/content-understanding/content-assembly-create-template-4a.png)
-
-   Der er i øjeblikket to måder, som brugerne kan udfylde en pladsholder på:
+   I øjeblikket er der tre måder, brugerne kan udfylde en pladsholder på:
 
    - [Indtast tekst, eller markér en dato](#associate-a-placeholder-by-entering-text-or-selecting-a-date)
    - [Vælg mellem valg i en kolonne på en liste eller i et bibliotek](#associate-a-placeholder-by-selecting-from-choices-in-a-column-of-a-list-or-library)
+   - [Vælg fra administreret metadataordsæt eller ord](#associate-a-placeholder-by-selecting-from-managed-metadata-term-set-or-term)
 
    > [!NOTE]
-   > Du kan kun oprette pladsholdere for tekst. I øjeblikket understøttes billeder, smartart, tabeller og punktopstilling ikke.
+   > Du kan kun oprette pladsholdere for tekst. Billeder, smartart, tabeller og punktopstillinger understøttes ikke i øjeblikket.   
 
 ### <a name="associate-a-placeholder-by-entering-text-or-selecting-a-date"></a>Tilknyt en pladsholder ved at indtaste tekst eller vælge en dato
 
@@ -72,7 +73,7 @@ På panelet **Alle pladsholdere** :
 
 1. Angiv et relevant navn til pladsholderen i feltet **Navn** .
 
-   ![Skærmbillede af skabelonfremviseren, der viser panelet Alle pladsholdere til manuelt input.](../media/content-understanding/content-assembly-create-template-5.png)
+   ![Skærmbillede af skabelonfremviseren, der viser panelet Alle pladsholdere til manuelt input.](../media/content-understanding/content-assembly-create-template-5a.png)
 
 2. I afsnittet **Sådan udfylder forfattere denne pladsholder** skal du vælge **Angiv tekst eller vælge en dato**.
 
@@ -86,7 +87,7 @@ På panelet **Alle pladsholdere** :
 
 1. Angiv et relevant navn til pladsholderen i feltet **Navn** .
 
-   ![Skærmbillede af skabelonfremviseren, der viser panelet Alle pladsholdere til input fra en SharePoint liste.](../media/content-understanding/content-assembly-create-template-6.png)
+   ![Skærmbillede af skabelonfremviseren, der viser panelet Alle pladsholdere til input fra en SharePoint liste.](../media/content-understanding/content-assembly-create-template-6a.png)
 
 2. I afsnittet **Sådan udfylder forfattere denne pladsholder** skal du vælge **Vælg blandt valgmuligheder i en kolonne på en liste eller et bibliotek** og derefter vælge **Vælg**.
 
@@ -106,10 +107,34 @@ På panelet **Alle pladsholdere** :
 
 6. Hvis du ønsker, at brugerne skal kunne tilføje input manuelt, skal du ud over at vælge på en liste vælge **Tillad, at forfattere tilføjer nye valgmuligheder**. I dette tilfælde er standarden for den manuelle inputdatatype *Enkelt tekstlinje*. Værdierne fra forfatterne bruges også kun til at generere dokumentet. De føjes ikke til listen over SharePoint.
 
-   Du kan oprette lige så mange pladsholdere, som du mener, er nødvendige. Når du er færdig, kan du vælge at gemme skabelonen som en kladde eller publicere skabelonen.
+### <a name="associate-a-placeholder-by-selecting-from-managed-metadata-term-set-or-term"></a>Tilknyt en pladsholder ved at vælge fra administrerede metadataordsæt eller ord
+
+På panelet **Alle pladsholdere** :
+
+1. Angiv et relevant navn til pladsholderen i feltet **Navn** .
+
+   ![Skærmbillede af skabelonfremviseren, der viser panelet Alle pladsholdere til input fra et ord eller ordsæt.](../media/content-understanding/content-assembly-create-template-term.png)
+
+2. I afsnittet **Sådan udfylder forfattere denne pladsholder** skal du vælge **Vælg fra administrerede metadataordsæt eller ord** og derefter vælge **Vælg**.
+
+3. På siden **Vælg ordsæt eller ord** skal du søge efter eller vælge det ordsæt eller ord, der skal knyttes til pladsholderen, og derefter vælge **Gem**.
+
+   ![Skærmbillede af siden Vælg ordsæt eller ord.](../media/content-understanding/content-assembly-select-term.png)
+
+4. Når du er færdig, kan du se, at det valgte ordsæt eller ord er knyttet til pladsholderen. 
+
+   ![Skærmbillede af panelet Alle pladsholdere, der viser det tilknyttede ordsæt eller ord.](../media/content-understanding/content-assembly-associated-term.png)
+
+5. Hvis du ønsker, at brugerne skal kunne tilføje flere værdier, der svarer til ordsættet eller ordet, skal du vælge **Tillad flere værdier**. Hvis ordsættet er konfigureret som et åbent ordsæt, kan du også vælge **Tillad nye værdier**. Hvis du aktiverer denne indstilling, kan brugere, der genererer dokumenter fra den moderne skabelon, føje nye ord til ordsættet og tilføje disse ord som pladsholderværdier.
+
+   > [!TIP]
+   > Når du aktiverer indstillingen **Tillad nye værdier** (kun tilladt for åbne ordsæt), er det mere sandsynligt, at brugerne tilføjer overflødige ord i ordbanken. Redundante ord kan gøre det svært for administratorer at administrere et ordsæt.
+
+Du kan oprette lige så mange pladsholdere, som du mener, er nødvendige. Når du er færdig, kan du vælge at gemme skabelonen som en kladde eller publicere skabelonen.
 
    - **Gem kladde** – gemmer skabelonen som en kladde, og du kan få adgang til den senere. Du kan få vist, redigere eller publicere gemte kladder i afsnittet **Moderne skabeloner** ved at vælge **NyRedigering** >  **ny i** dokumentbiblioteket.
-   - **Publicer** – publicerer skabelonen, der skal bruges af andre brugere i organisationen til at oprette dokumenter. Du kan få vist, redigere eller annullere publicering af *publicerede* skabeloner i afsnittet **Moderne skabeloner** ved at vælge **NyRedigering** >  **ny i** dokumentbiblioteket.
+ 
+   - **Publicer** – publicerer skabelonen, der skal bruges af andre brugere i organisationen til at oprette dokumenter. Du kan få vist, redigere eller annullere publicering af *publicerede* skabeloner i afsnittet **Moderne skabeloner** ved at vælge **NyRedigering** >  **ny i** dokumentbiblioteket. 
 
 ## <a name="edit-a-modern-template"></a>Rediger en moderne skabelon
 
@@ -145,7 +170,7 @@ Du kan bruge en *publiceret* moderne skabelon til hurtigt at oprette lignende do
 
 3. Angiv oplysningerne i panelet **Opret et dokument fra en skabelon** , og vælg derefter **Opret dokument**.
 
-   ![Skærmbillede af dokumentbiblioteket, der viser Opret et dokument fra et skabelonpanel.](../media/content-understanding/content-assembly-create-document-2.png)
+   ![Skærmbillede af dokumentbiblioteket, der viser Opret et dokument fra et skabelonpanel.](../media/content-understanding/content-assembly-create-document-2b.png)
 
    For at hjælpe med at reducere den tid og indsats, der er forbundet med at udfylde værdier for pladsholdere, giver SharePoint Syntex:
 
@@ -153,9 +178,13 @@ Du kan bruge en *publiceret* moderne skabelon til hurtigt at oprette lignende do
       - Autofyld pladsholderværdier, hvis det er muligt entydigt at identificere en post for pladsholdere, der er knyttet til den samme liste.
 
 > [!NOTE]
->
-> - I øjeblikket understøttes kun Microsoft Word dokumenter (.docx udvidelse) til oprettelse af en skabelon. Før du uploader dokumentet, skal du kontrollere, at **Registrering af ændringer** eller kommentarer ikke er aktiveret i Word-dokumentet. Hvis dit dokument indeholder tekstpladsholdere for billeder, skal du kontrollere, at de ikke er tekstombrudte. Vi understøtter ikke **indholdskontrolelementer** i Word i øjeblikket. Hvis du vil oprette en skabelon ud fra et Word-dokument med indholdskontrolelementer, skal du fjerne dem, før du opretter en moderne skabelon.
-> - Skabelonen og dokumentet er knyttet til ét dokumentbibliotek. Hvis du vil bruge skabelonen i et andet dokumentbibliotek, skal du oprette skabelonen igen i dokumentbiblioteket.
-> - Det overførte dokument, der bruges til at oprette den moderne skabelon, gemmes som en separat kopi og placeres i mappen /forms i dokumentbiblioteket. Den oprindelige fil på disken påvirkes ikke.
-> - Du kan kun oprette pladsholdere for tekst. I øjeblikket understøttes billeder, smartart, tabeller og punktopstilling ikke.
-> - Når et dokument er oprettet ud fra en skabelon, er det ikke knyttet til skabelonen.
+> **Begrænsninger for aktuel udgivelse**
+>- Det er i øjeblikket kun Microsoft Word dokumenter (.docx filtypenavn), der understøttes i forbindelse med oprettelse af en skabelon. Før du uploader et Word-dokument, skal du sørge for, at det ikke indeholder kommentarer eller har **Aktiveret Registrer ændringer** . Hvis dokumentet indeholder tekstpladsholdere for billeder, skal du kontrollere, at de ikke er tekstombrudte. Indholdskontrolelementer i Word understøttes ikke i øjeblikket. Hvis du vil oprette en skabelon fra et Word-dokument med indholdskontrolelementer, skal du fjerne dem, før du opretter en moderne skabelon.
+>- Skabelonen og dokumentet er knyttet til ét dokumentbibliotek. Hvis du vil bruge skabelonen i et andet dokumentbibliotek, skal du oprette skabelonen igen i dokumentbiblioteket.
+>- Det overførte dokument, der bruges til at oprette den moderne skabelon, gemmes som en separat kopi og placeres i mappen /forms i dokumentbiblioteket. Den oprindelige fil på disken påvirkes ikke.
+>- Du kan kun oprette pladsholdere for tekst. Billeder, smartart, tabeller og punktopstillinger understøttes ikke i øjeblikket.
+>- Når et dokument er oprettet ud fra en skabelon, er det ikke knyttet til skabelonen.
+
+
+
+ 
