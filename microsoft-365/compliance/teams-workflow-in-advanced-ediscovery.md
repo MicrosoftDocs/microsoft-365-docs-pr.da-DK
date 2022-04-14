@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du bevarer, indsamler, gennemser og eksporterer indhold fra Microsoft Teams i Advanced eDiscovery.
-ms.openlocfilehash: ecd114f9ea68cefb03e55453176a0c8b323620cc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 90c3ece3f6e8218771da9dbbb88fe5c32d9d7d94
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758789"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847009"
 ---
 # <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Advanced eDiscovery arbejdsproces for indhold i Microsoft Teams
 
@@ -298,6 +298,10 @@ Her er nogle tip og bedste praksis for visning Teams indhold i et anmeldelsessæ
 - Nyttige kolonner, der kan hjælpe dig med at gennemse Teams indhold, omfatter **Tilsynsførende**, **Modtagere** og **Filtype** eller **Meddelelsestype**.
 
 - Brug [filtre](review-set-search.md) til Teams-relaterede egenskaber til hurtigt at få vist Teams indhold. Der er filtre for de fleste metadataegenskaber, der er beskrevet i forrige afsnit.
+
+## <a name="deleting-teams-chat-messages"></a>Sletter Teams chatbeskeder
+
+Du kan bruge Advanced eDiscovery og Microsoft Graph Explorer til at reagere på dataspildhændelser, når indhold, der indeholder fortrolige eller skadelige oplysninger, frigives via Teams chatbeskeder. Administratorer i din organisation kan søge efter og slette chatbeskeder i Microsoft Teams. Dette kan hjælpe dig med at fjerne følsomme oplysninger eller upassende indhold i Teams chatbeskeder. Du kan finde flere oplysninger [under Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
 
 ## <a name="reference-guide"></a>Referencevejledning
 

@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Brug eDiscovery- og søgeværktøjer til at administrere og reagere på en dataspildhændelse i din organisation.
-ms.openlocfilehash: 55bed2461d48d77e7dbb756402439f394ac55270
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 106a67bff07f76d3ac40798d8bb4e28a254b923d
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760905"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847327"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eDiscovery-løsningsserie: Dataspildscenarie – Søg og fjern
 
@@ -50,16 +50,18 @@ Sådan administrerer du en dataspildhændelse:
 
 ## <a name="things-to-know-before-you-start"></a>Ting, du skal vide, før du starter
 
+- Den arbejdsproces for dataspild, der er beskrevet i denne artikel, sletter ikke chatbeskeder i Microsoft Teams. Hvis du vil søge efter og slette Teams chatbeskeder, skal du se [Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
+
 - Når en postkasse er i venteposition, forbliver en slettet meddelelse i mappen Gendanbare elementer, indtil opbevaringsperioden udløber, eller ventepositionen frigives. [Trin 6](#step-6-prepare-the-mailboxes) beskriver, hvordan du fjerner venteposition fra postkasserne. Kontakt datastyringen eller de juridiske afdelinger, før du fjerner ventepositionen. Din organisation kan have en politik, der definerer, om en postkasse i venteposition eller en dataspildhændelse har prioritet. 
-    
+
 - Hvis du vil styre, hvilke brugerpostkasser en dataspildsøger kan søge efter og administrere, hvem der kan få adgang til sagen, kan du konfigurere overholdelsesgrænser og oprette en brugerdefineret rollegruppe, som er beskrevet i [trin 1](#optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries). Hvis du vil gøre dette, skal du være medlem af rollegruppen Organisationsadministration eller tildeles rolleadministrationsrollen. Hvis du eller en administrator i din organisation allerede har angivet grænser for overholdelse af regler og standarder, kan du springe trin 1 over.
-    
+
 - Hvis du vil oprette en sag, skal du være medlem af rollegruppen eDiscovery Manager eller være medlem af en brugerdefineret rollegruppe, der har fået tildelt rollen Sagsstyring. Hvis du ikke er medlem, kan du bede en Microsoft 365 administrator [om at føje dig til rollegruppen eDiscovery-leder](assign-ediscovery-permissions.md).
-    
+
 - Hvis du vil oprette og køre en indholdssøgning, skal du være medlem af rollegruppen eDiscovery Manager eller tildeles rollen Styring af overholdelsessøgning. Hvis du vil slette meddelelser, skal du være medlem af rollegruppen Organisationsadministration eller tildeles administrationsrollen Søg og fjern. Du kan finde oplysninger om, hvordan du føjer brugere til en rollegruppe, under [Tildel eDiscovery-tilladelser](./assign-ediscovery-permissions.md).
-    
-- Hvis du vil søge i eDiscovery-aktiviteter i overvågningsloggen i trin 8, skal overvågning være aktiveret for din organisation. Du kan søge efter aktiviteter, der er udført inden for de sidste 90 dage. Hvis du vil vide mere om, hvordan du aktiverer og bruger overvågning, skal du se afsnittet [Overvågning af undersøgelsesprocessen for dataspild](#auditing-the-data-spillage-investigation-process) i Trin 8. 
-    
+
+- Hvis du vil søge i eDiscovery-aktiviteter i overvågningsloggen i trin 8, skal overvågning være aktiveret for din organisation. Du kan søge efter aktiviteter, der er udført inden for de sidste 90 dage. Hvis du vil vide mere om, hvordan du aktiverer og bruger overvågning, skal du se afsnittet [Overvågning af undersøgelsesprocessen for dataspild](#auditing-the-data-spillage-investigation-process) i Trin 8.
+
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(Valgfrit) Trin 1: Administrer, hvem der kan få adgang til sagen, og angiv grænser for overholdelse af regler og standarder
 
 Afhængigt af din organisations praksis skal du styre, hvem der kan få adgang til eDiscovery-sagen, der bruges til at undersøge en dataspildhændelse og konfigurere overholdelsesgrænser. Den nemmeste måde at gøre dette på er at tilføje efterforskere som medlemmer af en eksisterende rollegruppe i Microsoft 365 Overholdelsescenter og derefter tilføje rollegruppen som medlem af eDiscovery-sagen. Du kan finde oplysninger om de indbyggede eDiscovery-rollegrupper, og hvordan du føjer medlemmer til en eDiscovery-sag, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).

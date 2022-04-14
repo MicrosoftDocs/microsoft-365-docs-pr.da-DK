@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få rapporten over SharePoint webstedsforbrug for at finde ud af, hvor mange filer brugerne gemmer på SharePoint websteder, hvor mange der aktivt bruges, og hvor meget lagerplads der bruges i alt.
-ms.openlocfilehash: afcaa6cd087948c635604dbadeb9d56c6d48c1a9
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: a99884863db3ffc1f2577358abef6d287d01e2d1
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781495"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64846987"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365 Rapporter i Administration – SharePoint brug af websted
 
@@ -76,7 +76,7 @@ Den **SharePoint webstedsforbrugsrapport** kan ses for tendenser for de seneste 
 |Webstedets ejers hovednavn  |Mailadressen på ejeren af webstedet. |
 |Seneste aktivitetsdato (UTC)  | Datoen for sidste gang, filaktiviteten blev registreret, eller en side blev vist på webstedet.  |
 |Id for følsomhedsmærkat for websted  | Følsomhedsmærkaten på webstedet.  |
-|Ekstern deling  | Indstillingerne for ekstern delbart på webstedet.  |
+|Ekstern deling  | Værdien af indstillingen for ekstern deling for webstedet. Denne værdi afspejler ikke ændringer af den effektive indstilling, der er foretaget af webstedets følsomhedsmærkater. Hvis du bruger følsomhedsmærkater, skal du bruge [rapporter om styring af dataadgang](/sharepoint/data-access-governance-reports) til at få de korrekte værdier.|
 |Politik for ikke-administreret enhed  | Politikken for webstedsadgang for ikke-administrerede enheder.  |
 |Geografisk placering  | Webstedets Geo-placering.  |
 |Filer  |Antallet af filer på webstedet. |

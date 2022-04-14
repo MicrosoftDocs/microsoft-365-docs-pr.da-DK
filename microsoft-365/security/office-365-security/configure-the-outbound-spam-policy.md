@@ -19,12 +19,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan de får vist, opretter, ændrer og sletter udgående spampolitikker i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 15dc850046e74c3b42477998fa24a608d0fd0af8
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 9ab8585a0671f9c62ec2015d91486539c84004db
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841726"
+ms.locfileid: "64847446"
 ---
 # <a name="configure-outbound-spam-filtering-in-eop"></a>Konfigurer filtrering af udgående spam i EOP
 
@@ -101,9 +101,11 @@ Når du opretter en brugerdefineret politik for udgående spam på Microsoft 365
 
    Klik på **Næste**, når du er færdig.
 
-4. På siden **Brugere, grupper og domæner** , der vises, skal du identificere de interne afsendere, som politikken gælder for (afsenderens betingelser):
-   - **Brugere**: De angivne postkasser, mailbrugere eller mailkontakter i din organisation.
-   - **Grupper**: De angivne distributionsgrupper, mailaktiverede sikkerhedsgrupper eller Microsoft 365-grupper i din organisation.
+4. På siden **Brugere, grupper og domæner** , der vises, skal du identificere de interne afsendere, som politikken gælder for (modtagerbetingelser):
+   - **Brugere**: De angivne postkasser, mailbrugere eller mailkontakter.
+   - **Grupper**:
+     - Medlemmer af de angivne distributionsgrupper eller mailaktiverede sikkerhedsgrupper.
+     - Den angivne Microsoft 365-grupper.
    - **Domæner**: Alle afsendere i de angivne [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i din organisation.
 
    Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.

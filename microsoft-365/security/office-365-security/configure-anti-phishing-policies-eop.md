@@ -1,5 +1,5 @@
 ---
-title: Konfigurer antiphishing-politikker i EOP
+title: Konfigurer politikker for antiphishing i EOP
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -13,282 +13,284 @@ ms.assetid: ''
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan lære, hvordan de opretter, redigerer og sletter antiphishing-politikker, der er tilgængelige i Exchange Online Protection (EOP)-organisationer med eller uden Exchange Online postkasser.
+description: Administratorer kan få mere at vide om, hvordan de opretter, redigerer og sletter de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection organisationer (EOP) med eller uden Exchange Online postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6321dcb41e276ccd03d048033e063572506a3c0f
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: f199cb3dbaddc47416c24a82b3066a2631641706
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63588408"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847375"
 ---
-# <a name="configure-anti-phishing-policies-in-eop"></a>Konfigurer antiphishing-politikker i EOP
+# <a name="configure-anti-phishing-policies-in-eop"></a>Konfigurer politikker for antiphishing i EOP
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser er der en standard antiphishing-politik, der indeholder et begrænset antal antispoofing-funktioner, der er aktiveret som standard. Du kan finde flere oplysninger [under Indstillinger for spoof i antiphishing-politikker](set-up-anti-phishing-policies.md#spoof-settings).
+I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser er der en standardpolitik for anti-phishing, der indeholder et begrænset antal anti-spoofing-funktioner, der er aktiveret som standard. Du kan få flere oplysninger under [Spoof-indstillinger i politikker til bekæmpelse af phishing](set-up-anti-phishing-policies.md#spoof-settings).
 
-Administratorer kan få vist, redigere og konfigurere (men ikke slette) standardpolitikken for phishing. Hvis du vil have større granularitet, kan du også oprette brugerdefinerede antiphishing-politikker, der gælder for bestemte brugere, grupper eller domæner i organisationen. Brugerdefinerede politikker tilsidesætter altid standardpolitikken, men du kan ændre prioriteten (rækkefølgen) for dine brugerdefinerede politikker.
+Administratorer kan få vist, redigere og konfigurere (men ikke slette) standardpolitikken til bekæmpelse af phishing. For at opnå større granularitet kan du også oprette brugerdefinerede anti-phishing-politikker, der gælder for bestemte brugere, grupper eller domæner i din organisation. Brugerdefinerede politikker har altid forrang frem for standardpolitikken, men du kan ændre prioriteten (kører rækkefølge) for dine brugerdefinerede politikker.
 
-Organisationer med Exchange Online-postkasser kan konfigurere antiphishing-politikker i Microsoft 365 Defender-portalen eller Exchange Online PowerShell. Enkeltstående EOP-organisationer kan kun bruge Microsoft 365 Defender-portalen.
+Organisationer med Exchange Online postkasser kan konfigurere politikker til bekæmpelse af phishing på Microsoft 365 Defender-portalen eller i Exchange Online PowerShell. Separate EOP-organisationer kan kun bruge portalen Microsoft 365 Defender.
 
-Hvis du vil have mere at vide om at oprette og ændre de mere avancerede antiphishing-politikker, der er tilgængelige i Microsoft Defender til Office 365, skal du se Konfigurer [antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md).
+Du kan få oplysninger om, hvordan du opretter og ændrer de mere avancerede politikker til bekæmpelse af phishing, der er tilgængelige i Microsoft Defender for Office 365, [under Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
-De grundlæggende elementer i en antiphishingpolitik er:
+De grundlæggende elementer i en anti-phishing-politik er:
 
-- **Antiphish-politikken**: Angiver beskyttelse mod phishing for at aktivere eller deaktivere samt de handlinger, der skal anvendes indstillinger.
-- **Antiphish-reglen**: Angiver prioritets- og modtagerfiltre (hvem politikken gælder for) for en antiphish-politik.
+- **Politikken til anti-phish**: Angiver den phishing-beskyttelse, der skal aktiveres eller deaktiveres, og de handlinger, der skal anvendes indstillinger.
+- **Anti-phish-reglen**: Angiver prioritets- og modtagerfiltrene (hvem politikken gælder for) for en anti-phish-politik.
 
-Forskellen mellem disse to elementer er ikke indlysende, når du administrerer antiphishing-politikker Microsoft 365 Defender-portalen:
+Forskellen mellem disse to elementer er ikke indlysende, når du administrerer politikker til bekæmpelse af phishing på Microsoft 365 Defender portalen:
 
-- Når du opretter en antiphishingpolitik, opretter du faktisk en antiphish-regel og den tilknyttede antiphish-politik på samme tid med det samme navn til begge.
-- Når du ændrer en antiphishingpolitik, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltrene ændrer antiphish-reglen. Alle andre indstillinger ændrer den tilknyttede antiphish-politik.
-- Når du fjerner en antiphishing-politik, fjernes antiphish-reglen og den tilknyttede antiphish-politik.
+- Når du opretter en anti-phishing-politik, opretter du faktisk en anti-phish-regel og den tilknyttede anti-phish-politik på samme tid ved hjælp af det samme navn for begge.
+- Når du ændrer en politik til bekæmpelse af phishing, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltre anti-phish-reglen. Alle andre indstillinger ændrer den tilknyttede anti-phish-politik.
+- Når du fjerner en anti-phishing-politik, fjernes reglen for anti-phish og den tilknyttede anti-phish-politik.
 
-I Exchange Online PowerShell administrerer du politikken og reglen separat. Du kan finde flere oplysninger [i afsnittet Brug Exchange Online PowerShell til at konfigurere antiphishing-politikker](#use-exchange-online-powershell-to-configure-anti-phishing-policies) senere i denne artikel.
+I Exchange Online PowerShell kan du administrere politikken og reglen separat. Du kan få flere oplysninger i afsnittet [Brug Exchange Online PowerShell til at konfigurere politikker til anti-phishing](#use-exchange-online-powershell-to-configure-anti-phishing-policies) senere i denne artikel.
 
-Hver organisation har en indbygget antiphishing-politik, der hedder Office365 AntiPhish Default, som har disse egenskaber:
+Alle organisationer har en indbygget anti-phishing-politik med navnet Office365 Antiphish Default, der har disse egenskaber:
 
-- Politikken anvendes på alle modtagere i organisationen, selvom der ikke er knyttet nogen antiphish-regel (modtagerfiltre) til politikken.
-- Politikken har den brugerdefinerede **prioritetsværdi Laveste** , som du ikke kan ændre (politikken anvendes altid sidst). Eventuelle brugerdefinerede politikker, du opretter, har altid en højere prioritet.
-- Politikken er standardpolitikken (egenskaben **IsDefault** har værdien ), `True`og du kan ikke slette standardpolitikken.
+- Politikken anvendes på alle modtagere i organisationen, selvom der ikke er knyttet nogen anti-phish-regel (modtagerfiltre) til politikken.
+- Politikken har den brugerdefinerede prioritetsværdi **Laveste** , som du ikke kan ændre (politikken anvendes altid sidst). Alle brugerdefinerede politikker, du opretter, har altid en højere prioritet.
+- Politikken er standardpolitikken (egenskaben **IsDefault** har værdien `True`), og du kan ikke slette standardpolitikken.
 
-For at øge effektiviteten af beskyttelse mod phishing kan du oprette brugerdefinerede antiphishing-politikker med mere restriktive indstillinger, der anvendes til bestemte brugere eller grupper af brugere.
+Hvis du vil øge effektiviteten af beskyttelse mod phishing, kan du oprette brugerdefinerede politikker til bekæmpelse af phishing med strengere indstillinger, der anvendes på bestemte brugere eller grupper af brugere.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender på <https://security.microsoft.com>. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-- Hvis du vil oprette Exchange Online forbindelse til PowerShell, [skal du Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-  Du kan ikke administrere antiphishing-politikker i enkeltstående EOP PowerShell.
+  Du kan ikke administrere anti-phishing-politikker i enkeltstående EOP PowerShell.
 
-- Du skal have tildelt tilladelser **i Exchange Online,** før du kan udføre procedurerne i denne artikel:
-  - Hvis du vil tilføje, redigere og slette antiphishing-politikker, skal du være medlem af **rollegrupperne** Organisationsadministration **eller Sikkerhedsadministrator** .
-  - Hvis du vil have skrivebeskyttet adgang til antiphishing-politikker, skal du være medlem af **rollegrupperne Global læser** **eller** Sikkerhedslæser.
+- Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
+  - Hvis du vil tilføje, redigere og slette anti-phishing-politikker, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
+  - Hvis du vil have skrivebeskyttet adgang til anti-phishing-politikker, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** .
 
-  Du kan finde flere [oplysninger i Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
+  Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
-  **Bemærkninger**:
+  **Noter**:
 
-  - Hvis du føjer brugere til den Azure Active Directory rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser og tilladelser til andre  funktioner Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
-  - **Rollegruppen Skrivebeskyttet** organisationsadministration [i Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) også skrivebeskyttet adgang til funktionen <sup>\*</sup>.
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen <sup>\*</sup>.
 
-- Se vores anbefalede indstillinger for antiphishing-politikker under [Politikindstillinger for EOP-antiphishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
+- Du kan se vores anbefalede indstillinger for politikker til anti-phishing under [Politikindstillinger for EOP til anti-phishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
 
 - Der kan gå op til 30 minutter, før den opdaterede politik anvendes.
 
-- Du kan finde oplysninger om, hvor antiphishing-politikker anvendes i filtreringspipelinen, under Rækkefølge [og prioriteret mailbeskyttelse](how-policies-and-protections-are-combined.md).
+- Du kan finde oplysninger om, hvor anti-phishing-politikker anvendes i filtreringspipelinen, under [Rækkefølge af og prioritet for mailbeskyttelse](how-policies-and-protections-are-combined.md).
 
-## <a name="use-the-microsoft-365-defender-portal-to-create-anti-phishing-policies"></a>Brug portalen Microsoft 365 Defender til at oprette antiphishing-politikker
+## <a name="use-the-microsoft-365-defender-portal-to-create-anti-phishing-policies"></a>Brug Microsoft 365 Defender-portalen til at oprette politikker til bekæmpelse af phishing
 
-Oprettelse af en brugerdefineret antiphishingpolitik i Microsoft 365 Defender-portalen opretter antiphish-reglen og den tilknyttede antiphish-politik på samme tid med samme navn for begge.
+Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defender-portalen, oprettes reglen for anti-phish og den tilknyttede anti-phish-politik samtidig med det samme navn for begge.
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. Klik på **Opret ikon på** siden Antiphishing ![.](../../media/m365-cc-sc-create-icon.png) **Opret**.
+2. Klik på Ikonet Opret på ![siden **Anti-phishing**.](../../media/m365-cc-sc-create-icon.png) **Opret**.
 
-3. Guiden politik åbnes. På siden **Politiknavn** skal du konfigurere disse indstillinger:
+3. Politikguiden åbnes. Konfigurer disse indstillinger på siden **Politiknavn** :
    - **Navn**: Angiv et entydigt, beskrivende navn til politikken.
    - **Beskrivelse**: Angiv en valgfri beskrivelse af politikken.
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-4. På siden **Brugere, grupper og domæner, der** vises, skal du identificere de interne modtagere, som politikken gælder for (modtagerbetingelser):
-   - **Brugere**: De angivne postkasser, mailbrugere eller mailkontakter i organisationen.
-   - **Grupper**: De angivne distributionsgrupper, mailaktiverede sikkerhedsgrupper eller Microsoft 365 grupper i organisationen.
-   - **Domæner:** Alle modtagere på de angivne [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i organisationen.
+4. På siden **Brugere, grupper og domæner** , der vises, skal du identificere de interne modtagere, som politikken gælder for (modtagerbetingelser):
+   - **Brugere**: De angivne postkasser, mailbrugere eller mailkontakter.
+   - **Grupper**:
+     - Medlemmer af de angivne distributionsgrupper eller mailaktiverede sikkerhedsgrupper.
+     - Den angivne Microsoft 365-grupper.
+   - **Domæner**: Alle modtagere i de angivne [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i din organisation.
 
-   Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi i resultaterne. Gentag denne proces så mange gange, som det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Ikonet Fjern.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
+   Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
 
-   For brugere eller grupper kan du bruge de fleste identifikatorer (navn, visningsnavn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du angive en stjerne (\*) alene for at få vist alle tilgængelige værdier.
+   For brugere eller grupper kan du bruge de fleste identifikatorer (navn, vist navn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du angive en stjerne (\*) alene for at se alle tilgængelige værdier.
 
-   Flere værdier i samme betingelse bruger ELLER-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
+   Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
-   - **Udelad disse brugere, grupper** og domæner: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (undtagelser til modtagere), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+   - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-5. På siden **Phishing-&,** der vises, skal du bruge afkrydsningsfeltet Aktivér efterlignet intelligens til at slå efterlignet intelligens til eller fra. Standardværdien er valgt (valgt), og vi anbefaler, at du lader den være tændt. Du konfigurerer handlingen til at gøre følgende for blokerede efterlignede meddelelser på næste side.
+5. På **tærsklen for phishing & beskyttelsesside** , der vises, skal du bruge afkrydsningsfeltet **Aktivér spoof intelligence** til at slå spoof intelligence til eller fra. Standardværdien er slået til (valgt), og vi anbefaler, at du lader den være slået til. Du kan konfigurere den handling, der skal udføres på blokerede spoofede meddelelser på næste side.
 
-   Hvis du vil deaktivere efterlignet intelligens, skal du fjerne markeringen i afkrydsningsfeltet.
+   Hvis du vil slå spoof intelligence fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
    > [!NOTE]
-   > Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. Du skal i stedet aktivere Udvidet filtrering for forbindelser. Du kan finde en [vejledning under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+   > Du behøver ikke at slå beskyttelse mod spoofing fra, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer i stedet Udvidet filtrering for forbindelser. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-6. På siden **Handlinger** , der vises, skal du konfigurere følgende indstillinger:
-   - **Hvis meddelelsen registreres som efterlignet**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér efterlignet intelligens** på den forrige side. Vælg en af følgende handlinger på rullelisten for meddelelser fra blokerede spoof-afsendere:
+6. Konfigurer følgende indstillinger på siden **Handlinger** , der vises:
+   - **Hvis meddelelsen registreres som spoof**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Vælg en af følgende handlinger på rullelisten for meddelelser fra blokerede spoofede afsendere:
      - **Flyt meddelelsen til modtagernes mapper med uønsket mail**
-     - **An karantæne af meddelelsen**: Hvis du vælger denne handling,  vises et anvend karantænepolitikfelt, hvor du vælger den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af efterlignet intelligencebeskyttelse. Karantænepolitikker definerer, hvad brugerne kan gøre for meddelelser, der er sat i karantæne, og om brugerne modtager beskeder om karantæne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+     - **Sæt meddelelsen i karantæne**: Hvis du vælger denne handling, vises feltet **Anvend karantænepolitik** , hvor du vælger den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af spoof intelligence-beskyttelse. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-       En tom **værdi for Anvend karantænepolitik** betyder, at standardpolitikken for karantæne bruges (DefaultFullAccessPolicy til oplysninger om spoof-intelligens). Når du senere redigerer antiphishing-politikken eller får vist indstillingerne, vises politikkens standardpolitiknavn i karantæne. Du kan finde flere oplysninger om standardkarantænepolitikker, der bruges til understøttet filtrering af beskyttelse, i [denne tabel](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features).
+       En tom værdi for **Anvend karantænepolitik** betyder, at standardkarantænepolitikken bruges (DefaultFullAccessPolicy for spoof intelligence-registreringer). Når du senere redigerer politikken til bekæmpelse af phishing eller får vist indstillingerne, vises standardnavnet for karantænepolitikken. Du kan få flere oplysninger om standard karantænepolitikker, der bruges til understøttede beskyttelsesfiltreringssigelser, i [denne tabel](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features).
 
-   - **Sikkerhedstip & indikatorer**:
-     - **Vis første kontakt sikkerhedstip**: Du kan få mere at vide under [Første sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
-     - **Vis (?) for** ikke-godkendte afsendere for spoof <sup>\*</sup>: Føjer et spørgsmålstegn (?) til afsenderens billede i feltet Fra i Outlook, hvis meddelelsen ikke passerer SPF- eller DKIM-kontroller, og meddelelsen ikke består DMARC- eller [ikke-sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
-     - **Vis "via"-mærket**<sup>\*</sup>: Føjer et via-mærke (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis det er forskelligt fra domænet i DKIM-signaturen eller **MAIL FRA-adressen** .
+   - **Sikkerhedstips & indikatorer**:
+     - **Vis første kontakt sikkerhedstip**: Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
+     - **Vis (?) for ikke-godkendte afsendere til spoof**<sup>\*</sup>: Føjer et spørgsmålstegn (?) til afsenderens foto i feltet Fra i Outlook hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
+     - **Vis "via"-mærket**<sup>\*</sup>: Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** .
 
-     Hvis du vil aktivere en indstilling, skal du markere afkrydsningsfeltet. Hvis du vil deaktivere den, skal du fjerne markeringen i afkrydsningsfeltet.
+     Hvis du vil aktivere en indstilling, skal du markere afkrydsningsfeltet. Hvis du vil slå den fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
-     <sup>\*</sup> Denne indstilling er kun tilgængelig, hvis du har **valgt Aktivér efterlignet intelligens** på den forrige side. Du kan finde flere [oplysninger under Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).
+     <sup>\*</sup> Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-7. Gennemgå dine **indstillinger** på siden Gennemse, der vises. Du kan vælge **Rediger** i hver sektion for at ændre indstillingerne i sektionen. Eller du kan klikke **på** Tilbage eller vælge den bestemte side i guiden.
+7. Gennemse dine indstillinger på siden **Gennemse** , der vises. Du kan vælge **Rediger** i hver sektion for at redigere indstillingerne i sektionen. Du kan også klikke på **Tilbage** eller vælge den specifikke side i guiden.
 
-   Klik på Send, når du er **færdig**.
+   Klik på **Send**, når du er færdig.
 
-8. Klik på Udført på bekræftelsessiden, der **vises**.
+8. Klik på **Udført** på den bekræftelsesside, der vises.
 
-## <a name="use-the-microsoft-365-defender-portal-to-view-anti-phishing-policies"></a>Brug portalen Microsoft 365 Defender til at få vist antiphishing-politikker
+## <a name="use-the-microsoft-365-defender-portal-to-view-anti-phishing-policies"></a>Brug Microsoft 365 Defender-portalen til at få vist politikker til bekæmpelse af phishing
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På **siden Antiphishing** vises følgende egenskaber på listen over politikker:
+2. På siden **Anti-phishing** vises følgende egenskaber på listen over politikker:
 
    - **Navn**
    - **Status**
    - **Prioritet**
    - **Senest ændret**
 
-3. Når du vælger en politik ved at klikke på navnet, vises politikindstillingerne i en pop op-meddelelse.
+3. Når du vælger en politik ved at klikke på navnet, vises politikindstillingerne i et pop op-vindue.
 
-## <a name="use-the-microsoft-365-defender-portal-to-modify-anti-phishing-policies"></a>Brug portalen Microsoft 365 Defender til at ændre antiphishing-politikker
+## <a name="use-the-microsoft-365-defender-portal-to-modify-anti-phishing-policies"></a>Brug Microsoft 365 Defender-portalen til at ændre politikker til bekæmpelse af phishing
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På siden **Antiphishing** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Anti-phishing** skal du vælge en politik på listen ved at klikke på navnet.
 
-3. I pop op-vindue med politikoplysninger skal du **vælge Rediger** i hver sektion for at ændre indstillingerne i sektionen. Du kan finde flere oplysninger om indstillingerne i [afsnittet Brug Microsoft 365 Defender til at oprette antiphishing-politikker](#use-the-microsoft-365-defender-portal-to-create-anti-phishing-policies) tidligere i denne artikel.
+3. I det pop op-vindue med politikoplysninger, der vises, skal du vælge **Rediger** i hvert afsnit for at redigere indstillingerne i sektionen. Du kan få flere oplysninger om indstillingerne i afsnittet [Brug portalen Microsoft 365 Defender til at oprette politikker til bekæmpelse af phishing](#use-the-microsoft-365-defender-portal-to-create-anti-phishing-policies) tidligere i denne artikel.
 
-   For standardpolitikken for phishing er afsnittet Brugere **,** grupper og domæner ikke tilgængelig (politikken gælder for alle), og du kan ikke omdøbe politikken.
+   I forbindelse med standardpolitikken til bekæmpelse af phishing er sektionen **Brugere, grupper og domæner** ikke tilgængelig (politikken gælder for alle), og du kan ikke omdøbe politikken.
 
-Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkefølgen for politikker, skal du se følgende afsnit.
+Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkefølgen for politikken, skal du se følgende afsnit.
 
-### <a name="enable-or-disable-custom-anti-phishing-policies"></a>Aktivere eller deaktivere brugerdefinerede antiphishing-politikker
+### <a name="enable-or-disable-custom-anti-phishing-policies"></a>Aktivér eller deaktiver brugerdefinerede anti-phishing-politikker
 
-Du kan ikke deaktivere standardpolitikken for phishing.
+Du kan ikke deaktivere standardpolitikken til anti-phishing.
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På siden **Antiphishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
+2. På siden **Anti-phishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
 
-3. Øverst i pop op-vindue med politikoplysninger, der vises, får du vist en af følgende værdier:
-   - **Politik deaktiveret**: Hvis du vil aktivere politikken, skal du klikke ![på ikonet Slå til.](../../media/m365-cc-sc-turn-on-off-icon.png) **Slå til** .
-   - **Politik slået til**: Hvis du vil deaktivere politikken, skal du klikke ![på Ikonet Slå fra.](../../media/m365-cc-sc-turn-on-off-icon.png) **Slå fra**.
+3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se en af følgende værdier:
+   - **Politik slået fra**: Hvis du vil aktivere politikken, skal du klikke på ![Slå ikonet til.](../../media/m365-cc-sc-turn-on-off-icon.png) **Aktivér** .
+   - **Politik slået** til: Hvis du vil slå politikken fra, skal du klikke på ![Slå ikonet fra.](../../media/m365-cc-sc-turn-on-off-icon.png) **Sluk for den**.
 
-4. I bekræftelsesdialogboksen, der vises, skal **du klikke på Aktivér** **eller Slå fra**.
+4. I den bekræftelsesdialogboks, der vises, skal du klikke **på Slå til** eller **Slå fra**.
 
-5. Klik **på Luk** i pop op-menuen med politikoplysninger.
+5. Klik på **Luk** i pop op-vinduet med politikoplysninger.
 
-Tilbage på hovedpolitiksiden vil **politikkens statusværdi** **være Til eller** **Fra**.
+Tilbage på hovedpolitiksiden **vil statusværdien** for politikken være **Til** eller **Fra**.
 
-### <a name="set-the-priority-of-custom-anti-phishing-policies"></a>Angiv prioriteten af brugerdefinerede antiphishing-politikker
+### <a name="set-the-priority-of-custom-anti-phishing-policies"></a>Angiv prioriteten for brugerdefinerede anti-phishing-politikker
 
-Antiphishing-politikker prioriteres som standard baseret på den rækkefølge, de er blevet oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et tal for lavere prioritet angiver en højere prioritet for politikken (0 er den højeste), og politikkerne behandles i prioritetsrækkefølgen (politikker med højere prioritet behandles før politikker med lavere prioritet). Der er ikke to politikker, der kan have samme prioritet, og behandling af politikker stopper, når den første politik er anvendt.
+Som standard får anti-phishing-politikker en prioritet, der er baseret på den rækkefølge, de blev oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et lavere prioritetsnummer angiver en højere prioritet for politikken (0 er den højeste), og politikker behandles i prioriteret rækkefølge (politikker med højere prioritet behandles før politikker med lavere prioritet). Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
 
-Hvis du vil ændre prioriteten af en politik, skal du klikke  på Forøg prioritet eller Formindsk prioritet i egenskaberne for politikken (du kan ikke direkte ændre tallet prioritet i Microsoft 365 Defender portal). Det giver kun mening at ændre prioriteten af en politik, hvis du har flere politikker.
+Hvis du vil ændre prioriteten for en politik, skal du klikke på **Forøg prioritet** eller **Formindsk prioritet** i egenskaberne for politikken (du kan ikke direkte ændre **prioritetsnummeret** på portalen Microsoft 365 Defender). Det giver kun mening at ændre prioriteten for en politik, hvis du har flere politikker.
 
- **Bemærkninger**:
+ **Noter**:
 
-- I Microsoft 365 Defender-portalen kan du kun ændre prioriteten af antiphishing-politikken, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter antiphish-reglen (som kan påvirke prioriteten af eksisterende regler).
-- Antiphishing-politikker behandles i den rækkefølge, de vises i (den første politik har **værdien Prioritet** 0). Standardpolitikken for phishing har prioritetsværdien **Laveste**, og du kan ikke ændre den.
+- På Microsoft 365 Defender-portalen kan du kun ændre prioriteten for politikken til bekæmpelse af phishing, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter anti-phish-reglen (hvilket kan påvirke prioriteten af eksisterende regler).
+- Politikker til bekæmpelse af phishing behandles i den rækkefølge, de vises i (den første politik har **prioritetsværdien** 0). Standardpolitikken mod phishing har prioritetsværdien **Laveste**, og du kan ikke ændre den.
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På siden **Antiphishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
+2. På siden **Anti-phishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
 
-3. Øverst i pop op-vindue med politikoplysninger, der vises, får du vist  Forøg  prioritet eller Formindsk prioritet baseret på den aktuelle prioritetsværdi og antallet af brugerdefinerede politikker:
-   - Politikken med værdien **Prioritet** **0 har** kun indstillingen **Formindsk** prioritet tilgængelig.
-   - Politikken med den laveste **prioritetsværdi** (f.eks. **3**) har kun indstillingen **Forøg** prioritet tilgængelig.
-   - Hvis du har tre eller flere politikker, har politikkerne mellem de højeste og laveste prioritetsværdier både indstillingerne Forøg **prioritet** **og Formindsk** prioritet.
+3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se **Forøg prioritet** eller **Formindsk prioritet** baseret på den aktuelle prioritetsværdi og antallet af brugerdefinerede politikker:
+   - Politikken med **prioritetsværdien** **0** har kun indstillingen **Formindsk prioritet** tilgængelig.
+   - Politikken med den laveste **prioritetsværdi** (f.eks. **3**) har kun indstillingen **Forøg prioritet** tilgængelig.
+   - Hvis du har tre eller flere politikker, har politikkerne mellem de højeste og laveste prioritetsværdier både indstillingerne **Forøg prioritet** og **Formindsk prioritet** tilgængelige.
 
-   Klik på ![ikonet Forøg prioritet.](../../media/m365-cc-sc-increase-icon.png) **Forøg** prioritet ![eller ikonet Formindsk prioritet](../../media/m365-cc-sc-decrease-icon.png) **Formindsk prioritet** for at **ændre værdien** Prioritet.
+   Klik på ![ikonet Forøg prioritet.](../../media/m365-cc-sc-increase-icon.png) **Forøg prioritet** eller ![formindsk prioritetsikon](../../media/m365-cc-sc-decrease-icon.png) **Formindsk prioritet** for at ændre **prioritetsværdien** .
 
-4. Når du er færdig, skal du **klikke på** Luk i pop op-menuen med politikoplysninger.
+4. Når du er færdig, skal du klikke på **Luk** i pop op-vinduet med politikoplysninger.
 
-## <a name="use-the-microsoft-365-defender-portal-to-remove-custom-anti-phishing-policies"></a>Brug portalen Microsoft 365 Defender til at fjerne brugerdefinerede antiphishing-politikker
+## <a name="use-the-microsoft-365-defender-portal-to-remove-custom-anti-phishing-policies"></a>Brug Microsoft 365 Defender-portalen til at fjerne brugerdefinerede politikker mod phishing
 
-Når du bruger portalen Microsoft 365 Defender til at fjerne en brugerdefineret antiphishing-politik, slettes begge antiphish-reglen og den tilsvarende antiphish-politik. Du kan ikke fjerne standardpolitikken for phishing.
+Når du bruger Microsoft 365 Defender-portalen til at fjerne en brugerdefineret anti-phishing-politik, slettes begge reglen om anti-phish og den tilsvarende anti-phish-politik. Du kan ikke fjerne standardpolitikken til anti-phishing.
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På siden **Antiphishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
+2. På siden **Anti-phishing** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet.
 
-3. Øverst i pop op-vindue med politikoplysninger, der vises, skal du klikke på ![ikonet Flere handlinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere handlinger** \> ![Ikonet Slet politik **Slet**](../../media/m365-cc-sc-delete-icon.png) politik.
+3. Øverst i pop op-vinduet med politikoplysninger, der vises, skal du klikke på ![ikonet Flere handlinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere handlinger** \> ![Ikonet](../../media/m365-cc-sc-delete-icon.png) Slet politik **Slet politik**.
 
-4. Klik på Ja i bekræftelsesdialogboksen, der **vises**.
+4. Klik på **Ja** i den bekræftelsesdialogboks, der vises.
 
-## <a name="use-exchange-online-powershell-to-configure-anti-phishing-policies"></a>Brug Exchange Online PowerShell til at konfigurere antiphishing-politikker
+## <a name="use-exchange-online-powershell-to-configure-anti-phishing-policies"></a>Brug Exchange Online PowerShell til at konfigurere politikker til bekæmpelse af phishing
 
-Som beskrevet tidligere består en antiphishingpolitik af en antiphish-politik og en antiphish-regel.
+Som tidligere beskrevet består en anti-phishing-politik af en anti-phish-politik og en anti-phish-regel.
 
-I Exchange Online PowerShell ses forskellen mellem antiphish-politikker og antiphish-regler. Du administrerer antiphish-politikker ved hjælp af cmdlet'erne -AntiPhishPolicy, og du administrerer antiphish-regler **\*** ved hjælp af cmdlet'erne -AntiPhishRule.**\***
+I Exchange Online PowerShell er forskellen mellem anti-phish-politikker og anti-phish-regler synlig. Du administrerer anti-phish-politikker ved hjælp **\*af -AntiPhishPolicy-cmdlet'er** , og du administrerer anti-phish-regler ved hjælp **\*af -AntiPhishRule-cmdlet'erne** .
 
-- I PowerShell opretter du først antiphish-politikken, og derefter opretter du antiphish-reglen, der identificerer den politik, som reglen gælder for.
-- I PowerShell skal du ændre indstillingerne i antiphish-politikken og antiphish-reglen separat.
-- Når du fjerner en antiphish-politik fra PowerShell, fjernes den tilsvarende antiphish-regel ikke automatisk og omvendt.
+- I PowerShell skal du først oprette politikken for anti-phish og derefter oprette den anti-phish-regel, der identificerer den politik, som reglen gælder for.
+- I PowerShell kan du ændre indstillingerne i politikken for anti-phish og anti-phish-reglen separat.
+- Når du fjerner en anti-phish-politik fra PowerShell, fjernes den tilsvarende anti-phish-regel ikke automatisk og omvendt.
 
 > [!NOTE]
-> Følgende PowerShell-procedurer er ikke tilgængelige i enkeltstående EOP-organisationer, der bruger Exchange Online Protection PowerShell.
+> Følgende PowerShell-procedurer er ikke tilgængelige i separate EOP-organisationer, der bruger Exchange Online Protection PowerShell.
 
-### <a name="use-powershell-to-create-anti-phishing-policies"></a>Brug PowerShell til at oprette antiphishing-politikker
+### <a name="use-powershell-to-create-anti-phishing-policies"></a>Brug PowerShell til at oprette politikker mod phishing
 
-Oprettelse af en antiphishingpolitik i PowerShell er en proces i to trin:
+Oprettelse af en politik til bekæmpelse af phishing i PowerShell er en proces med to trin:
 
-1. Opret antiphish-politikken.
-2. Opret den antiphish-regel, der angiver den antiphish-politik, som reglen gælder for.
+1. Opret politikken for anti-phish.
+2. Opret den anti-phish-regel, der angiver den anti-phish-politik, som reglen gælder for.
 
- **Bemærkninger**:
+ **Noter**:
 
-- Du kan oprette en ny antiphish-regel og tildele den en eksisterende, ikke-tilknyttet antiphish-politik. En antiphish-regel kan ikke være knyttet til mere end én antiphish-politik.
+- Du kan oprette en ny anti-phish-regel og tildele den en eksisterende, ikke-tilknyttet anti-phish-politik. Et anti-phish-regel kan ikke knyttes til mere end én anti-phish-politik.
 
-- Du kan konfigurere følgende indstillinger for nye antiphish-politikker i PowerShell, der ikke er tilgængelige i Microsoft 365 Defender-portalen, før du har oprettet politikken:
+- Du kan konfigurere følgende indstillinger for nye anti-phish-politikker i PowerShell, der ikke er tilgængelige på Microsoft 365 Defender-portalen, før du har oprettet politikken:
 
-  - Opret den nye politik som _deaktiveret (_ `$false` Aktiveret på **cmdlet'en New-AntiPhishRule** ).
-  - Angiv prioriteten af politikken under oprettelsen (_Prioritet_ _\<Number\>_) på **cmdlet'en New-AntiPhishRule** ).
+  - Opret den nye politik som deaktiveret (_aktiveret_ `$false` på **cmdlet'en New-AntiPhishRule** ).
+  - Angiv prioriteten for politikken under oprettelse (_prioritet_ _\<Number\>_) på **cmdlet'en New-AntiPhishRule** .
 
-- En ny antiphish-politik, som du opretter i PowerShell, er ikke synlig i Microsoft 365 Defender-portalen, før du tildeler politikken til en antiphish-regel.
+- En ny anti-phish-politik, som du opretter i PowerShell, er ikke synlig på Microsoft 365 Defender-portalen, før du tildeler politikken til en anti-phish-regel.
 
-#### <a name="step-1-use-powershell-to-create-an-anti-phish-policy"></a>Trin 1: Brug PowerShell til at oprette en antiphish-politik
+#### <a name="step-1-use-powershell-to-create-an-anti-phish-policy"></a>Trin 1: Brug PowerShell til at oprette en anti-phish-politik
 
-Hvis du vil oprette en antiphish-politik, skal du bruge denne syntaks:
+Hvis du vil oprette en anti-phish-politik, skal du bruge denne syntaks:
 
 ```PowerShell
 New-AntiPhishPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSpoofIntelligence <$true | $false>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-EnableUnauthenticatedSender <$true | $false>] [-EnableViaTag <$true | $false>] [-SpoofQuarantineTag <QuarantineTagName>]
 ```
 
-I dette eksempel oprettes en antiphish-politik med navnet Research Quarantine med følgende indstillinger:
+I dette eksempel oprettes en anti-phish-politik med navnet Research Quarantine med følgende indstillinger:
 
-- Beskrivelsen er: Afdelingspolitik for undersøgelser.
-- Ændrer standardhandlingen for spoofing-registreringer til Karantæne og bruger standardkarantænepolitikken [for meddelelser](quarantine-policies.md) , der er sat i karantæne (vi bruger ikke _parameteren SpoofQuarantineTag_ ).
+- Beskrivelsen er: Politik for forskningsafdeling.
+- Ændrer standardhandlingen for spoofing-registreringer til Karantæne og bruger standard [karantænepolitikken](quarantine-policies.md) for de karantænede meddelelser (vi bruger ikke parameteren _SpoofQuarantineTag_ ).
 
 ```powershell
 New-AntiPhishPolicy -Name "Monitor Policy" -AdminDisplayName "Research department policy" -AuthenticationFailAction Quarantine
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-AntiPhishPolicy](/powershell/module/exchange/New-AntiPhishPolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-AntiPhishPolicy](/powershell/module/exchange/New-AntiPhishPolicy).
 
 > [!NOTE]
-> Hvis du vil have detaljeret vejledning [](quarantine-policies.md) til at angive karantænepolitikker, der skal bruges i en antiphish-politik, skal du se Brug PowerShell til at angive karantænepolitikken i [antiphishing-politikker](quarantine-policies.md#anti-phishing-policies).
+> Du kan finde detaljerede instruktioner til, hvordan du angiver de [karantænepolitikker](quarantine-policies.md) , der skal bruges i en anti-phish-politik, under [Brug PowerShell til at angive karantænepolitikken i politikker til bekæmpelse af phishing](quarantine-policies.md#anti-phishing-policies).
 
-#### <a name="step-2-use-powershell-to-create-an-anti-phish-rule"></a>Trin 2: Brug PowerShell til at oprette en antiphish-regel
+#### <a name="step-2-use-powershell-to-create-an-anti-phish-rule"></a>Trin 2: Brug PowerShell til at oprette en anti-phish-regel
 
-Hvis du vil oprette en antiphish-regel, skal du bruge denne syntaks:
+Brug denne syntaks til at oprette en anti-phish-regel:
 
 ```PowerShell
 New-AntiPhishRule -Name "<RuleName>" -AntiPhishPolicy "<PolicyName>" <Recipient filters> [<Recipient filter exceptions>] [-Comments "<OptionalComments>"]
 ```
 
-I dette eksempel oprettes en antiphish-regel med navnet Forskningsafdeling med følgende betingelser:
+I dette eksempel oprettes en anti-phish-regel med navnet Forskningsafdeling med følgende betingelser:
 
-- Reglen er knyttet til antiphish-politikken med navnet Research Quarantine.
+- Reglen er knyttet til politikken for anti-phish med navnet Research Quarantine.
 - Reglen gælder for medlemmer af gruppen med navnet Forskningsafdeling.
 - Da vi ikke bruger parameteren _Prioritet_ , bruges standardprioriteten.
 
@@ -296,39 +298,39 @@ I dette eksempel oprettes en antiphish-regel med navnet Forskningsafdeling med f
 New-AntiPhishRule -Name "Research Department" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-AntiPhishRule](/powershell/module/exchange/New-AntiPhishRule).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-AntiphishRule](/powershell/module/exchange/New-AntiPhishRule).
 
-### <a name="use-powershell-to-view-anti-phish-policies"></a>Brug PowerShell til at få vist antiphish-politikker
+### <a name="use-powershell-to-view-anti-phish-policies"></a>Brug PowerShell til at få vist anti-phish-politikker
 
-Hvis du vil have vist eksisterende antiphish-politikker, skal du bruge følgende syntaks:
+Hvis du vil have vist eksisterende anti-phish-politikker, skal du bruge følgende syntaks:
 
 ```PowerShell
 Get-AntiPhishPolicy [-Identity "<PolicyIdentity>"] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
-I dette eksempel returneres en oversigtsliste over alle antiphish-politikker sammen med de angivne egenskaber.
+I dette eksempel returneres en oversigtsliste over alle anti-phish-politikker sammen med de angivne egenskaber.
 
 ```PowerShell
 Get-AntiPhishPolicy | Format-Table Name,IsDefault
 ```
 
-I dette eksempel returneres alle egenskabsværdierne for antiphish-politikken, der hedder Direktører.
+I dette eksempel returneres alle egenskabsværdierne for den anti-phish-politik med navnet Direktører.
 
 ```PowerShell
 Get-AntiPhishPolicy -Identity "Executives"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-AntiPhishPolicy](/powershell/module/exchange/Get-AntiPhishPolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Get-AntiPhishPolicy](/powershell/module/exchange/Get-AntiPhishPolicy).
 
-### <a name="use-powershell-to-view-anti-phish-rules"></a>Brug PowerShell til at få vist antiphish-regler
+### <a name="use-powershell-to-view-anti-phish-rules"></a>Brug PowerShell til at få vist anti-phish-regler
 
-Hvis du vil have vist eksisterende antiphish-regler, skal du bruge følgende syntaks:
+Hvis du vil have vist eksisterende anti-phish-regler, skal du bruge følgende syntaks:
 
 ```PowerShell
 Get-AntiPhishRule [-Identity "<RuleIdentity>"] [-State <Enabled | Disabled] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
-I dette eksempel returneres en oversigtsliste over alle antiphish-regler sammen med de angivne egenskaber.
+I dette eksempel returneres en oversigtsliste over alle anti-phish-regler sammen med de angivne egenskaber.
 
 ```PowerShell
 Get-AntiPhishRule | Format-Table Name,Priority,State
@@ -344,134 +346,134 @@ Get-AntiPhishRule -State Disabled | Format-Table Name,Priority
 Get-AntiPhishRule -State Enabled | Format-Table Name,Priority
 ```
 
-I dette eksempel returneres alle egenskabsværdierne for antiphish-reglen Contoso-ledere.
+I dette eksempel returneres alle egenskabsværdierne for anti-phish-reglen med navnet Contoso Executives.
 
 ```PowerShell
 Get-AntiPhishRule -Identity "Contoso Executives"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks [og parameter i Get-AntiPhishRule](/powershell/module/exchange/Get-AntiPhishrule).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-AntiphishRule](/powershell/module/exchange/Get-AntiPhishrule).
 
-### <a name="use-powershell-to-modify-anti-phish-policies"></a>Brug PowerShell til at ændre antiphish-politikker
+### <a name="use-powershell-to-modify-anti-phish-policies"></a>Brug PowerShell til at ændre anti-phish-politikker
 
-Ud over følgende elementer er de samme indstillinger tilgængelige, når du ændrer en antiphish-politik i PowerShell, som når du opretter en politik som beskrevet i Trin 1: Brug PowerShell til at oprette en [antiphish-politik](#step-1-use-powershell-to-create-an-anti-phish-policy) tidligere i denne artikel.
+Ud over følgende elementer er de samme indstillinger tilgængelige, når du ændrer en anti-phish-politik i PowerShell, som når du opretter en politik som beskrevet i [trin 1: Brug PowerShell til at oprette en anti-phish-politik](#step-1-use-powershell-to-create-an-anti-phish-policy) tidligere i denne artikel.
 
-- _MakeDefault-parameteren_, der ændrer den angivne politik til standardpolitikken (gælder for alle, altid Laveste prioritet, og du kan ikke slette den) er kun tilgængelig, når du redigerer en antiphish-politik i PowerShell.
-- Du kan ikke omdøbe en antiphish-politik ( **cmdlet'en Set-AntiPhishPolicy** har ingen _Navne-parameter_ ). Når du omdøber en antiphishingpolitik i Microsoft 365 Defender, omdøber du kun antiphish-reglen.
+- Parameteren _MakeDefault_ , der ændrer den angivne politik til standardpolitikken (anvendt på alle, altid **laveste** prioritet, og du kan ikke slette den), er kun tilgængelig, når du ændrer en anti-phish-politik i PowerShell.
+- Du kan ikke omdøbe en anti-phish-politik ( **Set-AntiPhishPolicy-cmdlet'en** har ingen _navneparameter_ ). Når du omdøber en politik til anti-phishing på Microsoft 365 Defender-portalen, omdøber du kun _anti-phish-reglen_.
 
-Hvis du vil ændre en antiphish-politik, skal du bruge denne syntaks:
+Hvis du vil ændre en anti-phish-politik, skal du bruge denne syntaks:
 
 ```PowerShell
 Set-AntiPhishPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-AntiPhishPolicy](/powershell/module/exchange/Set-AntiPhishPolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-AntiPhishPolicy](/powershell/module/exchange/Set-AntiPhishPolicy).
 
 > [!NOTE]
-> Hvis du vil have detaljeret vejledning [](quarantine-policies.md) til at angive karantænepolitikken, der skal bruges i en antiphish-politik, skal du se Brug PowerShell til at angive karantænepolitikken i [antiphishing-politikker](quarantine-policies.md#anti-phishing-policies).
+> Du kan finde detaljerede instruktioner til, hvordan du angiver den [karantænepolitik](quarantine-policies.md) , der skal bruges i en anti-phish-politik, under [Brug PowerShell til at angive karantænepolitikken i politikker til bekæmpelse af phishing](quarantine-policies.md#anti-phishing-policies).
 
-### <a name="use-powershell-to-modify-anti-phish-rules"></a>Brug PowerShell til at ændre antiphish-regler
+### <a name="use-powershell-to-modify-anti-phish-rules"></a>Brug PowerShell til at ændre anti-phish-regler
 
-Den eneste indstilling, der ikke er tilgængelig, når du redigerer en antiphish-regel i PowerShell, er parameteren _Enabled_ , der gør det muligt at oprette en deaktiveret regel. Hvis du vil aktivere eller deaktivere eksisterende antiphish-regler, skal du se næste afsnit.
+Den eneste indstilling, der ikke er tilgængelig, når du ændrer en anti-phish-regel i PowerShell, er den _aktiverede_ parameter, der giver dig mulighed for at oprette en deaktiveret regel. Hvis du vil aktivere eller deaktivere eksisterende anti-phish-regler, skal du se næste afsnit.
 
-Ellers er de samme indstillinger tilgængelige, når du opretter en regel som beskrevet i trin 2: Brug PowerShell til at oprette en [antiphish-regelsektion](#step-2-use-powershell-to-create-an-anti-phish-rule) tidligere i denne artikel.
+Ellers er de samme indstillinger tilgængelige, når du opretter en regel som beskrevet i [Trin 2: Brug PowerShell til at oprette en anti-phish-regelsektion](#step-2-use-powershell-to-create-an-anti-phish-rule) tidligere i denne artikel.
 
-Hvis du vil ændre en antiphish-regel, skal du bruge denne syntaks:
+Hvis du vil ændre en anti-phish-regel, skal du bruge denne syntaks:
 
 ```PowerShell
 Set-AntiPhishRule -Identity "<RuleName>" <Settings>
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-AntiPhishRule](/powershell/module/exchange/set-antiphishrule).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-AntiphishRule](/powershell/module/exchange/set-antiphishrule).
 
-### <a name="use-powershell-to-enable-or-disable-anti-phish-rules"></a>Brug PowerShell til at aktivere eller deaktivere antiphish-regler
+### <a name="use-powershell-to-enable-or-disable-anti-phish-rules"></a>Brug PowerShell til at aktivere eller deaktivere anti-phish-regler
 
-Aktivering eller deaktivering af en antiphish-regel i PowerShell aktiverer eller deaktiverer hele antiphishing-politikken (antiphish-reglen og den tildelte antiphish-politik). Du kan ikke aktivere eller deaktivere standardpolitikken for phishing (den anvendes altid på alle modtagere).
+Aktivering eller deaktivering af en anti-phish-regel i PowerShell aktiverer eller deaktiverer hele politikken til anti-phishing (anti-phish-reglen og den tildelte anti-phish-politik). Du kan ikke aktivere eller deaktivere standardpolitikken til anti-phishing (den anvendes altid på alle modtagere).
 
-Hvis du vil aktivere eller deaktivere en antiphish-regel i PowerShell, skal du bruge denne syntaks:
+Hvis du vil aktivere eller deaktivere en anti-phish-regel i PowerShell, skal du bruge denne syntaks:
 
 ```PowerShell
 <Enable-AntiPhishRule | Disable-AntiPhishRule> -Identity "<RuleName>"
 ```
 
-I dette eksempel deaktiveres reglen om antiphish med navnet Marketingafdeling.
+I dette eksempel deaktiveres reglen for anti-phish med navnet Marketing Department.
 
 ```PowerShell
 Disable-AntiPhishRule -Identity "Marketing Department"
 ```
 
-I dette eksempel kan du bruge den samme regel.
+I dette eksempel aktiveres samme regel.
 
 ```PowerShell
 Enable-AntiPhishRule -Identity "Marketing Department"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Enable-AntiPhishRule](/powershell/module/exchange/enable-antiphishrule) [og Disable-AntiPhishRule](/powershell/module/exchange/disable-antiphishrule).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Enable-AntiPhishRule](/powershell/module/exchange/enable-antiphishrule) og [Disable-AntiPhishRule](/powershell/module/exchange/disable-antiphishrule).
 
-### <a name="use-powershell-to-set-the-priority-of-anti-phish-rules"></a>Brug PowerShell til at angive prioriteten af antiphish-regler
+### <a name="use-powershell-to-set-the-priority-of-anti-phish-rules"></a>Brug PowerShell til at angive prioriteten for anti-phish-regler
 
-Den højeste prioritetsværdi, du kan angive for en regel, er 0. Den laveste værdi, du kan angive, afhænger af antallet af regler. Hvis du f.eks. har fem regler, kan du bruge prioritetsværdierne 0 til 4. Hvis du ændrer prioriteten af en eksisterende regel, kan det have en overlappende effekt på andre regler. Hvis du f.eks. har fem brugerdefinerede regler (prioriteter 0 til 4), og du ændrer prioriteten af en regel til 2, ændres den eksisterende regel med prioritet 2 til prioritet 3, og reglen med prioritet 3 ændres til prioritet 4.
+Den højeste prioritetsværdi, du kan angive for en regel, er 0. Den laveste værdi, du kan angive, afhænger af antallet af regler. Hvis du f.eks. har fem regler, kan du bruge prioritetsværdierne 0 til 4. Hvis du ændrer prioriteten for en eksisterende regel, kan det have en overlappende effekt på andre regler. Hvis du f.eks. har fem brugerdefinerede regler (prioriteter 0 til 4), og du ændrer prioriteten for en regel til 2, ændres den eksisterende regel med prioritet 2 til prioritet 3, og reglen med prioritet 3 ændres til prioritet 4.
 
-Hvis du vil angive prioriteten af en antiphish-regel i PowerShell, skal du bruge følgende syntaks:
+Hvis du vil angive prioriteten for en anti-phish-regel i PowerShell, skal du bruge følgende syntaks:
 
 ```PowerShell
 Set-AntiPhishRule -Identity "<RuleName>" -Priority <Number>
 ```
 
-I dette eksempel angives prioriteten af reglen Marketingafdeling til 2. Alle eksisterende regler, der har en prioritet, der er mindre end eller lig med 2, formindskes med 1 (deres prioritetstal øges med 1).
+I dette eksempel angives prioriteten for reglen marketingafdeling til 2. Alle eksisterende regler, der har en prioritet, der er mindre end eller lig med 2, reduceres med 1 (deres prioritetstal øges med 1).
 
 ```PowerShell
 Set-AntiPhishRule -Identity "Marketing Department" -Priority 2
 ```
 
-**Bemærkninger**:
+**Noter**:
 
-- Hvis du vil angive prioriteten af en ny regel, når du opretter den, skal du bruge parameteren _Prioritet_ på **cmdlet'en New-AntiPhishRule** i stedet.
-- Standardpolitikken for phish har ikke en tilsvarende antiphish-regel, og den har altid den uændrede prioritetsværdi **Laveste**.
+- Hvis du vil angive prioriteten for en ny regel, når du opretter den, skal du i stedet bruge parameteren _Priority_ på **cmdlet'en New-AntiPhishRule** .
+- Standardpolitikken for anti-phish har ikke en tilsvarende anti-phish-regel, og den har altid den ikke-redigerbare prioritetsværdi **Laveste**.
 
-### <a name="use-powershell-to-remove-anti-phish-policies"></a>Brug PowerShell til at fjerne antiphish-politikker
+### <a name="use-powershell-to-remove-anti-phish-policies"></a>Brug PowerShell til at fjerne anti-phish-politikker
 
-Når du bruger PowerShell til at fjerne en antiphish-politik, fjernes den tilsvarende antiphish-regel ikke.
+Når du bruger PowerShell til at fjerne en anti-phish-politik, fjernes den tilsvarende anti-phish-regel ikke.
 
-Hvis du vil fjerne en antiphish-politik i PowerShell, skal du bruge denne syntaks:
+Hvis du vil fjerne en anti-phish-politik i PowerShell, skal du bruge denne syntaks:
 
 ```PowerShell
 Remove-AntiPhishPolicy -Identity "<PolicyName>"
 ```
 
-I dette eksempel fjernes politikken for antiphish med navnet Marketingafdeling.
+I dette eksempel fjernes politikken for anti-phish med navnet Marketing Department.
 
 ```PowerShell
 Remove-AntiPhishPolicy -Identity "Marketing Department"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-AntiPhishPolicy](/powershell/module/exchange/Remove-AntiPhishPolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-AntiPhishPolicy](/powershell/module/exchange/Remove-AntiPhishPolicy).
 
-### <a name="use-powershell-to-remove-anti-phish-rules"></a>Brug PowerShell til at fjerne antiphish-regler
+### <a name="use-powershell-to-remove-anti-phish-rules"></a>Brug PowerShell til at fjerne anti-phish-regler
 
-Når du bruger PowerShell til at fjerne en antiphish-regel, fjernes den tilsvarende antiphish-politik ikke.
+Når du bruger PowerShell til at fjerne en anti-phish-regel, fjernes den tilsvarende anti-phish-politik ikke.
 
-Hvis du vil fjerne en antiphish-regel i PowerShell, skal du bruge denne syntaks:
+Hvis du vil fjerne en anti-phish-regel i PowerShell, skal du bruge denne syntaks:
 
 ```PowerShell
 Remove-AntiPhishRule -Identity "<PolicyName>"
 ```
 
-I dette eksempel fjernes reglen om antiphish med navnet Marketingafdeling.
+I dette eksempel fjernes reglen for anti-phish med navnet Marketing Department.
 
 ```PowerShell
 Remove-AntiPhishRule -Identity "Marketing Department"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-AntiPhishRule](/powershell/module/exchange/Remove-AntiPhishRule).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-AntiphishRule](/powershell/module/exchange/Remove-AntiPhishRule).
 
-## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer fungerede?
+## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer virkede?
 
-For at bekræfte, at du har konfigureret antiphishing-politikker i EOP, skal du gøre et af følgende:
+Benyt en af følgende fremgangsmåder for at bekræfte, at du har konfigureret politikker til bekæmpelse af phishing i EOP:
 
-- På siden **Antiphishing** i Microsoft 365 Defender på <https://security.microsoft.com/antiphishing>, skal du bekræfte listen over politikker, deres **Statusværdier** og deres **Prioritetsværdier**. Hvis du vil have vist flere detaljer, skal du vælge politikken på listen ved at klikke på navnet og få vist oplysningerne i pop op-menuen, der vises.
+- Kontrollér listen over politikker, deres **statusværdier** og **deres prioritetsværdier** på siden **Anti-phishing** på portalen Microsoft 365 Defender på <https://security.microsoft.com/antiphishing>. Hvis du vil have vist flere oplysninger, skal du vælge politikken på listen ved at klikke på navnet og få vist detaljerne i det pop op-vindue, der vises.
 
-- I Exchange Online PowerShell skal du \<Name\> erstatte med navnet på politikken eller reglen, køre følgende kommando og kontrollere indstillingerne:
+- I Exchange Online PowerShell skal du erstatte \<Name\> med navnet på politikken eller reglen, køre følgende kommando og kontrollere indstillingerne:
 
   ```PowerShell
   Get-AntiPhishPolicy -Identity "<Name>"
