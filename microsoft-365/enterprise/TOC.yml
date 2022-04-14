@@ -375,6 +375,8 @@
       items:
         - name: Bliv klar
           href: configure-services-and-applications.md
+        - name: Eksternt samarbejde
+          href: external-guest-access.md
         - name: Exchange Online
           href: /Exchange/exchange-online
         - name: SharePoint
