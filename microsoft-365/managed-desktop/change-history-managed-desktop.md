@@ -13,12 +13,12 @@ f1.keywords:
 ms.author: tiaraquan
 ms.article: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99ed659ceae21901deb1625c0b9e65a9a82ea1b4
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: abaca30b4de2638b0c1f7d0522b96fac469760a9
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704730"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841785"
 ---
 # <a name="change-history-for-microsoft-managed-desktop-documentation"></a>Ændringsoversigt for Microsoft Managed Desktop dokumentation
 
@@ -28,7 +28,7 @@ Denne artikel indeholder en liste over nye og opdaterede artikler i [dokumentati
 
 Ny eller ændret artikel | Beskrivelse
 --- | ---
-| [Delte enheder](service-description/shared-devices.md) | Tilføjet afsnittet Registrer nye enheder i delt tilstand |
+| [Delte enheder](service-description/shared-devices.md) | Tilføjede Registrer nye enheder ved hjælp af Windows selvudrullende tilstandsprofil for Autopilot |
 | [Teams](get-started/teams.md) | Opdaterede sektionen Microsoft Intune ændringer |
 
 ## <a name="march-2022"></a>Marts 2022
@@ -157,7 +157,7 @@ Ny eller ændret artikel | Beskrivelse
 [Enhedskrav](service-description/device-requirements.md) | Opdateret artikel
 [Løs problemer, der blev fundet af værktøjet til parathedsvurdering](get-ready/readiness-assessment-fix.md) | Opdateret artikel
 [Microsoft OneDrive](get-started/onedrive.md) | Ny artikel
-[Overholdelse af regler og standarder](intro/compliance.md) | Opdateret
+[Overholdelse af angivne standarder](intro/compliance.md) | Opdateret
 [Microsoft 365 Apps for enterprise](get-started/m365-apps.md) | Opdateret artikel
 [Værktøjer til vurdering af parathed](get-ready/readiness-assessment-tool.md) | Opdateret artikel
 
@@ -170,7 +170,7 @@ Ny eller ændret artikel | Beskrivelse
 [Arbejd med rapporter](working-with-managed-desktop/reports.md) | Opdateret artikel
 [Installér Intune-firmaportal på enheder](get-started/company-portal.md) | Opdateret artikel
 [Enhedskrav](service-description/device-requirements.md) | Ny artikel
-[Overholdelse af regler og standarder](intro/compliance.md) | Opdateret artikel
+[Overholdelse af angivne standarder](intro/compliance.md) | Opdateret artikel
 [Sådan håndteres opdateringer i Microsoft Managed Desktop](service-description/updates.md) | Opdateret artikel
 [Få adgang til administrationsportalen](get-started/access-admin-portal.md) | Opdateret artikel
 
@@ -181,7 +181,7 @@ Ny eller ændret artikel | Beskrivelse
 [Hvad er Microsoft Managed Desktop?](./intro/index.md) | Opdateret artikel
 [Arbejd med rapporter](working-with-managed-desktop/reports.md) | Opdateret artikel
 [Beskyttelse af personlige oplysninger og personlige oplysninger](service-description/privacy-personal-data.md) | Opdateret artikel
-[Overholdelse af regler og standarder](intro/compliance.md) | Opdateret artikel
+[Overholdelse af angivne standarder](intro/compliance.md) | Opdateret artikel
 [Forudsætninger](get-ready/prerequisites.md) | Opdateret artikel
 [Netværkskonfiguration](get-ready/network.md) | Opdateret artikel
 
@@ -241,7 +241,7 @@ Ny eller ændret artikel | Beskrivelse
 Ny eller ændret artikel | Beskrivelse
 --- | ---
 [krav til Microsoft Managed Desktop app](service-description/mmd-app-requirements.md) | Opdateret artikel
-[Overholdelse af regler og standarder](intro/compliance.md) | Opdateret artikel
+[Overholdelse af angivne standarder](intro/compliance.md) | Opdateret artikel
 [Kom i gang med appstyring](get-started/get-started-app-control.md) | Opdateret artikel
 [Arbejd med appkontrolelement](working-with-managed-desktop/work-with-app-control.md) | Opdateret artikel
 [Forudsætninger for Microsoft Managed Desktop](get-ready/prerequisites.md) | Opdateret artikel
@@ -272,7 +272,7 @@ Ny eller ændret artikel | Beskrivelse
 
 Ny eller ændret artikel | Beskrivelse
 --- | ---
-[Overholdelse af regler og standarder](intro/compliance.md) | Ny artikel
+[Overholdelse af angivne standarder](intro/compliance.md) | Ny artikel
 [Microsoft Managed Desktop understøttede områder og sprog](service-description/regions-languages.md) | Opdateret artikel
 
 ## <a name="march-2020"></a>Marts 2020

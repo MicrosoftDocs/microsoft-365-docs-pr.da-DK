@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f06ed934f1ba1a24ba16fe3919d37e10526a3a2f
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 1709597d10b140124501fd0dc7349e8fc4342bb6
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823844"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841745"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -102,7 +102,8 @@ Hvis du tidligere har onboardet dine servere ved hjælp af MMA, skal du følge v
 Følgende specifikke oplysninger gælder for den nye samlede løsningspakke til Windows Server 2012 R2 og 2016:
 
 - Sørg for, at forbindelseskravene som angivet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](/microsoft-365/security/defender-endpoint/configure-proxy-internet?enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) er opfyldt. De svarer til dem, der gælder for Windows Server 2019. 
-- Vi undersøger et problem med Windows Server 2012 R2-forbindelse til skyen, når der bruges statisk telemetryProxyServer, og URL-adresserne på listen over tilbagekaldte certifikater (CRL) kan ikke nås fra SYSTEM-kontokonteksten. Den øjeblikkelige afhjælpning er enten at bruge en alternativ proxyindstilling, der leverer en sådan forbindelse, eller konfigurere den samme proxy via indstillingen WinInet i SYSTEM-kontokonteksten.
+- Vi har identificeret et problem med Windows Server 2012 R2-forbindelse til skyen, når der bruges statisk telemetryProxyServer, **og** URL-adresserne på listen over tilbagekaldte certifikater (CRL) kan ikke nås fra SYSTEM-kontokonteksten. Den øjeblikkelige afhjælpning er enten at bruge en alternativ proxyindstilling ("hele systemet"), der leverer en sådan forbindelse, eller konfigurere den samme proxy via indstillingen WinInet på SYSTEM-kontokonteksten.
+Alternativt kan du bruge instruktionerne i [Løsning på et kendt problem med TelemetryProxyServer på frakoblede computere](#workaround-for-a-known-issue-with-telemetryproxyserver-on-disconnected-machines) for at installere et certifikat som en midlertidig løsning.
 - Tidligere var brugen af Microsoft Monitoring Agent (MMA) på Windows Server 2016 og nedenfor tilladt for OMS/Log Analytics-gatewayen for at give forbindelse til Defender-cloudtjenester. Den nye løsning, f.eks. Microsoft Defender for Endpoint på Windows Server 2019, Windows Server 2022 og Windows 10, understøtter ikke denne gateway.
 - På Windows Server 2016 skal du kontrollere, at Microsoft Defender Antivirus er installeret, er aktiv og opdateret. Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).  
 - På Windows Server 2012 R2 er der ingen brugergrænseflade til Microsoft Defender Antivirus. Derudover tillader brugergrænsefladen på Windows Server 2016 kun grundlæggende handlinger. Hvis du vil udføre handlinger på en enhed lokalt, skal du se [Administrer Microsoft Defender for Endpoint med PowerShell, WMI og MPCmdRun.exe](/microsoft-365/security/defender-endpoint/manage-mde-post-migration-other-tools). Derfor fungerer funktioner, der specifikt er afhængige af brugerinteraktion, f.eks. hvor brugeren bliver bedt om at træffe en beslutning eller udføre en bestemt opgave, muligvis ikke som forventet. Det anbefales at deaktivere eller ikke aktivere brugergrænsefladen eller kræve brugerinteraktion på en administreret server, da det kan påvirke beskyttelsesfunktionerne.
@@ -116,9 +117,21 @@ Følgende specifikke oplysninger gælder for den nye samlede løsningspakke til 
   På maskiner med en stor mængde netværkstrafik anbefales det desuden på det kraftigste at teste ydeevnen i dit miljø, før du aktiverer denne funktion bredt. Du skal muligvis tage højde for yderligere ressourceforbrug.
 - På Windows Server 2012 R2 udfyldes netværkshændelser muligvis ikke på tidslinjen. Dette problem kræver en Windows Update udgivet som en del af den [månedlige akkumulering fra 12. oktober 2021 (KB5006714)](https://support.microsoft.com/topic/october-12-2021-kb5006714-monthly-rollup-4dc4a2cd-677c-477b-8079-dcfef2bda09e).
 - Opgraderinger af operativsystemet understøttes ikke. Fjern derefter Offboard, før du opgraderer.
-- Automatiske udeladelser for *serverroller* understøttes ikke på Windows Server 2012 R2, men indbyggede undtagelser for operativsystemfiler er. Du kan få flere oplysninger om tilføjelse af udeladelser under [Anbefalinger til virusscanning for virksomhedscomputere, der kører aktuelt understøttede versioner af Windows](https://support.microsoft.com/topic/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows-kb822158-c067a732-f24a-9079-d240-3733e39b40bc).
-- På computere, der er blevet opgraderet fra den tidligere MMA-baserede løsning, og Slutpunktsregistrering og -svar-sensoren er en (prøveversion) version, der er ældre end 10.8047.22439.1056, kan fjernelse og gendannelse tilbage til den MMA-baserede løsning føre til nedbrud. 
-- Integration med Microsoft Defender for Cloud/Microsoft Defender til servere til besked om og automatisk udrulning eller opgradering er endnu ikke tilgængelig. Selvom du manuelt kan installere den nye løsning på disse maskiner, vises der ingen beskeder i Microsoft Defender for Cloud.
+- Automatiske udeladelser for **serverroller** understøttes ikke på Windows Server 2012 R2, men indbyggede undtagelser for operativsystemfiler er. Du kan få flere oplysninger om tilføjelse af udeladelser under [Anbefalinger til virusscanning for virksomhedscomputere, der kører aktuelt understøttede versioner af Windows](https://support.microsoft.com/topic/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows-kb822158-c067a732-f24a-9079-d240-3733e39b40bc).
+- På computere, der er blevet opgraderet fra den tidligere MMA-baserede løsning, og Slutpunktsregistrering og -svar-sensoren er en (prøveversion) version, der er ældre end 10.8047.22439.1056, kan fjernelse og gendannelse tilbage til den MMA-baserede løsning føre til nedbrud. Hvis du bruger sådan en prøveversion, skal du opdatere ved hjælp af KB5005292.
+- Hvis du vil udrulle og onboarde den nye løsning ved hjælp af Microsoft Endpoint Manager, skal du i øjeblikket oprette en pakke. Du kan få flere oplysninger om, hvordan du installerer programmer og scripts i Configuration Manager, [under Pakker og programmer i Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs). MECM 2107 med hotfix-akkumulering eller nyere er påkrævet for at understøtte administration af politikkonfiguration ved hjælp af noden Endpoint Protection.
+
+## <a name="workaround-for-a-known-issue-with-telemetryproxyserver-on-disconnected-machines"></a>Løsning på et kendt problem med TelemetryProxyServer på frakoblede maskiner
+
+Problembeskrivelse: Når du bruger indstillingen TelemetryProxyServer til at angive en proxy, der skal bruges af den Slutpunktsregistrering og -svar komponent i Microsoft Defender for Endpoint, vil et manglende mellemliggende certifikat medføre, at Slutpunktsregistrering og -svar sensor til ikke at oprette forbindelse til cloudtjenesten.
+
+Berørt scenarie: -Microsoft Defender for Endpoint med Sense-versionsnummer 10.8048.22439.1065 eller tidligere prøveversioner, der kører på Windows Server 2012 R2 -Brug af proxykonfigurationen TelemetryProxyServer. Andre metoder påvirkes ikke
+
+Løsning:
+1. Kontrollér, at computeren kører Sense version 10.8048.22439.1065 eller nyere ved enten at installere ved hjælp af den nyeste pakke, der er tilgængelig fra onboardingsiden, eller ved at anvende KB5005292.
+2. Download og udpakke certifikatet fra https://github.com/microsoft/mdefordownlevelserver/blob/main/InterCA.zip
+3. Importér certifikatet til lageret "Mellemliggende nøglecentre", der er tillid til, på den lokale computer.
+Du kan bruge PowerShell-kommandoen: Import-Certificate -FilePath .\InterCA.cer -CertStoreLocation Cert:\LocalMachine\Ca
 
 ## <a name="integration-with-microsoft-defender-for-cloud"></a>Integration med Microsoft Defender for Cloud
 
@@ -127,7 +140,7 @@ Microsoft Defender for Endpoint integreres problemfrit med Microsoft Defender fo
 Du kan få flere oplysninger under [Integration med Microsoft Defender for Cloud](azure-server-integration.md).
 
 > [!NOTE]
-> For Windows Server 2012 R2 og 2016, der kører den moderne samlede løsning, er integration med Microsoft Defender for Cloud/Microsoft Defender for servere til besked om og automatiseret udrulning eller opgradering endnu ikke tilgængelig. Selvom du manuelt kan installere den nye løsning på disse maskiner, vises der ingen beskeder i Microsoft Defender for Cloud.
+> For Windows Server 2012 R2 og 2016, der kører den moderne unified løsning, er integration med Microsoft Defender for Cloud/Microsoft Defender for servere til automatiseret installation eller opgradering endnu ikke tilgængelig for alle planer. Du kan installere den nye løsning manuelt på disse computere eller bruge Microsoft Defender til server P1 til at teste den nye løsning. Flere oplysninger på [New Defender for serverplaner](/azure/defender-for-cloud/release-notes#new-defender-for-servers-plans).
 
 > [!NOTE]
 > - Integrationen mellem Microsoft Defender til servere og Microsoft Defender for Endpoint er blevet udvidet til at understøtte Windows Server 2022, [Windows Server 2019 og Windows Virtual Desktop (WVD)](/azure/security-center/release-notes#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-virtual-desktop-wvd-in-preview).
@@ -148,20 +161,17 @@ Installationspakken kontrollerer, om følgende komponenter allerede er installer
 
 **Forudsætninger for Windows Server 2016** 
 
-Service stack-opdateringen (SSU) fra 14. september 2021 eller nyere skal installeres.  Den seneste kumulative opdatering (LCU) fra 20. september 2018 eller nyere skal installeres.  Det anbefales at installere den nyeste tilgængelige SSU og LCU på serveren.  
-
-Funktionen Microsoft Defender Antivirus skal være installeret og køre version 4.18.2109.6 eller nyere.  Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
+- Service stack-opdateringen (SSU) fra 14. september 2021 eller nyere skal installeres.  
+- Den seneste kumulative opdatering (LCU) fra 20. september 2018 eller nyere skal installeres.  Det anbefales at installere den nyeste tilgængelige SSU og LCU på serveren.  - Funktionen Microsoft Defender Antivirus skal være aktiveret/installeret og opdateret. Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 
 **Forudsætninger for at køre med sikkerhedsløsninger fra tredjepart**
 
 Hvis du vil bruge en antimalwareløsning fra tredjepart, skal du køre Microsoft Defender Antivirus i passiv tilstand. Du skal huske at indstille til passiv tilstand under installationen og onboardingprocessen.
 
-
-**Opdateringspakke til Microsoft Defender for Endpoint på Windows Server 2012 R2 og 2016**
 > [!NOTE]
 > Hvis du installerer Microsoft Defender for Endpoint på servere med McAfee Endpoint Security (ENS) eller VirusScan Enterprise (VSE), skal versionen af McAfee-platformen muligvis opdateres for at sikre, at Microsoft Defender Antivirus ikke fjernes eller deaktiveres. Du kan få flere oplysninger, herunder de specifikke versionsnummer, der kræves, i [artiklen McAfee Knowledge Center](https://kc.mcafee.com/corporate/index?page=content&id=KB88214).
 
-
+**Opdateringspakke til Microsoft Defender for Endpoint på Windows Server 2012 R2 og 2016**
 
 Hvis du vil modtage regelmæssige produktforbedringer og rettelser til komponenten Slutpunktsregistrering og -svar sensor, skal du sikre, at Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) anvendes eller godkendes. Hvis du vil holde beskyttelseskomponenterne opdaterede, skal du desuden se [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
 
@@ -170,7 +180,6 @@ Hvis du vil modtage regelmæssige produktforbedringer og rettelser til komponent
 - TRIN 1: [Download installations- og onboardingpakkerne](#step-1-download-installation-and-onboarding-packages)
 - TRIN 2: [Anvend installations- og onboardingpakken](#step-2-apply-the-installation-and-onboarding-package)
 - TRIN 3: [Fuldfør onboardingtrinnene](#step-3-complete-the-onboarding-steps) 
-
 
 ### <a name="step-1-download-installation-and-onboarding-packages"></a>TRIN 1: Download installations- og onboardingpakker
 
@@ -314,9 +323,7 @@ Data, der indsamles af Defender for Endpoint, gemmes på lejerens geo-placering 
 
 
 
-## <a name="windows-server-semi-annual-enterprise-channel-and-windows-server-2019-and-windows-server-2022"></a>Windows Server Semi-Annual Enterprise Channel og Windows Server 2019 og Windows Server 2022
-
-Onboardingpakken til Windows Server 2019 og Windows Server 2022 gennem Microsoft Endpoint Manager sender i øjeblikket et script. Du kan få flere oplysninger om, hvordan du installerer scripts i Configuration Manager, [under Pakker og programmer i Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs).
+## <a name="windows-server-semi-annual-enterprise-channel-sac-windows-server-2019-and-windows-server-2022"></a>Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019 og Windows Server 2022
 
 ### <a name="download-package"></a>Download pakke
 

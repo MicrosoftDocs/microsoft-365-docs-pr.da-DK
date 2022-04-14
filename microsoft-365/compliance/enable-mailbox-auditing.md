@@ -19,17 +19,17 @@ ms.assetid: aaca8987-5b62-458b-9882-c28476a66918
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Logføring af overvågning af postkasser er som standard slået til i Microsoft 365 (også kaldet standardovervågning af postkasser eller overvågning af postkasser er som standard slået til). Det betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres i en overvågningslog for postkassen, hvor du kan søge efter aktiviteter, der udføres i postkassen.
-ms.openlocfilehash: 9b3c08850ff0cce14fdce13d496642239e817096
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+description: Logføring af overvågning af postkasser er som standard slået til i Microsoft 365 (også kaldet "overvågning af standardpostkasser" eller "overvågning af postkasser slået til som standard"). Denne konfiguration betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres i en overvågningslog for postkassen, hvor du kan søge efter aktiviteter, der udføres i postkassen.
+ms.openlocfilehash: e869c705df2943c1781c02362c2c38b6713affc5
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714323"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841907"
 ---
 # <a name="manage-mailbox-auditing"></a>Administrer overvågning af postkasse
 
-Fra og med januar 2019 aktiverer Microsoft som standard logføring af overvågning af postkasser for alle organisationer. Det betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres, og de tilsvarende overvågningsposter for postkassen vil være tilgængelige, når du søger efter dem i postkassens overvågningslog. Før overvågning af postkassen blev slået til som standard, skulle du aktivere den manuelt for hver brugerpostkasse i din organisation.
+I januar 2019 aktiverede Microsoft som standard logføring af postkasseovervågning for alle organisationer. Denne konfiguration betyder, at visse handlinger udført af postkasseejere, stedfortrædere og administratorer automatisk logføres. Det betyder også, at de tilsvarende postkassens overvågningsposter vil være tilgængelige, når du søger efter dem i postkassens overvågningslog. Før overvågning af postkassen blev slået til som standard, skulle du aktivere den manuelt for hver brugerpostkasse i din organisation.
 
 Her er nogle fordele ved overvågning af postkasser som standard:
 
@@ -41,7 +41,8 @@ Her er nogle fordele ved overvågning af postkasser som standard:
 > [!NOTE]
 >
 > - Det er vigtigt at huske på, at overvågning af postkasser er aktiveret som standard: Du behøver ikke at foretage dig noget for at administrere overvågning af postkasser. Men hvis du vil vide mere, tilpasse overvågning af postkasser ud fra standardindstillingerne eller slå den helt fra, kan denne artikel hjælpe dig.
-> - Som standard er det kun overvågningshændelser for postkasser for E5-brugere, der er tilgængelige i søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til Office 365-administrationsaktivitet. Du kan få flere oplysninger i afsnittet [Flere oplysninger](#more-information) i denne artikel.
+> - Det er som standard kun overvågningshændelser for postkasser for brugere med licenser, der indeholder funktionen [Avanceret overvågning](advanced-audit.md), der er tilgængelige i søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til administration af Office 365. Disse licenser er beskrevet [her](auditing-solutions-overview.md#advanced-audit-1). Denne artikel henviser samlet set til licenser, der omfatter Avanceret overvågning som *E5/A5/G5-licenser*.
+>   Du kan få flere oplysninger om, hvordan licenser påvirker overvågningshændelser for postkasser i M365 Compliance Center, i afsnittet [Flere oplysninger](#more-information) senere i denne artikel.
 
 ## <a name="verify-mailbox-auditing-on-by-default-is-turned-on"></a>Kontrollér, at overvågning af postkassen som standard er slået til
 
@@ -53,7 +54,7 @@ Get-OrganizationConfig | Format-List AuditDisabled
 
 Værdien **False** angiver, at overvågning af postkasser som standard er aktiveret for organisationen. Dette er aktiveret som standard for organisationsværdier, og overvågning af postkasser tilsidesættes for bestemte postkasser. Hvis overvågning af postkasser f.eks. er deaktiveret for en postkasse (egenskaben *AuditEnabled* er **Falsk** i postkassen), overvåges standardhandlingerne for postkassen stadig, fordi overvågning af postkassen som standard er aktiveret for organisationen.
 
-Hvis du vil holde overvågning af postkassen deaktiveret for bestemte postkasser, skal du konfigurere overvågning af postkasser for ejeren af postkassen og andre brugere, der er blevet uddelegeret adgang til postkassen. Du kan få flere oplysninger i afsnittet [Overgå logføring af overvågning af postkasser](#bypass-mailbox-audit-logging) i denne artikel.
+Hvis du vil holde overvågning af postkassen deaktiveret for bestemte postkasser, skal du konfigurere overvågning af postkasser for ejeren af postkassen og andre brugere, der er blevet uddelegeret adgang til postkassen. Du kan få flere oplysninger i afsnittet [Overgå logføring af overvågning af postkasser](#bypass-mailbox-audit-logging) senere i denne artikel.
 
 > [!NOTE]
 > Når overvågning af postkasser som standard er slået til for organisationen, ændres egenskaben *AuditEnabled* for berørte postkasser ikke fra **Falsk** til **Sand**. Det vil sige, at overvågning af postkasser som standard ignorerer egenskaben *AuditEnabled* på postkasser.
@@ -102,15 +103,15 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 |**Mappebind**|Der blev åbnet en postkassemappe. Denne handling logføres også, når administratoren eller stedfortræderen åbner postkassen. <br/><br/> **Bemærk**! Overvåg poster for handlinger for mappebindinger, der udføres af stedfortrædere, konsolideres. Der genereres én overvågningspost for individuel mappeadgang inden for en 24-timers periode.|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
 |**HardDelete**|En meddelelse blev fjernet fra mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|
 |**MailboxLogin**|Brugeren loggede på sin postkasse.|||![Markeret](../media/checkmark.png)|
-|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
-|**Meddelelsebind**|**Bemærk**! Denne værdi er kun tilgængelig for E3-brugere (brugere uden abonnementer på tilføjelsesprogrammer til E5- eller E5-overholdelse). <br/><br/> En meddelelse blev vist i indholdsruden eller åbnet af en administrator.|![Markeret](../media/checkmark.png)|||
+|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**Meddelelsebind**|**Bemærk**! Denne værdi er kun tilgængelig for brugere *uden* E5/A5/G5-licenser. <br/><br/> En meddelelse blev vist i indholdsruden eller åbnet af en administrator.|![Markeret](../media/checkmark.png)|||
 |**RedigerMapperTilladelser**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
 |**Flytte**|En meddelelse blev flyttet til en anden mappe.|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**FlyttilDeletedItems**|En meddelelse blev slettet og flyttet til mappen Slettet post.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Postsletning**|Et element, der er mærket som en post, blev slettet med blød sletning (flyttet til mappen Genoprettelige elementer). Elementer, der er mærket som poster, kan ikke slettes permanent (fjernes fra mappen Gendanbare elementer).|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**RemoveFolderPermissions**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
-|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
-|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere af abonnementsbrugere af E5- eller E5-overholdelse. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
+|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer avanceret overvågning i Microsoft 365](set-up-advanced-audit.md). <br/><br/> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Send som**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendAs. Det betyder, at en anden bruger sendte meddelelsen, som om den kom fra ejeren af postkassen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**SendOnBehalf**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf. Det betyder, at en anden bruger sendte meddelelsen på vegne af ejeren af postkassen. Meddelelsen angiver til modtageren, hvem meddelelsen blev sendt på vegne af, og hvem der rent faktisk sendte meddelelsen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**Blød sletning**|En meddelelse blev slettet eller slettet permanent fra mappen Slettet post. Elementer, der er slettet med blød sletning, flyttes til mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
@@ -320,11 +321,11 @@ Værdien **Sand** angiver, at logføring af overvågning af postkasser tilsides�
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Selvom logføring af overvågning af postkasser som standard er aktiveret for alle organisationer, er det kun brugere med E5-licenser, der returnerer overvågningsloghændelser for postkasser i [søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter](search-the-audit-log-in-security-and-compliance.md) eller via [API'en til Office 365 administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference) **som standard**.
+- Selvom logføring af overvågning af postkasser som standard er aktiveret for alle organisationer, er det kun brugere med [licenser, der indeholder funktionen Avanceret overvågning](auditing-solutions-overview.md#advanced-audit-1) (samlet kaldet *E5/A5/G5-licenser*), der returnerer hændelser i [overvågningsloggen for postkasser i søgninger i Microsoft 365 Overholdelsescenter](search-the-audit-log-in-security-and-compliance.md) eller via [API'en](/office/office-365-management-api/office-365-management-activity-api-reference) **til Office 365 administration af aktivitet som standard**.
 
-  Hvis du vil hente overvågningslogposter for postkasser for brugere uden E5-licenser, kan du:
+  Hvis du vil hente overvågningslogposter for postkasser for brugere uden E5/A5/G5-licenser, kan du bruge en af følgende løsninger:
 
-  - Aktivér overvågning af postkasser manuelt på individuelle postkasser (kør kommandoen `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`, ). Når du har gjort dette, kan du bruge søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til Office 365 managementaktivitet.
+  - Aktivér overvågning af postkasser manuelt på de berørte brugerpostkasser ved at køre følgende kommando: `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`. Når du har aktiveret overvågning af postkassen i postkassen, kan du bruge søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til Office 365 administrationsaktivitet.
 
     > [!NOTE]
     > Hvis overvågning af postkassen allerede ser ud til at være aktiveret i postkassen, men dine søgninger ikke returnerer nogen resultater, skal du ændre værdien af parameteren *AuditEnabled* til `$false` og derefter tilbage til `$true`.

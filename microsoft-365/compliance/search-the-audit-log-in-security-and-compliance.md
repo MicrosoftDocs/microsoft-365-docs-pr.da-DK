@@ -21,12 +21,12 @@ description: Brug Microsoft 365 Overholdelsescenter til at søge i den samlede o
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: edf5bfd91313c621707d1bdc35074bfe7fe9585c
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 1a10bf738562f8fd9a263252d4a56eddf8acee9d
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759915"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841949"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Søg i overvågningsloggen i Overholdelsescenter
 
@@ -128,29 +128,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
 - Azure Active Directory (Azure AD) er katalogtjenesten til Microsoft 365. Den samlede overvågningslog indeholder bruger-, gruppe-, program-, domæne- og katalogaktiviteter, der udføres i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> eller i Azure-administrationsportalen. Du kan se en komplet liste over Azure AD-hændelser [under Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
-- Det kan tage op til 30 minutter eller op til 24 timer, efter en hændelse forekommer, for at den tilsvarende overvågningslogpost returneres i resultaterne af en søgning i overvågningsloggen. I følgende tabel vises den tid, det tager for de forskellige tjenester i Microsoft 365.
-
-  |Microsoft 365 tjeneste eller funktion|30 minutter|24 timer|
-  |---|:---:|:---:|
-  |Defender for Microsoft 365 og Threat Intelligence|![Markeret.](../media/checkmark.png)||
-  |Azure Active Directory (brugerlogonhændelser)||![Markeret.](../media/checkmark.png)|
-  |Azure Active Directory (administratorhændelser)||![Markeret.](../media/checkmark.png)|
-  |Forebyggelse af datatab|![Markeret.](../media/checkmark.png)||
-  |Dynamics 365 CRM||![Markeret.](../media/checkmark.png)|
-  |eDiscovery|![Markeret.](../media/checkmark.png)||
-  |Exchange Online|![Markeret.](../media/checkmark.png)||
-  |Microsoft Power Automate||![Markeret.](../media/checkmark.png)|
-  |Microsoft Stream|![Markeret.](../media/checkmark.png)||
-  |Microsoft Teams|![Markeret.](../media/checkmark.png)||
-  |Power Apps||![Markeret.](../media/checkmark.png)|
-  |Power BI|![Markeret.](../media/checkmark.png)||
-  |Microsoft 365-overholdelsescenter|![Markeret.](../media/checkmark.png)||
-  |Følsomhedsmærkater||![Markeret.](../media/checkmark.png)|
-  |SharePoint Online og OneDrive for Business|![Markeret.](../media/checkmark.png)||
-  |Workplace Analytics|![Markeret.](../media/checkmark.png)||
-  |Yammer||![Markeret.](../media/checkmark.png)|
-  |Microsoft Forms|![Markeret.](../media/checkmark.png)||
-  ||||
+- Microsoft garanterer ikke et bestemt tidspunkt, efter at der opstår en hændelse, for at den tilsvarende overvågningspost returneres i resultaterne af en søgning i overvågningsloggen. For kernetjenester (f.eks. Exchange, SharePoint, OneDrive og Teams) er tilgængeligheden af overvågningsposter typisk 60-90 minutter, efter at en hændelse forekommer. For andre tjenester kan tilgængeligheden af overvågningsposter være længere. Nogle problemer, der er uundgåelige (f.eks. serverafbrydelser), kan dog opstå uden for overvågningstjeneste, der forsinker tilgængeligheden af overvågningsposter. Af denne grund forpligter Microsoft sig ikke til et bestemt tidspunkt.
 
 - Overvågningslogføring for Power BI er ikke aktiveret som standard. Hvis du vil søge efter Power BI aktiviteter i overvågningsloggen, skal du aktivere overvågning på Power BI administrationsportal. Du kan finde instruktioner i afsnittet "Overvågningslogge" i [Power BI administrationsportal](/power-bi/service-admin-portal#audit-logs).
 

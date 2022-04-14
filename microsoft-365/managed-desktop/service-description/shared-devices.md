@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 8c8d79313ee858ebcac8754b96046b517a3f614a
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 5cb1f14f8f9dc8c645621c1a12c651db8a790b71
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835968"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841918"
 ---
 # <a name="shared-devices"></a>Delte enheder
 
@@ -45,7 +45,7 @@ Delt enhedstilstand er ikke et godt valg i disse situationer:
 - Hvis brugeroplevelsen skal være anderledes for forskellige brugere på enheden.
 - Hvis sættet af programmer, som hver bruger har brug for, varierer meget.
 
-## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile-in-microsoft-managed-desktop"></a>Registrer nye enheder ved hjælp af profilen til selvudrulning af Windows Autopilot i Microsoft Managed Desktop
+## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile"></a>Registrer nye enheder ved hjælp af profilen for selvudrulning af Windows Autopilot
 
 Uanset om du eller en partner håndterer enhedsregistrering, kan du vælge at bruge profilen [Windows Autopilot til selvudrulningstilstand](/mem/autopilot/self-deploying) i Microsoft Managed Desktop.
 
