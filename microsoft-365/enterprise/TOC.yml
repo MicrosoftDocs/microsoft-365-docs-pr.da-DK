@@ -383,6 +383,10 @@
           href: /sharepoint/sharepoint-online
         - name: Microsoft Teams
           href: /MicrosoftTeams/Teams-overview
+        - name: Møder og konferencer
+          href: /microsoftteams/deploy-meetings-microsoft-teams-landing-page
+        - name: Teams-stemme
+          href: /microsoftteams/cloud-voice-landing-page
         - name: Yammer
           href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
         - name: Aktivér rettighedsstyring
@@ -402,7 +406,7 @@
         - name: SharePoint
           href: /sharepoint/introduction
         - name: Microsoft Teams
-          href: /microsoftteams/upgrade-monitor-quality
+          href: /microsoftteams/manage-teams-overview
         - name: Yammer
           href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
         - name: Ydeevne og justering
