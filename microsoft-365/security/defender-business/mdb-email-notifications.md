@@ -1,36 +1,34 @@
 ---
-title: Konfigurer mailbeskeder til dit sikkerhedsteam
-description: Konfigurer mailbeskeder til at fortælle personer om vigtige og sårbarheder med Microsoft Defender for Business
+title: Konfigurer mailmeddelelser til dit sikkerhedsteam
+description: Konfigurer mailmeddelelser for at fortælle personer om beskeder og sikkerhedsrisici med Microsoft Defender til virksomheder
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: bf11ed140d2e0609f2d12d1da3bcc448ff733235
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: a65634a5827e60d710cec56ca10835c73053cb10
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683137"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862846"
 ---
-# <a name="set-up-email-notifications"></a>Konfigurer mailbeskeder
+# <a name="set-up-email-notifications"></a>Konfigurer mailmeddelelser
 
-> [!IMPORTANT]
-> Microsoft Defender for Business udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra d. 1. marts 2022. Defender for Business som et enkeltstående abonnement er i preview, og den udrulles gradvist til kunder og [it-partnere](https://aka.ms/mdb-preview) , der tilmelder sig her for at anmode om det. [Forhåndsvisning indeholder et indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer funktioner regelmæssigt.
-> 
-> Nogle oplysninger i denne artikel relaterer til foreløbige produkter/tjenester, der kan være væsentligt ændret, før de frigives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller underforståede, for de oplysninger, du har angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
-Du kan konfigurere mailbeskeder til dit sikkerhedsteam. I tilfælde af at der genereres beskeder, eller nye sårbarheder opdages, får personer i sikkerhedsteamet besked automatisk. 
+Du kan konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres beskeder, eller der registreres nye sikkerhedsrisici, får personer i dit sikkerhedsteam automatisk besked. 
 
-## <a name="what-to-do"></a>Hvad kan du gøre?
+## <a name="what-to-do"></a>Sådan gør du
 
 1. [Få mere at vide om typer af mailmeddelelser](#types-of-email-notifications).
 
@@ -40,39 +38,39 @@ Du kan konfigurere mailbeskeder til dit sikkerhedsteam. I tilfælde af at der ge
 
 
 >
-> **Har du et minut?**
-> Tag vores korte <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">undersøgelse om Microsoft Defender for Business</a>. Vi vil meget gerne høre fra dig!
+> **Har du et øjeblik?**
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
-## <a name="types-of-email-notifications"></a>Typer af mailbeskeder
+## <a name="types-of-email-notifications"></a>Typer af mailmeddelelser
 
-Når du konfigurerer mailmeddelelser, kan du vælge mellem to typer, som beskrevet i følgende tabel: <br/><br/>
+Når du konfigurerer mailmeddelelser, kan du vælge mellem to typer, som beskrevet i følgende tabel:
 
 | Meddelelsestype  | Beskrivelse  |
 |---------|---------|
-| Sårbarheder  | Når der registreres nye udnyttelses- eller sikkerhedsrisikohændelser, modtager modtagerne en mail. |
-| Beskeder & sårbarheder  | Når der genereres beskeder, fordi der registreres trusler på enheder, eller når der registreres nye udnyttelses- eller sikkerhedsrisikohændelser, modtager modtagerne en mail. |
+| Sårbarheder  | Når der registreres nye udnyttelser eller sårbarhedshændelser, modtager modtagerne en mail. |
+| Beskeder & sikkerhedsrisici  | Når der genereres beskeder, fordi der registreres trusler på enheder, eller når der registreres nye udnyttelser eller sårbarhedshændelser, modtager modtagerne en mail. |
 
 > [!TIP]
-> **Mailbeskeder er ikke den eneste måde, hvorpå dit sikkerhedsteam kan få oplysninger om nye beskeder eller sårbarheder**.
+> **Mailmeddelelser er ikke den eneste måde, dit sikkerhedsteam kan finde ud af om nye beskeder eller sikkerhedsrisici**.
 > 
-> Mailmeddelelser er en praktisk metode til at holde dit sikkerhedsteam informeret i realtid. Men der er andre! Når sikkerhedsteamet f.eks. logger på Microsoft 365 Defender -portalen ([https://security.microsoft.com](https://security.microsoft.com)), får de vist kort, der fremhæver nye trusler, advarsler og sårbarheder. Defender for Business er udviklet til at fremhæve vigtige oplysninger, som dit sikkerhedsteam er særligt opmærksom på, så snart de logger på.
+> Mailmeddelelser er en praktisk måde at holde dit sikkerhedsteam informeret på i realtid. Men der er andre! Når dit sikkerhedsteam f.eks. logger på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), får de vist kort, der fremhæver nye trusler, beskeder og sårbarheder. Defender for Business er designet til at fremhæve vigtige oplysninger, som dit sikkerhedsteam bekymrer sig om, så snart de logger på.
 > 
-> Dit sikkerhedsteam kan også vælge **Hændelser i navigationsruden** for at få vist oplysninger. Du kan få mere at [vide under Få vist og administrer hændelser i Microsoft Defender for Business](mdb-view-manage-incidents.md).
+> Dit sikkerhedsteam kan også vælge **Hændelser** i navigationsruden for at få vist oplysninger. Du kan få mere at vide under [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md).
 
-## <a name="view-and-edit-email-notifications"></a>Få vist og redigere mailbeskeder
+## <a name="view-and-edit-email-notifications"></a>Få vist og rediger mailmeddelelser
 
-Hvis du vil have vist eller redigere indstillinger for mailbeskeder for din virksomhed, skal du følge disse trin:
+Hvis du vil have vist eller redigere indstillinger for mailbeskeder for dit firma, skal du følge disse trin:
 
-1. Gå til Microsoft 365 Defender -portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
+1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. I navigationsruden skal **du Indstillinger** slutpunkter og derefter **vælge Slutpunkter**. Derefter skal du under **Generelt** vælge **Mailbeskeder**. 
+2. Vælg **Indstillinger** i navigationsruden, og vælg derefter **Slutpunkter**. Vælg derefter **Mailmeddelelser** under **Generelt**. 
 
-3. Gennemse oplysningerne under **fanerne Vigtige** beskeder **og sårbarheder** .
+3. Gennemse oplysningerne under fanerne **Beskeder** og **Sikkerhedsrisici** .
 
-   - Hvis du ikke kan se nogen elementer på fanen Beskeder,  kan du oprette en regel for personer, der skal have besked, når der genereres beskeder. Hvis du vil have hjælp til denne opgave, skal [du se Opret regler for beskeder om beskeder](../defender-endpoint/configure-email-notifications.md).
+   - Hvis du ikke kan se nogen elementer på fanen **Beskeder** , kan du oprette en regel for personer, der skal have besked, når der genereres beskeder. Hvis du vil have hjælp til denne opgave, skal du se [Opret regler for beskeder](../defender-endpoint/configure-email-notifications.md).
 
-   - Hvis du ikke kan se nogen elementer på fanen Sårbarheder, kan du oprette en regel, som giver personer besked, når der opdages en ny sikkerhedsrisiko. For at få hjælp til denne opgave skal du [se Opret regler for sikkerhedsrisikohændelser](../defender-endpoint/configure-vulnerability-email-notifications.md).
+   - Hvis du ikke kan se nogen elementer på fanen **Sårbarheder** , kan du oprette en regel, der giver personer besked, når der registreres en ny sikkerhedsrisiko. Hvis du vil have hjælp til denne opgave, skal du se [Opret regler for hændelser for sårbarheder](../defender-endpoint/configure-vulnerability-email-notifications.md).
 
    - Hvis du har oprettet regler, skal du vælge en regel for at redigere den. Du kan også slette en regel. 
 
@@ -80,4 +78,4 @@ Hvis du vil have vist eller redigere indstillinger for mailbeskeder for din virk
 
 Fortsæt til:
 
-- [Trin 4: Onboard-enheder til Microsoft Defender for Business](mdb-onboard-devices.md)
+- [Trin 4: Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md)

@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,19 +16,17 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 13e803666cc7af14af52031eb86a2f86edf06f80
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 56b7bbcb95bc00c8647fb4cc39e0d1e0611596ab
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666300"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862164"
 ---
 # <a name="understand-policy-order-in-microsoft-defender-for-business"></a>Forstå politikrækkefølgen i Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 ## <a name="policy-order-in-microsoft-defender-for-business"></a>Politikrækkefølge i Microsoft Defender til virksomheder
 
@@ -40,27 +38,20 @@ Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge.
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="key-points-to-remember-about-policy-order"></a>Vigtige punkter at huske om politikrækkefølge
 
 - Politikker tildeles en prioritetsrækkefølge.
-
 - Enheder modtager kun den første anvendte politik.
-
 - Du kan ændre prioritetsrækkefølgen for politikker.
-
 - Standardpolitikker får den laveste prioritetsrækkefølge.
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Kom i gang med at bruge Defender for Business](mdb-get-started.md)
-
+- [Első lépések ved hjælp af Defender for Business](mdb-get-started.md)
 - [Administrer enheder](mdb-manage-devices.md)
-
 - [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-
 - [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
-
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

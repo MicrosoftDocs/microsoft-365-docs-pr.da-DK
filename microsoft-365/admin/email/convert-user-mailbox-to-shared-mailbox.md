@@ -23,107 +23,102 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 2e122487-e1f5-4f26-ba41-5689249d93ba
-description: 'Lær at konvertere en privat postkasse til en delt postkasse, der kan åbnes af flere personer i stedet for kun én person. '
-ms.openlocfilehash: a1b82d744cc43f8119e9819537467133f2bae17c
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: 'Få mere at vide om, hvordan du konverterer en privat postkasse til en delt postkasse, som flere personer kan få adgang til i stedet for kun én person. '
+ms.openlocfilehash: 4838dc7bd4856c89448cb501fdd20066d1c97aa2
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63590778"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861933"
 ---
 # <a name="convert-a-user-mailbox-to-a-shared-mailbox"></a>Konvertér en brugerpostkasse til en delt postkasse
 
-Når du konverterer en brugers postkasse til en delt postkasse, bevares hele den eksisterende mail og kalender. Først nu findes den i en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person. På et senere tidspunkt kan du konvertere en delt postkasse tilbage til en brugerpostkasse (privat).
+Når du konverterer en brugers postkasse til en delt postkasse, bevares al den eksisterende mail og kalender. Først nu er det i en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person. På et senere tidspunkt kan du konvertere en delt postkasse tilbage til en brugerpostkasse (privat).
 
 > [!TIP]
-> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialspecialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist får du og dine medarbejdere døgnet rundt adgang til små virksomhedsspecialister, efterhånden som du vokser din virksomhed, fra onboarding til daglig brug.
+> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft-specialist i mindre virksomheder](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist får du og dine medarbejdere døgnet rundt adgang til specialister i mindre virksomheder, efterhånden som du udvikler din virksomhed – lige fra onboarding til daglig brug.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-**Her er nogle meget vigtige ting, du skal vide:**
+**Her er nogle vigtige ting, du skal vide**:
 
-- Den brugerpostkasse, du konverterer, skal have en licens tildelt, før du konverterer den til en delt postkasse. Ellers får du ikke vist muligheden for at konvertere postkassen. Hvis du har fjernet licensen, skal du tilføje den igen, så du kan konvertere postkassen. Når du har konverteret postkassen til en delt postkasse, kan du fjerne licensen fra brugerens konto.
+- Brugerpostkassen skal have tildelt en licens, før du konverterer den til en delt postkasse. Ellers kan du ikke se muligheden for at konvertere postkassen. Hvis du har fjernet licensen, skal du tilføje den igen, så du kan konvertere postkassen. Når du har konverteret brugerpostkassen til en delt postkasse, kan du fjerne licensen fra brugerens konto.
 
-- Delte postkasser kan have op til 50 GB data uden at være tildelt en licens. Hvis du vil opbevare flere data end det, skal du have tildelt en licens. Det kan være nødvendigt at slette en masse store mails (f.eks. mails med vedhæftede filer) fra den delte postkasse for at formindske den, så du kan fjerne licensen.
+- Uden en licens er delte postkasser begrænset til 50 GB. Du skal muligvis slette en masse store meddelelser (f.eks. meddelelser med vedhæftede filer) fra den delte postkasse for at formindske den, så du kan fjerne licensen.
 
-- Slet ikke den gamle brugers konto. Den skal bruges til at forankre den delte postkasse. Hvis du allerede har slettet brugerkontoen, skal du se [Konvertér en slettet brugers postkasse](#convert-the-mailbox-of-a-deleted-user).
+  Hvis du vil øge størrelsesgrænsen til 100 GB, skal du tildele en Exchange Online Plan 2-licens til den delte postkasse.
 
-- Reglerne er intakte, når postkassen er konverteret til en delt postkasse.
+  Hvis du tildeler en Exchange Online Plan 1-licens og en Exchange Online-arkivering tilføjelsesprogramlicens til den delte postkasse, kan du aktivere automatisk udvidelse af arkivering for at få yderligere arkivlagerkapacitet.
 
-## <a name="use-the-classic-exchange-admin-center-to-convert-a-mailbox"></a>Brug den klassiske Exchange Administration til at konvertere en postkasse
- 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">den klassiske Exchange Administration</a>.
+- Slet ikke den gamle brugers konto, fordi kontoen er påkrævet for at forankre den delte postkasse. Hvis du allerede har slettet brugerkontoen, skal du se [Konvertér en slettet brugers postkasse](#convert-the-mailbox-of-a-deleted-user).
 
-2. Vælg **Modtagerpostkasser**\>.
+- Du behøver ikke at nulstille kontoens adgangskode til brugerpostkassen. Men hvis du ikke nulstiller adgangskoden, **vil det oprindelige brugernavn og den oprindelige adgangskode fortsat fungere i den delte postkasse** , når konverteringen er fuldført.
 
-3. Vælg brugerpostkassen. Under **Konvertér til delt postkasse skal** du vælge **Konvertér**.
+- Indbakkeregler bevares, når brugerpostkassen konverteres til en delt postkasse.
 
-4. Hvis postkassen er mindre end 50 GB, kan du fjerne [licensen fra](../manage/remove-licenses-from-users.md) brugeren og holde op med at betale for den. Slet ikke brugerens konto. Den delte postkasse skal bruge den som en forankring. Hvis du konverterer postkassen for en medarbejder, der forlader organisationen, skal du foretage dig yderligere for at sikre, at de ikke længere kan logge på. Få mere at vide under [Fjern en tidligere medarbejder fra Microsoft 365](../add-users/remove-former-employee.md).
-    
-> [!NOTE]
-> Det er ikke påkrævet at nulstille brugerens adgangskode under konvertering af postkasse. Men hvis adgangskoden ikke nulstilles, fungerer **det oprindelige brugernavn og den oprindelige adgangskode fortsat, når** postkassekonverteringen er fuldført.
+- Hvis du vil sætte en In-Place venteposition eller en procesretlig venteposition på en delt postkasse, skal du tildele en Exchange Online Plan 2-licens *eller* en Exchange Online Plan 1-licens og en Exchange Online-arkivering tilføjelsesprogramlicens til den delte postkasse.
 
-Du kan finde alle andre oplysninger om delte postkasser i [Om delte postkasser](about-shared-mailboxes.md) og [Opret en delt postkasse](create-a-shared-mailbox.md).
+## <a name="use-the-classic-exchange-admin-center-to-convert-a-mailbox"></a>Brug Classic Exchange Administration til at konvertere en postkasse
 
-> [!NOTE]
-> Delte postkasser kræver ikke en separat licens. Men hvis du vil aktivere In-Place-arkivet eller sætte en In-Place-venteposition eller en retslig venteposition på en delt postkasse, skal du tildele en Exchange Online Plan 1 med Exchange Online-arkivering- eller Exchange Online Plan 2-licens til postkassen.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Klassisk Exchange Administration</a>.
 
-## <a name="use-the-new-exchange-admin-center-to-convert-a-mailbox"></a>Brug den nye Exchange Administration til at konvertere en postkasse
+2. Vælg **Modtageres** \> **postkasser**.
+
+3. Vælg brugerpostkassen. Under **Konvertér til delt postkasse** skal du vælge **Konvertér**.
+
+4. Hvis postkassen er mindre end 50 GB, kan du fjerne [licensen fra brugeren](../manage/remove-licenses-from-users.md) og stoppe med at betale for den. Slet ikke brugerens konto. Den delte postkasse skal bruge den der som et anker. Hvis du konverterer postkassen for en medarbejder, der forlader din organisation, skal du udføre yderligere trin for at sikre, at vedkommende ikke længere kan logge på. Du kan få flere oplysninger under [Fjern en tidligere medarbejder fra Microsoft 365](../add-users/remove-former-employee.md).
+
+Du kan se alt andet, du har brug for at vide om delte postkasser, under [Om delte postkasser](about-shared-mailboxes.md) og [Opret en delt postkasse](create-a-shared-mailbox.md).
+
+## <a name="use-the-new-exchange-admin-center-to-convert-a-mailbox"></a>Brug Nyt Exchange Administration til at konvertere en postkasse
 
 1. Gå til <a href="https://admin.exchange.microsoft.com/#/homepage" target="_blank"> Exchange Administration</a>.
 
-2. Vælg **Modtagerpostkasser**\>.
+2. Vælg **Modtageres** \> **postkasser**.
 
-3. Vælg brugerpostkassen. På fanen **Postkasse** under Flere handlinger **skal du** vælge **Konvertér til delt postkasse**.
+3. Vælg brugerpostkassen. Under fanen **Postkasse** under **Flere handlinger** skal du vælge **Konvertér til delt postkasse**.
 
-4. Hvis postkassen er mindre end 50 GB, kan du fjerne [licensen fra](../manage/remove-licenses-from-users.md) brugeren og holde op med at betale for den. Slet ikke brugerens konto. Den delte postkasse skal bruge den som en forankring. Hvis du konverterer postkassen for en medarbejder, der forlader organisationen, skal du foretage dig yderligere for at sikre, at de ikke kan logge på længere. Se Fjern [en tidligere medarbejder fra Microsoft 365](../add-users/remove-former-employee.md).
-    
-> [!NOTE]
-> Det er ikke påkrævet at nulstille brugerens adgangskode under konvertering af postkasse. Men hvis adgangskoden ikke nulstilles, fungerer **det oprindelige brugernavn og den oprindelige adgangskode fortsat, når** postkassekonverteringen er fuldført.
+4. Hvis postkassen er mindre end 50 GB, kan du fjerne [licensen fra brugeren](../manage/remove-licenses-from-users.md) og stoppe med at betale for den. Slet ikke brugerens konto. Den delte postkasse skal bruge den der som et anker. Hvis du konverterer postkassen for en medarbejder, der forlader organisationen, skal du udføre yderligere trin for at sikre, at vedkommende ikke længere kan logge på. Se [Fjern en tidligere medarbejder fra Microsoft 365](../add-users/remove-former-employee.md).
 
-Du kan finde alle andre oplysninger om delte postkasser i [Om delte postkasser](about-shared-mailboxes.md) og [Opret en delt postkasse](create-a-shared-mailbox.md).
+Du kan se alt andet, du har brug for at vide om delte postkasser, under [Om delte postkasser](about-shared-mailboxes.md) og [Opret en delt postkasse](create-a-shared-mailbox.md).
 
-> [!NOTE]
-> Delte postkasser kræver ikke en separat licens. Men hvis du vil aktivere In-Place-arkivet eller sætte en In-Place-venteposition eller en retslig venteposition på en delt postkasse, skal du tildele en Exchange Online Plan 1 med Exchange Online-arkivering- eller Exchange Online Plan 2-licens til postkassen.
+## <a name="convert-the-mailbox-of-a-deleted-user"></a>Konvertér postkassen for en slettet bruger
 
-## <a name="convert-the-mailbox-of-a-deleted-user"></a>Konvertér en slettet brugers postkasse
-
-Når du sletter en brugerkonto, skal du følge disse trin for at konvertere brugerens gamle postkasse til en delt postkasse:
+Når du har slettet en brugerkonto, skal du følge disse trin for at konvertere den gamle postkasse til en sharepostkasse:
 
 1. [Gendan brugerens konto](../add-users/restore-user.md).
 
-2. Sørg for, Microsoft 365 tildelt en licens til den.
+2. Sørg for, at der er tildelt en Microsoft 365 licens til den.
 
 3. Nulstil brugerens adgangskode.
-    
-4. Vent 20-30 minutter på, at postkassen oprettes igen.
-      
-6. Når postkassen er oprettet igen, skal du fjerne licensen fra brugerens postkasse. Slet ikke brugerens gamle postkasse. Den delte postkasse skal bruge den som en forankring.
-    
-7. Føj medlemmer til den delte postkasse.
+
+4. Vent 20-30 minutter på, at postkassen genoprettes.
+
+5. Når postkassen er oprettet igen, skal du fjerne licensen fra brugerens postkasse. Slet ikke brugerens gamle postkasse. Den delte postkasse skal bruge den der som et anker.
+
+6. Føj medlemmer til den delte postkasse.
 
 ## <a name="convert-a-shared-mailbox-back-to-a-users-private-mailbox"></a>Konvertér en delt postkasse tilbage til en brugers (private) postkasse
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>.
-   
-2. Vælg **Modtagere** \> **delt**.
+
+2. Vælg **Delte modtagere**\>.
 
 3. Vælg den delte postkasse. Under **Konvertér til almindelig postkasse** skal du vælge **Konvertér**.
 
-4. Gå tilbage til Administration. Under **Brugere skal** du vælge den brugerkonto, der er knyttet til den gamle delte postkasse. Tildel en licens til kontoen, og nulstil derefter adgangskoden.
+4. Go back til Administration. Under **Brugere** skal du vælge den brugerkonto, der er knyttet til den gamle delte postkasse. Tildel en licens til kontoen, og nulstil derefter adgangskoden.
 
-   Det tager et par minutter, før postkassen er konfigureret, men derefter er den person, der skal bruge den pågældende konto, klar til at gå i gang. Når de logger på, får de vist de mail- og kalenderelementer, der plejede at være i den delte postkasse.
+   Det tager et par minutter, før postkassen er konfigureret, men derefter er den person, der skal bruge kontoen, klar til at gå i gang. Når de logger på, får de vist de mail- og kalenderelementer, der tidligere var i den delte postkasse.
 
 ## <a name="convert-a-users-mailbox-in-a-hybrid-environment"></a>Konvertér en brugers postkasse i et hybridmiljø
 
-Du kan finde flere oplysninger om konvertering af en brugerpostkasse til en delt postkasse Exchange et hybridmiljø i:
+Du kan finde flere oplysninger om konvertering af en brugerpostkasse til en delt postkasse i et Exchange Hybrid-miljø under:
 
- - [Cmdlet'er til at oprette eller redigere en ekstern delt postkasse i et lokalt Exchange miljø](https://support.microsoft.com/office/cmdlets-to-create-or-modify-a-remote-shared-mailbox-in-an-on-premises-exchange-environment-9e83fb59-c001-729c-a4c0-b2964c154b49)
- - [Delte postkasser konverteres uventet til brugerpostkasser, når katalogsynkronisering kører i en Exchange hybridinstallation](/exchange/troubleshoot/user-and-shared-mailboxes/shared-mailboxes-unexpectedly-converted-to-user-mailboxes)
- 
+- [Cmdlet'er til oprettelse eller ændring af en delt fjernpostkasse i et lokalt Exchange miljø](https://support.microsoft.com/office/cmdlets-to-create-or-modify-a-remote-shared-mailbox-in-an-on-premises-exchange-environment-9e83fb59-c001-729c-a4c0-b2964c154b49)
+- [Delte postkasser konverteres uventet til brugerpostkasser, når katalogsynkronisering har kørt i en Exchange hybridinstallation](/exchange/troubleshoot/user-and-shared-mailboxes/shared-mailboxes-unexpectedly-converted-to-user-mailboxes)
 
 > [!NOTE]
-> Hvis du er medlem af rollegruppen Organisationsadministration eller Modtageradministration, kan du bruge Exchange Management Shell til at ændre en brugerpostkasse til en delt postkasse i det lokale miljø. F.eks. `Set-Mailbox -Identity mailbox1@contoso.com -Type Shared`.
+> Hvis du er medlem af rollegruppen Organisationsadministration eller Modtageradministration, kan du bruge Exchange Management Shell til at ændre en brugerpostkasse til en delt postkasse i det lokale miljø. For eksempel `Set-Mailbox -Identity mailbox1@contoso.com -Type Shared`.
 
 ## <a name="related-content"></a>Relateret indhold
 
@@ -131,4 +126,4 @@ Du kan finde flere oplysninger om konvertering af en brugerpostkasse til en delt
 [Opret en delt postkasse](create-a-shared-mailbox.md) (artikel)\
 [Konfigurer en delt postkasse](configure-a-shared-mailbox.md) (artikel)\
 [Fjern en licens fra en delt postkasse](remove-license-from-shared-mailbox.md) (artikel)\
-[Løse problemer med delte postkasser](resolve-issues-with-shared-mailboxes.md) (artikel)
+[Løs problemer med delte postkasser](resolve-issues-with-shared-mailboxes.md) (artikel)

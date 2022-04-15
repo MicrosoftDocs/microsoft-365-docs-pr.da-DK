@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-endpointprotect
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 41f47720582f715e6c5d28276ddd87777e9669d5
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: e308b1c1d8c26a4ec3d6b3044501ffe1ce92e1c7
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783375"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862868"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-in-rings"></a>Installer Microsoft Defender for Endpoint i ringe
 
@@ -42,7 +42,7 @@ Installationsringene kan anvendes i følgende scenarier:
 
 ## <a name="new-deployments"></a>Nye udrulninger
 
-:::image type="content" source="images/deployment-rings.png" alt-text="Udrulningsringene" lightbox="images/deployment-rings.png":::
+:::image type="content" source="images/deployment-rings.png" alt-text="Udrulningen ringer." lightbox="images/deployment-rings.png":::
 
 En ringbaseret tilgang er en metode til at identificere et sæt slutpunkter, der skal onboardes, og til at bekræfte, at visse kriterier er opfyldt, før du fortsætter med at udrulle tjenesten til et større sæt enheder. Du kan definere udgangskriterierne for hver ring og sikre, at de er opfyldt, før du går videre til næste ring.
 
@@ -52,16 +52,11 @@ Tabel 1 indeholder et eksempel på de udrulningsringe, du kan bruge.
 
 **Tabel 1**:
 
-<br>
-
-****
-
 |Installationsring|Beskrivelse|
 |---|---|
 |Evaluere|Ring 1: Identificer 50 systemer til pilottest|
 |Pilot|Ring 2: Identificer de næste 50-100 slutpunkter i produktionsmiljøet|
 |Fuld udrulning|Ring 3: Udrul tjenesten til resten af miljøet i større trin|
-|
 
 ### <a name="exit-criteria"></a>Afslut kriterier
 
@@ -82,13 +77,13 @@ Microsoft Defender for Endpoint understøtter en række slutpunkter, som du kan 
 
 I følgende tabel vises de understøttede slutpunkter og det tilsvarende værktøj, du kan bruge til at onboarde enheder til tjenesten.
 
-| Slutpunkt     | Installationsværktøj                       |
-|--------------|------------------------------------------|
-| **Windows**  |  [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br> BEMÆRK! Hvis du vil udrulle mere end 10 enheder i et produktionsmiljø, skal du i stedet bruge metoden Gruppepolitik eller de andre understøttede værktøjer, der er angivet nedenfor.<br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Enhedshåndtering Microsoft Endpoint Manager/Mobil](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)  |
-| **Macos**    | [Lokalt script](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Enhedshåndtering](mac-install-with-other-mdm.md) |
-| **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Marionet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
-| **Ios**      | [Microsoft Endpoint Manager](ios-install.md)                                |
-| **Android**  | [Microsoft Endpoint Manager](android-intune.md)               |
+|Slutpunkt|Installationsværktøj|
+|---|---|
+|**Windows**|[Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br> BEMÆRK! Hvis du vil installere mere end 10 enheder i et produktionsmiljø, skal du i stedet bruge metoden نهج المجموعة eller de andre understøttede værktøjer, der er angivet nedenfor.<br>  [نهج المجموعة](configure-endpoints-gp.md) <br>  [Enhedshåndtering Microsoft Endpoint Manager/Mobil](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)|
+|**Macos**|[Lokalt script](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil 裝置管理](mac-install-with-other-mdm.md)|
+|**Linux Server**|[Lokalt script](linux-install-manually.md) <br> [Marionet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
+|**Ios**|[Microsoft Endpoint Manager](ios-install.md)|
+|**Android**|[Microsoft Endpoint Manager](android-intune.md)|
 
 ### <a name="full-deployment"></a>Fuld udrulning
 
@@ -96,9 +91,9 @@ I denne fase kan du bruge [installationsmaterialet Plan](deployment-strategy.md)
 
 Brug følgende materiale til at vælge den relevante Microsoft Defender for Endpoint arkitektur, der passer bedst til din organisation.
 
-|**Element**|**Beskrivelse**|
-|:-----|:-----|
-|[:::image type="content" source="images/mde-deployment-strategy.png" alt-text="Strategien for Microsoft Defender for Endpoint udrulning" lightbox="images/mde-deployment-strategy.png":::](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/security/defender-endpoint/downloads/mdatp-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   | Det arkitektoniske materiale hjælper dig med at planlægge din udrulning for følgende arkitekturer: <ul><li> Oprindelig sky </li><li> Fælles administration </li><li> Det lokale</li><li>Evaluering og lokal onboarding</li></ul>
+|Element|Beskrivelse|
+|---|---|
+|[:::image type="content" source="images/mde-deployment-strategy.png" alt-text="Strategien for Microsoft Defender for Endpoint udrulning." lightbox="images/mde-deployment-strategy.png":::](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/security/defender-endpoint/downloads/mdatp-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf) \| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)|Det arkitektoniske materiale hjælper dig med at planlægge din udrulning for følgende arkitekturer: <ul><li> Oprindelig sky </li><li> Fælles administration </li><li> Det lokale</li><li>Evaluering og lokal onboarding</li></ul>|
 
 ## <a name="existing-deployments"></a>Eksisterende installationer
 
@@ -120,8 +115,7 @@ Med macOS og Linux kan du tage et par systemer og køre i betakanalen.
 
 Valget af kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes til din enhed. Enheder i beta er de første, der modtager opdateringer og nye funktioner, efterfulgt senere af Prøveversion og sidst af Current.
 
-:::image type="content" source="images/insider-rings.png" alt-text="Insiderringene" lightbox="images/insider-rings.png":::
-
+:::image type="content" source="images/insider-rings.png" alt-text="Insiderringene." lightbox="images/insider-rings.png":::
 
 For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer nogle enheder i din virksomhed til at bruge enten Beta eller Preview.
 

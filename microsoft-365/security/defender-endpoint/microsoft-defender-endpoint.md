@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender til Slutpunkt
-description: Microsoft Defender til Slutpunkt er en virksomheds slutpunktssikkerhedsplatform, der hjælper med at beskytte dig mod avancerede permanente trusler.
-keywords: Introduktion til Microsoft Defender til slutpunkt, introduktion til Microsoft Defender til slutpunkt, cybersikkerhed, avanceret vedvarende trussel, virksomhedssikkerhed, maskinfunktionssensor, skysikkerhed, analyse, trusselsintelligens, reduktion af angrebsoverfladen, reduktion af angrebsoverfladen, automatisk undersøgelse og afhjælpning, microsoft-trusselseksperter, sikker score, avanceret jagt, Microsoft 365 Defender, cybertrusler på jagt
+title: Microsoft Defender for Endpoint
+description: Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der hjælper med at forsvare sig mod avancerede vedvarende trusler.
+keywords: introduktion til Microsoft Defender for Endpoint, introduktion til Microsoft Defender for Endpoint, cybersikkerhed, avanceret vedvarende trussel, virksomhedssikkerhed, sensor til maskinel adfærd, cloudsikkerhed, analyse, trusselsintelligens, reduktion af angrebsoverflade, næste generations beskyttelse, automatiseret undersøgelse og afhjælpning, Microsoft threat experts, secure score, advanced hunting, Microsoft 365 Defender, cyber threat hunting
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,46 +17,46 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: c4308c203093d2170cc1a6316db824ee9935363f
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 3a67d73475301096df8be691f2c5e0dc6db23db8
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63591935"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862186"
 ---
-# <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender til Slutpunkt
+# <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Microsoft Defender til Slutpunkt er en sikkerhedsplatform til virksomheder, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler.
+Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler.
 
 > [!TIP]
-> Microsoft Defender til slutpunkt bliver snart tilgængelig i to planer. I denne artikel beskrives de funktioner og funktioner, der er inkluderet i Microsoft Defender til Slutpunktsplan 2. [Få mere at vide om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
+> Snart vil Microsoft Defender for Endpoint være tilgængelige i to planer. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i Microsoft Defender for Endpoint Plan 2. [Mer informasjon om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
 > 
 
 <p><p>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
 
-Defender til Slutpunkt bruger følgende kombination af teknologi, der er indbygget Windows 10 Microsofts robuste skytjeneste:
+Defender for Endpoint bruger følgende kombination af teknologi, der er indbygget i Windows 10 og Microsofts robuste cloudtjeneste:
 
-- **Slutpunktsfunktionsmådesensorer**: Disse sensorer, der er integreret i Windows 10, indsamler og behandler adfærdssignaler fra operativsystemet og sender disse sensordata til din private, isolerede, skybaserede forekomst af Microsoft Defender til slutpunkt.
+- **Sensorer til slutpunktets adfærd: Disse sensorer**, der er integreret i Windows 10, indsamler og behandler adfærdsmæssige signaler fra operativsystemet og sender disse sensordata til din private, isolerede, cloudforekomst af Microsoft Defender for Endpoint.
 
-- **Sikkerhedsanalyse** i skyen: Udnyttelse af big-data, enhedslæring og unik Microsoft-optik på tværs af Windows-økosystemet, virksomhedsskyprodukter (f.eks Office 365) og onlineaktiver, adfærdsbaserede signaler omsættes til indsigt, registreringer og anbefalede svar på avancerede trusler.
+- **Analyse af cloudsikkerhed**: Udnyttelse af big data, enhedslæring og unik Microsoft-optik på tværs af Windows økosystem, virksomhedscloudprodukter (f.eks. Office 365) og onlineaktiver, adfærdssignaler oversættes til indsigt, registreringer og anbefalede svar på avancerede trusler.
 
-- Trusselsintelligens: Genereret af Microsoft-gerningsfolk, sikkerhedsteams og udvidet af trusselsintelligens fra partnere, gør Threat Intelligence det muligt for Defender for Endpoint at identificere hackerværktøjer, teknikker og procedurer og generere beskeder, når de observeres i indsamlede sensordata.
+- **Trusselsintelligens: Trusselsintelligens**: Genereret af Microsoft-jægere, sikkerhedsteams og forstærket med trusselsintelligens leveret af partnere gør trusselsintelligens det muligt for Defender for Endpoint at identificere værktøjer, teknikker og procedurer for hackere og generere beskeder, når de observeres i indsamlede sensordata.
 
-<center><h2>Microsoft Defender til Slutpunkt</center></h2>
+<center><h2>Microsoft Defender for Endpoint</center></h2>
 <table>
 <tr>
-<td><a href="#tvm"><center><img src="images/TVM_icon.png" alt="Threat & Vulnerability Management"> <br><b>Administration af & af sikkerhedssikkerhedsrisiko</b></center></a></td>
-<td><a href="#asr"><center><img src="images/asr-icon.png" alt="Attack surface reduction"><br><b>Reduktion af angrebsoverfladen</b></center></a></td>
+<td><a href="#tvm"><center><img src="images/TVM_icon.png" alt="Threat & Vulnerability Management"> <br><b>Administration af sårbarheder i forbindelse med trussel &</b></center></a></td>
+<td><a href="#asr"><center><img src="images/asr-icon.png" alt="Attack surface reduction"><br><b>Reduktion af angrebsoverflade</b></center></a></td>
 <td><center><a href="#ngp"><img src="images/ngp-icon.png" alt="Next-generation protection"><br> <b>Næste generations beskyttelse</b></a></center></td>
 <td><center><a href="#edr"><img src="images/edr-icon.png" alt="Endpoint detection and response"><br> <b>Registrering af slutpunkt og svar</b></a></center></td>
 <td><center><a href="#ai"><img src="images/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automatiseret undersøgelse og afhjælpning</b></a></center></td>
@@ -77,89 +77,92 @@ Defender til Slutpunkt bruger følgende kombination af teknologi, der er indbygg
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0]
 
 > [!TIP]
->
-> - Få mere at vide om de nyeste forbedringer i Defender til Slutpunkt: [Nyheder i Microsoft Defender til slutpunkt](whats-new-in-microsoft-defender-endpoint.md).
-> - Microsoft Defender til slutpunkt demonstrerede brancheførende optik og registreringsfunktioner i den seneste MITRE-evaluering. Læs: [Insights fra den MITRE ATT&CK-baserede evaluering](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
+> - Få mere at vide om de seneste forbedringer i Defender for Endpoint: [Nyheder i Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
+> - Microsoft Defender for Endpoint demonstrerede branchens førende optik- og registreringsfunktioner i den seneste MITRE-evaluering. Læs: [Insights fra MITRE ATT&CK-baseret evaluering](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
+
+
+>[!IMPORTANT]
+>Funktionerne på platforme, der ikke er Windows, kan være forskellige fra dem, der gælder for Windows. Du kan få flere oplysninger om, hvilke funktioner der er tilgængelige for platforme, der ikke er Windows, [i Microsoft Defender for Endpoint for platforme, der ikke er Windows](/security/defender-endpoint/non-windows).
 
 <a name="tvm"></a>
 
-**[Administration af & af sikkerhedssikkerhedsrisiko](next-gen-threat-and-vuln-mgt.md)**
+**[Administration af sårbarheder i forbindelse med trussel &](next-gen-threat-and-vuln-mgt.md)**
 
-Denne indbyggede funktion bruger en risikobaseret tilgang til registrering, prioritering og afhjælpning af slutpunktsrisici og forkert konfigurationer.
+Denne indbyggede funktion bruger en spilændrende risikobaseret tilgang til registrering, prioritering og afhjælpning af sårbarheder og fejlkonfigurationer af slutpunkter.
 
 <a name="asr"></a>
 
 **[Reduktion af angrebsoverfladen](overview-attack-surface-reduction.md)**
 
-Reduktionssættet af angrebsoverfladen er den første forsvarslinje i stablen. Ved at sikre, at konfigurationsindstillingerne er korrekt indstillet, og udnytte afhjælpningsteknikker anvendes, kan funktionerne modstå angreb og udnyttelse. Dette sæt funktioner omfatter [også netværksbeskyttelse](network-protection.md) og [webbeskyttelse](web-protection-overview.md), som regulerer adgangen til skadelige IP-adresser, domæner og URL-adresser.
+Reduktionssættet for angrebsoverfladen giver den første forsvarslinje i stakken. Ved at sikre, at konfigurationsindstillinger indstilles korrekt, og at der anvendes teknikker til afhjælpning af udnyttelse, modstår funktionerne angreb og udnyttelse. Dette sæt funktioner omfatter også [netværksbeskyttelse](network-protection.md) og [webbeskyttelse](web-protection-overview.md), som regulerer adgangen til skadelige IP-adresser, domæner og URL-adresser.
 
 <a name="ngp"></a>
 
 **[Næste generations beskyttelse](next-generation-protection.md)**
 
-For yderligere at styrke dit netværks sikkerhedsperimeter bruger Microsoft Defender til Slutpunkt næste generations beskyttelse, der er udviklet til at fange alle typer af nye trusler.
+For yderligere at styrke sikkerhedsperimeteren på dit netværk bruger Microsoft Defender for Endpoint næste generations beskyttelse, der er designet til at fange alle typer nye trusler.
 
 <a name="edr"></a>
 
-**[Registrering af slutpunkt og svar](overview-endpoint-detection-response.md)**
+**[Slutpunktsregistrering og -svar](overview-endpoint-detection-response.md)**
 
-Slutpunktsregistrering og svarfunktioner er blevet indsat for at registrere, undersøge og reagere på avancerede trusler, der kan have fået det forbi de første to sikkerhedssøjler. [Avanceret jagt](advanced-hunting-overview.md) giver et forespørgselsbaseret værktøj til trusselssporing, der proaktivt lader dig finde brud og oprette brugerdefinerede registreringer.
+Der er indført funktioner til registrering af slutpunkter og svar for at registrere, undersøge og reagere på avancerede trusler, der kan have gjort det forbi de første to sikkerhedssøjler. [Avanceret jagt](advanced-hunting-overview.md) indeholder et forespørgselsbaseret værktøj til trusselsjagt, der giver dig mulighed for proaktivt at finde brud og oprette brugerdefinerede opdagelser.
 
 <a name="ai"></a>
 
 **[Automatiseret undersøgelse og afhjælpning](automated-investigations.md)**
 
-Sammen med at kunne reagere hurtigt på avancerede angreb tilbyder Microsoft Defender til slutpunkt automatisk undersøgelse og afhjælpning, som er med til at reducere mængden af beskeder i minutter på skala.
+Sammen med at kunne reagere hurtigt på avancerede angreb tilbyder Microsoft Defender for Endpoint automatisk undersøgelses- og afhjælpningsfunktioner, der hjælper med at reducere mængden af beskeder i minutter i stor skala.
 
 <a name="ss"></a>
 
 **[Microsoft Secure Score til enheder](tvm-microsoft-secure-score-devices.md)**
 
-Defender til Slutpunkt omfatter Microsoft Secure Score for Enheder, som kan hjælpe dig med dynamisk at vurdere sikkerhedstilstanden for dit virksomhedsnetværk, identificere ubeskyttede systemer og udføre anbefalede handlinger for at forbedre organisationens overordnede sikkerhed.
+Defender for Endpoint indeholder Microsoft Secure Score for Devices, der hjælper dig med dynamisk at vurdere sikkerhedstilstanden for dit virksomhedsnetværk, identificere ubeskyttede systemer og udføre anbefalede handlinger for at forbedre den overordnede sikkerhed i din organisation.
 
 <a name="mte"></a>
 
-**[Microsoft-trusselseksperter](microsoft-threat-experts.md)**
+**[Microsoft Threat Experts](microsoft-threat-experts.md)**
 
-Microsoft Defender til Slutpunkts nye administrerede trussels-jagttjeneste leverer proaktiv jagt, prioritering og yderligere kontekst og viden, der yderligere giver Security Operation Centers (SOCs) mulighed for at identificere og reagere på trusler hurtigt og præcist.
+Microsoft Defender for Endpoint nye administrerede trusselsjagttjeneste giver proaktiv jagt, prioritering og yderligere kontekst og indsigt, der yderligere gør det muligt for SIC'er (Security Operation Centers) at identificere og reagere på trusler hurtigt og præcist.
 
 > [!IMPORTANT]
-> Defender til Endpoint-kunder skal ansøge om den Microsoft-trusselseksperter-administrerede trusselssøgningstjeneste for at få proaktive målrettede angrebsmeddelelser og samarbejde med eksperter efter behov. Eksperter efter behov er en tilføjelsestjeneste. Målrettede angrebsmeddelelser er altid inkluderet, når du er blevet accepteret til Microsoft-trusselseksperter trusselshundetjeneste.
+> Defender for Endpoint-kunder skal ansøge om den Microsoft-trusselseksperter administrerede trusselsjagttjeneste for at få proaktive meddelelser om målrettede angreb og samarbejde med eksperter efter behov. Eksperter on Demand er en tilføjelsestjeneste. Målrettede angrebsmeddelelser er altid inkluderet, når du er blevet accepteret i Microsoft-trusselseksperter administreret trusselsjagttjeneste.
 >
-> Hvis du endnu ikke er tilmeldt og gerne vil opleve fordelene ved den, kan du gå til **Indstillinger** \> **Generelle** \>  \> avancerede funktioner **Microsoft-trusselseksperter** at anvende. Når de er accepteret, får du fordelene ved Målrettede angrebsmeddelelser og starter en 90-dages prøveversion af Experts On Demand. Kontakt din Microsoft-repræsentant for at få et fuldt Ekspert on Demand-abonnement.
+> Hvis du endnu ikke er tilmeldt og gerne vil opleve fordelene ved det, skal du gå til **Indstillinger** \> **Generelle** \> **avancerede funktioner** \> **, Microsoft-trusselseksperter** gælder. Når du har accepteret, får du fordelene ved meddelelser om målrettede angreb og starter en 90-dages prøveversion af Eksperter on Demand. Kontakt din Microsoft-repræsentant for at få et komplet Abonnement på eksperter on Demand.
 
 <a name="apis"></a>
 
 **[Centraliseret konfiguration og administration, API'er](management-apis.md)**
 
-Integrer Microsoft Defender til slutpunkt i dine eksisterende arbejdsprocesser.
+Integrer Microsoft Defender for Endpoint i dine eksisterende arbejdsprocesser.
 
 <a name="mtp"></a>
 
 **[Integration med Microsoft-løsninger](threat-protection-integration.md)**
 
-Defender til Slutpunkt integreres direkte med forskellige Microsoft-løsninger, herunder:
+Defender for Endpoint kan integreres direkte med forskellige Microsoft-løsninger, herunder:
 
-- Microsoft Defender til skyen
+- Microsoft Defender for Cloud
 - Microsoft Sentinel
 - Intune
-- Microsoft Defender til skyapps
+- Microsoft Defender for Cloud Apps
 - Microsoft Defender for Identity
-- Microsoft Defender til Office
+- Microsoft Defender for Office
 - Skype for Business
 
 **[Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)**
 
-Med Microsoft 365 Defender udgør Defender til slutpunkt og forskellige Microsoft-sikkerhedsløsninger en samlet virksomhedsforbeholdspakke, der indbygget integreres på tværs af slutpunkt, identitet, mail og programmer for at registrere, forhindre, undersøge og automatisk reagere på avancerede angreb.
+Med Microsoft 365 Defender udgør Defender for Endpoint og forskellige Microsoft-sikkerhedsløsninger en samlet virksomhedsforsvarspakke før og efter sikkerhedsbrud, der oprindeligt integreres på tværs af slutpunkter, identiteter, mail og programmer for at registrere, forhindre, undersøge og automatisk reagere på avancerede angreb.
 
 
-## <a name="training-for-security-analysts"></a>Kurser til sikkerhedsanalytikere
+## <a name="training-for-security-analysts"></a>Oplæring af sikkerhedsanalytikere
 
-Med denne læringssti fra Microsoft Learn kan du forstå Defender til slutpunkt, og hvordan det kan hjælpe med at forhindre, registrere, undersøge og reagere på trusler på tværs af organisationens slutpunkter – dine enheder og systemer.
+Med dette læringsforløb fra Microsoft Learn kan du forstå Defender for Endpoint, og hvordan det kan hjælpe med at forhindre, registrere, undersøge og reagere på trusler på tværs af organisationens slutpunkter – dine enheder og systemer.
 
-|Kursus:|Find og svar på cyberangreb med Microsoft 365 Defender|
+|Uddannelse:|Registrer og reager på cyberangreb med Microsoft 365 Defender|
 |---|---|
-|![Microsoft 365 Defender kursusikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Defender til Slutpunkt er en sikkerhedsløsning for slutpunkter, der tilbyder håndtering af sikkerhedsrisici, slutpunktsbeskyttelse, slutpunktsregistrering og -svar, mobil trusselsbeskyttelse og administrerede tjenester på en enkelt, samlet platform.<p> 2 timer 25 min - Learning Sti - 9 moduler|
+|![Microsoft 365 Defender træningsikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Defender for Endpoint er en sikkerhedsløsning for slutpunkter, der tilbyder håndtering af sikkerhedsrisici, slutpunktsbeskyttelse, slutpunktsregistrering og -svar, mobiltrusselforsvar og administrerede tjenester på en enkelt samlet platform.<p> 2 t. 25 min. - Learning sti - 9 moduler|
 
 > [!div class="nextstepaction"]
 > [Start >](/learn/paths/defender-endpoint-fundamentals/)

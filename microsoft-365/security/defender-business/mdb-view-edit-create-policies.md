@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,35 +17,30 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 6f8ad1bd1f77bd3e53a1686674984155a7dc8525
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ba7f6846809009b8bb9df258b8ac18536a910b6d
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665090"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862120"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>Få vist eller rediger politikker i Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 I Microsoft Defender til virksomheder konfigureres sikkerhedsindstillinger via politikker, der anvendes på enheder. For at hjælpe med at forenkle din konfigurationsoplevelse indeholder Defender for Business forudkonfigurerede politikker, der hjælper med at beskytte din virksomheds enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere politikker eller oprette dine egne politikker.
 
 **I denne artikel beskrives det, hvordan du**:
 
 - [Få et overblik over dine standardpolitikker](#default-policies-in-defender-for-business)
-
 - [Få vist dine eksisterende politikker](#view-your-existing-policies)
-
 - [Rediger en eksisterende politik](#edit-an-existing-policy)
-
 - [Opret en ny politik](#create-a-new-policy)
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="default-policies-in-defender-for-business"></a>Standardpolitikker i Defender for Business
@@ -53,7 +48,6 @@ I Microsoft Defender til virksomheder konfigureres sikkerhedsindstillinger via p
 I Defender for Business er der to primære typer politikker, der beskytter din virksomheds enheder:
 
 - **Næste generations beskyttelsespolitikker**, der bestemmer, hvordan Microsoft Defender Antivirus og andre funktioner til trusselsbeskyttelse er konfigureret
-
 - **Firewallpolitikker**, der bestemmer, hvilken netværkstrafik der må overføres til og fra virksomhedens enheder
 
 
@@ -138,11 +132,7 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 Vælg en eller flere af følgende opgaver:
 
 - [Administrer enheder](mdb-manage-devices.md)
-
 - [Opret en ny politik i Microsoft Defender til virksomheder](mdb-create-new-policy.md)
-
 - [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-
 - [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
-
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

@@ -1,5 +1,5 @@
 ---
-title: Kom i gang med at bruge Microsoft 365 Defender-portalen
+title: Besøg Microsoft 365 Defender-portalen
 description: Se, hvordan du kommer i gang med at bruge Microsoft 365 Defender-portalen. Få mere at vide om, hvordan du navigerer i portalen og får vist din aktuelle sikkerhedsstatus og dine aktuelle anbefalinger
 search.appverid: MET150
 author: denisebmsft
@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,42 +18,29 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: c5a940676eab6ae3a07c526ecb1bd910ed8751fe
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 4af2986a3c1c726e9bf963752d53fe6ef098c19e
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667136"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861460"
 ---
-# <a name="get-started-using-the-microsoft-365-defender-portal"></a>Kom i gang med at bruge Microsoft 365 Defender-portalen
+# <a name="visit-the-microsoft-365-defender-portal"></a>Besøg Microsoft 365 Defender-portalen
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
-Når du har tilmeldt dig Microsoft Defender til virksomheder, skal du stifte bekendtskab med Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). Denne artikel indeholder følgende afsnit:
-
-- [Sådan navigerer du i Microsoft 365 Defender-portalen](#navigate-the-microsoft-365-defender-portal)
-
-- [Learning moduler om hændelser og svarhandlinger](#complete-a-learning-module-about-incidents-and-response-actions) 
-
-- [Næste trin](#next-steps)
-
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
->
-
-## <a name="navigate-the-microsoft-365-defender-portal"></a>Gå til Microsoft 365 Defender-portalen
-
-Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) er dit one-stop-shop til brug og administration af Microsoft Defender til virksomheder. Den indeholder et velkomstbanner og billedforklatter, der hjælper dig med at komme i gang, kort, der viser relevante oplysninger, og en navigationslinje, der giver dig nem adgang til de forskellige funktioner og funktioner.
- 
-Brug et øjeblik på at stifte bekendtskab med din Microsoft 365 Defender portal.
+Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) er dit one-stop-shop til brug og administration af Microsoft Defender til virksomheder. Den indeholder et velkomstbanner og billedforklatter, der hjælper dig med at komme i gang, kort, der viser relevante oplysninger, og en navigationslinje, der giver dig nem adgang til de forskellige funktioner og funktioner. 
 
 :::image type="content" source="../../media/defender-business/mdb-portal-home.png" alt-text="Microsoft 365 Defender portal":::
 
-### <a name="use-the-navigation-bar"></a>Brug navigationslinjen
+ 
+>
+> **Har du et øjeblik?**
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
+>
+
+## <a name="the-navigation-bar"></a>Navigationslinjen
 
 Brug navigationslinjen i venstre side af skærmen til at få adgang til dine hændelser, få vist rapporter og administrere dine sikkerhedspolitikker. I følgende tabel beskrives de elementer, du kan se på navigationslinjen.
 
@@ -71,30 +58,12 @@ Brug navigationslinjen i venstre side af skærmen til at få adgang til dine hæ
 | **Slutpunkter** >  **Tutorials** | Giver adgang til gennemgange og simuleringer, så du kan få mere at vide om, hvordan dine funktioner til trusselsbeskyttelse fungerer. <br/><br/>Vælg linket **Læs gennemgangen** , før du forsøger at hente simuleringsfilen for hvert selvstudium. Nogle simuleringer kræver Office apps, f.eks. Microsoft Word, for at læse gennemgangen. |
 | **Slutpunkter** >  **Enhedskonfiguration** | Viser dine sikkerhedspolitikker efter operativsystem og efter type. <br/><br/>Du kan få mere at vide om dine sikkerhedspolitikker [under Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md). |
 | **Rapporter** | Viser dine tilgængelige sikkerhedsrapporter. Disse rapporter giver dig mulighed for at se dine sikkerhedstendenser, få vist oplysninger om trusselsregistreringer og -beskeder og få mere at vide om din virksomheds sårbare enheder. |
-| **Sundhed** | Giver dig mulighed for at få vist din tjenestetilstandsstatus og planlægge kommende ændringer. <br/>– Vælg **Tjenestetilstand** for at få vist tilstandsstatussen for de Microsoft 365 tjenester, der er inkluderet i firmaets abonnement. <br/>– Vælg **Meddelelsescenter** for at få mere at vide om planlagte ændringer, og hvad du kan forvente.  |
+| **Sundhed** | Giver dig mulighed for at få vist din tjenestetilstandsstatus og planlægge kommende ændringer. <br/>– Vælg **Estado de funcionamento dos serviços** for at få vist tilstandsstatus for de Microsoft 365 tjenester, der er inkluderet i firmaets abonnement. <br/>– Vælg **Meddelelsescenter** for at få mere at vide om planlagte ændringer, og hvad du kan forvente.  |
 | **Tilladelser & roller** | Giver dig mulighed for at tildele tilladelser til de personer i virksomheden, der skal administrere dine sikkerhedshændelser og få vist hændelser og rapporter i Microsoft 365 Defender portalen. Giver dig også mulighed for at konfigurere og administrere enhedsgrupper for at onboarde din virksomheds enheder og tildele dine politikker for trusselsbeskyttelse.  |
 | **Indstillinger** | Giver dig mulighed for at redigere indstillingerne for Microsoft 365 Defender portalen og Microsoft Defender til virksomheder. Du kan f.eks. onboarde (eller offboard) og din virksomheds enheder (også kaldet slutpunkter). Du kan også definere regler, f.eks. regler for undertrykkelse af beskeder, og konfigurere indikatorer til at blokere eller tillade bestemte filer eller processer.  |
 | **Flere ressourcer** | Naviger til andre portaler, f.eks. Azure Active Directory. Vær opmærksom på, at Microsoft 365 Defender-portalen skal opfylde dine behov, uden at du skal navigere til andre portaler. |
 
-## <a name="complete-a-learning-module-about-incidents-and-response-actions"></a>Gennemfør et læringsmodul om hændelser og svarhandlinger
-
-Se læringsmodulet [Registrer og reager på sikkerhedsproblemer](/learn/modules/m365-detect-respond-security-issues-defender-endpoint/) for at få et overblik over hændelser og svarhandlinger. Du får mere at vide om hændelseskøen, beskeder og svarhandlinger, som du kan tage. Dette kursus hjælper dig med at komme i gang med at arbejde med hændelser i Defender for Business.
-
-> [!NOTE]
-> Selvom læringsmodulet ([Registrer og reager på sikkerhedsproblemer](/learn/modules/m365-detect-respond-security-issues-defender-endpoint/)) faktisk er til Microsoft Defender for Endpoint, svarer de grundlæggende begreber og det overordnede flow til det, du kan se i Defender for Business.
-
 ## <a name="next-steps"></a>Næste trin
 
-Nu, hvor du har en oversigt over Defender for Business, kan du prøve en eller flere af følgende opgaver:
-
-- [Prøv selvstudier og simuleringer i Microsoft Defender til virksomheder](mdb-tutorials.md)
-
-- [Administrer enheder i Microsoft Defender til virksomheder](mdb-manage-devices.md)
-
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
-
-- [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)
-
-- [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md)
+- [Brug installationsguiden i Microsoft Defender til virksomheder](mdb-use-wizard.md)
+- [Se konfigurationsprocessen](mdb-setup-configuration.md)

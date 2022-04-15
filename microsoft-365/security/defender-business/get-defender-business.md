@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/08/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,31 +16,29 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 830149a1592aa2985b603d2e9f317250c7c2606a
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: d0364a26fab9e2c496e1208eb5ac4e4275bab3b2
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746525"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861834"
 ---
 # <a name="get-microsoft-defender-for-business"></a>Hent Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Hvis du ikke allerede har Microsoft Defender til virksomheder, kan du vælge mellem flere indstillinger:
 
 - [Arbejd med en Microsoft-løsningsudbyder](#work-with-a-microsoft-solution-provider)
 - [Hent Microsoft 365 Business Premium](#get-microsoft-365-business-premium)
-- [Tilmeld dig prøveversionsprogrammet](#sign-up-for-the-preview-program)
+- [Tilmeld dig prøveversionsprogrammet Defender for Business](#sign-up-for-the-preview-program)
 
 Hvis du har tilmeldt dig en prøveversion, kan du [aktivere din prøveversion og tildele brugerlicenser](#activate-your-trial), når du har modtaget din acceptmail, og derefter fortsætte til dine [næste trin](#next-steps).
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="work-with-a-microsoft-solution-provider"></a>Arbejd med en Microsoft Solution Provider
@@ -101,7 +99,7 @@ Når du er klar til at starte din prøveversion, skal du arbejde med to primære
 |Portal  |Beskrivelse  |
 |---------|---------|
 | Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Brug Microsoft 365 Administration til at aktivere din prøveversion og logge på første gang.<br/><br/> Du skal også bruge Microsoft 365 Administration til at: <br/>- Tilføj eller fjern brugere<br/>– Tildel brugerlicenser<br/>- Få vist dine produkter og tjenester<br/>– Fuldføre konfigurationsopgaver for dit Microsoft 365 abonnement <br/><br/> Du kan få mere at vide under [Oversigt over Microsoft 365 Administration](../../admin/admin-overview/admin-center-overview.md).      |
-| Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com))     | Brug Microsoft 365 Defender-portalen til at konfigurere Defender for Business. <br/><br/>Du skal bruge Microsoft 365 Defender-portalen til at: <br/>– Få vist dine enheder og politikker for enhedsbeskyttelse<br/>- Få vist registrerede trusler, og udfør handlinger<br/>– Få vist sikkerhedsanbefalinger, og administrer dine sikkerhedsindstillinger <br/><br/>Du kan få mere at vide under [Kom i gang med at bruge Microsoft 365 Defender-portalen](mdb-get-started.md).        |
+| Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com))     | Brug Microsoft 365 Defender-portalen til at konfigurere Defender for Business. <br/><br/>Du skal bruge Microsoft 365 Defender-portalen til at: <br/>– Få vist dine enheder og politikker for enhedsbeskyttelse<br/>- Få vist registrerede trusler, og udfør handlinger<br/>– Få vist sikkerhedsanbefalinger, og administrer dine sikkerhedsindstillinger <br/><br/>Du kan få mere at vide [under Első lépések ved hjælp af portalen Microsoft 365 Defender](mdb-get-started.md).        |
 
 Hvis din virksomhed bruger Microsoft 365 Business Premium, har du Microsoft Intune (en del af Microsoft Endpoint Manager), og du bruger muligvis Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)). Endpoint Manager gør det muligt for dig også at administrere enheder og konfigurere sikkerhedsindstillinger. Du kan få mere at vide under [Microsoft Intune er EN MDM- og MAM-udbyder til dine enheder](/mem/intune/fundamentals/what-is-intune).
 
@@ -119,7 +117,7 @@ Når du modtager din acceptmail, kan du aktivere dit prøveabonnement på følge
 
    | Scenario | Procedure |
    |:---|:---|
-   | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<br/><br/>1. Installér dine Office apps nu, eller vælg **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.<br/><br/>2. Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.<br/><br/>3. Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](../../admin/add-users/add-users.md). |
+   | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<br/><br/>1. Installér dine Office apps nu, eller vælg **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.<br/><br/>2. Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.<br/><br/>3. Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](mdb-add-users.md). |
    | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | 1. Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.<br/><br/>2. Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. <br/><br/>3. Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md). |
 
 

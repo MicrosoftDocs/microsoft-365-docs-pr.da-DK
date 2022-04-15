@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 04/08/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: cf4c209fa274c106c56da59fce78c97ec39839f1
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: b1dbe79aadea39bfc737ae9f5457715b669cc79b
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783793"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861812"
 ---
 # <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium
 
@@ -37,7 +37,7 @@ Microsoft Defender til virksomheder er tilgængelig som et separat tilbud eller 
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 **Brug denne artikel til at**:
@@ -77,27 +77,35 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 
 |Funktion/funktionalitet|[Defender for Business](mdb-overview.md)<br/>(separat, i øjeblikket i prøveversion)|[Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)|[Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)|
 |---|---|---|---|
-|[Centraliseret administration](../defender-endpoint/manage-atp-post-migration.md) <sup>[[1](#fn1)]</sup>|Ja|Ja|Ja|
+|[Centraliseret administration](../defender-endpoint/manage-atp-post-migration.md) |Ja <sup>[[1](#fn1)]</sup>|Ja|Ja|
 |[Forenklet klientkonfiguration](mdb-simplified-configuration.md)|Ja|Nej|Nej|
 |[Håndtering af trusler og sikkerhedsrisici](../defender-endpoint/next-gen-threat-and-vuln-mgt.md)|Ja|Nej|Ja|
 |[Reduktion af angrebsoverflade](../defender-endpoint/overview-attack-surface-reduction.md)|Ja|Ja|Ja|
 |[Næste generations beskyttelse](../defender-endpoint/next-generation-protection.md)|Ja|Ja|Ja|
 |[Slutpunktsregistrering og -svar](../defender-endpoint/overview-endpoint-detection-response.md)|Ja <sup>[[2](#fn2)]</sup>|Nej|Ja|
-|[Automatiseret undersøgelse og svar](../defender-endpoint/automated-investigations.md)|Ja <sup>[[2](#fn2)]</sup>|Nej|Ja|
-|[Trusselsjagt](../defender-endpoint/advanced-hunting-overview.md) og seks måneders dataopbevaring <sup>[[3](#fn3)]</sup>|Nej|Nej|Ja|
-|[Trusselsanalyse](../defender-endpoint/threat-analytics.md)|Ja <sup>[[2](#fn2)]</sup>|Nej|Ja|
-|[Understøttelse på tværs af platforme](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS og Android OS)|Ja <sup>[[4](#fn4)]</sup>|Ja|Ja|
+|[Automatiseret undersøgelse og svar](../defender-endpoint/automated-investigations.md)|Ja <sup>[[3](#fn3)]</sup>|Nej|Ja|
+|[Trusselsjagt](../defender-endpoint/advanced-hunting-overview.md) og seks måneders dataopbevaring |Nej <sup>[[4](#fn4)]</sup>|Nej|Ja|
+|[Trusselsanalyse](../defender-endpoint/threat-analytics.md)|Ja <sup>[[5](#fn5)]</sup>|Nej|Ja|
+|[Understøttelse på tværs af platforme](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS og Android OS)|Ja <sup>[[6](#fn6)]</sup>|Ja|Ja|
 |[Microsoft Threat Experts](../defender-endpoint/microsoft-threat-experts.md)|Nej|Nej|Ja|
 |Partner-API'er|Ja|Ja|Ja|
 |[integration af Microsoft 365 fyrtårn](../../lighthouse/m365-lighthouse-overview.md) <br/>(Til visning af sikkerhedshændelser på tværs af kundelejere)|Ja|Nej|Nej|
 
-(<a id="fn1">1</a>) Onboard og administrer enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller med et andet værktøj, f.eks. Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
+(<a id="fn1">1</a>) Onboarde og administrer enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller med Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
 
-(<a id="fn2">2</a>) Disse funktioner er optimeret til små og mellemstore virksomheder.
+(<a id="fn2">2</a>) Slutpunktsregistrerings- og svarfunktioner (Slutpunktsregistrering og -svar) i Defender for Business omfatter funktionsmådebaseret registrering og følgende fire typer manuelle svarhandlinger: 
+- Kør antivirusscanning
+- Isoler enhed
+- Stop og sæt en fil i karantæne
+- Tilføj en indikator for at blokere eller tillade en fil
 
-(<a id="fn3">3</a>) Der er ingen tidslinjefane i Defender for Business.
+(<a id="fn3">3</a>) I Defender for Business er automatiseret undersøgelse og svar som standard slået til i hele lejeren. Hvis du slår automatiseret undersøgelse og svar fra, påvirker det beskyttelse i realtid. Se [Gennemse indstillinger for avancerede funktioner](mdb-configure-security-settings.md#review-settings-for-advanced-features).  
 
-(<a id="fn4">4</a>) I løbet af prøveversionsprogrammet understøttes Windows klientenheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)).
+(<a id="fn4">4</a>) Der er ingen tidslinjevisning i Defender for Business.
+
+(<a id="fn5">5</a>) I Defender for Business er trusselsanalyser optimeret til små og mellemstore virksomheder.
+
+(<a id="fn6">6</a>) I løbet af prøveversionsprogrammet understøttes Windows klientenheder til onboarding på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). Du kan bruge den lokale scriptmetode. Se [Onboard-enheder for at Microsoft Defender til virksomheder](mdb-onboard-devices.md).
 
 ## <a name="next-steps"></a>Næste trin
 

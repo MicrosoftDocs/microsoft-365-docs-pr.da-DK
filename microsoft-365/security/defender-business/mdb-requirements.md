@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/01/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,19 +17,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: dd30af8003e6c5bc6a4348efe16626d2d45317f1
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: cf6a74bbde2e32ae047f97a7198b7f263e91b048
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64747067"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862692"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>krav til Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 I denne artikel beskrives kravene til Microsoft Defender til virksomheder.
 
@@ -41,21 +39,21 @@ I denne artikel beskrives kravene til Microsoft Defender til virksomheder.
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="review-the-requirements"></a>Gennemse kravene
 
-I følgende tabel vises de grundlæggende krav til konfiguration og brug af Microsoft Defender til virksomheder. <br/><br/>
+I følgende tabel vises de grundlæggende krav til konfiguration og brug af Microsoft Defender til virksomheder.
 
 | Krav | Beskrivelse |
 |:---|:---|
 | Abonnement | Microsoft 365 Business Premium <br/>--- eller ---<br/>Microsoft Defender til virksomheder (separat, som i øjeblikket er en prøveversion). <br/><br/> Se [Sådan får du Microsoft Defender til virksomheder](get-defender-business.md).<br/><br/>Bemærk, at hvis du har flere abonnementer, har det højeste abonnement forrang. Hvis du f.eks. har Microsoft Defender for Endpoint Plan 2 (købt eller prøveabonnement), og du får Microsoft Defender til virksomheder, har Defender for Endpoint Plan 2 forrang. I dette tilfælde kan du ikke se Defender for Business-oplevelsen.  |
-| Datacenter | En af følgende datacenterplaceringer: <br/>- Den Europæiske Union <br/>- Det Forenede Kongerige <br/>- USA |
-| Brugerkonti | Brugerkonti oprettes i Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>Microsoft Defender til virksomheder licenser tildeles i Microsoft 365 Administration<br/><br/>Hvis du vil have hjælp til denne opgave, skal du se [Tilføj brugere og tildel licenser](../../admin/add-users/add-users.md). |
+| Datacenter | En af følgende datacenterplaceringer: <br/>- Den Europæiske Union <br/>- Det Forenede Kongerige <br/>- Estados Unidos |
+| Brugerkonti | Brugerkonti oprettes i Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>Microsoft Defender til virksomheder licenser tildeles i Microsoft 365 Administration<br/><br/>Hvis du vil have hjælp til denne opgave, skal du se [Tilføj brugere og tildel licenser](mdb-add-users.md). |
 | Tilladelser  | Hvis du vil tilmelde dig Microsoft Defender til virksomheder, skal du være global administrator.<br/><br/>Brugerne skal have tildelt en af følgende [roller i Azure AD](mdb-roles-permissions.md) for at få adgang til Microsoft 365 Defender-portalen: <br/>- Sikkerhedslæser<br/>– Sikkerhedsadministrator<br/>- Global administrator<br/><br/>Du kan få mere at vide [under Roller og tilladelser i Microsoft Defender til virksomheder](mdb-roles-permissions.md). |
 | Krav til browser | Microsoft Edge eller Google Chrome |
-| Operativsystem | Hvis du vil administrere enheder i Microsoft Defender til virksomheder, skal dine enheder køre et af følgende operativsystemer: <br/>- Windows 10 Business eller nyere <br/>- Windows 10 Professional eller nyere <br/>- Windows 10 Enterprise eller nyere <br/><br/>Kontrollér, at [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) er installeret. <br/><br/>Hvis du allerede administrerer enheder i Microsoft Intune (eller Microsoft Endpoint Manager), kan du onboarde disse enheder til Defender for Business. |
+| Operativsystem | Hvis du vil administrere enheder i Microsoft Defender til virksomheder, skal dine enheder køre et af følgende operativsystemer: <br/>- Windows 10 Business eller nyere <br/>- Windows 10 Professional eller nyere <br/>- Windows 10 Enterprise eller nyere <br/><br/>Kontrollér, at [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) er installeret. <br/><br/>Hvis du allerede administrerer enheder i Microsoft Intune (eller Microsoft Endpoint Manager), kan du onboarde disse enheder til Defender for Business.<br/><br/>Muligheden for at onboarde slutpunkter, der kører Windows Server 2012 R2 og nyere, fås i øjeblikket som prøveversion. |
 
 > [!NOTE]
 > [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) bruges til at administrere brugertilladelser og enhedsgrupper. Azure AD er inkluderet i dit Defender for Business-abonnement. 

@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,19 +18,17 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 0d291f4da7c44a57d12516be364fc36bbb771356
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 93db141d60353c5e3581298a67383718bdf4fe54
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664936"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862560"
 ---
 # <a name="overview-of-microsoft-defender-for-business"></a>Oversigt over Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Microsoft Defender til virksomheder er en ny sikkerhedsløsning til slutpunkter, der er udviklet specielt til små og mellemstore virksomheder (op til 300 medarbejdere). Med denne sikkerhedsløsning til slutpunkter er din virksomheds enheder bedre beskyttet mod ransomware, malware, phishing og andre trusler. 
 
@@ -44,7 +42,7 @@ I denne artikel beskrives, hvad der er inkluderet i Defender for Business, med l
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din virksomhed bruger med:
@@ -80,6 +78,5 @@ Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Få mere at vide om den forenklede konfigurationsproces i Microsoft Defender til virksomheder](mdb-simplified-configuration.md)
-
+- [Mer informasjon om den forenklede konfigurationsproces i Microsoft Defender til virksomheder](mdb-simplified-configuration.md)
 - [Få mere at vide om, hvordan du får Microsoft Defender til virksomheder](get-defender-business.md)

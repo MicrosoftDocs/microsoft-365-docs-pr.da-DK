@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,19 +17,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 02f970f7ad9981336ba54aaafcf936e952f1b726
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 68ebf170fa351d63e943a2c4c7a920d3e243ddbe
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663110"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862626"
 ---
 # <a name="the-simplified-configuration-process-in-microsoft-defender-for-business"></a>Den forenklede konfigurationsproces i Microsoft Defender til virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
-> 
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. 
+> [!NOTE]
+> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Microsoft Defender til virksomheder har en forenklet konfigurationsproces, der er udviklet specielt til små og mellemstore virksomheder. Denne oplevelse tager gætteriet ud af onboarding og administration af enheder med en guidelignende oplevelse og standardpolitikker, der er designet til at beskytte din virksomheds enheder fra dag ét. **Vi anbefaler, at du bruger den forenklede konfigurationsproces, men du er ikke begrænset til denne indstilling**.
 
@@ -43,19 +41,18 @@ Når det drejer sig om onboarding af enheder og konfiguration af sikkerhedsindst
 
 1. [Gennemse indstillingerne for konfiguration og konfiguration](#review-your-setup-and-configuration-options)
 
-2. [Få mere at vide om den forenklede konfigurationsproces i Defender for Business](#why-we-recommend-using-the-simplified-configuration-process)
+2. [Mer informasjon om den forenklede konfigurationsproces i Defender for Business](#why-we-recommend-using-the-simplified-configuration-process)
 
 3. [Fortsæt til de næste trin](#next-steps)
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="review-your-setup-and-configuration-options"></a>Gennemse indstillingerne for konfiguration og konfiguration
 
 I følgende tabel beskrives hver enkelt oplevelse:
-<br/><br/>
 
 | Portaloplevelse  | Beskrivelse  |
 |---------|---------|
@@ -73,5 +70,4 @@ Defender for Business er designet til at yde stærk beskyttelse, samtidig med at
 ## <a name="next-steps"></a>Næste trin
 
 - [Konfigurer og konfigurer Microsoft Defender til virksomheder](mdb-setup-configuration.md)
-
-- [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md)
+- [Első lépések ved hjælp af Microsoft Defender til virksomheder](mdb-get-started.md)

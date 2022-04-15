@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 98ead4a77c275e0e4aeeab90e87e0b468a9b7bb8
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 42d7acb4512928a32ac99c486a231d7891102208
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665970"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861328"
 ---
 # <a name="tutorials-and-simulations-in-microsoft-defender-for-business"></a>Selvstudier og simuleringer i Microsoft Defender til virksomheder
 
@@ -34,18 +34,16 @@ Hvis du lige er færdig med at konfigurere Microsoft Defender til virksomheder, 
 
 >
 > **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om Microsoft Defender til virksomheder</a>. Vi vil meget gerne høre fra dig!
+> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
 
 ## <a name="try-these-preview-scenarios"></a>Prøv disse prøveversionsscenarier
 
-I følgende tabel opsummeres flere scenarier, som du kan prøve med Defender for Business. 
-<br/><br/>
-
+I følgende tabel opsummeres flere scenarier, som du kan prøve med Defender for Business:
 
 | Scenario  | Beskrivelse  |
 |---------|---------|
-| Onboarde enheder ved hjælp af et lokalt script <br/>(*ikke til produktionsinstallation*)     | I Defender for Business kan du onboarde op til ti Windows 10 og 11 enheder ved hjælp af et script, som du downloader og kører på hver enhed. Scriptet er velegnet til evaluering af, hvordan Defender for Business fungerer i dit miljø, og scriptet opretter et tillidsforhold til Azure Active Directory (Azure AD) og tilmelder enheden med Microsoft Intune. Du kan få mere at vide [under Lokalt script i Defender for Business](mdb-onboard-devices.md#local-script-in-defender-for-business).         |
+| Onboarde enheder ved hjælp af et lokalt script <br/>(*ikke til produktionsinstallation*)     | I Defender for Business kan du onboarde op til ti Windows 10 og 11 enheder ved hjælp af et script, som du downloader og kører på hver enhed. Scriptet er velegnet til evaluering af, hvordan Defender for Business fungerer i dit miljø, og scriptet opretter et tillidsforhold til Azure Active Directory (Azure AD) og tilmelder enheden med Microsoft Intune. Du kan få mere at vide under [Onboard enheder for at Microsoft Defender til virksomheder](mdb-onboard-devices.md).         |
 | Onboarde enheder ved hjælp af Microsoft Intune     | Hvis du allerede brugte Microsoft Intune, før du fik Defender for Endpoint, kan du fortsætte med at bruge Microsoft Intune til at onboarde enheder. Prøv at onboarde macOS-, iOS- og Android-enheder med Microsoft Intune. Du kan få mere at vide under [Tilmelding af enhed i Microsoft Intune](/mem/intune/enrollment/device-enrollment).        |
 | Rediger sikkerhedspolitikker     | Hvis du administrerer dine sikkerhedspolitikker i Defender for Business, skal du bruge siden **Enhedskonfiguration** til at få vist og redigere dine politikker. Du kan få mere at vide under [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md).        |
 | Udfør et simuleret angreb   | Flere selvstudier og simuleringer er tilgængelige i Defender for Business. Disse selvstudier og simuleringer er designet til at vise dig, hvordan trusselsbeskyttelsesfunktionerne i Defender for Business kan fungere for din virksomhed. Hvis du vil prøve et eller flere af selvstudierne, skal du se [Anbefalede selvstudier til Microsoft Defender til virksomheder](#recommended-tutorials-for-defender-for-business).         |
@@ -55,8 +53,6 @@ I følgende tabel opsummeres flere scenarier, som du kan prøve med Defender for
 ## <a name="recommended-tutorials-for-defender-for-business"></a>Anbefalede selvstudier til Defender for Business
 
 I følgende tabel beskrives de anbefalede selvstudier til Defender for Business-kunder:
-<br/><br/>
-
 
 | Tutorial  | Beskrivelse  |
 |---------|---------|
@@ -84,9 +80,6 @@ Hvert selvstudium indeholder et gennemgangsdokument, der forklarer scenariet, hv
 ## <a name="next-steps"></a>Næste trin
 
 - [Administrer enheder i Microsoft Defender til virksomheder](mdb-manage-devices.md)
-
 - [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-
 - [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
-
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)
