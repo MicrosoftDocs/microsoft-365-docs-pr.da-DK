@@ -15,12 +15,12 @@
       items:
         - name: Hent Defender for Business
           href: get-defender-business.md
+        - name: 'Tilføj brugere, og tildel licenser'
+          href: mdb-add-users.md
+        - name: Besøg Microsoft 365 Defender-portalen
+          href: mdb-get-started.md
         - name: Brug konfigurationsguiden
           href: mdb-use-wizard.md
-        - name: Kom i gang med at bruge portalen
-          href: mdb-get-started.md
-        - name: Få vist dashboardet til administration af sikkerhedsrisici
-          href: mdb-view-tvm-dashboard.md
         - name: Prøv selvstudier og simuleringer
           href: mdb-tutorials.md
     - name: Konfigurer Defender for Business
@@ -39,6 +39,8 @@
           href: mdb-configure-security-settings.md
     - name: Få vist og reager på registrerede trusler
       items:
+        - name: Få vist dashboardet til administration af sikkerhedsrisici
+          href: mdb-view-tvm-dashboard.md
         - name: Få vist og administrer hændelser
           href: mdb-view-manage-incidents.md
         - name: Reager på og afhjælp trusler
@@ -65,6 +67,8 @@
           href: mdb-manage-devices.md
         - name: Opret enhedsgrupper
           href: mdb-create-edit-device-groups.md
+        - name: Offboard-enheder
+          href: mdb-offboard-devices.md
     - name: Referenceoplysninger
       items:
         - name: Sådan får du hjælp eller kontakter support
