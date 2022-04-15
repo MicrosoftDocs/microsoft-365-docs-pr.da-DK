@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: a5261261a1a1cb7b2039b646c3dbbd92c5f43688
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: cbd9bdb73dc69da5e36e0fb9c3ff2ff15b5269a4
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781649"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882258"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
 
@@ -71,7 +71,7 @@ For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de s
 |Møder, der har deltaget i planlagte tilbagevendende møder  <br/> |Antallet af tilbagevendende møder, som en bruger deltog i i den angivne tidsperiode.  <br/> |
 |Er licenseret  <br/> |Valgt, hvis brugeren har licens til at bruge Teams. <br/>|
 |Anden aktivitet  <br/>|Brugeren er aktiv, men har udført andre aktiviteter end de eksponerede handlingstyper, der tilbydes i rapporten (afsendelse eller svar på kanalmeddelelser og chatbeskeder, planlægning eller deltagelse i 1:1-opkald og -møder). Eksempler på handlinger er, når en bruger ændrer status for Teams eller Teams statusmeddelelse eller åbner et kanalmeddelelsesindlæg, men ikke svarer.  <br/>|
-|Ikke-klassificerede møder <br/>|Den, der ikke kan klassificeres som tidsplan eller tilbagevendende eller ad hoc. Disse er korte og kan for det meste ikke identificeres på grund af ændrede telemetrioplysninger. |
+
 
 ## <a name="make-the-user-specific-data-anonymous"></a>Gør de brugerspecifikke data anonyme
 

@@ -5,13 +5,13 @@
 
 ## <a name="exchange-online"></a>Exchange Online
 
-Id | Kategori | ER | Adresser | Porte
+ID | Kategori | ER | Adresser | Porte
 --- | --------------------------------------------------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------
 1 | Optimer<BR>Påkrævet | Ja | `outlook.office.com, outlook.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 443, 80
 2 | Tillad<BR>Påkrævet | Ja | `smtp.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 587
 3 | Standard<BR>Påkrævet | Nej | `r1.res.office365.com, r3.res.office365.com, r4.res.office365.com` | **TCP:** 443, 80
-5 | Tillad<BR>Valgfrit<BR>**Noter:** Exchange Online IMAP4-overførsel | Ja | `*.outlook.office.com, outlook.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 143, 993
-6 | Tillad<BR>Valgfrit<BR>**Noter:** Exchange Online POP3-overførsel | Ja | `*.outlook.office.com, outlook.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 995
+5 | Tillad<BR>Valgfrit<BR>**Bemærkninger:** Exchange Online IMAP4-migrering | Ja | `*.outlook.office.com, outlook.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 143, 993
+6 | Tillad<BR>Valgfrit<BR>**Bemærkninger:** Exchange Online POP3-migrering | Ja | `*.outlook.office.com, outlook.office365.com`<BR>`13.107.6.152/31, 13.107.18.10/31, 13.107.128.0/22, 23.103.160.0/20, 40.96.0.0/13, 40.104.0.0/15, 52.96.0.0/14, 131.253.33.215/32, 132.245.0.0/16, 150.171.32.0/22, 204.79.197.215/32, 2603:1006::/40, 2603:1016::/36, 2603:1026::/36, 2603:1036::/36, 2603:1046::/36, 2603:1056::/36, 2620:1ec:4::152/128, 2620:1ec:4::153/128, 2620:1ec:c::10/128, 2620:1ec:c::11/128, 2620:1ec:d::10/128, 2620:1ec:d::11/128, 2620:1ec:8f0::/46, 2620:1ec:900::/46, 2620:1ec:a92::152/128, 2620:1ec:a92::153/128, 2a01:111:f400::/48` | **TCP:** 995
 8 | Standard<BR>Påkrævet | Nej | `*.outlook.com, attachments.office.net` | **TCP:** 443, 80
 9 | Tillad<BR>Påkrævet | Ja | `*.protection.outlook.com`<BR>`40.92.0.0/15, 40.107.0.0/16, 52.100.0.0/14, 52.238.78.88/32, 104.47.0.0/17, 2a01:111:f403::/48` | **TCP:** 443
 10 | Tillad<BR>Påkrævet | Ja | `*.mail.protection.outlook.com`<BR>`40.92.0.0/15, 40.107.0.0/16, 52.100.0.0/14, 104.47.0.0/17, 2a01:111:f400::/48, 2a01:111:f403::/48` | **TCP:** 25
@@ -19,11 +19,11 @@ Id | Kategori | ER | Adresser | Porte
 
 ## <a name="sharepoint-online-and-onedrive-for-business"></a>SharePoint Online og OneDrive for Business
 
-Id | Kategori | ER | Adresser | Porte
+ID | Kategori | ER | Adresser | Porte
 -- | -------------------------------------------------------------------------------------------------------------------------------------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------
 31 | Optimer<BR>Påkrævet | Ja | `<tenant>.sharepoint.com, <tenant>-my.sharepoint.com`<BR>`13.107.136.0/22, 40.108.128.0/17, 52.104.0.0/14, 104.146.128.0/17, 150.171.40.0/22, 2603:1061:1300::/40, 2620:1ec:8f8::/46, 2620:1ec:908::/46, 2a01:111:f402::/48` | **TCP:** 443, 80
-32 | Standard<BR>Valgfrit<BR>**Noter:** OneDrive for Business: understøttelse, telemetri, API'er og integrerede maillinks | Nej | `ssw.live.com, storage.live.com` | **TCP:** 443
-33 | Standard<BR>Valgfrit<BR>**Noter:** SharePoint hybridsøgning – slutpunkt til SearchContentService, hvor hybrid-crawleren føder dokumenter | Nej | `*.search.production.apac.trafficmanager.net, *.search.production.emea.trafficmanager.net, *.search.production.us.trafficmanager.net` | **TCP:** 443
+32 | Standard<BR>Valgfrit<BR>**Bemærkninger:** OneDrive for Business: understøttelse, telemetri, API'er og indlejrede maillinks | Nej | `ssw.live.com, storage.live.com` | **TCP:** 443
+33 | Standard<BR>Valgfrit<BR>**Notes:** SharePoint Hybrid Search – Slutpunkt til SearchContentService, hvor hybrid-crawleren leverer dokumenter | Nej | `*.search.production.apac.trafficmanager.net, *.search.production.emea.trafficmanager.net, *.search.production.us.trafficmanager.net` | **TCP:** 443
 35 | Standard<BR>Påkrævet | Nej | `*.wns.windows.com, admin.onedrive.com, officeclient.microsoft.com` | **TCP:** 443, 80
 36 | Standard<BR>Påkrævet | Nej | `g.live.com, oneclient.sfx.ms` | **TCP:** 443, 80
 37 | Standard<BR>Påkrævet | Nej | `*.sharepointonline.com, spoprod-a.akamaihd.net` | **TCP:** 443, 80
@@ -31,7 +31,7 @@ Id | Kategori | ER | Adresser | Porte
 
 ## <a name="skype-for-business-online-and-microsoft-teams"></a>Skype for Business Online og Microsoft Teams
 
-Id | Kategori | ER | Adresser | Porte
+ID | Kategori | ER | Adresser | Porte
 --- | ------------------------------------------------------------------------------------------------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------
 11 | Optimer<BR>Påkrævet | Ja | `13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14` | **UDP:** 3478, 3479, 3480, 3481
 12 | Tillad<BR>Påkrævet | Ja | `*.lync.com, *.teams.microsoft.com, teams.microsoft.com`<BR>`13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2620:1ec:6::/48, 2620:1ec:40::/42` | **TCP:** 443, 80
@@ -39,25 +39,25 @@ Id | Kategori | ER | Adresser | Porte
 15 | Standard<BR>Påkrævet | Nej | `*.sfbassets.com` | **TCP:** 443, 80
 16 | Standard<BR>Påkrævet | Nej | `*.keydelivery.mediaservices.windows.net, *.streaming.mediaservices.windows.net, mlccdn.blob.core.windows.net` | **TCP:** 443
 17 | Standard<BR>Påkrævet | Nej | `aka.ms` | **TCP:** 443
-18 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Sammenslutning med Skype og offentlig chatforbindelse: Hentning af kontaktbillede | Nej | `*.users.storage.live.com` | **TCP:** 443
+18 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Sammenslutning med Skype og forbindelse til offentlige chattjenester: Hentning af kontaktbillede | Nej | `*.users.storage.live.com` | **TCP:** 443
 19 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Gælder kun for brugere, der udruller systemer til mødelokaler | Nej | `*.adl.windows.com` | **TCP:** 443, 80
-22 | Tillad<BR>Valgfrit<BR>**Noter:** Teams: Sms-forbindelse med Skype for Business | Ja | `*.skypeforbusiness.com`<BR>`13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2620:1ec:6::/48, 2620:1ec:40::/42` | **TCP:** 443
+22 | Tillad<BR>Valgfrit<BR>**Bemærkninger:** Teams: Kompatibilitet mellem beskeder og Skype for Business | Ja | `*.skypeforbusiness.com`<BR>`13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2620:1ec:6::/48, 2620:1ec:40::/42` | **TCP:** 443
 26 | Standard<BR>Påkrævet | Nej | `*.msedge.net, compass-ssl.microsoft.com` | **TCP:** 443
 27 | Standard<BR>Påkrævet | Nej | `*.mstea.ms, *.secure.skypeassets.com, mlccdnprod.azureedge.net` | **TCP:** 443
 127 | Standard<BR>Påkrævet | Nej | `*.skype.com` | **TCP:** 443, 80
 
 ## <a name="microsoft-365-common-and-office-online"></a>Microsoft 365 Common og Office Online
 
-Id | Kategori | ER | Adresser | Porte
+ID | Kategori | ER | Adresser | Porte
 --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------
-41 | Standard<BR>Valgfrit<BR>**Noter:** Microsoft Stream | Nej | `*.microsoftstream.com` | **TCP:** 443
-43 | Standard<BR>Valgfrit<BR>**Noter:** Microsoft Stream integration med tredjeparter (herunder CDN'er) | Nej | `nps.onyx.azure.net` | **TCP:** 443
-44 | Standard<BR>Valgfrit<BR>**Noter:** Microsoft Stream - ikke-godkendt | Nej | `*.azureedge.net, *.media.azure.net, *.streaming.mediaservices.windows.net` | **TCP:** 443
-45 | Standard<BR>Valgfrit<BR>**Noter:** Microsoft Stream | Nej | `*.keydelivery.mediaservices.windows.net` | **TCP:** 443
+41 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Microsoft Stream | Nej | `*.microsoftstream.com` | **TCP:** 443
+43 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Microsoft Stream integration med tredjeparter (herunder CDN'er) | Nej | `nps.onyx.azure.net` | **TCP:** 443
+44 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Microsoft Stream - ikke-godkendt | Nej | `*.azureedge.net, *.media.azure.net, *.streaming.mediaservices.windows.net` | **TCP:** 443
+45 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Microsoft Stream | Nej | `*.keydelivery.mediaservices.windows.net` | **TCP:** 443
 46 | Tillad<BR>Påkrævet | Ja | `*.officeapps.live.com, *.online.office.com, office.live.com`<BR>`13.107.6.171/32, 13.107.18.15/32, 13.107.140.6/32, 52.108.0.0/14, 52.238.106.116/32, 52.244.37.168/32, 52.244.203.72/32, 52.244.207.172/32, 52.244.223.198/32, 52.247.150.191/32, 2603:1010:2::cb/128, 2603:1010:200::c7/128, 2603:1020:200::682f:a0fd/128, 2603:1020:201:9::c6/128, 2603:1020:600::a1/128, 2603:1020:700::a2/128, 2603:1020:800:2::6/128, 2603:1020:900::8/128, 2603:1030:7::749/128, 2603:1030:800:5::bfee:ad3c/128, 2603:1030:f00::17/128, 2603:1030:1000::21a/128, 2603:1040:200::4f3/128, 2603:1040:401::762/128, 2603:1040:601::60f/128, 2603:1040:a01::1e/128, 2603:1040:c01::28/128, 2603:1040:e00:1::2f/128, 2603:1040:f00::1f/128, 2603:1050:1::cd/128, 2620:1ec:c::15/128, 2620:1ec:8fc::6/128, 2620:1ec:a92::171/128, 2a01:111:f100:2000::a83e:3019/128, 2a01:111:f100:2002::8975:2d79/128, 2a01:111:f100:2002::8975:2da8/128, 2a01:111:f100:7000::6fdd:6cd5/128, 2a01:111:f100:a004::bfeb:88cf/128` | **TCP:** 443, 80
 47 | Standard<BR>Påkrævet | Nej | `*.cdn.office.net, contentstorage.osi.office.net` | **TCP:** 443
 49 | Standard<BR>Påkrævet | Nej | `*.onenote.com` | **TCP:** 443
-50 | Standard<BR>Valgfrit<BR>**Noter:** OneNote notesbøger (jokertegn) | Nej | `*.microsoft.com, *.office.net` | **TCP:** 443
+50 | Standard<BR>Valgfrit<BR>**Bemærkninger:** OneNote-notesbøger (jokertegn) | Nej | `*.microsoft.com, *.office.net` | **TCP:** 443
 51 | Standard<BR>Påkrævet | Nej | `*cdn.onenote.net` | **TCP:** 443
 53 | Standard<BR>Påkrævet | Nej | `ajax.aspnetcdn.com, apis.live.net, officeapps.live.com, www.onedrive.com` | **TCP:** 443
 56 | Tillad<BR>Påkrævet | Ja | `*.msftidentity.com, *.msidentity.com, account.activedirectory.windowsazure.com, accounts.accesscontrol.windows.net, adminwebservice.microsoftonline.com, api.passwordreset.microsoftonline.com, autologon.microsoftazuread-sso.com, becws.microsoftonline.com, clientconfig.microsoftonline-p.net, companymanager.microsoftonline.com, device.login.microsoftonline.com, graph.microsoft.com, graph.windows.net, login.microsoft.com, login.microsoftonline.com, login.microsoftonline-p.com, login.windows.net, logincert.microsoftonline.com, loginex.microsoftonline.com, login-us.microsoftonline.com, nexus.microsoftonline-p.com, passwordreset.microsoftonline.com, provisioningapi.microsoftonline.com`<BR>`20.190.128.0/18, 40.126.0.0/18, 2603:1006:2000::/48, 2603:1007:200::/48, 2603:1016:1400::/48, 2603:1017::/48, 2603:1026:3000::/48, 2603:1027:1::/48, 2603:1036:3000::/48, 2603:1037:1::/48, 2603:1046:2000::/48, 2603:1047:1::/48, 2603:1056:2000::/48, 2603:1057:2::/48` | **TCP:** 443, 80
@@ -65,15 +65,15 @@ Id | Kategori | ER | Adresser | Porte
 64 | Tillad<BR>Påkrævet | Ja | `*.compliance.microsoft.com, *.protection.office.com, *.security.microsoft.com, compliance.microsoft.com, protection.office.com, security.microsoft.com`<BR>`52.108.0.0/14, 2603:1006:1400::/40, 2603:1016:2400::/40, 2603:1026:2400::/40, 2603:1036:2400::/40, 2603:1046:1400::/40, 2603:1056:1400::/40, 2a01:111:200a:a::/64, 2a01:111:2035:8::/64, 2a01:111:f406:1::/64, 2a01:111:f406:c00::/64, 2a01:111:f406:1004::/64, 2a01:111:f406:1805::/64, 2a01:111:f406:3404::/64, 2a01:111:f406:8000::/64, 2a01:111:f406:8801::/64, 2a01:111:f406:a003::/64` | **TCP:** 443
 65 | Tillad<BR>Påkrævet | Ja | `account.office.net`<BR>`52.108.0.0/14, 2603:1006:1400::/40, 2603:1016:2400::/40, 2603:1026:2400::/40, 2603:1036:2400::/40, 2603:1046:1400::/40, 2603:1056:1400::/40, 2a01:111:200a:a::/64, 2a01:111:2035:8::/64, 2a01:111:f406:1::/64, 2a01:111:f406:c00::/64, 2a01:111:f406:1004::/64, 2a01:111:f406:1805::/64, 2a01:111:f406:3404::/64, 2a01:111:f406:8000::/64, 2a01:111:f406:8801::/64, 2a01:111:f406:a003::/64` | **TCP:** 443, 80
 66 | Standard<BR>Påkrævet | Nej | `*.portal.cloudappsecurity.com, suite.office.net` | **TCP:** 443
-67 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Security and Compliance Center eDiscovery-eksport | Nej | `*.blob.core.windows.net` | **TCP:** 443
-68 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Portal og delt: Office-integration med tredjeparter. (herunder CDN'er) | Nej | `firstpartyapps.oaspapps.com, prod.firstpartyapps.oaspapps.com.akadns.net, telemetryservice.firstpartyapps.oaspapps.com, wus-firstpartyapps.oaspapps.com` | **TCP:** 443
+67 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Security and Compliance Center, eDiscovery-eksport | Nej | `*.blob.core.windows.net` | **TCP:** 443
+68 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Portal og delt: Office-integration med tredjepart. (herunder CDN'er) | Nej | `firstpartyapps.oaspapps.com, prod.firstpartyapps.oaspapps.com.akadns.net, telemetryservice.firstpartyapps.oaspapps.com, wus-firstpartyapps.oaspapps.com` | **TCP:** 443
 69 | Standard<BR>Påkrævet | Nej | `*.aria.microsoft.com, *.events.data.microsoft.com` | **TCP:** 443
 70 | Standard<BR>Påkrævet | Nej | `*.o365weve.com, amp.azure.net, appsforoffice.microsoft.com, assets.onestore.ms, auth.gfx.ms, c1.microsoft.com, dgps.support.microsoft.com, docs.microsoft.com, msdn.microsoft.com, platform.linkedin.com, prod.msocdn.com, shellprod.msocdn.com, support.content.office.net, support.microsoft.com, technet.microsoft.com, videocontent.osi.office.net, videoplayercdn.osi.office.net` | **TCP:** 443
 71 | Standard<BR>Påkrævet | Nej | `*.office365.com` | **TCP:** 443
 72 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Azure Rights Management (RMS) med Office 2010-klienter | Nej | `*.cloudapp.net` | **TCP:** 443
 73 | Standard<BR>Påkrævet | Nej | `*.aadrm.com, *.azurerms.com, *.informationprotection.azure.com, ecn.dev.virtualearth.net, informationprotection.hosting.portal.azure.net` | **TCP:** 443
-75 | Standard<BR>Valgfrit<BR>**Noter:** Graph.windows.net, Office 365 Management Pack til Operations Manager, SecureScore, Azure AD Device Registration, Forms, StaffHub, Insights, captcha-tjenester | Nej | `*.sharepointonline.com, dc.services.visualstudio.com, mem.gfx.ms, staffhub.ms` | **TCP:** 443
-78 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Nogle Office 365 funktioner kræver slutpunkter inden for disse domæner (herunder CDN'er). Mange specifikke FQDN'er inden for disse jokertegn er blevet publiceret for nylig, mens vi arbejder på enten at fjerne eller bedre forklare vores retningslinjer for disse jokertegn. | Nej | `*.microsoft.com, *.msocdn.com, *.office.net, *.onmicrosoft.com` | **TCP:** 443, 80
+75 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Graph.windows.net, Office 365 Management Pack for Operations Manager, SecureScore, Azure AD-enhedsregistrering, formularer, StaffHub, Application Insights, captcha-tjenester | Nej | `*.sharepointonline.com, dc.services.visualstudio.com, mem.gfx.ms, staffhub.ms` | **TCP:** 443
+78 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Nogle funktioner i Office 365 kræver slutpunkter inden for disse domæner (inklusiv CDN'er). Mange specifikke FQDN'er inden for disse jokertegn er blevet publiceret for nylig, mens vi arbejder på at fjerne eller bedre forklare vores retningslinjer for disse jokertegn. | Nej | `*.microsoft.com, *.msocdn.com, *.office.net, *.onmicrosoft.com` | **TCP:** 443, 80
 79 | Standard<BR>Påkrævet | Nej | `o15.officeredir.microsoft.com, officepreviewredir.microsoft.com, officeredir.microsoft.com, r.office.microsoft.com` | **TCP:** 443, 80
 83 | Standard<BR>Påkrævet | Nej | `activation.sls.microsoft.com` | **TCP:** 443
 84 | Standard<BR>Påkrævet | Nej | `crl.microsoft.com` | **TCP:** 443, 80
@@ -82,25 +82,25 @@ Id | Kategori | ER | Adresser | Porte
 89 | Standard<BR>Påkrævet | Nej | `go.microsoft.com` | **TCP:** 443, 80
 91 | Standard<BR>Påkrævet | Nej | `ajax.aspnetcdn.com, cdn.odc.officeapps.live.com` | **TCP:** 443, 80
 92 | Standard<BR>Påkrævet | Nej | `officecdn.microsoft.com, officecdn.microsoft.com.edgesuite.net` | **TCP:** 443, 80
-93 | Standard<BR>Valgfrit<BR>**Bemærkninger:** ProPlus: hjælpewebadresser | Nej | `*.virtualearth.net, c.bing.net, excelbingmap.firstpartyapps.oaspapps.com, ocos-office365-s2s.msedge.net, peoplegraph.firstpartyapps.oaspapps.com, tse1.mm.bing.net, wikipedia.firstpartyapps.oaspapps.com, www.bing.com` | **TCP:** 443, 80
-95 | Standard<BR>Valgfrit<BR>**Noter:** Outlook til Android og iOS | Nej | `*.acompli.net, *.outlookmobile.com` | **TCP:** 443
-96 | Standard<BR>Valgfrit<BR>**Noter:** Outlook til Android og iOS: Godkendelse | Nej | `login.windows-ppe.net` | **TCP:** 443
-97 | Standard<BR>Valgfrit<BR>**Noter:** Outlook til Android og iOS: Integration af Outlook.com og OneDrive forbrugere | Nej | `account.live.com, login.live.com` | **TCP:** 443
-105 | Standard<BR>Valgfrit<BR>**Noter:** Outlook til Android og iOS: Beskyttelse Outlook beskyttelse af personlige oplysninger | Nej | `www.acompli.com` | **TCP:** 443
-114 | Standard<BR>Valgfrit<BR>**Noter: Office** mobile URL-adresser | Nej | `*.appex.bing.com, *.appex-rf.msn.com, c.bing.com, c.live.com, d.docs.live.net, directory.services.live.com, docs.live.net, partnerservices.getmicrosoftkey.com, signup.live.com` | **TCP:** 443, 80
-116 | Standard<BR>Valgfrit<BR>**Noter: Office** til iPad URL-adresser | Nej | `account.live.com, auth.gfx.ms, login.live.com` | **TCP:** 443, 80
-117 | Standard<BR>Valgfrit<BR>**Noter:** Yammer | Nej | `*.yammer.com, *.yammerusercontent.com` | **TCP:** 443
-118 | Standard<BR>Valgfrit<BR>**Noter:** Yammer CDN | Nej | `*.assets-yammer.com` | **TCP:** 443
-121 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Planner: hjælpewebadresser | Nej | `www.outlook.com` | **TCP:** 443, 80
-122 | Standard<BR>Valgfrit<BR>**Noter:** Sway CDN'er | Nej | `eus-www.sway-cdn.com, eus-www.sway-extensions.com, wus-www.sway-cdn.com, wus-www.sway-extensions.com` | **TCP:** 443
-124 | Standard<BR>Valgfrit<BR>**Noter:** Sway | Nej | `sway.com, www.sway.com` | **TCP:** 443
+93 | Standard<BR>Valgfrit<BR>**Bemærkninger:** ProPlus: AUX URL-adresser | Nej | `*.virtualearth.net, c.bing.net, excelbingmap.firstpartyapps.oaspapps.com, ocos-office365-s2s.msedge.net, peoplegraph.firstpartyapps.oaspapps.com, tse1.mm.bing.net, wikipedia.firstpartyapps.oaspapps.com, www.bing.com` | **TCP:** 443, 80
+95 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Outlook til Android og iOS | Nej | `*.acompli.net, *.outlookmobile.com` | **TCP:** 443
+96 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Outlook til Android og iOS: Godkendelse | Nej | `login.windows-ppe.net` | **TCP:** 443
+97 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Outlook til Android og iOS: Integration af forbruger-Outlook.com og OneDrive | Nej | `account.live.com, login.live.com` | **TCP:** 443
+105 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Outlook til Android og iOS: Beskyttelse af personlige oplysninger i Outlook | Nej | `www.acompli.com` | **TCP:** 443
+114 | Standard<BR>Valgfrit<BR>**Bemærkninger:** URL-adresser for Office Mobile | Nej | `*.appex.bing.com, *.appex-rf.msn.com, c.bing.com, c.live.com, d.docs.live.net, directory.services.live.com, docs.live.net, partnerservices.getmicrosoftkey.com, signup.live.com` | **TCP:** 443, 80
+116 | Standard<BR>Valgfrit<BR>**Bemærkninger:** URL-adresser for Office til iPad | Nej | `account.live.com, auth.gfx.ms, login.live.com` | **TCP:** 443, 80
+117 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Yammer | Nej | `*.yammer.com, *.yammerusercontent.com` | **TCP:** 443
+118 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Yammer CDN | Nej | `*.assets-yammer.com` | **TCP:** 443
+121 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Planner: AUX URL-adresser | Nej | `www.outlook.com` | **TCP:** 443, 80
+122 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Sway-CDN'er | Nej | `eus-www.sway-cdn.com, eus-www.sway-extensions.com, wus-www.sway-cdn.com, wus-www.sway-extensions.com` | **TCP:** 443
+124 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Sway | Nej | `sway.com, www.sway.com` | **TCP:** 443
 125 | Standard<BR>Påkrævet | Nej | `*.entrust.net, *.geotrust.com, *.omniroot.com, *.public-trust.com, *.symcb.com, *.symcd.com, *.verisign.com, *.verisign.net, apps.identrust.com, cacerts.digicert.com, cert.int-x3.letsencrypt.org, crl.globalsign.com, crl.globalsign.net, crl.identrust.com, crl3.digicert.com, crl4.digicert.com, isrg.trustid.ocsp.identrust.com, mscrl.microsoft.com, ocsp.digicert.com, ocsp.globalsign.com, ocsp.msocsp.com, ocsp2.globalsign.com, ocspx.digicert.com, secure.globalsign.com, www.digicert.com, www.microsoft.com` | **TCP:** 443, 80
-126 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Der kræves forbindelse til taletjenesten for at Office Dikteringsfunktioner. Hvis forbindelse ikke er tilladt, deaktiveres Diktering. | Nej | `officespeech.platform.bing.com` | **TCP:** 443
+126 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Forbindelse til taletjenesten er påkrævet for Office-dikteringsfunktioner. Hvis forbindelse ikke er tilladt, deaktiveres diktering. | Nej | `officespeech.platform.bing.com` | **TCP:** 443
 128 | Standard<BR>Påkrævet | Nej | `*.config.office.net, *.manage.microsoft.com` | **TCP:** 443
 147 | Standard<BR>Påkrævet | Nej | `*.office.com` | **TCP:** 443, 80
 148 | Standard<BR>Påkrævet | Nej | `cdnprod.myanalytics.microsoft.com, myanalytics.microsoft.com, myanalytics-gcc.microsoft.com` | **TCP:** 443, 80
 149 | Standard<BR>Påkrævet | Nej | `workplaceanalytics.cdn.office.net` | **TCP:** 443, 80
-152 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Disse slutpunkter aktiverer funktionen Office Scripts i Office klienter, der er tilgængelige via fanen Automatiser.  Denne funktion kan også deaktiveres via Office 365 Admin portal. | Nej | `*.microsoftusercontent.com` | **TCP:** 443
+152 | Standard<BR>Valgfrit<BR>**Bemærkninger:** Disse slutpunkter aktiverer Office Scripts-funktionaliteten i Office-klienter, der er tilgængelige via fanen Automatiser.  Denne funktion kan også deaktiveres via Office 365-administrationsportalen. | Nej | `*.microsoftusercontent.com` | **TCP:** 443
 153 | Standard<BR>Påkrævet | Nej | `*.azure-apim.net, *.flow.microsoft.com, *.powerapps.com` | **TCP:** 443
 156 | Standard<BR>Påkrævet | Nej | `*.activity.windows.com, activity.windows.com` | **TCP:** 443
 157 | Standard<BR>Påkrævet | Nej | `ocsp.int-x3.letsencrypt.org` | **TCP:** 80

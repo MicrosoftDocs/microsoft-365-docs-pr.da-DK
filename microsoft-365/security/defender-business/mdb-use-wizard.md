@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/12/2022
+ms.date: 04/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 1f128a48e8ee2939b4bfcc270c110e0ec63d6ebe
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 697dfc567eb2719a6e81a7b57df321ba2af40911
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862582"
+ms.locfileid: "64882302"
 ---
 # <a name="use-the-setup-wizard-in-microsoft-defender-for-business"></a>Brug installationsguiden i Microsoft Defender til virksomheder
 
@@ -36,6 +36,11 @@ Microsoft Defender til virksomheder var designet til at spare små og mellemstor
 > **Har du et øjeblik?**
 > Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
+
+> [!TIP]
+> Det er valgfrit at bruge installationsguiden. Du kan vælge at gennemgå konfigurationsprocessen manuelt. Du kan få mere at vide under:
+> - [Hvad sker der, hvis jeg ikke bruger guiden?](#what-happens-if-i-dont-use-the-wizard)
+> - [Sådan konfigurerer og konfigurerer du Microsoft Defender til virksomheder](mdb-setup-configuration.md)
 
 ## <a name="how-to-start-the-setup-wizard"></a>Sådan starter du installationsguiden
 
@@ -62,16 +67,16 @@ Installationsguiden er udviklet til at hjælpe dig med hurtigt og effektivt at k
    - **Sikkerhedsadministrator**: En sikkerhedsadministrator kan få vist og redigere sikkerhedsindstillinger og udføre handlinger, når der registreres trusler.
    - **Sikkerhedslæser**: En sikkerhedslæser kan få vist oplysninger i rapporter, men kan ikke ændre nogen sikkerhedsindstillinger. 
 
-   [Mer informasjon om roller og tilladelser](mdb-roles-permissions.md). 
+   [Få mere at vide om roller og tilladelser](mdb-roles-permissions.md). 
 
-2. **Konfigurer mailmeddelelser**. I dette trin kan du konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres en besked, eller der registreres en ny sårbarhed, vil dit sikkerhedsteam ikke om det, selvom de er væk fra deres skrivebord. [Mer informasjon om mailmeddelelser](mdb-email-notifications.md). 
+2. **Konfigurer mailmeddelelser**. I dette trin kan du konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres en besked, eller der registreres en ny sårbarhed, vil dit sikkerhedsteam ikke om det, selvom de ikke er væk fra deres skrivebord. [Få mere at vide om mailmeddelelser](mdb-email-notifications.md). 
 
 3. **Onboarde og konfigurer Windows enheder**. I dette trin kan du hurtigt onboarde din virksomheds Windows-enheder til Defender for Business. Onboarding af enheder med det samme hjælper med at beskytte disse enheder fra dag 1. 
 
    - **Hvis du allerede bruger Microsoft Endpoint Manager** (hvilket omfatter Microsoft Intune), og din virksomhed har enheder tilmeldt Endpoint Manager, bliver du spurgt, om du vil bruge [automatisk onboarding](#what-is-automatic-onboarding) til nogle eller alle dine tilmeldte Windows enheder. Automatisk onboarding konfigurerer en forbindelse mellem Endpoint Manager og Defender for Business og onboarder derefter uden problemer Windows enheder til Defender for Business. 
    - **Hvis du ikke allerede bruger Endpoint Manager**, kan du [onboarde enheder til Defender for Business](mdb-onboard-devices.md). 
    
-   [Mer informasjon om onboarding af enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
+   [Få mere at vide om onboarding af enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
    
 4. **Konfigurer dine sikkerhedspolitikker**. Defender for Business indeholder standardsikkerhedspolitikker for næste generations beskyttelse og firewallbeskyttelse, der kan anvendes på virksomhedens enheder. Disse standardpolitikker bruger anbefalede indstillinger og er designet til at yde stærk beskyttelse af dine enheder. Du kan også oprette dine egne sikkerhedspolitikker. Og hvis du allerede bruger Endpoint Manager, kan du fortsætte med at bruge det til at administrere dine sikkerhedspolitikker.
 
