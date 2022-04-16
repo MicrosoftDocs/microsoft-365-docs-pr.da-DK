@@ -27,77 +27,77 @@ description: Find din faktura eller faktureringsopgørelse i Microsoft 365 Admin
 ms.date: 01/25/2022
 ms.openlocfilehash: 02905b1e31dc295d8b5d79bc150a0c93823c9dd7
 ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: da-DK
 ms.lasthandoff: 03/08/2022
 ms.locfileid: "63588541"
 ---
 # <a name="view-your-bill-or-invoice"></a>Få vist din regning eller faktura
 
-Denne artikel er til personer, der har et Microsoft 365 for business-abonnement.
+Denne artikel er beregnet til personer, der har et abonnement på Office 365 til virksomheder.
   
-Hvis du har [brug for hjælp](understand-your-invoice2.md) til at forstå gebyrerne på din faktura, kan du se Forstå din regning eller faktura for at få en detaljeret gennemgang.
+Hvis du har brug for hjælp til at forstå gebyrerne på din faktura, kan du se [Forstå din regning eller faktura](understand-your-invoice2.md) for at få en detaljeret gennemgang.
   
-**Har du et problem med din faktura?** [Kontakt support om forretningsprodukter](../../admin/get-help-support.md).
+**Har du problemer med din faktura?** [Kontakt support til virksomhedsprodukter](../../admin/get-help-support.md).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være global administrator eller faktureringsadministrator for at udføre trinnene beskrevet i denne artikel.
+Du skal være global administrator eller faktureringsadministrator for at udføre de trin, der er beskrevet i denne artikel.
   
 ## <a name="watch-view-download-or-print-your-bill"></a>Se: Få vist, download eller udskriv din faktura
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FGmo?autoplay=false]
 
-1. I Microsoft 365 Administration du vælge **Fakturering** i venstre <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">**navigationsrude**</a> og derefter vælge fanen Fakturaer.
-1. Vælg en faktura for at få den vist. Hvis du ikke kan se en faktura, skal du **vælge Filtrer efter:** Sidste seks måneder på rullelisten.
-1. For at få vist fakturaoplysningerne skal **du vælge Download PDF** i øverste højre hjørne af fakturaen.
+1. I Microsoft 365 Administration skal du vælge **fakturerings-** i venstre navigationsrude og derefter vælge fanen <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">**Fakturaer**</a>.
+1. Vælg en faktura for at få den vist. Hvis du ikke kan se en faktura, skal du vælge **Filtrer efter: Sidste seks måneder** på rullelisten.
+1. Hvis du vil have vist fakturaoplysninger, skal du vælge **Download PDF** i øverste højre hjørne af fakturaen.
 
 ## <a name="view-a-bill-or-invoice"></a>Få vist en regning eller faktura
 
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Faktureringsfakturering</a>  \> & betalinger.
+1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Fakturaer og betalinger</a>.
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. I Administration skal du gå til siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank">Faktureringsfakturering</a>  \> & betalinger.
+1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank">Fakturaer og betalinger</a>.
 
 ::: moniker-end
 
-2. Vælg **et datointerval** på rullelisten under fanen Fakturaer, og vælg derefter den ordre, du vil have vist.
-3. På oversigtssiden kan du se elementer, antal, pris, rabat og total for alle varer på fakturaen.
+2. På fanen **Fakturaer** skal du vælge et datointerval på rullelisten og derefter vælge den rækkefølge, du vil have vist.
+3. På oversigtssiden kan du se varer, antal, pris, rabat og total for alle varer på fakturaen.
 4. Hvis du vil udskrive eller gemme en PDF-kopi af fakturaen, skal du vælge **Download PDF**.
 
-Hvis du vil modtage en kopi af din faktureringsopgørelse pr. mail, skal du se [Administrer faktureringsbeskeder og vedhæftede fakturaer](manage-billing-notifications.md).
+Hvis du vil modtage en kopi af din faktureringsopgørelse via mail, skal du se [Administrer faktureringsmeddelelser og vedhæftede fakturaer](manage-billing-notifications.md).
 
 ::: moniker range="o365-21vianet"
 
 ## <a name="request-a-fapiao"></a>Anmod om en Fapiao
 
-Du kan indsende din Fapiao-anmodning til vores [Fapiao-administrationssystem](https://go.microsoft.com/fwlink/p/?linkid=837465) , ca. tre (3) dage efter, du har betalt.
+Du kan sende din Fapiao-anmodning til vores [Fapiao-administrationssystem](https://go.microsoft.com/fwlink/p/?linkid=837465) ca. tre (3) dage efter, at du har betalt.
 
-1. I Administration <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">skal du</a> gå til siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank">**Faktureringsfakturering**</a>  > & betalinger.
+1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">Administration</a> skal du gå til siden **Fakturering**><a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank">**Fakturaer og betalinger**</a>.
 2. Find den ønskede faktura, og vælg derefter **Hent Fapiaos**.
 
 > [!NOTE]
 >
-> Du skal have en registreret konto for at få adgang [til Fapiao-administrationssystemet](https://go.microsoft.com/fwlink/p/?linkid=837465). Hvis du ikke allerede har konfigureret en konto, kan du se [Anmeld for en Fapiao for Office 365 drevet af 21Vianet](../../admin/services-in-china/apply-for-a-fapiao.md).
+> Du skal have en registreret konto for at få adgang til [Fapiao-administrationssystemet](https://go.microsoft.com/fwlink/p/?linkid=837465). Hvis du ikke allerede har konfigureret en konto, skal du se [Ansøg om en Fapiao til Office 365 drevet af 21Vianet](../../admin/services-in-china/apply-for-a-fapiao.md).
 
 ::: moniker-end
 
 > [!NOTE]
 >
-> Microsoft 365-tjenester indeholder ikke kvitteringer for betaling.
-> For kreditkortbetalinger skal du bruge fakturaen og kreditkortfaktureringsopgørelsen til at matche din betaling.
+> Microsoft 365-tjenester giver ikke betalingskvitteringer.
+> For kreditkortbetalinger skal du bruge faktura- og kreditkortfaktureringsopgørelsen til at matche din betaling.
 
-## <a name="run-the-unknown-charge-diagnostic"></a>Kør Unknown Charge Diagnostic
+## <a name="run-the-unknown-charge-diagnostic"></a>Kør diagnosticering af ukendt opkrævning
 
-Som global Microsoft 365 administrator kan du bruge et diagnosticeringsværktøj, der kører i Microsoft 365 Administration, til at undersøge uventede gebyrer fra Microsoft, som vises på din bank- eller kreditkortopgørelse.
+Som Microsoft 365 global administrator kan du bruge et diagnosticeringsværktøj, der kører inden for Microsoft 365 Administration til at undersøge uventede opkrævninger fra Microsoft, der vises på din bank- eller kreditkortudskrift.
 
 > [!NOTE]
-> Unknown Charge Diagnostic er kun tilgængelig for kunder, der har købt deres produkter og tjenester fra Microsoft.com, herunder Microsoft 365 Enterprise, Education og non-profit.
+> Diagnosticering af ukendt opkrævning er kun tilgængelig for kunder, der har købt deres produkter og tjenester fra Microsoft.com, herunder Microsoft 365 Enterprise, Uddannelse og almennyttige organisationer.
 
 Vælg linket **Kør test** nedenfor for at åbne diagnosticeringsværktøjet i Microsoft 365 Administration.
 
@@ -106,11 +106,11 @@ Vælg linket **Kør test** nedenfor for at åbne diagnosticeringsværktøjet i M
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis du har en saldo og gerne vil betale, kan du gøre det online. Se Betal for dit [abonnement for at se hvordan](pay-for-your-subscription.md).
+Hvis du har en saldo og gerne vil betale den, kan du gøre det online. Du kan få mere at vide under [Betal for dit abonnement](pay-for-your-subscription.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Betal via faktura, kreditkort eller bankkonto](pay-for-your-subscription.md) (artikel) \
 [Administrer betalingsmetoder](manage-payment-methods.md) (artikel) \
-[Faktureringsoplysninger for Microsoft 365 for virksomheder i Mexico](mexico-billing-info.md) (artikel) \
+[Faktureringsoplysninger for Microsoft 365 til virksomheder i Mexico](mexico-billing-info.md) (artikel) \
 [Minecraft: Education Edition betalingsmåder](/education/windows/school-get-minecraft) (artikel)
