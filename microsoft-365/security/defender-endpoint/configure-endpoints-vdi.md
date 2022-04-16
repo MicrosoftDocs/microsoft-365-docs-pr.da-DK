@@ -1,7 +1,7 @@
 ---
 title: Onboard ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)
-description: Udrul konfigurationspakken på VDI-enheden (Virtual Desktop Infrastructure), så de er onboardet til Microsoft Defender for Endpoint-tjenesten.
-keywords: konfigurer VDI-enhed (Virtual Desktop Infrastructure), vdi, enhedshåndtering, konfigurer Microsoft Defender for Endpoint, slutpunkter
+description: Udrul konfigurationspakken på VDI-enheden (Virtual Desktop Infrastructure), så de er onboardet til Pertahanan Microsoft untuk Titik Akhir-tjenesten.
+keywords: konfigurer VDI-enhed (Virtual Desktop Infrastructure), vdi, enhedshåndtering, konfigurer Pertahanan Microsoft untuk Titik Akhir, slutpunkter
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -16,14 +16,14 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
-ms.date: 02/14/2022
+ms.date: 04/15/2022
 ms.technology: mde
-ms.openlocfilehash: fe86b09588f08a05183de146092b50b5cb530d0e
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 78d22772ccc9713b968347de5dee4c3a9699fe26
+ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825008"
+ms.lasthandoff: 04/16/2022
+ms.locfileid: "64891860"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Onboarde VDI-enheder (Virtual Desktop Infrastructure) i Microsoft 365 Defender
 
@@ -35,7 +35,7 @@ Som ethvert andet system i et it-miljø skal disse også have en løsning til re
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - VDI-enheder (Virtual Desktop Infrastructure)
 - Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
@@ -43,7 +43,7 @@ Som ethvert andet system i et it-miljø skal disse også have en løsning til re
 > Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
  > [!NOTE]
-  > **Faste VDI'er** -  [Onboarding af en vedvarende VDI-maskine](configure-endpoints.md) i Microsoft Defender for Endpoint håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en vedvarende maskine. På Microsoft 365 Defender-portalen (https://security.microsoft.com) under onboarding skal du vælge din foretrukne onboardingmetode og følge instruktionerne for den pågældende type. 
+  > **Faste VDI'er** -  [Onboarding af en vedvarende VDI-maskine](configure-endpoints.md) i Pertahanan Microsoft untuk Titik Akhir håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en vedvarende maskine. På Microsoft 365 Defender-portalen (https://security.microsoft.com) under onboarding skal du vælge din foretrukne onboardingmetode og følge instruktionerne for den pågældende type. 
 
 ## <a name="onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices"></a>Onboarding af VDI-enheder (Virtual Desktop Infrastructure), der ikke er vedvarende
 
@@ -57,7 +57,7 @@ Der kan være tilknyttede udfordringer, når du onboarder VDI-instanser. Følgen
 I et VDI-miljø kan VDI-forekomster have korte levetider. VDI-enheder kan vises i Defender for Endpoint Portal som enten:
 
 
-- Enkelt portalpost for hver VDI-forekomst. Hvis VDI-forekomsten allerede er onboardet til Microsoft Defender for Endpoint og på et tidspunkt er slettet og derefter gendannet med det samme værtsnavn, oprettes der IKKE et nyt objekt, der repræsenterer denne VDI-forekomst, på portalen. 
+- Enkelt portalpost for hver VDI-forekomst. Hvis VDI-forekomsten allerede er onboardet til Pertahanan Microsoft untuk Titik Akhir og på et tidspunkt er slettet og derefter gendannet med det samme værtsnavn, oprettes der IKKE et nyt objekt, der repræsenterer denne VDI-forekomst, på portalen. 
 
 
   > [!NOTE]
@@ -122,7 +122,7 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 ## <a name="for-downlevel-skus-windows-server-2008-r2"></a>For sku'er på et lavere niveau (Windows Server 2008 R2)
 
 > [!NOTE]
-> Disse instruktioner til andre Windows serverversioner gælder også, hvis du kører den tidligere Microsoft Defender for Endpoint til Windows Server 2016 og Windows Server 2012 R2, der kræver MMA. Instruktioner til migrering til den nye samlede løsning finder du [i Server migrationsscenarier i Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
+> Disse instruktioner til andre Windows serverversioner gælder også, hvis du kører den tidligere Pertahanan Microsoft untuk Titik Akhir til Windows Server 2016 og Windows Server 2012 R2, der kræver MMA. Instruktioner til migrering til den nye samlede løsning finder du [i Server migrationsscenarier i Pertahanan Microsoft untuk Titik Akhir](/microsoft-365/security/defender-endpoint/server-migration).
 
 > [!NOTE]
 > Følgende registreringsdatabase er kun relevant, når målet er at opnå en "enkelt post for hver enhed".
@@ -146,7 +146,7 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 
 Med muligheden for nemt at udrulle opdateringer til VM'er, der kører i VM'er, har vi forkortet denne vejledning for at fokusere på, hvordan du hurtigt og nemt kan få opdateringer på dine maskiner. Du behøver ikke længere at oprette og forsegle gyldne billeder regelmæssigt, da opdateringer udvides til deres komponentbits på værtsserveren og derefter downloades direkte til vm'en, når den er slået til.
 
-Du kan finde flere oplysninger ved at følge vejledningen i [Installationsvejledning til Microsoft Defender Antivirus i et VDI-miljø (Virtual Desktop Infrastructure).](/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus)
+Du kan finde flere oplysninger ved at følge vejledningen i [Installationsvejledning til Microsoft Defender Antivirus i et VDI-miljø (Virtual Desktop Infrastructure).](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus)
 
 
 ## <a name="related-topics"></a>Relaterede emner
@@ -154,4 +154,4 @@ Du kan finde flere oplysninger ved at følge vejledningen i [Installationsvejled
 - [Onboard Windows-enheder ved hjælp af Microsoft Endpoint Konfigurationsstyring](configure-endpoints-sccm.md)
 - [Onboard Windows-enheder ved hjælp af værktøjer til administration af mobilenheder](configure-endpoints-mdm.md)
 - [Onboard Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
-- [Fejlfinding af problemer med Microsoft Defender for Endpoint onboarding](troubleshoot-onboarding.md)
+- [Fejlfinding af problemer med Pertahanan Microsoft untuk Titik Akhir onboarding](troubleshoot-onboarding.md)

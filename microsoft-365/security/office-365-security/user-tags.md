@@ -1,5 +1,5 @@
 ---
-title: Brugerkoder i Microsoft Defender for Office 365
+title: Brugerkoder i Pertahanan Microsoft untuk Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,24 +14,24 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan de identificerer bestemte grupper af brugere med brugerkoder i Microsoft Defender for Office 365 Plan 2. Kodefiltrering er tilgængelig på tværs af beskeder, rapporter og undersøgelser i Microsoft Defender for Office 365 for hurtigt at identificere de mærkede brugere.
+description: Administratorer kan få mere at vide om, hvordan de identificerer bestemte grupper af brugere med brugerkoder i Pertahanan Microsoft untuk Office 365 Plan 2. Kodefiltrering er tilgængelig på tværs af beskeder, rapporter og undersøgelser i Pertahanan Microsoft untuk Office 365 for hurtigt at identificere de mærkede brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9da17b2dfb20746bb48b1ba737968873d4151595
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 1f045e5dcb590c36fd0f3768c472057b07b12b21
+ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731608"
+ms.lasthandoff: 04/16/2022
+ms.locfileid: "64891814"
 ---
-# <a name="user-tags-in-microsoft-defender-for-office-365"></a>Brugerkoder i Microsoft Defender for Office 365
+# <a name="user-tags-in-microsoft-defender-for-office-365"></a>Brugerkoder i Pertahanan Microsoft untuk Office 365
 
-Brugerkoder er id'er for bestemte grupper af brugere i [Microsoft Defender for Office 365](defender-for-office-365.md). Der er to typer brugerkoder:
+Brugerkoder er id'er for bestemte grupper af brugere i [Pertahanan Microsoft untuk Office 365](defender-for-office-365.md). Der er to typer brugerkoder:
 
 - **Systemkoder**: [Prioritetskonti](../../admin/setup/priority-accounts.md) er i øjeblikket den eneste type systemkode.
 - **Brugerdefinerede mærker**: Du opretter selv disse brugerkoder.
 
-Hvis din organisation har Defender for Office 365 Plan 2 (inkluderet i dit abonnement eller som et tilføjelsesprogram), kan du oprette brugerdefinerede brugerkoder ud over at bruge prioritetskontomærket.
+Hvis din organisation har Defender pre Office 365 Plan 2 (inkluderet i dit abonnement eller som et tilføjelsesprogram), kan du oprette brugerdefinerede brugerkoder ud over at bruge prioritetskontokoden.
 
 > [!NOTE]
 > I øjeblikket kan du kun anvende brugerkoder på postkassebrugere.
@@ -41,6 +41,7 @@ Når du har anvendt systemkoder eller brugerdefinerede mærker på brugere, kan 
 - [Beskeder](alerts.md)
 - [Brugerdefinerede beskedpolitikker](../../compliance/alert-policies.md#viewing-alerts)
 - [Trusselsoversigt og registreringer i realtid](threat-explorer.md)
+- [Kompromitteret brugerrapport](view-email-security-reports.md#compromised-users-report)
 - [Mailobjektside](mdo-email-entity-page.md#other-innovations)
 - [Statusrapport om trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report)
 - [Simulering af angreb](attack-simulation-training.md#target-users)
@@ -67,7 +68,7 @@ Hvis du vil se, hvordan brugerkoder er en del af strategien for at beskytte brug
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   >
   > - Administration af brugerkode styres af rollerne **Mærkelæser** og **Kodestyring** .
 
@@ -146,4 +147,4 @@ Hvis du vil se, hvordan brugerkoder er en del af strategien for at beskytte brug
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Konfigurer og gennemse prioritetskonti i Microsoft Defender for Office 365](configure-review-priority-account.md)
+[Konfigurer og gennemse prioritetskonti i Pertahanan Microsoft untuk Office 365](configure-review-priority-account.md)
