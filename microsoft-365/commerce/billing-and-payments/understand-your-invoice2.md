@@ -20,154 +20,154 @@ ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid: MET150
-description: Få mere at vide om, hvordan du fortolker gebyrer, fakturerings- og betalingsoplysninger Microsoft 365 for business bill or invoice.
+description: Få mere at vide om, hvordan du fortolker gebyrer, fakturering og betalingsoplysninger på din faktura eller faktura for Microsoft 365 til virksomheder.
 ms.date: 03/04/2022
 ms.openlocfilehash: e8a27dbdab3f49412f78d0ef7dcb533266d5f4f4
 ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: da-DK
 ms.lasthandoff: 03/08/2022
 ms.locfileid: "63588272"
 ---
 # <a name="understand-your-bill-or-invoice-for-microsoft-365-for-business"></a>Forstå din regning eller faktura for Microsoft 365 til virksomheder
 
-Din faktura indeholder en oversigt over gebyrer for dit abonnement og indeholder en vejledning i, hvordan du betaler.
+Din regning eller faktura indeholder en oversigt over gebyrer for dit abonnement og indeholder instruktioner til, hvordan du foretager en betaling.
 
 > [!NOTE]
-> Hvis du har andre abonnementer i stedet for eller Microsoft 365, skal du se [Forstå din regning eller faktura](understand-your-invoice.md).
+> Hvis du har andre abonnementer i stedet for eller ud over Microsoft 365, skal du se [Forstå din regning eller faktura](understand-your-invoice.md).
 
 ## <a name="how-often-and-when-am-i-billed"></a>Hvor ofte og hvornår faktureres jeg?
 
-Afhængigt af den faktureringsfrekvens, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt eller årligt. Hvis du vælger årlig fakturering, modtager du kun én faktura om året, medmindre aktivitet for dit abonnement tilføjer en ny opkrævning eller en kredit.
+Afhængigt af den faktureringshyppighed, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt eller årligt. Hvis du vælger årlig fakturering, modtager du kun én faktura om året, medmindre aktivitet for dit abonnement tilføjer et nyt gebyr eller en kredit.
 
-Mængden af tid siden sidste fakturadato kaldes Faktureringsperiode *og* er på side en af fakturaen. Dette klokkeslæt repræsenterer det datointerval, hvor gebyrer periodiseres for den aktuelle faktura. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. at tilføje eller fjerne licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
+Den tid, der er gået siden sidste fakturadato, kaldes *Faktureringsperioden* og er på side et af fakturaen. Dette tidspunkt repræsenterer det datointerval, hvor den aktuelle faktura tilskrives gebyrer. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. tilføjelse eller fjernelse af licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
 
-Fra og med side to på fakturaen vises gebyrerne grupperet efter *deres tjenesteperiode*. Tjenesteperioden er det datointerval, hvor du bliver opkrævet for at bruge tjenesten.
+Fra og med side to i fakturaen kan du se gebyrerne grupperet efter deres *Serviceperiode*. Tjenesteperioden er det datointerval, hvor du faktureres for at bruge tjenesten.
 
-I slutningen af hver faktureringsperiode modtager du en mail, der fortæller, at din nye faktura er klar til at blive vist eller downloadet Microsoft 365 Administration. Hvis du har mere end én ordre, modtager du en faktura for hver ordre. Få mere at vide [om, hvordan du finder og får vist din regning eller faktura](view-your-bill-or-invoice.md).
+I slutningen af hver faktureringsperiode modtager du en mail, hvor der står, at din nye faktura er klar til at blive vist eller downloadet i Microsoft 365 Administration. Hvis du har mere end én ordre, modtager du en faktura for hver ordre. Få mere at vide om, hvordan du [finde og få vist din regning eller faktura](view-your-bill-or-invoice.md).
 
-## <a name="why-is-my-total-due-different-from-last-month"></a>Hvorfor er min samlede forfalden forskellig fra sidste måned?
+## <a name="why-is-my-total-due-different-from-last-month"></a>Hvorfor er min forfaldne total forskellig fra sidste måned?
 
 Det beløb, der faktureres for dit abonnement, afspejler licensprisen ganget med antallet af købte licenser og eventuelle påkrævede afgifter eller gebyrer.
 
-Hvis det fakturerede beløb er anderledes end forventet, kan det skyldes forskellige årsager:
+Hvis det fakturerede beløb er anderledes end forventet, kan det ske af få årsager:
 
-- Du har tilføjet eller fjernet licenser fra dit abonnement. Licenser, der er ændret midtvejs, afspejles på den næste faktura. Du vil muligvis se en kredit og en genfakturering for den forrige tjenesteperiode for at tage højde for denne ændring. Hvis du vil have mere at vide om, hvordan det ser ud i din faktura, skal [du se Side to](#page-two) nedenfor.
-- Abonnementet blev annulleret. Du modtager en faktura efter annulleringen med en eventuel udestående saldo minus eventuelle kreditter.
+- Du har tilføjet eller fjernet licenser fra dit abonnement. Licenser, der er ændret midt i perioden, afspejles på den næste faktura. Du får muligvis vist en kredit og en ny fakturering for den forrige tjenesteperiode for at tage højde for denne ændring. Du kan finde flere oplysninger om, hvordan dette ser ud på din faktura, under [Side to](#page-two) nedenfor.
+- Abonnementet blev annulleret. Du modtager en faktura efter annullering med en eventuel udestående saldo minus eventuelle kreditter.
 - Dit abonnement er fornyet for en ny periode, og licensprisen er ændret.
 
-## <a name="overview-of-the-invoice-pdf"></a>Oversigt over fakturaens .PDF
+## <a name="overview-of-the-invoice-pdf"></a>Oversigt over fakturaen. PDF
 
-Din faktura er en .PDF, der indeholder mindst to sider. [Side et](#page-one) er faktureringsoversigten og indeholder generelle oplysninger om fakturaen, ordren, det forfaldne beløb og betalingsvejledningen, hvis det er relevant.
+Din faktura er en .PDF, der indeholder mindst to sider. [Side et](#page-one) er faktureringsoversigten og indeholder generelle oplysninger om fakturaen, ordren, det forfaldne beløb og betalingsinstruktioner, hvis det er relevant.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page-1.png" alt-text="Side et af fakturafakturaen .PDF der viser detaljerede oplysninger om din ordre.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page-1.png" alt-text="Side et af fakturaen .PDF, der viser de overordnede oplysninger om din ordre.":::
 
-[Side to](#page-two) indeholder oplysninger om faktureringsaktiviteten for hvert abonnement i tjenesteperioden.
+[Side to](#page-two) indeholder oplysninger om faktureringsaktiviteten for hvert abonnement i serviceperioden.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page-2.png" alt-text="Side to på fakturaen viser .PDF, der viser faktureringsaktivitet for hvert abonnement.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page-2.png" alt-text="Side to af fakturaen .PDF, der viser faktureringsaktivitet for hvert abonnement.":::
 
 ## <a name="header"></a>Sidehoved
 
-Sidehovedet vises øverst på hver fakturaside og indeholder månedstjenesten og **Fakturadatoen,** som er den dato, hvor Microsoft oprettede fakturaen. Fakturaen oprettes dagen efter slutningen af din faktureringsperiode. Hvis din faktureringsperiode f.eks. er 15. januar – 14. februar, er fakturadatoen 15. februar.
+Sidehovedet vises øverst på hver fakturaside og indeholder servicemåneden og **Fakturadatoen**, som er den dato, hvor Microsoft oprettede fakturaen. Fakturaen oprettes dagen efter slutningen af din faktureringsperiode. Hvis din faktureringsperiode f.eks. er fra d. 15. januar til 14. februar, er faktureringsdatoen den 15. februar.
 
-Sidehovedet indeholder også et **fakturanummer**, det entydige nummer, der er tildelt din faktura. Hvis du betaler via elektronisk pengeoverførsel eller check, skal du medtage fakturanummeret sammen med din betaling.
+Sidehovedet indeholder også et **Fakturanummer**, det entydige nummer, der er tildelt din faktura. Hvis du betaler via elektronisk pengeoverførsel (EFT) eller med check, skal du medtage fakturanummeret sammen med din betaling.
 
-Til sidst indeholder overskriften **forfaldsdatoen** for betaling af fakturaen og viser det samlede forfaldne beløb. Hvis du betaler for dit abonnement med et kreditkort eller en bankkonto, debiter vi dit kort eller din konto dagen efter fakturadatoen.
+Til sidst indeholder overskriften **Forfaldsdatoen** for betaling af fakturaen og viser det samlede forfaldne beløb. Hvis du betaler for dit abonnement med et kreditkort eller en bankkonto, debiterer vi dit kort eller din konto dagen efter fakturadatoen.
 
 ## <a name="footer"></a>Sidefod
 
-Sidefoden vises nederst på hver fakturaside og indeholder Microsoft Business Center-adresse. Baseret på dit land eller område kan det indeholde andre oplysninger, som f.eks. telefonnummeret, der skal ringes til for at få faktureringssupport eller teknisk support, et link til selvhjælpsartikler online samt adresse og moms-id for Microsoft i dit land eller område.
+Sidefoden vises nederst på hver fakturaside og indeholder Adressen på Microsoft Business Center. Baseret på dit land eller område kan det omfatte andre oplysninger som telefonnummeret til at ringe til fakturerings- eller teknisk support, et link til online artikler til selvhjælp og adressen og moms-id'et for Microsoft i dit land eller område.
 
 ## <a name="page-one"></a>Side et
 
-Side en af din faktura indeholder adresseoplysninger for din organisation, detaljerede oplysninger om din ordre, en oversigt over fakturatotaler og instruktioner om, hvordan du betaler din faktura.
+Side 1 af din faktura indeholder adresseoplysninger for din organisation, oplysninger på højt niveau om din ordre, en oversigt over fakturatotaler og instruktioner om, hvordan du betaler din faktura.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page1-details.png" alt-text="Hovedsektionen på en side i fakturaen.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page1-details.png" alt-text="Hovedafsnittet på side 1 af fakturaen.":::
 
 ### <a name="addresses"></a>Adresser
 
-Der vises tre adresser øverst på den første side. Solgt **til-adressen** er navnet og adressen på den organisation, der har købt abonnementet. **Faktureringsadressen** er adressen på din faktureringsafdeling. **Tjenestens brugsadresse** er adressen, hvor tjenesten bruges. Normalt er disse adresser de samme. Afhængigt af størrelsen og konfigurationen af organisationen kan disse adresser være forskellige.
+Tre adresser vises øverst på den første side. Adressen **Solgt til-** er navnet og adressen på den organisation, der købte abonnementet. **Faktureringsadressen** er adressen på din faktureringsafdeling. **Tjenestebrugsadresse** er den adresse, hvor tjenesten bruges. Disse adresser er normalt de samme. Afhængigt af størrelsen og konfigurationen af din organisation kan disse adresser være forskellige.
 
-Hvis du vil **opdatere Solgt til-adressen** , [skal du se Skift organisationens adresse, tekniske kontakt og meget mere](../../admin/manage/change-address-contact-and-more.md)**. Hvis du vil opdatere din fakturerings- eller** **tjenestebrugsadresse**, skal du [se Ændre dine faktureringsadresser](change-your-billing-addresses.md).
+Hvis du vil opdatere **Solgt til-adressen**, skal du se [Ændre organisationens adresse, tekniske kontakt og meget mere](../../admin/manage/change-address-contact-and-more.md)**. Hvis du vil opdatere din Faktura-til** eller **Tjenestebrugsadresse** skal du se [Ændre Faktureringsadresserne](change-your-billing-addresses.md).
 
 #### <a name="order-details"></a>Ordreoplysninger
 
-På side en af din faktura er **produktet** "Onlinetjenester", som er den generiske udtryk, vi bruger til at beskrive dit abonnement. Side to viser de enkelte produkter i din ordre.
+På side 1 af din faktura er **Produkt** "Online Services, det generiske udtryk,” vi bruger til at beskrive dit abonnement. Side to viser de enkelte produkter i din ordre.
 
-**Kundens købsordrenummer** er det indkøbsordrenummer, du angiver. Du kan ikke føje et IP-nummer til en eksisterende faktura. Hvis du opdaterer IA-nummeret, medtages det i fremtidige fakturaer. Hvis du vil ændre købsordrenummeret, [skal du se Ændre dit indkøbsordrenummer](#change-your-purchase-order-number).
+**Kundens indkøbsordrenummer** er det indkøbsordrenummer, du angiver. Du kan ikke føje et IO-nummer til en eksisterende faktura. Hvis du opdaterer indkøbsordrenummeret, inkluderes det i fremtidige fakturaer. Hvis du vil ændre indkøbsordrenummeret, skal du se [Ændre dit indkøbsordrenummer](#change-your-purchase-order-number).
 
-**Ordrenummer** er det GUID (Globally Unique Identifier), der identificerer din ordre. Hver gang du køber et nyt abonnement, oprettes der en ny ordre med et nyt ordrenummer. Du modtager en faktura for hver ordre hver faktureringsperiode.
+**Ordrenummer** er det GUID (Globally Unique Identifier), der identificerer din ordre. Hver gang du køber et nyt abonnement, oprettes der en ny ordre med et nyt ordrenummer. Du modtager en faktura for hver ordre i hver faktureringsperiode.
 
 **Faktureringsperiode** er perioden siden sidste fakturadato.
 
-**Betalingsbetingelser** er antallet af dage fra fakturadatoen, når betalingen forfalder. Standardbetaling er 30 dage.
+**Betalingsbetingelser** er antallet af dage fra fakturadatoen, hvor betalingen forfalder. Standardbetalingsperioden er 30 dage.
 
-**Forfaldsdato** er den dato, hvor fakturabetalingen forfalder. Hvis dit abonnement betales med et kreditkort eller pr. bankkonto opkræver vi betaling på kortet eller kontoen dagen efter fakturadatoen.
+**Forfaldsdato** er den dato, hvor fakturabetalingen forfalder. Hvis dit abonnement betales med et kreditkort eller en bankkonto, debiterer vi dit kort eller din konto dagen efter fakturadatoen.
 
 ### <a name="billing-summary"></a>Faktureringsoversigt
 
-Side en af din faktura viser totalerne for følgende varer for fakturaens faktureringsperiode. Side to indeholder detaljer for hver kategori.
+Side et af din faktura viser totalerne for følgende elementer for fakturafaktureringsperioden. Side to indeholder oplysninger om hver kategori.
 
 - Gebyrer
 - Rabatter
 - Kreditter
-- Moms
+- Skat
 - I alt
 
-### <a name="payment-instructions"></a>Betalingsinstruktioner
+### <a name="payment-instructions"></a>Betalingsvejledning
 
-Hvis du betaler med kreditkort, står der "Betal IKKE." Du vil blive debiteret det forfaldne beløb via din valgte betalingsmetode." Hvis du betaler via faktura, indeholder dette afsnit instruktioner om betaling med elektronisk penge penge eller check.
+Hvis du betaler med kreditkort, kan du se "BETAL IKKE. Du bliver opkrævet det forfaldne beløb via din valgte betalingsmetode." Hvis du betaler via faktura, indeholder dette afsnit instruktioner til betaling med elektronisk pengeoverførsel eller check.
 
-### <a name="electronic-fund-transfer-eft-and-check"></a>Elektronisk pengeoverførsel (EFT), og kontrollér
+### <a name="electronic-fund-transfer-eft-and-check"></a>Elektronisk pengeoverførsel (EFT) og check
 
-Hvis du har valgt "faktura" som betalingsmetode for dit abonnement, indeholder side et  afsnittet Elektronisk pengeoverførsel, der viser Microsofts bankkontooplysninger til elektroniske betalinger (wire, ACH, SEPA, og så videre). Din bank har som regel et referencefelt, du har udfyldet, når du sender en betaling. Sørg for at henvise til fakturanummeret i det pågældende felt.
+Hvis du vælger “faktura” som betalingsmetode for dit abonnement, indeholder side et afsnittet **Elektronisk pengeoverførsel**, der viser Microsofts bankkontooplysninger for elektroniske betalinger (bankoverførsel, ACH, SEPA osv.). Normalt har din bank et referencefelt, du udfylder, når du sender en betaling. Kontrollér, at du refererer til fakturanummeret i det pågældende felt.
 
-Hvis vi accepterer betalinger med check for dit land eller område, kan du også se  afsnittet Check, der indeholder modtagernavn og postadresse. Sørg for at henvise til dit fakturanummer på checken.
+Hvis vi accepterer betalinger med check for dit land eller område, kan du også se et afsnit med **Check**, der indeholder modtagerens navn og postadresse. Kontrollér, at du refererer til fakturanummeret i checken.
 
 ### <a name="support"></a>Support
 
-I visse lande eller områder har fakturaen et **Support-afsnit**, der indeholder instruktioner om, hvordan du får vist tidligere fakturaer Microsoft 365 Administration. Den indeholder også et link til artikler med selvhjælp, og for visse lande og områder er supporttelefonnummeret.
+I nogle lande eller områder indeholder fakturaen et afsnit med **Support**, der indeholder instruktioner om, hvordan du får vist tidligere fakturaer i Microsoft 365 Administration. Den indeholder også et link til artikler med selvhjælp og supporttelefonnummeret for nogle lande og områder.
 
 ## <a name="page-two"></a>Side to
 
-Produktnavnet for dit abonnement findes øverst på side to. Nedenfor finder du formlen, der forklarer, hvordan gebyrerne beregnes. Hvis du har mere end ét produkt i din ordre, kan du se en separat sektion for hvert produkt og de tilknyttede gebyrer.
+Produktnavnet for dit abonnement er øverst på side to. Nedenfor er formlen, der forklarer, hvordan gebyrerne beregnes. Hvis du har mere end ét produkt i din ordre, kan du se et separat afsnit for hvert produkt og de tilknyttede gebyrer.
 
 ### <a name="new-charges"></a>Nye gebyrer
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-new-charges.png" alt-text="Afsnittet Nye gebyrer på side to på fakturaen.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-new-charges.png" alt-text="Afsnittet Nye gebyrer på side to af fakturaen.":::
 
-Afsnittet **Nye gebyrer viser** den tjenesteperiode, hvor der er blevet tilføjet gebyrer, rabatter, kreditter og afgifter. Den viser antallet af licenser, der er inkluderet i tjenesteperioden, prisen pr. licens og antallet af dage i tjenesteperioden.
+Afsnittet **Nye gebyrer** viser den tjenesteperiode, hvor gebyrer, rabatter, kreditter og afgifter blev tilføjet. Den viser antallet af licenser, der er inkluderet i tjenesteperioden, prisen pr. licens og antallet af dage i tjenesteperioden.
 
 ### <a name="previous-charges"></a>Tidligere gebyrer
 
 :::image type="content" source="../../media/understand-your-invoice2/invoice-previous-charges.png" alt-text="Afsnittet Forrige gebyrer på side to af fakturaen.":::
 
-Afsnittet **Tidligere gebyrer viser** en kredit for gebyrer, du har betalt for den forrige faktura. Hvis du har foretaget en ændring i løbet af den forrige faktureringsperiode, omfatter din faktura **sektionen Forrige** gebyrer. Hvis du f.eks. har tilføjet eller fjernet licenser midt i  perioden, viser afsnittet Forrige gebyrer antallet af licenser for den pågældende tjenesteperiode sammen med den månedlige pris pr. licens, antallet af dage i tjenesteperioden, gebyrerne og andre beløb, der gælder.
+Afsnittet **Tidligere opkrævninger** viser en kreditering for gebyrer, du har betalt for den forrige faktura. Hvis du har foretaget en ændring i løbet af den forrige faktureringsperiode, inkluderer din faktura afsnittet **Tidligere gebyrer**. Hvis du f.eks. har tilføjet eller fjernet licenser midt i perioden, viser afsnittet **Tidligere gebyrer** antallet af licenser for den pågældende tjenesteperiode sammen med den månedlige pris pr. licens, antallet af dage i tjenesteperioden, gebyrerne og andre beløb, der gælder.
 
 ### <a name="charges-during-this-billing-period"></a>Gebyrer i denne faktureringsperiode
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-charges-this-period.png" alt-text="Afsnittet Gebyrer i denne faktureringsperiode på side to på din faktura.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-charges-this-period.png" alt-text="Afsnittet Gebyrer i denne faktureringsperiode på side to af din faktura.":::
 
-Afsnittet **Gebyrer i denne faktureringsperiode viser ændringer** af dit abonnement, der er foretaget i denne faktureringsperiode. Hvis du har foretaget en ændring i løbet af den forrige faktureringsperiode, indeholder din faktura **også afsnittet Ændringer i denne faktureringsperiode** . Hvis du f.eks. har tilføjet eller fjernet licenser under perioden, viser afsnittet Gebyrer i denne faktureringsperiode ændringerne i abonnementet, og hvornår de blev foretaget. De skyldige gebyrer eller refusioner på grund af disse ændringer er forholdsmæssigt for det antal dage, det er påvirket i faktureringsperioden.
+Afsnittet **Gebyrer i denne faktureringsperiode** viser ændringer af dit abonnement, der er foretaget i denne faktureringsperiode. Hvis du har foretaget en ændring i løbet af den forrige faktureringsperiode, indeholder din faktura også afsnittet **Ændringer i denne faktureringsperiode**. Hvis du f.eks. har tilføjet eller fjernet licenser midt i perioden, viser afsnittet **Gebyrer i denne faktureringsperiode** ændringerne af abonnementet, og hvornår de fandt sted. De gebyrer eller refusioner, der skyldes dig på grund af disse ændringer, beregnes forholdsmæssigt for det antal dage, der er berørt i faktureringsperioden.
 
 ## <a name="change-your-purchase-order-number"></a>Ændre dit indkøbsordrenummer
 
-Hvis du betaler via faktura, kan du tilføje eller ændre indkøbsordrenummeret (IP) for dit abonnement.
+Hvis du betaler med faktura, kan du tilføje eller ændre indkøbsordrenummeret (IO) for dit abonnement.
 
 > [!NOTE]
-> Du kan ikke føje et IP-nummer til en eksisterende faktura. Købsnummeret vises på alle fremtidige fakturaer.
+> Du kan ikke føje et IO-nummer til en eksisterende faktura. Indkøbsordrenummeret vises på alle fremtidige fakturaer.
 
-1. I Administration skal du gå til **siden** <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">BillingYour</a> >  products.
-2. Vælg **det abonnement** , du vil ændre, under fanen Produkter.
-3. På siden med abonnementsoplysninger skal du **i sektionen Abonnements- og betalingsindstillinger** vælge **Rediger faktura**.
-4. Nederst i ruden **Rediger detaljer for betaling med faktura** skal du angive dit købslistenummer og derefter vælge **Gem**.
+1. I Administration skal du gå til siden **Fakturering** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
+2. På fanen **Produkter** skal du vælge det abonnement, du vil ændre.
+3. På siden med abonnementsoplysninger skal du i sektionen **Abonnements- og betalingsindstillinger** vælge **Rediger faktura**.
+4. Nederst i ruden **Rediger oplysninger om betaling via faktura** skal du angive dit indkøbsordrenummer og derefter vælge **Gem**.
 
-## <a name="run-the-unknown-charge-diagnostic"></a>Kør Unknown Charge Diagnostic
+## <a name="run-the-unknown-charge-diagnostic"></a>Kør diagnosticering af ukendt opkrævning
 
-Som global Microsoft 365 administrator kan du bruge et diagnosticeringsværktøj, der kører i Microsoft 365 Administration, til at undersøge uventede gebyrer fra Microsoft, som vises på din bank- eller kreditkortopgørelse.
+Som Microsoft 365 global administrator kan du bruge et diagnosticeringsværktøj, der kører inden for Microsoft 365 Administration til at undersøge uventede opkrævninger fra Microsoft, der vises på din bank- eller kreditkortudskrift.
 
 > [!NOTE]
-> Unknown Charge Diagnostic er kun tilgængelig for kunder, der har købt deres produkter og tjenester fra Microsoft.com, herunder Microsoft 365 Enterprise, Education og non-profit.
+> Diagnosticering af ukendt opkrævning er kun tilgængelig for kunder, der har købt deres produkter og tjenester fra Microsoft.com, herunder Microsoft 365 Enterprise, Uddannelse og almennyttige organisationer.
 
 Vælg linket **Kør test** nedenfor for at åbne diagnosticeringsværktøjet i Microsoft 365 Administration.
 
@@ -176,8 +176,8 @@ Vælg linket **Kør test** nedenfor for at åbne diagnosticeringsværktøjet i M
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Få vist din regning eller faktura](view-your-bill-or-invoice.md) (artikel)\
-[Betal for dit Microsoft 365 for business-abonnement](pay-for-your-subscription.md) (artikel)\
+[Se din regning eller faktura](view-your-bill-or-invoice.md) (artikel)\
+[Betal for dit abonnement på Microsoft 365 til virksomheder](pay-for-your-subscription.md) (artikel)\
 [Administrer betalingsmetoder](manage-payment-methods.md) (artikel)\
-[Faktureringsoplysninger for Microsoft 365 for virksomheder i Mexico](mexico-billing-info.md) (artikel) \
+[Faktureringsoplysninger for Microsoft 365 til virksomheder i Mexico](mexico-billing-info.md) (artikel) \
 [Minecraft: Education Edition betalingsmåder](/education/windows/school-get-minecraft) (artikel)
