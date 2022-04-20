@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til at arkivere zoommødedata i Microsoft 365
+title: Konfigurer en connector til arkivering af zoommødedata i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,39 +11,39 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en forbindelse til at importere og arkivere data fra Veritas Zoom-møder i Microsoft 365. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere organisationens tredjepartsdata.
-ms.openlocfilehash: f776fe3d03f8674a698b5c8fe2f355aa5635577f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Administratorer kan konfigurere en connector til at importere og arkivere data fra Veritas Zoom-møder til Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
+ms.openlocfilehash: f8239b1c624712b1eafe0bdce7250143c80610a5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63601548"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934901"
 ---
-# <a name="set-up-a-connector-to-archive-zoom-meetings-data"></a>Konfigurere en forbindelse til at arkivere zoommødedata
+# <a name="set-up-a-connector-to-archive-zoom-meetings-data"></a>Konfigurer en connector til arkivering af Zoom-mødedata
 
-Brug en Veritas-forbindelse i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra Zoom-møder til brugerpostkasser Microsoft 365 organisationen. Veritas har en [Zoom Meetings-forbindelse](https://globanet.com/zoom/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og importere disse elementer til Microsoft 365. Forbindelsen konverterer indholdet af møder (herunder chatsamtaler, optagede filer og metadata) fra kontoen Zoom-møder til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
+Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Zoom-møder til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en [Zoom Meetings-connector](https://globanet.com/zoom/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet af møderne (herunder chats, optagede filer og metadata) fra zoommødekontoen til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når zoom-mødedata er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner som f.eks Retslig tilbageholdelse, eDiscovery, opbevaringspolitikker og opbevaringsetiketter samt overholdelse af regler og standarder og kommunikation. Hvis du bruger en Zoom-mødeforbindelse til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når dataene for Zoom-møder er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. proceshold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Zoom Meetings-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-zoom-meetings-data"></a>Oversigt over arkivering af zoommødedata
 
-Følgende oversigt beskriver processen med at bruge en forbindelse til at arkivere zoom mødedata i Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere Zoom-mødedata i Microsoft 365.
 
-![Zoome arbejdsprocessen for arkivering af møder.](../media/ZoomMeetingsConnectorWorkflow.png)
+![Zoom arbejdsprocessen for arkivering af møder.](../media/ZoomMeetingsConnectorWorkflow.png)
 
-1. Din organisation arbejder med Zoom-møder for at konfigurere et zoommødewebsted.
+1. Din organisation arbejder sammen med Zoom-møder om at konfigurere et Zoom-mødewebsted.
 
-2. Én gang i døgnet kopieres mødeelementer fra Zoom-møder til webstedet Veritas Merge1. Forbindelsen konverterer også indholdet af møder til et mailformat.
+2. En gang hver 24 timer kopieres mødeelementer fra Zoom-møder til Veritas Merge1-webstedet. Connectoren konverterer også indholdet af møderne til et mailmeddelelsesformat.
 
-3. Forbindelsen Zoommøder, som du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til Veritas Merge1 hver dag og overfører mødemeddelelserne til en sikker placering Azure Storage Microsoft-skyen.
+3. Zoom Meetings-connectoren, som du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1 hver dag og overfører mødemeddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Forbindelsen importerer de konverterede mødeelementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben  Mail og automatisk brugertilknytning, som beskrevet i trin 3. En ny undermappe i mappen Indbakke med navnet **Zoommøder** oprettes i brugerpostkasser, og mødeelementerne importeres til den pågældende mappe. Forbindelsen gør dette ved hjælp af værdien *af egenskaben Mail* . Hvert mødeelement indeholder denne egenskab, som er udfyldt med mailadressen for hver deltager i mødet.
+4. Connectoren importerer de konverterede mødeelementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* og automatisk brugertilknytning, som beskrevet i trin 3. Der oprettes en ny undermappe i mappen Indbakke med navnet **Zoom-møder** i brugerpostkasser, og mødeelementerne importeres til den pågældende mappe. Connectoren gør dette ved hjælp af værdien af egenskaben *Mail* . Hvert mødeelement indeholder denne egenskab, som udfyldes med mailadressen på hver deltager i mødet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Opret en Veritas Merge1-konto til Microsoft-forbindelser. Kontakt [Veritas kundesupport for at oprette denne konto](https://globanet.com/ms-connectors-contact). Du skal logge på denne konto, når du opretter forbindelsen i trin 1.
+- Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette denne konto, skal du kontakte [Veritas-kundesupport](https://globanet.com/ms-connectors-contact). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Hent brugernavnet og adgangskoden til din organisations Zoom Business- eller Zoom Enterprise-konto. Du skal logge på denne konto i trin 2, når du konfigurerer forbindelsen Zoom møder.
+- Hent brugernavnet og adgangskoden til din organisations Zoom Business- eller Zoom Enterprise-konto. Du skal logge på denne konto i Trin 2, når du konfigurerer connectoren Zoom møder.
 
 - Opret følgende programmer på [Zoom Marketplace](https://marketplace.zoom.us):
 
@@ -51,54 +51,54 @@ Følgende oversigt beskriver processen med at bruge en forbindelse til at arkive
 
   - JWT-program
 
-  Når du har oprettet disse programmer, genererer zoomplatformen et sæt unikke legitimationsoplysninger, der bruges til at generere tokens. Disse tokens bruges til at godkende forbindelsen, når den opretter forbindelse til din Zoom-konto, og kopierer elementer til Flet1-webstedet. Du skal bruge disse tokens, når du konfigurerer zoomforbindelse i trin 2.
+  Når du har oprettet disse programmer, genererer Zoom-platformen et sæt entydige legitimationsoplysninger, der bruges til at generere tokens. Disse tokens bruges til at godkende connectoren, når den opretter forbindelse til din Zoom-konto og kopierer elementer til Flet1-webstedet. Du skal bruge disse tokens, når du konfigurerer Zoom-connectoren i trin 2.
 
-  For at få en trinvis vejledning til, hvordan du opretter OAuth- og JWT-programmerne, skal du se Brugervejledning til forbindelser [fra tredjeparter](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Zoom%20Meetings%20User%20Guide%20.pdf).
+  Du kan finde en trinvis vejledning til, hvordan du opretter OAuth- og JWT-programmer, i [Brugervejledningen Til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Zoom%20Meetings%20User%20Guide%20.pdf).
 
-- Den bruger, der opretter forbindelsen Zoom-møder i trin 1 (og fuldfører den i trin 3), skal have tildelt rollen som dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter connectoren Zoom møder i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataforbindelse er i offentlig prøveversion i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="step-1-set-up-the-zoom-meetings-connector"></a>Trin 1: Konfigurer forbindelsen zoommøder
+## <a name="step-1-set-up-the-zoom-meetings-connector"></a>Trin 1: Konfigurer connectoren Zoom møder
 
-Det første trin er at få adgang **til dataforbindelserne i** Microsoft 365 Overholdelsescenter og oprette en Zoom-mødeforbindelse.
+Det første trin er at få adgang til **dataconnectors på overholdelsesportalen** og oprette en Zoom Meetings-connector.
 
-1. Gå til og [https://compliance.microsoft.com](https://compliance.microsoft.com/) klik derefter **på DataforbindelserZoom-møder** > .
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsZoom** >  **Meetings**.
 
-2. Klik på **Tilføj forbindelse på** produktbeskrivelsen for **Zoommøder**.
+2. Klik på **Tilføj connector** på produktbeskrivelsessiden **Zoom møder**.
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. Angiv et entydigt navn, der identificerer forbindelsen, og klik derefter på **Næste**.
+4. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**.
 
-5. Log på din Flet1-konto for at konfigurere forbindelsen.
+5. Log på din Merge1-konto for at konfigurere connectoren.
 
-## <a name="step-2-configure-the-zoom-meetings-connector"></a>Trin 2: Konfigurer forbindelsen til Zoommøder
+## <a name="step-2-configure-the-zoom-meetings-connector"></a>Trin 2: Konfigurer connectoren Zoom møder
 
-Det andet trin er at konfigurere forbindelsen Zoom-møder på Flet1-webstedet. Du kan finde flere oplysninger om, hvordan du konfigurerer forbindelsen [Zoom-møder](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Zoom%20Meetings%20User%20Guide%20.pdf) på webstedet Veritas Merge1 i Brugervejledning til forbindelser fra tredjepart.
+Det andet trin er at konfigurere connectoren Zoom møder på Flet1-webstedet. Du kan få flere oplysninger om, hvordan du konfigurerer zoommøder-connectoren på Veritas [Merge1-webstedet, i Brugervejledning til fletning1 af tredjepartsconnectorer](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Zoom%20Meetings%20User%20Guide%20.pdf).
 
-Når du har **klikket & færdig**, **vises** siden Brugertilknytning i Microsoft 365 Overholdelsescenter forbindelsen.
+Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i connectorguiden på overholdelsesportalen.
 
-## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør konfigurationen af forbindelsen
+## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-1. På siden **Tilknyt eksterne brugere Microsoft 365 brugere** skal du aktivere automatisk tilknytning af brugere.
+1. Aktivér automatisk brugertilknytning på siden **Knyt eksterne brugere til Microsoft 365 brugere**.
 
-   Zoom-mødeelementer indeholder en egenskab *kaldet Mail* , der indeholder mailadresser for brugere i organisationen. Hvis forbindelsen kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse
+   Zoommødeelementer omfatter en egenskab kaldet *Mail* , der indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse
 
-2. Klik **på** Næste, gennemgå dine indstillinger, og gå til siden **Dataforbindelser** for at se status for importprocessen for den nye forbindelse.
+2. Klik på **Næste**, gennemse dine indstillinger, og gå til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 
-## <a name="step-4-monitor-the-zoom-meetings-connector"></a>Trin 4: Hold øje med forbindelsen Zoom møder
+## <a name="step-4-monitor-the-zoom-meetings-connector"></a>Trin 4: Overvåg connectoren Zoom møder
 
-Når du har oprettet forbindelsen Zoom-møder, kan du få vist forbindelsens status i Microsoft 365 Overholdelsescenter.
+Når du har oprettet connectoren Zoom møder, kan du få vist connectorstatussen på overholdelsesportalen.
 
-1. Gå til og [https://compliance.microsoft.com](https://compliance.microsoft.com) klik **på Dataforbindelser** i venstre navigationslinje.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com) og klik på **Dataconnectors** i venstre navigationsrude.
 
-2. Klik på **fanen Forbindelser,** og vælg derefter forbindelsen **Zoom møder for** at få vist pop op-siden. Denne side indeholder egenskaber og oplysninger om forbindelsen.
+2. Klik på fanen **Forbindelser,** og vælg derefter connectoren **Zoom møder** for at få vist pop op-siden. Denne side indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde skal** du klikke **på linket Hent log** for at åbne (eller gemme) statusloggen for forbindelsen. Denne logfil indeholder oplysninger om de data, der er blevet importeret til Microsoft-skyen.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.
 
-- Hvis zoom-forbindelsen til møder skal fungere, skal du aktivere optagelser, når du konfigurerer Zoom-møder.
+- Hvis connectoren Zoom-møder skal fungere, skal du aktivere optagelser, når du konfigurerer Zoom møder.

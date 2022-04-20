@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 slutpunkter
+title: Microsoft 365-slutpunkter
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -18,39 +18,39 @@ ms.custom:
 - Ent_TLGs
 - seo-marvel-apr2020
 ms.assetid: ''
-description: For destinations-IP-adresser og url-adresser til Microsoft 365, skal du bruge denne liste over artikler til internetslutpunkter for de forskellige Microsoft 365 skyer.
-ms.openlocfilehash: 29b9d720209eee66103ceca9384fc8d18c1621ae
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: I forbindelse med DESTINATIONS-IP-adresser og URL-adresser til Microsoft 365 trafik skal du bruge denne liste over artikler til internetslutpunkterne for de forskellige Microsoft 365 cloudmiljøer.
+ms.openlocfilehash: e06ca4abc1d8fe918fab4f786712f704e941714a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681540"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64931555"
 ---
-# <a name="microsoft-365-endpoints"></a>Microsoft 365 slutpunkter
+# <a name="microsoft-365-endpoints"></a>Microsoft 365-slutpunkter
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Slutpunkter er sættet af DESTINATIONS-IP-adresser, DNS-domænenavne og URL-adresser til Microsoft 365 til trafik på internettet. 
+Slutpunkter er sættet af DESTINATIONS-IP-adresser, DNS-domænenavne og URL-adresser til Microsoft 365 trafik på internettet. 
 
-For at optimere ydeevnen Microsoft 365 skybaserede tjenester skal disse slutpunkter have særlig håndtering af dine klientbrowsere og enhederne i dit grænsenetværk. Disse enheder omfatter firewalls, SSL Break og Inspect- og pakkeinspektionsenheder og systemer til forebyggelse af datatab.
+Hvis du vil optimere ydeevnen for Microsoft 365 cloudbaserede tjenester, skal disse slutpunkter håndteres specielt af dine klientbrowsere og enhederne i edge-netværket. Disse enheder omfatter firewalls, SSL Break and Inspect- og packet inspection-enheder og systemer til forebyggelse af datatab.
 
-Se [Administrere Microsoft 365 slutpunkter for at](managing-office-365-endpoints.md) få flere oplysninger.
+Se [Administration af Microsoft 365 slutpunkter](managing-office-365-endpoints.md) for at få flere oplysninger.
 
-Der er i øjeblikket fem Microsoft 365 skyer. Denne tabel fører dig til listen over slutpunkter for hver enkelt.
+Der er i øjeblikket fem forskellige Microsoft 365 cloudmiljøer. Denne tabel fører dig til listen over slutpunkter for hver enkelt.
 
 | Sky | Beskrivelse |
 |:-------|:-----|
-| [Verdensomspændende slutpunkter](urls-and-ip-address-ranges.md) | Slutpunkterne for verdensomspændende abonnementer Microsoft 365, som omfatter USA Government Community Cloud (GCC). |
-| [Amerikanske Government DoD-slutpunkter](microsoft-365-u-s-government-dod-endpoints.md) | Slutpunkterne for det amerikanske forsvarsministerium (DoD) abonnementer. |
-| [Amerikanske Government GCC High-slutpunkter](microsoft-365-u-s-government-gcc-high-endpoints.md) | Slutpunkterne for abonnementer af Government Community Cloud High (GCC High). |
-| [Microsoft 365 drevet af 21Vianet-slutpunkter](urls-and-ip-address-ranges-21vianet.md) | Slutpunkterne for Microsoft 365 af 21Vianet, som er designet til at opfylde behovene for Microsoft 365 i Kina. |
+| [Verdensomspændende slutpunkter](urls-and-ip-address-ranges.md) | Slutpunkterne for abonnementer på verdensomspændende Microsoft 365, herunder USA Government Community Cloud (GCC). |
+| [Den amerikanske regering DoD-slutpunkter](microsoft-365-u-s-government-dod-endpoints.md) | Slutpunkterne for abonnementer på USA DoD (Department of Defense). |
+| [Den amerikanske regering GCC High slutpunkter](microsoft-365-u-s-government-gcc-high-endpoints.md) | Slutpunkterne for abonnementer på USA Government Community Cloud High (GCC High). |
+| [Microsoft 365 drevet af 21Vianet-slutpunkter](urls-and-ip-address-ranges-21vianet.md) | Slutpunkterne for Microsoft 365 drevet af 21Vianet, som er designet til at imødekomme behovene for Microsoft 365 i Kina. |
 |||
 
-Hvis du vil automatisere med at hente den seneste liste over slutpunkter til din Microsoft 365-sky, skal du [se Office 365 IP-adresse og URL-webtjeneste](microsoft-365-ip-web-service.md).
+Hvis du vil automatisere hentningen af den nyeste liste over slutpunkter for dit Microsoft 365 cloudmiljø, skal du se [webtjenesten Office 365 IP-adresse og URL-adresse](microsoft-365-ip-web-service.md).
 
-Du kan finde flere slutpunkter i følgende artikler:
+Du kan finde flere slutpunkter i disse artikler:
 
 - [Yderligere slutpunkter, der ikke er inkluderet i webtjenesten](additional-office365-ip-addresses-and-urls.md)
 - [Netværksanmodninger i Office 2016 til Mac](network-requests-in-office-2016-for-mac.md)
 
-Hvis du er leverandør af netværksudstyr, kan du deltage [i Office 365 Netværkspartnerprogram](microsoft-365-networking-partner-program.md). Tilmeld dig programmet for at opbygge Microsoft 365 til dine produkter og løsninger. 
+Hvis du er leverandør af netværksudstyr, skal du tilmelde dig [Office 365 Netværkspartnerprogram](microsoft-365-networking-partner-program.md). Tilmeld dig programmet for at bygge Microsoft 365 principper for netværksforbindelser i dine produkter og løsninger. 

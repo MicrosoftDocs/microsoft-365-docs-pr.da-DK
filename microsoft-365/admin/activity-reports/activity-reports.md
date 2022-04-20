@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365 tjenester, og analysér i hvert diagram for at få mere indsigt.
-ms.openlocfilehash: 224ed6ffb0fa44280f1b83d3a0f440d1a8571557
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: 63684384f8f9d496767ef66ee6628653945ad8c9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738314"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935933"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 rapporter i Administration
 
@@ -73,7 +73,7 @@ Personer, der har følgende tilladelser:
 
 - Læser af forbrugsoversigtsrapporter (uden brugeroplysninger)
 
-- Læser af rapporter
+- Rapportlæser
 
 - Teams administrator
 
@@ -152,7 +152,7 @@ Globale administratorer kan gendanne denne ændring for deres lejer og vise iden
   
 3. Fjern markeringen i sætningen **Vis skjulte bruger-, gruppe- og webstedsnavne i alle rapporter**, og gem derefter dine ændringer.  
   
-Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for de Microsoft 365 anvendelsesrapporter i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) samt [forbrugsrapporterne i Microsoft Teams Administration](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i overvågningsloggen for Microsoft 365 Overholdelsescenter.   
+Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for de Microsoft 365 anvendelsesrapporter i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) samt [forbrugsrapporterne i Microsoft Teams Administration](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i overvågningsloggen til Microsoft Purview-overholdelsesportalen.   
 
   
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Hvad sker der med forbrugsdata, når en brugerkonto lukkes?

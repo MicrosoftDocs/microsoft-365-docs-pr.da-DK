@@ -1,5 +1,5 @@
 ---
-title: Understøttede filtyper i Advanced eDiscovery
+title: Understøttede filtyper i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,30 +14,30 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: En liste over understøttede filtyper i Microsoft 365 Advanced eDiscovery, herunder billedfiltyper, der understøttes af OCR-funktionen Advanced eDiscovery.
+description: En liste over understøttede filtyper i Microsoft 365 eDiscovery (Premium), herunder billedfiltyper, der understøttes af OCR-funktionaliteten i eDiscovery (Premium).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 96d469d861be3392108b53811478f94d0e59f40b
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: ce0d44a2d3e887c6278af1ed9a35039c74d6a0a9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63589537"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934571"
 ---
-# <a name="supported-file-types-in-advanced-ediscovery"></a>Understøttede filtyper i Advanced eDiscovery
+# <a name="supported-file-types-in-ediscovery-premium"></a>Understøttede filtyper i eDiscovery (Premium)
 
-Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer. Supportfilerne er beskrevet i følgende tabeller i denne artikel. Denne liste er ikke afsluttet, og vi tilføjer nye filtyper, efterhånden som vi fortsætter vores valideringstest. Disse tabeller angiver, om en filtype understøttes til tekstudtrækning (og Optical Character Recognition eller OCR-tekstudtrækning til billedfiler), der kan vises i den oprindelige fremviser, og understøtter også Anmærkningsvisning i Advanced eDiscovery.
+Microsoft Purview eDiscovery (Premium) understøtter mange filtyper på mange forskellige niveauer. Supportfilerne er beskrevet i følgende tabeller i denne artikel. Denne liste er ikke færdig, og vi tilføjer nye filtyper, efterhånden som vi fortsætter vores valideringstest. Disse tabeller angiver, om en filtype understøttes til tekstudtrækning (og optisk tegngenkendelse eller OCR-tekstudtrækning for billedfiler), der kan ses i den oprindelige fremviser og også understøttes i Anmærk fremviser i eDiscovery (Premium).
 
-## <a name="archive--container"></a>Arkiv / Objektbeholder
+## <a name="archive--container"></a>Arkiv/objektbeholder
 
 <br>
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Beholderudtrækning|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Udtrækning af objektbeholder|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|
-|application/x-7z-compressed|Ja|Ja|Ja|.7z|
-|application/x-dekomprimeret|Ja|Ja|Ja|.rar|
-|application/x-tar|Ja|Ja|Ja|.tar|
+|program/x-7z-komprimeret|Ja|Ja|Ja|.7z|
+|program/x-rar-komprimeret|Ja|Ja|Ja|.rar|
+|program/x-tjære|Ja|Ja|Ja|.tar|
 |program/zip|Ja|Ja|Ja|.zip|
 |
 
@@ -47,9 +47,9 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-|application/mp4|Ja|Ja|Nej|Ja|Nej|.f4v; .m4a; .m4v; .mp4. .mp4v; .mpeg. .mpeg4|
+|program/mp4|Ja|Ja|Nej|Ja|Nej|.f4v; .m4a; .m4v; .mp4; .mp4v; .mpeg; .mpeg4|
 |lyd/mpeg|Ja|Ja|Nej|Ja|Nej|.mpeg|
 |video/3gpp|Ja|Ja|Nej|Ja|Nej|.3gp|
 |video/3gpp2|Ja|Ja|Nej|Ja|Nej|.3g2; .3gp2|
@@ -63,33 +63,33 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/x-msaccess|Ja|Ja|Ja|Nej|Nej|.mdb|
 |
 
-## <a name="email"></a>Mail
+## <a name="email"></a>E-mail
 
 <br>
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-outlook|Ja|Ja|Ja|Ja|Ja|.msg|
-|meddelelse/rfc822|Ja|Ja|Ja|Ja|Ja|.eml|
-|text/vcard-contact|Ja|Ja|Ja|Ja|Ja|.vcf|
+|message/rfc822|Ja|Ja|Ja|Ja|Ja|.eml|
+|tekst/vcard-kontakt|Ja|Ja|Ja|Ja|Ja|.vcf|
 |
 
-## <a name="email-container"></a>Mailbeholder
+## <a name="email-container"></a>Mailobjektbeholder
 
 <br>
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Beholderudtrækning|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Udtrækning af objektbeholder|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|
-|application/mbox|Ja|Ja|Ja|.mbox|
+|program/mbox|Ja|Ja|Ja|.mbox|
 |application/vnd.ms-outlook-pst|Ja|Ja|Ja|.pst|
 |
 
@@ -99,10 +99,10 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/xhtml+xml|Ja|Ja|Ja|Ja|Ja|.xhtml|
-|application/xml|Ja|Ja|Ja|Ja|Ja|.xml|
+|program/xml|Ja|Ja|Ja|Ja|Ja|.xml|
 |tekst/html|Ja|Ja|Ja|Ja|Ja|.htm; .html; .shtml|
 |
 
@@ -112,17 +112,17 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|OCR-tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|OCR-tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |billede/bmp|Ja|Ja|Ja|Ja|Ja|.bmp|
-|image/emf|Ja|Ja|Ja|Ja|Ja|.emf|
-|image/gif|Ja|Ja|Ja|Ja|Ja|.gif|
-|image/jpeg|Ja|Ja|Ja|Ja|Ja|.jpeg; .jpg|
-|image/png|Ja|Ja|Ja|Ja|Ja|.png|
+|billede/emf|Ja|Ja|Ja|Ja|Ja|.emf|
+|billede/gif|Ja|Ja|Ja|Ja|Ja|.gif|
+|billede/jpeg|Ja|Ja|Ja|Ja|Ja|.jpeg; .jpg|
+|billede/png|Ja|Ja|Ja|Ja|Ja|.png|
 |image/svg+xml|Ja|Ja|Ja|Ja|Nej|.svg|
-|image/tiff|Ja|Ja|Ja|Ja|Ja|.tif|
-|image/vnd.dwg|Ja|Ja|Ja|Ja|Ja|.dwg; .dxf|
-|image/wmf|Ja|Ja|Ja|Ja|Ja|.wmf|
+|billede/tiff|Ja|Ja|Ja|Ja|Ja|.tif|
+|billede/vnd.dwg|Ja|Ja|Ja|Ja|Ja|.dwg; .dxf|
+|billede/wmf|Ja|Ja|Ja|Ja|Ja|.wmf|
 |
 
 ## <a name="microsoft-excel"></a>Microsoft Excel
@@ -131,14 +131,14 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-excel|Ja|Ja|Ja|Ja|Ja|.dat; .xls|
 |application/vnd.ms-excel.sheet.binary.macroenabled.12|Ja|Ja|Ja|Ja|Nej|.xlsb|
 |application/vnd.ms-excel.sheet.macroenabled.12|Ja|Ja|Ja|Ja|Ja|.xlsm|
 |application/vnd.ms-excel.template.macroenabled.12|Ja|Ja|Ja|Nej|Nej|.xltm|
-|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|Ja|Ja|Ja|Ja|Ja|.xlsx|
-|application/vnd.openxmlformats-officedocument.spreadsheetml.template|Ja|Ja|Ja|Ja|Ja|.xltx|
+|application/vnd.openxmlformats-officedocument.regnearkml.sheet|Ja|Ja|Ja|Ja|Ja|.xlsx|
+|application/vnd.openxmlformats-officedocument.regnearkml.template|Ja|Ja|Ja|Ja|Ja|.xltx|
 |
 
 ## <a name="microsoft-onenote"></a>Microsoft OneNote
@@ -147,7 +147,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |program/onenote|Ja|Ja|Ja|Nej|Nej|.one|
 |
@@ -158,7 +158,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-powerpoint|Ja|Ja|Ja|Ja|Ja|.pot; .pps; .ppt|
 |application/vnd.openxmlformats-officedocument.presentationml.presentation|Ja|Ja|Ja|Ja|Ja|.pptx|
@@ -172,7 +172,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-project|Ja|Ja|Ja|Nej|Ja|.mpp|
 |
@@ -183,7 +183,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/x-mspublisher|Ja|Ja|Ja|Ja|Ja|.pub|
 |
@@ -194,7 +194,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-visio.drawing|Ja|Ja|Ja|Ja|Nej||
 |application/vnd.visio|Ja|Ja|Ja|Ja|Ja|.vsd|
@@ -206,7 +206,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/msword|Ja|Ja|Ja|Ja|Ja|.dat; .doc|
 |program/rtf|Ja|Ja|Ja|Ja|Ja|.doc; .rtf|
@@ -222,7 +222,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.ms-works-ss|Ja|Ja|Nej|Nej|Nej|.wps|
 |application/vnd.ms-works-wp|Ja|Ja|Nej|Nej|Nej|.wps|
@@ -234,7 +234,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.oasis.opendocument.text|Ja|Ja|Ja|Ja|Ja|.odt|
 |
@@ -245,9 +245,9 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-|application/json|Ja|Ja|Ja|Ja|Ja|i/t|
+|program/json|Ja|Ja|Ja|Ja|Ja|Nielsen|
 |application/octet-stream|Ja|Nej|Nej|Nej|Nej|.fluid|
 |application/vnd.ms-graph|Ja|Ja|Nej|Nej|Nej||
 |application/winhlp|Ja|Ja|Nej|Nej|Nej|.hlp|
@@ -260,7 +260,7 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |tekst/csv|Ja|Ja|Ja|Ja|Ja|.csv|
 |tekst/almindelig|Ja|Ja|Ja|Ja|Ja|.con; .css; .csv; .dat; .pl; .txt|
@@ -272,31 +272,31 @@ Advanced eDiscovery understøtter mange filtyper på mange forskellige niveauer.
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-|application/pdf|Ja|Ja|Ja|Ja|Ja|.pdf|
+|program/pdf|Ja|Ja|Ja|Ja|Ja|.pdf|
 |
 
-## <a name="word-perfect"></a>Perfekt ord
+## <a name="word-perfect"></a>Word Perfect
 
 <br>
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-|application/vnd.wordperfect; version=5,0|Ja|Ja|Ja|Nej|Nej|.wpd|
-|application/vnd.wordperfect; version=5,1|Ja|Ja|Ja|Nej|Nej|.wpd|
+|application/vnd.wordperfect; version=5.0|Ja|Ja|Ja|Nej|Nej|.wpd|
+|application/vnd.wordperfect; version=5.1|Ja|Ja|Ja|Nej|Nej|.wpd|
 |application/vnd.wordperfect; version=6.x|Ja|Ja|Ja|Nej|Nej|.wpd|
 |
 
-## <a name="word-pro"></a>Word Pro
+## <a name="word-pro"></a>Word-Pro
 
 <br>
 
 ****
 
-|Mime-type|Filidentifikation|Metadataudtrækning|Tekstudtrækning|Indbygget fremviser|Anmærke fremviser|Mulige udvidelser|
+|Mime-type|Filidentifikation|Udtrækning af metadata|Tekstudtrækning|Oprindelig fremviser|Anmærk seer|Mulige udvidelser|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |application/vnd.lotus-wordpro|Ja|Ja|Nej|Nej|Nej|.lwp|
 |

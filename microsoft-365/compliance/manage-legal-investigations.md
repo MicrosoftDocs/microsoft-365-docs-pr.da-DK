@@ -16,62 +16,62 @@ search.appverid:
 ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
-description: Brug eDiscovery-sager i Microsoft 365 Overholdelsescenter til at administrere din organisations juridiske undersøgelse.
-ms.openlocfilehash: fc4e89645ef1912c33ab89ec190c87dc9c8a8965
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Brug eDiscovery-sager på Microsoft Purview-overholdelsesportalen til at administrere organisationens juridiske undersøgelse.
+ms.openlocfilehash: d218c7d624da837e685929d95e515687f54897ef
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588935"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64931986"
 ---
 # <a name="manage-legal-investigations-in-microsoft-365"></a>Administrer juridiske undersøgelser i Microsoft 365
 
-Organisationer har mange grunde til at besvare en juridisk sag med visse ledere eller andre medarbejdere i organisationen. Dette kan omfatte hurtigt at finde og bevare til yderligere undersøgelse-specifikke oplysninger i mails, dokumenter, chatsamtaler og andre indholdsplaceringer, der bruges af personer i deres daglige arbejdsopgaver. Du kan udføre disse og mange andre lignende aktiviteter ved hjælp af eDiscovery-sagsværktøjerne i Security and Compliance Center.
+Organisationer har mange grunde til at reagere på en sag, der involverer bestemte direktører eller andre medarbejdere i organisationen. Dette kan omfatte hurtigt at finde og gemme yderligere undersøgelsesspecifikke oplysninger i mail, dokumenter, chatsamtaler og andre indholdsplaceringer, der bruges af personer i deres daglige arbejdsopgaver. Du kan udføre disse og mange andre lignende aktiviteter ved hjælp af eDiscovery-sagsværktøjerne i Security and Compliance Center.
   
-**Vil du vide, hvordan Microsoft administrerer sine eDiscovery-undersøgelser?** Here's a [technical white paper you](https://go.microsoft.com/fwlink/?linkid=852161) can download that explains how we use the same search and investigation tools to manage our internal eDiscovery workflow.
+**Vil du gerne vide, hvordan Microsoft administrerer sine eDiscovery-undersøgelser?** Her er et [teknisk whitepaper](https://go.microsoft.com/fwlink/?linkid=852161) , som du kan downloade, og som forklarer, hvordan vi bruger de samme søge- og undersøgelsesværktøjer til at administrere vores interne eDiscovery-arbejdsproces.
 
 ## <a name="manage-legal-investigations-with-ediscovery-cases"></a>Administrer juridiske undersøgelser med eDiscovery-sager
 
-Med eDiscovery-sager kan du styre, hvem der kan oprette, få adgang til og administrere eDiscovery-sager i din organisation. Use cases to add members and control what types of actions they can perform, placer a hold on content locations relevant to a legal case, and use the Content Search tool to search the locations on hold for content that might be responsive to your case. Derefter kan du også eksportere og hente disse resultater, så eksterne korrekturlæsere kan undersøge dem yderligere.
+Med eDiscovery-sager kan du styre, hvem der kan oprette, få adgang til og administrere eDiscovery-sager i din organisation. Brug sager til at tilføje medlemmer og styre, hvilke typer handlinger de kan udføre, placere en venteposition på indholdsplaceringer, der er relevante for en juridisk sag, og bruge værktøjet Indholdssøgning til at søge efter indhold, der kan reagere på din sag. Derefter kan du også eksportere og downloade disse resultater til yderligere undersøgelse af eksterne korrekturlæsere.
   
-- [Administrer din eDiscovery-arbejdsproces](./get-started-core-ediscovery.md) ved at oprette og bruge eDiscovery-sager til enhver juridisk undersøgelse, som din organisation skal foretage.
+- [Administrer din eDiscovery-arbejdsproces](./get-started-core-ediscovery.md) ved at oprette og bruge eDiscovery-sager til alle juridiske undersøgelser, din organisation skal foretage.
 
-- [Tildel eDiscovery-tilladelser for](assign-ediscovery-permissions.md) at styre, hvem der kan oprette og administrere eDiscovery-sager i din organisation.
+- [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md) til at styre, hvem der kan oprette og administrere eDiscovery-sager i din organisation.
 
-- [Konfigurer overholdelsesgrænser til](set-up-compliance-boundaries.md) at styre de placeringer af indhold, som eDiscovery-ledere kan søge efter.
+- [Konfigurer overholdelsesgrænser](set-up-compliance-boundaries.md) for at styre de brugerindholdsplaceringer, som eDiscovery-ledere kan søge efter.
 
 - [Søg efter indhold](search-for-content.md) i din organisation.
 
-### <a name="use-scripts-for-advanced-scenarios"></a>Bruge scripts til avancerede scenarier
+### <a name="use-scripts-for-advanced-scenarios"></a>Brug scripts til avancerede scenarier
 
-Ligesom i det forrige afsnit, der opliste scripts til scenarier med indholdssøgning, har vi også oprettet nogle Security & Compliance Center PowerShell-scripts, der kan hjælpe dig med at administrere eDiscovery-sager.
+Ligesom i det forrige afsnit, der viste scripts til indholdssøgningsscenarier, har vi også oprettet nogle PowerShell-scripts til Security & Compliance Center for at hjælpe dig med at administrere eDiscovery-sager.
   
-- [Opret en rapport om eDiscovery-venteposition,](create-a-report-on-holds-in-ediscovery-cases.md) der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager i din organisation.
+- [Opret en eDiscovery-ventepositionsrapport](create-a-report-on-holds-in-ediscovery-cases.md) , der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager i din organisation.
 
-- [Tilføj postkasser og OneDrive for en](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) liste over brugere til en eDiscovery-venteposition.
+- [Føj postkasser og OneDrive placeringer](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) for en liste over brugere til eDiscovery-venteposition.
   
-## <a name="manage-legal-investigations-with-the-advanced-ediscovery-solution-in-microsoft-365"></a>Administrer retsundersøgelser med den Advanced eDiscovery løsning på Microsoft 365
+## <a name="manage-legal-investigations-with-the-ediscovery-premium-solution-in-microsoft-365"></a>Administrer juridiske undersøgelser med eDiscovery-løsningen (Premium) i Microsoft 365
 
-Løsningen Advanced eDiscovery i Microsoft 365 bygger på de eksisterende eDiscovery- og analyseegenskaber i Office 365. Denne nye løsning, kaldet *Advanced eDiscovery*, giver en ende-til-en-arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der er dynamiske på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelser om retsligt hold, så de kan kommunikere med personer, der er involveret i en sag.
+Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365 bygger på de eksisterende eDiscovery- og analysefunktioner i Office 365. Denne nye løsning, der kaldes *eDiscovery (Premium)*, indeholder en komplette arbejdsproces, hvor du kan bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag.
 
-Advanced eDiscovery kræver et E5-abonnement til din Microsoft 365 eller Office 365 organisation. Du kan finde flere oplysninger om licenser [under Konfigurer Advanced eDiscovery](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
+eDiscovery (Premium) kræver et E5-abonnement til din Microsoft 365 eller Office 365 organisation. Du kan finde flere oplysninger om licenser under [Konfigurer eDiscovery (Premium)](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
 
-Her er en hurtig oversigt over den indbyggede arbejdsproces i Advanced eDiscovery. Du kan finde flere oplysninger [i Advanced eDiscovery arbejdsprocessen](create-and-manage-advanced-ediscoveryv2-case.md#manage-the-workflow).
+Her er et hurtigt overblik over den indbyggede arbejdsproces i eDiscovery (Premium). Du kan finde flere oplysninger under [Administrer arbejdsprocessen for eDiscovery (Premium).](create-and-manage-advanced-ediscoveryv2-case.md#manage-the-workflow)
 
-- [Opret en sag for](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case) at komme i gang.
+- [Opret en sag](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case) for at komme i gang.
 
-- [Administrer familiemedlemmer ved](managing-custodians.md) at føje dem til en sag og sætte indhold i retslig venteposition i deres postkasse, OneDrive-konto og Microsoft Teams, som de er medlem af.
+- [Administrer vogtere](managing-custodians.md) ved at føje dem til en sag og placere indhold i deres postkasse, OneDrive konto og Microsoft Teams, de er medlemmer af.
 
-- [Administrer kommunikation](managing-custodian-communications.md) med overensstemmelsesmedarbejdere ved at automatisere meddelelsesprocessen for retslig venteposition.
+- [Administrer kommunikation](managing-custodian-communications.md) med tilsynsførende ved at automatisere meddelelsesprocessen for juridisk venteposition.
 
-- [Indeksering af data, der](processing-data-for-case.md) kan håndteres, og ret indekseringsfejl, så du effektivt kan indsamle data til dine undersøgelser.
+- [Indeksér data om forældremyndigheden](processing-data-for-case.md) , og ret indekseringsfejl, så du effektivt kan indsamle data til dine undersøgelser.
 
-- [Indsaml data](collecting-data-for-ediscovery.md) for en sag, [og føj den til et revisionssæt](collecting-data-for-ediscovery.md#add-search-results-to-a-review-set) til yderligere undersøgelse.
+- [Indsaml data](collecting-data-for-ediscovery.md) for en sag, og [føj dem til et gennemsynssæt](collecting-data-for-ediscovery.md#add-search-results-to-a-review-set) med henblik på yderligere undersøgelse.
 
-- [Få](view-documents-in-review-set.md) vist dokumenter, [forespørgselsdata](review-set-search.md) og [mærke](tagging-documents.md) elementer i et korrektursæt.
+- [Få vist](view-documents-in-review-set.md) dokumenter, [forespørg om](review-set-search.md) data, og [mærk](tagging-documents.md) elementer i et korrektursæt.
 
 - [Analysér sagsdata](analyzing-data-in-review-set.md) med avancerede analyseværktøjer.
 
-- [Eksportér sagsdata](exporting-data-ediscover20.md) til gennemgang af en ekstern advokat.
+- [Eksportér sagsdata](exporting-data-ediscover20.md) til gennemsyn af eksterne rådgivere.
 
-- [Administrer langsigtede job i](managing-jobs-ediscovery20.md) Advanced eDiscovery.
+- [Administrer langvarige job](managing-jobs-ediscovery20.md) i eDiscovery (Premium).

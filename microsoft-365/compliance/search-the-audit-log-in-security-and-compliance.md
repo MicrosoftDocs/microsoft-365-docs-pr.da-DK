@@ -1,5 +1,5 @@
 ---
-title: Søg i overvågningsloggen i Microsoft 365 Overholdelsescenter
+title: Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,20 +17,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Brug Microsoft 365 Overholdelsescenter til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
+description: Brug Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 1a10bf738562f8fd9a263252d4a56eddf8acee9d
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: f35bfbbe299495e912d018bd00615964f883031e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841949"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936263"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Søg i overvågningsloggen i Overholdelsescenter
 
-Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog i Microsoft 365 Overholdelsescenter til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
+Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Microsoft 365 tjenester, der understøtter overvågning
 
@@ -92,7 +92,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 - Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i Exchange Administration. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Hvis du vil give en bruger mulighed for at søge i overvågningsloggen med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
 
   > [!IMPORTANT]
-  > Hvis du tildeler en bruger rollen View-Only overvågningslogfiler eller overvågningslogfiler på siden **Tilladelser** i Microsoft 365 Overholdelsescenter, kan vedkommende ikke søge i overvågningsloggen. Du skal tildele tilladelserne i Exchange Online. Det skyldes, at den underliggende cmdlet, der bruges til at søge i overvågningsloggen, er en Exchange Online-cmdlet.
+  > Hvis du tildeler en bruger rollen View-Only overvågningslogge eller overvågningslogge på siden **Tilladelser på overholdelsesportalen** , kan vedkommende ikke søge i overvågningsloggen. Du skal tildele tilladelserne i Exchange Online. Det skyldes, at den underliggende cmdlet, der bruges til at søge i overvågningsloggen, er en Exchange Online-cmdlet.
 
 - Når en overvåget aktivitet udføres af en bruger eller administrator, oprettes der en overvågningspost, som gemmes i overvågningsloggen for din organisation. Den tid, en overvågningspost opbevares (og kan søges i i overvågningsloggen), afhænger af dit Office 365 eller Microsoft 365 Enterprise abonnement, og specifikt den licenstype, der er tildelt til bestemte brugere.
 
@@ -104,7 +104,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
   - For brugere, der har fået tildelt andre (ikke-E5) Office 365 eller Microsoft 365 licens, bevares overvågningsposter i 90 dage. Du kan se en liste over Office 365 og Microsoft 365 abonnementer, der understøtter samlet overvågningslogføring, [i tjenestebeskrivelsen for Security and Compliance Center](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
 
     > [!NOTE]
-    > Selvom overvågning af postkasser som standard er slået til, kan du muligvis se, at overvågningshændelser for postkasser for nogle brugere ikke blev fundet i søgninger i overvågningsloggen i Microsoft 365 Overholdelsescenter eller via API'en til Office 365 administrationsaktivitet. Du kan få flere oplysninger under [Flere oplysninger om logføring af overvågning af postkasser](enable-mailbox-auditing.md#more-information).
+    > Selvom overvågning af postkasser som standard er slået til, vil du måske bemærke, at overvågningshændelser for postkasser for nogle brugere ikke findes i søgninger i overvågningsloggen på overholdelsesportalen eller via API'en for Office 365 administrationsaktiviteter. Du kan få flere oplysninger under [Flere oplysninger om logføring af overvågning af postkasser](enable-mailbox-auditing.md#more-information).
 
 - Hvis du vil slå søgning i overvågningslog for din organisation fra, kan du køre følgende kommando i den eksterne PowerShell, der er forbundet med din Exchange Online organisation:
 
@@ -120,7 +120,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
   Du kan finde flere oplysninger under [Slå søgning i overvågningslog fra](turn-audit-log-search-on-or-off.md).
 
-- Som tidligere nævnt er den underliggende cmdlet, der bruges til at søge i overvågningsloggen, en Exchange Online-cmdlet, som er **Search-UnifiedAuditLog**. Det betyder, at du kan bruge denne cmdlet til at søge i overvågningsloggen i stedet for at bruge søgeværktøjet på siden **Overvågning** i Microsoft 365 Overholdelsescenter. Du skal køre denne cmdlet i Exchange Online PowerShell. Du kan finde flere oplysninger under [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+- Som tidligere nævnt er den underliggende cmdlet, der bruges til at søge i overvågningsloggen, en Exchange Online-cmdlet, som er **Search-UnifiedAuditLog**. Det betyder, at du kan bruge denne cmdlet til at søge i overvågningsloggen i stedet for at bruge søgeværktøjet på siden **Overvågning** på overholdelsesportalen. Du skal køre denne cmdlet i Exchange Online PowerShell. Du kan finde flere oplysninger under [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
 
   Du kan finde oplysninger om eksport af de søgeresultater, der **returneres af Search-UnifiedAuditLog-cmdlet'en**, til en CSV-fil i afsnittet "Tips til eksport og visning af overvågningsloggen" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
 
@@ -147,9 +147,9 @@ Her er processen til søgning i overvågningsloggen i Microsoft 365.
 1. Gå til , <https://compliance.microsoft.com> og log på.
 
     > [!TIP]
-    > Brug en privat browsersession (ikke en almindelig session) til at få adgang til Microsoft 365 Overholdelsescenter da dette forhindrer, at de legitimationsoplysninger, du i øjeblikket er logget på med, bruges. Tryk på **CTRL+SKIFT+N** for at åbne en InPrivate-browsingsession i Microsoft Edge eller en privat browsersession i Google Chrome (kaldet et inkognitovindue).
+    > Brug en privat browsersession (ikke en almindelig session) til at få adgang til overholdelsesportalen, da det forhindrer, at de legitimationsoplysninger, du i øjeblikket er logget på med, bruges. Tryk på **CTRL+SKIFT+N** for at åbne en InPrivate-browsingsession i Microsoft Edge eller en privat browsersession i Google Chrome (kaldet et inkognitovindue).
 
-2. Klik på **Overvågning** i venstre rude i Microsoft 365 Overholdelsescenter.
+2. Klik på **Overvågning** i venstre rude på overholdelsesportalen.
 
     Siden **Overvågning** vises.
 
@@ -314,7 +314,7 @@ Klik på et af følgende links for at gå til en bestemt tabel.
         [eDiscovery-aktiviteter](#ediscovery-activities)
     :::column-end:::
     :::column:::
-        [Advanced eDiscovery aktiviteter](#advanced-ediscovery-activities)
+        [eDiscovery-aktiviteter (Premium)](#ediscovery-premium-activities)
     :::column-end:::
 :::row-end:::
 
@@ -644,7 +644,7 @@ I følgende tabel vises de aktiviteter, der kan logføres af logføring af overv
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
-|Elementer i en postkasse, der er åbnet|MailItemsAccessed|Meddelelser blev læst eller åbnet i postkassen. Overvågningsposter for denne aktivitet udløses på en af to måder: Når en mailklient (f.eks. Outlook) udfører en bindingshandling på meddelelser, eller når mailprotokoller (f.eks. Exchange ActiveSync eller IMAP) synkroniserer elementer i en mailmappe. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Det er nyttigt at analysere overvågningsposter for denne aktivitet, når du undersøger kompromitteret mailkonto. Du kan få flere oplysninger i afsnittet "Avancerede overvågningshændelser" i [Avanceret overvågning](advanced-audit.md#advanced-audit-events). |
+|Elementer i en postkasse, der er åbnet|MailItemsAccessed|Meddelelser blev læst eller åbnet i postkassen. Overvågningsposter for denne aktivitet udløses på en af to måder: Når en mailklient (f.eks. Outlook) udfører en bindingshandling på meddelelser, eller når mailprotokoller (f.eks. Exchange ActiveSync eller IMAP) synkroniserer elementer i en mailmappe. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Det er nyttigt at analysere overvågningsposter for denne aktivitet, når du undersøger kompromitteret mailkonto. Du kan få flere oplysninger i afsnittet "Overvågningshændelser (Premium) under [Overvågning (Premium)](advanced-audit.md#audit-premium-events). |
 |Tilføjede tilladelser til stedfortræderpostkasse|Add-MailboxPermission|En administrator har tildelt tilladelsen til FullAccess-postkassen til en bruger (kaldet stedfortræder) til en anden persons postkasse. Tilladelsen FullAccess gør det muligt for stedfortræderen at åbne den anden persons postkasse og læse og administrere indholdet af postkassen. Overvågningsposten for denne aktivitet genereres også, når en systemkonto i Microsoft 365-tjenesten jævnligt udfører vedligeholdelsesopgaver på vegne af din organisation. En almindelig opgave, der udføres af en systemkonto, er at opdatere tilladelserne for systempostkasser. Du kan få flere oplysninger under [Systemkonti i Exchange postkassens overvågningsposter](#system-accounts-in-exchange-mailbox-audit-records).|
 |Tilføjet eller fjernet bruger med stedfortræderadgang til kalendermappen|UpdateCalendarDelegation|En bruger blev tilføjet eller fjernet som stedfortræder for kalenderen i en anden brugers postkasse. Kalenderdelegering giver en anden i den samme organisation tilladelse til at administrere postkasseejerens kalender.|
 |Føjede tilladelser til mappen|AddFolderPermissions|Der blev tilføjet en mappetilladelse. Mappetilladelser styrer, hvilke brugere i din organisation der kan få adgang til mapper i en postkasse og de meddelelser, der er placeret i disse mapper.|
@@ -660,7 +660,7 @@ I følgende tabel vises de aktiviteter, der kan logføres af logføring af overv
 |Fjernede meddelelser fra postkassen|HardDelete|En meddelelse blev fjernet fra mappen Gendan elementer (slettet permanent fra postkassen).|
 |Fjernede tilladelser til stedfortræderpostkasse|Remove-MailboxPermission|En administrator fjernede FullAccess-tilladelsen (som blev tildelt til en stedfortræder) fra en persons postkasse. Når FullAccess-tilladelsen er fjernet, kan stedfortræderen ikke åbne den anden persons postkasse eller få adgang til noget indhold i den.|
 |Fjernede tilladelser fra mappen|RemoveFolderPermissions|En mappetilladelse blev fjernet. Mappetilladelser styrer, hvilke brugere i din organisation der kan få adgang til mapper i en postkasse og de meddelelser, der er placeret i disse mapper.|
-|Sendt meddelelse|Send|En meddelelse blev sendt, besvaret eller videresendt. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Du kan få flere oplysninger i afsnittet "Avancerede overvågningshændelser" i [Avanceret overvågning](advanced-audit.md#advanced-audit-events).|
+|Sendt meddelelse|Send|En meddelelse blev sendt, besvaret eller videresendt. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Du kan få flere oplysninger i afsnittet "Overvågningshændelser (Premium) under [Overvågning (Premium)](advanced-audit.md#audit-premium-events).|
 |Sendt meddelelse med tilladelserne Send som|Send som|Der blev sendt en meddelelse ved hjælp af tilladelsen SendAs. Det betyder, at en anden bruger har sendt meddelelsen, som om den kom fra ejeren af postkassen.|
 |Sendt meddelelse med tilladelsen Send på vegne|SendOnBehalf|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf. Det betyder, at en anden bruger sendte meddelelsen på vegne af ejeren af postkassen. Meddelelsen angiver til den modtager, som meddelelsen blev sendt på vegne af, og hvem der rent faktisk sendte meddelelsen.|
 |Opdaterede indbakkeregler fra Outlook klient|UpdateInboxRules|En postkasseejer eller en anden bruger med adgang til den postkasse, der er oprettet, ændret eller fjernet en indbakkeregel ved hjælp af Outlook-klienten.|
@@ -782,11 +782,11 @@ Indholdssøgning og eDiscovery-relaterede aktiviteter, der udføres i Security a
 Du kan finde en liste og en detaljeret beskrivelse af de eDiscovery-aktiviteter, der logføres, [under Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md).
 
 > [!NOTE]
-> Det tager op til 30 minutter, før hændelser, der stammer fra de aktiviteter, der er angivet under **eDiscovery-aktiviteter** og **Advanced eDiscovery aktiviteter** på rullelisten **Aktiviteter**, vises i søgeresultaterne. Omvendt tager det op til 24 timer, før de tilsvarende hændelser fra eDiscovery-cmdlet-aktiviteter vises i søgeresultaterne.
+> Det tager op til 30 minutter, før hændelser, der stammer fra de aktiviteter, der er angivet under **eDiscovery-aktiviteter** og **eDiscovery-aktiviteter (Premium)** på rullelisten **Aktiviteter**, vises i søgeresultaterne. Omvendt tager det op til 24 timer, før de tilsvarende hændelser fra eDiscovery-cmdlet-aktiviteter vises i søgeresultaterne.
 
-### <a name="advanced-ediscovery-activities"></a>Advanced eDiscovery aktiviteter
+### <a name="ediscovery-premium-activities"></a>eDiscovery-aktiviteter (Premium)
 
-Du kan også søge i overvågningsloggen efter aktiviteter i Advanced eDiscovery. Du kan finde en beskrivelse af disse aktiviteter i afsnittet "Advanced eDiscovery aktiviteter" i [Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md#advanced-ediscovery-activities).
+Du kan også søge i overvågningsloggen efter aktiviteter i Microsoft Purview eDiscovery (Premium). Du kan finde en beskrivelse af disse aktiviteter i afsnittet "eDiscovery(Premium)-aktiviteter" i [Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities).
 
 ### <a name="power-bi-activities"></a>Power BI aktiviteter
 
@@ -840,7 +840,7 @@ Du kan finde en beskrivelse af aktiviteter i Appen Skift under [Søg i overvågn
 I følgende tabel vises de bruger- og administratoraktiviteter i Yammer, der er logført i overvågningsloggen. Hvis du vil returnere Yammer-relaterede aktiviteter fra overvågningsloggen, skal du vælge **Vis resultater for alle aktiviteter** på listen **Aktiviteter**. Brug datoområdefelterne og listen **Brugere** til at indsnævre søgeresultaterne.
 
 > [!NOTE]
-> Nogle Yammer overvågningsaktiviteter er kun tilgængelige i Avanceret overvågning. Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige i Avanceret overvågning, [under Avanceret overvågning i Microsoft 365](advanced-audit.md#advanced-audit-events). Hvis du vil have mere at vide om krav til avancerede overvågningslicenser, [skal du se Overvågningsløsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel er Aktiviteter for avanceret overvågning fremhævet med en stjerne (*).
+> Nogle Yammer overvågningsaktiviteter er kun tilgængelige under Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), under [Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium) [under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -871,7 +871,7 @@ I følgende tabel vises de bruger- og administratoraktiviteter i Yammer, der er 
 
 ### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate aktiviteter
 
-Du kan søge i overvågningsloggen efter aktiviteter i Power Automate (tidligere kaldet Microsoft Flow). Disse aktiviteter omfatter oprettelse, redigering og sletning af flow og ændring af flowtilladelser. Du kan få oplysninger om overvågning af Power Automate aktiviteter på bloggen [Power Automate overvågningshændelser, der nu er tilgængelige i Microsoft 365 Overholdelsescenter](https://flow.microsoft.com/blog/security-and-compliance-center).
+Du kan søge i overvågningsloggen efter aktiviteter i Power Automate (tidligere kaldet Microsoft Flow). Disse aktiviteter omfatter oprettelse, redigering og sletning af flow og ændring af flowtilladelser. Du kan få oplysninger om overvågning af Power Automate aktiviteter på bloggen [Power Automate overvågningshændelser, der nu er tilgængelige på overholdelsesportalen](https://flow.microsoft.com/blog/security-and-compliance-center).
 
 ### <a name="microsoft-power-apps-activities"></a>Microsoft Power Apps aktiviteter
 
@@ -883,7 +883,7 @@ Du kan søge i overvågningsloggen efter aktiviteter i Microsoft Stream. Disse a
 
 ### <a name="content-explorer-activities"></a>Aktiviteter i Indholdsoversigt
 
-I følgende tabel vises de aktiviteter i Indholdsoversigt, der er logført i overvågningsloggen. Indholdsoversigt, som du kan få adgang til i værktøjet Dataklassificering i Microsoft 365 Overholdelsescenter. [Du kan få flere oplysninger under Brug af indholdsoversigt til dataklassificering](data-classification-content-explorer.md).
+I følgende tabel vises de aktiviteter i Indholdsoversigt, der er logført i overvågningsloggen. Indholdsoversigt, som du kan få adgang til i værktøjet Dataklassificering på overholdelsesportalen. [Du kan få flere oplysninger under Brug af indholdsoversigt til dataklassificering](data-classification-content-explorer.md).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -910,7 +910,7 @@ Tabellerne i dette afsnit bruger- og administratoraktiviteterne i Microsoft Form
 Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder, logføres den lidt anderledes. Du kan få flere oplysninger i afsnittet [Formularaktiviteter udført af medforfattere og anonyme respondere](#forms-activities-performed-by-coauthors-and-anonymous-responders) .
 
 > [!NOTE]
-> Nogle formularovervågningsaktiviteter er kun tilgængelige i Avanceret overvågning. Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige i Avanceret overvågning, [under Avanceret overvågning i Microsoft 365](advanced-audit.md#advanced-audit-events). Hvis du vil have mere at vide om krav til avancerede overvågningslicenser, [skal du se Overvågningsløsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel er Aktiviteter for avanceret overvågning fremhævet med en stjerne (*).
+> Nogle formularovervågningsaktiviteter er kun tilgængelige i Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), under [Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium) [under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|

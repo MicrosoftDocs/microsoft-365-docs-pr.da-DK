@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Deklarer poster ved hjælp af opbevaringsmærkater.
-ms.openlocfilehash: 228ce06cbc646f60703443a00492693019dfa0b8
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 23dd6c61d9da787eecd2e1fa825fe338d961d1d1
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836127"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911449"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Erklær data ved hjælp af opbevaringsmærkater
 
@@ -69,7 +69,7 @@ Ved hjælp af denne opbevaringsmærkat kan du nu anvende den på SharePoint elle
 
 Hvis du vil have en komplet vejledning:
 
-- [Opret opbevaringsmærkater, og anvend dem i apps](create-apply-retention-labels.md)
+- [Publicer opbevaringsmærkater, og anvend dem i apps](create-apply-retention-labels.md)
 
 - [Anvend automatisk en opbevaringsmærkat på indhold](apply-retention-labels-automatically.md) (understøttes ikke for lovmæssige poster)
 

@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de anvender Standard- og Strict-politikindstillinger på tværs af beskyttelsesfunktionerne i Exchange Online Protection (EOP) og Microsoft Defender for Office 365
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2a74fce0242f0206218d6f7f2f13e61d9f0a3b6f
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 01fd969461b47b0208dcfd20ff608e829b6a3336
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847075"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64915967"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
 
@@ -81,6 +81,9 @@ Forudindstillede sikkerhedspolitikker bruger de tilsvarende politikker fra de fo
   - [Antimalwarepolitikker](configure-anti-malware-policies.md) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy**.
   - [EOP Anti-phishing-politikker](set-up-anti-phishing-policies.md#spoof-settings) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy** (spoof settings).
 
+  > [!NOTE]
+  > Politikker for udgående spam er ikke en del af forudindstillede sikkerhedspolitikker. Standardpolitikken for udgående spam beskytter automatisk medlemmer af forudindstillede sikkerhedspolitikker. Du kan også oprette brugerdefinerede politikker for udgående spam for at tilpasse beskyttelsen for medlemmer af forudindstillede sikkerhedspolitikker. Du kan få flere oplysninger under [Konfigurer filtrering af udgående spam i EOP](configure-the-outbound-spam-policy.md).
+
 - **Microsoft Defender for Office 365 politikker**: Dette omfatter organisationer med abonnementer på Microsoft 365 E5 eller Defender for Office 365 tilføjelsesprogrammer:
   - Anti-phishing-politikker i Microsoft Defender for Office 365 med navnet **Standard Forudindstillet sikkerhedspolitik** og **Strict Preset Security Policy**, som omfatter:
     - De samme [spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings) , der er tilgængelige i EOP's anti-phishing-politikker.
@@ -124,7 +127,7 @@ Hvis der f.eks. findes en sikkerhedsindstilling i **Standardbeskyttelse** , og e
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
-  **Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  **Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ### <a name="use-the-microsoft-365-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users"></a>Brug Microsoft 365 Defender-portalen til at tildele standard- og strenge forudindstillede sikkerhedspolitikker til brugere
 

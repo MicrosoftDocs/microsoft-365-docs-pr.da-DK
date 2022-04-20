@@ -1,5 +1,5 @@
 ---
-title: Analysér data i et korrektursæt i Advanced eDiscovery
+title: Analysér data i et korrektursæt i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,88 +15,88 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentsæt, når du analyserer Advanced eDiscovery store og små bogstaver.
+description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentgrupper, når du analyserer en Microsoft Purview eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 829e6e6441403cf5a934e81a1a437f65d2de3db3
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: c12b71d4bc2ddbf39df4e9414689cafeb4f4f785
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63588702"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935692"
 ---
-# <a name="analyze-data-in-a-review-set-in-advanced-ediscovery"></a>Analysér data i et korrektursæt i Advanced eDiscovery
+# <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>Analysér data i et korrektursæt i eDiscovery (Premium)
 
-Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Advanced eDiscovery indeholder en række værktøjer til analyse af dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og for at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Hvis du vil vide mere om disse funktioner, skal du se:
+Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Microsoft Purview eDiscovery (Premium) indeholder en række værktøjer til at analysere dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og til at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Du kan få mere at vide om disse funktioner under:
 
-- [Nær registrering af dubletter](near-duplicate-detection-in-advanced-ediscovery.md)
+- [Registrering af næsten dubletter](near-duplicate-detection-in-advanced-ediscovery.md)
 
 - [Mailtrådning](email-threading-in-advanced-ediscovery.md)
 
 - [Temaer](themes-in-advanced-ediscovery.md)
 
-## <a name="run-analytics-for-a-review-set"></a>Kør analyser for et gennemsynssæt
+## <a name="run-analytics-for-a-review-set"></a>Kør analyse for et korrektursæt
 
 Sådan analyserer du data i et korrektursæt:
 
-1. Konfigurer analyseindstillinger for din sag. Få mere at vide under [Konfigurer indstillinger for søgning og analyse](configure-search-and-analytics-settings-in-advanced-ediscovery.md).
+1. Konfigurer analyseindstillinger for din sag. Du kan finde flere oplysninger under [Konfigurer søge- og analyseindstillinger](configure-search-and-analytics-settings-in-advanced-ediscovery.md).
 
 2. Åbn det korrektursæt, du vil analysere.
 
-3. Klik **på AnalyticsRun-dokument** >  **& mailanalyse**.
+3. Klik på **AnalyticsRun** >  **dokument & mailanalyse**.
 
-   ![Vælg Kør & og mailanalyse fra rullelisten Analytics](..\media\RunAnalytics1.png)
+   ![Vælg Kør dokument & mailanalyse på rullelisten Analytics](..\media\RunAnalytics1.png)
 
-Du kan se status for analysen under **fanen Jobs** for sagen.
+Du kan kontrollere status for analysen under fanen **Job** i sagen.
 
- Når analysen er fuldført, kan du få vist analyserapporten, køre forespørgsler i dit korrektursæt på output fra analysen (se Forespørgsel i dit korrektursæt [, og](review-set-search.md) se relaterede dokumenter for et bestemt dokument (se Gennemse [data](reviewing-data-in-review-set.md) i korrektursæt.
+ Når analysen er fuldført, kan du få vist analyserapporten, køre forespørgsler i dit korrektursæt på output fra analysen (se [Forespørgsel i dit korrektursæt](review-set-search.md), og se relaterede dokumenter i et givet dokument (se [Gennemse data i korrektursæt](reviewing-data-in-review-set.md).
 
 ## <a name="using-the-for-review-filter-query"></a>Brug af filterforespørgslen Til gennemsyn
 
-Når du har kørt analyser for korrektursættet, kan du bruge en automatisk genereret filterforespørgsel (kaldet Til gennemsyn), der filtrerer din anmeldelse *for* at udelukke im chat, duplikerede eller ikke-inkluderende elementer. Dette giver dig kun de elementer, der er repræsentative, entydige og inkluderende i korrektursættet.
+Når du har kørt analyser for korrektursættet, kan du bruge en automatisk genereret filterforespørgsel (kaldet *Til gennemsyn*), der filtrerer din anmeldelse for at udelade immaterielle, dublerede eller ikke-inkluderende elementer. Dette efterlader dig kun de elementer, der er repræsentative, unikke og inkluderende i korrektursættet.
 
-Hvis du vil **anvende filterforespørgslen**  Til gennemsyn på et korrektursæt, skal du vælge rullelisten Gemte filterforespørgsler og derefter **vælge AutoGen] Til gennemsyn.\[**
+Hvis du vil anvende filterforespørgslen **til gennemsyn** på et korrektursæt, skal du vælge rullelisten **Gemte filterforespørgsler** og derefter vælge **\[AutoGen] til gennemsyn**.
 
 ![Vælg Til gennemsyn på rullelisten Gemte filterforespørgsler](..\media\ForReviewFilterQuery1.png)
 
-Her er syntaksen for **filterforespørgslen** Til gennemsyn:
+Her er syntaksen for filterforespørgslen **til gennemsyn** :
 
 `(((FileClass="Email") AND (InclusiveType="InclusiveMinus" OR InclusiveType="Inclusive")) OR ((FileClass="Attachment") AND (UniqueInEmailSet="true")) OR ((FileClass="Document") AND (MarkAsRepresentative="Unique")) OR (FileClass="Conversations"))`
 
-Følgende liste beskriver resultatet af filterforespørgslen med hensyn til, hvilket indhold der vises, når du anvender den på korrektursættet.
+På følgende liste beskrives resultatet af filterforespørgslen med hensyn til, hvilket indhold der vises, når du har anvendt det i korrektursættet.
 
-- **Mail**. Viser elementer, der er markeret som **Inkluderende** **eller InklusiveMinus**. Et inkluderende element er den endelige meddelelse i en mailtråd. Den indeholder alt tidligere indhold i mailtråden. Et inkluderende minus indeholder en eller flere vedhæftede filer, der er knyttet til den specifikke meddelelse i mailtråden. En korrekturlæser kan bruge den inkluderende minusværdi til at bestemme, hvilke bestemte meddelelser i mailtråden der har tilknyttede vedhæftede filer.
+- **Mail**. Viser elementer, der er markeret som **Inclusive** eller **InclusiveMinus**. Et inkluderende element er den endelige meddelelse i en mailtråd. Den indeholder alt tidligere indhold i mailtråden. Et inkluderende minus det indeholder en eller flere vedhæftede filer, der er knyttet til den specifikke meddelelse i mailtråden. En korrekturlæser kan bruge minusværdien inklusive til at bestemme, hvilke bestemte meddelelser i mailtråden der har tilknyttede vedhæftede filer.
 
-- **Vedhæftede filer**. Filtrerer dublerede vedhæftede filer ud i det samme mailsæt. Kun vedhæftede filer, der er entydige i en mailtråd, vises.
+- **Vedhæftede filer**. Filtrerer dublerede vedhæftede filer i det samme mailsæt fra. Det er kun vedhæftede filer, der er entydige i en mailtråd, der vises.
 
-- **Dokumenter og andre**. Filtrerer dublerede dokumenter fra. Det er kun de dokumenter, der er entydige i korrektursættet, der vises.
+- **Dokumenter og andet**. Filtrerer dublerede dokumenter fra. Det er kun dokumenter, der er entydige i korrektursættet, der vises.
 
-- **Teams samtaler**. Alle Teams (Yammer samtaler i korrektursættet) vises.
+- **Teams samtaler**. Alle Teams (og Yammer) samtaler i korrektursættet vises.
 
-Du kan finde flere oplysninger om inkluderende typer og dokumentets [entydighed under Mailtrådning Advanced eDiscovery](email-threading-in-advanced-ediscovery.md).
+Du kan finde flere oplysninger om inkluderende typer og dokumentets entydighed [under Mailtrådning i eDiscovery (Premium)](email-threading-in-advanced-ediscovery.md).
 
 > [!NOTE]
-> Under det offentlige eksempel på [](advanced-ediscovery-new-case-format.md) det nye caseformat i Advanced eDiscovery returnerede filterforespørgslen Til gennemsyn ikke Teams- eller Yammer-samtaler for korrektursæt (i tilfælde, der bruger det store sagsformat), som blev oprettet før 4. november 2021. Dette problem er løst. Det betyder, at hvis du genanvender  forespørgslen Til gennemsyn på et korrektursæt i en sag, der bruger store bogstaver, vises der muligvis flere elementer, der svarer til filterforespørgslen, fordi alle Teams- eller Yammer-samtaler er inkluderet.
+> I den offentlige prøveversion af [det nye sagsformat](advanced-ediscovery-new-case-format.md) i eDiscovery (Premium) returnerede filterforespørgslen til **gennemsyn** ikke Teams eller Yammer samtaler til korrektursæt (i tilfælde, hvor store sager bruges) oprettet før den 4. november 2021. Problemet er løst. Det betyder, at hvis du anvender forespørgslen **Til gennemsyn** igen på et korrektursæt i et tilfælde, der bruger store og små bogstaver, kan flere elementer, der stemmer overens med filterforespørgslen, blive vist, fordi alle Teams eller Yammer samtaler er inkluderet.
 
 ## <a name="analytics-report"></a>Analyserapport
 
-Sådan får du vist analyserapporten for et korrektursæt:
+Sådan får du vist analyserapporten for et gennemsynssæt:
 
 1. Åbn korrektursættet.
 
-2. Klik **på** **AnalyticsShow-rapporter** > .
+2. Klik på **AnalyticsShowrapporter** > .
 
-Rapporten **Analytics** indeholder syv komponenter fra analysen:
+**Analyserapporten** indeholder syv komponenter fra analysen:
 
-- **Målgruppe:** Antallet af mails, vedhæftede filer og løse dokumenter, der findes i korrektursættet.
+- **Målpopulation:** Antallet af mails, vedhæftede filer og løse dokumenter, der blev fundet i korrektursættet.
 
-- **Dokumenter (undtagen vedhæftede filer):** Antallet af løse dokumenter, der er pivoter, entydige nær dubletter af en pivot eller en nøjagtig kopi af et andet dokument.
+- **Dokumenter (undtagen vedhæftede filer):** Antallet af løse dokumenter, der er pivots, entydige nær dubletter af en pivot eller en nøjagtig dublet af et andet dokument.
 
-- **Mails:** Antallet af mails, der er markeret som inkluderende, inklusive kopi, inklusive minus eller ingen af ovenstående.
+- **E-mails:** Antallet af mails, der er markeret som inklusive, inklusive kopi, inklusive minus, eller ingen af ovenstående.
 
-- **Vedhæftede filer:** Antallet af vedhæftede filer i mails, der er entydige eller dubletter af en anden vedhæftet fil i gennemsynssættet.
+- **Vedhæftede filer:** Antallet af vedhæftede filer i mails, der er entydige eller dubletter af en anden vedhæftet fil i korrektursættet.
 
-- **Nummerer dokumenter efter filtype:** Antallet af filer, der er identificeret med filtypenavn.
+- **Nummerer dokumenter efter filtype:** Antallet af filer, der er identificeret af filtypenavnet.
 
-- **Dokumenter efter kilde:** En oversigt over indhold ud fra den oprindelige datakilde.
+- **Dokumenter efter kilde:** En oversigt over indhold fra den oprindelige datakilde.
 
-- **Dokumenter aggregeret efter proces:** En oversigt over indhold efter gennemsyn af indstillede processer. 
+- **Dokumenter, der er samlet efter proces:** En oversigt over indhold ved at gennemse sæt processer. 

@@ -20,12 +20,12 @@ search.appverid:
 - GEA150
 description: Få mere at vide om Azure Information Protection (AIP) til Office 365, der drives af 21Vianet, og hvordan du konfigurerer det for kunder i Kina.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 3b4906844c76293a1163d17d77b009528ef32f12
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 0f495139a807d4a0eeb3181626717c6d5061fc38
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782891"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935209"
 ---
 # <a name="azure-information-protection-support-for-office-365-operated-by-21vianet"></a>Azure Information Protection support til Office 365, der drives af 21Vianet
 
@@ -62,7 +62,7 @@ Følgende liste indeholder de eksisterende huller mellem AIP for Office 365 drev
 Sådan konfigurerer du AIP for kunder i Kina:
 1. [Aktivér Rights Management for lejeren](#step-1-enable-rights-management-for-the-tenant).
 
-1. [Tilføj tjenesteprincipalen Microsoft Information Protection synkroniser](#step-2-add-the-microsoft-information-protection-sync-service-service-principal) tjeneste.
+1. [Tilføj Tjenesteprincipalen Microsoft Purview Information Protection Synkroniser tjeneste](#step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal).
 
 1. [Konfigurer DNS-kryptering](#step-3-configure-dns-encryption).
 
@@ -86,9 +86,9 @@ Hvis krypteringen skal fungere korrekt, skal RMS være aktiveret for lejeren.
 
 2. Hvis funktionstilstanden er `Disabled`, skal du køre `Enable-AipService`.
 
-### <a name="step-2-add-the-microsoft-information-protection-sync-service-service-principal"></a>Trin 2: Tilføj tjenesteprincipalen Microsoft Information Protection synkroniser tjeneste
+### <a name="step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal"></a>Trin 2: Tilføj Tjenesteprincipalen Microsoft Purview Information Protection synkroniser tjeneste
 
-Tjenesteprincipalen **Microsoft Information Protection synkroniser** tjeneste er som standard ikke tilgængelig i Azure China-lejere og kræves til Azure Information Protection. Opret denne tjenesteprincipal manuelt via Azure Az PowerShell-modulet.
+**Tjenesteprincipalen Microsoft Purview Information Protection Synkroniseringstjeneste** er som standard ikke tilgængelig i Azure China-lejere og kræves til Azure Information Protection. Opret denne tjenesteprincipal manuelt via Azure Az PowerShell-modulet.
 
 1. Hvis du ikke har installeret Azure Az-modulet, skal du installere det eller bruge en ressource, hvor Azure Az-modulet er forudinstalleret, f.eks [. Azure Cloud Shell](/azure/cloud-shell/overview). Du kan få flere oplysninger under [Installér Azure Az PowerShell-modulet](/powershell/azure/install-az-ps).
 
@@ -98,7 +98,7 @@ Tjenesteprincipalen **Microsoft Information Protection synkroniser** tjeneste er
     Connect-azaccount -environmentname azurechinacloud
     ```
 
-1. Opret **tjenesteprincipalen Microsoft Information Protection synkroniser** tjenesten manuelt ved hjælp af [new-AzADServicePrincipal-cmdlet'en](/powershell/module/az.resources/new-azadserviceprincipal) og `870c4f2e-85b6-4d43-bdda-6ed9a579b725` program-id'et for Microsoft Information Protection-synkroniseringstjenesten:
+1. Opret **tjenesteprincipalen Microsoft Purview Information Protection synkroniser tjeneste** manuelt ved hjælp af cmdlet'en [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) og `870c4f2e-85b6-4d43-bdda-6ed9a579b725` program-id'et for Microsoft Purview Information Protection Synkroniseringstjeneste:
 
     ```powershell 
     New-AzADServicePrincipal -ApplicationId 870c4f2e-85b6-4d43-bdda-6ed9a579b725

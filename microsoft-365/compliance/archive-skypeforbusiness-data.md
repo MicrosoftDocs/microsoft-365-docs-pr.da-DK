@@ -11,19 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Få mere at vide om, hvordan du konfigurerer og bruger en connector i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra Skype for Business til Microsoft 365.
-ms.openlocfilehash: fc31371717425c06c08cf43a25a2422c1a235060
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Få mere at vide om, hvordan du konfigurerer og bruger en connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Skype for Business til Microsoft 365.
+ms.openlocfilehash: 406c8db8a28303657b6c475bf826ee501c9e7620
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759075"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937185"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Konfigurer en connector til arkivering af Skype for Business data
 
-Brug en Veritas-connector i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra den Skype for Business platform til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Skype for Business](https://www.veritas.com/en/au/insights/merge1/skype-for-business) connector, der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. meddelelser mellem brugere, vedvarende chats og mødemeddelelser fra Skype for Business til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
+Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Skype for Business platform til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Skype for Business](https://www.veritas.com/en/au/insights/merge1/skype-for-business) connector, der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. meddelelser mellem brugere, vedvarende chats og mødemeddelelser fra Skype for Business til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når Skype for Business data er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Skype for Business-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når Skype for Business data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Skype for Business-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-skype-for-business-data"></a>Oversigt over arkivering af Skype for Business data
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres Skype for Business varer til Veritas Merge1-webstedet. Connectoren konverterer også Skype for Business elementer til et mailformat.
 
-3. Den Skype for Business connector, du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører det Skype for Business indhold til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Skype for Business connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører det Skype for Business indhold til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer de konverterede elementer til postkasserne for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Skype for Business** i brugerpostkasserne, og elementer importeres til den pågældende mappe. Connectoren gør dette ved hjælp af værdien af egenskaben *Mail* . Hvert Skype for Business element indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
@@ -43,13 +43,13 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret en Flet1-konto til Microsoft-connectors. For at gøre dette skal du kontakte [Veritas Kundesupport](https://www.veritas.com/form/requestacall/ms-connectors-contact.html). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter den Skype for Business connector i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter den Skype for Business connector i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-skype-for-business-connector"></a>Trin 1: Konfigurer Skype for Business-connectoren
 
-Det første trin er at få adgang til siden **Dataconnectors** i Microsoft 365 Overholdelsescenter og oprette en connector til Skype for Business data.
+Det første trin er at få adgang til siden **Dataconnectors på overholdelsesportalen** og oprette en connector til Skype for Business data.
 
 1. Gå til <https://compliance.microsoft.com> , og klik på **Dataconnectors** >  **Skype for Business**.
 
@@ -65,11 +65,11 @@ Det første trin er at få adgang til siden **Dataconnectors** i Microsoft 365 O
 
 Det andet trin er at konfigurere Skype for Business connector på Veritas Merge1 site. Du kan få mere at vide om, hvordan du konfigurerer Skype for Business connector, i [Brugervejledning til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Skype%20for%20Business%20%20User%20Guide.pdf).
 
-Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i connectorguiden i Microsoft 365 Overholdelsescenter.
+Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i connectorguiden på overholdelsesportalen.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
+Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
 1. Aktivér automatisk brugertilknytning på siden **Tilknyt Skype for Business brugere til Microsoft 365 brugere**. De Skype for Business elementer omfatter en egenskab med navnet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
 
@@ -77,7 +77,7 @@ Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 
 
 ## <a name="step-4-monitor-the-skype-for-business-connector"></a>Trin 4: Overvåg den Skype for Business connector
 
-Når du har oprettet den Skype for Business connector, kan du få vist connectorstatussen i Microsoft 365 Overholdelsescenter.
+Når du har oprettet Skype for Business connector, kan du få vist connectorstatussen på overholdelsesportalen.
 
 1. Gå til , <https://compliance.microsoft.com/> og klik på **Dataconnectors** i venstre navigationsrude.
 

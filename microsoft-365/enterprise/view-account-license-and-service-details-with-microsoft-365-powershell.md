@@ -19,12 +19,12 @@ ms.custom:
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
 description: Beskriver, hvordan du bruger PowerShell til at bestemme de Microsoft 365 tjenester, der er tildelt til brugere.
-ms.openlocfilehash: 2789026e2e22bbae3e84e91ada7ad21af2252f03
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 7e5724acbff571825f1496db5d59e04e11ba3a67
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823954"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64915989"
 ---
 # <a name="view-microsoft-365-account-license-and-service-details-with-powershell"></a>Få vist oplysninger om Microsoft 365-kontolicens og -tjeneste med PowerShell
 
@@ -41,7 +41,7 @@ Først [skal du oprette forbindelse til din Microsoft 365 lejer](/graph/powershe
 Hvis du vil læse brugeregenskaber, herunder licensoplysninger, skal du have tilladelsesomfanget User.Read.All eller en af de andre tilladelser, der er angivet på [siden "Hent en bruger" Graph API-referenceside](/graph/api/user-get).
 
 ```powershell
-Connect-Graph -Scopes User.Read.All
+Connect-Graph -Scopes User.ReadWrite.All, Organization.Read.All
 ```
 
 Derefter skal du angive licensplanerne for din lejer med denne kommando.

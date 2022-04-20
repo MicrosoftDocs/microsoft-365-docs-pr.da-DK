@@ -1,5 +1,5 @@
 ---
-title: Brug et script til at føje brugere til venteposition i en Kerne-eDiscovery-sag
+title: Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -21,17 +21,17 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft 365 Overholdelsescenter.
-ms.openlocfilehash: 10a605b422178e5006d8a027a697ca6745f82b98
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-overholdelsesportalen.
+ms.openlocfilehash: 8835e853825786668ba1b7617078d899c0773779
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824482"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934520"
 ---
-# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Brug et script til at føje brugere til venteposition i en Kerne-eDiscovery-sag
+# <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 
-Security & Compliance Center PowerShell indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge eDiscovery-kernecasen i Microsoft 365 Overholdelsescenter til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
+Security & Compliance Center PowerShell indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge Microsoft Purview eDiscovery-sagen (Standard) i Microsoft Purview-overholdelsesportalen til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
   
 Scriptet beder dig om navnet på organisationens Mit websted-domæne (f.eks `contoso` . i URL-adressen https://contoso-my.sharepoint.com), navnet på en eksisterende eDiscovery-sag, navnet på den nye venteposition, der er knyttet til sagen, en liste over mailadresser på de brugere, du vil sætte i venteposition, og en søgeforespørgsel, der skal bruges, hvis du vil oprette en forespørgselsbaseret venteposition. Scriptet henter derefter URL-adressen for det OneDrive for Business websted for hver bruger på listen, opretter den nye venteposition og føjer derefter postkassen og OneDrive for Business websted for hver bruger på listen til ventepositionen. Scriptet genererer også logfiler, der indeholder oplysninger om den nye venteposition.
   
@@ -45,9 +45,9 @@ Her er de trin, du skal udføre for at få dette til at ske:
   
 ## <a name="before-you-add-users-to-a-hold"></a>Før du føjer brugere til en venteposition
 
-- Du skal være medlem af rollegruppen eDiscovery Manager i Microsoft 365 Overholdelsescenter og være SharePoint Online-administrator for at køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
+- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en SharePoint Online-administrator for at køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
 
-- Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en Core eDiscovery-sag i Microsoft 365 Overholdelsescenter. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
+- Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en eDiscovery-sag i overholdelsesportalen. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
 
 - Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 i den samme mappe. Det vil gøre det nemmere at køre scriptet.
 
@@ -93,7 +93,7 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
 
 - **Søgeforespørgsel efter en forespørgselsbaseret venteposition:** Du kan oprette en forespørgselsbaseret venteposition, så det kun er det indhold, der opfylder de angivne søgekriterier, der sættes i venteposition. Hvis du vil placere alt indhold i venteposition, skal du blot trykke på **Enter** , når du bliver bedt om at angive en søgeforespørgsel.
 
-- **Aktivering af ventepositionen eller ej:** Du kan få scriptet til at aktivere ventepositionen, når det er oprettet, eller du kan få scriptet til at oprette ventepositionen uden at aktivere det. Hvis du ikke har aktiveret scriptet, kan du aktivere det senere i Microsoft 365 Overholdelsescenter eller ved at køre følgende PowerShell-kommandoer:
+- **Aktivering af ventepositionen eller ej:** Du kan få scriptet til at aktivere ventepositionen, når det er oprettet, eller du kan få scriptet til at oprette ventepositionen uden at aktivere det. Hvis du ikke har aktiveret scriptet, kan du aktivere det senere på overholdelsesportalen eller ved at køre følgende PowerShell-kommandoer:
 
   ```powershell
   Set-CaseHoldPolicy -Identity <name of the hold> -Enabled $true
@@ -114,7 +114,7 @@ Når du har indsamlet de oplysninger, som scriptet beder dig om, er det sidste t
 " "
 write-host "***********************************************"
 write-host "   Security & Compliance Center PowerShell  " -foregroundColor yellow -backgroundcolor darkgreen
-write-host "   Core eDiscovery cases - Add users to a hold   " -foregroundColor yellow -backgroundcolor darkgreen 
+write-host "   eDiscovery (Standard) cases - Add users to a hold   " -foregroundColor yellow -backgroundcolor darkgreen 
 write-host "***********************************************"
 " "
 # Connect to SCC PowerShell using modern authentication
@@ -283,7 +283,7 @@ Write-host "Script complete!" -foregroundColor Yellow
 
 4. Angiv de oplysninger, som scriptet beder dig om.
 
-   Scriptet opretter forbindelse til Security & Compliance Center PowerShell og opretter derefter den nye venteposition i eDiscovery-sagen og tilføjer postkasserne og OneDrive for Business for brugerne på listen. Du kan gå til sagen på **eDiscovery-siden** i Microsoft 365 Overholdelsescenter for at få vist den nye venteposition.
+   Scriptet opretter forbindelse til Security & Compliance Center PowerShell og opretter derefter den nye venteposition i eDiscovery-sagen og tilføjer postkasserne og OneDrive for Business for brugerne på listen. Du kan gå til sagen på **eDiscovery-siden** på overholdelsesportalen for at få vist den nye venteposition.
 
 Når scriptet er færdigt, oprettes følgende logfiler, og de gemmes i den mappe, hvor scriptet er placeret.
   

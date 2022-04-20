@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: 0ec9ace6d2a2205996baed8cd64ca0e29ac83ed3
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 729c31935ee3ded04a12f7822a17082ef1b52c26
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836078"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911506"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -33,7 +33,7 @@ Mange indstillinger for opbevaring er fælles for både opbevaringspolitikker og
 Du kan se de scenarier, der understøtter disse politikker til opbevaring, under:
 
 - [Opret og konfigurer opbevaringspolitikker](create-retention-policies.md).
-- [Opret opbevaringsmærkater, og anvend dem i apps](create-apply-retention-labels.md)
+- [Publicer opbevaringsmærkater, og anvend dem i apps](create-apply-retention-labels.md)
 - [Anvend automatisk en opbevaringsmærkat på indhold](apply-retention-labels-automatically.md)
 
 Indstillinger, der er specifikke for hvert scenarie, forklares i deres respektive dokumentation.

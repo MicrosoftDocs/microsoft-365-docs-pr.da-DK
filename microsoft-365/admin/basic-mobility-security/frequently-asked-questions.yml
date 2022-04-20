@@ -20,12 +20,12 @@ metadata:
   search.appverid:
   - MET150
   description: Ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed.
-  ms.openlocfilehash: 98dbb589f3464a0a34729d95e04975e7d8095e5c
-  ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+  ms.openlocfilehash: 68e7143dba70859aa69845f8e1e8e0a5c65ea44f
+  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/12/2022
-  ms.locfileid: "64781111"
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64934197"
 title: Ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed
 summary: Denne artikel indeholder ofte stillede spørgsmål om grundlæggende mobilitet og sikkerhed, som er en funktion, der hjælper dig med at administrere og sikre mobilenheder i Microsoft 365. Hvis du ikke kan finde et svar på dit spørgsmål, kan du fortælle os det ved at skrive en kommentar på siden, så vi kan overveje at føje dit spørgsmål til denne artikel.
 sections:
@@ -55,7 +55,7 @@ sections:
   - question: >
       Hvordan fungerer politikker for grundlæggende mobilitet og sikkerhed? Hvordan gør jeg sat dem op? Vil du deaktivere dem?
     answer: >
-      Når du har fuldført den indledende konfiguration af Grundlæggende mobilitet og sikkerhed, kan du oprette politikker og anvende dem på grupper af brugere i Security & Compliance Center. Politikker kræver, at brugerne af politikkerne tilmelder deres enheder i Basic Mobility og Security, før enheden kan bruges til at få adgang til Microsoft 365 data. De politikker, du konfigurerer, bestemmer indstillinger for mobilenheder, f.eks. hvor ofte adgangskoder skal nulstilles, eller om datakryptering er påkrævet. Du kan få flere oplysninger under [Opret politikker for enhedssikkerhed i Grundlæggende mobilitet og sikkerhed](create-device-security-policies.md) og [Microsoft 365 Overholdelsescenter](../../compliance/microsoft-365-compliance-center.md).
+      Når du har fuldført den indledende konfiguration af Grundlæggende mobilitet og sikkerhed, kan du oprette politikker og anvende dem på grupper af brugere i Security & Compliance Center. Politikker kræver, at brugerne af politikkerne tilmelder deres enheder i Basic Mobility og Security, før enheden kan bruges til at få adgang til Microsoft 365 data. De politikker, du konfigurerer, bestemmer indstillinger for mobilenheder, f.eks. hvor ofte adgangskoder skal nulstilles, eller om datakryptering er påkrævet. Du kan få flere oplysninger under [Opret politikker for enhedssikkerhed på Portal til grundlæggende mobilitet og sikkerhed](create-device-security-policies.md) og [Microsoft Purview-overholdelse](../../compliance/microsoft-365-compliance-center.md).
 
 
       Du kan finde en trinvis vejledning til, hvordan du opretter og installerer enhedspolitikker, [under Opret sikkerhedspolitikker for enheder i Grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).

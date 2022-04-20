@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: a9872e707bbbb6546d6801ac88ebd28f23fb9806
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 23a0bb391acdf584d278c9de4aee0fdedf4d8071
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651317"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934219"
 ---
 # <a name="manage-devices-with-intune-overview"></a>Administrer enheder med Intune Oversigt
 
@@ -49,7 +49,7 @@ I denne artikelserie gennemgås en anbefalet proces til administration af enhede
 
 ## <a name="implementing-the-layers-of-protection-on-and-for-devices"></a>Implementering af beskyttelseslag på og for enheder
 
-Beskyttelse af data og apps på enheder og selve enhederne er en proces med flere lag. Der er nogle beskyttelser, du kan få på ikke-administrerede enheder. Når du har tilmeldt enheder til Intune, kan du implementere mere avancerede kontrolelementer. Når trusselsbeskyttelse udrulles på tværs af dine slutpunkter, får du endnu mere indsigt og muligheden for automatisk at afhjælpe nogle angreb. Hvis din organisation har arbejdet med at identificere følsomme data, anvende klassificering og mærkater og konfigurere politikker til forebyggelse af datatab, kan du opnå endnu mere detaljeret beskyttelse af data på dine slutpunkter.
+Beskyttelse af data og apps på enheder og selve enhederne er en proces med flere lag. Der er nogle beskyttelser, du kan få på ikke-administrerede enheder. Når du har tilmeldt enheder til administration, kan du implementere mere avancerede kontrolelementer. Når trusselsbeskyttelse udrulles på tværs af dine slutpunkter, får du endnu mere indsigt og muligheden for automatisk at afhjælpe nogle angreb. Hvis din organisation har lagt arbejdet i at identificere følsomme data, anvende klassificering og mærkater og konfigurere Microsoft Purview-politikker til forebyggelse af datatab, kan du opnå endnu mere detaljeret beskyttelse af data på dine slutpunkter.
 
 Følgende diagram illustrerer byggestenene til at opnå en Nul tillid sikkerhedsholdning for Microsoft 365 og andre SaaS-apps, som du introducerer til dette miljø. De elementer, der er relateret til enheder, nummereres fra 1 til 7. Dette er lagene af beskyttelse af enhedsadministratorer, der koordinerer med andre administratorer for at opnå dette.
 
@@ -89,7 +89,7 @@ I denne illustration:
 Hvis du følger denne vejledning, skal du tilmelde enheder til administration ved hjælp af Intune, og du vil onboarde enheder til følgende Microsoft 365 funktioner:
 
 - Microsoft Defender for Endpoint
-- Microsoft 365 overholdelse af angivne standarder (til forebyggelse af datatab for slutpunkter (DLP)) 
+- Microsoft Purview (til forebyggelse af datatab for slutpunkter (DLP)) 
 
 Følgende illustration indeholder oplysninger om, hvordan det fungerer ved hjælp af Intune.
 
@@ -98,8 +98,19 @@ Følgende illustration indeholder oplysninger om, hvordan det fungerer ved hjæl
 I illustrationen:
 
 1. Tilmeld enheder til administration med Intune.
-2. Brug Intune til at onboarde enheder for at Microsoft Defender for Endpoint.
-3. Enheder, der er onboardet til Defender for Endpoint, er også onboardet til Microsoft 365 funktioner til overholdelse af angivne standarder, herunder slutpunkt DLP.
+2. Brug Intune til at føje enheder til Defender for Endpoint.
+3. Enheder, der er onboardet til Defender for Endpoint, er også onboardet til Microsoft Purview-funktioner, herunder Endpoint DLP.
+ 
+Bemærk, at kun Intune administrerer enheder. Onboarding refererer til muligheden for, at en enhed kan dele oplysninger med en bestemt tjeneste. I følgende tabel opsummeres forskellene mellem at tilmelde enheder til administration og onboarding af enheder for en bestemt tjeneste.
+
+
+|         |Tilmelde     |Onboard  |
+|---------|---------|---------|
+|Beskrivelse     |  Tilmelding gælder for administration af enheder. Enheder er tilmeldt administration med Intune eller Configuration Manager.        | Onboarding konfigurerer en enhed til at arbejde med et bestemt sæt funktioner i Microsoft 365. Onboarding gælder i øjeblikket for funktioner til Microsoft Defender for Endpoint og Microsofts overholdelse af angivne standarder. <br><br>På Windows enheder involverer onboarding at slå en indstilling til i Windows Defender, der gør det muligt for Defender at oprette forbindelse til onlinetjenesten og acceptere politikker, der gælder for enheden.        |
+|Omfanget     | Disse værktøjer til enhedshåndtering administrerer hele enheden, herunder konfiguration af enheden, så den opfylder bestemte målsætninger, f.eks. sikkerhed.        |Onboarding påvirker kun de tjenester, der gælder.     |
+|Anbefalet metode     | Azure Active Directory tilmelde enheder til Intune automatisk.        | Intune er den foretrukne metode til onboarding af enheder til Windows Defender til Slutpunkt og derfor Microsoft Purview-funktioner.<br><br>Bemærk, at enheder, der er onboardet til Microsoft Purview-funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.        |
+|Andre metoder     |   Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.      | Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge:<br><li>Konfigurationsstyring<li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)<li>Lokalt script<li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)<li>Gruppepolitik|
+| | |     |
 
 Bemærk, at kun Intune administrerer enheder. Onboarding refererer til muligheden for, at en enhed kan dele oplysninger med en bestemt tjenesteegenskab. I følgende tabel opsummeres forskellene mellem at tilmelde enheder til administration og onboarding af enheder for en bestemt funktion.
 
@@ -107,7 +118,7 @@ Bemærk, at kun Intune administrerer enheder. Onboarding refererer til mulighede
 |---|---|---|
 |Beskrivelse|Tilmelding gælder for administration af enheder. Enheder er tilmeldt administration med Intune eller Configuration Manager.|Onboarding konfigurerer en enhed til at arbejde med et bestemt sæt funktioner i Microsoft 365. Onboarding gælder i øjeblikket for funktioner til Microsoft Defender for Endpoint og Microsofts overholdelse af angivne standarder. <br/><br/> På Windows enheder involverer onboarding at slå en indstilling til i Windows Defender, der gør det muligt for Defender at oprette forbindelse til onlinetjenesten og acceptere politikker, der gælder for enheden.|
 |Omfanget|Disse værktøjer til enhedshåndtering administrerer hele enheden, herunder konfiguration af enheden, så den opfylder bestemte målsætninger, f.eks. sikkerhed.|Onboarding påvirker kun de funktioner, der gælder.|
-|Anbefalet metode|Azure Active Directory tilmelde enheder til Intune automatisk.|Intune er den foretrukne metode til onboarding af enheder til Windows Defender for Endpoint og derfor Microsoft 365 funktioner til overholdelse af angivne standarder. <br/><br/> Bemærk, at enheder, der er onboardet til Microsoft 365 funktioner til overholdelse af angivne standarder ved hjælp af andre metoder, ikke automatisk er tilmeldt Defender for Endpoint.|
+|Anbefalet metode|Azure Active Directory tilmelde enheder til Intune automatisk.|Intune er den foretrukne metode til onboarding af enheder til Windows Defender til Slutpunkt og derfor Microsoft Purview-funktioner. <br/><br/> Bemærk, at enheder, der er onboardet til Microsoft Purview-funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.|
 |Andre metoder|Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.|Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge: <ul><li>Konfigurationsstyring</li><li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)</li><li>Lokalt script</li><li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)</li><li>Gruppepolitik</li></ul>|
 
 ## <a name="learning-for-administrators"></a>Learning for administratorer

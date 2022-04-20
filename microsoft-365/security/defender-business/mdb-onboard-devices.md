@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ba816430521db2848273a4f7c6ca7d1a61703690
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 77eb8c0aa4d0ebd78788e9701e4933788af2e46c
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862276"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64915901"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Om bord på enheder til Microsoft Defender til virksomheder
 
@@ -41,7 +41,6 @@ Med Microsoft Defender til virksomheder har du flere muligheder at vælge imelle
 1. Vælg fanen for operativsystemet: 
 
    - Windows klienter
-   - Windows Server (prøveversion)
    - macOS-computere
    - mobilenheder
 
@@ -56,6 +55,7 @@ Med Microsoft Defender til virksomheder har du flere muligheder at vælge imelle
 Vælg en af følgende muligheder for at onboarde Windows klientenheder til Defender for Business:
 
 - [Lokalt script](#local-script-for-windows-clients) (til onboarding af enheder manuelt på portalen Microsoft 365 Defender)
+- [Gruppepolitik](#group-policy-for-windows-clients)
 - [Microsoft Endpoint Manager](#endpoint-manager-for-windows-clients) (inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md))
 
 
@@ -82,9 +82,13 @@ Du kan bruge et lokalt script til at onboarde Windows klientenheder. Når du kø
 
 8. Når scriptet er kørt, skal du fortsætte med at [køre en registreringstest](#running-a-detection-test-on-a-windows-client).
 
+### <a name="group-policy-for-windows-clients"></a>Gruppepolitik til Windows klienter
+
+Hvis du foretrækker at bruge Gruppepolitik til at onboarde Windows klienter, skal du følge vejledningen i [Onboard Windows enheder ved hjælp af Gruppepolitik](../defender-endpoint/configure-endpoints-gp.md). I denne artikel beskrives trinnene til onboarding til Microsoft Defender for Endpoint, men trinnene til onboarding til Defender for Business er de samme.
+
 ### <a name="endpoint-manager-for-windows-clients"></a>Endpoint Manager til Windows klienter
 
-Hvis dit abonnement omfatter [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), kan du onboarde Windows klienter og andre enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager indeholder [裝置管理 funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
+Hvis dit abonnement omfatter [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), kan du onboarde Windows klienter og andre enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager omfatter [Enhedshåndtering-funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
 
 Der findes flere metoder til tilmelding af enheder i Intune. Vi anbefaler, at du starter med en af følgende metoder:
 
@@ -95,7 +99,7 @@ Der findes flere metoder til tilmelding af enheder i Intune. Vi anbefaler, at du
 
 Når du konfigurerer automatisk tilmelding, føjer brugerne deres arbejdskonto til enheden. I baggrunden registrerer og joinforbinder enheden Azure Active Directory (Azure AD) og er tilmeldt Intune.
 
-1. Gå til Azure-Portal ([https://portal.azure.com/](https://portal.azure.com/)), og log på. 
+1. Gå til Azure Portal ([https://portal.azure.com/](https://portal.azure.com/)), og log på. 
 
 2. Vælg **Azure Active Directory** >  **Mobilitet (MDM og MAM)** > **Microsoft Intune**.
 
@@ -112,7 +116,7 @@ Når du konfigurerer automatisk tilmelding, føjer brugerne deres arbejdskonto t
 
 4. Vælg **Gem**.
 
-5. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Mer informasjon om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+5. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
 
 
 > [!TIP]
@@ -126,7 +130,7 @@ Når du konfigurerer automatisk tilmelding, føjer brugerne deres arbejdskonto t
 
 2. Del denne artikel med brugere i din organisation: [Tilmeld Windows 10/11-enheder i Intune](/mem/intune/user-help/enroll-windows-10-device).
 
-3. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Mer informasjon om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+3. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
 
 ### <a name="running-a-detection-test-on-a-windows-client"></a>Kørsel af en registreringstest på en Windows klient
 
@@ -152,68 +156,7 @@ Hvis du vil have vist listen over enheder, der er onboardet til Defender for Bus
 
 - Hvis du har andre enheder at onboarde, skal du vælge den fane, der svarer til operativsystemet på enhederne [(Windows klienter, Windows Server, macOS eller mobilenheder](#what-to-do)) og følge vejledningen under den pågældende fane.
 - Hvis du er færdig med at onboarde enheder, skal du gå til [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
-- Se [Első lépések ved hjælp af Microsoft Defender til virksomheder](mdb-get-started.md).
-
-## <a name="windows-server"></a>[**Windows Server**](#tab/WindowsServerEndpoints)
-
-## <a name="windows-server-preview"></a>Windows Server (prøveversion)
-
-Du kan onboarde en Windows Server-enhed ved hjælp af et lokalt script. 
-
-> [!IMPORTANT]
-> Muligheden for at onboarde Windows Server-slutpunkter er i øjeblikket en prøveversion.
-
-1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
-
-2. Vælg **Indstillinger** >  **Endpoints** i navigationsruden, og vælg derefter **Onboarding** under **Enhedshåndtering**.
-
-3. Vælg et operativsystem, f.eks **. Windows Server 1803, 2019 og 2022**, og vælg derefter **Lokalt script** i afsnittet **Installationsmetode**. 
-
-   Hvis du vælger **Windows Server 2012 R2 og 2016**, har du to pakker at downloade og køre: en installationspakke og en onboardingpakke. Installationspakken indeholder en MSI-fil, der installerer den Microsoft Defender til virksomheder agent. Onboardingpakken indeholder scriptet til onboarding af dit Windows Server-slutpunkt til Defender for Business. 
-
-4. Vælg **Download onboarding-pakke**. Vi anbefaler, at du gemmer onboardingpakken på et flytbart drev.
-
-   Hvis du har valgt **Windows Server 2012 R2 og 2016**, skal du også vælge **Download installationspakke** og gemme den på et flytbart drev
-
-5. Udpak indholdet af installations-/onboardingpakken/-pakkerne på dit Windows Server-slutpunkt til en placering, f.eks. desktopmappen. Du skal have en fil med navnet `WindowsDefenderATPLocalOnboardingScript.cmd`. 
-
-   Hvis du onboarder Windows Server 2012 R2 eller Windows Server 2016, skal du først pakke installationspakken ud.
-
-6. Åbn kommandoprompten som administrator.
-
-7. Hvis du onboarder Windows Server 2012R2 eller Windows Server 2016, skal du køre følgende kommando: `Msiexec /i md4ws.msi /quiet`. 
-
-   Hvis du onboarder Windows Server 1803, 2019 eller 2022, skal du springe dette trin over og fortsætte til trin 8.
-
-8. Skriv placeringen af scriptfilen. Hvis du f.eks. kopierede filen til mappen Desktop, skulle du skrive `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`og derefter trykke på tasten Enter (eller vælge **OK**).
-
-9. Fortsæt til [Kør en registreringstest på Windows Server](#running-a-detection-test-on-windows-server)
-
-### <a name="running-a-detection-test-on-windows-server"></a>Kørsel af en registreringstest på Windows Server
-
-Når du har onboardet dit Windows Server-slutpunkt til Defender for Business, kan du køre en registreringstest for at sikre, at alt fungerer korrekt.
-
-1. Opret en mappe på Windows Server-enheden: `C:\test-MDATP-test`.
-
-2. Åbn kommandoprompten som administrator.
-
-3. Kør følgende PowerShell-kommando i vinduet Kommandoprompt:
-
-   ```powershell
-   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
-   ```
-
-Når kommandoen er kørt, lukkes kommandopromptvinduet automatisk. Hvis det lykkes, markeres registreringstesten som fuldført, og der vises en ny besked på portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)) for den nyligt onboardede enhed om ca. 10 minutter.
-
-## <a name="view-a-list-of-onboarded-devices"></a>Få vist en liste over onboardede enheder
-
-Hvis du vil have vist listen over enheder, der er onboardet til Defender for Business, skal du vælge **Enhed invetory** på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) i navigationsruden under **Slutpunkter**.
-
-## <a name="next-steps"></a>Næste trin
-
-- Hvis du har andre enheder at onboarde, skal du vælge den fane, der svarer til operativsystemet på enhederne [(Windows klienter, Windows Server, macOS eller mobilenheder](#what-to-do)) og følge vejledningen under den pågældende fane.
-- Hvis du er færdig med at onboarde enheder, skal du gå til [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
-- Se [Első lépések ved hjælp af Microsoft Defender til virksomheder](mdb-get-started.md).
+- Se [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md).
 
 ## <a name="macos"></a>[**Macos**](#tab/macOSdevices)
 
@@ -251,11 +194,11 @@ Når du kører det lokale script på en macOS-enhed, oprettes der et tillidsforh
 
 10. Brug følgende Python-kommando i Bash til at køre onboardingpakken: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`
 
-11. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Mer informasjon om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+11. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
 
 ### <a name="endpoint-manager-for-macos"></a>Endpoint Manager til macOS
 
-Hvis dit abonnement omfatter [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), kan du onboarde macOS-enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager indeholder [裝置管理 funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
+Hvis dit abonnement omfatter [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), kan du onboarde macOS-enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager omfatter [Enhedshåndtering-funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
 
 Der findes flere metoder til tilmelding af enheder i Intune. Vi anbefaler, at du starter med en af følgende metoder:
 
@@ -290,7 +233,7 @@ Hvis din virksomhed foretrækker at få personer til at tilmelde deres egne enhe
 
 3. Hvis du vil bekræfte, at enheden er onboardet, skal du bruge følgende kommando i Bash: `mdatp health --field real_time_protection_enabled`
 
-4. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Mer informasjon om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+4. Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
 
 ## <a name="view-a-list-of-onboarded-devices"></a>Få vist en liste over onboardede enheder
 
@@ -300,23 +243,23 @@ Hvis du vil have vist listen over enheder, der er onboardet til Defender for Bus
 
 - Hvis du har andre enheder at onboarde, skal du vælge den fane, der svarer til operativsystemet på enhederne ([Windows klienter, Windows Server, macOS eller mobilenheder](#what-to-do)) og følge vejledningen under den pågældende fane.
 - Hvis du er færdig med at onboarde enheder, skal du gå til [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
-- Se [Első lépések ved hjælp af Microsoft Defender til virksomheder](mdb-get-started.md).
+- Se [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md).
 
 ## <a name="mobile-devices"></a>[**mobilenheder**](#tab/mobiles)
 
 ## <a name="mobile-devices"></a>Mobilenheder
 
-Du skal bruge Microsoft Intune til at onboarde mobilenheder, f.eks. Android- og iOS-/iPadOS-enheder. Hvis du har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager indeholder [裝置管理 funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
+Du skal bruge Microsoft Intune til at onboarde mobilenheder, f.eks. Android- og iOS-/iPadOS-enheder. Hvis du har [Microsoft 365 Business Premium](../../business/index.yml), har du Endpoint Manager som en del af dit abonnement. Endpoint Manager omfatter [Enhedshåndtering-funktioner til Microsoft Intune og mobil](/mem/intune/fundamentals/what-is-device-management).[](/mem/intune/fundamentals/what-is-intune) 
 
 Se følgende ressourcer for at få hjælp til at tilmelde disse enheder til Intune:
 
 - [Tilmeld Android-enheder](/mem/intune/enrollment/android-enroll)
 - [Tilmeld iOS- eller iPadOS-enheder](/mem/intune/enrollment/ios-enroll)
 
-Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Mer informasjon om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+Når en enhed er blevet tilmeldt Intune, kan du føje den til en enhedsgruppe. [Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
 
 ## <a name="next-steps"></a>Næste trin
 
 - Hvis du har andre enheder at onboarde, skal du vælge den fane, der svarer til operativsystemet på enhederne ([Windows klienter, Windows Server, macOS eller mobilenheder](#what-to-do)) og følge vejledningen under den pågældende fane.
 - Hvis du er færdig med at onboarde enheder, skal du gå til [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
-- Se [Első lépések ved hjælp af Microsoft Defender til virksomheder](mdb-get-started.md).
+- Se [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md).

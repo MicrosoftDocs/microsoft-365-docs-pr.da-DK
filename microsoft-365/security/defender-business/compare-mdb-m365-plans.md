@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 04/12/2022
+ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: b1dbe79aadea39bfc737ae9f5457715b669cc79b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: e32018f52f3a45624fcf07ae03e44c662a594297
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861812"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916309"
 ---
 # <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium
 
@@ -73,9 +73,9 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 
 Defender for Business giver små og mellemstore virksomheder professionelle funktioner i Defender for Endpoint.
 
-I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business med Microsoft Defender for Endpoint Plan 1 og 2.
+I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business med virksomhedstilbud, Microsoft Defender for Endpoint Plan 1 og 2.
 
-|Funktion/funktionalitet|[Defender for Business](mdb-overview.md)<br/>(separat, i øjeblikket i prøveversion)|[Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)|[Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)|
+|Funktion/funktionalitet|[Defender for Business](mdb-overview.md)<br/>(separat, i øjeblikket i prøveversion)|[Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)<br/>(til virksomhedskunder) |[Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)<br/>(til virksomhedskunder) |
 |---|---|---|---|
 |[Centraliseret administration](../defender-endpoint/manage-atp-post-migration.md) |Ja <sup>[[1](#fn1)]</sup>|Ja|Ja|
 |[Forenklet klientkonfiguration](mdb-simplified-configuration.md)|Ja|Nej|Nej|

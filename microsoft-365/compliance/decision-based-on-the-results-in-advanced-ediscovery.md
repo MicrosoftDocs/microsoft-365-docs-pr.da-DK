@@ -1,5 +1,5 @@
 ---
-title: Beslutning baseret på resultaterne i Advanced eDiscovery
+title: Beslutning baseret på resultaterne i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,40 +14,40 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: aed65bcd-0a4f-43e9-b5e5-b98cc376bdf8
-description: Få mere at vide om, hvordan fanen Beslut Advanced eDiscovery indeholder data, der kan hjælpe dig med at bestemme den korrekte størrelse på gennemsynssættet af sagsfiler.
+description: Få mere at vide om, hvordan fanen Beslut i eDiscovery (Premium) indeholder data, der kan hjælpe dig med at bestemme den korrekte størrelse af korrektursættet af sagsfiler.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 32682690c6febac247d67e3b78f56d1f71b9a2fb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6c8759db2445b8d98c47cc1103deda058d2f3508
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588907"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64932414"
 ---
-# <a name="decisions-based-on-relevance-results-in-advanced-ediscovery"></a>Beslutninger baseret på resultater af relevans i Advanced eDiscovery
+# <a name="decisions-based-on-relevance-results-in-ediscovery-premium"></a>Beslutninger baseret på relevansresultater i eDiscovery (Premium)
   
-Fanen Beslut i modulet Relevans i Advanced eDiscovery indeholder yderligere oplysninger til visning og brug af statistik for beslutningssupport til at fastslå størrelsen på sagsfilernes gennemgangssæt.
+I relevansmodulet i eDiscovery (Premium) indeholder fanen Beslut yderligere oplysninger til visning og brug af statistik for beslutningssupport til at bestemme størrelsen af korrektursættet af sagsfiler.
   
 ## <a name="using-the-decide-tab"></a>Brug af fanen Beslut
 
-![Relevans Beslut.](../media/f32fed89-f3b5-404a-90c7-ea25d2eb58a9.png)
+![Relevans beslutte.](../media/f32fed89-f3b5-404a-90c7-ea25d2eb58a9.png)
   
 Denne fane indeholder følgende komponenter:
   
-- **Problem**: Herfra kan du vælge problemet med interesse på listen.
+- **Problem**: Herfra kan du vælge spørgsmålet om interesse på listen.
 
-- **Review-recall ratio**: Sammenligninger af resultater Advanced eDiscovery efter relevansresultater. Skæringspunktet i diagrammet repræsenterer procentdelen af filer, der skal gennemses, knyttet til et relevansscore. Dette bruges i fasen Relevanstest og som en eksporttærskel for nedslagning. Standardskæringspunktet for antallet af filer, der skal gennemgås, er det punkt, hvor balancen mellem Tilbagekaldelse og præcision er optimal. Det faktiske skæringspunkt bør bestemmes af brugeren afhængigt af målsætninger og omkostningsintern kompromis (gennemgang af omkostninger) og risici (%recall). Ved hjælp af skyderen kan du justere skæringspunktet og se effekten på grafen og parametrene, når du justerer procentdelen af relevante filer, der skal hentes, og før du validerer en beslutning.
+- **Forhold mellem tilbagekald** af anmeldelse: Sammenligninger af eDiscovery-gennemgang (Premium) i henhold til relevansscores. Skæringspunktet i diagrammet repræsenterer den procentdel af filer, der skal gennemses, og som er knyttet til en relevansscore. Dette bruges i relevanstestfasen og som en eksporttærskel for nedslagning. Standardafskæringspunktet for det antal filer, der skal gennemses, er på det punkt, hvor balancen mellem Tilbagekaldelse og Præcision er optimal. Det faktiske skæringspunkt skal bestemmes af brugeren afhængigt af målsætninger og omkostningsafvejning (%review) og risiko (%recall). Ved hjælp af skyderen kan du justere skæringspunktet og se effekten på grafen og parametrene, når du justerer procentdelen af relevante filer, der skal hentes, og før du validerer en beslutning.
 
-- **Parametre**: Gennemse, Tilbagekald, Næste relevante og Samlede omkostningsparametre er kumulative beregnede statistikker, der vedrører gennemgangssættet i forhold til samlingen for hele sagen. Definitioner for disse parametre er som følger:
+- **Parametre: Parametrene** Review, Recall, Next relevant og Total cost er akkumulerede beregnede statistikker, der vedrører gennemgangssættet i forhold til samlingen for hele sagen. Definitioner for disse parametre er som følger:
 
-  - **Gennemse**: Procentdel af filer, der skal gennemses, baseret på denne skæring.
+  - **Anmeldelse**: Procentdel af filer, der skal gennemses baseret på denne skæring.
 
-  - **Tilbagekaldelse**: Procentdel af relevante filer i gennemsynssættet.
+  - **Husk**: Procentdelen af relevante filer i korrektursættet.
 
-  - **Næste relevant**: Omkostninger til at gennemse og identificere en anden relevant fil, der i øjeblikket ikke er i korrektursættet.
+  - **Næste relevant**: Omkostninger ved gennemsyn og identificer en anden relevant fil, der i øjeblikket ikke er i korrektursættet.
 
-  - **Samlede omkostninger**: Omkostninger til gennemgang af denne procentdel af sagsfilerne. Indstillinger for omkostningsparametre kan angives af Case manager.
+  - **Samlede omkostninger**: Omkostninger til gennemsyn af denne procentdel af sagsfilerne. Indstillinger for omkostningsparametre kan angives af Sagsadministrator.
 
-  - **Fordeling efter relevansscore**: Filer i den mørkegrå visning til venstre er under skæringsresultatet. Et værktøjstip viser relevansscoren og den relaterede procentdel af filer i gennemsynsfilen angivet i forhold til de samlede filer.
+  - **Distribution efter relevansscore**: Filer i den mørke grå skærm til venstre er under skæringsscoren. Et værktøjstip viser relevansscoren og den relaterede procentdel af filer i korrekturfilen, der er angivet i forhold til det samlede antal filer.
 
-Den udvidede **ruden Detaljer** viser flere detaljer. Filer i samlingsfigurer inkluderer ikke tomme eller overflødige filer. Tal for familiefiler repræsenterer filer, der ikke er indlæst med relevans, men stadig tælles som en del af familien.
+Den udvidede rude **Detaljer** viser flere detaljer. Filer i samlingsfigurer indeholder ikke tomme eller tågede filer. Familiefiler repræsenterer filer, der ikke er indlæst i Relevans, men stadig tælles som en del af familien.
