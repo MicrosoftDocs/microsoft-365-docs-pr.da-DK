@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Har du brug for en datastyringsløsning til Microsoft 365, der administrerer indhold af høj værdi for juridiske, forretningsmæssige eller lovmæssige forpligtelser, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske retningslinjer for at komme i gang.
-ms.openlocfilehash: 02c16f9d1a9d42f59cf8bc27bdee38bcc2d10d73
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: e73cb1a118235082978ee93efcdb77f5e5135f8c
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911384"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971467"
 ---
 # <a name="get-started-with-records-management"></a>Kom i gang med datastyring
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -44,21 +46,19 @@ Er du klar til at begynde at administrere din organisations indhold af høj vær
     - [Publicer opbevaringsmærkater, og anvend dem i apps](create-apply-retention-labels.md)
     - [Anvend automatisk en opbevaringsmærkat på indhold](apply-retention-labels-automatically.md)
 
-Uafhængigt af disse trin **skal du bruge connectors til at importere og arkivere tredjepartsdata** , der omfatter data fra sociale medieplatforme, chatplatforme og platforme til dokumentsamarbejde. Når disse data importeres til onlinepostkasser, understøtter de ikke kun dataadministration fra Microsoft 365 Overholdelse, men også andre løsninger til overholdelse af angivne standarder, f.eks. overholdelse af angivne standarder for kommunikation, styring af insiderrisiko og eDiscovery. Du kan finde flere oplysninger under [Få mere at vide om forbindelser til tredjepartsdata](archiving-third-party-data.md).
-
 ## <a name="subscription-and-licensing-requirements"></a>Abonnements- og licenskrav
 
 En række forskellige abonnementer understøtter datastyring, og licenskravene for brugere afhænger af de funktioner, du bruger.
 
-Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft 365 overholdelsesfunktioner, skal du se [Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Hvis du vil have administration af poster, skal du se afsnittet [Datastyring](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#records-management) og relateret PDF-download for at få licenskrav på funktionsniveau.
+Hvis du vil se indstillingerne for licensering af dine brugere, så de kan drage fordel af Microsoft Purview-funktioner, skal du se [Microsoft 365 licensvejledning for at få oplysninger om sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Hvis du vil have administration af poster, skal du se afsnittet [Microsoft Purview Records Management](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-records-management) og relateret PDF-download for at få licenskrav på funktionsniveau.
 
 ## <a name="permissions"></a>Tilladelser
 
-Medlemmer af dit overholdelsesteam, der er ansvarlige for datastyring, skal have tilladelser til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>. Lejeradministratoren (global administrator) har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang uden at give dem alle tilladelserne for en lejeradministrator. Hvis du vil give tilladelser til denne begrænsede administration, anbefaler vi, at du føjer brugere til rollegruppen **Administration af datastyring** , som giver tilladelser til alle funktioner, der er relateret til datastyring, herunder [dispositionsgennemsyn og bekræftelse](disposition.md).
+Medlemmer af overholdelsesteamet, der er ansvarlige for datastyring, skal have tilladelser til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>. Lejeradministratoren (global administrator) har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang uden at give dem alle tilladelserne for en lejeradministrator. Hvis du vil give tilladelser til denne begrænsede administration, anbefaler vi, at du føjer brugere til rollegruppen **Administration af datastyring** , som giver tilladelser til alle funktioner, der er relateret til datastyring, herunder [dispositionsgennemsyn og bekræftelse](disposition.md).
 
 For en skrivebeskyttet rolle kan du oprette en ny rollegruppe og føje rollen **Vis kun postadministration** til denne gruppe.
 
-Du kan finde oplysninger om, hvordan du føjer brugere til standardrollerne eller opretter dine egne rollegrupper, [under Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md).
+Du kan finde oplysninger om, hvordan du føjer brugere til standardrollerne eller opretter dine egne rollegrupper, [under Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md).
 
 Disse tilladelser kræves kun for at oprette, konfigurere og anvende opbevaringsmærkater, der deklarerer poster og administrerer disposition. Den person, der konfigurerer disse mærkater, kræver ikke adgang til indholdet.
 
@@ -67,7 +67,7 @@ Disse tilladelser kræves kun for at oprette, konfigurere og anvende opbevarings
 Brug følgende tabel som en hjælp til at knytte dine forretningskrav til de scenarier, der understøttes af datastyring.
 
 > [!TIP]
-> Har du brug for at overholde en specifik branchelovgivning? Se [Lovmæssige krav til styring af oplysninger og datastyring](retention-regulatory-requirements.md) for at få en regelspecifik vejledning.
+> Har du brug for at overholde en specifik branchelovgivning? Se [Lovmæssige krav til administration af datalivscyklus og datastyring](retention-regulatory-requirements.md) for at få en regelspecifik vejledning.
 
 |Jeg vil...|Dokumentation|
 |----------------|---------------|

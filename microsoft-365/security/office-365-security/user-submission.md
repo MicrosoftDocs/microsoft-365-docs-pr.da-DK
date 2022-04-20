@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4b86341434c05f18e1dd264b6fdabef8e36f2d29
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: a2e57c5dbfb8738eb9e554a3207679bfd48c6f60
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705357"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970865"
 ---
 # <a name="user-reported-message-settings"></a>Indstillinger for brugerrapporterede meddelelser
 
@@ -124,13 +124,16 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
    - **Knappen Sæt rapportmeddelelse i karantæne**: Aktivér denne funktion, hvis du vil lade slutbrugerne rapportere meddelelser fra karantæne.
 
-   Klik på **Bekræft**, når du er færdig. Hvis du vil rydde disse værdier, skal du klikke på **Gendan**
+3. Klik på **Bekræft**, når du er færdig. Klik på **Gendan** for at rydde disse værdier.
 
 ## <a name="third-party-reporting-tools"></a>Rapporteringsværktøjer fra tredjepart
 
 Du kan konfigurere værktøjer til rapportering af meddelelser fra tredjepart for at sende rapporterede meddelelser til den brugerdefinerede postkasse. Det gør du ved at angive **knappen Microsoft Outlook Rapportmeddelelse** til **Fra** og angive **Min organisations postkasse** til en Office 365 postkasse efter eget valg.
 
-Det eneste krav er, at den oprindelige meddelelse er inkluderet som en . EML eller . Den vedhæftede MSG-fil (ikke komprimeret) i den meddelelse, der sendes til den brugerdefinerede postkasse (videresend ikke kun den oprindelige meddelelse til den brugerdefinerede postkasse).
+Det eneste krav er, at den oprindelige meddelelse er inkluderet som en . EML eller . Den vedhæftede MSG-fil (ikke komprimeret) i den meddelelse, der sendes til den brugerdefinerede postkasse (videresend ikke kun den oprindelige meddelelse til den brugerdefinerede postkasse). 
+
+ > [!NOTE]
+ > Hvis der findes flere vedhæftede filer i mailen, kasseres indsendelsen. Vi understøtter kun mails med én vedhæftet fil.
 
 Kravene til meddelelsesformatering er beskrevet i næste afsnit. Formateringen er valgfri, men hvis den ikke følger det foreskrevne format, sendes rapporterne altid som phish.
 
@@ -151,6 +154,5 @@ Eksempel:
 
 - Begge disse meddelelser rapporteres som Ikke uønsket baseret på emne.
 - Resten ignoreres.
-
 
 Meddelelser, der ikke følger dette format, vises ikke korrekt på portalen Indsendelser.

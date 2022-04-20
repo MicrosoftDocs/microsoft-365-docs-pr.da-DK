@@ -1,5 +1,5 @@
 ---
-title: Få vist mailsikkerhedsrapporter
+title: Få vist sikkerhedsrapporter for mail
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 44d09eefb065ee204dd90980dfe710d6b3ddb88e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: d97442fc2c3767a30c1ea98dc4a1ee7a38e56b45
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666784"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970995"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -110,7 +110,6 @@ På **rapportsiden Exchange transportregel** er de tilgængelige diagrammer og d
 > [!NOTE]
 > **Rapporten Exchange transportregel** er nu tilgængelig i EAC. Du kan få flere oplysninger i [rapporten Exchange transportregel i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
 
-
 ### <a name="chart-breakdown-by-direction"></a>Diagramopdeling efter retning
 
 :::image type="content" source="../../media/transport-rule-report-etr-direction-view.png" alt-text="Retningsvisningen for Exchange transportregler i rapporten Exchange transportregel" lightbox="../../media/transport-rule-report-etr-direction-view.png":::
@@ -192,7 +191,7 @@ Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen på <https:/
 På **rapportsiden Mailflowstatus** er fanen **Type** valgt som standard. Diagrammet viser følgende oplysninger for det angivne datointerval:
 
 - **God mail**: Mail, der er besluttet på ikke at være spam, eller som er tilladt af bruger- eller organisationspolitikker.
-- **Samlede**
+- **I alt**
 - **Malware**: Mail, der er blokeret som malware af forskellige filtre.
 - **Phishingmail**: Mail, der er blokeret som phishing af forskellige filtre.
 - **Spam**: Mail, der er blokeret som spam af forskellige filtre.
@@ -478,7 +477,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -541,7 +540,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -592,7 +591,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -648,7 +647,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -716,7 +715,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -789,7 +788,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Pengeskab vedhæftede filer**
+  - **Sikre vedhæftede filer**
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -1068,7 +1067,7 @@ Hvis du vil have vist og bruge de rapporter, der er beskrevet i denne artikel, s
 
 Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-**Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+**Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="what-if-the-reports-arent-showing-data"></a>Hvad sker der, hvis rapporterne ikke viser data?
 

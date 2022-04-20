@@ -15,14 +15,16 @@ search.appverid:
 - MET150
 description: Vælg, hvordan du får vist indhold i eDiscovery (Premium), f.eks. tekst, anmærk, konverteret eller oprindelig visning.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 775804bd8e69e11bdacd1fee141234b07462dbef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8248eaa1fd8bce5c34bb8c936b9fecc0dd29deba
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945797"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992811"
 ---
 # <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Få vist dokumenter i et korrektursæt i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eDiscovery (Premium) viser indhold via flere seere med forskellige formål. De forskellige seere kan bruges ved at klikke på et hvilket som helst dokument i et korrektursæt. De seere, der i øjeblikket er angivet, er:
 
@@ -40,7 +42,7 @@ Dette panel kan slås til/fra for at vise forskellige metadata, der er knyttet t
 
 ## <a name="native-view"></a>Oprindelig visning
 
-Den oprindelige fremviser viser den rigeste visning af et dokument. Den understøtter hundredvis af filtyper og er beregnet til at vise den sandeste til den oprindelige oplevelse som muligt. I forbindelse med Microsoft Office-filer bruger fremviseren webversionen af Office-apps til at få vist indhold som dokumentkommentarer, Excel formler, skjulte rækker/kolonner og PowerPoint noter.
+Den oprindelige fremviser viser den rigeste visning af et dokument. Den understøtter hundredvis af filtyper og er beregnet til at vise den sandeste til den oprindelige oplevelse som muligt. I forbindelse med Microsoft Office-filer bruger seeren webversionen af Office-apps til at få vist indhold som dokumentkommentarer, Excel formler, skjulte rækker/kolonner og PowerPoint noter.
 
 ![Oprindelig visning
 ](../media/Reviewimage3.png)

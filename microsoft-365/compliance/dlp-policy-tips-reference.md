@@ -1,5 +1,5 @@
 ---
-title: Reference til tip til politik til forebyggelse af datatab
+title: Reference til politiktips til forebyggelse af datatab
 f1.keywords: CSH
 ms.author: chrfox
 author: chrfox
@@ -17,391 +17,393 @@ ms.collection:
 - M365-security-compliance
 - SPO_Content
 recommendations: false
-description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab) giver en bruger besked om, at de arbejder med indhold, der er i konflikt med en DLP-politik.
+description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab). Giv en bruger besked om, at brugeren arbejder med indhold, der er i konflikt med en DLP-politik.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 52bb2fba47c5588dc6a44eb5f8e1d7b745e69e70
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f9702916831839ac384cd262854fd0a88f90a8ea
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599376"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953655"
 ---
-# <a name="data-loss-prevention-policy-tips-reference"></a>Reference til tip til politik til forebyggelse af datatab
+# <a name="data-loss-prevention-policy-tips-reference"></a>Reference til politiktips til forebyggelse af datatab
 
-Tip til DLP-politik i Outlook Web Access understøttes for alle de betingelser, undtagelser og handlinger, der gælder for Exchange-arbejdsbelastningen i en DLP-politik med undtagelse af følgende:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Tip til DLP-politikker i Outlook Web Access understøttes for alle de betingelser, undtagelser og handlinger, der gælder for Exchange arbejdsbelastning i en DLP-politik, undtagen følgende:
 
 **Betingelser:**
 
 - Modtageren er medlem af
 - Sidehovedet indeholder ord eller udtryk
-- Sidehoved matcher mønstre
-- Meddelelsestype er
+- Header matcher mønstre
+- Meddelelsestypen er
 - Indholdstegnsæt indeholder ord
 - Har afsenderen tilsidesat politiktip
-- Meddelelsesstørrelse er lig med eller større end
-- Attributten Afsender-AD indeholder ord eller udtryk
-- Afsenderens AD-attribut svarer til mønstre
-- IP-afsenderintervaller
+- Meddelelsesstørrelsen er lig med eller større end
+- Afsender-AD-attributten indeholder ord eller udtryk
+- Afsender AD-attributten matcher mønstre
+- Afsenders IP-intervaller
 - Modtager-AD-attributten indeholder ord eller udtryk
-- Modtagerens AD-attribut svarer til mønstre
-- Dokumentnavn indeholder ord eller udtryk
-- Dokumentnavn matcher mønstre
+- Modtager-AD-attributten matcher mønstre
+- Dokumentnavnet indeholder ord eller udtryk
+- Dokumentnavnet stemmer overens med mønstre
 - Dokumentindhold indeholder ord eller udtryk
-- Dokumentindhold matcher mønstre
+- Dokumentindhold stemmer overens med mønstre
 
 **Handlinger:**
 
-- Videresende meddelelsen til godkendelse til afsenderens leder
-- Videresende meddelelsen til godkendelse til bestemte godkendere
+- Videresend meddelelsen til godkendelse til afsenderens chef
+- Videresend meddelelsen til godkendelse til bestemte godkendere
 - Omdiriger meddelelsen til bestemte brugere
 - Føj modtagere til feltet Til
-- Føj modtagere til feltet Cc
-- Føj modtagere til feltet Bcc
-- Tilføj afsenderens overordnede som modtager
+- Føj modtagere til cc-boksen
+- Føj modtagere til Bcc-boksen
+- Tilføj afsenderens chef som modtager
 - Tilføj HTML-ansvarsfraskrivelse
-- Forudindstillet mail-emne
+- Forudindstillet mailemne
 - Fjern O365-meddelelseskryptering og rettighedsbeskyttelse
 
-## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 og nyere understøtter visning af politiktip til kun visse betingelser og undtagelser
+## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 og nyere understøtter visning af politiktips for kun nogle betingelser og undtagelser
 
-Aktuelt understøtter Outlook 2013 og nyere visning af politiktip til politikker, som ikke indeholder nogen betingelser eller undtagelser, bortset fra de nedenstående betingelser og tilsvarende undtagelser:
+Outlook 2013 og nyere understøtter i øjeblikket visning af politiktips til politikker, der ikke indeholder nogen betingelse eller undtagelser bortset fra nedenstående betingelser og tilsvarende undtagelser:
 
 - Indhold indeholder (fungerer kun for typer af følsomme oplysninger. Følsomhedsmærkater understøttes ikke)
-- Indhold deles
+- Indholdet er delt
 
-Bemærk, at alle betingelserne fungerer for mails, der er Outlook i en klientapp, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Men visning af politiktip til brugere understøttes ikke for eventuelle betingelser, der bruges, bortset fra dem, der er nævnt ovenfor.
+Bemærk, at alle betingelser fungerer for mails, der er oprettet i Outlook klientapp, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Visning af politiktip til brugere understøttes dog ikke for nogen betingelser, der bruges ud over dem, der er nævnt ovenfor.
 
-## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 og nyere og Office-apps på skrivebordssupport, der viser politiktip til nogle typer af følsomme oplysninger
+## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 og nyere og Office apps på Desktop support, der viser politiktips til kun nogle følsomme oplysningstyper
 
-Listen over følsomme oplysningstyper, der er klar til at vise tip til DLP-politik i Outlook på skrivebordet (2013 og nyere) og Office-apps (Word, Excel, PowerPoint) på skrivebordet er følgende:
+Listen over indbyggede følsomme oplysningstyper, der registreres til visning af tip til DLP-politikker i Outlook på Desktop (2013 og nyere) og Office apps (Word, Excel, PowerPoint) på Desktop er følgende:
 
-- ABA-registreringsnummer
-- Argentina National Identity (DNI) Number
+- ABA-routingnummer
+- Argentinas nationale identitet (DNI)-nummer
 - Australiens bankkontonummer
-- Australia Medical Account-nummer
-- Australiens pasnummer
+- Nummer på medicinsk konto i Australien
+- Australiens passport-nummer
 - Australiens skattefilnummer
-- Azure DocumentDB Auth-nøgle  
-- Forbindelsesstreng for Azure IAAS-database og Azure SQL forbindelsesstreng  
+- Godkendelsesnøgle til Azure DocumentDB  
+- Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng  
 - Azure IoT-forbindelsesstreng  
-- Indstillingsadgangskode til Azure-publicering  
-- Azure Redis Cache Connection String  
+- Adgangskode til indstilling for Azure Publish  
+- Forbindelsesstreng til Azure Redis-cache  
 - Azure SAS  
 - Azure Service Bus forbindelsesstreng  
 - Azure Storage kontonøgle  
-- Azure Storage kontonøgle (Generic)  
+- Azure Storage kontonøgle (generisk)  
 - Belgiens nationale nummer
-- Brasiliens CPF-nummer
-- Brasiliens juridiske enhedsnummer (CNPJ)
-- Brasiliens nationale id-kort (RG)
+- BrasilienS CPF-nummer
+- Juridisk enhedsnummer for Brasilien (CNPJ)
+- Nationalt id-kort for Brasilien (RG)
 - Canadas bankkontonummer
-- Canada Kørekortnummer
-- Canada Tilstandstjeneste tal
+- Canadas kørekortsnummer
+- Canada Tilstandstjeneste-nummer
 - Canada Passport-nummer
 - Canada Personal Health Identification Number (PHIN)
 - Canada Social Insurance Number
-- Chile Identity Card Number
-- Kinas iboende identitetskort (Folkerepublikken Kina)
+- Chiles identitetskortnummer
+- Kina Resident Identity Card (PRC) Number
 - Kreditkortnummer
 - Kroatiens identitetskortnummer  
-- OIB-nummer (Croatia Personal Identification)  
-- Tjekkisk personligt identitetsnummer  
-- Danmark Personligt identifikationsnummer
-- Drug Enforcement Agency (DEA) Number
+- Personidentifikationsnummer for Kroatien (OIB)  
+- Tjekkisk personligt id-nummer  
+- Danmark Personidentifikationsnummer
+- Nummer på drug enforcement agency (DEA)
 - EU-debetkortnummer
-- EU-kørekortnummer  
-- EU-national identifikationsnummer  
+- EU-kørekortsnummer  
+- EU-nationalt identifikationsnummer  
 - EU-pasnummer  
-- EU Cpr-nummer (SSN) eller tilsvarende id  
+- EU-cpr-nummer (SSN) eller tilsvarende id  
 - EU-skatteidentifikationsnummer (TIN)  
 - Finlands nationale id
-- Finland-pasnummer
-- Frankrigs kørekortnummer
-- France National ID Card (CNI)
-- Frankrigs pasnummer
-- France Social Security Number (INSEE)
-- Tysk kørekortnummer
+- Finlands pasnummer
+- Frankrigs kørekortsnummer
+- Nationalt id-kort for Frankrig (CNI)
+- France Passport-nummer
+- Det franske cpr-nummer (INSEE)
+- Tysk kørekortsnummer
 - Tysk pasnummer
 - Tysklands identitetskortnummer
-- Grækenlands nationale id-kort  
-- Hong Kong Identity Card (HKID) Number
-- India Permanent Account Number (PAN)
-- Indiens entydige identifikationsnummer (Aadhaar)
-- Indonesia Identity Card (KTP) Number
-- International Banking Account Number (IBAN)
-- International klassificering af klassifikationer (ICD-10-CM)  
-- International klassificering af klassifikationer (ICD-9-CM)  
+- Nationalt id-kort for Grækenland  
+- HKID-nummer (Hong Kong Identity Card)
+- Permanent kontonummer for Indien (PAN)
+- Entydigt id for Indien (Aadhaar)
+- Indonesiens identitetskortnummer (KTP)
+- Internationalt bankkontonummer (IBAN)
+- International klassificering af sygdomme (ICD-10-CM)  
+- International klassificering af sygdomme (ICD-9-CM)  
 - IP-adresse
-- Ireland Personal Public Service-nummer (PPS) 
+- Irlands personlige offentlige tjeneste (PPS)-nummer 
 - Israels bankkontonummer
 - Israels nationale id
-- Italiens kørekortnummer
+- Italiens kørekortsnummer
 - Japans bankkontonummer
-- Japan Kørekortnummer
-- Japan-pasnummer
-- Japan Resident Registration Number
+- Japans kørekortsnummer
+- Pasnummer til Japan
+- Registreringsnummer for residenter i Japan
 - Japan Social Insurance Number (SIN)
 - Japansk bopælskortnummer
-- Malaysia Identity Card-nummer
-- Nederlandske borgeres servicenummer  
-- New Zealand Det sundhedstilstandsnummer, der er gerningsnummeret
+- Malaysias identitetskortnummer
+- BSN-nummer (Netherlands Citizen's Service)  
+- New Zealands sundhedsministerium
 - Norges identitetsnummer  
-- Philippines Unified Multi-Purpose ID Number
+- Filippinerne Unified Multi-Purpose ID-nummer
 - Polens identitetskort
-- Polens nationale id (PESEL)
+- Nationalt id for Polen (PESEL)
 - Polens pas
-- Portugals borgeres kortnummer
+- Nummer på portugals borgerkort
 - Saudi-Arabiens nationale id
-- Singapores nationale registreringsidentitetskort (NRIC)-nummer
+- NRIC-nummer (National Registration Identity Card) for Singapore
 - Sydafrikas identifikationsnummer  
-- South Korea Resident Registration Number
-- CPR-nummer (Spain Social Security Number)
+- Registreringsnummer for residenter i Sydkorea
+- Spanien Cpr-nummer (SSN)
 - SQL Server forbindelsesstreng  
-- Sveriges nationale id
+- Nationalt id for Sverige
 - Sveriges pasnummer
 - SWIFT-kode
 - Taiwans nationale id
-- Taiwan-pasnummer
+- Taiwans pasnummer
 - Taiwan Resident Certificate (ARC/TARC)
-- Identifikationskode for den thailandske befolkning
+- Thai population-id-kode
 - Tyrkisk nationalt identifikationsnummer
-- Storbritannien Kørekortnummer
-- Storbritannien Tilvalgsrullenummer
-- Storbritannien Nationalt Tilstandstjeneste nummer
-- Storbritannien Nationalt forsikringsnummer (NINO)
-- USA/Storbritannien Pasnummer
-- USA Bankkontonummer
-- USA Kørekortnummer
-- USA Id-nummer for individuelle skatteydere (ITIN)
-- USA CPR-nummer (SSN)
+- STORBRITANNIEN. Kørekortsnummer
+- STORBRITANNIEN. Valgrullenummer
+- STORBRITANNIEN. Nationalt Tilstandstjeneste nummer
+- STORBRITANNIEN. NINO (National Insurance Number)
+- Amerikansk/britisk Passport-nummer
+- Amerikansk bankkontonummer
+- Amerikansk kørekortsnummer
+- Id-nummer for individuelle amerikanske skatteborgere (ITIN)
+- SSN (US Social Security Number)
 
-Bemærk, at brugerdefinerede typer af følsomme oplysninger også understøttes til tip til DLP-politikker ud over de ovenstående typer af følsomme oplysninger, der er klar til brug.
+Bemærk, at brugerdefinerede typer af følsomme oplysninger også understøttes for tip til DLP-politikker ud over ovenstående indbyggede typer følsomme oplysninger.
 
-## <a name="data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types"></a>Forebyggelse af datatab på slutpunktsenheder understøtter politiktip til kun visse typer af følsomme oplysninger
+## <a name="data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types"></a>Forebyggelse af datatab på slutpunktsenheder understøtter kun politiktip til nogle følsomme oplysningstyper
 
-Listen over følsomme oplysningstyper, der er klar til brug i dokumenter, der er bosiddende på slutpunktsenheder, er følgende:
+Listen over indbyggede følsomme oplysningstyper, der registreres i dokumenter, der findes på slutpunktsenheder, er følgende:
 
-- ABA-registreringsnummer 
-- Argentina National Identity (DNI) Number 
+- ABA-routingnummer 
+- Argentinas nationale identitet (DNI)-nummer 
 - Australiens bankkontonummer 
-- Australia Medical Account-nummer 
-- Australiens pasnummer 
+- Nummer på medicinsk konto i Australien 
+- Australiens passport-nummer 
 - Australiens skattefilnummer 
-- Australske forretningsnummer 
-- Australske firmanummer 
-- Østrigs kørekortnummer 
+- Australsk virksomhedsnummer 
+- Australsk firmanummer 
+- Østrigs kørekortsnummer 
 - Østrigs identitetskort 
-- Østrigs pasnummer 
-- Østrigs CPR-nummer 
-- Skatte-id for Østrig 
-- Momsnummer (moms) i Østrig 
-- Azure DocumentDB Auth-nøgle 
-- Forbindelsesstreng for Azure IAAS-database og Azure SQL forbindelsesstreng 
+- Pasnummer for Østrig 
+- Det østrigske cpr-nummer 
+- Østrigs skatteidentifikationsnummer 
+- Momsnummer for Østrig 
+- Godkendelsesnøgle til Azure DocumentDB 
+- Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng 
 - Azure IoT-forbindelsesstreng 
-- Indstillingsadgangskode til Azure-publicering 
-- Azure Redis Cache Connection String 
+- Adgangskode til indstilling for Azure Publish 
+- Forbindelsesstreng til Azure Redis-cache 
 - Azure SAS 
 - Azure Service Bus forbindelsesstreng 
 - Azure Storage kontonøgle 
-- Azure Storage kontonøgle (Generic) 
-- Belgiens kørekortnummer 
+- Azure Storage kontonøgle (generisk) 
+- Belgiens kørekortsnummer 
 - Belgiens nationale nummer 
-- Belgiens pasnummer 
-- Belgiens momsnummer for moms 
-- Brasiliens CPF-nummer 
-- Brasiliens juridiske enhedsnummer (CNPJ) 
-- Brasiliens nationale id-kort (RG) 
-- Bulgariens kørekortnummer 
+- Belgien Passport-nummer 
+- Belgien Momsnummer 
+- BrasilienS CPF-nummer 
+- Juridisk enhedsnummer for Brasilien (CNPJ) 
+- Nationalt id-kort for Brasilien (RG) 
+- Bulgariens kørekortsnummer 
 - Bulgariens pasnummer 
-- Bulgariens uniformsnummer 
+- Bulgariens ensartede civilnummer 
 - Canadas bankkontonummer 
-- Canada Kørekortnummer 
-- Canada Tilstandstjeneste tal 
+- Canadas kørekortsnummer 
+- Canada Tilstandstjeneste-nummer 
 - Canada Passport-nummer 
 - Canada Personal Health Identification Number (PHIN) 
 - Canada Social Insurance Number 
-- Chile Identity Card Number 
-- Kinas iboende identitetskort (Folkerepublikken Kina) 
+- Chiles identitetskortnummer 
+- Kina Resident Identity Card (PRC) Number 
 - Kreditkortnummer 
-- Kroatiens kørekortnummer 
+- Kroatiens kørekortsnummer 
 - Kroatiens identitetskortnummer 
-- Kroatiens nationale id-kortnummer 
+- Nationalt id-kortnummer for Kroatien 
 - Kroatiens pasnummer 
-- OIB-nummer (Croatia Personal Identification) 
+- Personidentifikationsnummer for Kroatien (OIB) 
 - CSCAN-AZURE0060 Azure Storage-kontos delte adgangssignatur 
 - CSCAN-GENERAL0140 Generel symmetrisk nøgle 
-- Cyperns kørekortnummer 
-- Cypernsidentitetskort 
+- Cyperns kørekortsnummer 
+- Cyperns identitetskort 
 - Cyperns pasnummer 
-- Cyperns skatte-id 
-- Tjekkisk kørekortnummer 
-- Tjekkisk personligt identitetsnummer 
-- Tjekkisk pasnummer 
-- Danmark Kørekortnummer 
-- Danmark pasnummer 
-- Danmark Personligt identifikationsnummer 
-- Drug Enforcement Agency (DEA) Number 
-- Estlands kørekortnummer 
-- Estlands pasnummer 
-- Estlands personlige identifikationskode 
+- Cyperns skatteidentifikationsnummer 
+- Tjekkisk kørekortsnummer 
+- Tjekkisk personligt id-nummer 
+- Pasnummer for Tjekkiet 
+- Danmarks kørekortsnummer 
+- Danmark Passport-nummer 
+- Danmark Personidentifikationsnummer 
+- Nummer på drug enforcement agency (DEA) 
+- Estlands kørekortsnummer 
+- Estisk pasnummer 
+- Personidentifikationskode for Estland 
 - EU-debetkortnummer 
-- EU-kørekortnummer 
-- EU-national identifikationsnummer 
+- EU-kørekortsnummer 
+- EU-nationalt identifikationsnummer 
 - EU-pasnummer 
-- EU Cpr-nummer (SSN) eller tilsvarende id 
+- EU-cpr-nummer (SSN) eller tilsvarende id 
 - EU-skatteidentifikationsnummer (TIN) 
-- Finlands kørekortnummer 
-- Finland European Health Insurance Number 
+- Finlands kørekortsnummer 
+- Finland Europæisk sygesikringsnummer 
 - Finlands nationale id 
-- Finland-pasnummer 
-- Frankrigs kørekortnummer 
-- France Health Insurance Number 
-- France National ID Card (CNI) 
-- Frankrigs pasnummer 
-- France Social Security Number (INSEE) 
-- France Tax Identification Number (numéro SPI.) 
-- Momsnummer for Frankrigs momsnummer 
-- Tysk kørekortnummer 
+- Finlands pasnummer 
+- Frankrigs kørekortsnummer 
+- Frankrig Sygesikringsnummer 
+- Nationalt id-kort for Frankrig (CNI) 
+- France Passport-nummer 
+- Det franske cpr-nummer (INSEE) 
+- Frankrigs skatteidentifikationsnummer (numéro SPI.) 
+- Momsnummer for Frankrig 
+- Tysk kørekortsnummer 
 - Tysk pasnummer 
 - Tysklands identitetskortnummer 
-- Tysklands skatte-id 
-- Tysklands momsnummer (moms) 
-- Grækenlands kørekortnummer 
-- Grækenlands nationale id-kort 
+- Tysklands skatteidentifikationsnummer 
+- Momsnummer for Tyskland 
+- Grækenlands kørekortsnummer 
+- Nationalt id-kort for Grækenland 
 - Grækenlands pasnummer 
-- Grækenlands CPR-nummer (AMKA) 
-- Græsk skatte-id 
-- Hong Kong Identity Card (HKID) Number 
-- Ungarsk CPR-nummer (DEN UNGARSKE CPR-NUMMER) 
-- Ungarsk værdi tilføjet momsnummer 
-- Ungarns kørekortnummer 
-- Ungarns pasnummer 
-- Ungarns personlige identifikationsnummer 
-- Ungarns skatteidentifikationsnummer 
-- India Permanent Account Number (PAN) 
-- Indiens entydige identifikationsnummer (Aadhaar) 
-- Indonesia Identity Card (KTP) Number 
-- International Banking Account Number (IBAN) 
-- International klassificering af klassifikationer (ICD-10-CM) 
-- International klassificering af klassifikationer (ICD-9-CM) 
+- Det græske cpr-nummer (AMKA) 
+- Græsk skatteidentifikationsnummer 
+- HKID-nummer (Hong Kong Identity Card) 
+- Ungarsk cpr-nummer (TAJ) 
+- Ungarsk momsnummer 
+- Ungarns kørekortsnummer 
+- Ungarn Pasnummer 
+- Ungarns personidentifikationsnummer 
+- Ungarn Skatteidentifikationsnummer 
+- Permanent kontonummer for Indien (PAN) 
+- Entydigt id for Indien (Aadhaar) 
+- Indonesiens identitetskortnummer (KTP) 
+- Internationalt bankkontonummer (IBAN) 
+- International klassificering af sygdomme (ICD-10-CM) 
+- International klassificering af sygdomme (ICD-9-CM) 
 - IP-adresse 
-- Irlands kørekortnummer 
+- Irlands kørekortsnummer 
 - Irlands pasnummer 
-- Ireland Personal Public Service-nummer (PPS) 
+- Irlands personlige offentlige tjeneste (PPS)-nummer 
 - Israels bankkontonummer 
 - Israels nationale id 
-- Italiens kørekortnummer 
+- Italiens kørekortsnummer 
 - Italiens regnskabskode 
-- Italiens pasnummer 
-- Momsnummer for italiener tilføjet moms 
+- Pasnummer til Italien 
+- Italien Momsnummer 
 - Japans bankkontonummer 
-- Japan Kørekortnummer 
-- Japan-pasnummer 
-- Japan Resident Registration Number 
+- Japans kørekortsnummer 
+- Pasnummer til Japan 
+- Registreringsnummer for residenter i Japan 
 - Japan Social Insurance Number (SIN) 
-- Japanese My Number Corporate 
-- Japansk Mit nummer Personligt 
+- Japansk mit nummer firma 
+- Japansk mit personlige nummer 
 - Japansk bopælskortnummer 
-- Letland Kørekortnummer 
+- Letlands kørekortsnummer 
 - Letlands pasnummer 
-- Letlands personlige kode 
-- Litauens kørekortnummer 
+- Letlands personlige kodeks 
+- Litauens kørekortsnummer 
 - Litauens pasnummer 
 - Litauens personlige kode 
-- Luxemburg kørekortnummer 
-- Luxemburgs nationale identifikationsnummer (fysiske personer) 
-- Luxemburgs nationale identifikationsnummer (ikke-naturlige personer) 
-- Luxemburg pasnummer 
-- Malaysia Identity Card-nummer 
-- Maltas kørekortnummer 
+- Luxemburg-kørekortsnummer 
+- Luxembourgs nationale identifikationsnummer (fysiske personer) 
+- Luxembourgs nationale identifikationsnummer (ikke-fysiske personer) 
+- Luxemburg Passport-nummer 
+- Malaysias identitetskortnummer 
+- Maltas kørekortsnummer 
 - Maltas identitetskortnummer 
 - Maltas pasnummer 
-- Maltas skatte-id 
-- Nederlandske borgeres servicenummer 
-- Nederlandsk kørekortnummer 
+- Maltas skatte-id-nummer 
+- BSN-nummer (Netherlands Citizen's Service) 
+- Nederlandsk kørekortsnummer 
 - Nederlandsk pasnummer 
-- Nederlandsk skatte-id 
-- Nederlandsk momsnummer (moms) 
-- New Zealand bankkontonummer 
-- New Zealand-kørekortnummer 
-- New Zealand Inland Revenue-nummer 
-- New Zealand Det sundhedstilstandsnummer, der er gerningsnummeret 
-- New Zealand Social Integration Number 
+- Nederlandsk skatteidentifikationsnummer 
+- Nederlandsk momsnummer 
+- New Zealands bankkontonummer 
+- New Zealand-driverlicensnummer 
+- New Zealands omsætningsnummer 
+- New Zealands sundhedsministerium 
+- Velfærdsnummer for New Zealand 
 - Norges identitetsnummer 
-- Philippines Unified Multi-Purpose ID Number 
-- Polens kørekortnummer 
+- Filippinerne Unified Multi-Purpose ID-nummer 
+- Polens kørekortsnummer 
 - Polens identitetskort 
-- Polens nationale id (PESEL) 
+- Nationalt id for Polen (PESEL) 
 - Polens pas 
-- Polens skatte-id 
-- Polsk REGON-nummer 
-- Portugals borgeres kortnummer 
-- Portugal Kørekortnummer 
-- Portugal-pasnummer 
-- Portugals skatte-id 
-- Rumæniens kørekortnummer 
-- Rumæniens pasnummer 
+- Polens skatteidentifikationsnummer 
+- Polsk REGON-tal 
+- Nummer på portugals borgerkort 
+- Portugals kørekortsnummer 
+- Pasnummer til Portugal 
+- Portugals skatteidentifikationsnummer 
+- Rumæniens kørekortsnummer 
+- Rumænien Passport-nummer 
 - Rumæniens personlige numeriske kode (CNP) 
-- Russisk pasnummer (indenrigs) 
+- Russisk pasnummer (indenlandsk) 
 - Russisk pasnummer (international) 
 - Saudi-Arabiens nationale id 
-- Singapores nationale registreringsidentitetskort (NRIC)-nummer 
-- Slovakiets kørekortnummer 
+- NRIC-nummer (National Registration Identity Card) for Singapore 
+- Slovakiets kørekortsnummer 
 - Slovakiets pasnummer 
 - Slovakiets personlige nummer 
-- Sloveniens kørekortnummer 
+- Sloveniens kørekortsnummer 
 - Sloveniens pasnummer 
-- Sloveniens skatte-id 
-- Sloveniens entydige masternummer for borgere 
+- Sloveniens skatteidentifikationsnummer 
+- Sloveniens entydige masterborgernummer 
 - Sydafrikas identifikationsnummer 
-- South Korea Resident Registration Number 
-- Spain DNI 
-- Spanien-kørekortnummer 
+- Registreringsnummer for residenter i Sydkorea 
+- Spanien DNI 
+- Spaniens kørekortsnummer 
 - Spaniens pasnummer 
-- CPR-nummer (Spain Social Security Number) 
-- Spaniens skatte-id 
+- Spanien Cpr-nummer (SSN) 
+- Spaniens skatteidentifikationsnummer 
 - SQL Server forbindelsesstreng 
-- Sveriges kørekortnummer 
-- Sveriges nationale id 
+- Sveriges kørekortsnummer 
+- Nationalt id for Sverige 
 - Sveriges pasnummer 
-- Sveriges skatte-id 
+- Sveriges skatteidentifikationsnummer 
 - SWIFT-kode 
-- Schweizisk CPR-nummer AHV 
+- Swiss Social Security Number AHV 
 - Taiwans nationale id 
-- Taiwan-pasnummer 
+- Taiwans pasnummer 
 - Taiwan Resident Certificate (ARC/TARC) 
-- Identifikationskode for den thailandske befolkning 
+- Thai population-id-kode 
 - Tyrkisk nationalt identifikationsnummer 
-- Storbritannien Kørekortnummer 
-- Storbritannien Tilvalgsrullenummer 
-- Storbritannien Nationalt Tilstandstjeneste nummer 
-- Storbritannien Nationalt forsikringsnummer (NINO) 
-- Storbritannien Entydigt skatteyders referencenummer 
-- USA/Storbritannien Pasnummer 
-- USA Bankkontonummer 
-- USA Kørekortnummer 
-- USA Id-nummer for individuelle skatteydere (ITIN) 
-- USA CPR-nummer (SSN) 
-- Ukraines pasnummer (indenrigs) 
-- Ukraines pasnummer (internationale) 
+- STORBRITANNIEN. Kørekortsnummer 
+- STORBRITANNIEN. Valgrullenummer 
+- STORBRITANNIEN. Nationalt Tilstandstjeneste nummer 
+- STORBRITANNIEN. NINO (National Insurance Number) 
+- STORBRITANNIEN. Entydigt referencenummer for skatteborger 
+- Amerikansk/britisk Passport-nummer 
+- Amerikansk bankkontonummer 
+- Amerikansk kørekortsnummer 
+- Id-nummer for individuelle amerikanske skatteborgere (ITIN) 
+- SSN (US Social Security Number) 
+- Ukraines pasnummer (indenlandsk) 
+- Ukraines passport-nummer (international) 
  
-Bemærk, at brugerdefinerede typer af følsomme oplysninger også registreres ud over de ovenstående typer af følsomme oplysninger
+Bemærk, at brugerdefinerede følsomme informationstyper også vil blive registreret ud over ovenstående indbyggede typer følsomme oplysninger
 
-## <a name="support-matrix-for-dlp-policy-tips-across-microsoft-apps"></a>Supportmatrix til DLP-politiktips på tværs af Microsoft-apps
+## <a name="support-matrix-for-dlp-policy-tips-across-microsoft-apps"></a>Supportmatrix til tip til DLP-politik på tværs af Microsoft-apps
 
-|**App og platform**|**Understøttelse af DLP-politiktip**|**Typer af følsomme oplysninger understøttes**|**Understøttede prædikater og handlinger**|**Kommentarer**|
+|**App og platform**|**Understøttelse af DLP-politiktip**|**Understøttede typer følsomme oplysninger**|**Understøttede prædikater og handlinger**|**Kommentarer**|
 |:--|:--|:--|:--|:--|
-|**Outlook på internettet**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alle|delmængde||
-|**Outlook Win32 (ver. 2105 build 14026.20000 og halvårlige kanal ver. 2102 build 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|delmængde|delmængde|Se [Outlook 2013](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) og nyere understøtter visning af politiktip til kun visse betingelser og undtagelser og [Outlook 2013 og nyere og Office-apps](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) på skrivebordssupport, der viser politiktip til nogle typer af følsomme oplysninger for at få mere at vide om understøttelse af typer af følsomme oplysninger og DLP-betingelser og handlinger, der understøttes til at vise tips til DLP-politikker på Outlook  Win32.|
-|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|ingen|ingen|Tips til DLP-politik understøttes ikke på Outlook mobile|
-|**SharePoint Online/OneDrive for Business-webklient**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alle|alle SPO-/ODB-prædikater og handlinger i DLP||
-|**SharePoint Win32/OneDrive for Business Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|ingen|ingen|Tip til DLP-politik understøttes ikke SharePoint eller OneDrive-klientprogrammer på computeren|
-|**Word-, Excel-, PowerPoint-webklient**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alle|alle SPO-/ODB-prædikater og handlinger i DLP|Tip til DLP-politik understøttes, hvis dokumentet er hostet på SPO- eller ODB-webappen, og DLP-politikken allerede er stemplet.|
-|**Word-, Excel-, PowerPoint Mobile klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|ingen|ingen|Tip til DLP-politik understøttes ikke i mobilapps til Office.|
-|**Teams Web/ Teams-computer/ Teams Mobile/ Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alle|alle Teams prædikater i DLP-politik|Politiktip vises, når en meddelelse er markeret med flag som "Denne meddelelse er blevet markeret med flag. Hvad kan jeg gøre?" Når brugeren klikker på linket, kan brugeren gennemse de følsomme oplysningstyper, der registreres og tilsidesættes, eller rapportere et problem, hvis administratoren tillader det. Bemærk, at der ikke vises politiktip for filer. Når modtageren forsøger at få adgang til dokumentet, får de muligvis nægtet adgang, hvis det ikke er tilladt.|
-|**Win32-slutpunktsenheder**|:::image type="icon" source="../media/rightmrk.png" border="false":::|delmængde|alle slutpunkts-DLP-prædikater og handlinger i DLP-politik|Se [Forebyggelse af datatab på slutpunkt understøtter politiktip til kun nogle typer af følsomme oplysninger](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
-|**macOS-enheder (forhåndsvisning)**|kun standardtip|alle|delmængde|Politikker til forebyggelse af datatab kan håndhæves på macOS-enheder. Brugerdefinerede politiktip understøttes ikke.|
-|**Tredjepartsskyapps**|:::image type="icon" source="../media/crsmrk.png" border="false":::|ingen|ingen|Tip til politik til forebyggelse af datatab understøttes ikke i tredjepartsskyapps|
-|**On-prem**|:::image type="icon" source="../media/crsmrk.png" border="false":::|ingen|ingen||
-|**Word-, Excel-, PowerPoint Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|delmængde|delmængde|Se en [Outlook 2013 og nyere og Office-apps](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) på skrivebordssupport, der viser politiktip til kun nogle typer af følsomme oplysninger for listen over typer af følsomme oplysninger, der understøttes</br></br>Politiktip til WXP-klientapps fungerer for dokumenter, der er gemt på SharePoint Online- eller OneDrive for Business-websteder for alle DLP-politikker, som har nøjagtigt nedenstående eller et undersæt af betingelser eller handlinger i DLP-politikken:</br> <ul><li>Indhold indeholder følsomme oplysningstyper</li><li>Adgangsomfang (indhold deles internt/eksternt)</li><li>Giv bruger besked (politiktip/brugermeddelelser)</li><li>Bloker alle</li><li>Hændelsesrapporter</li></ul></br> Hvis en anden betingelse eller handling er til stede, vises DLP-politiktip for den pågældende politik ikke i skrivebordsappsene i Word, Excel eller PowerPoint.</br>Se [Politiktip i Excel, PowerPoint og Word for at](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) få mere at vide|
+|**Outlook på internettet**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|Undersæt||
+|**Outlook Win32 (ver. 2105 build 14026.20000 og halvårlig kanalvers. 2102 build 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Undersæt|Undersæt|Se [Outlook 2013 og nyere understøtter visning af politiktips for kun nogle betingelser og undtagelser](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) og [Outlook 2013 og nyere og Office apps på Desktop-support, der viser politiktips for kun nogle følsomme oplysningstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for at få oplysninger om understøttelse af følsomme informationstyper og DLP-betingelser og handlinger, der understøttes for at vise tip til DLP-politik på Outlook  Win32.|
+|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke på Outlook mobil|
+|**webklienten SharePoint online/OneDrive for Business**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP||
+|**SharePoint Win32/OneDrive for Business Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i SharePoint eller OneDrive klientapps til stationære computere|
+|**Webklienten Word, Excel PowerPoint**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP|DLP-politiktip understøttes, hvis dokumentet hostes på SPO- eller ODB-webappen, og DLP-politikken allerede er stemplet.|
+|**Word, Excel, PowerPoint Mobile Client**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i mobilapps til Office.|
+|**Teams Web/Teams Desktop/Teams Mobile/Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle Teams prædikater i DLP-politik|Politiktips vises, når en meddelelse er markeret som "Denne meddelelse er blevet markeret med flag. Hvad kan jeg gøre?" Når brugeren klikker på linket, kan vedkommende gennemse de registrerede følsomme oplysningstyper og tilsidesætte eller rapportere et problem, hvis det er tilladt af administratoren. Bemærk, at der ikke vises nogen politiktip til filer. Når modtageren forsøger at få adgang til dokumentet, kan vedkommende blive nægtet adgang, hvis den ikke er tilladt.|
+|**Win32-slutpunktsenheder**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Undersæt|alle DLP-prædikater og handlinger for slutpunkter i DLP-politikken|Se [Forebyggelse af datatab på Slutpunkt understøtter politiktip for kun nogle følsomme oplysningstyper](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
+|**macOS-enheder**|kun standardtip|Alle|Undersæt|Politikker til forebyggelse af datatab kan gennemtvinges på macOS-enheder. Brugerdefinerede politiktip understøttes ikke.|
+|**Tredjepartscloudapps**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til politikker til forebyggelse af datatab understøttes ikke i tredjepartscloudapps|
+|**I det lokale miljø**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen||
+|**Word, Excel, PowerPoint Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Undersæt|Undersæt|Se [Outlook 2013 og nyere og Office apps på Desktop Support, der viser politiktip til kun nogle følsomme informationstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for listen over understøttede følsomme oplysningstyper</br></br>Politiktips til WXP-klientapps fungerer for dokumenter, der er gemt på SharePoint Online eller OneDrive for Business-websteder for alle DLP-politikker, som har præcis nedenstående eller et undersæt af betingelser eller handlinger i DLP-politikken:</br> <ul><li>Indhold indeholder følsomme oplysningstyper</li><li>Adgangsområde (indhold deles internt/eksternt)</li><li>Giv brugeren besked (politiktip/brugermeddelelser)</li><li>Bloker alle</li><li>Hændelsesrapporter</li></ul></br> Hvis der findes en anden betingelse eller handling, vises DLP-politiktip for den pågældende politik ikke i Desktop-apps i Word, Excel eller PowerPoint.</br>Se [Politiktips i Excel, PowerPoint og Word for at](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) få flere oplysninger|
 ||||||

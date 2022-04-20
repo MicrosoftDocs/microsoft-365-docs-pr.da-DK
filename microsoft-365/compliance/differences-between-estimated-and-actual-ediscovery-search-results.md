@@ -19,19 +19,21 @@ search.appverid:
 - MET150
 ms.assetid: 8f20ca4f-a908-46ec-99e6-9890d269ecf2
 description: Forstå, hvorfor anslåede og faktiske søgeresultater kan variere i søgninger, der køres med eDiscovery-værktøjer i Office 365.
-ms.openlocfilehash: b1e4ba4938e418d8364dfb06b24b6f7a58d6a463
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a71b246b71e7b3cca3ef361510042b6292c36c8b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938153"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993946"
 ---
 # <a name="differences-between-estimated-and-actual-ediscovery-search-results"></a>Forskelle mellem anslåede og faktiske eDiscovery-søgeresultater
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Denne artikel gælder for søgninger, som du kan køre ved hjælp af et af følgende Microsoft 365 eDiscovery-værktøjer: 
 
 - Indholdssøgning
-- eDiscovery (standard)
+- eDiscovery (Standard)
 
 Når du kører en eDiscovery-søgning, returnerer det værktøj, du bruger, et estimat over antallet af elementer (og deres samlede størrelse), der svarer til søgekriterierne. Når du f.eks. kører en søgning på Microsoft Purview-overholdelsesportalen, vises de anslåede søgeresultater på pop op-siden for den valgte søgning.
   

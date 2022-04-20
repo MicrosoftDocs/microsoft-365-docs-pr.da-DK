@@ -14,16 +14,18 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du bevarer, indsamler, gennemser og eksporterer indhold fra Microsoft Teams i eDiscovery (Premium).
-ms.openlocfilehash: 21f6149d8a1c1114ab0d2d293af710690f74c6e5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4dc516037e1ccad41c7ed93f280d698ca6bd164c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948391"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991902"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>eDiscovery-arbejdsproces (Premium) for indhold i Microsoft Teams
 
-Denne artikel indeholder en omfattende række procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsproces til Teams indhold.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Denne artikel indeholder et omfattende sæt procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsproces til Teams indhold.
 
 Der er fem kategorier af Teams indhold, som du kan indsamle og behandle ved hjælp af eDiscovery (Premium):
 
@@ -43,14 +45,14 @@ En forudsætning for at administrere Teams indhold i eDiscovery (Premium) er at 
 
 |&nbsp;|Placering af chatbeskeder og -indlæg|Placering af filer og vedhæftede filer|
 |---|---|---|
-|Teams 1:1 chats|Meddelelser i 1:1 chats gemmes i alle chatdeltageres Exchange Online postkasse.|Filer, der deles i en 1:1-chat, gemmes på den OneDrive for Business konto for den person, der har delt filen.|
-|Teams gruppechats|Meddelelser i gruppechat gemmes i alle chatdeltageres Exchange Online postkasse.|Filer, der deles i gruppechats, gemmes på den OneDrive for Business konto for den person, der har delt filen.|
-|Teams kanaler|Alle kanalmeddelelser og -meddelelser gemmes i den Exchange Online postkasse, der er knyttet til teamet.|Filer, der deles i en kanal, gemmes på det SharePoint Online-websted, der er knyttet til teamet.|
-|Private kanaler|Meddelelser, der sendes i en privat kanal, gemmes i de Exchange Online postkasser for alle medlemmer af den private kanal.|Filer, der deles i en privat kanal, gemmes på et dedikeret SharePoint Online-websted, der er knyttet til den private kanal.|
+|Teams 1:1 chats|Meddelelser i 1:1 chats gemmes i Exchange Online-postkassen for alle chatdeltagere.|Filer, der deles i en 1:1-chat, gemmes på den OneDrive for Business konto for den person, der har delt filen.|
+|Teams gruppechats|Meddelelser i gruppechat gemmes i Exchange Online-postkassen for alle chatdeltagere.|Filer, der deles i gruppechats, gemmes på den OneDrive for Business konto for den person, der har delt filen.|
+|Teams kanaler|Alle kanalmeddelelser og -indlæg gemmes i den Exchange Online-postkasse, der er knyttet til teamet.|Filer, der deles i en kanal, gemmes på det SharePoint Online-websted, der er knyttet til teamet.|
+|Private kanaler|Meddelelser, der sendes i en privat kanal, gemmes i Exchange Online-postkasser for alle medlemmer af den private kanal.|Filer, der deles i en privat kanal, gemmes på et dedikeret SharePoint Online-websted, der er knyttet til den private kanal.|
 |Delte kanaler|Meddelelser, der sendes i en delt kanal, gemmes i en systempostkasse, der er knyttet til den delte kanal. <sup>1</sup>|Filer, der deles i en delt kanal, gemmes på et dedikeret SharePoint Online-websted, der er knyttet til den delte kanal.|
 
 > [!NOTE]
-> <sup>1</sup> Hvis du vil søge efter (og bevare) meddelelser, der sendes i en delt kanal, skal du søge i eller angive den Exchange Online postkasse for det overordnede team.
+> <sup>1</sup> Hvis du vil søge efter (og bevare) meddelelser, der sendes i en delt kanal, skal du søge efter eller angive Exchange Online-postkassen for det overordnede team.
 
 ## <a name="create-a-case-for-teams-content"></a>Opret en sag for Teams indhold
 
@@ -70,7 +72,7 @@ Sådan opretter du en sag:
 
 2. Klik på **eDiscovery > Avanceret** i navigationsruden til venstre på Microsoft Purview-overholdelsesportalen.
 
-3. På siden **eDiscovery (Premium)** skal du klikke på fanen **Sager** og derefter klikke på **Opret en sag**.
+3. Klik på fanen **Sager** på siden **eDiscovery (Premium),** og klik derefter på **Opret en sag**.
 
    Siden **Ny eDiscovery-sag** vises. I afsnittet **Sagsformat** kan du oprette en sag ved hjælp af det nye sagsformat.
 
@@ -84,7 +86,7 @@ Det næste trin er at identificere de brugere, der er datavogterne i din unders�
 
 Sådan føjer du tilsynsførende til en sag og bevarer datakilder med frihedsberøvelse:
 
-1. Gå til den eDiscovery-sag (Premium), du oprettede i forrige afsnit, og klik derefter på **Datakilder**.
+1. Gå til den eDiscovery (Premium)-sag, du oprettede i forrige afsnit, og klik derefter på **Datakilder**.
 
 2. På siden **Datakilder** skal du klikke på **Tilføj** **datakildeTilføj** >  nye tilsynsførende.
 
@@ -133,7 +135,7 @@ Du har også mulighed for ikke at køre en kladdesamling og føje samlingsresult
 
 Sådan opretter du en samling Teams indhold:
 
-1. Gå til eDiscovery-sagen (Premium), som du føjede vogterne til i forrige afsnit, og klik derefter på **Samlinger**.
+1. Gå til eDiscovery(Premium)-sagen, som du føjede vogterne til i det forrige afsnit, og klik derefter på **Samlinger**.
 
 2. På siden **Samlinger** skal du vælge **Ny** **samlingStandardsamling** > .
 
@@ -177,7 +179,7 @@ Sådan opretter du en samling Teams indhold:
 
 ## <a name="review-teams-content-in-a-review-set"></a>Gennemse Teams indhold i et korrektursæt
 
-Når du har føjet samlinger af Teams indhold til et anmeldelsessæt, er det næste trin at gennemse indholdet for at se dets relevans for din undersøgelse og om nødvendigt udsætte det. En vigtig forudsætning for at gennemse Teams indhold er at forstå, hvordan eDiscovery (Premium) behandler Teams chatsamtaler og vedhæftede filer, når de føjes til et korrektursæt. Denne behandling af Teams indhold resulterer i følgende tre ting:
+Når du har føjet samlinger af Teams indhold til et anmeldelsessæt, er det næste trin at gennemse indholdet for at se dets relevans for din undersøgelse og om nødvendigt udsætte det. En vigtig forudsætning for at gennemse Teams indhold er at forstå, hvordan eDiscovery (Premium) behandler Teams chatsamtaler og vedhæftede filer, når du føjer dem til et korrektursæt. Denne behandling af Teams indhold resulterer i følgende tre ting:
 
 - **[Gruppering](#grouping)**. Sådan grupperes meddelelser, indlæg og svar Teams samtaler sammen og præsenteres i korrektursættet. Dette omfatter også vedhæftede filer i chatsamtaler, der udtrækkes og grupperes i samtalen.
 
@@ -227,9 +229,9 @@ Følgende skærmbilleder viser et eksempel på samtale i Teams-klienten og trans
 
 ### <a name="transcript-conversation-threading"></a>Transskriptionssamtaletråde
 
-Funktionen til samtaletrådning i det nye sagsformat i eDiscovery (Premium) hjælper dig med at identificere kontekstafhængigt indhold, der er relateret til elementer, som kan være relevante for din undersøgelse. Denne funktion producerer forskellige samtalevisninger, der omfatter chatmeddelelser, der kommer før og følger elementerne, svarer til søgeforespørgslen under samlingen. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (kaldet *gevindsamtaler*) i Microsoft Teams. Som tidligere forklaret genskabes chatsamtaler i HTML-transskriptionsfiler, når eDiscovery (Premium) føjer Teams indhold til et korrektursæt.
+Funktionen Til samtaletrådning i det nye sagsformat i eDiscovery (Premium) hjælper dig med at identificere kontekstafhængigt indhold, der er relateret til elementer, der kan være relevant for din undersøgelse. Denne funktion producerer forskellige samtalevisninger, der omfatter chatmeddelelser, der kommer før og følger elementerne, svarer til søgeforespørgslen under samlingen. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (kaldet *gevindsamtaler*) i Microsoft Teams. Som tidligere forklaret genskabes chatsamtaler i HTML-transskriptionsfiler, når eDiscovery (Premium) føjer Teams indhold til et korrektursæt.
 
-Her er den logik, der bruges af eDiscovery (Premium) til at inkludere yderligere meddelelser og svar transskriptionsfiler, der leverer kontekst omkring elementerne, som svarer til den samlingsforespørgsel (kaldet *dynamiske elementer*), du brugte til at indsamle Teams indhold. Forskellige funktionsmåder for trådning er baseret på typerne af chats og den søgeforespørgsel, der bruges til at indsamle de dynamiske elementer. Der er to almindelige samlingsscenarier:
+Her er den logik, der bruges af eDiscovery (Premium) til at inkludere yderligere meddelelser og svar transskriptionsfiler, der giver kontekst omkring elementerne, der svarer til den samlingsforespørgsel (kaldet *dynamiske elementer*), du brugte til at indsamle Teams indhold. Forskellige funktionsmåder for trådning er baseret på typerne af chats og den søgeforespørgsel, der bruges til at indsamle de dynamiske elementer. Der er to almindelige samlingsscenarier:
 
 - Forespørgsler, der bruger søgeparametre, f.eks. nøgleord og egenskab:værdipar
 
@@ -260,7 +262,7 @@ På følgende liste beskrives funktionsmåden for deduplikering (og duplikering)
 
 ### <a name="metadata-for-teams-content"></a>Metadata for Teams indhold
 
-I store korrektursæt med tusindvis eller millioner af elementer kan det være svært at indsnævre omfanget af din anmeldelse for at Teams indhold. For at hjælpe dig med at fokusere din anmeldelse på Teams indhold er der metadataegenskaber, der er specifikke for Teams indhold. Du kan bruge disse egenskaber til at organisere kolonnerne på listen over [korrekturer og konfigurere filtre og forespørgsler](review-set-search.md) for at optimere gennemgangen af Teams indhold. Disse metadataegenskaber er også inkluderet, når du eksporterer Teams indhold fra eDiscovery (Premium) for at hjælpe dig med at organisere og få vist indhold efter eksport eller i eDiscovery-værktøjer fra tredjepart.
+I store korrektursæt med tusindvis eller millioner af elementer kan det være svært at indsnævre omfanget af din anmeldelse for at Teams indhold. For at hjælpe dig med at fokusere din anmeldelse på Teams indhold er der metadataegenskaber, der er specifikke for Teams indhold. Du kan bruge disse egenskaber til at organisere kolonnerne på listen over [korrekturer og konfigurere filtre og forespørgsler](review-set-search.md) for at optimere gennemgangen af Teams indhold. Disse metadataegenskaber medtages også, når du eksporterer Teams indhold fra eDiscovery (Premium) for at hjælpe dig med at organisere og få vist indhold efter eksport eller i eDiscovery-værktøjer fra tredjepart.
 
 I følgende tabel beskrives metadataegenskaber for Teams indhold.
 
@@ -277,7 +279,7 @@ I følgende tabel beskrives metadataegenskaber for Teams indhold.
 |Modtagere|En liste over alle brugere, der har modtaget en meddelelse i transskriptionssamtalen.|
 |TeamsChannelName|Transskriptionens Teams kanalnavn.|
 
-Du kan finde beskrivelser af andre egenskaber for eDiscovery-metadata (Premium) [under Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
+Du kan finde beskrivelser af andre egenskaber for eDiscovery-metadata (Premium) [under Dokumentmetadatafelter i eDiscovery (Premium).](document-metadata-fields-in-Advanced-eDiscovery.md)
 
 ## <a name="export-teams-content"></a>Eksportér Teams indhold
 
@@ -285,7 +287,7 @@ Når du har gennemgået og slettet Teams indhold i et anmeldelsessæt, kan du ek
 
 Der refereres til hver transskriptionsfil i indlæsningsfilen, og den kan findes ved hjælp af den relative sti i feltet Export_native_path i indlæsningsfilen. Transskriptionsfiler findes i mappen Samtaler i rodeksportmappen.
 
-## <a name="tips-for-viewing-teams-content-in-a-review-set"></a>Tips til visning af Teams indhold i et korrektursæt
+## <a name="tips-for-viewing-teams-content-in-a-review-set"></a>Tip til visning Teams indhold i et anmeldelsessæt
 
 Her er nogle tip og bedste praksis for visning Teams indhold i et anmeldelsessæt.
 
@@ -301,11 +303,11 @@ Her er nogle tip og bedste praksis for visning Teams indhold i et anmeldelsessæ
 
 ## <a name="deleting-teams-chat-messages"></a>Sletter Teams chatbeskeder
 
-Du kan bruge Advanced eDiscovery og Microsoft Graph Explorer til at reagere på dataspildhændelser, når indhold, der indeholder fortrolige eller skadelige oplysninger, frigives via Teams chatbeskeder. Administratorer i din organisation kan søge efter og slette chatbeskeder i Microsoft Teams. Dette kan hjælpe dig med at fjerne følsomme oplysninger eller upassende indhold i Teams chatbeskeder. Du kan finde flere oplysninger [under Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
+Du kan bruge eDiscovery (Premium) og Microsoft Graph Explorer til at reagere på dataspildhændelser, når indhold, der indeholder fortrolige eller skadelige oplysninger, frigives via Teams chatbeskeder. Administratorer i din organisation kan søge efter og slette chatbeskeder i Microsoft Teams. Dette kan hjælpe dig med at fjerne følsomme oplysninger eller upassende indhold i Teams chatbeskeder. Du kan finde flere oplysninger [under Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
 
 ## <a name="reference-guide"></a>Referencevejledning
 
-Her er en oversigtsvejledning til brug af eDiscovery (Premium) til Microsoft Teams. I denne vejledning opsummeres nøglepunkterne for brug af eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams.
+Her er en vejledning i, hvordan du bruger eDiscovery (Premium) til Microsoft Teams. I denne vejledning opsummeres nøglepunkterne for brug af eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams.
 
 ![Miniature til referencevejledning til brug af eDiscovery (Premium) til Microsoft Teams.](../media/AeDTeamsReferenceGuide-thumbnail.png)
 

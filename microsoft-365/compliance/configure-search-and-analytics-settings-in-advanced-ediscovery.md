@@ -16,17 +16,19 @@ search.appverid:
 - MET150
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
-description: Konfigurer indstillinger for Microsoft Purview eDiscovery (Premium), der gælder for alle korrektursæt i en sag. Dette omfatter indstillinger for analyse og optisk tegngenkendelse.
-ms.openlocfilehash: f6cae054f111aa3aa4f8c7d4ab3c3323ce0498ff
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Konfigurer indstillingerne for Microsoft Purview eDiscovery (Premium), der gælder for alle korrektursæt i en sag. Dette omfatter indstillinger for analyse og optisk tegngenkendelse.
+ms.openlocfilehash: c5b542f224e35a6505dca9cbfacb5f1095fa2dbe
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949669"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992298"
 ---
 # <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>Konfigurer søge- og analyseindstillinger i eDiscovery (Premium)
 
-Du kan konfigurere indstillinger for hver Microsoft Purview eDiscovery-sag (Premium) for at styre følgende funktionalitet.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Du kan konfigurere indstillinger for hver Microsoft Purview eDiscovery (Premium)-sag for at styre følgende funktionalitet.
 
 - Næsten dubletter og mailtråde
 
@@ -72,7 +74,7 @@ I dette afsnit kan du angive parametre for temaer. Du kan få flere oplysninger 
 
 ## <a name="review-set-query"></a>Gennemse sætforespørgsel
 
-Hvis du markerer afkrydsningsfeltet **Opret automatisk en gemt søgning til gennemsyn efter analyse**, genererer eDiscovery (Premium) automatisk en forespørgsel med navnet **Til gennemsyn.** 
+Hvis du markerer afkrydsningsfeltet **Opret automatisk en gemt søgning til gennemsyn efter analyse** , genererer eDiscovery (Premium) automatisk forespørgsel, der er angivet til gennemsyn, med navnet **Til gennemsyn.** 
 
 ![Den automatisk genererede forespørgsel til gennemsyn.](../media/AeDForReviewQuery.png)
 

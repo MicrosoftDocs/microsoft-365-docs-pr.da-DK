@@ -1,5 +1,5 @@
 ---
-title: Rediger og fjern poster i lejerens tilladelses-/blokeringsliste
+title: Rediger og fjern poster på listen over tilladte/blokerede lejer
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -13,128 +13,127 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Administratorer kan få mere at vide om, hvordan de redigerer og fjerner poster på lejerens liste over tilladte/blokerede elementer i sikkerhedsportalen.
+description: Administratorer kan få mere at vide om, hvordan de redigerer og fjerner poster på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f1ab3f815cc64af6d1383df228ef7961c3afdcec
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7da986c42421c797f2d01b1e61d50c06933e373f
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63606644"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970891"
 ---
-# <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Rediger og fjern poster i lejerens tilladelses-/blokeringsliste
+# <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Rediger og fjern poster på listen over tilladte/blokerede lejer
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Du kan bruge Microsoft 365 Defender-portalen eller PowerShell til at ændre og fjerne poster på lejerens tilladelses-/blokeringsliste.
+Du kan bruge Microsoft 365 Defender-portalen eller PowerShell til at redigere og fjerne poster på listen over tilladte/blokerede lejere.
 
-## <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender portalen
+## <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender-portalen
 
-### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Rediger poster i lejerens tilladelses-/blokeringsliste
+### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Rediger poster på listen over tilladte/blokerede lejere
 
-1. I portalen Microsoft 365 Defender skal du  gå til **Politikker & regler** \>  \> for trusselspolitikker i **afsnittet Lejers**\> tilladelses-/blokeringslister.
+1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
 
-2. Vælg den fane, der indeholder den type indtastning, du vil ændre:
+2. Vælg den fane, der indeholder den type post, du vil ændre:
    - **Afsendere**
    - **Spoofing**
-   - **URL-adresser**
+   - **Webadresser**
    - **Filer**
 
-
-3. Markér det element, du vil ændre, og klik derefter på ![Ikonet Rediger.](../../media/m365-cc-sc-edit-icon.png) **Rediger**. De værdier, du kan ændre i pop op-pop-siden, afhænger af den fane, du valgte i forrige trin:
+3. Vælg den post, du vil redigere, og klik derefter på ![Ikonet Rediger.](../../media/m365-cc-sc-edit-icon.png) **Rediger**. De værdier, du kan ændre i det pop op-vindue, der vises, afhænger af den fane, du valgte i det forrige trin:
    - **Afsendere**
-     - **Udløber aldrig** og/eller udløbsdato.
+     - **Udløber aldrig** og/eller udløbsdatoen.
      - **Valgfri note**
    - **Spoofing**
      - **Handling**: Du kan ændre værdien til **Tillad** eller **Bloker**.
-   - **URL-adresser**
-     - **Udløber aldrig** og/eller udløbsdato.
+   - **Webadresser**
+     - **Udløber aldrig** og/eller udløbsdatoen.
      - **Valgfri note**
    - **Filer**
-     - **Udløber aldrig** og/eller udløbsdato.
+     - **Udløber aldrig** og/eller udløbsdatoen.
      - **Valgfri note**
 
 4. Klik på **Gem**, når du er færdig.
 
 > [!NOTE]
-> Du kan kun udvide og giver mulighed for maksimalt 30 dage efter oprettelsesdatoen. Blokke kan forlænges i op til 90 dage, men i modsætning til dette kan de også indstilles til Udløber aldrig.
+> Du kan kun forlænge med maksimalt 30 dage efter oprettelsesdatoen. Blokke kan forlænges i op til 90 dage, men i modsætning til tillader, kan de også indstilles til Aldrig udløber.
 
-### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Fjern poster fra lejerens tilladelses-/blokeringsliste
+### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Fjern poster fra listen over tilladte/blokerede lejere
 
-1. I portalen Microsoft 365 Defender skal du  gå til **Politikker & regler** \>  \> for trusselspolitikker i **afsnittet Lejers**\> tilladelses-/blokeringslister.
+1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
 
 2. Vælg den fane, der indeholder den type post, du vil fjerne:
    - **Afsendere**
    - **Spoofing**
-   - **URL-adresser**
+   - **Webadresser**
    - **Filer**
- 
-3. Markér den post, du vil fjerne, og klik derefter på ![ikonet Slet.](../../media/m365-cc-sc-delete-icon.png) **Slet**.
 
-4. Klik på Slet i den dialogboks, der vises med **advarslen**.
+3. Vælg den post, du vil fjerne, og klik derefter på ![Ikonet Slet.](../../media/m365-cc-sc-delete-icon.png) **Slet**.
+
+4. Klik på **Slet** i den viste advarselsdialogboks.
 
 ## <a name="use-powershell"></a>Brug PowerShell
 
-### <a name="modify-allow-or-block-sender-file-and-url-entries-in-the-tenant-allowblock-list"></a>Rediger tillade eller blokere afsender-, fil- og URL-poster på lejerens tilladelses-/blokeringsliste
+### <a name="modify-allow-or-block-sender-file-and-url-entries-in-the-tenant-allowblock-list"></a>Rediger tilladelses- eller blokeringsposter for afsendere, filer og URL-adresser på listen over tilladte/blokerede lejere
 
-Hvis du vil ændre tilladte eller blokere afsender-, fil- og URL-poster på lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+Hvis du vil redigere poster for afsender, fil og URL-adresse på listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType <Sender | FileHash | Url> -Ids <"Id1","Id2",..."IdN"> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
 ```
 
-I dette eksempel ændres udløbsdatoen for den angivne URL-adresse for blokering.
+I dette eksempel ændres udløbsdatoen for den angivne blok-URL-adresse.
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSRAAAA" -ExpirationDate "5/30/2020"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
 
-### <a name="remove-allow-or-block-sender-url-or-file-entries-from-the-tenant-allowblock-list"></a>Fjern tillad eller bloker afsender-, URL- eller filposter fra lejerens tilladelses-/blokeringsliste
+### <a name="remove-allow-or-block-sender-url-or-file-entries-from-the-tenant-allowblock-list"></a>Fjern tilladelses- eller blokeringsposter for afsendere, URL-adresser eller filer fra listen over tilladte/blokerede lejere
 
-Hvis du vil fjerne tilladte eller blokere afsender-, fil- og URL-poster fra lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+Hvis du vil fjerne afsender-, fil- og URL-adresser fra listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType <Sender | FileHash | Url> -Ids <"Id1","Id2",..."IdN">
 ```
 
-I dette eksempel fjernes den angivne URL-adresse for blokering fra lejerens tilladelses-/blokeringsliste.
+I dette eksempel fjernes den angivne url-adresse for blokering fra listen over tilladte/blokerede lejere.
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
 
-### <a name="modify-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Rediger tillad eller bloker efterlignede afsenderposter fra lejerens tilladelses-/blokeringsliste
+### <a name="modify-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Rediger poster for tillad eller blokerpooferede afsendere fra listen over tilladte/blokerede lejere
 
-Hvis du vil ændre tillad eller blokere efterlignede afsenderposter i lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+Hvis du vil ændre poster af typen Tillad eller bloker efterligning af afsendere på listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 
 ```powershell
 Set-TenantAllowBlockListSpoofItems -Ids <"Id1","Id2",..."IdN"> -Action <Allow | Block>
 ```
 
-I dette eksempel ændres efterlignet afsenderpost fra Tillad til blokering.
+I dette eksempel ændres den spoofede afsenderpost fra Allow til Block.
 
 ```powershell
 Set-TenantAllowBlockListItems -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSRAAAA" -Action Block
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-TenantAllowBlockListSpoofItems](/powershell/module/exchange/set-tenantallowblocklistspoofitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchange/set-tenantallowblocklistspoofitems).
 
-### <a name="remove-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Fjern tillad eller bloker efterlignede afsenderposter fra lejerens tilladelses-/blokeringsliste
- 
-Hvis du vil fjerne tillade eller blokere spoof afsenderposter fra lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+### <a name="remove-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Fjern tilladte eller blokerpooferede afsenderposter fra listen over tilladte/blokerede lejere
+
+Brug følgende syntaks til at fjerne tilladelse til eller blokering af afsenderposter fra listen over tilladte/blokerede lejere:
 
 ```powershell
 Remove-TenantAllowBlockListSpoofItems -Ids <"Id1","Id2",..."IdN">
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).

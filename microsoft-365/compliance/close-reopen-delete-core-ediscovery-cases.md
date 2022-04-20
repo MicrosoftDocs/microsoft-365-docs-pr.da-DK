@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du administrerer eDiscovery-sager (Standard). Dette omfatter lukning af en sag, genåbning af en lukket sag og sletning af en sag.
-ms.openlocfilehash: 3ceb23f3ec215f3e9a7e5db036e71e5fe2842191
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ee18a169ace43f03a0407b87c8ae70705af2f43c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940351"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992364"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>Luk, genåbn og slet en eDiscovery-sag (Standard)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel beskrives det, hvordan du lukker, genåbner og sletter Microsoft Purview eDiscovery-sager (Standard) i Microsoft 365.
 

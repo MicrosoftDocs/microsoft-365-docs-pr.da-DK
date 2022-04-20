@@ -17,18 +17,20 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) (kaldet samtaletrådning) for at genskabe, gennemse og eksportere chatsamtaler i Microsoft Teams og Yammer grupper.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 9bfd87de95449ab30b8a33c9f7f96db458e809d1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c3cd05ab340775a7a923b9e4a0f66c3abaf559cb
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950263"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993266"
 ---
 # <a name="conversation-threading-in-ediscovery-premium"></a>Samtaletrådning i eDiscovery (Premium)
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Chat er en nem måde at stille spørgsmål, dele ideer eller hurtigt kommunikere på tværs af store målgrupper. Efterhånden som chatplatforme, f.eks. Microsoft Teams og Yammer grupper, bliver kerne i virksomhedssamarbejde, skal organisationer evaluere, hvordan deres eDiscovery-arbejdsproces håndterer disse nye former for kommunikation og samarbejde.
 
-Funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) er designet til at hjælpe dig med at identificere kontekstuelt indhold og oprette forskellige samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (også kaldet *trådede samtaler*), der genereres på platforme som Microsoft Teams.
+Funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) er designet til at hjælpe dig med at identificere kontekstafhængigt indhold og producere forskellige samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (også kaldet *trådede samtaler*), der genereres på platforme som Microsoft Teams.
 
 Med genopbygning af samtaler kan du bruge indbyggede funktioner til at genskabe, gennemse og eksportere gevindsamtaler. Brug genopbygning af eDiscovery-samtaler (Premium) til at:
 
@@ -54,7 +56,7 @@ Her er nogle definitioner, der kan hjælpe dig med at komme i gang med at bruge 
 
 ## <a name="step-1-create-a-draft-collection"></a>Trin 1: Opret en kladdesamling
 
-Når du har identificeret relevante tilsynsførende og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. Under fanen **Samlinger** i eDiscovery-sagen (Premium) kan du oprette en samling ved at klikke på **Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du kan oprette en samling, oprette en søgeforespørgsel og få vist søgeresultaterne i [Opret en kladdesamling](create-draft-collection.md).
+Når du har identificeret relevante tilsynsførende og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. Under fanen **Samlinger** i eDiscovery (Premium)-sagen kan du oprette en samling ved at klikke på **Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du kan oprette en samling, oprette en søgeforespørgsel og få vist søgeresultaterne i [Opret en kladdesamling](create-draft-collection.md).
 
 ## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>Trin 2: Send en kladdesamling til et gennemsynssæt
 

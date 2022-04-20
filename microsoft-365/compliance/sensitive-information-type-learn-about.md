@@ -16,16 +16,18 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Denne artikel indeholder en oversigt over typer af følsomme oplysninger, og hvordan de registrerer følsomme oplysninger som f.eks. social sikring, kreditkort eller bankkontonumre for at identificere følsomme elementer
-ms.openlocfilehash: aef78c5ab3348b7a0b00a649f94fa5e50a99a397
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0e154e0ee578b9a182cb7cd5b43cafba466f9bcd
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760311"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971345"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Få mere at vide om typer af følsomme oplysninger.
 
-Identificering og klassificering af følsomme elementer, der er under din organisations kontrol, er det første skridt i [Information Protection disciplin](./information-protection.md).  Microsoft 365 giver tre måder at identificere elementer på, så de kan klassificeres:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Identificering og klassificering af følsomme elementer, der er under din organisations kontrol, er det første skridt i [Information Protection disciplin](./information-protection.md).  Microsoft Purview indeholder tre måder at identificere elementer på, så de kan klassificeres:
 
 - manuelt af brugere
 - automatiseret mønstergenkendelse, f.eks. følsomme oplysningstyper
@@ -37,7 +39,7 @@ Microsoft leverer et stort antal forudkonfigurerede SIT'er, eller du kan oprette
 
 ## <a name="sensitive-information-types-are-used-in"></a>Følsomme oplysningstyper bruges i
 
-- [Politikker til forebyggelse af datatab](dlp-learn-about-dlp.md)
+- [Microsoft Purview Politikker til forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Følsomhedsmærkater](sensitivity-labels.md)
 - [Opbevaringsmærkater](retention.md)
 - [Styring af insider-risiko](insider-risk-management.md)
@@ -53,7 +55,7 @@ Disse SIT'er oprettes af Microsoft vises som standard i overholdelseskonsollen. 
 
 ### <a name="named-entity-sensitive-information-types"></a>Navngivne objektfølsomme oplysningstyper
 
-Navngivne objekt-SIT'er vises også som standard i overholdelseskonsollen. De registrerer personnavne, fysiske adresser og medicinske vilkår og betingelser. De kan ikke redigeres eller kopieres. Se [Få mere at vide om navngivne enheder (prøveversion)](named-entities-learn.md#learn-about-named-entities-preview) for at få flere oplysninger. Navngivne objekt-SIT'er findes i to typer:
+Navngivne objekt-SIT'er vises også som standard i overholdelseskonsollen. De registrerer personnavne, fysiske adresser og medicinske vilkår og betingelser. De kan ikke redigeres eller kopieres. Se [Få mere at vide om navngivne objekter ](named-entities-learn.md#learn-about-named-entities) for at få flere oplysninger. Navngivne objekt-SIT'er findes i to typer:
 
 **ikke-bundtet**
 
@@ -172,9 +174,8 @@ Du kan vælge mellem flere muligheder for at oprette brugerdefinerede typer føl
 - **Brug PowerShell** – Du kan konfigurere brugerdefinerede typer følsomme oplysninger ved hjælp af PowerShell. Selvom denne metode er mere kompleks end at bruge brugergrænsefladen, har du flere konfigurationsindstillinger. Se [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 > [!NOTE]
-> Forbedrede tillidsniveauer er tilgængelige til øjeblikkelig brug inden for forebyggelse af datatab for Microsoft 365 tjenester, Microsoft Information Protection til Microsoft 365 tjenester, kommunikation med overholdelse af angivne standarder, styring af oplysninger og datastyring.
-> Microsoft 365 Information Protection understøtter nu sprog med dobbeltbytetegnsæt for:
->
+> Forbedrede tillidsniveauer er tilgængelige til øjeblikkelig brug i Microsoft Purview-tjenester til forebyggelse af datatab, beskyttelse af oplysninger, Overholdelse af kommunikation, administration af datalivscyklus og datastyring.
+> Information Protection understøtter nu sprog med dobbeltbytetegnsæt for:
 > - Kinesisk (forenklet)
 > - Kinesisk (traditionelt)
 > - Korean

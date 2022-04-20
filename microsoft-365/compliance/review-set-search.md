@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du opretter og kører en forespørgsel i et korrektursæt for at organisere indhold for at få en mere effektiv korrektur i en Microsoft Purview eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: ead066428d5c2404da5bf863ad428784b3c3a30c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: aad8cd7461c795f8ecba03edab76e81e8384430d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936285"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991924"
 ---
 # <a name="query-and-filter-content-in-a-review-set"></a>Forespørg om og filtrer indhold i et valideringssæt
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I de fleste tilfælde vil det være nyttigt at gå dybere ned i indholdet i et anmeldelsessæt og organisere det for at lette en mere effektiv korrektur. Brug af filtre og forespørgsler i et korrektursæt hjælper dig med at fokusere på et undersæt af dokumenter, der opfylder kriterierne i din anmeldelse.
 

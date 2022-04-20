@@ -14,12 +14,12 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: b5b2f8efe36ceba10dd1dadd3034b899ad05fd38
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9d35303de99256329ad1f0a5ea547e0af4a042b6
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945445"
+ms.locfileid: "64953798"
 ---
 # <a name="to-identity-and-beyondone-architects-viewpoint"></a>Til identitet og videre – en arkitekts synspunkt
 
@@ -33,7 +33,7 @@ Jeg er Principal Technical Architect i [Microsoft Technology Center](https://www
 
 Jeg arbejder typisk med mere end 100 kunder hvert år. Hver organisation har unikke egenskaber, men det er interessant at se tendenser og fællestræk. En tendens er f.eks. interesse på tværs af brancher for mange kunder. Når alt kommer til alt kan en bankgren også være en kaffebar og et fællescenter.
 
-I min rolle fokuserer jeg på at hjælpe kunderne med at nå frem til den bedste tekniske løsning til at løse deres unikke sæt forretningsmål. Officielt fokuserer jeg på identitet, sikkerhed, beskyttelse af personlige oplysninger og overholdelse af angivne standarder. Jeg elsker det faktum, at disse rører alt, hvad vi gør. Det giver mig mulighed for at blive involveret i de fleste projekter. Dette holder mig ganske travlt og nyder denne rolle.
+I min rolle fokuserer jeg på at hjælpe kunderne med at nå frem til den bedste tekniske løsning til at løse deres unikke sæt forretningsmål. Officielt fokuserer jeg på identitet, sikkerhed, beskyttelse af personlige oplysninger og overholdelse af angivne standarder. Jeg elsker det faktum, at disse rører alt, hvad vi gør. Det giver mig mulighed for at blive involveret i de fleste projekter. Dette holder mig travlt og nyder denne rolle.
 
 Jeg bor i New York City (den bedste!) og nyder virkelig mangfoldigheden af dens kultur, mad og mennesker (ikke trafik). Jeg elsker at rejse, når jeg kan og håber at se det meste af verden i min levetid. Jeg er i øjeblikket forsker en tur til Afrika for at lære om dyrelivet.
 
@@ -46,8 +46,8 @@ Jeg bor i New York City (den bedste!) og nyder virkelig mangfoldigheden af dens 
 
 ## <a name="baseline-concepts"></a>Koncepter for oprindelig plan
 
-Spring ikke denne sektion over. Jeg oplever ofte, at jeg skal gå et skridt tilbage til disse emner, selv for kunder, der har brugt cloudtjenester i årevis.
-Desværre er sprog ikke et præcist værktøj. Vi bruger ofte det samme ord til at betyde forskellige begreber eller forskellige ord for at betyde det samme begreb. Jeg bruger ofte dette diagram nedenfor til at etablere nogle grundlæggende terminologi og "hierarkimodel".
+Spring ikke denne sektion over. Jeg oplever ofte, at jeg skal gå tilbage til disse artikler, selv for kunder, der har brugt cloudtjenester i årevis.
+Desværre er sprog ikke et præcist værktøj. Vi bruger ofte det samme ord til at betyde forskellige begreber eller forskellige ord til at betyde det samme begreb. Jeg bruger ofte dette diagram nedenfor til at etablere nogle grundlæggende terminologi og "hierarkimodel".
 <br><br>
 
 ![Illustration af lejer, abonnement, tjeneste og data.](../media/solutions-architecture-center/Identity-and-beyond-tenant-level.png)
@@ -61,22 +61,22 @@ I diagrammet:
 - Lejer = en forekomst af Azure AD. Den er "øverst" i et hierarki eller niveau 1 i diagrammet. Vi kan betragte dette som "[grænsen](/azure/active-directory/users-groups-roles/licensing-directory-independence)", hvor alt andet sker ([Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) bortset fra). Alle Microsoft Enterprise-cloudtjenester er en del af en af disse lejere. Forbrugertjenester er separate. "Lejer" vises i dokumentationen som Office 365 lejer, Azure-lejer, WVD-lejer osv. Jeg oplever ofte, at disse variationer skaber forvirring hos kunderne.
 - Tjenester/abonnementer, niveau 2 i diagrammet, tilhører én og kun én lejer. De fleste SaaS-tjenester er 1:1 og kan ikke flyttes uden migrering. Azure er anderledes. Du kan [flytte fakturering](/azure/cost-management-billing/manage/billing-subscription-transfer) og/eller et [abonnement](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) til en anden lejer. Der er mange kunder, der skal flytte Azure-abonnementer. Dette har forskellige konsekvenser. Objekter, der findes uden for abonnementet, flyttes ikke (f.eks. rollebaseret adgangskontrol eller Azure RBAC- og Azure AD-objekter, herunder grupper, apps, politikker osv.). Nogle tjenester (f.eks. Azure Key Vault, Data Bricks osv.). Overfør ikke tjenester uden et godt forretningsbehov. Nogle scripts, der kan være nyttige i forbindelse med overførsel, [deles på GitHub](https://github.com/lwajswaj/azure-tenant-migration).
 - En given tjeneste har normalt en form for "grænse under niveau" eller niveau 3 (L3). Dette er nyttigt for at forstå for adskillelse af sikkerhed, politikker, styring osv. Desværre er der ikke noget ensartet navn, som jeg kender til. Nogle eksempler på navne på L3 er: Azure Subscription = [resource](/azure/azure-resource-manager/management/manage-resources-portal); Dynamics 365 CE = [instans](/dynamics365/admin/new-instance-management); Power BI = [arbejdsområde](/power-bi/service-create-the-new-workspaces); Power Apps = [miljø](/power-platform/admin/environments-overview) osv.
-- Niveau 4 er stedet, hvor de faktiske data findes. Dette "datafly" er et komplekst emne. Nogle tjenester bruger Azure AD til RBAC, andre ikke. Jeg vil diskutere det lidt, når vi kommer til delegering emner.
+- Niveau 4 er stedet, hvor de faktiske data findes. Dette "datafly" er en kompleks artikel. Nogle tjenester bruger Azure AD til RBAC, andre ikke. Jeg vil diskutere det lidt, når vi kommer til delegering artikler.
 
 Nogle yderligere begreber, som jeg finder, at mange kunder (og Microsoft-medarbejdere) er forvirrede over eller har spørgsmål om, omfatter følgende:
 
-- Alle kan [oprette](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) mange lejere [uden omkostninger](https://azure.microsoft.com/pricing/details/active-directory/). Du behøver ikke at have en tjeneste klargjort i den. Jeg har mange. Hvert lejernavn er entydigt i Microsofts verdensomspændende cloudtjeneste (med andre ord kan ikke to lejere have det samme navn). De har alle formatet TenantName.onmicrosoft.com. Der er også processer, der opretter lejere automatisk ([ikke-administrerede lejere](/azure/active-directory/users-groups-roles/directory-self-service-signup)). Dette kan f.eks. ske, når en bruger tilmelder sig en virksomhedstjeneste med et maildomæne, der ikke findes i nogen anden lejer.
+- Alle kan [oprette](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) mange lejere [uden omkostninger](https://azure.microsoft.com/pricing/details/active-directory/). Du behøver ikke at have en klargjort tjeneste i den. Jeg har mange. Hvert lejernavn er entydigt i Microsofts verdensomspændende cloudtjeneste (med andre ord kan ikke to lejere have det samme navn). De har alle formatet TenantName.onmicrosoft.com. Der er også processer, der opretter lejere automatisk ([ikke-administrerede lejere](/azure/active-directory/users-groups-roles/directory-self-service-signup)). Dette kan f.eks. ske, når en bruger tilmelder sig en virksomhedstjeneste med et maildomæne, der ikke findes i nogen anden lejer.
 - I en administreret lejer kan mange [DNS-domæner](/azure/active-directory/fundamentals/add-custom-domain) registreres i den. Dette ændrer ikke det oprindelige lejernavn. Der er i øjeblikket ingen nem måde at omdøbe en lejer på (bortset fra overførsel). Selvom lejernavnet teknisk set ikke er kritisk i disse dage, kan nogle finde det begrænsende.
-- Du skal reservere et lejernavn til din organisation, selvom du endnu ikke har planer om at udrulle nogen tjenester. Ellers nogen kan tage det fra dig, og der er ingen enkel proces til at tage det tilbage (samme problem som DNS-navne). Jeg hører denne måde alt for ofte fra kunder. Det, dit lejernavn skal være, er også et debatemne.
+- Du skal reservere et lejernavn til din organisation, selvom du endnu ikke har planer om at udrulle nogen tjenester. Ellers kan nogen tage det fra dig, og der er ingen enkel proces til at tage det tilbage (samme problem som DNS-navne). Jeg hører denne måde alt for ofte fra kunder. Det, dit lejernavn skal være, er også en debatartikel.
 - Hvis du ejer DNS-navneområder, skal du føje alle disse til dine lejere. Ellers kan man oprette en [ikke-administreret lejer](/azure/active-directory/users-groups-roles/directory-self-service-signup) med dette navn, hvilket derefter medfører afbrydelse for at [få den administreret](/azure/active-directory/users-groups-roles/domains-admin-takeover).
 - DNS-navneområdet (f.eks. contoso.com) kan tilhøre én og kun én lejer. Dette har konsekvenser for forskellige scenarier (f.eks. deling af et maildomæne under en fusion eller overtagelse osv.). Det er muligt at registrere et DNS-under (f.eks. div.contoso.com) i en anden lejer, men det bør undgås. Ved at registrere et domænenavn på øverste niveau antages det, at alle underdomæner tilhører den samme lejer. I scenarier med flere lejere (se nedenfor) vil jeg normalt anbefale at bruge et andet domænenavn på øverste niveau (f.eks. contoso.ch eller ch-contoso.com).
 - Who skal "eje" en lejer? Jeg ser ofte kunder, der ikke ved, hvem der i øjeblikket ejer deres lejer. Dette er et stort rødt flag. Ring til Microsoft Support HURTIGST MULIGT. Ligesom det er problematisk, når en tjenesteejer (ofte en Exchange administrator) er udpeget til at administrere en lejer. Lejeren indeholder alle de tjenester, du eventuelt vil have i fremtiden. Lejerejeren skal være en gruppe, der kan træffe beslutning om aktivering af alle cloudtjenester i en organisation. Et andet problem er, når en lejerejergruppe bliver bedt om at administrere alle tjenester. Dette skaleres ikke til store organisationer.
-- Der er ikke noget begreb for en under-/superlejer. Af en eller anden grund bliver denne myte ved at gentage sig selv. Dette gælder også for [Azure AD B2C-lejere](/azure/active-directory-b2c/) . Jeg hører for mange gange, "Mit B2C-miljø er i min XYZ-lejer" eller "Hvordan gør jeg flytte min Azure-lejer til min Office 365 lejer?"
+- Der findes ingen sub/super-lejer. Af en eller anden grund bliver denne myte ved at gentage sig selv. Dette gælder også for [Azure AD B2C-lejere](/azure/active-directory-b2c/) . Jeg hører for mange gange, "Mit B2C-miljø er i min XYZ-lejer" eller "Hvordan gør jeg flytte min Azure-lejer til min Office 365 lejer?"
 - Dette dokument fokuserer hovedsageligt på den kommercielle verdensomspændende cloud, da det er det, de fleste kunder bruger. Det kan nogle gange være nyttigt at vide om [nationale cloudmiljøer](/azure/active-directory/develop/authentication-national-cloud). Nationale cloudmiljøer har yderligere konsekvenser for at diskutere, hvilke der ikke er omfattet af denne diskussion.
 
-## <a name="baseline-identity-topics"></a>Grundlæggende identitetsemner
+## <a name="baseline-identity-articles"></a>Artikler om oprindelig identitet
 
-Der er meget dokumentation om Microsofts identitetsplatform – Azure Active Directory (Azure AD). For dem, der lige er begyndt, det ofte føles overvældende. Selv efter at du har lært om det, kan det være en udfordring at holde dig opdateret med konstant innovation og forandring. I mine kundeinteraktioner fungerer jeg ofte som "oversætter" mellem forretningsmål og "God, Bedre, Bedste" tilgange til at håndtere disse (og menneskelige "klippenoter" for disse emner). Der er sjældent et perfekt svar, og den "rigtige" beslutning er en balance mellem forskellige risikofaktorer. Nedenfor er nogle af de almindelige spørgsmål og forvirring områder, jeg har en tendens til at diskutere med kunder.
+Der er meget dokumentation om Microsofts identitetsplatform – Azure Active Directory (Azure AD). For dem, der lige er begyndt, det ofte føles overvældende. Selv efter at du har lært om det, kan det være en udfordring at holde dig opdateret med konstant innovation og forandring. I mine kundeinteraktioner fungerer jeg ofte som "oversætter" mellem forretningsmål og "God, Bedre, Bedste" tilgange til at håndtere disse (og menneskelige "klippenoter" for disse artikler). Der er sjældent et perfekt svar, og den "rigtige" beslutning er en balance mellem forskellige risikofaktorer. Nedenfor er nogle af de almindelige spørgsmål og forvirring områder, jeg har en tendens til at diskutere med kunder.
 
 ### <a name="provisioning"></a>Klargøring
 
@@ -98,7 +98,7 @@ XYZ SaaS understøtter JIT-klargøring (Just-in-Time), hvorfor skal jeg synkroni
 
 [Synkronisering af adgangskodehash](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization) (PHS) vs. [pass-through authentication](/azure/active-directory/hybrid/how-to-connect-pta-how-it-works) (PTA) vs. [federation](/azure/active-directory/hybrid/how-to-connect-fed-compatibility).
 
-Normalt er der en lidenskabelig [debat](/azure/active-directory/hybrid/choose-ad-authn) om sammenslutning. Enklere er normalt bedre og derfor bruge PHS, medmindre du har en god grund til ikke at. Det er også muligt at konfigurere forskellige godkendelsesmetoder for forskellige DNS-domæner i den samme lejer.
+Normalt er der en lidenskabelig [debat](/azure/active-directory/hybrid/choose-ad-authn) omkring forbundet. Enklere er normalt bedre og derfor bruge PHS, medmindre du har en god grund til ikke at. Det er også muligt at konfigurere forskellige godkendelsesmetoder for forskellige DNS-domæner i den samme lejer.
 
 Nogle kunder muliggør sammenslutning + PHS primært for:
 
@@ -112,7 +112,7 @@ Jeg fører ofte kunderne gennem klientgodkendelsesflowet for at tydeliggøre nog
 
 Denne type whiteboardtegning illustrerer, hvor sikkerhedspolitikker anvendes i flowet for en godkendelsesanmodning. I dette eksempel anvendes politikker, der gennemtvinges via AD FS (Active Directory Federation Service), på den første serviceanmodning, men ikke på efterfølgende tjenesteanmodninger. Dette er mindst én grund til at flytte sikkerhedskontroller til cloudmiljøet så meget som muligt.
 
-Vi har jagtet drømmen om [enkeltlogon](/azure/active-directory/manage-apps/what-is-single-sign-on) (SSO) så længe jeg kan huske. Nogle kunder mener, at de kan opnå dette ved at vælge den "rigtige" SAMMENSLUTNING (STS) udbyder. Azure AD kan hjælpe markant med at [aktivere SSO-funktioner](/azure/active-directory/manage-apps/plan-sso-deployment) , men ingen STS er magisk. Der er for mange "ældre" godkendelsesmetoder, der stadig bruges til kritiske programmer. Udvidelse af Azure AD med [partnerløsninger](/azure/active-directory/saas-apps/tutorial-list) kan håndtere mange af disse scenarier. SSO er en strategi og en rejse. Du kan ikke komme dertil uden at gå i retning af [standarder for applikationer](/azure/active-directory/develop/v2-app-types). Relateret til dette emne er en rejse til [adgangskodeløs](/azure/active-directory/authentication/concept-authentication-passwordless) godkendelse, som heller ikke har et magisk svar.
+Vi har jagtet drømmen om [enkeltlogon](/azure/active-directory/manage-apps/what-is-single-sign-on) (SSO) så længe jeg kan huske. Nogle kunder mener, at de kan opnå dette ved at vælge den "rigtige" SAMMENSLUTNING (STS) udbyder. Azure AD kan hjælpe markant med at [aktivere SSO-funktioner](/azure/active-directory/manage-apps/plan-sso-deployment) , men ingen STS er magisk. Der er for mange "ældre" godkendelsesmetoder, der stadig bruges til kritiske programmer. Udvidelse af Azure AD med [partnerløsninger](/azure/active-directory/saas-apps/tutorial-list) kan håndtere mange af disse scenarier. SSO er en strategi og en rejse. Du kan ikke komme dertil uden at gå i retning af [standarder for applikationer](/azure/active-directory/develop/v2-app-types). Relateret til denne artikel er en rejse til [adgangskodeløs](/azure/active-directory/authentication/concept-authentication-passwordless) godkendelse, som heller ikke har et magisk svar.
 
 [Multifaktorgodkendelse](/azure/active-directory/authentication/concept-mfa-howitworks) (MFA) er vigtig i dag ([her](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984) for mere). Føj til [it-analyse af brugeradfærd](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) , og du har en løsning, der forhindrer de mest almindelige cyberangreb. Selv forbrugertjenester flytter sig for at kræve MFA. Alligevel mødes jeg stadig med mange kunder, der ikke ønsker at flytte til [moderne godkendelsesmetoder](../enterprise/hybrid-modern-auth-overview.md) . Det største argument, jeg hører, er, at det vil påvirke brugere og ældre programmer. Nogle gange kan et godt kick hjælpe kunderne med at komme videre – Exchange Online [annoncerede ændringer](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-auth-and-exchange-online-february-2020-update/ba-p/1191282). Der er nu mange Azure [AD-rapporter](/azure/active-directory/fundamentals/concept-fundamentals-block-legacy-authentication) tilgængelige, som kan hjælpe kunderne med denne overgang.
 
@@ -180,7 +180,7 @@ Mange kunder ender med flere produktionslejere efter en fusion og overtagelse (M
 
 Nogle kunder vælger at gå med mere end én lejer. Dette bør være en meget omhyggelig beslutning og næsten altid forretningsårsag drevet! Nogle eksempler omfatter følgende:
 
-- En holdingselskabsstruktur, hvor der ikke er behov for nemt samarbejde mellem forskellige enheder, og der er stærke administrative og andre isolationsbehov.
+- En holdingtypevirksomhedsstruktur, hvor der ikke kræves nemt samarbejde mellem forskellige enheder, og der er stærke administrative og andre isolationsbehov.
 - Efter en overtagelse træffes der en forretningsbeslutning om at adskille to enheder.
 - Simulering af en kundes miljø, der ikke ændrer kundens produktionsmiljø.
 - Udvikling af software til kunder.
@@ -195,7 +195,7 @@ Til [Multi-Geo](../enterprise/microsoft-365-multi-geo.md) eller ikke til Multi-G
 - Det er ikke en løsning for [overholdelse af GDPR](https://www.microsoft.com/trust-center/privacy/gdpr-overview). GDPR fokuserer ikke på datasuverænitet eller lagerplaceringer. Der er andre overholdelsesrammer for dette.
 - Det løser ikke delegering af administration (se nedenfor) eller [informationsbarrierer](../compliance/information-barriers.md).
 - Det er ikke det samme som flerlejer og kræver yderligere arbejdsprocesser [til klargøring af brugere](https://github.com/MicrosoftDocs/azure-docs-pr/blob/master/articles/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation.md) .
-- Den flytter ikke [din lejer](../enterprise/moving-data-to-new-datacenter-geos.md) (dit Azure AD) til et andet geografisk område.
+- Det [flytter ikke din lejer](../enterprise/moving-data-to-new-datacenter-geos.md) (din Azure AD) til et andet geografisk område.
 
 ## <a name="delegation-of-administration"></a>Delegering af administration
 
@@ -221,9 +221,9 @@ Et andet almindeligt spørgsmål er muligheden for at udvide roller til et under
 
 I dag kræver alle disse roller direkte medlemskab (eller dynamisk tildeling, hvis du bruger [Azure AD PIM](/azure/active-directory/privileged-identity-management/)). Det betyder, at kunderne skal administrere disse direkte i Azure AD, og disse kan ikke være baseret på et medlemskab af en sikkerhedsgruppe. Jeg er ikke fan af at oprette scripts til at administrere disse, da det ville være nødvendigt at køre med øgede rettigheder. Jeg anbefaler generelt API-integration med processystemer som ServiceNow eller brug af partnerstyringsværktøjer som F.eks. Saviynt. Der er tekniske arbejde i gang med at løse dette over tid.
 
-Jeg nævnte [Azure AD PIM](/azure/active-directory/privileged-identity-management/) et par gange. Der findes en tilsvarende Microsoft Identity Manager-løsning (MIM) [PAM (Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)) til kontrolelementer i det lokale miljø. Det kan også være en god idé at se på [Privilegerede paws (Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) ) og [Azure AD Identity Governance](/azure/active-directory/governance/identity-governance-overview). Der er også forskellige tredjepartsværktøjer, som kan muliggøre just-in-time, just-enough og dynamisk rolle udvidede. Dette er normalt en del af en større diskussion om beskyttelse af et miljø.
+Jeg nævnte [Azure AD PIM](/azure/active-directory/privileged-identity-management/) et par gange. Der er en tilsvarende Microsoft Identity Manager(MIM) [PAM-løsning (Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)) til kontrolelementer i det lokale miljø. Det kan også være en god idé at se på [Privilegerede paws (Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) ) og [Azure AD Identity Governance](/azure/active-directory/governance/identity-governance-overview). Der er også forskellige tredjepartsværktøjer, som kan muliggøre just-in-time, just-enough og dynamisk rolle udvidede. Dette er normalt en del af en større diskussion om beskyttelse af et miljø.
 
-Nogle gange kræver scenarier tilføjelse af en ekstern bruger til en rolle (se afsnittet med flere lejere ovenfor). Det her fungerer fint. [Azure AD B2B](/azure/active-directory/b2b/) er endnu et stort og sjovt emne, som kunderne skal gennemgå, måske i en anden artikel.
+Nogle gange kræver scenarier tilføjelse af en ekstern bruger til en rolle (se afsnittet med flere lejere ovenfor). Det her fungerer fint. [Azure AD B2B](/azure/active-directory/b2b/) er endnu en stor og sjov artikel, som kunderne skal gennemgå– måske i en anden artikel.
 
 ### <a name="security-and-compliance-center-scc"></a>Security and Compliance Center (SCC)
 
@@ -275,7 +275,7 @@ Som tidligere nævnt ønsker mange kunder at opnå en mere detaljeret delegering
 
 ### <a name="activity-logs"></a>Aktivitetslogge
 
-Office 365 har en [samlet overvågningslog](../compliance/search-the-audit-log-in-security-and-compliance.md). Det er en meget [detaljeret log](/office/office-365-management-api/office-365-management-activity-api-schema), men læs ikke for meget ind i navnet. Den indeholder muligvis ikke alt, hvad du ønsker eller har brug for til dine behov for sikkerhed og overholdelse af angivne standarder. Nogle kunder er også virkelig interesseret i [Avanceret revision](../compliance/advanced-audit.md).
+Office 365 har en [samlet overvågningslog](../compliance/search-the-audit-log-in-security-and-compliance.md). Det er en meget [detaljeret log](/office/office-365-management-api/office-365-management-activity-api-schema), men læs ikke for meget ind i navnet. Den indeholder muligvis ikke alt, hvad du ønsker eller har brug for til dine behov for sikkerhed og overholdelse af angivne standarder. Nogle kunder er også meget interesseret i [Audit (Premium)](../compliance/advanced-audit.md).
 
 Eksempler på Microsoft 365 logfiler, der tilgås via andre API'er, omfatter følgende:
 
@@ -306,7 +306,7 @@ Mange store kunder vil overføre disse logdata til et tredjepartssystem (f.eks. 
 
 ### <a name="azure"></a>Azure
 
-Jeg bliver ofte spurgt, om der er en måde at adskille roller med rettigheder på højt niveau mellem Azure AD, Azure og SaaS (f.eks.: Global administrator for Office 365 men ikke Azure).  Ikke rigtig.  Arkitektur med flere lejere er nødvendig, hvis fuldstændig administrativ adskillelse er påkrævet, men det medfører betydelig [kompleksitet](https://aka.ms/multi-tenant-user) (se ovenfor). Alle disse tjenester er en del af den samme sikkerheds-/identitetsgrænse (se hierarkimodellen ovenfor).
+Jeg bliver ofte spurgt, om der er en måde at adskille roller med rettigheder på højt niveau mellem Azure AD, Azure og SaaS (f.eks.: Global administrator for Office 365, men ikke Azure).  Ikke rigtig.  Arkitektur med flere lejere er nødvendig, hvis fuldstændig administrativ adskillelse er påkrævet, men det medfører betydelig [kompleksitet](https://aka.ms/multi-tenant-user) (se ovenfor). Alle disse tjenester er en del af den samme sikkerheds-/identitetsgrænse (se hierarkimodellen ovenfor).
 
 Det er vigtigt at forstå relationer mellem forskellige tjenester i den samme lejer. Jeg arbejder sammen med mange kunder, der bygger forretningsløsninger, der spænder over Azure, Office 365 og Power Platform (og ofte også cloudtjenester i det lokale miljø og tredjepartscloudtjenester). Et almindeligt eksempel:
 

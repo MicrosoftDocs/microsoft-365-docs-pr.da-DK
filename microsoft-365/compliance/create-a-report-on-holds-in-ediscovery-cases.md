@@ -20,14 +20,16 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du opretter en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager.
-ms.openlocfilehash: b0460b725359e2953c0a27b517a362327ae504f5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 98cdad3d125fbeab9afd9d7d99b572e5f0bf7386
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946457"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993200"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>Brug et script til at oprette en rapport om ventepositioner i eDiscovery-sager
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til core- og eDiscovery-sager (Premium) i Microsoft Purview-overholdelsesportalen. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
 
@@ -41,15 +43,15 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret bes
 
 - De eksempelscripts, der er angivet i dette emne, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Forbind til Security & Compliance Center PowerShell
+## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Opret forbindelse til Security & Compliance Center PowerShell
 
-Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>Trin 2: Kør scriptet for at rapportere om ventepositioner, der er knyttet til eDiscovery-sager
 
 Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er det næste trin at oprette og køre scriptet, der indsamler oplysninger om eDiscovery-sager i din organisation.
 
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks med .ps1, f.eks. CaseHoldsReport.ps1.
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. CaseHoldsReport.ps1.
 
    ```powershell
    #script begin
@@ -172,7 +174,7 @@ Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er
    #script end
    ```
 
-2. I den Windows PowerShell session, der blev åbnet i trin 1, skal du gå til den mappe, hvor du gemte scriptet.
+2. I Den Windows PowerShell-session, der blev åbnet i trin 1, skal du gå til den mappe, hvor du gemte scriptet.
 
 3. Kør scriptet. f.eks.:
 
@@ -187,7 +189,7 @@ Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er
    > [!TIP]
    > Hvis du vil gemme rapporten i den samme mappe, som scriptet er placeret i, skal du skrive et punktum ("."), når du bliver bedt om at angive en destinationsmappe. Hvis du vil gemme rapporten i en undermappe i den mappe, hvor scriptet er placeret, skal du blot skrive navnet på undermappen.
 
-   Scriptet begynder at indsamle oplysninger om alle eDiscovery-sager i din organisation. Undlad at få adgang til rapportfilen, mens scriptet kører. Når scriptet er fuldført, vises der en bekræftelsesmeddelelse i den Windows PowerShell session. Når denne meddelelse vises, kan du få adgang til rapporten i den mappe, du angav i trin 4. Filnavnet på rapporten er `CaseHoldsReport<DateTimeStamp>.csv`.
+   Scriptet begynder at indsamle oplysninger om alle eDiscovery-sager i din organisation. Undlad at få adgang til rapportfilen, mens scriptet kører. Når scriptet er fuldført, vises der en bekræftelsesmeddelelse i Windows PowerShell-sessionen. Når denne meddelelse vises, kan du få adgang til rapporten i den mappe, du angav i trin 4. Filnavnet på rapporten er `CaseHoldsReport<DateTimeStamp>.csv`.
 
    Derudover opretter scriptet også en rapport med en liste over sager, der ikke har nogen ventepositioner. Filnavnet på denne rapport er `CaseswithNoHolds<DateTimeStamp>.csv`.
 

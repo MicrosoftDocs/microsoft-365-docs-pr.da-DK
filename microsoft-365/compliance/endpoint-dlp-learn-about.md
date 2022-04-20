@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om Microsoft 365 forebyggelse af datatab i Slutpunkt
+title: Få mere at vide om forebyggelse af datatab ved slutpunkt
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -18,33 +18,35 @@ ms.collection:
 - m365initiative-compliance
 search.appverid:
 - MET150
-description: 'Microsoft 365 forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
-ms.openlocfilehash: f32e84434258ff4b4c5ea6af24f69c607952b56a
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+description: 'Forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
+ms.openlocfilehash: e84d2de72e05991a7d8374a2e5214df90fb939d9
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714543"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953299"
 ---
-# <a name="learn-about-microsoft-365-endpoint-data-loss-prevention"></a>Få mere at vide om Microsoft 365 forebyggelse af datatab i Slutpunkt
+# <a name="learn-about-endpoint-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab ved slutpunkt
 
-Du kan bruge Microsoft 365 DLP (forebyggelse af datatab) til at overvåge de handlinger, der udføres på elementer, du har besluttet dig for at være følsomme, og til at forhindre utilsigtet deling af disse elementer. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**Forebyggelse af datatab for slutpunkter** (Slutpunkt DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk gemmes på Windows 10, Windows 11 og macOS-enheder (Catalina 10.15 og nyere). Når enheder er onboardet i Microsoft 365 overholdelsesløsninger, bliver oplysningerne om, hvad brugerne foretager sig med følsomme elementer, synlige i [Aktivitetsoversigt](data-classification-activity-explorer.md), og du kan gennemtvinge beskyttende handlinger på disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).
+Du kan bruge Microsoft Purview DLP (Data Loss Prevention) til at overvåge de handlinger, der udføres på elementer, du har besluttet at være følsomme, og til at forhindre utilsigtet deling af disse elementer. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
+
+**Forebyggelse af datatab for slutpunkter** (Slutpunkt DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk gemmes på Windows 10, Windows 11 og macOS-enheder (Catalina 10.15 og nyere). Når enheder er onboardet i Microsoft Purview-løsninger, bliver oplysningerne om, hvad brugerne foretager sig med følsomme elementer, synlige i [Aktivitetsoversigt](data-classification-activity-explorer.md) , og du kan gennemtvinge beskyttende handlinger på disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).
 
 > [!TIP]
 > Hvis du leder efter enhedsstyring til flytbart lager, [skal du se Microsoft Defender for Endpoint Flytbare Storage Access Control til enhedshåndtering](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
 
 > [!NOTE]
-> I Microsoft 365 overholdelse af angivne standarder sker DLP-politikevalueringen af følsomme elementer centralt, så der er ingen tidsforskydning for politikker og politikopdateringer, der skal distribueres til individuelle enheder. Når en politik opdateres i Overholdelsescenter, tager det normalt ca. en time, før disse opdateringer synkroniseres på tværs af tjenesten. Når politikopdateringer er synkroniseret, evalueres elementer på målrettede enheder automatisk igen, næste gang de tilgås eller ændres.
+> I Microsoft Purview forekommer DLP-politikevalueringen af følsomme elementer centralt, så der er ingen tidsforskydning for, at politikker og politikopdateringer distribueres til individuelle enheder. Når en politik opdateres i Overholdelsescenter, tager det normalt ca. en time, før disse opdateringer synkroniseres på tværs af tjenesten. Når politikopdateringer er synkroniseret, evalueres elementer på målrettede enheder automatisk igen, næste gang de tilgås eller ændres.
 
 ## <a name="endpoint-activities-you-can-monitor-and-take-action-on"></a>Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på
 
-Microsoft Endpoint DLP giver dig mulighed for at overvåge og administrere følgende typer aktiviteter, som brugere foretager på følsomme elementer, der fysisk er gemt Windows 10, Windows 11 eller macOS-enheder.
+Slutpunkt DLP giver dig mulighed for at overvåge og administrere følgende typer aktiviteter, som brugere foretager på følsomme elementer, der fysisk er gemt Windows 10, Windows 11 eller macOS-enheder.
 
-|Aktivitet |Beskrivelse  |Windows 10 1809 og nyere / Windows 11| macOS Catalina 10.15 (prøveversion) | Kan overvåges/begrænses|
+|Aktivitet |Beskrivelse  |Windows 10 1809 og nyere / Windows 11| macOS Catalina 10.15| Kan overvåges/begrænses|
 |---------|---------|---------|---------|---------|
-|uploade til cloudtjenesten eller få adgang fra ikke-tilladte browsere    | Registrerer, når en bruger forsøger at overføre et element til et tjenestedomæne med begrænset adgang eller få adgang til et element via en browser.  Hvis de bruger en browser, der er angivet i DLP som en ikke-tilladt browser, blokeres uploadaktiviteten, og brugeren omdirigeres til at bruge Microsoft Edge . Microsoft Edge tillader eller blokerer derefter upload eller adgang baseret på konfigurationen af DLP-politikken         |Understøttes | Understøttes|kan overvåges og begrænses|
+|uploade til cloudtjenesten eller få adgang fra ikke-tilladte browsere    | Registrerer, når en bruger forsøger at overføre et element til et tjenestedomæne med begrænset adgang eller få adgang til et element via en browser.  Hvis de bruger en browser, der er angivet i DLP som en ikke-tilladt browser, blokeres uploadaktiviteten, og brugeren omdirigeres til at bruge Microsoft Edge. Microsoft Edge tillader eller blokerer derefter upload eller adgang baseret på konfigurationen af DLP-politikken         |Understøttes | Understøttes|kan overvåges og begrænses|
 |kopiér til en anden app    |Registrerer, når en bruger forsøger at kopiere oplysninger fra et beskyttet element og derefter indsætte dem i en anden app, i en anden proces eller et andet element. Kopiering og indsættelse af oplysninger i den samme app, proces eller element registreres ikke af denne aktivitet.|Understøttes|Understøttes         | kan overvåges og begrænses|
 |kopiér til flytbart USB-medie |Registrerer, når en bruger forsøger at kopiere et element eller oplysninger til flytbare medier eller USB-enheder.|Understøttes|Understøttes         | kan overvåges og begrænses|
 |kopiér til et netværksshare    |Registrerer, når en bruger forsøger at kopiere et element til et netværksshare eller et tilknyttet netværksdrev |Understøttes|Understøttes         |kan overvåges og begrænses|
@@ -125,7 +127,7 @@ Der er et par ekstra begreber, som du skal være opmærksom på, før du går i 
 
 ### <a name="enabling-device-management"></a>Aktivering af enhedshåndtering
 
-Enhedshåndtering er den funktionalitet, der muliggør indsamling af telemetri fra enheder og bringer den ind i Microsoft 365 løsninger til overholdelse af angivne standarder, f.eks. Endpoint DLP og [Insider Risk Management](insider-risk-management.md). Du skal onboarde alle de enheder, du vil bruge som placeringer i DLP-politikker.
+Enhedshåndtering er den funktionalitet, der muliggør indsamling af telemetri fra enheder og overfører den til Microsoft Purview-løsninger, f.eks. Endpoint DLP og [styring af insiderrisiko](insider-risk-management.md). Du skal onboarde alle de enheder, du vil bruge som placeringer i DLP-politikker.
 
 > [!div class="mx-imgBorder"]
 > ![aktivere enhedshåndtering.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
@@ -201,10 +203,10 @@ Hvis en fil f.eks. kopieres til et flytbart USB-medie, får du vist disse attrib
 
 Nu, hvor du har lært om Endpoint DLP, er dine næste trin:
 
-1. [Om bord på Windows 10- eller Windows 11 enheder i Microsoft 365 oversigt](device-onboarding-overview.md)
-1. [Oversigt over onboarding af macOS-enheder i Microsoft 365 (prøveversion)](device-onboarding-macos-overview.md)
+1. [Oversigt over onboarding af Windows 10 eller Windows 11 enheder i Microsoft Purview](device-onboarding-overview.md)
+1. [Oversigt over onboarding af macOS-enheder i Microsoft Purview](device-onboarding-macos-overview.md)
 1. [Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt](dlp-configure-endpoint-settings.md)
-1. [Brug af Microsoft Endpoint til forebyggelse af datatab](endpoint-dlp-using.md)
+1. [Brug forebyggelse af datatab ved slutpunkt](endpoint-dlp-using.md)
 
 ## <a name="see-also"></a>Se også
 
@@ -214,4 +216,4 @@ Nu, hvor du har lært om Endpoint DLP, er dine næste trin:
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Kom i gang med Aktivitetsoversigt](data-classification-activity-explorer.md)
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection/)
-- [Styring af insiderrisiko](insider-risk-management.md)
+- [Styring af insider-risiko](insider-risk-management.md)

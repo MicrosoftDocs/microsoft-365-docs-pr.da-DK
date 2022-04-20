@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Skype for Business til Microsoft 365.
-ms.openlocfilehash: 406c8db8a28303657b6c475bf826ee501c9e7620
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 510eea94519b6f2278b9319da8c37b683639680c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937185"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992408"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Konfigurer en connector til arkivering af Skype for Business data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Skype for Business platform til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Skype for Business](https://www.veritas.com/en/au/insights/merge1/skype-for-business) connector, der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. meddelelser mellem brugere, vedvarende chats og mødemeddelelser fra Skype for Business til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
@@ -45,7 +47,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Den bruger, der opretter den Skype for Business connector i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-skype-for-business-connector"></a>Trin 1: Konfigurer Skype for Business-connectoren
 

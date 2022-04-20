@@ -16,16 +16,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug det nye sagsformat i eDiscovery (Premium), så du kan tilføje flere elementer for at gennemse sæt og drage fordel af andre øgede grænser og ny funktionalitet.
-ms.openlocfilehash: 36650a369d2bac2742eb7f0d5ea76b3a530a1a03
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6c3e9f86cac5424ae9d9610a9c715c2f86563f64
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947423"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993551"
 ---
 # <a name="use-the-new-case-format-in-ediscovery-premium"></a>Brug det nye sagsformat i eDiscovery (Premium)
 
-Flere organisationer bruger eDiscovery-løsningen (Premium) i Microsoft 365 til kritiske eDiscovery-processer. Dette omfatter besvarelse af lovmæssige anmodninger, undersøgelser og retssager. I takt med at brugen af eDiscovery (Premium) øges, er et almindeligt kundekrav at udvide den samlede mængde indhold, der kan administreres i et enkelt eDiscovery-tilfælde (Premium). For at imødekomme betydelige stigninger i sagsstørrelsen, både for den samlede datamængde og det samlede antal elementer, kan du nu vælge det nye sagsformat, når du opretter en eDiscovery-sag (Premium).  
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Flere organisationer bruger eDiscovery-løsningen (Premium) i Microsoft Purview til kritiske eDiscovery-processer. Dette omfatter besvarelse af lovmæssige anmodninger, undersøgelser og retssager. I takt med at brugen af eDiscovery (Premium) øges, er et almindeligt kundekrav at udvide den samlede mængde indhold, der kan administreres i et enkelt eDiscovery-tilfælde (Premium). For at hjælpe med at imødekomme betydelige stigninger i sagsstørrelsen, både for den samlede datamængde og det samlede antal elementer, kan du nu vælge det nye sagsformat, når du opretter en eDiscovery-sag (Premium).  
 
 ## <a name="create-a-case"></a>Opret en sag
 
@@ -35,7 +37,7 @@ Sådan opretter du en eDiscovery-sag (Premium) ved hjælp af det nye sagsformat:
 
 2. Klik på **eDiscovery > Avanceret** i navigationsruden til venstre på Microsoft Purview-overholdelsesportalen.
 
-3. På siden **eDiscovery (Premium)** skal du klikke på fanen **Sager** og derefter klikke på **Opret en sag**.
+3. Klik på fanen **Sager** på siden **eDiscovery (Premium),** og klik derefter på **Opret en sag**.
 
    Siden **Ny eDiscovery-sag** vises. Afsnittet **Sagsformat** giver mulighed for at oprette en sag ved hjælp af det nye format.
 
@@ -47,7 +49,7 @@ Sådan opretter du en eDiscovery-sag (Premium) ved hjælp af det nye sagsformat:
 
 Det nye sagsformat giver dig mulighed for at administrere sager, der indeholder mere end 40 millioner elementer. Denne funktion hjælper dig med effektivt at administrere store mængder sagsdata via hele eDiscovery-arbejdsprocessen.
 
-Her er en liste over andre fordele ved store sager i eDiscovery-arbejdsprocessen (Premium).
+Her er en liste over andre fordele ved store sager i arbejdsprocessen for eDiscovery (Premium).
 
 - **Samling**: I det nye sagsformat kan du indsamle op til 1 TB data for en enkelt samling.
 
@@ -59,7 +61,7 @@ Her er en liste over andre fordele ved store sager i eDiscovery-arbejdsprocessen
 
 Det nye caseformat indeholder desuden en opdateret brugergrænseflade, der viser den samlede størrelse af hvert anmeldelsessæt i sagen. Størrelser på korrektursæt vises i en kolonne under fanen **Gennemse sæt** .
 
-![Ny statistik for gennemsynssæt i brugergrænsefladen i eDiscovery (Premium).](..\media\LargeCaseUI.png)
+![Ny statistik for gennemgangssæt i brugergrænsefladen i eDiscovery (Premium).](..\media\LargeCaseUI.png)
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 

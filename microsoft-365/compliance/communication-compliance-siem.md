@@ -1,6 +1,7 @@
 ---
 title: Kommunikationsoverholdelse med SIEM-løsninger
-description: Få mere at vide om integration af kommunikationsoverholdelse med SIEM-løsninger.
+description: Få mere at vide om integration af overholdelse af kommunikation med SIEM-løsninger.
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, kommunikation
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -18,24 +19,26 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: d957b5fec4341cd7335f5c5a49b6654ffaf51f68
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: f111fbd831f36cd8f1647e4b99565a24372387b8
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63594024"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953864"
 ---
 # <a name="communication-compliance-with-siem-solutions"></a>Kommunikationsoverholdelse med SIEM-løsninger
 
-[Kommunikationsoverholdelse](communication-compliance.md) er en insider-risikoløsning i Microsoft 365, der hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. Sikkerhedsoplysninger og begivenhedsstyring (SIEM)-løsninger som [f.eks. Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel) eller [Splunk](https://www.splunk.com/) bruges ofte til at samle og spore trusler i en organisation.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Et almindeligt behov for organisationer er at integrere beskeder om kommunikationsoverholdelse og disse SIEM-løsninger. Med denne integration kan organisationer få vist beskeder om kommunikationsoverholdelse i deres SIEM-løsning og derefter afhjælpe beskeder i kommunikationsoverholdelsesarbejdsprocessen og brugeroplevelsen. En medarbejder sender f.eks. en stødende meddelelse til en anden medarbejder, og meddelelsen registreres af en overvågning af overholdelsespolitik for kommunikation for upassende indhold. Disse hændelser registreres i Microsoft 365 Audit (også kaldet "samlet overvågningslog") af løsningen til overholdelse af kommunikation og importeres til SIEM-løsningen. Der udløses derefter en besked i SIEM-løsningen for organisationen fra hændelser, der overvåges i Microsoft 365 Audit, som er knyttet til beskeder om kommunikationsoverholdelse. Ligene underrettes om advarslen i SIEM-løsningerne, og de undersøger og afhjælper derefter beskeden i løsningen til overholdelse af kommunikation.
+[Overholdelse af angivne standarder for kommunikation](communication-compliance.md) er en insiderrisikoløsning i Microsoft Purview, der hjælper dig med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. SIEM-løsninger (Security Information and Event Management), f.eks [. Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel) eller [Splunk](https://www.splunk.com/) , bruges ofte til at aggregere og spore trusler i en organisation.
 
-## <a name="communication-compliance-alerts-in-microsoft-365-audit"></a>Beskeder om overholdelse af kommunikation i Microsoft 365 Audit
+Et almindeligt behov for organisationer er at integrere beskeder om overholdelse af angivne standarder for kommunikation og disse SIEM-løsninger. Med denne integration kan organisationer få vist beskeder om overholdelse af angivne standarder i deres SIEM-løsning og derefter afhjælpe beskeder i arbejdsprocessen for overholdelse af kommunikation og brugeroplevelsen. En medarbejder sender f.eks. en stødende meddelelse til en anden medarbejder, og denne meddelelse registreres af en overvågning af politikken for overholdelse af kommunikation for upassende indhold. Disse hændelser spores i Microsoft 365 Audit (også kendt som "unified audit log") af kommunikationsoverholdelsesløsningen og importeres til SIEM-løsningen. Der udløses derefter en besked i SIEM-løsningen for organisationen fra hændelser, der overvåges i Microsoft 365 Overvågning, som er knyttet til beskeder om kommunikation med overholdelse af angivne standarder. Efterforskere får besked om advarslen i SIEM-løsningerne, og de undersøger og afhjælper derefter advarslen i løsningen til kommunikationsoverholdelse.
 
-Alle match til overholdelse af kommunikationspolitik registreres Microsoft 365 Overvågning. Følgende eksempler viser de oplysninger, der er tilgængelige for de valgte matchaktiviteter for politikker for overholdelse af kommunikation:
+## <a name="communication-compliance-alerts-in-microsoft-365-audit"></a>Beskeder om overholdelse af kommunikation i Microsoft 365 overvågning
 
-**Eksempel på post i overvågningsloggen for en skabelon til upassende indholdspolitik, der matcher:**
+Alle overholdelsespolitikforekomster for kommunikation registreres i Microsoft 365 Overvågning. Følgende eksempler viser de oplysninger, der er tilgængelige for de valgte aktiviteter for politikken for overholdelse af angivne standarder for kommunikation:
+
+**Eksempel på en post i overvågningsloggen for et forkert indholdspolitikskabelonmatch:**
 
 ```xml
 RunspaceId: 5c7bc9b0-7672-4091-a112-0635bd5f7732
@@ -51,7 +54,7 @@ IsValid: True
 ObjectState: Unchanged
 ```
 
-**Eksempel på en post Microsoft 365 overvågningslog for en politik med et brugerdefineret nøgleordsmatch (brugerdefineret type af følsomme oplysninger):**
+**Eksempel på en Microsoft 365 post i overvågningsloggen for en politik med et brugerdefineret nøgleordsmatch (brugerdefineret type følsomme oplysninger):**
 
 ```xml
 RunspaceId: 5c7bc9b0-7672-4091-a112-0635bd5f7732
@@ -68,70 +71,70 @@ ObjectState: Unchanged
 ```
 
 > [!NOTE]
-> Der kan i øjeblikket være op til en 24-timers forsinkelse mellem det tidspunkt, hvor et match til politikken registreres i Microsoft 365 Audit, og det tidspunkt, hvor du kan undersøge overensstemmelse mellem politikker i overensstemmelse med kommunikation.
+> Der kan i øjeblikket være en forsinkelse på op til 24 timer mellem det tidspunkt, hvor et politikmatch registreres i Microsoft 365 Overvågning, og det tidspunkt, hvor du kan undersøge politikforekomster i kommunikation med overholdelse af angivne standarder.
 
-## <a name="configure-communication-compliance-and-microsoft-sentinel-integration"></a>Konfigurer kommunikationsoverholdelse og integration af Microsoft Sentinel
+## <a name="configure-communication-compliance-and-microsoft-sentinel-integration"></a>Konfigurer overholdelse af kommunikation og Microsoft Sentinel-integration
 
-Når du bruger Microsoft Sentinel til at aggregere overholdelsespolitikken for kommunikation, bruger Sentinel Microsoft 365 Audit som datakilde. Hvis du vil integrere beskeder om kommunikationsoverholdelse med Sentinel, skal du udføre følgende trin:
+Når du bruger Microsoft Sentinel til at aggregere overholdelsespolitik for kommunikation, bruger Sentinel Microsoft 365 Overvågning som datakilde. Hvis du vil integrere beskeder om kommunikation med overholdelse af angivne standarder med Sentinel, skal du fuldføre følgende trin:
 
 1. [Onboard til Microsoft Sentinel](/azure/sentinel/quickstart-onboard). Som en del af onboardingprocessen skal du konfigurere dine datakilder.
-2. Konfigurer Microsoft Sentinel-Microsoft Office 365 [dataforbindelse, og](/azure/sentinel/data-connectors-reference#microsoft-office-365) under konfiguration af forbindelse skal *du Exchange*.
-3. Konfigurer søgeforespørgsel for at hente beskeder om kommunikationsoverholdelse. Eksempel:
+2. Konfigurer Microsoft Sentinel [Microsoft Office 365 dataconnector](/azure/sentinel/data-connectors-reference#microsoft-office-365), og vælg *Exchange* under connectorkonfiguration.
+3. Konfigurer søgeforespørgslen for at hente beskeder om kommunikation med overholdelse af angivne standarder. Eksempel:
 
     *| OfficeActivity | hvor OfficeWorkload == "Exchange" og Operation == "SupervisionRuleMatch" | sortér efter TimeGenerated*
 
-    Hvis du vil filtrere for en bestemt bruger, skal du bruge følgende forespørgselsformat:
+    Hvis du vil filtrere efter en bestemt bruger, skal du bruge følgende forespørgselsformat:
 
     *| OfficeActivity | hvor OfficeWorkload == "Exchange" og Operation == "SupervisionRuleMatch" og UserId == "User1@Contoso.com" | sortér efter TimeGenerated*
 
-Du kan finde flere oplysninger Microsoft 365 overvågningslogfiler til data Office 365 der er indsamlet af Microsoft Sentinel, under [Reference til Azure Monitor-logge](/azure/azure-monitor/reference/tables/OfficeActivity).
+Du kan finde flere oplysninger om Microsoft 365 Overvågningslogge for Office 365, der indsamles af Microsoft Sentinel, i [Reference til Azure Monitor Logs](/azure/azure-monitor/reference/tables/OfficeActivity).
 
-## <a name="configure-communication-compliance-and-splunk-integration"></a>Konfigurer kommunikationsoverholdelse og integration af Splunk
+## <a name="configure-communication-compliance-and-splunk-integration"></a>Konfigurer kommunikation med overholdelse af angivne standarder og Splunk-integration
 
-Hvis du vil integrere beskeder om kommunikationsoverholdelse med Splunk, skal du udføre følgende trin:
+Hvis du vil integrere beskeder om kommunikation med overholdelse af angivne standarder med Splunk, skal du udføre følgende trin:
 
-1. Installér [Splunk-tilføjelsesprogrammet til Microsoft Office 365](https://docs.splunk.com/Documentation/AddOns/released/MSO365/ConfigureinputsmanagementAPI)
-2. Konfigurer et integrationsprogram i Azure AD til Splunk-tilføjelsesprogrammet til Microsoft Office 365
-3. Konfigurer søgeforespørgsler i din Splunk-løsning. Brug følgende søgeeksemsel til at identificere alle beskeder om kommunikationsoverholdelse:
+1. Installér [tilføjelsesprogrammet Splunk til Microsoft Office 365](https://docs.splunk.com/Documentation/AddOns/released/MSO365/ConfigureinputsmanagementAPI)
+2. Konfigurer et integrationsprogram i Azure AD for Splunk-tilføjelsesprogrammet til Microsoft Office 365
+3. Konfigurer søgeforespørgsler i din Splunk-løsning. Brug følgende søgeeksempel til at identificere alle beskeder om kommunikation med overholdelse af angivne standarder:
 
-    *index=\* sourcetype="o365:management:activity" workload=Exchange Operation=SupervisionRuleMatch*
+    *index=\* sourcetype="o365:management:activity" Workload=Exchange Operation=SupervisionRuleMatch*
 
-Hvis du vil filtrere resultaterne for en bestemt politik for overholdelse af kommunikation, kan du bruge *parameteren SRPolicyMatchDetails.SRPolicyName* .
+Hvis du vil filtrere resultaterne for en bestemt politik for overholdelse af kommunikation, kan du bruge parameteren *SRPolicyMatchDetails.SRPolicyName* .
 
-I følgende søgeeksemsel returneres der f.eks. beskeder om match til en politik for overholdelse af regler og standarder med navnet *Upassende indhold*:
+Følgende søgeeksempel returnerer f.eks. beskeder om matches til en politik for kommunikation med overholdelse af angivne standarder med navnet *Upassende indhold*:
 
-  *index=\* sourcetype='o365:management:activity' workload=Exchange Operation=SupervisionRuleMatch SRPolicyMatchDetails.SRPolicyName=\<Inappropriate content\>*
+  *index=\* sourcetype='o365:management:activity' Workload=Exchange Operation=SupervisionRuleMatch SRPolicyMatchDetails.SRPolicyName=\<Inappropriate content\>*
 
-Følgende tabel viser eksempler på søgeresultater for forskellige politiktyper:
+I følgende tabel vises eksempelsøgeresultater for forskellige politiktyper:
 
 | Politiktyper | Eksempel på søgeresultater |
 | :------------------ | :--------------------------------------- |
-| Politik, der registrerer en brugerdefineret liste med nøgleord af typen følsomme oplysninger | { <br> CreationTime: 2021-09-17T16:29:57 <br> ID: 4b9ce23d-ee60-4f66-f38d-08d979f8631f <br> IsPolicyHit: true <br> ObjectId: <CY1PR05MB27158B96AF7F3AFE62E1F762CFDD9@CY1PR05MB2715.namprd05.prod.outlook.com> <br> Handling: OvervågningsregelMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> RecordType: 68 <br> ResultStatus: {"ItemClass":"IPM. Note","CcsiResults":"leak"} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.OnMicrosoft.com <br> UserKey: OvervågningStoreDeliveryAgent <br> UserType: 0 <br> Version: 1 <br> Arbejdsbelastning: Exchange <br> } |
-| Politik, der registrerer upassende sprog | { <br> CreationTime: 2021-09-17T23:44:35 <br> ID: e0ef6f54-9a52-4e4c-9584-08d97a351ad0 <br> IsPolicyHit: true <br> ObjectId: <BN6PR05MB3571AD9FBB85C4E12C1F66B4CCDD9@BN6PR05MB3571.namprd05.prod.outlook.com> <br> Handling: OvervågningsregelMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> RecordType: 68 <br> ResultStatus: {"ItemClass":"IPM.Yammer. Message","CcsiResults":""} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.com <br> UserKey: OvervågningStoreDeliveryAgent <br> UserType: 0 <br> Version: 1 <br> }  |
+| Politik til registrering af en nøgleordsliste med brugerdefinerede følsomme oplysninger | { <br> CreationTime: 09-17T16:29:57 <br> ID: 4b9ce23d-ee60-4f66-f38d-08d979f8631f <br> IsPolicyHit: true <br> Objectid: <CY1PR05MB27158B96AF7F3AFE62E1F762CFDD9@CY1PR05MB2715.namprd05.prod.outlook.com> <br> Handling: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> RecordType: 68 <br> ResultStatus: {"ItemClass":"IPM. Note","CcsiResults":"leak"} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.OnMicrosoft.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Version: 1 <br> Arbejdsbelastning: Exchange <br> } |
+| Politik til registrering af upassende sprog | { <br> CreationTime: 09-17T23:44:35 <br> ID: e0ef6f54-9a52-4e4c-9584-08d97a351ad0 <br> IsPolicyHit: true <br> Objectid: <BN6PR05MB3571AD9FBB85C4E12C1F66B4CCDD9@BN6PR05MB3571.namprd05.prod.outlook.com> <br> Handling: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> RecordType: 68 <br> ResultStatus: {"ItemClass":"IPM.Yammer. Meddelelse","CcsiResults":""} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Version: 1 <br> }  |
 
-## <a name="configure-communication-compliance-with-other-siem-solutions"></a>Konfigurere kommunikationsoverholdelse med andre SIEM-løsninger
+## <a name="configure-communication-compliance-with-other-siem-solutions"></a>Konfigurer overholdelse af kommunikation med andre SIEM-løsninger
 
-Hvis du vil hente matches af kommunikationsoverholdelsespolitik Microsoft 365 Audit, kan du enten bruge PowerShell eller [Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-reference).
+Hvis du vil hente overholdelsespolitik for kommunikation fra Microsoft 365 Overvågning, kan du enten bruge PowerShell eller [API'en til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-Når du bruger PowerShell, kan du bruge en af disse parametre med **Search-UnifiedAuditLog-cmdlet'en** til at filtrere overvågningsloghændelser for kommunikationsoverholdelsesaktiviteter.
+Når du bruger PowerShell, kan du bruge en af disse parametre med **search-UnifiedAuditLog-cmdlet'en** til at filtrere hændelser i overvågningsloggen for aktiviteter for kommunikation med overholdelse af angivne standarder.
 
-| Parameteren Overvågningslog | Parameterværdi for kommunikationsoverholdelse |
+| Parameter for overvågningslog | Parameterværdi for kommunikation med overholdelse af angivne standarder |
 | :------------------ | :--------------------------------------- |
-| Handlinger          | OvervågningsregelMatch                     |
-| RecordType          | ComplianceSupervisionExchange            |
+| Operationer          | TilsynSregelmatch                     |
+| Posttype          | ComplianceSupervisionExchange            |
 
-Følgende er f.eks. en eksempelsøgning ved hjælp af **parameteren Operations** og *SupervisionRuleMatch* :
+Følgende er f.eks. en eksempelsøgning ved hjælp af parameteren **Operations** og værdien *SupervisionRuleMatch* :
 
 ```powershell
 Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -Operations SupervisionRuleMatch | ft CreationDate,UserIds,AuditData
 ```
-Følgende er en stikprøvesøgning, der bruger **RecordsType-parameteren** og *ComplianceSupervisionExchange-værdien* :
+Følgende er et eksempel på en søgning ved hjælp af parameteren **RecordsType** og værdien *ComplianceSupervisionExchange* :
 
 ```powershell
 Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -RecordType ComplianceSuperVisionExchange | ft CreationDate,UserIds,AuditData
 ```
 ## <a name="resources"></a>Ressourcer
 
-- [Overvågning af overholdelse af kommunikation](communication-compliance-reports-audits.md#audit)
-- [Avanceret overvågning i Microsoft 365](advanced-audit.md)
-- [Office 365 administrationsaktivitets-API-reference](/office/office-365-management-api/office-365-management-activity-api-reference)
+- [Overvågning af kommunikation med overholdelse af angivne standarder](communication-compliance-reports-audits.md#audit)
+- [Microsoft Purview Audit (Premium)](advanced-audit.md)
+- [Reference til Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference)

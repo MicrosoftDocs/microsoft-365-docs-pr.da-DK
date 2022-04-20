@@ -1,5 +1,5 @@
 ---
-title: Introduktion til Microsoft 365 forebyggelse af datatab på slutpunkter
+title: Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,71 +19,73 @@ ms.collection:
 search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
-description: Konfigurer beskyttelse Microsoft 365 forebyggelse af datatab på slutpunkter for at overvåge filaktiviteter og implementere beskyttende handlinger for disse filer til slutpunkter.
-ms.openlocfilehash: e29db57c42081349064fd690c5c9fcebee0f8045
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+description: Konfigurer forebyggelse af datatab for slutpunkter for at overvåge filaktiviteter og implementere beskyttende handlinger for disse filer til slutpunkter.
+ms.openlocfilehash: 097ad2ab08d31482413285d3b3d82e6b43255281
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "63589482"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952748"
 ---
-# <a name="get-started-with-endpoint-data-loss-prevention"></a>Kom i gang med forebyggelse af datatab på slutpunkt
+# <a name="get-started-with-endpoint-data-loss-prevention"></a>Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt
 
-Microsoft Endpoint DLP (Forebyggelse af datatab) er en del af Microsoft 365 DLP-pakken (forebyggelse af datatab), som du kan bruge til at opdage og beskytte følsomme elementer på tværs af Microsoft 365-tjenester. Du kan finde flere oplysninger om alle Microsofts DLP-tilbud i [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md). Du kan få mere at vide om Endpoint DLP under [Få mere at vide om forebyggelse af datatab på slutpunkter](endpoint-dlp-learn-about.md)
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Endpoint DLP giver dig mulighed for at overvåge [onboarded Windows 10 og Windows 11](device-onboarding-overview.md) og [onboarded macOS-enheder *(preview),*](device-onboarding-macos-overview.md) der kører Catalina 10.15 og nyere. Når en enhed er onboardet, registrerer DLP, når følsomme elementer bruges og deles. Dette giver dig den synlighed og kontrol, du skal bruge for at sikre, at de bruges og beskyttes korrekt, og for at forhindre risikabel adfærd, der kan kompromittere dem.
+Forebyggelse af datatab for slutpunkter (Endpoint DLP) er en del af Microsoft Purview DLP-pakken (Forebyggelse af datatab), som du kan bruge til at finde og beskytte følsomme elementer på tværs af Microsoft 365 tjenester. Du kan finde flere oplysninger om alle Microsofts DLP-tilbud under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md). Hvis du vil vide mere om Endpoint DLP, skal [du se Få mere at vide om forebyggelse af datatab for Slutpunkt](endpoint-dlp-learn-about.md)
+
+Med Microsoft Endpoint DLP kan du overvåge [onboardede Windows 10 og Windows 11](device-onboarding-overview.md) og [onboardede macOS-enheder](device-onboarding-macos-overview.md), der kører Catalina 10.15 og nyere. Når en enhed er onboardet, registrerer DLP, når følsomme elementer bruges og deles. Dette giver dig den synlighed og kontrol, du har brug for, for at sikre, at de bruges og beskyttes korrekt, og for at forhindre risikable funktionsmåder, der kan kompromittere dem.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonnementslicenser
+### <a name="skusubscriptions-licensing"></a>LICENSER TIL SKU/abonnementer
 
-Før du går i gang med endpoint DLP, skal du [bekræfte Microsoft 365 abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) og eventuelle tilføjelser. For at få adgang til og bruge slutpunkts-DLP-funktionalitet skal du have et af disse abonnementer eller tilføjelser.
+Før du går i gang med Endpoint DLP, skal du bekræfte dit [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) og eventuelle tilføjelsesprogrammer. Hvis du vil have adgang til og bruge Endpoint DLP-funktionalitet, skal du have et af disse abonnementer eller tilføjelsesprogrammer.
 
 - Microsoft 365 E5
 - Microsoft 365 A5 (EDU)
-- Microsoft 365 E5 overholdelse af regler og standarder
-- Microsoft 365 A5 overholdelse af regler og standarder
+- Microsoft 365 E5 overholdelse af angivne standarder
+- Microsoft 365 A5 overholdelse af angivne standarder
 - Microsoft 365 E5 beskyttelse og styring af oplysninger
 - Microsoft 365 A5 beskyttelse og styring af oplysninger
 
-hvis du vil have flere oplysninger om licenser, [Microsoft 365 se licensvejledning for informationsbeskyttelse](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
+Du kan finde komplette licensoplysninger [under Microsoft 365 licensvejledning for at få oplysninger om beskyttelse af oplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
 
-### <a name="configure-proxy-on-the-windows-10-or-windows-11-device"></a>Konfigurer proxy på Windows 10 eller Windows 11-enhed
+### <a name="configure-proxy-on-the-windows-10-or-windows-11-device"></a>Konfigurer proxy på den Windows 10 eller Windows 11 enhed
 
-Hvis du onboarder Windows 10 eller Windows 11 enheder, skal du kontrollere, at enheden kan kommunikere med den skybaserede DLP-tjeneste. Du kan finde flere oplysninger under [Konfigurer indstillinger for enhedsproxy og internetforbindelse for informationsbeskyttelse](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
+Hvis du onboarder Windows 10 eller Windows 11 enheder, skal du kontrollere, at enheden kan kommunikere med DLP-tjenesten i cloudmiljøet. Du kan få flere oplysninger under [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
 
 ## <a name="windows-10-and-windows-11-onboarding-procedures"></a>Windows 10 og Windows 11 Onboarding-procedurer
 
-Hvis du vil have en generel introduktion til Windows-enheder, skal du se:
+Du kan få en generel introduktion til onboarding Windows enheder i:
 
-- [Onboard Windows 10 og Windows 11 enheder i Microsoft 365 oversigt](device-onboarding-overview.md#onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview)
+- [Oversigt over onboarding af Windows 10 og Windows 11 enheder i Microsoft Purview](device-onboarding-overview.md#onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview)
 
-Du kan finde en specifik vejledning til onboarding Windows-enheder under:
+Hvis du vil have specifik vejledning i onboarding Windows enheder, skal du se:
 
 Emne | Beskrivelse
 :---|:---
-[Onboard Windows 10 eller 11 enheder ved hjælp af Gruppepolitik](device-onboarding-gp.md) | Brug Gruppepolitik til at installere konfigurationspakken på enheder.
-[Onboard Windows 10 eller 11 enheder ved hjælp af Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md) | Du kan enten bruge Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1606 eller Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1602 eller tidligere til at installere konfigurationspakken på enheder.
-[Onboard Windows 10 eller 11 enheder ved hjælp af værktøjer til administration af mobilenheder](device-onboarding-mdm.md) | Brug værktøjer til administration af mobilenheder Microsoft Intune til at installere konfigurationspakken på enheden.
-[Onboard Windows 10 eller 11 enheder ved hjælp af et lokalt script](device-onboarding-script.md) | Lær at bruge det lokale script til at installere konfigurationspakken på slutpunkter.
-[Onboard ikke-permanente VDI-enheder (Virtual Desktop Infrastructure)](device-onboarding-vdi.md) | Få mere at vide om, hvordan du bruger konfigurationspakken til at konfigurere VDI-enheder.
+[Onboarde Windows 10 eller 11 enheder ved hjælp af Gruppepolitik](device-onboarding-gp.md) | Brug Gruppepolitik til at installere konfigurationspakken på enheder.
+[Onboarde Windows 10 eller 11 enheder ved hjælp af Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md) | Du kan bruge enten Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1606 eller Microsoft Endpoint Configuration Manager (aktuel forgrening) version 1602 eller tidligere til at installere konfigurationspakken på enheder.
+[Onboarde Windows 10 eller 11 enheder ved hjælp af værktøjer til Enhedshåndtering til mobilenheder](device-onboarding-mdm.md) | Brug værktøjer til Enhedshåndtering mobilenheder eller Microsoft Intune til at installere konfigurationspakken på enheden.
+[Onboarde Windows 10 eller 11 enheder ved hjælp af et lokalt script](device-onboarding-script.md) | Få mere at vide om, hvordan du bruger det lokale script til at installere konfigurationspakken på slutpunkter.
+[Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](device-onboarding-vdi.md) | Få mere at vide om, hvordan du bruger konfigurationspakken til at konfigurere VDI-enheder.
 
-## <a name="macos-onboarding-procedures"></a>macOS-onboardingprocedurer
+## <a name="macos-onboarding-procedures"></a>onboardingprocedurer for macOS
 
-Hvis du vil have en generel introduktion til onboarding macOS-enheder, skal du se:
+Du kan få en generel introduktion til onboarding af macOS-enheder i:
  
-- [Onboard macOS-enheder Microsoft 365 oversigt (forhåndsvisning)](device-onboarding-macos-overview.md#onboard-macos-devices-into-microsoft-365-overview-preview)
+- [Onboard macOS-enheder i Microsoft Purview](device-onboarding-macos-overview.md)
 
-Du kan finde en specifik vejledning til onboarding af macOS-enheder under:
+Hvis du vil have specifik vejledning til onboarding af macOS-enheder, skal du se:
 
 Emne | Beskrivelse
 :---|:---
-|[Onboard and offboard macOS devices into Microsoft 365 Compliance solutions using Intune (preview)](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|For macOS-enheder, der administreres via Intune
-|[Onboard og offboard macOS-enheder i Overholdelsesløsninger ved hjælp af Intune til Microsoft Defender til Endpoint-kunder (preview)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |På macOS-enheder, der administreres via Intune, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
-|[Onboard og offboard macOS-enheder i Microsoft 365 overholdelsesløsninger ved hjælp af SYLF Pro (preview)](device-onboarding-offboarding-macos-jamfpro.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview) | For macOS-enheder, der administreres via JAMF Pro
-|[Onboard og offboard macOS-enheder i Overholdelsesløsninger ved hjælp af SYLF Pro til Microsoft Defender til Slutpunkt-kunder (prøveversion)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|For macOS-enheder, der administreres via SYLF Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
+|[Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune](device-onboarding-offboarding-macos-intune.md)|MacOS-enheder, der administreres via Intune
+|[Onboarde og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint kunder](device-onboarding-offboarding-macos-intune-mde.md) |MacOS-enheder, der administreres via Intune, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
+|[Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro)](device-onboarding-offboarding-macos-jamfpro.md) | Til macOS-enheder, der administreres via JAMF-Pro
+|[Onboarde og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF-Pro til Microsoft Defender for Endpoint kunder)](device-onboarding-offboarding-macos-jamfpro-mde.md)|MacOS-enheder, der administreres via JAMF-Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
 
-Når en enhed er onboardet, bør den være synlig på listen over enheder og også starte rapporteringsaktivitet til Aktivitetsoversigt.
+Når en enhed er onboardet, skal den være synlig på enhedslisten og også begynde at rapportere overvågningsaktivitet til Aktivitetsoversigt.
 
 <!--### Permissions
 
@@ -156,7 +158,7 @@ See, [Onboard macOS devices into Microsoft 365 overview (preview)](device-onboar
 
 <!--## Onboarding Windows 10 and Windows 11 devices into device management
 
-You must enable device monitoring and onboard your endpoints before you can monitor and protect sensitive items on a device. Both of these actions are done in the Microsoft 365 Compliance portal.
+You must enable device monitoring and onboard your endpoints before you can monitor and protect sensitive items on a device. Both of these actions are done in the Microsoft Purview compliance portal.
 
 When you want to onboard devices that haven't been onboarded yet, you'll download the appropriate script and deploy it to those devices. Follow the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).
 
@@ -166,7 +168,7 @@ If you already have devices onboarded into [Microsoft Defender for Endpoint](/wi
 
 In this deployment scenario, you'll onboard devices that have not been onboarded yet, and you just want to monitor and protect sensitive items from unintentional sharing on Windows 10 or Windows 11 devices.
 
-1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a>.
+1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>.
 
 2. Choose **Settings** > **Device onboarding**.
 
@@ -199,7 +201,7 @@ Once done and endpoint is onboarded, it should be visible in the devices list an
 
 In this scenario, Microsoft Defender for Endpoint is already deployed and there are endpoints reporting in. All these endpoints will appear in the managed devices list. You can continue to onboard new devices into Endpoint DLP to expand coverage by using the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).
 
-1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a>.
+1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>.
 
 2. Open the Compliance Center settings page and choose **Enable device monitoring**.
 
@@ -227,13 +229,13 @@ Once done and endpoint is onboarded, it should be visible under the **Devices** 
 
 ### Viewing Endpoint DLP alerts in DLP Alerts Management dashboard
 
-1. Open the Data loss prevention page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a> and choose Alerts.
+1. Open the Data loss prevention page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a> and choose Alerts.
 
 2. Refer to the procedures in [How to configure and view alerts for your DLP policies](dlp-configure-view-alerts-policies.md) to view alerts for your Endpoint DLP policies.
 
 ### Viewing Endpoint DLP data in activity explorer
 
-1. Open the [Data classification page](https://compliance.microsoft.com/dataclassification?viewid=overview) for your domain in the Microsoft 365 Compliance center and choose Activity explorer.
+1. Open the [Data classification page](https://compliance.microsoft.com/dataclassification?viewid=overview) for your domain in the Microsoft Purview compliance portal and choose Activity explorer.
 
 2. Refer to the procedures in [Get started with Activity explorer](data-classification-activity-explorer.md) to access and filter all the data for your Endpoint devices.
 

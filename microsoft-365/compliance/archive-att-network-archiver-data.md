@@ -12,18 +12,20 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS- og MMS-data fra AT&T Mobile Network. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft Purview, så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 8c038769ef7330788badfaa8a0a40a00c0730a13
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 87b933117fae134572ccf4a152a83ec4165b1caf
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950715"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992760"
 ---
 # <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>Konfigurer en connector til arkivering af AT&T SMS/MMS-data
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Brug en TeleMessage-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere SMS- og MMS-data fra AT&T Mobile Network. Når du har konfigureret en connector, opretter den forbindelse til organisationens AT&T Network én gang om dagen og importerer SMS- og MMS-data til postkasser i Microsoft Purview.
 
-Når sms- og mms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft 365 Purview-funktioner som f.eks. litigation hold, content search og Microsoft 365 opbevaringspolitikker på AT&T Network-data. Du kan f.eks. søge i AT&T Network-data ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder AT&T Network-connectordata, til en tilsynsførende i et eDiscovery-tilfælde (Premium). Hvis du bruger en AT&T Network-connector til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
+Når sms- og mms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft 365 Purview-funktioner som f.eks. litigation hold, content search og Microsoft 365 opbevaringspolitikker på AT&T Network-data. Du kan f.eks. søge i AT&T Network-data ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder AT&T Network-connectordataene, til en tilsynsførende i en eDiscovery-sag (Premium). Hvis du bruger en AT&T Network-connector til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-att-network-data"></a>Oversigt over arkivering af AT&T Network-data
 
@@ -55,7 +57,7 @@ Nogle af de implementeringstrin, der kræves for at arkivere AT&T Network-data, 
 
 - Den bruger, der opretter en AT&T Network-connector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-att-network-connector"></a>Opret en AT&T Network-connector
 

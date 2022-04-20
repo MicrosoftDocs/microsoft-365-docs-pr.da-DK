@@ -19,15 +19,17 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om udvidelse af Microsoft Purview-løsninger ved hjælp af dataconnectors fra tredjepart og Microsoft Graph API'er.
-ms.openlocfilehash: e61cd2dfa8121a0925cc89fd5373569d9697936a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Få mere at vide om udvidelse af Microsoft Purview-løsninger ved hjælp af dataconnectors fra tredjepart og Microsoft Graph-API'er.
+ms.openlocfilehash: 9d2c3235a29e2d25e24656a4ff94216cde925b6c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942749"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992254"
 ---
 # <a name="microsoft-purview-and-microsoft-priva-extensibility"></a>Microsoft Purview- og Microsoft Priva-udvidelse
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview-løsninger hjælper organisationer med på intelligent vis at vurdere deres risici for overholdelse af angivne standarder, styre og beskytte følsomme data og reagere effektivt på lovmæssige krav. Microsoft Purview er rig på udvidelsesscenarier og giver organisationer mulighed for at tilpasse, udvide, integrere, sætte skub i og understøtte deres løsninger til overholdelse af angivne standarder.
 
@@ -55,13 +57,13 @@ Du kan finde vejledning og krav til dataconnectors fra tredjepart i afsnittet "D
 
 Microsoft Purview- og Microsoft Priva-API'er er tilgængelige i Microsoft Information Protection SDK, Microsoft Graph API og API'en til Office 365 Management Activity. Nogle overholdelses-API'er er en del af et nyt sæt API'er til sikkerhed og overholdelse af angivne standarder, der gør det muligt for udviklere til Microsoft 365 kunder, uafhængige softwareleverandører, systemintegratorer og udbydere af administrerede sikkerhedstjenester at bygge sikkerheds- og overholdelsesløsninger af høj værdi.
 
-Hvis du vil vide mere om, hvordan du får adgang til Graph API'er, skal du se [Oversigt over Microsoft Graph](/graph/overview).
+Hvis du vil vide mere om, hvordan du får adgang til Graph-API'er, skal du se [Oversigt over Microsoft Graph](/graph/overview).
 
-### <a name="microsoft-graph-apis-for-subject-rights-requests"></a>Microsoft Graph API'er til anmodninger om emnerettigheder
+### <a name="microsoft-graph-apis-for-subject-rights-requests"></a>Microsoft Graph-API'er til anmodninger om emnerettigheder
 
-I overensstemmelse med visse bestemmelser om beskyttelse af personlige oplysninger over hele verden kan enkeltpersoner anmode om at gennemse eller administrere de personlige data om sig selv, som virksomhederne har indsamlet. Disse anmodninger kaldes *anmodninger om emnerettigheder* i løsningen Microsoft Priva Subject Rights Requests. Anmodninger om fysiske rettigheder kaldes også DSR-anmodninger ( *Data Subject Requests* ) eller DSAR'er ( *Data Subject Access Requests* ). Microsoft Graph API'er til anmodninger om emnerettigheder gør det muligt for udviklere at integrere Microsoft 365 relaterede anmodninger om emnerettigheder i det bredere økosystem for beskyttelse af personlige oplysninger. Denne API-baserede udvidelse gør det muligt for organisationer at svare på anmodninger om emnerettigheder på en samlet måde på tværs af hele deres dataområde, der dækker både Microsoft- og ikke-Microsoft-miljøer. Denne funktion hjælper også med automatisering i stor skala og hjælper organisationer med at overholde brancheregler mere effektivt uden at være afhængige af manuelle processer.
+I overensstemmelse med visse bestemmelser om beskyttelse af personlige oplysninger over hele verden kan enkeltpersoner anmode om at gennemse eller administrere de personlige data om sig selv, som virksomhederne har indsamlet. Disse anmodninger kaldes *anmodninger om emnerettigheder* i løsningen Microsoft Priva Subject Rights Requests. Anmodninger om fysiske rettigheder kaldes også DSR-anmodninger ( *Data Subject Requests* ) eller DSAR'er ( *Data Subject Access Requests* ). Microsoft Graph-API'er til anmodninger om emnerettigheder gør det muligt for udviklere at integrere Microsoft 365-relaterede anmodninger om emnerettigheder med det bredere økosystem for beskyttelse af personlige oplysninger. Denne API-baserede udvidelse gør det muligt for organisationer at svare på anmodninger om emnerettigheder på en samlet måde på tværs af hele deres dataområde, der dækker både Microsoft- og ikke-Microsoft-miljøer. Denne funktion hjælper også med automatisering i stor skala og hjælper organisationer med at overholde brancheregler mere effektivt uden at være afhængige af manuelle processer.
 
-Du kan få mere at vide under [Microsoft Graph API'er for anmodning om emnerettigheder](/graph/api/resources/subjectrightsrequest-subjectrightsrequestapioverview).
+Du kan få mere at vide under [Microsoft Graph-API'er for anmodning om emnerettigheder](/graph/api/resources/subjectrightsrequest-subjectrightsrequestapioverview).
 
 ### <a name="microsoft-information-protection-mip-sdk"></a>Microsoft Information Protection SDK (MIP)
 
@@ -79,7 +81,7 @@ Du kan få mere at vide om MIP SDK, forudsætninger, yderligere scenarier og eks
 
 ### <a name="microsoft-graph-api-for-teams-dlp"></a>Microsoft Graph API til Teams DLP
 
-[DLP-funktioner (forebyggelse af datatab)](dlp-microsoft-teams.md) bruges i vid udstrækning i Microsoft Teams især i takt med at organisationer har skiftet til fjernarbejde. For nylig [annoncerede vi den generelle tilgængelighed](https://devblogs.microsoft.com/microsoft365dev/change-notifications-for-microsoft-teams-messages-now-generally-available/) af Microsoft Graph API til ændringsmeddelelse for meddelelser i Teams. Denne API gør det muligt for udviklere at bygge apps, der kan lytte til Microsoft Teams meddelelser i næsten realtid og derefter implementere DLP-scenarier for både kunder og partnere. Derudover giver Microsoft Graph Patch API dig mulighed for at anvende DLP-handlinger på Teams meddelelser.
+[DLP-funktioner (forebyggelse af datatab)](dlp-microsoft-teams.md) bruges i vid udstrækning i Microsoft Teams især i takt med at organisationer har skiftet til fjernarbejde. For nylig [annoncerede vi den generelle tilgængelighed](https://devblogs.microsoft.com/microsoft365dev/change-notifications-for-microsoft-teams-messages-now-generally-available/) af Microsoft Graph Change Notification API for meddelelser i Teams. Denne API gør det muligt for udviklere at bygge apps, der kan lytte til Microsoft Teams meddelelser i næsten realtid og derefter implementere DLP-scenarier for både kunder og partnere. Derudover giver Microsoft Graph Patch API dig mulighed for at anvende DLP-handlinger på Teams meddelelser.
 
 Disse to API'er udgør Microsoft Graph API til Teams DLP. Du kan komme i gang ved at prøve [eksempelappen](https://github.com/microsoftgraph/aspnetcore-webhooks-sample). Du kan få flere oplysninger om Microsoft Teams messaging-webhooks i [dokumentationen](/graph/api/subscription-post-subscriptions).
 
@@ -87,13 +89,13 @@ Du kan finde licenskravene til Teams DLP [i Microsoft 365 licensvejledning til s
 
 ### <a name="microsoft-graph-api-for-ediscovery-preview"></a>Microsoft Graph API til eDiscovery (prøveversion)
 
-Med [eDiscovery (Premium)](overview-ediscovery-20.md) kan organisationer finde data, hvor de befinder sig, og administrere flere komplette eDiscovery-arbejdsprocesser med intelligente funktioner til maskinel indlæring og analyse for at reducere data til det relevante sæt – alt sammen mens dataene forbliver inden for Microsoft 365 sikkerheds- og overholdelsesgrænse.
+Med [eDiscovery (Premium)](overview-ediscovery-20.md) kan organisationer finde data, hvor de findes, og administrere flere komplette eDiscovery-arbejdsprocesser med intelligent maskinel indlæring og analysefunktioner for at reducere data til det relevante sæt – alt sammen mens dataene forbliver inden for Microsoft 365 sikkerheds- og overholdelsesgrænse.
 
-Graph API'er til eDiscovery (Premium) kan bruges til at oprette og administrere sager, gennemse sæt og gennemse sæt forespørgsler på en skalerbar og gentagelig måde. Dette gør det muligt for kunder og partnere at oprette apps og arbejdsprocesser for at automatisere almindelige og gentagne processer, f.eks. oprette sager og administrere tilsynsførende og juridiske ventepositioner.
+Graf-API'er til eDiscovery (Premium) kan bruges til at oprette og administrere sager, gennemse sæt og gennemse sætforespørgsler på en skalerbar og gentagelig måde. Dette gør det muligt for kunder og partnere at oprette apps og arbejdsprocesser for at automatisere almindelige og gentagne processer, f.eks. oprette sager og administrere tilsynsførende og juridiske ventepositioner.
 
-Det første sæt Graph API'er til eDiscovery er tilgængelige i en offentlig prøveversion. Vi planlægger at tilføje flere funktioner inden udgangen af kalenderåret. Du kan få mere at vide om disse API'er og andre opdateringer til eDiscovery (Premium) på denne [blog](https://aka.ms/Ignite2020AeDAA).
+Det første sæt Graph-API'er til eDiscovery er tilgængelige i en offentlig prøveversion. Vi planlægger at tilføje flere funktioner inden udgangen af kalenderåret. Hvis du vil vide mere om disse API'er og andre opdateringer til eDiscovery (Premium), skal du se denne [blog](https://aka.ms/Ignite2020AeDAA).
 
-Du kan finde licenskravene til eDiscovery (Premium) og API'en i afsnittet "eDiscovery" i [Microsoft 365 licensvejledning om sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#ediscovery).
+Du kan finde licenskravene til eDiscovery (Premium) og API'en i afsnittet "eDiscovery" i Microsoft 365 [licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#ediscovery).
 
 ### <a name="microsoft-graph-api-for-teams-export"></a>Microsoft Graph API til eksport af Teams
 
@@ -101,6 +103,6 @@ EIA (Enterprise Information Archiving) til Microsoft Teams er et nøglescenarie 
 
 Du kan finde licenskravene til brugen af Teams Eksport-API'er [i Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-### <a name="microsoft-graph-connector-apis-preview"></a>Api'er til Microsoft Graph Connector (prøveversion)
+### <a name="microsoft-graph-connector-apis-preview"></a>Microsoft Graph Connector-API'er (prøveversion)
 
-Med [Microsoft Graph-connectors](/microsoftsearch/connectors-overview) kan organisationer indeksere tredjepartsdata, så de vises i Microsoft Søg resultater. Denne funktion udvider de typer af indholdskilder, der kan søges i i dine Microsoft 365 produktivitetsapps og det bredere Microsoft-økosystem. Tredjepartsdataene kan hostes i det lokale miljø eller i offentlige eller private cloudmiljøer. Fra og med eDiscovery (Premium) aktiverer vi udviklereksempel på indbygget overholdelsesværdi for Microsoft 365 forbundne apps. Dette muliggør overholdelse af angivne standarder for apps, der integreres i det Microsoft 365 økosystem, for at give brugerne mulighed for problemfrie overholdelsesoplevelser. Hvis du vil vide mere om, hvordan du inkorporerer Microsoft Graph Connector-API'er i din appsvisning, skal du se [Opret, opdater og slet forbindelser i Microsoft Graph](/graph/connecting-external-content-connectors-api-overview).
+Med [Microsoft Graph-connectors](/microsoftsearch/connectors-overview) kan organisationer indeksere tredjepartsdata, så de vises i Microsoft Søg resultater. Denne funktion udvider de typer af indholdskilder, der kan søges i i dine Microsoft 365 produktivitetsapps og det bredere Microsoft-økosystem. Tredjepartsdataene kan hostes i det lokale miljø eller i offentlige eller private cloudmiljøer. Fra og med eDiscovery (Premium) aktiverer vi udviklereksempel på indbygget overholdelsesværdi af Microsoft 365 forbundne apps. Dette muliggør overholdelse af angivne standarder for apps, der integreres i det Microsoft 365 økosystem, for at give brugerne mulighed for problemfrie overholdelsesoplevelser. Hvis du vil vide mere om, hvordan du inkorporerer Microsoft Graph Connector-API'er i din appvisning, skal du se [Opret, opdater og slet forbindelser i Microsoft Graph](/graph/connecting-external-content-connectors-api-overview).

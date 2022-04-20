@@ -18,20 +18,22 @@ search.appverid:
 - MOE150
 ms.custom: admindeeplinkMAC
 description: Få mere at vide om kunde lockbox-anmodninger, der giver dig mulighed for at styre, hvordan en Microsoft-supporttekniker kan få adgang til dine data, når du støder på et problem.
-ms.openlocfilehash: 8f875f485830d59af733c6c76a5a3d297bedb2cc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cf9a2a6d682ca87e97986389f640a536775ca014
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759937"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953820"
 ---
-# <a name="customer-lockbox-in-office-365"></a>Kundelåsekasse i Office 365
+# <a name="microsoft-purview-customer-lockbox"></a>Microsoft Purview Customer Lockbox
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Denne artikel indeholder en installations- og konfigurationsvejledning til Customer Lockbox. Customer Lockbox understøtter anmodninger om at få adgang til data i Exchange Online, SharePoint Online, OneDrive for Business og Teams. Hvis du vil anbefale support til andre tjenester, skal du sende en anmodning på [feedbackportalen](https://feedbackportal.microsoft.com).
 
-Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft 365 tilbud om overholdelse af angivne standarder, skal du se [Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Hvis du vil se indstillingerne for licensering af dine brugere, så de kan drage fordel af Microsoft Purview-tilbud, skal du se [Microsoft 365 licensvejledning for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Hvis du vil vide mere om Microsofts arbejdsproces, skal du se [Privilegeret adgangsstyring i Microsoft 365](privileged-access-management-solution-overview.md).
+Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Du kan få mere at vide om Microsofts arbejdsproces under [Privilegeret adgangsstyring](privileged-access-management-solution-overview.md).
 
 Nogle gange hjælper Microsoft-teknikere med at foretage fejlfinding og løse problemer, der opstår i forbindelse med tjenesten. Normalt løser teknikere problemer ved hjælp af omfattende telemetri- og fejlfindingsværktøjer, som Microsoft har til sine tjenester. Nogle tilfælde kræver dog, at en Microsoft-tekniker har adgang til dit indhold for at finde rodårsagen og løse problemet. Customer Lockbox kræver, at teknikeren anmoder om adgang fra dig som et sidste trin i godkendelsesarbejdsprocessen. Det giver dig mulighed for at godkende eller afvise anmodningen for din organisation og give direkte adgangskontrol til dit indhold.
 
@@ -102,15 +104,15 @@ Du kan slå Customer Lockbox-kontrolelementer til i Microsoft 365 Administration
     ![Afvis kundelåsekasseanmodninger.](../media/CustomerLockbox8.png)
 
 > [!NOTE]
-> Brug cmdlet'en Set-AccessToCustomerDataRequest til at godkende, afvise eller annullere Microsoft 365 kundelåsekasseanmodninger, der styrer adgangen til dine data af Microsofts supportteknikere. Du kan få flere oplysninger under [Set-AccessToCustomerDataRequest](/powershell/module/exchange/set-accesstocustomerdatarequest).
+> Brug cmdlet'en Set-AccessToCustomerDataRequest til at godkende, afvise eller annullere Microsoft Purview Customer Lockbox-anmodninger, der styrer microsoft-supportteknikeres adgang til dine data. Du kan få flere oplysninger under [Set-AccessToCustomerDataRequest](/powershell/module/exchange/set-accesstocustomerdatarequest).
 
 ## <a name="auditing-customer-lockbox-requests"></a>Overvågning af kundelåsekasseanmodninger
 
-Overvågningsposter, der svarer til kundelåsekasseanmodninger, logføres i Microsoft 365 overvågningslog. Du kan få adgang til disse logge ved hjælp af [søgeværktøjet til overvågningslogfiler](search-the-audit-log-in-security-and-compliance.md) i Microsoft 365 Overholdelsescenter. Handlinger, der er relateret til at acceptere eller afvise en kundelåsekasseanmodning, og handlinger, der udføres af Microsoft-teknikere (når adgangsanmodninger godkendes), logføres også i overvågningsloggen. Du kan søge efter og gennemse disse overvågningsposter.
+Overvågningsposter, der svarer til kundelåsekasseanmodninger, logføres i Microsoft 365 overvågningslog. Du kan få adgang til disse logge ved hjælp af [søgeværktøjet til overvågningslogfiler](search-the-audit-log-in-security-and-compliance.md) på Microsoft Purview-overholdelsesportalen. Handlinger, der er relateret til at acceptere eller afvise en kundelåsekasseanmodning, og handlinger, der udføres af Microsoft-teknikere (når adgangsanmodninger godkendes), logføres også i overvågningsloggen. Du kan søge efter og gennemse disse overvågningsposter.
 
 ### <a name="search-the-audit-log-for-activity-related-to-customer-lockbox-requests"></a>Søg i overvågningsloggen efter aktivitet, der er relateret til kundelåsekasseanmodninger
 
-Før du kan bruge overvågningsloggen til at spore anmodninger om Customer Lockbox, er der nogle trin, du skal udføre for at konfigurere overvågningslogføring, herunder tildeling af tilladelser til at søge i overvågningsloggen. Du kan få flere oplysninger under [Konfigurer grundlæggende overvågning i Microsoft 365](set-up-basic-audit.md). Når du har fuldført konfigurationen, skal du bruge disse trin til at oprette en søgeforespørgsel i overvågningsloggen for at returnere overvågningsposter, der er relateret til Customer Lockbox:
+Før du kan bruge overvågningsloggen til at spore anmodninger om Customer Lockbox, er der nogle trin, du skal udføre for at konfigurere overvågningslogføring, herunder tildeling af tilladelser til at søge i overvågningsloggen. Du kan få flere oplysninger under [Konfigurer Microsoft Purview Audit (Standard)](set-up-basic-audit.md). Når du har fuldført konfigurationen, skal du bruge disse trin til at oprette en søgeforespørgsel i overvågningsloggen for at returnere overvågningsposter, der er relateret til Customer Lockbox:
 
 1. Gå til <https://compliance.microsoft.com>.
   
@@ -159,7 +161,7 @@ Når du har downloadet filen, kan du åbne den i Excel og derefter filtrere kolo
 
 ### <a name="use-powershell-to-search-and-export-audit-records"></a>Brug PowerShell til at søge efter og eksportere overvågningsposter
 
-Et alternativ til at bruge værktøjet til overvågningssøgning i Microsoft 365 Overholdelsescenter er at køre cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell. En fordel ved at bruge PowerShell er, at du specifikt kan søge efter **Set-AccessToCustomerDataRequest-aktiviteter** eller aktiviteter, der udføres af Microsoft-teknikere, som er relateret til en kundelåskasseanmodning.
+Et alternativ til at bruge værktøjet til overvågningssøgning på Microsoft Purview-overholdelsesportalen er at køre cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell. En fordel ved at bruge PowerShell er, at du specifikt kan søge efter **Set-AccessToCustomerDataRequest-aktiviteter** eller aktiviteter, der udføres af Microsoft-teknikere, som er relateret til en kundelåskasseanmodning.
 
 Når du [har oprettet forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), skal du køre en af følgende kommandoer. Erstat pladsholderne med et bestemt datointerval.
 

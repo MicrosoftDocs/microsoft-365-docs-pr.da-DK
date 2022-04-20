@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365-overvågningsløsninger
+title: Microsoft Purview-overvågningsløsninger
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,18 +19,18 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du overvåger brugeres og administratorers aktiviteter i din Microsoft 365 organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2ab97dc632aeaf13109380fb9a5586594c63ebaa
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c7c6461868ee212e6b332181b9dea1560ce49558
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949051"
+ms.locfileid: "64953733"
 ---
-# <a name="auditing-solutions-in-microsoft-365"></a>Overvågning af løsninger i Microsoft 365
+# <a name="auditing-solutions-in-microsoft-purview"></a>Overvågning af løsninger i Microsoft Purview
 
-Microsoft 365 overvågningsløsninger leverer en integreret løsning, der hjælper organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelse af angivne standarder. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Der kan søges i overvågningsposter for disse hændelser af sikkerhedsadministratorer, it-administratorer, insiderrisikoteams og overholdelses- og juridiske efterforskere i din organisation. Denne funktion giver indblik i de aktiviteter, der udføres på tværs af din Microsoft 365 organisation.
+Microsoft Purview-overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelse af angivne standarder. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Der kan søges i overvågningsposter for disse hændelser af sikkerhedsadministratorer, it-administratorer, insiderrisikoteams og overholdelses- og juridiske efterforskere i din organisation. Denne funktion giver indblik i de aktiviteter, der udføres på tværs af din Microsoft 365 organisation.
 
-## <a name="microsoft-365-auditing-solutions"></a>Microsoft 365-overvågningsløsninger
+## <a name="microsoft-purview-auditing-solutions"></a>Microsoft Purview-overvågningsløsninger
 
 Microsoft Purview indeholder to overvågningsløsninger: Overvågning (Standard) og Overvågning (Premium).
 
@@ -94,7 +94,7 @@ I følgende tabel sammenlignes de nøglefunktioner, der er tilgængelige i Overv
 
 ## <a name="licensing-requirements"></a>Licenskrav
 
-I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Overvågning (Premium). Overvågningsfunktionalitet (Standard) er inkluderet i Avanceret overvågning.
+I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Overvågning (Premium). Overvågningsfunktionalitet (Standard) er inkluderet i Overvågning (Premium).
 
 ### <a name="audit-standard"></a>Overvågning (standard)
 
@@ -126,9 +126,9 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 - Office 365 Enterprise E5-abonnement
 - Office 365 Education A5-abonnement
 
-## <a name="set-up-microsoft-365-auditing-solutions"></a>Konfigurer Microsoft 365 overvågningsløsninger
+## <a name="set-up-microsoft-purview-auditing-solutions"></a>Konfigurer Microsoft Purview-overvågningsløsninger
 
-Hvis du vil i gang med at bruge overvågningsløsninger i Microsoft 365, skal du se følgende konfigurationsvejledning.
+Hvis du vil i gang med at bruge overvågningsløsningerne i Microsoft Purview, skal du se følgende konfigurationsvejledning.
 
 ### <a name="set-up-audit-standard"></a>Konfigurer overvågning (standard)
 

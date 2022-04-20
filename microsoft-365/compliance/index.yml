@@ -14,12 +14,12 @@ metadata:
   ms.author: robmazz
   ms.date: 09/20/2019
   ms.localizationpriority: high
-  ms.openlocfilehash: cc558fa8a9ae3c04a9ce9796233aafc8f2fa79f5
-  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.openlocfilehash: 3b86087d8f8fea8e9b3b143f7e38997d07fca3ec
+  ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
   ms.translationtype: HT
   ms.contentlocale: da-DK
   ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64934681"
+  ms.locfileid: "64953343"
 landingContent:
 - title: Administrer beskyttelse af oplysninger & styring
   linkLists:
@@ -59,8 +59,8 @@ landingContent:
       url: ./get-started-core-ediscovery.md
     - text: Indholdssøgning
       url: search-for-content.md
-    - text: Overvågning
-      url: search-the-audit-log-in-security-and-compliance.md
+    - text: Microsoft Purview Audit-løsninger
+      url: auditing-solutions-overview.md
 - title: Kom i gang med overholdelse af lovmæssige standarder
   linkLists:
   - linkListType: get-started

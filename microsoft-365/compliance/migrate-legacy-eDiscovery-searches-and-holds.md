@@ -15,21 +15,23 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 5de25b0b1385e709a818b1ff797910ec4ee4ddfc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28f110c6b236721debdb5585263dd835f2a5a658
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949625"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993134"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Overfør ældre eDiscovery-søgninger og ventepositioner til overholdelsesportalen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview-overholdelsesportalen giver en forbedret oplevelse i forbindelse med eDiscovery-brug, herunder: højere pålidelighed, bedre ydeevne og mange funktioner, der er skræddersyet til eDiscovery-arbejdsprocesser, herunder sager til at organisere dit indhold efter sag, gennemgå sæt for at gennemse indhold og analyser for at hjælpe med at kassere data til gennemsyn, f.eks. næsten identisk gruppering, mailtrådning, temaanalyse og forudsigende kodning.
 
 Denne artikel indeholder en grundlæggende vejledning i, hvordan du overfører In-Place eDiscovery-søgninger og ventepositioner fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til overholdelsesportalen for at hjælpe kunder med at drage fordel af den nye og forbedrede funktionalitet.
 
 > [!NOTE]
-> Da der er mange forskellige scenarier, indeholder denne artikel en generel vejledning i overgang af søgninger og ventepositioner til en grundlæggende eDiscovery-sag i overholdelsesportalen. Brug af eDiscovery-sager er ikke altid påkrævet, men de tilføjer et ekstra lag af sikkerhed ved at give dig tilladelse til at tildele tilladelser til at styre, hvem der har adgang til eDiscovery-sager i din organisation.
+> Da der er mange forskellige scenarier, indeholder denne artikel en generel vejledning til at overføre søgninger og ventepositioner til en eDiscovery(Standard)-sag i overholdelsesportalen. Brug af eDiscovery-sager er ikke altid påkrævet, men de tilføjer et ekstra lag af sikkerhed ved at give dig tilladelse til at tildele tilladelser til at styre, hvem der har adgang til eDiscovery-sager i din organisation.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -37,7 +39,7 @@ Denne artikel indeholder en grundlæggende vejledning i, hvordan du overfører I
 
 - Denne artikel indeholder en vejledning i, hvordan du opretter en eDiscovery-venteposition. Politikken for venteposition anvendes på postkasser via en asynkron proces. Når du opretter en eDiscovery-venteposition, skal du oprette både en CaseHoldPolicy og CaseHoldRule, ellers oprettes ventepositionen ikke, og indholdsplaceringer sættes ikke i venteposition.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell og Security & Compliance Center PowerShell
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>Trin 1: Opret forbindelse til Exchange Online PowerShell og Security & Compliance Center PowerShell
 
 Det første trin er at oprette forbindelse til Exchange Online PowerShell og Security & Compliance Center PowerShell. Du kan kopiere følgende script, indsætte det i et PowerShell-vindue og derefter køre det. Du bliver bedt om at angive legitimationsoplysninger for den organisation, du vil oprette forbindelse til. 
 

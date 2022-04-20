@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Brug eDiscovery- og søgeværktøjer til at administrere og reagere på en dataspildhændelse i din organisation.
-ms.openlocfilehash: e9e81ae81c344bfc8773174c8650a1808faddd5e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 875c63f264e750603c4ad8a0b5bf1df2b6e45217
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948061"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993222"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eDiscovery-løsningsserie: Dataspildscenarie – Søg og fjern
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  **Hvad er dataspild, og hvorfor skal du pleje det?** Dataspild er, når et fortroligt dokument frigives i et miljø, der ikke er tillid til. Når der registreres en dataspildhændelse, er det vigtigt hurtigt at vurdere størrelsen og placeringen af spildet, undersøge brugeraktiviteterne omkring den og derefter fjerne de spildte data permanent fra systemet.
   
@@ -91,7 +93,7 @@ Hvis du har mere end 1.000 postkasser eller mere end 100 mails pr. postkasse, de
 
 Når du finder en mail, der indeholder spildte data, skal du kontrollere modtagerne af meddelelsen for at finde ud af, om den blev delt eksternt. Hvis du vil spore en meddelelse yderligere, kan du indsamle afsenderoplysninger og datointervaller, så du kan bruge meddelelsessporingslogfilerne. Denne proces er beskrevet i [trin 5](#step-5-use-message-trace-log-to-check-how-spilled-data-was-shared).
 
-Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Microsoft Purview eDiscovery (Premium) og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
+Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt til sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Microsoft Purview eDiscovery (Premium) og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
   
  **Sådan opretter du en statistisk rapport:**
   
@@ -183,7 +185,7 @@ Vær opmærksom på følgende grænser, når du sletter spildte data:
 - Der kan maksimalt fjernes 10 elementer pr. postkasse på én gang. Da funktionen til at søge efter og fjerne meddelelser er beregnet til at være et værktøj til svar på hændelser, hjælper denne grænse med at sikre, at meddelelser hurtigt fjernes fra postkasser. Denne funktion er ikke beregnet til at rydde op i brugerpostkasser.
 
 > [!IMPORTANT]
-> Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
+> Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery (Premium)-sag](close-or-delete-case.md).
   
 ## <a name="step-8-verify-provide-a-proof-of-deletion-and-audit"></a>Trin 8: Kontrollér, angiv et bevis for sletning og overvågning
 

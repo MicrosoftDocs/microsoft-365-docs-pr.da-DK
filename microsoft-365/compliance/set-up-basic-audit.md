@@ -20,14 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du konfigurerer Overvågning (Standard), så du kan begynde at søge efter overvågningsaktiviteter, der udføres af brugere og administratorer i din organisation.
-ms.openlocfilehash: 93245abfc4f57b22d6db715103f93428487a648d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 15e72d1b2899799f432cdc717352cf53a0a370e4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936043"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993726"
 ---
 # <a name="set-up-microsoft-purview-audit-standard"></a>Konfigurer Microsoft Purview Audit (Standard)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Med Microsoft Purview Audit (Standard) i Microsoft 365 kan du søge efter overvågningsposter for aktiviteter, der udføres i de forskellige Microsoft 365 tjenester af brugere og administratorer. Da Overvågning (Standard) er aktiveret som standard for de fleste Microsoft 365 og Office 365 organisationer, er der kun nogle få ting, du skal gøre, før du og andre i din organisation kan søge i overvågningsloggen.
 
@@ -49,7 +51,7 @@ Du kan finde en liste over abonnements- og licenskrav til Overvågning (Standard
 
 ## <a name="step-2-assign-permissions-to-search-the-audit-log"></a>Trin 2: Tildel tilladelser til at søge i overvågningsloggen
 
-Administratorer og medlemmer af undersøgelsesteams skal tildeles rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at kunne søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Hvis du vil give en bruger mulighed for at søge i overvågningsloggen med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
+Administratorer og medlemmer af undersøgelsesteams skal tildeles rollen View-Only Overvågningslogge eller Overvågningslogge i Exchange Online for at kunne søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Hvis du vil give en bruger mulighed for at søge i overvågningsloggen med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
 
 På følgende skærmbillede kan du se de to overvågningsrelaterede roller, der er tildelt rollegruppen Organisationsadministration i Exchange Administration.
 

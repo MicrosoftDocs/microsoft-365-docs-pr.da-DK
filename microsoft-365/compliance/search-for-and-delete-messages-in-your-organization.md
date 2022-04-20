@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
 description: Brug funktionen Søg og fjern på Microsoft Purview-overholdelsesportalen til at søge efter og slette en mail fra alle postkasser i organisationen.
-ms.openlocfilehash: 23eeff8078dbd7ab65b0bddb9684aa81d65aab94
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 67a1c6758a5030897afbde07a0803cad348eca0c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936241"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993650"
 ---
 # <a name="search-for-and-delete-email-messages"></a>Søg efter og slet mails
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Denne artikel er til administratorer. Forsøger du at finde elementer i postkassen, som du vil slette? Se [Find en meddelelse eller et element med Hurtigsøgning](https://support.office.com/article/69748862-5976-47b9-98e8-ed179f1b9e4d)**.
 
@@ -46,7 +48,7 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
 - Hvis du vil oprette og køre en indholdssøgning, skal du være medlem af **rollegruppen eDiscovery Manager** eller være tildelt rollen **Søgning efter overholdelse** på Microsoft Purview-overholdelsesportalen. Hvis du vil slette meddelelser, skal du være medlem af rollegruppen **Organisationsadministration** eller tildeles rollen **Søg og fjern** i overholdelsescenteret Du kan finde oplysninger om, hvordan du føjer brugere til en rollegruppe, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
   > [!NOTE]
-  > Rollegruppen **Organisationsadministration** findes både i Exchange Online og på overholdelsesportalen. Dette er separate rollegrupper, der giver forskellige tilladelser. Når du er medlem af **Organisationsadministration** i Exchange Online giver du ikke de nødvendige tilladelser til at slette mails. Hvis du ikke har fået tildelt rollen **Søg og fjern** i Overholdelsescenter (enten direkte eller via en rollegruppe, f.eks **. Organisationsadministration**), får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** med meddelelsen "Der blev ikke fundet en parameter, der svarer til parameternavnet "Fjern".
+  > Rollegruppen **Organisationsadministration** findes både i Exchange Online og på portalen til overholdelse af angivne standarder. Dette er separate rollegrupper, der giver forskellige tilladelser. Når du er medlem af **Organisationsadministration** i Exchange Online, giver det ikke de nødvendige tilladelser til at slette mails. Hvis du ikke har fået tildelt rollen **Søg og fjern** i Overholdelsescenter (enten direkte eller via en rollegruppe, f.eks **. Organisationsadministration**), får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** med meddelelsen "Der blev ikke fundet en parameter, der svarer til parameternavnet "Fjern".
 
 - Du skal bruge Security & Compliance Center PowerShell til at slette meddelelser. Se [Trin 1](#step-1-connect-to-security--compliance-center-powershell) for at få instruktioner om, hvordan du opretter forbindelse.
 
@@ -54,13 +56,13 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
 
 - Det maksimale antal postkasser i en indholdssøgning, som du kan bruge til at slette elementer ved at udføre en søge- og tømningshandling, er 50.000. Hvis søgningen (som du opretter i [trin 2](#step-2-create-a-content-search-to-find-the-message-to-delete) , søger i mere end 50.000 postkasser, mislykkes handlingen Fjern (som du opretter i trin 3). Søgning i mere end 50.000 postkasser i en enkelt søgning kan typisk ske, når du konfigurerer søgningen til at omfatte alle postkasser i din organisation. Denne begrænsning gælder stadig, selvom mindre end 50.000 postkasser indeholder elementer, der svarer til søgeforespørgslen. Se afsnittet [Flere oplysninger](#more-information) for at få vejledning i, hvordan du bruger filtre for søgetilladelser til at søge efter og fjerne elementer fra mere end 50.000 postkasser.
 
-- Proceduren i denne artikel kan kun bruges til at slette elementer i Exchange Online postkasser og offentlige mapper. Du kan ikke bruge den til at slette indhold fra SharePoint eller OneDrive for Business websteder.
+- Proceduren i denne artikel kan kun bruges til at slette elementer i Exchange onlinepostkasser og offentlige mapper. Du kan ikke bruge den til at slette indhold fra SharePoint eller OneDrive for Business websteder.
 
-- Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er gemt på en Azure Storage placering og ikke i livetjenesten. Det betyder, at de ikke returneres af den indholdssøgning, du opretter i trin 1. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
+- Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er gemt på en Azure Storage placering og ikke i livetjenesten. Det betyder, at de ikke returneres af den indholdssøgning, du opretter i trin 1. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery (Premium)-sag](close-or-delete-case.md).
 
-## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Forbind til Security & Compliance Center PowerShell
+## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Opret forbindelse til Security & Compliance Center PowerShell
 
-Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-create-a-content-search-to-find-the-message-to-delete"></a>Trin 2: Opret en indholdssøgning for at finde den meddelelse, der skal slettes
 
@@ -77,7 +79,7 @@ Det andet trin er at oprette og køre en indholdssøgning for at finde den medde
 > [!NOTE]
 > De indholdsplaceringer, der søges i i den indholdssøgning, du opretter i dette trin, må ikke indeholde SharePoint eller OneDrive for Business websteder. Du kan kun inkludere postkasser og offentlige mapper i en indholdssøgning, der bruges til mails. Hvis indholdssøgningen indeholder websteder, får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** .
 
-### <a name="tips-for-finding-messages-to-remove"></a>Tips til søgning efter meddelelser, der skal fjernes
+### <a name="tips-for-finding-messages-to-remove"></a>Tip til søgning efter meddelelser, der skal fjernes
 
 Målet med søgeforespørgslen er kun at begrænse resultaterne af søgningen til den eller de meddelelser, du vil fjerne. Her er nogle tip:
 

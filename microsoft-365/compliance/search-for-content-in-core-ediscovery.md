@@ -1,5 +1,5 @@
 ---
-title: Søg efter indhold i en grundlæggende eDiscovery-sag
+title: Søg efter indhold i en eDiscovery-sag (Standard)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Søg efter indhold, der kan være relevant for en eDiscovery-sag (Standard).
-ms.openlocfilehash: b6c53c1f87f0d2783b2d6d3cc765a8fd3ed2f6cf
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d97acf066914a7dee0059f27aa0127efe52ea5f3
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949349"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971599"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>Søg efter indhold i en eDiscovery-sag (Standard)
 

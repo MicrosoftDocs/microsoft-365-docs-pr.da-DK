@@ -11,14 +11,16 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 description: Brug eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business.
-ms.openlocfilehash: b339d2f4ebe738407c42eda86f18a5167af03921
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4efe2f4b4735005c10fd59e618bb6ecc8be51ec0
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941935"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993638"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>Søg efter indhold ved hjælp af indholdssøgeværktøjet
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
   

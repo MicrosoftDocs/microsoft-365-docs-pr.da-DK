@@ -1,5 +1,5 @@
 ---
-title: Onboarde og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
+title: Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -13,32 +13,34 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
-ms.openlocfilehash: 44e57e482c08b486563200010671b5c79329f7b2
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF-Pro
+ms.openlocfilehash: bf15868b865afa80146df2b16199caf360a55ce2
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783815"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953421"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview"></a>Onboarde og offboard macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro (prøveversion)
+# <a name="onboard-and-offboard-macos-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro
 
-Du kan bruge JAMF-Pro til at onboarde macOS-enheder i løsninger til Microsoft 365 overholdelse af angivne standarder, f.eks. forebyggelse af datatab i Slutpunkt.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Du kan bruge JAMF-Pro til at onboarde macOS-enheder i Microsoft Purview-løsninger, f.eks. endpoint-forebyggelse af datatab.
 
 > [!IMPORTANT]
 > Brug denne fremgangsmåde, hvis du ***ikke*** har installeret Microsoft Defender for Endpoint (MDE) på dine macOS-enheder
 
 **Gælder for:**
 
-- [Microsoft 365 Endpoint DLP (forebyggelse af datatab)](./endpoint-dlp-learn-about.md)
-- [Styring af insider-risiko](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Forebyggelse af datatab for slutpunkt (DLP)](./endpoint-dlp-learn-about.md)
+- [Styring af insider-risiko](insider-risk-management.md)
 
 ## <a name="before-you-begin"></a>Før du begynder
 
 - Sørg for, at dine [macOS-enheder administreres via JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD joinforbundet UPN) via JAMF-Forbind eller Intune.
 - Installér v95+ Edge-browseren på dine macOS-enheder
 
-## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>Onboarder enheder i løsninger til Microsoft 365 overholdelse af angivne standarder ved hjælp af JAMF-Pro
+## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>Onboarde enheder i Microsoft Purview-løsninger ved hjælp af JAMF-Pro
 
 1. Du skal bruge disse filer til denne procedure.
 

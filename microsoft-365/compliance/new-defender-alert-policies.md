@@ -19,14 +19,16 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Vi frigiver nye beskedpolitikker for Microsoft Defender for Office 365. Vi udfaser også to eksisterende beskedpolitikker, der er blevet erstattet af de nye.
-ms.openlocfilehash: 339d16f7cd4e481d408a13d2e738cdef9fc991bf
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 78f359e273054b7b103fc61bbee9b1555ad843da
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939625"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991946"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Nye beskedpolitikker i Microsoft Defender for Office 365
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Defender for Office 365 introducerer nye og forbedrede advarselspolitikker i forbindelse med registreringer efter levering. Dette omfatter forbedringer af de air-playbooks (Automated Investigation & Response), der er knyttet til dem. Derudover ændrer vi klassificeringen af alvorsgrad for seks standardbeskedpolitikker for bedre at justere de beskeder, der genereres af disse politikker, med deres indvirkning på din organisation.
 

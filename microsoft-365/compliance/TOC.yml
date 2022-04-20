@@ -1,24 +1,24 @@
-- name: Overholdelse af regler og standarder for Microsoft 365
+- name: Microsoft Purview
   href: index.yml
-- name: Få mere at vide om nyheder i overholdelse af regler og standarder for Microsoft 365
+- name: Nyheder i Microsoft Purview
   href: whats-new.md
 - name: Prøveversion af overholdelse af regler og standarder
   items:
-    - name: Om den gratis prøveversion af overholdelse af regler og standarder for Microsoft 365
+    - name: Om den gratis prøveversion af Microsoft Purview
       href: compliance-easy-trials.md
-    - name: Om den gratis prøveversion af Premium-vurderinger til Microsoft Overholdelsesstyring
+    - name: Om den gratis prøveversion af Premium-vurderinger til Microsoft Purview-overholdelsesstyring
       href: compliance-easy-trials-compliance-manager-assessments.md
 - name: Kom i gang
   items:
-    - name: Hurtige opgaver for at komme i gang med overholdelse af regler og standarder
+    - name: Hurtige opgaver for at komme i gang med Microsoft Purview
       href: compliance-quick-tasks.md
-    - name: Microsoft 365-løsningskatalog
+    - name: Microsoft Purview-løsningskatalog
       href: microsoft-365-solution-catalog.md
-    - name: Microsoft 365-overholdelsescenter
+    - name: Microsoft Purview-overholdelsesportal
       href: microsoft-365-compliance-center.md
-    - name: Tilladelser i Microsoft 365-overholdelsescenter
+    - name: Tilladelser på Microsoft Purview-overholdelsesportalen
       href: microsoft-365-compliance-center-permissions.md
-    - name: Omdirigerer brugere til Microsoft 365-overholdelsescenter
+    - name: Omdirigering af brugere til Microsoft Purview-overholdelsesportalen
       href: microsoft-365-compliance-center-redirection.md
     - name: Brug dit gratis Azure Active Directory-abonnement
       href: use-your-free-azure-ad-subscription-in-office-365.md
@@ -44,15 +44,15 @@
           href: device-onboarding-vdi.md
     - name: Onboard macOS-enheder (prøveversion)
       items:
-        - name: Oversigt over onboarding af macOS-enheder i Microsoft 365 (prøveversion)
+        - name: Oversigt over onboarding af macOS-enheder i Microsoft 365
           href: device-onboarding-macos-overview.md
-        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Microsoft Intune (prøveversion)
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Microsoft Intune
           href: device-onboarding-offboarding-macos-intune.md
-        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder (prøveversion)
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder
           href: device-onboarding-offboarding-macos-intune-mde.md
-        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro (prøveversion)
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro
           href: device-onboarding-offboarding-macos-jamfpro.md
-        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder (prøveversion)
+        - name: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder
           href: device-onboarding-offboarding-macos-jamfpro-mde.md
 - name: Administrer forbindelser for tredjepartsdata
   items:
@@ -216,7 +216,7 @@
       href: use-content-search-to-search-third-party-data-that-was-imported.md
 - name: Administrer insider-risici
   items:
-    - name: Microsoft 365-løsninger til insider-risiko
+    - name: Microsoft Purview-løsninger for insider-risiko
       href: insider-risk-solution-overview.md
     - name: Kommunikationsoverholdelse
       items:
@@ -304,9 +304,9 @@
   items:
     - name: 'Kend dine data, beskyt dine data, undgå tab af data'
       href: information-protection.md
-    - name: Udrul en MIP-løsning
+    - name: Udrul en løsning til beskyttelse af oplysninger
       href: information-protection-solution.md
-    - name: Standardmærkater og -politikker for Microsoft Information Protection
+    - name: Standardmærkater og -politikker til beskyttelse af dine data
       href: mip-easy-trials.md
     - name: Typer af følsomme oplysninger
       items:
@@ -396,7 +396,7 @@
       items:
         - name: Få mere at vide om følsomhedsmærkater
           href: sensitivity-labels.md
-        - name: Hvorfor vælge MIP-indbygget mærkning til Office-apps
+        - name: Hvorfor vælge indbygget mærkning til Office-apps?
           href: sensitivity-labels-aip.md
         - name: Kom i gang med følsomhedsmærkater
           href: get-started-with-sensitivity-labels.md
@@ -428,7 +428,7 @@
           href: office-365-service-encryption.md
         - name: Kundenøgle
           items:
-            - name: Kundenøgle i Microsoft 365
+            - name: Tjenestekryptering med Microsoft Purview-kundenøgle
               href: customer-key-overview.md
             - name: Konfigurer kundenøgle til Microsoft 365
               href: customer-key-set-up.md
@@ -441,27 +441,27 @@
         - name: Mailkryptering
           href: email-encryption.md
           items:
-            - name: Kryptering af Office 365-meddelelser
+            - name: Meddelelseskryptering
               href: ome.md
-            - name: De nye egenskaber i Office 365-meddelelseskryptering
+            - name: Konfigurer Microsoft Purview-meddelelseskryptering
               href: set-up-new-message-encryption-capabilities.md
-            - name: Definer regler for mailflow for at kryptere mails i Office 365
+            - name: Definer regler for mailflow for at kryptere mails
               href: define-mail-flow-rules-to-encrypt-email.md
             - name: Føj din organisations brand til dine krypterede meddelelser
               href: add-your-organization-brand-to-encrypted-messages.md
-            - name: Opret en politik for følsomme oplysninger for din organisation ved hjælp af Office 365-meddelelseskryptering
+            - name: Opret en politik for følsomme oplysninger for din organisation ved hjælp af Microsoft Purview-meddelelseskryptering
               href: ome-sensitive-info-types.md
-            - name: Fjern Office 365-meddelelseskryptering
+            - name: Administrer meddelelseskryptering
               href: manage-office-365-message-encryption.md
-            - name: Avanceret meddelelseskryptering i Office 365
+            - name: Avanceret meddelelseskryptering
               href: ome-advanced-message-encryption.md
-            - name: 'Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Office 365'
+            - name: 'Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Microsoft Purview'
               href: ome-advanced-expiration.md
-            - name: 'Tilbagekald mail, der er krypteret med Avanceret meddelelseskryptering i Office 365'
+            - name: 'Tilbagekald mail, der er krypteret af Avanceret meddelelseskryptering i Microsoft Purview'
               href: revoke-ome-encrypted-mail.md
-            - name: Sammenlign versioner af OME
+            - name: Sammenlign versioner af meddelelseskryptering
               href: ome-version-comparison.md
-            - name: Ofte stillede spørgsmål om kryptering af Office 365-meddelelser
+            - name: Ofte stillede spørgsmål om meddelelseskryptering
               href: ome-faq.yml
             - name: Sådan beskytter Exchange Online dine mailhemmeligheder
               href: exchange-online-secures-email-secrets.md
@@ -501,9 +501,9 @@
               href: endpoint-dlp-learn-about.md
             - name: Få mere at vide om standardpolitikken for forebyggelse af datatab i Microsoft Teams (prøveversion)
               href: dlp-teams-default-policy.md
-            - name: Få mere at vide om Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+            - name: Få mere at vide om scanner til forebyggelse af datatab i det lokale miljø
               href: dlp-on-premises-scanner-learn.md
-            - name: Få mere at vide om Microsoft Overholdelsesudvidelse
+            - name: Få mere at vide om Microsoft Purview-udvidelsen
               href: dlp-chrome-learn-about.md
             - name: Få mere at vide om dashboardet til forebyggelse af datatab
               href: dlp-alerts-dashboard-learn.md
@@ -525,13 +525,13 @@
               href: create-a-dlp-policy-from-a-template.md
             - name: 'Opret, test og finjuster en DLP-politik'
               href: create-test-tune-dlp-policy.md
-            - name: Kom i gang med Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+            - name: Kom i gang med scanner til forebyggelse af datatab i det lokale miljø
               href: dlp-on-premises-scanner-get-started.md
             - name: Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt
               href: endpoint-dlp-getting-started.md
             - name: Konfigurer indstillinger for enhedsproxy og internetforbindelse for Information Protection
               href: device-onboarding-configure-proxy.md
-            - name: Kom i gang med Microsoft Overholdelsesudvidelse
+            - name: Kom i gang med Microsoft Purview-udvidelsen
               href: dlp-chrome-get-started.md
             - name: Kom i gang med dashboardet til advarsel om forebyggelse af datatab
               href: dlp-alerts-dashboard-get-started.md
@@ -543,7 +543,7 @@
               href: dlp-microsoft-teams.md
             - name: Brug forebyggelse af datatab ved slutpunkt
               href: endpoint-dlp-using.md
-            - name: Brug Microsoft 365-scanner til forebyggelse af datatab i det lokale miljø
+            - name: Brug scanner til forebyggelse af datatab i det lokale miljø
               href: dlp-on-premises-scanner-use.md
             - name: Brug meddelelser og politiktip i DLP-politikker
               href: use-notifications-and-policy-tips.md
@@ -569,10 +569,10 @@
               href: dlp-migrate-exo-policy-to-unified-dlp.md
             - name: Reference til politiktips til forebyggelse af datatab
               href: dlp-policy-tips-reference.md
-- name: Administrer informationsstyring og data
+- name: Administrer datalivscyklus og poster
   items:
     - name: Styr dine data
-      href: manage-information-governance.md
+      href: manage-data-governance.md
     - name: Forstå opbevaring og sletning af data
       items:
         - name: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
@@ -593,16 +593,16 @@
           href: retention-settings.md
         - name: Begrænsninger for opbevaring og sletning
           href: retention-limits.md
-    - name: Informationsstyring
+    - name: Administration af datalivscyklus
       items:
-        - name: Få mere at vide om informationsstyring
-          href: information-governance.md
-        - name: Kom i gang med informationsstyring
-          href: get-started-with-information-governance.md
+        - name: Få mere at vide om administration af datalivscyklus
+          href: data-lifecycle-management.md
+        - name: Kom i gang med administration af datalivscyklus
+          href: get-started-with-data-lifecycle-management.md
         - name: Opret opbevaringspolitik
           href: create-retention-policies.md
         - name: Brug opbevaringsmærkater til undtagelser
-          href: create-retention-labels-information-governance.md
+          href: create-retention-labels-data-lifecycle-management.md
         - name: Arkivér postkassedata
           items:
             - name: Få mere at vide om arkivpostkasser
@@ -673,7 +673,7 @@
           href: disposition.md
 - name: Administrer eDiscovery
   items:
-    - name: Microsoft 365 eDiscovery-løsninger
+    - name: Microsoft Purview eDiscovery-løsninger
       href: ediscovery.md
     - name: Indholdssøgning
       items:
@@ -742,9 +742,9 @@
               href: create-report-on-and-delete-multiple-content-searches.md
             - name: Klon en søgning
               href: clone-a-content-search.md
-    - name: Grundlæggende eDiscovery
+    - name: eDiscovery (Standard)
       items:
-        - name: Kom i gang med grundlæggende eDiscovery
+        - name: Kom i gang med eDiscovery (Standard)
           href: get-started-core-ediscovery.md
         - name: Opret eDiscovery-fastfrysninger
           href: create-ediscovery-holds.md
@@ -754,7 +754,7 @@
           href: export-content-in-core-ediscovery.md
         - name: 'Lukke, genåbne og slette en sag'
           href: close-reopen-delete-core-ediscovery-cases.md
-        - name: Grundlæggende eDiscovery-reference
+        - name: eDiscovery-reference (standard)
           items:
             - name: Begrænsninger for eDiscovery-søgning
               href: limits-for-content-search.md
@@ -800,19 +800,19 @@
               href: configure-edge-to-export-search-results.md
             - name: Søg efter eDiscovery-aktiviteter i overvågningsloggen
               href: search-for-ediscovery-activities-in-the-audit-log.md
-    - name: Avanceret eDiscovery
+    - name: eDiscovery (Premium)
       items:
         - name: Oversigt
           href: overview-ediscovery-20.md
-        - name: Konfigurer avanceret eDiscovery
+        - name: Konfigurer eDiscovery (Premium)
           href: get-started-with-advanced-ediscovery.md
-        - name: Opret en Avanceret eDiscovery-sag
+        - name: Opret eDiscovery-sager (Premium)
           items:
             - name: Opret og administrer en sag
               href: create-and-manage-advanced-ediscoveryv2-case.md
             - name: Brug det nye sagsformat
               href: advanced-ediscovery-new-case-format.md
-        - name: Avanceret eDiscovery-arbejdsproces til Teams-indhold
+        - name: eDiscovery-arbejdsproces (Premium) til Teams-indhold
           href: teams-workflow-in-advanced-ediscovery.md
         - name: Administrer ansvarlige og datakilder uden ansvarlige
           href: managing-custodians.md
@@ -933,9 +933,9 @@
               href: add-or-remove-members-from-a-case-in-advanced-ediscovery.md
             - name: Konfigurer indstillinger for søgning og analyse
               href: configure-search-and-analytics-settings-in-advanced-ediscovery.md
-        - name: Avanceret eDiscovery-reference
+        - name: eDiscovery-reference (Premium)
           items:
-            - name: Avancerede eDiscovery-grænser
+            - name: Grænser for eDiscovery (Premium)
               href: limits-ediscovery20.md
             - name: Understøttede filtyper
               href: supported-filetypes-ediscovery20.md
@@ -985,11 +985,11 @@
       href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
 - name: Administrer overvågnings- og underretningspolitikker
   items:
-    - name: Microsoft 365-overvågningsløsninger
+    - name: Overvågningsløsninger til Microsoft Purview
       href: auditing-solutions-overview.md
-    - name: Grundlæggende overvågning
+    - name: Overvågning (standard)
       items:
-        - name: Konfigurer grundlæggende overvågning
+        - name: Konfigurer overvågning (standard)
           href: set-up-basic-audit.md
         - name: Søgning i overvågningsloggen
           href: search-the-audit-log-in-security-and-compliance.md
@@ -1013,15 +1013,15 @@
               href: /office/office-365-management-api/office-365-management-activity-api-schema
             - name: Ofte stillede spørgsmål og fejlfinding i forbindelse med Office 365 Management Activity API
               href: /office/office-365-management-api/troubleshooting-the-office-365-management-activity-api
-    - name: Avanceret overvågning
+    - name: Overvågning (Premium)
       items:
-        - name: Oversigt over Avanceret overvågning
+        - name: Oversigt over overvågning (Premium)
           href: advanced-audit.md
-        - name: Konfigurer Avanceret overvågning
+        - name: Konfigurer overvågning (Premium)
           href: set-up-advanced-audit.md
         - name: Administrer opbevaringspolitikker for overvågningslog
           href: audit-log-retention-policies.md
-        - name: Brug Avanceret overvågning til at undersøge kompromitterede konti
+        - name: Brug Overvågning (Premium) til at undersøge kompromitterede konti
           href: mailitemsaccessed-forensics-investigations.md
     - name: Postkasseovervågning
       href: enable-mailbox-auditing.md

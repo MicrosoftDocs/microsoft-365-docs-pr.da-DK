@@ -14,129 +14,128 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: e21774ada245a3b9d5c131998b7c60b4a4778210
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: c7fd01b95d461332baaf4eac90aee4715da3e55e
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63595998"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953024"
 ---
 # <a name="test-base-faq"></a>Ofte stillede spørgsmål om testbase
 
-**Sp: Hvordan sender vi vores pakker til Test Base-teamet?**
+**Spørgsmål: Hvordan sender vi vores pakker til testbaseteamet?**
 
-**A:** Send dine pakker direkte til Test Base-miljøet ved hjælp af vores selvbetjeningsportal.
+**A:** Indsend dine pakker direkte til Test Base-miljøet ved hjælp af vores selvbetjeningsportal.
 
-Hvis du vil sende din programpakke, skal du gå til [Azure](https://www.aka.ms/testbaseportal "Testbase startside") Portal og uploade en zip-komprimeret mappe, der indeholder dit programs binære binære, afhængigheder og testscripts via dashboardet for selvbetjeningsportalen for Test Base. 
+Hvis du vil sende din programpakke, skal du gå til [Azure Portal](https://www.aka.ms/testbaseportal "Startside for testbase") og uploade en zip-komprimeret mappe, der indeholder programmets binære filer, afhængigheder og testscripts via det selvbetjente dashboard til Test Base-portalen.
 
-Se brugervejledningen til onboarding for at få flere oplysninger, eller kontakt vores team for at <testbasepreview@microsoft.com> få hjælp og flere oplysninger.
+Se onboardingbrugervejledningen for at få flere oplysninger eller kontakt vores team på <testbasepreview@microsoft.com> for at få hjælp og flere oplysninger.
 
-**Sp: Hvad er OOB-test (out of box) ?**
+**Spørgsmål: Hvad er OOB-test (Out-of-box)?**
 
-**A:** Out of box-test (OOB) er standardiserede, standardtest kører, hvor programpakker installeres, startes og lukkes tredive (30) gange og derefter fjernes. 
+**A:** OOB-test (Out-of-box) standardiseres, standardtestkørsler, hvor programpakker installeres, startes og lukkes tredive (30) gange og derefter fjernes.
 
-De pakker, der er oprettet til Test Base, har følgende testscripts: installér, start, luk og eventuelt fjernelsesscriptet. 
+De pakker, der er oprettet til Test Base, har følgende testscripts: installér, start, luk og eventuelt fjernelsesscriptet.
 
-OOB-test (Out of box) giver dig standardiseret telemetri på dit program, så du kan sammenligne på tværs Windows builds.
+Oob-testene (Out-of-box) giver dig standardiseret telemetri på dit program, som du kan sammenligne på tværs af Windows builds.
 
-**Sp: Kan vi indsende tests uden for out of box-tests (installér, start, luk, fjern testscripts)?**
+**Spørgsmål: Kan vi indsende test uden for de indbyggede test (installere, starte, lukke, fjerne testscripts)?**
 
-**A:** Ja, kunder kan også uploade programpakker til **funktionstests** via dashboardet i selvbetjeningsportalen.
-**Funktionstest** er test, der giver kunderne mulighed for at udføre deres scripts for at køre brugerdefinerede funktioner i deres program.
-
+**A:** Ja, kunderne kan også uploade programpakker til **funktionelle test** via det selvbetjente portaldashboard.
+**Funktionelle test** er test, der gør det muligt for kunder at udføre deres scripts for at køre brugerdefineret funktionalitet på deres program.
 
 ## <a name="testing"></a>Test
 
-**Sp: Understøtter I funktionstest?**
+**Spørgsmål: Understøtter du funktionelle test?**
 
-**A:** Ja, Testbase understøtter funktionstest. Funktionstest er test, der giver vores kunder mulighed for at udføre deres scripts for at køre brugerdefinerede funktioner på deres program. 
+**A:** Ja, testbasen understøtter funktionelle test. Funktionelle test er test, der gør det muligt for vores kunder at udføre deres scripts for at køre brugerdefineret funktionalitet på deres program.
 
-Hvis du vil sende programpakken til funktionelle test, skal du uploade den ZIP-komprimerede mappe, der indeholder dit programs binære binære, afhængigheder og testscripts via vores selvbetjeningsportaldashboard. 
+Hvis du vil sende din programpakke til funktionel test, skal du uploade den ZIP-mappe, der indeholder programmets binære filer, afhængigheder og testscripts, via vores selvbetjente portaldashboard.
 
-Se brugervejledningen til onboarding for at få flere oplysninger, eller kontakt vores team for at <testbasepreview@microsoft.com> få hjælp og flere oplysninger.
+Se onboardingbrugervejledningen for at få flere oplysninger eller kontakt vores team på <testbasepreview@microsoft.com> for at få hjælp og flere oplysninger.
 
-**Sp: Hvordan håndterer TestBase vores testdata?**
+**Spørgsmål: Hvordan håndterer Test Base vores testdata?**
 
-**A:** Testbase indsamler og administrerer sikkert dine testdata på Azure-miljøet. 
+**A:** Testbasen indsamler og administrerer dine testdata sikkert i Azure-miljøet.
 
-**Sp: Kan TestBase understøtte vores automatiserede test?**
+**Spørgsmål: Kan testbasen understøtte vores automatiserede test?**
 
-**A:** Ja, Testbase understøtter automatiserede test, men vi understøtter ikke manuelle test på nuværende tidspunkt på grund af tjenestefunktioner.
+**A:** Ja, testbasen understøtter automatiserede test, men vi understøtter ikke manuelle test på nuværende tidspunkt på grund af tjenestefunktioner.
 
-**Sp: Hvilke sprog og rammer for automatiserede test understøtter du?**
+**Spørgsmål: Hvilke sprog og strukturer i automatiserede test understøtter du?**
 
-**A:** Vi understøtter alle sprog og rammer. Vi aktiverer alle scripts via PowerShell. 
+**A:** Vi understøtter alle sprog og strukturer. Vi aktiverer alle scripts via PowerShell.
 
-Du skal også angive (uploade) de afhængige binære i den påkrævede struktur.
+Du skal også angive (uploade) de afhængige binære filer i den påkrævede struktur.
 
-**Sp: Hvor hurtigt giver Test Base testresultater?**
+**Spørgsmål: Hvor hurtigt giver testbasen testresultater?**
 
-**A:** For hver test, vi kører i forhold til de foreløbige builds, leverer vi resultater inden for 48 timer på dashboardet i [Azure Portal](https://www.aka.ms/testbaseportal "Testbase startside") .
+**A:** For hver test, vi kører i forhold til foreløbige builds, leverer vi resultater inden for 48 timer på dit [Azure Portal-dashboard](https://www.aka.ms/testbaseportal "Startside for testbase") .
 
-**Sp: Kan du genstarte efter installationen?**
+**Spørgsmål: Kan du genstarte efter installationen?**
 
-**A:** Ja, vores proces understøtter genstart efter installationen. Sørg for at vælge denne indstilling på rullelisten "Valgfri indstillinger", når du angiver **dine opgaver** på onboardingportalen.
+**A:** Ja, vores proces understøtter genstart efter installation. Sørg for at vælge denne indstilling på rullelisten "Valgfrie indstillinger", når du angiver dine **opgaver** på onboardingportalen.
 
-Ved OOB-test (Out of box) kan du angive, om en genstart er nødvendig for _scriptet Installér._
+I forbindelse med OOB-test (Out-of-box) kan du angive, om der kræves en genstart til _installationsscriptet._
 
-![Billede af Genstart.](Media/reboot.png)
+![Genstart billede.](Media/reboot.png)
 
-Når det gælder funktionelle test, kan du angive, om der kræves en genstart for hvert script, der tilføjes.
+I forbindelse med funktionelle test kan du angive, om en genstart er påkrævet for hvert script, der tilføjes.
 
-![Sådan vælges funktionstests.](Media/functionalreboot.png)
+![Sådan vælger du funktionelle test.](Media/functionalreboot.png)
 
-**Sp: hvilke Windows versioner understøtter du?**
+**Spørgsmål: Hvilke Windows versioner understøtter du?**
 
-**A:** Vi understøtter i øjeblikket Windows 10-klienter, Windows Server 2016, Windows Server 2016 Core-version, Windows Server 2019 og Windows Server 2019 Core-version.
+**A:** Vi understøtter i øjeblikket Windows 10 klienter, Windows Server 2016, Windows Server 2016 Core-version, Windows Server 2019 og Windows Server 2019 Core-versionen.
 
-**Sp: Hvad er forskellen mellem sikkerhedsopdateringstests og funktionsopdateringstests?**
+**Spørgsmål: Hvad er forskellen mellem test af sikkerhedsopdatering og funktionsopdatering?**
 
-**A:** I forbindelse med sikkerhedsopdateringstests tester **<ins></ins>** vi i forhold til de månedlige foreløbige sikkerhedsopdateringer på Windows, som fokuserer på at holde vores brugere altid sikre og beskyttede. I forbindelse med funktionsopdateringstestene tester **<ins></ins>** vi dig i forhold til de toårlige foreløbige funktionsopdateringer, som introducerer nye funktioner og Windows.
+**A:** I forbindelse med test af sikkerhedsopdateringer tester vi i forhold til de **<ins>månedlige foreløbige sikkerhedsopdateringer</ins>** på Windows, som fokuserer på at holde vores brugere altid sikre og beskyttede. I forbindelse med test af funktionsopdateringen tester vi mod de **<ins>toårige foreløbige funktionsopdateringer</ins>**, der introducerer nye funktioner og funktioner på Windows.
 
-## <a name="debugging-options"></a>Fejlfindingsindstillinger
+## <a name="debugging-options"></a>Indstillinger for fejlfinding
 
-**Sp: Får vi adgang til virtuelle computere i tilfælde af fejl? Hvad deler Test Base?**
+**Spørgsmål: Får vi adgang til Virtual Machines (VM'er) i tilfælde af fejl? Hvad deler Test Base?**
 
-**A:** For at tjenesten skal være kompatibel, og de foreløbige opdateringer skal være sikre, er det kun Microsoft, der har adgang til VM'erne. Men kunder kan få vist testresultater og andre testmålepunkter på deres portaldashboard, herunder crash and hang-signaler, målepunkter for pålidelighed, hukommelse og CPU-udnyttelse osv. Vi genererer og leverer også logfiler over test, der køres på dashboardet til download og yderligere analyse. 
+**A:** Det er kun Microsoft, der har adgang til VM'erne, for at tjenesten er kompatibel, og de foreløbige opdateringer er sikre. Kunder kan dog få vist testresultater og andre testmålepunkter på deres portaldashboard, herunder nedbruds- og stopsignaler, målepunkter for pålidelighed, hukommelse og CPU-forbrug osv. Vi genererer og leverer også logge over testkørsler på dashboardet til download og yderligere analyse.
 
-Vi kan også levere hukommelsesdumps til fejlfinding af nedbrud efter behov.
+Vi kan også levere hukommelsesdumps til fejlfinding efter behov.
 
-**Sp: Hvis der bliver fundet problemer under testen, hvad er de næste trin til at løse disse problemer?**
+**Spørgsmål: Hvad er de næste trin til at løse disse problemer, hvis der er problemer under testen?**
 
-**A:** Testbaseteamet udfører en indledende triageproces for at bestemme den egentlige årsag til fejlen, og afhængigt af vores resultater dirigerer vi derefter til kunden eller de interne teams i Microsoft til fejlfinding. 
+**A:** Testbaseteamet udfører en indledende triageproces for at bestemme den egentlige årsag til fejlen, og afhængigt af vores resultater dirigerer vi til kunden eller interne teams i Microsoft med henblik på fejlfinding.
 
-Vi arbejder altid tæt sammen med vores kunder i fælles afhjælpning for at løse eventuelle problemer. 
+Vi arbejder altid tæt sammen med vores kunder om fælles afhjælpning for at løse eventuelle problemer.
 
-**Sp: Holder Microsoft frigivelsen af sikkerhedsopdateringen i venteposition, indtil problemet er løst? Hvilke alternative opløsninger er tilgængelige?**
+**Spørgsmål: Er Microsoft i besiddelse af udgivelsen af sikkerhedsrettelsen, indtil problemet er løst? Hvilke alternative løsninger er tilgængelige?**
 
-**A:** Formålet med Test Base er at sikre, at vores fælles slutbrugere ikke står over for problemer. Vi arbejder hårdt sammen med softwareleverandører om at løse eventuelle problemer før udgivelsen, men i tilfælde af at rettelsen ikke er mulig, har vi andre løsninger, f.eks. f.eks. glimser og blokke.
+**A:** Formålet med testbasen er at sikre, at vores fælles slutbrugere ikke oplever problemer. Vi vil arbejde hårdt sammen med softwareleverandører for at løse eventuelle problemer før udgivelsen, men i tilfælde af at rettelsen ikke er mulig, har vi andre løsninger som f.eks. shims og blokke.
 
-## <a name="miscellaneous"></a>Diverse bestemmelser
+## <a name="miscellaneous"></a>Diverse
 
-**Sp: Hvordan fungerer tjenesten med en server i det offentlige sted?**
+**Spørgsmål: Hvordan fungerer tjenesten med en server i det lokale miljø?**
 
-**A:** Vi yder i øjeblikket ikke support på serverne i det aktuelle tidspunkt. Men hvis serveren bruger HTTP-slutpunkt, kan vi oprette forbindelse til det via internettet.
+**A:** Vi understøtter i øjeblikket ikke lokale servere. Men hvis serveren eksponerer HTTP-slutpunktet, kan vi oprette forbindelse til det via internettet.
 
-**Sp: Who VM'erne?**
+**Spørgsmål: Who er vært for VM'erne?**
 
-**A:** Microsoft klar gør VM'en til denne tjeneste og tager kundens indlæsning af den.
+**A:** Microsoft klargør vm'en til denne tjeneste og tager belastningen ved at gøre det fra kunden.
 
-**Sp: Understøtter denne tjeneste web-, mobil- eller skrivebordsprogrammer?**
+**Spørgsmål: Understøtter denne tjeneste web-, mobil- eller skrivebordsprogrammer?**
 
-**A:** I øjeblikket er vores fokus på skrivebordsprogrammer, men vi har planer om at onboarde webprogrammer i fremtiden, men vi understøtter ikke mobilprogrammer på nuværende tidspunkt.
+**A:** I øjeblikket fokuserer vi på skrivebordsprogrammer, men vi har planer om at onboarde webprogrammer i fremtiden, men vi understøtter ikke mobilapps på nuværende tidspunkt.
 
-**Sp: Hvad er forskellen mellem Test Base og AFRUKP?**
+**Spørgsmål: Hvad er forskellen mellem Test Base og SUVP?**
 
-**A:** Den største forskel mellem Test Base og ONBOARDP er, at vores partnere onboarder deres programmer til Test Base Azure-miljøet til validering i forhold til foreløbige opdateringer i stedet for at udføre selve testene. 
+**A:** Den største forskel mellem Test Base og SUVP er, at vores partnere onboarder deres programmer i Test Base Azure-miljøet til valideringskørsler mod foreløbige opdateringer i stedet for selv at udføre testene.
 
-Ud over foreløbige sikkerhedsopdateringer understøtter vi tests af foreløbige funktionsopdateringer på vores platform. Vi har mange andre typer opdateringer og os-test i vores oversigt.
+Ud over test af foreløbige sikkerhedsopdateringer understøtter vi test af foreløbige funktionsopdateringer på vores platform. Vi har mange andre typer opdateringer og OS-test på vores roadmap.
 
-**Sp: Er der en omkostning knyttet til tjenesten?**
+**Spørgsmål: Er der en omkostning forbundet med tjenesten?**
 
-**A:** Pr. 1. marts 2022 får du 100 gratis timer (værdien 800 USD), der udløber om 6 måneder under dit abonnement for at opfylde dine valideringsbehov. Når de gratis timer bliver forbrugt (eller udløbet før brug), bliver du automatisk forbrugt til 8 USD pr. time i forhold til dit forbrug.   
+**A:** Fra og med den 1. marts 2022 får du 100 gratis timer (til en værdi af $800), der udløber om 6 måneder under dit abonnement til dine valideringsbehov. Når de gratis timer forbruges (eller udløber, før de bruges), måles du automatisk til 8 USD pr. time i forhold til dit forbrug.
 
-**Sp: Hvordan kan jeg give feedback om Test Base?**
+**Spørgsmål: Hvordan kan jeg give feedback om testbasen?**
 
-**A:** Hvis du vil dele din feedback om TestBase, **skal du** vælge Feedback-ikonet nederst til venstre på portalen. Medtag et skærmbillede sammen med din indsendelse for at hjælpe Microsoft med bedre at forstå din feedback. 
+**A:** Hvis du vil dele din feedback om testbasen, skal du vælge ikonet **Feedback** nederst til venstre på portalen. Medtag et skærmbillede med din indsendelse for at hjælpe Microsoft med bedre at forstå din feedback.
 
-Du kan også indsende produktforslag ogvote andre ideer på <testbasepreview@microsoft.com>.
+Du kan også indsende produktforslag og opvote andre ideer på <testbasepreview@microsoft.com>.

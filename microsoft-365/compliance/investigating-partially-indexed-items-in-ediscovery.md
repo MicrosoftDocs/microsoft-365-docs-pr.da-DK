@@ -18,14 +18,16 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du administrerer delvist indekserede elementer (også kaldet ikke-indekserede elementer) fra Exchange, SharePoint og OneDrive for Business i din organisation.
-ms.openlocfilehash: 8dd5235027a4563ad868d8ebe28c8dab50fb6376
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0cab31f56576cac9cbe7b51ea2cdceb49aff6db9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944761"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993112"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>Undersøger delvist indekserede elementer i eDiscovery
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 En eDiscovery-søgning, som du kører fra Microsoft Purview-overholdelsesportalen, inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. De fleste mails og webstedsdokumenter indekseres, fordi de falder inden [for indekseringsgrænserne for mails](limits-for-content-search.md#indexing-limits-for-email-messages). Nogle elementer kan dog overskride disse indekseringsgrænser og vil blive delvist indekseret. Her er andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
   
@@ -119,7 +121,7 @@ Fejlfelter beskriver, hvilke felter der påvirkes af den behandlingsfejl, der er
 
 I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger efter alle elementer i alle Exchange postkasser og derefter genererer en rapport om organisationens forhold mellem delvist indekserede mailelementer (efter antal og størrelse) og viser antallet af elementer (og deres filtype) for hver indekseringsfejl, der opstår. Brug beskrivelser af fejlkoder i det forrige afsnit til at identificere indekseringsfejlen.
   
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `PartiallyIndexedItems.ps1`f.eks. .
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `PartiallyIndexedItems.ps1`.
 
    ```powershell
      write-host "**************************************************"
@@ -164,7 +166,7 @@ I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger e
      }
    ```
 
-2. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/exchange-online-powershell).
+2. [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/exchange-online-powershell).
 
 3. I Security & Compliance Center PowerShell skal du gå til den mappe, hvor du gemte scriptet i trin 1, og derefter køre scriptet. f.eks.:
 

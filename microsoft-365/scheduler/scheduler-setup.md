@@ -1,5 +1,5 @@
 ---
-title: Konfiguration af Scheduler for Microsoft 365.
+title: Konfigurerer Planlægger for Microsoft 365.
 ms.author: v-aiyengar
 author: AshaIyengar21
 manager: serdars
@@ -7,48 +7,49 @@ audience: Admin
 ms.topic: article
 ms.service: scheduler
 ms.localizationpriority: medium
-description: Konfiguration af Scheduler for Microsoft 365.
-ms.openlocfilehash: 3315c362a6e6ae1eb4fa9bf54d388a89dd667136
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Konfigurerer Planlægger for Microsoft 365.
+ms.openlocfilehash: ef377393134e4d8028ab0e6e40ddcc3647f60695
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63592401"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953842"
 ---
-# <a name="setting-up-scheduler-for-microsoft-365"></a>Konfiguration af Scheduler for Microsoft 365
+# <a name="setting-up-scheduler-for-microsoft-365"></a>Konfiguration af Tidsplan for Microsoft 365
 
-Lejeradministratorer skal konfigurere en Scheduler-assistentpostkasse og hente Scheduler-licenser til mødearrangører for at aktivere Scheduler til Microsoft 365 tjeneste. 
+Lejeradministratorer skal konfigurere en scheduler-assistents postkasse og hente Scheduler-licenser til mødearrangører for at aktivere Scheduler for Microsoft 365-tjenesten. 
 
 ## <a name="licensing"></a>Licensering
 
-Få mere at vide: [Scheduler til Microsoft 365 licenser](https://www.microsoft.com/microsoft-365/meeting-scheduler-pricing)
+Få mere at vide: [Planlægger for Microsoft 365 licenser](https://www.microsoft.com/microsoft-365/meeting-scheduler-pricing)
 
-> [!Note]
-> Mødedeltagerne behøver ikke en Planlægnings- eller Microsoft 365 licens. <br>Scheduler-assistentpostkassen kræver ikke en Microsoft 365 eller en Scheduler-licens.
+> [!NOTE]
+> Mødedeltagere behøver ikke en tidsplan eller Microsoft 365 licens.
+>
+> Postkassen i Scheduler-assistenten kræver ikke en Microsoft 365 eller en Scheduler-licens.
 
 ## <a name="prerequisites"></a>Forudsætninger
 
-| Forudsætninger | Beskrivelse |
-|-------------------|-------------|
-|En Scheduler-assistentpostkasse for lejeren |En Exchange ressourcepostkasse af typen Udstyr, der fungerer som Scheduler-assistentpostkassen for din lejer, hvor du kan sende og modtage mails til og Cortana. Alle mails, der Cortana mails, bevares i din lejers Cortana baseret på din opbevaringspolitik. Scheduler-assistentpostkassen kaldes typisk "Cortana" eller "Cortana Scheduler", da alle mails fra assistenten bliver signeret Cortana.<ul><li>Oprette en udstyrstype Exchange ressourcepostkasse</li><li>Navngive postkassens viste navn og primære SMTP-adresse `Cortana <cortana@yourdomain.com>` eller `Cortana Scheduler <cortana.scheduler@yourdomain.com>`.</li></ul>**Bemærk!** Scheduler-assistentpostkassen kræver ikke en Microsoft 365 eller en Scheduler-licens.|
-|Exchange Online postkasse |Mødearrangører skal have en Exchange Online-postkasse og -kalender typisk som en del af deres Microsoft 365 licens. Desuden skal mødearrangører have en Scheduler-licens. Scheduler-licensen gør det muligt for Scheduler-assistenten at bruge mødearrangørens postkasse og kalender til at planlægge møder for dem.<br/><br/> Se Scheduler for at Microsoft 365 oplysninger om licenser og priser.  <br/><br/>**Bemærk!** Mødedeltagerne behøver ikke en Planlægnings- eller Microsoft 365 licens. Mødedeltagerne kan være interne eller eksterne i forhold til lejeren. Mødedeltagerne skal kun have adgang til en mailadresse.|
+|Forudsætning|Beskrivelse|
+|---|---|
+|En planlægningsassistent-postkasse for lejeren |En Exchange ressourcepostkasse af udstyrstypen, der fungerer som Scheduler-assistentens postkasse, så din lejer kan sende og modtage mails til og fra Cortana. Alle mails, der sendes til Cortana, bevares i din lejers Cortana postkasse baseret på din opbevaringspolitik. Planlægningsassistentens postkasse hedder typisk "Cortana" eller "Cortana Scheduler", da alle mails fra assistenten signeres Cortana. <ul><li>Opret en udstyrstype Exchange ressourcepostkasse</li><li>Navngiv postkassens viste navn og primære SMTP-adresse `Cortana <cortana@yourdomain.com>` eller `Cortana Scheduler <cortana.scheduler@yourdomain.com>`.</li></ul> <br/> **Bemærk:** Postkassen i Scheduler-assistenten kræver ikke en Microsoft 365 eller en Scheduler-licens.|
+|Exchange Online postkasse |Mødearrangører skal have en Exchange Online postkasse og kalender som regel som en del af deres Microsoft 365 licens. Mødearrangører skal desuden have en scheduler-licens. Scheduler-licensen gør det muligt for Planlægningsassistenten at bruge mødearrangørens postkasse og kalender til at planlægge møder for dem. <br/><br/> Se Scheduler for at få Microsoft 365 for at få oplysninger om licenser og priser. <br/><br/> **Bemærk:** Mødedeltagere behøver ikke en tidsplan eller Microsoft 365 licens. Mødedeltagere kan være interne eller eksterne i forhold til lejeren. Mødedeltagere skal kun have adgang til en mailadresse.|
 
+## <a name="setting-up-the-scheduler-assistant-mailbox"></a>Konfiguration af planlægningsassistentens postkasse
 
-## <a name="setting-up-the-scheduler-assistant-mailbox"></a>Konfiguration af Scheduler-assistentpostkassen
-
-Scheduler-assistentpostkassen er en Exchange af udstyrstype, der ikke kræver en ekstra Microsoft 365 eller Scheduler-licens. Det viste navn og den primære SMTP-adresse for postkassen skal indeholde Cortana, da alle mails fra Scheduler-assistenten bliver signeret Cortana (dvs. `Cortana <cortana@yourdomain.com>` eller `Cortana Scheduler <cortana.scheduler@yourdomain.com>`). Når Scheduler-assistentpostkassen er blevet oprettet, skal du angive postkassen som Scheduler-assistentpostkassen. Når du har udpeget Scheduler-assistentpostkassen, Cortana du mulighed for at planlægge møder på vegne af dine brugere.
+Scheduler Assistant-postkassen er en Exchange udstyrstypepostkasse, der ikke kræver en ekstra Microsoft 365- eller Scheduler-licens. Det viste navn og den primære SMTP-adresse for postkassen skal indeholde Cortana da alle mails fra Scheduler-assistenten signeres Cortana (dvs. `Cortana <cortana@yourdomain.com>` eller `Cortana Scheduler <cortana.scheduler@yourdomain.com>`). Når planlægningsassistentens postkasse er blevet oprettet, skal du angive postkassen som planlægningsassistentens postkasse. Når du har angivet planlægningsassistentens postkasse, vil Cortana være tilgængelige til at planlægge møder på vegne af dine brugere.
 
 - Brug Microsoft 365 Administration til at oprette en brugerpostkasse. En 30-dages opbevaringspolitik anbefales. 
-- Brug navnet Cortana din postkasses primære SMTP-adresse. Navne som f.eks`Cortana@yourdomain.com``CortanaScheduler@contoso.com`. , eller `Cortana.Scheduler@yourdomain.com` anbefales.
+- Brug navnet Cortana i postkassens primære SMTP-adresse. Navne som `Cortana@yourdomain.com`, `CortanaScheduler@contoso.com`eller `Cortana.Scheduler@yourdomain.com` anbefales.
 
-## <a name="designate-the-mailbox-as-the-scheduler-assistant"></a>Angive postkassen som Planlægningsassistent
+## <a name="designate-the-mailbox-as-the-scheduler-assistant"></a>Angiv postkassen som Planlægningsassistent
 
-Når en entydig postkasse til Cortana Scheduler er blevet oprettet, skal du formelt angive postkassen Microsoft 365 postkassen. Når du har udpeget Cortana Scheduler, vil den være tilgængelig til at planlægge møder på vegne af dine brugere.
+Når der er oprettet en entydig postkasse til Cortana Scheduler, skal du angive, at postkassen skal Microsoft 365 formelt. Når du har angivet den Cortana Scheduler-postkasse, vil den være tilgængelig til at planlægge møder på vegne af dine brugere.
 
-#### <a name="connect-to-powershell"></a>Forbind til PowerShell
+### <a name="connect-to-powershell"></a>Forbind til PowerShell
 
 Brug Microsoft 365 Administration til at oprette en brugerpostkasse. En 30-dages opbevaringspolitik anbefales.
-Brug navnet Cortana din postkasses primære SMTP-adresse. Navne som f.eks`Cortana@yourdomain.com``CortanaScheduler@contoso.com`. , eller `Cortana.Scheduler@yourdomain.com` anbefales.
+Brug navnet Cortana i postkassens primære SMTP-adresse. Navne som `Cortana@yourdomain.com`, `CortanaScheduler@contoso.com`eller `Cortana.Scheduler@yourdomain.com` anbefales.
 
 ```PowerShell
 $domain="yourdomain.com"
@@ -57,75 +58,71 @@ Import-Module ExchangeOnlineManagement
 Connect-ExchangeOnline -UserPrincipalName $tenantAdmin
 ```
 
-#### <a name="create-the-scheduler-assistant-mailbox"></a>Opret Scheduler-assistentpostkassen
+### <a name="create-the-scheduler-assistant-mailbox"></a>Opret planlægningsassistentens postkasse
 
 ```PowerShell
 New-Mailbox -Name Cortana -Organization $domain -DisplayName "Cortana Scheduler" -Equipment 
 Set-CalendarProcessing Cortana@$domain -DeleteNonCalendarItems $false 
 ```
-    
-#### <a name="designate-the-scheduler-assistant-mailbox"></a>Angive Scheduler-assistentpostkassen
+
+### <a name="designate-the-scheduler-assistant-mailbox"></a>Angiv planlægningsassistentens postkasse
 
 ```PowerShell
 Set-mailbox cortana@$domain -SchedulerAssistant:$true
 ```
 
-Når du har kørt denne "set"-kommando i Cortana Scheduler-assistentpostkassen, angives en ny "PersistedCapability" i postkassen for at bemærke, at denne postkasse er "SchedulerAssistant".
+Når du har kørt denne "set"-kommando på Cortana Scheduler-assistentens postkasse, angives der en ny "PersistedCapability" i postkassen for at bemærke, at denne postkasse er "SchedulerAssistant".
 
-> [!Note]
-> Du kan få mere at vide om, hvordan du forbinder din organisation til [PowerShell under: Forbind til Microsoft 365 med PowerShell](/microsoft-365/enterprise/connect-to-microsoft-365-powershell)
+> [!NOTE]
+> Hvis du vil vide mere om, hvordan du opretter forbindelse mellem din organisation og PowerShell, [skal du se: Forbind at Microsoft 365 med PowerShell](/microsoft-365/enterprise/connect-to-microsoft-365-powershell)
 
-### <a name="verifying-the-scheduler-assistant-mailbox"></a>Bekræftelse af Scheduler-assistentpostkassen
+### <a name="verifying-the-scheduler-assistant-mailbox"></a>Kontrollerer planlægningsassistentens postkasse
 
-Sådan bekræfter du, at Scheduler-assistentpostkassen er blevet oprettet
+Sådan bekræfter du, at planlægningsassistentens postkasse er blevet oprettet
 
 ```PowerShell
 Get-CalendarProcessing cortana@$domain | fl DeleteNonCalendarItems
 ```
 
-Resultatet skal være "falsk".
-
-<br>
+Resultatet skal være "false".
 
 ```PowerShell
 Get-Mailbox -Identity cortana@$domain | fl *type*
 ```
 
 Resultatet skal være
-- ResourceType: Udstyr
-- Remote RecipientType: Ingen
-- RecipientType: UserMailbox
+
+- Ressourcetype: Udstyr
+- Fjernmodtagertype: Ingen
+- Modtagertype: UserMailbox
 - RecipientTypeDetails: EquipmentMailbox
 
-<br/>
-
-### <a name="to-discover-which-mailbox-is-the-scheduler-assistant-mailbox"></a>Sådan finder du ud af, hvilken postkasse der er Scheduler-assistentpostkassen
+### <a name="to-discover-which-mailbox-is-the-scheduler-assistant-mailbox"></a>Sådan finder du ud af, hvilken postkasse der er planlægningsassistentens postkasse
 
 ```PowerShell
 Get-Mailbox -ResultSize Unlimited | where {$_.PersistedCapabilities -Match "SchedulerAssistant"}
 ```
 
-> [!Important]
-> Det kan tage flere timer, før Scheduler-assistentpostkassen er færdig med at udføre fuld klargøring for at konfigurere SchedulerAssistant-funktionen.
-
+> [!IMPORTANT]
+> Det kan tage flere timer for Scheduler-assistentens postkasse at fuldføre fuld klargøring for at angive funktionen SchedulerAssistant.
 
 ## <a name="exchange-online-mailbox"></a>Exchange Online postkasse
 
-En Scheduler-licens er et tilføjelsesprogram til Microsoft 365, som gør det muligt for mødearrangøren at uddelegere deres mødeplanlægningsopgaver til deres Scheduler-assistent. Ud over at designe en postkasse som en Scheduler-assistentpostkasse skal mødearrangører også have en Scheduler-licens og Exchange Online-postkasse og kalender, typisk via Microsoft 365-licens for at Scheduler kan fungere. Mødedeltagerne behøver ikke en Scheduler-licens eller en Microsoft 365 licens.
+En scheduler-licens er et tilføjelsesprogram til Microsoft 365, som gør det muligt for mødearrangøren at delegere sine mødeplanlægningsopgaver til deres planlægningsassistent. Ud over at angive en postkasse som en Scheduler-assistent-postkasse skal mødearrangørerne også have en Scheduler-licens og Exchange Online postkasse og kalender, typisk via Microsoft 365 licens, så Scheduler kan arbejde. Mødedeltagere behøver ikke en scheduler-licens eller en Microsoft 365 licens.
 
-For at købe Scheduler-tilføjelsesprogrammet skal du have en af følgende licenser:
+Hvis du vil købe tilføjelsesprogrammet Tidsplan, skal du bruge en af følgende licenser:
 
 - Microsoft 365 E3, A3, E5, A5
 - Business Basic, Business, Business Standard, Business Premium
 - Office 365 E1, A1, E3, A3, E5, A5
 - Business Essentials, Business Premium
-- Exchange Online plan 1 eller plan 2 licens. 
+- Exchange Online Plan 1- eller Plan 2-licens.
 
-> [!Note]
-> Planlægger til Microsoft 365 findes kun på engelsk i verdensomspændende miljøer med flere lejere. **Planlægger til Microsoft 365** ikke tilgængelig for brugere af:
-> 
+> [!NOTE]
+> Planlægger for Microsoft 365 er kun tilgængelig i globale miljøer med flere lejere på engelsk. **Planlægger for Microsoft 365** er ikke tilgængelig for brugere af:
+>
 > - Microsoft 365 drevet af 21Vianet i Kina
-> - Microsoft 365 med tysk sky, der bruger datatillidse tysk Telekom
-> - Government-skyen, GCC, forbruger, GCC High eller DoD
-> 
+> - Microsoft 365 med den tyske cloud, der bruger datatillidscenteret Tysk Telekom
+> - Government-cloud, herunder GCC, forbruger, GCC høj eller dod
+>
 > Scheduler understøtter brugere i Tyskland, hvis dataplacering ikke er det tyske datacenter.

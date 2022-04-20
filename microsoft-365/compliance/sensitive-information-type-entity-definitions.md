@@ -19,14 +19,16 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: Der er mange følsomme oplysningstyper, der er klar til brug i dine DLP-politikker. I denne artikel vises alle disse typer følsomme oplysninger, og du kan se, hvad en DLP-politik søger efter, når hver type registreres.
-ms.openlocfilehash: 69c47a717b63f8d9ac4e30f3b97fd228399bf21c
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 6074082812853469e0513d67ec68519eb2a89563
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760396"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970653"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Enhedsdefinitioner for type af følsomme oplysninger
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel vises alle objektdefinitioner for følsomme oplysninger. Hver definition viser, hvad en DLP-politik søger efter for at registrere hver type. Du kan få mere at vide om typer af følsomme oplysninger under [Typer af følsomme oplysninger](sensitive-information-type-learn-about.md)
 
@@ -225,7 +227,7 @@ Matchning af gadeadresser er designet til at matche strenge, som et menneske vil
 
 Ressourcerne er forskellige for hvert land. De primære ressourcer er mønstre for adresseformater, der bruges i et bestemt land. Der vælges forskellige formater for at sikre, at så mange adresser som muligt matches. Disse formater giver fleksibilitet, f.eks. kan en adresse udelade postnummeret eller udelade et bynavn eller have en gade uden gadesuffiks. I alle tilfælde bruges sådanne matches til at øge tilliden til kampen.
 
-Mønstrene er designet til at matche individuelle adresser, ikke generiske placeringer. Strenge som *Redmond, WA 98052* eller Main Street matcher derfor ikke *Albuquerque* .
+Mønstrene er designet til at matche individuelle adresser, ikke generiske placeringer. Så strenge som *Redmond, WA 98052* eller *Main Street, Vil Albuquerque* ikke blive matchet.
 
 ### <a name="contains"></a>Indeholder
 
@@ -510,7 +512,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -575,7 +577,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -1126,7 +1128,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -1413,7 +1415,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -2337,7 +2339,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -2879,7 +2881,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -3728,7 +3730,7 @@ Ja, luhn-kontrollen
 En DLP-politik har stor tillid til, at den har registreret denne type følsomme oplysninger, hvis den ligger i nærheden af 300 tegn:
 
 - Funktionen Func_credit_card finder indhold, der svarer til mønsteret.
-- Et af følgende er sandt:
+- En af følgende betingelser er opfyldt:
   - Der blev fundet et nøgleord fra Keyword_cc_verification.
   - Der blev fundet et nøgleord fra Keyword_cc_name.
   - Funktionen Func_expiration_date finder en dato i det rigtige datoformat.
@@ -4569,7 +4571,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -4712,7 +4714,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -5828,7 +5830,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -6293,7 +6295,7 @@ Disse enheder findes i EU-kørekortsnummeret og er følsomme informationstyper.
 - [Litauen](#lithuania-drivers-license-number)
 - [Luxemburg](#luxemburg-drivers-license-number)
 - [Malta](#malta-drivers-license-number)
-- [Holland](#netherlands-drivers-license-number)
+- [Nederlandene](#netherlands-drivers-license-number)
 - [Polen](#poland-drivers-license-number)
 - [Portugal](#portugal-drivers-license-number)
 - [Rumænien](#romania-drivers-license-number)
@@ -6326,7 +6328,7 @@ Disse enheder findes i EU's nationale identifikationsnummer og er følsomme info
 - [Litauen](#lithuania-personal-code)
 - [Luxemburg](#luxemburg-national-identification-number-natural-persons)
 - [Malta](#malta-identity-card-number)
-- [Holland](#netherlands-citizens-service-bsn-number)
+- [Nederlandene](#netherlands-citizens-service-bsn-number)
 - [Polen](#poland-national-id-pesel)
 - [Portugal](#portugal-citizen-card-number)
 - [Rumænien](#romania-personal-numeric-code-cnp)
@@ -6358,7 +6360,7 @@ Disse enheder findes i EU-passets nummer og er følsomme oplysningstyper. Disse 
 - [Litauen](#lithuania-passport-number)
 - [Luxemburg](#luxemburg-passport-number)
 - [Malta](#malta-passport-number)
-- [Holland](#netherlands-passport-number)
+- [Nederlandene](#netherlands-passport-number)
 - [Polen](#poland-passport-number)
 - [Portugal](#portugal-passport-number)
 - [Rumænien](#romania-passport-number)
@@ -6370,7 +6372,7 @@ Disse enheder findes i EU-passets nummer og er følsomme oplysningstyper. Disse 
 
 ## <a name="eu-social-security-number-or-equivalent-identification"></a>EU-cpr-nummer eller tilsvarende identifikation
 
-Det er enheder, der befinder sig i EU's cpr-nummer eller tilsvarende identifikation og er følsomme informationstyper.
+Disse enheder findes i EU's cpr-nummer eller tilsvarende identifikation og er følsomme informationstyper.
 
 - [Østrig](#austria-social-security-number)
 - [Belgien](#belgium-national-number)
@@ -6409,7 +6411,7 @@ Disse enheder er i EU's type af følsomme oplysninger om skatteidentifikationsnu
 - [Litauen](#lithuania-personal-code)
 - [Luxemburg](#luxemburg-national-identification-number-non-natural-persons)
 - [Malta](#malta-tax-identification-number)
-- [Holland](#netherlands-tax-identification-number)
+- [Nederlandene](#netherlands-tax-identification-number)
 - [Polen](#poland-tax-identification-number)
 - [Portugal](#portugal-tax-identification-number)
 - [Rumænien](#romania-personal-numeric-code-cnp)
@@ -6599,7 +6601,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -7010,7 +7012,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -7367,7 +7369,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -7634,7 +7636,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 ### <a name="format"></a>Format
 
-siden 1. november 2010: Ni til elleve bogstaver og cifre
+siden 1. november 2010: Ni til 11 bogstaver og cifre
 
 fra 1. april 1987 til 31. oktober 2010: 10 cifre
 
@@ -7885,7 +7887,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -7947,7 +7949,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 ## <a name="greece-drivers-license-number"></a>Grækenlands kørekortsnummer
 
-Denne enhed er inkluderet i den følsomme informationstype for EU-kørekortsnummer. Den er også tilgængelig som en separat enhed af typen følsomme oplysninger.
+Denne enhed er inkluderet i den følsomme informationstype for EU-kørekortsnummer. Den er også tilgængelig som et separat objekt af typen følsomme oplysninger.
 
 ### <a name="format"></a>Format
 
@@ -8258,7 +8260,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -8319,7 +8321,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -8717,7 +8719,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -8852,7 +8854,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -8934,7 +8936,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -10260,7 +10262,7 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 ## <a name="italy-drivers-license-number"></a>Italiens kørekortsnummer
 
-Denne type enhed er inkluderet i den følsomme informationstype for EU-kørekortsnummer. Den er også tilgængelig som en separat enhed af typen følsomme oplysninger.
+Denne type enhed er inkluderet i den følsomme informationstype for EU-kørekortsnummer. Den er også tilgængelig som et separat objekt af typen følsomme oplysninger.
 
 ### <a name="format"></a>Format
 
@@ -10435,7 +10437,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -10618,7 +10620,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -10858,7 +10860,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -10922,7 +10924,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -11776,7 +11778,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -12115,7 +12117,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -12618,7 +12620,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13304,7 +13306,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13390,7 +13392,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13455,7 +13457,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13520,7 +13522,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13638,7 +13640,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -13760,7 +13762,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -14299,7 +14301,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -14368,7 +14370,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -15084,7 +15086,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -15194,7 +15196,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -15258,7 +15260,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -15665,7 +15667,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -16029,7 +16031,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -16103,7 +16105,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -16287,7 +16289,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -16717,7 +16719,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -17257,7 +17259,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -17425,7 +17427,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -18149,7 +18151,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -18278,7 +18280,7 @@ Afhænger af staten
 afhænger af staten – f.eks. New York:
 
 - ni cifre formateret som ddd ddd ddd vil matche.
-- ni cifre som ddddddddd vil ikke matche.
+- ni cifre som ddddddddd matcher ikke.
 
 ### <a name="checksum"></a>Checksum
 
@@ -18665,7 +18667,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 
@@ -18715,7 +18717,7 @@ Denne type følsomme oplysninger er kun tilgængelig til brug i:
 
 - politikker til forebyggelse af datatab
 - politikker for overholdelse af kommunikation
-- informationstyring
+- administration af datalivscyklus
 - datastyring
 - Microsoft Defender for Cloud Apps
 

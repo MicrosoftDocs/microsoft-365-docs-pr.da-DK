@@ -15,22 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 description: Du kan føje datakilder uden frihedsberøvelse til en eDiscovery-sag (Premium) og placere en venteposition på datakilden. Datakilder, der ikke er frihedsberøvende, genbehandles, så alt indhold, der er markeret som delvist indekseret, behandles igen for at gøre det fuldt ud og hurtigt søgbart.
-ms.openlocfilehash: cc093b60de055fe8b762f6c141921cd274233af2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2f5825f514dfc8f99fc7a6006d1fd30028515c7b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945907"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991880"
 ---
 # <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>Føj datakilder uden frihedsberøvelse til en eDiscovery-sag (Premium)
 
-I Premium-sager (Microsoft Purview eDiscovery) opfylder det ikke altid dine behov at knytte en Microsoft 365 datakilde til en tilsynsførende i tilfælde af dette. Men du skal muligvis stadig knytte disse data til en sag, så du kan søge i dem, føje dem til et korrektursæt og analysere og gennemse dem. Funktionen i eDiscovery (Premium) kaldes *ikke-frihedsberøvende datakilder* og giver dig mulighed for at føje data til en sag uden at skulle knytte dem til en tilsynsførende. Den anvender også den samme eDiscovery-funktionalitet (Premium) på ikke-frihedsberøvende data, der er tilgængelige for data, der er knyttet til tilsynsførende. To af de mest nyttige ting, du kan anvende på ikke-frihedsberøvende data, er at sætte dem i venteposition og behandle dem ved hjælp af [avanceret indeksering](indexing-custodian-data.md).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+I Microsoft Purview eDiscovery-sager (Premium) opfylder den ikke altid dine behov for at knytte en Microsoft 365 datakilde til en tilsynsførende i tilfælde af dette. Men du skal muligvis stadig knytte disse data til en sag, så du kan søge i dem, føje dem til et korrektursæt og analysere og gennemse dem. Funktionen i eDiscovery (Premium) kaldes *datakilder uden frihedsberøvelse* og giver dig mulighed for at føje data til en sag uden at skulle knytte dem til en tilsynsførende. Den anvender også den samme eDiscovery-funktionalitet (Premium) på ikke-frihedsberøvende data, der er tilgængelige for data, der er knyttet til tilsynsførende. To af de mest nyttige ting, du kan anvende på ikke-frihedsberøvende data, er at sætte dem i venteposition og behandle dem ved hjælp af [avanceret indeksering](indexing-custodian-data.md).
 
 ## <a name="add-a-non-custodial-data-source"></a>Tilføj en datakilde, der ikke er frihedsberøvende
 
-Følg disse trin for at tilføje og administrere datakilder, der ikke er frihedsberøvende, i en eDiscovery-sag (Premium).
+Følg disse trin for at tilføje og administrere ikke-frihedsberøvende datakilder i en eDiscovery-sag (Premium).
 
-1. Klik på den sag, du vil føje dataene til, på startsiden **for eDiscovery (Premium**).
+1. På startsiden **for eDiscovery (Premium)** skal du klikke på den sag, du vil føje dataene til.
 
 2. Klik på fanen **Datakilder,** og klik derefter på **Tilføj datakildeTilføj** >  **dataplaceringer**.
 
@@ -59,7 +61,7 @@ Når du føjer datakilder, der ikke er frihedsberøvende, til sagen, oprettes de
 
 Når du har sat en venteposition på en datakilde, der ikke er frihedsberøvende, oprettes der automatisk en politik for bevarelse, der indeholder de datakilder, der ikke er frihedsberøvende for sagen. Når du placerer andre datakilder, der ikke er frihedsberøvende, i venteposition, føjes de til denne politik for bevarelse.
 
-1. Åbn sagen eDiscovery (Premium), og vælg fanen **Venteposition**.
+1. Åbn sagen eDiscovery (Premium), og vælg fanen **Venteposition** .
 
 2. Klik på **NCDSHold-, hvor GUID-værdien\<GUID\>** er entydig for sagen.
 

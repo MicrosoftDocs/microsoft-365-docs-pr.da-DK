@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere og arkivere data fra Bloomberg Message-mailværktøjet i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 497e0e5e3f99c5776d872ef522107cb29ba0fd33
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 781378ba30ccb7db44191764e050277fa4a239aa
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938747"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992808"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Konfigurer en connector til arkivering af Bloomberg Message-data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug en dataconnector i Microsoft Purview-overholdelsesportalen til at importere og arkivere maildata om finansielle tjenester fra [Bloomberg Message-samarbejdsværktøjet](https://www.bloomberg.com/professional/product/collaboration/) . Når du har konfigureret en connector, opretter den forbindelse til organisationens SFTP-websted (Bloomberg Secure FTP) én gang om dagen og importerer mailelementer til postkasser i Microsoft 365.
 

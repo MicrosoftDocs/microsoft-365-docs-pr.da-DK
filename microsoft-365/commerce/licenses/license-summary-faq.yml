@@ -12,12 +12,12 @@ metadata:
   ms.custom: commerce_vl
   ms.localizationpriority: medium
   description: Ofte stillede spørgsmål om Microsoft 365 Administration licenskontrakter.
-  ms.openlocfilehash: 16b6abd5d49b1b72fb93f981762140a98105b297
-  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+  ms.openlocfilehash: bcc97969b283d51194dd8f1eb213340bd8f0334e
+  ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/08/2022
-  ms.locfileid: "64714147"
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64953677"
 title: Ofte stillede spørgsmål om kontrakter
 summary: ''
 sections:
@@ -66,7 +66,30 @@ sections:
       Du kan få flere oplysninger om VL-tilladelsesroller og deres tilladte handlinger under [Ofte stillede spørgsmål om tilladelser](https://docs.microsoft.com/licensing/permissions-faq).
   - question: >
       Hvor lang tid tager det, før nye licensordrer vises på listen over kontrakter?
-    answer: "Senest købte licenser vises typisk på listen inden for 10 timer, efter At Microsoft har modtaget din ordre fra Microsoft-partneren. Der kan opstå forsinkelser på et par dage til et par uger, hvis din partner forsinker videresendelsen af indkøbsordren til Microsoft. Licenser vises i oversigten, når ordrens Dækningsstartperiode er opfyldt for alle programmer undtagen Åben licens.\n\nFølgende data er tilgængelige på listen over kontakter:\n\n|**Navnet på kolonnen**|**Beskrivelse**|\n|:-----|:-----|\n|Licens-id |Vigtige kontakter og relaterede licenser i din organisation efter specifikt licens-id |\n|Oplysninger om overordnet program |Vigtige kontakter og relaterede licens-id'er for din organisation efter licensprogram |\n|MBSA-oplysninger |Vigtige kontakter og relaterede licens-id'er for din organisation, der er knyttet til en Microsoft Business and Services-aftale (MBSA) | \n|Organisation | Licensorganisationen|\n|Placering |Kombinationen af by og amt i licensorganisationen |\n|Slutdato |Slutdatoen for licensen |    \n|Status |Licensens status| \n"
+    answer: >
+      Senest købte licenser vises typisk på listen inden for 10 timer, efter At Microsoft har modtaget din ordre fra Microsoft-partneren. Der kan opstå forsinkelser på et par dage til et par uger, hvis din partner forsinker videresendelsen af indkøbsordren til Microsoft. Licenser vises i oversigten, når ordrens Dækningsstartperiode er opfyldt for alle programmer undtagen Åben licens.
+
+
+      Følgende data er tilgængelige på listen over kontakter:
+
+
+      |Navnet på kolonnen|Beskrivelse|
+
+      |---|---|
+
+      |Licens-id|Vigtige kontakter og relaterede licenser i din organisation efter specifikt licens-id|
+
+      |Oplysninger om overordnet program|Vigtige kontakter og relaterede licens-id'er for din organisation efter licensprogram|
+
+      |MBSA-oplysninger|Vigtige kontakter og relaterede licens-id'er for din organisation, der er knyttet til en Microsoft Business and Services-aftale (MBSA)|
+
+      |Organisation|Licensorganisationen|
+
+      |Placering|Kombinationen af by og amt i licensorganisationen|
+
+      |Slutdato|Slutdatoen for licensen|
+
+      |Status|Licensens status|
   - question: >
       Hvad er licensoversigten?
     answer: >
@@ -81,16 +104,18 @@ sections:
 
       Få adgang til og opret licensoversigten
 
-      1.  Log på Microsoft 365 Administration.
 
-      2.  Gå til **FaktureringFå** >  **dine** **produkterVolume-licenserKontrakter** >  > .
+      1. Log på Microsoft 365 Administration.
+
+      2. Gå til **FaktureringFå** >  **dine** **produkterVolume-licenserKontrakter** >  > .
 
 
       Filtrer licens-id'erne, så de vises i licensoversigten
 
-      1.  Brug afkrydsningsfelterne til at vælge de licens-id'er, der skal inkluderes i denne oversigt.
 
-      2.  Vælg **Opret licensoversigt**. Licensoversigten genereres kun for de valgte licens-id'er.
+      1. Brug afkrydsningsfelterne til at vælge de licens-id'er, der skal inkluderes i denne oversigt.
+
+      2. Vælg **Opret licensoversigt**. Licensoversigten genereres kun for de valgte licens-id'er.
 - name: Om licensoversigten
   questions:
   - question: >
@@ -113,12 +138,25 @@ sections:
       - SA-Step-Up
   - question: >
       Hvorfor får jeg vist Effective Quantity og/eller Active SA Quantity som '0'?
-    answer: "Licensoversigten er beregnet til at vise de licenser, din organisation er berettiget til at udrulle og bruge. \n\nHvis Effective Quantity i den genererede licenssætning vises som nul, betyder det, at din organisation ikke er berettiget til at bruge licensen i henhold til vilkårene i det sæt licens-id'er, der er valgt for denne sætning. \n\nHvis Active SA Quantity vises som nul, betyder det, at licenserne under det sæt licens-id'er, der bruges til at generere erklæringen, ikke har nogen gyldig eller aktiv Software Assurance-dækning. \n\n>[!NOTE]\n>For Online Services-licenser er den aktive SA Quantity altid nul, fordi onlinetjenester ikke har tilknyttede SA'er. \n"
+    answer: >
+      Licensoversigten er beregnet til at vise de licenser, din organisation er berettiget til at udrulle og bruge.
+
+
+      Hvis Effective Quantity i den genererede licenssætning vises som nul, betyder det, at din organisation ikke er berettiget til at bruge licensen i henhold til vilkårene i det sæt licens-id'er, der er valgt for denne sætning.
+
+
+      Hvis Active SA Quantity vises som nul, betyder det, at licenserne under det sæt licens-id'er, der bruges til at generere erklæringen, ikke har nogen gyldig eller aktiv Software Assurance-dækning.
+
+
+      > [!NOTE]
+
+      > For Online Services-licenser er den aktive SA Quantity altid nul, fordi onlinetjenester ikke har tilknyttede SA'er.
   - question: >
       Indeholder licensoversigten oplysninger om producent af originalt udstyr (OEM) eller detaillicens?
     answer: >
       Nej. I licensoversigten vises kun licenser, der er erhvervet af din organisation via volumenlicensprogrammer.
-  - question: "Viser licensoversigten, hvilken software der er installeret i min organisation? \n"
+  - question: >
+      Viser licensoversigten, hvilken software der er installeret i min organisation?
     answer: >
       Nej. Det er ikke muligt for Microsoft at angive en liste over produktinstallationsoplysninger i licensoversigten. I licensoversigten kan du se, hvilken software din organisation er berettiget til at installere og bruge, men ikke hvad der er installeret i øjeblikket.
   - question: >
@@ -134,7 +172,21 @@ sections:
       - Servere (f.eks. Exchange Server, SQL Server og Windows Server)
   - question: >
       Hvad er en licenstildeling?
-    answer: "Indimellem tilbyder Microsoft Volume Licensing en kampagne, hvor køb af et bestemt produkt giver kunden ret til at bruge et andet produkt. Kampagner er typisk betinget af aktiv Software Assurance- eller Upgrade Advantage-dækning på det købte produkt. Eksempel:\n\n- En kunde køber 1 licens for Exchange Server 2016.\n- Transaktionen har aktiv Software Assurance- eller Upgrade Advantage-dækning under tilbuddet.\n- Microsoft tilbyder en kampagne for 1 licens af Skype for Business Server med et køb af Exchange Server 2016.\n\nLicenstildelingen giver kunden ret til at bruge kampagneproduktet, eller \"tilskud\". I ovenstående eksempel tildeles kunden brugen af Skype for Business Server.\n\nDu kan finde flere oplysninger om licenstilskud under [Microsofts produktvilkår](https://www.microsoft.com/licensing/terms/welcome/welcomepage). \n"
+    answer: >
+      Indimellem tilbyder Microsoft Volume Licensing en kampagne, hvor køb af et bestemt produkt giver kunden ret til at bruge et andet produkt. Kampagner er typisk betinget af aktiv Software Assurance- eller Upgrade Advantage-dækning på det købte produkt. Eksempel:
+
+
+      - En kunde køber 1 licens for Exchange Server 2016.
+
+      - Transaktionen har aktiv Software Assurance- eller Upgrade Advantage-dækning under tilbuddet.
+
+      - Microsoft tilbyder en kampagne for 1 licens af Skype for Business Server med et køb af Exchange Server 2016.
+
+
+      Licenstildelingen giver kunden ret til at bruge kampagneproduktet, eller "tilskud". I ovenstående eksempel tildeles kunden brugen af Skype for Business Server.
+
+
+      Du kan finde flere oplysninger om licenstilskud under [Microsofts produktvilkår](https://www.microsoft.com/licensing/terms/welcome/welcomepage).
   - question: >
       Hvordan kan jeg se mine licenstilskud?
     answer: >
