@@ -1,5 +1,5 @@
 ---
-title: Føje søgeresultater til et korrektursæt
+title: Føj søgeresultater til et korrektursæt
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,60 +17,60 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler på disse søgeresultater Advanced eDiscovery en gennemgangssæt til en sag.
-ms.openlocfilehash: bce0301e7045eeb0dd5c42f8a119d56649120a11
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery-sæt (Premium) til sagsgennemgang.
+ms.openlocfilehash: 1649b766c0e7f39122505d3a73574e478373f5b2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588703"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941121"
 ---
-# <a name="add-search-results-to-a-review-set"></a>Føje søgeresultater til et korrektursæt
+# <a name="add-search-results-to-a-review-set"></a>Føj søgeresultater til et korrektursæt
 
-Når du er tilfreds med resultaterne af en søgning, og du er klar til at gennemse og analysere disse søgeresultater, kan du føje dem til et gennemsynssæt i sagen. Kopiering af de oprindelige data til korrektursættet letter også gennemsyns- og analyseprocessen ved at give dig avancerede analyseværktøjer som f.eks registrering af temaer, registrering af næsten dubletter og identifikation af mailtråde. Du kan også føje data fra ikke-Microsoft 365-datakilder til et korrektursæt, så du kan gennemse disse data ud over de data, du indsamler fra Microsoft 365.
+Når du er tilfreds med resultaterne af en søgning, og du er klar til at gennemse og analysere disse søgeresultater, kan du føje dem til et korrektursæt i tilfælde af. Kopiering af de oprindelige data til korrektursættet faciliterer også gennemgangs- og analyseprocessen ved at give dig avancerede analyseværktøjer, f.eks. registrering af temaer, registrering af næsten dubletter og identifikation af mailtråde. Du kan også føje data fra ikke-Microsoft 365 datakilder til et korrektursæt, så du kan gennemse disse data ud over de data, du indsamler fra Microsoft 365.
 
-Når du føjer resultaterne af en søgning til et korrektursæt (korrektursæt i en sag vises på fanen Gennemse **sæt** ), sker følgende:
+Når du føjer resultaterne af en søgning til et korrektursæt (korrektursættene i en sag vises under fanen **Korrektursæt** ), sker følgende ting:
 
 - Søgningen køres igen. Det betyder, at de faktiske søgeresultater, der kopieres til korrektursættet, kan være anderledes end de anslåede resultater, der blev returneret, da søgningen sidst blev kørt.
 
-- Alle elementer i søgeresultaterne kopieres fra den oprindelige datakilde i livetjenesterne og kopieres til en sikker placering Azure Storage Microsoft-skyen.
+- Alle elementer i søgeresultaterne kopieres fra den oprindelige datakilde i livetjenesterne og kopieres til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-- Alle elementer (herunder indhold og metadata) bliver indekseret igen, så alle data i korrektursættet er fuldt søgbare under gennemgangen af sagsdataene. Når du søger efter data i gennemsynssættet under caseundersøgelse, kan det give nye dataresultater en grundig og hurtig søgning.
+- Alle elementer (herunder indhold og metadata) omdexeres, så alle data i korrektursættet er fuldt søgbare under gennemgangen af sagsdataene. Genintegrering af dataene resulterer i grundige og hurtige søgninger, når du søger efter dataene i gennemgangssættet under sagsundersøgelsen.
 
-- En fil, der er krypteret med en [Microsoft-krypteringsteknologi](encryption.md) og er vedhæftet en mail, der returneres i søgeresultaterne, dekrypteres, når mailen og den vedhæftede fil føjes til gennemsynssættet. Du kan gennemse og forespørge på den dekrypterede fil i korrektursættet. Du skal have tildelt rollen RMS Dekrypter for at tilføje dekrypterede vedhæftede filer i mails til et gennemsynssæt. Få mere at vide under [Dekryptering i Microsoft 365 eDiscovery-værktøjer](ediscovery-decryption.md).
+- En fil, der er krypteret med en [Microsoft-krypteringsteknologi](encryption.md) og er knyttet til en mail, der returneres i søgeresultaterne, dekrypteres, når mailen og den vedhæftede fil føjes til korrektursættet. Du kan gennemse og forespørge den dekrypterede fil i korrektursættet. Du skal tildeles rollen RMS Dekrypter for at føje dekrypterede vedhæftede filer i mails til et korrektursæt. Du kan finde flere oplysninger [under Dekryptering i Microsoft 365 eDiscovery-værktøjer](ediscovery-decryption.md).
 
-Hvis du vil føje data til et korrektursæt, skal du  klikke på en søgning på fanen Søgninger  og derefter klikke på Tilføj resultater for at gennemse sættet på pop op-siden.
+Hvis du vil føje data til et korrektursæt, skal du klikke på en søgning under fanen **Søgninger** og derefter klikke på **Tilføj resultater for at gennemse sæt** på pop op-siden.
 
-Du kan føje til et eksisterende korrektursæt eller oprette et nyt korrektursæt.  Hvis du føjer til et nyt korrektursæt, skal du angive navnet og derefter klikke på **Tilføj for** at få vist pop op-siden.
+Du kan føje til et eksisterende korrektursæt eller oprette et nyt korrektursæt.  Hvis du føjer til et nyt korrektursæt, skal du angive navnet og derefter klikke på **Tilføj** for at få vist pop op-siden.
 
-![Vælg et korrektursæt, og konfigurer samlingsindstillinger.](../media/AeD_AddToReviewSet.png)
+![Vælg et korrektursæt, og konfigurer indstillinger for samling.](../media/AeD_AddToReviewSet.png)
 
-Det er lang tid at føje data til et korrektursæt. Denne proces omfatter indsamling af elementer fra de oprindelige datakilder i Microsoft 365 (f.eks. fra postkasser og websteder), kopiering af dem til Azure Storage-placeringen (denne kopieringsproces kaldes også *ingestion*) og derefter genindførte elementerne. Du kan spore status på fanen **Jobs** eller på fanen Søgninger ved  at overvåge status i kolonnen Tilføjede **data til gennemsynssæt**. Når behandlingen af korrektursættet er fuldført, skal  du klikke på fanen Gennemse sæt i sagen og derefter klikke på korrektursættet for at starte filtreringsprocessen, gennemgangen, mærkningen og eksporten af data i korrektursættet.
+Tilføjelse af data til et korrektursæt er en langvarig proces. Denne proces omfatter indsamling af elementer fra de oprindelige datakilder i Microsoft 365 (f.eks. fra postkasser og websteder), kopiering af dem til den Azure Storage placering (denne kopieringsproces kaldes også *indtagelse*) og derefter omdexere elementerne. Du kan spore statussen under fanen **Job** eller under fanen **Søgninger** ved at overvåge statussen i kolonnen **Tilføjede data for at gennemse den sætkolonne** . Når behandlingen af gennemsynssættet er fuldført, skal du klikke på fanen **Gennemse sæt** i sagen og derefter klikke på korrektursættet for at starte processen med at filtrere, gennemse, mærke og eksportere data i korrektursættet.
 
-## <a name="define-options-to-scope-your-collection-for-review"></a>Definer indstillinger for at begrænse din samling til gennemsyn
+## <a name="define-options-to-scope-your-collection-for-review"></a>Definer indstillinger til gennemsyn af din samling
 
 Når du føjer indholdet af en søgning til et eksisterende eller nyt korrektursæt, har du følgende muligheder for at indsamle indholdet til gennemsyn:
 
-- **Medtag versioner fra SharePoint (beta)**: Brug denne indstilling til at aktivere indsamling af alle versioner af et SharePoint-dokument pr. versionsgrænserne og søgeparametre i samlingen. Hvis du vælger denne indstilling, øges størrelsen på elementer, der føjes til korrektursættet betydeligt.
+- **Medtag versioner fra SharePoint (beta)**: Brug denne indstilling til at aktivere samlingen af alle versioner af et SharePoint dokument i henhold til versionsgrænserne og søgeparametrene for samlingen. Hvis du vælger denne indstilling, øges størrelsen af elementer, der føjes til korrektursættet, markant.
 
-- **Indstillinger for hentning af** samtaler: Elementer, der er føjet til korrektursættet, er aktiveret til samtaler med tråde for at hjælpe med at gennemse indhold i konteksten for frem og tilbage-samtalen. Du kan finde flere [oplysninger i Gennemse samtaler i Advanced eDiscovery](conversation-review-sets.md).
+- **Indstillinger for hentning af samtale**: Elementer, der er føjet til korrektursættet, er aktiveret for trådede samtaler for at hjælpe med at gennemse indhold i forbindelse med frem og tilbage-samtalen. Du kan finde flere oplysninger [under Gennemse samtaler i eDiscovery (Premium)](conversation-review-sets.md).
 
-- **Aktivér hentning af moderne vedhæftede** filer: Brug denne indstilling til at medtage moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemgang. Du kan finde flere oplysninger om de søgbare egenskaber, der er relateret til moderne vedhæftede filer, under Felter [til dokumentmetadata Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).
+- **Aktivér hentning for moderne vedhæftede filer**: Brug denne indstilling til at inkludere moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemsyn. Du kan finde flere oplysninger om søgbare egenskaber, der er relateret til moderne vedhæftede filer, [under Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
 
-## <a name="add-a-sample-to-a-review-set"></a>Føj en prøve til et korrektursæt
+## <a name="add-a-sample-to-a-review-set"></a>Føj et eksempel til et korrektursæt
 
-Hvis du vil validere resultaterne af en søgning grundigre, før du føjer dem alle til et korrektursæt, kan du føje en stikprøve af søgeresultaterne til et korrektursæt i stedet for at tilføje alt.
+Hvis du vil validere resultaterne af en søgning mere grundigt, før du føjer dem alle til et korrektursæt, kan du føje et eksempel på søgeresultaterne til et korrektursæt i stedet for at tilføje alt.
 
-Hvis du vil føje en prøve til et korrektursæt, skal du  klikke på en søgning på fanen Søgninger og **klikke på Eksempel** på pop op-siden. På siden **Stikprøveparametre** skal du vælge en af følgende indstillinger:
+Hvis du vil føje et eksempel til et korrektursæt, skal du klikke på en søgning under fanen **Søgninger** og klikke på **Eksempel** på pop op-siden. Vælg en af følgende indstillinger på siden **Parametre for stikprøvetagning** :
 
-- **Tillidsniveau %** og **Tillidsinterval %** – De elementer, der føjes til korrektursættet, bestemmes af de statistiske parametre, du angiver. Hvis du typisk bruger et tillidsniveau og interval, når der anvendes stikprøveresultater, skal du angive dem i rullelisten. Ellers skal du bruge standardindstillingerne.
+- **Konfidensniveau %** og **konfidensinterval %** – De elementer, der føjes til korrektursættet, bestemmes af de statistiske parametre, du har angivet. Hvis du typisk bruger et konfidensniveau og et interval, når du prøver resultater, skal du angive dem på rullelistene. Ellers skal du bruge standardindstillingerne.
 
-- **Tilfældigt eksempel %** – De elementer, der føjes til korrektursættet, er baseret på et tilfældigt udvalg af den angivne procentdel af det samlede antal elementer, der returneres af søgningen.
+- **Random sample %** – De elementer, der føjes til korrektursættet, er baseret på et tilfældigt valg af den angivne procentdel af det samlede antal elementer, der returneres af søgningen.
 
-Når du har valgt og konfigureret en af de forrige indstillinger, skal du vælge et korrektursæt, som eksemplet skal føjes til, og derefter klikke på **Send**. Igen kan du spore status på fanen **Jobs** eller på fanen Søgninger ved at  overvåge status i kolonnen Tilføjede data, der **skal gennemses**.
+Når du har valgt og konfigureret en af de tidligere indstillinger, skal du vælge et korrektursæt for at føje eksemplet til og derefter klikke på **Send**. Igen kan du spore statussen under fanen **Job** eller under fanen **Søgninger** ved at overvåge status i kolonnen **Tilføjet data for at gennemse den angivne** kolonne.
 
 ## <a name="optical-character-recognition"></a>Optisk tegngenkendelse
 
-Når du føjer søgeresultater til et korrektursæt, udtrækker optisk tegngenkendelse (OCR)-funktionalitet i Advanced eDiscovery automatisk tekst fra billeder og inkluderer billedteksten med de data, der er føjet til et korrektursæt. Du kan få vist den udpakkede tekst i Tekstvisning for den valgte billedfil i korrektursættet. Dette giver dig mulighed for yderligere gennemgang og analyse af tekst i billeder. OCR understøttes til løse filer, vedhæftede filer i mails og integrerede billeder. Du kan finde en liste over billedfilformater, der understøttes af OCR, under [Understøttede filtyper Advanced eDiscovery](supported-filetypes-ediscovery20.md#image).
+Når du føjer søgeresultater til et korrektursæt, udtrækker optisk tegngenkendelse (OCR) i eDiscovery (Premium) automatisk tekst fra billeder og inkluderer billedteksten med de data, der er føjet til et korrektursæt. Du kan få vist den udtrukne tekst i Tekstfremviser for den valgte billedfil i korrektursættet. Dette giver dig mulighed for at foretage yderligere gennemgang og analyse af tekst i billeder. OCR understøttes til løse filer, vedhæftede filer i mails og integrerede billeder. Du kan finde en liste over billedfilformater, der understøttes for OCR, [under Understøttede filtyper i eDiscovery (Premium)](supported-filetypes-ediscovery20.md#image).
 
-Du skal aktivere OCR-funktionalitet for hvert tilfælde, som du opretter i Advanced eDiscovery. Få mere at vide under [Konfigurer indstillinger for søgning og analyse](configure-search-and-analytics-settings-in-advanced-ediscovery.md#optical-character-recognition-ocr).
+Du skal aktivere OCR-funktionalitet for hver enkelt sag, du opretter i eDiscovery (Premium). Du kan finde flere oplysninger under [Konfigurer søge- og analyseindstillinger](configure-search-and-analytics-settings-in-advanced-ediscovery.md#optical-character-recognition-ocr).

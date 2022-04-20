@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: af165f3565e3601ac4e8118535af3913c2cb2af8
-ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
+ms.openlocfilehash: 68ce5f263f24d4ab3271425815834870c71f2a4a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737445"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938966"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>Trin 6. Overvåg enhedens risiko og overholdelse af regler og standarder i forhold til sikkerhedsbaseline
 
@@ -39,7 +39,7 @@ Udrulning af Microsoft Defender for Endpoint omfatter onboarding af slutpunkter.
 I denne illustration:
 - Microsoft Defender for Endpoint øger i høj grad den sofistikerede trusselsbeskyttelse for enheder. 
 - Selvom Microsoft Intune giver dig mulighed for at angive politikker for appbeskyttelse og administrere enheder (herunder konfigurationsændringer), overvåger Defender for Endpoint løbende dine enheder for trusler og kan udføre automatiserede handlinger for at afhjælpe angreb. 
-- Du kan oprette forbindelse Microsoft Intune til Defender for Endpoint for at overvåge enhedens risiko og overholdelse af sikkerhedsgrundlinjer.
+- Du kan bruge Intune til at føje enheder til Defender for Endpoint. Når du gør det, aktiverer du også disse enheder til at arbejde med microsoft Purview Endpoint forebyggelse af datatab (Endpoint DLP).
 
 Denne artikel indeholder følgende trin:
 - Overvåg enhedsrisiko
@@ -51,9 +51,9 @@ Hvis Defender for Endpoint ikke allerede er konfigureret, kan du samarbejde med 
 
 Når Microsoft Defender for Endpoint er installeret, kan du drage fordel af trusselsrisikosignaler. Dette giver dig mulighed for at blokere adgang til enheder baseret på deres risikoscore. Microsoft anbefaler, at du tillader adgang til enheder med en risikoscore på mellem eller under.
 
-Til Android og iOS/iPadOS kan trusselssignaler bruges i dine appbeskyttelsespolitikker (APP). Du kan få oplysninger om, hvordan du konfigurerer dette, under [Opret og tildel beskyttelsespolitik for apps for at angive niveauet for enhedsrisiko](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
+Til Android og iOS/iPadOS kan trusselssignaler bruges i dine appbeskyttelsespolitikker (APP). Du kan få oplysninger om, hvordan du konfigurerer dette, under [Opret og tildel beskyttelsespolitik for apps for at angive niveauet for enhedsrisiko](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
-For alle platforme kan du angive risikoniveauet i de eksisterende politikker for enhedsoverholdelse. Se [Opret en politik for betinget adgang](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-a-conditional-access-policy). 
+For alle platforme kan du angive risikoniveauet i de eksisterende politikker for enhedsoverholdelse. Se [Opret en politik for betinget adgang](/mem/intune/protect/advanced-threat-protection-configure#create-a-conditional-access-policy).
 
 ## <a name="deploy-security-baselines-and-monitor-compliance-to-these-settings"></a>Udrul grundlæggende sikkerhedsindstillinger, og overvåg overholdelse af disse indstillinger
 

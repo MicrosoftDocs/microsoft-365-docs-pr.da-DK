@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility and Security kan hjælpe dig med at sikre og administrere dine mobilenheder.
-ms.openlocfilehash: 78cfa4582aa2e25a3b47a12d2e067082e8b41d07
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: b0e303af27d731cf3dba3af13019b3b993e52bfe
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781221"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937757"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Funktioner i Basic Mobility og Security
 
@@ -230,7 +230,7 @@ Du kan angive disse yderligere politikindstillinger ved hjælp af PowerShell-cmd
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Fjernsletning af en mobilenhed
 
-Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at udføre en sletning fra Security & Compliance Center > **forebyggelse af** >  **datatabAdministration af datatab**. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
+Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at udføre en sletning fra **Microsoft Purview-overholdelsesportalEn portal** >  **til forebyggelse af** >  **datatabAdministration af datatab**. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
 
 Du kan få flere oplysninger under [Slet en mobilenhed i Grundlæggende mobilitet og sikkerhed](wipe-mobile-device.md).
 

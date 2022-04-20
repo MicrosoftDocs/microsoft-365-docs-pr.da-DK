@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere RingCentral-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, eDiscovery- og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 241764bee0ca708adc6dd294c5b7f5e039be784b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 5b1186abdf842fcc2f66638258c20accb2b28980
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760137"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944057"
 ---
 # <a name="set-up-a-connector-to-archive-ringcentral-data"></a>Konfigurer en connector til arkivering af RingCentral-data
 
-Brug en Veritas-connector i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra RingCentral-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en [RingCentral-connector](https://www.veritas.com/insights/merge1/ringcentral), der er konfigureret til at hente elementer fra tredjepartsdatakilden og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som f.eks. chats, vedhæftede filer, opgaver, noter og meddelelser fra RingCentral til et mailformat og importerer derefter disse elementer til brugerpostkasserne i Microsoft 365.
+Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra RingCentral-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en [RingCentral-connector](https://www.veritas.com/insights/merge1/ringcentral), der er konfigureret til at hente elementer fra tredjepartsdatakilden og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som f.eks. chats, vedhæftede filer, opgaver, noter og meddelelser fra RingCentral til et mailformat og importerer derefter disse elementer til brugerpostkasserne i Microsoft 365.
 
-Når RingCentral-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en RingCentral-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når RingCentral-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en RingCentral-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-ringcentral-data"></a>Oversigt over arkivering af RingCentral-data
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres RingCentral-varer til Veritas Merge1-webstedet. Connectoren konverterer også RingCentral-elementer til et mailformat.
 
-3. Den RingCentral-connector, du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører RingCentral-indholdet til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den RingCentral-connector, du opretter i overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører RingCentral-indholdet til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer de konverterede elementer til postkasserne for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **RingCentral** i brugerpostkasserne, og elementer importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle RingCentral-elementer indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
@@ -45,13 +45,13 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret et RingCentral-program til at hente data fra din RingCentral-konto. Du kan finde en trinvis vejledning i, hvordan du opretter programmet, under [Brugervejledning til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20RingCentral%20User%20Guide.pdf).
 
-- Den bruger, der opretter RingCentral-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter RingCentral-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-ringcentral-connector"></a>Trin 1: Konfigurer RingCentral-connectoren
 
-Det første trin er at få adgang til siden **DataConnectors** i Microsoft 365 Overholdelsescenter og oprette en connector til RingCentral-data.
+Det første trin er at få adgang til siden **DataConnectors på overholdelsesportalen** og oprette en connector til RingCentral-data.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsRingCentral** > .
 
@@ -67,11 +67,11 @@ Det første trin er at få adgang til siden **DataConnectors** i Microsoft 365 O
 
 Det andet trin er at konfigurere RingCentral-connectoren på Veritas Merge1-webstedet. Du kan få oplysninger om, hvordan du konfigurerer RingCentral-connectoren, i [Brugervejledningen til Merge1-tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20RingCentral%20User%20Guide.pdf).
 
-Når du klikker på **Gem & Udfør,** vises siden **Brugertilknytning** i connectorguiden i Microsoft 365 Overholdelsescenter.
+Når du klikker på **Gem & Udfør,** vises siden **Brugertilknytning** i connectorguiden på overholdelsesportalen.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
+Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
 1. Aktivér automatisk brugertilknytning på siden **Map RingCentral-brugere til Microsoft 365 brugere**. RingCentral-elementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
 
@@ -79,7 +79,7 @@ Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 
 
 ## <a name="step-4-monitor-the-ringcentral-connector"></a>Trin 4: Overvåg RingCentral-connectoren
 
-Når du har oprettet RingCentral-connectoren, kan du få vist connectorstatussen i Microsoft 365 Overholdelsescenter.
+Når du har oprettet RingCentral-connectoren, kan du få vist connectorstatussen på overholdelsesportalen.
 
 1. Gå til , <https://compliance.microsoft.com/> og klik på **Dataconnectors** i venstre navigationsrude.
 

@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Fuze DataParser-connector til at importere og arkivere Fuze-data i Microsoft 365.
-ms.openlocfilehash: 48547996c584cde3193646d9794d0a3fc5c017c9
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a1acd9462aa3497d3717219787cb9b9cd8f15cc3
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762161"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940857"
 ---
 # <a name="set-up-a-connector-to-archive-fuze-data"></a>Konfigurer en connector til arkivering af Fuze-data
 
 Brug [Fuze DataParser](https://www.17a-4.com/fuze-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Fuze til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Fuze-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Fuze DataParser-connectoren konverterer Fuze-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når Fuze-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og overholdelse af kommunikation. Brug af en Fuze-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Fuze-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Fuze-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-fuze-data"></a>Oversigt over arkivering af fuzedata
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 2. Fuze-elementer indsamles regelmæssigt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. Den Fuze DataParser-connector, du opretter i Microsoft 365 Overholdelsescenter opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Fuze DataParser-connector, du opretter på Microsoft Purview-overholdelsesportalen, opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
 4. Der oprettes en undermappe i mappen Indbakke med navnet **Fuze DataParser** i brugerpostkasserne, og Fuze-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle Fuze-elementer indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
 
@@ -43,13 +43,13 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Opret en DataParser-konto til Microsoft-connectors. For at gøre dette skal du kontakte [17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter Fuze DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Fuze DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-fuze-dataparser-connector"></a>Trin 1: Konfigurer en Fuze DataParser-connector
 
-Det første trin er at få adgang til siden Dataconnectors i Microsoft 365 Overholdelsescenter og oprette en 17a-4-connector til Fuze-data.
+Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til Fuze-data.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsFuze** >  **DataParser**.
 
@@ -71,7 +71,7 @@ Fuze DataParser-connectoren knytter automatisk brugere til deres Microsoft 365 m
 
 ## <a name="step-4-monitor-the-fuze-dataparser-connector"></a>Trin 4: Overvåg Fuze DataParser-connectoren
 
-Når du har oprettet en Fuze DataParser-connector, kan du få vist connectorstatussen i Microsoft 365 Overholdelsescenter.
+Når du har oprettet en Fuze DataParser-connector, kan du få vist connectorstatussen på overholdelsesportalen.
 
 1. Gå til , <https://compliance.microsoft.com> og klik på **Dataconnectors** i venstre navigationsrude.
 

@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en CellTrust SL2-dataconnector til at importere og arkivere mobilkommunikationsdata.
-ms.openlocfilehash: e5e07e4138445e46cdd21edc0cfb01d871dd3b6e
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 286546950c29732e1d33738ffbe7a74f2f6dcca2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761147"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940681"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>Arkivér data fra CellTrust SL2 til Microsoft 365
 
 CellTrust SL2 henter mobilkommunikationsdata og integreres med de førende arkiveringsteknologier for at opfylde kravene til elektronisk registrering i forbindelse med regler som FINRA, HIPAA, FOIA og TCPA. SL2 Data Connector importerer elementer til mobilkommunikation for at Microsoft 365. I denne artikel beskrives processen til integration af SL2 med Microsoft 365 ved hjælp af CellTrust SL2 Data Connector til arkivering. Fuldførelse af denne proces forudsætter, at du abonnerer på CellTrust SL2-tjenesten og har kendskab til SL2-arkitekturen. Du kan få oplysninger om CellTrust SL2 under <https://www.celltrust.com>.
 
-Når data er importeret til brugerpostkasser i Microsoft 365, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. litigation hold, eDiscovery, Microsoft 365 opbevaringspolitikker og overholdelse af kommunikation. Brug af CellTrust SL2 Data Connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når data er importeret til brugerpostkasser i Microsoft 365, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, Microsoft 365 opbevaringspolitikker og kommunikation med overholdelse af angivne standarder. Brug af CellTrust SL2 Data Connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-with-the-celltrust-sl2-data-connector"></a>Oversigt over arkivering med CellTrust SL2 Data Connector
 
@@ -45,13 +45,13 @@ CellTrusts SL2-platform henter kommunikationsdata fra flere kilder. SL2-datakild
 
 - Hent legitimationsoplysningerne for at få adgang til administratorkontoen for dit SL2-domæne.
 
-- Den bruger, der opretter CellTrust SL2-dataconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter CellTrust SL2-dataconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** på Microsoft Purview-overholdelsesportalen. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne CellTrust-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne CellTrust-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-create-a-celltrust-sl2-connector"></a>Trin 1: Opret en CellTrust SL2-connector
 
-Det første trin er at oprette en dataconnector i Microsoft 365 Overholdelsescenter.
+Det første trin er at oprette en dataconnector på overholdelsesportalen.
 
 1. Gå til <https://compliance.microsoft.com> , og klik på **Dataconnectors** i venstre navigationsrude.
 
@@ -85,11 +85,11 @@ Det næste trin er at logge på en administratorkonto for dit CellTrust SL2-dom�
 
    ![Aktivér OUs for at arkivere.](../media/EnableCellTrustOUs.png)
 
-4. Når du er færdig med dine valg, skal du lukke browservinduet og vende tilbage til guidesiden i Microsoft 365 Overholdelsescenter. Efter et par sekunder går guiden automatisk videre til næste trin i tilknytningen af brugere.
+4. Når du er færdig med dine valg, skal du lukke browservinduet og vende tilbage til guidesiden i overholdelsesportalen. Efter et par sekunder går guiden automatisk videre til næste trin i tilknytningen af brugere.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Det sidste trin er at tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 365 Overholdelsescenter.
+Det sidste trin er at tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen.
 
 1. På siden **Brugertilknytning** skal du vælge **Aktivér automatisk brugertilknytning**, hvis mailadressen for brugerne er den samme i både SL2 og Microsoft 365. Ellers skal du manuelt bruge mailadresser ved at uploade en CSV-fil, der knytter brugernes SL2-adresse til deres Microsoft 365 adresse.
 

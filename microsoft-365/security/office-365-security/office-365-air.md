@@ -1,6 +1,6 @@
 ---
 title: Automatiseret undersøgelse og svar i Microsoft Defender for Office 365
-keywords: AIR, autoIR, Microsoft Defender for Endpoint, automatiseret, undersøgelse, svar, afhjælpning, trusler, avanceret, trussel, beskyttelse
+keywords: AIR, autoIR, Microsoft Defender for Endpoint, automatiseret, undersøgelse, reaktion, afhjælpning, trusler, avanceret, trussel, beskyttelse
 f1.keywords:
 - NOCSH
 author: dansimp
@@ -16,20 +16,20 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Kom i gang med automatiseret undersøgelse og svarfunktioner Microsoft Defender for Office 365.
+description: Kom i gang med at bruge automatiserede undersøgelses- og svarfunktioner i Microsoft Defender for Office 365.
 ms.custom:
 - air
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e9cd2388d3551ccc0c180d20a92ec0c513472797
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: ca64509321ff43bbe8b7baf7ec7dfa270d9afdc4
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473667"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941517"
 ---
-# <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Automatiseret undersøgelse og svar (AIR) i Microsoft Defender for Office 365
+# <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Automatiseret undersøgelse og reaktion (AIR) i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -37,119 +37,119 @@ ms.locfileid: "64473667"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Microsoft Defender for Office 365 indeholder](defender-for-office-365.md) effektive funktioner til automatisk undersøgelse og svar (AIR), som kan spare tid og besvær for dit sikkerhedsteam. Når der udløses beskeder, er det op til dit sikkerhedsteam at gennemse, prioritere og reagere på disse beskeder. Det kan være overvældende at holde styr på mængden af indgående beskeder. Det kan være en hjælp at automatisere nogle af disse opgaver.
+[Microsoft Defender for Office 365](defender-for-office-365.md) indeholder effektive funktioner til automatiseret undersøgelse og svar (AIR), der kan spare dit team for sikkerhedshandlinger tid og kræfter. Når beskeder udløses, er det op til dit team af sikkerhedshandlinger at gennemse, prioritere og svare på disse beskeder. Det kan være overvældende at holde styr på mængden af indgående beskeder. Det kan hjælpe at automatisere nogle af disse opgaver.
 
-AIR gør det muligt for dit sikkerhedsteam at fungere mere effektivt. AIR-funktioner omfatter automatiserede undersøgelsesprocesser som reaktion på velkendte trusler, der findes i dag. Relevante afhjælpningshandlinger afventer godkendelse, så dit sikkerhedsteam kan reagere effektivt på registrerede trusler. Med AIR kan dit sikkerhedsteam fokusere på opgaver med højere prioritet, uden at de vigtige beskeder, der udløses, går tabt.
+AIR gør det muligt for dit sikkerhedsteam at arbejde mere effektivt og effektivt. AIR-funktioner omfatter automatiserede undersøgelsesprocesser som svar på velkendte trusler, der findes i dag. Passende afhjælpningshandlinger venter på godkendelse, hvilket gør det muligt for dit team af sikkerhedshandlinger at reagere effektivt på registrerede trusler. Med AIR kan dit team af sikkerhedshandlinger fokusere på opgaver med højere prioritet uden at miste vigtige beskeder, der udløses, af syne.
 
-I denne artikel beskrives følgende:
+I denne artikel beskrives:
 
-- Den [overordnede strøm af AIR](#the-overall-flow-of-air);
-- [Sådan får du AIR](#how-to-get-air); og
-- De [nødvendige tilladelser til](#required-permissions-to-use-air-capabilities) at konfigurere eller bruge AIR-funktioner.
-- Ændringer, der snart kommer til din Microsoft 365 Defender-portal
+- [Luftstrømmens samlede strøm](#the-overall-flow-of-air);
+- [Sådan får du LUFT](#how-to-get-air); Og
+- De [nødvendige tilladelser](#required-permissions-to-use-air-capabilities) til at konfigurere eller bruge AIR-funktioner.
+- Ændringer, der snart kommer til Microsoft 365 Defender-portalen
 
-Denne artikel indeholder også næste [trin og](#next-steps) ressourcer til at få mere at vide.
+Denne artikel indeholder også [næste trin](#next-steps) og ressourcer til at få mere at vide.
 
-## <a name="the-overall-flow-of-air"></a>Den overordnede strøm af AIR
+## <a name="the-overall-flow-of-air"></a>Den samlede luftstrøm
 
-Der udløses en besked, og en sikkerhedsspilbog starter en automatisk undersøgelse, som resulterer i resultater og anbefalede handlinger. Her er den overordnede strøm af AIR, trin for trin:
+En besked udløses, og en sikkerhedslegebog starter en automatisk undersøgelse, som resulterer i resultater og anbefalede handlinger. Her er den overordnede flow for AIR, trin for trin:
 
-1. En automatisk undersøgelse igangsættes på en af følgende måder:
-   - Enten [udløses en advarsel af noget](#which-alert-policies-trigger-automated-investigations) mistænkeligt i en mail (f.eks. en meddelelse, vedhæftet fil, URL-adresse eller kompromitteret brugerkonto). Der oprettes en hændelse, og en automatisk undersøgelse begynder; eller
-   - En sikkerhedsanalytiker starter [en automatisk undersøgelse, mens](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer) du bruger [Stifinder](threat-explorer.md).
-2. Mens en automatisk undersøgelse kører, indsamler den data om den pågældende mail og enheder, der er relateret til den pågældende mail. Sådanne enheder kan omfatte filer, URL-adresser og modtagere. Undersøgelsens omfang kan øges, efterhånden som der udløses nye og relaterede beskeder.
-3. Under og efter en automatiseret undersøgelse [er det muligt at få](air-view-investigation-results.md) vist detaljer og resultater. Resultaterne omfatter [anbefalede handlinger](air-remediation-actions.md) , der kan tages for at reagere på og afhjælpe eventuelle trusler, der blev fundet.
-4. Dit sikkerhedsteam gennemser [undersøgelsesresultaterne og anbefalingerne](air-view-investigation-results.md) [og godkender eller afviser afhjælpningshandlinger](air-review-approve-pending-completed-actions.md).
-5. Efterhånden som ventende afhjælpningshandlinger godkendes (eller afvises), fuldføres den automatiske undersøgelse.
+1. En automatiseret undersøgelse startes på en af følgende måder:
+   - En [besked udløses](#which-alert-policies-trigger-automated-investigations) enten af noget mistænkeligt i en mail (f.eks. en meddelelse, vedhæftet fil, URL-adresse eller kompromitteret brugerkonto). Der oprettes en hændelse, og en automatisk undersøgelse starter. Eller
+   - En sikkerhedsanalytiker [starter en automatisk undersøgelse](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer) , mens der bruges [Stifinder](threat-explorer.md).
+2. Mens en automatiseret undersøgelse kører, indsamler den data om den pågældende mail og enheder, der er relateret til den pågældende mail. Sådanne enheder kan omfatte filer, URL-adresser og modtagere. Undersøgelsens omfang kan øges, når nye og relaterede beskeder udløses.
+3. Under og efter en automatiseret undersøgelse er [detaljer og resultater](air-view-investigation-results.md) tilgængelige for at få vist. Resultaterne omfatter [anbefalede handlinger](air-remediation-actions.md) , der kan udføres for at reagere på og afhjælpe eventuelle trusler, der blev fundet.
+4. Teamet for sikkerhedshandlinger gennemgår [undersøgelsesresultaterne og -anbefalingerne](air-view-investigation-results.md) og [godkender eller afviser afhjælpningshandlinger](air-review-approve-pending-completed-actions.md).
+5. Da ventende afhjælpningshandlinger godkendes (eller afvises), fuldføres den automatiserede undersøgelse.
 
-I Microsoft Defender for Office 365 bliver der ikke foretaget nogen afhjælpningshandlinger automatisk. Afhjælpningshandlingerne skal kun løses, når organisationens sikkerhedsteam har godkendt det. AIR-funktioner sparer tid for sikkerhedsteamet ved at identificere afhjælpningshandlinger og angive de oplysninger, der er nødvendige for at træffe en velovervejet beslutning.
+I Microsoft Defender for Office 365 udføres der ingen afhjælpningshandlinger automatisk. Afhjælpningshandlinger udføres kun efter godkendelse af organisationens sikkerhedsteam. AIR-funktioner sparer tid for dit team for sikkerhedshandlinger ved at identificere afhjælpningshandlinger og angive de oplysninger, der er nødvendige for at træffe en informeret beslutning.
 
-Under og efter hver automatiseret undersøgelse kan dit sikkerhedsteam:
+Under og efter hver automatiseret undersøgelse kan dit team for sikkerhedshandlinger:
 
-- [Få vist oplysninger om en besked i forbindelse med en undersøgelse](air-view-investigation-results.md#view-details-about-an-alert-related-to-an-investigation)
-- [Få vist resultaterne af en undersøgelse](air-view-investigation-results.md#view-details-of-an-investigation)
+- [Få vist oplysninger om en besked, der er relateret til en undersøgelse](air-view-investigation-results.md#view-details-about-an-alert-related-to-an-investigation)
+- [Vis resultaterne af en undersøgelse](air-view-investigation-results.md#view-details-of-an-investigation)
 - [Gennemse og godkend handlinger som et resultat af en undersøgelse](air-review-approve-pending-completed-actions.md)
 
 > [!TIP]
 > Du kan få en mere detaljeret oversigt under [Sådan fungerer AIR](automated-investigation-response-office.md).
 
-## <a name="how-to-get-air"></a>Sådan får du AIR
+## <a name="how-to-get-air"></a>Sådan får du LUFT
 
-AIR-funktioner er inkluderet [Microsoft Defender for Office 365](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2), forudsat at dine politikker og beskeder er konfigureret. Har du brug for hjælp? Følg vejledningen i [Beskyt mod trusler for](protect-against-threats.md) at konfigurere følgende beskyttelsesindstillinger:
+AIR-funktioner er inkluderet i [Microsoft Defender for Office 365](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2), forudsat at dine politikker og beskeder er konfigureret. Har du brug for hjælp? Følg vejledningen i [Beskyt mod trusler](protect-against-threats.md) for at konfigurere følgende beskyttelsesindstillinger:
 
-- [Overvågningslogføring](../../compliance/turn-audit-log-search-on-or-off.md) (skal være slået til)
+- [Overvågningslogføring](../../compliance/turn-audit-log-search-on-or-off.md) (skal aktiveres)
 - [Beskyttelse mod malware](protect-against-threats.md#part-1---anti-malware-protection-in-eop)
 - [Beskyttelse mod phishing](../office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
-- [Beskyttelse mod uønsket post](protect-against-threats.md#part-3---anti-spam-protection-in-eop)
+- [Beskyttelse mod spam](protect-against-threats.md#part-3---anti-spam-protection-in-eop)
 - [Pengeskab links og Pengeskab vedhæftede filer](protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
-Desuden skal du sørge for [at gennemse organisationens advarselspolitikker](../../compliance/alert-policies.md), især [standardpolitikkerne i kategorien Trusselsadministration](../../compliance/alert-policies.md#default-alert-policies).
+Derudover skal du sørge for at [gennemse organisationens politikker for beskeder](../../compliance/alert-policies.md), især [standardpolitikkerne i kategorien Trusselsadministration](../../compliance/alert-policies.md#default-alert-policies).
 
 ## <a name="which-alert-policies-trigger-automated-investigations"></a>Hvilke beskedpolitikker udløser automatiserede undersøgelser?
 
-Microsoft 365 indeholder mange indbyggede politikker for påmindelser, som hjælper med at identificere Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler samt risiko for informationsstyring. Flere af [standardbeskedpolitikker kan](../../compliance/alert-policies.md#default-alert-policies) udløse automatiserede undersøgelser. I følgende tabel beskrives de beskeder, der udløser automatiserede undersøgelser, deres alvorsgrad i Microsoft 365 Defender, og hvordan de genereres:
+Microsoft 365 indeholder mange indbyggede beskedpolitikker, der hjælper med at identificere Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler og risici i forbindelse med styring af oplysninger. Flere af [standardpolitikkerne for beskeder](../../compliance/alert-policies.md#default-alert-policies) kan udløse automatiserede undersøgelser. I følgende tabel beskrives de beskeder, der udløser automatiserede undersøgelser, deres alvorsgrad på Microsoft 365 Defender portalen, og hvordan de genereres:
 
-|Besked|Alvorsgrad|Sådan genereres beskeden|
+|Besked|Sværhedsgraden|Sådan genereres beskeden|
 |---|---|---|
-|Der blev fundet et potentielt ondsindet klik på webadressen|**Høj**|Denne besked genereres, når et af følgende sker: <ul><li>En bruger, der [er Pengeskab links](safe-links.md) i organisationen, klikker på et skadeligt link</li><li>Ændringer af konklusion for URL-adresser identificeres af Microsoft Defender for Office 365</li><li>Brugere tilsidesætter Pengeskab Links-advarselssider (baseret på [organisationens politik Pengeskab Links](set-up-safe-links-policies.md).</li></ul> <p> Du kan finde flere oplysninger om hændelser, der udløser denne besked, [under Konfigurer Pengeskab links-politikker](set-up-safe-links-policies.md).|
-|En mail rapporteres af en bruger som malware eller phish|**Information**|Denne besked genereres, når brugere i organisationen rapporterer meddelelser som phishingmail ved hjælp af tilføjelsesprogrammet [Rapportmeddelelse](enable-the-report-message-add-in.md) eller [tilføjelsesprogrammet Rapportphishing](enable-the-report-phish-add-in.md).|
-|Mails, der indeholder malware, fjernes efter levering|**Information**|Denne besked genereres, når alle mails, der indeholder malware, leveres til postkasser i organisationen. Hvis denne hændelse forekommer, fjerner Microsoft de inficeret meddelelser fra Exchange Online postkasser ved hjælp [af automatisk tømning (ZAP) uden brug af nul-time](zero-hour-auto-purge.md).|
-|Mails, der indeholder phish URL-adresser, fjernes efter levering|**Information**|Denne besked genereres, når alle meddelelser, der indeholder phish, leveres til postkasser i organisationen. Hvis denne hændelse sker, fjerner Microsoft de inficeret meddelelser fra Exchange Online postkasser ved hjælp af [ZAP](zero-hour-auto-purge.md).|
-|Mistænkelige e-mail-afsendelsesmønstre registreres|**Mellem**|Denne besked genereres, når en person i organisationen har sendt mistænkelige mails og er i risiko for at blive begrænset fra at sende mails. Beskeden er en tidlig advarsel for adfærd, der kan betyde, at kontoen er kompromitteret, men ikke alvorlig nok til at begrænse brugeren. <p> Selvom det er sjældent, kan en besked, der genereres af denne politik, være en anomali. Det er dog en god ide at [kontrollere, om brugerkontoen er kompromitteret](responding-to-a-compromised-email-account.md).|
-|En bruger er begrænset i at kunne sende mails|**Høj**|Denne besked genereres, når en person i organisationen er begrænset i at kunne sende udgående mail. Denne påmindelse giver typisk resultater, når [en mailkonto er kompromitteret](responding-to-a-compromised-email-account.md). <p> Du kan finde flere oplysninger om begrænsede brugere [i Fjern blokerede brugere fra portalen Begrænsede brugere Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
+|Der blev registreret et potentielt skadeligt klik på URL-adressen|**Høj**|Denne besked genereres, når en af følgende opstår: <ul><li>En bruger, der er beskyttet af [Pengeskab Links](safe-links.md) i din organisation, klikker på et skadeligt link</li><li>Ændringer af dom for URL-adresser identificeres af Microsoft Defender for Office 365</li><li>Brugere tilsidesætter advarselssider for Pengeskab links (baseret på organisationens [politik for Pengeskab links](set-up-safe-links-policies.md).</li></ul> <p> Du kan få flere oplysninger om hændelser, der udløser denne besked, under [Konfigurer politikker for Pengeskab links](set-up-safe-links-policies.md).|
+|En mail rapporteres af en bruger som malware eller phish|**Informative**|Denne besked genereres, når brugere i organisationen rapporterer meddelelser som phishing-mail ved hjælp af [tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md) eller [tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md).|
+|Mails, der indeholder malware, fjernes efter levering|**Informative**|Denne besked genereres, når alle mails, der indeholder malware, leveres til postkasser i din organisation. Hvis denne hændelse indtræffer, fjerner Microsoft de inficerede meddelelser fra Exchange Online postkasser ved hjælp af [automatisk tømning på nul timer (ZAP).](zero-hour-auto-purge.md)|
+|Mails, der indeholder phish-URL-adresser, fjernes efter levering|**Informative**|Denne besked genereres, når alle meddelelser, der indeholder phish, leveres til postkasser i din organisation. Hvis denne hændelse opstår, fjerner Microsoft de inficerede meddelelser fra Exchange Online postkasser ved hjælp af [ZAP](zero-hour-auto-purge.md).|
+|Der registreres mistænkelige mønstre for afsendelse af mail|**Medium**|Denne besked genereres, når en person i din organisation har sendt mistænkelig mail og er i fare for at blive begrænset fra at sende mail. Beskeden er en tidlig advarsel om funktionsmåde, der kan indikere, at kontoen er kompromitteret, men ikke alvorlig nok til at begrænse brugeren. <p> Selvom det er sjældent, kan en besked, der genereres af denne politik, være en uregelmæssighed. Det er dog en god idé at [kontrollere, om brugerkontoen er kompromitteret](responding-to-a-compromised-email-account.md).|
+|En bruger er begrænset til at sende mail|**Høj**|Denne besked genereres, når en person i din organisation er begrænset til at sende udgående mails. Denne besked opstår typisk, når en [mailkonto kompromitteres](responding-to-a-compromised-email-account.md). <p> Du kan få flere oplysninger om brugere med begrænset adgang under [Fjern blokerede brugere fra portalen Brugere med begrænset adgang i Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
 
 > [!TIP]
-> Du kan få mere at vide om beskedpolitikker eller redigere standardindstillingerne under [Beskedpolitikker i Microsoft 365 Overholdelsescenter](../../compliance/alert-policies.md).
+> Hvis du vil vide mere om politikker for beskeder eller redigere standardindstillingerne, skal du se [Beskedpolitikker på Microsoft Purview-overholdelsesportalen](../../compliance/alert-policies.md).
 
 ## <a name="required-permissions-to-use-air-capabilities"></a>Påkrævede tilladelser til at bruge AIR-funktioner
 
-Tilladelser tildeles gennem bestemte roller, f.eks. dem, der er beskrevet i følgende tabel:
+Tilladelser tildeles via visse roller, f.eks. dem, der er beskrevet i følgende tabel:
 
 |Opgave|Rolle(er) påkrævet|
 |---|---|
-|Konfigurer AIR-funktioner|En af følgende roller: <ul><li>Global Administrator</li><li>Sikkerhedsadministrator</li></ul> <p> Disse roller kan tildeles [i Azure Active Directory](/azure/active-directory/roles/permissions-reference) eller i [Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md).|
-|Start en automatiseret undersøgelse <p> --- eller --- <p> Godkend eller afvis anbefalede handlinger|En af følgende roller, der er [tildelt Azure Active Directory](/azure/active-directory/roles/permissions-reference) eller på [Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md): <ul><li>Global Administrator</li><li>Sikkerhedsadministrator</li><li>Sikkerhedsoperator</li><li>Sikkerhedslæser <br> --- og --- </li><li>Søg og tøm (denne rolle tildeles kun i [Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md). Det kan være nødvendigt at oprette en **ny rollegruppe &** mailsamarbejde og føje rollen Søg og tøm til den nye rollegruppe.</li></ul>|
+|Konfigurer AIR-funktioner|En af følgende roller: <ul><li>Global administrator</li><li>Sikkerhedsadministrator</li></ul> <p> Disse roller kan tildeles i [Azure Active Directory](/azure/active-directory/roles/permissions-reference) eller på [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).|
+|Start en automatiseret undersøgelse <p> --- eller --- <p> Godkend eller afvis anbefalede handlinger|En af følgende roller, der er tildelt i [Azure Active Directory](/azure/active-directory/roles/permissions-reference) eller på [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md): <ul><li>Global administrator</li><li>Sikkerhedsadministrator</li><li>Sikkerhedsoperator</li><li>Sikkerhedslæser <br> --- og --- </li><li>Søg og fjern (denne rolle tildeles kun på [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md). Du skal muligvis oprette en ny **mail & rollegruppe for samarbejde** der og føje rollen Søg og Fjern til den nye rollegruppe.</li></ul>|
 
 ## <a name="required-licenses"></a>Påkrævede licenser
 
-[Microsoft Defender for Office 365 plan 2-licenser](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) skal tildeles til:
+[Microsoft Defender for Office 365 Plan 2-licenser](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) skal tildeles til:
 
 - Sikkerhedsadministratorer (herunder globale administratorer)
-- Organisationens sikkerhedsteam (herunder sikkerhedslæsere og personer med rollen **Søg og Tøm** )
+- Organisationens team for sikkerhedshandlinger (herunder sikkerhedslæsere og dem med rollen **Søg og Fjern** )
 - Slutbrugere
 
-## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Der kommer snart ændringer i din Microsoft 365 Defender-portal
+## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Ændringer kommer snart på Microsoft 365 Defender-portalen
 
-Hvis du allerede bruger AIR-funktioner i Microsoft Defender for Office 365, vil du nu se nogle ændringer i den forbedrede [Microsoft 365 Defender portal](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Hvis du allerede bruger AIR-funktioner i Microsoft Defender for Office 365, kan du se nogle ændringer i den [forbedrede Microsoft 365 Defender portal](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Samlet handlingscenter" lightbox="../../media/m3d-action-center-unified.png":::
+:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Unified Action Center" lightbox="../../media/m3d-action-center-unified.png":::
 
-Den nye og forbedrede Microsoft 365 Defender samler <https://security.microsoft.com> AIR-funktioner i [Microsoft Defender for Office 365](defender-for-office-365.md) og [Microsoft Defender for Endpoint](../defender-endpoint/automated-investigations.md). Med disse opdateringer og forbedringer kan dit sikkerhedsteam få vist oplysninger om automatiserede undersøgelser og afhjælpningshandlinger på tværs af din mail, dit samarbejdsindhold, dine brugerkonti og enheder, alt sammen på ét sted.
+Den nye og forbedrede Microsoft 365 Defender portal <https://security.microsoft.com> samler AIR-funktioner i [Microsoft Defender for Office 365](defender-for-office-365.md) og i [Microsoft Defender for Endpoint](../defender-endpoint/automated-investigations.md). Med disse opdateringer og forbedringer kan dit team for sikkerhedshandlinger få vist oplysninger om automatiserede undersøgelser og afhjælpningshandlinger på tværs af din mail, samarbejdsindhold, brugerkonti og enheder på ét sted.
 
 > [!TIP]
-> Den nye Microsoft 365 Defender portal erstatter følgende administrationscentre:
+> Den nye Microsoft 365 Defender-portal erstatter følgende administrationscentre:
 >
 > - Security & Compliance Center (<https://protection.office.com>)
 > - Microsoft 365 Defender (<https://security.microsoft.com>)
 >
-> Ud over at URL-adressen er ændret, er der et nyt udseende, som er designet til at give dit sikkerhedsteam en mere strømlinet oplevelse med synlighed til flere trusselsregistreringer på ét sted.
+> Ud over at URL-adressen ændres, er der et nyt udseende og en ny funktionalitet, der er designet til at give dit sikkerhedsteam en mere strømlinet oplevelse med synlighed til flere trusselsregistreringer på ét sted.
 
-### <a name="what-to-expect"></a>Hvad du kan forvente
+### <a name="what-to-expect"></a>Hvad kan du forvente?
 
-I følgende tabel vises ændringer og forbedringer af AIR i Microsoft Defender for Office 365.
+I følgende tabel vises de ændringer og forbedringer, der kommer til AIR i Microsoft Defender for Office 365.
 
 |Element|Hvad ændres?|
 |---|---|
-|**Undersøgelsesside**|Den opdaterede **side Undersøgelser er** mere i overensstemmelse med det, du ser [i Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Du får vist nogle generelle format- og typografiændringer, der er justeret efter den nye, samlede **undersøgelsesvisning** . Undersøgelsesgrafen har f.eks. et mere ensartet format.|
-|**Fanen** Brugere|Fanen **Brugere** er nu **fanen Postkasser** . Oplysninger om brugere er angivet på **fanen** Postkasse.|
-|**Fanen** Mail|Fanen **Mail** er blevet fjernet. gå til **fanen Enheder for** at få vist en liste over mail- og mailklyngeelementer.|
-|**Fanen Enheder**|Fanen **Enheder har** en fane i tabulatortypografi, der omfatter en oversigtsvisning, og muligheden for at filtrere efter enhedstype. Fanen **Enheder indeholder** nu indstillingen **Gå på jagt** ud over indstillingen **Åbn i Stifinder** . Du kan nu bruge enten [Stifinder](threat-explorer.md) [eller avanceret jagt](../defender-endpoint/advanced-hunting-overview.md) på at finde enheder og trusler og filtrere efter resultater.|
-|**Fanen** Handlinger|Den opdaterede **fane Handlinger** indeholder nu fanen **Afventende handlinger** og fanen **Handlingsoversigt** . Handlinger kan godkendes (eller afvises) i en siderude, der åbnes, når du vælger en afventende handling.|
-|**Fanen** Beviser|En ny **fane med** Beviser viser de vigtigste resultater i forbindelse med handlinger. Handlinger, der er relateret til hvert enkelt beviser, kan godkendes (eller afvises) i en siderude, der åbnes, når du vælger en afventende handling.|
-|**Handlingscenter**|Det opdaterede **handlingscenter** (<https://security.microsoft.com/action-center>) samler afventende og fuldførte handlinger på tværs af mail, enheder og identiteter. Du kan få mere at vide i Handlingscenter. Hvis du vil have mere at vide, [skal du se Handlingscenter](../defender/m365d-action-center.md).|
-|**Siden Hændelser**|Siden **Hændelser korrelerer** nu flere undersøgelser i fællesskab for at give en bedre konsolideret visning af undersøgelser. ([Få mere at vide om hændelser](../defender/incidents-overview.md)).|
+|**Siden Undersøgelser**|Den opdaterede side **Undersøgelser** er mere konsistent med det, du ser i [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Du får vist nogle generelle formaterings- og formateringsændringer, der er i overensstemmelse med den nye samlede **undersøgelsesvisning** . Undersøgelsesgrafen har f.eks. et mere ensartet format.|
+|Fanen **Brugere**|Fanen **Brugere** er nu fanen **Postkasser** . Oplysninger om brugere vises under fanen **Postkasse** .|
+|Fanen **Mail**|Fanen **Mail** er blevet fjernet. gå til fanen **Enheder** for at få vist en liste over mail- og mailklyngeelementer.|
+|Fanen **Enheder**|Fanen **Enheder** har en fane i faneformat, der indeholder en visning af alle oversigter og muligheden for at filtrere efter objekttype. Fanen **Enheder** indeholder nu indstillingen **Gå på jagt** ud over indstillingen **Åbn i Stifinder** . Du kan nu bruge enten [Stifinder](threat-explorer.md) eller [avanceret jagt](../defender-endpoint/advanced-hunting-overview.md) til at finde enheder og trusler og filtrere på resultater.|
+|Fanen **Handlinger**|Fanen Opdaterede **handlinger** indeholder nu fanen **Ventende handlinger** og fanen **Handlingers historik** . Handlinger kan godkendes (eller afvises) i en siderude, der åbnes, når du vælger en ventende handling.|
+|Fanen **Beviser**|På en ny fane **med beviser** kan du se de vigtigste objektresultater, der er relateret til handlinger. Handlinger, der er relateret til hver enkelt dokumentation, kan godkendes (eller afvises) i en siderude, der åbnes, når du vælger en ventende handling.|
+|**Handlingscenter**|Det opdaterede **Løsningscenter** (<https://security.microsoft.com/action-center>) samler ventende og fuldførte handlinger på tværs af mail, enheder og identiteter. Du kan få mere at vide i Løsningscenter. Du kan få mere at vide [under Løsningscenter](../defender/m365d-action-center.md).|
+|**Hændelsesside**|Siden **Hændelser** korrelerer nu flere undersøgelser sammen for at give et bedre samlet overblik over undersøgelserne. ([Få mere at vide om hændelser](../defender/incidents-overview.md)).|
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Se detaljer og resultater af en automatisk undersøgelse](air-view-investigation-results.md#view-details-of-an-investigation)
-- [Gennemse og godkende afventende handlinger](air-remediation-actions.md)
+- [Se detaljer og resultater af en automatiseret undersøgelse](air-view-investigation-results.md#view-details-of-an-investigation)
+- [Gennemse og godkend ventende handlinger](air-remediation-actions.md)

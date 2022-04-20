@@ -1,5 +1,5 @@
 ---
-title: Opret eDiscovery-ventepositioner i en kerne-eDiscovery-sag
+title: Opret eDiscovery-ventepositioner i en eDiscovery-sag (Standard)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,17 +17,17 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Du kan oprette en venteposition, der er knyttet til en Kerne-eDiscovery-sag, i Microsoft 365 for at bevare indhold, der er relevant for en undersøgelse eller en retssag.
-ms.openlocfilehash: f732bf1c9b85804a8a3814bf578a719d854725e5
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Du kan oprette en venteposition, der er knyttet til en eDiscovery-sag (Standard), i Microsoft 365 for at bevare indhold, der er relevant for en undersøgelse eller en juridisk sag.
+ms.openlocfilehash: 4448c9b8a55466c0cf626deff6e69acd247a5814
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824898"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938263"
 ---
 # <a name="create-an-ediscovery-hold"></a>Opret en eDiscovery-venteposition
 
-Du kan bruge en kerne-eDiscovery-sag til at oprette ventepositioner for at bevare indhold, der kan være relevant for sagen. Du kan placere en venteposition på de Exchange postkasser og OneDrive for Business konti for personer, du undersøger i sagen. Du kan også placere en venteposition på de postkasser og websteder, der er knyttet til Microsoft Teams, Office 365 grupper og Yammer grupper. Når du placerer indholdsplaceringer i venteposition, bevares indholdet, indtil du fjerner indholdsplaceringen fra ventepositionen, eller indtil du sletter ventepositionen.
+Du kan bruge en Microsoft Purview eDiscovery-sag (Standard) til at oprette ventepositioner for at bevare indhold, der kan være relevant for sagen. Du kan placere en venteposition på de Exchange postkasser og OneDrive for Business konti for personer, du undersøger i sagen. Du kan også placere en venteposition på de postkasser og websteder, der er knyttet til Microsoft Teams, Office 365 grupper og Yammer grupper. Når du placerer indholdsplaceringer i venteposition, bevares indholdet, indtil du fjerner indholdsplaceringen fra ventepositionen, eller indtil du sletter ventepositionen.
 
 Når du har oprettet en eDiscovery-venteposition, kan det tage op til 24 timer, før ventepositionen træder i kraft.
 
@@ -39,13 +39,13 @@ Når du opretter en venteposition, har du følgende muligheder for at tilpasse o
   
 ## <a name="how-to-create-an-ediscovery-hold"></a>Sådan opretter du en eDiscovery-venteposition
 
-Sådan opretter du en eDiscovery-venteposition, der er knyttet til en kerne-eDiscovery-sag:
+Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery-sag (Standard):
   
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>, og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
 2. Klik på **Vis alle** i navigationsruden til venstre, og klik derefter på **eDiscovery > Core**.
 
-3. Klik på navnet på den sag, du vil oprette venteposition for, på siden **Kerne-eDiscovery** .
+3. Klik på navnet på den sag, du vil oprette venteposition for, på siden **eDiscovery (Standard** ).
 
 4. Klik **på fanen** **Hold** på startsiden for sagen.
   
@@ -113,7 +113,7 @@ Vær opmærksom på følgende ting i forbindelse med statistik for eDiscovery-ve
 
 ## <a name="search-locations-on-ediscovery-hold"></a>Søg på placeringer i eDiscovery-venteposition
 
-Når du [søger efter indhold](search-for-content-in-core-ediscovery.md) i en kerne-eDiscovery-sag, kan du hurtigt konfigurere søgningen til kun at søge efter de indholdsplaceringer, der er placeret i en venteposition, der er knyttet til sagen.
+Når du [søger efter indhold](search-for-content-in-core-ediscovery.md) i en eDiscovery-sag (Standard), kan du hurtigt konfigurere søgningen til kun at søge efter de indholdsplaceringer, der er placeret i en venteposition, der er knyttet til sagen.
 
 Vælg indstillingen **Placeringer i venteposition** for at søge efter alle de indholdsplaceringer, der er sat i venteposition. Hvis sagen indeholder flere eDiscovery-ventepositioner, søges der efter indholdsplaceringer fra alle ventepositioner, når du vælger denne indstilling. Hvis en indholdsplacering blev placeret i en forespørgselsbaseret venteposition, er det desuden kun de elementer, der svarer til ventepositionsforespørgslen, der søges i, når du kører søgningen. Det er med andre ord kun det indhold, der matcher både ventepositionskriterierne og søgekriterierne, der returneres sammen med søgeresultaterne. Hvis en bruger f.eks. blev placeret i forespørgselsbaseret sagsposition, der bevarer elementer, der blev sendt eller oprettet før en bestemt dato, ville der kun blive søgt i disse elementer. Dette opnås ved at forbinde forespørgslen om sag venteposition og søgeforespørgslen af en **AND-operator** .
 
@@ -215,7 +215,7 @@ Når en postkasse, SharePoint websted eller OneDrive konto er fjernet fra eDisco
 
    Du kan få flere oplysninger under [Frigivelse af en politik til opbevaring](retention.md#releasing-a-policy-for-retention).
 
-Der anvendes også forsinkelse på indholdsplaceringer, der er i venteposition, når du lukker en kerne-eDiscovery-sag, fordi ventepositioner er slået fra, når en sag lukkes. Du kan finde flere oplysninger om lukning af en sag under [Luk, genåbn og slet en kerne-eDiscovery-sag](close-reopen-delete-core-ediscovery-cases.md).
+Der anvendes også forsinkelse på indholdsplaceringer i venteposition, når du lukker en eDiscovery(Standard)-sag, fordi ventepositioner er slået fra, når en sag lukkes. Du kan finde flere oplysninger om lukning af en sag under [Luk, genåbn og slet en eDiscovery-sag (Standard).](close-reopen-delete-core-ediscovery-cases.md)
 
 ## <a name="ediscovery-hold-limits"></a>Grænser for eDiscovery-venteposition
 
@@ -224,7 +224,7 @@ I følgende tabel vises grænserne for eDiscovery-sager og ventepositioner for s
   | Beskrivelse af grænse | Grænse |
   |:-----|:-----|
   |Maksimalt antal sager for en organisation.  <br/> |Ingen grænse  <br/> |
-  |Det maksimale antal politikker for eDiscovery-venteposition for en organisation. Denne grænse omfatter det samlede antal politikker for bevarelse af ventepositioner i centrale eDiscovery-sager og Advanced eDiscovery tilfælde.  <br/> |10,000  <br/> |
+  |Det maksimale antal politikker for eDiscovery-venteposition for en organisation. Denne grænse omfatter det samlede antal ventepositionspolitikker i sager med eDiscovery (Standard) og eDiscovery (Premium).  <br/> |10.0001<sup></sup>  <br/> |
   |Det maksimale antal postkasser i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer Grupper.  <br/> |1,000  <br/> |
   |Det maksimale antal websteder i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer grupper.  <br/> |100  <br/> |
   |Det maksimale antal sager, der vises på eDiscovery-startsiden, og det maksimale antal elementer, der vises på fanerne Ventepositioner, Søgninger og Eksportér i en sag.  |1.0001<sup></sup>|

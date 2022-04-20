@@ -1,5 +1,5 @@
 ---
-title: Forudsigelig kodning i Advanced eDiscovery – Hurtig start
+title: Forudsigende kodning i eDiscovery (Premium) – Hurtig start
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,104 +13,104 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Få mere at vide om, hvordan du kommer i gang med at bruge forudsigelig kodningsmodulet Advanced eDiscovery. I denne artikel gennemgås hele processen med at bruge forudsigelig kodning til at identificere indhold i et korrektursæt, der er mest relevant for din undersøgelse.
-ms.openlocfilehash: 2266f44e7b95c118314d76fe019a97b2db24f07c
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: Få mere at vide om, hvordan du kommer i gang med at bruge modulet med forudsigende kodning i eDiscovery (Premium). I denne artikel gennemgår vi processen fra ende til anden med at bruge forudsigende kodning til at identificere indhold i et anmeldelsessæt, der er mest relevant for din undersøgelse.
+ms.openlocfilehash: 449ef5446ee5a4da87081774037c9b5e2a8d440d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63593293"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942309"
 ---
-# <a name="quick-start-predictive-coding-in-advanced-ediscovery-preview"></a>Hurtig start: Forudsigelig kodning i Advanced eDiscovery (eksempel)
+# <a name="quick-start-predictive-coding-in-ediscovery-premium-preview"></a>Hurtig start: Forudsigende kode i eDiscovery (Premium) (prøveversion)
 
-Denne artikel giver en hurtig start på brugen af forudsigelig kodning i Advanced eDiscovery. Forudsigeligt kodningsmodul bruger intelligente maskinlæringsfunktioner til at hjælpe dig med at cullere store mængder sagsindhold, der ikke er relevant for din undersøgelse. Dette opnås ved at oprette og træne dine egne forudsigelige kodningsmodeller, der hjælper dig med at prioritere de mest relevante elementer til gennemsyn.
+I denne artikel præsenteres en hurtig start til brug af forudsigende kode i Microsoft Purview eDiscovery (Premium). I modulet til forudsigelse af kodning bruges intelligente funktioner til maskinel indlæring til at hjælpe dig med at slå store mængder sagsindhold fra, der ikke er relevant for din undersøgelse. Dette opnås ved at oprette og oplære dine egne forudsigende kodemodeller, der hjælper dig med at prioritere de mest relevante elementer til gennemsyn.
 
-Her er en hurtig oversigt over forudsigelig kodningsprocessen:
+Her er et hurtigt overblik over den forudsigende kodningsproces:
 
-![Hurtig start-proces til forudsigelseskodning.](..\media\PredictiveCodingQuickStartProcess.png)
+![Hurtig start-processen til forudsigelseskodning.](..\media\PredictiveCodingQuickStartProcess.png)
 
-For at komme i gang skal du oprette en model med et navn på så få som 50 elementer, som relevante eller ikke er relevante. Systemet anvender derefter dette kursus til at anvende forudsigelsesresultater for hvert element i korrektursættet. Dette gør det muligt at filtrere elementer baseret på forudsigelsesresultatet, hvilket giver dig mulighed for at gennemse de mest relevante (eller ikke-relevante) elementer først. Hvis du vil træne modeller med højere inaktler og tilbagekaldelseshastigheder, kan du fortsætte med at navnmærke elementer i efterfølgende træningsrunder, indtil modellen er stabil. Når modellen er stabil, kan du anvende det endelige forudsigelsesfilter til at prioritere elementer til gennemsyn.
+For at komme i gang skal du oprette en model med så få som 50 elementer som relevante eller ikke relevante. Systemet bruger derefter denne oplæring til at anvende forudsigelsesscores på alle elementer i korrektursættet. Det giver dig mulighed for at filtrere elementer baseret på forudsigelsesscoren, hvilket giver dig mulighed for først at gennemse de mest relevante (eller ikke-relevante) elementer. Hvis du vil oplære modeller med højere tilgængeligheds- og genkaldelsesrater, kan du fortsætte med at mærke elementer i efterfølgende træningsrunder, indtil modellen stabiliseres. Når modellen er stabiliseret, kan du anvende det endelige forudsigelsesfilter til at prioritere elementer, der skal gennemses.
 
-Du kan få en detaljeret oversigt over forudsigelig kodning [under Få mere at vide om forudsigelig kodning Advanced eDiscovery](predictive-coding-overview.md).
+Du kan finde en detaljeret oversigt over forudsigende kodning [under Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md).
 
-## <a name="step-1-create-a-new-predictive-coding-model"></a>Trin 1: Opret en ny forudsigelig kodningsmodel
+## <a name="step-1-create-a-new-predictive-coding-model"></a>Trin 1: Opret en ny forudsigende kodemodel
 
-Det første trin er at oprette en ny forudsigelig kodningsmodel i revisionssættet
+Det første trin er at oprette en ny forudsigende kodemodel i korrektursættet
 
-1. I dialogboksen Microsoft 365 Overholdelsescenter du åbne en Advanced eDiscovery en sag og derefter vælge **fanen Gennemse sæt**.
+1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
 
-2. Åbn et korrektursæt, og **klik derefter på AnalyticsManage** >  **predictive coding (preview)**.
+2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
 
-   ![Klik på rullemenuen Analysér i korrektur indstillet til at gå til siden Forudsigelig kodning.](..\media\ManagePredictiveCoding.png)
+   ![Klik på rullemenuen Analysér i gennemgangssættet for at gå til siden Forudsigende kodning.](..\media\ManagePredictiveCoding.png)
 
-3. Klik på **Ny model på siden Forudsigelige kodningsmodeller (****forhåndsvisning**).
+3. Klik på **Ny model** på siden **Forudsigende kodningsmodeller (prøveversion).**
 
-4. På pop op-siden skal du skrive et navn til modellen og en valgfri beskrivelse.
+4. Skriv et navn til modellen og en valgfri beskrivelse på pop op-siden.
 
-5. Klik **på Gem** for at oprette modellen.
+5. Klik på **Gem** for at oprette modellen.
 
-   Det tager et par minutter, før systemet forbereder din model. Når den er klar, kan du udføre den første runde af kurser.
+   Det tager et par minutter, før systemet klargør din model. Når den er klar, kan du udføre den første runde af træningen.
 
-Du kan finde en mere detaljeret vejledning [under Opret en forudsigelig kodningsmodel](predictive-coding-create-model.md).
+Du kan finde mere detaljerede instruktioner under [Opret en forudsigende kodemodel](predictive-coding-create-model.md).
 
-## <a name="step-2-perform-the-first-training-round"></a>Trin 2: Udfør den første træningsrund
+## <a name="step-2-perform-the-first-training-round"></a>Trin 2: Udfør den første træningsrunde
 
-Når du har oprettet modellen, er næste trin at fuldføre den første træningsrund ved at navnmærke elementer som relevante eller ikke relevante.
+Når du har oprettet modellen, er det næste trin at gennemføre den første oplæringsrunde ved at angive elementer som relevante eller ikke relevante.
 
-1. Åbn korrektursættet, og klik **derefter på AnalyticsManage** >  **predictive coding (preview)**.
+1. Åbn korrektursættet, og klik derefter på **AnalyticsAdministrer forudsigende kode (prøveversion).**. > 
 
-2. På siden **Predictive coding models (preview)** skal du vælge den model, du vil træne.
+2. På siden **Forudsigende kodningsmodeller (prøveversion)** skal du vælge den model, du vil oplære.
 
-3. Klik på **Start** næste **træningsrund** under Rund 1 **på fanen Oversigt**.
+3. Klik på **Start næste træningsrunde** under **Runde 1** under fanen **Oversigt**.
 
-   Fanen **Kursus** vises og indeholder 50 elementer, du kan navnmærke.
+   Fanen **Oplæring** vises og indeholder 50 elementer, som du kan navngive.
 
-4. Gennemse hvert dokument, og vælg derefter **knappen Relevant** **eller Ikke relevant** nederst i læseruden for at navnmærke det.
+4. Gennemse hvert dokument, og vælg derefter knappen **Relevant** eller **Ikke relevant** nederst i læseruden for at navngive det.
 
-   ![Giv hvert dokument en mærkat som relevant eller ikke relevant.](..\media\TrainModel1.png)
+   ![Mærk hvert dokument som relevant eller ikke relevant.](..\media\TrainModel1.png)
 
 5. Når du har markeret alle 50 elementer, skal du klikke på **Udfør**.
 
-    Det tager et par minutter, før systemet "lærer" af din mærkning og opdaterer modellen. Når denne proces er fuldført, vises status som  Klar for modellen på siden **Forudsigelig kodningsmodeller (forhåndsvisning**).
+    Det tager et par minutter, før systemet "lærer" fra din mærkning og opdaterer modellen. Når processen er fuldført, vises statussen **Ready** for modellen på siden **Predictive coding models (prøveversion).**
 
-Du kan finde en mere detaljeret vejledning [under Træn en forudsigelig kodningsmodel](predictive-coding-train-model.md).
+Du kan finde mere detaljerede instruktioner under [Oplær en forudsigende kodemodel](predictive-coding-train-model.md).
 
-## <a name="step-3-apply-the-prediction-score-filter-to-items-in-review-set"></a>Trin 3: Anvende forudsigelsesscorefilteret på elementer i korrektursæt
+## <a name="step-3-apply-the-prediction-score-filter-to-items-in-review-set"></a>Trin 3: Anvend filteret for forudsigelsesscore på elementer i korrektursæt
 
-Når du har leaset én træningsrund, kan du anvende forudsigelsesscorefilteret på elementer i gennemsynssættet. Dette giver dig mulighed for at gennemse de elementer, modellen har forudsagt, som relevante eller ikke relevante.   
+Når du har udført leasing én træningsrunde, kan du anvende forudsigelsesscorefilteret på elementer i korrektursæt. Dette giver dig mulighed for at gennemse de elementer, som modellen har forudsagt som relevante eller ikke relevante.   
 
 1. Åbn korrektursættet.
 
    ![Klik på Filtre for at få vist pop op-siden Filtre.](..\media\PredictionScoreFilter0.png)
 
-   De forudindlæste standardfiltre vises øverst på siden med korrektursæt. Du kan lade disse være indstillet **til Enhver**.
+   De forudindlæste standardfiltre vises øverst på siden med korrektursæt. Du kan lade disse være angivet til **Enhver**.
 
-2. Klik **på Filtre** for at få **vist pop** op-siden Filtre.
+2. Klik på **Filtre** for at få vist pop op-siden **Filtre** .
 
-3. Udvid **sektionen Analytics & forudsigelig kodning** for at få vist et sæt filtre.
+3. Udvid afsnittet **Analyse & forudsigende kodning** for at få vist et sæt filtre.
 
-      ![Forudsigelsesscorefilter i & med forudsigelig kodning.](..\media\PredictionScoreFilter1.png)
+      ![Filter for forudsigelsesscore i afsnittet Analyse & forudsigende kodning.](..\media\PredictionScoreFilter1.png)
 
-   Navngivningskonventionen for forudsigelsesscorefiltre **er Forudsigelsesscore (modelnavn)**. For eksempel er navnet på forudsigelsesscore filteret for en model med navnet **Model A** **Forudsigelsesscore (Model A)**.
+   Navngivningskonventionen for filtre for forudsigelsesscore er **Forudsigelsesscore (modelnavn)**. Filternavnet for forudsigelsesscoren for en model med navnet **Model A** er f.eks. **Forudsigelsesscore (Model A)**.
 
-4. Vælg det forudsigelsesscorefilter, du vil bruge, og klik derefter på **Udført**.
+4. Vælg det filter for forudsigelsesscore, du vil bruge, og klik derefter på **Udført**.
 
-5. På siden med korrektursæt skal du klikke på rullemenuen for forudsigelsesscorefilteret og skrive minimum- og maksimumværdier for prognoseresultatet. Følgende skærmbillede viser f.eks. et forudsigelsesresultatinterval mellem **0,5** og **1,0**.
+5. På siden med korrektursæt skal du klikke på rullelisten for filteret for forudsigelsesscore og skrive minimum- og maksimumværdier for forudsigelsesresultatintervallet. Følgende skærmbillede viser f.eks. et forudsigelsesscoreinterval mellem **.5** og **1.0**.
 
-   ![Minimum- og maksimumværdier for forudsigelsesscorefilteret.](..\media\PredictionScoreFilter2.png)
+   ![Minimum- og maksimumværdier for filteret for forudsigelsesscore.](..\media\PredictionScoreFilter2.png)
 
 6. Klik uden for filteret for automatisk at anvende filteret på korrektursættet.
 
-  En liste over dokumenter med et forudsigelsesresultat inden for det område, du har angivet, vises på siden med korrektursæt.
+  En liste over dokumenter med en forudsigelsesscore inden for det angivne område vises på siden med korrektursæt.
 
-Du kan finde en mere detaljeret vejledning under [Anvende et forudsigelsesfilter på et korrektursæt](predictive-coding-apply-prediction-filter.md).
+Du kan finde flere detaljerede instruktioner under [Anvend et forudsigelsesfilter på et korrektursæt](predictive-coding-apply-prediction-filter.md).
 
 ## <a name="step-4-perform-more-training-rounds"></a>Trin 4: Udfør flere træningsrunder
 
-Det er mere end sandsynligt, at du er nødt til at udføre flere træningsrunder for at træne modulet til bedre at forudsige relevante og ikke-relevante elementer i korrektursættet. Generelt skal du træne modellen nok gange, indtil den er stabil nok til at opfylde dine krav.
+Det er mere end sandsynligt, at du skal udføre flere oplæringsrunder for at oplære modulet for bedre at forudsige relevante og ikke-relevante elementer i korrektursættet. Generelt skal du oplære modellen nok gange, indtil den stabiliserer nok til at opfylde dine krav.
 
-Få mere at vide under [Udfør flere træningsrunder](predictive-coding-train-model.md#perform-additional-training-rounds)
+Du kan finde flere oplysninger under [Udfør yderligere træningsrunder](predictive-coding-train-model.md#perform-additional-training-rounds)
 
-## <a name="step-5-apply-the-final-prediction-score-filter-to-prioritize-review"></a>Trin 5: Anvend det endelige forudsigelsesresultatfilter for at prioritere gennemsyn
+## <a name="step-5-apply-the-final-prediction-score-filter-to-prioritize-review"></a>Trin 5: Anvend det endelige filter til forudsigelsesscore for at prioritere gennemgangen
 
-Gentag vejledningen i trin 3 for at anvende den endelige forudsigelse på korrektursættet for at prioritere gennemgangen af relevante og ikke-relevante elementer, når du har fuldført alle træningsrundne og har stabilt modellen.
+Gentag instruktionerne i trin 3 for at anvende den endelige forudsigelsesscore på gennemgangssættet for at prioritere gennemgangen af relevante og ikke-relevante elementer, når du har fuldført alle oplæringsrunder og stabiliseret modellen.

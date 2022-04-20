@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 879cbe33393158ee9e24107bbe042adc2f727ac6
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3b943569485ffaa96b33208c1c4bf0a491c23a95
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667202"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939471"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Nul tillid udrulningsplan i Microsoft 365
 
@@ -115,18 +115,18 @@ Gå til [**_Evaluer og pilot Microsoft 365 Defender_**](defender/eval-overview.m
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Trin 5. Beskyt og styr følsomme data
 
-Implementer Microsoft Information Protection (MIP) for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de bor eller rejser.
+Implementer Microsoft Purview Information Protection for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
 
-MIP-funktioner er inkluderet i Microsoft 365 Overholdelse og giver dig værktøjerne til at kende dine data, beskytte dine data og forhindre tab af data.
+Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview og giver dig værktøjerne til at kende dine data, beskytte dine data og forhindre tab af data.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Funktionerne til beskyttelse af oplysninger, der beskytter data gennem håndhævelse af politikker" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
 Selvom dette arbejde er repræsenteret øverst i udrulningsstakken, der er illustreret tidligere i denne artikel, kan du starte dette arbejde når som helst.
 
-Microsoft Information Protection indeholder en struktur, proces og egenskaber, som du kan bruge til at nå dine specifikke forretningsmål.
+Microsoft Purview Information Protection indeholder en struktur, proces og egenskaber, som du kan bruge til at nå dine specifikke forretningsmål.
 
-:::image type="content" source="../media/zero-trust/mip-solution-overview.png" alt-text="MIP-strukturen (Microsoft Information Protection)" lightbox="../media/zero-trust/mip-solution-overview.png":::
+![Microsoft Purview Information Protection](../media/zero-trust/mip-solution-overview.png)
 
-Du kan få mere at vide om, hvordan du planlægger og installerer beskyttelse af oplysninger, under [**_Installér en Microsoft Information Protection løsning_**](../compliance/information-protection-solution.md).
+Du kan få flere oplysninger om, hvordan du planlægger og installerer beskyttelse af oplysninger, under [**_Installér en Microsoft Purview-Information Protection-løsning_**](../compliance/information-protection-solution.md). 
 
 Hvis du udruller beskyttelse af oplysninger i forbindelse med regler for beskyttelse af personlige oplysninger, indeholder denne løsningsvejledning en anbefalet struktur for hele processen: [**_Udrul bestemmelser om beskyttelse af personlige oplysninger i forbindelse med Microsoft 365_**](../solutions/information-protection-deploy.md).

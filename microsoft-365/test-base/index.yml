@@ -1,0 +1,64 @@
+### YamlMime:Landing
+title: Dokumentation til Test Base til Microsoft 365
+summary: Test Base for Microsoft 365 er en Azure-tjeneste, der faciliterer datadrevet test af programmer. Den understøttes af styrken ved data og cloudmiljøet og gør det muligt for it-teknikere at drage fordel af intelligent test overalt i verden. Det hjælper dig med at teste dine programmer uden besværet, tidsforpligtelsen og udgifterne til konfiguration og vedligeholdelse af komplekse testmiljøer. Det vigtigste er, at den giver dig adgang til foreløbige Windows-opdateringer på sikre virtuelle maskiner (VM'er) og intelligens i verdensklasse til dine programmer.
+metadata:
+  title: Dokumentation til testbase til M365
+  description: Test Base for Microsoft 365 er en Azure-tjeneste, der faciliterer datadrevet test af programmer. Den understøttes af styrken ved data og cloudmiljøet og gør det muligt for it-teknikere at drage fordel af intelligent test overalt i verden.
+  ms.service: service
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: v-zhifufeng
+  ms.author: v-zhifufeng
+  ms.date: 03/29/2021
+  ms.openlocfilehash: e49550339e3be9dbd93844ee3a06c9bbe4cd0faa
+  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64935955"
+landingContent:
+- title: Om Test Base
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Test Base?
+      url: overview.md
+  - linkListType: get-started
+    links:
+    - text: Opret en Test Base-konto
+      url: createAccount.md
+  - linkListType: tutorial
+    links:
+    - text: yderligere ressourcer
+      url: faq.md
+- title: Kom i gang
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Opret en Test Base-konto
+      url: createAccount.md
+    - text: Test dit program på Test Base
+      url: testoverview.md
+    - text: Byg en pakke
+      url: buildpackage.md
+    - text: Upload dine binære filer
+      url: binaries.md
+    - text: Angiv dine testopgaver
+      url: testtask.md
+    - text: Vælg dine testindstillinger
+      url: testoptions.md
+    - text: Gennemse dine markeringer
+      url: review.md
+    - text: Retningslinjer for testpakke
+      url: contentguideline.md
+    - text: Analyse af hukommelsesregression
+      url: memory.md
+    - text: CPU-regressionsanalyse
+      url: cpu.md
+- title: Hent referencer
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Ofte stillede spørgsmål
+      url: faq.md

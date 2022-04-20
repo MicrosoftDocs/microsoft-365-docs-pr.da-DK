@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du anvender en opbevaringsmærkat på en model i SharePoint Syntex.
-ms.openlocfilehash: 17bfc0121d18f30b03cc42585cb214b649597ff6
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 281ff940377f033690f1ed1e7146c8aefe645bf1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882500"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941803"
 ---
 # <a name="apply-a-retention-label-to-a-model-in-sharepoint-syntex"></a>Anvend en opbevaringsmærkat på en model i SharePoint Syntex
 
@@ -36,7 +36,7 @@ Med opbevaringsmærkater kan du anvende opbevaringsindstillinger på de dokument
 Du kan anvende en allerede eksisterende opbevaringsmærkat på din model via dine modelindstillinger på din models startside. 
 
 > [!Important]
-> Hvis opbevaringsmærkater skal være tilgængelige, så de kan anvendes på modeller, der forstår dit dokument, skal de [oprettes](../compliance/file-plan-manager.md#create-retention-labels) og [publiceres](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) i Microsoft 365 Overholdelsescenter.
+> Hvis opbevaringsmærkater skal være tilgængelige, så de kan anvendes på modeller til dokumentforståelse, skal de [oprettes](../compliance/file-plan-manager.md#create-retention-labels) og [publiceres](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) på Microsoft Purview-overholdelsesportalen.
 
 ## <a name="to-add-a-retention-label-to-a-document-understanding-model"></a>Sådan føjer du en opbevaringsmærkat til en model til dokumentforståelse
 
@@ -74,7 +74,7 @@ Alle *forsikringsmeddelelsesdokumenter*, som din model identificerer, vil f.eks.
 ## <a name="to-add-a-retention-label-to-a-form-processing-model"></a>Sådan føjer du en opbevaringsmærkat til en formularbehandlingsmodel
 
 > [!Important]
-> Hvis opbevaringsmærkater skal være tilgængelige for din formularbehandlingsmodel, skal de [oprettes](../compliance/file-plan-manager.md#create-retention-labels) og [publiceres](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) i Microsoft 365 Overholdelsescenter.
+> Hvis opbevaringsmærkater skal være tilgængelige for din formularbehandlingsmodel, skal de [oprettes](../compliance/file-plan-manager.md#create-retention-labels) og [publiceres](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) på Microsoft Purview-overholdelsesportalen.
 
 Du kan enten anvende en opbevaringsmærkat på en formularbehandlingsmodel, når du opretter en model, eller du kan anvende den på en eksisterende model.
 

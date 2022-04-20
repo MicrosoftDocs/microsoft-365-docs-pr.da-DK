@@ -1,7 +1,7 @@
 ---
-title: Microsoft-sikkerhedsportaler og -administrationscentre
-description: Find den rigtige Microsoft Administration eller portal til administration af forskellige tjenester relateret Microsoft 365 sikkerhed
-keywords: security, portals, Microsoft 365, M365, security center, admin center, URL, link, Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender Security Center, Microsoft Defender for Identity, Microsoft Defender for Office 365 , MCAS, WDSI, SCC, Intune, MDM, MEM, ASC, Cloud App Security, Azure AD, security & compliance center
+title: Microsofts sikkerhedsportaler og administrationscentre
+description: Find det rette Microsoft Administration eller -portal til administration af forskellige tjenester, der er relateret til Microsoft 365 sikkerhed
+keywords: sikkerhed, portaler, Microsoft 365, M365, Sikkerhedscenter, Administration, URL-adresse, link, Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender Security Center, Microsoft Defender for Identity, Microsoft Defender for Office 365, MCAS, WDSI, SCC, Intune, MDM, MEM, ASC, Cloud App Security , Azure AD, security & compliance Center
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -16,36 +16,36 @@ ms.collection:
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: c0861dbd3e0f3eb5219baecd19a97828a680ca19
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 2c476e78a0d5af6267ae93879f5399e521e7461f
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63592662"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941583"
 ---
-# <a name="microsoft-security-portals-and-admin-centers"></a>Microsoft-sikkerhedsportaler og -administrationscentre
+# <a name="microsoft-security-portals-and-admin-centers"></a>Microsofts sikkerhedsportaler og administrationscentre
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-Mens [Microsoft 365 Defender-portalen](microsoft-365-defender.md#the-microsoft-365-defender-portal) er det nye hjem til overvågning og administration af sikkerhed på tværs af dine identiteter, data, enheder og apps, skal du have adgang til forskellige portaler til bestemte specialiserede opgaver.
+Selvom [Microsoft 365 Defender portal](microsoft-365-defender.md#the-microsoft-365-defender-portal) er det nye hjem til overvågning og administration af sikkerhed på tværs af dine identiteter, data, enheder og apps, skal du have adgang til forskellige portaler til visse specialiserede opgaver.
 
 > [!TIP] 
-> For at få adgang til forskellige relevante portaler Microsoft 365 Defender portal skal du **vælge Flere ressourcer** i navigationsruden.
+> Hvis du vil have adgang til forskellige relevante portaler fra Microsoft 365 Defender portal, skal du vælge **Flere ressourcer** i navigationsruden.
 
 ## <a name="security-portals"></a>Sikkerhedsportaler
 
-Sikkerhedsoperatorer og administratorer kan gå til følgende portaler for at administrere sikkerhedsspecifikke indstillinger, undersøge mulige trusselsaktiviteter, reagere på aktive trusler og samarbejde med it-administratorer om at løse problemer.
+Sikkerhedsoperatører og -administratorer kan gå til følgende portaler for at administrere sikkerhedsspecifikke indstillinger, undersøge mulige trusselsaktiviteter, reagere på aktive trusler og samarbejde med it-administratorer om at løse problemer.
 <p></p>
 
 | Portalnavn | Beskrivelse | Link |
 |---|---|---| 
-| Microsoft 365 Defender-portal | Overvåg og svar på trusselsaktivitet, og styrk sikkerheden på tværs af dine identiteter, mails, data, slutpunkter og apps med [Microsoft 365 Defender](microsoft-365-defender.md) | [security.microsoft.com](https://security.microsoft.com/) |
-| Microsoft Defender Security Center | Overvåg og svar på trusselsaktivitet på dine slutpunkter ved hjælp af de funktioner, der leveres med [Microsoft Defender til Slutpunkt](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) | [securitycenter.windows.com](https://securitycenter.microsoft.com/) |
-| Security & Compliance Center | Administrer [Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md) [og Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) for at beskytte dine mail- og samarbejdstjenester og sikre overholdelse af forskellige regler for datahåndtering | [protection.office.com](https://protection.office.com) |
-| Defender til skyportalen | Brug [Microsoft Defender for Cloud](/azure/security-center/security-center-intro) til at styrke sikkerheden i dine datacentre og dine hybride arbejdsbelastninger i skyen | [portal.azure.com/#blade/Microsoft_Azure_Security](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0) |
-| Microsoft Defender for Identity-portal | Identificer, find og undersøg avancerede trusler, kompromitterede identiteter og skadelige Insider-handlinger ved hjælp af Active Directory-signaler [med Microsoft Defender til identitet](/azure-advanced-threat-protection/what-is-atp) | [portal.atp.azure.com](https://portal.atp.azure.com/) |
-| Defender for Cloud Apps Portal | Brug [Microsoft Defender til skyapps](/cloud-app-security/what-is-cloud-app-security) til at få større synlighed, kontrol over datarejse og avancerede analyser til at identificere og bekæmpe cybertrusler på skytjenester | [portal.cloudappsecurity.com](https://portal.cloudappsecurity.com/) |
-| Microsoft Sikkerhedsviden portal | Få sikkerhedsintelligensopdateringer til Microsoft Defender til Slutpunkt, indsend eksempler, og udforsk trusselscykelopedia | [microsoft.com/wdsi](https://microsoft.com/wdsi) |
+| Microsoft 365 Defender portal | Overvåg og reager på trusselsaktivitet, og styrk din sikkerhedsholdning på tværs af dine identiteter, mails, data, slutpunkter og apps med [Microsoft 365 Defender](microsoft-365-defender.md) | [security.microsoft.com](https://security.microsoft.com/) |
+| Microsoft Defender Security Center | Overvåg og reager på trusselsaktivitet på dine slutpunkter ved hjælp af funktioner, der leveres med [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) | [securitycenter.windows.com](https://securitycenter.microsoft.com/) |
+| Security & Compliance Center | Administrer [Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md) og [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) for at beskytte dine mail- og samarbejdstjenester og sikre overholdelse af forskellige regler for datahåndtering | [protection.office.com](https://protection.office.com) |
+| Defender for Cloud Portal | Brug [Microsoft Defender for Cloud](/azure/security-center/security-center-intro) til at styrke dine datacentres og dine hybride arbejdsbelastninger i clouden | [portal.azure.com/#blade/Microsoft_Azure_Security](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0) |
+| Microsoft Defender for Identity portal | Identificer, registrer og undersøg avancerede trusler, kompromitterede identiteter og skadelige insiderhandlinger ved hjælp af Active Directory-signaler med [Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) | [portal.atp.azure.com](https://portal.atp.azure.com/) |
+| Defender for Cloud Apps-portalen | Brug [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) til at få omfattende synlighed, kontrol over datarejser og avancerede analyser til at identificere og bekæmpe cybertrusler på cloudtjenester | [portal.cloudappsecurity.com](https://portal.cloudappsecurity.com/) |
+| Microsoft Sikkerhedsviden portal | Få opdateringer til sikkerhedsintelligens for Microsoft Defender for Endpoint, send eksempler, og udforsk trusselscyklopædiet | [microsoft.com/wdsi](https://microsoft.com/wdsi) |
 
 ## <a name="portals-for-other-workloads"></a>Portaler til andre arbejdsbelastninger
 
@@ -54,9 +54,9 @@ Selvom disse portaler ikke er specifikt til administration af sikkerhed, underst
 
 | Portalnavn | Beskrivelse | Link | 
 |---|---|---| 
-| Azure-portal | Få vist og administrer alle dine [Azure-ressourcer](/azure/azure-resource-manager/management/overview)  | [portal.azure.com](https://portal.azure.com/) |
-| Azure Active Directory portal | Få vist og [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) | [aad.portal.azure.com](https://aad.portal.azure.com/) |
-| Microsoft 365 Overholdelsescenter | Administrer politikker for datahåndtering, og sørg [for overholdelse af regler](/compliance/regulatory/offering-home) | [compliance.microsoft.com](https://compliance.microsoft.com/) |
-| Microsoft 365 Administration | Konfigurere Microsoft 365 tjenester, administrere roller, licenser og spore opdateringer til dine Microsoft 365 tjenester | [admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2166757) |
-| Microsoft Endpoint Manager Administration | Brug [Microsoft Endpoint Manager til](/mem/configmgr/) at administrere og sikre enheder ved hjælp af kombinerede intune- Konfigurationsstyring funktioner | [devicemanagement.microsoft.com](https://devicemanagement.microsoft.com/) |
-| Microsoft Intune portal | Brug [Microsoft Intune til](/intune/fundamentals/what-is-intune) at implementere enhedspolitikker og overvåge enheder for overholdelse af regler og standarder | [endpoint.microsoft.com](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/overview)
+| Azure Portal | Få vist og administrer alle dine [Azure-ressourcer](/azure/azure-resource-manager/management/overview)  | [portal.azure.com](https://portal.azure.com/) |
+| Azure Active Directory portal | Få vist og administrer [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) | [aad.portal.azure.com](https://aad.portal.azure.com/) |
+| Microsoft Purview-overholdelsesportal | Administrer politikker for datahåndtering, og sørg for [overholdelse af regler](/compliance/regulatory/offering-home) | [compliance.microsoft.com](https://compliance.microsoft.com/) |
+| Microsoft 365 Administration | Konfigurer Microsoft 365 tjenester, administrer roller, licenser og spor opdateringer til dine Microsoft 365 tjenester | [admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2166757) |
+| Microsoft Endpoint Manager Administration | Brug [Microsoft Endpoint Manager](/mem/configmgr/) til at administrere og sikre enheder ved hjælp af kombinerede Intune og Configuration Manager funktioner | [devicemanagement.microsoft.com](https://devicemanagement.microsoft.com/) |
+| Microsoft Intune portal | Brug [Microsoft Intune](/intune/fundamentals/what-is-intune) til at installere enhedspolitikker og overvåge enheder for overholdelse af angivne standarder | [endpoint.microsoft.com](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/overview)

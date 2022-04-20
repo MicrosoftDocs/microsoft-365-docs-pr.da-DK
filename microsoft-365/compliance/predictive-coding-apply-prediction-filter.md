@@ -1,5 +1,5 @@
 ---
-title: Anvende forudsigelsesscorefilteret på elementer i et korrektursæt
+title: Anvend filteret med forudsigelsesresultatet på et korrektursæt
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,59 +13,59 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Brug et forudsigelsesscorefilter til at vise elementer, som en forudsigelig kodningsmodel som forventet relevant eller ikke relevant.
-ms.openlocfilehash: 04d0881e36c28a70df58a1aa7b054c641dfeeb2a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Brug et filter til forudsigelsesscore til at vise elementer, som en forudsigende kodningsmodel er forudsagt som relevant eller ikke relevant.
+ms.openlocfilehash: 261c77031eb0831db11878c2ce0c573eb3b9db6e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63595955"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942287"
 ---
-# <a name="apply-a-prediction-score-filter-to-a-review-set-preview"></a>Anvende et forudsigelsesscorefilter på et korrektursæt (forhåndsvisning)
+# <a name="apply-a-prediction-score-filter-to-a-review-set-preview"></a>Anvend et filter for forudsigelsesscore på et korrektursæt (eksempelvisning)
 
-Når du har oprettet en forudsigelig kodningsmodel i Advanced eDiscovery og trænet den til det punkt, hvor den er stabil, kan du anvende forudsigelsesscorefilteret til at vise korrektursætelementer, som modellen har fastsat, relevante (eller ikke relevante). Når du opretter en model, oprettes også et tilsvarende forudsigelsesscorefilter. Du kan bruge dette filter til at vise elementer, der er tildelt en forudsigelsesscore inden for et angivet område. Generelt er forudsigelsesresultater mellem **0** og **5** tildelt elementer, som modellen har forudsagt, ikke relevante. Elementer, der er tildelt **forudsigelsesresultater mellem 0,5** **og 1,0** , er elementer, som modellen har forudsagt, er relevante.
+Når du har oprettet en forudsigende kodemodel i Microsoft Purview eDiscovery (Premium) og oplært den til det punkt, hvor den er stabil, kan du anvende filteret til forudsigelsesscore til at vise elementer, som modellen har angivet er relevante (eller ikke relevante). Når du opretter en model, oprettes der også et tilsvarende filter for forudsigelsesscore. Du kan bruge dette filter til at få vist elementer, der er tildelt en forudsigelsesscore inden for et angivet område. Generelt tildeles forudsigelsesscore mellem **0** og **0,5** elementer, som modellen har forudsagt, ikke relevante. Elementer, der er tildelt forudsigelsesscores mellem **.5** og **1.0** , er elementer, som modellen har forudsagt, er relevante.
 
-Her er to måder, hvorpå du kan bruge forudsigelsesscorefilteret:
+Her er to måder, du kan bruge filteret for forudsigelsesscore på:
 
-- Prioriter gennemgangen af elementer i et korrektursæt, som modellen har forudsagt, er relevante.
+- Prioriter gennemgangen af elementer i et korrektursæt, som modellen har forudsagt er relevante.
 
-- Cull-elementer fra det korrektursæt, som modellen har forudsagt, er ikke relevante. Alternativt kan du bruge forudsigelsesscorefilteret til at af prioritere gennemgangen af ikke-relevante elementer.
+- Elementer til udsætning fra det korrektursæt, som modellen har forudsagt, er ikke relevante. Alternativt kan du bruge filteret for forudsigelsesscore til at fraprioritere gennemgangen af ikke-relevante elementer.
 
-## <a name="before-you-apply-a-prediction-score-filter"></a>Før du anvender et forudsigelsesscorefilter
+## <a name="before-you-apply-a-prediction-score-filter"></a>Før du anvender et filter til forudsigelsesscore
 
-- Opret en forudsigelig kodningsmodel, så der oprettes et tilsvarende forudsigelsesscorefilter.
+- Opret en forudsigende kodemodel, så der oprettes et tilsvarende filter for forudsigelsesscore.
 
-- Du kan anvende et forudsigelsesscorefilter efter en hvilken som helst af træningsrunderne. Men det kan være en ide at vente, efter der er udført flere runder, eller indtil modellen er stabil, før du bruger filteret til forudsigelsesscore.
+- Du kan anvende et filter for forudsigelsesscore efter en af oplæringsrunderene. Det kan dog være en god idé at vente, når du har udført flere runder, eller indtil modellen er stabil, før du bruger filteret for forudsigelsesscore.
 
-## <a name="apply-a-prediction-score-filter"></a>Anvend et forudsigelsesscorefilter
+## <a name="apply-a-prediction-score-filter"></a>Anvend et filter til forudsigelsesscore
 
-1. I Microsoft 365 Overholdelsescenter skal du åbne Advanced eDiscovery store og små bogstaver, vælge **fanen Gennemse sæt** og derefter åbne korrektursættet.
+1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt**, og åbn derefter korrektursættet.
 
    ![Klik på Filtre for at få vist pop op-siden Filtre.](..\media\PredictionScoreFilter0.png)   
 
-   De forudindlæste standardfiltre vises øverst på siden med korrektursæt. Du kan lade disse være indstillet **til Enhver**.
+   De forudindlæste standardfiltre vises øverst på siden med korrektursæt. Du kan lade disse være angivet til **Enhver**.
 
-2. Klik **på Filtre** for at få **vist pop** op-siden Filtre.
+2. Klik på **Filtre** for at få vist pop op-siden **Filtre** .
 
-3. Udvid **sektionen Analytics & forudsigelig kodning** for at få vist et sæt filtre.
+3. Udvid afsnittet **Analyse & forudsigende kodning** for at få vist et sæt filtre.
 
-      ![Forudsigelsesscorefilter i & med forudsigelig kodning.](..\media\PredictionScoreFilter1.png)
+      ![Filter for forudsigelsesscore i afsnittet Analyse & forudsigende kodning.](..\media\PredictionScoreFilter1.png)
 
-   Navngivningskonventionen for forudsigelsesscorefiltre **er Forudsigelsesscore (modelnavn)**. For eksempel er navnet på forudsigelsesscore filteret for en model med navnet **Model A** **Forudsigelsesscore (Model A)**.
+   Navngivningskonventionen for filtre for forudsigelsesscore er **Forudsigelsesscore (modelnavn)**. Filternavnet for forudsigelsesscoren for en model med navnet **Model A** er f.eks. **Forudsigelsesscore (Model A)**.
 
-4. Vælg det forudsigelsesscorefilter, du vil bruge, og klik derefter på **Udført**.
+4. Vælg det filter for forudsigelsesscore, du vil bruge, og klik derefter på **Udført**.
 
-5. På siden med korrektursæt skal du klikke på rullemenuen for forudsigelsesscorefilteret og skrive minimum- og maksimumværdier for prognoseresultatet. Følgende skærmbillede viser f.eks. et forudsigelsesresultatinterval mellem **0,5** og **1,0**.
+5. På siden med korrektursæt skal du klikke på rullelisten for filteret for forudsigelsesscore og skrive minimum- og maksimumværdier for forudsigelsesresultatintervallet. Følgende skærmbillede viser f.eks. et forudsigelsesscoreinterval mellem **.5** og **1.0**.
 
-   ![Minimum- og maksimumværdier for forudsigelsesscorefilteret.](..\media\PredictionScoreFilter2.png)
+   ![Minimum- og maksimumværdier for filteret for forudsigelsesscore.](..\media\PredictionScoreFilter2.png)
 
 6. Klik uden for filteret for automatisk at anvende filteret på korrektursættet.
 
-  En liste over dokumenter med et forudsigelsesresultat inden for det område, du har angivet, vises på siden med korrektursæt. 
+  En liste over dokumenter med en forudsigelsesscore inden for det angivne område vises på siden med korrektursæt. 
 
   > [!TIP]
-  > Hvis du vil have vist den faktiske forudsigelsesscore for et dokument, kan du klikke **på fanen Metadata** i læseruden. Forudsigelsens resultater for alle modeller i korrektursættet vises i **metadataegenskaben Relevansstegn** .
+  > Hvis du vil have vist den faktiske forudsigelsesscore, der er tildelt et dokument, kan du klikke på fanen **Metadata** i læseruden. Forudsigelsesscorerne for alle modeller i korrektursættet vises i egenskaben **Relevansscores-metadata** .
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Du kan finde flere oplysninger om brug af filtre [under Forespørg og filtrer indhold i et korrektursæt](review-set-search.md).
+- Du kan få flere oplysninger om brug af filtre under [Forespørg om og filtrer indhold i et anmeldelsessæt](review-set-search.md).

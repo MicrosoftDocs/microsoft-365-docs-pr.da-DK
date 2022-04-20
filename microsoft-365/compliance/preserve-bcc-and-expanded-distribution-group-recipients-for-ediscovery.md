@@ -12,23 +12,23 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 description: In-Place venteposition, procesretsholdning og Microsoft 365 opbevaringspolitikker giver dig mulighed for at bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og krav til eDiscovery.
-ms.openlocfilehash: 1477fbb2425138dc428fe348fbe85cac1f12183b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a088407277f7ebced3aa69ee9ff807913f9b0c85
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758547"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942111"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>Bevar Bcc- og udvidede distributionsgruppemodtagere for eDiscovery
-
-I forbindelse med procesførelser, eDiscovery-ventepositioner og [Microsoft 365 opbevaringspolitikker](./retention.md) (oprettet i Microsoft 365 Overholdelsescenter) kan du bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og krav til eDiscovery. Oplysninger om modtagere, der er direkte adresseret i felterne Til og Cc i en meddelelse, medtages som standard i alle meddelelser. Men din organisation kan kræve muligheden for at søge efter og gengive oplysninger om alle modtagere af en meddelelse. Dette omfatter:
-
-- **Modtagere, der er adresseret ved hjælp af Bcc-feltet i en meddelelse:** Bcc-modtagere gemmes i meddelelsen i afsenderens postkasse, men medtages ikke i brevhoveder i meddelelsen, der leveres til modtagere.
-
-- **Udvidede distributionsgruppemodtagere:** Modtagere, der modtager meddelelsen, fordi de er medlemmer af en distributionsgruppe, som meddelelsen er adresseret til, enten i felterne Til, Cc eller Bcc.
-
-Exchange Online og Exchange Server 2013 (kumulativ opdatering 7 og nyere versioner) bevarer oplysninger om Bcc og udvidede modtagere af distributionsgrupper. Du kan søge efter disse oplysninger ved hjælp af et eDiscovery-værktøj i Microsoft 365 Overholdelsescenter.
-
+  
+I forbindelse med procesførelser, eDiscovery-ventepositioner og [Microsoft 365 opbevaringspolitikker](./retention.md) (oprettet i Microsoft Purview-overholdelsesportalen) kan du bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og eDiscovery-krav. Oplysninger om modtagere, der er direkte adresseret i felterne Til og Cc i en meddelelse, medtages som standard i alle meddelelser. Men din organisation kan kræve muligheden for at søge efter og gengive oplysninger om alle modtagere af en meddelelse. Dette omfatter:
+  
+- **Modtagere, der er adresseret ved hjælp af Bcc-feltet i en meddelelse:** Bcc-modtagere gemmes i meddelelsen i afsenderens postkasse, men medtages ikke i brevhoveder i meddelelsen, der leveres til modtagere. 
+    
+- **Udvidede distributionsgruppemodtagere:** Modtagere, der modtager meddelelsen, fordi de er medlemmer af en distributionsgruppe, som meddelelsen er adresseret til, enten i felterne Til, Cc eller Bcc. 
+    
+Exchange Online og Exchange Server 2013 (kumulativ opdatering 7 og nyere versioner) bevarer oplysninger om Bcc og udvidede modtagere af distributionsgrupper. Du kan søge efter disse oplysninger ved hjælp af et eDiscovery-værktøj på overholdelsesportalen.
+  
 ## <a name="how-bcc-recipients-and-expanded-distribution-group-recipients-are-preserved"></a>Sådan bevares Bcc-modtagere og udvidede modtagere af distributionsgrupper
 
 Som tidligere nævnt gemmes oplysninger om Bcc-modtagere sammen med meddelelsen i afsenderens postkasse. Disse oplysninger er indekseret og tilgængelige for eDiscovery-søgninger og ventepositioner.

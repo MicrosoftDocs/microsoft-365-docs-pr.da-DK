@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Vi frigiver nye beskedpolitikker for Microsoft Defender for Office 365. Vi udfaser også to eksisterende beskedpolitikker, der er blevet erstattet af de nye.
-ms.openlocfilehash: afdc547fc658b40c2eee7a92ef2043326e159b32
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 339d16f7cd4e481d408a13d2e738cdef9fc991bf
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759473"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939625"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Nye beskedpolitikker i Microsoft Defender for Office 365
 
@@ -97,7 +97,7 @@ De nye beskeder begynder at udløse og udløse AIR-undersøgelserne i din organi
 
 ## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Det skal du gøre for at forberede dig på disse ændringer
 
-Den måde, din organisation bruger disse beskeder på, bestemmer, hvad du skal gøre for at forberede dig. Hvis du har driftsklargjort beskederne og bruger eller bruger dem enten via en API, en besked via mail eller i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, skal du ændre dine arbejdsprocesser.
+Den måde, din organisation bruger disse beskeder på, bestemmer, hvad du skal gøre for at forberede dig. Hvis du har driftsklargjort beskederne og bruger eller bruger dem enten via en API, en besked via mail eller i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, skal du ændre dine arbejdsprocesser.
 
 **Hvis du ikke har operationaliseret disse beskeder, kan du gøre et af følgende:**
 

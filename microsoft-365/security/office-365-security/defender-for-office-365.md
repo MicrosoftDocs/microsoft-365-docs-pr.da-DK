@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Office 365 – CSH
+title: Microsoft Defender for Office 365 - CSH
 ms.author: tracyp
 author: msfttracyp
 manager: dansimp
@@ -17,160 +17,160 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 - intro-overview
-description: Microsoft Defender til Office 365 indeholder Pengeskab vedhæftede filer, Pengeskab links, avancerede antiphishing-værktøjer, rapporteringsværktøjer og funktioner til trusselsintelligens.
+description: Microsoft Defender for Office 365 omfatter Pengeskab Attachments, Pengeskab Links, avancerede værktøjer til anti-phishing, rapporteringsværktøjer og funktioner til trusselsintelligens.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b8041962ca1a696146f9a5828c66b1a6800c4b01
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: a181f8ef6bb7ca018fb9ddf0f0adc4fe565b73e1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683729"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941539"
 ---
-# <a name="microsoft-defender-for-office-365"></a>Microsoft Defender til Office 365
+# <a name="microsoft-defender-for-office-365"></a>Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Denne artikel er beregnet til virksomhedskunder, der [har Microsoft Defender Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Hvis du bruger Outlook.com, Microsoft 365 Family eller Microsoft 365 Personal, og du leder efter oplysninger om Pengeskab Links eller Pengeskab Vedhæftede filer i Outlook, skal du se Avanceret [Outlook.com for Microsoft 365 abonnenter](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Hvis du bruger Outlook.com, Microsoft 365 Family eller Microsoft 365 Personal, og du leder efter oplysninger om Pengeskab links eller Pengeskab vedhæftede filer i Outlook, skal du se [Avanceret Outlook.com sikkerhed for Microsoft 365 abonnenter](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Defender til Office 365 omfatter:
+Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Defender for Office 365 omfatter:
 
-- **[Politikker for trusselsbeskyttelse](#configure-microsoft-defender-for-office-365-policies)**: Definer politikker for trusselsbeskyttelse for at angive det passende beskyttelsesniveau for organisationen.
+- **[Politikker til trusselsbeskyttelse](#configure-microsoft-defender-for-office-365-policies)**: Definer politikker for trusselsbeskyttelse for at angive det relevante beskyttelsesniveau for din organisation.
 
-- **[Rapporter](#view-microsoft-defender-for-office-365-reports)**: Få vist rapporter i realtid for at overvåge Defender Office 365 ydeevnen i organisationen.
+- **[Rapporter](#view-microsoft-defender-for-office-365-reports)**: Få vist rapporter i realtid for at overvåge Defender for Office 365 ydeevne i din organisation.
 
-- **[Funktioner til trusselsundersøgelse og svar](#use-threat-investigation-and-response-capabilities)**: Brug førende værktøjer til at undersøge, forstå, simulere og forhindre trusler.
+- **[Trusselsundersøgelses- og svarfunktioner](#use-threat-investigation-and-response-capabilities)**: Brug avancerede værktøjer til at undersøge, forstå, simulere og forhindre trusler.
 
-- **[Automatiserede undersøgelses- og svarmuligheder](office-365-air.md)**: Spar tid og besvær med at undersøge og mindske trusler.
+- **[Automatiserede undersøgelses- og svarfunktioner](office-365-air.md)**: Spar tid og kræfter på at undersøge og afhjælpe trusler.
 
-## <a name="interactive-guide-to-microsoft-defender-for-office-365"></a>Interaktiv guide til Microsoft Defender for Office 365
+## <a name="interactive-guide-to-microsoft-defender-for-office-365"></a>Interaktiv vejledning til Microsoft Defender for Office 365
 
-I denne interaktive vejledning lærer du, hvordan du beskytter din organisation med Microsoft Defender Office 365. Du kan se, hvordan Defender til Office 365 kan hjælpe dig med at definere beskyttelsespolitikker, analysere trusler til din organisation og reagere på angreb.
+I denne interaktive vejledning lærer du, hvordan du beskytter din organisation med Microsoft Defender for Office 365. Du kan se, hvordan Defender for Office 365 kan hjælpe dig med at definere beskyttelsespolitikker, analysere trusler mod din organisation og reagere på angreb.
 
 [Se den interaktive vejledning](https://aka.ms/MSDO-IG)
 
 ## <a name="getting-started"></a>Introduktion
 
-Hvis du er ny bruger af Microsoft Defender for Office 365, eller hvis du lærer bedst ved at gøre *det, kan* det være en fordel at bryde den indledende Defender for Office 365-konfiguration i dele, undersøge og få vist rapporter ved hjælp af denne artikel som en reference. Her er logiske dele af tidlig konfiguration:
+Hvis du ikke kender Microsoft Defender for Office 365 eller lærer bedst ved *at gøre det*, kan det være en fordel at opdele den indledende Defender for Office 365 konfiguration i dele, undersøge og få vist rapporter ved hjælp af denne artikel som reference. Her er logiske tidlige konfigurationssegmenter:
 
 - Konfigurer alt med "*anti*" i navnet.
   - antimalware
-  - antiphishing
-  - antispam
-- Konfigurer alt med "*sikkert*" i navnet.
+  - anti-phishing
+  - anti-spam
+- Konfigurer alt med "*sikker*" i navnet.
   - Sikre links
   - Pengeskab vedhæftede filer
 - Forsvar arbejdsbelastningerne (f.eks. SharePoint Online, OneDrive og Teams)
-- Beskyt med automatisk tømning uden time (ZAP).
+- Beskyt med automatisk udrensning på nul timer (ZAP).
 
-Klik på dette link for at [lære ved at gøre dette](protect-against-threats.md).
+Klik [på dette link](protect-against-threats.md) for at få mere at vide ved at gøre det.
 
 > [!NOTE]
-> Microsoft Defender til Office 365 fås i to forskellige Plan-typer. Du kan se, om du har **Plan 1** , hvis du har "Registreringer i realtid" og **Plan 2**, hvis du har Threat Explorer. Den Plan, du har, påvirker de værktøjer, du vil se, så du skal være sikker på, at du er opmærksom på din plan, efterhånden som du lærer.
+> Microsoft Defender for Office 365 findes i to forskellige plantyper. Du kan se, om du har **Plan 1** , hvis du har 'Realtidsregistreringer' og **Plan 2**, hvis du har Threat Explorer. Den Plan, du har, påvirker de værktøjer, du vil se, så vær sikker på, at du er opmærksom på din plan, efterhånden som du lærer.
 
-## <a name="microsoft-defender-for-office-365-plan-1-and-plan-2"></a>Microsoft Defender til Office 365 Plan 1 og Plan 2
+## <a name="microsoft-defender-for-office-365-plan-1-and-plan-2"></a>Microsoft Defender for Office 365 Plan 1 og Plan 2
 
-Følgende tabel opsummerer, hvad hver plan indeholder.
+I følgende tabel opsummeres det, der er inkluderet i de enkelte planer.
 
-|Defender til Office 365 Plan 1|Defender til Office 365 Plan 2|
+|Defender for Office 365 Plan 1|Defender for Office 365 Plan 2|
 |---|---|
-|Konfigurations-, beskyttelses- og registreringsfunktioner: <ul><li>[Pengeskab vedhæftede filer](safe-attachments.md)</li><li>[Sikre links](safe-links.md)</li><li>[Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Beskyttelse mod phishing i Defender til Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Registreringer i realtid](threat-explorer.md)</li></ul>|Defender for Office 365 Plan 1-funktioner <p> --- plus --- <p> Automatisering, undersøgelse, afhjælpning og uddannelsesfunktioner: <ul><li>[Threat Trackers](threat-trackers.md)</li><li>[Threat Explorer](threat-explorer.md)</li><li>[Automatiseret undersøgelse og svar](office-365-air.md)</li><li>[Kursus i angrebssimulering](attack-simulation-training.md)</li><li>[Proaktivt på jagt efter trusler med avanceret jagt på Microsoft 365 Defender](../defender/advanced-hunting-overview.md)</li><li>[Undersøg hændelser i Microsoft 365 Defender](../defender/investigate-incidents.md)</li><li>[Undersøg beskeder i Microsoft 365 Defender](../defender/investigate-alerts.md)</li></ul>|
+|Konfiguration, beskyttelse og registreringsfunktioner: <ul><li>[Sikre vedhæftede filer](safe-attachments.md)</li><li>[Sikre links](safe-links.md)</li><li>[Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Beskyttelse mod phishing i Defender for Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Registreringer i realtid](threat-explorer.md)</li></ul>|Funktioner i Defender for Office 365 Plan 1 <p> --- plus --- <p> Automatiserings-, undersøgelses-, afhjælpnings- og uddannelsesfunktioner: <ul><li>[Trusselssporinger](threat-trackers.md)</li><li>[Trusselsoversigt](threat-explorer.md)</li><li>[Automatiseret undersøgelse og svar](office-365-air.md)</li><li>[Oplæring i angrebssimulering](attack-simulation-training.md)</li><li>[Gå proaktivt på jagt efter trusler med avanceret jagt i Microsoft 365 Defender](../defender/advanced-hunting-overview.md)</li><li>[Undersøg hændelser i Microsoft 365 Defender](../defender/investigate-incidents.md)</li><li>[Undersøg underretninger i Microsoft 365 Defender](../defender/investigate-alerts.md)</li></ul>|
 
-- Microsoft Defender til Office 365 Plan 2 er inkluderet i Office 365 E5, Office 365 A5 og Microsoft 365 E5.
+- Microsoft Defender for Office 365 Plan 2 er inkluderet i Office 365 E5, Office 365 A5 og Microsoft 365 E5.
 
-- Microsoft Defender til Office 365 Plan 1 er inkluderet i Microsoft 365 Business Premium.
+- Microsoft Defender for Office 365 Plan 1 er inkluderet i Microsoft 365 Business Premium.
 
-- Microsoft Defender for Office 365 Plan 1 og Defender Office 365 Plan 2 er hver især tilgængelige som et tilføjelsesprogrammet for visse abonnementer. Du kan få mere at vide ved at se her et andet link [Tilgængelighed af funktionen på tværs af Microsoft Defender Office 365-planer](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+- Microsoft Defender for Office 365 Plan 1 og Defender for Office 365 Plan 2 er hver især tilgængelige som et tilføjelsesprogram til visse abonnementer. Hvis du vil have mere at vide, kan du se dette link [Funktionstilgængelighed på tværs af Microsoft Defender for Office 365-planer](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
-- Funktionen [Pengeskab Dokumenter](safe-docs.md) er kun tilgængelig for brugere med Microsoft 365 E5- eller Microsoft 365 E5 Sikkerhed-licenser (ikke inkluderet i Microsoft Defender til Office 365-planer).
+- Funktionen [Sikre dokumenter](safe-docs.md) er kun tilgængelig for brugere med Microsoft 365 E5- eller Microsoft 365 E5-sikkerhedslicenser (ikke inkluderet i Microsoft Defender for Office 365-planer).
 
-- Hvis dit nuværende abonnement ikke omfatter Microsoft Defender til [Office 365, og](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html) du vil have det, skal du kontakte salg for at starte en prøveversion og finde ud af, hvordan Microsoft Defender for Office 365 kan fungere for i din organisation.
+- Hvis dit aktuelle abonnement ikke omfatter Microsoft Defender for Office 365, og du vil have det, skal du [kontakte salg for at starte en prøveversion](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html) og finde ud af, hvordan Microsoft Defender for Office 365 kan fungere i din organisation.
 
-- Microsoft Defender til Office 365 P2-kunder har **adgang til Microsoft 365 Defender integration** til effektivt at registrere, gennemse og reagere på hændelser og beskeder.
+- Microsoft Defender for Office 365 P2-kunder har adgang til **Microsoft 365 Defender-integration** til effektivt at registrere, gennemse og reagere på hændelser og beskeder.
 
-## <a name="configure-microsoft-defender-for-office-365-policies"></a>Konfigurer Microsoft Defender til Office 365 politikker
+## <a name="configure-microsoft-defender-for-office-365-policies"></a>Konfigurer Microsoft Defender for Office 365 politikker
 
-Med Microsoft Defender for Office 365 kan organisationens sikkerhedsteam konfigurere beskyttelsen ved at <https://security.microsoft.com> definere politikker på Microsoft 365 Defender-portalen på Mail **&-samarbejdspolitikker** \> **& regler** \> **for trusselspolitikker**. Eller du kan gå direkte til siden **Med Trusselspolitikker** ved hjælp af <https://security.microsoft.com/threatpolicy>.
+Med Microsoft Defender for Office 365 kan organisationens sikkerhedsteam konfigurere beskyttelse ved at definere politikker på Microsoft 365 Defender-portalen på <https://security.microsoft.com> **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker**. Du kan også gå direkte til siden **Trusselspolitikker** ved hjælp <https://security.microsoft.com/threatpolicy>af .
 
-Få mere at vide ved at [se denne video](https://www.youtube.com/watch?v=vivvTmWJ_3c).
+Få mere at vide ved at se [denne video](https://www.youtube.com/watch?v=vivvTmWJ_3c).
 
 > [!TIP]
-> Du kan finde en hurtig liste over de politikker, der skal [defineres, under Beskyt dig mod trusler](protect-against-threats.md).
+> Du kan finde en hurtig liste over politikker, der skal defineres, under [Beskyt mod trusler](protect-against-threats.md).
 
 ## <a name="defender-for-office-365-policies"></a>Defender for Office 365 politikker
 
-De politikker, der er defineret for organisationen, bestemmer funktionsmåden og beskyttelsesniveauet for foruddefinerede trusler. Politikindstillingerne er meget fleksible. Organisationens sikkerhedsteam kan f.eks. angive en høj grad af trusselsbeskyttelse på bruger-, organisations-, modtager- og domæneniveau. Det er vigtigt regelmæssigt at gennemgå dine politikker, fordi nye trusler og udfordringer opstår dagligt.
+De politikker, der er defineret for din organisation, bestemmer funktionsmåden og beskyttelsesniveauet for foruddefinerede trusler. Politikmulighederne er yderst fleksible. Organisationens sikkerhedsteam kan f.eks. angive detaljeret trusselsbeskyttelse på bruger-, organisations-, modtager- og domæneniveau. Det er vigtigt at gennemgå dine politikker regelmæssigt, fordi der dagligt opstår nye trusler og udfordringer.
 
-- **[Pengeskab vedhæftede filer](safe-attachments.md)**: Giver nul dages beskyttelse for at beskytte dit meddelelsessystem ved at kontrollere vedhæftede filer i mails for skadeligt indhold. Det distribuerer alle meddelelser og vedhæftede filer, der ikke har en virus-/malwaresignatur, til et særligt miljø og bruger derefter maskinlærings- og analyseteknikker til at registrere ondsindede hensigter. Hvis der ikke findes nogen mistænkelig aktivitet, videresendes meddelelsen til postkassen. Du kan få mere at vide [under Konfigurere Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md).
+- **[Pengeskab vedhæftede filer](safe-attachments.md)**: Giver nuldagsbeskyttelse til beskyttelse af dit meddelelsessystem ved at kontrollere vedhæftede filer i mails for skadeligt indhold. Den distribuerer alle meddelelser og vedhæftede filer, der ikke har en virus-/malwaresignatur, til et særligt miljø og bruger derefter teknikker til maskinel indlæring og analyse til at registrere ondsindede hensigter. Hvis der ikke blev fundet mistænkelig aktivitet, videresendes meddelelsen til postkassen. Du kan få mere at vide under [Konfigurer politikker for Pengeskab vedhæftede filer](set-up-safe-attachments-policies.md).
 
-- **[Pengeskab Links](safe-links.md)**: Giver dig tid til klik-godkendelse af URL-adresser, f.eks. i mails og Office filer. Beskyttelse er løbende og gælder for alle dine meddelelser og Office miljø. Links scannes for hvert klik: sikre links forbliver tilgængelige, og skadelige links blokeres dynamisk. Du kan få mere at [vide under Konfigurere Pengeskab politikker for links](set-up-safe-links-policies.md).
+- **[Pengeskab Links](safe-links.md)**: Giver tid til klik-bekræftelse af URL-adresser, f.eks. i mails og Office filer. Beskyttelse foregår løbende og gælder på tværs af dine beskeder og Office miljø. Links scannes for hvert klik: Sikre links forbliver tilgængelige, og skadelige links blokeres dynamisk. Du kan få mere at vide under [Konfigurer politikker for Pengeskab links](set-up-safe-links-policies.md).
 
-- Pengeskab Vedhæftede filer **[til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)**: Beskytter organisationen, når brugere samarbejder og deler filer, ved at identificere og blokere skadelige filer på teamwebsteder og dokumentbiblioteker. Du kan få mere at [vide under Slå Defender til for Office 365 for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
+- **[Pengeskab vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)**: Beskytter din organisation, når brugerne samarbejder og deler filer, ved at identificere og blokere skadelige filer på teamwebsteder og i dokumentbiblioteker. Du kan få mere at vide under [Slå Defender for Office 365 til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
 
-- **[Beskyttelse mod phishing i Defender til Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)**: Registrerer forsøg på at udgive sig for at være dine brugere og interne eller brugerdefinerede domæner. Den anvender maskinlæringsmodeller og avancerede algoritmer til registrering af efterligninger for at forhindre phishing-angreb. Du kan få mere at vide [under Konfigurer antiphishing-politikker i Microsoft Defender Office 365](configure-mdo-anti-phishing-policies.md).
+- **[Beskyttelse mod phishing i Defender for Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)**: Registrerer forsøg på at repræsentere dine brugere og interne eller brugerdefinerede domæner. Den anvender modeller til maskinel indlæring og avancerede algoritmer til registrering af repræsentation for at afværge phishing-angreb. Du kan få mere at vide under [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
-## <a name="view-microsoft-defender-for-office-365-reports"></a>Få vist Microsoft Defender til Office 365 rapporter
+## <a name="view-microsoft-defender-for-office-365-reports"></a>Få vist Microsoft Defender for Office 365 rapporter
 
-Microsoft Defender til Office 365 indeholder [rapporter til](view-reports-for-mdo.md) at overvåge Defender for Office 365. Du kan få adgang til rapporterne iMicrosoft 365 Defender-portalen <https://security.microsoft.com>  \> på Rapporter & **mailsamarbejde** \> **& samarbejdsrapporter**. Eller du kan gå direkte til siden Mail **- og samarbejdsrapporter** ved hjælp af <https://security.microsoft.com/securityreports>.
+Microsoft Defender for Office 365 indeholder [rapporter](view-reports-for-mdo.md) til overvågning af Defender for Office 365. Du kan få adgang til rapporterne på Microsoft 365 Defender-portalen på <https://security.microsoft.com> **Mail** \> **& samarbejde** \> **Mail & samarbejdsrapporter**. Du kan også gå direkte til siden **Mail- og samarbejdsrapporter** ved hjælp af <https://security.microsoft.com/securityreports>.
 
-Rapporter opdateres i realtid og giver dig de seneste indsigter. Disse rapporter indeholder også anbefalinger og giver dig besked om trusler i nær fremtid. Foruddefinerede rapporter omfatter følgende:
+Rapporter opdateres i realtid, hvilket giver dig den nyeste indsigt. Disse rapporter indeholder også anbefalinger og advarer dig om forestående trusler. Foruddefinerede rapporter omfatter følgende:
 
-- [Trusselsstifinder (eller registreringer i realtid)](threat-explorer.md)
-- [Statusrapport over trusselsbeskyttelse](view-reports-for-mdo.md#threat-protection-status-report)
-- ... og flere.
+- [Threat Explorer (eller registreringer i realtid)](threat-explorer.md)
+- [Statusrapport om trusselsbeskyttelse](view-reports-for-mdo.md#threat-protection-status-report)
+- ... og flere flere.
 
-## <a name="use-threat-investigation-and-response-capabilities"></a>Brug egenskaberne for trusselsundersøgelse og -svar
+## <a name="use-threat-investigation-and-response-capabilities"></a>Brug trusselsundersøgelses- og svarfunktioner
 
-Microsoft Defender til Office 365 Plan 2 indeholder førsteklasses trusselsundersøgelse og svarværktøjer, der [](office-365-ti.md) gør det muligt for organisationens sikkerhedsteam at forudse, forstå og forhindre ondsindede angreb.
+Microsoft Defender for Office 365 Plan 2 indeholder de bedste [trusselsundersøgelses- og svarværktøjer](office-365-ti.md), der gør det muligt for din organisations sikkerhedsteam at forudse, forstå og forhindre skadelige angreb.
 
-- **[Trusselssporing giver](threat-trackers.md)** den nyeste intelligens om aktuelle cybersikkerhedsproblemer. Du kan f.eks. få vist oplysninger om den nyeste malware og tage modforanstaltninger, før det bliver en egentlig trussel mod din organisation. Tilgængelige trackere [omfatter Trackers,](threat-trackers.md#noteworthy-trackers) Mest populære [trackere](threat-trackers.md#trending-trackers), [Sporede](threat-trackers.md#tracked-queries) forespørgsler [og Gemte forespørgsler](threat-trackers.md#saved-queries).
+- **[Trusselssporing giver](threat-trackers.md)** den nyeste intelligens om gældende cybersikkerhedsproblemer. Du kan f.eks. få vist oplysninger om den nyeste malware og tage modforanstaltninger, før den bliver en faktisk trussel mod din organisation. Tilgængelige trackere omfatter [Bemærkelsesværdige trackere](threat-trackers.md#noteworthy-trackers), [Trending Trackers](threat-trackers.md#trending-trackers), [Sporede forespørgsler](threat-trackers.md#tracked-queries) og [Gemte forespørgsler](threat-trackers.md#saved-queries).
 
-- **[Trusselsstifinder (](threat-explorer.md)** eller registreringer i realtid) (også kaldet Stifinder) er en rapport i realtid, der gør det muligt at identificere og analysere de seneste trusler. Du kan konfigurere Stifinder til at vise data for brugerdefinerede perioder.
+- **[Threat Explorer (eller registreringer i realtid)](threat-explorer.md)** (også kaldet Explorer) er en rapport i realtid, der giver dig mulighed for at identificere og analysere de seneste trusler. Du kan konfigurere Stifinder til at vise data for brugerdefinerede perioder.
 
-- **[Kursus i angrebssimulering](attack-simulation-training.md)** giver dig mulighed for at køre realistiske angrebsscenarier i organisationen for at identificere sårbarheder. Der findes simuleringer af aktuelle typer angreb, herunder indsamling af phishing-oplysninger om phishing og vedhæftede filer samt adgangskoder og brute-force-adgangskodeangreb.
+- **[Oplæring i simulering af angreb](attack-simulation-training.md)** giver dig mulighed for at køre realistiske angrebsscenarier i din organisation for at identificere sikkerhedsrisici. Der er simuleringer af aktuelle typer angreb tilgængelige, herunder høst af phishing-legitimationsoplysninger og angreb på vedhæftede filer samt adgangskodesprøjt- og brute force-adgangskodeangreb.
 
-## <a name="save-time-with-automated-investigation-and-response"></a>Spar tid med automatisk undersøgelse og svar
+## <a name="save-time-with-automated-investigation-and-response"></a>Spar tid med automatiseret undersøgelse og svar
 
-(**NY!**) Når du undersøger et potentielt cyberangreb, er tiden essensen. Jo tidligere du kan identificere og afhjælpe trusler, jo bedre vil din organisation være. [Automatiserede](office-365-air.md) undersøgelses- og svarfunktioner (AIR) omfatter et sæt sikkerhedsspilebøger, der kan startes automatisk, f.eks. når der udløses en besked, eller manuelt, f.eks. fra en visning i Stifinder. AIR kan spare tid og besvær for dit sikkerhedsteam i forbindelse med at mindske trusler effektivt og effektivt. Du kan få mere at vide [under AIR i Office 365](office-365-air.md).
+(**NY!**) Når du undersøger et potentielt cyberangreb, er tiden af afgørende betydning. Jo hurtigere du kan identificere og afhjælpe trusler, desto bedre er det for din organisation. [Air-funktioner (Automatiseret undersøgelse og svar](office-365-air.md) ) omfatter et sæt sikkerhedslegebøger, der kan startes automatisk, f.eks. når en besked udløses, eller manuelt, f.eks. fra en visning i Stifinder. AIR kan spare dit sikkerhedsteam tid og kræfter på at afhjælpe trusler effektivt og effektivt. Du kan få mere at vide [under AIR i Office 365](office-365-air.md).
 
-## <a name="permissions-required-to-use-microsoft-defender-for-office-365-features"></a>Tilladelser, der kræves for at bruge Microsoft Defender til Office 365 funktioner
+## <a name="permissions-required-to-use-microsoft-defender-for-office-365-features"></a>Tilladelser, der kræves for at bruge Microsoft Defender for Office 365 funktioner
 
-Hvis du vil have adgang til Microsoft Defender Office 365 funktioner, skal du have tildelt en passende rolle. Følgende tabel indeholder nogle eksempler:
+Hvis du vil have adgang til Microsoft Defender for Office 365 funktioner, skal du have tildelt en relevant rolle. Følgende tabel indeholder nogle eksempler:
 
 |Rolle eller rollegruppe|Ressourcer til at få mere at vide|
 |---|---|
-|global administrator (Organisationsadministration)|Du kan tildele denne rolle i Azure Active Directory eller i Microsoft 365 Defender portalen. Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).|
-|Sikkerhedsadministrator|Du kan tildele denne rolle i Azure Active Directory eller i Microsoft 365 Defender portalen. Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).|
+|global administrator (organisationsadministration)|Du kan tildele denne rolle i Azure Active Directory eller på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).|
+|Sikkerhedsadministrator|Du kan tildele denne rolle i Azure Active Directory eller på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).|
 |Organisationsadministration i Exchange Online|[Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo) <p> [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell)|
-|Søg og tøm|Denne rolle er kun tilgængelig i Microsoft 365 Defender-portalen eller Microsoft 365 Overholdelsescenter. Du kan finde flere [oplysninger i Tilladelser Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md) [og Tilladelser i Microsoft 365 Overholdelsescenter](../../compliance/microsoft-365-compliance-center-permissions.md).|
+|Søg og fjern|Denne rolle er kun tilgængelig på Microsoft 365 Defender-portalen eller Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser på Microsoft Purview-overholdelsesportalen](../../compliance/microsoft-365-compliance-center-permissions.md).|
 |||
 
-## <a name="get-microsoft-defender-for-office-365"></a>Få Microsoft Defender til Office 365
+## <a name="get-microsoft-defender-for-office-365"></a>Hent Microsoft Defender for Office 365
 
-Microsoft Defender til Office 365 er inkluderet i visse abonnementer, f.eks. Microsoft 365 E5, Office 365 E5, Office 365 A5 og Microsoft 365 Business Premium. Hvis dit abonnement ikke omfatter Defender for Office 365, kan du købe Defender til Office 365 Plan 1 eller Defender Office 365 Plan 2 som et tilføjelsesprogrammet til visse abonnementer. Du kan få mere at vide i følgende ressourcer:
+Microsoft Defender for Office 365 er inkluderet i visse abonnementer, f.eks. Microsoft 365 E5, Office 365 E5, Office 365 A5 og Microsoft 365 Business Premium. Hvis dit abonnement ikke indeholder Defender for Office 365, kan du købe Defender for Office 365 Plan 1 eller Defender for Office 365 Plan 2 som et tilføjelsesprogram til visse abonnementer. Du kan få mere at vide i følgende ressourcer:
 
-- [Microsoft Defender for Office 365 en](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#office-365-advanced-threat-protection-atp-availability) liste over abonnementer, der omfatter Defender til Office 365-planer.
+- [Microsoft Defender for Office 365 tilgængelighed](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#office-365-advanced-threat-protection-atp-availability) for en liste over abonnementer, der indeholder Defender for Office 365 planer.
 
-- [Tilgængelighed af funktioner på tværs af Microsoft Defender Office 365 planer](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans) for en liste over funktioner, der er inkluderet i Plan 1 og 2.
+- [Tilgængelighed af funktioner på tværs af Microsoft Defender for Office 365 planer](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans) for en liste over funktioner, der er inkluderet i Plan 1 og 2.
 
-- [Få den rigtige Microsoft Defender til Office 365](https://products.office.com/exchange/advance-threat-protection#pmg-allup-content) at sammenligne planer, og køb Defender til Office 365.
+- [Få de rigtige Microsoft Defender for Office 365](https://products.office.com/exchange/advance-threat-protection#pmg-allup-content) til at sammenligne planer og købe Defender for Office 365.
 
 - [Start en gratis prøveversion](https://go.microsoft.com/fwlink/p/?LinkID=698279)
 
-## <a name="new-features-in-microsoft-defender-for-office-365"></a>Nye funktioner i Microsoft Defender til Office 365
+## <a name="new-features-in-microsoft-defender-for-office-365"></a>Nye funktioner i Microsoft Defender for Office 365
 
-Nye funktioner føjes til Microsoft Defender til Office 365 kontinuerligt. Du kan få mere at vide i følgende ressourcer:
+Nye funktioner føjes løbende til Microsoft Defender for Office 365. Du kan få mere at vide i følgende ressourcer:
 
-- [Microsoft 365 oversigt](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CDefender%2Cfor%2COffice%2C365) indeholder en liste over nye funktioner under udvikling og udrulning.
+- [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CDefender%2Cfor%2COffice%2C365) indeholder en liste over nye funktioner i udvikling og udrulning.
 
-- [Beskrivelse af Microsoft Defender Office 365-tjeneste](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#whats-new-in-office-365-advanced-threat-protection-atp) beskriver funktioner og tilgængelighed på tværs af Defender Office 365-planer.
+- [Microsoft Defender for Office 365 Tjenestebeskrivelse](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#whats-new-in-office-365-advanced-threat-protection-atp) beskriver funktioner og tilgængelighed på tværs af Defender for Office 365 planer.
 
 ## <a name="see-also"></a>Se også
 
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-- [Automatiseret undersøgelse og svar (AIR) i Microsoft 365 Defender](../defender/m365d-autoir.md)
+- [Automatiseret undersøgelse og reaktion (AIR) i Microsoft 365 Defender](../defender/m365d-autoir.md)

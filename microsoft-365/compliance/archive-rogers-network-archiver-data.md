@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere Rogers Network-data i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 54c57c2ddf8d4224884137efb0cfa4679a13b46d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 790a41ce3d505e6381bb9d02ed9014132fe8f9f0
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758701"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944013"
 ---
 # <a name="set-up-a-connector-to-archive-rogers-network-data"></a>Konfigurer en connector til arkivering af Rogers Network-data
 
-Brug TeleMessage-connectoren i Microsoft 365 Overholdelsescenter til at importere og arkivere SMS- og MMS-data fra Rogers-mobilnetværket. Når du har konfigureret en [Rogers Network Archiver-connector](https://www.telemessage.com/mobile-archiver/network-archiver/rogers/), opretter den forbindelse til din organisations Rogers-mobilnetværk og importerer SMS- og MMS-data til postkasser i Microsoft 365.
+Brug TeleMessage-connectoren på Microsoft Purview-overholdelsesportalen til at importere og arkivere SMS- og MMS-data fra Rogers-mobilnetværket. Når du har konfigureret en [Rogers Network Archiver-connector](https://www.telemessage.com/mobile-archiver/network-archiver/rogers/), opretter den forbindelse til din organisations Rogers-mobilnetværk og importerer SMS- og MMS-data til postkasser i Microsoft 365.
 
-Når data fra Rogers-mobilnetværket er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. proceshold, indholdssøgning og Microsoft 365 opbevaringspolitikker på dataene. Du kan f.eks. søge efter sms- og mms-meddelelser fra Rogers-mobilnetværket ved hjælp af indholdssøgning eller en søgning, der er knyttet til en kerne-eDiscovery-sag. Hvis du bruger en Rogers Network Archiver-connector til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde regler for virksomhedsstyring og lovgivningsmæssige politikker.
+Når data fra Rogers-mobilnetværket er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. proceshold, indholdssøgning og Microsoft 365 opbevaringspolitikker på dataene. Du kan f.eks. søge efter sms- og mms-meddelelser fra Rogers-mobilnetværket ved hjælp af indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery-sag (Standard). Hvis du bruger en Rogers Network Archiver-connector til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde regler for virksomhedsstyring og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-rogers-mobile-network-data"></a>Oversigt over arkivering af Rogers-mobilnetværksdata
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. I realtid kopieres din organisations Rogers-mobilnetværksdata til telemeddelelseswebstedet.
 
-3. Den Rogers Network Archiver-connector, du opretter i Microsoft 365 Overholdelsescenter opretter forbindelse til TeleMessage-webstedet hver dag og overfører mailmeddelelserne fra de forrige 24 timer til et sikkert Azure Storage område i Microsoft Cloud.
+3. Den Rogers Network Archiver-connector, du opretter på overholdelsesportalen, opretter forbindelse til TeleMessage-webstedet hver dag og overfører mailmeddelelserne fra de forrige 24 timer til et sikkert Azure Storage område i Microsoft Cloud.
 
 4. Connectoren importerer mobilkommunikationselementerne til en bestemt brugers postkasse. Der oprettes en ny mappe med navnet Rogers SMS/MMS Network Archiver i den specifikke brugers postkasse, og elementerne importeres til den. Connectoren udfører tilknytningen ved hjælp af værdien af egenskaben *For brugerens mailadresse* . Alle mails indeholder denne egenskab, som udfyldes med mailadressen for hver deltager i mailen.
 
@@ -51,13 +51,13 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Hent kontaktoplysningerne for Rogers-kontoen og faktureringskontakten for din organisation, så du kan udfylde onboardingformularerne og bestille tjenesten til arkivering af meddelelser fra Rogers.
 
-- Den bruger, der opretter en Rogers Network Archiver-connector i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter en Rogers Network Archiver-connector i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-rogers-network-archiver-connector"></a>Opret en Rogers Network Archiver-connector
 
-Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette connectoren Rogers Network Archiver i Microsoft 365 Overholdelsescenter. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til TeleMessage-webstedet og overføre Rogers SMS/MMS-data til de tilsvarende brugerpostkasser i Microsoft 365.
+Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette Connectoren Rogers Network Archiver på overholdelsesportalen. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til TeleMessage-webstedet og overføre Rogers SMS/MMS-data til de tilsvarende brugerpostkasser i Microsoft 365.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsRogers** >  **Network Archiver**.
 

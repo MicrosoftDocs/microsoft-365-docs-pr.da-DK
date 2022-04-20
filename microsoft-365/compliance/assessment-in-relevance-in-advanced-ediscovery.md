@@ -1,5 +1,5 @@
 ---
-title: Forstå vurdering i relevans i Advanced eDiscovery
+title: Forstå vurdering i relevans i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,39 +15,39 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d33d4fb-91ed-41c0-b72e-5a26eca3a2a7
-description: Få et overblik over fasen Bedømmelse og dens rolle i vurderingen af den omfattende betydning for relevanskurser i Microsoft 365 Advanced eDiscovery.
+description: Få et overblik over vurderingsfasen og dens rolle i forbindelse med bestemmelse af de mange problemer under relevanstræning i Microsoft Purview eDiscovery (Premium).
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 80ec4f0c362ff403f45123bf837e82c5d2f6ed7e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 29376b8c71947b1f09bd86de90facef6f73e0fdd
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589518"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943947"
 ---
-# <a name="assessment-in-the-relevance-module-in-advanced-ediscovery"></a>Vurdering i relevansmodulet i Advanced eDiscovery
+# <a name="assessment-in-the-relevance-module-in-ediscovery-premium"></a>Vurdering i relevansmodulet i eDiscovery (Premium)
   
-Advanced eDiscovery det muligt at foretage en tidlig vurdering, f.eks. for de definerede problemer og de importerede data for en sag. Advanced eDiscovery kan gøre det muligt for eksperten at træffe beslutninger om en indført tilgang og anvende disse beslutninger i dokumentgennemsynsprojektet.
+Microsoft Purview eDiscovery (Premium) muliggør tidlig vurdering, f.eks. for de definerede problemer og de data, der er importeret for en sag. eDiscovery (Premium) gør det muligt for eksperten at træffe beslutninger om en vedtaget tilgang og anvende disse beslutninger på projektet til dokumentgennemgang.
   
-## <a name="understanding-assessment"></a>Forstå bedømmelse
+## <a name="understanding-assessment"></a>Om vurdering
 
-Eksperten gennemgår et vilkårligt sæt af mindst 500 filer, som bruges til at afgøre, hvor omfattende problemerne er, og til at udarbejde statistik, der afspejler uddannelsesresultaterne. Vurdering er vellykket, når der er fundet tilstrækkeligt med relevante filer til at nå et statistisk niveau, som kan hjælpe Advanced eDiscovery relevans med at levere nøjagtig statistik og for effektivt at bestemme stabiliseringspunktet i uddannelsesprocessen. 
+I vurderingen gennemgår eksperten et tilfældigt sæt på mindst 500 filer, som bruges til at fastslå, hvor omfattende problemerne er, og til at udarbejde statistikker, der afspejler uddannelsesresultater. Vurderingen lykkes, når der findes nok relevante filer til at nå et statistisk niveau, der hjælper eDiscovery (Premium) Relevans til at levere nøjagtige statistikker og til effektivt at bestemme stabiliseringspunktet i oplæringsprocessen. 
   
-Jo højere antallet af relevante filer i bedømmelsessættet er, desto mere nøjagtig bliver statistikken og effektiviteten af stabilitetsalgoritmen. Antallet af relevante filer i bedømmelsesfilerne afhænger af problemets omfattende indhold. Richness is the estimated percent of relevant files in the set relevant to an issue. Problemer med større richness vil nå et højere antal relevante filer hurtigere end problemer med lavere richness. Problemer med meget lav richness (f.eks. 2 % eller mindre) kræver et meget stort antal bedømmelsessæt for at nå et betydeligt antal relevante filer.
+Jo højere antal relevante filer i vurderingssættet, jo mere nøjagtige statistikker og effektivitet af stabilitetsalgoritmen. Antallet af relevante filer i vurderingsfilerne afhænger af problemets rigdom. Richness er den anslåede procentdel af relevante filer i sættet, der er relevant for et problem. Problemer med større rigdom vil hurtigere nå et højere antal relevante filer end problemer med lavere rigdom. Problemer med meget lav rigdom (f.eks. 2 % eller mindre) kræver et meget stort vurderingssæt for at nå et betydeligt antal relevante filer.
   
-Den statistik, der præsenteres i fanerne Spor og Beslut under uddannelse og efter batchberegningen, omfatter estimering af tilbagekaldelse for forskellige korrektursæt. I statistik omfatter estimeringerne, der er baseret på et stikprøvesæt (i dette tilfælde vurderingsfilerne), fejlmargenen og tillidsniveauet for den pågældende fejlmargen. Anslået tilbagekaldelse af 80 % kan f.eks. have en fejlmargen på plus eller minus 5 % med et tillidsniveau på 95 %. Det betyder, at den anslåede tilbagekaldelse faktisk er 75 %-85 %, og dette estimering har 95 % tillid. Jo større bedømmelsessættet er, jo mindre bliver fejlmargenen, og statistikken er mere nøjagtig. 
+De statistikker, der vises under fanerne Spor og Beslut under oplæring og efter batchberegning, omfatter estimering af genkaldelse for forskellige korrektursæt. I statistikker omfatter skøn, der er baseret på et eksempelsæt (i dette tilfælde vurderingsfilerne), fejlmargenen og tillidsniveauet for fejlmargenen. Anslået genkaldelse af 80 % kan f.eks. have en fejlmargen på plus eller minus 5 % med et konfidensniveau på 95 %. Det betyder, at den anslåede genkaldelse rent faktisk er 75 %-85 %, og at dette skøn har 95 % tillid. Jo større vurderingssættet er, bliver fejlmargenen mindre, og statistikkerne er mere nøjagtige. 
   
-Når eksperten har gennemset et indledende bedømmelsessæt med 500 filer, kan Relevans afgøre den aktuelle fejlmargen for tilbagekaldelsesværdierne. Relevansen vil også anbefale en standardmargen for fejl, der kan nås, for at optimere bedømmelsessættet. Her er nogle eksempler:
+Når eksperten har gennemset et indledende vurderingssæt på 500 filer, kan Relevans bestemme den aktuelle fejlmargen for genkaldelsesværdierne. Relevans anbefaler også en standardmargen for fejl for at nå for at optimere vurderingssættet. Her er nogle eksempler:
   
-- Hvis bedømmelsessættet allerede gav en fejlmargen på plus eller minus 10 %, anbefaler Relevans, at du går videre til uddannelse (ingen yderligere vurdering er nødvendig). 
+- Hvis vurderingssættet allerede gav en fejlmargen på plus eller minus 10 %, anbefaler Relevans, at man går videre til uddannelse (der kræves ingen yderligere vurdering). 
 
-- Hvis bedømmelsessættet gav en fejlmargen på plus eller minus 13 %, kan Relevans anbefale gennemgangen af et andet sæt bedømmelsesfiler for at nå en mindre margen. 
+- Hvis vurderingssættet gav en fejlmargen på plus eller minus 13 %, anbefaler Relevans muligvis gennemgangen af et andet sæt vurderingsfiler for at nå en mindre margen. 
 
-- Hvis den omfattende mængde er meget lav, kan relevans anbefale at stoppe vurderingen, selvom fejlmargenen er stor (hvilket gør statistik upraktisk), fordi det skøn, der kræves for at nå en nyttig fejlmargen, er for stor.
+- Hvis rigdommen er meget lav, anbefaler Relevans muligvis at stoppe vurderingen, selvom fejlmargenen er stor (hvilket gør det upraktisk at bruge statistikker), fordi den vurdering, der er nødvendig for at nå frem til en nyttig fejlmargen, er for stor.
 
-Hvert problem har sit eget indhold, den aktuelle fejlmargen og det anslåede antal yderligere vurderingsfiler. Det næste bedømmelsessæt oprettes ud fra det maksimale antal filer (op til 1.000 i et enkelt sæt).
+Hvert problem har sin egen rigdom, aktuelle fejlmargen og som et resultat heraf det anslåede antal ekstra vurderingsfiler. Det næste vurderingssæt oprettes i henhold til det maksimale antal filer (op til 1.000 i et enkelt sæt).
   
-Du kan acceptere anbefalingerne for relevans eller justere den aktuelle fejlmargen efter dine behov. Standardmargenen for den aktuelle fejl bestemmes for tilbagekaldelse ved ens eller over 75 %.
+Du kan acceptere relevansanbefalinger eller justere den aktuelle fejlmargen i henhold til dine behov. Standarden for den aktuelle fejlmargen bestemmes for tilbagekaldelse med ens eller over 75 %.
   
 > [!NOTE]
-> Fasen Bedømmelse kan **\>** tilsidesættes på fanen Relevansspor i den udvidede visning for et problem ved at fjerne markeringen i afkrydsningsfeltet Vurdering pr. problem og derefter for "alle problemer". Der vil derfor ikke være nogen statistik for dette problem. Rydning **af afkrydsningsfeltet** Bedømmelse kan kun udføres, før der udføres en vurdering. Hvis der findes flere problemer i en sag, tilsidesættes vurderingen kun, hvis afkrydsningsfeltet ikke er markeret for hvert problem.
+> Vurderingsfasen kan tilsidesættes under fanen **Relevanssporing \>** i den udvidede visning for et problem ved at fjerne markeringen i afkrydsningsfeltet **Vurdering** for hvert problem og derefter for "alle problemer". Der vil derfor ikke være nogen statistikker for dette problem. Rydning af afkrydsningsfeltet **Vurdering** kan kun udføres, før vurderingen udføres. Hvis der findes flere problemer i en sag, tilsidesættes vurderingen kun, hvis afkrydsningsfeltet er ryddet for hvert problem.

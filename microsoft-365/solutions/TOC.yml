@@ -43,7 +43,7 @@
           href: manage-devices-with-intune-require-compliance.md
         - name: Trin 5. Udrul enhedsprofiler
           href: manage-devices-with-intune-configuration-profiles.md
-        - name: Trin 6. Overvåg enhedens risiko og overholdelse af regler og standarder i forhold til sikkerhedsbaseline
+        - name: Trin 6. Overvåg enhedens risiko og overholdelse af angivne standarder i forhold til sikkerhedsbaseline
           href: manage-devices-with-intune-monitor-risk.md
         - name: Trin 7. Implementer forebyggelse af datatab (DLP) med funktioner til beskyttelse af oplysninger
           href: manage-devices-with-intune-dlp-mip.md
@@ -161,15 +161,15 @@
                   href: ../admin/add-users/remove-former-employee.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
                 - name: Trin 1. Forhindre en medarbejder i at logge på og blokere adgang til Microsoft 365-tjenester
                   href: ../admin/add-users/remove-former-employee-step-1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Trin 2. Gem indholdet fra en tidligere medarbejders postkasse
+                - name: Trin 2. Gem indholdet af en tidligere medarbejders postkasse
                   href: ../admin/add-users/remove-former-employee-step-2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Trin 3. Slet og blokere en tidligere medarbejders mobilenhed
+                - name: Trin 3. Slet og bloker en tidligere medarbejders mobilenhed
                   href: ../admin/add-users/remove-former-employee-step-3.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: 'Trin 4. Videresend den tidligere medarbejders mails til en anden medarbejder, eller konvertér mailkontoen til en delt postkasse'
+                - name: 'Trin 4. Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér til en delt postkasse'
                   href: ../admin/add-users/remove-former-employee-step-4.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
                 - name: Trin 5. Giv en anden medarbejder adgang til OneDrive- og Outlook-data
                   href: ../admin/add-users/remove-former-employee-step-5.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Trin 6. Fjern Microsoft 365-licens fra en tidligere medarbejder
+                - name: Trin 6. Fjern Microsoft 365-licensen fra en tidligere medarbejder
                   href: ../admin/add-users/remove-former-employee-step-6.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
                 - name: Trin 7. Slet en tidligere medarbejders brugerkonto
                   href: ../admin/add-users/remove-former-employee-step-7.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
@@ -306,13 +306,13 @@
           href: /onedrive/plan-onedrive-enterprise
     - name: Overholdelse af regler og standarder
       items:
-        - name: Insider-risikoløsninger i Microsoft 365
+        - name: Insider-risikoløsninger i Microsoft Purview
           href: ../compliance/insider-risk-solution-overview.md
         - name: Overvågningsløsninger
           href: ../compliance/auditing-solutions-overview.md
         - name: eDiscovery-løsninger i Microsoft 365
           href: ../compliance/ediscovery.md
-        - name: Microsoft 365 Avanceret eDiscovery
+        - name: Microsoft Purview eDiscovery (Premium)
           href: ../compliance/overview-ediscovery-20.md
         - name: Handlingsplaner for overholdelse af regler og standarder
           items:

@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 56d666f1deff43f872ad265c625302980669ecd9
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 8a5029ad6de3de33eacdf814729ed2eafcd2cf89
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862098"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941671"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Trusselsoversigt og registreringer i realtid
 
@@ -115,7 +115,7 @@ Oplysninger om mærker vises også i pop op-vinduet med URL-klik. Hvis du vil ha
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/tags-urls.png" alt-text="URL-mærkerne" lightbox="../../media/tags-urls.png":::
 >
-Mer informasjon ved at se [denne video](https://www.youtube.com/watch?v=UoVzN0lYbfY&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=4).
+Få mere at vide ved at se [denne video](https://www.youtube.com/watch?v=UoVzN0lYbfY&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=4).
 
 ## <a name="improvements-to-the-threat-hunting-experience-upcoming"></a>Forbedringer af truslen jagt erfaring (kommende)
 
@@ -288,7 +288,7 @@ Du kan se både GUID og navnet på de transportregler, der er anvendt på meddel
 > [!IMPORTANT]
 > Tilgængeligheden af ETR-søgning og -navn afhænger af den specifikke rolle, der er tildelt til dig. Du skal have en af følgende roller/tilladelser for at få vist ETR-navnene og søgningen. Hvis du ikke har fået tildelt nogen af disse roller, kan du ikke se navnene på transportreglerne eller søge efter meddelelser ved hjælp af ETR-navne. Du kan dog se ETR-mærkaten og GUID-oplysningerne i Mailoplysninger. Andre oplevelser med postvisning i mailgitre, pop op-vinduet Mail, Filtre og Eksport påvirkes ikke.
 >
-> - Kun EXO – Forebyggelse af datatab: Alle
+> - Kun EXO – forebyggelse af datatab: Alle
 > - Kun EXO – O365SupportViewConfig: Alle
 > - Microsoft Azure Active Directory eller EXO – Sikkerhedsadministrator: Alle
 > - AAD eller EXO – Sikkerhedslæser: Alle

@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: 68315c6cf7947c2d42e58e34b4496e0ef790c8b0
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: d332cbf32f5423fb16abb158f9a30a18c2391a22
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665486"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939339"
 ---
 # <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Kom i gang med Microsoft Defender for Endpoint Plan 1
 
@@ -81,7 +81,7 @@ Navigationslinjen i venstre side af skærmen giver dig mulighed for nemt at flyt
 | **Sundhed** >  **Meddelelsescenter** | Navigerer til Meddelelsescenter i Microsoft 365 Administration. Meddelelsescenteret indeholder oplysninger om planlagte ændringer. Hver meddelelse beskriver, hvad der kommer, hvordan det kan påvirke brugerne, og hvordan du administrerer ændringer. |  
 | **Tilladelser & roller** | Giver dig mulighed for at give tilladelser til at bruge Microsoft 365 Defender-portalen. Tilladelser tildeles via roller i Azure Active Directory (Azure AD). Vælg en rolle, hvorefter der vises en pop op-rude. Pop op-vinduet indeholder et link til Azure AD, hvor du kan tilføje eller fjerne medlemmer i en rollegruppe. <br/><br/> Du kan få mere at vide under [Administrer portaladgang ved hjælp af rollebaseret adgangskontrol](rbac.md).  |
 | **Indstillinger** | Navigerer til generelle indstillinger for Microsoft 365 Defender-portalen (angivet som **Security Center**) og Defender for Endpoint (angivet som **Slutpunkter**). <br/><br/> Du kan få mere at vide under [Indstillinger](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
-| **Flere ressourcer** | Viser en liste over flere portaler og centre, f.eks. Azure Active Directory og Microsoft 365 Overholdelsescenter. <br/><br/> Du kan få mere at vide under [Microsofts sikkerhedsportaler og administrationscentre](../defender/portals.md). |
+| **Flere ressourcer** | Viser en liste over flere portaler og centre, f.eks. Azure Active Directory og Microsoft Purview-overholdelsesportalen. <br/><br/> Du kan få mere at vide under [Microsofts sikkerhedsportaler og administrationscentre](../defender/portals.md). |
 
 > [!TIP]
 > Du kan få mere at vide i [oversigten over Microsoft 365 Defender portal](../defender/microsoft-365-security-center-mde.md).

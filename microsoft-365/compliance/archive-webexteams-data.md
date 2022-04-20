@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til Webex Teams data i Microsoft 365
+title: Konfigurer en connector til Webex-Teams data i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,84 +11,84 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en forbindelse til at importere og arkivere data fra Veritas Webex-forbindelseskomponent Teams en Microsoft 365. Med denne forbindelse kan du arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 0906156f5c0c796deaa5bd72738813d912e30b47
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Administratorer kan konfigurere en connector til at importere og arkivere data fra Veritas' Webex-Teams-connector i Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
+ms.openlocfilehash: 1aa1a0ddd94aa2308c4884921138b12b0c152bab
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590408"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942859"
 ---
-# <a name="set-up-a-connector-to-archive-webex-teams-data"></a>Konfigurere en forbindelse til at arkivere Webex Teams data
+# <a name="set-up-a-connector-to-archive-webex-teams-data"></a>Konfigurer en connector til arkivering af Webex-Teams data
 
-Brug en Veritas-forbindelse i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra Webex Teams til brugerpostkasser i Microsoft 365 organisation. Veritas indeholder en [Webex Teams-forbindelse](https://globanet.com/webex-teams/), der er konfigureret til at registrere Webex Teams-kommunikationselementer og importere dem til Microsoft 365. Forbindelsen konverterer indhold fra Webex Teams, f.eks. 1:1-chatsamtaler, gruppesamtaler, kanalsamtaler og vedhæftede filer fra organisationens Webex Teams-konto, til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
+Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Webex-Teams til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Webex Teams-connector](https://globanet.com/webex-teams/), der er konfigureret til at registrere Webex-Teams kommunikationselementer og importere dem til Microsoft 365. Connectoren konverterer indhold fra Webex-Teams, f.eks. 1:1-chats, gruppesamtaler, kanalsamtaler og vedhæftede filer fra din organisations Webex-Teams-konto, til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når Webex Teams-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner som f.eks Retslig tilbageholdelse, eDiscovery, opbevaringspolitikker og opbevaringsetiketter samt overholdelse af regler og standarder i forbindelse med kommunikation. Hvis du bruger en Webex Teams-forbindelse til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Webex-Teams data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater samt kommunikation med overholdelse af angivne standarder. Brug af en Webex Teams-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
-## <a name="overview-of-archiving-webex-teams-data"></a>Oversigt over arkivering af Webex Teams data
+## <a name="overview-of-archiving-webex-teams-data"></a>Oversigt over arkivering af Webex-Teams data
 
-Følgende oversigt forklarer processen med at bruge en forbindelse til at arkivere Webex Teams data i Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere Webex Teams data i Microsoft 365.
 
-![Arkiveringsarbejdsproces for Webex Teams data.](../media/WebexTeamsConnectorWorkflow.png)
+![Arkivering af arbejdsproces for Webex Teams data.](../media/WebexTeamsConnectorWorkflow.png)
 
-1. Din organisation arbejder sammen med Webex Teams at konfigurere et Webex-Teams-websted.
+1. Din organisation arbejder sammen med Webex-Teams om at konfigurere et Webex-Teams websted.
 
-2. Én gang i døgnet kopieres Webex Teams elementer til webstedet Veritas Merge1. Forbindelsen konverterer også Webex-elementer Teams til et mailformat.
+2. En gang hver 24 timer kopieres Webex Teams varer til Veritas Merge1-webstedet. Connectoren konverterer også Webex-Teams elementer til et mailformat.
 
-3. Den Webex Teams-forbindelse, du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til Veritas Merge1 hver dag og overfører Webex Teams-elementerne til en sikker Azure Storage-placering i Microsoft-skyen.
+3. Den Webex-Teams-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1 hver dag og overfører Webex-Teams-elementer til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Forbindelsen importerer elementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben Mail  for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med **navnet Webex Teams** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Forbindelsen gør dette ved hjælp af værdien *af egenskaben Mail* . Hver Webex Teams element indeholder denne egenskab, som er udfyldt med mailadressen for hver deltager i elementet.
+4. Connectoren importerer elementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Webex Teams** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Connectoren gør dette ved hjælp af værdien af egenskaben *Mail* . Alle Webex-Teams-elementer indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Opret en Veritas Merge1-konto til Microsoft-forbindelser. Kontakt [Veritas kundesupport for at oprette denne konto](https://globanet.com/ms-connectors-contact). Du skal logge på denne konto, når du opretter forbindelsen i trin 1.
+- Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette denne konto, skal du kontakte [Veritas-kundesupport](https://globanet.com/ms-connectors-contact). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Opret et program på for at [https://developer.webex.com/](https://developer.webex.com) hente data fra din Webex Teams-konto. Du kan finde en trinvis vejledning til oprettelse af programmet i [Brugervejledning til forbindelser fra tredjepart](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Webex%20Teams%20User%20Guide%20.pdf)
+- Opret et program på [https://developer.webex.com/](https://developer.webex.com) for at hente data fra din Webex-Teams-konto. Du kan finde en trinvis vejledning i, hvordan du opretter programmet, under [Brugervejledning til fletning1 af tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Webex%20Teams%20User%20Guide%20.pdf)
 
-   Når du opretter dette program, genererer Webex-platformen et sæt unikke legitimationsoplysninger. Disse legitimationsoplysninger bruges i trin 2, når du konfigurerer Webex Teams-forbindelsen på webstedet Global Flet1.
+   Når du opretter dette program, genererer Webex-platformen et sæt entydige legitimationsoplysninger. Disse legitimationsoplysninger bruges i trin 2, når du konfigurerer Webex Teams-connectoren på webstedet Global Merge1.
 
-- Den bruger, der opretter Webex Teams-forbindelsen i trin 1 (og fuldfører den i trin 3), skal have tildelt rollen Dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Webex Teams-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataforbindelse er i offentlig prøveversion i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="step-1-set-up-the-webex-teams-connector"></a>Trin 1: Konfigurer Webex Teams forbindelse
+## <a name="step-1-set-up-the-webex-teams-connector"></a>Trin 1: Konfigurer Webex Teams-connectoren
 
-Det første trin er at få adgang til **dataforbindelserne** og konfigurere [Webex Teams forbindelse](https://globanet.com/webex-teams/).
+Det første trin er at få adgang til **dataconnectors** og konfigurere [Webex Teams-connectoren](https://globanet.com/webex-teams/).
 
-1. Gå til [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter **på DataforbindelserWebex** >  **Teams**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsWebex** >  **Teams**.
 
-2. Klik på **Tilføj Teams** webex-produktbeskrivelse på **siden Produktbeskrivelse**.
+2. Klik på **Tilføj connector** på siden **Webex Teams** produktbeskrivelse.
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. Angiv et entydigt navn, der identificerer forbindelsen, og klik derefter på **Næste**.
+4. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**.
 
-5. Log på din Flet1-konto for at konfigurere forbindelsen.
+5. Log på din Merge1-konto for at konfigurere connectoren.
 
-## <a name="step-2-configure-the-webex-teams-connector-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer Webex Teams-forbindelsen på webstedet Veritas Merge1
+## <a name="step-2-configure-the-webex-teams-connector-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer Webex Teams-connectoren på Veritas Merge1-webstedet
 
-Det andet trin er at konfigurere Webex Teams-forbindelsen på webstedet Flet1. Hvis du vil have mere at vide om, hvordan du konfigurerer Webex Teams-forbindelsen, skal du se [Brugervejledning til Flet1 tredjepartsforbindelser](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Webex%20Teams%20User%20Guide%20.pdf).
+Det andet trin er at konfigurere Webex Teams-connectoren på Merge1-webstedet. Du kan få oplysninger om, hvordan du konfigurerer Webex-Teams-connectoren, i [Brugervejledningen Til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Webex%20Teams%20User%20Guide%20.pdf).
 
-Når du har **klikket & færdig**, **vises** siden Brugertilknytning i Microsoft 365 Overholdelsescenter forbindelsen.
+Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i connectorguiden på overholdelsesportalen.
 
-## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør konfigurationen af forbindelsen
+## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Hvis du vil tilknytte brugere og fuldføre konfigurationen af forbindelsen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
+Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
-1. På siden **Map Webex Teams brugere Microsoft 365 aktivere** automatisk tilknytning af brugere. Webex-Teams indeholder en egenskab kaldet *Mail*, som indeholder mailadresser for brugere i organisationen. Hvis forbindelsen kan knytte denne adresse til Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Kortwebex Teams brugere, der skal Microsoft 365 brugere**. Webex-Teams-elementerne omfatter en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
 
-2. Klik **på** Næste, gennemgå dine indstillinger, og gå derefter til siden **Dataforbindelser** for at se status for importprocessen for den nye forbindelse.
+2. Klik på **Næste**, gennemse dine indstillinger, og gå derefter til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 
-## <a name="step-4-monitor-the-webex-teams-connector"></a>Trin 4: Overvåg WebEx-Teams forbindelseskomponent
+## <a name="step-4-monitor-the-webex-teams-connector"></a>Trin 4: Overvåg Webex-Teams-connectoren
 
-Når du har oprettet Webex Teams forbindelse, kan du få vist forbindelsens status på Microsoft 365 Overholdelsescenter.
+Når du har oprettet Webex-Teams-connectoren, kan du få vist connectorstatussen på overholdelsesportalen.
 
-1. Gå til og [https://compliance.microsoft.com](https://compliance.microsoft.com) klik **på Dataforbindelser** i venstre navigationslinje.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com) og klik på **Dataconnectors** i venstre navigationsrude.
 
-2. Klik på **fanen Forbindelser**, og vælg derefter **Webex-forbindelsen Teams** for at få vist pop op-siden. Denne side indeholder egenskaber og oplysninger om forbindelsen.
+2. Klik på fanen **Forbindelser,** og vælg derefter **webex-Teams-connectoren** for at få vist pop op-siden. Denne side indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde skal** du klikke **på linket Hent log** for at åbne (eller gemme) statusloggen for forbindelsen. Denne logfil indeholder oplysninger om de data, der er blevet importeret til Microsoft-skyen.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.

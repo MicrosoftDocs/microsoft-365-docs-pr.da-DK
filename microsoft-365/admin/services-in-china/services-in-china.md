@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: a8ab5061-3346-4da0-bb7c-5260822b53ae
 description: Få mere at vide om Office 365, der drives af 21Vianet, og som er designet til at opfylde behovene for sikre, pålidelige og skalerbare cloudtjenester i Kina.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 7608be301accfb99e03683240108be5eaa7529a6
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 16b40c0cb03d14915ccb89f7d34be5110b4c0849
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782627"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938922"
 ---
 # <a name="office-365-operated-by-21vianet"></a>Office 365 drevet af 21Vianet
 
@@ -42,7 +42,7 @@ Microsoft driver ikke selve tjenesten. 21Vianet driver, leverer og administrerer
 
  **Følg os på WeChat**
 
-Scan denne QR-kode for at følge os på WeChat og få de nyeste opdateringer til Office 365, der drives af 21Vianet.
+Scan denne QR-kode for at følge os på WeChat, og få de seneste opdateringer til Office 365 drevet af 21Vianet.
 
 ![Scan denne QR-kode for at følge os på WeChat.](../../media/9bbbdf3b-b3ab-4355-82a0-37a84d70735b.png)
 
@@ -174,7 +174,7 @@ Du kan få mere at vide om konfiguration af en hybridinstallation med Office 365
 |Kalenderdeling|Exchange 2013 SP1 og nyere understøtter manuel konfiguration af deling af internetkalendere med andre Exchange eller Exchange Online organisationer i det lokale miljø. Du kan finde flere oplysninger om, hvordan du konfigurerer denne funktion manuelt, under [Aktivér publicering af internetkalendere](/exchange/enable-internet-calendar-publishing-exchange-2013-help).|
 Deling Exchange kontaktdata på Apple-mobilenheder til Apple iCloud.|Denne indstilling/funktion er aktiveret som standard. Administratorer bør slå denne funktion fra for at forhindre brugere i at dele Exchange data uden for din organisation.|
 |Exchange hostet mailkryptering|Ikke tilgængelig.|
-|Office 365 meddelelsekryptering|Kommer snart.|
+|Microsoft Purview-meddelelsekryptering|Kommer snart.|
 
 ## <a name="office"></a>Office
 

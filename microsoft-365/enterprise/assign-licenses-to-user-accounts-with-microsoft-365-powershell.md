@@ -21,12 +21,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: I denne artikel kan du få mere at vide om, hvordan du bruger PowerShell til at tildele en Microsoft 365 licens til brugere uden licens.
-ms.openlocfilehash: 72ad30cb3c8a36a78b3f95699c775b96d959b542
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 3c92b3baaa0b8d67a5d5a626951b296be2516436
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823030"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941693"
 ---
 # <a name="assign-microsoft-365-licenses-to-user-accounts-with-powershell"></a>Tildel Microsoft 365 licenser til brugerkonti med PowerShell
 
@@ -119,7 +119,7 @@ $addLicenses = @(
 Set-MgUserLicense -UserId "belinda@litwareinc.com" -AddLicenses $addLicenses -RemoveLicenses @()
 ```
 
-I dette eksempel tildeles **SPE_E5** (Microsoft 365 E5) med **tjenesterne MICROSOFTBOOKINGS** (Microsoft Bookings) og **LOCKBOX_ENTERPRISE** (Customer LockBox) slået fra:
+I dette eksempel tildeles **SPE_E5** (Microsoft 365 E5) med **tjenesterne MICROSOFTBOOKINGS** (Microsoft Bookings) og **LOCKBOX_ENTERPRISE** (Customer Lockbox) slået fra:
   
 ```powershell
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'

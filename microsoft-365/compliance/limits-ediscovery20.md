@@ -1,5 +1,5 @@
 ---
-title: Avancerede eDiscovery-grænser
+title: grænser for eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,21 +15,21 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der er gældende for den Advanced eDiscovery løsning i Microsoft 365.
-ms.openlocfilehash: 93f0a988cb5a5321c8a725a1d678079174eba923
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
+ms.openlocfilehash: 599f57ab863ab6d82140fa473624916bd2f26ac1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861306"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942507"
 ---
-# <a name="limits-in-advanced-ediscovery"></a>Grænser i Advanced eDiscovery
+# <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
-I denne artikel beskrives grænserne i Advanced eDiscovery løsningen i Microsoft 365.
+I denne artikel beskrives grænserne i Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365.
 
 ## <a name="case-and-review-set-limits"></a>Grænser for sags- og gennemgangssæt
 
-I følgende tabel vises grænserne for sager og gennemgangssæt i Advanced eDiscovery.
+I følgende tabel vises grænserne for sager og gennemsynssæt i eDiscovery (Premium).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
@@ -45,17 +45,17 @@ I følgende tabel vises grænserne for sager og gennemgangssæt i Advanced eDisc
 
 ## <a name="hold-limits"></a>Grænser for venteposition
 
-I følgende tabel vises grænserne for ventepositioner, der er knyttet til en Advanced eDiscovery sag.
+I følgende tabel vises grænserne for de ventepositioner, der er knyttet til en eDiscovery-sag (Premium).
 
-|Beskrivelse af grænse|Grænse|
-|---|---|
-|Det maksimale antal politikker for bevarelse af en organisation. Denne grænse omfatter det samlede antal politikker for bevarelse af ventepositioner i centrale eDiscovery-sager og Advanced eDiscovery tilfælde.|10,000|
-|Det maksimale antal postkasser i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer Grupper.|1.0003<sup></sup>|
-|Det maksimale antal websteder i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer grupper.|1003<sup></sup>|
+| Beskrivelse af grænse | Grænse |
+|:-----|:-----|
+|Det maksimale antal politikker for bevarelse af en organisation. Denne grænse omfatter det samlede antal ventepositionspolitikker i sager med Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium). <br/> |10.0003<sup></sup>  <br/> |
+|Det maksimale antal postkasser i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer Grupper. <br/> |1,000  <br/> |
+|Det maksimale antal websteder i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer grupper.  <br/> |100  <br/> |
 
 ## <a name="indexing-limits"></a>Indekseringsgrænser
 
-I følgende tabel vises indekseringsgrænserne i Advanced eDiscovery.
+I følgende tabel vises indekseringsgrænserne i eDiscovery (Premium).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
@@ -66,7 +66,7 @@ I følgende tabel vises indekseringsgrænserne i Advanced eDiscovery.
 
 ## <a name="search-limits"></a>Søgegrænser
 
-De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger [under Indsaml data for en sag i Advanced eDiscovery](collecting-data-for-ediscovery.md).
+De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger [under Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
@@ -126,7 +126,7 @@ De grænser, der er beskrevet i dette afsnit, er relateret til eksport af dokume
 > [!NOTE]
 > <sup>1</sup> Dette er det maksimale antal mærker, du kan oprette i en sag. Denne grænse er ikke relateret til antallet af dokumenter, der kan mærkes.
 >
-> <sup>2</sup> Denne grænse deles med eksport af indhold i andre eDiscovery-værktøjer. Det betyder, at samtidige eksporter i Indholdssøgning og Kerne-eDiscovery (og tilføjelse af indhold til korrektursæt i Advanced eDiscovery) alle anvendes mod denne grænse.
+> <sup>2</sup> Denne grænse deles med eksport af indhold i andre eDiscovery-værktøjer. Det betyder, at samtidige eksporter i Indholdssøgning og eDiscovery (Standard) (og tilføjelse af indhold til korrektursæt i eDiscovery (Premium)) alle anvendes mod denne grænse.
 >
 > <sup>3</sup> Når du placerer mere end 1.000 postkasser eller 100 websteder i venteposition i en enkelt ventepositionspolitik, skalerer systemet automatisk ventepositionen efter behov. Det betyder, at systemet automatisk føjer dataplaceringer til politikker for flere ventepositioner i stedet for at føje dem til en politik for enkelt venteposition. Grænsen på 10.000 politikker for sags bevarelse pr. organisation gælder dog stadig.
 >
@@ -141,4 +141,4 @@ De grænser, der er beskrevet i dette afsnit, er relateret til eksport af dokume
 >
 > <sup>6</sup> Til forespørgsler uden udtryk (en nøgleordsværdi, der ikke bruger dobbelte anførselstegn) bruger vi et særligt præfiksindeks. Dette fortæller os, at der forekommer et ord i et dokument, men ikke der, hvor det forekommer i dokumentet. Hvis du vil udføre en udtryksforespørgsel (en nøgleordsværdi med dobbelte anførselstegn), skal vi sammenligne placeringen i dokumentet med ordene i udtrykket. Det betyder, at vi ikke kan bruge præfiksindekset til udtryksforespørgsler. I dette tilfælde udvider vi forespørgslen internt med alle de mulige ord, som præfikset udvides til. time_ kan f.eks. ***udvides til _*"time OR timer OR times OR timex OR timeboxed OR ...".\*** Grænsen på 10.000 er det maksimale antal varianter, ordet kan udvides til, ikke antallet af dokumenter, der svarer til forespørgslen. Der er ingen øvre grænse for ord, der ikke er udtryk.
 >
-> <sup>7</sup> Denne grænse gælder for hentning af valgte dokumenter fra et gennemsynssæt. Det gælder ikke for eksport af dokumenter fra et korrektursæt. Du kan finde flere oplysninger om hentning og eksport af dokumenter [under Eksportér sagsdata i Advanced eDiscovery](exporting-data-ediscover20.md).
+> <sup>7</sup> Denne grænse gælder for hentning af valgte dokumenter fra et gennemsynssæt. Det gælder ikke for eksport af dokumenter fra et korrektursæt. Du kan finde flere oplysninger om hentning og eksport af dokumenter [under Eksportér sagsdata i eDiscovery (Premium)](exporting-data-ediscover20.md).

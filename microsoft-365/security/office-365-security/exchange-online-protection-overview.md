@@ -1,5 +1,5 @@
 ---
-title: Exchange Online Protection (EOP)
+title: oversigt over Exchange Online Protection (EOP)
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -13,115 +13,115 @@ ms.localizationpriority: medium
 ms.assetid: 1270a65f-ddc3-4430-b500-4d3a481efb1e
 ms.custom:
 - seo-marvel-apr2020
-description: Lær, Exchange Online Protection (EOP) kan hjælpe med at beskytte din lokale mailorganisation i enkeltstående og hybride miljøer.
+description: Få mere at vide om, hvordan Exchange Online Protection (EOP) kan hjælpe med at beskytte din mailorganisation i det lokale miljø i separate og hybride miljøer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 319b20d548ad83cbf57043909a8dc2ce840db5cd
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 19bf82a530cd61b253047261bb44893266a240d8
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682653"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941561"
 ---
-# <a name="exchange-online-protection-overview"></a>Exchange Online Protection oversigt
+# <a name="exchange-online-protection-overview"></a>Oversigt over Exchange Online Protection
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online Protection (EOP) er den skybaserede filtreringstjeneste, der beskytter din organisation mod spam, malware og andre mailtrusler. EOP er inkluderet i alle Microsoft 365 med Exchange Online postkasser.
+Exchange Online Protection (EOP) er den skybaserede filtreringstjeneste, der beskytter din organisation mod spam, malware og andre mailtrusler. EOP er inkluderet i alle Microsoft 365 organisationer med Exchange Online postkasser.
 
 > [!NOTE]
-> EOP er også tilgængelig for sig selv til at beskytte postkasser i det lokale miljø og i hybridmiljøer for at beskytte lokale Exchange postkasser. Du kan finde flere oplysninger [under Enkeltstående Exchange Online Protection](/exchange/standalone-eop/standalone-eop).
+> EOP er også tilgængelig i sig selv for at beskytte postkasser i det lokale miljø og i hybridmiljøer for at beskytte Exchange postkasser i det lokale miljø. Du kan få flere oplysninger under [Separate Exchange Online Protection](/exchange/standalone-eop/standalone-eop).
 
-Trinnene til at konfigurere EOP-sikkerhedsfunktioner og en sammenligning med den ekstra sikkerhed, du får i Microsoft Defender til Office 365, se Beskyt [dig mod trusler](protect-against-threats.md). De anbefalede indstillinger for EOP-funktioner er tilgængelige [i Anbefalede indstillinger for EOP og Microsoft Defender Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+Trinnene til konfiguration af EOP-sikkerhedsfunktioner og en sammenligning af den ekstra sikkerhed, du får i Microsoft Defender for Office 365, kan du se [Beskyt mod trusler](protect-against-threats.md). De anbefalede indstillinger for EOP-funktioner er tilgængelige under [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 
 I resten af denne artikel forklares det, hvordan EOP fungerer, og hvilke funktioner der er tilgængelige i EOP.
 
 ## <a name="how-eop-works"></a>Sådan fungerer EOP
 
-For at forstå, hvordan EOP fungerer, hjælper det at se, hvordan det behandler indgående mail:
+For at forstå, hvordan EOP fungerer, hjælper det at se, hvordan den behandler indgående mail:
 
-:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="Grafik af mail fra internettet eller kundefeedback, der går ind i EOP og via Forbindelse, antimalware, filtrering af regler for mailflow og filtrering af indhold, før du afslutter enten uønsket mail eller karantæne eller leveringen af mails til slutbrugeren.":::
+:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="Grafik af mail fra internettet eller kundefeedback, der sendes til EOP og via forbindelse, antimalware, mailflowpolitikfiltrering og indholdsfiltrering, før dommen af enten uønsket mail eller karantæne eller levering af slutbrugermail" lightbox="../../media/tp_emailprocessingineopt3.png":::
 
-1. Når en indgående meddelelse kommer ind i EOP, gennemgår den til at begynde med filtrering af forbindelsen, hvilket kontrollerer afsenderens ry. Størstedelen af spam stoppes på nuværende tidspunkt og afvises af EOP. Du kan finde flere oplysninger [under Konfigurere filtrering af forbindelse](configure-the-connection-filter-policy.md).
+1. Når en indgående meddelelse kommer ind i EOP, går den i første omgang gennem forbindelsesfiltrering, som kontrollerer afsenderens omdømme. Størstedelen af spam stoppes på dette tidspunkt og afvises af EOP. Du kan få flere oplysninger under [Konfigurer forbindelsesfiltrering](configure-the-connection-filter-policy.md).
 
-2. Derefter undersøges meddelelsen for malware. Hvis der bliver fundet malware i meddelelsen eller i de vedhæftede filer, leveres meddelelsen til karantæne. Som standard er det kun administratorer, der kan få vist og interagere med malwaremeddelelser, der er i karantæne. Men administratorer kan oprette og bruge karantænepolitikker [til at angive](quarantine-policies.md) , hvad brugerne har tilladelse til at gøre for meddelelser, der er sat i karantæne. Du kan få mere at vide om beskyttelse mod malware [under Beskyttelse mod malware i EOP](anti-malware-protection.md).
+2. Derefter inspiceres meddelelsen for malware. Hvis der findes malware i meddelelsen eller den eller de vedhæftede filer, leveres meddelelsen til karantæne. Som standard er det kun administratorer, der kan få vist og interagere med meddelelser, der er sat i karantæne. Men administratorer kan oprette og bruge [karantænepolitikker](quarantine-policies.md) til at angive, hvad brugerne har tilladelse til at gøre for at sætte meddelelser i karantæne. Du kan få mere at vide om beskyttelse mod malware [under Beskyttelse mod skadelig software i EOP](anti-malware-protection.md).
 
-3. Meddelelsen fortsætter via politikfiltrering, hvor den evalueres i forhold til eventuelle regler for mailflow (også kaldet transportregler), du har oprettet. En regel kan f.eks. sende en meddelelse til en chef, når der modtages en meddelelse fra en bestemt afsender.
+3. Meddelelsen fortsætter via politikfiltrering, hvor den evalueres i forhold til de regler for mailflow (også kaldet transportregler), du har oprettet. En regel kan f.eks. sende en meddelelse til en leder, når der modtages en meddelelse fra en bestemt afsender.
 
-   I en lokal organisation med Exchange Enterprise CAL med servicelicenser, udføres [DLP-kontroller (forebyggelse](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) af datatab) også i EOP på dette tidspunkt.
+   I organisationen i det lokale miljø med Exchange Enterprise CAL med tjenestelicenser sker [der også microsoft Purview DLP-kontroller (Forebyggelse af datatab)](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) i EOP på dette tidspunkt.
 
-4. Meddelelsen passerer gennem filtrering af indhold (antispam og uønsket spoofing), hvor skadelige meddelelser identificeres som spam, spam med høj tillid, phishing, phishing med høj sikkerhed eller massemail (antispampolitikker) eller spoofing (spoof-indstillinger i antiphishing-politikker). Du kan konfigurere den handling, der skal udføre handlingen på meddelelsen, baseret på filtreringens vurdering (karantæne, flytning til mappen Uønsket mail osv.), og hvad brugerne kan gøre ved de meddelelser, der er i karantæne, ved hjælp af karantænepolitikker[.](quarantine-policies.md) Få mere at vide under [Konfigurer antispampolitikker](configure-your-spam-filter-policies.md) og [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md).
+4. Meddelelsen går gennem indholdsfiltrering (anti-spam og anti-spoofing), hvor skadelige meddelelser identificeres som spam, spam med høj tillid, phishing, phishing med høj tillid eller masse (politikker for anti-spam) eller spoofing (spoof-indstillinger i politikker til anti-phishing). Du kan konfigurere den handling, der skal udføres på meddelelsen, på baggrund af filterafsigelsen (karantæne, flytning til mappen Uønsket mail osv.), og hvad brugerne kan gøre med de karantænerede meddelelser ved hjælp af [karantænepolitikker](quarantine-policies.md). Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af spam](configure-your-spam-filter-policies.md) og [Konfigurer politikker til bekæmpelse af phishing i EOP](configure-anti-phishing-policies-eop.md).
 
-En meddelelse, der er korrekt videregivet alle disse beskyttelseslag, leveres til modtagerne.
+En meddelelse, der overfører alle disse beskyttelseslag, leveres til modtagerne.
 
-Du kan finde flere oplysninger [i Rækkefølgen og prioriteten af mailbeskyttelse](how-policies-and-protections-are-combined.md).
+Du kan få flere oplysninger under [Rækkefølgen og rækkefølgen af mailbeskyttelse](how-policies-and-protections-are-combined.md).
 
 ### <a name="eop-datacenters"></a>EOP-datacentre
 
-EOP kører på et verdensomspændende netværk af datacentre, der er designet til at give den bedste tilgængelighed. Hvis et datacenter f.eks. ikke længere er tilgængeligt, sendes mails automatisk til et andet datacenter uden afbrydelser i tjenesten. Servere i hvert datacenter accepterer meddelelser på dine vegne, hvilket giver et lag af adskillelse mellem din organisation og internettet, hvilket reducerer belastningen på dine servere. Via dette meget tilgængelige netværk kan Microsoft sikre, at mail når rettidigt frem til din organisation.
+EOP kører på et verdensomspændende netværk af datacentre, der er designet til at give den bedste tilgængelighed. Hvis et datacenter f.eks. bliver utilgængeligt, dirigeres mails automatisk til et andet datacenter uden afbrydelser i tjenesten. Servere i hvert datacenter accepterer meddelelser på dine vegne, hvilket giver et lag af adskillelse mellem din organisation og internettet, hvilket reducerer belastningen på dine servere. Via dette netværk, der er meget tilgængeligt, kan Microsoft sikre, at mail når din organisation i tide.
 
-EOP udfører belastningsjustering mellem datacentre, men kun inden for et område. Hvis du er klargjort i ét område, behandles alle dine meddelelser ved hjælp af mail-routing for det pågældende område.
+EOP udfører belastningsjustering mellem datacentre, men kun inden for et område. Hvis du klargøres i ét område, behandles alle dine meddelelser ved hjælp af maildistributionen for det pågældende område.
 
 ### <a name="eop-features"></a>EOP-funktioner
 
-Dette afsnit indeholder en detaljeret oversigt over de vigtigste funktioner, der er tilgængelige i EOP.
+Dette afsnit indeholder en overordnet oversigt over de vigtigste funktioner, der er tilgængelige i EOP.
 
-Du kan finde oplysninger om krav, vigtige begrænsninger og tilgængelighed af funktioner på tværs af alle EOP-abonnementsplaner [i Exchange Online Protection tjenestebeskrivelse](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+Du kan få oplysninger om krav, vigtige grænser og tilgængelighed af funktioner på tværs af alle EOP-abonnementsplaner i [beskrivelsen af Exchange Online Protection-tjenesten](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
 
-**Bemærkninger**:
+**Noter**:
 
-- EOP bruger flere lister over URL-adresser, der hjælper med at registrere kendte ondsindede links i meddelelser.
+- EOP bruger flere URL-blokeringslister, der hjælper med at registrere kendte skadelige links i meddelelser.
 - EOP bruger en stor liste over domæner, der er kendt for at sende spam.
-- EOP bruger flere antimalware programmer til automatisk at beskytte vores kunder hele tiden.
-- EOP undersøger den aktive nyttedata i meddelelsens brødtekst og alle vedhæftede filer for malware.
-- Du kan finde anbefalede værdier for beskyttelsespolitikker [i Anbefalede indstillinger for EOP og Microsoft Defender Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
-- Du kan finde en hurtig vejledning i, hvordan du [konfigurerer beskyttelsespolitikker, under Beskyt dig mod trusler](protect-against-threats.md).
+- EOP bruger flere antimalwareprogrammer, der hjælper med automatisk at beskytte vores kunder hele tiden.
+- EOP undersøger de aktive nyttedata i meddelelsens brødtekst og alle vedhæftede filer i meddelelser for malware.
+- Du kan se de anbefalede værdier for beskyttelsespolitikker under [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+- Hvis du vil have en hurtig vejledning i at konfigurere beskyttelsespolitikker, skal du se [Beskyt mod trusler](protect-against-threats.md).
 
 |Funktion|Kommentarer|
 |---|---|
 |**Beskyttelse**||
-|Antimalware|[Beskyttelse mod malware i EOP](anti-malware-protection.md) <p> [Ofte stillede spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml) <p> [Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md)|
-|Indgående antispam|[Beskyttelse mod spam i EOP](anti-spam-protection.md) <p> [Ofte stillede spørgsmål om beskyttelse mod spam](anti-spam-protection-faq.yml) <p> [Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
-|Udgående antispam|[Beskyttelse mod udgående spam i EOP](outbound-spam-controls.md) <p> [Konfigurere udgående spamfiltrering i EOP](configure-the-outbound-spam-policy.md) <p> [Kontrollere automatisk videresendelse af eksterne mails Microsoft 365](external-email-forwarding.md)|
-|Forbindelsesfiltrering|[Konfigurere filtrering af forbindelse](configure-the-connection-filter-policy.md)|
-|Antiphishing|[Antiphishing-politikker i Microsoft 365](set-up-anti-phishing-policies.md) <p> [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)|
-|Beskyttelse mod spoofing|[Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md) <p> [Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md)|
-|Nul-timers automatisk tømning (ZAP) for leveret malware, spam og phishing-meddelelser|[ZAP i Exchange Online](zero-hour-auto-purge.md)|
-|Forudindstillede sikkerhedspolitikker|[Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender Office 365](preset-security-policies.md) <p> [Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender til Office 365](configuration-analyzer-for-security-policies.md)|
-|Lejers tilladelses-/blokeringsliste|[Administrer lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md)|
-|Blokere lister for meddelelsesafsendere|[Opret lister over blokerede afsendere i EOP](create-block-sender-lists-in-office-365.md)|
-|Tilladelseslister for meddelelsesafsendere|[Opret lister over afsendere, der er tillid til i EOP](create-safe-sender-lists-in-office-365.md)|
-|Mappebaseret blokering af kanter (DBEB)|[Brug blokering af mappebaseret kant til at afvise meddelelser, der sendes til ugyldige modtagere](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking)|
+|Antimalware|[Beskyttelse mod skadelig software i EOP](anti-malware-protection.md) <p> [Ofte stillede spørgsmål om beskyttelse mod malware](anti-malware-protection-faq-eop.yml) <p> [Konfigurer politikker for antimalware i EOP](configure-anti-malware-policies.md)|
+|Indgående anti-spam|[Beskyttelse mod spam i EOP](anti-spam-protection.md) <p> [Ofte stillede spørgsmål om beskyttelse mod spam](anti-spam-protection-faq.yml) <p> [Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md)|
+|Udgående anti-spam|[Beskyttelse mod udgående spam i EOP](outbound-spam-controls.md) <p> [Konfigurer filtrering af udgående spam i EOP](configure-the-outbound-spam-policy.md) <p> [Kontrollér automatisk ekstern videresendelse af mail i Microsoft 365](external-email-forwarding.md)|
+|Forbindelsesfiltrering|[Konfigurer filtrering af forbindelse](configure-the-connection-filter-policy.md)|
+|Anti-phishing|[Politikker til bekæmpelse af phishing i Microsoft 365](set-up-anti-phishing-policies.md) <p> [Konfigurer politikker for antiphishing i EOP](configure-anti-phishing-policies-eop.md)|
+|Beskyttelse mod forfalskning|[Spoof intelligence-indsigt i EOP](learn-about-spoof-intelligence.md) <p> [Administrer listen over tilladte/blokerede lejere](tenant-allow-block-list.md)|
+|Zap (automatisk fjernelse på nul timer) for leveret malware, spam og phishing|[ZAP i Exchange Online](zero-hour-auto-purge.md)|
+|Forudindstil sikkerhedspolitikker|[Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md) <p> [Konfigurationsanalyse for beskyttelsespolitikker i EOP og Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)|
+|Liste over tilladte/blokerede lejere|[Administrer listen over tilladte/blokerede lejere](tenant-allow-block-list.md)|
+|Bloker lister for afsendere af meddelelser|[Opret lister over blokerede afsendere i EOP](create-block-sender-lists-in-office-365.md)|
+|Tillad lister for afsendere af meddelelser|[Opret lister over sikre afsendere i EOP](create-safe-sender-lists-in-office-365.md)|
+|Katalogbaseret kantblokering (DBEB)|[Brug mappebaseret kantblokering til at afvise meddelelser, der er sendt til ugyldige modtagere](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking)|
 |**Karantæne og indsendelser**||
-|Administratorindsendelse|[Brug administratorindsendelse til at sende mistænkeligt spam, phish, URL-adresser og filer til Microsoft](admin-submission.md)|
+|Administratorafsendelse|[Brug administratorindsendelse til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md)|
 |Brugerindsendelser (brugerdefineret postkasse)|[Politik for brugerindsendelser](user-submission.md)|
-|Karantæne – administratorer|[Administrer meddelelser og filer, der er sat i karantæne, som administrator i EOP](manage-quarantined-messages-and-files.md) <p> [Ofte stillede spørgsmål om meddelelser i karantæne](quarantine-faq.yml) <p> [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md) <p> [Antispam-brevhoveder i Microsoft 365](anti-spam-message-headers.md) <p> Du kan analysere brevhovederne for meddelelser, der er sat i karantæne, ved [hjælp af Analyse af brevhoved](https://mha.azurewebsites.net/) på.|
-|Karantæne – slutbrugere|[Find og slip meddelelser, der er sat i karantæne, som en bruger i EOP](find-and-release-quarantined-messages-as-a-user.md) <p> [Brug af karantænemeddelelser til at frigive og rapportere meddelelser, der er sat i karantæne](use-spam-notifications-to-release-and-report-quarantined-messages.md) <p> [Karantænepolitikker](quarantine-policies.md)|
+|Karantæne – administratorer|[Administrer karantænemeddelelser og filer som administrator i EOP](manage-quarantined-messages-and-files.md) <p> [Ofte stillede spørgsmål om karantænemeddelelser](quarantine-faq.yml) <p> [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md) <p> [Brevhoveder mod spam i Microsoft 365](anti-spam-message-headers.md) <p> Du kan analysere brevhovederne i karantænemeddelelser ved hjælp af [Analyse af brevhoved på](https://mha.azurewebsites.net/).|
+|Karantæne - slutbrugere|[Find og frigiv karantænemeddelelser som en bruger i EOP](find-and-release-quarantined-messages-as-a-user.md) <p> [Brug karantænemeddelelser til at frigive og rapportere karantænemeddelelser](use-spam-notifications-to-release-and-report-quarantined-messages.md) <p> [Karantænepolitik](quarantine-policies.md)|
 |**Mailflow**||
-|Regler for mailflow|[Regler for mailflow (transportregler) i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <p> [Betingelser og undtagelser for regler for mailflow (prædikater) i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <p> [Handlinger for regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <p> [Administrer regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <p> [Mailflowregelprocedurer i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
+|Regler for mailflow|[Regler for mailflow (transportregler) i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <p> [Regelbetingelser og undtagelser for mailflow (prædikater) i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <p> [Handlinger for mailflowregel i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <p> [Administrer regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <p> [Regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
 |Accepterede domæner|[Administrer accepterede domæner i Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)|
-|Forbindelser|[Konfigurer mailflow ved hjælp af forbindelser i Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow)|
+|Stik|[Konfigurer mailflow ved hjælp af connectors i Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow)|
 |Forbedret filtrering for forbindelser|[Forbedret filtrering af forbindelser i Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)|
 |**Overvågning**||
 |Meddelelsessporing|[Meddelelsessporing](message-trace-scc.md) <p> [Meddelelsessporing i Exchange Administration](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac)|
-|Rapporter & mailsamarbejde|[Få vist mailsikkerhedsrapporter](view-email-security-reports.md)|
-|Mailflowrapporter|[Få vist mailflowrapporter](view-mail-flow-reports.md) <p> [Mailflowrapporter i Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
-|Indsigt i mailflow|[Indsigt i mailflow](mail-flow-insights-v2.md) <p> [Indsigt i mailflow Exchange Administration](/exchange/monitoring/mail-flow-insights/mail-flow-insights)|
+|Mail & samarbejdsrapporter|[Få vist sikkerhedsrapporter for mail](view-email-security-reports.md)|
+|Mailflowrapporter|[Vis rapporter over mailflow](view-mail-flow-reports.md) <p> [Mailflowrapporter i Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
+|Indsigt i mailflow|[Indsigt i mailflow](mail-flow-insights-v2.md) <p> [Indsigt i mailflow i Exchange Administration](/exchange/monitoring/mail-flow-insights/mail-flow-insights)|
 |Overvågningsrapporter|[Overvågningsrapporter i Exchange Administration](/exchange/security-and-compliance/exchange-auditing-reports/exchange-auditing-reports)|
-|Beskedpolitikker|[Beskedpolitikker](../../compliance/alert-policies.md)|
-|**Serviceaftale og support**||
-|Sla for spameffektiviteten|\> 99%|
-|FALSK positiv ratio SLA|\< 1:250,000|
+|Underretningspolitikker|[Underretningspolitikker](../../compliance/alert-policies.md)|
+|**Serviceniveauaftaler (SLA'er) og support**||
+|SLA for spameffektivitet|\> 99%|
+|SLA for falsk positivt forhold|\< 1:250,000|
 |Virusregistrering og blokering af SLA|100 % af kendte virusser|
-|Serviceaftale for månedlig oppetid|99.999%|
-|Telefon og teknisk websupport 24 timer i døgnet, syv dage om ugen|[Hjælp og support til EOP](help-and-support-for-eop.md).|
+|SLA for månedlig oppetid|99.999%|
+|Telefon og web teknisk support 24 timer i døgnet, syv dage om ugen|[Hjælp og support til EOP](help-and-support-for-eop.md).|
 |**Andre funktioner**||
-|Et geo redundant globalt netværk af servere|EOP kører på et verdensomspændende netværk af datacentre, der er designet til at hjælpe med at levere den bedste tilgængelighed. Du kan finde flere oplysninger i [afsnittet EOP-datacentre](#eop-datacenters) tidligere i denne artikel.|
-|Meddelelseskø, når den lokale server ikke kan acceptere mail|Meddelelser, der udskydes, forbliver i vores køer i en dag. Gentagne forsøg på meddelelse er baseret på den fejl, vi får tilbage fra modtagerens mailsystem. I gennemsnit foreprøves meddelelser igen hvert 5. minut. Få mere at vide under [Ofte stillede spørgsmål om EOP i kø, udskudt og afvist meddelelse](eop-queued-deferred-and-bounced-messages-faq.yml).|
-|Office 365-meddelelseskryptering tilgængelig som et tilføjelsesprogrammet|Du kan finde flere oplysninger [under Kryptering i Office 365](../../compliance/encryption.md).|
+|Et geo-redundant globalt netværk af servere|EOP kører på et verdensomspændende netværk af datacentre, der er designet til at hjælpe med at sikre den bedste tilgængelighed. Du kan få flere oplysninger i afsnittet [EOP-datacentre](#eop-datacenters) tidligere i denne artikel.|
+|Msmq, når serveren i det lokale miljø ikke kan acceptere post|Meddelelser, der udskydes, forbliver i vores kø i en dag. Forsøg på at gentage meddelelser er baseret på den fejl, vi får tilbage fra modtagerens postsystem. Meddelelser prøves i gennemsnit igen hvert 5. minut. Du kan få flere oplysninger under [Ofte stillede spørgsmål om EOP-meddelelser, der er sat i kø, udskudt eller afvist](eop-queued-deferred-and-bounced-messages-faq.yml).|
+|Office 365 meddelelseskryptering tilgængelig som et tilføjelsesprogram|Du kan få flere oplysninger [under Kryptering i Office 365](../../compliance/encryption.md).|
 |||

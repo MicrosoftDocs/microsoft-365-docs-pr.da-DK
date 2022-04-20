@@ -14,16 +14,16 @@ ms.custom: nextgen
 ms.reviewer: mkaminska, pahuijbr
 manager: dansimp
 ms.technology: mde
-ms.date: 04/14/2022
+ms.date: 04/19/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6d0e9b00e7044145f7ca03d492a5bd32e726c38d
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: 08f9f3e127246b361cd76000967ae22991335338
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911440"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943441"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -176,7 +176,7 @@ Tabellen i dette afsnit opsummerer de funktioner og funktioner, der fungerer akt
 (<a id="fn8">8</a>) Når Microsoft Defender Antivirus er i passiv tilstand, fungerer filtrering af webindhold kun med Microsoft Edge browser. 
 
 > [!NOTE]
-> [Microsoft 365 beskyttelse mod datatab](/microsoft-365/compliance/endpoint-dlp-learn-about) fungerer fortsat normalt, når Microsoft Defender Antivirus er i enten aktiv eller passiv tilstand.
+> [Beskyttelse mod datatab for slutpunkter](/microsoft-365/compliance/endpoint-dlp-learn-about) fungerer fortsat normalt, når Microsoft Defender Antivirus er i enten aktiv eller passiv tilstand.
 
 ## <a name="important-notes"></a>Vigtige noter
 
@@ -194,7 +194,6 @@ Du kan bruge en af flere metoder til at bekræfte tilstanden af Microsoft Defend
  | Jobliste |  1. Åbn appen Jobliste på en Windows enhed.<br/>2. Vælg fanen **Detaljer** .<br/>3. Søg efter **MsMpEng.exe** på listen. | 
  | Windows PowerShell <br/> (For at bekræfte, at Microsoft Defender Antivirus kører) |  1. Åbn Windows PowerShell på en Windows enhed. <br/>2. Kør følgende PowerShell-cmdlet: `Get-Process`.<br/>3. Gennemse resultaterne. Du bør kunne se **MsMpEng.exe**, om Microsoft Defender Antivirus er aktiveret. | 
  | Windows PowerShell <br/>(For at bekræfte, at antivirusbeskyttelse er på plads) |  Du kan bruge [PowerShell-cmdlet'en Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus).<br/>1. Åbn Windows PowerShell på en Windows enhed.<br/>2. Kør følgende PowerShell-cmdlet:<br/> \|Get-MpComputerStatus vælge AMRunningMode <br/>3. Gennemse resultaterne. Du bør kunne se enten **Normal**, **Passiv** eller **Slutpunktsregistrering og -svar Blokeringstilstand**, hvis Microsoft Defender Antivirus er aktiveret på slutpunktet.  | 
- | Kommandoprompten |  1. Åbn kommandoprompten på en Windows enhed.<br/>2. Skriv `sc query windefend`, og tryk derefter på Enter.<br/>3. Gennemse resultaterne for at bekræfte, at Microsoft Defender Antivirus kører i passiv tilstand.  | 
 
 ## <a name="more-details-about-microsoft-defender-antivirus-states"></a>Flere oplysninger om Microsoft Defender Antivirus stater
 
@@ -221,4 +220,4 @@ I tabellen i dette afsnit beskrives forskellige tilstande, som du kan se med Mic
 - [Microsoft Defender Antivirus på Windows klienter](microsoft-defender-antivirus-in-windows-10.md)
 - [Microsoft Defender Antivirus på Windows server](microsoft-defender-antivirus-on-windows-server.md)
 - [EDR i bloktilstand](edr-in-block-mode.md)
-- [Få mere at vide om Microsoft 365 forebyggelse af datatab i Slutpunkt](/microsoft-365/compliance/endpoint-dlp-learn-about)
+- [Få mere at vide om forebyggelse af datatab ved slutpunkt](/microsoft-365/compliance/endpoint-dlp-learn-about)
