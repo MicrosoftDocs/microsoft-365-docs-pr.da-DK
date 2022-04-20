@@ -1,5 +1,5 @@
 ---
-title: Brug et script til at oprette en rapport over ventende eDiscovery-ventende
+title: Brug et script til at oprette en rapport over eDiscovery-ventepositioner
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,37 +19,37 @@ search.appverid:
 ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du opretter en rapport, der indeholder oplysninger om alle de ventende elementer, der er knyttet til eDiscovery-sager.
-ms.openlocfilehash: 568d4fa351879d271004d0f0749881f3de4b4a49
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du opretter en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager.
+ms.openlocfilehash: b0460b725359e2953c0a27b517a362327ae504f5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587692"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946457"
 ---
-# <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>Brug et script til at oprette en rapport om ventende mails i eDiscovery-sager
+# <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>Brug et script til at oprette en rapport om ventepositioner i eDiscovery-sager
 
-Scriptet i denne artikel giver eDiscovery-administratorer og eDiscovery-ledere mulighed for at generere en rapport, der indeholder oplysninger om alle ventende elementer, der er knyttet til Core- og Advanced eDiscovery-sager i Microsoft 365 Overholdelsescenter. Rapporten indeholder oplysninger som f.eks. navnet på den sag, en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er tilfælde, der ikke har nogen ventende funktioner, opretter scriptet en ekstra rapport med en liste over sager uden ventende funktioner.
+Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til core- og eDiscovery-sager (Premium) i Microsoft Purview-overholdelsesportalen. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
 
-Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret beskrivelse af oplysningerne i rapporten.
+Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret beskrivelse af de oplysninger, der er inkluderet i rapporten.
 
 ## <a name="admin-requirements-and-script-information"></a>Administratorkrav og scriptoplysninger
 
-- For at generere en rapport om alle eDiscovery-sager i din organisation skal du være eDiscovery-administrator i din organisation. Hvis du er eDiscovery-leder, indeholder rapporten kun oplysninger om de sager, du kan få adgang til. Du kan finde flere oplysninger om eDiscovery-tilladelser [under Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
+- Hvis du vil generere en rapport over alle eDiscovery-sager i din organisation, skal du være eDiscovery-administrator i din organisation. Hvis du er eDiscovery Manager, indeholder rapporten kun oplysninger om de sager, du har adgang til. Du kan finde flere oplysninger om eDiscovery-tilladelser under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
-- Scriptet i denne artikel har minimal fejlhåndtering. Det primære formål er hurtigt at oprette en rapport om de ventende, der er knyttet til eDiscovery-sager i din organisation.
+- Scriptet i denne artikel har minimal fejlhåndtering. Det primære formål er hurtigt at oprette en rapport om de ventepositioner, der er knyttet til eDiscovery-sager i din organisation.
 
-- De eksempelscripts, der er angivet i dette emne, understøttes ikke i nogen Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptene leveres som de er, uden garantier af nogen art. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, men ikke begrænset til stiltiende garantier for salgbarhed eller egnethed til bestemte formål. Den samlede risiko ved anvendelse eller ydeevne af eksempelscripts og dokumentation forbliver hos dig. I intet tilfælde kan Microsoft, dets forfattere eller andre involverede i oprettelse, produktion eller levering af scripts holdes ansvarlige for erstatning (herunder, men ikke begrænset til, erstatning for tabt forretningsfortjenester, driftstab, tabt erhvervsinformation eller andre økonomiske tab) som følge af brug af eller manglende mulighed for at bruge eksempelscripts eller dokumentation,  også selvom Microsoft er blevet underrettet om risikoen for sådanne skader.
+- De eksempelscripts, der er angivet i dette emne, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
 ## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Forbind til Security & Compliance Center PowerShell
 
-Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for organisationen. Du kan finde en trinvis vejledning under [Forbind Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>Trin 2: Kør scriptet for at rapportere om ventende ventende mails, der er knyttet til eDiscovery-sager
+## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>Trin 2: Kør scriptet for at rapportere om ventepositioner, der er knyttet til eDiscovery-sager
 
-Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er næste trin at oprette og køre det script, der indsamler oplysninger om eDiscovery-sager i din organisation.
+Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er det næste trin at oprette og køre scriptet, der indsamler oplysninger om eDiscovery-sager i din organisation.
 
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnsuffiks af .ps1, f.eks. CaseHoldsReport.ps1.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks med .ps1, f.eks. CaseHoldsReport.ps1.
 
    ```powershell
    #script begin
@@ -105,7 +105,7 @@ Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er
    }
    #get information on the cases and pass values to the case report function
    " "
-   write-host "Gathering a list of Core eDiscovery cases and holds..."
+   write-host "Gathering a list of eDiscovery (Standard) cases and holds..."
    " "
    $edc =Get-ComplianceCase -ErrorAction SilentlyContinue
    foreach($cc in $edc)
@@ -136,7 +136,7 @@ Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er
    }
    #get information on the cases and pass values to the case report function
    " "
-   write-host "Gathering a list of Advanced eDiscovery cases and holds..."
+   write-host "Gathering a list of eDiscovery (Premium) cases and holds..."
    " "
    $edc =Get-ComplianceCase -CaseType Advanced -ErrorAction SilentlyContinue
    foreach($cc in $edc)
@@ -174,49 +174,49 @@ Når du har oprettet forbindelse til Security & Compliance Center PowerShell, er
 
 2. I den Windows PowerShell session, der blev åbnet i trin 1, skal du gå til den mappe, hvor du gemte scriptet.
 
-3. Kør scriptet. for eksempel:
+3. Kør scriptet. f.eks.:
 
    ```powershell
    .\CaseHoldsReport.ps1
    ```
 
-   Scriptet beder om en destinationsmappe at gemme rapporten i.
+   Scriptet beder om en destinationsmappe, som rapporten skal gemmes i.
 
-4. Skriv det fulde stinavn på mappen, som rapporten skal gemmes i, og tryk derefter på **Enter**.
+4. Skriv det fulde stinavn på den mappe, rapporten skal gemmes i, og tryk derefter på **Enter**.
 
    > [!TIP]
-   > Hvis du vil gemme rapporten i den samme mappe, som scriptet er placeret i, skal du skrive et punktum ("."), når du bliver bedt om en destinationsmappe. Hvis du vil gemme rapporten i en undermappe i den mappe, hvor scriptet er placeret, skal du blot skrive navnet på undermappen.
+   > Hvis du vil gemme rapporten i den samme mappe, som scriptet er placeret i, skal du skrive et punktum ("."), når du bliver bedt om at angive en destinationsmappe. Hvis du vil gemme rapporten i en undermappe i den mappe, hvor scriptet er placeret, skal du blot skrive navnet på undermappen.
 
-   Scriptet begynder at indsamle oplysninger om alle eDiscovery-sager i din organisation. Få ikke adgang til rapportfilen, mens scriptet kører. Når scriptet er fuldført, vises der en bekræftelsesmeddelelse i Windows PowerShell session. Når denne meddelelse vises, kan du få adgang til rapporten i den mappe, du angav i trin 4. Rapportens filnavn er `CaseHoldsReport<DateTimeStamp>.csv`.
+   Scriptet begynder at indsamle oplysninger om alle eDiscovery-sager i din organisation. Undlad at få adgang til rapportfilen, mens scriptet kører. Når scriptet er fuldført, vises der en bekræftelsesmeddelelse i den Windows PowerShell session. Når denne meddelelse vises, kan du få adgang til rapporten i den mappe, du angav i trin 4. Filnavnet på rapporten er `CaseHoldsReport<DateTimeStamp>.csv`.
 
-   Desuden opretter scriptet også en rapport med en liste over sager, der ikke har nogen ventende funktioner. Filnavnet for denne rapport er `CaseswithNoHolds<DateTimeStamp>.csv`.
+   Derudover opretter scriptet også en rapport med en liste over sager, der ikke har nogen ventepositioner. Filnavnet på denne rapport er `CaseswithNoHolds<DateTimeStamp>.csv`.
 
-   Her er et eksempel på at køre CaseHoldsReport.ps1 script.
+   Her er et eksempel på kørsel af CaseHoldsReport.ps1 script.
 
-   ![Outputtet efter at have kørt CaseHoldsReport.ps1 script.](../media/7d312ed5-505e-4ec5-8f06-3571e3524a1a.png)
+   ![Outputtet efter kørsel af CaseHoldsReport.ps1 script.](../media/7d312ed5-505e-4ec5-8f06-3571e3524a1a.png)
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Sagen indeholder en rapport, der oprettes, når du kører scriptet i denne artikel, indeholder følgende oplysninger om hver venteposition. Som beskrevet tidligere skal du være eDiscovery-administrator for at returnere oplysninger om alle ventende oplysninger i organisationen. Du kan finde flere oplysninger om ventende sager i [eDiscovery-sager](./get-started-core-ediscovery.md).
+Sagen indeholder en rapport, der oprettes, når du kører scriptet i denne artikel, indeholder følgende oplysninger om hver venteposition. Som tidligere forklaret skal du være eDiscovery-administrator for at returnere oplysninger om alle ventepositioner i din organisation. Du kan finde flere oplysninger om ventepositioner i [eDiscovery-sager](./get-started-core-ediscovery.md).
 
-- Navnet på ventepositionen og navnet på eDiscovery-sagen, som ventepositionen er knyttet til.
+- Navnet på ventepositionen og navnet på den eDiscovery-sag, som ventepositionen er knyttet til.
 
-- Uanset om ventepositionen er knyttet til en core eller Advanced eDiscovery sag.
+- Angiver, om ventepositionen er knyttet til en Core- eller eDiscovery-sag (Premium).
 
 - Hvorvidt eDiscovery-sagen er aktiv eller lukket.
 
-- Hvorvidt ventepositionen er aktiveret eller deaktiveret.
+- Angiver, om ventepositionen er aktiveret eller deaktiveret.
 
-- Medlemmerne af eDiscovery-sagen, som ventepositionen er knyttet til. Sagsmedlemmer kan få vist eller administrere en sag afhængigt af de eDiscovery-tilladelser, de har fået tildelt.
+- Medlemmerne af eDiscovery-sagen, som ventepositionen er knyttet til. Sagsmedlemmer kan få vist eller administrere en sag, afhængigt af de eDiscovery-tilladelser, de er blevet tildelt.
 
 - Det klokkeslæt og den dato, hvor sagen blev oprettet.
 
-- Hvis en sag er lukket, kan den person, der lukkede den, samt klokkeslæt og dato, den blev lukket.
+- Hvis en sag lukkes, den person, der lukkede den, og tidspunktet og datoen for den blev lukket.
 
-- Den Exchange postkasser og SharePoint websteder, der er i venteposition.
+- De Exchange postkasser og SharePoint websteder, der er i venteposition.
 
 - Hvis ventepositionen er forespørgselsbaseret, er forespørgselssyntaksen.
 
-- Det klokkeslæt og den dato, hvor ventepositionen blev oprettet, samt den person, der oprettede den.
+- Det klokkeslæt og den dato, hvor ventepositionen blev oprettet, og den person, der oprettede den.
 
-- Det klokkeslæt og den dato, hvor ventepositionen sidst blev ændret, og den person, der har ændret den.
+- Det klokkeslæt og den dato, hvor ventepositionen sidst blev ændret, og den person, der ændrede den.

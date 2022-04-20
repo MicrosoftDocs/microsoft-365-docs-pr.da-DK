@@ -1,5 +1,5 @@
 ---
-title: Konfigurer indstillinger for søgning og analyse – Advanced eDiscovery
+title: Konfigurer søge- og analyseindstillinger – eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,84 +16,84 @@ search.appverid:
 - MET150
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
-description: Konfigurer Advanced eDiscovery, der gælder for alle gennemsynssæt i en sag. Dette omfatter indstillinger for analyse og optisk tegngenkendelse.
-ms.openlocfilehash: 65175950a430dd6b43cac207e16a17cf02d1bbbf
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Konfigurer indstillinger for Microsoft Purview eDiscovery (Premium), der gælder for alle korrektursæt i en sag. Dette omfatter indstillinger for analyse og optisk tegngenkendelse.
+ms.openlocfilehash: f6cae054f111aa3aa4f8c7d4ab3c3323ce0498ff
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589513"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949669"
 ---
-# <a name="configure-search-and-analytics-settings-in-advanced-ediscovery"></a>Konfigurer indstillinger for søgning og analyse i Advanced eDiscovery
+# <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>Konfigurer søge- og analyseindstillinger i eDiscovery (Premium)
 
-Du kan konfigurere indstillingerne for hver Advanced eDiscovery store og små bogstaver for at styre følgende funktioner.
+Du kan konfigurere indstillinger for hver Microsoft Purview eDiscovery-sag (Premium) for at styre følgende funktionalitet.
 
-- Nær dubletter og mailtrådning
+- Næsten dubletter og mailtråde
 
 - Temaer
 
-- Autogenereret forespørgsel for korrektursæt
+- Automatisk genereret forespørgsel for korrektursæt
 
 - Ignorer tekst
 
 - Optisk tegngenkendelse
 
-Sådan konfigureres indstillinger for søgning og analyse for en sag:
+Sådan konfigurerer du søge- og analyseindstillinger for en sag:
 
-1. Vælg **Advanced eDiscovery** under fanen Store og små bogstaver.
+1. Vælg sagen på siden **eDiscovery (Premium).**
 
-2. På fanen **Indstillinger** under **Søgeanalyser skal & klikke** på **Vælg**.
+2. Klik på **Vælg** under **Søg & analyse** under fanen **Indstillinger**.
 
-   Siden med indstillinger for store og små bogstaver vises. Disse indstillinger anvendes på alle korrektursæt i en sag.
+   Siden med indstillinger for sag vises. Disse indstillinger anvendes på alle korrektursæt i en sag.
 
-   ![Konfigurer analyse- og søgeindstillinger for en Advanced eDiscovery sag.](../media/AeDCaseSettings.png)
+   ![Konfigurer analyse- og søgeindstillinger for en eDiscovery-sag (Premium).](../media/AeDCaseSettings.png)
 
-## <a name="near-duplicates-and-email-threading"></a>Nær dubletter og mailtrådning
+## <a name="near-duplicates-and-email-threading"></a>Næsten dubletter og mailtråde
 
-I dette afsnit kan du angive parametre for registrering af dubletter, registrering af dubletter og mailtrådning. Få mere at vide under [Nær duplikering af](near-duplicate-detection-in-advanced-ediscovery.md) registrering [og Mailtrådning](email-threading-in-advanced-ediscovery.md).
+I dette afsnit kan du angive parametre for registrering af dubletter i nærheden af registrering af dubletter og mailtrådning. Du kan få flere oplysninger [under Næsten registrering af dubletter](near-duplicate-detection-in-advanced-ediscovery.md) og [Mailtrådning](email-threading-in-advanced-ediscovery.md).
 
-- **Nær dubletter/mailtrådning:** Når denne er slået til, medtages registrering af dubletter, registrering af nær dubletter og mailtrådning som en del af arbejdsprocessen, når du kører analyser af dataene i et gennemsynssæt.
+- **Næsten dubletter/mailtrådning:** Når funktionen er slået til, medtages registrering af dubletter i nærheden af registrering af dubletter og mailtråde som en del af arbejdsprocessen, når du kører analyse af dataene i et korrektursæt.
 
-- **Grænseværdi for lighed mellem dokumenter og mails:** Hvis lighedsniveauet for to dokumenter er over grænsen, sættes begge dokumenter i det samme nær dublerede sæt.
+- **Tærskel for dokument- og mail-lighed:** Hvis lighedsniveauet for to dokumenter er over tærsklen, placeres begge dokumenter i det samme næsten duplikerede sæt.
 
-- **Antal ord for minimum/maksimum:** Disse indstillinger angiver, at nær dubletter og mailtrådning kun udføres på dokumenter, der har mindst det mindste antal ord og højst det maksimale antal ord.
+- **Minimum-/maksimumantal ord:** Disse indstillinger angiver, at der i nærheden af dubletter og mailtrådanalyse kun udføres på dokumenter, der har mindst det mindste antal ord og højst det maksimale antal ord.
 
 ## <a name="themes"></a>Temaer
 
-I denne sektion kan du angive parametre for temaer. Du kan finde flere oplysninger under [Temaer](themes-in-advanced-ediscovery.md).
+I dette afsnit kan du angive parametre for temaer. Du kan få flere oplysninger under [Temaer](themes-in-advanced-ediscovery.md).
 
-- **Temaer:** Når den er slået til, udføres gruppering af temaer som en del af arbejdsprocessen, når du kører analyser på dataene i et korrektursæt.
+- **Temaer:** Når den er slået til, udføres temaerklynger som en del af arbejdsprocessen, når du kører analyser på dataene i et korrektursæt.
 
-- **Maksimale antal temaer:** Angiver det maksimale antal temaer, der kan genereres, når du kører analyser på dataene i et gennemsynssæt.
+- **Maksimalt antal temaer:** Angiver det maksimale antal temaer, der kan genereres, når du kører analyser på dataene i et korrektursæt.
 
-- **Medtag tal i temaer:** Når det er slået til, medtages tal (der identificerer et tema), når du genererer temaer. 
+- **Medtag tal i temaer:** Når funktionen er slået til, medtages tal (der identificerer et tema) ved generering af temaer. 
 
-- **Juster det maksimale antal temaer dynamisk:** I visse situationer er der måske ikke nok dokumenter i et korrektursæt til at oprette det ønskede antal temaer. Når denne indstilling er aktiveret, Advanced eDiscovery indstiller indstillingen det maksimale antal temaer dynamisk i stedet for at forsøge at gennemtvinge det maksimale antal temaer.
+- **Juster det maksimale antal temaer dynamisk:** I visse situationer er der muligvis ikke nok dokumenter i et korrektursæt til at producere det ønskede antal temaer. Når denne indstilling er aktiveret, justerer eDiscovery (Premium) det maksimale antal temaer dynamisk i stedet for at forsøge at gennemtvinge det maksimale antal temaer.
 
 ## <a name="review-set-query"></a>Gennemse sætforespørgsel
 
-Hvis du markerer **afkrydsningsfeltet** Opret automatisk en gemt søgning til gennemsyn efter analyse, skal Advanced eDiscovery autogenerates gennemsynssætforespørgsel **navngivet Til gennemsyn.** 
+Hvis du markerer afkrydsningsfeltet **Opret automatisk en gemt søgning til gennemsyn efter analyse**, genererer eDiscovery (Premium) automatisk en forespørgsel med navnet **Til gennemsyn.** 
 
-![Den autogenererede forespørgsel Til gennemsyn.](../media/AeDForReviewQuery.png)
+![Den automatisk genererede forespørgsel til gennemsyn.](../media/AeDForReviewQuery.png)
 
-Denne forespørgsel filtrerer dubletter fra gennemsynssættet. Dette giver dig mulighed for at gennemse de entydige elementer i gennemsynssættet. Denne forespørgsel oprettes kun, når du kører analyser for et gennemsynssæt i sagen. Hvis du vil have mere at vide om gennemsynssætforespørgsler, skal [du se Forespørge dataene i et gennemsynssæt](review-set-search.md).
+Denne forespørgsel filtrerer grundlæggende dubletelementer fra korrektursættet. Det giver dig mulighed for at gennemse de entydige elementer i korrektursættet. Denne forespørgsel oprettes kun, når du kører analyser for et gennemsynssæt i dette tilfælde. Du kan få flere oplysninger om forespørgsler i korrektursæt under [Forespørg om dataene i et korrektursæt](review-set-search.md).
 
 ## <a name="ignore-text"></a>Ignorer tekst
 
-Der er situationer, hvor bestemt tekst vil forringe kvaliteten af analyser, f.eks. lange ansvarsfraskrivelser, der føjes til mails uanset indholdet af mailen. Hvis du kender til tekst, der skal ignoreres, kan du udelukke den fra analyser ved at angive tekststrengen og analysefunktionaliteten (næsten dubletter, Mailtrådning, Temaer og Relevans), som teksten skal udelades for. Brug af regulære udtryk (RegEx) som ignoreret tekst understøttes også.
+Der er situationer, hvor bestemt tekst vil forringe kvaliteten af analyser, f.eks. lange ansvarsfraskrivelser, der føjes til mails, uanset indholdet af mailen. Hvis du kender til tekst, der skal ignoreres, kan du udelade den fra analyse ved at angive tekststrengen og analysefunktionen (næsten dubletter, Mailtråde, Temaer og Relevans), som teksten skal udelades for. Brug af regulære udtryk (RegEx) som ignoreret tekst understøttes også.
 
 ## <a name="optical-character-recognition-ocr"></a>Optisk tegngenkendelse (OCR)
 
 Når denne indstilling er slået til, køres OCR-behandling på billedfiler. OCR-behandling køres i følgende situationer:
 
-- Når ledende leverandører [og ikke-registrerede datakilder føjes](non-custodial-data-sources.md) til en sag. Når OCR anvendes på billedfiler, vil teksten i disse filer være søgbar under en samling. OCR-behandling udføres under [den avancerede indekseringsproces](indexing-custodian-data.md) . OCR køres kun på elementer, der behandles under avanceret indeksering. Hvis f.eks. en stor PDF-fil, der er delvist indekseret eller har andre indekseringsfejl, behandles under avanceret indeksering, vil filen også have OCR anvendt. Med andre ord sker OCR-behandling kun på filer, der indekseres igen under avanceret indekseringsproces. Det betyder, at der kan være situationer, hvor hæftninger føjes til en sag, men nogle vedhæftede filer i mails ikke behandles for OCR, fordi disse filer ikke behandles under avanceret indeksering.
+- Når tilsynsførende og [ikke-frihedsberøvende datakilder](non-custodial-data-sources.md) føjes til en sag. Når OCR anvendes på billedfiler, kan der søges i teksten i disse filer under en samling. OCR-behandling udføres under [den avancerede indekseringsproces](indexing-custodian-data.md) . OCR køres kun på elementer, der behandles under avanceret indeksering. Hvis en stor PDF-fil, der er delvist indekseret eller har andre indekseringsfejl, f.eks. behandles under avanceret indeksering, anvendes OCR også for filen. OCR-behandling sker med andre ord kun på filer, der indekseres igen under den avancerede indekseringsproces. Det betyder, at der kan være situationer, hvor tilsynsførende føjes til en sag, men nogle vedhæftede filer i mails behandles ikke for OCR, fordi disse filer ikke behandles under avanceret indeksering.
 
-- Når indhold fra andre datakilder (som ikke er knyttet til en inficator og føjet til sagen i en ikke-vigtig datakilde) føjes til et gennemsynssæt.
+- Når indhold fra andre datakilder (der ikke er knyttet til en tilsynsførende og føjet til sagen i en datakilde, der ikke er frihedsberøvende), føjes til et korrektursæt.
 
-Når dataene er føjet til et korrektursæt, kan billedtekst gennemses, søges, mærkes og analyseres. Du kan få vist den udpakkede tekst i Tekstvisning for den valgte billedfil i korrektursættet. Du kan finde flere oplysninger under:
+Når data er føjet til et korrektursæt, kan billedtekst gennemses, søges, mærkes og analyseres. Du kan få vist den udtrukne tekst i Tekstfremviser for den valgte billedfil i korrektursættet. Du kan finde flere oplysninger under:
 
-- [Avanceret indeksering af data for oversigter](indexing-custodian-data.md)
+- [Avanceret indeksering af data fra tilsynsførende](indexing-custodian-data.md)
 
-- [Føje søgeresultater til et korrektursæt](add-data-to-review-set.md#optical-character-recognition)
+- [Føj søgeresultater til et korrektursæt](add-data-to-review-set.md#optical-character-recognition)
 
 - [Understøttede billedfiltyper](supported-filetypes-ediscovery20.md#image)

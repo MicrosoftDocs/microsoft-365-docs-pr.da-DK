@@ -1,5 +1,5 @@
 ---
-title: Anvend et følsomhedsmærkat på en model i Microsoft SharePoint Syntex
+title: Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,71 +12,71 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Få mere at vide om, hvordan du anvender et følsomhedsmærkat på en model SharePoint Syntex.
-ms.openlocfilehash: a7e6ea878fd7fceb6b7496dbcfb90a50f3e8ce1e
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Få mere at vide om, hvordan du anvender en følsomhedsmærkat på en model i SharePoint Syntex.
+ms.openlocfilehash: 4ab530fbd4a187f03617b01b6b9661332ad1a7d9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64635081"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945599"
 ---
-# <a name="apply-a-sensitivity-label-to-a-model-in-microsoft-sharepoint-syntex"></a>Anvend et følsomhedsmærkat på en model i Microsoft SharePoint Syntex
+# <a name="apply-a-sensitivity-label-to-a-model-in-microsoft-sharepoint-syntex"></a>Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex
 
-Du kan nemt anvende et [følsomhedsmærkat til](../compliance/sensitivity-labels.md) at dokumentere modeller i Microsoft SharePoint Syntex. Denne funktion er endnu ikke tilgængelig for modeller til formularbehandling.
+Du kan nemt anvende en [følsomhedsmærkat](../compliance/sensitivity-labels.md) til at dokumentere forståelse af modeller i Microsoft SharePoint Syntex. Denne funktion er endnu ikke tilgængelig for modeller til formularbehandling.
 
-Følsomhedsmærkater gør det muligt at anvende kryptering på de dokumenter, som dine modeller identificerer. Du ønsker f.eks., at din model ikke blot identificerer eventuelle økonomiske dokumenter, der indeholder bankkontonumre eller kreditkortnumre, der overføres til dit dokumentbibliotek, men også at anvende en følsomhedsmærkat, der er konfigureret med krypteringsindstillinger, for at begrænse, hvem der kan få adgang til indholdet, og hvordan det kan bruges. SharePoint Syntex-modellerne [overholde](../compliance/apply-sensitivity-label-automatically.md#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label) reglerne for navnerækkefølgen og overskriver heller ikke en eksisterende etiket, der er blevet anvendt manuelt af en bruger på filen. 
+Med følsomhedsmærkater kan du anvende kryptering på de dokumenter, som dine modeller identificerer. Din model skal f.eks. ikke kun identificere finansielle dokumenter, der indeholder bankkontonumre eller kreditkortnumre, der uploades til dit dokumentbibliotek, men også anvende en følsomhedsmærkat, der er konfigureret med krypteringsindstillinger for at begrænse, hvem der har adgang til indholdet, og hvordan det kan bruges. SharePoint Syntex modeller anvender reglerne for [navnerækkefølgen](../compliance/apply-sensitivity-label-automatically.md#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label) og overskriver heller ikke en eksisterende mærkat, der er anvendt manuelt af en bruger på filen. 
 
-Du kan anvende en eksisterende følsomhedsmærkat til din model via dine modelindstillinger på modellens startside. Etiketten skal allerede være publiceret, for at den kan vælges mellem modelindstillinger. Etiketter gælder for Office filer i Word (.docx), PowerPoint (.pptx) og Excel (.xlsx). 
+Du kan anvende en allerede eksisterende følsomhedsmærkat på din model via dine modelindstillinger på din models startside. Etiketten skal allerede være publiceret, før den kan vælges fra modelindstillingerne. Mærkater gælder for Office filer til Word (.docx), PowerPoint (.pptx) og Excel (.xlsx). 
 
 > [!Important]
-> For at følsomhedsmærkater kan anvendes på dine dokumentforståelsesmodeller, skal de oprettes og publiceres [i Microsoft 365 Compliance Center](../compliance/microsoft-365-compliance-center.md).
+> Hvis følsomhedsmærkater skal være tilgængelige, så de kan anvendes på modeller, der forstår dit dokument, skal de [oprettes og publiceres på Microsoft Purview-overholdelsesportalen](../admin/security-and-compliance/set-up-compliance.md).
 
-## <a name="add-a-sensitivity-label-to-a-document-understanding-model"></a>Føj en følsomhedsmærkat til en dokumentforståelsesmodel
+## <a name="add-a-sensitivity-label-to-a-document-understanding-model"></a>Føj en følsomhedsmærkat til en model, der forstår dokumentet
 
-1. Fra modellens startside skal du vælge **Modelindstillinger**.
+1. Vælg **Modelindstillinger** på modellens startside.
 
    ![Skærmbillede af siden Modeller med indstillingen Modelindstillinger fremhævet.](../media/content-understanding/sensitivity-model-settings.png)
 
-2. I **ruden Modelindstillinger** skal du i  sektionen Overholdelse vælge menuen Følsomhedsmærkat for at få vist en liste over følsomhedsmærkater, der er tilgængelige for dig at anvende på modellen.
+2. I ruden **Modelindstillinger** i afsnittet **Overholdelse** skal du vælge menuen **Følsomhedsmærkat** for at få vist en liste over følsomhedsmærkater, der er tilgængelige for dig at anvende på modellen.
 
-   ![Skærmbillede af ruden Modelindstillinger, der viser menuen med følsomhedsmærkater.](../media/content-understanding/sensitivity-model-settings-pane.png) 
+   ![Skærmbillede af ruden Modelindstillinger, der viser menuen for følsomhedsmærkat.](../media/content-understanding/sensitivity-model-settings-pane.png) 
 
 3. Vælg den følsomhedsmærkat, du vil anvende på modellen, og vælg derefter **Gem**.
 
-Når du anvender følsomhedsmærkatet på din model, kan du anvende den på en:
+Når du har anvendt følsomhedsmærkaten på din model, kan du anvende den på en:
 
 - Nyt dokumentbibliotek
-- Dokumentbibliotek, som modellen allerede er anvendt på
+- Det dokumentbibliotek, som modellen allerede er anvendt på
  
-### <a name="apply-the-sensitivity-label-to-a-document-library-to-which-the-model-is-already-applied"></a>Anvend følsomhedsmærkatet på et dokumentbibliotek, som modellen allerede er anvendt på
+### <a name="apply-the-sensitivity-label-to-a-document-library-to-which-the-model-is-already-applied"></a>Anvend følsomhedsmærkaten på et dokumentbibliotek, som modellen allerede er anvendt på
 
-Hvis din dokumentforståelsesmodel allerede er blevet anvendt på et dokumentbibliotek, kan du gøre følgende for at synkronisere din opdatering af følsomhedsmærkaten for at anvende den i dokumentbiblioteket:
+Hvis din model til dokumentforståelse allerede er blevet anvendt på et dokumentbibliotek, kan du gøre følgende for at synkronisere opdateringen af følsomhedsmærkaten for at anvende den på dokumentbiblioteket:
 
-1. På modellens startside skal du i sektionen Biblioteker med denne model vælge det dokumentbibliotek, som du vil anvende opdateringen af **følsomhedsmærkatet** til.
+1. På modellens startside skal du i afsnittet **Biblioteker med denne model** vælge det dokumentbibliotek, som du vil anvende opdateringen af følsomhedsmærkaten på.
 
 2. Vælg **Synkroniser**.
 
-   ![Skærmbillede, der viser biblioteker med denne modelsektion med Synkroniser fremhævet.](../media/content-understanding/sensitivity-libraries-sync.png)
+   ![Skærmbillede, der viser biblioteker med dette modelafsnit med Synkronisering fremhævet.](../media/content-understanding/sensitivity-libraries-sync.png)
 
-Når du har anvendt opdateringen og synkroniseret den til din model, kan du bekræfte, at den er blevet anvendt, ved at gøre følgende:
+Når du har anvendt opdateringen og synkroniseret den med din model, kan du bekræfte, at den er blevet anvendt, ved at gøre følgende:
 
-1. I indholdscenteret i sektionen **Biblioteker med denne model skal** du vælge det bibliotek, som den opdaterede model blev anvendt på. 
+1. I indholdscentret skal du i afsnittet **Biblioteker med denne model** vælge det bibliotek, som din opdaterede model blev anvendt på. 
 
-2. I visningen dokumentbibliotek skal du vælge oplysningsikonet for at kontrollere egenskaberne for modellen.
+2. Vælg oplysningsikonet i visningen af dokumentbiblioteket for at kontrollere modelegenskaberne.
 
-3. Vælg din **opdaterede model** på listen Aktive modeller.
+3. Vælg din opdaterede model på listen **Aktive modeller** .
 
-4. I sektionen **Følsomhedsmærkat** kan du se navnet på den anvendte følsomhedsmærkat.
+4. I afsnittet **Følsomhedsmærkat** kan du se navnet på den anvendte følsomhedsmærkat.
 
-På modellens visningsside i dokumentbiblioteket vises en ny **følsomhedsmærkatkolonne** . Efterhånden som din model klassificerer filer, den identificerer som tilhører dens indholdstype og viser dem i biblioteksvisningen, viser  kolonnen Følsomhedsmærkat også navnet på den følsomhedsmærkat, der er blevet anvendt på den via modellen.
+På modellens visningsside i dokumentbiblioteket vises der en ny kolonne **med følsomhedsmærkater** . Når din model klassificerer filer, den identificerer som tilhører indholdstypen og viser dem i biblioteksvisningen, viser kolonnen **Følsomhedsmærkat** også navnet på den følsomhedsmærkat, der er anvendt på den via modellen.
 
-Eksempelvis vil alle finansielle dokumenter, som modellen identificerer, også få krypteringsfølsom følsomhedsmærkatet anvendt på dem, så uautoriserede personer ikke kan få adgang til dem. Hvis en uautoriseret person forsøger at få adgang til filen fra dokumentbiblioteket, vises en fejl, der fortæller, at den ikke er tilladt på grund af den anvendte følsomhedsmærkat.
+Alle økonomiske dokumenter, som din model identificerer, vil f.eks. også have mærkaten *Krypteringsfølsomhed* anvendt på dem, hvilket forhindrer uautoriserede personer i at få adgang til dem. Hvis en uautoriseret person forsøger at få adgang til filen fra dokumentbiblioteket, vises der en fejl, hvor der står, at den ikke er tilladt på grund af den anvendte følsomhedsmærkat.
 
 <!---
 ## Add a sensitivity label to a form processing model
 
 > [!Important]
-> For sensitivity labels to be available to apply to your form processing model, they need to be [created and published in the Microsoft 365 Compliance Center](../business-premium/m365bp-set-up-compliance.md).
+> For sensitivity labels to be available to apply to your form processing model, they need to be [created and published in the Microsoft Purview compliance portal](../admin/security-and-compliance/set-up-compliance.md).
 
 You can either apply a sensitivity label to a form processing model when you are creating a model, or apply it to an existing model.
 
@@ -119,10 +119,10 @@ You can add a sensitivity label to an existing form processing model that you ow
 
 ## <a name="see-also"></a>Se også
 
-[Anvend en opbevaringsetiket](apply-a-retention-label-to-a-model.md)
+[Anvend en opbevaringsmærkat](apply-a-retention-label-to-a-model.md)
 
 [Opret en klassificering](create-a-classifier.md)
 
-[Opret en extractor](create-an-extractor.md)
+[Opret en udtrækningsmaskine](create-an-extractor.md)
 
 [Oversigt over dokumentforståelse](document-understanding-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Gennemse samtaler i Advanced eDiscovery
+title: Gennemse samtaler i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,78 +15,78 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om funktionen til samtaleovertrædelse i Advanced eDiscovery (kaldet samtaletrådning) for at genoprette, gennemgå og eksportere chatsamtaler i Microsoft Teams og Yammer grupper.
+description: Få mere at vide om funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) (kaldet samtaletrådning) for at genskabe, gennemse og eksportere chatsamtaler i Microsoft Teams og Yammer grupper.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 7bd13bdb01298d0cf1f37671f044a3405a2de0b6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 9bfd87de95449ab30b8a33c9f7f96db458e809d1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587891"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950263"
 ---
-# <a name="conversation-threading-in-advanced-ediscovery"></a>Samtaletråde i Advanced eDiscovery
+# <a name="conversation-threading-in-ediscovery-premium"></a>Samtaletrådning i eDiscovery (Premium)
 
-Chat er en nem metode til at stille spørgsmål, dele ideer eller hurtigt kommunikere på tværs af store målgrupper. Som chatplatforme, f.eks. Microsoft Teams og Yammer-grupper, bliver kernen i virksomhedsamarbejde, skal organisationer evaluere, hvordan deres eDiscovery-arbejdsproces adresserer disse nye former for kommunikation og samarbejde.
+Chat er en nem måde at stille spørgsmål, dele ideer eller hurtigt kommunikere på tværs af store målgrupper. Efterhånden som chatplatforme, f.eks. Microsoft Teams og Yammer grupper, bliver kerne i virksomhedssamarbejde, skal organisationer evaluere, hvordan deres eDiscovery-arbejdsproces håndterer disse nye former for kommunikation og samarbejde.
 
-Funktionen til samtalekontekster i Advanced eDiscovery er designet til at hjælpe dig med at identificere kontekstafhængigt indhold og producere særskilte samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemgå komplette chatsamtaler (også kaldet samtaler med tråde), der *genereres* i platforme som f.eks. Microsoft Teams.
+Funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) er designet til at hjælpe dig med at identificere kontekstuelt indhold og oprette forskellige samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (også kaldet *trådede samtaler*), der genereres på platforme som Microsoft Teams.
 
-Med samtaler, der er forskellige, kan du bruge indbyggede funktioner til at genoprette, gennemgå og eksportere samtaler med tråde. Brug Advanced eDiscovery samtale om at:
+Med genopbygning af samtaler kan du bruge indbyggede funktioner til at genskabe, gennemse og eksportere gevindsamtaler. Brug genopbygning af eDiscovery-samtaler (Premium) til at:
 
-- Bevar unikke metadata på meddelelsesniveau på tværs af alle meddelelser i en samtale.
+- Bevar entydige metadata på meddelelsesniveau på tværs af alle meddelelser i en samtale.
 
 - Indsaml kontekstafhængige meddelelser omkring dine søgeresultater.
 
-- Gennemse, anmærke og redigere samtaler med tråde igen.
+- Gennemse, anmærk og gentegn gevindsamtaler.
 
-- Eksportér individuelle meddelelser eller samtaler med tråde
+- Eksportér individuelle meddelelser eller gevindsamtaler
 
 ## <a name="terminology"></a>Terminologi
 
-Her er nogle få definitioner, der kan hjælpe dig med at komme i gang med at bruge samtalerne.
+Her er nogle definitioner, der kan hjælpe dig med at komme i gang med at bruge genopbygning af samtaler.
 
-- **Meddelelser:** Repræsenterer den mindste enhed af en samtale. Meddelelser kan variere i størrelse, struktur og metadata.
+- **Meddelelser:** Repræsenter den mindste enhed i en samtale. Meddelelser kan variere i størrelse, struktur og metadata.
 
-- **Samtale:** Repræsenterer en gruppering af en eller flere meddelelser. Samtaler kan være repræsenteret på forskellige måder på tværs af forskellige programmer. I nogle programmer er der en eksplicit handling, der kommer fra at besvare en eksisterende meddelelse. Samtaler oprettes eksplicit som et resultat af denne brugerhandling. Her er f.eks. et skærmbillede af en kanalsamtale i Microsoft Teams.
+- **Samtale:** Repræsenterer en gruppering af en eller flere meddelelser. Samtaler kan repræsenteres på forskellige måder på tværs af forskellige programmer. I nogle programmer er der en eksplicit handling, der skyldes svar på en eksisterende meddelelse. Samtaler dannes eksplicit som et resultat af denne brugerhandling. Her er f.eks. et skærmbillede af en kanalsamtale i Microsoft Teams.
 
    ![Microsoft Teams kanalsamtale.](../media/threadedchat.png)
 
-   I andre apps (f.eks. gruppechatmeddelelser i Teams) er der ikke en formel svarkæde, og i stedet vises meddelelser som en "flad flod af meddelelser" i en enkelt tråd. I disse typer apps udledes samtaler fra en gruppe af meddelelser, der forekommer inden for et bestemt tidspunkt. Denne "blød gruppering" af meddelelser (i modsætning til en svarkæde) repræsenterer "frem og tilbage"-samtalen om et bestemt interessant emne.
+   I andre apps (f.eks. gruppechatbeskeder i Teams) er der ikke en formel svarkæde, og meddelelser vises i stedet som en "flad flod af meddelelser" i en enkelt tråd. I disse typer apps udledes samtaler fra en gruppe meddelelser, der forekommer inden for et bestemt tidspunkt. Denne "blød gruppering" af meddelelser (i modsætning til en svarkæde) repræsenterer "frem og tilbage"-samtalen om et bestemt emne af interesse.
 
 ## <a name="step-1-create-a-draft-collection"></a>Trin 1: Opret en kladdesamling
 
-Når du har identificeret relevante forældre og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. På fanen **Samlinger i** alle Advanced eDiscovery kan du oprette en samling ved at klikke **på Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du opretter en samling, opbygger en søgeforespørgsel og får vist søgeresultaterne under [Opret en kladdesamling](create-draft-collection.md).
+Når du har identificeret relevante tilsynsførende og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. Under fanen **Samlinger** i eDiscovery-sagen (Premium) kan du oprette en samling ved at klikke på **Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du kan oprette en samling, oprette en søgeforespørgsel og få vist søgeresultaterne i [Opret en kladdesamling](create-draft-collection.md).
 
-## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>Trin 2: Bestil en kladdesamling til et korrektursæt
+## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>Trin 2: Send en kladdesamling til et gennemsynssæt
 
-Når du har gennemset og færdiggjort søgeforespørgslen i en samling, kan du føje søgeresultaterne til et gennemsynssæt. Når du tilføjer dine søgeresultater i et korrektursæt, kopieres de oprindelige data til et Azure Storage-område for at muliggøre gennemsyns- og analyseprocessen. Du kan finde flere oplysninger om at føje søgeresultater til et korrektursæt under [Bekræfte en kladdesamling i et korrektursæt](commit-draft-collection.md).
+Når du har gennemset og færdiggjort søgeforespørgslen i en samling, kan du føje søgeresultaterne til et korrektursæt. Når du føjer dine søgeresultater til et korrektursæt, kopieres de oprindelige data til et Azure Storage område for at lette korrektur- og analyseprocessen. Du kan finde flere oplysninger om, hvordan du føjer søgeresultater til et korrektursæt, under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
 
-Når du føjer elementer fra samtaler til et korrektursæt, kan du bruge indstillingen Samtaler med tråde til at indsamle kontekstafhængige meddelelser fra samtaler, der indeholder elementer, der opfylder søgekriterierne i samlingen. Når du har valgt indstillingen Samtaler i tråd, kan følgende ske:
+Når du føjer elementer fra samtaler til et korrektursæt, kan du bruge indstillingen gevindsamtaler til at indsamle kontekstafhængige meddelelser fra samtaler, der indeholder elementer, der opfylder søgekriterierne i samlingen. Når du har valgt indstillingen trådsamtaler, kan følgende ting ske:
 
   ![Hentning af samtale.](../media/messagesandconversations.png)
 
-1. Ved hjælp af et nøgleord og en datoområdeforespørgsel returnerede søgningen et hit *på Meddelelse 3*. Denne meddelelse var en del af en større samtale illustreret af *CRC1*.
+1. Ved hjælp af en forespørgsel med nøgleord og datointerval returnerede søgningen et hit på *Meddelelse 3*. Denne meddelelse var en del af en større samtale, der illustreres af *CRC1*.
 
-2. Når du tilføjer dataene i et gennemsynssæt og aktiverer indstillingerne for hentning af samtaler, Advanced eDiscovery gå tilbage og indsamle andre elementer i *CRC1*.
+2. Når du føjer dataene til et korrektursæt og aktiverer indstillingerne for hentning af samtaler, går eDiscovery (Premium) tilbage og indsamler andre elementer i *CRC1*.
 
-3. Når elementerne er blevet føjet til korrektursættet, kan du gennemse alle de enkelte meddelelser fra *CRC1*.
+3. Når elementerne er føjet til korrektursættet, kan du gennemse alle de enkelte meddelelser fra *CRC1*.
 
-Hvis du vil aktivere indstillingen Samtaler med tråde, skal du se [Bekræfte en kladdesamling i et korrektursæt](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set).
+Hvis du vil aktivere indstillingen trådede samtaler, skal du se [Send en kladdesamling til et korrektursæt](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set).
 
-## <a name="step-3-review-and-export-threaded-conversations"></a>Trin 3: Gennemse og eksportér samtaler med tråde
+## <a name="step-3-review-and-export-threaded-conversations"></a>Trin 3: Gennemse og eksportér gevindsamtaler
 
-Når indholdet er blevet behandlet og føjet til korrektursættet, kan du begynde at gennemgå dataene i korrektursættet. Individuelle meddelelser trådes sammen og præsenteres som samtaler. Dette giver dig mulighed for at gennemse og eksportere kontekstafhængige samtaler.
+Når indholdet er blevet behandlet og føjet til korrektursættet, kan du begynde at gennemse dataene i korrektursættet. Individuelle meddelelser er sammentrådet og præsenteret som samtaler. Det giver dig mulighed for at gennemse og eksportere kontekstafhængige samtaler.
 
-  ![Samtalegennemsyn indstillet.](../media/ConversationRSOptions.PNG)
+  ![Samtalegennemgangssæt.](../media/ConversationRSOptions.PNG)
 
-I de følgende afsnit beskrives gennemgang og eksport af samtaler.
+I de følgende afsnit beskrives det, hvordan du gennemgår og eksporterer samtaler.
 
 ### <a name="reviewing-conversations"></a>Gennemgå samtaler
 
-I et korrektursæt kan du bruge følgende indstillinger til at lette gennemsynsprocessen.
+I et korrektursæt kan du bruge følgende indstillinger til at lette korrekturprocessen.
 
-- **Gruppere efter samtale:** Grupperer meddelelser i den samme samtale sammen for at gøre det nemmere for brugerne at forenkle og fremskynde gennemsynsprocessen.
+- **Gruppér efter samtale:** Grupperer meddelelser i den samme samtale for at hjælpe brugerne med at forenkle og fremskynde deres korrekturproces.
 
-- **Oversigtsvisning:** Viser samtalen med tråde. I denne visning kan du se hele samtalen og også få adgang til metadataene for hver enkelt meddelelse.
+- **Oversigtsvisning:** Viser den trådede samtale. I denne visning kan du se hele samtalen og også få adgang til metadataene for hver enkelt meddelelse.
 
    - Få vist metadata for individuelle meddelelser
 
@@ -94,24 +94,24 @@ I et korrektursæt kan du bruge følgende indstillinger til at lette gennemsynsp
 
 - **Tekstvisning:** Leverer den udtrukne tekst til hele samtalen.
 
-- **Anmærkningsvisning:** Gør det muligt at markere en trådopdetalt visning af samtalen. Alle meddelelser i samtalen deler det samme kommenterede dokument.
+- **Anmærk visning:** Gør det muligt at markere en trådet visning af samtalen. Alle meddelelser i samtalen deler det samme anmærkede dokument.
 
-- **Mærkning:** Når du får vist samtaler i et gennemsynssæt, kan du få vist og anvende mærker ved at klikke **på** Mærkningspanel i panelet Kodning.
+- **Tagging:** Når du får vist samtaler i et korrektursæt, kan du få vist og anvende mærker ved at klikke på **panelet Tagging** i panelet Kodning.
 
-- **Kør samtalekonvertering igen:** Når meddelelser føjes til et samtalegennemsynssæt, køres der automatisk et konverteringsjob for at oprette oversigtstråde og anmærkevisninger. Hvis jobbet Samtalebeskæmpning mislykkes, kan du køre dette job igen ved at klikke på **handling > Opret PDF-filer** til samtaler i gennemsynssættet.
+- **Kør samtalekonvertering igen:** Når meddelelser føjes til et samtalegennemsynssæt, køres der automatisk et konverteringsjob for at oprette den gevindrede oversigt og anmærke visninger. Hvis jobbet Til genopbygning af samtale mislykkes, kan du køre jobbet igen ved at klikke på **Handling > Opret samtale-PDF-filer** i korrektursættet.
 
-### <a name="exporting-conversations"></a>Eksport af samtaler
+### <a name="exporting-conversations"></a>Eksporterer samtaler
 
-Du kan se de indstillinger, du kan vælge, når du eksporterer samtaler fra et korrektursæt, under [Eksportere dokumenter fra et gennemsynssæt](export-documents-from-review-set.md#export-options).
+Du kan finde de indstillinger, du kan vælge, når du eksporterer samtaler fra et korrektursæt, under [Eksportér dokumenter fra et korrektursæt](export-documents-from-review-set.md#export-options).
 
-Du kan eksportere hele chatsamtaler i en enkelt PDF-fil, eller du kan eksportere hver chatmeddelelse i en samtale som en individuel fil.
+Du kan især eksportere hele chatsamtaler i en enkelt PDF-fil, eller du kan eksportere hver enkelt chatmeddelelse i en samtale som en enkelt fil.
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Du kan få mere at vide om, hvordan du gennemser sagsdata Advanced eDiscovery, i følgende artikler:
+Du kan få mere at vide om, hvordan du gennemser sagsdata i eDiscovery (Premium), i følgende artikler:
 
-- [Forespørg og filtrer indhold i et korrektursæt](review-set-search.md)
-- [Tag dokumenter i et korrektursæt](tagging-documents.md)
-- [Få vist sagsdata](view-documents-in-review-set.md)
-- [Analysere sagsdata](analyzing-data-in-review-set.md)
-- [Eksportere sagsdata](exporting-data-ediscover20.md)
+- [Forespørg om og filtrer indhold i et valideringssæt](review-set-search.md)
+- [Markér dokumenter i et valideringssæt](tagging-documents.md)
+- [Vis sagsdata](view-documents-in-review-set.md)
+- [Analysér sagsdata](analyzing-data-in-review-set.md)
+- [Eksportér sagsdata](exporting-data-ediscover20.md)

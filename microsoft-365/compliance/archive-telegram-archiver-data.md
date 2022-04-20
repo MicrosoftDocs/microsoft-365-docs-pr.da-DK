@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere Telegram-kommunikationsdata i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: e44eaa160bc78015191d2ceaca99bebbd31462fc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: b18d05fa697f3d23e57444d5757d14dff7acfc23
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762073"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947115"
 ---
 # <a name="set-up-a-connector-to-archive-telegram-communications-data"></a>Konfigurer en connector til arkivering af Telegram-kommunikationsdata
 
-Brug TeleMessage-connectoren i Microsoft 365 Overholdelsescenter til at importere og arkivere Telegram-chats, vedhæftede filer, filer og slettede meddelelser og opkald. Når du har konfigureret en connector, oprettes der forbindelse til din organisations TeleMessage-konto, og medarbejdernes mobilkommunikation importeres ved hjælp af Telegram Archiver til postkasser i Microsoft 365.
+Brug TeleMessage-connectoren på Microsoft Purview-overholdelsesportalen til at importere og arkivere Telegram-chats, vedhæftede filer, filer og slettede meddelelser og opkald. Når du har konfigureret en connector, oprettes der forbindelse til din organisations TeleMessage-konto, og medarbejdernes mobilkommunikation importeres ved hjælp af Telegram Archiver til postkasser i Microsoft 365.
 
-Når Telegram Archiver-connectordata er gemt i brugerpostkasser, kan du anvende Microsoft 365 funktioner til overholdelse af angivne standarder, f.eks. litigation hold, indholdssøgning og Microsoft 365 opbevaringspolitikker, til Telegram-kommunikationsdata. Du kan f.eks. søge i Telegram-kommunikation ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder Connectordata fra Telegram Archiver, til en tilsynsførende i et Advanced eDiscovery tilfælde. Brug af en Telegram Archiver-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde reglerne for virksomhedsstyring og lovgivningsmæssige politikker.
+Når Telegram Archiver-connectordata er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Indholdssøgning og Microsoft 365 opbevaringspolitikker til Telegram-kommunikationsdata. Du kan f.eks. søge i Telegram-kommunikation ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder Connectordata fra Telegram Archiver, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en Telegram Archiver-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde reglerne for virksomhedsstyring og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-telegram-communications-data"></a>Oversigt over arkivering af telegramkommunikationsdata
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. I realtid kopieres din organisations Telegram-data til TeleMessage-webstedet.
 
-3. Telegram Archiver-connectoren, som du opretter i Microsoft 365 Overholdelsescenter opretter forbindelse til TeleMessage-webstedet hver dag og overfører mailmeddelelserne fra de forrige 24 timer til et sikkert Azure Storage område i Microsoft Cloud.
+3. Telegram Archiver-connectoren, som du opretter i overholdelsesportalen, opretter forbindelse til TeleMessage-webstedet hver dag og overfører mailmeddelelserne fra de forrige 24 timer til et sikkert Azure Storage område i Microsoft Cloud.
 
 4. Connectoren importerer mobilkommunikationselementerne til en bestemt brugers postkasse. Der oprettes en ny mappe med navnet TelegramArkiver i den specifikke brugers postkasse, og elementerne importeres til den. Connectoren udfører denne tilknytning ved hjælp af værdien af egenskaben *For brugerens mailadresse* . Alle mails indeholder denne egenskab, som udfyldes med mailadressen for hver deltager i mailen.
 
@@ -49,13 +49,13 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Installér Telegram Archiver-appen på dine medarbejderes mobiltelefoner, og aktivér den. Telegram Archiver-appen giver dem mulighed for at kommunikere og chatte med andre Telegram-brugere.
 
-- Den bruger, der opretter en Telegram Archiver-connector i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter en Telegram Archiver-connector i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-telegram-archiver-connector"></a>Opret en Telegram Archiver-connector
 
-Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette connectoren Telegram Archiver i Microsoft 365 Overholdelsescenter. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til TeleMessage-webstedet og overfører Telegram-kommunikationsdata til de tilsvarende brugerpostkasser i Microsoft 365.
+Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette Connectoren Telegram Archiver på overholdelsesportalen. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til TeleMessage-webstedet og overfører Telegram-kommunikationsdata til de tilsvarende brugerpostkasser i Microsoft 365.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **Dataconnectors** > **Telegram Archiver**.
 

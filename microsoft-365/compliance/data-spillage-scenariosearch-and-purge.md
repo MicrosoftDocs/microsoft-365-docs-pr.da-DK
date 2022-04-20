@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Brug eDiscovery- og søgeværktøjer til at administrere og reagere på en dataspildhændelse i din organisation.
-ms.openlocfilehash: 106a67bff07f76d3ac40798d8bb4e28a254b923d
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: e9e81ae81c344bfc8773174c8650a1808faddd5e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847327"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948061"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eDiscovery-løsningsserie: Dataspildscenarie – Søg og fjern
 
@@ -64,7 +64,7 @@ Sådan administrerer du en dataspildhændelse:
 
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(Valgfrit) Trin 1: Administrer, hvem der kan få adgang til sagen, og angiv grænser for overholdelse af regler og standarder
 
-Afhængigt af din organisations praksis skal du styre, hvem der kan få adgang til eDiscovery-sagen, der bruges til at undersøge en dataspildhændelse og konfigurere overholdelsesgrænser. Den nemmeste måde at gøre dette på er at tilføje efterforskere som medlemmer af en eksisterende rollegruppe i Microsoft 365 Overholdelsescenter og derefter tilføje rollegruppen som medlem af eDiscovery-sagen. Du kan finde oplysninger om de indbyggede eDiscovery-rollegrupper, og hvordan du føjer medlemmer til en eDiscovery-sag, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
+Afhængigt af din organisations praksis skal du styre, hvem der kan få adgang til eDiscovery-sagen, der bruges til at undersøge en dataspildhændelse og konfigurere overholdelsesgrænser. Den nemmeste måde at gøre dette på er at tilføje efterforskere som medlemmer af en eksisterende rollegruppe på Microsoft Purview-overholdelsesportalen og derefter tilføje rollegruppen som medlem af eDiscovery-sagen. Du kan finde oplysninger om de indbyggede eDiscovery-rollegrupper, og hvordan du føjer medlemmer til en eDiscovery-sag, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
   
 Du kan også oprette en ny rollegruppe, der opfylder organisationens behov. Det kan f.eks. være, at du gerne vil have, at en gruppe dataspildsøgere i organisationen får adgang til og samarbejder om alle dataspildsager. Det kan du gøre ved at oprette en rollegruppe af typen "Data Spillage Investigator", tildele de relevante roller (Eksport, RMS Decrypt, Review, Preview, Compliance Search og Case Management), føje dataspildetektiverne til rollegruppen og derefter tilføje rollegruppen som medlem af dataspillage-eDiscovery-sagen. Se [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser i Office 365](set-up-compliance-boundaries.md) for at få en detaljeret vejledning i, hvordan du gør dette. 
   
@@ -72,13 +72,13 @@ Du kan også oprette en ny rollegruppe, der opfylder organisationens behov. Det 
 
 En eDiscovery-sag er en effektiv måde at administrere din undersøgelse af dataspild på. Du kan føje medlemmer til den rollegruppe, du oprettede i trin 1, tilføje rollegruppen som medlem af en ny eDiscovery-sag, udføre iterative søgninger for at finde de spildte data, eksportere en rapport til deling, spore status for sagen og derefter gå tilbage til detaljerne om sagen, hvis det er nødvendigt. Overvej at oprette en navngivningskonvention for eDiscovery-sager, der bruges til dataspildhændelser, og angiv så mange oplysninger, som du kan i sagsnavnet og beskrivelsen, så du kan finde og referere til i fremtiden, hvis det er nødvendigt.
   
-Hvis du vil oprette en ny sag, kan du bruge eDiscovery i Security and Compliance Center. Se "Opret en ny sag" i [Kom i gang med Core eDiscovery](get-started-core-ediscovery.md#step-3-create-a-core-ediscovery-case).
+Hvis du vil oprette en ny sag, kan du bruge eDiscovery i Security and Compliance Center. Se "Opret en ny sag" i [Kom i gang med eDiscovery (Standard).](get-started-core-ediscovery.md#step-3-create-a-ediscovery-standard-case)
   
 ## <a name="step-3-search-for-the-spilled-data"></a>Trin 3: Søg efter de spildte data
 
 Nu, hvor du har oprettet en sag og administreret adgang, kan du bruge sagen til at søge iterativt for at finde de spildte data og identificere de postkasser, der indeholder de spildte data. Du skal bruge den samme søgeforespørgsel, som du brugte til at finde mailmeddelelserne, til at slette de samme meddelelser i [trin 7](#step-7-permanently-delete-the-spilled-data).
   
-Hvis du vil oprette en indholdssøgning, der er knyttet til en eDiscovery-sag, skal du se [Søg efter indhold i en kerne-eDiscovery-sag](search-for-content-in-core-ediscovery.md).
+Hvis du vil oprette en indholdssøgning, der er knyttet til en eDiscovery-sag, skal du se [Søg efter indhold i en eDiscovery-sag (Standard).](search-for-content-in-core-ediscovery.md)
   
 > [!IMPORTANT]
 > De nøgleord, du bruger i søgeforespørgslen, kan indeholde de faktiske spildte data, du søger efter. Hvis du f.eks. søger efter dokumenter, der indeholder et CPR-nummer, og du bruger det som søgenøgleord, skal du slette forespørgslen bagefter for at undgå yderligere spild. Se [Sletning af søgeforespørgslen](#deleting-the-search-query) i trin 8.
@@ -91,7 +91,7 @@ Hvis du har mere end 1.000 postkasser eller mere end 100 mails pr. postkasse, de
 
 Når du finder en mail, der indeholder spildte data, skal du kontrollere modtagerne af meddelelsen for at finde ud af, om den blev delt eksternt. Hvis du vil spore en meddelelse yderligere, kan du indsamle afsenderoplysninger og datointervaller, så du kan bruge meddelelsessporingslogfilerne. Denne proces er beskrevet i [trin 5](#step-5-use-message-trace-log-to-check-how-spilled-data-was-shared).
 
-Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt til sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Advanced eDiscovery og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
+Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Microsoft Purview eDiscovery (Premium) og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
   
  **Sådan opretter du en statistisk rapport:**
   
@@ -183,7 +183,7 @@ Vær opmærksom på følgende grænser, når du sletter spildte data:
 - Der kan maksimalt fjernes 10 elementer pr. postkasse på én gang. Da funktionen til at søge efter og fjerne meddelelser er beregnet til at være et værktøj til svar på hændelser, hjælper denne grænse med at sikre, at meddelelser hurtigt fjernes fra postkasser. Denne funktion er ikke beregnet til at rydde op i brugerpostkasser.
 
 > [!IMPORTANT]
-> Mailelementer i et korrektursæt i en Advanced eDiscovery tilfælde kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette det Advanced eDiscovery tilfælde, der indeholder korrektursættet. Du kan få flere oplysninger under [Luk eller slet en Advanced eDiscovery sag](close-or-delete-case.md).
+> Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
   
 ## <a name="step-8-verify-provide-a-proof-of-deletion-and-audit"></a>Trin 8: Kontrollér, angiv et bevis for sletning og overvågning
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til at arkivere Reuters Dealing-data i Microsoft 365
+title: Konfigurer en connector til arkivering af Reuters Håndtering af data i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,82 +11,82 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en forbindelse til at importere og arkivere Reuters Dealing-data fra Veritas Microsoft 365. Med denne forbindelse kan du arkivere data fra tredjeparts datakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge overholdelsesfunktioner som f.eks. retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 7e978af3c0916b277fcf97d9fe58c9b7cea08d43
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Administratorer kan konfigurere en connector til at importere og arkivere Reuters Håndtering af data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: 75b44a6ed76908a566edf8cb39c27f25788ce2c1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591730"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950693"
 ---
-# <a name="set-up-a-connector-to-archive-reuters-dealing-data"></a>Konfigurer en forbindelse til at arkivere Reuters dealing-data
+# <a name="set-up-a-connector-to-archive-reuters-dealing-data"></a>Konfigurer en connector for at arkivere Reuters Dealing-data
 
-Brug en Veritas-forbindelse i Microsoft 365 Overholdelsescenter til at importere og arkivere data fra platformen reuters dealing til brugerpostkasser i Microsoft 365 organisation. Veritas giver dig en [reuters dealing-forbindelse](https://globanet.com/reuters-dealing/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og derefter importere disse elementer til Microsoft 365. Forbindelsen konverterer dealing communications from the Reuters Dealing account to an email message format and then import those items to the user's mailbox in Microsoft 365.
+Brug en Veritas-connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Reuters Dealing-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas giver dig en [Reuters Dealing-connector](https://globanet.com/reuters-dealing/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og derefter importere disse elementer for at Microsoft 365. Connectoren konverterer Dealing-kommunikation fra Reuters Dealing-kontoen til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når reuters dealing-data er gemt i brugerpostkasser, kan du anvende Microsoft 365 overholdelsesfunktioner som f.eks Retslig tilbageholdelse, eDiscovery, opbevaringspolitikker og opbevaringsetiketter samt overholdelse af regler og standarder og kommunikation. Hvis du bruger en forbindelseskomponent til Reuters-håndtering til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Reuters Dealing-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Reuters Dealing-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
-## <a name="overview-of-archiving-reuters-dealing-data"></a>Oversigt over arkivering af reuters håndteringsdata
+## <a name="overview-of-archiving-reuters-dealing-data"></a>Oversigt over arkivering af Reuters Håndtering af data
 
-Følgende oversigt beskriver processen med at bruge en forbindelse til at arkivere reuters dealing-data Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere Reuters Dealing-data i Microsoft 365.
 
-![Arkiveringsarbejdsproces for Reuters-håndteringsdata.](../media/ReuetersDealingConnectorWorkflow.png)
+![Arkivering af arbejdsproces for Reuters Håndtering af data.](../media/ReuetersDealingConnectorWorkflow.png)
 
-1. Din organisation arbejder sammen med Reuters Dealing for at konfigurere et websted til håndtering af reuters.
+1. Din organisation arbejder sammen med Reuters Dealing om at konfigurere et Reuters Dealing-websted.
 
-2. Én gang i døgnet kopieres Reuters Dealing-elementer til webstedet Veritas Merge1. Forbindelsen konverterer også elementerne til et mailformat.
+2. En gang hver 24 timer kopieres Reuters Dealing-varer til Veritas Merge1-webstedet. Connectoren konverterer også elementerne til et mailformat.
 
-3. Den forbindelseskomponent Reuters Dealing, som du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til webstedet Veritas Merge1 hver dag og overfører indholdet til en sikker Azure Storage placering i Microsoft-skyen.
+3. Den Reuters Dealing-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører indholdet til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Forbindelsen importerer elementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben Mail  for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Reuters Dealing** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Forbindelsen bestemmer, hvilken postkasse der skal importeres elementer til, ud fra værdien *af egenskaben Mail* . Alle Reuters Dealing-elementer indeholder denne egenskab, som er udfyldt med mailadressen for hver deltager i elementet.
+4. Connectoren importerer elementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Reuters Dealing** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle Reuters Dealing-elementer indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Opret en Veritas Merge1-konto til Microsoft-forbindelser. Kontakt [Veritas kundesupport for at oprette en konto](https://globanet.com/contact-us). Du skal logge på denne konto, når du opretter forbindelsen i trin 1.
+- Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette en konto, skal du kontakte [Veritas Kundesupport](https://globanet.com/contact-us). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter forbindelsen Reuters Dealing i trin 1 (og fuldfører den i trin 3), skal have tildelt rollen Dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Reuters Dealing-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataforbindelse er i offentlig prøveversion i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="step-1-set-up-the-reuters-dealing-connector"></a>Trin 1: Konfigurer forbindelsen Reuters Dealing
+## <a name="step-1-set-up-the-reuters-dealing-connector"></a>Trin 1: Konfigurer Reuters Dealing-connectoren
 
-Det første trin er at få adgang til **siden Dataforbindelser** i Microsoft 365 og oprette en forbindelse til Reuters dealing data.
+Det første trin er at få adgang til siden **Dataconnectors** i Microsoft 365 og oprette en connector til Reuters Dealing-data.
 
-1. Gå til [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter **på DataforbindelserReuters** >  **Dealing**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsReuters** >  **Dealing**.
 
-2. Klik på **Tilføj forbindelse på siden Produktbeskrivelse for Reuters Dealing**.
+2. Klik på **Tilføj connector** på siden **Reuters Dealing-produktbeskrivelse**.
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. Angiv et entydigt navn, der identificerer forbindelsen, og klik derefter på **Næste**.
+4. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**.
 
-5. Log på din Flet1-konto for at konfigurere forbindelsen.
+5. Log på din Flet1-konto for at konfigurere connectoren.
 
-## <a name="step-2-configure-the-reuters-dealing-connector-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer forbindelsen Reuters Dealing på webstedet Veritas Merge1
+## <a name="step-2-configure-the-reuters-dealing-connector-on-the-veritas-merge1-site"></a>Trin 2: Konfigurer Reuters Dealing-connectoren på Veritas Merge1-webstedet
 
-Det andet trin er at konfigurere forbindelsen Reuters Dealing på Veritas webstedet Merge1. Hvis du vil have mere at vide om konfiguration af forbindelsen Reuters Dealing, skal [du se Brugervejledning til forbindelse fra tredjepart](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20Dealing%20User%20Guide%20.pdf).
+Det andet trin er at konfigurere Reuters Dealing-connectoren på Veritas Merge1-webstedet. Du kan få oplysninger om konfiguration af Reuters [Dealing-connectoren i Brugervejledningen til Flette1 tredjepartsconnectorer](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20Dealing%20User%20Guide%20.pdf).
 
-Når du har **klikket & færdig**, **vises** siden Brugertilknytning i Microsoft 365 Overholdelsescenter forbindelsen.
+Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i connectorguiden på overholdelsesportalen.
 
-## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør konfigurationen af forbindelsen
+## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-Hvis du vil tilknytte brugere og fuldføre konfigurationen af forbindelsen i Microsoft 365 Overholdelsescenter, skal du følge disse trin:
+Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
-1. På siden **Tilknyt Brugere, der håndterer Microsoft 365 brugere** skal du aktivere automatisk tilknytning af brugere.
+1. Aktivér automatisk brugertilknytning på siden **Map Reuters Dealing users to Microsoft 365 users**.
 
-   Reuters Dealing items include a property *called Email*, which contains email addresses for users in your organization. Hvis forbindelsen kan knytte denne adresse til Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+   Reuters Dealing-elementer omfatter en egenskab med navnet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
 
-2. Klik **på** Næste, gennemgå dine indstillinger, og gå til siden **Dataforbindelser** for at se status for importprocessen for den nye forbindelse.
+2. Klik på **Næste**, gennemse dine indstillinger, og gå til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 
-## <a name="step-4-monitor-the-reuters-dealing-connector"></a>Trin 4: Overvåg forbindelsen Reuters Dealing
+## <a name="step-4-monitor-the-reuters-dealing-connector"></a>Trin 4: Overvåg Reuters Dealing-connectoren
 
-Når du har oprettet forbindelsen Reuters Dealing, kan du få vist forbindelsesstatus i Microsoft 365 Overholdelsescenter.
+Når du har oprettet Reuters Dealing-connectoren, kan du få vist connectorstatussen på overholdelsesportalen.
 
-1. Gå til og [https://compliance.microsoft.com](https://compliance.microsoft.com/) klik **på Dataforbindelser** i venstre navigationslinje.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik på **Dataconnectors** i venstre navigationsrude.
 
-2. Klik på **fanen Forbindelser** , og vælg derefter forbindelsen **Reuters Dealing** for at få vist pop op-siden, der indeholder egenskaber og oplysninger om forbindelsen.
+2. Klik på fanen **Forbindelser,** og vælg derefter connectoren **Reuters Dealing** for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde skal** du klikke **på linket Hent log** for at åbne (eller gemme) statusloggen for forbindelsen. Denne logfil indeholder data, der er blevet importeret til Microsoft-skyen.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.

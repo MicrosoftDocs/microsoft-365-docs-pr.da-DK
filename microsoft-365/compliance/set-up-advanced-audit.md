@@ -1,5 +1,5 @@
 ---
-title: Konfigurer Avanceret overvågning i Microsoft 365
+title: Konfigurer overvågning (Premium) i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,58 +19,58 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: I denne artikel beskrives det, hvordan du kan konfigurere Avanceret overvågning, så du kan undersøge, hvornår brugerkonti kompromitteres, eller for at undersøge andre sikkerhedsrelaterede hændelser.
-ms.openlocfilehash: dafe53161e04f28f2f5e4ff8dcfa71bab6c1a1f1
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+description: I denne artikel beskrives det, hvordan du konfigurerer overvågning (Premium), så du kan udføre tekniske undersøgelser, når brugerkonti kompromitteres, eller undersøge andre sikkerhedsrelaterede hændelser.
+ms.openlocfilehash: 9e758ce6a830569b007ee024e17abdddbce01f13
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754574"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945841"
 ---
-# <a name="set-up-advanced-audit-in-microsoft-365"></a>Konfigurer Avanceret overvågning i Microsoft 365
+# <a name="set-up-microsoft-purview-audit-premium"></a>Konfigurer Microsoft Purview Audit (Premium)
 
-Hvis din organisation har et abonnement og slutbrugerlicens, der understøtter Avanceret overvågning, skal du udføre følgende trin for at konfigurere og bruge de yderligere funktioner i Avanceret overvågning.
+Hvis din organisation har et abonnement og en slutbrugerlicens, der understøtter Overvågning (Premium), skal du udføre følgende trin for at konfigurere og bruge de yderligere funktioner i Overvågning (Premium).
 
-![Arbejdsproces til at konfigurere Avanceret overvågning.](../media/AdvancedAuditWorkflow.png)
+![Arbejdsproces til konfiguration af overvågning (Premium).](../media/AdvancedAuditWorkflow.png)
 
-## <a name="step-1-set-up-advanced-audit-for-users"></a>Trin 1: Konfigurere Avanceret overvågning for brugere
+## <a name="step-1-set-up-audit-premium-for-users"></a>Trin 1: Konfigurer overvågning (Premium) for brugere
 
-Avancerede overvågningsfunktioner, såsom muligheden for at logføre vigtige hændelser som MailItemsAccessed og Send kræver en passende E5-licens, der er tildelt til brugere. Desuden skal avanceret overvågning af app/serviceplan være aktiveret for disse brugere. For at bekræfte at appen Avanceret overvågning er tildelt til brugere, skal du udføre følgende trin for hver bruger:
+Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hændelser, f.eks. MailItemsAccessed og Send, kræver en passende E5-licens, der er tildelt til brugerne. Derudover skal app-/tjenesteplanen Avanceret overvågning være aktiveret for disse brugere. Udfør følgende trin for hver bruger for at bekræfte, at appen Avanceret overvågning er tildelt til brugere:
 
-1. I Microsoft 365 Administration skal du gå **til** <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**UsersActive**</a> >  users og vælge en bruger.
+1. I Microsoft 365 Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**BrugereAktive**</a> >  brugere og vælge en bruger.
 
-2. Klik på Licenser og apps på pop **op-siden med brugeregenskaber**.
+2. Klik på **Licenser og apps** på siden med brugeregenskaber.
 
-3. I sektionen **Licenser** skal du bekræfte, at brugeren er tildelt en E5-licens eller er tildelt en passende tilføjelseslicens. Du kan finde en liste over licenser, der understøtter Avanceret overvågning, [under Licenskrav til avanceret overvågning](auditing-solutions-overview.md#advanced-audit-1).
+3. I afsnittet **Licenser** skal du bekræfte, at brugeren er tildelt en E5-licens eller er tildelt en passende licens til tilføjelsesprogrammet. Du kan se en liste over licenser, der understøtter Overvågning (Premium), under [Overvågningskrav (Premium).](auditing-solutions-overview.md#audit-premium-1)
 
-4. Udvid **sektionen Apps**, og bekræft **, Microsoft 365 afkrydsningsfeltet Avanceret** overvågning er markeret.
+4. Udvid afsnittet **Apps**, og kontrollér, at afkrydsningsfeltet **Microsoft 365 Avanceret overvågning** er markeret.
 
 5. Hvis afkrydsningsfeltet ikke er markeret, skal du markere det og derefter klikke på **Gem ændringer.**
 
-   Logføringen af overvågningsposter for MailItemsAccessed og Send starter inden for 24 timer. Du skal udføre trin 3 for at starte logføring af to andre Avancerede overvågningshændelser: SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint.
+   Logføring af overvågningsposter for MailItemsAccessed og Send starter inden for 24 timer. Du skal udføre trin 3 for at starte logføring af to andre overvågningshændelser (Premium): SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint.
 
-Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, så bliver alle nye Avancerede overvågning-hændelser, der frigives af Microsoft, ikke automatisk overvåget for disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Rediger eller gendan postkassehandlinger, der er logført som standard" i Administrer [postkasserevision](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
+Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, overvåges alle nye overvågningshændelser (Premium), der udgives af Microsoft, heller ikke automatisk på disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Skift eller gendan postkassehandlinger, der logføres som standard" under [Administrer overvågning af postkasse](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
 
-## <a name="step-2-enable-advanced-audit-events"></a>Trin 2: Aktivér avancerede overvågningshændelser
+## <a name="step-2-enable-audit-premium-events"></a>Trin 2: Aktivér overvågningshændelser (Premium)
 
-Du skal aktivere to Avancerede overvågningshændelser (SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint) for at blive logført, når brugere udfører søgninger i Exchange Online og SharePoint Online. For at gøre det muligt at overvåge disse to hændelser for brugere skal du køre følgende kommando (for hver bruger) [i Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+Du skal aktivere to overvågningshændelser (Premium) (SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint), der skal logføres, når brugerne udfører søgninger i Exchange Online og SharePoint Online. Hvis du vil aktivere, at disse to hændelser overvåges for brugere, skal du køre følgende kommando (for hver bruger) i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
 Set-Mailbox <user> -AuditOwner @{Add="SearchQueryInitiated"}
 ```
 
-I et miljø med flere geografiske områder skal du køre den forrige **Set-Mailbox-kommando** i den skov, hvor brugerens postkasse er placeret. Kør følgende kommando for at identificere brugerens postkasseplacering: 
+I et multi-geo-miljø skal du køre den forrige **Set-Mailbox-kommando** i det område, hvor brugerens postkasse er placeret. Kør følgende kommando for at identificere brugerens postkasseplacering: 
 
 ```powershell
 Get-Mailbox <user identity> | FL MailboxLocations
 ```
 
-Hvis kommandoen til at aktivere overvågning af søgeforespørgsler tidligere blev kørt i et område, der er anderledes end den, brugerens postkasse er placeret i, skal du fjerne værdien SearchQueryInitiated `Set-Mailbox -AuditOwner @{Remove="SearchQueryInitiated"}` fra brugerens postkasse ved at køre og derefter føje den til brugerens postkasse i den skov, hvor brugerens postkasse er placeret.
+Hvis kommandoen til at aktivere overvågning af søgeforespørgsler tidligere blev kørt i en skov, der er forskellig fra den, brugerens postkasse er placeret i, skal du fjerne værdien SearchQueryInitiated fra brugerens postkasse ved at køre `Set-Mailbox -AuditOwner @{Remove="SearchQueryInitiated"}` og derefter føje den til brugerens postkasse i det område, hvor brugerens postkasse er placeret.
 
-## <a name="step-3-set-up-audit-retention-policies"></a>Trin 3: Konfigurere politikker for opbevaring af overvågning
+## <a name="step-3-set-up-audit-retention-policies"></a>Trin 3: Konfigurer politikker for overvågningsopbevaring
 
-Ud over standardpolitikken, der bevarer Exchange-, SharePoint- og Azure AD-overvågningsposter i et år, kan du oprette yderligere politikker for opbevaring af overvågningslogfiler, der opfylder kravene til organisationens sikkerhedshandlinger, IT og overholdelsesteams. Du kan få mere at vide under [Administrere opbevaringspolitikker for overvågningslogfiler](audit-log-retention-policies.md).
+Ud over standardpolitikken, der bevarer Exchange, SharePoint og Azure AD-overvågningsposter i ét år, kan du oprette yderligere politikker for opbevaring af overvågningslog for at opfylde kravene i organisationens sikkerhedshandlinger, it og overholdelsesteams. Du kan få flere oplysninger under [Administrer opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md).
 
-## <a name="step-4-search-for-advanced-audit-events"></a>Trin 4: Søg efter Avancerede overvågningshændelser
+## <a name="step-4-search-for-audit-premium-events"></a>Trin 4: Søg efter overvågningshændelser (Premium)
 
-Nu hvor du har konfigureret Avanceret overvågning for din organisation, kan du søge efter vigtige Avancerede overvågningshændelser og andre aktiviteter, når du foretager omfattende undersøgelser. Når du har fuldført trin 1 og trin 2, kan du søge i overvågningsloggen efter Avancerede overvågningshændelser og andre aktiviteter under undersøgelse af kompromitterede konti og andre typer af sikkerheds- eller overholdelsesundersøgelse. Du kan finde flere oplysninger om, hvordan du undersøger kompromitterede brugerkonti ved hjælp af hændelsen MailItemsAccessed Advanced Audit under Brug Avanceret overvågning til at undersøge [kompromitterede konti](mailitemsaccessed-forensics-investigations.md).
+Nu, hvor du har konfigureret Overvågning (Premium) for din organisation, kan du søge efter vigtige overvågningshændelser (Premium) og andre aktiviteter, når du udfører kriminaltekniske undersøgelser. Når du har fuldført trin 1 og trin 2, kan du søge i overvågningsloggen efter overvågningshændelser (Premium) og andre aktiviteter under retsmedicinske undersøgelser af kompromitterede konti og andre typer sikkerheds- eller overholdelsesundersøgelser. Du kan få flere oplysninger om, hvordan du foretager en kriminalteknisk undersøgelse af kompromitterede brugerkonti ved hjælp af hændelsen MailItemsAccessed Audit (Premium), under [Brug overvågning (Premium) til at undersøge kompromitterede konti](mailitemsaccessed-forensics-investigations.md).

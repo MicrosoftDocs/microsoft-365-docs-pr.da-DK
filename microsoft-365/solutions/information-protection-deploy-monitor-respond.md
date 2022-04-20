@@ -1,5 +1,5 @@
 ---
-title: Overvåg og svar på hændelser i forbindelse med beskyttelse af personlige oplysninger i din organisation
+title: Overvåg og besvar hændelser om beskyttelse af personlige oplysninger i din organisation
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -16,29 +16,29 @@ ms.collection:
 - m365solution-infoprotection
 - m365solution-scenario
 ms.custom: ''
-description: Brug overvågning og påmindelsespolitikker og anmodninger fra den registrerede til at overvåge og reagere på personlige datahændelser.
-ms.openlocfilehash: 74efff60bb8e0ad6f170b57c86e384d3b689eee1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Brug politikker for overvågning og beskeder og anmodninger fra den registrerede til at overvåge og besvare personlige datahændelser.
+ms.openlocfilehash: 5f4dd6a59ae361cbef042bfc3587203b34620746
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590898"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945335"
 ---
-# <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Overvåg og svar på hændelser i forbindelse med beskyttelse af personlige oplysninger i din organisation
+# <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Overvåg og besvar hændelser om beskyttelse af personlige oplysninger i din organisation
 
-Microsoft 365 tilgængelige funktioner, der kan hjælpe dig med at overvåge, undersøge og reagere på hændelser i forbindelse med beskyttelse af personlige oplysninger i organisationen, når du driftsiserer relaterede funktioner. Det kan også være vigtigt at have processer, procedurer og anden dokumentation til hver af disse for at demonstrere overholdelse af lovbestemmelser.
+Microsoft 365 funktioner er tilgængelige, som kan hjælpe dig med at overvåge, undersøge og reagere på hændelser om beskyttelse af personlige oplysninger i din organisation, når du anvender relaterede funktioner. Det kan også være vigtigt at have processer, procedurer og anden dokumentation til hver af disse for at vise overholdelse over for tilsynsorganer.
 
 Disse omfatter: 
 
-- Overvågning og beskedpolitikker
-- Anmodninger fra den registrerede (herunder indholdssøgning og eDiscovery)
-- Yderligere nyttige værktøjer og rapportering
+- Politikker for overvågning og beskeder
+- Anmodninger fra fysiske personer (herunder indholdssøgning og eDiscovery)
+- Yderligere undersøgelsesværktøjer og rapportering
 
-## <a name="data-privacy-regulations-impacting-the-use-of-monitoring-and-response-tools"></a>Regler for beskyttelse af personlige oplysninger for data, der påvirker brugen af overvågnings- og svarværktøjer
+## <a name="data-privacy-regulations-impacting-the-use-of-monitoring-and-response-tools"></a>Bestemmelser om beskyttelse af personlige oplysninger, der påvirker brugen af overvågnings- og svarværktøjer
 
-Her er et eksempel på en liste over bestemmelser om beskyttelse af personlige oplysninger, der kan være relateret til styring af oplysninger:
+Her er et eksempel på en liste over bestemmelser om beskyttelse af personlige oplysninger, der kan relatere til kontrolelementer for styring af oplysninger:
 
-- LGPD artikel 46
+- LGPD-artikel 46
 - LGPD-artikel 48
 - GDPR-artikel (5)(1)(f)
 - GDPR-artikel (15)(1)(e)
@@ -47,37 +47,37 @@ Her er et eksempel på en liste over bestemmelser om beskyttelse af personlige o
 - HIPAA-HITECH (45 C.F.R. 164.312(b))
 - CCPA (1798.105(c))
 
-Få mere at vide under [Vurder risici i forbindelse med beskyttelse af data og identificer følsomme oplysninger](information-protection-deploy-assess.md).
+Du kan finde flere oplysninger under [Vurder risici for beskyttelse af personlige oplysninger og identificer følsomme oplysninger](information-protection-deploy-assess.md).
 
-Reglerne for beskyttelse af personlige oplysninger for data kræver generelt følgende for overvågning og svar:
+Reglerne om beskyttelse af personlige oplysninger kræver generelt følgende for overvågning og svar:
 
-- Overvågning, påmindelse og rapportering for aktiviteter vedrørende lagring, deling og behandling af personlige data
-- Muligheden for at besvare en anmodning fra den registrerede (DSR) og i nogle tilfælde udføre handlinger, der kræver handling, og andre administrative foranstaltninger for at overholde sådanne anmodninger.
+- Overvågning, advarsler og rapportering for aktiviteter, der er relateret til lagring, deling og behandling af personlige data
+- Muligheden for at besvare en DSR-anmodning (Data Subject Request) og i nogle tilfælde udføre undersøgelser og andre administrative foranstaltninger for at overholde sådanne anmodninger.
 
-Din organisation kan også ønske at udføre overvågnings- og svaraktiviteter til andre formål, f.eks. andre overholdelsesbehov eller af forretningsmæssige årsager. Når du etablerer overvågnings- og svarskemaet for beskyttelse af data, skal det gøres som en del af den overordnede planlægning af overvågning og svar, implementering og administration.
+Din organisation ønsker måske også at udføre overvågnings- og svaraktiviteter til andre formål, f.eks. andre behov for overholdelse af angivne standarder eller af forretningsmæssige årsager. Oprettelse af din overvågnings- og svarordning for beskyttelse af personlige oplysninger skal udføres som en del af den overordnede planlægning, implementering og administration af overvågning og svar.
 
-For at hjælpe dig med at komme i gang med et overvågnings- og svarskema i Microsoft 365 for regler om beskyttelse af personlige oplysninger for data viser denne artikel nyttige funktioner i Microsoft 365 til at besvare spørgsmål som f.eks.: 
+For at hjælpe dig med at komme i gang med et overvågnings- og svarskema i Microsoft 365 til bestemmelser om beskyttelse af personlige oplysninger indeholder denne artikel en liste over nyttige funktioner i Microsoft 365 til at besvare spørgsmål som f.eks.: 
 
-- Hvilken slags daglig overvågning, overvågning og rapporteringsteknikker er tilgængelige for de forskellige datatyper og -kilder?
-- Hvilke mekanismer er nødvendige for at håndtere anmodninger fra registrerede og eventuelle afhjælpende handlinger, f.eks anonymisering, redaction og sletning.
+- Hvilken slags daglige overvågnings-, undersøgelses- og rapporteringsteknikker er tilgængelige for de forskellige datatyper og kilder?
+- Hvilke mekanismer skal der bruges til at håndtere DSR-anmodninger (data subject requests) og eventuelle afhjælpende handlinger, f.eks. anonymisering, redaction og sletning.
 
-## <a name="auditing-and-alert-policies-in-the-security-and-compliance-center"></a>Overvågning og beskedpolitikker i Security and Compliance Center
+## <a name="auditing-and-alert-policies-in-the-security-and-compliance-center"></a>Politikker for overvågning og beskeder i Security and Compliance Center
 
-Se disse artikler for at konfigurere overvågning, avanceret overvågning og beskedpolitikker:
+Se disse artikler om konfiguration af overvågning, avanceret overvågning og beskedpolitikker:
 
 - [Samlet overvågning](../compliance/search-the-audit-log-in-security-and-compliance.md)
-- [Overvågning af postkasse](../compliance/enable-mailbox-auditing.md)
+- [Postkasseovervågning](../compliance/enable-mailbox-auditing.md)
 - [Avanceret overvågning](../compliance/advanced-audit.md)
-- [Beskedpolitikker](../compliance/alert-policies.md)
+- [Underretningspolitikker](../compliance/alert-policies.md)
 
-## <a name="data-subject-requests-for-the-gdpr-and-ccpa"></a>Anmodninger fra den registrerede om GDPR og CCPA
+## <a name="data-subject-requests-for-the-gdpr-and-ccpa"></a>Anmodninger fra fysiske personer for GDPR og CCPA
 
-Se [Anmodninger fra den registrerede om GDPR og CCPA](/compliance/regulatory/gdpr-dsr-Office365) for at få oplysninger om besvarelse af en DSR Microsoft 365.
+Se [Anmodninger fra fysiske personer for GDPR og CCPA for](/compliance/regulatory/gdpr-dsr-Office365) at få oplysninger om besvarelse af en DSR i Microsoft 365.
 
 ## <a name="manage-deleted-users-in-microsoft-stream"></a>Administrer slettede brugere i Microsoft Stream
 
-Når en bruger i Microsoft Stream slettes fra Azure Active Directory (Azure AD), forbliver brugerens mailadresse knyttet til videoen, hvis brugerens navn er knyttet til en stream-video, der er udgivet før dette tidspunkt. Se [Administrer slettede brugere fra Microsoft Stream for](/stream/managing-deleted-users) at fjerne den.
+For Microsoft Stream, når en bruger slettes fra Azure Active Directory (Azure AD), hvis vedkommendes navn var knyttet til en postet Stream-video før dette tidspunkt, forbliver vedkommendes mailadresse knyttet til videoen. Se [Administrer slettede brugere fra Microsoft Stream](/stream/managing-deleted-users) for at fjerne den.
 
-## <a name="insider-risk-management-as-an-investigative-tool"></a>Insider-risikostyring som et værktøj til at tilsnive risici
+## <a name="insider-risk-management-as-an-investigative-tool"></a>Insiderrisikostyring som undersøgelsesværktøj
 
-[Insider-risikostyring i Microsoft 365](../compliance/insider-risk-management.md) er en funktion i Microsoft Compliance Admin center, som kan hjælpe dig med at minimere den interne risiko ved at gøre det muligt for dig at registrere, undersøge og handle på risikabelt arbejde i din organisation.
+[Styring af insiderrisiko](../compliance/insider-risk-management.md) er en funktion i Microsoft Purview-overholdelsesportalen, der hjælper dig med at minimere den interne risiko ved at gøre det muligt for dig at registrere, undersøge og reagere på risikable aktiviteter i din organisation.

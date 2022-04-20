@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om vigtige forskelle mellem en model til dokumentforståelse og en formularbehandlingsmodel.
-ms.openlocfilehash: f6fe6e821e41b47bcce6ef157d971245fdd072b8
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 571516a7112e3f145d9e3ca392ad3488a33b4887
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882280"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947819"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem modeller til dokumentforståelse og formularbehandling 
 
@@ -80,7 +80,7 @@ Brug følgende tabel til at forstå, hvornår du skal bruge formularbehandling, 
 | Steder | Oplært i et enkelt dokumentbibliotek.| Kan anvendes på flere biblioteker.|
 | Understøttede filtyper| Oplær på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Oplær på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider.|
 | Integrer med administrerede metadata | Nej | Ja, ved at udtrække enheder, der refererer til et konfigureret felt for administrerede metadata.|
-| Integration af overholdelsesfunktion, når Microsoft Information Protection er aktiveret | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
+| Funktionsintegration med Overholdelse med Microsoft Purview-Information Protection | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
 | Understøttede områder| Formularbehandling er afhængig af Power Platform. Du kan få oplysninger om global tilgængelighed for Power Platform og AI Builder under [Tilgængelighed af Power Platform](https://dynamics.microsoft.com/geographic-availability/). | Tilgængelig i alle områder.|
 | Transaktionsomkostninger | Bruger AI Builder-kreditter.<br>Kreditter kan købes i batches på 1 mio.<br>Kreditter på 1 mio. er inkluderet, når der købes mere end 300 SharePoint Syntex licenser.<br>Kreditter på 1 mio. tillader behandling af 2.000 filsider.<br>| NIELSEN |
 | Kapacitet | Bruger Power Platform-standardmiljøet (brugerdefinerede miljøer med understøttet Dataverse-database). | Har ikke kapacitetsbegrænsninger.|

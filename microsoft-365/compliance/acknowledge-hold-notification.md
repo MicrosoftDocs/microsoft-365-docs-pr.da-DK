@@ -1,11 +1,11 @@
 ---
-title: Anerkend en meddelelse om venteposition
+title: Anerkend en meddelelse om fastfrysning
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/05/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,41 +17,41 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Lær at bruge Advanced eDiscovery til at sende og følge op på meddelelser om retslig venteposition via mail samt overvåge forpligtelsesstatus.
-ms.openlocfilehash: 57cda6e88968fc90845965a8554f55d80bd3ded0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du bruger eDiscovery (Premium) til at sende og følge op på meddelelser om juridiske ventepositioner via mail samt overvåge status for forpligtelser.
+ms.openlocfilehash: 4be0781a273f842c043276a19688f36b96cfdb28
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588704"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947401"
 ---
-# <a name="acknowledge-a-hold-notification"></a>Anerkend en meddelelse om venteposition
+# <a name="acknowledge-a-hold-notification"></a>Anerkend en meddelelse om fastfrysning
 
-Når du besvarer en lovgivningsmæssig anmodning eller undersøgelse, kan det være påkrævet, at du informerer personer, der er ansvarlige for deres forpligtelse til at opbevare elektronisk gemte oplysninger (ESI) og alt materiale, der kan være relevant for en aktiv eller umiddelbart for sen juridisk sag. Når de er sendt, skal juridiske teams vide, at hver vagtleder har modtaget, læst, forstået og accepteret at følge de angivne instruktioner.
+Når du besvarer en lovmæssig anmodning eller undersøgelse, kan du blive bedt om at informere vogtere om deres forpligtelse til at bevare elektronisk lagrede oplysninger (ESI) og alt materiale, der kan være relevant for en aktiv eller forestående juridisk sag. Når de juridiske teams er sendt, skal de vide, at hver tilsynsførende har modtaget, læst, forstået og indvilliget i at følge de angivne instruktioner.
 
-For at reducere tid, omkostninger og anstrengelser for at følge op med dine Advanced eDiscovery giver Advanced eDiscovery dig mulighed for at sende og følge op på meddelelser om retsligt hold via mail. Ud over mailbeskeder har hver hjælper at få adgang til en individuel overholdelsesportal, så hjælpere, der kan hjælpe med at blive holdt orienteret om ændringer af deres status for forpligtelse.
+EDiscovery (Premium) giver dig mulighed for at sende og følge op på juridiske beskeder via mail for at hjælpe med at reducere den tid, de omkostninger og den indsats, der er forbundet med at følge op på dine tilsynsførende. Ud over e-mailmeddelelser vil hver tilsynsførende have adgang til en individualiseret overholdelsesportal, der gør det muligt for vogtere at blive informeret om ændringer af deres forpligtelsesstatus.
 
 ## <a name="email-notifications"></a>Mailbeskeder
 
-Når en meddelelse om retsligt hold er blevet udstedt, modtager hver enkelt meddelelse om retslig venteposition en unik og personlig mail, der indeholder din definerede meddelelse om retslig venteposition og tilføjede instruktioner. 
+Når der er udstedt en meddelelse om juridisk venteposition, modtager hver tilsynsførende en unik og personlig e-mail, der indeholder din definerede juridiske ventepositionsmeddelelse og yderligere instruktioner. 
 
 > [!TIP]
-> Se, hvordan du kan bruge den indbyggede  [Kommunikationseditor](using-communications-editor.md) til at give dine brugere tilladelse til at anerkende deres meddelelse eller få adgang til deres overholdelsesportal direkte fra deres mail.
+> Se, hvordan du kan bruge den indbyggede  [kommunikationseditor](using-communications-editor.md) til at give dine tilsynsførende tilladelse til at bekræfte deres meddelelse eller få adgang til deres overholdelsesportal direkte fra deres e-mail.
 
-Baseret på konfigurationen af din meddelelse om retslig venteposition kan dine selvtere modtage følgende meddelelser: 
+Baseret på konfigurationen af din meddelelse om juridisk venteposition kan dine tilsynsførende modtage følgende meddelelser: 
 
-- **Meddelelse om udstedelse:** Den første meddelelse, der sendes til din vagtleder. Denne meddelelse indeholder dine udsendelsesinstruktioner og meddelelsen om venteposition, som er føjet til slutningen af meddelelsen.
+- **Meddelelse om udstedelse:** Den første besked, der sendes til din tilsynsførende. Denne meddelelse indeholder dine udstedelsesinstruktioner og ventepositionsmeddelelsen, der er føjet til slutningen af meddelelsen.
 
-- **Påmindelsesmeddelelse:** Hvis denne indstilling er aktiveret, sendes der en påmindelsesmeddelelse til dine ydvntere baseret på den angivne hyppighed og det angivne interval. Påmindelserne vil fortsat blive sendt, enten indtil vagten har bekræftet sin meddelelse, eller indtil antallet af påmindelser er opbrugt.
+- **Påmindelse:** Hvis indstillingen er aktiveret, sendes der en påmindelse til dine tilsynsførende på baggrund af den angivne hyppighed og det angivne interval. Påmindelserne vil fortsat blive sendt, enten indtil vogteren har bekræftet meddelelsen, eller indtil antallet af påmindelser er opbrugt.
 
-- **Eskaleringsmeddelelse:** Hvis denne indstilling er aktiveret, sendes en eskaleringsmeddelelse til din vagtchef og dennes leder, når påmindelsesmeddelelsen er opbrugt. Systemet vil automatisk sende eskaleringsbeskeder, indtil det angivne antal eskaleringer er gennemført, eller indtil den din besked om venteposition er bekræftet.
+- **Eskaleringsmeddelelse:** Hvis indstillingen er aktiveret, sendes der en eskaleringsmeddelelse til din tilsynsførende og deres leder, når påmindelserne er blevet opbrugt. Systemet sender automatisk eskaleringsmeddelelser, indtil det angivne antal eskaleringer er afsluttet, eller indtil frihedsberøveren anerkender meddelelsen om deres venteposition.
 
-- **Meddelelse igen:** Hvis indholdet af den ventende meddelelse opdateres i løbet af en undersøgelse, sendes den opdaterede meddelelse automatisk til den, der er vagtleder.
+- **Meddelelse om genudgivelse:** Hvis indholdet af meddelelsen om venteposition opdateres under en undersøgelse, sendes den opdaterede meddelelse automatisk til den tilsynsførende.
 
-- **Meddelelse om udgivelse:** Når en vagter frigives fra sagen, får de tilsendt en meddelelse om frigivelsen. 
+- **Meddelelse om frigivelse:** Når en varetægtsfængsling bliver løsladt, bliver de løsladt. 
 
 ## <a name="compliance-portal"></a>Overholdelsesportal
 
-Ud over mailmeddelelser har hver enkelt hjælper adgang til en unik overholdelsesportal. Via portalen kan hver deltager se, få adgang til og anerkende deres aktive meddelelser om venteposition.
+Ud over mailmeddelelserne har hver tilsynsførende adgang til en unik overholdelsesportal. Via portalen kan hver tilsynsførende få vist, få adgang til og bekræfte deres aktive ventepositionsmeddelelser.
 
-![Overholdelsesportal for en kontrollerende bruger.](../media/CustodianPortal.jpg)
+![Overholdelsesportal for en tilsynsførende.](../media/CustodianPortal.jpg)

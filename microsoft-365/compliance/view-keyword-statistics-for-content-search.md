@@ -1,5 +1,5 @@
 ---
-title: Få vist statistik for eDiscovery-søgeresultater
+title: Vis statistik for eDiscovery-søgeresultater
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,116 +14,116 @@ ms.localizationpriority: medium
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du bruger funktionen søgestatistik til at vise statistik for indholdssøgninger og -søgninger, der er knyttet til en grundlæggende eDiscovery-sag Microsoft 365 Overholdelsescenter.
+description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery(Standard) sag i Microsoft Purview-overholdelsesportalen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 04d24020cd22d40d6706295ccb53578bf3aef756
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: e057a6e4997240dbaa4b9b7975274c5f3eab7589
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63587514"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947093"
 ---
-# <a name="view-statistics-for-ediscovery-search-results"></a>Få vist statistik for eDiscovery-søgeresultater
+# <a name="view-statistics-for-ediscovery-search-results"></a>Vis statistik for eDiscovery-søgeresultater
 
-Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en core eDiscovery-sag, kan du få vist statistik for de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til en oversigt over de anslåede søgeresultater, der vises på pop op-siden med søgninger), forespørgselsstatistik, f.eks. antallet af indholdsplaceringer med elementer, der svarer til søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
+Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard)-sag, kan du få vist statistikker om de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til oversigten over de anslåede søgeresultater, der vises på søgevinduets side), forespørgselsstatistikken, f.eks. antallet af indholdsplaceringer med elementer, der stemmer overens med søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
   
-Desuden kan du bruge listen over nøgleord til at konfigurere en søgning til at returnere statistik for hvert nøgleord i en søgeforespørgsel. Det gør det muligt at sammenligne antallet af resultater, der returneres af hvert nøgleord i en forespørgsel.
+Du kan også bruge listen over nøgleord til at konfigurere en søgning til at returnere statistikker for hvert nøgleord i en søgeforespørgsel. Her kan du sammenligne antallet af resultater, der returneres af hvert nøgleord i en forespørgsel.
   
-Du kan også hente søgestatistik til en CSV-fil. Dette giver dig mulighed for at bruge filtrerings- og sorteringsfunktionerne i Excel til at sammenligne resultater og forberede rapporter til dine søgeresultater.
+Du kan også downloade søgestatistik til en CSV-fil. Det giver dig mulighed for at bruge filtrerings- og sorteringsfunktionerne i Excel til at sammenligne resultater og forberede rapporter til dine søgeresultater.
   
-## <a name="get-statistics-for-searches"></a>Få statistik for søgninger
+## <a name="get-statistics-for-searches"></a>Hent statistik for søgninger
 
-Sådan får du vist statistik for en indholdssøgning eller en søgning, der er knyttet til en core eDiscovery-sag:
+Sådan får du vist statistikker for en indholdssøgning eller en søgning, der er knyttet til en eDiscovery-sag (Standard).
   
-1. Klik på Microsoft 365 Overholdelsescenter i **dialogboksen Vis** alle, og gør derefter et af følgende:
+1. På Microsoft Purview-overholdelsesportalen skal du klikke på **Vis alle** og derefter gøre et af følgende:
 
-   - Klik **på Indholdssøgning** , og vælg derefter en søgning for at få vist pop op-siden.
+   - Klik på **Indholdssøgning** , og vælg derefter en søgning for at få vist pop op-siden.
 
      ELLER
 
-   - Klik **på eDiscoveryCore** > , vælg en sag, og vælg derefter en søgning på  fanen Søgninger for at få vist pop op-siden.
+   - Klik på **eDiscoveryCore** > , vælg en sag, og vælg derefter en søgning på fanen **Søgninger** for at få vist pop op-siden.
 
-2. Klik på fanen Søgestatistik på pop op-siden **for den valgte** søgning.
+2. Klik på fanen **Søg efter statistik** på pop op-siden i den valgte søgning.
   
-   ![Fanen Søg i statistik.](../media/SearchStatistics1.png)
+   ![Fanen Søg efter statistik.](../media/SearchStatistics1.png)
 
-Fanen **Søgestatistik** indeholder følgende afsnit, der indeholder forskellige typer statistik om søgningen.
+Fanen **Søg efter statistik** indeholder følgende afsnit, der indeholder forskellige typer statistik om søgningen.
 
-### <a name="search-content"></a>Søg i indhold
+### <a name="search-content"></a>Søg efter indhold
 
-I dette afsnit vises en grafisk oversigt over de anslåede elementer, der returneres af søgningen. Dette angiver antallet af elementer, der opfylder søgekriterierne. Disse oplysninger giver dig en ide om det anslåede antal elementer, der returneres af søgningen.
+I dette afsnit vises en grafisk oversigt over de anslåede elementer, der returneres af søgningen. Dette angiver antallet af elementer, der opfylder søgekriterierne. Disse oplysninger giver dig en idé om det anslåede antal elementer, der returneres af søgningen.
 
-![Søgeestimimater for en søgning.](../media/SearchContentReport.png)
+![Søg efter estimater for en søgning.](../media/SearchContentReport.png)
 
-- **Anslåede elementer efter placeringer**: Det samlede antal anslåede elementer, der returneres af søgningen. Det specifikke antal elementer, der er placeret i postkasser og placeret på websteder, vises også.
+- **Anslåede elementer efter lokationer**: Det samlede antal anslåede elementer, der returneres af søgningen. Det specifikke antal elementer, der er placeret i postkasser og placeret på websteder, vises også.
 
-- **Anslåede placeringer med hits**: Det samlede antal indholdsplaceringer, der indeholder elementer, der returneres af søgningen. Det specifikke antal postkasser og webstedsplaceringer vises også.
+- **Anslåede placeringer med forekomster**: Det samlede antal indholdsplaceringer, der indeholder elementer, der returneres af søgningen. Det specifikke antal postkasser og webstedsplaceringer vises også.
 
-- **Datamængde efter placering (i MB)**: Den samlede størrelse af alle anslåede elementer, der returneres af søgningen. Den specifikke størrelse på postkasseelementer og webstedselementer vises også.
+- **Datamængde efter placering (i MB)**: Den samlede størrelse af alle anslåede elementer, der returneres af søgningen. Den specifikke størrelse af postkasseelementer og webstedselementer vises også.
 
 ### <a name="condition-report"></a>Betingelsesrapport
 
-Dette afsnit viser statistik om søgeforespørgslen og antallet af estimerede elementer, der matcher forskellige dele af søgeforespørgslen. Du kan bruge denne statistik til at analysere antallet af elementer, der svarer til hver komponent i søgeforespørgslen. Dette kan hjælpe dig med at afgrænse søgekriterierne og om nødvendigt indsnævre omfanget af området. Du kan også downloade en kopi af denne rapport i CSV-format.
+I dette afsnit vises statistik om søgeforespørgslen og antallet af anslåede elementer, der matcher forskellige dele af søgeforespørgslen. Du kan bruge disse statistikker til at analysere antallet af elementer, der stemmer overens med hver komponent i søgeforespørgslen. Dette kan hjælpe dig med at tilpasse søgekriterierne og om nødvendigt begrænse omfanget af området. Du kan også downloade en kopi af denne rapport i CSV-format.
 
 ![Betingelsesrapport.](../media/SearchContentReportNoKeywordList.png)
 
-- **Placeringstype**: Den type indholdsplacering, forespørgselsstatistikken gælder for. Værdien af en **Exchange** angiver en postkasseplacering; en værdi på **SharePoint** angiver en webstedsplacering.
+- **Placeringstype**: Den type indholdsplacering, som forespørgselsstatistikken gælder for. Værdien af **Exchange** angiver placeringen af en postkasse. Værdien **SharePoint** angiver placeringen af webstedet.
 
-- **Del**: Den del af søgeforespørgslen, statistikken gælder for. **Primær** angiver hele søgeforespørgslen. **Nøgleord** angiver, at statistikken i rækken er for et bestemt nøgleord. Hvis du bruger en liste med nøgleord til søgeforespørgsel, medtages statistik for hver komponent i forespørgslen i denne tabel. Du kan finde flere oplysninger [i Få statistik for nøgleord for søgninger](#get-keyword-statistics-for-searches).
+- **Del**: Den del af søgeforespørgslen, som statistikkerne gælder for. **Primary** angiver hele søgeforespørgslen. **Nøgleordet** angiver, at statistikkerne i rækken er for et bestemt nøgleord. Hvis du bruger en nøgleordsliste til søgeforespørgslen, medtages statistik for hver komponent i forespørgslen i denne tabel. Du kan finde flere oplysninger under [Hent nøgleordsstatistik for søgninger](#get-keyword-statistics-for-searches).
 
-- **Betingelse**: Den faktiske komponent (nøgleordet eller betingelsen) for den søgeforespørgsel, der returnerede den statistik, der blev vist i den tilsvarende række.
+- **Betingelse**: Den faktiske komponent (nøgleord eller betingelse) for søgeforespørgslen, der returnerede de statistikker, der vises i den tilsvarende række.
 
-- **Placeringer med hits**: Antallet af placeringer af indhold (angivet af kolonnen Placeringstype),  der indeholder elementer, der svarer til den primære forespørgsel eller nøgleordsforespørgslen, der er angivet i **kolonnen** Betingelse.
+- **Placeringer med forekomster**: Antallet af indholdsplaceringer (angivet af kolonnen **Placeringstype** ), der indeholder elementer, der svarer til den primære forespørgsel eller nøgleordsforespørgsel, der er angivet i kolonnen **Betingelse** .
 
-- **Elementer**: Antallet af elementer (fra den angivne indholdsplacering), der svarer til den forespørgsel, der er angivet i **kolonnen** Betingelse. Som tidligere nævnt tælles det kun én gang i denne kolonne, hvis et element indeholder flere forekomster af et nøgleord, der søges efter.
+- **Elementer**: Det antal elementer (fra den angivne indholdsplacering), der svarer til den forespørgsel, der er angivet i kolonnen **Betingelse** . Hvis et element indeholder flere forekomster af et nøgleord, der søges efter, tælles det som tidligere forklaret kun én gang i denne kolonne.
 
-- **Størrelse (MB)**: Den samlede størrelse af alle de elementer, der blev fundet (på den angivne indholdsplacering), der svarer til søgeforespørgslen i **kolonnen** Betingelse.
+- **Størrelse (MB)**: Den samlede størrelse af alle elementer, der blev fundet (på den angivne indholdsplacering), som svarer til søgeforespørgslen i kolonnen **Betingelse** .
 
-### <a name="top-locations"></a>Vigtigste placeringer
+### <a name="top-locations"></a>Topplaceringer
 
-Dette afsnit viser statistik om de specifikke placeringer af indhold med de fleste elementer, der returneres af søgningen. De øverste 1.000 placeringer vises. Du kan også downloade en kopi af denne rapport i CSV-format.
+I dette afsnit vises statistik om de specifikke indholdsplaceringer med de fleste elementer, der returneres af søgningen. De øverste 1.000 placeringer vises. Du kan også downloade en kopi af denne rapport i CSV-format.
 
-- Navnet på placeringens navn (mailadressen på postkasser og URL'en til websteder).
+- Navnet på placeringen (mailadressen på postkasser og URL-adressen til websteder).
 
 - Placeringstype (en postkasse eller et websted).
 
-- Anslået antal elementer på den indholdsplacering, der returneres af søgningen.
+- Anslået antal elementer på indholdsplaceringen, der returneres af søgningen.
 
-- Den samlede størrelse af anslåede elementer for hver indholdsplacering.
+- Den samlede størrelse af anslåede elementer på hver indholdsplacering.
 
-## <a name="get-keyword-statistics-for-searches"></a>Få nøgleordsstatistik for søgninger
+## <a name="get-keyword-statistics-for-searches"></a>Hent nøgleordsstatistik for søgninger
 
-Som beskrevet tidligere viser **sektionen Betingelsesrapport** søgeforespørgslen og antallet (og størrelsen) af elementer, der svarer til forespørgslen. Hvis du bruger en liste med nøgleord, når du opretter eller redigerer en søgeforespørgsel, kan du få forbedret statistik, der viser, hvor mange elementer der matcher hvert nøgleord eller nøgleordsudtryk. Dette kan hjælpe dig med hurtigt at identificere, hvilke dele af forespørgslen der er mest (og mindst) effektive. Hvis et nøgleord f.eks. returnerer et stort antal elementer, kan du vælge at indskrænke nøgleordsforespørgslen for at indsnævre søgeresultaterne.
+Som tidligere forklaret viser afsnittet **Betingelsesrapport** søgeforespørgslen og antallet (og størrelsen) af elementer, der stemmer overens med forespørgslen. Hvis du bruger en nøgleordsliste, når du opretter eller redigerer en søgeforespørgsel, kan du få forbedret statistik, der viser, hvor mange elementer der matcher hvert nøgleord eller nøgleordsudtryk. Dette kan hjælpe dig med hurtigt at identificere, hvilke dele af forespørgslen der er mest (og mindst) effektive. Hvis et nøgleord f.eks. returnerer et stort antal elementer, kan du vælge at afgrænse nøgleordsforespørgslen for at indsnævre søgeresultaterne.
 
 Sådan opretter du en nøgleordsliste og får vist nøgleordsstatistik for en søgning:
   
-1. På internettet Microsoft 365 Overholdelsescenter oprette en ny indholdssøgning eller en søgning, der er knyttet til en core eDiscovery-sag.
+1. På overholdelsesportalen skal du oprette en ny indholdssøgning eller en søgning, der er knyttet til en eDiscovery(Standard)-sag.
 
-2. På **siden Betingelser** i søgeguiden. skal du **markere afkrydsningsfeltet Vis** listen over nøgleord.
+2. På siden **Betingelser** i søgeguiden. markér afkrydsningsfeltet **Vis nøgleordsliste** .
 
-   ![Afkrydsningsfeltet Vis nøgleordsliste.](../media/SearchKeywordsList1.png)
+   ![Vis afkrydsningsfeltet Liste over nøgleord.](../media/SearchKeywordsList1.png)
 
-3. Skriv et nøgleord eller en nøgleordsfase i en række i tabellen med nøgleord. Skriv **f.eks. budget** i den første række,  skriv sikkerhed i den anden række, og skriv **FY2021** i den tredje række.
+3. Skriv et nøgleord eller en nøgleordsfase i en række i nøgleordstabellen. Du kan f.eks. skrive **budget** i den første række, skrive **sikkerhed** i den anden række og skrive **FY2021** i den tredje række.
 
    ![Skriv op til 20 nøgleord eller nøgleordsudtryk på listen.](../media/SearchKeywordsList2.png)
 
    > [!NOTE]
-   > For at reducere problemer, der skyldes lister med store nøgleord, er du begrænset til maksimalt 20 rækker på listen med nøgleord i en søgeforespørgsel.
+   > For at hjælpe med at reducere problemer, der skyldes store nøgleordslister, er du begrænset til maksimalt 20 rækker på nøgleordslisten i en søgeforespørgsel.
 
-4. Når du har føjet nøgleordene til listen, som du vil søge efter og hente statistik for, skal du køre søgningen.
+4. Når du har føjet nøgleordene til den liste, du vil søge efter og hente statistikker for, skal du køre søgningen.
 
 5. Når søgningen er fuldført, skal du vælge den for at få vist pop op-siden.
 
-6. På fanen **Søgestatistik** skal du klikke på **betingelsesrapporten** for at få vist nøgleordsstatistikken for søgningen.
+6. Klik på **rapporten Betingelse** under fanen **Søg efter statistik** for at få vist nøgleordsstatistikken for søgningen.
 
-    ![Statistikken for hvert nøgleord vises.](../media/SearchKeywordsList3.png)
+    ![Statistikkerne for hvert nøgleord vises.](../media/SearchKeywordsList3.png)
   
-    Som vist på det forrige skærmbillede vises statistikken for hvert nøgleord. dette omfatter:
+    Som vist på det forrige skærmbillede vises statistikkerne for hvert nøgleord. dette omfatter:
 
-    - Nøgleordsstatistikken for hver type indholdsplacering, der medtages i søgningen.
+    - Nøgleordsstatistikken for hver type indholdsplacering, der er inkluderet i søgningen.
 
-    - Antallet af ikke-identificerede postkasseelementer.
+    - Antallet af elementer i en ikke-indekseret postkasse.
 
-    - Den faktiske søgeforespørgsel og resultater for hvert nøgleord (identificeret som  **Nøgleord** i kolonnen Del), som indeholder alle betingelser fra søgeforespørgslen.
+    - Den faktiske søgeforespørgsel og de faktiske resultater for hvert nøgleord (identificeret som **nøgleord** i kolonnen **Del** ), som indeholder alle betingelser fra søgeforespørgslen.
 
-    - Den komplette søgeforespørgsel ( **identificeret** **som primær** i kolonnen Del) og statistikken for den komplette forespørgsel for hver placeringstype. Bemærk, at dette er de samme statistikker, der vises på **fanen** Oversigt.
+    - Den komplette søgeforespørgsel (identificeret som **Primær** i kolonnen **Del** ) og statistikkerne for den komplette forespørgsel for hver placeringstype. Bemærk, at dette er de samme statistikker, der vises under fanen **Oversigt** .

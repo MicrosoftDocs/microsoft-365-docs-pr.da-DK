@@ -16,35 +16,35 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan Microsoft 365 eDiscovery-værktøjer håndterer krypterede dokumenter, der er knyttet til mails og gemt i SharePoint Online og OneDrive for Business.
-ms.openlocfilehash: ae4e1fe274015da27514ef5149cd05c09928890b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 91eef14c1cb4dc91657a1d9a26ab00b1eb6f6d92
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861923"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948765"
 ---
 # <a name="decryption-in-microsoft-365-ediscovery-tools"></a>Dekryptering i Microsoft 365 eDiscovery-værktøjer
 
 Kryptering er en vigtig del af din strategi til beskyttelse af filer og beskyttelse af oplysninger. Organisationer af alle typer bruger krypteringsteknologi til at beskytte følsomt indhold i deres organisation og sikre, at kun de rette personer har adgang til dette indhold.
 
-For at udføre almindelige eDiscovery-opgaver på krypteret indhold skulle eDiscovery-ledere dekryptere mailindhold, efterhånden som det blev eksporteret fra indholdssøgninger, centrale eDiscovery-sager og Advanced eDiscovery sager. Indhold, der er krypteret med Microsoft-krypteringsteknologier, var først tilgængeligt til gennemsyn, efter at det blev eksporteret.
+For at udføre almindelige eDiscovery-opgaver på krypteret indhold skulle eDiscovery-ledere dekryptere mailindhold, efterhånden som det blev eksporteret fra indholdssøgninger, Microsoft Purview eDiscovery-sager (Standard) og Microsoft Purview eDiscovery-sager (Premium). Indhold, der er krypteret med Microsoft-krypteringsteknologier, var først tilgængeligt til gennemsyn, efter at det blev eksporteret.
 
-For at gøre det nemmere at administrere krypteret indhold i eDiscovery-arbejdsprocessen omfatter Microsoft 365 eDiscovery-værktøjer nu dekryptering af krypterede filer, der er knyttet til mails og sendt i Exchange Online.<sup> 1</sup> Desuden dekrypteres krypterede dokumenter, der er gemt i SharePoint Online, og OneDrive for Business i Advanced eDiscovery.
+For at gøre det nemmere at administrere krypteret indhold i eDiscovery-arbejdsprocessen omfatter Microsoft 365 eDiscovery-værktøjer nu dekryptering af krypterede filer, der er knyttet til mails og sendt i Exchange Online.<sup> 1</sup> Derudover dekrypteres krypterede dokumenter, der er gemt i SharePoint Online, og OneDrive for Business i eDiscovery (Premium).
 
-Før denne nye funktion blev kun indholdet af en mail, der er beskyttet af Rights Management (og ikke vedhæftede filer), dekrypteret. Krypterede dokumenter i SharePoint og OneDrive kunne ikke dekrypteres under eDiscovery-arbejdsprocessen. Nu er filer, der krypteres med en Microsoft-krypteringsteknologi, placeret på en SharePoint- eller OneDrive-konto, der kan søges i og dekrypteres, når søgeresultaterne forberedes til eksempelvisning, føjes til et korrektursæt i Advanced eDiscovery og eksporteres. Derudover kan der søges i krypterede dokumenter i SharePoint og OneDrive, der er knyttet til en mail. Denne dekrypteringsfunktion gør det muligt for eDiscovery-ledere at få vist indholdet af krypterede vedhæftede filer i mails og webstedsdokumenter, når de får vist søgeresultater, og gennemse dem, når de er føjet til et korrektursæt i Advanced eDiscovery.
+Før denne nye funktion blev kun indholdet af en mail, der er beskyttet af Rights Management (og ikke vedhæftede filer), dekrypteret. Krypterede dokumenter i SharePoint og OneDrive kunne ikke dekrypteres under eDiscovery-arbejdsprocessen. Nu er filer, der krypteres med en Microsoft-krypteringsteknologi, placeret på en SharePoint eller OneDrive konto, der kan søges i og dekrypteres, når søgeresultaterne forberedes til eksempelvisning, føjes til et korrektursæt i eDiscovery (Premium) og eksporteres. Derudover kan der søges i krypterede dokumenter i SharePoint og OneDrive, der er knyttet til en mail. Denne dekrypteringsfunktion gør det muligt for eDiscovery-ledere at få vist indholdet af krypterede vedhæftede filer i mails og webstedsdokumenter, når de får vist søgeresultater, og gennemse dem, når de er føjet til et korrektursæt i eDiscovery (Premium).
 
 ## <a name="supported-encryption-technologies"></a>Understøttede krypteringsteknologier
 
-Microsoft eDiscovery-værktøjer understøtter elementer, der er krypteret med Microsoft-krypteringsteknologier. Disse teknologier er Azure Rights Management og Microsoft informācijas aizsardzība (specifikt følsomhedsmærkater). Du kan få flere oplysninger om Microsoft-krypteringsteknologier under [Kryptering](encryption.md). Indhold, der er krypteret af krypteringsteknologier fra tredjepart, understøttes ikke. Eksempelvisning eller eksport af indhold, der er krypteret med ikke-Microsoft-teknologier, understøttes f.eks. ikke.
+Microsoft eDiscovery-værktøjer understøtter elementer, der er krypteret med Microsoft-krypteringsteknologier. Disse teknologier er Azure Rights Management og Microsoft Purview Information Protection (især følsomhedsmærkater). Du kan få flere oplysninger om Microsoft-krypteringsteknologier under [Kryptering](encryption.md). Indhold, der er krypteret af krypteringsteknologier fra tredjepart, understøttes ikke. Eksempelvisning eller eksport af indhold, der er krypteret med ikke-Microsoft-teknologier, understøttes f.eks. ikke.
 
 > [!NOTE]
-> Dekryptering af mails, der sendes med en [brugerdefineret OME-skabelon (Office 365 Message Encryption),](add-your-organization-brand-to-encrypted-messages.md) understøttes ikke af Microsoft eDiscovery-værktøjer. Når du bruger en brugerdefineret OME-brandingskabelon, leveres mailmeddelelser til OME-portalen i stedet for modtagerens postkasse. Derfor kan du ikke bruge eDiscovery-værktøjer til at søge efter OME-krypterede meddelelser, fordi disse meddelelser aldrig modtages af modtagerens postkasse.
+> Dekryptering af mails, der sendes med en [brugerdefineret brandingskabelon til Microsoft Purview Message Encryption](add-your-organization-brand-to-encrypted-messages.md) , understøttes ikke af Microsoft eDiscovery-værktøjer. Når du bruger en brugerdefineret OME-brandingskabelon, leveres mailmeddelelser til OME-portalen i stedet for modtagerens postkasse. Derfor kan du ikke bruge eDiscovery-værktøjer til at søge efter krypterede meddelelser, fordi disse meddelelser aldrig modtages af modtagerens postkasse.
 
 ## <a name="ediscovery-activities-that-support-encrypted-items"></a>eDiscovery-aktiviteter, der understøtter krypterede elementer
 
 I følgende tabel identificeres de understøttede opgaver, der kan udføres i Microsoft 365 eDiscovery-værktøjer på krypterede filer, der er knyttet til mailmeddelelser og krypterede dokumenter i SharePoint og OneDrive. Disse understøttede opgaver kan udføres på krypterede filer, der opfylder kriterierne i en søgning. Værdien angiver `N/A` , at funktionaliteten ikke er tilgængelig i det tilsvarende eDiscovery-værktøj.
 
-|eDiscovery-opgave  |Indholdssøgning  |Grundlæggende eDiscovery  |Avanceret eDiscovery  |
+|eDiscovery-opgave  |Indholdssøgning  |eDiscovery (standard)  |eDiscovery (Premium)  |
 |:---------|:---------|:---------|:---------|
 |Søg efter indhold i krypterede filer på websteder og vedhæftede filer <sup>i mails1</sup>     |Nej      |Nej      |Ja      |
 |Vis krypterede filer, der er knyttet til mail     |Ja      |Ja     |Ja       |
@@ -67,7 +67,7 @@ eDiscovery understøtter ikke krypterede filer i SharePoint og OneDrive, når en
 
 Du kan finde flere oplysninger om disse indstillinger i afsnittet "Konfigurer krypteringsindstillinger" i [Begræns adgang til indhold ved hjælp af følsomhedsmærkater for at anvende kryptering](encryption-sensitivity-labels.md#configure-encryption-settings).
 
-Dokumenter, der er krypteret med de tidligere indstillinger, kan stadig returneres af en eDiscovery-søgning. Dette kan ske, når en dokumentegenskab (f.eks. titlen, forfatteren eller datoen for ændring) svarer til søgekriterierne. Selvom disse dokumenter kan være inkluderet i søgeresultater, kan de ikke gennemses eller gennemses. Disse dokumenter forbliver også krypterede, når de eksporteres i Advanced eDiscovery.
+Dokumenter, der er krypteret med de tidligere indstillinger, kan stadig returneres af en eDiscovery-søgning. Dette kan ske, når en dokumentegenskab (f.eks. titlen, forfatteren eller datoen for ændring) svarer til søgekriterierne. Selvom disse dokumenter kan være inkluderet i søgeresultater, kan de ikke gennemses eller gennemses. Disse dokumenter forbliver også krypterede, når de eksporteres i eDiscovery (Premium).
 
 > [!IMPORTANT]
 > Dekryptering understøttes ikke for filer, der er krypteret lokalt og derefter uploadet til SharePoint eller OneDrive. Lokale filer, der krypteres af Azure Information Protection-klienten (AIP), og som derefter uploades til Microsoft 365, understøttes f.eks. ikke. Kun filer, der er krypteret i tjenesten SharePoint eller OneDrive, understøttes til dekryptering.
@@ -86,11 +86,11 @@ I begge disse scenarier kan mails med krypterede vedhæftede filer returneres af
 
 ## <a name="requirements-for-decryption-in-ediscovery"></a>Krav til dekryptering i eDiscovery
 
-Du skal tildeles rollen RMS Dekryptering for at få vist, gennemse og eksportere filer, der er krypteret med Microsoft-krypteringsteknologier. Du skal også have tildelt denne rolle for at gennemse og forespørge krypterede filer, der føjes til et korrektursæt i Advanced eDiscovery.
+Du skal tildeles rollen RMS Dekryptering for at få vist, gennemse og eksportere filer, der er krypteret med Microsoft-krypteringsteknologier. Du skal også tildeles denne rolle for at gennemse og forespørge krypterede filer, der føjes til et korrektursæt i eDiscovery (Premium).
 
-Denne rolle tildeles som standard rollegruppen eDiscovery Manager på siden **Tilladelser** i Qendra e pajtimit e Microsoft 365. Du kan finde flere oplysninger om RMS-dekrypteringsrollen under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md#rms-decrypt).
+Denne rolle er som standard tildelt rollegruppen eDiscovery Manager på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen. Du kan finde flere oplysninger om RMS-dekrypteringsrollen under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md#rms-decrypt).
 
-### <a name="decrypting-rms-protected-email-messages-and-encrypted-file-attachments-using-content-search-or-core-ediscovery"></a>Dekrypterer RMS-beskyttede mails og krypterede vedhæftede filer ved hjælp af indholdssøgning eller kerne-eDiscovery
+### <a name="decrypting-rms-protected-email-messages-and-encrypted-file-attachments-using-content-search-or-ediscovery-standard"></a>Dekrypterer RMS-beskyttede mails og krypterede vedhæftede filer ved hjælp af indholdssøgning eller eDiscovery (Standard)
 
 Alle rettighedsbeskyttede (RMS-beskyttede) mails, der er inkluderet i resultaterne af en indholdssøgning, dekrypteres, når du eksporterer dem. Derudover dekrypteres alle filer, der er krypteret med en [Microsoft-krypteringsteknologi](encryption.md) , og som er knyttet til en mail, der er inkluderet i søgeresultaterne, når de eksporteres. Denne dekrypteringsfunktion er som standard aktiveret for medlemmer af rollegruppen eDiscovery Manager. Det skyldes, at rollen RMS Decrypt management som standard er tildelt denne rollegruppe. Vær opmærksom på følgende ting, når du eksporterer krypterede mails og vedhæftede filer:
   

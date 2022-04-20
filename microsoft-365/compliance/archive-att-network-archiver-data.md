@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en forbindelse til at arkivere AT&T SMS/MMS-netværksdata
+title: Konfigurer en connector til arkivering af AT&T SMS/MMS Network-data
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,76 +11,76 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en TeleMessage-forbindelse til at importere og arkivere sms- og mms-data fra&T Mobile Network. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og opbevaringspolitikker til at administrere organisationens tredjepartsdata.
-ms.openlocfilehash: 2b1e03c4d434b08c3dce21ed42c24e4573513c24
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS- og MMS-data fra AT&T Mobile Network. Dette giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft Purview, så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
+ms.openlocfilehash: 8c038769ef7330788badfaa8a0a40a00c0730a13
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591331"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950715"
 ---
-# <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>Konfigurer en forbindelse til at arkivere AT&T SMS/MMS-data
+# <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>Konfigurer en connector til arkivering af AT&T SMS/MMS-data
 
-Brug en TeleMessage-forbindelse i Microsoft 365 Overholdelsescenter til at importere og arkivere sms- og mms-data fra at&T Mobile Network. Når du konfigurerer en forbindelse, opretter den forbindelse til din organisations AT&T-netværk én gang hver dag og importerer sms- og mms-data til postkasser i Microsoft 365.
+Brug en TeleMessage-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere SMS- og MMS-data fra AT&T Mobile Network. Når du har konfigureret en connector, opretter den forbindelse til organisationens AT&T Network én gang om dagen og importerer SMS- og MMS-data til postkasser i Microsoft Purview.
 
-Når sms- og mms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft 365-overholdelsesfunktioner som f.eks retslig tilbageholdelse, indholdssøgning og Microsoft 365-opbevaringspolitikker til AT&T-netværksdata. Du kan f.eks. søge efter AT&T-netværksdata ved hjælp af indholdssøgning eller tilknytte den postkasse, der indeholder AT&T-netværksforbindelsesdataene, med en assistent, der er tilknyttet en Advanced eDiscovery-sag. Hvis du bruger en AT&-netværksforbindelse til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når sms- og mms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft 365 Purview-funktioner som f.eks. litigation hold, content search og Microsoft 365 opbevaringspolitikker på AT&T Network-data. Du kan f.eks. søge i AT&T Network-data ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder AT&T Network-connectordata, til en tilsynsførende i et eDiscovery-tilfælde (Premium). Hvis du bruger en AT&T Network-connector til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-att-network-data"></a>Oversigt over arkivering af AT&T Network-data
 
-Følgende oversigt forklarer processen med at bruge en forbindelse til at arkivere AT&T-netværksdata i Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere AT&T Network-data i Microsoft 365.
 
-![ARBEJDSPROCESSEN ATT-netværksarkivering.](../media/ATTNetworkConnectorWorkflow.png)
+![ATT Netværksarkiveringsarbejdsproces.](../media/ATTNetworkConnectorWorkflow.png)
 
-1. Din organisation arbejder sammen med TeleMessage om at konfigurere en AT&T Network-forbindelse. Du kan finde flere [oplysninger&AT&T Network Archiver](https://www.telemessage.com/office365-activation-for-atnt-network-archiver/).
+1. Din organisation arbejder sammen med TeleMessage om at konfigurere en AT&T Network-connector. Du kan få flere oplysninger under [AT&T Network Archiver](https://www.telemessage.com/office365-activation-for-atnt-network-archiver/).
 
-2. I realtid kopieres sms- og mms-beskeder fra organisationens at&T-netværk til TeleMessage-webstedet.
+2. I realtid kopieres SMS- og MMS-meddelelser fra organisationens AT&T Network til telemeddelelseswebstedet.
 
-3. Den AT&T Network-forbindelse, som du opretter i Microsoft 365 Overholdelsescenter, opretter forbindelse til TeleMessage-webstedet hver dag og overfører sms- og mms-meddelelserne fra de foregående 24 timer til en sikker Azure Storage-placering i Microsoft-skyen. Forbindelsen konverterer også indholdet af sms- og mms-beskeder til et mailformat.
+3. Den AT&T Network-connector, som du opretter på overholdelsesportalen, opretter forbindelse til TeleMessage-webstedet hver dag og overfører SMS- og MMS-meddelelserne fra de forrige 24 timer til en sikker Azure Storage placering i Microsoft-cloudmiljøet. Connectoren konverterer også indholdet af sms- og mms-meddelelser til et mailformat.
 
-4. Forbindelsen importerer elementer fra mobilkommunikation til postkassen for bestemte brugere. Der oprettes en **ny mappe&at SMS/MMS-netværksarkivet** oprettes i brugerens postkasse, og elementerne importeres til den. Forbindelsen gør denne tilknytning ved hjælp af værdien af *egenskaben Brugers* mailadresse. Alle sms'er og mms-meddelelser indeholder denne egenskab, som er udfyldt med mailadressen på hver deltager i meddelelsen.
+4. Connectoren importerer mobilkommunikationselementerne til bestemte brugeres postkasse. Der oprettes en ny mappe med navnet **AT&T SMS/MMS Network Archiver** i brugerens postkasse, og elementerne importeres til den. Connectoren udfører denne tilknytning ved hjælp af værdien af egenskaben *For brugerens mailadresse* . Alle SMS- og MMS-meddelelser indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager i meddelelsen.
  
-   Ud over automatisk brugertilknytning med værdien af  brugerens mailadresseegenskab kan du også definere en brugerdefineret tilknytning ved at overføre en CSV-tilknytningsfil. Denne tilknytningsfil indeholder mobiltelefonnummeret og Microsoft 365 mailadressen for brugere i organisationen. Hvis du aktiverer både automatisk brugertilknytning og brugerdefineret tilknytning, ser forbindelsen først på den brugerdefinerede tilknytningsfil for hvert mailelement. Hvis den ikke finder en gyldig Microsoft 365-bruger, der svarer til et mobiltelefonnummer, bruger forbindelsen værdierne i mailadresseegenskaben for det element, den forsøger at importere. Hvis forbindelsen ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller i mailadresseegenskaben for mailelementet, importeres elementet ikke.
+   Ud over automatisk brugertilknytning ved hjælp af værdien for *brugerens mailadresseegenskab* kan du også definere en brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Denne tilknytningsfil indeholder mobiltelefonnummeret og tilsvarende Microsoft 365 mailadresse for brugere i din organisation. Hvis du aktiverer både automatisk brugertilknytning og brugerdefineret tilknytning, kigger connectoren først på den brugerdefinerede tilknytningsfil for hvert mailelement. Hvis der ikke findes en gyldig Microsoft 365 bruger, der svarer til et mobiltelefonnummer, bruger connectoren værdierne i egenskaben mailadresse for det element, der forsøges importeret. Hvis connectoren ikke finder en gyldig Microsoft 365 bruger i enten den brugerdefinerede tilknytningsfil eller i mailadresseegenskaben for mailelementet, importeres elementet ikke.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Nogle af de implementeringstrin, der kræves for at arkivere AT&T-netværksdata er eksterne i forhold til Microsoft 365 og skal udføres, før du kan oprette forbindelsen i overholdelsescenteret.
+Nogle af de implementeringstrin, der kræves for at arkivere AT&T Network-data, er eksterne i forhold til Microsoft 365 og skal fuldføres, før du kan oprette connectoren i Overholdelsescenter.
 
-- Bestil [mobilarkivtjenesten fra TeleMessage, og](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) få en gyldig administrationskonto for din organisation. Du skal logge på denne konto, når du opretter forbindelsen i overholdelsescenter.
+- Bestil [mobilarkiveringstjenesten fra TeleMessage,](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) og få en gyldig administrationskonto til din organisation. Du skal logge på denne konto, når du opretter connectoren i Overholdelsescenter.
 
-- Hent dine AT&T-konto- og faktureringskontaktoplysninger, så du kan udfylde onboardingformularerne til TeleMessage og bestille meddelelsesarkivtjenesten fra AT&T.
+- Få dine AT&T-konto- og faktureringskontaktoplysninger, så du kan udfylde onboardingformularerne for TeleMessage og bestille tjenesten til arkivering af meddelelser fra AT&T.
 
-- Registrer alle brugere, der kræver arkivering&T SMS/MMS Network, i TeleMessage-kontoen. Når du registrerer brugere, skal du sørge for at bruge den samme mailadresse, der bruges til deres Microsoft 365-konto.
+- Registrer alle brugere, der kræver AT&T SMS/MMS Network-arkivering på TeleMessage-kontoen. Når du registrerer brugere, skal du sørge for at bruge den samme mailadresse, der bruges til deres Microsoft 365 konto.
 
-- Dine medarbejdere skal have mobiltelefoner, der ejes af virksomheder og kan holdes ansvarlige for virksomheden, på&T-mobilnetværket. Arkivering af meddelelser Microsoft 365 ikke tilgængelig for medarbejderejede enheder eller "Medbring dine egne enheder (BYOD)-enheder.
+- Dine medarbejdere skal have virksomhedsejede og virksomhedsansvarende mobiltelefoner på AT&T-mobilnetværket. Arkivering af meddelelser i Microsoft 365 er ikke tilgængelig for medarbejderejede eller BYOD-enheder (Bring Your Own Devices).
 
-- Den bruger, der opretter en at&T-netværksforbindelse, skal have tildelt rollen som dataforbindelsesadministrator. Denne rolle er påkrævet for at tilføje forbindelser **på siden Dataforbindelser** i Microsoft 365 Overholdelsescenter. Denne rolle er som standard føjet til flere rollegrupper. Du kan finde en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescenter" i Tilladelser i [& Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternativt kan en administrator i organisationen oprette en brugerdefineret rollegruppe, tildele rollen Dataforbindelsesadministrator og derefter tilføje de relevante brugere som medlemmer. Du kan finde en vejledning i afsnittet "Opret en brugerdefineret rollegruppe" under [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter en AT&T Network-connector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataforbindelse er tilgængelig i GCC i den amerikanske Microsoft 365 Government-sky. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen, og som derfor ikke er omfattet af Microsoft 365-overholdelses- og databeskyttelsesforpligtelserne. Microsoft påser ikke, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer antyder, at disse tredjepartsprogrammer er FEDRAMP kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
-## <a name="create-a-att-network-connector"></a>Opret en AT&T-netværksforbindelse
+## <a name="create-a-att-network-connector"></a>Opret en AT&T Network-connector
 
-Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette en AT&T-netværksforbindelse i Microsoft 365 Overholdelsescenter. Forbindelsen anvender de oplysninger, du angiver, til at oprette forbindelse til TeleMessage-webstedet og overføre sms- og mms-meddelelser til de tilsvarende postkassefelter i Microsoft 365.
+Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette en AT&T Network-connector på overholdelsesportalen. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til telemeddelelseswebstedet og overføre SMS- og MMS-meddelelser til de tilsvarende brugerpostkasser i Microsoft 365.
 
-1. Gå til [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter **på DataforbindelserAT** \  **&T Network**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsAT** \  **&T Network**.
 
-2. På siden **Produktbeskrivelse&AT-netværk** skal du klikke på **Tilføj forbindelse**
+2. På produktbeskrivelsessiden **AT&T Network** skal du klikke på **Tilføj connector**
 
-3. Klik **på Acceptér på** siden **Servicebetingelser**.
+3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
-4. På siden **Login på TeleMessage under** Trin 3 skal du angive de nødvendige oplysninger i følgende felter og derefter klikke på **Næste**.
+4. På siden **Log på TeleMessage** under Trin 3 skal du angive de nødvendige oplysninger i følgende felter og derefter klikke på **Næste**.
 
    - **Brugernavn:** Dit TeleMessage-brugernavn.
 
    - **Adgangskode:** Din TeleMessage-adgangskode.
 
-5. Når forbindelsen er oprettet, kan du lukke pop op-vinduet og gå til den næste side.
+5. Når connectoren er oprettet, kan du lukke pop op-vinduet og gå til næste side.
 
-6. På siden **Brugertilknytning** skal du aktivere automatisk brugertilknytning. Hvis du vil aktivere brugerdefineret tilknytning, skal du overføre en CSV-fil, der indeholder brugertilknytningsoplysningerne, og derefter klikke på **Næste**.
+6. Aktivér automatisk brugertilknytning på siden **Brugertilknytning** . Hvis du vil aktivere brugerdefineret tilknytning, skal du uploade en CSV-fil, der indeholder brugertilknytningsoplysningerne, og derefter klikke på **Næste**.
 
-7. Gennemse dine indstillinger, og klik derefter på **Udfør** for at oprette forbindelsen.
+7. Gennemse dine indstillinger, og klik derefter på **Udfør** for at oprette connectoren.
 
-8. Gå til fanen **Forbindelser på** siden **Dataforbindelser i overholdelsescenteret** for at se status for importprocessen for den nye forbindelse.
+8. Gå til fanen **Forbindelser** på siden **Dataconnectors** i Overholdelsescenter for at se status for importprocessen for den nye connector.
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer bliver tilgængelig på et senere tidspunkt.
+- På nuværende tidspunkt understøtter vi ikke import af vedhæftede filer eller elementer, der er større end 10 MB. Understøttelse af større elementer vil være tilgængelig på et senere tidspunkt.

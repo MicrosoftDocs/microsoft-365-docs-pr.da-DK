@@ -1,5 +1,5 @@
 ---
-title: Undersøg beskeder i Microsoft 365 Defender
+title: Undersøg underretninger i Microsoft 365 Defender
 description: Undersøg beskeder, der vises på tværs af enheder, brugere og postkasser.
 keywords: hændelser, beskeder, undersøge, analysere, svar, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365
 ms.prod: m365-security
@@ -21,14 +21,14 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 20ae5bd77b9a4a962093db1e3d92d8f765a9a9a3
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: fd043ae1ebabcb8162ed96b973c9392bae5fd2a1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664694"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944431"
 ---
-# <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg beskeder i Microsoft 365 Defender
+# <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg underretninger i Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "64664694"
 - Microsoft 365 Defender
 
 >[!Note]
->I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft 365 overholdelse | Microsoft Docs](../../compliance/create-activity-alerts.md).
+>I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft Purview-| Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Beskeder er grundlaget for alle hændelser og angiver forekomsten af skadelige eller mistænkelige hændelser i dit miljø. Beskeder er typisk en del af et bredere angreb og giver fingerpeg om en hændelse.
 
@@ -81,7 +81,7 @@ Du skal have en af følgende roller for at få adgang til Microsoft Defender for
 
 - Office 365 rollegrupper for sikkerhed & overholdelse
 
-   - Overholdelsesadministrator
+   - Administrator for overholdelse af angivne standarder
 
    - Organisationsadministration 
 

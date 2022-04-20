@@ -1,5 +1,5 @@
 ---
-title: Søg i postkassens & OneDrive for Business efter en liste over brugere med indholdssøgning
+title: Brug indholdssøgning til en liste over brugere i postkassen & OneDrive for Business webstedet
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,65 +17,65 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
-description: Brug indholdssøgning og scriptet i denne artikel til at søge i postkasser og OneDrive for Business efter en gruppe af brugere.
+description: Brug Indholdssøgning og scriptet i denne artikel til at søge i postkasserne og OneDrive for Business websteder efter en gruppe af brugere.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2fdf749511cc859c0aec2ea947c3a53cb800cf8c
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 14c518c4450b01e387f84b4211da8d0eb346fe7a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "63587920"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949261"
 ---
-# <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Brug indholdssøgning til at søge i postkassen og OneDrive for Business efter en liste over brugere
+# <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Brug indholdssøgning til at søge i postkassen og OneDrive for Business websted efter en liste over brugere
 
-Security & Compliance Center PowerShell indeholder en række cmdlet'er, som gør det muligt at automatisere tidskrævende eDiscovery-relaterede opgaver. I øjeblikket tager det tid og forberedelse at oprette Microsoft 365 Overholdelsescenter indholdssøgning i programmet for at søge efter et stort antal indholdsplaceringer, hvor der er hjælp at finde. Før du opretter en søgning, skal du indsamle URL-adressen for hver OneDrive for Business-websted og derefter tilføje hver postkasse OneDrive for Business websted til søgningen. I fremtidige versioner vil det være nemmere at gøre i Microsoft 365 Overholdelsescenter. Indtil da kan du bruge scriptet i denne artikel til at automatisere denne proces. Dette script beder dig om navnet på organisationens domæne for Mit websted (f.eks. **contoso** i URL-adressen `https://contoso-my.sharepoint.com`), en liste over brugermailadresser, navnet på den nye indholdssøgning og den søgeforespørgsel, der skal bruges. Scriptet henter url-adressen til OneDrive for Business for hver bruger på listen, og derefter oprettes og startes en indholdssøgning, der søger i postkassen og OneDrive for Business-webstedet for hver bruger på listen ved hjælp af den søgeforespørgsel, du angiver.
+Security & Compliance Center PowerShell indeholder en række cmdlet'er, der giver dig mulighed for at automatisere tidskrævende eDiscovery-relaterede opgaver. I øjeblikket tager det tid og forberedelse at oprette en indholdssøgning på Microsoft Purview-overholdelsesportalen for at søge i et stort antal placeringer med tilsynsførende indhold. Før du opretter en søgning, skal du indsamle URL-adressen for hvert OneDrive for Business websted og derefter føje hver postkasse og OneDrive for Business websted til søgningen. I fremtidige versioner bliver det nemmere at gøre det på overholdelsesportalen. Indtil da kan du bruge scriptet i denne artikel til at automatisere denne proces. I dette script bliver du bedt om at angive navnet på din organisations MySite-domæne (f.eks. **contoso** i URL-adressen `https://contoso-my.sharepoint.com`), en liste over brugermailadresser, navnet på den nye indholdssøgning og den søgeforespørgsel, der skal bruges. Scriptet henter OneDrive for Business URL-adresse for hver bruger på listen og opretter og starter derefter en indholdssøgning, der søger i postkassen og OneDrive for Business websted for hver bruger på listen ved hjælp af den søgeforespørgsel, du angiver.
   
 ## <a name="permissions-and-script-information"></a>Tilladelser og scriptoplysninger
 
-- Du skal være medlem af eDiscovery Manager-rollegruppen i Microsoft 365 Overholdelsescenter og en global SharePoint Online-administrator for at køre scriptet i trin 3.
+- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en SharePoint Global Online-administrator for at køre scriptet i trin 3.
 
-- Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 til den samme mappe. Det gør det nemmere at køre scriptet.
+- Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 i den samme mappe. Det vil gøre det nemmere at køre scriptet.
 
-- Scriptet indeholder minimal fejlhåndtering. Dens primære formål er hurtigt og nemt at søge i postkassen OneDrive for Business websted for hver enkelt bruger.
+- Scriptet indeholder minimal fejlhåndtering. Dens primære formål er hurtigt og nemt at søge i postkassen og OneDrive for Business websted for hver bruger.
 
-- De eksempelscripts, der er angivet i dette emne, understøttes ikke i nogen Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptene leveres som de er, uden garantier af nogen art. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, men ikke begrænset til stiltiende garantier for salgbarhed eller egnethed til bestemte formål. Den samlede risiko ved anvendelse eller ydeevne af eksempelscripts og dokumentation forbliver hos dig. I intet tilfælde kan Microsoft, dets forfattere eller andre involverede i oprettelse, produktion eller levering af scripts holdes ansvarlige for erstatning (herunder, men ikke begrænset til, erstatning for tabt forretningsfortjenester, driftstab, tabt erhvervsinformation eller andre økonomiske tab) som følge af brug af eller manglende mulighed for at bruge eksempelscripts eller dokumentation,  også selvom Microsoft er blevet underrettet om risikoen for sådanne skader.
+- De eksempelscripts, der er angivet i dette emne, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
 ## <a name="step-1-install-the-sharepoint-online-management-shell"></a>Trin 1: Installér SharePoint Online Management Shell
 
-Det første trin er at installere SharePoint Online Management Shell. Du behøver ikke at bruge shell i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at få URL-adresserne til OneDrive for Business websteder.
+Det første trin er at installere SharePoint Online Management Shell. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
   
-Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
+Gå til [Konfigurer SharePoint Shell til onlineadministration Windows PowerShell miljø](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
   
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasser og OneDrive efter en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i trin 3).
+Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få vist en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
   
-Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser for alle brugere i organisationen og gemme den i en tekstfil med navnet `Users.txt`. 
+Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser for alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`. 
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > Users.txt
 ```
 
-Når du har kørt denne kommando, skal du sørge for at åbne filen og fjerne det sidehoved, der indeholder egenskabsnavnet. `PrimarySmtpAddress` Tekstfilen skal blot indeholde en liste over mailadresser og intet andet. Sørg for, at der ikke er nogen tomme rækker før eller efter listen over mailadresser.
+Når du har kørt denne kommando, skal du åbne filen og fjerne den header, der indeholder egenskabsnavnet . `PrimarySmtpAddress` Tekstfilen skal blot indeholde en liste over mailadresser og intet andet. Sørg for, at der ikke er tomme rækker før eller efter listen over mailadresser.
   
 ## <a name="step-3-run-the-script-to-create-and-start-the-search"></a>Trin 3: Kør scriptet for at oprette og starte søgningen
 
-Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for, at disse oplysninger er klar, før du kører scriptet.
+Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for at have disse oplysninger klar, før du kører scriptet.
   
-- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at få adgang til SharePoint Online for at få URL-adresserne til OneDrive for Business og til at oprette forbindelse til Security & Compliance Center PowerShell. 
+- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at få adgang til SharePoint Online for at hente OneDrive for Business URL-adresser og oprette forbindelse til Security & Compliance Center PowerShell. 
     
-- **Navnet på dit domæne for Mit websted** – Domænet Mit websted er det domæne, der indeholder alle OneDrive for Business i organisationen. Hvis URL-adressen for domænet for Mit websted f.eks. er , `contoso` skal du angive, når scriptet beder dig om navnet på dit domæne for Mit **https://contoso-my.sharepoint.com** websted. 
+- **Navnet på dit MySite-domæne** – MySite-domænet er det domæne, der indeholder alle de OneDrive for Business websteder i din organisation. Hvis URL-adressen for dit MySite-domæne f.eks. er **https://contoso-my.sharepoint.com**, skal du angive  `contoso` , når scriptet beder dig om navnet på dit MySite-domæne. 
     
-- **Stinavn for tekstfilen fra trin 2** – stinavnet på tekstfilen, du oprettede i trin 2. Hvis tekstfilen og scriptet er placeret i den samme mappe, skal du skrive navnet på tekstfilen. Ellers skal du angive hele stinavnet for tekstfilen. 
+- **Stinavn på tekstfilen fra Trin 2** – Stinavnet på den tekstfil, du oprettede i trin 2. Hvis tekstfilen og scriptet er placeret i den samme mappe, skal du angive navnet på tekstfilen. Ellers skal du angive det fulde stinavn for tekstfilen. 
     
-- **Navnet på indholdssøgningen** – navnet på den indholdssøgning, der oprettes af scriptet. 
+- **Navnet på indholdssøgningen** – Navnet på den indholdssøgning, der oprettes af scriptet. 
     
-- **Søgeforespørgsel** – Den søgeforespørgsel, der skal bruges sammen med Indholdssøgning, oprettes og køres. Du kan finde flere oplysninger om søgeforespørgsler [under Nøgleordsforespørgsler og søgebetingelser for eDiscovery](keyword-queries-and-search-conditions.md).
+- **Søgeforespørgsel** – Den søgeforespørgsel, der skal bruges sammen med indholdssøgningen, oprettes og køres. Du kan finde flere oplysninger om søgeforespørgsler under [Nøgleordsforespørgsler og søgebetingelser for eDiscovery](keyword-queries-and-search-conditions.md).
 
 
 **Sådan kører du scriptet:**
     
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnsuffiks af .ps1, f.eks. `SearchEXOOD4B.ps1`. Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `SearchEXOOD4B.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
     
   ```powershell
   # This PowerShell script will prompt you for the following information:
@@ -163,9 +163,9 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
   
   ```
 
-2. Åbn Windows PowerShell, og gå til den mappe, hvor du gemte scriptet og listen over brugere fra trin 2.
+2. Åbn Windows PowerShell, og gå til den mappe, hvor du gemte scriptet, og listen over brugere fra trin 2.
     
-3. Start scriptet. for eksempel:
+3. Start scriptet. f.eks.:
     
     ```powershell
     .\SearchEXOOD4B.ps1
@@ -173,14 +173,14 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
 
 4. Når du bliver bedt om dine legitimationsoplysninger, skal du angive din mailadresse og adgangskode og derefter klikke på **OK**. 
     
-5. Angiv følgende oplysninger, når du bliver bedt om det af scriptet. Skriv hver enkelt oplysning, og tryk derefter på **Enter**.
+5. Angiv følgende oplysninger, når scriptet beder om det. Skriv hver oplysning, og tryk derefter på **Enter**.
     
-    - Navnet på dit domæne for Mit websted. 
+    - Navnet på dit MySite-domæne. 
     
     - Stinavnet på den tekstfil, der indeholder listen over brugere.
     
-    - Et navn til Indholdssøgning.
+    - Et navn til indholdssøgningen.
     
-    - Søgeforespørgslen (lad denne være tom for at returnere alle elementer på indholdsplaceringerne).
+    - Søgeforespørgslen (lad dette være tomt for at returnere alle elementer på indholdsplaceringerne).
     
-    Scriptet henter URL-adresserne for hver OneDrive for Business og opretter og starter derefter søgningen. Du kan enten køre **Cmdlet'en Get-ComplianceSearch** i Security & Compliance Center PowerShell for at få vist søgestatistik og resultater, eller du kan gå til siden Indholdssøgning i Microsoft 365 Overholdelsescenter for at få vist oplysninger om søgningen.
+    Scriptet henter URL-adresserne for hvert OneDrive for Business websted og opretter og starter derefter søgningen. Du kan enten køre **Get-ComplianceSearch-cmdlet'en** i Security & Compliance Center PowerShell for at få vist søgestatistikken og -resultaterne, eller du kan gå til siden **Indholdssøgning** på overholdelsesportalen for at få vist oplysninger om søgningen.

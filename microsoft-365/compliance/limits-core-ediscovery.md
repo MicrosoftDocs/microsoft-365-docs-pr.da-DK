@@ -17,16 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives grænserne i eDiscovery-kernetilfælde i Microsoft 365.
-ms.openlocfilehash: 2d920fbe5973d07b7da656d6247038ab785bbe5c
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 67f15bb39ed75f40a8ef42747c0d4e2dfcb1297d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822644"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949603"
 ---
-# <a name="limits-in-core-ediscovery"></a>Grænser i kerne-eDiscovery
+# <a name="limits-in-ediscovery-standard"></a>Grænser i eDiscovery (Standard)
 
-I følgende tabel vises grænserne for eDiscovery-kernesager og ventepositioner, der er knyttet til en eDiscovery-kernesag. Du kan finde flere oplysninger om Core eDiscovery under [Oversigt over kerne-eDiscovery](./get-started-core-ediscovery.md).
+I følgende tabel vises grænserne for eDiscovery-kernesager og ventepositioner, der er knyttet til en eDiscovery-kernesag. Du kan finde flere oplysninger om Microsoft Purview eDiscovery (Standard) under [Oversigt over eDiscovery (Standard).](./get-started-core-ediscovery.md)
     
   | Beskrivelse af grænse | Grænse |
   |:-----|:-----|
@@ -44,4 +44,4 @@ I følgende tabel vises grænserne for eDiscovery-kernesager og ventepositioner,
    > - [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch)
    > - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
 
-Du kan finde flere oplysninger om grænser, der er relateret til søgninger og eksporter, der er knyttet til en grundlæggende eDiscovery-sag, under [Grænser for indholdssøgning og Kerne-eDiscovery](limits-for-content-search.md).
+Du kan finde flere oplysninger om grænser, der er relateret til søgninger og eksporter, der er knyttet til en eDiscovery-sag (Standard [), under Grænser for indholdssøgning og eDiscovery (Standard)](limits-for-content-search.md).

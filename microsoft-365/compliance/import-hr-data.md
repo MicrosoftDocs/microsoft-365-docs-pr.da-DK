@@ -15,21 +15,21 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Administratorer kan konfigurere en dataconnector til at importere medarbejderdata fra organisationens HR-system for at Microsoft 365. Dette giver dig mulighed for at bruge HR-data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere aktiviteter fra bestemte brugere, der kan udgøre en intern trussel for din organisation.
-ms.openlocfilehash: af7af189e97f4e56f8a8a96d2ff2ebfb5788a0c3
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: e1539661c987de8642639df777602fbcf05bdcc4
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762029"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944805"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>Konfigurer en connector til import af HR-data
 
-Du kan konfigurere en dataconnector i Microsoft 365 Overholdelsescenter til at importere HR-data, der er relateret til hændelser, f.eks. en brugers fratræden eller en ændring af en brugers jobniveau. HR-dataene kan derefter bruges af [insiderrisikostyringsløsningen](insider-risk-management.md) til at generere risikoindikatorer, der kan hjælpe dig med at identificere mulig ondsindet aktivitet eller datatyveri af brugere i din organisation.
+Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen for at importere HR-data (Human Resources), der er relateret til hændelser, f.eks. en brugers fratræden eller en ændring i en brugers jobniveau. HR-dataene kan derefter bruges af [insiderrisikostyringsløsningen](insider-risk-management.md) til at generere risikoindikatorer, der kan hjælpe dig med at identificere mulig ondsindet aktivitet eller datatyveri af brugere i din organisation.
 
-Konfiguration af en connector til HR-data, som politikker for styring af insiderrisiko kan bruge til at generere risikoindikatorer, består i at oprette en CSV-fil, der indeholder HR-dataene, oprette en app i Azure Active Directory, der bruges til godkendelse, og oprette en HR-dataconnector i Microsoft 365 Overholdelsescenter og derefter køre et script (efter en tidsplan), der overfører HR-dataene i CSV-filer til Microsoft-cloudmiljøet, så de er tilgængelige for løsningen til styring af insiderrisiko.
+Konfiguration af en connector til HR-data, som politikker for styring af insiderrisiko kan bruge til at generere risikoindikatorer, består i at oprette en CSV-fil, der indeholder HR-dataene, oprette en app i Azure Active Directory, der bruges til godkendelse, oprette en HR-dataconnector i overholdelsesportalen og derefter køre et script (efter en tidsplan), der overfører HR-dataene i CSV-filer til Microsoft-cloudmiljøet, så de er tilgængelige  til løsningen til styring af insiderrisiko.
 
 > [!IMPORTANT]
-> En ny version af HR-connectoren er nu tilgængelig til offentlig prøveversion. Hvis du vil oprette en ny HR-connector eller importere data til det [nye scenarie for medarbejderprofilen](#csv-file-for-employee-profile-data-preview) for scenariet for administration af insiderrisiko, skal du gå til siden **Dataconnectors** i Microsoft 365 Overholdelsescenter, vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connector > HR (prøveversion)** for at starte opsætningen. Eksisterende HR-connectors fungerer fortsat uden afbrydelser.
+> En ny version af HR-connectoren er nu tilgængelig til offentlig prøveversion. Hvis du vil oprette en ny HR-connector eller importere data til det [nye scenarie for medarbejderprofilen](#csv-file-for-employee-profile-data-preview) for scenariet for administration af insiderrisiko, skal du gå til siden **Dataconnectors på overholdelsesportalen** , vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connector > HR (prøveversion)** for at starte opsætningen. Eksisterende HR-connectors fungerer fortsat uden afbrydelser.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -37,11 +37,11 @@ Konfiguration af en connector til HR-data, som politikker for styring af insider
 
 - Bestem, hvordan du henter eller eksporterer dataene fra organisationens HR-system (og regelmæssigt), og føj dem til de CSV-filer, du opretter i trin 1. Det script, du kører i trin 4, uploader HR-dataene i CSV-filerne til Microsoft-cloudmiljøet.
 
-- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft 365 Overholdelsescenter. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 - Det eksempelscript, du kører i trin 4, uploader dine HR-data til Microsoft-cloudmiljøet, så de kan bruges af løsningen til styring af insiderrisiko. Dette eksempelscript understøttes ikke under noget Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-- Denne connector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsoft 365 forpligtelser til overholdelse af angivne standarder og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible. Du kan finde en trinvis vejledning til konfiguration af en HR-connector i et GCC miljø under [Konfigurer en connector til import af HR-data i US Government](import-hr-data-US-government.md).
+- Denne connector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible. Du kan finde en trinvis vejledning til konfiguration af en HR-connector i et GCC miljø under [Konfigurer en connector til import af HR-data i US Government](import-hr-data-US-government.md).
 
 ## <a name="step-1-prepare-a-csv-file-with-your-hr-data"></a>Trin 1: Forbered en CSV-fil med dine HR-data
 
@@ -167,7 +167,7 @@ I følgende tabel beskrives hver kolonne i CSV-filen for data til gennemsyn af y
 ### <a name="csv-file-for-employee-profile-data-preview"></a>CSV-fil til medarbejderprofildata (prøveversion)
 
 > [!NOTE]
-> Muligheden for at oprette en HR-connector til medarbejderprofildata findes i en offentlig prøveversion. Hvis du vil oprette en HR-connector, der understøtter medarbejderprofildata, skal du gå til siden **Dataconnectors** i Microsoft 365 Overholdelsescenter, vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connectorHR** >  **(prøveversion).** Følg trinnene for at oprette en connector i [Trin 3: Opret HR-connectoren](#step-3-create-the-hr-connector).
+> Muligheden for at oprette en HR-connector til medarbejderprofildata findes i en offentlig prøveversion. Hvis du vil oprette en HR-connector, der understøtter medarbejderprofildata, skal du gå til siden **Dataconnectors på overholdelsesportalen**, vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connectorHR** >  **(prøveversion).** Følg trinnene for at oprette en connector i [Trin 3: Opret HR-connectoren](#step-3-create-the-hr-connector).
 
 Her er et eksempel på en CSV-fil til dataene for medarbejderprofildataene.
 
@@ -256,11 +256,11 @@ Du kan finde en trinvis vejledning i, hvordan du opretter en app i Azure AD, und
 
 ## <a name="step-3-create-the-hr-connector"></a>Trin 3: Opret HR-connectoren
 
-Det næste trin er at oprette en HR-connector i Microsoft 365 Overholdelsescenter. Når du har kørt scriptet i trin 4, overfører den HR-connector, du opretter, HR-dataene fra CSV-filen til din Microsoft 365 organisation. Før du opretter en connector, skal du sørge for, at du har en liste over HR-scenarierne og de tilsvarende CSV-kolonnenavne for hver enkelt. Du skal knytte de data, der kræves til hvert scenarie, til de faktiske kolonnenavne i din CSV-fil, når du konfigurerer connectoren. Du kan også uploade en CSV-eksempelfil, når du konfigurerer connectoren, så hjælper guiden dig med at knytte navnet på kolonnerne til de påkrævede datatyper.
+Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du har kørt scriptet i trin 4, overfører den HR-connector, du opretter, HR-dataene fra CSV-filen til din Microsoft 365 organisation. Før du opretter en connector, skal du sørge for, at du har en liste over HR-scenarierne og de tilsvarende CSV-kolonnenavne for hver enkelt. Du skal knytte de data, der kræves til hvert scenarie, til de faktiske kolonnenavne i din CSV-fil, når du konfigurerer connectoren. Du kan også uploade en CSV-eksempelfil, når du konfigurerer connectoren, så hjælper guiden dig med at knytte navnet på kolonnerne til de påkrævede datatyper.
 
 Når du har fuldført dette trin, skal du sørge for at kopiere det job-id, der genereres, når du opretter connectoren. Du skal bruge job-id'et, når du kører scriptet.
 
-1. Gå til Microsoft 365 Overholdelsescenter, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Dataconnectors**</a>.
+1. Gå til overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Dataconnectors**</a>.
 
 2. Klik på **HR (prøveversion)** på siden **Dataconnectors**.
 
@@ -358,9 +358,9 @@ Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript
 
 ## <a name="step-5-monitor-the-hr-connector"></a>Trin 5: Overvåg HR-connectoren
 
-Når du har oprettet HR-connectoren og kørt scriptet for at uploade dine HR-data, kan du få vist connectoren og uploade status i Microsoft 365 Overholdelsescenter. Hvis du planlægger, at scriptet skal køre automatisk regelmæssigt, kan du også få vist den aktuelle status efter sidste gang scriptet kørte.
+Når du har oprettet HR-connectoren og kørt scriptet for at uploade dine HR-data, kan du få vist connectoren og uploade status på overholdelsesportalen. Hvis du planlægger, at scriptet skal køre automatisk regelmæssigt, kan du også få vist den aktuelle status efter sidste gang scriptet kørte.
 
-1. Gå til Microsoft 365 Overholdelsescenter, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Dataconnectors**</a>.
+1. Gå til overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Dataconnectors**</a>.
 
 2. Klik på fanen **Forbindelser,** og vælg derefter HR-connectoren for at få vist pop op-siden. Denne side indeholder egenskaberne og oplysningerne om connectoren.
 

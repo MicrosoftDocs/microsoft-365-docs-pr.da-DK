@@ -18,40 +18,40 @@ search.appverid:
 - MET150
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
-description: Tilføj og administrer aktivitetsbeskeder i Microsoft 365 Overholdelsescenter så Microsoft 365 sender dig mailbeskeder, når brugere udfører bestemte aktiviteter
-ms.openlocfilehash: 593c51a9d85ebb6f687a5e8573df32d4de515e6b
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+description: Tilføj og administrer aktivitetsbeskeder på Microsoft Purview-overholdelsesportalen, så Microsoft 365 sender dig mailmeddelelser, når brugerne udfører bestemte aktiviteter
+ms.openlocfilehash: 7826a09bff1dd17febc3f621b50ed32129e21a37
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63588695"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946479"
 ---
 # <a name="create-activity-alerts"></a>Opret aktivitetsbeskeder
 
-Du kan oprette en aktivitetsbesked, der sender dig en mail, når brugere udfører bestemte aktiviteter i Office 365. Aktivitetsbeskeder minder om at søge efter begivenheder i overvågningsloggen, bortset fra at du får tilsendt en mail, når der sker en hændelse for en aktivitet, du har oprettet en besked til.
+Du kan oprette en aktivitetsbesked, der sender dig en mailmeddelelse, når brugerne udfører bestemte aktiviteter i Office 365. Aktivitetsbeskeder svarer til at søge efter hændelser i overvågningsloggen, bortset fra at du får tilsendt en mail, når der sker en hændelse for en aktivitet, som du har oprettet en besked for.
 
- **Hvorfor bruge aktivitetsbeskeder i stedet for at søge i overvågningsloggen?** Der kan være visse typer aktivitet eller aktivitet, der udføres af bestemte brugere, som du virkelig gerne vil vide noget om. I stedet for at skulle huske at søge efter disse aktiviteter i overvågningsloggen, kan du bruge aktivitetsbeskeder til at få Microsoft 365 til at sende dig en mail, når brugerne udfører disse aktiviteter. Du kan f.eks. oprette en aktivitetsbesked for at give dig besked, når en bruger sletter filer i SharePoint, eller du kan oprette en besked for at give dig besked, når en bruger sletter meddelelser fra sin postkasse permanent. Mailmeddelelsen, der blev sendt til dig, indeholder oplysninger om, hvilken aktivitet der blev udført, og den bruger, der udførte den.
+ **Hvorfor bruge aktivitetsbeskeder i stedet for at søge i overvågningsloggen?** Der kan være visse typer aktiviteter eller aktiviteter, der udføres af bestemte brugere, som du virkelig vil vide noget om. I stedet for at skulle huske at søge i overvågningsloggen efter disse aktiviteter kan du bruge aktivitetsbeskeder til at få Microsoft 365 sende dig en mail, når brugerne udfører disse aktiviteter. Du kan f.eks. oprette en aktivitetsbesked for at give dig besked, når en bruger sletter filer i SharePoint, eller du kan oprette en besked for at give dig besked, når en bruger sletter meddelelser permanent fra sin postkasse. Den mailmeddelelse, der sendes til dig, indeholder oplysninger om, hvilken aktivitet der blev udført, og den bruger, der udførte den.
 
 > [!NOTE]
-> Aktivitetsbeskeder frarådes. Vi anbefaler, at du begynder at bruge påmindelsespolitikker i sikkerheds- og overholdelsescenteret i stedet for at oprette nye aktivitetsbeskeder. Beskedpolitikker giver yderligere funktionalitet, f.eks. muligheden for at oprette en beskedpolitik, der udløser en besked, når en bruger udfører en bestemt aktivitet, og visning af beskeder  på siden Vis beskeder i sikkerheds- og overholdelsescenteret. Du kan få mere at vide under [Beskedpolitikker](alert-policies.md).
+> Aktivitetsbeskeder frarådes. Vi anbefaler, at du begynder at bruge beskedpolitikker i Security and Compliance Center i stedet for at oprette nye aktivitetsbeskeder. Politikker for beskeder indeholder yderligere funktionalitet, f.eks. muligheden for at oprette en beskedpolitik, der udløser en besked, når en bruger udfører en angivet aktivitet, og visning af beskeder på siden **Vis beskeder** i Sikkerheds- og overholdelsescenter. Du kan få flere oplysninger under [Beskedpolitikker](alert-policies.md).
 
 ## <a name="confirm-roles-and-configure-audit-logging"></a>Bekræft roller, og konfigurer overvågningslogføring
 
-- Du skal have tildelt rollen Organisationskonfiguration i organisationens Microsoft 365 Overholdelsescenter at administrere aktivitetsbeskeder. Som standard er denne rolle tildelt rollegrupperne Overholdelsesadministrator og Organisationsadministration. Du kan finde flere oplysninger om at føje medlemmer til rollegrupper [i Giv brugere adgang til Microsoft 365 Overholdelsescenter](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+- Du skal være tildelt rollen Organisationskonfiguration på Microsoft Purview-overholdelsesportalen for at administrere aktivitetsbeskeder. Denne rolle tildeles som standard til rollegrupperne Overholdelsesadministrator og Organisationsadministration. Du kan få flere oplysninger om, hvordan du føjer medlemmer til rollegrupper, under [Giv brugere adgang til Microsoft Purview-overholdelsesportalen](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 
-- Du (eller en anden administrator) skal først aktivere overvågningslogføring for organisationen, før du kan begynde at bruge aktivitetsbeskeder. For at gøre dette skal du blot **klikke på Start optagelse af bruger-** og administratoraktivitet **på siden Aktivitetsbeskeder** . Hvis du ikke kan se dette link, er overvågning allerede aktiveret for organisationen. Du kan også aktivere overvågning på siden Søgning **i overvågningslogfil** i Microsoft 365 Overholdelsescenter (gå til **Overvågning**). Du behøver kun at gøre dette én gang for din organisation.
+- Du (eller en anden administrator) skal først aktivere overvågningslogføring for din organisation, før du kan begynde at bruge aktivitetsbeskeder. Det gør du ved at klikke på **Start optagelse af bruger- og administratoraktivitet** på siden **Aktivitetsbeskeder** . Hvis du ikke kan se dette link, er overvågning allerede slået til for din organisation. Du kan også aktivere overvågning på **søgesiden Overvågningslog** på overholdelsesportalen (gå til **Overvågning**). Det skal du kun gøre én gang for din organisation.
 
-- Du kan oprette beskeder for de samme aktiviteter, som du kan søge efter i overvågningsloggen. Se afsnittet [Flere oplysninger](#more-information) for at få en liste over almindelige scenarier (og den specifikke aktivitet, du skal overvåge), som du kan oprette beskeder for.
+- Du kan oprette beskeder for de samme aktiviteter, som du kan søge efter i overvågningsloggen. Se afsnittet [Flere oplysninger](#more-information) for at få en liste over almindelige scenarier (og den specifikke aktivitet, der skal overvåges), som du kan oprette beskeder for.
 
-- Du kan bruge siden **Aktivitetsbeskeder** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a> til kun at oprette beskeder for aktivitet, der er udført af brugere, der er angivet i organisationens adressekartotek. Du kan ikke bruge denne side til at oprette beskeder om aktiviteter, der udføres af eksterne brugere, som ikke er angivet i adressekartoteket.
+- Du kan bruge siden **Aktivitetsbeskeder** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> til kun at oprette beskeder for aktiviteter, der udføres af brugere, der er angivet i organisationens adressekartotek. Du kan ikke bruge denne side til at oprette beskeder for aktiviteter, der udføres af eksterne brugere, som ikke er angivet i adressekartoteket.
 
 ## <a name="create-an-activity-alert"></a>Opret en aktivitetsbesked
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a>.
 
 2. Log på med din arbejds- eller skolekonto.
 
-3. Klik på **Tilføj ikon på siden Aktivitetsbeskeder**![.](../media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **Ny**.
+3. Klik på Tilføj ikon på ![siden **Aktivitetsbeskeder**.](../media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **Ny**.
 
    Pop op-siden til oprettelse af en aktivitetsbesked vises.
 
@@ -60,74 +60,74 @@ Du kan oprette en aktivitetsbesked, der sender dig en mail, når brugere udføre
 
 4. Udfyld følgende felter for at oprette en aktivitetsbesked:
 
-    1. **Navn** – Skriv et navn til beskeden. Navnene på beskeder skal være entydige i din organisation.
+    1. **Name** – Skriv et navn til beskeden. Beskednavne skal være entydige i din organisation.
 
-    1. **Beskrivelse** (Valgfrit) – Beskriv beskeden, f.eks. de aktiviteter og brugere, der registreres, og de brugere, som mailbeskeder sendes til. Beskrivelser giver en hurtig og nem måde at beskrive formålet med beskeden til andre administratorer.
+    1. **Beskrivelse** (valgfrit) – Beskriv beskeden, f.eks. de aktiviteter og brugere, der spores, og de brugere, som mailmeddelelser sendes til. Beskrivelser giver en hurtig og nem måde at beskrive formålet med beskeden til andre administratorer på.
 
-    1. **Beskedtype** – Sørg for, at **indstillingen** Brugerdefineret er valgt.
+    1. **Beskedtype** – Kontrollér, at indstillingen **Brugerdefineret** er valgt.
 
-    1. **Send denne besked, når** – Klik **på Send denne besked, når** og konfigurer derefter disse to felter:
+    1. **Send denne besked, når** – Klik på **Send denne besked, når** og konfigurer derefter disse to felter:
 
-       - **Aktiviteter** – Klik på rullelisten for at få vist de aktiviteter, som du kan oprette en besked for. Dette er den samme aktivitetsliste, der vises, når du søger i overvågningsloggen. Du kan vælge en eller flere bestemte aktiviteter, eller du kan klikke på aktivitetens gruppenavn for at markere alle aktiviteter i gruppen. Du kan finde en beskrivelse af disse aktiviteter i afsnittet "Overvågede aktiviteter" [i Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md#audited-activities). Når en bruger udfører nogen af de aktiviteter, du har føjet til beskeden, sendes der en mail.
+       - **Aktiviteter** – Klik på rullelisten for at få vist de aktiviteter, du kan oprette en besked for. Dette er den samme aktivitetsliste, der vises, når du søger i overvågningsloggen. Du kan vælge en eller flere specifikke aktiviteter, eller du kan klikke på navnet på aktivitetsgruppen for at vælge alle aktiviteter i gruppen. Du kan finde en beskrivelse af disse aktiviteter i afsnittet "Overvågede aktiviteter" i [Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md#audited-activities). Når en bruger udfører en af de aktiviteter, du har føjet til beskeden, sendes der en mail.
 
-       - **Brugere** – Klik på dette felt, og vælg derefter en eller flere brugere. Hvis brugerne i dette felt udfører de aktiviteter, du har føjet til **feltet Aktiviteter** , sendes der en besked. Lad feltet **Brugere være** tomt for at sende en besked, når en bruger i organisationen udfører de aktiviteter, der er angivet af beskeden.
+       - **Brugere** – Klik på dette felt, og vælg derefter en eller flere brugere. Hvis brugerne i dette felt udfører de aktiviteter, du har føjet til feltet **Aktiviteter** , sendes der en besked. Lad feltet **Brugere** være tomt for at sende en besked, når en bruger i organisationen udfører de aktiviteter, der er angivet i beskeden.
 
-    1. **Send** denne besked til – Klik på **Send** denne besked, og klik derefter i  feltet Modtagere, og skriv et navn for at tilføje brugere, som skal modtage en besked via mail, når en bruger  (angivet i feltet Brugere) udfører en aktivitet (angivet i **feltet** Aktiviteter). Bemærk, at du som standard er føjet til listen over modtagere. Du kan fjerne dit navn fra denne liste.
+    1. **Send denne besked til** – Klik på **Send denne besked**, klik derefter i feltet **Modtagere** , og skriv et navn for at tilføje brugere, der modtager en mailmeddelelse, når en bruger (angivet i feltet **Brugere** ) udfører en aktivitet (angivet i feltet **Aktiviteter** ). Bemærk, at du som standard er føjet til listen over modtagere. Du kan fjerne dit navn fra denne liste.
 
-5. Klik **på Gem** for at oprette beskeden.
+5. Klik på **Gem** for at oprette beskeden.
 
     Den nye besked vises på listen på siden **Aktivitetsbeskeder** .
 
     ![Der vises en liste over beskeder på siden Aktivitetsbeskeder.](../media/02b774f2-1719-41de-bbc9-5e5b7576f335.png)
 
-    Beskedens status er indstillet til **Til**. Bemærk, at de modtagere, der modtager en mail, når der sendes en besked, også vises.
+    Status for beskeden er angivet til **Til**. Bemærk, at de modtagere, der modtager en mailmeddelelse, når der sendes en besked, også vises.
 
 ## <a name="turn-off-an-activity-alert"></a>Slå en aktivitetsbesked fra
 
-Du kan deaktivere en aktivitetsbesked, så der ikke sendes en mailmeddelelse. Når du har deaktiveret aktivitetsbeskeden, vises den stadig på listen over aktivitetsbeskeder for organisationen, og du kan stadig få vist dens egenskaber.
+Du kan slå en aktivitetsbesked fra, så der ikke sendes en mailmeddelelse. Når du har slået aktivitetsbeskeden fra, vises den stadig på listen over aktivitetsbeskeder for din organisation, og du kan stadig få vist dens egenskaber.
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a>.
 
 2. Log på med din arbejds- eller skolekonto.
 
-3. Klik på den besked, du vil deaktivere, på listen over aktivitetsbeskeder for din organisation.
+3. Klik på den besked, du vil slå fra, på listen over aktivitetsbeskeder for din organisation.
 
-4. På siden **Rediger besked** skal du klikke på **til** /fra-knappen Til for at ændre status **til Fra** og derefter klikke på **Gem**.
+4. På siden **Rediger besked** skal du klikke på til/fra-knappen **Til** for at ændre status til **Fra** og derefter klikke på **Gem**.
 
-    Status for beskeden på siderne **Aktivitetsbeskeder** er indstillet til **Fra**.
+    Status for beskeden på siderne **aktivitetsbeskeder** er angivet til **Fra**.
 
-Hvis du vil slå en aktivitetsbesked til igen, skal du blot gentage  disse trin og klikke på til/fra-knappen Fra for at ændre status til **Til**.
+Hvis du vil slå en aktivitetsbesked til igen, skal du blot gentage disse trin og klikke på til/ **fra-knappen** for at ændre status til **Til**.
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Her er et eksempel på mailmeddelelsen, der sendes til de brugere, der er angivet i feltet Sendt denne besked til (og angivet under Modtagere på siden **Aktivitetsbeskeder**) i Microsoft 365 Overholdelsescenter.
+- Her er et eksempel på den mailmeddelelse, der sendes til de brugere, der er angivet i feltet Sendt denne besked til (og angivet under **Modtagere** på siden **Aktivitetsbeskeder** ) på overholdelsesportalen.
 
-    ![Eksempel på en mail, der er sendt for en aktivitetsbesked.](../media/a5f91611-fae6-4fe9-82f5-58521a2e2541.png)
+    ![Eksempel på en mailmeddelelse, der er sendt for en aktivitetsbesked.](../media/a5f91611-fae6-4fe9-82f5-58521a2e2541.png)
 
-- Her er nogle almindelige dokument- og mailaktiviteter, som du kan oprette aktivitetsbeskeder for. Tabellerne beskriver aktiviteten, navnet på den aktivitet, der skal oprettes en besked for, og navnet på den aktivitetsgruppe, som aktiviteten er angivet under på rullelisten Aktiviteter. Hvis du vil se en komplet liste over de aktiviteter, du kan oprette aktivitetsbeskeder for, skal du se afsnittet "Overvågede aktiviteter" [i Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md#audited-activities).
+- Her er nogle almindelige dokument- og mailaktiviteter, som du kan oprette aktivitetsbeskeder for. I tabellerne beskrives aktiviteten, navnet på den aktivitet, der skal oprettes en besked for, og navnet på den aktivitetsgruppe, som aktiviteten er angivet under på rullelisten **Aktiviteter** . Hvis du vil se en komplet liste over de aktiviteter, du kan oprette aktivitetsbeskeder for, skal du se afsnittet "Overvågede aktiviteter" i [Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md#audited-activities).
 
     > [!TIP]
-    > Det kan være en ide at oprette en aktivitetsbesked for kun én aktivitet, der udføres af en hvilken som helst bruger. Eller det kan være en ide at oprette en aktivitetsbesked, der registrerer flere aktiviteter, der udføres af en eller flere brugere.
+    > Det kan være en god idé at oprette en aktivitetsbesked for kun én aktivitet, der udføres af en hvilken som helst bruger. Det kan også være en god idé at oprette en aktivitetsbesked, der sporer flere aktiviteter udført af en eller flere brugere.
 
     I følgende tabel vises nogle almindelige dokumentrelaterede aktiviteter i SharePoint eller OneDrive for Business.
 
-    | Når en bruger gør dette... | Opret en besked for denne aktivitet | Gruppen Aktivitet |
+    | Når en bruger gør dette... | Opret en besked for denne aktivitet | Aktivitetsgruppe |
     |:-----|:-----|:-----|
-    |Få en visning af et dokument på et websted.  |Åbnet fil  |Fil- og mappeaktiviteter  |
+    |Viser et dokument på et websted.  |Åbnet fil  |Fil- og mappeaktiviteter  |
     |Redigerer eller ændrer et dokument.  |Ændret fil  |Fil- og mappeaktiviteter  |
-    |Deler et dokument med en bruger uden for organisationen.  |Del fil, mappe eller websted  <br/> Og  <br/> Invitation til deling oprettet  <br/> Få mere at vide under [Brug overvågning af deling i overvågningsloggen](use-sharing-auditing.md).  |Aktiviteter for anmodning om deling og adgang  |
-    |Uploader eller downloader et dokument.  |Uploadet fil  <br/> Og/eller  <br/> Downloadet fil  |Fil- og mappeaktiviteter  |
-    |Ændrer adgangstilladelserne til et websted.  |Webstedstilladelser ændret  |Aktiviteter for webstedsadministration  |
+    |Deler et dokument med en bruger uden for din organisation.  |Del fil, mappe eller websted  <br/> Og  <br/> Invitation til deling er oprettet  <br/> Du kan få flere oplysninger under [Brug overvågning af deling i overvågningsloggen](use-sharing-auditing.md).  |Delings- og adgangsanmodningsaktiviteter  |
+    |Overfører eller downloader et dokument.  |Overført fil  <br/> Eller  <br/> Downloadet fil  |Fil- og mappeaktiviteter  |
+    |Ændrer adgangstilladelserne til et websted.  |Ændrede webstedstilladelser  |Webstedsadministrationsaktiviteter  |
 
     I følgende tabel vises nogle almindelige mailrelaterede aktiviteter i Exchange Online.
 
-    | Når en bruger gør dette... | Opret en besked for denne aktivitet | Gruppen Aktivitet |
+    | Når en bruger gør dette... | Opret en besked for denne aktivitet | Aktivitetsgruppe |
     |:-----|:-----|:-----|
-    |Sletter (fjerner) en mail fra postkassen permanent.  |Meddelelser fjernet fra postkasse  | Exchange postkasseaktiviteter  |
-    |Sender en mail fra en delt postkasse.  |Meddelelse sendt ved hjælp af Send som-tilladelser  <br/> Og  <br/> Meddelelse sendt ved hjælp af Send på vegne af-tilladelser  | Exchange postkasseaktiviteter  |
+    |Sletter (fjerner) permanent en mail fra deres postkasse.  |Fjernede meddelelser fra postkasse  | Exchange postkasseaktiviteter  |
+    |Sender en mail fra en delt postkasse.  |Sendt meddelelse med tilladelserne Send som  <br/> Og  <br/> Sendt meddelelse med tilladelsen Send på vegne  | Exchange postkasseaktiviteter  |
 
-- Du kan også bruge Cmdlet'er **New-ActivityAlert** og **Set-ActivityAlert** i Security & Compliance Center PowerShell til at oprette og redigere aktivitetsbeskeder. Husk følgende, hvis du bruger disse cmdlet'er til at oprette eller redigere aktivitetsbeskeder:
+- Du kan også bruge Cmdlet'erne **New-ActivityAlert** og **Set-ActivityAlert** i Security & Compliance Center PowerShell til at oprette og redigere aktivitetsbeskeder. Vær opmærksom på følgende ting, hvis du bruger disse cmdlet'er til at oprette eller redigere aktivitetsbeskeder:
 
-  - Hvis du bruger en cmdlet til at føje en aktivitet til beskeden, der ikke er angivet på rullelisten Aktiviteter, vises der en meddelelse på egenskabssiden for beskeden, hvor der står "Denne besked har brugerdefinerede handlinger, der ikke vises i vælgeren".
+  - Hvis du bruger en cmdlet til at føje en aktivitet til den besked, der ikke er angivet på rullelisten **Aktiviteter** , vises der en meddelelse på egenskabssiden for beskeden med teksten "Denne besked indeholder brugerdefinerede handlinger, der ikke er angivet i vælgeren".
 
-  - En god grund til at bruge cmdlet'erne til at oprette eller redigere en aktivitetsbesked er at sende mailbeskeder til en person uden for organisationen. Denne eksterne bruger vises på listen over modtagere af beskeden. Men hvis du fjerner denne eksterne bruger fra beskeden, kan den pågældende bruger ikke føjes til beskeden igen ved hjælp af **siden Rediger** besked. Du er nødt til at tilføje den eksterne bruger igen ved hjælp af cmdlet'en **Set-ActivityAlert** eller bruge **New-ActivityAlert-cmdlet'en** til at tilføje den samme (eller en anden) eksterne bruger til en ny besked.
+  - En god grund til at bruge cmdlet'erne til at oprette eller redigere en aktivitetsbesked er at sende mailmeddelelser til en person uden for din organisation. Denne eksterne bruger vises på listen over modtagere af beskeden. Men hvis du fjerner denne eksterne bruger fra beskeden, kan den pågældende bruger ikke føjes til beskeden igen ved hjælp af siden **Rediger besked** . Du skal tilføje den eksterne bruger igen ved hjælp af **Set-ActivityAlert-cmdlet'en** eller bruge Cmdlet'en **New-ActivityAlert** til at føje den samme (eller en anden) ekstern bruger til en ny besked.

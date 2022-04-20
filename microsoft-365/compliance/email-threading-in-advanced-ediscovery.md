@@ -1,5 +1,5 @@
 ---
-title: Mailtrådning i Advanced eDiscovery
+title: Mailtrådning i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,33 +14,33 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Når du udfører en Advanced eDiscovery, fortolker mailtråde en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
+description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtråde en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 788858d6acaccbe07f3190b5adaaa05fe95c33a5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 51cc9ce09f1f2c9c95c3ab5a7f2175516c9ed199
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588929"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948699"
 ---
-# <a name="email-threading-in-advanced-ediscovery"></a>Mailtrådning i Advanced eDiscovery
+# <a name="email-threading-in-ediscovery-premium"></a>Mailtrådning i eDiscovery (Premium)
 
-Overvej en mailsamtale, der har stået på i et stykke tid. I de fleste tilfælde vil den sidste meddelelse i mailtråden indeholde indholdet af alle de foregående meddelelser. Derfor giver gennemgangen af den sidste meddelelse en komplet kontekst til den samtale, der skete i tråden. Mailtrådning identificerer sådanne meddelelser, så korrekturlæsere kan gennemse en brøkdel af de indsamlede dokumenter, uden at konteksten går tabt.
+Overvej en mailsamtale, der har stået på i et stykke tid. I de fleste tilfælde indeholder den sidste meddelelse i mailtråden indholdet af alle de foregående meddelelser. Derfor vil gennemgang af den sidste meddelelse give en komplet kontekst for den samtale, der skete i tråden. Mailtrådning identificerer sådanne meddelelser, så korrekturlæsere kan gennemse en brøkdel af indsamlede dokumenter uden at miste nogen kontekst.
 
 ## <a name="what-does-email-threading-do"></a>Hvad gør mailtrådning?
 
-Mailtrådning fortolker hver mailtråd og dekonstrukturerer den til individuelle meddelelser. Hver mailtråd er en kæde af individuelle meddelelser. Advanced eDiscovery analyserer alle mails i korrektursættet for at afgøre, om en mail har entydigt indhold, eller om kæden (overordnede meddelelser) er indeholdt i den endelige meddelelse i mailtråden. Mails er opdelt i fire inkluderende værdier:
+Mailtråde fortolker hver mailtråd og dekonstruerer den til individuelle meddelelser. Hver mailtråd er en kæde af individuelle meddelelser. Microsoft Purview eDiscovery (Premium) analyserer alle mail-messaer i korrektursættet for at afgøre, om en mail har entydigt indhold, eller om kæden (overordnede meddelelser) er helt indeholdt i den endelige meddelelse i mailtråden. Mailmeddelelser er opdelt i fire inklusive værdier:
 
-- **Inkluderende**: *En inkluderende* mail er den endelige mail i en mailtråd og indeholder alt det tidligere indhold fra den pågældende mailtråd.
+- **Inklusive**: En *inkluderende* mail er den endelige mail i en mailtråd og indeholder alt det tidligere indhold i den pågældende mailtråd.
 
-- **Inklusive minus**: En mail angives som Inkluderende *minus* , hvis der er knyttet en eller flere vedhæftede filer til den specifikke meddelelse i mailtråden. En korrekturlæser kan bruge værdien Inklusive minus til at afgøre, hvilken bestemt mail i tråden der har tilknyttede vedhæftede filer. 
+- **Inklusive minus**: En mail er angivet som *Inklusive minus* , hvis der er knyttet en eller flere vedhæftede filer til den specifikke meddelelse i mailtråden. En korrekturlæser kan bruge minusværdien Inclusive til at bestemme, hvilken bestemt mail i tråden der har knyttet vedhæftede filer. 
 
-- **Inkluderende kopi**: En mail betragtes som en *inkluderende kopi,* hvis det er en nøjagtig kopi af en inkluderende eller inkluderende minusmeddelelse. 
+- **Inklusive kopi**: En mail betragtes som en *inklusive kopi* , hvis det er en nøjagtig kopi af en inclusive- eller inclusive-minusmeddelelse. 
 
-- **Ingen**: *Værdien Ingen angiver* , at indholdet af meddelelsen er indeholdt i mindst én anden mail, der er markeret som Inkluderende eller Inkluderende minus.
+- **Ingen**: Værdien *Ingen* angiver, at indholdet af meddelelsen er helt indeholdt i mindst én anden mail, der er markeret som Inklusive eller Inklusive minus.
 
-## <a name="how-is-it-different-from-conversations-in-outlook"></a>Hvordan er det forskelligt fra samtaler i Outlook?
+## <a name="how-is-it-different-from-conversations-in-outlook"></a>Hvordan adskiller det sig fra samtaler i Outlook?
 
-Dette lyder hurtigt som samtalegruppering i Outlook. Der findes dog nogle vigtige forskelle. Overvej en mailsamtale, der er blevet forkedt ind i to samtaler; Eksempelvis har nogen svaret på en mail, der ikke er den seneste i samtalen, så de to sidste mails i samtalen begge har entydigt indhold.
+Det lyder hurtigt som samtalegrupperinger i Outlook. Der er dog nogle vigtige forskelle. Overvej en mailsamtale, der blev opdelt i to samtaler. En person svarede f.eks. på en mail, der ikke er den nyeste i samtalen, så de sidste to mails i samtalen begge har unikt indhold.
 
-Outlook stadig gruppere mails i en enkelt samtale. Hvis du kun læste den sidste mail, ville det betyde, at der manglede konteksten for den næstsidlige mail, som også indeholder entydigt indhold. Da mailtrådning fortolker hver mail til individuelle komponenter og sammenligner dem, markerer mailtrådning begge de sidste to mails som inkluderende og sørger for, at du ikke går glip af kontekst, så længe du læser alle mails, der er markeret som inkluderende.
+Outlook vil stadig gruppere mails i en enkelt samtale. Hvis du kun læser den sidste mail, vil det betyde, at konteksten for den anden til sidste mail, som også indeholder entydigt indhold, mangler. Da mailtrådning fortolker hver mail i individuelle komponenter og sammenligner dem, markerer mailtrådning begge de sidste to mails som inklusive, hvilket sikrer, at du ikke går glip af nogen kontekst, så længe du læser alle de mails, der er markeret som inklusive.

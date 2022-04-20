@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Bestem reglerne for beskyttelse af personlige oplysninger, de relevante scenarier, din parathed og de følsomme oplysningstyper, der findes i dit Microsoft 365 miljø.
-ms.openlocfilehash: ea151577f31ad8ea9454addf171c1079f334d377
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 967c64dee2d99f41b3c2a1b6a193730dcd75811a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822688"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947511"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>Vurder risici for beskyttelse af personlige oplysninger, og identificer følsomme elementer med Microsoft 365
 
@@ -192,11 +192,11 @@ Dette trin omfatter identifikation af bestemte følsomme informationstyper, der 
 
 Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, og det kan tidligere omfatte en kombination af at bruge Søgning efter overholdelse, eDiscovery, Advanced eDiscovery, DLP og overvågning.
 
-Med den nye **dataklassificeringsløsning** i Microsoft Compliance Administration er dette blevet meget nemmere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md) , som fungerer sammen med enten indbyggede eller brugerdefinerede typer af følsomme oplysninger, herunder dem, der er relateret til personlige data.
+Med den nye **dataklassificeringsløsning** på Microsoft Purview-overholdelsesportalen er dette blevet meget nemmere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md) , som fungerer sammen med enten indbyggede eller brugerdefinerede typer følsomme oplysninger, herunder dem, der er relateret til personlige data.
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-Microsoft Compliance Administration leveres forudinstalleret med mere end 100 typer følsomme oplysninger, hvoraf de fleste er relateret til at identificere og finde personlige data. Disse indbyggede typer følsomme oplysninger kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre m.m., baseret på mønstre, der er defineret af et regulært udtryk (regex) eller en funktion. Du kan få mere at vide under [Hvad de følsomme oplysningstyper søger efter](../compliance/sensitive-information-type-entity-definitions.md).
+Microsoft Purview-overholdelsesportalen er forudinstalleret med mere end 100 følsomme oplysningstyper, hvoraf de fleste er relateret til at identificere og finde personlige data. Disse indbyggede typer følsomme oplysninger kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre m.m., baseret på mønstre, der er defineret af et regulært udtryk (regex) eller en funktion. Du kan få mere at vide under [Hvad de følsomme oplysningstyper søger efter](../compliance/sensitive-information-type-entity-definitions.md).
 
 Hvis du har brug for at identificere og beskytte en organisationsspecifik eller regional type følsomme elementer, f.eks. et brugerdefineret format for medarbejder-id'er eller andre personlige oplysninger, der ikke allerede er omfattet af en indbygget type følsomme oplysninger, kan du oprette en brugerdefineret type følsomme oplysninger ved hjælp af disse metoder:
 
@@ -216,7 +216,7 @@ Se disse artikler for at få flere oplysninger:
 
 ### <a name="content-explorer"></a>Indholdsoversigt
 
-Et vigtigt værktøj, der til bestemmelse af forekomsten af følsomme elementer i dit miljø er den nye [Indholdsoversigt](../compliance/data-classification-content-explorer.md) i Microsoft 365 Administration af overholdelse. Det er et automatiseret værktøj til indledende og løbende scanning af hele dit Microsoft 365 abonnement for forekomsten af følsomme informationstyper og visning af resultaterne.
+Et vigtigt værktøj, der til bestemmelse af forekomsten af følsomme elementer i dit miljø er den nye [Indholdsoversigt](../compliance/data-classification-content-explorer.md) i Microsoft Purview Administration. Det er et automatiseret værktøj til indledende og løbende scanning af hele dit Microsoft 365 abonnement for forekomsten af følsomme informationstyper og visning af resultaterne.
 
 Med det nye værktøj i Indholdsoversigt kan du hurtigt identificere placeringen af følsomme elementer i dit miljø ved hjælp af enten indbyggede typer følsomme oplysninger eller brugerdefinerede. Dette kan omfatte oprettelse af en proces og ansvar for regelmæssigt at undersøge tilstedeværelsen og placeringen af følsomme elementer.
 

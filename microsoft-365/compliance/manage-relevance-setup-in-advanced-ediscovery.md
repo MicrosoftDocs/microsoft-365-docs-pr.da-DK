@@ -1,5 +1,5 @@
 ---
-title: Administrer konfigurationen af relevans i Advanced eDiscovery
+title: Administrer opsætning af relevans i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,59 +15,59 @@ search.appverid:
 - MET150
 ms.assetid: fd6be6d3-2e8d-449d-9851-03ab7546e6aa
 ROBOTS: NOINDEX, NOFOLLOW
-description: Læs anbefalingerne til konfiguration af relevanskurser i Advanced eDiscovery at score filer ud fra deres relevans og generere analytiske resultater.
-ms.openlocfilehash: bed912c0631511e9d3d4839e5d6925de79554163
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Læs anbefalingerne til konfiguration af relevanstræning i eDiscovery (Premium) for at score filer efter relevans og generere analytiske resultater.
+ms.openlocfilehash: 66afbb3b8e7d8c2a4e266aa7fb63dc8434f9c8a6
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587715"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946017"
 ---
-# <a name="manage-relevance-setup-in-advanced-ediscovery-classic"></a>Administrer konfigurationen af relevans i Advanced eDiscovery (klassisk)
+# <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>Administrer opsætning af relevans i eDiscovery (Premium) (klassisk)
 
 > [!NOTE]
-> Advanced eDiscovery kræver en Office 365 E3 med tilføjelsesprogrammet Avanceret overholdelse eller et E5-abonnement til din organisation. Hvis du ikke har den plan og gerne vil prøve Advanced eDiscovery, kan du tilmelde dig [en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
+> Microsoft Purview eDiscovery (Premium) kræver et Office 365 E3 med tilføjelsesprogrammet Avanceret overholdelse eller et E5-abonnement for din organisation. Hvis du ikke har denne plan og vil prøve eDiscovery (Premium), kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
   
- Advanced eDiscovery relevansteknologi anvender ekspertguidet software til scorefiler ud fra deres relevans. Advanced eDiscovery relevans kan bruges til ECA (Early Case Assessment), nedslagning og gennemgang af fileksempel. 
+ eDiscovery (Premium) Relevansteknologi anvender ekspertstyret software til scoring af filer efter relevans. eDiscovery (Premium) Relevans kan bruges til vurdering af tidlige sager (ECA), nedslagning og gennemsyn af fileksemplet. 
   
- Advanced eDiscovery indeholder komponenter til relevanskurser og mærkning af filer, der er relevante for en sag. Advanced eDiscovery lærer af de uddannede eksempler på relevante og ikke relevante filer for at levere relevansresultater for hver fil og genererer analytiske resultater, der kan bruges under og efter filgennemsynsprocessen. 
+ eDiscovery (Premium) indeholder komponenter til relevanstræning og mærkning af filer, der er relevante for en sag. eDiscovery (Premium) lærer fra de oplærte eksempler på relevante og ikke relevante filer for at levere relevansscores for hver fil og genererer analytiske resultater, der kan bruges under og efter filgennemsynsprocessen. 
   
-## <a name="guidelines-for-setting-up-relevance-training"></a>Retningslinjer for konfiguration af relevanskurser
+## <a name="guidelines-for-setting-up-relevance-training"></a>Retningslinjer for konfiguration af relevanstræning
 
- På forhånd eDiscovery skal du i **vinduet Sager** vælge en sag og klikke på **Gå til sag**. Klik på **Konfiguration af relevans** \> **.** Følg disse anbefalede retningslinjer for at konfigurere Relevans. 
+ På forhånd skal du vælge en sag i vinduet **Sager** og klikke på **Gå til sag**. Klik på Opsætning **af relevans** \> **relevans**. Følg disse anbefalede retningslinjer for at konfigurere Relevans. 
   
-- **Mærkning**: Effektiviteten af kursusprocessen for iterativ relevans afhænger af ekspertens mulighed for at mærke fileksempler med præcision og ensartethed.
+- **Mærkning**: Effektiviteten af den iterative relevanstræningsproces afhænger af ekspertens evne til at mærke fileksempler med præcision og konsistens.
 
 - **Sagsproblemer**:
   
-  - For hvert problem skal du bruge den samme ekspert under hele relevans-uddannelsesprocessen. Samtidig mærkning af det samme problem af flere eksperter er ikke tilladt.
+  - For hvert problem skal du bruge den samme ekspert i hele relevanstræningsprocessen. Samtidig mærkning af det samme problem af flere eksperter er ikke tilladt.
   
-  - Afgør, om hver gruppe af filer kun er relevant for et bestemt problem.
+  - Find ud af, om hver gruppe filer kun er relevante for et bestemt problem.
 
-  - Hvis et problem er defineret for generelt, kan Advanced eDiscovery give for mange filer, der ikke er relevante. Hvis et problem er defineret for smalt, kan uddannelsesprocessen Relevans tage længere tid. 
+  - Hvis et problem er defineret for generelt, kan eDiscovery (Premium) give for mange filer, der ikke er relevante. Hvis et problem er defineret for snævert, kan relevanstræningsprocessen tage længere tid. 
 
-  - Under hvert relevanskursus i Advanced eDiscovery fokus på et enkelt aktivt problem, og midlertidige eksempelresultater vises tilsvarende.
+  - I hver relevanstræningscyklus fokuserer eDiscovery (Premium) på et enkelt aktivt problem, og midlertidige eksempelresultater vises tilsvarende.
 
-  - I et scenarie med flere problemer gør stikprøvetilstand det muligt at inkludere valget af problemer i behandlingen. Problemer defineret som "fra" håndteres ikke, før deres stikprøvetilstand ændres. Et problem kan være "inaktivt" eller "on" for kun én ekspert.
+  - I et scenarie med flere problemer gør samplingstilstanden det muligt at inkludere valg af problemer i behandlingen. Problemer, der er defineret som "fra", håndteres ikke, før samplingstilstanden ændres. Et problem kan være "inaktivt" eller "aktiveret" for kun én ekspert.
 
-  - Advanced eDiscovery kan bruges til at generere kandidaternes rettighedsfiler. Konfigurer et separat problem for rettigheder. Hvis det er muligt, skal du først træne og cull for relevans og derefter kun træne til rettighedsberegninger på det bestødede sæt (genindlæs det omdøbte sæt som en separat sag). 
+  - eDiscovery (Premium) kan bruges til at generere filer med kandidatrettigheder. Konfigurer et separat problem for rettigheder. Hvis det er muligt, skal du først oplære og aflive efter relevans og derefter kun oplære rettighedssortering for det aflivede sæt (genindlæs det frasorterede sæt som et separat tilfælde). 
 
-  - Batchberegning kan kun udføres, når der ikke er nogen åbne eksempler (når du klikker på Batchberegning, vises der en liste over brugere med åbne eksempler). Hvis du vil "lukke" eksempler på andre brugere (dette bør kun udføres, hvis disse brugere ikke mærker disse eksempler), kan en administrator bruge værktøjet "Rediger relevans" med indstillingen "Alle brugere eksempel".
+  - Batchberegning kan kun udføres, når der ikke er nogen åbne eksempler (når du klikker på Batchberegning, vises der en liste over brugere med åbne eksempler). Hvis du vil "lukke" eksempler fra andre brugere (dette skal kun udføres, hvis disse brugere ikke mærker disse eksempler), kan en administrator bruge funktionen "Rediger relevans" med indstillingen "Alle brugere eksempel".
 
-- **Metadata**: Advanced eDiscovery fokuserer på indhold. Metadata er ikke en del af relevanskriterierne.
+- **Metadata**: eDiscovery (Premium) fokuserer på indhold. Den betragter ikke metadata som en del af relevanskriterierne.
 
-- **Richness**: If the Richness for an issue is less than 3% after Assessment, consider seeding the Relevance training with known Relevant and Not Relevant files.
+- **Rigdom**: Hvis richness for et problem er mindre end 3 % efter vurdering, bør du overveje at seede relevanstræningen med kendte relevante og ikke relevante filer.
 
-- **Filstørrelse**: Store filer (over 5.242.880 tegn udtrukket tekst) ignoreres i relevans. Filerne deltager ikke i relevanskursusprocessen og får ikke et relevansscore efter batchberegning. Filer på mere end 5 MB kan medtages i Bedømmelsessættet.
+- **Filstørrelse**: Store filer (over 5.242.880 tegn udpakket tekst) ignoreres i relevans. Filerne deltager ikke i relevanstræningsprocessen og modtager ikke en relevansscore efter Batchberegning. Filer på over 5 MB kan inkluderes i vurderingssættet.
 
 ## <a name="setting-up-case-issues"></a>Konfiguration af sagsproblemer
 
-De parametre, der er beskrevet i dette afsnit, er tilgængelige i Advanced eDiscovery **for relevans**\>.
+De parametre, der er beskrevet i dette afsnit, er tilgængelige i **konfigurationen** af **relevans relevans** \> i eDiscovery (Premium).
   
-- Der skal tildeles problemer til en bruger, der skal oplære filerne.
+- Problemer skal tildeles til en bruger, der skal oplære filerne.
 
-- Importerede filer skal derefter føjes til den belastning, der behandles.
+- Importerede filer skal derefter føjes til den indlæsning, der behandles.
 
-- Definer og organiser problemer omhyggeligt, da dette kan påvirke resultaterne af relevanskurserne.
+- Definer og organiser problemer omhyggeligt, da det kan påvirke resultaterne af relevanstræningen.
 
-Når parametrene er angivet, kan korrekturlæseren/eksperten begynde at uddanne filerne på **fanen** Relevans.
+Når der er angivet parametre, kan korrekturlæseren/eksperten begynde at oplære filerne under fanen **Relevans** .
