@@ -16,111 +16,110 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Brug det nye Sikkerhedsdashboard til at Office 365 status for trusselsbeskyttelse og få vist og handle på sikkerhedsadvarsler.
+description: Brug det nye sikkerhedsdashboard til at gennemse Office 365 Threat Protection Status og få vist og reagere på sikkerhedsbeskeder.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4bc9d813732c4c67531aeb47a673111d62bbf417
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: defda5c112cf29cb944b502f442cf0e721a32676
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475735"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971732"
 ---
-# <a name="security-dashboard-in-the-security--compliance-center"></a>Sikkerhedsdashboard i Sikkerheds- & Compliance Center
+# <a name="security-dashboard-in-the-security--compliance-center"></a>Sikkerhedsdashboard i Security & Compliance Center
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
+## <a name="basic-functions-and-how-to-open-security-dashboard"></a>Grundlæggende funktioner, og hvordan du åbner et sikkerhedsdashboard
 
-## <a name="basic-functions-and-how-to-open-security-dashboard"></a>Grundlæggende funktioner, og hvordan du åbner Sikkerhedsdashboard
-
-Security & Compliance Center hos giver din organisation mulighed for at <https://protection.office.com> administrere databeskyttelse og overholdelse af data. Hvis du har de nødvendige tilladelser, giver Sikkerhedsdashboard dig mulighed for at gennemse din status for trusselsbeskyttelse samt få vist og reagere på sikkerhedsadvarsler.
+Security & Compliance Center på <https://protection.office.com> gør det muligt for din organisation at administrere databeskyttelse og overholdelse af angivne standarder. Hvis du har de nødvendige tilladelser, giver sikkerhedsdashboardet dig mulighed for at gennemse din Trusselsbeskyttelsesstatus samt få vist og reagere på sikkerhedsbeskeder.
 
 Se videoen for at få et overblik, og læs derefter denne artikel for at få mere at vide.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1VV3o]
 
-Afhængigt af hvad din organisations abonnement omfatter, indeholder Sikkerhedsdashboard flere widgets, f.eks. Oversigt over trusselsadministration, Status for trusselsbeskyttelse, globale ugentlige trusselsregistreringer, malware og meget mere, som beskrevet i de følgende afsnit.
+Afhængigt af hvad din organisations abonnement omfatter, indeholder sikkerhedsdashboardet flere widgets, f.eks. Threat Management Summary, Threat Protection Status, Global Weekly Threat Detections, Malware og meget mere, som beskrevet i følgende afsnit.
 
-Hvis du vil have vist Sikkerhedsdashboard i Security & Compliance Center, skal du gå til **Dashboard til trusselsadministration**\>. For at gå direkte til dashboardet Sikkerhed skal du bruge <https://protection.office.com/searchandinvestigation/dashboard>.
+Hvis du vil have vist sikkerhedsdashboardet i Security & Compliance Center, skal du gå til **Dashboard** til **trusselsstyring**\>. Hvis du vil gå direkte til sikkerhedsdashboardet, skal du bruge <https://protection.office.com/searchandinvestigation/dashboard>.
 
 > [!NOTE]
-> Du skal være global administrator, sikkerhedsadministrator eller sikkerhedslæser for at få vist dashboardet Sikkerhed. Nogle widgets kræver yderligere tilladelser for at få vist. Du kan få mere at [vide under Tilladelser i Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)[.
+> Du skal være global administrator, sikkerhedsadministrator eller sikkerhedslæser for at få vist sikkerhedsdashboardet. Nogle widgets kræver yderligere tilladelser for at få vist. Du kan få mere at vide [under Tilladelser i Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)[.
 
-## <a name="threat-management-summary"></a>Oversigt over trusselsadministration
+## <a name="threat-management-summary"></a>Oversigt over trusselsstyring
 
-Widgetten Oversigt over trusselsadministration fortæller dig hurtigt, hvordan organisationen var beskyttet mod trusler i løbet af de seneste syv (7) dage.
+Widgetten Threat Management Summary fortæller dig hurtigt, hvordan din organisation var beskyttet mod trusler i løbet af de seneste syv (7) dage.
 
-:::image type="content" source="../../media/SecDash-ThreatMgmtSummary.png" alt-text="Widgetten Security Dashboard - Threat Management Summary" lightbox="../../media/SecDash-ThreatMgmtSummary.png":::
+:::image type="content" source="../../media/SecDash-ThreatMgmtSummary.png" alt-text="Widgetten Security Dashboard – Oversigt over trusselsstyring" lightbox="../../media/SecDash-ThreatMgmtSummary.png":::
 
-De oplysninger, du får vist i Threat Management Summary, afhænger af, hvad dit abonnement indeholder. I følgende tabel beskrives, hvilke oplysninger der er medtaget for Office 365 E3 og Office 365 E5.
+De oplysninger, du får vist i Oversigten over trusselsadministration, afhænger af, hvad dit abonnement omfatter. I følgende tabel beskrives, hvilke oplysninger der er inkluderet for Office 365 E3 og Office 365 E5.
 
 |Office 365 E3|Office 365 E5|
 |---|---|
-|Malwaremeddelelser blokeret<br>Blokerede phishingmeddelelser<br>Meddelelser rapporteret af brugere<br><br><br><br>|Malwaremeddelelser blokeret<br>Blokerede phishingmeddelelser<br>Meddelelser rapporteret af brugere<br>Malware blokeret på nul dage<br>Avancerede phishingmeddelelser registreres<br>Skadelige URL-adresser blokeret|
+|Malwaremeddelelser er blokeret<br>Phishing-meddelelser er blokeret<br>Meddelelser, der er rapporteret af brugere<br><br><br><br>|Malwaremeddelelser er blokeret<br>Phishing-meddelelser er blokeret<br>Meddelelser, der er rapporteret af brugere<br>Nuldags malware er blokeret<br>Der blev fundet avancerede phishing-meddelelser<br>Ondsindede URL-adresser er blokeret|
 
-For at få vist eller få adgang til widgetten Oversigt over trusselsadministration skal du have tilladelse til at få vist Defender for Office 365 rapporter. Du kan få mere at [vide under Hvilke tilladelser er nødvendige for at kunne se Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
+Hvis du vil have vist eller få adgang til widgetten Threat Management Summary, skal du have tilladelser til at få vist Defender for Office 365 rapporter. Du kan få mere at vide under [Hvilke tilladelser er nødvendige for at få vist de Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
 
 ## <a name="threat-protection-status"></a>Status for trusselsbeskyttelse
 
-Statuswidget'en Threat Protection viser effektiviteten af trusselsbeskyttelse med en tendens og detaljeret visning af phish og malware.
+Widgetten Threat Protection Status viser effektiviteten af trusselsbeskyttelse med en trendende og detaljeret visning af phish og malware.
 
-:::image type="content" source="../../media/tpswidget.png" alt-text="Statuswidgeten for trusselsbeskyttelse" lightbox="../../media/tpswidget.png":::
+:::image type="content" source="../../media/tpswidget.png" alt-text="Widgetten Status for trusselsbeskyttelse" lightbox="../../media/tpswidget.png":::
 
-Oplysningerne afhænger af, om Microsoft 365 omfatter [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) med eller [uden Microsoft Defender for Office 365](defender-for-office-365.md).
+Detaljerne afhænger af, om dit Microsoft 365-abonnement omfatter [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) med eller uden [Microsoft Defender for Office 365](defender-for-office-365.md).
 
-|Hvis dit abonnement omfatter...|Du får vist disse oplysninger|
+|Hvis dit abonnement indeholder...|Du får vist disse oplysninger|
 |---|---|
-|EOP, men ikke Microsoft Defender for Office 365|Ondsindede mails, der blev registreret og blokeret af EOP.<p> Se [Statusrapport over trusselsbeskyttelse (EOP)](view-email-security-reports.md#threat-protection-status-report).|
-|Microsoft Defender for Office 365|Skadeligt indhold og skadelig mail registreret og blokeret af EOP og Defender for Office 365 <p> Samlet antal unikke mails med skadeligt indhold blokeret af antimalwareprogrammet, automatisk tømning uden time og [Defender for Office 365-funktioner](zero-hour-auto-purge.md) (herunder [Pengeskab](safe-links.md) links, [Pengeskab](safe-attachments.md) vedhæftede filer og [antiphishing i Defender for Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)) . <p> Se [Statusrapport over trusselsbeskyttelse](view-reports-for-mdo.md#threat-protection-status-report).|
+|EOP, men ikke Microsoft Defender for Office 365|Skadelig mail, der blev registreret og blokeret af EOP.<p> Se [Rapport over status for trusselsbeskyttelse (EOP).](view-email-security-reports.md#threat-protection-status-report)|
+|Microsoft Defender for Office 365|Skadeligt indhold og skadelig mail, der er registreret og blokeret af EOP og Defender for Office 365 <p> Samlet antal entydige mails med skadeligt indhold, der er blokeret af antimalwareprogrammet, [automatisk tømninger på nul timer](zero-hour-auto-purge.md) og Defender for Office 365 funktioner (herunder [Pengeskab links](safe-links.md), [Pengeskab vedhæftede filer](safe-attachments.md) og [anti-phishing i Defender for Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)) . <p> Se [Statusrapport for trusselsbeskyttelse](view-reports-for-mdo.md#threat-protection-status-report).|
 
-For at få vist eller få adgang til widgetten Status for trusselsbeskyttelse skal du have tilladelse til at få vist Defender for Office 365 rapporter. Du kan få mere at [vide under Hvilke tilladelser er nødvendige for at kunne se Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports)
+Hvis du vil have vist eller få adgang til widgetten Threat Protection Status, skal du have tilladelser til at få vist Defender for Office 365 rapporter. Du kan få mere at vide under [Hvilke tilladelser er der brug for for at få vist de Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports)
 
 ## <a name="global-weekly-threat-detections"></a>Globale ugentlige trusselsregistreringer
 
-Widget'en Globale ugentlige trusselsregistreringer viser, hvor mange trusler der blev registreret i mails i løbet af de seneste syv (7) dage.
+Widgetten Global Weekly Threat Detections viser, hvor mange trusler der blev registreret i mails i løbet af de seneste syv (7) dage.
 
-:::image type="content" source="../../media/globalweeklythreatdetections.png" alt-text="Widgetten Globale ugentlige trusselsregistreringer" lightbox="../../media/globalweeklythreatdetections.png":::
+:::image type="content" source="../../media/globalweeklythreatdetections.png" alt-text="Widgetten Global Weekly Threat Detections" lightbox="../../media/globalweeklythreatdetections.png":::
 
-Metrikværdierne beregnes som beskrevet i følgende tabel:
+Målepunkterne beregnes som beskrevet i følgende tabel:
 
-|Metrisk|Sådan beregnes det|
+|Metriske|Sådan beregnes den|
 |---|---|
-|Meddelelser scannet|Antal scannede mails ganget med antallet af modtagere|
-|Trusler er stoppet|Antal mails, der er identificeret som indeholdende malware ganget med antallet af modtagere|
-|Blokeret [af Defender for Office 365](defender-for-office-365.md)|Antal mails, der blokeres Defender for Office 365 ganget med antallet af modtagere|
-|Fjernet efter levering|Antal meddelelser, der er [blevet fjernet med automatisk tømning uden time (ZAP)](zero-hour-auto-purge.md) ganget med antallet af modtagere|
+|Scannede meddelelser|Antallet af scannede mails ganget med antallet af modtagere|
+|Truslerne er stoppet|Antallet af mails, der er identificeret som indeholder malware, ganget med antallet af modtagere|
+|Blokeret af [Defender for Office 365](defender-for-office-365.md)|Antal blokerede mails med Defender for Office 365 ganget med antallet af modtagere|
+|Fjernet efter levering|Antal meddelelser, der er fjernet med [automatisk fjernelse på nul timer (ZAP)](zero-hour-auto-purge.md) ganget med antallet af modtagere|
 
 ## <a name="malware"></a>Malware
 
-Malwarewidgets viser detaljer om malwaretendenser og malwarefamilietyper i løbet af de seneste syv (7) dage.
+Malwarewidgets viser oplysninger om malwaretendenser og malwarefamilietyper i løbet af de seneste syv (7) dage.
 
-:::image type="content" source="../../media/malwarewidgetatpe5.png" alt-text="Malwaretendenser og familietyper" lightbox="../../media/malwarewidgetatpe5.png":::
+:::image type="content" source="../../media/malwarewidgetatpe5.png" alt-text="Malware tendenser og familie typer" lightbox="../../media/malwarewidgetatpe5.png":::
 
 ## <a name="insights"></a>Insights
 
-Insights er ikke kun surface key-problemer, du skal gennemgå, de indeholder også anbefalinger og handlinger, du bør overveje.
+Insights ikke kun behandler vigtige problemer, du skal gennemgå, de indeholder også anbefalinger og handlinger, du skal overveje.
 
 :::image type="content" source="../../media/smartinsights.png" alt-text="Smart indsigt" lightbox="../../media/smartinsights.png":::
 
-Du kan f.eks. se, at phishing-mails leveres, fordi nogle brugere har deaktiveret deres indstillinger for uønsket mail. Hvis du vil have mere at vide om, hvordan indsigt [fungerer, skal du se Rapporter og indsigt & Security & Compliance Center](reports-and-insights-in-security-and-compliance.md).
+Du kan f.eks. se, at phishing-mails leveres, fordi nogle brugere har deaktiveret deres indstillinger for uønsket mail. Hvis du vil vide mere om, hvordan indsigt fungerer, skal du se [Rapporter og indsigt i Security & Compliance Center](reports-and-insights-in-security-and-compliance.md).
 
 ## <a name="threat-investigation-and-response"></a>Trusselsundersøgelse og -svar
 
-Hvis din organisations abonnement omfatter Microsoft Defender for Office 365 [Plan 2](office-365-ti.md), har dit Sikkerhedsdashboard et afsnit, der indeholder avancerede trusselsundersøgelses- og svarværktøjer. Disse værktøjer omfatter [automatiserede undersøgelses- og svarmuligheder](automated-investigation-response-office.md). Automatiseret undersøgelse og svar kan være nyttigt i scenarier som [adressering af kompromitterede brugerkonti hurtigt](address-compromised-users-quickly.md).
+Hvis organisationens abonnement omfatter [Microsoft Defender for Office 365 Plan 2](office-365-ti.md), indeholder dit sikkerhedsdashboard et afsnit, der indeholder avancerede værktøjer til undersøgelse af trusler og svar. Disse værktøjer omfatter [automatiserede undersøgelses- og svarfunktioner](automated-investigation-response-office.md). Automatiseret undersøgelse og svar kan være nyttig i scenarier som f.eks. [hurtig håndtering af kompromitterede brugerkonti](address-compromised-users-quickly.md).
 
-Du kan få mere at vide [under Kom i gang med at bruge Automatiseret undersøgelse og svar (AIR) Office 365](office-365-air.md).
+Du kan få mere at vide under [Kom i gang med at bruge automatiseret undersøgelse og svar (AIR) i Office 365](office-365-air.md).
 
 ## <a name="trends"></a>Tendenser
 
-Nederst i sikkerhedsdashboardet findes sektionen **Trends** , som opsummerer tendenser i mailflowet for organisationen. Rapporter indeholder oplysninger om mails, der er kategoriseret som spam, malware, phishingforsøg og gode mails. Klik på et felt for at få vist mere detaljerede oplysninger i rapporten.
+Nederst i sikkerhedsdashboardet findes afsnittet **Tendenser** , der opsummerer mailflowtendenser for din organisation. Rapporter indeholder oplysninger om mail, der er kategoriseret som spam, malware, phishingforsøg og god mail. Klik på et felt for at få vist mere detaljerede oplysninger i rapporten.
 
-:::image type="content" source="../../media/trends.png" alt-text="Afsnittet Tendenser, der opsummerer tendenser i mailflowet for organisationen" lightbox="../../media/trends.png":::
+:::image type="content" source="../../media/trends.png" alt-text="Afsnittet Tendenser, der opsummerer mailflowtendenser for organisationen" lightbox="../../media/trends.png":::
 
-Og hvis din organisations abonnement omfatter [Defender for Office 365 Plan 2](office-365-ti.md), får du også en rapport om seneste **trusselsadministration** i dette afsnit, der gør det muligt for dit sikkerhedsteam at få vist og handle på vigtige sikkerhedsadvarsler.
+Og hvis din organisations abonnement omfatter [Defender for Office 365 Plan 2](office-365-ti.md), har du også en rapport over **vigtige beskeder om administration af trusler for nylig** i dette afsnit, der gør det muligt for dit sikkerhedsteam at få vist og reagere på sikkerhedsbeskeder med høj prioritet.
 
-For at få vist eller få adgang til widgetten Sendt og Modtaget mail skal du have tilladelse til at få vist Defender for Office 365 rapporter. Du kan få mere at [vide under Hvilke tilladelser er nødvendige for at kunne se Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
+Hvis du vil have vist eller få adgang til widgetten Sendt og Modtaget mail, skal du have tilladelse til at få vist Defender for Office 365 rapporter. Du kan få mere at vide under [Hvilke tilladelser er nødvendige for at få vist de Defender for Office 365 rapporter?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
 
-For at få vist eller få adgang til widget'en Seneste threat management Alerts skal du have tilladelse til at få vist beskeder. Du kan få mere at vide under [RBAC-tilladelser, der kræves for at få vist vigtige beskeder](../../compliance/alert-policies.md#rbac-permissions-required-to-view-alerts).
+Hvis du vil have vist eller få adgang til widgetten Recent Threat Management Alerts, skal du have tilladelse til at få vist beskeder. Du kan få mere at vide under [RBAC-tilladelser, der kræves for at få vist beskeder](../../compliance/alert-policies.md#rbac-permissions-required-to-view-alerts).
 
 ## <a name="related-articles"></a>Relaterede artikler
 
@@ -130,4 +129,4 @@ For at få vist eller få adgang til widget'en Seneste threat management Alerts 
 
 [Defender for Office 365](defender-for-office-365.md)
 
-[Office 365 trusselsundersøgelse og -svar](office-365-ti.md)
+[Office 365 Trusselsundersøgelse og -svar](office-365-ti.md)

@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bcbacc886c57257e5c4b067b278c7736ae403390
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d8515ce2bccb90478f11fa4a1813c7cb4ab7fb7d
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945511"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973833"
 ---
 # <a name="threat-hunting-in-threat-explorer-for-microsoft-defender-for-office-365"></a>Trusselsjagt i Threat Explorer efter Microsoft Defender for Office 365
 
@@ -35,7 +35,6 @@ I denne artikel:
 
 > [!NOTE]
 > Dette er en del af en **serie med tre artikler** om **Threat Explorer (Explorer),** **mailsikkerhed** og **registreringer i realtid** (f.eks. forskelle mellem værktøjerne og de tilladelser, der er nødvendige for at betjene dem). De to andre artikler i denne serie er [Mailsikkerhed med Threat Explorer](email-security-in-microsoft-defender.md) og [Threat Explorer og registreringer i realtid](real-time-detections.md).
-
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -69,7 +68,6 @@ Når en person med sikkerhedshandlinger (sek. ops) vælger de data, vedkommende 
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/sender-drop-down.png" alt-text="Knappen Afsender i Threat Explorer" lightbox="../../media/sender-drop-down.png":::
-
 
 Du kan overveje at justere fokus i Stifinder eller registrering i realtid i lag. Den første er **Vis**. Det andet kan opfattes som et *filtreret fokus*. Du kan f.eks. spore de trin, du har udført for at finde en trussel, ved at registrere dine beslutninger som denne: Hvis du vil finde problemet i Stifinder, **har jeg valgt Visningen Malware med et modtagerfilterfokus**. Det gør det nemmere at udføre dine trin igen.
 

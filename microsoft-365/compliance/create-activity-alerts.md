@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
 description: Tilføj og administrer aktivitetsbeskeder på Microsoft Purview-overholdelsesportalen, så Microsoft 365 sender dig mailmeddelelser, når brugerne udfører bestemte aktiviteter
-ms.openlocfilehash: 7826a09bff1dd17febc3f621b50ed32129e21a37
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 43991eaf0f80957b0d72a2f16a2021f24194f2d6
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946479"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995024"
 ---
 # <a name="create-activity-alerts"></a>Opret aktivitetsbeskeder
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan oprette en aktivitetsbesked, der sender dig en mailmeddelelse, når brugerne udfører bestemte aktiviteter i Office 365. Aktivitetsbeskeder svarer til at søge efter hændelser i overvågningsloggen, bortset fra at du får tilsendt en mail, når der sker en hændelse for en aktivitet, som du har oprettet en besked for.
 

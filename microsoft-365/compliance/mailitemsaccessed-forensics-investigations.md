@@ -16,22 +16,24 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Brug overvågningshandlingen MailItemsAccessed-postkasse til at udføre tekniske undersøgelser af kompromitterede brugerkonti.
-ms.openlocfilehash: 658a4b079bd7909f8436867efd86d3ac04d61aa2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2256e331075074348e2a72d6528bed1944567b94
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946193"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996190"
 ---
 # <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Brug Microsoft Purview Audit (Premium) til at undersøge kompromitterede konti
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 En kompromitteret brugerkonto (også kaldet en *kontoovertagelse*) er en type angreb, når en hacker får adgang til en brugerkonto og fungerer som brugeren. Disse typer angreb forårsager nogle gange mere skade, end angriberen har til hensigt. Når du undersøger kompromitterede mailkonti, skal du antage, at flere maildata er blevet kompromitteret, end det kan være angivet, ved at spore personens faktiske tilstedeværelse. Afhængigt af typen af data i mails skal du antage, at følsomme oplysninger blev kompromitteret, eller at de blev pålagt lovmæssige bøder, medmindre du kan bevise, at følsomme oplysninger ikke blev eksponeret. HIPAA-regulerede organisationer står f.eks. over for betydelige bøder, hvis der er tegn på, at patientsundhedsmæssige oplysninger (PHI) blev eksponeret. I disse tilfælde er det usandsynligt, at hackere er interesseret i PHI, men organisationer skal stadig rapportere brud på datasikkerheden, medmindre de kan bevise andet.
 
-For at hjælpe dig med at undersøge kompromitterede mailkonti overvågninger vi nu adgang til maildata via mailprotokoller og klienter med handlingen *MailItemsAccessed* mailbox-auditing. Denne nye overvågede handling vil hjælpe efterforskerne med bedre at forstå brud på maildata og hjælpe dig med at identificere omfanget af kompromiser for bestemte mailelementer, der kan blive kompromitteret. Målet om at bruge denne nye overvågningshandling er teknisk forsvarlighed for at hævde, at en bestemt postdata ikke blev kompromitteret. Hvis en person med ondsindede hensigter fik adgang til en bestemt post, overvåges hændelsen Exchange Online, selvom der ikke er noget, der tyder på, at postelementet blev læst.
+For at hjælpe dig med at undersøge kompromitterede mailkonti overvågninger vi nu adgang til maildata via mailprotokoller og klienter med handlingen *MailItemsAccessed* mailbox-auditing. Denne nye overvågede handling vil hjælpe efterforskerne med bedre at forstå brud på maildata og hjælpe dig med at identificere omfanget af kompromiser for bestemte mailelementer, der kan blive kompromitteret. Målet om at bruge denne nye overvågningshandling er teknisk forsvarlighed for at hævde, at en bestemt postdata ikke blev kompromitteret. Hvis en person med ondsindede hensigter fik adgang til en bestemt post, overvåger Exchange Online hændelsen, selvom der ikke er nogen indikation for, at mailelementet blev læst.
 
 ## <a name="the-mailitemsaccessed-mailbox-auditing-action"></a>Overvågningshandlingen MailItemsAccessed for postkasse
 
-Den nye MailItemsAccessed-handling er en del af den nye [overvågningsfunktion (Premium).](advanced-audit.md) Det er en del af [overvågning af Exchange postkasse](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) og er som standard aktiveret for brugere, der har fået tildelt en Office 365- eller Microsoft 365 E5-licens, eller for organisationer med et Microsoft 365 E5 Overholdelse tilføjelsesprogramabonnement.
+Den nye MailItemsAccessed-handling er en del af den nye [overvågningsfunktionalitet (Premium).](advanced-audit.md) Det er en del af [overvågning af Exchange postkasse](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) og er som standard aktiveret for brugere, der har fået tildelt en Office 365- eller Microsoft 365 E5-licens, eller for organisationer med et tilføjelsesprogram til Microsoft 365 E5-overholdelse.
 
 Handlingen MailItemsAccessed mailbox-auditing dækker alle mailprotokoller: POP, IMAP, MAPI, EWS, Exchange ActiveSync og REST. Den dækker også begge typer af adgang til mail: *synkroniser* og *bind*.
 

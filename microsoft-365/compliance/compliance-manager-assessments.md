@@ -1,5 +1,5 @@
 ---
-title: Byg og administrer vurderinger i Microsoft Compliance Manager
+title: Byg og administrer vurderinger i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,15 +16,17 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Byg vurderinger i Microsoft Compliance Manager for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
-ms.openlocfilehash: 9fbea59eae103e2ce9715fda6c7b7a97d38eb855
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Opret vurderinger i Microsoft Purview Compliance Manager for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
+ms.openlocfilehash: 841d48951eebf0d04bf5c97a708a250218b44c65
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759009"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972557"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Byg og administrer vurderinger i Overholdelsesstyring
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Få mere at vide om, hvordan du tilpasser Overholdelsesstyring for din organisation ved at oprette og administrere **vurderinger**. I denne artikel gennemgår vi, hvordan du opretter vurderinger, hvordan du organiserer dem i **grupper**, arbejder med **kontrolelementer**, accepterer **opdateringer** og eksporterer **vurderingsrapporter**.
 
@@ -35,7 +37,7 @@ Overholdelsesstyring hjælper dig med at oprette vurderinger, der evaluerer din 
 Alle dine vurderinger er angivet under fanen Vurderinger i Overholdelsesstyring. Få mere at vide om [, hvordan du filtrerer din visning af dine vurderinger og fortolker statustilstande](compliance-manager-setup.md#assessments-page).
 
 > [!IMPORTANT]
-> De skabeloner, der er tilgængelige for din organisation til oprettelse af vurderinger, afhænger af din licensaftale. [Gennemse licensoplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> De skabeloner, der er tilgængelige for din organisation til oprettelse af vurderinger, afhænger af din licensaftale. [Gennemse licensoplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="data-protection-baseline-default-assessment"></a>Vurdering af standardvurdering af grundlæggende databeskyttelse
 

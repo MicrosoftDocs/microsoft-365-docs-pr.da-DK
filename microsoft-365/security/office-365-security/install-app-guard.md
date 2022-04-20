@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Få den nyeste hardwarebaserede isolation. Undgå aktuelle og nye angreb, f.eks. udnyttelser eller skadelige links, fra at forstyrre medarbejdernes produktivitet og virksomhedens sikkerhed.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c8e24b61b7f800b7c27a57bcec5c127adb032bf5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 98d23a814ac2af8d9dedc4f163923e67c9ca7dc2
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939251"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973239"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Application Guard til Office for administratorer
 
@@ -39,7 +39,7 @@ Microsoft Defender Application Guard til Office (Application Guard for Office) h
 
 ### <a name="minimum-software-requirements"></a>Minimumkrav til software
 
-* **Windows**: Windows 10 Enterprise udgave, Client Build version 2004 (20H1) build 19041 eller nyere. Alle versioner af Windows 11 understøttes. 
+* **Windows**: Windows 10 Enterprise udgave, Client Build version 2004 (20H1) build 19041 eller nyere. Alle versioner af Windows 11 understøttes.
 * **Office**: Office Current Channel og Monthly Enterprise Channel, Build version 2011 16.0.13530.10000 eller nyere. Office Semi-Annual Enterprise Channel, Build version 2108 eller nyere. Både 32-bit og 64-bit versioner af Office understøttes.
 * **Opdateringspakke**: Windows 10 kumulative månedlige sikkerhedsopdatering [KB4571756](https://support.microsoft.com/help/4571756/windows-10-update-KB4571756)
 
@@ -124,7 +124,6 @@ Ved åbning bør filen vise et par visuelle indikatorer, som filen blev åbnet i
 
 Office understøtter følgende politikker, så du kan konfigurere funktionerne i Application Guard for Office. Disse politikker kan konfigureres via gruppepolitikker eller via [tjenesten Office cloudpolitik](/DeployOffice/overview-office-cloud-policy-service).
 
-
 > [!NOTE]
 > Konfiguration af disse politikker kan deaktivere nogle funktioner for filer, der er åbnet i Application Guard for Office.
 
@@ -198,7 +197,7 @@ Du kan også konfigurere Microsoft Defender for Office 365 til at arbejde med De
 
 ## <a name="limitations-and-considerations"></a>Begrænsninger og overvejelser
 
-* Application Guard for Office er en beskyttet tilstand, der isolerer dokumenter, der ikke er tillid til, så de ikke kan få adgang til virksomhedens ressourcer, et intranet, brugerens identitet og vilkårlige filer på computeren. Hvis en bruger forsøger at få adgang til en funktion, der er afhængig af en sådan adgang, f.eks. at indsætte et billede fra en lokal fil på disken, mislykkes adgangen, og der oprettes en prompt, der ligner følgende eksempel. Hvis du vil aktivere et dokument, der ikke er tillid til, for at få adgang til ressourcer, der er tillid til, skal brugerne fjerne Application Guard-beskyttelse fra dokumentet. 
+* Application Guard for Office er en beskyttet tilstand, der isolerer dokumenter, der ikke er tillid til, så de ikke kan få adgang til virksomhedens ressourcer, et intranet, brugerens identitet og vilkårlige filer på computeren. Hvis en bruger forsøger at få adgang til en funktion, der er afhængig af en sådan adgang, f.eks. at indsætte et billede fra en lokal fil på disken, mislykkes adgangen, og der oprettes en prompt, der ligner følgende eksempel. Hvis du vil aktivere et dokument, der ikke er tillid til, for at få adgang til ressourcer, der er tillid til, skal brugerne fjerne Application Guard-beskyttelse fra dokumentet.
 
   :::image type="content" source="../../media/ag09-confirm.png" alt-text="Dialogboksen, der angiver sikkerhedsmeddelelsen og funktionsstatussen" lightbox="../../media/ag09-confirm.png":::
 
@@ -206,7 +205,7 @@ Du kan også konfigurere Microsoft Defender for Office 365 til at arbejde med De
   > Råder brugerne til kun at fjerne beskyttelsen, hvis de har tillid til filen og dens kilde, eller hvor den kom fra.
 
 * Når et dokument, der ikke er tillid til, gemmes på et sted, der er tillid til, nedarves tillid fra placeringen af dokumentet. En organisations cloudlager identificeres typisk som et sted, der er tillid til.
-  
+
 * Aktivt indhold i dokumenter, f.eks. makroer og ActiveX kontrolelementer, er deaktiveret i Application Guard for Office. Brugerne skal fjerne Application Guard-beskyttelse for at aktivere aktivt indhold.
 
 * Filer, der ikke er tillid til, fra netværksshares eller filer, der deles fra OneDrive, OneDrive for Business eller SharePoint Online fra en anden organisation, åbnes som skrivebeskyttet i Application Guard. Brugerne kan gemme en lokal kopi af disse filer for at fortsætte med at arbejde i objektbeholderen eller fjerne beskyttelsen for at arbejde direkte med den oprindelige fil.
@@ -242,4 +241,4 @@ Når denne heuristik er opfyldt, opretter Office en Application Guard-objektbeho
 * CSV- og HTML-filer understøttes ikke i øjeblikket.
 * Application Guard til Office fungerer i øjeblikket ikke sammen med NTFS-komprimerede diskenheder. Hvis du får vist fejlmeddelelsen "ERROR_VIRTUAL_DISK_LIMITATION", skal du prøve at dekomprimere diskenheden.
 * Opdateringer til .NET kan medføre, at filer ikke åbnes i Application Guard. Som en løsning kan brugerne genstarte deres enhed, når de støder på denne fejl. Få mere at vide om problemet ved [at modtage en fejlmeddelelse, når du forsøger at åbne Windows Defender Application Guard eller Windows Sandkasse](https://support.microsoft.com/help/4575917/receiving-an-error-message-when-attempting-to-open-windows-defender-ap).
-* Se [Ofte stillede spørgsmål – Microsoft Defender Application Guard for at få flere oplysninger.](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 
+* Se [Ofte stillede spørgsmål – Microsoft Defender Application Guard for at få flere oplysninger.](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard)

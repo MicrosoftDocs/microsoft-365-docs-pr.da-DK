@@ -1,5 +1,5 @@
 ---
-title: Muligheder for & trusselsrespons – Microsoft Defender for Office 365 Plan 2
+title: Trusselsundersøgelse & svarfunktioner – Microsoft Defender for Office 365 Plan 2
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -18,15 +18,15 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om muligheder for trusselsundersøgelse og svar i Microsoft Defender for Office 365 Plan.
+description: Få mere at vide om trusselsundersøgelses- og svarfunktioner i Microsoft Defender for Office 365 Plan.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 53f1077d4ef32c6dc5698aae74de51dd5a421510
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: c972a42730f4d21b73227a8b8a9900223109d590
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474899"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972029"
 ---
 # <a name="threat-investigation-and-response"></a>Trusselsundersøgelse og -svar
 
@@ -35,95 +35,94 @@ ms.locfileid: "64474899"
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-
-Trusselsundersøgelse og svarmuligheder i [Microsoft Defender for Office 365 kan](defender-for-office-365.md) hjælpe sikkerhedsanalytikere og administratorer med at beskytte deres Microsoft 365 for virksomhedsbrugere ved at:
+Trusselsundersøgelses- og svarfunktioner i [Microsoft Defender for Office 365](defender-for-office-365.md) hjælpe sikkerhedsanalytikere og administratorer med at beskytte deres organisations Microsoft 365 for erhvervsbrugere ved at:
 
 - Gør det nemt at identificere, overvåge og forstå cyberangreb.
-- Hjælper dig med hurtigt at håndtere trusler Exchange Online, SharePoint Online, OneDrive for Business og Microsoft Teams.
-- Give indsigt og viden for at hjælpe sikkerhedshandlinger med at forhindre cyberangreb mod deres organisation.
-- Anvend [automatiseret undersøgelse og svar Office 365](automated-investigation-response-office.md) svar på vigtige mailbaserede trusler.
+- Hjælp til hurtigt at håndtere trusler i Exchange Online, SharePoint Online, OneDrive for Business og Microsoft Teams.
+- At give indsigt og viden for at hjælpe sikkerhedshandlinger med at forhindre cyberangreb mod deres organisation.
+- Anvender [automatiseret undersøgelse og svar i Office 365](automated-investigation-response-office.md) for kritiske mailbaserede trusler.
 
-Trusselsundersøgelse og svarmuligheder giver indsigt i trusler og relaterede svarhandlinger, der findes i Microsoft 365 Defender-portalen. Denne indsigt kan hjælpe organisationens sikkerhedsteam med at beskytte brugerne mod mail- eller filbaserede angreb. Funktionerne hjælper med at overvåge signaler og indsamle data fra flere kilder, f.eks. brugeraktivitet, godkendelse, mail, kompromitterede pc'er og sikkerhedshændelser. Forretnings beslutningstagere og dit sikkerhedsteam kan bruge disse oplysninger til at forstå og reagere på trusler mod din organisation og beskytte din immaterielle ejendom.
+Trusselsundersøgelses- og svarfunktioner giver indsigt i trusler og relaterede svarhandlinger, der er tilgængelige på Microsoft 365 Defender-portalen. Denne indsigt kan hjælpe din organisations sikkerhedsteam med at beskytte brugerne mod mail- eller filbaserede angreb. Funktionerne hjælper med at overvåge signaler og indsamle data fra flere kilder, f.eks. brugeraktivitet, godkendelse, mail, kompromitterede pc'er og sikkerhedshændelser. Beslutningstagere i virksomheden og dit team af sikkerhedshandlinger kan bruge disse oplysninger til at forstå og reagere på trusler mod din organisation og beskytte dine immaterielle rettigheder.
 
-## <a name="get-acquainted-with-threat-investigation-and-response-tools"></a>Blive fortrolig med værktøjer til trusselsundersøgelse og svar
+## <a name="get-acquainted-with-threat-investigation-and-response-tools"></a>Få kendskab til trusselsundersøgelses- og svarværktøjer
 
-Funktionalitet til trusselsundersøgelse og svar i Microsoft 365 Defender at er <https://security.microsoft.com> et sæt værktøjer og arbejdsprocesser for svar, der omfatter:
+Trusselsundersøgelses- og svarfunktioner i Microsoft 365 Defender portalen på <https://security.microsoft.com> er et sæt værktøjer og svararbejdsprocesser, der omfatter:
 
-- [Stifinder](#explorer)
+- [Explorer](#explorer)
 - [Hændelser](#incidents)
-- [Kursus i angrebssimulering](attack-simulation-training.md)
+- [Oplæring i angrebssimulering](attack-simulation-training.md)
 - [Automatiseret undersøgelse og svar](automated-investigation-response-office.md)
 
-### <a name="explorer"></a>Stifinder
+### <a name="explorer"></a>Explorer
 
-Brug [Stifinder (og](threat-explorer.md) registreringer i realtid) til at analysere trusler, se mængden af angreb over tid og analysere data fra trusselsfamilier, hackerinfrastruktur og meget mere. Stifinder (også kaldet Threat Explorer) er udgangspunktet for en sikkerhedsanalytikers undersøgelsesarbejdsproces.
+Brug [Stifinder (og registreringer i realtid)](threat-explorer.md) til at analysere trusler, se mængden af angreb over tid og analysere data efter trusselsfamilier, infrastruktur for hackere med mere. Explorer (også kaldet Threat Explorer) er startsted for alle sikkerhedsanalytikeres undersøgelsesarbejdsprocesser.
 
-:::image type="content" source="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png" alt-text="Siden Trusselsstifinder" lightbox="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png":::
+:::image type="content" source="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png" alt-text="Siden Threat Explorer" lightbox="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png":::
 
-Hvis du vil have vist og bruge denne rapport Microsoft 365 Defender på , skal du <https://security.microsoft.com>gå **til & med Stifinder til** \> **samarbejde**. Du kan også gå direkte til **Stifinder-siden** ved hjælp af <https://security.microsoft.com/threatexplorer>.
+Hvis du vil have vist og bruge denne rapport på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Mail & samarbejdsoversigt**\>. Du kan også gå direkte til siden **Stifinder** ved at bruge <https://security.microsoft.com/threatexplorer>.
 
 ## <a name="office-365-threat-intelligence-connection"></a>Office 365 Threat Intelligence-forbindelse
 
-Denne funktion er kun tilgængelig, hvis du har et aktivt Office 365 E5-abonnement eller tilføjelsesprogrammet Threat Intelligence. Du kan finde flere oplysninger Office 365 Enterprise siden med E5-produkter.
+Denne funktion er kun tilgængelig, hvis du har et aktivt Office 365 E5-abonnement eller Threat Intelligence-tilføjelsesprogrammet. Du kan få flere oplysninger på produktsiden Office 365 Enterprise E5.
 
-Når du slår denne funktion til, vil du kunne inkorporere data fra Microsoft Defender for Office 365 til Microsoft 365 Defender for at udføre en omfattende sikkerhedsundersøgelse på tværs af Office 365 postkasser og Windows enheder.
+Når du aktiverer denne funktion, kan du integrere data fra Microsoft Defender for Office 365 i Microsoft 365 Defender for at udføre en omfattende sikkerhedsundersøgelse på tværs af Office 365 postkasser og Windows enheder.
 
 > [!NOTE]
 > Du skal have den relevante licens for at aktivere denne funktion.
 
-Hvis du vil modtage kontekstafhængig enhedsintegration i Office 365 Threat Intelligence, skal du aktivere indstillingerne for Defender for Endpoint i dashboardet Security & Compliance.
+Hvis du vil modtage kontekstafhængig enhedsintegration i Office 365 Threat Intelligence, skal du aktivere indstillingerne for Defender for Endpoint på dashboardet Sikkerhed & Overholdelse.
 
 ### <a name="incidents"></a>Hændelser
 
-Brug listen Hændelser (dette kaldes også undersøgelser) for at få vist en liste over sikkerhedshændelser for fly. Hændelser bruges til at spore trusler som f.eks. mistænkelige e-mail-meddelelser og til at foretage yderligere undersøgelser og afhjælpning.
+Brug listen Hændelser (dette kaldes også Undersøgelser) for at få vist en liste over hændelser i flightsikkerhed. Hændelser bruges til at spore trusler, f.eks. mistænkelige mails, og til at udføre yderligere undersøgelse og afhjælpning.
 
 :::image type="content" source="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png" alt-text="Listen over aktuelle trusselshændelser i Office 365" lightbox="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png":::
 
-Hvis du vil have vist listen over aktuelle hændelser for din organisation i Microsoft 365 Defender-portalen<https://security.microsoft.com>, skal du gå til **Hændelser & hændelser** \> **.** Eller du kan bruge til at **gå direkte til siden** Hændelser <https://security.microsoft.com/incidents>.
+Hvis du vil have vist listen over aktuelle hændelser for din organisation på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Hændelser & beskeder** \> **Hændelser**. Du kan også gå direkte til siden **Hændelser** ved at bruge <https://security.microsoft.com/incidents>.
 
-:::image type="content" source="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png" alt-text="Siden Gennemse i Sikkerheds- & Compliance Center" lightbox="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png":::
+:::image type="content" source="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png" alt-text="Siden Gennemse i Security & Compliance Center" lightbox="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png":::
 
-### <a name="attack-simulation-training"></a>Kursus i angrebssimulering
+### <a name="attack-simulation-training"></a>Oplæring i angrebssimulering
 
-Brug angrebssimuleringskurser til at konfigurere og køre realistiske cyberangreb i din organisation og identificere følsomme personer, før et rigtigt cyberangreb påvirker din virksomhed. Du kan få mere at vide under [Simulere et phishingangreb](attack-simulation-training.md).
+Brug træning i simulering af angreb til at konfigurere og køre realistiske cyberangreb i din organisation, og identificer sårbare personer, før et rigtigt cyberangreb påvirker din virksomhed. Du kan få mere at vide under [Simuler et phishing-angreb](attack-simulation-training.md).
 
-Hvis du vil have vist og bruge denne Microsoft 365 Defender på <https://security.microsoft.com>, skal du gå til Mail & **samarbejdeAttack-simuleringskursus** > . Du kan også gå direkte til siden til **simulering af angreb** ved at bruge <https://security.microsoft.com/attacksimulator?viewid=overview>.
+Hvis du vil have vist og bruge denne funktion på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Mail & samarbejdeTræning** >  af **simulering af simulering**. Du kan også gå direkte til træningssiden **for simulering af angreb** ved at bruge <https://security.microsoft.com/attacksimulator?viewid=overview>.
 
 ### <a name="automated-investigation-and-response"></a>Automatiseret undersøgelse og svar
 
-Brug automatiserede undersøgelses- og svarfunktioner (AIR) til at spare tid og besvær med at korrelere indhold, enheder og personer, der er i risiko for trusler i din organisation. AIR-processer kan starte, når der udløses bestemte beskeder, eller når sikkerhedsteamet starter. Du kan få mere at vide [ved at se automatiseret undersøgelse og svar Office 365](automated-investigation-response-office.md).
+Brug air-funktioner (automatiseret undersøgelse og svar) til at spare tid og kræfter på at korrelere indhold, enheder og personer, der er i fare for trusler i din organisation. AIR-processer kan begynde, når visse beskeder udløses, eller når de startes af dit sikkerhedsteam. Du kan få mere at vide [under Automatiseret undersøgelse og svar i Office 365](automated-investigation-response-office.md).
 
-## <a name="threat-intelligence-widgets"></a>Threat intelligence-widgets
+## <a name="threat-intelligence-widgets"></a>Trusselsintelligenswidgets
 
-Som en del af Microsoft Defender for Office 365 Plan 2 kan sikkerhedsanalytikere gennemgå oplysninger om en kendt trussel. Dette er nyttigt til at afgøre, om der er yderligere forhindrende målinger/trin, der kan tages for at beskytte brugerne.
+Som en del af tilbuddet på Microsoft Defender for Office 365 Plan 2 kan sikkerhedsanalytikere gennemse detaljer om en kendt trussel. Dette er nyttigt for at afgøre, om der er yderligere forebyggende foranstaltninger/trin, der kan træffes for at beskytte brugerne.
 
 :::image type="content" source="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png" alt-text="Ruden Sikkerhedstendenser, der viser oplysninger om de seneste trusler" lightbox="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png":::
 
-## <a name="how-do-we-get-these-capabilities"></a>Hvordan får vi disse egenskaber?
+## <a name="how-do-we-get-these-capabilities"></a>Hvordan får vi disse funktioner?
 
-Microsoft 365 af trusler og svarfunktioner er inkluderet i Microsoft Defender for Office 365 Plan 2, som er inkluderet i Enterprise E5 eller som et tilføjelsesprogrammet til visse abonnementer. Du kan få mere at [vide Defender for Office 365 plan 1 og Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
+Microsoft 365 trusselsundersøgelses- og svarfunktioner er inkluderet i Microsoft Defender for Office 365 Plan 2, som er inkluderet i Enterprise E5 eller som et tilføjelsesprogram til visse abonnementer. Du kan få mere at vide [under Defender for Office 365 Plan 1 og Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
 
 ## <a name="required-roles-and-permissions"></a>Påkrævede roller og tilladelser
 
-Microsoft Defender for Office 365 anvender rollebaseret adgangskontrol. Tilladelser tildeles gennem bestemte roller i Azure Active Directory, Microsoft 365 Administration eller Microsoft 365 Defender portalen.
+Microsoft Defender for Office 365 bruger rollebaseret adgangskontrol. Tilladelser tildeles via visse roller i Azure Active Directory, Microsoft 365 Administration eller Microsoft 365 Defender-portalen.
 
 > [!TIP]
-> Selvom nogle roller, f.eks. sikkerhedsadministrator, kan tildeles i Microsoft 365 Defender, kan du overveje at bruge enten den Microsoft 365 Administration eller Azure Active Directory i stedet. Du kan finde oplysninger om roller, rollegrupper og tilladelser i følgende ressourcer:
+> Selvom nogle roller, f.eks. Sikkerhedsadministrator, kan tildeles på Microsoft 365 Defender-portalen, kan du overveje enten at bruge Microsoft 365 Administration eller Azure Active Directory i stedet. Du kan få oplysninger om roller, rollegrupper og tilladelser i følgende ressourcer:
 >
-> - [Tilladelser i Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md)
+> - [Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md)
 > - [Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference)
 
 |Aktivitet|Roller og tilladelser|
 |---|---|
-|Brug dashboardet til & til håndtering af sikkerhedsrisiko (eller det [nye dashboard Sikkerhed)](security-dashboard.md) <p> Få vist oplysninger om de seneste eller aktuelle trusler|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
-|Brug [Stifinder (og registreringer i realtid)](threat-explorer.md) til at analysere trusler|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
-|Få vist hændelser (også kaldet undersøgelser) <p> Føj mails til en hændelse|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
-|Udløse mailhandlinger i en hændelse <p> Find og slet mistænkelige mails|Et af følgende: <ul><li>**Global Administrator**</li><li>**Sikkerhedsadministrator** plus **rollen Søg og Tøm**</li></ul> <p> **Rollerne Global** administrator **og sikkerhedsadministrator** kan tildeles i enten Azure Active Directory (<https://portal.azure.com>) eller Microsoft 365 Administration (<https://admin.microsoft.com>). <p> Rollen **Søg og tøm** skal være tildelt i & **i** samarbejdsrollerne i Microsoft 36 Defender-portalen (<https://security.microsoft.com>).|
-|Integrer Microsoft Defender for Office 365 Plan 2 med Microsoft Defender for Endpoint <p> Integrer Microsoft Defender for Office 365 Plan 2 med en SIEM-server|Enten den **globale administrator** eller den **sikkerhedsadministratorrolle**, der er tildelt i Azure Active Directory (<https://portal.azure.com>) eller Microsoft 365 Administration (<https://admin.microsoft.com>). <p> --- **plus** --- <p> En passende rolle, der er tildelt i flere programmer ([f.eks. Microsoft Defender Security Center](/windows/security/threat-protection/microsoft-defender-atp/user-roles) eller din SIEM-server).|
+|Brug dashboardet Administration af sårbarheder & Threat & (eller det nye [sikkerhedsdashboard](security-dashboard.md)) <p> Få vist oplysninger om de seneste eller aktuelle trusler|Et af følgende: <ul><li>**Global administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
+|Brug [Stifinder (og registreringer i realtid)](threat-explorer.md) til at analysere trusler|Et af følgende: <ul><li>**Global administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
+|Vis hændelser (også kaldet Undersøgelser) <p> Føj mails til en hændelse|Et af følgende: <ul><li>**Global administrator**</li><li>**Sikkerhedsadministrator**</li><li>**Sikkerhedslæser**</li></ul> <p> Disse roller kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>).|
+|Udløs mailhandlinger i en hændelse <p> Find og slet mistænkelige mails|Et af følgende: <ul><li>**Global administrator**</li><li>**Sikkerhedsadministrator** plus rollen **Søg og Fjern**</li></ul> <p> Rollerne **Global administrator** og **Sikkerhedsadministrator** kan tildeles enten i Azure Active Directory (<https://portal.azure.com>) eller i Microsoft 365 Administration (<https://admin.microsoft.com>). <p> Rollen **Søg og Fjern** skal tildeles i **rollerne Mail & samarbejde** på Microsoft 36 Defender-portalen (<https://security.microsoft.com>).|
+|Integrer Microsoft Defender for Office 365 Plan 2 med Microsoft Defender for Endpoint <p> Integrer Microsoft Defender for Office 365 Plan 2 med en SIEM-server|Rollen **Global administrator** eller **Sikkerhedsadministrator** tildelt i enten Azure Active Directory (<https://portal.azure.com>) eller Microsoft 365 Administration (<https://admin.microsoft.com>). <p> --- **Plus** --- <p> En relevant rolle, der er tildelt i yderligere programmer (f.eks[. Microsoft Defender Security Center](/windows/security/threat-protection/microsoft-defender-atp/user-roles) eller din SIEM-server).|
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Få mere at vide om Threat Trackers – nye og be noterede](threat-trackers.md)
-- [Find og undersøg skadelige mails, der blev leveret (Office 365 trusselsundersøgelse og -svar)](investigate-malicious-email-that-was-delivered.md)
-- [Integrer Office 365 trusselsundersøgelse og svar med Microsoft Defender for Endpoint](integrate-office-365-ti-with-mde.md)
-- [Simulere et phishingangreb](attack-simulation-training.md)
+- [Få mere at vide om Threat Trackers – Ny og Bemærkelsesværdig](threat-trackers.md)
+- [Find og undersøg ondsindet mail, der blev leveret (Office 365 Threat Investigation og Response)](investigate-malicious-email-that-was-delivered.md)
+- [Integrer Office 365 Threat Investigation og Response med Microsoft Defender for Endpoint](integrate-office-365-ti-with-mde.md)
+- [Simuler et phishing-angreb](attack-simulation-training.md)

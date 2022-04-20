@@ -15,15 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Du kan løse en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
-ms.openlocfilehash: fa4a595a967935241e67b9a88ed158c789075102
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Du kan rette en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
+ms.openlocfilehash: d3b90f0f2d396b6304bb85b46bc5b018802101eb
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935648"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993990"
 ---
-# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i et enkelt element i eDiscovery (Premium)
+# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i enkelt element i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Fejlafhjælpning giver brugere af Microsoft Purview eDiscovery (Premium) mulighed for at rette dataproblemer, der forhindrer eDiscovery (Premium) i at behandle indholdet korrekt. Filer, der er beskyttet med adgangskode, kan f.eks. ikke behandles, fordi disse filer er låst eller krypteret. Tidligere kunne du kun løse flere fejl ved hjælp af [denne arbejdsproces](error-remediation-when-processing-data-in-advanced-ediscovery.md). Men nogle gange giver det ikke mening at afhjælpe fejl i flere filer, når du er usikker på, om nogen af disse filer reagerer på den sag, du undersøger. Det giver muligvis heller ikke mening at afhjælpe fejl, før du har haft mulighed for at gennemse filmetadata (f.eks. filplacering, eller hvem der havde adgang) for at hjælpe dig med at træffe de første beslutninger om svartid. En ny funktion, der kaldes *afhjælpning af fejl med enkelt element* , giver eDiscovery-ledere mulighed for at få vist metadataene for filer med en behandlingsfejl og om nødvendigt afhjælpe fejlen direkte i korrektursættet. I artiklen beskrives det, hvordan du identificerer, ignorerer og afhjælper filer med behandlingsfejl i et korrektursæt.
 

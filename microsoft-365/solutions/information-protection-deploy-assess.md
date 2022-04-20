@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Bestem reglerne for beskyttelse af personlige oplysninger, de relevante scenarier, din parathed og de følsomme oplysningstyper, der findes i dit Microsoft 365 miljø.
-ms.openlocfilehash: 967c64dee2d99f41b3c2a1b6a193730dcd75811a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e2d87599315e7bb43b289d74b5f192b29aecd965
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947511"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973468"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>Vurder risici for beskyttelse af personlige oplysninger, og identificer følsomme elementer med Microsoft 365
 
@@ -60,22 +60,22 @@ Til senere henvisninger i artiklerne i denne overordnede løsning indeholder den
 
 |Forordning|Artikel/sektion|Uddrag|Relevante tekniske kontrolkategorier|
 |---|---|---|---|
-|GDPR|Artikel 5, stk. 1, litra f)|Personoplysninger skal behandles på en måde, der sikrer passende sikkerhed for personoplysningerne, herunder beskyttelse mod uautoriseret eller ulovlig behandling og mod utilsigtet tab, ødelæggelse eller skade, ved hjælp af passende tekniske eller organisatoriske foranstaltninger ("integritet og fortrolighed".|(Alle) <br> Identitet <br> Enhed <br> Trusselsbeskyttelse <br> Beskyt oplysninger <br> Styr oplysninger <br> Find og besvar|
+|GDPR|Artikel 5, stk. 1, litra f)|Personoplysninger skal behandles på en måde, der sikrer passende sikkerhed for personoplysningerne, herunder beskyttelse mod uautoriseret eller ulovlig behandling og mod utilsigtet tab, ødelæggelse eller skade, ved hjælp af passende tekniske eller organisatoriske foranstaltninger ("integritet og fortrolighed".|(Alle) <br> Identitet <br> Enhed <br> Trusselsbeskyttelse <br> Beskyt oplysninger <br> Styr oplysninger <br> Opdag og svar|
 ||Artikel 32, stk. 1, litra a)|Under hensyntagen til den tekniske udvikling, gennemførelsesomkostningerne og behandlingens art, omfang, sammenhæng og formål samt risikoen for varierende sandsynlighed og alvor for fysiske personers rettigheder og friheder skal den dataansvarlige og databehandleren iværksætte passende tekniske og organisatoriske foranstaltninger for at sikre et sikkerhedsniveau, der svarer til risikoen.  herunder bl.a. efter behov: (a) pseudonymisering og kryptering af personoplysninger.|Beskyt oplysninger|
 ||Artikel 13, stk. 2, litra a)|"... den dataansvarlige skal på det tidspunkt, hvor der indhentes personoplysninger, give den registrerede følgende yderligere oplysninger, der er nødvendige for at sikre en retfærdig og gennemsigtig behandling: (a) den periode, hvor personoplysningerne vil blive opbevaret, eller hvis dette ikke er muligt, de kriterier, der anvendes til at fastslå den pågældende periode.|Styr oplysninger|
-||Artikel 15, stk. 1, litra e)|Den registrerede har ret til fra den dataansvarlige at få bekræftet, om personoplysninger om ham eller hende behandles, og hvis det er tilfældet, adgang til personoplysningerne og følgende oplysninger: e) tilstedeværelsen af retten til at anmode den dataansvarlige om at korrigere eller slette personoplysninger eller begrænsning af behandlingen af den registreredes personoplysninger eller gøre indsigelse mod sådanne Behandling|Find og besvar|
-|LGPD|Artikel 46|Behandlingsagenter skal vedtage sikkerheds-, tekniske og administrative foranstaltninger, der kan beskytte personoplysninger mod uautoriseret adgang og hændelige eller ulovlige situationer med ødelæggelse, tab, ændring, kommunikation eller enhver form for uretmæssig eller ulovlig behandling.|Beskyt oplysninger <br> Styr oplysninger <br> Find og besvar|
-||Artikel 48|Den dataansvarlige skal underrette den nationale myndighed og den registrerede om forekomsten af en sikkerhedsrisiko, der kan medføre risiko eller relevant skade på den registrerede.|Find og besvar|
+||Artikel 15, stk. 1, litra e)|Den registrerede har ret til fra den dataansvarlige at få bekræftet, om personoplysninger om ham eller hende behandles, og hvis det er tilfældet, adgang til personoplysningerne og følgende oplysninger: e) tilstedeværelsen af retten til at anmode den dataansvarlige om at korrigere eller slette personoplysninger eller begrænsning af behandlingen af den registreredes personoplysninger eller gøre indsigelse mod sådanne Behandling|Opdag og svar|
+|LGPD|Artikel 46|Behandlingsagenter skal vedtage sikkerheds-, tekniske og administrative foranstaltninger, der kan beskytte personoplysninger mod uautoriseret adgang og hændelige eller ulovlige situationer med ødelæggelse, tab, ændring, kommunikation eller enhver form for uretmæssig eller ulovlig behandling.|Beskyt oplysninger <br> Styr oplysninger <br> Opdag og svar|
+||Artikel 48|Den dataansvarlige skal underrette den nationale myndighed og den registrerede om forekomsten af en sikkerhedsrisiko, der kan medføre risiko eller relevant skade på den registrerede.|Opdag og svar|
 |HIPPA-HITECH|45 CFR 164.312(e)(1)|Implementer tekniske sikkerhedsforanstaltninger for at beskytte mod uautoriseret adgang til elektroniske beskyttede sundhedsoplysninger, der overføres via et elektronisk kommunikationsnetværk.|Beskyt oplysninger|
 ||45 F.F.R. 164.312(e)(2)(ii)|Implementer en mekanisme til kryptering af elektroniske beskyttede tilstandsoplysninger, når det skønnes hensigtsmæssigt.|Beskyt oplysninger|
 ||45 CFR 164.312(c)(2)|Implementere elektroniske mekanismer til at bekræfte, at elektroniske beskyttede sundhedsoplysninger ikke er blevet ændret eller destrueret på en uautoriseret måde.|Styr oplysninger|
 ||45 CFR 164.316(b)(1)(i)|Hvis en handling, aktivitet eller vurdering af denne subpart kræves for at blive dokumenteret, skal du vedligeholde en skriftlig (som kan være elektronisk) registrering af handlingen, aktiviteten eller vurderingen|Styr oplysninger|
 ||45 CFR 164.316(b)(1)(ii)|Bevar den dokumentation, der kræves i henhold til afsnit b) (1) i dette afsnit i seks år fra oprettelsesdatoen eller datoen for sidste anvendelse, alt efter hvad der sker senere.|Styr oplysninger|
-||45 F.F.R. 164.308(a)(1)(ii)(D)|Implementer procedurer for regelmæssigt at gennemse poster over aktiviteter i informationssystemet, f.eks. overvågningslogge, adgangsrapporter og sporingsrapporter for sikkerhedshændelser|Find og besvar|
-||45 F.F.R. 164.308(a)(6)(ii)|Identificere og reagere på formodede eller kendte sikkerhedshændelser; i det omfang det er praktisk muligt at afhjælpe skadelige virkninger af sikkerhedshændelser, der er kendt af den dækkede enhed eller forretningspartner og dokumentere sikkerhedshændelser og deres resultater.|Find og besvar|
-||45 F.F.R. 164.312(b)|Implementer hardware-, software- og proceduremekanismer, der registrerer og undersøger aktiviteter i informationssystemer, der indeholder eller bruger elektroniske beskyttede tilstandsoplysninger.|Find og besvar|
-|CCPA|1798.105(c)|En virksomhed, der modtager en verificerbar anmodning fra en forbruger om at slette forbrugerens personlige oplysninger i henhold til underinddeling (a) i dette afsnit, skal slette forbrugerens personlige oplysninger fra dens poster og bede tjenesteudbydere om at slette forbrugerens personlige oplysninger fra deres registre|Find og besvar|
-||1798.105(d)|(undtagelser fra 1798.105(c) <br> En virksomhed eller en tjenesteyder er ikke forpligtet til at opfylde en forbrugers anmodning om at slette forbrugerens personlige oplysninger, hvis det er nødvendigt for virksomheden eller tjenesteudbyderen at vedligeholde forbrugerens personlige oplysninger med henblik på: (se den aktuelle forordning for yderligere oplysninger).|Find og besvar|
+||45 F.F.R. 164.308(a)(1)(ii)(D)|Implementer procedurer for regelmæssigt at gennemse poster over aktiviteter i informationssystemet, f.eks. overvågningslogge, adgangsrapporter og sporingsrapporter for sikkerhedshændelser|Opdag og svar|
+||45 F.F.R. 164.308(a)(6)(ii)|Identificere og reagere på formodede eller kendte sikkerhedshændelser; i det omfang det er praktisk muligt at afhjælpe skadelige virkninger af sikkerhedshændelser, der er kendt af den dækkede enhed eller forretningspartner og dokumentere sikkerhedshændelser og deres resultater.|Opdag og svar|
+||45 F.F.R. 164.312(b)|Implementer hardware-, software- og proceduremekanismer, der registrerer og undersøger aktiviteter i informationssystemer, der indeholder eller bruger elektroniske beskyttede tilstandsoplysninger.|Opdag og svar|
+|CCPA|1798.105(c)|En virksomhed, der modtager en verificerbar anmodning fra en forbruger om at slette forbrugerens personlige oplysninger i henhold til underinddeling (a) i dette afsnit, skal slette forbrugerens personlige oplysninger fra dens poster og bede tjenesteudbydere om at slette forbrugerens personlige oplysninger fra deres registre|Opdag og svar|
+||1798.105(d)|(undtagelser fra 1798.105(c) <br> En virksomhed eller en tjenesteyder er ikke forpligtet til at opfylde en forbrugers anmodning om at slette forbrugerens personlige oplysninger, hvis det er nødvendigt for virksomheden eller tjenesteudbyderen at vedligeholde forbrugerens personlige oplysninger med henblik på: (se den aktuelle forordning for yderligere oplysninger).|Opdag og svar|
 |||||
 
 > [!IMPORTANT]
@@ -190,7 +190,7 @@ GDPR-vurderingen består af følgende afsnit:
 
 Dette trin omfatter identifikation af bestemte følsomme informationstyper, der er underlagt specifikke lovmæssige kontroller, samt forekomsten af dem i dit Microsoft 365 miljø.
 
-Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, og det kan tidligere omfatte en kombination af at bruge Søgning efter overholdelse, eDiscovery, Advanced eDiscovery, DLP og overvågning.
+Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, og det kan tidligere omfatte en kombination af at bruge Søgning efter overholdelse, eDiscovery, eDiscovery (Premium), DLP og overvågning.
 
 Med den nye **dataklassificeringsløsning** på Microsoft Purview-overholdelsesportalen er dette blevet meget nemmere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md) , som fungerer sammen med enten indbyggede eller brugerdefinerede typer følsomme oplysninger, herunder dem, der er relateret til personlige data.
 

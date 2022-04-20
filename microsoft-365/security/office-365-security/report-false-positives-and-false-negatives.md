@@ -1,5 +1,5 @@
 ---
-title: Rapportér falske positive og falske negativer i Outlook
+title: Rapportér falske positiver og falske negativer i Outlook
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -10,49 +10,49 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om, hvordan du rapporterer falske positive og falske Outlook ved hjælp af funktionen Rapportmeddelelse.
+description: Få mere at vide om, hvordan du rapporterer falske positiver og falske negativer i Outlook ved hjælp af funktionen Rapportmeddelelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e5539525b6d752223c4895fc62ff49a90768a5b5
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: 8f52b4d085c13f2e1e1a48c2a8a12e6782f13960
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "63606526"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64974097"
 ---
-# <a name="report-false-positives-and-false-negatives-in-outlook"></a>Rapportér falske positive og falske negativer i Outlook
+# <a name="report-false-positives-and-false-negatives-in-outlook"></a>Rapportér falske positiver og falske negativer i Outlook
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
-> Hvis du er administrator i en Microsoft 365 organisation med Exchange Online-postkasser, anbefaler vi, at du bruger siden Indsendelser på Microsoft 365 Defender-portalen. Få mere at vide under [Brug portalen indsendelser til at sende mistænkeligt spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+> Hvis du er administrator i en Microsoft 365 organisation med Exchange Online postkasser, anbefaler vi, at du bruger siden **Indsendelser** på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
-I Microsoft 365-organisationer med postkasser i Exchange Online eller lokale postkasser med moderne hybridgodkendelse kan du sende falske positive (god mail, der blev blokeret eller sendt til mappen Uønsket) og falske negativer (uønsket mail eller phish, der blev leveret til indbakken) til Exchange Online Protection (EOP).
+I Microsoft 365 organisationer med postkasser i Exchange Online eller lokale postkasser ved hjælp af hybrid moderne godkendelse kan du sende falske positiver (god mail, der blev blokeret eller sendt til mappen med uønsket post) og falske negativer (uønsket mail eller phish, der blev leveret til indbakken) til Exchange Online Protection (EOP).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du får den bedste brugerindsendelsesoplevelse ved at bruge tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapportphishing.
+- Hvis du vil have den bedste brugerindsendelsesoplevelse, skal du bruge tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapport phishing.
 
-- Tilføjelsesprogrammet Rapportmeddelelse og tilføjelsesprogrammet Report Phishing fungerer for Outlook på alle platforme (Outlook på internettet, iOS, Android og skrivebord).
+- Tilføjelsesprogrammet Rapportmeddelelse og tilføjelsesprogrammet Rapport phishing fungerer for Outlook på alle platforme (Outlook på internettet, iOS, Android og Desktop).
 
-- Hvis du er administrator i en organisation med Exchange Online, kan du bruge indsendelsesportalen på Microsoft 365 Defender portal. Få mere at vide under [Brug administratorindsendelse til at sende mistænkeligt spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+- Hvis du er administrator i en organisation med Exchange Online postkasser, skal du bruge portalen Indsendelser på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Brug indsendelse af administratorer til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
-- Du kan konfigurere at sende meddelelser direkte til Microsoft, en postkasse, du angiver, eller begge dele. Få mere at vide under [Politikker for brugerindsendelse](user-submission.md).
+- Du kan konfigurere til at sende meddelelser direkte til Microsoft, en postkasse, du angiver, eller begge dele. Du kan få flere oplysninger under [Politikker for brugerindsendelser](user-submission.md).
 
-- Du kan finde flere oplysninger om, hvordan du henter og aktiverer rapportmeddelelsen eller tilføjelsesprogrammet Report Phishing, under Aktivere rapportmeddelelsen eller tilføjelsesprogrammet [Rapportphishing](enable-the-report-message-add-in.md).
+- Du kan få flere oplysninger om, hvordan du henter og aktiverer tilføjelsesprogrammer til rapportmeddelelse eller phishing af rapporter, under [Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing](enable-the-report-message-add-in.md).
 
-- Du kan finde flere oplysninger om rapportering af meddelelser til Microsoft [i Rapportere meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
+- Du kan få flere oplysninger om rapportering af meddelelser til Microsoft under [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
 
 ### <a name="turn-off-the-built-in-reporting-experience"></a>Slå den indbyggede rapporteringsoplevelse fra
 
-Vi anbefaler ikke den indbyggede rapporteringsoplevelse i Outlook fordi den ikke kan bruge politikken for [brugerindsendelse](./user-submission.md). Vi anbefaler, at du i stedet bruger tilføjelsesprogrammet Rapportmeddelelse eller phishing-tilføjelsesprogrammet Rapport.
+Vi anbefaler ikke den indbyggede rapporteringsoplevelse i Outlook, fordi den ikke kan bruge [politikken for brugerindsendelse](./user-submission.md). Vi anbefaler, at du bruger tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapport phishing i stedet.
 
-Du skal have tildelt tilladelser, før du kan køre denne cmdlet. For at finde de tilladelser, der kræves for at køre en cmdlet eller parameter i din organisation, skal du se Find de nødvendige tilladelser til at køre en Exchange [cmdlet](/powershell/exchange/find-exchange-cmdlet-permissions).
+Du skal have tildelt tilladelser, før du kan køre denne cmdlet. Hvis du vil finde de tilladelser, der kræves for at køre en cmdlet eller parameter i din organisation, skal du se [Find de tilladelser, der kræves for at køre en Exchange cmdlet](/powershell/exchange/find-exchange-cmdlet-permissions).
 
 Kør følgende PowerShell-kommando for at deaktivere den indbyggede rapporteringsoplevelse i Outlook på internettet:
 
@@ -60,36 +60,35 @@ Kør følgende PowerShell-kommando for at deaktivere den indbyggede rapportering
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -ReportJunkEmailEnabled $false
 ```
 
-
 ## <a name="use-the-report-message-feature"></a>Brug funktionen Rapportmeddelelse
 
 ### <a name="report-junk-and-phishing-messages"></a>Rapportér uønskede meddelelser og phishingmeddelelser
 
-For meddelelser i indbakken eller en anden mailmappe, undtagen Uønsket mail, skal du bruge følgende metode til at rapportere spam- og phishingmeddelelser:
+I forbindelse med meddelelser i indbakken eller andre mailmapper undtagen uønsket mail skal du bruge følgende metode til at rapportere spam og phishing-meddelelser:
 
-1. Vælg **ellipserne** Flere handlinger i øverste højre hjørne af den markerede meddelelse, vælg Rapportmeddelelse i rullemenuen, og vælg derefter **Uønsket** eller **Phishing**.
+1. Vælg ellipsen **Flere handlinger** i øverste højre hjørne af den valgte meddelelse, vælg **Rapportmeddelelse** i rullemenuen, og vælg derefter **Uønsket** eller **Phishing**.
 
-   ![Rapportmeddelelse – Flere handlinger.](../../media/report-message-more-actions.png)
+   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Ikonet Flere handlinger" lightbox="../../media/report-message-more-actions.png":::
 
-   ![Rapportmeddelelse – Uønsket og Phishing.](../../media/report-message-junk-phishing.png)
+   :::image type="content" source="../../media/report-message-junk-phishing.png" alt-text="Indstillingen Uønsket og phishing i ruden Rapportmeddelelse" lightbox="../../media/report-message-junk-phishing.png":::
 
 2. De valgte meddelelser sendes til Microsoft til analyse og:
    - Flyttet til mappen Uønsket mail, hvis de blev rapporteret som spam.
-   - Slettet, hvis det blev rapporteret som phishing.
+   - Slettet, hvis de blev rapporteret som phishing.
 
-### <a name="report-messages-that-are-not-junk"></a>Rapportér meddelelser, der ikke er uønskede
+### <a name="report-messages-that-are-not-junk"></a>Rapportmeddelelser, der ikke er uønsket
 
-1. Vælg **ellipserne** Flere handlinger i øverste højre hjørne af den markerede meddelelse, vælg Rapportmeddelelse i rullemenuen, og vælg derefter **Ikke uønsket**.
+1. Vælg ellipsen **Flere handlinger** i øverste højre hjørne af den valgte meddelelse, vælg **Rapportmeddelelse** i rullemenuen, og vælg derefter **Ikke uønsket.**
 
-   ![Rapportmeddelelse – Flere handlinger.](../../media/report-message-more-actions.png)
+   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Ikonet, der indeholder flere handlinger" lightbox="../../media/report-message-more-actions.png":::
 
-   ![Rapportmeddelelse – Ikke uønsket.](../../media/report-message-not-junk.png)
+   :::image type="content" source="../../media/report-message-not-junk.png" alt-text="Indstillingen Ikke uønsket mail i ruden Rapportmeddelelse" lightbox="../../media/report-message-not-junk.png":::
 
-2. Den markerede meddelelse sendes til Microsoft til analyse og flyttes til Indbakke eller en anden angivet mappe.
+2. Den valgte meddelelse sendes til Microsoft til analyse og flyttes til Indbakke eller en anden angivet mappe.
 
 ## <a name="view-and-review-reported-messages"></a>Få vist og gennemse rapporterede meddelelser
 
 Hvis du vil gennemse meddelelser, som brugerne rapporterer til Microsoft, har du følgende muligheder:
 
-- Brug **siden Indsendelser** i Microsoft 365 Defender portal. Få mere at vide under [Få vist brugerindsendelser til Microsoft](admin-submission.md#view-user-submissions-to-microsoft).
-- Opret en regel for mailflow (også kaldet en transportregel) til at sende kopier af rapporterede meddelelser. Du kan finde en vejledning [i Brug regler for mailflow for at se, hvad brugerne rapporterer til Microsoft](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft).
+- Brug siden **Indsendelser** på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Få vist brugerindsendelser til Microsoft](admin-submission.md#view-user-submissions-to-microsoft).
+- Opret en regel for mailflow (også kendt som en transportregel) for at sende kopier af rapporterede meddelelser. Du kan finde instruktioner under [Brug regler for mailflow til at se, hvilke brugere der rapporterer til Microsoft](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft).

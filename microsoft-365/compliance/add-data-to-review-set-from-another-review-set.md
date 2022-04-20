@@ -15,18 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du vælger dokumenter fra ét korrektursæt og arbejder med dem individuelt i et andet sæt i en Microsoft Purview eDiscovery-sag (Premium).
+description: Få mere at vide om, hvordan du vælger dokumenter fra ét korrektursæt og arbejder med dem individuelt i et andet sæt i en Microsoft Purview eDiscovery (Premium)-sag.
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: deb0389a4f4bd9bafedd3b2a8dd6c367c6e78fbb
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b87c9278b5009f6873414f8fc53d434c458c62ad
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941165"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995838"
 ---
 # <a name="add-data-to-a-review-set-from-another-review-set"></a>Føj data til et korrektursæt fra et andet korrektursæt
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I nogle tilfælde kan det være nødvendigt at vælge dokumenter fra ét korrektursæt og arbejde med dem individuelt i et andet korrektursæt. Dette er især nyttigt, hvis du har slettet indhold i et anmeldelsessæt og gerne vil køre analyser på undersættet af data.
 

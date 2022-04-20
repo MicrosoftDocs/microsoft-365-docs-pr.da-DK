@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug samlinger i eDiscovery (Premium) til at søge efter og indsamle indhold, der er i forhold til din sag eller undersøgelse.
-ms.openlocfilehash: 8831508260d48dc270a5e4b7a15cecf894656ff6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f57748d54bc177812fd89eca13252311d4ab269f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940263"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996234"
 ---
 # <a name="learn-about-collections-in-ediscovery-premium"></a>Få mere at vide om samlinger i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når organisationer står over for at indsamle den kommunikation og det indhold, der kan være relevant for en undersøgelse eller potentiel procesførelse, står de over for en betydelig udfordring under de bedste omstændigheder. På nutidens moderne arbejdsplads muliggør indholdsmængden, variationen og hastigheden innovation og fjernarbejde, samtidig med at kravene til og processen til administration af samlinger til eDiscovery-undersøgelser udvides.
 
@@ -35,7 +37,7 @@ Når samlingen er defineret, kan eDiscovery-ledere gemme samlingen som en kladde
 
 Når lederen er tilfreds med omfanget af samlingen og den anslåede indholdsmængde, der sandsynligvis vil være dynamisk, kan lederen tilføje eller *bekræfte* indholdet til et korrektursæt. Når en samling bindes til et anmeldelsessæt, har denne leder også mulighed for at inkludere chatsamtaler, vedhæftede filer i skyen og dokumentversioner. Indholdet i samlingen gennemgår også et andet niveau af behandling under indtagelse i anmeldelsessættet. og samlingen opdateres med den endelige samlingsoversigt. Når indhold er føjet til korrektursættet, kan eDiscovery-ledere fortsætte med at forespørge, gruppere og tilpasse indholdet i for at hjælpe med minimering og gennemsyn. Derudover opdateres samlingen med oplysninger og statistikker om det indhold, der er anvendt i korrektursættet. Dette indeholder en historisk reference om indholdet i samlingen.
 
-Med udgivelsen af samlinger i en eDiscovery -sag (Premium) er fanen **Søgninger** blevet omdøbt til **Samlinger** i en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen. Trinnene til at definere omfanget og størrelsen af samlingen følger samme proces som søgning for at definere placeringer og betingelser. Gem som kladde, og få eksempelestimater giver mulighed for hurtig validering af målrettet omfang af samlinger, før der indgås en komplet søgning og samling i korrektursættet. Dette giver mulighed for forbedret jobstyring og målrettede gentagelser, så du begynder at minimere indholdet under søge- og samlingsprocessen.
+Med udgivelsen af samlinger i en eDiscovery (Premium) er fanen **Søgninger** blevet omdøbt til **Samlinger** i et eDiscovery(Premium)-tilfælde i Microsoft Purview-overholdelsesportalen. Trinnene til at definere omfanget og størrelsen af samlingen følger samme proces som søgning for at definere placeringer og betingelser. Gem som kladde, og få eksempelestimater giver mulighed for hurtig validering af målrettet omfang af samlinger, før der indgås en komplet søgning og samling i korrektursættet. Dette giver mulighed for forbedret jobstyring og målrettede gentagelser, så du begynder at minimere indholdet under søge- og samlingsprocessen.
 
 ## <a name="collections-workflow"></a>Arbejdsproces for samlinger
 
@@ -51,7 +53,7 @@ Her er en grundlæggende arbejdsproces og beskrivelser af hvert trin i processen
 
 4. **Send en kladdesamling til et korrektursæt**. Når du er overbevist om, at samlingen returnerer det typeindhold, der er relevant for sagen, kan du bekræfte samlingen til korrektursættet. Når du sender en samling, har du mulighed for at føje samtaletråde, vedhæftede filer i skyen og dokumentversioner til korrektursættet, hvilket alt sammen kan være relevant for sagen.
 
-   Når du sender en samling, udtrækkes underordnede elementer, f.eks. mailsignaturer og billeder, fra et overordnet element (f.eks. en mail, en chatbesked eller et dokument) og behandles derefter af OPTISK tegngenkendelse (OCR) for at udtrække tekst fra det underordnede element. Tekst, der er udtrukket fra underordnede elementer, føjes derefter til det overordnede element, så du kan få den vist i korrektursættet. Hvis du ikke føjer underordnede elementer til korrektursættet som en separat fil, hjælper eDiscovery (Premium) med at begrænse antallet af potentielt immaterielle elementer, der føjes til korrektursættet. Du kan få flere oplysninger om, hvordan underordnede elementer håndteres, under [Indsamlingsstatistik og -rapporter](collection-statistics-reports.md#collection-contents).
+   Når du sender en samling, udtrækkes underordnede elementer, f.eks. mailsignaturer og billeder, fra et overordnet element (f.eks. en mail, en chatbesked eller et dokument) og behandles derefter af OPTISK tegngenkendelse (OCR) for at udtrække tekst fra det underordnede element. Tekst, der er udtrukket fra underordnede elementer, føjes derefter til det overordnede element, så du kan få den vist i korrektursættet. Hvis du ikke føjer underordnede elementer til korrektursættet som en separat fil, hjælper eDiscovery (Premium) med at begrænse antallet af potentielt uvæsentlige elementer, der føjes til korrektursættet. Du kan få flere oplysninger om, hvordan underordnede elementer håndteres, under [Indsamlingsstatistik og -rapporter](collection-statistics-reports.md#collection-contents).
 
    Du kan få flere oplysninger under [Send en kladdesamling til et gennemsynssæt](commit-draft-collection.md).
 

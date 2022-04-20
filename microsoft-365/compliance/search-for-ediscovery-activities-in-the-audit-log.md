@@ -15,20 +15,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgning, eDiscovery (Standard) og eDiscovery-opgaver (Premium) på Microsoft Purview-overholdelsesportalen.
+description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgnings-, eDiscovery- (Standard) og eDiscovery-opgaver (Premium) på Microsoft Purview-overholdelsesportalen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 519347ed8f074fc15c8618f6ceb84159314c5915
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1e21fcff71d050e09a60a6708678d46f2b894bdc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941825"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995860"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Søg efter eDiscovery-aktiviteter i overvågningsloggen
 
-Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)), der udføres i Microsoft Purview-overholdelsesportalen eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium), der udføres i Microsoft Purview-overholdelsesportalen eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
   
-- Oprettelse og administration af core- og eDiscovery-sager (Premium)
+- Oprettelse og administration af Core- og eDiscovery-sager (Premium)
 
 - Oprettelse, start og redigering af indholdssøgninger
 
@@ -101,8 +103,8 @@ I følgende tabel beskrives de indholdssøgnings- og eDiscovery-aktiviteter (Sta
 |Downloadet eksport af indholdssøgning  <br/> |SearchExportDownloaded  <br/> |NIELSEN  <br/> |En bruger har downloadet resultaterne af en indholdssøgning til deres lokale computer. En **startet eksport af indholdssøgningsaktivitet** skal startes, før søgeresultaterne kan downloades.  <br/> |
 |Resultater af indholdssøgning, der er forhåndsvist  <br/> |Søgning er gennemset  <br/> |NIELSEN  <br/> |En bruger har forhåndsvist resultaterne af en indholdssøgning.  <br/> |
 |Slettede resultater af indholdssøgning  <br/> |SearchResultsPurged  <br/> |New-ComplianceSearchAction  <br/> |En bruger fjernede resultaterne af en indholdssøgning ved at køre kommandoen **New-ComplianceSearchAction -Purge** .  <br/> |
-|Fjernet analyse af indholdssøgning  <br/> |RemovedSearchResultsSentToZoom  <br/> |Remove-ComplianceSearchAction  <br/> |En forberedelseshandling for indholdssøgning (til forberedelse af søgeresultater til eDiscovery (Premium)) blev slettet. Hvis forberedelseshandlingen var mindre end to uger gammel, blev de søgeresultater, der blev forberedt til eDiscovery (Premium), slettet fra Microsoft Azure lagerområde. Hvis forberedelseshandlingen var ældre end 2 uger, angiver denne hændelse, at det kun er den tilsvarende forberedelseshandling, der blev slettet.  <br/> |
-|Eksport af indholdssøgning er fjernet  <br/> |RemovedSearchExported  <br/> |Remove-ComplianceSearchAction  <br/> |En eksporthandling for indholdssøgning blev slettet. Hvis eksporthandlingen var mindre end to uger gammel, blev de søgeresultater, der blev overført til Microsoft Azure lagerområde, slettet. Hvis eksporthandlingen var ældre end 2 uger, angiver denne hændelse, at det kun er den tilsvarende eksporthandling, der blev slettet.  <br/> |
+|Fjernet analyse af indholdssøgning  <br/> |RemovedSearchResultsSentToZoom  <br/> |Remove-ComplianceSearchAction  <br/> |En forberedelseshandling for indholdssøgning (til forberedelse af søgeresultater til eDiscovery (Premium)) blev slettet. Hvis forberedelseshandlingen var mindre end to uger gammel, blev de søgeresultater, der blev forberedt til eDiscovery (Premium), slettet fra Microsoft Azure-lageret. Hvis forberedelseshandlingen var ældre end 2 uger, angiver denne hændelse, at det kun er den tilsvarende forberedelseshandling, der blev slettet.  <br/> |
+|Eksport af indholdssøgning er fjernet  <br/> |RemovedSearchExported  <br/> |Remove-ComplianceSearchAction  <br/> |En eksporthandling for indholdssøgning blev slettet. Hvis eksporthandlingen var mindre end to uger gammel, blev de søgeresultater, der blev overført til Microsoft Azure-lagerområdet, slettet. Hvis eksporthandlingen var ældre end 2 uger, angiver denne hændelse, at det kun er den tilsvarende eksporthandling, der blev slettet.  <br/> |
 |Fjernede medlem fra eDiscovery-sag  <br/> |CaseMemberRemoved  <br/> |Remove-ComplianceCaseMember  <br/> |En bruger blev fjernet som medlem af en eDiscovery-sag.  <br/> |
 |Fjernede eksempelresultaterne af indholdssøgningen  <br/> |RemovedSearchPreviewed  <br/> |Remove-ComplianceSearchAction  <br/> |En visningshandling for indholdssøgning blev slettet.  <br/> |
 |Fjernede den slettede handling, der blev udført på indholdssøgning  <br/> |RemovedSearchResultsPurged  <br/> |Remove-ComplianceSearchAction  <br/> |En handling til sletning af indholdssøgning blev slettet.  <br/> |
@@ -120,12 +122,12 @@ I følgende tabel beskrives de indholdssøgnings- og eDiscovery-aktiviteter (Sta
   
 ## <a name="ediscovery-premium-activities"></a>eDiscovery-aktiviteter (Premium)
 
-I følgende tabel beskrives de eDiscovery-aktiviteter (Premium), der logføres i overvågningsloggen. Disse aktiviteter kan bruges til at hjælpe dig med at spore forløbet af aktiviteter i en eDiscovery-sag (Premium).
+I følgende tabel beskrives de eDiscovery-aktiviteter (Premium), der logføres i overvågningsloggen. Disse aktiviteter kan bruges som en hjælp til at spore forløbet af aktiviteter i en eDiscovery-sag (Premium).
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
 |Data er føjet til et andet korrektursæt|AddWorkingSetQueryToWorkingSet|Brugeren har føjet dokumenter fra ét korrektursæt til et andet korrektursæt.|
-|Tilføjede data til gennemsynssættet|AddQueryToWorkingSet|Brugeren har føjet søgeresultaterne fra en indholdssøgning, der er knyttet til en eDiscovery-sag (Premium), til et korrektursæt.|
+|Tilføjede data til gennemsynssættet|AddQueryToWorkingSet|Brugeren har føjet søgeresultaterne fra en indholdssøgning, der er knyttet til en eDiscovery(Premium)-sag, til et korrektursæt.|
 |Tilføjede data, der ikke Microsoft 365, for at gennemse sættet|AddNonOffice365DataToWorkingSet|Brugeren føjede ikke-Microsoft 365 data til et korrektursæt.|
 |Tilføjede afhjælpede dokumenter for at gennemse sættet|AddRemediatedData|Brugeren overfører dokumenter, der havde indekseringsfejl, som var rettet til et korrektursæt.|
 |Analyserede data i korrektursæt|RunAlgo|Brugeren kørte analyser på dokumenterne i et korrektursæt.|
@@ -206,7 +208,7 @@ I følgende tabel beskrives de egenskaber, der er inkluderet på pop op-siden fo
 |CmdletVersion  <br/> |Buildnummeret for den version af Overholdelsescenter, der kører i din organisation.  <br/> |
 |Oprettelsestid  <br/> |Den dato og det klokkeslæt i UTC (Coordinated Universal Time), hvor eDiscovery-aktiviteten blev fuldført.  <br/> |
 |Effektiv organisation  <br/> |Navnet på Microsoft 365-organisationen.  <br/> |
-|ExchangeLocations  <br/> |De Exchange Online postkasser, der er inkluderet i en indholdssøgning eller sat i venteposition i en eDiscovery-sag.  <br/> |
+|ExchangeLocations  <br/> |De Exchange Online-postkasser, der er inkluderet i en indholdssøgning eller sat i venteposition i en eDiscovery-sag.  <br/> |
 |Udeladelser  <br/> |Postkasser eller webstedsplaceringer, der er udelukket fra en indholdssøgning eller en venteposition i en eDiscovery-sag.  <br/> |
 |Udvidedeegenskaber  <br/> |Yderligere egenskaber fra en indholdssøgning, en indholdssøgningshandling eller venteposition i en eDiscovery-sag, f.eks. objekt-GUID og de tilsvarende cmdlet- og cmdlet-parametre, der blev brugt, da aktiviteten blev udført.  <br/> |
 |Id  <br/> |Id'et for rapportposten. Id'et identificerer entydigt overvågningslogposten.  <br/> |

@@ -1,5 +1,5 @@
 ---
-title: Upload pakken
+title: Upload din pakke
 description: Sådan uploader du dit program, dine binære filer og dine afhængigheder til testbasen
 search.appverid: MET150
 author: mansipatel-usl
@@ -14,18 +14,20 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 9ee299c0972ed4e286e5a660f5082dd5632167e4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cd0d463e234c439d8b57576375fd6a91e512f753
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934263"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995262"
 ---
 # <a name="upload-your-test-base-package-zip"></a>Upload din Test Base-pakke (Zip) 
 
-På siden Test Base-portalen skal du navigere til indstillingen **Upload ny pakke** på navigationslinjen til venstre som vist nedenfor:
+På siden Test Base-portalen skal du gå til indstillingen **Ny pakke** på navigationslinjen til venstre og derefter klikke på **Ældre overførselsoplevelse** for at aktivere zip-overførselsoplevelsen som vist nedenfor:
 
-:::image type="content" alt-text="Upload en ny pakke." source="Media/Upload-New-Package.png" lightbox="Media/Upload-New-Package.png":::
+:::image type="content" alt-text="Upload en ny pakke." source="Media/testapplication01.png" lightbox="Media/testapplication01.png":::
+
+:::image type="content" alt-text="Anvend handlingen." source="Media/testapplication21.png" lightbox="Media/testapplication21.png":::
 
 Når du er der, skal du følge nedenstående trin for at uploade en ny pakke.
 
@@ -56,7 +58,7 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
     En **OOB-test (Out-of-Box)** udfører en *installation*, *start*, *lukning* og *fjernelse* af pakken. Efter installationen gentages startlukningsrutinen 30 gange, før der køres en enkelt fjernelse.
 
-    Denne OOB-test giver dig standardiseret telemetri på din pakke, så du kan sammenligne på tværs af Windows builds.
+    Denne OOB-test giver dig standardiseret telemetri på din pakke, så du kan sammenligne på tværs af Windows-builds.
 
     En **funktionel test** udfører dine uploadede testscript(r) på pakken. Scriptene køres i overførselssekvensen, og en fejl i et bestemt script forhindrer efterfølgende scripts i at blive udført.
 
@@ -65,8 +67,8 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
 4. Vælg opdateringstypen for operativsystemet.
 
-    - 'Sikkerhedsopdateringer' gør det muligt for din pakke at blive testet i forhold til trinvise fald i Windows foreløbige månedlige sikkerhedsopdateringer.
-    - 'Funktionsopdateringer' gør det muligt for din pakke at blive testet i forhold til Windows foreløbige toårige funktionsopdateringer builds fra Windows Insider Program.
+    - 'Sikkerhedsopdateringer' gør det muligt for din pakke at blive testet i forhold til trinvise fald i månedlige sikkerhedsopdateringer, der udgives før udgivelsen af Windows.
+    - 'Funktionsopdateringer' gør det muligt for din pakke at blive testet i forhold til de foreløbige Windows-foreløbige funktionsopdateringer fra Windows Insider Program.
     <!---
     Change to the correct picture
     -->
@@ -74,11 +76,11 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
 5. Vælg operativsystemversionerne til test af sikkerhedsopdatering.
 
-    På rullelisten med flere valg skal du vælge operativsystemversionerne af Windows pakken installeres på.
+    Vælg operativsystemversionerne af Windows, som pakken skal installeres på, på rullelisten med flere valg.
 
-    - Hvis du kun vil teste pakken i forhold til Windows klientoperativsystemer, skal du vælge de relevante Windows klientoperativsystemer på menulisten.
+    - Hvis du kun vil teste pakken i forhold til Windows-klientoperativsystemer, skal du vælge de relevante versioner af Windows-klientoperativsystemet på menulisten.
     - Hvis du kun vil teste pakken i forhold til Windows Server-operativsystemer, skal du vælge de relevante Windows Server OS-versioner på menulisten.
-    - Hvis du vil teste pakken i forhold til Windows klient- og Windows serveroperativsystemer, skal du vælge alle relevante operativsystemer på menulisten.
+    - Hvis du vil teste pakken i forhold til Windows-klient- og Windows Server-operativsystemer, skal du vælge alle relevante operativsystemer på menulisten.
 
     > [!NOTE]
     > Hvis du vælger at teste pakken mod både server- og klient-OSes, skal du sørge for, at pakken er kompatibel og kan køre på begge OSes
@@ -94,7 +96,7 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
       Vi bruger i øjeblikket builds, der flightes i Insider Beta Channel.
 
-    - Vælg den Windows os-version, der skal bruges som baseline, når du sammenligner dine testresultater, i indstillingen "Vælg os-baseline for Insight".
+    - I indstillingen "Vælg OS baseline for Insight" skal du vælge den Windows OS-version, der skal bruges som baseline, når du sammenligner dine testresultater.
 
     > [!NOTE]
     > Vi understøtter ikke funktionsopdateringstest for server-OSes på nuværende tidspunkt

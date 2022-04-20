@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Prøveversion af Microsoft Purview-løsninger.
-ms.openlocfilehash: 5136ceb33f4fb09345ee942b8d411d14952befc5
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 4544e07baa5b8d2b89991d9a31c84a2d7cefb7f8
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952770"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973767"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview-løsninger
 
@@ -225,9 +225,9 @@ Udnyt en arbejdsproces fra start til slut til bevarelse, indsamling, analyse og 
 > [!TIP]
 > Bedste praksis for prøveversion: Dag 1
 
-Hvis du vil have adgang til Advanced eDiscovery eller blive tilføjet som medlem af en Advanced eDiscovery sag, skal en bruger tildeles de relevante tilladelser.
+Hvis du vil have adgang til eDiscovery (Premium) eller tilføjes som medlem af en eDiscovery-sag (Premium), skal en bruger tildeles de relevante tilladelser.
 
-1. [Konfigurer Advanced eDiscovery – tildel eDiscovery-tilladelser](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
+1. [Konfigurer eDiscovery (Premium) – tildel eDiscovery-tilladelser](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
 1. [Tilføj eller fjern medlemmer fra en sag](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 
 ### <a name="step-2-required-create-a-case"></a>Trin 2 (påkrævet): Opret en sag
@@ -235,9 +235,9 @@ Hvis du vil have adgang til Advanced eDiscovery eller blive tilføjet som medlem
 > [!TIP]
 > Bedste praksis for prøveversion: Opret inden for de første 30 dage
 
-Flere organisationer bruger Advanced eDiscovery-løsningen i Microsoft 365 til kritiske eDiscovery-processer. Dette omfatter besvarelse af lovmæssige anmodninger, undersøgelser og retssager.
+Flere organisationer bruger eDiscovery-løsningen (Premium) i Microsoft 365 til kritiske eDiscovery-processer. Dette omfatter besvarelse af lovmæssige anmodninger, undersøgelser og retssager.
 
-1. Administrer Advanced eDiscovery – [få mere at vide om, hvordan du konfigurerer Advanced eDiscovery, administrerer sager ved hjælp af Security & Compliance Center, administrerer en arbejdsproces i Advanced eDiscovery og analyserer Advanced eDiscovery søgeresultater](/learn/modules/manage-advanced-ediscovery).
+1. Administrer eDiscovery (Premium) – [få mere at vide om, hvordan du konfigurerer eDiscovery (Premium), administrerer sager ved hjælp af Security & Compliance Center, administrerer en arbejdsproces i eDiscovery (Premium) og analyserer eDiscovery-søgeresultaterne (Premium).](/learn/modules/manage-advanced-ediscovery)
 1. [Opret en eDiscovery-sag ved hjælp af det nye sagsformat i Advance eDiscovery](advanced-ediscovery-new-case-format.md)
 1. [Luk eller slet en sag](close-or-delete-case.md) – Når sagen eller undersøgelsen er afsluttet, kan du lukke eller slette den. Du kan også genåbne en lukket sag.
 
@@ -245,9 +245,9 @@ Flere organisationer bruger Advanced eDiscovery-løsningen i Microsoft 365 til k
 
 Hvis du vil tillade, at personer i din organisation begynder at oprette og bruge sager, skal du konfigurere globale indstillinger, der gælder for alle sager i din organisation. På nuværende tidspunkt er den eneste globale indstilling **registrering af rettigheder for advokater og klienter** (flere globale indstillinger vil være tilgængelige i fremtiden).
 
-1. [Konfigurer Advanced eDiscovery – global Indstillinger](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
+1. [Konfigurer eDiscovery (Premium) – global Indstillinger](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
 1. [Konfigurer indstillinger for søgning og analyse](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
-1. [Administrer job i Advanced eDiscovery](managing-jobs-ediscovery20.md)
+1. [Administrer job i eDiscovery (Premium)](managing-jobs-ediscovery20.md)
 
 ### <a name="step-4-optional-compliance-boundaries"></a>Trin 4 (valgfrit): [Overholdelsesgrænser](set-up-compliance-boundaries.md)
 
@@ -266,7 +266,7 @@ Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser:
 
 Brug indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
 
-- [Få mere at vide om Advanced eDiscovery søgning](search-for-content.md#search-for-content)
+- [Få mere at vide om eDiscovery-søgning (Premium)](search-for-content.md#search-for-content)
 
 ## <a name="information-protection"></a>Information Protection
 

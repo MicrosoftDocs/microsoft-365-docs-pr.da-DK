@@ -14,18 +14,20 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du opretter en forudsigende kodemodel i eDiscovery (Premium). Dette er det første trin i brugen af funktionerne til maskinel indlæring i eDiscovery (Premium) for at hjælpe dig med at identificere relevant og ikke-relevant indhold i et korrektursæt.
-ms.openlocfilehash: 86fc72ae73faf25184c5b137a0e433af8125eb54
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f5636defbd4bc004a4732ff1d956f8b879daea2d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942265"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994034"
 ---
 # <a name="create-a-predictive-coding-model-preview"></a>Opret en forudsigende kodemodel (prøveversion)
 
-Det første trin i brugen af funktionerne til maskinel indlæring i forudsigende kodning i eDiscovery (Premium) er at oprette en forudsigende kodemodel. Når du har oprettet en model, kan du oplære den til at identificere det relevante og ikke-relevante indhold i et anmeldelsessæt.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal du se [Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
+Det første trin i brugen af funktionerne til maskinel indlæring i forbindelse med forudsigende kodning i eDiscovery (Premium) er at oprette en forudsigende kodemodel. Når du har oprettet en model, kan du oplære den til at identificere det relevante og ikke-relevante indhold i et anmeldelsessæt.
+
+Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal [du se Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
 
 ## <a name="before-you-create-a-model"></a>Før du opretter en model
 
@@ -37,7 +39,7 @@ Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal du se [Få 
 
 ## <a name="create-a-model"></a>Opret en model
 
-1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
+1. Åbn en eDiscovery(Premium)-sag på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt** .
 
 2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
 

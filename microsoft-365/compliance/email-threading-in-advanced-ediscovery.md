@@ -14,16 +14,18 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtråde en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
+description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtrådning en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 51cc9ce09f1f2c9c95c3ab5a7f2175516c9ed199
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f2cdd3a10250a256179ce3fe959a88e0cbef01ba
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948699"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995486"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>Mailtrådning i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Overvej en mailsamtale, der har stået på i et stykke tid. I de fleste tilfælde indeholder den sidste meddelelse i mailtråden indholdet af alle de foregående meddelelser. Derfor vil gennemgang af den sidste meddelelse give en komplet kontekst for den samtale, der skete i tråden. Mailtrådning identificerer sådanne meddelelser, så korrekturlæsere kan gennemse en brøkdel af indsamlede dokumenter uden at miste nogen kontekst.
 

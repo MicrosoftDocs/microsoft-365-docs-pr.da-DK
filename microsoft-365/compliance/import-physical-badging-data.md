@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Administratorer kan konfigurere en dataconnector til at importere data fra organisationens fysiske badgingsystem til Microsoft 365. Dette giver dig mulighed for at bruge disse data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere adgang til dine fysiske bygninger af bestemte brugere, der kan indikere en mulig intern trussel mod din organisation.
-ms.openlocfilehash: 7b6161cfc8f712082303641f9da7345edf5e24df
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a55874b9f920919c16a094d32c4edcde394600d4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937933"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994870"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Konfigurer en connector for at importere data om dårlig fysisk skrivning (eksempelvisning)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen for at importere fysiske badging-data, f.eks. medarbejderens rå fysiske adgangshændelser eller eventuelle fysiske adgangsalarmer, der genereres af din organisations badgingsystem. Eksempler på fysiske adgangspunkter er en post i en bygning eller en post i serverrum eller datacenter. Fysiske badging-data kan bruges af Microsoft 365 [løsning til styring af insiderrisiko](insider-risk-management.md) for at beskytte din organisation mod skadelig aktivitet eller datatyveri i din organisation.
 
@@ -43,13 +45,13 @@ Konfiguration af en fysisk dårlig connector består af følgende opgaver:
 - Den bruger, der opretter den fysiske dårligging-connector i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
    > [!NOTE]
-   > Rollen dataconnectoradministrator understøttes i øjeblikket ikke i US Government-GCC high- og dod-miljøer. Derfor skal den bruger, der opretter HR-connectoren i GCC high- og dod-miljøer, tildeles rollen Importér eksport af postkasse i Exchange Online. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration i Exchange Online. Du kan også oprette en ny rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje de relevante brugere som medlemmer. Du kan få flere oplysninger i afsnittene [Opret rollegrupper](/Exchange/permissions-exo/role-groups#create-role-groups) eller [Rediger rollegrupper](/Exchange/permissions-exo/role-groups#modify-role-groups) i artiklen "Administrer rollegrupper i Exchange Online".
+   > Rollen dataconnectoradministrator understøttes i øjeblikket ikke i GCC High- og DoD-miljøer for US Government. Derfor skal den bruger, der opretter HR-connectoren i GCC High- og DoD-miljøer, tildeles rollen Importeksport af postkasse i Exchange Online. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration i Exchange Online. Du kan også oprette en ny rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje de relevante brugere som medlemmer. Du kan få flere oplysninger i afsnittene [Opret rollegrupper](/Exchange/permissions-exo/role-groups#create-role-groups) eller [Rediger rollegrupper](/Exchange/permissions-exo/role-groups#modify-role-groups) i artiklen "Administrer rollegrupper i Exchange Online".
 
 - Du skal finde ud af, hvordan du henter eller eksporterer dataene fra organisationens fysiske badgingsystem (dagligt) og opretter en JSON-fil, der er beskrevet i trin 2. Det script, du kører i trin 4, overfører dataene i JSON-filen til API-slutpunktet.
 
 - Det eksempelscript, du kører i trin 4, overfører de fysiske badging-data fra JSON-filen til connector-API'en, så det kan bruges af løsningen til styring af insiderrisiko. Dette eksempelscript understøttes ikke under noget Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-- Denne connector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne connector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>Trin 1: Opret en app i Azure Active Directory
 
@@ -61,7 +63,7 @@ Det første trin er at oprette og registrere en ny app i Azure Active Directory 
 
 - Lejer-id (også kaldet *mappe-id*)
 
-Du kan finde en trinvis vejledning i, hvordan du opretter en app i Azure AD, under [Registrer et program med Microsoft-identitetsplatform](/azure/active-directory/develop/quickstart-register-app).
+Du kan finde en trinvis vejledning til, hvordan du opretter en app i Azure AD, under [Registrer et program med Microsoft-identitetsplatformen](/azure/active-directory/develop/quickstart-register-app).
 
 ## <a name="step-2-prepare-a-json-file-with-physical-badging-data"></a>Trin 2: Forbered en JSON-fil med fysiske badging-data
 
@@ -175,7 +177,7 @@ Når du har kørt scriptet, sendes den JSON-fil, der indeholder de fysiske badgi
 > [!NOTE]
 > Det maksimale antal poster i JSON-filen, der kan behandles af API'en, er 50.000 poster.
 
-1. Gå til [dette GitHub websted](https://github.com/microsoft/m365-physical-badging-connector-sample-scripts/blob/master/push_physical_badging_records.ps1) for at få adgang til eksempelscriptet.
+1. Gå til [dette GitHub-websted](https://github.com/microsoft/m365-physical-badging-connector-sample-scripts/blob/master/push_physical_badging_records.ps1) for at få adgang til eksempelscriptet.
 
 2. Klik på knappen **Rå** for at få vist scriptet i tekstvisning
 
@@ -183,7 +185,7 @@ Når du har kørt scriptet, sendes den JSON-fil, der indeholder de fysiske badgi
 
 4. Rediger eksempelscriptet for din organisation, hvis det er nødvendigt.
 
-5. Gem tekstfilen som en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks med .ps1, f.eks. PhysicalBadging.ps1.
+5. Gem tekstfilen som en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks med .ps1. f.eks. PhysicalBadging.ps1.
 
 6. Åbn en kommandoprompt på din lokale computer, og gå til den mappe, hvor du gemte scriptet.
 
@@ -210,7 +212,7 @@ Når du har kørt scriptet, sendes den JSON-fil, der indeholder de fysiske badgi
    .\PhysicalBadging.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -jsonFilePath 'C:\Users\contosoadmin\Desktop\Data\physical_badging_data.json'
    ```
 
-   Hvis overførslen lykkes, viser scriptet **meddelelsen Upload fuldført**.
+   Hvis overførslen lykkes, viser scriptet meddelelsen **Upload fuldført** .
 
    Hvis du har flere JSON-filer, skal du køre scriptet for hver fil.
 
@@ -241,7 +243,7 @@ Hvis du vil sikre, at de nyeste fysiske badging-data fra din organisation er til
 
 Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver dag.
 
-1. Klik på knappen Windows **Start** på den lokale computer, og skriv derefter **Opgavestyring**.
+1. Klik på knappen **Start** i Windows på den lokale computer, og skriv derefter **Opgavestyring**.
 
 2. Klik på appen **Opgavestyring** for at åbne den.
 
@@ -257,7 +259,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
 6. Vælg fanen **Udløsere** , klik på **Ny**, og gør derefter følgende:
 
-   1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt, hvor scriptet skal køres første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
+   1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt for at køre scriptet for første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
 
    2. Under **Avancerede indstillinger** skal du kontrollere, at afkrydsningsfeltet **Aktiveret** er markeret.
 

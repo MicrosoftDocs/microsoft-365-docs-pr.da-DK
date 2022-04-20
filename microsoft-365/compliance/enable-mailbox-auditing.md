@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Logføring af overvågning af postkasser er som standard slået til i Microsoft 365 (også kaldet "overvågning af standardpostkasser" eller "overvågning af postkasser slået til som standard"). Denne konfiguration betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres i en overvågningslog for postkassen, hvor du kan søge efter aktiviteter, der udføres i postkassen.
-ms.openlocfilehash: bb8170b603bc72459e3bbd55fa256df188f42f65
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: d5d966cf4d5b7c58c15df4ce8d4039331ebca8c4
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952880"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972623"
 ---
 # <a name="manage-mailbox-auditing"></a>Administrer overvågning af postkasse
 
@@ -83,7 +83,7 @@ Logontyper klassificerer den bruger, der udførte de overvågede handlinger i po
 - **Administrator**:
   - Der søges i postkassen med et af følgende Microsoft eDiscovery-værktøjer:
     - Indholdssøgning i Overholdelsescenter.
-    - eDiscovery eller Advanced eDiscovery i Compliance Center.
+    - eDiscovery eller eDiscovery (Premium) i Overholdelsescenter.
     - In-Place eDiscovery i Exchange Online.
   - Du kan få adgang til postkassen ved hjælp af Microsoft Exchange Server MAPI-editor.
 

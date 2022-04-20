@@ -18,14 +18,16 @@ search.appverid:
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
 ms.custom: seo-marvel-apr2020
 description: I denne artikel får du mere at vide om, hvordan du eksporterer, konfigurerer og får vist Microsoft 365 overvågningslogposter.
-ms.openlocfilehash: ed9844ac7a5b7dc62b4d0ba8eb7311f76d28aace
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9403ead4c7fd6bd27bcc3848d367749e00beed3c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948743"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994386"
 ---
 # <a name="export-configure-and-view-audit-log-records"></a>Eksportér, konfigurer og få vist data fra overvågningsloggen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har søgt i overvågningsloggen og downloadet søgeresultaterne til en CSV-fil, indeholder filen en kolonne med navnet **AuditData**, som indeholder yderligere oplysninger om hver enkelt hændelse. Dataene i denne kolonne er formateret som et JSON-objekt, der indeholder flere egenskaber, der er konfigureret som *property:value-par* adskilt af kommaer. Du kan bruge transformationsfunktionen JSON i Power Query-editor i Excel til at opdele hver egenskab i JSON-objektet i kolonnen **AuditData** i flere kolonner, så hver egenskab har sin egen kolonne. Det giver dig mulighed for at sortere og filtrere på en eller flere af disse egenskaber, hvilket kan hjælpe dig med hurtigt at finde de specifikke overvågningsdata, du leder efter.
 
@@ -100,7 +102,7 @@ Det næste trin er at bruge JSON-transformeringsfunktionen i Power Query-editor 
 
 ## <a name="use-powershell-to-search-and-export-audit-log-records"></a>Brug PowerShell til at søge efter og eksportere overvågningslogposter
 
-I stedet for at bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen kan du bruge cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell til at eksportere resultaterne af en søgning i overvågningsloggen til en CSV-fil. Derefter kan du følge den samme procedure, der er beskrevet i trin 2, for at formatere overvågningsloggen ved hjælp af Power Query editor. En fordel ved at bruge PowerShell-cmdlet'en er, at du kan søge efter hændelser fra en bestemt tjeneste ved hjælp af parameteren *RecordType* . Her er nogle eksempler på, hvordan du bruger PowerShell til at eksportere overvågningsposter til en CSV-fil, så du kan bruge editoren Power Query til at transformere JSON-objektet i kolonnen **AuditData** som beskrevet i trin 2.
+I stedet for at bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen kan du bruge cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell til at eksportere resultaterne af en overvågningslogsøgning til en CSV-fil. Derefter kan du følge den samme procedure, der er beskrevet i trin 2, for at formatere overvågningsloggen ved hjælp af Power Query editor. En fordel ved at bruge PowerShell-cmdlet'en er, at du kan søge efter hændelser fra en bestemt tjeneste ved hjælp af parameteren *RecordType* . Her er nogle eksempler på, hvordan du bruger PowerShell til at eksportere overvågningsposter til en CSV-fil, så du kan bruge editoren Power Query til at transformere JSON-objektet i kolonnen **AuditData** som beskrevet i trin 2.
 
 I dette eksempel skal du køre følgende kommandoer for at returnere alle poster, der er relateret til SharePoint delingshandlinger.
 
@@ -126,7 +128,7 @@ $auditlog = Search-UnifiedAuditLog -StartDate 06/01/2019 -EndDate 06/30/2019 -Re
 $auditlog | Select-Object -Property CreationDate,UserIds,RecordType,AuditData | Export-Csv -Append -Path c:\AuditLogs\PowerShellAuditlog.csv -NoTypeInformation
 ```
 
-## <a name="tips-for-exporting-and-viewing-the-audit-log"></a>Tips til eksport og visning af overvågningsloggen
+## <a name="tips-for-exporting-and-viewing-the-audit-log"></a>Tip til eksport og visning af overvågningsloggen
 
 Her er nogle tip og eksempler på eksport og visning af overvågningsloggen før og efter, du bruger JSON-transformationsfunktionen til at opdele kolonnen **AuditData** i flere kolonner.
 

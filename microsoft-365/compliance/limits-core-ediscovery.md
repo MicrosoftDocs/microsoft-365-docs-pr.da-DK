@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives grænserne i eDiscovery -tilfælde (Standard) i Microsoft 365.
-ms.openlocfilehash: 4eb43687e92d90179ff24d69827c3c2889d82b47
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 29d1ef4d017ebf26a0c5ed1cc03fcf4361266e94
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971516"
+ms.locfileid: "64994100"
 ---
 # <a name="limits-in-ediscovery-standard"></a>Grænser i eDiscovery (Standard)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I følgende tabel vises grænserne for eDiscovery-sager (Standard) og ventepositioner, der er knyttet til en eDiscovery-sag (Standard). Du kan finde flere oplysninger om Microsoft Purview eDiscovery (Standard) under [Oversigt over eDiscovery (Standard).](./get-started-core-ediscovery.md)
     

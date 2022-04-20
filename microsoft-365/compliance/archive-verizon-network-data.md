@@ -12,18 +12,20 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS- og MMS-data fra Verizon Network i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 5df1adad87c9995caeed4e090a7db0e7fbdf7566
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: efa310c17441db67eed31d729daa28dd34755538
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936967"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994958"
 ---
 # <a name="set-up-a-connector-to-archive-verizon-network-data"></a>Konfigurer en connector til arkivering af Verizon Network-data
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Brug TeleMessage-connectoren på Microsoft Purview-overholdelsesportalen til at importere og arkivere sms-data (Short Messaging Service) og MMS-data (Multimedia Messaging Service) fra Verizon Network. Når du har konfigureret en connector, opretter den forbindelse til din organisations Verizon Network én gang om dagen og importerer SMS- og MMS-data til postkasser i Microsoft 365.
 
-Når Verizon Network-connectordata er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search og Microsoft 365 opbevaringspolitikker på Verizon-data. Du kan f.eks. søge i Verizon SMS- og MMS-meddelelser ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder Verizon Network-data, til en tilsynsførende i en Microsoft Purview eDiscovery-sag (Premium). Brug af en Verizon Network-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
+Når Verizon Network-connectordata er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search og Microsoft 365 opbevaringspolitikker på Verizon-data. Du kan f.eks. søge i Verizon SMS- og MMS-meddelelser ved hjælp af Indholdssøgning eller knytte den postkasse, der indeholder Verizon Network-data, til en tilsynsførende i en Microsoft Purview eDiscovery-sag (Premium). Brug af en Verizon Network-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-verizon-network-data"></a>Oversigt over arkivering af Verizon Network-data
 
@@ -55,7 +57,7 @@ Nogle af de trin til implementering, der kræves for at arkivere Verizon Network
 
 - Den bruger, der opretter en Verizon Network-connector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-verizon-network-connector"></a>Opret en Verizon Network-connector
 

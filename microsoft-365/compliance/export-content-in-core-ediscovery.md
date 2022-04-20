@@ -18,16 +18,18 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Beskriver, hvordan du eksporterer og downloader indhold fra en eDiscovery -sag (Standard) i Microsoft 365.
-ms.openlocfilehash: a0ea33d599ed609c24cf63f1df4c68b882364b1b
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2a63d22c8b4cb20e2c0f1317a8496e1cf517b2da
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937955"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995442"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>Eksportér indhold fra en eDiscovery-sag (Standard)
 
-Når en søgning, der er knyttet til en eDiscovery-sag (Standard), er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Når en søgning, der er knyttet til en eDiscovery-sag (Standard), er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office-dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
   
 ## <a name="export-search-results"></a>Eksportér søgeresultater
 

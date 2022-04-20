@@ -20,18 +20,20 @@ search.appverid:
 - MED150
 - MET150
 ms.assetid: ed48d448-3714-4c42-85f5-10f75f6a4278
-description: Eksportér søgeresultaterne fra en indholdssøgning på Microsoft Purview-overholdelsesportalen til en lokal computer. Mailresultater eksporteres som PST-filer. Indhold fra SharePoint og OneDrive for Business websteder eksporteres som oprindelige Office dokumenter.
+description: Eksportér søgeresultaterne fra en indholdssøgning på Microsoft Purview-overholdelsesportalen til en lokal computer. Mailresultater eksporteres som PST-filer. Indhold fra SharePoint og OneDrive for Business websteder eksporteres som oprindelige Office-dokumenter.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: cdd80829e76bce37bc55b5375597729df947b61b
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 38faaf29087e67aef161e46a1fbc6c338d9c33e4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934813"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995464"
 ---
 # <a name="export-content-search-results"></a>Eksportér søgeresultater for indhold
 
-Når en indholdssøgning er blevet kørt, kan du eksportere søgeresultaterne til en lokal computer. Når du eksporterer mailresultater, downloades de til din computer som PST-filer. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office dokumenter. Der er andre dokumenter og rapporter, der er inkluderet i de eksporterede søgeresultater.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Når en indholdssøgning er blevet kørt, kan du eksportere søgeresultaterne til en lokal computer. Når du eksporterer mailresultater, downloades de til din computer som PST-filer. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office-dokumenter. Der er andre dokumenter og rapporter, der er inkluderet i de eksporterede søgeresultater.
   
 Eksport af resultaterne af en indholdssøgning omfatter forberedelse af resultaterne og derefter download af dem til en lokal computer. Disse trin til eksport af søgeresultater gælder også for eksport af resultaterne af en søgning, der er knyttet til Microsoft Purview eDiscovery-sager (Standard).
   
@@ -45,22 +47,22 @@ Eksport af resultaterne af en indholdssøgning omfatter forberedelse af resultat
   
   - Microsoft .NET Framework 4.7 eller nyere
   
-- Du skal bruge Microsoft Edge <sup>1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke <sup>længere2</sup>.
+- Du skal bruge Microsoft <sup>Edge1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke <sup>længere2</sup>.
   
   > [!NOTE]
-  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er understøttelse af ClickOnce ikke længere aktiveret som standard. Du kan finde oplysninger om, hvordan du aktiverer understøttelse af ClickOnce i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
+  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er ClickOnce-understøttelse ikke længere aktiveret som standard. Du kan finde en vejledning i, hvordan du aktiverer ClickOnce-understøttelse i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce-programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
   >
   > <sup>2</sup> Fra august 2021 understøtter Microsoft 365 apps og tjenester ikke længere Internet Explorer 11 (IE11), og brugerne kan have en forringet oplevelse eller ikke kunne oprette forbindelse til disse apps og tjenester. Disse apps og tjenester udfases i løbet af de kommende uger og måneder for at sikre en problemfri ophør af support. Hver app og tjeneste udfases efter uafhængige tidsplaner. Du kan få flere oplysninger i dette [blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 - Det eDiscovery-eksportværktøj, du bruger i trin 2 til at downloade søgeresultater, understøtter ikke automatisering (ved hjælp af et script eller ved at køre cmdlet'er). Vi anbefaler på det kraftigste, at du ikke automatiserer forberedelsesprocessen i trin 1 eller downloadprocessen i trin 2. Hvis du automatiserer en af disse processer, yder Microsoft Support ikke hjælp, hvis du støder på problemer.
 
-- Vi anbefaler, at du downloader søgeresultater til en lokal computer. Hvis du vil undgå, at din virksomheds firewall eller proxyinfrastruktur forårsager problemer, når du downloader søgeresultater, kan du overveje at downloade søgeresultater til et virtuelt skrivebord uden for netværket. Dette kan reducere timeouts, der opstår i Azure-dataforbindelser, når der eksporteres et stort antal filer. Du kan få flere oplysninger om virtuelle skriveborde [under Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop).
+- Vi anbefaler, at du downloader søgeresultater til en lokal computer. Hvis du vil undgå, at din virksomheds firewall eller proxyinfrastruktur forårsager problemer, når du downloader søgeresultater, kan du overveje at downloade søgeresultater til et virtuelt skrivebord uden for netværket. Dette kan reducere timeouts, der opstår i Azure-dataforbindelser, når der eksporteres et stort antal filer. Du kan få flere oplysninger om virtuelle skriveborde under [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop).
 
 - Hvis du vil forbedre ydeevnen, når du downloader søgeresultater, kan du overveje at opdele søgninger, der returnerer et stort sæt resultater, i mindre søgninger. Du kan f.eks. bruge datointervaller i søgeforespørgsler til at returnere et mindre sæt resultater, der kan downloades hurtigere.
   
 - Når du eksporterer søgeresultater, gemmes dataene midlertidigt på en Microsoft-leveret Azure Storage placering i Microsoft-cloudmiljøet, før de downloades til din lokale computer. Sørg for, at din organisation kan oprette forbindelse til slutpunktet i Azure, som er **\*.blob.core.windows.net** (jokertegnet repræsenterer et entydigt id for din eksport). Søgeresultaterne slettes fra Azure Storage placering to uger efter, at de er oprettet. 
   
-- Hvis din organisation bruger en proxyserver til at kommunikere med internettet, skal du definere proxyserverindstillingerne på den computer, du bruger til at eksportere søgeresultaterne (så eksportværktøjet kan godkendes af proxyserveren). Det gør du ved at åbne *denmachine.config* fil på den placering, der svarer til din version af Windows. 
+- Hvis din organisation bruger en proxyserver til at kommunikere med internettet, skal du definere proxyserverindstillingerne på den computer, du bruger til at eksportere søgeresultaterne (så eksportværktøjet kan godkendes af proxyserveren). Det gør du ved at åbne  *filenmachine.config*  på den placering, der svarer til din version af Windows. 
   
   - **32-bit:** `%windir%\Microsoft.NET\Framework\[version]\Config\machine.config`
   
@@ -127,7 +129,7 @@ Det første trin er at forberede søgeresultaterne til eksport. Når du forbered
   
    2. Markér afkrydsningsfeltet **Medtag versioner til SharePoint filer for** at eksportere alle versioner af SharePoint dokumenter. Denne indstilling vises kun, hvis søgeindholdskilderne omfatter SharePoint eller OneDrive for Business websteder.
   
-   3. Vælg **Eksportér filer i en zip-komprimeret mappe. Medtager kun individuelle meddelelser og SharePoint dokumenter** til eksport af søgeresultater til komprimerede mapper. Denne indstilling vises kun, når du vælger at eksportere Exchange elementer som individuelle meddelelser, og når søgeresultaterne omfatter SharePoint eller OneDrive dokumenter. Denne indstilling bruges primært til at omgå grænsen på 260 tegn i Windows filnavne, når elementer eksporteres. Se "Filnavne på eksporterede elementer" i afsnittet [Flere oplysninger](#more-information) .
+   3. Vælg **Eksportér filer i en zip-komprimeret mappe. Medtager kun individuelle meddelelser og SharePoint dokumenter** til eksport af søgeresultater til komprimerede mapper. Denne indstilling vises kun, når du vælger at eksportere Exchange elementer som individuelle meddelelser, og når søgeresultaterne omfatter SharePoint eller OneDrive dokumenter. Denne indstilling bruges primært til at omgå grænsen på 260 tegn i windows-filnavne, når elementer eksporteres. Se "Filnavne på eksporterede elementer" i afsnittet [Flere oplysninger](#more-information) .
    > [!IMPORTANT]
    > Eksport af filer i en zip-komprimeret mappe øger eksporttiden.
   

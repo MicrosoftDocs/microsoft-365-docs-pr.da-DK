@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Beskriver, hvordan du kommer i gang med at bruge eDiscovery (Standard) i Microsoft Purview. Når du har tildelt eDiscovery-tilladelser og oprettet en sag, kan du tilføje medlemmer, oprette eDiscovery-ventepositioner og derefter søge efter og eksportere indhold, der er relevant for din undersøgelse.
-ms.openlocfilehash: bf49ebd886a85005166f07b1a3d6c97e10412e20
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 90470d0128fd15bf295b1c8fa2cd15ef6d5cc384
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934725"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994144"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Kom i gang med eDiscovery (Standard) i Microsoft Purview
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eDiscovery (Standard) i Microsoft Purview indeholder et grundlæggende eDiscovery-værktøj, som organisationer kan bruge til at søge efter og eksportere indhold i Microsoft 365 og Office 365. Du kan også bruge eDiscovery (Standard) til at placere en eDiscovery-venteposition på indholdsplaceringer, f.eks. Exchange postkasser, SharePoint websteder, OneDrive konti og Microsoft Teams. Der kræves intet for at udrulle eDiscovery (Standard), men der er nogle forudsætningsopgaver, som en it-administrator og eDiscovery-chef skal udføre, før din organisation kan begynde at bruge eDiscovery (Standard) til at søge efter, eksportere og bevare indhold.
 
@@ -35,15 +37,15 @@ I denne artikel beskrives de trin, der er nødvendige for at konfigurere eDiscov
 
 Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement og licenser pr. bruger.
 
-- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen og bruge ventepositions- og eksportfunktioner, skal din organisation have et Microsoft 365 E3 eller Office 365 E3 abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
+- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen og bruge ventepositions- og eksportfunktionerne, skal organisationen have et Microsoft 365 E3- eller Office 365 E3-abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
 
 - **Licenser pr. bruger:** Hvis du vil placere en eDiscovery-venteposition på postkasser og websteder, skal brugerne tildeles en af følgende licenser, afhængigt af dit organisationsabonnement:
 
-  - En Microsoft 365 E3 eller Office 365 E3 licens eller nyere
+  - En Microsoft 365 E3- eller Office 365 E3-licens eller nyere
 
    ELLER
 
-  - Office 365 E1 licens med en Exchange Online Plan 2- eller Exchange Online-arkivering-tilføjelsesprogramlicens
+  - Office 365 E1-licens med en Exchange Online Plan 2- eller Exchange Online-licens til arkivering
 
    ELLER
 
@@ -51,7 +53,7 @@ Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement
 
   OG
 
-  - Office 365 E1 licens med en SharePoint Online Plan 2- eller OneDrive for Business Plan 2-tilføjelsesprogramlicens
+  - Office 365 E1-licens med en SharePoint Online Plan 2- eller OneDrive for Business Plan 2-tilføjelsesprogramlicens
   
   Du kan få oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](../admin/manage/assign-licenses-to-users.md).
 

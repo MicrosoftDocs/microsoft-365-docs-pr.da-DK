@@ -22,16 +22,18 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om mail- og dokumentegenskaber, som du kan søge i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft 365.
-ms.openlocfilehash: 09c939f7d92bf06a9eab89d8ac45fec78bd424a8
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f00d257a558d252ca0176166d42d02cd72dad0aa
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936637"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995376"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>Nøgleordsforespørgsler og søgebetingelser for eDiscovery
 
-I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder, ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*). Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance Center PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*. Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance Center PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
 
 - Brug booleske søgeoperatorer, søgebetingelser og andre teknikker til søgeforespørgslen til at tilpasse søgeresultaterne.
 - Søgning efter følsomme datatyper og brugerdefinerede følsomme datatyper i SharePoint og OneDrive for Business.
@@ -79,7 +81,7 @@ I følgende tabel vises de egenskaber for mailmeddelelser, der kan søges i ved 
 
 ### <a name="recipient-expansion"></a>Modtagerudvidelse
 
-Når du søger i en af modtageregenskaberne (Fra, Til, Cc, Bcc, Deltagere og Modtagere), forsøger Microsoft 365 at udvide hver brugers identitet ved at slå dem op i Azure Active Directory (Azure AD).  Hvis brugeren findes i Azure AD, udvides forespørgslen til at omfatte brugerens mailadresse (eller UPN), alias, vist navn og LegacyExchangeDN. En forespørgsel, f.eks `participants:ronnie@contoso.com` . udvides f.eks. til `participants:ronnie@contoso.com OR participants:ronnie OR participants:"Ronald Nelson" OR participants:"<LegacyExchangeDN>"`.
+Når du søger i en af modtageregenskaberne (Fra, Til, Cc, Bcc, Deltagere og Modtagere), forsøger Microsoft 365 at udvide identiteten for hver bruger ved at slå dem op i Azure Active Directory (Azure AD).  Hvis brugeren findes i Azure AD, udvides forespørgslen til at omfatte brugerens mailadresse (eller UPN), alias, vist navn og LegacyExchangeDN. En forespørgsel, f.eks `participants:ronnie@contoso.com` . udvides f.eks. til `participants:ronnie@contoso.com OR participants:ronnie OR participants:"Ronald Nelson" OR participants:"<LegacyExchangeDN>"`.
 
 Hvis du vil forhindre modtagerudvidelse, skal du tilføje et jokertegn (stjerne) til slutningen af mailadressen og bruge et reduceret domænenavn. Sørg f.eks. `participants:"ronnie@contoso*"` for at omgive mailadressen med dobbelte anførselstegn.
 
@@ -96,7 +98,7 @@ Du kan finde en komplet liste over SharePoint egenskaber, der kan søges [i, und
 
 |Ejendom|Beskrivelse af egenskab|Eksempel|Søgeresultater, der returneres af eksemplerne|
 |---|---|---|---|
-|Forfatter|Forfatterfeltet fra Office dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter. Sørg for at bruge brugerens viste navn til denne egenskab.|`author:"Garth Fort"`|Alle dokumenter, der er oprettet af Garth Fort.|
+|Forfatter|Forfatterfeltet fra Office-dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter. Sørg for at bruge brugerens viste navn til denne egenskab.|`author:"Garth Fort"`|Alle dokumenter, der er oprettet af Garth Fort.|
 |Contenttype|Den SharePoint indholdstype for et element, f.eks. element, dokument eller video.|`contenttype:document`|Alle dokumenter returneres.|
 |Lavet|Den dato, hvor et element oprettes.|`created>=2021-06-01`|Alle elementer, der er oprettet den 1. juni 2021 eller efter den 1. juni 2021.|
 |Oprettet af|Den person, der har oprettet eller uploadet et element. Sørg for at bruge brugerens viste navn til denne egenskab.|`createdby:"Garth Fort"`|Alle elementer, der er oprettet eller uploadet af Garth Fort.|
@@ -110,7 +112,7 @@ Du kan finde en komplet liste over SharePoint egenskaber, der kan søges [i, und
 |SharedWithUsersOWSUser|Dokumenter, der er blevet delt med den angivne bruger og vist på siden **Delt med mig** på brugerens OneDrive for Business websted. Dette er dokumenter, der udtrykkeligt er blevet delt med den angivne bruger af andre personer i organisationen. Når du eksporterer dokumenter, der svarer til en søgeforespørgsel, der bruger egenskaben SharedWithUsersOWSUser, eksporteres dokumenterne fra den oprindelige indholdsplacering for den person, der delte dokumentet med den angivne bruger. Du kan finde flere oplysninger under [Søgning efter webstedsindhold, der deles i din organisation](#searching-for-site-content-shared-within-your-organization).|`sharedwithusersowsuser:garthf` <p> `sharedwithusersowsuser:"garthf@contoso.com"`|Begge eksempler returnerer alle interne dokumenter, der udtrykkeligt er blevet delt med Garth Fort, og som vises på siden **Delt med mig** på Garth Forts OneDrive for Business-konto.|
 |Websted|URL-adressen på et websted eller en gruppe af websteder i din organisation.|`site:"https://contoso-my.sharepoint.com"` <p> `site:"https://contoso.sharepoint.com/sites/teams"`|I det første eksempel returneres elementer fra de OneDrive for Business websteder for alle brugere i organisationen. I det andet eksempel returneres elementer fra alle teamwebsteder.|
 |Størrelse|Størrelsen på et element i byte.|`size>=1` <p> `size:1..10000`|I det første eksempel returneres elementer, der er større end 1 byte. I det andet eksempel returneres elementer fra 1 til og med 10.000 byte.|
-|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Microsoft Office dokumenter. Det er forskelligt fra dokumentets filnavn.|`title:"communication plan"`|Alle dokumenter, der indeholder udtrykket "kommunikationsplan" i egenskaben Title metadata for et Office dokument.|
+|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Microsoft Office dokumenter. Det er forskelligt fra dokumentets filnavn.|`title:"communication plan"`|Alle dokumenter, der indeholder udtrykket "kommunikationsplan" i egenskaben Title metadata for et Office-dokument.|
 
 ## <a name="searchable-contact-properties"></a>Egenskaber for kontakt, der kan søges i
 
@@ -122,7 +124,7 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 |Ejendom|Beskrivelse af egenskab|
 |---|---|
 |Adresse (arbejde)|Adressen i egenskaben **Forretningsadresse** . Egenskaben kaldes **også arbejdsadressen** på siden med kontaktegenskaber.|
-|Telefon (arbejde)|Telefonnummeret i en af egenskaberne **business Telefon** number.|
+|Telefon (arbejde)|Telefonnummeret i en af egenskaberne for **firmatelefonnummeret** .|
 |Firmanavn|Navnet i egenskaben **Firma** .|
 |Institut|Navnet i egenskaben **Afdeling** .|
 |Displayname|Kontaktens viste navn. Dette er navnet i egenskaben **Full Name** for kontakten.|
@@ -135,7 +137,7 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 |MiddleName|Navnet i egenskaben **Mellemnavn** .|
 |Mobiltelefon|Telefonnummeret i egenskaben **Mobiltelefonnummer** .|
 |Brugernavn|Navnet i egenskaben **Kaldenavn** .|
-|OfficeLocation|Værdien i **egenskaben Office** eller **Office placering**.|
+|OfficeLocation|Værdien **i office** - eller **Office-placeringsegenskaben** .|
 |Andre adresser|Værdien for egenskaben **Anden** adresse.|
 |Efternavn|Navnet i egenskaben **Efternavn** .|
 |Titel|Titlen i egenskaben **Stillingsbetegnelse** .|
@@ -150,7 +152,7 @@ Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af ege
 
 ### <a name="limitations-for-searching-sensitive-data-types"></a>Begrænsninger for søgning i følsomme datatyper
 
-- Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede følsomme oplysningstyper. Indbyggede følsomme datatyper har en værdi for `Microsoft Corporation` egenskaben **Publisher**.
+- Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede typer følsomme oplysninger. Indbyggede følsomme datatyper har værdien `Microsoft Corporation` for egenskaben **Publisher** .
 
   Hvis du vil have vist navnet og id'et for de brugerdefinerede følsomme datatyper i din organisation, skal du køre følgende kommando i Security & Compliance Center PowerShell:
 
@@ -160,7 +162,7 @@ Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af ege
 
   Derefter kan du bruge id'et i søgeegenskaben `SensitiveType` til at returnere dokumenter, der indeholder den brugerdefinerede følsomme datatype, f.eks. `SensitiveType:7e13277e-6b04-3b68-94ed-1aeb9d47de37`
 
-- Du kan ikke bruge følsomme oplysningstyper og søgeegenskaben `SensitiveType` til at søge efter inaktive følsomme data i Exchange Online postkasser. Dette omfatter 1:1 chatbeskeder, 1:N gruppechatbeskeder og teamkanalsamtaler i Microsoft Teams, fordi alt dette indhold er gemt i postkasser. Du kan dog bruge DLP-politikker (forebyggelse af datatab) til at beskytte følsomme maildata under overførsel. Du kan finde flere oplysninger under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md) og [Søg efter og find personlige data](/compliance/regulatory/gdpr).
+- Du kan ikke bruge følsomme oplysningstyper og søgeegenskaben `SensitiveType` til at søge efter inaktive følsomme data i Exchange Online-postkasser. Dette omfatter 1:1 chatbeskeder, 1:N gruppechatbeskeder og teamkanalsamtaler i Microsoft Teams, fordi alt dette indhold er gemt i postkasser. Du kan dog bruge DLP-politikker (forebyggelse af datatab) til at beskytte følsomme maildata under overførsel. Du kan finde flere oplysninger under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md) og [Søg efter og find personlige data](/compliance/regulatory/gdpr).
 
 ## <a name="search-operators"></a>Søgeoperatorer
 
@@ -211,7 +213,7 @@ Opret en betingelse ved hjælp af almindelige egenskaber, når du søger i postk
 |Betingelse|Beskrivelse|
 |---|---|
 |Dato|For mail den dato, hvor en meddelelse blev modtaget af en modtager eller sendt af afsenderen. For dokumenter den dato, hvor et dokument sidst blev ændret.|
-|Afsender/forfatter|Den person, der sendte en meddelelse i forbindelse med en mail. For dokumenter er den person, der er nævnt i forfatterfeltet, fra Office dokumenter. Du kan skrive mere end ét navn adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** .|
+|Afsender/forfatter|Den person, der sendte en meddelelse i forbindelse med en mail. For dokumenter: den person, der er nævnt i forfatterfeltet, fra Office-dokumenter. Du kan skrive mere end ét navn adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** .|
 |Størrelse (i byte)|Størrelsen på elementet (i byte) for både mail og dokumenter.|
 |Emne/titel|I forbindelse med mail er teksten i emnelinjen i en meddelelse. Titlen på dokumentet for dokumenter. Som tidligere forklaret er egenskaben Title metadata angivet i Microsoft Office dokumenter. Du kan skrive navnet på mere end én værdi for emne/titel adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** . <p> **Bemærk**! Medtag ikke dobbelte anførselstegn til værdierne for denne betingelse, fordi anførselstegn tilføjes automatisk, når denne søgebetingelse bruges. Hvis du føjer anførselstegn til værdien, føjes der to par dobbelte anførselstegn til betingelsesværdien, og søgeforespørgslen returnerer en fejl.|
 |Opbevaringsmærkat|Opbevaringsmærkater for både mail og dokumenter, der kan anvendes automatisk eller manuelt på meddelelser og dokumenter. Opbevaringsmærkater kan bruges til at deklarere poster og hjælpe dig med at administrere datalevetidscyklussen for indhold ved at gennemtvinge regler for opbevaring og sletning, der er angivet af mærkaten. Du kan skrive en del af navnet på opbevaringsmærkaten og bruge et jokertegn eller skrive det komplette navn. Du kan finde flere oplysninger om opbevaringsmærkater under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).|
@@ -238,8 +240,8 @@ Opret en betingelse ved hjælp af dokumentegenskaber, når du søger efter dokum
 
 |Betingelse|Beskrivelse|
 |---|---|
-|Forfatter|Forfatterfeltet fra Office dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter.|
-|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Office dokumenter. Den er forskellig fra dokumentets filnavn.|
+|Forfatter|Forfatterfeltet fra Office-dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter.|
+|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Office-dokumenter. Den er forskellig fra dokumentets filnavn.|
 |Lavet|Den dato, hvor et dokument oprettes.|
 |Senest ændret|Den dato, hvor et dokument sidst blev ændret.|
 |Filtype|Filtypenavnet for en fil. f.eks. docx, one, pptx eller xlsx. Dette er den samme egenskab som webstedsegenskaben FileExtension. <p> **Bemærk:** Hvis du medtager en betingelse af typen Filtype ved hjælp af operatoren **Equals** eller **Equals** i en søgeforespørgsel, kan du ikke bruge en præfikssøgning (ved at medtage jokertegnet ( \* ) i slutningen af filtypen) til at returnere alle versioner af en filtype. Hvis du gør det, ignoreres jokertegnet. Hvis du f.eks. inkluderer betingelsen `Equals any of doc*`, returneres der kun filer med filtypenavnet `.doc` . Filer med filtypenavnet `.docx` returneres ikke. Hvis du vil returnere alle versioner af en filtype, skal du bruge *egenskab:værdiparret* i en nøgleordsforespørgsel. f.eks. `filetype:doc*`.|

@@ -14,12 +14,12 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: 9d35303de99256329ad1f0a5ea547e0af4a042b6
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: bf3a713ce81ef31e3ff376c97ebf972ac2f2b575
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953798"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972117"
 ---
 # <a name="to-identity-and-beyondone-architects-viewpoint"></a>Til identitet og videre – en arkitekts synspunkt
 
@@ -249,7 +249,7 @@ Som tidligere nævnt ønsker mange kunder at opnå en mere detaljeret delegering
 - **eDiscovery** – (.. /compliance/index.yml)
   - **Tilladelsesfiltrering** – (.. /compliance/index.yml)
   - **Overholdelsesgrænser** - (.. /compliance/set-up-compliance-boundaries.md)
-  - **Advanced eDiscovery** - (.. /compliance/overview-ediscovery-20.md)
+  - **eDiscovery (Premium)** - (.. /compliance/overview-ediscovery-20.md)
 - **Yammer** - (/yammer/manage-yammer-users/manage-yammer-admins)
 - **Multi-Geo** – (.. /enterprise/add-a-sharepoint-geo-admin.md)
 - **Dynamics 365** – (/dynamics365/)

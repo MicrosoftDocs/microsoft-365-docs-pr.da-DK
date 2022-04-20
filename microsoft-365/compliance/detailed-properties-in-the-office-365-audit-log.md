@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: ce004100-9e7f-443e-942b-9b04098fcfc3
 description: Denne artikel indeholder beskrivelser af yderligere egenskaber, der er inkluderet, når du eksporterer resultater for en Office 365 overvågningslogpost.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7e65b5e27f8c6821b12c7f0b7f03e4ecb472c0a9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2342a64deaa2787e534a09b3d874ed3795d82ea8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948941"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996212"
 ---
 # <a name="detailed-properties-in-the-audit-log"></a>Detaljerede egenskaber i overvågningsloggen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du eksporterer resultaterne af en søgning i en overvågningslog fra Microsoft Purview-overholdelsesportalen, har du mulighed for at downloade alle de resultater, der opfylder dine søgekriterier. Det gør du ved at vælge **Eksportér resultater** \> **Download alle resultater** på **søgesiden Overvågningslog** . Du kan finde flere oplysninger i [Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md).
   
@@ -42,19 +44,19 @@ I følgende tabel beskrives de egenskaber, der er inkluderet (afhængigt af den 
 |Skuespiller|Den bruger- eller tjenestekonto, der udførte handlingen.|Azure Active Directory|
 |AddOnName|Navnet på et tilføjelsesprogram, der blev tilføjet, fjernet eller opdateret i et team. Typen af tilføjelsesprogrammer i Microsoft Teams er en bot, en connector eller en fane.|Microsoft Teams|
 |AddOnType|Typen af tilføjelsesprogram, der blev tilføjet, fjernet eller opdateret i et team. Følgende værdier angiver typen af tilføjelsesprogram.  <br/> **1** – angiver en bot.<br/> **2** – Angiver en connector.<br/> **3** – Angiver en fane.|Microsoft Teams|
-|AzureActiveDirectoryEventType|Typen af Azure Active Directory hændelse. Følgende værdier angiver hændelsestypen.  <br/> **0** – Angiver en kontologonhændelse.<br/> **1** – Angiver en sikkerhedshændelse for et Azure-program.|Azure Active Directory|
+|AzureActiveDirectoryEventType|Typen af Azure Active Directory-hændelse. Følgende værdier angiver hændelsestypen.  <br/> **0** – Angiver en kontologonhændelse.<br/> **1** – Angiver en sikkerhedshændelse for et Azure-program.|Azure Active Directory|
 |ChannelGuid|Id'et for en Microsoft Teams kanal. Det team, som kanalen er placeret i, identificeres af egenskaberne **TeamName** og **TeamGuid** .|Microsoft Teams|
 |ChannelName|Navnet på en Microsoft Teams kanal. Det team, som kanalen er placeret i, identificeres af egenskaberne **TeamName** og **TeamGuid** .|Microsoft Teams|
 |Klient|Klientenheden, enhedens OPERATIVSYSTEM og den enhedsbrowser, der bruges til logonhændelsen (f.eks. Nokia Lumia 920; Windows Phone 8; IE Mobile 11).|Azure Active Directory|
 |ClientInfoString|Oplysninger om den mailklient, der blev brugt til at udføre handlingen, f.eks. en browserversion, Outlook version og oplysninger om mobilenheder|Exchange (postkasseaktivitet)|
-|ClientIP|IP-adressen på den enhed, der blev brugt, da aktiviteten blev logført. IP-adressen vises i enten et IPv4- eller IPv6-adresseformat.<br/><br/> For nogle tjenester kan den værdi, der vises i denne egenskab, være IP-adressen for et program, der er tillid til (f.eks. Office på internettet apps), der ringer til tjenesten på vegne af en bruger, og ikke IP-adressen på den enhed, der bruges af den person, der udførte aktiviteten. <br/><br/>Desuden logføres IP-adressen ikke for administratoraktivitet (eller aktivitet, der udføres af en systemkonto) for Azure Active Directory-relaterede hændelser, og værdien for egenskaben ClientIP er `null`. |Azure Active Directory, Exchange, SharePoint|
+|ClientIP|IP-adressen på den enhed, der blev brugt, da aktiviteten blev logført. IP-adressen vises i enten et IPv4- eller IPv6-adresseformat.<br/><br/> For nogle tjenester kan den værdi, der vises i denne egenskab, være IP-adressen for et program, der er tillid til (f.eks. Office på internettet-apps), der ringer til tjenesten på vegne af en bruger, og ikke IP-adressen på den enhed, der bruges af den person, der udførte aktiviteten. <br/><br/>Desuden logføres IP-adressen ikke for administratoraktivitet (eller aktivitet, der udføres af en systemkonto) for Azure Active Directory-relaterede hændelser, og værdien for egenskaben ClientIP er `null`. |Azure Active Directory, Exchange, SharePoint|
 |Oprettelsestid|Den dato og det klokkeslæt i UTC (Coordinated Universal Time), hvor brugeren udførte aktiviteten.|Alle|
 |DestinationFileExtension|Filtypenavnet for en fil, der kopieres eller flyttes. Denne egenskab vises kun for brugeraktiviteterne FileCopied og FileMoved.|SharePoint|
 |Destinationsfilnavn|Navnet på filen kopieres eller flyttes. Denne egenskab vises kun for handlingerne FileCopied og FileMoved.|SharePoint|
 |DestinationRelativeUrl|URL-adressen til destinationsmappen, hvor en fil kopieres eller flyttes. Kombinationen af værdierne for **SiteURL**, **DestinationRelativeURL** og egenskaben **DestinationFileName** er den samme som værdien for egenskaben **ObjectID** , som er det fulde stinavn for den fil, der blev kopieret. Denne egenskab vises kun for brugeraktiviteterne FileCopied og FileMoved.|SharePoint|
 |EventSource|Identificerer, at der opstod en hændelse i SharePoint. De mulige værdier er **SharePoint** og **ObjectModel**.|SharePoint|
 |Ekstern adgang|I forbindelse med Exchange administratoraktivitet angiver, om cmdlet'en blev kørt af en bruger i din organisation, af Microsofts datacenterpersonale eller en datacentertjenestekonto eller af en uddelegeret administrator. Værdien **False** angiver, at cmdlet'en blev kørt af en person i din organisation. Værdien **True** angiver, at cmdlet'en blev kørt af datacenterafdelingen, en datacentertjenestekonto eller en delegeret administrator.  <br/> I forbindelse med Exchange postkasseaktivitet angiver, om en postkasse blev åbnet af en bruger uden for organisationen.|Exchange|
-|Udvidedeegenskaber|De udvidede egenskaber for en Azure Active Directory hændelse.|Azure Active Directory|
+|Udvidedeegenskaber|De udvidede egenskaber for en Azure Active Directory-hændelse.|Azure Active Directory|
 |ID|Id'et for rapportposten. Id'et identificerer entydigt rapportposten.|Alle|
 |InternalLogonType|Reserveret til intern brug.|Exchange (postkasseaktivitet)|
 |Itemtype|Den objekttype, der blev åbnet eller ændret. Mulige værdier omfatter **Fil**, **Mappe**, **Websted**, **Websted**, **Lejer** og **Dokumentbibliotek**.|SharePoint|

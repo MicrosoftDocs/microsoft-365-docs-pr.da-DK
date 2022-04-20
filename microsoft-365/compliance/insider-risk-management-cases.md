@@ -1,7 +1,7 @@
 ---
-title: Insider-sager om risikostyring
-description: Få mere at vide om insider-sager i Microsoft 365
-keywords: Microsoft 365, insider-risikostyring, risikostyring, overholdelse af regler og standarder
+title: Sager vedrørende styring af insiderrisiko
+description: Få mere at vide om sager om styring af insiderrisiko i Microsoft Purview
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,229 +13,231 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 59933705bb113e4ad23b12fe8bf00e8d0ca2e701
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 687eb92693d3343fb0ef5b2392d4622d9af4bb9d
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775802"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971941"
 ---
-# <a name="insider-risk-management-cases"></a>Insider-sager om risikostyring
+# <a name="insider-risk-management-cases"></a>Sager vedrørende styring af insiderrisiko
 
-Sager er kernen i insider-risikostyring og giver dig mulighed for at undersøge og reagere dybt på problemer, der genereres af risikoindikatorer defineret i dine politikker. Der oprettes manuelt tilfælde ud fra beskeder i situationer, hvor der er behov for yderligere handling for at løse et kompatibilitetsrelateret problem for en bruger. Hver sag er begrænset til en enkelt bruger, og flere beskeder for brugeren kan føjes til en eksisterende sag eller til en ny sag.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du har undersøgt detaljerne i en sag, kan du gøre noget ved at:
+Sager er kernen i insiderrisikostyring og giver dig mulighed for at undersøge og reagere på problemer, der genereres af risikoindikatorer, der er defineret i dine politikker. Sager oprettes manuelt ud fra beskeder i situationer, hvor der er behov for yderligere handling for at løse et problem relateret til overholdelse af regler og standarder for en bruger. Hver sag er begrænset til en enkelt bruger, og flere beskeder for brugeren kan føjes til en eksisterende sag eller til en ny sag.
+
+Når du har undersøgt detaljerne for en sag, kan du udføre en handling ved at:
 
 - sende brugeren en meddelelse
-- løsning af sagen som tilsnende
+- løsning af sagen som godartet
 - dele sagen med din ServiceNow-forekomst eller med en mailmodtager
-- eskalere sagen til en Advanced eDiscovery undersøgelse
+- eskalerer sagen for en eDiscovery-undersøgelse (Premium)
 
-Se videoen [insider-risikostyringsundersøgelse og -eskalering](https://www.youtube.com/watch?v=UONUSmkRC8s) for at få et overblik over, hvordan sager undersøges og administreres i Insider Risk Management.
+Se [videoen Insider Risk Management Investigation and Escalation](https://www.youtube.com/watch?v=UONUSmkRC8s) for at få en oversigt over, hvordan sager undersøges og administreres i styring af insiderrisiko.
 
 ## <a name="cases-dashboard"></a>Dashboardet Sager
 
-Med dashboardet Insider Risk **Management Cases** kan du få vist og handle på sager. Hver rapportwidget på dashboardet viser oplysninger for de seneste 30 dage.
+**Dashboardet Sager** for insiderrisikostyring giver dig mulighed for at få vist og reagere på sager. Hver rapportwidget på dashboardet viser oplysninger for de seneste 30 dage.
 
 - **Aktive sager**: Det samlede antal aktive sager, der undersøges.
-- **Sager over de seneste 30** dage: Det samlede antal oprettede sager sorteret efter *statussen* *Aktiv og* Lukket.
-- **Statistik**: Gennemsnitlig tid for aktive sager, der er angivet i timer, dage eller måneder.
+- **Sager over de seneste 30 dage**: Det samlede antal sager, der er oprettet *, sorteret* efter aktiv og *lukket* status.
+- **Statistik**: Den gennemsnitlige tid for aktive sager, der er angivet i timer, dage eller måneder.
 
-Sagskøen viser alle aktive og lukkede sager for organisationen ud over den aktuelle status for følgende sagsattributter:
+Sagskøen viser alle aktive og lukkede sager for din organisation ud over den aktuelle status for følgende sagsattributter:
 
-- **Sagsnavn**: Navnet på sagen, der er defineret, når en besked bekræftes, og sagen oprettes.  
+- **Sagsnavn**: Navnet på sagen, der defineres, når en besked bekræftes, og sagen oprettes.  
 - **Status**: Status for sagen, enten *Aktiv* eller *Lukket*.
-- **Bruger**: Brugeren af sagen. Hvis anonymisering for brugernavne er aktiveret, vises anonymiserede oplysninger.
-- **Tidstilfælde åbnet**: Det tidspunkt, der er gået, siden sagen blev åbnet.
-- **Beskeder om samlet politik**: Antallet af politik matches, der er medtaget i sagen. Dette tal kan øges, hvis der føjes nye beskeder til sagen.
-- **Sag sidst opdateret**: Det tidspunkt, der er gået, siden der er blevet tilføjet en sagsnote eller ændring i sagstilstanden.
-- **Senest opdateret af**: Navnet på insider-analytikeren for risikostyring eller den, der senest har opdateret sagen.
+- **Bruger**: Brugeren for sagen. Hvis anonymisering af brugernavne er aktiveret, vises anonymiserede oplysninger.
+- **Tid åbnet sag**: Det tidspunkt, der er gået, siden sagen blev åbnet.
+- **Samlet antal politikbeskeder**: Antallet af politikforekomster, der er inkluderet i sagen. Dette tal kan stige, hvis der føjes nye beskeder til sagen.
+- **Sagen blev sidst opdateret**: Det tidspunkt, der er gået, siden der er tilføjet en note eller ændring i sagstilstanden.
+- **Sidst opdateret af**: Navnet på den insiderrisikostyringsanalytiker eller efterforsker, der sidst opdaterede sagen.
 
-![Dashboard for Insider-risikostyringssager.](../media/insider-risk-cases-dashboard.png)
+![Dashboard med sager om insiderrisikostyring.](../media/insider-risk-cases-dashboard.png)
 
-Brug **kontrolelementet Søg** til at søge efter navne på store og små bogstaver for en bestemt tekst, og brug filteret til at sortere sager efter følgende attributter:
+Brug kontrolelementet **Search** til at søge efter navne på små og små bogstaver efter bestemt tekst, og brug sagsfilteret til at sortere sager efter følgende attributter:
 
 - Status
-- Tid, hvor store og små bogstaver er åbnet, startdato og slutdato
+- Tidspunkt for åbning af sag, startdato og slutdato
 - Senest opdateret, startdato og slutdato
 
 ## <a name="filter-cases"></a>Filtrer sager
 
-Det kan være en udfordring at gennemgå en stor kø af sager afhængigt af antallet og typen af aktive insider-risikostyringspolitikker i organisationen. Brug af sagsfiltre kan hjælpe analytikere og analytikere med at sortere sager efter flere attributter. Hvis du vil filtrere beskeder på **dashboardet Sager**, skal du vælge **kontrolelementet Filter** . Du kan filtrere sager efter en eller flere attributter:
+Det kan være en udfordring at gennemgå en stor række sager, afhængigt af antallet og typen af aktive politikker for styring af insiderrisiko i din organisation. Brug af sagsfiltre kan hjælpe analytikere og efterforskere med at sortere sager efter flere attributter. Hvis du vil filtrere beskeder på **dashboardet Sager**, skal du vælge kontrolelementet **Filter** . Du kan filtrere sager efter en eller flere attributter:
 
-- **Status**: Vælg en eller flere statusværdier for at filtrere sagslisten. Indstillingerne er *Aktive* og *Lukkede*.
-- **Tidstilfælde åbnet**: Vælg start- og slutdatoerne for, hvornår sagen blev åbnet.
-- **Senest opdateret**: Vælg start- og slutdatoerne for, hvornår sagen blev opdateret.
+- **Status**: Vælg en eller flere statusværdier for at filtrere sagslisten. Indstillingerne er *Aktiv* og *Lukket*.
+- **Tid for åbning af sag**: Vælg start- og slutdatoerne for, hvornår sagen blev åbnet.
+- **Sidst opdateret**: Vælg start- og slutdatoerne for, hvornår sagen blev opdateret.
 
 ## <a name="investigate-a-case"></a>Undersøg en sag
 
-En dybere undersøgelse af insider-risikostyringsadvarsler er afgørende for at tage korrekte korrigerende handlinger. Insider-risikostyringssager er det centrale administrationsværktøj til at dykke dybere ned i historikken for brugerrisici, give besked om detaljer, rækkefølgen af risikohændelser og udforske indholdet og meddelelser, der er eksponeret for risici. Risikoanalytikere og analyseanalytikere bruger også tilfælde til at centralisere feedback og noter og behandle sagsløsning.
+En dybere undersøgelse af insiderrisikostyringsbeskeder er afgørende for at kunne udføre korrekte korrigerende handlinger. Insiderrisikostyringssager er det centrale administrationsværktøj til at dykke dybere ned i brugerrisikoaktivitetshistorikken, beskedoplysninger, sekvensen af risikohændelser og til at udforske det indhold og de meddelelser, der eksponeres for risici. Risikoanalytikere og efterforskere bruger også sager til at centralisere feedback og noter om anmeldelser og til at behandle sagsløsning.
 
-Når du vælger en sag, åbnes værktøjerne til sagsadministration, og analytikere og analytikere kan grave ned i detaljerne i sager.
+Når du vælger en sag, åbnes værktøjerne til sagsstyring, og analytikere og efterforskere kan se nærmere på sagsoplysningerne.
 
-### <a name="case-overview"></a>Oversigt over store og små bogstaver
+### <a name="case-overview"></a>Oversigt over sager
 
-Fanen **Case overview** opsummerer detaljerne for risikoanalytikere og analyseværktøjer. Den indeholder følgende oplysninger i **området Om denne** sag
+Under fanen **Sagsoversigt** opsummeres sagsdetaljerne for risikoanalytikere og efterforskere. Den indeholder følgende oplysninger i området **Om denne sag**
 
 - **Status**: Den aktuelle status for sagen, enten Aktiv eller Lukket.
-- **Sag oprettet den**: Den dato og det klokkeslæt, hvor sagen blev oprettet.
-- **Brugerens risikoscore**: Brugerens aktuelle beregnede risikoniveau for sagen. Dette resultat beregnes hver 24. time og bruger advarselskarakterer fra alle aktive beskeder, der er knyttet til brugeren.
+- **Sag oprettet** den: Den dato og det klokkeslæt, hvor sagen blev oprettet.
+- **Brugerens risikoscore: Brugerens** aktuelle beregnede risikoniveau for sagen. Denne score beregnes hvert 24. time og bruger scorer for advarselsrisici fra alle aktive beskeder, der er knyttet til brugeren.
 - **Mail**: Brugerens mailalias for sagen.
-- **Organisation eller afdeling**: Den organisation eller afdeling, brugeren er tildelt til.
-- **Administratornavn**: Navnet på brugerens overordnede.
-- **Administratormail**: Mailaliaset for brugerens chef.
+- **Organisation eller afdeling**: Den organisation eller afdeling, som brugeren er tildelt.
+- **Ledernavn**: Navnet på brugerens leder.
+- **Chefmail**: Mailaliaset for brugerens leder.
 
-![Insider-oplysninger om risikostyringssag.](../media/insider-risk-case-details.png)
+![Oplysninger om insiderrisikostyringscases.](../media/insider-risk-case-details.png)
 
-Fanen **Sagsoversigt** indeholder også sektionen **Vigtige beskeder** , der indeholder følgende oplysninger om beskeder om match af politik, der er knyttet til sagen:
+Fanen **Sagsoversigt** indeholder også sektionen **Beskeder** , der indeholder følgende oplysninger om politikmatchbeskeder, der er knyttet til sagen:
 
-- **Politikken matcher**: Navnet på den insider-risikostyringspolitik, der er knyttet til matchbeskeder for brugeraktivitet.
-- **Status**: Beskedens status.
-- **Alvorsgrad**: Beskedens alvorsgrad.
-- **Registreret tid**: Det tidspunkt, der er gået, siden beskeden blev oprettet.
+- **Politikforekomster**: Navnet på politikken for styring af insiderrisiko, der er knyttet til matchbeskederne for brugeraktivitet.
+- **Status**: Status for beskeden.
+- **Alvorsgrad**: Alvorsgraden af beskeden.
+- **Tid registreret**: Det tidspunkt, der er gået, siden beskeden blev genereret.
 
 ### <a name="alerts"></a>Beskeder
 
-Fanen **Beskeder opsummerer** de aktuelle beskeder, der er medtaget i sagen. Nye beskeder kan føjes til en eksisterende sag, og de føjes til **beskedkøen** , når de tildeles. Følgende attributter for påmindelser vises i køen:
+Fanen **Beskeder** opsummerer de aktuelle beskeder, der er inkluderet i sagen. Nye beskeder kan føjes til en eksisterende sag, og de føjes til **beskedkøen** , når de tildeles. Følgende beskedattributter er angivet i køen:
 
 - Status
-- Alvorsgrad
-- Registreret klokkeslæt
+- Sværhedsgraden
+- Registreret tid
 
-Vælg en besked fra køen for at få vist **detaljesiden** Besked.
+Vælg en besked fra køen for at få vist siden **Beskedoplysninger** .
 
-Brug søgekontrolelementet til at søge efter navne på vigtige beskeder efter bestemt tekst, og brug beskedfilteret til at sortere sager efter følgende attributter:
+Brug søgekontrolelementet til at søge efter beskednavne efter bestemt tekst, og brug beskedfilteret til at sortere sager efter følgende attributter:
 
 - Status
-- Alvorsgrad
-- Registreret klokkeslæt, startdato og slutdato
+- Sværhedsgraden
+- Registreret tid, startdato og slutdato
 
 Brug filterkontrolelementet til at filtrere beskeder efter flere attributter, herunder:
 
-- **Status**: Vælg en eller flere statusværdier for at filtrere påmindelseslisten. Indstillingerne er *Bekræftet*, *Afvist*, *Skal gennemgås* og *Løst*.
-- **Alvorsgrad**: Vælg et eller flere alvorsniveauer for din besked for at filtrere påmindelseslisten. Indstillingerne er *Høj*, *Mellem* og *Lav*.
-- **Det registrerede klokkeslæt**: Vælg start- og slutdatoerne for det tidspunkt, hvor beskeden blev oprettet.
+- **Status**: Vælg en eller flere statusværdier for at filtrere beskedlisten. Indstillingerne er *Bekræftet*, *Afvist*, *Skal gennemses* og *Løst*.
+- **Alvorsgrad**: Vælg et eller flere niveauer af beskedrisikoen for at filtrere beskedlisten. Indstillingerne er *Høj*, *Mellem* og *Lav*.
+- **Registreret tid**: Vælg start- og slutdatoer for, hvornår beskeden blev oprettet.
 - **Politik**: Vælg en eller flere politikker for at filtrere de beskeder, der genereres af de valgte politikker.
 
 ### <a name="user-activity"></a>Brugeraktivitet
 
-Fanen **Brugeraktivitet giver** risikoanalytikere og risikoanalytikere mulighed for at gennemgå detaljer om aktivitet og bruge en visuel repræsentation af alle de aktiviteter, der er forbundet med risikobeskeder og sager. Som en del af triageprocessen af beskeder kan det f.eks. være, at analytikere skal gennemgå alle de risikoaktiviteter, der er forbundet med sagen, for at få flere oplysninger. I tilfælde kan risikoanalyser gennemse detaljer om brugeraktivitet og boblediagrammet for at hjælpe med at forstå det overordnede omfang af de aktiviteter, der er knyttet til sagen. Du kan finde flere oplysninger om diagrammet Brugeraktivitet i [artiklen Om Insider-aktiviteter for risikostyring](insider-risk-management-activities.md#user-activity) .
+Fanen **Brugeraktivitet** gør det muligt for risikoanalytikere og efterforskere at gennemse aktivitetsoplysninger og bruge en visuel repræsentation af alle de aktiviteter, der er knyttet til risikobeskeder og sager. Som en del af processen til vigtige beskeder skal analytikere f.eks. gennemse alle de risikoaktiviteter, der er knyttet til sagen, for at få flere oplysninger. I tilfælde kan risikoforskere gennemse oplysninger om brugeraktivitet og boblediagrammet for at hjælpe med at forstå det overordnede omfang af de aktiviteter, der er knyttet til sagen. Du kan få flere oplysninger om brugeraktivitetsdiagrammet i artiklen [Insider Risk Management-aktiviteter](insider-risk-management-activities.md#user-activity) .
 
-### <a name="activity-explorer-preview"></a>Aktivitetsstifinder (eksempel)
+### <a name="activity-explorer-preview"></a>Aktivitetsoversigt (prøveversion)
 
-Fanen **Aktivitetsoversigt** giver risikoanalytikere og risikoanalytikere mulighed for at gennemgå oplysninger om aktivitet, der er knyttet til risikobeskeder. Som en del af handlingerne til sagsstyring kan det f.eks. være, at analytikere og analytikere skal gennemgå alle de risikoaktiviteter, der er forbundet med sagen, for at få flere oplysninger. Med **Aktivitetsoversigt kan** korrekturlæsere hurtigt gennemgå en tidslinje for registreret risikabel aktivitet og identificere og filtrere alle risikoaktiviteter, der er knyttet til beskeder.
+Fanen **Aktivitetsoversigt** giver risikoanalytikere og efterforskere mulighed for at gennemse aktivitetsoplysninger, der er knyttet til risikobeskeder. Som en del af sagshåndteringshandlinger kan det f.eks. være nødvendigt for efterforskere og analytikere at gennemse alle de risikoaktiviteter, der er knyttet til sagen, for at få flere oplysninger. Med **Aktivitetsoversigt** kan korrekturlæsere hurtigt gennemse en tidslinje over registreret risikable aktiviteter og identificere og filtrere alle risikoaktiviteter, der er knyttet til beskeder.
 
-Du kan finde flere oplysninger om Aktivitetsstifinder i [artiklen Om Insider-aktiviteter for](insider-risk-management-activities.md#activity-explorer) risikostyring.
+Du kan få flere oplysninger om Aktivitetsoversigt i artiklen [Insider Risk Management-aktiviteter](insider-risk-management-activities.md#activity-explorer) .
 
-### <a name="content-explorer"></a>Indholdsstifinder
+### <a name="content-explorer"></a>Indholdsoversigt
 
-Fanen **Indholdsstifinder** giver mulighed for risiko for at gennemse kopier af alle individuelle filer og mails, der er forbundet med advarsler om risici. Hvis der f.eks. oprettes en besked, når en bruger downloader hundredvis af filer fra SharePoint Online, og aktiviteten udløser en besked om en politik, bliver alle de downloadede filer til beskeden registreret og kopieret til Insider-risikostyringssagen fra de oprindelige lagringskilder.
+Fanen **Indholdsoversigt** giver risikoforskere mulighed for at gennemse kopier af alle individuelle filer og mailmeddelelser, der er knyttet til risikobeskeder. Hvis der f.eks. oprettes en besked, når en bruger downloader hundredvis af filer fra SharePoint Online, og aktiviteten udløser en politikbesked, registreres og kopieres alle de downloadede filer til beskeden til insiderrisikostyringscasen fra oprindelige lagerkilder.
 
-Indholdsstifinder er et effektivt værktøj med grundlæggende og avancerede søge- og filtreringsfunktioner. Hvis du vil have mere at vide om at bruge Indholdsstifinder, [skal du se Indholdsstifinder til Insider-risikostyring](insider-risk-management-content-explorer.md).
+Indholdsoversigt er et effektivt værktøj med grundlæggende og avancerede søge- og filtreringsfunktioner. Hvis du vil vide mere om brug af Indholdsoversigt, skal du se [Indholdsoversigt for styring af insiderrisiko](insider-risk-management-content-explorer.md).
 
-![Insider-sag til risikostyring Indholdsstifinder.](../media/insider-risk-content-explorer.png)
+![Insider risk management-sag Indholdsoversigt.](../media/insider-risk-content-explorer.png)
 
-### <a name="case-notes"></a>Casenoter
+### <a name="case-notes"></a>Sagsnoter
 
-Fanen **Case notes** i sagen er der, hvor risikoanalytikere og analyseanalytikere deler kommentarer, feedback og viden om deres arbejde i sagen. Noter er permanente tilføjelser til en sag og kan ikke redigeres eller slettes, når noten er gemt. Når der oprettes en sag ud fra en besked, tilføjes de kommentarer, der er angivet i dialogboksen Bekræft besked og opret **insider-risiko** sag, automatisk som en casenote.
+Fanen **Case notes** i sagen er det tilfælde, hvor risikoanalytikere og efterforskere deler kommentarer, feedback og indsigt om deres arbejde i forbindelse med sagen. Noter er permanente tilføjelser til en sag og kan ikke redigeres eller slettes, når noten er gemt. Når der oprettes en sag ud fra en besked, tilføjes de kommentarer, der er angivet i dialogboksen **Bekræft besked og opret insiderrisikosag** , automatisk som en sagsbemærkning.
 
-Dashboardet til sagsnoter viser noter fra den bruger, der har oprettet noten, samt det tidspunkt, der er gået, siden noten blev gemt. Hvis du vil søge i tekstfeltet til store og små bogstaver efter et  bestemt nøgleord, skal du bruge knappen Søg på dashboardet til store og små bogstaver og skrive et bestemt nøgleord.
+Dashboardet sagsnoter viser noter fra den bruger, der oprettede noten, og det tidspunkt, der er gået, siden noten blev gemt. Hvis du vil søge i tekstfeltet til sagsnoter efter et bestemt nøgleord, skal du bruge knappen **Søg** på sagsdashboardet og angive et bestemt nøgleord.
 
 Sådan føjer du en note til en sag:
 
-1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) gå til **Insider-risikostyring og** vælge **fanen** Sager.
-2. Markér en sag, og vælg derefter fanen **Store og små bogstaver** .
-3. Vælg **Tilføj en sagsnote**.
-4. Skriv **din note for sagen** i dialogboksen Tilføj en sagsnote. Vælg **Gem** for at føje noten til sagen, eller vælg **Annuller** Luk uden at gemme noten i sagen.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+2. Vælg en sag, og vælg derefter fanen **Sagsnoter** .
+3. Vælg **Tilføj sagsnote**.
+4. Skriv din note til sagen i dialogboksen **Tilføj sagsnote** . Vælg **Gem** for at føje noten til sagen, eller vælg **Annuller** luk uden at gemme noten i sagen.
 
 ### <a name="contributors"></a>Bidragydere
 
-Fanen **Bidragydere** er der, hvor risikoanalytikere og analyseværktøjer kan føje andre korrekturlæsere til sagen. Som standard er alle brugere, der er tildelt **Insider Risk Management-analytikere** og **rollerne Insider Risk Management angivne** som bidragydere for hver aktiv og lukket sag. Kun de brugere, der **er tildelt rollen Insider Risk Management administration,** har tilladelse til at få vist filer og meddelelser i Indholdsstifinder.
+Fanen **Bidragydere** i sagen er det tilfælde, hvor risikoanalytikere og efterforskere kan føje andre korrekturlæsere til sagen. Alle brugere, der er tildelt **rollerne Insider Risk Management Analysts** og **Insider Risk Management Investigators** , er som standard angivet som bidragydere for hver aktive og lukkede sag. Det er kun brugere, der har fået tildelt rollen **Undersøgere af insiderrisikostyring** , der har tilladelse til at få vist filer og meddelelser i Indholdsoversigt.
 
-Midlertidig adgang til en sag kan tildeles ved at tilføje en bruger som bidragyder. Bidragydere har al sagsstyringskontrol på den specifikke sag undtagen:
+Du kan give midlertidig adgang til en sag ved at tilføje en bruger som bidragyder. Bidragydere har al sagsstyringskontrol i den specifikke sag undtagen:
 
 - Tilladelse til at bekræfte eller afvise beskeder
-- Tilladelse til at redigere bidragydere til sager
-- Tilladelse til at få vist filer og meddelelser i Indholdsstifinder
+- Tilladelse til at redigere bidragydere for sager
+- Tilladelse til at få vist filer og meddelelser i Indholdsoversigt
 
 Sådan føjer du en bidragyder til en sag:
 
-1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) gå til **Insider-risikostyring og** vælge **fanen** Sager.
-2. Vælg en sag, og vælg **derefter fanen Bidragydere** .
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+2. Vælg en sag, og vælg derefter fanen **Bidragydere** .
 3. Vælg **Tilføj bidragyder**.
-4. Begynd at **skrive navnet** på den bruger, du vil tilføje, i dialogboksen Tilføj bidragyder, og vælg derefter brugeren på listen over foreslåede brugere. Denne liste genereres fra Azure Active Directory for dit lejerabonnement.
+4. I dialogboksen **Tilføj bidragyder** skal du begynde at skrive navnet på den bruger, du vil tilføje, og derefter vælge brugeren på listen over foreslåede brugere. Denne liste oprettes ud fra Azure Active Directory for dit lejerabonnement.
 5. Vælg **Tilføj** for at tilføje brugeren som bidragyder, eller vælg **Annuller** luk dialogboksen uden at tilføje brugeren som bidragyder.
 
 ## <a name="case-actions"></a>Sagshandlinger
 
-Risici kan handle på en sag i en af flere forskellige metoder afhængigt af sags alvorligheden, historikken for risikoen for brugeren og retningslinjerne for din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller dataundersøgelse for at samarbejde med andre områder i organisationen og dykke dybere ned i risikoaktiviteter. Insider-risikostyring er tæt integreret med andre Microsoft 365 løsninger til overholdelse af regler og standarder for at hjælpe dig med en ende-til-en-løsningsstyring.
+Risikoforskere kan handle på en sag på en af flere metoder, afhængigt af sagens alvorsgrad, historikken over risikoen for brugeren og retningslinjerne for risikoen i din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller en dataundersøgelse for at samarbejde med andre områder i din organisation og dykke dybere ned i risikoaktiviteter. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med administration af komplette løsninger.
 
-### <a name="send-email-notice"></a>Send en mailmeddelelse
+### <a name="send-email-notice"></a>Send meddelelse via mail
 
-I de fleste tilfælde er brugerhandlinger, der opretter insider-risikobeskeder, utilsigtet eller utilsigtet. At sende en påmindelsesmeddelelse til brugeren via mail er en effektiv metode til at dokumentere sagsgennemgang og -handling og er en metode til at minde brugerne om virksomhedens politikker eller pege dem til at opdatere kurser. Meddelelser genereres fra [meddelelsesskabeloner, som du opretter](insider-risk-management-notices.md) til din Insider-infrastruktur til risikostyring.
+I de fleste tilfælde er brugerhandlinger, der opretter insiderrisikobeskeder, utilsigtede eller utilsigtede. Afsendelse af en påmindelse til brugeren via mail er en effektiv metode til at dokumentere sagsgennemgang og -handling og er en metode til at minde brugerne om virksomhedens politikker eller pege dem på oplæring i opdatering. Meddelelser genereres ud fra [de meddelelsesskabeloner, du opretter](insider-risk-management-notices.md) til din infrastruktur til styring af insiderrisiko.
 
-Det er vigtigt at huske på, at når du sender en mail til en bruger ***ikke** _løses problemet som _Closed*. I nogle tilfælde kan det være en god ide at lade en sag være åben efter at have sendt en meddelelse til en bruger for at lede efter flere risikoaktiviteter uden at åbne en ny sag. Hvis du vil løse en sag efter afsendelse af en meddelelse, skal du vælge løs  sag som et opfølgningstrin efter afsendelse af en meddelelse.
+Det er vigtigt at huske, at afsendelse af en mailmeddelelse til en bruger ***ikke** _ løser sagen som _Closed*. I nogle tilfælde kan det være en god idé at lade en sag være åben, når du har sendt en meddelelse til en bruger for at søge efter flere risikoaktiviteter uden at åbne en ny sag. Hvis du vil løse en sag, når du har sendt en meddelelse, skal du vælge trinnet **Løs sag** som et efterfølgende trin, når du har sendt en meddelelse.
 
 Sådan sender du en meddelelse til den bruger, der er tildelt en sag:
 
-1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) gå til **Insider-risikostyring og** vælge **fanen** Sager.
-2. Vælg en sag, og vælg derefter **knappen Send mailmeddelelse** på værktøjslinjen sagshandling.
-3. I dialogboksen **Send mailmeddelelse skal** du vælge rullelisten **Vælg** en meddelelsesskabelon for at vælge meddelelsesskabelonen for meddelelsen. Denne markering udfylder de andre felter i meddelelsen på forhånd.
-4. Gennemse meddelelsesfelterne, og opdater dem efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
-5. Vælg **Send** for at sende meddelelsen til brugeren, eller vælg **Annuller** Luk dialogboksen uden at sende meddelelsen til brugeren. Alle sendte meddelelser føjes til køen med sagsnoter på **dashboardet for sagsnoter** .
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+2. Vælg en sag, og vælg derefter knappen **Send meddelelse via mail** på værktøjslinjen med sagshandlingen.
+3. I dialogboksen **Send mailmeddelelse** skal du vælge rullelistekontrolelementet **Vælg en meddelelsesskabelon** for at vælge meddelelsesskabelonen til meddelelsen. Dette valg udfylder på forhånd de andre felter i meddelelsen.
+4. Gennemse meddelelsesfelterne, og opdater efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
+5. Vælg **Send** for at sende meddelelsen til brugeren, eller vælg **Annuller** luk dialogboksen uden at sende meddelelsen til brugeren. Alle sendte meddelelser føjes til sagsnotekøen på dashboardet **Sagsnoter** .
 
 ### <a name="escalate-for-investigation"></a>Eskaler til undersøgelse
 
-Eskaler sagen til brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner en ny Advanced eDiscovery sag i din Microsoft 365 organisation. Advanced eDiscovery en ende-til-ende-arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelser om retsligt hold til at kommunikere med personer, der er involveret i en sag. Når du tildeler en korrekturlæser som din Advanced eDiscovery en sag, der er oprettet ud fra en Insider Risk management-sag, kan det hjælpe dit juridiske team med at tage de nødvendige skridt til at administrere opbevaring af indhold. Hvis du vil have mere Advanced eDiscovery om Advanced eDiscovery, [skal du se Oversigt over Advanced eDiscovery i Microsoft 365](overview-ediscovery-20.md).
+Eskaler sagen for brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner et nyt Microsoft Purview eDiscovery-tilfælde (Premium) i din Microsoft 365 organisation. eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelse om juridiske ventepositioner for at kommunikere med tilsynsførende, der er involveret i en sag. Tildeling af en korrekturlæser som tilsynsførende i en eDiscovery-sag (Premium), der er oprettet ud fra en sag om styring af insiderrisiko, hjælper dit juridiske team med at træffe de nødvendige foranstaltninger og administrere bevarelse af indhold. Hvis du vil vide mere om eDiscovery-sager (Premium), skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 Sådan eskalerer du en sag til en brugerundersøgelse:
 
-1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) gå til **Insider-risikostyring og** vælge **fanen** Sager.
-2. Vælg en sag, og vælg derefter knappen **Eskaler til undersøgelse** på værktøjslinjen Sagshandling.
-3. I dialogboksen **Eskaler til undersøgelse** skal du angive et navn til den nye brugerundersøgelse. Hvis det er nødvendigt, kan du skrive noter om sagen og **vælge Eskaler**.
-4. Gennemse meddelelsesfelterne, og opdater dem efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+2. Vælg en sag, og vælg derefter knappen **Eskaler til undersøgelse** på værktøjslinjen sagshandling.
+3. Angiv et navn til den nye brugerundersøgelse i dialogboksen **Eskaler til undersøgelse** . Angiv evt. noter om sagen, og vælg **Eskaler**.
+4. Gennemse meddelelsesfelterne, og opdater efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
 5. Vælg **Bekræft** for at oprette brugerundersøgelsessagen, eller vælg **Annuller** for at lukke dialogboksen uden at oprette en ny brugerundersøgelsessag.
 
-Når insider-risikostyringssagen er blevet eskaleret til en ny brugerundersøgelsessag, kan du gennemgå den nye sag i **området eDiscoveryAdvanced** >  på Microsoft 365 Overholdelsescenter.
+Når insiderrisikostyringscasen er eskaleret til en ny brugerundersøgelsessag, kan du gennemse den nye sag i området **eDiscoveryAdvanced** >  på Microsoft Purview-overholdelsesportalen.
 
-### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Kør automatiserede opgaver med Power Automate flows for sagen
+### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Kør automatiserede opgaver med Power Automate flow for sagen
 
-Ved hjælp Power Automate dataflows kan risikoanalytikere og analytikere hurtigt reagere på:
+Ved hjælp af anbefalede Power Automate flow kan risikoforskere og analytikere hurtigt gøre noget for at:
 
-- Anmod om oplysninger fra HR eller virksomhed om en bruger i en Insider-risikosag
-- Giv besked til chef, når en bruger har en insider-risikobesked
-- Opret en post for en insider-risikoadministrationssag i ServiceNow
-- Giv brugerne besked, når de føjes til en Insider-risikopolitik
+- Anmod HR eller virksomheden om oplysninger om en bruger i en insiderrisikosag
+- Giv lederen besked, når en bruger har en insiderrisikobesked
+- Opret en post for en sag om styring af insiderrisiko i ServiceNow
+- Giv brugerne besked, når de føjes til en insiderrisikopolitik
 
-Sådan kører, administrerer eller opretter du Power Automate flows for en insider-risikostyringssag:
+Sådan kører, administrerer eller opretter du Power Automate flow for en insiderrisikostyringssag:
 
 1. Vælg **Automatiser** på værktøjslinjen til sagshandling. 
-2. Vælg det Power Automate, der skal køres, og vælg **derefter Kør flow**. 
+2. Vælg det Power Automate flow, der skal køres, og vælg derefter **Kør flow**. 
 3. Når flowet er fuldført, skal du vælge **Udført**.
 
-Du kan få mere at Power Automate om flow for insider-risikostyring under [Introduktion til indstillinger for insider-risikostyring](insider-risk-management-settings.md#power-automate-flows-preview).
+Hvis du vil vide mere om Power Automate flow til styring af insiderrisiko, skal [du se Introduktion til indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#power-automate-flows-preview).
 
-### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Få vist eller opret Microsoft Teams team for sagen
+### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Få vist eller opret et Microsoft Teams team til sagen
 
-Når Microsoft Teams integration for Insider Risk Management er aktiveret i indstillinger, oprettes der automatisk et Microsoft Teams-team, hver gang der bekræftes en besked, og der oprettes en sag. Risici og analytikere kan hurtigt åbne Microsoft Teams og gå direkte til teamet for en sag ved at vælge Vis **Microsoft Teams-team** på værktøjslinjen for sagshandling.
+Når Microsoft Teams integration til styring af insiderrisiko er aktiveret i indstillinger, oprettes der automatisk et Microsoft Teams team, hver gang en besked bekræftes, og der oprettes en sag. Risikoforskere og analytikere kan hurtigt åbne Microsoft Teams og navigere direkte til teamet for en sag ved at vælge **Vis Microsoft Teams team** på værktøjslinjen til sagshandling.
 
-For tilfælde, der åbnes, før Microsoft Team-integration er aktiveret, kan risikoanalyser og analytikere oprette et nyt Microsoft Teams-team til en sag ved at vælge Opret **Microsoft Teams-team** på værktøjslinjen for sagshandling.
+I forbindelse med sager, der er åbnet før aktivering af Microsoft Team-integration, kan risikoforskere og analytikere oprette et nyt Microsoft Teams team til en sag ved at vælge **Opret Microsoft Teams team** på værktøjslinjen til sagshandling.
 
-Når en sag er løst, arkiveres det tilknyttede Microsoft-team automatisk (skjult og aktiveret som skrivebeskyttet).
+Når en sag er afsluttet, arkiveres det tilknyttede Microsoft-team automatisk (skjult og skrivebeskyttet).
 
-Hvis du vil vide mere Microsoft Teams om insider-risikostyring, skal du se [Introduktion til insider-indstillinger for risikostyring](insider-risk-management-settings.md#microsoft-teams-preview).
+Hvis du vil vide mere om Microsoft Teams til styring af insiderrisiko, [skal du se Introduktion til indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#microsoft-teams-preview).
 
-### <a name="resolve-the-case"></a>Løs problemet
+### <a name="resolve-the-case"></a>Løs sagen
 
-Når risikoanalytikere og risikoanalytikere har afsluttet deres gennemgang og undersøgelse, kan en sag løses, så der kan reageres på alle de beskeder, der aktuelt er inkluderet i sagen. Når du løser en sag, tilføjes der en klassificering af løsningen, statussen for sag ændres til *Lukket, og* handlingsårsagen til løsningen føjes automatisk til køen med sagsnoter på dashboardet For **sagsnoter** . Sager løses enten som:
+Når risikoanalytikere og efterforskere har afsluttet deres gennemgang og undersøgelse, kan en sag løses for at reagere på alle de beskeder, der i øjeblikket er inkluderet i sagen. Løsning af en sag tilføjer en løsningsklassificering, ændrer sagsstatus til *Lukket*, og årsagerne til løsningshandlingen føjes automatisk til sagsnotekøen på dashboardet **Sagsnoter** . Sager løses som enten:
 
-- **Benign**: Klassificeringen af tilfælde, hvor beskeder om match af politikker evalueres som lav risiko, ikke-alvorlig eller falsk positiv.
-- **Bekræftet overtrædelse af** politikken: Klassificeringen af tilfælde, hvor beskeder om match af politikker evalueres som risikabelt, alvorlig eller resultatet af ondsindede hensigter.
+- **Godartet**: Klassificeringen for de tilfælde, hvor politikmatchbeskeder evalueres som lav risiko, ikke-alvorlig eller falsk positiv.
+- **Bekræftet politikovertrædelse**: Klassificeringen for tilfælde, hvor beskeder om politikmatch evalueres som risikable, alvorlige eller resultatet af ondsindet hensigt.
 
 Sådan løses en sag:
 
-1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) gå til **Insider-risikostyring og** vælge **fanen** Sager.
-2. Markér en sag, og vælg derefter **knappen Løs sag** på værktøjslinjen til sagshandling.
-3. I dialogboksen **Løs sag** skal du vælge **rulleelementet Løs** som for at vælge løsningsklassificeringen for sagen. Indstillingerne er **Benign-** eller **Bekræftet politikkrænkelse**.
-4. I dialogboksen **Løs sag skal** du angive årsagerne til klassificeringen af løsningen i **tekstfeltet Handling** taget.
-5. Vælg **Løs** for at lukke sagen, eller vælg **Annuller** luk dialogboksen uden at løse sagen.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+2. Vælg en sag, og vælg derefter knappen **Løs sag** på værktøjslinjen sag.
+3. I dialogboksen **Løs sag** skal du vælge rullemenuen **Løs som** for at vælge løsningsklassificeringen for sagen. Indstillingerne er overtrædelse af politikken **Godartet** eller **Bekræftet**.
+4. I dialogboksen **Løs sag** skal du angive årsagerne til løsningsklassificeringen i tekstfeltet **Handling udført** .
+5. Vælg **Løs** for at lukke sagen, eller vælg **Annuller** Luk dialogboksen uden at løse problemet.

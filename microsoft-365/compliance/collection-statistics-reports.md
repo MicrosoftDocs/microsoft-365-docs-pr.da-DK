@@ -15,15 +15,17 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du får adgang til og bruger statistikker og rapporter til kladdesamlinger og samlinger, der er blevet sendt til et korrektursæt i Microsoft Purview eDiscovery (Premium).
-ms.openlocfilehash: 12152e0b81df6c61732fda068c593a91578861ee
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Få mere at vide om, hvordan du får adgang til og bruger statistikker og rapporter til kladdesamlinger og samlinger, der er blevet bekræftet i et korrektursæt i Microsoft Purview eDiscovery (Premium).
+ms.openlocfilehash: 140a6aa2ac0a0ebbff7cf2ab2ee8618cd45cdf07
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940307"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995750"
 ---
 # <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Statistik og rapporter for samling i Microsoft Purview eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har oprettet en kladdesamling, kan du få vist statistikker over de hentede elementer, f.eks. de indholdsplaceringer, der indeholder de fleste elementer, der opfylder søgekriterierne, og antallet af elementer, der returneres af søgeforespørgslen. Du kan også få vist et undersæt af resultaterne.
 

@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Søg efter indhold, der kan være relevant for en eDiscovery-sag (Standard).
-ms.openlocfilehash: d97acf066914a7dee0059f27aa0127efe52ea5f3
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 00a7c7bdd565a5fc184281fa467db3c56b1c6288
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971599"
+ms.locfileid: "64995332"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>Søg efter indhold i en eDiscovery-sag (Standard)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når der er oprettet en Microsoft Purview eDiscovery (Standard)-sag, og personer af interesse for sagen er sat i venteposition, kan du oprette og køre en eller flere søgninger efter indhold, der er relevant for sagen. Søgninger, der er knyttet til en eDiscovery-sag (Standard), vises ikke på siden **Indholdssøgning** på Microsoft Purview-overholdelsesportalen. Disse søgninger vises på siden **Søgninger** i eDiscover-kernecasen, som søgninger er knyttet til. Det betyder også, at sagsmedlemmer kun kan få adgang til søgninger, der er knyttet til en sag.
 
@@ -50,7 +52,7 @@ Sådan opretter du en eDiscovery-søgning (Standard):
 
    2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online-organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
   
    4. Markér dette afkrydsningsfelt for at søge efter Teams indhold til brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 

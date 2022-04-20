@@ -15,14 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug masseimportværktøjet til hurtigt at føje flere tilsynsførende og deres tilknyttede datakilder til en sag i Microsoft Purview eDiscovery (Premium).
-ms.openlocfilehash: 7913c8674dc5560539196f34e323f05955a6850e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a6ad413c65b3b8afaa0cbf10df1a595730914405
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950351"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994511"
 ---
 # <a name="import-custodians-to-an-ediscovery-premium-case"></a>Importér tilsynsførende til en eDiscovery-sag (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer mange tilsynsførende, kan du importere flere tilsynsførende på én gang ved hjælp af en CSV-fil, der indeholder de oplysninger, der er nødvendige for at føje dem til en sag. Værktøjet til import af tilsynsførende validerer også CSV-filen, før importjobbet oprettes. Det betyder, at du kan rette eventuelle fejl i CSV-filen i stedet for at skulle vente, indtil importjobbet er fuldført, før du lærer, at der er fejl, der forhindrer en tilsynsførende i at blive føjet til sagen.
 
@@ -32,7 +34,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 - Du kan tilknytte op til 500 datakilder for hver tilsynsførende.  
 
-- Du kan kun importere tilsynsførende, der er en del af organisationens Azure Active Directory.
+- Du kan kun importere tilsynsførende, der er en del af din organisations Azure Active Directory.
 
 - Hver tilsynsførende skal have en entydig mailadresse.
 
@@ -40,7 +42,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 ## <a name="import-custodians"></a>Importér tilsynsførende
 
-1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder**.
+1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder** .
 
 2. Klik på **Tilføj** **datakildeImportér** >  tilsynsførende.
 
@@ -52,7 +54,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 5. Når du har forberedt CSV-filen med oplysninger om tilsynsførende, skal du gå tilbage til fanen **Datakilder** og klikke på **Tilføj** **datakildeImportér** >  tilsynsførende igen.
 
-6. Klik på **Upload CSV-fil** på siden **med guiden Upload CSV-fil**, og upload derefter den CSV-fil, der indeholder oplysningerne om vogteren.
+6. På siden med guiden **Upload CSV-fil** skal du klikke på **Overfør csv-fil** og derefter overføre den CSV-fil, der indeholder oplysningerne om vogteren.
 
    Når du har uploadet CSV-filen, validerer importguiden CSV-filen. Hvis der findes valideringsfejl, viser guiden et fejlbanner med et link til at få vist fejlene.
 

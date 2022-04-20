@@ -1,5 +1,5 @@
 ---
-title: Arbejde med vurderingsskabeloner i Microsoft Compliance Manager
+title: Arbejde med vurderingsskabeloner i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,20 +17,22 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Compliance Manager. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
-ms.openlocfilehash: 0dc28eb3058e3b929da47d947b29c7ba7be41111
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Purview Compliance Manager. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
+ms.openlocfilehash: 009b2d742ab135abcde7c3ab73f9ec15c05c8f29
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758987"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972777"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Få mere at vide om vurderingsskabeloner i Overholdelsesstyring
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Forstå **, hvordan skabeloner fungerer****, og hvordan du administrerer dem** fra siden med vurderingsskabeloner. Få instruktioner til **oprettelse af** nye skabeloner, **udvidelse** og **ændring af** eksisterende skabeloner, **formatering af dine skabelondata med Excel** og eksport af **skabelonrapporter**.
 
 > [!IMPORTANT]
-> De vurderingsskabeloner, der er tilgængelige for din organisation, afhænger af din licensaftale. [Gennemse detaljerne](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> De vurderingsskabeloner, der er tilgængelige for din organisation, afhænger af din licensaftale. [Gennemse detaljerne](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="templates-overview"></a>Oversigt over skabeloner
 
@@ -78,7 +80,7 @@ GCC Høj- og DOD-konti skal købe skabelonlicenser via [volumenlicenser](https:/
 
 Hvis du vil prøve Premium-skabeloner, før du foretager et køb, kan du også få prøveversioner af licenserne. Prøvelicenser er gode i op til 25 skabeloner i 90 dage. Når du har fået din prøvelicens, skal skabelonerne være tilgængelige i din lejer inden for 48 timer.
 
-Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [Om den gratis prøveversion af Premium-vurderinger fra Microsoft Compliance Manager](compliance-easy-trials-compliance-manager-assessments.md).
+Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [Om den gratis prøveversion til Premium-vurderinger fra Microsoft Purview Compliance Manager](compliance-easy-trials-compliance-manager-assessments.md).
 
 Hvis din organisation er under en GCC- eller DOD-licens, skal du vælge det relevante prøveversionslink til din organisation:
 

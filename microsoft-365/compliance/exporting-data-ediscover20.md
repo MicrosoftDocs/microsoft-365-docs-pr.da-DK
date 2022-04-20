@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du eksporterer eller downloader indhold fra et korrektursæt til præsentationer eller eksterne korrekturer i en eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f94062bee378a408e1a04240b09c5ae05f53c5f8
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 322b2c97d554ef917034afc261652a8150d23fbc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948633"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994122"
 ---
 # <a name="export-case-data-in-ediscovery-premium"></a>Eksportér sagsdata i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Der er tre måder at eksportere data fra et korrektursæt på:
 

@@ -16,22 +16,24 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan Microsoft 365 eDiscovery-værktøjer håndterer krypterede dokumenter, der er knyttet til mails og gemt i SharePoint Online og OneDrive for Business.
-ms.openlocfilehash: 91eef14c1cb4dc91657a1d9a26ab00b1eb6f6d92
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e010ef1ff169467b442e137bc31d3640aa5a8cb4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948765"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994437"
 ---
 # <a name="decryption-in-microsoft-365-ediscovery-tools"></a>Dekryptering i Microsoft 365 eDiscovery-værktøjer
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kryptering er en vigtig del af din strategi til beskyttelse af filer og beskyttelse af oplysninger. Organisationer af alle typer bruger krypteringsteknologi til at beskytte følsomt indhold i deres organisation og sikre, at kun de rette personer har adgang til dette indhold.
 
 For at udføre almindelige eDiscovery-opgaver på krypteret indhold skulle eDiscovery-ledere dekryptere mailindhold, efterhånden som det blev eksporteret fra indholdssøgninger, Microsoft Purview eDiscovery-sager (Standard) og Microsoft Purview eDiscovery-sager (Premium). Indhold, der er krypteret med Microsoft-krypteringsteknologier, var først tilgængeligt til gennemsyn, efter at det blev eksporteret.
 
-For at gøre det nemmere at administrere krypteret indhold i eDiscovery-arbejdsprocessen omfatter Microsoft 365 eDiscovery-værktøjer nu dekryptering af krypterede filer, der er knyttet til mails og sendt i Exchange Online.<sup> 1</sup> Derudover dekrypteres krypterede dokumenter, der er gemt i SharePoint Online, og OneDrive for Business i eDiscovery (Premium).
+For at gøre det nemmere at administrere krypteret indhold i eDiscovery-arbejdsprocessen omfatter Microsoft 365 eDiscovery-værktøjer nu dekryptering af krypterede filer, der er knyttet til mails, og som sendes i Exchange Online.<sup> 1</sup> Derudover dekrypteres krypterede dokumenter, der er gemt i SharePoint Online, og OneDrive for Business i eDiscovery (Premium).
 
-Før denne nye funktion blev kun indholdet af en mail, der er beskyttet af Rights Management (og ikke vedhæftede filer), dekrypteret. Krypterede dokumenter i SharePoint og OneDrive kunne ikke dekrypteres under eDiscovery-arbejdsprocessen. Nu er filer, der krypteres med en Microsoft-krypteringsteknologi, placeret på en SharePoint eller OneDrive konto, der kan søges i og dekrypteres, når søgeresultaterne forberedes til eksempelvisning, føjes til et korrektursæt i eDiscovery (Premium) og eksporteres. Derudover kan der søges i krypterede dokumenter i SharePoint og OneDrive, der er knyttet til en mail. Denne dekrypteringsfunktion gør det muligt for eDiscovery-ledere at få vist indholdet af krypterede vedhæftede filer i mails og webstedsdokumenter, når de får vist søgeresultater, og gennemse dem, når de er føjet til et korrektursæt i eDiscovery (Premium).
+Før denne nye funktion blev kun indholdet af en mail, der er beskyttet af Rights Management (og ikke vedhæftede filer), dekrypteret. Krypterede dokumenter i SharePoint og OneDrive kunne ikke dekrypteres under eDiscovery-arbejdsprocessen. Nu er filer, der krypteres med en Microsoft-krypteringsteknologi, placeret på en SharePoint- eller OneDrive-konto, der kan søges i og dekrypteres, når søgeresultaterne forberedes til eksempelvisning, føjes til et korrektursæt i eDiscovery (Premium) og eksporteres. Derudover kan der søges i krypterede dokumenter i SharePoint og OneDrive, der er knyttet til en mail. Denne dekrypteringsfunktion gør det muligt for eDiscovery-ledere at få vist indholdet af krypterede vedhæftede filer i mails og webstedsdokumenter, når de får vist søgeresultater, og gennemse dem, når de er føjet til et korrektursæt i eDiscovery (Premium).
 
 ## <a name="supported-encryption-technologies"></a>Understøttede krypteringsteknologier
 
@@ -44,7 +46,7 @@ Microsoft eDiscovery-værktøjer understøtter elementer, der er krypteret med M
 
 I følgende tabel identificeres de understøttede opgaver, der kan udføres i Microsoft 365 eDiscovery-værktøjer på krypterede filer, der er knyttet til mailmeddelelser og krypterede dokumenter i SharePoint og OneDrive. Disse understøttede opgaver kan udføres på krypterede filer, der opfylder kriterierne i en søgning. Værdien angiver `N/A` , at funktionaliteten ikke er tilgængelig i det tilsvarende eDiscovery-værktøj.
 
-|eDiscovery-opgave  |Indholdssøgning  |eDiscovery (standard)  |eDiscovery (Premium)  |
+|eDiscovery-opgave  |Indholdssøgning  |eDiscovery (Standard)  |eDiscovery (Premium)  |
 |:---------|:---------|:---------|:---------|
 |Søg efter indhold i krypterede filer på websteder og vedhæftede filer <sup>i mails1</sup>     |Nej      |Nej      |Ja      |
 |Vis krypterede filer, der er knyttet til mail     |Ja      |Ja     |Ja       |

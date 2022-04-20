@@ -17,16 +17,18 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du indsamler eDiscovery-diagnosticeringsoplysninger for en Microsoft Support-sag.
-ms.openlocfilehash: 13d3967adc6eddb6f0fc5a5b57119eb6c47114de
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6077df8f0a014b9e3356d8f520ddbaf0b2378983
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932194"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994434"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>Indsaml diagnosticeringsoplysninger i eDiscovery
 
-Nogle gange kræver Microsofts supportteknikere specifikke oplysninger om dit problem, når du åbner en supportsag, der er relateret til Microsoft Purview eDiscovery (Standard) eller Microsoft Purview eDiscovery (Premium). Denne artikel indeholder en vejledning i, hvordan du indsamler diagnosticeringsoplysninger for at hjælpe supportteknikere med at undersøge og løse problemer. Du behøver normalt ikke at indsamle disse oplysninger, før du bliver bedt om det af en Microsoft Support-tekniker.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Nogle gange kræver Microsoft-supportteknikere specifikke oplysninger om dit problem, når du åbner en supportsag, der er relateret til Microsoft Purview eDiscovery (Standard) eller Microsoft Purview eDiscovery (Premium). Denne artikel indeholder en vejledning i, hvordan du indsamler diagnosticeringsoplysninger for at hjælpe supportteknikere med at undersøge og løse problemer. Du behøver normalt ikke at indsamle disse oplysninger, før du bliver bedt om det af en Microsoft Support-tekniker.
 
 > [!IMPORTANT]
 > Outputtet fra de cmdlet'er og diagnosticeringsoplysninger, der er beskrevet i denne artikel, kan omfatte følsomme oplysninger om procesførelse eller interne undersøgelser i din organisation. Før du sender rå diagnosticeringsoplysninger til Microsoft Support, skal du gennemse oplysningerne og redigere eventuelle følsomme oplysninger (f.eks. navne eller andre oplysninger om parter i tvister eller undersøgelse) ved at erstatte dem med `XXXXXXX`. Hvis du bruger denne metode, kan Microsoft Support-teknikere også se, at oplysningerne er blevet redigeret.
@@ -76,11 +78,11 @@ Get-ComplianceCase "<eDiscovery (Standard) case name>"| %{$_|fl;"`t==Searches=="
 
 ## <a name="collect-diagnostic-information-for-ediscovery-premium"></a>Indsaml diagnosticeringsoplysninger for eDiscovery (Premium)
 
-Under fanen **Indstillinger** i en eDiscovery-sag (Premium) kan du hurtigt kopiere diagnosticeringsoplysningerne for sagen. Diagnosticeringsoplysningerne gemmes i Udklipsholder, så du kan indsætte dem i en tekstfil og sende dem til Microsoft Support.
+Under fanen **Indstillinger** i en eDiscovery(Premium)-sag kan du hurtigt kopiere diagnosticeringsoplysningerne for sagen. Diagnosticeringsoplysningerne gemmes i Udklipsholder, så du kan indsætte dem i en tekstfil og sende dem til Microsoft Support.
 
 1. Gå til overholdelsesportalen, og vælg **eDiscoveryAvanceret** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
 
-2. Vælg en sag, og klik derefter på fanen **Indstillinger**.
+2. Vælg en sag, og klik derefter på fanen **Indstillinger** .
 
 3. Klik på **Vælg** under **Sagsoplysninger**.
 

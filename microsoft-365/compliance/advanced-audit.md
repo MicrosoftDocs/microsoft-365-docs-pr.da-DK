@@ -1,5 +1,5 @@
 ---
-title: Overvågning (Premium) i Microsoft 365
+title: Microsoft Purview Audit (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Audit (Premium) indeholder nye overvågningsfunktioner, der kan hjælpe din organisation med tekniske undersøgelser og undersøgelser af overholdelse af angivne standarder.
-ms.openlocfilehash: 5e224d4d7073f96f4dc17d48f6caf19840905d06
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 51add6560c12994470f5a6ad96fce5c3f293f4f7
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941055"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972821"
 ---
 # <a name="microsoft-purview-audit-premium"></a>Microsoft Purview Audit (Premium)
 

@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt skiftende overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 5c1e48f1cd9d4a73e703e4d5d93d6d1354d57366
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: b5f231abfbfe943f0b2ab0cf33a14267f0940820
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953711"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972469"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Nyheder i Microsoft Purview
 
@@ -51,29 +51,29 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 | **Tidligere navn** | **Nyt navn** | **Beskrivelse** |
 |:----------------|:-------------|:----------------|
-| Microsoft 365 avanceret overvågning | Microsoft Purview Audit (Premium) | Overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelsesforpligtelser. Du kan få mere at vide under [Microsoft Purview Advanced Audit (Premium)](advanced-audit.md). |
-| Microsoft 365 overholdelse af kommunikation | Overholdelse af Microsoft Purview-kommunikation | Kommunikation med overholdelse af angivne standarder hjælper med at minimere risici ved hurtigt at registrere, registrere og håndtere afhjælpningshandlinger for virksomhedens kommunikationskanaler og politikovertrædelser. Du kan få mere at vide under [Microsoft Purview Communication Compliance](communication-compliance-solution-overview.md). |
+| Microsoft 365 avanceret overvågning <br><br> Microsoft 365 grundlæggende overvågning | Microsoft Purview Audit (Premium) <br><br> Microsoft Purview Audit (Standard)| Overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelsesforpligtelser. Du kan få mere at vide under [Microsoft Purview Advanced Audit (Premium)](advanced-audit.md) og [Microsoft Purview Advanced Audit (Standard).](set-up-basic-audit.md) |
+| Microsoft 365 overholdelse af kommunikation | Kommunikationsoverholdelse i Microsoft Purview | Kommunikation med overholdelse af angivne standarder hjælper med at minimere risici ved hurtigt at registrere, registrere og håndtere afhjælpningshandlinger for virksomhedens kommunikationskanaler og politikovertrædelser. Du kan få mere at vide under [Microsoft Purview Communication Compliance](communication-compliance-solution-overview.md). |
 | Microsoft Compliance Manager | Microsoft Purview Compliance Manager | Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Du kan få mere at vide under [Microsoft Purview Compliance Manager](compliance-manager.md). |
 | Microsoft 365 kundenøgle | Microsoft Purview-kundenøgle | Kundenøglen giver ekstra beskyttelse mod visning af data af uautoriserede systemer eller medarbejdere og supplerer BitLocker-diskkryptering i Microsoft-datacentre. Du kan få mere at vide under [Microsoft Purview Customer Key](customer-key-overview.md). |
 | Office 365 Kundelåseboks | Microsoft Purview Customer Lockbox | Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Du kan få mere at vide under [Microsoft Purview Customer Lockbox](customer-lockbox-requests.md). |
 | Forebyggelse af datatab | Microsoft Purview Forebyggelse af datatab | DLP hjælper med at beskytte følsomme data og reducere risikoen ved at forhindre brugerne i at dele disse data med personer, der ikke skulle have dem. Du kan få mere at vide under [Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md). |
 | Kryptering med dobbelt nøgle for Microsoft 365 | Kryptering af Dobbelt nøgle i Microsoft Purview | DkE (Double Key Encryption) bruger to nøgler sammen til at få adgang til beskyttet indhold. Microsoft gemmer én nøgle i Microsoft Azure, og du holder den anden nøgle. Du kan få mere at vide under [Kryptering af dobbelt nøgle i Microsoft Purview](double-key-encryption.md) |
-| Microsoft 365 informationsbarrierer | Microsoft Purview Information Barriers | Informationsbarrierer er en løsning, der begrænser kommunikation og samarbejde mellem visse personer i din organisation for at beskytte interne oplysninger. Du kan få mere at vide under [Microsoft Purview Information Barriers](information-barriers-solution-overview.md). |
+| Microsoft 365 informationsbarrierer | Microsoft Purview-informationsbarrierer | Informationsbarrierer er en løsning, der begrænser kommunikation og samarbejde mellem visse personer i din organisation for at beskytte interne oplysninger. Du kan få mere at vide under [Microsoft Purview Information Barriers](information-barriers-solution-overview.md). |
 | Microsoft Information Protection | Microsoft Purview Information Protection | Information Protection hjælper dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de bor eller rejser. Du kan få mere at vide under [Microsoft Purview Information Protection](information-protection.md). |
 | Microsoft Information Governance | Administration af Microsoft Purview-datalivscyklus | Administration af datalivscyklus giver dig værktøjer og funktioner til at bevare det indhold, du skal bruge for at beholde og slette det indhold, du ikke har. Du kan få mere at vide under [Administration af Microsoft Purview-datalivscyklus](data-lifecycle-management.md). |
-| Microsoft 365 Styring af insiderrisiko | Microsoft Purview Insider Risk Management | Insiderrisikostyring bruger hele bredden af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikable brugeraktivitet. Du kan få mere at vide under [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
+| Microsoft 365 Styring af insiderrisiko | Styring af Insider-risiko i Microsoft Purview | Insiderrisikostyring bruger hele bredden af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikable brugeraktivitet. Du kan få mere at vide under [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
 | Office 365 meddelelsekryptering | Microsoft Purview-meddelelsekryptering | Med Meddelelsekryptering kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Du kan få mere at vide under [Microsoft Purview-meddelelsekryptering](ome.md). |
-| Privilegeret adgangsstyring i Microsoft 365 | Privilegeret adgangsstyring i Microsoft Purview | Privilegeret adgangsstyring hjælper med at beskytte din organisation mod brud og hjælper med at overholde bedste praksis for overholdelse af angivne standarder ved at begrænse stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan få mere at vide under [Privilegeret adgangsstyring i Microsoft Purview](privileged-access-management-solution-overview.md). |
+| Privilegeret adgangsstyring i Microsoft 365 | Microsoft Purview-Privileged Access Management | Privilegeret adgangsstyring hjælper med at beskytte din organisation mod brud og hjælper med at overholde bedste praksis for overholdelse af angivne standarder ved at begrænse stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan få mere at vide under [Privilegeret adgangsstyring i Microsoft Purview](privileged-access-management-solution-overview.md). |
 | Microsoft-dataforbindelser | Microsoft Purview-dataconnectors | Microsoft 365 gør det muligt for administratorer at bruge dataconnectors til at importere og arkivere ikke-Microsoft-data fra sociale medieplatforme, chatplatforme og platforme til dokumentsamarbejde til postkasser i din Microsoft 365 organisation. Du kan få mere at vide under [Microsoft Purview-dataconnectors](compliance-extensibility.md). |
-| Microsoft 365 Avanceret eDiscovery | Microsoft Purview eDiscovery-Premium | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide under [Microsoft Purview eDiscovery Premium](overview-ediscovery-20.md). |
+| Microsoft 365 Avanceret eDiscovery <br><br> Microsoft 365 Core eDiscovery | Microsoft Purview eDiscovery (Premium) <br><br> Microsoft Purview eDiscovery (Standard) | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide under [Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md) og [Microsoft Purview eDiscovery (Standard).](get-started-core-ediscovery.md) |
 | Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administrationsportal til adgang til løsninger og løsningskatalog i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide på [Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center.md). |
 
 ## <a name="february-2022"></a>Februar 2022
 
 ### <a name="ediscovery"></a>eDiscovery
 
-- [Administrer skabeloner til tilsynsførende kommunikation i Advanced eDiscovery](advanced-ediscovery-communications-library.md) – eDiscovery-ledere kan nu oprette skabeloner til tilsynsførende kommunikation, der kan bruges i alle Advanced eDiscovery tilfælde i organisationen.
-- [Administrer udstedende medarbejdere i Advanced eDiscovery](advanced-ediscovery-issuing-officers.md) – eDiscovery-ledere kan tilføje en liste over udstedende medarbejdere, der kan tildeles til tilsynsførende kommunikation i alle Advanced eDiscovery tilfælde i organisationen.
+- [Administrer skabeloner til tilsynsførende kommunikation i eDiscovery (Premium)](advanced-ediscovery-communications-library.md) – eDiscovery-ledere kan nu oprette skabeloner til tilsynsførende kommunikation, der kan bruges i alle eDiscovery-tilfælde (Premium) i organisationen.
+- [Administrer udstedende medarbejdere i eDiscovery (Premium)](advanced-ediscovery-issuing-officers.md) – eDiscovery-ledere kan tilføje en liste over udstedende medarbejdere, der kan tildeles til tilsynsførende kommunikation i alle eDiscovery-tilfælde (Premium) i organisationen.
 
 ### <a name="data-lifecycle-management-and-records-management"></a>Administration af datalivscyklus og datastyring
 
@@ -120,7 +120,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="ediscovery"></a>eDiscovery
 
-- [Advanced eDiscovery arbejdsproces for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#reference-guide) – opdateret med en ny vejledning, der kan downloades, til administration af Teams indhold i Advanced eDiscovery
+- [eDiscovery-arbejdsproces (Premium) for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#reference-guide) – opdateret med en ny vejledning til hurtig reference, der kan downloades, til administration af Teams indhold i eDiscovery (Premium)
 
 ### <a name="data-lifecycle-management"></a>Administration af datalivscyklus
 
@@ -159,7 +159,7 @@ Følgende artikler blev tilføjet for onboarding af enheder:
 
 ### <a name="ediscovery"></a>eDiscovery
 
-- [Brug det nye sagsformat i Advanced eDiscovery](advanced-ediscovery-new-case-format.md) nye sagsformat blev udgivet, så det er offentligt tilgængeligt og omdøbt fra "store bogstaver"
+- [Brug det nye sagsformat i det nye eDiscovery-format (Premium)](advanced-ediscovery-new-case-format.md) blev udgivet til generel tilgængelighed og omdøbt fra "stort sagsformat"
 
 ### <a name="retention-and-records-management"></a>Opbevarings- og datastyring
 - Udrulning: Nye indstillinger for postadministration, der styrer, om navngivne elementer i SharePoint og OneDrive kan slettes af brugere. Tidligere forhindrede opbevaringsmærkater, der var konfigureret til at bevare indhold, og som ikke mærkede elementer som poster, brugerne fra at slette mærket indhold i SharePoint, da denne handling blev tilladt i OneDrive. Du kan få flere oplysninger under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
@@ -213,8 +213,8 @@ Følgende nye artikler er tilføjet:
 
 ### <a name="ediscovery"></a>eDiscovery
 
-- [Indsaml vedhæftede filer i skyen i Advanced eDiscovery](advanced-ediscovery-cloud-attachments.md) ud over at indsamle den nyeste version af en vedhæftet fil i skyen kan du indsamle den version, der blev delt i en mail eller Teams chatsamtale. Indsamling af den delte version er muliggjort af den nye funktionalitet til automatisk at anvende en opbevaringsmærkat på vedhæftede filer i skyen.
-- [Konfigurer historiske versioner i Advanced eDiscovery](advanced-ediscovery-historical-versions.md) nye funktionalitet, der indekserer alle versioner af dokumenter, der er gemt på et SharePoint websted til søgning. Det betyder, at dokumentversioner, der indeholder indhold, som svarer til en samlingsforespørgsel, returneres i søgeresultaterne.
+- [Indsaml vedhæftede filer i skyen i eDiscovery (Premium)](advanced-ediscovery-cloud-attachments.md) ud over at indsamle den nyeste version af en vedhæftet fil i skyen, kan du indsamle den version, der blev delt i en mail eller Teams chatsamtale. Den nye funktionalitet til automatisk anvendelse af en opbevaringsmærkat på vedhæftede filer i skyen gør det muligt at indsamle den delte version.
+- [Konfigurer historiske versioner i ny funktionalitet i eDiscovery (Premium),](advanced-ediscovery-historical-versions.md) der indekserer alle versioner af dokumenter, der er gemt på et SharePoint websted til søgning. Det betyder, at dokumentversioner, der indeholder indhold, som svarer til en samlingsforespørgsel, returneres i søgeresultaterne.
 
 ### <a name="encryption"></a>Kryptering
 
@@ -247,7 +247,7 @@ Følgende nye artikler er tilføjet:
 - [Strømlinet appstyring – introduktionsoplysninger](app-governance-get-started.md) har en ændret arbejdsproces og tilføjet nye links til tilmelding til offentlig prøveversion
 - [Ny definition af registreringsbeskeder](app-governance-anomaly-detection-alerts.md#app-made-high-volume-of-importance-mail-read-and-created-inbox-rule) er tilføjet (opdateret; tilføjet ny definition for besked om samling)
 
-### <a name="auditing"></a>Revision
+### <a name="auditing"></a>Overvågning
 
 - [Slå overvågning til eller fra](turn-audit-log-search-on-or-off.md) tilføjet nyt afsnit om, hvordan ændringer af overvågningsstatus i en organisation overvåges selv. Det betyder, at overvågningsposter logføres, når overvågning er slået til eller fra. du kan søge i Exchange administratorens overvågningslog for disse overvågningsposter
 
@@ -275,7 +275,7 @@ Følgende nye artikler er tilføjet:
 
 ### <a name="ediscovery"></a>eDiscovery
 
-- [Brug KQL-editoren til at oprette en offentlig prøveversion af søgeforespørgsler](ediscovery-kql-editor.md) på en ny måde til at oprette søgeforespørgsler i Indholdssøgning, Core eDiscovery og Advanced eDiscovery. KQL-editoren leverer automatisk fuldførelse af understøttede egenskaber og betingelser, der kan søges i, og viser lister over understøttede værdier for standardegenskaber og -betingelser. KQL-editoren indeholder også registrering af fejl og forslag til rettelser af potentielle fejl i søgeforespørgsler
+- [Brug KQL-editoren til at oprette en offentlig prøveversion af søgeforespørgsler](ediscovery-kql-editor.md) på en ny måde at oprette søgeforespørgsler på i Indholdssøgning, eDiscovery (Standard) og eDiscovery (Premium). KQL-editoren leverer automatisk fuldførelse af understøttede søgeegenskaber og -betingelser og viser lister over understøttede værdier for standardegenskaber og -betingelser. KQL-editoren giver også fejlregistrering og forslag til rettelser af potentielle fejl i søgeforespørgsler
 
 ### <a name="information-barriers"></a>Informationsbarrierer
 

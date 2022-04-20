@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du kommer i gang med at bruge modulet med forudsigende kodning i eDiscovery (Premium). I denne artikel gennemgår vi processen fra ende til anden med at bruge forudsigende kodning til at identificere indhold i et anmeldelsessæt, der er mest relevant for din undersøgelse.
-ms.openlocfilehash: 449ef5446ee5a4da87081774037c9b5e2a8d440d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dc4edcb6affa7ccfd6a915839ef84b0d453fcfca
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942309"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996146"
 ---
 # <a name="quick-start-predictive-coding-in-ediscovery-premium-preview"></a>Hurtig start: Forudsigende kode i eDiscovery (Premium) (prøveversion)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel præsenteres en hurtig start til brug af forudsigende kode i Microsoft Purview eDiscovery (Premium). I modulet til forudsigelse af kodning bruges intelligente funktioner til maskinel indlæring til at hjælpe dig med at slå store mængder sagsindhold fra, der ikke er relevant for din undersøgelse. Dette opnås ved at oprette og oplære dine egne forudsigende kodemodeller, der hjælper dig med at prioritere de mest relevante elementer til gennemsyn.
 
@@ -37,7 +39,7 @@ Du kan finde en detaljeret oversigt over forudsigende kodning [under Få mere at
 
 Det første trin er at oprette en ny forudsigende kodemodel i korrektursættet
 
-1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
+1. Åbn en eDiscovery(Premium)-sag på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt** .
 
 2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
 

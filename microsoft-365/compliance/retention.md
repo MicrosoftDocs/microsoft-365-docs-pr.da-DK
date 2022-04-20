@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: e14c438858d5e57dca6ecab0573014171a0c6fb7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 5c9a88b27814b89077a013b03d25b4d53ef3f125
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783309"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972057"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -60,7 +62,7 @@ Med disse to opbevaringshandlinger kan du konfigurere opbevaringsindstillinger f
 
 Disse opbevaringsindstillinger fungerer sammen med det indhold, der er på plads, hvilket sparer dig for de ekstra omkostninger ved at oprette og konfigurere ekstra lagerplads, når du har brug for at bevare indhold af hensyn til overholdelse af angivne standarder. Derudover behøver du ikke at implementere brugerdefinerede processer for at kopiere og synkronisere disse data.
 
-Brug følgende afsnit til at få mere at vide om, hvordan opbevaringspolitikker og opbevaringsmærkater fungerer, hvornår de skal bruges, og hvordan de supplerer hinanden. Men hvis du er klar til at komme i gang og installere opbevaringsindstillinger for nogle almindelige scenarier, skal du se [Kom i gang med styring af oplysninger](get-started-with-information-governance.md).
+Brug følgende afsnit til at få mere at vide om, hvordan opbevaringspolitikker og opbevaringsmærkater fungerer, hvornår de skal bruges, og hvordan de supplerer hinanden. Men hvis du er klar til at komme i gang og udrulle opbevaringsindstillinger for nogle almindelige scenarier, skal du se [Kom i gang med administration af datalivscyklus](get-started-with-data-lifecycle-management.md).
 
 ## <a name="how-retention-settings-work-with-content-in-place"></a>Sådan fungerer opbevaringsindstillinger med indhold på plads
 
@@ -172,7 +174,7 @@ Du kan f.eks. oprette og anvende en opbevaringsmærkat med navnet "Gennemse sene
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>Brug af en opbevaringsmærkat som en betingelse i en DLP-politik
 
-Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (forebyggelse af datatab) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
+Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Data Loss Prevention) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
 
 Du kan få flere oplysninger under [Brug af en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -227,7 +229,7 @@ Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig pos
 
 #### <a name="monitoring-retention-labels"></a>Overvågning af opbevaringsmærkater
 
-I Microsoft 365 Overholdelsescenter skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
+På Microsoft Purview-overholdelsesportalen skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
 
 Du kan derefter foretage detailudledning i detaljer ved hjælp af [Indholdsoversigt](data-classification-content-explorer.md) og [Aktivitetsoversigt](data-classification-activity-explorer.md).
 
@@ -358,11 +360,13 @@ Hvis du vil se et optaget webinar (kræver registrering), skal du gå [til Detal
 
 ## <a name="policy-lookup"></a>Politikopslag
 
-Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde de politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningen **til styring af oplysninger** i Microsoft 365 Overholdelsescenter:
+Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde de politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne til **administration af datalivscyklus** eller **Dataadministration** på Microsoft Purview-overholdelsesportalen.
+
+Eksempel:
 
 ![Politikopslag for at finde politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper ](../media/policy-lookup.png)
 
-Du skal angive den nøjagtige mailadresse for en bruger, den nøjagtige URL-adresse for et websted eller den nøjagtige mailadresse for en Microsoft 365 gruppe.
+Du skal angive den nøjagtige mailadresse for en bruger, den nøjagtige URL-adresse for et websted eller den nøjagtige mailadresse for en Microsoft 365 gruppe. Du kan f.eks. ikke bruge jokertegn eller delvise matches.
 
 Indstillingen for websteder omfatter OneDrive konti. Du kan få oplysninger om, hvordan du angiver URL-adressen for en brugers OneDrive-konto, under [Hent en liste over alle bruger-OneDrive URL-adresser i din organisation](/onedrive/list-onedrive-urls).
 
@@ -537,7 +541,7 @@ Opbevaringshandlinger, der logføres som overvågningshændelser, er kun tilgæn
 
 ## <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>PowerShell-cmdlet'er til opbevaringspolitikker og opbevaringsmærkater
 
-Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse til PowerShell Office 365 Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell). Brug derefter en af følgende cmdlet'er:
+Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse til Office 365 Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell). Brug derefter en af følgende cmdlet'er:
 
 - [Get-ComplianceTag](/powershell/module/exchange/get-compliancetag)
 
@@ -575,22 +579,22 @@ Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse t
 
 Selvom opbevaringsindstillinger og [ventepositioner, som du opretter med en eDiscovery-sag](create-ediscovery-holds.md) , begge kan forhindre, at data slettes permanent, er de udviklet til forskellige scenarier. Du kan få hjælp til at forstå forskellene og beslutte, hvilken du vil bruge, ved at bruge følgende vejledning:
 
-- Opbevaringsindstillinger, som du angiver i opbevaringspolitikker og opbevaringsmærkater, er designet til en langsigtet strategi for styring af oplysninger for at bevare eller slette data til overholdelse af angivne standarder. Omfanget er normalt bredt, hvor hovedfokus er placeringen og indholdet i stedet for individuelle brugere. Start og afslutning af opbevaringsperioden kan konfigureres med mulighed for automatisk at slette indhold uden yderligere administratorinput.
+- Opbevaringsindstillinger, som du angiver i opbevaringspolitikker og opbevaringsmærkater, er designet til en langsigtet strategi for administration af datalivscyklus for at bevare eller slette data med henblik på overholdelse af angivne standarder. Omfanget er normalt bredt, hvor hovedfokus er placeringen og indholdet i stedet for individuelle brugere. Start og afslutning af opbevaringsperioden kan konfigureres med mulighed for automatisk at slette indhold uden yderligere administratorinput.
 
-- Ventepositioner for eDiscovery (enten Centrale eDiscovery- eller Advanced eDiscovery-sager) er designet til en begrænset varighed for at bevare data til en juridisk undersøgelse. Omfanget er specifikt med fokus på indhold, der ejes af identificerede brugere. Starten og slutningen af bevarelsesperioden kan ikke konfigureres, men afhænger af individuelle administratorhandlinger uden mulighed for automatisk at slette indhold, når ventepositionen frigives.
+- Ventepositioner for eDiscovery-sager (enten eDiscovery (Standard) eller eDiscovery-sager (Premium) er designet til en begrænset varighed for at bevare data til en juridisk undersøgelse. Omfanget er specifikt med fokus på indhold, der ejes af identificerede brugere. Starten og slutningen af bevarelsesperioden kan ikke konfigureres, men afhænger af individuelle administratorhandlinger uden mulighed for automatisk at slette indhold, når ventepositionen frigives.
 
 Oversigt, der sammenligner opbevaring med ventepositioner:
 
 |Overvejelse|Fastholdelse |eDiscovery-ventepositioner|
 |:-----|:-----|:-----|:-----|
-|Forretningsbehov: |Overholdelse af angivne standarder |Juridiske |
+|Forretningsbehov: |Overholdelse af regler og standarder |Juridiske |
 |Tidsområde: |Langsigtede |Kortsigtede |
 |Fokus: |Bred, indholdsbaseret |Specifik, brugerbaseret |
 |Konfigurerbar start- og slutdato: |Ja |Nej |
 |Sletning af indhold: |Ja (valgfrit) |Nej |
 |Administrative udgifter: |Lav |Høj |
 
-Hvis indhold er underlagt både opbevaringsindstillinger og eDiscovery-venteposition, har bevarelse af indhold til eDiscovery-venteposition altid forrang. På denne måde udvides [principperne for opbevaring](#the-principles-of-retention-or-what-takes-precedence) til eDiscovery, fordi de bevarer data, indtil en administrator frigiver ventepositionen manuelt. På trods af denne rangplacering skal du dog ikke bruge eDiscovery-ventepositioner til langsigtet informationstyring. Hvis du er bekymret for automatisk sletning af data, kan du konfigurere opbevaringsindstillinger for at bevare elementer for evigt eller bruge [dispositionsgennemsyn](disposition.md#disposition-reviews) med opbevaringsmærkater.
+Hvis indhold er underlagt både opbevaringsindstillinger og eDiscovery-venteposition, har bevarelse af indhold til eDiscovery-venteposition altid forrang. På denne måde udvides [principperne for opbevaring](#the-principles-of-retention-or-what-takes-precedence) til eDiscovery, fordi de bevarer data, indtil en administrator frigiver ventepositionen manuelt. På trods af denne prioritet skal du dog ikke bruge eDiscovery-ventepositioner til langsigtet administration af datalivscyklusser. Hvis du er bekymret for automatisk sletning af data, kan du konfigurere opbevaringsindstillinger for at bevare elementer for evigt eller bruge [dispositionsgennemsyn](disposition.md#disposition-reviews) med opbevaringsmærkater.
 
 Hvis du bruger ældre eDiscovery-værktøjer til at bevare data, kan du se følgende ressourcer:
 
@@ -605,7 +609,7 @@ Hvis du bruger ældre eDiscovery-værktøjer til at bevare data, kan du se følg
 
 ## <a name="use-retention-policies-and-retention-labels-instead-of-older-features"></a>Brug opbevaringspolitikker og opbevaringsmærkater i stedet for ældre funktioner
 
-Hvis du proaktivt har brug for at bevare eller slette indhold i Microsoft 365 til styring af oplysninger, anbefaler vi, at du bruger opbevaringspolitikker og opbevaringsmærkater i stedet for følgende ældre funktioner.
+Hvis du har brug for proaktivt at bevare eller slette indhold i Microsoft 365 til administration af datalivscyklus, anbefaler vi, at du bruger opbevaringspolitikker og opbevaringsmærkater i stedet for følgende ældre funktioner.
 
 Hvis du i øjeblikket bruger disse ældre funktioner, vil de fortsat fungere side om side med Microsoft 365 opbevaringspolitikker og opbevaringsmærkater. Vi anbefaler dog, at du fremover bruger Microsoft 365 opbevaringspolitikker og opbevaringsmærkater til at drage fordel af en enkelt løsning til at administrere både opbevaring og sletning af indhold på tværs af flere arbejdsbelastninger i Microsoft 365.
 
@@ -638,9 +642,9 @@ Hvis du har konfigureret SharePoint websteder for politikker for indholdstyper e
 ## <a name="related-information"></a>Relaterede oplysninger
 
 - [SharePoint onlinegrænser](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
-- [Grænser og specifikationer for Microsoft Teams](/microsoftteams/limits-specifications-teams)
-- [Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til styring af oplysninger og datastyring](retention-regulatory-requirements.md)
+- [Grænser og specifikationer for Microsoft Teams](/microsoftteams/limits-specifications-teams) 
+- [Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til administration af datalivscyklus og datastyring](retention-regulatory-requirements.md)
 
 ## <a name="configuration-guidance"></a>Konfigurationsvejledning
 
-Se [Kom i gang med styring af oplysninger](get-started-with-information-governance.md). Denne artikel indeholder oplysninger om abonnementer, tilladelser og links til komplette konfigurationsvejledninger til opbevaringsscenarier.
+Se [Kom i gang med administration af datalivscyklus](get-started-with-data-lifecycle-management.md). Denne artikel indeholder oplysninger om abonnementer, tilladelser og links til komplette konfigurationsvejledninger til opbevaringsscenarier.

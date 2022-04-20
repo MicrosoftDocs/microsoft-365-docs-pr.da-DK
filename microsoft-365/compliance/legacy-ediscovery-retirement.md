@@ -14,12 +14,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: In-Place eDiscovery og In-Place Venteposition (og de tilsvarende PowerShell-cmdlet'er) i Exchange Online udgår i første halvdel af 2020. Den Search-Mailbox cmdlet og Microsoft Purview eDiscovery (Premium) v1.0 udgår også inden for samme tidsperiode.
-ms.openlocfilehash: 228827ec405165bf8308d89fba350eb2192f6723
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0a5a5c5a22aefbb0ad5abe6846915e1da653ee6b
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936593"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973261"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Ophør af ældre eDiscovery-værktøjer
 
@@ -102,7 +102,7 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 <tr class="odd">
 <td>Søg, eksportér og sæt i venteposition til juridiske formål</td>
 <td>eDiscovery-sager (Standard) på overholdelsesportalen </td>
-<td><p>Brug af funktionerne i eDiscovery-kernesager giver den funktionelle paritet til at In-Place eDiscovery og In-Place Ventepositioner. Dette omfatter følgende:</p>
+<td><p>Brug af funktionerne i eDiscovery-sager (Standard) giver den funktionelle paritet til at In-Place eDiscovery og In-Place Ventepositioner. Dette omfatter følgende:</p>
 <ul>
 <li>
 <p>Søg skalerer til millioner af placeringer</p>
@@ -208,9 +208,9 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 <p><a href="/powershell/module/exchange/get-compliancesearchaction"><span class="underline">*-ComplianceSearchAction</span></a></p>
 <p><a href="/powershell/module/exchange/get-compliancecase"><span class="underline">*-Overholdelsescase</span></a></p>
 <p> </p></td>
-<td><p>ComplianceSearch- og ComplianceSearchAction-cmdlet'erne arbejder sammen for at hjælpe dig med at søge efter og eksportere indhold. Du kan oprette en ny søgning og få vist søgeestimatet ved hjælp af cmdlet'erne <strong>New-</strong>, <strong>Get-og</strong> <strong>Start-ComplianceSearch</strong> . Derefter kan du bruge Cmdlet'en <strong>New-ComplianceSearchAction</strong> til at eksportere søgeresultaterne. Du skal stadig bruge eDiscovery-kerneværktøjet på overholdelsesportalen til at downloade disse søgeresultater til din lokale computer.</p>
+<td><p>ComplianceSearch- og ComplianceSearchAction-cmdlet'erne arbejder sammen for at hjælpe dig med at søge efter og eksportere indhold. Du kan oprette en ny søgning og få vist søgeestimatet ved hjælp af cmdlet'erne <strong>New-</strong>, <strong>Get-og</strong> <strong>Start-ComplianceSearch</strong> . Derefter kan du bruge Cmdlet'en <strong>New-ComplianceSearchAction</strong> til at eksportere søgeresultaterne. Du skal stadig bruge værktøjet eDiscovery (Standard) på overholdelsesportalen til at downloade disse søgeresultater til din lokale computer.</p>
 <p>
-<p><strong>Bemærk:</strong> Hvis du bruger disse cmdlet'er til at oprette søgninger, der ikke er knyttet til en grundlæggende eDiscovery-sag, vil disse søgninger blive placeret på siden <strong>indholdssøgning</strong> på overholdelsesportalen.</p></td>
+<p><strong>Bemærk:</strong> Hvis du bruger disse cmdlet'er til at oprette søgninger, der ikke er knyttet til en eDiscovery-sag (Standard), vil disse søgninger være placeret på siden <strong>indholdssøgning</strong> på overholdelsesportalen.</p></td>
 </tr>
 <tr class="even">
 <td>Hold indhold i en postkasse</td>
@@ -286,7 +286,7 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 <td><p><a href="/powershell/module/exchange/get-compliancesearch"><span class="underline">*-ComplianceSearch</span></a></p>
 <p><a href="/powershell/module/exchange/get-compliancesearchaction"><span class="underline">*-ComplianceSearchAction</span></a></p>
 <p></a></p></td>
-<td><p>ComplianceSearch- og ComplianceSearchAction-cmdlet'erne arbejder sammen for at hjælpe dig med at søge efter og eksportere indhold. Du kan oprette en ny søgning og få vist søgeestimatet ved hjælp af cmdlet'erne <strong>New-</strong>, <strong>Get-og</strong> <strong>Start-ComplianceSearch</strong> . Du kan derefter bruge kommandoen <strong>New-ComplianceSearchAction -Export</strong> til at eksportere søgeresultaterne. Du skal stadig bruge eDiscovery-kerneværktøjet på overholdelsesportalen til at downloade disse søgeresultater til din lokale computer.</p></p>
+<td><p>ComplianceSearch- og ComplianceSearchAction-cmdlet'erne arbejder sammen for at hjælpe dig med at søge efter og eksportere indhold. Du kan oprette en ny søgning og få vist søgeestimatet ved hjælp af cmdlet'erne <strong>New-</strong>, <strong>Get-og</strong> <strong>Start-ComplianceSearch</strong> . Du kan derefter bruge kommandoen <strong>New-ComplianceSearchAction -Export</strong> til at eksportere søgeresultaterne. Du skal stadig bruge værktøjet eDiscovery (Standard) på overholdelsesportalen til at downloade disse søgeresultater til din lokale computer.</p></p>
 </td>
 </tr>
 <tr class="even">
@@ -342,7 +342,7 @@ Disse handlinger i Exchange Web Services API bruges af funktionen In-Place eDisc
 
 ## <a name="ediscovery-premium-v10"></a>eDiscovery (Premium) v1.0
 
-eDiscovery (Premium) v1.0, som er den version af eDiscovery (Premium), der er tilgængelig i en eDiscovery-kernesag ved at klikke på **Skift til eDiscovery (Premium)**, udgår. Dens funktionalitet er blevet erstattet af den nye [eDiscovery-løsning (Premium)](./ediscovery.md) på overholdelsesportalen.
+eDiscovery (Premium) v1.0, som er den version af eDiscovery (Premium), der er tilgængelig i en eDiscovery (Standard)-sag ved at klikke på **Skift til eDiscovery (Premium)**, udgår. Dens funktionalitet er blevet erstattet af den nye [eDiscovery-løsning (Premium)](./ediscovery.md) på overholdelsesportalen.
 
 Sådan finder du ud af, om din organisation bruger eDiscovery (Premium) v1.0:
 

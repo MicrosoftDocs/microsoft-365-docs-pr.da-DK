@@ -1,7 +1,7 @@
 ---
-title: Nyheder i Microsoft Defender til Office 365
-description: Få mere at vide om de nye funktioner og den nye funktionalitet i den nyeste version af Microsoft Defender Office 365.
-keywords: nyheder i Microsoft Defender til Office 365, ga, generelt tilgængelige, tilgængelige, nye
+title: Nyheder i Microsoft Defender for Office 365
+description: Få mere at vide om de nye funktioner, der er tilgængelige i den nyeste version af Microsoft Defender for Office 365.
+keywords: nyheder i Microsoft Defender for Office 365, ga, offentligt tilgængelig, funktioner, tilgængelige, nye
 search.appverid: met150
 ms.sitesec: library
 ms.pagetype: security
@@ -21,107 +21,104 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5ae288b2d7dbaec9f66a501f7177741a5df48d0c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c5b1d501f0d33e5b837abcd81f7b228cdc74d943
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63597861"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973019"
 ---
-# <a name="whats-new-in-microsoft-defender-for-office-365"></a>Nyheder i Microsoft Defender til Office 365
+# <a name="whats-new-in-microsoft-defender-for-office-365"></a>Nyheder i Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for:**
 
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Denne artikel viser en liste over nye funktioner i den nyeste version af Microsoft Defender Office 365. Funktioner, der i øjeblikket er i forhåndsvisning, er angivet med **(forhåndsvisning)**.
+Denne artikel indeholder en liste over nye funktioner i den seneste version af Microsoft Defender for Office 365. Funktioner, der i øjeblikket er i prøveversion, er angivet med **(prøveversion)**.
 
-Få mere at vide ved at [se denne video](https://www.youtube.com/watch?v=Tdz6KfruDGo&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=3).
+Få mere at vide ved at se [denne video](https://www.youtube.com/watch?v=Tdz6KfruDGo&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=3).
 
 > [!TIP]
-> Har du ikke Microsoft Defender til Office 365 endnu? [Kontakt salg for at starte en prøveversion](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html).
+> Har du ikke Microsoft Defender for Office 365 endnu? [Kontakt salg for at starte en prøveversion](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html).
 
-Du kan finde flere oplysninger om nyheder i forbindelse med andre Microsoft Defender-sikkerhedsprodukter her:
+Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedsprodukter under:
 
 - [Nyheder i Microsoft 365 Defender](../defender/whats-new.md)
-- [Nyheder i Microsoft Defender til slutpunkt](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
+- [Nyheder i Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
 - [Nyheder i Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [Nyheder i Microsoft Cloud App Security](/cloud-app-security/release-notes)
 
 ## <a name="march-2022"></a>Marts 2022
 
-- [Strømlinet indsendelsesoplevelse i Microsoft Defender til Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/streamlining-the-submissions-experience-in-microsoft-defender/ba-p/3152080): Introduktion til den nye samlede og strømlinede indsendelsesproces for at gøre din oplevelse enklere.
-
+- [Strømlinede indsendelsesoplevelsen i Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/streamlining-the-submissions-experience-in-microsoft-defender/ba-p/3152080): Vi introducerer den nye samlede og strømlinede indsendelsesproces for at gøre din oplevelse enklere.
 
 ## <a name="january-2022"></a>Januar 2022
 
-- [Opdaterede oplevelser med jagt og undersøgelse til Microsoft Defender til Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/updated-hunting-and-investigation-experiences-for-microsoft/ba-p/3002015): Introduktion til panelet til mailoversigt for oplevelser i Defender til Office 365 samt oplevelsesopdateringer til Threat Explorer og registreringer i realtid.
-
+- [Opdaterede jagt- og undersøgelsesoplevelser til Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/updated-hunting-and-investigation-experiences-for-microsoft/ba-p/3002015): Introduktion af panelet med mailoversigter til oplevelser i Defender for Office 365 sammen med oplevelsesopdateringer til Threat Explorer og registreringer i realtid.
 
 ## <a name="october-2021"></a>Oktober 2021
 
-- [Avanceret forbedring af DKIM-levering](configure-advanced-delivery.md): Tilføjet understøttelse af DKIM-domænepost som en del af konfiguration af phishing-simulering fra tredjepart.
-- [Sikker som standard](secure-by-default.md): Udvidet sikker som standard for Exchange regler for mailflow (også kaldet transportregler).
+- [Avanceret levering DKIM-forbedring](configure-advanced-delivery.md): Tilføjet understøttelse af indtastning af DKIM-domæner som en del af konfigurationen af phishingsimulering fra tredjepart.
+- [Sikker som standard](secure-by-default.md): Udvidet sikker som standard for Exchange regler for mailflow (også kendt som transportregler).
 
 ## <a name="september-2021"></a>September 2021
 
-- [Forbedret rapporteringsoplevelse i Defender til Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/improving-the-reporting-experience-in-microsoft-defender-for/ba-p/2760898)
-- [Karantænepolitikker](quarantine-policies.md): Administratorer kan konfigurere detaljeret kontrol for modtageradgang til meddelelser, der er sat i karantæne, og tilpasse beskeder om spam til slutbrugeren.
+- [Forbedret rapporteringsoplevelse i Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/improving-the-reporting-experience-in-microsoft-defender-for/ba-p/2760898)
+- [Karantænepolitikker](quarantine-policies.md): Administratorer kan konfigurere detaljeret kontrol for modtageradgang til meddelelser i karantæne og tilpasse meddelelser om uønsket post fra slutbrugere.
   - [Video om administratoroplevelse](https://youtu.be/vnar4HowfpY)
-  - [Video af slutbrugeroplevelsen](https://youtu.be/s-vozLO43rI)
-  - Andre nye funktioner, der er på vej til karantæne, er beskrevet i dette blogindlæg: [Forenkle karantæneoplevelsen](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
-- Portalomdirigering er som standard startet, hvilket omdirigerer brugere fra & overholdelse Microsoft 365 Defender <https://security.microsoft.com>. Du kan finde flere oplysninger under: [Omdirigere konti fra Office 365 Security and Compliance Center til Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-mdo-redirection)
+  - [Video om slutbrugerens oplevelse](https://youtu.be/s-vozLO43rI)
+  - Andre nye funktioner, der kommer til karantæneoplevelsen, er beskrevet i dette blogindlæg: [Forenkling af karantæneoplevelsen](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
+- Portalomdirigering starter som standard og omdirigerer brugere fra Security & Compliance til Microsoft 365 Defender <https://security.microsoft.com>. Du kan få mere at vide om dette under: [Omdirigering af konti fra Office 365 Security and Compliance Center til Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-mdo-redirection)
 
 ## <a name="august-2021"></a>August 2021
 
-- [Administratorgennemsyn for rapporterede](admin-review-reported-message.md) meddelelser: Administratorer kan nu sende skabelonmeddelelser tilbage til slutbrugere, efter de har gennemset rapporterede meddelelser. Skabelonerne kan tilpasses til din organisation og baseres også på din administrators konklusion.
-- [Tilføj tilladelse](manage-tenant-allows.md) i lejerens tilladelses-/blokeringsliste: Du kan nu føje tilladte poster til lejerens tilladelses-/blokeringsliste, hvis den blokerede meddelelse blev sendt som en del af administratorindsendelsesprocessen. Afhængigt af blokkens art føjes den sendte URL-adresse, fil og/eller senderen til lejerens tilladelses-/blokeringsliste. I de fleste tilfælde tilføjes tilladelse til at give systemet noget tid og tillade det naturligt, hvis det garanteres. I nogle tilfælde administrerer Microsoft tilladen for dig.
+- [Administratorgennemsyn for rapporterede meddelelser](admin-review-reported-message.md): Administratorer kan nu sende skabelonmeddelelser tilbage til slutbrugerne, når de har gennemset rapporterede meddelelser. Skabelonerne kan tilpasses til din organisation og også baseret på din administrators dom.
+- [Tilføj tillader på listen over tilladte/blokerede lejere](manage-tenant-allows.md): Du kan nu føje tilladte poster til lejerens tilladelses-/blokliste, hvis den blokerede meddelelse blev sendt som en del af administratorindsendelsesprocessen. Afhængigt af blokkens art føjes den sendte URL-adresse, fil og/eller afsender til listen over tilladte lejere/blokeringer. I de fleste tilfælde tillades tilføjet for at give systemet lidt tid og tillade det naturligt, hvis det er berettiget. I nogle tilfælde administrerer Microsoft din tilladelse.
 
 ## <a name="july-2021"></a>Juli 2021
 
 - [Forbedringer af mailanalyse i automatiserede undersøgelser](email-analysis-investigations.md)
-- [Avanceret](configure-advanced-delivery.md) levering: Introduktion til en ny funktion til konfiguration af levering af phishing-simuleringer fra tredjeparter til brugere og ufiltrerede meddelelser til postkasser til sikkerhedsfunktioner.
+- [Avanceret levering](configure-advanced-delivery.md): Introduktion af en ny funktionalitet til konfiguration af levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til sikkerhedshandlingspostkasser.
 - [Pengeskab links til Microsoft Teams](safe-links.md#safe-links-settings-for-microsoft-teams)
-- Nye politikker for påmindelser om følgende scenarier: kompromitterede postkasser, phishingformularer, skadelige mails leveret på grund af tilsidesættelser og afrunding af ZAP
-  - Mistænkelig videresendelse af mail
-  - Bruger begrænset fra delingsformularer og indsamling af svar
-  - Formular blokeret på grund af potentielt forsøg på phishing
-  - Formular markeret med flag og bekræftet som phishing
-  - [Nye beskedpolitikker for ZAP](../../compliance/new-defender-alert-policies.md)
-- Microsoft Defender til Office 365-beskeder er nu integreret i Microsoft 365 Defender – [Microsoft 365 Defender samlet advarselskø og samlet advarselskø](../defender/investigate-alerts.md)
-- [Brugermærker](user-tags.md) er nu integreret i Microsoft Defender til Office 365-påmindelsesoplevelser, herunder: køen med beskeder og detaljer i Office 365 Security & Compliance og angivelse af brugerdefinerede politikker for påmindelser til brugermærker for at oprette målrettede beskedpolitikker.
-  - Mærker er også tilgængelige i køen til samlede beskeder i Microsoft 365 Defender portal (Microsoft Defender for Office 365 Plan 2)
+- Nye beskedpolitikker for følgende scenarier: kompromitterede postkasser, phishing af formularer, skadelige mails, der leveres på grund af tilsidesættelser og afrunding af ZAP
+  - Mistænkelig aktivitet for videresendelse af mail
+  - Brugeren er begrænset fra at dele formularer og indsamle svar
+  - Formularen er blokeret på grund af et muligt forsøg på phishing
+  - Formular, der er markeret og bekræftet som phishing
+  - [Nye advarselspolitikker for ZAP](../../compliance/new-defender-alert-policies.md)
+- Microsoft Defender for Office 365 beskeder er nu integreret i Microsoft 365 Defender – [Microsoft 365 Defender Unified Alerts Queue og Unified Alerts Queue](../defender/investigate-alerts.md)
+- [Brugerkoder](user-tags.md) er nu integreret i Microsoft Defender for Office 365 beskeder, herunder: beskedkøen og detaljer i Office 365 Sikkerhed & Overholdelse, og tilpasse brugerdefinerede advarselspolitikker til brugerkoder for at oprette målrettede politikker for beskeder.
+  - Mærker er også tilgængelige i den samlede beskedkø på Microsoft 365 Defender-portalen (Microsoft Defender for Office 365 Plan 2)
 
 ## <a name="june-2021"></a>Juni 2021
 
-- Indstillingen Ny sikkerhedstip inden for antiphishing-politikker. Denne sikkerhedstip vises, når modtagerne først modtager en mail fra en afsender eller ikke ofte modtager mails fra en afsender. Du kan finde flere oplysninger om denne indstilling, og hvordan du konfigurerer den, i følgende artikler:
+- Ny indstilling for første kontakt sikkerhedstip indstilling i politikker til bekæmpelse af phishing. Denne sikkerhedstip vises, når modtagerne først modtager en mail fra en afsender eller ikke ofte modtager en mail fra en afsender. Du kan få flere oplysninger om denne indstilling, og hvordan du konfigurerer den, i følgende artikler:
   - [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip)
-  - [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)
-  - [Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)
+  - [Konfigurer politikker for antiphishing i EOP](configure-anti-phishing-policies-eop.md)
+  - [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
 
 ## <a name="aprilmay-2021"></a>April/maj 2021
 
-- [Siden Mailenhed](mdo-email-entity-page.md): En samlet 360-graders visning af en mail med forbedrede oplysninger om trusler, godkendelse og registreringer, detonationsdetaljer og en helt ny oplevelse af maileksempel.
-- [Office 365-administrations-API](/office/office-365-management-api/office-365-management-activity-api-schema#email-message-events): Opdateringer til EmailEvents (RecordType 28) for at tilføje leveringshandling, oprindelige og seneste leveringsplaceringer samt opdaterede registreringsoplysninger.
-- [Threat Analytics for Defender til Office 365](/microsoft-365/security/defender/threat-analytics): Få vist aktive trusselseksperter, populære teknikker og angrebsoverflader sammen med omfattende rapportering fra Microsoft-agenter omkring igangværende kampagner.
+- [Mailenhedsside](mdo-email-entity-page.md): En samlet 360-graders visning af en mail med forbedrede oplysninger om trusler, godkendelse og registreringer, detonationsoplysninger og en helt ny maileksempeloplevelse.
+- [Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#email-message-events): Opdateringer til EmailEvents (RecordType 28) for at tilføje leveringshandling, oprindelige og seneste leveringssteder og opdaterede registreringsoplysninger.
+- [Threat Analytics til Defender for Office 365](/microsoft-365/security/defender/threat-analytics): Få vist aktive trusselsaktører, populære teknikker og angrebsoverflader sammen med omfattende rapportering fra Microsoft-forskere om igangværende kampagner.
 
 ## <a name="februarymarch-2021"></a>Februar/marts 2021
 
-- Integration af besked-id (søgning ved hjælp af alert-id Alert-Explorer navigation) i [jagtoplevelser](threat-explorer.md)
-- Øge grænsen for eksport af poster fra 9990 til 200.000 i [jagtoplevelser](threat-explorer.md)
-- Udvidelse af stifinderen (og registreringer i realtid) af dataopbevaring og søgegrænse for prøvelejere fra 7 (tidligere grænse) til 30 dage i [jagtoplevelser](threat-explorer.md)
-- Nye pivots ved navn **Impersonated domain** and **Impersonated** user within the Explorer (and Real-time detections) to search for impersonation attacks against protected users or domains. Du kan få mere at vide under [detaljer](threat-explorer.md#view-phishing-emails-sent-to-impersonated-users-and-domains). (Microsoft Defender til Office 365 Plan 1 eller Plan 2)
+- Integration af besked-id (søgning ved hjælp af Besked-id og Alert-Explorer navigation) i [jagtoplevelser](threat-explorer.md)
+- Forøgelse af grænserne for eksport af poster fra 9990 til 200.000 i [jagtoplevelser](threat-explorer.md)
+- Udvidelse af dataopbevarings- og søgegrænsen for prøveversionslejere (og registreringer i realtid) fra 7 (tidligere grænse) til 30 dage i [jagtoplevelser](threat-explorer.md)
+- Nye jagtpivots kaldet **Repræsenteret domæne** og **Repræsenteret bruger** i Stifinder (og registreringer i realtid) for at søge efter repræsentationsangreb mod beskyttede brugere eller domæner. Du kan finde flere oplysninger [i detaljer](threat-explorer.md#view-phishing-emails-sent-to-impersonated-users-and-domains). (Microsoft Defender for Office 365 Plan 1 eller Plan 2)
 
+## <a name="microsoft-defender-for-office-365-plan-1-and-plan-2"></a>Microsoft Defender for Office 365 Plan 1 og Plan 2
 
-## <a name="microsoft-defender-for-office-365-plan-1-and-plan-2"></a>Microsoft Defender til Office 365 Plan 1 og Plan 2
-
-Vidste du, at Microsoft Defender for Office 365 er tilgængelig i to planer? [Få mere at vide om, hvad hver plan indeholder](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
+Vidste du, at Microsoft Defender for Office 365 er tilgængelig i to planer? [Få mere at vide om, hvad de enkelte planer omfatter](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
 
 ## <a name="see-also"></a>Se også
 
-[Microsoft 365 oversigt](https://www.microsoft.com/microsoft-365/roadmap)
+[køreplan for Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap)
 
-[Beskrivelse af Microsoft Defender Office 365-tjenesten](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+[Beskrivelse af Microsoft Defender for Office 365-tjeneste](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)

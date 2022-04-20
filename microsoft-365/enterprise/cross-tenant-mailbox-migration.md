@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: c66c0c60002b67642a2cf8eb8e1a66dc5db140ff
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 00ded796cb0fc8878b3eee3f656afac426cd0f35
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651427"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973987"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
@@ -644,7 +644,7 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
 
       | Navn                                             |
       | ------------------------------------------------ |
-      | Advanced eDiscovery Storage (500 GB)             |
+      | eDiscovery(Premium) Storage (500 GB)             |
       | Kundelockbox                                 |
       | Forebyggelse af datatab                             |
       | Exchange Enterprise CAL Services (EOP, DLP)      |
@@ -669,7 +669,7 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
       | Microsoft Bookings                               |
       | Microsoft Business Center                        |
       | Microsoft MyAnalytics (fuld)                     |
-      | Office 365 Advanced eDiscovery                   |
+      | Office 365 eDiscovery (Premium)                   |
       | Microsoft Defender for Office 365 (plan 1)       |
       | Microsoft Defender for Office 365 (plan 2)       |
       | Office 365 privilegeret adgangsstyring          |

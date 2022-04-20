@@ -18,12 +18,12 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery-sæt (Premium) til sagsgennemgang.
-ms.openlocfilehash: 1649b766c0e7f39122505d3a73574e478373f5b2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 7b754aa09390d041de44cd2e82ed9d1f93eede7e
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941121"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973745"
 ---
 # <a name="add-search-results-to-a-review-set"></a>Føj søgeresultater til et korrektursæt
 
@@ -37,7 +37,7 @@ Når du føjer resultaterne af en søgning til et korrektursæt (korrektursætte
 
 - Alle elementer (herunder indhold og metadata) omdexeres, så alle data i korrektursættet er fuldt søgbare under gennemgangen af sagsdataene. Genintegrering af dataene resulterer i grundige og hurtige søgninger, når du søger efter dataene i gennemgangssættet under sagsundersøgelsen.
 
-- En fil, der er krypteret med en [Microsoft-krypteringsteknologi](encryption.md) og er knyttet til en mail, der returneres i søgeresultaterne, dekrypteres, når mailen og den vedhæftede fil føjes til korrektursættet. Du kan gennemse og forespørge den dekrypterede fil i korrektursættet. Du skal tildeles rollen RMS Dekrypter for at føje dekrypterede vedhæftede filer i mails til et korrektursæt. Du kan finde flere oplysninger [under Dekryptering i Microsoft 365 eDiscovery-værktøjer](ediscovery-decryption.md).
+- En fil, der er krypteret med en [Microsoft-krypteringsteknologi](encryption.md) og er knyttet til en mail, der returneres i søgeresultaterne, dekrypteres, når mailen og den vedhæftede fil føjes til korrektursættet. Du kan gennemse og forespørge den dekrypterede fil i korrektursættet. Du skal tildeles rollen RMS Dekrypter for at føje dekrypterede vedhæftede filer i mails til et korrektursæt. Du kan finde flere oplysninger [under Dekryptering i Microsoft Purview eDiscovery-værktøjer](ediscovery-decryption.md).
 
 Hvis du vil føje data til et korrektursæt, skal du klikke på en søgning under fanen **Søgninger** og derefter klikke på **Tilføj resultater for at gennemse sæt** på pop op-siden.
 
