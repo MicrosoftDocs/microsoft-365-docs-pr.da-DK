@@ -1,0 +1,279 @@
+### YamlMime:Hub
+title: Microsoft 365-dokumentation
+summary: Find de løsninger, scenarier og ressourcer, du skal bruge for at komme i gang med Microsoft 365 for din virksomhed eller organisation. Microsoft 365 omfatter tjenester som Teams og SharePoint og Microsoft 365 Apps, f.eks. Outlook, Word, Excel og PowerPoint.
+brand: m365
+metadata:
+  title: Microsoft 365-dokumentation
+  description: Find de løsninger, scenarier og ressourcer, du skal bruge for at komme i gang med Microsoft 365, herunder Office, til din virksomhed eller organisation.
+  ms.service: o365-solutions
+  ms.topic: hub-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: samanro
+  ms.author: samanro
+  ms.date: 06/08/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: 7e2e2fc3b0e35675338c54f930189e1ac94599f1
+  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64934153"
+highlightedContent:
+  items:
+  - title: Konfigurer din infrastruktur til hybridarbejde
+    itemType: how-to-guide
+    url: solutions/empower-people-to-work-remotely.md
+  - title: Fjernundervisning med Microsoft Teams
+    itemType: get-started
+    url: /MicrosoftTeams/remote-learning-edu
+  - title: Opbyg dine færdigheder med Microsoft Learn
+    itemType: learn
+    url: /learn/m365/
+  - title: Få din lille virksomhed i gang med Microsoft 365
+    itemType: quickstart
+    url: business-video/index.yml
+productDirectory:
+  title: Microsoft 365-løsninger og -scenarier
+  items:
+  - title: Microsoft 365-løsninger
+    imageSrc: https://docs.microsoft.com/office/media/icons/secure-document-blue.svg
+    links:
+    - url: solutions/empower-people-to-work-remotely.md
+      text: Konfigurer din infrastruktur til hybridarbejde
+    - url: solutions/setup-secure-collaboration-with-teams.md
+      text: Konfigurer sikkert samarbejde
+    - url: solutions/deploy-threat-protection.md
+      text: Udrul trusselsbeskyttelse
+    - url: solutions/information-protection-deploy.md
+      text: Udrul beskyttelse af oplysninger i forbindelse med bestemmelser om beskyttelse af personlige oplysninger
+    - url: business-premium/index.md
+      text: Microsoft 365 til mindre virksomheder og kampagner
+  - title: Møde og kommuniker
+    imageSrc: https://docs.microsoft.com/office/media/icons/call-phone-blue.svg
+    links:
+    - url: /sharepoint/corporate-communications-overview
+      text: Organisationskommunikationer
+    - url: /MicrosoftTeams/quick-start-meetings-live-events
+      text: Møder og livebegivenheder i Microsoft Teams
+    - url: solutions/deploy-voice.md
+      text: Planlæg og udrul en Teams-stemmeløsning
+    - url: /MicrosoftTeams/business-voice/whats-business-voice
+      text: Microsoft 365 Business Voice
+    - url: /MicrosoftTeams/cloud-voice-landing-page
+      text: Microsoft-telefoniløsninger
+  - title: Samarbejd med dit team
+    imageSrc: https://docs.microsoft.com/office/media/icons/users-people.svg
+    links:
+    - url: solutions/collaborate-with-people-outside-your-organization.md
+      text: Konfigurer ekstern deling
+    - url: /sharepoint/intelligent-internet-overview
+      text: Byg et intelligent SharePoint-intranet
+    - url: /sharepoint/deploy-file-collaboration
+      text: Filsamarbejde i SharePoint
+    - url: /onedrive/plan-onedrive-enterprise
+      text: OneDrive-vejledning til virksomheder
+    - url: solutions/collaboration-governance-overview.md
+      text: Styring af samarbejde
+  - title: Arkitekturressourcer
+    imageSrc: https://docs.microsoft.com/office/media/icons/cloud-architecture2.svg
+    links:
+    - url: solutions/productivity-illustrations.md
+      text: Microsoft 365-produktivitetsillustrationer
+    - url: solutions/cloud-architecture-models.md
+      text: Microsoft-skyarkitekturmodeller
+    - url: solutions/design-principles.md
+      text: Designprincipper for virksomhedsarkitektur
+    - url: solutions/infographics-for-users.md
+      text: Infografik til dine brugere
+    - url: solutions/architecture-icons-templates.md
+      text: Arkitekturikoner og -skabeloner
+  - title: Beskyt din organisation
+    imageSrc: https://docs.microsoft.com/office/media/icons/security-blue.svg
+    links:
+    - url: security/top-security-tasks-for-remote-work.md
+      text: Vigtigste opgaver for sikkerhedsteams, der understøtter arbejde hjemmefra
+    - url: solutions/configure-teams-three-tiers-protection.md
+      text: Konfigurer tre niveauer af beskyttelse med Microsoft Teams
+    - url: security/defender/get-started.md
+      text: Kom i gang med Microsoft 365 Defender
+    - url: security/defender-endpoint/deployment-phases.md
+      text: Udrul Microsoft Defender for Endpoint
+    - url: security/office-365-security/defender-for-office-365.md
+      text: Udrul Microsoft Defender for Office 365
+    - url: security/office-365-security/microsoft-365-policies-configurations.md
+      text: Konfigurer beskyttelse for identitet og enhedsadgang
+  - title: Beskyt dine oplysninger, og overhold regler
+    imageSrc: https://docs.microsoft.com/office/media/icons/certificate-blue.svg
+    links:
+    - url: compliance/insider-risk-solution-overview.md
+      text: Insider-risikoløsninger i Microsoft Purview
+    - url: compliance/compliance-quick-tasks.md
+      text: Hurtige opgaver for at komme i gang med Microsoft Purview
+    - url: compliance/information-protection.md
+      text: Azure Information Protection
+    - url: compliance/manage-data-governance.md
+      text: Administrer informationsstyring
+    - url: compliance/auditing-solutions-overview.md
+      text: Overvågningsløsninger
+    - url: compliance/overview-ediscovery-20.md
+      text: eDiscovery (Premium)
+  - title: Udrul og administrer dine skriveborde og enheder
+    imageSrc: https://docs.microsoft.com/office/media/icons/deploy-blue.svg
+    links:
+    - url: /DeployOffice/plan-microsoft-365-apps
+      text: Deploy Microsoft 365-apps
+    - url: /windows/deployment/
+      text: Udrul Windows 10
+    - url: ./managed-desktop/index.yml
+      text: Microsoft-administreret skrivebord
+    - url: /mem/intune/fundamentals/what-is-intune
+      text: Enhedshåndtering med Microsoft Intune
+  - title: Migrer til Microsoft 365
+    imageSrc: https://docs.microsoft.com/office/media/icons/migration-blue.svg
+    links:
+    - url: /MicrosoftTeams/journey-skypeforbusiness-teams
+      text: Migrer til Microsoft Teams
+    - url: /sharepointmigration/migrate-to-sharepoint-online
+      text: Migrer dit indhold til SharePoint, OneDrive og Teams
+    - url: /Exchange/mailbox-migration/mailbox-migration
+      text: Migrer flere mailkonti til Microsoft 365
+  - title: Branchespecifikke løsninger og scenarier
+    imageSrc: https://docs.microsoft.com/office/media/icons/on-premises-blue.svg
+    links:
+    - url: solutions/financial-services-secure-collaboration.md
+      text: Sikkerhed og overholdelse af regler og standarder for finansielle tjenester
+    - url: solutions/energy-secure-collaboration.md
+      text: Sikkerhed og overholdelse af regler og standarder for energi- og forsyningstjenester
+    - url: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc
+      text: Teams til sundhedsorganisationer
+    - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page
+      text: Teams til Undervisning
+    - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page
+      text: Teams til offentlige myndigheder
+    - url: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams
+      text: Støt eksterne offentlige medarbejdere ved hjælp af Microsoft Teams
+additionalContent:
+  sections:
+  - title: Alle apps og tjenester
+    summary: Dokumentation til alle apps og produkter, der er inkluderet i Microsoft 365.
+    items:
+    - title: Microsoft 365
+      summary: Konfigurer og administrer Microsoft 365 tjenester for din organisation.
+      links:
+      - text: Microsoft 365 Administration
+        url: admin/index.yml
+      - text: Microsoft 365 Business Premium
+        url: business/index.yml
+      - text: Microsoft 365 for enterprise
+        url: enterprise/index.yml
+      - text: Microsoft Purview
+        url: compliance/index.yml
+      - text: Microsoft 365-sikkerhed
+        url: security/index.yml
+      - text: Microsoft-administreret skrivebord
+        url: managed-desktop/index.yml
+      - text: Fejlfinding og support
+        url: /office/troubleshoot
+    - title: Microsoft Teams
+      links:
+      - text: Administratordokumentation
+        url: /MicrosoftTeams/Teams-overview
+      - text: Sikkerhed og overholdelse af angivne standarder i Teams
+        url: /MicrosoftTeams/security-compliance-overview
+      - text: Opgrader fra Skype for Business til Teams
+        url: /MicrosoftTeams/journey-skypeforbusiness-teams
+      - text: Mere >
+        url: /MicrosoftTeams
+    - title: Udrul Office
+      links:
+      - text: Microsoft 365 Apps
+        url: /DeployOffice/plan-microsoft-365-apps
+      - text: Office til Mac
+        url: /DeployOffice/mac
+      - text: Office LTSC 2021
+        url: /DeployOffice/ltsc2021/overview
+      - text: Mere >
+        url: /DeployOffice
+    - title: SharePoint
+      links:
+      - text: SharePoint i Microsoft 365
+        url: /sharepoint/sharepoint-online
+      - text: SharePoint Syntex
+        url: contentunderstanding/index.md
+      - text: SharePoint Server
+        url: /sharepoint/sharepoint-server
+      - text: Hybrid
+        url: /sharepoint/hybrid/hybrid
+      - text: PowerShell-reference til SharePoint
+        url: /powershell/sharepoint
+      - text: Mere >
+        url: /sharepoint
+    - title: OneDrive
+      links:
+      - text: Planlæg, udrul og administrer
+        url: /onedrive/onedrive
+      - text: Flere OneDrive >
+        url: /onedrive
+    - title: Outlook og Exchange
+      links:
+      - text: Outlook til iOS og Android
+        url: https://resources.techcommunity.microsoft.com/outlook-mobile-adoption/
+      - text: Exchange Online
+        url: /Exchange/exchange-online
+      - text: Mere Exchange >
+        url: /Exchange
+    - title: Planner og Project
+      links:
+      - text: Hjælp til Planner-administrator
+        url: /office365/planner
+      - text: Project til internettet
+        url: /project-for-the-web/projectforweb-admin-home
+      - text: Mere Project >
+        url: /Project
+    - title: Microsoft Viva
+      links:
+      - text: Microsoft Viva Topics
+        url: /microsoft-365/knowledge/
+      - text: Microsoft Viva Insights
+        url: /insights/viva-teams-app
+      - text: Microsoft Viva Connections
+        url: /sharepoint/viva-connections
+      - text: Microsoft Viva Learning
+        url: /microsoft-365/learning/
+      - text: Mere Microsoft Viva >
+        url: /microsoft-365/viva/
+    - title: Flere apps og tjenester
+      links:
+      - text: Microsoft Bookings
+        url: bookings/index.yml
+      - text: Microsoft Kaizala
+        url: /Kaizala
+      - text: Microsoft Stream
+        url: /stream/
+      - text: Yammer
+        url: /yammer/yammer-landing-page
+      - text: Skype for Business
+        url: /skypeforbusiness
+      - text: Office onlineserver
+        url: /officeonlineserver
+  - title: Relateret vejledning og ressourcer
+    items:
+    - title: Udviklere
+      summary: Find selvstudier, referencer og andre ressourcer til udviklere i Microsoft 365 Developer Center.
+      url: https://developer.microsoft.com/microsoft-365
+    - title: Slutbrugere
+      summary: Find kurser, vejledninger og hjælp-indhold til brugere af Microsoft 365 på support.microsoft.com.
+      url: https://support.microsoft.com/microsoft-365
+    - title: Education IT
+      summary: Få mere at vide om, hvordan du låser op for kreativitet, fremmer teamwork og får en sikker og enkel oplevelse med Microsoft 365 Education.
+      url: /education
+    - title: Undervisere
+      summary: Find kurser, vejledninger og hjælp-indhold til undervisere ved hjælp af Microsoft 365 Education.
+      url: https://support.microsoft.com/education
+    - title: Tech community
+      summary: Deltag i Microsoft 365 Tech-community'et for at dele oplevelser, engagere og lære af eksperter.
+      url: https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365
+    - title: Microsoft 365 Communityindhold
+      summary: Find løsninger og scenarievejledning til Microsoft 365-brugere, som it-professionelle og administrator-community'et bidrager med.
+      url: /microsoft-365/community/
