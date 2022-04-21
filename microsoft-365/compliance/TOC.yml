@@ -318,7 +318,7 @@
               href: sit-learn-about-exact-data-match-based-sits.md
             - name: Dokumentfingeraftryk
               href: document-fingerprinting.md
-            - name: Få mere at vide om navngivne enheder (prøveversion)
+            - name: Få mere at vide om navngivne enheder
               href: named-entities-learn.md
         - name: Kom i gang med typer af følsomme oplysninger
           items:
@@ -362,7 +362,7 @@
               href: sit-use-exact-data-manage-schema.md
             - name: Opdater kildetabelfilen for følsomme oplysninger
               href: sit-use-exact-data-refresh-data.md
-            - name: Brug navngivne enheder i dine politikker til forebyggelse af datatab (prøveversion)
+            - name: Brug navngivne enheder i dine politikker til forebyggelse af datatab
               href: named-entities-use.md
             - name: Almindelige brugsscenarier for typer af følsomme oplysninger
               href: sit-common-scenarios.md
