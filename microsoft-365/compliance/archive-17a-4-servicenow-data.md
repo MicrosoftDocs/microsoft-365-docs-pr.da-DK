@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 ServiceNow DataParser-connector til at importere og arkivere ServiceNow-data i Microsoft 365.
-ms.openlocfilehash: 4120b54225bc8af6542f4936a9af3bcc4b982e02
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: de899dff29f91002259701b79b3ae6119fa1df66
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937721"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997554"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-servicenow"></a>Konfigurer en connector til arkivering af data fra ServiceNow
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug [ServiceNow DataParser](https://www.17a-4.com/dataparser/) fra 17a-4 LLC til at importere og arkivere data fra ServiceNow til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en ServiceNow-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. ServiceNow DataParser-connectoren konverterer ServiceNow-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
@@ -45,7 +47,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Den bruger, der opretter ServiceNow DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-servicenow-dataparser-connector"></a>Trin 1: Konfigurer en ServiceNow DataParser-connector
 

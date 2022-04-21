@@ -18,16 +18,18 @@ ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
 description: Brug PowerShell-scriptet i denne artikel til hurtigt at klone en eksisterende indholdssøgning i overholdelsescenteret i Office 365 eller Microsoft 365.
-ms.openlocfilehash: 782620d3693f4659c135d2a52aa7062a490a7cd0
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 82994bcc87b76efe21bb1c68877b2bb8a5926424
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940483"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998656"
 ---
 # <a name="clone-a-content-search"></a>Klon en indholdssøgning
 
-Det kan tage et stykke tid at oprette en indholdssøgning i overholdelsescenteret i Office 365 eller Microsoft 365, der søger i mange postkasser eller SharePoint og OneDrive for Business websteder. Hvis du angiver de websteder, der skal søges efter, kan der også opstå fejl, hvis du angiver en URL-adresse forkert. Du kan undgå disse problemer ved at bruge scriptet Windows PowerShell i denne artikel til hurtigt at klone en eksisterende indholdssøgning. Når du kloner en søgning, oprettes der en ny søgning (med et andet navn), der indeholder de samme egenskaber (f.eks. indholdsplaceringer og søgeforespørgslen) som den oprindelige søgning. Derefter kan du redigere den nye søgning ved at ændre nøgleordsforespørgslen eller datointervallet og køre den.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Det kan tage et stykke tid at oprette en indholdssøgning i overholdelsescenteret i Office 365 eller Microsoft 365, der søger i mange postkasser eller SharePoint og OneDrive for Business websteder. Hvis du angiver de websteder, der skal søges efter, kan der også opstå fejl, hvis du angiver en URL-adresse forkert. Du kan undgå disse problemer ved at bruge Windows PowerShell-scriptet i denne artikel til hurtigt at klone en eksisterende indholdssøgning. Når du kloner en søgning, oprettes der en ny søgning (med et andet navn), der indeholder de samme egenskaber (f.eks. indholdsplaceringer og søgeforespørgslen) som den oprindelige søgning. Derefter kan du redigere den nye søgning ved at ændre nøgleordsforespørgslen eller datointervallet og køre den.
   
 Hvorfor klone indholdssøgninger?
   
@@ -61,7 +63,7 @@ Scriptet i dette trin opretter en ny indholdssøgning ved at klone en eksisteren
     
 Sådan kloner du en søgning:
   
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `CloneSearch.ps1`f.eks. .
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `CloneSearch.ps1`.
     
   ```powershell
   # This PowerShell script clones an existing content search in the Security &amp; Compliance Center.

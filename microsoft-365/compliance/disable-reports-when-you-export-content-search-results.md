@@ -17,14 +17,16 @@ ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
 ms.custom:
 - seo-marvel-apr2020
 description: Rediger Windows-registreringsdatabasen på din lokale computer for at deaktivere rapporter, når du eksporterer resultaterne af en indholdssøgning fra Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: d1b305f1d6ce0aba835d21695e59a4166ec96b7a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 5cd6816807af1b6da4fc8c41e7cdde7bc7f07d66
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936813"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000086"
 ---
 # <a name="disable-reports-when-you-export-content-search-results"></a>Deaktiver rapporter, når du eksporterer resultater af indholdssøgning
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bruger værktøjet eDiscovery-eksport til at eksportere resultaterne af en indholdssøgning på Microsoft Purview-overholdelsesportalen, opretter og eksporterer værktøjet automatisk to rapporter, der indeholder yderligere oplysninger om det eksporterede indhold. Disse rapporter er Results.csv-filen og Manifest.xml-filen .Se afsnittet [Ofte stillede spørgsmål om deaktivering af eksportrapporter](#frequently-asked-questions-about-disabling-export-reports) i dette emne for at få detaljerede beskrivelser af disse rapporter). Da disse filer kan være meget store, kan du fremskynde downloadtiden og spare diskplads ved at forhindre, at disse filer eksporteres. Det kan du gøre ved at ændre Windows-registreringsdatabasen på den computer, du bruger til at eksportere søgeresultaterne. Hvis du vil medtage rapporterne på et senere tidspunkt, kan du redigere indstillingen i registreringsdatabasen. 
   
@@ -38,7 +40,7 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
     
     - **Results.csv**
     
-      Gem følgende tekst i en Windows registreringsdatabasefil ved hjælp af et filnavnssuffiks med .reg, f.eks. DisableResultsCsv.reg.
+      Gem følgende tekst i en Windows-registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg. f.eks. DisableResultsCsv.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -47,14 +49,14 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
 
     - **Manifest.xml**
     
-      Gem følgende tekst i en Windows registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg, f.eks. DisableManifestXml.reg.
+      Gem følgende tekst i en Windows-registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg. f.eks. DisableManifestXml.reg.
     
       ```text
       Windows Registry Editor Version 5.00
       reg add HKLM\SOFTWARE\Microsoft\Exchange\Client\eDiscovery\ExportTool /v ResultEdrmEnabled /t REG_SZ /d False 
       ```
 
-3. I Windows Explorer skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
+3. I Windows Stifinder skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
     
 4. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     
@@ -72,7 +74,7 @@ Hvis du har deaktiveret Results.csv og Manifest.xml rapporter ved at oprette .re
     
     - **Results.csv**
     
-        Åbn filen DisableResultsCsv.reg i Notesblok, ret værdien `False` til `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
+        Åbn filen DisableResultsCsv.reg i Notesblok, skift værdien  `False` til  `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
     
         ```text
         Windows Registry Editor Version 5.00
@@ -81,14 +83,14 @@ Hvis du har deaktiveret Results.csv og Manifest.xml rapporter ved at oprette .re
 
     - **Manifest.xml**
     
-        Åbn filen DisableManifestXml.reg i Notesblok, ret værdien `False` til `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
+        Åbn filen DisableManifestXml.reg i Notesblok, ret værdien  `False` til  `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
     
       ```text
       Windows Registry Editor Version 5.00
       reg add HKLM\SOFTWARE\Microsoft\Exchange\Client\eDiscovery\ExportTool /v ResultEdrmEnabled /t REG_SZ /d True
       ```
 
-3. I Windows Explorer skal du klikke eller dobbeltklikke på en .reg-fil, som du redigerede i det forrige trin.
+3. I Windows Stifinder skal du klikke eller dobbeltklikke på en .reg-fil, som du redigerede i det forrige trin.
     
 4. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     

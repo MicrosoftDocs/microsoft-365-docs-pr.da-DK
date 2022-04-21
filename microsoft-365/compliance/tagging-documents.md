@@ -15,16 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Mærkning af dokumenter i et korrektursæt hjælper med at fjerne unødvendigt indhold og identificere relevant indhold i en eDiscovery-sag (Premium).
+description: Mærkning af dokumenter i et korrektursæt hjælper med at fjerne unødvendigt indhold og identificere relevant indhold i en eDiscovery(Premium)-sag.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: c1d30cdefe0ae93fe7c87a1c5ecc9712d80bc3fb
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6130a50c966fe23b1218c98efde381dc64fcb009
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64931599"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996699"
 ---
-# <a name="tag-documents-in-a-review-set-in-ediscovery-premium"></a>Tag dokumenter i et korrektursæt i eDiscovery (Premium)
+# <a name="tag-documents-in-a-review-set-in-ediscovery-premium"></a>Mærk dokumenter i et korrektursæt i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Det er vigtigt at organisere indhold i et korrektursæt for at fuldføre forskellige arbejdsprocesser i eDiscovery-processen. Dette omfatter:
 
@@ -59,7 +61,7 @@ Du kan organisere mærker yderligere ved at indlejre dem i en sektion. Hvis hens
 
 ## <a name="creating-and-applying-tags"></a>Oprettelse og anvendelse af mærker
 
-Mærkning af elementer i korrektursæt er en proces med to trin. Det første trin er at oprette de mærker, der derefter anvendes til at gennemse sætelementer. Når du har oprettet mærker, kan du og andre korrekturlæsere anvende dem på elementer i et korrektursæt. Som tidligere forklaret kan en eDiscovery-sag (Premium) kun have ét sæt mærker, som korrekturlæsere kan bruge til at mærke elementer i korrektursæt.
+Mærkning af elementer i korrektursæt er en proces med to trin. Det første trin er at oprette de mærker, der derefter anvendes til at gennemse sætelementer. Når du har oprettet mærker, kan du og andre korrekturlæsere anvende dem på elementer i et korrektursæt. Som tidligere forklaret kan en eDiscovery-sag (Premium) kun have ét sæt mærker, som korrekturlæsere kan bruge til at mærke elementer, der er angivet til gennemsyn.
 
 ### <a name="create-tags"></a>Opret mærker
 
@@ -103,7 +105,7 @@ Når kodestrukturen er på plads, kan korrekturlæsere anvende mærker på eleme
 
       - **Medtag tilknyttede familieelementer**: Denne indstilling anvender det samme mærke på de tilknyttede familieelementer for elementer, der er mærket.  *Familieelementer* er elementer, der deler den samme **FamilyId-metadataegenskabsværdi** . Et dokument, der er knyttet til en mail, deler f.eks. det samme **FamilyId** som mailen. Så hvis denne indstilling er valgt til dette eksempel, er mailen og dokumentet mærket, selvom dokumentet muligvis ikke er inkluderet på listen over elementer, der er angivet til gennemsyn.
 
-      - **Medtag tilknyttede samtaleelementer**: Denne indstilling anvender det samme mærke for alle elementer, der er i samme Teams eller Yammer samtale som de elementer, der er mærket. *Samtaleelementer* er elementer, der deler den samme **egenskabsværdi for ConversationId-metadata** . Alle meddelelser, indlæg og tilsvarende transskriptionsfil for en samtale deler det samme **Samtale-id**. Hvis denne indstilling er valgt, mærkes alle elementer i den samme samtale (og transskriptionsfil), selvom nogle af disse samtaleelementer muligvis ikke er inkluderet på listen over elementer, der er angivet til gennemsyn. Du kan finde flere oplysninger om samtaleelementer i afsnittet "Gruppering" i [eDiscovery-arbejdsprocessen (Premium) for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#grouping).
+      - **Medtag tilknyttede samtaleelementer**: Denne indstilling anvender det samme mærke for alle elementer, der er i samme Teams eller Yammer samtale som de elementer, der er mærket. *Samtaleelementer* er elementer, der deler den samme **egenskabsværdi for ConversationId-metadata** . Alle meddelelser, indlæg og tilsvarende transskriptionsfil for en samtale deler det samme **Samtale-id**. Hvis denne indstilling er valgt, mærkes alle elementer i den samme samtale (og transskriptionsfil), selvom nogle af disse samtaleelementer muligvis ikke er inkluderet på listen over elementer, der er angivet til gennemsyn. Du kan finde flere oplysninger om samtaleelementer i afsnittet "Gruppering" i [eDiscovery (Premium)-arbejdsprocessen for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#grouping).
 
       - **Ingen**: Denne indstilling anvender ikke mærker på familieelementer eller samtaleelementer. Den anvender kun mærker på de elementer, der er markeret, eller på alle elementer på listen over korrektursæt.
 

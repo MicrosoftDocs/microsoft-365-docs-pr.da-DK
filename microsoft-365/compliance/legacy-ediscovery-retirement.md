@@ -14,14 +14,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: In-Place eDiscovery og In-Place Venteposition (og de tilsvarende PowerShell-cmdlet'er) i Exchange Online udgår i første halvdel af 2020. Den Search-Mailbox cmdlet og Microsoft Purview eDiscovery (Premium) v1.0 udgår også inden for samme tidsperiode.
-ms.openlocfilehash: 0a5a5c5a22aefbb0ad5abe6846915e1da653ee6b
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 19809b96574bf8d703264e0bedaada10f177ef31
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973261"
+ms.locfileid: "64999187"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Ophør af ældre eDiscovery-værktøjer
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
 > Funktionaliteten af de ældre eDiscovery-værktøjer, der er beskrevet i denne artikel, er enten fjernet fra Microsoft 365-tjenesten eller er stadig tilgængelig, men understøttes ikke længere. Alle funktioner, der stadig er tilgængelige, kan fjernes uden varsel. Hvis du stadig bruger nogle af disse ældre værktøjer, kan du overveje at overføre til eDiscovery-værktøjerne på Microsoft Purview-overholdelsesportalen eller et af de alternativer, der er beskrevet i denne artikel.
@@ -57,7 +59,7 @@ Som et resultat af denne nye og forbedrede eDiscovery-funktionalitet på overhol
 
    - [GetHoldOnMailboxes](/exchange/client-developer/web-service-reference/getholdonmailboxes-operation)
 
-- [Microsoft Purview eDiscovery (Premium) v1.0](./overview-ediscovery-20.md), som er den første version af eDiscovery (Premium), der åbnes via et Microsoft Purview eDiscovery-tilfælde (Standard) i overholdelsesportalen. Udfasning af eDiscovery (Premium) v1.0 påvirker ikke din mulighed for at oprette og administrere eDiscovery-sager (Standard).
+- [Microsoft Purview eDiscovery (Premium) v1.0](./overview-ediscovery-20.md), som er den første version af eDiscovery (Premium), der tilgås via et Microsoft Purview eDiscovery (Standard)-tilfælde i overholdelsesportalen. Udfasning af eDiscovery (Premium) v1.0 påvirker ikke din mulighed for at oprette og administrere eDiscovery-sager (Standard).
 
 > [!NOTE]
 > EDiscovery-funktionaliteten, der udgår, gælder kun for skybaserede versioner af Microsoft 365 og Office 365. eDiscovery-funktionalitet i lokale versioner af Exchange og SharePoint understøttes stadig indtil videre.
@@ -66,9 +68,9 @@ Følgende afsnit i denne artikel indeholder en vejledning om hver funktion, der 
 
 ## <a name="in-place-ediscovery-and-in-place-holds-in-the-exchange-admin-center"></a>In-Place eDiscovery- og In-Place Ventepositioner i Exchange Administration 
 
-I henhold til den oprindelige meddelelse den 1. juli 2017 udgår funktionen In-Place eDiscovery & Venteposition i EAC (Exchange Administration). Siden In-Place eDiscovery-& ventepositioner i EAC gav dig mulighed for at søge efter, holde og eksportere indhold fra Exchange Online. In-Place eDiscovery kan du også kopiere søgeresultater til en registreringspostkasse, så du eller andre eDiscovery-ledere kan gennemse indhold og gøre det tilgængeligt for juridiske, lovmæssige og offentlige anmodninger.
+I henhold til den oprindelige meddelelse den 1. juli 2017 udgår funktionen In-Place eDiscovery & Venteposition i EAC (Exchange Administration). Siden In-Place eDiscovery & Ventepositioner i EAC gav dig mulighed for at søge efter, holde og eksportere indhold fra Exchange Online. In-Place eDiscovery kan du også kopiere søgeresultater til en registreringspostkasse, så du eller andre eDiscovery-ledere kan gennemse indhold og gøre det tilgængeligt for juridiske, lovmæssige og offentlige anmodninger.
 
-Da alle disse funktioner (undtagen kopiering af søgeresultater til en registreringspostkasse) nu er tilgængelige i værktøjerne til indholdssøgning, eDiscovery og eDiscovery (Premium) i [overholdelsesportalen](./microsoft-365-compliance-center.md) (med forbedret funktionalitet, pålidelighed og understøttelse af en lang række Microsoft 365 tjenester), anbefaler vi, at du begynder at bruge disse værktøjer hurtigst muligt. For at hjælpe dig med overgangen til disse andre eDiscovery-værktøjer vises de værktøjer, du kan bruge i stedet for In-Place eDiscovery og In-Place Venteposition, i tabellen nedenfor.
+Da alle disse funktioner (undtagen kopiering af søgeresultater til en registreringspostkasse) nu er tilgængelige i værktøjerne til indholdssøgning, eDiscovery og eDiscovery (Premium) på [overholdelsesportalen](./microsoft-365-compliance-center.md) (med forbedret funktionalitet, pålidelighed og understøttelse af en lang række Microsoft 365 tjenester), anbefaler vi, at du begynder at bruge disse værktøjer hurtigst muligt. For at hjælpe dig med overgangen til disse andre eDiscovery-værktøjer vises de værktøjer, du kan bruge i stedet for In-Place eDiscovery og In-Place Venteposition, i tabellen nedenfor.
 
 ### <a name="scope-of-affected-organizations"></a>Omfanget af berørte organisationer
 
@@ -76,7 +78,7 @@ Da alle disse funktioner (undtagen kopiering af søgeresultater til en registrer
 
 - Office 365 og Microsoft 365 Education organisationer
 
-- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC Høj og DoD
+- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC High og DoD
 
 - Office 365 Tyskland
 
@@ -135,7 +137,7 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 <li><p>Analysér indhold i et korrektursæt. Dette omfatter mailtrådning, registrering af næsten dubletter, analyse af temaer og forudsigende kodning</p></li>
 <li><p>Markér dokumenter i et valideringssæt</p></li>
 <li><p>Mærkningsforslag, der kan hjælpe med at identificere indhold om advokatklientrettigheder</p></li></ul>
-<p>Du kan finde flere oplysninger under <a href="/microsoft-365/compliance/overview-ediscovery-20">Oversigt over eDiscovery-løsningen (Premium) i Microsoft 365</a>.</p>
+<p>Du kan finde flere oplysninger under <a href="/microsoft-365/compliance/overview-ediscovery-20">Oversigt over eDiscovery(Premium)-løsningen i Microsoft 365</a>.</p>
 <p>
 <p>Du kan også eksportere søgeresultaterne til PST-filer og derefter bruge Microsoft 365 importtjenesten til at importere psts til en registreringspostkasse. Du kan få en trinvis vejledning under <a href="/microsoft-365/compliance/use-network-upload-to-import-pst-files">Brug netværksupload til at importere PST-filer til Office 365</a>.
 </tr>
@@ -148,7 +150,7 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 <tr class="odd">
 <td>Gendan elementer fra mappen Gendan elementer, der kan gendannes</td>
   <td><a href="/powershell/module/exchange/Restore-RecoverableItems">Restore-RecoverableItems</td>
-  <td>Du kan gendanne permanent slettede elementer (også kaldet <i>elementer med blød sletning</i> ) i postkasser, så længe opbevaringsperioden for slettede elementer for et element ikke er udløbet. Du kan finde flere oplysninger <a href="/Exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder">i mappen Elementer, der kan gendannes i Exchange Online</a>.</td>
+  <td>Du kan gendanne permanent slettede elementer (også kaldet <i>elementer med blød sletning</i> ) i postkasser, så længe opbevaringsperioden for slettede elementer for et element ikke er udløbet. Du kan finde flere oplysninger <a href="/Exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder">i mappen Elementer, der kan gendannes, i Exchange Online</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +181,7 @@ Da disse funktioner nu er tilgængelige i [<span class="underline">overholdelses
 
 - Office 365 og Microsoft 365 Education organisationer
 
-- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC Høj og DoD
+- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC High og DoD
 
 - Office 365 Tyskland
 
@@ -240,7 +242,7 @@ I følgende tabel beskrives andre værktøjer, som du kan bruge til at erstatte 
 
 **Vi bruger Kopiér søgning til at eksportere mails eller chatbeskeder til andre eDiscovery- og juridiske undersøgelser. Hvilke andre muligheder har vi efter disse cmdlet'er er gået på pension?**
 
-[<span class="underline">Microsoft Graph API'er</span>](https://developer.microsoft.com/en-us/graph) indeholder en række metoder til udtrækning af data til analyse og andre formål, der er langt mere robuste og skalerbare end brugen af **\*-MailboxSearch-cmdlet'erne**.
+[<span class="underline">Microsoft Graph-API'erne</span>](https://developer.microsoft.com/en-us/graph) indeholder en række metoder til udtrækning af data til analyse og andre formål, der er langt mere robuste og skalerbare end brugen af **\*-MailboxSearch-cmdlet'erne**.
 
 **Hvordan kan jeg overføre mine søgninger og ventepositioner til overholdelsesportalen?**
 
@@ -252,7 +254,7 @@ Ja, selvom vi fjerner muligheden for at oprette og redigere søgninger, kan du s
 
 ## <a name="search-mailbox-cmdlet"></a>Search-Mailbox cmdlet
 
-**Search-Mailbox-cmdlet'en** i Exchange Online PowerShell udgår som oprindeligt annonceret i en advarsel i cmdlet-outputtet fra 2018. **Search-Mailbox-cmdlet'en** blev oprindeligt brugt til at søge i en brugers postkasse og fjerne skadeligt indhold. Vi anbefaler, at du begynder at bruge Cmdlet'erne **New-ComplianceSearch** og **New-ComplianceSearchAction** i Office 365 Security & Compliance Center PowerShell til at søge efter og fjerne indhold. De [<span class="underline">Microsoft 365 sikkerhedsfunktioner</span>](../security/index.yml) giver robust trusselsbeskyttelse for mail og mange andre Microsoft-tjenester for at få en indbygget sikkerhedsoplevelse.
+**Search-Mailbox-cmdlet'en** i Exchange Online PowerShell udgår som oprindeligt annonceret i en advarsel i cmdlet-outputtet fra 2018. **Search-Mailbox-cmdlet'en** blev oprindeligt brugt til at søge i en brugers postkasse og fjerne skadeligt indhold. Vi anbefaler, at du begynder at bruge Cmdlet'erne **New-ComplianceSearch** og **New-ComplianceSearchAction** i Office 365 Security & Compliance Center PowerShell til at søge efter og fjerne indhold. For at få en indbygget sikkerhedsoplevelse giver [<span class="underline">de Microsoft 365 sikkerhedsfunktioner</span>](../security/index.yml) robust trusselsbeskyttelse af mail og mange andre Microsoft-tjenester.
 
 ### <a name="scope-of-affected-organizations"></a>Omfanget af berørte organisationer
 
@@ -260,7 +262,7 @@ Ja, selvom vi fjerner muligheden for at oprette og redigere søgninger, kan du s
 
 - Office 365 og Microsoft 365 Education organisationer
 
-- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC Høj og DoD
+- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC High og DoD
 
 - Office 365 Tyskland
 
@@ -332,7 +334,7 @@ Disse handlinger i Exchange Web Services API bruges af funktionen In-Place eDisc
 
 - Office 365 og Microsoft 365 Education organisationer
 
-- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC Høj og DoD
+- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC High og DoD
 
 - Office 365 Tyskland
 
@@ -342,21 +344,21 @@ Disse handlinger i Exchange Web Services API bruges af funktionen In-Place eDisc
 
 ## <a name="ediscovery-premium-v10"></a>eDiscovery (Premium) v1.0
 
-eDiscovery (Premium) v1.0, som er den version af eDiscovery (Premium), der er tilgængelig i en eDiscovery (Standard)-sag ved at klikke på **Skift til eDiscovery (Premium)**, udgår. Dens funktionalitet er blevet erstattet af den nye [eDiscovery-løsning (Premium)](./ediscovery.md) på overholdelsesportalen.
+eDiscovery (Premium) v1.0, som er den version af eDiscovery (Premium), der er tilgængelig i en eDiscovery (Standard)-sag ved at klikke på **Skift til eDiscovery (Premium)**, udgår. Dens funktionalitet er blevet erstattet af den nye [eDiscovery(Premium)-løsning](./ediscovery.md) på overholdelsesportalen.
 
 Sådan finder du ud af, om din organisation bruger eDiscovery (Premium) v1.0:
 
 1. Gå til overholdelsesportalen, vælg **eDiscoveryCore** > , og åbn en eDiscovery(Standard)-sag.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
 
-1. Hvis du ser knappen **Skift til eDiscovery (Premium),** vil du blive sendt til 1.0-versionen af eDiscovery (Premium), som udgår. Muligheden for at oprette og administrere sager i eDiscovery (Standard) påvirkes ikke. Det er kun muligheden for at tilføje og analysere sagsdata i eDiscovery (Premium) v1.0 (ved at klikke på **Skift til eDiscovery (Premium)),** der udgår.
+1. Hvis du ser knappen **Skift til eDiscovery (Premium),** bliver du sendt til 1.0-versionen af eDiscovery (Premium), som udgår. Muligheden for at oprette og administrere sager i eDiscovery (Standard) påvirkes ikke. Det er kun muligheden for at tilføje og analysere sagsdata i eDiscovery (Premium) v1.0 (ved at klikke på **Skift til eDiscovery (Premium)**), der udgår.
 
-Den nye eDiscovery-løsning (Premium) i Microsoft 365 (også kendt som *eDiscovery (Premium) v2.0*) indeholder alle funktionerne i den oprindelige løsning, men omfatter nu en tilsynsførende tilgang til identificering af indhold i andre Microsoft 365  tjenester, indsamle dette indhold og derefter føje det til et anmeldelsessæt, hvor korrekturlæsere kan drage fordel af funktionerne til hurtig søgning, mærkning og analyse for at hjælpe med at finde relevante dokumenter. eDiscovery (Premium) indeholder nu forbedret behandling og oprindelige seere til både Microsoft- og ikke-Microsoft-filtyper, en komplet liste over filtyper er [her](./supported-filetypes-ediscovery20.md), og understøttede metadatafelter er [her](./document-metadata-fields-in-advanced-ediscovery.md). Den nye eDiscovery-løsning (Premium) indeholder også en effektiv funktion til administration af forældremyndigheden over indhold, der giver dig mulighed for at anvende ventepositioner på indhold i forskellige tjenester, give brugerne besked om ventepositionerne og spore tilsynsførendesvar – alt sammen i en eDiscovery-sag (Premium).
+Den nye eDiscovery (Premium)-løsning i Microsoft 365 (også kendt som *eDiscovery (Premium) v2.0*) indeholder alle funktionerne i den oprindelige løsning, men indeholder nu en forældremyndighedsbaseret tilgang til identifikation af indhold i andre Microsoft 365 tjenester, indsamling af dette indhold og derefter tilføjelse af det til et gennemgangssæt, hvor korrekturlæsere kan drage fordel af forespørgsler, mærkning og analyse til hurtig søgning  til at hjælpe med at slagte relevante dokumenter. eDiscovery (Premium) indeholder nu forbedret behandling og oprindelige seere til både Microsoft- og ikke-Microsoft-filtyper, en komplet liste over filtyper er [her](./supported-filetypes-ediscovery20.md) , og understøttede metadatafelter er [her](./document-metadata-fields-in-advanced-ediscovery.md). Den nye eDiscovery-løsning (Premium) indeholder også en effektiv funktion til administration af forældremyndigheden over indhold i forskellige tjenester, giver brugerne besked om ventepositionerne og sporer forældremyndighedssvar – alt sammen i en eDiscovery-sag (Premium).
 
 Sådan får du adgang til eDiscovery (Premium) v2.0:
 
 Gå til overholdelsesportalen, vælg **eDiscoveryAdvanced** > , og åbn en eDiscovery(Standard)-sag.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
 
-På nuværende tidspunkt anbefaler vi, at du begynder at overføre eDiscovery-arbejdsprocessen til den nye eDiscovery-funktionalitet (Premium). Hvis det er nødvendigt, kan du arkivere dine eDiscovery-sager (Premium) 1,0 sager ved at eksportere indholdet og gemme det offline. Selvom du stadig vil kunne få adgang til eDiscovery (Premium) v1.0 i eksisterende tilfælde indtil den 31. december 2020, yder Microsoft Support ikke support efter den 1. oktober 2020. Se følgende tidslinje for at få flere oplysninger.
+På nuværende tidspunkt anbefaler vi, at du begynder at overføre din eDiscovery-arbejdsproces til den nye eDiscovery-funktionalitet (Premium). Hvis det er nødvendigt, kan du arkivere dine eDiscovery(Premium) 1.0-sager ved at eksportere indholdet og gemme det offline. Selvom du stadig vil kunne få adgang til eDiscovery (Premium) v1.0 i eksisterende tilfælde indtil den 31. december 2020, yder Microsoft Support ikke support efter den 1. oktober 2020. Se følgende tidslinje for at få flere oplysninger.
 
 ### <a name="scope-of-affected-organizations"></a>Omfanget af berørte organisationer
 
@@ -364,17 +366,17 @@ På nuværende tidspunkt anbefaler vi, at du begynder at overføre eDiscovery-ar
 
 - Office 365 og Microsoft 365 Education organisationer
 
-- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC Høj og DoD
+- Office 365 og Microsoft 365 offentlige organisationer. Dette omfatter GCC, GCC High og DoD
 
 - Office 365 Tyskland
 
 ### <a name="timeline"></a>Tidslinjen
 
-- 1. juli 2020: Du kan ikke oprette nye eDiscovery-sager (Premium) v1.0-sager.
+- 1. juli 2020: Du kan ikke oprette nye eDiscovery (Premium) v1.0-sager.
 
-- 1. oktober 2020: Du kan ikke føje nye data (Forbered søgeresultater for eDiscovery (Premium)) til alle sager. Du kan fortsætte med at arbejde med data i eksisterende tilfælde på egen risiko. Microsoft Support yder ikke længere hjælp. 
+- 1. oktober 2020: Du kan ikke føje nye data (Forbered søgeresultater for eDiscovery (Premium)) til nogen sager. Du kan fortsætte med at arbejde med data i eksisterende tilfælde på egen risiko. Microsoft Support yder ikke længere hjælp. 
 
-- 31. december 2020: Du kan ikke få adgang til eDiscovery-sager (Premium) v1.0.
+- 31. december 2020: Du kan ikke få adgang til eDiscovery (Premium) v1.0-sager.
 
 ### <a name="alternative-tools"></a>Alternative værktøjer
 

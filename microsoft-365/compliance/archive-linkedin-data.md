@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan administratorer kan konfigurere & bruge en oprindelig connector til at importere data fra en LinkedIn-firmaside for at Microsoft 365.
-ms.openlocfilehash: de39d0e3e95164a39f9aed1a227ab15f6e4fd7d6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4def1c8946c8b09f1ba543762026572ceb229b6
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937229"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998038"
 ---
 # <a name="set-up-a-connector-to-archive-linkedin-data"></a>Konfigurer en connector til arkivering af LinkedIn-data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug en connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra LinkedIn-virksomhedssider. Når du har konfigureret en connector, oprettes der forbindelse til kontoen for den specifikke LinkedIn-firmaside én gang hver 24. time. Connectoren konverterer de meddelelser, der er sendt til siden Firma, til en mail og importerer derefter disse elementer til en postkasse i Microsoft 365.
 

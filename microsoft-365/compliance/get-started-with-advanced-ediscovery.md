@@ -19,23 +19,25 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: I denne artikel beskrives det, hvordan du konfigurerer eDiscovery (Premium), så du kan begynde at oprette og administrere sager. Den indeholder også en beskrivelse af de påkrævede Microsoft-abonnementer og -licenser. Når du har udført nogle få hurtige trin, er værktøjet eDiscovery (Premium) klar til brug.
-ms.openlocfilehash: 29805066c2db26aca6992dc34ad8bf8c0966ceb7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: I denne artikel beskrives det, hvordan du konfigurerer eDiscovery (Premium), så du kan begynde at oprette og administrere sager. Den indeholder også en beskrivelse af de påkrævede Microsoft-abonnementer og -licenser. Når du har fuldført nogle få hurtige trin, er værktøjet eDiscovery (Premium) klar til brug.
+ms.openlocfilehash: dff99ab432ce5f2380a6fd5a81e855c946146c8c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939911"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997708"
 ---
 # <a name="set-up-microsoft-purview-ediscovery-premium"></a>Konfigurer Microsoft Purview eDiscovery (Premium)
 
-Microsoft Purview eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere data, der reagerer på din organisations interne og eksterne undersøgelser. Der kræves intet for at udrulle eDiscovery (Premium), men der er nogle påkrævede opgaver, som en it-administrator og eDiscovery-leder skal udføre, før organisationen kan begynde at oprette og bruge eDiscovery-sager (Premium) til at administrere dine undersøgelser.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af data, der reagerer på din organisations interne og eksterne undersøgelser. Der kræves intet for at udrulle eDiscovery (Premium), men der er nogle påkrævede opgaver, som it-administratoren og eDiscovery-chefen skal udføre, før organisationen kan begynde at oprette og bruge eDiscovery-sager (Premium) til at administrere dine undersøgelser.
 
 I denne artikel beskrives følgende trin, der er nødvendige for at konfigurere eDiscovery (Premium).
 
 ![Trin til konfiguration af eDiscovery (Premium).](../media/set-up-advanced-ediscovery.png)
 
-Dette omfatter sikring af den korrekte licens, der kræves for at få adgang til eDiscovery (Premium) og føje vogtere til sager og tildele tilladelser til dit juridiske team og undersøgelsesteam, så de kan få adgang til og administrere sager.
+Dette omfatter sikring af den korrekte licens, der kræves for at få adgang til eDiscovery (Premium) og føje tilsynsførende til sager og tildele tilladelser til dit juridiske team og undersøgelsesteam, så de kan få adgang til og administrere sager.
 
 ## <a name="step-1-verify-and-assign-appropriate-licenses"></a>Trin 1: Bekræft og tildel relevante licenser
 
@@ -43,7 +45,7 @@ Licenser til eDiscovery (Premium) kræver det relevante organisationsabonnement 
 
 ## <a name="step-2-assign-ediscovery-permissions"></a>Trin 2: Tildel eDiscovery-tilladelser
 
-Hvis du vil have adgang til eDiscovery (Premium) eller tilføjes som medlem af en eDiscovery-sag (Premium), skal en bruger tildeles de relevante tilladelser. En bruger skal specifikt tilføjes som medlem af rollegruppen eDiscovery Manager på Microsoft Purview-overholdelsesportalen. Medlemmer af denne rollegruppe kan oprette og administrere eDiscovery-sager (Premium). De kan tilføje og fjerne medlemmer, placere tilsynsførende og indholdsplaceringer i venteposition, administrere meddelelser om juridisk venteposition, oprette og redigere søgninger, der er tilknyttet i en sag, føje søgeresultater til et gennemsynssæt, analysere data i et korrektursæt og eksportere og downloade fra en eDiscovery-sag (Premium).
+Hvis du vil have adgang til eDiscovery (Premium) eller tilføjes som medlem af en eDiscovery(Premium)-sag, skal en bruger tildeles de relevante tilladelser. En bruger skal specifikt tilføjes som medlem af rollegruppen eDiscovery Manager på Microsoft Purview-overholdelsesportalen. Medlemmer af denne rollegruppe kan oprette og administrere eDiscovery-sager (Premium). De kan tilføje og fjerne medlemmer, placere tilsynsførende og indholdsplaceringer i venteposition, administrere meddelelser om juridisk venteposition, oprette og redigere søgninger, der er tilknyttet i en sag, føje søgeresultater til et korrektursæt, analysere data i et korrektursæt og eksportere og downloade fra en eDiscovery-sag (Premium).
 
 Fuldfør følgende trin for at føje brugere til rollegruppen eDiscovery Manager:
 
@@ -83,7 +85,7 @@ Du kan finde flere oplysninger om eDiscovery-tilladelser og en beskrivelse af hv
 
 Det sidste trin, der skal fuldføres, før personer i din organisation begynder at oprette og bruge sager, er at konfigurere globale indstillinger, der gælder for alle sager i organisationen. På nuværende tidspunkt er den eneste globale indstilling *registrering af rettigheder for advokater og klienter* (flere globale indstillinger vil være tilgængelige i fremtiden). Denne indstilling gør det muligt for rettighedsmodellen for advokater og klienter at køre, når du analyserer data i et anmeldelsessæt. Modellen bruger maskinel indlæring til at bestemme sandsynligheden for, at et dokument indeholder indhold, der er lovligt. Det sammenligner også deltagerne i dokumenter med en advokatliste (som du indsender, når du opretter modellen) for at afgøre, om et dokument har mindst én deltager, der er advokat.
 
-Du kan finde flere oplysninger om konfiguration og brug af modellen til registrering af rettigheder for advokater og klienter under [Konfigurer registrering af rettigheder for advokater og klienter i eDiscovery (Premium)](attorney-privilege-detection.md).
+Du kan finde flere oplysninger om konfiguration og brug af modellen til registrering af rettighedsregistrering for advokater og klienter i [Konfigurer registrering af rettigheder for advokater og klienter i eDiscovery (Premium).](attorney-privilege-detection.md)
 
 > [!NOTE]
 > Dette er et valgfrit trin, som du kan udføre når som helst. Hvis du ikke implementerer modellen til registrering af rettigheder for advokatklienter, forhindrer det dig ikke i at oprette og bruge eDiscovery-sager (Premium).

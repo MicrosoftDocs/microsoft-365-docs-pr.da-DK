@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 description: In-Place venteposition, procesretsholdning og Microsoft 365 opbevaringspolitikker giver dig mulighed for at bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og krav til eDiscovery.
-ms.openlocfilehash: a088407277f7ebced3aa69ee9ff807913f9b0c85
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4c3c7b7be98959011473eeafc85f40b19be82fdc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942111"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998487"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>Bevar Bcc- og udvidede distributionsgruppemodtagere for eDiscovery
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 I forbindelse med procesførelser, eDiscovery-ventepositioner og [Microsoft 365 opbevaringspolitikker](./retention.md) (oprettet i Microsoft Purview-overholdelsesportalen) kan du bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og eDiscovery-krav. Oplysninger om modtagere, der er direkte adresseret i felterne Til og Cc i en meddelelse, medtages som standard i alle meddelelser. Men din organisation kan kræve muligheden for at søge efter og gengive oplysninger om alle modtagere af en meddelelse. Dette omfatter:
   

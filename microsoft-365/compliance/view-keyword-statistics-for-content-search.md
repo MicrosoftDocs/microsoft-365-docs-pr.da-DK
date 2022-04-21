@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery(Standard) sag i Microsoft Purview-overholdelsesportalen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e057a6e4997240dbaa4b9b7975274c5f3eab7589
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 5d35616823988562b3b075e7a513c8a98a4e3281
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947093"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000812"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>Vis statistik for eDiscovery-søgeresultater
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard)-sag, kan du få vist statistikker om de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til oversigten over de anslåede søgeresultater, der vises på søgevinduets side), forespørgselsstatistikken, f.eks. antallet af indholdsplaceringer med elementer, der stemmer overens med søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
   

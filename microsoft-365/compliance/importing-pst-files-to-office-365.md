@@ -21,21 +21,23 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Få mere at vide om, hvordan du bruger importtjenesten på Microsoft Purview-overholdelsesportalen til masseimport af maildata (PST-filer) til brugerpostkasser.
-ms.openlocfilehash: ba517359d54c698abd2ce50f07fe76d87fba472c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a1720b51a57569d676aeac37933f1dce3075e7ed
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946215"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001010"
 ---
 # <a name="learn-about-importing-your-organizations-pst-files"></a>Få mere at vide om import af din organisations PST-filer
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Denne artikel er til administratorer. Forsøger du at importere PST-filer til din egen postkasse? Se [Importér mail, kontakter og kalender fra en Outlook .pst-fil](https://go.microsoft.com/fwlink/p/?LinkID=785075).
 
-Du kan bruge importtjenesten på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> til hurtigt at masseimportere PST-filer for at Exchange Online postkasser i din organisation. Du kan importere PST-filer på to måder for at Microsoft 365:
+Du kan bruge importtjenesten på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> til hurtigt at masseimportere PST-filer til Exchange Online-postkasser i din organisation. Du kan importere PST-filer på to måder for at Microsoft 365:
 
-- **Overførsel af netværk** ![ Cloudupload.](../media/54ab16ee-3822-4551-abef-3d926f4e1c01.png) – Upload PST-filerne via netværket til en midlertidig Azure Storage placering i Microsoft-cloudmiljøet. Derefter skal du bruge tjenesten Microsoft 365 import til at importere PST-dataene til postkasser i din organisation.
+- **Overførsel af netværk** ![ Cloudupload.](../media/54ab16ee-3822-4551-abef-3d926f4e1c01.png) – Overfør PST-filerne via netværket til en midlertidig Azure Storage placering i Microsoft-cloudmiljøet. Derefter skal du bruge tjenesten Microsoft 365 import til at importere PST-dataene til postkasser i din organisation.
 
 - **Kør forsendelse** ![ Harddisk.](../media/e72b76f3-1f73-4296-b749-c325d95d9ef6.png) - Kopiér PST-filerne til en BitLocker-krypteret harddisk, og send derefter drevet fysisk til Microsoft. Når Microsoft modtager harddisken, uploader datacenterafdelingen dataene til en midlertidig Azure Storage placering i Microsoft-cloudmiljøet. Derefter kan du bruge tjenesten Microsoft 365 Import til at importere dataene til postkasser i din organisation.
 
@@ -55,7 +57,7 @@ Her er en illustration og beskrivelse af den komplette PST-importproces. Illustr
 
 1. **Download PST-importværktøjerne og nøglen til privat Azure Storage placering** – Det første trin er at downloade værktøjet og adgangsnøglen, der bruges til at uploade PST-filerne eller kopiere dem til en harddisk. Du henter disse fra siden **Importér** på overholdelsesportalen. Nøglen giver dig (eller Microsofts datacenterpersonale i tilfælde af drevforsendelse) de nødvendige tilladelser til at uploade PST-filer til en privat og sikker Azure Storage placering. Denne adgangsnøgle er unik for din organisation og hjælper med at forhindre uautoriseret adgang til dine PST-filer, når de er uploadet til Microsoft-cloudmiljøet. Import af PST-filer til Microsoft 365 kræver ikke, at din organisation har et separat Azure-abonnement.
 
-2. **Upload eller kopiér PST-filerne** – Næste trin afhænger af, om du bruger netværksupload eller drevforsendelse til at importere PST-filer. I begge tilfælde skal du bruge værktøjet og den sikre lagernøgle, du fik i det forrige trin.
+2. **Upload eller kopiér PST-filerne** – Næste trin afhænger af, om du bruger netværksupload eller driver forsendelse til at importere PST-filer. I begge tilfælde skal du bruge værktøjet og den sikre lagernøgle, du fik i det forrige trin.
 
     - **Netværksoverførsel:** Værktøjet AzCopy.exe (downloadet i trin 1) bruges til at uploade og gemme dine PST-filer på en Azure Storage placering i Microsoft-cloudmiljøet. Den Azure Storage placering, du uploader dine PST-filer til, er placeret i det samme regionale Microsoft-datacenter som din organisation.
 
@@ -136,7 +138,7 @@ Du skal have tildelt rollen Importér eksport af postkasse i Exchange Online for
 
 Hvis du vil oprette importjob på overholdelsesportalen, skal et af følgende være sandt:
 
-- Du skal tildeles rollen Postmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration.
+- Du skal tildeles rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration.
 
     Eller
 
@@ -182,7 +184,7 @@ PST-importprocessen søger efter dublerede elementer og kopierer ikke elementern
 
 #### <a name="is-there-a-message-size-limit-when-importing-pst-files-using-network-upload"></a>Er der en grænse for meddelelsens størrelse, når du importerer PST-filer ved hjælp af netværksoverførsel?
 
-Ja. Hvis en PST-fil indeholder et postkasseelement, der er større end 150 MB, springes elementet over og importeres ikke under importprocessen. Elementer, der er større end 150 MB, importeres ikke, fordi 150 MB er grænsen for meddelelsesstørrelsen i Exchange Online. Du kan få flere oplysninger [under Meddelelsesgrænser i Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits).
+Ja. Hvis en PST-fil indeholder et postkasseelement, der er større end 150 MB, springes elementet over og importeres ikke under importprocessen. Elementer, der er større end 150 MB, importeres ikke, fordi 150 MB er grænsen for meddelelsesstørrelsen i Exchange Online. Du kan få flere oplysninger under [Meddelelsesgrænser i Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits).
 
 #### <a name="are-message-properties-such-as-when-the-message-was-sent-or-received-the-list-of-recipients-and-other-properties-preserved-when-pst-files-are-imported-to-a-microsoft-365-mailbox-using-network-upload"></a>Bevares meddelelsesegenskaber, f.eks. hvornår meddelelsen blev sendt eller modtaget, listen over modtagere og andre egenskaber, når PST-filer importeres til en Microsoft 365 postkasse ved hjælp af netværksoverførsel?
 
@@ -200,7 +202,7 @@ Ja, denne funktion er nu tilgængelig.
 
 Ja, denne funktion er nu tilgængelig.
 
-#### <a name="can-i-use-network-upload-to-import-pst-files-to-public-folders-in-exchange-online"></a>Kan jeg bruge netværksupload til at importere PST-filer til offentlige mapper i Exchange Online?
+#### <a name="can-i-use-network-upload-to-import-pst-files-to-public-folders-in-exchange-online"></a>Kan jeg bruge netværksoverførsel til at importere PST-filer til offentlige mapper i Exchange Online?
 
 Nej, du kan ikke importere PST-filer til offentlige mapper.
 
@@ -212,7 +214,7 @@ Du skal have tildelt rollen Importér eksport af postkasse for at importere PST-
 
 Hvis du vil oprette importjob på overholdelsesportalen, skal et af følgende være sandt:
 
-- Du skal tildeles rollen Postmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration.
+- Du skal tildeles rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration.
 
     Eller
 
@@ -278,7 +280,7 @@ Derudover kan PST-filer fra Outlook 2007 og nyere versioner importeres til Micro
 
 #### <a name="is-there-a-message-size-limit-when-importing-pst-files-using-drive-shipping"></a>Er der en grænse for meddelelsens størrelse, når du importerer PST-filer ved hjælp af drevforsendelse?
 
-Ja. Hvis en PST-fil indeholder et postkasseelement, der er større end 150 MB, springes elementet over og importeres ikke under importprocessen. Elementer, der er større end 150 MB, importeres ikke, fordi 150 MB er grænsen for meddelelsesstørrelsen i Exchange Online. Du kan få flere oplysninger [under Meddelelsesgrænser i Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits).
+Ja. Hvis en PST-fil indeholder et postkasseelement, der er større end 150 MB, springes elementet over og importeres ikke under importprocessen. Elementer, der er større end 150 MB, importeres ikke, fordi 150 MB er grænsen for meddelelsesstørrelsen i Exchange Online. Du kan få flere oplysninger under [Meddelelsesgrænser i Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits).
 
   **Hvordan håndterer PST-importprocessen dublerede mailelementer?
 

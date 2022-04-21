@@ -17,15 +17,17 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery-sæt (Premium) til sagsgennemgang.
-ms.openlocfilehash: 7b754aa09390d041de44cd2e82ed9d1f93eede7e
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery(Premium)-sagsgennemgangssæt.
+ms.openlocfilehash: d41697f18360b277b060dd537020f9e04ef341ec
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973745"
+ms.locfileid: "64997730"
 ---
 # <a name="add-search-results-to-a-review-set"></a>Føj søgeresultater til et korrektursæt
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du er tilfreds med resultaterne af en søgning, og du er klar til at gennemse og analysere disse søgeresultater, kan du føje dem til et korrektursæt i tilfælde af. Kopiering af de oprindelige data til korrektursættet faciliterer også gennemgangs- og analyseprocessen ved at give dig avancerede analyseværktøjer, f.eks. registrering af temaer, registrering af næsten dubletter og identifikation af mailtråde. Du kan også føje data fra ikke-Microsoft 365 datakilder til et korrektursæt, så du kan gennemse disse data ud over de data, du indsamler fra Microsoft 365.
 
@@ -55,7 +57,7 @@ Når du føjer indholdet af en søgning til et eksisterende eller nyt korrekturs
 
 - **Indstillinger for hentning af samtale**: Elementer, der er føjet til korrektursættet, er aktiveret for trådede samtaler for at hjælpe med at gennemse indhold i forbindelse med frem og tilbage-samtalen. Du kan finde flere oplysninger [under Gennemse samtaler i eDiscovery (Premium)](conversation-review-sets.md).
 
-- **Aktivér hentning for moderne vedhæftede filer**: Brug denne indstilling til at inkludere moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemsyn. Du kan finde flere oplysninger om søgbare egenskaber, der er relateret til moderne vedhæftede filer, [under Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
+- **Aktivér hentning for moderne vedhæftede filer**: Brug denne indstilling til at inkludere moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemsyn. Du kan finde flere oplysninger om søgbare egenskaber, der er relateret til moderne vedhæftede filer, [i Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
 
 ## <a name="add-a-sample-to-a-review-set"></a>Føj et eksempel til et korrektursæt
 

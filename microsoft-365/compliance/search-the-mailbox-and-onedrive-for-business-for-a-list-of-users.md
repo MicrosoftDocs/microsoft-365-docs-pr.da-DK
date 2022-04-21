@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
 description: Brug Indholdssøgning og scriptet i denne artikel til at søge i postkasserne og OneDrive for Business websteder efter en gruppe af brugere.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 14c518c4450b01e387f84b4211da8d0eb346fe7a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1bbfc26c2193c1bf31e081b8ded9e2e2baf56743
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949261"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998810"
 ---
 # <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Brug indholdssøgning til at søge i postkassen og OneDrive for Business websted efter en liste over brugere
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Security & Compliance Center PowerShell indeholder en række cmdlet'er, der giver dig mulighed for at automatisere tidskrævende eDiscovery-relaterede opgaver. I øjeblikket tager det tid og forberedelse at oprette en indholdssøgning på Microsoft Purview-overholdelsesportalen for at søge i et stort antal placeringer med tilsynsførende indhold. Før du opretter en søgning, skal du indsamle URL-adressen for hvert OneDrive for Business websted og derefter føje hver postkasse og OneDrive for Business websted til søgningen. I fremtidige versioner bliver det nemmere at gøre det på overholdelsesportalen. Indtil da kan du bruge scriptet i denne artikel til at automatisere denne proces. I dette script bliver du bedt om at angive navnet på din organisations MySite-domæne (f.eks. **contoso** i URL-adressen `https://contoso-my.sharepoint.com`), en liste over brugermailadresser, navnet på den nye indholdssøgning og den søgeforespørgsel, der skal bruges. Scriptet henter OneDrive for Business URL-adresse for hver bruger på listen og opretter og starter derefter en indholdssøgning, der søger i postkassen og OneDrive for Business websted for hver bruger på listen ved hjælp af den søgeforespørgsel, du angiver.
   
@@ -44,13 +46,13 @@ Security & Compliance Center PowerShell indeholder en række cmdlet'er, der give
 
 Det første trin er at installere SharePoint Online Management Shell. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
   
-Gå til [Konfigurer SharePoint Shell til onlineadministration Windows PowerShell miljø](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
+Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
   
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få vist en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
+Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
   
-Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser for alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`. 
+Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser til alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`. 
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > Users.txt
@@ -75,7 +77,7 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
 
 **Sådan kører du scriptet:**
     
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `SearchEXOOD4B.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `SearchEXOOD4B.ps1`. Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
     
   ```powershell
   # This PowerShell script will prompt you for the following information:

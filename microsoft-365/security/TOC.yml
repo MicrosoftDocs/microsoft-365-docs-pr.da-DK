@@ -1,44 +1,44 @@
-- name: Microsoft 365 sikkerhed
+- name: Microsoft 365-sikkerhed
   href: index.yml
   expanded: true
   items:
     - name: Kom i gang
       items:
-        - name: Microsoft 365 Zero Trust-installationsplan
+        - name: Nul tillid udrulningsplan i Microsoft 365
           href: microsoft-365-zero-trust.md
-        - name: Vigtigste opgaver til at understøtte hjemmearbejde
+        - name: Vigtigste opgaver der understøtter arbejde hjemmefra
           href: top-security-tasks-for-remote-work.md
-    - name: Konfigurationer for nultillidsidentitet og enhedsadgang
+    - name: Konfigurationer af Nul tillid-identitet og enhedsadgang
       items:
         - name: Oversigt
           href: ./office-365-security/microsoft-365-policies-configurations.md
-        - name: Nødvendige arbejde
+        - name: Forudsætningsarbejde
           href: ./office-365-security/identity-access-prerequisites.md
-        - name: Fælles identitets- og enhedsadgangspolitikker
+        - name: Fælles politikker for identitets- og enhedsadgang
           href: ./office-365-security/identity-access-policies.md
-        - name: Politikker for gæster og eksterne brugere
+        - name: Politikker for gæstebrugere og eksterne brugere
           href: ./office-365-security/identity-access-policies-guest-access.md
-        - name: Anbefalede Teams adgangspolitikker
+        - name: Anbefalede adgangspolitikker for Teams
           href: ./office-365-security/teams-access-policies.md
-        - name: Anbefalede Exchange adgangspolitikker
+        - name: Anbefalede adgangspolitikker for Exchange
           href: ./office-365-security/secure-email-recommended-policies.md
-        - name: Anbefalede SharePoint adgangspolitikker
+        - name: Anbefalede adgangspolitikker for SharePoint
           href: ./office-365-security/sharepoint-file-access-policies.md
-        - name: Politikker for Anbefalede Defender til skyapps til SaaS-apps
+        - name: Anbefalet Defender for Cloud Apps-politikker for SaaS-apps
           href: ./office-365-security/mcas-saas-access-policies.md
-        - name: Kontinuerlig adgangsevaluering
+        - name: Løbende adgangsevaluering
           href: ./office-365-security/microsoft-365-continuous-access-evaluation.md
-    - name: Microsoft 365 Defender dokumenter
+    - name: Microsoft 365 Defender-dokumenter
       items:
         - name: Microsoft 365 Defender
           href: ./defender/index.yml
-        - name: Defender til Office 365
+        - name: Defender for Office 365
           href: ./office-365-security/index.yml
-        - name: Defender til Slutpunkt
+        - name: Defender for Endpoint
           href: ./defender-endpoint/index.yml
         - name: Defender for Identity
           href: /defender-for-identity
-        - name: Defender til skyapps
+        - name: Defender for Cloud Apps
           href: /cloud-app-security
         - name: Defender for Business
           href: ./defender-business/index.yml
@@ -46,7 +46,7 @@
       href: ../enterprise/index.yml
     - name: Microsoft 365 til virksomheder
       href: ./index.yml
-    - name: Microsoft 365 overholdelse af regler og standarder
+    - name: Microsoft Purview
       href: ../compliance/index.yml
-    - name: Administrere aktivt indhold i Office dokumenter
+    - name: Administrer aktivt indhold i Office dokumenter
       href: active-content-in-trusted-docs.md

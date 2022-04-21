@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Brug nær registrering af dubletter til at gruppere tekstlignende dokumenter, når du analyserer sagsdata i eDiscovery (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f7976f5fdf023c30f7f96264ecc2b744656e9091
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e22444845005f4cf155340e13856722976715d91
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949405"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997598"
 ---
 # <a name="near-duplicate-detection-in-ediscovery-premium"></a>Nær registrering af dubletter i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Overvej et sæt dokumenter, der skal gennemses, hvor et undersæt er baseret på den samme skabelon og for det meste har det samme standardsprog med nogle få forskelle her og der. Hvis en validator kunne identificere dette undersæt, gennemse et af dem grundigt og gennemse forskellene for resten, ville de ikke have overset nogen entydige oplysninger, samtidig med at de kun havde taget en brøkdel af tiden, der ville have taget dem til at læse alle dokumenter, der var dækket. I nærheden af registrering af dubletter grupperer tekstlignende dokumenter sammen for at hjælpe dig med at gøre din korrekturproces mere effektiv.
 

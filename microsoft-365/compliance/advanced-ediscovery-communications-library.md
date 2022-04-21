@@ -16,16 +16,18 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Du kan tilføje skabeloner til tilsynsførende kommunikation (f.eks. en skabelon til meddelelse om venteposition) i eDiscovery (Premium), så de kan bruges i alle tilfælde i din organisation.
-ms.openlocfilehash: be8311a9687eb4edb9cc44e15264808a2a05a69a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9ac944a3d845a770e35a84adcdc2f1f1dbefd172
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945147"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000592"
 ---
 # <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>Administrer skabeloner til tilsynsførende kommunikation i eDiscovery (Premium)
 
-Når du eller andre brugere opretter en meddelelse om bevarelse af venteposition eller andre typer af tilsynsførende kommunikation, skulle du oprette kommunikationsdokumentet fra bunden ved hjælp af kommunikationseditoren under fanen **Kommunikation** i en eDiscovery-sag (Premium). Nu har vi udgivet en ny funktion, hvor du kan oprette kommunikationsskabeloner, der under alle omstændigheder kan bruges til at oprette kommunikation i din organisation. Når der er oprettet kommunikationsskabeloner, kan de bruges i en sag. Det betyder, at paralegals eller andre brugere, der opretter tilsynsførende kommunikation, ikke behøver at starte fra bunden for at oprette en meddelelse. De kan i stedet vælge en skabelon for at oprette den meddelelse, der sendes til en tilsynsførende.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Når du eller andre brugere opretter en meddelelse om venteposition eller andre typer af tilsynsførende kommunikation, skulle du oprette kommunikationsdokumentet fra bunden ved hjælp af kommunikationseditoren under fanen **Kommunikation** i en eDiscovery-sag (Premium). Nu har vi udgivet en ny funktion, hvor du kan oprette kommunikationsskabeloner, der under alle omstændigheder kan bruges til at oprette kommunikation i din organisation. Når der er oprettet kommunikationsskabeloner, kan de bruges i en sag. Det betyder, at paralegals eller andre brugere, der opretter tilsynsførende kommunikation, ikke behøver at starte fra bunden for at oprette en meddelelse. De kan i stedet vælge en skabelon for at oprette den meddelelse, der sendes til en tilsynsførende.
 
 I denne artikel forklares det, hvordan du opretter kommunikationsskabeloner for hele organisationen og vælger dem, når du opretter en ny meddelelse om forældremyndigheden over en bestemt eDiscovery-sag (Premium).
 
@@ -37,11 +39,11 @@ I denne artikel forklares det, hvordan du opretter kommunikationsskabeloner for 
 
 ## <a name="create-a-communications-template"></a>Opret en kommunikationsskabelon
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) i portalen til overholdelse af angivne standarder, og klik derefter på **indstillinger for eDiscovery (Premium).**
+1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium**).
 
    ![Vælg indstillinger for eDiscovery (Premium)](..\media\HistoricalVersions1.png)
 
-2. Vælg fanen **Kommunikationsbibliotek** på siden **Indstillinger**.
+2. På siden **Indstillinger** skal du vælge fanen **Kommunikationsbibliotek** .
 
 3. Klik på **Opret** på siden **Kommunikationsbibliotek**.
 

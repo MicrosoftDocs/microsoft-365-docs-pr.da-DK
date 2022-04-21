@@ -15,14 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: eDiscovery-job (Premium) hjælper dig med at spore status for langvarige processer, der er relateret til udførelse af forskellige eDiscovery-opgaver (Premium).
-ms.openlocfilehash: 2c82b79458d59dd1176857cf37943c7676ad38a2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ab1b6cf45805a0d67492a5d386670f139b24f5e1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935604"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998484"
 ---
 # <a name="manage-jobs-in-ediscovery-premium"></a>Administrer job i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Her er en liste over de job (som typisk er langvarige processer), der spores under fanen **Job** i en sag i Microsoft Purview eDiscovery (Premium). Disse job udløses af brugerhandlinger, når du bruger og administrerer sager.
 

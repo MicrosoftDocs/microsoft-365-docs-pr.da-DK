@@ -16,20 +16,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: a85e1c87-a48e-4715-bfa9-d5275cde67b0
-description: Få mere at vide om, hvordan administratorer kan slette elementer i en brugers mappe med gendanbare elementer for en Exchange Online postkasse, også selvom denne postkasse er sat i juridisk venteposition.
+description: Få mere at vide om, hvordan administratorer kan slette elementer i en brugers mappe med gendanbare elementer for en Exchange Online-postkasse, selvom postkassen er sat i juridisk venteposition.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 29519b61d4a32b03772cfddba9183d3568afc209
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b421be087980c7878b79e3dbc03759ec45c546d8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950241"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001186"
 ---
 # <a name="delete-items-in-the-recoverable-items-folder-of-cloud-based-mailboxes-on-hold"></a>Slet elementer i mappen Gendan elementer i skybaserede postkasser i venteposition
 
-Mappen Gendanbare elementer for en Exchange Online postkasse findes for at beskytte mod utilsigtet eller skadelig sletning. Den bruges også til at gemme elementer, der bevares og tilgås af funktioner til overholdelse af angivne standarder, f.eks. ventepositioner og eDiscovery-søgninger. I nogle situationer kan organisationer dog have data, der utilsigtet bevares i mappen Gendanbare elementer, som de skal slette. En bruger kan f.eks. ubevidst sende eller videresende en mail, der indeholder følsomme oplysninger eller oplysninger, der kan have alvorlige forretningsmæssige konsekvenser. Selvom meddelelsen slettes permanent, kan den bevares på ubestemt tid, fordi der er placeret en juridisk venteposition på postkassen. Dette scenarie kaldes *dataspild*, fordi data utilsigtet er blevet *spildt* i Office 365. I disse situationer kan du slette elementer i en brugers mappe med gendanbare elementer for en Exchange Online postkasse, selvom postkassen er sat i venteposition med en af de forskellige ventepositionsfunktioner i Office 365. Disse typer ventepositioner omfatter tvister, In-Place ventepositioner, eDiscovery-ventepositioner og opbevaringspolitikker, der er oprettet i Sikkerheds- og overholdelsescenter i Office 365 eller Microsoft 365.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Mappen Gendanbare elementer for en Exchange Online-postkasse findes for at beskytte mod utilsigtede eller skadelige sletninger. Den bruges også til at gemme elementer, der bevares og tilgås af funktioner til overholdelse af angivne standarder, f.eks. ventepositioner og eDiscovery-søgninger. I nogle situationer kan organisationer dog have data, der utilsigtet bevares i mappen Gendanbare elementer, som de skal slette. En bruger kan f.eks. ubevidst sende eller videresende en mail, der indeholder følsomme oplysninger eller oplysninger, der kan have alvorlige forretningsmæssige konsekvenser. Selvom meddelelsen slettes permanent, kan den bevares på ubestemt tid, fordi der er placeret en juridisk venteposition på postkassen. Dette scenarie kaldes *dataspild*, fordi data utilsigtet er blevet *spildt* i Office 365. I disse situationer kan du slette elementer i en brugers mappe med gendanbare elementer for en Exchange Online-postkasse, selvom postkassen er sat i venteposition med en af de forskellige ventepositionsfunktioner i Office 365. Disse typer ventepositioner omfatter tvister, In-Place ventepositioner, eDiscovery-ventepositioner og opbevaringspolitikker, der er oprettet i Sikkerheds- og overholdelsescenter i Office 365 eller Microsoft 365.
 
 I denne artikel forklares det, hvordan administratorer kan slette elementer fra mappen Gendanbare elementer for skybaserede postkasser, der er i venteposition. Denne procedure omfatter deaktivering af adgang til postkassen og deaktivering af gendannelse af enkelte elementer, deaktivering af assistenten til administrerede mapper fra behandling af postkassen, midlertidig fjernelse af venteposition, sletning af elementer fra mappen Gendan elementer og derefter gendannelse af postkassen til den tidligere konfiguration. Her er processen:
   
@@ -46,7 +48,7 @@ I denne artikel forklares det, hvordan administratorer kan slette elementer fra 
 [Trin 6: Genindlæs postkassen til den forrige tilstand](#step-6-revert-the-mailbox-to-its-previous-state)
   
 > [!CAUTION]
-> De procedurer, der er beskrevet i denne artikel, medfører, at data slettes permanent (fjernes) fra en Exchange Online postkasse. Det betyder, at meddelelser, du sletter fra mappen Elementer, der kan gendannes, ikke kan gendannes og vil ikke være tilgængelige til juridisk registrering eller andre overholdelsesformål. Hvis du vil slette meddelelser fra en postkasse, der er sat i venteposition som en del af en procesførelsesholdning, In-Place venteposition, eDiscovery-venteposition eller opbevaringspolitik, der er oprettet i Microsoft Purview-overholdelsesportalen, skal du kontakte datastyringen eller juridiske afdelinger, før du fjerner ventepositionen. Din organisation kan have en politik, der definerer, om en postkasse i venteposition eller en dataspildhændelse har prioritet.
+> De procedurer, der er beskrevet i denne artikel, medfører, at data slettes permanent (fjernes) fra en Exchange Online-postkasse. Det betyder, at meddelelser, du sletter fra mappen Elementer, der kan gendannes, ikke kan gendannes og vil ikke være tilgængelige til juridisk registrering eller andre overholdelsesformål. Hvis du vil slette meddelelser fra en postkasse, der er sat i venteposition som en del af en procesførelsesholdning, In-Place venteposition, eDiscovery-venteposition eller opbevaringspolitik, der er oprettet i Microsoft Purview-overholdelsesportalen, skal du kontakte datastyringen eller juridiske afdelinger, før du fjerner ventepositionen. Din organisation kan have en politik, der definerer, om en postkasse i venteposition eller en dataspildhændelse har prioritet.
   
 ## <a name="before-you-delete-items"></a>Før du sletter elementer
 
@@ -70,7 +72,7 @@ Dette første trin er at indsamle valgte egenskaber fra målpostkassen, der påv
 
 Derudover skal du hente indstillingerne for klientadgang til postkassen, så du midlertidigt kan deaktivere dem, så ejeren (eller andre brugere) ikke kan få adgang til postkassen under denne procedure. Til sidst kan du hente den aktuelle størrelse og antallet af elementer i mappen Gendanbare elementer. Når du har slettet elementer i mappen Elementer, der kan gendannes i trin 5, skal du bruge disse oplysninger til at kontrollere, at elementerne er blevet fjernet.
   
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Sørg for at bruge et brugernavn og en adgangskode til en administratorkonto, der har fået tildelt de relevante administrationsroller i Exchange Online.
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Sørg for at bruge et brugernavn og en adgangskode til en administratorkonto, der har fået tildelt de relevante administrationsroller i Exchange Online.
 
 2. Kør følgende kommando for at få oplysninger om gendannelse af enkelt element og opbevaringsperioden for slettet element.
 
@@ -138,7 +140,7 @@ Når du har indsamlet og gemt oplysninger om postkassen, er det næste trin at f
   
 - **Deaktiver klientadgang til postkassen** , så ejeren af postkassen ikke kan få adgang til sin postkasse og foretage ændringer af postkassedataene under denne procedure.
 
-- **Forøg opbevaringsperioden for slettede elementer** til 30 dage (den maksimale værdi i Exchange Online), så elementer ikke fjernes fra mappen Gendan elementer, før du kan slette dem i trin 5.
+- **Forøg opbevaringsperioden for slettede elementer** til 30 dage (den maksimale værdi i Exchange Online), så elementer ikke fjernes fra mappen Elementer, der kan gendannes, før du kan slette dem i trin 5.
 
 - **Deaktiver gendannelse af enkelt element** , så elementer ikke bevares (i varigheden af opbevaringsperioden for slettet element), når du har slettet dem fra mappen Elementer, der kan genoprettes i trin 5.
 
@@ -178,14 +180,14 @@ Udfør følgende trin i Exchange Online PowerShell.
 
 ## <a name="step-3-remove-all-holds-from-the-mailbox"></a>Trin 3: Fjern alle ventepositioner fra postkassen
 
-Det sidste trin, før du kan slette elementer fra mappen Gendanbare elementer, er at fjerne alle ventepositioner (som du identificerede i trin 1), der er placeret i postkassen. Alle ventepositioner skal fjernes, så elementerne ikke bevares, når du har slettet dem fra mappen Elementer, der kan gendannes. De følgende afsnit indeholder oplysninger om fjernelse af forskellige typer ventepositioner i en postkasse. Se afsnittet [Flere oplysninger](#more-information) for at få tip til, hvordan du identificerer, hvilken type venteposition der kan være placeret i en postkasse. Du kan finde flere oplysninger under [Sådan identificeres den type venteposition, der er placeret i en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
+Det sidste trin, før du kan slette elementer fra mappen Gendanbare elementer, er at fjerne alle ventepositioner (som du identificerede i trin 1), der er placeret i postkassen. Alle ventepositioner skal fjernes, så elementerne ikke bevares, når du har slettet dem fra mappen Elementer, der kan gendannes. De følgende afsnit indeholder oplysninger om fjernelse af forskellige typer ventepositioner i en postkasse. Se afsnittet [Flere oplysninger](#more-information) for at få tip til, hvordan du identificerer, hvilken type venteposition der kan være placeret i en postkasse. Du kan finde flere oplysninger under [Sådan identificerer du den type venteposition, der er placeret i en Exchange Online-postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
   
 > [!CAUTION]
 > Som tidligere nævnt skal du kontakte datastyringen eller de juridiske afdelinger, før du fjerner en venteposition fra en postkasse.
   
 ### <a name="litigation-hold"></a>Procesførelse - venteposition
   
-Kør følgende kommando i Exchange Online PowerShell for at fjerne en litigation-venteposition fra postkassen.
+Kør følgende kommando i Exchange Online PowerShell for at fjerne en retslig venteposition fra postkassen.
 
 ```powershell
 Set-Mailbox <username> -LitigationHoldEnabled $false
@@ -261,11 +263,11 @@ Get-ComplianceCase $CaseHold.CaseId | FL Name
 $CaseHold.Name
 ```
 
-Når du har identificeret navnet på eDiscovery-sagen og ventepositionen, skal du gå til **eDiscovery** \> **eDiscovery-siden** i overholdelsescenter, åbne sagen og fjerne postkassen fra ventepositionen. Du kan finde flere oplysninger om identifikation af eDiscovery-ventepositioner i afsnittet "eDiscovery-ventepositioner" i [Sådan identificeres den type venteposition, der er placeret på en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds).
+Når du har identificeret navnet på eDiscovery-sagen og ventepositionen, skal du gå til **eDiscovery** \> **eDiscovery-siden** i overholdelsescenter, åbne sagen og fjerne postkassen fra ventepositionen. Du kan finde flere oplysninger om identifikation af eDiscovery-ventepositioner i afsnittet "eDiscovery-ventepositioner" i [Sådan identificeres den type venteposition, der er placeret på en Exchange Online-postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds).
   
 ## <a name="step-4-remove-the-delay-hold-from-the-mailbox"></a>Trin 4: Fjern forsinkelsesventepositionen fra postkassen
 
-Når en hvilken som helst type venteposition er fjernet fra en postkasse, angives værdien af egenskaben *DelayHoldApplied* eller *DelayReleaseHoldApplied* for postkassen til **Sand**. Dette sker, næste gang Assistent til administreret mappe behandler postkassen og registrerer, at en venteposition er blevet fjernet. Dette kaldes *en forsinkelsesventetid* og betyder, at den faktiske fjernelse af ventepositionen forsinkes i 30 dage for at forhindre, at data slettes permanent fra postkassen. (Formålet med en forsinkelsesventeposition er at give administratorer mulighed for at søge efter eller gendanne postkasseelementer, der fjernes, når en venteposition er fjernet.  Når der er sat en forsinkelse i venteposition på postkassen, anses postkassen stadig for at være i venteposition i ubegrænset varighed, som om postkassen var i procesretlig venteposition. Efter 30 dage udløber forsinkelsesventetiden, og Microsoft 365 forsøger automatisk at fjerne forsinkelsesventetiden (ved at angive egenskaben *DelayHoldApplied* eller *DelayReleaseHoldApplied* til **Falsk**), så ventepositionen fjernes. Du kan finde flere oplysninger om en forsinkelsesventeposition i afsnittet "Administration af postkasser i forsinkelsesventeposition" i [Sådan identificeres den type venteposition, der er placeret på en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#managing-mailboxes-on-delay-hold).
+Når en hvilken som helst type venteposition er fjernet fra en postkasse, angives værdien af egenskaben *DelayHoldApplied* eller *DelayReleaseHoldApplied* for postkassen til **Sand**. Dette sker, næste gang Assistent til administreret mappe behandler postkassen og registrerer, at en venteposition er blevet fjernet. Dette kaldes *en forsinkelsesventetid* og betyder, at den faktiske fjernelse af ventepositionen forsinkes i 30 dage for at forhindre, at data slettes permanent fra postkassen. (Formålet med en forsinkelsesventeposition er at give administratorer mulighed for at søge efter eller gendanne postkasseelementer, der fjernes, når en venteposition er fjernet.  Når der er sat en forsinkelse i venteposition på postkassen, anses postkassen stadig for at være i venteposition i ubegrænset varighed, som om postkassen var i procesretlig venteposition. Efter 30 dage udløber forsinkelsesventetiden, og Microsoft 365 forsøger automatisk at fjerne forsinkelsesventetiden (ved at angive egenskaben *DelayHoldApplied* eller *DelayReleaseHoldApplied* til **Falsk**), så ventepositionen fjernes. Du kan finde flere oplysninger om forsinkelse i afsnittet "Administration af postkasser i forsinkelsesventeposition" i [Sådan identificeres den type venteposition, der er placeret på en Exchange Online-postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#managing-mailboxes-on-delay-hold).
 
 Hvis værdien af egenskaben *DelayHoldApplied* eller *DelayReleaseHoldApplied* er angivet til **Sand**, skal du køre en af følgende kommandoer for at fjerne forsinkelsesventepositionen:
 
@@ -289,7 +291,7 @@ Hvis du vil søge efter elementer, der er placeret i mappen Gendanbare elementer
 
 Her er en oversigt over den proces, der skal bruges til at søge efter og slette elementer i en brugers mappe med genoprettelige elementer:
 
-1. Kør det målrettede samlingsscript, der returnerer mappe-id'erne for alle mapper i destinationsbrugerens postkasse. Scriptet opretter forbindelse til Exchange Online PowerShell og Security & Compliance PowerShell i den samme PowerShell-session. Du kan få flere oplysninger [under Kør scriptet for at få en liste over mapper for en postkasse](use-content-search-for-targeted-collections.md#step-1-run-the-script-to-get-a-list-of-folders-for-a-mailbox-or-site).
+1. Kør det målrettede samlingsscript, der returnerer mappe-id'erne for alle mapper i destinationsbrugerens postkasse. Scriptet opretter forbindelse til Exchange Online PowerShell and Security & Compliance PowerShell i den samme PowerShell-session. Du kan få flere oplysninger [under Kør scriptet for at få en liste over mapper for en postkasse](use-content-search-for-targeted-collections.md#step-1-run-the-script-to-get-a-list-of-folders-for-a-mailbox-or-site).
 
 2. Kopiér mappe-id'erne for alle undermapper i mappen Elementer, der kan gendannes. Du kan også omdirigere outputtet fra scriptet til en tekstfil.
 
@@ -330,7 +332,7 @@ Her er en oversigt over den proces, der skal bruges til at søge efter og slette
 
 ### <a name="verify-that-items-were-deleted"></a>Kontrollér, at elementerne er blevet slettet
 
-Hvis du vil kontrollere, at du har slettet elementer fra mappen Gendanbare elementer i en postkasse, skal du bruge **Get-MailboxFolderStatistics-cmdlet'en** i Exchange Online PowerShell til at kontrollere størrelsen og antallet af elementer i mappen Gendanbare elementer. Du kan sammenligne disse statistikker med dem, du indsamlede i trin 1.
+Hvis du vil kontrollere, at du har slettet elementer fra mappen Gendanbare elementer i en postkasse, skal du bruge **Get-MailboxFolderStatistics-cmdlet'en** i Exchange Online PowerShell til at kontrollere størrelsen og antallet af elementer i mappen Genoprettelige elementer. Du kan sammenligne disse statistikker med dem, du indsamlede i trin 1.
   
 Kør følgende kommando i for at hente den aktuelle størrelse og det samlede antal elementer i mapper og undermapper i mappen Gendanbare elementer i brugerens primære postkasse.
   
@@ -425,14 +427,14 @@ Udfør følgende trin (i den angivne sekvens) i Exchange Online PowerShell.
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Her er en tabel, der beskriver, hvordan du identificerer forskellige typer ventepositioner baseret på værdierne i egenskaben  *InPlaceHolds*  , når du kører **Get-Mailbox** - eller **Get-OrganizationConfig-cmdlet'erne** . Du kan finde flere detaljerede oplysninger under [Sådan identificeres den type venteposition, der er placeret i en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
+Her er en tabel, der beskriver, hvordan du identificerer forskellige typer ventepositioner baseret på værdierne i egenskaben  *InPlaceHolds*  , når du kører **Get-Mailbox** - eller **Get-OrganizationConfig-cmdlet'erne** . Du kan finde flere detaljerede oplysninger under [Sådan identificerer du den type venteposition, der er placeret i en Exchange Online-postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
 
 Som tidligere forklaret, skal du fjerne alle ventepositioner og opbevaringspolitikker fra en postkasse, før du kan slette elementer i mappen Elementer, der kan genoprettes.
   
 | Ventepositionstype | Eksempelværdi | Sådan identificerer du ventepositionen |
 |:-----|:-----|:-----|
 |Procesførelse - venteposition  <br/> | `True` <br/> |Egenskaben  *LitigationHoldEnabled*  er angivet til  `True`.  <br/> |
-|In-Place venteposition  <br/> | `c0ba3ce811b6432a8751430937152491` <br/> |Egenskaben  *InPlaceHolds*  indeholder GUID'et for den In-Place venteposition, der er placeret i postkassen. Du kan se, at dette er en In-Place venteposition, fordi GUID'et ikke starter med et præfiks.  <br/> Du kan bruge kommandoen `Get-MailboxSearch -InPlaceHoldIdentity <hold GUID> | FL` i Exchange Online PowerShell til at få oplysninger om In-Place Venteposition på postkassen.  <br/> |
+|In-Place venteposition  <br/> | `c0ba3ce811b6432a8751430937152491` <br/> |Egenskaben  *InPlaceHolds*  indeholder GUID'et for den In-Place venteposition, der er placeret i postkassen. Du kan se, at dette er en In-Place venteposition, fordi GUID'et ikke starter med et præfiks.  <br/> Du kan bruge kommandoen `Get-MailboxSearch -InPlaceHoldIdentity <hold GUID> | FL` i Exchange Online PowerShell til at få oplysninger om In-Place Venteposition i postkassen.  <br/> |
 | Opbevaringspolitikker i overholdelsesportalen, der anvendes på bestemte postkasser  <br/> | `mbxcdbbb86ce60342489bff371876e7f224` <br/> Eller  <br/>  `skp127d7cf1076947929bf136b7a2a8c36f` <br/> |Når du kører **cmdlet'en Get-Mailbox** , indeholder egenskaben  *InPlaceHolds*  også GUID'er for opbevaringspolitikker, der er anvendt på postkassen. Du kan identificere opbevaringspolitikker, fordi GUID'et starter med præfikset  `mbx` . Hvis GUID'et for opbevaringspolitikken starter med præfikset`skp`, angiver det, at opbevaringspolitikken anvendes på Skype for Business samtaler.  <br/> Hvis du vil identificere den opbevaringspolitik, der anvendes på postkassen, skal du køre følgende kommando i Security & Compliance Center PowerShell: <br/> <br/>`Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Sørg for at fjerne præfikset  `mbx` eller  `skp` , når du kører denne kommando.  <br/> |
 |Opbevaringspolitikker for hele organisationen på overholdelsesportalen  <br/> |Ingen værdi  <br/> Eller  <br/>  `-mbxe9b52bf7ab3b46a286308ecb29624696` (angiver, at postkassen er udelukket fra en politik for hele organisationen)  <br/> |Selvom egenskaben  *InPlaceHolds*  er tom, når du kører **Get-Mailbox-cmdlet'en** , kan der stadig anvendes en eller flere opbevaringspolitikker for hele organisationen på postkassen.  <br/> Du kan bekræfte dette ved at køre `Get-OrganizationConfig | FL InPlaceHolds` kommandoen i Exchange Online PowerShell for at få vist en liste over GUID'erne for opbevaringspolitikker for hele organisationen. GUID'et for opbevaringspolitikker for hele organisationen, der anvendes på Exchange postkasser starter med præfikset`mbx`, `mbxa3056bb15562480fadb46ce523ff7b02`f.eks. .  <br/> Hvis du vil identificere den opbevaringspolitik for hele organisationen, der anvendes på postkassen, skal du køre følgende kommando i Security & Compliance Center PowerShell: <br/><br/> `Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Hvis en postkasse udelades fra en opbevaringspolitik for hele organisationen, vises GUID for opbevaringspolitikken i egenskaben  *InPlaceHolds*  for brugerens postkasse, når du kører **cmdlet'en Get-Mailbox** . det identificeres af præfikset  `-mbx`, f.eks.  `-mbxe9b52bf7ab3b46a286308ecb29624696` <br/> |
 |eDiscovery-sag i overholdelsesportalen  <br/> | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d` <br/> |Egenskaben  *InPlaceHolds*  indeholder også GUID'et for alle ventepositioner, der er knyttet til en eDiscovery-sag i overholdelsesportalen, som kan være placeret i postkassen. Du kan se, at dette er en eDiscovery-sag i venteposition, fordi GUID'et starter med præfikset  `UniH` .  <br/> Du kan bruge cmdlet'en  `Get-CaseHoldPolicy` i Security & Compliance Center PowerShell til at få oplysninger om den eDiscovery-sag, som ventepositionen på postkassen er knyttet til. Du kan f.eks. køre kommandoen  `Get-CaseHoldPolicy <hold GUID without prefix> | FL Name` for at få vist navnet på sagspositionen i postkassen. Sørg for at fjerne præfikset  `UniH` , når du kører denne kommando.  <br/><br/> Kør følgende kommandoer for at identificere eDiscovery-sagen, som postkassens venteposition er knyttet til:<br/><br/>`$CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>`<br/><br/>`Get-ComplianceCase $CaseHold.CaseId | FL Name`

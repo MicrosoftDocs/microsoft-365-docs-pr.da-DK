@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 ROBOTS: NOINDEX, NOFOLLOW
 description: Med i-mærker kan du anvende funktionerne til maskinel indlæring, når du gennemser indhold i en eDiscovery-sag (Premium). Brug grupper med i-mærker til at få vist resultaterne af modeller til registrering af maskinel indlæring, f.eks. rettighedsmodellen for advokat/klient.
-ms.openlocfilehash: 9fd4a53df00bcb096a885ed311e4fb4ed365725e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1adea2404192b9e715ad021f70ba07f7e64a89d5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934615"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999734"
 ---
 # <a name="set-up-smart-tags-in-ediscovery-premium"></a>Konfigurer i-mærker i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Funktioner til maskinel indlæring i Microsoft Purview eDiscovery (Premium) kan hjælpe dig med at gøre beslutningsprocessen mere effektiv, når du gennemser sagsdokumenter i et korrektursæt. I-mærker er en metode til at overføre ML-funktionerne til de steder, hvor beslutningerne registreres: når du mærker dokumenter under gennemgangen. Når du opretter en gruppe med i-mærker, vises de beslutninger, der er resultatet af den ML-model, du har knyttet til i-mærke-gruppen, på linje med mærkerne i mærkegruppen. Dette hjælper med at se oplysningerne om ML-resultaterne på linje, når du gennemser bestemte dokumenter.
 

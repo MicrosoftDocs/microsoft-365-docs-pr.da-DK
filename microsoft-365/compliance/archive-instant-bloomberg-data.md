@@ -15,18 +15,20 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan administratorer kan konfigurere og bruge en dataconnector til at importere og arkivere data fra Chatværktøjet Instant Bloomberg til Microsoft 365.
-ms.openlocfilehash: 3729c36df27e6def709dc5d2c976885c3db5a518
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 22b581c332e8accad567bb7eb8b29e57ec981044
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938659"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998126"
 ---
 # <a name="set-up-a-connector-to-archive-instant-bloomberg-data"></a>Konfigurer en connector til arkivering af Instant Bloomberg-data
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Brug en oprindelig connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere chatdata om finansielle tjenester fra [Instant Bloomberg-samarbejdsværktøjet](https://www.bloomberg.com/professional/product/collaboration/) . Når du har konfigureret en connector, opretter den forbindelse til din organisations SFTP (Secure FTP Site) i Bloomberg én gang om dagen, konverterer indholdet af chatbeskeder til et mailformat og importerer derefter disse elementer til postkasser i Microsoft 365.
 
-Når Instant Bloomberg-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search, In-Place Archiving, Auditing, Communication compliance og Microsoft 365 retention policies på Instant Bloomberg-data. Du kan f.eks. søge i Chatbeskeder i Instant Bloomberg ved hjælp af Indholdssøgning eller knytte den postkasse, der indeholder Instant Bloomberg-dataene, til en tilsynsførende i en Microsoft Purview eDiscovery-sag (Premium). Brug af en Instant Bloomberg-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
+Når Instant Bloomberg-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search, In-Place Archiving, Auditing, Communication compliance og Microsoft 365 retention policies på Instant Bloomberg-data. Du kan f.eks. søge i Instant Bloomberg-chatbeskeder ved hjælp af Indholdssøgning eller knytte den postkasse, der indeholder Instant Bloomberg-dataene, til en tilsynsførende i en Microsoft Purview eDiscovery (Premium)-sag. Brug af en Instant Bloomberg-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-instant-bloomberg-data"></a>Oversigt over arkivering af Instant Bloomberg-data
 

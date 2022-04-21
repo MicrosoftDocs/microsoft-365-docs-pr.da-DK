@@ -20,14 +20,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få vist et eksempel på de resultater, der returneres af en indholdssøgning eller en eDiscovery-søgning (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 83779ad333d6944b65b92b2032d46b3eaa016479
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3397b82f088f9aff480b6893edbf7aa664d91dc4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934703"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999008"
 ---
 # <a name="preview-ediscovery-search-results"></a>Eksportér søgeresultater fra eDiscovery
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery-sag (Standard), kan du få vist et eksempel på de resultater, der returneres af søgningen. Visning af elementer, der returneres af søgeforespørgslen, kan hjælpe dig med at afgøre, om søgningen returnerer de resultater, du håber på, eller om du har brug for at ændre søgeforespørgslen og køre søgningen igen.
 

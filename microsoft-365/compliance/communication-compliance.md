@@ -21,14 +21,17 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 17f0cbbd62d45a3e9b2b41d1baf72224b9433d70
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: bd7ab3040b261fb7c664d92b73a069cc8ba6e3b5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973657"
+ms.locfileid: "64997312"
 ---
 # <a name="learn-about-communication-compliance"></a>Få mere at vide om kommunikationsoverholdelse
+
+> [!TIP]
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -160,7 +163,7 @@ Du kan vælge mellem følgende politikskabeloner på Microsoft Purview-overholde
 
 I dette trin ser du nærmere på de problemer, der registreres som matchende politikker for kommunikation med overholdelse af angivne standarder. Dette trin indeholder følgende handlinger, der er tilgængelige på Microsoft Purview-overholdelsesportalen:
 
-- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, registreret tid, og om en eDiscovery-sag (Premium) er tildelt, og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
+- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, den registrerede tid, og om der er tildelt en eDiscovery-sag (Premium) og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
 - **Problemadministration**: For hver besked kan du udføre undersøgelseshandlinger for at hjælpe med at løse det problem, der er registreret i meddelelsen.
 - **Dokumentgennemsyn**: Under undersøgelsen af et problem kan du bruge flere visninger af meddelelsen til at evaluere det registrerede problem korrekt. Visningerne omfatter en samtaleoversigt, kun tekst og detaljerede visninger af kommunikationssamtalen.
 - **Gennemse brugeraktivitetshistorik**: Få vist oversigten over aktiviteter i brugermeddelelser og afhjælpningshandlinger, f.eks. tidligere meddelelser og eskaleringer, for politikkampe.
@@ -176,7 +179,7 @@ Det næste trin er at løse problemer med kommunikation med overholdelse af angi
 - **Eskaler til en anden korrekturlæser**: Nogle gange har den første reviewer af et problem brug for input fra andre korrekturlæsere for at hjælpe med at løse hændelsen. Du kan nemt eskalere meddelelsesproblemer til korrekturlæsere i andre områder af organisationen som en del af løsningsprocessen.
 - **Rapportér som fejlklassificeret**: Meddelelser, der er registreret forkert som match af politikker for overholdelse af angivne standarder, vil undertiden gå videre til gennemsynsprocessen. Du kan markere disse typer beskeder som forkert klassificerede, sende feedback til Microsoft om fejlklassificeringen for at hjælpe med at forbedre globale klassificeringer og automatisk løse problemet.
 - **Fjern meddelelse i Teams (prøveversion)**: Upassende meddelelser kan blive fjernet fra visning i Microsoft Teams kanaler eller personlige chatbeskeder og gruppechatmeddelelser. Upassende meddelelser, der fjernes, erstattes af en meddelelse om, at meddelelsen er blevet fjernet for en politikovertrædelse.
-- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview-funktioner for at hjælpe dig med løsning af risici fra ende til anden. Hvis du eskalerer en sag til undersøgelse, kan du overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery-sager (Premium), skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview-funktioner for at hjælpe dig med løsning af risici fra ende til anden. Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 ### <a name="monitor"></a>Skærm
 

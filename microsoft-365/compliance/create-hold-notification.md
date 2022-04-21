@@ -15,18 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug kommunikationsværktøjet i en eDiscovery-sag (Premium) til at sende, indsamle og spore meddelelser om juridiske ventepositioner.
+description: Brug kommunikationsværktøjet i en eDiscovery-sag (Premium) til at sende, indsamle og spore meddelelser om juridisk venteposition.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f82e61b618c351f4dac05ce2559eab047f0e70a7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ca5c895ca98aafb67fd728e137f0d69dd8b98f8f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945059"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997950"
 ---
 # <a name="create-a-legal-hold-notice"></a>Opret en meddelelse om juridisk venteposition
 
-Ved hjælp af eDiscovery-kommunikation (Premium) kan organisationer administrere deres arbejdsproces omkring kommunikation med tilsynsførende. Gennem kommunikationsværktøjet kan juridiske teams systematisk sende, indsamle og spore meddelelser om juridiske ventepositioner. Den fleksible oprettelsesproces giver også teams mulighed for at tilpasse arbejdsprocessen for meddelelse om venteposition og indholdet i de meddelelser, der sendes til tilsynsførende.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Organisationer kan ved hjælp af eDiscovery (Premium)-forældremyndighedskommunikation administrere deres arbejdsproces omkring kommunikation med vogtere. Gennem kommunikationsværktøjet kan juridiske teams systematisk sende, indsamle og spore meddelelser om juridiske ventepositioner. Den fleksible oprettelsesproces giver også teams mulighed for at tilpasse arbejdsprocessen for meddelelse om venteposition og indholdet i de meddelelser, der sendes til tilsynsførende.
 
 ![Kommunikationsside.](../media/CommunicationPage.PNG)
 
@@ -46,7 +48,7 @@ Det første trin er at angive de relevante oplysninger om meddelelser om juridis
 
     - **Navn**: Dette er navnet på kommunikationen.
 
-    - **Udstedende officer**: På rullelisten vises de brugere i organisationen, der kan vælges som udstedende officer for kommunikationen. Hver kommunikation, der sendes til tilsynsførende, sendes på vegne af den valgte udstedende officer. Listen over brugere på rullelisten består af sagsmedlemmer og udstedende myndigheder i hele organisationen. Disse udstedende medarbejdere tilføjes af en eDiscovery-administrator og er tilgængelige i alle eDiscovery-sager (Premium) i din organisation. Du kan få flere oplysninger under [Administrer udstedende medarbejdere](advanced-ediscovery-issuing-officers.md).
+    - **Udstedende officer**: På rullelisten vises de brugere i organisationen, der kan vælges som udstedende officer for kommunikationen. Hver kommunikation, der sendes til tilsynsførende, sendes på vegne af den valgte udstedende officer. Listen over brugere på rullelisten består af sagsmedlemmer og udstedende myndigheder i hele organisationen. Disse udstedende medarbejdere tilføjes af en eDiscovery-administrator og er tilgængelige i alle eDiscovery(Premium)-sager i din organisation. Du kan få flere oplysninger under [Administrer udstedende medarbejdere](advanced-ediscovery-issuing-officers.md).
 
     - **Vælg kommunikationsskabelon**: På rullelisten vises skabelonerne fra kommunikationsbiblioteket på siden med indstillinger for eDiscovery (Premium). Hvis du vælger en skabelon, vises den i **Definer portalindhold** som udgangspunkt for teksten i den meddelelse, du opretter. Hvis du ikke vælger en skabelon, skal du selv oprette meddelelsen fra bunden. Du kan få flere oplysninger om kommunikationsskabeloner under [Administrer skabeloner til tilsynsførende kommunikation](advanced-ediscovery-communications-library.md).
 

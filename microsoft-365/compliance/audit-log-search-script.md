@@ -18,15 +18,17 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Brug et PowerShell-script, der kører Search-UnifiedAuditLog-cmdlet'en i Exchange Online til at søge i overvågningsloggen. Dette script er optimeret til at returnere et stort sæt overvågningsposter, hver gang du kører det. Scriptet eksporterer disse poster til en CSV-fil, som du kan få vist eller transformere ved hjælp af Power Query i Excel.
-ms.openlocfilehash: fc7f2e8626fd5b510dca08504d91dd0faadd78b6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Brug et PowerShell-script, der kører Search-UnifiedAuditLog-cmdlet'en i Exchange Online, for at søge i overvågningsloggen. Dette script er optimeret til at returnere et stort sæt overvågningsposter, hver gang du kører det. Scriptet eksporterer disse poster til en CSV-fil, som du kan få vist eller transformere ved hjælp af Power Query i Excel.
+ms.openlocfilehash: 00edbeb18bc882cf9113e80321b29d84ed43114c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943837"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000240"
 ---
 # <a name="use-a-powershell-script-to-search-the-audit-log"></a>Brug et PowerShell-script til at søge i overvågningsloggen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Sikkerhed, overholdelse af angivne standarder og overvågning er blevet en topprioritet for it-administratorer i dagens verden. Microsoft 365 har flere indbyggede funktioner, der kan hjælpe organisationer med at administrere sikkerhed, overholdelse af angivne standarder og overvågning. Unified Audit Logging kan især hjælpe dig med at undersøge sikkerhedshændelser og problemer med overholdelse af angivne standarder. Du kan hente overvågningslogge ved hjælp af følgende metoder:
 
@@ -50,21 +52,21 @@ Når der er situationer, hvor du skal hente overvågningsdata manuelt for en bes
 
   Værdien for `True` egenskaben **UnifiedAuditLogIngestionEnabled** angiver, at søgning i overvågningslog er slået til.
 
-- Du skal have tildelt rollen View-Only Overvågningslogge eller Overvågningslogfiler i Exchange Online for at kunne køre scriptet korrekt. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden Tilladelser i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Du kan finde flere oplysninger i afsnittet "Krav til søgning i overvågningsloggen" i [Søg i overvågningsloggen i Overholdelsescenter](search-the-audit-log-in-security-and-compliance.md#before-you-search-the-audit-log).
+- Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogfiler i Exchange Online for at kunne køre scriptet korrekt. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden Tilladelser i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Du kan finde flere oplysninger i afsnittet "Krav til søgning i overvågningsloggen" i [Søg i overvågningsloggen i Overholdelsescenter](search-the-audit-log-in-security-and-compliance.md#before-you-search-the-audit-log).
 
 - Det kan tage lang tid, før scriptet er fuldført. Hvor lang tid det tager at køre, afhænger af datointervallet og størrelsen af det interval, du konfigurerer scriptet til at hente overvågningsposter for. Større datointervaller og mindre intervaller vil resultere i en lang kørselstid. Se tabellen i trin 2 for at få flere oplysninger om datointervallet og intervallerne.
 
 - Eksempelscriptet, der er angivet i denne artikel, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts forfattere eller andre, der er involveret i oprettelse, produktion eller levering af scriptet, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscriptet eller dokumentationen,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-## <a name="step-1-connect-to-exchange-online-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell
+## <a name="step-1-connect-to-exchange-online-powershell"></a>Trin 1: Opret forbindelse til Exchange Online PowerShell
 
-Det første trin er at oprette forbindelse til Exchange Online PowerShell. Du kan oprette forbindelse ved hjælp af moderne godkendelse eller med multifaktorgodkendelse (MFA). Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Det første trin er at oprette forbindelse til Exchange Online PowerShell. Du kan oprette forbindelse ved hjælp af moderne godkendelse eller med multifaktorgodkendelse (MFA). Du kan finde en trinvis vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-modify-and-run-the-script-to-retrieve-audit-records"></a>Trin 2: Rediger og kør scriptet for at hente overvågningsposter
 
 Når du har oprettet forbindelse til Exchange Online PowerShell, er næste trin at oprette, redigere og køre scriptet for at hente overvågningsdataene. De første syv linjer i søgescriptet til overvågningsloggen indeholder følgende variabler, som du kan ændre for at konfigurere din søgning. Se tabellen i trin 2 for at få en beskrivelse af disse variabler.
 
-1. Gem følgende tekst i et Windows PowerShell script ved hjælp af et filnavnssuffiks af .ps1. F.eks. SearchAuditLog.ps1.
+1. Gem følgende tekst i et Windows PowerShell-script ved hjælp af et filnavnssuffiks af .ps1. F.eks. SearchAuditLog.ps1.
 
    ```powershell
    #Modify the values for the following variables to configure the audit log search.

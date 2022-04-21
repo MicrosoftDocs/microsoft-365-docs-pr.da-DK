@@ -20,14 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du konfigurerer overvågning (Premium), så du kan udføre tekniske undersøgelser, når brugerkonti kompromitteres, eller undersøge andre sikkerhedsrelaterede hændelser.
-ms.openlocfilehash: 9e758ce6a830569b007ee024e17abdddbce01f13
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6f4f9953c88b1d994d4f033629cc89a6529fb9de
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945841"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998832"
 ---
 # <a name="set-up-microsoft-purview-audit-premium"></a>Konfigurer Microsoft Purview Audit (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis din organisation har et abonnement og en slutbrugerlicens, der understøtter Overvågning (Premium), skal du udføre følgende trin for at konfigurere og bruge de yderligere funktioner i Overvågning (Premium).
 
@@ -35,13 +37,13 @@ Hvis din organisation har et abonnement og en slutbrugerlicens, der understøtte
 
 ## <a name="step-1-set-up-audit-premium-for-users"></a>Trin 1: Konfigurer overvågning (Premium) for brugere
 
-Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hændelser, f.eks. MailItemsAccessed og Send, kræver en passende E5-licens, der er tildelt til brugerne. Derudover skal app-/tjenesteplanen Avanceret overvågning være aktiveret for disse brugere. Udfør følgende trin for hver bruger for at bekræfte, at appen Avanceret overvågning er tildelt til brugere:
+Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hændelser som MailItemsAccessed og Send, kræver en passende E5-licens, der er tildelt til brugerne. Derudover skal app-/tjenesteplanen Avanceret overvågning være aktiveret for disse brugere. Udfør følgende trin for hver bruger for at bekræfte, at appen Avanceret overvågning er tildelt til brugere:
 
 1. I Microsoft 365 Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**BrugereAktive**</a> >  brugere og vælge en bruger.
 
 2. Klik på **Licenser og apps** på siden med brugeregenskaber.
 
-3. I afsnittet **Licenser** skal du bekræfte, at brugeren er tildelt en E5-licens eller er tildelt en passende licens til tilføjelsesprogrammet. Du kan se en liste over licenser, der understøtter Overvågning (Premium), under [Overvågningskrav (Premium).](auditing-solutions-overview.md#audit-premium-1)
+3. I afsnittet **Licenser** skal du bekræfte, at brugeren er tildelt en E5-licens eller er tildelt en passende licens til tilføjelsesprogrammet. Du kan se en liste over licenser, der understøtter Audit (Premium), under [Overvågning (Premium)-licenskrav](auditing-solutions-overview.md#audit-premium-1).
 
 4. Udvid afsnittet **Apps**, og kontrollér, at afkrydsningsfeltet **Microsoft 365 Avanceret overvågning** er markeret.
 
@@ -49,7 +51,7 @@ Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hæ
 
    Logføring af overvågningsposter for MailItemsAccessed og Send starter inden for 24 timer. Du skal udføre trin 3 for at starte logføring af to andre overvågningshændelser (Premium): SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint.
 
-Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, overvåges alle nye overvågningshændelser (Premium), der udgives af Microsoft, heller ikke automatisk på disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Skift eller gendan postkassehandlinger, der logføres som standard" under [Administrer overvågning af postkasse](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
+Hvis du har tilpasset de postkassehandlinger, der er logget på brugerpostkasser eller delte postkasser, overvåges alle nye Overvågningshændelser (Premium), der udgives af Microsoft, heller ikke automatisk på disse postkasser. Du kan finde oplysninger om, hvordan du ændrer de postkassehandlinger, der overvåges for hver logontype, i afsnittet "Skift eller gendan postkassehandlinger, der logføres som standard" under [Administrer overvågning af postkasse](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
 
 ## <a name="step-2-enable-audit-premium-events"></a>Trin 2: Aktivér overvågningshændelser (Premium)
 
@@ -73,4 +75,4 @@ Ud over standardpolitikken, der bevarer Exchange, SharePoint og Azure AD-overvå
 
 ## <a name="step-4-search-for-audit-premium-events"></a>Trin 4: Søg efter overvågningshændelser (Premium)
 
-Nu, hvor du har konfigureret Overvågning (Premium) for din organisation, kan du søge efter vigtige overvågningshændelser (Premium) og andre aktiviteter, når du udfører kriminaltekniske undersøgelser. Når du har fuldført trin 1 og trin 2, kan du søge i overvågningsloggen efter overvågningshændelser (Premium) og andre aktiviteter under retsmedicinske undersøgelser af kompromitterede konti og andre typer sikkerheds- eller overholdelsesundersøgelser. Du kan få flere oplysninger om, hvordan du foretager en kriminalteknisk undersøgelse af kompromitterede brugerkonti ved hjælp af hændelsen MailItemsAccessed Audit (Premium), under [Brug overvågning (Premium) til at undersøge kompromitterede konti](mailitemsaccessed-forensics-investigations.md).
+Nu, hvor du har konfigureret Overvågning (Premium) for din organisation, kan du søge efter vigtige overvågningshændelser (Premium) og andre aktiviteter, når du udfører kriminaltekniske undersøgelser. Når du har fuldført trin 1 og trin 2, kan du søge i overvågningsloggen efter overvågningshændelser (Premium) og andre aktiviteter under retsmedicinske undersøgelser af kompromitterede konti og andre typer sikkerheds- eller overholdelsesundersøgelser. Du kan få flere oplysninger om udførelse af en kriminalteknisk undersøgelse af kompromitterede brugerkonti ved hjælp af Hændelsen MailItemsAccessed Audit (Premium) under [Brug overvågning (Premium) til at undersøge kompromitterede konti](mailitemsaccessed-forensics-investigations.md).

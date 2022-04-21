@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en connector til arkivering af Skype for Business Server data i Microsoft 365
+title: Konfigurer en connector til arkivering af Skype for Business Server-data i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,33 +11,35 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4-Skype for Business Server DataParser-connector til at importere og arkivere Skype for Business Server data i Microsoft 365.
-ms.openlocfilehash: 7b004068e255d5972a978d4e9650e9207a2da117
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4-Skype for Business Server DataParser-connector til at importere og arkivere Skype for Business Server-data i Microsoft 365.
+ms.openlocfilehash: 8a7c8e7b2d59aeabc2f21207d5b3ce2eb3d524e9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937691"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997532"
 ---
-# <a name="set-up-a-connector-to-archive-skype-for-business-server-data"></a>Konfigurer en connector til arkivering af Skype for Business Server data
+# <a name="set-up-a-connector-to-archive-skype-for-business-server-data"></a>Konfigurer en connector til arkivering af Skype for Business Server-data
 
-Brug [Skype Server DataParser](https://www.17a-4.com/skype-server-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra en Skype for Business Server til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Skype for Business connector, der er konfigureret til at hente elementer fra en datakilde fra en tredjepart og importere disse elementer til Microsoft 365. Connectoren Skype for Business Server DataParser konverterer Skype for Business Server data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når Skype for Business Server data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Skype for Business Server connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Brug [Skype Server DataParser](https://www.17a-4.com/skype-server-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra en Skype for Business Server til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Skype for Business connector, der er konfigureret til at hente elementer fra en datakilde fra en tredjepart og importere disse elementer til Microsoft 365. Connectoren Skype for Business Server DataParser konverterer Skype for Business Server-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-## <a name="overview-of-archiving-skype-for-business-server-data"></a>Oversigt over arkivering af Skype for Business Server data
+Når Skype for Business Server-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Skype for Business Server-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
-I følgende oversigt forklares processen med at bruge en dataconnector til at arkivere Skype for Business Server data i Microsoft 365.
+## <a name="overview-of-archiving-skype-for-business-server-data"></a>Oversigt over arkivering af Skype for Business Server-data
 
-![Arkivering af arbejdsproces for Skype for Business Server data fra 17a-4.](../media/SkypeServerDataParserConnectorWorkflow.png)
+I følgende oversigt forklares processen med at bruge en dataconnector til at arkivere Skype for Business Server-data i Microsoft 365.
+
+![Arkivering af arbejdsproces for Skype for Business Server-data fra 17a-4.](../media/SkypeServerDataParserConnectorWorkflow.png)
 
 1. Din organisation arbejder sammen med 17a-4 om at konfigurere Skype for Business Server DataParser.
 
-2. Med jævne mellemrum indsamles Skype for Business Server elementer af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
+2. Med jævne mellemrum indsamles Skype for Business Server-elementer af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
 3. Den Skype for Business Server DataParser-connector, du opretter på Microsoft Purview-overholdelsesportalen, opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Der oprettes en undermappe i mappen Indbakke med navnet **Skype for Business Server DataParser** i brugerpostkasserne, og de Skype for Business Server elementer importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hvert Skype for Business Server element indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
+4. Der oprettes en undermappe i mappen Indbakke med navnet **Skype for Business Server DataParser** i brugerpostkasserne, og de Skype for Business Server-elementer importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hvert Skype for Business Server-element indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
 
 ## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 
@@ -45,15 +47,15 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Den bruger, der opretter Skype for Business Server DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-skype-for-business-server-dataparser-connector"></a>Trin 1: Konfigurer en Skype for Business Server DataParser-connector
 
-Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til Skype for Business Server data.
+Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til Skype for Business Server-data.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **Dataconnectors** >  **Skype for Business Server DataParser**.
 
-2. Klik på **Tilføj connector** på siden **Skype for Business Server DataParser-produktbeskrivelse**.
+2. Klik på **Tilføj connector** på siden med produktbeskrivelsen **Skype for Business Server DataParser**.
 
 3. Klik på **Acceptér** på siden **Vilkår for tjeneste**.
 
@@ -67,9 +69,9 @@ Arbejd med 17a-4-understøttelse for at konfigurere Skype for Business Server Da
 
 ## <a name="step-3-map-users"></a>Trin 3: Tilknyt brugere
 
-Connectoren Skype for Business Server DataParser knytter automatisk brugerne til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
+Connectoren Skype for Business Server DataParser knytter automatisk brugere til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
 
-## <a name="step-4-monitor-the-skype-for-business-server-dataparser-connector"></a>Trin 4: Overvåg Skype for Business Server DataParser-connectoren
+## <a name="step-4-monitor-the-skype-for-business-server-dataparser-connector"></a>Trin 4: Overvåg connectoren Skype for Business Server DataParser
 
 Når du har oprettet en Skype for Business Server DataParser-connector, kan du få vist connectorstatussen på overholdelsesportalen.
 

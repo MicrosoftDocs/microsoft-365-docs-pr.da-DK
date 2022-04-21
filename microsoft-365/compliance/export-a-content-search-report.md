@@ -22,14 +22,16 @@ search.appverid:
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
 description: I stedet for at eksportere de faktiske resultater af en indholdssøgning på Microsoft Purview-overholdelsesportalen kan du eksportere en rapport med søgeresultater. Rapporten indeholder en oversigt over søgeresultaterne og et dokument med detaljerede oplysninger om hvert element, der skal eksporteres.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6ac46944ab454271358168c95a7df94d606e0ec5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f8fc881ed57831aadb035d0ec1168b4f334ec085
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944827"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001120"
 ---
 # <a name="export-a-content-search-report"></a>Eksportér en indholdssøgningsrapport
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I stedet for at eksportere det fulde sæt søgeresultater fra en indholdssøgning på Microsoft Purview-overholdelsesportalen (eller fra en søgning, der er knyttet til en Microsoft Purview eDiscovery(Standard)-sag), kan du eksportere de samme rapporter, der genereres, når du eksporterer de faktiske søgeresultater.
   
@@ -47,10 +49,10 @@ Når du eksporterer en rapport, downloades rapportfilerne til en mappe på din l
   
   - Microsoft .NET Framework 4.7 eller nyere
   
-- Du skal bruge Microsoft Edge <sup>1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke <sup>længere2</sup>.
+- Du skal bruge Microsoft <sup>Edge1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke <sup>længere2</sup>.
   
   > [!NOTE]
-  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er understøttelse af ClickOnce ikke længere aktiveret som standard. Du kan finde oplysninger om, hvordan du aktiverer understøttelse af ClickOnce i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
+  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er ClickOnce-understøttelse ikke længere aktiveret som standard. Du kan finde en vejledning i, hvordan du aktiverer ClickOnce-understøttelse i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce-programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
   > 
   > <sup>2</sup> Fra august 2021 understøtter Microsoft 365 apps og tjenester ikke længere Internet Explorer 11 (IE11), og brugerne kan have en forringet oplevelse eller ikke kunne oprette forbindelse til disse apps og tjenester. Disse apps og tjenester udfases i løbet af de kommende uger og måneder for at sikre en problemfri ophør af support. Hver app og tjeneste udfases efter uafhængige tidsplaner. Du kan få flere oplysninger i dette [blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 

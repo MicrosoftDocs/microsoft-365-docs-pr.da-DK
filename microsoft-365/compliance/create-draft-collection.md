@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: En kladde til en samling er en eDiscovery-søgning af datakilder med frihedsberøvelse og ingen frihedsberøvelse i en eDiscovery-sag (Premium), der returnerer et søgeestimat, der svarer til søgeforespørgslen i samlingen. Du kan gennemse søgestatistik, få vist et eksempel på et udsnit af elementer og revidere og køre samlingen igen, før du sender resultaterne til et korrektursæt.
-ms.openlocfilehash: 248e95f928c818dfb4eb5b864c2d34304893281c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2178e836809a24edec6d3d184ef8b699bec87bb5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934872"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997062"
 ---
 # <a name="create-a-draft-collection-in-ediscovery-premium"></a>Opret en kladdesamling i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsynsførende for sagen, er du klar til at identificere og finde et sæt dokumenter, der er relevante. Det gør du ved hjælp af værktøjet Samlinger til at søge efter relevant indhold fra datakilder. Det gør du ved at oprette en samling, der søger i angivne datakilder efter indhold, der opfylder dine søgekriterier. Du har mulighed for at oprette en *kladdesamling*, som er et estimat over elementerne, eller du kan oprette en samling, der automatisk føjer elementerne til et korrektursæt. Når du opretter en kladdesamling, kan du få vist oplysninger om de anslåede resultater, der matcher søgeforespørgslen, f.eks. det samlede antal og den samlede størrelse af fundne elementer, de forskellige datakilder, hvor de blev fundet, og statistikker om søgeforespørgslen. Du kan også få vist et eksempel på elementer, der blev returneret af samlingen. Ved hjælp af disse statistikker kan du ændre søgeforespørgslen og køre kladdesamlingen igen for at indsnævre dine resultater. Når du er tilfreds med resultaterne af samlingen, kan du bekræfte samlingen til et korrektursæt. Når du bekræfter en kladdesamling, føjes de elementer, der returneres af samlingen, til et gennemsynssæt til gennemsyn, analyse og eksport.
 
@@ -39,7 +41,7 @@ Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsy
 
 ## <a name="create-a-draft-collection"></a>Opret en kladdesamling
 
-1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger**.
+1. Åbn eDiscovery (Premium)-sagen på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger** .
 
 2. På siden **Samlinger** skal du vælge **Ny** **samlingStandardsamling** > .
 

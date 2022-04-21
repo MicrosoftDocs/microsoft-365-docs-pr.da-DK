@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Slack DataParser-connector til at importere og arkivere Slack-data i Microsoft 365.
-ms.openlocfilehash: 60aa2d532a561d2c08357de6437a55583fb5b4c3
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9157db405f37b53b8637c466e9d6d8050c5a325b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937716"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996630"
 ---
 # <a name="set-up-a-connector-to-archive-slack-data"></a>Konfigurer en connector til arkivering af Slack-data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug [DataParser fra 17a-4 LLC](https://www.17a-4.com/slack-dataparser/) til at importere og arkivere data fra Slack-platformen til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Slack-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Connectoren Slack DataParser konverterer Slack-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
@@ -45,7 +47,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Den bruger, der opretter Slack DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-slack-dataparser-connector"></a>Trin 1: Konfigurer en Slack DataParser-connector
 

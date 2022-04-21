@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
 description: Få mere at vide om, hvordan du automatiserer opgaver til indholdssøgning, f.eks. oprettelse af søgninger og kørsel af rapporter ved hjælp af Security & Compliance Center PowerShell.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 06ea7655348851cbd457b527a3ee36f72d78e562
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c6e84641fef819503349803cdd54d5aaa860fc50
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936857"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000218"
 ---
 # <a name="create-report-on-and-delete-multiple-content-searches"></a>Opret, rapportér om og slet flere indholdssøgninger
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  Hurtig oprettelse og rapportering af registreringssøgninger er ofte et vigtigt skridt i eDiscovery og undersøgelser, når du forsøger at få mere at vide om de underliggende data og dine søgningers rigdom og kvalitet. Som en hjælp til at gøre dette tilbyder PowerShell i Security & Compliance Center et sæt cmdlet'er, der kan automatisere tidskrævende opgaver til indholdssøgning. Disse scripts giver en hurtig og nem måde at oprette en række søgninger på og derefter køre rapporter over de anslåede søgeresultater, der kan hjælpe dig med at bestemme mængden af pågældende data. Du kan også bruge scripts til at oprette forskellige versioner af søgninger for at sammenligne de resultater, som hver enkelt producerer. Disse scripts kan hjælpe dig med hurtigt og effektivt at identificere og slagte dine data.
 
@@ -44,7 +46,7 @@ ms.locfileid: "64936857"
 
 ## <a name="step-1-create-a-csv-file-that-contains-information-about-the-searches-you-want-to-run"></a>Trin 1: Opret en CSV-fil, der indeholder oplysninger om de søgninger, du vil køre
 
-Den fil med kommaseparerede værdier (CSV), som du opretter i dette trin, indeholder en række for hver bruger, der vil søge. Du kan søge i brugerens Exchange Online postkasse (herunder arkivpostkassen, hvis den er aktiveret) og vedkommendes OneDrive for Business websted. Du kan også søge i postkassen eller på OneDrive for Business websted. Du kan også søge på et hvilket som helst websted i din SharePoint Online-organisation. Det script, du kører i trin 3, opretter en separat søgning for hver række i CSV-filen.
+Den fil med kommaseparerede værdier (CSV), som du opretter i dette trin, indeholder en række for hver bruger, der vil søge. Du kan søge i brugerens Exchange Online-postkasse (herunder arkivpostkassen, hvis den er aktiveret) og vedkommendes OneDrive for Business websted. Du kan også søge i postkassen eller på OneDrive for Business websted. Du kan også søge på et hvilket som helst websted i din SharePoint Online-organisation. Det script, du kører i trin 3, opretter en separat søgning for hver række i CSV-filen.
 
 1. Kopiér og indsæt følgende tekst i en .txt fil ved hjælp af Notesblok. Gem filen i en mappe på din lokale computer. Du skal også gemme de andre scripts i denne mappe.
 
@@ -75,9 +77,9 @@ Den fil med kommaseparerede værdier (CSV), som du opretter i dette trin, indeho
 
 3. Gem Excel-filen som en CSV-fil i en mappe på din lokale computer. Det script, du opretter i trin 3, bruger oplysningerne i denne CSV-fil til at oprette søgninger.
 
-## <a name="step-2-connect-to-security--compliance-center-powershell"></a>Trin 2: Forbind til Security & Compliance Center PowerShell
+## <a name="step-2-connect-to-security--compliance-center-powershell"></a>Trin 2: Opret forbindelse til Security & Compliance Center PowerShell
 
-Det næste trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det næste trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>Trin 3: Kør scriptet for at oprette og starte søgninger
 
@@ -89,7 +91,7 @@ Scriptet i dette trin opretter en separat indholdssøgning for hver række i den
 
 Sådan kører du scriptet:
 
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `CreateSearches.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte de andre filer.
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `CreateSearches.ps1`. Gem filen i den samme mappe, hvor du gemte de andre filer.
 
    ```Powershell
    # Get the Search Group ID and the location of the CSV input file
@@ -166,7 +168,7 @@ Sådan kører du scriptet:
    }
    ```
 
-2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet, f.eks.:
+2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet. f.eks.:
 
    ```Powershell
    .\CreateSearches.ps1
@@ -186,7 +188,7 @@ Sådan kører du scriptet:
 
 Når du har oprettet søgninger, er det næste trin at køre et script, der viser en enkel rapport over antallet af søgeresultat for hver søgning, der blev oprettet i trin 3. Rapporten indeholder også størrelsen af resultaterne for hver søgning og det samlede antal forekomster og den samlede størrelse af alle søgninger. Når du kører rapporteringsscriptet, bliver du bedt om at angive søgegruppe-id'et og et CSV-filnavn, hvis du vil gemme rapporten i en CSV-fil.
 
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `SearchReport.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte de andre filer.
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `SearchReport.ps1`. Gem filen i den samme mappe, hvor du gemte de andre filer.
 
    ```Powershell
    $searchGroup = Read-Host 'Search Group ID'
@@ -241,7 +243,7 @@ Når du har oprettet søgninger, er det næste trin at køre et script, der vise
    }
    ```
 
-2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet, f.eks.:
+2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet. f.eks.:
 
    ```Powershell
    .\SearchReport.ps1
@@ -264,7 +266,7 @@ Når du har oprettet søgninger, er det næste trin at køre et script, der vise
 
 Da du muligvis opretter mange søgninger, gør dette sidste script det nemt hurtigt at slette de søgninger, du oprettede i trin 3. På samme måde som med de andre scripts bliver du også bedt om at angive søgegruppe-id'et. Alle søgninger med søgegruppe-id'et i søgenavnet slettes, når du kører dette script.
 
-1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `DeleteSearches.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte de andre filer.
+1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `DeleteSearches.ps1`. Gem filen i den samme mappe, hvor du gemte de andre filer.
 
    ```Powershell
    # Delete all searches in a search group
@@ -280,7 +282,7 @@ Da du muligvis opretter mange søgninger, gør dette sidste script det nemt hurt
    }
    ```
 
-2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet, f.eks.:
+2. I Windows PowerShell skal du gå til den mappe, hvor du gemte scriptet i det forrige trin, og derefter køre scriptet. f.eks.:
 
    ```Powershell
    .\DeleteSearches.ps1

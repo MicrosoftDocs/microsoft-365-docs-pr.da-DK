@@ -1,5 +1,5 @@
 ---
-title: Indhold, der er gemt i Exchange Online postkasser
+title: Indhold, der er gemt i Exchange onlinepostkasser
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,17 +15,19 @@ search.appverid:
 - MED150
 - MET150
 ms.assetid: ''
-description: Indhold, der produceres af skybaserede apps i Microsoft 365, gemmes eller knyttes til en brugers Exchange Online postkasse. Der kan søges i dette indhold ved hjælp af Microsoft eDiscovery-værktøjer.
-ms.openlocfilehash: b37295783883d689acc34dbff88e5a94186eb4a6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Indhold, der produceres af skybaserede apps i Microsoft 365, gemmes eller knyttes til en brugers Exchange Online-postkasse. Der kan søges i dette indhold ved hjælp af Microsoft eDiscovery-værktøjer.
+ms.openlocfilehash: b5e8434f5345cda8ef4f637b3dff2d3cf704f748
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947841"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000790"
 ---
-# <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>Indhold, der er gemt i Exchange Online postkasser til eDiscovery
+# <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>Indhold, der er gemt i Exchange onlinepostkasser til eDiscovery
 
-En postkasse i Exchange Online bruges primært til at gemme mailrelaterede elementer, f.eks. meddelelser, kalenderelementer, opgaver og noter. Men det ændrer sig, efterhånden som flere cloudbaserede apps også gemmer deres data i en brugers postkasse. En fordel ved at gemme data i en postkasse er, at du kan bruge søgeværktøjerne i indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) til at søge efter, få vist og eksportere dataene fra disse skybaserede apps. Dataene fra nogle af disse apps gemmes i skjulte mapper, der er placeret i et undertræ for en ikke-interpersonel meddelelse (ikke-IPM) i postkassen. Data fra andre cloudbaserede apps gemmes muligvis ikke _i_ postkassen, men de er _knyttet til_ postkassen og returneres i søgninger (hvis disse data stemmer overens med søgeforespørgslen). Uanset om skybaserede data er gemt i eller tilknyttet en brugerpostkasse, er dataene normalt ikke synlige i en mailklient, når en bruger åbner sin postkasse.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+En postkasse i Exchange Online bruges primært til at gemme mailrelaterede elementer, f.eks. meddelelser, kalenderelementer, opgaver og noter. Men det ændrer sig, efterhånden som flere cloudbaserede apps også gemmer deres data i en brugers postkasse. En fordel ved at gemme data i en postkasse er, at du kan bruge søgeværktøjerne i indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) til at finde, få vist og eksportere dataene fra disse skybaserede apps. Dataene fra nogle af disse apps gemmes i skjulte mapper, der er placeret i et undertræ for en ikke-interpersonel meddelelse (ikke-IPM) i postkassen. Data fra andre cloudbaserede apps gemmes muligvis ikke _i_ postkassen, men de er _knyttet til_ postkassen og returneres i søgninger (hvis disse data stemmer overens med søgeforespørgslen). Uanset om skybaserede data er gemt i eller tilknyttet en brugerpostkasse, er dataene normalt ikke synlige i en mailklient, når en bruger åbner sin postkasse.
 
 I følgende tabel vises de apps, der enten gemmer eller knytter data til en cloudbaseret postkasse. I tabellen beskrives også den type indhold, som hver app producerer.
 
@@ -49,4 +51,4 @@ I følgende tabel vises de apps, der enten gemmer eller knytter data til en clou
 |
 
 > [!NOTE]
-> <sup>*</sup>Hvis en venteposition på nuværende tidspunkt er placeret i en postkasse (ved hjælp af ventepositioner i eDiscovery-sager (Standard) eller eDiscovery-sager (Premium), bevares indholdet fra denne app ikke af ventepositionen.
+> <sup>*</sup> Hvis en venteposition på nuværende tidspunkt er placeret i en postkasse (ved hjælp af ventepositioner i sager med eDiscovery (Standard) eller eDiscovery (Premium), bevares indhold fra denne app ikke af ventepositionen.

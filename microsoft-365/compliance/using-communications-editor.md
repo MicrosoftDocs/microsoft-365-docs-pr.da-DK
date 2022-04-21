@@ -15,30 +15,32 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug Kommunikationseditor til at ændre tekst- og fletfeltvariabler, når du formaterer dit indhold.
+description: Brug kommunikationseditoren til at ændre variabler for tekst og fletfelter, når du formaterer dit indhold.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: aceebf9f8a19448c05c137f668c2bca5db2d99bd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6377da0dbb89963fdf25610c638e6f5ce4ccfd70
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587729"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999646"
 ---
 # <a name="use-the-communications-editor"></a>Brug kommunikationseditoren
 
-Når du definerer indholdet af dit portalindhold, meddelelser om retslig venteposition og relaterede påmindelser/eskaleringer, kan du bruge Kommunikationseditor til at formatere og tilpasse dit indhold dynamisk.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Når du definerer indholdet af portalindholdet, meddelelser om juridisk venteposition og relaterede påmindelser/eskaleringer, kan du bruge Kommunikationseditor til at formatere og tilpasse dit indhold dynamisk.
 
 ## <a name="rich-text-editor"></a>RTF-editor
 
-Kommunikationseditoren giver brugerne mulighed for at tilpasse teksten ved hjælp af redigeringsindstillingerne. Brugere kan f.eks ændre skrifttypetyper, oprette opstillinger med punkttegn, fremhæve indhold og meget mere.
+Kommunikationseditoren gør det muligt for brugeren at tilpasse teksten ved hjælp af editorindstillingerne. Brugerne kan f.eks. ændre skrifttypetyper, oprette punktopstilling, fremhæve indhold og meget mere.
 
-## <a name="merge-field-variables"></a>Variabler for fletfelt
+## <a name="merge-field-variables"></a>Flet feltvariabler
 
-Du kan bruge variabler til mailfletning fra Kommunikationseditor til at integrere brugerdefinerede attributter for fletning i en kommunikations brødtekst. Når det sendes til hjælperen, udfyldes fletfeltet med det tilsvarende felt. Når f.eks. sendes til vagtleder John Smith, oversættes fletfeltet [navn på fletningsnavn] med det tilsvarende navn.
+Du kan bruge variabler til mailfletning fra Kommunikationseditor til at integrere brugerdefinerede tilsynsførende attributter i brødteksten i en kommunikation. Når fletfeltet sendes til tilsynsførende, udfyldes det med det tilsvarende felt. Når fletfeltet [Navn på tilsynsførende] f.eks. sendes til tilsynsførende John Smith, oversættes det med det tilsvarende navn.
 
-Du kan bruge felter til mailfletning ved at vælge **ikonerne for** Fletfelt øverst i RTF-editorkontrolelementet. Pladsholderen tilføjes baseret på placeringen af brugernes markør.
+Du kan bruge felter til mailfletning ved at vælge ikonerne **fletfelter** øverst i RTF-editorkontrolelementet. Pladsholderen tilføjes baseret på placeringen af brugernes markør.
 
-### <a name="list-of-merge-field-variables"></a>Liste over variabler for fletfelter
+### <a name="list-of-merge-field-variables"></a>Liste over fletfeltvariabler
 
 <br>
 
@@ -46,9 +48,9 @@ Du kan bruge felter til mailfletning ved at vælge **ikonerne for** Fletfelt øv
 
 |Feltnavn|Feltoplysninger|
 |---|---|
-|Visningsnavn|Den andens for- og efternavn.|
-|Bekræftelseslink|Et tilpasset link til at registrere hver af de ydsmandsforberedendes bekræftelse.|
-|Portallink|Et tilpasset link til complianceianens overholdelsesportal.|
-|Udstedelsesofficer|Mailadressen på den angivne udstederofficer.|
+|Vist navn|Vogterens for- og efternavn.|
+|Bekræftelseslink|Et tilpasset link til registrering af hver tilsynsførendes bekræftelse.|
+|Portallink|Et tilpasset link til vogterens overholdelsesportal.|
+|Udstedende myndighed|Mailadressen på den angivne udstedende officer.|
 |Udstedelsesdato|Den dato, hvor meddelelsen blev udstedt (UTC).|
 |

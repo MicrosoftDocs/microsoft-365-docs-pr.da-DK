@@ -15,14 +15,17 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: ca5719710e30e2f5880f73b75a3fe0233f242060
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 69c24b9d26fb16936064d9099f0866ce60d16d2c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970797"
+ms.locfileid: "64997026"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
+
+> [!TIP]
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -142,7 +145,7 @@ Når sager er undersøgt, kan korrekturlæsere hurtigt løse sagen eller samarbe
 
 I de mere alvorlige situationer kan det være nødvendigt at dele oplysninger om sager om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med løsning af risici fra ende til anden.
 
-- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery-sager (Premium), skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 - **Office 365 integration af API'er til administration (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (Security Information Information and Event Management) via API'erne til administration af Office 365. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til administration af Office 365, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
 
 > [!NOTE]

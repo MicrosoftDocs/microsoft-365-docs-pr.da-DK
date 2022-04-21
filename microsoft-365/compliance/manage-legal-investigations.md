@@ -17,14 +17,16 @@ ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
 description: Brug eDiscovery-sager på Microsoft Purview-overholdelsesportalen til at administrere organisationens juridiske undersøgelse.
-ms.openlocfilehash: d218c7d624da837e685929d95e515687f54897ef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28dead35cce2102cfd826fa1505cdd620e4a1b25
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64931986"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999778"
 ---
 # <a name="manage-legal-investigations-in-microsoft-365"></a>Administrer juridiske undersøgelser i Microsoft 365
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Organisationer har mange grunde til at reagere på en sag, der involverer bestemte direktører eller andre medarbejdere i organisationen. Dette kan omfatte hurtigt at finde og gemme yderligere undersøgelsesspecifikke oplysninger i mail, dokumenter, chatsamtaler og andre indholdsplaceringer, der bruges af personer i deres daglige arbejdsopgaver. Du kan udføre disse og mange andre lignende aktiviteter ved hjælp af eDiscovery-sagsværktøjerne i Security and Compliance Center.
   
@@ -52,7 +54,7 @@ Ligesom i det forrige afsnit, der viste scripts til indholdssøgningsscenarier, 
   
 ## <a name="manage-legal-investigations-with-the-ediscovery-premium-solution-in-microsoft-365"></a>Administrer juridiske undersøgelser med eDiscovery-løsningen (Premium) i Microsoft 365
 
-Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365 bygger på de eksisterende eDiscovery- og analysefunktioner i Office 365. Denne nye løsning, der kaldes *eDiscovery (Premium)*, indeholder en komplette arbejdsproces, hvor du kan bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag.
+Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365 bygger på de eksisterende eDiscovery- og analysefunktioner i Office 365. Denne nye løsning, *der kaldes eDiscovery (Premium),* indeholder en komplette arbejdsproces, hvor du kan bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag.
 
 eDiscovery (Premium) kræver et E5-abonnement til din Microsoft 365 eller Office 365 organisation. Du kan finde flere oplysninger om licenser under [Konfigurer eDiscovery (Premium)](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
 

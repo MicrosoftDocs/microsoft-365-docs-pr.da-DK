@@ -18,14 +18,16 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Oversigt over behandling af forskellige former for data i eDiscovery (Premium).
-ms.openlocfilehash: 043e1b2b023fdd4e379116109069674515153524
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e55d4c3554015adf1135086f23db6566d4bf132d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936307"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998964"
 ---
 # <a name="work-with-processing-errors-in-ediscovery-premium"></a>Arbejd med behandlingsfejl i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 *Behandling* er processen med filidentifikation, udvidelse af integrerede dokumenter og vedhæftede filer, tekstudtrækning og OCR (Optical Character Recognition) af billedfiler og den efterfølgende indeksering af dette indhold.  
 

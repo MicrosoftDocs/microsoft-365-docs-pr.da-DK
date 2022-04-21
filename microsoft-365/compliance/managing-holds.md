@@ -17,30 +17,32 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du placerer ventepositioner på tilsynsførende og deres datakilder for at bevare relevant indhold til din eDiscovery-sag (Premium).
+description: Få mere at vide om, hvordan du placerer ventepositioner på tilsynsførende og deres datakilder for at bevare relevant indhold i din eDiscovery-sag (Premium).
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkMAC
-ms.openlocfilehash: 16a4932993a652d8d7d71be78fd23a238fc90759
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6ec8e31fddba430a7a148eea5c8b07eb35872641
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939647"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996762"
 ---
 # <a name="manage-holds-in-ediscovery-premium"></a>Administrer ventepositioner i eDiscovery (Premium)
 
-Du kan bruge en Microsoft Purview eDiscovery-sag (Premium) til at oprette ventepositioner for at bevare indhold, der kan være relevant for din sag. Ved hjælp af funktionerne til eDiscovery-bevarelse (Premium) kan du placere ventepositioner på tilsynsførende og deres datakilder. Derudover kan du placere en ikke-frihedsberøvende venteposition på postkasser og OneDrive for Business websteder. Du kan også placere en venteposition på gruppepostkassen, SharePoint websted og OneDrive for Business websted for en Microsoft 365 gruppe. På samme måde kan du placere en venteposition på den postkasse og det websted, der er knyttet til Microsoft Teams. Når du placerer indholdsplaceringer i venteposition, opbevares indhold, indtil du frigiver vogteren, fjerner en bestemt dataplacering eller sletter politikken for bevarelse af data helt.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Du kan bruge en Microsoft Purview eDiscovery-sag (Premium) til at oprette ventepositioner for at bevare indhold, der kan være relevant for din sag. Ved hjælp af funktionerne til eDiscovery -bevarelse (Premium) kan du placere ventepositioner på tilsynsførende og deres datakilder. Derudover kan du placere en ikke-frihedsberøvende venteposition på postkasser og OneDrive for Business websteder. Du kan også placere en venteposition på gruppepostkassen, SharePoint websted og OneDrive for Business websted for en Microsoft 365 gruppe. På samme måde kan du placere en venteposition på den postkasse og det websted, der er knyttet til Microsoft Teams. Når du placerer indholdsplaceringer i venteposition, opbevares indhold, indtil du frigiver vogteren, fjerner en bestemt dataplacering eller sletter politikken for bevarelse af data helt.
 
 ## <a name="manage-custodian-based-holds"></a>Administrer frihedsberøvende bevarelser
 
-I nogle tilfælde kan du have et sæt tilsynsførende, som du har identificeret og har besluttet at bevare deres data i løbet af sagen. Når disse tilsynsførende sættes i venteposition i eDiscovery (Premium), føjes brugeren og deres valgte datakilder automatisk til en politik for frihedsberøvelse.
+I nogle tilfælde kan du have et sæt tilsynsførende, som du har identificeret og har besluttet at bevare deres data i løbet af sagen. Når disse tilsynsførende sættes i venteposition i eDiscovery (Premium), føjes brugeren og deres valgte datakilder automatisk til en politik om frihedsberøvelse.
 
 Sådan får du vist politikken for frihedsberøvelse:
 
 1. På Microsoft Purview-overholdelsesportalen skal du klikke på **eDiscovery > Avanceret** for at få vist listen over sager i din organisation.
 
-2. Gå til fanen **Kilder** for at tilføje vogtere i din sag. Hvis du vil vide mere om, hvordan du kan tilføje og placere tilsynsførende i en eDiscovery-sag (Premium), skal du se [Føj tilsynsførende til en sag](add-custodians-to-case.md). Hvis du allerede har tilføjet tilsynsførende og sat dem i venteposition, skal du gå til trin 3.
+2. Gå til fanen **Kilder** for at tilføje vogtere i din sag. Hvis du vil vide mere om, hvordan du kan tilføje og placere tilsynsførende i venteposition i en eDiscovery-sag (Premium), skal du se [Føj tilsynsførende til en sag](add-custodians-to-case.md). Hvis du allerede har tilføjet tilsynsførende og sat dem i venteposition, skal du gå til trin 3.
 
 3. Gå til fanen **Ventepositioner,** og klik på **CustodianHold\<HoldId>**.
 
@@ -54,7 +56,7 @@ Når du opretter en venteposition, har du følgende muligheder for at tilpasse o
   
 - Du kan angive et datointerval, der kun indeholder det indhold, der blev sendt, modtaget eller oprettet inden for dette datointerval. Du kan også indeholde alt indhold, uanset hvornår det blev sendt, modtaget eller oprettet.
 
-Sådan opretter du en eDiscovery-sag (Premium) uden frihedsberøvelse:
+Sådan opretter du en ikke-frihedsberøvende venteposition for en eDiscovery-sag (Premium):
 
 1. Klik på **eDiscovery > Avanceret** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> for at få vist listen over sager i din organisation.
   
@@ -82,7 +84,7 @@ Sådan opretter du en eDiscovery-sag (Premium) uden frihedsberøvelse:
       > [!NOTE]
       > URL-adressen til en brugers OneDrive-konto indeholder brugerens hovednavn (UPN) (f.eks. `https://alpinehouse-my.sharepoint.com/personal/sarad_alpinehouse_onmicrosoft_com`). I det sjældne tilfælde, at en persons UPN ændres, ændres vedkommendes OneDrive URL-adresse også for at inkorporere det nye UPN. Hvis en brugers OneDrive konto er en del af en ikke-frihedsberøvende venteposition, og brugerens UPN ændres, skal du opdatere ventepositionen og pege på den nye ONEDRIVE URL-adresse. Du kan få flere oplysninger under [Sådan påvirker UPN-ændringer OneDrive URL-adressen](/onedrive/upn-changes).
 
-   1. **Exchange offentlige mapper** – Flyt til/fra-knappen til positionen Alle for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-kontakten være angivet til **Ingen** , hvis du ikke vil sætte offentlige mapper i venteposition.
+   1. **Exchange offentlige mapper** – Flyt til/fra-knappen til positionen Alle for at sætte alle offentlige mapper i din Exchange Online-organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-kontakten være angivet til **Ingen** , hvis du ikke vil sætte offentlige mapper i venteposition.
 
 9. Når du er færdig med at føje indholdsplaceringer til ventepositionen, skal du klikke på **Næste**.
   
@@ -130,7 +132,7 @@ Microsoft Teams er baseret på Office 365 Grupper. Derfor er det det samme at s�
 
   - Hvis du vil placere indhold i Microsoft 365-grupper og Microsoft Teams i venteposition, skal du angive postkassen og SharePoint websted, der er knyttet til en gruppe eller et team.
   
-  - Kør **Get-UnifiedGroup-cmdlet'en** i Exchange Online for at få vist egenskaber for en Microsoft 365 gruppe eller Et Microsoft-team. Dette er en god måde at få URL-adressen til det websted, der er knyttet til en Microsoft 365 gruppe eller et Microsoft-team. Følgende kommando viser f.eks. de valgte egenskaber for en Microsoft 365 gruppe med navnet Senior Leadership Team:
+  - Kør **Cmdlet'en Get-UnifiedGroup** i Exchange Online for at få vist egenskaber for en Microsoft 365 gruppe eller Et Microsoft-team. Dette er en god måde at få URL-adressen til det websted, der er knyttet til en Microsoft 365 gruppe eller et Microsoft-team. Følgende kommando viser f.eks. de valgte egenskaber for en Microsoft 365 gruppe med navnet Senior Leadership Team:
 
     ```console
     Get-UnifiedGroup "Senior Leadership Team" | FL DisplayName,Alias,PrimarySmtpAddress,SharePointSiteUrl
@@ -141,7 +143,7 @@ Microsoft Teams er baseret på Office 365 Grupper. Derfor er det det samme at s�
     ```
 
     > [!NOTE]
-    > Hvis du vil køre den Get-UnifiedGroup cmdlet, skal du have tildelt rollen View-Only modtagere i Exchange Online eller være medlem af en rollegruppe, der har fået tildelt rollen View-Only Modtagere.
+    > Hvis du vil køre Get-UnifiedGroup-cmdlet'en, skal du have tildelt rollen View-Only modtagere i Exchange Online eller være medlem af en rollegruppe, der har fået tildelt rollen View-Only modtagere.
 
   - Når der søges i en brugers postkasse, bliver der ikke søgt i Microsoft 365 gruppe eller Microsoft Team, som brugeren er medlem af. På samme måde er det kun gruppepostkassen og gruppewebstedet, der sættes i venteposition, når du placerer en Microsoft 365 gruppe- eller Microsoft Team-venteposition. Postkasserne og OneDrive for Business websteder for gruppemedlemmer sættes ikke i venteposition, medmindre du udtrykkeligt tilføjer dem som vogtere eller placerer deres datakilder i venteposition. Hvis du derfor har brug for at placere en Microsoft 365 gruppe eller Microsoft-team i venteposition for en bestemt tilsynsførende, kan du overveje at knytte gruppewebstedet og gruppepostkassen til vogteren (se Administration af tilsynsførende i eDiscovery (Premium)). Hvis Microsoft 365-gruppen eller Microsoft-teamet ikke kan henføres til en enkelt tilsynsførende, kan du overveje at føje kilden til en ikke-frihedsberøvende venteposition.
   - Hvis du vil hente en liste over medlemmerne af en Microsoft 365-gruppe eller Microsoft Team, kan du få vist egenskaberne på siden [**HomeGroups**](https://go.microsoft.com/fwlink/p/?linkid=2052855)  >  i Microsoft 365 Administration. Du kan også køre følgende kommando i Exchange Online PowerShell:

@@ -16,20 +16,22 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du har oprettet og gentaget en kladdesamling, kan du bekræfte den til et korrektursæt. Når du bekræfter en kladde til en samling, tilføjes de indsamlede elementer for at gennemse dem, der er angivet i sagen. Når de indsamlede elementer er i korrektursættet, kan du analysere, gennemse og eksportere dem.
-ms.openlocfilehash: 5637d97020d7fb086914a6debdaffc8050772828
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f908d17d804487cd5e7e93085e418f9a94915c8e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940285"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997928"
 ---
 # <a name="commit-a-draft-collection-to-a-review-set-in-ediscovery-premium"></a>Send en kladdesamling til et korrektursæt i eDiscovery (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er klar til at analysere, mærke og gennemse dem, kan du føje en samling til et korrektursæt i tilfælde af. Når du bekræfter en kladde af en samling til et korrektursæt, kopieres indsamlede elementer fra deres oprindelige indholdsplacering i Microsoft 365 til et korrektursæt. Et anmeldelsessæt er en sikker, Microsoft-leveret Azure Storage placering i Microsoft-cloudmiljøet.
 
 ## <a name="commit-a-draft-collection-to-a-review-set"></a>Bekræft en kladdesamling til et valideringssæt
 
-1. Åbn sagen Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger** for at få vist en liste over samlingerne i sagen.
+1. Åbn sagen Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger** for at få vist en liste over samlingerne i dette tilfælde.
 
    ![Liste over samlinger i en sag.](../media/CommitDraftCollections1.png)
 
@@ -52,7 +54,7 @@ Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er
 
       ![Konfigurer yderligere indstillinger for samling.](../media/AeDAdditionalCollectionSettings.png).
 
-       a. **Teams og Yammer meddelelser**: Vælg denne indstilling for at føje samtaletråde til den samling, der indeholder de chatelementer, der returneres af søgeforespørgslen i samlingen. Det betyder, at chatsamtalen, der indeholder elementer, der stemmer overens med søgekriterierne, rekonstrueres. Dette giver dig mulighed for at gennemse chatelementer i konteksten af samtalen frem og tilbage. Du kan finde flere oplysninger [under Samtaletråd i eDiscovery (Premium)](conversation-review-sets.md).
+       a. **Teams og Yammer meddelelser**: Vælg denne indstilling for at føje samtaletråde til den samling, der indeholder de chatelementer, der returneres af søgeforespørgslen i samlingen. Det betyder, at chatsamtalen, der indeholder elementer, der stemmer overens med søgekriterierne, rekonstrueres. Dette giver dig mulighed for at gennemse chatelementer i konteksten af samtalen frem og tilbage. Du kan finde flere oplysninger under [Samtaletråd i eDiscovery (Premium)](conversation-review-sets.md).
 
        b. **Vedhæftede filer i skyen**: Vælg denne indstilling for at inkludere moderne vedhæftede filer eller sammenkædede filer, når samlingsresultaterne føjes til korrektursættet. Det betyder, at målfilen for en moderne vedhæftet fil eller sammenkædet fil føjes til korrektursættet.
 

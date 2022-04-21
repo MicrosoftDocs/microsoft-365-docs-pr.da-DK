@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8a5029ad6de3de33eacdf814729ed2eafcd2cf89
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6992af4483bedfe418610b752d2195a8d22f30d3
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941671"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64974317"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Trusselsoversigt og registreringer i realtid
 
@@ -51,7 +51,6 @@ Med denne rapport kan du:
 - [Undersøg ondsindet mail m.m.](#more-ways-to-use-explorer-and-real-time-detections)
 
 ## <a name="improvements-to-threat-hunting-experience"></a>Forbedringer af Threat Hunting Experience
-
 
 ### <a name="introduction-of-alert-id-for-defender-for-office-365-alerts-within-explorerreal-time-detections"></a>Introduktion af besked-id for Defender for Office 365 beskeder i Stifinder/Registreringer i realtid
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Information Protection i Microsoft 365
+title: Microsoft Purview Information Protection
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,70 +17,75 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 recommendations: false
-description: Implementer Microsoft Information Protection (MIP)-funktioner for at hjælpe dig med at beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
-ms.openlocfilehash: 2fccdafa662bfdf8390a53ac535c571f52f673de
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+description: Implementer Microsoft Purview Information Protection funktioner for at hjælpe dig med at beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
+ms.openlocfilehash: ac6627d620169aca962f85f30c98d830b4a34a9f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63591728"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999866"
 ---
-# <a name="microsoft-information-protection-in-microsoft-365"></a>Microsoft Information Protection i Microsoft 365
+# <a name="protect-your-sensitive-data-with-microsoft-purview"></a>Beskyt dine følsomme data med Microsoft Purview
 
->*[Licensering til Microsoft 365 til & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+> [!TIP]
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
-Implementer funktioner fra Microsoft Information Protection (MIP) for at hjælpe dig med at opdage, klassificere og beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-MIP-funktioner er inkluderet Microsoft 365 overholdelse af regler og standarder og giver dig værktøjerne til at kende dine [data](#know-your-data), beskytte [dine data](#protect-your-data) [og forhindre tab af data](#prevent-data-loss).
+>*[Licenser til overholdelse af & for Microsoft 365 sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
-![Billede af, hvordan MIP hjælper dig med at opdage, klassificere og beskytte følsomme data.](../media/powered-by-intelligent-platform.png)
+Implementer funktioner fra **Microsoft Purview Information Protection** (tidligere Microsoft Information Protection) for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
 
-Hvis du vil have en beskrivelse af, hvordan du installerer en MIP-løsning til din organisation, skal [du se installere Microsoft Information Protection løsning](information-protection-solution.md).
+Disse funktioner til beskyttelse af oplysninger giver dig værktøjer til at [kende dine data](#know-your-data), [beskytte dine data](#protect-your-data) og [forhindre tab af data](#prevent-data-loss).
 
-Du kan finde oplysninger om, hvordan du styrer dine data, [under Microsoft Information Governance Microsoft 365](manage-Information-governance.md).
+![Billede af, hvordan Microsoft Purview Information Protection hjælper dig med at finde, klassificere og beskytte følsomme data.](../media/powered-by-intelligent-platform.png)
 
-## <a name="know-your-data"></a>Kende dine data
+Hvis du vil have en præskriptiv vejledning til installation af en Microsoft Purview-Information Protection-løsning til din organisation, skal du se [Installér en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md).
 
-For at forstå dit datamiljø og identificere følsomme data på tværs af dit hybridmiljø skal du bruge følgende funktioner:
+Du kan få oplysninger om, hvordan du styrer dine data, under [Styr dine data med Microsoft Purview](manage-Information-governance.md).
 
-|Funktion|Hvilke problemer løser den?|Kom i gang|
+## <a name="know-your-data"></a>Kend dine data
+
+Hvis du vil forstå dit datalandskab og identificere følsomme data på tværs af dit hybridmiljø, skal du bruge følgende funktioner:
+
+|Kapacitet|Hvilke problemer løser det?|Kom i gang|
 |:------|:------------|:--------------------|
-|[Typer af følsomme oplysninger](sensitive-information-type-learn-about.md)| Identificerer følsomme data ved hjælp af indbyggede eller brugerdefinerede regulære udtryk eller en funktion. Bekræftende beviser omfatter nøgleord, tillidsniveauer og afstand.| [Tilpasse en indbygget følsom oplysningstype](customize-a-built-in-sensitive-information-type.md)|
-|[Trænbare klassificeringer](classifier-learn-about.md)| Identificerer følsomme data ved hjælp af eksempler på de data, du er interesseret i, i stedet for at identificere elementer i elementet (mønstersammenholdelse). Du kan bruge indbyggede klassificeringer eller træne en klassificering med dit eget indhold.| [Kom i gang med klassekammerater, der kan trænes](classifier-get-started-with.md) |
-|[Dataklassificering](data-classification-overview.md) | En grafisk identifikation af elementer i din organisation, som har en følsomhedsmærkat, et opbevaringsmærkat, eller som er blevet klassificeret. Du kan også bruge disse oplysninger til at få indsigt i de handlinger, dine brugere benytter på disse elementer. | [Introduktion til indholdsstifinder](data-classification-content-explorer.md) <p> [Introduktion til Aktivitetsstifinder](data-classification-activity-explorer.md) |
+|[Typer af følsomme oplysninger](sensitive-information-type-learn-about.md)| Identificerer følsomme data ved hjælp af indbyggede eller brugerdefinerede regulære udtryk eller en funktion. Bekræftende beviser omfatter nøgleord, tillidsniveauer og nærhed.| [Tilpas en indbygget type af følsomme oplysninger](customize-a-built-in-sensitive-information-type.md)|
+|[Trænbare klassificeringer](classifier-learn-about.md)| Identificerer følsomme data ved hjælp af eksempler på de data, du er interesseret i, i stedet for at identificere elementer i elementet (mønstermatch). Du kan bruge indbyggede klassificeringer eller oplære en klassificering med dit eget indhold.| [Kom i gang med trænbare klassificeringer](classifier-get-started-with.md) |
+|[Klassificering af data](data-classification-overview.md) | En grafisk identifikation af elementer i din organisation, der har en følsomhedsmærkat, en opbevaringsmærkat eller er blevet klassificeret. Du kan også bruge disse oplysninger til at få indsigt i de handlinger, som dine brugere foretager på disse elementer. | [Kom i gang med Indholdsviser](data-classification-content-explorer.md) <p> [Kom i gang med aktivitetsviser](data-classification-activity-explorer.md) |
 
 ## <a name="protect-your-data"></a>Beskyt dine data
 
-Hvis du vil anvende fleksible beskyttelseshandlinger, som omfatter kryptering, adgangsbegrænsninger og visuelle markeringer, skal du bruge følgende funktioner:
+Hvis du vil anvende fleksible beskyttelseshandlinger, der omfatter kryptering, adgangsbegrænsninger og visuelle markeringer, skal du bruge følgende funktioner:
 
-|Funktion|Hvilke problemer løser den?|Kom i gang|
+|Kapacitet|Hvilke problemer løser det?|Kom i gang|
 |:------|:------------|---------------------|
-|[Følsomhedsmærkater](sensitivity-labels.md)| En enkelt løsning på tværs af apps, tjenester og enheder til at mærke og beskytte dine data, mens de ligger inden for og uden for organisationen. <br /><br /> Eksempelscenarier: <br />- [Administrer følsomhedsmærkater for Office apps](sensitivity-labels-office-apps.md) <br />- [Kryptér dokumenter og mails](encryption-sensitivity-labels.md) <br />-  [Anvend og få vist navne i Power BI](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Du kan finde en omfattende liste over scenarier for følsomhedsmærkater i Dokumentationen Introduktion.|[Introduktion til følsomhedsmærkater](get-started-with-sensitivity-labels.md) |
-|[Samlet Etiketklient til Azure Information Protection](/azure/information-protection/rms-client/aip-clientv2)| For Windows computere kan du udvide mærkningen til Stifinder og PowerShell med yderligere funktioner til Office apps, hvis det er nødvendigt| [Samlet vejledning til Azure Information Protection-klientadministrator](/azure/information-protection/rms-client/clientv2-admin-guide)|
-|[Kryptering med dobbelt nøgle](double-key-encryption.md)| Under alle omstændigheder er det kun din organisation, der nogensinde kan dekryptere beskyttet indhold eller for lovmæssige krav, der skal opbevares krypteringsnøgler inden for en geografisk grænse. | [Installér kryptering med dobbelt nøgle](double-key-encryption.md#deploy-dke)|
-|[Office 365-meddelelseskryptering (OME)](ome.md)| Krypterer mails og vedhæftede dokumenter, der sendes til alle brugere på en hvilken som helst enhed, så kun autoriserede modtagere kan læse mailoplysninger. <br /><br />  Eksempelscenarie: Tilbagekalde [mail krypteret med avanceret meddelelseskryptering](revoke-ome-encrypted-mail.md) | [Konfigurer nye egenskaber for meddelelseskryptering](set-up-new-message-encryption-capabilities.md)|
-|[Tjenestekryptering med kundenøgle](customer-key-overview.md) | Beskytter mod visning af data fra uautoriserede systemer eller medarbejdere og supplerer BitLocker-diskkryptering i Microsoft-datacentre. | [Konfigurer kundenøgle til Office 365](customer-key-set-up.md)|
-|[SharePoint IRM (Information Rights Management)](set-up-irm-in-sp-admin-center.md#irm-enable-sharepoint-document-libraries-and-lists)|Beskytter SharePoint og biblioteker, så når en bruger tjekker et dokument ud, er den downloadede fil beskyttet, så kun autoriserede personer kan få vist og bruge filen i overensstemmelse med de politikker, du angiver. | [Konfigurere IRM (Information Rights Management) SharePoint Administration](set-up-irm-in-sp-admin-center.md)|
-[Rights Management-forbindelse](/azure/information-protection/deploy-rms-connector) |Protection-only for eksisterende lokale installationer, der bruger Exchange eller SharePoint Server eller filservere, der kører Windows Server and File Classification Infrastructure (FCI). | [Trin til installation af RMS-forbindelsen](/azure/information-protection/deploy-rms-connector#steps-to-deploy-the-rms-connector)
-|[Azure Information Protection samlet scanner til mærkning](/azure/information-protection/deploy-aip-scanner)| Finder, etiketter og beskytter følsomme oplysninger, der findes i lokale datalagre. | [Konfiguration og installation af den samlede Azure Information Protection-etiketscanner](/azure/information-protection/deploy-aip-scanner-configure-install)|
-|[Microsoft Defender til skyapps](/cloud-app-security/what-is-cloud-app-security)| Finder, navne og beskytter følsomme oplysninger, der findes i datalagre, der findes i skyen. | [Opdag, klassificer, mærkater og beskyt regulerede og følsomme data, der er gemt i skyen](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
-|[Azure-visning](/azure/purview/overview) |Identificerer følsomme data og anvender automatisk mærkning på indhold i Azure Purview-aktiver. Disse omfatter filer i lagerplads som Azure Data Lake og Azure Files og skemalagte data som f.eks. kolonner i Azure SQL DB og Db. |[Mærkning i Azure-visning](/azure/purview/create-sensitivity-label) |
-|[Microsoft Information Protection SDK](/information-protection/develop/overview#microsoft-information-protection-sdk)|Udvider følsomhedsmærkater til tredjepartsapps og -tjenester. <br /><br />  Eksempelscenarie: [Angiv og få en følsomhedsmærkat (C++)](/information-protection/develop/quick-file-set-get-label-cpp) |[Microsoft Information Protection og konfiguration af SDK (MIP)](/information-protection/develop/setup-configure-mip)|
+|[Følsomhedsmærkater](sensitivity-labels.md)| En enkelt løsning på tværs af apps, tjenester og enheder til mærkning og beskyttelse af dine data, efterhånden som de bevæger sig i og uden for din organisation. <br /><br /> Eksempelscenarier: <br />- [Administrer følsomhedsmærkater for Office-apps](sensitivity-labels-office-apps.md) <br />- [Kryptér dokumenter og mails](encryption-sensitivity-labels.md) <br />-  [Anvend og få vist navne i Power BI](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Du kan se en omfattende liste over scenarier for følsomhedsmærkater i dokumentationen Introduktion.|[Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md) |
+|[Azure Information Protection Unified Labeling Client](/azure/information-protection/rms-client/aip-clientv2)| For Windows-computere udvides mærkaten til Stifinder og PowerShell med yderligere funktioner til Office-apps, hvis det er nødvendigt| [Vejledning til Azure Information Protection unified labeling-klientadministrator](/azure/information-protection/rms-client/clientv2-admin-guide)|
+|[Kryptering med dobbelt nøgle](double-key-encryption.md)| Under alle omstændigheder er det kun din organisation, der nogensinde kan dekryptere beskyttet indhold eller til lovmæssige krav, du skal have krypteringsnøgler inden for en geografisk grænse. | [Installer kryptering med dobbelt nøgle](double-key-encryption.md#deploy-dke)|
+|[Kryptering af Office 365-meddelelser](ome.md)| Krypterer mails og vedhæftede dokumenter, der sendes til alle brugere på en hvilken som helst enhed, så det kun er godkendte modtagere, der kan læse mailoplysninger. <br /><br />  Eksempelscenarie: [Tilbagekald mail, der er krypteret af avanceret meddelelseskryptering](revoke-ome-encrypted-mail.md) | [Konfigurer nye funktioner til meddelelsekryptering](set-up-new-message-encryption-capabilities.md)|
+|[Tjenestekryptering med kundenøgle](customer-key-overview.md) | Beskytter mod visning af data af uautoriserede systemer eller medarbejdere og supplerer BitLocker-diskkryptering i Microsoft-datacentre. | [Konfigurer kundenøgle til Office 365](customer-key-set-up.md)|
+|[SharePoint IRM (Information Rights Management)](set-up-irm-in-sp-admin-center.md#irm-enable-sharepoint-document-libraries-and-lists)|Beskytter SharePoint lister og biblioteker, så når en bruger tjekker et dokument ud, er den downloadede fil beskyttet, så det kun er godkendte personer, der kan få vist og bruge filen i henhold til de politikker, du angiver. | [Konfigurer IRM (Information Rights Management) i SharePoint Administration](set-up-irm-in-sp-admin-center.md)|
+[Rights Management-connector](/azure/information-protection/deploy-rms-connector) |Kun beskyttelse for eksisterende installationer i det lokale miljø, der bruger Exchange eller SharePoint Server eller filservere, der kører Windows Server og FCI (File Classification Infrastructure). | [Trin til installation af RMS-connectoren](/azure/information-protection/deploy-rms-connector#steps-to-deploy-the-rms-connector)
+|[Azure Information Protection unified labeling scanner](/azure/information-protection/deploy-aip-scanner)| Registrerer, mærkater og beskytter følsomme oplysninger, der er placeret i datalagre i det lokale miljø. | [Konfiguration og installation af Azure Information Protection Unified Labeling Scanner](/azure/information-protection/deploy-aip-scanner-configure-install)|
+|[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)| Registrerer, mærkater og beskytter følsomme oplysninger, der er placeret i datalagre i cloudmiljøet. | [Opdag, klassificer, mærk og beskyt regulerede og følsomme data, der er gemt i cloudmiljøet](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
+|[Microsoft Purview-dataoversigt](/azure/purview/overview) |Identificerer følsomme data og anvender automatisk mærkning på indhold i Microsoft Purview Data Map-aktiver. Disse omfatter filer i lageret, f.eks. Azure Data Lake og Azure Files, og skematiserede data, f.eks. kolonner i Azure SQL DB og Cosmos DB. |[Mærkat i Microsoft Purview-datatilknytning](/azure/purview/create-sensitivity-label) |
+|[Microsoft Information Protection SDK](/information-protection/develop/overview#microsoft-information-protection-sdk)|Udvider følsomhedsmærkater til tredjepartsapps og -tjenester. <br /><br />  Eksempelscenarie: [Angiv og hent en følsomhedsmærkat (C++)](/information-protection/develop/quick-file-set-get-label-cpp) |[konfiguration og konfiguration af MICROSOFT INFORMATION PROTECTION (MIP)](/information-protection/develop/setup-configure-mip)|
 
 
-## <a name="prevent-data-loss"></a>Undgå tab af data
+## <a name="prevent-data-loss"></a>Undgå datatab
 
-For at forhindre utilsigtet overdeling af følsomme oplysninger kan du bruge følgende funktioner:
+Brug følgende funktioner for at forhindre utilsigtet overdeling af følsomme oplysninger:
 
 
-|Funktion|Hvilke problemer løser den?|Kom i gang|
+|Kapacitet|Hvilke problemer løser det?|Kom i gang|
 |:------|:------------|:---------------------|
-|[Forebyggelse af datatab](dlp-learn-about-dlp.md)| Hjælper med at forhindre utilsigtet deling af følsomme elementer. | [Introduktion til DLP-standardpolitikken](get-started-with-the-default-dlp-policy.md)|
-|[Forebyggelse af datatab på slutpunkt](endpoint-dlp-learn-about.md)| Udvider DLP-funktioner til elementer, der bruges og deles på Windows 10 computere. | [Kom i gang med forebyggelse af datatab på slutpunkt](endpoint-dlp-getting-started.md)|
-|[Microsoft-udvidelse til overholdelse af regler og standarder](dlp-chrome-learn-about.md) | Udvider DLP-funktioner til Chrome-browseren | [Kom i gang med Microsoft-udvidelse til overholdelse af regler og standarder](dlp-chrome-get-started.md)|
-|[Microsoft 365 lokal scanner til forebyggelse af datatab (forhåndsvisning)](dlp-on-premises-scanner-learn.md)|Udvider DLP-overvågning af filaktiviteter og beskyttende handlinger for disse filer til lokale filshares og SharePoint-mapper og dokumentbiblioteker.|[Introduktion til Microsoft 365 lokal scanner til forebyggelse af datatab (forhåndsvisning)](dlp-on-premises-scanner-get-started.md)|
-|[Beskyt følsomme oplysninger i Microsoft Teams og kanalmeddelelser](dlp-microsoft-teams.md) | Udvider nogle DLP-funktioner til at Teams chat og kanalmeddelelser | [Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams (forhåndsvisning)](dlp-teams-default-policy.md)|
+|[Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)| Hjælper med at forhindre utilsigtet deling af følsomme elementer. | [Kom i gang med DLP-standardpolitikken](get-started-with-the-default-dlp-policy.md)|
+|[Forebyggelse af datatab for slutpunkt](endpoint-dlp-learn-about.md)| Udvider DLP-funktioner til elementer, der bruges og deles på Windows 10 computere. | [Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt](endpoint-dlp-getting-started.md)|
+|[Microsoft Compliance-udvidelse](dlp-chrome-learn-about.md) | Udvider DLP-funktioner til Chrome-browseren | [Kom i gang med Microsoft Overholdelsesudvidelse](dlp-chrome-get-started.md)|
+|[Microsoft Purview-scanner til forebyggelse af datatab i det lokale miljø (prøveversion)](dlp-on-premises-scanner-learn.md)|Udvider DLP-overvågning af filaktiviteter og beskyttende handlinger for disse filer til filshares i det lokale miljø og SharePoint mapper og dokumentbiblioteker.|[Kom i gang med Microsoft Purview-scanner til forebyggelse af datatab i det lokale miljø (prøveversion)](dlp-on-premises-scanner-get-started.md)|
+|[Beskyt følsomme oplysninger i Microsoft Teams chat- og kanalmeddelelser](dlp-microsoft-teams.md) | Udvider nogle DLP-funktioner til Teams chat- og kanalmeddelelser | [Få mere at vide om standardpolitikken for forebyggelse af datatab i Microsoft Teams (prøveversion)](dlp-teams-default-policy.md)|
 
 ## <a name="licensing-requirements"></a>Licenskrav
 
-Licenskrav til MIP afhænger af de scenarier og funktioner, du bruger, i stedet for at angive licenskrav for hver funktionalitet, der er angivet på denne side. For at forstå dine licenskrav og -indstillinger for MIP skal du se afsnittene til **informationsbeskyttelse** fra [Microsoft 365 &-vejledning](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) for sikkerhed og overholdelse af regler og standarder og den relaterede [PDF-fil](https://go.microsoft.com/fwlink/?linkid=2139145) for licenskrav på funktionsniveau.
+Licenskrav til Microsoft Purview Information Protection afhænger af de scenarier og funktioner, du bruger, i stedet for at angive licenskrav for hver egenskab, der er angivet på denne side. Hvis du vil vide mere om dine licenskrav og muligheder for Microsoft Purview Information Protection, skal du se afsnittene **om Information Protection** i [Microsoft 365 vejledning til overholdelse af & sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) og den relaterede [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få oplysninger om licenskrav på funktionsniveau.

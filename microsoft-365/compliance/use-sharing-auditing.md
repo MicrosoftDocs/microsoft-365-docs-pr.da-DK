@@ -21,14 +21,16 @@ ms.collection:
 ms.assetid: 50bbf89f-7870-4c2a-ae14-42635e0cfc01
 description: Administratoren kan få mere at vide om, hvordan du bruger deling af overvågning i Microsoft 365 overvågningslog til at identificere ressourcer, der deles med brugere uden for deres organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7643dfae2e7e9fa871976cfe92bdf7028e756d3e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 785fdd2628a1e0bea9fd0361e7843939bf7b84a3
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934483"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999668"
 ---
 # <a name="use-sharing-auditing-in-the-audit-log"></a>Brug overvågning af deling i overvågningsloggen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Deling er en vigtig aktivitet i SharePoint Online og OneDrive for Business, og den bruges i vid udstrækning i organisationer. Administratorer kan bruge deling af overvågning i overvågningsloggen til at bestemme, hvordan deling bruges i deres organisation. 
   
@@ -48,7 +50,7 @@ Der er en anden skemaegenskab, der er vigtig for delingshistorien. Når du ekspo
 
 ## <a name="sharepoint-sharing-events"></a>SharePoint delingshændelser
 
-Deling defineres ved, hvornår en bruger (den *fungerende* bruger) ønsker at dele en ressource med en anden bruger ( *målbrugeren* ). Overvåg poster, der er relateret til deling af en ressource med en ekstern bruger (en bruger uden for organisationen og ikke har en gæstekonto i organisationens Azure Active Directory) identificeres af følgende hændelser, som logføres i overvågningsloggen:
+Deling defineres ved, hvornår en bruger (den *fungerende* bruger) ønsker at dele en ressource med en anden bruger ( *målbrugeren* ). Overvågningsposter, der er relateret til deling af en ressource med en ekstern bruger (en bruger uden for din organisation og ikke har en gæstekonto i din organisations Azure Active Directory), identificeres af følgende hændelser, som logføres i overvågningsloggen:
 
 - **SharingInvitationCreated:** En bruger i organisationen forsøgte at dele en ressource (sandsynligvis et websted) med en ekstern bruger. Dette resulterer i en ekstern delingsinvitation, der sendes til destinationsbrugeren. Der gives ikke adgang til ressourcen på nuværende tidspunkt.
 

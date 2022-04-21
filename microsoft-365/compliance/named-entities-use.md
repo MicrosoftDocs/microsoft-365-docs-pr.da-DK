@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Brug disse procedurer til at drage fordel af navngivne enheder i dine politikker til forebyggelse af datatab
-ms.openlocfilehash: 108b21e7c5a6708a01a712dcd44788f489df0e73
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 6b00c45b95436e2425aedadd57a178fcb01ab50e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971577"
+ms.locfileid: "65000988"
 ---
 # <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Brug navngivne enheder i dine politikker til forebyggelse af datatab
 
@@ -62,7 +62,7 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 ## <a name="workloads-and-services-that-support-named-entities"></a>Arbejdsbelastninger og tjenester, der understøtter navngivne enheder
 
 - **Microsoft 365 eDiscovery** understøtter brugen af navngivne objekter i Substrate-tjenester.
-- **Microsoft Defender for Cloud Apps** understøtter brugen af navngivne objekter i Defender for Cloud Apps-politikker på Defender for Cloud Apps-portalen.
+- **Microsoft Defender for Cloud Apps** understøtter brugen af navngivne enheder i Defender for Cloud Apps-politikker på Defender for Cloud-apps-portalen.
 - **Insider Risk Management** understøtter brugen af navngivne objekter i Substrate-tjenester.
 - **Datastyring** understøtter brugen af navngivne objekter.
 - **Præcise datamatch følsomme oplysningstyper** understøtter brugen af navngivne objekter.
@@ -73,8 +73,8 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 
 |Arbejdsbelastning/tjenester  |Understøttelse af navngivne enheder  |
 |---------|---------|
-|politiktip til Office Win32-klienter    |Understøttes ikke  |
-|politiktip til Office WAC-klienter    |Understøttes         |
+|Politiktip til Office Win32-klienter    |Understøttes ikke  |
+|Politiktip til Office WAC-klienter    |Understøttes         |
 |Tip til OWA-politik     |Understøttes ikke         |
 |Outlook politiktip     |Understøttes ikke |
 |Slutpunkter (Windows 10 og 11 enheder)     |Understøttes  |
@@ -83,7 +83,7 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 |SharePoint Online-data-at-rest     |Understøttes         |
 |Teams hviledata     |Understøttes         |
 |Data-at-rest i mails     |Understøttes for lejere med Plan for beskyttelse af personlige oplysninger         |
-|Microsoft Defender for Cloud Apps     |Understøttes         |
+<!--|Microsoft Defender for Cloud Apps     |Understøttes         |-->
 
 ### <a name="autolabeling"></a>Automatisk navngivning
 

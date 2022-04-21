@@ -21,14 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du filtrerer data ved hjælp af funktionen til intelligent import i Microsoft 365 importtjeneste, når du importerer PST-filer til Microsoft 365.
-ms.openlocfilehash: 2b948352a3aff64dc06486a8380b9c81f7f5c020
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dc60baf45be97e438875e0b045d9e8f3b6208d3f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948589"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997906"
 ---
 # <a name="filter-data-when-importing-pst-files"></a>Filtrer data ved import af PST-filer
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug den nye funktion Intelligent import i tjenesten Microsoft 365 Importér til at filtrere elementerne i PST-filer, der faktisk importeres til destinationspostkasserne. Sådan fungerer det:
   
@@ -142,7 +144,7 @@ Når du har oprettet et PST-importjob, skal du følge disse trin for at filtrere
     |IPM. Aktivitet  <br/> |Journaloptegnelser  <br/> |
     |IPM. Dokument  <br/> |Dokumenter og filer (ikke knyttet til en mail)  <br/> |
     |IPM. Fil  <br/> |(samme som IPM. Dokument)  <br/> |
-    |IPM. Note.IMC.Notification  <br/> |Rapporter, der sendes via internetmail Forbind, som er den Exchange Server gateway til internettet  <br/> |
+    |IPM. Note.IMC.Notification  <br/> |Rapporter, der sendes af Internet Mail Connect, som er Exchange Server-gatewayen til internettet  <br/> |
     |IPM. Note.Microsoft.Fax  <br/> |Faxmeddelelser  <br/> |
     |IPM. Note.Rules.Oof.Template.Microsoft  <br/> |Autosvar fraværende-meddelelser  <br/> |
     |IPM. Note.Rules.ReplyTemplate.Microsoft  <br/> |Svar, der er sendt af en indbakkeregel  <br/> |

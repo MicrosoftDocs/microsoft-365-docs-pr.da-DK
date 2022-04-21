@@ -12,16 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere WhatsApp-data i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 507927fb2dd19eb9c1bef745db8e85e1d4e017e8
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e473e9a83bd035209cbc2cb07aa3fb93386e47d9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934923"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000438"
 ---
 # <a name="set-up-a-connector-to-archive-whatsapp-data"></a>Konfigurer en connector til arkivering af WhatsApp-data
 
-Brug TeleMessage-connectoren på Microsoft Purview-overholdelsesportalen til at importere og arkivere WhatsApp-opkald, chats, vedhæftede filer, filer og slettede meddelelser. Når du har konfigureret en connector, oprettes der forbindelse til din organisations TeleMessage-konto én gang om dagen, og medarbejdernes mobilkommunikation importeres ved hjælp af TeleMessage WhatsApp Telefon Archiver eller TeleMessage WhatsApp Cloud Archiver til postkasser i Microsoft 365.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Brug TeleMessage-connectoren på Microsoft Purview-overholdelsesportalen til at importere og arkivere WhatsApp-opkald, chats, vedhæftede filer, filer og slettede meddelelser. Når du har konfigureret en connector, oprettes der forbindelse til din organisations TeleMessage-konto én gang om dagen, og medarbejdernes mobilkommunikation importeres ved hjælp af TeleMessage WhatsApp Phone Archiver eller TeleMessage WhatsApp Cloud Archiver til postkasser i Microsoft 365.
 
 Når WhatsApp-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, Content Search og Microsoft 365 opbevaringspolitikker, på WhatsApp-data. Du kan f.eks. søge i WhatsApp-meddelelser ved hjælp af Indholdssøgning eller knytte den postkasse, der indeholder WhatsApp-meddelelser, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en WhatsApp-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
@@ -49,11 +51,11 @@ Nogle af de implementeringstrin, der kræves for at arkivere WhatsApp-kommunikat
 
 - Registrer alle brugere, der kræver WhatsApp-arkivering, på TeleMessage-kontoen. Når du registrerer brugere, skal du sørge for at bruge den samme mailadresse, der bruges til deres Microsoft 365 konto.
 
-- Installér appen TeleMessage [WhatsApp Telefon Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-phone-archiver-2/) på dine medarbejderes mobiltelefoner, og aktivér den. Alternativt kan du installere de almindelige WhatsApp- eller WhatsApp Business-apps på dine medarbejderes mobiltelefoner og aktivere Tjenesten WhatsApp Cloud Archiver ved at scanne en QR-kode på TeleMessage-webstedet. Du kan få flere oplysninger under [WhatsApp Cloud Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-archiver/whatsapp-cloud-archiver/).
+- Installér appen TeleMessage [WhatsApp Phone Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-phone-archiver-2/) på dine medarbejderes mobiltelefoner, og aktivér den. Alternativt kan du installere de almindelige WhatsApp- eller WhatsApp Business-apps på dine medarbejderes mobiltelefoner og aktivere Tjenesten WhatsApp Cloud Archiver ved at scanne en QR-kode på TeleMessage-webstedet. Du kan få flere oplysninger under [WhatsApp Cloud Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-archiver/whatsapp-cloud-archiver/).
 
 - Den bruger, der opretter en Verizon Network-connector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-whatsapp-archiver-connector"></a>Opret en WhatsApp Archiver-connector
 

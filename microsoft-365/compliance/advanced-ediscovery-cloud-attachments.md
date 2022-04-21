@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug samlinger i Microsoft Purview eDiscovery (Premium) til at indsamle vedhæftede filer i skyen til gennemsyn i en undersøgelse eller sag.
-ms.openlocfilehash: 0a0d3dab3942dbdfcfa896d8e2f59fd2e2dca813
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1dd48f343f9df43edf8553e73395d756eb6713a4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935714"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000702"
 ---
 # <a name="collect-cloud-attachments-in-microsoft-purview-ediscovery-premium-preview"></a>Indsaml vedhæftede filer i skyen i Microsoft Purview eDiscovery (Premium) (prøveversion)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Vedhæftede filer i skyen er links til dokumenter, der typisk gemmes på SharePoint websted og OneDrive. Så i stedet for at vedhæfte en faktisk kopi af et dokument i en mail eller en Teams chatsamtale, har du mulighed for at dele et link til filen. Vedhæftede filer i skyen er en effektiv måde at dele dokumenter og samarbejde med andre i din organisation på. Men vedhæftede filer i skyen udgør udfordringer under eDiscovery-arbejdsprocessen, fordi det kun er linket til vedhæftede filer i skyen og ikke det faktiske indhold i det delte dokument, der returneres i en eDiscovery-søgning. For at løse denne udfordring indeholder eDiscovery (Premium) to løsninger til indsamling af vedhæftede filer i skyen:  
 
@@ -33,7 +35,7 @@ Vedhæftede filer i skyen er links til dokumenter, der typisk gemmes på SharePo
 
 ## <a name="collecting-cloud-attachments"></a>Indsamling af vedhæftede filer i skyen
 
-Når du opretter en kladdesamling, og søgeresultaterne indeholder elementer, der indeholder vedhæftede filer i skyen, skal du have mulighed for at indsamle målet for den vedhæftede fil i skyen, når du overfører kladdesamlingen til et korrektursæt. Når du vælger denne indstilling, føjer eDiscovery (Premium) de dokumenter, der er sammenkædet med i den vedhæftede fil i skyen, til korrektursættet. Dette giver dig mulighed for at gennemse destinationsdokumenterne og afgøre, om dokumentet er relevant for din sag eller undersøgelse.
+Når du opretter en kladdesamling, og søgeresultaterne indeholder elementer, der indeholder vedhæftede filer i skyen, skal du have mulighed for at indsamle målet for den vedhæftede fil i skyen, når du overfører kladdesamlingen til et korrektursæt. Når du vælger denne indstilling, føjer eDiscovery (Premium) de dokumenter, der er sammenkædet med i den vedhæftede sky, til korrektursættet. Dette giver dig mulighed for at gennemse destinationsdokumenterne og afgøre, om dokumentet er relevant for din sag eller undersøgelse.
 
 På følgende skærmbillede kan du se muligheden for at inkludere mål for vedhæftede filer i skyen, når du sender en samling til et korrektursæt.
 
@@ -46,7 +48,7 @@ Hvis du vil have en vejledning i, hvordan du sender en samling til et korrekturs
 
 ## <a name="collecting-the-version-shared-in-a-cloud-attachment"></a>Indsamling af den version, der deles i en vedhæftet fil i skyen
 
-EDiscovery-arbejdsprocessen (Premium) til indsamling af vedhæftede filer i skyen omfatter kun tilføjelse af den nyeste version af en vedhæftet fil i skyen i et korrektursæt. Det betyder, at den version, der indsamles og føjes til et korrektursæt, kan være anderledes end den version, der oprindeligt blev delt i den vedhæftede fil i cloudmiljøet. Det er derfor muligt, at indhold, der var til stede i den vedhæftede fil i skyen på det tidspunkt, den blev delt, er fjernet og ikke findes i den aktuelle version, der er føjet til korrektursættet.
+Arbejdsprocessen for eDiscovery (Premium) til indsamling af vedhæftede filer i skyen omfatter kun tilføjelse af den nyeste version af en vedhæftet fil i skyen til et korrektursæt. Det betyder, at den version, der indsamles og føjes til et korrektursæt, kan være anderledes end den version, der oprindeligt blev delt i den vedhæftede fil i cloudmiljøet. Det er derfor muligt, at indhold, der var til stede i den vedhæftede fil i skyen på det tidspunkt, den blev delt, er fjernet og ikke findes i den aktuelle version, der er føjet til korrektursættet.
 
 Organisationer har nu mulighed for at bruge Microsoft 365 opbevaringsmærkater til at bevare versionen af et dokument på det tidspunkt, hvor det blev delt som en vedhæftet fil i skyen. For at gøre dette kan din organisation oprette en opbevaringsmærkat, vælge indstillingen Anvend mærkaten på vedhæftede filer i skyen og derefter automatisk anvende mærkaten på dokumenter, der er gemt i SharePoint og OneDrive. Når du har konfigureret denne konfiguration, oprettes der en kopi af et dokument på det tidspunkt, hvor filen deles. Hvis dokumentet ændres og deles igen som en vedhæftet fil i skyen, bevares den ændrede version også. Hvis filen ændres og deles igen, bevares en ny kopi af filen som en ny version.
 

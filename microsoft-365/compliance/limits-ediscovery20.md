@@ -1,5 +1,5 @@
 ---
-title: grænser for eDiscovery (Premium)
+title: Grænser for eDiscovery (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,17 +15,19 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
-ms.openlocfilehash: 599f57ab863ab6d82140fa473624916bd2f26ac1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der er gældende for eDiscovery-løsningen (Premium) i Microsoft 365.
+ms.openlocfilehash: 07977b80ba0ce55c6d0e6b179955cfa959eaa5c8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942507"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999756"
 ---
 # <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
-I denne artikel beskrives grænserne i Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+I denne artikel beskrives grænserne i Microsoft Purview eDiscovery(Premium)-løsningen i Microsoft 365.
 
 ## <a name="case-and-review-set-limits"></a>Grænser for sags- og gennemgangssæt
 
@@ -66,7 +68,7 @@ I følgende tabel vises indekseringsgrænserne i eDiscovery (Premium).
 
 ## <a name="search-limits"></a>Søgegrænser
 
-De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger [under Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
+De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger under [Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
