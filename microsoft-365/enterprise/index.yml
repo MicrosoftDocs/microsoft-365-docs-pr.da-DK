@@ -1,0 +1,80 @@
+### YamlMime:Hub
+title: Microsoft 365 til virksomhedsdokumentation og -ressourcer
+summary: De bedste produktivitetsapps med intelligente cloudtjenester, der transformerer den måde, du arbejder på.
+brand: m365
+metadata:
+  title: Microsoft 365 til virksomhedsdokumentation og -ressourcer
+  description: Få mere at vide om produktdokumentationen og de ressourcer, der er tilgængelige for Microsoft 365 for enterprise til it-professionelle, informationsmedarbejdere og partnere.
+  services: service
+  ms.prod: microsoft-365-enterprise
+  ms.service: O365-seccomp
+  ms.topic: hub-page
+  ms.collection:
+  - M365-subscription-management
+  - Adm_TOC
+  author: robmazz
+  ms.author: robmazz
+  ms.date: 07/28/2020
+  ms.openlocfilehash: 4096920e940152fc75ed473b6ef9bc70cfd1171d
+  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64937625"
+highlightedContent:
+  items:
+  - title: Få mere at vide om Microsoft 365 for enterprise
+    itemType: get-started
+    url: microsoft-365-overview.md
+  - title: Accelerer udrulningen med FastTrack
+    itemType: quickstart
+    url: https://www.microsoft.com/fasttrack/microsoft-365
+  - title: Oplær dine it-professionelle og -administratorer
+    itemType: learn
+    url: /learn/m365/
+conceptualContent:
+  title: Få hjælp til Microsoft 365 for enterprise og andre ressourcer
+  summary: Udforsk Microsoft 365 for enterprise for at få vejledning, funktioner og tjeneste.
+  items:
+  - title: Udrul vigtige elementer
+    links:
+    - url: deploy-identity-solution-overview.md
+      itemType: how-to-guide
+      text: Identitetsinfrastruktur
+    - url: /windows/deployment/
+      itemType: get-started
+      text: Windows 10 Enterprise
+    - url: /deployoffice/plan-microsoft-365-apps
+      itemType: deploy
+      text: Microsoft 365 Apps for enterprise
+    - url: /intune/fundamentals/planning-guide
+      itemType: deploy
+      text: Microsoft Intune
+  - title: Administrer Microsoft 365 for enterprise
+    links:
+    - url: /windows/deployment/update/
+      itemType: how-to-guide
+      text: Windows 10 Enterprise
+    - url: /deployoffice/overview-update-channels
+      itemType: concept
+      text: Microsoft 365 Apps for enterprise
+    - url: /intune/apps/app-management
+      itemType: get-started
+      text: Apps med Intune
+    - url: /office365/
+      itemType: get-started
+      text: Microsoft 365-tjenester
+additionalContent:
+  sections:
+  - title: Yderligere ressourcer
+    summary: Få mere at vide om andre Microsoft 365 funktioner og ressourcer.
+    items:
+    - title: Microsoft Purview
+      summary: Hjælp din organisation med at styre oplysninger, beskytte mod risici og overholde juridiske eller lovgivningsmæssige standarder.
+      url: ../compliance/index.yml
+    - title: Microsoft 365-sikkerhed
+      summary: Beskyt din organisation på tværs af angrebsoverflader med robuste sikkerhedstjenester og -løsninger.
+      url: ../security/index.yml
+    - title: Microsoft 365 tekniske community
+      summary: Oprette forbindelse til og samarbejd med peers og eksperter i Microsoft Tech Community, og del Microsoft 365 bedste praksis.
+      url: https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365

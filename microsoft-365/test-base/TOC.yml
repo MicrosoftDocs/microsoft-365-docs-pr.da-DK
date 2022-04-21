@@ -1,42 +1,50 @@
-- name: Testbasedokumentation
+- name: Dokumentation til Test Base
   href: index.yml
 - name: Oversigt
   items:
     - name: Hvad er Test Base?
       href: overview.md
-- name: Hurtigstarter
+- name: Hurtig start
   items:
-    - name: Opret testbasekonto
+    - name: Opret en Test Base-konto
       href: createAccount.md
-    - name: Opbyg en pakke
+    - name: Test dit program på Test Base
+      items:
+        - name: Oversigt
+          href: testoverview.md
+        - name: Test binær-pakke på Test Base
+          href: testapplication.md
+        - name: Test din Intune app på Test Base
+          href: testintuneapplication.md
+        - name: Upload din Test Base-pakke (Zip)
+          href: uploadApplication.md
+    - name: Byg en pakke
       href: buildpackage.md
-    - name: Upload af en pakke
-      href: uploadApplication.md
-    - name: Upload binære & afhængigheder
+    - name: Upload binære og afhængigheder
       href: binaries.md
     - name: Angiv testopgaver
       href: testtask.md
-    - name: Angive testindstillinger
+    - name: Angiv testindstillinger
       href: testoptions.md
-    - name: Gennemse
+    - name: Vurder
       href: review.md
     - name: Pakkeretningslinje
       href: contentguideline.md
     - name: Program-/testregler
       href: rules.md
-- name: Vejledninger til at gøre dette
+- name: Sådan gør du vejledninger
   items:
-    - name: Test af serverprogram
+    - name: Serverprogram-testning
       href: server.md
-    - name: Funktionstest
+    - name: Funktionel testning
       href: functional.md
     - name: Validering af funktionsopdatering
       href: feature.md
-    - name: Regressionsanalyse af hukommelse
+    - name: Analyse af hukommelsesregression
       href: memory.md
-    - name: Regressionsanalyse for CPU
+    - name: CPU-regressionsanalyse
       href: cpu.md
-    - name: SDK-& API
+    - name: SDK og API
       href: sdkapi.md
 - name: Reference
   items:
