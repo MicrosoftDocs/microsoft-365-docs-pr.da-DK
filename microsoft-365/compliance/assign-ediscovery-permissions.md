@@ -20,14 +20,16 @@ description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relate
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 1f19c43e65993652628703f002b9537c71066013
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3fef13fe96297b426dda4d72231846a99fb03179
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946523"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001362"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Tildel eDiscovery-tilladelser på overholdelsesportalen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis du vil have, at brugerne skal bruge et af de [eDiscovery-relaterede værktøjer](ediscovery.md) på Microsoft Purview-overholdelsesportalen, skal du tildele dem de relevante tilladelser. Den nemmeste måde at gøre dette på er at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser** i Overholdelsescenter. I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
   
@@ -37,7 +39,7 @@ Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **
   
 - **eDiscovery-administrator** – En eDiscovery-administrator er medlem af rollegruppen eDiscovery Manager og kan udføre de samme indholdssøgnings- og sagsstyringsrelaterede opgaver, som en eDiscovery Manager kan udføre. En eDiscovery-administrator kan desuden:
   
-  - Få adgang til alle sager, der er angivet på siderne **eDiscovery (Standard)** og **eDiscovery (Premium)** på overholdelsesportalen.
+  - Få adgang til alle de sager, der er angivet på siderne **eDiscovery (Standard)** og **eDiscovery (Premium)** på overholdelsesportalen.
 
   - Få adgang til sagsdata i eDiscovery (Premium) for alle tilfælde i organisationen.
   
@@ -48,7 +50,7 @@ Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **
   Hvis du vil have eDiscovery-administratorer i din organisation, skal du se [Flere oplysninger](#more-information).
 
 > [!NOTE]
-> Hvis du vil analysere en brugers data ved hjælp af eDiscovery (Premium), skal brugeren (datamyndigheden over dataene) tildeles en Office 365 E5 eller Microsoft 365 E5 licens. Alternativt kan brugere med en Office 365 E1 eller en Office 365- eller Microsoft 365 E3-licens tildeles en Microsoft 365 E5 Overholdelse eller Microsoft 365 eDiscovery- og overvågningstilføjelsesprogramlicens. Administratorer, overholdelsesansvarlige eller juridisk personale, der er tildelt sager som medlemmer, og bruger eDiscovery (Premium) til at indsamle, få vist og analysere data, behøver ikke en E5-licens. Du kan finde flere oplysninger om eDiscovery-licenser (Premium) [under Abonnementer og licenser i eDiscovery (Premium)](overview-ediscovery-20.md#subscriptions-and-licensing).
+> Hvis du vil analysere en brugers data ved hjælp af eDiscovery (Premium), skal brugeren (datamyndigheden over dataene) tildeles en Office 365 E5- eller Microsoft 365 E5-licens. Alternativt kan brugere med en Office 365 E1- eller en Office 365- eller Microsoft 365 E3-licens tildeles en Microsoft 365 E5-overholdelse eller Microsoft 365 licens til tilføjelsesprogrammet eDiscovery og overvågning. Administratorer, overholdelsesansvarlige eller juridiske medarbejdere, der er tildelt sager som medlemmer og bruger eDiscovery (Premium) til at indsamle, få vist og analysere data, behøver ikke en E5-licens. Du kan finde flere oplysninger om eDiscovery-licenser (Premium) [under Abonnementer og licenser i eDiscovery (Premium)](overview-ediscovery-20.md#subscriptions-and-licensing).
   
 ## <a name="before-you-assign-permissions"></a>Før du tildeler tilladelser
 
@@ -99,7 +101,7 @@ I følgende afsnit beskrives hver af de eDiscovery-relaterede RBAC-roller, der e
 
 ### <a name="case-management"></a>Sagsstyring
 
-Denne rolle giver brugerne mulighed for at oprette, redigere, slette og styre adgangen til sager med eDiscovery (Standard) og eDiscovery (Premium) i overholdelsesportalen. Som tidligere forklaret skal en bruger tildeles rollen Sagsstyring, før du kan bruge **cmdlet'en Add-eDiscoveryCaseAdmin** til at gøre vedkommende til eDiscovery-administrator.
+Denne rolle giver brugerne mulighed for at oprette, redigere, slette og styre adgangen til eDiscovery-sager (Standard) og eDiscovery (Premium) i overholdelsesportalen. Som tidligere forklaret skal en bruger tildeles rollen Sagsstyring, før du kan bruge **cmdlet'en Add-eDiscoveryCaseAdmin** til at gøre vedkommende til eDiscovery-administrator.
 
 Du kan finde flere oplysninger under:
 
@@ -109,7 +111,7 @@ Du kan finde flere oplysninger under:
 
 ### <a name="communication"></a>Kommunikation
 
-Denne rolle giver brugerne mulighed for at administrere al kommunikation med de tilsynsførende, der er identificeret i en eDiscovery-sag (Premium). Dette omfatter oprettelse af meddelelser om venteposition, påmindelser om venteposition og eskalering til administration. Brugeren kan også spore den tilsynsførendes anerkendelse af meddelelser om venteposition og administrere adgangen til den tilsynsførende portal, der bruges af hver tilsynsførende til at spore kommunikation i de tilfælde, hvor de blev identificeret som tilsynsførende.
+Denne rolle giver brugerne mulighed for at administrere al kommunikation med de tilsynsførende, der er identificeret i en eDiscovery(Premium)-sag. Dette omfatter oprettelse af meddelelser om venteposition, påmindelser om venteposition og eskalering til administration. Brugeren kan også spore den tilsynsførendes anerkendelse af meddelelser om venteposition og administrere adgangen til den tilsynsførende portal, der bruges af hver tilsynsførende til at spore kommunikation i de tilfælde, hvor de blev identificeret som tilsynsførende.
 
 Du kan finde flere oplysninger [under Arbejd med kommunikation i eDiscovery (Premium)](managing-custodian-communications.md).
 
@@ -131,7 +133,7 @@ Du kan finde flere oplysninger [under Arbejd med vogtere i eDiscovery (Premium)]
 
 ### <a name="export"></a>eksportér
 
-Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Det giver dem også mulighed for at forberede søgeresultater til analyse i eDiscovery (Premium).
+Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Den gør det også muligt for dem at forberede søgeresultater til analyse i eDiscovery (Premium).
 
 Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-overholdelsesportalen](export-search-results.md).
 
@@ -163,7 +165,7 @@ Denne rolle giver brugerne mulighed for at udføre massefjernelse af data, der o
 
 ## <a name="adding-role-groups-as-members-of-ediscovery-cases"></a>Tilføjelse af rollegrupper som medlemmer af eDiscovery-sager
 
-Du kan tilføje rollegrupper som medlemmer af eDiscovery-sager (Standard) og eDiscovery-sager (Premium), så medlemmer af rollegrupperne kan få adgang til og udføre opgaver i de tildelte sager. De roller, der er tildelt rollegruppen, definerer, hvad medlemmer af rollegruppen kan gøre. Hvis du derefter tilføjer en rollegruppe som medlem af sagen, kan medlemmerne få adgang til og udføre disse opgaver i en bestemt sag. Du kan få flere oplysninger om tilføjelse af rollegrupper som medlemmer af sager i:
+Du kan tilføje rollegrupper som medlemmer af eDiscovery-sager (Standard) og eDiscovery (Premium), så medlemmer af rollegrupperne kan få adgang til og udføre opgaver i de tildelte sager. De roller, der er tildelt rollegruppen, definerer, hvad medlemmer af rollegruppen kan gøre. Hvis du derefter tilføjer en rollegruppe som medlem af sagen, kan medlemmerne få adgang til og udføre disse opgaver i en bestemt sag. Du kan få flere oplysninger om tilføjelse af rollegrupper som medlemmer af sager i:
 
 - [Kom i gang med eDiscovery (Standard)](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-ediscovery-standard-case)
 
@@ -191,7 +193,7 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
 
   - Hvis en person, der er det eneste medlem af en eDiscovery-sag, forlader organisationen, kan ingen (herunder medlemmer af rollegruppen Organisationsadministration eller et andet medlem af rollegruppen eDiscovery Manager) få adgang til denne eDiscovery-sag, fordi de ikke er medlem af en sag. I denne situation er der ingen måde at få adgang til dataene på i dette tilfælde. Men da en eDiscovery-administrator kan få adgang til alle eDiscovery-sager i organisationen, kan vedkommende få vist sagen og tilføje sig selv eller en anden eDiscovery-administrator som medlem af sagen.
 
-  - Da en eDiscovery-administrator kan få vist og få adgang til alle sager med eDiscovery (Standard) og eDiscovery (Premium), kan de overvåge og overvåge alle sager og tilknyttede søgninger efter overholdelse af angivne standarder. Dette kan hjælpe med at forhindre misbrug af søgninger i overholdelse af angivne standarder eller eDiscovery-sager. Og da eDiscovery-administratorer kan få adgang til potentielt følsomme oplysninger i resultaterne af en søgning efter overholdelse, skal du begrænse antallet af personer, der er eDiscovery-administratorer.
+  - Da en eDiscovery-administrator kan få vist og få adgang til alle eDiscovery- (Standard) og eDiscovery(Premium)-sager, kan de overvåge og overvåge alle sager og tilknyttede søgninger efter overholdelse af angivne standarder. Dette kan hjælpe med at forhindre misbrug af søgninger i overholdelse af angivne standarder eller eDiscovery-sager. Og da eDiscovery-administratorer kan få adgang til potentielt følsomme oplysninger i resultaterne af en søgning efter overholdelse, skal du begrænse antallet af personer, der er eDiscovery-administratorer.
 
 - **Kan jeg tilføje en gruppe som medlem af rollegruppen eDiscovery Manager?** Som tidligere forklaret kan du tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery Managers i rollegruppen eDiscovery Manager ved hjælp af cmdlet'en **Add-RoleGroupMember** i Security & Compliance Center PowerShell. Du kan f.eks. køre følgende kommando for at føje en mailaktiveret sikkerhedsgruppe til rollegruppen eDiscovery Manager. 
 

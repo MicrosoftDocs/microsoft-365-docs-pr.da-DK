@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: cbd9bdb73dc69da5e36e0fb9c3ff2ff15b5269a4
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: ad2701e10e6b71f6fdb6a7d9ccf4a6b795a38b94
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882258"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65014996"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
 
@@ -33,6 +33,7 @@ Dashboardet Microsoft 365 Rapporter viser dig aktivitetsoversigten på tværs af
 ## <a name="how-to-get-to-the-microsoft-teams-user-activity-report"></a>Sådan får du adgang til rapporten over Microsoft Teams brugeraktivitet
 
 1. I Administration skal du gå til siden **Rapportanvendelse**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank"></a>
+
 2. Klik på knappen **Vis mere** på Microsoft Teams aktivitetskortet på startsiden for dashboardet.
 
 ## <a name="interpret-the-microsoft-teams-user-activity-report"></a>Fortolkning af rapporten over Microsoft Teams brugeraktivitet
@@ -53,7 +54,7 @@ For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de s
 |Brugernavn  <br/> |Brugerens mailadresse. Du kan få vist den faktiske mailadresse eller gøre dette felt anonymt.   <br/> |
 |Lejernavn  <br/> |Navnet på en intern eller ekstern lejer, hvor en bruger tilhører.   <br/> <br/> Hvis en bruger tilhører en ekstern lejer, beregnes tilsvarende datamålepunkter (f.eks. postmeddelelser, svarmeddelelser osv.) på baggrund af deres interaktioner i delte kanaler i administratorens lejer. Interaktioner, der udføres af brugeren i deres egen lejer (uden for delte kanaler for den angivne lejer), tages ikke i betragtning som administratorforbrugsrapport for den angivne lejer.  |
 |Lejernavne for delte kanaler   <br/> |Navnene på interne eller eksterne lejere på delte kanaler, hvor brugeren deltog.   <br/> |
-|Kanalmeddelelser   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en teamchat i den angivne tidsperiode.  <br/> |
+|Kanalmeddelelser   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en teamchat i den angivne tidsperiode.   <br/> |
 |Indlæg   <br/> |Antallet af meddelelser i alle kanaler i den angivne tidsperiode <br/> |
 |Svar   <br/> |Antallet af besvarede meddelelser i alle kanaler i den angivne tidsperiode. <br/> |
 |Vigtige meddelelser    <br/> |Antallet af hastemeddelelser i den angivne tidsperiode. <br/> |

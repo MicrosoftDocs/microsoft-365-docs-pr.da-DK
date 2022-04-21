@@ -1,6 +1,7 @@
 ---
 title: Politikker for kommunikation med overholdelse af angivne standarder
 description: Få mere at vide om politikker for overholdelse af kommunikation.
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, kommunikation
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -18,21 +19,23 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 25a8a25497485932ce0aeb12700af1557b4cea29
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 47c7ddbc5ce935e8b9fedb7682daa6af468b66b4
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705424"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65015018"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="policies"></a>Politikker
 
 > [!IMPORTANT]
-> Brug af PowerShell til at oprette og administrere politikker for kommunikation med overholdelse af angivne standarder understøttes ikke. Hvis du vil oprette og administrere disse politikker, skal du bruge kontrolelementerne til administration af politikker i [Microsoft 365 løsning til kommunikation med overholdelse af angivne standarder](https://compliance.microsoft.com/supervisoryreview).
+> Brug af PowerShell til at oprette og administrere politikker for kommunikation med overholdelse af angivne standarder understøttes ikke. Hvis du vil oprette og administrere disse politikker, skal du bruge kontrolelementerne til administration af politikker i [kommunikationsoverholdelsesløsningen](https://compliance.microsoft.com/supervisoryreview).
 
-Du opretter politikker for overholdelse af kommunikation for Microsoft 365 organisationer i Microsoft 365 Overholdelsescenter. Politikker for kommunikation med overholdelse af angivne standarder definerer, hvilken kommunikation og hvilke brugere der skal gennemses i din organisation, definerer, hvilke brugerdefinerede betingelser kommunikationen skal opfylde, og angiver, hvem der skal udføre korrekturer. Brugere, der er tildelt rollen *Administrator af kommunikationsoverholdelse*, kan konfigurere politikker, og alle, der har denne rolle tildelt, kan få adgang til siden **Kommunikation med overholdelse af angivne standarder** og globale indstillinger i Microsoft 365 Overholdelsescenter. Hvis det er nødvendigt, kan du eksportere oversigten over ændringer til en politik til en .csv (kommaseparerede værdier), der også indeholder status for beskeder, der afventer gennemsyn, eskalerede elementer og løste elementer. Politikker kan ikke omdøbes og kan slettes, når der ikke længere er brug for dem.
+Du opretter politikker for overholdelse af kommunikation for Microsoft 365 organisationer på Microsoft Purview-overholdelsesportalen. Politikker for kommunikation med overholdelse af angivne standarder definerer, hvilken kommunikation og hvilke brugere der skal gennemses i din organisation, definerer, hvilke brugerdefinerede betingelser kommunikationen skal opfylde, og angiver, hvem der skal udføre korrekturer. Brugere, der er tildelt rollen *Administrator af kommunikationsoverholdelse* , kan konfigurere politikker, og alle, der har denne rolle tildelt, kan få adgang til siden **Kommunikation med overholdelse af angivne standarder** og globale indstillinger på Microsoft Purview-overholdelsesportalen. Hvis det er nødvendigt, kan du eksportere oversigten over ændringer til en politik til en .csv (kommaseparerede værdier), der også indeholder status for beskeder, der afventer gennemsyn, eskalerede elementer og løste elementer. Politikker kan ikke omdøbes og kan slettes, når der ikke længere er brug for dem.
 
 ## <a name="policy-templates"></a>Politikskabeloner
 
@@ -103,13 +106,16 @@ Brugerrapporterede meddelelser fra Teams chats er de eneste meddelelser, der beh
 
 Administratorer skal straks tildele brugerdefinerede korrekturlæsere til denne politik efter behov for din organisation. Dette kan omfatte korrekturlæsere, f.eks. overholdelsesansvarlige, risikoansvarlige eller medlemmer af hr-afdelingen. Hvis du vil tilpasse korrekturlæserne for chatmeddelelser, der er sendt som brugerrapporterede meddelelser, skal du udføre følgende trin:
 
-1. Log på [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com/) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
-2. I Microsoft 365 Overholdelsescenter skal du gå til **Kommunikation med overholdelse af angivne standarder**.
+1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+2. Gå til **Kommunikation med overholdelse af angivne standarder på portalen for overholdelse af angivne standarder**.
 3. Under fanen **Politik** skal du vælge politikken *Brugerrapporterede meddelelser* og vælge **Rediger**.
 4. I ruden **Overvåg for brugerrapporterede meddelelser** skal du tildele validatorer til politikken. Korrekturlæsere skal have postkasser, der hostes på Exchange Online. Når validatorer føjes til en politik, modtager de automatisk en mail, der giver dem besked om tildelingen til politikken og indeholder links til oplysninger om korrekturprocessen.
 5. Vælg **Gem**.
 
-Hvis du vil deaktivere brugere fra at rapportere Teams meddelelser med *indstillingen Rapportér et problem*, skal du deaktivere indstillingen **Slutbrugerrapportering** i [Teams Administration](/microsoftteams/manage-teams-in-modern-portal).
+Hvis du vil deaktivere brugere fra at rapportere Teams meddelelser med *indstillingen Rapportér et problem*, skal du deaktivere indstillingen **Slutbrugerrapportering** i [Teams Administration](/microsoftteams/manage-teams-in-modern-portal). 
+
+>[!IMPORTANT]
+>Hvis du bruger PowerShell til at deaktivere indstillingen **Slutbrugerrapportering** i Teams Administration, skal du bruge [Microsoft Teams cmdlet'er modul version 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) eller nyere.
 
 ## <a name="storage-limit-notification-preview"></a>Storage meddelelse om grænse (prøveversion)
 
@@ -140,7 +146,7 @@ Som standard vises betingelsen **Retning er** , og den kan ikke fjernes. Indstil
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper som en hjælp til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
+Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
 
 - Finansielle
 - Medicinsk og sundhed
@@ -186,7 +192,7 @@ De indbyggede og globale klassificeringer giver ikke en udtømmende liste over b
 > [!NOTE]
 > Politikker, der bruger klassificeringer, undersøger og evaluerer meddelelser med et ordantal på seks eller flere. Meddelelser, der indeholder mindre end seks ord, evalueres ikke i politikker ved hjælp af klassificeringer. For at identificere og reagere på kortere meddelelser, der indeholder upassende indhold, anbefaler vi, at du inkluderer en brugerdefineret nøgleordsordbog til overvågning af politikker for kommunikation med overholdelse af angivne standarder for denne type indhold.
 
-Du kan finde oplysninger om klassificeringer, der kan oplæres i Microsoft 365, under [Introduktion til klassificeringer, der kan oplæres](classifier-get-started-with.md).
+Du kan finde oplysninger om klassificeringer, der kan oplæres, under [Introduktion til klassificeringer, der kan oplæres](classifier-get-started-with.md).
 
 ### <a name="optical-character-recognition-ocr"></a>Optisk tegngenkendelse (OCR)
 
@@ -269,15 +275,15 @@ I forbindelse med politikker for kommunikation med overholdelse af regler og sta
 > [!NOTE]
 > Tærskel for beskedpolitik for udløserindstillinger for aktiviteter understøtter en minimumværdi på 3 eller højere for politikker for kommunikation med overholdelse af angivne standarder.
 
-Du kan ændre standardindstillingerne for udløsere for antal aktiviteter, periode for aktiviteterne og for bestemte brugere i beskedpolitikker på siden **Politikker for beskeder** i Microsoft 365 Overholdelsescenter.
+Du kan ændre standardindstillingerne for udløsere for antallet af aktiviteter, perioden for aktiviteterne og for bestemte brugere i beskedpolitikker på siden **Beskedpolitikker** på Microsoft Purview-overholdelsesportalen.
 
 ### <a name="change-the-severity-level-for-an-alert-policy"></a>Skift alvorsgradsniveauet for en beskedpolitik
 
 Hvis du vil ændre det alvorsgradsniveau, der er tildelt i en beskedpolitik for en bestemt politik for overholdelse af angivne standarder for kommunikation, skal du udføre følgende trin:
 
-1. Log på [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. I Microsoft 365 Overholdelsescenter skal du gå til **Politikker**.
+2. Gå til **Politikker** på Microsoft Purview-overholdelsesportalen.
 
 3. Vælg **Office 365 besked** på siden **Politikker** for at åbne siden **Politikker for beskeder**.
 

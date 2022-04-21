@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere data fra Workplace fra Facebook, som er arkiveret på Veritas' Merge1-websted, i Microsoft 365. Konfiguration af en connector kræver, at du arbejder med Veritas Denne connector giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk venteposition, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 888697c6b5e340ebe82cd9466a260dc046622ee1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0dbd1bfaeea6a42db03793941b1fea894ee391b5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943925"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001450"
 ---
 # <a name="set-up-a-connector-to-archive-workplace-from-facebook-data"></a>Konfigurer en connector til arkivering af arbejdsplads fra Facebook-data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug en Veritas-connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Arbejdsplads fra Facebook til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [arbejdsplads fra Facebook-connector](https://globanet.com/workplace/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. chats, vedhæftede filer, indlæg og videoer fra Arbejdsplads, til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
@@ -49,7 +51,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Den bruger, der opretter workplace fra Facebook-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-workplace-from-facebook-connector"></a>Trin 1: Konfigurer arbejdsplads fra Facebook-connector
 

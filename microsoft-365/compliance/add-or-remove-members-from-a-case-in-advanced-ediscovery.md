@@ -15,22 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du tilføjer eller fjerner de medlemmer, der har adgang til en sag, når du administrerer en eDiscovery-sag (Premium).
+description: Få mere at vide om, hvordan du tilføjer eller fjerner de medlemmer, der kan få adgang til en sag, når du administrerer en eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 9586fd0f606c3f95cda19ca9d6ae036bc23763dc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ae0404199506d5da18fb1579fbe6a125350afcde
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943189"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001670"
 ---
 # <a name="add-or-remove-members-from-a-case"></a>Tilføj eller fjern medlemmer fra en sag
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Du kan tilføje eller fjerne medlemmer for at administrere, hvem der har adgang til sagen. Før et medlem kan få adgang til en eDiscovery-sag (Premium) (og udføre opgaver i dette tilfælde), skal du dog føje brugeren til rollegruppen eDiscovery Manager på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](./assign-ediscovery-permissions.md).
 
-1. Gå til den sag, du vil føje et medlem til, på siden **eDiscovery (Premium**).
+1. På siden **eDiscovery (Premium)** skal du gå til den sag, du vil føje et medlem til.
 
-2. Klik på fanen **Indstillinger**, og klik derefter på **Vælg** i feltet **Adgang & tilladelser**.
+2. Klik på fanen **Indstillinger,** og klik derefter på **Vælg** i feltet **Adgang & tilladelser** .
 
 3. Under **Administrer medlemmer** skal du klikke på **Tilføj** for at føje medlemmer til sagen. Du kan også vælge at føje en rollegruppe til sagen ved at klikke på  **Tilføj** under **Administrer rollegrupper**.
 

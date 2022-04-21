@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: I denne artikel får du mere at vide om de bedste fremgangsmåder til deling af filer og mapper med ikke-godkendte brugere.
-ms.openlocfilehash: ca6b75ba036aac826d657c8c907b512fe9d1f87a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 43db59e0380f99a2312fd803970a73013445504a
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948369"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65015040"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Bedste praksis for deling af filer og mapper med ikke-godkendte brugere
 
@@ -47,6 +47,8 @@ Sådan angiver du en udløbsdato for alle links på tværs af organisationen
 1. Under **Vælg indstillinger for udløb og tilladelser for alle links** skal du markere afkrydsningsfeltet **Disse links skal udløbe inden for dette antal dage** .</br>
    ![Skærmbillede af SharePoint udløbsindstillinger for alle links på organisationsniveau.](../media/sharepoint-organization-anyone-link-expiration.png)
 1. Skriv et antal dage i feltet, og klik derefter på **Gem**.
+
+Hvis du ændrer udløbstiden, beholder eksisterende links deres aktuelle udløbstid, hvis den nye indstilling er længere, eller opdateres til den nye indstilling, hvis den nye indstilling er kortere.
 
 Sådan angiver du en udløbsdato for links til alle på et bestemt websted
 
@@ -101,7 +103,7 @@ Sådan angiver du standardlinket til fil- og mappedeling for et bestemt websted
 
 ## <a name="prevent-unauthenticated-sharing-of-sensitive-content"></a>Undgå ikke-godkendt deling af følsomt indhold
 
-Du kan bruge [Microsoft Purview DLP (forebyggelse af datatab)](../compliance/dlp-learn-about-dlp.md) til at forhindre ikke-godkendt deling af følsomt indhold. Forebyggelse af datatab kan udføre handlinger på baggrund af en fils følsomhedsmærkat, opbevaringsmærkat eller følsomme oplysninger i selve filen.
+Du kan bruge [Microsoft Purview DLP (Data Loss Prevention)](../compliance/dlp-learn-about-dlp.md) til at forhindre ikke-godkendt deling af følsomt indhold. Forebyggelse af datatab kan udføre handlinger på baggrund af en fils følsomhedsmærkat, opbevaringsmærkat eller følsomme oplysninger i selve filen.
 
 Sådan opretter du en DLP-regel
 1. I Microsoft Purview Administration skal du gå til [siden til forebyggelse af datatab](https://compliance.microsoft.com/datalossprevention).

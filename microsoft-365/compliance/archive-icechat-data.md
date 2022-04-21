@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere data fra ICE Chat-værktøjet i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 51c79127894f506f2f0f59a9c883f1b4c4bb5f24
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 55af0567fc5cb8dbdeb571209fb7d9f863561900
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937317"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001692"
 ---
 # <a name="set-up-a-connector-to-archive-ice-chat-data"></a>Konfigurer en connector til arkivering af ICE Chat-data
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]V
 
 Brug en oprindelig connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere chatdata for finansielle tjenester fra ICE Chat-samarbejdsværktøjet. Når du har konfigureret en connector, opretter den forbindelse til organisationens SFTP-websted (ICE Chat secure FTP) én gang om dagen, konverterer indholdet af chatbeskeder til et mailformat og importerer derefter disse elementer til postkasser i Microsoft 365.
 
