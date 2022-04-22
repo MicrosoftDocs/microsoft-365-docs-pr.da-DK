@@ -1,5 +1,5 @@
 ---
-title: Administrer dine tilladte og blokerer fra lejerens tilladelses-/blokeringsliste
+title: Administrer dine tilladelser og blokke på listen over tilladte/blokerede lejere
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,155 +14,159 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan de administrerer tilladelses- og blokeringsblokke i lejerens tilladelses-/blokeringsliste i sikkerhedsportalen.
+description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e27da44a38162955df252e29c1754c93a2dc8967
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0ed23cf7bfe8db25ed216859c434e86f14710db8
+ms.sourcegitcommit: 363bdc517bd2564c6420cf21f352e97079f950e0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590072"
+ms.lasthandoff: 04/22/2022
+ms.locfileid: "65031810"
 ---
-# <a name="manage-the-tenant-allowblock-list"></a>Administrer lejerens tilladelses-/blokeringsliste
+# <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
 >
-> Nogle af de funktioner, der er beskrevet i denne artikel, er i Preview, kan blive ændret og er ikke tilgængelige i alle organisationer.
+> Nogle af de funktioner, der er beskrevet i denne artikel, er i prøveversion, kan ændres og er ikke tilgængelige i alle organisationer.
 >
-> Hvis din organisation ikke har spoof-funktionerne som beskrevet i denne artikel, kan du se den ældre spoof-administrationsoplevelse i Administrer spoof-afsendere ved hjælp af efterlignet intelligenspolitik og [efterlignet intelligensindsigt i EOP](walkthrough-spoof-intelligence-insight.md).
+> Hvis din organisation ikke har spoof-funktionerne som beskrevet i denne artikel, kan du se den ældre spoof-administrationsoplevelse på [Administrer spoofed-afsendere ved hjælp af spoof intelligence-politikken og indsigt i spoof intelligence i EOP](walkthrough-spoof-intelligence-insight.md).
 
-I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser, kan du være uenig i EOP-filtreringskriteriet. En god meddelelse kan f.eks. være markeret som dårlig (en falsk positiv), eller en forkert meddelelse kan blive tilladt via (en falsk negativ).
+I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser kan du være uenig i dommen om EOP-filtrering. En god meddelelse kan f.eks. være markeret som dårlig (et falsk positivt), eller der kan tillades en forkert meddelelse via (falsk negativ).
 
-Lejerens tilladelses-/blokeringsliste i Microsoft 365 Defender-portalen giver dig en metode til manuelt at tilsidesætte Microsoft 365 dine filtreringskriterier. Lejerens tilladelses-/blokeringsliste bruges under mailflow for indgående meddelelser (gælder ikke for meddelelser inden for organisationen) og på tidspunktet for brugerklik. Du kan angive følgende typer tilsidesættelser:
+Listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen giver dig mulighed for manuelt at tilsidesætte de Microsoft 365 filtreringsdomme. Lejerlisten tillad/bloker bruges under mailflow til indgående meddelelser (gælder ikke for meddelelser i organisationen) og på tidspunktet for brugerens klik. Du kan angive følgende typer tilsidesættelser:
 
 - URL-adresser, der skal blokeres.
 - Filer, der skal blokeres.
 - Afsendermails eller domæner, der skal blokeres.
-- Spoofed afsendere at tillade eller blokere. Hvis du tilsidesætter tilladelses- eller blokeringsindsigt i efterlignet intelligensindsigt, bliver den [spoofede](learn-about-spoof-intelligence.md) afsender en manuel tilladelse eller blokering, der kun vises på fanen **Spoof** på lejerens tilladelses-/blokeringsliste. Du kan også manuelt oprette tillade eller blokere poster for efterlignede afsendere her, før de bliver registreret af efterlignet intelligens.
-- URL-adresser til at tillade.
+- Forfalskede afsendere, der skal tillades eller blokeres. Hvis du tilsidesætter den tilladte eller blokerede dom i [indsigten spoof intelligence](learn-about-spoof-intelligence.md), bliver den spoofede afsender en manuel tilladelses- eller blokindtastning, der kun vises under fanen **Spoof** på listen Over tilladte/blokerede lejere. Du kan også manuelt oprette tillad eller blokere poster for spoofed afsendere her, før de registreres af spoof intelligence.
+- URL-adresser, der skal tillades.
 - Filer, der skal tillades.
-- Afsendermails eller domæner, der skal tillades.
+- Sender mails eller domæner, der skal tillades.
 
-Denne artikel beskriver, hvordan du konfigurerer poster på listen over tilladte/blokerede lejere i Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
+I denne artikel beskrives det, hvordan du konfigurerer poster på listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender på <https://security.microsoft.com>. For at gå direkte til siden **med lejerens tilladelses-/blokeringslister** skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **med lister over tilladte/blokerede lejere** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
-- Du kan angive filer ved hjælp af filens SHA256-hash-værdi. For at finde SHA256-hash-værdien for en fil i Windows skal du køre følgende kommando i en kommandoprompt:
+- Du angiver filer ved hjælp af filens SHA256-hashværdi. Hvis du vil finde SHA256-hashværdien for en fil i Windows, skal du køre følgende kommando i en kommandoprompt:
 
   ```console
   certutil.exe -hashfile "<Path>\<Filename>" SHA256
   ```
 
-  En eksempelværdi er `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3a`. Værdier for perceptuel hash (pHash) understøttes ikke.
+  En eksempelværdi er `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3a`. Perceptuelle hashværdier (pHash) understøttes ikke.
 
-- De tilgængelige URL-værdier er beskrevet i [URL-syntaksen for afsnittet Lejers tilladelses-/blokeringsliste](#url-syntax-for-the-tenant-allowblock-list) senere i denne artikel.
+- De tilgængelige URL-værdier er beskrevet i [URL-syntaksen for afsnittet Tillad/bloker](#url-syntax-for-the-tenant-allowblock-list) lejer senere i denne artikel.
 
-- Lejerens tilladelses-/blokeringsliste tillader maksimalt 500 poster for afsendere, 500 poster for URL-adresser, 500 poster for filhashes og 1024 poster til spoofing (spoofed afsendere).
+- Listen over tilladte/blokerede lejere tillader maksimalt 500 poster for afsendere, 500 poster for URL-adresser, 500 poster for filhash og 1024 poster for spoofing (spoofede afsendere).
 
-- Det maksimale antal tegn for hver indtastning er:
+- Det maksimale antal tegn for hver post er:
   - Filhashes = 64
-  - URL = 250
+  - URL-adresse = 250
 
-- En post bør være aktiv inden for 30 minutter.
+- En post skal være aktiv inden for 30 minutter.
 
-- Som standard udløber posterne på lejerens tilladelses-/blokeringsliste efter 30 dage. Du kan angive en dato eller indstille den til aldrig at udløbe.
+- Poster på listen over tilladte/blokerede lejere udløber som standard efter 30 dage. Du kan angive en dato eller indstille dem til aldrig at udløbe.
 
-- Hvis du vil oprette Exchange Online forbindelse til PowerShell, [skal du Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du Forbind Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Du skal have tildelt tilladelser i Microsoft 365 Defender, før du kan udføre procedurerne i denne artikel:
+- Du skal have tildelt tilladelser på Microsoft 365 Defender-portalen, før du kan udføre procedurerne i denne artikel:
   - **Afsendere, URL-adresser og filer**:
-    - Hvis du vil tilføje og fjerne værdier fra lejerens tilladelses-/blokeringsliste, skal du være medlem af rollegrupperne  Organisationsadministration **, Sikkerhedsadministrator** eller Sikkerhedsoperator, eller du får tildelt rollen **Lejer AllowBlockList Manager**. 
-    - For skrivebeskyttet adgang til lejerens tilladelses-/blokeringsliste skal du være medlem af rollegrupperne **Global læser** **eller** Sikkerhedslæser.
+    - Hvis du vil tilføje og fjerne værdier fra listen over tilladte/blokerede lejere, skal du være medlem af 
+      -   **Rollegruppen Organisationsadministration** eller **Sikkerhedsadministrator** (**rolle som sikkerhedsadministrator**)
+      -    **Rollegruppe for sikkerhedsoperator** (**Lejer allowBlockList Manager**).
+    - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af 
+      - **Rollegruppe for global læser**
+      - **Rollegruppe for sikkerhedslæser**
   - **Spoofing**: En af følgende kombinationer:
     - **Organisationsadministration**
-    - **Sikkerhedsadministrator** <u>og</u> **kun visningskonfiguration eller** **kun visningsadministration af organisationen**.
+    - **Konfiguration af sikkerhedsadministrator** <u>og</u> kun **visning** eller **kun visning af organisationsadministration**.
 
-  Du kan finde flere [oplysninger i Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
+  Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
   >
-  > - Hvis du føjer brugere til den Azure Active Directory rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser og tilladelser til andre  funktioner Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   >
-  > - **Rollegruppen Skrivebeskyttet** organisationsadministration i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) også skrivebeskyttet adgang til funktionen.
+  > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
-## <a name="configure-the-tenant-allowblock-list"></a>Konfigurer lejerens tilladelses-/blokeringsliste
+## <a name="configure-the-tenant-allowblock-list"></a>Konfigurer listen over tilladte/blokerede lejere
 
-### <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender portalen
+### <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender-portalen
 
-I portalen Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til Politikker **& regler** \>  \> lejerens tilladelse **/blokeringslister** i **sektionen** Regler. For at gå direkte til siden **med lejerens tilladelses-/blokeringslister** skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
+I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Lejer tillad/bloker lister** i afsnittet **Regler**. Hvis du vil gå direkte til siden **med lister over tilladte/blokerede lejere** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
-Hvis du vil tilføje alle blokke, [skal du se Tilføj blokke på lejerens tilladelses-/blokeringsliste](manage-tenant-blocks.md).
+Hvis du vil tilføje alle blokke, skal du se [Tilføj blokke på listen over tilladte/blokerede lejere](manage-tenant-blocks.md).
 
-Hvis du vil tilføje alle, der tillader det, [skal du se Tilføj tillader i lejerens tilladelses-/blokeringsliste](manage-tenant-allows.md).
+Hvis du vil tilføje alle tillader, skal du se [Tilføj tillader på listen over tilladte/blokerede lejere](manage-tenant-allows.md).
 
-Hvis du vil ændre og fjerne alle blokke og tillader det, [skal du se Rediger og fjern poster på lejerens tilladelses-/blokeringsliste](modify-remove-entries-tenant-allow-block.md).
+Hvis du vil redigere og fjerne alle blokke og tillader, skal du se [Rediger og fjern poster på listen over tilladte/blokerede lejere](modify-remove-entries-tenant-allow-block.md).
 
 ### <a name="use-exchange-online-powershell-or-standalone-eop-powershell"></a>Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell
 
-Hvis du vil administrere alle tilladte og blokerede elementer, skal du se Tilføj blokke på lejerens tilladelses- [/](manage-tenant-blocks.md)blokeringsliste, Tilføj tillader i lejerens tilladelses [-/](manage-tenant-allows.md)blokeringsliste og Rediger og fjern poster på lejerens tilladelses [-/blokeringsliste](modify-remove-entries-tenant-allow-block.md).
+Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke på listen Over tilladte/blokerede lejere](manage-tenant-blocks.md), [Tilføj tillader på listen Over tilladte/blokerede lejere](manage-tenant-allows.md) og [Rediger og fjern poster på lejerlisten tillad/bloker](modify-remove-entries-tenant-allow-block.md).
 
-## <a name="view-entries-in-the-tenant-allowblock-list"></a>Få vist poster på lejerens tilladelses-/blokeringsliste
+## <a name="view-entries-in-the-tenant-allowblock-list"></a>Vis poster på listen over tilladte/blokerede lejere
 
-1. I portalen Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til Politikker **& regler** \>  \> lejerens tilladelse **/blokeringslister** i **sektionen** Regler. For at gå direkte til siden **med lejerens tilladelses-/blokeringslister** skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Lejer tillad/bloker lister** i afsnittet **Regler**. Hvis du vil gå direkte til siden **med lister over tilladte/blokerede lejere** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
-2. Vælg den ønskede fane. De tilgængelige kolonner afhænger af den valgte fane:
+2. Vælg den ønskede fane. De kolonner, der er tilgængelige, afhænger af den fane, du har valgt:
 
    - **Afsendere**:
      - **Værdi**: Afsenderens domæne eller mailadresse.
-     - **Handling**: Værdien **Tillad** eller **Bloker**.
+     - **Handling**: Værdien **Allow** eller **Block**.
      - **Ændret af**
      - **Senest opdateret**
      - **Fjern den**
      - **Bemærkninger**
    - **URL-adresser**:
      - **Værdi**: URL-adressen.
-     - **Handling**: Værdien **Tillad** eller **Bloker**.
+     - **Handling**: Værdien **Allow** eller **Block**.
      - **Ændret af**
      - **Senest opdateret**
      - **Fjern den**
      - **Bemærkninger**
    - **Filer**
      - **Værdi**: Filhash.
-     - **Handling**: Værdien **Tillad** eller **Bloker**.
+     - **Handling**: Værdien **Allow** eller **Block**.
      - **Ændret af**
      - **Senest opdateret**
      - **Fjern den**
      - **Bemærkninger**
    - **Spoofing**
-     - **Spoofed bruger**
-     - **Afsendende infrastruktur**
+     - **Poofed bruger**
+     - **Sender infrastruktur**
      - **Spoof-type**: Værdien **Intern** eller **Ekstern**.
-     - **Handling**: Værdien **Bloker** eller **Tillad**.
+     - **Handling**: Værdien **Block** eller **Allow**.
 
    Du kan klikke på en kolonneoverskrift for at sortere i stigende eller faldende rækkefølge.
 
-   Du kan klikke på **Gruppe** for at gruppere resultaterne. De tilgængelige værdier afhænger af den valgte fane:
+   Du kan klikke på **Gruppér** for at gruppere resultaterne. De værdier, der er tilgængelige, afhænger af den fane, du har valgt:
 
    - **Afsendere**: Du kan gruppere resultaterne efter **handling**.
    - **URL-adresser**: Du kan gruppere resultaterne efter **handling**.
    - **Filer**: Du kan gruppere resultaterne efter **handling**.
-   - **Spoofing**: Du kan gruppere resultaterne efter **handlings-** **eller spoof-type**.
+   - **Spoofing**: Du kan gruppere resultaterne efter **Handling** eller **Spoof-type**.
 
-   Klik **på** Søg, angiv hele eller dele af en værdi, og tryk derefter på Enter for at finde en bestemt værdi. Klik på Ryd søgeikon, når du ![er færdig.](../../media/m365-cc-sc-close-icon.png) **Ryd søgning**.
+   Klik på **Søg**, indtast hele eller en del af en værdi, og tryk derefter på ENTER for at finde en bestemt værdi. Når du er færdig, skal du klikke på ![Ikonet Ryd søgning.](../../media/m365-cc-sc-close-icon.png) **Ryd søgning**.
 
-   Klik **på Filtrer** for at filtrere resultaterne. De værdier, der er tilgængelige i pop **op-meddelelsesfilteret** , som vises, afhænger af den valgte fane:
+   Klik på **Filtrer** for at filtrere resultaterne. De værdier, der er tilgængelige i pop **op-vinduet Filter** , som vises, afhænger af den fane, du har valgt:
 
    - **Afsendere**
      - **Handling**
      - **Udløber aldrig**
      - **Dato for seneste opdatering**
      - **Fjern den**
-   - **URL-adresser**
+   - **Webadresser**
      - **Handling**
      - **Udløber aldrig**
      - **Dato for seneste opdatering**
@@ -176,13 +180,13 @@ Hvis du vil administrere alle tilladte og blokerede elementer, skal du se Tilfø
      - **Handling**
      - **Spoof-type**
 
-   Klik på Anvend, når du er **færdig**. Hvis du vil rydde eksisterende filtre, skal **du klikke på Filter**, og i pop **op-menuen** Filter, der vises, skal du klikke **på Ryd filtre**.
+   Klik på **Anvend**, når du er færdig. Hvis du vil rydde eksisterende filtre, skal du klikke på **Filter** og klikke på **Ryd filtre** i pop **op-vinduet Filter**, der vises.
 
-4. Klik på Tilføj, når du er **færdig**.
+4. Klik på **Tilføj**, når du er færdig.
 
-## <a name="view-sender-file-or-url-entries-in-the-tenant-allowblock-list"></a>Få vist afsender-, fil- eller URL-poster på lejerens tilladelses-/blokeringsliste
+## <a name="view-sender-file-or-url-entries-in-the-tenant-allowblock-list"></a>Få vist afsender-, fil- eller URL-adresser på listen over tilladte/blokerede lejere
 
-Hvis du vil have vist poster for blokeret afsender, fil eller URL-adresse på lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+Hvis du vil have vist afsender-, fil- eller URL-adresser på listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 
 ```powershell
 Get-TenantAllowBlockListItems -ListType <Sender | FileHash | URL> [-Entry <SenderValue | FileHashValue | URLValue>] [<-ExpirationDate Date | -NoExpiration>]
@@ -200,39 +204,39 @@ I dette eksempel returneres alle blokerede URL-adresser.
 Get-TenantAllowBlockListItems -ListType Url -Block
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
 
-## <a name="view-spoofed-sender-entries"></a>Få vist efterlignede afsenderposter
+## <a name="view-spoofed-sender-entries"></a>Vis spoofed afsenderposter
 
-Hvis du vil have vist efterlignede afsenderposter på lejerens tilladelses-/blokeringsliste, skal du bruge følgende syntaks:
+Hvis du vil have vist spoofede afsenderposter på listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 
 ```powershell
 Get-TenantAllowBlockListSpoofItems [-Action <Allow | Block>] [-SpoofType <External | Internal>
 ```
 
-I dette eksempel returneres alle efterlignede afsenderposter på lejerens liste over tilladte/blokerede afsendere.
+I dette eksempel returneres alle spooferede afsenderposter på listen over tilladte/blokerede lejere.
 
 ```powershell
 Get-TenantAllowBlockListSpoofItems
 ```
 
-I dette eksempel returneres alle tilladte efterlignede afsenderposter, der er interne.
+I dette eksempel returneres alle tilladte forfalskede afsenderposter, der er interne.
 
 ```powershell
 Get-TenantAllowBlockListSpoofItems -Action Allow -SpoofType Internal
 ```
 
-I dette eksempel returneres alle blokerede efterlignede afsenderposter, der er eksterne.
+I dette eksempel returneres alle blokerede spoofed afsenderposter, der er eksterne.
 
 ```powershell
 Get-TenantAllowBlockListSpoofItems -Action Block -SpoofType External
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-TenantAllowBlockListSpoofItems](/powershell/module/exchange/get-tenantallowblocklistspoofitems).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-TenantAllowBlockListSpoofItems](/powershell/module/exchange/get-tenantallowblocklistspoofitems).
 
-## <a name="url-syntax-for-the-tenant-allowblock-list"></a>URL-syntaks for lejerens tilladelses-/blokeringsliste
+## <a name="url-syntax-for-the-tenant-allowblock-list"></a>URL-syntaks for listen over tilladte/blokerede lejere
 
-- IPv4- og IPv6-adresser er tilladt, men TCP/UDP-porte er ikke.
+- Adresserne IPv4 og IPv6 er tilladt, men det er TCP/UDP-porte ikke.
 
 - Filtypenavne er ikke tilladt (f.eks. test.pdf).
 
@@ -240,54 +244,54 @@ Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-TenantAllowB
 
 - Værtsnavne er tilladt, hvis alle følgende sætninger er sande:
   - Værtsnavnet indeholder et punktum.
-  - Der er mindst ét tegn til venstre for perioden.
-  - Der er mindst to tegn til højre for perioden.
+  - Der er mindst ét tegn til venstre i punktumet.
+  - Der er mindst to tegn til højre for punktum.
 
-  er f.eks`t.co`. tilladt eller `contoso.` `.com` ikke tilladt.
+  Er f.eks `t.co` . tilladt, `.com` eller `contoso.` er ikke tilladt.
 
-- Understier er ikke underforståede for tillader.
+- Understier er ikke underforstået i forbindelse med tillad.
 
-  Omfatter f.eks `contoso.com` . ikke `contoso.com/a`.
+  Omfatter `contoso.com/a`f.eks. `contoso.com` ikke .
 
 - Jokertegn (*) er tilladt i følgende scenarier:
 
   - Et venstre jokertegn skal efterfølges af et punktum for at angive et underdomæne.
 
-    Er f.eks `*.contoso.com` . tilladt, `*contoso.com` er ikke tilladt.
+    Er f.eks `*.contoso.com` . tilladt. `*contoso.com` Er ikke tilladt.
 
-  - Et højre jokertegn skal følge en skråstreg (/) for at angive en sti.
+  - Et jokertegn til højre skal følge en skråstreg (/) for at angive en sti.
 
-    er f.eks`contoso.com/*`. tilladt eller `contoso.com/ab*` `contoso.com*` ikke tilladt.
+    Er f.eks `contoso.com/*` . tilladt, `contoso.com*` eller `contoso.com/ab*` er ikke tilladt.
 
-  - `*.com*` er ugyldigt (ikke et domæne, der kan løses, og højre jokertegn følger ikke en skråstreg).
+  - `*.com*` er ugyldigt (ikke et domæne, der kan isoleres, og det højre jokertegn følger ikke en skråstreg).
 
   - Jokertegn er ikke tilladt i IP-adresser.
 
 - Tildetegnet (~) er tilgængeligt i følgende scenarier:
 
-  - En venstre tilde angiver et domæne og alle underdomæner.
+  - Et venstre tilde angiver et domæne og alle underdomæner.
 
-    For eksempel `~contoso.com` omfatter `contoso.com` og `*.contoso.com`.
+    Omfatter `contoso.com` f.eks. `~contoso.com` og `*.contoso.com`.
 
-- URL-poster, der indeholder protokoller (f.eks, `http://`, `https://`eller `ftp://`), vil mislykkes, fordi URL-poster gælder for alle protokoller.
+- URL-adresser, der indeholder protokoller (f.eks. `http://`, `https://`eller `ftp://`), mislykkes, fordi URL-adresser gælder for alle protokoller.
 
-- Et brugernavn eller en adgangskode understøttes ikke og er ikke påkrævet.
+- Et brugernavn eller en adgangskode understøttes eller kræves ikke.
 
 - Anførselstegn (' eller ") er ugyldige tegn.
 
 - En URL-adresse skal indeholde alle omdirigeringer, hvor det er muligt.
 
-### <a name="url-entry-scenarios"></a>Scenarier for URL-adresseindtastning
+### <a name="url-entry-scenarios"></a>Url-adresseindtastningsscenarier
 
-Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
+Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 
 #### <a name="scenario-no-wildcards"></a>Scenarie: Ingen jokertegn
 
-**Post**: `contoso.com`
+**Indtastning**: `contoso.com`
 
 - **Tillad match**: contoso.com
 
-- **Tillad ikke match:**
+- **Tillad ikke matchet**:
 
   - abc-contoso.com
   - contoso.com/a
@@ -297,7 +301,7 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
   - www.contoso.com
   - www.contoso.com/q=a@contoso.com
 
-- **Bloker match**:
+- **Blokmatch**:
 
   - contoso.com
   - contoso.com/a
@@ -307,18 +311,18 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
   - www.contoso.com
   - www.contoso.com/q=a@contoso.com
 
-- **Bloker ikke tilsvarende**: abc-contoso.com
+- **Blok, der ikke stemmer overens**: abc-contoso.com
 
 #### <a name="scenario-left-wildcard-subdomain"></a>Scenarie: Venstre jokertegn (underdomæne)
 
-**Post**: `*.contoso.com`
+**Indtastning**: `*.contoso.com`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - www.contoso.com
   - xyz.abc.contoso.com
 
-- **Tillad ikke matchet** og **Bloker ikke tilsvarende**:
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
 
   - 123contoso.com
   - contoso.com
@@ -327,15 +331,15 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
 
 #### <a name="scenario-right-wildcard-at-top-of-path"></a>Scenarie: Højre jokertegn øverst på stien
 
-**Post**: `contoso.com/a/*`
+**Indtastning**: `contoso.com/a/*`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - contoso.com/a/b
   - contoso.com/a/b/c
   - contoso.com/a/?q=joe@t.com
 
-- **Tillad ikke matchet** og **Bloker ikke tilsvarende**:
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
 
   - contoso.com
   - contoso.com/a
@@ -344,25 +348,25 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
 
 #### <a name="scenario-left-tilde"></a>Scenarie: Venstre tilde
 
-**Post**: `~contoso.com`
+**Indtastning**: `~contoso.com`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - contoso.com
   - www.contoso.com
   - xyz.abc.contoso.com
 
-- **Tillad ikke matchet** og **Bloker ikke tilsvarende**:
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
 
   - 123contoso.com
   - contoso.com/abc
   - www.contoso.com/abc
 
-#### <a name="scenario-right-wildcard-suffix"></a>Scenarie: Højre suffiks med jokertegn
+#### <a name="scenario-right-wildcard-suffix"></a>Scenarie: Højre jokertegnsuffiks
 
-**Post**: `contoso.com/*`
+**Indtastning**: `contoso.com/*`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - contoso.com/?q=whatever@fabrikam.com
   - contoso.com/a
@@ -372,13 +376,13 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
   - contoso.com/b/a/c
   - contoso.com/ba
 
-- **Tillad ikke matchet** **og Bloker ikke matchet**: contoso.com
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**: contoso.com
 
-#### <a name="scenario-left-wildcard-subdomain-and-right-wildcard-suffix"></a>Scenarie: Venstre underdomæne med jokertegn og højre jokertegn
+#### <a name="scenario-left-wildcard-subdomain-and-right-wildcard-suffix"></a>Scenarie: Underdomæne for venstre jokertegn og højre jokertegnsuffiks
 
-**Post**: `*.contoso.com/*`
+**Indtastning**: `*.contoso.com/*`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - abc.contoso.com/ab
   - abc.xyz.contoso.com/a/b/c
@@ -386,13 +390,13 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
   - www.contoso.com/b/a/c
   - xyz.contoso.com/ba
 
-- **Tillad ikke matchet** **og Bloker ikke tilsvarende**: contoso.com/b
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**: contoso.com/b
 
 #### <a name="scenario-left-and-right-tilde"></a>Scenarie: Venstre og højre tilde
 
-**Post**: `~contoso.com~`
+**Indtastning**: `~contoso.com~`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - contoso.com
   - contoso.com/a
@@ -400,43 +404,43 @@ Gyldige URL-poster og deres resultater er beskrevet i de følgende afsnit.
   - www.contoso.com/b
   - xyz.abc.contoso.com
 
-- **Tillad ikke matchet** og **Bloker ikke tilsvarende**:
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
 
   - 123contoso.com
   - contoso.org
 
 #### <a name="scenario-ip-address"></a>Scenarie: IP-adresse
 
-**Post**: `1.2.3.4`
+**Indtastning**: `1.2.3.4`
 
-- **Tillad match** og **Bloker match**: 1.2.3.4
+- **Tillad match** og **blokmatch**: 1.2.3.4
 
-- **Tillad ikke matchet** og **Bloker ikke tilsvarende**:
+- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
 
   - 1.2.3.4/a
   - 11.2.3.4/a
 
 #### <a name="ip-address-with-right-wildcard"></a>IP-adresse med højre jokertegn
 
-**Post**: `1.2.3.4/*`
+**Indtastning**: `1.2.3.4/*`
 
-- **Tillad match og** **bloker match**:
+- **Tillad match** og **blokmatch**:
 
   - 1.2.3.4/b
   - 1.2.3.4/baaaa
 
-### <a name="examples-of-invalid-entries"></a>Eksempler på ugyldige indtastninger
+### <a name="examples-of-invalid-entries"></a>Eksempler på ugyldige poster
 
-Følgende indtastninger er ugyldige:
+Følgende poster er ugyldige:
 
 - **Manglende eller ugyldige domæneværdier**:
 
-  - contoso
+  - Contoso
   - \*.contoso.\*
   - \*.com
   - \*.pdf
 
-- **Jokertegn i tekst eller uden mellemrumstegn**:
+- **Jokertegn på tekst eller uden afstandstegn**:
 
   - \*contoso.com
   - contoso.com\*
@@ -460,37 +464,37 @@ Følgende indtastninger er ugyldige:
   - conto\* so.com
   - conto~so.com
 
-- **Dobbelt jokertegn**
+- **Dobbelte jokertegn**
 
   - contoso.com/\*\*
   - contoso.com/\*/\*
 
-## <a name="domain-pair-syntax-for-spoofed-sender-entries-in-the-tenant-allowblock-list"></a>Domænepars syntaks for efterlignede afsenderposter på lejerens liste over tilladte/blokerede afsendere
+## <a name="domain-pair-syntax-for-spoofed-sender-entries-in-the-tenant-allowblock-list"></a>Domæneparsyntaks for spoofede afsenderposter på listen over tilladte/blokerede lejere
 
-Et domænepar for en efterlignet afsender på lejerens tilladelses-/blokeringsliste anvender følgende syntaks: `<Spoofed user>, <Sending infrastructure>`.
+Et domænepar for en spoofed afsender på listen over tilladte/blokerede lejere bruger følgende syntaks: `<Spoofed user>, <Sending infrastructure>`.
 
-- **Efterlignet bruger**: Denne værdi involverer mailadressen på den spoofede bruger, der vises i feltet **Fra** i mailklienter. Denne adresse kaldes også for `5322.From` adressen. Gyldige værdier omfatter:
+- **Spoofed bruger**: Denne værdi omfatter mailadressen på den spoofede bruger, der vises i feltet **Fra** i mailklienter. Denne adresse kaldes også adressen `5322.From` . Gyldige værdier omfatter:
   - En individuel mailadresse (f.eks. chris@contoso.com).
   - Et maildomæne (f.eks. contoso.com).
   - Jokertegnet (f.eks. \*).
 
 - **Sender infrastruktur**: Denne værdi angiver kilden til meddelelser fra den spoofede bruger. Gyldige værdier omfatter:
-  - Domænet, der findes i et omvendt DNS-opslag (PTR-post) på kildemailserverens IP-adresse (f.eks fabrikam.com).
-  - Hvis kilde-IP-adressen ikke har en PTR-post, \<source IP\>identificeres den afsendende infrastruktur som /24 (f.eks. 192.168.100.100/24).
+  - Domænet, der blev fundet i et omvendt DNS-opslag (PTR-post) for kildemailserverens IP-adresse (f.eks. fabrikam.com).
+  - Hvis kildens IP-adresse ikke har nogen PTR-post, identificeres den afsendende infrastruktur som \<source IP\>/24 (f.eks. 192.168.100.100/24).
 
-Her er nogle eksempler på gyldige domænepar til at identificere efterlignede afsendere:
+Her er nogle eksempler på gyldige domænepar, der identificerer spoofede afsendere:
 
 - `contoso.com, 192.168.100.100/24`
 - `chris@contoso.com, fabrikam.com`
 - `*, contoso.net`
 
-Det maksimale antal spoof afsenderposter er 1000.
+Det maksimale antal spoofede afsenderposter er 1000.
 
-Tilføjelse af et domænepar tillader eller blokerer *kun kombinationen* af den efterlignede bruger *og* sendeinfrastrukturen. Det tillader ikke mail fra den efterlignede bruger fra nogen kilde, heller ikke mail fra den afsendende infrastrukturkilde for en spoof-bruger. 
+Tilføjelse af et domænepar tillader eller blokerer kun *kombinationen* af den spoofede bruger *og* den afsendende infrastruktur. Den tillader ikke mail fra den spoofede bruger fra nogen kilde og tillader heller ikke mail fra den afsendende infrastrukturkilde for en spoofed bruger. 
 
 Du kan f.eks. tilføje en tilladelsespost for følgende domænepar:
 
 - **Domæne**: gmail.com
 - **Infrastruktur**: tms.mx.com
 
-Det er kun meddelelser fra det pågældende *domæne og* afsenderinfrastrukturpar, der har tilladelse til at efterligne. Andre afsendere, der forsøger at efterligne gmail.com, er ikke tilladt. Meddelelser fra afsendere på andre domæner, der stammer tms.mx.com, kontrolleres af efterlignet intelligens.
+Det er kun meddelelser fra dette domæne *og* det afsendende infrastrukturpar, der må spoof. Andre afsendere, der forsøger at spoof gmail.com, er ikke tilladt. Meddelelser fra afsendere i andre domæner, der stammer fra tms.mx.com kontrolleres af spoof intelligence.

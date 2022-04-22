@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om prøveversionen af Microsoft Purview-løsninger, og hvordan du tilmelder dig.
-ms.openlocfilehash: a019ac3a2e16dfd6ae83ba1564f0031f77757b62
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ed7848a12483062c2873f4735ecb2188cad373a1
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971985"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023673"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Om prøveversionen af Microsoft Purview-løsninger
 
@@ -70,7 +70,7 @@ Brug vores [playbook til prøveversion](compliance-easy-trials-compliance-playbo
 
 #### <a name="finding-support"></a>Sådan finder du support
 
-Organisationer kan bruge FastTrack til understøttelse af installation af prøveversioner, hvis lejeren har mindst 150 licenser. Få flere [oplysninger om FastTrack](https://docs.microsoft.com/fasttrack/introduction).
+Organisationer kan bruge FastTrack til understøttelse af installation af prøveversioner, hvis lejeren har mindst 150 licenser. Få flere [oplysninger om FastTrack](/fasttrack/introduction).
 
 #### <a name="extending-the-trial"></a>Udvidelse af prøveversionen
 
@@ -98,6 +98,10 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 
   Microsoft Purview Compliance Manager kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Få mere at vide om [Overholdelsesstyring](compliance-manager.md)
 
+- **Administration af datalivscyklus**
+
+  Automatiser din opbevaringsdækning ved hjælp af tilpassede politikområder. Denne funktion giver dig mulighed for dynamisk at målrette politikker for opbevaring til bestemte brugere, grupper eller websteder. Disse politikker opdateres automatisk, når der sker ændringer i din organisation. Desuden er politikker, der bruger tilpassede områder, ikke underlagt placeringsgrænser. Få mere at vide om [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention).
+
 - **Forebyggelse af datatab**
 
   Microsoft Purview DLP (Forebyggelse af datatab) hjælper dig med at styre deling og brug af følsomme oplysninger på enheder, apps og tjenester. Med prøveversioner kan du udvide dækningen af DLP-politikker til Teams og enheder, beskytte endnu mere følsomt indhold ved hjælp af oplærbare klassificeringer og nøjagtigt datamatch (EDM) og hurtigt komme i gang med vores anbefalede DLP-politikker.  [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
@@ -106,10 +110,6 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 
   - Dine eksisterende politikker forbliver slået til, medmindre du slår dem fra.
   - Hvis du redigerer DLP-politikker, der indeholder enten placeringen Teams eller Enheder, når prøveversionen er afsluttet, fjernes disse placeringer fra politikken.
-
-- **Administration af datalivscyklus**
-
-  Automatiser din opbevaringsdækning ved hjælp af tilpassede politikområder. Denne funktion giver dig mulighed for dynamisk at målrette politikker for opbevaring til bestemte brugere, grupper eller websteder. Disse politikker opdateres automatisk, når der sker ændringer i din organisation. Desuden er politikker, der bruger tilpassede områder, ikke underlagt placeringsgrænser. Få mere at vide om [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention).
 
 - **eDiscovery**
 
@@ -144,6 +144,7 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 - **Datastyring**
 
   Brug integrerede funktioner i Microsoft Purview Records Management til at:
+
   - Klassificer indhold som en post for at forhindre brugere i at redigere i henhold til regler, love eller organisationspolitik
   - Anvend automatisk opbevaringsmærkater på indhold, når det opfylder de kriterier, du angiver, ved hjælp af mærkatpolitikker for automatisk anvendelse
   - Brug politikker for adaptive områder til dynamisk at målrette politikkerne for opbevaringsmærkater til placeringer uden nogen grænse for, hvor mange placeringer der er inkluderet

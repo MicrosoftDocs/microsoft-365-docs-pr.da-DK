@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) skal du få en liste over krav til brug af Microsoft 365 Lighthouse.
-ms.openlocfilehash: d5f04c39cbce9726fefa4b410be63cd5ee4e959d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 06d5c5bb0de76ecc8ba9fc28677f480f5f4d5561
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823668"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023255"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Krav til Microsoft 365 Lighthouse
 
@@ -62,7 +62,7 @@ Microsoft Defender Antivirus er en del af Windows operativsystem og er som stand
 ## <a name="related-content"></a>Relateret indhold
 
 [Konfigurer sikkerhed Microsoft 365 Lighthouse Portal](m365-lighthouse-configure-portal-security.md) (artikel)\
-[oversigt over Microsoft 365 lighthouse-enhedens overholdelse af angivne standarder](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
-[Microsoft 365 Oversigt over fyrtårnsbrugere](m365-lighthouse-users-page-overview.md) (artikel)\
-[oversigt over Microsoft 365 lighthouse threat management (](m365-lighthouse-threat-management-page-overview.md)artikel)\
+[Oversigt over siden Med enhedsoverholdelse i Microsoft 365 Lighthouse](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
+[Oversigt over siden Brugere i Microsoft 365 Fyrtårn](m365-lighthouse-users-page-overview.md) (artikel)\
+[Oversigt over siden Threat management i Microsoft 365 Lighthouse](m365-lighthouse-threat-management-page-overview.md) (artikel)\
 [ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

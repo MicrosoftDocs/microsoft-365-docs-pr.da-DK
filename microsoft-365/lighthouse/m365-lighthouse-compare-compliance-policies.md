@@ -1,5 +1,5 @@
 ---
-title: Sammenlign indstillinger for politikker for overholdelse af enhed
+title: Sammenlign politikindstillinger for enhedens overholdelse af regler og standarder i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,57 +15,57 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du se, hvordan du sammenligner politikindstillinger for enhedsoverholdelse.
-ms.openlocfilehash: 30645ef4d59fcdee0d994ae709ff9bb45fc21b09
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du sammenligner politikindstillinger for enhedsoverholdelse for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
+ms.openlocfilehash: 1ea7a278a58cd6d864c32ab7b25569ae463658f9
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594130"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022752"
 ---
-# <a name="compare-device-compliance-policy-settings"></a>Sammenlign indstillinger for politikker for overholdelse af enhed
+# <a name="compare-device-compliance-policy-settings-in-microsoft-365-lighthouse"></a>Sammenlign politikindstillinger for enhedens overholdelse af regler og standarder i Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse giver dig mulighed for at få vist overholdelsespolitikker på tværs af dine lejere i en enkelt visning. Du kan fremme sikkerhed og standardisering på tværs af dine lejere ved at sammenligne politikker. Du kan filtrere visninger for at få vist indstillinger, der er blevet konfigureret (kontra de indstillinger, der ikke blev konfigureret), indstillinger, der er forskellige i deres konfigurationer, eller indstillinger, der matcher. Du kan også søge efter bestemte indstillinger for at se, hvordan de kan sammenlignes på tværs af politikker.
+Microsoft 365 Fyrtårn kan du få vist politikker for overholdelse af angivne standarder på tværs af dine lejere i en enkelt visning. Du kan fremme sikkerhed og standardisering på tværs af dine lejere ved at sammenligne politikker. Du kan filtrere visninger for at se indstillinger, der er konfigureret (i forhold til indstillinger, der ikke er konfigureret), indstillinger, der er forskellige i deres konfigurationer, eller indstillinger, der stemmer overens. Du kan også søge efter specifikke indstillinger for at se, hvordan de kan sammenlignes på tværs af politikker.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Kontrollér, at enheder har Microsoft Intune licens og er tilmeldt Microsoft Endpoint Manager (MEM).
+Sørg for, at enheder har en Microsoft Intune licens og er tilmeldt Microsoft Endpoint Manager (MEM).
 
 ## <a name="compare-policy-settings"></a>Sammenlign politikindstillinger
 
-1. I venstre navigationsrude i Fyrtårn skal du vælge **Enheder**.
+1. Vælg **Enheder** i navigationsruden til venstre i Lighthouse.
 
-2. Vælg **fanen** Politikker.
+2. Vælg fanen **Politikker** .
 
-3. Vælg **et** operativsystem eller en platform på rullelisten Filtre.
+3. Vælg et operativsystem eller en platform på rullelisten **Filtre** .
 
    > [!NOTE]
    > Du kan kun sammenligne politikker med det samme operativsystem eller den samme platform.
 
-4. Vælg op til tre politikker, du vil sammenligne, på den filtrerede liste.
+4. Vælg op til tre politikker, som du vil sammenligne, på den filtrerede liste.
 
 5. Vælg **Sammenlign**.
 
-Du kan filtrere resultaterne for at se **Indstillinger, der er** forskellige, **Indstillinger, der matcher**, **eller Konfigurerede indstillinger**.
+Du kan filtrere resultaterne for at se **Indstillinger, der er forskellige**, **Indstillinger, der stemmer overens**, eller **Konfigurerede indstillinger**.
 
-## <a name="configure-a-policy-setting"></a>Konfigurere en politikindstilling
+## <a name="configure-a-policy-setting"></a>Konfigurer en politikindstilling
 
-1. I venstre navigationsrude i Fyrtårn skal du vælge **Enheder**.
+1. Vælg **Enheder** i navigationsruden til venstre i Lighthouse.
 
-2. Vælg **fanen** Politikker.
+2. Vælg fanen **Politikker** .
 
 3. Vælg et politiknavn på listen.
 
-4. I ruden Politikdetaljer skal du **vælge Vis denne politik i Microsoft Endpoint Manager**.
+4. I ruden Politikoplysninger skal du vælge **Få vist denne politik i Microsoft Endpoint Manager**.
 
 5. Rediger politikindstillingerne efter behov i MEM.
 
 ## <a name="next-steps"></a>Næste trin
 
-Når du foretager justeringer af politikker, skal du sørge for at vurdere dine ændringer i forhold til dine aktuelle indstillinger for oprindelige planer. Få mere at vide under Oversigt [over brug af grundlinjer til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md).
+Når du foretager politikjusteringer, skal du sørge for at vurdere dine ændringer i forhold til dine aktuelle indstillinger for grundlinjer. Du kan få flere oplysninger under [Oversigt over brug af grundlinjer til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Hvad er tilmelding af enheder i Intune?](/mem/intune/enrollment/device-enrollment) (artikel)  
 [Brug politikker for overholdelse af regler og standarder til at angive regler for enheder, du administrerer med Intune](/mem/intune/protect/device-compliance-get-started) (artikel)  
-[Oversigt over brug af oprindelige planer til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (artikel)
+[Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (artikel)

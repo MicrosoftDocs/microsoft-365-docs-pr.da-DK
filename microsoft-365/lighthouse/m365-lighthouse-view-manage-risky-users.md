@@ -1,5 +1,5 @@
 ---
-title: Få vist og administrer risikable brugere
+title: Få vist og administrer risikable brugere i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist og administrerer risikable brugere.
-ms.openlocfilehash: 0b7567404b909927a80b69184299baae131f8eb7
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: dad86fedeb27f13752bcd1c07efd0d51aa33cf2a
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824262"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022927"
 ---
-# <a name="view-and-manage-risky-users"></a>Få vist og administrer risikable brugere
+# <a name="view-and-manage-risky-users-in-microsoft-365-lighthouse"></a>Få vist og administrer risikable brugere i Microsoft 365 Fyrtårn
 
 Microsoft indsamler og analyserer billioner af brugerlogonsignaler hver dag. Disse signaler bruges til at hjælpe med at skabe gode funktionsmådemønstre for brugerlogon og identificere potentielle risikable logonforsøg. Azure Active Directory (Azure AD) Identity Protection bruger disse signaler til at gennemse brugerlogonforsøg og udføre handlinger, hvis der er mistænkelig aktivitet.
 
@@ -44,7 +44,7 @@ Følgende betingelser skal være opfyldt, før brugerne kan blive vist på liste
 
 - Kundelejer skal have en Azure AD Premium licens for hver bruger. Du kan få flere oplysninger om, hvilke licenser der understøtter Azure AD Identity Protection, under [Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- Kundelejer skal være aktiv i Microsoft 365 Lighthouse. Hvis du vil finde ud af, om en lejer er aktiv, skal du se [sideoversigten over Microsoft 365 Fyrtårnslejere](m365-lighthouse-tenant-list-overview.md).
+- Kundelejer skal være aktiv i Microsoft 365 Lighthouse. Hvis du vil finde ud af, om en lejer er aktiv, skal du se [Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse](m365-lighthouse-tenant-list-overview.md).
 
 ## <a name="review-detected-risks-and-take-action"></a>Gennemse registrerede risici, og udfør handlinger
 

@@ -1,5 +1,5 @@
 ---
-title: oversigt over Microsoft 365 Lighthouse Threat-administrationsside
+title: Oversigt over siden Threat Management i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Trusselsstyring for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 94e71d648dac3a285ecef81b4dae29305cf7e98c
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: fea297845446bd8cbb14c81851afb5d51ce33717
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823162"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023343"
 ---
-# <a name="microsoft-365-lighthouse-threat-management-page-overview"></a>oversigt over Microsoft 365 Lighthouse Threat-administrationsside 
+# <a name="overview-of-the-threat-management-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Threat Management i Microsoft 365 Lighthouse 
 
 **Gælder for:**
 

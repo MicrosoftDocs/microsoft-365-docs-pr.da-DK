@@ -1,5 +1,5 @@
 ---
-title: Oversigt over brug af oprindelige planer til installation af standardlejerkonfigurationer
+title: Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,41 +15,41 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få mere at vide om at bruge grundlinjer til at udrulle standardlejerkonfigurationer.
-ms.openlocfilehash: 643bb962277d30caf8ea067b9276a5986af8914f
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du bruger grundlinjer til at udrulle standard lejerkonfigurationer.
+ms.openlocfilehash: a12abd14064559ec92fc735bd90c1f8d58d24cb1
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63592485"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023299"
 ---
-# <a name="overview-of-using-baselines-to-deploy-standard-tenant-configurations"></a>Oversigt over brug af oprindelige planer til installation af standardlejerkonfigurationer 
+# <a name="overview-of-using-microsoft-365-lighthouse-baselines-to-deploy-standard-tenant-configurations"></a>Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer 
 
-Microsoft 365 Lighthouse giver dig en gentagelig og skalerbar måde, hvorpå du kan administrere Microsoft 365 på tværs af flere kundelejere. Oprindelige planer giver standardlejerkonfigurationer, der udruller centrale sikkerhedspolitikker og overholdelsesstandarder, der holder dine lejeres brugere, enheder og data sikre.
+Microsoft 365 grundlinjer i lighthouse giver dig en gentagelig og skalerbar måde at administrere Microsoft 365 sikkerhedsindstillinger på tværs af flere kundelejere. Grundlinjer indeholder standardlejerkonfigurationer, der installerer kernesikkerhedspolitikker og standarder for overholdelse af angivne standarder, som holder dine lejers brugere, enheder og data sikre.
 
-Du kan få vist standard oprindelige planer og installationstrinnene fra Fyrtårn. Hvis du vil anvende en oprindelig plan for en lejer, **skal du vælge** Lejere i venstre navigationsrude og derefter vælge en lejer. Gå derefter til fanen **Installationsplaner for** at starte installationen.
+Du kan få vist standardgrundlinjen og dens installationstrin inde fra Lighthouse. Hvis du vil anvende en oprindelig plan på en lejer, skal du vælge **Lejere i venstre navigationsrude** og derefter vælge en lejer. Derefter skal du gå til fanen **Udrulningsplaner** for at starte udrulningen.
 
-## <a name="lighthouse-baseline"></a>Grundlinjen Fyrtårn
+## <a name="lighthouse-baseline"></a>Grundlinje for fyrtårn
 
-Konfigurationer af grundlinjer for fyrtårne er designet til at sikre, at alle administrerede lejere er sikre og kompatible. Vælg **Grundlinjer i venstre navigationsrude** for at få vist den standardlinje, der gælder for alle lejere.  Hvis du vil have vist installationstrinnene, der er inkluderet i standarden for den oprindelige plan, skal du vælge Vis **oprindelig plan** for at åbne standardsiden for den oprindelige plan. Vælg en af installationstrinnene for at få vist installationsdetaljer og brugerpåvirkning.
+Konfigurationer af fyrtårnsgrundlinje er designet til at sikre, at alle administrerede lejere er sikre og kompatible. Vælg **Oprindelige planer** i navigationsruden til venstre for at få vist den standardgrundlinje, der gælder for alle lejere.  Hvis du vil have vist de installationstrin, der er inkluderet i standardgrundlinjen, skal du vælge **Vis oprindelig plan** for at åbne siden med standardgrundlinjen. Vælg et af installationstrinnene for at få vist installationsdetaljer og brugerpåvirkning.
 
-:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Skærmbillede af siden Standard for grundlinje.":::
+:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Skærmbillede af siden Standardgrundlinje.":::
 
-### <a name="default-lighthouse-configurations"></a>Standardkonfigurationer af fyrtårne
+### <a name="default-lighthouse-configurations"></a>Standardkonfigurationer for fyrtårn
 
-| Konfiguration af grundlinje | Beskrivelse |
+| Oprindelig konfiguration | Beskrivelse |
 |--|--|
-| Kræv MFA for administratorer | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle administratorer. Det er påkrævet for alle skyprogrammer. Du kan finde flere oplysninger om denne oprindelige plan [under Betinget adgang: Kræv MFA til alle administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa).|
-| Kræv MFA for slutbrugere | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle brugere.  Det er påkrævet for alle skyprogrammer. Du kan finde flere oplysninger om denne grundlinje [i Betinget adgang: Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
-| Bloker ældre godkendelse | En politik for betinget adgang til at blokere ældre klientgodkendelse. Du kan finde flere oplysninger om denne grundlinje [under Bloker ældre godkendelse til Azure AD med betinget adgang](/azure/active-directory/conditional-access/block-legacy-authentication).|
-| Konfigurere tilmelding af enhed | Tilmelding af enhed for at give dine lejerenheder tilladelse til at tilmelde sig Microsoft Endpoint Manager. Dette gøres ved at konfigurere automatisk registrering mellem Azure Active Directory og Microsoft Endpoint Manager. Du kan finde flere oplysninger om denne [grundlinje i Konfigurere tilmelding til Windows enheder](/mem/intune/enrollment/windows-enroll). |
-| Konfigurer Microsoft Defender Antivirus til Windows 10 og nyere | En enhedskonfigurationsprofil for Windows enheder med forudkonfigurerede Microsoft Defender Antivirus indstillinger. Du kan finde flere oplysninger om denne [grundlinje under Konfigurer Microsoft Defender til slutpunkt i Intune](/mem/intune/protect/advanced-threat-protection-configure).|
-| Konfigurer Microsoft Defender Firewall til Windows 10 og nyere | En firewallpolitik, der hjælper med at sikre enheder ved at forhindre uønsket og uautoriseret netværkstrafik. Du kan finde flere oplysninger om denne [grundlinje i Bedste fremgangsmåder til konfiguration Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
-| Konfigurere en politik for enhedsoverholdelse for Windows 10 og nyere | En Windows af enheder med forudkonfigurerede indstillinger, der opfylder de grundlæggende krav til overholdelse af regler og standarder. Du kan finde flere oplysninger om denne grundlinje under [Betinget adgang: Kræv kompatibel eller hybrid Azure AD-enhed, der er forbundet](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
+| Kræv MFA for administratorer | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle administratorer. Det er påkrævet til alle cloudprogrammer. Du kan få flere oplysninger om denne oprindelige plan under [Betinget adgang: Kræv MFA for alle administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa).|
+| Kræv MFA for slutbrugere | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle brugere.  Det er påkrævet til alle cloudprogrammer. Du kan få flere oplysninger om denne oprindelige plan under [Betinget adgang: Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
+| Bloker ældre godkendelse | En politik for betinget adgang til at blokere ældre klientgodkendelse. Du kan få flere oplysninger om denne baseline under [Bloker ældre godkendelse til Azure AD med betinget adgang](/azure/active-directory/conditional-access/block-legacy-authentication).|
+| Konfigurer tilmelding af enhed | Enhedsregistrering, så dine lejerenheder kan tilmelde sig Microsoft Endpoint Manager. Dette gøres ved at konfigurere automatisk tilmelding mellem Azure Active Directory og Microsoft Endpoint Manager. Du kan få flere oplysninger om denne grundlinje under [Konfigurer tilmelding til Windows enheder](/mem/intune/enrollment/windows-enroll). |
+| Konfigurer Microsoft Defender Antivirus til Windows 10 og nyere | En enhedskonfigurationsprofil for Windows enheder med forudkonfigurerede indstillinger for Microsoft Defender Antivirus. Du kan få flere oplysninger om denne oprindelige plan [under Konfigurer Microsoft Defender for Endpoint i Intune](/mem/intune/protect/advanced-threat-protection-configure).|
+| Konfigurer Microsoft Defender Firewall til Windows 10 og nyere | En firewallpolitik, der hjælper med at beskytte enheder ved at forhindre uønsket og uautoriseret netværkstrafik. Du kan få flere oplysninger om denne oprindelige plan under [Bedste praksis for konfiguration af Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
+| Konfigurer en politik for enhedsoverholdelse for Windows 10 og nyere | En Windows enhedspolitik med forudkonfigurerede indstillinger, der opfylder de grundlæggende krav til overholdelse af angivne standarder. Du kan få flere oplysninger om denne baseline under [Betinget adgang: Kræv kompatibel eller hybrid azure AD-tilsluttet enhed](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
 
 ## <a name="deployment-plans"></a>Udrulningsplaner
 
-Hver aktiv lejer har en installationsplan, der omfatter installationstrinnene fra Microsoft 365 Lighthouse-grundlinjen. For at få adgang til en **lejers** installationsplan skal du vælge en aktiv lejer på listen på siden Lejere og derefter vælge **fanen Installationsplan** .
+Hver aktiv lejer har en udrulningsplan, der indeholder udrulningstrinnene fra Microsoft 365 Baseline for Lighthouse. Hvis du vil have adgang til en lejers udrulningsplan, skal du vælge en aktiv lejer på listen på siden **Lejere** og derefter vælge fanen **Udrulningsplan** .
 
 :::image type="content" source="../media/m365-lighthouse-deploy-baselines/deployment-plan-tab.png" alt-text="Skærmbillede af fanen Installationsplan.":::
 
@@ -60,31 +60,31 @@ Fanen Installationsplan indeholder følgende oplysninger:
 |---------|---------|
 |Installationstrin     |  Beskrivelse af installationstrin.       |
 |Status     |Status for installationstrinnet.         |
-|Oprindelig plan     |Den oprindelige plan, som installationstrinnet er afledt af.         |
-|Kategori     | Uanset om installationstrinnet er knyttet til administration af enheder, identitet eller data.        |
-|Senest opdateret    | Den dato, hvor installationstrinnet sidst blev opdateret.        |
+|Oprindelige     |Den oprindelige plan, som udrulningstrinnet er afledt fra.         |
+|Kategori     | Angiver, om installationstrinnet er knyttet til administration af enheder, identitet eller data.        |
+|Senest opdateret    | Den dato, hvor udrulningstrinnet sidst blev opdateret.        |
 
 
-Fanen Udrulningsplan indeholder også følgende indstillinger:
+Fanen Installationsplan indeholder også følgende indstillinger:
 
-- **Eksportér:** Vælg for at eksportere installationstrindata Excel en fil med kommaseparerede værdier (.csv).
-- **Opdater:** Vælg for at hente de mest aktuelle installationstrindata.
+- **Eksport:** Vælg at eksportere data fra installationstrin til en Excel fil med kommaseparerede værdier (.csv).
+- **Opdatere:** Vælg at hente de nyeste data for udrulningstrinnet.
 - **Søg:** Angiv nøgleord for hurtigt at finde et bestemt installationstrin på listen.
 
 ## <a name="deployment-steps-and-processes"></a>Installationstrin og -processer
 
-Hver lejers installationsplan omfatter installationstrinnene fra den oprindelige Microsoft 365 Lighthouse. Hvert installationstrin består af en eller flere processer, der skal udføres for at opfylde kravene til installationstrinnet. Når en ny lejer bliver aktiv, skal du fuldføre installationsaktiviteter, der er knyttet til installationstrinnene og -processerne.
+Hver lejers udrulningsplan indeholder installationstrinnene fra den Microsoft 365 baseline for Lighthouse. Hvert installationstrin indeholder en eller flere processer, der skal fuldføres. Når en ny lejer bliver aktiv, skal du fuldføre udrulningsaktiviteter, der er knyttet til udrulningstrinnene og -processerne.
 
-For hvert installationstrin kan du udføre følgende handlinger:
+For hvert installationstrin kan du foretage følgende handlinger:
 
 |Handling  |Beskrivelse  |
 |---------|---------|
-| Del    |  Aktiverer indholdet af Installationstrinnet til at blive delt via et link eller via mail.    |
-| Gennemse og installér    |  Gør det muligt for brugeren at: <ul><li>Når de understøttes, kan du sammenligne konfigurationsindstillingerne i installationstrinnet med indstillingerne i eventuelle eksisterende politikker uden at udrulle indstillingerne for lejeren.<br>Følgende installationstrin understøtter sammenligning:</br><ul><li>Konfigurere en politik for enhedsoverholdelse for Windows 10 og nyere</li><li>Kræv MFA for slutbrugere</li><li>Kræv MFA for administratorer</li><li>Bloker ældre godkendelse</li></ul></li> <li>Installér konfigurationsindstillingerne for lejeren.</li></ul>**Bemærk!** Trin, der ikke understøtter muligheden for at sammenligne uden at udrulle indstillingerne for lejeren, gør det muligt at gennemgå konfigurationsindstillingerne og installere dem.|
-| Opdater status for handlingsplan    |  Gør det muligt for brugeren at rapportere status for deres handlingsplan for installationstrinnet.      |
+| Del    |  Gør det muligt at dele indholdet af installationstrinnet via et link eller via mail.    |
+| Gennemse og udrul    |  Gør det muligt for brugeren at: <ul><li>Når det understøttes, skal du sammenligne konfigurationsindstillingerne i installationstrinnet med indstillinger i eksisterende politikker uden at installere indstillingerne i lejeren.<br>Følgende installationstrin understøtter sammenligning:</br><ul><li>Konfigurer en politik for enhedsoverholdelse for Windows 10 og nyere</li><li>Kræv MFA for slutbrugere</li><li>Kræv MFA for administratorer</li><li>Bloker ældre godkendelse</li></ul></li> <li>Udrul konfigurationsindstillingerne til lejeren.</li></ul>**Bemærk:** Trin, der ikke understøtter muligheden for at sammenligne uden at installere indstillingerne i lejeren, giver dig mulighed for at gennemse konfigurationsindstillingerne og installere dem.|
+| Opdater status for handlingsplan    |  Giver brugeren mulighed for at rapportere status for sin handlingsplan for udrulningstrinnet.      |
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Installér Microsoft 365 Lighthouse-grundlinjer](m365-lighthouse-deploy-baselines.md) (artikel)\
-[Almindelige betingede adgangspolitikker](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) (artikel)\
-[Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Udrul Microsoft 365 Lighthouse baselines](m365-lighthouse-deploy-baselines.md) (artikel)\
+[Almindelige politikker for betinget adgang](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) (artikel)\
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

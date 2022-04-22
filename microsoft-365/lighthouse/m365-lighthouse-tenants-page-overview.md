@@ -1,5 +1,5 @@
 ---
-title: sideoversigt over Microsoft 365 fyrtårnslejere
+title: Oversigt over siden Lejere i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Lejere for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 44111d62a9b8df9bf3b05ddbaa9cb4f3937159a4
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 7b8e26ddbe68059a9c5ecf4d5e396fd11c49be71
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823515"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023277"
 ---
-# <a name="microsoft-365-lighthouse-tenants-page-overview"></a>sideoversigt over Microsoft 365 fyrtårnslejere
+# <a name="overview-of-the-tenants-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Lejere i Microsoft 365 Fyrtårn
 
 Microsoft 365 Fyrtårn kan du administrere lejerkonti ved at vælge **Lejere** i venstre navigationsrude for at åbne siden Lejere. Siden Lejere indeholder en liste over alle dine lejere. Du kan vælge en lejer for at få vist detaljerede oplysninger, herunder kontaktoplysninger og installationsstatus.
 
@@ -70,7 +70,7 @@ Når du har deaktiveret en lejer, kan du ikke udføre handlinger på lejeren, f�
 
 ## <a name="tenant-tags"></a>Lejertags
 
-Hvis du vil organisere dine lejere og nemt filtrere eksisterende visninger, kan du oprette og tildele mærker til dine lejere. Du kan få mere at vide under [Administrer din lejerliste](m365-lighthouse-manage-tenant-list.md).
+Hvis du vil organisere dine lejere og nemt filtrere eksisterende visninger, kan du oprette og tildele mærker til dine lejere. Du kan få mere at vide under [Administrer din lejerliste i Microsoft 365 Lighthouse](m365-lighthouse-manage-tenant-list.md).
 
 > [!NOTE]
 > Du kan oprette op til 30 mærker på tværs af alle lejere.
@@ -135,6 +135,6 @@ Fanen Udrulningsplaner indeholder også følgende indstillinger:
 
 [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md) (artikel)\
 [Microsoft 365 Ofte stillede spørgsmål om Fyrtårn](m365-lighthouse-faq.yml) (artikel)\
-[Administrer din lejerliste](m365-lighthouse-manage-tenant-list.md) (artikel)\
-[Oversigt over brug af grundlinjer til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (artikel)\
+[Administrer din lejerliste i Microsoft 365 Lighthouse](m365-lighthouse-manage-tenant-list.md) (artikel)\
+[Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (artikel)\
 [Udrul Microsoft 365 lighthouse baselines](m365-lighthouse-deploy-baselines.md) (artikel)

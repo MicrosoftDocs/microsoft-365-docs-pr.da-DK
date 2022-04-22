@@ -1,5 +1,5 @@
 ---
-title: Få vist lejertjenestens tilstand
+title: Få vist lejerens tjenestetilstand i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist tilstanden for lejertjenesten.
-ms.openlocfilehash: 5c15e004108606ce00a90e0fa3d675d00806b430
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: c5cfed4449fbdbb6cb63bc80dfd8e23ca4d5c4bb
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822710"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023607"
 ---
-# <a name="view-tenant-service-health"></a>Få vist lejertjenestens tilstand
+# <a name="view-tenant-service-health-in-microsoft-365-lighthouse"></a>Få vist lejerens tjenestetilstand i Microsoft 365 Fyrtårn
 
 Du kan få vist tjenestetilstanden for de lejere, du administrerer i Microsoft 365 Lighthouse. Tjenestetilstand omfatter hændelser og gode råd til flere tjenester, herunder Microsoft Intune, identitetstjenester for Azure Active Directory (Azure AD) og MDM-cloudtjenester (Mobile Device Management). Du kan også se, hvor mange af dine administrerede lejere der påvirkes af hændelser. Hvis en af dine lejere f.eks. oplever problemer, kan du kontrollere siden Tjenestetilstand for at finde ud af, om det er et kendt problem med en igangværende løsning, eller om en nylig ændring kan påvirke dem. Det kan spare dig tid ved fejlfinding og reducere supportopkald.
 

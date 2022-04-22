@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 siden med Windows 365 (sky-pc'er)
+title: Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,83 +15,83 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere, der bruger Microsoft 365 Lighthouse, kan du få mere at vide Windows 365 siden (sky-pc'er).
-ms.openlocfilehash: fa910e3de992aa3f3f76090f76a473a96aebc8fb
-ms.sourcegitcommit: 9d563faeaa50b59b0b468dbb373d886e5270f58e
+description: Få mere at vide om siden Windows 365 (cloud-pc'er) for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
+ms.openlocfilehash: 843e241c796d626ecca2180b0bce1372059701a2
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "64387074"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022883"
 ---
-# <a name="windows-365-cloud-pcs-page-overview"></a>Windows 365 (Cloud pc'er) sideoversigt  
+# <a name="overview-of-the-windows-365-cloud-pcs-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse  
   
-Windows 365 er en skybaseret tjeneste, der gør det muligt for Microsoft Endpoint Manager-administratorer (MEM) at klargøre og administrere skybaserede pc'er for deres brugere, der har en Windows 365 licens. Windows 365 fuldt integreret med MEM til enhedshåndtering og med Microsoft 365 Lighthouse til partneradministration af sky-pc'er på tværs af alle deres kundelejere.
+Windows 365 er en cloudbaseret tjeneste, der gør det muligt for Microsoft Endpoint Manager (MEM)-administratorer at klargøre og administrere cloud-pc'er for deres brugere, der har en Windows 365 licens. Windows 365 er fuldt integreret med MEM til enhedshåndtering og med Microsoft 365 Lighthouse til partneradministration af cloud-pc'er på tværs af alle deres kundelejere.
 
-Du kan finde flere oplysninger Windows 365 under [Hvad er Windows 365?](/windows-365/overview) Du kan finde en Windows 365 over alle krav [i Forudsætninger for Windows 365](/windows-365/enterprise/requirements).
+Du kan få flere oplysninger om Windows 365 under [Hvad er Windows 365?](/windows-365/overview) Du kan se en liste over krav til Windows 365 under [Krav til Windows 365](/windows-365/enterprise/requirements).
 
 > [!IMPORTANT]
-> Du skal gå til [MEM for at](https://go.microsoft.com/fwlink/p/?linkid=2150463) klargøre sky-pc'er til hver kundelejer, før du kan administrere dem i Fyrtårn. Du kan ikke klargøre fra Lighthouse.
+> Du skal gå til [MEM](https://go.microsoft.com/fwlink/p/?linkid=2150463) for at klargøre cloud-pc'er for hver kundelejer, før du kan administrere dem i Lighthouse. Du kan ikke klargøre inde fra Lighthouse.
 
-Når du har klargjort sky-pc'er til din kundelejer, giver Windows 365-kortet på Microsoft 365-startsiden en kort besked på de skybaserede pc'er, hvor der er behov for handling, f.eks. antallet af sky-pc'er, der ikke kunne klargøres, og fejl i Azure-netværksforbindelsen. Hvis du vil have en detaljeret status, skal du vælge knappen på Windows 365 (eller vælge **Windows 365** i venstre navigationsrude) for at åbne Windows 365 side. Fra denne side kan du få en statusoversigt over de skybaserede pc'er, der er tildelt dine kundelejere, få vist en liste over alle de sky-pc'er, du administrerer, og de lejere, de er tildelt, og få vist Azure-netværksforbindelser mellem dine kundelejere og Azure Active Directory (Azure AD) og deres status.
+Når du har klargjort cloud-pc'er til din kundelejer, indeholder kortet Windows 365 på siden Microsoft 365 startside en kort besked om de cloud-pc'er, der har brug for handling, f.eks. antallet af cloud-pc'er, der ikke kunne klargøres, og fejl i Azure-netværksforbindelsen. Hvis du vil have en detaljeret status, skal du vælge knappen på kortet Windows 365 (eller vælge **Windows 365** i navigationsruden til venstre) for at åbne den Windows 365 side. Fra denne side kan du få en statusoversigt over de Cloud-pc'er, der er tildelt dine kundelejere, få vist en liste over alle de cloud-pc'er, du administrerer, og de lejere, de er tildelt, og få vist Azure-netværksforbindelserne mellem dine kundelejere og Azure Active Directory (Azure AD) og deres status.
 
 ## <a name="overview-tab"></a>Fanen Oversigt
 
-På fanen Oversigt viser den farvede antal anmærkningslinje det samlede antal sky-pc'er eller Azure-netværksforbindelser på tværs af alle dine kundelejere, der har følgende status: Mislykkede netværksforbindelser, Ikke klargjort, Klargøring mislykkedes og Fjern snart.
+Under fanen Oversigt viser den farvede linje med antal anmærkninger det samlede antal cloud-pc'er eller Azure-netværksforbindelser på tværs af alle dine kundelejere, der har følgende statusser: Mislykkede netværksforbindelser, Ikke klargjort, Klargøring mislykkedes og Klargøring snart.
 
-Du kan se en oversigt over Cloud PC-statusser for hver kundelejer på listen under anmærkningslinjen. Hvis du vil se, hvilke lejere der har skybaserede pc'er med en bestemt status, skal du vælge denne status på anmærkningslinjen for at filtrere listen. Hvis du vil se statusser for skyen til pc for en eller flere bestemte  lejere, skal du bruge rullemenuen Lejere til at filtrere listen.
+Du kan se en oversigt over cloud-pc-statusser for hver kundelejer på listen under anmærkningslinjen. Hvis du vil se, hvilke lejere der har cloud-pc'er med en bestemt status, skal du vælge denne status på linjen med antal anmærkninger for at filtrere listen. Hvis du vil se statusser for cloud-pc'er for en eller flere specifikke kundelejere, skal du bruge rullemenuen **Lejere** til at filtrere listen.
 
-Hvis du vil have detaljerede statusoplysninger for en bestemt kundelejer, skal du vælge en værdi under en af statuskolonnerne for den pågældende lejer. Afhængigt af hvilken kolonne værdien er i, åbnes  fanen Azure-netværksforbindelser eller Alle skybaserede **pc'er** og viser flere oplysninger.
+Hvis du vil have detaljerede statusoplysninger for en bestemt kundelejer, skal du vælge en værdi under en af statuskolonnerne for den pågældende lejer. Afhængigt af hvilken kolonne værdien er i, åbnes fanen **Azure-netværksforbindelser** eller **Alle cloud-pc'er** , og der vises flere oplysninger.
 
 Fanen Oversigt indeholder også følgende indstillinger:
 
-- **Opdater:** Vælg for at hente de mest aktuelle Sky-pc-data.
-- **Eksportér:** Vælg for at eksportere Sky-pc-data Excel en fil med kommaseparerede værdier (.csv).
-- **Søg:** Angiv nøgleord for hurtigt at finde en bestemt sky-pc på listen.
+- **Opdatere:** Vælg at hente de nyeste Cloud PC-data.
+- **Eksport:** Vælg at eksportere Cloud PC-data til en Excel fil med kommaseparerede værdier (.csv).
+- **Søg:** Angiv nøgleord for hurtigt at finde en bestemt Cloud-pc på listen.
 
-:::image type="content" source="../media/m365-lighthouse-win365-page-overview/win365-overview-tab.png" alt-text="Skærmbillede af Windows 365 Oversigt." lightbox="../media/m365-lighthouse-win365-page-overview/win365-overview-tab.png":::
+:::image type="content" source="../media/m365-lighthouse-win365-page-overview/win365-overview-tab.png" alt-text="Skærmbillede af fanen Windows 365 Oversigt." lightbox="../media/m365-lighthouse-win365-page-overview/win365-overview-tab.png":::
 
-## <a name="all-cloud-pcs-tab"></a>Fanen Alle sky-pc'er
+## <a name="all-cloud-pcs-tab"></a>Fanen Alle cloud-pc'er
 
-På fanen Alle skybaserede pc'er viser den farvede antal anmærkningslinje det samlede antal sky-pc'er på tværs af alle dine kundelejere, der har følgende statusser: Klargjort, Ikke klargjort, Klargøring mislykkedes og Fjernet snart.
+Under fanen Alle cloud-pc'er viser den farvede linje med antal anmærkninger det samlede antal cloud-pc'er på tværs af alle dine kundelejere, der har følgende statusser: Klargjort, Ikke klargjort, Klargøring mislykkedes og Klargøring snart.
 
-Du kan få vist alle sky-pc'er og deres klargøringsstatus på listen under anmærkningslinjen. Følgende oplysninger gives:
+Du kan få vist alle cloud-pc'er og deres klargøringsstatus på listen under anmærkningslinjen. Følgende oplysninger er angivet:
 
-- **Navn på sky-pc:** Navn, der er tildelt cloud-pc'en.
-- **Lejer:** Kundelejer, hvor en cloud-pc blev klargjort.
-- **Enhedsnavn:** Intune enhedsnavn – et entydig identifier til en sky-pc.
-- **Pc-type:** Cloud-pc i overensstemmelse med standard-SKU'er.
-- **Status:** Klargøringsstatus for Cloud-pc'en.
-- **Bruger:** Bruger, som en sky-pc er blevet klargjort eller forsøgt at blive klargjort til.
+- **Navn på cloud-pc:** Navn, der er tildelt cloud-pc'en.
+- **Lejer:** Kundelejer, hvor en Cloud-pc blev klargjort.
+- **Enhedsnavn:** Intune enhedsnavn – et entydigt id for en Cloud-pc.
+- **Pc-type:** Typen af cloud-pc i henhold til standard-SKU'er.
+- **Status:** Klargøringsstatus for cloud-pc'en.
+- **Bruger:** Bruger, for hvem en Cloud-pc er blevet klargjort eller forsøgt klargjort.
 
-Hvis du vil se, hvilke lejere der har skybaserede pc'er med en bestemt klargøringsstatus, skal du vælge denne status på anmærkningslinjen for at filtrere listen. Hvis du vil se klargøringsstatusser for en eller flere bestemte kunder, skal du  bruge rullemenuen Lejere til at filtrere listen.
+Hvis du vil se, hvilke lejere der har cloud-pc'er med en bestemt klargøringsstatus, skal du vælge den pågældende status på linjen med antal anmærkninger for at filtrere listen. Hvis du vil se klargøringsstatusser for cloud-pc'er for en eller flere specifikke kundelejere, skal du bruge rullemenuen **Lejere** til at filtrere listen.
 
-Vælg en skybaseret pc på listen for at få vist flere oplysninger. Hvis du skal handle på sky-pc'en, er der mulighed for at få vist politikker for klargøring af lejere og enhedsoplysninger Microsoft Endpoint Manager.
+Vælg en cloud-pc på listen for at få vist flere oplysninger. Hvis du har brug for at udføre handlinger på Cloud-pc'en, er der muligheder for at få vist politikker og enhedsdetaljer for lejerklargøring i Microsoft Endpoint Manager.
 
-Fanen Alle sky-pc'er indeholder også følgende indstillinger:
+Fanen Alle cloud-pc'er indeholder også følgende indstillinger:
 
-- **Opdater:** Vælg for at hente de mest aktuelle Sky-pc-data.
-- **Eksportér:** Vælg for at eksportere Sky-pc-data Excel en fil med kommaseparerede værdier (.csv).
-- **Søg:** Angiv nøgleord for hurtigt at finde en bestemt sky-pc på listen.
-- **Prøv klargøring igen:** Vælg 1-20 sky-pc'er på listen, der har statussen **Klargøring** mislykkedes, og vælg derefter denne indstilling for at prøve klargøring for disse sky-pc'er igen.
+- **Opdatere:** Vælg at hente de nyeste Cloud PC-data.
+- **Eksport:** Vælg at eksportere Cloud PC-data til en Excel fil med kommaseparerede værdier (.csv).
+- **Søg:** Angiv nøgleord for hurtigt at finde en bestemt Cloud-pc på listen.
+- **Prøv at klargøre igen:** Vælg 1 til 20 cloud-pc'er på listen, der har statussen **Klargøring mislykkedes**, og vælg derefter denne indstilling for at forsøge at klargøre disse Cloud-pc'er igen.
 
-Hvis du vil se en komplet liste over klargøringsstatusser for cloud-pc, og hvad de betyder, skal du se Oversigt over enhedshåndtering [for](/windows-365/enterprise/device-management-overview#column-details) sky-pc'er Windows 365 biblioteket med dokumentation.
+Hvis du vil se en komplet liste over klargøringsstatusser for cloud-pc'er, og hvad de betyder, skal du se [Oversigt over enhedshåndtering for Cloud-pc'er](/windows-365/enterprise/device-management-overview#column-details) i dokumentationsbiblioteket Windows 365.
 
-:::image type="content" source="../media/m365-lighthouse-win365-page-overview/all-cloud-pcs-tab.png" alt-text="Skærmbillede af fanen Windows 365 alle sky-pc'er." lightbox="../media/m365-lighthouse-win365-page-overview/all-cloud-pcs-tab.png":::
+:::image type="content" source="../media/m365-lighthouse-win365-page-overview/all-cloud-pcs-tab.png" alt-text="Skærmbillede af fanen Windows 365 alle cloud-pc'er." lightbox="../media/m365-lighthouse-win365-page-overview/all-cloud-pcs-tab.png":::
 
 ## <a name="azure-network-connections-tab"></a>Fanen Azure-netværksforbindelser
 
-På fanen Azure-netværksforbindelser viser den farvede antal-anmærkningslinje det samlede antal Azure-netværksforbindelser på tværs af alle dine kundelejere, der har følgende status: Vellykkede forbindelser og mislykkede forbindelser.
+Under fanen Azure-netværksforbindelser viser den farvede linje med antal anmærkninger det samlede antal Azure-netværksforbindelser på tværs af alle dine kundelejere, der har følgende status: Vellykkede forbindelser og Mislykkede forbindelser.
 
-På listen under antal anmærkningslinjen kan du se alle Azure-netværksforbindelser og deres forbindelsesstatus.
+På listen under linjen med antal anmærkninger kan du få vist alle Azure-netværksforbindelser og deres forbindelsesstatus.
 
-Hvis du vil have vist forbindelser med en bestemt klargøringsstatus, skal du vælge denne status på linjen med antal anmærkninger for at filtrere listen. Hvis du vil se forbindelsesstatusser for en eller flere bestemte kundelejere, skal du **bruge** rullemenuen Lejere til at filtrere listen.
+Hvis du vil se forbindelser med en bestemt klargøringsstatus, skal du vælge denne status på linjen med antal anmærkninger for at filtrere listen. Hvis du vil se forbindelsesstatusser for en eller flere specifikke kundelejere, skal du bruge rullemenuen **Lejere** til at filtrere listen.
 
-Hvis du skal foretage en handling eller foretage fejlfinding af en forbindelse på listen, skal du **vælge Vis oplysninger om forbindelse Microsoft Endpoint Manager**.
+Hvis du har brug for at foretage en handling eller foretage fejlfinding af en forbindelse på listen, skal du vælge **Få vist forbindelsesoplysninger i Microsoft Endpoint Manager**.
 
 Fanen Azure-netværksforbindelser indeholder også følgende indstillinger:
 
-- **Opdater:** Vælg for at hente de mest aktuelle forbindelsesdata.
-- **Eksportér:** Vælg for at eksportere forbindelsesdata til Excel en fil med kommaseparerede værdier (.csv).
+- **Opdatere:** Vælg at hente de mest aktuelle forbindelsesdata.
+- **Eksport:** Vælg at eksportere forbindelsesdata til en Excel fil med kommaseparerede værdier (.csv).
 - **Søg:** Angiv nøgleord for hurtigt at finde en bestemt forbindelse.
 
 :::image type="content" source="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png" alt-text="Skærmbillede af fanen Azure-netværksforbindelser." lightbox="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png":::
@@ -99,5 +99,5 @@ Fanen Azure-netværksforbindelser indeholder også følgende indstillinger:
 ## <a name="related-content"></a>Relateret indhold
 
 [Hvad er Windows 365?](/windows-365/overview) (artikel)\
-[Windows 365 oversigt over enhedsstyring for Cloud-pc'er](/windows-365/enterprise/device-management-overview) (artikel)\
-[Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Windows 365 oversigt over enhedshåndtering for cloud-pc'er](/windows-365/enterprise/device-management-overview) (artikel)\
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

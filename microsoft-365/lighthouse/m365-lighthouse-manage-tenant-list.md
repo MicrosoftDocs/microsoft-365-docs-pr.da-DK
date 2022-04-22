@@ -1,5 +1,5 @@
 ---
-title: Administrer din lejerliste
+title: Administrer din lejerliste i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer din lejerliste.
-ms.openlocfilehash: 2f9d38bad24d20c53a1bafe44b1b831369957b71
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: b4bffcfd5b8962253e68938a956949ca8470f818
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824372"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022421"
 ---
-# <a name="manage-your-tenant-list"></a>Administrer din lejerliste
+# <a name="manage-your-tenant-list-in-microsoft-365-lighthouse"></a>Administrer din lejerliste i Microsoft 365 Fyrtårn
 
 Du kan hjælpe dig med at administrere din lejerliste i Microsoft 365 Lighthouse ved at anvende brugerdefinerede mærker på dine lejere. Disse mærker kan bruges til at organisere dine lejere og kan også hjælpe dig med at filtrere de eksisterende visninger og indsigter, der er tilgængelige for relevante sæt lejere. Du kan administrere dine mærker fra siden Lejere. Når dataene er oprettet og tildelt, kan du filtrere dataene på siderne Lejere, Brugere, Enheder, Trusselsstyring og Windows 365 baseret på et tag.
 
@@ -106,4 +106,4 @@ Når du har oprettet og tildelt mærker, kan du bruge dem til at filtrere dine l
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel) [Microsoft 365 siden med overholdelse af angivne standarder for lighthouse-enheder](m365-lighthouse-device-compliance-page-overview.md) (artikel) [Microsoft 365 Ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel) [Oversigt over siden Overholdelse af enhed i Microsoft 365 Lighthouse](m365-lighthouse-device-compliance-page-overview.md) (artikel) [Microsoft 365 Ofte stillede spørgsmål om lighthouse](m365-lighthouse-faq.yml) (artikel)

@@ -1,5 +1,5 @@
 ---
-title: Angiv udløbspolitikken for adgangskoder for organisationen
+title: Angiv politikken for udløb af adgangskode for din organisation
 f1.keywords:
 - CSH
 ms.author: kwekua
@@ -25,78 +25,78 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 0f54736f-eb22-414c-8273-498a0918678f
-description: Få mere at vide om, hvordan en administrator kan angive en udløbspolitik for adgangskoder for din virksomhed, skole eller nonprofitorganisation Microsoft 365 Administration.
-ms.openlocfilehash: 9ba871a166169a0125b68808c124b10802424dfd
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Få mere at vide om, hvordan en administrator kan angive en udløbspolitik for adgangskoder for din virksomhed, skole eller nonprofitorganisation i Microsoft 365 Administration.
+ms.openlocfilehash: ed94cb8bc3bdcc1c1f30c6cb9bf56907c83de41e
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63590153"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022333"
 ---
-# <a name="set-the-password-expiration-policy-for-your-organization"></a>Angiv udløbspolitikken for adgangskoder for organisationen
+# <a name="set-the-password-expiration-policy-for-your-organization"></a>Angiv politikken for udløb af adgangskode for din organisation
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Denne artikel er for personer, der angiver udløbspolitikken for adgangskoder for en virksomhed, skole eller non-profit organisation. For at fuldføre disse trin skal du logge på med Microsoft 365 administratorkonto. [Hvad er en administratorkonto?](/microsoft-365/admin/add-users/about-admin-roles).
+Denne artikel er til personer, der angiver en politik for udløb af adgangskode for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365 administratorkonto. [Hvad er en administratorkonto?](/microsoft-365/admin/add-users/about-admin-roles).
 
-Som administrator kan du indstille brugernes adgangskoder til at udløbe efter et bestemt antal dage eller til aldrig at udløbe. Som standard er adgangskoder indstillet til aldrig at udløbe for din organisation.
+Som administrator kan du få brugeradgangskoder til at udløbe efter et bestemt antal dage eller indstille adgangskoder til aldrig at udløbe. Adgangskoder er som standard angivet til aldrig at udløbe for din organisation.
 
-Aktuelle undersøgelser indikerer på det kraftigste, at ændringer af adgangskoder gør mere skade end gavn. De driver brugerne til at vælge svage adgangskoder, anvende adgangskoder igen eller opdatere gamle adgangskoder på måder, som hackere nemt kan gætte. Vi anbefaler, at [du aktiverer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md). Du kan få mere at vide om adgangskodepolitik i Anbefalinger [til adgangskodepolitik](../misc/password-policy-recommendations.md).
+Aktuelle undersøgelser viser på det kraftigste, at mandatændringer af adgangskoder gør mere skade end gavn. De driver brugerne til at vælge svagere adgangskoder, genbruge adgangskoder eller opdatere gamle adgangskoder på måder, der let gættes af hackere. Vi anbefaler, at du aktiverer [multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md). Hvis du vil vide mere om adgangskodepolitik, skal du se [Anbefalinger til adgangskodepolitik](../misc/password-policy-recommendations.md).
 
-Du skal være [global administrator for](../add-users/about-admin-roles.md) at udføre disse trin.
+Du skal være [global administrator](../add-users/about-admin-roles.md) for at kunne udføre disse trin.
 
-Hvis du er bruger, har du ikke tilladelse til at indstille din adgangskode til aldrig at udløbe. Bed teknisk support på din arbejdsplads eller skole om at udføre trinnene for dig.
+Hvis du er bruger, har du ikke tilladelse til at angive din adgangskode til aldrig at udløbe. Bed din tekniske support til dit arbejde eller din skole om at udføre trinnene i denne artikel for dig.
 
 > [!TIP]
-> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialspecialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist får du og dine medarbejdere døgnet rundt adgang til små virksomhedsspecialister, efterhånden som du vokser din virksomhed, fra onboarding til daglig brug.
+> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
-## <a name="set-password-expiration-policy"></a>Angiv udløbspolitik for adgangskoder
+## <a name="set-password-expiration-policy"></a>Angiv politik for udløb af adgangskode
 
-Følg nedenstående trin, hvis du vil indstille brugeradgangskoder til at udløbe efter et bestemt tidsrum.
+Følg nedenstående trin, hvis du vil angive, at brugeradgangskoder skal udløbe efter et bestemt tidsrum.
 
-1. I gruppen Microsoft 365 Administration du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**fanen Sikkerhed og &**</a> under **Org Indstillinger**.
+1. I Microsoft 365 Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">fanen **Sikkerhed & beskyttelse af personlige oplysninger**</a> under **Organisationens Indstillinger**.
 
-    Hvis du ikke er global administrator, kan du ikke se indstillingen Sikkerhed og beskyttelse af personlige oplysninger.
+    Hvis du ikke er global administrator eller sikkerhedsadministrator, kan du ikke se indstillingen Sikkerhed og beskyttelse af personlige oplysninger.
   
-1. Vælg **Udløbspolitik for adgangskoder**.
+1. Vælg **Politik for udløb af adgangskode**.
   
-1. Hvis du ikke ønsker, at brugerne skal ændre deres adgangskoder, skal du fjerne markeringen i afkrydsningsfeltet ud for Angiv brugeradgangskoder til at **udløbe efter et antal dage**.
+1. Hvis du ikke ønsker, at brugerne skal ændre adgangskoder, skal du fjerne markeringen i afkrydsningsfeltet ud for **Angiv, at brugeradgangskoder skal udløbe efter et antal dage**.
 
-1. Angiv, hvor ofte adgangskoder skal udløbe. Vælg et antal dage mellem 14 og 730.
+1. Skriv, hvor ofte adgangskoder skal udløbe. Vælg et antal dage mellem 14 og 730.
   
-1. Skriv, hvornår brugeren skal have besked om, at adgangskoden udløber i det andet felt, og vælg derefter **Gem**. Vælg et antal dage mellem 1 og 30.
+1. I det andet felt skal du skrive, når brugerne får besked om, at deres adgangskode udløber, og derefter vælge **Gem**. Vælg et antal dage mellem 1 og 30.
 
 > [!IMPORTANT]
-> Meddelelser om udløb af adgangskoder understøttes ikke længere Office webapps [eller Administration](https://portal.office.com).
+> Meddelelser om udløb af adgangskode understøttes ikke længere i Office webapps eller [i Administration](https://portal.office.com).
   
-## <a name="important-things-you-need-to-know-about-the-password-expiration-feature"></a>Vigtige ting, du bør vide om funktionen udløb af adgangskoder
+## <a name="important-things-you-need-to-know-about-the-password-expiration-feature"></a>Vigtige ting, du skal vide om udløbsfunktionen for adgangskoden
   
-Personer, der kun Outlook-appen, tvinges ikke til at nulstille deres Microsoft 365 adgangskode, før den udløber i cachen. Dette kan være flere dage efter den faktiske udløbsdato. Der er ingen løsning til dette på administratorniveau.
+Personer, der kun bruger Outlook-appen, bliver ikke tvunget til at nulstille deres Microsoft 365 adgangskode, før den udløber i cachen. Dette kan være flere dage efter den faktiske udløbsdato. Der er ingen løsning på dette på administratorniveau.
 
-## <a name="prevent-last-password-from-being-used-again"></a>Forhindre, at den sidste adgangskode bruges igen
+## <a name="prevent-last-password-from-being-used-again"></a>Undgå, at den seneste adgangskode bruges igen
 
-Hvis du vil forhindre, at dine brugere genbruger gamle adgangskoder, kan du gøre det ved at gennemtvinge adgangskodehistorik i det lokale Active Directory (AD). Se [Opret en brugerdefineret adgangskodepolitik](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
+Hvis du vil forhindre dine brugere i at genbruge gamle adgangskoder, kan du gøre det ved at gennemtvinge adgangskoder i Active Directory i det lokale miljø (AD). Se [Opret en brugerdefineret adgangskodepolitik](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
 
-I Azure AD kan den sidste adgangskode ikke bruges igen, når brugeren ændrer en adgangskode. Adgangskodepolitikken anvendes på alle brugerkonti, der oprettes og administreres direkte i Azure AD. Denne adgangskodepolitik kan ikke ændres. Se [Politikker for adgangskoder til Azure AD](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
+I Azure AD kan den sidste adgangskode ikke bruges igen, når brugeren ændrer en adgangskode. Adgangskodepolitikken anvendes på alle brugerkonti, der oprettes og administreres direkte i Azure AD. Denne adgangskodepolitik kan ikke ændres. Se [Politikker for adgangskode til Azure AD](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
 
-## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Synkroniser brugeradgangskoderhashes fra et lokalt Active Directory til Azure AD (Microsoft 365)
+## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Synkroniser brugeradgangskoder fra en Active Directory i det lokale miljø til Azure AD (Microsoft 365)
 
-Denne artikel handler om at indstille udløbspolitikken for brugere, der kun bruger skyen (Azure AD). Den gælder ikke for hybrididentitetsbrugere, der bruger synkronisering af adgangskodehash, pass-through-godkendelse eller lokal sammenslutning som f.eks. ADFS.
+Denne artikel omhandler angivelse af udløbspolitikken for brugere, der kun har skyen (Azure AD). Det gælder ikke for hybride identitetsbrugere, der bruger synkronisering af adgangskodehash, pass-through-godkendelse eller sammenslutning i det lokale miljø, f.eks. ADFS.
   
-Du kan få mere at vide om, hvordan du synkroniserer brugeradgangskodehashes fra lokal AD til Azure AD under [Implementer synkronisering af adgangskodehash med Azure AD Forbind synkronisering](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization).
+Du kan få mere at vide om, hvordan du synkroniserer brugeradgangskodehash fra ad i det lokale miljø til Azure AD under [Implementer synkronisering af adgangskodehash med Azure AD Forbind synkronisering](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization).
 
 ## <a name="password-policies-and-account-restrictions-in-azure-active-directory"></a>Adgangskodepolitikker og kontobegrænsninger i Azure Active Directory
 
-Du kan angive flere adgangskodepolitikker og begrænsninger i Azure Active Directory. Se [Adgangskodepolitikker og kontobegrænsninger i Adgangskode Azure Active Directory](/azure/active-directory/authentication/concept-sspr-policy) for at få flere oplysninger.
+Du kan angive flere politikker og begrænsninger for adgangskoder i Azure Active Directory. Se [adgangskodepolitikker og kontobegrænsninger i Azure Active Directory](/azure/active-directory/authentication/concept-sspr-policy) for at få flere oplysninger.
 
 ## <a name="update-password-policy"></a>Opdater adgangskodepolitik
 
-Den Set-MsolPasswordPolicy-cmdlet opdaterer adgangskodepolitikken for et bestemt domæne eller lejer og angiver det tidsrum, en adgangskode forbliver gyldig, før den skal ændres.
+Den Set-MsolPasswordPolicy cmdlet opdaterer adgangskodepolitikken for et angivet domæne eller en bestemt lejer og angiver, hvor lang tid en adgangskode forbliver gyldig, før den skal ændres.
 
-Du kan få mere at vide om, hvordan du opdaterer adgangskodepolitikken for et bestemt domæne eller en bestemt lejer, [under Set-MsolPasswordPolicy](/powershell/module/msonline/set-msolpasswordpolicy).
+Hvis du vil vide mere om, hvordan du opdaterer adgangskodepolitikken for et bestemt domæne eller en bestemt lejer, skal [du se Set-MsolPasswordPolicy](/powershell/module/msonline/set-msolpasswordpolicy).
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Lad brugere nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)/
+[Lad brugerne nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)/
 
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)

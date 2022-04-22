@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 oversigt over siden brugere i Lighthouse
+title: Oversigt over siden Brugere i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,51 +15,51 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Få mere at vide om siden Brugere for administrerede tjenesteudbydere ved Microsoft 365 Lighthouse.
-ms.openlocfilehash: fad5ff4b41b43efb68c7e230401b80e50cea95a4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om siden Brugere for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
+ms.openlocfilehash: c4ae82485c2f9b57b1e47fe61624e0ccac34d067
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592483"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022487"
 ---
-# <a name="microsoft-365-lighthouse-users-page-overview"></a>Microsoft 365 oversigt over siden brugere i Lighthouse 
+# <a name="overview-of-the-users-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Brugere i Microsoft 365 Fyrtårn 
 
-Microsoft 365 Lighthouse giver dig mulighed for at administrere brugere på tværs af kundelejerkonti ved at vælge Brugere i venstre navigationsrude for at åbne siden Brugere. Fra denne side kan du søge efter brugere og vurdere og handle på sikkerhedstilstanden for dine brugerkonti. Du kan også få vist indsigt i risikabelt bruger og status for multifaktorgodkendelse og nulstilling af adgangskode via selvbetjening.  
+Microsoft 365 Fyrtårn kan du administrere brugere på tværs af kundelejerkonti ved at vælge **Brugere** i navigationsruden til venstre for at åbne siden Brugere. Fra denne side kan du søge efter brugere og vurdere og reagere på sikkerhedstilstanden for dine brugerkonti. Du kan også få vist indsigt i risikable brugere og status for multifaktorgodkendelse og selvbetjent nulstilling af adgangskode.  
   
 ## <a name="search-users-tab"></a>Fanen Søg efter brugere  
   
-Under fanen Søg efter brugere kan du hurtigt søge på tværs af lejere efter bestemte brugere og udføre grundlæggende brugeradministrationshandlinger som f.eks. nulstilling af en adgangskode til en konto.
+Under fanen Søg efter brugere kan du hurtigt søge efter bestemte brugere på tværs af lejere og udføre grundlæggende brugeradministrationshandlinger, f.eks. nulstille en kontoadgangskode.
 
 :::image type="content" source="../media/m365-lighthouse-users-page-overview/users-search-users-tab.png" alt-text="Skærmbillede af fanen Søg efter brugere.":::
 
-## <a name="risky-users-tab"></a>Fanen Risikabel brugere
+## <a name="risky-users-tab"></a>Fanen Risikable brugere
 
-Fanen Risikabele brugere viser brugerkonti på tværs af dine lejere, der er markeret med flag for risikabelt adfærd. Vælg en af brugerne for at få vist flere oplysninger om en registreret risiko eller for at reducere en risiko ved at nulstille en brugers adgangskode eller blokere logon. Du kan finde flere oplysninger om risikotyper og [registrering under Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
+Fanen Risikable brugere viser brugerkonti på tværs af dine lejere, der er markeret med risiko for risiko. Vælg en af brugerne for at få vist flere oplysninger om en registreret risiko eller for at afhjælpe en risiko ved at nulstille en brugers adgangskode eller blokere for logon. Du kan få flere oplysninger om risikotyper og registrering under [Hvad er risikoen?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
 
-Fanen Risikabel brugere indeholder også følgende indstillinger:
-- **Eksportér:** Vælg for at eksportere data om enhedsoverholdelse til Excel fil med kommaseparerede værdier (.csv).
-- **Opdater:** Vælg for at hente de mest aktuelle data om enhedsoverholdelse.
+Fanen Risikable brugere indeholder også følgende indstillinger:
+- **Eksport:** Vælg at eksportere data om enhedens overholdelse af angivne standarder til en Excel fil med kommaseparerede værdier (.csv).
+- **Opdatere:** Vælg at hente de nyeste data om enhedens overholdelse af angivne standarder.
 - **Bekræft, at en eller flere brugere er kompromitteret:** Vælg for at bekræfte, at brugeren er blevet kompromitteret.
-- **Afvis risiko for brugere:** Vælg for at afvise brugersikkerhedsrisikoen.  
-- **Nulstil adgangskode:** Vælg for at ændre eller nulstille brugerens adgangskode.
-- **Bloker logon:** Vælg for at forhindre andre i at logge på som denne bruger.
+- **Afvis brugerrisici:** Vælg at afvise brugerrisikoen.  
+- **Nulstil adgangskode:** Vælg at ændre eller nulstille brugerens adgangskode.
+- **Bloklogon:** Vælg for at forhindre nogen i at logge på som denne bruger.
 
-:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-risky-users-tab.png" alt-text="Skærmbillede af fanen Risikabele brugere.":::
+:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-risky-users-tab.png" alt-text="Skærmbillede af fanen Risikable brugere.":::
 
-## <a name="multifactor-authentication-tab"></a>Fanen Multifaktorgodkendelse
+## <a name="multifactor-authentication-tab"></a>Fanen Godkendelse af multifaktor
 
-Fanen Multifaktorgodkendelse indeholder detaljerede oplysninger om status for multifaktorgodkendelse (MFA)-aktivering på tværs af dine lejere. Vælg en vilkårlig lejer på listen for at få vist flere oplysninger om den pågældende lejer, herunder hvilke betingede adgangspolitikker, der kræver MFA, der allerede er konfigureret, og hvilke brugere der endnu ikke er registreret for MFA.
+Fanen Multifactor Authentication indeholder detaljerede oplysninger om status for MFA-aktivering (Multifactor Authentication) på tværs af dine lejere. Vælg en hvilken som helst lejer på listen for at få vist flere oplysninger om den pågældende lejer, herunder hvilke politikker for betinget adgang, der kræver MFA, der allerede er konfigureret, og hvilke brugere der endnu ikke har registreret sig til MFA.
 
-:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-mfa-tab.png" alt-text="Skærmbillede af fanen Multifaktorgodkendelse.":::
+:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-mfa-tab.png" alt-text="Skærmbillede af fanen Godkendelse af multifaktor.":::
 
-## <a name="password-reset-tab"></a>Fanen Nulstilling af adgangskode
+## <a name="password-reset-tab"></a>Fanen Nulstil adgangskode
 
-Fanen Nulstilling af adgangskode viser detaljerede oplysninger om status for aktivering af nulstilling af adgangskode via selvbetjening på tværs af dine lejere. Den giver også indsigt i brugere, der er aktiveret, men stadig skal registrere sig, før de selv kan nulstille deres adgangskode.
+Fanen Nulstil adgangskode viser detaljerede oplysninger om status for selvbetjent nulstilling af adgangskode på tværs af dine lejere. Den giver også indsigt i brugere, der er aktiveret, men stadig har brug for at registrere, før de selv kan nulstille deres adgangskode.
 
-:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-password-reset-tab.png" alt-text="Skærmbillede af fanen Nulstilling af adgangskode.":::
+:::image type="content" source="../media/m365-lighthouse-users-page-overview/users-password-reset-tab.png" alt-text="Skærmbillede af fanen Nulstil adgangskode.":::
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 Lighthouse- enhedsoverholdelsesside](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
-[Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[oversigt over Microsoft 365 siden med overholdelse af angivne standarder for lighthouse-enheder](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

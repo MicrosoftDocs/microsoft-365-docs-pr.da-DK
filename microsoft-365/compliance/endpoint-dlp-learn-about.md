@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
-ms.openlocfilehash: e84d2de72e05991a7d8374a2e5214df90fb939d9
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 76649559b1110c02f29584afdfb7e48f57a41f1e
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953299"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023365"
 ---
 # <a name="learn-about-endpoint-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab ved slutpunkt
 
@@ -95,7 +95,7 @@ Hvis du kun vil have overvågningsdata fra politikforekomster, kan du slå **alt
 
 Slutpunkt DLP overvåger aktivitetsbaseret på MIME-typen, så aktiviteter registreres, selvom filtypenavnet ændres.
 
-### <a name="file-types-preview"></a>Filtyper (prøveversion)
+### <a name="file-types"></a>Filtyper
 
 Filtyper er en gruppering af filformater, der bruges til at beskytte bestemte arbejdsprocesser eller forretningsområder. Du kan bruge en eller flere filtyper som betingelser i dine DLP-politikker.
 
@@ -107,7 +107,7 @@ Filtyper er en gruppering af filformater, der bruges til at beskytte bestemte ar
 |Arkiv  |filarkiv- og komprimeringsværktøjer | .zip, .zipx, .rar, .7z, .tar, .gz        |
 |E-mail    |Outlook |.pst, .ost, .msg         |
 
-### <a name="file-extensions-preview"></a>Filtypenavne (prøveversion)
+### <a name="file-extensions"></a>Filtypenavne
 
 Hvis filtyperne ikke dækker de filtypenavne, du skal angive som en betingelse i en politik, kan du i stedet bruge filtypenavne adskilt af komma.
 

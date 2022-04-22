@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 38fb3333-bfcc-4340-a37b-deda509c2093
 description: Få et overblik over Microsoft 365 Meddelelsescenter og dets rolle i sporing af nye og ændrede funktioner og andre vigtige meddelelser.
-ms.openlocfilehash: 6fabb66407eb21dc97880eaf2532b89ce02f9281
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2d2f76d401e68fb7494cd74b169bcfe6cd6e6758
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935275"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022905"
 ---
 # <a name="message-center"></a>Meddelelsescenter
 
@@ -270,7 +270,7 @@ Når du åbner en meddelelse i en læserude, kan du bruge pil **op** og **ned** 
 
 En masse handlingsbare oplysninger om ændringer i Microsoft 365 tjenester ankommer i Microsoft 365 meddelelsescenter. Det kan være svært at holde styr på, hvilke ændringer der kræver, at der udføres opgaver, hvornår og af hvem, og at spore hver opgave til fuldførelse. Det kan også være en god idé at notere dig noget og mærke det til senere. Du kan gøre alt dette og meget mere, når du synkroniserer dine meddelelser fra Microsoft 365 Administration til Microsoft Planner. Du kan finde flere oplysninger under [Spor dine opgaver i meddelelsescenter i Planner](/office365/planner/track-message-center-tasks-planner).
 
-Du kan få en oversigt over Meddelelsescenter [i Meddelelsescenter i Microsoft 365](message-center.md). Du kan også få mere at vide om, hvordan du angiver dine sprogindstillinger for at aktivere maskinoversættelse for meddelelser i Meddelelsescenter under [Sprogoversættelse for meddelelser i Meddelelsescenter](language-translation-for-message-center-posts.md). Hvis du vil programmere en alternativ måde at få oplysninger om tjenestetilstand i realtid og meddelelsescenterkommunikation på, skal du se [Arbejd med API til tjenestekommunikation i Microsoft Graph](/graph/api/resources/service-communications-api-overview?view=graph-rest-beta).
+Du kan få en oversigt over Meddelelsescenter [i Meddelelsescenter i Microsoft 365](message-center.md). Du kan også få mere at vide om, hvordan du angiver dine sprogindstillinger for at aktivere maskinoversættelse for meddelelser i Meddelelsescenter under [Sprogoversættelse for meddelelser i Meddelelsescenter](language-translation-for-message-center-posts.md). Hvis du vil programmere en alternativ måde at få oplysninger om tjenestetilstand i realtid og meddelelsescenterkommunikation på, skal du se [Arbejde med API til tjenestekommunikation i Microsoft Graph](/graph/api/resources/service-communications-api-overview).
 
 ## <a name="unsubscribe-from-message-center-emails"></a>Opsig abonnement på mails i Meddelelsescenter
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer Standard eller Målrettede udgivelsesindstillinger
+title: Konfigurer indstillingerne Standard eller Målrettet udgivelse
 f1.keywords:
 - CSH
 ms.author: kwekua
@@ -23,94 +23,96 @@ search.appverid:
 - BEA160
 - GEA150
 ms.assetid: 3b3adfa4-1777-4ff0-b606-fb8732101f47
-description: Få mere at vide om, hvordan du konfigurerer udgivelsesindstillingen for nye produkter og funktioner i Microsoft 365 Administration.
-ms.openlocfilehash: 6e3cf1987d6b3c22ed1414bd8e352da7acf49e60
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+description: Få mere at vide om, hvordan du konfigurerer udgivelsesindstillingen for nye produkt- og funktionsopdateringer i Microsoft 365 Administration.
+ms.openlocfilehash: 67c6fe3f08549424c725589a50c647a876c151af
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63589338"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022443"
 ---
-# <a name="set-up-the-standard-or-targeted-release-options"></a>Konfigurer Standard eller Målrettede udgivelsesindstillinger
+# <a name="set-up-the-standard-or-targeted-release-options"></a>Konfigurer indstillingerne Standard eller Målrettet udgivelse
 
 > [!IMPORTANT]
-> De Microsoft 365 opdateringer, der er beskrevet i denne artikel, gælder for Microsoft 365, SharePoint Online og Exchange Online. Disse udgivelsesindstillinger er målrettede og gør den bedste indsats for at udgive ændringer Microsoft 365 men dette kan ikke altid garanteres eller garanteres for alle opdateringer. De gælder ikke for Microsoft 365 Apps, Skype for Business, Microsoft Teams og relaterede tjenester. Du kan finde oplysninger om udgivelsesindstillinger Microsoft 365 Apps i [Oversigt over opdateringskanaler for Microsoft 365 Apps](/deployoffice/overview-update-channels).
+> De Microsoft 365 opdateringer, der er beskrevet i denne artikel, gælder for Microsoft 365, SharePoint Online og Exchange Online. Disse udgivelsesindstillinger er målrettede, bedste måder at udgive ændringer på Microsoft 365 men kan ikke garanteres til enhver tid eller for alle opdateringer. De gælder ikke for Microsoft 365 Apps, Skype for Business, Microsoft Teams og relaterede tjenester. Du kan få oplysninger om udgivelsesmuligheder for Microsoft 365 Apps under [Oversigt over opdateringskanaler til Microsoft 365 Apps](/deployoffice/overview-update-channels).
 
-Med Microsoft 365 får du nye produktopdateringer og -funktioner, efterhånden som de bliver tilgængelige, i stedet for dyrere opdateringer hvert år. Du kan styre, hvordan din organisation modtager disse opdateringer. Du kan f.eks. tilmelde dig en tidlig version, så din organisation modtager opdateringer først. Du kan angive, at det kun er visse personer, der modtager opdateringerne. Eller du kan forblive på standard udgivelsesplanen og modtage opdateringerne senere. I denne artikel forklares de forskellige udgivelsesindstillinger, og hvordan du kan bruge dem til din organisation.
+Med Microsoft 365 modtager du nye produktopdateringer og funktioner, efterhånden som de bliver tilgængelige i stedet for at foretage dyre opdateringer hvert andet år. Du kan administrere, hvordan din organisation modtager disse opdateringer. Du kan f.eks. tilmelde dig en tidlig version, så din organisation modtager opdateringer først. Du kan angive, at det kun er bestemte personer, der modtager opdateringerne. Eller du kan forblive i standardversionsplanen og modtage opdateringerne senere. I denne artikel forklares de forskellige udgivelsesmuligheder, og hvordan du kan bruge dem til din organisation.
 
 ## <a name="how-it-works---release-validation"></a>Sådan fungerer det – udgivelsesvalidering
 
-En ny version testes først og valideres af funktionsteamet og derefter af hele Microsoft 365, efterfulgt af hele Microsoft. Efter intern test og validering er det næste trin en Målrettet udgivelsesversion **(tidligere** kaldet First release) til kunder, der har tilvalgt den. Ved hver udgivelsesring indsamler Microsoft feedback og validerer kvaliteten yderligere ved at overvåge vigtige målepunkter for brug. Denne serie af gradvis validering er på plads for at sikre, at den globale udgivelsesversion er så robust som muligt. Udgivelsesudgivelserne er afbilledet i følgende figur. 
+Alle nye versioner testes først og valideres af funktionsteamet og derefter af hele Microsoft 365 funktionsteamet efterfulgt af hele Microsoft. Efter intern test og validering er det næste trin en **målrettet udgivelse** (tidligere kaldet Første udgivelse) til kunder, der tilmelder sig. Ved hver udgivelsesring indsamler Microsoft feedback og validerer kvaliteten yderligere ved at overvåge vigtige forbrugsdata. Denne serie af progressiv validering er på plads for at sikre, at den verdensomspændende udgivelse er så robust som muligt. Udgivelserne er afbilledet i følgende figur. 
   
-![Valideringsringe for udgivelse for Microsoft 365.](../../media/73611ed3-2d8c-4e7b-8074-9f03b239f9ed.png)
+![Frigiv valideringsringe for Microsoft 365.](../../media/73611ed3-2d8c-4e7b-8074-9f03b239f9ed.png)
   
-Ved væsentlige opdateringer underrettes kunderne indledningsvist i [Microsoft 365 Roadmap](https://products.office.com/business/office-365-roadmap). Når en opdatering nærmer sig udrulning, kommunikeres det via [Microsoft 365 Meddelelsescenter](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter).
+I forbindelse med vigtige opdateringer får kunderne i første omgang besked af [Microsoft 365 Roadmap](https://products.office.com/business/office-365-roadmap). Efterhånden som en opdatering kommer tættere på udrulningen, kommunikeres den via dit [Microsoft 365 Meddelelsescenter](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter).
 
 > [!NOTE]
-> Du skal bruge en Microsoft 365 eller Azure AD-konto for at få adgang til meddelelsescenteret [via Administration](/office365/admin/admin-overview/about-the-admin-center). Microsoft 365 home plan-brugere har ikke Administration.
+> Du skal bruge en Microsoft 365- eller Azure AD-konto for at få adgang til dit Meddelelsescenter via [Administration](/office365/admin/admin-overview/about-the-admin-center). Microsoft 365 brugere af startplanen har ikke et administrationscenter.
 
+## <a name="standard-release"></a>Standardversion
 
-## <a name="standard-release"></a>Standardudgivelsesversion
-
-Dette er standardindstillingen, hvor du og dine brugere modtager de seneste opdateringer, når de frigives til alle kunder.
+Dette er standardindstillingen, hvor du og dine brugere modtager de nyeste opdateringer, når de udgives bredt til alle kunder.
   
-En god fremgangsmåde er at lade størstedelen af brugerne blive i **Standardversionen** og give it-fagfolk og  superbrugere adgang til en målrettet udgivelsesversion for at evaluere nye funktioner og forberede teams til at understøtte forretningsbrugere og ledere. 
+En god praksis er at lade størstedelen af brugerne i **Standard-versionen** og it-teknikere og superbrugere i **Målrettet udgivelse** evaluere nye funktioner og forberede teams til at understøtte virksomhedsbrugere og direktører. 
   
 > [!NOTE]
-> Hvis du skifter fra den målrettede udgivelsesversion tilbage til standardversionsversionen, kan dine brugere miste adgang til funktioner, der endnu ikke er udgivet i standardversionen. 
+> Hvis du skifter fra målrettet version tilbage til standardversionsspor, kan dine brugere miste adgangen til funktioner, der endnu ikke har nået standardversionen. 
   
-## <a name="targeted-release"></a>Målrettet udgivelsesversion
+## <a name="targeted-release"></a>Målrettet udgivelse
 
-Med denne indstilling kan du og dine brugere være de første til at se de nyeste opdateringer og hjælpe med at forme produktet ved at give tidlig feedback. Du kan vælge at få enkeltpersoner eller hele organisationen til at modtage opdateringerne tidligt.
+Med denne indstilling kan du og dine brugere være de første til at se de nyeste opdateringer og hjælpe med at forme produktet ved at give tidlig feedback. Du kan vælge at få enkeltpersoner eller hele organisationen til at modtage opdateringer tidligt.
   
 > [!IMPORTANT]
-> - Det kan tage længere tid med store eller komplekse opdateringer, så ingen brugere påvirkes negativt. Der er ingen garanti for den nøjagtige tidslinje for en udgivelse.
-> - Målrettet udgivelsesversion er i øjeblikket ikke tilgængelig for kunder med enten Office 365 GCC-planen eller den Office 365 GCC High and DoD-plan.
+> - Store eller komplekse opdateringer kan tage længere tid end andre, så ingen brugere påvirkes negativt. Der er ingen garanti på den nøjagtige tidslinje for en udgivelse.
+> - Målrettet udgivelse er i øjeblikket ikke tilgængelig for kunder med enten Office 365 GCC-planen eller Office 365 GCC High- og DoD-planen.
   
-### <a name="targeted-release-for-entire-organization"></a>Målrettet udgivelsesversion for hele organisationen
+### <a name="targeted-release-for-entire-organization"></a>Målrettet udgivelse for hele organisationen
 
-Hvis du [konfigurerer udgivelsesindstillingen i Administration](#set-up-the-release-option-in-the-admin-center) til denne indstilling, får alle dine brugere oplevelsen af den målrettede udgivelsesversion. Til organisationer med mere end 300 brugere anbefaler vi, at du bruger et testabonnement til denne indstilling. Kontakt din Microsoft-kontakt for at få flere oplysninger om testabonnementet. 
+Hvis du [konfigurerer udgivelsesindstillingen i Administration](#set-up-the-release-option-in-the-admin-center) for denne indstilling, får alle dine brugere oplevelsen Målrettet udgivelse. For organisationer med mere end 300 brugere anbefaler vi, at du bruger et testabonnement til denne indstilling. Kontakt din Microsoft-kontakt for at få oplysninger om testabonnementer. 
   
-### <a name="targeted-release-for-selected-users"></a>Målrettet udgivelsesversion for udvalgte brugere
+### <a name="targeted-release-for-selected-users"></a>Målrettet udgivelse til udvalgte brugere
 
-Hvis du [konfigurerer udgivelsesindstillingen](#set-up-the-release-option-in-the-admin-center) i Administration til denne indstilling, kan du definere bestemte brugere, som regel superbrugere, til at få tidlig adgang til funktioner og funktionalitet. 
-  
-## <a name="benefits-of-targeted-release"></a>Fordele ved den målrettede udgivelsesversion
+Hvis du [konfigurerer udgivelsesindstillingen i Administration](#set-up-the-release-option-in-the-admin-center) for denne indstilling, kan du definere bestemte brugere, normalt superbrugere, for at modtage tidlig adgang til funktioner og funktionalitet.
 
-Den målrettede udgivelsesversion giver administratorer, ændringsledere eller andre ansvarlige for at Microsoft 365 opdateringer til at forberede sig på de kommende ændringer ved at lade dem:
+> [!IMPORTANT]
+> Nogle funktioner udrulles kun pr. organisation. Det betyder, at hele organisationen får adgang til funktionen på samme tid. For funktioner som denne er det ikke muligt for udvalgte brugere i det målrettede udgivelsesprogram at få funktionen tidligt. Det betyder, at din organisation ikke kan modtage disse funktioner tidligt, hvis du har konfigureret udvalgte brugere i målrettet version. Hvis du vil sikre dig, at du kan se alle funktioner i målrettet version, skal du konfigurere målrettet udgivelse for hele organisationen eller konfigurere en testorganisation.
   
-- Test og valider nye opdateringer, før de frigives til alle brugere i organisationen.
+## <a name="benefits-of-targeted-release"></a>Fordele ved målrettet udgivelse
+
+Målrettet udgivelse gør det muligt for administratorer, ændringsadministratorer eller andre, der er ansvarlige for Microsoft 365 opdateringer, at forberede sig på de kommende ændringer ved at lade dem:
+  
+- Test og valider nye opdateringer, før de udgives til alle brugerne i organisationen.
     
-- Forbered brugerbeskeder og dokumentation, før opdateringerne frigives i hele verden.
+- Forbered brugermeddelelser og dokumentation, før der udgives opdateringer over hele verden.
     
-- Forberede intern helpdesk til kommende ændringer.
+- Forbered intern helpdesk til kommende ændringer.
     
-- Gennemgå overholdelse af regler og standarder og sikkerhedsvurderinger.
+- Gennemgå gennemgange af overholdelse af angivne standarder og sikkerhed.
     
-- Brug funktionskontrolelementer til at styre frigivelsen af opdateringer til slutbrugere, hvor det er relevant.
+- Brug funktionskontrolelementer, hvor det er relevant, til at styre udgivelsen af opdateringer til slutbrugere.
     
 ## <a name="set-up-the-release-option-in-the-admin-center"></a>Konfigurer udgivelsesindstillingen i Administration
 
-Du kan ændre, hvordan din organisation modtager Microsoft 365 opdateringer ved at følge disse trin. Du skal være global administrator i Microsoft 365 at tilmelde dig.
+Du kan ændre, hvordan din organisation modtager Microsoft 365 opdateringer, ved at følge disse trin. Du skal være global administrator i Microsoft 365 for at tilmelde dig.
   
 > [!IMPORTANT]
-> Det kan tage op til 24 timer, før ændringerne nedenfor træder i kraft Microsoft 365. Hvis du fravælger den målrettede udgivelsesversion, efter du har aktiveret den, kan dine brugere miste adgang til funktioner, der endnu ikke er frigivet. 
+> Det kan tage op til 24 timer, før nedenstående ændringer træder i kraft i Microsoft 365. Hvis du fravælger målrettet udgivelse, når du har aktiveret den, kan dine brugere miste adgangen til funktioner, der endnu ikke har nået den planlagte version. 
   
-1. I Administration skal du gå til **indstillingen Indstillinger** >  **Ellerg** og under fanen <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Organisationsprofil** vælge</a> **Udgivelsesindstillinger**.
+1. I Administration skal du gå til **indstillingen Indstillinger** >  **Ellerg** og under <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">fanen **Organisationsprofil**</a> vælge **Udgivelsesindstillinger**.
 
-5. Hvis du vil deaktivere den målrettede udgivelsesversion, **skal du vælge Standardversion** og **derefter vælge Gem ændringer**. 
+5. Hvis du vil deaktivere målrettet udgivelse, skal du vælge **Standardversion** og derefter vælge **Gem ændringer**. 
     
-6. Hvis du vil aktivere den målrettede udgivelsesversion for alle brugere i organisationen, skal du **vælge Målrettet udgivelsesversion for alle** og derefter **vælge Gem ændringer**. 
+6. Hvis du vil aktivere målrettet udgivelse for alle brugere i din organisation, skal du vælge **Målrettet udgivelse for alle** og derefter vælge **Gem ændringer**. 
     
-7. Hvis du vil aktivere den målrettede udgivelsesversion for nogle personer i organisationen, skal **du vælge Målrettet udgivelsesversion for udvalgte** brugere og derefter **vælge Gem ændringer**. 
+7. Hvis du vil aktivere målrettet udgivelse for nogle personer i din organisation, skal du vælge **Målrettet udgivelse for valgte brugere** og derefter vælge **Gem ændringer**. 
     
-8. Vælg **Vælg brugere** for at tilføje brugere én ad gangen, eller vælg Upload **at** tilføje dem flere ad gangen.
+8. Vælg **Vælg brugere** for at tilføje brugere én ad gangen, eller **Upload brugere** for at tilføje dem samlet.
     
-9. Når du er færdig med at tilføje brugere, skal du **vælge Gem ændringer**.
+9. Når du er færdig med at tilføje brugere, skal du vælge **Gem ændringer**.
   
 ## <a name="next-steps"></a>Næste trin
 
-Find ud af[, hvordan du](/office365/admin/manage/message-center) administrerer [meddelelser Microsoft 365 Meddelelsescenter](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) for at få meddelelser om kommende Microsoft 365 opdateringer og udgivelser.
+Se, hvordan du [administrerer meddelelser](/office365/admin/manage/message-center) i [dit Microsoft 365 Meddelelsescenter](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) for at få meddelelser om kommende Microsoft 365 opdateringer og udgivelser.
 
 ## <a name="related-content"></a>Relateret indhold
 

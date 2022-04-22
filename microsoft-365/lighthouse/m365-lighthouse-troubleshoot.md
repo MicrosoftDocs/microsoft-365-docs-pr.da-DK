@@ -1,5 +1,5 @@
 ---
-title: Foretag fejlfinding af og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
+title: Foretag fejlfinding af fejlmeddelelser og problemer i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,15 +15,15 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få hjælp til fejlfinding og løsning af fejlmeddelelser og problemer.
-ms.openlocfilehash: 1126db76129a0f3cf6b65921a6e731f02d7311d3
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få hjælp til fejlfinding af fejlmeddelelser og problemer.
+ms.openlocfilehash: 3da40291742ae85ef897aeceae0def27aca8abe2
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824064"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023211"
 ---
-# <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Foretag fejlfinding af og løs problemer og fejlmeddelelser i Microsoft 365 Lighthouse
+# <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Foretag fejlfinding af fejlmeddelelser og problemer i Microsoft 365 Fyrtårn
 
 I denne artikel beskrives fejlmeddelelser og problemer, der kan opstå, når du bruger Microsoft 365 Lighthouse, og den indeholder fejlfindingstrin, du kan udføre for at løse dem.
 

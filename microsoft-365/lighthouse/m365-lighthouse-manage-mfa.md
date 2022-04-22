@@ -1,5 +1,5 @@
 ---
-title: Administrer multifaktorgodkendelse
+title: Administrer multifaktorgodkendelse i Microsoft 365 Fyrtårn
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,65 +15,65 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For administrerede tjenesteudbydere ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer multifaktorgodkendelse.
-ms.openlocfilehash: 5ab430e464fb2d20f9a911818f9fd6cb077d849e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer multifaktorgodkendelse.
+ms.openlocfilehash: 53f1b0fa9a477ae74b48c96f76f9b2523fe45c10
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592987"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023189"
 ---
-# <a name="manage-multifactor-authentication"></a>Administrer multifaktorgodkendelse
+# <a name="manage-multifactor-authentication-in-microsoft-365-lighthouse"></a>Administrer multifaktorgodkendelse i Microsoft 365 Fyrtårn
 
-Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA) hjælper med at beskytte adgangen til data og programmer, hvilket giver et andet lag af sikkerhed ved hjælp af en anden form for godkendelse. Fanen Multifaktorgodkendelse indeholder detaljerede oplysninger om status for multifaktorgodkendelsesaktivering på tværs af dine lejere. Vælg en hvilken som helst lejer på listen for at få vist flere oplysninger om den pågældende lejer, herunder hvilke betingede adgangspolitikker, der kræver MFA, der allerede er konfigureret, og hvilke brugere der endnu ikke har tilmeldt sig MFA.
+Azure Active Directory (Azure AD) MFA (Multi-Factor Authentication) hjælper med at beskytte adgangen til data og programmer og giver endnu et lag af sikkerhed ved hjælp af en anden form for godkendelse. Fanen Multifactor Authentication indeholder detaljerede oplysninger om status for MFA-aktivering på tværs af dine lejere. Vælg en hvilken som helst lejer på listen for at få vist flere oplysninger om den pågældende lejer, herunder hvilke politikker for betinget adgang, der kræver MFA, der allerede er konfigureret, og hvilke brugere der endnu ikke har registreret sig til MFA.
 
-Til små og mellemstore virksomheder (SMB)-kunder anbefaler Microsoft [, at man](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) som minimum aktiverer sikkerhedsstandardindstillinger. Til mere komplekse scenarier kan du bruge Betinget [adgang til](/azure/active-directory/conditional-access/overview) at konfigurere bestemte politikker.
+For kunder med små og mellemstore virksomheder (SMB) anbefaler Microsoft, at du aktiverer [sikkerhedsstandarder](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) som minimum. I forbindelse med mere komplekse scenarier kan du bruge [Betinget adgang](/azure/active-directory/conditional-access/overview) til at konfigurere bestemte politikker.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
 Følgende betingelser skal være opfyldt, før en lejer vises på listen:
 
-- Kundelejeren skal have en Azure AD Premium licens for hver bruger. Du kan finde flere oplysninger om, hvilke licenser der understøtter [multifaktorgodkendelse, under Funktioner og licenser til Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-licensing).
+- Kundelejer skal have en Azure AD Premium licens for hver bruger. Du kan få flere oplysninger om, hvilke licenser der understøtter MFA, under [Funktioner og licenser til Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-licensing).
 
-- Kundelejeren skal være aktiv i Microsoft 365 Fyrtårn. Du kan få mere at vide om, hvordan du finder ud af, om en lejer [er aktiv, Microsoft 365 oversigt over lejerlisten i Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-tenant-list-overview).
+- Kundelejer skal være aktiv i Microsoft 365 Lighthouse. Hvis du vil vide mere om, hvordan du finder ud af, om en lejer er aktiv, [skal du se oversigt over Microsoft 365 Lighthouse-lejerliste](/microsoft-365/lighthouse/m365-lighthouse-tenant-list-overview).
 
 ## <a name="enable-mfa-for-a-tenant"></a>Aktivér MFA for en lejer
 
-1. Vælg Brugere i venstre navigationsrude i **Fyrtårn**.
+1. Vælg **Brugere** i navigationsruden til venstre i Lighthouse.
 
-2. Vælg fanen **Multifaktorgodkendelse** .
+2. Vælg fanen **Multifactor Authentication (Godkendelse af multifaktor** ).
 
 3. Vælg en lejer på lejerlisten for at åbne detaljeruden.
 
-4. På fanen **MFA-aktivering under** **MFA med sikkerhedsstandard skal** du vælge **Aktivér sikkerhedsstandard**.
+4. Under fanen **MFA-aktivering** under **MFA med sikkerhedsstandarder** skal du vælge **Aktivér sikkerhedsstandarder**.
 
 5. Vælg **Gem ændringer**.
 
-Hvis du vil aktivere MFA via Betinget adgang, skal du [se Selvstudium: Sikre brugerhændelser med Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa).
+Hvis du vil aktivere MFA via betinget adgang, skal du se [Selvstudium: Sikre brugerlogonhændelser med Multifaktorgodkendelse i Azure AD](/azure/active-directory/authentication/tutorial-enable-azure-mfa).
 
-## <a name="notify-users-who-arent-registered-for-mfa"></a>Giv besked til brugere, der ikke er registreret til MFA
+## <a name="notify-users-who-arent-registered-for-mfa"></a>Giv brugere, der ikke er registreret til MFA, besked
 
-1. Vælg Brugere i venstre navigationsrude i **Fyrtårn**.
+1. Vælg **Brugere** i navigationsruden til venstre i Lighthouse.
 
-2. Vælg fanen **Multifaktorgodkendelse** .
+2. Vælg fanen **Multifactor Authentication (Godkendelse af multifaktor** ).
 
 3. Vælg en lejer på lejerlisten for at åbne detaljeruden.
 
-4. På fanen **Bruger, der ikke er registreret til MFA** skal du vælge de brugere, du vil underrette.
+4. Vælg de brugere, du vil give besked, under fanen Bruger, der **ikke er registreret til MFA** .
 
 5. Vælg **Opret mail**.
 
-Fyrtårn åbner din standardmailklient og udfylder mailen med instruktioner til at tilmelde dig MFA. Alle de valgte brugere medtages på linjen BCC. Hvis du foretrækker at sende en mail til brugerne enkeltvis, kan du vælge mailikonet ud for brugernavnet.
+Lighthouse åbner din standardmailklient og udfylder mailmeddelelsen med instruktioner i, hvordan du tilmelder dig MFA. Alle de valgte brugere medtages på BCC-linjen. Hvis du foretrækker at sende mails individuelt til brugere, kan du vælge mailikonet ud for brugernavnet.
 
-Hvis du vil bruge en anden mailkonto, kan du eksportere listen over brugere til en fil. Du kan også hente mailskabeloner, som du kan tilpasse med virksomhedens branding.
+Hvis du vil bruge en anden mailkonto, kan du eksportere listen over brugere til en fil. Du kan også downloade eksempelmailskabeloner, som du kan tilpasse med din virksomhedsbranding.
 
 ## <a name="next-steps"></a>Næste trin
 
-Når MFA er aktiveret, kan du Azure Active Directory selvbetjeningstjenesten (Azure AD) til nulstilling af adgangskode. Denne funktion giver brugerne mulighed for at ændre eller nulstille deres adgangskode uden administrator- eller helpdeskdeltagelse. Du kan finde flere oplysninger under [Administrere nulstilling af adgangskode via selvbetjening](m365-lighthouse-manage-sspr.md).
+Når MFA er aktiveret, kan du aktivere selvbetjeningsnulstilling af Azure Active Directory (Azure AD). Denne funktion giver brugerne mulighed for at ændre eller nulstille deres adgangskode uden involvering af administrator eller helpdesk. Du kan få flere oplysninger under [Administrer selvbetjent nulstilling af adgangskode i Microsoft 365 Lighthouse](m365-lighthouse-manage-sspr.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Planlæg en Azure Active Directory installation af Multi-Factor Authentication](/azure/active-directory/authentication/howto-mfa-getstarted) (artikel)\
-[Hvad er sikkerhedsstandard?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) (artikel)\
-[Hvad er Betinget adgang?](/azure/active-directory/conditional-access/overview) (artikel)\
-[Få mere at vide om, hvordan du konverterer brugere fra MFA pr. bruger til Betinget adgang](/azure/active-directory/authentication/howto-mfa-getstarted#convert-users-from-per-user-mfa-to-conditional-access-based-mfa) (artikel)
+[Planlæg en Azure Active Directory udrulning af multifaktorgodkendelse](/azure/active-directory/authentication/howto-mfa-getstarted) (artikel)\
+[Hvad er sikkerhedsstandarder?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) (artikel)\
+[Hvad er betinget adgang?](/azure/active-directory/conditional-access/overview) (artikel)\
+[Få mere at vide om, hvordan du konverterer brugere fra MFA pr. bruger til betinget adgang](/azure/active-directory/authentication/howto-mfa-getstarted#convert-users-from-per-user-mfa-to-conditional-access-based-mfa) (artikel)

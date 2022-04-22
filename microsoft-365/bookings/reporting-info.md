@@ -1,5 +1,5 @@
 ---
-title: Rapporteringsoplysninger for Microsoft Bookings
+title: Få vist Bookings kalenderoplysninger
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Få mere at vide om, hvordan du kan se en 4-måneders visning af din Bookings aktivitet
-ms.openlocfilehash: 191194d112fe231c1a2f64245d33850ecb1266c0
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 8f6ddcdc7320013698b1ba9f0ad2f5b1cd1e2e22
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714301"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023717"
 ---
 # <a name="reporting-info-for-bookings"></a>Rapporteringsoplysninger om Bookings
 
