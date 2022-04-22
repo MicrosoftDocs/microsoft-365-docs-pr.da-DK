@@ -42,7 +42,7 @@
           href: device-onboarding-script.md
         - name: Onboard ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)
           href: device-onboarding-vdi.md
-    - name: Onboard macOS-enheder (prøveversion)
+    - name: Onboard macOS-enheder
       items:
         - name: Oversigt over onboarding af macOS-enheder i Microsoft 365
           href: device-onboarding-macos-overview.md
