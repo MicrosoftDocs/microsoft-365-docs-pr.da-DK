@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1ea87a29d93c43b89bcfb482d185bd4b397dcc5b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 60038a2b82ea452ed921d16042cb81d4f0e023a9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862450"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100649"
 ---
 # <a name="add-blocks-in-the-tenant-allowblock-list"></a>Tilføj blokerede på listen over tilladte/blokerede lejere
 
@@ -115,9 +115,11 @@ ms.locfileid: "64862450"
    - **Spoof-type**: Vælg en af følgende værdier:
      - **Intern**: Den spoofede afsender er i et domæne, der tilhører din organisation (et [accepteret domæne](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)).
      - **Ekstern**: Den spoofede afsender er i et eksternt domæne.
-   - **Handling**: Vælg **Tillad** eller **Bloker**.
+   - **Handling**: Vælg **Blok**.
 
 4. Klik på **Tilføj**, når du er færdig.
+> [!NOTE]
+> Mails fra disse afsendere blokeres som *phish*. 
 
 ## <a name="use-powershell"></a>Brug PowerShell
 

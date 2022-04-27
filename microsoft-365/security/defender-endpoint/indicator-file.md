@@ -1,8 +1,8 @@
 ---
 title: Opret indikatorer for filer
 ms.reviewer: ''
-description: Opret indikatorer for en filhash, der definerer registrering, forhindring og udelukkelse af enheder.
-keywords: fil, hash, administrer, tilladt, blokeret, bloker, ren, skadelig, filhash, IP-adresse, URL-adresser, domæne
+description: Opret indikatorer for en filhash, der definerer registrering, forebyggelse og udeladelse af objekter.
+keywords: fil, hash, administrere, tilladt, blokeret, blokere, ren, skadelig, filhash, IP-adresse, URL-adresser, domæne
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 20e120385046a333f68f4959c395c2bbb520899b
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: f1d32c546fc270e044d391dd35f325afc98fe5a9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500909"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101441"
 ---
 # <a name="create-indicators-for-files"></a>Opret indikatorer for filer
 
@@ -29,17 +29,17 @@ ms.locfileid: "64500909"
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
+> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
-Forebyg yderligere overførsel af et angreb i organisationen ved at udelukke potentielt skadelige filer eller mistanke om malware. Hvis du kender en potentielt skadelig eksekverbar eksekverbar fil (PE), kan du blokere den. Denne handling forhindrer den i at blive læst, skrevet eller udført på enheder i organisationen.
+Undgå yderligere overførsel af et angreb i din organisation ved at forbyde potentielt skadelige filer eller mistanke om malware. Hvis du kender en potentielt skadelig PE-fil (Portable Executable), kan du blokere den. Denne handling forhindrer, at den læses, skrives eller udføres på enheder i din organisation.
 
-Der er tre måder, hvorpå du kan oprette indikatorer for filer:
+Du kan oprette indikatorer for filer på tre måder:
 
-- Ved at oprette en indikator via siden med indstillinger
+- Ved at oprette en indikator via indstillingssiden
 - Ved at oprette en kontekstafhængig indikator ved hjælp af knappen Tilføj indikator fra siden med filoplysninger
 - Ved at oprette en indikator via [indikator-API'en](ti-indicator.md)
 
@@ -47,76 +47,76 @@ Der er tre måder, hvorpå du kan oprette indikatorer for filer:
 
 Det er vigtigt at forstå følgende forudsætninger, før du opretter indikatorer for filer:
 
-- Denne funktion er tilgængelig, hvis din organisation **Microsoft Defender Antivirus (i aktiv tilstand)** og **skybaseret beskyttelse er aktiveret**. Få mere at vide under [Administrer skybaseret beskyttelse](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- Denne funktion er tilgængelig, hvis din organisation bruger **Microsoft Defender Antivirus (i aktiv tilstand),** og **cloudbaseret beskyttelse er aktiveret**. Du kan få flere oplysninger under [Administrer skybaseret beskyttelse](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 
-- Versionen af Antimalware-klienten skal være 4.18.1901.x eller nyere. Se [Månedlig platform og programversioner](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
+- Antimalware-klientversionen skal være 4.18.1901.x eller nyere. Se [Månedlige platform- og programversioner](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
 
-- Understøttes på enheder med Windows 10, version 1703 eller nyere, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
+- Understøttes på enheder med Windows 10 version 1703 eller nyere, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
     
-   >[!NOTE]
-    >Windows Server 2016 og Windows Server 2012 R2 skal være onboardet ved hjælp af instruktionerne i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016), for at denne funktion kan fungere. 
+   > [!NOTE]
+   > Windows Server 2016 og Windows Server 2012 R2 skal onboardes ved hjælp af vejledningen i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016), for at denne funktion kan fungere. Brugerdefinerede filindikatorer med handlingerne Allow, Block og Remediate er nu også tilgængelige i den [offentlige prøveversion for de forbedrede funktioner i antimalwareprogrammet til macOS og Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
-- Hvis du vil begynde at blokere filer, skal [du først aktivere funktionen "bloker eller tillad"](advanced-features.md) i Indstillinger.
+- Hvis du vil starte blokering af filer, skal du først [aktivere funktionen "bloker eller tillad"](advanced-features.md) i Indstillinger.
 
-Denne funktion er udviklet til at forhindre mulig malware (eller potentielt skadelige filer) i at blive hentet fra internettet. Det understøtter i øjeblikket portable eksekverbare filer (PE), herunder .exe og .dll filer. Dækningen udvides med tiden.
+Denne funktion er designet til at forhindre, at formodet malware (eller potentielt skadelige filer) downloades fra internettet. Den understøtter i øjeblikket bærbare eksekverbare filer (PE), herunder .exe og .dll filer. Dækningen vil blive forlænget over tid.
 
-## <a name="create-an-indicator-for-files-from-the-settings-page"></a>Opret en indikator for filer fra siden med indstillinger
+## <a name="create-an-indicator-for-files-from-the-settings-page"></a>Opret en indikator for filer fra indstillingssiden
 
-1. I **navigationsruden** skal du **vælge Indstillinger** \> **Slutpunktsindikatorer** \> (under **Regler**).
+1. Vælg **Indstillinger** \> **Slutpunktsindikatorer** \> (under **Regler**) i navigationsruden.
 
-2. Vælg **fanen Filhashes** .
+2. Vælg fanen **Filerhashes** .
 
 3. Vælg **Tilføj element**.
 
 4. Angiv følgende oplysninger:
-    - Indikator – Angiv enhedsdetaljerne, og definer udløb af indikatoren.
-    - Handling – Angiv den handling, der skal gøres, og angiv en beskrivelse.
-    - Omfang – Definer enhedsgruppens omfang.
+    - Indikator – Angiv enhedsoplysningerne, og definer indikatorens udløb.
+    - Handling – Angiv den handling, der skal udføres, og angiv en beskrivelse.
+    - Scope – Definer omfanget af enhedsgruppen.
 
-5. Gennemgå oplysningerne under fanen Oversigt, og vælg derefter **Gem**.
+5. Gennemse oplysningerne under fanen Oversigt, og vælg derefter **Gem**.
 
 ## <a name="create-a-contextual-indicator-from-the-file-details-page"></a>Opret en kontekstafhængig indikator fra siden med filoplysninger
 
-En af mulighederne, når du [tager svarhandlinger i en fil](respond-file-alerts.md) , er at tilføje en indikator for filen. Når du tilføjer en indikatorhash for en fil, kan du vælge at hæve en besked og blokere filen, når en enhed i organisationen forsøger at køre den.
+En af indstillingerne, når du foretager [svarhandlinger på en fil](respond-file-alerts.md) , er at tilføje en indikator for filen. Når du tilføjer en indikatorhash for en fil, kan du vælge at udløse en besked og blokere filen, når en enhed i organisationen forsøger at køre den.
 
-Filer, der automatisk blokeres af en indikator, vises ikke i filens handlingscenter, men beskederne vil stadig være synlige i køen Vigtige beskeder.
+Filer, der automatisk blokeres af en indikator, vises ikke i filens Løsningscenter, men beskederne vil stadig være synlige i beskedkøen.
 
-## <a name="public-preview-alerting-on-file-blocking-actions"></a>Offentlig forhåndsvisning: Beskeder om filblokeringshandlinger
+## <a name="public-preview-alerting-on-file-blocking-actions"></a>Offentlig prøveversion: Besked om handlinger til filblokering
 
 > [!IMPORTANT]
-> Oplysningerne i dette afsnit (Offentlig prøveversion af automatiseret undersøgelse og **afhjælpningsprogram**) relaterer til det foreløbige produkt, som kan være væsentligt ændret, før det frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
+> Oplysningerne i dette afsnit (**Offentlig prøveversion til automatiseret undersøgelse og afhjælpningsprogram**) er relateret til et produkt, der er udgivet på forhånd, og som kan ændres væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-De aktuelle understøttede handlinger for fil-IOC er tilladte, overvåge og blokere og afhjælpe. Når du har valgt at blokere en fil, kan du vælge, om det er nødvendigt at udløse en besked. På denne måde kan du styre antallet af vigtige beskeder til dine sikkerhedsteams og sikre, at kun påkrævede beskeder hæves.
+De aktuelt understøttede handlinger for fil-IOC tillader, overvåger og blokerer og afhjælper. Når du har valgt at blokere en fil, kan du vælge, om det er nødvendigt at udløse en besked. På denne måde kan du styre antallet af beskeder, der sendes til dine sikkerhedsteams, og sørge for, at der kun sendes påkrævede beskeder.
 
-I Microsoft 365 Defender skal du gå **Indstillinger** >  EndpointsIndicatorsAdd >  >  **New File Hash**.
+I Microsoft 365 Defender skal du gå til **Indstillinger** >  **EndpointsIndicatorsAdd** >  >  **Ny filhash**.
 
 Vælg at blokere og afhjælpe filen.
 
-Vælg, om der skal genereres en besked om filblokeringshændelsen, og definer indstillingerne for vigtige beskeder:
+Vælg, om der skal oprettes en besked for filblokeringshændelsen, og definer beskedindstillingerne:
 
 - Beskedens titel
-- Alvorsgrad for beskeden
+- Alvorsgraden af beskeden
 - Kategori
 - Beskrivelse
 - Anbefalede handlinger
 
-:::image type="content" source="images/indicators-generate-alert.png" alt-text="Beskedindstillinger for filindikatorer" lightbox="images/indicators-generate-alert.png":::
+:::image type="content" source="images/indicators-generate-alert.png" alt-text="Beskedindstillingerne for filindikatorer" lightbox="images/indicators-generate-alert.png":::
 
 > [!IMPORTANT]
 >
-> - Typisk gennemtvinges filblokke og fjernes inden for et par minutter, men det kan tage op til 30 minutter.
-> - Hvis der er IoC-politikker med samme håndhævelsestype og destination, anvendes politikken for en mere sikker hash-fil. En IoC-politik for en SHA-256-filhash vinder over en IoC-politik for en SHA-1-filhash, som vinder over en IoC-politik for en MD5-filhash, hvis hash-typerne definerer den samme fil. Dette gælder altid, uanset enhedsgruppen.
-> - I alle andre tilfælde gælder politikken i enhedsgruppen for en enhed, hvis der anvendes IoC-politikker med samme håndhævelsessmål for alle enheder og for enhedens gruppe. For en enhed gælder politikken i enhedsgruppen.
-> - Hvis gruppepolitikken EnableFileHashComputation er deaktiveret, reduceres blokeringsnøjagtigheden af filens IoC. Aktivering kan dog påvirke `EnableFileHashComputation` enhedens ydeevne. Eksempelvis kan kopiering af store filer fra et netværksshare til din lokale enhed, især via en VPN-forbindelse, have en effekt på enhedens ydeevne.
+> - Filblokke gennemtvinges og fjernes typisk inden for et par minutter, men kan tage op til 30 minutter.
+> - Hvis der er modstridende IoC-politikker med samme håndhævelsestype og mål, anvendes politikken for den mere sikre hash. En SHA-256-filhash IoC-politik vinder over en SHA-1-filhash IoC-politik, som vil vinde over en MD5-filhash IoC-politik, hvis hashtyperne definerer den samme fil. Dette er altid tilfældet, uanset enhedsgruppen.
+> - Hvis IoC-politikker med samme håndhævelsesmål anvendes på alle enheder og på enhedens gruppe, vil politikken i enhedsgruppen i alle andre tilfælde vinde, hvis der anvendes modstridende IoC-politikker på alle enheder og på enhedens gruppe.
+> - Hvis gruppepolitikken EnableFileHashComputation er deaktiveret, reduceres blokeringsnøjagtigheden af filen IoC. Aktivering kan dog `EnableFileHashComputation` påvirke enhedens ydeevne. Kopiering af store filer fra et netværksshare til din lokale enhed, især via en VPN-forbindelse, kan f.eks. have indflydelse på enhedens ydeevne.
 >
-> Du kan finde flere oplysninger om gruppepolitikken EnableFileHashComputation under [Defender CSP](/windows/client-management/mdm/defender-csp).
+> Du kan få flere oplysninger om gruppepolitikken EnableFileHashComputation under [Defender CSP](/windows/client-management/mdm/defender-csp).
 
-## <a name="public-preview-advanced-hunting-capabilities"></a>Offentlig prøveversion: Avancerede muligheder for at søge
+## <a name="public-preview-advanced-hunting-capabilities"></a>Offentlig prøveversion: Avancerede jagtegenskaber
 
 > [!IMPORTANT]
-> Oplysninger i dette afsnit (Offentlig prøveversion af automatiseret undersøgelse og **afhjælpningsprogram**) relaterer til det foreløbige produkt, som kan være væsentligt ændret, før det frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
+> Oplysningerne i dette afsnit (**Offentlig prøveversion til automatiseret undersøgelse og afhjælpningsprogram**) er relateret til et produkt, der er udgivet på forhånd, og som kan ændres væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-Du kan forespørge på svarhandlingsaktiviteten på forhånd at lede. Nedenfor er et eksempel på en avanceret forespørgsel:
+Du kan forespørge om svarhandlingsaktiviteten på forhånd på jagt. Nedenfor er et eksempel på en forespørgsel om avanceret jagt:
 
 ```console
 search in (DeviceFileEvents, DeviceProcessEvents, DeviceEvents, DeviceRegistryEvents, DeviceNetworkEvents, DeviceImageLoadEvents, DeviceLogonEvents)
@@ -124,9 +124,9 @@ Timestamp > ago(30d)
 | where AdditionalFields contains "EUS:Win32/CustomEnterpriseBlock!cl"
 ```
 
-Du kan finde flere oplysninger om avanceret [jagt under Proaktivt lede efter trusler med avanceret jagt](advanced-hunting-overview.md).
+Du kan finde flere oplysninger om avanceret jagt under [Proaktiv jagt efter trusler med avanceret jagt](advanced-hunting-overview.md).
 
-Nedenfor finder du yderligere trådnavne, der kan bruges i eksempelforespørgslen ovenfor:
+Nedenfor er yderligere trådnavne, som kan bruges i eksempelforespørgslen ovenfor:
 
 Filer:
 
@@ -137,28 +137,28 @@ Certifikater:
 
 - EUS:Win32/CustomCertEnterpriseBlock!cl
 
-Svarhandlingsaktiviteten kan også ses på enhedens tidslinje.
+Aktiviteten for svarhandlingen kan også ses på enhedens tidslinje.
 
-## <a name="policy-conflict-handling"></a>Håndtering af konflikt mellem politikker
+## <a name="policy-conflict-handling"></a>Politikkonflikthåndtering
 
-Cert- og File IoC-politikhåndteringskonflikt følger nedenstående rækkefølge:
+Konflikt i håndtering af certifikat- og fil-IoC-politik følger nedenstående rækkefølge:
 
-- Hvis filen ikke er tilladt af Windows Defender Programkontrolelement og AppLocker-gennemtving tilstandspolitik/-politikker, skal du vælge **Bloker**
-- Hvis filen ikke er tilladt i Microsoft Defender Antivirus, skal du vælge **Tillad**
-- Ellers, hvis filen blokeres eller advares af en bloker eller advar fil IoC, så **Bloker/advar**
-- Ellers hvis filen er tilladt af en IoC-politik for tillad fil, skal du **vælge Tillad**
+- Hvis filen ikke er tilladt af Windows Defender Programkontrolelement og AppLocker gennemtvinge tilstandspolitik/-politikker, skal du **blokere**
+- Ellers hvis filen er tilladt af Microsoft Defender Antivirus udeladelse, så **Tillad**
+- Ellers, hvis filen er blokeret eller advaret af en blok eller advar fil IoC, og derefter **Bloker/Advar**
+- Ellers, hvis filen er tilladt af en IoC-politik for tillad fil **, skal du**
 - Ellers, hvis filen er blokeret af ASR-regler, CFA, AV, SmartScreen og derefter **Bloker**
-- **Ellers** tillades (Windows Defender programkontrolelement & AppLocker-politik, ingen IoC-regler gælder for den)
+- Else **Allow** (overfører Windows Defender Application Control & AppLocker-politik, der gælder ingen IoC-regler for den)
 
 >[!NOTE]
-> I situationer, Microsoft Defender Antivirus er indstillet til **Bloker**, men Defender til Slutpunkt er indstillet til **Tillad**, vil politikken som standard være **Tillad**.
+> I situationer, hvor Microsoft Defender Antivirus er angivet til **Bloker**, men Defender for Endpoint er angivet til **Tillad**, vil politikken som standard **være Tillad**.
 
-Hvis der er IoC-politikker med samme håndhævelsestype og destination, der er i konflikt med hinanden, anvendes politikken for den mere sikre (hvilket vil sige længere) hash. Eksempelvis vil en IoC-politik for en SHA-256-fil, vinde over en IoC-politik for en MD5-filhash, hvis begge hash-typer definerer den samme fil.
+Hvis der er modstridende IoC-politikker med samme håndhævelsestype og mål, anvendes politikken for den mere sikre hashværdi (dvs. længere). En SHA-256-filhash IoC-politik vinder f.eks. over en IoC-politik for MD5-filhash, hvis begge hashtyper definerer den samme fil.
 
 > [!WARNING]
-> Håndtering af politikkonflikter for filer og certifikater adskiller sig fra håndtering af politikkonflikter for domæner/URL-adresser/IP-adresser.
+> Politikkonflikthåndtering for filer og certifikater adskiller sig fra politikkonflikthåndtering for domæner/URL-adresser/IP-adresser.
 
-Trussels- og håndtering af sikkerhedsrisici s blokerede følsomme programfunktioner bruger fil-IoCs til håndhævelse og følger rækkefølgen af ovenstående konflikthåndtering.
+Threat og håndtering af sikkerhedsrisici blokerer sårbare programfunktioner bruger fil-IoCs til håndhævelse og følger ovenstående rækkefølge for konflikthåndtering.
 
 ### <a name="examples"></a>Eksempler
 
@@ -166,10 +166,10 @@ Trussels- og håndtering af sikkerhedsrisici s blokerede følsomme programfunkti
 
 ****
 
-|Komponent|Håndhævelse af komponent|Handling med filindikator|Resultat|
+|Komponent|Gennemtvingelse af komponent|Filindikatorhandling|Resultat|
 |---|---|---|---|
-|Udelukkelse af reduktion af filsti til angrebsoverfladen|Tillad|Bloker|Bloker|
-|Regel for reduktion af angrebsoverfladen|Bloker|Tillad|Tillad|
+|Udeladelse af filsti til reduktion af angrebsoverflade|Tillad|Bloker|Bloker|
+|Regel for reduktion af angrebsoverflade|Bloker|Tillad|Tillad|
 |Windows Defender programkontrolelement|Tillad|Bloker|Tillad|
 |Windows Defender programkontrolelement|Bloker|Tillad|Bloker|
 |Microsoft Defender Antivirus udeladelse|Tillad|Bloker|Tillad|

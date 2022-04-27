@@ -2,13 +2,13 @@
 title: Sådan påvirker disse sikkerhedsanbefalinger dine brugere
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
+ms.author: v-kcirillo
+author: cirilk
 manager: scotv
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,68 +23,68 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan disse sikkerhedsanbefalinger Microsoft 365 Business Premium dine brugere og beskytter dine data.
-ms.openlocfilehash: f1c327badefcd7f5d7f1728489a8388e7e7925e8
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Få mere at vide om, hvordan disse sikkerhedsanbefalinger til Microsoft 365 Business Premium påvirker dine brugere og beskytter dine data.
+ms.openlocfilehash: 202df778e74fb0f14a92b572df977088f8319595
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64635147"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099955"
 ---
 # <a name="how-these-security-recommendations-affect-your-users"></a>Sådan påvirker disse sikkerhedsanbefalinger dine brugere
 
-Sikkerhedsanbefalinger for Microsoft 365 denne løsning gør det meget sværere for hackere at få adgang til dit miljø. Kompromisen er, at brugerne skal være opmærksomme på, hvordan de skal arbejde i dette mere sikre miljø. Vi forstår, at det kræver lidt ekstra tålmodighed, men det er værd at holde organisationen beskyttet.
+Sikkerhedsanbefalinger til Microsoft 365 i denne løsning gør det meget sværere for hackere at få adgang til dit miljø. Konsekvensen er, at brugerne skal være opmærksomme på, hvordan de arbejder i dette mere sikre miljø. Vi forstår, at der kræves lidt ekstra tålmodighed, men det er værd at beskytte din organisation.
 
-![Illustration, der opsummerer vigtige punkter nedenfor til iPhones, Android-enheder, Mac-computere, Windows 10, deling og nøglemedarbejdere.](../media/M365-democracy-Users_900px.png)
+![Illustration, der opsummerer vigtige punkter nedenfor for iPhones, Android-enheder, Macs, Windows 10, deling og nøglemedarbejdere.](../media/M365-democracy-Users_900px.png)
 
-## <a name="use-secure-email-practices"></a>Brug sikre mailpraksisser
+## <a name="use-secure-email-practices"></a>Brug af sikre mailpraksisser
 
-Alle brugere skal være opmærksomme på og bruge disse mailvaner til at holde deres mail sikker:
+Alle brugere skal være opmærksomme på og bruge disse mailpraksisser til at holde deres mail sikker:
 
-- Konfigurer mail til at bruge multifaktorgodkendelse med Authenticator-appen.
+- Konfigurer mail for at bruge multifaktorgodkendelse med godkenderappen.
 
-- Bekræft legitime mails, og se efter sikkerhedstip fra avanceret phishingbeskyttelse (Defender for Office 365).
+- Bekræft legitime mails, og søg efter sikkerhedstips fra avanceret phishing-beskyttelse (Defender for Office 365).
 
-- Åbn kun sikre links og vedhæftede filer, som bekræftet af Pengeskab Links og Pengeskab vedhæftede filer.
+- Åbn kun sikre links og vedhæftede filer, som bekræftet af Pengeskab Links og Pengeskab Vedhæftede filer.
 
-Få mere at [vide om multifaktorgodkendelse](m365bp-multifactor-authentication.md) og [phishing og andre angreb](m365-campaigns-phishing-and-attacks.md).
+Få mere at vide om [multifaktorgodkendelse](m365bp-multifactor-authentication.md) og [phishing og andre angreb](avoid-phishing-and-attacks.md).
 
 Download en [infografik](m365-campaigns-protect-campaign-infographic.md) med tip til dig og medlemmerne af dit team.
 
 ## <a name="set-up-iphones-and-android-devices"></a>Konfigurer iPhones og Android-enheder
 
-Alle brugere, du føjer til dit miljø, skal bruge et par minutter for [at konfigurere iPhones og Android-enheder](../business/set-up-mobile-devices.md) til at fungere sikkert:
+Det tager et par minutter for alle brugere, du føjer til dit miljø, at [konfigurere iPhones og Android-enheder](../business/set-up-mobile-devices.md) for at fungere sikkert:
 
-- Konfigurer enheder til at bruge multifaktorgodkendelse med Authenticator-appen.
+- Konfigurer enheder til at bruge multifaktorgodkendelse med godkenderappen.
 
-- Brug Microsoft-mobilapps, herunder Outlook Mobile, Word, OneDrive og andre Microsoft-apps fra App Store. De oprindelige mailapps, der er inkluderet på iPhones og Android-enheder, understøttes ikke. 
+- Brug Microsoft-mobilapps, herunder Outlook Mobile, Word, OneDrive og andre Microsoft-apps fra appbutikken. De oprindelige mailapps, der er inkluderet på iPhones og Android-enheder, understøttes ikke. 
 
-- Kræv en pinkode, for at brugerne kan låse enheden op.
+- Kræv en pinkode, så brugerne kan låse deres enhed op.
 
-Når du har konfigureret disse, bliver dine brugere bedt om at bruge Authenticator-appen, når de får adgang til organisationens data på disse enheder, herunder mail.
+Når du har konfigureret disse, bliver brugerne bedt om at bruge godkenderappen, når de får adgang til dine organisationsdata på disse enheder, herunder mail.
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>Hold BYOD Macs og Windows 10 pc'er frisk
+## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>Hold BYOD Macs og Windows 10 pc'er friske
 
 Det er også vigtigt, at brugerne holder deres primære arbejdsenhed opdateret:
 
-- Installér de nyeste versioner af Office-skrivebordsapps, og hold disse nye med opdateringer, når du bliver bedt om det.
+- Installér de nyeste versioner af Office desktopapps, og hold dem opdateret med opdateringer, når du bliver bedt om det.
 
-- Hold dig opdateret med opdateringer til operativsystemet, f.eks. Windows opdateringer.
+- Hold dig ajour med opdateringer til operativsystemet, f.eks. Windows opdateringer.
 
-For [ikke-administrerede Windows 10 og Mac-enheder](m365bp-protect-pcs-macs.md) har brugerne ansvaret for at sikre, at grundlæggende sikkerhedsfunktioner er aktiveret.
+For [ikke-administrerede Windows 10- og Mac-enheder](m365bp-protect-pcs-macs.md) har brugerne ansvaret for at sikre, at grundlæggende sikkerhedsfunktioner er aktiveret.
 
-**Aktivere grundlæggende sikkerhedsfunktioner på BYOD-Windows 10- og Mac-enheder**
+**Aktivér grundlæggende sikkerhedsfunktioner på BYOD-Windows 10- og Mac-enheder**
 
 |**Windows 10**|**Mac**|
 |:-----|:------|
-|Slå BitLocker-enhedsbeskyttelse til<p><p> Sørg for Windows Defender forbliver tændt <p>Slå firewallen Windows til| Brug FileVault til at kryptere mac-disken <p><p>Brug en pålidelig antivirussoftware <p>Slå firewallbeskyttelse til|
+|Slå BitLocker-enhedsbeskyttelse til<p><p> Sørg for, at Windows Defender forbliver på <p>Slå Windows Firewall til| Brug FileVault til at kryptere Mac-disken <p><p>Brug en pålidelig antivirussoftware <p>Slå firewallbeskyttelse til|
 
-Du kan få mere at vide om disse anbefalinger [under Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
+Hvis du vil vide mere om disse anbefalinger, skal [du se Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
 
-## <a name="collaborate-using-microsoft-teams-onedrive-sharepoint-online-and-other-tools"></a>Samarbejd ved hjælp Microsoft Teams, OneDrive, SharePoint Online og andre værktøjer
+## <a name="collaborate-using-microsoft-teams-onedrive-sharepoint-online-and-other-tools"></a>Samarbejd ved hjælp af Microsoft Teams, OneDrive, SharePoint Online og andre værktøjer
 
-Dine brugere kan være fristende at dele og gemme dine organisationsfiler andre steder end Microsoft 365. Microsoft 365 gør det så nemt som muligt at samarbejde og dele sikkert. Du kan [dele filer og videoer](share-files-and-videos.md) direkte fra Microsoft Teams, OneDrive, Stream og endda inde fra en fil. Deling fra disse værktøjer hjælper med at undgå, at dine datalækagerlækager. Du kan føje yderligere beskyttelse til følsomme data for at forhindre deling uden for organisationen.
+Brugerne kan blive fristet til at dele og gemme dine organisationsfiler andre steder end Microsoft 365. Microsoft 365 gør det så nemt som muligt at samarbejde og dele sikkert. Du kan [dele filer og videoer](share-files-and-videos.md) direkte fra Microsoft Teams, OneDrive, Stream og endda fra en fil. Deling fra disse værktøjer hjælper med at forhindre, at dine data lækker. Du kan føje yderligere beskyttelse til følsomme data for at forhindre deling uden for din organisation.
 
-## <a name="set-up-managed-windows-10-devices"></a>Konfigurere administrerede Windows 10 enheder
+## <a name="set-up-managed-windows-10-devices"></a>Konfigurer administrerede Windows 10 enheder
 
-Vi anbefaler, at dine vigtigste medarbejdere bruger nyligt erhvervede Windows 10 enheder, som du administrerer. Vi viser dig, hvordan du [administrerer og sikrer disse enheder](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Dette sikrer, at medarbejdere, der er den højeste værdimålet for hackere, får den største beskyttelse.
+Vi anbefaler, at dine vigtigste medarbejdere bruger nyerhvervede Windows 10 enheder, som du administrerer. Vi viser dig, hvordan du [administrerer og sikrer disse enheder](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Dette sikrer, at medarbejdere, der er det højeste værdimål for hackere, modtager den mest beskyttelse.

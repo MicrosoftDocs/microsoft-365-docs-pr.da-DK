@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 0bfec0b56a67b1242d8dfd76b845aa273a76d27e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: cb17e2a3624471031eb4f72199705d6b8fe06979
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667246"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092861"
 ---
 # <a name="work-with-advanced-hunting-query-results"></a>Arbejd med avancerede resultater af jagtforespørgslen
 
@@ -42,7 +42,7 @@ Selvom du kan konstruere dine [avancerede](advanced-hunting-overview.md) jagtfor
 - Vis resultater som en tabel eller et diagram
 - Eksportér tabeller og diagrammer
 - Analysér ned til detaljerede enhedsoplysninger
-- Tilpas dine forespørgsler direkte fra resultaterne, eller anvend filtre
+- Tilpas dine forespørgsler direkte fra resultaterne
 
 ## <a name="view-query-results-as-a-table-or-chart"></a>Få vist forespørgselsresultater som en tabel eller et diagram
 
@@ -52,12 +52,12 @@ Som standard viser avanceret jagt forespørgselsresultater som tabeldata. Du kan
 |--|--|
 | **Tabel** | Viser forespørgselsresultaterne i tabelformat |
 | **Søjlediagram** | Gengiver en række entydige elementer på x-aksen som lodrette streger, hvis højde repræsenterer numeriske værdier fra et andet felt |
-| **Stablet søjlediagram** | Gengiver en række entydige elementer på x-aksen som stablede lodrette søjler, hvis højde repræsenterer numeriske værdier fra et eller flere andre felter |
 | **Cirkeldiagram** | Gengiver sektionstærter, der repræsenterer entydige elementer. Størrelsen af hvert cirkeldiagram repræsenterer numeriske værdier fra et andet felt. |
-| **Kransediagram** | Gengiver sektionsbuer, der repræsenterer entydige elementer. Længden af hver bue repræsenterer numeriske værdier fra et andet felt. |
 | **Kurvediagram** | Afbilder numeriske værdier for en række entydige elementer og forbinder de afbildede værdier |
 | **Punktdiagram** | Afbilder numeriske værdier for en række entydige elementer |
 | **Områdediagram** | Afbilder numeriske værdier for en række entydige elementer og udfylder sektionerne under de afbildede værdier |
+| **Stablet områdediagram** | Afbilder numeriske værdier for en række entydige elementer og stabler de udfyldte sektioner under de afbildede værdier  |
+| **Tidsdiagram** | Afbilder værdier efter antal på en lineær tidsskala |
 
 ### <a name="construct-queries-for-effective-charts"></a>Konstruer forespørgsler for effektive diagrammer
 

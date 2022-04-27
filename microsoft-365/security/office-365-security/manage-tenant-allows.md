@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer tillad på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ad2a55d19f60bf310b62ac13dfbe2563709673d2
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ad2ef693848b664be6ec9b48cc4fc320a8b4b9c2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970896"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090138"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Tilføj tilladte på listen over tilladte/blokerede lejere
 
@@ -117,7 +117,7 @@ Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
    - **Spoof-type**: Vælg en af følgende værdier:
      - **Intern**: Den spoofede afsender er i et domæne, der tilhører din organisation (et [accepteret domæne](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)).
      - **Ekstern**: Den spoofede afsender er i et eksternt domæne.
-   - **Handling**: Vælg **Tillad** eller **Bloker**.
+   - **Handling**: Vælg **Tillad**.
 
 4. Klik på **Tilføj**, når du er færdig.
 

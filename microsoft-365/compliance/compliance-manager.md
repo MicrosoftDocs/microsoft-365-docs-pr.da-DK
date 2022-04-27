@@ -18,17 +18,17 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Compliance Manager hjælper organisationer med at forenkle og automatisere risikovurderinger og foreslår anbefalede handlinger for at hjælpe med at håndtere risici.
-ms.openlocfilehash: 1d5f036b8bc97da431ed6e41017d59e01db749a4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: deb3c3755a8afbab0071b8f829da620676f926ff
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997092"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078222"
 ---
 # <a name="microsoft-purview-compliance-manager"></a>Microsoft Purview Compliance Manager
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [prøveversionshubben til Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "64997092"
 Se videoen nedenfor for at få mere at vide om, hvordan Overholdelsesstyring kan hjælpe med at forenkle, hvordan din organisation administrerer overholdelse af angivne standarder:
 <br>
 <br>
->[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4FGYZ]
+>[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4VdoO]
 
 Overholdelsesstyring hjælper med at forenkle overholdelse af angivne standarder og reducere risikoen ved at levere:
 
@@ -95,7 +95,7 @@ En vurdering er gruppering af kontroller fra en bestemt forordning, standard ell
 
 Vurderinger har flere komponenter:
 
-- **Tjenester i omfang**: det specifikke sæt Microsoft-tjenester, der gælder for vurderingen
+- **Tjenester inden for området**: det specifikke sæt Microsoft-tjenester, der gælder for vurderingen
 - **Microsoft-administrerede kontrolelementer**: kontrolelementer til Microsoft-cloudtjenester, som Microsoft implementerer på dine vegne
 - **Dine kontrolelementer**: Nogle gange kaldet kundeadministrerede kontrolelementer, er disse kontrolelementer implementeret og administreret af din organisation
 - **Delte kontrolelementer**: Dette er kontrolelementer, som både din organisation og Microsoft deler ansvaret for at implementere

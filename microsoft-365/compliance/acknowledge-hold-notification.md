@@ -2,8 +2,8 @@
 title: Anerkend en meddelelse om fastfrysning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/05/2022
 audience: Admin
@@ -17,13 +17,13 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du bruger eDiscovery (Premium) til at sende og følge op på meddelelser i juridisk venteposition via mail samt overvåge status for forpligtelser.
-ms.openlocfilehash: db13ed4a148238dbb677ece55999fd3fb907a1a1
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om, hvordan du bruger eDiscovery (Premium) til at sende og følge op på meddelelser om juridiske ventepositioner via mail samt overvåge status for forpligtelser.
+ms.openlocfilehash: 21f02f25518fe2ff1c2e4bf80e43de476d381595
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999580"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100605"
 ---
 # <a name="acknowledge-a-hold-notification"></a>Anerkend en meddelelse om fastfrysning
 
@@ -31,7 +31,7 @@ ms.locfileid: "64999580"
 
 Når du besvarer en lovmæssig anmodning eller undersøgelse, kan du blive bedt om at informere vogtere om deres forpligtelse til at bevare elektronisk lagrede oplysninger (ESI) og alt materiale, der kan være relevant for en aktiv eller forestående juridisk sag. Når de juridiske teams er sendt, skal de vide, at hver tilsynsførende har modtaget, læst, forstået og indvilliget i at følge de angivne instruktioner.
 
-EDiscovery (Premium) giver dig mulighed for at sende og følge op på juridiske beskeder via mail for at hjælpe med at reducere den tid, de omkostninger og den indsats, der er forbundet med at følge op på problemet med at følge op på dem. Ud over e-mailmeddelelser vil hver tilsynsførende have adgang til en individualiseret overholdelsesportal, der gør det muligt for vogtere at blive informeret om ændringer af deres forpligtelsesstatus.
+EDiscovery (Premium) giver dig mulighed for at sende og følge op på juridiske beskeder via mail for at hjælpe med at reducere den tid, de omkostninger og den indsats, der er forbundet med at følge op på dine tilsynsførende. Ud over e-mailmeddelelser vil hver tilsynsførende have adgang til en individualiseret overholdelsesportal, der gør det muligt for vogtere at blive informeret om ændringer af deres forpligtelsesstatus.
 
 ## <a name="email-notifications"></a>Mailbeskeder
 

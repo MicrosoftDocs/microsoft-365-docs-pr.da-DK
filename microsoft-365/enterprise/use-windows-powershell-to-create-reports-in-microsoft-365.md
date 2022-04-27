@@ -2,7 +2,7 @@
 title: Brug PowerShell til at oprette rapporter til Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/17/2020
 audience: ITPro
 ms.topic: landing-page
@@ -15,44 +15,44 @@ ms.custom:
 - Ent_Office_Other
 - seo-marvel-apr2020
 ms.assetid: 1ea4d4ec-af89-496f-9678-701867f5a6fc
-description: 'Oversigt: Brug PowerShell til Microsoft 365 til at oprette rapporter, som du ikke kan producere i Microsoft 365 Administration.'
-ms.openlocfilehash: f29f9d6ac2f71163118b8e00eb78d39e16e0a79a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: 'Oversigt: Brug PowerShell til Microsoft 365 til at oprette rapporter, som du ikke kan oprette i Microsoft 365 Administration.'
+ms.openlocfilehash: cc64e5108a5aeff517f825ca4973b2511fe124b3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679912"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078440"
 ---
 # <a name="use-powershell-to-create-reports-for-microsoft-365"></a>Brug PowerShell til at oprette rapporter til Microsoft 365
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Der findes mange forskellige rapporter i Microsoft 365 Administration. Men disse rapporter giver kun så mange oplysninger, og nogle gange har du brug for mere. Det er her, du skal bruge PowerShell til Microsoft 365.
+Der findes mange forskellige rapporter i Microsoft 365 Administration. Men disse rapporter indeholder kun så mange oplysninger, og nogle gange har du brug for mere. Det er her, du skal bruge PowerShell til Microsoft 365.
   
-I disse artikler beskrives det, hvordan du bruger PowerShell Microsoft 365 at hente oplysninger fra din Microsoft 365 lejer:
+I disse artikler beskrives det, hvordan du bruger PowerShell til Microsoft 365 til at hente oplysninger fra din Microsoft 365 lejer:
   
-- Kom i gang med at rapportere ved hjælp af PowerShell Microsoft 365:
+- Kom i gang med rapportering ved hjælp af PowerShell til Microsoft 365:
     
   - [Derfor skal du bruge PowerShell til Microsoft 365](./why-you-need-to-use-microsoft-365-powershell.md)
     
     
 - Rapporter for brugerkonti og licenser:
     
-  - [Få Microsoft 365 licenser og tjenester med PowerShell](view-licenses-and-services-with-microsoft-365-powershell.md)
+  - [Få vist Microsoft 365 licenser og tjenester med PowerShell](view-licenses-and-services-with-microsoft-365-powershell.md)
     
-  - [Få Microsoft 365 brugere med licens og uden licens med PowerShell](view-licensed-and-unlicensed-users-with-microsoft-365-powershell.md)
+  - [Få vist Microsoft 365 brugere med licens og uden licens med PowerShell](view-licensed-and-unlicensed-users-with-microsoft-365-powershell.md)
     
-  - [Vis Microsoft 365-kontolicens og serviceoplysninger med PowerShell](view-account-license-and-service-details-with-microsoft-365-powershell.md)
+  - [Få vist oplysninger om Microsoft 365-kontolicens og -tjeneste med PowerShell](view-account-license-and-service-details-with-microsoft-365-powershell.md)
     
-  - [Vis Microsoft 365-brugerkonti med PowerShell](view-user-accounts-with-microsoft-365-powershell.md)
+  - [Få vist Microsoft 365 brugerkonti med PowerShell](view-user-accounts-with-microsoft-365-powershell.md)
     
-- Rapporter for SharePoint Online:
+- Rapporter til SharePoint Online:
     
-  - [Introduktion til SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+  - [Kom i gang med SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
     
-  - [Get-SPOSiteGroup – henter alle grupper på en bestemt gruppe af websteder](/powershell/module/sharepoint-online/get-spositegroup)
+  - [Get-SPOSiteGroup – Henter alle grupperne i en angivet gruppe af websteder](/powershell/module/sharepoint-online/get-spositegroup)
     
-- Rapporter for Exchange Online:
+- Rapporter til Exchange Online:
     
   - [Brug Exchange Online PowerShell til at vise postkasse](/exchange/recipients-in-exchange-online/manage-user-mailboxes/use-powershell-to-display-mailbox-information)
     
@@ -61,7 +61,7 @@ I disse artikler beskrives det, hvordan du bruger PowerShell Microsoft 365 at he
 
 [Administrer Microsoft 365 med PowerShell](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Introduktion til PowerShell til Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Kom i gang med PowerShell til Microsoft 365](getting-started-with-microsoft-365-powershell.md)
   
 [Administrer SharePoint med PowerShell](manage-sharepoint-online-with-microsoft-365-powershell.md)
   

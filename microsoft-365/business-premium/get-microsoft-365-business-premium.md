@@ -1,14 +1,14 @@
 ---
-title: Få Microsoft 365 Business Premium
+title: Hent Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -22,39 +22,44 @@ ms.custom:
 search.appverid:
 - BCS160
 - MET150
-description: Få Microsoft 365 Business Premium, så du kan beskytte din virksomhed mod cybertrusler mod enheder, mail, data og kommunikation.
-ms.openlocfilehash: 2e6ad120407a7bc84e089b997c990e04d438ab29
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få Microsoft 365 Business Premium, så du kan beskytte din virksomhed mod cybersikkerhedstrusler mod enheder, mail, data og kommunikation.
+ms.openlocfilehash: 6df4c10e7c302f95eba00206767a533a8f23db67
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63593696"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100131"
 ---
 # <a name="how-to-get-microsoft-365-business-premium"></a>Sådan får du Microsoft 365 Business Premium
 
-Denne artikel beskriver, hvordan du får Microsoft 365 Business Premium til din virksomhed. Du kan vælge at:
+Når du er klar til at få Microsoft 365 Business Premium, har du flere muligheder. Du kan:
 
-- [Prøv eller køb Microsoft 365 Business Premium selv](#get-microsoft-365-business-premium-on-your-own)
+- [Prøv eller køb Microsoft 365 Business Premium på egen hånd](#get-microsoft-365-business-premium-on-your-own)
 - [Arbejd med en løsningsudbyder](#work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium)
+
+> [!TIP]
+> Hvis du leder efter Microsoft 365 til kampagner, kan du se [Sådan får du Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
 
 ## <a name="get-microsoft-365-business-premium-on-your-own"></a>Få Microsoft 365 Business Premium på egen hånd
 
-Se [Prøv eller køb et Microsoft 365 til virksomheder](../commerce/try-or-buy-microsoft-365.md). På webstedet [Microsoft 365 Produkter skal](https://www.aka.ms/office365signup) du vælge **Microsoft 365 Business Premium**.
+1. Besøg [siden Microsoft 365 Business Premium produkt](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
 
-## <a name="work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium"></a>Arbejd med en Microsoft Solution Provider for at få Microsoft 365 Business Premium
+2. Vælg at prøve eller købe dit abonnement. Se [Prøv eller køb et Microsoft 365 til virksomhedsabonnement](../commerce/try-or-buy-microsoft-365.md). Vælg **Microsoft 365 Business Premium** på [webstedet Microsoft 365 Products](https://www.aka.ms/office365signup).
 
-Microsoft har en liste over løsningsudbydere, der er autoriseret til at sælge tilbud, herunder Microsoft 365 Business Premium. 
+3. Når du har tilmeldt dig Microsoft 365 Business Premium, modtager du en mail med et link til at logge på og komme i gang. Fortsæt til [Konfigurer Microsoft 365 Business Premium](m365bp-setup.md).
 
-Hvis du vil finde en løsningsudbyder i dit område, skal du gøre følgende:
+## <a name="work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium"></a>Arbejd sammen med en Microsoft Solution Provider for at få Microsoft 365 Business Premium
+
+Microsoft har en liste over løsningsudbydere, der har tilladelse til at sælge tilbud, herunder Microsoft 365 Business Premium. Hvis du ikke allerede arbejder med en løsningsudbyder, kan du finde en ved at følge disse trin: 
 
 1. Gå til siden **Microsoft Solution Providers** ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers)).
  
-2. I søgefeltet skal du udfylde din placering og virksomhedens størrelse. 
+2. I søgefeltet skal du angive din placering og virksomhedsstørrelse. 
 
-3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du lægge `Microsoft 365`, og derefter vælge **Gå**.
+3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du placere `Microsoft 365`og derefter vælge **Søg**.
 
 4. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
 
-## <a name="what-does-microsoft-365-business-premium-include"></a>Hvad Microsoft 365 Business Premium indeholder?
+## <a name="next-steps"></a>Næste trin
 
-[Få vist Microsoft 365-brugerabonnementspakker til små og mellemstore virksomheder](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWR6bM)
+[Konfigurer Microsoft 365 Business Premium](m365bp-setup.md)

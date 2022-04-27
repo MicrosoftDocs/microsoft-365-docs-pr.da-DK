@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 73afd0751e34fbb020019e6f28056c9f2a935c07
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 3c517d9adcdc2181b43c430a92be3de9ac889dd6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788584"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101111"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Effektivitetsanalyse til Microsoft Defender Antivirus
 
@@ -31,7 +31,7 @@ ms.locfileid: "64788584"
 **Platforme**
 - Windows
 
-**Hvad er Microsoft Defender Antivirus effektivitetsanalyse?**
+## <a name="what-is-microsoft-defender-antivirus-performance-analyzer"></a>Hvad er Microsoft Defender Antivirus effektivitetsanalyse?
 
 I nogle tilfælde skal du muligvis tilpasse ydeevnen for Microsoft Defender Antivirus, når den scanner bestemte filer og mapper. Effektivitetsanalyse er et PowerShell-kommandolinjeværktøj, der hjælper med at bestemme, hvilke filer, filtypenavne og processer der kan medføre problemer med ydeevnen på individuelle slutpunkter. Disse oplysninger kan bruges til bedre at vurdere problemer med ydeevnen og anvende afhjælpningshandlinger.
 
@@ -74,28 +74,30 @@ Du kan få flere oplysninger om kommandolinjeparametre og -indstillinger i [New-
 > [!NOTE]
 > Hvis du får vist fejlmeddelelsen "Der kan ikke startes en optagelse af ydeevnen, fordi Windows Performance Recorder allerede optager" under kørsel af en optagelse, skal du køre følgende kommando for at stoppe den eksisterende sporing med den nye kommando: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
 
-### <a name="performance-tuning-data-and-information"></a>Justering af ydeevnedata og -oplysninger
+## <a name="performance-tuning-data-and-information"></a>Justering af ydeevnedata og -oplysninger
 
 Baseret på forespørgslen kan brugeren få vist data for antal scanninger, varighed (total/min/average/max/median), sti, proces og årsag til scanning. Billedet nedenfor viser eksempeloutputtet for en enkel forespørgsel af de 10 øverste filer med henblik på scanningseffekt.
 
 :::image type="content" source="images/example-output.png" alt-text="Eksempel på output for en grundlæggende TopFiles-forespørgsel" lightbox="images/example-output.png":::
 
-### <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Yderligere funktionalitet: eksport og konvertering til CSV og JSON
+## <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Yderligere funktionalitet: eksport og konvertering til CSV og JSON
 
 Resultaterne af effektivitetsanalysen kan også eksporteres og konverteres til en CSV- eller JSON-fil.
 Du kan finde eksempler, der beskriver processen med at "eksportere" og "konvertere" via eksempelkoder, nedenfor.
 
-#### <a name="for-csv"></a>Til CSV
+### <a name="for-csv"></a>Til CSV
 
 - **Sådan eksporterer du**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:1000). TopScans | Export-CSV -Path:.\Repro-Install-Scans.csv -Encoding:UTF8 -NoTypeInformation`
 
 - **Sådan konverterer du**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:100). TopScans | ConvertTo-Csv -NoTypeInformation`
 
-#### <a name="for-json"></a>For JSON
+### <a name="for-json"></a>For JSON
 
 - **Sådan konverterer du**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:1000). TopScans | ConvertTo-Json -Depth:1`
 
-### <a name="requirements"></a>Krav
+Hvis du vil sikre, at maskinlæsbart output til eksport med andre databehandlingssystemer, anbefales det at bruge parameteren -Raw for Get-MpPerformanceReport. Se nedenfor for at få flere oplysninger
+
+## <a name="requirements"></a>Krav
 
 Microsoft Defender Antivirus effektivitetsanalyse har følgende forudsætninger:
 
@@ -157,6 +159,12 @@ New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $
 
 Ovenstående kommando indsamler en optagelse af ydeevnen på Server02 (som angivet af argument $s af parametersessionen) og gemmer den i den angivne sti: **C:\LocalPathOnServer02\trace.etl** på Server02.
 
+##### <a name="example-3-collect-a-performance-recording-in-non-interactive-mode"></a>Eksempel 3: Indsaml en optagelse af ydeevnen i ikke-interaktiv tilstand
+```powershell
+New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60 
+```
+Ovenstående kommando indsamler en optagelse af ydeevnen i den varighed i sekunder, der er angivet af parameteren -Seconds. Dette anbefales til brugere, der udfører batchsamlinger, som ikke kræver nogen interaktion eller prompt.
+
 #### <a name="parameters-new-mpperformancerecording"></a>Parametre: New-MpPerformanceRecording
 
 ##### <a name="-recordto"></a>-Optag til
@@ -179,6 +187,17 @@ Angiver det PSSession-objekt, hvor den Microsoft Defender Antivirus ydelsesoptag
 Type: PSSession[]
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+##### <a name="-seconds"></a>-Sekunder
+Angiver varigheden af ydelsesoptagelsen i sekunder. Dette anbefales til brugere, der udfører batchsamlinger, som ikke kræver nogen interaktion eller prompt.
+
+```yaml
+Type: Int32
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -218,6 +237,7 @@ Get-MpPerformanceReport    [-Path] <String>
     [-TopScansPerFilePerProcess <Int32>]
 ]
 [-MinDuration <String>]
+[-Raw]
 ```
 
 #### <a name="description-get-mpperformancereport"></a>Beskrivelse: Get-MpPerformanceReport
@@ -260,6 +280,12 @@ Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensio
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:100 -MinDuration:100ms
 ```
+##### <a name="example-5-using--raw-parameter"></a>Eksempel 5: Brug af parameteren -Raw
+
+```powershell
+Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10 -Raw | ConvertTo-Json
+```
+Brug af -Raw i ovenstående kommando angiver, at outputtet skal være maskinlæsbart og let kan konverteres til serialiseringsformater, f.eks. JSON
 
 #### <a name="parameters-get-mpperformancereport"></a>Parametre: Get-MpPerformanceReport
 
@@ -286,8 +312,19 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+##### <a name="-raw"></a>-Rå
 
-### <a name="-topextensions"></a>-Topudvidelser
+Angiver, at outputtet af ydelsesoptagelsen skal være maskinlæsbart og let kan konverteres til serialiseringsformater, f.eks. JSON (f.eks. via kommandoen Konvertér til JSON). Dette anbefales til brugere, der er interesseret i batchbehandling med andre databehandlingssystemer. 
+
+```yaml
+Type: <SwitchParameter>
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+##### <a name="-topextensions"></a>-Topudvidelser
 
 Angiver, hvor mange topudvidelser der skal udskrives, sorteret efter "Varighed".
 
@@ -299,7 +336,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topextensionsperprocess"></a>-TopExtensionsPerProcess
+##### <a name="-topextensionsperprocess"></a>-TopExtensionsPerProcess
 
 Angiver, hvor mange topudvidelser der skal udskrives for hver topproces sorteret efter "Varighed".
 
@@ -311,7 +348,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfiles"></a>-TopFiler
+##### <a name="-topfiles"></a>-TopFiler
 
 Anmoder om en rapport med topfiler og angiver, hvor mange topfiler der skal udskrives, sorteret efter "Varighed".
 
@@ -323,7 +360,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfilesperextension"></a>-TopFilesPerExtension
+##### <a name="-topfilesperextension"></a>-TopFilesPerExtension
 
 Angiver, hvor mange topfiler der skal udskrives for hver topudvidelse sorteret efter "Varighed".
 
@@ -335,7 +372,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfilesperprocess"></a>-TopFilesPerProcess
+##### <a name="-topfilesperprocess"></a>-TopFilesPerProcess
 
 Angiver, hvor mange topfiler der skal udskrives for hver topproces sorteret efter "Varighed".
 
@@ -347,7 +384,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocesses"></a>-Topprocesser
+##### <a name="-topprocesses"></a>-Topprocesser
 
 Anmoder om en rapport med topprocesser og angiver, hvor mange af de øverste processer der skal udskrives, sorteret efter "Varighed".
 
@@ -359,7 +396,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocessesperextension"></a>-TopProcessesPerExtension
+##### <a name="-topprocessesperextension"></a>-TopProcessesPerExtension
 
 Angiver, hvor mange topprocesser der skal udskrives for hver topudvidelse sorteret efter "Varighed".
 
@@ -371,7 +408,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocessesperfile"></a>-TopProcessesPerFile
+##### <a name="-topprocessesperfile"></a>-TopProcessesPerFile
 
 Angiver, hvor mange topprocesser der skal udskrives for hver topfil sorteret efter "Varighed".
 
@@ -383,7 +420,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscans"></a>-TopScans
+##### <a name="-topscans"></a>-TopScans
 
 Anmoder om en rapport med en topscanning og angiver, hvor mange topscanninger der skal udskrives, sorteret efter "Varighed".
 
@@ -395,7 +432,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperextension"></a>-TopScansPerExtension
+##### <a name="-topscansperextension"></a>-TopScansPerExtension
 
 Angiver, hvor mange topscanninger der skal udskrives for hver topudvidelse sorteret efter "Varighed".
 
@@ -407,7 +444,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperextensionperprocess"></a>-TopScansPerExtensionPerProcess
+##### <a name="-topscansperextensionperprocess"></a>-TopScansPerExtensionPerProcess
 
 Angiver, hvor mange topscanninger der skal udskrives for hver topudvidelse for hver topproces sorteret efter "Varighed".
 
@@ -419,7 +456,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfile"></a>-TopScansPerFile
+##### <a name="-topscansperfile"></a>-TopScansPerFile
 
 Angiver, hvor mange topscanninger der skal udskrives for hver topfil sorteret efter "Varighed".
 
@@ -431,7 +468,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfileperextension"></a>-TopScansPerFilePerExtension
+##### <a name="-topscansperfileperextension"></a>-TopScansPerFilePerExtension
 
 Angiver, hvor mange topscanninger der skal udskrives for hver topfil for hvert øverste filtypenavn sorteret efter "Varighed".
 
@@ -443,7 +480,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfileperprocess"></a>-TopScansPerFilePerProcess
+##### <a name="-topscansperfileperprocess"></a>-TopScansPerFilePerProcess
 
 Angiver, hvor mange topscanninger der søges efter output for hver topfil for hver topproces sorteret efter "Varighed".
 
@@ -455,7 +492,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocess"></a>-TopScansPerProcess
+##### <a name="-topscansperprocess"></a>-TopScansPerProcess
 
 Angiver, hvor mange topscanninger der skal udskrives for hver topproces i rapporten Topprocesser sorteret efter "Varighed".
 
@@ -467,7 +504,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocessperextension"></a>-TopScansPerProcessPerExtension
+##### <a name="-topscansperprocessperextension"></a>-TopScansPerProcessPerExtension
 
 Angiver, hvor mange topscanninger der søges efter output for hver topproces for hver topudvidelse sorteret efter "Varighed".
 
@@ -479,7 +516,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocessperfile"></a>-TopScansPerProcessPerFile
+##### <a name="-topscansperprocessperfile"></a>-TopScansPerProcessPerFile
 
 Angiver, hvor mange topscanninger der søges efter output for hver topproces for hver topfil sorteret efter "Varighed".
 
@@ -490,12 +527,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-> [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
-> - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
-> - [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
+
+## <a name="additional-resources"></a>Yderligere ressourcer
+
+Hvis du leder efter Antivirus-relaterede oplysninger til andre platforme, kan du se:
+
+- [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
+- [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
+- [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+- [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
+- [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
+- [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)-  [Konfigurer Microsoft Defender for Endpoint på iOS-funktioner](ios-configure-features.md)

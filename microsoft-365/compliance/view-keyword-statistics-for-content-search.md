@@ -2,8 +2,8 @@
 title: Vis statistik for eDiscovery-søgeresultater
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery(Standard) sag i Microsoft Purview-overholdelsesportalen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5d35616823988562b3b075e7a513c8a98a4e3281
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d96ad67a638ab3917743e64462debd9f2c94ef4d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000812"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092199"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>Vis statistik for eDiscovery-søgeresultater
 

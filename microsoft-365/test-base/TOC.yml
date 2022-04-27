@@ -20,14 +20,6 @@
           href: uploadApplication.md
     - name: Byg en pakke
       href: buildpackage.md
-    - name: Upload binære og afhængigheder
-      href: binaries.md
-    - name: Angiv testopgaver
-      href: testtask.md
-    - name: Angiv testindstillinger
-      href: testoptions.md
-    - name: Vurder
-      href: review.md
     - name: Pakkeretningslinje
       href: contentguideline.md
     - name: Program-/testregler

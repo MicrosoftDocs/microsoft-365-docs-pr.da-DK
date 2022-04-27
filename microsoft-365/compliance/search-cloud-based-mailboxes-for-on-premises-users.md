@@ -2,8 +2,8 @@
 title: Søg efter Teams-chatdata for brugere i det lokale miljø
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -18,12 +18,12 @@ search.appverid:
 ms.assetid: 3f7dde1a-a8ea-4366-86da-8ee6777f357c
 description: Administratorer kan bruge eDiscovery-værktøjer i Microsoft 365 til at søge efter og eksportere Teams chatdata til brugere i det lokale miljø i en Exchange hybridinstallation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e1f15922e84a68538e20ccb3ad0030bd5c2bd5f1
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e532dc629df1ddc2e3ceaa94a639723dae483714
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995354"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077816"
 ---
 # <a name="search-for-teams-chat-data-for-on-premises-users"></a>Søg efter Teams-chatdata for brugere i det lokale miljø
 
@@ -33,11 +33,11 @@ Hvis organisationen har en Exchange hybridinstallation (eller din organisation s
   
 Her er kravene og begrænsningerne for aktivering af cloudbaseret lager for brugere i det lokale miljø:
   
-- Brugerkontiene i din lokale katalogtjeneste (f.eks. Active Directory) skal synkroniseres med Azure Active Directory, som er katalogtjenesten i Microsoft 365. Det betyder, at der oprettes en mailbrugerkonto i Microsoft 365 og er knyttet til en bruger, hvis primære postkasse er placeret i organisationen i det lokale miljø.
+- Brugerkontiene i katalogtjenesten i det lokale miljø (f.eks. Active Directory) skal synkroniseres med Azure Active Directory, katalogtjenesten i Microsoft 365. Det betyder, at der oprettes en mailbrugerkonto i Microsoft 365 og er knyttet til en bruger, hvis primære postkasse er placeret i organisationen i det lokale miljø.
 
 - Den bruger, hvis primære postkasse er placeret i organisationen i det lokale miljø, skal tildeles en Microsoft Teams licens og mindst en Exchange Online Plan 1-licens.
 
-- Hvis din organisation ikke har en Exchange hybridinstallation, skal du synkronisere dit lokale Exchange skema til Azure Active Directory. Hvis du ikke gør dette, kan du risikere at oprette duplikerede skybaserede postkasser i Exchange Online for brugere, der har en postkasse i din lokale Exchange organisation.
+- Hvis din organisation ikke har en Exchange hybridinstallation, skal du synkronisere skemaet for Exchange i det lokale miljø for at Azure Active Directory. Hvis du ikke gør dette, kan du risikere at oprette duplikerede skybaserede postkasser i Exchange Online for brugere, der har en postkasse i din lokale Exchange organisation.
 
 - Det er kun de Teams chatdata, der er knyttet til en bruger i det lokale miljø, der gemmes i det cloudbaserede lagerområde. En bruger i det lokale miljø kan ikke få adgang til dette lagerområde på nogen måde.
 
@@ -46,13 +46,13 @@ Her er kravene og begrænsningerne for aktivering af cloudbaseret lager for brug
   
 ## <a name="how-it-works"></a>Sådan fungerer det
 
-Hvis en Microsoft Teams-aktiveret bruger har en postkasse i det lokale miljø, og brugerens brugerkonto/identitet er synkroniseret til cloudmiljøet, opretter Microsoft et cloudbaseret lager, der knytter brugerens 1xN-Teams chatdata til i det lokale miljø. Teams chatdata for brugere i det lokale miljø indekseres til søgning. Dette giver dig mulighed for at bruge indholdssøgning (og søgninger, der er knyttet til Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) til at søge efter, få vist og eksportere Teams chatdata til brugere i det lokale miljø. Du kan også bruge **\*** ComplianceSearch-cmdlet'er i Security & Compliance Center PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
+Hvis en Microsoft Teams-aktiveret bruger har en postkasse i det lokale miljø, og brugerens brugerkonto/identitet er synkroniseret til cloudmiljøet, opretter Microsoft et cloudbaseret lager, der knytter brugerens 1xN-Teams chatdata til i det lokale miljø. Teams chatdata for brugere i det lokale miljø indekseres til søgning. Dette giver dig mulighed for at bruge indholdssøgning (og søgninger, der er knyttet til Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery -sager (Premium) til at søge efter, få vist og eksportere Teams chatdata til lokale brugere. Du kan også bruge **\*** ComplianceSearch-cmdlet'er i Security & Compliance Center PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
   
 Følgende grafik viser arbejdsprocessen for, hvordan Teams chatdata for brugere i det lokale miljø er tilgængelige til søgning, visning og eksport.
   
 ![Cloudbaseret lager til brugere i det lokale miljø i Microsoft Teams.](../media/EHAMShard1.png)
   
-Ud over denne funktion kan du også bruge eDiscovery-værktøjer til at søge efter, få vist og eksportere Teams indhold på det skybaserede SharePoint websted og Exchange postkasse, der er knyttet til de enkelte Microsoft Team- og 1xN-Teams chatdata i Exchange Online-postkassen til skybaserede brugere.
+Ud over denne funktion kan du også bruge eDiscovery-værktøjer til at søge efter, få vist og eksportere Teams indhold på det skybaserede SharePoint websted og Exchange postkasse, der er knyttet til de enkelte Microsoft Team- og 1xN-Teams chatdata i den Exchange Online postkasse til skybaserede brugere.
 
 ## <a name="searching-for-teams-chat-content-for-on-premises-users"></a>Søgning efter Teams chatindhold for brugere i det lokale miljø
 
@@ -68,7 +68,7 @@ Sådan bruger du indholdssøgning på Microsoft Purview-overholdelsesportalen ti
 
 5. Sørg for, at afkrydsningsfeltet **Tilføj appindhold for brugere i det lokale** miljø er markeret. Dette sikrer, at der søges i cloudbaselageret for brugere i det lokale miljø.
 
-    ![Markér afkrydsningsfeltet "Tilføj Office-appindhold til brugere i det lokale miljø" på siden med guiden Placeringer.](../media/EHAMShardCheckBox.png)
+    ![Markér afkrydsningsfeltet "Tilføj Office-app indhold til brugere i det lokale miljø" på siden med guiden Placeringer.](../media/EHAMShardCheckBox.png)
 
 6. På siden **Definer dine søgebetingelser** skal du oprette en nøgleordsforespørgsel og føje betingelser til søgeforespørgslen, hvis det er nødvendigt. Hvis du kun vil søge efter teamchatdata, kan du tilføje følgende forespørgsel i feltet **Nøgleord** :
 
@@ -88,7 +88,7 @@ Sådan bruger du indholdssøgning på Microsoft Purview-overholdelsesportalen ti
 
 Du kan bruge **New-ComplianceSearch-cmdlet'erne** i Security & Compliance Center PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø. Som tidligere forklaret behøver du ikke indsende en supportanmodning for at bruge PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
   
-1. [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende PowerShell-kommando for at oprette en indholdssøgning, der søger efter Teams chatdata for brugere i det lokale miljø.
 
@@ -114,7 +114,7 @@ Du kan få flere oplysninger om brug af disse cmdlet'er under:
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- I øjeblikket kan du søge efter, få vist og eksportere Teams chatdata for brugere i det lokale miljø. Du kan også placere de Teams chatdata for en bruger i det lokale miljø i en venteposition, der er knyttet til en Core- eller eDiscovery(Premium)-sag, og anvende en opbevaringspolitik for Teams chats eller kanalmeddelelser til brugere i det lokale miljø. På nuværende tidspunkt kan du dog ikke anvende en opbevaringspolitik for andre indholdsplaceringer (f.eks. Exchange postkasser og SharePoint websteder) for brugere i det lokale miljø.
+- I øjeblikket kan du søge efter, få vist og eksportere Teams chatdata for brugere i det lokale miljø. Du kan også placere Teams chatdata for en bruger i det lokale miljø i en venteposition, der er knyttet til en kerne- eller eDiscovery-sag (Premium), og anvende en opbevaringspolitik for Teams chats eller kanalmeddelelser til brugere i det lokale miljø. På nuværende tidspunkt kan du dog ikke anvende en opbevaringspolitik for andre indholdsplaceringer (f.eks. Exchange postkasser og SharePoint websteder) for brugere i det lokale miljø.
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
@@ -124,7 +124,7 @@ Nej. Denne funktion er som standard aktiveret for alle organisationer. På et ti
   
  **Kan eDiscovery-værktøjer finde ældre Teams chatdata for brugere i det lokale miljø, før denne funktion som standard blev aktiveret for alle organisationer?**
   
-Microsoft begyndte at gemme de Teams chatdata for brugere i det lokale miljø den 31. januar 2018. Så hvis identiteten for en Teams bruger i det lokale miljø er blevet synkroniseret mellem dig Active Directory i det lokale miljø og Azure Active Directory i Microsoft 365 siden denne dato, gemmes deres Teams chatdata i cloudmiljøet og kan søges i ved hjælp af eDiscovery-værktøjer.
+Microsoft begyndte at gemme de Teams chatdata for brugere i det lokale miljø den 31. januar 2018. Så hvis identiteten for en Teams bruger i det lokale miljø er blevet synkroniseret mellem dig, Active Directory i det lokale miljø og Azure Active Directory i Microsoft 365 siden denne dato, så deres Teams  chatdata gemmes i cloudmiljøet og kan søges i ved hjælp af eDiscovery-værktøjer.
 
  **Skal brugerne i det lokale miljø have en licens til at gemme deres Teams chatdata i cloudmiljøet?**
   

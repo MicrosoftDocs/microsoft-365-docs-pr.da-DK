@@ -1,14 +1,14 @@
 ---
-title: Oprette et SharePoint kommunikationswebsted
+title: Opret et SharePoint kommunikationswebsted
 f1.keywords:
 - NOCSH
 ms.author: samanro
 author: samanro
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,52 +23,54 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvorfor og hvordan du SharePoint et kommunikationswebsted til din kampagne eller virksomhed med Microsoft 365.
-ms.openlocfilehash: ba0f8f559bc8843a61baca1bbb6615c596ffdc65
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Få mere at vide om, hvorfor og hvordan du opretter et SharePoint kommunikationswebsted for din kampagne eller virksomhed med Microsoft 365, og beskyt teamet mod cyberangreb og angreb mod malware og andre trusler på grund af forkert fildeling.
+ms.openlocfilehash: 1e1e2792e4a667737118974b95ae5f77cb6ae224
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634377"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100175"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>Opret et kommunikationswebsted i SharePoint
 
-En god metode til at kommunikere prioriteter, dele strategidokumenter og fremhæve kommende begivenheder er at bruge et kommunikationswebsted i SharePoint. Kommunikationswebsteder er til at dele ting bredt på tværs af hele virksomheden eller kampagnen; er det dit interne strategiwebsted.
+En god måde at kommunikere prioriteter, dele strategidokumenter og fremhæve kommende begivenheder på er ved at bruge et kommunikationswebsted i SharePoint, og det er det, denne mission handler om. Kommunikationswebsteder er til deling af ting bredt på tværs af hele virksomheden eller kampagne &mdash; , det er dit interne strategiwebsted og taktisk rum. 
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 
-Medtag følgende elementer på kommunikationswebstedet:
+Medtag følgende elementer på et kommunikationswebsted:
 
-1. Tilføj dit logo og dine farver som et overskriftsbillede og tema.
+1. Tilføj dit logo og dine farver som et headerbillede og -tema.
 
-2. Led med din strategi, meddelelse, vigtige dokumenter, en mappe og ofte stillede spørgsmål i **webdelen Hero**.
+2. Led med din strategi, dit budskab, vigtige dokumenter, en mappe og ofte stillede spørgsmål i en **Hero-webdel**.
 
-3. Medtag en administrerende direktør eller kandidaterklæring til teamet i **webdelen Tekst**.
+3. Medtag en CEO- eller kandidaterklæring til teamet i **en Tekst-webdel**.
 
-4. Føj begivenheder til **webdelen Begivenheder,** så alle kan se, hvad der kommer.
+4. Føj hændelser til en **hændelseswebdel** , så alle kan se, hvad der kommer.
 
-5. Føj billeder, som folk kan bruge eller dele, til **webdelen Billedgalleri**.
+5. Føj billeder, som andre kan bruge eller dele, til en **webdel i billedgalleriet**.
 
-![Diagram over en SharePoint kommunikationsside med plads til fælles elementer, som en kampagne har brug for.](../media/m365-democracy-comms-site.png)
+![Diagram over en SharePoint siden Kommunikation med plads til almindelige elementer, som en kampagne skal bruge.](../media/m365-democracy-comms-site.png)
 
-## <a name="infographic-create-a-communications-site-infographic"></a>Infografik: Oprette en infografik om et kommunikationswebsted
+## <a name="infographic-create-a-communications-site-infographic"></a>Infografik: Opret en infografik til et kommunikationswebsted
 
-Følgende links til PowerPoint pdf-filer kan downloades og udskrives i tabloidformat (også kaldet ledger, 11 x 17 eller A3).
+Følgende links til PowerPoint og PDF kan downloades og udskrives i tabloidformat (også kendt som ledger, 11 x 17 eller A3).
 
-[![Billede til infografikken kommunikationswebsted.](../media/M365-Campaigns-CreateCommunicationSite-358-201.png)](https://download.microsoft.com/download/3/f/f/3ff49b41-e5a4-4993-a00c-7f791a80b627/M365CampaignsCreateCommunicationSite.pdf)
+[![Billede til infografik på kommunikationswebsted.](../media/M365-Campaigns-CreateCommunicationSite-358-201.png)](https://download.microsoft.com/download/3/f/f/3ff49b41-e5a4-4993-a00c-7f791a80b627/M365CampaignsCreateCommunicationSite.pdf)
 
 [PDF](https://download.microsoft.com/download/3/f/f/3ff49b41-e5a4-4993-a00c-7f791a80b627/M365CampaignsCreateCommunicationSite.pdf) |  [PowerPoint](https://download.microsoft.com/download/3/f/f/3ff49b41-e5a4-4993-a00c-7f791a80b627/M365CampaignsCreateCommunicationSite.pptx)
 
 ## <a name="set-it-up"></a>Konfigurer det
 
-1. Log på https://Office.com.
+1. https://Office.comLog på .
 
-2. Vælg ikonet for appstarteren i øverste venstre hjørne på siden, og vælg **SharePoint** felt. Hvis du ikke kan se feltet **SharePoint**, skal du klikke på feltet Websteder eller  Alle, hvis SharePoint  ikke er synlig.
+2. I øverste venstre hjørne af siden skal du vælge appstarterikonet og derefter vælge feltet **SharePoint**. Hvis feltet **SharePoint** ikke vises, skal du klikke på feltet **Websteder** eller **Alle**, hvis SharePoint ikke er synligt.
 
-3. Øverst på startsiden på SharePoint skal du klikke **på + Opret websted** og vælge **indstillingen Kommunikationswebsted**.
+3. Øverst på startsiden SharePoint skal du klikke på **+ Opret websted** og vælge indstillingen **Kommunikationswebsted**.
 
-Lær alt [om kommunikationswebsteder](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732), og hvordan [du opretter et kommunikationswebsted i SharePoint Online](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).
+Få mere at vide [om kommunikationswebsteder](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732), og hvordan [du opretter et kommunikationswebsted i SharePoint Online](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).
 
 ## <a name="admin-settings"></a>Administratorindstillinger
 
-Hvis du ikke kan se linket **+ Opret** websted, er selvbetjeningen til oprettelse af websteder muligvis ikke tilgængelig Microsoft 365. Hvis du vil oprette et teamwebsted, skal du kontakte den person, der Microsoft 365 i organisationen. Hvis du er Microsoft 365-administrator, skal du se Administrer oprettelse af websteder i [SharePoint Online](/sharepoint/manage-site-creation) for at aktivere selvbetjening for oprettelse af websteder for din organisation eller Administrer websteder i den nye [SharePoint](/sharepoint/manage-sites-in-new-admin-center) Administration for at oprette et websted <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">fra SharePoint Administration</a>.
+Hvis du ikke kan se linket **+ Opret** websted, er oprettelse af websteder muligvis ikke tilgængelig i Microsoft 365. Hvis du vil oprette et teamwebsted, skal du kontakte den person, der administrerer Microsoft 365 i din organisation. Hvis du er Microsoft 365 administrator, skal du se [Administrer oprettelse af websted i SharePoint Online](/sharepoint/manage-site-creation) for at aktivere oprettelse af selvbetjeningswebsteder for din organisation eller [Administrer websteder i det nye SharePoint Administration](/sharepoint/manage-sites-in-new-admin-center) for at oprette et websted fra <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
+
+Tillykke, &mdash; du har fuldført missionen! Nu skal du straks vende fokus mod [at beskytte de administrerede enheder](m365bp-protect-devices.md) for hele organisationen!

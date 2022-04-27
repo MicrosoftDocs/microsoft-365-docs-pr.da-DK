@@ -2,8 +2,8 @@
 title: Konfigurer en connector til arkivering af O2-netværksdata i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/06/2022
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS- og MMS-data fra O2-mobilnetværket i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: eb8bec7aa81963d9bdd1617f022a9352378d8f08
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 525420c3c838cdab677c08f07910bd709b774715
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994606"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077524"
 ---
 # <a name="set-up-a-connector-to-archive-o2-network-data"></a>Konfigurer en connector til arkivering af O2-netværksdata
 
@@ -25,7 +25,7 @@ ms.locfileid: "64994606"
 
 Brug en TeleMessage-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere sms-beskeder og taleopkald fra O2-mobilnetværket. Når du har konfigureret en connector, opretter den forbindelse til organisationens O2-netværk én gang om dagen og importerer sms- og taleopkald til postkasser i Microsoft 365.
 
-Når sms-beskeder og taleopkald er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, Content Search og Microsoft 365 opbevaringspolitikker, på O2 Network-data. Du kan f.eks. søge i O2 Network-sms-beskeder og taleopkald ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder O2 Network-data, til en tilsynsførende i en eDiscovery-sag (Premium). Hvis du bruger en O2 Network-connector til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når sms-beskeder og taleopkald er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, Content Search og Microsoft 365 opbevaringspolitikker, på O2 Network-data. Du kan f.eks. søge i O2 Network-sms-beskeder og taleopkald ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder O2 Network-data, til en tilsynsførende i et eDiscovery-tilfælde (Premium). Hvis du bruger en O2 Network-connector til at importere og arkivere data i Microsoft 365 kan det hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-o2-network-data"></a>Oversigt over arkivering af O2-netværksdata
 
@@ -57,7 +57,7 @@ Nogle af de implementeringstrin, der kræves for at arkivere O2-netværksdata, e
 
 - Den bruger, der opretter en O2-netværksconnector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-an-o2-network-connector"></a>Opret en O2-netværksconnector
 

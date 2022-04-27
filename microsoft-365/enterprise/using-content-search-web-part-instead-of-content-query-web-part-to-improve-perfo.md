@@ -1,8 +1,8 @@
 ---
-title: Brug af webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel til at forbedre ydeevnen SharePoint Online
+title: Brug af webdelen Indholdssøgning i stedet for webdelen indholdsforespørgsel til at forbedre ydeevnen i SharePoint Online
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 4/20/2015
 audience: Admin
 ms.topic: article
@@ -20,58 +20,58 @@ search.appverid:
 - MET150
 - SPO160
 ms.assetid: e8ce6b72-745b-464a-85c7-cbf6eb53391b
-description: Lær at øge ydeevnen ved at erstatte webdelen Indholdsforespørgsel med webdelen Indholdssøgning i SharePoint Server 2013 og SharePoint Online.
-ms.openlocfilehash: d41983a5771e42d357ae4d2adb5864e2a74fdd57
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du øger ydeevnen ved at erstatte webdelen indholdsforespørgsel med webdelen Indholdssøgning i SharePoint Server 2013 og SharePoint Online.
+ms.openlocfilehash: 77c2c6e48beb05b6d371734f0eeeb48881339156
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63594273"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098158"
 ---
-# <a name="using-content-search-web-part-instead-of-content-query-web-part-to-improve-performance-in-sharepoint-online"></a>Brug af webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel til at forbedre ydeevnen SharePoint Online
+# <a name="using-content-search-web-part-instead-of-content-query-web-part-to-improve-performance-in-sharepoint-online"></a>Brug af webdelen Indholdssøgning i stedet for webdelen indholdsforespørgsel til at forbedre ydeevnen i SharePoint Online
 
-I denne artikel beskrives det, hvordan du kan øge ydeevnen ved at erstatte webdelen Indholdsforespørgsel med webdelen Indholdssøgning i SharePoint Server 2013 og SharePoint Online.
+I denne artikel beskrives det, hvordan du øger ydeevnen ved at erstatte webdelen indholdsforespørgsel med webdelen indholdssøgning i SharePoint Server 2013 og SharePoint Online.
   
-En af de mest effektive nye funktioner i SharePoint Server 2013 og SharePoint Online er webdelen Indholdssøgning (CSWP). Denne webdel bruger søgeindekset til hurtigt at hente resultater, der vises for brugeren. Brug webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel (CQWP) på dine sider til at forbedre ydeevnen for dine brugere.
+En af de mest effektive nye funktioner i SharePoint Server 2013 og SharePoint Online er webdelen Til indholdssøgning (CSWP). Denne webdel bruger søgeindekset til hurtigt at hente resultater, der vises for brugeren. Brug webdelen indholdssøgning i stedet for CQWP (Indholdsforespørgsel) på dine sider for at forbedre ydeevnen for dine brugere.
   
-Brug af webdelen Indholdssøgning frem for webdelen Indholdsforespørgsel vil næsten altid give betydeligt bedre sideindlæsningsydeevne SharePoint online. Der er en smule yderligere konfiguration for at få den rigtige forespørgsel, men gevinsten er forbedret ydeevne og mere tilfredse brugere.
+Hvis du bruger en webdel til indholdssøgning via en webdel til indholdsforespørgslen, vil det næsten altid resultere i en væsentligt bedre ydeevne for sideindlæsning på SharePoint Online. Der er lidt ekstra konfiguration for at få den rigtige forespørgsel, men belønningerne er forbedret ydeevne og gladere brugere.
   
-## <a name="comparing-the-performance-gain-you-get-from-using-content-search-web-part-instead-of-content-query-web-part"></a>Sammenligning af den ydeevne, du opnår ved at bruge webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel
+## <a name="comparing-the-performance-gain-you-get-from-using-content-search-web-part-instead-of-content-query-web-part"></a>Sammenligning af den ydeevne, du får ved at bruge webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel
 
-Følgende eksempler viser den relative effektivitet, du opnår, når du bruger en webdel til indholdssøgning i stedet for en webdel til indholdsforespørgsel. Virkningerne er mere tydelige med en kompleks webstedsstruktur og meget brede indholdsforespørgsler.
+Følgende eksempler viser de relative ydeevnegevinster, du kan få, når du bruger en webdel til indholdssøgning i stedet for en webdel til indholdsforespørgsel. Effekterne er mere indlysende med en kompleks webstedsstruktur og meget brede indholdsforespørgsler.
   
 Dette eksempelwebsted har følgende egenskaber:
   
 - 8 niveauer af underordnede websteder.
     
-- Lister med en brugerdefineret "frugt"-indholdstype.
+- Lister, der bruger en brugerdefineret "frugt"-indholdstype.
     
 - I webdelen er indholdsforespørgslen bred og returnerer alle elementer med indholdstypen "frugt".
     
-- I eksemplet bruges kun 50 elementer på tværs af 8 websteder. Virkningerne vil være endnu mere udtale for websteder med mere indhold.
+- I eksemplet bruges der kun 50 elementer på tværs af de 8 websteder. Effekterne vil blive endnu mere udtalt for websteder med mere indhold.
     
-Her er et skærmbillede af resultaterne af webdelen Indholdsforespørgsel.
+Her er et skærmbillede af resultaterne af webdelen indholdsforespørgsel.
   
-![Grafik, der viser indholdsforespørgsel for webdel.](../media/b3d41f20-dfe5-46ed-9c0a-31057e82de33.png)
+![Grafik, der viser indholdsforespørgsel for webdelen.](../media/b3d41f20-dfe5-46ed-9c0a-31057e82de33.png)
   
-I Internet Explorer skal du bruge **fanen Netværk** i F12-udviklerværktøjerne til at se nærmere på detaljerne for svaroverskriften. I følgende skærmbillede indlæses værdien for **SPRequestDuration** for denne side på 924 millisekunder. 
+I Internet Explorer skal du bruge fanen **Netværk** i F12-udviklerværktøjerne til at se nærmere på svarheaderen. På følgende skærmbillede er værdien for **SPRequestDuration** for denne sideindlæsning 924 millisekunder. 
   
-![Skærmbillede med varighed af anmodning på 924.](../media/343571f2-a249-4de2-bc11-2cee93498aea.png)
+![Skærmbillede, der viser anmodningens varighed på 924.](../media/343571f2-a249-4de2-bc11-2cee93498aea.png)
   
- **SPRequestDuration** angiver den mængde arbejde, der er udført på serveren for at forberede siden. Hvis du skifter indhold efter webdele indhold med indhold fra webdele reduceres den tid, det tager at gengive siden, dramatisk. I modsætning hertil har en side med en tilsvarende webdel Indholdssøgning, der returnerer det samme antal resultater, en **værdi for SPRequestDuration** på 106 millisekunder, som vist i dette skærmbillede: 
+ **SPRequestDuration** angiver den mængde arbejde, der udføres på serveren for at forberede siden. Hvis du skifter indhold efter forespørgsel webdele med indhold efter søgning, webdele reduceres den tid, det tager at gengive siden, dramatisk. En side med en tilsvarende webdel til indholdssøgning, der returnerer det samme antal resultater, har derimod en **SPRequestDuration-værdi** på 106 millisekunder, som vist i dette skærmbillede: 
   
-![Skærmbillede med varighed af anmodning på 106.](../media/b46387ac-660d-4e5e-a11c-cc430e912962.png)
+![Skærmbillede, der viser anmodningsvarigheden på 106.](../media/b46387ac-660d-4e5e-a11c-cc430e912962.png)
   
-## <a name="adding-a-content-search-web-part-in-sharepoint-online"></a>Tilføje en webdel til indholdssøgning i SharePoint Online
+## <a name="adding-a-content-search-web-part-in-sharepoint-online"></a>Tilføjelse af en webdel til indholdssøgning i SharePoint Online
 
-At tilføje en webdel til indholdssøgning minder meget om en almindelig webdel til indholdsforespørgsel. Se afsnittet *"Tilføje en webdel til indholdssøgning"* [i Konfigurere en webdel til indholdssøgning SharePoint](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a).
+Tilføjelse af en webdel til indholdssøgning minder meget om en almindelig webdel til indholdsforespørgslen. Se afsnittet *"Tilføj en webdel til indholdssøgning"* i [Konfigurer en webdel til indholdssøgning i SharePoint](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a).
   
-## <a name="creating-the-right-search-query-for-your-content-search-web-part"></a>Oprette den rigtige søgeforespørgsel til din webdel til indholdssøgning
+## <a name="creating-the-right-search-query-for-your-content-search-web-part"></a>Oprettelse af den rigtige søgeforespørgsel til webdelen indholdssøgning
 
-Når du har tilføjet en webdel til indholdssøgning, kan du afgrænse søgningen og returnere de ønskede elementer. Hvis du vil have detaljeret vejledning til at gøre dette, skal du se afsnittet "Vis indhold ved at konfigurere en avanceret forespørgsel i en webdel til indholdssøgning *"* i Konfigurere en webdel til indholdssøgning [i SharePoint](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a).
+Når du har tilføjet en webdel til indholdssøgning, kan du tilpasse søgningen og returnere de ønskede elementer. Du kan finde detaljerede instruktioner til, hvordan du gør dette, i afsnittet *"Vis indhold ved at konfigurere en avanceret forespørgsel i en webdel til indholdssøgning"* i [Konfigurer en webdel til indholdssøgning i SharePoint](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a).
   
-## <a name="query-building-and-testing-tool"></a>Forespørgselsopbygning og testværktøj
+## <a name="query-building-and-testing-tool"></a>Værktøj til oprettelse og test af forespørgsler
 
-Du kan finde et værktøj til at opbygge og teste komplekse forespørgsler i [søgeforespørgselsværktøjet](https://sp2013searchtool.codeplex.com/) på Codeplex. 
+Hvis du vil have et værktøj til at bygge og teste komplekse forespørgsler, skal du se [søgeforespørgselsværktøjet](https://sp2013searchtool.codeplex.com/) på Codeplex. 
   
 

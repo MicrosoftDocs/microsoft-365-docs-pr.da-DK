@@ -2,8 +2,8 @@
 title: Prøv en indholdssøgning igen for at løse en fejl i indholdsplaceringen
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: troubleshooting
@@ -16,12 +16,12 @@ search.appverid:
 ms.assetid: ''
 description: Under en undersøgelse kan du bruge knappen Prøv igen for at løse indholdssøgninger, der har fejl i indholdsplaceringen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9ded77dedc2c304e8a51b165ab6b5324cc5e78e3
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5345b346e8c66f6983d67081839248e4c66be7d8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994012"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090423"
 ---
 # <a name="retry-a-content-search-to-resolve-a-content-location-error"></a>Prøv en indholdssøgning igen for at løse en fejl i indholdsplaceringen
 
@@ -54,7 +54,7 @@ Genstart af søgningen vil ofte resultere i lignende fejl på forskellige server
 
 Dette medfører, at søgningen kun forsøges igen for de postkasser, der mislykkedes. Når du prøver søgningen igen, bevares de andre resultater, der blev returneret.
 
-## <a name="tips-to-avoid-content-location-errors"></a>Tip til at undgå fejl i placering af indhold
+## <a name="tips-to-avoid-content-location-errors"></a>Tips for at undgå fejl i indholdsplacering
 
 Her er nogle yderligere årsager til fejl i placering af indhold og nogle tip, der kan hjælpe dig med at undgå dem, når du søger i et stort antal postkasser.
 

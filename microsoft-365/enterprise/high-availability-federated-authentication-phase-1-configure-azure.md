@@ -2,7 +2,7 @@
 title: Godkendelse i organisationsnetværket med høj tilgængelighed Fase 1 Konfigurer Azure
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
@@ -13,146 +13,146 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
-description: 'Oversigt: Konfigurer den Microsoft Azure til at hoste godkendelse i organisationsnetværket med høj tilgængelighed for Microsoft 365.'
-ms.openlocfilehash: 35666baf98b45419f41a0078729ac5a5a6fab995
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: 'Oversigt: Konfigurer infrastrukturen for Microsoft Azure til at hoste organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365.'
+ms.openlocfilehash: f83aa494fcdead8f29810dea06193934b8ef26b9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63591391"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098378"
 ---
-# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>Godkendelse i organisationsnetværket med høj tilgængelighed Fase 1: Konfigurer Azure
+# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>Godkendelse i organisationsnetværket med høj tilgængelighed fase 1: Konfigurer Azure
 
-I denne fase opretter du ressourcegrupper, virtuelt netværk (VNet) og tilgængelighedssæt i Azure, der er vært for de virtuelle maskiner i faserne 2, 3 og 4. Du skal fuldføre denne fase, før du går videre [til Fase 2: Konfigurer domænecontrollere](high-availability-federated-authentication-phase-2-configure-domain-controllers.md). Se [Installér godkendelse med høj tilgængelighed i organisationsnetværket Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faser.
+I denne fase opretter du ressourcegrupperne, det virtuelle netværk (VNet) og tilgængelighedssættene i Azure, der skal hoste de virtuelle maskiner i fase 2, 3 og 4. Du skal fuldføre denne fase, før du går videre til [fase 2: Konfigurer domænecontrollere](high-availability-federated-authentication-phase-2-configure-domain-controllers.md). Se [Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faserne.
   
 Azure skal klargøres med disse grundlæggende komponenter:
   
 - Ressourcegrupper
     
-- Et virtuelt Azure-netværk på tværs af et miljø (VNet) med undernet til at hoste de virtuelle Azure-maskiner
+- Et virtuelt Azure-netværk på tværs af det lokale miljø (VNet) med undernet til hosting af de virtuelle Azure-maskiner
     
-- Netværkssikkerhedsgrupper til udførelse af undernetisolation
+- Netværkssikkerhedsgrupper til udførelse af isolation af undernet
     
 - Tilgængelighedssæt
     
 ## <a name="configure-azure-components"></a>Konfigurer Azure-komponenter
 
-Inden du går i gang med at konfigurere Azure-komponenter, skal du udfylde følgende tabeller. For at hjælpe dig med procedurerne til konfiguration af Azure skal du udskrive dette afsnit og skrive de nødvendige oplysninger ned eller kopiere denne sektion til et dokument og udfylde det. Udfyld Tabel V for at se indstillingerne for VNet.
+Før du begynder at konfigurere Azure-komponenter, skal du udfylde følgende tabeller. Du kan hjælpe dig med at konfigurere Azure ved at udskrive denne sektion og skrive de nødvendige oplysninger ned eller kopiere sektionen til et dokument og udfylde den. Udfyld Tabel V for at få vist indstillingerne for VNet.
   
 |**Element**|**Konfigurationsindstilling**|**Beskrivelse**|**Værdi**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |VNetnavn  <br/> |Et navn, der skal tildeles VNet (f.eks. FedAuthNet).  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |VNetplacering  <br/> |Det regionale Azure-datacenter, der skal indeholde det virtuelle netværk.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |IP-adresse på VPN-enhed  <br/> |Den offentlige IPv4-adresse for din VPN-enheds grænseflade på internettet.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|4.  <br/> |VNet-adresseområde  <br/> |Adressepladsen til det virtuelle netværk. Arbejd sammen med din it-afdeling for at finde dette adresseområde.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|5.  <br/> |Delt IPsec-nøgle  <br/> |En vilkårlig, alfanumerisk streng på 32 tegn, der skal bruges til at godkende begge sider af VPN-forbindelsen mellem websted og websted. Arbejd med din it- eller sikkerhedsafdeling for at finde frem til denne nøgleværdi. Du kan også se [Opret en tilfældig streng for en IPsec-foruddelt nøgle](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |VNet-navn  <br/> |Et navn, der skal tildeles til VNet (f.eks. FedAuthNet).  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |VNet-placering  <br/> |Det regionale Azure-datacenter, der indeholder det virtuelle netværk.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |IP-adresse for VPN-enhed  <br/> |Den offentlige IPv4-adresse på vpn-enhedens grænseflade på internettet.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |VNet-adresseområde  <br/> |Adresseområdet for det virtuelle netværk. Samarbejd med it-afdelingen om at bestemme dette adresseområde.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |Delt nøgle til IPsec  <br/> |En 32-tegns tilfældig alfanumerisk streng, der bruges til at godkende begge sider af vpn-forbindelsen fra websted til websted. Samarbejd med it- eller sikkerhedsafdelingen om at bestemme denne nøgleværdi. Alternativt kan du se [Opret en tilfældig streng for en IPsec-foruddelt nøgle](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
- **Tabel V: Konfiguration af virtuelt netværk på tværs af lokale netværk**
+ **Tabel V: Konfiguration af virtuelt netværk på tværs af det lokale miljø**
   
-Dernæst skal du udfylde Tabel S for denne løsnings undernet. Alle adresseområder skal være i CIDR-format (Classless Interdomain Routing), også kaldet et format med et netværkspræfiks. Et eksempel er 10.24.64.0/20.
+Udfyld derefter Tabel S for undernet for denne løsning. Alle adresseområder skal være i CIDR-format (Classless Interdomain Routing), også kendt som netværkspræfiksformat. Et eksempel er 10.24.64.0/20.
   
-For de første tre undernet skal du angive et navn og et enkelt IP-adresseområde, der er baseret på det virtuelle netværks adresseområde. For gatewayundernettet skal du bestemme 27-bit adresseområde (med en længde på /27 præfiks) for Azure gateway-undernettet med følgende:
+For de første tre undernet skal du angive et navn og et enkelt IP-adresseområde baseret på det virtuelle netværksadresseområde. For gatewayundernettet skal du bestemme 27-bit adresseområdet (med præfikslængden /27) for Azure Gateway-undernettet med følgende:
   
-1. Angiv variable bit i adresserummet for VNet til 1, op til de bit, der bruges af gatewayundernettet, og angiv derefter de resterende bit til 0.
+1. Angiv variable bits i adresseområdet for VNet til 1 op til de bit, der bruges af gatewayens undernet, og angiv derefter de resterende bit til 0.
     
-2. Konvertér de resulterende bit til decimaler, og udtryk dem som et adresseområde med præfikslængden indstillet til størrelsen af gatewayundernettet.
+2. Konvertér de resulterende bit til decimaler, og udtryk det som et adresseområde, hvor præfiksets længde er angivet til størrelsen på gatewayens undernet.
     
-Se [Adressepladsberegner til Azure gateway-undernet](address-space-calculator-for-azure-gateway-subnets.md) for en PowerShell-kommandoblok og C# eller Python-konsolprogram, der udfører denne beregning for dig.
+Se [Adressepladsberegner til Azure Gateway-undernet](address-space-calculator-for-azure-gateway-subnets.md) for en PowerShell-kommandoblok og C# eller Python-konsolprogram, der udfører denne beregning for dig.
   
-Arbejd sammen med din it-afdeling for at bestemme disse adresseområder fra det virtuelle netværks adresseområde.
+Samarbejd med it-afdelingen om at bestemme disse adresseområder fra det virtuelle netværksadresseområde.
   
-|**Element**|**Navn på undernet**|**Undernetadresseområde**|**Formål**|
+|**Element**|**Navn på undernet**|**Adresseområde for undernet**|**Formål**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af den Active Directory-domæneservices (AD DS) domænecontroller og virtuelle computere med katalogsynkroniseringsserver (VMs).  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af AD FS VMs.  <br/> |
-|3.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af webprogrammets proxy-VM'er.  <br/> |
-|4.  <br/> |GatewaySubnet  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af Azure Gateway-VM'er.  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af ad DS-domænecontrolleren (Active Directory-domæneservices) og virtuelle maskiner (VM'er) til katalogsynkroniseringsserver.  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af AD FS VM'er.  <br/> |
+|3.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af vm'er til webprogramproxy.  <br/> |
+|4.  <br/> |GatewaySubnet  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af Azure Gateway VM'er.  <br/> |
    
  **Tabel S: Undernet i det virtuelle netværk**
   
-Dernæst skal du udfylde tabel I for de statiske IP-adresser, der er tildelt virtuelle maskiner og belastningsbalancerforekomster.
+Udfyld derefter Tabel I for de statiske IP-adresser, der er tildelt virtuelle maskiner og belastningsjusteringsforekomster.
   
-|**Element**|**Formål**|**IP-adresse på undernettet**|**Værdi**|
+|**Element**|**Formål**|**IP-adresse på undernet**|**Værdi**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |Statisk IP-adresse på den første domænecontroller  <br/> |Den fjerde mulige IP-adresse for adresserummet for undernettet, der er defineret i element 1 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |Statisk IP-adresse på den anden domænecontroller  <br/> |Den femte mulige IP-adresse for adresserummet for undernettet, der er defineret i element 1 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |Statisk IP-adresse på katalogsynkroniseringsserveren  <br/> |Den sjette mulige IP-adresse for adresserummet for undernettet, der er defineret i element 1 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|4.  <br/> |Statisk IP-adresse for den interne belastningsbalance for AD FS-servere  <br/> |Den fjerde mulige IP-adresse for adresserummet for undernettet, der er defineret i element 2 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|5.  <br/> |Statisk IP-adresse på den første AD FS-server  <br/> |Den femte mulige IP-adresse for adresserummet for undernettet, der er defineret i element 2 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|6.  <br/> |Statisk IP-adresse på den anden AD FS-server  <br/> |Den sjette mulige IP-adresse for adresserummet for det undernet, der er defineret i element 2 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|7.  <br/> |Statisk IP-adresse på den første webprogramproxyserver  <br/> |Den fjerde mulige IP-adresse for adresserummet for undernettet, der er defineret i element 3 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|8.  <br/> |Statisk IP-adresse på den anden webprogramproxyserver  <br/> |Den femte mulige IP-adresse for adresserummet for undernettet, der er defineret i element 3 i Tabel S.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |Statisk IP-adresse for den første domænecontroller  <br/> |Den fjerde mulige IP-adresse for adresseområdet i det undernet, der er defineret i element 1 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |Statisk IP-adresse for den anden domænecontroller  <br/> |Den femte mulige IP-adresse for adresseområdet på det undernet, der er defineret i punkt 1 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |Statisk IP-adresse på katalogsynkroniseringsserveren  <br/> |Den sjette mulige IP-adresse for adresseområdet på det undernet, der er defineret i punkt 1 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |Statisk IP-adresse for den interne belastningsjustering for AD FS-serverne  <br/> |Den fjerde mulige IP-adresse for adresseområdet i det undernet, der er defineret i element 2 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |Statisk IP-adresse på den første AD FS-server  <br/> |Den femte mulige IP-adresse for adresseområdet på det undernet, der er defineret i punkt 2 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|6.  <br/> |Statisk IP-adresse for den anden AD FS-server  <br/> |Den sjette mulige IP-adresse for adresseområdet i det undernet, der er defineret i punkt 2 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|7.  <br/> |Statisk IP-adresse på den første webprogramproxyserver  <br/> |Den fjerde mulige IP-adresse for adresseområdet i det undernet, der er defineret i punkt 3 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|8.  <br/> |Statisk IP-adresse på den anden webprogramproxyserver  <br/> |Den femte mulige IP-adresse for adresseområdet på det undernet, der er defineret i punkt 3 i tabel S.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tabel I: Statiske IP-adresser i det virtuelle netværk**
   
-Udfyld Tabel D for to DNS-servere (Domain Name System) i dit lokale netværk, som du vil bruge, når du først konfigurerer domænecontrollere i dit virtuelle netværk. Arbejd med din it-afdeling for at finde denne liste.
+Udfyld tabel D for to DNS-servere (Domain Name System) på netværket i det lokale miljø, som du vil bruge, når du konfigurerer domænecontrollerne i dit virtuelle netværk. Kontakt it-afdelingen for at finde listen.
   
-|**Element**|**Navn på dns-servervenligt**|**IP-adresse til DNS-server**|
+|**Element**|**Fuldt navn på DNS-server**|**DNS-server-IP-adresse**|
 |:-----|:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
- **Tabel D: Lokale DNS-servere**
+ **Tabel D: DNS-servere i det lokale miljø**
   
-Hvis du vil distribuere pakker fra det lokale netværk til dit organisationsnetværk på tværs af VPN-forbindelsen mellem websted og websted, skal du konfigurere det virtuelle netværk med et lokalt netværk, der har en liste over adresseområderne (i CIDR-notation) for alle tilgængelige placeringer på organisationens lokale netværk. Listen over adresseområder, der definerer dit lokale netværk, skal være entydig og må ikke overlappe med det adresseområde, der bruges til andre virtuelle netværk eller andre lokale netværk.
+Hvis du vil distribuere pakker fra netværket på tværs af det lokale miljø til organisationsnetværket på tværs af VPN-forbindelsen fra websted til websted, skal du konfigurere det virtuelle netværk med et lokalt netværk, der har en liste over adresseområderne (i CIDR-notationen) for alle de placeringer, der kan nås på organisationens lokale netværk. Listen over adresseområder, der definerer det lokale netværk, skal være entydig og må ikke overlappe den adresseplads, der bruges til andre virtuelle netværk eller andre lokale netværk.
   
-Udfyld Tabel L for sættet af adresseområder i lokalnetværket. Bemærk, at tre tomme poster er angivet, men du har typisk brug for flere. Arbejd sammen med din it-afdeling for at finde denne liste over adresseområder.
+I forbindelse med sættet af lokale netværksadresseområder skal du udfylde Tabel L. Bemærk, at der er angivet tre tomme adresser, men du har typisk brug for mere. Samarbejd med it-afdelingen om at fastlægge denne liste over adresseområder.
   
-|**Element**|**Lokal netværksadresseområde**|
+|**Element**|**Adresseområde på lokalt netværk**|
 |:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tabel L: Adressepræfikser for det lokale netværk**
   
-Lad os nu begynde at opbygge Azure-infrastrukturen til at hoste din organisationsnetværksgodkendelse til Microsoft 365.
+Lad os nu begynde at bygge Azure-infrastrukturen til at hoste din godkendelse i organisationsnetværket for Microsoft 365.
   
 > [!NOTE]
-> Følgende kommandosæt bruger den nyeste version af Azure PowerShell. Se [Introduktion til Azure PowerShell](/powershell/azure/get-started-azureps). 
+> Følgende kommandosæt bruger den nyeste version af Azure PowerShell. Se [Kom i gang med Azure PowerShell](/powershell/azure/get-started-azureps). 
   
-Start først med en Azure PowerShell og logge på din konto.
+Start først en Azure PowerShell spørg, og log på din konto.
   
 ```powershell
 Connect-AzAccount
 ```
 
 > [!TIP]
-> Hvis du vil generere powerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du [Microsoft Excel projektmappen til konfiguration](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
+> Hvis du vil generere PowerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du bruge denne [Microsoft Excel konfigurationsprojektmappe](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
 
-Få dit abonnementsnavn ved hjælp af følgende kommando.
+Hent dit abonnementsnavn ved hjælp af følgende kommando.
   
 ```powershell
 Get-AzSubscription | Sort Name | Select Name
 ```
 
-For ældre versioner af Azure PowerShell skal du bruge denne kommando i stedet.
+Brug denne kommando i stedet for til ældre versioner af Azure PowerShell.
   
 ```powershell
 Get-AzSubscription | Sort Name | Select SubscriptionName
 ```
 
-Angiv dit Azure-abonnement. Erstat alt inden for anførselstegnene \< and > , herunder tegnene, med det korrekte navn.
+Angiv dit Azure-abonnement. Erstat alt i anførselstegnene, herunder tegnene \< and > , med det korrekte navn.
   
 ```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-Derefter skal du oprette de nye ressourcegrupper. Hvis du vil fastlægge et entydigt sæt ressourcegruppenavne, skal du bruge denne kommando til at angive dine eksisterende ressourcegrupper.
+Opret derefter de nye ressourcegrupper. Hvis du vil bestemme et entydigt sæt af navne på ressourcegrupper, skal du bruge denne kommando til at få vist dine eksisterende ressourcegrupper.
   
 ```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
-Udfyld følgende tabel for sættet med entydige ressourcegruppenavne.
+Udfyld følgende tabel for sættet af entydige navne på ressourcegrupper.
   
-|**Element**|**Ressourcegruppenavn**|**Formål**|
+|**Element**|**Navn på ressourcegruppe**|**Formål**|
 |:-----|:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Domænecontrollere  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |AD FS-servere  <br/> |
-|3.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Webprogramproxyservere  <br/> |
-|4.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Infrastrukturelementer  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Domænecontrollere  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |AD FS-servere  <br/> |
+|3.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Proxyservere for webprogram  <br/> |
+|4.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Infrastrukturelementer  <br/> |
    
  **Tabel R: Ressourcegrupper**
   
@@ -199,7 +199,7 @@ New-AzVirtualNetwork -Name $vnetName -ResourceGroupName $rgName -Location $locNa
 
 ```
 
-Derefter skal du oprette netværkssikkerhedsgrupper for hvert undernet, der har virtuelle computere. Hvis du vil udføre undernetisolation, kan du føje regler for bestemte typer trafik, der er tilladt eller afvist, til netværkssikkerhedsgruppen for et undernet.
+Derefter skal du oprette netværkssikkerhedsgrupper for hvert undernet, der har virtuelle maskiner. Hvis du vil udføre undernetisolation, kan du føje regler for de specifikke trafiktyper, der er tilladt eller nægtet til netværkssikkerhedsgruppen for et undernet.
   
 ```powershell
 # Create network security groups
@@ -219,7 +219,7 @@ Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $subnet3Name -Addre
 $vnet | Set-AzVirtualNetwork
 ```
 
-Derefter skal du bruge disse kommandoer til at oprette gateways for VPN-forbindelsen mellem websted og websted.
+Derefter skal du bruge disse kommandoer til at oprette gateways for VPN-forbindelsen fra websted til websted.
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -253,35 +253,35 @@ $vnetConnection=New-AzVirtualNetworkGatewayConnection -Name $vnetConnectionName 
 ```
 
 > [!NOTE]
-> Federated Authentication for individuelle brugere er ikke afhængig af lokale ressourcer. Men hvis denne websted-til-websted VPN-forbindelse bliver utilgængelig, vil domænecontrollere i VNet ikke modtage opdateringer til brugerkonti og grupper, der er foretaget i den lokale Active Directory-domæneservices. For at sikre at dette ikke sker, kan du konfigurere høj tilgængelighed for din WEBSTED-til-websted VPN-forbindelse. Du kan få mere at [vide under Meget tilgængelig på tværs af lokale netværk og VNet-til-VNet-forbindelse](/azure/vpn-gateway/vpn-gateway-highlyavailable)
+> Godkendelse i organisationsnetværket af individuelle brugere er ikke afhængig af ressourcer i det lokale miljø. Men hvis denne websted til websted-VPN-forbindelse bliver utilgængelig, modtager domænecontrollerne i VNet ikke opdateringer til brugerkonti og grupper, der er oprettet i Active Directory i det lokale miljø Domænetjenester. Hvis du vil sikre, at dette ikke sker, kan du konfigurere høj tilgængelighed for din websted til websted-VPN-forbindelse. Du kan få flere oplysninger under [Yderst tilgængelig på tværs af det lokale miljø og VNet-til-VNet-forbindelse](/azure/vpn-gateway/vpn-gateway-highlyavailable)
   
-Derefter skal du registrere den offentlige IPv4-adresse for Azure VPN-gatewayen for dit virtuelle netværk fra visningen af denne kommando:
+Derefter skal du registrere den offentlige IPv4-adresse på Azure VPN-gatewayen for dit virtuelle netværk fra visningen af denne kommando:
   
 ```powershell
 Get-AzPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgName
 ```
 
-Dernæst skal du konfigurere din lokale VPN-enhed til at oprette forbindelse til Azure VPN-gatewayen. Få mere at vide under [Konfigurer din VPN-enhed](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+Konfigurer derefter din VPN-enhed i det lokale miljø for at oprette forbindelse til Azure VPN-gatewayen. Du kan få flere oplysninger under [Konfigurer VPN-enheden](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
   
-For at konfigurere din lokale VPN-enhed skal du bruge følgende:
+Hvis du vil konfigurere din VPN-enhed i det lokale miljø, skal du bruge følgende:
   
 - Den offentlige IPv4-adresse for Azure VPN-gatewayen.
     
-- IPsec-forudseende delt nøgle for websted-til-websted-VPN-forbindelsen (Tabel V - element 5 - værdikolonne).
+- Den foruddelte IPsec-nøgle for VPN-forbindelsen fra websted til websted (Tabel V – Element 5 – Kolonnen Værdi).
     
-Dernæst skal du sikre dig, at der kan oprettes forbindelse til adressepladsen på det virtuelle netværk fra dit lokale netværk. Dette gøres normalt ved at føje en rute, der svarer til det virtuelle netværks adresseområde, til din VPN-enhed og derefter reklamere for den pågældende rute til resten af organisationens routinginfrastruktur. Arbejd sammen med din it-afdeling for at finde ud af, hvordan du gør dette.
+Sørg derefter for, at der er adgang til adresseområdet på det virtuelle netværk fra dit lokale netværk. Dette gøres normalt ved at føje en rute, der svarer til det virtuelle netværksadresseområde, til din VPN-enhed og derefter reklamere for denne rute til resten af distributionsinfrastrukturen i organisationens netværk. Samarbejd med it-afdelingen for at finde ud af, hvordan det skal gøres.
   
-Dernæst skal du definere navnene på tre tilgængelighedssæt. Udfyld tabel A. 
+Derefter skal du definere navnene på tre tilgængelighedssæt. Udfyld tabel A. 
   
 |**Element**|**Formål**|**Navn på tilgængelighedssæt**|
 |:-----|:-----|:-----|
-|1.  <br/> |Domænecontrollere  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |AD FS-servere  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |Webprogramproxyservere  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |Domænecontrollere  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |AD FS-servere  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |Proxyservere for webprogram  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tabel A: Tilgængelighedssæt**
   
-Du skal bruge disse navne, når du opretter de virtuelle maskiner i faserne 2, 3 og 4.
+Du skal bruge disse navne, når du opretter de virtuelle maskiner i fase 2, 3 og 4.
   
 Opret de nye tilgængelighedssæt med disse Azure PowerShell kommandoer.
   
@@ -300,20 +300,20 @@ New-AzAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locNam
 
 Dette er den konfiguration, der er resultatet af den vellykkede fuldførelse af denne fase.
   
-**Fase 1: Azure-infrastruktur til godkendelse i organisationsnetværket med høj tilgængelighed til Microsoft 365**
+**Fase 1: Azure-infrastrukturen til samlet godkendelse med høj tilgængelighed til Microsoft 365**
 
 ![Fase 1 af den høje tilgængelighed Microsoft 365 organisationsnetværksgodkendelse i Azure med Azure-infrastrukturen.](../media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
   
 ## <a name="next-step"></a>Næste trin
 
-Brug [Fase 2: Konfigurer domænecontrollere](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) for at fortsætte med konfigurationen af denne arbejdsbyrde.
+Brug [fase 2: Konfigurer domænecontrollere](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) for at fortsætte med konfigurationen af denne arbejdsbelastning.
   
 ## <a name="see-also"></a>Se også
 
-[Installér godkendelse med høj tilgængelighed i organisationsnetværket Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
+[Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
   
-[Identitet i organisationsnetværk for dit Microsoft 365 udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)
+[Organisationsnetværksidentitet for dit Microsoft 365 udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)
   
-[Microsoft 365 og arkitekturcenter](../solutions/index.yml)
+[Microsoft 365-løsnings- og arkitekturcenter](../solutions/index.yml)
 
-[Forstå Microsoft 365 identitetsmodeller](deploy-identity-solution-identity-model.md)
+[Om Microsoft 365 identitetsmodeller](deploy-identity-solution-identity-model.md)

@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt skiftende overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: b5f231abfbfe943f0b2ab0cf33a14267f0940820
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: b79015ce0ca55bf9a74b6acac8f38f09b9e5e984
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972469"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100523"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Nyheder i Microsoft Purview
 
@@ -68,6 +68,58 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 | Microsoft 365 Avanceret eDiscovery <br><br> Microsoft 365 Core eDiscovery | Microsoft Purview eDiscovery (Premium) <br><br> Microsoft Purview eDiscovery (Standard) | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide under [Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md) og [Microsoft Purview eDiscovery (Standard).](get-started-core-ediscovery.md) |
 | Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administrationsportal til adgang til løsninger og løsningskatalog i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide på [Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center.md). |
 
+## <a name="march-2022"></a>Marts 2022
+
+### <a name="communication-compliance"></a>Kommunikationsoverholdelse
+
+- [Undersøg og afhjælp beskeder om kommunikation med overholdelse af angivne standarder](communication-compliance-investigate-remediate.md) – fjernede vejledningen til frarådet anmærkningsvisning.
+
+### <a name="compliance-manager"></a>Overholdelsesstyring
+
+- [Arbejde med forbedringshandlinger](compliance-manager-improvement-actions.md), [Kom i gang med Overholdelsesstyring](compliance-manager-setup.md) – yderligere oplysninger om flere forbedringshandlinger, der automatisk kan overvåges og testes ("løbende vurdering af overholdelse af angivne standarder"); Dette omfatter nye evner til at overordnet teststatus for en handling i forhold til en anden handling.
+
+### <a name="data-classification"></a>Dataklassificering
+
+- [Kom i gang med Indholdsoversigt](data-classification-content-explorer.md) – Teams tilføjede vejledning, pegede licensafsnittet på tjenestebeskrivelser.
+
+### <a name="data-lifecycle-management-and-records-management"></a>Administration af datalivscyklus og datastyring
+
+- [Opbevaringspolitikker for Yammer](create-retention-policies.md#retention-policy-for-yammer-locations) er nu offentligt tilgængelige.
+- Understøttelse af delte kanaler, der i øjeblikket er en prøveversion. Når du konfigurerer en opbevaringspolitik for placeringen af Teams kanalmeddelelsen, nedarver alle delte kanaler opbevaringsindstillinger fra deres overordnede team.
+- [Grænser pr. lejer for indholdsdisposition](retention-limits.md#maximum-number-of-items-for-disposition).
+
+### <a name="data-loss-prevention"></a>Forebyggelse af datatab
+
+- [Forebyggelse af datatab og Microsoft Teams](dlp-microsoft-teams.md) – Offentlig prøveversion af indhold i Share Teams Kanaler.
+- [Kom i gang med Microsoft Compliance-udvidelsen](dlp-chrome-get-started.md) – offentlig prøveversion af begrænsede appgrupper, fjern instruktioner om registreringsdatabasenøgle, konfiguration er nu aktiveret som standard.
+- [Konfigurer indstillinger for forebyggelse af datatab for slutpunkter](dlp-configure-endpoint-settings.md) – nyt til offentlig prøveversion af begrænsede appgrupper.
+- [Reference til politik til forebyggelse af datatab](dlp-policy-reference.md) – opdateret til offentlig prøveversion af begrænsede appgrupper.
+- [Kom i gang med forebyggelse af datatab for Power BI](dlp-powerbi-get-started.md) – nyt til offentlig prøveversion.
+
+### <a name="insider-risk-management"></a>Styring af insider-risiko
+
+- [Kom i gang med styring af insiderrisiko](insider-risk-management-configure.md) – tilføjede nye opgaver i vejledningen Anbefalede handlinger.
+- [Kom i gang med indstillinger for styring af insiderrisiko](insider-risk-management-settings.md) – nye opdateringer af funktioner til meddelelser og mailbeskeder, nye opdateringer til analysemeddelelser.
+
+### <a name="microsoft-information-protection"></a>Microsoft Information Protection
+
+- [Understøttelse af produktbemærkninger med dobbeltbytetegnsæt](mip-dbcs-relnotes.md) – ekstra vejledning til macOS.
+
+### <a name="microsoft-priva"></a>Microsoft Priva
+
+- [Konfigurer Priva-indstillinger](/privacy/priva/priva-settings) – opdaterede afklaring af oplysninger om opbevaringsperioder for registreredes rettigheder. tilføjede oplysninger om administration og anvendelse af datagennemsynstags for anmodninger om emnerettigheder.
+- [Opret en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-create) – tilføjede oplysninger om finjustering af søgninger og valg af betingelser og attributter. tilføjede oplysninger om ny funktionalitet, der gør det muligt for brugerne at vælge alle versioner af SharePoint elementer i deres søgning (i forhold til standardindstillingen, som kun returnerer den aktuelle version af SharePoint elementer).
+- [Gennemse data for en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-data-review) – tilføjet oplysninger i trin 3 om gennemsyn af elementer i fasen til datagennemsyn, herunder markering af filer som "include/exclude", anmærkning af filer for at anvende redigeringer, anvende mærker og angive noter.
+- [Generér rapporter, og indfri en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-reports) – der er tilføjet oplysninger om, hvordan du forstår rapporter. præciseres, når der genereres en eksportpakke, og hvordan du arbejder med dens indhold tilføjede oplysninger om overvågningslogge, mærkede filrapporter og opbevaringsperioder for SRR-data og -rapporter.
+
+### <a name="sensitivity-labels"></a>Følsomhedsmærkater
+
+- [Følsomhedsmærkater for Teams](sensitivity-labels-teams-groups-sites.md):
+  - Understøttelse af delte kanaler, der i øjeblikket er en prøveversion. Hvis et team har delte kanaler, arver de automatisk indstillinger for følsomhedsmærkat fra deres overordnede team, og denne mærkat kan ikke fjernes eller erstattes med en anden mærkat.
+  - Understøttelse af skabeloner, der tidligere er angivet som [ikke understøttet med Teams Graph API'er og PowerShell-cmdlet'er]( /microsoftteams/sensitivity-labels#limitations).  
+- I forbindelse med overvågning af Word, Excel og PowerPoint på internettet er begrundelsesteksten nu udrullet fuldt ud.
+- Anvendelse af en standardetiket på eksisterende dokumenter til Word, Excel og PowerPoint på internettet er nu udrullet fuldt ud.
+
 ## <a name="february-2022"></a>Februar 2022
 
 ### <a name="ediscovery"></a>eDiscovery
@@ -109,7 +161,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 - Understøttelse af nye [rollegrupper og roller](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels), der nu er en prøveversion.
 - Nye [overvågningsfunktioner](apply-sensitivity-label-automatically.md#monitoring-your-auto-labeling-policy) til politikker for automatisk mærkning.
-- Udrulles nu: standardetiket for eksisterende dokumenter i den aktuelle kanal (prøveversion) og justeringstekst for Office på internettet.
+- Udrulles nu: standardetiket for eksisterende dokumenter og justeringstekst for Office på internettet.
 - Annonceret for Semi-Annual Enterprise Channel i juli med version 2202+: Samtidig redigering og overvågning af Outlook.
 
 ## <a name="december-2021"></a>December 2021

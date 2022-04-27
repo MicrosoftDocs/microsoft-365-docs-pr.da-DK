@@ -1,9 +1,9 @@
 ---
-title: Modul til forudsigende kodning til eDiscovery (Premium) (prøveversion)
+title: Modul med forudsigende kodning til eDiscovery (Premium) (prøveversion)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: jefwan
 manager: laurawi
 audience: Admin
@@ -13,21 +13,21 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Det nye modul til forudsigende kodning i eDiscovery (Premium) bruger maskinel indlæring til at analysere elementer i et korrektursæt for at forudsige, hvilke elementer der er relevante for din sag eller undersøgelse.
-ms.openlocfilehash: 7d45c995fafe5b802713e101ad36a362ab77fa37
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Det nye modul med forudsigende kodning i eDiscovery (Premium) bruger maskinel indlæring til at analysere elementer i et korrektursæt for at forudsige, hvilke elementer der er relevante for din sag eller undersøgelse.
+ms.openlocfilehash: cc0db62b4ec7d632dae70347aaba5644138bcdce
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998986"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100759"
 ---
 # <a name="learn-about-predictive-coding-in-ediscovery-premium-preview"></a>Få mere at vide om forudsigende kodning i eDiscovery (Premium) (prøveversion)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Det forudsigende kodemodul i eDiscovery (Premium) bruger de intelligente funktioner til maskinel indlæring til at hjælpe dig med at reducere mængden af indhold, der skal gennemses. Forudsigende kodning hjælper dig med at reducere og reducere store mængder sagsindhold til et relevant sæt elementer, som du kan prioritere til gennemsyn. Dette opnås ved at oprette og oplære dine egne forudsigende kodemodeller, der hjælper dig med at prioritere gennemgangen af de mest relevante elementer i et korrektursæt.
+Det forudsigende kodningsmodul i eDiscovery (Premium) bruger de intelligente funktioner til maskinel indlæring til at hjælpe dig med at reducere mængden af indhold, der skal gennemses. Forudsigende kodning hjælper dig med at reducere og reducere store mængder sagsindhold til et relevant sæt elementer, som du kan prioritere til gennemsyn. Dette opnås ved at oprette og oplære dine egne forudsigende kodemodeller, der hjælper dig med at prioritere gennemgangen af de mest relevante elementer i et korrektursæt.
 
-Det forudsigende kodningsmodul er designet til at strømline kompleksiteten ved at administrere en model i et korrektursæt og give en iterativ tilgang til oplæring af din model, så du kan komme hurtigere i gang med funktionerne til maskinel indlæring i eDiscovery (Premium). For at komme i gang kan du oprette en model med så få som 50 elementer som relevante eller ikke-relevante. Systemet bruger denne oplæring til at anvende forudsigelsesscores på hvert element i korrektursættet. Det giver dig mulighed for at filtrere elementer baseret på forudsigelsesscoren, hvilket giver dig mulighed for først at gennemse de mest relevante (eller ikke-relevante) elementer. Hvis du vil oplære modeller med højere tilgængeligheds- og genkaldelsesrater, kan du fortsætte med at mærke elementer i efterfølgende træningsrunder, indtil modellen stabiliseres.  
+Det forudsigende kodemodul er designet til at strømline kompleksiteten ved at administrere en model i et korrektursæt og give en iterativ tilgang til oplæring af din model, så du kan komme hurtigere i gang med funktionerne til maskinel indlæring i eDiscovery (Premium). For at komme i gang kan du oprette en model med så få som 50 elementer som relevante eller ikke-relevante. Systemet bruger denne oplæring til at anvende forudsigelsesscores på hvert element i korrektursættet. Det giver dig mulighed for at filtrere elementer baseret på forudsigelsesscoren, hvilket giver dig mulighed for først at gennemse de mest relevante (eller ikke-relevante) elementer. Hvis du vil oplære modeller med højere tilgængeligheds- og genkaldelsesrater, kan du fortsætte med at mærke elementer i efterfølgende træningsrunder, indtil modellen stabiliseres.  
 
 ## <a name="the-predictive-coding-workflow"></a>Arbejdsprocessen for forudsigende kodning
 

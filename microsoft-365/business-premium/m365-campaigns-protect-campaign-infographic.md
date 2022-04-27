@@ -1,14 +1,14 @@
 ---
-title: 'Infografik: Beskytte din kampagne'
+title: 'Infografik: Hjælp med at beskytte din kampagne'
 f1.keywords:
 - NOCSH
 ms.author: samanro
 author: samanro
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,18 +23,18 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Hvad du kan gøre for at beskytte din kampagne mod digitale angreb.
-ms.openlocfilehash: 531dd980054d407f10ab0bc8d8e24dc6a7fdd9f9
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Det kan du gøre for at beskytte din kampagne mod digitale angreb.
+ms.openlocfilehash: 508387313ebe0cb7255073f73d7b646f2fa12a2f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63601096"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099977"
 ---
-# <a name="infographic-help-protect-yourself-and-your-campaign-from-digital-threats"></a>Infografik: Beskyt dig selv og din kampagne mod digitale trusler
+# <a name="infographic-help-protect-yourself-and-your-campaign-from-digital-threats"></a>Infografik: Hjælp med at beskytte dig selv og din kampagne mod digitale trusler
 
-Følgende links til PowerPoint pdf-filer kan downloades og udskrives i tabloidformat (også kaldet ledger, 11 x 17 eller A3).
+Følgende links til PowerPoint og PDF kan downloades og udskrives i tabloidformat (også kendt som ledger, 11 x 17 eller A3).
 
-[![Billede af, hvordan du beskytter din grafik med kampagneoplysninger.](../media/M365-Campaigns-WhatCanUsersDoToSecure-358x201.png)](https://download.microsoft.com/download/f/c/5/fc58bc0c-773a-4ac8-a232-6f986f61ef58/M365CampaignsWhatCanUsersDoToSecure.pdf)
+[![Billede, der sikrer din hjælp til at beskytte din kampagnes infografik.](../media/M365-Campaigns-WhatCanUsersDoToSecure-358x201.png)](https://download.microsoft.com/download/f/c/5/fc58bc0c-773a-4ac8-a232-6f986f61ef58/M365CampaignsWhatCanUsersDoToSecure.pdf)
 
 [PDF](https://download.microsoft.com/download/f/c/5/fc58bc0c-773a-4ac8-a232-6f986f61ef58/M365CampaignsWhatCanUsersDoToSecure.pdf) |  [PowerPoint](https://download.microsoft.com/download/f/c/5/fc58bc0c-773a-4ac8-a232-6f986f61ef58/M365CampaignsWhatCanUsersDoToSecure.pptx)

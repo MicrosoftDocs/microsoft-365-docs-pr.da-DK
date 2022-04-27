@@ -2,8 +2,8 @@
 title: Spor relevansanalyse i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 titleSuffix: Office 365
 ms.date: ''
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: 3ab1e2c3-28cf-4bf5-b0a8-c0222f32bdf5
 ROBOTS: NOINDEX, NOFOLLOW
 description: Få mere at vide om, hvordan du får vist og fortolker status for relevanstræning og resultater for sagsproblemer i eDiscovery (Premium).
-ms.openlocfilehash: 72e12fe54b30c3d766f7a198e5e3417ff9d48a22
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: dd2eecbcd347125b1728851d873068b37f82aced
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000944"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093981"
 ---
 # <a name="track-relevance-analysis-in-ediscovery-premium"></a>Spor relevansanalyse i eDiscovery (Premium)
 
@@ -81,7 +81,7 @@ Hvis du vil importere nye filer efter batchberegningen, kan administratoren føj
   
 ### <a name="assessing-tagging-consistency"></a>Vurdering af konsistens ved mærkning
 
-Hvis der er uoverensstemmelser i filmarkering, kan det påvirke analysen. Processen til eDiscovery-mærkning (Premium) kan bruges, når resultaterne ikke er optimale, eller der er tvivl om konsistens. Der returneres en liste over mulige uoverensstemmende kodede filer, og de kan gennemses og mærkes igen efter behov.
+Hvis der er uoverensstemmelser i filmarkering, kan det påvirke analysen. Processen med eDiscovery-mærkning (Premium) kan bruges, når resultaterne ikke er optimale, eller der er tvivl om konsistensen. Der returneres en liste over mulige uoverensstemmende kodede filer, og de kan gennemses og mærkes igen efter behov.
   
 > [!NOTE]
 > Efter syv eller flere træningsrunder efter vurdering kan konsistensen ved mærkning ses i **Relevansspor** \>  \> **Problem** \> **Detaljerede resultater** \> **Oplæringsstatus**. Denne anmeldelse udføres for ét problem ad gangen.
@@ -114,7 +114,7 @@ Et nøgleord er en entydig streng, et ord, et udtryk eller en sekvens af ord i e
   
 eDiscovery (Premium) tildeler negative eller positive nøgleordsvægtværdier. Jo højere vægt, jo højere er sandsynligheden for, at en fil, hvor nøgleordet vises, tildeles en højere relevansscore under batchberegningen.
   
-EDiscovery-listen (Premium) over nøgleord kan bruges til at supplere en liste, der er oprettet af en ekspert, eller som en indirekte tilregnelighedskontrol på et hvilket som helst tidspunkt i filgennemsynsprocessen.
+EDiscovery-listen (Premium) med nøgleord kan bruges til at supplere en liste, der er oprettet af en ekspert, eller som en indirekte tilregnelighedskontrol på et hvilket som helst tidspunkt i filgennemsynsprocessen.
   
 ### <a name="training-progress"></a>Status for oplæring
 
@@ -130,7 +130,7 @@ Ruden **Oplæringsstatus** indeholder en visning af statusgrafen for oplæring o
 
 - **Advarsel**! Mange filer kan blive mærket uoverensstemmende. (Rødt lys vises)
 
-**Graf over oplæringsstatus**: Viser graden af stabilitet af relevanstræning efter mange cyklusser for relevanstræning sammenlignet med F-målingsværdien. Når vi flytter fra venstre mod højre på tværs af grafen, indsnævres konfidensintervallet, og det bruges sammen med F-målingen af eDiscovery (Premium) Relevans til at bestemme stabiliteten, når resultaterne af relevanstræning er optimeret.
+**Graf over oplæringsstatus**: Viser graden af stabilitet af relevanstræning efter mange cyklusser for relevanstræning sammenlignet med F-målingsværdien. Når vi flytter fra venstre mod højre på tværs af grafen, indsnævres konfidensintervallet, og det bruges sammen med F-målingen af eDiscovery (Premium) Relevans til at bestemme stabiliteten, når resultaterne af relevanstræningen optimeres.
   
 > [!NOTE]
 > Relevans bruger F2, som er en metrikværdi for F-måling, hvor Recall modtager dobbelt så meget vægt som Præcision. I tilfælde med høj rigdom (over 25 %), relevansen bruger F1 (1:1-forhold). F-målingsforholdet kan konfigureres i **Relevanskonfiguration** \> **Avancerede indstillinger**.

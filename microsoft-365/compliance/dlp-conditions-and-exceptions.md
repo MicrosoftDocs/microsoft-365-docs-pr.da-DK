@@ -15,14 +15,16 @@ search.appverid:
 - MET150
 recommendations: false
 description: få mere at vide om dlp-politikbetingelser og -undtagelser
-ms.openlocfilehash: f4a3521d0e5aab73cc16d97e0aea9c5830d9ddec
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cd252002f2fcef3e3935dd44b1333e801bcba46d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762051"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090445"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP-politikbetingelser, -undtagelser og -handlinger
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Betingelser og undtagelser i DLP-politikker identificerer følsomme elementer, som politikken anvendes på. Handlinger definerer, hvad der sker som følge af en undtagelsesbetingelse, der er opfyldt.
 
@@ -94,11 +96,12 @@ Hvis du vil konfigurere afsenderens adresseplacering på et DLP-regelniveau, er 
 
 |betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
-|Emne indeholder ord eller udtryk|betingelse: *SubjectContainsWords* <br/><br/> undtagelse: *ExceptIf SubjectContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet.|
-|Emne matcher mønstre|condition: *SubjectMatchesPatterns* <br/><br/> undtagelse: *ExceptIf SubjectMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
-|Indholdet indeholder|betingelse: *ContentContainsSensitiveInformation* <br/><br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Meddelelser eller dokumenter, der indeholder følsomme oplysninger, som defineret af DLP-politikker (forebyggelse af datatab).|
-|Mønster for match af emne eller brødtekst|condition: *SubjectOrBodyMatchesPatterns* <br/><br/> undtagelse: *ExceptIfSubjectOrBodyMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet eller meddelelsesteksten indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
-|Emne eller brødtekst indeholder ord|betingelse: *SubjectOrBodyContainsWords* <br/><br/> undtagelse: *ExceptIfSubjectOrBodyContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet eller meddelelsesteksten|
+|Emne indeholder ord eller udtryk|betingelse: *SubjectContainsWords* <br/> undtagelse: *ExceptIf SubjectContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet.|
+|Emne matcher mønstre|condition: *SubjectMatchesPatterns* <br/> undtagelse: *ExceptIf SubjectMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
+|Indholdet indeholder|betingelse: *ContentContainsSensitiveInformation* <br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Meddelelser eller dokumenter, der indeholder følsomme oplysninger, som defineret af politikker til forebyggelse af datatab i Microsoft Purview (DLP).|
+|Mønster for match af emne eller brødtekst|condition: *SubjectOrBodyMatchesPatterns* <br/> undtagelse: *ExceptIfSubjectOrBodyMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet eller meddelelsesteksten indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
+|Emne eller brødtekst indeholder ord|betingelse: *SubjectOrBodyContainsWords* <br/> undtagelse: *ExceptIfSubjectOrBodyContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet eller meddelelsesteksten|
+|
 
 ### <a name="attachments"></a>Vedhæftede filer
 
@@ -147,7 +150,6 @@ I denne tabel beskrives de handlinger, der er tilgængelige i DLP.
 |Tilføj afsenderens chef som modtager|Tilføj modtagere|Første egenskab: *AddedManagerAction*<br/><br/>Anden egenskab: *Field*|Føjer afsenderens chef til meddelelsen som den angivne modtagertype (Til, Cc, Bcc) eller omdirigerer meddelelsen til afsenderens leder uden at give afsenderen eller modtageren besked. Denne handling fungerer kun, hvis afsenderens lederattribut er defineret i Active Directory. Denne parameter bruger syntaksen: @{AddManagerAsRecipientType = "\<To \| Cc \| Bcc\>"}|
 Forudindstillet emne|PrependSubject|String|Tilføjer den angivne tekst i starten af emnefeltet i meddelelsen. Overvej at bruge et mellemrum eller et kolon (:) som det sidste tegn i den angivne tekst for at adskille den fra den oprindelige emnetekst.<br/><br/>Hvis du vil forhindre, at den samme streng føjes til meddelelser, der allerede indeholder teksten i emnet (f.eks. svar), skal du føje undtagelsen "Emnet indeholder ord" (ExceptIfSubjectContainsWords) til reglen.|
 |Anvend HTML-ansvarsfraskrivelse|AnvendHtmlDisclaimer|Første egenskab: *Tekst*<br/><br/>Anden egenskab: *Placering*<br/><br/>Tredje egenskab: *Fallback-handling*|Anvender den angivne HTML-ansvarsfraskrivelse på den påkrævede placering af meddelelsen.<br/><br/>Denne parameter bruger syntaksen: @{ Text = " " ; Placering = \<Append \| Prepend\>; FallbackAction = \<Wrap \| Ignore \| Reject\> }|
-|Fjern Office 365 meddelelsekryptering og rettighedsbeskyttelse|RemoveRMSTemplate|Nielsen|Fjerner Office 365 kryptering, der er anvendt på en mail|
+|Fjern meddelelseskryptering og rettighedsbeskyttelse|RemoveRMSTemplate|Nielsen|Fjerner kryptering af meddelelser, der er anvendt på en mail|
 |Levér meddelelsen til den hostede karantæne |*Karantæne*|Nielsen| Denne handling er i øjeblikket en **offentlig prøveversion**. I denne fase viser mails, der er sat i karantæne af DLP-politikker, politiktypen som ExchangeTransportRule.<br/><br/> Leverer meddelelsen til karantænen i EOP. Du kan få flere oplysninger under [Karantænelagrede mails i EOP](/microsoft-365/security/office-365-security/quarantine-email-messages).|
-
-<!--|Modify Subject|ModifySubject|PswsHashTable | Remove text from the subject line that matches a specific pattern and replace it with different text. See the example below. You can: <br/><br/>- **Replace** all matches in the subject with the replacement text <br/><br/>- **Append** to remove all matches in the subject and inserts the replacement text at the end of the subject. <br/><br/>- **Prepend** to remove all matches and inserts the replacement text at the beginning of the subject. See ModifySubject parameter in, /powershell/module/exchange/new-dlpcompliancerule|-->
+|Rediger emne|Redigeremne|PswsHashTable | Fjern tekst fra emnelinjen, der svarer til et bestemt mønster, og erstat den med anden tekst. Se eksemplet nedenfor. Du kan: <br/><br/>- **Erstat** alle forekomster i emnet med erstatningsteksten <br/><br/>- **Tilføj** for at fjerne alle forekomster i emnet og indsætter erstatningsteksten i slutningen af emnet. <br/><br/>- **Forudindstillet** til at fjerne alle forekomster og indsætter erstatningsteksten i begyndelsen af emnet. Se Parameteren ModifySubject i, /powershell/module/exchange/new-dlpcompliancerule|

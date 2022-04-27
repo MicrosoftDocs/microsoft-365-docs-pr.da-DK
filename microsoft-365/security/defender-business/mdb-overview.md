@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
+ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 93db141d60353c5e3581298a67383718bdf4fe54
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 8e382e8cf1c4863ffa67bc7687f549d6ae0a4f81
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862560"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101463"
 ---
 # <a name="overview-of-microsoft-defender-for-business"></a>Oversigt over Microsoft Defender til virksomheder
 
@@ -78,5 +78,5 @@ Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Mer informasjon om den forenklede konfigurationsproces i Microsoft Defender til virksomheder](mdb-simplified-configuration.md)
+- [Få mere at vide om den forenklede konfigurationsproces i Microsoft Defender til virksomheder](mdb-simplified-configuration.md)
 - [Få mere at vide om, hvordan du får Microsoft Defender til virksomheder](get-defender-business.md)

@@ -15,18 +15,20 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: cc2032c547cbd9c75a73da2f47f7baed21e7438e
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 6822f736cae73d7d4654f8b4310e0e397cffa677
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835925"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077481"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
+
+> [!IMPORTANT]
+> Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering. Se [Månedlige platform- og programversioner](#monthly-platform-and-engine-versions) (i denne artikel).
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint plan 1 og 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -37,15 +39,15 @@ ms.locfileid: "64835925"
 
 Det er vigtigt at holde Microsoft Defender Antivirus opdateret for at sikre, at dine enheder har den nyeste teknologi og de funktioner, der er nødvendige for at beskytte mod ny malware og angrebsteknikker. Sørg for at opdatere antivirusbeskyttelsen, selvom Microsoft Defender Antivirus kører i [passiv tilstand](microsoft-defender-antivirus-compatibility.md). Der er to typer opdateringer, der er relateret til at holde Microsoft Defender Antivirus opdateret:
 
-- Opdateringer til sikkerhedsintelligens
-- Produktopdateringer
+- [Opdateringer til sikkerhedsintelligens](#security-intelligence-updates)
+- [Produktopdateringer](#product-updates)
 
 > [!TIP]
 > Hvis du vil se den mest aktuelle program-, platform- og signaturdato, skal du gå [til Sikkerhedsintelligensopdateringer til Microsoft Defender Antivirus og andre Microsoft-antimalwareprogrammer](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
 ## <a name="security-intelligence-updates"></a>Opdateringer til sikkerhedsintelligens
 
-Microsoft Defender Antivirus bruger [skybaseret beskyttelse](cloud-protection-microsoft-defender-antivirus.md) (også kaldet Microsoft Advanced Protection Service eller MAPS) og downloader jævnligt dynamiske opdateringer til sikkerhedsintelligens for at yde yderligere beskyttelse. Disse dynamiske opdateringer træder ikke i stedet for regelmæssige opdateringer til sikkerhedsintelligens via KB2267602.
+Microsoft Defender Antivirus bruger [skybaseret beskyttelse](cloud-protection-microsoft-defender-antivirus.md) (også kaldet Microsoft Advanced Protection Service eller MAPS) og downloader jævnligt dynamiske opdateringer til sikkerhedsintelligens for at yde yderligere beskyttelse. Disse dynamiske opdateringer træder ikke i stedet for regelmæssige opdateringer af sikkerhedsintelligens via KB2267602.
 
 > [!NOTE]
 > Opdateringer udgives under følgende KB:
@@ -88,6 +90,29 @@ Alle vores opdateringer indeholder
 - Forbedringer af integration (Cloud, [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender))
 <br/><br/>
 <details>
+<summary>Marts-2022-OPDATERING (platform: 4.18.2203.5 | Motor: 1.1.19200.5)</summary>
+
+*Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering.*
+
+&ensp;Version af sikkerhedsintelligensopdatering: **1.363.817.0**<br/>
+&ensp;Udgivet: **22. april 2022**<br/>
+&ensp;Platform: **4.18.2203.5**<br/>
+&ensp;Motor: **1.1.19200.5**<br/>
+&ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
+
+Programversion: 1.1.19200.5 <br/>
+Version af sikkerhedsintelligensopdatering: 1.363.817.0<br/>
+
+### <a name="whats-new"></a>Nyheder
+
+- Løser problemer med høj ressourceudnyttelse (CPU og/eller hukommelse), der er relateret til opdateringen af Microsoft Defender-programmet fra marts 2022 (1.1.19100.5)
+
+### <a name="known-issues"></a>Kendte problemer
+
+Ingen kendte problemer
+
+<br/><br/>
+</details><details>
 <summary>Marts-2022 (platform: 4.18.2203.5 | Motor: 1.1.19100.5)</summary>
 
 &ensp;Version af sikkerhedsintelligensopdatering: **1.361.1449.0**<br/>
@@ -661,7 +686,7 @@ Når denne opdatering er installeret, skal enheden bruge jumppakken 4.18.2001.10
 
 Platform- og programopdateringer leveres på en månedlig kadence. Hvis du vil have fuld support, skal du holde dig opdateret med de nyeste platformopdateringer. Vores supportstruktur er dynamisk og udvikler sig til to faser afhængigt af tilgængeligheden af den nyeste platformversion:
 
-- **Servicefase for vigtige opdateringer og sikkerhedsopdateringer** – Når du kører den nyeste platformversion, vil du være berettiget til at modtage både sikkerhedsopdateringer og vigtige opdateringer til platformen til antimalware.
+- **Servicefase for vigtige opdateringer og sikkerhedsopdateringer** – Når du kører den nyeste platformversion, er du berettiget til at modtage både sikkerhedsopdateringer og vigtige opdateringer til platformen til antimalware.
 
 - **Fasen Teknisk support (kun)** – Når en ny platformversion udgives, reduceres understøttelsen af ældre versioner (N-2) til kun teknisk support. Platformversioner, der er ældre end N-2, understøttes ikke længere.*
 
@@ -992,10 +1017,10 @@ Du kan få flere oplysninger under [Microsoft Defender-opdatering til Windows af
 | [Microsoft Defender for Endpoint opdatering til Slutpunktsregistrering og -svar sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | Du kan opdatere den Slutpunktsregistrering og -svar sensor (MsSense.exe), der er inkluderet i den nye Microsoft Defender for Endpoint samlede løsningspakke, der blev udgivet i 2021.   |
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

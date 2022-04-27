@@ -14,12 +14,12 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 14bfa8711d5cff46b8cce02950c087844384b9f9
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 6ae0fdf9cc49faaaff84eb3f96e076d1efba8a4c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953776"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077431"
 ---
 # <a name="manage-your-resource-with-sdk--apis"></a>Administrer din ressource med API'er til SDK-&
 
@@ -108,7 +108,7 @@ Se nedenfor links for at få flere oplysninger om API'en til SDK &.
 
 - [Dokumentation til Test Base Python SDK](/python/api/overview/azure/mgmt-testbase-readme)
 - [Test grundlæggende Python SDK-eksempel](https://aka.ms/testbase-sample-py)
-- [Azure General Usage Pattern of Python SDK](/azure/developer/python/azure-sdk-overview#provision-and-manage-azure-resources-with-management-libraries)
+- [Azure General Usage Pattern of Python SDK](/azure/developer/python/sdk/azure-sdk-library-usage-patterns)
 
 **REST API**:
 

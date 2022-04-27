@@ -1,5 +1,5 @@
 ---
-title: Upload din pakke
+title: Upload pakken
 description: Sådan uploader du dit program, dine binære filer og dine afhængigheder til testbasen
 search.appverid: MET150
 author: mansipatel-usl
@@ -14,12 +14,12 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: cd0d463e234c439d8b57576375fd6a91e512f753
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 23c21eae9ad149aea5442c0c8a00f716f3d22506
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995262"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099471"
 ---
 # <a name="upload-your-test-base-package-zip"></a>Upload din Test Base-pakke (Zip) 
 
@@ -58,7 +58,7 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
     En **OOB-test (Out-of-Box)** udfører en *installation*, *start*, *lukning* og *fjernelse* af pakken. Efter installationen gentages startlukningsrutinen 30 gange, før der køres en enkelt fjernelse.
 
-    Denne OOB-test giver dig standardiseret telemetri på din pakke, så du kan sammenligne på tværs af Windows-builds.
+    Denne OOB-test giver dig standardiseret telemetri på din pakke, så du kan sammenligne på tværs af Windows builds.
 
     En **funktionel test** udfører dine uploadede testscript(r) på pakken. Scriptene køres i overførselssekvensen, og en fejl i et bestemt script forhindrer efterfølgende scripts i at blive udført.
 
@@ -67,8 +67,8 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
 4. Vælg opdateringstypen for operativsystemet.
 
-    - 'Sikkerhedsopdateringer' gør det muligt for din pakke at blive testet i forhold til trinvise fald i månedlige sikkerhedsopdateringer, der udgives før udgivelsen af Windows.
-    - 'Funktionsopdateringer' gør det muligt for din pakke at blive testet i forhold til de foreløbige Windows-foreløbige funktionsopdateringer fra Windows Insider Program.
+    - 'Sikkerhedsopdateringer' gør det muligt for din pakke at blive testet i forhold til trinvise fald i Windows foreløbige månedlige sikkerhedsopdateringer.
+    - 'Funktionsopdateringer' gør det muligt for din pakke at blive testet i forhold til Windows foreløbige toårige funktionsopdateringer builds fra Windows Insider Program.
     <!---
     Change to the correct picture
     -->
@@ -76,11 +76,11 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
 5. Vælg operativsystemversionerne til test af sikkerhedsopdatering.
 
-    Vælg operativsystemversionerne af Windows, som pakken skal installeres på, på rullelisten med flere valg.
+    På rullelisten med flere valg skal du vælge operativsystemversionerne af Windows pakken installeres på.
 
-    - Hvis du kun vil teste pakken i forhold til Windows-klientoperativsystemer, skal du vælge de relevante versioner af Windows-klientoperativsystemet på menulisten.
+    - Hvis du kun vil teste pakken i forhold til Windows klientoperativsystemer, skal du vælge de relevante Windows klientoperativsystemer på menulisten.
     - Hvis du kun vil teste pakken i forhold til Windows Server-operativsystemer, skal du vælge de relevante Windows Server OS-versioner på menulisten.
-    - Hvis du vil teste pakken i forhold til Windows-klient- og Windows Server-operativsystemer, skal du vælge alle relevante operativsystemer på menulisten.
+    - Hvis du vil teste pakken i forhold til Windows klient- og Windows serveroperativsystemer, skal du vælge alle relevante operativsystemer på menulisten.
 
     > [!NOTE]
     > Hvis du vælger at teste pakken mod både server- og klient-OSes, skal du sørge for, at pakken er kompatibel og kan køre på begge OSes
@@ -96,7 +96,7 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
       Vi bruger i øjeblikket builds, der flightes i Insider Beta Channel.
 
-    - I indstillingen "Vælg OS baseline for Insight" skal du vælge den Windows OS-version, der skal bruges som baseline, når du sammenligner dine testresultater.
+    - Vælg den Windows os-version, der skal bruges som baseline, når du sammenligner dine testresultater, i indstillingen "Vælg os-baseline for Insight".
 
     > [!NOTE]
     > Vi understøtter ikke funktionsopdateringstest for server-OSes på nuværende tidspunkt
@@ -112,13 +112,107 @@ Nedenstående trin indeholder en vejledning i, hvordan du udfylder dine pakkeopl
 
     :::image type="content" alt-text="Visning af testoplysninger." source="Media/TestDetails.png":::
 
+
+
+## <a name="upload-your-binaries-dependencies-and-scripts"></a>Upload dine binære filer, afhængigheder og scripts
+
+Under denne fane skal du uploade en enkelt zip-pakke, der indeholder dine binære filer, afhængigheder og scripts, der bruges til at køre din testpakke.
+
+> [!NOTE]
+> Zip-pakkens størrelse skal være mellem mindst 10 MB og højst 2 GB.
+
+**zip-fil til Upload pakke**
+
+:::image type="content" alt-text="Upload dine binære filer." source="Media/AddBinaries.png":::
+
+  - Uploadede afhængigheder kan omfatte testrammer, scriptingprogrammer eller data, der skal tilgås for at køre dit program eller dine testcases. Du kan f.eks. uploade Selenium og et installationsprogram til webdriver for at hjælpe med at køre browserbaserede test.
+  - Det er bedste praksis at sikre, at dine scriptaktiviteter holdes modulopbyggede, dvs. 
+    - Scriptet `Install` udfører kun installationshandlinger.
+    - Scriptet `Launch` starter kun programmet.
+    - Scriptet `Close` lukker kun programmet.
+    - Det valgfrie `Uninstall` script fjerner kun programmet.
+
+**I øjeblikket understøtter portalen kun PowerShell-scripts.**
+
+
+
+## <a name="the-tasks-tab"></a>Fanen Opgaver
+
+Under fanen Opgaver forventes du at angive stierne til dine testscripts, som findes i den zip-mappe, du overførte under fanen Binære filer.
+
+  - **Testscripts, der ikke er i brug:** Skriv de relative stier til installationen, start, luk og fjern scripts. Du har også mulighed for at vælge yderligere indstillinger for installationsscriptet.
+  - **Funktionelle testscripts:** Skriv den relative sti til hvert funktionelt testscript, der uploades. Der kan tilføjes yderligere funktionelle testscripts ved hjælp af knappen ```Add Script``` . Du skal bruge mindst ét (1) script og kan tilføje op til otte (8) funktionelle testscripts. 
+  
+    Scriptene kører i den rækkefølge, de er angivet i. En fejl i et bestemt script forhindrer efterfølgende scripts i at blive udført.
+    Du har også mulighed for at vælge yderligere indstillinger for hvert script, der er angivet.
+
+**Angiv scriptsti**
+
+:::image type="content" alt-text="Billede af testopgave." source="Media/testtask.png":::
+
+Nedenfor kan du se et eksempel på, hvordan du angiver den relative sti i en mappestruktur:
+
+_**Zip_file_uploaded**_
+~~~
+├── file1.exe
+
+├── ScriptX.ps1
+
+├── folder1
+
+│   ├── file3.exe
+
+│   ├── script.ps1
+~~~
+  - **ScriptX.ps1** ville have gjort det. _ScriptX.ps1_ som den relative sti.
+  - **Script.ps1** vil have _folder1/script.ps1_ som den relative sti.
+
+
+
+## <a name="choose-your-test-options"></a>Vælg dine testindstillinger. 
+
+Fanen ```Test Options``` er beregnet til brugere, der ønsker at udføre funktionelle test, for at angive, hvornår Windows Update programrettelse skal anvendes i sekvensen af udførelsen af deres funktionelle testscripts.
+
+:::image type="content" alt-text="Billede af testindstillinger. Enten køreklare eller funktionelle test." source="Media/testoptions.png":::
+
+Vælg _**Gennemse**_ for at navigere til næste fane og gennemse dine valgte testindstillinger.
+
+
+
+## <a name="review-your-selections-to-create-your-package"></a>Gennemse dine valg for at oprette pakken.
+
+1. Under denne fane viser tjenesten dine testoplysninger og kører en hurtig fuldstændighedskontrol.
+
+    Du kan se, om du kan fortsætte til næste trin eller ej, ved at få vist en meddelelse om, at valideringen **er bestået** eller **valideringen mislykkedes** .
+
+2. Gennemse dine testoplysninger, og klik på knappen **Opret** , hvis de er opfyldt.
+
+    :::image type="content" alt-text="Vis validering." source="Media/validation.png" lightbox="Media/validation.png":::
+
+3. Dette føjer din pakke til Test Base-miljøet. Hvis pakken oprettes, udløses en automatiseret test, der kontrollerer, om pakken kan udføres korrekt på Azure.
+
+    :::image type="content" alt-text="Vellykket resultat." source="Media/successful.png":::
+
+    > [!NOTE]
+    > Du får en meddelelse fra Azure Portal om, at pakkebekræftelsen lykkedes eller mislykkedes.
+    >
+    > Bemærk, at processen kan tage op til 24 timer, så det er sandsynligt, at din webside får timeout, hvis du ikke er aktiv på den, og derfor informerer meddelelsen dig ikke om fuldførelsen af denne on-demand-kørsel.
+
+    - Peradventure dette sker, kan du få vist status for din pakke på fanen **Administrer pakker** .
+
+      :::image type="content" alt-text="Billede til administration af pakker." source="Media/managepackages.png" lightbox="Media/managepackages.png":::
+
+    - I forbindelse med vellykkede test kan resultaterne ses via siderne **Testoversigt**, **Resultater af sikkerhedsopdateringer** og **Resultat af funktionsopdateringer** med planlagte intervaller, der ofte starter et par dage efter upload.
+  
+    - Mens der opstod fejl i testene, skal du overføre en ny pakke. 
+
+      Du kan downloade **testlogfilerne** for yderligere analyse fra siderne **med resultater af sikkerhedsopdateringer** og **funktionsopdateringer** .
+
+    - Hvis du oplever gentagne testfejl, skal du kontakte testbasepreview@microsoft.com med oplysninger om fejlen.
+
 ## <a name="next-steps"></a>Næste trin
 
-Vores næste artikel dækker Upload af dine binære filer til vores tjeneste.
+Se vores retningslinjer for indhold via linket nedenfor.
 
 > [!div class="nextstepaction"]
-> [Næste trin](binaries.md)
-
-<!---
-Add button for next page
--->
+> [Næste trin](contentguideline.md)

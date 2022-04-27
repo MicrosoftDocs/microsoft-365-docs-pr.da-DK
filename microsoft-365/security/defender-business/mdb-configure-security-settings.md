@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 22c2de998f4d4cfadb0262ccedf04decc01ce226
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 8ff1e381631d3ba85f41da2bb82b1a47ddf1612f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916287"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097310"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>Få vist og rediger dine sikkerhedspolitikker og -indstillinger i Microsoft Defender til virksomheder
 
@@ -196,4 +196,6 @@ Fortsæt til en eller flere af følgende opgaver:
 - [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md)
 - [Administrer enheder i Microsoft Defender til virksomheder](mdb-manage-devices.md)
 - [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
+- [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md)
+
 - [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md)

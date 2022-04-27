@@ -1,9 +1,9 @@
 ---
-title: Mærkning og relevanstræning i eDiscovery (Premium)
+title: Mærknings- og relevanstræning i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 titleSuffix: Office 365
 ms.date: ''
@@ -17,14 +17,14 @@ search.appverid:
 ms.assetid: 8576cc86-d51b-4285-b54b-67184714cc62
 ROBOTS: NOINDEX, NOFOLLOW
 description: Få mere at vide om, hvordan du tagger og derefter arbejder med et træningseksempel på 40 filer i fasen Relevanstræning i eDiscovery (Premium).
-ms.openlocfilehash: 9078bf36e1434cad0362c4584b5c61fd49e86c14
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 3e2deb66658aacc8fdd50f2dea5ba082afb8a5e6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996674"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090379"
 ---
-# <a name="tagging-and-relevance-training-in-ediscovery-premium"></a>Mærkning og relevanstræning i eDiscovery (Premium)
+# <a name="tagging-and-relevance-training-in-ediscovery-premium"></a>Mærknings- og relevanstræning i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
   

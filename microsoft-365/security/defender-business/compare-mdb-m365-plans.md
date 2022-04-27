@@ -17,14 +17,14 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: e32018f52f3a45624fcf07ae03e44c662a594297
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: d14215c7c648bafd4d21f765848f20a391a13a2f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916309"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100231"
 ---
-# <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium
+# <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder
 
 > [!IMPORTANT]
 > Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.

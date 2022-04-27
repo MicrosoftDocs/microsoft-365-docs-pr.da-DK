@@ -18,16 +18,16 @@ search.appverid:
 - MOE150
 - GEA150
 description: Få mere at vide om, hvordan du får en brugsrapport for Microsoft-browseren ved hjælp af dashboardet Microsoft 365 Rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: 29b4161b9bb6cbc509d6541e13fa9222628534b4
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 5515c00b5c7fc64a6f0295bdce724e5b798fb018
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782011"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078316"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-browser-usage"></a>Microsoft 365 rapporter i Administration – Brug af Microsoft-browser
 
-Dashboardet Microsoft 365 rapporter viser dig en aktivitetsoversigt på tværs af produkterne i din organisation. Det giver dig mulighed for at analysere individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert enkelt produkt. Se [emnet Oversigt over rapporter](activity-reports.md). I brugsrapporten for Microsoft-browseren kan du få indsigt i Internet Explorer, Den ældre version af Microsoft Edge og nye Microsoft Edge brug. Anvendelsesrapportering er baseret på Microsoft 365 onlinetjenester adgang til ved hjælp af en Microsoft-browser.
+Dashboardet Microsoft 365 rapporter viser dig en aktivitetsoversigt på tværs af produkterne i din organisation. Det giver dig mulighed for at analysere individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert enkelt produkt. Se [emnet Oversigt over rapporter](activity-reports.md). I brugsrapporten for Microsoft-browseren kan du få indsigt i Internet Explorer, Den ældre version af Microsoft Edge og nye Microsoft Edge brug. Anvendelsesrapportering er baseret på Microsoft 365 onlinetjenester tilgås ved hjælp af en Microsoft-browser på alle enheder, der bruger en Microsoft 365 konto.
 
 ## <a name="how-to-get-to-the-microsoft-browser-usage-report"></a>Sådan kommer du til Brugsrapport for Microsoft-browseren
 

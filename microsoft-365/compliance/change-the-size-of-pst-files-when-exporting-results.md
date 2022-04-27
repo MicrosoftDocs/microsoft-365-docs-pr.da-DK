@@ -2,8 +2,8 @@
 title: Skift størrelsen på PST-filer, når du eksporterer eDiscovery-søgeresultater
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 10/12/2018
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 ms.assetid: 04e9de2d-765b-457b-a98a-d0f60bfb13f2
 description: Du kan ændre standardstørrelsen for PST-filer, der downloades til din computer, når du eksporterer eDiscovery-søgeresultater.
-ms.openlocfilehash: c7c78bc23599f55529898b4677d7833d567741f5
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 135c83f734e0687c8d477ab434d0aa539224f39a
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000152"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100825"
 ---
 # <a name="change-the-size-of-pst-files-when-exporting-ediscovery-search-results"></a>Skift størrelsen på PST-filer, når du eksporterer eDiscovery-søgeresultater
 
@@ -56,7 +56,7 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
    
 3. Ret værdien `PstSizeLimitInBytes` til den ønskede maksimumstørrelse for en PST-fil, når du eksporterer søgeresultater, og gem derefter filen. 
     
-4. I Windows Stifinder skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
+4. I Windows Explorer skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
     
 5. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     

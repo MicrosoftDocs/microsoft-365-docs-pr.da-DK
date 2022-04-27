@@ -2,8 +2,8 @@
 title: Arkivér data fra CellTrust SL2-platformen for at Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en CellTrust SL2-dataconnector til at importere og arkivere mobilkommunikationsdata.
-ms.openlocfilehash: a4cbfc9dccd2541de0a9dca1a3791d5f213aa73d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 0ac1137c8b6ee2d2267421c80adbbf65eaf9e5b7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996388"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100891"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>Arkivér data fra CellTrust SL2 til Microsoft 365
 
@@ -35,7 +35,7 @@ CellTrusts SL2-platform henter kommunikationsdata fra flere kilder. SL2-datakild
 
 1. SL2-brugere sender og modtager data til og fra SL2-tjenester i Microsoft Azure.
 
-2. Din organisation har et SL2-domæne i CellTrust's SL2 Cloud Service-miljø. Dit domæne kan have en eller flere organisationsenheder . SL2 Cloud Service overfører dine data til et yderst sikkert område på Microsoft Azure-platformen, så dine data aldrig forlader Microsoft Azure-miljøet. Afhængigt af din SL2-plan (Enterprise, SMB eller Government) hostes dit domæne enten på Microsoft Azure Global eller Microsoft Azure Government.
+2. Din organisation har et SL2-domæne i CellTrust's SL2 Cloud Service-miljø. Dit domæne kan have en eller flere organisationsenheder . SL2 Cloud Service overfører dine data til et meget sikkert område på den Microsoft Azure platform, så dine data aldrig forlader Microsoft Azure miljø. Afhængigt af din SL2-plan (Enterprise, SMB eller Government) hostes dit domæne enten på Microsoft Azure Global eller Microsoft Azure Government.
 
 3. Når du har oprettet CellTrust SL2-dataconnectoren, begynder dit domæne og dine eksterne enheder (uanset din SL2-plan) at sende data til Microsoft 365. Datafeedet er struktureret til at understøtte rapportering baseret på datakilder, AFHÆNGIGE'er eller domænet i sig selv. Derfor har din organisation kun brug for én connector til at sende alle dine datakilder til Microsoft 365.
 
@@ -49,7 +49,7 @@ CellTrusts SL2-platform henter kommunikationsdata fra flere kilder. SL2-datakild
 
 - Den bruger, der opretter CellTrust SL2-dataconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** på Microsoft Purview-overholdelsesportalen. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne CellTrust-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne CellTrust-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-create-a-celltrust-sl2-connector"></a>Trin 1: Opret en CellTrust SL2-connector
 

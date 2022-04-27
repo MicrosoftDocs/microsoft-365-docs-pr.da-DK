@@ -2,8 +2,8 @@
 title: Indsaml vedhæftede filer i skyen i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: nickrob
 manager: laurawi
 ms.date: 04/05/2022
@@ -16,12 +16,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug samlinger i Microsoft Purview eDiscovery (Premium) til at indsamle vedhæftede filer i skyen til gennemsyn i en undersøgelse eller sag.
-ms.openlocfilehash: 1dd48f343f9df43edf8553e73395d756eb6713a4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 4a9db59f8e8b997cdd04934c9dac161369964229
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000702"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094113"
 ---
 # <a name="collect-cloud-attachments-in-microsoft-purview-ediscovery-premium-preview"></a>Indsaml vedhæftede filer i skyen i Microsoft Purview eDiscovery (Premium) (prøveversion)
 
@@ -35,7 +35,7 @@ Vedhæftede filer i skyen er links til dokumenter, der typisk gemmes på SharePo
 
 ## <a name="collecting-cloud-attachments"></a>Indsamling af vedhæftede filer i skyen
 
-Når du opretter en kladdesamling, og søgeresultaterne indeholder elementer, der indeholder vedhæftede filer i skyen, skal du have mulighed for at indsamle målet for den vedhæftede fil i skyen, når du overfører kladdesamlingen til et korrektursæt. Når du vælger denne indstilling, føjer eDiscovery (Premium) de dokumenter, der er sammenkædet med i den vedhæftede sky, til korrektursættet. Dette giver dig mulighed for at gennemse destinationsdokumenterne og afgøre, om dokumentet er relevant for din sag eller undersøgelse.
+Når du opretter en kladdesamling, og søgeresultaterne indeholder elementer, der indeholder vedhæftede filer i skyen, skal du have mulighed for at indsamle målet for den vedhæftede fil i skyen, når du overfører kladdesamlingen til et korrektursæt. Når du vælger denne indstilling, føjer eDiscovery (Premium) de dokumenter, der er sammenkædet med i den vedhæftede fil i skyen, til korrektursættet. Dette giver dig mulighed for at gennemse destinationsdokumenterne og afgøre, om dokumentet er relevant for din sag eller undersøgelse.
 
 På følgende skærmbillede kan du se muligheden for at inkludere mål for vedhæftede filer i skyen, når du sender en samling til et korrektursæt.
 
@@ -48,7 +48,7 @@ Hvis du vil have en vejledning i, hvordan du sender en samling til et korrekturs
 
 ## <a name="collecting-the-version-shared-in-a-cloud-attachment"></a>Indsamling af den version, der deles i en vedhæftet fil i skyen
 
-Arbejdsprocessen for eDiscovery (Premium) til indsamling af vedhæftede filer i skyen omfatter kun tilføjelse af den nyeste version af en vedhæftet fil i skyen til et korrektursæt. Det betyder, at den version, der indsamles og føjes til et korrektursæt, kan være anderledes end den version, der oprindeligt blev delt i den vedhæftede fil i cloudmiljøet. Det er derfor muligt, at indhold, der var til stede i den vedhæftede fil i skyen på det tidspunkt, den blev delt, er fjernet og ikke findes i den aktuelle version, der er føjet til korrektursættet.
+EDiscovery-arbejdsprocessen (Premium) til indsamling af vedhæftede filer i skyen omfatter kun tilføjelse af den nyeste version af en vedhæftet fil i skyen i et korrektursæt. Det betyder, at den version, der indsamles og føjes til et korrektursæt, kan være anderledes end den version, der oprindeligt blev delt i den vedhæftede fil i cloudmiljøet. Det er derfor muligt, at indhold, der var til stede i den vedhæftede fil i skyen på det tidspunkt, den blev delt, er fjernet og ikke findes i den aktuelle version, der er føjet til korrektursættet.
 
 Organisationer har nu mulighed for at bruge Microsoft 365 opbevaringsmærkater til at bevare versionen af et dokument på det tidspunkt, hvor det blev delt som en vedhæftet fil i skyen. For at gøre dette kan din organisation oprette en opbevaringsmærkat, vælge indstillingen Anvend mærkaten på vedhæftede filer i skyen og derefter automatisk anvende mærkaten på dokumenter, der er gemt i SharePoint og OneDrive. Når du har konfigureret denne konfiguration, oprettes der en kopi af et dokument på det tidspunkt, hvor filen deles. Hvis dokumentet ændres og deles igen som en vedhæftet fil i skyen, bevares den ændrede version også. Hvis filen ændres og deles igen, bevares en ny kopi af filen som en ny version.
 

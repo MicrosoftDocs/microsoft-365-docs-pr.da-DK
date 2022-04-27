@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Windows 365 (cloud-pc'er) for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 843e241c796d626ecca2180b0bce1372059701a2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 325fe39c144227052c966b81a8a2109a07fb0cf2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022883"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100275"
 ---
 # <a name="overview-of-the-windows-365-cloud-pcs-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse  
   
@@ -57,22 +57,25 @@ Under fanen Alle cloud-pc'er viser den farvede linje med antal anmærkninger det
 Du kan få vist alle cloud-pc'er og deres klargøringsstatus på listen under anmærkningslinjen. Følgende oplysninger er angivet:
 
 - **Navn på cloud-pc:** Navn, der er tildelt cloud-pc'en.
-- **Lejer:** Kundelejer, hvor en Cloud-pc blev klargjort.
-- **Enhedsnavn:** Intune enhedsnavn – et entydigt id for en Cloud-pc.
-- **Pc-type:** Typen af cloud-pc i henhold til standard-SKU'er.
-- **Status:** Klargøringsstatus for cloud-pc'en.
 - **Bruger:** Bruger, for hvem en Cloud-pc er blevet klargjort eller forsøgt klargjort.
+- **Enhedsnavn:** Intune enhedsnavn – et entydigt id for en Cloud-pc.
+- **Lejer:** Kundelejer, hvor en Cloud-pc blev klargjort.
+- **Status:** Klargøringsstatus for cloud-pc'en.
+- **Licenstype:** Enterprise eller Business.
+- **Specifikationer:** Cloud-pc-hardwarekonfiguration.
 
 Hvis du vil se, hvilke lejere der har cloud-pc'er med en bestemt klargøringsstatus, skal du vælge den pågældende status på linjen med antal anmærkninger for at filtrere listen. Hvis du vil se klargøringsstatusser for cloud-pc'er for en eller flere specifikke kundelejere, skal du bruge rullemenuen **Lejere** til at filtrere listen.
 
-Vælg en cloud-pc på listen for at få vist flere oplysninger. Hvis du har brug for at udføre handlinger på Cloud-pc'en, er der muligheder for at få vist politikker og enhedsdetaljer for lejerklargøring i Microsoft Endpoint Manager.
+Vælg en cloud-pc på listen for at få vist flere oplysninger og udføre administrationshandlinger, f.eks.:
+- **Genstarte:** Vælg at genstarte enheden. 
+- **Klargøring igen:** Vælg at nulstille enheden. Du kan også få vist klargøringspolitikken i linket Microsoft Endpoint Manager.
+- **Omdøbe:** Vælg at omdøbe den enhed, der er tildelt en bruger.
 
 Fanen Alle cloud-pc'er indeholder også følgende indstillinger:
 
-- **Opdatere:** Vælg at hente de nyeste Cloud PC-data.
 - **Eksport:** Vælg at eksportere Cloud PC-data til en Excel fil med kommaseparerede værdier (.csv).
+- **Opdatere:** Vælg at hente de nyeste Cloud PC-data.
 - **Søg:** Angiv nøgleord for hurtigt at finde en bestemt Cloud-pc på listen.
-- **Prøv at klargøre igen:** Vælg 1 til 20 cloud-pc'er på listen, der har statussen **Klargøring mislykkedes**, og vælg derefter denne indstilling for at forsøge at klargøre disse Cloud-pc'er igen.
 
 Hvis du vil se en komplet liste over klargøringsstatusser for cloud-pc'er, og hvad de betyder, skal du se [Oversigt over enhedshåndtering for Cloud-pc'er](/windows-365/enterprise/device-management-overview#column-details) i dokumentationsbiblioteket Windows 365.
 
@@ -80,7 +83,7 @@ Hvis du vil se en komplet liste over klargøringsstatusser for cloud-pc'er, og h
 
 ## <a name="azure-network-connections-tab"></a>Fanen Azure-netværksforbindelser
 
-Under fanen Azure-netværksforbindelser viser den farvede linje med antal anmærkninger det samlede antal Azure-netværksforbindelser på tværs af alle dine kundelejere, der har følgende status: Vellykkede forbindelser og Mislykkede forbindelser.
+Under fanen Azure-netværksforbindelser vises det samlede antal Azure-netværksforbindelser på tværs af alle dine kundelejere, der har Windows 365 Enterprise Cloud-pc'er, og som kan have følgende statusser: Vellykkede forbindelser og Mislykkede forbindelser.
 
 På listen under linjen med antal anmærkninger kan du få vist alle Azure-netværksforbindelser og deres forbindelsesstatus.
 
@@ -90,8 +93,8 @@ Hvis du har brug for at foretage en handling eller foretage fejlfinding af en fo
 
 Fanen Azure-netværksforbindelser indeholder også følgende indstillinger:
 
-- **Opdatere:** Vælg at hente de mest aktuelle forbindelsesdata.
 - **Eksport:** Vælg at eksportere forbindelsesdata til en Excel fil med kommaseparerede værdier (.csv).
+- **Opdatere:** Vælg at hente de mest aktuelle forbindelsesdata.
 - **Søg:** Angiv nøgleord for hurtigt at finde en bestemt forbindelse.
 
 :::image type="content" source="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png" alt-text="Skærmbillede af fanen Azure-netværksforbindelser." lightbox="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png":::

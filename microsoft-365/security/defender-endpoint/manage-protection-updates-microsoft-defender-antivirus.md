@@ -15,16 +15,17 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 076b445a6ac129c1debd7cba813798f51aa6f86b
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 4f6c43da4940ddee099c515a5dc8889cb5aca62b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789024"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101397"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Administrer kilderne til Microsoft Defender Antivirus beskyttelsesopdateringer
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
+> [!IMPORTANT]
+> Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering. Du kan få flere oplysninger under [Månedlige platform- og programversioner](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions).
 
 **Gælder for:**
 
@@ -286,10 +287,10 @@ Konfigurer et netværksfilshare (UNC/tilknyttet drev) for at downloade sikkerhed
     > Tilføj ikke mappen x64 (eller x86) i stien. Den mpcmdrun.exe proces tilføjer den automatisk.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

@@ -1,8 +1,8 @@
 ---
-title: Office 365 for anbefalinger til netværksresultater
+title: Office 365 målinger for anbefalinger til netværksydeevne
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 10/22/2019
 audience: Admin
 ms.topic: conceptual
@@ -13,12 +13,12 @@ search.appverid:
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
-description: Office 365 for anbefalinger til netværksresultater
-ms.openlocfilehash: 515e875b75d43f9719964b9b084dbdbc17619947
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Office 365 målinger for anbefalinger til netværksydeevne
+ms.openlocfilehash: a11790257a2b2979ab9c18a610a406dd8b072847
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63601628"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098290"
 ---
-# <a name="office-365-measurements-for-network-performance-recommendations"></a>Office 365 for anbefalinger til netværksresultater
+# <a name="office-365-measurements-for-network-performance-recommendations"></a>Office 365 målinger for anbefalinger til netværksydeevne

@@ -1,14 +1,14 @@
 ---
-title: Sådan kan sikkerhedsanbefalinger påvirke dine brugere
+title: Sådan hjælper Microsoft 365 Business Premium din virksomhed
 f1.keywords:
 - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,63 +23,70 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan sikkerhedsanbefalinger Microsoft 365 Business Premium dine brugere og beskytte dine data.
-ms.openlocfilehash: 5704e4c6b0675e8d69ffb2a81b8b6d7bf57bb0b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan Microsoft 365 Business Premium hjælper din virksomhed med produktivitet og sikkerhed.
+ms.openlocfilehash: f9501ce8a478af45d8d1b79db1411575636eda36
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704985"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098112"
 ---
-# <a name="how-security-recommendations-affect-your-users"></a>Sådan påvirker sikkerhedsanbefalinger dine brugere
+# <a name="how-microsoft-365-business-premium-helps-your-business"></a>Sådan hjælper Microsoft 365 Business Premium din virksomhed
 
-Sikkerhedsanbefalinger for Microsoft 365 denne løsning gør det meget sværere for hackere at få adgang til dit miljø. Kompromisen er, at brugerne skal være opmærksomme på, hvordan de skal arbejde i dette mere sikre miljø. Vi forstår, at det kræver lidt ekstra tålmodighed, men det er værd at holde organisationen beskyttet.
+Microsoft 365 Business Premium er en omkostningseffektiv løsning, der sætter små og mellemstore virksomheder i stand til at arbejde mere effektivt og sikkert end tidligere. I denne artikel beskrives det, hvordan Microsoft 365 Business Premium kan hjælpe din virksomhed, og den indeholder følgende afsnit:
 
-:::image type="content" source="media/m365-democracy-users.png" alt-text="Illustration, der opsummerer nøglepunkter for enheder.":::
+- [Video: Top 5 fordele ved Microsoft 365 Business Premium](#video-top-5-benefits-of-microsoft-365-business-premium)
+- [Produktivitet og avancerede sikkerhedsfunktioner](#productivity-and-security) , der gør det muligt for dig at køre din virksomhed mere sikkert på tværs af enheder og fra stort set alle steder
+- [Ressourcer til at oplære dit team og alle medarbejdere](#resources-to-train-your-users) i, hvordan du arbejder produktivt, samtidig med at du bevarer et mere sikkert miljø
+- En [guide til digitale trusler, der kan downloades](#download-the-digital-threats-guide) , og som beskriver forskellige former for trusler, og hvordan du beskytter mod dem i dit daglige arbejde
+- [Næste trin](#next-steps)
 
-## <a name="use-secure-email-practices"></a>Brug sikre mailpraksisser
+## <a name="video-top-5-benefits-of-microsoft-365-business-premium"></a>Video: Top 5 fordele ved Microsoft 365 Business Premium
 
-Alle brugere skal være opmærksomme på og bruge disse mailvaner til at holde deres mail sikker:
+Se følgende video for at få mere at vide om, hvordan Microsoft 365 Business Premium hjælper din virksomhed med at være mere produktiv og sikker: <p>
 
-- Konfigurer mail til at bruge multifaktorgodkendelse med Authenticator-appen.
-- Bekræft legitime mails, og se efter sikkerhedstip fra Advanced Phishing i Defender for Office 365 Protection.
-- Åbn kun sikre links og vedhæftede filer, som bekræftet af Pengeskab Links og Pengeskab vedhæftede filer.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Pq0G]
 
-Få mere at [vide om multifaktorgodkendelse](m365bp-multifactor-authentication.md) og [phishing og andre angreb](m365-campaigns-phishing-and-attacks.md).
+> [!TIP]
+> Du kan få flere oplysninger under [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:overviewtab).
 
-Download en [infografik](m365-campaigns-protect-campaign-infographic.md) med tip til dig og medlemmerne af dit team.
+## <a name="productivity-and-security"></a>Produktivitet og sikkerhed
 
-## <a name="set-up-iphones-and-android-devices"></a>Konfigurer iPhones og Android-enheder
+Microsoft 365 Business Premium omfatter dine foretrukne Office produktivitetsapps, samarbejdsværktøjer som Microsoft Teams og professionelle sikkerheds-, identitets- og enhedshåndteringsløsninger. Med Microsoft 365 Business Premium kan du køre din virksomhed mere sikkert, på tværs af enheder og fra næsten overalt. Microsoft 365 Business Premium omfatter:
 
-Alle brugere, du føjer til dit miljø, skal bruge et par minutter for [at konfigurere iPhones og Android-enheder](../business/set-up-mobile-devices.md?toc=%2Fmicrosoft-365%2Fcampaigns%2Ftoc.json) til at fungere sikkert:
+- **Windows 10 og 11 Pro** opgraderinger til virksomhedens Windows enheder
+- **Office apps**, f.eks. Word, Excel og PowerPoint, som du kan installere på dine computere (Windows og Mac) og på dine mobilenheder (Windows, iOS og Android). Du får også Publisher og adgang til dine Windows enheder.
+- **Microsoft Teams, Outlook og Exchange** til mail, kalendere, møder og samarbejde
+- **SharePoint og OneDrive** til at gemme og administrere dine virksomhedsfiler
+- **Avanceret beskyttelse mod trusler** som phishing, malware og ransomware-beskyttelse
+- **Funktioner til overholdelse af angivne standarder og beskyttelse af personlige oplysninger** for at beskytte og styre adgangen til dine og dine kunders følsomme oplysninger
+- **Funktioner til enhedshåndtering** , der gør det muligt for dit sikkerhedsteam at holde computere, tablets og telefoner opdateret og sikre
 
-- Konfigurer enheder til at bruge multifaktorgodkendelse med Authenticator-appen.
-- Brug Microsoft-mobilapps, herunder Outlook Mobile, Word, OneDrive og andre Microsoft-apps fra App Store. De oprindelige mailapps, der er inkluderet på iPhones og Android-enheder, understøttes ikke. 
-- Kræv en pinkode, for at brugerne kan låse enheden op.
+> [!TIP]
+> Du kan finde flere detaljerede oplysninger om, hvad der er inkluderet i Microsoft 365 Business Premium, i [Microsoft 365 Brugerabonnementspakker til små og mellemstore virksomheder](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWR6bM).
 
-Når du har konfigureret disse, bliver dine brugere bedt om at bruge Authenticator-appen, når de får adgang til organisationens data på disse enheder, herunder mail.
+## <a name="resources-to-train-your-users"></a>Ressourcer til at oplære dine brugere
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>Hold BYOD Macs og Windows 10 pc'er frisk
+De sikkerhedsanbefalinger, der leveres i dette bibliotek, gør det meget sværere for cyberattackers at få adgang til dit miljø. En vigtig del af din sikkerhedsstrategi omfatter dog oplæring af brugere&mdash; af de personer i virksomheden, der bruger dine systemer regelmæssigt. Brugerne kan hjælpe med at være din forreste forsvarslinje. Alle skal vide, hvordan de arbejder produktivt, samtidig med at de bevarer et mere sikkert miljø. 
 
-Det er også vigtigt, at brugerne holder deres primære arbejdsenhed opdateret:
+Der er ressourcer tilgængelige, som kan hjælpe alle i din organisation med at:
 
-- Installér de nyeste versioner af Office-skrivebordsapps, og hold disse nye med opdateringer, når du bliver bedt om det.
-- Hold dig opdateret med opdateringer til operativsystemet, f.eks. Windows opdateringer.
+- [Beskyt enheder](m365bp-devices-overview.md)
+- [Brug mail på en mere sikker måde](m365bp-protect-email-overview.md)
+- [Samarbejd og del oplysninger på en mere sikker måde](m365bp-collaborate-share-securely.md)
 
-For [ikke-administrerede Windows 10 og Mac-enheder](m365bp-protect-pcs-macs.md) har brugerne ansvaret for at sikre, at grundlæggende sikkerhedsfunktioner er aktiveret.
+Brug anbefalingerne i dette bibliotek for at hjælpe dine brugere med at være produktive og mere sikre i deres arbejde.
 
-**Aktivere grundlæggende sikkerhedsfunktioner på BYOD-Windows 10- og Mac-enheder**
+## <a name="download-the-digital-threats-guide"></a>Download vejledningen til digitale trusler
 
-|**Windows 10**|**Mac**|
-|:-----|:------|
-|Slå BitLocker-enhedsbeskyttelse til<p><p> Sørg for Windows Defender forbliver tændt <p>Slå firewallen Windows til| Brug FileVault til at kryptere mac-disken <p><p>Brug en pålidelig antivirussoftware <p>Slå firewallbeskyttelse til|
+Vores vejledning til digitale trusler beskriver forskellige former for trusler, og hvad du og dine medarbejdere kan gøre for at beskytte mod disse trusler. Download denne vejledning til visualiseringer for dig og dit team:
 
-Du kan få mere at vide om disse anbefalinger [under Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
+[:::image type="content" source="media/m365bp-whatuserscandotosecure.png" alt-text="Miniature af vejledning, der kan downloades.":::](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf)
 
-## <a name="collaborate-using-microsoft-teams-onedrive-sharepoint-online-and-other-tools"></a>Samarbejd ved hjælp Microsoft Teams, OneDrive, SharePoint Online og andre værktøjer
+[PDF](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf) |  [PowerPoint](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pptx)
 
-Dine brugere kan være fristende at dele og gemme dine organisationsfiler andre steder end Microsoft 365. Microsoft 365 gør det så nemt som muligt at samarbejde og dele sikkert. Du kan [dele filer og videoer](share-files-and-videos.md) direkte fra Microsoft Teams, OneDrive, Stream og endda inde fra en fil. Deling fra disse værktøjer hjælper med at undgå, at dine datalækagerlækager. Du kan føje yderligere beskyttelse til følsomme data for at forhindre deling uden for organisationen.
+## <a name="next-steps"></a>Næste trin
 
-## <a name="set-up-managed-windows-10-devices"></a>Konfigurere administrerede Windows 10 enheder
+1. Hent [Microsoft 365 Business Premium](get-microsoft-365-business-premium.md) eller [Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
 
-Vi anbefaler, at dine vigtigste medarbejdere bruger nyligt erhvervede Windows 10 enheder, som du administrerer. Vi viser dig, hvordan du [administrerer og sikrer disse enheder](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Dette sikrer, at medarbejdere, der er den højeste værdimålet for hackere, får den største beskyttelse.
+2. [Start konfigurationsprocessen](m365bp-setup-overview.md).

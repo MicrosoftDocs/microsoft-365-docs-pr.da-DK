@@ -1,14 +1,14 @@
 ---
-title: Opret et team i Microsoft Teams så din lille virksomhed eller kampagne kan samarbejde
+title: Brug Microsoft Teams til samarbejde
 f1.keywords:
 - NOCSH
 ms.author: samanro
 author: samanro
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -22,75 +22,75 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvorfor og hvordan du kan oprette et team Microsoft Teams så din lille virksomhed eller kampagne kan samarbejde.
-ms.openlocfilehash: 6c218b24b335dc01aa0b426eb4e95bccef3d20d7
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Få mere at vide om, hvorfor og hvordan du opretter et team i Microsoft Teams, så din lille virksomhed eller kampagne kan samarbejde.
+ms.openlocfilehash: ef9c435cbaa7a862164c39244bdb2a865845fa58
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634069"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100153"
 ---
-# <a name="create-a-team-in-microsoft-teams-so-your-small-business-or-campaign-can-collaborate"></a>Opret et team i Microsoft Teams så din lille virksomhed eller kampagne kan samarbejde
+# <a name="use-microsoft-teams-for-collaboration"></a>Brug Microsoft Teams til samarbejde
 
-Microsoft Teams er en samarbejdsapp, der hjælper dine medarbejdere med at organisere sig og have samtaler fra enhver enhed. Du kan bruge Microsoft Teams til at chatte med medlemmer af dit personale eller gæster uden for organisationen. Du kan også foretage telefonopkald, være vært for møder og dele filer.
+Microsoft Teams er en samarbejdsapp, der hjælper dine medarbejdere med at holde styr på tingene og føre samtaler fra enhver enhed. Du kan bruge Microsoft Teams til at føre øjeblikkelige samtaler med medlemmer af dine medarbejdere eller gæster uden for organisationen. Du kan også foretage telefonopkald, hoste møder og dele filer.
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 
 1. Opret private teams til følsomme oplysninger.
 
-2. Opret et team for hele organisationen til kommunikation med alle i organisationen.
+2. Opret et team for hele organisationen til kommunikation med alle på tværs af organisationen.
 
-3. Opret teams til bestemte projekter, og anvend den rette beskyttelse, baseret på hvem der skal medtages.
+3. Opret teams til specifikke projekter, og anvend den rette mængde beskyttelse baseret på, hvem der skal inkluderes.
 
-4. Opret specifikke teams til kommunikation med eksterne partnere for at holde dem adskilt fra alt følsomt for din virksomhed.
+4. Opret specifikke teams til kommunikation med eksterne partnere for at holde dem adskilt fra alt, der er følsomt for din virksomhed.
 
-Eksempelvis kan en virksomhed, et advokatfirma eller en sundhedspraksis oprette følgende teams:
+En virksomhed, et juridisk firma eller en sundhedspraksis kan f.eks. oprette følgende teams:
 
-1. **Et team for hele virksomheden, firmaet eller praksis:** Dette er til brug for den daglige kommunikation og dit daglige arbejde på tværs af din virksomhed. Du kan bruge dette team til at sende meddelelser eller dele oplysninger, der interesserer hele virksomheden eller praksis.
+1. **Et virksomheds-, virksomheds- eller øvelsesteam:** Dette er for alle at bruge til daglig kommunikation og arbejde på tværs af din virksomhed. Du kan bruge dette team til at sende meddelelser eller dele oplysninger af interesse for hele firmaet eller praksis.
 
-2. **Individuelle teams:** Konfigurer teams til mindre grupper til at samarbejde om deres daglige arbejde.
+2. **Individuelle teams:** Konfigurer teams for mindre grupper for at samarbejde om deres daglige arbejde.
 
-3. **Et eksternt kommunikationsteam eller teams:** Koordiner med leverandører, partnere eller kunder uden at give dem adgang til følsomme oplysninger. Konfigurer forskellige kanaler for bestemte grupper.
+3. **Et eksternt kommunikationsteam eller -teams:** Koordinater med dine leverandører, partnere eller kunder uden at give dem adgang til noget følsomt. Konfigurer forskellige kanaler til bestemte grupper.
 
-![Diagram over et Microsoft Teams med tre separate teams, der muliggør sikker kommunikation og samarbejde i en virksomhed.](../media/m365-democracy-teams-business-collab.png)
+![Diagram over et Microsoft Teams vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en virksomhed.](../media/m365-democracy-teams-business-collab.png)
 
-Og kampagner kan oprette følgende teams til at kommunikere og samarbejde sikkert:
+Og kampagner kan oprette følgende teams for at kommunikere og samarbejde sikkert:
 
-1. **Et kampagneteam:** Konfigurer dette som et privat team, så kun dine vigtigste kampagnemedlemmer kan få adgang til det og diskutere potentielt følsomme bekymringer.
+1. **Et kampagnelederteam:** Konfigurer dette som et privat team, så det kun er dine vigtigste kampagnemedlemmer, der kan få adgang til den og diskutere potentielt følsomme bekymringer.
 
-2. **Et generelt kampagneteam:** Dette er til brug for al kommunikation og arbejde i det daglige. Enkeltpersoner, grupper eller komiteer kan oprette kanaler i dette team for at udføre deres arbejde. Personer, der planlægger begivenheder, kan f.eks. konfigurere en kanal til chat og koordinere logistik for kampagnebegivenheder.
+2. **Et generelt kampagneteam:** Dette er for alle at bruge til den daglige kommunikation og arbejde. Enkeltpersoner, grupper eller udvalg kan oprette kanaler i dette team til at udføre deres arbejde. Personer, der planlægger begivenheder, kan f.eks. oprette en kanal for at chatte og koordinere logistikken for kampagnebegivenheder.
 
-3. **Et partnerteam:** Koordiner med leverandører, partnere eller frivillige uden at give dem adgang til følsomme oplysninger.
+3. **Et partnerteam:** Koordinater med dine leverandører, partnere eller frivillige uden at give dem adgang til noget følsomt.
 
-![Diagram over et Microsoft Teams-vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en kampagne.](../media/m365-democracy-teams-collab.png)
+![Diagram over et Microsoft Teams vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en kampagne.](../media/m365-democracy-teams-collab.png)
 
-Når du opretter et team, oprettes der ellers følgende:
+Når du opretter et team, oprettes der også følgende:
 
 - En ny [Microsoft 365 gruppe](/MicrosoftTeams/office-365-groups)
 
-- Et [SharePoint onlinewebsted](/MicrosoftTeams/sharepoint-onedrive-interact) og dokumentbibliotek til at gemme teamfiler
+- Et [SharePoint onlinewebsted](/MicrosoftTeams/sharepoint-onedrive-interact) og dokumentbibliotek til lagring af teamfiler
 
-- En [Exchange Online delt](/MicrosoftTeams/exchange-teams-interact) postkasse og kalender
+- En [Exchange Online](/MicrosoftTeams/exchange-teams-interact) delt postkasse og kalender
 
 - En OneNote notesbog
 
-- Bindinger til Office 365 apps som Planner og Power BI
+- Knytter til andre Office 365 apps, f.eks. Planner og Power BI
 
 I Microsoft Teams kan du finde:
 
-1. **Teams: Find** kanaler at høre til, eller opret din egen. I kanaler kan du holde møder på stedet, have samtaler og dele filer.
+1. **Teams:** Find kanaler, du vil tilhøre, eller opret dine egne. I kanaler kan du holde møder på stedet, føre samtaler og dele filer.
 
-2. **Møder:** Se alt, hvad du har konfigureret for dagen eller ugen. Eller planlæg et møde. Denne kalender synkroniseres med din Outlook kalender.
+2. **Møder:** Se alt det, du har klar til dag eller uge. Eller planlæg et møde. Denne kalender synkroniseres med din Outlook kalender.
 
-3. **Opkald:** I nogle tilfælde kan du, hvis din organisation har konfigureret den, ringe til Microsoft Teams, også selvom de ikke bruger Microsoft Teams.
+3. **Opkald:** Hvis organisationen har konfigureret den, kan du i nogle tilfælde ringe til alle fra Microsoft Teams, også selvom de ikke bruger Microsoft Teams.
 
-4. **Aktivitet:** Få mere at vide om alle dine ulæste meddelelser, @mentions, svar og meget mere.
+4. **Aktivitet:** Se alle dine ulæste meddelelser, @mentions, svar og meget mere.
 
-Brug kommandofeltet øverst til at søge efter bestemte elementer eller personer, udføre hurtige handlinger og starte apps.
+Brug kommandolinjen øverst til at søge efter bestemte elementer eller personer, udføre hurtige handlinger og starte apps.
 
 ## <a name="set-it-up"></a>Konfigurer det
 
-Opret et privat team kun for virksomhedsejeren og lederne eller kampagnelederen og kandidaterne på denne måde.
+Opret et privat team kun til virksomhedsejeren og -lederne eller kampagnelederen og kandidaten som denne.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWeqWA]
 
@@ -98,12 +98,18 @@ Opret et team for hele organisationen, som alle i virksomheden eller kampagnen k
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2GCG9]
 
-Opret et team, som du deler med gæster uden for organisationen, f.eks. til reklame eller økonomi.
+Opret et team, som du deler med gæster uden for din organisation, f.eks. til annoncering eller økonomi.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FQMp]
 
-Få mere at vide Microsoft Teams at [Microsoft Teams den tekniske dokumentation](/microsoftteams/microsoft-teams)
+Få mere at vide om Microsoft Teams i [Microsoft Teams tekniske dokumentation](/microsoftteams/microsoft-teams)
 
 ## <a name="admin-settings"></a>Administratorindstillinger
 
-Du skal være administrator for at oprette et team for hele organisationen. Du kan finde flere [oplysninger under Hvad er en administrator i Microsoft 365?](https://support.office.com/article/what-is-an-admin-e123627e-4892-4461-b9aa-1b6d57a5cfa4?ui=en-US&rs=en-US&ad=US).
+> [!Note]
+> Du skal være administrator for at oprette et team for hele organisationen. Du kan få flere oplysninger under [Hvad er en administrator i Microsoft 365?](https://support.office.com/article/what-is-an-admin-e123627e-4892-4461-b9aa-1b6d57a5cfa4?ui=en-US&rs=en-US&ad=US).
+
+## <a name="next-objective"></a>Næste mål
+
+Når du har fuldført dette mål, skal du [konfigurere møder](set-up-meetings.md) på en sikker måde.
+

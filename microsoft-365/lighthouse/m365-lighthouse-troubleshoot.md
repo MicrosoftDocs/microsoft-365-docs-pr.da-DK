@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få hjælp til fejlfinding af fejlmeddelelser og problemer.
-ms.openlocfilehash: 3da40291742ae85ef897aeceae0def27aca8abe2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: a150213c2e202c96afeae14843708daa58ab4f92
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023211"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093278"
 ---
 # <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Foretag fejlfinding af fejlmeddelelser og problemer i Microsoft 365 Fyrtårn
 
@@ -65,7 +65,7 @@ I denne artikel beskrives fejlmeddelelser og problemer, der kan opstå, når du 
 |--|--|--|
 | Inaktive | Lejeren blev offboardet på anmodning af MSP'en og administreres ikke længere i Lighthouse. | Du skal genaktivere lejeren. På siden **Lejere** skal du vælge de tre prikker (flere handlinger) ud for den lejer, du vil genaktivere, og derefter vælge **Aktivér lejer**. Det kan tage 24-48 timer, før de første kundedata vises i Lighthouse. |
 | Ikke berettiget – DAP eller GDAP er ikke konfigureret | Du har ikke rettigheder som DAP- eller GDAP-administrator konfigureret med lejeren, hvilket er påkrævet af Lighthouse. | Konfigurer DAP- eller GDAP-administratorrettigheder i Microsoft Partnercenter. |
-| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. | Sørg for, at lejeren har tildelt mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. |
+| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium eller Microsoft 365 E3 licens. | Sørg for, at lejeren har tildelt mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. |
 | Ikke kvalificeret - Antallet af brugere er overskredet | Lejeren har mere end maksimalt 1000 licenserede brugere tilladt af Lighthouse. | Kontrollér, at lejeren ikke har mere end 1000 licenserede brugere. |
 | Ikke berettiget - Geo-kontrol mislykkedes | Du og din kunde bor ikke i det samme geografiske område, hvilket er påkrævet af Lighthouse. | Kontrollér, at kunden er placeret i dit geografiske område. Hvis ikke, kan du ikke administrere lejeren i Lighthouse. |
 | I gang | Lighthouse opdagede lejeren, men er stadig i gang med at onboarde dem. | Tillad, at Lighthouse 48 timer fuldfører onboarding af lejeren. |

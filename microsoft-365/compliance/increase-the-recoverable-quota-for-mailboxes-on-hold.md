@@ -2,8 +2,8 @@
 title: Øg kvoten for genoprettelige elementer for fastfrosne postkasser
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,18 +16,18 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: Aktivér arkivpostkassen, og aktivér automatisk udvidelse af arkivering for at øge størrelsen af mappen Gendanbare elementer for en postkasse i Microsoft 365.
-ms.openlocfilehash: 68ef8cfe1751ed5822d99edf9e7efeb4bd3766f2
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a05851f1019405a495a7b909bf4a8d096227163d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999888"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100799"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Øg kvoten for genoprettelige elementer for fastfrosne postkasser
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Standardpolitikken Exchange opbevaring – med navnet *Standard-MRM-politik* – der automatisk anvendes på nye postkasser i Exchange Online indeholder en opbevaringskode med navnet Gendanbare elementer, 14 dages flytning til arkivet. Dette opbevaringsmærke flytter elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse, når opbevaringsperioden på 14 dage udløber for et element. Hvis dette skal ske, skal brugerens arkivpostkasse være aktiveret. Hvis arkivpostkassen ikke er aktiveret, udføres der ingen handling, hvilket betyder, at elementer i mappen Gendanbare elementer for en postkasse, der er i venteposition, ikke flyttes til arkivpostkassen, når opbevaringsperioden på 14 dage udløber. Da intet slettes fra en postkasse i venteposition, er det muligt, at lagerkvoten for mappen Gendanbare elementer kan blive overskredet, især hvis brugerens arkivpostkasse ikke er aktiveret.
+Standardpolitikken Exchange opbevaring – med navnet *Standard-MRM-politik* – der automatisk anvendes på nye postkasser i Exchange Online indeholder en opbevaringskode med navnet Gendanbare elementer 14 dages flytning til arkiv. Dette opbevaringsmærke flytter elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse, når opbevaringsperioden på 14 dage udløber for et element. Hvis dette skal ske, skal brugerens arkivpostkasse være aktiveret. Hvis arkivpostkassen ikke er aktiveret, udføres der ingen handling, hvilket betyder, at elementer i mappen Gendanbare elementer for en postkasse, der er i venteposition, ikke flyttes til arkivpostkassen, når opbevaringsperioden på 14 dage udløber. Da intet slettes fra en postkasse i venteposition, er det muligt, at lagerkvoten for mappen Gendanbare elementer kan blive overskredet, især hvis brugerens arkivpostkasse ikke er aktiveret.
 
 For at reducere risikoen for at overskride denne grænse øges lagerkvoten for mappen Gendanbare elementer automatisk fra 30 GB til 100 GB, når der sættes en venteposition på en postkasse i Exchange Online. Hvis arkivpostkassen er aktiveret, øges lagerkvoten for mappen Gendanbare elementer i arkivpostkassen også fra 30 GB til 100 GB. Hvis funktionen til automatisk udvidelse af arkivering i Exchange Online er aktiveret, er den samlede lagerkvote for brugerens arkivpostkasse, herunder mappen Genoprettelige elementer, 1,5 TB.
 
@@ -39,7 +39,7 @@ For at reducere risikoen for at overskride denne grænse øges lagerkvoten for m
 |Arkivpostkasse, herunder mappen Elementer, der kan gendannes <sup>\*</sup> |1,5 TB |1,5 TB |
 
 > [!NOTE]
-> <sup>\*</sup>Den første lagerkvote for arkivpostkassen er 100 GB for brugere med en licens til Exchange Online (Plan 2). Når automatisk udvidelse af arkivering er slået til for postkasser i venteposition, øges lagerkvoten for både arkivpostkassen og mappen Gendanbare elementer til 110 GB. Yderligere lagerplads til arkivet (som omfatter mappen Gendanbare elementer) op til 1,5 TB klargøres, når det er nødvendigt. Du kan finde flere oplysninger om automatisk udvidelse af arkivering under [Få mere at vide om automatisk udvidelse af arkivering](autoexpanding-archiving.md).
+> <sup>\*</sup>Den første lagerkvote for arkivpostkassen er 100 GB for brugere med en Exchange Online (plan 2) licens. Når automatisk udvidelse af arkivering er slået til for postkasser i venteposition, øges lagerkvoten for både arkivpostkassen og mappen Gendanbare elementer til 110 GB. Yderligere lagerplads til arkivet (som omfatter mappen Gendanbare elementer) op til 1,5 TB klargøres, når det er nødvendigt. Du kan finde flere oplysninger om automatisk udvidelse af arkivering under [Få mere at vide om automatisk udvidelse af arkivering](autoexpanding-archiving.md).
 
 Når lagerkvoten for mappen Gendanbare elementer i den primære postkasse i en postkasse, der er i venteposition, er tæt på at nå grænsen, kan du gøre følgende:
 
@@ -64,7 +64,7 @@ I resten af dette emne beskrives de trinvise procedurer til oprettelse af en bru
 
 Det første trin er at oprette en brugerdefineret opbevaringskode (kaldet en opbevaringspolitikkode eller RPT) for mappen Genoprettelige elementer. Som tidligere forklaret flytter denne RPT elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse. Du skal bruge PowerShell til at oprette en RPT til mappen Gendanbare elementer. Du kan ikke bruge Exchange Administration (EAC).
 
-1. [Opret forbindelse til Exchange Online ved hjælp af Fjern-PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Forbind til Exchange Online ved hjælp af PowerShell-fjernadgang](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kør følgende kommando for at oprette en ny RPT til mappen Gendanbare elementer:
 
@@ -79,7 +79,7 @@ Det første trin er at oprette en brugerdefineret opbevaringskode (kaldet en opb
     ```
 
     > [!TIP]
-    > Vi anbefaler, at opbevaringsperioden (defineret af parameteren  _AgeLimitForRetention_ ) for RPT for genoprettelige elementer er den samme som opbevaringsperioden for slettede elementer for de postkasser, som RPT anvendes på. Dette gør det muligt for en bruger at gendanne slettede elementer i hele opbevaringsperioden for slettede elementer, før de flyttes til arkivpostkassen. I det forrige eksempel blev opbevaringsperioden angivet til 30 dage baseret på den antagelse, at opbevaringsperioden for slettede elementer for postkasser også er 30 dage. En Exchange Online-postkasse er som standard konfigureret til at bevare slettede elementer i 14 dage. Men du kan ændre denne indstilling til højst 30 dage. Du kan få flere oplysninger under [Skift opbevaringsperioden for slettede elementer for en postkasse i Exchange Online](https://www.microsoft.com/?ref=go).
+    > Vi anbefaler, at opbevaringsperioden (defineret af parameteren  _AgeLimitForRetention_ ) for RPT for genoprettelige elementer er den samme som opbevaringsperioden for slettede elementer for de postkasser, som RPT anvendes på. Dette gør det muligt for en bruger at gendanne slettede elementer i hele opbevaringsperioden for slettede elementer, før de flyttes til arkivpostkassen. I det forrige eksempel blev opbevaringsperioden angivet til 30 dage baseret på den antagelse, at opbevaringsperioden for slettede elementer for postkasser også er 30 dage. En Exchange Online postkasse er som standard konfigureret til at bevare slettede elementer i 14 dage. Men du kan ændre denne indstilling til højst 30 dage. Du kan få flere oplysninger under [Skift opbevaringsperioden for slettede elementer for en postkasse i Exchange Online](https://www.microsoft.com/?ref=go).
 
 ## <a name="step-2-create-a-new-exchange-retention-policy-for-mailboxes-on-hold"></a>Trin 2: Opret en ny Exchange opbevaringspolitik for postkasser i venteposition
 
@@ -205,7 +205,7 @@ Get-Mailbox -ResultSize unlimited | Where-Object {$_.InPlaceHolds -ne $null} | F
 
 ## <a name="optional-step-4-run-the-managed-folder-assistant-to-apply-the-new-retention-settings"></a>(Valgfrit) Trin 4: Kør Assistent til administreret mappe for at anvende de nye opbevaringsindstillinger
 
-Når du har anvendt den nye Exchange opbevaringspolitik på postkasser i venteposition, kan det tage op til 7 dage i Exchange Online, før assistenten til administrerede mapper behandler disse postkasser ved hjælp af indstillingerne i den nye opbevaringspolitik. I stedet for at vente på, at Assistent til administrerede mapper kører, kan du bruge cmdlet'en **Start-ManagedFolderAssistant** til manuelt at udløse assistenten til at behandle de postkasser, du anvendte den nye opbevaringspolitik på.
+Når du har anvendt den nye Exchange opbevaringspolitik på postkasser i venteposition, kan det tage op til syv dage i Exchange Online for Assistent til administrerede mapper at behandle disse postkasser ved hjælp af indstillingerne i den nye opbevaringspolitik. I stedet for at vente på, at Assistent til administrerede mapper kører, kan du bruge cmdlet'en **Start-ManagedFolderAssistant** til manuelt at udløse assistenten til at behandle de postkasser, du anvendte den nye opbevaringspolitik på.
 
 Kør følgende kommando for at starte Assistent til administreret mappe for Pilar Pinillas postkasse.
 
@@ -225,6 +225,6 @@ $MailboxesOnHold.DistinguishedName | Start-ManagedFolderAssistant
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Når du har aktiveret en brugers arkivpostkasse, kan du overveje at fortælle brugeren, at andre elementer i deres postkasse (ikke kun elementer i mappen Gendanbare elementer) kan flyttes til arkivpostkassen. Det skyldes, at standard-MRM-politikken, der er tildelt til Exchange Online-postkasser, indeholder en opbevaringskode (med navnet Standard 2 år flyttes til arkiv), der flytter elementer til arkivpostkassen to år efter den dato, hvor elementet blev leveret til postkassen eller oprettet af brugeren. Du kan få flere oplysninger under [Standardopbevaringspolitik i Exchange Online](/exchange/security-and-compliance/messaging-records-management/default-retention-policy)
+- Når du har aktiveret en brugers arkivpostkasse, kan du overveje at fortælle brugeren, at andre elementer i deres postkasse (ikke kun elementer i mappen Gendanbare elementer) kan flyttes til arkivpostkassen. Det skyldes, at standard-MRM-politikken, der er tildelt til Exchange Online postkasser, indeholder en opbevaringskode (med navnet Standard 2 års flytning til arkiv), der flytter elementer til arkivpostkassen to år efter den dato, hvor elementet blev leveret til postkassen eller oprettet af brugeren. Du kan få flere oplysninger under [Standardopbevaringspolitik i Exchange Online](/exchange/security-and-compliance/messaging-records-management/default-retention-policy)
 
-- Når du har aktiveret en brugers arkivpostkasse, kan du også fortælle brugeren, at brugeren kan gendanne slettede elementer i mappen Gendanbare elementer i deres arkivpostkasse. De kan gøre dette i Outlook ved at vælge mappen **Slettet post** i arkivpostkassen og derefter klikke på **Gendan slettet post fra server** under fanen **Hjem**. Du kan finde flere oplysninger om gendannelse af slettede elementer [under Gendan slettede elementer i Outlook til Windows](https://go.microsoft.com/fwlink/p/?LinkId=624829).
+- Når du har aktiveret en brugers arkivpostkasse, kan du også fortælle brugeren, at brugeren kan gendanne slettede elementer i mappen Gendanbare elementer i deres arkivpostkasse. De kan gøre dette i Outlook ved at vælge mappen **Slettet post** i arkivpostkassen og derefter klikke på **Gendan slettet post fra server** under fanen **Hjem**. Du kan finde flere oplysninger om gendannelse af slettede elementer [under Gendan slettede elementer i Outlook for at få Windows](https://go.microsoft.com/fwlink/p/?LinkId=624829).

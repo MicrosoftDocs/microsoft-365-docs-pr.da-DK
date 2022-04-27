@@ -13,14 +13,13 @@ ms.topic: article
 ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
-ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e8c2b464b7a4559ba316826400cfd0ad308d8786
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 4db7b8f13f1f4860d8cd88f6dec0ff588a89ab41
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790212"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098906"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurer og valider udeladelser baseret på filtypenavn og mappeplacering
 
@@ -107,7 +106,7 @@ Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for u
 
 2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Udeladelser**.
+3. Udvid træet for at **Windows komponenter** \> **Windows Defender Antivirus** \> **Udeladelser**.
 
 4. Åbn indstillingen **Stiudeladelser** til redigering, og tilføj dine udeladelser.
     1. Angiv indstillingen til **Aktiveret**.
@@ -380,10 +379,10 @@ Hvis du ikke har internetadgang, kan du oprette din egen EICAR-testfil ved at sk
 Du kan også kopiere strengen til en tom tekstfil og forsøge at gemme den med filnavnet eller i den mappe, du forsøger at udelade.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

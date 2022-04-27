@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3a67d73475301096df8be691f2c5e0dc6db23db8
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 77766c153582f519aa0ba9853d18c216092747bc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862186"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092299"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint
 
@@ -37,7 +37,7 @@ ms.locfileid: "64862186"
 Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler.
 
 > [!TIP]
-> Snart vil Microsoft Defender for Endpoint være tilgængelige i to planer. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i Microsoft Defender for Endpoint Plan 2. [Mer informasjon om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
+> Snart vil Microsoft Defender for Endpoint være tilgængelige i to planer. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i Microsoft Defender for Endpoint Plan 2. [Få mere at vide om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
 > 
 
 <p><p>
@@ -81,8 +81,8 @@ Defender for Endpoint bruger følgende kombination af teknologi, der er indbygge
 > - Microsoft Defender for Endpoint demonstrerede branchens førende optik- og registreringsfunktioner i den seneste MITRE-evaluering. Læs: [Insights fra MITRE ATT&CK-baseret evaluering](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 
 
->[!IMPORTANT]
->Funktionerne på platforme, der ikke er Windows, kan være forskellige fra dem, der gælder for Windows. Du kan få flere oplysninger om, hvilke funktioner der er tilgængelige for platforme, der ikke er Windows, [i Microsoft Defender for Endpoint for platforme, der ikke er Windows](/security/defender-endpoint/non-windows).
+> [!IMPORTANT]
+> Funktionerne på platforme, der ikke er Windows, kan være forskellige fra dem, der gælder for Windows. Du kan få flere oplysninger om, hvilke funktioner der er tilgængelige for platforme, der ikke er Windows, [i Microsoft Defender for Endpoint for platforme, der ikke er Windows](/microsoft-365/security/defender-endpoint/non-windows).
 
 <a name="tvm"></a>
 
@@ -153,7 +153,7 @@ Defender for Endpoint kan integreres direkte med forskellige Microsoft-løsninge
 
 **[Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)**
 
-Med Microsoft 365 Defender udgør Defender for Endpoint og forskellige Microsoft-sikkerhedsløsninger en samlet virksomhedsforsvarspakke før og efter sikkerhedsbrud, der oprindeligt integreres på tværs af slutpunkter, identiteter, mail og programmer for at registrere, forhindre, undersøge og automatisk reagere på avancerede angreb.
+Med Microsoft 365 Defender, Defender for Endpoint og forskellige Microsoft-sikkerhedsløsninger danner du en samlet virksomhedsforsvarspakke, der er integreret før og efter sikkerhedsbrud, og som oprindeligt integreres på tværs af slutpunkter, identitet, mail og programmer for at registrere, forhindre, undersøge og automatisk reagere på avancerede angreb.
 
 
 ## <a name="training-for-security-analysts"></a>Oplæring af sikkerhedsanalytikere

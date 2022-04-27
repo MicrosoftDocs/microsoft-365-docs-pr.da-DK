@@ -1,8 +1,8 @@
 ---
-title: Ressourcer, der kan hjælpe dig med at opgradere Office 2007-servere og -klienter
+title: Ressourcer, der kan hjælpe dig med at opgradere fra Office 2007-servere og -klienter
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/01/2018
 audience: ITPro
 ms.topic: overview
@@ -22,45 +22,45 @@ search.appverid:
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: Denne artikel indeholder ressourcer, der kan hjælpe dig med at opgradere fra Office 2007-servere og -klienter, efterhånden som supporten til Office 2007 er ophørt.
+description: Denne artikel indeholder ressourcer, der kan hjælpe dig med at opgradere fra Office 2007-servere og -klienter, da support til Office 2007 er ophørt.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: cb303fcf5051ce1c54437818ce8b1751c41a8d72
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 47c9fdafabcd81c71106d287b45303a49a8177fc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590531"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098202"
 ---
-# <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a>Ressourcer, der kan hjælpe dig med at opgradere Office 2007-servere og -klienter
+# <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a>Ressourcer, der kan hjælpe dig med at opgradere fra Office 2007-servere og -klienter
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Hvis du bruger en Office 2007-produkter og -tjenester, skal du være opmærksom på, at understøttelse af disse programmer er ophørt. Overvej at flytte til Microsoft Cloud, startende med Microsoft 365. Brug denne artikel som et udgangspunkt for at gennemgå dine muligheder og planlægge din opgradering.
+Hvis du bruger Office 2007-produkter og -tjenester, skal du være opmærksom på, at support til disse programmer er ophørt. Overvej at flytte til Microsoft-cloudmiljøet– startende med Microsoft 365. Brug denne artikel som udgangspunkt for at gennemse dine muligheder og planlægge opgraderingen.
       
-## <a name="office-2007-planning-roadmaps"></a>Office 2007-planlægningsoversigter
+## <a name="office-2007-planning-roadmaps"></a>planplaner for Office 2007
   
-Support til Office 2007-produkter og -tjenester er ophørt. Følgende oversigter kan hjælpe dig med at planlægge din opgradering nu.
+Support er ophørt for Office 2007-produkter og -tjenester. Følgende oversigter kan hjælpe dig med at planlægge opgraderingen nu.
 
 |**Planlægning af indhold**|**Dato for ophør af support**|
 |:-----|:-----|
-|[Office end of support 2007](/DeployOffice/office-2007-end-support-roadmap) <br/> |10. oktober 2017  <br/> |
-|[Exchange end of support 2007](exchange-2007-end-of-support.md) <br/> |11. april 2017  <br/> |
-|[SharePoint oversigt over ophør af support til Server 2007](sharepoint-2007-end-of-support.md) <br/> |10. oktober 2017  <br/> |
-|[Project oversigt over ophør af support til Server 2007](project-server-2007-end-of-support.md) <br/> |10. oktober 2017  <br/> |
-|[Opgradere fra Office Communications Server](/SkypeForBusiness/plan-your-deployment/upgrade) <br/> |8. januar 2018  <br/> |
-|[PerformancePoint Server end of support 2007](pps-2007-end-of-support.md) <br/> |9. januar 2018  <br/> |
+|[køreplan for ophør af support Office 2007](/DeployOffice/office-2007-end-support-roadmap) <br/> |10. oktober 2017  <br/> |
+|[køreplan for ophør af support Exchange 2007](exchange-2007-end-of-support.md) <br/> |11. april 2017  <br/> |
+|[køreplan for ophør af support til SharePoint Server 2007](sharepoint-2007-end-of-support.md) <br/> |10. oktober 2017  <br/> |
+|[køreplan for ophør af support til Project Server 2007](project-server-2007-end-of-support.md) <br/> |10. oktober 2017  <br/> |
+|[Opgrader fra Office Communications Server](/SkypeForBusiness/plan-your-deployment/upgrade) <br/> |8. januar 2018  <br/> |
+|[køreplan for ophør af support PerformancePoint Server 2007](pps-2007-end-of-support.md) <br/> |9. januar 2018  <br/> |
    
-Når understøttelsen af et Microsoft-produkt stopper, findes der ikke længere:
+Når supporten til et Microsoft-produkt ophører, er der ikke flere:
 - Nye sikkerhedsopdateringer
-- Nye ikke-sikkerhedsbaserede opdateringer
-- Gratis eller betalte assisterede supportmuligheder tilgængelige (herunder kundesupportaftaler)
-- Nye tekniske opdateringer af onlineindhold
+- Nye ikke-sikkerhedsrelaterede opdateringer
+- Gratis eller betalte muligheder for assisteret support (herunder brugerdefinerede supportaftaler)
+- Nye opdateringer af teknisk indhold online
 
-Uanset om du er en virksomhedsorganisation eller en enkelt privat bruger, har du flere muligheder, du bør overveje.
+Uanset om du er en virksomhedsorganisation eller en individuel privat bruger, har du flere muligheder at overveje.
 
-## <a name="im-a-home-user-what-do-i-do"></a>Jeg er privat bruger. Hvad gør jeg?
+## <a name="im-a-home-user-what-do-i-do"></a>Jeg er hjemmebruger. Hvad skal jeg gøre?
 
-Hvis du bruger en Office 2007-produkter og -programmer derhjemme, skal du se [disse oplysninger](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do).
+Hvis du bruger Office 2007-produkter og -programmer derhjemme, kan du se [disse oplysninger](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do).
      
 ## <a name="related-topics"></a>Relaterede emner
 

@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,23 +13,23 @@ ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Forstå Contoso Corporation som en virksomhed og den lagdelt struktur i virksomhedens kontorer i hele verden.
-ms.openlocfilehash: 9c14849d09dc4adb75630dffd86d00d7bc766545
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Forstå Contoso Corporation som en virksomhed og den niveauinddelte struktur af dets verdensomspændende kontorer.
+ms.openlocfilehash: ec9df867252fe672f73dc7387c996f23ba476726
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587455"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093454"
 ---
 # <a name="overview-of-contoso-corporation"></a>Oversigt over Contoso Corporation
 
-Contoso Corporation er en multinational virksomhed med hovedkontor i Paris. Virksomheden er en produktions-, salgs- og supportorganisation med mere end 100.000 produkter.
+Contoso Corporation er en multinational virksomhed med hjemsted i Paris. Virksomheden er en produktions-, salgs- og supportorganisation med mere end 100.000 produkter.
 
 ## <a name="contoso-around-the-world"></a>Contoso over hele verden
 
-Figur 1 viser hovedkontoret i Paris og det regionale hub og satellitkontorer på forskellige kontinenter.
+Figur 1 viser hovedkontoret i Paris og regionale hub- og satellitkontorer på forskellige kontinenter.
 
-![Contoso-kontorer over hele verden.](../media/contoso-overview/contoso-overview-fig1.png)
+![Contoso kontorer rundt om i verden.](../media/contoso-overview/contoso-overview-fig1.png)
 
 **Figur 1: Contoso-kontorer over hele verden**
  
@@ -37,44 +37,44 @@ Contoso har tre niveauer af kontorer:
 
 - Headquarters
 
-  Contoso's hovedkvarter er et virksomheds campus på udkanten af Paris med masser af bygninger til administrative, tekniske og produktionsfaciliteter. Alle Contoso-datacentrene og deres internettilstedeværelse ligger i Paris's hovedkvarter.
+  Contoso hovedkvarter er en corporate campus i udkanten af Paris med snesevis af bygninger til administrative, tekniske og produktionsanlæg. Alle Contoso-datacentrene og dets internet-tilstedeværelse er beliggende i hovedkvarteret i Paris.
 
-  Hovedkontoret har 25.000 medarbejdere.
+  Hovedkvarteret har 25.000 medarbejdere.
 
 - Regionale hubs
 
-  Hubkontorer betjene et bestemt område i verden med 60 procent salg og supportmedarbejdere. Hver regional hub har forbindelse til Paris's hovedkvarter via et WAN-link med høj båndbredde.
+  Hubkontorer betjener et bestemt område i verden med 60 procent salg og supportpersonale. Hver regional hub er forbundet til Paris hovedkvarteret via et WAN-link med høj båndbredde.
 
-  De regionale hubs har i gennemsnit 2.000 medarbejdere.
+  De regionale hubs har i gennemsnit 2.000 arbejdstagere.
 
 - Satellitkontorer
 
-  Satellitkontorer indeholder 80 procent salg og supportmedarbejdere. De leverer en tilstedeværelse på stedet for Contoso-kunder i vigtige byer eller underområder. Hvert satellitkontor er forbundet til en regional hub via et WAN-link med høj båndbredde.
+  Satellitkontorer indeholder 80 procent salg og supportpersonale. De giver Contoso-kunder en tilstedeværelse på stedet i vigtige byer eller underregioner. Hvert satellitkontor er forbundet til en regional hub via et WAN-link med høj båndbredde.
 
-  Satellitkontorerne har i gennemsnit 250 medarbejdere.
+  Satellitkontorerne har i gennemsnit 250 arbejdstagere.
 
-Omkring 25 % af Contoso-medarbejderne er udelukkende mobile. De regionale hubs og satellitkontorer har en højere procentdel af disse medarbejdere. Contoso har et vigtigt forretningsmål for at yde bedre support til medarbejdere, der kun kan arbejde mobil.
+Ca. 25 procent af Contosos arbejdsstyrke er kun mobil. De regionale hubs og satellitkontorer har en højere procentdel af disse arbejdstagere. Contoso har et vigtigt forretningsmål at yde bedre support til arbejdstagere, der kun arbejder på mobilenheder.
 
-## <a name="design-considerations-for-microsoft-365-for-enterprise"></a>Designovervejelser i forbindelse Microsoft 365 til virksomheder
+## <a name="design-considerations-for-microsoft-365-for-enterprise"></a>Overvejelser i forbindelse med design af Microsoft 365 til virksomheder
 
-Contoso IT-arkitekterne har identificeret følgende faktorer for designkrav til implementering Microsoft 365 til virksomheder:
+Contoso-it-arkitekterne identificerede følgende faktorer med designkrav til udrulning af Microsoft 365 til virksomheder:
 
-- Flere geografiske placeringer med lokale regler og overholdelseskrav
-- Et centralt intranetdatacenter på hovedkontoret og de regionale programservere, der er vært for interne line of business-programmer
+- Flere geografiske placeringer med lokale regler og krav til overholdelse af angivne standarder
+- Et centralt intranetdatacenter i hovedkontoret og de regionale programservere, der er vært for interne line of business-programmer
 - En eksisterende Microsoft Endpoint Configuration Manager infrastruktur
-- En blanding af klientenheder, der kører Windows, Mac og Linux
-- En blanding af personlige og firmaejede mobilenheder, herunder iOS-telefoner (iPhone og iPad) og Android-smartphones og -tablets
-- Mange fjern- og mobilmedarbejdere
+- En blanding af klientcomputingenheder, der kører Windows, Mac og Linux
+- En blanding af personlige og virksomhedsejede mobilenheder, herunder iOS (iPhone og iPad) og Android-smartphones og tablets
+- Mange fjernarbejdere og mobile arbejdstagere
 - Mange forretningspartnere
-- En stor mængde kunder og andre fortrolige personlige oplysninger til at administrere og sikre
-- En stor mængde intellektuel ejendom af høj værdi i form af designspecifikationer til produkter og produktion af forretningshemmeligheder
+- En stor mængde kunde og andre fortrolige personlige oplysninger, der skal administreres og beskyttes
+- En stor mængde immaterielle rettigheder af høj værdi i form af designspecifikationer for produkter og fremstillingshemmeligheder
 
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide om den lokale [it-infrastruktur](contoso-infra-needs.md) for Contoso Corporation, og hvordan virksomhedens forretningsmæssige behov håndteres med Microsoft 365 til virksomheder.
+Få mere at vide om Contoso [Corporations it-infrastruktur i det lokale](contoso-infra-needs.md) miljø, og hvordan virksomhedens forretningsmæssige behov håndteres med Microsoft 365 for enterprise.
 
 ## <a name="see-also"></a>Se også
 
-[Microsoft 365 for Enterprise-oversigt](microsoft-365-overview.md)
+[Microsoft 365 til virksomhedsoversigt](microsoft-365-overview.md)
 
-[Test labvejledninger](m365-enterprise-test-lab-guides.md)
+[Vejledninger til testlaboratorier](m365-enterprise-test-lab-guides.md)

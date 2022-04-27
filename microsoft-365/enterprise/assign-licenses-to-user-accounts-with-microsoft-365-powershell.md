@@ -2,7 +2,7 @@
 title: Tildel Microsoft 365 licenser til brugerkonti med PowerShell
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 09/23/2020
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: I denne artikel kan du få mere at vide om, hvordan du bruger PowerShell til at tildele en Microsoft 365 licens til brugere uden licens.
-ms.openlocfilehash: 3c92b3baaa0b8d67a5d5a626951b296be2516436
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 7f01ac335941c2f7b0ba425f5aff963056ce0da8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941693"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091429"
 ---
 # <a name="assign-microsoft-365-licenses-to-user-accounts-with-powershell"></a>Tildel Microsoft 365 licenser til brugerkonti med PowerShell
 

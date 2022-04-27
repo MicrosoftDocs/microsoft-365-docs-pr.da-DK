@@ -19,13 +19,13 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid: MET150
 description: Få mere at vide om, hvordan du gennemser og godkender eller afviser licensanmodninger fra brugere for dit abonnement på Microsoft 365 til virksomheder.
-ms.date: 06/07/2021
-ms.openlocfilehash: cc1d03717cbdf0ce8768c630044990363feded8a
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.date: 04/22/2022
+ms.openlocfilehash: 802b84445c83c2831e5fd88598cc00fb8b0ab867
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841789"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098686"
 ---
 # <a name="manage-license-requests"></a>Administrer licensanmodninger
 
@@ -41,7 +41,7 @@ Hvis administratoren vil se og administrere licensanmodninger, skal du bruge fan
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være global administrator for at kunne udføre opgaverne i denne artikel. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+Du skal være global administrator for at kunne udføre opgaverne i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="use-your-own-request-process"></a>Brug din egen anmodningsproces
 

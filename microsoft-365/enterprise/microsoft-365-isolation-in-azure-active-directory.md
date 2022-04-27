@@ -1,8 +1,8 @@
 ---
-title: Microsoft 365 isolation og adgangskontrol i Azure Active Directory
+title: Microsoft 365 isolation og Access Control i Azure Active Directory
 ms.author: robmazz
 author: robmazz
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,39 +14,39 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: I denne artikel kan du lære, hvordan Isolation og adgangskontrol fungerer for at holde data for flere lejere isoleret fra hinanden Azure Active Directory.
+description: I denne artikel kan du få mere at vide om, hvordan Isolation og Access Control fungerer for at holde data for flere lejere isoleret fra hinanden inden for Azure Active Directory.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 11c2c488f0168815a1485f5833c5520259db0fa5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 409528847d04a55926138e49128f018b349da0a3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590366"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093871"
 ---
-# <a name="microsoft-365-isolation-and-access-control-in-azure-active-directory"></a>Microsoft 365 isolation og adgangskontrol i Azure Active Directory
+# <a name="microsoft-365-isolation-and-access-control-in-azure-active-directory"></a>Microsoft 365 isolation og Access Control i Azure Active Directory
 
-Azure Active Directory (Azure AD) blev udviklet til at hoste flere lejere på en meget sikker måde via logisk dataisolation. Adgang til Azure AD begrænses af et godkendelseslag. Azure AD isolerer kunder, der bruger lejerbeholdere som sikkerhedsgrænser for at beskytte en kundes indhold, så indholdet ikke kan tilgås eller kompromitteres af andre lejere. Der udføres tre kontroller af Azure AD's godkendelseslag:
+Azure Active Directory (Azure AD) er udviklet til at hoste flere lejere på en yderst sikker måde gennem logisk dataisolation. Adgang til Azure AD er lukket af et godkendelseslag. Azure AD isolerer kunder, der bruger lejerobjektbeholdere, som sikkerhedsgrænser for at beskytte en kundes indhold, så indholdet ikke kan tilgås eller kompromitteres af medlejere. Der udføres tre kontroller af Azure AD's godkendelseslag:
 
-- Er hovedstolen aktiveret for adgang til Azure AD-lejeren?
-- Er hovedstolen aktiveret for adgang til data i denne lejer?
-- Er hovedstolens rolle i denne lejer autoriseret til den type dataadgang, der anmodes om?
+- Er hovedprincipalen aktiveret for at få adgang til Azure AD-lejeren?
+- Er hovedprincipalen aktiveret for at få adgang til data i denne lejer?
+- Er sikkerhedsprincipalens rolle i denne lejer godkendt for den type dataadgang, der anmodes om?
 
-Intet program, bruger, server eller tjeneste kan få adgang til Azure AD uden den rette godkendelse og det rigtige token eller certifikat. Anmodninger afvises, hvis de ikke ledsages af korrekte legitimationsoplysninger.
+Ingen programmer, brugere, servere eller tjenester kan få adgang til Azure AD uden den korrekte godkendelse og det korrekte token eller certifikat. Anmodninger afvises, hvis de ikke ledsages af korrekte legitimationsoplysninger.
 
-Azure AD hoster effektivt hver lejer i sin egen beskyttede beholder med politikker og tilladelser til og i beholderen, der udelukkende ejes og administreres af lejeren.
+Azure AD hoster effektivt hver lejer i sin egen beskyttede objektbeholder med politikker og tilladelser til og i objektbeholderen, der udelukkende ejes og administreres af lejeren.
  
 ![Azure-objektbeholder.](../media/office-365-isolation-azure-container.png)
 
-Begrebet lejerbeholdere er dybt bekymrende i katalogtjenesten på alle lag, fra portaler hele vejen til vedvarende lagerplads. Selvom flere Azure AD-lejermetadata gemmes på den samme fysiske disk, er der ingen relation mellem de andre beholdere end dem, der er defineret af katalogtjenesten, som igen dikteres af lejeradministratoren. Der kan ikke være nogen direkte forbindelser til Azure AD-lagerplads fra et program eller en tjeneste, der anmoder om det, uden først at gå gennem godkendelseslaget.
+Begrebet lejerobjektbeholdere er dybt rodfæstet i katalogtjenesten på alle lag lige fra portaler hele vejen til vedvarende lager. Selv når flere Azure AD-lejermetadata er gemt på den samme fysiske disk, er der ingen relation mellem andre objektbeholdere end det, der er defineret af katalogtjenesten, hvilket igen dikteres af lejeradministratoren. Der kan ikke være direkte forbindelser til Azure AD-lageret fra nogen, der anmoder om et program eller en tjeneste, uden først at gå gennem godkendelseslaget.
 
-I eksemplet nedenfor har Contoso og Fabrikam begge separate, dedikerede beholdere, og selvom disse beholdere kan dele noget af den samme underliggende infrastruktur, f.eks. servere og lager, forbliver de adskilte og isolerede fra hinanden, og de er adskilt af lag af godkendelse og adgangskontrol.
+I eksemplet nedenfor har Både Contoso og Fabrikam separate, dedikerede objektbeholdere, og selvom disse objektbeholdere kan dele nogle af den samme underliggende infrastruktur, f.eks. servere og lager, forbliver de adskilt og isoleret fra hinanden og afspærret af lag af godkendelse og adgangskontrol.
  
-![Dedikerede Azure-objektbeholdere.](../media/office-365-isolation-azure-dedicated-containers.png)
+![Azure-dedikerede objektbeholdere.](../media/office-365-isolation-azure-dedicated-containers.png)
 
-Desuden er der ingen programkomponenter, der kan udføres inde fra Azure AD, og det er ikke muligt for én lejer at krænke integriteten af en anden lejer, få adgang til krypteringsnøgler fra en anden lejer eller læse rådata fra serveren.
+Derudover er der ingen programkomponenter, der kan udføres fra Azure AD, og det er ikke muligt for én lejer at håndhæve brud på integriteten af en anden lejer, få adgang til krypteringsnøgler i en anden lejer eller læse rådata fra serveren.
 
-Som standard tillades alle handlinger, der er udstedt af identiteter i andre lejere, ikke i Azure AD. Hver lejer er logisk isoleret i Azure AD via kravbaserede adgangskontrolelementer. Læsning og skrivning af katalogdata er begrænset til lejerbeholdere og af et internt abstraktionslag og et rollebaseret adgangskontrollag (RBAC), som sammen gennemtvinger lejeren som sikkerhedsgrænse. Alle mappedataadgangsanmodninger behandles af disse lag, og alle adgangsanmodninger i Microsoft 365 er under kontrol af den ovenstående logik.
+Azure AD giver som standard ikke alle handlinger, der er udstedt af identiteter i andre lejere. Hver lejer er logisk isoleret i Azure AD via kravsbaserede adgangskontrolelementer. Læsninger og skrivninger af katalogdata er begrænset til lejerobjektbeholdere og afgrænset af et internt abstraktionslag og et rollebaseret RBAC-lag (Access Control), der tilsammen gennemtvinger lejeren som sikkerhedsgrænse. Alle anmodninger om adgang til mappedata behandles af disse lag, og alle anmodninger om adgang i Microsoft 365 styres af ovenstående logik.
 
-Azure AD har nordamerika, amerikanske myndigheder, EU, Tyskland og World Wide partitioner. En lejer findes i en enkelt partition, og partitioner kan indeholde flere lejere. Partitionsoplysninger indsamles væk fra brugerne. En given partition (herunder alle lejerne i den) replikeres til flere datacentre. Partitionen for en lejer vælges ud fra egenskaberne for lejeren (f.eks. landekoden). Hemmeligheder og andre følsomme oplysninger i hver partition krypteres med en dedikeret nøgle. Tasterne genereres automatisk, når der oprettes en ny partition.
+Azure AD har Nordamerika, amerikanske myndigheder, EU, Tyskland og partitioner i hele verden. Der findes en lejer i en enkelt partition, og partitioner kan indeholde flere lejere. Partitionsoplysninger abstrakteres væk fra brugere. En given partition (herunder alle lejere i den) replikeres til flere datacentre. Partitionen for en lejer vælges på baggrund af lejerens egenskaber (f.eks. landekoden). Hemmeligheder og andre følsomme oplysninger i hver partition krypteres med en dedikeret nøgle. Nøglerne genereres automatisk, når der oprettes en ny partition.
 
-Azure AD-systemfunktionaliteter er en entydig forekomst for hver brugersession. Azure AD bruger desuden krypteringsteknologier til at levere isolation af delte systemressourcer på netværksniveau for at forhindre uautoriseret og utilsigtet overførsel af oplysninger.
+Funktioner i Azure AD-systemet er en entydig forekomst af hver brugersession. Desuden bruger Azure AD krypteringsteknologier til at isolere delte systemressourcer på netværksniveau for at forhindre uautoriseret og utilsigtet overførsel af oplysninger.

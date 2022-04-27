@@ -2,8 +2,8 @@
 title: Føj søgeresultater til et korrektursæt
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,13 +17,13 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery(Premium)-sagsgennemgangssæt.
-ms.openlocfilehash: d41697f18360b277b060dd537020f9e04ef341ec
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om, hvordan du føjer søgeresultater eller eksempler af disse søgeresultater til et eDiscovery-sæt (Premium) til sagsgennemgang.
+ms.openlocfilehash: cda1a7fcf33a5fc1b299fd2d66f7241ab1cef229
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997730"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100957"
 ---
 # <a name="add-search-results-to-a-review-set"></a>Føj søgeresultater til et korrektursæt
 
@@ -57,7 +57,7 @@ Når du føjer indholdet af en søgning til et eksisterende eller nyt korrekturs
 
 - **Indstillinger for hentning af samtale**: Elementer, der er føjet til korrektursættet, er aktiveret for trådede samtaler for at hjælpe med at gennemse indhold i forbindelse med frem og tilbage-samtalen. Du kan finde flere oplysninger [under Gennemse samtaler i eDiscovery (Premium)](conversation-review-sets.md).
 
-- **Aktivér hentning for moderne vedhæftede filer**: Brug denne indstilling til at inkludere moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemsyn. Du kan finde flere oplysninger om søgbare egenskaber, der er relateret til moderne vedhæftede filer, [i Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
+- **Aktivér hentning for moderne vedhæftede filer**: Brug denne indstilling til at inkludere moderne vedhæftede filer eller sammenkædede filer i samlingen til yderligere gennemsyn. Du kan finde flere oplysninger om søgbare egenskaber, der er relateret til moderne vedhæftede filer, [under Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-Advanced-eDiscovery.md).
 
 ## <a name="add-a-sample-to-a-review-set"></a>Føj et eksempel til et korrektursæt
 

@@ -2,8 +2,8 @@
 title: Føj data fra ét korrektursæt til et andet
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/05/2022
 audience: Admin
@@ -15,16 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du vælger dokumenter fra ét korrektursæt og arbejder med dem individuelt i et andet sæt i en Microsoft Purview eDiscovery (Premium)-sag.
+description: Få mere at vide om, hvordan du vælger dokumenter fra ét korrektursæt og arbejder med dem individuelt i et andet sæt i en Microsoft Purview eDiscovery-sag (Premium).
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: b87c9278b5009f6873414f8fc53d434c458c62ad
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 599af9e2060497738076cd702e9e3dd31f5db06d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995838"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094135"
 ---
 # <a name="add-data-to-a-review-set-from-another-review-set"></a>Føj data til et korrektursæt fra et andet korrektursæt
 
