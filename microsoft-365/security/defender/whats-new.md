@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 053326cacaeb2b4110f71edaa290ed10454aa720
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 56e22e0525324c59d2d62adaf2325edc3317ccd6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731642"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096044"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -46,10 +46,13 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescenteret](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
 
 
+## <a name="april-2022"></a>April 2022
+- (eksempelvisning) [Handlinger](advanced-hunting-take-action.md) kan nu udføres på mails direkte fra resultaterne af jagtforespørgslen. Mails kan flyttes til andre mapper eller slettes permanent. 
 
 ## <a name="march-2022"></a>Marts 2022
 
 - (eksempelvisning) Hændelseskøen er blevet forbedret med flere funktioner, der er designet til at hjælpe dine undersøgelser. Forbedringer omfatter funktioner som f.eks. mulighed for at søge efter hændelser efter id eller navn, angive et brugerdefineret tidsinterval og andre.
+
 
 ## <a name="december-2021"></a>December 2021
 

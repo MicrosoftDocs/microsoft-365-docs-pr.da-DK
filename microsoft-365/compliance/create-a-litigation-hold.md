@@ -2,8 +2,8 @@
 title: Opret en retslig fastfrysning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 8fdb5d8c388399a2ce93281947b5f14782db771b
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 00c7e809fd878b677947dc1db2a55c612ef04997
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997048"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097046"
 ---
 # <a name="create-a-litigation-hold"></a>Opret en retslig fastfrysning
 
@@ -42,10 +42,10 @@ Her er, hvad der sker, når du opretter en procesførelsesventeposition.
 
 ## <a name="assign-an-exchange-online-plan-2-license"></a>Tildel en Exchange Online Plan 2-licens
 
-Hvis du vil placere en Exchange Online-postkasse på Litigation-venteposition, skal den tildeles en Exchange Online Plan 2-licens. Hvis en postkasse tildeles en Exchange Online Plan 1-licens, skal du tildele den en separat Exchange onlinearkiveringslicens for at placere den i venteposition.
+Hvis du vil placere en Exchange Online postkasse i stridsposition, skal den tildeles en Exchange Online Plan 2-licens. Hvis en postkasse tildeles en Exchange Online Plan 1-licens, skal du tildele den en separat Exchange Online-arkivering licens for at placere den i venteposition.
 
 > [!NOTE]
-> For Office 365 Education organisationer understøttes bevarelse af procesførelse i Office 365 A1-abonnementer, som omfatter en Exchange Online Plan 1-licens med supplerende funktioner. Du kan få flere oplysninger i afsnittet "Exchange Onlinefunktioner" i [beskrivelsen af Office 365 Education-tjenesten](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features).
+> For Office 365 Education organisationer understøttes bevarelse af procesførelser i Office 365 A1 abonnementer, som omfatter en Exchange Online Plan 1-licens med supplerende funktioner. Du kan få flere oplysninger i afsnittet "Exchange Online funktioner" i [beskrivelsen af Office 365 Education-tjenesten](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features).
 
 ## <a name="place-a-mailbox-on-litigation-hold"></a>Placer en postkasse i stridsposition
 

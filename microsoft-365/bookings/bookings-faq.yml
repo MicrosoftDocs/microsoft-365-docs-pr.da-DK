@@ -9,12 +9,12 @@ metadata:
   ms.service: bookings
   ms.localizationpriority: medium
   description: Microsoft Bookings ofte stillede spørgsmål.
-  ms.openlocfilehash: c904a60fafd980de7bc8559e5025538957fdd7b4
-  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+  ms.openlocfilehash: 6a61179849e01f60e46a53f12f1ad5c125987527
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64822810"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65096022"
 title: Microsoft Bookings ofte stillede spørgsmål
 summary: ''
 sections:
@@ -25,17 +25,16 @@ sections:
     answer: >
       Microsoft Bookings er en Microsoft 365 app, der gør det nemt at planlægge og administrere aftaler. Bookings inkluderer en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender, hvilket giver dine kunder fleksibilitet til at booke et tidspunkt, der fungerer bedst for dem. Automatiserede meddelelsesmails reducerer antallet af no-shows, og organisationer sparer tid med en reduktion i gentagne planlægningsopgaver. Bookings hjælper dig med nemt at udføre virtuelle aftaler via Skype eller Microsoft Teams og hjælper dig med at administrere den daglige planlægning via Bookings-appen i Teams. Med indbygget tilpasning er Bookings designet til at opfylde behovene i flere dele af en organisation.
   - question: >
+      Er Bookings tilgængeligt for mit abonnement?
+    answer: "Bookings er tilgængelig med følgende abonnementer: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 drevet af 21Vianet.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, Business Premium. Du kan bruge Bookings med en medfølgende iOS- og Android-app. Bookings er ikke tilgængelig som en separat app. Outlook Web App eller Outlook på internettet skal være aktiveret til at bruge Bookings, da der gemmes data i Outlook.\n\nEn Bookings-licens giver fuld funktionalitet, herunder oprettelse og administration af kalendere. Brugerne kan få vist og redigere eksisterende kalendere, når disse brugere tilføjes som medarbejdere med rollen Administrator eller Fremviser.\n"
+  - question: >
       Hvordan gør jeg bruge Microsoft Bookings?
     answer: >
       Bookings er en onlinetjeneste, så du behøver ikke at downloade noget. Du skal blot gå til appvælgeren i Microsoft 365 weboplevelse. Administratorer kan også bruge Bookings medfølgende app til at holde sig ajour med de nyeste oplysninger om kunder og deres aftaler.
   - question: >
-      Who har adgang til Microsoft Bookings?
-    answer: >
-      Bookings er som standard tilgængelig og aktiv for kunder over hele verden Microsoft 365 Business Premium, Microsoft 365 Business Standard, F1, F3, A3, A5, E3 og E5. Bookings fås også i Office 365 drevet af 21Vianet.
-  - question: >
       Kan mine kunder se min personlige kalender eller virksomhedskalender?
     answer: >
-      Dine kunder kan kun se den Bookings kalender, som du publicerer online for de tjenester, tidspunkter og medarbejdere, du vælger at tilmelde dig.
+      Dine kunder kan kun se den Bookings kalender, som du publicerer online for de tjenester, tidspunkter og medarbejdere, du vælger.
   - question: >
       Hvordan gør jeg ændre en reserverbar attribut under Administrer personale?
     answer: >
@@ -43,7 +42,7 @@ sections:
   - question: >
       Hvordan får slutbrugerne adgang til Bookings-appen?
     answer: >
-      Alle, der har licens til Microsoft 365 Business Premium, Microsoft 365 Business Standard, A3, A5, E3, E5, F1, F3 eller tilføjes som medarbejder i rollerne Administrator eller Fremviser, kan få adgang til Bookings i appvælgeren i Microsoft 365  Weboplevelse. Der er også en medfølgende app tilgængelig til iOS og Android.
+      Alle, der har licens til et understøttet abonnement, eller som tilføjes som medarbejder i rollerne Administrator eller Fremviser, kan få adgang til Bookings i appvælgeren i Microsoft 365 weboplevelse. Der er også en medfølgende app tilgængelig til iOS og Android.
   - question: >
       Kan jeg bruge Bookings på mit eget websted?
     answer: >
@@ -55,7 +54,7 @@ sections:
   - question: >
       Kan vores it-afdeling styre, om slutbrugerne har adgang til Bookings?
     answer: >
-      Bookings er som standard tilgængelig i lejerne Microsoft 365 Business Premium, Microsoft 365 Business Standard, M365 A3/A5 og E3/E5, men administratorer kan slå den fra i Microsoft 365 Administration, hvis de Vælge. Det gør du ved [at følge disse instruktioner](turn-bookings-on-or-off.md).
+      Administratorer kan slå Bookings fra i Microsoft 365 Administration, hvis de vælger det. Det gør du ved [at følge disse instruktioner](turn-bookings-on-or-off.md).
 
 
       Hvis en kunde vil deaktivere adgang til Bookings for visse berettigede licenser i sin lejer, kan vedkommende enten bruge en gruppepolitik til at begrænse licenser eller implementere en OWA-postkassepolitik, der begrænser, hvem der kan oprette nye Bookings kalendere.
@@ -118,11 +117,8 @@ sections:
           - teknisk support
           - juridiske korrekturer
           - Faciliteter
-- name: Priser og licenser
+- name: Kontooplysninger
   questions:
-  - question: >
-      Hvordan gør jeg få Microsoft Bookings?
-    answer: "Bookings er tilgængelig med følgende abonnementer: \n- Office 365: A3, A5, E3, E5, F1, F3\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Standard, Business Premium. Du kan bruge Bookings med en medfølgende iOS- og Android-app. Bookings er ikke tilgængelig som en separat app. Outlook Web App eller Outlook på internettet skal være aktiveret til at bruge Bookings, da der gemmes data i Outlook.\n\nEn Bookings licens giver produktet fuld funktionalitet, herunder oprettelse og administration af kalendere. Det gør det også muligt for brugerne at få vist og redigere eksisterende kalendere, når disse brugere tilføjes som medarbejdere med administrator- eller seerrollen.\n"
   - question: >
       Skal jeg overføre min mailkonto fra min aktuelle udbyder til Microsoft 365?
     answer: >
@@ -290,11 +286,6 @@ sections:
       Hvis du får vist fejlmeddelelsen "Denne medarbejders kalender kan ikke synkroniseres", indeholder dette afsnit flere fejlfindingsprocedurer, der kan hjælpe dig med at løse fejlen.
 
 
-      > [!NOTE]
-
-      > Bookings er som standard slået til for kunder, der har abonnementerne Microsoft 365 Business Standard, Microsoft 365 A3 eller Microsoft 365 A5. Bookings er også tilgængelig for kunder, der har Office 365 Enterprise E3 og Office 365 Enterprise E5, men de er som standard slået fra. For at komme i gang skal du se [Få adgang til Microsoft Bookings](get-access.md). Hvis du vil slå Bookings til eller fra, skal du se [Slå Bookings til eller fra for din organisation](turn-bookings-on-or-off.md).
-
-
       Hvis du leder efter oplysninger om synkronisering af medarbejdernes kalender, skal du se [Føj personale til Bookings](add-staff.md). Sørg for, at **hændelser i kalenderen, der påvirker tilgængeligheden**, er markeret på siden **Personaleoplysninger**.
   - question: >
       Medarbejderen skal ændre sine kalendertilladelser
@@ -354,4 +345,4 @@ sections:
 
 
       Hvis du stadig får vist denne fejl efter en længere periode, eller hvis du ofte ser den, skal du kontakte support.
-additionalContent: "\n## <a name=\"additional-resources\"></a>Flere ressourcer\n\n- [Microsoft Bookings udvider tilgængeligheden i virksomheder blog](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Sådan Microsoft Bookings Works-video](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Begynd at bruge Microsoft Bookings](get-access.md)\n\n- [Slå Microsoft Bookings til eller fra](turn-bookings-on-or-off.md)\n\n- [Tilføj brugere enkeltvist eller samlet](../admin/add-users/add-users.md)\n\n- [Føj medarbejdere til Bookings](add-staff.md)\n\n- [API-komponenter, der skal automatiseres, når skabelonen er defineret](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [URL-adresse til Bookings kalender til visning](https://outlook.office.com/bookings/calendar)\n\n- [Bookings politikker for overholdelse af angivne standarder](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Tilpas og publicer din bookingside](customize-booking-page.md)\n\n- [Konfiguration af lejerpostkasse](/powershell/module/exchange/get-accepteddomain)\n\n- [Gruppe Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings målepunkter og aktivitetssporing](metrics-and-activity-tracking.md)\n\n- [Offentlig køreplan for M365](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"
+additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Microsoft Bookings udvider tilgængeligheden i virksomheder blog](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Sådan Microsoft Bookings Works-video](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Begynd at bruge Microsoft Bookings](get-access.md)\n\n- [Slå Microsoft Bookings til eller fra](turn-bookings-on-or-off.md)\n\n- [Tilføj brugere enkeltvist eller samlet](../admin/add-users/add-users.md)\n\n- [Føj medarbejdere til Bookings](add-staff.md)\n\n- [API-komponenter, der skal automatiseres, når skabelonen er defineret](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [URL-adresse til Bookings kalender til visning](https://outlook.office.com/bookings/calendar)\n\n- [Bookings politikker for overholdelse af angivne standarder](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Tilpas og publicer din bookingside](customize-booking-page.md)\n\n- [Konfiguration af lejerpostkasse](/powershell/module/exchange/get-accepteddomain)\n\n- [Gruppe Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings målepunkter og aktivitetssporing](metrics-and-activity-tracking.md)\n\n- [Offentlig køreplan for M365](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"

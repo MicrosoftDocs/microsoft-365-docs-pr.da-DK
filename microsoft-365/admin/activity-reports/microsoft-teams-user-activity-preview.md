@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: ad2701e10e6b71f6fdb6a7d9ccf4a6b795a38b94
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: a2bfa434d5a564307498f621cb5105f411daff4d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65014996"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65087211"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
 
@@ -54,8 +54,8 @@ For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de s
 |Brugernavn  <br/> |Brugerens mailadresse. Du kan få vist den faktiske mailadresse eller gøre dette felt anonymt.   <br/> |
 |Lejernavn  <br/> |Navnet på en intern eller ekstern lejer, hvor en bruger tilhører.   <br/> <br/> Hvis en bruger tilhører en ekstern lejer, beregnes tilsvarende datamålepunkter (f.eks. postmeddelelser, svarmeddelelser osv.) på baggrund af deres interaktioner i delte kanaler i administratorens lejer. Interaktioner, der udføres af brugeren i deres egen lejer (uden for delte kanaler for den angivne lejer), tages ikke i betragtning som administratorforbrugsrapport for den angivne lejer.  |
 |Lejernavne for delte kanaler   <br/> |Navnene på interne eller eksterne lejere på delte kanaler, hvor brugeren deltog.   <br/> |
-|Kanalmeddelelser   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en teamchat i den angivne tidsperiode.   <br/> |
-|Indlæg   <br/> |Antallet af meddelelser i alle kanaler i den angivne tidsperiode <br/> |
+|Kanalmeddelelser   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en teamchat i den angivne tidsperiode. Dette omfatter oprindelige indlæg og svar.   <br/> |
+|Indlæg   <br/> |Antallet af meddelelser i alle kanaler i den angivne tidsperiode. Et indlæg er den oprindelige meddelelse i en teamschat.<br/> |
 |Svar   <br/> |Antallet af besvarede meddelelser i alle kanaler i den angivne tidsperiode. <br/> |
 |Vigtige meddelelser    <br/> |Antallet af hastemeddelelser i den angivne tidsperiode. <br/> |
 |Chatbeskeder   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en privat chat i den angivne tidsperiode.  <br/> |

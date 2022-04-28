@@ -2,8 +2,8 @@
 title: Søg i overvågningsloggen for at foretage fejlfinding af almindelige scenarier
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du bruger søgeværktøjet Microsoft 365 overvågningslog til at foretage fejlfinding af almindelige supportproblemer for mailkonti.
-ms.openlocfilehash: dd82c735411592a3cfa7cb79ae4d1ce6f97798b4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 57d8cfd1cbb07300b7cd69fb78ff6a0b33b302f5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997994"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097178"
 ---
 # <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Søg i overvågningsloggen for at undersøge almindelige supportproblemer
 
@@ -46,7 +46,7 @@ Hvert af de fejlfindingsscenarier, der er beskrevet i denne artikel, er baseret 
 
 ### <a name="permissions-required-to-use-the-audit-log-search-tool"></a>Tilladelser, der kræves for at bruge søgeværktøjet til overvågningslog
 
-Du skal være tildelt rollen View-Only Overvågningslogge eller Overvågningslogfiler i Exchange Online for at kunne søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
+Du skal være tildelt rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at kunne søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
 
 ### <a name="running-audit-log-searches"></a>Kører søgninger i overvågningslog
 
@@ -87,7 +87,7 @@ Sådan konfigurerer du en søgeforespørgsel i overvågningsloggen for dette sce
 **Aktiviteter:** Hvis det er relevant for din sag, skal du vælge en bestemt aktivitet, du vil søge efter. I forbindelse med fejlfinding af kompromitterede konti kan du overveje at vælge den bruger, der **er logget på postkasseaktiviteten** under **Exchange postkasseaktiviteter**. Dette returnerer overvågningsposter, der viser den IP-adresse, der blev brugt, da du logger på postkassen. Ellers skal du lade feltet være tomt for at returnere overvågningsposter for alle aktiviteter. 
 
 > [!TIP]
-> Hvis du lader feltet være tomt, **returneres UserLoggedIn-aktiviteter** , som er en Azure Active Directory-aktivitet, der angiver, at nogen har logget på en brugerkonto. Brug filtrering i søgeresultaterne til at få vist **UserLoggedIn-overvågningsposterne** .
+> Hvis du lader feltet være tomt, **returneres UserLoggedIn-aktiviteter**, som er en Azure Active Directory aktivitet, der angiver, at en person har logget på en brugerkonto. Brug filtrering i søgeresultaterne til at få vist **UserLoggedIn-overvågningsposterne** .
 
 **Startdato** og **slutdato:** Vælg et datointerval, der skal gælde for din undersøgelse.
 
@@ -99,7 +99,7 @@ Når du har kørt søgningen, vises IP-adressen for hver aktivitet i kolonnen **
 
 ## <a name="determine-who-set-up-email-forwarding-for-a-mailbox"></a>Find ud af, hvem der konfigurerer videresendelse af mail for en postkasse
 
-Når videresendelse af mail er konfigureret for en postkasse, videresendes mails, der sendes til postkassen, til en anden postkasse. Meddelelser kan videresendes til brugere i eller uden for din organisation. Når videresendelse af mail er konfigureret på en postkasse, er den underliggende Exchange Online-cmdlet, der bruges, **Set-Mailbox**.
+Når videresendelse af mail er konfigureret for en postkasse, videresendes mails, der sendes til postkassen, til en anden postkasse. Meddelelser kan videresendes til brugere i eller uden for din organisation. Når videresendelse af mail er konfigureret på en postkasse, er den underliggende Exchange Online cmdlet, der bruges, **Set-Mailbox**.
 
 Sådan konfigurerer du en søgeforespørgsel i overvågningsloggen for dette scenarie:
 
@@ -176,7 +176,7 @@ Som tidligere forklaret kan administratorer muligvis gendanne slettede elementer
 
 ## <a name="determine-if-a-user-created-an-inbox-rule"></a>Find ud af, om en bruger har oprettet en indbakkeregel
 
-Når brugerne opretter en indbakkeregel for deres Exchange Online-postkasse, gemmes der en tilsvarende overvågningspost i overvågningsloggen. Du kan få flere oplysninger om indbakkeregler under:
+Når brugerne opretter en indbakkeregel for deres Exchange Online postkasse, gemmes der en tilsvarende overvågningspost i overvågningsloggen. Du kan få flere oplysninger om indbakkeregler under:
 
 - [Brug indbakkeregler i Outlook på internettet](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
 - [Administrer mails i Outlook ved hjælp af regler](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
@@ -209,7 +209,7 @@ d. Feltet **UserId** angiver den bruger, der oprettede den indbakkeregel, der er
 
 ## <a name="investigate-why-there-was-a-successful-login-by-a-user-outside-your-organization"></a>Undersøg, hvorfor en bruger uden for organisationen lykkedes med at logge på
 
-Når du gennemser overvågningsposter i overvågningsloggen, kan du få vist poster, der angiver, at en ekstern bruger er blevet godkendt af Azure Active Directory og er logget på din organisation. En administrator i contoso.onmicrosoft.com kan f.eks. se en overvågningspost, der viser, at en bruger fra en anden organisation (f.eks. fabrikam.onmicrosoft.com) er logget på contoso.onmicrosoft.com. På samme måde kan du muligvis se overvågningsposter, der angiver, at brugere med en Microsoft-konto (MSA), f.eks. en Outlook.com eller Live.com, er logget på din organisation. I disse situationer er den overvågede aktivitet **bruger logget på**. 
+Når du gennemser overvågningsposter i overvågningsloggen, kan du se poster, der angiver, at en ekstern bruger er blevet godkendt af Azure Active Directory og er logget på din organisation. En administrator i contoso.onmicrosoft.com kan f.eks. se en overvågningspost, der viser, at en bruger fra en anden organisation (f.eks. fabrikam.onmicrosoft.com) er logget på contoso.onmicrosoft.com. På samme måde kan du muligvis se overvågningsposter, der angiver, at brugere med en Microsoft-konto (MSA), f.eks. en Outlook.com eller Live.com, er logget på din organisation. I disse situationer er den overvågede aktivitet **bruger logget på**. 
 
 Denne funktionsmåde er tilsigtet. Azure Active Directory (Azure AD), katalogtjenesten, tillader noget, der kaldes *pass-through-godkendelse*, når en ekstern bruger forsøger at få adgang til et SharePoint websted eller en OneDrive placering i din organisation. Når den eksterne bruger forsøger at gøre dette, bliver vedkommende bedt om at angive sine legitimationsoplysninger. Azure AD bruger legitimationsoplysningerne til at godkende brugeren, hvilket betyder, at det kun er Azure AD, der bekræfter, at brugeren er den, de siger, de er. Indikationen af det vellykkede logon i overvågningsposten er resultatet af, at Azure AD godkender brugeren. Det vellykkede logon betyder ikke, at brugeren kunne få adgang til ressourcer eller udføre andre handlinger i din organisation. Det angiver kun, at brugeren blev godkendt af Azure AD. Hvis en pass-through-bruger skal have adgang til SharePoint eller OneDrive ressourcer, skal en bruger i organisationen udtrykkeligt dele en ressource med den eksterne bruger ved at sende vedkommende en invitation til deling eller et anonymt delingslink. 
 
@@ -238,7 +238,7 @@ Her er to eksempler på scenarier, der kan resultere i en vellykket bruger, der 
 
   - En bruger med en arbejds- eller skolekonto i en organisation (f.eks. pilarp@fabrikam.onmicrosoft.com) har forsøgt at få adgang til et SharePoint websted i contoso.onmicrosoft.com, og der er ikke en tilsvarende gæstebrugerkonto til pilarp@fabrikam.com i contoso.onmicrosoft.com.
 
-### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Tip til undersøgelse af vellykkede logon som følge af pass-through-godkendelse
+### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Tips til undersøgelse af vellykkede logon som følge af pass-through-godkendelse
 
 - Søg i overvågningsloggen efter aktiviteter, der er udført af den eksterne bruger, som er identificeret i den **bruger, der er logget på** overvågningsposten. Skriv UPN'et for den eksterne bruger i feltet **Brugere** , og brug et datointerval, hvis det er relevant for dit scenarie. Du kan f.eks. oprette en søgning ved hjælp af følgende søgekriterier:
 
@@ -269,7 +269,7 @@ Hvis du vil hente overvågningslogposter for postkasser for ikke-E5-brugere, kan
 
 ## <a name="search-for-mailbox-activities-performed-in-a-specific-mailbox-including-shared-mailboxes"></a>Søg efter postkasseaktiviteter, der udføres i en bestemt postkasse (herunder delte postkasser)
 
-Når du bruger rullelisten **Brugere** i søgeværktøjet til overvågningslog i overholdelsescenter eller kommandoen **Search-UnifiedAuditLog -UserIds** i Exchange Online PowerShell, kan du søge efter aktiviteter, der udføres af en bestemt bruger. I forbindelse med overvågningsaktiviteter for postkasser søger denne type søgning efter aktiviteter, der er udført af den angivne bruger. Det garanterer ikke, at alle aktiviteter, der udføres i den samme postkasse, returneres i søgeresultaterne. En søgning i en overvågningslog returnerer f.eks. ikke overvågningsposter for aktiviteter, der er udført af en stedfortræderbruger, fordi søgning efter postkasseaktiviteter, der udføres af en bestemt bruger, ikke returnerer aktiviteter, der er udført af en stedfortræderbruger, som har fået tildelt tilladelser til at få adgang til en anden brugers postkasse. En stedfortræderbruger er en person, der har fået tildelt tilladelsen SendAs, SendOnBehalf eller FullAccess-postkassen til en anden brugers postkasse.
+Når du bruger rullelisten **Brugere** i søgeværktøjet til overvågningslog i overholdelsescenter eller kommandoen **Search-UnifiedAuditLog -UserIds** i Exchange Online PowerShell, kan du søge efter aktiviteter, der er udført af en bestemt bruger. I forbindelse med overvågningsaktiviteter for postkasser søger denne type søgning efter aktiviteter, der er udført af den angivne bruger. Det garanterer ikke, at alle aktiviteter, der udføres i den samme postkasse, returneres i søgeresultaterne. En søgning i en overvågningslog returnerer f.eks. ikke overvågningsposter for aktiviteter, der er udført af en stedfortræderbruger, fordi søgning efter postkasseaktiviteter, der udføres af en bestemt bruger, ikke returnerer aktiviteter, der er udført af en stedfortræderbruger, som har fået tildelt tilladelser til at få adgang til en anden brugers postkasse. En stedfortræderbruger er en person, der har fået tildelt tilladelsen SendAs, SendOnBehalf eller FullAccess-postkassen til en anden brugers postkasse.
 
 Hvis du bruger rullelisten **Bruger** i søgeværktøjet til overvågningslog eller **Search-UnifiedAuditLog -UserIds, returneres** der heller ikke resultater for aktiviteter, der udføres i en delt postkasse.
 

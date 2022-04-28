@@ -1,9 +1,9 @@
 ---
-title: Konfigurer en connector for at arkivere ICE Connect Chat-data i Microsoft 365
+title: Konfigurer en connector til arkivering af ICE Forbind Chat-data i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -11,35 +11,35 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 ICE Connect Chat DataParser-connector til at importere og arkivere ICE Connect Chat-data i Microsoft 365.
-ms.openlocfilehash: fcc700546a15c6dad39b9ebcaeb7385194727016
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 ICE Forbind Chat DataParser-connector til at importere og arkivere ICE Forbind Chat-data i Microsoft 365.
+ms.openlocfilehash: 106b425886b6294f7c96ead439be30c5e61030a0
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998073"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097222"
 ---
-# <a name="set-up-a-connector-to-archive-ice-connect-chat-data"></a>Konfigurer en connector til arkivering af ICE Connect Chat-data
+# <a name="set-up-a-connector-to-archive-ice-connect-chat-data"></a>Konfigurer en connector til arkivering af ICE Forbind Chat-data
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug [ICE DataParser](https://www.17a-4.com/ice-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra ICE Connect Chat til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en ICE Chat-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. ICE DataParser-connectoren konverterer ICE Connect Chat-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
+Brug [ICE DataParser](https://www.17a-4.com/ice-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra ICE Forbind Chat til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en ICE Chat-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. ICE DataParser-connectoren konverterer ICE Forbind Chat-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når ICE Connect Chat-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en ICE DataParser-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når ICE Forbind Chat-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en ICE DataParser-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-ice-chat-data"></a>Oversigt over arkivering af ICE Chat-data
 
-I følgende oversigt forklares processen med at bruge en dataconnector til at arkivere ICE Connect Chat-data i Microsoft 365.
+I følgende oversigt forklares processen med at bruge en dataconnector til at arkivere ICE Forbind Chat-data i Microsoft 365.
 
-![Arkivering af arbejdsproces for ICE Connect Chat-data fra 17a-4.](../media/ICEChatDataParserConnectorWorkflow.png)
+![Arkivering af arbejdsproces for ICE Forbind Chat-data fra 17a-4.](../media/ICEChatDataParserConnectorWorkflow.png)
 
 1. Din organisation arbejder sammen med 17a-4 om at konfigurere ICE-dataparser.
 
-2. Ice Connect Chat-elementer indsamles jævnligt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
+2. Ice Forbind Chat-elementer indsamles jævnligt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
 3. Den ICE DataParser-connector, du opretter på Microsoft Purview-overholdelsesportalen, opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
-4. Der oprettes en undermappe i mappen Indbakke med navnet **ICE DataParser** i brugerpostkasserne, og ICE Connect Chat-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle ICE Connect Chat-elementer indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
+4. Der oprettes en undermappe i mappen Indbakke med navnet **ICE DataParser** i brugerpostkasserne, og ICE Forbind Chat-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle ICE Forbind Chat-elementer indeholder denne ejendom, som udfyldes med mailadressen på hver enkelt deltager.
 
 ## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 
@@ -47,11 +47,11 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Den bruger, der opretter ICE DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-an-ice-dataparser-connector"></a>Trin 1: Konfigurer en ICE DataParser-connector
 
-Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til ICE Connect Chat-data.
+Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til ICE Forbind Chat-data.
 
 1. Gå til , <https://compliance.microsoft.com> og klik derefter på **Data connectorsICE** >  **DataParser**.
 

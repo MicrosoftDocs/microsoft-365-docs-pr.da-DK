@@ -2,7 +2,7 @@
 title: Microsoft 365 principper for netværksforbindelse
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 6/23/2020
 audience: Admin
 ms.topic: conceptual
@@ -17,12 +17,12 @@ f1.keywords:
 - NOCSH
 description: Denne artikel indeholder den nyeste vejledning i sikker optimering af Microsoft 365 netværksforbindelse.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e92f30c356ae782ba7d4d3bb779b744bccebf320
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 082061eeeb3443068eaa13cb0b91f8e93adefb21
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944475"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078773"
 ---
 # <a name="microsoft-365-network-connectivity-principles"></a>Microsoft 365 principper for netværksforbindelse
 

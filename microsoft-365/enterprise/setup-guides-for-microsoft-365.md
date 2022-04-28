@@ -2,7 +2,7 @@
 title: Installationsvejledninger til Microsoft 365 og Office 365 tjenester
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Få trinvise værktøjer til at planlægge, overføre og implementere funktionerne i din lejers licenser. Find en vejledning til, hvordan du konfigurerer en tjeneste eller en app, du skal køre.
-ms.openlocfilehash: b5ac1347870a7e49d0bbf0a277524647d046a312
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6018a490cf77498b1767e7e269b17937f11ae011
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934285"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097354"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365 og Office 365 tjenester
 

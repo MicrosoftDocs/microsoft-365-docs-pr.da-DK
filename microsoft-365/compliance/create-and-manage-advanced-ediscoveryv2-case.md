@@ -2,8 +2,8 @@
 title: Opret og administrer eDiscovery-sager (Premium) i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/08/2022
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du opretter og administrerer Microsoft Purview eDiscovery-sager (Premium). Det første trin er at oprette en sag og begynde at bruge funktioner og funktionalitet i eDiscovery (Premium).
-ms.openlocfilehash: 294a07c2f43559943482c3e17c98289f41dff7bc
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e5773f54d0ce6efbfc5aae22eb616f96c3777eda
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999272"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096980"
 ---
 # <a name="create-and-manage-an-ediscovery-premium-case"></a>Opret og administrer en eDiscovery-sag (Premium)
 
@@ -65,7 +65,7 @@ Udfør følgende trin for at oprette en sag og tilføje medlemmer. Den bruger, d
 
 ## <a name="manage-the-workflow"></a>Administrer arbejdsprocessen
 
-Her er en grundlæggende arbejdsproces, der er i overensstemmelse med [almindelige eDiscovery-fremgangsmåder](advanced-ediscovery-edrm.md), så du kan komme i gang med at bruge eDiscovery (Premium). I hvert af disse trin fremhæver vi også nogle udvidede funktioner i eDiscovery (Premium), som du kan udforske.
+Her er en grundlæggende arbejdsproces, der passer til [almindelige eDiscovery-fremgangsmåder](advanced-ediscovery-edrm.md), så du kan komme i gang med at bruge eDiscovery (Premium). I hvert af disse trin fremhæver vi også nogle udvidede funktioner i eDiscovery (Premium), som du kan udforske.
 
 ![eDiscovery-arbejdsproces (Premium).](../media/AeDWorkflow.png)
 
@@ -81,7 +81,7 @@ Her er en grundlæggende arbejdsproces, der er i overensstemmelse med [almindeli
   
    - Du kan knytte andre datakilder til en tilsynsførende (du kan f.eks. knytte et SharePoint websted eller en Microsoft 365 gruppe til en tilsynsførende), så disse data kan omlægges, sættes i venteposition og søges på samme måde som dataene i forældremyndighedens postkasse eller OneDrive konto.
 
-   - Du kan bruge [arbejdsprocessen for kommunikation](managing-custodian-communications.md) i eDiscovery (Premium) til at sende en meddelelse om juridisk venteposition til vogtere.
+   - Du kan bruge [arbejdsprocessen for kommunikation](managing-custodian-communications.md) i eDiscovery (Premium) til at sende en meddelelse om juridisk venteposition til tilsynsførende.
 
 2. **[Indsaml relevant indhold fra datakilder](create-draft-collection.md)**. Når du har føjet tilsynsførende og ikke-frihedsberøvende datakilder til en sag, kan du bruge det indbyggede indsamlingsværktøj til at søge i disse datakilder efter indhold, der kan være relevant for sagen. Du kan bruge nøgleord, egenskaber og betingelser til at [oprette søgeforespørgsler](building-search-queries.md) , der returnerer søgeresultater med de data, der er mest relevante for sagen. Du kan også:
 
@@ -111,7 +111,7 @@ Her er en grundlæggende arbejdsproces, der er i overensstemmelse med [almindeli
 
 ## <a name="ediscovery-premium-architecture"></a>eDiscovery-arkitektur (Premium)
 
-Her er et arkitekturdiagram, der viser eDiscovery(Premium) end-to-end-arbejdsprocessen i et enkelt geo-miljø og i et multi-geo-miljø samt dataflowet fra slutpunkt til slutpunkt, der er justeret i forhold til [modellen for reference til elektronisk registrering](overview-ediscovery-20.md#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model).
+Her er et arkitekturdiagram, der viser eDiscovery-arbejdsprocessen (Premium) i et enkelt geomiljø og i et multi-geo-miljø samt dataflowet fra slutpunkt til slutpunkt, der er justeret i forhold til [modellen for reference til elektronisk registrering](overview-ediscovery-20.md#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model).
 
 [![Modelplakat: eDiscovery-arkitektur (Premium) i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 

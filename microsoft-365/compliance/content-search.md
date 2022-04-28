@@ -2,8 +2,8 @@
 title: Opret og kør en indholdssøgning på Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: how-to
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Brug eDiscovery-værktøjet til indholdssøgning i Overholdelsescenter til at søge efter indhold i forskellige Microsoft 365 tjenester.
-ms.openlocfilehash: f5d8a398f36c1ab3c0f83234718346e8dd20434e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 418bdffd71e83aea548c21589c6b8c08ae2419e8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994496"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097090"
 ---
 # <a name="create-a-content-search"></a>Opret en indholdssøgning
 
@@ -34,7 +34,7 @@ ms.locfileid: "64994496"
 
 Du kan bruge eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen til at søge efter indhold på stedet, f.eks. mail, dokumenter og chatsamtaler i din organisation. Brug dette værktøj til at søge efter indhold i disse skybaserede Microsoft 365 datakilder:
   
-- Exchange onlinepostkasser
+- Exchange Online postkasser
 
 - SharePoint onlinewebsteder og OneDrive for Business konti
 
@@ -70,7 +70,7 @@ Når du har kørt en søgning, vises antallet af indholdsplaceringer og et ansl�
 
    2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online-organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
   
    4. Markér dette afkrydsningsfelt for at søge efter Teams indhold til brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 

@@ -2,8 +2,8 @@
 title: Microsoft Purview eDiscovery-løsninger
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,17 +20,17 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview indeholder tre eDiscovery-værktøjer, som du kan bruge til at søge efter og eksportere indhold, der findes på forskellige placeringer, f.eks. Exchange postkasser, SharePoint og OneDrive for Business websteder, Microsoft 365-grupper, Microsoft Teams og Skype for Business samtaler. eDiscovery (Standard) og eDiscovery (Premium) indeholder mange ekstra funktioner, der kan hjælpe dig med at administrere dine undersøgelser.
-ms.openlocfilehash: 4c146e2eea1c0c462491444102365cb5c611e78d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: f5660b8a31cad45b110e6e32450dc03b75d5f533
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001142"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095856"
 ---
 # <a name="microsoft-purview-ediscovery-solutions"></a>Microsoft Purview eDiscovery-løsninger
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [prøveversionshubben til Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -46,7 +46,7 @@ Microsoft Purview indeholder tre eDiscovery-løsninger: Indholdssøgning, eDisco
 
 - **eDiscovery (Standard)**. eDiscovery (Standard) bygger på den grundlæggende søge- og eksportfunktionalitet i indholdssøgning ved at gøre det muligt for dig at oprette eDiscovery-sager og tildele eDiscovery-ledere til bestemte sager. eDiscovery-ledere kan kun få adgang til de sager, de er medlemmer af. Med eDiscovery (Standard) kan du også knytte søgninger og eksporter til en sag og giver dig mulighed for at placere eDiscovery-venteposition på indholdsplaceringer, der er relevante for sagen.
 
-- **eDiscovery (Premium)**. Værktøjet eDiscovery (Premium) bygger på eksisterende funktioner til sagsstyring, bevarelse, søgning og eksport i eDiscovery (Standard). eDiscovery (Premium) indeholder en arbejdsproces fra start til slut, hvor du kan identificere, bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere tilsynsførende og arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag. Den giver dig mulighed for at indsamle og kopiere data fra livetjenesten til korrektursæt, når du kan filtrere, søge efter og mærke indhold for at fjerne ikke-relevant indhold fra yderligere gennemgang, så din arbejdsproces kan identificere og fokusere på indhold, der er mest relevant. eDiscovery (Premium) indeholder analyse- og maskinel indlæringsbaserede forudsigende kodningsmodeller, der gør det endnu mere begrænset til omfanget af din undersøgelse til det mest relevante indhold.
+- **eDiscovery (Premium)**. Værktøjet eDiscovery (Premium) bygger på eksisterende funktioner til sagsstyring, bevarelse, søgning og eksport i eDiscovery (Standard). eDiscovery (Premium) indeholder en komplette arbejdsproces, der identificerer, bevarer, indsamler, gennemser, analyserer og eksporterer indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere tilsynsførende og arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag. Den giver dig mulighed for at indsamle og kopiere data fra livetjenesten til korrektursæt, når du kan filtrere, søge efter og mærke indhold for at fjerne ikke-relevant indhold fra yderligere gennemgang, så din arbejdsproces kan identificere og fokusere på indhold, der er mest relevant. eDiscovery (Premium) indeholder analyse- og maskinel indlæringsbaserede forudsigende kodningsmodeller, der gør det endnu mere begrænset til omfanget af din undersøgelse til det mest relevante indhold.
 
 ## <a name="comparison-of-key-capabilities"></a>Sammenligning af nøglefunktioner
 
@@ -91,7 +91,7 @@ Her er en beskrivelse af hver eDiscovery-funktion.
 
 - **Rollebaserede tilladelser**. Brug rollebaseret adgangstilladelser (RBAC) til at styre, hvilke eDiscovery-relaterede opgaver forskellige brugere kan udføre. Du kan bruge en indbygget eDiscovery-relateret rollegruppe eller oprette brugerdefinerede rollegrupper, der tildeler bestemte eDiscovery-tilladelser.
 
-- **Sagsstyring**. Med eDiscovery-sager i eDiscovery (Standard) og eDiscovery (Premium) kan du knytte specifikke søgninger og eksporter til en bestemt undersøgelse. Du kan også tildele medlemmer til en sag for at styre, hvem der kan få adgang til sagen og få vist indholdet af sagen.
+- **Sagsstyring**. Med eDiscovery-sager i eDiscovery (Standard) og eDiscovery (Premium) kan du knytte bestemte søgninger og eksporter til en bestemt undersøgelse. Du kan også tildele medlemmer til en sag for at styre, hvem der kan få adgang til sagen og få vist indholdet af sagen.
 
 - **Placer indholdsplaceringer i juridisk venteposition**. Bevar indhold, der er relevant for din undersøgelse, ved at placere en juridisk bevarelse på indholdsplaceringerne i en sag. Dette giver dig mulighed for at sikre elektronisk gemte oplysninger fra utilsigtet (eller bevidst) sletning under din undersøgelse.
 
@@ -117,7 +117,7 @@ Her er en beskrivelse af hver eDiscovery-funktion.
 
 - **Tagging**. Mærker hjælper dig også med at udrydde ikke-relevant indhold og identificere det mest relevante indhold. Når eksperter, advokater eller andre brugere gennemser indhold i et anmeldelsessæt, kan deres udtalelser, der er relateret til indholdet, registreres ved hjælp af tags. Hvis hensigten f.eks. er at fjerne unødvendigt indhold, kan en bruger mærke dokumenter med et mærke, f.eks. "ikke-dynamisk". Når indhold er blevet gennemset og mærket, kan der oprettes en forespørgsel i et korrektursæt for at udelade alt indhold, der er mærket som "ikke-dynamisk". Denne proces fjerner det indhold, der ikke svarer, fra efterfølgende trin i eDiscovery-arbejdsprocessen.
 
-- **Analyse**. eDiscovery (Premium) indeholder værktøjer til at analysere dokumenter, der er angivet til gennemsyn, så du kan organisere dokumenterne på en sammenhængende måde og reducere mængden af dokumenter, der skal gennemses. *I nærheden af registrering af dubletter* grupperer tekstlignende dokumenter sammen for at hjælpe dig med at gøre din korrekturproces mere effektiv. *Mailtrådning* identificerer bestemte mails, der giver en komplet kontekst for samtalen i en mailtråd. *Temaers* funktionalitet forsøger at analysere temaer i dokumenter, der er angivet til gennemsyn, og tildele et tema til dokumenter, så du kan gennemse dokumenter med relaterede temaer. Disse analysefunktioner hjælper med at gøre din korrekturproces mere effektiv, så korrekturlæsere kan gennemse en brøkdel af indsamlede dokumenter.
+- **Analyse**. eDiscovery (Premium) indeholder værktøjer til at analysere dokumenter, der er angivet til gennemsyn, for at hjælpe dig med at organisere dokumenterne på en sammenhængende måde og reducere mængden af dokumenter, der skal gennemses. *I nærheden af registrering af dubletter* grupperer tekstlignende dokumenter sammen for at hjælpe dig med at gøre din korrekturproces mere effektiv. *Mailtrådning* identificerer bestemte mails, der giver en komplet kontekst for samtalen i en mailtråd. *Temaers* funktionalitet forsøger at analysere temaer i dokumenter, der er angivet til gennemsyn, og tildele et tema til dokumenter, så du kan gennemse dokumenter med relaterede temaer. Disse analysefunktioner hjælper med at gøre din korrekturproces mere effektiv, så korrekturlæsere kan gennemse en brøkdel af indsamlede dokumenter.
 
 - **Forudsigende kodemodeller**. Brug forudsigende kodningsmodeller til at reducere og fjerne store mængder sagsindhold til et relevant sæt elementer, som du kan prioritere til gennemsyn. Dette opnås ved at oprette og oplære dine egne forudsigende kodemodeller, der hjælper dig med at prioritere gennemgangen af de mest relevante elementer i et korrektursæt. Systemet bruger oplæringen til at anvende forudsigelsesscores på hvert element i korrektursættet. Det giver dig mulighed for at filtrere elementer baseret på forudsigelsesscoren, hvilket giver dig mulighed for først at gennemse de mest relevante (eller ikke-relevante) elementer.
 
@@ -135,28 +135,28 @@ I følgende afsnit vises minimumkravene til abonnementer for indholdssøgning, e
 
 - Microsoft 365 E1-abonnement
 - Microsoft 365 G1-abonnement
-- Microsoft 365 F1- eller F3-abonnement eller tilføjelsesprogrammet F5 Security
+- Microsoft 365 F1- eller F3-abonnement eller F5 Security-tilføjelsesprogram
 - Microsoft 365 Business Premium abonnement
 - Microsoft 365 Business Standard abonnement
 - Microsoft 365 Business Basic abonnement
 - Office 365 Education A1-abonnement
-- Office 365 E1-abonnement
+- Office 365 E1 abonnement
 
 
 ### <a name="ediscovery-standard"></a>eDiscovery (Standard)
 
-- Microsoft 365 E3-abonnement
-- Microsoft 365 G3-abonnement
+- Microsoft 365 E3 abonnement
+- Microsoft 365 G3 abonnement
 - Microsoft 365 Business Premium abonnement
 - Microsoft 365 tilføjelsesprogrammet Overholdelse af F5 eller tilføjelsesprogrammet F5 Security & Compliance
 - Microsoft 365 Education A3- eller Office 365 Education A3-abonnement
-- Office 365 E3-abonnement
+- Office 365 E3 abonnement
 
 ### <a name="ediscovery-premium"></a>eDiscovery (Premium)
 
 - Microsoft 365 E5- eller Office 365 E5-abonnement
 - Microsoft 365 E3-abonnement med tilføjelsen E5-overholdelse
-- Microsoft 365 E3-abonnement med tilføjelsesprogrammet E5 eDiscovery og Overvågning
+- Microsoft 365 E3 abonnement med tilføjelsesprogrammet E5 eDiscovery og Overvågning
 - Microsoft 365 G5-abonnement
 - Microsoft 365 G5-abonnement med tilføjelsesprogrammet G5 Overholdelse
 - Microsoft 365 G5-abonnement med tilføjelsesprogrammet G5 eDiscovery og Overvågning

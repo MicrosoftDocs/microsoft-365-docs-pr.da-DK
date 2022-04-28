@@ -2,8 +2,8 @@
 title: Funktionsreference til indholdssøgning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Denne artikel indeholder referenceoplysninger om eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen, som kan hjælpe dig med at få mere at vide om indholdssøgning.
-ms.openlocfilehash: 72088b1a1bd2e3f3ba2c38ee827c6eb46b7c893a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 8d7f1497a0dbd400536dd74c5abd4b9e3be7e29f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995706"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097112"
 ---
 # <a name="feature-reference-for-content-search"></a>Funktionsreference til indholdssøgning
 
@@ -84,7 +84,7 @@ Vær opmærksom på følgende ting, når du søger efter indhold i Microsoft Tea
 
 - Indhold fra private kanaler gemmes i hver brugers postkasse og ikke i teampostkassen. Hvis du vil søge efter indhold i private kanaler, skal du se [eDiscovery af private og delte kanaler](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
 
-- Kør **Get-UnifiedGroup-cmdlet'en** i Exchange Online for at få vist egenskaber for et team eller en Microsoft 365 gruppe. Dette er en god måde at få URL-adressen til det websted, der er knyttet til et team eller en gruppe. Følgende kommando viser f.eks. de valgte egenskaber for en Microsoft 365 gruppe med navnet Senior Leadership Team:
+- Kør **Cmdlet'en Get-UnifiedGroup** i Exchange Online for at få vist egenskaber for et team eller en Microsoft 365 gruppe. Dette er en god måde at få URL-adressen til det websted, der er knyttet til et team eller en gruppe. Følgende kommando viser f.eks. de valgte egenskaber for en Microsoft 365 gruppe med navnet Senior Leadership Team:
 
   ```text
   Get-UnifiedGroup "Senior Leadership Team" | FL DisplayName,Alias,PrimarySmtpAddress,SharePointSiteUrl
@@ -110,7 +110,7 @@ Vær opmærksom på følgende ting, når du søger efter indhold i Microsoft Tea
 
 - Samtaler, der er en del af en Teams kanal, gemmes i den postkasse, der er knyttet til teamet. På samme måde gemmes filer, som teammedlemmer deler i en kanal, på teamets SharePoint websted. Derfor skal du tilføje teampostkassen og SharePoint websted som en indholdsplacering for at søge i samtaler og filer i en kanal.
 
-- Alternativt gemmes samtaler, der er en del af chatlisten i Teams, i Exchange Online-postkassen for de brugere, der deltager i chatten. Og filer, som en bruger deler i Chat-samtaler, gemmes på den OneDrive for Business konto for den bruger, der deler filen. Derfor skal du tilføje de enkelte brugerpostkasser og OneDrive for Business konti som indholdsplaceringer for at søge i samtaler og filer på chatlisten.
+- Alternativt gemmes samtaler, der er en del af chatlisten i Teams i Exchange Online postkasse for de brugere, der deltager i chatten. Og filer, som en bruger deler i Chat-samtaler, gemmes på den OneDrive for Business konto for den bruger, der deler filen. Derfor skal du tilføje de enkelte brugerpostkasser og OneDrive for Business konti som indholdsplaceringer for at søge i samtaler og filer på chatlisten.
 
     > [!NOTE]
     > I en Exchange hybridinstallation kan brugere med en postkasse i det lokale miljø deltage i samtaler, der er en del af chatlisten i Teams. I dette tilfælde kan der også søges i indhold fra disse samtaler, fordi det er gemt i et skybaseret lagerområde (kaldet en *cloudbaseret postkasse til brugere i det lokale miljø*) for brugere, der har en postkasse i det lokale miljø. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
@@ -192,7 +192,7 @@ Du kan bruge mailegenskaben **ItemClass** eller søgebetingelsen **Type** til at
 
 ## <a name="searching-inactive-mailboxes"></a>Søger i inaktive postkasser
 
-Du kan søge i inaktive postkasser i en indholdssøgning. Hvis du vil hente en liste over de inaktive postkasser i din organisation, skal du køre kommandoen `Get-Mailbox -InactiveMailboxOnly` i Exchange Online PowerShell. Du kan også gå til **Opbevaring af** **styring af** \> oplysninger i Security & Compliance Center og derefter klikke på ellipsen **MoreNavigation**![ Bar.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Inaktive postkasser**.
+Du kan søge i inaktive postkasser i en indholdssøgning. Hvis du vil hente en liste over de inaktive postkasser i din organisation, skal du køre kommandoen `Get-Mailbox -InactiveMailboxOnly` i Exchange Online PowerShell. Du kan også gå til **Opbevaring** af **datalivscyklusstyring** \> på Microsoft Purview-overholdelsesportalen og derefter klikke på ellipsen **Merenavigationslinje**![.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Inaktive postkasser**.
 
 Her er et par ting, du skal være opmærksom på, når du søger i inaktive postkasser.
 
@@ -216,7 +216,7 @@ Her er et par ting, du skal være opmærksom på, når du søger i inaktive post
 
 ## <a name="searching-disconnected-or-de-licensed-mailboxes"></a>Søgning i frakoblede postkasser eller postkasser med ikke-licenseret
 
-Hvis Exchange Online-licensen (eller hele Microsoft 365-licensen) fjernes fra en brugerkonto eller i Azure Active Directory, bliver brugerens postkasse en *frakoblet* postkasse. Det betyder, at postkassen ikke længere er knyttet til brugerkontoen. Her er, hvad der sker, når du søger i frakoblede postkasser:
+Hvis den Exchange Online licens (eller hele Microsoft 365-licensen) fjernes fra en brugerkonto eller i Azure Active Directory, bliver brugerens postkasse en *frakoblet* postkasse. Det betyder, at postkassen ikke længere er knyttet til brugerkontoen. Her er, hvad der sker, når du søger i frakoblede postkasser:
 
 - Hvis licensen fjernes fra en postkasse, kan der ikke længere søges i postkassen.
 
@@ -224,9 +224,9 @@ Hvis Exchange Online-licensen (eller hele Microsoft 365-licensen) fjernes fra en
 
 - Hvis du bruger **New-ComplianceSearch-cmdlet'en** til at oprette en indholdssøgning og angiver en afbrudt postkasse som den Exchange indholdsplacering, der skal søges i, returnerer indholdssøgningen ikke nogen søgeresultater fra den afbrudte postkasse.
 
-Hvis du har brug for at bevare dataene i en afbrudt postkasse, så der kan søges i dem, skal du placere en venteposition på postkassen, før du fjerner licensen. Dette bevarer dataene og sørger for, at der kan søges i den frakoblede postkasse, indtil ventepositionen fjernes. Du kan finde flere oplysninger om ventepositioner under [Sådan identificerer du den type venteposition, der er placeret på en Exchange Online-postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
+Hvis du har brug for at bevare dataene i en afbrudt postkasse, så der kan søges i dem, skal du placere en venteposition på postkassen, før du fjerner licensen. Dette bevarer dataene og sørger for, at der kan søges i den frakoblede postkasse, indtil ventepositionen fjernes. Du kan finde flere oplysninger om ventepositioner under [Sådan identificeres den type venteposition, der er placeret på en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
 
-## <a name="searching-for-content-in-a-sharepoint-multi-geo-environment"></a>Søgning efter indhold i et SharePoint Multi-Geo-miljø
+## <a name="searching-for-content-in-a-sharepoint-multi-geo-environment"></a>Søgning efter indhold i et SharePoint Multi-Geo miljø
 
 Hvis det er nødvendigt for en eDiscovery-administrator at søge efter indhold i SharePoint og OneDrive i forskellige områder i et [SharePoint multi-geo-miljø](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md), skal du gøre følgende for at få det til at ske:
 

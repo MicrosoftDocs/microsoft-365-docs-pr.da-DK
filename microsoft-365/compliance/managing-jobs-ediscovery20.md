@@ -2,8 +2,8 @@
 title: Administrer job i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: eDiscovery-job (Premium) hjælper dig med at spore status for langvarige processer, der er relateret til udførelse af forskellige eDiscovery-opgaver (Premium).
-ms.openlocfilehash: ab1b6cf45805a0d67492a5d386670f139b24f5e1
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d13f53ce0a8eb0f435bb465d59b908e96926140b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998484"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096914"
 ---
 # <a name="manage-jobs-in-ediscovery-premium"></a>Administrer job i eDiscovery (Premium)
 

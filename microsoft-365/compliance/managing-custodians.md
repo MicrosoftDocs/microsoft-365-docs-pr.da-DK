@@ -2,8 +2,8 @@
 title: Arbejd med tilsynsførende i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -18,12 +18,12 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du bruger værktøjet til administration af forældremyndigheden i eDiscovery (Premium) til at administrere data i en juridisk sag.
-ms.openlocfilehash: 0c529b339c79789072cf160916db8c21acff7d86
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 360e66c3244b614624b6817f7fe95d9204c34bef
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992188"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096650"
 ---
 # <a name="work-with-custodians-and-non-custodial-data-sources-in-ediscovery-premium"></a>Arbejd med tilsynsførende og datakilder uden frihedsberøvelse i eDiscovery (Premium)
 
@@ -33,7 +33,7 @@ Når en organisation reagerer på en juridisk undersøgelse, er arbejdsprocessen
 
 Derudover kan der være indhold placeret i postkasser og websteder, der ikke er knyttet til en tilsynsførende, men som er relevant for sagen. Indholdsplaceringer, hvor tilsynsførende for sager ikke har administrativ kontrol, men kan være ejere af relevante data, kaldes *datakilder, der ikke er frihedsberøvende*.
 
-I en eDiscovery-sag (Premium) kan juridiske teams tilføje personer i deres organisation som vogtere og identificere og bevare datakilder, f.eks. Exchange postkasser, OneDrive konti og SharePoint og Teams websteder. De kan også identificere og bevare datakilder, der ikke er frihedsberøvende. Ved hjælp af det indbyggede værktøj til administration af datakilder i eDiscovery (Premium) kan organisationer sikre elektronisk gemte oplysninger mod utilsigtet (eller bevidst) sletning. Dette giver dig mulighed for at fjerne den tidskrævende og fejlbehæftede proces, hvor du manuelt skal udføre de juridiske ventepositionsprocesser.
+I en eDiscovery-sag (Premium) kan juridiske teams tilføje personer i deres organisation som tilsynsførende og identificere og bevare datakilder, f.eks. Exchange postkasser, OneDrive konti og SharePoint og Teams websteder. De kan også identificere og bevare datakilder, der ikke er frihedsberøvende. Ved hjælp af det indbyggede værktøj til administration af data tilsynsførende og datakilder i eDiscovery (Premium) kan organisationer sikre elektronisk gemte oplysninger mod utilsigtet (eller bevidst) sletning. Dette giver dig mulighed for at fjerne den tidskrævende og fejlbehæftede proces, hvor du manuelt skal udføre de juridiske ventepositionsprocesser.
 
 Du kan få flere oplysninger om at arbejde med tilsynsførende i følgende artikler:
 

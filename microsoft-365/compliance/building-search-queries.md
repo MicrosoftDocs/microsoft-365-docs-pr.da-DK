@@ -2,8 +2,8 @@
 title: Opret søgeforespørgsler i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Brug nøgleord og betingelser til at indsnævre omfanget af søgningen, når der søges efter data ved hjælp af eDiscovery (Premium) i Microsoft 365.
-ms.openlocfilehash: cceac6974bacb066201120ac4972393f2323353c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: afb033a014528b7e79a6ce192896f4b2b3eef054
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995002"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096132"
 ---
 # <a name="build-search-queries-for-collections-in-ediscovery-premium"></a>Opret søgeforespørgsler for samlinger i eDiscovery (Premium)
 
@@ -37,7 +37,7 @@ Skriv en **nøgleordsforespørgsel** i feltet Nøgleord i søgeforespørgslen. D
 
 ## <a name="keyword-list"></a>Nøgleordsliste
 
-Du kan også markere afkrydsningsfeltet **Vis nøgleordsliste** og skrive et nøgleord eller nøgleordsudtryk i hver række. Nøgleordene i hver række er forbundet med en logisk operator (der *repræsenteres som c:s i søgeforespørgslens* syntaks), der har samme funktionalitet som operatoren **OR** i den søgeforespørgsel, der oprettes. Det betyder, at elementer, der indeholder nøgleord i en vilkårlig række, findes i søgeresultaterne. Du kan tilføje op til 180 rækker på nøgleordslisten i eDiscovery(Premium)-søgeforespørgsler.
+Du kan også markere afkrydsningsfeltet **Vis nøgleordsliste** og skrive et nøgleord eller nøgleordsudtryk i hver række. Nøgleordene i hver række er forbundet med en logisk operator (der *repræsenteres som c:s i søgeforespørgslens* syntaks), der har samme funktionalitet som operatoren **OR** i den søgeforespørgsel, der oprettes. Det betyder, at elementer, der indeholder nøgleord i en vilkårlig række, findes i søgeresultaterne. Du kan tilføje op til 180 rækker på nøgleordslisten i eDiscovery-søgeforespørgsler (Premium).
 
 ![Brug nøgleordslisten til at få statistikker om hvert nøgleord i forespørgslen.](../media/KeywordListSearch.png)
 

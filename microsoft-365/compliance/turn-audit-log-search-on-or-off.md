@@ -2,8 +2,8 @@
 title: Slå overvågning til eller fra
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
 description: Sådan slår du søgefunktionen Overvågningslog til eller fra på Microsoft Purview-overholdelsesportalen for at aktivere eller deaktivere muligheden for, at administratorer kan søge i overvågningsloggen.
-ms.openlocfilehash: e74effad1803b9a55167d1cd3bb5725bd042616a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 3602a35169670b61a124cda40c9ab50b481571d8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991814"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078861"
 ---
 # <a name="turn-auditing-on-or-off"></a>Slå overvågning til eller fra
 
@@ -80,7 +80,7 @@ Hvis overvågning ikke er slået til for din organisation, kan du aktivere den p
 
 ### <a name="use-powershell-to-turn-on-auditing"></a>Brug PowerShell til at aktivere overvågning
 
-1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør følgende PowerShell-kommando for at aktivere overvågning.
 
@@ -94,7 +94,7 @@ Hvis overvågning ikke er slået til for din organisation, kan du aktivere den p
 
 Du skal bruge Exchange Online PowerShell til at slå overvågning fra.
   
-1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør følgende PowerShell-kommando for at deaktivere overvågning.
 
@@ -104,7 +104,7 @@ Du skal bruge Exchange Online PowerShell til at slå overvågning fra.
 
 3. Efter et stykke tid skal du kontrollere, at overvågning er slået fra (deaktiveret). Der er to måder at gøre dette på:
 
-    - I Exchange Online PowerShell skal du køre følgende kommando:
+    - Kør følgende kommando i Exchange Online PowerShell:
 
       ```powershell
       Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
@@ -120,7 +120,7 @@ Du skal bruge Exchange Online PowerShell til at slå overvågning fra.
 
 Ændringer af overvågningsstatus i din organisation overvåges selv. Det betyder, at overvågningsposter logføres, når overvågning er slået til eller fra. Du kan søge i Exchange administratorens overvågningslog for disse overvågningsposter.
 
-Hvis du vil søge i Exchange administratorovervågningslog for overvågningsposter, der genereres, når overvågning slås til eller fra, skal du køre følgende kommando i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+Hvis du vil søge i Exchange administratorovervågningslog for overvågningsposter, der genereres, når overvågning aktiveres eller deaktiveres, skal du køre følgende kommando i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
 Search-AdminAuditLog -Cmdlets Set-AdminAuditLogConfig -Parameters UnifiedAuditLogIngestionEnabled

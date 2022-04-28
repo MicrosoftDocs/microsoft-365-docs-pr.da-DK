@@ -2,8 +2,8 @@
 title: CJK/Double Byte-understøttelse af eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,19 +15,19 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan Microsoft Purview eDiscovery (Premium) i Microsoft 365 understøtter sprog af typen kinesisk, japansk og koreansk (CJK), som bruger et dobbeltbytetegnsæt.
-ms.openlocfilehash: e6221d37a3ebb07414f87f349b020365c80990e3
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om, hvordan Microsoft Purview eDiscovery (Premium) i Microsoft 365 understøtter kinesiske, japanske og koreanske (CJK) sprog, som bruger et dobbeltbytetegnsæt.
+ms.openlocfilehash: e6399136713ff7be4b3c065de05b587a3f942b01
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992210"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095900"
 ---
 # <a name="cjk-language-support-for-ediscovery-premium"></a>CJK-sprogunderstøttelse til eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview eDiscovery (Premium) understøtter sprog med dobbeltbytetegnsæt (disse omfatter forenklet kinesisk, traditionelt kinesisk, japansk og koreansk, som kollektivt kaldes *CJK-sprog* ) for følgende avancerede scenarier i et korrektursæt:
+Microsoft Purview eDiscovery (Premium) understøtter sprog med dobbeltbytetegnsæt (disse omfatter forenklet kinesisk, traditionelt kinesisk, japansk og koreansk, som kollektivt kaldes *CJK-sprog*) for følgende avancerede scenarier i et korrektursæt:
 
 - Når du [forespørger dataene i et korrektursæt](review-set-search.md).
 
@@ -39,7 +39,7 @@ Microsoft Purview eDiscovery (Premium) understøtter sprog med dobbeltbytetegns�
 
 **Hvordan gør jeg oprette en søgning for at indsamle elementer, der indeholder CJK-tegn?**
 
-Du kan bruge CJK-tegn til [nøgleordssøgninger](building-search-queries.md#keyword-searches), [nøgleordsforespørgsler og søgebetingelser](keyword-queries-and-search-conditions.md) , når du søger efter indhold i eDiscovery (Premium). Søgning efter CJK-tegn understøttes også, når du søger efter indhold i Microsoft Purview eDiscovery (Standard) og indholdssøgning.
+Du kan bruge CJK-tegn til [nøgleordssøgninger](building-search-queries.md#keyword-searches), [nøgleordsforespørgsler og søgebetingelser](keyword-queries-and-search-conditions.md), når du søger efter indhold i eDiscovery (Premium). Søgning efter CJK-tegn understøttes også, når du søger efter indhold i Microsoft Purview eDiscovery (Standard) og indholdssøgning.
 
 Vi understøtter CJK for alle [søgeoperatorer](keyword-queries-and-search-conditions.md#search-operators) og [søgebetingelser](keyword-queries-and-search-conditions.md#search-conditions), herunder de booleske operatorer **AND**, **OR**, **NOT** og **NEAR**.
 

@@ -2,8 +2,8 @@
 title: Eksportér dokumenter fra et valideringssæt
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,14 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du vælger og eksporterer indhold fra et eDiscovery(Premium)-korrektursæt til præsentationer eller eksterne korrekturer.
+description: Få mere at vide om, hvordan du vælger og eksporterer indhold fra et eDiscovery-korrektursæt (Premium) til præsentationer eller eksterne korrekturer.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 3335c0bf15a57da7b3857b8503c6aaaeca2f303a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a2cc2b5f528c7573c255e05cea4b512416711462
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995400"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096958"
 ---
 # <a name="export-documents-from-a-review-set-in-ediscovery-premium"></a>Eksportér dokumenter fra et korrektursæt i eDiscovery (Premium)
 
@@ -32,7 +32,7 @@ Eksport giver brugerne mulighed for at tilpasse det indhold, der er inkluderet i
 
 Sådan eksporterer du dokumenter fra et gennemsynssæt:
 
-1. Åbn eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt** , og vælg derefter det korrektursæt, du vil eksportere.
+1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt**, og vælg derefter det korrektursæt, du vil eksportere.
 
 2. Klik på **ActionExport** >  i korrektursættet.
 

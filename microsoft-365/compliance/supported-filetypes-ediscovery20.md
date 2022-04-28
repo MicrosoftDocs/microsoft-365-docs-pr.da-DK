@@ -2,8 +2,8 @@
 title: Understøttede filtyper i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: En liste over understøttede filtyper i Microsoft 365 eDiscovery (Premium), herunder billedfiltyper, der understøttes af OCR-funktionaliteten i eDiscovery (Premium).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 95adaf84f5281b943720be595b0e0e4aababd91f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 422200b3015ff86566507cbe3f63bc2a75a84bea
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996740"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095790"
 ---
 # <a name="supported-file-types-in-ediscovery-premium"></a>Understøttede filtyper i eDiscovery (Premium)
 
@@ -292,7 +292,7 @@ Microsoft Purview eDiscovery (Premium) understøtter mange filtyper på mange fo
 |application/vnd.wordperfect; version=6.x|Ja|Ja|Ja|Nej|Nej|.wpd|
 |
 
-## <a name="word-pro"></a>Word Pro
+## <a name="word-pro"></a>Word-Pro
 
 <br>
 

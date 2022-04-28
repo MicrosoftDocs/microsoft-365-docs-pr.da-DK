@@ -2,8 +2,8 @@
 title: Avanceret indeksering af data fra tilsynsførende
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,13 +15,13 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Når en tilsynsførende føjes til en eDiscovery-sag (Premium), genbehandles alt indhold, der anses for at være delvist indekseret, for at gøre det fuldt søgbart.
-ms.openlocfilehash: 8b7dbbb13b9a667a7b5a50a5535634414c0caec5
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Når en tilsynsførende føjes til en eDiscovery-sag (Premium), behandles alt indhold, der anses for delvist indekseret, for at gøre det fuldt søgbart.
+ms.openlocfilehash: 2a4cea13291bd592cf47a61b500a4f3a6012ac85
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993616"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096672"
 ---
 # <a name="advanced-indexing-of-custodian-data"></a>Avanceret indeksering af data fra tilsynsførende
 
@@ -41,7 +41,7 @@ Hvis du vil vide mere om behandling af support og delvist indekserede elementer,
 
 ## <a name="viewing-advanced-indexing-results"></a>Visning af avancerede indekseringsresultater
 
-Når den avancerede indekseringsproces er fuldført, kan du få en forståelse af, hvor effektiv oparbejdningen er.  I visningen Avancerede indekseringsresultater under fanen **Behandling** for en sag viser grafen antallet af elementer, der er føjet til *hybridindekset*.  Hybridindekset er stedet, hvor eDiscovery (Premium) gemmer det genbehandlede indhold.
+Når den avancerede indekseringsproces er fuldført, kan du få en forståelse af, hvor effektiv oparbejdningen er.  I visningen Avancerede indekseringsresultater under fanen **Behandling** for en sag viser grafen antallet af elementer, der er føjet til *hybridindekset*.  Hybridindekset er det steder, hvor eDiscovery (Premium) gemmer det genbehandlede indhold.
 
 Denne visning indeholder også antallet af elementer, der kræver afhjælpning, og en anden graf over fejl efter filtype. Du kan finde flere oplysninger under:
 

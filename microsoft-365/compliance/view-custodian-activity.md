@@ -2,8 +2,8 @@
 title: Vis overvågningsaktivitet for ansvarlig
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,16 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug værktøjet eDiscovery (Premium) Custodian Management til nemt at få adgang til og søge efter tilsynsførende i din sag.
+description: Brug værktøjet til administration af eDiscovery (Premium) til nemt at få adgang til og søge efter tilsynsførende i din sag.
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: e2de6209e08d6e8dd6f853724f26d026aec1c33f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 6f55ad389fe24e87e693e6523c7008713c6bc54b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993704"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096562"
 ---
 # <a name="view-custodian-audit-activity"></a>Vis overvågningsaktivitet for ansvarlig
 
@@ -34,14 +34,14 @@ Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller 
 
 ## <a name="get-permissions"></a>Hent tilladelser
 
-Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden Tilladelser i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Hvis du vil give en bruger mulighed for at søge i eDiscovery(Premium)-overvågningsloggen med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under Administrer rollegrupper i Exchange Online.
+Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden Tilladelser i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Hvis du vil give en bruger mulighed for at søge i eDiscovery-overvågningsloggen (Premium) med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under Administrer rollegrupper i Exchange Online.
 
 > [!IMPORTANT]
 > Hvis du tildeler en bruger rollen View-Only overvågningslogfiler eller overvågningslogfiler på siden Tilladelser på overholdelsesportalen, kan vedkommende ikke søge i overvågningsloggen. Du skal tildele tilladelserne i Exchange Online. Det skyldes, at den underliggende cmdlet, der bruges til at søge i overvågningsloggen, er en Exchange Online-cmdlet.
 
 ## <a name="step-1-search-the-audit-log-for-activities-performed-by-a-custodian"></a>Trin 1: Søg i overvågningsloggen efter aktiviteter, der udføres af en tilsynsførende
 
-1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
   
 2. Klik på fanen **Kilder** .
   
