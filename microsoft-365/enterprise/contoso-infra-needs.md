@@ -1,10 +1,10 @@
 ---
-title: It-infrastruktur og forretningsmæssige behov for Contoso
+title: Contoso It-infrastruktur og forretningsbehov
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,134 +13,134 @@ ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Forstå den grundlæggende struktur i den lokale it-infrastruktur i Contoso, og hvordan virksomhedens forretningsmæssige behov opfyldes af Microsoft 365 for virksomheder.
-ms.openlocfilehash: 94118a66f7bb1468a8f27816151a3b4d087b5703
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Forstå den grundlæggende struktur i Contosos it-infrastruktur i det lokale miljø, og hvordan virksomhedens forretningsmæssige behov imødekommes af Microsoft 365 for virksomheden.
+ms.openlocfilehash: 5dc47898aa0499bc4b62d22d37689d872116a9e7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63589490"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101353"
 ---
-# <a name="contoso-it-infrastructure-and-business-needs"></a>It-infrastruktur og forretningsmæssige behov for Contoso
+# <a name="contoso-it-infrastructure-and-business-needs"></a>Contoso It-infrastruktur og forretningsbehov
 
-Contoso skifter fra en lokal, centraliseret IT-infrastruktur til en skyomfattende konfiguration, der indeholder skybaserede personlige produktivitetsmængder og programmer.
+Contoso skifter fra en central it-infrastruktur i det lokale miljø til en cloud-inkluderende konfiguration, der omfatter cloudbaserede arbejdsbelastninger og -programmer for personlig produktivitet.
 
-## <a name="existing-contoso-it-infrastructure"></a>Eksisterende it-infrastruktur for Contoso
+## <a name="existing-contoso-it-infrastructure"></a>Eksisterende Contoso-it-infrastruktur
 
-Contoso anvender primært en centraliseret it-infrastruktur i det lokale miljø med programdatacentre i Paris's hovedkvarter.
+Contoso bruger en primært centraliseret it-infrastruktur i det lokale miljø med programdatacentre i Paris's hovedkvarter.
 
-Her er hovedkontoret med programdatacentre, en DMZ og internettet.
+Her er hovedkontoret med applikationsdatacentre, en DMZ og internettet.
 
-![Eksisterende it-infrastruktur for Contoso.](../media/contoso-infra-needs/contoso-infra-needs-fig1.png)
+![Eksisterende Contoso-it-infrastruktur.](../media/contoso-infra-needs/contoso-infra-needs-fig1.png)
 
-Vært for det lokale programs datacentre: 
+Værten for programdatacentrene i det lokale miljø: 
 
 - Brugerdefinerede line of business-programmer, der bruger SQL Server og andre Linux-databaser.
-- Et sæt ældre SharePoint-servere.
-- Servere på organisationsniveau og på teamniveau til fillagring.
+- Et sæt ældre SharePoint servere.
+- Servere på organisationsniveau og teamniveau til fillagring.
 
-Desuden understøtter hvert regionale hubkontor et sæt servere med et lignende sæt programmer. Disse servere er under kontrol af regionale it-afdelinger.
+Derudover understøtter hvert regionalt hubkontor et sæt servere med et tilsvarende sæt programmer. Disse servere er under kontrol af regionale it-afdelinger.
 
-Søgbarhed på tværs af programmer og data i disse separate multi geografiske datacentre er fortsat en udfordring.
+Det er fortsat en udfordring at søge på tværs af programmerne og dataene i disse separate multige geografiske datacentre.
 
-I Contoso-hovedkontoret DMZ giver forskellige sæt servere:
+I Contoso-hovedkvarterets DMZ leverer forskellige serversæt:
 
-- Vært for det offentlige contoso-websted, hvorfra kunder kan bestille produkter, dele, materialer og tjenester.
-- Vært for Contoso-partner ekstranet for partnerkommunikation og samarbejde.
-- Virtuelt privat netværk (VPN)-baseret fjernadgang til Contoso-intranet og webproxy for medarbejdere i Paris's hovedkvarter.
+- Vært for det offentlige Contoso-websted, hvorfra kunderne kan bestille produkter, dele, forsyninger og service.
+- Vært for Contoso-partner extranet til partnerkommunikation og samarbejde.
+- VPN-baseret fjernadgang (Virtuelt privat netværk) til Contosos intranet og webproxy for arbejdere i Paris's hovedkvarter.
 
-## <a name="contoso-business-needs"></a>Forretningsbehov i Contoso
+## <a name="contoso-business-needs"></a>Contoso-forretningsbehov
 
-Contoso-forretningsbehov kan ind indgå i fem hovedkategorier:
+Contosos forretningsbehov falder i fem hovedkategorier:
 
 **Produktivitet**
 
-- Gør samarbejde nemmere
+- Gør samarbejdet nemmere
 
-  Erstat mail- og fildelingsbaseret samarbejde med en onlinemodel, der giver mulighed for ændringer i dokumenter i realtid, nemmere onlinemøder og hentede samtaletråde.
-- Forbedr produktiviteten for fjern- og mobilmedarbejdere
+  Erstat mail- og fildelingsbaseret samarbejde med en onlinemodel, der muliggør ændringer i dokumenter i realtid, nemmere onlinemøder og optagede samtaletråde.
+- Øg produktiviteten for fjernarbejdere og mobile arbejdstagere
 
-  Når mange medarbejdere arbejder hjemmefra eller i feltet, skal du erstatte VPN-løsningen med flaskehalse med performant adgang til Contoso-data og -ressourcer i skyen.
+  Med mange medarbejdere, der arbejder hjemmefra eller i marken, kan du erstatte den flaskehalsede VPN-løsning med effektiv adgang til Contoso-data og -ressourcer i cloudmiljøet.
 - Øg kreativiteten og innovationen
 
-  Udnyt de nyeste metoder til visuel læring og udvikling af ideer, herunder håndskrift og 3D-visualisering.
+  Udnyt de nyeste visuelle lærings- og idéudviklingsmetoder, herunder håndskrift og 3D-visualisering.
 
 **Sikkerhed**
 
-- Administration af identitet og adgang
+- Identitets- og adgangsstyring
 
-  Gennemtving multifaktor og andre former for godkendelse, og beskyt legitimationsoplysninger for bruger- og administratorkonti.
+  Gennemtving multifaktor og andre former for godkendelse, og beskyt legitimationsoplysninger til bruger- og administratorkontoen.
 
 - Trusselsbeskyttelse
 
-  Beskyt dig mod eksterne sikkerhedstrusler, herunder mail og operativsystembaseret malware.
+  Beskyt mod eksterne sikkerhedstrusler, herunder mail og operativsystembaseret malware.
 
 - Beskyttelse af oplysninger
 
-  Lås adgangen til og kryptere digitale aktiver med høj værdi, f.eks. kundedata, design- og produktionsspecifikationer og medarbejderoplysninger.
+  Lås adgang til og kryptér digitale aktiver med høj værdi, f.eks. kundedata, design- og produktionsspecifikationer og medarbejderoplysninger.
 
 - Sikkerhedsadministration
 
-  Overvåg sikkerhed, og find og svar på trusler i realtid.
+  Overvåg sikkerhedsholdning, og registrer og reager på trusler i realtid.
 
-**Fjern- og mobiladgang og forretningspartnere**
+**Fjern- og mobiladgang samt forretningspartnere**
 
-- Forbedre sikkerheden for fjern- og mobilmedarbejdere
+- Øg sikkerheden for fjernarbejdere og mobile medarbejdere
 
-  Implementer medbring din egen enhed (BYOD) og virksomhedsejede enhedsadministration for at sikre sikret adgang, korrekt programfunktionsmåde og virksomhedens databeskyttelse.
+  Implementer BYOD (Bring Your Own Device) og virksomhedsejet enhedshåndtering for at sikre sikker adgang, korrekt programfunktion og beskyttelse af virksomhedens data.
 
 - Reducer fjernadgangsinfrastrukturen for medarbejdere
 
-  Reducer vedligeholdelses- og supportomkostningerne, og forbedr ydeevnen for en løsning til fjernadgang ved at flytte almindeligt tilgåde ressourcer til skyen.
+  Reducer vedligeholdelses- og supportomkostninger, og øg ydeevnen for fjernadgangsløsning ved at flytte ressourcer, der ofte tilgås, til cloudmiljøet.
 
 - Giver bedre forbindelse og lavere omkostninger ved B2B-transaktioner (business-to-susiness)
 
-  Erstat et ældre og dyrere partner ekstranet med en skybaseret løsning, der bruger federated authentication.
+  Erstat et aldrende og dyrt partner-ekstranet med en cloudbaseret løsning, der bruger godkendelse i organisationsnetværket.
 
 **Overholdelse af regler og standarder**
 
-- Overholde regionale lovmæssige krav
+- Overhold regionale lovmæssige krav
 
-  Sørg for overholdelse af branche og regionale bestemmelser for datalagring, kryptering, beskyttelse af personlige oplysninger og persondata, som f.eks. Persondataforordningen (GDPR) for Europa.
+  Sørg for overholdelse af brancheregler og regionale regler for datalagring, kryptering, beskyttelse af personlige oplysninger og persondataregler, f.eks. den generelle forordning om databeskyttelse (GDPR) for EU.
 
 **Administration**
 
-- Få lavere it-omkostninger til administration af software, der kører på klient-pc'er og -enheder
+- Lavere it-omkostninger til administration af software, der kører på klient-pc'er og -enheder
 
-  Automatiser installation af opdateringer til Windows og opdateringer Microsoft 365 Apps for enterprise tværs af organisationen.
+  Automatiser installation af opdateringer til Windows operativsystem og Microsoft 365 Apps for enterprise på tværs af organisationen.
 
-## <a name="mapping-contoso-business-needs-to-microsoft-365-for-enterprise"></a>Tilknytning af Contoso-virksomhed Microsoft 365 for virksomheder
+## <a name="mapping-contoso-business-needs-to-microsoft-365-for-enterprise"></a>Tilknytning af Contoso-virksomheden skal Microsoft 365 for virksomheden
 
-It-afdelingen i Contoso har fastlagt følgende tilknytning af forretningsbehov for Microsoft 365 E5 før installation:
+Contoso-it-afdelingen bestemte følgende tilknytning af forretningsbehov for at Microsoft 365 E5 funktioner før udrulningen:
 
 
-| Kategori | Forretningsmæssige behov | Microsoft 365 til virksomhedsprodukter eller -funktioner |
+| Kategori | Forretningsbehov | Microsoft 365 til virksomhedsprodukter eller -funktioner |
 |:-------|:-----|:-----|
 | Produktivitet |  |  |
-|  | Gør samarbejde nemmere | Microsoft Teams, SharePoint, OneDrive |
-|  | Forbedr produktiviteten for fjern- og mobilmedarbejdere | Microsoft 365 arbejdsbelastninger og skybaserede data |
-|  | Øg kreativiteten og innovationen | Windows Ink er Cortana på arbejde PowerPoint |
+|  | Gør samarbejdet nemmere | Microsoft Teams, SharePoint, OneDrive |
+|  | Øg produktiviteten for fjernarbejdere og mobile arbejdstagere | Microsoft 365 arbejdsbelastninger og cloudbaserede data |
+|  | Øg kreativiteten og innovationen | Windows Ink, Cortana på arbejde, PowerPoint |
 | Sikkerhed |  |  |
-|  | Administration & identitetsadgang | Dedikerede globale administratorkonti med Azure AD Multi-Factor Authentication (MFA) og Azure AD Privileged Identity Management (PIM) <br> MFA for alle brugerkonti <br> Betinget adgang <br> Sikkerhedslæser <br> Windows Hello <br> Windows Credential Guard |
-|  | Trusselsbeskyttelse | Advanced Threat Analytics <br> Windows Defender <br> Defender til Office 365 <br> Microsoft Defender til Office 365 <br> Microsoft 365 trusselsundersøgelse og -svar <br> |
-|  | Beskyttelse af oplysninger | Azure Information Protection <br> Forebyggelse af datatab (DLP) <br> Windows (WIP) <br> Microsoft Defender til skyapps <br> Microsoft Intune |
-|  | Sikkerhedsadministration | Microsoft Defender til skyen  <br> Windows Defender Security Center |
-| Fjern- og mobiladgang og forretningspartnere |  |  |
-|  | Bedre sikkerhed for fjern- og mobilmedarbejdere | Microsoft Intune |
-|  | Reducer fjernadgangsinfrastrukturen for medarbejdere | Microsoft 365 arbejdsbelastninger og skybaserede data |
-|  | Få bedre forbindelse og lavere omkostninger for B2B-transaktioner | Federated Authentication og skybaserede ressourcer |
+|  | Administration af identitet & adgang | Dedikerede globale administratorkonti med Azure AD Multi-Factor Authentication (MFA) og Azure AD Privileged Identity Management (PIM) <br> MFA for alle brugerkonti <br> Betinget adgang <br> Sikkerhedslæser <br> Windows Hello <br> Windows Credential Guard |
+|  | Trusselsbeskyttelse | Advanced Threat Analytics <br> Windows Defender <br> Defender for Office 365 <br> Microsoft Defender for Office 365 <br> Microsoft 365 trusselsundersøgelse og -reaktion <br> |
+|  | Beskyttelse af oplysninger | Azure Information Protection <br> Forebyggelse af datatab (DLP) <br> Windows Information Protection (IGVA) <br> Microsoft Defender for Cloud Apps <br> Microsoft Intune |
+|  | Sikkerhedsadministration | Microsoft Defender for Cloud  <br> Windows Defender Security Center |
+| Fjern- og mobiladgang samt forretningspartnere |  |  |
+|  | Bedre sikkerhed for fjernarbejdere og mobile arbejdstagere | Microsoft Intune |
+|  | Reducer fjernadgangsinfrastrukturen for medarbejdere | Microsoft 365 arbejdsbelastninger og cloudbaserede data |
+|  | Gør forbindelsen bedre og lavere omkostninger ved B2B-transaktioner | Godkendelse i organisationsnetværk og cloudbaserede ressourcer |
 | Overholdelse af regler og standarder |  |  |
-|  | Overholde regionale lovmæssige krav | GDPR-funktioner i Microsoft 365 |
+|  | Overhold regionale lovmæssige krav | GDPR-funktioner i Microsoft 365 |
 | Administration |  |  |
-|  | Sænke it-omkostninger til installation af klientopdateringer | Windows 10 Enterprise opdateringer <br> Microsoft 365 Apps for enterprise opdateringer |
+|  | Lavere it-omkostninger ved installation af klientopdateringer | Windows 10 Enterprise opdateringer <br> Microsoft 365 Apps for enterprise opdateringer |
 ||||
 
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide om det lokale Contoso [Corporation-netværk](contoso-networking.md), og hvordan det er blevet optimeret til adgang og ventetid til Microsoft 365 skybaserede ressourcer.
+Få mere at vide om Contoso [Corporations netværk i det lokale miljø](contoso-networking.md), og hvordan det er optimeret til adgang og ventetid til Microsoft 365 cloudbaserede ressourcer.
 
 ## <a name="see-also"></a>Se også
 
-[Microsoft 365 for Enterprise-oversigt](microsoft-365-overview.md)
+[Microsoft 365 til virksomhedsoversigt](microsoft-365-overview.md)
 
-[Test labvejledninger](m365-enterprise-test-lab-guides.md)
+[Vejledninger til testlaboratorier](m365-enterprise-test-lab-guides.md)

@@ -2,7 +2,7 @@
 title: Kapacitetsplanlægning og indlæsningstest i SharePoint Online
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 04/10/2019
 audience: Admin
 ms.topic: conceptual
@@ -18,31 +18,31 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: c932bd9b-fb9a-47ab-a330-6979d03688c0
-description: Denne artikel beskriver, hvordan du kan installere på SharePoint Online uden at udføre traditionelle belastningstests, da det ikke er tilladt.
-ms.openlocfilehash: 8792c59ef96ef97cc36d0908100fd9ebb330857a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: I denne artikel beskrives det, hvordan du kan udrulle på SharePoint Online uden at udføre traditionel belastningstest, da det ikke er tilladt.
+ms.openlocfilehash: 1d1714bbcdefdbc41ff3ac5d038c6b59a7043a26
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63590587"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101089"
 ---
 # <a name="capacity-planning-and-load-testing-sharepoint-online"></a>Kapacitetsplanlægning og indlæsningstest i SharePoint Online
-Denne artikel beskriver, hvordan du kan installere på SharePoint Online uden traditionelle belastningstests, da belastningstests ikke er tilladt på SharePoint Online. SharePoint Online er en skybaseret tjeneste, og indlæsningsfunktionerne, tilstand og den overordnede balance mellem belastning af tjenesten administreres af Microsoft.
+I denne artikel beskrives det, hvordan du kan installere på SharePoint Online uden traditionel belastningstest, da belastningstest ikke er tilladt på SharePoint Online. SharePoint Online er en cloudtjeneste, og belastningsfunktionerne, tilstanden og den overordnede balance for belastningen i tjenesten administreres af Microsoft.
   
-Den bedste fremgangsmåde til at sikre en vellykket lancering af dit websted er at følge de grundlæggende principper, fremgangsmåder og anbefalinger, der fremhæves i udrulningen af [portalens lancering](planportallaunchroll-out.md).
+Den bedste tilgang til at sikre, at lanceringen af dit websted lykkes, er at følge de grundlæggende principper, fremgangsmåder og anbefalinger, der er fremhævet i [planen for udrulningen af portalen](planportallaunchroll-out.md).
 
-## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>Oversigt over, hvordan SharePoint Online udfører Kapacitetsplanlægning 
-En af de vigtigste fordele ved SharePoint Online over en lokal installation er elasticiteten af skyen og optimeringer for brugere i distribuerede områder. Vores omfattende miljø er konfigureret til at servicere millioner af brugere dagligt, så det er vigtigt, at vi håndterer kapacitet effektivt ved at balancere og udvide farme.
+## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>Oversigt over, hvordan SharePoint Online udfører kapacitetsplanlægning 
+En af de største fordele ved SharePoint Online i forbindelse med en udrulning i det lokale miljø er fleksibiliteten i cloudmiljøet og optimeringer for brugere i distribuerede områder. Vores store miljø er konfigureret til at betjene millioner af brugere dagligt, så det er vigtigt, at vi håndterer kapacitet effektivt ved at balancere og udvide farme.
   
-Væksten er ofte uforudsigelig for hver enkelt lejer i en hvilken som helst farm, men den aggregerede sum af anmodninger er forudsigelig over tid. Ved at identificere væksttendenserne i SharePoint Online kan vi planlægge fremtidig udvidelse.
+Selvom væksten ofte er uforudsigelig for en hvilken som helst lejer i en farm, er den samlede sum af anmodninger forudsigelig over tid. Ved at identificere væksttendenserne i SharePoint Online kan vi planlægge en fremtidig udvidelse.
   
-For effektivt at bruge kapacitet og håndtere uventet vækst i en farm har vi automatisering, der registrerer og overvåger forskellige elementer i tjenesten. Der anvendes flere målepunkter, hvoraf en af de vigtigste er CPU-belastning, som bruges som et signal til opskalering af front end-servere. Desuden anbefaler vi en faseindfaset [/bølge-tilgang](planportallaunchroll-out.md), da SQL-miljøer skaleres efter belastning og vækst over tid, og hvis du følger faser og runder, kan du bruge den korrekte fordeling af den pågældende belastning og vækst. 
+For effektivt at kunne bruge kapacitet og håndtere uventet vækst på alle farme har vi automatisering, der sporer og overvåger forskellige elementer i tjenesten. Der anvendes flere målepunkter, hvor en af de vigtigste er CPU-belastning, som bruges som et signal til skalering af frontendservere. Derudover anbefaler vi en [faseinddelt/bølgetilgang](planportallaunchroll-out.md), da SQL miljøer skaleres efter belastning og vækst over tid, og når faserne og bølgerne følges, giver det mulighed for korrekt fordeling af denne belastning og vækst. 
 
-Kapacitet er mere end bare at tilføje mere hardware løbende, men det gælder også administration og kontrol af denne kapacitet for at sikre, at den servicerer gyldige anmodninger om belastning. Vi anbefaler, at kunder følger den anbefalede vejledning for at sikre, at de får den bedste oplevelse. Det betyder også, at vi har begrænsningsmønstre og -kontrolelementer på plads for at sikre, at vi ikke tillader "stødende" adfærd i tjenesten. Det er ikke alle "dårlige" funktionsmåder, der er tilsigtet, men vi er nødt til at sikre, at vi begrænser effekten af den pågældende funktionsmåde. Du kan finde flere oplysninger om begrænsning, og hvordan du undgår begrænsningen, i artiklen om, hvordan du [undgår at blive begrænsning af vejledningen](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) .
+Kapacitet handler mere end blot om at tilføje mere hardware løbende, men det vedrører også administration og styring af kapaciteten for at sikre, at den servicerer gyldige belastningsanmodninger. Vi anbefaler, at kunderne følger den anbefalede vejledning for at sikre, at de får den bedste oplevelse. Det betyder også, at vi har begrænsninger for mønstre og kontroller på plads for at sikre, at vi ikke tillader "krænkende" adfærd i tjenesten. Selvom ikke al "dårlig" adfærd er bevidst, er vi nødt til at sikre, at vi begrænser effekten af denne funktionsmåde. Du kan finde flere oplysninger om begrænsning, og hvordan du undgår det, i artiklen Vejledning [til, hvordan du undgår begrænsning](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) .
 
 ## <a name="why-you-cannot-load-test-sharepoint-online"></a>Derfor kan du ikke indlæse test SharePoint Online
-I forbindelse med lokale miljøer bruges belastningstests til at validere skalaantagelser og i sidste ende finde en farms brudpunkt. ved at mætte den med indlæsning. 
+I miljøer i det lokale miljø bruges belastningstest til at validere skaleringsantagelse og i sidste ende finde brudpunktet for en farm. ved at mætte den med belastning. 
 
-Med SharePoint Online er vi nødt til at gøre tingene anderledes, fordi skalaen er relativt flydende og justerer, begrænser og styrer belastningen baseret på visse heuristics. Da der er så stort et miljø med flere lejere, skal vi beskytte alle lejere i samme farm, så vi begrænser automatisk eventuelle belastningtests. Hvis du imidlertid forsøger at belastningstests, men ikke bliver mindre, vil du få skuffende og potentielt misvisende resultater, fordi den farm, du har testet i dag, sandsynligvis vil have haft skaleringsændringer i løbet af testvinduet eller inden for få timer efter test, efterhånden som handlinger til justering af skala og farm udføres løbende.
+Med SharePoint Online er vi nødt til at gøre tingene anderledes, fordi skalaen er relativt flydende og justerer, begrænser og styrer belastningen baseret på visse heuristik. Da vi er et så stort miljø med flere lejere, skal vi beskytte alle lejere i den samme farm, så vi begrænser automatisk alle belastningstest. Hvis du forsøger at indlæse test, vil du ud over at være begrænset få skuffende og potentielt vildledende resultater, fordi den farm, du har testet i dag, sandsynligvis vil have haft skaleringsændringer i løbet af testvinduet eller inden for få timer efter testen, da skala- og farmjusteringshandlinger udføres løbende.
 
-I stedet for at forsøge at indlæse SharePoint som en tjeneste, bør du i stedet fokusere på at følge de anbefalede fremgangsmåder og følge vejledningen Oprette, starte og vedligeholde [en sund portal](/sharepoint/portal-health).
+I stedet for at forsøge at indlæse test SharePoint som en tjeneste, skal du i stedet fokusere på at følge de anbefalede fremgangsmåder og følge [vejledningen Til oprettelse, start og vedligeholdelse af en sund portal](/sharepoint/portal-health).

@@ -2,8 +2,8 @@
 title: Konfigurer en connector til arkivering af YouTube-data i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere YouTube-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, eDiscovery- og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 7f67269c979b6ef6c5e83e29cfd833cf98f1561f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 2c24e8d73a097f2745d89913091c366ac9c81cc0
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001472"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100583"
 ---
 # <a name="set-up-a-connector-to-archive-youtube-data"></a>Konfigurer en connector til arkivering af YouTube-data
 

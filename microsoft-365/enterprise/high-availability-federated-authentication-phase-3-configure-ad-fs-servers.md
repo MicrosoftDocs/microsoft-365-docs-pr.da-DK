@@ -2,7 +2,7 @@
 title: Godkendelse i organisationsnetværket med høj tilgængelighed Fase 3 Konfigurer AD FS-servere
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
@@ -15,45 +15,45 @@ ms.custom:
 - Ent_Solutions
 - seo-marvel-apr2020
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
-description: Få mere at vide om, hvordan du opretter og konfigurerer AD FS-servere til din godkendelse i organisationsnetværket med høj tilgængelighed til Microsoft 365 i Microsoft Azure.
-ms.openlocfilehash: c26fc68aa382ce93c62b6edbce4040b7e0813474
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du opretter og konfigurerer AD FS-serverne til din organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Microsoft Azure.
+ms.openlocfilehash: ed0974c8286a5bbad083152d2e2f9aeb01f659df
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590606"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101243"
 ---
-# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>Godkendelse i organisationsnetværket med høj tilgængelighed Fase 3: Konfigurer AD FS-servere
+# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>Godkendelse i organisationsnetværket med høj tilgængelighed fase 3: Konfigurer AD FS-servere
 
-I denne fase af udrulning af høj tilgængelighed for Microsoft 365 i organisationsnetværket i Azure-infrastrukturtjenester, skal du oprette en intern belastningsbalancere og to AD FS-servere.
+I denne fase af udrulningen af høj tilgængelighed til Microsoft 365 sammenkædet godkendelse i Azure-infrastrukturtjenester opretter du en intern belastningsjustering og to AD FS-servere.
   
-Du skal fuldføre denne fase, før du går videre [til Fase 4: Konfigurer webprogram-proxyer](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). Se [Installér godkendelse med høj tilgængelighed i organisationsnetværket Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faser.
+Du skal fuldføre denne fase, før du går videre til [fase 4: Konfigurer proxyer for webprogrammer](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). Se [Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faserne.
   
-## <a name="create-the-ad-fs-server-virtual-machines-in-azure"></a>Opret virtuelle AD FS-servercomputere i Azure
+## <a name="create-the-ad-fs-server-virtual-machines-in-azure"></a>Opret virtuelle AD FS-servermaskiner i Azure
 
-Brug følgende blok af PowerShell-kommandoer til at oprette de virtuelle maskiner til de to AD FS-servere. Dette PowerShell-kommandosæt bruger værdier fra følgende tabeller:
+Brug følgende blok PowerShell-kommandoer til at oprette de virtuelle maskiner til de to AD FS-servere. Dette PowerShell-kommandosæt bruger værdier fra følgende tabeller:
   
 - Tabel M til dine virtuelle maskiner
     
 - Tabel R for dine ressourcegrupper
     
-- Tabel V til indstillingerne for virtuelt netværk
+- Tabel V for dine indstillinger for virtuelle netværk
     
-- Tabel S til dine undernet
+- Tabel S for dine undernet
     
-- Tabel I til dine statiske IP-adresser
+- Tabel I for dine statiske IP-adresser
     
 - Tabel A for dine tilgængelighedssæt
     
-Husk, at du definerede Tabel M i Fase [2: Konfigurer](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) domænecontrollere og tabellerne R, V, S, I og A i [fase 1: Konfigurer Azure](high-availability-federated-authentication-phase-1-configure-azure.md).
+Husk, at du definerede Tabel M i [fase 2: Konfigurer domænecontrollere](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) og Tabeller R, V, S, I og A i [fase 1: Konfigurer Azure](high-availability-federated-authentication-phase-1-configure-azure.md).
   
 > [!NOTE]
-> Følgende kommandosæt bruger den nyeste version af Azure PowerShell. Se [Introduktion til Azure PowerShell](/powershell/azure/get-started-azureps). 
+> Følgende kommandosæt bruger den nyeste version af Azure PowerShell. Se [Kom i gang med Azure PowerShell](/powershell/azure/get-started-azureps). 
   
-Først skal du oprette en intern Azure-belastningsbalance for de to AD FS-servere. Angiv værdierne for variablerne, og fjern tegnene \< and > . Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok ved Azure PowerShell kommandoprompt eller i PowerShell ISE.
+Først skal du oprette en intern Belastningsjustering i Azure for de to AD FS-servere. Angiv værdierne for variablerne, og fjern tegnene \< and > . Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok ved kommandoprompten Azure PowerShell eller i PowerShell ISE.
   
 > [!TIP]
-> Hvis du vil generere powerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du [Microsoft Excel projektmappen til konfiguration](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
+> Hvis du vil generere PowerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du bruge denne [Microsoft Excel konfigurationsprojektmappe](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
 
 ```powershell
 # Set up key variables
@@ -74,9 +74,9 @@ $lbrule=New-AzLoadBalancerRuleConfig -Name "HTTPSTraffic" -FrontendIpConfigurati
 New-AzLoadBalancer -ResourceGroupName $rgName -Name "ADFSServers" -Location $locName -LoadBalancingRule $lbrule -BackendAddressPool $beAddressPool -Probe $healthProbe -FrontendIpConfiguration $frontendIP
 ```
 
-Dernæst skal du oprette virtuelle AD FS-servercomputere.
+Opret derefter de virtuelle AD FS-servercomputere.
   
-Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok ved Azure PowerShell kommandoprompt eller i PowerShell ISE.
+Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok ved kommandoprompten Azure PowerShell eller i PowerShell ISE.
   
 ```powershell
 # Set up variables common to both virtual machines
@@ -131,11 +131,11 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> Da disse virtuelle computere er til et intranetprogram, er de ikke tildelt en offentlig IP-adresse eller et DNS-domænenavnenavn, der vises på internettet. Men det betyder også, at du ikke kan oprette forbindelse til dem fra Azure-portalen. Indstillingen **Forbind** ikke tilgængelig, når du får vist egenskaberne for den virtuelle maskine. Brug tilbehøret Forbindelse til fjernskrivebord eller et andet fjernskrivebord-værktøj til at oprette forbindelse til den virtuelle maskine ved hjælp af dens private IP-adresse eller DNS-navn på intranettet.
+> Da disse virtuelle maskiner er til et intranetprogram, tildeles de ikke en offentlig IP-adresse eller et DNS-domænenavn og vises på internettet. Det betyder dog også, at du ikke kan oprette forbindelse til dem fra Azure Portal. Indstillingen **Forbind** er ikke tilgængelig, når du får vist egenskaberne for den virtuelle maskine. Brug tilbehøret Forbindelse til Fjernskrivebord eller et andet fjernskrivebord-værktøj til at oprette forbindelse til den virtuelle maskine ved hjælp af dens private IP-adresse eller intranet-DNS-navn.
   
-For hver virtuel maskine skal du bruge den foretrukne fjernskrivebord-klient og oprette en forbindelse til fjernskriveborde. Brug dets intranet-DNS eller computernavn samt legitimationsoplysningerne for den lokale administratorkonto.
+For hver virtuel maskine skal du bruge den valgte fjernskrivebordsklient og oprette en forbindelse til fjernskrivebord. Brug intranet-DNS- eller computernavnet og legitimationsoplysningerne for den lokale administratorkonto.
   
-For hver virtuel maskine skal de joinforbindelse dem til det relevante Active Directory-domæneservices (AD DS)-domæne med disse kommandoer i Windows PowerShell prompten.
+For hver virtuel maskine skal du slutte dem til det relevante AD DS-domæne (Active Directory-domæneservices) med disse kommandoer ved Windows PowerShell prompt.
   
 ```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
@@ -144,18 +144,18 @@ Add-Computer -DomainName $domName -Credential $cred
 Restart-Computer
 ```
 
-Her er konfigurationen, der fremkommer, når denne fase er fuldført, med pladsholdercomputernavne.
+Her er den konfiguration, der er resultatet af den vellykkede fuldførelse af denne fase med navne på pladsholdercomputere.
   
-**Fase 3: AD FS-servere og intern belastningsbalancer for din godkendelsesinfrastruktur i organisationsnetværket med høj tilgængelighed i Azure**
+**Fase 3: AD FS-serverne og den interne belastningsjustering for din netværksforbundne godkendelsesinfrastruktur med høj tilgængelighed i Azure**
 
-![Fase 3 af den høje tilgængelighed Microsoft 365 organisationsnetværkets godkendelsesinfrastruktur i Azure med AD FS-serverne.](../media/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
+![Fase 3 af den høje tilgængelighed Microsoft 365 organisationsnetværksgodkendelsesinfrastruktur i Azure med AD FS-serverne.](../media/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
   
 ## <a name="next-step"></a>Næste trin
 
-Brug [Fase 4: Konfigurer webprogram-proxyer for](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) at fortsætte med at konfigurere denne arbejdsbyrde.
+Brug [fase 4: Konfigurer proxyer for webprogrammer](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) for at fortsætte konfigurationen af denne arbejdsbelastning.
   
 ## <a name="see-also"></a>Se også
 
-[Installér godkendelse med høj tilgængelighed i organisationsnetværket Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
+[Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
   
-[Identitet i organisationsnetværk for dit Microsoft 365 udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)
+[Organisationsnetværksidentitet for dit Microsoft 365 udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)

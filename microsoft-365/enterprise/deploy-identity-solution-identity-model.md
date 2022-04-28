@@ -1,8 +1,8 @@
 ---
-title: Trin 1. Bestem din skyidentitetsmodel
+title: Trin 1. Bestem din cloudidentitetsmodel
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.date: 09/30/2020
 ms.topic: overview
@@ -22,93 +22,93 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
-description: Trin 1. Bestem din Microsoft-skyidentitetsmodel
-ms.openlocfilehash: 2f9527b05a688b27304529634a75db4ef8a1b07d
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Trin 1. Fastlæg din Microsoft-cloudidentitetsmodel
+ms.openlocfilehash: 41604ebb08104f802e33023763e9771d2b6acfda
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63598599"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101265"
 ---
-# <a name="step-1-determine-your-cloud-identity-model"></a>Trin 1. Bestem din skyidentitetsmodel
+# <a name="step-1-determine-your-cloud-identity-model"></a>Trin 1. Bestem din cloudidentitetsmodel
 
-Microsoft 365 bruger Azure Active Directory (Azure AD), en skybaseret brugeridentitet og autentifikationsservice, der er inkluderet i dit Microsoft 365-abonnement, til at administrere identiteter og godkendelse for Microsoft 365. Det er vigtigt at få konfigureret din identitetsinfrastruktur korrekt Microsoft 365 administration af brugeradgang og tilladelser for organisationen.
+Microsoft 365 bruger Azure Active Directory (Azure AD), en cloudbaseret brugeridentitets- og godkendelsestjeneste, der følger med dit Microsoft 365 abonnement, til at administrere identiteter og godkendelse for Microsoft 365. Det er vigtigt at få konfigureret din identitetsinfrastruktur korrekt for at administrere Microsoft 365 brugeradgang og tilladelser for din organisation.
 
-Før du begynder, kan du se denne video for at få et overblik over identitetsmodeller og godkendelse til Microsoft 365.
+Før du begynder, kan du se denne video for at få en oversigt over identitetsmodeller og godkendelse for Microsoft 365.
 
 <p> </p>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2Pjwu]
 
-Dit første planlægningsvalg er din skyidentitetsmodel.
+Dit første planlægningsvalg er din cloudidentitetsmodel.
 
-## <a name="microsoft-cloud-identity-models"></a>Microsoft-skyidentitetsmodeller
+## <a name="microsoft-cloud-identity-models"></a>Microsofts cloudidentitetsmodeller
 
-Hvis du vil planlægge brugerkonti, skal du først forstå de to identitetsmodeller i Microsoft 365. Du kan kun bevare organisationens identiteter i skyen, eller du kan bevare dine lokale Active Directory-domæneservices-identiteter (AD DS) og bruge dem til godkendelse, når brugere får adgang til Microsoft 365-skytjenester.
+Hvis du vil planlægge brugerkonti, skal du først forstå de to identitetsmodeller i Microsoft 365. Du kan kun vedligeholde din organisations identiteter i cloudmiljøet, eller du kan vedligeholde dine AD DS-identiteter (Active Directory i det lokale miljø Domain Services) og bruge dem til godkendelse, når brugerne får adgang til Microsoft 365 cloudtjenester.
 
-Her er de to typer identiteter og deres bedste tilpasning og fordele.
+Her er de to typer af identitet og deres bedste pasform og fordele.
 
-| Attribut | Kun skyidentitet | Hybrididentitet |
+| Attribut | Kun cloud-id | Hybrididentitet |
 |:-------|:-----|:-----|
-| **Definition** | Brugerkonto findes kun i Azure AD-lejeren for dit Microsoft 365 abonnement. | Brugerkonto findes i et AD DS og der findes også en kopi i Azure AD-lejeren for Microsoft 365 abonnement. Brugerkontoen i Azure AD kan også indeholde en ændret version af den allerede AD DS adgangskoden til brugerkontoen. |
-| **Sådan Microsoft 365 brugerlegitimationsoplysninger** | Azure AD-lejeren for dit Microsoft 365-abonnement udfører godkendelsen med skyidentitetskontoen. | Azure AD-lejeren for dit Microsoft 365 håndterer godkendelsesprocessen eller omdirigerer brugeren til en anden identitetsudbyder. |
-| **Bedst til** | Organisationer, der ikke har eller har brug for en lokal AD DS. | Organisationer, der AD DS en anden identitetsudbyder. |
-| **Største fordel** | Nem at bruge. Der kræves ingen ekstra katalogværktøjer eller servere. | Brugere kan bruge de samme legitimationsoplysninger, når de får adgang til lokale eller skybaserede ressourcer. |
+| **Definition** | Brugerkontoen findes kun i Azure AD-lejeren for dit Microsoft 365 abonnement. | Brugerkontoen findes i AD DS, og der findes også en kopi i Azure AD-lejeren for dit Microsoft 365 abonnement. Brugerkontoen i Azure AD kan også indeholde en hashkodet version af adgangskoden til AD DS-brugerkontoen, der allerede er hashkodet. |
+| **Sådan godkender Microsoft 365 brugerlegitimationsoplysninger** | Azure AD-lejeren for dit Microsoft 365-abonnement udfører godkendelsen med cloudidentitetskontoen. | Azure AD-lejeren for dit Microsoft 365-abonnement håndterer enten godkendelsesprocessen eller omdirigerer brugeren til en anden identitetsudbyder. |
+| **Bedst til** | Organisationer, der ikke har eller har brug for ad DS i det lokale miljø. | Organisationer, der bruger AD DS eller en anden identitetsudbyder. |
+| **Største fordel** | Nem at bruge. Der kræves ingen ekstra katalogværktøjer eller -servere. | Brugerne kan bruge de samme legitimationsoplysninger, når de får adgang til lokale eller skybaserede ressourcer. |
 ||||
 
-## <a name="cloud-only-identity"></a>Kun skyidentitet
+## <a name="cloud-only-identity"></a>Kun cloud-id
 
-En identitet, der kun findes i skyen, bruger brugerkonti, der kun findes i Azure AD. Identitet, der kun findes i skyen, bruges typisk af små organisationer, der ikke har lokale servere eller ikke bruger AD DS til at administrere lokale identiteter.
+En skybaseret identitet bruger brugerkonti, der kun findes i Azure AD. Identitet, der kun findes i skyen, bruges typisk af små organisationer, der ikke har lokale servere eller ikke bruger AD DS til at administrere lokale identiteter.
 
-Her er de grundlæggende komponenter i en identitet, der kun findes i skyen.
+Her er de grundlæggende komponenter i identitet, der kun findes i cloudmiljøet.
 
-![Grundlæggende komponenter i kun skyidentitet.](../media/about-microsoft-365-identity/cloud-only-identity.png)
+![Grundlæggende komponenter i identitet, der kun er i cloudmiljøet.](../media/about-microsoft-365-identity/cloud-only-identity.png)
 
-Både lokale og eksterne (online) brugere bruger deres Azure AD-brugerkonti og adgangskoder til at få adgang Microsoft 365 skytjenester. Azure AD godkender brugerlegitimationsoplysninger baseret på de gemte brugerkonti og adgangskoder.
+Både lokale og eksterne (online) brugere bruger deres Azure AD-brugerkonti og -adgangskoder til at få adgang til Microsoft 365 cloudtjenester. Azure AD godkender brugerlegitimationsoplysninger baseret på de gemte brugerkonti og adgangskoder.
 
 ### <a name="administration"></a>Administration
-Da brugerkonti kun gemmes i Azure AD, administrerer du skyidentiteter med værktøjer som [Microsoft 365 Administration og](/admin) [Windows PowerShell](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md).
+Da brugerkonti kun gemmes i Azure AD, kan du administrere cloudidentiteter med værktøjer som [Microsoft 365 Administration](/admin) og [Windows PowerShell](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md).
 
 ## <a name="hybrid-identity"></a>Hybrididentitet
 
-Hybrididentitet bruger konti, der stammer fra en lokal AD DS og har en kopi i Azure AD-lejeren for et Microsoft 365 abonnement. De fleste ændringer, med undtagelse af [bestemte kontoattributter](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized), flyder kun én måde. De ændringer, du foretager AD DS brugerkonti, synkroniseres med deres kopi i Azure AD.
+Hybrididentitet bruger konti, der stammer fra en AD DS i det lokale miljø og har en kopi i Azure AD-lejeren for et Microsoft 365-abonnement. De fleste ændringer, med undtagelse af [specifikke kontoattributter](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized), flower kun én måde. De ændringer, du foretager af AD DS-brugerkonti, synkroniseres med deres kopi i Azure AD.
 
-Azure AD Forbind den løbende synkronisering af konti. Den kører på en lokal server, kontrollerer, om der er ændringer i AD DS og videresender disse ændringer til Azure AD. Azure AD Forbind giver mulighed for at filtrere, hvilke konti der synkroniseres, og om du vil synkronisere en hash-version af brugeradgangskoder, også kaldet synkronisering af adgangskodehash ( PHS).
+Azure AD Forbind leverer den løbende kontosynkronisering. Den kører på en server i det lokale miljø, kontrollerer, om der er ændringer i AD DS, og videresender disse ændringer til Azure AD. Azure AD Forbind gør det muligt at filtrere, hvilke konti der synkroniseres, og om der skal synkroniseres en hashkodet version af brugeradgangskoder, også kaldet synkronisering af adgangskodehash (PHS).
 
-Når du implementerer hybrididentitet, er din lokale AD DS den autoritative kilde til kontooplysninger. Det betyder, at du hovedsageligt udfører administrationsopgaver i det lokale miljø, som derefter synkroniseres med Azure AD.
+Når du implementerer hybrididentitet, er AD DS i det lokale miljø den autoritative kilde til kontooplysninger. Det betyder, at du primært udfører administrationsopgaver i det lokale miljø, som derefter synkroniseres til Azure AD.
 
-Her er komponenterne for hybrididentitet.
+Her er komponenterne i hybrididentitet.
 
 ![Komponenter i hybrididentitet.](../media/about-microsoft-365-identity/hybrid-identity.png)
 
-Azure AD-lejeren har en kopi af de AD DS konti. I denne konfiguration godkendes både lokale brugere og eksterne brugere, der Microsoft 365 skytjenester, i Azure AD.
+Azure AD-lejeren har en kopi af AD DS-kontiene. I denne konfiguration godkendes både lokale og eksterne brugere, der får adgang til Microsoft 365 cloudtjenester, i Azure AD.
 
 > [!NOTE]
-> Du skal altid bruge Azure AD-Forbind at synkronisere brugerkonti til hybrididentitet. Du skal bruge de synkroniserede brugerkonti i Azure AD for at kunne udføre licenstildeling og gruppeadministration, konfigurere tilladelser og andre administrative opgaver, der involverer brugerkonti.
+> Du skal altid bruge Azure AD-Forbind til at synkronisere brugerkonti for hybrididentitet. Du skal bruge de synkroniserede brugerkonti i Azure AD for at kunne udføre licenstildeling og gruppeadministration, konfigurere tilladelser og andre administrative opgaver, der omfatter brugerkonti.
 
-### <a name="hybrid-identity-and-directory-synchronization-for-microsoft-365"></a>Hybrid identitet og katalogsynkronisering til Microsoft 365
+### <a name="hybrid-identity-and-directory-synchronization-for-microsoft-365"></a>Synkronisering af hybrididentitet og mappe for Microsoft 365
 
-Afhængigt af virksomhedens behov og tekniske krav er hybrididentitetsmodellen og katalogsynkronisering det mest almindelige valg for virksomhedskunder, der Microsoft 365. Katalogsynkronisering gør det muligt at administrere identiteter i din Active Directory-domæneservices (AD DS), og alle opdateringer af brugerkonti, grupper og kontakter synkroniseres med Azure Active Directory-lejeren (Azure AD) i dit Microsoft 365-abonnement.
+Afhængigt af dine forretningsbehov og tekniske krav er hybrididentitetsmodellen og katalogsynkroniseringen det mest almindelige valg for virksomhedskunder, der anvender Microsoft 365. Katalogsynkronisering giver dig mulighed for at administrere identiteter i dit ad-DS (Active Directory-domæneservices), og alle opdateringer af brugerkonti, grupper og kontakter synkroniseres med Azure AD-lejeren (Azure Active Directory) for dit Microsoft 365-abonnement.
 
 >[!Note]
->Når AD DS brugerkonti synkroniseres for første gang, tildeles de ikke automatisk en Microsoft 365-licens og kan ikke få adgang til Microsoft 365-tjenester, f.eks. mail. Du skal først tildele dem en brugsplacering. Tildel derefter en licens til disse brugerkonti enten enkeltvis eller dynamisk via gruppemedlemskab.
+>Når AD DS-brugerkonti synkroniseres første gang, tildeles de ikke automatisk en Microsoft 365-licens og kan ikke få adgang til Microsoft 365 tjenester, f.eks. mail. Du skal først tildele dem en forbrugsplacering. Derefter skal du tildele en licens til disse brugerkonti enten individuelt eller dynamisk via gruppemedlemskab.
 >
 
-#### <a name="authentication-for-hybrid-identity"></a>Godkendelse til hybrididentitet
+#### <a name="authentication-for-hybrid-identity"></a>Godkendelse af hybrididentitet
 
-Der findes to typer godkendelse, når du bruger hybrididentitetsmodellen:
+Der er to godkendelsestyper, når du bruger hybrididentitetsmodellen:
 
 - Administreret godkendelse
 
-  Azure AD håndterer godkendelsesprocessen ved hjælp af en lokalt gemt hashedsversion af adgangskoden eller sender legitimationsoplysningerne til en lokal softwareagent for at blive godkendt af den lokale AD DS.
+  Azure AD håndterer godkendelsesprocessen ved hjælp af en hashkodet version af adgangskoden, der er gemt lokalt, eller sender legitimationsoplysningerne til en lokal softwareagent, der skal godkendes af AD DS i det lokale miljø.
 
 - Federated Authentication
 
-  Azure AD omdirigerer klientcomputeren, der anmoder om godkendelse, til en anden identitetsudbyder.
+  Azure AD omdirigerer den klientcomputer, der anmoder om godkendelse, til en anden identitetsudbyder.
 
 #### <a name="managed-authentication"></a>Administreret godkendelse
 
-Der findes to typer administreret godkendelse:
+Der er to typer administreret godkendelse:
 
 - Synkronisering af adgangskodehash (PHS)
 
@@ -116,51 +116,51 @@ Der findes to typer administreret godkendelse:
 
 - Pass-through-godkendelse (PTA)
 
-  Azure AD AD DS udføre godkendelsen.
+  Azure AD har AD DS til at udføre godkendelsen.
 
 
 ##### <a name="password-hash-synchronization-phs"></a>Synkronisering af adgangskodehash (PHS)
 
-Med PHS synkroniserer du dine AD DS-brugerkonti Microsoft 365 og administrerer dine brugere lokalt. Hashes af brugeradgangskoder synkroniseres fra din AD DS til Azure AD, så brugerne har den samme adgangskode lokalt og i skyen. Dette er den nemmeste måde at aktivere godkendelse AD DS identiteter i Azure AD. 
+Med PHS synkroniserer du dine AD DS-brugerkonti med Microsoft 365 og administrerer dine brugere i det lokale miljø. Hashværdier for brugeradgangskoder synkroniseres fra dit AD DS til Azure AD, så brugerne har den samme adgangskode i det lokale miljø og i cloudmiljøet. Dette er den nemmeste måde at aktivere godkendelse for AD DS-identiteter på i Azure AD. 
 
 ![Synkronisering af adgangskodehash (PHS).](../media/plan-for-directory-synchronization/phs-authentication.png)
 
-Når adgangskoder ændres eller nulstilles lokalt, synkroniseres de nye adgangskodehashes med Azure AD, så brugerne altid kan bruge den samme adgangskode til skyressourcer og lokale ressourcer. Brugeradgangskoder sendes aldrig til Azure AD eller gemmes i Azure AD i klar tekst. Nogle førsteklassesfunktioner i Azure AD, f.eks Identity Protection, kræver PHS, uanset hvilken godkendelsesmetode der vælges.
+Når adgangskoder ændres eller nulstilles i det lokale miljø, synkroniseres de nye adgangskodehashs til Azure AD, så dine brugere altid kan bruge den samme adgangskode til cloudressourcer og ressourcer i det lokale miljø. Brugeradgangskoder sendes aldrig til Azure AD eller gemmes i Azure AD som klartekst. Nogle premiumfunktioner i Azure AD, f.eks Identity Protection, kræver PHS, uanset hvilken godkendelsesmetode der vælges.
   
-Se [vælge den rigtige godkendelsesmetode for at](/azure/active-directory/hybrid/choose-ad-authn) få mere at vide.
+Se [Valg af den rigtige godkendelsesmetode](/azure/active-directory/hybrid/choose-ad-authn) for at få mere at vide.
   
 ##### <a name="pass-through-authentication-pta"></a>Pass-through-godkendelse (PTA)
 
-PTA giver en enkel adgangskodevalidering for Azure AD-godkendelsestjenester, der bruger en softwareagent, der kører på en eller flere lokale servere, til at validere brugerne direkte med din AD DS. Med PTA synkroniserer du AD DS-brugerkonti med Microsoft 365 og administrerer dine brugere lokalt. 
+PTA leverer en simpel adgangskodevalidering for Azure AD-godkendelsestjenester ved hjælp af en softwareagent, der kører på en eller flere lokale servere, for at validere brugerne direkte med din AD DS. Med PTA synkroniserer du AD DS-brugerkonti med Microsoft 365 og administrerer dine brugere i det lokale miljø. 
 
 ![Pass-through-godkendelse (PTA).](../media/plan-for-directory-synchronization/pta-authentication.png)
 
-PTA gør det muligt for brugerne at logge på både lokale og lokale Microsoft 365 og programmer ved hjælp af deres lokale konto og adgangskode. Denne konfiguration validerer brugernes adgangskoder direkte i forhold til din lokale AD DS uden at gemme adgangskodehashes i Azure AD. 
+PTA giver brugerne mulighed for at logge på både det lokale miljø og Microsoft 365 ressourcer og programmer ved hjælp af deres lokale konto og adgangskode. Denne konfiguration validerer brugernes adgangskoder direkte mod din AD DS i det lokale miljø uden at gemme adgangskodehash i Azure AD. 
 
-PTA er også for organisationer med et sikkerhedskrav om øjeblikkeligt at gennemtvinge tilstande for lokale brugerkontoer, adgangskodepolitikker og logontimer. 
+PTA er også til organisationer med et sikkerhedskrav om straks at gennemtvinge tilstande for brugerkonti i det lokale miljø, adgangskodepolitikker og logontimer. 
   
-Se [vælge den rigtige godkendelsesmetode for at](/azure/active-directory/hybrid/choose-ad-authn) få mere at vide.
+Se [Valg af den rigtige godkendelsesmetode](/azure/active-directory/hybrid/choose-ad-authn) for at få mere at vide.
   
 ##### <a name="federated-authentication"></a>Federated Authentication
 
-Federated Authentication er primært for store virksomhedsorganisationer med mere komplekse godkendelseskrav. AD DS identiteter synkroniseres med Microsoft 365 og brugerkonti administreres lokalt. Med federated authentication har brugerne den samme adgangskode lokalt og i skyen, og de behøver ikke at logge på igen for at bruge Microsoft 365. 
+Organisationsnetværksgodkendelse er primært til store virksomhedsorganisationer med mere komplekse godkendelseskrav. AD DS-identiteter synkroniseres med Microsoft 365 og brugerkonti administreres i det lokale miljø. Med godkendelse i organisationsnetværket har brugerne den samme adgangskode i det lokale miljø og i cloudmiljøet, og de behøver ikke at logge på igen for at bruge Microsoft 365. 
 
-Federated Authentication kan understøtte yderligere godkendelseskrav, f.eks chipkort-baseret godkendelse eller en tredjeparts multifaktorgodkendelse og er typisk påkrævet, når organisationer har et godkendelseskrav, der ikke oprindeligt understøttes af Azure AD.
+Sammenkædet godkendelse kan understøtte yderligere godkendelseskrav, f.eks. chipkortbaseret godkendelse eller en flerfaktorgodkendelse fra tredjepart, og det er typisk påkrævet, når organisationer har et godkendelseskrav, der ikke understøttes oprindeligt af Azure AD.
  
-Se [vælge den rigtige godkendelsesmetode for at](/azure/active-directory/hybrid/choose-ad-authn) få mere at vide.
+Se [Valg af den rigtige godkendelsesmetode](/azure/active-directory/hybrid/choose-ad-authn) for at få mere at vide.
   
-For tredjepartsudbydere af godkendelse og identitet kan katalogobjekter i det lokale miljø synkroniseres med Microsoft 365 og ressourceadgang i skyen, som primært administreres af en tredjepartsidentitetsudbyder. Hvis din organisation bruger en tredjepartssammenslutningsløsning, kan du konfigurere logon med den løsning til Microsoft 365 forudsat, at tredjepartssammenslutningsløsningen er kompatibel med Azure AD.
+For tredjepartsgodkendelses- og identitetsprovidere kan katalogobjekter i det lokale miljø synkroniseres til Microsoft 365 og adgang til cloudressourcer, der primært administreres af en idP (third-party identity provider). Hvis din organisation bruger en tredjepartsorganisationsløsning, kan du konfigurere logon med denne løsning til Microsoft 365, forudsat at tredjeparts federationløsningen er kompatibel med Azure AD.
   
-Se Azure [AD-sammenslutningens kompatibilitetsliste for](/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility) at få mere at vide.
+Se [kompatibilitetslisten for Azure AD Federation](/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility) for at få mere at vide.
   
 ### <a name="administration"></a>Administration
 
-Da de oprindelige og autoritative brugerkonti er gemt i den lokale AD DS, administrerer du dine identiteter med de samme værktøjer, som du administrerer dine AD DS.
+Da de oprindelige og autoritative brugerkonti er gemt i AD DS i det lokale miljø, kan du administrere dine identiteter med de samme værktøjer, som du administrerer AD DS.
 
-Du bruger ikke bruger-Microsoft 365 Administration eller PowerShell til Microsoft 365 administrere synkroniserede brugerkonti i Azure AD.
+Du bruger ikke Microsoft 365 Administration eller PowerShell til Microsoft 365 til at administrere synkroniserede brugerkonti i Azure AD.
 
 ## <a name="next-step"></a>Næste trin
 
-[![Beskyt dine Microsoft 365-konti](../media/deploy-identity-solution-overview/protect-your-global-administrator-accounts.png)](protect-your-global-administrator-accounts.md)
+[![Beskyt dine Microsoft 365 privilegerede konti](../media/deploy-identity-solution-overview/protect-your-global-administrator-accounts.png)](protect-your-global-administrator-accounts.md)
 
 Fortsæt med [trin 2](protect-your-global-administrator-accounts.md) for at sikre dine globale administratorkonti.

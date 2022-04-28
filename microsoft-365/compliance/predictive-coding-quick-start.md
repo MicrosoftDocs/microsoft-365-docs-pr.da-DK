@@ -2,8 +2,8 @@
 title: Forudsigende kodning i eDiscovery (Premium) – Hurtig start
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: jefwan
 manager: laurawi
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du kommer i gang med at bruge modulet med forudsigende kodning i eDiscovery (Premium). I denne artikel gennemgår vi processen fra ende til anden med at bruge forudsigende kodning til at identificere indhold i et anmeldelsessæt, der er mest relevant for din undersøgelse.
-ms.openlocfilehash: dc4edcb6affa7ccfd6a915839ef84b0d453fcfca
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ac8e31540fbe817b83b5fd0bdae2fadea7040b1a
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996146"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100781"
 ---
 # <a name="quick-start-predictive-coding-in-ediscovery-premium-preview"></a>Hurtig start: Forudsigende kode i eDiscovery (Premium) (prøveversion)
 
@@ -39,7 +39,7 @@ Du kan finde en detaljeret oversigt over forudsigende kodning [under Få mere at
 
 Det første trin er at oprette en ny forudsigende kodemodel i korrektursættet
 
-1. Åbn en eDiscovery(Premium)-sag på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt** .
+1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
 
 2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
 

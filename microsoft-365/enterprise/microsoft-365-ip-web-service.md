@@ -2,7 +2,7 @@
 title: Office 365 IP-adresse og URL-webtjeneste
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 8/6/2019
 audience: ITPro
 ms.topic: conceptual
@@ -22,75 +22,75 @@ search.appverid:
 - MET150
 - MOE150
 - BCS160
-description: Lær at bruge IP Office 365-adressen og URL-webtjenesten til at hjælpe dig med bedre at identificere Office 365 og netværkstrafik.
-ms.openlocfilehash: e4976bafbedc8f5289e2992569bbd5de28e9de75
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+description: Få mere at vide om, hvordan du bruger Office 365 IP-adresse og URL-webtjeneste til at hjælpe dig med bedre at identificere og differentiere Office 365 netværkstrafik.
+ms.openlocfilehash: b13377c6230c869231b7cecda8375f663cbcd33b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63594286"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100627"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP-adresse og URL-webtjeneste
 
-Webtjenesten Office 365 IP-adresse og URL-adresse hjælper dig med bedre at identificere og skelne Office 365-netværkstrafik, hvilket gør det nemmere for dig at evaluere, konfigurere og holde dig opdateret om ændringer. Denne REST-baserede webtjeneste erstatter de tidligere XML-filer, der kan downloades, og som blev udfaset d. 2. oktober 2018.
+Webtjenesten Office 365 IP-adresse og URL-adresse hjælper dig med bedre at identificere og differentiere Office 365 netværkstrafik, hvilket gør det nemmere for dig at evaluere, konfigurere og holde dig ajour med ændringer. Denne REST-baserede webtjeneste erstatter de tidligere XML-filer, der kan downloades, og som blev udfaset den 2. oktober 2018.
 
-Som kunde eller leverandør af en netværksperimeterenhed kan du bygge mod webtjenesten til Office 365 IP-adresse og FQDN-poster. Du kan få adgang til dataene direkte i en webbrowser ved hjælp af disse URL-adresser:
+Som kunde eller leverandør af netværksperimeterenheder kan du oprette i forhold til webtjenesten for Office 365 IP-adresse og FQDN-poster. Du kan få adgang til dataene direkte i en webbrowser ved hjælp af disse URL-adresser:
 
-- Du kan få den nyeste version Office 365 URL-adresser og IP-adresseintervaller ved at bruge [https://endpoints.office.com/version](https://endpoints.office.com/version?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
-- For dataene på siden Office 365 URL-adresser og IP-adresseintervaller for firewalls og proxyservere skal du bruge [https://endpoints.office.com/endpoints/worldwide](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
-- Hvis du vil have alle de seneste ændringer siden juli 2018, da webtjenesten først var tilgængelig, skal du bruge [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Du kan finde den nyeste version af Office 365 URL-adresser og IP-adresseområder ved at bruge [https://endpoints.office.com/version](https://endpoints.office.com/version?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Hvis du vil se dataene på siden Office 365 URL-adresser og IP-adresseområder for firewalls og proxyservere, skal du bruge [https://endpoints.office.com/endpoints/worldwide](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Hvis du vil hente alle de seneste ændringer siden juli 2018, da webtjenesten først var tilgængelig, skal du bruge [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
 
 Som kunde kan du bruge denne webtjeneste til at:
 
-- Opdater dine PowerShell-scripts for at Office 365 slutpunktsdata og ændre eventuel formatering til dine netværksenheder.
+- Opdater dine PowerShell-scripts for at hente Office 365 slutpunktsdata og ændre formateringen af dine netværksenheder.
 - Brug disse oplysninger til at opdatere PAC-filer, der er installeret på klientcomputere.
 
-Som leverandør af netværksperimeterenheden kan du bruge denne webtjeneste til at:
+Som leverandør af netværksperimeterenheder kan du bruge denne webtjeneste til at:
 
-- Opret og test enhedssoftware for at downloade listen for automatiseret konfiguration.
-- Søg efter den aktuelle version.
+- Opret og test enhedssoftware for at downloade listen til automatiseret konfiguration.
+- Kontrollér, om der er den aktuelle version.
 - Hent de aktuelle ændringer.
 
 > [!NOTE]
-> Hvis du bruger Azure ExpressRoute til at oprette forbindelse til Office 365, skal du gennemgå [Azure ExpressRoute for Office 365 for](azure-expressroute.md) at blive fortrolig med de Office 365-tjenester, der understøttes via Azure ExpressRoute. Læs også artiklen om [Office 365 OG](urls-and-ip-address-ranges.md) IP-adresseintervaller for at forstå, hvilke netværksanmodninger til Office 365 programmer kræver forbindelse til internettet. Dette vil hjælpe dig med bedre at konfigurere dine perimetersikkerhedsenheder.
+> Hvis du bruger Azure ExpressRoute til at oprette forbindelse til Office 365, skal du gennemse [Azure ExpressRoute for at få Office 365](azure-expressroute.md) for at blive fortrolig med de Office 365 tjenester, der understøttes via Azure ExpressRoute. Gennemse også artiklen [Office 365 URL-adresser og IP-adresseintervaller](urls-and-ip-address-ranges.md) for at forstå, hvilke netværksanmodninger for Office 365 programmer der kræver internetforbindelse. Dette hjælper med at konfigurere perimetersikkerhedsenhederne bedre.
 
 Du kan finde flere oplysninger under:
 
-- [Blogindlæg om meddelelse i Office 365 Tech Community-forum](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638)
-- [Office 365 Tech Community-forum for spørgsmål om brug af webtjenesterne](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
+- [Blogindlæg om annoncering i Office 365 Tech Community Forum](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638)
+- [Office 365 Tech Community Forum for spørgsmål om brug af webtjenester](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
 
 ## <a name="common-parameters"></a>Almindelige parametre
 
-Disse parametre er fælles for alle webtjenestemetoder:
+Disse parametre er fælles på tværs af alle webtjenestemetoderne:
 
-- **format=\<JSON \| CSV\>** – Som standard er det returnerede dataformat JSON. Brug denne valgfri parameter til at returnere dataene i kommaseparerede værdier (CSV)-format.
-- **ClientRequestId=\<guid\>** – Et påkrævet GUID, som du opretter for klientsammenknytning. Opret et entydigt GUID for hver computer, der kalder webtjenesten (de scripts, der er inkluderet på denne side, opretter et GUID for dig). Brug ikke GUID'erne, der er vist i følgende eksempler, da de kan være blokerede af webtjenesten fremover. GUID-formatet er _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_, hvor x repræsenterer et hexadecimaltal.
+- **format=\<JSON \| CSV\>** – Som standard er det returnerede dataformat JSON. Brug denne valgfri parameter til at returnere dataene i CSV-format (kommaseparerede værdier).
+- **ClientRequestId=\<guid\>** – Et påkrævet GUID, som du genererer for klienttilknytningen. Opret et entydigt GUID for hver computer, der kalder webtjenesten (de scripts, der er inkluderet på denne side, genererer et GUID for dig). Brug ikke guid'erne, der vises i følgende eksempler, da de kan blive blokeret af webtjenesten i fremtiden. GUID-formatet er _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx_, hvor x repræsenterer et hexadecimaltal.
 
-  Hvis du vil oprette et GUID, kan du bruge [New-Guid PowerShell-kommandoen](/powershell/module/microsoft.powershell.utility/new-guid) eller bruge en onlinetjeneste som f.eks. [Online GUID Generator](https://www.guidgenerator.com/).
+  Hvis du vil oprette et GUID, kan du bruge kommandoen [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) PowerShell eller bruge en onlinetjeneste, f.eks. [Generator af online-GUID](https://www.guidgenerator.com/).
 
-## <a name="version-web-method"></a>Version via webmetode
+## <a name="version-web-method"></a>Webmetode for version
 
-Microsoft opdaterer Office 365 IP-adresse og FQDN-poster i begyndelsen af hver måned. Out of band-opdateringer udgives nogle gange på grund af supporthændelser, sikkerhedsopdateringer eller andre driftskrav.
+Microsoft opdaterer posterne Office 365 IP-adresse og FQDN i begyndelsen af hver måned. Out-of-band-opdateringer udgives nogle gange på grund af supporthændelser, sikkerhedsopdateringer eller andre driftsmæssige krav.
 
-Dataene for hver forekomst, der publiceres, tildeles et versionsnummer, og version via webmetoden gør det muligt at kontrollere, om den nyeste version af hver forekomst Office 365 forekomst. Vi anbefaler, at du kontrollerer versionen højst én gang i timen.
+Dataene for hver publicerede forekomst tildeles et versionsnummer, og webmetoden version giver dig mulighed for at kontrollere, om der er den nyeste version af hver Office 365 tjenesteforekomst. Vi anbefaler, at du kontrollerer versionen ikke mere end én gang i timen.
 
-Parametre for version via webmetoden er:
+Parametrene for webmetoden til versionen er:
 
-- **AllVersions=\<true \| false\>** – Som standard er den returnerede version den nyeste. Medtag denne valgfri parameter for at anmode om alle publicerede versioner, siden webtjenesten blev udgivet første gang.
-- **Format=\<JSON \| CSV \| RSS\>** – Ud over formaterne JSON og CSV understøtter version via webmetoden også RSS. Du kan bruge denne valgfri parameter sammen med _parameteren AllVersions=true_ til at anmode om et RSS-feed, der kan bruges sammen med Outlook eller andre RSS-læsere.
-- **Forekomst=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** – Denne valgfri parameter angiver forekomsten, versionen skal returneres til. Hvis det udelades, returneres alle forekomster. Gyldige forekomster er: Worldwide, China, USGovDoD, USGovGCCHigh.
+- **AllVersions=\<true \| false\>** – Den version, der returneres, er som standard den nyeste. Medtag denne valgfri parameter for at anmode om alle publicerede versioner, siden webtjenesten blev udgivet første gang.
+- **Format=\<JSON \| CSV \| RSS\>** – Ud over formaterne JSON og CSV understøtter webmetoden også RSS. Du kan bruge denne valgfri parameter sammen med parameteren _AllVersions=true_ til at anmode om et RSS-feed, der kan bruges sammen med Outlook eller andre RSS-læsere.
+- **Forekomst=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** – Denne valgfri parameter angiver den forekomst, versionen skal returneres for. Hvis den udelades, returneres alle forekomster. Gyldige forekomster er: Worldwide, China, USGovDoD, USGovGCCHigh.
 
-Versionen af webmetoden er ikke begrænset til rentesatsen og returnerer aldrig 429 HTTP-svarkoder. Svaret på version via webmetoden omfatter en cachekontrolkontroloverskrift, der anbefaler cachelagring af dataene i 1 time. Resultatet af version via webmetoden kan være en enkelt post eller en række poster. Elementerne i hver post er:
+Webmetoden til versionen er ikke begrænset og returnerer aldrig 429 HTTP-svarkoder. Svaret på webmetoden for versionen omfatter en cachekontrolheader, der anbefaler cachelagring af dataene i 1 time. Resultatet fra webmetoden version kan være en enkelt post eller en matrix af poster. Elementerne i hver post er:
 
-- forekomst – det korte navn på den Office 365 tjenesteforekomst.
-- seneste – den nyeste version for slutpunkterne for den angivne forekomst.
-- versioner – en liste over alle tidligere versioner for den angivne forekomst. Dette element er kun inkluderet, hvis _parameteren AllVersions_ er sand.
+- instance – Det korte navn på Office 365 tjenesteforekomst.
+- latest – den nyeste version for slutpunkter for den angivne forekomst.
+- versioner – en liste over alle tidligere versioner for den angivne forekomst. Dette element medtages kun, hvis parameteren _AllVersions_ er sand.
 
-### <a name="version-web-method-examples"></a>Eksempler på version via webmetode
+### <a name="version-web-method-examples"></a>Eksempler på webmetode til version
 
-Eksempel 1 på anmodnings-URI: <https://endpoints.office.com/version?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 1- anmodnings-URI: <https://endpoints.office.com/version?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Denne URI returnerer den nyeste version af hver Office 365 hver tjenesteforekomst. Eksempelresultat:
+Denne URI returnerer den nyeste version af hver Office 365 tjenesteforekomst. Eksempelresultat:
 
 ```json
 [
@@ -114,9 +114,9 @@ Denne URI returnerer den nyeste version af hver Office 365 hver tjenesteforekoms
 ```
 
 > [!IMPORTANT]
-> GUID'et for parameteren ClientRequestID i disse URI'er er kun et eksempel. Hvis du vil prøve webtjenestens URI'er, skal du oprette dit eget GUID. GUID'erne, der er vist i disse eksempler, kan være blokeret af webtjenesten fremover.
+> GUID'et for parameteren ClientRequestID i disse URI'er er kun et eksempel. Hvis du vil prøve webtjeneste-URI'erne, skal du generere dit eget GUID. De GUID'er, der vises i disse eksempler, kan blive blokeret af webtjenesten i fremtiden.
 
-Eksempel 2 på anmodnings-URI: <https://endpoints.office.com/version/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 2- anmodnings-URI: <https://endpoints.office.com/version/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
 Denne URI returnerer den nyeste version af den angivne Office 365 tjenesteforekomst. Eksempelresultat:
 
@@ -127,7 +127,7 @@ Denne URI returnerer den nyeste version af den angivne Office 365 tjenesteforeko
 }
 ```
 
-Eksempel 3 på anmodnings-URI: <https://endpoints.office.com/version/Worldwide?Format=CSV&ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 3- anmodnings-URI: <https://endpoints.office.com/version/Worldwide?Format=CSV&ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
 Denne URI viser output i CSV-format. Eksempelresultat:
 
@@ -136,9 +136,9 @@ instance,latest
 Worldwide,2018063000
 ```
 
-Eksempel 4 på anmodnings-URI: <https://endpoints.office.com/version/Worldwide?AllVersions=true&ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 4- anmodnings-URI: <https://endpoints.office.com/version/Worldwide?AllVersions=true&ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Denne URI viser alle tidligere versioner, der er blevet publiceret for Office 365 verdensomspændende tjenesteforekomst. Eksempelresultat:
+Denne URI viser alle tidligere versioner, der er publiceret for Office 365 verdensomspændende tjenesteforekomst. Eksempelresultat:
 
 ```json
 {
@@ -153,7 +153,7 @@ Denne URI viser alle tidligere versioner, der er blevet publiceret for Office 36
 
 Eksempel 5 RSS-feed-URI: <https://endpoints.office.com/version/worldwide?clientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7&allVersions=true&format=RSS>
 
-Denne URI viser et RSS-feed med de publicerede versioner, der indeholder links til listen over ændringer for hver version. Eksempelresultat:
+Denne URI viser et RSS-feed for de publicerede versioner, der indeholder links til listen over ændringer for hver version. Eksempelresultat:
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -170,37 +170,37 @@ Denne URI viser et RSS-feed med de publicerede versioner, der indeholder links t
 </item>
 ```
 
-## <a name="endpoints-web-method"></a>Slutpunkter via webmetode
+## <a name="endpoints-web-method"></a>Webmetode for slutpunkter
 
-Slutpunkter via webmetoden returnerer alle poster for IP-adresseintervaller og URL-adresser, der udgør Office 365 tjeneste. De nyeste data fra slutpunkter via webmetoden bør altid bruges til konfiguration af netværksenhed. Microsoft giver dig besked i forvejen 30 dage før udgivelse af nye tilføjelser for at give dig tid til at opdatere adgangskontrollister og proxyserverens bypass-lister. Vi anbefaler, at du kun kalder slutpunkter for webmetoden igen, når version via webmetoden angiver, at der findes en ny version af dataene.
+Webmetoden slutpunkter returnerer alle poster for IP-adresseintervaller og URL-adresser, der udgør Office 365-tjenesten. De nyeste data fra webmetoden for slutpunkter skal altid bruges til konfiguration af netværksenheder. Microsoft giver forhåndsmeddelelse 30 dage før publicering af nye tilføjelser for at give dig tid til at opdatere adgangskontrollister og proxyserver bypass-lister. Det anbefales, at du kun kalder webmetoden for slutpunkter igen, når webmetoden for versionen angiver, at der er en ny version af dataene tilgængelig.
 
-Parametrene for slutpunkter via webmetoden er:
+Parametrene for slutpunktets webmetode er:
 
-- **ServiceAreas=\<Common \| Exchange \| SharePoint \| Skype\>** – En kommasepareret liste over tjenesteområder. Gyldige elementer _er Fælles__, Exchange_, _SharePoint_ og _Skype_. Da _almindelige_ tjenesteområdeelementer er en forudsætning for alle andre tjenesteområder, omfatter webtjenesten dem altid. Hvis du ikke medtager denne parameter, returneres alle tjenesteområder.
-- **TenantName=\<tenant_name\>** – dit Office 365 lejernavn. Webtjenesten tager dit angivne navn og indsætter det i dele af URL-adresser, der indeholder lejernavnet. Hvis du ikke angiver et lejernavn, har disse dele af URL-adresser jokertegnet (\*).
-- **NoIPv6=\<true \| false\>** – Indstil værdien til _sand_ for at udelukke IPv6-adresser fra outputtet, hvis du ikke bruger IPv6 i dit netværk.
-- **Forekomst=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** – Denne påkrævede parameter angiver forekomsten, slutpunkterne skal returneres fra. Gyldige forekomster er: _Worldwide_, _China_, _USGovDoD_, and _USGovGCCHigh_.
+- **Tjenesteområder=\<Common \| Exchange \| SharePoint \| Skype\>** –En kommasepareret liste over tjenesteområder. De gyldige elementer er _Fælles_, _Exchange_, _SharePoint_ og _Skype_. Da _Elementer i Common_ Service-området er en forudsætning for alle andre tjenesteområder, inkluderer webtjenesten dem altid. Hvis du ikke medtager denne parameter, returneres alle tjenesteområder.
+- **TenantName=\<tenant_name\>** – Dit Office 365 lejernavn. Webtjenesten tager det angivne navn og indsætter det i dele af URL-adresser, der indeholder lejernavnet. Hvis du ikke angiver et lejernavn, har disse dele af URL-adresser jokertegnet (\*).
+- **NoIPv6=\<true \| false\>** – Angiv værdien til _sand_ for at udelade IPv6-adresser fra outputtet, hvis du ikke bruger IPv6 i netværket.
+- **Forekomst=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** –Denne obligatoriske parameter angiver den forekomst, som slutpunkterne skal returneres fra. Gyldige forekomster er: _Worldwide_, _China_, _USGovDoD_ og _USGovGCCHigh_.
 
-Hvis du kalder slutpunkter for webmetoden for mange gange fra den samme klients IP-adresse, modtager du muligvis HTTP-svarkode _429 (for mange anmodninger)_. Hvis du får denne svarkode, skal du vente 1 time, før du gentager din anmodning, eller du kan oprette et nyt GUID for anmodningen. Som en generel bedste fremgangsmåde skal du kun kalde slutpunkter via webmetoden, når version via webmetoden angiver, at der findes en ny version.
+Hvis du kalder webmetoden for slutpunkter for mange gange fra den samme klient-IP-adresse, modtager du muligvis HTTP-svarkoden _429 (for mange anmodninger)_. Hvis du får vist denne svarkode, skal du vente 1 time, før du gentager din anmodning, eller generere et nyt GUID for anmodningen. Generelt bedste praksis er det kun at kalde webmetoden for slutpunkter, når webmetoden for versionen angiver, at der er en ny version tilgængelig.
 
-Resultatet af slutpunkter via webmetoden er en række poster, hvor hver post repræsenterer et bestemt slutpunktssæt. Elementerne for hver post er:
+Resultatet fra webmetoden slutpunkter er en matrix af poster, hvor hver post repræsenterer et bestemt slutpunktsæt. Elementerne for hver post er:
 
-- id – Slutpunktssættets uforanderlige id-nummer.
-- serviceArea – det tjenesteområde, som dette er en del af: _Fælles_, _Exchange_, _SharePoint_ eller _Skype_.
-- URL-adresser – URL-adresser for slutpunktssættet. EN JSON-matrix med DNS-poster. Udelades, hvis det er tomt.
-- tcpPorts – TCP-porte til slutpunktssættet. Alle portelementer er formateret som en kommasepareret liste over porte eller portintervaller adskilt af en bindestreg (-). Porte gælder for alle IP-adresser og alle URL-adresser i slutpunktssættet for en bestemt kategori. Udelades, hvis det er tomt.
-- udpPorts – UDP-porte for IP-adresseintervaller i dette slutpunktssæt. Udelades, hvis det er tomt.
-- ips – IP-adresseintervaller, der er knyttet til dette slutpunktssæt, som er knyttet til de angivne TCP- eller UDP-porte. En JSON-matrix med IP-adresseintervaller. Udelades, hvis det er tomt.
-- category – forbindelseskategorien for slutpunktssættet. Gyldige værdier er _Optimer_, _Tillad_ og _Standard_. Hvis du søger i slutpunkter via webmetodens output efter kategorien for en bestemt IP-adresse eller URL-adresse, er det muligt, at din forespørgsel returnerer flere kategorier. I så fald skal du følge anbefalingen for kategorien med højeste prioritet. Hvis slutpunktet f.eks. vises i både _Optimer_ _og Tillad_, skal du følge kravene til _Optimer_. Påkrævet.
-- expressRoute – _Sand_ , hvis dette slutpunktssæt dirigeres over ExpressRoute, _False, hvis_ det ikke er tilfældet.
-- required – _SAND_, hvis dette slutpunktssæt er påkrævet for, at forbindelsen Office 365 understøttes. _Falsk_ , hvis dette slutpunktssæt er valgfrit.
-- noter – For valgfri slutpunkter beskriver denne tekst Office 365-funktionalitet, der ikke vil være tilgængelig, hvis IP-adresser eller URL-adresser i dette slutpunktssæt ikke kan tilgås i netværkslaget. Udelades, hvis det er tomt.
+- id – Det uforanderlige id-nummer for slutpunktssættet.
+- serviceArea – Det tjenesteområde, som dette er en del af: _Fælles_, _Exchange_, _SharePoint_ eller _Skype_.
+- URL-adresser – URL-adresser for slutpunktssættet. En JSON-matrix af DNS-poster. Udeladt, hvis den er tom.
+- tcpPorts – TCP-porte for slutpunktssættet. Alle portelementer formateres som en kommasepareret liste over porte eller portområder adskilt af et tankestregtegn (-). Porte gælder for alle IP-adresser og alle URL-adresser i slutpunktet, der er angivet for en given kategori. Udeladt, hvis den er tom.
+- udpPorts – UDP-porte for IP-adresseintervaller i dette slutpunktssæt. Udeladt, hvis den er tom.
+- ips – de IP-adresseområder, der er knyttet til dette slutpunkt, som er knyttet til de angivne TCP- eller UDP-porte. En JSON-matrix af IP-adresseområder. Udeladt, hvis den er tom.
+- category – forbindelseskategorien for slutpunktssættet. Gyldige værdier er _Optimer_, _Tillad_ og _Standard_. Hvis du søger i outputtet for slutpunkterne for webmetoden efter kategorien for en bestemt IP-adresse eller URL-adresse, er det muligt, at din forespørgsel returnerer flere kategorier. I så fald skal du følge anbefalingen for den højeste prioritetskategori. Hvis slutpunktet f.eks. vises i både _Optimer_ og _Tillad_, skal du følge kravene til _Optimer_. Kræves.
+- expressRoute – _Sand_ , hvis dette slutpunktssæt dirigeres over ExpressRoute, _Falsk_ , hvis ikke.
+- required – _Sand_, hvis dette slutpunktssæt skal have forbindelse, for at Office 365 understøttes. _Falsk_ , hvis dette slutpunktsæt er valgfrit.
+- noter – I forbindelse med valgfrie slutpunkter beskriver denne tekst Office 365 funktionalitet, der ikke er tilgængelig, hvis der ikke kan opnås adgang til IP-adresser eller URL-adresser i dette slutpunktsæt på netværkslaget. Udeladt, hvis den er tom.
 
-### <a name="endpoints-web-method-examples"></a>Eksempler på slutpunkter på webmetode
+### <a name="endpoints-web-method-examples"></a>Eksempler på slutpunktswebmetode
 
-Eksempel 1 på anmodnings-URI: <https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 1- anmodnings-URI: <https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Denne URI henter alle slutpunkter for forekomsten Office 365 hele verden for alle arbejdsbelastninger. Eksempelresultat, der viser et uddrag af outputtet:
+Denne URI henter alle slutpunkter for Office 365 verdensomspændende forekomst for alle arbejdsbelastninger. Eksempelresultat, der viser et udsnit af outputtet:
 
 ```json
 [
@@ -230,55 +230,55 @@ Denne URI henter alle slutpunkter for forekomsten Office 365 hele verden for all
    ],
 ```
 
-Hele outputtet fra anmodningen i dette eksempel vil indeholde andre slutpunktssæt.
+Det fulde output af anmodningen i dette eksempel ville indeholde andre slutpunktssæt.
 
-Eksempel 2 på anmodnings-URI: [https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp; ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp;ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
+Eksempel 2- anmodnings-URI: [https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp; ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp;ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
 
-I dette eksempel opnås slutpunkter for Office 365 Worldwide-forekomsten Exchange Online kun for brugere og afhængigheder.
+I dette eksempel hentes slutpunkter for Office 365 Verdensomspændende forekomst kun for Exchange Online og afhængigheder.
 
-Outputtet, f.eks. 2, minder om eksempel 1, bortset fra at resultaterne ikke vil indeholde slutpunkter for SharePoint Online eller Skype for Business Online.
+Outputtet, f.eks. 2, svarer til eksempel 1, bortset fra at resultaterne ikke indeholder slutpunkter for SharePoint Online eller Skype for Business Online.
 
-## <a name="changes-web-method"></a>Ændringer via webmetode
+## <a name="changes-web-method"></a>Ændrer webmetode
 
-Ændringer via webmetoden returnerer de seneste opdateringer, der er blevet publiceret, typisk den forrige måneds ændringer af IP-adresseintervaller og URL-adresser.
+Webmetoden ændringer returnerer de seneste opdateringer, der er blevet publiceret, typisk den forrige måneds ændringer af IP-adresseintervaller og URL-adresser.
 
-De mest kritiske ændringer af slutpunktsdata er nye URL-adresser og IP-adresser. Hvis du ikke føjer en IP-adresse til en liste over adgangskontrol for en firewall eller en URL-adresse til en proxyservers bypass-liste, kan det medføre et strømsvigt for Office 365 brugere bag den pågældende netværksenhed. Uagtet driftskravene publiceres nye slutpunkter i webtjenesten 30 dage før datoen, hvor slutpunkterne er klargjort til brug for at give dig tid til at opdatere adgangslister og proxyserverens bypass-lister.
+De vigtigste ændringer af data for slutpunkter er nye URL-adresser og IP-adresser. Hvis du ikke føjer en IP-adresse til en liste over firewalladgangskontrol eller en URL-adresse til en tilsidesættelsesliste for proxyserveren, kan det medføre afbrydelse af Office 365 brugere bag denne netværksenhed. Uanset driftskravene publiceres nye slutpunkter til webtjenesten 30 dage før den dato, hvor slutpunkterne klargøres til brug for at give dig tid til at opdatere adgangskontrollister og lister over tilsidesættelse af proxyserver.
 
-Den påkrævede parameter for ændringer via webmetoden er:
+Den påkrævede parameter for webmetoden for ændringer er:
 
-- **Version=\<YYYYMMDDNN>** – Obligatorisk URL-ruteparameter. Denne værdi er den version, du aktuelt har implementeret. Webtjenesten returnerer ændringerne siden den pågældende version. Formatet er _YYYYMMDDNN_, hvor _NN_ er et naturligt tal, der øges, hvis der er flere versioner, der skal publiceres på en enkelt dag, med _00_ , der repræsenterer den første opdatering for en given dag. Webtjenesten kræver, at _versionsparameteren_ indeholder nøjagtigt 10 cifre.
+- **Version=\<YYYYMMDDNN>** – Påkrævet URL-ruteparameter. Denne værdi er den version, du har implementeret i øjeblikket. Webtjenesten returnerer ændringerne siden denne version. Formatet er _YYYYYMMDDNN_, hvor _NN_ er et naturligt tal forøget, hvis der kræves flere versioner for at blive publiceret på en enkelt dag, hvor _00_ repræsenterer den første opdatering for en given dag. Webtjenesten kræver, at _versionsparameteren_ indeholder nøjagtigt 10 cifre.
 
-Ændringer via webmetoden er begrænset på samme måde som slutpunkter via webmetoden. Hvis du modtager en HTTP-svarkode på 429, skal du vente 1 time, før du gentager anmodningen, eller du opretter et nyt GUID for anmodningen.
+Webmetoden for ændringer er begrænset på samme måde som slutpunktets webmetode. Hvis du modtager en 429 HTTP-svarkode, skal du vente 1 time, før du gentager din anmodning eller genererer et nyt GUID for anmodningen.
 
-Resultatet af ændringer via webmetoden er en række poster, hvor hver post repræsenterer en ændring i en bestemt version af slutpunkterne. Elementerne for hver post er:
+Resultatet af webmetoden ændringer er en matrix af poster, hvor hver post repræsenterer en ændring i en bestemt version af slutpunkterne. Elementerne for hver post er:
 
 - id – Det uforanderlige id for ændringsposten.
-- endpointSetId – Id'et for slutpunktssættets post, der er ændret.
-- disposition – Beskriver, hvad ændringen gjorde ved slutpunktssætposten. Værdier _ændres_, _tilføjes_ eller _fjernes_.
-- ingen betydning – Ikke alle ændringer er lige vigtige for alle miljøer. Dette element beskriver den forventede påvirkning af virksomhedens netværksperimetermiljø som et resultat af denne ændring. Dette element er kun inkluderet i ændringsposter for **version 2018112800** og nyere. Indstillingerne for effekten er: – AddedIp – En IP-adresse blev føjet Office 365 og vil snart være live på tjenesten. Dette repræsenterer en ændring, du skal tage med en firewall eller en anden layer 3-netværksperimeterenhed. Hvis du ikke tilføjer dette, før vi begynder at bruge det, kan du opleve et strømsvigt.
-  – AddedUrl – En URL-adresse blev føjet Office 365 og vil snart være live på tjenesten. Dette repræsenterer en ændring, du skal tage på en proxyserver eller URL-adresse, der fortolker netværkets perimeterenhed. Hvis du ikke tilføjer denne URL-adresse, før vi begynder at bruge den, kan du opleve et strømsvigt.
-  – AddedIpAndUrl – Både en IP-adresse og en URL-adresse blev tilføjet. Dette repræsenterer en ændring, du skal tage med enten en firewall layer 3-enhed eller en proxyserver eller URL-fortolkningsenhed. Hvis du ikke tilføjer dette IP/URL-par, før vi begynder at bruge det, kan du opleve et strømsvigt.
-  – RemovedIpOrUrl – Mindst én IP-adresse eller URL-adresse blev fjernet Office 365. Fjern netværksslutpunkterne fra dine perimeterenheder, men der er ingen deadline for dig at gøre dette.
-  – ChangedIsExpressRoute – ExpressRoute-supportattributten blev ændret. Hvis du bruger ExpressRoute, kan det være nødvendigt at gøre noget afhængigt af din konfiguration.
-  – MovedIpOrUrl – Vi har flyttet en IP-adresse eller URL-adresse mellem dette slutpunktssæt og en anden. Generelt kræves der ingen handling.
-  – RemovedDuplicateIpOrUrl – Vi har fjernet en duplikeret IP-adresse eller URL-adresse, men den er stadig udgivet for Office 365. Generelt kræves der ingen handling.
+- endpointSetId – Id'et for den post for slutpunktssættet, der ændres.
+- disposition – Beskriver, hvad ændringen gjorde med posten for slutpunktssættet. Værdier _ændres_, _tilføjes_ eller _fjernes_.
+- effekt – Ikke alle ændringer er lige vigtige for alle miljøer. I dette element beskrives den forventede indvirkning på et perimetermiljø for virksomhedsnetværket som følge af denne ændring. Dette element er kun inkluderet i ændringsposter for version **2018112800** og nyere. Mulighederne for indvirkningen er: – AddedIp – En IP-adresse blev føjet til Office 365 og vil snart være live på tjenesten. Dette repræsenterer en ændring, du skal foretage på en firewall eller en anden lag 3-netværksperimeterenhed. Hvis du ikke tilføjer dette, før vi begynder at bruge det, kan du opleve en afbrydelse.
+  – AddedUrl – En URL-adresse blev føjet til Office 365 og vil snart være live på tjenesten. Dette repræsenterer en ændring, du skal foretage på en proxyserver eller URL-fortolker netværksperimeterenhed. Hvis du ikke tilføjer denne URL-adresse, før vi begynder at bruge den, kan du opleve et udfald.
+  – AddedIpAndUrl – Både en IP-adresse og en URL-adresse blev tilføjet. Dette repræsenterer en ændring, du skal foretage på enten en firewall layer 3-enhed eller en proxyserver eller EN URL-fortolkningsenhed. Hvis du ikke tilføjer dette IP/URL-par, før vi begynder at bruge det, kan du opleve en afbrydelse.
+  – RemovedIpOrUrl – Mindst én IP-adresse eller URL-adresse blev fjernet fra Office 365. Fjern netværksslutpunkterne fra perimeterenhederne, men du har ingen deadline for at gøre dette.
+  – ChangedIsExpressRoute – Supportattributten ExpressRoute blev ændret. Hvis du bruger ExpressRoute, skal du muligvis udføre handlinger, afhængigt af din konfiguration.
+  – MovedIpOrUrl – Vi har flyttet en IP-adresse eller URL-adresse mellem dette slutpunktssæt og et andet. Generelt kræves der ingen handling.
+  – RemovedDuplicateIpOrUrl – Vi har fjernet en duplikeret IP-adresse eller URL-adresse, men den er stadig publiceret til Office 365. Generelt kræves der ingen handling.
   – OtherNonPriorityChanges – Vi har ændret noget mindre kritisk end alle de andre indstillinger, f.eks. indholdet af et notefelt.
-- version – Versionen af det publicerede slutpunktssæt, hvor ændringen blev introduceret. Versionsnumre har formatet _YYYYMMDDNN_, hvor _NN_ er et naturligt nummer, der øges, hvis der er flere versioner, der skal publiceres på en enkelt dag.
-- previous — En substruktur med detaljeret detaljeret beskrivelse af de forrige værdiers ændrede elementer på slutpunktssættet. Dette medtages ikke for nyligt tilføjede slutpunktssæt. Omfatter  _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ og _notes_.
-- current – En substruktur med detaljeret beskrivelse af de opdaterede værdiers ændrede elementer på slutpunktssættet. Omfatter _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ og _notes_.
-- add – En substruktur med detaljeret beskrivelse af elementer, der skal føjes til slutpunktssætsamlinger. Udelades, hvis der ikke er nogen tilføjelser.
-  — effectiveDate — Definerer dataene, når tilføjelserne bliver tilgængelige i tjenesten.
-  — ips — Elementer, der skal føjes til _ips-matrixen_ .
-  – URL-adresser – Elementer, der skal føjes til _matrixen for URL-adresser_ .
-- remove – En substruktur med detaljeret beskrivelse af elementer, der skal fjernes fra slutpunktssættet. Udelades, hvis intet skal fjernes.
-  – ips – Elementer, der skal fjernes fra _ips-matrixen_ .
-  – URL-adresser – Elementer, der skal fjernes fra _matrixen for URL-adresser_ .
+- version – Versionen af det publicerede slutpunktssæt, hvor ændringen blev introduceret. Versionsnumre har formatet _YYYYYMMDDNN_, hvor _NN_ er et naturligt tal, der forøges, hvis der kræves flere versioner for at blive publiceret på en enkelt dag.
+- previous – En understruktur, der beskriver tidligere værdier for ændrede elementer i slutpunktssættet. Dette medtages ikke for nyligt tilføjede slutpunktssæt. Omfatter  _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ og _notes_.
+- current – En understruktur, der beskriver opdaterede værdier for ændringer af elementer i slutpunktssættet. Omfatter _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ og _notes_.
+- add – En understruktur med detaljer om elementer, der skal føjes til samlinger af slutpunktssæt. Udelades, hvis der ikke er nogen tilføjelser.
+  – effectiveDate – Definerer dataene, når tilføjelserne er live i tjenesten.
+  – ips – elementer, der skal føjes til _ips-matrixen_ .
+  – URL-adresser– Elementer, der skal føjes til matrixen _URL-adresser_ .
+- remove – En understruktur med detaljer om elementer, der skal fjernes fra slutpunktssættet. Udelades, hvis der ikke er nogen fjernelser.
+  – ips – elementer, der skal fjernes fra _ips-matrixen_ .
+  – URL-adresser– Elementer, der skal fjernes fra matrixen _URL-adresser_ .
 
-### <a name="changes-web-method-examples"></a>Eksempler på ændringer på webmetode
+### <a name="changes-web-method-examples"></a>Ændrer eksempler på webmetode
 
-Eksempel 1 på anmodnings-URI: <https://endpoints.office.com/changes/worldwide/0000000000?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 1- anmodnings-URI: <https://endpoints.office.com/changes/worldwide/0000000000?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Dette anmoder om alle forrige ændringer af Office 365 worldwide-tjenesteforekomst. Eksempelresultat:
+Dette anmoder om alle tidligere ændringer af Office 365 verdensomspændende tjenesteforekomst. Eksempelresultat:
 
 ```json
 [
@@ -314,9 +314,9 @@ Dette anmoder om alle forrige ændringer af Office 365 worldwide-tjenesteforekom
      [
 ```
 
-Eksempel 2 på anmodnings-URI: <https://endpoints.office.com/changes/worldwide/2018062700?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
+Eksempel 2- anmodnings-URI: <https://endpoints.office.com/changes/worldwide/2018062700?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Dette anmoder om ændringer siden den angivne version af Office 365 Worldwide-forekomsten. I dette tilfælde er den angivne version den nyeste. Eksempelresultat:
+Dette anmoder om ændringer siden den angivne version til Office 365 verdensomspændende forekomst. I dette tilfælde er den angivne version den nyeste. Eksempelresultat:
 
 ```json
 [
@@ -347,28 +347,28 @@ Dette anmoder om ændringer siden den angivne version af Office 365 Worldwide-fo
 
 ## <a name="example-powershell-script"></a>Eksempel på PowerShell-script
 
-Du kan køre dette PowerShell-script for at se, om der er handlinger, du skal udføre for opdaterede data. Du kan køre dette script som en planlagt opgave for at søge efter en versionsopdatering. For at undgå overdreven belastning på webtjenesten kan du prøve ikke at køre scriptet mere end én gang i timen.
+Du kan køre dette PowerShell-script for at se, om der er handlinger, du skal udføre for at få opdaterede data. Du kan køre dette script som en planlagt opgave for at kontrollere, om der er en versionsopdatering. Hvis du vil undgå for stor belastning på webtjenesten, skal du prøve ikke at køre scriptet mere end én gang i timen.
 
 Scriptet gør følgende:
 
-- Kontrollerer versionsnummeret på de aktuelle Office 365 Worldwide-forekomstslutpunkter ved at ringe til webtjenestens REST-API.
-- Kontrollerer, om der er en aktuel version af _filen til $Env:TEMP\O365_endpoints_latestversion.txt_. Stien til den globale variabel **$Env:TEMP** er normalt _C:\Brugere\\<brugernavn\>\AppData\Local\Temp_.
-- Hvis dette er første gang, scriptet er blevet kørt, returnerer scriptet den aktuelle version og alle aktuelle IP-adresser og URL-adresser, skriver slutpunktsversionen til filen _$Env:TEMP\O365_endpoints_latestversion.txt_ og slutpunkterne dataoutput til filen _$Env:TEMP\O365_endpoints_data.txt_. Du kan redigere outputfilens sti og/eller navn ved at redigere disse linjer:
+- Kontrollerer versionsnummeret for de aktuelle Office 365 verdensomspændende forekomstslutpunkter ved at kalde REST API'en for webtjenesten.
+- Kontrollerer, om der er en aktuel version af filen på _$Env:TEMP\O365_endpoints_latestversion.txt_. Stien til den globale variabel **$Env:TEMP** er normalt _C:\Users\\<username\>\AppData\Local\Temp_.
+- Hvis det er første gang, scriptet køres, returnerer scriptet den aktuelle version og alle aktuelle IP-adresser og URL-adresser, skriver slutpunktsversionen til filen _$Env:TEMP\O365_endpoints_latestversion.txt_ og slutpunkterne dataoutput til filen _$Env:TEMP\O365_endpoints_data.txt_. Du kan ændre stien til og/eller navnet på outputfilen ved at redigere disse linjer:
 
     ``` powershell
     $versionpath = $Env:TEMP + "\O365_endpoints_latestversion.txt"
     $datapath = $Env:TEMP + "\O365_endpoints_data.txt"
     ```
 
-- Ved hver efterfølgende udførelse af scriptet afsluttes scriptet uden at foretage ændringer, hvis den nyeste version af webtjenesten er identisk med versionen i _O365_endpoints_latestversion.txt-filen_ .
-- Når den nyeste version af webtjenesten er nyere end versionen i _O365_endpoints_latestversion.txt-filen_, returnerer scriptet slutpunkterne og filtrene for slutpunkterne for kategorien Tillad og  optimer, opdaterer versionen i _O365_endpoints_latestversion.txt-filen_ og skriver de opdaterede data til _O365_endpoints_data.txt-filen_.
+- Hvis den seneste version af webtjenesten er identisk med versionen i _denO365_endpoints_latestversion.txt_ fil, afsluttes scriptet ved hver efterfølgende udførelse af scriptet uden at foretage ændringer.
+- Når den nyeste version af webtjenesten er nyere end versionen i _O365_endpoints_latestversion.txt-filen_ , returnerer scriptet slutpunkterne og filtrene for kategorislutpunkterne **Tillad** og **Optimer** , opdaterer versionen i _filenO365_endpoints_latestversion.txt_ og skriver de opdaterede data til _O365_endpoints_data.txt-filen_ .
 
-Scriptet genererer en entydig _ClientRequestId_ for den computer, det udføres på, og genbruger dette id på tværs af flere opkald. Dette id gemmes i _O365_endpoints_latestversion.txt_ fil.
+Scriptet genererer et entydigt _ClientRequestId_ for den computer, det udføres på, og genbruger dette id på tværs af flere kald. Dette id gemmes i _filenO365_endpoints_latestversion.txt_ .
 
 ### <a name="to-run-the-powershell-script"></a>Sådan kører du PowerShell-scriptet
 
-1. Kopiér scriptet, og gem det på din lokale harddisk eller scriptplacering som _Get-O365WebServiceUpdates.ps1_.
-1. Udfør scriptet i dit foretrukne scripteditor, f.eks. PowerShell ISE eller VS-koden, eller fra en PowerShell-konsol ved hjælp af følgende kommando:
+1. Kopiér scriptet, og gem det på den lokale harddisk eller i den lokale scriptplacering som _Get-O365WebServiceUpdates.ps1_.
+1. Udfør scriptet i din foretrukne scripteditor, f.eks. PowerShell ISE eller VS Code, eller fra en PowerShell-konsol ved hjælp af følgende kommando:
 
     ``` powershell
    powershell.exe -file <path>\Get-O365WebServiceUpdates.ps1
@@ -524,7 +524,7 @@ else {
 
 ## <a name="example-python-script"></a>Eksempel på Python-script
 
-Her er et Python-script, testet med Python 3.6.3 på Windows 10, som du kan køre for at se, om der er handlinger, du skal udføre for at opdatere dataene. Dette script kontrollerer versionsnummeret for slutpunkterne Office 365 Worldwide-forekomsten. Når der er en ændring, downloader den slutpunkterne og filtrene for _slutpunkterne_ _i kategorien_ Tillad og optimer. Den bruger også en entydig ClientRequestId på tværs af flere opkald og gemmer den nyeste version, der findes i en midlertidig fil. Kald dette script én gang i timen for at søge efter en versionsopdatering.
+Her er et Python-script, der testes med Python 3.6.3 på Windows 10, som du kan køre for at se, om der er handlinger, du skal udføre for opdaterede data. Dette script kontrollerer versionsnummeret for Office 365 verdensomspændende forekomstslutpunkter. Når der er en ændring, downloades slutpunkterne og filtrene for kategorislutpunkterne _Tillad_ og _Optimer_ . Den bruger også et entydigt ClientRequestId på tværs af flere kald og gemmer den nyeste version, der blev fundet i en midlertidig fil. Kald dette script én gang i timen for at kontrollere, om der er en versionsopdatering.
 
 ```python
 import json
@@ -589,44 +589,44 @@ else:
     print('Office 365 worldwide commercial service instance endpoints are up-to-date')
 ```
 
-## <a name="web-service-interface-versioning"></a>Web Service-grænsefladeversioner
+## <a name="web-service-interface-versioning"></a>Versionsstyring af webtjenestegrænseflade
 
-Opdateringer af parametrene eller resultaterne for disse webtjenestemetoder kan være nødvendige i fremtiden. Når den generelle tilgængelighedsversion af disse webtjenester er udgivet, vil Microsoft inden for rimelighedens tid sørge for at give besked i forvejen om vigtige opdateringer af webtjenesten. Når Microsoft mener, at en opdatering kræver ændringer af klienter, der bruger webtjenesten, så vil Microsoft holde den forrige version (én version tilbage) af webtjenesten tilgængelig i mindst 12 måneder efter udgivelsen af den nye version. Kunder, der ikke opgraderer i denne periode, kan muligvis ikke få adgang til webtjenesten og dens metoder. Kunder skal sikre, at webtjenestens klienter fortsat fungerer uden fejl, hvis følgende ændringer foretages i webtjenestens grænsefladesignatur:
+Opdateringer af parametrene eller resultaterne for disse webtjenestemetoder kan være påkrævet i fremtiden. Når versionen af disse webtjenester er offentligt tilgængelig, vil Microsoft gøre en rimelig indsats for at give forhåndsmeddelelse om væsentlige opdateringer til webtjenesten. Når Microsoft mener, at en opdatering kræver ændringer af klienter, der bruger webtjenesten, holder Microsoft den tidligere version (én version tilbage) af webtjenesten tilgængelig i mindst 12 måneder efter udgivelsen af den nye version. Kunder, der ikke opgraderer på dette tidspunkt, kan muligvis ikke få adgang til webtjenesten og dens metoder. Kunderne skal sikre, at klienter i webtjenesten fortsætter med at arbejde uden fejl, hvis der foretages følgende ændringer af grænsefladesignaturen for webtjenesten:
 
-- Tilføjelse af en ny valgfri parameter til en eksisterende webmetode, der ikke behøver at være leveret af ældre klienter, og som ikke påvirker det resultat, en ældre klient modtager.
-- Tilføjelse af en ny navngivet attribut i et af svar-REST-elementerne eller andre kolonner i svar-CSV'en.
-- Tilføjelse af en ny webmetode med et nyt navn, der ikke kaldes af de ældre klienter.
+- Tilføjelse af en ny valgfri parameter til en eksisterende webmetode, der ikke skal leveres af ældre klienter, og som ikke påvirker det resultat, som en ældre klient modtager.
+- Tilføjelse af en ny navngiven attribut i et af svar-REST-elementerne eller andre kolonner til svar-CSV.
+- Tilføjelse af en ny webmetode med et nyt navn, der ikke kaldes af ældre klienter.
 
 ## <a name="update-notifications"></a>Opdateringsmeddelelser
 
-Du kan bruge et par forskellige metoder til at få mailbeskeder, når ændringer i IP-adresser og URL-adresser publiceres på webtjenesten.
+Du kan bruge et par forskellige metoder til at få mailmeddelelser, når ændringer af IP-adresserne og URL-adresserne publiceres til webtjenesten.
 
-- Hvis du vil bruge Power Automate løsning, skal du se Brug Power Automate til at modtage en mail for ændringer i [Office 365 IP-adresser og URL-adresser](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651).
-- Hvis du vil installere en Azure Logic-app ved hjælp ARM en ARM, [skal du Office 365 meddelelse om opdatering (v1.1)](https://aka.ms/ipurlws-updates-template).
-- Hvis du vil skrive dit eget meddelelsesscript ved hjælp af PowerShell, [skal du se Send-MailMessage](/powershell/module/microsoft.powershell.utility/send-mailmessage).
+- Hvis du vil bruge en Power Automate løsning, skal du se [Brug Power Automate til at modtage en mail for ændringer af Office 365 IP-adresser og URL-adresser](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651).
+- Hvis du vil udrulle en Azure Logic App ved hjælp af en ARM-skabelon, [skal du se Office 365 Update Notification (v1.1)](https://aka.ms/ipurlws-updates-template).
+- Hvis du vil skrive dit eget meddelelsesscript ved hjælp af PowerShell, skal du se [Send-MailMessage](/powershell/module/microsoft.powershell.utility/send-mailmessage).
 
-## <a name="exporting-a-proxy-pac-file"></a>Eksportere en PROXY PAC-fil
+## <a name="exporting-a-proxy-pac-file"></a>Eksport af en proxy-PAC-fil
 
-[Get-PacFile er et PowerShell-script](https://www.powershellgallery.com/packages/Get-PacFile), der læser de seneste netværksslutpunkter fra webtjenesten Office 365 IP-adresse og URL-adresse og opretter en PAC-eksempelfil. Du kan finde oplysninger om brug af Get-PacFile i [Brug en PAC-fil til direkte routing af Office 365 trafik](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic).
+[Get-PacFile er et PowerShell-script](https://www.powershellgallery.com/packages/Get-PacFile), der læser de nyeste netværksslutpunkter fra Office 365 IP-adresse og URL-webtjeneste og opretter et eksempel på en PAC-fil. Du kan få oplysninger om brug af Get-PacFile under [Brug en PAC-fil til direkte routing af vigtig Office 365 trafik](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic).
 
 ## <a name="related-topics"></a>Relaterede emner
   
 [Office 365-URL-adresser og IP-adresseintervaller](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 
-[Administrere Office 365 slutpunkter](managing-office-365-endpoints.md)
+[Administrere Office 365-slutpunkter](managing-office-365-endpoints.md)
   
-[Office 365 ofte stillede spørgsmål om slutpunkter](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Ofte stillede spørgsmål om Office 365 slutpunkter](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
 
-[Office 365 principper for netværksforbindelse](microsoft-365-network-connectivity-principles.md)
+[principper for Office 365 netværksforbindelser](microsoft-365-network-connectivity-principles.md)
 
-[Office 365 netværk og justering af ydeevnen](network-planning-and-performance.md)
+[Office 365 netværk og justering af ydeevne](network-planning-and-performance.md)
 
-[Vurdering Office 365 netværksforbindelsen](assessing-network-connectivity.md)
+[Vurdering af Office 365 netværksforbindelse](assessing-network-connectivity.md)
   
-[Mediekvalitet og ydeevne for netværksforbindelse i Skype for Business Online](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
+[Mediekvalitet og ydeevne for netværksforbindelsen i Skype for Business Online](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[Optimere dit netværk til Skype for Business Online](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[Optimering af netværket til Skype for Business Online](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
 
 [Office 365 justering af ydeevnen ved hjælp af grundlinjer og ydeevnehistorik](performance-tuning-using-baselines-and-history.md)
   
-[Fejlfinding af ydeevne i forbindelse med planen for Office 365](performance-troubleshooting-plan.md)
+[Plan for fejlfinding af ydeevnen for Office 365](performance-troubleshooting-plan.md)

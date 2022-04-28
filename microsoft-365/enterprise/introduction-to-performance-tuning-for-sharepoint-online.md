@@ -2,7 +2,7 @@
 title: Introduktion til justering af ydeevnen for SharePoint Online
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 6/22/2018
 audience: Admin
 ms.topic: overview
@@ -16,67 +16,67 @@ f1.keywords:
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 81c4be5f-327e-435d-a568-526d68cffef0
-description: I denne artikel forklares det, hvilke specifikke aspekter du skal overveje, når du designer sider for at opnå den bedste SharePoint Online.
-ms.openlocfilehash: deabb059e2121743b35d5519e4b8684a08dd28b4
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: I denne artikel forklares det, hvilke specifikke aspekter du skal overveje, når du designer sider for at opnå den bedste ydeevne i SharePoint Online.
+ms.openlocfilehash: b31696766d3201b6677bf0c63108fad72c3ed49d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63590596"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100737"
 ---
 # <a name="introduction-to-performance-tuning-for-sharepoint-online"></a>Introduktion til justering af ydeevnen for SharePoint Online
 
-I denne artikel forklares det, hvilke specifikke aspekter du skal overveje, når du designer sider for at opnå den bedste SharePoint Online.
+I denne artikel forklares det, hvilke specifikke aspekter du skal overveje, når du designer sider for at opnå den bedste ydeevne i SharePoint Online.
      
-## <a name="sharepoint-online-metrics"></a>SharePoint Online-målepunkter
+## <a name="sharepoint-online-metrics"></a>SharePoint onlinemålepunkter
 
-Følgende generelle målepunkter for SharePoint Online indeholder virkelige data om ydeevne:
+Følgende brede målepunkter for SharePoint Online leverer data om ydeevnen i den virkelige verden:
   
-- Sådan indlæses sider hurtigt
+- Hvor hurtige sider indlæses
     
-- Hvor mange ture påkrævet pr. side
+- Hvor mange rundture der kræves pr. side
     
 - Problemer med tjenesten
     
-- Andre ting, der kan medføre forringet ydeevne
+- Andre ting, der forårsager forringelse af ydeevnen
     
-### <a name="conclusions-reached-because-of-the-data"></a>Konklusioner på baggrund af dataene
+### <a name="conclusions-reached-because-of-the-data"></a>Konklusioner, der er nået på grund af dataene
 
 Dataene fortæller os:
   
-- De fleste af siderne fungerer godt på SharePoint Online.
+- De fleste af siderne klarer sig godt på SharePoint Online.
     
-- Sider, der ikke er tilpassede, indlæses hurtigt.
+- Ikke-tilpassede sider indlæses hurtigt.
     
-- OneDrive for Business, teamwebsteder og systemsider, f._layouts. osv., indlæses alle hurtigt.
+- OneDrive for Business, teamwebsteder og systemsider, f.eks. _layouts osv., indlæses hurtigt.
     
-- De mest langsomme 1 % SharePoint onlinesider tager mere end 5.000 millisekunder at indlæse.
+- Den langsomste 1 % af SharePoint Online-sider tager mere end 5.000 millisekunder at indlæse.
     
-En simpel test, du kan bruge til at måle ydeevnen, er at sammenligne indlæsningstiden for din egen portal med indlæsningstiden for OneDrive for Business-startsiden, da den kun bruger få tilpassede funktioner. Dette vil ofte være det første trin, support vil bede dig om at udføre ved fejlfinding af problemer med netværkets ydeevne.
+En enkel benchmarktest, du kan bruge, er at måle ydeevnen ved at sammenligne indlæsningstiden på din egen portal med indlæsningstiden for den OneDrive for Business startside, da den bruger få brugerdefinerede funktioner. Dette vil ofte være det første trin Support beder dig om at fuldføre, når du foretager fejlfinding af problemer med netværkets ydeevne.
   
 ## <a name="use-a-standard-user-account-when-checking-performance"></a>Brug en standardbrugerkonto, når du kontrollerer ydeevnen
 
-En administrator for gruppen af websteder, webstedsejer, redaktør eller bidragyder tilhører en anden sikkerhedsgruppe, har flere tilladelser og har derfor ekstra elementer, SharePoint indlæses på en side.
+En administrator af en gruppe af websteder, ejeren af webstedet, editoren eller bidragyderen tilhører andre sikkerhedsgrupper, har flere tilladelser og har derfor ekstra elementer, der SharePoint indlæses på en side.
   
-Dette gælder for SharePoint lokalt miljø og SharePoint Online, men i et lokalt scenarie er forskellene ikke så lette at bemærke som i SharePoint Online.
+Dette gælder for SharePoint i det lokale miljø og SharePoint Online, men i et scenarie i det lokale miljø bliver forskellene ikke så nemme at bemærke som i SharePoint Online.
   
-For at foretage en korrekt evaluering af, hvordan en side vil fungere for brugerne, skal du bruge en standardbrugerkonto for at undgå at indlæse oprettelseskontrolelementerne og ekstra trafik, der er relateret til sikkerhedsgrupper.
+Hvis du vil evaluere, hvordan en side vil fungere korrekt for brugerne, skal du bruge en standardbrugerkonto for at undgå at indlæse kontrolelementerne til oprettelse og ekstra trafik, der er relateret til sikkerhedsgrupper.
   
 ## <a name="connection-categories-for-performance-tuning"></a>Forbindelseskategorier til justering af ydeevnen
 
-Du kan kategorisere forbindelserne mellem serveren og brugeren i tre hovedkomponenter. Overvej disse, når du designer SharePoint onlinesider for at få indsigt i indlæsningstider.
+Du kan kategorisere forbindelserne mellem serveren og brugeren i tre hovedkomponenter. Overvej disse, når du designer SharePoint Online-sider for at få indsigt i indlæsningstider.
   
-- **Server** De servere, Microsoft er vært for i datacentre.
+- **Server** De servere, som Microsoft hoster i datacentre.
     
 - **Netværk** Microsoft-netværket, internettet og dit lokale netværk mellem datacenteret og dine brugere.
     
-- **Browser** Hvor siden indlæses.
+- **Browser** Hvor siden er indlæst.
     
-Inden for disse tre forbindelser er der typisk fem årsager til 95 % af alle langsomme sider. Hver af disse årsager diskuteres i denne artikel:
+Inden for disse tre forbindelser er der typisk fem årsager, der forårsager 95 % af de langsomme sider. Hver af disse årsager beskrives i denne artikel:
   
 - Navigationsproblemer
     
-- Opsnulning af indhold
+- Opløftet indhold
     
 - Store filer
     
@@ -86,19 +86,19 @@ Inden for disse tre forbindelser er der typisk fem årsager til 95 % af alle lan
     
 ### <a name="server-connection"></a>Serverforbindelse
 
-Mange af de problemer, der påvirker ydeevnen SharePoint lokalt miljø, gælder også for SharePoint Online.
+Mange af de problemer, der påvirker ydeevnen med SharePoint i det lokale miljø, gælder også for SharePoint Online.
   
-Som man ville forvente, har du langt mere kontrol over, hvordan servere klarer sig med lokale SharePoint. Med SharePoint Online er tingene lidt anderledes. Jo mere arbejde en server skal udføre, jo længere tid tager det at gengive en side. Med SharePoint er de største gerningsmanden i denne forbindelse komplekse sider med flere webdele.
+Som du ville forvente, har du langt mere kontrol over, hvordan servere klarer sig med SharePoint i det lokale miljø. Med SharePoint Online er tingene lidt anderledes. Jo mere arbejde en server udfører, jo længere tid tager det at gengive en side. Med SharePoint er de største syndere i denne henseende komplekse sider med flere webdele.
   
-SharePoint lokal server
+SharePoint Server i det lokale miljø
   
-![Skærmbillede af lokal server.](../media/a8e9b646-cdff-4131-976a-b5f891da44ac.png)
+![Skærmbillede af serveren i det lokale miljø.](../media/a8e9b646-cdff-4131-976a-b5f891da44ac.png)
   
 SharePoint Online
   
-![Skærmbillede af server, der er online.](../media/46b27ded-d8a4-4287-b3e0-2603a764b8f8.png)
+![Skærmbillede af serveren online.](../media/46b27ded-d8a4-4287-b3e0-2603a764b8f8.png)
   
-Med SharePoint Online kan visse sideanmodninger faktisk ende med at kalde flere servere. Du kan ende med en matrix af anmodninger mellem servere for en enkelt anmodning. Disse interaktioner er dyre set i forhold til sideindlæsning og gør det hele langsomt.
+Med SharePoint Online kan visse sideanmodninger faktisk ende med at kalde flere servere. Du kan ende med en matrix af anmodninger mellem servere for en individuel anmodning. Disse interaktioner er dyre ud fra et sideindlæsningsperspektiv og vil gøre tingene langsomme.
   
 Eksempler på disse server til server-interaktioner er:
   
@@ -106,13 +106,13 @@ Eksempler på disse server til server-interaktioner er:
     
 - Web til programservere
     
-Det andet, der kan gøre serverinteraktion langsommere, er cache overser. I modsætning til lokale SharePoint er der meget lille risiko for, at du kommer til at gå til den samme server for en side, du har besøgt tidligere. Dette gør cachelagring af objekter overflødig.
+Den anden ting, der kan gøre serverinteraktioner langsommere, er, at cachen går glip af noget. I modsætning til SharePoint i det lokale miljø er der en lille chance for, at du rammer den samme server for en side, du tidligere har besøgt. Dette gør cachelagring af objekter forældet.
   
 ### <a name="network-connection"></a>Netværksforbindelse
 
-Med lokale SharePoint der ikke gør brug af et WAN, kan du bruge en højhastighedsforbindelse mellem datacenter og slutbrugere. Generelt er det nemt at administrere set fra et netværksperspektiv.
+Med SharePoint i det lokale miljø, der ikke bruger et WAN, kan du bruge en hurtig forbindelse mellem datacenter og slutbrugere. Generelt er det nemt at administrere fra et netværksperspektiv.
   
-Med SharePoint Online er der flere faktorer, du skal overveje, f.eks.:
+Med SharePoint Online er der et par flere faktorer, du skal overveje, f.eks.:
   
 - Microsoft-netværket
     
@@ -120,7 +120,7 @@ Med SharePoint Online er der flere faktorer, du skal overveje, f.eks.:
     
 - Internetudbyderen
     
-Uanset hvilken version af SharePoint (og hvilket netværk), du bruger, vil de ting, der typisk medfører, at netværket er optaget, omfatte:
+Uanset hvilken version af SharePoint (og hvilket netværk) du bruger, omfatter ting, der normalt medfører, at netværket er optaget, følgende:
   
 - Stor nyttedata
     
@@ -128,19 +128,19 @@ Uanset hvilken version af SharePoint (og hvilket netværk), du bruger, vil de ti
     
 - Stor fysisk afstand til serveren
     
-En af de funktioner, du kan bruge SharePoint Online, er Microsoft CDN (Content Delivery Network). En CDN er reelt en distribueret samling af servere, der er installeret på tværs af flere datacentre. Med en CDN indhold på sider kan hostes på en server tæt på klienten, selvom klienten er langt væk fra den oprindelige SharePoint Server. Microsoft bruger dette mere i fremtiden til at gemme lokale forekomster af sider, der ikke kan tilpasses, f.eks. startsiden SharePoint Online-administrator. Du kan finde flere oplysninger om CDN'er under [Netværk, der kan levere indhold](content-delivery-networks.md).
+En funktion, du kan bruge i SharePoint Online, er Microsoft CDN (Content Delivery Network). Et CDN er grundlæggende en distribueret samling af servere, der er installeret på tværs af flere datacentre. Med en CDN kan indhold på sider hostes på en server tæt på klienten, selvom klienten er langt væk fra den oprindelige SharePoint Server. Microsoft vil fremover bruge dette til at gemme lokale forekomster af sider, der ikke kan tilpasses, f.eks. startsiden for SharePoint Online-administrator. Du kan få flere oplysninger om CDN'er under [Netværk til levering af indhold](content-delivery-networks.md).
   
-Noget, du skal være opmærksom på, men muligvis ikke kan gøre meget ved, er din internetudbyders forbindelseshastighed. Et simpelt værktøj til test af hastighed fortæller dig forbindelseshastigheden.
+Noget, du skal være opmærksom på, men måske ikke være i stand til at gøre meget ved, er forbindelseshastigheden for din internetudbyder. Et simpelt værktøj til test af hastighed fortæller dig forbindelseshastigheden.
   
 ### <a name="browser-connection"></a>Browserforbindelse
 
-Der er et par faktorer, du skal overveje i forbindelse med webbrowsere set fra et ydeevneperspektiv.
+Der er et par faktorer, du skal overveje i forbindelse med webbrowsere fra et ydeevneperspektiv.
   
-Besøg på komplekse sider vil påvirke ydeevnen. De fleste browsere har kun en lille cache (omkring 90 MB), mens den gennemsnitlige webside typisk er omkring 1,6 MB. Det tager ikke lang tid at blive brugt op.
+Besøg af komplekse sider vil påvirke ydeevnen. De fleste browsere har kun en lille cache (ca. 90 MB), mens den gennemsnitlige webside typisk er omkring 1,6 MB. Det tager ikke lang tid at vænne sig til det.
   
-Båndbredden kan også være et problem. Hvis en bruger f.eks. kan se videoer i en anden session, påvirker det ydeevnen i SharePoint session. Du kan ikke forhindre brugere i at streame medier, men du kan styre, hvordan en side indlæses for brugere.
+Båndbredde kan også være et problem. Hvis en bruger f.eks. ser videoer i en anden session, påvirker dette ydeevnen af din SharePoint side. Selvom du ikke kan forhindre brugere i at streame medier, kan du styre, hvordan en side indlæses for brugerne.
   
-Se følgende artikler for at finde forskellige SharePoint tilpasningsteknikker til onlinesider og andre bedste fremgangsmåder, der kan hjælpe dig med at opnå optimal ydeevne.
+Se følgende artikler om forskellige teknikker til tilpasning af SharePoint onlinesider og andre bedste fremgangsmåder for at hjælpe dig med at opnå optimal ydeevne.
   
 - [Navigationsindstillinger for SharePoint Online](navigation-options-for-sharepoint-online.md)
     
@@ -148,18 +148,18 @@ Se følgende artikler for at finde forskellige SharePoint tilpasningsteknikker t
     
 - [Billedoptimering til SharePoint Online](image-optimization-for-sharepoint-online.md)
     
-- [Forsinke indlæsning af billeder og JavaScript i SharePoint Online](delay-loading-images-and-javascript-in-sharepoint-online.md)
+- [Udskyd indlæsning af billeder og JavaScript i SharePoint Online](delay-loading-images-and-javascript-in-sharepoint-online.md)
     
-- [Minification og bundtning i SharePoint Online](minification-and-bundling-in-sharepoint-online.md)
+- [Minification og bundling i SharePoint Online](minification-and-bundling-in-sharepoint-online.md)
     
-- [Brug Office 365 Content Delivery Network (CDN) med SharePoint Online](use-microsoft-365-cdn-with-spo.md)
+- [Brug Office 365 Content Delivery Network (CDN) sammen med SharePoint Online](use-microsoft-365-cdn-with-spo.md)
     
-- [Brug af webdelen Indholdssøgning i stedet for webdelen Indholdsforespørgsel til at forbedre ydeevnen SharePoint Online](using-content-search-web-part-instead-of-content-query-web-part-to-improve-perfo.md)
+- [Brug af webdelen Indholdssøgning i stedet for webdelen indholdsforespørgsel til at forbedre ydeevnen i SharePoint Online](using-content-search-web-part-instead-of-content-query-web-part-to-improve-perfo.md)
     
 - [Kapacitetsplanlægning og indlæsningstest i SharePoint Online](capacity-planning-and-load-testing-sharepoint-online.md)
     
-- [Diagnosticering af problemer med ydeevnen for SharePoint Online](diagnosing-performance-issues-with-sharepoint-online.md)
+- [Diagnosticering af problemer med ydeevnen med SharePoint Online](diagnosing-performance-issues-with-sharepoint-online.md)
     
 - [Brug af objektcachen med SharePoint Online](using-the-object-cache-with-sharepoint-online.md)
     
-- [Sådan gør du: Undgå at blive begrænser eller blokeret i SharePoint Online](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
+- [Sådan gør du: Undgå at blive begrænset eller blokeret i SharePoint Online](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)

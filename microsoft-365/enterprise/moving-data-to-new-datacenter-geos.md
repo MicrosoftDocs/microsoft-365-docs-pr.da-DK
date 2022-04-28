@@ -1,8 +1,8 @@
 ---
-title: Flytning af kernedata til det nye Microsoft 365-datacenter geos
+title: Flytning af kernedata til nye Microsoft 365 geos for datacentre
 ms.author: andyber
 author: andybergen
-manager: laurawi
+manager: scotv
 ms.date: 11/16/2021
 audience: ITPro
 ms.topic: article
@@ -13,68 +13,68 @@ search.appverid:
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 f1.keywords:
 - NOCSH
-description: Få mere at vide om nye Office 365-datacentres geocentre, og hvordan du kan bruge indstillingen for dataopbevaring til at anmode om en flytning af dine kernedata til et nyt geo.
+description: Få mere at vide om nye Office 365 datacenter geos, og hvordan du bruger indstillingen for dataopbevaring til at anmode om en flytning af dine kernedata til en ny geo.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 590d1b7e72f79e0e6cfd4e29a0a78560f6c13433
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: be42954aaa0de3f1c5af851915070e7f27c4e850
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63594208"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101133"
 ---
-# <a name="moving-core-data-to-new-microsoft-365-datacenter-geos"></a>Flytning af kernedata til det nye Microsoft 365-datacenter geos
+# <a name="moving-core-data-to-new-microsoft-365-datacenter-geos"></a>Flytning af kernedata til nye Microsoft 365 geos for datacentre
 
-Vi fortsætter med at åbne nye datacenter-geos for Microsoft 365-tjenester. Disse nye datacentre tilføjer kapacitet og beregner ressourcer for at understøtte vores fortsatte kundebehov og forbrugsvækst. Desuden tilbyder det nye datacenter geos in-geo-dataopbevaring for kernekundedata. 
+Vi fortsætter med at åbne nye datacenter-geos for Microsoft 365-tjenester. Disse nye datacenter-geos tilføjer kapacitet og beregningsressourcer for at understøtte vores løbende kundeefterspørgsel og forbrugsvækst. Derudover tilbyder det nye datacenter geos in-geo-dataopbevaring for kernekundedata. 
 
-Kerne kundedata er et udtryk, der refererer til et undersæt af kundedata, herunder: 
-- Exchange Online-postkasseindhold (brødtekst, kalenderposter og indholdet af vedhæftede filer i mails)
-- SharePoint Online-webstedsindhold og de filer, der er gemt på det pågældende websted
-- Filer uploadet til OneDrive for Business
-- Teams-chatmeddelelser, herunder private beskeder, kanalmeddelelser og billeder, der bruges i chats
+Kernekundedata er et begreb, der refererer til et undersæt af kundedata, herunder: 
+- Exchange Online postkasseindhold (brødtekst, kalenderposter og indholdet af vedhæftede filer i mails)
+- SharePoint onlinewebstedsindhold og de filer, der er gemt på det pågældende websted
+- Filer, der er overført til OneDrive for Business
+- Teams chatbeskeder, herunder private meddelelser, kanalmeddelelser og billeder, der bruges i chats
   
-Eksisterende kunder, der har deres kernekundedata gemt i et allerede eksisterende datacenters geo, påvirkes ikke af lanceringen af et nyt datacenters geocenter. Vi introducerer ingen unikke egenskaber, funktioner eller overholdelsescertificeringer med det nye datacenter geo. Som kunde i et af disse to geos vil du opleve den samme tjenestekvalitet, ydeevne og sikkerhedskontrolelementer, som du havde før. Vi tilbyder eksisterende kunder, der er angivet i tabellen nedenfor, mulighed for at anmode om tidlig overførsel af deres organisations kerne kundedata in rest-to-their nye datacenter geo.
+Eksisterende kunder, der har deres kernekundedata gemt i et allerede eksisterende datacenter geo, påvirkes ikke af lanceringen af et nyt datacenter geo. Vi introducerer ingen unikke funktioner eller certificeringer af overholdelse af angivne standarder med det nye datacenter Geo. Som kunde i et af disse to geografiske områder vil du opleve den samme kvalitet af service-, ydeevne- og sikkerhedskontroller, som du gjorde før. Vi tilbyder eksisterende kunder, der er angivet i nedenstående tabel, mulighed for at anmode om tidlig migrering af organisationens centrale kundedata som inaktive data til deres nye datacenter geo.
   
-| Kunder med lejerens tilmeldingsland i | Forrige datacenter geo | Nyt datacenter geo | Geo tilgængelig siden |
+| Kunder med lande, hvor lejertilmelding er tilmeldt | Tidligere geo for datacenter | Nyt datacenter geo | Geo tilgængelig siden |
 |:-----|:-----|:-----|:-----|
 |**Japan**| Asien/Stillehavsområdet | Japan | December 2014 |
 |**Australien, New Zealand, Fiji**| Asien/Stillehavsområdet | Australien | Marts 2015 |
 |**Indien**| Asien/Stillehavsområdet | Indien | Oktober 2015 |
 |**Canada**| USA | Canada | Maj 2016 |
-|**Storbritannien**| EU | Storbritannien | September 2016 |
+|**Storbritannien**| Eu | Storbritannien | September 2016 |
 |**Sydkorea**| Asien/Stillehavsområdet | Sydkorea | April 2017 |
-|**Frankrig**| EU | Frankrig | Marts 2018 |
-|**De Forenede Arabiske Emirater**| EU | De Forenede Arabiske Emirater | Juni 2019 |
-|**Sydafrika**| EU | Sydafrika | juli 2019 |
-|**Schweiz, Liechtenstein**| EU | Schweiz | december 2019 |
-|**Tyskland**| EU | Tyskland | december 2019 |
-|**Norge**| EU | Norge | april 2020 |
-|**Brasilien**| Nord-, Mellem- og Mellemamerika | Brasilien | november 2020 |
-|**Sverige**| EU | Sverige | November 2021 |
+|**Frankrig**| Eu | Frankrig | Marts 2018 |
+|**De Forenede Arabiske Emirater**| Eu | De Forenede Arabiske Emirater | Juni 2019 |
+|**Sydafrika**| Eu | Sydafrika | juli 2019 |
+|**Schweiz, Liechtenstein**| Eu | Schweiz | december 2019 |
+|**Tyskland**| Eu | Tyskland | december 2019 |
+|**Norge**| Eu | Norge | april 2020 |
+|**Brasilien**| Americas | Brasilien | november 2020 |
+|**Sverige**| Eu | Sverige | November 2021 |
 
-Pr. 1. oktober 2020 er kunder med et Office 365 Education-abonnement inkluderet i lejeren ikke berettiget til overførsel.
+Fra den 1. oktober 2020 er kunder med et Office 365 Education abonnement, der er inkluderet i lejeren, ikke berettiget til overførsel.
 
-En komplet liste over alle datacenter geografiske datacentre, datacentre og placeringen af kundens data i hvile er tilgængelig som en del af de interaktive [datacenterkort](https://office.com/datamaps). 
+En komplet liste over alle datacenter-geos, datacentre og placeringen af kundedata som rest er tilgængelig som en del af de [interaktive datacenterkort](https://office.com/datamaps). 
   
 ## <a name="data-residency-option"></a>Indstillingen Dataopbevaring
 
-Vi giver dig en mulighed for dataopbevaring for berettigede Microsoft 365-kunder, der er dækket af de datacenter-geos, der er angivet i tabellen ovenfor. Med denne indstilling kan berettigede kunder med krav til dataopbevaring anmode om overførsel af deres organisations kernekundedata in rest-data til deres nye datacenters geocenter.  Microsoft vil tilbyde en bindende deadline til alle berettigede kunder, der anmoder om overførsel i tilmeldingsvinduet.  Gennemgå siden [Sådan anmoder](request-your-data-move.md) du om flytning af dine data for at få mere at vide om det åbne tilmeldingsvindue for dit datacenters geo og trinnene til at tilmelde dig programmet.  Databevægelser kan tage op til 24 måneder, efter anmodningens periode udløber.
+Vi leverer en mulighed for dataopbevaring til berettigede Microsoft 365 kunder, der er omfattet af de geografiske datacentre, der er angivet i tabellen ovenfor. Med denne mulighed kan berettigede kunder med krav til dataopbevaring anmode om migrering af deres organisations centrale kundedata som inaktive data til deres nye datacenter geo.  Microsoft tilbyder en bindende deadline til alle berettigede kunder, der anmoder om migrering under tilmeldingsvinduet.  Gennemse siden [Sådan anmoder du om flytning af dine data for at](request-your-data-move.md) få flere oplysninger om det åbne tilmeldingsvindue for dit datacenter geo og trinnene til at tilmelde dig programmet.  Dataflytninger kan tage op til 24 måneder, efter at anmodningsperioden er afsluttet.
 
-Vi introducerer ingen unikke egenskaber, funktioner eller overholdelsescertificeringer med det nye datacenter geo.
+Vi introducerer ingen unikke funktioner eller certificeringer af overholdelse af angivne standarder med det nye datacenter Geo.
     
-Den kompleksitet, præcision og skalering, hvorpå vi skal udføre databevægelser i et globalt styret og automatiseret miljø, forhindrer os i at dele, når der forventes at blive udført en data flytte for din lejer eller en anden enkelt lejer. Kunder modtager én bekræftelse i Meddelelsescenter pr. deltagende tjeneste, når dataover flytningen er fuldført. 
+Den kompleksitet, præcision og skalering, hvor vi skal udføre dataflytninger i et globalt drevet og automatiseret miljø, forhindrer os i at dele, når en dataflytning forventes at blive fuldført for din lejer eller en anden enkelt lejer. Kunderne modtager én bekræftelse i Meddelelsescenter pr. deltagertjeneste, når dataflytningen er fuldført. 
     
-Databevægelser er en back-end-tjenestehandling med minimal indvirkning for slutbrugere. Funktioner, der kan påvirkes, er angivet på [siden Under og efter, dine data flyttes](during-and-after-your-data-move.md) . Vi overholder [Serviceaftale (Service Level Agreement) for Microsoft Online Services for](https://go.microsoft.com/fwlink/p/?LinkId=523897) tilgængelighed, så der er intet, kunderne skal forberede sig på eller overvåge under flytningen. Meddelelse om eventuel servicevedligeholdelse udføres, hvis det er nødvendigt. 
+Dataflytninger er en back end-tjenestehandling, der har minimal indvirkning på slutbrugerne. De funktioner, der kan påvirkes, vises på siden [Under og efter flytning af dine data](during-and-after-your-data-move.md) . Vi overholder [Serviceniveauaftalen for Microsoft Online Services,](https://go.microsoft.com/fwlink/p/?LinkId=523897) så der ikke er noget, som kunderne behøver at forberede sig på eller overvåge under flytningen. Meddelelse om eventuel vedligeholdelse af tjenesten udføres, hvis det er nødvendigt. 
 
-Data flyttes til det nye datacenters geocenter uden yderligere omkostninger for kunden.
+Dataflytninger til det nye datacenter geo fuldføres uden yderligere omkostninger for kunden.
     
 ## <a name="related-topics"></a>Relaterede emner 
  
-[Sådan anmoder du om, at dine data flyttes](request-your-data-move.md)
+[Sådan anmoder du om flytning af dine data](request-your-data-move.md)
     
-[Ofte stillede spørgsmål om flytning af data](data-move-faq.yml)
+[Generelle ofte stillede spørgsmål om dataflytning](data-move-faq.yml)
   
-[Nye datacenter-geos til Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)
+[Nyt datacenter-geos til Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)
   
 [Azure-tjenester efter område](https://azure.microsoft.com/regions/)
 
-[Teams-oplevelse i et Microsoft 365-multi-geo-aktiveret leje](/microsoftteams/teams-experience-o365odb-spo-multi-geo)
+[Teams oplevelse i en Microsoft 365 Multi-Geo-aktiveret lejer](/microsoftteams/teams-experience-o365odb-spo-multi-geo)

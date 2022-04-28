@@ -3,7 +3,7 @@ metadata:
   title: Generelle ofte stillede spørgsmål om dataflytning
   ms.author: kvice
   author: kelleyvice-msft
-  manager: laurawi
+  manager: scotv
   audience: ITPro
   ms.topic: faq
   ms.service: o365-administration
@@ -15,12 +15,12 @@ metadata:
   - NOCSH
   description: Få svar på ofte stillede spørgsmål om flytning af kernedata til et nyt Office 365 datacenter geo.
   ms.custom: seo-marvel-mar2020
-  ms.openlocfilehash: c39f0c122d2c004a330b9b14f43bc65274f1c98d
-  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+  ms.openlocfilehash: 8e6b8299bdd6d66ea6f64d2e980cb156a35213f8
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64823490"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65101309"
 title: Generelle ofte stillede spørgsmål om dataflytning
 summary: Her er svar på generelle spørgsmål om flytning af inaktive kernekundedata til et nyt datacenter geo.
 sections:
