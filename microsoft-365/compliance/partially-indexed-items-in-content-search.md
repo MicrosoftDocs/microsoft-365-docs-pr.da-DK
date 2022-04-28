@@ -2,8 +2,8 @@
 title: Delvist indekserede elementer i indholdssøgning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: b88e7d0f6651ecaa31849343db066295af1f5e84
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ff21f04456d6886e7849a8d9a0770640897a62ac
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993090"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091495"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>Delvist indekserede elementer i eDiscovery
 
@@ -78,7 +78,7 @@ Du kan finde en liste over mail- og dokumentegenskaber, som du kan søge efter v
 
 ## <a name="partially-indexed-items-included-in-the-search-results"></a>Delvist indekserede elementer, der er inkluderet i søgeresultaterne
 
-Din organisation skal muligvis identificere og udføre yderligere analyser af delvist indekserede elementer for at bestemme, hvad de er, hvad de indeholder, og om de er relevante for en bestemt undersøgelse. Som tidligere forklaret medtages de delvist indekserede elementer på de indholdsplaceringer, der søges efter, automatisk med de anslåede søgeresultater. Du har mulighed for at inkludere disse delvist indekserede elementer, når du eksporterer søgeresultater eller forbereder søgeresultaterne til eDiscovery (Premium).
+Din organisation skal muligvis identificere og udføre yderligere analyser af delvist indekserede elementer for at bestemme, hvad de er, hvad de indeholder, og om de er relevante for en bestemt undersøgelse. Som tidligere forklaret medtages de delvist indekserede elementer på de indholdsplaceringer, der søges efter, automatisk med de anslåede søgeresultater. Du har mulighed for at medtage disse delvist indekserede elementer, når du eksporterer søgeresultater eller forbereder søgeresultaterne til eDiscovery (Premium).
   
 Vær opmærksom på følgende i forbindelse med delvist indekserede elementer:
   

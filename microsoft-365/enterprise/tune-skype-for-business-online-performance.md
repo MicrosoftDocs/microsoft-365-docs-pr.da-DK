@@ -1,8 +1,8 @@
 ---
-title: Finjustere ydeevnen Skype for Business Online
+title: Finindstil ydeevnen for Skype for Business Online
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 9/29/2016
 audience: Admin
 ms.topic: troubleshooting
@@ -20,46 +20,46 @@ search.appverid:
 - MSO150
 - BCS160
 ms.assetid: beec23c2-c5d6-4e84-a8af-e82aefca7802
-description: Denne artikel indeholder links til systemadministratorer, der planlægger krav til netværksbåndbredde eller forbedrer ydeevnen Skype for Business Online.
-ms.openlocfilehash: 5dd5672a016701b167c1510276da71198e21d7a7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Denne artikel indeholder links til systemadministratorer, der planlægger krav til netværksbåndbredde eller forbedrer ydeevnen af Skype for Business Online.
+ms.openlocfilehash: 2316f919d564216cd015b398641278e2f3a11567
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63591022"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077366"
 ---
-# <a name="tune-skype-for-business-online-performance"></a>Finjustere ydeevnen Skype for Business Online
+# <a name="tune-skype-for-business-online-performance"></a>Finindstil ydeevnen for Skype for Business Online
 
-Denne artikel indeholder links til systemadministratorer, der vil udarbejde en plan for at opfylde krav til netværksbåndbredde, eller som vil forbedre ydeevnen for Skype for Business Online. 
+Denne artikel indeholder links til systemadministratorer, der vil planlægge krav til netværksbåndbredde, eller som har brug for at forbedre ydeevnen af Skype for Business Online. 
   
 ## <a name="fine-tuning-skype-for-business-online-performance"></a>Finjustering Skype for Business onlineydeevne
 
-- **Hvis du vil have** mere at vide om de indstillinger og målepunkter, der skal anvendes for at opretholde din organisations opkaldskvalitet, er det vigtigt at læse Mediekvalitet og ydeevne for [netværksforbindelse i Skype for Business Online](/skypeforbusiness/optimizing-your-network/media-quality-and-network-connectivity-performance). Denne artikel giver dig oplysninger, hvis du vil bruge ExpressRoute, om installationstyperne og andre oplysninger, du skal bruge.
+- **Hvis du vil vide mere om indstillingerne og målepunkterne for vedligeholdelse af opkaldskvaliteten for din organisation**, er det vigtigt at læse [Media Quality og Network Connectivity Performance i Skype for Business Online](/skypeforbusiness/optimizing-your-network/media-quality-and-network-connectivity-performance). Denne artikel indeholder oplysninger om installationstyper og andre oplysninger, du skal bruge, hvis du vil bruge ExpressRoute.
     
-- **For lokale og hybride** installationer kan du se kravene til båndbredde for Skype for Business Server telefonmøder med manuelt opkald under Planlægge telefonmøder med manuelt opkald [i Skype for Business Server 2015](/skypeforbusiness/plan-your-deployment/conferencing/dial-in-conferencing).
+- I forbindelse med installationer i det **lokale miljø og hybride installationer** kan du se krav til båndbredde for Skype for Business Server telefonmøde med manuelt opkald i [Plan for telefonmøde med manuelt opkald i Skype for Business Server 2015](/skypeforbusiness/plan-your-deployment/conferencing/dial-in-conferencing).
     
-## <a name="more-ways-to-improve-skype-for-business-online-performance"></a>Flere måder at forbedre Skype for Business onlineydeevne
+## <a name="more-ways-to-improve-skype-for-business-online-performance"></a>Flere måder at forbedre ydeevnen Skype for Business online
 
-- [ExpressRoute og QoS i Skype for Business Online](/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online): Forbind Office 365 via en dedikeret netværksforbindelse ved hjælp af Azure ExpressRoute til Office 365 og Skype for Business Online. 
+- [ExpressRoute og QoS i Skype for Business Online](/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online): Forbind at Office 365 via en dedikeret netværksforbindelse ved hjælp af Azure ExpressRoute til Office 365 og Skype for Business Online. 
     
-- [Aktivering og brug](/SkypeForBusiness/using-call-quality-in-your-organization/turning-on-and-using-call-quality-dashboard) af dashboardet Opkaldskvalitet i Skype for Business Online: Dashboardet Opkaldskvalitet giver dig mulighed for at overvåge og få indsigt i kvaliteten af opkald, der foretages ved hjælp af Skype for Business-tjenester. 
+- [Når du aktiverer og bruger Dashboard til opkaldskvalitet i Skype for Business Online](/SkypeForBusiness/using-call-quality-in-your-organization/turning-on-and-using-call-quality-dashboard): CQD (Call Quality Dashboard) giver dig mulighed for at overvåge og få indsigt i kvaliteten af opkald, der foretages ved hjælp af Skype for Business tjenester. 
     
 ## <a name="articles-on-setting-up-skype-for-business-online"></a>Artikler om konfiguration af Skype for Business Online
 
 - [Konfigurer Skype for Business Online](/skypeforbusiness/set-up-skype-for-business-online/set-up-skype-for-business-online)
     
-- [Konfigurere lydmøder til Skype for Business og Microsoft Teams](/skypeforbusiness/audio-conferencing-in-office-365/set-up-audio-conferencing)
+- [Konfigurer lydmøde for Skype for Business og Microsoft Teams](/skypeforbusiness/audio-conferencing-in-office-365/set-up-audio-conferencing)
     
-- [Konfigurer opkaldsplaner (Skype for Business)](/SkypeForBusiness/what-are-calling-plans-in-office-365/set-up-calling-plans)
+- [Konfigurer opkaldsabonnementer (Skype for Business)](/SkypeForBusiness/what-are-calling-plans-in-office-365/set-up-calling-plans)
     
 - [Her er, hvad du får med Telefonsystem i Office 365](/skypeforbusiness/what-is-phone-system-in-office-365/here-s-what-you-get-with-phone-system)
     
 ## <a name="see-also"></a>Se også
 
-[Netværksplanlægning og justering af ydeevnen for Office 365](network-planning-and-performance.md)
+[Netværksplanlægning og justering af ydeevne for Office 365](network-planning-and-performance.md)
   
-[Optimere dit netværk til Skype for Business Online](/skypeforbusiness/optimizing-your-network/optimizing-your-network)
+[Optimering af netværket til Skype for Business Online](/skypeforbusiness/optimizing-your-network/optimizing-your-network)
   
 [ExpressRoute og QoS i Skype for Business Online](/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online)
   
-[Opkaldsflow med ExpressRoute](/skypeforbusiness/optimizing-your-network/call-flow-using-expressroute)
+[Opkaldsflow ved hjælp af ExpressRoute](/skypeforbusiness/optimizing-your-network/call-flow-using-expressroute)

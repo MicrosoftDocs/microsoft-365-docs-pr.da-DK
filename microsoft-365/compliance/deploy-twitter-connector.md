@@ -2,8 +2,8 @@
 title: Udrul en connector for at arkivere Twitter-data
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: Administratorer kan konfigurere en oprindelig connector til at importere og arkivere Twitter-data for at Microsoft 365. Når disse data er importeret til Microsoft 365, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere styringen af din organisations Twitter-data.
-ms.openlocfilehash: 6bf801d7c3443385ee0a2656753dcf069ac6aebc
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a928e24c73fcbb290bde2caa0f508610fc18728d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997136"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090955"
 ---
 # <a name="deploy-a-connector-to-archive-twitter-data"></a>Udrul en connector for at arkivere Twitter-data
 
@@ -59,18 +59,18 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    ![Skriv hemmeligheden, og vælg udløbsperiode.](../media/TCimage08.png)
 
-8. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er AAD-programhemmeligheden, som du bruger i senere trin.
+8. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er den AAD programhemmelighed, du bruger i senere trin.
 
    ![Kopiér og gem hemmeligheden.](../media/TCimage09.png)
 
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub på din Azure-konto
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub til din Azure-konto
 
-1. Gå til [dette GitHub-websted,](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet) og klik på **Udrul på Azure**.
+1. Gå til [dette GitHub websted](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet), og klik på **Udrul på Azure**.
 
     ![Gå til startsiden for Azure.](../media/FBCimage11.png)
 
-2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **indstillinger,** og klik derefter på **Køb**.
+2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **Indstillinger** oplysninger, og klik derefter på **Køb**.
 
    ![Klik på Opret en ressource, og skriv lagerkonto.](../media/FBCimage12.png)
 
@@ -88,7 +88,7 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
 3. Når installationen er fuldført, ligner siden følgende skærmbillede:
 
-    ![Klik på Lager, og klik derefter på Lagerkonto.](../media/FBCimage13.png)
+    ![Klik på Storage, og klik derefter på Storage konto.](../media/FBCimage13.png)
 
 ## <a name="step-3-create-the-twitter-app"></a>Trin 3: Opret Twitter-appen
 
@@ -141,7 +141,7 @@ Udviklerappen Twitter er nu klar til brug.
 
    ![Klik på Konfigurer for at få vist logonsiden.](../media/FBCimage42.png)
 
-3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfigurationsindstillinger** for at få vist siden med konfigurationsoplysninger.
+3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfiguration Indstillinger** for at få vist siden med konfigurationsoplysninger.
 
    ![Log på med lejer-id og API-hemmelig nøgle.](../media/TCimage35.png)
 
@@ -155,9 +155,9 @@ Udviklerappen Twitter er nu klar til brug.
 
    - **Twitter-adgangstokenhemmelighed:** Den adgangstokenhemmelighed, du oprettede i Trin 3.
 
-   - **AAD-program-id:** Program-id'et for den Azure Active Directory-app, du oprettede i trin 1
+   - **AAD program-id:** Program-id'et for den Azure Active Directory app, du oprettede i trin 1
 
-   - **AAD-programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
+   - **AAD Programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
 
 5. Klik på **Gem** for at gemme connectorindstillingerne.
 

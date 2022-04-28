@@ -1,9 +1,9 @@
 ---
-title: Sådan identificerer du ventepositionen på en Exchange Online-postkasse
+title: Sådan identificerer du ventepositionen på en Exchange Online postkasse
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: ITPro
@@ -17,19 +17,19 @@ ms.assetid: 6057daa8-6372-4e77-a636-7ea599a76128
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Få mere at vide om, hvordan du identificerer de forskellige typer venteposition, der kan placeres i en Exchange Online-postkasse i Microsoft 365.
-ms.openlocfilehash: 2e62d8f6fd0dc6352b4bf6fc5766b9cd33f8ffb4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om, hvordan du identificerer de forskellige ventepositionstyper, der kan placeres i en Exchange Online postkasse i Microsoft 365.
+ms.openlocfilehash: 4b4ff5064f59285412c4c20108df9dbbae992f7e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994166"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097750"
 ---
-# <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Sådan identificeres den type venteposition, der er placeret i en Exchange Online-postkasse
+# <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Sådan identificeres den type venteposition, der er placeret i en Exchange Online postkasse
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-I denne artikel forklares det, hvordan du identificerer ventepositioner, der er placeret på Exchange Online-postkasser i Microsoft 365.
+I denne artikel forklares det, hvordan du identificerer ventepositioner, der er placeret på Exchange Online postkasser i Microsoft 365.
 
 Microsoft 365 tilbyder flere måder, som din organisation kan forhindre, at postkasseindhold slettes permanent. Dette gør det muligt for din organisation at bevare indhold for at overholde angivne standarder eller under juridiske og andre typer undersøgelser. Her er en liste over opbevaringsfunktionerne (også kaldet *ventepositioner*) i Office 365:
 
@@ -46,7 +46,7 @@ Microsoft 365 tilbyder flere måder, som din organisation kan forhindre, at post
 
   Der er to typer Microsoft 365 opbevaringspolitikker, der kan tildeles til postkasser.
 
-    - **Specifikke politikker for placeringsopbevaring:** Dette er politikker, der er tildelt bestemte brugeres indholdsplaceringer. Du kan bruge **Get-Mailbox-cmdlet'en** i Exchange Online PowerShell til at få oplysninger om opbevaringspolitikker, der er tildelt bestemte postkasser. Du kan få flere oplysninger om denne type opbevaringspolitik i afsnittet [En politik med specifikke medtagelser eller udeladelser](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions) fra dokumentationen til opbevaringspolitikken.
+    - **Specifikke politikker for placeringsopbevaring:** Dette er politikker, der er tildelt bestemte brugeres indholdsplaceringer. Du kan bruge **Get-Mailbox-cmdlet'en** i Exchange Online PowerShell til at få oplysninger om opbevaringspolitikker, der er tildelt til bestemte postkasser. Du kan få flere oplysninger om denne type opbevaringspolitik i afsnittet [En politik med specifikke medtagelser eller udeladelser](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions) fra dokumentationen til opbevaringspolitikken.
 
     - **Opbevaringspolitikker for hele organisationen:** Dette er politikker, der er tildelt til alle indholdsplaceringer i din organisation. Du kan bruge cmdlet'en **Get-OrganizationConfig** i Exchange Online PowerShell til at få oplysninger om opbevaringspolitikker for hele organisationen. Du kan få flere oplysninger om denne type opbevaringspolitik i afsnittet [En politik, der gælder for hele placeringer](retention-settings.md#a-policy-that-applies-to-entire-locations) fra dokumentationen til opbevaringspolitikken.
 
@@ -56,13 +56,13 @@ Hvis du vil administrere postkasser i venteposition, skal du muligvis identifice
 
 ## <a name="step-1-obtain-the-guid-for-holds-placed-on-a-mailbox"></a>Trin 1: Hent GUID'et for ventepositioner, der er placeret i en postkasse
 
-Du kan køre følgende to cmdlet'er i Exchange Online PowerShell for at få GUID'et for de ventepositioner, der er placeret i en postkasse. Når du har fået et GUID, kan du bruge det til at identificere den specifikke venteposition i trin 2. En procesførelsesventeposition identificeres ikke af et GUID. Retsførelse ventepositioner er enten aktiveret eller deaktiveret for en postkasse.
+Du kan køre følgende to cmdlet'er i Exchange Online PowerShell for at få GUID for de ventepositioner, der er placeret i en postkasse. Når du har fået et GUID, kan du bruge det til at identificere den specifikke venteposition i trin 2. En procesførelsesventeposition identificeres ikke af et GUID. Retsførelse ventepositioner er enten aktiveret eller deaktiveret for en postkasse.
 
 - **Hent postkasse:** Brug denne cmdlet til at bestemme, om procesførelsesholdning er aktiveret for en postkasse, og til at hente GUID'erne for eDiscovery-ventepositioner, In-Place ventepositioner og Microsoft 365 opbevaringspolitikker, der specifikt er tildelt til en postkasse. Outputtet af denne cmdlet angiver også, om en postkasse udtrykkeligt er blevet udelukket fra en opbevaringspolitik for hele organisationen.
 
 - **Get-OrganizationConfig:** Brug denne cmdlet til at hente GUID'erne for opbevaringspolitikker for hele organisationen.
 
-Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ### <a name="get-mailbox"></a>Get-Mailbox
 
@@ -132,7 +132,7 @@ Når du har fået GUID'et for en venteposition, der er anvendt på en postkasse,
 
 Kør følgende kommandoer i Security & Compliance Center PowerShell for at identificere en eDiscovery-venteposition, der er anvendt på postkassen. Brug GUID (inklusive ikke UniH-præfikset) for den eDiscovery-venteposition, du identificerede i trin 1. 
 
-Hvis du vil oprette forbindelse til Security & Compliance Center PowerShell, skal du se [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Hvis du vil oprette forbindelse til Security & Compliance Center PowerShell, [skal du se Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 Den første kommando opretter en variabel, der indeholder oplysninger om ventepositionen. Denne variabel bruges i de andre kommandoer. Den anden kommando viser navnet på den eDiscovery-sag, som ventepositionen er knyttet til. Den tredje kommando viser navnet på ventepositionen og en liste over de postkasser, som ventepositionen gælder for.
 
@@ -163,7 +163,7 @@ Hvis GUID'et for den In-Place Venteposition starter med præfikset `cld` , skal 
 
 ### <a name="microsoft-365-retention-policies"></a>Microsoft 365 opbevaringspolitikker
 
-[Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), og kør følgende kommando for at identificere den Microsoft 365 opbevaringspolitik (for hele organisationen eller en bestemt placering), der er anvendt på postkassen. Brug guid'et (inklusive ikke præfikset mbx, skp eller grp eller det handlingssuffiks), du identificerede i trin 1.
+[Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre følgende kommando for at identificere den Microsoft 365 opbevaringspolitik (for hele organisationen eller en bestemt placering), der er anvendt på postkassen. Brug guid'et (inklusive ikke præfikset mbx, skp eller grp eller det handlingssuffiks), du identificerede i trin 1.
 
 ```powershell
 Get-RetentionCompliancePolicy <hold GUID without prefix or suffix> -DistributionDetail  | FL Name,*Location
@@ -243,7 +243,7 @@ Vær opmærksom på følgende ting, når du administrerer en postkasse i forsink
 
 ## <a name="how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox"></a>Sådan bekræfter du, at der anvendes en opbevaringspolitik for hele organisationen på en postkasse
 
-Når der anvendes eller fjernes en opbevaringspolitik for hele organisationen i en postkasse, kan eksport af logfilerne for postkassediagnosticering hjælpe dig med at sikre, at Exchange Online faktisk har anvendt eller fjernet opbevaringspolitikken til postkassen. Hvis du vil have vist disse oplysninger, skal du først validere et par ting ved hjælp af [Exchange Online Powershell](/powershell/exchange/connect-to-exchange-online-powershell).
+Når der anvendes eller fjernes en opbevaringspolitik for hele organisationen i en postkasse, kan eksport af diagnosticeringslogfilerne for postkassen hjælpe dig med at sikre, at Exchange Online rent faktisk har anvendt eller fjernet opbevaringspolitikken i postkassen. Hvis du vil have vist disse oplysninger, skal du først validere et par ting ved hjælp af [Exchange Online Powershell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ### <a name="obtain-the-guids-for-any-retention-policies-explicitly-applied-to-a-mailbox"></a>Hent GUID'erne for alle opbevaringspolitikker, der udtrykkeligt er anvendt på en postkasse
 

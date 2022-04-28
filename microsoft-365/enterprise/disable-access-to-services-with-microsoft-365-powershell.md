@@ -2,7 +2,7 @@
 title: Deaktiver adgang til Microsoft 365-tjenester med PowerShell
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/27/2020
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: I denne artikel kan du få mere at vide om, hvordan du bruger PowerShell til at deaktivere adgang til Microsoft 365-tjenester for brugere.
-ms.openlocfilehash: d6754cc2de6208b9dc4bce03ef6477939f8d530a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0acd174fce25e0332aa8f927595657e4d0a464b9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939427"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097706"
 ---
 # <a name="disable-access-to-microsoft-365-services-with-powershell"></a>Deaktiver adgang til Microsoft 365-tjenester med PowerShell
 

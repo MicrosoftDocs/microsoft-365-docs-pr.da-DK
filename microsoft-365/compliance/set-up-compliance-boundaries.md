@@ -2,8 +2,8 @@
 title: Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 1b45c82f-26c8-44fb-9f3b-b45436fe2271
 description: Få mere at vide om, hvordan du bruger overholdelsesgrænser til at oprette logiske grænser, der styrer placeringen af brugerindhold, som en eDiscovery-leder kan søge i Microsoft 365.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: adfdc0284983c6efb91f076be1a203734deb038e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 36a7f1e679f404a77b61c30b8efef7875558fee9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993968"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099185"
 ---
 # <a name="set-up-compliance-boundaries-for-ediscovery-investigations"></a>Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser
 
@@ -72,7 +72,7 @@ Her er processen til konfiguration af overholdelsesgrænser:
 
 ## <a name="before-you-set-up-compliance-boundaries"></a>Før du konfigurerer overholdelsesgrænser
 
-- Brugerne skal tildeles en Exchange Online-licens. Du kan bekræfte dette ved at bruge [cmdlet'en Get-User](/powershell/module/exchange/get-user) i Exchange Online PowerShell.
+- Brugerne skal tildeles en Exchange Online licens. Du kan bekræfte dette ved at bruge [cmdlet'en Get-User](/powershell/module/exchange/get-user) i Exchange Online PowerShell.
 
 ## <a name="step-1-identify-a-user-attribute-to-define-your-agencies"></a>Trin 1: Identificer en brugerattribut for at definere dine agenturer
 
@@ -170,7 +170,7 @@ Her kan du se, hvordan filtrene for søgetilladelser anvendes for hvert agentur 
 
 ## <a name="step-4-create-an-ediscovery-case-for-intra-agency-investigations"></a>Trin 4: Opret en eDiscovery-sag til undersøgelser inden for agenturet
 
-Det sidste trin er at oprette en eDiscovery-sag (Standard) eller eDiscovery (Premium)-sag i overholdelsesportalen og derefter tilføje den rollegruppe, du oprettede i trin 2 som medlem af sagen. Dette resulterer i to vigtige egenskaber ved at bruge overholdelsesgrænser:
+Det sidste trin er at oprette en eDiscovery-sag (Standard)- eller eDiscovery-sag (Premium) i overholdelsesportalen og derefter tilføje den rollegruppe, du oprettede i trin 2 som medlem af sagen. Dette resulterer i to vigtige egenskaber ved at bruge overholdelsesgrænser:
   
 - Det er kun medlemmer af rollegruppen, der er føjet til sagen, der kan se og få adgang til sagen på overholdelsesportalen. Hvis rollegruppen Fjerde kaffeforskere f.eks. er det eneste medlem af en sag, kan medlemmer af rollegruppen Fjerde kaffe eDiscovery-ledere (eller medlemmer af en anden rollegruppe) ikke se eller få adgang til sagen.
 
@@ -193,7 +193,7 @@ Sådan opretter du en sag og tildeler medlemmer:
 
 ## <a name="searching-and-exporting-content-in-multi-geo-environments"></a>Søgning efter og eksport af indhold i Multi-Geo-miljøer
 
-Filtre for søgetilladelser giver dig også mulighed for at styre, hvor indhold distribueres til eksport, og hvilket datacenter der kan søges i, når du søger efter indholdsplaceringer i et [SharePoint Multi-Geo-miljø](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).
+Med filtre for søgetilladelser kan du også styre, hvor indhold distribueres til eksport, og hvilket datacenter der kan søges i, når du søger efter indholdsplaceringer i et [SharePoint Multi-Geo miljø](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).
   
 - **Eksportér søgeresultater:** Du kan eksportere søgeresultaterne fra Exchange postkasser, SharePoint websteder og OneDrive konti fra et bestemt datacenter. Det betyder, at du kan angive placeringen af det datacenter, som søgeresultaterne skal eksporteres fra.
 
@@ -232,7 +232,7 @@ Filtre for søgetilladelser giver dig også mulighed for at styre, hvor indhold 
    For at forenkle konceptet styrer parameteren *Region* det datacenter, der bruges til at søge efter indhold i SharePoint og OneDrive. Dette gælder ikke for søgning efter indhold i Exchange, fordi Exchange indholdssøgninger ikke er bundet af datacentrenes geografiske placering. Den samme parameterværdi *for Område* kan også diktere det datacenter, som eksporteres gennem. Dette er ofte nødvendigt for at kontrollere bevægelsen af data på tværs af geografiske tavler.
 
 > [!NOTE]
-> Hvis du bruger eDiscovery (Premium), styrer parameteren *Region* ikke det område, som dataene eksporteres fra. Data eksporteres fra organisationens centrale placering. Desuden er søgning efter indhold i SharePoint og OneDrive ikke bundet af datacentrenes geografiske placering. Der søges i alle datacentre. Du kan finde flere oplysninger om eDiscovery (Premium[) under Oversigt over eDiscovery(Premium)-løsningen i Microsoft 365](overview-ediscovery-20.md).
+> Hvis du bruger eDiscovery (Premium), styrer parameteren *Region* ikke det område, som dataene eksporteres fra. Data eksporteres fra organisationens centrale placering. Desuden er søgning efter indhold i SharePoint og OneDrive ikke bundet af datacentrenes geografiske placering. Der søges i alle datacentre. Du kan finde flere oplysninger om eDiscovery (Premium[) under Oversigt over eDiscovery-løsningen (Premium) i Microsoft 365](overview-ediscovery-20.md).
 
 Her er eksempler på brug af parameteren *Region* , når du opretter søgetilladelsesfiltre for overholdelsesgrænser. Dette forudsætter, at det fjerde kaffe-datterselskab er placeret i Nordamerika, og at Coho Winery er i Europa.
   
@@ -248,13 +248,13 @@ Vær opmærksom på følgende ting, når du søger efter og eksporterer indhold 
   
 - Parameteren *Region* styrer ikke søgninger i Exchange postkasser. Der søges i alle datacentre, når du søger i postkasser. Hvis du vil begrænse omfanget af, hvilke Exchange postkasser der søges i, skal du bruge parameteren *Filtre*, når du opretter eller ændrer et filter for søgetilladelser.
 
-- Hvis det er nødvendigt for en eDiscovery Manager at søge på tværs af flere SharePoint områder, skal du oprette en anden brugerkonto, som den pågældende eDiscovery-leder skal bruge i søgetilladelsesfilteret til at angive det område, hvor de SharePoint websteder eller OneDrive konti er placeret. Du kan finde flere oplysninger om, hvordan du konfigurerer dette, i afsnittet "Søgning efter indhold i et SharePoint Multi-Geo-miljø" i [Indholdssøgning](content-search-reference.md#searching-for-content-in-a-sharepoint-multi-geo-environment).
+- Hvis det er nødvendigt for en eDiscovery Manager at søge på tværs af flere SharePoint områder, skal du oprette en anden brugerkonto, som den pågældende eDiscovery-leder skal bruge i søgetilladelsesfilteret til at angive det område, hvor de SharePoint websteder eller OneDrive konti er placeret. Du kan finde flere oplysninger om, hvordan du konfigurerer dette, i afsnittet "Søgning efter indhold i et SharePoint Multi-Geo miljø" i [Indholdssøgning](content-search-reference.md#searching-for-content-in-a-sharepoint-multi-geo-environment).
 
 - Når du søger efter indhold i SharePoint og OneDrive, dirigerer parameteren *Region* søgninger til enten den primære placering eller satellitplaceringen, hvor eDiscovery-lederen skal foretage eDiscovery-undersøgelser. Hvis en eDiscovery-leder søger SharePoint og OneDrive websteder uden for det område, der er angivet i søgetilladelsesfilteret, returneres der ingen søgeresultater.
 
 - Når du eksporterer søgeresultater fra eDiscovery (Standard), uploades indhold fra alle indholdsplaceringer (herunder Exchange, Skype for Business, SharePoint, OneDrive og andre tjenester, som du kan søge efter ved hjælp af værktøjet Indholdssøgning) til Azure Storage  placering i det datacenter, der er angivet af parameteren *Region*. Dette hjælper organisationer med at overholde angivne standarder ved ikke at tillade, at indhold eksporteres på tværs af kontrollerede grænser. Hvis der ikke er angivet et område i filteret for søgetilladelser, uploades indholdet til organisationens primære datacenter.
 
-  Når du eksporterer indhold fra eDiscovery (Premium), kan du ikke styre, hvor indhold uploades ved hjælp af parameteren *Region* . Indhold uploades til en Azure Storage placering i et datacenter på din organisations centrale placering. Du kan finde en liste over geografiske placeringer, der er baseret på din centrale placering, [under Microsoft 365 Multi-Geo eDiscovery-konfiguration](../enterprise/multi-geo-ediscovery-configuration.md).
+  Når du eksporterer indhold fra eDiscovery (Premium), kan du ikke styre, hvor indhold uploades ved hjælp af parameteren *Region*. Indhold uploades til en Azure Storage placering i et datacenter på din organisations centrale placering. Du kan finde en liste over geografiske placeringer, der er baseret på din centrale placering, [under Microsoft 365 Multi-Geo eDiscovery-konfiguration](../enterprise/multi-geo-ediscovery-configuration.md).
 
 - Du kan redigere et eksisterende filter for søgetilladelser for at tilføje eller ændre området ved at køre følgende kommando:
 
@@ -304,7 +304,7 @@ Vær opmærksom på følgende begrænsninger, når du administrerer eDiscovery-s
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-**Hvem kan oprette og administrere filtre for søgetilladelser (ved hjælp af New-ComplianceSecurityFilter og Set-ComplianceSecurityFilter cmdlet'er)?**
+**Who kan oprette og administrere filtre for søgetilladelser (ved hjælp af New-ComplianceSecurityFilter og Set-ComplianceSecurityFilter cmdlet'er)?**
   
 Hvis du vil oprette, få vist og redigere filtre for søgetilladelser, skal du være medlem af rollegruppen Organisationsadministration på overholdelsesportalen.
   
@@ -318,7 +318,7 @@ Det tager op til tre dage for et filter for søgetilladelser at gennemtvinge ove
   
 **Kan en eDiscovery-leder se indhold fra to separate overholdelsesgrænser?**
   
-Ja, det kan du gøre, når du søger i Exchange postkasser ved at føje eDiscovery-administratoren til rollegrupper, der har synlighed for begge bureauer. Når en eDiscovery-administrator søger efter SharePoint websteder og OneDrive konti, kan vedkommende dog kun søge efter indhold i forskellige overholdelsesgrænser, hvis bureauerne befinder sig i det samme område eller på den samme geografiske placering. **Bemærk:** Denne begrænsning for websteder gælder ikke i eDiscovery (Premium), fordi søgning efter indhold i SharePoint og OneDrive ikke er bundet af den geografiske placering.
+Ja, det kan du gøre, når du søger i Exchange postkasser ved at føje eDiscovery-administratoren til rollegrupper, der har synlighed for begge bureauer. Når en eDiscovery-administrator søger efter SharePoint websteder og OneDrive konti, kan vedkommende dog kun søge efter indhold i forskellige overholdelsesgrænser, hvis bureauerne befinder sig i det samme område eller på den samme geografiske placering. **Bemærk:** Denne begrænsning for websteder gælder ikke i eDiscovery (Premium), fordi søgning efter indhold i SharePoint og OneDrive ikke er bundet af geografisk placering.
   
 **Fungerer filtre for søgetilladelser for ventepositioner for eDiscovery-sager, Microsoft 365 opbevaringspolitikker eller DLP?**
   

@@ -2,8 +2,8 @@
 title: Forespørg om indholdet i et korrektursæt
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du opretter og kører en forespørgsel i et korrektursæt for at organisere indhold for at få en mere effektiv korrektur i en Microsoft Purview eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: aad8cd7461c795f8ecba03edab76e81e8384430d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 44f4b9d6aed92a6593f5c6c70322656e4c770c3d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991924"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090911"
 ---
 # <a name="query-and-filter-content-in-a-review-set"></a>Forespørg om og filtrer indhold i et valideringssæt
 

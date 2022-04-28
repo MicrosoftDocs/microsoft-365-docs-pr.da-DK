@@ -2,8 +2,8 @@
 title: Dokumentmetadatafelter i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Denne artikel definerer metadatafelterne for dokumenter i et gennemsynssæt i en sag i Microsoft Purview eDiscovery (Premium) i Microsoft 365.
-ms.openlocfilehash: 4e1efbf48cf4313682095b69eb97f52d00b9ceaf
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d0e188d227e3000ba6811204c74cf746b00bc0e2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001098"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097772"
 ---
 # <a name="document-metadata-fields-in-ediscovery-premium"></a>Dokumentmetadatafelter i eDiscovery (Premium)
 
@@ -188,4 +188,4 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |||||
 
 > [!NOTE]
-> Du kan finde flere oplysninger om egenskaber, der kan søges i, når du søger efter Office 365 indholdsplaceringer, når du indsamler data for en eDiscovery (Premium)-sag, under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
+> Du kan finde flere oplysninger om egenskaber, der kan søges i, når du søger efter Office 365 indholdsplaceringer, når du indsamler data for en eDiscovery-sag (Premium), under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).

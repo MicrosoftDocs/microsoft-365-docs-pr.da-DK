@@ -2,8 +2,8 @@
 title: Undersøger delvist indekserede elementer i eDiscovery
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -18,12 +18,12 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du administrerer delvist indekserede elementer (også kaldet ikke-indekserede elementer) fra Exchange, SharePoint og OneDrive for Business i din organisation.
-ms.openlocfilehash: 0cab31f56576cac9cbe7b51ea2cdceb49aff6db9
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 03d68a02765a85066e41ba2b4dee54441d971190
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993112"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077929"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>Undersøger delvist indekserede elementer i eDiscovery
 
@@ -121,7 +121,7 @@ Fejlfelter beskriver, hvilke felter der påvirkes af den behandlingsfejl, der er
 
 I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger efter alle elementer i alle Exchange postkasser og derefter genererer en rapport om organisationens forhold mellem delvist indekserede mailelementer (efter antal og størrelse) og viser antallet af elementer (og deres filtype) for hver indekseringsfejl, der opstår. Brug beskrivelser af fejlkoder i det forrige afsnit til at identificere indekseringsfejlen.
   
-1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `PartiallyIndexedItems.ps1`.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `PartiallyIndexedItems.ps1`f.eks. .
 
    ```powershell
      write-host "**************************************************"
@@ -166,7 +166,7 @@ I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger e
      }
    ```
 
-2. [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/exchange-online-powershell).
+2. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/exchange-online-powershell).
 
 3. I Security & Compliance Center PowerShell skal du gå til den mappe, hvor du gemte scriptet i trin 1, og derefter køre scriptet. f.eks.:
 

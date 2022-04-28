@@ -2,8 +2,8 @@
 title: Tjenestesikkerhed i Security & Compliance Center
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 6/29/2018
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: 47e8b964-4b09-44f7-a2d7-b8a06e8e389c
 description: Download tredjepartsrevisioner, find ud af, hvordan Microsoft holder kundedata sikre, og ved, hvordan du kan overholde ISO, HIPAA, FINRA og FedRAMP, når du bruger Office 365.
-ms.openlocfilehash: fb9fcf5f7a5b954c26f93fa55ed5135b5a31aa9e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 8247eee98d9c039e05aca2b621881f56b59c2ee5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991836"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077842"
 ---
 # <a name="service-assurance-in-the-security--compliance-center"></a>Tjenestesikkerhed i Security & Compliance Center
 
@@ -43,7 +43,7 @@ Du kan også finde ud af, hvordan Office 365 kan hjælpe kunderne med at overhol
     
 - FedRAMP (Federal Risk and Authorization Management Program)
     
-## <a name="who-can-access-office-365-service-assurance-and-how"></a>Hvem kan få adgang til Office 365 Service Assurance, og hvordan?
+## <a name="who-can-access-office-365-service-assurance-and-how"></a>Who kan få adgang til Office 365 Service Assurance, og hvordan?
 
  **Nye kunder og kunder, der evaluerer Microsoft onlinetjenester**, kan få adgang til Service Assurance, som er inkluderet i Office 365 Enterprise E3- og E5-planer (både prøveabonnementer og betalte abonnementer). Hvis du ikke har en af disse planer og vil prøve Service Assurance, kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
   
@@ -54,7 +54,7 @@ Du kan også finde ud af, hvordan Office 365 kan hjælpe kunderne med at overhol
 
 Når du får adgang til Service Assurance første gang, er det første trin at konfigurere dine brancheindstillinger og internationale indstillinger. Du kan når som helst ændre disse indstillinger. Konfiguration af disse indstillinger gør det muligt for Service assurance at give dig det indhold, der er mest relevant for din organisation. Sådan konfigurerer du dine branche- og områdeindstillinger:
   
-1. Når du har fået adgang til Service assurance, skal du vælge **Indstillinger** , hvorefter siden Område- og brancheindstillinger vises som vist på følgende skærmbillede. 
+1. Når du har fået adgang til Service assurance, skal du vælge **Indstillinger** og siden Område- og brancheindstillinger vises som vist på følgende skærmbillede. 
     
     ![Viser siden Indstillinger for Beskyttelsescenter.](../media/101716e8-9c0a-4839-a2c0-f6aacf64eb9d.png)
   

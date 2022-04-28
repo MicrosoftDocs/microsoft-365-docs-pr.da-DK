@@ -2,8 +2,8 @@
 title: Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
 description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 70ec2481e8fa352be47544cd2fe6a772c2fbb325
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: c652cd7d553faa5a7f85c59127e4aa2acfd7df4b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000878"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097904"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 
@@ -55,7 +55,7 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 - Scriptet føjer listen over brugere til en ny venteposition, der er knyttet til en eksisterende sag. Sørg for, at det tilfælde, du vil knytte ventepositionen til, oprettes, før du kører scriptet.
 
-- Scriptet i denne artikel understøtter moderne godkendelse, når der oprettes forbindelse til Security & Compliance Center PowerShell og SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC-organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance Center PowerShell. Du kan få flere oplysninger i eksemplerne i [Opret forbindelse til sikkerhed & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Scriptet i denne artikel understøtter moderne godkendelse, når der oprettes forbindelse til Security & Compliance Center PowerShell og SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance Center PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
 - Scriptet afbryder automatisk forbindelsen til Security & Compliance Center PowerShell og SharePoint Online Management Shell.
 
@@ -67,13 +67,13 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 Det første trin er at installere SharePoint Online Management Shell, hvis den ikke allerede er installeret på din lokale computer. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
   
-Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
+Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell miljø](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
 
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en venteposition, der er knyttet til en eDiscovery-sag, og tilføjer postkasserne og OneDrive for Business websteder på en liste over brugere i venteposition. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
+Scriptet i trin 3 opretter en venteposition, der er knyttet til en eDiscovery-sag, og tilføjer postkasserne og OneDrive for Business websteder på en liste over brugere i venteposition. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få vist en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
   
-Her er en PowerShell-kommando (som du kører ved hjælp af Ekstern PowerShell, der er forbundet med din Exchange Online-organisation) for at få en liste over mailadresser til alle brugere i din organisation og gemme den i en tekstfil med navnet HoldUsers.txt.
+Her er en PowerShell-kommando (som du kører ved hjælp af Ekstern PowerShell med forbindelse til din Exchange Online organisation) for at få en liste over mailadresser til alle brugere i din organisation og gemme den i en tekstfil med navnet HoldUsers.txt.
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > HoldUsers.txt
@@ -109,7 +109,7 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
 
 Når du har indsamlet de oplysninger, som scriptet beder dig om, er det sidste trin at køre scriptet for at oprette den nye venteposition og føje brugere til den.
   
-1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af `.ps1`. For eksempel `AddUsersToHold.ps1`.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af suffikset filnavn til `.ps1`. For eksempel `AddUsersToHold.ps1`.
 
 ```powershell
 #script begin

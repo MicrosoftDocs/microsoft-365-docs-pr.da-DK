@@ -2,8 +2,8 @@
 title: Importér tilsynsførende til en eDiscovery-sag (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug masseimportværktøjet til hurtigt at føje flere tilsynsførende og deres tilknyttede datakilder til en sag i Microsoft Purview eDiscovery (Premium).
-ms.openlocfilehash: a6ad413c65b3b8afaa0cbf10df1a595730914405
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a9274ebd01a034af82eec510b4e16534150e2216
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994511"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097794"
 ---
 # <a name="import-custodians-to-an-ediscovery-premium-case"></a>Importér tilsynsførende til en eDiscovery-sag (Premium)
 
@@ -34,7 +34,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 - Du kan tilknytte op til 500 datakilder for hver tilsynsførende.  
 
-- Du kan kun importere tilsynsførende, der er en del af din organisations Azure Active Directory.
+- Du kan kun importere tilsynsførende, der er en del af organisationens Azure Active Directory.
 
 - Hver tilsynsførende skal have en entydig mailadresse.
 
@@ -42,7 +42,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 ## <a name="import-custodians"></a>Importér tilsynsførende
 
-1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder** .
+1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder**.
 
 2. Klik på **Tilføj** **datakildeImportér** >  tilsynsførende.
 
@@ -54,7 +54,7 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 5. Når du har forberedt CSV-filen med oplysninger om tilsynsførende, skal du gå tilbage til fanen **Datakilder** og klikke på **Tilføj** **datakildeImportér** >  tilsynsførende igen.
 
-6. På siden med guiden **Upload CSV-fil** skal du klikke på **Overfør csv-fil** og derefter overføre den CSV-fil, der indeholder oplysningerne om vogteren.
+6. Klik på **Upload CSV-fil** på siden **med guiden Upload CSV-fil**, og upload derefter den CSV-fil, der indeholder oplysningerne om vogteren.
 
    Når du har uploadet CSV-filen, validerer importguiden CSV-filen. Hvis der findes valideringsfejl, viser guiden et fejlbanner med et link til at få vist fejlene.
 

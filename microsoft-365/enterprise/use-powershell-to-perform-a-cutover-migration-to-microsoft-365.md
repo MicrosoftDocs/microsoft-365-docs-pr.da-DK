@@ -1,8 +1,8 @@
 ---
-title: Brug PowerShell til at udføre en migrering til Microsoft 365
+title: Brug PowerShell til at udføre en komplet migrering til Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -16,60 +16,60 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
-description: Få mere at vide om, hvordan du bruger PowerShell til at flytte indholdet fra et kildemailsystem på én gang ved at udføre en Microsoft 365.
-ms.openlocfilehash: 65f48d95a73742a0ba4e5225361ecfb0fbf66c40
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Få mere at vide om, hvordan du bruger PowerShell til at flytte indholdet fra et kildemailsystem på én gang ved at udføre en komplet migrering til Microsoft 365.
+ms.openlocfilehash: ede2dfc25897012c5cb7e5469abea49e6db4292e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63590314"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078685"
 ---
-# <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en migrering til Microsoft 365
+# <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en komplet migrering til Microsoft 365
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Du kan overføre indholdet af brugerpostkasser fra et kildemailsystem til at Microsoft 365 på én gang ved hjælp af en enkelt migrering. Denne artikel gennemgår opgaverne i forbindelse med en migrering af mail ved hjælp Exchange Online PowerShell.
+Du kan overføre indholdet af brugerpostkasser fra et kildemailsystem til Microsoft 365 på én gang ved hjælp af en komplet migrering. I denne artikel gennemgås opgaverne for en migrering af mail ved hjælp af Exchange Online PowerShell.
 
-Ved at gennemgå emnet Hvad du bør vide om en komplet mailoverførsel til [Microsoft 365](/Exchange/mailbox-migration/what-to-know-about-a-cutover-migration), kan du få et overblik over overførselsprocessen. Når du er fortrolig med indholdet af den pågældende artikel, skal du bruge denne for at starte overførslen af postkasser fra ét mailsystem til et andet.
+Ved at gennemgå emnet [Hvad du har brug for at vide om en komplet mailoverførsel for at Microsoft 365](/Exchange/mailbox-migration/what-to-know-about-a-cutover-migration), kan du få et overblik over migreringsprocessen. Når du er fortrolig med indholdet af den pågældende artikel, kan du bruge denne til at begynde at overføre postkasser fra ét mailsystem til et andet.
 
 > [!NOTE]
-> Du kan også bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Administration Exchange at</a> udføre en fuld migrering. Se [Udfør en migrering af mails for at Microsoft 365](/Exchange/mailbox-migration/cutover-migration-to-office-365).
+> Du kan også bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til at udføre en komplet migrering. Se [Udfør en komplet migrering af mail for at Microsoft 365](/Exchange/mailbox-migration/cutover-migration-to-office-365).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-Anslået tidspunkt for at fuldføre denne opgave: 2-5 minutter til at oprette en overførselsbatch. Når overførselsbatchen startes, varierer varigheden af overførslen afhængigt af antallet af postkasser i batchen, størrelsen på hver postkasse og din tilgængelige netværkskapacitet. Du kan finde oplysninger om andre faktorer, der påvirker, hvor lang tid det tager at overføre postkasser Microsoft 365, under [Ydeevne for overførsel](/Exchange/mailbox-migration/office-365-migration-best-practices).
+Anslået tid til at fuldføre denne opgave: 2-5 minutter for at oprette et overførselsbatch. Når overførselsbatchen er startet, varierer varigheden af overførslen afhængigt af antallet af postkasser i batchen, størrelsen på hver postkasse og din tilgængelige netværkskapacitet. Du kan få oplysninger om andre faktorer, der påvirker, hvor lang tid det tager at overføre postkasser til Microsoft 365, under [Overførselsydeevne](/Exchange/mailbox-migration/office-365-migration-best-practices).
 
-Du skal have tildelt tilladelser, før du kan udføre proceduren eller procedurerne. Hvis du vil se, hvilke tilladelser du skal bruge, skal du se posten "Overførsel" i en tabel [under emnet Modtagertilladelser](/exchange/recipients-permissions-exchange-2013-help) .
+Du skal have tildelt tilladelser, før du kan udføre denne procedure eller disse procedurer. Hvis du vil se, hvilke tilladelser du har brug for, skal du se posten "Overførsel" i en tabel i emnet [Modtageres tilladelser](/exchange/recipients-permissions-exchange-2013-help) .
 
-For at bruge Exchange Online PowerShell-cmdlet'er skal du logge på og importere cmdlet'er til din lokale Windows PowerShell session. Se [Forbind at Exchange Online bruge Remote PowerShell for at](/powershell/exchange/connect-to-exchange-online-powershell) få en vejledning.
+Hvis du vil bruge Exchange Online PowerShell-cmdlet'er, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell session. Du kan finde en vejledning [under Forbind til Exchange Online ved hjælp af fjern-PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-Du kan se en komplet liste over overførselskommandoer [under Flyt- og overførsels-cmdlet'er](/powershell/exchange/).
+Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 
 ## <a name="migration-steps"></a>Overførselstrin
 
-### <a name="step-1-prepare-for-a-cutover-migration"></a>Trin 1: Forberede en migrering
+### <a name="step-1-prepare-for-a-cutover-migration"></a>Trin 1: Forbered en komplet migrering
 <a name="BK_Step1"> </a>
 
-- **Tilføj din lokale Exchange som et accepteret domæne for din Microsoft 365 organisation.** Overførselstjenesten bruger SMTP-adressen på dine lokale postkasser til at oprette bruger-id og mailadresse til Microsoft Online Services til de nye Microsoft 365 postkasser. Overførslen mislykkes, hvis Exchange domæne ikke er et accepteret domæne eller dit Microsoft 365 domæne. Du kan få mere at vide [under Bekræfte dit domæne](../admin/setup/add-domain.md).
+- **Tilføj din lokale Exchange organisation som et accepteret domæne for din Microsoft 365 organisation.** Overførselstjenesten bruger SMTP-adressen på dine lokale postkasser til at oprette microsoft Online Services-bruger-id'et og mailadressen for de nye Microsoft 365 postkasser. Overførslen mislykkes, hvis dit Exchange domæne ikke er et accepteret domæne eller det primære domæne for din Microsoft 365 organisation. Du kan finde flere oplysninger under [Kontrollér dit domæne](../admin/setup/add-domain.md).
 
-- **Konfigurer Outlook hvor som helst på din lokale Exchange server.** Tjenesten til overførsel af mail bruger RPC over HTTP eller Outlook et vilkårligt sted til at oprette forbindelse til din lokale Exchange server. Du kan finde oplysninger om, hvordan du konfigurerer Outlook Anywhere til Exchange 2010, Exchange 2007 og Exchange 2003, i følgende:
+- **Konfigurer Outlook Hvor som helst på Exchange-serveren i det lokale miljø.** Mailoverførselstjenesten bruger RPC via HTTP eller Outlook Anywhere til at oprette forbindelse til din lokale Exchange-server. Du kan finde oplysninger om, hvordan du konfigurerer Outlook Anywhere for Exchange 2010, Exchange 2007 og Exchange 2003, på følgende:
 
   - [Exchange 2010: Aktivér Outlook overalt](/previous-versions/office/exchange-server-2010/bb123542(v=exchg.141))
 
-  - [Exchange 2007: Sådan aktiveres Outlook Anywhere](/previous-versions/office/exchange-server-2007/bb123889(v=exchg.80))
+  - [Exchange 2007: Sådan aktiverer du Outlook overalt](/previous-versions/office/exchange-server-2007/bb123889(v=exchg.80))
 
-  - [Exchange 2003: Installationsscenarier for RPC over HTTP](/previous-versions/tn-archive/bb124876(v=exchg.65))
+  - [Exchange 2003: Installationsscenarier for RPC via HTTP](/previous-versions/tn-archive/bb124876(v=exchg.65))
 
-  - [Sådan konfigurerer du Outlook hvor som helst med Exchange 2003](/previous-versions/office/exchange-server-2007/aa996922(v=exchg.80))
+  - [Sådan konfigurerer du Outlook anywhere med Exchange 2003](/previous-versions/office/exchange-server-2007/aa996922(v=exchg.80))
 
     > [!IMPORTANT]
-    > Din Outlook hvor som helst skal konfigureres med et certifikat udstedt af et pålideligt nøglecenter. Det kan ikke konfigureres med et selv signeret certifikat. Du kan få mere at vide [under Sådan konfigureres SSL til Outlook hvor som helst](/previous-versions/office/exchange-server-2007/aa995982(v=exchg.80)).
+    > Din Outlook Anywhere-konfiguration skal konfigureres med et certifikat, der er udstedt af et nøglecenter, der er tillid til. Den kan ikke konfigureres med et selvsigneret certifikat. Du kan finde flere oplysninger under [Sådan konfigurerer du SSL til Outlook hvor som helst](/previous-versions/office/exchange-server-2007/aa995982(v=exchg.80)).
 
-- **Kontrollér, at du kan oprette forbindelse til din Exchange ved hjælp af Outlook Anywhere.** Prøv en af disse metoder til at teste forbindelsesindstillingerne:
+- **Kontrollér, at du kan oprette forbindelse til din Exchange organisation ved hjælp af Outlook Anywhere.** Prøv en af disse metoder for at teste dine forbindelsesindstillinger:
 
   - Brug Microsoft Outlook uden for virksomhedens netværk til at oprette forbindelse til din lokale Exchange postkasse.
 
-  - Brug Microsoft [Exchange Remote Connectivity Analyzer til](https://www.testexchangeconnectivity.com/) at teste dine forbindelsesindstillinger. Brug Outlook overalt (RPC over HTTP) eller Outlook Autodiscover-test.
+  - Brug Microsoft [Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) til at teste dine forbindelsesindstillinger. Brug Outlook Anywhere (RPC via HTTP) eller Outlook Autodiscover-test.
 
   - Kør følgende kommandoer i Exchange Online PowerShell.
 
@@ -81,30 +81,30 @@ Du kan se en komplet liste over overførselskommandoer [under Flyt- og overførs
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
-- **Tildele en lokal brugerkonto de nødvendige tilladelser til at få adgang til postkasser i din Exchange organisation.** Den lokale brugerkonto, du bruger til at oprette forbindelse til din lokale Exchange-organisation (også kaldet overførselsadministratoren), skal have de nødvendige tilladelser til at få adgang til de lokale postkasser, du vil overføre til Microsoft 365. Denne brugerkonto bruges til at oprette et overførselsslutpunkt for din lokale organisation.
+- **Tildel en brugerkonto i det lokale miljø de nødvendige tilladelser til at få adgang til postkasser i din Exchange organisation.** Den brugerkonto i det lokale miljø, som du bruger til at oprette forbindelse til din lokale Exchange organisation (også kaldet overførselsadministratoren), skal have de nødvendige tilladelser til at få adgang til de lokale postkasser, du vil overføre til Microsoft 365. Denne brugerkonto bruges til at oprette et overførselsslutpunkt til din organisation i det lokale miljø.
 
-    Følgende liste viser de administrative rettigheder, der kræves for at overføre postkasser ved hjælp af en komplet migrering. Der er tre mulige indstillinger.
+    På følgende liste vises de administrative rettigheder, der kræves for at overføre postkasser ved hjælp af en komplet overførsel. Der er tre mulige muligheder.
 
-  - Overførselsadministratoren skal være medlem af **gruppen Domæneadministratorer** i Active Directory i den lokale organisation.
-
-    Eller
-
-  - Overførselsadministratoren skal **tildeles FullAccess-tilladelsen** for hver lokal postkasse.
+  - Overførselsadministratoren skal være medlem af gruppen **Domæneadministratorer** i Active Directory i organisationen i det lokale miljø.
 
     Eller
 
-  - Overførselsadministratoren skal have tildelt **tilladelsen Receive As** i den lokale postkassedatabase, der lagrer brugerpostkasserne.
+  - Overførselsadministratoren skal have tildelt **FullAccess-tilladelsen** for hver postkasse i det lokale miljø.
 
-- **Deaktiver Unified Messaging.** Hvis de lokale postkasser, du overfører, er aktiveret til UM (Unified Messaging), skal du deaktivere UM i postkasserne, før du overfører dem. Du kan derefter aktivere UM i postkasserne, når overførslen er fuldført.
+    Eller
 
-- **Sikkerhedsgrupper og stedfortrædere** Tjenesten til overførsel af mail kan ikke registrere, om lokale Active Directory-grupper er sikkerhedsgrupper eller ej, så den kan ikke klargøre eventuelle overførte grupper som sikkerhedsgrupper i Microsoft 365. Hvis du vil have sikkerhedsgrupper i din Microsoft 365-lejer, skal du først klargøre en tom mailaktiveret sikkerhedsgruppe i din Microsoft 365-lejer, før du starter den uoverensgjorte migrering. Desuden flytter denne overførselsmetode kun postkasser, mailbrugere, mailkontakter og mailaktiverede grupper. Hvis et andet Active Directory-objekt, f.eks. en bruger, der ikke er overført til Microsoft 365, tildeles som leder eller stedfortræder for et objekt, der overføres, skal de fjernes fra objektet, før du overfører.
+  - Overførselsadministratoren skal have tildelt tilladelsen **Modtag som** i den lokale postkassedatabase, der lagrer brugerpostkasserne.
 
-### <a name="step-2-create-a-migration-endpoint"></a>Trin 2: Oprette et overførselsslutpunkt
+- **Deaktiver Unified Messaging.** Hvis de postkasser i det lokale miljø, du overfører, er aktiveret for Unified Messaging (UM), skal du deaktivere UM i postkasserne, før du overfører dem. Du kan derefter aktivere UM på postkasserne, når overførslen er fuldført.
+
+- **Sikkerhedsgrupper og stedfortrædere** Mailoverførselstjenesten kan ikke registrere, om Active Directory i det lokale miljø grupper er sikkerhedsgrupper eller ej, så den kan ikke klargøre migrerede grupper som sikkerhedsgrupper i Microsoft 365. Hvis du vil have sikkerhedsgrupper i din Microsoft 365 lejer, skal du først klargøre en tom mailaktiveret sikkerhedsgruppe i din Microsoft 365 lejer, før du starter komplet migrering. Denne overførselsmetode flytter desuden kun postkasser, mailbrugere, mailkontakter og mailaktiverede grupper. Hvis et andet Active Directory-objekt, f.eks. en bruger, der ikke er overført til Microsoft 365, tildeles som leder eller stedfortræder til et objekt, der migreres, skal de fjernes fra objektet, før du overfører.
+
+### <a name="step-2-create-a-migration-endpoint"></a>Trin 2: Opret et overførselsslutpunkt
 <a name="BK_Step2"> </a>
 
-For at overføre mails korrekt skal Microsoft 365 oprette forbindelse til og kommunikere med kildemailsystemet. For at gøre dette Microsoft 365 et overførselsslutpunkt. Hvis du vil oprette Outlook hvor som helst overførselsslutpunkt til en uoverenssluttet migrering, skal [du først oprette forbindelse Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell).
+Hvis du vil overføre mails, skal Microsoft 365 oprette forbindelse og kommunikere med kildemailsystemet. Det gør Microsoft 365 ved at bruge et overførselsslutpunkt. Hvis du vil oprette et Outlook Anywhere-overførselsslutpunkt til komplet migrering, skal du først [oprette forbindelse til Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell).
 
-Du kan se en komplet liste over overførselskommandoer [under Flyt- og overførsels-cmdlet'er](/powershell/exchange/).
+Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 
 Kør følgende kommandoer i Exchange Online PowerShell:
 
@@ -112,7 +112,7 @@ Kør følgende kommandoer i Exchange Online PowerShell:
 $Credentials = Get-Credential
 ```
 
-I eksemplet bruges cmdlet'en [Test-MigrationServerAvailability](/powershell/module/exchange/test-migrationserveravailability) til at hente og teste forbindelsesindstillingerne til den lokale Exchange-server og bruger derefter disse forbindelsesindstillinger til at oprette overførselsslutpunktet "CutoverEndpoint".
+I eksemplet bruges cmdlet'en [Test-MigrationServerAvailability](/powershell/module/exchange/test-migrationserveravailability) til at hente og teste forbindelsesindstillingerne til Exchange-serveren i det lokale miljø og bruger derefter disse forbindelsesindstillinger til at oprette overførselsslutpunktet "CutoverEndpoint".
 
 ```powershell
 $TSMA = Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $credentials
@@ -123,73 +123,73 @@ New-MigrationEndpoint -ExchangeOutlookAnywhere -Name CutoverEndpoint -Connection
 ```
 
 > [!NOTE]
-> **New-MigrationEndpoint-cmdletten** kan bruges til at angive en database for tjenesten, der skal bruges, ved hjælp **af indstillingen -TargetDatabase**. Ellers tildeles en database tilfældigt fra Active Directory Federation Services (AD FS) 2.0-webstedet, hvor administrationspostkassen er placeret.
+> **New-MigrationEndpoint-cmdlet'en** kan bruges til at angive en database, som tjenesten skal bruge, ved hjælp af indstillingen **-TargetDatabase**. Ellers tildeles en database tilfældigt fra det Active Directory Federation Services (AD FS) 2.0-websted, hvor administrationspostkassen er placeret.
 
-#### <a name="verify-it-worked"></a>Bekræft, at det lykkedes
+#### <a name="verify-it-worked"></a>Kontrollér, at det virkede
 
-I Exchange Online PowerShell skal du køre følgende kommando for at få vist oplysninger om slutpunktet for "CutoverEndpoint"-overførslen:
+I Exchange Online PowerShell skal du køre følgende kommando for at få vist oplysninger om overførselsslutpunktet "CutoverEndpoint":
 
 ```powershell
 Get-MigrationEndpoint CutoverEndpoint | Format-List EndpointType,ExchangeServer,UseAutoDiscover,Max*
 
 ```
 
-### <a name="step-3-create-the-cutover-migration-batch"></a>Trin 3: Opret den klippede overførselsbatch
+### <a name="step-3-create-the-cutover-migration-batch"></a>Trin 3: Opret komplet overførselsbatch
 <a name="BK_Step3"> </a>
 
-Du kan bruge **New-MigrationBatch-cmdlet'en** i Exchange Online PowerShell til at oprette en overførselsbatch til en cutover-overførsel. Du kan oprette en overførselsbatch og starte den automatisk ved at medtage _autostartparameteren_ . Du kan også oprette overførselsbatchen og derefter starte den manuelt bagefter ved hjælp af **cmdlet'en Start-MigrationBatch** . I dette eksempel oprettes en overførselsbatch kaldet "CutoverBatch" og bruger overførselsslutpunktet, der blev oprettet i det forrige trin.
+Du kan bruge **New-MigrationBatch-cmdlet'en** i Exchange Online PowerShell til at oprette et overførselsbatch til en komplet migrering. Du kan oprette et overførselsbatch og starte det automatisk ved at inkludere parameteren _AutoStart_ . Du kan også oprette overførselsbatchen og derefter starte den manuelt bagefter ved hjælp af cmdlet'en **Start-MigrationBatch** . I dette eksempel oprettes et overførselsbatch med navnet "CutoverBatch" og bruger det overførselsslutpunkt, der blev oprettet i det forrige trin.
 
 ```powershell
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint CutoverEndpoint -AutoStart
 ```
 
-I dette eksempel oprettes også en overførselsbatch med navnet "CutoverBatch" og bruges til overførselsslutpunktet, der blev oprettet i det forrige trin. Da  _autostartparameteren_ ikke er inkluderet, skal overførselsbatchen startes manuelt på dashboardet for overførsel eller ved hjælp af cmdlet'en **Start-MigrationBatch** . Som nævnt tidligere kan der kun findes én enkelt overførselsbatch ad gangen.
+I dette eksempel oprettes der også et overførselsbatch med navnet "CutoverBatch" og bruger det overførselsslutpunkt, der blev oprettet i det forrige trin. Da parameteren  _AutoStart_ ikke er inkluderet, skal overførselsbatchen startes manuelt på overførselsdashboardet eller ved hjælp af **Start-MigrationBatch-cmdlet'en** . Som tidligere nævnt kan der kun findes én komplet overførselsbatch ad gangen.
 
 ```powershell
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint CutoverEndpoint
 ```
 
-#### <a name="verify-it-worked"></a>Bekræft, at det lykkedes
+#### <a name="verify-it-worked"></a>Kontrollér, at det virkede
 
-For at bekræfte, at du har oprettet en overførselsbatch til en fuldført overførsel, skal du køre følgende kommando i Exchange Online PowerShell for at få vist oplysninger om den nye overførselsbatch:
+Hvis du vil bekræfte, at du har oprettet et overførselsbatch til en komplet migrering, skal du køre følgende kommando i Exchange Online PowerShell for at få vist oplysninger om den nye overførselsbatch:
 
 ```powershell
 Get-MigrationBatch | Format-List
 ```
 
-### <a name="step-4-start-the-cutover-migration-batch"></a>Trin 4: Start den klippede overførselsbatch
+### <a name="step-4-start-the-cutover-migration-batch"></a>Trin 4: Start komplet overførselsbatch
 
-For at starte overførselsbatchen Exchange Online PowerShell skal du køre følgende kommando. Dette vil oprette en overførselsbatch med navnet "CutoverBatch".
+Kør følgende kommando for at starte overførselsbatchen i Exchange Online PowerShell. Dette opretter et overførselsbatch med navnet "CutoverBatch".
 
 ```powershell
 Start-MigrationBatch -Identity CutoverBatch
 ```
 
-#### <a name="verify-it-worked"></a>Bekræft, at det lykkedes
+#### <a name="verify-it-worked"></a>Kontrollér, at det virkede
 
-Hvis en overførselsbatch er startet korrekt, angives dens status på dashboardet til overførsel som Synkroniserer. For at bekræfte, at du har startet en overførselsbatch ved hjælp Exchange Online PowerShell, skal du køre følgende kommando:
+Hvis et overførselsbatch startes, angives dets status på overførselsdashboardet som Synkronisering. Kør følgende kommando for at bekræfte, at du har startet en overførselsbatch ved hjælp af Exchange Online PowerShell:
 
 ```powershell
 Get-MigrationBatch -Identity CutoverBatch |  Format-List Status
 ```
 
-### <a name="step-5-route-your-email-to-microsoft-365"></a>Trin 5: Omrute dine mails til Microsoft 365
+### <a name="step-5-route-your-email-to-microsoft-365"></a>Trin 5: Distribuer din mail til Microsoft 365
 
-Mailsystemer bruger en DNS-post, der kaldes en MX-post, til at finde ud af, hvor mails skal leveres. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu hvor overførslen af mail til Microsoft 365 er fuldført, er det tid til at få din MX-post til at pege Microsoft 365. Dette er med til at sikre, at mail leveres til Microsoft 365 postkasser. Ved at flytte MX-posten kan du også deaktivere dit gamle mailsystem, når du er klar.
+Mailsystemer bruger en DNS-post kaldet en MX-post til at finde ud af, hvor de skal levere mails. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu, hvor mailoverførslen til Microsoft 365 er fuldført, er det tid til at pege din MX-post på Microsoft 365. Dette hjælper med at sikre, at mail leveres til dine Microsoft 365 postkasser. Når du flytter MX-posten, kan du også slå dit gamle mailsystem fra, når du er klar.
 
-For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retningslinjer, får du også en generel vejledning til [MX-poster](https://support.office.microsoft.com/article/7b7b075d-79f9-4e37-8a9e-fb60c1d95166#bkmk_add_mx) .
+For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](https://support.office.microsoft.com/article/7b7b075d-79f9-4e37-8a9e-fb60c1d95166#bkmk_add_mx) .
 
-Det kan tage op til 72 timer, før dine kunders og partneres mailsystemer genkender den ændrede MX-post. Vent mindst 72 timer, før du går videre til den næste opgave: [Trin 6: Slet den klippede overførselsbatch](#step-6-delete-the-cutover-migration-batch).
+Det kan tage op til 72 timer, før dine kunders og partneres mailsystemer genkender den ændrede MX-post. Vent mindst 72 timer, før du fortsætter til næste opgave: [Trin 6: Slet overførselsbatchen til udskæring](#step-6-delete-the-cutover-migration-batch).
 
-### <a name="step-6-delete-the-cutover-migration-batch"></a>Trin 6: Slet den klippede overførselsbatch
+### <a name="step-6-delete-the-cutover-migration-batch"></a>Trin 6: Slet komplet overførselsbatch
 
-Når du har ændret MX-posten og bekræfter, at alle mails dirigeres til Microsoft 365-postkasser, skal du give brugerne besked om, at deres mail sendes Microsoft 365. Derefter kan du slette den klippede overførselsbatch. Kontrollér følgende, før du sletter overførselsbatchen.
+Når du har ændret MX-posten og bekræftet, at alle mails distribueres til Microsoft 365 postkasser, skal du give brugerne besked om, at deres mail vil Microsoft 365. Derefter kan du slette komplet overførselsbatch. Kontrollér følgende, før du sletter overførselsbatchen.
 
-- Alle brugere bruger Microsoft 365 postkasser. Når batchen slettes, kopieres de mails, der sendes til postkasser i det lokale Exchange Server, ikke til de tilsvarende Microsoft 365 postkasser.
+- Alle brugere bruger Microsoft 365 postkasser. Når batchen er slettet, kopieres mails, der sendes til postkasser i det lokale miljø, Exchange Server ikke til de tilsvarende Microsoft 365 postkasser.
 
-- Microsoft 365 postkasser blev synkroniseret mindst én gang, efter at mails begyndte at blive sendt direkte til dem. For at gøre dette skal du sørge for, at værdien i feltet Seneste synkroniseringstid for overførselsbatchen er af nyere dato end tidspunktet, hvor mail begyndte at blive dirigeret direkte til Microsoft 365 postkasser.
+- Microsoft 365 postkasser blev synkroniseret mindst én gang, efter mailen begyndte at blive sendt direkte til dem. Det gør du ved at sikre, at værdien i feltet Senest synkroniseret tid for overførselsbatchen er nyere, end da mailen begyndte at blive distribueret direkte til Microsoft 365 postkasser.
 
-Hvis du vil slette overførselsbatchen "CutoverBatch" Exchange Online PowerShell, skal du køre følgende kommando:
+Hvis du vil slette overførselsbatchen "CutoverBatch" i Exchange Online PowerShell, skal du køre følgende kommando:
 
 ```powershell
 Remove-MigrationBatch -Identity CutoverBatch
@@ -197,31 +197,31 @@ Remove-MigrationBatch -Identity CutoverBatch
 
 ### <a name="section-7-assign-user-licenses"></a>Afsnit 7: Tildel brugerlicenser
 
- **Aktivér Microsoft 365 brugerkonti for de overførte konti ved at tildele licenser.** Hvis du ikke tildeler en licens, deaktiveres postkassen, når prøveperioden udløber (efter 30 dage). Hvis du vil tildele en licens Microsoft 365 Administration, skal du [se Tildele eller fjerne tildeling af licenser](../admin/manage/assign-licenses-to-users.md).
+ **Aktivér Microsoft 365 brugerkonti for de migrerede konti ved at tildele licenser.** Hvis du ikke tildeler en licens, deaktiveres postkassen, når den udvidede periode udløber (30 dage). Hvis du vil tildele en licens i Microsoft 365 Administration, skal du se [Tildel eller fjern tildeling af licenser](../admin/manage/assign-licenses-to-users.md).
 
-### <a name="step-8-complete-post-migration-tasks"></a>Trin 8: Udføre opgaver efter overførslen
+### <a name="step-8-complete-post-migration-tasks"></a>Trin 8: Udfør opgaver efter overførsel
 
-- **Opret en Autodiscover DNS-post, så brugerne nemt kan få adgang til deres postkasser.** Når alle lokale postkasser er blevet overført til Microsoft 365, kan du konfigurere en Autodiscover DNS-post for din Microsoft 365-organisation, så brugerne nemt kan oprette forbindelse til deres nye Microsoft 365-postkasser med Outlook og mobilklienter. Denne nye Autodiscover DNS-post skal bruge det samme navneområde, som du bruger til din Microsoft 365 organisation. Hvis f.eks. dit skybaserede navneområde er cloud.contoso.com, er Autodiscover DNS-posten, du skal oprette, autodiscover.cloud.contoso.com.
+- **Opret en Autodiscover DNS-post, så brugerne nemt kan få adgang til deres postkasser.** Når alle postkasser i det lokale miljø er overført til Microsoft 365, kan du konfigurere en Autodiscover DNS-post for din Microsoft 365 organisation, så brugerne nemt kan oprette forbindelse til deres nye Microsoft 365 postkasser med Outlook- og mobilklienter. Denne nye Autodiscover DNS-post skal bruge det samme navneområde, som du bruger til din Microsoft 365 organisation. Hvis dit skybaserede navneområde f.eks. er cloud.contoso.com, er den Autodiscover DNS-post, du skal oprette, autodiscover.cloud.contoso.com.
 
-    Hvis du beholder din Exchange Server, skal du også sørge for, at Autodiscover DNS CNAME-post peger på Microsoft 365 i både intern og ekstern DNS efter overførslen, så Outlook-klienten opretter forbindelse til den korrekte postkasse.
+    Hvis du bevarer din Exchange Server, skal du også sørge for, at Autodiscover DNS CNAME-posten skal pege på Microsoft 365 i både intern og ekstern DNS efter migreringen, så den Outlook klient opretter forbindelse til den korrekte postkasse.
 
     > [!NOTE]
     >  I Exchange 2007, Exchange 2010 og Exchange 2013 skal du også angive `Set-ClientAccessServer AutodiscoverInternalConnectionURI` til `Null`.
 
-    Microsoft 365 anvender en CNAME-post til at implementere Autodiscover-tjenesten for Outlook og mobilklienter. Autodiscover CNAME-posten skal indeholde følgende oplysninger:
+    Microsoft 365 bruger en CNAME-post til at implementere Autodiscover-tjenesten for Outlook- og mobilklienter. CNAME-posten autodiscover skal indeholde følgende oplysninger:
 
-  - **Alias:** autodiscover
+  - **Alias:** automatisk søgning
 
-  - **Destination:** autodiscover.outlook.com
+  - **Mål:** autodiscover.outlook.com
 
-    Få mere at vide under [Tilføj DNS-poster for at forbinde dit domæne](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
+    Du kan få flere oplysninger under [Tilføj DNS-poster for at oprette forbindelse til dit domæne](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
 
-- **Udrævn lokale servere Exchange serverne.** Når du har bekræftet, at alle mails dirigeres direkte til Microsoft 365-postkasserne, og du ikke længere har brug for at bevare din lokale mailorganisation eller ikke har planer om implementering af en løsning med enkelt logon (SSO), kan du fjerne Exchange fra dine servere og fjerne din lokale Exchange-organisation.
+- **Demonter lokale Exchange servere.** Når du har bekræftet, at alle mails distribueres direkte til de Microsoft 365 postkasser, og du ikke længere behøver at vedligeholde din lokale mailorganisation eller ikke har planer om at implementere en SSO-løsning (Single Sign-on), kan du fjerne Exchange fra dine servere og fjerne din lokale Exchange organisation.
 
     Brug nedenstående links til at få flere oplysninger:
 
-  - [Ændre eller fjerne Exchange 2010](/previous-versions/office/exchange-server-2010/ee332361(v=exchg.141))
+  - [Rediger eller fjern Exchange 2010](/previous-versions/office/exchange-server-2010/ee332361(v=exchg.141))
 
-  - [Sådan fjernes en Exchange 2007-organisation](/previous-versions/office/exchange-server-2007/aa998313(v=exchg.80))
+  - [Sådan fjerner du en Exchange 2007-organisation](/previous-versions/office/exchange-server-2007/aa998313(v=exchg.80))
 
   - [Sådan fjernes Exchange Server 2003](/previous-versions/tn-archive/bb125110(v=exchg.65))

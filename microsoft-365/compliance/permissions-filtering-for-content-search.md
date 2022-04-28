@@ -2,8 +2,8 @@
 title: Konfigurer filtrering af tilladelser for eDiscovery
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: 1adffc35-38e5-4f7d-8495-8e0e8721f377
 description: Brug filtrering af søgetilladelser til kun at lade eDiscovery-ledere søge i et undersæt af postkasser og websteder i din organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 20a13b99e7ec851669aaab483a049bdea95973bd
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ba8cfaaec45ceefff89b17b561a5e80bebbdade6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994078"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098796"
 ---
 # <a name="configure-permissions-filtering-for-ediscovery"></a>Konfigurer filtrering af tilladelser for eDiscovery
 
@@ -33,7 +33,7 @@ ms.locfileid: "64994078"
 
 Du kan bruge filtrering af søgetilladelser til kun at lade en eDiscovery-leder søge i et undersæt af postkasser og websteder i din organisation. Du kan også bruge filtrering af tilladelser til at lade den samme eDiscovery-administrator søge efter postkasse eller webstedsindhold, der opfylder et bestemt søgekriterium. Du kan f.eks. lade en eDiscovery-leder søge i postkasser for brugere på en bestemt placering eller afdeling. Det gør du ved at oprette et filter, der bruger et understøttet modtagerfilter til at begrænse, hvilke postkasser en bestemt bruger eller gruppe af brugere kan søge i. Du kan også oprette et filter, der angiver, hvilket postkasseindhold en bruger kan søge efter. Dette gøres ved at oprette et filter, der bruger en meddelelsesegenskab, der kan søges i. På samme måde kan du lade en eDiscovery-leder søge efter bestemte SharePoint websteder i din organisation. Det gør du ved at oprette et filter, der begrænser, hvilket websted der kan søges på. Du kan også oprette et filter, der angiver, hvilket webstedsindhold der kan søges i. Dette gøres ved at oprette et filter, der bruger en webstedsegenskab, der kan søges i.
 
-Der anvendes filtre for søgetilladelser, når du søger efter indhold ved hjælp af Indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen. Når der anvendes et filter for søgetilladelser for en bestemt bruger, kan den pågældende bruger udføre følgende søgerelaterede handlinger:
+Der anvendes filtre for søgetilladelser, når du søger efter indhold ved hjælp af indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen. Når der anvendes et filter for søgetilladelser for en bestemt bruger, kan den pågældende bruger udføre følgende søgerelaterede handlinger:
 
 - Søg efter indhold
 
@@ -59,7 +59,7 @@ Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed f
 
 - Hvis du vil køre cmdlet'erne til overholdelse af sikkerhed, skal du være medlem af rollegruppen Organisationsadministration på overholdelsesportalen. Du kan få flere oplysninger [under Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).
 
-- Du skal oprette forbindelse til både Exchange Online og Security & Compliance Center PowerShell for at bruge cmdlet'erne til overholdelse af sikkerhed. Dette er nødvendigt, fordi disse cmdlet'er kræver adgang til egenskaberne for postkassen, og derfor skal du oprette forbindelse til Exchange Online PowerShell. Se trinnene i næste afsnit.
+- Du skal oprette forbindelse til både Exchange Online og Security & Compliance Center PowerShell for at bruge cmdlet'erne til overholdelse af sikkerhed. Dette er nødvendigt, fordi disse cmdlet'er kræver adgang til postkasseegenskaber, og derfor skal du oprette forbindelse til Exchange Online PowerShell. Se trinnene i næste afsnit.
 
 - Se afsnittet [Flere oplysninger](#more-information) for at få flere oplysninger om filtre for søgetilladelser.
 
@@ -69,11 +69,11 @@ Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed f
 
 - Der er ingen grænse for antallet af filtre for søgetilladelser, der kan oprettes i en organisation. En søgeforespørgsel kan dog højst have 100 betingelser. I dette tilfælde defineres en betingelse som noget, der er forbundet til forespørgslen af en boolesk operator (f.eks **. AND**, **OR** og **NEAR**). Grænsen for antallet af betingelser omfatter selve søgeforespørgslen plus alle filtre for søgetilladelser, der anvendes på den bruger, der kører søgningen. Jo flere søgetilladelser du har (især hvis disse filtre anvendes på den samme bruger eller gruppe af brugere), jo større er chancen for at overskride det maksimale antal betingelser for en søgning. Hvis du vil forhindre din organisation i at nå betingelsesgrænsen, skal du holde antallet af søgetilladelsersfiltre i din organisation så få som muligt, så de opfylder dine forretningskrav. Du kan finde flere oplysninger under [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser](set-up-compliance-boundaries.md#frequently-asked-questions).
 
-## <a name="connect-to-exchange-online-and-security--compliance-center-powershell-in-a-single-session"></a>Opret forbindelse til Exchange Online and Security & Compliance Center PowerShell i en enkelt session
+## <a name="connect-to-exchange-online-and-security--compliance-center-powershell-in-a-single-session"></a>Forbind til Exchange Online og security & Compliance Center PowerShell i en enkelt session
 
-Før du kan køre scriptet i dette afsnit, skal du downloade og installere Exchange Online PowerShell V2-modulet. Du kan få flere oplysninger [i Modulet om Exchange Online PowerShell V2](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
+Før du kan køre scriptet i dette afsnit, skal du downloade og installere Exchange Online PowerShell V2-modulet. Du kan få flere oplysninger [under Om Exchange Online PowerShell V2-modulet](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af **.ps1**. Du kan f.eks. gemme den i en fil med navnet **ConnectEXO-SCC.ps1**.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af **.ps1**. Du kan f.eks. gemme den i en fil med navnet **ConnectEXO-SCC.ps1**.
 
     ```powershell
     Import-Module ExchangeOnlineManagement
@@ -83,19 +83,19 @@ Før du kan køre scriptet i dette afsnit, skal du downloade og installere Excha
     $Host.UI.RawUI.WindowTitle = $UserCredential.UserName + " (Exchange Online + Compliance Center)"
     ```
 
-2. Åbn Windows PowerShell på din lokale computer, gå til den mappe, hvor det script, du oprettede i det forrige trin, er placeret, og kør derefter scriptet. f.eks.:
+2. Åbn Windows PowerShell på din lokale computer, gå til den mappe, hvor det script, du oprettede i det forrige trin, er placeret, og kør derefter scriptet, f.eks.:
 
     ```powershell
     .\ConnectEXO-SCC.ps1
     ```
 
-Hvordan ved du, om det virkede? Når du har kørt scriptet, importeres cmdlet'er fra Exchange Online og Security & Compliance PowerShell til din lokale Windows PowerShell-session. Hvis du ikke modtager nogen fejl, har du oprettet forbindelse. En hurtig test er at køre Exchange Online and Security & Compliance Center PowerShell-cmdlet'er. Du kan f.eks. køre og **Get-Mailbox** og **Get-ComplianceSearch**.
+Hvordan ved du, om det virkede? Når du har kørt scriptet, importeres cmdlet'er fra Exchange Online og security & Compliance PowerShell til din lokale Windows PowerShell session. Hvis du ikke modtager nogen fejl, har du oprettet forbindelse. En hurtig test er at køre PowerShell-cmdlet'er Exchange Online & Compliance Center. Du kan f.eks. køre og **Get-Mailbox** og **Get-ComplianceSearch**.
 
 Hvis du vil foretage fejlfinding af PowerShell-forbindelsesfejl, skal du se:
 
-- [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
+- [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
 
-- [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
+- [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
 
 ## <a name="new-compliancesecurityfilter"></a>New-ComplianceSecurityFilter
 
@@ -208,7 +208,7 @@ New-ComplianceSecurityFilter -FilterName "Fourth Coffee Security Filter" -Users 
 > [!NOTE]
 > I det forrige eksempel skal der medtages et ekstra webstedsindholdsfilter (`SiteContent_Path -like 'https://contoso-my.sharepoint.com/personal'`), så medlemmer af rollegruppen kan søge efter dokumenter i OneDrive konti. Hvis dette filter ikke er inkluderet, tillader filteret kun, at medlemmer af rollegruppen søger efter dokumenter, der er placeret i `https://contoso.sharepoint.com/sites/FourthCoffee`.
 
-I dette eksempel kan medlemmer af rollegruppen eDiscovery Manager kun søge i postkasser og OneDrive konti for medlemmer af ottawa-brugerdistributionsgruppen. Den Get-DistributionGroup cmdlet i Exchange Online PowerShell bruges til at finde medlemmerne af Ottawa Users gruppen.
+I dette eksempel kan medlemmer af rollegruppen eDiscovery Manager kun søge i postkasser og OneDrive konti for medlemmer af ottawa-brugerdistributionsgruppen. Den Get-DistributionGroup cmdlet i Exchange Online PowerShell bruges til at finde medlemmerne af Ottawa Users-gruppen.
   
 ```powershell
 $DG = Get-DistributionGroup "Ottawa Users"

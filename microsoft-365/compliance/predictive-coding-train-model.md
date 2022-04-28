@@ -2,8 +2,8 @@
 title: Oplær en forudsigende kodemodel i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: jefwan
 manager: laurawi
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: ''
-ms.openlocfilehash: 3335e437a659eab984943adda31abdb344908c1c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 1f94f49f93310ea4b40d588c7c43ecce7ec535cc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997639"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091451"
 ---
 # <a name="train-a-predictive-coding-model-preview"></a>Oplær en forudsigende kodemodel (prøveversion)
 
@@ -27,7 +27,7 @@ ms.locfileid: "64997639"
 
 Når du har oprettet en forudsigende kodemodel i Microsoft Purview eDiscovery (Premium), er det næste trin at udføre den første oplæringsrunde for at oplære modellen i, hvad der er relevant og ikke-relevant indhold i dit anmeldelsessæt. Når du har fuldført den første træningsrunde, kan du udføre efterfølgende oplæringsrunder for at forbedre modellens evne til at forudsige relevant og ikke-relevant indhold.
 
-Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal [du se Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
+Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal du se [Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
 
 ## <a name="before-you-train-a-model"></a>Før du oplærer en model
 
@@ -35,7 +35,7 @@ Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal [du se Få 
 
 ## <a name="train-a-model-for-the-first-time"></a>Oplær en model første gang
 
-1. Åbn en eDiscovery(Premium)-sag på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt** .
+1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
 
 2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
 

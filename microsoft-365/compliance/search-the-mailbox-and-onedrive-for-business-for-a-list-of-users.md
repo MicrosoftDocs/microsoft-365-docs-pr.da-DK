@@ -2,8 +2,8 @@
 title: Brug indholdssøgning til en liste over brugere i postkassen & OneDrive for Business webstedet
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 1/3/2017
 audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
 description: Brug Indholdssøgning og scriptet i denne artikel til at søge i postkasserne og OneDrive for Business websteder efter en gruppe af brugere.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1bbfc26c2193c1bf31e081b8ded9e2e2baf56743
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a75296bd17a1f4b77c22298f6c9a294ec06bd182
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998810"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098444"
 ---
 # <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Brug indholdssøgning til at søge i postkassen og OneDrive for Business websted efter en liste over brugere
 
@@ -46,13 +46,13 @@ Security & Compliance Center PowerShell indeholder en række cmdlet'er, der give
 
 Det første trin er at installere SharePoint Online Management Shell. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
   
-Gå til [Konfigurer SharePoint Online Management Shell Windows PowerShell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
+Gå til [Konfigurer SharePoint Shell til onlineadministration Windows PowerShell miljø](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
   
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
+Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i Windows PowerShell for at få vist en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
   
-Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser til alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`. 
+Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser for alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`. 
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > Users.txt
@@ -77,7 +77,7 @@ Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. S
 
 **Sådan kører du scriptet:**
     
-1. Gem følgende tekst i en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af .ps1. f.eks. `SearchEXOOD4B.ps1`. Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
+1. Gem følgende tekst i en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af .ps1, `SearchEXOOD4B.ps1`f.eks. . Gem filen i den samme mappe, hvor du gemte listen over brugere i trin 2.
     
   ```powershell
   # This PowerShell script will prompt you for the following information:

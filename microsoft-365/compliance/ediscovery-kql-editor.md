@@ -2,8 +2,8 @@
 title: Brug KQL-editoren til at oprette søgeforespørgsler
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: nickrob
 manager: laurawi
 ms.date: ''
@@ -16,18 +16,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Du kan bruge KQL-editoren til at konfigurere eDiscovery-søgeforespørgsler i Indholdssøgning, eDiscovery (Standard) og eDiscovery (Premium).
-ms.openlocfilehash: cbd7adb02c926477fd81568ed950ebd16110c79b
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d97beb6cf8df95aa5112537c75caf4f548f7658d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993792"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098576"
 ---
 # <a name="use-the-kql-editor-to-build-search-queries"></a>Brug KQL-editoren til at oprette søgeforespørgsler
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Den nye KQL-forespørgselsoplevelse i Microsoft 365 søgning i eDiscovery-værktøjer giver feedback og vejledning, når du opretter søgeforespørgsler i Indholdssøgning, Microsoft Purview eDiscovery (Standard) og eDiscovery (Premium). Når du skriver forespørgsler i editoren, giver den automatisk fuldførelse af understøttede egenskaber og betingelser, der kan søges i, og indeholder lister over understøttede værdier for standardegenskaber og -betingelser. Hvis du f.eks. angiver mailegenskaben `kind` i din forespørgsel, viser editoren en liste over understøttede værdier, som du kan vælge. KQL-editoren viser også potentielle forespørgselsfejl i realtid, som du kan løse, før du kører søgningen. Det bedste af det hele er, at du kan indsætte komplekse forespørgsler direkte i editoren uden at skulle oprette forespørgsler manuelt ved hjælp af nøgleords- og betingelseskortene i standardbetingelsesgeneratoren.
+Den nye KQL-forespørgselsoplevelse i Microsoft 365 søgning i eDiscovery-værktøjer giver feedback og vejledning, når du opretter søgeforespørgsler i indholdssøgning, Microsoft Purview eDiscovery (Standard) og eDiscovery (Premium). Når du skriver forespørgsler i editoren, giver den automatisk fuldførelse af understøttede egenskaber og betingelser, der kan søges i, og indeholder lister over understøttede værdier for standardegenskaber og -betingelser. Hvis du f.eks. angiver mailegenskaben `kind` i din forespørgsel, viser editoren en liste over understøttede værdier, som du kan vælge. KQL-editoren viser også potentielle forespørgselsfejl i realtid, som du kan løse, før du kører søgningen. Det bedste af det hele er, at du kan indsætte komplekse forespørgsler direkte i editoren uden at skulle oprette forespørgsler manuelt ved hjælp af nøgleords- og betingelseskortene i standardbetingelsesgeneratoren.
   
 Her er de vigtigste fordele ved at bruge KQL-editoren:
 

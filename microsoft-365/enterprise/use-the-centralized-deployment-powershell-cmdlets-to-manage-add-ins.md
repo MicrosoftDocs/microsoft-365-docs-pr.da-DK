@@ -2,7 +2,7 @@
 title: Brug PowerShell-cmdlet'erne til central installation til at administrere tilføjelsesprogrammer
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 1/24/2020
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ ms.assetid: 94f4e86d-b8e5-42dd-b558-e6092f830ec9
 ms.custom:
 - seo-marvel-apr2020
 description: Brug PowerShell-cmdlet'erne til central installation for at hjælpe dig med at udrulle og administrere Office tilføjelsesprogrammer til din Microsoft 365 organisation.
-ms.openlocfilehash: 9f9a3e36c6e1c76d99d8abb7dc47f97a04541322
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 07e0f69cd95bc1553adea96242bf44eb9f1217f1
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824734"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078455"
 ---
 # <a name="use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins"></a>Brug PowerShell-cmdlet'erne til central installation til at administrere tilføjelsesprogrammer
 

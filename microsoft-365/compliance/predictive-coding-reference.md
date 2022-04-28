@@ -2,8 +2,8 @@
 title: Reference til forudsigende kodning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: jefwan
 manager: laurawi
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: ''
-ms.openlocfilehash: 2dd5b5ce984a131031101e6606b8e758864ece30
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: da8ea6f996735edb91b7191bbcf90df02e134428
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992848"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091473"
 ---
 # <a name="predictive-coding-reference-preview"></a>Reference til forudsigende kode (prøveversion)
 

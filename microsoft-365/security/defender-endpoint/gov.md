@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 32baee17e01aa4223124e21b7d20c219c0dc4b7f
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 51f9c373a68e34ffafa5c3763b8efe77fa2c6146
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841864"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098730"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender for Endpoint for US Government-kunder
 
@@ -78,7 +78,7 @@ Følgende er URL-adresserne på Microsoft Defender for Endpoint-portalen for US 
 |---|---|
 |GCC|<https://security.microsoft.com>|
 |GCC Høj|<https://security.microsoft.us>|
-|Dod|<https://security.microsoft.us>|
+|Dod|<https://security.apps.mil>|
 |
 > [!NOTE]
 > Hvis du er GCC kunde og er ved at flytte fra Microsoft Defender for Endpoint kommerciel til GCC, kan du bruge https://transition.security.microsoft.com til at få adgang til dine Microsoft Defender for Endpoint kommercielle data.

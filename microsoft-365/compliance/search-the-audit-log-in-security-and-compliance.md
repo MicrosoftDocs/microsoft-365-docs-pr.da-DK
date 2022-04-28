@@ -2,8 +2,8 @@
 title: Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ description: Brug Microsoft Purview-overholdelsesportalen til at søge i den sam
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 6c0f26bbda2ba28b98fc80b80ce4a520d9fb39c3
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: fa397ec1ce7dea253367dfb917166a9a43655896
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998898"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098466"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Søg i overvågningsloggen i Overholdelsescenter
 
@@ -98,7 +98,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
 - Når en overvåget aktivitet udføres af en bruger eller administrator, oprettes der en overvågningspost, som gemmes i overvågningsloggen for din organisation. Den tid, en overvågningspost opbevares (og kan søges i i overvågningsloggen), afhænger af dit Office 365 eller Microsoft 365 Enterprise abonnement, og specifikt den licenstype, der er tildelt til bestemte brugere.
 
-  - For brugere, der har fået tildelt en Office 365 E5- eller Microsoft 365 E5-licens (eller brugere med en Microsoft 365 E5-overholdelse eller Microsoft 365 E5 eDiscovery- og audittilføjelsesprogramlicens), overvåges poster for Azure Active Directory, Exchange og SharePoint  aktivitet bevares som standard i et år. Organisationer kan også oprette opbevaringspolitikker for overvågningslog for at bevare overvågningsposter for aktiviteter i andre tjenester i op til et år. Du kan få flere oplysninger under [Administrer opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md).
+  - For brugere, der har fået tildelt en Office 365 E5- eller Microsoft 365 E5-licens (eller brugere med en Microsoft 365 E5 Overholdelse- eller Microsoft 365 E5 licens til eDiscovery- og overvågningstilføjelsesprogram), overvåges poster for Azure Active Directory, Exchange og SharePoint aktiviteter bevares som standard i et år. Organisationer kan også oprette opbevaringspolitikker for overvågningslog for at bevare overvågningsposter for aktiviteter i andre tjenester i op til et år. Du kan få flere oplysninger under [Administrer opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md).
 
     > [!NOTE]
     > Hvis din organisation har deltaget i det private prøveversionsprogram for opbevaring af overvågningsposter i ét år, nulstilles opbevaringsvarigheden for de overvågningsposter, der blev genereret før udrulningsdatoen for generel tilgængelighed.
@@ -108,7 +108,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
     > [!NOTE]
     > Selvom overvågning af postkasser som standard er slået til, vil du måske bemærke, at overvågningshændelser for postkasser for nogle brugere ikke findes i søgninger i overvågningsloggen på overholdelsesportalen eller via API'en for Office 365 administrationsaktiviteter. Du kan få flere oplysninger under [Flere oplysninger om logføring af overvågning af postkasser](enable-mailbox-auditing.md#more-information).
 
-- Hvis du vil slå søgning i overvågningslog for din organisation fra, kan du køre følgende kommando i den eksterne PowerShell, der er forbundet med din Exchange Online-organisation:
+- Hvis du vil slå søgning i overvågningslog for din organisation fra, kan du køre følgende kommando i den eksterne PowerShell, der er forbundet med din Exchange Online organisation:
 
   ```powershell
   Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false
@@ -124,11 +124,11 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
 - Som tidligere nævnt er den underliggende cmdlet, der bruges til at søge i overvågningsloggen, en Exchange Online-cmdlet, som er **Search-UnifiedAuditLog**. Det betyder, at du kan bruge denne cmdlet til at søge i overvågningsloggen i stedet for at bruge søgeværktøjet på siden **Overvågning** på overholdelsesportalen. Du skal køre denne cmdlet i Exchange Online PowerShell. Du kan finde flere oplysninger under [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
 
-  Du kan finde oplysninger om eksport af de søgeresultater, der **returneres af Search-UnifiedAuditLog-cmdlet'en** til en CSV-fil, i afsnittet "Tip til eksport og visning af overvågningsloggen" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
+  Du kan finde oplysninger om eksport af de søgeresultater, der **returneres af Search-UnifiedAuditLog-cmdlet'en**, til en CSV-fil i afsnittet "Tips til eksport og visning af overvågningsloggen" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
 
 - Hvis du vil downloade data fra overvågningsloggen programmeringsmæssigt, anbefaler vi, at du bruger API'en Office 365 Management Activity i stedet for at bruge et PowerShell-script. API'en Office 365 managementaktivitet er en REST-webtjeneste, som du kan bruge til at udvikle løsninger til overvågning af drift, sikkerhed og overholdelse af angivne standarder for din organisation. Du kan få flere oplysninger under [Office 365 API-reference til administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- Azure Active Directory (Azure AD) er katalogtjenesten til Microsoft 365. Den samlede overvågningslog indeholder bruger-, gruppe-, program-, domæne- og katalogaktiviteter, der udføres i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> eller i Azure-administrationsportalen. Du kan se en komplet liste over Azure AD-hændelser under [Hændelser i Azure Active Directory-overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).
+- Azure Active Directory (Azure AD) er katalogtjenesten til Microsoft 365. Den samlede overvågningslog indeholder bruger-, gruppe-, program-, domæne- og katalogaktiviteter, der udføres i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> eller i Azure-administrationsportalen. Du kan se en komplet liste over Azure AD-hændelser [under Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 - Microsoft garanterer ikke et bestemt tidspunkt, efter at der opstår en hændelse, for at den tilsvarende overvågningspost returneres i resultaterne af en søgning i overvågningsloggen. For kernetjenester (f.eks. Exchange, SharePoint, OneDrive og Teams) er tilgængeligheden af overvågningsposter typisk 60-90 minutter, efter at en hændelse forekommer. For andre tjenester kan tilgængeligheden af overvågningsposter være længere. Nogle problemer, der er uundgåelige (f.eks. serverafbrydelser), kan dog opstå uden for overvågningstjeneste, der forsinker tilgængeligheden af overvågningsposter. Af denne grund forpligter Microsoft sig ikke til et bestemt tidspunkt.
 
@@ -185,7 +185,7 @@ Her er processen til søgning i overvågningsloggen i Microsoft 365.
 
    ![Antallet af resultater vises, når søgningen er fuldført.](../media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
 
-#### <a name="tips-for-searching-the-audit-log"></a>Tip til søgning i overvågningsloggen
+#### <a name="tips-for-searching-the-audit-log"></a>Tips til søgning i overvågningsloggen
 
 - Du kan vælge bestemte aktiviteter, du vil søge efter, ved at klikke på aktivitetsnavnet. Du kan også søge efter alle aktiviteter i en gruppe (f.eks **. fil- og mappeaktiviteter**) ved at klikke på gruppenavnet. Hvis der er valgt en aktivitet, kan du klikke på den for at annullere markeringen. Du kan også bruge søgefeltet til at få vist de aktiviteter, der indeholder det nøgleord, du skriver.
 
@@ -210,7 +210,7 @@ Resultaterne indeholder følgende oplysninger om hver hændelse, der returneres 
 - **IP-adresse**: IP-adressen på den enhed, der blev brugt, da aktiviteten blev logført. IP-adressen vises i enten et IPv4- eller IPv6-adresseformat.
 
    > [!NOTE]
-  > For nogle tjenester kan den værdi, der vises i dette felt, være IP-adressen for et program, der er tillid til (f.eks. Office på internettet-apps), der ringer til tjenesten på vegne af en bruger og ikke IP-adressen på den enhed, der bruges af den person, der udførte aktiviteten. Desuden logføres IP-adressen ikke for administratoraktivitet (eller aktivitet, der udføres af en systemkonto) for Azure Active Directory-relaterede hændelser, og den værdi, der vises i dette felt, er `null`.
+  > For nogle tjenester kan den værdi, der vises i dette felt, være IP-adressen for et program, der er tillid til (f.eks. Office på internettet apps), der ringer til tjenesten på vegne af en bruger, og ikke IP-adressen på den enhed, der bruges af den person, der udførte aktiviteten. Desuden logføres IP-adressen ikke for administratoraktivitet (eller aktivitet, der udføres af en systemkonto) for Azure Active Directory-relaterede hændelser, og den værdi, der vises i dette felt, er `null`.
 
 - **Bruger**: Den bruger (eller tjenestekonto), der udførte den handling, der udløste hændelsen.
 
@@ -346,7 +346,7 @@ Klik på et af følgende links for at gå til en bestemt tabel.
 
 :::row:::
     :::column:::
-        [Microsoft Power Automate-aktiviteter](#microsoft-power-automate-activities)
+        [Microsoft Power Automate aktiviteter](#microsoft-power-automate-activities)
     :::column-end:::
     :::column:::
         [Microsoft Power Apps aktiviteter](#microsoft-power-apps-activities)
@@ -567,11 +567,11 @@ I følgende tabel vises en liste over aktiviteter til synkronisering af filer i 
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
-|Tillader, at computeren synkroniserer filer|ManagedSyncClientAllowed|Brugeren etablerer en synkroniseringsrelation med et websted. Synkroniseringsrelationen lykkedes, fordi brugerens computer er medlem af et domæne, der er føjet til listen over domæner (kaldet *listen over sikre modtagere*), som kan få adgang til dokumentbiblioteker i din organisation. <br/><br/> Du kan få flere oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
-|Blokeret computer fra synkronisering af filer|Ikke-administreretSyncClientBlocked|Brugeren forsøger at etablere en synkroniseringsrelation med et websted fra en computer, der ikke er medlem af organisationens domæne, eller som er medlem af et domæne, der ikke er føjet til listen over domæner (kaldet  *listen over modtagere*  , der er tillid til), som kan få adgang til dokumentbiblioteker i din organisation. Synkroniseringsrelationen er ikke tilladt, og brugerens computer er blokeret fra at synkronisere, downloade eller overføre filer i et dokumentbibliotek. <br/><br/> Du kan få oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
-|Downloadede filer til computer|FileSyncDownloadedFull|Brugeren downloader en fil til sin computer fra et SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive synkroniseringsapp (OneDrive.exe).|
+|Tillader, at computeren synkroniserer filer|ManagedSyncClientAllowed|Brugeren etablerer en synkroniseringsrelation med et websted. Synkroniseringsrelationen lykkedes, fordi brugerens computer er medlem af et domæne, der er føjet til listen over domæner (kaldet *listen over sikre modtagere*), som kan få adgang til dokumentbiblioteker i din organisation. <br/><br/> Du kan få flere oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
+|Blokeret computer fra synkronisering af filer|Ikke-administreretSyncClientBlocked|Brugeren forsøger at etablere en synkroniseringsrelation med et websted fra en computer, der ikke er medlem af organisationens domæne, eller som er medlem af et domæne, der ikke er føjet til listen over domæner (kaldet  *listen over modtagere*  , der er tillid til), som kan få adgang til dokumentbiblioteker i din organisation. Synkroniseringsrelationen er ikke tilladt, og brugerens computer er blokeret fra at synkronisere, downloade eller overføre filer i et dokumentbibliotek. <br/><br/> Du kan få oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
+|Downloadede filer til computer|FileSyncDownloadedFull|Brugeren downloader en fil til sin computer fra et SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive-synkronisering app (OneDrive.exe).|
 |Downloadede filændringer på computeren|FileSyncDownloadedPartial|Denne hændelse frarådes sammen med den gamle OneDrive for Business synkroniseringsapp (Groove.exe).|
-|Overførte filer til dokumentbiblioteket|FileSyncUploadedFull|Brugeren uploader en ny fil eller ændringer til en fil i SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive synkroniseringsapp (OneDrive.exe).|
+|Overførte filer til dokumentbiblioteket|FileSyncUploadedFull|Brugeren uploader en ny fil eller ændringer til en fil i SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive-synkronisering app (OneDrive.exe).|
 |Overførte filændringer til dokumentbiblioteket|FileSyncUploadedPartial|Denne hændelse frarådes sammen med den gamle OneDrive for Business synkroniseringsapp (Groove.exe).|
 ||||
 
@@ -611,7 +611,7 @@ I følgende tabel vises hændelser, der stammer fra administrationsopgaver for w
 |Tilladt bruger at oprette grupper|AllowGroupCreationSet|Webstedsadministratoren eller -ejeren føjer et tilladelsesniveau til et websted, der giver en bruger, der har tildelt denne tilladelse, tilladelse til at oprette en gruppe for det pågældende websted.|
 |Annulleret geografisk flytning af websted|SiteGeoMoveCancelled|En SharePoint eller global administrator annullerer en geografisk flytning af et SharePoint eller OneDrive websted. Multi-Geo-funktionen gør det muligt for en organisation at spænde over flere geografiske områder i Microsoft-datacentre, som kaldes geos. Du kan få flere oplysninger [under Multi-Geo-funktioner i OneDrive og SharePoint Online](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
 |Ændrede en delingspolitik|SharingPolicyChanged|En SharePoint eller global administrator ændrede en politik for deling af SharePoint ved hjælp af Microsoft 365 Administration, SharePoint Administration eller SharePoint Shell til onlineadministration. Alle ændringer af indstillingerne i delingspolitikken i din organisation logføres. Den politik, der blev ændret, identificeres i feltet **ModifiedProperties** i de detaljerede egenskaber for hændelsesposten.|
-|Ændrede politik for enhedsadgang|DeviceAccessPolicyChanged|En SharePoint eller global administrator ændrede politikken for ikke-administrerede enheder for din organisation. Denne politik styrer adgangen til SharePoint, OneDrive og Microsoft 365 fra enheder, der ikke er tilmeldt din organisation. Konfiguration af denne politik kræver et Enterprise Mobility + Security-abonnement. Få mere at vide under [Kontrollér adgang fra ikke-administrerede enheder](/sharepoint/control-access-from-unmanaged-devices).|
+|Ændrede politik for enhedsadgang|DeviceAccessPolicyChanged|En SharePoint eller global administrator ændrede politikken for ikke-administrerede enheder for din organisation. Denne politik styrer adgangen til SharePoint, OneDrive og Microsoft 365 fra enheder, der ikke er tilmeldt din organisation. Konfiguration af denne politik kræver et Enterprise Mobility + Security abonnement. Få mere at vide under [Kontrollér adgang fra ikke-administrerede enheder](/sharepoint/control-access-from-unmanaged-devices).|
 |Ændrede brugeragenter, der er undtaget|TilpasExemptUsers|En SharePoint eller global administrator har tilpasset listen over brugeragenter, der er undtaget, i SharePoint Administration. Du kan angive, hvilke brugeragenter der skal fritages fra at modtage en hel webside til indeksering. Det betyder, at når en brugeragent, du har angivet som undtaget, støder på en InfoPath-formular, returneres formularen som en XML-fil i stedet for en hel webside. Det gør indeksering af InfoPath-formularer hurtigere.|
 |Ændret politik for netværksadgang|NetworkAccessPolicyChanged|En SharePoint eller global administrator ændrede den placeringsbaserede adgangspolitik (også kaldet en netværksgrænse, der er tillid til) i SharePoint Administration eller ved hjælp af SharePoint Online PowerShell. Denne type politik styrer, hvem der kan få adgang til SharePoint og OneDrive ressourcer i din organisation baseret på godkendte IP-adresseintervaller, som du angiver. Du kan få flere oplysninger under [Kontrollér adgang til SharePoint Online og OneDrive data, der er baseret på netværksplacering](/sharepoint/control-access-based-on-network-location).|
 |Fuldført geografisk flytning af websted|SiteGeoMoveCompleted|Et geografisk webstedsflytning, der er planlagt af en global administrator i din organisation, blev fuldført. Multi-Geo-funktionen gør det muligt for en organisation at spænde over flere geografiske områder i Microsoft-datacentre, som kaldes geos. Du kan få flere oplysninger [under Multi-Geo-funktioner i OneDrive og SharePoint Online](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
@@ -622,7 +622,7 @@ I følgende tabel vises hændelser, der stammer fra administrationsopgaver for w
 |Slettet websted|Webstedsdeleted|Webstedsadministratoren sletter et websted.|
 |Aktiveret dokumentvisning|PreviewModeEnabledSet|Webstedsadministratoren aktiverer dokumentvisning for et websted.|
 |Aktiveret ældre arbejdsproces|ÆldrearbejdsflowEnabledSet|Webstedsadministratoren eller -ejeren føjer indholdstypen SharePoint 2013 Arbejdsprocesopgave til webstedet. Globale administratorer kan også aktivere arbejdsflow for hele organisationen i SharePoint Administration.|
-|Aktiveret Office on Demand|OfficeOnDemandSet|Webstedsadministratoren aktiverer Office on Demand, hvilket giver brugerne adgang til den nyeste version af Office-skrivebordsprogrammer. Office on Demand er aktiveret i SharePoint Administration og kræver et Microsoft 365 abonnement, der omfatter komplette og installerede Office-programmer.|
+|Aktiveret Office efter behov|OfficeOnDemandSet|Webstedsadministratoren aktiverer Office efter behov, hvilket giver brugerne adgang til den nyeste version af Office skrivebordsprogrammer. Office on Demand er aktiveret i SharePoint Administration og kræver et Microsoft 365 abonnement, der omfatter fulde, installerede Office programmer.|
 |Aktiveret resultatkilde for personsøgninger|PeopleResultsScopeSet|Webstedsadministratoren opretter resultatkilden for personsøgninger på et websted.|
 |Aktiverede RSS-kilder|NyhedsstrømEnabledSet|Webstedsadministrator eller -ejer aktiverer RSS-feeds for et websted. Globale administratorer kan aktivere RSS-feeds for hele organisationen i SharePoint Administration.|
 |Joinforbundet websted til hubwebsted|HubSiteJoined|En webstedsejer knytter deres websted til et hubwebsted.|
@@ -646,7 +646,7 @@ I følgende tabel vises de aktiviteter, der kan logføres af logføring af overv
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
-|Elementer i en postkasse, der er åbnet|MailItemsAccessed|Meddelelser blev læst eller åbnet i postkassen. Overvågningsposter for denne aktivitet udløses på en af to måder: Når en mailklient (f.eks. Outlook) udfører en bindingshandling på meddelelser, eller når mailprotokoller (f.eks. Exchange ActiveSync eller IMAP) synkroniserer elementer i en mailmappe. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5-licens. Det er nyttigt at analysere overvågningsposter for denne aktivitet, når du undersøger kompromitteret mailkonto. Du kan få flere oplysninger i afsnittet "Overvåg (Premium)-hændelser" under [Overvågning (Premium)](advanced-audit.md#audit-premium-events). |
+|Elementer i en postkasse, der er åbnet|MailItemsAccessed|Meddelelser blev læst eller åbnet i postkassen. Overvågningsposter for denne aktivitet udløses på en af to måder: Når en mailklient (f.eks. Outlook) udfører en bindingshandling på meddelelser, eller når mailprotokoller (f.eks. Exchange ActiveSync eller IMAP) synkroniserer elementer i en mailmappe. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Det er nyttigt at analysere overvågningsposter for denne aktivitet, når du undersøger kompromitteret mailkonto. Du kan få flere oplysninger i afsnittet "Overvågningshændelser (Premium) under [Overvågning (Premium)](advanced-audit.md#audit-premium-events). |
 |Tilføjede tilladelser til stedfortræderpostkasse|Add-MailboxPermission|En administrator har tildelt tilladelsen til FullAccess-postkassen til en bruger (kaldet stedfortræder) til en anden persons postkasse. Tilladelsen FullAccess gør det muligt for stedfortræderen at åbne den anden persons postkasse og læse og administrere indholdet af postkassen. Overvågningsposten for denne aktivitet genereres også, når en systemkonto i Microsoft 365-tjenesten jævnligt udfører vedligeholdelsesopgaver på vegne af din organisation. En almindelig opgave, der udføres af en systemkonto, er at opdatere tilladelserne for systempostkasser. Du kan få flere oplysninger under [Systemkonti i Exchange postkassens overvågningsposter](#system-accounts-in-exchange-mailbox-audit-records).|
 |Tilføjet eller fjernet bruger med stedfortræderadgang til kalendermappen|UpdateCalendarDelegation|En bruger blev tilføjet eller fjernet som stedfortræder for kalenderen i en anden brugers postkasse. Kalenderdelegering giver en anden i den samme organisation tilladelse til at administrere postkasseejerens kalender.|
 |Føjede tilladelser til mappen|AddFolderPermissions|Der blev tilføjet en mappetilladelse. Mappetilladelser styrer, hvilke brugere i din organisation der kan få adgang til mapper i en postkasse og de meddelelser, der er placeret i disse mapper.|
@@ -662,7 +662,7 @@ I følgende tabel vises de aktiviteter, der kan logføres af logføring af overv
 |Fjernede meddelelser fra postkassen|HardDelete|En meddelelse blev fjernet fra mappen Gendan elementer (slettet permanent fra postkassen).|
 |Fjernede tilladelser til stedfortræderpostkasse|Remove-MailboxPermission|En administrator fjernede FullAccess-tilladelsen (som blev tildelt til en stedfortræder) fra en persons postkasse. Når FullAccess-tilladelsen er fjernet, kan stedfortræderen ikke åbne den anden persons postkasse eller få adgang til noget indhold i den.|
 |Fjernede tilladelser fra mappen|RemoveFolderPermissions|En mappetilladelse blev fjernet. Mappetilladelser styrer, hvilke brugere i din organisation der kan få adgang til mapper i en postkasse og de meddelelser, der er placeret i disse mapper.|
-|Sendt meddelelse|Send|En meddelelse blev sendt, besvaret eller videresendt. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5-licens. Du kan få flere oplysninger i afsnittet "Overvåg (Premium)-hændelser" under [Overvågning (Premium)](advanced-audit.md#audit-premium-events).|
+|Sendt meddelelse|Send|En meddelelse blev sendt, besvaret eller videresendt. Denne aktivitet logføres kun for brugere med en Office 365 eller Microsoft 365 E5 licens. Du kan få flere oplysninger i afsnittet "Overvågningshændelser (Premium) under [Overvågning (Premium)](advanced-audit.md#audit-premium-events).|
 |Sendt meddelelse med tilladelserne Send som|Send som|Der blev sendt en meddelelse ved hjælp af tilladelsen SendAs. Det betyder, at en anden bruger har sendt meddelelsen, som om den kom fra ejeren af postkassen.|
 |Sendt meddelelse med tilladelsen Send på vegne|SendOnBehalf|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf. Det betyder, at en anden bruger sendte meddelelsen på vegne af ejeren af postkassen. Meddelelsen angiver til den modtager, som meddelelsen blev sendt på vegne af, og hvem der rent faktisk sendte meddelelsen.|
 |Opdaterede indbakkeregler fra Outlook klient|UpdateInboxRules|En postkasseejer eller en anden bruger med adgang til den postkasse, der er oprettet, ændret eller fjernet en indbakkeregel ved hjælp af Outlook-klienten.|
@@ -688,12 +688,12 @@ I følgende tabel vises de brugeradministrationsaktiviteter, der logføres, når
 |:-----|:-----|:-----|
 |Tilføjet bruger|Tilføj bruger.|Der blev oprettet en brugerkonto.|
 |Ændret brugerlicens|Skift brugerlicens.|Den licens, der er tildelt en bruger, hvad der er ændret. Hvis du vil se, hvilke licenser der var ændringer, skal du se den tilsvarende **opdaterede brugeraktivitet** .|
-|Ændret brugeradgangskode|Skift brugeradgangskode.|En bruger ændrer sin adgangskode. Selvbetjent nulstilling af adgangskode skal aktiveres (for alle eller udvalgte brugere) i din organisation for at give brugerne tilladelse til at nulstille deres adgangskode. Du kan også spore aktiviteter for selvbetjent nulstilling af adgangskode i Azure Active Directory. Du kan få flere oplysninger under [Rapporteringsindstillinger for administration af Azure AD-adgangskoder](/azure/active-directory/authentication/howto-sspr-reporting).
+|Ændret brugeradgangskode|Skift brugeradgangskode.|En bruger ændrer sin adgangskode. Selvbetjent nulstilling af adgangskode skal aktiveres (for alle eller udvalgte brugere) i din organisation for at give brugerne tilladelse til at nulstille deres adgangskode. Du kan også spore selvbetjeningsaktivitet for nulstilling af adgangskode i Azure Active Directory. Du kan få flere oplysninger under [Rapporteringsindstillinger for administration af Azure AD-adgangskoder](/azure/active-directory/authentication/howto-sspr-reporting).
 |Slettet bruger|Slet bruger.|En brugerkonto blev slettet.|
 |Nulstil brugeradgangskode|Nulstil brugeradgangskoden.|Administratoren nulstiller adgangskoden for en bruger.|
 |Angiv en egenskab, der tvinger brugeren til at ændre adgangskode|Angiv gennemtving ændring af brugeradgangskode.|Administratoren angiver den egenskab, der tvinger en bruger til at ændre sin adgangskode, næste gang brugeren logger på Microsoft 365.|
 |Angiv licensegenskaber|Angiv licensegenskaber.|Administratoren ændrer egenskaberne for en licens, der er tildelt en bruger.|
-|Opdateret bruger|Opdater bruger.|Administratoren ændrer en eller flere egenskaber for en brugerkonto. Du kan se en liste over de brugeregenskaber, der kan opdateres, i afsnittet "Opdater brugerattributter" i [Hændelser i Azure Active Directory-overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).|
+|Opdateret bruger|Opdater bruger.|Administratoren ændrer en eller flere egenskaber for en brugerkonto. Du kan se en liste over de brugeregenskaber, der kan opdateres, i afsnittet "Opdater brugerattributter" i [Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).|
 ||||
 
 ### <a name="azure-ad-group-administration-activities"></a>Administrationsaktiviteter for Azure AD-grupper
@@ -784,11 +784,11 @@ Indholdssøgning og eDiscovery-relaterede aktiviteter, der udføres i Security a
 Du kan finde en liste og en detaljeret beskrivelse af de eDiscovery-aktiviteter, der logføres, [under Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md).
 
 > [!NOTE]
-> Det tager op til 30 minutter, før hændelser, der stammer fra de aktiviteter, der er angivet under **eDiscovery-aktiviteter** og **eDiscovery(Premium)-aktiviteter** på rullelisten **Aktiviteter** , vises i søgeresultaterne. Omvendt tager det op til 24 timer, før de tilsvarende hændelser fra eDiscovery-cmdlet-aktiviteter vises i søgeresultaterne.
+> Det tager op til 30 minutter, før hændelser, der stammer fra de aktiviteter, der er angivet under **eDiscovery-aktiviteter** og **eDiscovery-aktiviteter (Premium)** på rullelisten **Aktiviteter**, vises i søgeresultaterne. Omvendt tager det op til 24 timer, før de tilsvarende hændelser fra eDiscovery-cmdlet-aktiviteter vises i søgeresultaterne.
 
 ### <a name="ediscovery-premium-activities"></a>eDiscovery-aktiviteter (Premium)
 
-Du kan også søge i overvågningsloggen efter aktiviteter i Microsoft Purview eDiscovery (Premium). Du kan finde en beskrivelse af disse aktiviteter i afsnittet "eDiscovery (Premium)-aktiviteter" i [Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities).
+Du kan også søge i overvågningsloggen efter aktiviteter i Microsoft Purview eDiscovery (Premium). Du kan finde en beskrivelse af disse aktiviteter i afsnittet "eDiscovery(Premium)-aktiviteter" i [Søg efter eDiscovery-aktiviteter i overvågningsloggen](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities).
 
 ### <a name="power-bi-activities"></a>Power BI aktiviteter
 
@@ -817,7 +817,7 @@ Workplace Analytics giver indsigt i, hvordan grupper samarbejder på tværs af d
 ||||
 
 > [!NOTE]
-> <sup>*</sup>Dette er logon- og logonaktiviteter i Azure Active Directory. Disse aktiviteter logføres, selvom du ikke har Workplace Analytics slået til i din organisation. Du kan finde flere oplysninger om brugerlogføringsaktiviteter under [Logonlogfiler i Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+> <sup>*</sup>Disse er Azure Active Directory logon- og log af-aktiviteter. Disse aktiviteter logføres, selvom du ikke har Workplace Analytics slået til i din organisation. Du kan finde flere oplysninger om brugerlogføringsaktiviteter under [Logge på Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 ### <a name="microsoft-teams-activities"></a>Microsoft Teams aktiviteter
 
@@ -842,7 +842,7 @@ Du kan finde en beskrivelse af aktiviteter i Appen Skift under [Søg i overvågn
 I følgende tabel vises de bruger- og administratoraktiviteter i Yammer, der er logført i overvågningsloggen. Hvis du vil returnere Yammer-relaterede aktiviteter fra overvågningsloggen, skal du vælge **Vis resultater for alle aktiviteter** på listen **Aktiviteter**. Brug datoområdefelterne og listen **Brugere** til at indsnævre søgeresultaterne.
 
 > [!NOTE]
-> Nogle Yammer revisionsaktiviteter er kun tilgængelige under Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), [under Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium)[-licenser under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
+> Nogle Yammer overvågningsaktiviteter er kun tilgængelige under Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), under [Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium) [under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -871,9 +871,9 @@ I følgende tabel vises de bruger- og administratoraktiviteter i Yammer, der er 
 |Vist meddelelse<sup>*</sup>|Meddelelse vist|Brugeren får vist en meddelelse.|
 ||||
 
-### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate-aktiviteter
+### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate aktiviteter
 
-Du kan søge i overvågningsloggen efter aktiviteter i Power Automate (tidligere kaldet Microsoft Flow). Disse aktiviteter omfatter oprettelse, redigering og sletning af flow og ændring af flowtilladelser. Du kan få oplysninger om overvågning af Power Automate-aktiviteter på bloggen  [Power Automate-overvågningshændelser, der nu er tilgængelige på portalen for overholdelse af angivne standarder](https://flow.microsoft.com/blog/security-and-compliance-center).
+Du kan søge i overvågningsloggen efter aktiviteter i Power Automate (tidligere kaldet Microsoft Flow). Disse aktiviteter omfatter oprettelse, redigering og sletning af flow og ændring af flowtilladelser. Du kan få oplysninger om overvågning af Power Automate aktiviteter på bloggen [Power Automate overvågningshændelser, der nu er tilgængelige på overholdelsesportalen](https://flow.microsoft.com/blog/security-and-compliance-center).
 
 ### <a name="microsoft-power-apps-activities"></a>Microsoft Power Apps aktiviteter
 
@@ -912,7 +912,7 @@ Tabellerne i dette afsnit bruger- og administratoraktiviteterne i Microsoft Form
 Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder, logføres den lidt anderledes. Du kan få flere oplysninger i afsnittet [Formularaktiviteter udført af medforfattere og anonyme respondere](#forms-activities-performed-by-coauthors-and-anonymous-responders) .
 
 > [!NOTE]
-> Nogle formularrevisionsaktiviteter er kun tilgængelige i Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), [under Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium)[-licenser under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
+> Nogle formularovervågningsaktiviteter er kun tilgængelige i Overvågning (Premium). Det betyder, at brugerne skal tildeles den relevante licens, før disse aktiviteter logføres i overvågningsloggen. Du kan få flere oplysninger om aktiviteter, der kun er tilgængelige under Overvågning (Premium), under [Overvågning (Premium) i Microsoft 365](advanced-audit.md#audit-premium-events). Du kan finde oplysninger om overvågningskrav (Premium) [under Overvågning af løsninger i Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>I følgende tabel fremhæves overvågningsaktiviteter (Premium) med en stjerne (*).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -939,7 +939,7 @@ Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder,
 |Link til slettet oversigt|Sletsumelink|Formularejeren sletter linket med oversigtsresultater.|
 |Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned af administratoren <br/>- Blokeringen af administratoren er fjernet <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
 |Opdateret bruger phishing-status|UpdateUserPhishingStatus|Denne hændelse logføres, hver gang værdien for brugerens sikkerhedsstatus blev ændret. Værdien af brugerstatussen i overvågningsposten **bekræftes som Phisher** , da brugeren oprettede en phishing-formular, der blev fjernet af Microsoft Online-sikkerhedsteamet. Hvis en administrator fjerner blokeringen af brugeren, angives værdien af brugerens status til **Nulstil som normal bruger**.|
-|Invitation til Sendt Formular Pro|Invitation til proinvitation|Brugeren klikker for at aktivere en Pro-prøveversion.|
+|Invitation til sendte formularer Pro|Invitation til proinvitation|Brugeren klikker for at aktivere en Pro prøveversion.|
 |Opdateret formularindstilling<sup>*</sup> |UpdateFormSetting|Formularejeren opdaterer en eller flere formularindstillinger. <br><br>Property FormSettingName:string angiver opdaterede følsomme indstillingers navn. Property NewFormSettings:string angiver opdaterede indstillingers navn og nye værdi. Property thankYouMessageContainsLink:boolean angiver, at den opdaterede takkemeddelelse indeholder et URL-link.|
 |Opdateret brugerindstilling|UpdateUserSetting|Formularejeren opdaterer en brugerindstilling. <br><br>Property UserSettingName:string angiver indstillingens navn og nye værdi|
 |Viste formularer<sup>*</sup>|ListForms|Ejeren af formularen får vist en liste over formularer. <br><br>Property ViewType:string angiver, hvilken visning formularens ejer ser på: Alle formularer, Delt med mig eller Gruppeformularer|
@@ -988,7 +988,7 @@ I følgende tabel vises hændelser, der skyldes brug af [følsomhedsmærkater](s
 |:-----|:-----|:-----|
 |Anvendte følsomhedsmærkat på webstedet|SensitivityLabelApplied|Der blev anvendt en følsomhedsmærkat på et SharePoint eller Teams websted.|
 |Følsomhedsmærkaten er fjernet fra webstedet|SensitivityLabelRemoved|En følsomhedsmærkat blev fjernet fra et SharePoint eller Teams websted.|
-|Anvendte følsomhedsmærkat på fil|FileSensitivityLabelApplied|Der blev anvendt en følsomhedsmærkat på et dokument ved hjælp af Microsoft 365 apps, Office på internettet. eller en politik for automatisk mærkning.|
+|Anvendte følsomhedsmærkat på fil|FileSensitivityLabelApplied|Der blev anvendt en følsomhedsmærkat på et dokument ved hjælp af Microsoft 365 apps Office på internettet. eller en politik for automatisk mærkning.|
 |Ændret følsomhedsmærkat anvendt på fil|FileSensitivityLabelChanged<br /><br>SensitivityLabelUpdated|Der blev anvendt en anden følsomhedsmærkat på et dokument. <br /><br>Handlingerne for denne aktivitet er forskellige, afhængigt af hvordan mærkaten blev ændret:<br /> - Office på internettet eller en politik for automatisk mærkning (FileSensitivityLabelChanged) <br /> – Microsoft 365 apps (SensitivityLabelUpdated)|
 |Ændret følsomhedsmærkat på et websted|SensitivityLabelChanged|Der blev anvendt en anden følsomhedsmærkat på et SharePoint eller Teams websted.|
 |Følsomhedsmærkaten er fjernet fra filen|FileSensitivityLabelRemoved|En følsomhedsmærkat blev fjernet fra et dokument ved hjælp af Microsoft 365 apps, Office på internettet, en politik for automatisk mærkning eller cmdlet'en [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile).|
@@ -1085,10 +1085,10 @@ I følgende tabel vises de aktiviteter for forbrugsrapporter, der er logført i 
 
 ### <a name="exchange-admin-audit-log"></a>Exchange administratorens overvågningslog
 
-Exchange administrator overvågningslogføring (som er aktiveret som standard i Microsoft 365) logfører en hændelse i overvågningsloggen, når en administrator (eller en bruger, der har fået tildelt administrative tilladelser) foretager en ændring i din Exchange Online-organisation. Ændringer, der foretages ved hjælp af Exchange Administration eller ved at køre en cmdlet i Exchange Online PowerShell, logføres i Exchange administratorens overvågningslog. Cmdlet'er, der starter med verberne **Get-**, **Search-eller** **Test,** logføres ikke i overvågningsloggen. Du kan finde flere detaljerede oplysninger om logføring af administratorovervågning i Exchange under [Logføring af administratorrevision](/exchange/administrator-audit-logging-exchange-2013-help).
+Exchange administrator overvågningslogføring (som som standard er aktiveret i Microsoft 365) logfører en hændelse i overvågningsloggen, når en administrator (eller en bruger, der har fået tildelt administrative tilladelser) foretager en ændring i din Exchange Online organisation. Ændringer, der foretages ved hjælp af Exchange Administration eller ved at køre en cmdlet i Exchange Online PowerShell, logføres i Exchange administratorens overvågningslog. Cmdlet'er, der starter med verberne **Get-**, **Search-eller** **Test,** logføres ikke i overvågningsloggen. Du kan finde flere detaljerede oplysninger om logføring af administratorovervågning i Exchange under [Logføring af administratorrevision](/exchange/administrator-audit-logging-exchange-2013-help).
 
 > [!IMPORTANT]
-> Nogle Exchange Online-cmdlet'er, der ikke er logget på Exchange administratorens overvågningslog (eller i overvågningsloggen). Mange af disse cmdlet'er er relateret til vedligeholdelse af Exchange Online-tjenesten og køres af Microsofts datacenterpersonale eller tjenestekonti. Disse cmdlet'er logføres ikke, fordi de ville resultere i et stort antal "støjende" overvågningshændelser. Hvis der er en Exchange Online-cmdlet, der ikke overvåges, skal du sende en dcr-anmodning (designændring) til Microsoft Support.
+> Nogle Exchange Online cmdlet'er, der ikke er logget på Exchange administratorens overvågningslog (eller i overvågningsloggen). Mange af disse cmdlet'er er relateret til vedligeholdelse af tjenesten Exchange Online og køres af Microsofts datacenterpersonale eller tjenestekonti. Disse cmdlet'er logføres ikke, fordi de ville resultere i et stort antal "støjende" overvågningshændelser. Hvis der er en Exchange Online cmdlet, der ikke overvåges, skal du sende en dcr-anmodning (designændring) til Microsoft Support.
 
 Her er nogle tip til søgning efter Exchange administratoraktiviteter, når du søger i overvågningsloggen:
 
@@ -1098,9 +1098,9 @@ Her er nogle tip til søgning efter Exchange administratoraktiviteter, når du s
 
 - Hvis du vil have oplysninger om, hvilken cmdlet der blev kørt, hvilke parametre og parameterværdier der blev brugt, og hvilke objekter der blev påvirket, kan du eksportere søgeresultaterne ved at vælge indstillingen **Download alle resultater** . Du kan finde flere oplysninger under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
 
-- Du kan også bruge kommandoen `Search-UnifiedAuditLog -RecordType ExchangeAdmin` i Exchange Online PowerShell til kun at returnere overvågningsposter fra Exchange administratorens overvågningslog. Det kan tage op til 30 minutter, efter en Exchange cmdlet køres, før den tilsvarende post i overvågningsloggen returneres i søgeresultaterne. Du kan finde flere oplysninger under [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog). Du kan finde oplysninger om eksport af de søgeresultater, der **returneres af Search-UnifiedAuditLog-cmdlet'en** til en CSV-fil, i afsnittet "Tip til eksport og visning af overvågningsloggen" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
+- Du kan også bruge kommandoen `Search-UnifiedAuditLog -RecordType ExchangeAdmin` i Exchange Online PowerShell til kun at returnere overvågningsposter fra Exchange administratorens overvågningslog. Det kan tage op til 30 minutter, efter en Exchange cmdlet køres, før den tilsvarende post i overvågningsloggen returneres i søgeresultaterne. Du kan finde flere oplysninger under [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog). Du kan finde oplysninger om eksport af de søgeresultater, der **returneres af Search-UnifiedAuditLog-cmdlet'en**, til en CSV-fil i afsnittet "Tips til eksport og visning af overvågningsloggen" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
 
-- Du kan også få vist hændelser i Exchange administratorens overvågningslog ved hjælp af Exchange Administration eller ved at køre **Search-AdminAuditLog** i Exchange Online PowerShell. Dette er en god måde specifikt at søge efter aktiviteter, der udføres af Exchange Online-administratorer. Du kan finde instruktioner under:
+- Du kan også få vist hændelser i Exchange administratorens overvågningslog ved hjælp af Exchange Administration eller ved at køre **Search-AdminAuditLog** i Exchange Online PowerShell. Dette er en god måde specifikt at søge efter aktivitet, der udføres af Exchange Online administratorer. Du kan finde instruktioner under:
 
   - [Vis administratorens overvågningslog](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log)
 
@@ -1112,7 +1112,7 @@ Her er nogle tip til søgning efter Exchange administratoraktiviteter, når du s
 
 **Hvad er forskellige Microsoft 365 tjenester, der overvåges i øjeblikket?**
 
-De mest anvendte tjenester som Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Dynamics 365, Defender for Office 365 og Power BI overvåges. Du kan se en liste over de tjenester, der overvåges, i [starten af denne artikel](search-the-audit-log-in-security-and-compliance.md) .
+De mest anvendte tjenester som Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Dynamics 365, Defender for Office 365, og Power BI overvåges. Du kan se en liste over de tjenester, der overvåges, i [starten af denne artikel](search-the-audit-log-in-security-and-compliance.md) .
 
 **Hvilke aktiviteter overvåges af overvågningstjeneste i Microsoft 365?**
 
@@ -1124,7 +1124,7 @@ De fleste overvågningsdata er tilgængelige inden for 30 minutter, men det kan 
 
 **Hvor længe opbevares overvågningsposterne?**
 
-Som tidligere forklaret bevares overvågningsposter for aktiviteter, der udføres af brugere, der har fået tildelt en Office 365 E5- eller Microsoft E5-licens (eller brugere med en Microsoft 365 E5-tilføjelsesprogramlicens) i et år. For alle andre abonnementer, der understøtter samlet overvågningslogføring, bevares overvågningsposter i 90 dage.
+Som tidligere forklaret bevares overvågningsposter for aktiviteter, der udføres af brugere, der har fået tildelt en Office 365 E5- eller Microsoft E5-licens (eller brugere med en Microsoft 365 E5 tilføjelsesprogramlicens) i et år. For alle andre abonnementer, der understøtter samlet overvågningslogføring, bevares overvågningsposter i 90 dage.
 
 **Kan jeg få adgang til overvågningsdataene programmatisk?**
 
@@ -1148,6 +1148,6 @@ Vi har i øjeblikket udrulninger af overvågningspipelines i områderne NA (Nord
 
 **Er overvågningsdata krypteret?**
 
-Overvågningsdata gemmes i Exchange postkasser (inaktive data) i det samme område, hvor den samlede overvågningspipeline udrulles. Hvilede postkassedata krypteres ikke af Exchange. Kryptering på tjenesteniveau krypterer dog alle postkassedata, fordi Exchange servere i Microsoft-datacentre krypteres via BitLocker. Du kan få flere oplysninger [under Microsoft 365 Kryptering af Skype for Business, OneDrive for Business, SharePoint Online og Exchange Online](/compliance/assurance/assurance-encryption-for-microsoft-365-services).
+Overvågningsdata gemmes i Exchange postkasser (inaktive data) i det samme område, hvor den samlede overvågningspipeline udrulles. Hvilede postkassedata krypteres ikke af Exchange. Kryptering på tjenesteniveau krypterer dog alle postkassedata, fordi Exchange servere i Microsoft-datacentre krypteres via BitLocker. Du kan få flere oplysninger [under Microsoft 365 Encryption for Skype for Business, OneDrive for Business, SharePoint Online og Exchange Online](/compliance/assurance/assurance-encryption-for-microsoft-365-services).
 
 Maildata under overførsel krypteres altid.

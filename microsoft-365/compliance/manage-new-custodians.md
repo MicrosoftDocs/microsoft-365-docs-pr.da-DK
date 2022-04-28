@@ -2,8 +2,8 @@
 title: Administrer tilsynsførende i en eDiscovery-sag (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,18 +17,18 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du får vist detaljer, redigerer og masserediger listen over tilsynsførende i en eDiscovery-sag (Premium).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2ab30e1343acd4718f80f816abc6ef850acf7215
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 6ea05e2f0b19c23b236f7b64eb3a425fdb29cc39
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996828"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077938"
 ---
 # <a name="manage-custodians-in-an-ediscovery-premium-case"></a>Administrer tilsynsførende i en eDiscovery-sag (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Siden **Tilsynsførende** under fanen **Datakilder** i en Microsoft Purview eDiscovery (Premium)-sag indeholder en liste over alle tilsynsførende, der er føjet til sagen. Når du har føjet tilsynsførende til en sag, indsamles oplysninger om hver enkelt tilsynsførende automatisk fra Azure Active Directory og kan ses i eDiscovery (Premium).
+Siden **Tilsynsførende** under fanen **Datakilder** i en Microsoft Purview eDiscovery-sag (Premium) indeholder en liste over alle tilsynsførende, der er føjet til sagen. Når du har føjet tilsynsførende til en sag, indsamles oplysninger om hver enkelt tilsynsførende automatisk fra Azure Active Directory og kan ses i eDiscovery (Premium).
 
 ## <a name="view-custodian-details"></a>Vis oplysninger om tilsynsførende
 
@@ -70,7 +70,7 @@ Efterhånden som din sag skrider frem, kan du opdage, at der kan være yderliger
 
 Sådan opdaterer du de datakilder, der er knyttet til en tilsynsførende:
 
-1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
   
 2. Klik på fanen **Datakilder** .
   
@@ -105,13 +105,13 @@ Sådan opdaterer du de datakilder, der er knyttet til en tilsynsførende:
 
 ## <a name="reindex-custodian-data"></a>Gendæd data om tilsynsførende
 
-I de fleste eDiscovery-arbejdsprocesser til juridiske undersøgelser søges der i et undersæt af en tilsynsførendes data, når tilsynsførende er føjet til en juridisk sag. På grund af meget store filstørrelser eller mulig beskadigelse af data kan nogle elementer i de datakilder, der er knyttet til en tilsynsførende, blive delvist indekseret. Ved hjælp af den [avancerede indekseringsfunktionalitet](indexing-custodian-data.md) i eDiscovery (Premium) kan de fleste delvist indekserede elementer afhjælpes automatisk ved at omindeksere disse elementer efter behov.
+I de fleste eDiscovery-arbejdsprocesser til juridiske undersøgelser søges der i et undersæt af en tilsynsførendes data, når tilsynsførende er føjet til en juridisk sag. På grund af meget store filstørrelser eller mulig beskadigelse af data kan nogle elementer i de datakilder, der er knyttet til en tilsynsførende, blive delvist indekseret. Ved hjælp af den [avancerede indekseringsfunktion](indexing-custodian-data.md) i eDiscovery (Premium) kan de fleste delvist indekserede elementer afhjælpes automatisk ved at omindeksere disse elementer efter behov.
 
 Når en tilsynsførende føjes til en sag, genindekseres de data, der er placeret i de datakilder, der er knyttet til vogteren, automatisk (af den avancerede indekseringsproces). Det betyder, at du kan lade dataene være på stedet i stedet for at skulle downloade og afhjælpe dem og derefter søge i dem offline). Men i løbet af livscyklussen for en juridisk sag kan nye datakilder være knyttet til en tilsynsførende. I dette tilfælde kan du omindeksere tilsynsførendes data ved at køre den avancerede indekseringsproces igen for at afhjælpe eventuelle delvist indekserede elementer og opdatere indekset for tilsynsførendes data.
 
 Sådan udløser du den omindekseringsproces, der skal håndtere delvist indekserede elementer:
 
-1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
 
 2. Klik på fanen **Kilder** .
 
@@ -137,7 +137,7 @@ Hvis du frigiver en varetægtsfængslet efter en meddelelse om frihedsberøvelse
 
 Sådan frigiver du en tilsynsførende:
 
-1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
 
 2. Klik på fanen **Kilder** .
 
@@ -145,7 +145,7 @@ Sådan frigiver du en tilsynsførende:
 
 4. Klik på **Frigiv tilsynsførende** på pop op-siden.
 
-   Der vises en advarselsside, der forklarer, at hvis en venteposition er placeret på en datakilde, der er knyttet til vogteren, fjernes ventepositionen, og at alle andre ventepositioner, der er knyttet til en anden eDiscovery (Premium)-sag, stadig gælder. Det omfatter andre typer opbevarings- og opbevaringsfunktioner (f.eks. en politik for Microsoft 365 opbevaring).
+   Der vises en advarselsside, der forklarer, at hvis en venteposition er placeret på en datakilde, der er knyttet til vogteren, fjernes ventepositionen, og at alle andre ventepositioner, der er knyttet til en anden eDiscovery-sag (Premium), stadig gælder. Det omfatter andre typer opbevarings- og opbevaringsfunktioner (f.eks. en politik for Microsoft 365 opbevaring).
 
 5. Klik på **Ja** for at bekræfte, at du vil frigive tilsynsførende. 
 

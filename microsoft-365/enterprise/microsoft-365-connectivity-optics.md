@@ -1,8 +1,8 @@
 ---
-title: Microsoft 365 Connectivity Optics
+title: optik i forbindelse med Microsoft 365 forbindelse
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -20,49 +20,49 @@ search.appverid:
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
 description: Denne artikel indeholder oplysninger om Microsoft 365 Connectivity Optics.
-ms.openlocfilehash: c1ee14966f13ff50ff809ebbdf4c578bf949e956
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: cda5fa074aa04be5fbbaff9b98360a3a2f927fc2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63592479"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090313"
 ---
-# <a name="microsoft-365-connectivity-optics"></a>Microsoft 365 Connectivity Optics
+# <a name="microsoft-365-connectivity-optics"></a>optik i forbindelse med Microsoft 365 forbindelse
 
-Dette dokument beskriver nogle af de forbindelsesoptiske funktioner, som Microsoft typisk indsamler fra kundeenheder, og beskriver nogle af de måder, som Microsoft bruger disse data til at analysere og optimere leveringen af tjenester og for at vurdere og sikre den bedst mulige slutbrugeroplevelse.
+I dette dokument beskrives nogle af de forbindelsesmuligheder, Som Microsoft typisk indsamler fra kundeenheder, og beskriver nogle af de måder, hvorpå Microsoft bruger disse data til at analysere og optimere levering af tjenester og til at vurdere og sikre den bedst mulige slutbrugeroplevelse.
 
-Forbindelsesoptics indsamles generelt fra Microsoft-programmer, som kan installeres på slutbrugerenheder eller åbnes fra browsere. I modsætning til valgfri dataindsamling inden for Microsoft 365-tjenester er mange af de forbindelsesoptik, der er beskrevet her, en integreret funktion, der sikrer, at Microsoft opfylder vores forpligtelse til tilgængelighed og ydeevne over for kunder. Disse optik gør det muligt for Microsoft hurtigt at registrere og reagere på eventuelle problemer i forbindelsesstien mellem slutbrugere og Microsoft-tjenesteslutpunkter. Nogle af disse optik bruges også til at aktivere funktioner som [f.eks. netværksforbindelse i Microsoft 365 Administration Center](office-365-network-mac-perf-overview.md).
+Forbindelsesoptik indsamles generelt fra Microsoft-programmer, som kan installeres på slutbrugerenheder eller åbnes fra browsere. I modsætning til valgfri dataindsamling i Microsoft 365-tjenester er mange af de forbindelsesmuligheder, der er beskrevet her, en integreret del af at sikre, at Microsoft opfylder vores forpligtelse til tilgængelighed og ydeevne for kunder. Disse optik gør det muligt for Microsoft hurtigt at registrere og reagere på eventuelle problemer i forbindelsesstien mellem slutbrugere og Microsoft-tjenesteslutpunkter. Nogle af disse optik bruges også til at aktivere funktioner som [netværksforbindelse i Microsoft 365 Administration Center](office-365-network-mac-perf-overview.md).
 
-## <a name="optics-collected-from-microsoft-365-applications"></a>Optics, der er indsamlet Microsoft 365 programmer
+## <a name="optics-collected-from-microsoft-365-applications"></a>Optik, der indsamles fra Microsoft 365 programmer
 
-Optics indsamles i øjeblikket ved hjælp af sjældne stikprøver på tværs af alle enheder. Generelt set konfigureres det specifikke sæt optics og destinationer (tjenesteslutpunkter), som skal måles i en bestemt iteration, af Microsoft ud fra tjenestekrav og tilfældigt til stikprøveformål.
-Ved hvert optiksamlingsinterval kan en eller flere af følgende målinger indsamles ved hjælp af slutbrugerenheden som målekilde, og Microsoft 365-tjenesteslutpunkt som målepunkt:
+Optik indsamles i øjeblikket ved hjælp af sjældne udsnit på tværs af alle enheder. Generelt er det specifikke sæt optik og destinationer (tjenesteslutpunkter), der skal måles i en bestemt gentagelse, konfigureret af Microsoft baseret på tjenestekrav og randomiseret til samplingsformål.
+Ved hvert optikindsamlingsinterval kan en eller flere af følgende målinger indsamles ved hjælp af slutbrugerenheden som målingskilde og et Microsoft 365 tjenesteslutpunkt som målingsdestination:
 
-| Mål | Beskrivelse |
+| Måling | Beskrivelse |
 | --- | --- |
-| Ventetid | Den tid, det tager at hente en lille fil via HTTP |
-| Overførselshastighed | Den tid, det tager at hente en større fil via HTTP, måles sjældent for at undgå overdreven båndbreddeforbrug |
-| Tiden på returkørslen (RTT) | ICMP ping |
-| Traceroute | ICMP-traceroute |
+| Latency | Den tid, det tager at hente en lille fil via HTTP |
+| Overførselshastighed | Den tid, det tager at hente en større fil via HTTP, målt sjældent for at undgå overdrevent båndbreddeforbrug |
+| Rundturstid (RTT) | ICMP-ping |
+| Traceroute | ICMP-sporingsroute |
 
 Hver måling er typisk knyttet til yderligere oplysninger, som kan omfatte følgende elementer:
 
 | Element | Beskrivelse |
 | --- | --- |
-| Lejer-id | Entydigt id for kundens Azure Active Directory, der er knyttet til slutbrugerenheden. |
-| Skærm-id | Id for det program, der genererer anmodningen (f.eks. Outlook, OneDrive osv.), leveret af det klientprogram, der udfører målingen. |
-| Anmod om id | Identifikator for anmodningen om måling, som er angivet i den målingskonfiguration, der leveres af Microsoft. |
-| Fjern-IP | Maskeret kilde-IP, der er knyttet til anmodningen fra klient til tjenesteslutpunkt, leveres af den server, der modtog måleanmodningen og beregnede baseret på klientkilde-IP-adressen, der er synlig for Microsoft. IP-adresser er maskeret til et /24-undernet til IPv4-adresser eller et /48-undernet til IPv6-adresser for at sikre, at Microsoft ikke kan identificere individuelle enheder eller brugere. |
-| Front end | Microsoft 365 tjeneste front end-id, leveret af den server, der modtog anmodningen om måling. |
-| Slutpunkt | Microsoft 365 tjenesteslutpunktplacering, der leveres af den server, der modtog anmodningen om måling. |
-| Certifikat udstedt af | Egenskaben "certifikat udstedt af" for det SSL-certifikat, der præsenteres under oprettelse af forbindelse til tjenesteslutpunktet, hvilket angiver det nøglecenter, der udstedte certifikatet til tjenestens slutpunkt. |
-| Certificate Thumbprint | Egenskaben "certificate thumbprint" for det SSL-certifikat, der præsenteres, når du opretter forbindelse til tjenesteslutpunktet, som er en offentligt tilgængelig entydig identifier for certifikatet. |
-| Længde-/breddegrader | Den abstrakte bredde- og længdegrad for slutbrugerenheden. Dette indsamles kun for lejere, der har aktiveret Windows-placeringstjeneste på slutbrugerenheder og også har aktiveret indsamling af disse oplysninger [i Microsoft 365-administrationsportalen](office-365-network-mac-perf-overview.md#1-enable-windows-location-services). |
+| Lejer-id | Entydigt id for kundens Azure Active Directory lejer, der er knyttet til slutbrugerenheden. |
+| Skærm-id | Id for det program, der genererer anmodningen (f.eks. Outlook, OneDrive osv.), som leveres af det klientprogram, der udfører målingen. |
+| Anmodnings-id | Identifikator for anmodningen om måling, der er angivet i den målingskonfiguration, der leveres af Microsoft. |
+| Ekstern IP | Maskeret kilde-IP, der er knyttet til anmodningen fra klienten til tjenesteslutpunktet, leveret af den server, der modtog målingsanmodningen og beregnede baseret på klientens IP-adresse, som er synlig for Microsoft. IP-adresser maskeres til et /24-undernet for IPv4-adresser eller et /48-undernet for IPv6-adresser for at sikre, at Microsoft ikke kan identificere individuelle enheder eller brugere. |
+| Front-end | Microsoft 365 tjenestefrontend-id, der leveres af den server, der modtog anmodningen om måling. |
+| Slutpunkt | Microsoft 365 placering af tjenesteslutpunkt, som leveres af den server, der modtog anmodningen om måling. |
+| Certifikat udstedt af | Egenskaben "certifikat udstedt af" for det SSL-certifikat, der blev præsenteret under oprettelse af forbindelse til tjenesteslutpunktet, hvilket angiver det nøglecenter, der har udstedt certifikatet til tjenesteslutpunktet. |
+| Certifikataftryk | Egenskaben "certifikataftryk" for det SSL-certifikat, der blev præsenteret under oprettelse af forbindelse til tjenesteslutpunktet, som er et offentligt tilgængeligt entydigt id for certifikatet. |
+| Breddegrad/længdegrad | Den abstrakte breddegrad og længdegrad for slutbrugerenheden. Dette indsamles kun for lejere, der har aktiveret Windows Placeringstjeneste på slutbrugerenheder, og som også har [aktiveret indsamling af disse oplysninger på Microsoft 365 administrationsportal.](office-365-network-mac-perf-overview.md#1-enable-windows-location-services) |
 
 ## <a name="measurement-process"></a>Måleproces
 
-Hver slutbrugerenhed udfører typisk en måling enten på planlagt basis (for installerede programmer) eller baseret på handlingen for indlæsning af browsersider (for webbaserede programmer). Måleaktiviteter udføres som baggrundshandlinger og påvirker ikke programoplevelsen for brugerne. Da de måletyper og destinationer, der skal bruges til en bestemt iteration af denne proces, er randomiserede, vil kunderne muligvis bemærke anmodninger til Microsoft-tjenesteslutpunkter i deres område, der svarer til de typiske anmodninger fra slutbrugerenheder om normal applikationsforbindelse. Desuden vil kunder muligvis lægge mærke til anmodninger til Microsoft-tjenesteslutpunkter, der ligger et godt sted uden for deres område. Disse målinger bruges ofte til at sikre optimal routing af kundeanmodninger til det bedste tjenesteslutpunkt, da ændringer i kundens og internetudbyderens infrastruktur muligvis kræver, at Microsoft løbende ændrer vores omdirigeringspolitikker for anmodninger. Få mere at vide om, hvordan Microsoft routes trafik til det bedste tjenesteslutpunkt, og hvordan du optimerer forbindelse til Microsoft 365-tjenester [i oversigten Microsoft 365 netværksforbindelse](microsoft-365-networking-overview.md).
+Hver slutbrugerenhed udfører typisk en måling enten på et planlagt grundlag (for installerede programmer) eller baseret på den handling, der udføres ved indlæsning af browsersider (for webbaserede programmer). Måleaktiviteter udføres som handlinger i baggrunden og påvirker ikke programoplevelsen for brugerne. Da de målingstyper og destinationer, der skal bruges til en bestemt gentagelse af denne proces, er tilfældige, vil kunderne muligvis bemærke anmodninger til Microsoft-tjenesteslutpunkter i deres område, der svarer til de typiske anmodninger, der foretages af slutbrugerenheder for normal programforbindelse. Derudover kan kunder bemærke anmodninger til Microsoft-tjenesteslutpunkter, der ligger uden for deres lokale område. Disse målinger bruges ofte til at sikre optimal routing af kundeanmodninger til det bedste tjenesteslutpunkt, da ændringer i kunde- og ISP-infrastrukturen kan kræve, at Microsoft løbende ændrer vores politikker for anmodningsrouting. Få mere at vide om, hvordan Microsoft dirigerer trafik til det bedste tjenesteslutpunkt, og hvordan du optimerer forbindelsen til Microsoft 365 tjenester i [oversigten over Microsoft 365 netværksforbindelse](microsoft-365-networking-overview.md).
 
 ## <a name="service-endpoints"></a>Tjenesteslutpunkter
 
-Microsoft-tjenesteslutpunkterne, der bruges som destinationer til disse mål, er indeholdt i de publicerede [Office 365 URL- og IP-adresseområder](urls-and-ip-address-ranges.md). Adgang til yderligere tjenesteslutpunkter er ikke nødvendige for samlingen af disse forbindelsesoptik.
+De Microsoft-tjenesteslutpunkter, der bruges som destinationer for disse målinger, er indeholdt i de publicerede [Office 365 URL-adresser og IP-adresseområder](urls-and-ip-address-ranges.md). Adgang til yderligere tjenesteslutpunkter er ikke nødvendig for samlingen af disse forbindelsesoptik.

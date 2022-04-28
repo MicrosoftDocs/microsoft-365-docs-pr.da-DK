@@ -163,7 +163,7 @@
             - name: Automatisering af nyttedata i kursus i angrebssimulering
               href: attack-simulation-training-payload-automations.md
             - name: Slutbrugermeddelelser til kursus i angrebssimulering
-              href: attack-simulation-traning-end-user-notifications.md
+              href: attack-simulation-training-end-user-notifications.md
             - name: Indsigt og rapportering i kursus i angrebssimulering
               href: attack-simulation-training-insights.md
             - name: Ofte stillede spørgsmål og overvejelser i forbindelse med udrulning af kursus i angrebssimulering

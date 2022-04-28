@@ -2,8 +2,8 @@
 title: Eksportér dokumenter til en organisationskonto Azure Storage
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Eksportér dokumenter i et korrektursæt til en Azure Storage konto, og brug derefter Azure Storage Explorer til at downloade dem til en lokal computer.
-ms.openlocfilehash: 6c8709fe1540393164e00222b728b10d5f809012
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e0dfe3eb37ea440c93dc7753c7c4206d8d33c1f3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994892"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098620"
 ---
 # <a name="export-documents-in-a-review-set-to-an-azure-storage-account"></a>Eksportér dokumenter i et gennemsynssæt til en Azure Storage konto
 
@@ -33,9 +33,9 @@ Når du eksporterer dokumenter fra et korrektursæt i en eDiscovery-sag (Premium
 
 - Du skal angive et SAS-token (Shared Access Signature) for din Azure Storage-konto og URL-adressen for en bestemt objektbeholder på lagerkontoen for at eksportere dokumenter fra et korrektursæt. Sørg for at have disse ved hånden (f.eks. kopieret til en tekstfil), når du udfører trin 2
 
-  - **SAS-token**: Sørg for at få SAS-tokenet er til din Azure Storage konto (og ikke for objektbeholderen). Du kan generere et SAS-token for din konto i Azure Storage. Det gør du ved at gå til den Azure Storage konto og vælge **Del adgangssignatur** under indstillingerne under bladet **Indstillinger** på bladet Lagerkonto. Brug standardindstillingerne, og tillad alle ressourcetyper, når du genererer SAS-tokenet.
+  - **SAS-token**: Sørg for at få SAS-tokenet er til din Azure Storage konto (og ikke for objektbeholderen). Du kan generere et SAS-token for din konto i Azure Storage. Det gør du ved at gå til den Azure Storage konto og vælge **Del adgangssignatur** under indstillingerne **for Indstillinger** på bladet lagerkonto. Brug standardindstillingerne, og tillad alle ressourcetyper, når du genererer SAS-tokenet.
 
-  - **URL-adresse til objektbeholder**: Du skal oprette en objektbeholder for at uploade de dokumenter, der er angivet til gennemsyn, og derefter hente en kopi af URL-adressen til objektbeholderen. f.eks. `https://ediscoverydata.blob.core.windows.net/exportdata`. Hvis du vil hente URL-adressen, skal du gå til objektbeholderen i Azure Storage og vælge **Egenskaber** under afsnittet **Indstillinger** på beholderbladet.
+  - **URL-adresse til objektbeholder**: Du skal oprette en objektbeholder for at uploade de dokumenter, der er angivet til gennemsyn, og derefter hente en kopi af URL-adressen til objektbeholderen. f.eks. `https://ediscoverydata.blob.core.windows.net/exportdata`. Hvis du vil hente URL-adressen, skal du gå til objektbeholderen i Azure Storage og vælge **Egenskaber** under afsnittet **Indstillinger** på objektbeholderbladet.
 
 - Download og installér Azure Storage Explorer. Du kan finde instruktioner [under Azure Storage Explorer-værktøj](https://go.microsoft.com/fwlink/p/?LinkId=544842). Du kan bruge dette værktøj til at oprette forbindelse til objektbeholderen på din Azure Storage-konto og downloade de dokumenter, du eksporterede i trin 1.
 
@@ -43,7 +43,7 @@ Når du eksporterer dokumenter fra et korrektursæt i en eDiscovery-sag (Premium
 
 Det første trin er at oprette et eksportjob for at eksportere dokumenter ud af et gennemsynssæt. Du kan finde mere detaljerede instruktioner om alle eksportindstillingerne under [Eksportér dokumenter fra et gennemsynssæt](export-documents-from-review-set.md). I følgende procedure fremhæves indstillingerne for eksport af dokumenter til organisationens Azure Storage konto.
 
-1. Åbn eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt** , og vælg derefter det korrektursæt, du vil eksportere.
+1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt**, og vælg derefter det korrektursæt, du vil eksportere.
 
 2. Klik på **ActionExport** >  i korrektursættet.
 
@@ -63,7 +63,7 @@ Det første trin er at oprette et eksportjob for at eksportere dokumenter ud af 
 
 Det næste trin er at hente den SAS-URL-adresse, der genereres, når du har oprettet eksportjobbet i trin 1. Du kan bruge SAS URL-adressen til at oprette forbindelse til objektbeholderen på din Azure Storage konto, som du eksporterede korrektursættet dokumenter til.
 
-1. Gå til sagen på siden **eDiscovery (Premium),** og klik derefter på fanen **Eksporter** .
+1. Gå til sagen på siden **eDiscovery (Premium),** og klik derefter på fanen **Eksporter**.
 
 2. Klik på det eksportjob, du vil downloade, under fanen **Eksporter** . Dette er det eksportjob, du oprettede under trin 1.
 
@@ -74,17 +74,17 @@ Det næste trin er at hente den SAS-URL-adresse, der genereres, når du har opre
    > [!TIP]
    > DEN SAS-URL-adresse, der vises i eksportjobbet, er en sammenkædning af URL-adressen til objektbeholderen og SAS-tokenet for din Azure Storage-konto. Du kan kopiere det fra eksportjobbet eller selv oprette det ved at kombinere URL-adressen og SAS-tokenet.
 
-## <a name="step-3-connect-to-the-azure-storage-container"></a>Trin 3: Opret forbindelse til den Azure Storage objektbeholder
+## <a name="step-3-connect-to-the-azure-storage-container"></a>Trin 3: Forbind til Azure Storage objektbeholderen
 
 Det sidste trin er at bruge Azure Storage Explorer og SAS URL-adressen til at oprette forbindelse til objektbeholderen på din Azure Storage-konto og downloade de eksporterede dokumenter til en lokal computer.
 
 1. Start den Azure Storage Explorer, du har downloadet og installeret.
 
-2. Klik på ikonet **Åbn dialogboksen Opret forbindelse** .
+2. Klik på ikonet **Åbn Forbind dialogboks**.
 
    ![Klik på ikonet Tilføj konto.](../media/AzureStorageConnect.png)
 
-3. Klik på **BLOB-objektbeholder** på siden **Opret forbindelse til Azure Storage**.
+3. Klik på **Blob-objektbeholder** på siden **Forbind til Azure Storage**.
 
 4. På siden **Vælg godkendelsesmetode** skal du vælge indstillingen **Delt adgangssignatur (SAS)** og derefter klikke på **Næste**.
 
@@ -94,13 +94,13 @@ Det sidste trin er at bruge Azure Storage Explorer og SAS URL-adressen til at op
 
     Bemærk, at objektbeholdernavnet vises i feltet **Vist navn** . Du kan redigere dette navn.
 
-6. Klik på **Næste** for at få vist **oversigtssiden** , og klik derefter på **Opret forbindelse**.
+6. Klik på **Næste** for at få vist **oversigtssiden**, og klik derefter på **Forbind**.
 
-    Noden **BLOB-objektbeholdere** (under **Lagerkonti** >  **(vedhæftede objektbeholdere)** \> åbnes.
+    Noden **BLOB-objektbeholdere** (under **Storage Konti** >  **(vedhæftede objektbeholdere)** \> åbnes.
 
     ![Eksportér job i noden Blobs-objektbeholdere.](../media/AzureStorageConnect5.png)
 
-    Den indeholder en objektbeholder, der er navngivet med det viste navn fra trin 5. Denne objektbeholder indeholder en mappe til hvert eksportjob, du har downloadet til objektbeholderen på din Azure Storage konto. Disse mapper er navngivet med et id, der svarer til id'et for eksportjobbet. Du kan finde disse eksport-id'er (og navnet på eksporten) under **Supportoplysninger** på pop op-siden for hver **Forbereder data til eksportjob** , der er angivet under fanen **Job** i eDiscovery (Premium).
+    Den indeholder en objektbeholder, der er navngivet med det viste navn fra trin 5. Denne objektbeholder indeholder en mappe til hvert eksportjob, du har downloadet til objektbeholderen på din Azure Storage konto. Disse mapper er navngivet med et id, der svarer til id'et for eksportjobbet. Du kan finde disse eksport-id'er (og navnet på eksporten) under **Supportoplysninger** på pop op-siden for hver **Forbereder data til eksportjob**, der er angivet under fanen **Job** i sagen eDiscovery (Premium).
 
 7. Dobbeltklik på mappen med eksportjobbet for at åbne den.
 
@@ -121,7 +121,7 @@ Det sidste trin er at bruge Azure Storage Explorer og SAS URL-adressen til at op
 
 - Mappen til eksportjobbet indeholder følgende elementer. De faktiske elementer i eksportmappen bestemmes af de eksportindstillinger, der blev konfigureret, da eksportjobbet blev oprettet. Du kan finde flere oplysninger om disse indstillinger under [Eksportér dokumenter fra et korrektursæt](export-documents-from-review-set.md).
 
-  - Export_load_file.csv: Denne CSV-fil er en detaljeret eksportrapport, der indeholder oplysninger om hvert eksporteret dokument. Filen består af en kolonne for hver metadataegenskab for et dokument. Du kan finde en liste over og en beskrivelse af de metadata, der er inkluderet i denne rapport, i kolonnen **Med det eksporterede feltnavn** i tabellen i [Felterne Dokumentmetadata i eDiscovery (Premium)](document-metadata-fields-in-advanced-ediscovery.md).
+  - Export_load_file.csv: Denne CSV-fil er en detaljeret eksportrapport, der indeholder oplysninger om hvert eksporteret dokument. Filen består af en kolonne for hver metadataegenskab for et dokument. Du kan finde en liste over og en beskrivelse af de metadata, der er inkluderet i denne rapport, i kolonnen **Med det eksporterede feltnavn** i tabellen i [Dokumentmetadatafelter i eDiscovery (Premium)](document-metadata-fields-in-advanced-ediscovery.md).
 
   - Summary.txt: En tekstfil, der indeholder en oversigt over eksporten, herunder eksportstatistik.
 

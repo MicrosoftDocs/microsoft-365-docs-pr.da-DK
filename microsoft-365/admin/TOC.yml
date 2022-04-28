@@ -338,7 +338,7 @@
       href: ../commerce/index.yml
     - name: Beskyt din organisation
       items:
-        - name: De 10 bedste måder at sikre dine data på
+        - name: Bedste fremgangsmåder til sikring af dine data
           href: security-and-compliance/secure-your-business-data.md
         - name: Multifaktorgodkendelse til Microsoft 365
           href: security-and-compliance/multi-factor-authentication-microsoft-365.md

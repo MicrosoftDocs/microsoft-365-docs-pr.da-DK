@@ -3,8 +3,8 @@ metadata:
   title: Importerer ofte stillede spørgsmål om PST-filer
   f1.keywords:
   - NOCSH
-  ms.author: markjjo
-  author: markjjo
+  ms.author: v-tophillips
+  author: v-tophillips
   manager: laurawi
   audience: Admin
   ms.topic: faq
@@ -18,12 +18,12 @@ metadata:
   ms.assetid: 2fe71b05-f5a2-4182-ade7-4dc5cabdfd51
   ms.custom: seo-marvel-apr2020
   description: Denne artikel indeholder svar på nogle ofte stillede spørgsmål til administratorer om import af PST-filer til Microsoft 365 ved hjælp af Office 365 Import Service.
-  ms.openlocfilehash: c7f2e11120fbac275104f30b57d98c937e17886e
-  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.openlocfilehash: 664cf078d891bf1e40dc79ddb1dc009527ba0dd6
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64939845"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65098014"
 title: Ofte stillede spørgsmål om import af PST-filer
 summary: >
   **Denne artikel er til administratorer. Vil du importere PST-filer til din egen postkasse? Se [Importér mail, kontakter og kalender fra en .pst-fil Outlook](https://go.microsoft.com/fwlink/p/?LinkID=785075)**

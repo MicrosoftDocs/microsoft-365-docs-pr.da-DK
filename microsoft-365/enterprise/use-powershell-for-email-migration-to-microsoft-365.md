@@ -2,7 +2,7 @@
 title: Brug PowerShell til at overføre mail til Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/17/2020
 audience: Admin
 ms.topic: landing-page
@@ -15,25 +15,25 @@ f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
 ms.assetid: 795158e1-7dfc-4d9e-b805-373dd576c4e7
-description: Få mere at vide om, hvordan du overfører mail fra dit eksisterende system Microsoft 365 ved hjælp af PowerShell.
-ms.openlocfilehash: 4b578057a4e95d1fb835c819d547fc93a970f5f2
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Få mere at vide om, hvordan du overfører mails fra dit eksisterende system til Microsoft 365 ved hjælp af PowerShell.
+ms.openlocfilehash: 26c8b6038db090559a1c3cc908689918a8c2be11
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675278"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098180"
 ---
-# <a name="how-to-use-powershell-to-migrate-email-to-microsoft-365"></a>Sådan bruger du PowerShell til at overføre mail Microsoft 365
+# <a name="how-to-use-powershell-to-migrate-email-to-microsoft-365"></a>Sådan bruger du PowerShell til at overføre mails til Microsoft 365
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Administratorer overfører ofte mail fra eksisterende systemer, når de første gang konfigurerer Microsoft 365. I følgende artikler beskrives det, hvordan du overfører mail ved hjælp Windows PowerShell:
+Administratorer overfører ofte mail fra eksisterende systemer, første gang de konfigurerer Microsoft 365. I følgende artikler beskrives det, hvordan du overfører mails ved hjælp af Windows PowerShell:
   
-- [Brug PowerShell til at udføre en migrering til Microsoft 365](use-powershell-to-perform-a-cutover-migration-to-microsoft-365.md)
+- [Brug PowerShell til at udføre en komplet migrering til Microsoft 365](use-powershell-to-perform-a-cutover-migration-to-microsoft-365.md)
     
-- [Brug PowerShell til at udføre en IMAP-overførsel til Microsoft 365](use-powershell-to-perform-an-imap-migration-to-microsoft-365.md)
+- [Brug PowerShell til at udføre en IMAP-overførsel for at Microsoft 365](use-powershell-to-perform-an-imap-migration-to-microsoft-365.md)
     
-- [Brug PowerShell til at udføre en faseindret migrering til Microsoft 365](use-powershell-to-perform-a-staged-migration-to-microsoft-365.md)
+- [Brug PowerShell til at udføre en faseinddelt migrering til Microsoft 365](use-powershell-to-perform-a-staged-migration-to-microsoft-365.md)
     
 ## <a name="related-topics"></a>Relaterede emner
 

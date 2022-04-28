@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 ms.date: 10/02/2019
 audience: ITPro
 ms.topic: article
@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Sådan bruger Contoso sikkerhedsfunktionerne i Microsoft 365 for enterprise.
-ms.openlocfilehash: a03fcd9570ca29bcbf535e3248b19836a9598b40
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 7ffde6eec3e5f294311926fa013d9e089ad67e0f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936021"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091319"
 ---
 # <a name="summary-of-microsoft-365-for-enterprise-security-for-the-contoso-corporation"></a>Oversigt over Microsoft 365 for virksomhedssikkerhed for Contoso Corporation
 

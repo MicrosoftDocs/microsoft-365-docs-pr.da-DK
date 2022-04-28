@@ -2,8 +2,8 @@
 title: Konfigurer en connector til import af generiske overvågningsdata til sundhedssektoren
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere EHR-data (Electronic Healthcare Records) fra deres sundhedssystem til Microsoft 365. Dette giver dig mulighed for at bruge EHR-data i politikker for styring af insiderrisiko til at hjælpe dig med at registrere uautoriseret adgang til patientdata af dine medarbejdere.
-ms.openlocfilehash: b1745d8f91253132748fe08d724386d2e6633a4c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 90f50628e255267baeff7d39c776f9a6bf8cc426
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993156"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077903"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Konfigurer en connector til import af ehr-overvågningsdata til sundhedssektoren (prøveversion)
 
@@ -29,7 +29,7 @@ Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen 
 
 Konfiguration af en Healthcare-connector består af følgende opgaver:
 
-- Oprettelse af en app i Azure Active Directory (Azure AD) for at få adgang til et API-slutpunkt, der accepterer en fanesepareret tekstfil, der indeholder ehr-overvågningsdata til sundhedssektoren.
+- Oprettelse af en app i Azure Active Directory (Azure AD) for at få adgang til et API-slutpunkt, der accepterer en tabulatorsepareret tekstfil, der indeholder ehr-overvågningsdata til sundhedssektoren.
 
 - Oprettelse af en tekstfil med alle de påkrævede felter, som defineret i connectorskemaet.
 
@@ -57,7 +57,7 @@ Det første trin er at oprette og registrere en ny app i Azure Active Directory 
 
 - Lejer-id (også kaldet *mappe-id*)
 
-Du kan finde en trinvis vejledning til, hvordan du opretter en app i Azure AD, under [Registrer et program med Microsoft-identitetsplatformen](\azure\active-directory\develop\quickstart-register-app).
+Du kan finde en trinvis vejledning i, hvordan du opretter en app i Azure AD, under [Registrer et program med Microsoft-identitetsplatform](\azure\active-directory\develop\quickstart-register-app).
 
 ## <a name="step-2-prepare-a-text-file-with-healthcare-ehr-auditing-data"></a>Trin 2: Forbered en tekstfil med ehr-overvågningsdata til sundhedssektoren
 
@@ -119,7 +119,7 @@ Det næste trin er at oprette en Healthcare-connector på overholdelsesportalen.
 
     - **Job-id.** Du skal bruge dette job-id for at køre scriptet i næste trin. Du kan kopiere den fra denne side eller fra connector-pop op-siden.
 
-    - **Link til eksempelscript.** Klik på **linket her** for at gå til GitHub-webstedet for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen, når du kører scriptet. Dette link er også tilgængeligt på connector-pop op-siden.
+    - **Link til eksempelscript.** Klik på linket **her** for at gå til GitHub websted for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen, når du kører scriptet. Dette link er også tilgængeligt på connector-pop op-siden.
 
 9. Klik på **Udført**.
 
@@ -138,7 +138,7 @@ Det sidste trin i forbindelse med konfiguration af en Healthcare-connector er at
 > [!NOTE]
 > Som tidligere nævnt er den maksimale størrelse på den tekstfil, der indeholder overvågningsdataene, 3 GB. Det maksimale antal rækker er 5 millioner. Det script, du kører i dette trin, tager ca. 30-40 minutter at importere overvågningsdataene fra store tekstfiler. Derudover opdeler scriptet store tekstfiler i mindre blokke på 100.000 rækker og importerer derefter disse blokke sekventielt.
 
-1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub-webstedet med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede. Du kan også få adgang til scriptet [her](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1).
+1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub websted med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede. Du kan også få adgang til scriptet [her](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1).
 
 2. Klik på knappen **Rå** for at få vist scriptet i tekstvisning.
 
@@ -146,7 +146,7 @@ Det sidste trin i forbindelse med konfiguration af en Healthcare-connector er at
 
 4. Rediger eksempelscriptet for din organisation, hvis det er nødvendigt.
 
-5. Gem tekstfilen som en Windows PowerShell-scriptfil ved hjælp af et filnavnssuffiks af `.ps1`, f.eks `HealthcareConnector.ps1`. .
+5. Gem tekstfilen som en Windows PowerShell scriptfil ved hjælp af et filnavnssuffiks af `.ps1`, f.eks. `HealthcareConnector.ps1`.
 
 6. Åbn en kommandoprompt på din lokale computer, og gå til den mappe, hvor du gemte scriptet.
 
@@ -173,7 +173,7 @@ Her er et eksempel på syntaksen for connectorscriptet healthcare ved hjælp af 
 .\HealthcareConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -filePath 'C:\Users\contosoadmin\Desktop\Data\healthcare_audit_records.csv'
 ```
 
-Hvis overførslen lykkes, viser scriptet meddelelsen **Upload fuldført** .
+Hvis overførslen lykkes, viser scriptet **meddelelsen Upload fuldført**.
 
 > [!NOTE]
 > Hvis du har problemer med at køre den forrige kommando på grund af kørselspolitikker, skal du se [Om kørselspolitikker](/powershell/module/microsoft.powershell.core/about/about_execution_policies) og [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) for at få vejledning til, hvordan du angiver kørselspolitikker.
@@ -198,7 +198,7 @@ Hvis du vil sikre dig, at de nyeste overvågningsdata fra dit ehr-system til sun
 
 Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver dag.
 
-1. Klik på knappen **Start** i Windows på den lokale computer, og skriv derefter **Opgavestyring**.
+1. Klik på knappen Windows **Start** på den lokale computer, og skriv derefter **Opgavestyring**.
 
 2. Klik på appen **Opgavestyring** for at åbne den.
 
@@ -214,7 +214,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
 6. Vælg fanen **Udløsere** , klik på **Ny**, og gør derefter følgende:
 
-    1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt for at køre scriptet for første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
+    1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt, hvor scriptet skal køres første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
 
     2. Under **Avancerede indstillinger** skal du kontrollere, at afkrydsningsfeltet **Aktiveret** er markeret.
 

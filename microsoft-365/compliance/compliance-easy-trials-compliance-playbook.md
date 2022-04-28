@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Prøveversion af Microsoft Purview-løsninger.
-ms.openlocfilehash: 4544e07baa5b8d2b89991d9a31c84a2d7cefb7f8
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 3ff103a2e6ebc260f5f00964ae09c6b6bbc1fd69
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973767"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098884"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview-løsninger
 
@@ -35,6 +35,7 @@ Funktioner:
 - [Overvågning (Premium)](#audit-premium)
 - [Kommunikation med overholdelse af angivne standarder](#communication-compliance)
 - [Overholdelsesstyring](#compliance-manager)
+- [Administration af datalivscyklus](#data-lifecycle-management)
 - [Microsoft Purview Forebyggelse af datatab](#data-loss-prevention)
 - [eDiscovery](#ediscovery)
 - [Information Protection](#information-protection)
@@ -168,6 +169,31 @@ Brugerdefinerede vurderinger er nyttige i forbindelse med:
 1. [Rediger en eksisterende skabelon for at tilføje eller fjerne kontrolelementer og handlinger](compliance-manager-templates-modify.md)
 1. [Konfigurer automatiseret test af forbedringshandlinger](compliance-manager-setup.md#set-up-automated-testing)
 1. [Overdrag forbedringshandlinger til en anden bruger](compliance-manager-setup.md#reassign-improvement-actions-to-another-user)
+
+## <a name="data-lifecycle-management"></a>Administration af datalivscyklus
+
+**Styr i stor skala med automatisering**
+
+Gør det bedre at tilpasse dig ændringer i din organisation med politikområder, der automatisk opdateres. Automatiser mærkning af indhold for at reducere den manuelle indsats og forbedre overholdelsesholdning.
+
+### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>Trin 1: Målret dynamisk opbevaringspolitikker med tilpassede politikområder
+> [!TIP]
+> Bedste praksis for prøveversion: Dag 1
+
+Tilpassede politikområder giver dig mulighed for dynamisk at målrette en politik til bestemte brugere, grupper eller websteder baseret på deres AD-attributter.  Attributter for områder kan vælges på en liste eller tilpasses ved hjælp af en avanceret forespørgselsgenerator.
+
+Politikker, der bruger tilpassede politikområder, forbliver opdaterede, efterhånden som organisationen ændres, når nye medarbejdere tilmelder sig eller forlader virksomheden. Derudover er de ikke underlagt de tidligere grænser på 100/1.000 placeringer, der er inkluderet i en politik.
+
+- Opret et adaptivt politikområde, og brug det sammen med en opbevaringspolitik
+
+### <a name="step-2-automate-labeling-to-apply-a-label-to-all-items-by-default"></a>Trin 2: Automatiser mærkning for at anvende en etiket på alle elementer som standard
+
+> [!TIP]
+> Bedste praksis for prøveversion: Konfiguration inden for de første 30 dage
+
+Standardnavne giver dig mulighed for automatisk at anvende en opbevaringsmærkat på alle elementer i et angivet bibliotek, en angivet mappe eller et angivet dokumentsæt i SharePoint.
+
+- Publicer en etiket, og anvend den som standard i SharePoint
 
 ## <a name="data-loss-prevention"></a>Forebyggelse af datatab
 
@@ -356,59 +382,38 @@ Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af administrator
 
 ## <a name="records-management"></a>Datastyring
 
-**Automatiser opbevaringsplanen for forretningskritiske poster**
+**Administrer vigtige elementer for forretningsrelaterede, juridiske eller lovmæssige krav til registrering**
 
-Brug integrerede funktioner i Microsoft Purview Records Management til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Få fuld understøttelse af indholdslivscyklus fra oprettelse til samarbejde, postdeklaration, opbevaring og fordeling.
+Brug funktioner i Microsoft Purview Records Management til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Udnyt automatiseringsfunktioner fra oprettelse gennem samarbejde for at deklarere poster, bevare indhold og fjerne dem til sidst.
 
-### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>Trin 1: Målret dynamisk opbevaringspolitikker med tilpassede politikområder
+### <a name="step-1-mark-contents-as-records"></a>Trin 1: Markér indhold som poster  
 
 > [!TIP]
 > Bedste praksis for prøveversion: Dag 1
 
-Tilpassede politikområder giver dig mulighed for dynamisk at målrette en politik til bestemte brugere, grupper eller websteder baseret på deres AD-attributter.
+Når indhold erklæres som en post, er der begrænsninger for elementet med hensyn til, hvilke handlinger der er tilladt eller blokeret, yderligere aktiviteter om elementerne logføres, og du har bevis for fordeling, hvis elementerne slettes ved slutningen af deres opbevaringsperiode.
 
-Attributter for områder kan vælges på en liste eller tilpasses ved hjælp af en avanceret forespørgselsgenerator.
+- Opret en opbevaringsmærkat, der deklarerer indhold som en post eller en lovmæssig post
 
-Politikker, der bruger tilpassede politikområder, forbliver opdaterede, efterhånden som organisationen ændres, når nye medarbejdere tilmelder sig eller forlader virksomheden. Derudover er de ikke underlagt de tidligere grænser på 100/1.000 placeringer, der er inkluderet i en politik.
+### <a name="step-2-review-content-to-approve-before-its-permanently-deleted"></a>Trin 2: Gennemse indhold, der skal godkendes, før det slettes permanent
 
-- Opret et [adaptivt politikområde](retention.md#adaptive-or-static-policy-scopes-for-retention), og brug det sammen med en opbevaringspolitik
+> [!TIP]
+> Bedste praksis for prøveversion: Dag 1
 
-### <a name="step-2-automate-labeling-of-sensitive-information-with-the-ability-to-review-before-disposal"></a>Trin 2: Automatiser mærkning af følsomme oplysninger med mulighed for at gennemse dem før bortskaffelse
+Når opbevaringsperioden udløber, kan de brugere, du angiver ("validatorer"), få besked om at gennemse indholdet og godkende den permanente bortskaffelse. Dette understøtter, hvis en anden handling end sletning er mere relevant, f.eks. tildeling af en anden opbevaringsperiode til indholdet eller suspendering af sletning i forbindelse med en overvågning.
+
+- Opret en opbevaringsmærkat, der bruger dispositionsgennemgang
+
+### <a name="step-3-apply-labels-automatically-to-content-that-matches-specific-conditions"></a>Trin 3: Anvend automatisk mærkater på indhold, der opfylder bestemte betingelser
 
 > [!TIP]
 > Bedste praksis for prøveversion: Konfiguration inden for de første 30 dage
 
-Opbevaringsmærkater kan konfigureres til automatisk at gælde for indhold, når der registreres følsomme oplysninger, f.eks. et kreditkortnummer. Dette fjerner behovet for, at brugerne manuelt skal udføre mærkataktiviteten.
+Automatisk anvendelse af mærkater fjerner behovet for, at brugerne manuelt udfører mærkataktiviteterne. Du kan automatisk anvende opbevaringsmærkater på indhold, når der ikke allerede er anvendt en opbevaringsmærkat for dette indhold, og det indeholder følsomme oplysninger, nøgleord eller søgbare egenskaber eller et match for klassificeringer, der kan oplæres.
 
-Når opbevaringsperioden udløber, får de brugere, du angiver ("korrekturlæsere"), besked om at gennemse indholdet og godkende den permanente bortskaffelseshandling. På den måde kan noget bevares længere.
-
-Både mærkatprogramaktivitet og dispositionsgennemsynsaktivitet kan ses på skærmen Oversigt over datastyring.
-
-1. [Anvend automatisk opbevaringsmærkater på indhold, der indeholder følsomme oplysninger](retention.md#retention-labels)
-1. Opret og anvend en opbevaringsmærkat med [gennemgang af fordeling](disposition.md#disposition-reviews) i slutningen af opbevaringsperioden
-
-### <a name="step-3-label-content-as-records-automatically-using-trainable-classifiers"></a>Trin 3: Mærk indhold som poster automatisk ved hjælp af klassificeringer, der kan oplæres
-
-Når indhold erklæres som en post, er der begrænsninger for elementet med hensyn til, hvilke handlinger der er tilladt eller blokeret, yderligere aktiviteter om elementerne logføres, og du har bevis for fordeling, hvis elementerne slettes ved slutningen af deres opbevaringsperiode.
-
-Klassificeringsmaskiner, der kan oplæres, er værktøjer, der genkender forskellige typer indhold, som er baseret på eksempler, som de er blevet givet. Vælg mellem en række indbyggede indstillinger, eller konfigurer en brugerdefineret klassificering, der opfylder dine specifikke behov.
-
-1. Opret en opbevaringsmærkat, der [deklarerer indhold som en post eller en lovmæssig post](records-management.md#records)
-1. [Anvend automatisk opbevaringsmærkater på indhold ved hjælp af klassificeringer, der kan oplæres](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
-
-### <a name="more-information-auto-apply-retention-labels--disposition-review"></a>Flere oplysninger: Anvend automatisk opbevaringsmærkater + gennemgang af fordeling
-
-**Anvend etiketter automatisk for at bevare det, du har brug for...** Opbevaringsmærkater kan anvendes automatisk på indhold, når de indeholder:
-
-- [Specifikke typer følsomme oplysninger](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-specific-types-of-sensitive-information)
-- [Specifikke nøgleord eller egenskaber, der kan søges i, og som svarer til en forespørgsel, du opretter](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties)
-- [Et match for klassificeringer, der kan oplæres](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
-
-**... bortskaffes sikkert i slutningen.**
-
-Når en dispositionsgennemgang udløses i slutningen af opbevaringsperioden, modtager de korrekturlæsere, du vælger, en mail om, at de har indhold, der skal gennemses.
-
-Indhold, der afventer en dispositionsgennemsyn, slettes kun permanent, når en validator for den sidste fase af dispositionen vælger at slette indholdet permanent.
+- Anvend automatisk opbevaringsmærkater på indhold med bestemte typer følsomme oplysninger
+- Anvend automatisk opbevaringsmærkater på indhold ved hjælp af klassificeringer, der kan oplæres
+- Anvend automatisk opbevaringsmærkater med nøgleord eller søgbare egenskaber
 
 ## <a name="additional-trials-and-add-ons"></a>Yderligere prøveversioner og tilføjelsesprogrammer
 
@@ -432,7 +437,7 @@ Identificer og beskyt proaktivt mod risici for beskyttelse af personlige oplysni
 
 [Playbook til prøveversion: Microsoft Priva](/privacy/solutions/privacymanagement/privacy-management-trial-playbook)
 
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 **Inkluderet**: Du kan se en komplet liste over Microsoft Purview-løsninger og -funktioner, der er angivet efter produktniveau, ved at se [funktionsmatrixen](https://go.microsoft.com/fwlink/?linkid=2139145).
 

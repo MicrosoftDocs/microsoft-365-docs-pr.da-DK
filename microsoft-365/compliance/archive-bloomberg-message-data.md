@@ -2,8 +2,8 @@
 title: Konfigurer en connector til arkivering af Bloomberg Message-data
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere og arkivere data fra Bloomberg Message-mailværktøjet i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 781378ba30ccb7db44191764e050277fa4a239aa
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: f13fcad1586776711cfc726ab633c411f2eaa383
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992808"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078361"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Konfigurer en connector til arkivering af Bloomberg Message-data
 

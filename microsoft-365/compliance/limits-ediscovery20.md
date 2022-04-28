@@ -2,8 +2,8 @@
 title: Grænser for eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,19 +15,19 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der er gældende for eDiscovery-løsningen (Premium) i Microsoft 365.
-ms.openlocfilehash: 07977b80ba0ce55c6d0e6b179955cfa959eaa5c8
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
+ms.openlocfilehash: 3d0204eb452b669937d30fe5519e5af073b64d6d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999756"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099207"
 ---
 # <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-I denne artikel beskrives grænserne i Microsoft Purview eDiscovery(Premium)-løsningen i Microsoft 365.
+I denne artikel beskrives grænserne i Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365.
 
 ## <a name="case-and-review-set-limits"></a>Grænser for sags- og gennemgangssæt
 
@@ -68,7 +68,7 @@ I følgende tabel vises indekseringsgrænserne i eDiscovery (Premium).
 
 ## <a name="search-limits"></a>Søgegrænser
 
-De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger under [Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
+De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger [under Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|

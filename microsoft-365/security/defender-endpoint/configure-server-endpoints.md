@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1709597d10b140124501fd0dc7349e8fc4342bb6
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 14ec731eebe21f6b399e03d445fef248b8675026
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841745"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098752"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -174,6 +174,11 @@ Hvis du vil bruge en antimalwareløsning fra tredjepart, skal du køre Microsoft
 **Opdateringspakke til Microsoft Defender for Endpoint på Windows Server 2012 R2 og 2016**
 
 Hvis du vil modtage regelmæssige produktforbedringer og rettelser til komponenten Slutpunktsregistrering og -svar sensor, skal du sikre, at Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) anvendes eller godkendes. Hvis du vil holde beskyttelseskomponenterne opdaterede, skal du desuden se [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
+
+
+Hvis du bruger Windows Server Update Services (WSUS) og/eller Microsoft Endpoint Configuration Manager, er denne nye "Microsoft Defender for Endpoint opdatering til Slutpunktsregistrering og -svar  Sensor" er tilgængelig under kategorien "Microsoft Defender for Endpoint".
+
+
 
 ### <a name="onboarding-steps-summary"></a>Oversigt over onboardingtrin
 

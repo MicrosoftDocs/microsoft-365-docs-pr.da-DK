@@ -19,19 +19,19 @@ ms.custom: ''
 description: Få mere at vide om den rigtige måde at migrere fra beskyttelsestjenester eller enheder fra tredjepart, f.eks. Google Postini, Barracuda Spam og Virus Firewall, eller Cisco IronPort for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b00051effd6ee77fd29ba0a5a07ee27c9113a439
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 2f67135e2b8a3700a2fb6a6e24fc4f66696db2e3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704817"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098708"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Overfør fra en beskyttelsestjeneste eller enhed fra tredjepart til Microsoft Defender for Office 365
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
-Hvis du allerede har en eksisterende beskyttelsestjeneste eller enhed fra tredjepart, der er placeret foran Microsoft 365, kan du bruge denne vejledning til at migrere din beskyttelse til Microsoft Defender for Office 365 for at få fordelene ved en konsolideret ledelsesoplevelse, potentielt reducerede omkostninger (ved hjælp af produkter, du allerede betaler for) og et modent produkt med integreret sikkerhed  Beskyttelse. Du kan få flere oplysninger under [Microsoft Defender for Office](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
+Hvis du allerede har en eksisterende beskyttelsestjeneste eller enhed fra tredjepart, der er placeret foran Microsoft 365, kan du bruge denne vejledning til at migrere din beskyttelse til Microsoft Defender for Office 365 for at få fordelene ved en konsolideret ledelsesoplevelse, potentielt reducerede omkostninger (ved hjælp af produkter, du allerede betaler for) og et modent produkt med integreret sikkerhed  Beskyttelse. Du kan få flere oplysninger under [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
 
 Denne vejledning indeholder specifikke trin, der kan handles på, for din migrering og antager følgende fakta:
 
@@ -58,7 +58,7 @@ Overførselstrinnene på meget højt niveau er illustreret i følgende diagram. 
 I it-branchen er overraskelser generelt dårlige. Blot spejlvende dine MX-poster for at pege på Microsoft 365 uden forudgående og betænksom test vil resultere i mange overraskelser. Eksempel:
 
 - Du eller dine forgængere har sandsynligvis brugt en masse tid og kræfter på at tilpasse din eksisterende beskyttelsestjeneste til optimal levering af post (med andre ord blokere for, hvad der skal blokeres, og tillade, hvad der skal tillades). Det er næsten en garanteret sikkerhed, at det ikke er alle tilpasninger i din aktuelle beskyttelsestjeneste, der kræves i Defender for Office 365. Det er også meget muligt, at Defender for Office 365 vil introducere nye problemer (tillader eller blokerer), der ikke skete eller ikke var påkrævet i din aktuelle beskyttelsestjeneste.
-- Din helpdesk og sikkerhedsafdelingen skal vide, hvad de skal gøre i Defender for Office 365. Hvis en bruger f.eks. klager over en manglende meddelelse, ved din helpdesk så, hvor eller hvordan man leder efter den? De er sandsynligvis bekendt med værktøjerne i din eksisterende beskyttelsestjeneste, men hvad med værktøjerne i Defender for Office 365?
+- Din helpdesk og sikkerhedsafdelingen skal vide, hvad de skal gøre i Defender for Office 365. Hvis en bruger f.eks. klager over en manglende meddelelse, ved din helpdesk så, hvor eller hvordan man leder efter den? De kender sikkert værktøjerne i din eksisterende beskyttelsestjeneste, men hvad med værktøjerne i Defender for Office 365?
 
 Hvis du derimod følger trinnene i denne migreringsvejledning, får du følgende konkrete fordele for din migrering:
 
