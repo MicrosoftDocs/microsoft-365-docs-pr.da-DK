@@ -21,42 +21,42 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: 'Fjern en licens fra en delt postkasse for at tildele den til en anden bruger, eller returner licensen, så du ikke betaler for den. '
-ms.date: 05/11/2021
-ms.openlocfilehash: 6de6f213cc0df7a216122d55ef07e270586aea12
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: 'Fjern en licens fra en delt postkasse for at tildele den til en anden bruger eller returnere licensen, så du ikke betaler for den. '
+ms.date: 04/22/2022
+ms.openlocfilehash: 4445163281e403505612066285192b31adc44979
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599756"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091913"
 ---
-# <a name="remove-a-license-from-a-shared-mailbox"></a>Fjerne en licens fra en delt postkasse
+# <a name="remove-a-license-from-a-shared-mailbox"></a>Fjern en licens fra en delt postkasse
 
 Delte postkasser kræver normalt ikke en licens. Følg disse instruktioner for at fjerne en licens fra en delt postkasse, så du enten kan tildele den til en bruger eller returnere licensen, så du ikke betaler for en licens, du ikke har brug for.
 
 > [!NOTE]
 >
-> En Exchange Online Plan 2-licens er påkrævet i følgende scenarier:
+> Der kræves en Exchange Online Plan 2-licens i følgende scenarier:
 >
 > - Den delte postkasse har mere end 50 GB lagerplads i brug.
-> - Den delte postkasse anvender direkte arkivering.
-> - Den delte postkasse sættes i retslig venteposition.
-> - Den delte postkasse har fået tildelt Microsoft 365 Defender licens.
+> - Den delte postkasse bruger lokal arkivering.
+> - Den delte postkasse er sat i venteposition for tvister.
+> - Den delte postkasse har fået tildelt en Microsoft 365 Defender licens.
 > 
-> Du kan finde en trinvis vejledning i at tildele licenser i [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users). 
+> Du kan finde en trinvis vejledning i, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users). 
 
 
 ## <a name="remove-the-license"></a>Fjern licensen
 
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til **siden Aktive** \> brugere <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">for</a> brugere.
+1. I Administration skal du gå til siden **Brugere** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Aktive brugere</a> .
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
- 1. I Administration skal du gå til **siden Aktive** \> brugere <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">for</a> brugere.
+ 1. I Administration skal du gå til siden **Brugere** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">Aktive brugere</a> .
 
 ::: moniker-end
 
@@ -65,13 +65,13 @@ Delte postkasser kræver normalt ikke en licens. Følg disse instruktioner for a
   
 2. Vælg den delte postkasse.
 
-3. På fanen **Licenser og apps** skal du **udvide Licenser** og fjerne markeringen i afkrydsningsfeltet for den licens, du vil fjerne.
+3. Udvid **Licenser** under fanen **Licenser og apps**, og fjern markeringen i afkrydsningsfeltet for den licens, du vil fjerne.
 
 4. Vælg **Gem ændringer**.
 
-5. Når du vender tilbage **til siden Aktive** brugere, vil status for den delte postkasse være **Uden licens**.
+5. Når du vender tilbage til siden **Aktive brugere** , vil statussen for den delte postkasse være **Uden licens**.
 
-6. Du betaler stadig for licensen. Hvis du vil stoppe med at betale for [det, skal du fjerne licensen fra dit abonnement](../../commerce/licenses/buy-licenses.md).
+6. Du betaler stadig for licensen. Hvis du vil stoppe med at betale for det, skal [du fjerne licensen fra dit abonnement](../../commerce/licenses/buy-licenses.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
@@ -79,4 +79,4 @@ Delte postkasser kræver normalt ikke en licens. Følg disse instruktioner for a
 [Opret en delt postkasse](create-a-shared-mailbox.md) (artikel)\
 [Konfigurer en delt postkasse](configure-a-shared-mailbox.md) (artikel)\
 [Konvertér en brugerpostkasse til en delt postkasse](convert-user-mailbox-to-shared-mailbox.md) (artikel)\
-[Løse problemer med delte postkasser](resolve-issues-with-shared-mailboxes.md) (artikel)
+[Løs problemer med delte postkasser](resolve-issues-with-shared-mailboxes.md) (artikel)

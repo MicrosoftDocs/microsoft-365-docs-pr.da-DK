@@ -2,8 +2,8 @@
 title: Brug netværksupload til at importere PST-filer
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 103f940c-0468-4e1a-b527-cc8ad13a5ea6
 description: 'For administratorer: Få mere at vide om, hvordan du bruger netværksupload til masseimport af flere PST-filer til brugerpostkasser i Microsoft 365.'
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 10a0b2e076c3a8d4fc6910e16ba89c3ce75d2d2d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: cd025adb7100e6dff0d8cb97c195e851414afd81
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999800"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095416"
 ---
 # <a name="use-network-upload-to-import-your-organizations-pst-files-to-microsoft-365"></a>Brug netværksoverførsel til at importere din organisations PST-filer til Microsoft 365
 
@@ -37,7 +37,7 @@ Her er den trinvise vejledning, der kræves for at bruge netværksupload til mas
   
 [Trin 1: Kopiér SAS URL-adressen, og download AzCopy](#step-1-copy-the-sas-url-and-download-azcopy)
 
-[Trin 2: Overfør dine PST-filer til Microsoft 365](#step-2-upload-your-pst-files-to-microsoft-365)
+[Trin 2: Upload pst-filerne til Microsoft 365](#step-2-upload-your-pst-files-to-microsoft-365)
 
 [(Valgfrit) Trin 3: Få vist en liste over de PST-filer, der er overført](#optional-step-3-view-a-list-of-the-pst-files-uploaded-to-microsoft-365)
 
@@ -53,7 +53,7 @@ Du skal kun udføre trin 1 én gang for at importere PST-filer til Microsoft 365
   
 - Du skal have tildelt rollen Importér eksport af postkasse i Exchange Online for at oprette importjob på Microsoft Purview-overholdelsesportalen og importere PST-filer til brugerpostkasser. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration. Du kan også oprette en rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje dig selv som medlem. Du kan få flere oplysninger i afsnittene "Føj en rolle til en rollegruppe" eller "Opret en rollegruppe" i [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
 
-    Ud over rollen Importér eksport af postkasse skal du også have tildelt rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration i Exchange Online.
+    Ud over rollen Importér eksport af postkasse skal du også tildeles rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration i Exchange Online.
 
     > [!TIP]
     > Overvej at oprette en ny rollegruppe i Exchange Online, der er specifikt beregnet til import af PST-filer. Hvis du vil have det minimumsniveau af rettigheder, der kræves for at importere PST-filer, skal du tildele rollerne Importér eksport af postkasse og Postmodtagere til den nye rollegruppe og derefter tilføje medlemmer.
@@ -92,7 +92,7 @@ Det første trin er at downloade AzCopy-værktøjet, som er det værktøj, du k�
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på **Import** af **styring af oplysninger** \> i ruden til venstre på overholdelsesportalen.
+2. Klik på **Import** af **datalivscyklusstyring** \> i ruden til venstre på overholdelsesportalen.
 
     > [!NOTE]
     > Du skal have tildelt de nødvendige tilladelser for at få adgang til siden **Import** på overholdelsesportalen. Se afsnittet **Før du begynder for at få** flere oplysninger. 
@@ -103,9 +103,9 @@ Det første trin er at downloade AzCopy-værktøjet, som er det værktøj, du k�
 
 4. Skriv et navn til PST-importjobbet, og klik derefter på **Næste**. Brug små bogstaver, tal, bindestreger og understregningstegn. Du kan ikke bruge store bogstaver eller medtage mellemrum i navnet.
 
-5. På siden **Vil du overføre eller sende data? skal du** klikke på **Overfør dine data** og derefter klikke på **Næste**.
+5. På siden **Vil du overføre eller sende data? skal du** klikke **på Upload dine data** og derefter klikke på **Næste**.
 
-    ![Klik på Overfør dine data for at oprette et importjob til netværksupload.](../media/e59f9dc3-ccde-44ff-ac38-c4e39d76ae85.png)
+    ![Klik på Upload dataene for at oprette et importjob til netværksupload.](../media/e59f9dc3-ccde-44ff-ac38-c4e39d76ae85.png)
   
 6. Gør følgende to ting på siden **Importér data** :
 
@@ -118,7 +118,7 @@ Det første trin er at downloade AzCopy-værktøjet, som er det værktøj, du k�
    > [!NOTE]
    > Du kan lade **siden Importér data** være åben (hvis du skal kopiere SAS-URL-adressen igen) eller klikke på **Annuller** for at lukke den.
 
-## <a name="step-2-upload-your-pst-files-to-microsoft-365"></a>Trin 2: Overfør dine PST-filer til Microsoft 365
+## <a name="step-2-upload-your-pst-files-to-microsoft-365"></a>Trin 2: Upload pst-filerne til Microsoft 365
 
 Nu er du klar til at bruge AzCopy-værktøjet til at uploade PST-filer til Microsoft 365. Dette værktøj uploader og gemmer PST-filer på en Microsoft-leveret Azure Storage placering i Microsoft-cloudmiljøet. Som tidligere forklaret, er den Azure Storage placering, du uploader dine PST-filer til, placeret i det samme regionale Microsoft-datacenter, hvor din organisation er placeret. Pst-filerne skal være placeret på et filshare eller en filserver i din organisation eller på en Azure Storage placering, der administreres af din organisation, for at fuldføre dette trin. PST-lagringsplaceringen kaldes kildeplaceringen i denne procedure. Hver gang du kører azcopy-værktøjet, kan du angive en anden kildeplacering.
 
@@ -200,15 +200,15 @@ Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azu
 
 2. Start Microsoft Azure Storage Explorer.
 
-3. Klik på **Blob-objektbeholder** på siden **Vælg ressource** i dialogboksen **Opret forbindelse til Azure Storage**.
+3. Klik på **Blobobjektbeholder** på siden **Vælg ressource** i dialogboksen **Forbind til Azure Storage**.
   
 4. På siden **Vælg godkendelsesmetode** skal du vælge indstillingen **Delt adgangssignatur (SAS)** og derefter klikke på **Næste**.
 
 5. På siden **Angiv forbindelsesoplysninger** skal du indsætte den SAS URL-adresse, du fik i trin 1, i feltet under **SAS URL-adresse til Blob-objektbeholder** og derefter klikke på **Næste**. Når du har indsat SAS URL-adressen, udfyldes feltet under **Vist navn** automatisk med **data om indtagelse**.
 
-6. På siden **Oversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Opret forbindelse**.
+6. På siden **Oversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Forbind**.
 
-    Databeholderen **for dataindtagelse** åbnes. Den indeholder de PST-filer, du overførte i trin 2. Dataobjektbeholderen til **dataindtagelse** er placeret under **Lagerkonti** \> **(vedhæftede objektbeholdere)** \> **Blob-objektbeholdere**. 
+    Databeholderen **for dataindtagelse** åbnes. Den indeholder de PST-filer, du overførte i trin 2. Objektbeholderen **ingestiondata** er placeret under **Storage Konti** \> **(vedhæftede objektbeholdere)** \> **BLOB-objektbeholdere**. 
   
 7. Når du er færdig med at bruge Microsoft Azure Storage Explorer, skal du højreklikke på **data om indtagelse** og derefter klikke på **Fjern forbindelse** for at afbryde forbindelsen til dit Azure Storage område. Ellers får du vist en fejl, næste gang du forsøger at vedhæfte.
   
@@ -260,7 +260,7 @@ Det næste trin er at oprette PST-importjobbet i importtjenesten i Microsoft 365
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på Styring af oplysninger i venstre rude i overholdelsesportalen **> Importér**.
+2. I venstre rude på overholdelsesportalen skal du klikke på **Administration af datalivscyklus > Importér**.
 
 3. Klik på ![Tilføj ikon under fanen **Importér**.](../media/ITPro-EAC-AddIcon.gif) **Nyt importjob**.
 
@@ -269,7 +269,7 @@ Det næste trin er at oprette PST-importjobbet i importtjenesten i Microsoft 365
 
 4. Skriv et navn til PST-importjobbet, og klik derefter på **Næste**. Brug små bogstaver, tal, bindestreger og understregningstegn. Du kan ikke bruge store bogstaver eller medtage mellemrum i navnet.
 
-5. På siden **Vil du overføre eller sende data? skal du** klikke på **Overfør dine data** og derefter klikke på **Næste**.
+5. På siden **Vil du overføre eller sende data? skal du** klikke **på Upload dine data** og derefter klikke på **Næste**.
   
 6. I trin 4 på siden **Importér data** skal du klikke på afkrydsningsfelterne **Jeg er færdig med at overføre mine filer** , og **jeg har adgang til tilknytningsfilen** og derefter klikke på **Næste**.
 
@@ -364,7 +364,7 @@ Her er en illustration og beskrivelse af processen til netværksupload til impor
   
 1. **Download PST-importværktøjet og nøglen til privat Azure Storage placering:** Det første trin er at downloade kommandolinjeværktøjet AzCopy og en adgangsnøgle, der bruges til at uploade PST-filerne til en Azure Storage placering i Microsoft-cloudmiljøet. Du henter disse fra siden **Importér** på overholdelsesportalen. Nøglen (kaldet en SAS-nøgle (Secure Access Signature) giver dig de nødvendige tilladelser til at uploade PST-filer til en privat og sikker Azure Storage placering. Denne adgangsnøgle er unik for din organisation og hjælper med at forhindre uautoriseret adgang til dine PST-filer, når de er uploadet til Microsoft-cloudmiljøet. Import af PST-filer kræver ikke, at din organisation har et separat Azure-abonnement.
 
-2. **Overfør PST-filerne til den Azure Storage placering:** Næste trin er at bruge værktøjet azcopy.exe (downloadet i trin 1) til at uploade og gemme dine PST-filer på en Azure Storage placering, der er placeret i det samme regionale Microsoft-datacenter, hvor din organisation er placeret. Hvis du vil overføre dem, skal de PST-filer, du vil importere, være placeret i et filshare eller en filserver i din organisation.
+2. **Upload PST-filerne til den Azure Storage placering:** Næste trin er at bruge værktøjet azcopy.exe (downloadet i trin 1) til at uploade og gemme dine PST-filer på en Azure Storage placering, der er placeret i det samme regionale Microsoft-datacenter, hvor din organisation er placeret. Hvis du vil overføre dem, skal de PST-filer, du vil importere, være placeret i et filshare eller en filserver i din organisation.
 
     Der er et valgfrit trin, som du kan udføre for at få vist listen over PST-filer, når de er uploadet til Azure Storage placering.
 

@@ -2,8 +2,8 @@
 title: Foretag fejlfinding af AzCopy i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -19,26 +19,26 @@ description: Foretag fejlfinding af fejl i Azure AzCopy ved indlæsning af data,
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: ff8f69e6efeab3e0f0e9d8ee2f739caaa40d7c85
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 85d51e7ecb59f8423f0a509725c6a1c1defd3adf
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991792"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092321"
 ---
 # <a name="troubleshoot-azcopy-in-ediscovery-premium"></a>Foretag fejlfinding af AzCopy i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du indlæser ikke-Microsoft 365 data eller dokumenter til fejlafhjælpning i Microsoft Purview eDiscovery (Premium), leverer brugergrænsefladen en Azure AzCopy-kommando, der indeholder parametre med placeringen af, hvor de filer, du vil overføre, gemmes, og den Azure Storage-placering, som filerne overføres til. Hvis du vil overføre dine dokumenter, skal du kopiere denne kommando og derefter køre den i en kommandoprompt på din lokale computer.  På følgende skærmbillede vises et eksempel på en AzCopy-kommando:
+Når du indlæser ikke-Microsoft 365 data eller dokumenter til fejlafhjælpning i Microsoft Purview eDiscovery (Premium), leverer brugergrænsefladen en Azure AzCopy-kommando, der indeholder parametre med placeringen af, hvor de filer, du vil overføre, gemmes, og den Azure-lagerplacering, som filerne overføres til. Hvis du vil overføre dine dokumenter, skal du kopiere denne kommando og derefter køre den i en kommandoprompt på din lokale computer.  På følgende skærmbillede vises et eksempel på en AzCopy-kommando:
 
-![Overfør filer, der ikke er Microsoft 365.](../media/46ba68f6-af11-4e70-bb91-5fc7973516e3.png)
+![Upload filer, der ikke er Microsoft 365.](../media/46ba68f6-af11-4e70-bb91-5fc7973516e3.png)
 
 Normalt fungerer den kommando, der er angivet, når du kører den. Der kan dog være tilfælde, hvor den viste kommando ikke kan køres korrekt. Her er nogle mulige årsager.
 
 ## <a name="the-supported-version-of-azcopy-isnt-installed-on-the-local-computer"></a>Den understøttede version af AzCopy er ikke installeret på den lokale computer
 
-På nuværende tidspunkt skal du bruge AzCopy v8.1 til at indlæse ikke-Microsoft 365 data i eDiscovery (Premium). Kommandoen AzCopy, der vises på siden **Overfør filer** , som vises på det forrige skærmbillede, returnerer en fejl, hvis du ikke bruger AzCopy v8.1. Hvis du vil installere denne version, skal du se [Overfør data med AzCopy v8.1 på Windows](/previous-versions/azure/storage/storage-use-azcopy).
+På nuværende tidspunkt skal du bruge AzCopy v8.1 til at indlæse ikke-Microsoft 365 data i eDiscovery (Premium). Kommandoen AzCopy, der vises på siden **Upload filer**, som vises på det forrige skærmbillede, returnerer en fejl, hvis du ikke bruger AzCopy v8.1. Hvis du vil installere denne version, skal du se [Overfør data med AzCopy v8.1 på Windows](/previous-versions/azure/storage/storage-use-azcopy).
 
 ## <a name="azcopy-isnt-installed-on-the-local-computer-or-its-not-installed-in-the-default-location"></a>AzCopy er ikke installeret på den lokale computer, eller den er ikke installeret på standardplaceringen
 

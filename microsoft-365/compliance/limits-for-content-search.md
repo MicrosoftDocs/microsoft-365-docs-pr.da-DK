@@ -2,8 +2,8 @@
 title: Grænser for indholdssøgning og eDiscovery (Standard) i Overholdelsescenter
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: Få mere at vide om de grænser, der gælder for funktionerne til indholdssøgning og eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 8cba04c7ed3257d5a168d7754b2964eb4aa97b0d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 030e4dd16e2b24504632947a336b244a945813ff
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999036"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091715"
 ---
 # <a name="limits-for-ediscovery-search"></a>Grænser for eDiscovery-søgning
 
@@ -30,7 +30,7 @@ ms.locfileid: "64999036"
 
 Der anvendes forskellige grænser for eDiscovery-søgeværktøjer på Microsoft Purview-overholdelsesportalen. Dette omfatter søgninger, der kører på **indholdssøgesiden**, og søgninger, der er knyttet til en eDiscovery-sag på siden **eDiscovery (Standard).** Disse grænser hjælper med at opretholde sundhed og kvalitet af tjenester, der leveres til organisationer. Der er også grænser for indeksering af mails i Exchange Online til søgning. Du kan ikke ændre grænserne for eDiscovery-søgninger eller mailindeksering, men du skal være opmærksom på dem, så du kan tage disse begrænsninger i betragtning, når du planlægger, kører og foretager fejlfinding af eDiscovery-søgninger.
 
-Du kan finde begrænsninger, der er relateret til Værktøjet Microsoft Purview eDiscovery (Premium), [under Grænser i eDiscovery (Premium)](limits-ediscovery20.md)
+Du kan finde begrænsninger, der er relateret til værktøjet Microsoft Purview eDiscovery (Premium), [under Grænser i eDiscovery (Premium)](limits-ediscovery20.md)
 
 ## <a name="search-limits"></a>Søgegrænser
 
@@ -144,7 +144,7 @@ Du kan finde oplysninger om indholdssøgninger i:
 
 - [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md)
 
-Hvis du vil se sagsgrænser, der er relateret til eDiscovery (Standard) og eDiscovery (Premium), skal du se:
+Du kan finde sagsgrænser, der er relateret til eDiscovery (Standard) og eDiscovery (Premium), i:
 
 - [Grænser i eDiscovery (Standard)](limits-core-ediscovery.md)
 

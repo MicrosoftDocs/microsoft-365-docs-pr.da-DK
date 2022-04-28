@@ -4,11 +4,11 @@ f1.keywords:
 - NOCSH
 ms.author: twerner
 author: twerner
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -25,36 +25,36 @@ search.appverid:
 - MET150
 - MOE150
 description: Del filer og videoer i din kampagne med Microsoft Teams og SharePoint.
-ms.openlocfilehash: fa76261377f4ae52a53a4ff2375afc670086a449
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 5c371dea1c1e9d5768743072052825f0810938b9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63593699"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095116"
 ---
 # <a name="share-files-and-videos"></a>Del filer og videoer
 
-Når du har brug for at kontrollere, hvem der kan se, og hvem der kan redigere dine filer, skal du gemme filerne på et sikkert sted, hvor du kan sikre dig, at tilladelserne anvendes korrekt. Du kan bruge Microsoft Teams til at gemme dine filer og derefter dele filerne enten i eller uden for din virksomhed, praksis eller kampagne ved hjælp af Microsoft Teams eller ved at sende SharePoint links. Hvis du sender et link i stedet for en vedhæftet fil i en mail, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden din tilladelse.
+En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af organisationen styrer, hvem der kan få vist og redigere filer, og at de er gemt på et sikkert sted med de korrekte tilladelser anvendt. Brugerne kan bruge Microsoft Teams til at gemme filer og derefter dele filerne enten i eller uden for virksomheden, øvelsen eller kampagnen ved hjælp af Microsoft Teams eller ved at sende SharePoint links. Hvis du sender et link i stedet for en vedhæftet fil, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden tilladelse.
 
-![Diagram over et Microsoft Teams, der viser fanen Filer og Hent link i menuen.](../media/m365-democracy-teams-sharefiles.png)
+![Diagram over et Microsoft Teams vindue, der viser fanen Filer og linket Hent i menuen.](../media/m365-democracy-teams-sharefiles.png)
 
-Når dine filer er Microsoft Teams og SharePoint, kan I også arbejde sammen på filerne og gennemgå hinandens ændringer. Brug Microsoft Teams til at dele filer i en virksomhed, øvelse eller kampagne. Hvis du har brug for at dele eksternt med personer uden for organisationen, kan du føje dem som gæster til et team eller sende dem et sikkert SharePoint linket.
+Med filer i Microsoft Teams og SharePoint kan filer også arbejdes på og gennemses sammen, endda spore ændringer efter behov. I Teams deles filer i en virksomhed, en praksis eller en kampagne. Hvis du har brug for at dele dem eksternt med personer uden for din organisation, kan du føje dem som gæster til et team eller sende dem et sikkert SharePoint link.
 
-Du kan også bruge Microsoft Stream til at gemme og dele videoer internt. Disse videoer er ikke tilgængelige for offentligheden, så de er ideelle til interne kampagnemeddelelser.
+Du kan også bruge Microsoft Stream til at gemme og dele videoer internt. Disse videoer kan ikke ses af offentligheden, så de er ideelle til interne firma- eller kampagnebeskeder.
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 
-Brug disse metoder til at dele filer og videoer sikkert:
+Sørg for, at brugerne bruger disse metoder til at dele filer og videoer sikkert:
 
-1. Store filer i Microsoft Teams eller SharePoint, og sørg for, at kun de personer, der skal have adgang til disse filer, har dem.
-2. Når du vil dele, skal du ikke vedhæfte filer til en mail. I stedet skal **du vælge Hent link** Microsoft Teams en SharePoint og sende linket i en mail.
-3. Hvis du vil dele en fil eksternt, skal du tilføje brugeren som gæst i dit team eller bruge SharePoint til at få et sikkert link til at dele netop den pågældende fil.
-4. Brug Microsoft Stream til at hoste videoer, du vil have, at din kampagne skal se.
-5. Brug Microsoft Teams eller SharePoint til at gemme videofiler, som du har brug for, at dit team samarbejder om eller deler.
+1. Store filer i Microsoft Teams eller SharePoint, og sørg for, at kun de personer, der har brug for adgang til disse filer, har dem.
+2. Når du vil dele, skal du ikke vedhæfte filer til en mail. Vælg i stedet **Hent link** fra Microsoft Teams eller SharePoint, og send linket i en mail.
+3. Hvis du vil dele en fil eksternt, skal du føje brugeren som gæst til dit team eller bruge SharePoint til at få et sikkert link til kun at dele denne fil.
+4. Brug Microsoft Stream til at hoste videoer, som din kampagne skal se.
+5. Brug Microsoft Teams eller SharePoint til at gemme videofiler, som dit team skal samarbejde om eller dele.
 
-## <a name="set-up"></a>Konfigurer
+## <a name="set-up"></a>Oprette
 
-Hvis du vil oprette et team og føje gæster, f.eks. annoncører eller partnere, til det, skal du følge disse trin.
+Medlemmer af organisationen kan oprette et team og føje gæster som annoncører eller finansieringspartnere til det ved hjælp af følgende trin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FQMp]
 
@@ -66,6 +66,11 @@ Følg disse trin for at oprette og dele videoer.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWrv0F]
 
-Download en infografik i [PDF-format](https://go.microsoft.com/fwlink/?linkid=2079435) [eller PowerPoint for](https://go.microsoft.com/fwlink/?linkid=2079438) at få et hurtigt overblik over, hvordan du deler dine filer.
+Download en infografik i [PDF](https://go.microsoft.com/fwlink/?linkid=2079435) eller [PowerPoint](https://go.microsoft.com/fwlink/?linkid=2079438) for at få et hurtigt overblik over, hvordan du kan dele dine filer.
 
 [![En illustration af deling af filer med forskellige brugere.](../media/ShareYourfiles-thumb-358x201.png)](https://go.microsoft.com/fwlink/?linkid=2079435)
+
+## <a name="next-objective"></a>Næste mål
+
+Når dette mål er fuldført, [skal du oprette et kommunikationswebsted](create-communications-site.md) for dit team.
+

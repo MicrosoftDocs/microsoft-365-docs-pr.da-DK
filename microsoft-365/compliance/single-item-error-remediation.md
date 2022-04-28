@@ -2,8 +2,8 @@
 title: Afhjælpning af fejl med et enkelt element
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,15 +15,15 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Du kan rette en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
-ms.openlocfilehash: d3b90f0f2d396b6304bb85b46bc5b018802101eb
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Du kan løse en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
+ms.openlocfilehash: e8ace66eefadf5ce959bc01150ba21e232429131
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993990"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092343"
 ---
-# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i enkelt element i eDiscovery (Premium)
+# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i et enkelt element i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 

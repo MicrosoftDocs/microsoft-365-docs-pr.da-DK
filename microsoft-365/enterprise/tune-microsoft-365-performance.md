@@ -1,8 +1,8 @@
 ---
-title: Finjustere ydeevnen Microsoft 365 finjustere ydeevnen
+title: Finjuster ydeevnen for Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 04/09/2019
 audience: Admin
 ms.topic: troubleshooting
@@ -16,22 +16,22 @@ search.appverid:
 - MET150
 - BCS160
 ms.assetid: fce71911-5c54-455d-b937-1b5a0b674620
-description: Links til kurser, blogs, artikler og andre ressourcer, der fortæller dig, hvordan du forbedrer ydeevnen for Microsoft 365.
-ms.openlocfilehash: 7d9fe9c1a5725eba59d6ef13eaeb4f2f15d9c8a9
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Links til kurser, blogs, artikler og andre ressourcer, der fortæller dig, hvordan du kan forbedre ydeevnen af Microsoft 365.
+ms.openlocfilehash: ede2c6ff63ad0525448a61b14d6dd18ac77f1d65
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63591598"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091979"
 ---
-# <a name="tune-microsoft-365-performance"></a>Finjustere ydeevnen Microsoft 365 finjustere ydeevnen
+# <a name="tune-microsoft-365-performance"></a>Finjuster ydeevnen for Microsoft 365
 
-Denne artikel indeholder links til kurser, blogs, artikler og andre ressourcer, der fortæller dig, hvordan du forbedrer ydeevnen Microsoft 365.
+Denne artikel indeholder links til kurser, blogs, artikler og andre ressourcer, der fortæller dig, hvordan du kan forbedre ydeevnen af Microsoft 365.
   
-Denne artikel er en del af [Netværksplanlægning og justering af ydeevnen for Microsoft 365](./network-planning-and-performance.md) projekt.
+Denne artikel er en del af [projektet Netværksplanlægning og justering af ydeevne for Microsoft 365](./network-planning-and-performance.md).
 
-## <a name="articles-about-fine-tuning-microsoft-365-and-office-365-performance"></a>Artikler om finjustering af Microsoft 365 og Office 365 ydeevne
+## <a name="articles-about-fine-tuning-microsoft-365-and-office-365-performance"></a>Artikler om finjustering af ydeevnen for Microsoft 365 og Office 365
 
-Se nærmere på de [10 vigtigste tip](/archive/blogs/onthewire/top-10-tips-for-optimising-troubleshooting-your-office-365-network-connectivity) til optimering og fejlfinding af din Office 365 af Paul Collinge.
+Se de [ti bedste tip til optimering og fejlfinding af din Office 365 netværksforbindelse](/archive/blogs/onthewire/top-10-tips-for-optimising-troubleshooting-your-office-365-network-connectivity) af Paul Collinge.
   
-Du kan finde oplysninger om brug af netværksadresseoversættelse med Microsoft 365 [under NAT-understøttelse Microsoft 365](nat-support-with-microsoft-365.md).
+Du kan finde oplysninger om brug af netværksadresseoversættelse med Microsoft 365 under [NAT-understøttelse med Microsoft 365](nat-support-with-microsoft-365.md).

@@ -2,7 +2,7 @@
 title: Få vist licenserede og ikke-licenserede Microsoft 365 brugere med PowerShell
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/21/2020
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
 description: I denne artikel forklares det, hvordan du bruger PowerShell til at få vist licenserede og ikke-licenserede Microsoft 365 brugerkonti.
-ms.openlocfilehash: 1be54b20d3b50985fea8eb665a1b6098a26aa703
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 65dcc8e397f9ad56679b880f50caa99a51e4a4c5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823625"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095526"
 ---
 # <a name="view-licensed-and-unlicensed-microsoft-365-users-with-powershell"></a>Få vist licenserede og ikke-licenserede Microsoft 365 brugere med PowerShell
 

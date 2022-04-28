@@ -2,8 +2,8 @@
 title: Brug indholdssøgning til at søge efter importerede data fra tredjepart
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ec2677ff-c4d7-4363-a9e7-22c80e015688
 description: Brug eDiscovery-værktøjet til indholdssøgning til at søge efter elementer, der er importeret til postkasser i Microsoft 365 fra en datakilde fra en tredjepart, ved at oprette forespørgsler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9a6a7bcdf0cbd7f14e20cc8400e5d834dc7da0a1
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 73967c8897ee0fd5143b8e15dfe8874fc0c85755
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000900"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095394"
 ---
 # <a name="use-content-search-to-search-third-party-data-imported-by-a-custom-partner-connector"></a>Brug indholdssøgning til at søge efter tredjepartsdata, der er importeret af en brugerdefineret partnerconnector
 
@@ -90,9 +90,9 @@ I følgende tabel vises de datatyper fra tredjepart, som du kan søge efter, og 
 |Cisco IM-tilstedeværelsesserver &amp;  <br/> | `ipm.externaldata.Jabber.IM` <br/> |
 |Cisco Jabber  <br/> | `ipm.externaldata.Jabber*` <br/> |
 |CipherCloud til Salesforce Chatter  <br/> | `ipm.externaldata.Chatter.Post` <br/>  `ipm.externaldata.Chatter.Comment` <br/> |
-|Direkte forbindelse  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
+|Direkte Forbind  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
 |Facebook  <br/> | `ipm.externaldata.Facebook*` <br/> |
-|Fasttrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
+|FastTrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
 |FXConnect  <br/> | `ipm.externaldata.FXConnect.chat` <br/> |
 |Flickr  <br/> | `ipm.externaldata.Flickr*` <br/> |
 |Gnutella  <br/> | `ipm.externaldata.Gnutella*` <br/> |

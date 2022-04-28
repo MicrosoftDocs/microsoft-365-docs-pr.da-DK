@@ -2,8 +2,8 @@
 title: Brug eDiscovery-eksportværktøjet i Microsoft Edge
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: how-to
@@ -12,21 +12,21 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Du skal aktivere ClickOnce-understøttelse for at bruge den nyeste version af Microsoft Edge til at downloade søgeresultater fra Indholdssøgning og eDiscovery i sikkerheds- og overholdelsescenteret.
-ms.openlocfilehash: cd20a35a0a6ee2518667d21fadbca4577342de36
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+description: Du skal aktivere ClickOnce support for at bruge den nyeste version af Microsoft Edge til at downloade søgeresultater fra Indholdssøgning og eDiscovery i Security and Compliance Center.
+ms.openlocfilehash: 13556b08a0eaec5ed11bdaf09014a3988cd56829
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995772"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092431"
 ---
 # <a name="use-the-ediscovery-export-tool-in-microsoft-edge"></a>Brug eDiscovery-eksportværktøjet i Microsoft Edge
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Som følge af de seneste ændringer af den nyeste version af Microsoft Edge er ClickOnce-understøttelse ikke længere aktiveret som standard. Hvis du vil fortsætte med at bruge eDiscovery-eksportværktøjet til at downloade indholdssøgning eller eDiscovery-søgeresultater, skal du enten bruge [Microsoft Internet Explorer](https://support.microsoft.com/help/17621/internet-explorer-downloads) eller aktivere Understøttelse af ClickOnce i den nyeste version af Microsoft Edge.
+Som følge af de seneste ændringer af den nyeste version af Microsoft Edge er understøttelse af ClickOnce ikke længere aktiveret som standard. Hvis du vil fortsætte med at bruge eDiscovery-eksportværktøjet til at downloade indholdssøgning eller eDiscovery-søgeresultater, skal du enten bruge [Microsoft Internet Explorer](https://support.microsoft.com/help/17621/internet-explorer-downloads) eller aktivere ClickOnce support i den nyeste version af Microsoft Edge.
 
-## <a name="enable-clickonce-support-in-microsoft-edge"></a>Aktivér Understøttelse af ClickOnce i Microsoft Edge
+## <a name="enable-clickonce-support-in-microsoft-edge"></a>Aktivér understøttelse af ClickOnce i Microsoft Edge
 
 1. I Microsoft Edge skal du gå til **edge://flags/#edge-click-once**.
 
@@ -38,7 +38,7 @@ Som følge af de seneste ændringer af den nyeste version af Microsoft Edge er C
 
    ![Klik på Genstart.](../media/ClickOnceimage2.png)
 
-**Bemærk:** Organisationer kan bruge Gruppepolitik til at deaktivere ClickOnce-support. Hvis du vil kontrollere, om der er en organisationspolitik for ClickOnce-support, skal du gå til **edge://policy**. På følgende skærmbillede kan du se, at ClickOnce er aktiveret på tværs af hele organisationen. Hvis denne politikværdi er angivet til **falsk**, skal du kontakte en administrator i din organisation.
+**Bemærk:** Organisationer kan bruge Gruppepolitik til at deaktivere ClickOnce support. Hvis du vil kontrollere, om der er en organisationspolitik for ClickOnce support, skal du gå til **edge://policy**. På følgende skærmbillede kan du se, at ClickOnce er aktiveret på tværs af hele organisationen. Hvis denne politikværdi er angivet til **falsk**, skal du kontakte en administrator i din organisation.
 
 ![Liste over Edge-organisatoriske politikker.](../media/ClickOnceimage3.png)
 

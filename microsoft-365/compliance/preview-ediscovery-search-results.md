@@ -2,8 +2,8 @@
 title: Vis resultaterne af en eDiscovery-søgning
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få vist et eksempel på de resultater, der returneres af en indholdssøgning eller en eDiscovery-søgning (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 3397b82f088f9aff480b6893edbf7aa664d91dc4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: acbfebc5935666299dc6a717d70f9c426a6d61cd
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999008"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099625"
 ---
 # <a name="preview-ediscovery-search-results"></a>Eksportér søgeresultater fra eDiscovery
 

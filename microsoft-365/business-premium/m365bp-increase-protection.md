@@ -1,14 +1,14 @@
 ---
-title: Forøg trusselsbeskyttelse til Microsoft 365 Business Premium
+title: Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: Skjerland
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -25,286 +25,191 @@ search.appverid:
 - BCS160
 - MET150
 description: Få hjælp til at øge beskyttelsesniveauet i Microsoft 365 Business Premium
-ms.openlocfilehash: e8d1b010f18e595e0ea7c17caf94ca8d89eb0f47
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c653e4f84ad3f4dd537ab82382e8a57da7d2876e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704995"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099893"
 ---
-# <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Forøg trusselsbeskyttelse til Microsoft 365 Business Premium
+# <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 
-Denne artikel hjælper dig med at øge beskyttelsen i dit Microsoft 365-abonnement for at beskytte dig mod phishing, malware og andre trusler. Disse anbefalinger er relevante for organisationer med et øget behov for sikkerhed, f.eks. politiske kampagner, advokatkontorer og sundhedsplejeafdelinger.
+I dette mål øger du din trusselsbeskyttelse med Microsoft 365 Business Premium. Det er vigtigt at beskytte din virksomhed mod phishing, malware og andre trusler. Denne målsætning indeholder oplysninger om:
 
-Før du begynder, skal du kontrollere din Microsoft Secure Score. Microsoft Secure Score analyserer din organisations sikkerhed baseret på dine almindelige aktiviteter og sikkerhedsindstillinger og tildeler en score. Start med at notere dit aktuelle resultat. Hvis du gør det, der anbefales i denne artikel, øges din score. Målet er ikke at opnå det højeste antal point, men at være opmærksom på muligheder for at beskytte dit miljø, der ikke påvirker produktiviteten for dine brugere negativt.
+- [Forudindstillede sikkerhedspolitikker](#review-and-apply-preset-security-policies) , der kan spare meget tid i forbindelse med konfiguration og konfiguration
+- [Brugerdefinerede sikkerhedspolitikker](#create-custom-security-policies) , som du kan definere, så de passer til dine forretningsbehov
+- [Sådan justerer du dine delingsindstillinger for SharePoint og OneDrive filer og mapper](#set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders)
+- [Advarselspolitikker](#review-your-alert-policies) , der overvåger bestemte filer, og hvordan de bruges. 
 
-Du kan finde flere oplysninger [i Microsoft Secure Score](../security/defender/microsoft-secure-score.md).
+## <a name="review-and-apply-preset-security-policies"></a>Gennemse og anvend forudindstillede sikkerhedspolitikker
 
-## <a name="raise-the-level-of-protection-against-malware-in-mail"></a>Hæve beskyttelsesniveauet mod malware i mail
+Dit abonnement indeholder [forudindstillede sikkerhedspolitikker](../security/office-365-security/preset-security-policies.md) , der bruger anbefalede indstillinger til beskyttelse mod spam, antimalware og anti-phishing. Indbygget beskyttelse er som standard aktiveret. Overvej dog at anvende standard- eller streng beskyttelse for øget sikkerhed. 
 
-Dit Office 365 eller Microsoft 365-miljø omfatter beskyttelse mod malware, men du kan øge denne beskyttelse ved at blokere vedhæftede filer med filtyper, der ofte bruges til malware. Sådan får du en bedre beskyttelse mod malware i en mail:
+:::image type="content" source="media/m365bp-presetsecuritypolicies.png" alt-text="Skærmbillede af forudindstillede sikkerhedspolitikker.":::
 
-1. Gå til Office 365 <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Security & Compliance Center</a>, og log på med legitimationsoplysningerne til din administratorkonto.
+> [!NOTE]
+> Forudindstillede sikkerhedspolitikker er ikke det samme som [sikkerhedsstandarder](m365bp-conditional-access.md#security-defaults). Du bruger typisk *enten* sikkerhedsstandarder *eller* [Betinget adgang](m365bp-conditional-access.md#conditional-access) først, og derefter skal du tilføje dine sikkerhedspolitikker. [Forudindstillede sikkerhedspolitikker](#what-are-preset-security-policies) forenkler processen med at tilføje dine sikkerhedspolitikker. Du kan også [tilføje dine egne brugerdefinerede politikker](#create-custom-security-policies). 
 
-2. I venstre navigationsrude under **Trusselsstyring skal** du vælge **Antimalwarepolitik**\>.
+### <a name="what-are-preset-security-policies"></a>Hvad er forudindstillede sikkerhedspolitikker?
 
-3. Dobbeltklik på standardpolitikken for at redigere denne politik for hele virksomheden.
+Forudindstillede sikkerhedspolitikker beskytter dit mail- og samarbejdsindhold. Disse politikker består af:
 
-4. Klik **Indstillinger**.
+- *Profiler*, der bestemmer beskyttelsesniveauet
+- *Politikker* (f.eks. spam, antimalware, anti-phishing, spoof-indstillinger, repræsentation, Pengeskab vedhæftede filer og Pengeskab links)
+- *Politikindstillinger* (f.eks. grupper, brugere eller domæner for at modtage politikkerne og eventuelle undtagelser)
 
-5. Under **Filter for almindelige typer af vedhæftede** filer skal du **vælge Til**. De filtyper, der blokeres, vises i vinduet direkte under dette kontrolelement. Sørg for, at du tilføjer disse filtyper:
+I følgende tabel opsummeres beskyttelsesniveauer og forudindstillede politiktyper.
 
-   `ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif`
+| Beskyttelsesniveau | Beskrivelse |
+|:---|:---|
+| **Standardbeskyttelse** <br/>(*anbefales til de fleste virksomheder*) | Standardbeskyttelse bruger en grundlinjeprofil, der passer til de fleste brugere. Standardbeskyttelse omfatter anti-spam, anti-malware, anti-phishing, spoof-indstillinger, repræsentationsindstillinger, Pengeskab links og Pengeskab politikker for vedhæftede filer.  |
+| **Streng beskyttelse**  | Streng beskyttelse omfatter de samme typer politikker som standardbeskyttelse, men med strengere indstillinger. Hvis din virksomhed skal opfylde yderligere sikkerhedskrav eller -bestemmelser, kan du overveje at anvende streng beskyttelse for mindst dine prioriterede brugere eller mål med høj værdi. |
+| **Indbygget beskyttelse** | Beskytter mod skadelige links og vedhæftede filer i mails. Indbygget beskyttelse er aktiveret og anvendt på alle brugere som standard.  |
 
-   Du kan tilføje eller slette filtyper senere, hvis det er nødvendigt.
+> [!TIP]
+> Du kan angive de brugere, grupper og domæner, der skal modtage forudindstillede politikker, og du kan definere visse undtagelser, men du kan ikke selv ændre de forudindstillede politikker. Hvis du vil bruge forskellige indstillinger for dine sikkerhedspolitikker, kan du oprette dine egne brugerdefinerede politikker, så de passer til din virksomheds behov.
 
-6. Klik **på Gem.**
+### <a name="policy-order-of-priority"></a>Prioritetsrækkefølge for politik
 
-Få mere at vide under [Beskyttelse mod malware i EOP](../security/office-365-security/anti-malware-protection.md).
+Hvis brugere tildeles flere politikker, bruges en prioritetsrækkefølge til at anvende politikkerne. Prioritetsrækkefølgen fungerer på følgende måde:
 
-## <a name="protect-against-ransomware"></a>Beskyt dig mod ransomware
+1. **Streng beskyttelse** får den højeste prioritet og tilsidesætter alle andre politikker.
 
-Ransomware begrænser adgangen til data ved at kryptere filer eller låse computerskærme. Det forsøger derefter at afpresse penge fra det, der er brug for, ved at bede om "ekstra penge", som regel i form af f.eks. Bitcoin, til at få adgang til data.
+2. **Standardbeskyttelse** 
 
-Du kan beskytte mod ransomware ved at oprette en eller flere regler for mailflow for at blokere filtypenavne, der ofte bruges til ransomware (disse blev tilføjet i et højere niveau af beskyttelse mod [malware i mailtrin](#raise-the-level-of-protection-against-malware-in-mail) ), eller for at advare brugere, der modtager disse vedhæftede filer i en mail.
+3. **Brugerdefinerede sikkerhedspolitikker**
 
-Ud over de filer, du blokerede i forrige trin, er det også god praksis at oprette en regel for at advare brugerne, før du åbner Office vedhæftede filer, der indeholder makroer. Ransomware kan være skjult i makroer, så advar brugerne, så de ikke bør åbne disse filer fra personer, de ikke kender.
+4. **Indbygget beskyttelse** får den laveste prioritet og tilsidesættes af streng beskyttelse, standardbeskyttelse og brugerdefinerede politikker.
 
-Sådan oprettes en posttrafikregel:
+Streng beskyttelse tilsidesætter alle andre politikker, og indbygget beskyttelse tilsidesættes af de andre politikker. 
 
-1. Gå til Administration på , <https://admin.microsoft.com> og vælg **Exchange** \> **.**
+Hvis du vil vide mere om forudindstillede sikkerhedspolitikker, skal du se [Hvad forudindstillede sikkerhedspolitikker er lavet af](../security/office-365-security/preset-security-policies.md#what-preset-security-policies-are-made-of).
 
-2. Klik på **Regler i** kategorien **Mailflow**.
+### <a name="how-do-i-assign-preset-security-policies-to-users"></a>Hvordan gør jeg tildele forudindstillede sikkerhedspolitikker til brugere?
 
-3. Klik **+** på , og klik derefter **på Opret en ny regel**.
+> [!IMPORTANT]
+> Før du begynder, skal du sørge for, at du har en af følgende roller tildelt i Exchange Online (som er inkluderet i dit abonnement):
+> 
+> - Global administrator
+> - Organisationsadministration
+> - Sikkerhedsadministrator
+> 
+> Du kan få mere at vide [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo) og [Om administratorroller](../admin/add-users/about-admin-roles.md).
 
-4. Klik **på Flere** indstillinger nederst i dialogboksen for at få vist alle indstillinger.
+Hvis du vil tildele forudindstillede sikkerhedspolitikker, skal du følge disse trin:
 
-5. Anvend indstillingerne i følgende tabel for reglen. Lad resten af indstillingerne være som standard, medmindre du vil ændre dem.
+1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-6. Klik på **Gem**.
+2. Gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Forudindstillede sikkerhedspolitikker** i afsnittet **Skabelonpolitikker** . Hvis du vil gå direkte til siden **Forudindstillede sikkerhedspolitikker** , skal du bruge <https://security.microsoft.com/presetSecurityPolicies>.
 
-|Indstilling|Advar brugerne, før du åbner vedhæftede filer Office filer|
-|---|---|
-|Navn|Regel for anti-ransomware: advar brugere|
-|Anvend denne regel, hvis . . .|Enhver vedhæftet fil . . . filtypenavnet svarer til . . .|
-|Angiv ord eller udtryk|Tilføj disse filtyper: <br/> `dotm, docm, xlsm, sltm, xla, xlam, xll, pptm, potm, ppam, ppsm, sldm`|
-|Gør følgende. . .|Give modtageren besked med en meddelelse|
-|Angiv meddelelsestekst|Du skal ikke åbne disse filtyper fra personer, du ikke kender, da de kan indeholde makroer med skadelig kode.|
+2. På siden **Forudindstillede sikkerhedspolitikker** skal du enten i afsnittet **Standardbeskyttelse** eller **Streng beskyttelse** ændre til/fra-knappen fra **Deaktiveret** til **Aktiveret** og derefter vælge **Administrer**.
 
-Du kan finde flere oplysninger under:
+3. Guiden **Anvend standardbeskyttelse** eller **Anvend streng beskyttelse** starter i et pop op-vindue. På **EOP-beskyttelsen gælder for siden skal** du identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser):
+   - **Brugere**
+   - **Grupper**
+   - **Domæner**
 
-- [Ransomware: Sådan reducerer du risikoen](https://www.microsoft.com/security/blog/2020/04/28/ransomware-groups-continue-to-target-healthcare-critical-services-heres-how-to-reduce-risk/)
+   Klik i det relevante felt, begynd at skrive en værdi, og vælg derefter den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du vælge ikonet **Fjern** ud for værdien.
 
-- [Gendan dine OneDrive](https://support.microsoft.com//office/fa231298-759d-41cf-bcd0-25ac53eb8a15)
+   For brugere eller grupper kan du bruge de fleste identifikatorer (navn, vist navn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du skrive en stjerne (\*) alene for at se alle tilgængelige værdier.
 
-## <a name="stop-auto-forwarding-for-email"></a>Stop automatisk videresendelse for mail
+   Hvis du vil angive en udeladelse, skal du markere afkrydsningsfeltet **Udelad disse brugere, grupper og domæner** og derefter angive brugere, grupper eller domæner, der skal udelades.
 
-Hackere, der får adgang til en brugers postkasse, kan stjæle din mail ved at indstille postkassen til automatisk at videresende mails. Dette kan ske, selv uden brugerens opmærksomhed. Du kan forhindre dette ved at konfigurere en regel for mailflow.
+   Når du er færdig, skal du vælge **Næste**.
 
-Hvis du vil oprette en transportregel for mail, skal du [enten se denne korte video](https://support.office.com/article/f9d693ba-5c78-47c0-b156-8e461e062aa7) eller følge disse trin:
+4. På **siden Defender for Office 365 beskyttelse gælder for** at identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser). Angiv brugere, grupper og domæner på samme måde som i det forrige trin.
 
-1. Klik <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> Administration **i Exchange**\>.
+   Klik på **Næste**, når du er færdig.
 
-2. Klik på **Regler i** kategorien **Mailflow**.
+5. Kontrollér dine valg på siden **Gennemse og bekræft dine ændringer** , og vælg derefter **Bekræft**.
 
-3. Klik **+** på , og klik derefter **på Opret en ny regel**.
+> [!TIP]
+> Du kan få mere at vide om tildeling af forudindstillede sikkerhedspolitikker i følgende artikler:
+> - [Tildel forudindstillede sikkerhedspolitikker til brugere](../security/office-365-security/preset-security-policies.md#assign-preset-security-policies-to-users)
+> - [Anbefalede indstillinger for mail- og samarbejdsindhold](../security/office-365-security/recommended-settings-for-eop-and-office365.md) (Microsoft 365 Business Premium omfatter Exchange Online Protection og Microsoft Defender for Office 365 Plan 1)
 
-4. Klik **på Flere** indstillinger nederst i dialogboksen for at få vist alle indstillinger.
+## <a name="create-custom-security-policies"></a>Opret brugerdefinerede sikkerhedspolitikker
 
-5. Anvend indstillingerne i følgende tabel. Lad resten af indstillingerne være som standard, medmindre du vil ændre dem.
+De [forudindstillede sikkerhedspolitikker](#what-are-preset-security-policies) , der er beskrevet tidligere i denne artikel, sikrer stærk beskyttelse af de fleste virksomheder. Du er dog ikke begrænset til kun at bruge forudindstillede sikkerhedspolitikker. Du kan definere dine egne brugerdefinerede sikkerhedspolitikker, så de passer til virksomhedens behov. 
 
-6. Klik på **Gem**.
+Brug vores vejledning til hurtig start [, Beskyt mod trusler](../security/office-365-security/protect-against-threats.md), for at komme i gang med at oprette dine egne brugerdefinerede politikker. Vejledningen fører dig ikke kun gennem, hvordan du konfigurerer dine egne sikkerhedspolitikker. Den indeholder også anbefalede indstillinger, der skal bruges som udgangspunkt for:
 
-|Indstilling|Advar brugerne, før du åbner vedhæftede filer Office filer|
-|---|---|
-|Navn|Undgå automatisk videresendelse af mail til eksterne domæner|
-|Anvend denne regel, hvis ...|Afsenderen . . . er ekstern/intern. . . Inden for organisationen|
-|Tilføj betingelse|Meddelelsesegenskaberne. . . medtag meddelelsestypen . . . Automatisk videresendelse|
-|Gør følgende...|Bloker meddelelsen. . . afvise meddelelsen og medtage en forklaring.|
-|Angiv meddelelsestekst|Automatisk videresendelse af mail uden for denne organisation er forhindret af sikkerhedsmæssige årsager.|
+- [Beskyttelse modmalware](../security/office-365-security/protect-against-threats.md#part-1---anti-malware-protection-in-eop)
+- [Avanceret antiphishing-beskyttelse](../security/office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
+- [Antispambeskyttelse](../security/office-365-security/protect-against-threats.md#part-3---anti-spam-protection-in-eop)
+- [Pengeskab links og Pengeskab vedhæftede filer](../security/office-365-security/protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
-## <a name="protect-your-email-from-phishing-attacks"></a>Beskyt dine mails mod phishingangreb
+## <a name="set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>Angiv delingsindstillinger for SharePoint og OneDrive filer og mapper
 
-Hvis du har konfigureret et eller flere brugerdefinerede domæner til dit Office 365 eller Microsoft 365, kan du konfigurere målrettet beskyttelse mod phishing. Beskyttelse mod phishing, som er en del af Microsoft Defender Office 365, kan hjælpe med at beskytte din organisation mod ondsindede efterligningsbaserede phishingangreb og andre phishingangreb. Hvis du ikke har konfigureret et brugerdefineret domæne, behøver du ikke at gøre dette.
+Delingsniveauer er som standard angivet til det mest tilladte niveau for både SharePoint og OneDrive. Vi anbefaler, at du ændrer standardindstillingerne for bedre at beskytte din virksomhed.
 
-Vi anbefaler, at du går i gang med denne beskyttelse ved at oprette en politik for at beskytte dine vigtigste brugere og dit brugerdefinerede domæne.
+1. Gå til <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling** i SharePoint Administration</a>, og log på med en konto, der har [administratortilladelser til din organisation](/sharepoint/sharepoint-admin-role).
+ 
+2. Under **Ekstern deling** skal du angive delingsniveauet. (Vi anbefaler, at du bruger **Mindst tilladte** for at forhindre ekstern deling).
 
-Hvis du vil oprette en antiphishingpolitik i Defender for Office 365, skal du [se denne](https://support.office.com/article/86c425e1-1686-430a-9151-f7176cce4f2c) korte kursusvideo eller udføre følgende trin:
+3. Under **Fil- og mappelinks** skal du vælge en indstilling (f.eks **. Bestemte personer**). Vælg derefter, om du vil tildele visnings- eller redigeringstilladelser som standard for delte links (f.eks **. Vis**).
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Security & Compliance Center</a>.
+4. Under **Andre indstillinger** skal du vælge de indstillinger, du vil bruge.
 
-2. I venstre navigationsrude under **Trusselsstyring skal** du vælge **Politik**.
+5. Vælg derefter **Gem**.
 
-3. Vælg **Antiphishing på siden Politik**.
+> [!TIP]
+> Du kan få mere at vide om disse indstillinger under [Administrer delingsindstillinger](/sharepoint/turn-external-sharing-on-or-off).
 
-4. På siden **Antiphishing** skal du vælge **+ Opret**. Der startes en guide, der fører dig gennem definitionen af din antiphishingpolitik.
+## <a name="review-your-alert-policies"></a>Gennemse dine politikker for beskeder
 
-5. Angiv navn, beskrivelse og indstillinger for din politik som anbefalet i nedenstående diagram. Du kan få mere at [vide under Få mere at vide om politik for phishing i Microsoft Defender for Office 365 indstillinger](../security/office-365-security/set-up-anti-phishing-policies.md).
+Advarselspolitikker er nyttige til sporing af bruger- og administratoraktiviteter, potentielle malwaretrusler og datatabshændelser i din virksomhed. Dit abonnement indeholder et sæt standardpolitikker, men du kan også oprette brugerdefinerede politikker. Hvis du f.eks. gemmer en vigtig fil i SharePoint, som ingen skal dele eksternt, kan du oprette en meddelelse, der giver dig besked, hvis nogen deler den.
 
-6. Når du har gennemset dine indstillinger, skal du **vælge Opret denne politik** **eller Gem** efter behov.
+På følgende billede vises nogle af de standardpolitikker, der er inkluderet i Microsoft 365 Business Premium.
 
-|Indstilling eller indstilling|Anbefalet indstilling|
-|---|---|
-|Navn|Domæne og mest værdifulde medarbejdere|
-|Beskrivelse|Sørg for, at de vigtigste medarbejdere og vores domæne ikke repræsenteres.|
-|Tilføj brugere, der skal beskyttes|Vælg **+ Tilføj en betingelse, modtageren er**. Skriv brugernavne, eller angiv mailadressen på virksomhedsejere, partnere eller kandidater, ledere og andre vigtige medarbejdere. Du kan tilføje op til 20 interne og eksterne adresser, du vil beskytte mod efterligning.|
-|Tilføj domæner, der skal beskyttes|Vælg **+ Tilføj en betingelse, Modtagerens domæne er**. Angiv det brugerdefinerede domæne, der er knyttet Microsoft 365 abonnementet, hvis du har defineret et. Du kan angive mere end ét domæne.|
-|Vælg handlinger|Hvis mail sendes af en efterligning af en bruger: Vælg Omdiriger meddelelse til en anden **mailadresse, og** skriv derefter mailadressen på sikkerhedsadministratoren. for eksempel *2010<span><span>@contoso.com*. <br/> Hvis mail sendes af et efterligning af et domæne: Vælg **meddelelse i karantæne**.|
-|Postkasseintelligens|Postkasseintelligens vælges som standard, når du opretter en ny antiphishingpolitik. Lad denne indstilling være **til for** at få de bedste resultater.|
-|Tilføj afsendere og domæner, der er tillid til|Her kan du tilføje dit eget domæne eller andre domæner, der er tillid til.|
-|Anvendt på|Vælg **Modtagerdomænet er**. Under **Alle disse skal** du vælge **Vælg**. Vælg **+ Tilføj**. Markér afkrydsningsfeltet ud for navnet på domænet, f.eks. *contoso.<span><span> på* listen, og vælg derefter **Tilføj**. Vælg **Udført**.|
+![Standardpolitikker for beskeder, der er inkluderet i Microsoft 365.](../media/alertpolicies.png)
 
-Få mere at vide under [Konfigurer antiphishing-politikker i Defender Office 365](../security/office-365-security/set-up-anti-phishing-policies.md).
+### <a name="view-your-alert-policies"></a>Få vist dine politikker for beskeder
 
-## <a name="protect-against-malicious-attachments-files-and-links-with-defender-for-office-365"></a>Beskyt dig mod skadelige vedhæftede filer, filer og links med Defender Office 365
+1. Gå til Microsoft 365 Compliance Center på , og log på[https://compliance.microsoft.com](https://compliance.microsoft.com).
 
-![Banner, der peger på https://aka.ms/aboutM365preview.](../media/m365admincenterchanging.png)
+2. Vælg **Politikker** i navigationsruden, og vælg derefter **Beskedpolitikker**.
 
-Du skal først sørge for, at du i Administration har <https://admin.microsoft.com> aktiveret den nye forhåndsvisning af Administration. Slå til/fra-knappen til ud for **teksten Den nye Administration**.
+3. Vælg en individuel politik for at få vist flere oplysninger eller redigere politikken. På følgende billede vises en liste over politikker for beskeder med én politik valgt:
 
-   ![Den nye forhåndsvisning af Administration er blevet til.](../media/previewon.png)
+   :::image type="content" source="media/selected-alert-policy.png" lightbox="media/selected-alert-policy.png" alt-text="Skærmbillede af en valgt beskedpolitik.":::
 
-Hvis du endnu ikke kan se konfigurationssiden med kort i din lejer, kan du se, hvordan du gennemfører disse trin i Security & Compliance Center. Se [Konfigurer Pengeskab i Security & Compliance Center](#set-up-safe-attachments-in-the-security--compliance-center) og Konfigurer [Pengeskab-links i Security & Compliance Center](#set-up-safe-links-in-the-security--compliance-center).
+> [!TIP]
+> Du kan få flere oplysninger under [Politikker for beskeder](../compliance/alert-policies.md).
 
-1. I venstre navigationslinje skal du vælge **Konfiguration**.
-2. På siden **Konfiguration** skal du **vælge Vis** på kortet **Forøg beskyttelsen mod avancerede** trusler.
+### <a name="how-to-view-alerts"></a>Sådan får du vist beskeder
 
-   ![Vælg Vis i forøg beskyttelsen mod avancerede trusler.](../media/startatp.png)
+Afhængigt af den specifikke besked kan du få vist dine beskeder enten på Microsoft 365 Defender-portalen eller i Microsoft 365 Overholdelsescenter.
 
-3. På siden **Forøg beskyttelsen mod avancerede trusler** skal du vælge **Introduktion**.
-4. I den rude, der åbnes, skal du markere afkrydsningsfelterne ud for Links og vedhæftede filer i mails, Scan filer i **SharePoint, OneDrive og Teams** og **Scan links i Office-skrivebords- og Office Online-apps** under **Scan elementer for skadeligt** indhold.
+| Beskedtype  | Sådan gør du  |
+|---------|---------|
+| Sikkerhedsadvarsel, f.eks. når en bruger klikker på et skadeligt link, en mail rapporteres som malware eller phish, eller en enhed registreres som indeholdende malware     | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og vælg **Politikker &** **reglerAlert** >  politik under **Mail & samarbejde**. Du kan også gå direkte til <https://security.microsoft.com/alertpolicies>. |
+| Besked om overholdelse af regler og standarder, f.eks. når en bruger deler følsomme eller fortrolige oplysninger (advarsel om forebyggelse af datatab), eller der er en usædvanlig mængde ekstern fildeling (besked om styring af oplysninger)    | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>, og vælg derefter **PolitikkerAlertAlert-politikker** >  > .  |
 
-   Under **Links og vedhæftede filer i mail** skal du skrive Alle brugere eller de bestemte brugere, hvis mail du vil scanne.
-
-   ![Markér alle afkrydsningsfelter i Forøg beskyttelsen mod avancerede trusler.](../media/setatp.png)
-
-5. Vælg **Opret politikker** for at aktivere Pengeskab vedhæftede filer og Pengeskab links.
-
-### <a name="set-up-safe-attachments-in-the-security--compliance-center"></a>Konfigurer Pengeskab i Security & Compliance Center
-
-Folk sender, modtager og deler jævnligt vedhæftede filer, f.eks. dokumenter, præsentationer, regneark og meget mere. Det er ikke altid nemt at afgøre, om en vedhæftet fil er sikker eller skadelig blot ved at se på en mail. Microsoft Defender til Office 365 indeholder Pengeskab Beskyttelse af vedhæftet fil, men denne beskyttelse er ikke slået til som standard. Vi anbefaler, at du opretter en ny regel for at begynde at bruge denne beskyttelse. Denne beskyttelse omfatter filer i SharePoint, OneDrive og Microsoft Teams.
-
-Hvis du vil oprette Pengeskab vedhæftet fil, skal du [enten se denne korte video](https://support.office.com/article/e7e68934-23dc-4b9c-b714-e82e27a8f8a5) eller udføre følgende trin:
-
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Security & Compliance Center</a>, og log på med din administratorkonto.
-
-2. I venstre navigationsrude under **Trusselsstyring skal** du vælge **Politik**.
-
-3. På siden Politik skal du vælge Pengeskab **vedhæftede filer**.
-
-4. På siden Pengeskab vedhæftede filer skal du anvende denne beskyttelse bredt ved at markere afkrydsningsfeltet **Slå ATP til for SharePoint, OneDrive og Microsoft Teams** filer.
-
-5. Vælg **+** for at oprette en ny politik.
-
-6. Anvend indstillingerne i følgende tabel.
-
-7. Når du har gennemset dine indstillinger, **skal du vælge Opret denne** politik **eller Gem** efter behov.
-
-|Indstilling eller indstilling|Anbefalet indstilling|
-|---|---|
-|Navn|Bloker nuværende og fremtidige mails med registreret malware.|
-|Beskrivelse|Bloker nuværende og fremtidige mails og vedhæftede filer med registreret malware.|
-|Gem vedhæftede filer ukendt malware svar|Vælg **Bloker – Bloker for nuværende og fremtidige mails og vedhæftede filer med registreret malware**.|
-|Omdirigere vedhæftet fil ved registrering|Aktivér omdirigering (markér dette felt) <br/> Angiv administratorkontoen eller konfigurationen af en postkasse til karantæne. <br/> Anvend ovenstående markering, hvis malwarescanning for vedhæftede filer får time out, eller der opstår en fejl (markér dette felt).|
-|Anvendt på|Modtagerdomænet er . . . skal du vælge dit domæne.|
-
-Få mere at vide under [Konfigurer antiphishing-politikker i Defender Office 365](../security/office-365-security/set-up-anti-phishing-policies.md).
-
-### <a name="set-up-safe-links-in-the-security--compliance-center"></a>Konfigurer Pengeskab links i Security & Compliance Center
-
-Hackere skjuler sommetider ondsindede websteder i links i mails eller andre filer. Pengeskab Links, som er en del af Microsoft Defender til Office 365, kan hjælpe med at beskytte din organisation ved at angive tids-for-klik-bekræftelse af webadresser (URL-adresser) i mails og Office dokumenter. Beskyttelse defineres via Pengeskab Links-politikker.
-
-Vi anbefaler, at du gør følgende:
-
-- Rediger standardpolitikken for at øge beskyttelsen.
-
-- Tilføj en ny politik, der er målrettet alle modtagere i dit domæne.
-
-Hvis du vil konfigurere Pengeskab links, skal [du se denne korte kursusvideo](https://support.office.com/article/61492713-53c2-47da-a6e7-fa97479e97fa) eller udføre følgende trin:
-
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Security & Compliance Center</a>, og log på med din administratorkonto.
-
-2. I venstre navigationsrude under **Trusselsstyring skal** du vælge **Politik**.
-
-3. På siden Politik skal du vælge **Pengeskab Links**.
-
-Sådan ændres standardpolitikken:
-
-1. På siden Pengeskab du vælge **Standardpolitik under Politikker, der gælder** for **hele** organisationen.
-
-2. Under **Indstillinger, der gælder** for indhold undtagen mail, skal **du vælge Microsoft 365 Apps for enterprise, Office til iOS og Android**.
-
-3. Klik på **Gem**.
-
-Sådan opretter du en ny politik, der er målrettet alle modtagere i dit domæne:
-
-1. På siden Pengeskab, der gælder **for hele** organisationen, skal du klikke for **+** at oprette en ny politik.
-
-2. Anvend indstillingerne i følgende tabel.
-
-3. Klik på **Gem**.
-
-|Indstilling eller indstilling|Anbefalet indstilling|
-|---|---|
-|Navn|Pengeskab sammenkæder politik for alle modtagere i domænet|
-|Vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser|Vælg **Til – URL-adresser omskrives og kontrolleres mod en liste over kendte ondsindede links, når brugeren klikker på linket**.|
-|Brug Pengeskab til at scanne indhold, der kan downloades|Markér dette felt.|
-|Anvendt på|Modtagerdomænet er . . . skal du vælge dit domæne.|
-
-Du kan finde flere oplysninger [Pengeskab Links i Defender for Office 365](../security/office-365-security/safe-links.md).
-
-## <a name="turn-on-the-unified-audit-log"></a>Aktivere den samlede overvågningslog
-
-Når du har aktiveret søgning i overvågningsloggen i Security & Compliance Center, kan du bevare administratoraktiviteten og anden brugeraktivitet i logfilen og søge i den.
-
-Du skal være tildelt rollen Overvågningslogfiler Exchange Online at slå søgning i overvågningslog til eller fra i dit Microsoft 365 abonnement. Denne rolle er som standard tildelt rollegrupperne Styring af overholdelse og Organisationsadministration på siden Tilladelser <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">i Exchange Administration</a>. Globale administratorer i Microsoft 365 er som standard medlemmer af denne gruppe.
-
-1. Hvis du vil aktivere søgning i overvågningsloggen <https://admin.microsoft.com> , skal du gå til Administration på og derefter vælge **Sikkerhed** under **Administrationer** i venstre navigationslinje.
-2. På siden **Microsoft 365 Sikkerhed** skal du vælge Flere ressourcer og derefter åbn på kortet **Office 365 Security & Compliance Center**.
-
-    ![Vælg Åbn i sikkerheds- & kompatibilitetsbiler.](../media/gotosecandcomp.png)
-3. På siden sikkerhed og overholdelse af regler og standarder skal du **vælge Søg** og derefter **Søgning i overvågningslogfil**.
-4. Øverst på siden Søgning **i overvågningslog** skal du **vælge Aktiver overvågning**.
-
-Når funktionen er slået til, kan du søge efter filer, mapper og mange aktiviteter. Du kan få mere at vide [under Søg i overvågningsloggen](../compliance/search-the-audit-log-in-security-and-compliance.md).
-
-## <a name="tune-up-anonymous-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>Finjustere anonyme indstillinger for deling SharePoint og OneDrive filer og mapper
-
-(skift standard anonymt link udløb til 14 dage, skift standarddelingstype til "Bestemte personer") Sådan ændres indstillingerne for deling OneDrive og SharePoint:
-
-1. Gå til Administration på, <https://admin.microsoft.com> og vælg derefter **SharePoint** under **Administration i** venstre navigationslinje.
-2. I administration SharePoint skal du gå til **Deling af** \> <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**politikker**</a>.
-3. På siden **Deling** **under** Fil- og mappelinks skal du vælge Bestemte **personer, og** under Avancerede indstillinger **for links til "Alle" skal** du vælge Disse **links** skal udløbe inden for dette antal dage og skrive 14 (eller et andet antal dage, du vil begrænse linkets levetid til).
-
-   ![Vælg Bestemte personer, og angiv udløbslink til 14 dage.](../media/anyonelinks.png)
-
-## <a name="activity-alerts"></a>Aktivitetsbeskeder
-
-Du kan bruge aktivitetsbeskeder til at spore administrator- og brugeraktiviteter og registrere hændelser til forebyggelse af malware og datatab i organisationen. Dit abonnement omfatter et sæt standardpolitikker, men du kan også oprette brugerdefinerede politikker. Du kan finde flere oplysninger i [politikker for beskeder](../compliance/alert-policies.md). Hvis du f.eks. gemmer en vigtig fil i SharePoint som du ikke vil have nogen til at dele eksternt, kan du oprette en meddelelse, der giver dig besked, hvis nogen deler den.
-
-I følgende figur vises de standardpolitikker, der er inkluderet Microsoft 365.
-
-![Standardbeskedpolitikker, der er inkluderet Microsoft 365.](../media/alertpolicies.png)
+Du kan få flere oplysninger under [Få vist beskeder](../compliance/alert-policies.md#view-alerts).
 
 ## <a name="disable-or-manage-calendar-sharing"></a>Deaktiver eller administrer kalenderdeling
 
-Du kan forhindre personer i din organisation i at dele deres kalendere, eller du kan også administrere, hvad de kan dele. Du kan f.eks. begrænse deling til kun at være ledig/optaget.
+Du kan forhindre personer i din organisation i at dele deres kalendere. Du kan også administrere, hvilket detaljeniveau de kan dele. Du kan f.eks. begrænse delingen til kun ledig/optaget tid.
 
-1. Gå til Administration på , og <https://admin.microsoft.com> vælg **Indstillinger** \> **Org Indstillinger** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Services**</a>.
+1. Gå [til Organisationsindstillinger i Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2053743), og log på.
 
-1. Vælg **Kalender**, og vælg, om personer i organisationen kan dele deres kalendere med personer uden for organisationen Office 365 har Exchange kalendere eller med andre.
+2. Vælg **Kalender**, og vælg, om personer i din organisation kan dele deres kalendere med personer uden for, der har Office 365 eller Exchange eller med andre.
 
-   Hvis du vælger indstillingen Del med alle, kan du vælge kun at dele oplysninger om ledig/optaget tid.
+   Vi anbefaler, at du rydder indstillingen **Ekstern deling** .
 
-3. Vælg **Gem** ændringer nederst på siden.
+   Hvis du vælger indstillingen Del med alle, kan du vælge også kun at dele oplysninger om ledig/optaget tid.
 
-   I følgende figur vises kalenderdeling, som ikke er tilladt.
+3. Vælg **Gem ændringer** nederst på siden.
+
+   På følgende billede kan du se, at kalenderdeling ikke er tilladt.
 
    ![Skærmbillede af visning af ekstern kalenderdeling som ikke tilladt.](../media/nocalendarsharing.png)
 
-   Følgende figur viser indstillingerne, når kalenderdeling er tilladt med et maillink kun med oplysninger om ledig/optaget tid.
+   På følgende billede vises indstillingerne, når kalenderdeling er tilladt med et maillink med kun oplysninger om ledig/optaget tid.
 
-   ![Skærmbillede af kalender, hvor ledig/optaget er delt med alle.](../media/sharefreebusy.png)
+   ![Skærmbillede af ledig/optaget kalenderdeling med alle.](../media/sharefreebusy.png)
 
-Hvis brugerne har tilladelse til at dele deres kalendere, skal du [se denne vejledning](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) til, hvordan du deler fra Outlook på internettet.
+Hvis brugerne har tilladelse til at dele deres kalendere, kan du se [disse instruktioner](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) for, hvordan de deler fra Outlook på internettet.
+
+Nu er det tid til at starte din mission om at [**konfigurere BYOD-enheder**](m365bp-devices-overview.md).

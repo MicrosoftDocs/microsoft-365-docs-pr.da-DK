@@ -2,8 +2,8 @@
 title: Administrer opbevaringspolitikker for overvågningslog
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Opbevaringspolitikker for overvågningslog er en del af de nye funktioner i Microsoft Purview Audit (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation.
-ms.openlocfilehash: a19e12f82fc577406ea4257fc315902ca8238358
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 0a35177c160e80cef2263382e4a1bc04057963b5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000372"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099669"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Administrer opbevaringspolitikker for overvågningslog
 
@@ -36,10 +36,10 @@ Du kan oprette og administrere opbevaringspolitikker for overvågningslog på Mi
 
 ## <a name="default-audit-log-retention-policy"></a>Standard opbevaringspolitik for overvågningslog
 
-Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik for overvågningslog for alle organisationer. Denne politik bevarer alle overvågningsposter for Exchange Online, SharePoint Online, OneDrive for Business og Azure Active Directory i ét år. Denne standardpolitik bevarer overvågningsposter, der indeholder værdien **af Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** for egenskaben **Arbejdsbelastning** (som er den tjeneste, aktiviteten fandt sted i). Standardpolitikken kan ikke ændres. Se afsnittet [Flere oplysninger](#more-information) i denne artikel for at få en liste over posttyper for hver arbejdsbelastning, der er inkluderet i standardpolitikken.
+Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik for overvågningslog for alle organisationer. Denne politik bevarer alle Exchange Online, SharePoint Online, OneDrive for Business og Azure Active Directory overvågningsposter i ét år. Denne standardpolitik bevarer overvågningsposter, der indeholder værdien **af Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** for egenskaben **Arbejdsbelastning** (som er den tjeneste, aktiviteten fandt sted i). Standardpolitikken kan ikke ændres. Se afsnittet [Flere oplysninger](#more-information) i denne artikel for at få en liste over posttyper for hver arbejdsbelastning, der er inkluderet i standardpolitikken.
 
 > [!NOTE]
-> Standard opbevaringspolitikken for overvågningslog gælder kun for overvågningsposter for aktivitet, der udføres af brugere, der har fået tildelt en Office 365- eller Microsoft 365 E5-licens eller har en Microsoft 365 E5-overholdelses- eller E5 eDiscovery- og overvågningstilføjelsesprogramlicens. Hvis du har ikke-E5-brugere eller gæstebrugere i din organisation, bevares deres tilsvarende overvågningsposter i 90 dage.
+> Standard opbevaringspolitikken for overvågningsloggen gælder kun for overvågningsposter for aktivitet, der udføres af brugere, der har fået tildelt en Office 365 eller Microsoft 365 E5 licens eller har en Microsoft 365 E5 Overholdelse eller E5 eDiscovery- og overvågningstilføjelsesprogramlicens. Hvis du har ikke-E5-brugere eller gæstebrugere i din organisation, bevares deres tilsvarende overvågningsposter i 90 dage.
 
 ## <a name="before-you-create-an-audit-log-retention-policy"></a>Før du opretter en opbevaringspolitik for overvågningslog
 
@@ -47,7 +47,7 @@ Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik 
 
 - Du kan maksimalt have 50 opbevaringspolitikker for overvågningslog i din organisation.
 
-- Hvis du vil bevare en overvågningslog i mere end 90 dage (og op til 1 år), skal den bruger, der genererer overvågningsloggen (ved at udføre en overvåget aktivitet), tildeles en Office 365 E5- eller Microsoft 365 E5-licens eller have en Microsoft 365 E5 Compliance- eller E5 eDiscovery- og Audit-tilføjelsesprogramlicens. Hvis du vil bevare overvågningslogge i 10 år, skal den bruger, der genererer overvågningsloggen, også tildeles en tiårig licens til tilføjelsesprogrammet til opbevaring af overvågningslog ud over en E5-licens.
+- Hvis du vil bevare en overvågningslog i mere end 90 dage (og op til 1 år), skal den bruger, der genererer overvågningsloggen (ved at udføre en overvåget aktivitet), tildeles en Office 365 E5 eller en Microsoft 365 E5 licens eller have en Microsoft 365 E5 Overholdelse- eller E5 eDiscovery- og audit-licens. Hvis du vil bevare overvågningslogge i 10 år, skal den bruger, der genererer overvågningsloggen, også tildeles en tiårig licens til tilføjelsesprogrammet til opbevaring af overvågningslog ud over en E5-licens.
 
 - Alle brugerdefinerede opbevaringspolitikker for overvågningslog (oprettet af din organisation) har forrang frem for standardopbevaringspolitikken. Hvis du f.eks. opretter en opbevaringspolitik for overvågningsloggen for Exchange postkasseaktivitet, der har en opbevaringsperiode, der er kortere end ét år, bevares overvågningsposter for Exchange postkasseaktiviteter i den kortere varighed, der er angivet i den brugerdefinerede politik.
 
@@ -118,7 +118,7 @@ Du kan også bruge Security & Compliance Center PowerShell til at oprette og adm
 
 Følg disse trin for at oprette en opbevaringspolitik for overvågningslog i PowerShell:
 
-1. [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende kommando for at oprette en opbevaringspolitik for overvågningslog:
 
@@ -164,7 +164,7 @@ Brug cmdlet'en [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchan
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Som tidligere angivet bevares overvågningsposter for handlinger i Azure Active Directory, Exchange Online, SharePoint Online og OneDrive for Business som standard i ét år. I følgende tabel vises alle de posttyper (for hver af disse tjenester), der er inkluderet i standardpolitikken for opbevaring af overvågningslog. Det betyder, at overvågningslogge for alle handlinger med denne posttype bevares i ét år, medmindre en brugerdefineret opbevaringspolitik for overvågningslogge har forrang for en bestemt posttype, handling eller bruger. Enum-værdien (der vises som værdien for egenskaben RecordType i en overvågningspost) for hver posttype vises i parentes.
+Som tidligere angivet bevares overvågningsposter for handlinger i Azure Active Directory, Exchange Online, SharePoint Online og OneDrive for Business som standard i et år. I følgende tabel vises alle de posttyper (for hver af disse tjenester), der er inkluderet i standardpolitikken for opbevaring af overvågningslog. Det betyder, at overvågningslogge for alle handlinger med denne posttype bevares i ét år, medmindre en brugerdefineret opbevaringspolitik for overvågningslogge har forrang for en bestemt posttype, handling eller bruger. Enum-værdien (der vises som værdien for egenskaben RecordType i en overvågningspost) for hver posttype vises i parentes.
 
 <br>
 
@@ -174,7 +174,7 @@ Som tidligere angivet bevares overvågningsposter for handlinger i Azure Active 
 |---|---|---|
 |AzureActiveDirectory (8)|ExchangeAdmin (1)|ComplianceDLPSharePoint (11)|
 |AzureActiveDirectoryAccountLogon (9)|ExchangeItem (2)|ComplianceDLPSharePointClassification (33)|
-|AzureActiveDirectoryStsLogon (15)|Kampagne (62)|Projekt (35)|
+|AzureActiveDirectoryStsLogon (15)|Kampagne (62)|Project (35)|
 ||ComplianceDLPExchange (13)|SharePoint (4)|
 ||ComplianceSupervisionExchange (68)|SharePointCommentOperation (37)|
 ||CustomerKeyServiceEncryption (69)|SharePointContentTypeOperation (55)|

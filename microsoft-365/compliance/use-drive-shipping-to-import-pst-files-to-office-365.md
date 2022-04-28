@@ -2,8 +2,8 @@
 title: Brug drevforsendelse til at importere PST-filer
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 40829b57-793c-4d41-b171-e9270129173d
 ms.custom: seo-marvel-apr2020
 description: Administratoren kan få mere at vide om, hvordan du masseimporterer PST-filer til Microsoft 365 postkasser ved at kopiere PST-filer til en harddisk og derefter sende dem til Microsoft.
-ms.openlocfilehash: d2255a01c49e3837365735e1c3300b7f6b34c42c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 4f3c38c203b98fd4448657edfac6ee9b72a515be
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995992"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095438"
 ---
 # <a name="use-drive-shipping-to-import-your-organizations-pst-files"></a>Brug drevforsendelse til at importere din organisations PST-filer
 
@@ -57,7 +57,7 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
 
 - Du skal have tildelt rollen Importér eksport af postkasse i Exchange Online for at oprette importjob på Microsoft Purview-overholdelsesportalen og importere PST-filer til brugerpostkasser. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration. Du kan også oprette en rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje dig selv som medlem. Du kan få flere oplysninger i afsnittene "Føj en rolle til en rollegruppe" eller "Opret en rollegruppe" i [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
 
-    Ud over rollen Importér eksport af postkasse skal du også have tildelt rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration i Exchange Online.
+    Ud over rollen Importér eksport af postkasse skal du også tildeles rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration i Exchange Online.
 
     > [!TIP]
     > Overvej at oprette en ny rollegruppe i Exchange Online, der er specifikt beregnet til import af PST-filer til Office 365. Hvis du vil have det minimumsniveau af rettigheder, der kræves for at importere PST-filer, skal du tildele rollerne Importér eksport af postkasse og Postmodtagere til den nye rollegruppe og derefter tilføje medlemmer.
@@ -111,11 +111,11 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
 Det første trin er at downloade værktøjet, og at du bruger trin 2 til at kopiere PST-filer til harddisken.
   
 > [!IMPORTANT]
-> Du skal bruge værktøjet Azure Import/Export version 1 (WAimportExportV1) til at importere PST-filer ved hjælp af drevforsendelsesmetoden. Version 2 af Azure Import/Export-værktøjet understøttes ikke, og hvis du bruger det, vil det resultere i, at harddisken forberedes forkert til importjobbet. Sørg for at downloade Azure Import/Export-værktøjet fra Microsoft Purview-overholdelsesportalen ved at følge procedurerne i dette trin. 
+> Du skal bruge Azure Import/Export værktøjsversion 1 (WAimportExportV1) til at importere PST-filer ved hjælp af drevforsendelsesmetoden. Version 2 af Azure Import/Export-værktøjet understøttes ikke, og hvis du bruger det, vil det resultere i, at harddisken forberedes forkert til importjobbet. Sørg for at downloade Azure Import/Export-værktøjet fra Microsoft Purview-overholdelsesportalen ved at følge procedurerne i dette trin. 
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på **Import** af **styring af oplysninger** \> i venstre navigationsrude i overholdelsesportalen.
+2. Klik på **Import** af **datalivscyklusstyring** \> i venstre navigationsrude i overholdelsesportalen.
     
     > [!NOTE]
     > Som tidligere angivet skal du have tildelt de relevante tilladelser for at få adgang til siden **Import** på overholdelsesportalen.
@@ -130,7 +130,7 @@ Det første trin er at downloade værktøjet, og at du bruger trin 2 til at kopi
   
 6. Gør følgende på siden **Importér data** :     
     
-    **Download Værktøjet Azure Import/Export** for at downloade og installere Værktøjet Azure Import/Export (version 1).
+    **Download Azure Import/Export-værktøjet** for at downloade og installere Værktøjet Azure Import/Export (version 1).
     
     - Klik på **Gem** \> **som** i pop op-vinduet for at gemme den WaImportExportV1.zip fil i en mappe på din lokale computer.
     
@@ -242,7 +242,7 @@ Det næste trin er at oprette PST-importjobbet i tjenesten Importér i Office 36
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på **Import** af **styring af oplysninger** \> i venstre navigationsrude i overholdelsesportalen.
+2. Klik på **Import** af **datalivscyklusstyring** \> i venstre navigationsrude i overholdelsesportalen.
 
 3. Klik på ![Tilføj ikon under fanen **Importér**.](../media/ITPro-EAC-AddIcon.gif) **Nyt importjob**.
 
@@ -326,7 +326,7 @@ Når du har leveret harddisken til Microsoft, skal du fuldføre følgende proced
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på Styring af oplysninger i venstre navigationsrude i overholdelsesportalen **> Importér**.
+2. Klik på **DatalivscyklusstyringImportér** >  i venstre navigationsrude i overholdelsesportalen.
 
 3. Klik på jobbet for den drevleverance, du vil angive sporingsnummeret for, under fanen **Importér** .
 
@@ -352,7 +352,7 @@ Når PST-filer er uploadet til Azure, ændres status til **Igangværende analyse
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på **Styring af oplysninger** \> **Import****i venstre navigationsrude i overholdelsesportalen.
+2. Klik på Administration \> af **datalivscyklus** **Import****i venstre navigationsrude i overholdelsesportalen.
 
 3. Under fanen **Importér** skal du vælge det importjob, du oprettede i trin 4, og klikke på **Importér for at Office 365**.
   
@@ -380,7 +380,7 @@ Når PST-filer er uploadet til Azure, ændres status til **Igangværende analyse
 
 ## <a name="view-a-list-of-the-pst-files-uploaded-to-microsoft-365"></a>Vis en liste over de PST-filer, der er overført til Microsoft 365
 
-Du kan installere og bruge Microsoft Azure Storage Explorer (som er et gratis værktøj med åben kildekode) til at få vist listen over de PST-filer, vi har uploadet (af Microsofts datacenterpersonale) til Azure Storage område for din organisation. Det kan du gøre for at bekræfte, at PST-filer fra de harddiske, du sendte til Microsoft, blev overført til området Azure Storage.
+Du kan installere og bruge Microsoft Azure Storage Explorer (som er et gratis værktøj med åben kildekode) til at få vist listen over de PST-filer, vi er uploadet (af Microsofts datacenterpersonale) til Azure Storage område for din organisation. Det kan du gøre for at bekræfte, at PST-filer fra de harddiske, du sendte til Microsoft, blev overført til området Azure Storage.
   
 > [!IMPORTANT]
 > Du kan ikke bruge Azure Storage Explorer til at uploade eller redigere PST-filer. Den eneste understøttede metode til import af PST-filer til Microsoft 365 er at bruge AzCopy. Du kan heller ikke slette PST-filer, som du har uploadet til Azure-blob. Hvis du forsøger at slette en PST-fil, får du vist en fejlmeddelelse om, at du ikke har de nødvendige tilladelser. Alle PST-filer slettes automatisk fra dit Azure Storage område. Hvis der ikke er nogen igangværende importjob, slettes alle PST-filer i objektbeholderen ** ingestiondata ** 30 dage efter, at det seneste importjob blev oprettet.
@@ -391,13 +391,13 @@ Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azu
 
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på Styring af oplysninger i venstre rude i overholdelsesportalen **> Importér**.
+2. I venstre rude på overholdelsesportalen skal du klikke på Administration  >  af **datalivscyklusImportér**.
 
 3. Klik på ![Tilføj ikon under fanen **Importér**.](../media/ITPro-EAC-AddIcon.gif) **Nyt importjob**.
 
 4. Skriv et navn til PST-importjobbet i guiden til import af job, og klik derefter på **Næste**. Brug små bogstaver, tal, bindestreger og understregningstegn. Du kan ikke bruge store bogstaver eller medtage mellemrum i navnet.
 
-5. På siden **Vælg importjobtype** skal du klikke på **Overfør dine data** og derefter klikke på **Næste**.
+5. Klik på **Upload dine data** på siden **Vælg importjobtype**, og klik derefter på **Næste**.
 
 6. I trin 2 skal du klikke på **Vis SAS URL-adresse til netværksupload**.
 
@@ -410,17 +410,17 @@ Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azu
 
 9. Download og installér [værktøjet Microsoft Azure Storage Explorer](https://go.microsoft.com/fwlink/p/?LinkId=544842).
 
-10. Start Microsoft Azure Storage Explorer, højreklik på **Lagerkonti** i venstre rude, og klik derefter på **Opret forbindelse til Azure Storage**.
+10. Start Microsoft Azure Storage Explorer, højreklik **Storage Konti** i venstre rude, og klik derefter på **Forbind for at Azure Storage**.
 
-    ![Højreklik på Lagerkonti, og klik derefter på Opret forbindelse til Azure Storage.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
+    ![Højreklik på Storage Konti, og klik derefter på Forbind for at Azure Storage.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
   
 11. Klik på **Brug en SAS-URI (delt adgangssignatur) eller en forbindelsesstreng,** og klik på **Næste**.
 
 12. Klik på **Brug en SAS URI**, indsæt den SAS-URL-adresse, du fik i trin 1, i feltet under **URI**, og klik derefter på **Næste**.
 
-13. På siden **Forbindelsesoversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Opret forbindelse**.
+13. På siden **Forbindelsesoversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Forbind**.
 
-    Databeholderen **for dataindtagelse** åbnes. Den indeholder PST-filerne fra harddisken. Objektbeholderen **ingestiondata** er placeret under **Blob-objektbeholdere** til **lagerkonti** \> **(SAS-Attached Services).** \>
+    Databeholderen **for dataindtagelse** åbnes. Den indeholder PST-filerne fra harddisken. Dataobjektbeholderen **til dataindtagelse** er placeret under **Blob-objektbeholdere** **til Storage konti** \> **(SAS-Attached Services).** \>
 
     ![Azure Storage Explorer viser en liste over de PST-filer, du har overført.](../media/12376fed-13a5-4a09-8fe6-e819e011b334.png)
   

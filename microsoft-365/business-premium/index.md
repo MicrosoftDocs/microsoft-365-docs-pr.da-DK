@@ -1,14 +1,14 @@
 ---
-title: Microsoft 365 Business Premium oversigt
+title: Oversigt over Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
-ms.author: samanro
-author: samanro
+ms.author: v-kcirillo
+author: cirilk
 manager: scotv
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -24,77 +24,111 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
-description: Få mere at vide om, hvordan du samarbejder sikkert i din lille virksomhed eller kampagne med Microsoft 365 Business Premium.
-ms.openlocfilehash: 77ca1cb7171097a0cae6063db20b1868dcd1b448
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du implementerer cybersikkerhed for små eller mellemstore virksomheder med Microsoft 365 Business Premium. Cybersikkerhedsegenskaberne og -funktionerne er optimeret til at forhindre cyberangreb og sikkerhedsbrud og hjælper dig med at beskytte data, enheder og oplysninger med førsteklasses cyberbeskyttelse.
+ms.openlocfilehash: ac152ca67e7bdf62931b64e008669ca60b0a8031
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63607456"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100013"
 ---
-# <a name="microsoft-365-business-premium-overview"></a>Microsoft 365 Business Premium oversigt
+# <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 Business Premium &mdash; cybersikkerhed for små virksomheder
 
-I vores nuværende verden er det en prioritet at holde data og kommunikation sikker, især for medicinske og juridiske fremgangsmåder, politiske kampagner og mange andre mindre virksomheder. Udnyt sikkerhedsfunktionerne i din Microsoft 365 Business Premium til at samarbejde sikkert i din lille virksomhed. Denne løsning indeholder en række anbefalinger, der er beregnet til at beskytte dig og dine data. Dette bibliotek indeholder hjælp til at konfigurere og bruge dette anbefalede miljø, uanset din virksomhedstype.
+Lad os starte med at sige, at du har foretaget et klogt valg ved at indføre Microsoft 365 Business Premium og dens produktivitetsværktøjer i verdensklasse. Microsoft 365 Business Premium er designet med henblik på cybersikkerhed og beskytter dine data, enheder og oplysninger. Du er din organisations første og bedste forsvar mod hackere og cyberangreb, herunder tilfældige personer, organiseret kriminalitet eller meget sofistikerede nationalstater.
 
-:::image type="content" source="media/m365-whatisit-securityfocus2.png" alt-text="Microsoft 365 Business Premium beskytter dine apps, fillager, mail, enheder og identiteter.":::
+Opgaven foran dig er denne &mdash;. Lad Microsoft 365 Business Premium hjælpe dig med at sikre din organisations fremtid! Du kan håndtere denne opgave ved at udføre følgende opgaver, som kan hjælpe dig med at styrke dit miljø, oplære dit team og beskytte administrerede enheder. Opgaverne kategoriseres efter vigtighed, og fuldførelsen af dem er den mest effektive måde at modarbejde hackere, beskytte mod ransomware og sikre, at din organisations fremtid er beskyttet med de bedste cybersikkerhedsbeskyttelser. Lad os komme i gang.
 
-Denne konfiguration indeholder følgende vejledning til produktivitet, samarbejde, fillagring, mail, enheder og identitet for at beskytte din virksomhed:
+Klik dig gennem fanerne nedenfor for at få mere at vide om hver opgave, og hvordan du konfigurerer sikkerhed med Microsoft 365 Business Premium.
 
-| Beskyttelse af | Beskrivelse | Links |
-| ----- | ----- | ----- | ----- |
-|Mail | Brug multifaktorgodkendelse, avanceret antiphishing, Pengeskab links Pengeskab vedhæftede filer og krypterede mails til følsomme oplysninger.| [Konfigurer multifaktorgodkendelse](m365bp-multifactor-authentication.md) <br/><br/>[Beskyt dig mod phishingangreb](m365-campaigns-phishing-and-attacks.md)<br/><br/>[Kryptér eller mærkater dine følsomme mails](send-encrypted-email.md) |
-|iPhones og Android-enheder |Brug multifaktorgodkendelse, konfigurer Microsoft-mobilapps, og kræv en pinkode | [Konfigurer multifaktorgodkendelse](m365bp-multifactor-authentication.md)<br/><br/>[Konfigurer mobilenheder](../business/set-up-mobile-devices.md)|
-|Bring-your-own-devices (BYOD) til Mac og Windows pc'er |Hold Office opdateret, hold operativsystemer opdateret, og aktivér sikkerhedsfunktioner. | [Beskyt ikke-administrerede Windows- og Mac-enheder](m365bp-protect-pcs-macs.md) |
-|Gemme og dele filer sikkert | Del filer og videoer fra Microsoft Teams, OneDrive, SharePoint og Microsoft Stream, og beskyt følsomme data.| [Del filer og videoer](share-files-and-videos.md) |
-|Administrerede Windows enheder |Brug administrerede enheder til nøglemedarbejdere, og beskyt disse enheder. | [Konfigurer administrerede enheder](../business/set-up-windows-devices.md) |
+## <a name="fortify-your-environment"></a>[**Styrk dit miljø**](#tab/Fortify)
 
-## <a name="a-recommended-security-configuration-for-microsoft-365-business-premium"></a>En anbefalet sikkerhedskonfiguration til Microsoft 365 Business Premium
+I disse første opgaver skal du logge på og konfigurere dine indledende beskyttelse, startende med kontoadgangsbeskyttelse.
 
-Denne anbefalede sikre konfiguration for Microsoft 365 Business Premium gør det muligt at:
+[**Konfigurer dit miljø**](m365bp-setup-overview.md). Denne opgsve kræver, at du konfigurerer og implementerer sikkerhed på tværs af alle konti i systemet.
 
-- Brug pålidelige værktøjer til virksomhedsproduktivitet og samarbejde, f.eks. Outlook, Word, Excel og andre Office produkter.
+[**Opgrader cybersikkerhedsbeskyttelse**](m365bp-security-overview.md). Konfigurer kritiske frontlinjesikkerhedsforanstaltninger for at forhindre cyberangreb.
 
-- Beskyt dine arbejdsfiler på alle dine iOS-, Android- Windows-enheder med sikkerhed i virksomhedsklasse, der er nem at administrere.
+[:::image type="content" source="media/m365bp-fortify-environment.jpg" alt-text="Microsoft 365 Business Premium beskytter dine apps, fillager, mail, enheder og identiteter,.":::](m365bp-setup-overview.md)
 
-- Anvend ekstra beskyttelse til brugerkonti og identitet.
+## <a name="cybersecurity-playbook"></a>Strategiplan for cybersikkerhed
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3clbH]
+Vejledningen i disse opgaver hjælper din virksomhed med at nå de mål, der er beskrevet i Harvard Kennedy Schools [Strategiplan for cybersikkerhed](https://go.microsoft.com/fwlink/p/?linkid=2015598). Du kan downloade en resumé.
 
-Mens føderale og nogle statslige valgkampagner i USA er berettiget til [særpriser](get-microsoft-365-campaigns.md) for Microsoft 365 for kampagner med Microsoft 365 Business Premium, kan enhver organisation med Business Premium-planen drage fordel af denne vejledning til at konfigurere øget sikkerhed og lære, hvordan man samarbejder sikkert.
+Klik på infografikken for at se en større version, eller [Download en kopi af plakaten med strategiplanen for cybersikkerhed](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
 
-Dette bibliotek indeholder følgende:
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Strategiplan for cybersikkerhed" lightbox="media/m365bp-cyber-security-playbook.png":::
 
-- Foruddefineret konfigurationsvejledning til at tilføje øget sikkerhed.
+[Hent PDF-filen](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
 
-- Hjælp til brugerne til at konfigurere enheder for sikker adgang.
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Sådan hjælper Microsoft 365 Business Premium dig
 
-- Vejledning i at samarbejde og dele sikkert.
+Klik her for at opdage [fordelene ved Microsoft 365 Business Premium](m365bp-secure-users.md).
 
-Du kan finde flere oplysninger om, hvad der er inkluderet[, Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business).
+## <a name="next-steps"></a>Næste trin
 
-## <a name="get-started"></a>Kom i gang
+Lad os nu [styrke dit miljø mod cyberattaker](m365bp-setup-overview.md)!
 
-Følg disse trin for at komme i gang:
+> [!Note]
+> Når et begreb eller direktiv er uklart, kan du finde definitioner i [ordliste](m365bp-glossary.md).
 
-- Til små og mellemstore virksomheder: [Hent Microsoft 365 Business Premium](get-microsoft-365-business-premium.md)
+## <a name="train-your-team"></a>[**Træn dit team**](#tab/Train)
 
-- For kampagner: [Få Microsoft 365 kampagner](get-microsoft-365-campaigns.md)
+Vi har inkluderet et sæt af opgaver her med nogle mål, der skal fuldføres af dit team. Du skal sikre dig, at teamets enheder er beskyttet, samt at teamet er trænet til at bruge mail og fildeling på en sikker måde og til at genkende og rapportere trusler.
 
-## <a name="solutions-for-your-business"></a>Løsninger til din virksomhed
+[**Konfigurer BYOD-enheder**](m365bp-protect-pcs-macs.md). I denne mission konfigurerer du alle de ikke-administrerede enheder (BYOD), så de er en sikker del af økosystemet.
 
-Når du har konfigureret dit sikre Microsoft 365, kan du bruge følgende løsninger til at komme i gang:
+[**Beskyttelse af mail**](m365bp-protect-email-overview.md). Tag de nødvendige skridt for at beskytte mailsystemerne mod angreb.
 
-| Opret teams til samarbejde | Konfigurere onlinemøder |
-| ------------- | ------------- |
-| ![et SharePoint kommunikationswebsted.](../media/sm-m365-democracy-teams-collab.png) | ![et onlinemøde](../media/m365-democracy-teams-meetings.png) |
-| Samarbejd med teams om nøglemedarbejdere, alle medarbejdere og partnere eller leverandører.<br>[Opret dit team](create-teams-for-collaboration.md) | Planlæg et møde med lyd, video og deling med Microsoft Teams.<br>[Konfigurere et møde](set-up-meetings.md) |
+[**Samarbejd og del sikkert**](m365bp-collaborate-share-securely.md). Formålet med denne opgave kræver, at du konfigurerer sikker fildeling for alle medlemmer af organisationen.
 
-| Kryptér eller mærkater dine følsomme mails | Oprette et kommunikationswebsted |
-| ------------- | ------------- |
-| ![Krypteret og mærket mail.](../media/sm-m365-campaign-email-encrypt.png) | ![et SharePoint kommunikationswebsted](../media/sm-m365-democracy-comms-site.png) |
-| Brug kryptering og følsomhedsetiketter til at beskytte mails, der indeholder fortrolige eller følsomme oplysninger.<br>[Send krypteret mail](send-encrypted-email.md) | Del begivenheder, beskeder, billeder og meget mere med dit team på et internt kommunikationswebsted, der er oprettet SharePoint.<br>[Opret dit websted](create-communications-site.md) |
+[:::image type="content" source="media/m365bp-train-team.jpg" alt-text="Microsoft 365 Business Premium beskytter dine apps, fillager, mail, enheder og identiteter.":::](m365bp-devices-overview.md)
 
-| Del filer og videoer |
-| ------------- |
-| ![deling af en fil Microsoft Teams.](../media/m365-democracy-teams-sharefiles.png) |
-| Gem dine filer og videoer i skyen, så de er tilgængelige <br>til alle de relevante personer.<br>[Start deling](share-files-and-videos.md) |
+## <a name="cybersecurity-playbook"></a>Strategiplan for cybersikkerhed
+
+Vejledningen i disse opgaver hjælper din virksomhed med at nå de mål, der er beskrevet i Harvard Kennedy Schools [Strategiplan for cybersikkerhed](https://go.microsoft.com/fwlink/p/?linkid=2015598). Du kan downloade en resumé.
+
+Klik på infografikken for at se en større version, eller [Download en kopi af plakaten med strategiplanen for cybersikkerhed](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Strategiplan for cybersikkerhed" lightbox="media/m365bp-cyber-security-playbook.png":::
+
+[Hent PDF-filen](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Sådan hjælper Microsoft 365 Business Premium dig
+
+Klik her for at opdage [fordelene ved Microsoft 365 Business Premium](m365bp-secure-users.md).
+
+## <a name="next-steps"></a>Næste trin
+
+Lad os nu [styrke dit miljø mod cyberattaker](m365bp-setup-overview.md)!
+
+> [!Note]
+> Når et begreb eller direktiv er uklart, kan du finde definitioner i [ordliste](m365bp-glossary.md).
+
+## <a name="safeguard-managed-devices"></a>[**Beskyt administrerede enheder**](#tab/Safeguard)
+
+En sikker enhed er en enhed, der overvåges af organisationen. I denne sidste vigtige opgave onboarder og tilmelder du enheder i Microsoft Defender for Business, så de er sikret og beskyttet med de bedste værktøjer, der er tilgængelige.
+
+[**Konfigurér og beskyt administrerede enheder**](m365bp-protect-devices.md). Udfør trinnene for at sikre disse enheder, så de overvåges og beskyttes af organisationen!
+
+[:::image type="content" source="media/m365bp-safeguard-managed-devices.jpg" alt-text="Microsoft 365 Business Premium beskytter dine apps, fillager, mail, enheder og identiteter.":::](m365bp-protect-devices.md)
+
+## <a name="cybersecurity-playbook"></a>Strategiplan for cybersikkerhed
+
+Vejledningen i disse opgaver hjælper din virksomhed med at nå de mål, der er beskrevet i Harvard Kennedy Schools [Strategiplan for cybersikkerhed](https://go.microsoft.com/fwlink/p/?linkid=2015598). Du kan downloade en resumé.
+
+Klik på infografikken for at se en større version, eller [Download en kopi af plakaten med strategiplanen for cybersikkerhed](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Strategiplan for cybersikkerhed" lightbox="media/m365bp-cyber-security-playbook.png":::
+
+[Hent PDF-filen](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Sådan hjælper Microsoft 365 Business Premium dig
+
+Klik her for at opdage [fordelene ved Microsoft 365 Business Premium](m365bp-secure-users.md).
+
+## <a name="next-steps"></a>Næste trin
+
+Lad os nu [styrke dit miljø mod cyberattaker](m365bp-setup-overview.md)!
+
+> [!Note]
+> Når et begreb eller direktiv er uklart, kan du finde definitioner i [ordliste](m365bp-glossary.md).

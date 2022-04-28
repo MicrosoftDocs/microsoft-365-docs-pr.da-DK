@@ -2,8 +2,8 @@
 title: Filtrer data ved import af PST-filer
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du filtrerer data ved hjælp af funktionen til intelligent import i Microsoft 365 importtjeneste, når du importerer PST-filer til Microsoft 365.
-ms.openlocfilehash: dc60baf45be97e438875e0b045d9e8f3b6208d3f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5ff78126f9e2d02181635433d7a94ede0e191c8d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997906"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099735"
 ---
 # <a name="filter-data-when-importing-pst-files"></a>Filtrer data ved import af PST-filer
 
@@ -70,7 +70,7 @@ Når du har oprettet et PST-importjob, skal du følge disse trin for at filtrere
   
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
     
-2. Klik på **Import** af **styring af oplysninger** \> i ruden til venstre på overholdelsesportalen.
+2. Klik på **Import** af **datalivscyklusstyring** \> i ruden til venstre på overholdelsesportalen.
     
     Importjob for din organisation vises under fanen **Importér**. Værdien **Analyse fuldført** i kolonnen **Status** angiver de importjob, der er blevet analyseret af Microsoft 365 og er klar til at blive importeret.
     
@@ -144,7 +144,7 @@ Når du har oprettet et PST-importjob, skal du følge disse trin for at filtrere
     |IPM. Aktivitet  <br/> |Journaloptegnelser  <br/> |
     |IPM. Dokument  <br/> |Dokumenter og filer (ikke knyttet til en mail)  <br/> |
     |IPM. Fil  <br/> |(samme som IPM. Dokument)  <br/> |
-    |IPM. Note.IMC.Notification  <br/> |Rapporter, der sendes af Internet Mail Connect, som er Exchange Server-gatewayen til internettet  <br/> |
+    |IPM. Note.IMC.Notification  <br/> |Rapporter, der sendes via internetmail Forbind, som er den Exchange Server gateway til internettet  <br/> |
     |IPM. Note.Microsoft.Fax  <br/> |Faxmeddelelser  <br/> |
     |IPM. Note.Rules.Oof.Template.Microsoft  <br/> |Autosvar fraværende-meddelelser  <br/> |
     |IPM. Note.Rules.ReplyTemplate.Microsoft  <br/> |Svar, der er sendt af en indbakkeregel  <br/> |

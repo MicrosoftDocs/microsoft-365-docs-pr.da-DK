@@ -2,8 +2,8 @@
 title: Overfør ældre eDiscovery-søgninger og ventepositioner til Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,14 +15,16 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 07740a6569f67b04db22351f4b4e1214ccfbc787
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 416baed923884d9cbabbd6ee7607a48b0a19ab62
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973701"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092365"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Overfør ældre eDiscovery-søgninger og ventepositioner til overholdelsesportalen
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview-overholdelsesportalen giver en forbedret oplevelse i forbindelse med eDiscovery-brug, herunder: højere pålidelighed, bedre ydeevne og mange funktioner, der er skræddersyet til eDiscovery-arbejdsprocesser, herunder sager til at organisere dit indhold efter sag, gennemgå sæt for at gennemse indhold og analyser for at hjælpe med at kassere data til gennemsyn, f.eks. næsten identisk gruppering, mailtrådning, temaanalyse og forudsigende kodning.
 

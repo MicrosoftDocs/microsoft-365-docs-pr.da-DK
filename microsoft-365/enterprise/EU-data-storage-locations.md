@@ -2,7 +2,7 @@
 title: Dataplaceringer for EU
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Find ud af, hvor dine Microsoft 365 kundedata er gemt i Den Europæiske Union
-ms.openlocfilehash: fa1f1548039f060ae51131fbfcbb0b6ab61c9b70
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 2f4a6133724d868f3caeaf977517c74fe56bb4fd
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822622"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095372"
 ---
 # <a name="data-locations-for-the-european-union"></a>Dataplaceringer for EU
 
@@ -113,7 +113,7 @@ Når regeringer eller retshåndhævende myndigheder foretager en lovlig anmodnin
 
 Du kan få mere at vide under [Ofte stillede spørgsmål](https://blogs.microsoft.com/datalaw/our-practices/) om anmodninger fra offentlige myndigheder og retshåndhævende myndigheder, herunder spørgsmål om CLOUD-loven.
 
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 - [Databeskyttelse, der er tillid til](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FhZn) , giver et overblik over, hvordan Microsoft beskytter dine data, når du bruger Microsoft Online Services og Professional Services. Det foreslås også, at du konsulterer de [Vilkår for Microsoft Online Services (OST) og DPA (Data Protection Addendum),](https://www.microsoft.com/licensing/product-licensing/products) der styrer din brug af disse tjenester.
 - [Office 365 registreredes anmodninger om GDPR](/compliance/regulatory/gdpr-dsr-Office365) hjælper dig med at finde og handle på personlige data eller personlige oplysninger for at besvare DSR-anmodninger ved hjælp af Microsoft 365 produkter, tjenester og administrative værktøjer.

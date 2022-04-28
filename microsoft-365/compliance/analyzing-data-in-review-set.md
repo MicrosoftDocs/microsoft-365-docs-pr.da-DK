@@ -2,8 +2,8 @@
 title: Analysér data i et korrektursæt i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,20 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentsæt, når du analyserer en Microsoft Purview eDiscovery (Premium)-sag.
+description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentgrupper, når du analyserer en Microsoft Purview eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 72be5cf0cd6e4d52200f1167b525aa354192672e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: af34a790881cad2af5d278cf187b963f0aa58146
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998700"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099823"
 ---
 # <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>Analysér data i et korrektursæt i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Microsoft Purview eDiscovery (Premium) indeholder en række værktøjer til at analysere dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og for at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Du kan få mere at vide om disse funktioner under:
+Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Microsoft Purview eDiscovery (Premium) indeholder en række værktøjer til at analysere dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og til at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Du kan få mere at vide om disse funktioner under:
 
 - [Registrering af næsten dubletter](near-duplicate-detection-in-advanced-ediscovery.md)
 
@@ -77,7 +77,7 @@ På følgende liste beskrives resultatet af filterforespørgslen med hensyn til,
 Du kan finde flere oplysninger om inkluderende typer og dokumentets entydighed [under Mailtrådning i eDiscovery (Premium)](email-threading-in-advanced-ediscovery.md).
 
 > [!NOTE]
-> I den offentlige prøveversion af [det nye sagsformat](advanced-ediscovery-new-case-format.md) i eDiscovery (Premium) returnerede filterforespørgslen til **gennemsyn** ikke Teams eller Yammer samtaler til gennemsynssæt (i tilfælde, der bruger det store sagsformat), der blev oprettet før den 4. november 2021. Problemet er løst. Det betyder, at hvis du anvender forespørgslen **Til gennemsyn** igen på et korrektursæt i et tilfælde, der bruger store og små bogstaver, kan flere elementer, der stemmer overens med filterforespørgslen, blive vist, fordi alle Teams eller Yammer samtaler er inkluderet.
+> I den offentlige prøveversion af [det nye sagsformat](advanced-ediscovery-new-case-format.md) i eDiscovery (Premium) returnerede filterforespørgslen til **gennemsyn** ikke Teams eller Yammer samtaler til korrektursæt (i tilfælde, hvor store sager bruges) oprettet før den 4. november 2021. Problemet er løst. Det betyder, at hvis du anvender forespørgslen **Til gennemsyn** igen på et korrektursæt i et tilfælde, der bruger store og små bogstaver, kan flere elementer, der stemmer overens med filterforespørgslen, blive vist, fordi alle Teams eller Yammer samtaler er inkluderet.
 
 ## <a name="analytics-report"></a>Analyserapport
 

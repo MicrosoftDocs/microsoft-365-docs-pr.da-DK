@@ -4,11 +4,11 @@ f1.keywords:
 - NOCSH
 ms.author: twerner
 author: twerner
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -25,16 +25,18 @@ search.appverid:
 - MET150
 - MOE150
 description: Konfigurer onlinemøder med Microsoft Teams.
-ms.openlocfilehash: d945d5526e3cdd06bc0a7c7a80ef7cff0160d07d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 9ed624d8fe607f460d36eb391d801066b69f7141
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823096"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095138"
 ---
 # <a name="set-up-meetings"></a>Konfigurer møder
 
-Møder i Microsoft Teams omfatter lyd, video og deling. Og fordi de er online, har du altid et mødested (uden at have brug for et rum eller en projektor!), selvom dine medarbejdere er geografisk fordelt eller arbejder eksternt. Microsoft Teams møder er en god måde at mødes med dine medarbejdere både i og uden for organisationen på. Du behøver ikke at være medlem af din organisation eller endda have en konto for at deltage i et møde. Du kan planlægge og køre onlinemøder ved hjælp af Microsoft Teams. Under et møde kan du dele din skærm, dele filer, tildele opgaver og meget mere. Politiske kampagner kan omfatte personale, frivillige og gæster uden for organisationen i mødet. Små virksomheder eller praksisser kan mødes med deres personale eller mødes med kunder eller partnere over Microsoft Teams.
+Sørg for, at medlemmer af organisationen bruger Microsoft Teams til alle møder. Teams mødefiler omfatter lyd, video og deling, og fordi de er online, er der altid et mødested, og der er ikke behov for et rum med en projektor! Microsoft Teams møder er en god måde at mødes med dine medarbejdere både i og uden for organisationen på. 
+
+Når du bruger Teams, behøver du ikke at være medlem af organisationen eller endda have en konto for at deltage i et møde. Du kan planlægge og køre onlinemøder, hvor du kan dele din skærm, dele filer, tildele opgaver og meget mere. Politiske kampagner kan omfatte personale, frivillige eller gæster uden for organisationen. Du kan nemt mødes med klienter, medarbejdere eller partnere over Microsoft Teams og i et sikkert og problemfrit miljø.
 
 [![En illustration af to brugere i et møde.](../media/HostOnlineMeeting-thumb-358x201.png)](https://go.microsoft.com/fwlink/?linkid=2078712)
 
@@ -58,3 +60,9 @@ Følg disse bedste fremgangsmåder for dine onlinemøder:
 Få mere at vide om møde i Microsoft Teams:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWeokQ]
+
+## <a name="next-objective"></a>Næste mål
+
+Når denne mission er fuldført, kan du lære at [dele filer og videoer](share-files-and-videos.md) på en sikker måde
+
+

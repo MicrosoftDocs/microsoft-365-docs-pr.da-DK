@@ -2,8 +2,8 @@
 title: Arbejd sammen med en partner om at arkivere tredjepartsdata
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du konfigurerer en brugerdefineret connector til import af tredjepartsdata fra datakilder, f.eks. Salesforce Chatter, Yahoo Messenger eller Yammer.
-ms.openlocfilehash: eb557f43b97f343c45a7eaf21268ac6218d2e1c0
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: f0de03fb68b78779b6d1ed057a8b462c5c2a901b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995310"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097552"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Arbejd sammen med en partner om at arkivere tredjepartsdata
 
@@ -87,7 +87,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Blackberry
 
-- Bloomberg-datastrømme
+- Bloomberg-data Strømme
 
 - Cisco Jabber
 
@@ -99,7 +99,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - LivePerson
 
-- MessageLabs Data Streams
+- MessageLabs Data Strømme
 
 - Åbn tekst
 
@@ -117,7 +117,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Skype for Business Online (Lync Online)
 
-- SQL-databaser
+- SQL databaser
 
 - Squawker
 
@@ -287,13 +287,13 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Logføring af samarbejde i realtid
 
-- Direkte forbindelse
+- Direkte Forbind
 
 - Facebook
 
 - FactSet
 
-- Fasttrack
+- FastTrack
 
 - Gnutella
 
@@ -470,7 +470,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - TwistedPair Radio
 
-- Windows-skrivebordscomputerskærm
+- Windows stationær computerskærm
 
 ## <a name="step-2-create-and-configure-a-third-party-data-mailbox-in-microsoft-365"></a>Trin 2: Opret og konfigurer en datapostkasse fra tredjepart i Microsoft 365
 
@@ -509,7 +509,7 @@ Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse t
 
 ## <a name="step-3-configure-user-mailboxes-for-third-party-data"></a>Trin 3: Konfigurer brugerpostkasser til tredjepartsdata
 
-Det næste trin er at konfigurere brugerpostkasser til at understøtte tredjepartsdata. Udfør disse opgaver ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller ved hjælp af de tilsvarende Windows PowerShell-cmdlet'er.
+Det næste trin er at konfigurere brugerpostkasser til at understøtte tredjepartsdata. Udfør disse opgaver ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller ved hjælp af de tilsvarende Windows PowerShell cmdlet'er.
 
 1. Aktivér arkivpostkassen for hver bruger. se [Aktivér arkivpostkasser](enable-archive-mailboxes.md) og [Aktivér automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md).
 
@@ -535,9 +535,9 @@ Det sidste trin er at give din partner følgende oplysninger, så de kan konfigu
 
 ## <a name="step-5-register-the-third-party-data-connector-in-azure-active-directory"></a>Trin 5: Registrer dataconnectoren fra tredjepart i Azure Active Directory
 
-Fra og med den 30. september 2018 begynder Azure-tjenesten i Microsoft 365 at bruge moderne godkendelse i Exchange Online til at godkende dataconnectors fra tredjepart, der forsøger at oprette forbindelse til din organisation for at importere data. Årsagen til denne ændring er, at moderne godkendelse giver mere sikkerhed end den aktuelle metode, som var baseret på en liste over tilladte forbindelser for tredjepartsconnectorer, der bruger det tidligere beskrevne slutpunkt til at oprette forbindelse til Azure-tjenesten.
+Fra og med den 30. september 2018 begynder Azure-tjenesten i Microsoft 365 at bruge moderne godkendelse i Exchange Online til at godkende tredjepartsdataconnectors, der forsøger at oprette forbindelse til din organisation for at importere data. Årsagen til denne ændring er, at moderne godkendelse giver mere sikkerhed end den aktuelle metode, som var baseret på en liste over tilladte forbindelser for tredjepartsconnectorer, der bruger det tidligere beskrevne slutpunkt til at oprette forbindelse til Azure-tjenesten.
 
-Hvis en dataconnector fra tredjepart skal kunne oprette forbindelse til Microsoft 365 ved hjælp af den nye moderne godkendelsesmetode, skal en administrator i din organisation give samtykke til at registrere connectoren som et tjenesteprogram, der er tillid til, i Azure Active Directory. Dette gøres ved at acceptere en anmodning om tilladelse for at give connectoren adgang til din organisations data i Azure Active Directory. Når du har accepteret denne anmodning, tilføjes dataconnectoren fra tredjepart som et virksomhedsprogram til Azure Active Directory og repræsenteres som en tjenesteprincipal. Du kan få flere oplysninger om samtykkeprocessen under  [Lejeradministratorsamtykke](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
+Hvis en dataconnector fra tredjepart skal kunne oprette forbindelse til Microsoft 365 ved hjælp af den nye moderne godkendelsesmetode, skal en administrator i din organisation give samtykke til at registrere connectoren som et tjenesteprogram, der er tillid til, i Azure Active Directory. Dette gøres ved at acceptere en anmodning om tilladelse for at give connectoren adgang til organisationens data i Azure Active Directory. Når du har accepteret denne anmodning, tilføjes dataconnectoren fra tredjepart som et virksomhedsprogram for at Azure Active Directory og repræsenteres som en tjenesteprincipal. Du kan få flere oplysninger om samtykkeprocessen under  [Lejeradministratorsamtykke](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
 
 Her er trinnene til at få adgang til og acceptere anmodningen om at registrere connectoren:
 
@@ -549,14 +549,14 @@ Her er trinnene til at få adgang til og acceptere anmodningen om at registrere 
 
 2. Klik på **Acceptér**.
 
-Når du har accepteret anmodningen, vises [Azure Portal](https://portal.azure.com). Hvis du vil have vist listen over programmer for din organisation, skal du klikke på **Azure Active** **DirectoryEnterprise-programmer** > . Den Microsoft 365 dataconnector fra tredjepart er angivet på bladet **Virksomhedsprogrammer**.
+Når du har accepteret anmodningen, vises [Azure Portal](https://portal.azure.com). Hvis du vil have vist listen over programmer for din organisation, skal du klikke **på Azure Active Directory** >  **Enterprise-programmer**. Den Microsoft 365 dataconnector fra tredjepart er angivet på bladet **Virksomhedsprogrammer**.
 
 > [!IMPORTANT]
 > Efter den 30. september 2018 importeres tredjepartsdata ikke længere i postkasser i din organisation, hvis du ikke registrerer en dataconnector fra tredjepart i Azure Active Directory. Bemærk, at eksisterende dataconnectors fra tredjepart (dem, der er oprettet før den 30. september 2018) også skal registreres i Azure Active Directory ved at følge proceduren i trin 5.
 
 ### <a name="revoking-consent-for-a-third-party-data-connector"></a>Tilbagekalder samtykke til en dataconnector fra tredjepart
 
-Når din organisation har givet samtykke til anmodningen om tilladelse til at registrere en dataconnector fra tredjepart i Azure Active Directory, kan din organisation tilbagekalde dette samtykke når som helst. Hvis du tilbagekalder samtykket for en connector, betyder det dog, at data fra datakilden fra tredjepart ikke længere importeres til Microsoft 365.
+Når din organisation har givet samtykke til anmodningen om tilladelser til at registrere en dataconnector fra tredjepart i Azure Active Directory, kan din organisation til enhver tid tilbagekalde dette samtykke. Hvis du tilbagekalder samtykket for en connector, betyder det dog, at data fra datakilden fra tredjepart ikke længere importeres til Microsoft 365.
 
 Hvis du vil tilbagekalde samtykket for en dataconnector fra tredjepart, kan du slette programmet (ved at slette den tilsvarende tjenesteprincipal) fra Azure Active Directory ved hjælp af bladet **Virksomhedsprogrammer** i Azure Portal eller ved hjælp af [Remove-MsolServicePrincipal](/powershell/module/msonline/remove-msolserviceprincipal) i Microsoft 365 PowerShell. Du kan også bruge cmdlet'en [Remove-AzureADServicePrincipal](/powershell/module/azuread/remove-azureadserviceprincipal) i Azure Active Directory PowerShell.
 

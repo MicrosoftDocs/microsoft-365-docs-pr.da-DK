@@ -2,8 +2,8 @@
 title: Konfigurer en connector til arkivering af Facebook-data
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan du konfigurerer & bruger en connector på Microsoft Purview-overholdelsesportalen til at importere & arkivere data fra Facebook Business-sider for at Microsoft 365.
-ms.openlocfilehash: 58d1f0efd26d892a4bf206c71dc5ee55c653abfb
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 2d732352d8b6eebaee304a030736f35bcf32b84c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994936"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099317"
 ---
 # <a name="set-up-a-connector-to-archive-facebook-data-preview"></a>Konfigurer en connector til arkivering af Facebook-data (prøveversion)
 
@@ -43,7 +43,7 @@ Fuldfør følgende forudsætninger, før du kan konfigurere en connector på ove
     - [Tilmeld dig et Azure-abonnement, der betales efter forbrug](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
 
     > [!NOTE]
-    > Det [gratis Azure Active Directory-abonnement](use-your-free-azure-ad-subscription-in-office-365.md), der er inkluderet i dit Microsoft 365-abonnement, understøtter ikke connectorerne på overholdelsesportalen.
+    > Det [gratis Azure Active Directory abonnement](use-your-free-azure-ad-subscription-in-office-365.md), der er inkluderet i dit Microsoft 365-abonnement, understøtter ikke connectorerne på overholdelsesportalen.
 
 - Connectoren til Facebook Business-sider kan importere i alt 200.000 elementer på en enkelt dag. Hvis der er mere end 200.000 Facebook Business-elementer på én dag, importeres ingen af disse elementer til Microsoft 365.
 
@@ -53,17 +53,17 @@ Fuldfør følgende forudsætninger, før du kan konfigurere en connector på ove
 
 Det første trin er at registrere en ny app i Azure Active Directory (AAD). Denne app svarer til den webappressource, du implementerer i trin 4 og trin 5 for Facebook-connectoren.
 
-Du kan finde en trinvis vejledning under [Opret en app i Azure Active Directory](deploy-facebook-connector.md#step-1-create-an-app-in-azure-active-directory).
+Du kan finde en trinvis vejledning [under Opret en app i Azure Active Directory](deploy-facebook-connector.md#step-1-create-an-app-in-azure-active-directory).
 
 Når du har fuldført dette trin (ved hjælp af de forrige trinvise instruktioner), skal du gemme følgende oplysninger i en tekstfil. Disse værdier bruges i senere trin i installationsprocessen.
 
-- AAD-program-id
+- AAD program-id
 
-- AAD-programhemmelighed
+- AAD programhemmelighed
 
 - Lejer-id
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub på din Azure-konto
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub til din Azure-konto
 
 Det næste trin er at installere kildekoden for connectorappen Facebook Business Pages, der bruger Facebook-API'en til at oprette forbindelse til din Facebook-konto og udtrække data, så du kan importere dem for at Microsoft 365. Den Facebook-connector, du installerer for din organisation, uploader elementerne fra dine Facebook-virksomhedssider til den Azure Storage placering, der oprettes i dette trin. Når du har oprettet en connector til Facebook-virksomhedssider i overholdelsesportalen (i trin 5), kopierer importtjenesten dataene på Facebook-virksomhedssiderne fra den Azure Storage placering til en postkasse i din Microsoft 365 organisation. Som tidligere forklaret i afsnittet [Forudsætninger](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) skal du have et gyldigt Azure-abonnement for at oprette en Azure Storage konto.
 
@@ -105,9 +105,9 @@ Når du har fuldført dette trin (ved at følge den trinvise vejledning), skal d
 
 - Facebooks webhooks bekræfter token (hentet i Trin 3)
 
-- Azure Active Directory-program-id (AAD-program-id'et, der blev hentet i trin 1)
+- Azure Active Directory program-id (det AAD program-id, der blev hentet i trin 1)
 
-- Azure Active Directory-programhemmelighed (AAD-programhemmeligheden, der blev hentet i trin 1)
+- Azure Active Directory programhemmelighed (den AAD programhemmelighed, der blev hentet i trin 1)
 
 ## <a name="step-5-set-up-a-facebook-business-pages-connector-in-the-compliance-portal"></a>Trin 5: Konfigurer en connector til Facebook-virksomhedssider på overholdelsesportalen
 
@@ -117,7 +117,7 @@ Du kan finde en trinvis vejledning under [Trin 5: Konfigurer en Facebook-connect
 
 Når du har fuldført dette trin (ved at følge den trinvise vejledning), skal du angive følgende oplysninger (som du har kopieret til en tekstfil, når du har fuldført trinnene).
 
-- AAD-program-id (hentet i trin 1)
+- AAD program-id (hentet i trin 1)
 
 - URL-adresse til Azure-apptjeneste (hentet i trin 1, f.eks. https://fbconnector.azurewebsites.net)
 

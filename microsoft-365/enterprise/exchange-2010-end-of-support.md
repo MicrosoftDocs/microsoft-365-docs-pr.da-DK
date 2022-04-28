@@ -2,7 +2,7 @@
 title: køreplan for ophør af support Exchange 2010
 ms.author: dstrome
 author: dstrome
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -12,12 +12,12 @@ ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 f1.keywords:
 - NOCSH
 description: Exchange 2010 har nået ophør af support. Brug denne planlægningsoversigt som forberedelse til at opgradere til Exchange Online eller en nyere version af Exchange Server i det lokale miljø.
-ms.openlocfilehash: 24834a600a14c46287434f8f273fcd139d117376
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: f8515aa6f743927f25bf3dffa3c5bed0306816ac
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822766"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095284"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>køreplan for ophør af support Exchange 2010
 
@@ -60,7 +60,7 @@ Her er de tre veje, du kan gå for at undgå ophør af support til Exchange Serv
 
 I følgende afsnit udforskes hver indstilling mere detaljeret.
 
-## <a name="migrate-to-microsoft-365"></a>Overfør til Microsoft 365
+## <a name="migrate-to-microsoft-365"></a>Migrer til Microsoft 365
 
 Overførsel af din mail til Microsoft 365 er den bedste og nemmeste løsning, der kan hjælpe dig med at trække udrulningen af Exchange 2010 ud. Med en migrering til Microsoft 365 kan du oprette et enkelt hop fra gammel teknologi til aktuelle funktioner, herunder:
 

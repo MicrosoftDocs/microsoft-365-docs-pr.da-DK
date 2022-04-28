@@ -2,8 +2,8 @@
 title: Test relevansanalyse i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 titleSuffix: Office 365
 ms.date: ''
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: 1b092f7c-ea55-44f5-b419-63f3458fd7e0
 ROBOTS: NOINDEX, NOFOLLOW
 description: Få mere at vide om, hvordan du bruger fanen Test efter batchberegning i eDiscovery (Premium) til at teste, sammenligne og validere den overordnede kvalitet af behandlingen.
-ms.openlocfilehash: e568552501a07c74e7500a1041e69f4994668cd2
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 0b3d6c70bdfef4dec8e8a5d08d4e72f80d6fec77
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991858"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095460"
 ---
 # <a name="test-relevance-analysis-in-ediscovery-premium"></a>Test relevansanalyse i eDiscovery (Premium)
 
@@ -34,7 +34,7 @@ I scenarier med enkelt- og flere problemer udføres der typisk test pr. problem.
   
 ## <a name="testing-the-rest"></a>Test af resten
 
-Test resttesten bruges til at validere beslutninger om aflivning, f.eks. til kun at gennemse filer over en bestemt score for relevansafskæring baseret på de endelige resultater for eDiscovery (Premium). Eksperten gennemgår en stikprøve af filer under en valgt skæringsscore for at evaluere antallet af relevante filer i det pågældende sæt.
+Testen "Test resten" bruges til at validere beslutninger om aflivning, f.eks. til kun at gennemse filer over en bestemt score for relevansafskæring baseret på de endelige resultater for eDiscovery (Premium). Eksperten gennemgår en stikprøve af filer under en valgt skæringsscore for at evaluere antallet af relevante filer i det pågældende sæt.
   
 Denne test indeholder statistikker og en sammenligning mellem reviewsættet og restpopulationen Test. Resultaterne af korrektursættet er dem, der beregnes af Relevans under oplæringen. Resultaterne omfatter beregninger baseret på indstillinger og inputparametre, f.eks.:
   

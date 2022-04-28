@@ -2,8 +2,8 @@
 title: Opret eDiscovery-ventepositioner i en eDiscovery-sag (Standard)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Du kan oprette en venteposition, der er knyttet til en eDiscovery-sag (Standard), i Microsoft 365 for at bevare indhold, der er relevant for en undersøgelse eller en juridisk sag.
-ms.openlocfilehash: 87a75923ccc270e7b9802ae5d366dd2930a84d82
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e91e67b39a160de99856d73af8da6ab17d1d6fba
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001230"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095006"
 ---
 # <a name="create-an-ediscovery-hold"></a>Opret en eDiscovery-venteposition
 
@@ -63,7 +63,7 @@ Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery
 
    2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online-organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
 
    > [!IMPORTANT]
    > Når du føjer Exchange postkasser eller SharePoint websteder til venteposition, skal du eksplicit føje mindst én indholdsplacering til ventepositionen. Hvis du med andre ord angiver til/fra-knappen til **Til** for postkasser eller websteder, skal du vælge bestemte postkasser eller websteder, der skal føjes til ventepositionen. Ellers oprettes eDiscovery-ventepositionen, men der føjes ingen postkasser eller websteder til ventepositionen, og statistikkerne viser, at der ikke er nogen indholdsplaceringer eller elementer i venteposition.

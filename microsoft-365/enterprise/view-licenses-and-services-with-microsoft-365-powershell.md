@@ -2,7 +2,7 @@
 title: Få vist Microsoft 365 licenser og tjenester med PowerShell
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ ms.custom:
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
 description: Beskriver, hvordan du bruger PowerShell til at få vist oplysninger om de licensplaner, -tjenester og -licenser, der er tilgængelige i din Microsoft 365 organisation.
-ms.openlocfilehash: 8b5ff01f15e4dea7a44b423609b6533cc5729a5f
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 1d0d514cc0d821e8958a35c3598b41554260716d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823888"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091935"
 ---
 # <a name="view-microsoft-365-licenses-and-services-with-powershell"></a>Få vist Microsoft 365 licenser og tjenester med PowerShell
 

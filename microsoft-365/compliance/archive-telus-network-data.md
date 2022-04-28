@@ -2,8 +2,8 @@
 title: Konfigurer en connector til arkivering af TELUS-netværksdata i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS-data fra TELUS-netværket i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: d35f14d5987f0230f17313902d0f451eedacb104
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 9199c38960cbc3e238f6ea8a47a06935c7867b69
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000460"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099691"
 ---
 # <a name="set-up-a-connector-to-archive-telus-network-data"></a>Konfigurer en connector til arkivering af TELUS-netværksdata
 
@@ -25,7 +25,7 @@ ms.locfileid: "65000460"
 
 Brug telemeddelelsesconnectoren i Microsoft Purview-overholdelsesportalen til at importere og arkivere sms-data (Short Messaging Service) fra organisationens TELUS Network. Når du har konfigureret en connector, opretter den forbindelse til organisationens TELUS-netværk én gang om dagen og importerer SMS-data til postkasser i Microsoft 365.
 
-Når sms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search og Microsoft 365 opbevaringspolitikker på TELUS-data. Du kan f.eks. søge i TELUS-sms'er ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder TELUS-dataene, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en TELUS-netværksconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når sms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search og Microsoft 365 opbevaringspolitikker på TELUS-data. Du kan f.eks. søge i TELUS-sms-meddelelser ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder TELUS-dataene, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en TELUS-netværksconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-telus-network-data"></a>Oversigt over arkivering af TELUS-netværksdata
 
@@ -57,7 +57,7 @@ Nogle af de implementeringstrin, der kræves for at arkivere TELUS-netværksdata
 
 - Den bruger, der opretter en TELUS-netværksconnector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-telus-network-connector"></a>Opret en TELUS-netværksconnector
 

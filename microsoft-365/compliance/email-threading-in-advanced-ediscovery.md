@@ -2,8 +2,8 @@
 title: Mailtrådning i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -14,14 +14,14 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtrådning en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
+description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtråde en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f2cdd3a10250a256179ce3fe959a88e0cbef01ba
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e35ffa901bb1b90b0ac5d572b6a7ee05cce31d89
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995486"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65086803"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>Mailtrådning i eDiscovery (Premium)
 
