@@ -2,7 +2,7 @@
 title: Konfigurer Microsoft 365 Enterprise tjenester og programmer
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -19,12 +19,12 @@ f1.keywords:
 - NOCSH
 description: Konfigurer Microsoft 365 Enterprise tjenester og programmer, f.eks. SharePoint, Exchange og Microsoft Teams.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 22a19d616693b84f6e6970d3ce1797843e79c7cb
-ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
+ms.openlocfilehash: 4d58eb16463de8c04d5e909af675b9ce119d64e8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/16/2022
-ms.locfileid: "64891792"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092971"
 ---
 # <a name="configure-microsoft-365-enterprise-services-and-applications"></a>Konfigurer Microsoft 365 Enterprise tjenester og programmer
 

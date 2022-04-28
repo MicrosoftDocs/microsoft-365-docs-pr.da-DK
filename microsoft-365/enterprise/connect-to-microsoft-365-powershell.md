@@ -2,7 +2,7 @@
 title: Opret forbindelse til Microsoft 365 med PowerShell
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Forbind til din Microsoft 365 lejer ved hjælp af PowerShell, så Microsoft 365 kan udføre administrationsopgaver fra kommandolinjen.
-ms.openlocfilehash: 4083ffdf240664947b1d35e726a400f292b6d3bf
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: a7f493bd0073762d995a232918d732e999a85777
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713487"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093915"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>Opret forbindelse til Microsoft 365 med PowerShell
 
@@ -64,7 +64,7 @@ Du kan bruge følgende versioner af Windows:
 - I forbindelse med modulet Microsoft Azure Active Directory til Windows PowerShell skal du bruge PowerShell version 5.1 eller nyere op til PowerShell version 6. Du kan ikke bruge PowerShell version 7.
        
 >[!Note]
->Disse procedurer er beregnet til brugere, der er medlemmer af en Microsoft 365 administratorrolle. Du kan få flere oplysninger under [Om administratorroller](../admin/add-users/about-admin-roles.md).
+>Disse procedurer er beregnet til brugere, der er medlemmer af en Microsoft 365 administratorrolle. Du kan få mere at vide under [Om administratorroller](../admin/add-users/about-admin-roles.md).
 
 
 ## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>Forbind med modulet Azure Active Directory PowerShell til Graph

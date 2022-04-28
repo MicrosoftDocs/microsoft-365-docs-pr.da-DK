@@ -2,8 +2,8 @@
 title: Administrer udstedende medarbejdere i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,18 +16,18 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Du kan tilføje udstedende medarbejdere for hele organisationen i eDiscovery (Premium), så de under alle omstændigheder kan føjes til enhver form for kommunikation i din organisation.
-ms.openlocfilehash: f82d5359a90e21203c2ff882ceb831cc1630e008
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 894da37088599d1c8b0f9d473bf64311a09cc566
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000548"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093630"
 ---
 # <a name="manage-issuing-officers-in-ediscovery-premium"></a>Administrer udstedende medarbejdere i eDiscovery (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du eller andre opretter en meddelelse om venteposition eller en anden type kommunikation, der sendes til en bruger, der er tilsynsførende i tilfælde af, skal du angive en udstedende officer. Meddelelsen sendes til den tilsynsførende på vegne af den angivne udstedende officer. En paralegal i din organisation kan f.eks. være ansvarlig for at oprette og sende meddelelser om venteposition til tilsynsførende i en sag. I dette scenarie kan advokatfuldmægtigen angive en advokat i organisationen som den udstedende officer. Hvem kan angives som udstedende officer? Der er to typer brugere, der kan vælges som udstedende officer til en tilsynsførende kommunikation:
+Når du eller andre opretter en meddelelse om venteposition eller en anden type kommunikation, der sendes til en bruger, der er tilsynsførende i tilfælde af, skal du angive en udstedende officer. Meddelelsen sendes til den tilsynsførende på vegne af den angivne udstedende officer. En paralegal i din organisation kan f.eks. være ansvarlig for at oprette og sende meddelelser om venteposition til tilsynsførende i en sag. I dette scenarie kan advokatfuldmægtigen angive en advokat i organisationen som den udstedende officer. Who kan angives som udstedende officer? Der er to typer brugere, der kan vælges som udstedende officer til en tilsynsførende kommunikation:
 
 - Ethvert medlem af den specifikke sag, som meddelelsen sendes på vegne af.
 
@@ -45,11 +45,11 @@ I denne artikel forklares det, hvordan du tilføjer og fjerner brugere på liste
 
 ## <a name="add-an-issuing-officer"></a>Tilføj en udstedende officer
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium**).
+1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) i portalen til overholdelse af angivne standarder, og klik derefter på **indstillinger for eDiscovery (Premium).**
 
    ![Vælg indstillinger for eDiscovery (Premium)](..\media\HistoricalVersions1.png)
 
-2. På siden **Indstillinger** skal du vælge fanen **Udstedende medarbejdere** for at få vist siden **Administrer udstedende medarbejdere** .
+2. På siden **Indstillinger** skal du vælge fanen **Udstedende medarbejdere** for at få vist siden **Administrer udstedende medarbejdere**.
 
    ![Siden Med indstillinger for udstedende officerer.](..\media\AeDIssuingOfficers1.png)
 
@@ -59,9 +59,9 @@ Når du har tilføjet brugere som udstedende officerer, kan du eller andre bruge
 
 ## <a name="remove-an-issuing-officer"></a>Fjern en udstedende
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium**).
+1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) i portalen til overholdelse af angivne standarder, og klik derefter på **indstillinger for eDiscovery (Premium).**
 
-2. På siden **Indstillinger** skal du vælge fanen **Udstedende officerer** .
+2. Vælg fanen **Udstedende officerer** på siden **Indstillinger**.
 
 3. Vælg en eller flere brugere på listen over udstedende medarbejdere, og klik derefter på **Slet**.
 

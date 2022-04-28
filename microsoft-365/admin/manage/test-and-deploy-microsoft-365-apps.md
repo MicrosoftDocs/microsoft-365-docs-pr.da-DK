@@ -14,12 +14,12 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Find, test og udrul Microsoft- og Microsoft-partnerapps til brugere og grupper i din organisation fra portalen integrerede apps i Microsoft 365 Administration.
-ms.openlocfilehash: 2baf6aea136736b1239df9a4da7b7e6a5b456ea6
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 491315b36a7698399bcd22c60173db8cec482148
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782385"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094654"
 ---
 # <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Test og udrul Microsoft 365 Apps af partnere på portalen integrerede apps
 
@@ -34,7 +34,7 @@ Portalen integrerede apps er kun tilgængelig for globale administratorer og er 
 Portalen Integrerede apps viser en liste over apps, som omfatter enkelte apps og Microsoft 365 apps fra partnere, der er udrullet i din organisation. Det er kun webapps, SPFx apps, Office tilføjelsesprogrammer og Teams apps, der vises. For webapps kan du se to slags apps.
 
 - SaaS-apps, der er tilgængelige i appsource.microsoft.com, og som kan udrulles af administratorer, der giver samtykke på vegne af organisationen.
-- SAML-galleriapps, der er sammenkædet med Office-tilføjelsesprogrammer.
+- SAML-galleriapps, der er sammenkædet med Office tilføjelsesprogrammer.
 
 ## <a name="manage-apps-in-the-integrated-apps-portal"></a>Administrer apps på portalen integrerede apps
 
@@ -189,7 +189,7 @@ Hvis du vil udrulle tilføjelsesprogrammer ved hjælp af en faseinddelt tilgang,
 
 Afhængigt af målgruppens størrelse kan du tilføje eller fjerne udrulningstrin.  
 
-## <a name="deploy-an-office-add-in-using-the-admin-center"></a>Udrul et Office tilføjelsesprogram ved hjælp af Administration 
+## <a name="deploy-an-office-add-in-using-the-admin-center"></a>Udrul et Office-tilføjelsesprogram ved hjælp af Administration 
 
 1. Vælg **Indstillinger** i Administration, og vælg derefter **Integrerede apps**. 
 
@@ -230,7 +230,7 @@ Office tilføjelsesprogrammer kombinerer en XML-manifestfil, der indeholder meta
 - Læs en brugers dokument for at levere kontekstafhængige tjenester. 
 - Læs og skriv data til og fra en brugers dokument for at give den pågældende bruger værdi.  
 
-Du kan få flere oplysninger om typerne og egenskaberne i Office tilføjelsesprogrammer under [oversigt over Office platform til tilføjelsesprogrammer](/office/dev/add-ins/overview/office-add-ins), især afsnittet "Anatomy of an Office Add-in". 
+Du kan få flere oplysninger om typerne og egenskaberne i Office tilføjelsesprogrammer under [oversigt over Office platform til tilføjelsesprogrammer](/office/dev/add-ins/overview/office-add-ins), især afsnittet "Anatomi af et Office-tilføjelsesprogram". 
 
 Hvis du vil interagere med brugerens dokument, skal tilføjelsesprogrammet deklarere, hvilken tilladelse det har brug for i manifestet. En JavaScript API-adgangsrettighedsmodel på fem niveauer udgør grundlaget for beskyttelse af personlige oplysninger og sikkerhed for brugere af tilføjelsesprogrammer i opgaverude. De fleste tilføjelsesprogrammer i Office Store er ReadWriteDocument-niveauet, og næsten alle tilføjelsesprogrammer understøtter mindst ReadDocument-niveauet. Du kan få flere oplysninger om tilladelsesniveauer under [Anmodning om tilladelser til API-brug i indhold og tilføjelsesprogrammer i opgaveruden](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins). 
 
@@ -255,7 +255,7 @@ Et tilføjelsesprogram kan være i tilstanden **Til** eller **Fra** .
  
 Overvej at slette et tilføjelsesprogram, hvis ingen bruger det længere. Hvis du f.eks. deaktiverer et tilføjelsesprogram, kan det give mening, hvis et tilføjelsesprogram kun bruges på bestemte tidspunkter af året. 
 
-## <a name="manage-an-office-add-in-using-the-admin-center"></a>Administrer et Office tilføjelsesprogram ved hjælp af Administration
+## <a name="manage-an-office-add-in-using-the-admin-center"></a>Administrer et Office-tilføjelsesprogram ved hjælp af Administration
 
 Efter installationen kan administratorer også administrere brugeradgang til tilføjelsesprogrammer. 
 

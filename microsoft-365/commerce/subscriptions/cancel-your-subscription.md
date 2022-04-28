@@ -1,5 +1,5 @@
 ---
-title: Annuller dit abonnement
+title: Annuller dit virksomhedsabonnement
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,24 +20,26 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Få mere at vide om, hvordan du annullerer din prøveversion af Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder eller betalte abonnementer i Microsoft 365 Administration.
-ms.date: 03/31/2022
-ms.openlocfilehash: d6b6c078c5f0d1b44143f3a9cc2d336a0a80fe03
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.date: 04/22/2022
+ms.openlocfilehash: 5dbf455b2c90a51aadd5d2e93b0739f93d138841
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595274"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092563"
 ---
-# <a name="cancel-your-subscription"></a>Annuller dit abonnement
+# <a name="cancel-your-business-subscription"></a>Annuller dit virksomhedsabonnement
+
+> [!IMPORTANT]
+> - Denne artikel gælder kun for abonnementer på Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder. Hvis du har Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365-abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
+> - Hvis du har købt dit abonnement via en Microsoft-repræsentant eller en forhandler, har du syv dage til at annullere og få en forholdsmæssig refusion. Kontakt din sælger eller partner for at få hjælp til at opsige dit abonnement. [Få mere at vide om partnere](../manage-partners.md#what-can-a-partner-do-for-my-organization-or-school).
+> - Hvis din organisation er placeret i Chile, og du har købt dit abonnement via en partner i Chile, har du 10 dage til at annullere og få en forholdsmæssig refusion.
 
 Hvis du vil annullere dit abonnement, er den nemmeste måde at gøre det på at [slå tilbagevendende fakturering fra](renew-your-subscription.md). Når du slår tilbagevendende fakturering fra, kan du fortsætte med at bruge dit abonnement, indtil det udløber i slutningen af abonnementsperioden. Hvis du vil annullere med det samme, kan du bruge oplysningerne og trinnene i denne artikel til at gøre det.
 
-> [!IMPORTANT]
-> Denne artikel gælder kun for abonnementer på Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder. Hvis du har Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365-abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
-
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Du skal være en global eller fakturerende administrator for at udføre opgaver i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+- Du skal være global administrator eller faktureringsadministrator for at udføre opgaverne i denne artikel. Få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 - Før du annullerer et abonnement, skal du sørge for, at dine brugere [gemmer deres data](#save-your-data).
 - Hvis du har tilføjet dit eget domænenavn for at bruge dette sammen med [, skal du fjerne domænet ](../../admin/get-help-with-domains/remove-a-domain.md), før du afmelder dit abonnement.
 - Hvis du har et domæneabonnement, skal du [slå tilbagevendende fakturering fra](renew-your-subscription.md)for at forhindre andre gebyrer for det pågældende abonnement.
@@ -53,7 +55,7 @@ Du kan kun annullere og modtage en forholdsmæssig kredit eller refusion, hvis d
 
 Hvis du har brug for at annullere inden for syv dage efter starten eller fornyelsen af dit abonnement, skal du gå til [Trin til at annullere dit abonnement](#steps-to-cancel-your-subscription) senere i denne artikel.
 
-Hvis der er gået mere end syv dage, skal du [slå tilbagevendende fakturering](renew-your-subscription.md)fra. Dette forhindrer dig i at blive opkrævet igen for dit abonnement og giver dig mulighed for at beholde din adgang til dine produkter og tjenester i resten af din abonnementsperiode.
+Hvis der er gået mere end syv dage, [ skal du deaktivere tilbagevendende fakturering](renew-your-subscription.md). Dette forhindrer dig i at blive opkrævet for dit abonnement igen og giver dig mulighed for at beholde din adgang til dine produkter og tjenester i resten af dit abonnement.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Hvis du ikke har en faktureringsprofil
 
@@ -66,7 +68,7 @@ De trin, du skal udføre for at annullere dit prøveabonnement eller dit betalte
 |25 eller færre licenser  | [Følg nedenstående trin for at annullere](#steps-to-cancel-your-subscription) din prøveversion eller dit betalte abonnement online i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.        |
 |Mere end 25 licenser   | Reducer antallet af licenser til 25 eller færre, og [brug derefter nedenstående trin til at annullere](#steps-to-cancel-your-subscription).      |
 
-Hvis du ikke kan’ reducere antallet af licenser, skal du [slå tilbagevendende fakturering fra](renew-your-subscription.md). Dette forhindrer dig i at blive opkrævet igen for dit abonnement og giver dig mulighed for at beholde din adgang til dine produkter og tjenester i resten af din abonnementsperiode.
+Hvis du ikke kan reducere antallet af licenser, [ skal du deaktivere tilbagevendende fakturering](renew-your-subscription.md). Dette forhindrer dig i at blive opkrævet for dit abonnement igen og giver dig mulighed for at beholde din adgang til dine produkter og tjenester i resten af dit abonnement.
 
 Hvis du ikke kan annullere dit abonnement, skal du [kontakte support](../../admin/get-help-support.md) for at få hjælp.
 
@@ -93,7 +95,7 @@ Hvis du ikke kan annullere dit abonnement, skal du [kontakte support](../../admi
 
 4. Vælg **Gem**.
 
-Dit abonnement vises nu i en **Deaktiveret** tilstand og har nedsat funktionalitet, indtil det bliver slettet. Du kan få mere at vide om, hvad du kan forvente, når et betalt abonnement på Microsoft 365 til virksomheder annulleres, under [Hvad sker der med mine data og min adgang, når mit abonnement på Microsoft 365 til virksomheder ophører?](what-if-my-subscription-expires.md)
+Dit abonnement vises nu som **Deaktiveret** og har nedsat funktionalitet, indtil det bliver slettet. Få flere oplysninger om, hvad du kan forvente, når et betalt Microsoft 365 for Business-abonnement annulleres, under [Hvad sker der med mine data og min adgang, når mit abonnement på Microsoft 365 for Business stopper?](what-if-my-subscription-expires.md)
 
 > [!IMPORTANT]
 > Hvis du eksplicit sletter et abonnement, springer det tilstandende **Udløbne** og **Deaktiverede** over, og SharePoint Online-data og -indhold, herunder OneDrive, slettes med det samme.

@@ -2,8 +2,8 @@
 title: Brug dataconnectors til at importere og arkivere tredjepartsdata i Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -21,12 +21,12 @@ ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du importerer og arkiverer tredjepartsdata fra sociale medieplatforme, chatplatforme og dokumentationsplatforme til Microsoft 365 postkasser.
-ms.openlocfilehash: 820c4e2fb92720940a8b4f207d43aea649ef16e7
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 75a1136c38c0b893babd1cd349dbe34aa9bbf8cd
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997246"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093564"
 ---
 # <a name="learn-about-connectors-for-third-party-data"></a>Få mere at vide om forbindelser til tredjepartsdata
 
@@ -118,7 +118,7 @@ I tabellen i dette afsnit vises de dataconnectors fra tredjepart, der er tilgæn
 
 Før du kan arkivere tredjepartsdata i Microsoft 365, skal du arbejde med TeleMessage for at konfigurere deres arkiveringstjeneste for din organisation. Du kan finde flere oplysninger ved at klikke på linket i kolonnen **Data fra tredjepart** for at gå til den trinvise vejledning til oprettelse af en connector til den pågældende datatype.
 
-TeleMessage-dataconnectors er også tilgængelige i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
+TeleMessage-dataconnectors er også tilgængelige i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
 
 |Tredjepartsdata  |Procesførelse i venteposition|eDiscovery  |Opbevaringsindstillinger  |Datastyring  |Kommunikationsoverholdelse  |Styring af insider-risiko  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
@@ -142,7 +142,7 @@ Tabellen i dette afsnit viser de dataconnectors fra tredjepart, der er tilgænge
 
 Før du kan arkivere tredjepartsdata i Microsoft 365, skal du arbejde med 17a-4 LLC for at konfigurere deres arkiveringstjeneste (kaldet *DataParser*) for din organisation. Du kan finde flere oplysninger ved at klikke på linket i kolonnen **Data fra tredjepart** for at gå til den trinvise vejledning til oprettelse af en connector til den pågældende datatype.
 
-17a-4-dataconnectors er også tilgængelige i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
+17a-4-dataconnectors er også tilgængelige i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
 
 |Tredjepartsdata  |Procesførelse i venteposition|eDiscovery  |Opbevaringsindstillinger  |Datastyring  |Kommunikationsoverholdelse  |Styring af insider-risiko  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
@@ -159,7 +159,7 @@ Før du kan arkivere tredjepartsdata i Microsoft 365, skal du arbejde med 17a-4 
 |[Quip](archive-17a-4-quip-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 |[Refinitiv Eikon Messenger](archive-17a-4-refinitiv-messenger-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 |[ServiceNow](archive-17a-4-servicenow-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
-[Skype for Business-server](archive-17a-4-skype-for-business-server-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
+[Skype for Business Server](archive-17a-4-skype-for-business-server-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 |[Slæk](archive-17a-4-slack-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 |[SQL](archive-17a-4-sql-database-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 |[Symphony](archive-17a-4-symphony-data.md)    |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
@@ -177,7 +177,7 @@ Før du kan arkivere tredjepartsdata i Microsoft 365, skal du arbejde med CellTr
 |[CellTrust SL2](archive-data-from-celltrustsl2.md)     |![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)||
 ||||||||
 
-CellTrust SL2-dataconnectoren er også tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
+CellTrust SL2-dataconnectoren er også tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Du kan få flere oplysninger [i afsnittet Dataconnectors i US Government-cloudmiljøet](#data-connectors-in-the-us-government-cloud) i denne artikel.
 
 ## <a name="overview-of-compliance-solutions-that-support-third-party-data"></a>Oversigt over løsninger til overholdelse af angivne standarder, der understøtter tredjepartsdata
 
@@ -197,7 +197,7 @@ De tre primære eDiscovery-værktøjer i Microsoft 365 er Indholdssøgning, Micr
 
 - **[eDiscovery (Premium)](overview-ediscovery-20.md).** Dette effektive værktøj udvider sagsfunktionaliteten i eDiscovery (Standard) ved at lade dig føje vogtere til en sag, placere tilsynsførendes data i venteposition og derefter indlæse en tilsynsførendes tredjepartsdata i en gennemgang for at få yderligere analyser, f.eks. temaer og registrering af dubletter. Når du har indlæst tredjepartsdata i et korrektursæt, kan du forespørge på og filtrere dem til et smalt resultatsæt.
 
-   Både eDiscovery (Standard) og eDiscovery (Premium) giver dig mulighed for at administrere tredjepartsdata, der kan være relevante for organisationens juridiske eller interne undersøgelser.
+   Både eDiscovery (Standard) og eDiscovery (Premium) giver dig mulighed for at administrere tredjepartsdata, der kan være relevante for din organisations juridiske eller interne undersøgelser.
 
 ### <a name="retention-settings"></a>Opbevaringsindstillinger
 
@@ -217,7 +217,7 @@ Signaler fra tredjepartsdata, f.eks. selektive HR-data, kan bruges af [Insider-r
 
 ## <a name="using-ediscovery-tools-to-search-for-third-party-data"></a>Brug af eDiscovery-værktøjer til at søge efter tredjepartsdata
 
-Når du har brugt dataconnectors til at importere og arkivere tredjepartsdata i brugerpostkasser, kan du bruge Microsoft 365 eDiscovery-værktøjer til at søge efter data fra tredjepart. Du kan også eDiscovery-værktøjer til at oprette forespørgselsbaserede ventepositioner, der er knyttet til sager med eDiscovery (Standard) og eDiscovery (Premium), for at bevare tredjepartsdata. Du kan finde flere oplysninger om eDiscovery-værktøjer [under eDiscovery-løsninger i Microsoft 365](ediscovery.md).
+Når du har brugt dataconnectors til at importere og arkivere tredjepartsdata i brugerpostkasser, kan du bruge Microsoft 365 eDiscovery-værktøjer til at søge efter data fra tredjepart. Du kan også bruge eDiscovery-værktøjer til at oprette forespørgselsbaserede ventepositioner, der er knyttet til sager med eDiscovery (Standard) og eDiscovery (Premium), for at bevare tredjepartsdata. Du kan finde flere oplysninger om eDiscovery-værktøjer [under eDiscovery-løsninger i Microsoft 365](ediscovery.md).
 
 Hvis du vil søge efter (eller placere en venteposition) for alle typer tredjepartsdata, som du har importeret til brugerpostkasser ved hjælp af en dataconnector, kan du bruge følgende søgeforespørgsel. Sørg for at indsnævre søgningen til brugerpostkasser.
 
@@ -225,7 +225,7 @@ Hvis du vil søge efter (eller placere en venteposition) for alle typer tredjepa
 kind:externaldata
 ```
 
-Du kan bruge denne forespørgsel i feltet Nøgleord til en **indholdssøgning** , en søgning, der er knyttet til en eDiscovery-sag (Standard) eller en samling i eDiscovery (Premium).
+Du kan bruge denne forespørgsel i feltet Nøgleord til en **indholdssøgning**, en søgning, der er knyttet til en eDiscovery-sag (Standard) eller en samling i eDiscovery (Premium).
 
 ![Forespørgsel, der skal søge efter data fra tredjepart.](..\media\SearchThirdPartyData1.png)
 
@@ -271,7 +271,7 @@ Nogle dataconnectors er tilgængelige i US Government-cloudmiljøet. De følgend
 
 ### <a name="veritas-data-connectors-in-the-us-government-cloud-preview"></a>Veritas-dataconnectors i US Government-cloudmiljøet (prøveversion)
 
-|Dataconnector  |GCC  |GCC High  |Dod  |
+|Dataconnector  |GCC  |GCC Høj  |Dod  |
 |:---------|:---------|:---------|:---------|
 |CellTrust| Ja | Nej | Nej |
 |Cisco Japper på MS SQL| Ja | Nej | Nej |
@@ -306,7 +306,7 @@ Nogle dataconnectors er tilgængelige i US Government-cloudmiljøet. De følgend
 
 ### <a name="telemessage-data-connectors-in-the-us-government-cloud"></a>TeleMessage-dataconnectors i US Government-cloudmiljøet
 
-|Dataconnector  |GCC  |GCC High  |Dod  |
+|Dataconnector  |GCC  |GCC Høj  |Dod  |
 |:---------|:---------|:---------|:---------|
 |Android-arkivering | Ja | Nej | Nej |
 |AT&T SMS/MMS-netværksarkivering | Ja | Nej | Nej |
@@ -324,7 +324,7 @@ Nogle dataconnectors er tilgængelige i US Government-cloudmiljøet. De følgend
 
 ### <a name="17a-4-data-connectors-in-the-us-government-cloud"></a>17a-4-dataconnectors i US Government-cloudmiljøet
 
-|Dataconnector  |GCC  |GCC High  |Dod  |
+|Dataconnector  |GCC  |GCC Høj  |Dod  |
 |:---------|:---------|:---------|:---------|
 |BlackBerry DataParser | Ja | Nej | Nej |
 |Bloomberg DataParser  | Ja | Nej | Nej |
@@ -348,7 +348,7 @@ Nogle dataconnectors er tilgængelige i US Government-cloudmiljøet. De følgend
 
 ### <a name="celltrust-data-connectors-in-the-us-government-cloud"></a>CellTrust-dataconnectors i US Government-cloudmiljøet
 
-|Dataconnector  |GCC  |GCC High  |Dod  |
+|Dataconnector  |GCC  |GCC Høj  |Dod  |
 |:---------|:---------|:---------|:---------|
 |CellTrust SL2 | Ja | Nej | Nej |
 |||||

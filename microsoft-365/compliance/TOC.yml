@@ -1,4 +1,4 @@
-- name: Microsoft Purview
+- name: Overholdelsesportal for Microsoft Purview
   href: index.yml
 - name: Nyheder i Microsoft Purview
   href: whats-new.md

@@ -20,18 +20,18 @@ search.appverid:
 - MOE150
 ms.assetid: 737e8c86-be63-44d7-bf02-492fa7cd9c3f
 description: Få mere at vide om den generelle forordning om databeskyttelse (GDPR), der styrer mindreåriges personlige data.
-ms.openlocfilehash: 15b35798ba03132b35285dc16ce57b139e4d7222
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 9b348ce47b5deef8f012428a402a4a83eaa6dcf1
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782363"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094234"
 ---
 # <a name="minors-and-acquiring-add-ins-from-the-store"></a>Mindreårige og hentning af tilføjelsesprogrammer fra Store
 
 Den generelle forordning om databeskyttelse (GDPR) er en EU-forordning, der træder i kraft den 25. maj 2018. Det giver brugerne rettigheder til og beskyttelse af deres data. Et af aspekterne i GDPR er, at mindreårige ikke kan få deres personlige oplysninger sendt til parter, som deres forælder eller værge ikke har godkendt. Den specifikke alder, der defineres som en mindreårig, afhænger af det område, hvor personen er placeret.
 
-Regioner, der har lovgivningsmæssige bestemmelser om forældresamtykke, omfatter USA, Sydkorea, Det Forenede Kongerige og EU. For disse områder blokeres en mindreårig (via Azure Active Directory) fra at hente nye Office tilføjelsesprogrammer fra de Store og kørende tilføjelsesprogrammer, der tidligere blev anskaffet. For lande uden lovbestemte regler er der ingen downloadbegrænsninger.
+Regioner, der har lovgivningsmæssige bestemmelser om forældresamtykke, omfatter USA, Sydkorea, Det Forenede Kongerige og EU. For disse områder blokeres en mindreårig (via Azure Active Directory) fra at hente nye Office tilføjelsesprogrammer fra de Store og aktive tilføjelsesprogrammer, der tidligere er blevet anskaffet. For lande uden lovbestemte regler er der ingen downloadbegrænsninger.
 
 En bruger bestemmes for at være underordnet baseret på data, der er angivet i Azure Active Directory. Organisationsadministratoren er ansvarlig for at erklære den juridiske aldersgruppe og forældresamtykke for den pågældende bruger.
 

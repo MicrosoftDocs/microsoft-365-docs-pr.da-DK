@@ -1,0 +1,179 @@
+### YamlMime:Hub
+title: Microsoft 365 Business Premium-ressourcer
+summary: For virksomheder med op til 300 medarbejdere giver Microsoft 365 Business Premium dig mulighed for at være produktiv overalt med Office-apps og onlinemøder. Beskyt din virksomhed med avancerede sikkerhedsfunktioner, og strømlin din it-konfiguration og administration med en enkelt løsning.
+brand: m365
+metadata:
+  title: Microsoft 365 Business Premium-ressourcer
+  description: Dokumentation til konfiguration og arbejde med Microsoft 365 Business Premium.
+  ms.service: o365-administration
+  ms.topic: hub-page
+  ms.collection: collection
+  ms.custom:
+  - AdminSurgePortfolio
+  - intro-hub-or-landing
+  author: efrene
+  ms.author: efrene
+  ms.date: 04/08/2022
+  ms.openlocfilehash: e319645e0dea93a04213402003788d069a64a2b0
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65092585"
+productDirectory:
+  title: Produktivitet og sikkerhed med Microsoft 365 Business Premium
+  items:
+  - title: Se
+    imageSrc: https://docs.microsoft.com/office/media/icons/video-play.svg
+    summary: De fem største fordele ved Microsoft 365 Business Premium.
+    url: https://aka.ms/M365BPvideo
+  - title: Hvad er nyt?
+    imageSrc: https://docs.microsoft.com/office/media/icons/get-started-blue.svg
+    summary: Få mere at vide om de nye Defender for Business-funktioner i Business Premium og Microsoft 365 Lighthouse.
+    url: https://aka.ms/SMBsecurityFebBlog
+  - title: Hent det gratis partnerkit
+    imageSrc: https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg
+    summary: Praktisk vejledning, og gå til markedsressourcer for partnere for at sikre hybridt arbejde.
+    url: https://aka.ms/SMBSecurityKit
+  - title: Deltag i partnerwebinarserien
+    imageSrc: https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg
+    summary: Få mere at vide om, hvordan du kan øge mersalget og skabe vækst i din virksomhed med Microsoft 365 Business Premium, Microsoft Defender for Business og Microsoft 365 Lighthouse.
+    url: https://aka.ms/M365MDBseries
+conceptualContent:
+  items:
+  - title: Hvad er Microsoft 365 Business Premium?
+    links:
+    - url: ../business-premium/index.md
+      itemType: overview
+      text: Oversigt over Microsoft 365 Business Premium
+    - url: ../business-premium/m365bp-secure-users.md
+      itemType: overview
+      text: Sådan hjælper Microsoft 365 Business Premium din virksomhed med produktivitet og sikkerhed
+    - url: /office365/servicedescriptions/office-365-service-descriptions-technet-library
+      text: Microsoft 365 tjenestebeskrivelser
+      itemType: reference
+    - url: https://go.microsoft.com/fwlink/?linkid=2164213
+      itemType: overview
+      text: Sammenlign Microsoft 365 for virksomhedsplaner
+    - url: ../admin/misc/microsoft-365-business-faqs.yml
+      itemType: reference
+      text: Ofte stillede spørgsmål om Microsoft 365 til virksomheder
+    - url: ../business-video/index.yml
+      itemType: video
+      text: Microsoft 365 til videoer om virksomhedstræning
+  - title: Konfigurer Microsoft 365 Business Premium
+    links:
+    - url: ../business-premium/get-microsoft-365-business-premium.md
+      itemType: how-to-guide
+      text: Få Microsoft 365 Business Premium
+    - url: ../business-premium/m365bp-setup-overview.md
+      itemType: how-to-guide
+      text: 1. Fuldfør den grundlæggende konfigurationsproces
+    - url: ../business-premium/m365bp-security-overview.md
+      itemType: overview
+      text: 2. Beskyt dit miljø
+    - url: ../business-premium/m365bp-devices-overview.md
+      itemType: overview
+      text: 3. Konfigurer personlige (ikke-administrerede) enheder
+    - url: ../business-premium/m365bp-protect-email-overview.md
+      itemType: overview
+      text: 4. Brug mail på en mere sikker måde
+    - url: ../business-premium/m365bp-collaborate-share-securely.md
+      itemType: overview
+      text: 5. Samarbejd og del mere sikkert
+    - url: ../business-premium/m365bp-maintain-environment.md
+      itemType: overview
+      text: Vedligehold dit miljø
+  - title: Hvad er Microsoft 365 Lighthouse?
+    links:
+    - url: ../lighthouse/m365-lighthouse-overview.md
+      itemType: overview
+      text: Oversigt over Microsoft 365 Lighthouse
+    - url: ../lighthouse/m365-lighthouse-sign-up.md
+      itemType: how-to-guide
+      text: Sådan tilmelder du dig og bliver en Microsoft CSP
+    - url: ../lighthouse/m365-lighthouse-configure-portal-security.md
+      itemType: how-to-guide
+      text: Konfigurer og beskyt din Lighthouse-portal
+    - url: ../lighthouse/m365-lighthouse-deploy-standard-tenant-configurations-overview.md
+      itemType: overview
+      text: Brug grundlinjer til kundelejere
+    - url: ../lighthouse/m365-lighthouse-faq.yml
+      itemType: reference
+      text: ofte stillede spørgsmål om Microsoft 365 Lighthouse
+  - title: Ressourcer til partnere (kun på engelsk)
+    links:
+    - url: https://aka.ms/M365BPPartnerPlaybook
+      itemType: how-to-guide
+      text: Se Microsoft 365 Business Premium Partner Playbook and Readiness Series
+    - url: https://aka.ms/M365MDBseries
+      itemType: video
+      text: Deltag i partnerwebinarserien!
+    - url: https://partner.microsoft.com
+      itemType: overview
+      text: Microsoft Partner Network
+    - url: https://docs.microsoft.com/partner-center/overview
+      itemType: overview
+      text: Kom i gang med Partnercenter
+  - title: Beskyt enheder
+    links:
+    - url: ../business-premium/m365bp-devices-overview.md
+      itemType: overview
+      text: Beskyt personlige (ikke-administrerede) enheder
+    - url: ../business-premium/m365bp-multifactor-authentication.md
+      itemType: how-to-guide
+      text: Konfigurer multifaktorgodkendelse på enheder
+    - url: ../business-premium/m365bp-install-office-apps.md
+      itemType: how-to-guide
+      text: Installér Office apps på alle enheder
+    - url: ../business-premium/m365bp-protect-pcs-macs.md
+      itemType: how-to-guide
+      text: Beskyt ikke-administrerede Windows pc'er og Macs
+    - url: ../business-premium/m365bp-protect-devices.md
+      itemType: overview
+      text: Konfigurer og beskyt administrerede enheder
+  - title: Beskyt mailindhold og Office filer
+    links:
+    - url: ../business-premium/m365bp-increase-protection.md
+      itemType: how-to-guide
+      text: Konfigurer dine sikkerhedspolitikker
+    - url: ../business-premium/avoid-phishing-and-attacks.md
+      itemType: how-to-guide
+      text: Vide, hvad du skal holde øje med i mailindhold
+    - url: ../business-premium/send-encrypted-email.md
+      itemType: how-to-guide
+      text: Kryptér eller forsyn følsom mail med mærkat
+    - url: ../business-premium/create-teams-for-collaboration.md
+      itemType: how-to-guide
+      text: Brug Microsoft Teams til samarbejde
+    - url: ../business-premium/share-files-and-videos.md
+      itemType: overview
+      text: Del filer og videoer i Microsoft Teams eller SharePoint
+  - title: Support og community
+    links:
+    - url: https://techcommunity.microsoft.com/t5/Microsoft-365-Business-Blog/bg-p/Microsoft365BusinessBlog
+      itemType: whats-new
+      text: Meddelelser
+    - url: https://support.microsoft.com/office/7f681212-c649-4a3e-a43b-32b1d1e58988
+      itemType: video
+      text: Få hjælp
+    - url: https://techcommunity.microsoft.com/t5/Microsoft-365-Business/bd-p/Microsoft365business
+      itemType: overview
+      text: Send feedback
+    - url: https://techcommunity.microsoft.com/t5/Small-and-Medium-Businesses/ct-p/SMB
+      itemType: overview
+      text: Tech Community til små og mellemstore virksomheder
+  - title: Hvordan ... jeg
+    links:
+    - url: ../admin/manage/find-your-partner-or-reseller.md
+      itemType: how-to-guide
+      text: Find en Microsoft-partner, der kan hjælpe min virksomhed
+    - url: ../commerce/subscriptions/upgrade-to-different-plan.md
+      itemType: how-to-guide
+      text: Skift til en anden Microsoft 365 plan
+    - url: ../admin/setup/migrate-email-and-contacts-admin.md
+      itemType: how-to-guide
+      text: Migrer mail og kontakter til Microsoft 365
+    - url: ../admin/get-help-support.md
+      itemType: how-to-guide
+      text: Kontakt support til Microsoft 365

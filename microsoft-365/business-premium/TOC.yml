@@ -2,81 +2,113 @@
   items:
     - name: Oversigt
       href: index.md
+    - name: Sådan hjælper Microsoft 365 din virksomhed
+      href: m365bp-secure-users.md
     - name: Få Microsoft 365 Business Premium
       href: get-microsoft-365-business-premium.md
     - name: Få Microsoft 365 til kampagner
       href: get-microsoft-365-campaigns.md
-    - name: Sådan Microsoft 365 din organisation
-      href: m365bp-secure-users.md
-- name: Konfigurere og logge på
+- name: Styrk dit miljø
   items:
-    - name: Konfigurer Microsoft 365 Business Premium
-      href: m365bp-setup.md
-    - name: Konfigurer Microsoft 365 til kampagner
+    - name: 'Log på, og konfigurer'
       items:
         - name: Oversigt
-          href: microsoft-365-campaigns-setup-overview.md
-        - name: Tilmeld dig
-          href: m365-campaigns-sign-up.md
-        - name: Log på
-          href: m365-campaigns-sign-in.md
-        - name: Tilpasse logonsiden
-          href: m365-customize-sign-in.md
-- name: Få bedre sikkerhedsbeskyttelse
+          href: m365bp-setup-overview.md
+        - name: Konfigurer Microsoft 365 Business Premium
+          href: m365bp-setup.md
+        - name: Konfigurer Microsoft 365 for kampagner
+          items:
+            - name: Tilmeld dig
+              href: m365-campaigns-sign-up.md
+            - name: Log på
+              href: m365-campaigns-sign-in.md
+            - name: Tilpas logonsiden
+              href: m365-customize-sign-in.md
+    - name: Opgrader sikkerhedsbeskyttelse
+      items:
+        - name: Oversigt
+          href: m365bp-security-overview.md
+        - name: Beskyt administratorkonti
+          href: m365bp-protect-admin-accounts.md
+        - name: Slå sikkerhedsstandarder til
+          href: m365bp-conditional-access.md
+        - name: Beskyt mod malware og andre trusler
+          href: m365bp-increase-protection.md
+- name: Oplær dit team
   items:
-    - name: Beskyt administratorkonti
-      href: m365bp-protect-admin-accounts.md
-    - name: Aktivere sikkerhedsstandardindstillinger
-      href: m365bp-conditional-access.md
-    - name: Beskyt dig mod malware og andre trusler
-      href: m365bp-increase-protection.md
-- name: Konfigurer enheder
+    - name: Konfigurer ikke-administrerede (BYOD) enheder
+      items:
+        - name: Oversigt
+          href: m365bp-devices-overview.md
+        - name: Konfigurer multifaktorgodkendelse
+          href: m365bp-multifactor-authentication.md
+        - name: Installér Office apps på enheder
+          href: m365bp-install-office-apps.md
+        - name: Beskyt ikke-administrerede enheder
+          href: m365bp-protect-pcs-macs.md
+    - name: Brug mail sikkert
+      items:
+        - name: Oversigt
+          href: m365bp-protect-email-overview.md
+        - name: Beskyt mod phishing og andre angreb
+          href: avoid-phishing-and-attacks.md
+        - name: Send krypteret mail
+          href: send-encrypted-email.md
+    - name: Samarbejd og del sikkert
+      items:
+        - name: Oversigt
+          href: m365bp-collaborate-share-securely.md
+        - name: Opret Teams til samarbejde
+          href: create-teams-for-collaboration.md
+        - name: Konfigurer møder
+          href: set-up-meetings.md
+        - name: Del filer og videoer
+          href: share-files-and-videos.md
+        - name: Opret et kommunikationswebsted for din organisation
+          href: create-communications-site.md
+- name: Beskyt administrerede enheder
   items:
-    - name: Konfigurer multifaktorgodkendelse
-      href: m365bp-multifactor-authentication.md
-    - name: Konfigurere administrerede Windows enheder
-      href: ../business/set-up-windows-devices.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
-    - name: Konfigurer mobilenheder
-      href: ../business/set-up-mobile-devices.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
-    - name: Beskyt ikke-administrerede pc'er og Mac-computere
-      href: m365bp-protect-pcs-macs.md
-- name: Beskyt mail
+    - name: Konfigurer og beskyt administrerede enheder
+      items:
+        - name: Oversigt
+          href: m365bp-protect-devices.md
+        - name: Konfigurer administrerede enheder
+          href: m365bp-managed-devices-setup.md
+        - name: 'Onboard tilmeldte enheder, og anvend politikker'
+          href: m365bp-onboard-devices-mdb.md
+        - name: Gennemse og rediger enhedspolitikker
+          href: m365bp-view-edit-create-mdb-policies.md
+        - name: Administrer enhedsgrupper
+          href: m365bp-device-groups-mdb.md
+- name: Administration af sikkerhedshændelser
   items:
-    - name: Beskyt dig mod phishing og andre angreb
-      href: m365-campaigns-phishing-and-attacks.md
-    - name: Send krypteret mail
-      href: send-encrypted-email.md
-- name: Samarbejd og del sikkert
+    - name: Oversigt
+      href: m365bp-security-incident-management.md
+    - name: Gennemse sikkerhedsanbefalinger
+      href: ../security/defender-business/mdb-view-tvm-dashboard.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: Gennemse afhjælpningshandlinger på enheder
+      href: m365bp-review-remediation-actions-devices.md
+    - name: Besvar en kompromitteret mailkonto
+      href: ../security/office-365-security/responding-to-a-compromised-email-account.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+- name: Vedligehold dit miljø
   items:
-    - name: Opret Teams til samarbejde
-      href: create-teams-for-collaboration.md
-    - name: Konfigurer møder
-      href: set-up-meetings.md
-    - name: Del filer og videoer
-      href: share-files-and-videos.md
-    - name: Oprette et kommunikationswebsted til din organisation
-      href: create-communications-site.md
-- name: Beskyt enheder med Defender for Business
-  items:
-    - name: Onboard-enheder til Microsoft Defender for Business
-      href: m365bp-onboard-devices-mdb.md
-    - name: Gennemse og rediger enhedspolitikker
-      href: m365bp-view-edit-create-mdb-policies.md
-    - name: Administrer enhedsgrupper
-      href: m365bp-device-groups-mdb.md
-- name: Nulstil eller fjern data fra enheder
-  items:
+    - name: Oversigt
+      href: m365bp-maintain-environment.md
+    - name: Fjern brugere
+      href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Fjern data fra enheder
       href: ../business/remove-company-data.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Nulstil enheder til fabriksindstillingerne
       href: ../business/reset-devices-to-factory-settings.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
-- name: Håndtering af sikkerhedshændelser
-  items:
-    - name: Gennemse afhjælpningshandlinger på enheder
-      href: m365bp-review-remediation-actions-devices.md
-    - name: Besvarede en kompromitteret mailkonto
-      href: ../security/office-365-security/responding-to-a-compromised-email-account.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
 - name: Reference
   items:
+    - name: Ordliste over ord
+      href: m365bp-glossary.md
+    - name: Microsoft 365 administratorindhold
+      href: /microsoft-365/admin/
     - name: Microsoft Defender for Business
       href: ../security/defender-business/index.yml
+    - name: Microsoft Defender for Office 365
+      href: ../security/office-365-security/overview.md
+    - name: Microsoft 365 Lighthouse
+      href: ../lighthouse/m365-lighthouse-overview.md

@@ -2,8 +2,8 @@
 title: Få vist dokumenter i et korrektursæt i eDiscovery (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 description: Vælg, hvordan du får vist indhold i eDiscovery (Premium), f.eks. tekst, anmærk, konverteret eller oprindelig visning.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 8248eaa1fd8bce5c34bb8c936b9fecc0dd29deba
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d21ee5f24b12f010ba9869ca1dfe9af9251ab64c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992811"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093520"
 ---
 # <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Få vist dokumenter i et korrektursæt i eDiscovery (Premium)
 
@@ -42,7 +42,7 @@ Dette panel kan slås til/fra for at vise forskellige metadata, der er knyttet t
 
 ## <a name="native-view"></a>Oprindelig visning
 
-Den oprindelige fremviser viser den rigeste visning af et dokument. Den understøtter hundredvis af filtyper og er beregnet til at vise den sandeste til den oprindelige oplevelse som muligt. I forbindelse med Microsoft Office-filer bruger seeren webversionen af Office-apps til at få vist indhold som dokumentkommentarer, Excel formler, skjulte rækker/kolonner og PowerPoint noter.
+Den oprindelige fremviser viser den rigeste visning af et dokument. Den understøtter hundredvis af filtyper og er beregnet til at vise den sandeste til den oprindelige oplevelse som muligt. I forbindelse med Microsoft Office-filer bruger fremviseren webversionen af Office-apps til at få vist indhold som dokumentkommentarer, Excel formler, skjulte rækker/kolonner og PowerPoint noter.
 
 ![Oprindelig visning
 ](../media/Reviewimage3.png)

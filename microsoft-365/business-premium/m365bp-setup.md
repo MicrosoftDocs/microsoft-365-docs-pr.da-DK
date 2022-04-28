@@ -7,106 +7,84 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/01/2022
+ms.date: 04/08/2022
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5b6f187f93e8a135bfb67c78509553d2963b011b
-ms.sourcegitcommit: b67385243fb56ad20f2a6f1c40be46f5691c1c2a
+ms.openlocfilehash: f888556ea32d9d59c53728b30b629169bc9db45d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63705635"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093234"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 
-Du har flere muligheder for at konfigurere og konfigurere Microsoft 365 Business Premium. Du kan:
+Når du har [startet en prøveversion eller købt Microsoft 365 Business Premium](get-microsoft-365-business-premium.md), er dit næste trin at konfigurere alt. Du har flere tilgængelige indstillinger. Du kan:
 
-- [Brug en guidet konfigurationsoplevelse til grundlæggende konfiguration og konfiguration](#guided-process-for-basic-setup)
-- [Arbejde med en partner, f.eks. Microsoft Cloud Solution Provider (CSP)](#work-with-a-microsoft-partner)
-- [Arbejde manuelt gennem konfigurationsprocessen](#manual-setup-and-configuration)
-
+- [Start med den automatiserede konfigurationsoplevelse](#use-the-guided-process-for-basic-setup) for grundlæggende konfiguration. Eller
+- [Arbejd med en partner, f.eks. en Microsoft Cloud Solution Provider (CSP)](#work-with-a-microsoft-partner).
 
 Brug denne artikel som vejledning.
 
-## <a name="guided-process-for-basic-setup"></a>Guidet proces til grundlæggende konfiguration
+## <a name="before-you-begin"></a>Før du begynder
 
-Microsoft 365 Business Premium omfatter en guidet proces til grundlæggende konfiguration. Opgaver omfatter oprettelse af forbindelse til et brugerdefineret domæne, tilføjelse af brugere, tildeling af licenser, installation af Outlook på mobilenheder, gennemgang af indstillinger for databeskyttelse og anvendelse af en politik for beskyttelse af mobilapps. 
+Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocessen:
 
-Se følgende video for at se, hvordan den guidede konfiguration fungerer: <br/><br/>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ?autoplay=false]
-
-Når du er færdig med konfigurationen, er der yderligere trin, du skal udføre for at sikre, at dine sikkerheds- og overholdelsesfunktioner er korrekt konfigureret og anvendt. Disse trin omfatter:
-
-- [Sikring Windows enheder](m365bp-secure-windows-devices.md)
-- [Installation af Microsoft 365 apps](../admin/setup/install-applications.md)
-- [Konfiguration og konfiguration af dine nye funktioner i Defender for Business](../security/defender-business/mdb-setup-configuration.md)
-
-[Få mere at vide om forskellene mellem den guidede konfigurationsproces og siden Konfiguration](../admin/setup/o365-setup-wizard-and-setup-page.md).
+| Krav | Beskrivelse |
+|:---|:---|
+| Abonnement | Microsoft 365 Business Premium eller Microsoft 365 til kampagner <br/><br/> Hvis du vil starte en prøveversion eller købe dit abonnement, skal du se følgende artikler: <br/>- [Hent Microsoft 365 Business Premium](get-microsoft-365-business-premium.md)<br/>- [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md) |
+| Tilladelser  | Hvis du vil fuldføre den indledende konfigurationsproces, skal du være global administrator. [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md). |
+| Krav til browser | Microsoft Edge, Safari, Chrome eller Firefox. [Få mere at vide om krav til browser](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources#coreui-heading-uyetipy).  |
+| Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 eller nyere eller Windows Server 2016<br/><br/>**macOS**: En af de tre nyeste versioner af macOS |
 
 > [!TIP]
-> Se det følgende afsnit for at få mere at vide om konfiguration og konfiguration Microsoft 365 Business Premium.
+> Du kan finde flere detaljerede oplysninger om Microsoft 365, Office og systemkrav under [ressourcer Microsoft 365 og Office](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources).
 
+## <a name="use-the-guided-process-for-basic-setup"></a>Brug den automatiserede proces til grundlæggende konfiguration
+
+Microsoft 365 Business Premium indeholder en guidet proces til grundlæggende konfiguration. Den guidede proces omfatter følgende opgaver:
+
+- [Tilføjelse af dit eksisterende domæne for at tilpasse logon](../admin/setup/setup-business-basic.md#add-your-domain-to-personalize-sign-in)
+- [Tilføjelse af brugere og tildeling af licenser](../admin/add-users/add-users.md)
+- [Opdatering af dine DNS-poster](../admin/setup/setup-business-basic.md#connect-your-domain)
+
+I følgende video vises den guidede konfigurationsproces for Microsoft 365 Business Basic, som fungerer på samme måde i Microsoft 365 Business Premium.<br/><br/>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vk3W]
+
+> [!TIP]
+> Når du har tilføjet brugere, skal du give dem et link til [vejledningen til hurtig konfiguration af medarbejdere](../admin/setup/employee-quick-setup.md). I vejledningen gennemgås, hvordan du logger på, henter Office apps og gemmer, kopierer og deler filer.
 
 ## <a name="work-with-a-microsoft-partner"></a>Arbejd sammen med en Microsoft-partner
 
-Microsoft har en liste over løsningsudbydere, der er autoriseret til at sælge tilbud, herunder Microsoft 365 Business Premium. 
-
-Hvis du vil finde en løsningsudbyder i dit område, skal du gøre følgende:
+Hvis du foretrækker at have en Microsoft-partner, der hjælper dig med at få og konfigurere Microsoft 365, skal du følge disse trin:
 
 1. Gå til siden **Microsoft Solution Providers** ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers)).
- 
-2. I søgefeltet skal du udfylde din placering og virksomhedens størrelse. 
 
-3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du lægge `Microsoft 365`, og derefter vælge **Gå**.
+2. I søgefeltet skal du angive din placering og virksomhedsstørrelse. 
+
+3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du placere `Microsoft 365`og derefter vælge **Søg**.
 
 4. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
 
 Se også [Find din partner eller forhandler](../admin/manage/find-your-partner-or-reseller.md).
 
-## <a name="manual-setup-and-configuration"></a>Manuel konfiguration og konfiguration
+## <a name="next-objectives"></a>Næste mål
 
-Hvis du foretrækker at fuldføre konfigurationen og konfigurationen manuelt, skal du bruge følgende tabel som vejledning:
+Når du er færdig med din indledende konfigurationsproces, er dine næste mål at konfigurere dine sikkerheds- og overholdelsesfunktioner:
 
-| Fase  | Opgave  | Ressourcer til at få mere at vide  |
-|---------|---------|---------|
-| **Planlægning**     | Planlæg din konfigurationsproces  | [Planlæg din konfiguration af Microsoft 365 til virksomheder](../admin/setup/plan-your-setup.md)   |
-|  | Gennemse kravene | [Microsoft 365 Business Premium krav](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:overviewtab) |
-| **Grundlæggende konfiguration**     | Brug et brugerdefineret domæne som `rob@contoso.com` med Microsoft 365 | [Føj et domæne til Microsoft 365](../admin/setup/add-domain.md) |
-|      | Tilføj brugere, og tildel licenser i Microsoft 365      | [Tilføje brugere og tildele licenser på samme tid](../admin/add-users/add-users.md)        |
-|  | Tildel administratorroller til brugere, der skal udføre visse funktioner, f.eks.: <br/>- Administration af funktioner<br/>- Administration af brugerkonti<br/>- Administration af enheder<br/>- Få vist eller administrere organisationens oplysninger om sikkerhed og overholdelse af regler og standarder | [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md) <br/><br/> [Tildel administratorroller](../admin/add-users/assign-admin-roles.md)  |
-|  | Installere Microsoft 365 Apps (f.eks. Word, Excel, PowerPoint og meget mere) | [Installér Office-programmer](../admin/setup/install-applications.md) |
-| **Sikring af din organisation** | Se de 10 øverste dage for at sikre dit Microsoft 365 abonnement |  [De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | Kræve, at alle bruger en ekstra bekræftelsesmetode, når de logger på Microsoft 365 | [Konfigurer multifaktorgodkendelse](../admin/security-and-compliance/set-up-multi-factor-authentication.md) | 
-| **Beskyttelse af mail og indhold** |  Konfigurer avanceret beskyttelse mod phishing for at beskytte dig mod ondsindede efterligningsbaserede phishing-angreb og andre phishing-angreb | [Beskyt dine mails mod phishingangreb](../admin/security-and-compliance/secure-your-business-data.md) |
-|   | Konfigurer vedhæftede Pengeskab for at beskytte din organisation mod skadelige vedhæftede filer i mails | [Beskyt dig mod skadelige vedhæftede filer og filer med Pengeskab vedhæftede filer](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | Konfigurere Pengeskab links til beskyttelse mod skadelige websteder (URL-adresser) i mails og Office dokumenter | [Konfigurere Pengeskab links](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | Konfigurere politik til forebyggelse af datatab for at beskytte følsomme oplysninger mod at blive delt | [Konfigurer overholdelsesfunktioner](../admin/security-and-compliance/set-up-compliance.md) |
-| **Administration og beskyttelse af enheder** | Beskyt din organisations Windows enheder | [Gør Windows enheder sikre](m365bp-secure-windows-devices.md) <br/><br/>[Angive eller redigere indstillinger for programbeskyttelse til Windows 10 enheder](../admin/devices/protection-settings-for-windows-10-devices.md) |
-|   | Gør Microsoft 365-apps sikre på mobilenheder | [Angiv indstillinger for appbeskyttelse til Android- eller iOS-enheder](../admin/devices/app-protection-settings-for-android-and-ios.md) |
-|  | Konfigurer Microsoft Defender for Business (når det er tilgængeligt for din lejer) | [Oversigt over Microsoft Defender for Business](../security/defender-business/mdb-overview.md)<br/><br/>[Brug guiden til at konfigurere Defender for Business](../security/defender-business/mdb-use-wizard.md) |
-| **Fillagring og overførsel af indhold** | Konfigurer fillagring, og hvordan deling fungerer for din organisation | [Konfigurer lagring og deling af filer i Microsoft 365](../admin/setup/set-up-file-storage-and-sharing.md) |
-| | Importér eller overfør mail og kontakter | [Overfør mails og kontakter til Microsoft 365](../admin/setup/migrate-email-and-contacts-admin.md) |
-|  | Flyt de firmafiler, som alle skal have adgang til SharePoint (SharePoint erstatter typisk brugen af et filshare eller netværksdrev) | [Flyt filer til SharePoint](../admin/setup/files-to-sharepoint.md) |
-|  | Flyt dine eksisterende arbejdsfiler, f.eks. personlige arbejdsfiler eller følsomme forretningsfiler, til OneDrive | [Flyt filer til OneDrive](../admin/setup/files-to-onedrive.md) |
-| **Kursusadministratorer og dit sikkerhedsteam** | Få mere at vide om, hvordan du bruger Administration | [Oversigt over Microsoft 365 Administration](../admin/admin-overview/admin-center-overview.md) |
-|  | Brug det gratis videobibliotek til Microsoft 365 administratorer | [Videobibliotek for administratorkurser](../admin/admin-video-library.yml)  |
-|  | Få mere at vide om, hvordan du bruger Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) | [Kom i gang med at bruge Microsoft 365 Defender portalen](../security/defender-business/mdb-get-started.md) |
+1. [Konfigurer din sikkerhedsbeskyttelse](m365bp-security-overview.md).
 
-> [!TIP]
-> Har du brug for hjælp? Overvej at [få Business Assist til Microsoft 365](https://support.microsoft.com/en-us/office/business-assist-for-microsoft-365-37deb8fe-61cc-4cf9-9ad1-1c8d93475070)
+2. Oplær dit team:
 
-## <a name="see-also"></a>Se også
+   - [Konfigurer personlige enheder, der bruges til at få adgang til forretningsdata](m365bp-devices-overview.md)
+   - [Brug mail på en mere sikker måde](m365bp-protect-email-overview.md)
+   - [Samarbejd og del mere sikkert](m365bp-collaborate-share-securely.md)
 
-- [Oversigt over Microsoft Defender for Business](../security/defender-business/mdb-overview.md) (nu inkluderet i Microsoft 365 Business Premium!)
+3. [Beskyt administrerede enheder](m365bp-protect-devices.md).
 
-- [Virksomhedsabonnementer og faktureringsdokumentation](../commerce/index.yml)
-
-- [Oversigt over Microsoft 365 Lighthouse](../lighthouse/m365-lighthouse-overview.md) (til Microsoft-csp'er)
-
-- [De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](../admin/security-and-compliance/secure-your-business-data.md)

@@ -1,9 +1,9 @@
 ---
-title: Masseimport af eksterne kontakter til Exchange Online
+title: Masseimportér eksterne kontakter til Exchange Online
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 6/29/2018
 audience: End User
@@ -16,20 +16,20 @@ search.appverid:
 ms.assetid: bed936bc-0969-4a6d-a7a5-66305c14e958
 ms.custom: admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan administratorer kan bruge Exchange Online PowerShell og en CSV-fil til masseimport af eksterne kontakter til den globale adresseliste.
-ms.openlocfilehash: a85d24a4b20798df057250d9114f97563a6a8e2d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5e80453326159010aaae81a8b810396f5a7294cf
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999294"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093542"
 ---
-# <a name="bulk-import-external-contacts-to-exchange-online"></a>Masseimport af eksterne kontakter til Exchange Online
+# <a name="bulk-import-external-contacts-to-exchange-online"></a>Masseimportér eksterne kontakter til Exchange Online
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Denne artikel er til administratorer. Forsøger du at importere kontakter til din egen postkasse? Se [Importér kontakter til Outlook](https://support.office.com/article/bb796340-b58a-46c1-90c7-b549b8f3c5f8)**
    
-Har din virksomhed mange eksisterende forretningskontakter, som du vil medtage i det delte adressekartotek (også kaldet den globale adresseliste) i Exchange Online? Vil du tilføje eksterne kontakter som medlemmer af distributionsgrupper på samme måde som med brugere i virksomheden? Hvis det er tilfældet, kan du bruge Exchange Online PowerShell og en CSV-fil (kommasepareret værdi) til masseimport af eksterne kontakter til Exchange Online. Det er en proces med tre trin:
+Har virksomheden mange eksisterende forretningskontakter, som du vil medtage i det delte adressekartotek (også kaldet den globale adresseliste) i Exchange Online? Vil du tilføje eksterne kontakter som medlemmer af distributionsgrupper på samme måde som med brugere i virksomheden? Hvis det er tilfældet, kan du bruge Exchange Online PowerShell og en CSV-fil (kommasepareret værdi) til masseimport af eksterne kontakter til Exchange Online. Det er en proces med tre trin:
   
 [Trin 1: Opret en CSV-fil, der indeholder oplysninger om de eksterne kontakter](#step-1-create-a-csv-file-that-contains-information-about-the-external-contacts)
 
@@ -74,9 +74,9 @@ Det første trin er at oprette en CSV-fil, der indeholder oplysninger om hver ek
 
 Det næste trin er at bruge den CSV-fil, du oprettede i trin 1 og PowerShell, til masseimport af de eksterne kontakter, der er angivet i CSV-filen, til Exchange Online. 
   
-1.  Forbind PowerShell med din Exchange Online-organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Sørg for at bruge brugernavnet og adgangskoden til din globale administratorkonto, når du opretter forbindelse til Exchange Online PowerShell. 
+1.  Forbind PowerShell til din Exchange Online organisation. Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Sørg for at bruge brugernavnet og adgangskoden til din globale administratorkonto, når du opretter forbindelse til Exchange Online PowerShell. 
     
-2. Når du har oprettet forbindelse mellem PowerShell og Exchange Online, skal du gå til skrivebordsmappen, hvor du gemte CSV-filen i Trin 1, f.eks`C:\Users\Administrator\desktop`. .
+2. Når du har oprettet forbindelse mellem PowerShell og Exchange Online, skal du gå til skrivebordsmappen, hvor du gemte CSV-filen i trin 1, f.eks`C:\Users\Administrator\desktop`. .
     
 3. Kør følgende kommando for at oprette de eksterne kontakter:
 
@@ -89,7 +89,7 @@ Det næste trin er at bruge den CSV-fil, du oprettede i trin 1 og PowerShell, ti
 4. Hvis du vil have vist de nye eksterne kontakter, skal du gå til Exchange Administration og derefter klikke på **Modtagere kontakter**\>.<a href="https://go.microsoft.com/fwlink/?linkid=2182970" target="_blank"></a> 
     
     > [!TIP]
-    > Du kan finde oplysninger om, hvordan du opretter forbindelse til EAC, [i Exchange Administration i Exchange Online](/exchange/exchange-admin-center). 
+    > Du kan finde oplysninger om, hvordan du opretter forbindelse til EAC, [under Exchange Administration i Exchange Online](/exchange/exchange-admin-center). 
   
 5. Hvis det er nødvendigt, skal du klikke på **Opdater** for at opdatere listen og se de eksterne kontakter, der blev importeret. 
     
@@ -102,7 +102,7 @@ Det næste trin er at bruge den CSV-fil, du oprettede i trin 1 og PowerShell, ti
 
 Når du har kørt kommandoen i trin 2, oprettes de eksterne kontakter, men de indeholder ikke nogen af kontakt- eller organisationsoplysningerne, som er oplysningerne fra de fleste af cellerne i CSV-filen. Det skyldes, at når du opretter nye eksterne kontakter, er det kun de påkrævede egenskaber, der udfyldes. Du skal ikke være bekymret, hvis du ikke har udfyldt alle oplysningerne i CSV-filen. Hvis den ikke er der, tilføjes den ikke.
   
-1.  Forbind PowerShell med din Exchange Online-organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1.  Forbind PowerShell til din Exchange Online organisation. Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Gå til den skrivebordsmappe, hvor du gemte CSV-filen i trin 1. f.eks. `C:\Users\Administrator\desktop`.
     
@@ -141,7 +141,7 @@ Du kan gentage trin 1 til og med trin 3 for at tilføje nye eksterne kontakter i
 
 Nogle firmaer bruger muligvis kun eksterne kontakter, så de kan tilføjes som medlemmer af distributionsgrupper. I dette scenarie vil de måske skjule eksterne kontakter fra det delte adressekartotek. Sådan gør du:
   
-1.  Forbind PowerShell med din Exchange Online-organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1.  Forbind PowerShell til din Exchange Online organisation. Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Kør følgende kommando for at skjule en enkelt ekstern kontakt.
     

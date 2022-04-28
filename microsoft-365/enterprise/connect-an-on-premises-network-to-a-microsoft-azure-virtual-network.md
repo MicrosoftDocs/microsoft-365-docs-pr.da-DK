@@ -2,7 +2,7 @@
 title: Forbind et lokalt netværk til et Microsoft Azure virtuelt netværk
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/21/2019
 audience: ITPro
 ms.topic: article
@@ -19,46 +19,46 @@ ms.custom:
 - Ent_Solutions
 - seo-marvel-apr2020
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
-description: 'Oversigt: Få mere at vide om, hvordan du konfigurerer et virtuelt Azure-netværk på tværs af Office for en serverbelastning med en WEBSTED-til-websted-VPN-forbindelse.'
-ms.openlocfilehash: 5ba05dd432a6f6fe323e9d9cfd2542dcb1cc7efb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: 'Oversigt: Få mere at vide om, hvordan du konfigurerer et virtuelt Azure-netværk på tværs af det lokale miljø for Office serverarbejdsbelastninger med en VPN-forbindelse fra websted til websted.'
+ms.openlocfilehash: 8f9d8336bb50821374ada700613d2ae6142baf6d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63590612"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094852"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>Forbind et lokalt netværk til et Microsoft Azure virtuelt netværk
 
-Et virtuelt Azure-netværk på tværs af det lokale netværk er forbundet til dit lokale netværk og udvider dit netværk til at omfatte undernet og virtuelle maskiner, der er hostet i Azure-infrastrukturtjenester. Med denne forbindelse kan computere på dit lokale netværk få direkte adgang til virtuelle computere i Azure og omvendt. 
+Et virtuelt Azure-netværk på tværs af det lokale miljø er forbundet til dit lokale netværk og udvider dit netværk til at omfatte undernet og virtuelle maskiner, der hostes i Azure-infrastrukturtjenester. Denne forbindelse gør det muligt for computere på dit lokale netværk at få direkte adgang til virtuelle maskiner i Azure og omvendt. 
 
-En katalogsynkroniseringsserver, der kører på en virtuel Azure-computer, skal f.eks. forespørge på dine lokale domænecontrollere efter ændringer af konti og synkronisere disse ændringer med dit Microsoft 365-abonnement. Denne artikel viser, hvordan du konfigurerer et virtuelt Azure-netværk på tværs af det lokale miljø ved hjælp af en vpn-forbindelse (virtuelt privat netværk på websted), der er klar til at hoste virtuelle Azure-computere.
+En katalogsynkroniseringsserver, der kører på en virtuel Azure-maskine, skal f.eks. forespørge dine lokale domænecontrollere om ændringer af konti og synkronisere disse ændringer med dit Microsoft 365 abonnement. I denne artikel kan du se, hvordan du konfigurerer et virtuelt Azure-netværk på tværs af det lokale miljø ved hjælp af en vpn-forbindelse (virtual private network), der er klar til at hoste virtuelle Azure-maskiner.
 
-## <a name="configure-a-cross-premises-azure-virtual-network"></a>Konfigurere et virtuelt Azure-netværk på tværs af et miljø
+## <a name="configure-a-cross-premises-azure-virtual-network"></a>Konfigurer et virtuelt Azure-netværk på tværs af det lokale miljø
 
-Dine virtuelle maskiner i Azure behøver ikke at være isolerede fra dit lokale miljø. Hvis du vil forbinde virtuelle Azure-maskiner til dine lokale netværksressourcer, skal du konfigurere et virtuelt Azure-netværk på tværs af det lokale miljø. I nedenstående diagram vises de komponenter, der er nødvendige for at installere et virtuelt Azure-netværk på tværs af det lokale miljø med en virtuel maskine i Azure.
+Dine virtuelle maskiner i Azure behøver ikke at være isoleret fra dit lokale miljø. Hvis du vil forbinde virtuelle Azure-maskiner med dine netværksressourcer i det lokale miljø, skal du konfigurere et virtuelt Azure-netværk på tværs af det lokale miljø. I følgende diagram vises de komponenter, der kræves for at installere et virtuelt Azure-netværk på tværs af det lokale miljø med en virtuel maskine i Azure.
   
-![Lokalt netværk, der er forbundet Microsoft Azure af en WEBSTED-til-websted-VPN-forbindelse.](../media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
+![Netværk i det lokale miljø, der er forbundet til Microsoft Azure af en VPN-forbindelse fra websted til websted.](../media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
  
-I diagrammet er der to netværk, der er forbundet via en websted til websted-VPN-forbindelse: det lokale netværk og det virtuelle Azure-netværk. Site-to-site VPN-forbindelsen er:
+I diagrammet er der to netværk, der er forbundet via en websted til websted-VPN-forbindelse: netværket i det lokale miljø og det virtuelle Azure-netværk. Vpn-forbindelsen fra websted til websted er:
 
-- Mellem to slutpunkter, der kan adresseres og findes på det offentlige internet.
-- Afsluttet af en VPN-enhed på det lokale netværk og en Azure VPN-gateway på det virtuelle Azure-netværk.
+- Mellem to slutpunkter, der er adresserbare og placeret på det offentlige internet.
+- Afbrudt af en VPN-enhed på netværket i det lokale miljø og en Azure VPN-gateway på det virtuelle Azure-netværk.
 
-Azure Virtual Network hoster virtuelle computere. Netværkstrafik, der kommer fra virtuelle maskiner på det virtuelle Azure-netværk, videresendes til VPN-gatewayen, som derefter videresender trafikken på tværs af websted-til-websted-VPN-forbindelsen til VPN-enheden på det lokale netværk. Routinginfrastrukturen for det lokale netværk videresender derefter trafikken til destinationen.
+Det virtuelle Azure-netværk hoster virtuelle maskiner. Netværkstrafik, der stammer fra virtuelle maskiner på det virtuelle Azure-netværk, videresendes til VPN-gatewayen, som derefter videresender trafikken på tværs af webstedets VPN-forbindelse til VPN-enheden på netværket i det lokale miljø. Distributionsinfrastrukturen for netværket i det lokale miljø videresender derefter trafikken til destinationen.
 
 >[!Note]
->Du kan også bruge [ExpressRoute](https://azure.microsoft.com/services/expressroute/), som er en direkte forbindelse mellem din organisation og Microsofts netværk. Trafik over ExpressRoute rejser ikke via det offentlige internet. I denne artikel beskrives brugen af ExpressRoute ikke.
+>Du kan også bruge [ExpressRoute](https://azure.microsoft.com/services/expressroute/), som er en direkte forbindelse mellem din organisation og Microsofts netværk. Trafik via ExpressRoute rejser ikke over det offentlige internet. I denne artikel beskrives brugen af ExpressRoute ikke.
 >
   
 Hvis du vil konfigurere VPN-forbindelsen mellem dit virtuelle Azure-netværk og dit lokale netværk, skal du følge disse trin: 
   
-1. **Lokalt miljø:** Definer og opret en lokal netværksrute for adresserummet for det virtuelle Azure-netværk, der peger på din lokale VPN-enhed.
+1. **I det lokale miljø:** Definer og opret en netværksrute i det lokale miljø for adresseområdet for det virtuelle Azure-netværk, der peger på din VPN-enhed i det lokale miljø.
     
-2. **Microsoft Azure:** Opret et virtuelt Azure-netværk med en WEBSTED-til-websted-VPN-forbindelse. 
+2. **Microsoft Azure:** Opret et virtuelt Azure-netværk med en VPN-forbindelse fra websted til websted. 
     
-3. **I det lokale miljø:** Konfigurer din lokale hardware- eller software-VPN-enhed for at afbryde VPN-forbindelsen, som bruger IP-sikkerhed (IPsec).
+3. **I det lokale miljø:** Konfigurer vpn-enheden i det lokale miljø for at afslutte VPN-forbindelsen, som bruger IPsec (Internet Protocol Security).
     
-Når du har etableret VPN-forbindelsen mellem websted og websted, føjer du virtuelle Azure-computere til undernet af det virtuelle netværk.
+Når du har etableret VPN-forbindelsen fra websted til websted, føjer du virtuelle Azure-maskiner til undernet for det virtuelle netværk.
   
 ## <a name="plan-your-azure-virtual-network"></a>Planlæg dit virtuelle Azure-netværk
 <a name="PlanningVirtual"></a>
@@ -66,67 +66,67 @@ Når du har etableret VPN-forbindelsen mellem websted og websted, føjer du virt
 ### <a name="prerequisites"></a>Forudsætninger
 <a name="Prerequisites"></a>
 
-- Et Azure-abonnement. Du kan finde oplysninger om Azure-abonnementer på [siden Sådan køber du Azure](https://azure.microsoft.com/pricing/purchase-options/).
+- Et Azure-abonnement. Du kan få oplysninger om Azure-abonnementer på [siden Sådan køber du Azure](https://azure.microsoft.com/pricing/purchase-options/).
     
-- Et tilgængeligt privat IPv4-adresseområde, der kan tildeles det virtuelle netværk og dets undernet, med tilstrækkelig plads til vækst til at rumme det antal virtuelle maskiner, der skal bruges nu og i fremtiden.
+- Et tilgængeligt privat IPv4-adresseområde, der kan tildeles til det virtuelle netværk og dets undernet, med tilstrækkelig plads til vækst til at imødekomme det antal virtuelle maskiner, der er brug for nu og i fremtiden.
     
-- En tilgængelig VPN-enhed i dit lokale netværk til at afbryde VPN-forbindelsen fra websted til websted, der understøtter kravene til IPsec. Du kan finde flere oplysninger [i Om VPN-enheder til virtuelle netværksforbindelser mellem websteder](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+- En tilgængelig VPN-enhed på netværket i det lokale miljø til at afslutte den VPN-forbindelse, der understøtter kravene til IPsec. Du kan få flere oplysninger under [Om VPN-enheder til virtuelle netværksforbindelser fra websted til websted](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
     
-- Ændringer i din routinginfrastruktur, så trafik, der dirigeres til adresseområdet for det virtuelle Azure-netværk, videresendes til den VPN-enhed, der hoster WEBSTED-til-websted-VPN-forbindelsen.
+- Ændringer af distributionsinfrastrukturen, så trafik, der dirigeres til adresseområdet i det virtuelle Azure-netværk, videresendes til den VPN-enhed, der er vært for VPN-forbindelsen fra websted til websted.
     
-- En webproxy, der giver computere, der har forbindelse til det lokale netværk, og det virtuelle Azure-netværk adgang til internettet.
+- En webproxy, der giver computere, der har forbindelse til netværket i det lokale miljø og det virtuelle Azure-netværk, adgang til internettet.
     
-### <a name="solution-architecture-design-assumptions"></a>Forudsætninger for løsningsarkitekturdesign
+### <a name="solution-architecture-design-assumptions"></a>Antagelser i forbindelse med løsningsarkitekturdesign
 
 Følgende liste repræsenterer de designvalg, der er foretaget for denne løsningsarkitektur. 
   
-- Denne løsning bruger et enkelt virtuelt Azure-netværk med en websted-til-websted-VPN-forbindelse. Azure Virtual Network hoster et enkelt undernet, der kan indeholde flere virtuelle maskiner. 
+- Denne løsning bruger et enkelt virtuelt Azure-netværk med en VPN-forbindelse fra websted til websted. Det virtuelle Azure-netværk hoster et enkelt undernet, der kan indeholde flere virtuelle maskiner. 
     
-- Du kan bruge RRAS (Routing and Remote Access Service) i Windows Server 2016 eller Windows Server 2012 til at etablere en IPsec-WEBSTED-VPN-forbindelse mellem det lokale netværk og det virtuelle Azure-netværk. Du kan også bruge andre indstillinger, f.eks Cisco- eller Juniper Networks VPN-enheder.
+- Du kan bruge RRAS (Routing and Remote Access Service) i Windows Server 2016 eller Windows Server 2012 til at oprette en IPsec-websted til websted-VPN-forbindelse mellem netværket i det lokale miljø og det virtuelle Azure-netværk. Du kan også bruge andre muligheder, f.eks Cisco eller Juniper Networks VPN-enheder.
     
-- Det lokale netværk kan stadig have netværkstjenester som f.eks. Active Directory-domæneservices (AD DS), DNS (Domain Name System) og proxyservere. Afhængigt af dine krav kan det være nyttigt at placere nogle af disse netværksressourcer i det virtuelle Azure-netværk.
+- Netværket i det lokale miljø kan stadig have netværkstjenester som f.eks. Active Directory-domæneservices (AD DS), Dns (Domain Name System) og proxyservere. Afhængigt af dine krav kan det være en fordel at placere nogle af disse netværksressourcer i det virtuelle Azure-netværk.
     
-I forbindelse med et eksisterende virtuelt Azure-netværk med et eller flere undernet skal du afgøre, om der er resterende adresseplads til et ekstra undernet, der skal være vært for dine virtuelle maskiner, baseret på dine krav. Hvis du ikke har resterende adresseplads til et ekstra undernet, skal du oprette et ekstra virtuelt netværk, der har sin egen websted-til-websted-VPN-forbindelse.
+For et eksisterende virtuelt Azure-netværk med et eller flere undernet skal du afgøre, om der er resterende adresseplads til et ekstra undernet, der skal hoste dine nødvendige virtuelle maskiner, baseret på dine krav. Hvis du ikke har resterende adresseplads til et ekstra undernet, kan du oprette et ekstra virtuelt netværk, der har sin egen VPN-forbindelse fra websted til websted.
   
-### <a name="plan-the-routing-infrastructure-changes-for-the-azure-virtual-network"></a>Planlæg ændringer i routinginfrastrukturen for det virtuelle Azure-netværk
+### <a name="plan-the-routing-infrastructure-changes-for-the-azure-virtual-network"></a>Planlæg ændringer af distributionsinfrastrukturen for det virtuelle Azure-netværk
 
-Du skal konfigurere din lokale routinginfrastruktur for at videresende trafik, der er beregnet til adresseområdet for det virtuelle Azure-netværk, til den lokale VPN-enhed, der er vært for VPN-forbindelsen mellem websted og websted.
+Du skal konfigurere din distributionsinfrastruktur i det lokale miljø for at videresende trafik, der er beregnet til adresseområdet for det virtuelle Azure-netværk, til den VPN-enhed i det lokale miljø, der hoster VPN-forbindelsen fra websted til websted.
   
-Den nøjagtige metode til opdatering af din routinginfrastruktur afhænger af, hvordan du administrerer routingoplysninger, som kan være:
+Den nøjagtige metode til opdatering af distributionsinfrastrukturen afhænger af, hvordan du administrerer distributionsoplysninger, som kan være:
   
-- Routing af tabelopdateringer baseret på manuel konfiguration.
+- Opdateringer af distributionstabellen baseret på manuel konfiguration.
     
-- Routing af tabelopdateringer baseret på routingprotokoller, f.eks. ROUTING Information Protocol (RIP) eller Open Shortest Path First (OSPF).
+- Routingtabelopdateringer baseret på routingprotokoller, f.eks. RIP (Routing Information Protocol) eller OSPF (Open Shortest Path First).
     
-Kontakt din routingspecialist for at sikre, at trafik, der er bestemt for det virtuelle Azure-netværk, videresendes til den lokale VPN-enhed.
+Kontakt distributionsspecialisten for at sikre, at trafik, der er beregnet til det virtuelle Azure-netværk, videresendes til VPN-enheden i det lokale miljø.
   
-### <a name="plan-for-firewall-rules-for-traffic-to-and-from-the-on-premises-vpn-device"></a>Planlæg firewallregler for trafik til og fra den lokale VPN-enhed
+### <a name="plan-for-firewall-rules-for-traffic-to-and-from-the-on-premises-vpn-device"></a>Planlæg firewallregler for trafik til og fra VPN-enheden i det lokale miljø
 
-Hvis din VPN-enhed er på et perimeternetværk, der har en firewall mellem perimeternetværket og internettet, skal du muligvis konfigurere firewallen for følgende regler for at tillade VPN-forbindelse mellem websted og websted.
+Hvis DIN VPN-enhed er på et perimeternetværk, der har en firewall mellem perimeternetværket og internettet, skal du muligvis konfigurere firewallen for følgende regler for at tillade VPN-forbindelsen fra websted til websted.
   
 - Trafik til VPN-enheden (indgående fra internettet):
     
-  - DESTINATION IP-adresse for VPN-enheden og IP-protokollen 50
+  - DESTINATIONS-IP-adressen for VPN-enheden og IP-protokollen 50
     
-  - Destinationens IP-adresse for VPN-enheden og UDP-destinationsport 500
+  - DESTINATIONS-IP-adressen for VPN-enheden og UDP-destinationsporten 500
     
-  - Destinationens IP-adresse på VPN-enheden og UDP-destinationsport 4500
+  - DESTINATIONS-IP-adressen på VPN-enheden og UDP-destinationsporten 4500
     
 - Trafik fra VPN-enheden (udgående til internettet):
     
-  - IP-kildeadresse på VPN-enheden og IP-protokollen 50
+  - IP-kildeadressen for VPN-enheden og IP-protokollen 50
     
-  - IP-kildeadresse på VPN-enheden og UDP-kildeport 500
+  - IP-kildeadresse for VPN-enheden og UDP-kildeport 500
     
-  - IP-kildeadresse på VPN-enheden og UDP-kildeport 4500
+  - IP-kildeadresse for VPN-enheden og UDP-kildeport 4500
     
-### <a name="plan-for-the-private-ip-address-space-of-the-azure-virtual-network"></a>Planlæg den private IP-adresseplads i det virtuelle Azure-netværk
+### <a name="plan-for-the-private-ip-address-space-of-the-azure-virtual-network"></a>Planlæg det private IP-adresseområde i det virtuelle Azure-netværk
 
-Det private IP-adresseområde i det virtuelle Azure-netværk skal kunne rumme adresser, der bruges af Azure til at hoste det virtuelle netværk, og med mindst ét undernet, der har nok adresser til dine virtuelle Azure-computere.
+Det private IP-adresseområde i det virtuelle Azure-netværk skal kunne rumme adresser, der bruges af Azure til at hoste det virtuelle netværk, og med mindst ét undernet, der har tilstrækkelige adresser til dine virtuelle Azure-maskiner.
   
-For at bestemme antallet af adresser, der skal bruges til undernettet, skal du tælle antallet af virtuelle maskiner, du skal bruge nu, anslå fremtidig vækst og derefter bruge følgende tabel til at bestemme størrelsen på undernettet.
+Hvis du vil bestemme det antal adresser, der skal bruges til undernettet, skal du tælle antallet af virtuelle maskiner, du har brug for nu, beregne den fremtidige vækst og derefter bruge følgende tabel til at bestemme størrelsen af undernettet.
   
-|**Antal virtuelle maskiner er nødvendige**|**Antal værtsbit, der skal bruges**|**Undernettets størrelse**|
+|**Antal virtuelle maskiner, der er nødvendige**|**Antal værtsbits, der skal bruges**|**Undernettets størrelse**|
 |:-----|:-----|:-----|
 |1-3  <br/> |3  <br/> |/29  <br/> |
 |4-11  <br/> |4  <br/> |/28  <br/> |
@@ -137,102 +137,102 @@ For at bestemme antallet af adresser, der skal bruges til undernettet, skal du t
 ### <a name="planning-worksheet-for-configuring-your-azure-virtual-network"></a>Planlægningsregneark til konfiguration af dit virtuelle Azure-netværk
 <a name="worksheet"> </a>
 
-Før du opretter et virtuelt Azure-netværk til at hoste virtuelle computere, skal du bestemme de nødvendige indstillinger i følgende tabeller.
+Før du opretter et virtuelt Azure-netværk til at hoste virtuelle maskiner, skal du bestemme de indstillinger, der skal bruges i følgende tabeller.
   
-Udfyld Tabel V for at se indstillingerne for det virtuelle netværk.
+Udfyld Tabel V for indstillingerne for det virtuelle netværk.
   
- **Tabel V: Konfiguration af virtuelt netværk på tværs af lokale netværk**
+ **Tabel V: Konfiguration af virtuelt netværk på tværs af det lokale miljø**
   
 |**Element**|**Konfigurationselement**|**Beskrivelse**|**Værdi**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |Navn på virtuelt netværk  <br/> |Et navn, der skal tildeles det virtuelle Azure-netværk (f.eks. DirSyncNet).  <br/> |![.](../media/Common-Images/TableLine.png) |
-|2.  <br/> |Placering af virtuelt netværk  <br/> |Azure-datacenteret, der skal indeholde det virtuelle netværk (f.eks. Vest US).  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |IP-adresse på VPN-enhed  <br/> |Den offentlige IPv4-adresse for din VPN-enheds grænseflade på internettet. Arbejd sammen med din it-afdeling for at finde denne adresse.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|4.  <br/> |Virtuelt netværksadresseområde  <br/> |Adresserummet (defineret i et enkelt privat adressepræfiks) for det virtuelle netværk. Arbejd sammen med din it-afdeling for at finde dette adresseområde. Adresserummet skal være i CIDR-format (Classless Interdomain Routing), også kaldet et format med et netværkspræfiks. Et eksempel er 10.24.64.0/20.  <br/> |![.](../media/Common-Images/TableLine.png) <br/> |
-|5.  <br/> |Delt IPsec-nøgle  <br/> |En vilkårlig, alfanumerisk streng på 32 tegn, der skal bruges til at godkende begge sider af VPN-forbindelsen mellem websted og websted. Arbejd sammen med din it- eller sikkerhedsafdeling om at finde denne nøgleværdi og derefter gemme den et sikkert sted. Du kan også se [Opret en tilfældig streng for en IPsec-foruddelt nøgle](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![.](../media/Common-Images/TableLine.png) <br/> |
+|1.  <br/> |Navn på virtuelt netværk  <br/> |Et navn, der skal tildeles til det virtuelle Azure-netværk (f.eks. DirSyncNet).  <br/> |![Linje.](../media/Common-Images/TableLine.png) |
+|2.  <br/> |Placering af virtuelt netværk  <br/> |Azure-datacenteret, der indeholder det virtuelle netværk (f.eks. Det vestlige USA).  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |IP-adresse for VPN-enhed  <br/> |Den offentlige IPv4-adresse på vpn-enhedens grænseflade på internettet. Samarbejd med it-afdelingen om at bestemme denne adresse.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |Adresseområde for virtuelt netværk  <br/> |Adresseområdet (defineret i et enkelt præfiks for privat adresse) for det virtuelle netværk. Samarbejd med it-afdelingen om at bestemme dette adresseområde. Adresseområdet skal være i CIDR-format (Classless Interdomain Routing), der også kaldes netværkspræfiksformat. Et eksempel er 10.24.64.0/20.  <br/> |![Linje.](../media/Common-Images/TableLine.png) <br/> |
+|5.  <br/> |Delt nøgle til IPsec  <br/> |En 32-tegns tilfældig alfanumerisk streng, der bruges til at godkende begge sider af vpn-forbindelsen fra websted til websted. Samarbejd med it- eller sikkerhedsafdelingen om at bestemme denne nøgleværdi, og gem den derefter på en sikker placering. Alternativt kan du se [Opret en tilfældig streng for en IPsec-foruddelt nøgle](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![Linje.](../media/Common-Images/TableLine.png) <br/> |
    
-Udfyld Tabel S for denne løsnings undernet.
+Udfyld Tabel S for undernet i denne løsning.
   
-- For det første undernet skal du bestemme et 28-bit adresseområde (med en længde på /28 præfiks) for Azure gateway-undernettet. Se [Beregne gatewayens undernetadresseplads til virtuelle Azure-netværk for](/archive/blogs/solutions_advisory_board/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks) at få oplysninger om, hvordan du bestemmer dette adresseområde.
+- For det første undernet skal du bestemme et 28-bit adresseområde (med præfikslængden /28) for Azure Gateway-undernettet. Se [Beregning af adresseområdet for gatewayens undernet for virtuelle Azure-netværk for](/archive/blogs/solutions_advisory_board/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks) at få oplysninger om, hvordan du bestemmer dette adresseområde.
     
-- For det andet undernet skal du angive et brugervenligt navn, et enkelt IP-adresseområde, der er baseret på det virtuelle netværks adresseområde, og et beskrivende formål.
+- For det andet undernet skal du angive et brugervenligt navn, et enkelt IP-adresseområde baseret på det virtuelle netværksadresseområde og et beskrivende formål.
     
-Arbejd sammen med din it-afdeling for at bestemme disse adresseområder fra det virtuelle netværks adresseområde. Begge adresseområder skal være i CIDR-format.
+Samarbejd med it-afdelingen om at bestemme disse adresseområder fra det virtuelle netværksadresseområde. Begge adresseområder skal være i CIDR-format.
   
  **Tabel S: Undernet i det virtuelle netværk**
   
-|**Element**|**Navn på undernet**|**Undernetadresseområde**|**Formål**|
+|**Element**|**Navn på undernet**|**Adresseområde for undernet**|**Formål**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |GatewaySubnet  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af Azure-gatewayen.  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |GatewaySubnet  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |Det undernet, der bruges af Azure-gatewayen.  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
-For de lokale DNS-servere, som du vil have de virtuelle maskiner i det virtuelle netværk til at bruge, skal du udfylde Tabel D. Giv hver DNS-server et brugervenligt navn og en enkelt IP-adresse. Dette brugervenlige navn behøver ikke at svare til værtsnavnet eller computernavnet på DNS-serveren. Bemærk, at der vises to tomme poster, men du kan tilføje flere. Arbejd sammen med din it-afdeling for at finde denne liste.
+Udfyld tabel D for de DNS-servere i det lokale miljø, som de virtuelle maskiner i det virtuelle netværk skal bruge. Giv hver DNS-server et brugervenligt navn og en enkelt IP-adresse. Dette fulde navn behøver ikke at svare til værtsnavnet eller computernavnet på DNS-serveren. Bemærk, at der vises to tomme poster, men du kan tilføje flere. Samarbejd med it-afdelingen om at fastlægge denne liste.
   
- **Tabel D: Lokale DNS-servere**
+ **Tabel D: DNS-servere i det lokale miljø**
   
-|**Element**|**Navn på dns-servervenligt**|**IP-adresse til DNS-server**|
+|**Element**|**Fuldt navn på DNS-server**|**DNS-server-IP-adresse**|
 |:-----|:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
    
-Hvis du vil distribuere pakker fra det virtuelle Azure-netværk til organisationens netværk på tværs af WEBSTED-VPN-forbindelsen, skal du konfigurere det virtuelle netværk med et lokalt netværk. Dette lokale netværk har en liste over adresseområder (i CIDR-format) for alle de placeringer på organisationens lokale netværk, som de virtuelle maskiner i det virtuelle netværk skal oprette forbindelse til. Dette kan være alle placeringer på det lokale netværk eller et undersæt. Listen over adresseområder, der definerer dit lokale netværk, skal være entydig og må ikke overlappe med de adresseområder, der bruges til dette virtuelle netværk eller dine andre virtuelle netværk i det lokale miljø.
+Hvis du vil distribuere pakker fra det virtuelle Azure-netværk til organisationsnetværket på tværs af VPN-forbindelsen fra websted til websted, skal du konfigurere det virtuelle netværk med et lokalt netværk. Dette lokale netværk har en liste over adresseområderne (i CIDR-format) for alle de placeringer på organisationens lokale netværk, som de virtuelle maskiner i det virtuelle netværk skal nå ud til. Dette kan være alle placeringer på netværket i det lokale miljø eller et undersæt. Listen over adresseområder, der definerer det lokale netværk, skal være entydig og må ikke overlappe de adresseområder, der bruges til dette virtuelle netværk eller dine andre virtuelle netværk i det lokale miljø.
   
-Udfyld Tabel L for sættet af adresseområder i lokalnetværket. Bemærk, at tre tomme poster er angivet, men du har typisk brug for flere. Arbejd sammen med din it-afdeling for at finde denne liste.
+I forbindelse med sættet af lokale netværksadresseområder skal du udfylde Tabel L. Bemærk, at der er angivet tre tomme adresser, men du har typisk brug for mere. Samarbejd med it-afdelingen om at fastlægge denne liste.
   
  **Tabel L: Adressepræfikser for det lokale netværk**
   
-|**Element**|**Lokal netværksadresseområde**|
+|**Element**|**Adresseområde på lokalt netværk**|
 |:-----|:-----|
-|1.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |![linje](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Linje.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |![Linje](../media/Common-Images/TableLine.png)  <br/> |
    
-## <a name="deployment-roadmap"></a>Installationsoversigt
+## <a name="deployment-roadmap"></a>Oversigt over udrulning
 <a name="DeploymentRoadmap"> </a>
 
-Oprettelse af det virtuelle netværk på tværs af lokale netværk og tilføjelse af virtuelle maskiner i Azure består af tre faser:
+Oprettelse af det virtuelle netværk på tværs af det lokale miljø og tilføjelse af virtuelle maskiner i Azure består af tre faser:
   
 - Fase 1: Forbered dit lokale netværk.
     
 - Fase 2: Opret det virtuelle netværk på tværs af det lokale miljø i Azure.
     
-- Fase 3 (Valgfrit): Tilføj virtuelle computere.
+- Fase 3 (valgfrit): Tilføj virtuelle maskiner.
     
 ### <a name="phase-1-prepare-your-on-premises-network"></a>Fase 1: Forbered dit lokale netværk
 <a name="Phase1"></a>
 
-Du skal konfigurere dit lokale netværk med en rute, der peger på og i sidste ende leverer trafik, der er beregnet til det virtuelle netværks adresseområde til routeren på kanten af det lokale netværk. Kontakt din netværksadministrator for at finde ud af, hvordan du føjer routingen til routinginfrastrukturen for dit lokale netværk.
+Du skal konfigurere netværket i det lokale miljø med en rute, der peger på og i sidste ende leverer trafik, der er bestemt til adresseområdet for det virtuelle netværk, til routeren på kanten af netværket i det lokale miljø. Kontakt netværksadministratoren for at finde ud af, hvordan du føjer ruten til distributionsinfrastrukturen for netværket i det lokale miljø.
   
 Her er din resulterende konfiguration.
   
-![Det lokale netværk skal have en rute til det virtuelle netværks adresseområde, der peger mod VPN-enheden.](../media/90bab36b-cb60-4ea5-81d5-4737b696d41c.png)
+![Netværket i det lokale miljø skal have en rute til det virtuelle netværks adresseområde, der peger mod VPN-enheden.](../media/90bab36b-cb60-4ea5-81d5-4737b696d41c.png)
   
 ### <a name="phase-2-create-the-cross-premises-virtual-network-in-azure"></a>Fase 2: Opret det virtuelle netværk på tværs af det lokale miljø i Azure
 <a name="Phase2"></a>
 
-Først skal du åbne Azure PowerShell meddelelse. Hvis du ikke har installeret Azure PowerShell, skal du [se Introduktion til Azure PowerShell](/powershell/azure/get-started-azureps).
+Åbn først en Azure PowerShell prompt. Hvis du ikke har installeret Azure PowerShell, skal du se [Kom i gang med Azure PowerShell](/powershell/azure/get-started-azureps).
 
  
-Derefter skal du logge på din Azure-konto med denne kommando.
+Log derefter på din Azure-konto med denne kommando.
   
 ```powershell
 Connect-AzAccount
 ```
 
-Få dit abonnementsnavn ved hjælp af følgende kommando.
+Hent dit abonnementsnavn ved hjælp af følgende kommando.
   
 ```powershell
 Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
 ```
 
-Angiv dit Azure-abonnement med disse kommandoer. Erstat alt mellem anførselstegnene, herunder < og >, med det korrekte abonnementsnavn.
+Angiv dit Azure-abonnement med disse kommandoer. Erstat alt i anførselstegnene, herunder < og > tegn, med det korrekte abonnementsnavn.
   
 ```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-Dernæst skal du oprette en ny ressourcegruppe for dit virtuelle netværk. Hvis du vil finde et entydigt ressourcegruppenavn, skal du bruge denne kommando til at angive dine eksisterende ressourcegrupper.
+Opret derefter en ny ressourcegruppe for dit virtuelle netværk. Hvis du vil finde et entydigt navn på en ressourcegruppe, skal du bruge denne kommando til at angive dine eksisterende ressourcegrupper.
   
 ```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
@@ -274,9 +274,9 @@ $vnet | Set-AzVirtualNetwork
 
 Her er din resulterende konfiguration.
   
-![Det virtuelle netværk har endnu ikke forbindelse til det lokale netværk.](../media/54a37782-a6cc-4d48-b38d-73e128b44a82.png)
+![Det virtuelle netværk har endnu ikke forbindelse til netværket i det lokale miljø.](../media/54a37782-a6cc-4d48-b38d-73e128b44a82.png)
   
-Derefter skal du bruge disse kommandoer til at oprette gateways for VPN-forbindelsen mellem websted og websted.
+Derefter skal du bruge disse kommandoer til at oprette gateways for VPN-forbindelsen fra websted til websted.
   
 ```powershell
 # Fill in the variables from previous values and from Tables V and L
@@ -306,34 +306,34 @@ Her er din resulterende konfiguration.
   
 ![Det virtuelle netværk har nu en gateway.](../media/82dd66b2-a4b7-48f6-a89b-cfdd94630980.png)
   
-Dernæst skal du konfigurere din lokale VPN-enhed til at oprette forbindelse til Azure VPN-gatewayen. Du kan finde flere oplysninger [i Om VPN-enheder til websted-til-websted Azure Virtual Network-forbindelser](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+Konfigurer derefter din VPN-enhed i det lokale miljø for at oprette forbindelse til Azure VPN-gatewayen. Du kan få flere oplysninger under [Om VPN-enheder til Azure-forbindelser fra websted til websted Virtual Network.](/azure/vpn-gateway/vpn-gateway-about-vpn-devices)
   
-For at konfigurere din VPN-enhed skal du bruge følgende:
+Hvis du vil konfigurere vpn-enheden, skal du bruge følgende:
   
-- Den offentlige IPv4-adresse for Azure VPN-gatewayen for dit virtuelle netværk. Brug kommandoen **Get-AzPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** til at vise denne adresse.
+- Den offentlige IPv4-adresse på Azure VPN-gatewayen for dit virtuelle netværk. Brug kommandoen **Get-AzPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** til at få vist denne adresse.
     
-- IPsec-forudseende delt nøgle for websted-til-websted-VPN-forbindelsen (Tabel V- element 5 - værdikolonne).
+- Den foruddelte IPsec-nøgle for VPN-forbindelsen fra websted til websted (tabel V- Element 5 – kolonnen Værdi).
     
 Her er din resulterende konfiguration.
   
-![Det virtuelle netværk er nu forbundet med det lokale netværk.](../media/6379c423-4f22-4453-941b-7ff32484a0a5.png)
+![Det virtuelle netværk er nu forbundet til netværket i det lokale miljø.](../media/6379c423-4f22-4453-941b-7ff32484a0a5.png)
   
-### <a name="phase-3-optional-add-virtual-machines"></a>Fase 3 (valgfrit): Tilføj virtuelle computere
+### <a name="phase-3-optional-add-virtual-machines"></a>Fase 3 (valgfrit): Tilføj virtuelle maskiner
 
-Opret de virtuelle maskiner, du skal bruge i Azure. Få mere at vide under [Opret en Windows virtuel maskine med Azure-portalen](https://go.microsoft.com/fwlink/p/?LinkId=393098).
+Opret de virtuelle maskiner, du har brug for, i Azure. Du kan få flere oplysninger under [Opret en Windows virtuel maskine med Azure Portal](https://go.microsoft.com/fwlink/p/?LinkId=393098).
   
 Brug følgende indstillinger:
   
-- På fanen **Grundlæggende skal** du vælge den samme abonnements- og ressourcegruppe som dit virtuelle netværk. Du skal bruge disse senere for at logge på den virtuelle maskine. I sektionen **Forekomstdetaljer skal** du vælge den relevante virtuelle maskines størrelse. Optag administratorkontoens brugernavn og adgangskode på et sikkert sted. 
+- Under fanen **Grundlæggende** skal du vælge det samme abonnement og den samme ressourcegruppe som dit virtuelle netværk. Du skal bruge disse senere for at logge på den virtuelle maskine. I afsnittet **Oplysninger om forekomst** skal du vælge den relevante størrelse på den virtuelle maskine. Registrer administratorkontoens brugernavn og adgangskode på en sikker placering. 
     
-- På fanen **Netværk** skal du vælge navnet på dit virtuelle netværk og undernettet til at hoste virtuelle computere (ikke Gatewaysubnet). Lad alle andre indstillinger være ved deres standardværdier.
+- Under fanen **Netværk** skal du vælge navnet på dit virtuelle netværk og undernettet til hosting af virtuelle maskiner (ikke GatewaySubnet). Lad alle andre indstillinger være på deres standardværdier.
     
-Kontrollér, at din virtuelle maskine bruger DNS korrekt ved at kontrollere din interne DNS for at sikre, at der er føjet adresseposter (A) til din nye virtuelle maskine. For at få adgang til internettet skal dine virtuelle Azure-maskiner være konfigureret til at bruge dit lokale netværks proxyserver. Kontakt netværksadministratoren for at få flere konfigurationstrin at udføre på serveren.
+Kontrollér, at din virtuelle maskine bruger DNS korrekt, ved at kontrollere din interne DNS for at sikre, at adresseposter (A) blev tilføjet for dig nye virtuelle maskine. Hvis du vil have adgang til internettet, skal dine virtuelle Azure-maskiner være konfigureret til at bruge dit lokale netværks proxyserver. Kontakt netværksadministratoren for at få yderligere konfigurationstrin, der skal udføres på serveren.
   
 Her er din resulterende konfiguration.
   
-![Det virtuelle netværk er nu vært for virtuelle computere, der er tilgængelige fra det lokale netværk.](../media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
+![Det virtuelle netværk hoster nu virtuelle maskiner, der er tilgængelige fra netværket i det lokale miljø.](../media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
   
 ## <a name="next-step"></a>Næste trin
   
-[Installér Microsoft 365 katalogsynkronisering i Microsoft Azure](deploy-microsoft-365-directory-synchronization-dirsync-in-microsoft-azure.md)
+[Installér synkronisering af Microsoft 365 adresseliste i Microsoft Azure](deploy-microsoft-365-directory-synchronization-dirsync-in-microsoft-azure.md)

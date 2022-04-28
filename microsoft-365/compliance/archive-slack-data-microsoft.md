@@ -2,8 +2,8 @@
 title: Arkivér Slack eDiscovery-data for at Microsoft 365 ved hjælp af en dataconnector, der leveres af Microsoft
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en Slack eDiscovery-dataconnector, der leveres af Microsoft, til at importere og arkivere chatdata.
-ms.openlocfilehash: 418cbbd67444992f366ad5366258e0ea8eccc503
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: dc63673ae51d4ea47931a8a27acd7ef2191397d7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992320"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093081"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Konfigurer en connector til at arkivere Slack eDiscovery-data (prøveversion)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af angivne standarder, f.eks. litigation-venteposition, Microsoft Purview eDiscovery (Premium), kommunikationoverholdelse og opbevaringsindstillinger til Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af angivne standarder, f.eks. procesførelse, Microsoft Purview eDiscovery (Premium), kommunikationoverholdelse og opbevaringsindstillinger for Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Oversigt over arkivering af Slack eDiscovery-data
 

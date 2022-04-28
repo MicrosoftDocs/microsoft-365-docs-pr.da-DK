@@ -1,5 +1,5 @@
 ---
-title: Administrer tilføjelser i Administration
+title: Administrer tilføjelsesprogrammer i Administration
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -22,93 +22,93 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 737e8c86-be63-44d7-bf02-492fa7cd9c3f
-description: Få mere at vide om brugen af Centraliseret tilføjelses-ins til at installere tilføjelser til brugere og grupper i organisationen.
-ms.openlocfilehash: d2d1c4d36bf37ad82ac5c720931146c0dfb2220d
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Få mere at vide om, hvordan du bruger centraliserede tilføjelsesprogrammer til at installere tilføjelsesprogrammer til brugere og grupper i din organisation.
+ms.openlocfilehash: dadb308d45b17d98c7bf6a5dd0c214691d264b5f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63599885"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094278"
 ---
-# <a name="manage-add-ins-in-the-admin-center"></a>Administrer tilføjelser i Administration
+# <a name="manage-add-ins-in-the-admin-center"></a>Administrer tilføjelsesprogrammer i Administration
 
-Office tilføjelsesprogrammet hjælper dig med at tilpasse dine dokumenter og strømline den måde, hvorpå du får adgang til oplysninger på internettet. Se [Begynd at bruge Office-tilføjelsesprogrammet](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
+Office tilføjelsesprogrammer hjælper dig med at tilpasse dine dokumenter og strømline den måde, du får adgang til oplysninger på internettet på. Se [Begynd at bruge dit Office-tilføjelsesprogram](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
 
-Når en administrator installerer tilføjelsesprogrammet for brugere i en organisation, kan administratoren slå tilføjelsesprogrammet til eller fra, redigere, slette og administrere adgang til tilføjelses ins.
+Når en administrator har installeret tilføjelsesprogrammer for brugere i en organisation, kan administratoren slå tilføjelsesprogrammer fra eller til, redigere, slette og administrere adgang til tilføjelsesprogrammer.
 
-Du kan finde flere oplysninger om installation af tilføjelser fra Administration i [Installér tilføjelser i Administration](./manage-deployment-of-add-ins.md).
+Du kan få flere oplysninger om installation af tilføjelsesprogrammer fra Administration under [Udrul tilføjelsesprogrammer i Administration](./manage-deployment-of-add-ins.md).
   
-## <a name="add-in-states"></a>Tilføjelsesprogrammets tilstande
+## <a name="add-in-states"></a>Tilstande for tilføjelsesprogrammer
 
-Et tilføjelsesprogrammet kan være i **tilstanden Til** **eller** Fra.
+Et tilføjelsesprogram kan være i tilstanden **Til** eller **Fra** .
   
-| Stat | Sådan opstår tilstanden | Virkning |
+| Staten | Sådan opstår tilstanden | Indvirkning |
 |:-----|:-----|:-----|
-|**Aktiv**  <br/> |Administratoren har uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt til tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
-|**Deaktiveret**  <br/> |Administratoren har deaktiveret tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt til tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugere og grupper adgang til det igen.  <br/> |
-|**Slettet**  <br/> |Administratoren har slettet tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
+|**Aktive**  <br/> |Administratoren har uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
+|**Slukket**  <br/> |Administratoren har deaktiveret tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugerne og grupperne adgang til det igen.  <br/> |
+|**Slettet**  <br/> |Administratoren slettede tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
    
-Overvej at slette et tilføjelsesprogrammet, hvis der ikke længere er nogen, der bruger det. Det kan f.eks. være en god ide at deaktivere et tilføjelsesprogrammet, hvis det kun bruges på bestemte tidspunkter af året.
+Overvej at slette et tilføjelsesprogram, hvis ingen bruger det længere. Hvis du f.eks. deaktiverer et tilføjelsesprogram, kan det give mening, hvis et tilføjelsesprogram kun bruges på bestemte tidspunkter af året.
 
-## <a name="delete-an-add-in"></a>Slette et tilføjelsesprogrammet
+## <a name="delete-an-add-in"></a>Slet et tilføjelsesprogram
 
-Du kan også slette et tilføjelsesprogrammet, der blev installeret.
+Du kan også slette et tilføjelsesprogram, der er installeret.
 
-1. I Administration skal du gå til siden **Indstillinger** >  **Integrerede apps**.
+1. I Administration skal du gå til siden **Indstillinger** >  **Integrated apps**.
 
-2. Vælg det installerede tilføjelsesprogrammet, og vælg derefter **fanen** Konfiguration.
+2. Vælg det installerede tilføjelsesprogram, og vælg derefter fanen **Konfiguration** .
 
-3. I **ruden** Konfiguration skal du **gå til Avanceret** >  Indstillinger **Add-ins**.
+3. I ruden **Konfiguration** skal du gå til **Avanceret Indstillinger** >  **Tilføj-ins**.
 
 4. Vælg tilføjelsesprogrammet på listen igen.
 
-5. Vælg **Fjern tilføjelsesprogrammet**. Fjern knappen Tilføjelsesprogrammet i nederste højre hjørne.
+5. Vælg **Fjern tilføjelsesprogram**. Fjern knappen Tilføjelsesprogram i nederste højre hjørne.
 
 6. Valider dine valg, og vælg **Fjern**.
 
-## <a name="edit-add-in-access"></a>Rediger adgang til tilføjelsesprogrammet
+## <a name="edit-add-in-access"></a>Rediger adgang til tilføjelsesprogram
 
-Efter udrulningen kan administratorer også administrere brugeradgang til tilføjelsesprogrammet.
+Efter installationen kan administratorer også administrere brugeradgang til tilføjelsesprogrammer.
 
-1. I Administration skal du gå til siden **Indstillinger** >  **Integrerede apps**.
+1. I Administration skal du gå til siden **Indstillinger** >  **Integrated apps**.
 
-2. Vælg det installerede tilføjelsesprogrammet.
+2. Vælg det installerede tilføjelsesprogram.
 
 3. Klik på **Rediger** under **Who har Access**.
 
 4. Gem ændringerne.
 
-## <a name="prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook"></a>Undgå downloads af tilføjelsesprogrammet ved at deaktivere tilføjelsesprogrammets Office Store på tværs af alle klienter (undtagen Outlook)
+## <a name="prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook"></a>Undgå downloads af tilføjelsesprogrammer ved at deaktivere Office Store på tværs af alle klienter (undtagen Outlook)
 
 > [!NOTE]
 > Outlook installation af tilføjelsesprogrammet administreres af en [anden proces](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
-Som organisation kan det være en fordel at forhindre download af Office tilføjelsesprogrammet fra Office Store. Dette kan bruges sammen med Centraliseret udrulning for at sikre, at kun organisationsgodkendte tilføjelser udrulles til brugere i organisationen.
+Som organisation ønsker du måske at forhindre download af nye Office tilføjelsesprogrammer fra Office Store. Dette kan bruges sammen med Central installation for at sikre, at det kun er organisationsgodkendte tilføjelsesprogrammer, der udrulles til brugere i din organisation.
   
-**Sådan deaktiverer du anskaffelse af tilføjelsesprogrammet**
+**Sådan slår du anskaffelse af tilføjelsesprogrammer fra**
   
-1. I Administration skal du gå til siden **Indstillinger** \> [Org-indstillinger](https://go.microsoft.com/fwlink/p/?linkid=2053743).
+1. I Administration skal du gå til siden **Indstillinger** \> [Organisationsindstillinger](https://go.microsoft.com/fwlink/p/?linkid=2053743).
 
-2. Vælg **Brugerejede apps og tjenester**.
+2. Vælg **Brugerejet apps og tjenester**.
     
-3. Fjern markeringen af indstillingen for at give brugere adgang til Office butik.
+3. Fjern markeringen i indstillingen for at give brugerne adgang til Office store.
 
-    Dette forhindrer alle brugere i at anskaffe følgende tilføjelser fra Store.
+    Dette forhindrer alle brugere i at hente følgende tilføjelsesprogrammer fra butikken.
       
-    - Tilføjelser til Word, Excel og PowerPoint 2016 fra:
+    - Tilføjelsesprogrammer til Word, Excel og PowerPoint 2016 fra:
         
       - Windows
       - Mac
       - Office
         
         
-    - Anskaffelser, der starter **i AppSource**
+    - Opkøb, der starter i **AppSource**
         
-    - Tilføjelser i Microsoft 365
+    - Tilføjelsesprogrammer i Microsoft 365
         
-    En bruger, der forsøger at få adgang til store, får vist følgende meddelelse: Beklager, Microsoft 365 er konfigureret til at forhindre individuel anskaffelse **af Office Store tilføjelsesprogrammet.**
+    En bruger, der forsøger at få adgang til butikken, får vist følgende meddelelse: **Beklager, Microsoft 365 er konfigureret til at forhindre individuel erhvervelse af Office Store tilføjelsesprogrammer.**
   
-Support til at deaktivere Office Store fås i følgende versioner:
+Understøttelse af deaktivering af Office Store er tilgængelig i følgende versioner:
   
 - Windows: 16.0.9001 – tilgængelig i øjeblikket.
     
@@ -118,45 +118,45 @@ Support til at deaktivere Office Store fås i følgende versioner:
     
 - Internettet – tilgængelig i øjeblikket.
     
-Dette forhindrer ikke en administrator i at bruge Centraliseret udrulning til at tildele et tilføjelse Office Store.
+Dette forhindrer ikke en administrator i at bruge Central installation til at tildele et tilføjelsesprogram fra Office Store.
 
 > [!NOTE] 
-> Tilføjelser som f.eks. Visio Data visualizer, Bing Kort og Personer Graph vises stadig på båndet, også selvom en administrator har deaktiveret Store. For at fjerne disse links skal administratorer deaktivere Store til Gruppepolitik-objekt.
+> Tilføjelsesprogrammer som f.eks. Visio Data Visualizer, Bing Kort og People Graph vises stadig på båndet, selvom en administrator har deaktiveret Store. Administratorer skal deaktivere Store via Gruppepolitik-objekt for at fjerne disse links.
   
-Hvis du vil forhindre en bruger i at logge på med en Microsoft-konto, kan du begrænse logon til kun at bruge organisationskontoen. Du kan få mere at [vide under Identitet, godkendelse og godkendelse Office 2016](/DeployOffice/security/identity-authentication-and-authorization-in-office).  
+Hvis du vil forhindre en bruger i at logge på med en Microsoft-konto, kan du begrænse logon til kun at bruge organisationskontoen. Du kan få flere oplysninger [under Identitet, godkendelse og godkendelse i Office 2016](/DeployOffice/security/identity-authentication-and-authorization-in-office).  
 
 > [!NOTE] 
-> Hvis du forhindrer brugere i at få adgang til Office Store, vil det også forhindre dem i at [indsætte tilføjelsesprogrammet Office til test fra en netværksshare](/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins).
+> Hvis brugerne ikke får adgang til Office Store, forhindres de også [i at indlæse Office tilføjelsesprogrammer til test fra et netværksshare](/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins).
 
-## <a name="more-about-the-end-user-experience-with-add-ins"></a>Mere om slutbrugeroplevelsen med tilføjelsesprogrammet
+## <a name="more-about-the-end-user-experience-with-add-ins"></a>Mere om slutbrugerens oplevelse med tilføjelsesprogrammer
 
-Når du har implementeret et tilføjelsesprogrammer, kan slutbrugerne begynde at bruge det i deres Office programmer. Tilføjelsesprogrammet vises på alle platforme, der understøtter tilføjelsesprogrammet. Se [Begynd at bruge Office-tilføjelsesprogrammet](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
+Når du har installeret et tilføjelsesprogram, kan dine slutbrugere begynde at bruge det i deres Office programmer. Tilføjelsesprogrammet vises på alle platforme, som tilføjelsesprogrammet understøtter. Se [Begynd at bruge dit Office-tilføjelsesprogram](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
   
-Hvis tilføjelsesprogrammet understøtter tilføjelsesprogrammets kommandoer, vises kommandoerne på Office båndet. I følgende eksempel vises kommandoen **Søg citat** for **tilføjelsesprogrammet** Citater. 
+Hvis tilføjelsesprogrammet understøtter kommandoer i tilføjelsesprogrammet, vises kommandoerne på båndet Office. I følgende eksempel vises kommandoen **Søg i citat** for tilføjelsesprogrammet **Citater** . 
 
-![Office båndet med Søg citater.](../../media/553b0c0a-65e9-4746-b3b0-8c1b81715a86.png)
+![Office bånd med søgecitater.](../../media/553b0c0a-65e9-4746-b3b0-8c1b81715a86.png)
   
-Hvis det installerede tilføjelsesprogrammet ikke understøtter tilføjelsesprogrammets kommandoer, eller hvis du vil have vist alle installerede tilføjelsesprogrammet, kan du få dem vist via Mine **tilføjelsesprogrammet.** 
+Hvis det installerede tilføjelsesprogram ikke understøtter tilføjelsesprogrammer, eller hvis du vil have vist alle installerede tilføjelsesprogrammer, kan du få dem vist via **Mine tilføjelsesprogrammer**. 
   
 ### <a name="in-word-2016-excel-2016-or-powerpoint-2016"></a>I Word 2016, Excel 2016 eller PowerPoint 2016
 
-1. **\> Vælg Indsæt mine tilføjelser**. 
+1. Vælg **Indsæt \> Mine tilføjelsesprogrammer**. 
     
-2. Vælg **fanen Administreret** af administratorer i Office åbne tilføjelsesvinduet. 
+2. Vælg fanen **Administreret administrator** i vinduet Office tilføjelsesprogrammer. 
     
-3. Dobbeltklik på det tilføjelsesprogrammet, du har installeret tidligere (i dette eksempel **Citater**).
+3. Dobbeltklik på det tilføjelsesprogram, du installerede tidligere (i dette eksempel **Citater**).
 
-    ![Fanen Administreret af administratorer Office siden Tilføjelser.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
+    ![Fanen Administreret af administratorer på siden Office tilføjelsesprogrammer.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
   
 ### <a name="in-outlook"></a>I Outlook
 
-1. Vælg **Hent** tilføjelser **på båndet Hjem**.
+1. På båndet **Hjem** skal du vælge **Hent tilføjelsesprogrammer**.
 
-    ![Store i Outlook.](../../media/getaddinsicon.png)
+    ![knappen Store i Outlook.](../../media/getaddinsicon.png)
   
-2. Vælg **Administrator-administreret** i venstre navigationslinje. 
+2. Vælg **Administratoradministrer** i venstre navigationsrude. 
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Mindreårige og henløsning af tilføjelsesprogrammet fra Microsoft Store](./minors-and-acquiring-addins-from-the-store.md)
+[Mindreårige og hentning af tilføjelsesprogrammer fra Microsoft Store](./minors-and-acquiring-addins-from-the-store.md)
 

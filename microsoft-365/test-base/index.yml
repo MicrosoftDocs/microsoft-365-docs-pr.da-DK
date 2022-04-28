@@ -11,12 +11,12 @@ metadata:
   author: v-zhifufeng
   ms.author: v-zhifufeng
   ms.date: 03/29/2021
-  ms.openlocfilehash: e49550339e3be9dbd93844ee3a06c9bbe4cd0faa
-  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.openlocfilehash: f477021cd59dbc7c5b7ed70b4381213297f0b0fb
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64935955"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65092641"
 landingContent:
 - title: Om Test Base
   linkLists:
@@ -42,14 +42,6 @@ landingContent:
       url: testoverview.md
     - text: Byg en pakke
       url: buildpackage.md
-    - text: Upload dine binære filer
-      url: binaries.md
-    - text: Angiv dine testopgaver
-      url: testtask.md
-    - text: Vælg dine testindstillinger
-      url: testoptions.md
-    - text: Gennemse dine markeringer
-      url: review.md
     - text: Retningslinjer for testpakke
       url: contentguideline.md
     - text: Analyse af hukommelsesregression

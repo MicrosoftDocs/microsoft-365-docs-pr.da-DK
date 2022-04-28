@@ -2,8 +2,8 @@
 title: Føj tilsynsførende til en eDiscovery-sag (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du bruger det indbyggede værktøj til administration af tilsynsførende i Microsoft Purview eDiscovery (Premium) til at koordinere dine arbejdsprocesser og identificere relevante datakilder i en sag.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 46277524f616e91e89e9bccce1fdd3c3109b3d86
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 3810880ca414efaaa3471c65d2c8c7b8d2956120
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999470"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093212"
 ---
 # <a name="add-custodians-to-an-ediscovery-premium-case"></a>Føj tilsynsførende til en eDiscovery-sag (Premium)
 
@@ -48,7 +48,7 @@ Hvis du vil føje tilsynsførende til en sag, skal du være medlem af rollegrupp
 
 1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com) og log på med en brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
-2. Vælg **eDiscoveryeDiscovery** >  **(Premium)** i navigationsruden til venstre i Microsoft Purview-overholdelsesportalen, og vælg fanen [**Sager**](https://go.microsoft.com/fwlink/p/?linkid=2173764).
+2. Vælg **eDiscoveryeDiscovery** >  **(Premium)** i venstre navigationsrude i Microsoft Purview-overholdelsesportalen, og vælg fanen [**Sager**](https://go.microsoft.com/fwlink/p/?linkid=2173764).
 
 3. Vælg den sag, du vil føje tilsynsførende til.
 
@@ -85,7 +85,7 @@ Sådan knytter du andre postkasser, websteder, Teams eller Yammer grupper til en
    > [!NOTE]
    > Du kan bruge **Exchange** og **SharePoint** placeringsvælgere til at knytte en postkasse eller et websted i din organisation til en tilsynsførende. , Dette omfatter tilknytning af postkassen og webstedet for en Microsoft-gruppe eller Yammer gruppe, som en tilsynsførende ikke er medlem af. Det gør du ved at tilføje både den postkasse og det websted, der er knyttet til hvert team eller Yammer gruppe.
 
-2. Du kan få vist det samlede antal postkasser, websteder, Teams og Yammer grupper, der er tildelt hver tilsynsførende, ved at udvide hver tilsynsførende i tabellen. Når du har færdiggjort de tildelte dataplaceringer for hver tilsynsførende, vedligeholdes og bruges disse tilknytninger under indsamlings-, behandlings- og gennemsynsfaserne i eDiscovery-arbejdsprocessen (Premium).
+2. Du kan få vist det samlede antal postkasser, websteder, Teams og Yammer grupper, der er tildelt hver tilsynsførende, ved at udvide hver tilsynsførende i tabellen. Når du har færdiggjort de tildelte dataplaceringer for hver tilsynsførende, vedligeholdes og bruges disse tilknytninger under indsamlings-, behandlings- og gennemsynsfaserne i arbejdsprocessen for eDiscovery (Premium).
 
 3. Når du har tilføjet tilsynsførende og konfigureret deres dataplaceringer, skal du klikke på **Næste** for at gå til siden **Indstillinger for venteposition** .  
 

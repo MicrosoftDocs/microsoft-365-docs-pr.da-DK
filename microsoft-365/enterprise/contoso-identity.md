@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,75 +13,75 @@ ms.collection:
 - M365-identity-device-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Sådan udnytter Contoso Identitet som en tjeneste (IDaaS) og leverer skybaseret godkendelse til medarbejderne og organisationsnetværksgodkendelse for partnere og kunder.
-ms.openlocfilehash: 1e1fb2a74c3c3b491ddfda2b0b88e4ad11926a5a
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Sådan udnytter Contoso Identitet som en tjeneste (IDaaS) og leverer cloudbaseret godkendelse til sine medarbejdere og samlet godkendelse til sine partnere og kunder.
+ms.openlocfilehash: fc53ae761f26776c4bd632704505d2eafe8daa88
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63587253"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094432"
 ---
 # <a name="identity-for-the-contoso-corporation"></a>Identitet for Contoso Corporation
 
-Microsoft leverer Identity as a Service (IDaaS) på tværs af sine skybaserede tilbud via Azure Active Directory (Azure AD). For at Microsoft 365 til virksomheder skulle Contoso IDaaS-løsningen bruge deres lokale identitetsudbyder og medtage federated authentication med deres eksisterende pålidelige tredjeparts identitetsudbydere.
+Microsoft leverer IDaaS (Identity as a Service) på tværs af sine cloudtilbud via Azure Active Directory (Azure AD). For at kunne anvende Microsoft 365 til virksomheder skulle Contoso IDaaS-løsningen bruge deres identitetsudbyder i det lokale miljø og inkludere sammenkædet godkendelse med deres eksisterende identitetsudbydere, der er tillid til.
 
-## <a name="the-contoso-active-directory-domain-services-forest"></a>Contoso Active Directory-domæneservices skoven
+## <a name="the-contoso-active-directory-domain-services-forest"></a>Contoso Active Directory-domæneservices skov
 
-Contoso anvender en enkelt Active Directory-domæneservices (AD DS)-skov til contosocom\. med syv underdomæner, én for hvert område i verden. Hovedkontoret, de regionale hubkontorer og satellitkontorer indeholder domænecontrollere til lokal godkendelse og autorisation.
+Contoso bruger en enkelt Active Directory-domæneservices skov (AD DS) til contosocom\. med syv underdomæner, ét for hver region i verden. Hovedkvarteret, regionale hubkontorer og satellitkontorer indeholder domænecontrollere til lokal godkendelse og autorisation.
 
 Her er Contoso-skoven med regionale domæner for de forskellige dele af verden, der indeholder regionale hubs.
 
 :::image type="content" alt-text="Contosos skov og domæner over hele verden." source="../media/contoso-identity/contoso-identity-fig1.png" lightbox="../media/contoso-identity/contoso-identity-fig1.png":::
  
-Contoso har besluttet at bruge konti og grupper i contosocom-skoven\. til godkendelse og godkendelse til sine Microsoft 365 arbejdsbelastninger og tjenester.
+Contoso besluttede at bruge konti og grupper i contosocom-området\. til godkendelse og godkendelse til sine Microsoft 365 arbejdsbelastninger og -tjenester.
 
-## <a name="the-contoso-federated-authentication-infrastructure"></a>Contoso-organisationsnetværksgodkendelsesinfrastrukturen
+## <a name="the-contoso-federated-authentication-infrastructure"></a>Godkendelsesinfrastrukturen i Contoso-organisationsnetværket
 
 Contoso tillader:
 
-- Kunder kan bruge deres Microsoft-, Facebook- eller Google Mail-konti til at logge på virksomhedens offentlige websted.
-- Leverandører og partnere kan bruge deres LinkedIn-, Salesforce- eller Google Mail-konti til at logge på virksomhedens partner ekstranet.
+- Kunder til at bruge deres Microsoft-, Facebook- eller Google Mail-konti til at logge på virksomhedens offentlige hjemmeside.
+- Leverandører og partnere til at bruge deres LinkedIn-, Salesforce- eller Google Mail-konti til at logge på virksomhedens partner-ekstranet.
 
-Her er Contoso DMZ, der indeholder et offentligt websted, et partner extranet og et sæt af AD FS-servere (Active Directory Federation Services). DMZ har forbindelse til internettet, der indeholder kunder, partnere og internettjenester.
+Her er Contoso DMZ, der indeholder et offentligt websted, et partner-ekstranet og et sæt Active Directory Federation Services (AD FS) servere. DMZ har forbindelse til det internet, der indeholder kunder, partnere og internettjenester.
 
-![Contoso-understøttelse til federated authentication for kunder og partnere.](../media/contoso-identity/contoso-identity-fig2.png)
+![Contoso-understøttelse af godkendelse i organisationsnetværk for kunder og partnere.](../media/contoso-identity/contoso-identity-fig2.png)
  
-AD FS-servere i DMZ letter godkendelse af kundelegitimationsoplysninger af deres identitetsudbydere for at få adgang til det offentlige websted og partnerens legitimationsoplysninger for at få adgang til partner ekstranet.
+AD FS-servere i DMZ faciliterer godkendelse af kundelegitimationsoplysninger af deres identitetsudbydere for at få adgang til det offentlige websted og partnerlegitimationsoplysninger for at få adgang til partnerens ekstranet.
 
-Contoso har besluttet at beholde denne infrastruktur og dedikere den til kunde- og partnergodkendelse. Contoso-identitetsarkitekter undersøger konverteringen af denne infrastruktur til Azure AD [B2B-](/azure/active-directory/b2b/hybrid-organizations) og [B2C-løsninger](/azure/active-directory-b2c/solution-articles) .
+Contoso besluttede at beholde denne infrastruktur og dedikere den til kunde- og partnergodkendelse. Contoso-identitetsarkitekter undersøger konverteringen af denne infrastruktur til Azure AD [B2B](/azure/active-directory/b2b/hybrid-organizations) - og [B2C-løsninger](/azure/active-directory-b2c/solution-articles) .
 
 ## <a name="hybrid-identity-with-password-hash-synchronization-for-cloud-based-authentication"></a>Hybrididentitet med synkronisering af adgangskodehash til skybaseret godkendelse
 
-Contoso ønskede at bruge sit lokale miljø AD DS til godkendelse for at Microsoft 365 i skyen. Det har besluttet at bruge synkronisering af adgangskodehash (PHS).
+Contoso ønskede at bruge AD DS-området i det lokale miljø til godkendelse til at Microsoft 365 cloudressourcer. Det besluttede at bruge synkronisering af adgangskodehash (PHS).
 
-PHS synkroniserer området for AD DS i det lokale miljø med Azure AD-lejeren i deres abonnement på Microsoft 365 til store virksomheder, kopiering af bruger- og gruppekonti og en tidligere version af adgangskoder til brugerkonti.
+PHS synkroniserer AD DS-området i det lokale miljø med Azure AD-lejeren for deres Microsoft 365 til virksomhedsabonnement, kopierer bruger- og gruppekonti og en hashkodet version af adgangskoder til brugerkonti.
 
-For at udføre katalogsynkronisering har Contoso installeret Værktøjet Azure AD Forbind på en server i sit Paris-datacenter.
+Contoso udrullede Azure AD Forbind-værktøjet på en server i sit Paris-datacenter for at udføre katalogsynkronisering.
 
-Her er den server, der kører Azure AD Forbind, der forespørger Contoso AD DS-skoven om ændringer og derefter synkroniserer disse ændringer med Azure AD-lejeren.
+Her er den server, der kører Azure AD Forbind forespørge Contoso AD DS-området om ændringer og derefter synkronisere disse ændringer med Azure AD-lejeren.
 
-![Contoso PHS-katalogsynkroniseringsinfrastrukturen.](../media/contoso-identity/contoso-identity-fig4.png)
+![Infrastrukturen til synkronisering af Contoso PHS-kataloger.](../media/contoso-identity/contoso-identity-fig4.png)
  
-## <a name="conditional-access-policies-for-zero-trust-identity-and-device-access"></a>Betingede access-politikker for nultillidsidentitet og enhedsadgang
+## <a name="conditional-access-policies-for-zero-trust-identity-and-device-access"></a>Politikker for betinget adgang for Nul tillid identitet og enhedsadgang
 
-Contoso oprettede et sæt politikker for Betinget adgang til Azure AD og [Intune for](../security/office-365-security/identity-access-policies.md) tre beskyttelsesniveauer:
+Contoso oprettede et sæt Azure AD- og Intune [politikker for betinget adgang](../security/office-365-security/identity-access-policies.md) for tre beskyttelsesniveauer:
 
-- *Beskyttelse ved* udgangspunkt gælder for alle brugerkonti.
-- *Virksomhedsbeskyttelse* gælder for seniorledelsen og ledelsen.
-- *Specialiserede sikkerhedsbeskyttelsesprogrammer* gælder for bestemte brugere i finans-, juridiske- og forskningsafdelinger, der har adgang til stærkt regulerede data.
+- *Startpunktbeskyttelse* gælder for alle brugerkonti.
+- *Beskyttelse af virksomheder* gælder for ledende ledere og ledelsespersonale.
+- *Specialiseret sikkerhedsbeskyttelse* gælder for bestemte brugere inden for økonomi-, juridiske og forskningsafdelinger, der har adgang til stærkt regulerede data.
 
-Her er det resulterende sæt af politikker for Contoso-identitet og betinget adgang til enhed.
+Her er det resulterende sæt Contoso-identitets- og enhedspolitikker for betinget adgang.
 
-:::image type="content" alt-text="Politikkerne for Contosos identitet og betingede adgang på enhed." source="../media/contoso-identity/contoso-identity-fig5.png" lightbox="../media/contoso-identity/contoso-identity-fig5.png":::
+:::image type="content" alt-text="Contosos politikker for betinget adgang til identitet og enhed." source="../media/contoso-identity/contoso-identity-fig5.png" lightbox="../media/contoso-identity/contoso-identity-fig5.png":::
  
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide om, hvordan Contoso bruger sin Microsoft Endpoint Configuration Manager til at [installere og holde Windows 10 Enterprise på](contoso-win10.md) tværs af organisationen.
+Få mere at vide om, hvordan Contoso bruger sin Microsoft Endpoint Configuration Manager infrastruktur til at [udrulle og bevare aktuelle Windows 10 Enterprise](contoso-win10.md) på tværs af organisationen.
 
 ## <a name="see-also"></a>Se også
 
-[Installér identitet for Microsoft 365](deploy-identity-solution-overview.md)
+[Udrul identitet for Microsoft 365](deploy-identity-solution-overview.md)
 
-[Microsoft 365 for Enterprise-oversigt](microsoft-365-overview.md)
+[Microsoft 365 til virksomhedsoversigt](microsoft-365-overview.md)
 
-[Test labvejledninger](m365-enterprise-test-lab-guides.md)
+[Vejledninger til testlaboratorier](m365-enterprise-test-lab-guides.md)

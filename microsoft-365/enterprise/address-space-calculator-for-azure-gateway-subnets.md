@@ -1,8 +1,8 @@
 ---
-title: Adressepladsberegner til Azure gateway-undernet
+title: Adressepladsberegner til Azure Gateway-undernet
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 01/07/2021
 audience: ITPro
 ms.topic: landing-page
@@ -15,26 +15,26 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 - seo-marvel-apr2020
-description: 'Oversigt: Beregn adresserummet for et Azure gateway-undernet med C3, Python eller PowerShell.'
-ms.openlocfilehash: 129c64e4484110517edf3640861636324e59de57
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: 'Oversigt: Beregn adresseområdet for et Azure Gateway-undernet med C3, Python eller PowerShell.'
+ms.openlocfilehash: a19233b6ec68c92dbf65ecb6a73fc1a0a16e6d31
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681782"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094874"
 ---
-# <a name="address-space-calculator-for-azure-gateway-subnets"></a>Adressepladsberegner til Azure gateway-undernet
+# <a name="address-space-calculator-for-azure-gateway-subnets"></a>Adressepladsberegner til Azure Gateway-undernet
 
-Et virtuelt netværk (VNet) i Azure-infrastrukturtjenester, der er forbundet til andre netværk, skal have et gatewayundernet. De bedste fremgangsmåder til at definere gatewayundernet er:
+Et virtuelt netværk (VNet) i Azure-infrastrukturtjenester, der er forbundet til andre netværk, skal have et gatewayundernet. De bedste fremgangsmåder til definition af gatewayundernettet er:
 
-- Længden af præfikset på gatewayundernettet kan have en maksimal præfikslængde på 29 (f.eks. 10.119.255.248/29), men den aktuelle anbefaling er, at du bruger en præfikslængde på 27 (f.eks. 10.119.255.224/27).
-- Når du definerer adresserummet for gatewayens undernet, skal du bruge den sidste del af VNet-adresserummet.
+- Præfikslængden for gatewayundernettet kan have en maksimal præfikslængde på 29 (f.eks. 10.119.255.248/29), men den aktuelle anbefaling er, at du bruger en præfikslængde på 27 (f.eks. 10.119.255.224/27).
+- Når du definerer adresseområdet for gatewayundernettet, skal du bruge den sidste del af VNet-adresseområdet.
 
-For den anden anbefaling kan du bestemme adresserummet for gatewayundernettet ved at angive de bit, der bruges til gatewayundernet, til 0, og de resterende bit i VNet-adresserummet til 1. Hvis du hurtigt vil beregne gatewayens undernetadresseområde uden at skulle konvertere til binært og tilbage til decimal, kan du bruge et konsolprogram, der er skrevet i C# eller Python eller med en PowerShell-kommandoblok.
+I forbindelse med den anden anbefaling kan du bestemme adresseområdet for gatewayens undernet ved at angive de bit, der bruges til gatewayens undernet, til 0 og de resterende bit i VNet-adresseområdet til 1. Hvis du hurtigt vil beregne adresseområdet for gatewayens undernet uden at skulle konvertere til binær og tilbage til decimal, kan du bruge et konsolprogram, der er skrevet i C# eller Python eller med en PowerShell-kommandoblok.
 
-Denne artikel indeholder C#, Python og PowerShell-kodeblokke, der beregner gatewayens undernetadresseområde baseret på værdierne for w.x.y.z/n for VNet-adressepræfikset og gatewayens undernetpræfikslængde.
+Denne artikel indeholder C#-, Python- og PowerShell-kodeblokke, der beregner gatewayens undernetadresseplads baseret på værdierne for w.x.y.z/n for VNet-adressepræfikset og længden af gatewayens undernetpræfiks.
 
-## <a name="c-code-block"></a>C# kodeblok
+## <a name="c-code-block"></a>C#-kodeblok
 
 Brug denne kodeblok til at oprette en konsolapp i C#.
 
@@ -149,7 +149,7 @@ print(gwAddrPref)
 
 ## <a name="powershell-command-block"></a>PowerShell-kommandoblok
 
-Udfyld værdierne, og kør den resulterende kommandoblok i et PowerShell-vindue eller i det integrerede scriptmiljø (ISE) i PowerShell.
+Udfyld værdierne, og kør den resulterende kommandoblok i et PowerShell-vindue eller i PowerShell ISE (Integrated Script Environment).
 
 ```powershell
 # Specify the values of w.x.y.z/n for your VNet address space and g, the prefix length of your gateway subnet: 

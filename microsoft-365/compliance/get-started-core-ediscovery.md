@@ -2,8 +2,8 @@
 title: Kom i gang med eDiscovery-sager (Standard) i Microsoft Purview
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Beskriver, hvordan du kommer i gang med at bruge eDiscovery (Standard) i Microsoft Purview. Når du har tildelt eDiscovery-tilladelser og oprettet en sag, kan du tilføje medlemmer, oprette eDiscovery-ventepositioner og derefter søge efter og eksportere indhold, der er relevant for din undersøgelse.
-ms.openlocfilehash: 3619a3097567251d012594831081f0929d5ca80e
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: e224bf22741d0e1599d099802470e231b11fd785
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972403"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094940"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Kom i gang med eDiscovery (Standard) i Microsoft Purview
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eDiscovery (Standard) i Microsoft Purview indeholder et grundlæggende eDiscovery-værktøj, som organisationer kan bruge til at søge efter og eksportere indhold i Microsoft 365 og Office 365. Du kan også bruge eDiscovery (Standard) til at placere en eDiscovery-venteposition på indholdsplaceringer, f.eks. Exchange postkasser, SharePoint websteder, OneDrive konti og Microsoft Teams. Der kræves intet for at udrulle eDiscovery (Standard), men der er nogle forudsætningsopgaver, som en it-administrator og eDiscovery-chef skal udføre, før din organisation kan begynde at bruge eDiscovery (Standard) til at søge efter, eksportere og bevare indhold.
 

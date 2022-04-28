@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 ms.date: 07/21/2020
 audience: ITPro
 ms.topic: article
@@ -15,12 +15,12 @@ ms.collection:
 - M365-subscription-management
 ms.custom: ''
 description: Sådan udruller og opdaterer organisationer f.eks. ved hjælp af kanaler.
-ms.openlocfilehash: 4616d424c49a1348d374fa01d705e0483822eb90
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 0080a1d31f56709ec8dafef17122f5a67aaa7145
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823976"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094808"
 ---
 # <a name="deployment-and-update-channel-example-configurations"></a>Konfigurationer af eksempel på udrulning og opdatering af kanal
 

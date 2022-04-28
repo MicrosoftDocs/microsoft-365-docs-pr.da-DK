@@ -1,5 +1,5 @@
 ---
-title: Top 10 måder at sikre Microsoft 365 til forretningsplaner på
+title: Bedste praksis for sikring af Microsoft 365 for virksomheder
 f1.keywords:
 - CSH
 ms.author: deniseb
@@ -28,65 +28,64 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 0e09b245d084b946596c61f9e760b56baed6043d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 18de5e6f0d859095f38972b0fae66c1312bf4099
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935911"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093655"
 ---
-# <a name="top-10-ways-to-secure-microsoft-365-for-business-plans"></a>Top 10 måder at sikre Microsoft 365 til forretningsplaner på
+# <a name="best-practices-for-securing-microsoft-365-for-business"></a>Bedste praksis for sikring af Microsoft 365 for virksomheder
 
-Hvis du er en lille eller mellemstor organisation, der bruger en af Microsofts forretningsplaner, kan du bruge vejledningen i denne artikel til at øge sikkerheden i din organisation. Denne vejledning hjælper din organisation med at nå de mål, der er beskrevet i Harvard Kennedy School [Cybersecurity Campaign Handbook](https://go.microsoft.com/fwlink/p/?linkid=2015598).
+Hvis du er en lille eller mellemstor organisation, der bruger en af Microsofts forretningsplaner, hjælper vejledningen i denne artikel dig med at skærpe sikkerheden i din organisation. Blandt dine valg er Microsoft 365 Business Premium vejen, da det nu omfatter Microsoft Defender til virksomheder og anden [sikkerhedsbeskyttelse](../../business-premium/get-microsoft-365-business-premium.md). De anbefalede handlinger, der er inkluderet her, vil hjælpe dig med at nå de mål, der er beskrevet i Harvard Kennedy School [Cybersecurity Campaign Handbook](https://go.microsoft.com/fwlink/p/?linkid=2015598).
 
 > [!TIP]
 > Hvis du har brug for hjælp til trinnene i denne artikel, kan du overveje at [arbejde sammen med en Microsoft-specialist i mindre virksomheder](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
-## <a name="watch-overview-of-security"></a>Se: Oversigt over sikkerhed
+## <a name="watch-a-quick-overview-of-security"></a>Se: Et hurtigt overblik over sikkerhed
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4mzxI?autoplay=false]
 
-Microsoft 365 Business Premium leverer trusselsbeskyttelse, databeskyttelse og enhedshåndteringsfunktioner, der hjælper dig med at beskytte din virksomhed mod onlinetrusler og uautoriseret adgang samt beskytte og administrere virksomhedens data på dine telefoner, tablets og computere.
+Alle Microsoft 365 planer tilbyder grundlæggende beskyttelse og sikkerhed med Defender Antivirus, men med Microsoft 365 Business Premium har du også trusselsbeskyttelse, databeskyttelse og funktioner til enhedshåndtering på grund af medtagelse af Microsoft Defender til virksomheder.  Disse yderligere funktioner beskytter din organisation mod onlinetrusler og uautoriseret adgang samt giver dig mulighed for at administrere virksomhedsdata på dine telefoner, tablets og computere.
 
-## <a name="security-tasks-to-complete"></a>Sikkerhedsopgaver, der skal fuldføres
+## <a name="security-features-comparison"></a>Sammenligning af sikkerhedsfunktioner
 
-Microsoft anbefaler, at du udfører de opgaver, der er angivet i følgende tabel, og som gælder for din serviceplan.
+Hvis du vil vide mere om en af funktionerne i serviceplanen, skal du klikke på overskriften i følgende tabel. 
 
-|*Antallet*|Opgave|Microsoft 365 Business Standard|Microsoft 365 Business Premium|
-|---|---|---|---|
-| 1 | [Beskyt mod mistede eller stjålne adgangskoder](#1-set-up-multi-factor-authentication) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
-| 2 | [Oplær dine brugere](#2-train-your-users) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
-| 3 | [Brug dedikerede administratorkonti](#3-use-dedicated-admin-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | 
-| 4 | [Beskyt mod malware](#4-protect-against-malware) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse af mail) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(øget beskyttelse af mail og enheder) |
-| 5 | [Beskyt mod ransomware](#5-protect-against-ransomware) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse af mail og cloudlager) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(øget beskyttelse af enheder, mail og cloudlager) |
-| 6 | [Stop automatisk videresendelse af mail](#6-stop-auto-forwarding-for-email) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
-| 7 | [Brug meddelelseskryptering](#7-use-microsoft-purview-message-encryption) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
-| 8 | [Beskyt din mail mod phishingangreb](#8-protect-your-email-from-phishing-attacks) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(antiphishing protection) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(avanceret beskyttelse mod antifishing) |
-| 9 | [Beskyt mod skadelige vedhæftede filer, filer og URL-adresser i mails og Office filer](#9-protect-against-malicious-attachments-files-and-urls) | | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(Pengeskab links og Pengeskab vedhæftede filer) |
-| 10 | [Øg beskyttelsen af organisationens enheder](#10-increase-protection-for-your-organizations-devices) | | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(enhedsbeskyttelse i virksomhedsklasse) |
+|Opgave|Microsoft 365 Business Standard|Microsoft 365 Business Premium|
+|---|---|---|
+[Beskyt mod mistede eller stjålne adgangskoder](#set-up-multifactor-authentication) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
+[Oplær dine brugere](#train-your-users) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
+[Brug dedikerede administratorkonti](#use-dedicated-admin-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | 
+[Beskyt mod malware](#protect-against-malware) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse af mail) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(øget beskyttelse af mail og enheder) |
+[Beskyt mod ransomware](#protect-against-ransomware) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse af mail og cloudlager) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(øget beskyttelse af enheder, mail og cloudlager) |
+[Kryptér følsomme mails](#send-encrypted-email) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
+[Beskyt din mail mod phishingangreb](#protect-sensitive-emails) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse mod phishing) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(avanceret beskyttelse mod phishing) |
+[Beskyt mod skadelige vedhæftede filer, filer og URL-adresser i mails og Office filer](#protect-against-malicious-attachments-files-and-urls) | | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(Pengeskab links og Pengeskab vedhæftede filer) |
+[Øg beskyttelsen af organisationens enheder](#increase-protection-for-your-organizations-devices) | | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(enhedsbeskyttelse i virksomhedsklasse) |
 
-Hvis du har Microsoft Business Premium, er den hurtigste måde at konfigurere sikkerhed og begynde at samarbejde sikkert på at følge vejledningen i dette bibliotek: [Microsoft 365 Business Premium](../../business-premium/index.md). Denne vejledning blev udviklet i samarbejde med Microsoft Defending Democracy-teamet for at beskytte alle små virksomhedskunder mod cybertrusler, der lanceres af sofistikerede hackere.
+Du kan hurtigt konfigurere sikkerhed og begynde at samarbejde sikkert med den vejledning, vi giver i [Microsoft 365 Business Premium](../../business-premium/index.md) bibliotek. Oplysningerne om Business Premium blev udviklet i samarbejde med Microsoft Defending Democracy-teamet for at beskytte alle mindre virksomhedskunder mod cybertrusler, der blev lanceret af avancerede cyberangreb og hackere.
 
-Før du begynder, skal du kontrollere din [sikre score for Microsoft 365](../../security/defender/microsoft-secure-score.md) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalen Microsoft 365 Defender</a>. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365 identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller løsning af anbefalinger med et tredjepartsprogram eller -software. Med tilføjet indsigt og mere synlighed i et bredere sæt Microsoft-produkter og -tjenester kan du føle dig tryg ved at rapportere om din organisations sikkerhedstilstand.
+### <a name="about-the-microsoft-365-secure-score"></a>Om sikker score for Microsoft 365
+
+Det er vigtigt, at du kontrollerer din [Microsoft 365 Secure Score](../../security/defender/microsoft-secure-score.md) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalen</a>, før du begynder. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365 identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller løsning af anbefalinger med et tredjepartsprogram eller -software. Med tilføjet indsigt og mere synlighed i et bredere sæt Microsoft-produkter og -tjenester kan du føle dig tryg ved at rapportere om din organisations sikkerhedstilstand.
 
 ![Skærmbillede af Microsoft Secure Score.](../../media/secure-score.png)
 
-## <a name="1-set-up-multi-factor-authentication"></a>1: Konfigurer multifaktorgodkendelse
+## <a name="set-up-multifactor-authentication"></a>Konfigurer multifaktorgodkendelse
 
 Beskyt mod mistede eller stjålne adgangskoder ved hjælp af multifaktorgodkendelse (MFA). Når multifaktorgodkendelse er konfigureret, kræver det, at brugerne bruger en kode på deres telefon til at logge på Microsoft 365. Dette ekstra skridt kan forhindre hackere i at overtage, hvis de kender din adgangskode. 
 
-Multifactor-godkendelse kaldes også totrinsbekræftelse. Enkeltpersoner kan nemt føje totrinsbekræftelse til de fleste konti, f.eks. til deres Google- eller Microsoft-konti. Sådan [føjer du totrinsbekræftelse til din personlige Microsoft-konto](https://go.microsoft.com/fwlink/p/?linkid=2016403).
+Multifaktorgodkendelse kaldes også totrinsbekræftelse. Enkeltpersoner kan nemt føje totrinsbekræftelse til de fleste konti, f.eks. til deres Google- eller Microsoft-konti. Sådan [føjer du totrinsbekræftelse til din personlige Microsoft-konto](https://go.microsoft.com/fwlink/p/?linkid=2016403).
 
 For virksomheder, der bruger Microsoft 365, skal du tilføje en indstilling, der kræver, at brugerne logger på ved hjælp af multifaktorgodkendelse. Når du foretager denne ændring, bliver brugerne bedt om at konfigurere deres telefon til tofaktorgodkendelse, næste gang de logger på.
 Hvis du vil se en træningsvideo om, hvordan du konfigurerer MFA, og hvordan brugerne fuldfører konfigurationen, skal du se [Konfigurer MFA](set-up-multi-factor-authentication.md) og [brugerkonfiguration](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14).
 
-### <a name="to-set-up-multi-factor-authentication-you-turn-on-security-defaults"></a>Hvis du vil konfigurere multifaktorgodkendelse, skal du aktivere sikkerhedsstandarder
+### <a name="turn-on-security-defaults"></a>Slå sikkerhedsstandarder til
 
-For de fleste organisationer tilbyder sikkerhedsstandarder et godt niveau af ekstra logonsikkerhed. Du kan få flere oplysninger under [Hvad er sikkerhedsstandarder?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
+For de fleste organisationer tilbyder sikkerhedsstandarder et godt niveau af ekstra logonsikkerhed. Du kan få flere oplysninger under [Hvad er sikkerhedsstandarder?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Hvis dit abonnement er nyt, er sikkerhedsstandarder muligvis allerede slået til automatisk for dig.
 
-Hvis dit abonnement er nyt, er sikkerhedsstandarder muligvis allerede slået til automatisk for dig.
-
-Du aktiverer eller deaktiverer sikkerhedsstandarder i ruden **Egenskaber** for Azure Active Directory (Azure AD) i Azure Portal.
+Aktivér eller deaktiver sikkerhedsstandarder i ruden **Egenskaber** for Azure Active Directory (Azure AD) i Azure Portal.
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) med globale administratorlegitimationsoplysninger.
 
@@ -100,19 +99,19 @@ Du aktiverer eller deaktiverer sikkerhedsstandarder i ruden **Egenskaber** for A
 
 Når du har konfigureret multifaktorgodkendelse for din organisation, skal brugerne konfigurere totrinsbekræftelse på deres enheder. Du kan få flere oplysninger under [Konfigurer totrinsbekræftelse for Microsoft 365](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14).
 
-> [!TIP]
-> Du kan finde flere oplysninger og anbefalinger under [Konfigurer multifaktorgodkendelse for brugere](set-up-multi-factor-authentication.md).
+> [!Tip]
+> Hvis du har brug for mere detaljeret kontrol af multifaktorgodkendelse, kan du aktivere Betinget adgang med Microsoft 365 Business Premium. Hvis du gør dette, anbefaler vi, at du implementerer de tilsvarende politikker som sikkerhedsstandarder. Gå til denne side for at få flere oplysninger om [sikkerhedsstandarder](/microsoft-365/business-premium/m365bp-conditional-access).
 
-## <a name="2-train-your-users"></a>2: Oplær dine brugere
+Du kan finde flere oplysninger og anbefalinger under [Konfigurer multifaktorgodkendelse for brugere](set-up-multi-factor-authentication.md).
+
+## <a name="train-your-users"></a>Oplær dine brugere
 
 Harvard Kennedy School [Cybersecurity Campaign Handbook](https://go.microsoft.com/fwlink/p/?linkid=2015598) giver fremragende vejledning i at etablere en stærk kultur af sikkerhedsbevidsthed i din organisation, herunder uddannelse af brugere til at identificere phishing-angreb.
 
 Derudover anbefaler Microsoft, at dine brugere foretager de handlinger, der er beskrevet i denne artikel: [Beskyt din konto og dine enheder mod hackere og malware](https://support.microsoft.com/office/066d6216-a56b-4f90-9af3-b3a1e9a327d6). Disse handlinger omfatter:
 
 - Brug af stærke adgangskoder
-
 - Beskyttelse af enheder
-
 - Aktivering af sikkerhedsfunktioner på Windows 10- og Mac-pc'er
 
 Microsoft anbefaler også, at brugerne beskytter deres personlige mailkonti ved at gøre de handlinger, der anbefales i følgende artikler:
@@ -121,62 +120,58 @@ Microsoft anbefaler også, at brugerne beskytter deres personlige mailkonti ved 
 
 - [Beskyt din Gmail-konto med totrinsbekræftelse](https://go.microsoft.com/fwlink/p/?linkid=2015688&)
 
-## <a name="3-use-dedicated-admin-accounts"></a>3: Brug dedikerede administratorkonti
+## <a name="use-dedicated-admin-accounts"></a>Brug dedikerede administratorkonti
 
-De administrative konti, du bruger til at administrere dit Microsoft 365 miljø, omfatter administratorrettigheder. Disse er værdifulde mål for hackere og cyberattackers. Brug kun administratorkonti til administration. Administratorer skal have en separat brugerkonto til regelmæssig, ikke-administrativ brug og kun bruge deres administrative konto, når det er nødvendigt, for at fuldføre en opgave, der er knyttet til deres jobfunktion. Yderligere anbefalinger:
+De administrative konti, du bruger til at administrere dit Microsoft 365 miljø, omfatter administratorrettigheder. Dette er værdifulde mål for hackere og cyberangreb. Brug kun administratorkonti til administration. Administratorer skal have en separat brugerkonto til regelmæssig, ikke-administrativ brug og kun bruge deres administrative konto, når det er nødvendigt, for at fuldføre en opgave, der er knyttet til deres jobfunktion. Yderligere anbefalinger:
 
+- Sørg for, at konti føjes til [Azure Active Directory](../../admin/add-users/add-users.md).
 - Sørg for, at der også er konfigureret administratorkonti til multifaktorgodkendelse.
-
 - Før du bruger administratorkonti, skal du lukke alle ikke-relaterede browsersessioner og -apps, herunder personlige mailkonti.
-
 - Når du har fuldført administratoropgaver, skal du sørge for at logge af browsersessionen.
 
-## <a name="4-protect-against-malware"></a>4: Beskyt mod malware
+## <a name="protect-against-malware"></a>Beskyt mod malware
 
 Dit Microsoft 365 miljø omfatter beskyttelse mod malware. Du kan øge beskyttelsen af skadelig software ved at:
 
-- Blokering af vedhæftede filer med visse filtyper
-- Brug af antivirus-/antimalwarebeskyttelse på dine enheder
+- Brug [af forudindstillede politikker for Microsoft Office 365](../../../microsoft-365/security/office-365-security/preset-security-policies.md).
+- Blokerer vedhæftede filer med visse filtyper.
+- Brug antivirus-/antimalwarebeskyttelse på dine enheder, især Microsoft Defender til virksomheder. Det indeholder funktioner som [automatiseret undersøgelsesrapportering](../../security/office-365-security/air-view-investigation-results.md) (AIR) og dashboardet Threat and Vulnerability Management (TVM). Når Microsoft Defender til virksomheder ikke er din primære antivirussoftware, kan du stadig køre den i passiv tilstand og bruge [slutpunktsbeskyttelse og -svar (Slutpunktsregistrering og -svar)](../../security/defender-endpoint/overview-endpoint-detection-response.md), især i [bloktilstand](../../security/defender-endpoint/edr-in-block-mode.md), hvor det fungerer bag kulisserne for at afhjælpe skadelige artefakter, der blev opdaget af Slutpunktsregistrering og -svar egenskaber, og savnet af den primære virusdetektor software.
 
 ### <a name="block-attachments-with-certain-file-types"></a>Bloker vedhæftede filer med bestemte filtyper
 
 Du kan øge beskyttelsen mod skadelig software ved at blokere vedhæftede filer med filtyper, der ofte bruges til malware. Hvis du vil støde på beskyttelse mod skadelig software i en mail, skal du se en [kort træningsvideo](increase-threat-protection.md#raise-the-level-of-protection-against-malware-in-mail) eller fuldføre følgende trin:
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Antimalware** i afsnittet **Politikker**.
-
-2. Dobbeltklik på **Standard (standard)** på siden **Antimalware**. Der vises et pop op-vindue. 
-
-3. Vælg **Rediger beskyttelsesindstillinger** nederst i pop op-vinduet. 
-
-4. På næste side under **Beskyttelsesindstillinger** skal du markere afkrydsningsfeltet ud for **Aktivér filteret for almindelige vedhæftede filer**. De filtyper, der er blokeret, vises direkte under denne indstilling. Hvis du vil tilføje eller slette filtyper, skal du vælge **Tilpas filtyper** i slutningen af listen. 
-
-5. Vælg **Gem**. 
+2. Dobbeltklik på **Standard** på siden **Antimalware**. Der vises et pop op-vindue.
+3. Vælg **Rediger beskyttelsesindstillinger** nederst i pop op-vinduet.
+4. På næste side under **Beskyttelsesindstillinger** skal du markere afkrydsningsfeltet ud for **Aktivér filteret for almindelige vedhæftede filer**. De filtyper, der er blokeret, vises direkte under denne indstilling. Hvis du vil tilføje eller slette filtyper, skal du vælge **Tilpas filtyper** i slutningen af listen.
+5. Vælg **Gem**.
 
 Du kan få flere oplysninger under [Beskyttelse mod antimalware i EOP](../../security/office-365-security/anti-malware-protection.md).
 
-### <a name="use-antivirus-and-antimalware-protection"></a>Brug antivirus- og antimalwarebeskyttelse
+### <a name="use-antivirus-and-anti-malware-protection"></a>Brug antivirus- og antimalwarebeskyttelse
 
 Microsoft Defender Antivirus yder stærk antivirus- og antimalwarebeskyttelse og er indbygget i Windows operativsystem.
 
 Hvis din organisation bruger Microsoft 365 Business Premium, får du yderligere enhedsbeskyttelse, der omfatter:
 
 - Næste generations beskyttelse
-
 - Firewallbeskyttelse
-
 - Filtrering af webindhold
 
-Disse funktioner er inkluderet i Microsoft Defender til virksomheder, et tilbud, der begynder at blive udrullet for Microsoft 365 Business Premium kunder fra og med den 1. marts 2022. 
+Disse funktioner er inkluderet i Microsoft Defender til virksomheder, et tilbud, der begynder at blive udrullet for Microsoft 365 Business Premium kunder fra og med den 1. marts 2022.
 
 [Få mere at vide om Microsoft Defender til virksomheder](../../security/defender-business/mdb-overview.md).
 
-## <a name="5-protect-against-ransomware"></a>5: Beskyt mod ransomware
+## <a name="protect-against-ransomware"></a>Beskyt mod ransomware
 
 Ransomware begrænser adgangen til data ved at kryptere filer eller låse computerskærme. Det forsøger derefter at afpresse penge fra ofre ved at bede om "løsesum", som regel i form af kryptovalutaer som Bitcoin, i bytte for adgang til data.
 
 Du får ransomware-beskyttelse for e-mail, der hostes i Microsoft 365, og for filer, der er gemt i OneDrive. Hvis du har Microsoft 365 Business Premium, får du yderligere ransomware-beskyttelse til din organisations enheder.
 
 Du kan beskytte dig mod ransomware ved at oprette en eller flere regler for mailflow for at blokere filtypenavne, der ofte bruges til ransomware, eller for at advare brugere, der modtager disse vedhæftede filer i en mail. Et godt udgangspunkt er at oprette to regler:
+
+- Brug OneDrive til at flytte filer, så de altid er adgangskontrollerede og beskyttede.
 
 - Advar brugerne, før du åbner Office vedhæftede filer, der indeholder makroer. Ransomware kan skjules i makroer, så vi advarer brugerne om ikke at åbne disse filer fra personer, de ikke kender.
 
@@ -195,7 +190,7 @@ Hvis du vil oprette en regel for mailtransport, skal du se en [kort træningsvid
 5. Anvend indstillingerne i følgende tabel for hver regel. Lad resten af indstillingerne være standard, medmindre du vil ændre dem.
 
 6. Vælg **Gem**.
-    
+
 | Indstilling | Advar brugere, før de åbner vedhæftede filer i Office filer | Bloker filtyper, der kan indeholde ransomware eller anden skadelig kode |
 |:-----|:-----|:-----|
 |Navn  <br/> |Anti-ransomware-regel: advar brugere  <br/> |Anti-ransomware-regel: bloker filtyper  <br/> |
@@ -203,9 +198,9 @@ Hvis du vil oprette en regel for mailtransport, skal du se en [kort træningsvid
 |Angiv ord eller udtryk  <br/> |Tilføj disse filtyper:  <br/> dotm, docm, xlsm, sltm, xla, xlam, xll, pptm, potm, ppam, ppsm, sldm  <br/> |Tilføj disse filtyper:  <br/> ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif  <br/> |
 |Benyt følgende fremgangsmåde . . .  <br/> |Forbestil en ansvarsfraskrivelse  <br/> |Bloker meddelelsen . . . afvis meddelelsen, og medtag en forklaring  <br/> |
 |Angiv meddelelsestekst  <br/> |Du må ikke åbne disse filtyper – medmindre du forventede dem – da filerne kan indeholde skadelig kode, og hvis du kender afsenderen, er det ikke en garanti for sikkerhed.  <br/> ||
-   
+
 > [!TIP]
-> Du kan også tilføje de filer, du vil blokere, på listen over antimalwarefiler i [Trin 4: Beskyt mod malware](#4-protect-against-malware).
+> Du kan også føje de filer, du vil blokere, til listen over antimalwarefiler i [Beskyt mod malware](#protect-against-malware).
 
 Du kan finde flere oplysninger under:
 
@@ -215,71 +210,40 @@ Du kan finde flere oplysninger under:
 
 - [Gendan din OneDrive](https://support.microsoft.com/office/fa231298-759d-41cf-bcd0-25ac53eb8a15)
 
-## <a name="6-stop-auto-forwarding-for-email"></a>6: Stop automatisk videresendelse af mail
 
-Hackere, der får adgang til en brugers postkasse, kan exfiltrate mails ved at konfigurere postkassen til automatisk at videresende mail. Dette problem kan ske, selv uden brugerens opmærksomhed. Du kan forhindre, at dette sker, ved at konfigurere en regel for et mailflow.
+## <a name="protect-sensitive-emails"></a>Beskyt følsomme mails
 
-Sådan opretter du en regel for mailtransport:
+Microsoft 365 omfatter Office Meddelelseskryptering, som giver dig mulighed for at sende og modtage krypterede mails mellem personer i og uden for organisationen, og kun de tiltænkte modtagere kan få dem vist. Krypteringen fungerer sammen med Outlook.com, Yahoo!, Gmail og andre mailtjenester.
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>.
+> [!Tip]
+> Hvis der er behov for et strengere sikkerhedsniveau, skal din organisation også konfigurere og bruge følsomhedsmærkatering til mails eller filer. [Følsomhedsmærkater](../../compliance/sensitivity-labels.md) tillader kontrol over indhold, uanset hvor det går hen.
 
-2. Vælg **regler** i kategorien **mailflow**.
+### <a name="send-encrypted-email"></a>Send krypteret mail
 
-3. Vælg **+**, og **opret derefter en ny regel**.
+Sådan krypterer du din mail:
 
-4. Vælg **Flere indstillinger** nederst i dialogboksen for at se det fulde sæt indstillinger.
+1. Når en ny mail er åben, skal du vælge menuen **Indstillinger** .
+1. Vælg det relevante tilladelsesniveau på rullelisten **Kryptér** .
 
-5. Anvend indstillingerne i følgende tabel. Lad resten af indstillingerne være som standard, medmindre du vil ændre disse.
+:::image type="content" source="../../media/08e90a7e-a2d2-41a4-bae9-0a46b4ce639b.png" alt-text="Kryptering af mailmeddelelser i Outlook":::
 
-6. Vælg **Gem**.
-
-|Indstilling|Afvis automatisk videresendelse af mails til eksterne domæner|
-|---|---|
-|Navn|Undgå automatisk videresendelse af mail til eksterne domæner|
-|Anvend denne regel, hvis ...|Afsenderen . . . er ekstern/intern . . . Inde i organisationen|
-|Tilføj betingelse|Modtageren . . . er ekstern/intern . . . Uden for organisationen|
-|Tilføj betingelse|Meddelelsesegenskaberne . . . medtag meddelelsestypen . . . Fremadrettet automatisk|
-|Gør følgende...|Bloker meddelelsen . . . afvis meddelelsen, og medtag en forklaring.|
-|Angiv meddelelsestekst|Automatisk videresendelse af mails uden for denne organisation forhindres af sikkerhedsmæssige årsager.|
-
-## <a name="7-use-microsoft-purview-message-encryption"></a>7: Brug Microsoft Purview-meddelelsekryptering
-
-Microsoft Purview Message Encryption er inkluderet i Microsoft 365. Den er allerede konfigureret. Med Microsoft Purview Message Encryption kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Microsoft Purview Message Encryption fungerer sammen med Outlook.com, Yahoo!, Gmail og andre mailtjenester. Kryptering af mailmeddelelser hjælper med at sikre, at det kun er modtagere, der er beregnet til at få vist meddelelsesindhold.
-
-Microsoft Purview Message Encryption indeholder to beskyttelsesmuligheder, når der sendes mail:
-
-- Videresend ikke
-
-- Kryptere
-
-Din organisation har muligvis konfigureret andre indstillinger, der anvender en mærkat på mail, f.eks. Fortroligt.
-
-### <a name="to-send-protected-email"></a>Sådan sender du beskyttet mail
-
-I Outlook til pc skal du vælge **Indstillinger** i mailen og derefter vælge **Tilladelser**.
-
-![Kryptering af mailmeddelelser i Outlook.](../../media/08e90a7e-a2d2-41a4-bae9-0a46b4ce639a.png)
-
-På Outlook.com skal du vælge **Beskyt** i mailen. Standardbeskyttelsen er **Videresend ikke**. Hvis du vil ændre dette for at kryptere, skal du vælge **Skift tilladelser** \> **Krypter**.
-
-![Kryptering af mailmeddelelser på Outlook.com.](../../media/329ccf50-f6b1-4fb8-b249-60b907a82b7e.png)
-
-### <a name="to-receive-encrypted-email"></a>Sådan modtager du krypteret mail
+### <a name="receive-encrypted-email"></a>Modtag krypteret mail
 
 Hvis modtageren har Outlook 2013 eller Outlook 2016 og en Microsoft-mailkonto, får vedkommende vist en besked om elementets begrænsede tilladelser i læseruden. Når du har åbnet meddelelsen, kan modtageren få vist meddelelsen på samme måde som enhver anden.
 
-Hvis modtageren bruger en anden mailklient eller mailkonto, f.eks. Gmail eller Yahoo, får vedkommende vist et link, hvor de enten kan logge på for at læse mailen eller anmode om en engangsadgangskode for at få vist meddelelsen i en webbrowser. Hvis brugerne ikke modtager mailen, skal du få dem til at kontrollere deres mappe med spam eller uønsket post.
+Hvis modtageren bruger en anden mailklient eller mailkonto, f.eks. Gmail eller Yahoo, får vedkommende vist et link, hvor de enten kan logge på for at læse mailen eller anmode om en engangsadgangskode for at få vist meddelelsen i en webbrowser. Hvis brugerne ikke modtager mailen, skal de kontrollere deres mappe med spam eller uønsket mail.
 
 > [!TIP]
 > Du kan få flere oplysninger under [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/office/eaa43495-9bbb-4fca-922a-df90dee51980).
 
-## <a name="8-protect-your-email-from-phishing-attacks"></a>8. Beskyt din mail mod phishingangreb
+## <a name="protect-the-organization"></a>Beskyt organisationen
 
-Hvis du har konfigureret et eller flere brugerdefinerede domæner til dit Microsoft 365 miljø, kan du konfigurere målrettet beskyttelse mod phishing. Beskyttelse mod phishing, som er en del af Microsoft Defender for Office 365, kan hjælpe med at beskytte din organisation mod ondsindede efterligningsbaserede phishingangreb og andre phishingangreb. Hvis du ikke har konfigureret et brugerdefineret domæne, behøver du ikke at gøre dette.
+Hvis du har konfigureret et eller flere brugerdefinerede domæner til dit Microsoft 365 miljø, kan du konfigurere målrettet beskyttelse mod phishing. Beskyttelse mod phishing er inkluderet i Microsoft Defender for Office 365 og kan hjælpe med at beskytte din organisation mod skadelig efterligningsbaseret phishing og andre angreb.
 
-Vi anbefaler, at du kommer i gang med denne beskyttelse ved at oprette en politik, der beskytter dine vigtigste brugere og dit brugerdefinerede domæne.
+> [!Note]
+> Hvis du ikke har konfigureret et brugerdefineret domæne, behøver du ikke at gøre dette.
 
-Hvis du vil oprette en politik til bekæmpelse af phishing i Defender for Office 365, skal du se en [kort træningsvideo](increase-threat-protection.md#protect-your-email-from-phishing-attacks) eller fuldføre følgende trin:
+Vi anbefaler, at du kommer i gang med denne beskyttelse ved at oprette en politik for dine vigtigste brugere og dit brugerdefinerede domæne. Et godt sted at gøre dette er i Microsoft 365 Defender, der er inkluderet i Microsoft Business Premium. Hvis du vil oprette en politik til bekæmpelse af phishing i Defender for Office 365, skal du fuldføre følgende trin:
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
 
@@ -305,13 +269,13 @@ Hvis du vil oprette en politik til bekæmpelse af phishing i Defender for Office
 > [!TIP]
 > Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af phishing i Defender for Office 365](../../security/office-365-security/configure-atp-anti-phishing-policies.md).
 
-## <a name="9-protect-against-malicious-attachments-files-and-urls"></a>9: Beskyt mod skadelige vedhæftede filer, filer og URL-adresser
+## <a name="protect-against-malicious-attachments-files-and-urls"></a>Beskyt mod skadelige vedhæftede filer, filer og URL-adresser
 
 Folk sender, modtager og deler jævnligt vedhæftede filer, f.eks. dokumenter, præsentationer, regneark og meget mere. Det er ikke altid nemt at se, om en vedhæftet fil er sikker eller ondsindet bare ved at se på en mail. Microsoft Defender for Office 365 omfatter Pengeskab beskyttelse af vedhæftede filer, men denne beskyttelse er ikke aktiveret som standard. Vi anbefaler, at du opretter en ny regel for at begynde at bruge denne beskyttelse. Denne beskyttelse omfatter også filer i SharePoint, OneDrive og Microsoft Teams.
 
 ### <a name="set-up-safe-attachments"></a>Konfigurer Pengeskab vedhæftede filer
 
-Hvis du vil oprette en politik for vedhæftede filer Pengeskab, skal du se en [kort træningsvideo](increase-threat-protection.md) eller fuldføre følgende trin:
+Du kan bruge forudindstillede Pengeskab politikker for vedhæftede filer eller oprette dine egne. Hvis du vil oprette en politik for vedhæftede filer Pengeskab, skal du se en [kort træningsvideo](increase-threat-protection.md) eller fuldføre følgende trin:
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>, og log på med din administratorkonto.
 
@@ -370,11 +334,11 @@ Sådan redigerer du standardpolitikken:
 > [!TIP]
 > Du kan få flere oplysninger [under Pengeskab Links i Microsoft Defender for Office 365](../../security/office-365-security/atp-safe-links.md).
 
-## <a name="10-increase-protection-for-your-organizations-devices"></a>10: Øg beskyttelsen af organisationens enheder
+## <a name="increase-protection-for-your-organizations-devices"></a>Øg beskyttelsen af organisationens enheder
 
-Microsoft Defender Antivirus er indbygget i Windows operativsystem og giver god beskyttelse mod virus og malware. Du kan dog øge beskyttelsen af din organisations enheder ved at onboarde dem til Microsoft Defender til virksomheder, et nyt tilbud til små og mellemstore virksomheder som din. Med Defender for Business er din organisations enheder bedre beskyttet mod ransomware, malware, phishing og andre trusler.
+Microsoft Defender Antivirus er indbygget i Windows operativsystem og giver god beskyttelse mod virus og malware. Du kan dog øge beskyttelsen af din organisations enheder ved at onboarde dem til Microsoft Defender til virksomheder hvilket er et nyt tilbud til små og mellemstore virksomheder som dine og er inkluderet [i Microsoft 365 Business Premium](../../business-premium/index.md). Med Defender for Business er din organisations enheder bedre beskyttet mod ransomware, malware, phishing og andre trusler.
 
-**Fra den 1. marts 2022 føjes [Microsoft Defender til virksomheder](../../security/defender-business/index.yml) funktioner til Microsoft 365 Business Premium**. 
+Med Microsoft 365 Business Premium får du øgede sikkerhedsfunktioner, f.eks. enhedshåndtering og avanceret trusselsbeskyttelse. Når du tilmelder enheder til Microsoft 365 Business for Defender, overvåges og beskyttes enhederne af InTune.
 
 
 Du kan få mere at vide i følgende ressourcer:

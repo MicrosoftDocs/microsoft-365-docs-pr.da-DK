@@ -17,25 +17,23 @@ ms.custom:
 - intro-overview
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) kan du få mere at vide om, hvordan Microsoft 365 Lighthouse kan hjælpe dig med at sikre og administrere kundelejere på én placering.
-ms.openlocfilehash: 96ae7647107a1be89d9fe4d800374ce8a8970cb8
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 9a75cd43ac09d63c4524495a3146bf0b860627a4
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023629"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094676"
 ---
 # <a name="overview-of-microsoft-365-lighthouse"></a>Oversigt over Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers), der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business. 
+Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers), der bruger Microsoft 365 Business Premium eller Microsoft 365 E3.
 
-Lighthouse forenkler onboarding af Microsoft 365 Business Premium, Microsoft 365 E3 og Windows 365 Business lejere ved at anbefale grundlæggende sikkerhedskonfigurationer, der er skræddersyet til SMB-kunder og giver visninger med flere lejere på tværs af alle kundemiljøer. Med Lighthouse kan MSP'er skalere administrationen af deres kunder, fokusere på det vigtigste, hurtigt finde og undersøge risici og træffe foranstaltninger for at få deres kunder til en sund og sikker tilstand.
+Lighthouse forenkler onboarding af kundelejere ved at anbefale grundlæggende sikkerhedskonfigurationer, der er skræddersyet til SMB-kunder, og give visninger med flere lejere på tværs af alle kundemiljøer. Med Lighthouse kan MSP'er skalere administrationen af deres kunder, fokusere på det vigtigste, hurtigt finde og undersøge risici og træffe foranstaltninger for at få deres kunder til en sund og sikker tilstand.
 
-Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til at administrere Microsoft 365 tjenester og tilsluttede enheder. Lighthouse er tilgængelig for MSP'er, der er tilmeldt programmet Cloud Solution Provider (CSP), og som betjener SMB-kunder med et Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business abonnement.
-
-Brug af Lighthouse af Microsoft CSP-kanalpartnere, der har kunder, der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business, understøttes. Dette omfatter CSP-partnere, der gennemfører direkte med Microsoft, og dem, der gennemfører gennem en indirekte udbyder (distributør). 
+Der er ingen ekstra omkostninger forbundet med at bruge Lighthouse til at administrere Microsoft 365 tjenester og tilsluttede enheder. Lighthouse er tilgængeligt for MSP'er, der er tilmeldt programmet Cloud Solution Provider (CSP), som servicer SMB-kunder. Dette omfatter CSP-partnere, der gennemfører direkte med Microsoft, og dem, der gennemfører gennem en indirekte udbyder (distributør).
 
 > [!IMPORTANT] 
-> Hvis du vil bruge Lighthouse, skal MSP'er og deres kundelejere opfylde de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).     
+> Hvis du vil bruge Lighthouse, skal MSP'er og deres kundelejere opfylde de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
 
 Du kan finde flere oplysninger om CSP-programmet i [oversigten over Cloud Solution Provider program](/partner-center/csp-overview).
 

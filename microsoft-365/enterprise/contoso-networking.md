@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,33 +13,33 @@ ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Forstå Contoso-netværksinfrastrukturen, og hvordan virksomheden bruger sin SD-WAN-teknologi for optimal netværksydeevne til Microsoft 365 til skytjenester for virksomheder.
-ms.openlocfilehash: 94c9c43e35f0f1a3d973529aa2b107cffe608693
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Forstå Contoso-netværksinfrastrukturen, og hvordan virksomheden bruger sin SD-WAN-teknologi til optimal netværksydeevne til at Microsoft 365 til virksomhedscloudtjenester.
+ms.openlocfilehash: f8450b63bed68de414c0ea585b6f5e199c87ad90
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587857"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093937"
 ---
 # <a name="networking-for-the-contoso-corporation"></a>Netværk for Contoso Corporation
 
-For at indføre en skyomfattende infrastruktur, udtænkte Contoso en grundlæggende ændring af, hvordan netværkstrafik til skytjenester bevæger sig. I stedet for en intern hub-and-ege-model, der fokuserer på netværksforbindelser og trafik på næste niveau i Office-hierarkiet, har de tilknyttet brugerplaceringer til lokale internet udgangspunkter og lokale forbindelser til den nærmeste Microsoft 365-netværksplacering på internettet.
+For at indføre en cloudbaseret infrastruktur har Contoso udtænkt et grundlæggende skift i, hvordan netværkstrafik til cloudtjenester bevæger sig. I stedet for en intern hub-and-spoke-model, der fokuserer netværksforbindelse og trafik for det næste niveau i Office-hierarkiet, tilknyttede de brugerplaceringer til lokale internetudgange og lokale forbindelser til den nærmeste Microsoft 365 netværksplacering på internettet.
 
 ## <a name="networking-infrastructure"></a>Netværksinfrastruktur
 
-Dette er de netværkselementer, der forbinder Contoso-kontorer i hele verden:
+Dette er de netværkselementer, der forbinder Contoso-kontorer over hele verden:
 
-- WAN-netværk (Multiproto label switching) (MPLS)
+- MPLS WAN-netværk (Multiprotocol Label Switching)
 
-  Et MPLS WAN-netværk forbinder Paris's hovedkvarter til regionale kontorer og regionale kontorer til satellitkontorer i en ege-og-hub-konfiguration. Netværket giver brugerne mulighed for at få adgang til lokale servere, der udgør line of business-programmer i Paris's hovedkvarter. Den ruter også generisk internettrafik til Paris-kontoret, hvor netværksikkerhedsenheder renser anmodningerne. I hvert kontor leverer routere trafik til kablede værter eller trådløse adgangspunkter på undernet, som bruger det private IP-adresseområde.
+  Et MPLS WAN-netværk forbinder Paris hovedkvarter til regionale kontorer og regionale kontorer til satellitkontorer i en ege-og-hub konfiguration. Netværket giver brugerne mulighed for at få adgang til lokale servere, der udgør line-of-business applikationer i Paris hovedkvarter. Den sender også generisk internettrafik til Paris-kontoret, hvor netværkssikkerhedsenheder renser anmodningerne. Inden for hvert kontor leverer routere trafik til kablede værter eller trådløse adgangspunkter på undernet, som bruger den private IP-adresseplads.
 
-- Lokal direkte internetadgang til Microsoft 365 trafik
+- Lokal direkte internetadgang for Microsoft 365 trafik
 
-  Hvert kontor har en software defineret WAN-enhed (SD-WAN), der har en eller flere lokale internetudbyderes netværkskredsløb med sin egen internetforbindelse via en proxyserver. Dette er typisk implementeret som et WAN-link til en lokal internetudbyder, der også indeholder offentlige IP-adresser og en lokal DNS-server.
+  Hvert office har en softwaredefineret WAN-enhed (SD-WAN), der har et eller flere lokale INTERNET ISP-netværkskredsløb med sin egen internetforbindelse via en proxyserver. Dette implementeres typisk som et WAN-link til en lokal internetudbyder, der også leverer offentlige IP-adresser og en lokal DNS-server.
 
 - Internet tilstedeværelse
 
-  Contoso ejer det offentlige domænenavn for contosocom\.. Det offentlige Contoso-websted til bestilling af produkter er et sæt servere i et internettilsluttet datacenter på Paris campus. Contoso bruger et /24 offentligt IP-adresseområde på internettet.
+  Contoso ejer det offentlige contosocom-domænenavn\.. Den offentlige Contoso-hjemmeside til bestilling af produkter er et sæt servere i et internetforbundet datacenter på Paris campus. Contoso bruger et /24 offentligt IP-adresseinterval på internettet.
 
 Figur 1 viser Contoso-netværksinfrastrukturen og dens forbindelser til internettet.
 
@@ -47,81 +47,81 @@ Figur 1 viser Contoso-netværksinfrastrukturen og dens forbindelser til internet
  
 **Figur 1: Contoso-netværket**
 
-## <a name="use-of-sd-wan-for-optimal-network-connectivity-to-microsoft"></a>Brug af SD-WAN for optimal netværksforbindelse til Microsoft
+## <a name="use-of-sd-wan-for-optimal-network-connectivity-to-microsoft"></a>Brug af SD-WAN for at få optimal netværksforbindelse til Microsoft
 
-Contoso fulgte [Microsoft 365 principper for netværksforbindelse for](microsoft-365-network-connectivity-principles.md) at:
+Contoso fulgte [principperne for Microsoft 365 netværksforbindelse](microsoft-365-network-connectivity-principles.md) for at:
 
-- Identificer og Microsoft 365 på netværkstrafik
+- Identificer og differentiere Microsoft 365 netværkstrafik
 - Egress netværksforbindelser lokalt
-- Undgå netværks hairpins
-- Tilgå dublerede netværkssikkerhedsenheder
+- Undgå netværkshårnåle
+- Tilsidestil duplikerede netværkssikkerhedsenheder
 
-Der er tre kategorier af netværkstrafik for Microsoft 365: *Optimer**, Tillad* og *Standard*. Optimer og Tillad trafik er pålidelig netværkstrafik, der er krypteret og sikret på slutpunkterne og er beregnet til Microsoft 365 netværket.
+Der er tre kategorier af netværkstrafik til Microsoft 365: *Optimer*, *Tillad* og *Standard*. Optimer og tillad trafik er netværkstrafik, der er tillid til, og som er krypteret og sikret på slutpunkterne og er beregnet til det Microsoft 365 netværk.
 
-Contoso har besluttet at:
+Contoso besluttede at:
 
-- Brug direkte internetud udgangspunkt til at optimere og tillade kategoritrafik og til at videresende al Standard-kategoritrafik til den Paris-baserede centrale internetforbindelse.
+- Brug direkte internet udgang for Optimer og Tillad kategoritrafik og til at videresende al Standardkategoritrafik til den centrale internetforbindelse i Paris.
 
-- Installér SD-WAN-enheder på hvert kontor som en nem måde at følge disse principper på og opnå optimal netværksydeevne for Microsoft 365 skybaserede tjenester.
+- Udrul SD-WAN-enheder på hvert kontor som en nem måde at følge disse principper på og opnå optimal netværksydeevne for Microsoft 365 cloudbaserede tjenester.
 
-  SD-WAN-enhederne har en LAN-port til det lokale kontornetværk og flere WAN-porte. En WAN-port opretter forbindelse til deres MPLS-netværk. En anden opretter forbindelse til et lokalt ISP-kredsløb. SD-WAN-enhedsruterne Optimer og Tillad kategorinetværkstrafik via isp-linket.
+  SD-WAN-enhederne har en LAN-port til det lokale Office-netværk og flere WAN-porte. En WAN-port opretter forbindelse til deres MPLS-netværk. En anden opretter forbindelse til et lokalt ISP-kredsløb. SD-WAN-enhedsruterne Optimer og Tillad kategorinetværkstrafik via ISP-linket.
 
-## <a name="the-contoso-line-of-business-app-infrastructure"></a>Line of business-appinfrastrukturen i Contoso
+## <a name="the-contoso-line-of-business-app-infrastructure"></a>Contoso-infrastrukturen for line of business-apps
 
-Contoso har tegnet sin line of business-applikation og server intranetinfrastrukturen til følgende:
+Contoso har udviklet sin line of business-program- og serverintranetinfrastruktur til følgende:
 
-- Satellitkontorer bruger lokale cacheservere til at lagre dokumenter og interne websteder, der tilgås ofte.
-- Regionale hubs bruger regionale programservere til de regionale og satellitbaserede kontorer. Disse servere synkroniseres med servere i Paris's hovedkvarter.
-- Paris campus-datacentrene indeholder centraliseret programservere, der betjene hele organisationen.
+- Satellitkontorer bruger lokale cachelagringsservere til at gemme ofte tilgåede dokumenter og interne websteder.
+- Regionale hubs bruger regionale programservere til regionale kontorer og satellitkontorer. Disse servere synkroniseres med servere i Hovedkvarteret i Paris.
+- Campusdatacentrene i Paris indeholder centraliserede programservere, der betjener hele organisationen.
 
-Figur 2 viser procentdelen af netværkskapaciteten, der bruges ved åbning af servere på tværs af Contoso-intranettet.
+Figur 2 viser den procentdel af netværkstrafikkapaciteten, der bruges til at få adgang til servere på tværs af Contoso-intranettet.
 
 ![Contoso-infrastrukturen til interne programmer.](../media/contoso-networking/contoso-networking-fig2.png)
  
-**Figur 2: Contoso-infrastruktur til interne programmer**
+**Figur 2: Contoso-infrastrukturen til interne programmer**
 
-For satellit- eller regionale hubkontorer kan 60 % af de ressourcer, medarbejderne skal bruge, betjenes af satellit- og regionale hubkontorservere. De yderligere 40 procent af ressourceanmodninger skal gå over WAN-linket til Paris campus.
+For satellit- eller regionale hubkontorer kan 60 procent af de ressourcer, der kræves af medarbejdere, betjenes af satellit- og regionale hub office-servere. De yderligere 40 procent af ressourceanmodninger skal gå over WAN-linket til Paris campus.
 
-## <a name="network-analysis-and-preparation-for-microsoft-365-for-enterprise"></a>Netværksanalyse og forberedelse til Microsoft 365 til virksomheder
+## <a name="network-analysis-and-preparation-for-microsoft-365-for-enterprise"></a>Netværksanalyse og forberedelse til Microsoft 365 for virksomheder
 
-En vellykket indførelse Microsoft 365 virksomhedstjenester af Contoso-brugere afhænger af den meget tilgængelige og performant forbindelse til internettet eller direkte til Microsofts skytjenester. Contoso har taget disse trin for at planlægge og implementere optimeret forbindelse til Microsoft 365 til skytjenester for virksomheder:
+Contoso-brugeres vellykkede indførelse af Microsoft 365 til virksomhedstjenester afhænger af, at der er høj tilgængelig og effektiv forbindelse til internettet eller direkte til Microsoft-cloudtjenester. Contoso tog disse trin for at planlægge og implementere optimeret forbindelse for at Microsoft 365 til cloudtjenester i virksomheder:
 
-1. Opret et firma-WAN-netværksdiagram for at hjælpe med planlægningen
+1. Opret et WAN-netværksdiagram for virksomheden for at hjælpe med planlægningen
 
-   For at starte deres netværksplanlægning oprettede Contoso et diagram, der viser deres kontorplaceringer, eksisterende netværksforbindelse, eksisterende perimeterenheder på netværket og tjenesteklasser, der administreres på netværket. De brugte dette diagram til hvert efterfølgende trin i planlægningen og implementeringen af netværksforbindelsen.
+   For at starte netværksplanlægningen oprettede Contoso et diagram, der viser deres kontorplaceringer, eksisterende netværksforbindelse, eksisterende netværksperimeterenheder og tjenesteklasser, der administreres på netværket. De brugte dette diagram til hvert efterfølgende trin i planlægningen og implementeringen af netværksforbindelsen.
 
-2. Oprette en plan for Microsoft 365 for virksomhedens netværksforbindelse
+2. Opret en plan for Microsoft 365 til virksomhedsnetværksforbindelse
 
-   Contoso brugte [Microsoft 365-principperne](microsoft-365-network-connectivity-principles.md) for netværksforbindelse og eksempler på referencenetværksarkitekturer til at identificere SD-WAN som deres foretrukne topologi til Microsoft 365 forbindelse.
+   Contoso brugte [principperne for Microsoft 365 netværksforbindelse](microsoft-365-network-connectivity-principles.md) og eksempler på netværksarkitekturer for at identificere SD-WAN som deres foretrukne topologi for Microsoft 365 forbindelse.
 
-3. Analysér anvendelsen af internetforbindelse og MPLS-WAN-båndbredde på hvert kontor, og øg båndbredden efter behov
+3. Analysér udnyttelse af internetforbindelse og MPLS-WAN-båndbredde på hvert kontor, og øg båndbredden efter behov
 
-   Hvert kontors aktuelle forbrug blev analyseret, og kredsløbene blev øget, så forudsagte Microsoft 365 skybaseret trafik ville fungere med et gennemsnit af 20 procent ubrugt kapacitet.
+   Hvert kontors aktuelle forbrug blev analyseret, og kredsløbene blev forøget, så forudsagt Microsoft 365 cloudbaseret trafik ville fungere med gennemsnitligt 20 % ubrugt kapacitet.
 
 4. Optimer ydeevnen til Microsoft-netværkstjenester
 
-   Contoso bestemte Office 365-, Intune- og Azure-slutpunkter og konfigurerede firewalls, sikkerhedsenheder og andre systemer i internetstien for at opnå optimal ydeevne. Slutpunkter for Office 365 og Tillad kategoritrafik blev konfigureret i SD-WAN-enheder til routing via ISP-kredsløbet.
+   Contoso bestemte sættet af Office 365, Intune og Azure-slutpunkter og konfigurerede firewalls, sikkerhedsenheder og andre systemer i internetstien for at opnå optimal ydeevne. Slutpunkter for Office 365 Optimere og Tillad kategoritrafik blev konfigureret til SD-WAN-enheder til routing over INTERNETUDBYDERens kredsløb.
 
-5. Konfigurere intern DNS
+5. Konfigurer intern DNS
 
-   DNS skal være funktionel og skal opslags lokalt for at kunne Microsoft 365 trafik.
+   DNS skal være funktionel og søges lokalt for Microsoft 365 trafik.
 
 6. Valider netværksslutpunkt og portforbindelse
 
-   Contoso kørte Testværktøjer til Microsoft-netværksforbindelse for at validere forbindelsen Microsoft 365 virksomhedens skytjenester.
+   Contoso kørte testværktøjerne til Microsofts netværksforbindelse for at validere forbindelsen til Microsoft 365 til cloudtjenester i virksomheder.
 
 7. Optimer medarbejdercomputere til netværksforbindelse
 
-   Der blev kontrolleret individuelle computere for at sikre, at de nyeste opdateringer til operativsystemet blev installeret, og at sikkerhedsovervågningen på slutpunktet var aktiv på alle klienter.
+   De enkelte computere blev kontrolleret for at sikre, at de nyeste opdateringer af operativsystemet blev installeret, og at overvågning af slutpunktets sikkerhed var aktiv på alle klienter.
 
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide om, hvordan Contoso udnytter sine lokale [Active Directory-domæneservices i](contoso-identity.md) skyen til medarbejdere og federating-godkendelse til kunder og forretningspartnere.
+Få mere at vide om, hvordan Contoso [udnytter sine Active Directory i det lokale miljø Domænetjenester i skyen](contoso-identity.md) til medarbejdere og føderering af godkendelse for kunder og forretningspartnere.
 
 ## <a name="see-also"></a>Se også
 
-[Netværksoversigt for Microsoft 365](networking-roadmap-microsoft-365.md)
+[Oversigt over netværk for Microsoft 365](networking-roadmap-microsoft-365.md)
 
-[Microsoft 365 for Enterprise-oversigt](microsoft-365-overview.md)
+[Microsoft 365 til virksomhedsoversigt](microsoft-365-overview.md)
 
-[Test labvejledninger](m365-enterprise-test-lab-guides.md)
+[Vejledninger til testlaboratorier](m365-enterprise-test-lab-guides.md)
