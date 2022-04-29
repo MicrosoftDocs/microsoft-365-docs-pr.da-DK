@@ -13,17 +13,17 @@ ms.localizationpriority: medium
 ms.assetid: 37125cdb-715d-42d0-b669-1a8efa140813
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om, hvordan du kan bruge indsigt i Ret regler for langsom mailflow i Security & Compliance Center til at identificere og løse ineffektiv eller ødelagte regler for mailflow (også kaldet transportregler) i deres organisation.
+description: Administratorer kan få mere at vide om, hvordan de kan bruge indsigten Fix slow mail flow rules i Security & Compliance Center til at identificere og løse ineffektive eller brudte regler for mailflows (også kaldet transportregler) i deres organisation.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30dda2b890df9f33fbc9af04b5821fb24593a335
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 650389529f2a5d811f71b7c3f755d93e7e734d81
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64468385"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128734"
 ---
-# <a name="fix-slow-mail-flow-rules-insight-in-the-security--compliance-center"></a>Ret indsigt i regler for langsomt mailflow i Sikkerheds- & Compliance Center
+# <a name="fix-slow-mail-flow-rules-insight-in-the-security--compliance-center"></a>Løs indsigt i regler for langsomme mailflows i Security & Compliance Center
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -32,31 +32,31 @@ ms.locfileid: "64468385"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Ineffektiv regler for mailflow (også kaldet transportregler) kan medføre forsinkelser i mailflowet i organisationen. Dette indsigt rapporterer regler for mailflow, der har indvirkning på organisationens mailflow. Eksempler på disse typer regler omfatter:
+Ineffektive regler for mailflow (også kaldet transportregler) kan føre til forsinkelser i mailflowet for din organisation. Denne indsigt rapporterer regler for mailflow, der har indflydelse på organisationens mailflow. Eksempler på disse typer regler omfatter:
 
-- Betingelser, der **bruger Er medlem af** for store grupper.
-- Betingelser, der bruger matchende komplekse regulære udtryk (regex).
+- Betingelser, der bruger **Er medlem af** for store grupper.
+- Betingelser, der bruger et komplekst regulært udtryk (regex)-mønstermatch.
 - Betingelser, der bruger indholdskontrol i vedhæftede filer.
 
-**Du kan** finde oplysninger om regler for rettelse af langsom mailflow i området Anbefalet til dig i [dashboardet for mailflow](mail-flow-insights-v2.md) i [Security & Compliance Center](https://protection.office.com), når det tager for lang tid at gennemføre en regel **for** mailflow.
+Indsigten **Fix slow mail flow rules** i området **Anbefalet for dig** i [dashboardet Mailflow](mail-flow-insights-v2.md) i [Security & Compliance Center](https://protection.office.com) giver dig besked, når det tager for lang tid at fuldføre en regel for et mailflow.
 
-Dette indsigt vises kun, når betingelsen er registreret (hvis du ikke har nogen mailløkker, kan du ikke se indsigten).
+Denne indsigt vises først, når betingelsen er registreret (hvis du ikke har nogen mailløkker, kan du ikke se indsigten).
 
-Du kan bruge denne meddelelse til at hjælpe dig med at identificere og finjustere regler for mailflow for at reducere forsinkelser i mailflowet.
+Du kan bruge denne meddelelse til at hjælpe dig med at identificere og finjustere regler for mailflow for at hjælpe med at reducere forsinkelser i mailflowet.
 
-:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules.png" alt-text="Du kan finde oplysninger om regler for rettelse af langsom mailflow i området Anbefalet til dig i dashboardet for mailflow" lightbox="../../media/mfi-fix-slow-mail-flow-rules.png":::
+:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules.png" alt-text="Indsigten Ret regler for langsomme mailflows i området Anbefalet for dig på dashboardet Mailflow" lightbox="../../media/mfi-fix-slow-mail-flow-rules.png":::
 
-Når du klikker **på Vis detaljer** på widgetten, vises en pop op-meddelelse med flere oplysninger:
+Når du klikker på **Vis detaljer** på widgetten, vises der et pop op-vindue med flere oplysninger:
 
-- **Regel**: Du kan holde markøren over oversigten for at se alle reglens betingelser, undtagelser og handlinger. Du kan klikke på oversigten for at redigere reglen i Exchange Administration (EAC) på <https://admin.exchange.microsoft.com/#/transportrules>.
-- **Antal meddelelser, der er** evalueret:  Du kan klikke på Vis eksempelmeddelelser for at få vist resultaterne af meddelelsessporing for en stikprøve af de meddelelser, der blev påvirket af reglen.[](message-trace-scc.md)
-- **Gennemsnitlig tid brugt på hver meddelelse**
-- **Mediantid brugt på en meddelelse**: Den midterste værdi, der adskiller den øverste halvdel fra den nederste halvdel af tidsdataene.
+- **Regel**: Du kan holde markøren over oversigten for at se alle betingelserne, undtagelserne og handlingerne for reglen. Du kan klikke på oversigten for at redigere reglen i Exchange Administration på <https://admin.exchange.microsoft.com/#/transportrules>.
+- **Antal meddelelser, der evalueres**: Du kan klikke på **Vis eksempelmeddelelser** for at se [resultaterne af meddelelsessporingen](message-trace-scc.md) for et eksempel på de meddelelser, der blev påvirket af reglen.
+- **Den gennemsnitlige tid, der er brugt på hver meddelelse**
+- **Mediantid brugt på en meddelelse**: Den midterste værdi, der adskiller den øverste halvdel fra den nederste halvdel af tidsdata.
 
-:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules-details.png" alt-text="Pop op-vindue med Detaljer, der vises, når du klikker på Vis detaljer i indsigt i Ret regler for langsom mailflow" lightbox="../../media/mfi-fix-slow-mail-flow-rules-details.png":::
+:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules-details.png" alt-text="Pop op-vinduet Detaljer, der vises, når du har klikket på Vis detaljer i indsigten Ret regler for langsomme mailflow" lightbox="../../media/mfi-fix-slow-mail-flow-rules-details.png":::
 
-Du kan finde flere oplysninger om betingelser og undtagelser i regler for mailflow i Betingelser og undtagelser [(prædikater) for mailflowregler Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions).
+Du kan få flere oplysninger om betingelser og undtagelser i regler for mailflow under [Betingelser og undtagelser (prædikater) for mailflowregler i Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions).
 
 ## <a name="see-also"></a>Se også
 
-Hvis du vil have mere at vide om andre indsigter i dashboardet for mailflow, skal du se Indsigt i [mailflow & Security & Compliance Center](mail-flow-insights-v2.md).
+Du kan få oplysninger om anden indsigt i dashboardet Mailflow under [Mailflowindsigt i Security & Compliance Center](mail-flow-insights-v2.md).

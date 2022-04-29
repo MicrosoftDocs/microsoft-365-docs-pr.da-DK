@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 1b45c82f-26c8-44fb-9f3b-b45436fe2271
 description: Få mere at vide om, hvordan du bruger overholdelsesgrænser til at oprette logiske grænser, der styrer placeringen af brugerindhold, som en eDiscovery-leder kan søge i Microsoft 365.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 36a7f1e679f404a77b61c30b8efef7875558fee9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 52f4a66ffbab37109e7503181548b1de4ffac87a
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099185"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128777"
 ---
 # <a name="set-up-compliance-boundaries-for-ediscovery-investigations"></a>Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser
 
@@ -285,8 +285,6 @@ Vær opmærksom på følgende begrænsninger, når du administrerer eDiscovery-s
 - Når du opretter og kører en søgning, kan du vælge indholdsplaceringer uden for dit bureau. Men på grund af filteret for søgetilladelser medtages indhold fra disse placeringer ikke i søgeresultaterne.
 
 - Overholdelsesgrænser gælder ikke for ventepositioner i eDiscovery-sager. Det betyder, at en eDiscovery-leder i ét agentur kan placere en bruger i en anden instans i venteposition. Overholdelsesgrænsen gennemtvinges dog, hvis eDiscovery-styringen søger på indholdsplaceringerne for den bruger, der er sat i venteposition. Det betyder, at eDiscovery-administratoren ikke kan søge i brugerens indholdsplaceringer, selvom brugeren kunne sættes i venteposition.
-
-    Statistik for venteposition gælder også kun for indholdsplaceringer i bureauet.
 
 - Hvis du har fået tildelt et filter for søgetilladelser (enten en postkasse eller et webstedsfilter), og du forsøger at eksportere ikke-indekserede elementer til en søgning, der indeholder alle SharePoint websteder i din organisation, får du vist følgende fejlmeddelelse: `Unable to execute the task. Reason: The scope options UnindexedItemsOnly or BothIndexedandUnindexedItems are not allowed when the executing user has a compliance security filter applied`. Hvis du har fået tildelt et filter for søgetilladelser, og du vil eksportere ikke-indekserede elementer fra SharePoint, skal du køre søgningen igen og inkludere bestemte SharePoint websteder, der skal søges på. Ellers kan du kun eksportere indekserede elementer fra en søgning, der indeholder alle SharePoint websteder. Du kan finde flere oplysninger om indstillingerne, når du eksporterer søgeresultater, under [Eksportér søgeresultater for indhold](export-search-results.md#step-1-prepare-search-results-for-export).
 

@@ -14,13 +14,13 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 03/18/2022
-ms.openlocfilehash: 03efd5f8681824b5625611e0c8c871bfc7fd03a6
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.date: 04/11/2022
+ms.openlocfilehash: b176f7a89c46e016f7eb25cdf4cd6b0d6beb3966
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665134"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130599"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>flytbare Storage Access Control Microsoft Defender for Endpoint enhedsstyring
 
@@ -89,10 +89,10 @@ Du kan bruge følgende egenskaber til at oprette en flytbar lagergruppe:
 | **IncludedIdList** | De grupper, som politikken skal anvendes på. Hvis der tilføjes flere grupper, anvendes politikken på alle medier i alle disse grupper.|Gruppe-id/GUID skal bruges i denne forekomst. <p> I følgende eksempel vises brugen af GroupID: <p> `<IncludedIdList> <GroupId> {EAA4CCE5-F6C9-4760-8BAD-FDCC76A2ACA1}</GroupId> </IncludedIdList>` |
 | **ExcludedIDList** | De grupper, som politikken ikke anvendes på. | Gruppe-id/GUID skal bruges i denne forekomst. |
 | **Adresse-id** | Én Politikregel kan have flere poster. Hver post med et entydigt GUID fortæller Enhedshåndtering én begrænsning.| |
-| **Type** | Definerer handlingen for de flytbare lagergrupper på IncludedIDList. <p>Håndhævelse: Tillad eller Afvis <p>Overvågning: AuditAllowed eller AuditDenied<p> | Tillade<p>Benægte <p>AuditAllowed: Definerer meddelelse og hændelse, når adgang er tilladt <p>AuditDenied: Definerer meddelelse og hændelse, når adgang nægtes. skal arbejde sammen med **Afvis** post.<p> Når der er konflikttyper for de samme medier, anvender systemet den første i politikken. Et eksempel på en konflikttype er **Tillad** og **Afvis**. |
+| **Type** | Definerer handlingen for de flytbare lagergrupper på IncludedIDList. <p>Håndhævelse: Tillad eller Afvis <p>Overvågning: AuditAllowed eller AuditDenied<p> | Tillad<p>Benægte <p>AuditAllowed: Definerer meddelelse og hændelse, når adgang er tilladt <p>AuditDenied: Definerer meddelelse og hændelse, når adgang nægtes. skal arbejde sammen med **Afvis** post.<p> Når der er konflikttyper for de samme medier, anvender systemet den første i politikken. Et eksempel på en konflikttype er **Tillad** og **Afvis**. |
 | **Sid** | Sid for lokal bruger eller sid-gruppe for brugeren eller SID'et for AD-objektet definerer, om denne politik skal anvendes på en bestemt bruger eller brugergruppe. én post kan maksimalt have ét Sid, og en post uden sid betyder anvendelse af politikken over maskinen. |  |
 | **ComputerSid** | Sid- eller computer-SID-gruppen eller SID'et for AD-objektet definerer, om denne politik skal anvendes på en bestemt computer- eller computergruppe. én post kan maksimalt have ét ComputerSid, og en post uden ComputerSid betyder, at politikken skal anvendes på computeren. Hvis du vil anvende en Entry på en bestemt bruger og en bestemt maskine, skal du føje både Sid og ComputerSid til den samme post. |  |
-| **Muligheder** | Definerer, om der skal vises en meddelelse eller ej |**Når Tillad type er valgt**: <p>0: intet<p>4: Deaktiver **AuditAllowed** og **AuditDenied** for denne post. Selvom **Allow** sker, og indstillingen AuditAllowed er konfigureret, sender systemet ikke hændelsen. <p>8: Hent filoplysninger, og få en kopi af filen som dokumentation for skriveadgang. <p>16: Hent filoplysninger for skriveadgang. <p>**Når Afvis type er valgt**: <p>0: intet<p>4: Deaktiver **AuditDenied** for denne post. Selvom **Block** sker, og AuditDenied er konfigureret, vises der ikke en meddelelse i systemet. <p>**Når Type **AuditAllowed** er valgt**: <p>0: intet <p>1: intet <p>2: Send begivenhed<p>3: Send begivenhed <p> **Når Type **AuditDenied** er valgt**: <p>0: intet <p>1: vis meddelelse <p>2: Send begivenhed<p>3: Vis meddelelse og send begivenhed |
+| **Muligheder** | Definerer, om der skal vises en meddelelse eller ej |**Når Tillad type er valgt**: <p>0: intet<p>4: Deaktiver **AuditAllowed** og **AuditDenied** for denne post. Selvom **Allow** sker, og indstillingen AuditAllowed er konfigureret, sender systemet ikke hændelsen. <p>8: Hent filoplysninger, og få en kopi af filen som dokumentation for skriveadgang. <p>16: Hent filoplysninger for skriveadgang. <p>**Når Afvis type er valgt**: <p>0: intet<p>4: Deaktiver **AuditDenied** for denne post. Selvom **Block** sker, og AuditDenied er konfigureret, vises der ikke en meddelelse i systemet. <p>**Når Type **AuditAllowed** er valgt**: <p>0: intet <p>1: intet <p>2: Send begivenhed<p> **Når Type **AuditDenied** er valgt**: <p>0: intet <p>1: vis meddelelse <p>2: Send begivenhed<p>3: Vis meddelelse og send begivenhed |
 |AccessMask|Definerer adgangen. | **Adgang på diskniveau**: <p>1: Læs <p>2: Skriv <p>4: Udfør <p>**Adgang på filsystemniveau**: <p>8: Filsystemet Læs <p>16: Skriv til filsystemet <p>32: Filsystemet Udfør <p><p>Du kan have flere adgange ved at udføre en binær OR-handling. AccessMask for Læs og Skriv og Udfør vil f.eks. være 7. AccessMask for Læs og Skriv er 3.|
 
 ## <a name="common-removable-storage-access-control-scenarios"></a>Almindelige flytbare Storage Access Control scenarier
@@ -178,7 +178,7 @@ Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit
 
     :::image type="content" source="images/148608318-5cda043d-b996-4146-9642-14fccabcb017.png" alt-text="Indstillinger for enhedskontrol":::
 
-   - Når du installerer denne indstilling, får du vist **Aktiveret** eller **Deaktiveret**. Deaktiveret betyder, at flytbare Storage Access Control ikke kører på computeren.
+   - Når du installerer denne indstilling, får du vist **Aktiveret** eller **Deaktiveret**. Deaktiveret betyder, at der ikke kører en politik for Adgangskontrol til flytbare lagermedier på denne computer.
 
     :::image type="content" source="images/148609685-4c05f002-5cbe-4aab-9245-83e730c5449e.png" alt-text="Aktiveret eller deaktiveret enhedskontrolelement i PowerShell-kode":::
 
@@ -190,11 +190,11 @@ Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit
 
 ## <a name="deploying-and-managing-policy-via-intune-oma-uri"></a>Udrulning og administration af politik via Intune OMA-URI
 
-Funktionen Flytbare Storage Access Control giver dig mulighed for at anvende en politik via OMA-URI på enten bruger eller enhed eller begge dele.
+Funktionen Flytbare lageradgangskontrol giver dig mulighed for at anvende en politik via OMA-URI på enten bruger eller enhed eller begge dele.
 
 ### <a name="licensing-requirements"></a>Licenskrav
 
-Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit [abonnement på Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Flytbare Storage Access Control, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
+Før du kommer i gang med Adgangskontrol til Flytbare lagermedier, skal du bekræfte dit [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Flytbare lagermediers adgangskontrol, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
 
 ### <a name="permission"></a>Tilladelse
 
@@ -208,7 +208,7 @@ I forbindelse med politikinstallation i Intune skal kontoen have tilladelser til
 
 ### <a name="deploying-policy-via-oma-uri"></a>Installerer politik via OMA-URI
 
-Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) \> **Enhedskonfigurationsprofiler** \>  \> **Opret profilplatform** \> **: Windows 10 og nyere & profil: Brugerdefineret**
+Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) \> **Enhedskonfigurationsprofiler** \>  \> **Opret profilplatform** \> **: Windows 10 og nyere & Profil: Brugerdefineret**
 
 1. Opret en OMA-URI-regel for hver gruppe:
 
@@ -252,7 +252,7 @@ Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) \>
 
     :::image type="content" source="images/148609590-c67cfab8-8e2c-49f8-be2b-96444e9dfc2c.png" alt-text="Tillad PowerShell-kode til standard gennemtvingelse":::
 
-4. Aktivér eller deaktiver Flytbare Storage Access Control: Du kan angive denne værdi til midlertidigt at deaktivere Flytbare Storage Access Control.
+4. Aktivér eller deaktiver adgangskontrol til Flytbare lagermedier: Du kan angive denne værdi til midlertidigt at deaktivere Adgangskontrol til Flytbare lagermedier.
 
    - OMA-URI: `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
 
@@ -261,9 +261,9 @@ Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) \>
 
    - Når du installerer denne indstilling, får du vist **Aktiveret** eller **Deaktiveret**
 
-    **Deaktiveret** betyder, at der ikke kører en flytbar Storage Access Control politik på computeren
+    **Deaktiveret** betyder, at denne computer ikke har en politik for adgangskontrol til flytbare lagermedier, der kører
 
-    :::image type="content" source="images/148609770-3e555883-f26f-45ab-9181-3fb1ff7a38ac.png" alt-text="Fjernbar Storage Access Control i PowerShell-kode":::
+    :::image type="content" source="images/148609770-3e555883-f26f-45ab-9181-3fb1ff7a38ac.png" alt-text="Fjernbart lageradgangskontrol i PowerShell-kode":::
 
 5. Angiv placeringen for en kopi af filen: Hvis du vil have en kopi af filen, når skriveadgangen finder sted, skal du angive den placering, hvor systemet kan gemme kopien.
 
@@ -275,13 +275,13 @@ Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) \>
 
     :::image type="content" source="../../media/device-control-oma-uri-edit-row.png" alt-text="Angiv locaiton for filbeviser":::
 
-## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Udrulning og administration af politik ved hjælp af Intune brugergrænseflade
+## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Udrulning og administration af politik ved hjælp af Intune-brugergrænsefladen
 
-(*Kommer snart!*) Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>). Gå til **Endpoint SecurityAttack** >  **Surface** **ReductionCreate** >  Policy. Vælg **Platform: Windows 10 og nyere** med **Profil: Enhedskontrol**.
+(*Kommer snart!*) Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>). Gå til **Endpoint SecurityAttack** >  **Surface** **ReductionCreate** >  Policy. Vælg **Platform: Windows 10 og nyere** med **profil: Enhedskontrol**.
 
-## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Få vist flytbare Storage Access Control data for enhedsstyring i Microsoft Defender for Endpoint
+## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Vis data om flytbare lageradgangskontrol for enhedskontrolelementer i Microsoft Defender for Endpoint
 
-På [Microsoft 365 Defender-portalen](https://security.microsoft.com/advanced-hunting) vises hændelser, der udløses af flytbare Storage Access Control for enhedskontrol. Hvis du vil have adgang til Microsoft 365 sikkerhed, skal du have følgende abonnement:
+[På Microsoft 365 Defender-portalen](https://security.microsoft.com/advanced-hunting) vises hændelser, der udløses af adgangskontrolelementet Device Control Flytbart lager. Hvis du vil have adgang til sikkerheden i Microsoft 365, skal du have følgende abonnement:
 
 - Microsoft 365 til E5-rapportering
 
@@ -331,7 +331,7 @@ DeviceEvents
 
 ### <a name="how-to-generate-guid-for-group-idpolicyrule-identry-id"></a>Hvordan genererer du GUID for gruppe-id/PolicyRule-id/post-id?
 
-Du kan generere GUID via online åben kildekode eller via PowerShell – [Sådan genererer du GUID via PowerShell](/powershell/module/microsoft.powershell.utility/new-guid)
+Du kan generere GUID via åben kildekode online eller via PowerShell – [Sådan genererer du GUID via PowerShell](/powershell/module/microsoft.powershell.utility/new-guid)
 
 ![Billede](https://user-images.githubusercontent.com/81826151/159046476-26ea0a21-8087-4f01-b8ae-5aa73b392d8f.png)
 
@@ -345,13 +345,13 @@ Vi har valideret én USB-gruppe med 100.000 medier – op til 7 MB i størrelse.
 
 2. En anden årsag kan være, at XML-filen ikke er formateret korrekt, f.eks. at den korrekte markdown-formatering ikke bruges til tegnet "&" i XML-filen, eller at teksteditoren tilføjer et byterækkefølgetegn (BOM) 0xEF 0xBB 0xBF i starten af filerne, hvilket medfører, at XML-fortolkning ikke fungerer. En enkel løsning er at downloade [eksempelfilen](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) (vælge **Rå** og derefter **Gem som**) og derefter opdatere.
 
-3. Hvis du installerer og administrerer politikken via Gruppepolitik, skal du sørge for at kombinere alle PolicyRule i én XML-fil i en overordnet node, der kaldes PolicyRules, og alle grupper i én XML-fil i en overordnet node kaldet Grupper. Hvis du administrerer via Intune, skal du beholde én PolicyRule én XML-fil, samme ting, én gruppér én XML-fil.
+3. Hvis du installerer og administrerer politikken via Gruppepolitik, skal du sørge for at kombinere alle PolicyRule i én XML-fil i en overordnet node, der kaldes PolicyRules, og alle grupper i én XML-fil i en overordnet node kaldet Grupper. Hvis du administrerer via Intune, skal du beholde én PolicyRule én XML-fil, samme ting, én Gruppér én XML-fil.
 
 Hvis du stadig ikke arbejder, kan du kontakte os og dele support-cab ved at køre cmd med administratoren: "%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
 
-### <a name="there-is-no-configuration-ux-for-define-device-control-policy-groups-and-define-device-control-policy-rules-on-my-group-policy"></a>Der er ingen konfigurations-UX for 'Definer politikgrupper for enhedskontrol' og 'Definer politikregler for enhedskontrol' på mit Gruppepolitik
+### <a name="there-is-no-configuration-ux-for-define-device-control-policy-groups-and-define-device-control-policy-rules-on-my-group-policy"></a>Der er ingen konfigurations-UX for 'Definer politikgrupper for enhedskontrol' og 'Definer politikregler for enhedskontrol' i min gruppepolitik
 
-Vi backporterer ikke Gruppepolitik konfigurations-UX, men du kan stadig hente de relaterede adml- og admx-filer ved at klikke på 'Raw' og 'Gem som' i [filerne WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) og [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx).
+Vi backporterer ikke UX til gruppepolitikkonfigurationen, men du kan stadig hente de relaterede adml- og admx-filer ved at klikke på 'Raw' og 'Gem som' i [filerne WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) og [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) .
 
 ### <a name="how-can-i-know-whether-the-latest-policy-has-been-deployed-to-the-target-machine"></a>Hvordan kan jeg vide, om den nyeste politik er blevet installeret på destinationscomputeren?
 
@@ -361,7 +361,7 @@ Du kan køre "Get-MpComputerStatus" på PowerShell som administrator. Følgende 
 
 ### <a name="how-can-i-know-which-machine-is-using-out-of-date-antimalware-client-version-in-the-organization"></a>Hvordan ved jeg, hvilken computer der bruger forældet antimalwareklientversion i organisationen?
 
-Du kan bruge følgende forespørgsel til at hente en antimalwareklientversion på Microsoft 365 sikkerhedsportalen:
+Du kan bruge følgende forespørgsel til at hente en antimalwareklientversion på Microsoft 365-sikkerhedsportalen:
 
 ```kusto
 //check the antimalware client version

@@ -1,5 +1,5 @@
 ---
-title: Giv brugere adgang til Security & Compliance Center
+title: Giv brugerne adgang til Security & Compliance Center
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,55 +16,55 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 2cfce2c8-20c5-47f9-afc4-24b059c1bd76
-description: Brugere skal have tildelt tilladelser i Microsoft 365 Security & Compliance Center, før de kan administrere en af dens sikkerheds- eller overholdelsesfunktioner.
+description: Brugerne skal have tildelt tilladelser i Microsoft 365 Security & Compliance Center, før de kan administrere nogen af dets sikkerheds- eller overholdelsesfunktioner.
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5af3d045b174c4405dc2060fea1db22b3b4066ac
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5bf2f6f99af13de0858b041807f01e25e3516da8
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680681"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130752"
 ---
-# <a name="give-users-access-to-the-security--compliance-center"></a>Giv brugere adgang til Security & Compliance Center
+# <a name="give-users-access-to-the-security--compliance-center"></a>Giv brugerne adgang til Security & Compliance Center
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Brugere skal have tildelt tilladelser i Security & Compliance Center, før de kan administrere en af dens funktioner til sikkerhed eller overholdelse af regler og standarder. Som global administrator eller medlem af rollegruppen OrganizationManagement i Security & Compliance Center kan du give disse tilladelser til brugerne. Brugerne vil kun kunne administrere de sikkerheds- eller overholdelsesfunktioner, som du giver dem adgang til.
+Brugerne skal have tildelt tilladelser i Security & Compliance Center, før de kan administrere nogen af dets sikkerheds- eller overholdelsesfunktioner. Som global administrator eller medlem af rollegruppen OrganizationManagement i Security & Compliance Center kan du give disse tilladelser til brugerne. Brugerne kan kun administrere de sikkerheds- eller overholdelsesfunktioner, du giver dem adgang til.
 
-Du kan finde flere oplysninger om de forskellige tilladelser, du kan give brugere i Security & Compliance Center, under Tilladelser i [Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
+Du kan få flere oplysninger om de forskellige tilladelser, du kan give til brugere i Security & Compliance Center, [under Tilladelser i Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Du skal være global administrator eller medlem af rollegruppen OrganizationManagement i Security & Compliance Center for at fuldføre trinnene i denne artikel.
 
-- Rollegrupper i Sikkerheds- & Overholdelsescenter kan have lignende navne som rollegrupperne i Exchange Online, men de er ikke de samme.
+- Rollegrupper for Security & Compliance Center kan have navne, der ligner rollegrupperne i Exchange Online, men de er ikke ens.
 
 - Medlemskaber af rollegrupper deles ikke mellem Exchange Online og Security & Compliance Center.
 
-- Delegerede adgangstilladelse (DAP)-partnere med Administrer på vegne af (AOBO)-tilladelser kan ikke få adgang til Sikkerheds- & Overholdelsescenter.
+- DAP-partnere (Delegated Access Permission) med Administration på vegne af (AOBO) kan ikke få adgang til Security & Compliance Center.
 
 ## <a name="use-the-security--compliance-center-to-give-another-user-access-to-the-security--compliance-center"></a>Brug Security & Compliance Center til at give en anden bruger adgang til Security & Compliance Center
 
-1. Åbn Security & Compliance Center på, <https://protection.office.com> og gå derefter **til Tilladelser**. For at gå direkte til **fanen Tilladelser** skal du åbne <https://protection.office.com/permissions>.
+1. Åbn Security & Compliance Center på , <https://protection.office.com> og gå derefter til **Tilladelser**. Hvis du vil gå direkte til fanen **Tilladelser** , skal du åbne <https://protection.office.com/permissions>.
 
-2. Vælg rollegruppen på listen over rollegrupper, og klik derefter på **Rediger** ![redigeringsikon.](../../media/O365-MDM-CreatePolicy-EditIcon.gif)
+2. Vælg rollegruppen på listen over rollegrupper, og klik derefter på **Rediger** ![ikonet Rediger.](../../media/O365-MDM-CreatePolicy-EditIcon.gif)
 
-3. På siden med egenskaber for rollegruppen under Medlemmer **skal du** klikke **på Tilføj**![ tilføjelsesikon.](../../media/ITPro-EAC-AddIcon.gif) og vælg navnet på den bruger (eller brugere), du vil tilføje.
+3. På siden med egenskaber for rollegruppen under **Medlemmer** skal du klikke på **Tilføjikon**![.](../../media/ITPro-EAC-AddIcon.gif) og vælg navnet på den bruger (eller de brugere), du vil tilføje.
 
-4. Når du har valgt alle de brugere, du vil føje til rollegruppen, skal du klikke **på Tilføj-\>** og derefter **OK**.
+4. Når du har valgt alle de brugere, du vil føje til rollegruppen, skal du klikke på **Tilføj og\>** derefter **PÅ OK**.
 
 5. Klik på **Gem**, når du er færdig.
 
 ## <a name="use-security--compliance-center-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Brug Security & Compliance Center PowerShell til at give en anden bruger adgang til Security & Compliance Center
 
-1. [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 
 2. Brug følgende syntaks:
 
@@ -80,18 +80,18 @@ Du kan finde flere oplysninger om de forskellige tilladelser, du kan give bruger
    Add-RoleGroupMember -Identity "Organization Management" -Member MatildaS
    ```
 
-Du kan finde detaljerede problemer med syntaks [og parameter i Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember)
+Du kan finde detaljerede syntaks- og parameterproblemer under [Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember)
 
-### <a name="how-do-you-know-this-worked"></a>Hvordan ved du, at det virkede?
+### <a name="how-do-you-know-this-worked"></a>Hvordan ved du, det virkede?
 
-Hvis du vil bekræfte, at du har tildelt adgang til Security & Compliance Center, skal du gøre et af følgende:
+Benyt en af følgende fremgangsmåder for at bekræfte, at du har givet adgang til Security & Compliance Center:
 
-- I Security & Compliance Center skal du **gå til Tilladelser** og vælge rollegruppen. I pop op-vindue med oplysninger, der åbnes, skal du bekræfte medlemmerne af rollegruppen.
+- I Security & Compliance Center skal du gå til **Tilladelser** og vælge rollegruppen. Kontrollér medlemmerne af rollegruppen i det pop op-vindue med detaljer, der åbnes.
 
-- I Security & Compliance Center PowerShell skal \<RoleGroupName\> du erstatte med navnet på rollegruppen og køre følgende kommando:
+- I Security & Compliance Center skal du erstatte \<RoleGroupName\> med navnet på rollegruppen og køre følgende kommando:
 
   ```powershell
   Get-RoleGroupMember -Identity "<RoleGroupName>"
   ```
 
-  Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-RoleGroupMember](/powershell/module/exchange/Get-RoleGroupMember).
+  Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-RoleGroupMember](/powershell/module/exchange/Get-RoleGroupMember).

@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a0f499a08288735d5f0d75e7111ec0b6360908a8
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: b467d87f16900375ca2db2f8478bf001780c9059
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664518"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130335"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Udrul Microsoft Defender for Endpoint på Linux manuelt
 
@@ -323,12 +323,12 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 
     ```Output
     Archive:  WindowsDefenderATPOnboardingPackage.zip
-    inflating: MicrosoftDefenderATPOnboardingLinuxServer.py
+    inflating: MicrosoftDefenderATPOnboardingLinuxServer.sh
     ```
 
 ## <a name="client-configuration"></a>Klientkonfiguration
 
-1. Kopiér MicrosoftDefenderATPOnboardingLinuxServer.py til destinationsenheden.
+1. Kopiér MicrosoftDefenderATPOnboardingLinuxServer.sh til destinationsenheden.
 
     > [!NOTE]
     > Indledningsvist er klientenheden ikke knyttet til en organisation, og attributten *orgId* er tom.
@@ -337,21 +337,10 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
     mdatp health --field org_id
     ```
 
-2. Kør MicrosoftDefenderATPOnboardingLinuxServer.py.
-
-    > [!NOTE]
-    > Hvis du vil køre denne kommando, skal du have `python`  eller `python3` installeret på enheden, afhængigt af disto og versionen. Hvis det er nødvendigt, skal du se [Trinvis vejledning til installation af Python på Linux](https://opensource.com/article/20/4/install-python-linux).
-    
-    Hvis du kører RHEL 8.x eller Ubuntu 20.04 eller nyere, skal du bruge `python3`.
+2. Kør MicrosoftDefenderATPOnboardingLinuxServer.sh.
 
     ```bash
-    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
-    ```
-
-    I resten af distributioner og versioner skal du bruge `python`.
-    
-    ```bash
-    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
+    sudo bash MicrosoftDefenderATPOnboardingLinuxServer.sh
     ```
     
 3. Bekræft, at enheden nu er knyttet til din organisation, og rapporterer et gyldigt organisations-id:

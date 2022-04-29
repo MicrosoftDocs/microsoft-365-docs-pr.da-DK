@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer tillad på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ad2ef693848b664be6ec9b48cc4fc320a8b4b9c2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 413209bdecef19c4d101162f0e23f24ff1a2903e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090138"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129238"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Tilføj tilladte på listen over tilladte/blokerede lejere
 
@@ -57,6 +57,13 @@ Tillad afsendere (eller domæner) på siden **Indsendelser** i Microsoft 365 Def
 
 > ![Indsend malware til Microsoft til et analyseeksempel.](../../media/admin-submission-allow-messages.png)
 
+
+> [!NOTE]
+>
+> - På baggrund af hvilke filtre, der har bestemt, at mailen er skadelig, tilføjes under mailflow. Hvis filtre f.eks. fandt, at både afsender og URL-adresse var ugyldig, tilføjes der en tilladelse for hver enkelt. 
+> - Når enheden (afsender, domæne, URL-adresse og fil) blev registreret igen, springes alle filtre, der er knyttet til objektet, over.
+> - Så for en mail (der indeholder denne enhed), under mailflow, vil mailen blive leveret, hvis resten af filtrene finder, at mailen er ren.
+
 ## <a name="add-url-allows-using-the-submissions-portal"></a>Tilføj URL-adresse gør det muligt at bruge portalen Indsendelser
 
 Tillad URL-adresser på siden **Indsendelser** i Microsoft 365 Defender.
@@ -78,6 +85,13 @@ Tillad URL-adresser på siden **Indsendelser** i Microsoft 365 Defender.
 > [!div class="mx-imgBorder"]
 > ![Send URL-adresse til analyse.](../../media/submit-url-for-analysis.png)
 
+
+> [!NOTE]
+>
+> -  Når URL-adressen registreres igen, sendes URL-adressen ikke til detonation eller kontrol af omdømme, og alle andre URL-baserede filtre springes over.
+> -  Så for en mail (der indeholder denne URL-adresse), under mailflow, hvis resten af filtrene finder, at mailen er ren, så leveres mailen.
+
+
 ## <a name="add-file-allows-using-the-submissions-portal"></a>Tilføj fil gør det muligt at bruge indsendelsesportalen
 
 Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
@@ -98,6 +112,12 @@ Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
 
 > [!div class="mx-imgBorder"]
 > ![Send mail til analyse.](../../media/submit-email-for-analysis.png)
+
+
+> [!NOTE]
+>
+> - Når filen registreres igen, sendes den ikke til detonation eller kontrol af omdømme, og alle andre filbaserede filtre springes over.
+> - Så for en mail (der indeholder denne fil), under mailflow, hvis resten af filtrene finder, at mailen skal være ren, så leveres mailen. 
 
 ## <a name="create-spoofed-sender-allow-entries-using-microsoft-365-defender"></a>Opret spoofed afsender tillade poster ved hjælp af Microsoft 365 Defender
 

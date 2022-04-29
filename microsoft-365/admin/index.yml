@@ -16,12 +16,12 @@ metadata:
   - AdminSurgePortfolio
   - intro-hub-or-landing
   ms.collection: Adm_TOC
-  ms.openlocfilehash: 0a50a930013db739cab368e7763669798267a509
-  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  ms.openlocfilehash: d5491560ba5d26435ab7d124fc9b5818970a00f6
+  ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65094322"
+  ms.lasthandoff: 04/29/2022
+  ms.locfileid: "65130313"
 highlightedContent:
   items:
   - title: Office 365 er nu Microsoft 365!
@@ -68,7 +68,7 @@ additionalContent:
     items:
     - title: Oversigt over Microsoft 365 Administration
       summary: Få mere at vide om administratorroller, hvordan du holder styr på ændringer, og hvordan du tilpasser dit abonnement.
-      url: admin-overview/about-the-admin-center.md
+      url: admin-overview/admin-center-overview.md
     - title: Brugere og grupper
       summary: Administrer adgangskoder, tilføj og fjern brugere, konfigurer og administrer grupper, administrer gæsteadgang, og tildel brugerlicenser.
       url: add-users/add-users.md

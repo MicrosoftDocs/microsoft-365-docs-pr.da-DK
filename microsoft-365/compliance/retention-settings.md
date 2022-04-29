@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: 729c31935ee3ded04a12f7822a17082ef1b52c26
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: c0214476494e024247b76911475df88bdfbfa4ff
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911506"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129216"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](https://aka.ms/ComplianceSD).*
 
@@ -63,7 +65,7 @@ Når du vælger at bruge tilpassede områder, bliver du bedt om at vælge, hvilk
 
 Egenskabsnavnene for websteder er baseret på SharePoint webstedsadministrerede egenskaber. Du kan finde oplysninger om de brugerdefinerede attributter under [Brug af brugerdefinerede SharePoint webstedsegenskaber til at anvende Microsoft 365 opbevaring med områder for tilpassede politikker](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 
-Attributnavnene for brugere og grupper er baseret på [de modtageregenskaber, der kan filtreres](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) , og som knyttes til Azure AD-attributter. Eksempel:
+Attributnavnene for brugere og grupper er baseret på [de modtageregenskaber, der kan filtreres](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties), og som knyttes til Azure AD attributter. Eksempel:
 
 - **Alias** knyttes til LDAP-navnet **mailNickname**, der vises som **Mail** i Azure AD Administration.
 - **Mailadresser** knyttes til LDAP-navneproxyAdresser, der vises som **proxyadresse** i Azure AD Administration.
@@ -83,13 +85,13 @@ Før du konfigurerer dit tilpassede område, skal du bruge det forrige afsnit ti
 
 Specifikt for SharePoint websteder kan der være behov for yderligere SharePoint konfiguration, hvis du planlægger at bruge [brugerdefinerede webstedsegenskaber](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com/) skal du navigere til en af følgende placeringer:
+1. Gå til en af følgende placeringer på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/):
     
     - Hvis du bruger løsningen til datastyring:
         - **Løsninger** >  **Datastyring** >  Fanen **Tilpassede områder** > + **Opret område**
         
-    - Hvis du bruger løsningen til styring af oplysninger:
-       - **Løsninger** >  **Informationstyring** >  Fanen **Tilpassede områder** > + **Opret område**
+    - Hvis du bruger løsningen til administration af datalivscyklus:
+       - **Løsninger** >  Administration af  >  **datalivscyklus** Fanen **Tilpassede områder** > + **Opret område**
     
     Kan du ikke se din løsning i navigationsruden med det samme? Vælg først **Vis alle**. 
 
@@ -99,7 +101,7 @@ Specifikt for SharePoint websteder kan der være behov for yderligere SharePoint
     
     ![Eksempel på konfiguration af tilpasset omfang.](../media/example-adaptive-scope.png)
     
-    En gang om dagen kører denne forespørgsel mod Azure AD og identificerer alle brugere, der har den værdi **i Europa** , der er angivet for på deres konto for attributten **Land eller område** .
+    En gang om dagen kører denne forespørgsel mod Azure AD og identificerer alle brugere, der har den værdi **i Europa**, der er angivet for på deres konto for attributten **Land eller område**.
     
     > [!IMPORTANT]
     > Da forespørgslen ikke kører med det samme, er der ingen validering, som du har indtastet korrekt i værdien.
@@ -199,7 +201,7 @@ Sådan kører du en forespørgsel ved hjælp af PowerShell:
     Get-Mailbox -RecipientTypeDetails GroupMailbox -Filter {CustomAttribute15 -eq "Marketing"} -ResultSize Unlimited
     ```
 
-3. Kontrollér, at outputtet stemmer overens med de forventede brugere eller grupper for dit tilpassede omfang. Hvis den ikke gør det, skal du kontrollere din forespørgsel og værdierne hos den relevante administrator for Azure AD eller Exchange.
+3. Kontrollér, at outputtet stemmer overens med de forventede brugere eller grupper for dit tilpassede omfang. Hvis den ikke gør det, skal du kontrollere din forespørgsel og værdierne hos den relevante administrator for at få Azure AD eller Exchange.
  
 Sådan kører du en forespørgsel ved hjælp af SharePoint søgning:
 
@@ -368,7 +370,7 @@ Når du vælger indstillingerne for opbevaring og sletning af indhold, har din p
 
 ### <a name="retaining-content-for-a-specific-period-of-time"></a>Bevarelse af indhold i et bestemt tidsrum
 
-Når du konfigurerer en opbevaringsmærkat eller politik for at bevare indhold, vælger du at bevare elementer i et bestemt antal dage, måneder eller år. Eller du kan også bevare elementerne for evigt. Opbevaringsperioden beregnes ikke ud fra det tidspunkt, hvor politikken blev tildelt, men i henhold til starten af den angivne opbevaringsperiode.
+Når du konfigurerer en opbevaringsmærkat eller politik for at bevare indhold, vælger du at bevare elementer i et bestemt antal dage, måneder (forudsætter 30 dage for en måned) eller år. Eller du kan også bevare elementerne for evigt. Opbevaringsperioden beregnes ikke ud fra det tidspunkt, hvor politikken blev tildelt, men i henhold til starten af den angivne opbevaringsperiode.
 
 I starten af opbevaringsperioden kan du vælge, hvornår indholdet blev oprettet, eller kun understøttes for filer og SharePoint, OneDrive og Microsoft 365-grupper, hvornår indholdet sidst blev ændret. I forbindelse med opbevaringsmærkater kan du starte opbevaringsperioden fra det indhold, der er mærket, og når der opstår en hændelse.
 
@@ -426,7 +428,7 @@ Nogle indstillinger kan ikke ændres, når en politik for opbevaring er oprettet
 
 Hvis du redigerer en opbevaringspolitik, og elementer allerede er underlagt de oprindelige indstillinger i din opbevaringspolitik, anvendes dine opdaterede indstillinger automatisk på disse elementer ud over elementer, der er nyligt identificeret.
 
-Normalt er denne opdatering forholdsvis hurtig, men kan tage flere dage. Når politikreplikeringen på tværs af dine Microsoft 365 placeringer er fuldført, får du vist status for opbevaringspolitikken i Microsoft 365 Overholdelsescenter ændres fra **Til (Afventer)** til **Til (udført)**.
+Normalt er denne opdatering forholdsvis hurtig, men kan tage flere dage. Når politikreplikeringen på tværs af dine Microsoft 365 placeringer er fuldført, kan du se status for opbevaringspolitikken i Microsoft Purview-overholdelsesportalen ændres fra **Til (Afventer)** til **Til (udført)**.
 
 ## <a name="locking-the-policy-to-prevent-changes"></a>Låsning af politikken for at forhindre ændringer
 

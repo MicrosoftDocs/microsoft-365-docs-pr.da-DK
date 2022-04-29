@@ -21,12 +21,12 @@ description: Brug Microsoft Purview-overholdelsesportalen til at søge i den sam
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: fa397ec1ce7dea253367dfb917166a9a43655896
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e6754601aca5dda74ee59ed2c6c52b3f8b1eb2a3
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098466"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128494"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Søg i overvågningsloggen i Overholdelsescenter
 
@@ -128,7 +128,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
 - Hvis du vil downloade data fra overvågningsloggen programmeringsmæssigt, anbefaler vi, at du bruger API'en Office 365 Management Activity i stedet for at bruge et PowerShell-script. API'en Office 365 managementaktivitet er en REST-webtjeneste, som du kan bruge til at udvikle løsninger til overvågning af drift, sikkerhed og overholdelse af angivne standarder for din organisation. Du kan få flere oplysninger under [Office 365 API-reference til administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- Azure Active Directory (Azure AD) er katalogtjenesten til Microsoft 365. Den samlede overvågningslog indeholder bruger-, gruppe-, program-, domæne- og katalogaktiviteter, der udføres i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> eller i Azure-administrationsportalen. Du kan se en komplet liste over Azure AD-hændelser [under Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).
+- Azure Active Directory (Azure AD) er katalogtjenesten for Microsoft 365. Den samlede overvågningslog indeholder bruger-, gruppe-, program-, domæne- og katalogaktiviteter, der udføres i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> eller i Azure-administrationsportalen. Du kan se en komplet liste over Azure AD hændelser [under Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 - Microsoft garanterer ikke et bestemt tidspunkt, efter at der opstår en hændelse, for at den tilsvarende overvågningspost returneres i resultaterne af en søgning i overvågningsloggen. For kernetjenester (f.eks. Exchange, SharePoint, OneDrive og Teams) er tilgængeligheden af overvågningsposter typisk 60-90 minutter, efter at en hændelse forekommer. For andre tjenester kan tilgængeligheden af overvågningsposter være længere. Nogle problemer, der er uundgåelige (f.eks. serverafbrydelser), kan dog opstå uden for overvågningstjeneste, der forsinker tilgængeligheden af overvågningsposter. Af denne grund forpligter Microsoft sig ikke til et bestemt tidspunkt.
 
@@ -248,7 +248,7 @@ Du kan eksportere resultaterne af en søgning i overvågningsloggen til en komma
 
   Når du har opdelt kolonnen **AuditData** , kan du filtrere kolonnen **Handlinger** for at få vist de detaljerede egenskaber for en bestemt type aktivitet.
 
-- Når du downloader alle resultater fra en søgeforespørgsel, der indeholder hændelser fra forskellige tjenester, indeholder kolonnen **AuditData** i CSV-filen forskellige egenskaber, afhængigt af hvilken tjeneste handlingen blev udført i. Poster fra Exchange og Azure AD-overvågningslogge omfatter f.eks. en egenskab med navnet **ResultStatus**, der angiver, om handlingen lykkedes eller ej. Denne egenskab er ikke inkluderet for hændelser i SharePoint. På samme måde har SharePoint hændelser en egenskab, der identificerer WEBSTEDETs URL-adresse for fil- og mapperelaterede aktiviteter. Du kan afhjælpe denne funktionsmåde ved at overveje at bruge forskellige søgninger til at eksportere resultaterne for aktiviteter fra en enkelt tjeneste.
+- Når du downloader alle resultater fra en søgeforespørgsel, der indeholder hændelser fra forskellige tjenester, indeholder kolonnen **AuditData** i CSV-filen forskellige egenskaber, afhængigt af hvilken tjeneste handlingen blev udført i. Poster fra Exchange og Azure AD overvågningslogge indeholder f.eks. en egenskab med navnet **ResultStatus**, der angiver, om handlingen lykkedes eller ej. Denne egenskab er ikke inkluderet for hændelser i SharePoint. På samme måde har SharePoint hændelser en egenskab, der identificerer WEBSTEDETs URL-adresse for fil- og mapperelaterede aktiviteter. Du kan afhjælpe denne funktionsmåde ved at overveje at bruge forskellige søgninger til at eksportere resultaterne for aktiviteter fra en enkelt tjeneste.
 
   Du kan finde en beskrivelse af mange af de egenskaber, der er angivet i kolonnen **AuditData** i CSV-filen, når du downloader alle resultater, og den tjeneste, som hver enkelt gælder for, [under Detaljerede egenskaber i overvågningsloggen](detailed-properties-in-the-office-365-audit-log.md).
 
@@ -298,7 +298,7 @@ Klik på et af følgende links for at gå til en bestemt tabel.
 
 :::row:::
     :::column:::
-        [Administrationsaktiviteter for Azure AD-grupper](#azure-ad-group-administration-activities)
+        [Azure AD gruppeadministrationsaktiviteter](#azure-ad-group-administration-activities)
     :::column-end:::
     :::column:::
         [Programadministrationsaktiviteter](#application-administration-activities)
@@ -688,7 +688,7 @@ I følgende tabel vises de brugeradministrationsaktiviteter, der logføres, når
 |:-----|:-----|:-----|
 |Tilføjet bruger|Tilføj bruger.|Der blev oprettet en brugerkonto.|
 |Ændret brugerlicens|Skift brugerlicens.|Den licens, der er tildelt en bruger, hvad der er ændret. Hvis du vil se, hvilke licenser der var ændringer, skal du se den tilsvarende **opdaterede brugeraktivitet** .|
-|Ændret brugeradgangskode|Skift brugeradgangskode.|En bruger ændrer sin adgangskode. Selvbetjent nulstilling af adgangskode skal aktiveres (for alle eller udvalgte brugere) i din organisation for at give brugerne tilladelse til at nulstille deres adgangskode. Du kan også spore selvbetjeningsaktivitet for nulstilling af adgangskode i Azure Active Directory. Du kan få flere oplysninger under [Rapporteringsindstillinger for administration af Azure AD-adgangskoder](/azure/active-directory/authentication/howto-sspr-reporting).
+|Ændret brugeradgangskode|Skift brugeradgangskode.|En bruger ændrer sin adgangskode. Selvbetjent nulstilling af adgangskode skal aktiveres (for alle eller udvalgte brugere) i din organisation for at give brugerne tilladelse til at nulstille deres adgangskode. Du kan også spore selvbetjeningsaktivitet for nulstilling af adgangskode i Azure Active Directory. Du kan få flere oplysninger under [Rapporteringsindstillinger for Azure AD administration af adgangskode](/azure/active-directory/authentication/howto-sspr-reporting).
 |Slettet bruger|Slet bruger.|En brugerkonto blev slettet.|
 |Nulstil brugeradgangskode|Nulstil brugeradgangskoden.|Administratoren nulstiller adgangskoden for en bruger.|
 |Angiv en egenskab, der tvinger brugeren til at ændre adgangskode|Angiv gennemtving ændring af brugeradgangskode.|Administratoren angiver den egenskab, der tvinger en bruger til at ændre sin adgangskode, næste gang brugeren logger på Microsoft 365.|
@@ -696,7 +696,7 @@ I følgende tabel vises de brugeradministrationsaktiviteter, der logføres, når
 |Opdateret bruger|Opdater bruger.|Administratoren ændrer en eller flere egenskaber for en brugerkonto. Du kan se en liste over de brugeregenskaber, der kan opdateres, i afsnittet "Opdater brugerattributter" i [Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).|
 ||||
 
-### <a name="azure-ad-group-administration-activities"></a>Administrationsaktiviteter for Azure AD-grupper
+### <a name="azure-ad-group-administration-activities"></a>Azure AD gruppeadministrationsaktiviteter
 
 I følgende tabel vises de gruppeadministrationsaktiviteter, der logføres, når en administrator eller en bruger opretter eller ændrer en Microsoft 365 gruppe, eller når en administrator opretter en sikkerhedsgruppe ved hjælp af [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) eller Azure-administrationsportalen. Du kan få flere oplysninger om grupper i Microsoft 365 under [Få vist, opret og slet grupper i Microsoft 365 Administration](../admin/create-groups/create-groups.md).
 
@@ -722,7 +722,7 @@ I følgende tabel vises de programadministratoraktiviteter, der logføres, når 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
 |Tilføjet delegeringspost|Tilføj delegeringspost.|Der blev oprettet/tildelt en godkendelsestilladelse til et program i Azure AD.|
-|Tjenesteprincipalen er tilføjet|Tilføj tjenesteprincipal.|Et program blev registreret i Azure AD. Et program repræsenteres af en tjenesteprincipal i mappen.|
+|Tjenesteprincipalen er tilføjet|Tilføj tjenesteprincipal.|Der blev registreret et program i Azure AD. Et program repræsenteres af en tjenesteprincipal i mappen.|
 |Føjede legitimationsoplysninger til en tjenesteprincipal|Tilføj legitimationsoplysninger for tjenesteprincipal.|Legitimationsoplysningerne blev føjet til en tjenesteprincipal i Azure AD. Et tjenesteprincip repræsenterer et program i mappen.|
 |Fjernede delegeringsindtastning|Fjern delegeringsindtastning.|En godkendelsestilladelse blev fjernet fra et program i Azure AD.|
 |Fjernede en tjenesteprincipal fra mappen|Fjern tjenesteprincipalen.|Et program blev slettet/fjernet fra Azure AD. Et program repræsenteres af en tjenesteprincipal i mappen.|
@@ -732,7 +732,7 @@ I følgende tabel vises de programadministratoraktiviteter, der logføres, når 
 
 ### <a name="role-administration-activities"></a>Aktiviteter til rolleadministration
 
-I følgende tabel vises de azure AD-rolleadministrationsaktiviteter, der logføres, når en administrator administrerer administratorroller i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) eller på Azure-administrationsportalen.
+I følgende tabel vises Azure AD aktiviteter til rolleadministration, der logføres, når en administrator administrerer administratorroller i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) eller på Azure-administrationsportalen.
 
 > [!NOTE]
 > De handlingsnavne, der er angivet i kolonnen **Operation** i følgende tabel, indeholder et punktum ( `.` ). Du skal medtage perioden i handlingsnavnet, hvis du angiver handlingen i en PowerShell-kommando, når du søger i overvågningsloggen, opretter politikker for overvågningsopbevaring, opretter politikker for beskeder eller opretter aktivitetsbeskeder. Sørg også for at bruge dobbelte anførselstegn (`" "`) til at indeholde handlingsnavnet.
@@ -746,7 +746,7 @@ I følgende tabel vises de azure AD-rolleadministrationsaktiviteter, der logfør
 
 ### <a name="directory-administration-activities"></a>Aktiviteter til administration af adresseliste
 
-I følgende tabel vises Azure AD-mappen og domænerelaterede aktiviteter, der logføres, når en administrator administrerer deres organisation i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) eller på Azure-administrationsportalen.
+I følgende tabel vises Azure AD mappe- og domænerelaterede aktiviteter, der logføres, når en administrator administrerer deres organisation i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) eller på Azure-administrationsportalen.
 
 > [!NOTE]
 > De handlingsnavne, der er angivet i kolonnen **Operation** i følgende tabel, indeholder et punktum ( `.` ). Du skal medtage perioden i handlingsnavnet, hvis du angiver handlingen i en PowerShell-kommando, når du søger i overvågningsloggen, opretter politikker for overvågningsopbevaring, opretter politikker for beskeder eller opretter aktivitetsbeskeder. Sørg også for at bruge dobbelte anførselstegn (`" "`) til at indeholde handlingsnavnet.
@@ -761,7 +761,7 @@ I følgende tabel vises Azure AD-mappen og domænerelaterede aktiviteter, der lo
 |Angiv domænegodkendelse|Angiv domænegodkendelse.|Ændrede indstillingen for domænegodkendelse for din organisation.|
 |Opdaterede indstillingerne for sammenslutning for et domæne|Angiv indstillinger for sammenslutning på domænet.|Indstillingerne for organisationsnetværket (ekstern deling) er ændret.|
 |Angiv adgangskodepolitik|Angiv adgangskodepolitik.|Ændrede længden og tegnbegrænsningerne for brugeradgangskoder i din organisation.|
-|Slået Azure AD-synkronisering til|Angiv flaget DirSyncEnabled.|Angiv den egenskab, der aktiverer en mappe til Azure AD-synkronisering.|
+|Aktiveret Azure AD synkronisering|Angiv flaget DirSyncEnabled.|Angiv den egenskab, der aktiverer en mappe til Azure AD Synkroniser.|
 |Opdateret domæne|Opdater domæne.|Opdaterede indstillingerne for et domæne i din organisation.|
 |Bekræftet domæne|Kontrollér domænet.|Bekræftet, at din organisation er ejer af et domæne.|
 |Bekræftet mailbekræftet domæne|Bekræft mailbekræftet domæne.|Brugte mailbekræftelse til at bekræfte, at din organisation er ejer af et domæne.|
@@ -1107,6 +1107,21 @@ Her er nogle tip til søgning efter Exchange administratoraktiviteter, når du s
   - [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog)
 
    Vær opmærksom på, at de samme Exchange administratoraktiviteter er logget på både Exchange administratorens overvågningslog og overvågningslog.
+
+### <a name="encrypted-message-portal-activities"></a>Krypterede aktiviteter på meddelelsesportalen
+
+Adgangslogge er tilgængelige for krypterede meddelelser via den krypterede meddelelsesportal, der gør det muligt for din organisation at bestemme, hvornår meddelelser læses og videresendes af dine eksterne modtagere. Du kan finde flere oplysninger om aktivering og brug af krypterede aktivitetslogge for meddelelsesportalen i [Aktivitetslog for krypteret meddelelsesportal](ome-message-access-logs.md).
+
+Hver overvågningspost for en sporet meddelelse indeholder følgende felter:
+
+- MessageID – Indeholder id'et for den meddelelse, der spores. Dette er det nøgle-id, der bruges til at følge en meddelelse gennem systemet.
+- Recipient – Liste over alle modtagermailadresser.
+- Sender – Den oprindelige mailadresse.
+- AuthenticationMethod – Beskriver godkendelsesmetoden til at få adgang til meddelelsen, f.eks. OTP, Yahoo, Gmail eller Microsoft.
+- AuthenticationStatus – Indeholder en værdi, der angiver, at godkendelsen lykkedes eller mislykkedes.
+- OperationStatus – Angiver, om den angivne handling lykkedes eller mislykkedes.
+- AttachmentName - Navnet på den vedhæftede fil.
+- OperationProperties – En liste over valgfrie egenskaber, f.eks. antallet af OTP-adgangskoder, der er sendt, eller mailemnet.
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 

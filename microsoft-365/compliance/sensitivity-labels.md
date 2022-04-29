@@ -18,248 +18,250 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Brug følsomhedsmærkater fra Microsoft Information Protection (MIP) til at klassificere og beskytte følsomt indhold.
+description: Brug følsomhedsmærkater fra Microsoft Purview Information Protection til at klassificere og beskytte følsomt indhold.
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: 1c7ec0f9411d767e588e391eb7eb94ec95a219fb
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7bac33f19b51e2a5c6d6f234ba5e692cedd62c2b
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587526"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128450"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Hvis du leder efter oplysninger om følsomhedsmærkater, som du kan se i dine Office-apps, skal du se Anvend [følsomhedsmærkater](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) på dine filer og mail Office.
+> Hvis du leder efter oplysninger om følsomhedsmærkater, som du kan se i dine Office apps, skal du se [Anvend følsomhedsmærkater på dine filer og mails i Office](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 >
-> Oplysningerne på denne side er til it-administratorer, der kan oprette og konfigurere disse etiketter.
+> Oplysningerne på denne side er til it-administratorer, der kan oprette og konfigurere disse mærkater.
 
-Personer i organisationen samarbejder med andre både i og uden for organisationen for at få arbejdet udført. Det betyder, at indhold ikke længere bliver bag en firewall – det kan rejse overalt, på tværs af enheder, apps og tjenester. Og når den er på vej, skal den gøre det på en sikker og beskyttet måde, der opfylder din organisations forretnings- og overholdelsespolitikker.
+Personer i din organisation samarbejder med andre både i og uden for organisationen for at få deres arbejde fra hånden. Det betyder, at indhold ikke længere forbliver bag en firewall – det kan roame overalt på tværs af enheder, apps og tjenester. Og når den roamer, vil du gerne have, at den gør det på en sikker og beskyttet måde, der opfylder organisationens politikker for virksomhed og overholdelse af angivne standarder.
 
-Følsomhedsmærkater fra Microsoft Information Protection-løsningen lader dig klassificere og beskytte din organisations data, samtidig med at det sikrer, at brugernes produktivitet og deres evne til at samarbejde ikke bliver forhindret.
+Følsomhedsmærkater fra Microsoft Purview Information Protection giver dig mulighed for at klassificere og beskytte din organisations data, samtidig med at du sikrer, at brugernes produktivitet og deres evne til at samarbejde ikke hindres.
 
-Eksempel, der viser tilgængelige følsomhedsmærkater Excel på **fanen** Hjem på båndet. I dette eksempel vises den anvendte etiket på statuslinjen:
+Eksempel på visning af tilgængelige følsomhedsmærkater i Excel fra fanen **Hjem** på båndet. I dette eksempel vises den anvendte mærkat på statuslinjen:
 
-![Følsomhedsmærkat på Excel båndet og statuslinjen.](../media/Sensitivity-label-in-Excel.png)
+![Følsomhedsmærkat på Excel bånd og statuslinje.](../media/Sensitivity-label-in-Excel.png)
 
-For at anvende følsomhedsmærkater skal brugerne være logget på med deres Microsoft 365 arbejds- eller skolekonto.
+Hvis brugerne skal anvende følsomhedsmærkater, skal de være logget på med deres Microsoft 365 arbejds- eller skolekonto.
 
 > [!NOTE]
-> For lejere i den amerikanske stat understøttes følsomhedsmærkater for alle platforme.
+> Følsomhedsmærkater understøttes for alle platforme for US Government-lejere.
 >
-> Hvis du bruger en samlet Azure Information Protection-klient til mærkning og scanner, skal du se Beskrivelsen [af Azure Information Protection Premium Government-tjenesten](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
+> Hvis du bruger Azure Information Protection Unified-mærkatklient og -scanner, skal du se [beskrivelsen af Azure Information Protection Premium Government Service](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
 
 Du kan bruge følsomhedsmærkater til at:
   
-- **Angiv beskyttelsesindstillinger, der omfatter kryptering og indholdsmærkning.** Du kan f.eks. anvende en "Fortroligt" etiket i et dokument eller en mail, og den pågældende etiket krypterer indholdet og anvender et "Fortroligt" vandmærke. Indholdsmærkning omfatter sidehoveder og sidefødder samt vandmærker, og kryptering kan også begrænse, hvilke handlinger autoriserede personer kan udføre på indholdet.
+- **Angiv beskyttelsesindstillinger, der omfatter kryptering og indholdsmarkeringer.** Du kan f.eks. anvende mærkaten "Fortroligt" på et dokument eller en mail, og mærkaten krypterer indholdet og anvender et vandmærke af typen "Fortroligt". Indholdsmarkeringer omfatter sidehoveder og sidefødder samt vandmærker, og kryptering kan også begrænse, hvilke handlinger godkendte personer kan udføre på indholdet.
 
-- **Beskyt indhold i Office-apps på tværs af forskellige platforme og enheder.** Understøttes af Word, Excel, PowerPoint og Outlook på Office-skrivebordsapps og Office på internettet. Understøttes på Windows, macOS, iOS og Android.
+- **Beskyt indhold i Office-apps på tværs af forskellige platforme og enheder.** Understøttes af Word, Excel, PowerPoint og Outlook i Office desktopapps og Office på internettet. Understøttes på Windows, macOS, iOS og Android.
 
-- **Beskyt indhold i tredjepartsapps og -tjenester ved hjælp** af Microsoft Defender til skyapps. Med Defender til skyapps kan du registrere, klassificere, mærke og beskytte indhold i tredjepartsapps og -tjenester, f.eks. SalesForce, Box eller DropBox, selvom tredjepartsappen eller -tjenesten ikke læser eller understøtter følsomhedsmærkater.
+- **Beskyt indhold i tredjepartsapps og -tjenester** ved hjælp af Microsoft Defender for Cloud Apps. Med Defender for Cloud Apps kan du registrere, klassificere, navngive og beskytte indhold i tredjepartsapps og -tjenester, f.eks. SalesForce, Box eller DropBox, også selvom tredjepartsappen eller -tjenesten ikke læser eller understøtter følsomhedsmærkater.
 
-- **Beskyt beholdere**, der Teams, Microsoft 365 gruppe- og SharePoint websteder. Du kan f.eks. angive indstillinger for beskyttelse af personlige oplysninger, ekstern brugeradgang og ekstern deling og adgang fra enheder, der ikke er administrerede.
+- **Beskyt objektbeholdere**, der indeholder Teams, Microsoft 365-grupper og SharePoint websteder. Du kan f.eks. angive indstillinger for beskyttelse af personlige oplysninger, ekstern brugeradgang og ekstern deling samt adgang fra ikke-administrerede enheder.
 
-- **Udvid følsomhedsmærkater til Power BI**: Når du aktiverer denne funktion, kan du anvende og få vist navne i Power BI og beskytte data, når de gemmes uden for tjenesten.
+- **Udvid følsomhedsmærkater til Power BI**: Når du aktiverer denne funktion, kan du anvende og få vist mærkater i Power BI og beskytte data, når de gemmes uden for tjenesten.
 
-- **Udvid følsomhedsmærkaterne** til aktiver i Azure-visningen: Når du aktiverer denne funktion, som i øjeblikket er i forhåndsvisning, kan du anvende dine følsomhedsmærkater på filer og skemalagte dataaktiver i Azure-visningen. De skemalagte dataaktiver omfatter SQL, Azure SQL, Azure Synapse, Azure Cosoms og AWS RDS.
+- **Udvid følsomhedsmærkater til aktiver i Microsoft Purview-dataoversigt**: Når du aktiverer denne funktion, der i øjeblikket er en prøveversion, kan du anvende dine følsomhedsmærkater på filer og skematiserede dataaktiver i Microsoft Purview-dataoversigt. De skematiserede dataaktiver omfatter SQL, Azure SQL, Azure Synapse, Azure Cosmos og AWS RDS.
 
-- **Udvid følsomhedsmærkater til tredjepartsapps og -tjenester.** Ved hjælp Microsoft Information Protection SDK kan tredjepartsapps læse følsomhedsmærkater og anvende beskyttelsesindstillinger.
+- **Udvid følsomhedsmærkater til tredjepartsapps og -tjenester.** Ved hjælp af Microsoft Information Protection SDK kan tredjepartsapps læse følsomhedsmærkater og anvende beskyttelsesindstillinger.
 
-- **Klassificer indhold uden at bruge nogen beskyttelsesindstillinger.** Du kan også blot tildele en etiket som et resultat af klassificeringen af indholdet. Dette giver brugerne en visuel tilknytning af klassificering til organisationens navnenavne og kan bruge etiketterne til at generere forbrugsrapporter og se aktivitetsdata for dit følsomme indhold. Baseret på disse oplysninger kan du altid vælge at anvende beskyttelsesindstillinger senere.
+- **Klassificer indhold uden at bruge nogen beskyttelsesindstillinger.** Du kan også blot tildele en mærkat som følge af klassificeringen af indholdet. Dette giver brugerne en visuel tilknytning af klassificering til organisationens navne og kan bruge mærkaterne til at generere forbrugsrapporter og se aktivitetsdata for dit følsomme indhold. På baggrund af disse oplysninger kan du altid vælge at anvende beskyttelsesindstillinger senere.
 
-I alle disse tilfælde kan følsomhedsmærkater i Microsoft 365 hjælpe dig med at tage de rigtige handlinger på det rigtige indhold. Med følsomhedsmærkater kan du klassificere data på tværs af din organisation og håndhæve beskyttelsesindstillinger baseret på denne klassificering.
+I alle disse tilfælde kan følsomhedsmærkater i Microsoft 365 hjælpe dig med at træffe de rigtige handlinger på det rigtige indhold. Med følsomhedsmærkater kan du klassificere data på tværs af din organisation og gennemtvinge beskyttelsesindstillinger baseret på denne klassificering.
 
-Du kan finde flere oplysninger om disse og andre scenarier, der understøttes af følsomhedsmærkater, [under Almindelige scenarier for følsomhedsmærkater](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels). Der udvikles hele tiden nye funktioner, der understøtter følsomhedsmærkater, så du kan også finde det nyttigt at [referere til Microsoft 365 oversigten](https://aka.ms/MIPC/Roadmap).
+Du kan få flere oplysninger om disse og andre scenarier, der understøttes af følsomhedsmærkater, under [Almindelige scenarier for følsomhedsmærkater](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels). Der udvikles hele tiden nye funktioner, der understøtter følsomhedsmærkater, så du kan også finde det nyttigt at henvise til [køreplanen for Microsoft 365](https://aka.ms/MIPC/Roadmap).
 
 ## <a name="what-a-sensitivity-label-is"></a>Hvad en følsomhedsmærkat er
 
-Når du tildeler et følsomhedsmærkat til indhold, er det ligesom et stempel, der anvendes og er:
+Når du tildeler et følsomhedsmærkat til indhold, er det som et stempel, der anvendes, og som er:
 
-- **Kan tilpasses.** Specifikt for din organisation og virksomhedens behov kan du oprette kategorier til forskellige niveauer af følsomt indhold i organisationen. Eksempelvis Personlig, Offentlig, Generel, Fortrolig og Meget fortrolig.
+- **Tilpasselig.** Du kan oprette kategorier for forskellige niveauer af følsomt indhold i organisationen, der er specifikke for organisationens og virksomhedens behov. Det kan f.eks. være Personlig, Offentlig, Generelt, Fortroligt og Meget fortroligt.
 
-- **Ryd tekst.** Da et navn er gemt i klar tekst i metadataene for filer og mails, kan apps og tjenester fra tredjeparter læse den og derefter anvende deres egne beskyttende handlinger, hvis det er nødvendigt.
+- **Ryd tekst.** Da en mærkat er gemt i klartekst i metadataene for filer og mails, kan tredjepartsapps og -tjenester læse den og derefter anvende deres egne beskyttende handlinger, hvis det er nødvendigt.
 
-- **Fast.** Da navnet er gemt i metadata for filer og mails, vil navnet følge med indholdet, uanset hvor det gemmes eller gemmes. Den entydige etiketidentifikation danner basis for at anvende og gennemtvinge de politikker, du konfigurerer.
+- **Vedvarende.** Da mærkaten er gemt i metadata for filer og mails, følger etiketten med indholdet, uanset hvor den gemmes eller gemmes. Det entydige mærkat-id bliver grundlaget for anvendelse og håndhævelse af de politikker, du konfigurerer.
 
-Når et følsomhedsmærkat vises af brugerne, vises det som et mærke på apps, de bruger, og den kan nemt integreres i deres eksisterende arbejdsprocesser.
+Når brugerne får vist en følsomhedsmærkat, vises den som et mærke for de apps, de bruger, og de kan nemt integreres i deres eksisterende arbejdsprocesser.
 
-Hvert element, der understøtter følsomhedsetiketter, kan have et enkelt følsomhedsmærkat anvendt på det. Dokumenter og mails kan have både et følsomhedsmærkat og et [opbevaringsmærkat](retention.md#retention-labels) anvendt på dem.
+Hvert element, der understøtter følsomhedsmærkater, kan have en enkelt følsomhedsmærkat anvendt på det. Dokumenter og mails kan både have en følsomhedsmærkat og en [opbevaringsmærkat](retention.md#retention-labels) anvendt på dem.
 
 > [!div class="mx-imgBorder"]
 > ![Følsomhedsmærkat anvendt på en mail.](../media/Sensitivity-label-on-email.png)
 
-## <a name="what-sensitivity-labels-can-do"></a>Dette kan følsomhedsmærkater gøre
+## <a name="what-sensitivity-labels-can-do"></a>Hvad følsomhedsmærkater kan gøre
 
-Når et følsomhedsmærkat er anvendt på en mail eller et dokument, håndhæves alle konfigurerede beskyttelsesindstillinger for den pågældende etiket på indholdet. Du kan konfigurere et følsomhedsmærkat til at:
+Når der er anvendt en følsomhedsmærkat på en mail eller et dokument, gennemtvinges eventuelle konfigurerede beskyttelsesindstillinger for den pågældende mærkat på indholdet. Du kan konfigurere en følsomhedsmærkat til:
 
-- **Kryptér** mails og dokumenter for at forhindre uautoriserede personer i at få adgang til disse data. Du kan desuden vælge, hvilke brugere eller grupper der har tilladelse til at udføre hvilke handlinger og i hvor lang tid. Du kan f.eks. vælge at give alle brugere i organisationen tilladelse til at redigere et dokument, mens en bestemt gruppe i en anden organisation kun kan se det. Alternativt kan du i stedet for administratordefinerede tilladelser give brugerne tilladelse til at tildele tilladelser til indholdet, når de anvender etiketten. 
+- **Kryptér** mails og dokumenter for at forhindre uautoriserede personer i at få adgang til disse data. Du kan desuden vælge, hvilke brugere eller grupper der har tilladelse til at udføre hvilke handlinger og hvor længe. Du kan f.eks. vælge at tillade, at alle brugere i organisationen redigerer et dokument, mens en bestemt gruppe i en anden organisation kun kan se det. I stedet for administratordefinerede tilladelser kan du også give dine brugere tilladelse til at tildele tilladelser til indholdet, når de anvender mærkaten. 
     
-    Du kan finde flere oplysninger **om krypteringsindstillingerne** , når du opretter eller redigerer en følsomhedsmærkat i Begræns adgang til [indhold ved hjælp af kryptering i følsomhedsmærkater](encryption-sensitivity-labels.md).
+    Du kan få flere oplysninger om **krypteringsindstillingerne** , når du opretter eller redigerer en følsomhedsmærkat, under [Begræns adgang til indhold ved hjælp af kryptering i følsomhedsmærkater](encryption-sensitivity-labels.md).
 
-- **Markér indholdet, når** du bruger Office apps, ved at tilføje vandmærker, sidehoveder eller sidefødder i mails eller dokumenter, hvor etiketten er anvendt. Vandmærker kan anvendes på dokumenter, men ikke i mails. Eksempel på sidehoved og vandmærke:
+- **Markér indholdet**, når du bruger Office apps, ved at føje vandmærker, sidehoveder eller sidefødder til mails eller dokumenter, hvor mærkaten er anvendt. Vandmærker kan anvendes på dokumenter, men ikke på mail. Eksempelheader og vandmærke:
     
-    ![Vandmærke og sidehoved anvendt på dokument.](../media/Sensitivity-label-watermark-header.png)
+    ![Vandmærke og sidehoved anvendt på dokumentet.](../media/Sensitivity-label-watermark-header.png)
     
-    Dynamiske markeringer understøttes også ved hjælp af variabler. Indsæt f.eks. etiketnavnet eller dokumentnavnet i sidehovedet, sidefoden eller vandmærket. Du kan finde flere oplysninger [under Dynamiske markeringer med variabler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
+    Dynamiske markeringer understøttes også ved hjælp af variabler. Indsæt f.eks. navnet eller dokumentnavnet i sidehovedet, sidefoden eller vandmærket. Du kan få flere oplysninger under [Dynamiske markeringer med variabler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
     
-    Har du brug for at kontrollere, hvornår der anvendes indholdsmærkning? Se [Når Office anvende indholdsmærkning og kryptering](sensitivity-labels-office-apps.md#when-office-apps-apply-content-marking-and-encryption).
+    Skal det kontrolleres, hvornår der anvendes indholdsmarkeringer? Se [Når Office apps anvender indholdsmarkering og kryptering](sensitivity-labels-office-apps.md#when-office-apps-apply-content-marking-and-encryption).
     
-    Hvis du har skabeloner eller arbejdsprocesser, der er baseret på bestemte dokumenter, skal du teste disse dokumenter med det valgte indhold, før du gør etiketten tilgængelig for brugerne. Nogle begrænsninger for strenglængde, du skal være opmærksom på:
+    Hvis du har skabeloner eller arbejdsprocesser, der er baseret på bestemte dokumenter, skal du teste disse dokumenter med dine valgte indholdsmarkeringer, før du gør mærkaten tilgængelig for brugerne. Nogle begrænsninger for strenglængde for at være opmærksom på:
     
-    Vandmærker er begrænset til 255 tegn. Sidehoveder og sidefødder er begrænset til 1024 tegn, undtagen Excel. Excel har en samlet grænse på 255 tegn for sidehoveder og sidefødder, men denne grænse omfatter tegn, der ikke er synlige, f.eks. formateringskoder. Hvis denne grænse er nået, vises den streng, du angiver, ikke i Excel.
+    Vandmærker er begrænset til 255 tegn. Sidehoveder og sidefødder er begrænset til 1024 tegn, undtagen i Excel. Excel har en samlet grænse på 255 tegn for sidehoveder og sidefødder, men denne grænse omfatter tegn, der ikke er synlige, f.eks. formateringskoder. Hvis grænsen nås, vises den streng, du angiver, ikke i Excel.
 
-- **Beskyt indhold i beholdere**, f.eks. websteder og grupper, når du aktiverer muligheden for at bruge følsomhedsmærkater sammen Microsoft Teams [, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md).
+- **Beskyt indhold i objektbeholdere, f.eks. websteder og grupper**, når du aktiverer funktionen til at [bruge følsomhedsmærkater med Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md).
     
-    Du kan ikke konfigurere beskyttelsesindstillinger for grupper og websteder, før du har aktiveret denne funktion. Denne etiketkonfiguration medfører ikke, at dokumenter eller mails automatisk mærkes, men i stedet beskytter etiketindstillingerne indhold ved at kontrollere adgangen til beholderen, hvor indhold kan gemmes. Disse indstillinger omfatter indstillinger for beskyttelse af personlige oplysninger, ekstern brugeradgang og ekstern deling og adgang fra enheder, der ikke er administrerede.
+    Du kan ikke konfigurere beskyttelsesindstillinger for grupper og websteder, før du aktiverer denne funktion. Denne etiketkonfiguration medfører ikke, at dokumenter eller mails automatisk navngives, men i stedet beskytter mærkatindstillingerne indhold ved at styre adgangen til objektbeholderen, hvor indhold kan gemmes. Disse indstillinger omfatter indstillinger for beskyttelse af personlige oplysninger, ekstern brugeradgang og ekstern deling og adgang fra ikke-administrerede enheder.
 
-- **Anvend etiketten automatisk på filer og mails, eller anbefal en etiket.** Vælg, hvordan du vil identificere følsomme oplysninger, du vil have mærket, og etiketten kan anvendes automatisk, eller du kan bede brugerne om at anvende den etiket, du anbefaler. Hvis du anbefaler en etiket, vises den tekst, du vælger, i prompten. Eksempel:
+- **Anvend mærkaten automatisk på filer og mails, eller anbefal en etiket.** Vælg, hvordan følsomme oplysninger skal identificeres, og mærkaten kan anvendes automatisk, eller du kan bede brugerne om at anvende den mærkat, du anbefaler. Hvis du anbefaler en etiket, vises den tekst, du vælger, i prompten. Eksempel:
     
     ![Spørg, om der skal tildeles en påkrævet etiket.](../media/Sensitivity-label-Prompt-for-required-label.png)
     
-    Du kan finde flere oplysninger  om automatisk mærkning af filer og mailindstillinger, når du opretter eller redigerer en følsomhedsmærkat[](apply-sensitivity-label-automatically.md), under Anvend automatisk en følsomhedsmærkat på indhold til Office-apps og Mærkning i [Azure-visning](/azure/purview/create-sensitivity-label).
+    Du kan finde flere oplysninger om **automatisk mærkning af filer og mailindstillinger**, når du opretter eller redigerer en følsomhedsmærkat, under [Anvend en følsomhedsmærkat på indhold automatisk](apply-sensitivity-label-automatically.md) for Office apps og [mærkning i Microsoft Purview Data Map](/azure/purview/create-sensitivity-label).
 
-- **Angiv standardtypen for delingslink** til SharePoint websteder og individuelle dokumenter. For at forhindre overdeling af brugere skal du angive standardomfanget og [standardtilladelserne for](sensitivity-labels-default-sharing-link.md), hvornår brugere deler dokumenter SharePoint og OneDrive.
+- **Angiv standardlinktypen for deling** for SharePoint websteder og individuelle dokumenter. Du kan forhindre brugere i at overdrage ved at angive [standardområdet og -tilladelserne](sensitivity-labels-default-sharing-link.md) for, hvornår brugerne deler dokumenter fra SharePoint og OneDrive.
 
-### <a name="label-scopes"></a>Navneomfang
+### <a name="label-scopes"></a>Navneområder
 
-Når du opretter en følsomhedsmærkat, bliver du bedt om at konfigurere etikettens omfang, som bestemmer to ting:
-- Hvilke etiketindstillinger du kan konfigurere for den pågældende etiket
-- Hvor etiketten vil være synlig for brugerne
+Når du opretter en følsomhedsmærkat, bliver du bedt om at konfigurere mærkatens omfang, som bestemmer to ting:
+- Hvilke navneindstillinger du kan konfigurere for det pågældende navn
+- Hvor mærkaten er synlig for brugerne
 
-Denne omfangskonfiguration giver dig mulighed for at få følsomhedsmærkater, der kun er til dokumenter og mails og ikke kan vælges til beholdere. Og på samme måde er følsomhedsetiketter, der kun er til beholdere og ikke kan vælges til dokumenter og mails. Du kan også vælge området for Azure Purview-aktiver:
+Med denne områdekonfiguration kan du have følsomhedsmærkater, der kun er til dokumenter og mails og ikke kan vælges for objektbeholdere. Og på samme måde er følsomhedsmærkater, der kun er beregnet til objektbeholdere og ikke kan vælges til dokumenter og mails. Du kan også vælge området for Microsoft Purview Data Map-aktiver:
 
-![Indstillinger for omfang for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
+![Områdeindstillinger for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
 
-Som standard er **området filer & mails** altid markeret. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
+Som standard er området **Filer & mails** altid valgt. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
 
-- **Grupper & websteder**: [Aktivér følsomhedsmærkater for beholdere og synkroniser etiketter](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
+- **Grupper & websteder**: [Aktivér følsomhedsmærkater for objektbeholdere, og synkroniser mærkater](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
 
-- **Skemalagte dataaktiver**: [Navn giv dit indhold en automatisk mærkat i Azure-visning](/azure/purview/create-sensitivity-label)
+- **Skematiserede dataaktiver**: [Mærk automatisk dit indhold i Microsoft Purview Data Map](/azure/purview/create-sensitivity-label)
 
-Hvis du ændrer standardindstillingerne, så ikke alle områder markeres, får du vist den første side i konfigurationsindstillingerne for områder, du ikke har valgt, men du kan ikke konfigurere indstillingerne. Hvis f.eks. området for filer og mails ikke er markeret, kan du ikke vælge indstillingerne på den næste side:
+Hvis du ændrer standardindstillingerne, så ikke alle områder er valgt, kan du se den første side i konfigurationsindstillingerne for områder, du ikke har valgt, men du kan ikke konfigurere indstillingerne. Hvis omfanget for filer og mails f.eks. ikke er valgt, kan du ikke vælge indstillingerne på næste side:
 
-![Utilgængelige indstillinger for følsomhedsmærkater.](../media/sensitivity-labels-unavailable-settings.png)
+![Indstillinger for følsomhedsmærkater er ikke tilgængelige.](../media/sensitivity-labels-unavailable-settings.png)
 
-For disse sider, hvor indstillingerne ikke er tilgængelige, skal du vælge **Næste for** at fortsætte. Eller vælg **Tilbage for** at ændre navnets omfang.
+For de sider, der ikke har tilgængelige indstillinger, skal du vælge **Næste** for at fortsætte. Eller vælg **Tilbage** for at ændre navnets omfang.
 
 ### <a name="label-priority-order-matters"></a>Mærkatprioritet (rækkefølgen har betydning)
 
-Når du opretter dine følsomhedsmærkater i Administration, vises de på **en liste på** fanen Følsomhed på **siden** Etiketter. På denne liste er rækkefølgen af etiketterne vigtig, fordi den afspejler deres prioritet. Du ønsker, at din mest restriktive følsomhedsmærkat, f.eks. Meget  fortrolig, vises nederst på listen, og at din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, vises **øverst**.
+Når du opretter dine følsomhedsmærkater i administrationen, vises de på en liste under fanen **Følsomhed** på siden **Mærkater** . På denne liste er rækkefølgen af mærkater vigtig, fordi den afspejler deres prioritet. Din mest restriktive følsomhedsmærkat, f.eks. Meget fortroligt, skal vises **nederst** på listen, og din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, skal vises **øverst**.
 
-Du kan kun anvende ét følsomhedsmærkat på et element, f.eks. et dokument, en mail eller en beholder. Hvis du angiver en indstilling, der kræver, at brugerne skal angive en begrundelse for at ændre en mærkat til en lavere klassificering, identificerer rækkefølgen af denne liste de lavere klassificeringer. Denne indstilling gælder dog ikke for undergrupper, der deler prioriteten af deres overordnede etiket.
+Du kan kun anvende én følsomhedsmærkat på et element, f.eks. et dokument, en mail eller en objektbeholder. Hvis du angiver en indstilling, der kræver, at brugerne skal angive en begrundelse for at ændre en mærkat til en lavere klassificering, identificerer rækkefølgen af denne liste de lavere klassificeringer. Denne indstilling gælder dog ikke for undermærkater, der deler prioriteten for deres overordnede mærkat.
 
-Rækkefølgen af undermapper bruges dog [med automatisk](apply-sensitivity-label-automatically.md) mærkat. Når du konfigurerer mærkater til at blive anvendt automatisk eller som en anbefaling, kan flere matches resultere for mere end én mærkat. For at finde den etiket, der skal anvendes eller anbefales, bruges rækkefølgen af etiketter: Den sidste følsomme etiket markeres og derefter det sidste undernavn, hvis det er relevant.
+Rækkefølgen af undermærkater bruges dog med [automatisk mærkning](apply-sensitivity-label-automatically.md). Når du konfigurerer mærkater til at blive anvendt automatisk eller som en anbefaling, kan flere matches resultere for mere end én mærkat. For at bestemme den etiket, der skal anvendes eller anbefales, bruges navnerækkefølgen: Den sidste følsomme mærkat vælges, og den sidste undermærkat, hvis det er relevant.
 
-![Mulighed for at oprette et undermærke.](../media/Sensitivity-label-sublabel-options.png)
+![Mulighed for at oprette en underabel.](../media/Sensitivity-label-sublabel-options.png)
 
 ### <a name="sublabels-grouping-labels"></a>Undermærkater (grupperingsmærkater)
 
-Med undermærkater kan du gruppere en eller flere mærkater under en overordnet mærkat, som en bruger ser i en Office-app. Under Fortroligekan din organisation f.eks. bruge flere forskellige mærkater til bestemte typer af den pågældende klassificering. I dette eksempel er det overordnede navn Fortroligt blot en tekstetiket uden beskyttelsesindstillinger, og fordi den har undergrupper, kan den ikke anvendes på indhold. I stedet skal brugerne vælge Fortroligt for at få vist undergrupperne, og derefter kan de vælge et underordnet navn, der skal gælde for indholdet.
+Med undermærkater kan du gruppere en eller flere mærkater under en overordnet mærkat, som en bruger ser i en Office-app. Under Fortroligekan din organisation f.eks. bruge flere forskellige mærkater til bestemte typer af den pågældende klassificering. I dette eksempel er den overordnede mærkat Fortroligt blot en tekstmærkat uden beskyttelsesindstillinger, og fordi den har undermærkater, kan den ikke anvendes på indhold. Brugerne skal i stedet vælge Fortroligt for at få vist underlabels, og de kan derefter vælge et undermærke, der skal anvendes på indhold.
 
 Undermærkater er blot en måde at præsentere mærkater for brugere i logiske grupper på. Undermærkater arver ikke nogen indstillinger fra deres overordnede mærkat. Når du publicerer en undermærkat for en bruger, kan den pågældende bruger derefter anvende den pågældende undermærkat på indhold, men kan ikke kun anvende den overordnede mærkat.
 
-Vælg ikke en overordnet etiket som standardetiket, eller konfigurer en overordnet etiket til at blive anvendt automatisk (eller anbefalet). Hvis du gør det, anvendes den overordnede etiket ikke på indholdet.
+Vælg ikke en overordnet etiket som standardetiket, eller konfigurer en overordnet etiket, så den anvendes automatisk (eller anbefales). Hvis du gør det, anvendes den overordnede mærkat ikke på indhold.
 
-Eksempel på, hvordan undermapper vises for brugere:
+Eksempel på, hvordan underlabels vises for brugere:
 
-![Grupperede undergrupper på båndet.](../media/Sensitivity-label-grouped-labels2.png)
+![Grupperede underlabels på båndet.](../media/Sensitivity-label-grouped-labels2.png)
 
-### <a name="editing-or-deleting-a-sensitivity-label"></a>Redigere eller slette et følsomhedsmærkat
+### <a name="editing-or-deleting-a-sensitivity-label"></a>Redigering eller sletning af en følsomhedsmærkat
 
-Hvis du sletter et følsomhedsmærkat fra din Administration, fjernes mærkaten ikke automatisk fra indholdet, og eventuelle beskyttelsesindstillinger vil fortsat blive håndhævet på indhold, der havde den pågældende etiket anvendt.
+Hvis du sletter en følsomhedsmærkat fra administrationen, fjernes mærkaten ikke automatisk fra indholdet, og eventuelle beskyttelsesindstillinger gennemtvinges fortsat for indhold, hvor mærkaten er anvendt.
 
-Hvis du redigerer et følsomhedsmærkat, er versionen af den etiket, der blev anvendt på indholdet, hvad der håndhæves på indholdet.
+Hvis du redigerer en følsomhedsmærkat, er den version af mærkaten, der blev anvendt på indhold, det, der gennemtvinges for det pågældende indhold.
 
-## <a name="what-label-policies-can-do"></a>Hvilke etiketpolitikker kan gøre
+## <a name="what-label-policies-can-do"></a>Hvad kan mærkatpolitikker gøre?
 
-Når du har oprettet dine følsomhedsmærkater, skal du publicere dem for at gøre dem tilgængelige for personer og tjenester i din organisation. Følsomhedsmærkaterne kan derefter anvendes på Office dokumenter og mails og andre elementer, der understøtter følsomhedsmærkater. 
+Når du har oprettet dine følsomhedsmærkater, skal du publicere dem for at gøre dem tilgængelige for personer og tjenester i din organisation. Følsomhedsmærkater kan derefter anvendes på Office dokumenter og mails og andre elementer, der understøtter følsomhedsmærkater. 
 
-I modsætning til opbevaringsmærkater, der publiceres på placeringer som f.eks Exchange alle postkasser, publiceres følsomhedsmærkater til brugere eller grupper. Apps, der understøtter følsomhedsmærkater, kan derefter vise dem til disse brugere og grupper som etiketter eller som etiketter, de kan anvende.
+I modsætning til opbevaringsmærkater, der publiceres på placeringer, f.eks. alle Exchange postkasser, publiceres følsomhedsmærkater til brugere eller grupper. Apps, der understøtter følsomhedsmærkater, kan derefter vise dem til disse brugere og grupper som anvendte mærkater eller som mærkater, som de kan anvende.
 
-Når du konfigurerer en etiketpolitik, kan du:
+Når du konfigurerer en mærkatpolitik, kan du:
 
-- **Vælg, hvilke brugere og grupper der skal kunne se etiketterne.** Etiketter kan publiceres til en bestemt bruger eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe (som kan have [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule)) i Azure AD.
+- **Vælg, hvilke brugere og grupper der skal se mærkaterne.** Mærkater kan publiceres til en bestemt bruger eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe (som kan have [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule)) i Azure AD.
 
-- **Angiv et standardnavn** til ikke-navnerede dokumenter og mails, nye beholdere (når du har aktiveret følsomhedsetiketter [for Microsoft Teams-, Microsoft 365-grupper og SharePoint-websteder](sensitivity-labels-teams-groups-sites.md), og nu en standardmærkat til [Power BI indhold](/power-bi/admin/service-security-sensitivity-label-default-label-policy). Du kan angive den samme etiket for alle fire typer elementer eller forskellige navne. Brugere kan ændre den anvendte standard-følsomhedsmærkat, så den passer bedre til følsomheden af deres indhold eller beholder.
+- **Angiv en standardetiket** for dokumenter og mails, nye objektbeholdere (når du har [aktiveret følsomhedsmærkater for Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md) og nu en standardbeskrivelse for [Power BI indhold](/power-bi/admin/service-security-sensitivity-label-default-label-policy). Du kan angive den samme etiket for alle fire elementtyper eller forskellige navne. Brugerne kan ændre den anvendte standardfølsomhedsmærkat, så den bedre matcher følsomheden af deres indhold eller objektbeholder.
     
     > [!NOTE]
-    > I forhåndsvisning Office apps, der bruger indbyggede etiketter: Denne indstilling understøtter nu eksisterende dokumenter, når de åbnes af brugere samt nye dokumenter. Denne ændring giver paritet med den samlede Azure Information Protection-etiketklient. Du kan finde flere oplysninger om udrulning pr. app og minimumsversioner i tabellen med [egenskaber for Word](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint), Excel og PowerPoint.
+    > Som prøveversion til Office apps, der bruger indbyggede mærkater: Denne indstilling understøtter nu eksisterende dokumenter, når de åbnes af brugere, samt nye dokumenter. Denne ændring i funktionsmåden giver paritet med Azure Information Protection Unified-mærkatklienten. Du kan få flere oplysninger om udrulningen pr. app og minimumversioner i [tabellen med funktioner](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) til Word, Excel og PowerPoint.
     
-    Overvej at bruge en standardetiket til at angive et grundlæggende niveau af beskyttelse, der skal anvendes på alt dit indhold. Men uden brugerkurser og andre kontrolelementer kan denne indstilling også medføre unøjagtige etiketter. Det er normalt ikke en god ide at vælge en etiket, der anvender kryptering som standardetiket til dokumenter. Mange organisationer har f.eks. brug for at sende og dele dokumenter med eksterne brugere, som muligvis ikke har apps, der understøtter krypteringen, eller de bruger muligvis ikke en konto, der kan godkendes. Du kan finde flere oplysninger om dette scenarie [under Dele krypterede dokumenter med eksterne brugere](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).
+    Overvej at bruge et standardnavn til at angive et grundlæggende niveau af beskyttelsesindstillinger, som du vil anvende på alt dit indhold. Men uden brugertræning og andre kontrolelementer kan denne indstilling også resultere i unøjagtig mærkning. Det er normalt ikke en god idé at vælge en mærkat, der anvender kryptering som standardmærkat på dokumenter. Mange organisationer skal f.eks. sende og dele dokumenter med eksterne brugere, der muligvis ikke har apps, der understøtter krypteringen, eller de bruger muligvis ikke en konto, der kan godkendes. Du kan få flere oplysninger om dette scenarie under [Deling af krypterede dokumenter med eksterne brugere](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).
     
     > [!IMPORTANT]
-    > Når du har [undergrupper, skal](#sublabels-grouping-labels) du være forsigtig med at konfigurere den overordnede etiket som en standardetiket.
+    > Når du har [undermærkater](#sublabels-grouping-labels), skal du være forsigtig med ikke at konfigurere den overordnede etiket som en standardetiket.
 
-- **Kræve en begrundelse for at ændre en etiket.** Hvis en bruger forsøger at fjerne en etiket eller erstatte den med en etiket, der har et lavere ordrenummer, kan du kræve, at brugeren angiver en begrundelse for at udføre denne handling. En bruger åbner f.eks. et dokument med navnet Fortroligt (ordre nr. 3) og erstatter denne etiket med en navngivet Offentlig (ordrenummer 1). For Office apps udløses denne begrundelsesprompt én gang pr. appsession, når du bruger indbygget mærkning og pr. fil, når du bruger den samlede Azure Information Protection-etiketklient. Administratorer kan læse begrundelsesårsagen sammen med navneændringen i [Aktivitetsstifinder](data-classification-activity-explorer.md).
+- **Kræv en begrundelse for ændring af en etiket.** Hvis en bruger forsøger at fjerne en etiket eller erstatte den med en etiket, der har et lavere nummer, kan du kræve, at brugeren angiver en begrundelse for at udføre denne handling. En bruger åbner f.eks. et dokument med navnet Fortroligt (ordrenummer 3) og erstatter denne etiket med et med navnet Offentlig (ordrenummer 1). I forbindelse med Office apps udløses denne begrundelsesprompt én gang pr. appsession, når du bruger indbygget mærkat og pr. fil, når du bruger Azure Information Protection Unified Labeling-klienten. Administratorer kan læse begrundelsesårsagen sammen med navneændringen i [aktivitetsoversigten](data-classification-activity-explorer.md).
 
     ![Spørg, hvor brugerne skal angive en begrundelse.](../media/Sensitivity-label-justification-required.png)
 
-- **Kræv, at brugerne skal anvende** en etiket til dokumenter og mails, kun dokumenter, til beholdere og Power BI indhold. Disse indstillinger er også kendt som obligatorisk mærkning og sikrer, at der skal anvendes en etiket, før brugerne kan gemme dokumenter og sende mails, oprette nye grupper eller websteder, og når de bruger indhold uden navn til Power BI.
+- **Kræv, at brugerne anvender en mærkat** til dokumenter og mails, kun dokumenter, til objektbeholdere og Power BI indhold. Disse indstillinger, der også kaldes obligatorisk mærkning, sikrer, at der skal anvendes en mærkat, før brugerne kan gemme dokumenter og sende mails, oprette nye grupper eller websteder, og når de bruger ikke-navngivet indhold til Power BI.
     
-    For dokumenter og mails kan en etiket tildeles manuelt af brugeren, automatisk på grund af en betingelse, du konfigurerer, eller tildeles som standard (standardetiketindstillingen tidligere beskrevet). En eksempelprompt, når en bruger skal tildele en etiket:
+    I forbindelse med dokumenter og mails kan en mærkat tildeles manuelt af brugeren automatisk som følge af en betingelse, som du konfigurerer, eller tildeles som standard (standardindstillingen for mærkat, der tidligere er beskrevet). En eksempelprompt, når en bruger skal tildele en mærkat:
 
-    ![Spørg i Outlook, om brugeren skal anvende den påkrævede etiket.](../media/sensitivity-labels-mandatory-prompt-outlook.png)
+    ![Spørg i Outlook beder brugeren om at anvende den påkrævede mærkat.](../media/sensitivity-labels-mandatory-prompt-outlook.png)
     
-    Du kan finde flere oplysninger om obligatorisk mærkning af dokumenter og mails i [Kræv, at brugerne anvender en etiket i deres mail og dokumenter](sensitivity-labels-office-apps.md#require-users-to-apply-a-label-to-their-email-and-documents).
+    Du kan finde flere oplysninger om obligatorisk mærkning af dokumenter og mails under [Kræv, at brugerne anvender en mærkat på deres mail og dokumenter](sensitivity-labels-office-apps.md#require-users-to-apply-a-label-to-their-email-and-documents).
     
-    For beholdere skal der tildeles en etiket på det tidspunkt, hvor gruppen eller webstedet oprettes.
+    I forbindelse med objektbeholdere skal der tildeles en mærkat på det tidspunkt, hvor gruppen eller webstedet oprettes.
     
-    Du kan finde flere oplysninger om obligatorisk mærkning til Power BI i [Obligatorisk etiketpolitik for Power BI](/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
+    Du kan finde flere oplysninger om obligatorisk mærkning for Power BI under [Obligatorisk mærkatpolitik for Power BI](/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
     
-    Overvej at bruge denne indstilling til at øge din dækning af mærkningen. Men uden brugerkurser kan disse indstillinger medføre unøjagtige etiketter. Medmindre du også angiver en tilsvarende standardmærkat, kan obligatorisk mærkning frustrere dine brugere med de hyppige prompter.
+    Overvej at bruge denne indstilling som en hjælp til at øge din mærkatdækning. Men uden brugertræning kan disse indstillinger resultere i unøjagtig mærkning. Medmindre du også angiver en tilsvarende standardmærkat, kan obligatorisk mærkning desuden frustrere dine brugere med de hyppige prompts.
 
-- **Give hjælp-link til en brugerdefineret side i Hjælp.** Hvis brugerne ikke er sikre på, hvad dine følsomhedsmærkater betyder, eller hvordan de skal bruges, kan du angive en Få mere at vide URL-adresse,  der vises nederst i menuen følsomhedsetiketter i Office apps:
+- **Angiv et link til hjælp til en brugerdefineret hjælpside.** Hvis dine brugere ikke er sikre på, hvad dine følsomhedsmærkater betyder, eller hvordan de skal bruges, kan du angive en URL-adresse til Få mere at vide, der vises nederst i menuen **Følsomhedsmærkat** i Office apps:
 
-    ![Få mere at vide om linket på knappen Følsomhed på båndet.](../media/Sensitivity-label-learn-more.png)
+    ![Linket Få mere at vide om knappen Følsomhed på båndet.](../media/Sensitivity-label-learn-more.png)
 
-Når du har oprettet en etiketpolitik, der tildeler nye følsomhedsmærkater til brugere og grupper, begynder brugerne at se disse etiketter i deres Office apps. Det kan tage op til 24 timer, før de seneste ændringer replikeres i hele organisationen.
+Når du har oprettet en mærkatpolitik, der tildeler nye følsomhedsmærkater til brugere og grupper, begynder brugerne at se disse mærkater i deres Office apps. Der kan gå op til 24 timer, før de seneste ændringer replikeres i hele organisationen.
 
-Der er ingen begrænsninger for antallet af følsomhedsmærkater, som du kan oprette og publicere med én undtagelse: Hvis etiketten anvender kryptering, der angiver brugere og tilladelser, understøttes der maksimalt 500 etiketter med denne konfiguration. Men som en bedste fremgangsmåde til at sænke administrationsomkostninger og reducere kompleksiteten for dine brugere skal du prøve at holde antallet af navne på et minimum. Virkelige implementeringer har givet effektiviteten betydeligt reduceret, når brugere har mere end fem hovednavne eller mere end fem undernavne pr. hovednavn.
+Der er ingen grænse for, hvor mange følsomhedsmærkater du kan oprette og publicere, med én undtagelse: Hvis mærkaten anvender kryptering, der angiver brugerne og tilladelserne, understøttes der maksimalt 500 mærkater med denne konfiguration. Som bedste praksis for at reducere administrationsomkostningerne og reducere kompleksiteten for dine brugere kan du dog prøve at begrænse antallet af mærkater til et minimum. Udrulninger i den virkelige verden har vist sig at være mærkbart reducerede, når brugerne har mere end fem hovedmærkater eller mere end fem undermærkater pr. hovedmærkat.
 
-### <a name="label-policy-priority-order-matters"></a>Prioritet af navnepolitik (ordrespørgsmål)
+### <a name="label-policy-priority-order-matters"></a>Prioritet for mærkatpolitik (order matters)
 
-Du gør dine følsomhedsmærkater tilgængelige for brugere ved at publicere dem i en følsomhedsmærkatpolitik, der  vises på en liste på fanen Følsomhedspolitikker på **siden Etiketpolitikker**. Ligesom følsomhedsetiketter (se Etiketprioritet (rækkefølge vigtig [))](#label-priority-order-matters) er rækkefølgen af politikkerne for følsomhedsetiketter vigtig, fordi den afspejler deres prioritet. Etiketpolitikken med laveste prioritet **vises øverst,** og etiketpolitikken med højeste prioritet vises **nederst**.
+Du gør dine følsomhedsmærkater tilgængelige for brugere ved at publicere dem i en politik for følsomhedsmærkater, der vises på en liste under fanen **Følsomhedspolitikker** på siden **Mærkatpolitikker** . På samme måde som følsomhedsmærkater (se [Mærkatprioritet (order matters))](#label-priority-order-matters) er rækkefølgen af politikker for følsomhedsmærkater vigtig, fordi den afspejler deres prioritet. Etiketpolitikken med den laveste prioritet vises **øverst**, og mærkatpolitikken med den højeste prioritet vises **nederst**.
 
-En etiketpolitik består af:
+En mærkatpolitik består af:
 
-- Et sæt etiketter.
-- De brugere og grupper, der får tildelt politikken, med etiketter.
-- Omfanget af politikken og politikindstillingerne for det pågældende område (f.eks. standardnavn for filer og mails).
+- Et sæt mærkater.
+- De brugere og grupper, der får tildelt politikken med mærkater.
+- Omfanget af politik- og politikindstillingerne for det pågældende område (f.eks. standardmærkat for filer og mails).
 
-Du kan medtage en bruger i flere etiketpolitikker, og brugeren får alle følsomhedsmærkater og indstillinger fra disse politikker. Hvis der er en konflikt mellem indstillinger fra flere politikker, anvendes indstillingerne fra politikken med højeste prioritet (laveste placering). Med andre ord vinder højeste prioritet for hver indstilling.
+Du kan inkludere en bruger i flere mærkatpolitikker, så får brugeren alle følsomhedsmærkater og -indstillinger fra disse politikker. Hvis der er en konflikt i indstillinger fra flere politikker, anvendes indstillingerne fra politikken med den højeste prioritet (laveste placering). Med andre ord vinder den højeste prioritet for hver indstilling.
 
-Hvis du ikke kan se funktionsmåden for politikindstillingen for etiketter eller etiketter, som du forventer for en bruger eller gruppe, skal du kontrollere rækkefølgen af politikkerne for følsomhedsmærkater. Du skal muligvis flytte politikken ned. Hvis du vil ændre rækkefølgen af etiketpolitikker, skal du vælge en følsomhedsmærkatpolitik > vælge ellipsen i højre side > **Flyt ned** **eller Flyt op**.
+Hvis du ikke kan se funktionsmåden for politikindstillingen for mærkater eller mærkater, som du forventer for en bruger eller gruppe, skal du kontrollere rækkefølgen af politikkerne for følsomhedsmærkater. Du skal muligvis flytte politikken ned. Hvis du vil ændre rækkefølgen af mærkatpolitikkerne, skal du vælge en politik for følsomhedsmærkater > vælge ellipsen til højre > **Flyt ned** eller **Flyt op**.
 
-![Indstillingen Flyt på siden for politikker for følsomhedsmærkater.](../media/sensitivity-label-policy-priority.png)
+![Flyt indstillingen på siden for politikker for følsomhedsmærkater.](../media/sensitivity-label-policy-priority.png)
 
 > [!NOTE]
-> Husk: Når der opstår en konflikt mellem indstillingerne for en bruger, der har fået tildelt flere politikker, anvendes indstillingen fra politikken med højeste prioritet (laveste placering).
+> Husk: Når der er en konflikt mellem indstillinger for en bruger, der har flere politikker tildelt, anvendes indstillingen fra politikken med den højeste prioritet (laveste placering).
 
 ## <a name="sensitivity-labels-and-azure-information-protection"></a>Følsomhedsmærkater og Azure Information Protection
 
-Følsomhedsmærkaterne, der er indbygget i Microsoft 365 Apps på Windows, macOS, iOS og Android, ser ud og fungerer på samme måde på tværs af disse enheder for at give brugerne en ensartet etiketoplevelse. Men på Windows computere kan du også bruge [Azure Information Protection-klienten (AIP](/azure/information-protection/rms-client/aip-clientv2)). Denne klient er nu i [vedligeholdelsestilstand](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
+De følsomhedsmærkater, der er indbygget i Microsoft 365 Apps på Windows, macOS, iOS og Android, ser ud og fungerer på samme måde på tværs af disse enheder for at give brugerne en ensartet mærkatoplevelse. På Windows computere kan du dog også bruge [Azure Information Protection-klienten (AIP).](/azure/information-protection/rms-client/aip-clientv2) Denne klient er nu i [vedligeholdelsestilstand](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
 
-Hvis du bruger AIP-klienten, skal du se Hvorfor vælge Indbygget [MIP-mærkning over AIP-tilføjelsesprogrammet til Office-apps for](sensitivity-labels-aip.md) at forstå og administrere dine valg af mærkning for Windows computere.
+Hvis du bruger AIP-klienten, skal du se [Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet for Office apps for](sensitivity-labels-aip.md) at forstå og administrere dine valg af mærkater for Windows computere.
 
-### <a name="azure-information-protection-labels"></a>Azure Information Protection-etiketter
+### <a name="azure-information-protection-labels"></a>Azure Information Protection-mærkater
 
 > [!NOTE]
-> Navneadministration for Azure Information Protection-etiketter i Azure-portalen blev frarådet **den 31. marts 2021**. Få mere at vide fra [den officielle meddelelse om udrådning](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179).
+> Label management for Azure Information Protection mærkater i Azure Portal frarådes **31. marts 2021**. Få mere at vide fra den officielle [meddelelse om udfasning](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179).
 
-Hvis din lejer endnu ikke er på den samlede [etiketplatform, skal](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform) du først aktivere samlet mærkning, før du kan bruge følsomhedsmærkater. Du kan finde en vejledning [i Sådan overfører du Azure Information Protection-etiketter til samlede følsomhedsmærkater](/azure/information-protection/configure-policy-migrate-labels).
+Hvis din lejer endnu ikke er på [unified labeling-platformen](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), skal du først aktivere unified labeling, før du kan bruge følsomhedsmærkater. Du kan finde instruktioner under [Sådan overfører du Azure Information Protection-mærkater til samlede følsomhedsmærkater](/azure/information-protection/configure-policy-migrate-labels).
 
-## <a name="sensitivity-labels-and-the-microsoft-information-protection-sdk"></a>Følsomhedsmærkater og Microsoft Information Protection SDK
+## <a name="sensitivity-labels-and-the-microsoft-information-protection-sdk"></a>Følsomhedsmærkater og SDK'et for Microsoft Information Protection
 
-Da et følsomhedsmærkat er gemt i metadataene i et dokument, kan tredjepartsapps og -tjenester læse fra og skrive til denne mærkning af metadata som et supplement til din installation af etiketter. Desuden kan softwareudviklere bruge SDK til [Microsoft Information Protection fuldt](/information-protection/develop/overview#microsoft-information-protection-sdk) ud understøtte mærknings- og krypteringsfunktioner på tværs af flere platforme. Du kan få mere at vide i [meddelelsen Generelt tilgængelighed på Tech Community-bloggen](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Information-Protection-SDK-Now-Generally-Available/ba-p/263144). 
+Da en følsomhedsmærkat gemmes i metadataene for et dokument, kan tredjepartsapps og -tjenester læse fra og skrive til disse mærkatmetadata som supplement til installationen af mærkater. Derudover kan softwareudviklere bruge [Microsoft Information Protection SDK](/information-protection/develop/overview#microsoft-information-protection-sdk) til fuldt ud at understøtte mærkat- og krypteringsfunktioner på tværs af flere platforme. Du kan få mere at vide i [meddelelsen om generel tilgængelighed på tech community-bloggen](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Information-Protection-SDK-Now-Generally-Available/ba-p/263144). 
 
-Du kan også få mere at [vide om partnerløsninger, der er integreret med Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657).
+Du kan også få mere at vide om [partnerløsninger, der er integreret med Microsoft Purview Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657).
 
 ## <a name="deployment-guidance"></a>Installationsvejledning
 
-Se Introduktion til følsomhedsmærkater for installationsplanlægning og vejledning, som omfatter licensoplysninger, tilladelser, implementeringsstrategi, en liste over understøttede scenarier og [slutbrugerdokumentation](get-started-with-sensitivity-labels.md).
+Hvis du vil have planlægning af udrulning og vejledning, der indeholder licensoplysninger, tilladelser, udrulningsstrategi, en liste over understøttede scenarier og dokumentation til slutbrugere, skal [du se Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md).
 
-Du kan få mere at vide om, hvordan du bruger følsomhedsmærkater til at overholde bestemmelser om beskyttelse af data ved at se Udrul beskyttelse af data for bestemmelser om beskyttelse af personlige oplysninger [Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy).
+Hvis du vil vide mere om, hvordan du bruger følsomhedsmærkater til at overholde reglerne for beskyttelse af personlige oplysninger, skal du se [Installér bestemmelser om beskyttelse af personlige oplysninger for Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy).

@@ -24,12 +24,12 @@ search.appverid:
 - GEA150
 ms.assetid: 3b3adfa4-1777-4ff0-b606-fb8732101f47
 description: Få mere at vide om, hvordan du konfigurerer udgivelsesindstillingen for nye produkt- og funktionsopdateringer i Microsoft 365 Administration.
-ms.openlocfilehash: 67c6fe3f08549424c725589a50c647a876c151af
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 176558448f31fadea0b0cf865bca5d1156e3eefe
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022443"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129414"
 ---
 # <a name="set-up-the-standard-or-targeted-release-options"></a>Konfigurer indstillingerne Standard eller Målrettet udgivelse
 
@@ -47,7 +47,7 @@ Alle nye versioner testes først og valideres af funktionsteamet og derefter af 
 I forbindelse med vigtige opdateringer får kunderne i første omgang besked af [Microsoft 365 Roadmap](https://products.office.com/business/office-365-roadmap). Efterhånden som en opdatering kommer tættere på udrulningen, kommunikeres den via dit [Microsoft 365 Meddelelsescenter](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter).
 
 > [!NOTE]
-> Du skal bruge en Microsoft 365- eller Azure AD-konto for at få adgang til dit Meddelelsescenter via [Administration](/office365/admin/admin-overview/about-the-admin-center). Microsoft 365 brugere af startplanen har ikke et administrationscenter.
+> Du skal bruge en Microsoft 365- eller Azure AD-konto for at få adgang til meddelelsescenteret via [Administration](/office365/admin/admin-overview/admin-center-overview). Microsoft 365 brugere af startplanen har ikke et administrationscenter.
 
 ## <a name="standard-release"></a>Standardversion
 

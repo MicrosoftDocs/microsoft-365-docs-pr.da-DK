@@ -19,12 +19,12 @@ description: Integrer din organisations SIEM-server med Microsoft Defender for O
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e53fe703637ba4b33fd9658b2ec53b2c8c57db0f
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 2ffa1e59f368af4b3e99cee9939ed0ead0cc686e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972579"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130992"
 ---
 # <a name="siem-integration-with-microsoft-defender-for-office-365"></a>SIEM-integration med Microsoft Defender for Office 365
 

@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du udruller Microsoft 365 grundlinjer for fyrtårne.
-ms.openlocfilehash: 2649094f36903e5607fee28862fa0af683d0986e
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 550ded1383cb402da0943bdfeb6707cbd12b02d1
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022861"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131124"
 ---
 # <a name="deploy-microsoft-365-lighthouse-baselines"></a>Udrul Microsoft 365 grundlinjer for fyrtårne
 
@@ -33,7 +33,7 @@ Sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Krav ti
 
 ## <a name="view-a-deployment-plan"></a>Få vist en udrulningsplan
 
-1. Vælg **Lejere** på navigationssiden til venstre.
+1. Vælg **Lejere** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg den lejer, du vil have vist, på lejerlisten.
 
@@ -147,7 +147,7 @@ Udrulningen af udrulningstrinnet i de tilfælde, hvor der findes lige indstillin
 
 Der er angivet ekstra indstillinger for din opmærksomhed, men kræver ikke, at du gør noget.
 
-Du kan få flere oplysninger om administration af politikkonflikter i [dokumentationen til betinget adgang til Azure AD](/azure/active-directory/conditional-access/).
+Du kan få flere oplysninger om administration af politikkonflikter [i Azure AD dokumentation til betinget adgang](/azure/active-directory/conditional-access/).
 
 ## <a name="update-deployment-step-status"></a>Status for opdateringstrin til installation
 

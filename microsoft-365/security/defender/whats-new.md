@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 56e22e0525324c59d2d62adaf2325edc3317ccd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0cbcc198f31497996595a9f17df9cf689c435b58
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096044"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130533"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -48,6 +48,7 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 ## <a name="april-2022"></a>April 2022
 - (eksempelvisning) [Handlinger](advanced-hunting-take-action.md) kan nu udføres på mails direkte fra resultaterne af jagtforespørgslen. Mails kan flyttes til andre mapper eller slettes permanent. 
+- (eksempelvisning) Den nye [`UrlClickEvents` tabel](advanced-hunting-urlclickevents-table.md) i avanceret jagt kan bruges til at jage efter trusler som phishing-kampagner og mistænkelige links baseret på oplysninger, der kommer fra klik på Pengeskab links i mails, Microsoft Teams og Office 365 apps.
 
 ## <a name="march-2022"></a>Marts 2022
 

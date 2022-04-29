@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Lejere for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 7b8e26ddbe68059a9c5ecf4d5e396fd11c49be71
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 0f25f8bb02c6957598b2b328bc7832c429ca1e7a
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023277"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128368"
 ---
 # <a name="overview-of-the-tenants-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Lejere i Microsoft 365 Fyrtårn
 
@@ -52,9 +52,11 @@ På lejerlisten kan du:
 
 Hvis du vil deaktivere lejeren eller få vist og administrere mærker, skal du vælge de tre prikker (flere handlinger) ud for lejernavnet. Du kan få vist individuelle lejere ved enten at vælge lejernavnet eller ved at vælge et af de mærker, der er tildelt lejeren.
 
+Du kan få oplysninger om, hvordan du tilføjer lejere, under [Tilføj og administrer flere lejere på din Partnercenter-konto](/partner-center/multi-tenant-account).
+
 ## <a name="tenant-status"></a>Lejerstatus
 
-I følgende tabel vises de forskellige statusser og deres betydning.<br><br>
+I følgende tabel vises de forskellige statusser og deres betydning. Du kan finde oplysninger om, hvordan du foretager fejlfinding af kundelejerstatusser, [under Fejlfinding af fejlmeddelelser og problemer i Microsoft 365 Lighthouse: Onboarding af kundelejer](m365-lighthouse-troubleshoot.md#customer-tenant-onboarding).<br><br>
 
 | Status                                   | Beskrivelse                                                                                             |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------|

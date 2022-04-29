@@ -16,19 +16,19 @@ search.appverid:
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
 ms.collection:
 - M365-security-compliance
-description: Administratorer kan lære, hvordan du fjerner brugere fra siden Begrænsede brugere på Microsoft 365 Defender portal. Brugere føjes til portalen Begrænsede brugere for at sende udgående spam, typisk som et resultat af, at kontoen er blevet kompromitteret.
+description: Administratorer kan få mere at vide om, hvordan de fjerner brugere fra siden Brugere med begrænset adgang på portalen Microsoft 365 Defender. Brugere føjes til portalen Brugere med begrænset adgang for at sende udgående spam, typisk som følge af konto kompromitteret.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c375d77c3aa64d996a8d8d2f8dce538829eaa3b2
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 229dfbb7a0441f4a6cb6632432c0032f4ce4308e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568308"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130730"
 ---
-# <a name="remove-blocked-users-from-the-restricted-users-portal-in-microsoft-365"></a>Fjern blokerede brugere fra portalen Begrænsede brugere i Microsoft 365
+# <a name="remove-blocked-users-from-the-restricted-users-portal-in-microsoft-365"></a>Fjern blokerede brugere fra portalen Brugere med begrænset adgang i Microsoft 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -37,97 +37,107 @@ ms.locfileid: "64568308"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Hvis en bruger overskrider en af begrænsningerne for udgående afsendelse som angivet i tjenestegrænserne eller politikkerne for udgående [spam](configure-the-outbound-spam-policy.md), er brugeren begrænset i at kunne sende mail, men brugeren kan stadig modtage mail.[](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options)
+Hvis en bruger overskrider en af de grænser for udgående afsendelse, som angivet i [tjenestegrænserne](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) eller i [politikker for udgående spam](configure-the-outbound-spam-policy.md), er brugeren begrænset til at sende mail, men vedkommende kan stadig modtage mail.
 
-Brugeren føjes til siden **Begrænsede brugere** i Microsoft 365 Defender portal. Når de forsøger at sende mail, returneres meddelelsen i en rapport om manglende levering (også kaldet en NDR eller meddelelse om ikke-leveret post) med fejlkoden [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) og følgende tekst:
+Brugeren føjes til siden **Begrænsede brugere** på portalen Microsoft 365 Defender. Når de forsøger at sende en mail, returneres meddelelsen i en rapport om manglende levering (også kendt som en NDR- eller bounce-meddelelse) med fejlkoden [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) og følgende tekst:
 
-> "Meddelelsen kunne ikke leveres, fordi du ikke blev genkendt som en gyldig afsender. Den mest almindelige årsag til dette er, at der er mistanke om, at din mailadresse sender spam, og at den ikke længere har tilladelse til at sende mails.  Kontakt mailadministratoren for at få hjælp. Fjernserver returnerede '550 5.1.8 Access denied, bad udgående afsender."
+> "Meddelelsen kunne ikke leveres, fordi du ikke blev genkendt som en gyldig afsender. Den mest almindelige årsag til dette er, at din mailadresse er mistænkt for at sende spam, og det er ikke længere tilladt at sende e-mail.  Kontakt din mailadministrator for at få hjælp. Fjernserveren returnerede '550 5.1.8 Adgang nægtet, ugyldig udgående afsender."
 
-Administratorer kan fjerne brugere fra **siden Begrænsede brugere** i Microsoft 365 Defender eller i Exchange Online PowerShell.
+Administratorer kan fjerne brugere fra siden **Begrænsede brugere** i Microsoft 365 Defender eller i Exchange Online PowerShell.
+
+## <a name="learn-more-on-restricted-entities"></a>Få mere at vide om begrænsede enheder
+
+En begrænset enhed er et objekt, der er blevet blokeret fra at sende mail, fordi det enten er blevet potentielt kompromitteret, eller fordi afsendelsesgrænsen er overskredet.
+
+Der er to typer begrænsede enheder: 
+
+- **Begrænset bruger**: Få mere at vide om, hvorfor en bruger kan begrænses, og hvordan man håndterer begrænsede brugere (denne artikel).  
+
+- **Begrænset connector**: Du kan få flere oplysninger om, hvorfor en connector kan begrænses, og hvordan du håndterer begrænsede connectors, under [Fjern blokerede connectors fra portalen Begrænsede enheder](remove-blocked-connectors.md). 
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender på <https://security.microsoft.com>. For at gå direkte til **siden Begrænsede brugere** skal du bruge <https://security.microsoft.com/restrictedusers>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Begrænsede brugere** , skal du bruge <https://security.microsoft.com/restrictedusers>.
 
-- Hvis du vil oprette Exchange Online forbindelse til PowerShell, [skal du Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- Du skal have tildelt tilladelser **i Exchange Online,** før du kan udføre procedurerne i denne artikel:
-  - Hvis du vil fjerne brugere fra portalen Begrænsede brugere, skal du være medlem af **rollegrupperne Organisationsadministration** **eller Sikkerhedsadministrator** .
-  - For skrivebeskyttet adgang til portalen Brugere med begrænset adgang skal du være medlem af **rollegrupperne Global læser** eller **Sikkerhedslæser** .
+- Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
+  - Hvis du vil fjerne brugere fra portalen Begrænsede brugere, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
+  - Hvis du vil have skrivebeskyttet adgang til portalen Begrænsede brugere, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** .
 
-  Du kan finde flere [oplysninger i Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
+  Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
   >
-  > - Hvis du føjer brugere til den Azure Active Directory rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser og tilladelser til andre  funktioner Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   >
-  > - **Rollegruppen Skrivebeskyttet** organisationsadministration i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) også skrivebeskyttet adgang til funktionen.
+  > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
-- En afsender, der overskrider grænsen for udgående mail, er en indikator for en kompromitteret konto. Før du fjerner brugeren fra portalen Begrænsede brugere, skal du sørge for at følge de nødvendige trin for at få kontrollen over deres konto tilbage. Du kan få mere at vide [under Svar på en kompromitteret mailkonto i Office 365](responding-to-a-compromised-email-account.md).
+- En afsender, der overskrider grænserne for udgående mail, er en indikator for en kompromitteret konto. Før du fjerner brugeren fra portalen Begrænsede brugere, skal du sørge for at følge de påkrævede trin for at få kontrol over kontoen igen. Du kan få flere oplysninger under [Besvarelse af en kompromitteret mailkonto i Office 365](responding-to-a-compromised-email-account.md).
 
-## <a name="use-the-microsoft-365-defender-portal-to-remove-a-user-from-the-restricted-users-list"></a>Brug portalen Microsoft 365 Defender til at fjerne en bruger fra listen Begrænsede brugere
+## <a name="use-the-microsoft-365-defender-portal-to-remove-a-user-from-the-restricted-users-list"></a>Brug Microsoft 365 Defender-portalen til at fjerne en bruger fra listen Brugere med begrænset adgang
 
-1. I portalen Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til **Mail og & Gennemse** \> brugere **med** \> **begrænset adgang**. For at gå direkte til **siden Begrænsede brugere** skal du bruge <https://security.microsoft.com/restrictedusers>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & samarbejde** \> **Gennemse** **Brugere med begrænset adgang**\>. Hvis du vil gå direkte til siden **Begrænsede brugere** , skal du bruge <https://security.microsoft.com/restrictedusers>.
 
 2. På siden **Begrænsede brugere** skal du finde og vælge den bruger, du vil fjerne blokeringen af, ved at klikke på brugeren.
 
 3. Klik på handlingen **Fjern blokering** , der vises.
 
-4. I pop **op-pop op-pop** op-vindue med brugere, der vises, skal du læse oplysningerne om den begrænsede konto. Du bør gennemgå anbefalingerne for at sikre, at du tager de rigtige handlinger i tilfælde af, at kontoen bliver kompromitteret.
+4. I pop op-vinduet **Fjern blokering af bruger** , der vises, skal du læse oplysningerne om den begrænsede konto. Du skal gennemgå anbefalingerne for at sikre, at du foretager de korrekte handlinger, hvis kontoen kompromitteres.
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-5. Den næste skærm indeholder anbefalinger til at forhindre fremtidigt kompromis. Aktivering af multifaktorgodkendelse (MFA) og nulstilling af adgangskoden er et godt forsvar.
+5. Det næste skærmbillede indeholder anbefalinger, der hjælper med at forhindre fremtidig kompromis. Aktivering af multifaktorgodkendelse (MFA) og nulstilling af adgangskoden er et godt forsvar.
 
-   Klik på Send, når du er **færdig**.
+   Klik på **Send**, når du er færdig.
 
-6. Klik **på Ja** for at bekræfte ændringen.
+6. Klik på **Ja** for at bekræfte ændringen.
 
    > [!NOTE]
    > Det kan tage op til 1 time, før alle begrænsninger fjernes fra brugeren.
 
-## <a name="verify-the-alert-settings-for-restricted-users"></a>Bekræft beskedindstillingerne for begrænsede brugere
+## <a name="verify-the-alert-settings-for-restricted-users"></a>Kontrollér beskedindstillingerne for begrænsede brugere
 
-Standardpolitikken for påmindelse, der hedder **Bruger, der ikke kan sende** mails, giver automatisk administratorer besked, når brugere er blokeret fra at sende udgående mail. Du kan bekræfte disse indstillinger og tilføje flere brugere, der skal underrettes. Du kan finde flere oplysninger om beskedpolitikker [under Påmindelsespolitikker i Microsoft 365](../../compliance/alert-policies.md).
+Standardbeskedpolitikken med navnet Bruger, der er **begrænset til at sende mail** , giver automatisk administratorer besked, når brugere blokeres fra at sende udgående mail. Du kan bekræfte disse indstillinger og tilføje flere brugere for at give besked. Du kan få flere oplysninger om politikker for beskeder [under Beskedpolitikker i Microsoft 365](../../compliance/alert-policies.md).
 
 > [!IMPORTANT]
-> For at beskeder kan fungere, skal søgning i overvågningsloggen være aktiveret. Du kan finde flere oplysninger [i Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
+> Hvis beskeder skal fungere, skal søgning i overvågningslog være aktiveret. Du kan finde flere oplysninger under [Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
 
-1. I portalen Microsoft 365 Defender på skal du <https://security.microsoft.com>gå til Politik for **& mailsamarbejde** \> **& politikker for besked** \> **om regler**. Hvis du vil gå direkte til siden **med politik for beskeder** , skal du bruge <https://security.microsoft.com/alertpolicies>.
+1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & politikker for samarbejde** \> **& regler** \> **Beskedpolitik**. Hvis du vil gå direkte til siden **Beskedpolitik** , skal du bruge <https://security.microsoft.com/alertpolicies>.
 
-2. På siden **Beskedpolitik skal** du finde og vælge beskeden Bruger begrænset fra **at sende mail**. Du kan sortere politikkerne efter navn eller bruge **feltet Søg** til at finde politikken.
+2. På siden **Beskedpolitik** skal du finde og vælge den besked med navnet Bruger, der **ikke kan sende mail**. Du kan sortere politikkerne efter navn eller bruge **søgefeltet** til at finde politikken.
 
-3. I pop **op-menuen Bruger begrænset i at sende** mails, der vises, skal du bekræfte eller konfigurere følgende indstillinger:
-   - **Status**: Bekræft, at beskeden er slået ![til.](../../media/scc-toggle-on.png).
-   - **Mailmodtagere**: Klik **på Rediger** og bekræft eller konfigurer følgende indstillinger i pop **op-menuen Rediger** modtagere, der vises:
-     - **Send mailbeskeder**: Kontrollér, at dette er valgt (**Til**).
-     - **Mailmodtagere**: Standardværdien er **TenantAdmins** (dvs. **globale administratormedlemmer** ). Hvis du vil tilføje flere modtagere, skal du klikke i et tomt område i feltet. Der vises en liste over modtagere, og du kan begynde at skrive et navn for at filtrere og vælge en modtager. Du kan fjerne en eksisterende modtager fra feltet ved at klikke på ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for navnet.
-     - **Daglig beskedgrænse**: Standardværdien er **Ingen grænse,** men du kan vælge en grænse for det maksimale antal meddelelser pr. dag.
+3. I pop op-vinduet Bruger, der **er begrænset til at sende mails** , som vises, skal du bekræfte eller konfigurere følgende indstillinger:
+   - **Status**: Kontrollér, at beskeden er slået Til ![/fra.](../../media/scc-toggle-on.png).
+   - **Mailmodtagere**: Klik på **Rediger** , og bekræft eller konfigurer følgende indstillinger i pop op-vinduet **Rediger modtagere** , der vises:
+     - **Send mailmeddelelser**: Kontrollér, at dette er valgt (**Slået til**).
+     - **Mailmodtagere**: Standardværdien er **TenantAdmins** (dvs. **globale administratormedlemmer** ). Hvis du vil tilføje flere modtagere, skal du klikke i et tomt område i feltet. Der vises en liste over modtagere, og du kan begynde at skrive et navn for at filtrere og vælge en modtager. Du kan fjerne en eksisterende modtager fra feltet ved at klikke på ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for deres navn.
+     - **Grænse for daglig meddelelse**: Standardværdien er **Ingen grænse** , men du kan vælge en grænse for det maksimale antal meddelelser pr. dag.
 
      Klik på **Gem**, når du er færdig.
 
-4. Tilbage på pop **op-menuen Bruger begrænset fra at sende** mail skal du klikke **på Luk**.
+4. Tilbage på pop op-vinduet Bruger, der **er begrænset til at sende mail** , skal du klikke på **Luk**.
 
-## <a name="use-exchange-online-powershell-to-view-and-remove-users-from-the-restricted-users-list"></a>Brug Exchange Online PowerShell til at få vist og fjerne brugere fra listen Begrænsede brugere
+## <a name="use-exchange-online-powershell-to-view-and-remove-users-from-the-restricted-users-list"></a>Brug Exchange Online PowerShell til at få vist og fjerne brugere fra listen Brugere med begrænset adgang
 
-For at få vist denne liste over brugere, der er begrænset i at sende mail, skal du køre følgende kommando:
+Hvis du vil have vist denne liste over brugere, der ikke kan sende mails, skal du køre følgende kommando:
 
 ```powershell
 Get-BlockedSenderAddress
 ```
 
-Hvis du vil have vist oplysninger om en bestemt bruger, \<emailaddress\> skal du erstatte med dennes mailadresse og køre følgende kommando:
+Hvis du vil have vist detaljer om en bestemt bruger, skal du erstatte \<emailaddress\> med vedkommendes mailadresse og køre følgende kommando:
 
 ```powershell
 Get-BlockedSenderAddress -SenderAddress <emailaddress>
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-BlockedSenderAddress](/powershell/module/exchange/get-blockedsenderaddress).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Get-BlockedSenderAddress](/powershell/module/exchange/get-blockedsenderaddress).
 
-Hvis du vil fjerne en bruger fra listen Begrænsede brugere, skal du \<emailaddress\> erstatte med deres mailadresse og køre følgende kommando:
+Hvis du vil fjerne en bruger fra listen Begrænsede brugere, skal du erstatte \<emailaddress\> med vedkommendes mailadresse og køre følgende kommando:
 
 ```powershell
 Remove-BlockedSenderAddress -SenderAddress <emailaddress>
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-BlockedSenderAddress](/powershell/module/exchange/remove-blockedsenderaddress).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-BlockedSenderAddress](/powershell/module/exchange/remove-blockedsenderaddress).

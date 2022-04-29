@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: I denne artikel får du mere at vide om de bedste fremgangsmåder til deling af filer og mapper med ikke-godkendte brugere.
-ms.openlocfilehash: 43db59e0380f99a2312fd803970a73013445504a
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: bd153d34e6e9ddc4a4b627a79df90286661353d3
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65015040"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128582"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Bedste praksis for deling af filer og mapper med ikke-godkendte brugere
 
@@ -61,7 +61,11 @@ Sådan angiver du en udløbsdato for links til alle på et bestemt websted
 
 Bemærk, at når et link af typen *Alle* udløber, kan filen eller mappen deles igen med et nyt link *af typen Alle* .
 
-Du kan angive udløb af *linket Alle* for en bestemt OneDrive ved hjælp af [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite).
+Du kan angive udløb af *linket Alle* for et bestemt websted ved hjælp af [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite). 
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing -OverrideTenantAnonymousLinkExpirationPolicy $true -AnonymousLinkExpirationInDays 15
+```
 
 ## <a name="set-link-permissions"></a>Angiv linktilladelser
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Du kan oprette en venteposition, der er knyttet til en eDiscovery-sag (Standard), i Microsoft 365 for at bevare indhold, der er relevant for en undersøgelse eller en juridisk sag.
-ms.openlocfilehash: e91e67b39a160de99856d73af8da6ab17d1d6fba
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ddd1b2e62c2ec63dbd2303cadcef6a1d12f4dfc7
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095006"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130905"
 ---
 # <a name="create-an-ediscovery-hold"></a>Opret en eDiscovery-venteposition
 
@@ -66,7 +66,7 @@ Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery
    3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
 
    > [!IMPORTANT]
-   > Når du føjer Exchange postkasser eller SharePoint websteder til venteposition, skal du eksplicit føje mindst én indholdsplacering til ventepositionen. Hvis du med andre ord angiver til/fra-knappen til **Til** for postkasser eller websteder, skal du vælge bestemte postkasser eller websteder, der skal føjes til ventepositionen. Ellers oprettes eDiscovery-ventepositionen, men der føjes ingen postkasser eller websteder til ventepositionen, og statistikkerne viser, at der ikke er nogen indholdsplaceringer eller elementer i venteposition.
+   > Når du føjer Exchange postkasser eller SharePoint websteder til venteposition, skal du eksplicit føje mindst én indholdsplacering til ventepositionen. Hvis du med andre ord angiver til/fra-knappen til **Til** for postkasser eller websteder, skal du vælge bestemte postkasser eller websteder, der skal føjes til ventepositionen. Ellers oprettes eDiscovery-ventepositionen, men der føjes ingen postkasser eller websteder til ventepositionen.
 
 8. Når du er færdig med at føje placeringer til ventepositionen, skal du klikke på **Næste**.
 
@@ -94,24 +94,6 @@ Vær opmærksom på følgende ting, når du placerer en forespørgselsbaseret eD
 - En forespørgselsbaseret venteposition bevarer alle dokumenter på et websted i en kort periode, efter at de er slettet. Det betyder, at når et dokument slettes, flyttes det til biblioteket bevarelsesposition, selvom det ikke stemmer overens med kriterierne for den forespørgselsbaserede venteposition. Slettede dokumenter, der ikke svarer til en forespørgselsbaseret venteposition, fjernes dog af et timerjob, der behandler biblioteket bevarelsesventeposition. Timerjobbet kører jævnligt og sammenligner alle dokumenter i biblioteket bevarelsesposition med dine forespørgselsbaserede eDiscovery-ventepositioner (og andre typer ventepositioner og opbevaringspolitikker). Timerjobbet sletter de dokumenter, der ikke stemmer overens med en forespørgselsbaseret venteposition, og bevarer de dokumenter, der gør det.
 
 - Forespørgselsbaserede ventepositioner bør ikke bruges til at udføre målrettet bevarelse, f.eks. bevare dokumenter i en bestemt mappe eller et bestemt websted eller ved hjælp af andre placeringsbaserede kriterier for bevarelse. Det kan have utilsigtede resultater. Vi anbefaler, at du bruger kriterier, der ikke er baseret på placering, f.eks. nøgleord, datointervaller eller andre dokumentegenskaber, for at bevare webstedsdokumenter.
-
-## <a name="ediscovery-hold-statistics"></a>Statistik for eDiscovery-venteposition
-
-Når du har oprettet en eDiscovery-venteposition, vises oplysninger om den nye venteposition på pop op-siden for den valgte venteposition. Disse oplysninger omfatter antallet af postkasser og websteder, der er i venteposition, og statistik over det indhold, der blev sat i venteposition, f.eks. det samlede antal elementer og størrelsen af elementer, der er sat i venteposition, og den sidste gang statistik for venteposition blev beregnet. Disse statistik for bevarelse hjælper dig med at identificere mængden af indhold, der er relateret til sagen, bevares.
-  
-![Statistik for venteposition.](../media/eDiscoveryHoldStatistics.png)
-  
-Vær opmærksom på følgende ting i forbindelse med statistik for eDiscovery-venteposition:
-  
-- Det samlede antal elementer i venteposition angiver antallet af elementer fra alle indholdskilder, der er sat i venteposition. Hvis du har oprettet en forespørgselsbaseret venteposition, angiver denne statistik antallet af elementer, der svarer til forespørgslen.
-
-- Antallet af elementer i venteposition omfatter også ikke-indekserede elementer, der findes på indholdsplaceringerne. Hvis du opretter en forespørgselsbaseret venteposition, sættes alle ikke-indekserede elementer på indholdsplaceringerne i venteposition. Dette omfatter ikke-indekserede elementer, der ikke svarer til søgekriterierne for en forespørgselsbaseret venteposition og ikke-indekserede elementer, der kan falde uden for en datoområdebetingelse. Dette er anderledes end det, der sker, når du kører en søgning, hvor ikke-indekserede elementer, der ikke stemmer overens med søgeforespørgslen eller er udeladt af en datointervalbetingelse, ikke er inkluderet i søgeresultaterne. Du kan få flere oplysninger om ikke-indekserede elementer under [Delvist indekserede elementer](partially-indexed-items-in-content-search.md).
-
-- Du kan få den seneste statistik for venteposition ved at klikke på **Opdater statistik** for at køre et søgeestimat, der beregner det aktuelle antal elementer i venteposition.
-
-- Det er normalt, at antallet af elementer i venteposition øges over tid, fordi brugere, hvis postkasse eller websted er i venteposition, normalt sender eller modtager en ny mail og opretter nye dokumenter i SharePoint og OneDrive.
-
-- Hvis en Exchange postkasse, SharePoint websted eller OneDrive konto flyttes til et andet område i et multi-geo-miljø, medtages statistikkerne for det pågældende websted ikke i statistik for bevarelse. Men indholdet på disse placeringer bevares stadig. Hvis en postkasse eller et websted flyttes til et andet område, opdateres den SMTP-adresse eller URL-adresse, der vises i ventepositionen, heller ikke automatisk. Du skal redigere ventepositionen og opdatere URL-adressen eller SMTP-adressen, så indholdsplaceringerne igen medtages i statistik for venteposition
 
 ## <a name="search-locations-on-ediscovery-hold"></a>Søg på placeringer i eDiscovery-venteposition
 

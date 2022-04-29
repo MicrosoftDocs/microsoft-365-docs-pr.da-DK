@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 04/27/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -21,12 +21,12 @@ description: Få mere at vide om, hvordan du placerer ventepositioner på tilsyn
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkMAC
-ms.openlocfilehash: c2213c34e111989f0de6fccf886f44dd0f45841b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bc69481c8d59408ce22c238fc80d8ceb67685cf9
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098488"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128362"
 ---
 # <a name="manage-holds-in-ediscovery-premium"></a>Administrer ventepositioner i eDiscovery (Premium)
 
@@ -46,7 +46,7 @@ Sådan får du vist politikken for frihedsberøvelse:
 
 3. Gå til fanen **Ventepositioner,** og klik på **CustodianHold\<HoldId>**.
 
-4. På pop op-siden kan du se statistik for venteposition for politikken. Du kan også udføre handlinger som f.eks. at anvende en forespørgsel på din frihedsberøvende venteposition. Du kan finde flere oplysninger om oprettelse af en ventepositionsforespørgsel og brug af betingelser under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
+4. På pop op-siden kan du udføre handlinger som f.eks. at anvende en forespørgsel på din frihedsberøvende venteposition. Du kan finde flere oplysninger om oprettelse af en ventepositionsforespørgsel og brug af betingelser under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
 
 ## <a name="manage-non-custodial-holds"></a>Administrer ventepositioner uden frihedsberøvelse
 
@@ -105,24 +105,6 @@ Sådan opretter du en eDiscovery-sag (Premium) uden frihedsberøvelse:
 
 > [!NOTE]
 > Hvis SMTP-adressen for brugeren ændres, når du har sat brugerens postkasse i venteposition, forbliver postkassen i venteposition. Hvis du vil bruge den nye SMTP-adresse til at placere venteposition, skal du oprette en ny venteposition.
-
-## <a name="view-hold-statistics"></a>Vis statistik for venteposition
-
-Efter et stykke tid vises oplysninger om den nye venteposition i detaljeruden under fanen **Ventepositioner** for den valgte venteposition. Disse oplysninger omfatter antallet af postkasser og websteder, der er i venteposition, og statistik over det indhold, der blev sat i venteposition, f.eks. det samlede antal elementer og størrelsen af elementer, der er sat i venteposition, og den sidste gang statistik for venteposition blev beregnet. Disse statistikoplysninger hjælper dig med at identificere, hvor meget indhold der er relateret til eDiscovery-sagen.
-
-Vær opmærksom på følgende ting i forbindelse med statistik for venteposition:
-
-- Det samlede antal elementer i venteposition angiver antallet af elementer fra alle indholdskilder, der er sat i venteposition. Hvis du har oprettet en forespørgselsbaseret venteposition, angiver denne statistik antallet af elementer, der svarer til forespørgslen.
-  
-- Antallet af elementer i venteposition omfatter også ikke-indekserede elementer, der findes på indholdsplaceringerne. Hvis du opretter en forespørgselsbaseret venteposition, sættes alle ikke-indekserede elementer på indholdsplaceringerne i venteposition. Dette omfatter ikke-indekserede elementer, der ikke svarer til søgekriterierne for en forespørgselsbaseret venteposition og ikke-indekserede elementer, der kan falde uden for en datoområdebetingelse. Dette er forskelligt fra det, der sker, når du kører en indholdssøgning, hvor ikke-indekserede elementer, der ikke stemmer overens med søgeforespørgslen eller udelades af en datoområdebetingelse, ikke er inkluderet i søgeresultaterne. Du kan finde flere oplysninger om ikke-indekserede elementer [under Delvist indekserede elementer i indholdssøgning i Office 365](partially-indexed-items-in-content-search.md).
-
-- Du kan få den seneste statistik for venteposition ved at klikke på Opdater statistik for at køre et søgeestimat, der beregner det aktuelle antal elementer i venteposition.
-
-- Hvis det er nødvendigt, skal du klikke på Opdater på værktøjslinjen for at opdatere statistik for venteposition i detaljeruden.
-
-- Det er normalt, at antallet af elementer i venteposition øges over tid, fordi brugere, hvis postkasse eller websted er i venteposition, normalt sender eller modtager en ny mail og opretter nye SharePoint og OneDrive for Business dokumenter.
-
-- Hvis et SharePoint websted eller en OneDrive konto flyttes til et andet område i et multi-geo-miljø, medtages statistikkerne for det pågældende websted ikke i statistik for venteposition. Indholdet på webstedet er dog stadig i venteposition. Hvis et websted flyttes til et andet område, opdateres den URL-adresse, der vises i ventepositionen, heller ikke. Du skal redigere ventepositionen og opdatere URL-adressen.
 
 ## <a name="place-a-hold-on-microsoft-teams-and-office-365-groups"></a>Sæt Microsoft Teams og Office 365 grupper i venteposition
 

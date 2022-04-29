@@ -19,12 +19,12 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: Der er mange følsomme oplysningstyper, der er klar til brug i dine DLP-politikker. I denne artikel vises alle disse typer følsomme oplysninger, og du kan se, hvad en DLP-politik søger efter, når hver type registreres.
-ms.openlocfilehash: 6074082812853469e0513d67ec68519eb2a89563
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: af2cbd03de426aa34b9db82691a22684c4c1df0b
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970653"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130796"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Enhedsdefinitioner for type af følsomme oplysninger
 
@@ -9588,9 +9588,9 @@ En DLP-politik har mellem tillid til, at den har registreret denne type følsomm
 
 ### <a name="keywords"></a>Søgeord
 
-Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_updated, som er baseret på [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). Denne type søger kun efter ordet og ikke forsikringskoderne.
+Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_updated, som er baseret på [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://icd10cmtool.cdc.gov/). Denne type søger kun efter ordet og ikke forsikringskoderne.
 
-Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_codes, som er baseret på [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). Denne type søger kun efter forsikringskoder og ikke beskrivelsen.
+Ethvert ord fra nøgleordsordbogen for Dictionary_icd_10_codes, som er baseret på [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://icd10cmtool.cdc.gov/). Denne type søger kun efter forsikringskoder og ikke beskrivelsen.
 
 ## <a name="international-classification-of-diseases-icd-9-cm"></a>International klassificering af sygdomme (ICD-9-CM)
 

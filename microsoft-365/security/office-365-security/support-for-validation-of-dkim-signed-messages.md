@@ -1,5 +1,5 @@
 ---
-title: Understøttelse af validering af domænenøgler identificerede mails (DKIM)
+title: Understøttelse af validering af domænenøgleidentificerede mails (DKIM)
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -13,15 +13,15 @@ search.appverid:
 ms.assetid: a4c95148-a00c-4d12-85ed-88520b547d97
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om valideringen af DKIM-signerede meddelelser Exchange Online Protection og Exchange Online
+description: Få mere at vide om validering af DKIM-signerede meddelelser i Exchange Online Protection og Exchange Online
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a5ea98add5ebe860f756d645909366a1f5502832
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: dcdd251ba1266033671ac524426d1ac3d2f56a10
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588969"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130708"
 ---
 # <a name="support-for-validation-of-dkim-signed-messages"></a>Understøttelse af validering af DKIM-signerede meddelelser
 
@@ -29,18 +29,18 @@ ms.locfileid: "63588969"
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online Protection (EOP) og Exchange Online understøtter begge indgående validering af domænenøgler identificerede mails ([DKIM](https://www.rfc-editor.org/rfc/rfc6376.txt)).
+Exchange Online Protection (EOP) og Exchange Online begge understøtter indgående validering af [DKIM-meddelelser](https://www.rfc-editor.org/rfc/rfc6376.txt) (Domain Keys Identified Mail).
 
-DKIM validerer, at en mail ikke er blevet  efterlignet af en anden, og den er blevet sendt fra det domæne, *den hedder den* stammer fra. Den binder en mail til den organisation, der har sendt den. DKIM-bekræftelse bruges automatisk til alle meddelelser, der sendes med IPv6. Microsoft 365 understøtter også DKIM, når mail sendes via IPv4. (Du kan finde flere oplysninger om IPv6-understøttelse [i Support til anonyme indgående mails via IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)).
+DKIM validerer, at en mail ikke blev *spoofed* af en anden, og blev sendt fra det domæne, den *siger* , den kom fra. Den knytter en mail til den organisation, der har sendt den. DKIM-bekræftelse bruges automatisk til alle meddelelser, der sendes med IPv6. Microsoft 365 understøtter også DKIM, når der sendes mail via IPv4. (Du kan få flere oplysninger om IPv6-understøttelse under [Understøttelse af anonyme indgående mails via IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)).
 
-DKIM validerer en digitalt signeret meddelelse, der vises DKIM-Signature brevhovedet i brevhovederne. Resultaterne af en DKIM-Signature er stemplet i sidehovedetAuthentication-Results brevhovedet. Teksten i brevhovedet ligner følgende (hvor contoso.com er afsenderen):
+DKIM validerer en digitalt signeret meddelelse, der vises i DKIM-Signature header i brevhovederne. Resultaterne af en DKIM-Signature validering stemples i Authentication-Results overskrift. Teksten i brevhovedet ser ud som følgende (hvor contoso.com er afsenderen):
 
  `Authentication-Results: <contoso.com>; dkim=pass (signature was verified) header.d=example.com;`
 
 > [!NOTE]
-> Du kan finde flere oplysninger Authentication-Results brevhovedet i RFC 7001 (feltet Brevhoved til angivelse af [meddelelsesgodkendelsesstatus](https://www.rfc-editor.org/rfc/rfc7001.txt)). Microsofts DKIM-implementering er i overensstemmelse med denne RFC.
+> Du kan få flere oplysninger om den Authentication-Results header i RFC 7001 ([Feltet Meddelelsesheader til angivelse af godkendelsesstatus for meddelelse](https://www.rfc-editor.org/rfc/rfc7001.txt). Microsofts DKIM-implementering er i overensstemmelse med denne RFC.
 
-Administratorer kan oprette Exchange [regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kaldet transportregler) på resultaterne af DKIM-validering. Disse regler for mailflow giver administratorer mulighed for at filtrere eller distribuere meddelelser efter behov.
+Administratorer kan oprette Exchange [regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kaldet transportregler) for resultaterne af DKIM-valideringen. Disse regler for mailflow giver administratorer mulighed for at filtrere eller distribuere meddelelser efter behov.

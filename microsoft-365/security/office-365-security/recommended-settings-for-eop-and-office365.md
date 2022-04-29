@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1a5e18547a26d688238f5d4be94520d4e68c9ff4
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 72d4f64ca00defe26ddaff7fe27d641cb65f13be
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916331"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130511"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -43,10 +43,16 @@ Hvis du vil anvende Standard- eller Strict-indstillingerne automatisk på bruger
 
 I denne artikel beskrives standardindstillingerne og de anbefalede Standard- og Strict-indstillinger for at beskytte dine brugere. Tabellerne indeholder indstillingerne i Microsoft 365 Defender-portalen og PowerShell (Exchange Online PowerShell eller enkeltstående Exchange Online Protection PowerShell til organisationer uden Exchange Online postkasser).
 
-> [!TIP]
-> Du kan ikke ændre de anbefalede Standard- og Strict-indstillinger på portalen Microsoft 365 Defender. Hvis du vil ændre anbefalede værdier, f.eks **. Giv brugerne mulighed for at beskytte**, skal du bruge [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
->
+> [!NOTE]
 > Modulet Office 365 Advanced Threat Protection Recommended Configuration Analyzer (ORCA) til PowerShell kan hjælpe dig (administratorer) med at finde de aktuelle værdier for disse indstillinger. **Cmdlet'en Get-ORCAReport** genererer især en vurdering af indstillinger for anti-spam, anti-phishing og andre indstillinger for meddelelseshygiejne. Du kan downloade ORCA-modulet på <https://www.powershellgallery.com/packages/ORCA/>.
+>
+> I Microsoft 365 organisationer anbefaler vi, at du lader filteret for uønsket mail i Outlook være angivet til **Ingen automatisk filtrering** for at forhindre unødvendige konflikter (både positive og negative) med EOP's spamfiltreringsbesigelser. Du kan finde flere oplysninger i følgende artikler:
+>
+> - [Konfigurer indstillinger for uønsket mail i Exchange Online-postkasser](configure-junk-email-settings-on-exo-mailboxes.md)
+> - [Om indstillinger for uønsket mail i Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-junk-email-settings-in-outlook)
+> - [Skift beskyttelsesniveauet i filteret for uønsket mail](https://support.microsoft.com/en-us/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
+> - [Opret lister over sikre afsendere i EOP](create-safe-sender-lists-in-office-365.md)
+> - [Opret lister over blokerede afsendere i EOP](create-block-sender-lists-in-office-365.md)
 
 ## <a name="anti-spam-anti-malware-and-anti-phishing-protection-in-eop"></a>Anti-spam, antimalware og beskyttelse mod phishing i EOP
 

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 461664cc72486a49e5b7bd9be44235559409adff
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: e5f38f701c865ad337bd04cb731ba40e00bf6118
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825235"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130389"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Installér Microsoft Defender for Endpoint på Android med Microsoft Intune
 
@@ -261,6 +261,63 @@ Enhedskonfigurationsprofilen er nu tildelt den valgte brugergruppe.
 4. På dette tidspunkt er enheden onboardet til Defender for Endpoint på Android. Du kan bekræfte dette på [Microsoft 365 Defender portalen](https://security.microsoft.com) ved at gå til siden **Enhedslager**.
 
     :::image type="content" source="images/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="Portalen Microsoft Defender for Endpoint" lightbox="images/9fe378a1dce0f143005c3aa53d8c4f51.png":::
+
+## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>Konfigurer Microsoft Defender i personlig profil på Android Enterprise i BYOD-tilstand
+
+>[!NOTE]
+>Microsoft Defender-understøttelse i personlig profil i Android Enterprise-tilstand (AE) i BYOD-tilstand (Bring-Your-Own-Device) er nu tilgængelig som offentlig prøveversion. Følgende oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
+
+Med understøttelse af Microsoft Defender i personlige Android-profiler kan brugerenheder beskyttes mod phishing- og malwareangreb på en personlig profil, der potentielt kan kompromittere virksomhedens ressourcer på arbejdsprofilen. 
+
+**Konfigurer Microsoft Defender i personlig profil**
+
+Administratorer kan gå til Administration af [Microsoft Endpoint Management](https://endpoint.microsoft.com) for at konfigurere Microsoft Defender-support i personlige profiler ved at følge disse trin:
+1. Gå til **Apps> politikker for konfiguration af apps** , og klik på **Tilføj**. Vælg **Administrerede enheder**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Billede af tilføjelse af appkonfigurationspolitik.](images/addpolicy.png)
+
+1.  Angiv **Navn** og **Beskrivelse** for entydigt at identificere konfigurationspolitikken. Vælg platform som **'Android Enterprise'**, Profiltype som **'Kun personligt ejet arbejdsprofil'** og Målrettet app som **'Microsoft Defender'**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Billede af politik for navngivning af konfiguration.](images/selectapp.png)
+
+1. Vælg **"Brug konfigurationsdesigner"** på siden med indstillinger i **'Konfigurationsindstillingersformat'**, og klik på **Tilføj**. På listen over konfigurationer, der vises, skal du vælge **'Microsoft Defender in Personal profile'**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Billede af konfiguration af personlig profil.](images/addconfiguration.png)
+
+1. Den valgte konfiguration vises. Ret **konfigurationsværdien til 1** for at aktivere personlige profiler til understøttelse af Microsoft Defender. Der vises en meddelelse, der informerer administratoren om det samme. Klik på **Næste**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Billede af ændring af konfigurationsværdien.](images/changeconfigvalue.png)
+
+1. **Tildel** konfigurationspolitikken til en gruppe brugere. **Gennemse og opret** politikken.
+
+    > [!div class="mx-imgBorder"]
+    > ![Billede af korrektur og oprettelse af politik.](images/savepolicy.png)
+
+Administratorer kan også konfigurere **kontrolelementer til beskyttelse af personlige oplysninger** fra Microsoft Endpoint Manager Administration for at styre, hvilke data der kan sendes af Defender-mobilklienten til sikkerhedsportalen. Du kan få flere oplysninger under [Konfiguration af kontrolelementer til beskyttelse af personlige oplysninger](android-configure.md).
+
+Organisationer kan kommunikere med deres brugere for at beskytte personlig profil med Microsoft Defender på deres tilmeldte BYOD-enheder.
+- Forudsætning: Microsoft Defender skal allerede være installeret og aktiv i arbejdsprofilen for at aktivere Microsoft Defender i personlige profiler.
+
+**Sådan fuldfører du onboarding af en enhed**
+1.  Installér Microsoft Defender-programmet i en personlig profil med en personlig Google Play-butikskonto.
+2.  Installér programmet Firmaportal på en personlig profil. Der kræves ingen logon.
+3.  Når en bruger starter programmet, får vedkommende vist logonskærmen. **Log kun på med firmakontoen**.
+4.  Ved vellykket logon får brugerne vist følgende skærmbilleder:
+
+    a.  **Skærmbilledet slutbrugerlicensaftale**: Vises kun, hvis brugeren ikke allerede har givet samtykke til det i profilen Arbejde.
+
+    b.  **Meddelelsesskærm**: Brugerne skal give samtykke på denne skærm for at komme videre med onboarding af programmet. Dette er kun påkrævet under den første kørsel af appen.
+5.  Angiv de nødvendige tilladelser for at fuldføre onboarding.
+
+>[!NOTE]
+>**Forudsætning:**
+ >1. Firmaportalen skal være aktiveret på en personlig profil.
+ >2. Microsoft Defender skal allerede være installeret og aktiv i arbejdsprofilen.
+
 
 ## <a name="related-topics"></a>Relaterede emner
 

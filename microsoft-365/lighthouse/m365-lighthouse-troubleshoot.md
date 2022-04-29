@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få hjælp til fejlfinding af fejlmeddelelser og problemer.
-ms.openlocfilehash: a150213c2e202c96afeae14843708daa58ab4f92
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3ae2737a07815284f2981e8c4debac2d064fc1e9
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093278"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130774"
 ---
 # <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Foretag fejlfinding af fejlmeddelelser og problemer i Microsoft 365 Fyrtårn
 
@@ -54,7 +54,7 @@ I denne artikel beskrives fejlmeddelelser og problemer, der kan opstå, når du 
 **Forårsage:** Dine kundelejere opfylder ikke følgende kriterier:
 
 - Der skal være konfigureret uddelegeret adgang for MSP'en (Managed Service Provider) for at kunne administrere kundelejer*
-- Der skal være mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens
+- Der skal være mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business Microsoft Defender til virksomheder licens
 - Der må ikke være mere end 1000 licenserede brugere 
 
 **Opløsning:** I følgende tabel beskrives de forskellige lejerstatusser, der kræver handling, og det forklares, hvordan du løser dem.
@@ -65,7 +65,7 @@ I denne artikel beskrives fejlmeddelelser og problemer, der kan opstå, når du 
 |--|--|--|
 | Inaktive | Lejeren blev offboardet på anmodning af MSP'en og administreres ikke længere i Lighthouse. | Du skal genaktivere lejeren. På siden **Lejere** skal du vælge de tre prikker (flere handlinger) ud for den lejer, du vil genaktivere, og derefter vælge **Aktivér lejer**. Det kan tage 24-48 timer, før de første kundedata vises i Lighthouse. |
 | Ikke berettiget – DAP eller GDAP er ikke konfigureret | Du har ikke rettigheder som DAP- eller GDAP-administrator konfigureret med lejeren, hvilket er påkrævet af Lighthouse. | Konfigurer DAP- eller GDAP-administratorrettigheder i Microsoft Partnercenter. |
-| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium eller Microsoft 365 E3 licens. | Sørg for, at lejeren har tildelt mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business licens. |
+| Ikke berettiget – Påkrævet licens mangler | Lejeren mangler en påkrævet licens. De skal bruge mindst én Microsoft 365 Business Premium, Microsoft 365 E3 eller Microsoft Defender til virksomheder licens. | Sørg for, at lejeren har tildelt mindst én Microsoft 365 Business Premium, Microsoft 365 E3, Windows 365 Business Microsoft Defender til virksomheder licens. |
 | Ikke kvalificeret - Antallet af brugere er overskredet | Lejeren har mere end maksimalt 1000 licenserede brugere tilladt af Lighthouse. | Kontrollér, at lejeren ikke har mere end 1000 licenserede brugere. |
 | Ikke berettiget - Geo-kontrol mislykkedes | Du og din kunde bor ikke i det samme geografiske område, hvilket er påkrævet af Lighthouse. | Kontrollér, at kunden er placeret i dit geografiske område. Hvis ikke, kan du ikke administrere lejeren i Lighthouse. |
 | I gang | Lighthouse opdagede lejeren, men er stadig i gang med at onboarde dem. | Tillad, at Lighthouse 48 timer fuldfører onboarding af lejeren. |
@@ -78,15 +78,15 @@ Hvis du har bekræftet, at din kundelejer opfylder onboardingkriterierne, og de 
 
 **Forårsage:** Du tilhører ikke den korrekte sikkerhedsgruppe i Azure AD, eller du har ikke fået tildelt den korrekte rolle i Partnercenter for at få adgang til Lighthouse.
 
-**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede Roller i Azure AD og tilladelser til GDAP [i indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD og tildelt dig den korrekte rolle i Partnercenter. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle Azure AD indbyggede roller og tilladelser til GDAP [i Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference).
 
 For kunder med DAP-relationer skal partneradministratoren tildele dig rollen Administrator eller Helpdesk-agent i Partnercenter. Du kan finde en detaljeret beskrivelse af alle Partnercenter-roller og -tilladelser under [Tildel roller og tilladelser til brugere](/partner-center/permissions-overview).
 
 ### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Jeg kan ikke se komplette data i visse områder af Lighthouse, eller jeg kan ikke udføre visse opgaver, eller jeg kan ikke få adgang til visse lejere
 
-**Forårsage:** Du har begrænset GDAP-adgang baseret på de roller, der er tildelt den Azure AD-sikkerhedsgruppe, du er i.
+**Forårsage:** Du har begrænset GDAP-adgang baseret på de roller, der er tildelt den Azure AD sikkerhedsgruppe, du er i.
 
-**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle indbyggede Roller i Azure AD og tilladelser til GDAP [i indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+**Opløsning:** Sørg for, at en administrator fra din partnerlejer med de relevante tilladelser har tildelt dig til den korrekte GDAP-sikkerhedsgruppe i Azure AD. Husk også på, at nogle handlinger i Lighthouse kræver, at du er global administrator. Du kan få mere at vide om GDAP-rollerne, og hvad hver rolle kan gøre, [under Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Du kan finde en detaljeret beskrivelse af alle Azure AD indbyggede roller og tilladelser til GDAP [i Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="customer-tenant-management"></a>Administration af kundelejer  
 

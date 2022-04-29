@@ -13,18 +13,18 @@ ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 ms.collection: Strat_SP_gtc
 description: Få mere at vide om, hvordan du bruger parameteren Region til at konfigurere eDiscovery til brug på satellitplaceringer i Microsoft 365 Multi-Geo.
-ms.openlocfilehash: 6160087006e77de085f6a28614b95d1136890fd3
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: a220e68e6dbe010f2eab6876dc2813dcd84d5d6d
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973283"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130927"
 ---
 # <a name="microsoft-365-multi-geo-ediscovery-configuration"></a>Microsoft 365 Multi-Geo eDiscovery-konfiguration
 
-[eDiscovery-funktioner (Premium)](../compliance/overview-ediscovery-20.md) gør det muligt for en multi-geo-eDiscovery-administrator at søge i alle geos uden at skulle bruge et sikkerhedsfilter af typen "Område". Data eksporteres til Azure-forekomsten af den centrale placering af multi-geo-lejeren. Det samme sker med anvendelse af en venteposition på en tilsynsførende, men statistik for venteposition i venteposition vises ikke uden sikkerhedsfilteret "Område". Statistik for venteposition, der viser 0, betyder ikke, at ventepositionen mislykkedes, så længe status for venteposition vises Til (gennemført).
+[eDiscovery-funktioner (Premium)](../compliance/overview-ediscovery-20.md) gør det muligt for en multi-geo-eDiscovery-administrator at søge i alle geos uden at skulle bruge et sikkerhedsfilter af typen "Område". Data eksporteres til Azure-forekomsten af den centrale placering af multi-geo-lejeren.
 
-Uden eDiscovery-funktioner (Premium) kan en eDiscovery-administrator eller administrator af en multi-geo-lejer kun udføre eDiscovery på den centrale placering af lejeren. For at understøtte muligheden for at udføre eDiscovery for satellitplaceringer er der en ny filterparameter for overholdelse af angivne standarder med navnet "Område" tilgængelig via PowerShell. Denne parameter kan bruges af lejere, hvis centrale placering er i Nordamerika, Europa eller Asien og Stillehavsområdet. eDiscovery (Premium) anbefales til lejere, hvis centrale placering ikke er i Nordamerika, Europa eller Asien og Stillehavsområdet, og som har brug for at udføre eDiscovery på tværs af geografiske satellitplaceringer. 
+Uden eDiscovery-funktioner (Premium) kan en eDiscovery-administrator eller administrator af en multi-geo-lejer kun udføre eDiscovery på den centrale placering af lejeren. For at understøtte muligheden for at udføre eDiscovery for satellitplaceringer er der en ny filterparameter for overholdelse af angivne standarder med navnet "Område" tilgængelig via PowerShell. Denne parameter kan bruges af lejere, hvis centrale placering er i Nordamerika, Europa eller Asien og Stillehavsområdet. eDiscovery (Premium) anbefales til lejere, hvis centrale placering ikke er i Nordamerika, Europa eller Asien og Stillehavsområdet, og som har brug for at udføre eDiscovery på tværs af geografiske satellitplaceringer.
 
 Den Microsoft 365 globale administrator skal tildele eDiscovery Manager-tilladelser for at give andre tilladelse til at udføre eDiscovery og tildele en "Område"-parameter i deres relevante overholdelsessikkerhedsfilter for at angive området til udførelse af eDiscovery som satellitplacering, ellers udføres der ingen eDiscovery for satellitplaceringen. Der understøttes kun ét "Område"-sikkerhedsfilter pr. bruger, så alle områder skal være inden for det samme sikkerhedsfilter.
 

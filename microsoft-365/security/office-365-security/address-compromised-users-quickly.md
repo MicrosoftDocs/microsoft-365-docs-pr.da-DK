@@ -16,12 +16,12 @@ ms.date: 06/10/2021
 description: Få mere at vide om, hvordan du fremskynder processen med at registrere og løse kompromitterede brugerkonti med automatiserede undersøgelses- og svarfunktioner i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fdbb88d38b94ac48b2bbd2a447c76ee7d79d24a
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: a8c78847e36d4a4887c4f7a3c54904cc26a012e5
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974163"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131146"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Håndter kompromitterede brugerkonti med automatiseret undersøgelse og svar
 
