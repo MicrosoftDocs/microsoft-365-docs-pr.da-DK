@@ -453,6 +453,8 @@
               href: ome-sensitive-info-types.md
             - name: Administrer meddelelseskryptering
               href: manage-office-365-message-encryption.md
+            - name: Krypteret aktivitetslog for meddelelsesportal
+              href: ome-message-access-logs.md
             - name: Avanceret meddelelseskryptering
               href: ome-advanced-message-encryption.md
             - name: 'Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Microsoft Purview'
@@ -467,6 +469,8 @@
               href: exchange-online-secures-email-secrets.md
             - name: Sådan anvender Exchange Online-brugere TLS til at sikre deres mailforbindelser i Office 365
               href: exchange-online-uses-tls-to-secure-email-connections.md
+            - name: Forbedring af mailflow med MTA-STS
+              href: enhancing-mail-flow-with-mta-sts.md
             - name: Sådan fungerer SMTP-DANE
               href: how-smtp-dane-works.md
             - name: BitLocker og DKM (Distributed Key Manager) til kryptering

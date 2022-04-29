@@ -29,6 +29,8 @@
               href: ../admin/setup/setup-business-standard.md
             - name: Inviter brugere til Microsoft 365 Business Standard
               href: ../admin/simplified-signup/admin-invite-business-standard.md
+            - name: Hvad er Microsoft 365 for Business?
+              href: ../admin/admin-overview/what-is-microsoft-365-for-business.md
             - name: Acceptér mailinvitation til Microsoft 365 Business Standard
               href: ../admin/simplified-signup/user-invite-business-standard.md
             - name: 'Acceptér en mailinvitation til en Microsoft 365 Business Standard-abonnementsorganisation ved hjælp af en Outlook-, Yahoo-, Gmail-konto eller en anden konto.'

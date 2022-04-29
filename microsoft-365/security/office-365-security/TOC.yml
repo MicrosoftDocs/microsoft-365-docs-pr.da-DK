@@ -308,6 +308,14 @@
           href: remediate-malicious-email-delivered-office-365.md
         - name: Besvar en kompromitteret mailkonto i Office 365
           href: responding-to-a-compromised-email-account.md
+        - name: Besvar en kompromitteret forbindelse
+          href: respond-compromised-connector.md
+        - name: Fjern blokerede enheder
+          items:
+            - name: Fjern blokerede brugere
+              href: removing-user-from-restricted-users-portal-after-spam.md
+            - name: Fjern blokerede forbindelser
+              href: remove-blocked-connectors.md
         - name: Gennemse og godkend (eller afvis) ventende handlinger
           href: air-review-approve-pending-completed-actions.md
         - name: Finjuster beskyttelse mod phishing
@@ -320,8 +328,6 @@
           href: quarantine-policies.md
         - name: Frigiv meddelelser i karantæne fra delte postkasser
           href: view-and-release-quarantined-messages-from-shared-mailboxes.md
-        - name: Fjern blokerede brugere fra portalen Begrænsede brugere
-          href: removing-user-from-restricted-users-portal-after-spam.md
         - name: Brug slettelseportalen til at fjerne dig selv fra listen over blokerede afsendere
           href: use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md
     - name: Ofte stillede spørgsmål

@@ -85,7 +85,7 @@
 ##### [Nyheder](mac-whatsnew.md)
 
 ##### [Udrul]()
-###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md)
+###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md).
 ###### [JAMF Pro-baseret udrulning]()
 ####### [Udrulning af Microsoft Defender for Endpoint på macOS ved hjælp af Jamf Pro](mac-install-with-jamf.md)
 ####### [Log på Jamf Pro](mac-install-jamfpro-login.md)
@@ -251,7 +251,8 @@
 ##### [Tidslinje for begivenhed](threat-and-vuln-mgt-event-timeline.md)
 ##### [Rapport over følsomme enheder](tvm-vulnerable-devices-report.md)
 ##### [Gå på jagt efter eksponerede enheder](tvm-hunt-exposed-devices.md)
-
+#### [Vejledning til aktive trusler og kampagner]()
+##### [Administrer Log4Shell-sårbarheden](tvm-manage-log4shell-guidance.md)
 ### [Enhedssøgning]()
 #### [Oversigt over enhedssøgning](device-discovery.md)
 #### [Konfigurer enhedssøgning](configure-device-discovery.md)
