@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0ed23cf7bfe8db25ed216859c434e86f14710db8
-ms.sourcegitcommit: 363bdc517bd2564c6420cf21f352e97079f950e0
+ms.openlocfilehash: 62116022c14af67b4589e4ee8479d294755fcc80
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/22/2022
-ms.locfileid: "65031810"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144671"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -32,12 +32,6 @@ ms.locfileid: "65031810"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-
-> [!NOTE]
->
-> Nogle af de funktioner, der er beskrevet i denne artikel, er i prøveversion, kan ændres og er ikke tilgængelige i alle organisationer.
->
-> Hvis din organisation ikke har spoof-funktionerne som beskrevet i denne artikel, kan du se den ældre spoof-administrationsoplevelse på [Administrer spoofed-afsendere ved hjælp af spoof intelligence-politikken og indsigt i spoof intelligence i EOP](walkthrough-spoof-intelligence-insight.md).
 
 I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser kan du være uenig i dommen om EOP-filtrering. En god meddelelse kan f.eks. være markeret som dårlig (et falsk positivt), eller der kan tillades en forkert meddelelse via (falsk negativ).
 
@@ -81,10 +75,10 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
 - Du skal have tildelt tilladelser på Microsoft 365 Defender-portalen, før du kan udføre procedurerne i denne artikel:
   - **Afsendere, URL-adresser og filer**:
-    - Hvis du vil tilføje og fjerne værdier fra listen over tilladte/blokerede lejere, skal du være medlem af 
-      -   **Rollegruppen Organisationsadministration** eller **Sikkerhedsadministrator** (**rolle som sikkerhedsadministrator**)
-      -    **Rollegruppe for sikkerhedsoperator** (**Lejer allowBlockList Manager**).
-    - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af 
+    - Hvis du vil tilføje og fjerne værdier fra listen over tilladte/blokerede lejere, skal du være medlem af
+      - **Rollegruppen Organisationsadministration** eller **Sikkerhedsadministrator** (**rolle som sikkerhedsadministrator**)
+      - **Rollegruppe for sikkerhedsoperator** (**Lejer allowBlockList Manager**).
+    - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af
       - **Rollegruppe for global læser**
       - **Rollegruppe for sikkerhedslæser**
   - **Spoofing**: En af følgende kombinationer:
@@ -95,7 +89,7 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser *og* tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   >
   > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
@@ -182,7 +176,7 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
 
    Klik på **Anvend**, når du er færdig. Hvis du vil rydde eksisterende filtre, skal du klikke på **Filter** og klikke på **Ryd filtre** i pop **op-vinduet Filter**, der vises.
 
-4. Klik på **Tilføj**, når du er færdig.
+3. Klik på **Tilføj**, når du er færdig.
 
 ## <a name="view-sender-file-or-url-entries-in-the-tenant-allowblock-list"></a>Få vist afsender-, fil- eller URL-adresser på listen over tilladte/blokerede lejere
 
@@ -490,7 +484,7 @@ Her er nogle eksempler på gyldige domænepar, der identificerer spoofede afsend
 
 Det maksimale antal spoofede afsenderposter er 1000.
 
-Tilføjelse af et domænepar tillader eller blokerer kun *kombinationen* af den spoofede bruger *og* den afsendende infrastruktur. Den tillader ikke mail fra den spoofede bruger fra nogen kilde og tillader heller ikke mail fra den afsendende infrastrukturkilde for en spoofed bruger. 
+Tilføjelse af et domænepar tillader eller blokerer kun *kombinationen* af den spoofede bruger *og* den afsendende infrastruktur. Den tillader ikke mail fra den spoofede bruger fra nogen kilde og tillader heller ikke mail fra den afsendende infrastrukturkilde for en spoofed bruger.
 
 Du kan f.eks. tilføje en tilladelsespost for følgende domænepar:
 

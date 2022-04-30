@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a2e57c5dbfb8738eb9e554a3207679bfd48c6f60
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 8b73144b678140cd30917b4fd687663ff0a455a3
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970865"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144789"
 ---
 # <a name="user-reported-message-settings"></a>Indstillinger for brugerrapporterede meddelelser
 
@@ -95,7 +95,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
           > [!IMPORTANT]
           > Offentlige myndigheder i USA (GCC, GCC High og DoD) kan kun konfigurere **Min organisations postkasse**. De to andre indstillinger er deaktiveret.
           >
-          > Hvis organisationer er konfigureret til kun at sende til en brugerdefineret postkasse, sendes rapporterede meddelelser ikke til genscanning, og resultaterne i portalen brugerrapporterede meddelelser vil altid være tomme.
+          > Hvis organisationer er konfigureret til kun at sende brugerrapporterede meddelelser til den brugerdefinerede postkasse, vises rapporterede meddelelser i **brugerrapporterede meddelelser** , men deres resultater vil altid være tomme (da de ikke ville være blevet scannet igen).
 
        Uanset hvilken værdi du har valgt for **Send de rapporterede meddelelser til**, er følgende indstillinger tilgængelige:
 

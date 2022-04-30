@@ -19,21 +19,21 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om forslag, der kan hjælpe dig med at købe Microsoft-produkter og -tjenester.
 ROBOTS: NOINDEX
-ms.date: 03/17/2021
-ms.openlocfilehash: 6ba1f27901795a1e473165c0b6ac65d90ca1c0af
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.date: 04/28/2022
+ms.openlocfilehash: 8dc80bfaadcbee236f282796dcdb37f59360ebe4
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824864"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144855"
 ---
 # <a name="understand-the-proposal-workflow"></a>Forstå arbejdsprocessen for forslaget
 
 Et forslag er et formelt tilbud fra Microsoft om, at din organisation kan købe Microsoft-produkter og -tjenester. Du arbejder direkte sammen med en Microsoft-repræsentant om at fastlægge de specifikke produkter, tjenester og vilkår for dit forslag.
 
-En Microsoft-repræsentant udarbejder et forslag, der indeholder de elementer, som du og din repræsentant har diskuteret. Repræsentanten sender dig en mail med et link til forslagswebstedet. Webstedet indeholder det forslag, der er udarbejdet specielt til dig og din organisation.
+En Microsoft-repræsentant udarbejder et forslag, der indeholder de elementer, som du og din repræsentant har diskuteret. Repræsentanten sender dig en mail, der har et link til Azure Marketplace-portalen. Webstedet indeholder det forslag, der er udarbejdet specielt til dig og din organisation.
 
-Når du har modtaget meddelelsesmailen, skal du følge linket til forslagswebstedet. Når du har logget på webstedet, kan du starte processen til gennemsyn af forslag.
+Når du har modtaget meddelelsesmailen, skal du følge linket til forslagswebstedet. Når du logger på webstedet, kan du starte processen til gennemsyn af forslag.
 
 ## <a name="prerequisites-for-buying-items-with-a-proposal"></a>Forudsætninger for køb af varer med et forslag
 
@@ -53,13 +53,29 @@ Med Microsoft-kundeaftale (MCA) kan en organisation købe Microsoft-produkter og
 
 ## <a name="permissions-needed-to-sign-an-agreement-or-pay-for-items"></a>Tilladelser, der er nødvendige for at signere en aftale eller betale for elementer
 
-Hvis du ikke har en tildelt rolle på faktureringskontoen, får du tildelt den grundlæggende læserrolle, når du får vist forslaget. Denne rolle giver dig mulighed for at få vist forslaget, men ikke foretage dig noget. Du skal være tildelt rollen som ejer af faktureringskontoen eller bidragyder til faktureringskontoen, før du kan underskrive en aftale eller købe produkter og tjenester. Ejeren af din faktureringskonto kan tildele dig denne rolle.
+Du skal være ejer af faktureringskontoen eller bidragyder til faktureringskontoen for at kunne underskrive en aftale eller købe produkter og tjenester. Hvis du er global administrator, men ikke har en af disse roller, kan du tildele rollerne til dig selv. Hvis du ikke er global administrator, skal du bede ejeren af din globale administrator eller faktureringskonto om at tildele dig en af rollerne.
+
+Rollerne ejer af faktureringskontoen og bidragydere til faktureringskontoen tildeles ved hjælp af en af følgende metoder.
+
+### <a name="assign-roles-in-the-microsoft-365-admin-center"></a>Tildel roller i Microsoft 365 Administration
+
+1. I Microsoft 365 Administration skal du gå til siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">Faktureringsbilling-konti</a> > .
+2. Vælg **Tildel roller** i sektionen **Faktureringskontoroller** på siden **Faktureringskonti**.
+3. Søg efter navnet på den person, du vil tildele en rolle, i ruden **Tildel roller** .
+4. Markér afkrydsningsfeltet for det rollenavn, personen skal have, og vælg derefter **Tildel**.
+
+### <a name="assign-roles-in-the-azure-portal"></a>Tildel roller i Azure Portal
+
+1. I Azure Portal skal du gå til siden <a href="https://portal.azure.com/#blade/Microsoft_Azure_GTM/ModernBillingMenuBlade/Overview" target="_blank">Adgangskontrol (IAM).</a>
+2. På siden **Adgangskontrol (IAM)** skal du vælge **Tilføj**.
+3. I ruden **Tilføj tilladelse** skal du vælge den **rolle** , der skal tildeles til brugeren.
+4. Vælg brugeren, og vælg derefter **Gem**.
 
 Du kan få flere oplysninger om faktureringskontoroller under [Forstå adgang til faktureringskonti](manage-billing-accounts.md#understand-access-to-billing-accounts).
 
 Hvis dette er en ny faktureringskonto, og ingen har accepteret en aftale, bliver du automatisk ejeren af faktureringskontoen, forudsat at du:
 
-- Er den person, der er nævnt i forslaget, **eller**
+- Er den person, der er nævnt i forslaget **, eller**
 - Er allerede [en Azure Active Directory global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) for din organisation
 
 ## <a name="what-is-the-overall-workflow"></a>Hvad er den overordnede arbejdsproces?
@@ -154,6 +170,9 @@ I dette afsnit vises en liste over alle elementer, der er inkluderet i forslaget
 - **Køb nu** En liste over elementer, du betaler for under udtjekning i slutningen af arbejdsprocessen for accept af forslag.
 - **Rabatter (anvendes på fremtidige gebyrer)** En liste over rabatter, som du modtager som en del af forslaget.
 - **Inkluderet** En liste over elementer, der er inkluderet som en del af forslagspakken uden ekstra omkostninger. Nogle af disse elementer kan have en omkostning knyttet til dem i fremtiden.
+
+> [!NOTE]
+> Dit forslag kan omfatte abonnementer med en fremtidig startdato. Du kan få flere oplysninger under [Forstå fakturering for fremtidige startdatoer](billing-and-payments/future-start-date.md).
 
 ### <a name="summary"></a>Oversigt
 

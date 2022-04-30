@@ -20,12 +20,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om spoof intelligence-indsigt i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30a9a7a9714ed5e071c53a6b1641204fd8c4fafe
-ms.sourcegitcommit: 363bdc517bd2564c6420cf21f352e97079f950e0
+ms.openlocfilehash: c147396ff47f924d7dd4b2ebd3a0cac106de94b2
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/22/2022
-ms.locfileid: "65031806"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144689"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>Spoof intelligence-indsigt i EOP
 
@@ -35,9 +35,6 @@ ms.locfileid: "65031806"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-
-> [!NOTE]
-> De funktioner, der er beskrevet i denne artikel, er i prøveversion, kan ændres og er ikke tilgængelige i alle organisationer. Hvis din organisation ikke har de funktioner, der er beskrevet i denne artikel, kan du se den ældre spoof-administrationsoplevelse på [Administrer spoofed-afsendere ved hjælp af spoof intelligence-politikken og spoof intelligence-indsigt i EOP](walkthrough-spoof-intelligence-insight.md).
 
 I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser beskyttes indgående mails automatisk mod spoofing. EOP bruger **spoof intelligence** som en del af din organisations overordnede forsvar mod phishing. Du kan få flere oplysninger under [Beskyttelse mod spoofing i EOP](anti-spoofing-protection.md).
 

@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer tillad på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 413209bdecef19c4d101162f0e23f24ff1a2903e
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: af5f8ae1d3c172f4bf77bdca14625fe2440769ef
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129238"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144746"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Tilføj tilladte på listen over tilladte/blokerede lejere
 
@@ -57,12 +57,11 @@ Tillad afsendere (eller domæner) på siden **Indsendelser** i Microsoft 365 Def
 
 > ![Indsend malware til Microsoft til et analyseeksempel.](../../media/admin-submission-allow-messages.png)
 
-
 > [!NOTE]
 >
-> - På baggrund af hvilke filtre, der har bestemt, at mailen er skadelig, tilføjes under mailflow. Hvis filtre f.eks. fandt, at både afsender og URL-adresse var ugyldig, tilføjes der en tilladelse for hver enkelt. 
-> - Når enheden (afsender, domæne, URL-adresse og fil) blev registreret igen, springes alle filtre, der er knyttet til objektet, over.
-> - Så for en mail (der indeholder denne enhed), under mailflow, vil mailen blive leveret, hvis resten af filtrene finder, at mailen er ren.
+> - På baggrund af hvilke filtre, der har bestemt, at mailen er skadelig, tilføjes under mailflowet . Hvis filtre f.eks. fandt, at både afsender og URL-adresse var ugyldig, tilføjes der en tilladelse for hver enkelt. 
+> - Når enheden (afsender, domæne, URL-adresse og fil) registreres igen, springes alle filtre, der er knyttet til objektet, over.
+> - For en mail (der indeholder dette objekt) under mailflowet, leveres mailen, hvis resten af filtrene finder, at mailen er ren. En afsenders tilladelse (når godkendelse passerer) tilsidesætter f.eks. alle domme undtagen malware og phishing med høj tillid, der er knyttet til en vedhæftet fil eller URL-adresse.
 
 ## <a name="add-url-allows-using-the-submissions-portal"></a>Tilføj URL-adresse gør det muligt at bruge portalen Indsendelser
 
@@ -85,12 +84,10 @@ Tillad URL-adresser på siden **Indsendelser** i Microsoft 365 Defender.
 > [!div class="mx-imgBorder"]
 > ![Send URL-adresse til analyse.](../../media/submit-url-for-analysis.png)
 
-
 > [!NOTE]
 >
-> -  Når URL-adressen registreres igen, sendes URL-adressen ikke til detonation eller kontrol af omdømme, og alle andre URL-baserede filtre springes over.
-> -  Så for en mail (der indeholder denne URL-adresse), under mailflow, hvis resten af filtrene finder, at mailen er ren, så leveres mailen.
-
+> - Når URL-adressen registreres igen, sendes URL-adressen ikke til detonation eller kontrol af omdømme, og alle andre URL-baserede filtre springes over.
+> - Så for en mail (der indeholder denne URL-adresse), under mailflowet, vil mailen blive leveret, hvis resten af filtrene finder, at mailen er ren.
 
 ## <a name="add-file-allows-using-the-submissions-portal"></a>Tilføj fil gør det muligt at bruge indsendelsesportalen
 
@@ -113,7 +110,6 @@ Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
 > [!div class="mx-imgBorder"]
 > ![Send mail til analyse.](../../media/submit-email-for-analysis.png)
 
-
 > [!NOTE]
 >
 > - Når filen registreres igen, sendes den ikke til detonation eller kontrol af omdømme, og alle andre filbaserede filtre springes over.
@@ -126,7 +122,7 @@ Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
 > - Kun _kombinationen_ af den spoofede bruger _og_ den afsendende infrastruktur, som defineret i domæneparret, er specifikt tilladt eller blokeret fra spoofing.
 > - Når du konfigurerer en tilladelses- eller blokpost for et domænepar, vises meddelelser fra det pågældende domænepar ikke længere i indsigten spoof intelligence.
 > - Poster for spoofed afsendere udløber aldrig.
-> - Spoof understøtter både tillad og blok. URL-adressen understøtter kun Tillad.
+> - Spoof understøtter både tillad og blok. URL-adressen understøtter kun blokering.
 
 1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Lejer tillad/bloker lister** i afsnittet **Regler**. Hvis du vil gå direkte til siden **Med lejer-/bloklister** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
 

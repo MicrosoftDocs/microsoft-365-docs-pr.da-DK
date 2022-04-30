@@ -17,12 +17,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du aktiverer tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing for Outlook og Outlook på internettet, for individuelle brugere eller for hele organisationen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 14d59cbe6f3f98aabc231da88e4f0919a3974c97
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: a4166b36888c96b12a8aa410848c392c2afdaeb5
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973217"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144833"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing
 
@@ -61,7 +61,7 @@ Hvis du er global administrator eller Exchange Online administrator, og Exchange
 
 - Begge tilføjelsesprogrammer er ikke tilgængelige for delte postkasser.
 
-- Begge tilføjelsesprogrammer er ikke tilgængelige for postkasser i det lokale miljø Exchange. 
+- Begge tilføjelsesprogrammer er ikke tilgængelige for postkasser i det lokale miljø Exchange.
 
 - Din eksisterende webbrowser bør fungere med tilføjelsesprogrammer til rapportmeddelelse og rapport phishing. Men hvis du bemærker, at tilføjelsesprogrammet ikke er tilgængeligt eller ikke fungerer som forventet, kan du prøve en anden browser.
 
@@ -81,7 +81,7 @@ Hvis du er global administrator eller Exchange Online administrator, og Exchange
 
 2. Klik på **HENT DET NU**.
 
-   :::image type="content" source="../../media/ReportMessageGETITNOW.png" alt-text="Rapportmeddelelsen Hent det nu" lightbox="../../media/ReportMessageGETITNOW.png":::
+   :::image type="content" source="../../media/ReportMessageGETITNOW.png" alt-text="Rapportmeddelelsen Hent det nu." lightbox="../../media/ReportMessageGETITNOW.png":::
 
 3. Gennemse vilkårene for anvendelse og politik om beskyttelse af personlige oplysninger i den dialogboks, der vises, og klik derefter på **Fortsæt**.
 
@@ -92,7 +92,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 - I Outlook ser ikonet sådan ud:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/OutlookReportMessageIcon.png" alt-text="Tilføjelsesprogrammet Rapportmeddelelse for Outlook" lightbox="../../media/OutlookReportMessageIcon.png":::
+    > :::image type="content" source="../../media/OutlookReportMessageIcon.png" alt-text="Ikonet for tilføjelsesprogrammet Rapportmeddelelse for Outlook." lightbox="../../media/OutlookReportMessageIcon.png":::
 
 - I Outlook på internettet ser ikonet sådan ud:
 
@@ -107,21 +107,21 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 1. I [Microsoft 365 Administration](https://admin.microsoft.com/AdminPortal/Home?#/homepage) skal du gå til **Indstillinger** \> **integrerede apps**. Klik på **Hent apps**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps" lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
+    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps." lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
 
-2. På den **Microsoft 365 Apps** side, der vises, skal du klikke i feltet **Søg**, angive **Rapportmeddelelse** og derefter klikke på søgeikonet **Søg**![.](../../media/search-icon.png) Find og vælg **Rapportmeddelelse** på listen over resultater. 
+2. På den **Microsoft 365 Apps** side, der vises, skal du klikke i feltet **Søg**, angive **Rapportmeddelelse** og derefter klikke på søgeikonet **Søg**![.](../../media/search-icon.png) Find og vælg **Rapportmeddelelse** på listen over resultater.
 
-3. Siden med oplysninger om appen åbnes. Vælg **Hent det nu**. 
-
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message.png" alt-text="Tilføjelsesprogrammet Rapportmeddelelse" lightbox="../../media/microsoft-365-admin-center-report-message.png":::
-
-4. Udfyld de grundlæggende profiloplysninger, og klik derefter på **Fortsæt**. 
+3. Siden med oplysninger om appen åbnes. Vælg **Hent det nu**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-profile-info.png" alt-text="Profilkonfigurationen for tilføjelsesprogrammet Rapportmeddelelse" lightbox="../../media/microsoft-365-admin-center-profile-info.png":::
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message.png" alt-text="Tilføjelsesprogrammet Rapportmeddelelse." lightbox="../../media/microsoft-365-admin-center-report-message.png":::
 
-5. Pop **op-vinduet Installér ny app** åbnes. Konfigurer følgende indstillinger. Klik på **Næste** for at gå til næste side for at fuldføre konfigurationen. 
+4. Udfyld de grundlæggende profiloplysninger, og klik derefter på **Fortsæt**.
+
+    > [!div class="mx-imgBorder"]
+    > :::image type="content" source="../../media/microsoft-365-admin-center-profile-info.png" alt-text="Profilkonfigurationen for tilføjelsesprogrammet Rapportmeddelelse." lightbox="../../media/microsoft-365-admin-center-profile-info.png":::
+
+5. Pop **op-vinduet Installér ny app** åbnes. Konfigurer følgende indstillinger. Klik på **Næste** for at gå til næste side for at fuldføre konfigurationen.
 
    - **Tilføj brugere**: Vælg en af følgende værdier:
      - **Bare mig**
@@ -132,13 +132,13 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
      - **Acceptér anmodninger om tilladelser**: Læs apptilladelserne og -egenskaberne omhyggeligt, før du går til næste side.
 
         > [!div class="mx-imgBorder"]
-        > :::image type="content" source="../../media/microsoft-365-admin-center-deploy-new-app.png" alt-text="Siden Acceptér anmodninger om tilladelser" lightbox="../../media/microsoft-365-admin-center-deploy-new-app.png":::
+        > :::image type="content" source="../../media/microsoft-365-admin-center-deploy-new-app.png" alt-text="Siden Acceptér anmodninger om tilladelser." lightbox="../../media/microsoft-365-admin-center-deploy-new-app.png":::
 
-     - **Afslut installationen**: Gennemse og afslut installationen af tilføjelsesprogrammet. 
-     - **Installationen er fuldført**: Vælg **Udført** for at fuldføre konfigurationen. 
+     - **Afslut installationen**: Gennemse og afslut installationen af tilføjelsesprogrammet.
+     - **Installationen er fuldført**: Vælg **Udført** for at fuldføre konfigurationen.
 
         > [!div class="mx-imgBorder"]
-        > :::image type="content" source="../../media/microsoft-365-admin-center-deployment-complete.png" alt-text="Meddelelsesmeddelelsen om installationen blev fuldført" lightbox="../../media/microsoft-365-admin-center-deployment-complete.png":::
+        > :::image type="content" source="../../media/microsoft-365-admin-center-deployment-complete.png" alt-text="Meddelelsesmeddelelsen om installationen blev fuldført." lightbox="../../media/microsoft-365-admin-center-deployment-complete.png":::
 
 ## <a name="edit-settings-for-the-report-message-add-in"></a>Rediger indstillinger for tilføjelsesprogrammet Rapportmeddelelse
 
@@ -147,9 +147,9 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 2. I det pop op-vindue, der vises, skal du vælge **Rediger brugere** for at redigere brugerindstillinger.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message-edit.png" alt-text="Pop op-vinduet Rapportmeddelelse" lightbox="../../media/microsoft-365-admin-center-report-message-edit.png":::
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message-edit.png" alt-text="Pop op-vinduet Rapportmeddelelse." lightbox="../../media/microsoft-365-admin-center-report-message-edit.png":::
 
-3. Hvis du vil fjerne tilføjelsesprogrammet, skal du vælge **Fjern app** under **Handlinger** i det samme pop op-vindue. 
+3. Hvis du vil fjerne tilføjelsesprogrammet, skal du vælge **Fjern app** under **Handlinger** i det samme pop op-vindue.
 
 ## <a name="get-the-report-phishing-add-in"></a>Hent tilføjelsesprogrammet Rapport phishing
 
@@ -182,15 +182,15 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 1. I [Microsoft 365 Administration](https://admin.microsoft.com/AdminPortal/Home?#/homepage) skal du gå til **Indstillinger** \> **integrerede apps**. Klik på **Hent apps**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps" lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
+    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps." lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
 
-2. På den **Microsoft 365 Apps** side, der vises, skal du klikke i feltet **Søg**, angive **Rapport phishing** og **derefter klikke på** ![søgeikonet Søg.](../../media/search-icon.png) Find og vælg **Rapport phishing** på listen over resultater. 
- 
+2. På den **Microsoft 365 Apps** side, der vises, skal du klikke i feltet **Søg**, angive **Rapport phishing** og **derefter klikke på** ![søgeikonet Søg.](../../media/search-icon.png) Find og vælg **Rapport phishing** på listen over resultater.
+
 3. Siden med oplysninger om appen åbnes. Vælg **Hent det nu**.
 
 4. Udfyld de grundlæggende profiloplysninger, og klik derefter på **Fortsæt**.
 
-5. Pop **op-vinduet Installér ny app** åbnes. Følg de trin, [der er beskrevet ovenfor](enable-the-report-message-add-in.md#get-the-report-message-add-in-for-your-organization) , for at fuldføre konfigurationen. 
+5. Pop **op-vinduet Installér ny app** åbnes. Følg de trin, [der er beskrevet ovenfor](enable-the-report-message-add-in.md#get-the-report-message-add-in-for-your-organization) , for at fuldføre konfigurationen.
 
 ## <a name="edit-settings-for-the-report-phishing-add-in"></a>Rediger indstillinger for tilføjelsesprogrammet Rapport phishing
 
@@ -199,6 +199,6 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 2. I det pop op-vindue, der vises, skal du vælge **Rediger brugere** for at redigere brugerindstillinger.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/microsoft-365-admin-center-report-phishing-edit.png" alt-text="Pop op-vinduet Phishing-rapport" lightbox="../../media/microsoft-365-admin-center-report-phishing-edit.png":::
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-phishing-edit.png" alt-text="Pop op-vinduet Rapport phishing." lightbox="../../media/microsoft-365-admin-center-report-phishing-edit.png":::
 
-3. Hvis du vil fjerne tilføjelsesprogrammet, skal du vælge **Fjern app** under **Handlinger** i det samme pop op-vindue. 
+3. Hvis du vil fjerne tilføjelsesprogrammet, skal du vælge **Fjern app** under **Handlinger** i det samme pop op-vindue.

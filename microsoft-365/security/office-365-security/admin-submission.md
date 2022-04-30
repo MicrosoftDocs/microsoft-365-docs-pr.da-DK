@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a21c9e6655c01e2d2229e957f79b2342895ac4e4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 5d16cae309a90b8ffe10c90fea8ca3a359ece33b
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971963"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144811"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -278,7 +278,7 @@ Hvis du har installeret [tilføjelsesprogrammet Rapportmeddelelse](enable-the-re
    - Klik på **Eksportér** for at eksportere posterne. I den dialogboks, der vises, skal du gemme filen .csv.
 
 > [!NOTE]
-> Hvis organisationer er konfigureret til kun at sende brugerrapporterede meddelelser til den brugerdefinerede postkasse, sendes rapporterede meddelelser ikke til nyscanning, og resultaterne i **brugerrapporterede meddelelser** vil altid være tomme.
+> Hvis organisationer er konfigureret til kun at sende brugerrapporterede meddelelser til den brugerdefinerede postkasse, vises rapporterede meddelelser i **brugerrapporterede meddelelser** , men deres resultater vil altid være tomme (da de ikke ville være blevet scannet igen).
 
 ### <a name="undo-user-submissions"></a>Fortryd brugerindsendelser
 

@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365 tjenester, og analysér i hvert diagram for at få mere indsigt.
-ms.openlocfilehash: aa1cdf4b8fa6c1d558b005eb80031a20be4872af
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4757cf72653ffad2caeba45c99d3aabe61517ee4
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65088840"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144635"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 rapporter i Administration
 
@@ -87,35 +87,35 @@ Afhængigt af dit abonnement er her de tilgængelige rapporter i alle miljøer.
 
 |**Rapport**|**Offentlige**|**GCC**|**GCC høj**|**Dod**|**Office 365 drevet af 21Vianet**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|[Brug af Microsoft-browser](browser-usage-report.md)|Ja|Nej[^1]|Nej[^1]|Nej[^1]|Nej[^1]|
+|[Brug af Microsoft-browser](browser-usage-report.md)|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|
 |[Mailaktivitet](email-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Brug af mailapps](email-apps-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Postkasseforbrug](mailbox-usage.md)|Ja|Ja|Ja|Ja|Ja|
 |[Office aktiveringer](microsoft-office-activations-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Aktive brugere](active-users-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Microsoft 365 grupper](office-365-groups-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[Microsoft 365 Apps brug](microsoft365-apps-usage-ww.md)|Ja|Ja|Nej[^1]|Nej[^1]|Ja
+|[Microsoft 365 Apps brug](microsoft365-apps-usage-ww.md)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja
 |[OneDrive for Business brugeraktivitet](onedrive-for-business-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[OneDrive for Business brug](onedrive-for-business-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[SharePoint webstedsforbrug](sharepoint-site-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[SharePoint aktivitet](sharepoint-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[Microsoft Teams brugeraktivitet](microsoft-teams-user-activity-preview.md)|Ja|Ja|Ja|Ja|I/T[^2]|
-|[Microsoft Teams enhedsforbrug](microsoft-teams-device-usage-preview.md)|Ja|Ja|Ja|Ja|I/T[^2]|
-|[Microsoft Teams forbrugsaktivitet](microsoft-teams-usage-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
-|[Yammer aktivitet](yammer-activity-report-ww.md)|Ja|Ja|I/T[^2]|I/T[^2]|I/T[^2]|
-|[Yammer enhedsforbrug](yammer-device-usage-report-ww.md)|Ja|Ja|I/T[^2]|I/T[^2]|I/T[^2]|
-|[Yammer gruppers aktivitetsrapport](yammer-groups-activity-report-ww.md)|Ja|Ja|I/T[^2]|I/T[^2]|I/T[^2]|
-|[Formularaktivitet](forms-activity-ww.md)|Ja|Ja|Nej[^1]|Nej[^1]|Nej[^1]|
-|[Dynamics 365 Customer Voice-aktivitet](forms-pro-activity-ww.md)|Ja|Ja|I/T[^2]|I/T[^2]|I/T[^2]|
-|[Skype for Business Onlineaktivitet](/SkypeForBusiness/skype-for-business-online-reporting/activity-report)|Ja|Ja|Nej[^1]|Nej[^1]|Ja|
-|[Skype for Business Organiseret aktivitet for onlinekonference](/SkypeForBusiness/skype-for-business-online-reporting/conference-organizer-activity-report)|Ja|Ja|Nej[^1]|Nej[^1]|Ja|
-|[Skype for Business Deltageraktivitet i onlinemøde](/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)|Ja|Ja|Nej[^1]|Nej[^1]|Ja|
-|[Skype for Business Online peer-to-peer-aktivitet](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Ja|Ja|Nej[^1]|Nej[^1]|Ja|
+|[Microsoft Teams brugeraktivitet](microsoft-teams-user-activity-preview.md)|Ja|Ja|Ja|Ja|I/<sup>T2</sup>|
+|[Microsoft Teams enhedsforbrug](microsoft-teams-device-usage-preview.md)|Ja|Ja|Ja|Ja|I/<sup>T2</sup>|
+|[Microsoft Teams forbrugsaktivitet](microsoft-teams-usage-activity.md)|Ja|Ja|Ja|Ja|I/<sup>T2</sup>|
+|[Yammer aktivitet](yammer-activity-report-ww.md)|Ja|Ja|I/<sup>T2</sup>|I/<sup>T2</sup>|I/<sup>T2</sup>|
+|[Yammer enhedsforbrug](yammer-device-usage-report-ww.md)|Ja|Ja|I/<sup>T2</sup>|I/<sup>T2</sup>|I/<sup>T2</sup>|
+|[Yammer gruppers aktivitetsrapport](yammer-groups-activity-report-ww.md)|Ja|Ja|I/<sup>T2</sup>|I/<sup>T2</sup>|I/<sup>T2</sup>|
+|[Formularaktivitet](forms-activity-ww.md)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|
+|[Dynamics 365 Customer Voice-aktivitet](forms-pro-activity-ww.md)|Ja|Ja|I/<sup>T2</sup>|I/<sup>T2</sup>|I/<sup>T2</sup>|
+|[Skype for Business Onlineaktivitet](/SkypeForBusiness/skype-for-business-online-reporting/activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
+|[Skype for Business Organiseret aktivitet for onlinekonference](/SkypeForBusiness/skype-for-business-online-reporting/conference-organizer-activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
+|[Skype for Business Deltageraktivitet i onlinemøde](/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
+|[Skype for Business Online peer-to-peer-aktivitet](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
 |[Viva Learning aktivitet](viva-learning-activity.md)|Ja|NIELSEN|NIELSEN|NIELSEN|NIELSEN|
 |[Viva Insights aktivitet](viva-insights-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
 
-[^1]: The report is in plan to be released in the future. The <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Roadmap</a> will be updated before the release.
-[^2]: The service is not available in the environment so no plan to release the report.
+I/T<sup>:</sup> Rapporten er planlagt til at blive udgivet i fremtiden. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Køreplanen for Microsoft 365</a> opdateres før udgivelsen.
+I/<sup>T2</sup>: Tjenesten er ikke tilgængelig i miljøet, så der er ingen plan om at udgive rapporten.
 
 ## <a name="how-to-view-licensing-information"></a>Sådan får du vist licensoplysninger
 
