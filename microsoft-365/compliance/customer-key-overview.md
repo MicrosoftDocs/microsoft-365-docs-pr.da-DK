@@ -1,5 +1,5 @@
 ---
-title: Tjenestekryptering med kundenøgle
+title: Tjenestekryptering med Microsoft Purview-kundenøgle
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -14,15 +14,17 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 ms.custom: seo-marvel-apr2020
-description: I denne artikel får du mere at vide om, hvordan tjenestekryptering fungerer sammen med kundenøglen i Microsoft 365.
-ms.openlocfilehash: 65098994a6883fdadd3106b74b25a2251239fb3a
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: I denne artikel får du mere at vide om, hvordan tjenestekryptering fungerer sammen med Microsoft Purview Customer Key.
+ms.openlocfilehash: efb82a38c2f3a2e07d695425f36a17eebdbdf5ec
+ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761081"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65145206"
 ---
-# <a name="service-encryption-with-customer-key"></a>Tjenestekryptering med kundenøgle
+# <a name="service-encryption-with-microsoft-purview-customer-key"></a>Tjenestekryptering med Microsoft Purview-kundenøgle
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 leverer grundlæggende kryptering på diskenhedsniveau, der er aktiveret via BitLocker og Distributed Key Manager (DKM). Microsoft 365 tilbyder et ekstra krypteringslag for dit indhold. Dette indhold indeholder data fra Exchange Online, Skype for Business, SharePoint Online, OneDrive for Business og Microsoft Teams.
 
@@ -40,7 +42,7 @@ Kundenøglen krypterer kun inaktive data i cloudmiljøet. Kundenøglen fungerer 
 
 ## <a name="about-data-encryption-policies"></a>Om politikker for datakryptering
 
-En politik for datakryptering definerer krypteringshierarkiet. Dette hierarki bruges af tjenesten til at kryptere data ved hjælp af hver af de nøgler, du administrerer, og den tilgængelighedsnøgle, der er beskyttet af Microsoft. Du opretter DEP'er ved hjælp af PowerShell-cmdlet'er og tildeler derefter disse DEP'er for at kryptere programdata. Der er tre typer dep'er, der understøttes af Microsoft 365 kundenøgle. Hver politiktype bruger forskellige cmdlet'er og giver dækning for en anden type data. De DEP'er, du kan definere, omfatter:
+En politik for datakryptering definerer krypteringshierarkiet. Dette hierarki bruges af tjenesten til at kryptere data ved hjælp af hver af de nøgler, du administrerer, og den tilgængelighedsnøgle, der er beskyttet af Microsoft. Du opretter DEP'er ved hjælp af PowerShell-cmdlet'er og tildeler derefter disse DEP'er for at kryptere programdata. Der er tre typer dep'er, der understøttes af kundenøglen. Hver politiktype bruger forskellige cmdlet'er og giver dækning for en anden type data. De DEP'er, du kan definere, omfatter:
 
 **Forhindring af datatab for flere Microsoft 365 arbejdsbelastninger** Disse DEP'er krypterer data på tværs af flere M365-arbejdsbelastninger for alle brugere i lejeren. Disse arbejdsbelastninger omfatter:
 
@@ -52,7 +54,8 @@ En politik for datakryptering definerer krypteringshierarkiet. Dette hierarki br
 - Teams statusmeddelelser
 - Bruger- og signaloplysninger for Exchange Online
 - Exchange Online postkasser, der ikke allerede er krypteret af dep'er til postkasser
-- Microsoft Information Protection:
+- Samlet lager for overvågningslog
+- Microsoft Purview Information Protection:
 
   - Præcise datamatchdata (EDM), herunder datafilskemaer, regelpakker og salte, der bruges til at hash-hashe de følsomme data. For EDM og Microsoft Teams krypterer DEP med flere arbejdsbelastninger nye data fra det tidspunkt, du tildeler forhindring af datatab til lejeren. For Exchange Online krypterer Kundenøgle alle eksisterende og nye data.
 

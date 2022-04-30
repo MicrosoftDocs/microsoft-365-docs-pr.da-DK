@@ -1,5 +1,5 @@
 ---
-title: Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
+title: Anvend automatisk en opbevaringsmærkat
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: 8c3df81eabb0d67993825d95e390d3e94c7a9bd7
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 2c1ea20f9b663ca8cee59043bbe6399f5bae66f1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762007"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "65145266"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -63,7 +65,7 @@ Brug følgende instruktioner til de to administratortrin.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Den globale administrator for din organisation har fuld tilladelse til at oprette og redigere opbevaringsmærkater og deres politikker. Hvis du ikke logger på som global administrator, kan du se oplysninger om tilladelser til [datastyring](get-started-with-records-management.md#permissions) eller styring af [oplysninger](get-started-with-information-governance.md#permissions-for-retention-policies-and-retention-labels), afhængigt af den løsning du bruger.
+Den globale administrator for din organisation har fuld tilladelse til at oprette og redigere opbevaringsmærkater og deres politikker. Hvis du ikke logger på som global administrator, kan du se oplysninger om tilladelser til [dataadministration](get-started-with-records-management.md#permissions) eller administration af [datalivscyklus](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels), afhængigt af den løsning du bruger.
 
 Sørg for, at du har [oprettet de opbevaringsmærkater](file-plan-manager.md#create-retention-labels) , du vil anvende på elementer.
 
@@ -73,13 +75,13 @@ Beslut, om politikken for opbevaringsmærkaten skal være **tilpasset** eller **
 
 Når du opretter en politik, der automatisk skal anvendes, vælger du en opbevaringsmærkat, der automatisk skal anvendes på indhold baseret på de betingelser, du angiver.
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com/) skal du navigere til en af følgende placeringer:
+1. Gå til en af følgende placeringer på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/):
     
     - Hvis du bruger datastyring:
         - **Løsninger** >  **Datastyring** > > fanen **Mærkatpolitikker** > **Anvend automatisk en etiket**
     
-    - Hvis du bruger styring af oplysninger:
-        - **Løsninger** >  **Informationstyring** >  Fanen **Etiketpolitikker** > **Anvend automatisk en etiket**
+    - Hvis du bruger administration af datalivscyklus:
+        - **Løsninger** >  Administration  >  **af datalivscyklus** Fanen **Etiketpolitikker** > **Anvend automatisk en etiket**
     
     Kan du ikke se din løsning i navigationsruden med det samme? Vælg først **Vis alle**.
 
@@ -147,7 +149,7 @@ Derudover understøttes SharePoint elementer, der er kladder, eller som aldrig e
 > 
 > Selvom gruppepostkasser normalt medtages ved at vælge den **Microsoft 365-grupper** placering, omfatter gruppeplaceringen kun SharePoint websteder, der er forbundet med en Microsoft 365 gruppe, for denne specifikke politikkonfiguration.
 
-Når du opretter politikker for automatisk anvendelse af opbevaringsmærkater for følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en DLP-politik (forebyggelse af datatab). Hver skabelon er forudkonfigureret til at søge efter bestemte typer følsomme oplysninger. I følgende eksempel er de følsomme oplysningstyper fra kategorien **Beskyttelse af personlige oplysninger** og dataskabelonen Personlige **oplysninger (PII** ):
+Når du opretter politikker for automatisk anvendelse af opbevaringsmærkater for følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en DLP-politik (Microsoft Purview Data Loss Prevention). Hver skabelon er forudkonfigureret til at søge efter bestemte typer følsomme oplysninger. I følgende eksempel er de følsomme oplysningstyper fra kategorien **Beskyttelse af personlige oplysninger** og dataskabelonen Personlige **oplysninger (PII** ):
 
 ![Politikskabeloner med typer af følsomme oplysninger.](../media/sensitive-info-configuration.png)
 
@@ -341,7 +343,7 @@ Når du anvender opbevaringsmærkater automatisk på baggrund af følsomme oplys
   
 ![Diagram over, hvornår automatisk anvendelse af navne træder i kraft.](../media/retention-labels-autoapply-timings.png)
 
-Hvis de forventede mærkater ikke vises efter syv dage, skal du kontrollere **status** for politikken for automatisk anvendelse ved at vælge den på siden **Mærkatpolitikker** i Overholdelsescenter. Hvis du får vist status for **Fra (fejl),** og du i oplysningerne om placeringerne får vist en meddelelse om, at det tager længere tid end forventet at installere politikken (for SharePoint) eller at forsøge at geninstallere politikken (for OneDrive), kan du prøve at køre [PowerShell-kommandoen Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
+Hvis de forventede mærkater ikke vises efter syv dage, skal du kontrollere **status** for politikken for automatisk anvendelse ved at vælge den på siden **Mærkatpolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du får vist status for **Fra (fejl),** og du i oplysningerne om placeringerne får vist en meddelelse om, at det tager længere tid end forventet at installere politikken (for SharePoint) eller at forsøge at geninstallere politikken (for OneDrive), kan du prøve at køre [PowerShell-kommandoen Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
 1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 

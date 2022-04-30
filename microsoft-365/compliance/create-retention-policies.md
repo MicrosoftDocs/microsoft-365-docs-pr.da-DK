@@ -1,5 +1,5 @@
 ---
-title: Opret og konfigurer opbevaringspolitikker til automatisk at bevare eller slette indhold
+title: Bevar eller slet indhold automatisk ved hjælp af opbevaringspolitikker
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,36 +17,38 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Brug en opbevaringspolitik til effektivt at holde styr på det indhold, som brugerne genererer med mail, dokumenter og samtaler. Behold det, du ønsker, og afvis det, du ikke ønsker.
-ms.openlocfilehash: 5a57093ed4ecd5b87a62701e3c055888ed16a5ca
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+description: Brug en opbevaringspolitik til effektivt at bevare kontrollen over det indhold, som brugerne genererer med mail, dokumenter og samtaler. Hold hvad du vil og slippe af med, hvad du ikke gør.
+ms.openlocfilehash: 22373fddf6a4ccac718f9fede9d1bbc40b92681d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595317"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "65145310"
 ---
 # <a name="create-and-configure-retention-policies"></a>Opret og konfigurer opbevaringspolitikker
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug en opbevaringspolitik til at administrere data for organisationen ved proaktivt at beslutte, om du vil bevare indhold, slette indhold eller bevare og derefter slette indholdet.
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Med en opbevaringspolitik kan du gøre dette meget effektivt ved at tildele de samme opbevaringsindstillinger på objektbeholderniveau, der automatisk nedarves af indhold i den pågældende beholder. Eksempelvis alle elementer på SharePoint websteder, alle mails i brugernes postkasser Exchange, alle kanalmeddelelser for teams, der bruges Microsoft Teams. Hvis du ikke er sikker på, om du vil bruge en opbevaringspolitik på beholderniveau eller en opbevaringsetiket på elementniveau, skal du se Opbevaringspolitikker [og opbevaringsetiketter](retention.md#retention-policies-and-retention-labels).
+Brug en opbevaringspolitik til at administrere dataene for din organisation ved proaktivt at beslutte, om du vil bevare indhold, slette indhold eller gemme og derefter slette indholdet.
 
-Du kan finde flere oplysninger om opbevaringspolitikker, og hvordan opbevaring fungerer i Microsoft 365, i [Få mere at vide om opbevaringspolitikker og opbevaringsetiketter](retention.md).
+Med en opbevaringspolitik kan du gøre dette meget effektivt ved at tildele de samme opbevaringsindstillinger på objektbeholderniveau, der automatisk nedarves af indhold i den pågældende objektbeholder. For eksempel alle elementer på SharePoint websteder, alle mails i brugernes Exchange postkasser, alle kanalmeddelelser for teams, der bruges sammen med Microsoft Teams. Hvis du ikke er sikker på, om du vil bruge en opbevaringspolitik på objektbeholderniveau eller en opbevaringsmærkat på elementniveau, skal du se [Opbevaringspolitikker og opbevaringsmærkater](retention.md#retention-policies-and-retention-labels).
+
+Du kan finde flere oplysninger om opbevaringspolitikker, og hvordan opbevaring fungerer i Microsoft 365, under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
 
 > [!NOTE]
-> Oplysningerne på denne side er til administratorer af overholdelse af regler og standarder. Hvis du ikke er administrator og vil have oplysninger om, hvordan opbevaringspolitikker er konfigureret for de apps, du bruger, skal du kontakte din helpdesk, it-afdeling eller administrator. Hvis du får vist meddelelser om opbevaringspolitikker i Teams chats og kanalmeddelelser, kan det være nyttigt at gennemse [Teams om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
+> Oplysningerne på denne side er til overholdelsesadministratorer. Hvis du ikke er administrator og gerne vil forstå, hvordan opbevaringspolitikker er konfigureret for de apps, du bruger, skal du kontakte din helpdesk, it-afdeling eller administrator. Hvis du får vist meddelelser om opbevaringspolitikker i Teams chats og kanalmeddelelser, kan det være nyttigt at gennemse [Teams meddelelser om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Den globale administrator i organisationen har fuld tilladelse til at oprette og redigere opbevaringspolitikker. Hvis du ikke logger på som global administrator, skal du se oplysninger [om tilladelser til informationsstyring](get-started-with-information-governance.md#permissions-for-retention-policies-and-retention-labels).
+Den globale administrator for din organisation har fuld tilladelse til at oprette og redigere opbevaringspolitikker. Hvis du ikke logger på som global administrator, kan du se [oplysninger om tilladelser til administration af datalivscyklus](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels).
 
-Beslut før du opretter din opbevaringspolitik, om den **vil være tilpasset** eller **statisk**. Få mere at vide under [Tilpasnings- eller statiske politikomfang for opbevaring](retention.md#adaptive-or-static-policy-scopes-for-retention). Hvis du beslutter dig for at bruge en tilpasset politik, skal du oprette et eller flere tilpassede områder, før du opretter din opbevaringspolitik, og derefter vælge dem under processen til oprettelse af en opbevaringspolitik. Du kan finde en vejledning [i Konfigurationsoplysninger for adaptive områder](retention-settings.md#configuration-information-for-adaptive-scopes).
+Beslut, før du opretter din opbevaringspolitik, om den skal være **adaptiv** eller **statisk**. Du kan finde flere oplysninger under [Tilpassede eller statiske politikområder for opbevaring](retention.md#adaptive-or-static-policy-scopes-for-retention). Hvis du beslutter dig for at bruge en tilpasset politik, skal du oprette et eller flere tilpassede områder, før du opretter din opbevaringspolitik og derefter vælger dem under processen til oprettelse af opbevaringspolitik. Du kan finde en vejledning under [Konfigurationsoplysninger for tilpassede områder](retention-settings.md#configuration-information-for-adaptive-scopes).
 
 ## <a name="create-and-configure-a-retention-policy"></a>Opret og konfigurer en opbevaringspolitik
 
-Selvom en opbevaringspolitik kan understøtte flere tjenester, der er identificeret som "placeringer" i opbevaringspolitikken, kan du ikke oprette en enkelt opbevaringspolitik, der omfatter alle de understøttede placeringer:
+Selvom en opbevaringspolitik kan understøtte flere tjenester, der er identificeret som "placeringer" i opbevaringspolitikken, kan du ikke oprette en enkelt opbevaringspolitik, der indeholder alle de understøttede placeringer:
 
 - Exchange mail
 - SharePoint websted
@@ -60,119 +62,119 @@ Selvom en opbevaringspolitik kan understøtte flere tjenester, der er identifice
 - Yammer communitymeddelelser
 - Yammer brugermeddelelser
 
-Hvis du vælger placeringerne Teams en Yammer, når du opretter en opbevaringspolitik, udelades de andre placeringer automatisk. Det betyder, at den vejledning, du skal følge, afhænger af, om du skal medtage Teams eller Yammer placeringer:
+Hvis du vælger de Teams eller Yammer placeringer, når du opretter en opbevaringspolitik, udelades de andre placeringer automatisk. Det betyder, at de instruktioner, der skal følges, afhænger af, om du skal inkludere de Teams eller Yammer placeringer:
 
-- [Vejledning til en opbevaringspolitik for Teams placeringer](#retention-policy-for-teams-locations)
-- [Vejledning til en opbevaringspolitik for Yammer placeringer](#retention-policy-for-yammer-locations)
-- [Vejledning til opbevaringspolitik for andre placeringer end Teams og Yammer](#retention-policy-for-locations-other-than-teams-and-yammer)
+- [Instruktioner til en opbevaringspolitik for Teams placeringer](#retention-policy-for-teams-locations)
+- [Instruktioner til en opbevaringspolitik for Yammer placeringer](#retention-policy-for-yammer-locations)
+- [Instruktioner til en opbevaringspolitik for andre placeringer end Teams og Yammer](#retention-policy-for-locations-other-than-teams-and-yammer)
 
 > [!NOTE]
-> Når du bruger adaptive politikker i stedet for statiske politikker, kan du konfigurere en enkelt opbevaringspolitik, så den Teams og Yammer placeringer. Dette er ikke tilfældet for statiske politikker, hvor Teams og Yammer kræver deres egen opbevaringspolitik.
+> Når du bruger tilpassede politikker i stedet for statiske politikker, kan du konfigurere en enkelt opbevaringspolitik, så den omfatter både Teams og Yammer placeringer. Dette er ikke tilfældet for statiske politikker, hvor Teams og Yammer placeringer kræver deres egen opbevaringspolitik.
 
-Når du har mere end én opbevaringspolitik, og når du også bruger opbevaringsetiketter, skal du se Principperne for opbevaring, eller hvad der skal have forrang [?](retention.md#the-principles-of-retention-or-what-takes-precedence) for at forstå resultatet, når flere opbevaringsindstillinger gælder for det samme indhold.
+Når du har mere end én opbevaringspolitik, og når du også bruger opbevaringsmærkater, skal du se [Principperne for opbevaring, eller hvad har forrang?](retention.md#the-principles-of-retention-or-what-takes-precedence) for at forstå resultatet, når der gælder flere opbevaringsindstillinger for det samme indhold.
 
 ### <a name="retention-policy-for-teams-locations"></a>Opbevaringspolitik for Teams placeringer
 
 > [!NOTE]
-> Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er i forhåndsvisning. Når du konfigurerer opbevaringsindstillinger for **Teams** kanalmeddelelsesplaceringen, arver de opbevaringsindstillinger fra deres overordnede team, hvis et team har nogen delte kanaler.
+> Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er en prøveversion. Når du konfigurerer opbevaringsindstillinger for **placeringen af Teams kanalmeddelelsen**, nedarver de opbevaringsindstillinger fra deres overordnede team, hvis et team har delte kanaler.
 
-1. Vælg [Microsoft 365 Overholdelsescenter politikker](https://compliance.microsoft.com/) **for informationsstyring** >  **på listen**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
 
-2. Vælg **Ny opbevaringspolitik for** at starte Konfiguration **af Opret opbevaringspolitik** , og navngive din nye opbevaringspolitik.
+2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
-3. For siden **Vælg den type opbevaringspolitik** , der skal oprettes skal du vælge **Tilpasset** eller **Statisk afhængigt** af det valg, du har foretaget fra vejledningen [Før du begynder](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge Tilpasset, men  da der ikke vil være nogen tilpassede områder at vælge, kan du ikke afslutte konfigurationen med denne indstilling.
+3. På siden **Vælg den type opbevaringspolitik, der skal oprettes** skal du vælge **Adaptiv** eller **Statisk** afhængigt af det valg, du har foretaget i vejledningen [Før du starter](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge **Adaptivt** , men fordi der ikke er nogen tilpassede områder at vælge, kan du ikke fuldføre konfigurationen med denne indstilling.
 
-4. Afhængigt af det valgte område:
+4. Afhængigt af dit valgte område:
     
-    - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge Teams **,** men ikke Teams **kanalmeddelelser**. 
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Teams chats**, men ikke **Teams kanalmeddelelser**. 
     
-    - Hvis du vælger **Statisk**: På **siden Vælg placeringer for at** anvende politikken skal du vælge en eller flere placeringer Teams:
-        - **Teams kanalmeddelelse**: Meddelelser fra standardchats og delte kanalchats samt standard- og delte kanalmøder, men ikke fra [private](/microsoftteams/private-channels) kanaler, der har deres egen politikplacering.
-        - **Teams chatsamtaler**: Beskeder fra private 1:1-chats, gruppechats og mødechats.
-        - **Teams private kanalmeddelelser**: Beskeder fra private kanalchats og private kanalmøder.
+    - Hvis du vælger **Statisk**: Vælg en eller flere placeringer for Teams på siden **Vælg placeringer, hvor politikken skal anvendes**:
+        - **Teams kanalmeddelelse**: Meddelelser fra almindelige og delte kanalchats samt standard- og delte kanalmøder, men ikke fra [private kanaler](/microsoftteams/private-channels), der har deres egen politikplacering.
+        - **Teams chats**: Meddelelser fra private 1:1-chats, gruppechats og mødechats.
+        - **Teams private kanalmeddelelser**: Meddelelser fra private kanalchats og private kanalmøder.
         
-       Som standard er [alle teams og alle brugere markeret](retention-settings.md#a-policy-that-applies-to-entire-locations), men du kan finjustere dette ved at vælge [**indstillingerne Vælg** **og Udelad**](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions).
+       Som standard [er alle teams og alle brugere valgt](retention-settings.md#a-policy-that-applies-to-entire-locations), men du kan tilpasse dette ved at vælge [indstillingerne **Vælg** og **Udelad**](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions).
 
-5. Ud **for Beslut, om du vil** bevare indhold, slette det eller begge sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold.
+5. For **Beslut, om du vil bevare indhold, slette det eller begge** sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold.
 
-   Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevarer og derefter sletter efter en bestemt tidsperiode eller blot sletter indhold efter en bestemt tidsperiode. Du kan finde flere oplysninger [Indstillinger oplysninger om at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
+   Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevare og derefter slette efter et angivet tidsrum eller blot slette indhold efter et angivet tidsrum. Du kan få flere oplysninger [under Indstillinger til at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
 
 6. Fuldfør konfigurationen, og gem dine indstillinger.
 
-Du kan finde en vejledning til, hvornår du kan bruge opbevaringspolitikker til Teams og forstå slutbrugeroplevelsen i Administrere opbevaringspolitikker [for Microsoft Teams](/microsoftteams/retention-policies) fra Teams dokumentationen.
+Hvis du vil have hjælp til, hvornår du skal bruge opbevaringspolitikker til Teams og forstå slutbrugeroplevelsen, skal du se [Administrer opbevaringspolitikker for Microsoft Teams](/microsoftteams/retention-policies) i dokumentationen til Teams.
 
-Hvis du vil have tekniske oplysninger om, hvordan opbevaring fungerer for Teams, herunder hvilke elementer af meddelelser, der understøttes til opbevaring og tidsindstillinger med eksempler på gennemgange, skal du se Få mere at vide om opbevaring [for Microsoft Teams](retention-policies-teams.md).
+Du kan finde tekniske oplysninger om, hvordan opbevaring fungerer for Teams, herunder hvilke elementer i meddelelser der understøttes for oplysninger om opbevaring og tidsindstillinger med eksempelgennemgange, under [Få mere at vide om opbevaring for Microsoft Teams](retention-policies-teams.md).
 
 #### <a name="known-configuration-issues"></a>Kendte konfigurationsproblemer
 
-- Selvom du kan vælge at starte opbevaringsperioden, når elementer sidst blev ændret, så bruges værdien af Hvornår **elementer** blev oprettet altid. For meddelelser, der er redigeret, gemmes en kopi af den oprindelige meddelelse med dens oprindelige tidsstempel for at identificere, hvornår denne redigerede meddelelse blev oprettet, og den redigerede meddelelse har et nyere tidsstempel.
+- Selvom du kan vælge indstillingen for at starte opbevaringsperioden, da elementerne sidst blev ændret, bruges værdien af **Når elementer blev oprettet** altid. For meddelelser, der redigeres, gemmes en kopi af den oprindelige meddelelse med det oprindelige tidsstempel for at identificere, hvornår denne forudredigeringsmeddelelse blev oprettet, og den postredigeringerede meddelelse har et nyere tidsstempel.
 
-- Når du vælger **Rediger** for placeringen Teams chats, får du muligvis vist gæster og brugere uden postkasse. Opbevaringspolitikker er ikke udviklet til disse brugere, så du skal ikke markere dem.
+- Når du vælger **Rediger** for den Teams chatplacering, kan du se gæster og brugere, der ikke har postkasse. Opbevaringspolitikker er ikke udviklet til disse brugere, så vælg dem ikke.
 
 
-#### <a name="additional-retention-policy-needed-to-support-teams"></a>Yderligere opbevaringspolitik er nødvendig for at Teams
+#### <a name="additional-retention-policy-needed-to-support-teams"></a>Yderligere opbevaringspolitik, der er nødvendig for at understøtte Teams
 
-Teams er mere end blot chats og kanalmeddelelser. Hvis du har teams, der er oprettet fra en Microsoft 365-gruppe (tidligere Office 365-gruppe), skal du desuden konfigurere en opbevaringspolitik, der omfatter Microsoft 365-gruppen, ved hjælp af **Microsoft 365-grupper placering.** Denne opbevaringspolitik gælder for indhold i gruppens postkasse, websted og filer.
+Teams er mere end blot chats og kanalmeddelelser. Hvis du har teams, der er oprettet ud fra en Microsoft 365 gruppe (tidligere Office 365 gruppe), skal du desuden konfigurere en opbevaringspolitik, der omfatter den pågældende Microsoft 365 gruppe, ved hjælp af **den Microsoft 365-grupper** placering. Denne opbevaringspolitik gælder for indhold i gruppens postkasse, websted og filer.
 
-Hvis du har teamwebsteder, der ikke er knyttet til en Microsoft 365-gruppe, skal du have en opbevaringspolitik, der omfatter **placeringerne SharePoint-websteder** eller **OneDrive-konti** for at kunne opbevare og slette filer i Teams:
+Hvis du har teamwebsteder, der ikke har forbindelse til en Microsoft 365 gruppe, skal du have en opbevaringspolitik, der indeholder **de SharePoint websteder** eller **OneDrive kontoplaceringer** for at gemme og slette filer i Teams:
 
-- Filer, der deles i chat, gemmes på OneDrive for den bruger, der har delt filen.
+- Filer, der deles i chat, gemmes på den OneDrive konto for den bruger, der har delt filen.
 
-- Filer, der er overført til kanaler, gemmes SharePoint teamets websted.
+- Filer, der uploades til kanaler, gemmes på teamets SharePoint websted.
 
 > [!TIP]
-> Du kan anvende en opbevaringspolitik på kun et bestemt teams filer, når den ikke har forbindelse til en Microsoft 365-gruppe, ved at vælge SharePoint-webstedet for teamet og OneDrive-konti for brugere i teamet.
+> Du kan anvende en opbevaringspolitik på filerne for et bestemt team, når det ikke har forbindelse til en Microsoft 365 gruppe, ved at vælge teamets SharePoint websted og de OneDrive konti for brugere i teamet.
 
-Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365-grupper, SharePoint-websteder eller OneDrive-konti, kan slette en fil, der refereres til i en Teams-chat eller kanalmeddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i dialogboksen Teams, men når brugerne vælger filen, får de fejlmeddelelsen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker og kan også opstå, hvis en bruger manuelt sletter en fil SharePoint eller OneDrive.
+Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365 grupper, SharePoint websteder eller OneDrive konti, kan slette en fil, der henvises til i en Teams chat- eller kanalmeddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i Teams meddelelse, men når brugerne vælger filen, får de vist fejlen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker, og det kan også ske, hvis en bruger sletter en fil manuelt fra SharePoint eller OneDrive.
 
 ### <a name="retention-policy-for-yammer-locations"></a>Opbevaringspolitik for Yammer placeringer
 
 > [!NOTE]
-> Opbevaringspolitikker for Yammer giver i øjeblikket ikke brugerne besked, når meddelelser slettes som et resultat af en opbevaringspolitik.
+> Opbevaringspolitikker for Yammer informerer i øjeblikket ikke brugerne, når meddelelser slettes som følge af en opbevaringspolitik.
 >
-> Hvis du vil bruge denne funktion, Yammer dit netværk være [indbygget tilstand](/yammer/configure-your-yammer-network/overview-native-mode) og ikke hybridtilstand.
+> Hvis du vil bruge denne funktion, skal dit Yammer netværk være [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) og ikke hybridtilstand.
 
-1. Vælg [Microsoft 365 Overholdelsescenter politikker](https://compliance.microsoft.com/) **for informationsstyring** >  **på listen**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
 
-2. Vælg **Ny opbevaringspolitik for** at oprette en ny opbevaringspolitik.
+2. Vælg **Ny opbevaringspolitik** for at oprette en ny opbevaringspolitik.
 
-3. For siden **Vælg den type opbevaringspolitik** , der skal oprettes skal du vælge **Tilpasset** eller **Statisk afhængigt** af det valg, du har foretaget fra vejledningen [Før du begynder](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge Tilpasset, men  da der ikke vil være nogen tilpassede områder at vælge, kan du ikke afslutte konfigurationen med denne indstilling.
+3. På siden **Vælg den type opbevaringspolitik, der skal oprettes** skal du vælge **Adaptiv** eller **Statisk** afhængigt af det valg, du har foretaget i vejledningen [Før du starter](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge **Adaptivt** , men fordi der ikke er nogen tilpassede områder at vælge, kan du ikke fuldføre konfigurationen med denne indstilling.
 
-4. Afhængigt af det valgte område:
+4. Afhængigt af dit valgte område:
     
-    - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge en **Yammer,** men ikke Yammer **gruppemeddelelser**. 
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Yammer brugermeddelelser**, men ikke **Yammer communitymeddelelser**. 
     
-    - Hvis **du vælger Statisk**: På siden  Vælg placeringer for at anvende politikken skal du vælge en eller begge placeringer for Yammer: **Yammer-communitymeddelelse** **og Yammer-brugermeddelelser**.
+    - Hvis du vælger **Statisk**: På siden **Vælg placeringer, hvor politikken skal anvendes, skal** du slå den ene eller begge placeringer for Yammer til: **Yammer communitymeddelelse** og **Yammer brugermeddelelser**.
         
-        Som standard vælges alle communities og brugere, men du kan finjustere dette ved at angive grupper og brugere, der skal medtages eller udelades.
+        Som standard er alle communities og brugere valgt, men du kan tilpasse dette ved at angive communities og brugere, der skal medtages eller udelades.
         
-        For Yammer om brugermeddelelser: 
-        - Hvis du lader standardindstillingen være **Alle brugere**, er Azure B2B-gæstebrugere ikke inkluderet. 
+        For Yammer brugermeddelelser: 
+        - Hvis du forlader standarden hos **Alle brugere**, er Azure B2B-gæstebrugere ikke inkluderet. 
         - Hvis du vælger **Rediger** for **alle brugere**, kan du anvende en opbevaringspolitik på eksterne brugere, hvis du kender deres konto.
 
-5. Ud **for Beslut, om du vil** bevare indhold, slette det eller begge sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold. 
+5. For **Beslut, om du vil bevare indhold, slette det eller begge** sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold. 
     
-    Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevarer og derefter sletter efter en bestemt tidsperiode eller blot sletter indhold efter en bestemt tidsperiode. Du kan finde flere oplysninger [Indstillinger oplysninger om at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
+    Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevare og derefter slette efter et angivet tidsrum eller blot slette indhold efter et angivet tidsrum. Du kan få flere oplysninger [under Indstillinger til at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
 
 6. Fuldfør konfigurationen, og gem dine indstillinger.
 
-Du kan finde flere oplysninger om, hvordan opbevaringspolitikker fungerer for Yammer, i [Få mere at vide om opbevaring Yammer](retention-policies-yammer.md).
+Du kan finde flere oplysninger om, hvordan opbevaringspolitikker fungerer for Yammer, under [Få mere at vide om opbevaring for Yammer](retention-policies-yammer.md).
 
-#### <a name="additional-retention-policies-needed-to-support-yammer"></a>Yderligere opbevaringspolitikker er nødvendige for at understøtte Yammer
+#### <a name="additional-retention-policies-needed-to-support-yammer"></a>Yderligere opbevaringspolitikker, der er nødvendige for at understøtte Yammer
 
-Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails til dit Yammer-netværk, skal du konfigurere en ekstra opbevaringspolitik, der omfatter alle Microsoft 365-grupper, der bruges til Yammer, ved hjælp **af Microsoft 365-grupper** placering. 
+Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails for dit Yammer netværk, skal du konfigurere en yderligere opbevaringspolitik, der omfatter alle Microsoft 365 grupper, der bruges til Yammer, ved hjælp af **den Microsoft 365-grupper** placering. 
 
-Hvis du vil bevare og slette filer, der er gemt i Yammer, skal du have en opbevaringspolitik, der  omfatter placeringen Microsoft 365-grupper eller **OneDrive-kontoplaceringer**:
+Hvis du vil bevare og slette filer, der er gemt i Yammer, skal du bruge en opbevaringspolitik, der indeholder **placeringen af Microsoft 365-grupper** eller **OneDrive konti**:
 
-- Filer, der deles i private meddelelser, gemmes på OneDrive den bruger, der har delt filen. 
+- Filer, der deles i private meddelelser, gemmes på den OneDrive konto for den bruger, der har delt filen. 
 
-- Filer, der overføres til community'er, gemmes i gruppens forbundne SharePoint-webstedet for Yammer community'et.
+- Filer, der uploades til communities, gemmes på det gruppetilsluttede SharePoint websted for det Yammer community.
 
-Det er muligt, at en opbevaringspolitik, der anvendes på SharePoint-websteder eller OneDrive-konti, kan slette en fil, der refereres til i en Yammer-meddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i dialogboksen Yammer, men når brugerne vælger filen, får de fejlmeddelelsen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker og kan også opstå, hvis en bruger manuelt sletter en fil SharePoint eller OneDrive.
+Det er muligt, at en opbevaringspolitik, der anvendes på SharePoint websteder eller OneDrive konti, kan slette en fil, der henvises til i en Yammer meddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i meddelelsen Yammer, men når brugerne vælger filen, får de vist fejlen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker, og det kan også ske, hvis en bruger sletter en fil manuelt fra SharePoint eller OneDrive.
 
 ### <a name="retention-policy-for-locations-other-than-teams-and-yammer"></a>Opbevaringspolitik for andre placeringer end Teams og Yammer
 
-Brug følgende vejledning til opbevaringspolitikker, der gælder for en af disse tjenester:
+Brug følgende instruktioner til opbevaringspolitikker, der gælder for en af disse tjenester:
 
 - Exchange: Mail og offentlige mapper
 - SharePoint: Websteder
@@ -180,62 +182,62 @@ Brug følgende vejledning til opbevaringspolitikker, der gælder for en af disse
 - Microsoft 365 grupper
 - Skype for Business
 
-1. Vælg [Microsoft 365 Overholdelsescenter politikker](https://compliance.microsoft.com/) **for informationsstyring** >  **på listen**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
 
-2. Vælg **Ny opbevaringspolitik for** at starte Konfiguration **af Opret opbevaringspolitik** , og navngive din nye opbevaringspolitik.
+2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
-3. For siden **Vælg den type opbevaringspolitik** , der skal oprettes skal du vælge **Tilpasset** eller **Statisk afhængigt** af det valg, du har foretaget fra vejledningen [Før du begynder](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge Tilpasset, men  da der ikke vil være nogen tilpassede områder at vælge, kan du ikke afslutte konfigurationen med denne indstilling. Adaptive politikker understøtter ikke placeringer for Exchange offentlige mapper eller Skype for Business.
+3. På siden **Vælg den type opbevaringspolitik, der skal oprettes** skal du vælge **Adaptiv** eller **Statisk** afhængigt af det valg, du har foretaget i vejledningen [Før du starter](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge **Adaptivt** , men fordi der ikke er nogen tilpassede områder at vælge, kan du ikke fuldføre konfigurationen med denne indstilling. Tilpassede politikker understøtter ikke placeringer for Exchange offentlige mapper eller Skype for Business.
 
-4. Afhængigt af det valgte område:
+4. Afhængigt af dit valgte område:
     
-    - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge Exchange **,** men ikke SharePoint **websteder**. 
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange mail**, men ikke **SharePoint websteder**. 
     
-    - Hvis du vælger **Statisk**: På siden  Vælg placeringer skal du slå en af placeringerne til eller fra undtagen placeringer for Teams og Yammer. For hver placering kan du lade den være som standard for at anvende politikken på hele [placeringen eller angive](retention-settings.md#a-policy-that-applies-to-entire-locations) [omfatter og udelader](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions).
+    - Hvis du vælger **Statisk**: På siden **Vælg placeringer** skal du slå en af placeringerne til eller fra undtagen placeringerne for Teams og Yammer. For hver placering kan du lade den være som standard for at [anvende politikken på hele placeringen](retention-settings.md#a-policy-that-applies-to-entire-locations) eller [angive "include" og "excludes](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)".
     
     Oplysninger, der er specifikke for placeringer:
     - [Exchange mail og Exchange offentlige mapper](retention-settings.md#configuration-information-for-exchange-email-and-exchange-public-folders)
-    - [SharePoint websteder og OneDrive-konti](retention-settings.md#configuration-information-for-sharepoint-sites-and-onedrive-accounts)
+    - [SharePoint websteder og OneDrive konti](retention-settings.md#configuration-information-for-sharepoint-sites-and-onedrive-accounts)
     - [Microsoft 365-grupper](retention-settings.md#configuration-information-for-microsoft-365-groups)
     - [Skype for Business](retention-settings.md#configuration-information-for-skype-for-business)
 
-5. Ud **for Beslut, om du vil** bevare indhold, slette det eller begge sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold.
+5. For **Beslut, om du vil bevare indhold, slette det eller begge** sider, skal du angive konfigurationsindstillingerne for at bevare og slette indhold.
     
-    Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevarer og derefter sletter efter en bestemt tidsperiode eller blot sletter indhold efter en bestemt tidsperiode. Du kan finde flere [oplysninger Indstillinger oplysninger om at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content) på denne side.
+    Du kan oprette en opbevaringspolitik, der kun bevarer indhold uden at slette, bevare og derefter slette efter et angivet tidsrum eller blot slette indhold efter et angivet tidsrum. Du kan få flere oplysninger [under Indstillinger til at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content) på denne side.
 
 6. Fuldfør konfigurationen, og gem dine indstillinger.
 
-## <a name="how-long-it-takes-for-retention-policies-to-take-effect"></a>Hvor lang tid det tager at opbevaringspolitikkerne træder i kraft
+## <a name="how-long-it-takes-for-retention-policies-to-take-effect"></a>Hvor lang tid det tager for opbevaringspolitikker at træde i kraft
 
-Når du opretter og indsender en opbevaringspolitik, kan det tage op til syv dage, før opbevaringspolitikken anvendes:
+Når du opretter og sender en opbevaringspolitik, kan det tage op til syv dage, før opbevaringspolitikken anvendes:
   
 ![Diagram over, hvornår opbevaringspolitikken træder i kraft.](../media/retention-policy-timings.png)
 
-For det første skal opbevaringspolitikken fordeles til de placeringer, du har valgt, og derefter anvendes den på indholdet. Du kan altid kontrollere opbevaringspolitikkens distributionsstatus ved at vælge den på siden **Opbevaringspolitikker** i Overholdelsescenter. Hvis (Fejl **)** er inkluderet i status i pop op-ruden med pop-op-vinduet, får du vist en meddelelse om, at det tager længere tid end forventet at implementere politikken, eller hvis du vil prøve at implementere politikken igen, kan du prøve at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at prøve politikfordelingen igen:
+Først skal opbevaringspolitikken distribueres til de placeringer, du har valgt, og derefter anvendes på indhold. Du kan altid kontrollere distributionsstatussen for opbevaringspolitikken ved at vælge den på siden **Opbevaringspolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du i pop op-vinduet får vist **(Fejl),** der er inkluderet i status, og i oplysningerne om placeringerne vises en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, kan du prøve at køre Kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
-1. [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør en af følgende kommandoer:
     
-    - Du kan se **politikplaceringerne Teams private kanalmeddelelser**, Yammer **brugermeddelelser** **og Yammer-communitymeddelelser**:
+    - For politikplaceringerne **Teams private kanalmeddelelser** **skal du Yammer brugermeddelelser** og **Yammer communitymeddelelser**:
     
         ```PowerShell
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - For alle andre politikplaceringer, f.eks. **Exchange mail**, **SharePoint** websteder og **Teams kanalmeddelelser**:
+    - For alle andre politikplaceringer, f.eks. **Exchange mail**, **SharePoint websteder** og **Teams kanalmeddelelser**:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
 
-## <a name="updating-retention-policies"></a>Opdatering af opbevaringspolitikker
+## <a name="updating-retention-policies"></a>Opdaterer opbevaringspolitikker
 
-Når indstillingerne fra opbevaringspolitikken allerede anvendes på indhold, vil en ændring i konfigurationen af politikken automatisk blive anvendt på dette indhold ud over indhold, der er identificeret for nylig.
+Når indstillinger fra opbevaringspolitikken allerede anvendes på indhold, anvendes der automatisk en ændring i konfigurationen af politikken for dette indhold ud over indhold, der er blevet identificeret for nylig.
 
-Nogle indstillinger kan ikke ændres, når politikken er oprettet og gemt, hvilket omfatter navnet på opbevaringspolitikken, omfangstypen (tilpasset eller statisk) og opbevaringsindstillingerne undtagen opbevaringsperioden.
+Nogle indstillinger kan ikke ændres, når politikken er oprettet og gemt, hvilket omfatter navnet på opbevaringspolitikken, områdetypen (adaptiv eller statisk) og opbevaringsindstillingerne undtagen opbevaringsperioden.
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis nogle elementer til Exchange, SharePoint, OneDrive eller Microsoft 365-grupper har brug for andre opbevaringsindstillinger end de indstillinger for opbevaringspolitik, du har konfigureret, skal du oprette [opbevaringsnavne for](create-retention-labels-information-governance.md) disse undtagelser.
+Hvis nogle elementer til Exchange, SharePoint, OneDrive eller Microsoft 365-grupper har brug for andre opbevaringsindstillinger end de indstillinger for opbevaringspolitik, du har konfigureret, skal du [oprette opbevaringsmærkater for disse undtagelser](create-retention-labels-data-lifecycle-management.md).
 
-Men hvis du leder efter administration af livscyklus for elementer af høj værdi til forretningsmæssige, juridiske eller lovgivningsmæssige krav til registrering, kan du [](file-plan-manager.md)bruge filplan til at oprette og administrere opbevaringsmærkater.
+Men hvis du gerne vil administrere elementer af høj værdi for forretningsrelaterede, juridiske eller lovmæssige krav til registrering, [skal du bruge filplanen til at oprette og administrere opbevaringsmærkater](file-plan-manager.md).

@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du overvåger brugeres og administratorers aktiviteter i din Microsoft 365 organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: cc70060872c9f416120e859673ad9a3799322048
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4dd26229e5ca29344524238903dd2e972ac09ad7
+ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100869"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65145349"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Overvågning af løsninger i Microsoft Purview
 
@@ -53,7 +53,7 @@ Microsoft Purview Audit (Standard) giver dig mulighed for at logge og søge efte
   - [Reference til search-UnifiedAuditLog-cmdlet](/powershell/module/exchange/search-unifiedauditlog)
   - [Brug et PowerShell-script til at søge i overvågningsloggen](audit-log-search-script.md)
 
-- **Eksportér overvågningsposter til en CSV-fil**. Når du har kørt søgeværktøjet Overvågningslog i Overholdelsescenter, kan du eksportere de overvågningsposter, der returneres af søgningen, til en CSV-fil. Det giver dig mulighed for at bruge Microsoft Excel sortere og filtrere på forskellige egenskaber for overvågningsposter. Du kan også bruge Excel Power Query transformeringsfunktionalitet til at opdele hver egenskab i AuditData JSON-objektet i sin egen kolonne. Det giver dig mulighed for effektivt at få vist og sammenligne lignende data for forskellige hændelser. Du kan finde flere oplysninger under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
+- **Eksportér overvågningsposter til en CSV-fil**. Når du har kørt søgeværktøjet Overvågningslog på overholdelsesportalen, kan du eksportere de overvågningsposter, der returneres af søgningen, til en CSV-fil. Det giver dig mulighed for at bruge Microsoft Excel sortere og filtrere på forskellige egenskaber for overvågningsposter. Du kan også bruge Excel Power Query transformeringsfunktionalitet til at opdele hver egenskab i AuditData JSON-objektet i sin egen kolonne. Det giver dig mulighed for effektivt at få vist og sammenligne lignende data for forskellige hændelser. Du kan finde flere oplysninger under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
 
 - **Adgang til overvågningslogge via api'en til administration af Office 365**. En tredje metode til at få adgang til og hente overvågningsposter er at bruge API'en til administration af Office 365. Dette gør det muligt for organisationer at bevare overvågningsdata i længere perioder end de 90 standarddage, og gør det muligt for dem at importere deres overvågningsdata til en SIEM-løsning. Du kan få flere oplysninger under [Office 365 API-reference til administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference).
 
@@ -90,7 +90,7 @@ I følgende tabel sammenlignes de nøglefunktioner, der er tilgængelige i Overv
 |Opbevaring af 10-års overvågningslog <sup>2</sup>||![Understøttes](../media/check-mark.png)|
 |Opbevaringspolitikker for overvågningslog||![Understøttes](../media/check-mark.png)|
 |Vigtige hændelser med høj værdi||![Understøttes](../media/check-mark.png)|
-||||
+
 > [!NOTE]
 > <sup>1</sup> Overvågning (Premium) omfatter adgang til større båndbredde til API'en til administration af Office 365, hvilket giver hurtigere adgang til overvågningsdata.<br/><sup>2</sup> Ud over den krævede licens til Overvågning (Premium) (beskrevet i næste afsnit) skal en bruger tildeles en 10-årig overvågningslogopbevaringslicens for at bevare sine overvågningsposter i 10 år.
 
@@ -100,14 +100,14 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 
 ### <a name="audit-standard"></a>Overvågning (standard)
 
-- Microsoft 365 Business Basic abonnement
-- abonnement på Microsoft 365 Apps til virksomheder
-- Microsoft 365 Enterprise E3-abonnement
-- Microsoft 365 Business Premium
-- Microsoft 365 Education A3-abonnement
-- G3-abonnement til Microsoft 365 offentlige myndigheder
-- G1-abonnement for Microsoft 365 offentlige myndigheder
-- Microsoft 365 Frontline F1- eller F3-abonnement eller tilføjelsesprogrammet F5 Security
+- Microsoft Purview Business Basic-abonnement
+- Microsoft Purview Apps for Business-abonnement
+- Microsoft Purview Enterprise E3-abonnement
+- Microsoft Purview Business Premium
+- Microsoft Purview Education A3-abonnement
+- Microsoft Purview Government G3-abonnement
+- Microsoft Purview Government G1-abonnement
+- Microsoft Purview Frontline F1- eller F3-abonnement eller F5 Security-tilføjelsesprogram
 - Office 365 Enterprise E3-abonnement
 - Office 365 Enterprise E1-abonnement
 - Office 365 Education A1-abonnement
@@ -158,16 +158,25 @@ Hvis din organisation har et abonnement, der understøtter Overvågning (Premium
   
    - Aktivering af appen/serviceplanen for overvågning (Premium) skal være for disse brugere.
   
-   - Aktivering af overvågning af vigtige hændelser og derefter aktivering af appen Avanceret overvågning/tjenesteplan for disse brugere.
+   - Aktivering af overvågning af vigtige hændelser og derefter aktivere overvågning (Premium)ing af app/service-planen for disse brugere.
 
 2. Aktivér, at overvågningshændelser (Premium) logføres, når brugerne udfører søgninger i Exchange Online og SharePoint Online.
 
-3. Konfigurer opbevaringspolitikker for overvågningslog. Ud over standardpolitikken, der bevarer Exchange, SharePoint og Azure AD-overvågningsposter i ét år, kan du oprette yderligere politikker for opbevaring af overvågningslog for at opfylde kravene i organisationens sikkerhedshandlinger, it og overholdelsesteams.
+3. Konfigurer opbevaringspolitikker for overvågningslog. Ud over standardpolitikken, der bevarer Exchange, SharePoint og Azure AD overvågningsposter i et år, kan du oprette yderligere politikker for opbevaring af overvågningslog for at opfylde kravene i organisationens sikkerhedshandlinger, it og overholdelsesteams.
 
 4. Søg efter vigtige overvågningshændelser (Premium) og andre aktiviteter, når der udføres kriminaltekniske undersøgelser. Når du har fuldført trin 1 og trin 2, kan du søge i overvågningsloggen efter overvågningshændelser (Premium) og andre aktiviteter under kriminaltekniske undersøgelser af kompromitterede konti og andre typer sikkerheds- eller overholdelsesundersøgelser.
 
 Du kan finde mere detaljerede instruktioner under [Konfigurer overvågning (Premium)](set-up-advanced-audit.md).
 
+## <a name="encrypt-audit-records-using-customer-key"></a>Kryptér overvågningsposter ved hjælp af kundenøgle
+
+Du kan aktivere kryptering af kundenøglen for overvågningsposter. Overvågning bygger på [tjenestekryptering med kundenøglen](customer-key-overview.md) for at kryptere følsomme oplysninger i organisationens overvågningsdata. Implementering af kundenøglen giver ekstra beskyttelse ved at forhindre uautoriserede systemer eller Microsofts datacenterpersonale i at få vist dine overvågningsdata i overvågningspipelinen og inaktive data. Brug af Kundenøgle til at kryptere dine overvågningsdata hjælper dig også med at overholde lovmæssige eller overholdelsesforpligtelser, fordi din organisation leverer og styrer krypteringsnøglerne.
+
+Hvis du vil implementere kundenøglen til overvågning, skal du oprette en politik for datakryptering med flere arbejdsbelastninger, som definerer krypteringshierarkiet. Du kan finde detaljerede trinvise instruktioner under [Konfigurer kundenøgle](customer-key-set-up.md).
+
+> [!NOTE]
+> Ikke alle overvågningsposter i din organisation er krypteret. Microsoft Purview-tjenesten, der genererer bestemte overvågningsposter for aktivitet i den pågældende tjeneste, definerer, om overvågningsposten er krypteret eller ej.
+
 ## <a name="training"></a>Uddannelse
 
-Oplæring af dit team af sikkerhedshandlinger, it-administratorer og team af overholdelsesundersøgere i de grundlæggende funktioner til overvågning (Standard) og overvågning (Premium) kan hjælpe din organisation med at komme hurtigere i gang ved hjælp af overvågning som en hjælp til dine undersøgelser. Microsoft 365 indeholder følgende ressource, der kan hjælpe disse brugere i din organisation med at komme i gang med overvågning: [Beskriv eDiscovery- og overvågningsegenskaberne i Microsoft 365](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).
+Oplæring af dit team af sikkerhedshandlinger, it-administratorer og team af overholdelsesundersøgere i de grundlæggende funktioner til overvågning (Standard) og overvågning (Premium) kan hjælpe din organisation med at komme hurtigere i gang ved hjælp af overvågning som en hjælp til dine undersøgelser. Microsoft Purview indeholder følgende ressource, der kan hjælpe disse brugere i din organisation med at komme i gang med overvågning: [Beskriv eDiscovery- og overvågningsegenskaberne i Microsoft Purview](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).

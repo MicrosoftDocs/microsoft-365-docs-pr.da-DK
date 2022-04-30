@@ -1,5 +1,5 @@
 ---
-title: Udgive opbevaringsmærkater og anvende dem i apps for at bevare eller slette indhold
+title: Publicer og anvend opbevaringsmærkater
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,100 +17,102 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Vejledning til at udgive opbevaringsmærkater, så du kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: a1d8a32a9190ddb645160fc475fb72a9d1dcd72e
-ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
+description: Instruktioner til publicering af opbevaringsmærkater, så du derefter kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
+ms.openlocfilehash: c2088afd895b47945bea056c940e564b4dd770fb
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64638393"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "65145376"
 ---
-# <a name="publish-retention-labels-and-apply-them-in-apps"></a>Udgive opbevaringsmærkater og anvende dem i apps
+# <a name="publish-retention-labels-and-apply-them-in-apps"></a>Publicer opbevaringsmærkater, og anvend dem i apps
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Dette scenarie understøttes for alle opbevaringsetiketkonfigurationer, herunder [lovgivningsmæssige poster](records-management.md#records).
+> Dette scenarie understøttes for alle konfigurationer af opbevaringsmærkater, herunder [lovmæssige poster](records-management.md#records).
 
-Brug følgende oplysninger som en hjælp til at [publicere opbevaringsetiketter](retention.md), og anvend dem derefter på dokumenter og mails.
+Brug følgende oplysninger til at hjælpe dig med at publicere [opbevaringsmærkater](retention.md) og derefter anvende dem på dokumenter og mails.
 
-Opbevaringsnavne hjælper dig med at bevare det, du har brug for, og slette det, du ikke har på elementniveau (dokument eller mail). De bruges også til at erklære et element som en post som [en del af](records-management.md) en løsning til datastyring for Microsoft 365 data.
+Opbevaringsmærkater hjælper dig med at bevare det, du har brug for, og slette det, du ikke har på elementniveau (dokument eller mail). De bruges også til at deklarere et element som en post som en del af en [løsning til datastyring](records-management.md) for dine Microsoft 365 data.
 
-At gøre opbevaringsmærkater tilgængelige for personer i organisationen, så de kan klassificere indhold, er en proces i to trin: 
+At gøre opbevaringsmærkater tilgængelige for personer i din organisation, så de kan klassificere indhold, er en proces med to trin: 
 
-1. Opret opbevaringsnavnene.
+1. Opret opbevaringsmærkater.
 
-2. Publicer opbevaringsnavnene ved hjælp af en opbevaringsetiketpolitik.
+2. Publicer opbevaringsmærkater ved hjælp af en politik for opbevaringsmærkater.
   
-![Diagram over roller og opgaver for navne.](../media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
+![Diagram over roller og opgaver for mærkater.](../media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
 
-Brug følgende fremgangsmåde for de to administratortrin.
+Brug følgende instruktioner til de to administratortrin.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Den globale administrator i organisationen har fuld tilladelse til at oprette og redigere opbevaringsnavne og deres politikker. Hvis du ikke logger på som global administrator, kan du se tilladelsesoplysningerne [til](get-started-with-records-management.md#permissions) datastyring eller [informationsstyring](get-started-with-information-governance.md#permissions-for-retention-policies-and-retention-labels) afhængigt af den løsning, du bruger.
+Den globale administrator for din organisation har fuld tilladelse til at oprette og redigere opbevaringsmærkater og deres politikker. Hvis du ikke logger på som global administrator, kan du se tilladelsesoplysningerne for [dataadministration](get-started-with-records-management.md#permissions) eller administration af [datalivscyklus](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels), afhængigt af den løsning du bruger.
 
-Sørg for, at du [har oprettet de opbevaringsnavne](file-plan-manager.md#create-retention-labels) , du vil anvende på elementer.
+Sørg for, at du har [oprettet de opbevaringsmærkater](file-plan-manager.md#create-retention-labels) , du vil anvende på elementer.
 
-## <a name="how-to-publish-retention-labels"></a>Sådan publicerer du opbevaringsnavne
+## <a name="how-to-publish-retention-labels"></a>Sådan publicerer du opbevaringsmærkater
 
-Beslut før du opretter din politik for opbevaringsetiket, om **den vil være tilpasset** eller **statisk**. Få mere at vide under [Tilpasnings- eller statiske politikomfang for opbevaring](retention.md#adaptive-or-static-policy-scopes-for-retention). Hvis du beslutter dig for at bruge en tilpasset politik, skal du oprette et eller flere tilpassede områder, før du opretter din politik for opbevaringsetiket og derefter vælge dem under processen med at oprette opbevaringsetiketpolitik. Du kan finde en vejledning [i Konfigurationsoplysninger for adaptive områder](retention-settings.md#configuration-information-for-adaptive-scopes).
+Beslut, om politikken for opbevaringsmærkaten skal være **tilpasset** eller **statisk**, før du opretter den. Du kan finde flere oplysninger under [Tilpassede eller statiske politikområder for opbevaring](retention.md#adaptive-or-static-policy-scopes-for-retention). Hvis du beslutter at bruge en tilpasset politik, skal du oprette et eller flere tilpassede områder, før du opretter din politik for opbevaringsmærkat og derefter vælger dem under processen til oprettelse af opbevaringsmærkatpolitik. Du kan finde en vejledning under [Konfigurationsoplysninger for tilpassede områder](retention-settings.md#configuration-information-for-adaptive-scopes).
 
-1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a> skal du gå til en af følgende placeringer:
+1. Gå til en af følgende placeringer på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>:
     
     - Hvis du bruger datastyring:
-        - **Løsninger** >  **Fanen Etiketpolitikker** > > **datastyringsfanen** > **udgive etiketter**
+        - **Løsninger** >  Fanen **Label policies** > > **records management** > **Publish labels**
     
-    - Hvis du bruger informationsstyring:
-        - **Løsninger** >  **Styring af oplysninger** >  **Fanen Etiketpolitikker** > **udgive etiketter**
+    - Hvis du bruger administration af datalivscyklus:
+        - **Løsninger** >  Administration  >  **af datalivscyklus** Fanen **Etiketpolitikker** > **Publicer navne**
     
-    Kan du ikke umiddelbart se din løsning i navigationsruden? Vælg først **Vis alle**. 
+    Kan du ikke se din løsning i navigationsruden med det samme? Vælg først **Vis alle**. 
 
-2. Følg instruktionerne for at oprette opbevaringsetiketpolitikken. Vær forsigtig med det navn, du vælger til politikken, da dette ikke kan ændres, når politikken er gemt.
+2. Følg prompterne for at oprette politikken for opbevaringsmærkaten. Vær forsigtig med, hvilket navn du vælger til politikken, da dette ikke kan ændres, når politikken er gemt.
 
-3. Brug linket til at vælge de opbevaringsetiketter, der skal udgives, og vælg derefter **Næste**.
+3. Brug linket til at vælge de opbevaringsmærkater, der skal publiceres, og vælg derefter **Næste**.
 
-4. For siden **Vælg den type opbevaringspolitik** , der skal oprettes skal du vælge **Tilpasset** eller **Statisk afhængigt** af det valg, du har foretaget fra vejledningen [Før du begynder](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge Tilpasset, men  da der ikke vil være nogen tilpassede områder at vælge, kan du ikke afslutte guiden med denne indstilling.
+4. På siden **Vælg den type opbevaringspolitik, der skal oprettes** skal du vælge **Adaptiv** eller **Statisk** afhængigt af det valg, du har foretaget i vejledningen [Før du starter](#before-you-begin) . Hvis du ikke allerede har oprettet tilpassede områder, kan du vælge **Adaptivt** , men fordi der ikke er nogen tilpassede områder at vælge, kan du ikke fuldføre guiden med denne indstilling.
 
-5. Afhængigt af det valgte område:
+5. Afhængigt af dit valgte område:
     
-    - Hvis du vælger **Tilpasset**: På siden Vælg  tilpassede politikomfang og -placeringer skal du vælge Tilføj områder  og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de tilføjede [omfangstyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet en omfangstype af **bruger, kan** du vælge Exchange **,** men ikke SharePoint **websteder**. 
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange mail**, men ikke **SharePoint websteder**. 
     
-    - Hvis du vælger **Statisk**: På **siden Vælg placeringer** skal du slå en placering til eller fra. For hver placering kan du lade den være som standard for at [anvende politikken](retention-settings.md#a-policy-that-applies-to-entire-locations) på hele placeringen, eller du [kan angive omfatter og udelader](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
+    - Hvis du vælger **Statisk**: På siden **Vælg placeringer** skal du slå en af placeringerne til eller fra. For hver placering kan du lade den være som standard for at [anvende politikken på hele placeringen](retention-settings.md#a-policy-that-applies-to-entire-locations), eller du kan [angive medtag og ekskludering](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
     
-    Du kan finde oplysninger om valgmulighederne for [placeringer under Placeringer](retention-settings.md#locations).
+    Du kan få oplysninger om valg af placering under [Placeringer](retention-settings.md#locations).
 
-Hvis du vil redigere en eksisterende opbevaringsetiketpolitik (politiktypen er Udgiv **), skal** du  markere den og derefter vælge indstillingen Rediger for at starte **konfigurationen Rediger opbevaringspolitik**.
+Hvis du vil redigere en eksisterende politik for opbevaringsmærkater (politiktypen **Publicer**), skal du vælge den og derefter vælge indstillingen **Rediger** for at starte konfigurationen **Rediger opbevaringspolitik** .
 
-## <a name="when-retention-labels-become-available-to-apply"></a>Når opbevaringsnavne bliver tilgængelige til anvendelse
+## <a name="when-retention-labels-become-available-to-apply"></a>Når opbevaringsmærkater bliver tilgængelige for anvendelse
 
-Hvis du publicerer opbevaringsnavne til SharePoint eller OneDrive, vises disse etiketter typisk, så brugerne kan vælge dem inden for én dag. Der kan dog gå op til syv dage. 
+Hvis du publicerer opbevaringsmærkater til SharePoint eller OneDrive, ser disse mærkater typisk ud til brugerne at vælge inden for én dag. Der kan dog gå op til syv dage. 
 
-Hvis du publicerer opbevaringsnavne på Exchange, kan det tage op til syv dage, før disse opbevaringsetiketter vises for brugere, og postkassen skal indeholde mindst 10 MB data.
+Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv dage, før disse opbevaringsmærkater vises for brugerne, og postkassen skal indeholde mindst 10 MB data.
 
 ![Diagram over, hvornår publicerede navne træder i kraft.](../media/retention-labels-published-timings.png)
 
-Hvis etiketterne ikke vises efter syv dage, skal du kontrollere **Status** for etiketpolitikken ved at vælge den på siden Etiketpolitikker  i Overholdelsescenter. Hvis du ser **(Fejl)** inkluderet i status og i oplysningerne om placeringerne, vises en meddelelse om, at det tager længere tid end forventet at implementere politikken eller forsøge at implementere politikken igen, kan du prøve at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at prøve politikkens distribution igen:
+Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for mærkatpolitikken ved at vælge den på siden **Mærkatpolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du får vist **(Fejl),** der er inkluderet i status og i detaljerne for placeringerne, får du vist en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, ved at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at forsøge at distribuere politikken igen:
 
-1. [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør en af følgende kommandoer:
     
-    - Du kan se **politikplaceringerne Teams private kanalmeddelelser**, Yammer **brugermeddelelser** **og Yammer-communitymeddelelser**:
+    - For politikplaceringerne **Teams private kanalmeddelelser** **skal du Yammer brugermeddelelser** og **Yammer communitymeddelelser**:
     
         ```PowerShell
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - For alle andre politikplaceringer, f.eks. **Exchange, mail** **SharePoint, websteder****, Teams kanalmeddelelser** osv.:
+    - For alle andre politikplaceringer, f.eks. **Exchange mail**, **SharePoint websteder**, **Teams kanalmeddelelser** osv.:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
 
-### <a name="how-to-check-on-the-status-of-retention-labels-published-to-exchange"></a>Sådan kontrolleres status for opbevaringsnavne, der publiceres på Exchange
+### <a name="how-to-check-on-the-status-of-retention-labels-published-to-exchange"></a>Sådan kontrollerer du status for opbevaringsmærkater, der er publiceret til Exchange
 
-I Exchange Online opbevaringsmærkater gøres tilgængelige for slutbrugere ved en proces, der kører hver syv dage. Ved hjælp af PowerShell kan du se, hvornår denne proces sidst kørte, og du kan derfor se, hvornår den kører igen.
+I Exchange Online gøres opbevaringsmærkater tilgængelige for slutbrugerne af en proces, der kører hver syvende dag. Ved hjælp af PowerShell kan du se, hvornår denne proces sidst kørte, og derfor identificere, hvornår den vil køre igen.
   
 1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
     
