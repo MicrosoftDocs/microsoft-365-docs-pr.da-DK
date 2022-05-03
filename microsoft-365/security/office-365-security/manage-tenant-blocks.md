@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 60038a2b82ea452ed921d16042cb81d4f0e023a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 03c56e5e7e540766bb4a6048fba15b494c46d815
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100649"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182711"
 ---
 # <a name="add-blocks-in-the-tenant-allowblock-list"></a>Tilføj blokerede på listen over tilladte/blokerede lejere
 
@@ -32,11 +32,11 @@ ms.locfileid: "65100649"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-## <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender-portalen 
+## <a name="use-the-microsoft-365-defender-portal"></a>Brug Microsoft 365 Defender-portalen
 
 ### <a name="create-block-sender-entries-in-the-tenant-allowblock-list"></a>Opret afsenderposter for blokering på listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
+1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> Sektionen **Regler for trusselspolitikker**\>, **lejerlister** \> for tilladelse/blokering. Du kan også gå direkte til siden **Med lejer-/blokliste** ved at bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. På siden **Liste over tilladte/blokerede lejere** skal du kontrollere, at fanen **Afsendere** er valgt, og derefter klikke på ![ikonet Bloker.](../../media/m365-cc-sc-create-icon.png) **Blok.**
 
@@ -53,11 +53,11 @@ ms.locfileid: "65100649"
 4. Klik på **Tilføj**, når du er færdig.
 
 > [!NOTE]
-> Mails fra disse afsendere vil blive blokeret som *høj tillid spam (SCL = 9)*. 
+> Mails fra disse afsendere vil blive blokeret som _spam med høj tillid_ (SCL = 9).
 
 ### <a name="create-block-url-entries-in-the-tenant-allowblock-list"></a>Opret blokerings-URL-adresser på listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
+1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> Sektionen **Regler for trusselspolitikker**\>, **lejerlister** \> for tilladelse/blokering. Du kan også gå direkte til siden **Med lejer-/blokliste** ved at bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. På siden **Liste over tilladte/blokerede lejere** skal du kontrollere, at fanen **URL-adresser** er valgt, og derefter klikke på ![ikonet Bloker.](../../media/m365-cc-sc-create-icon.png) **Blok.**
 
@@ -74,11 +74,11 @@ ms.locfileid: "65100649"
 4. Klik på **Tilføj**, når du er færdig.
 
 > [!NOTE]
-> De mails, der indeholder disse URL-adresser, blokeres som *phish*. 
+> De mails, der indeholder disse URL-adresser, blokeres som _phish_.
 
 ### <a name="create-block-file-entries-in-the-tenant-allowblock-list"></a>Opret blokfilposter på listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
+1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> Sektionen **Regler for trusselspolitikker**\>, **lejerlister** \> for tilladelse/blokering. Du kan også gå direkte til siden **Med lejer-/blokliste** ved at bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. På siden **Liste over tilladte/blokerede lejere** skal du vælge fanen **Filer** og derefter klikke på ![ikonet Bloker.](../../media/m365-cc-sc-create-icon.png) **Blok.**
 
@@ -95,7 +95,7 @@ ms.locfileid: "65100649"
 4. Klik på **Tilføj**, når du er færdig.
 
 > [!NOTE]
-> De mails, der indeholder disse filer, blokeres som *malware*. 
+> De mails, der indeholder disse filer, blokeres som _malware_.
 
 ### <a name="create-spoofed-sender-block-entries"></a>Opret spoofed afsenderblokposter
 
@@ -118,8 +118,9 @@ ms.locfileid: "65100649"
    - **Handling**: Vælg **Blok**.
 
 4. Klik på **Tilføj**, når du er færdig.
+
 > [!NOTE]
-> Mails fra disse afsendere blokeres som *phish*. 
+> Mails fra disse afsendere blokeres som _phish_.
 
 ## <a name="use-powershell"></a>Brug PowerShell
 
@@ -151,7 +152,7 @@ New-TenantAllowBlockListItems -ListType Url -Block -Entries ~contoso.com
 
 Du kan finde detaljerede syntaks- og parameteroplysninger under [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
 
-### <a name="add-spoofed-sender-block-entries"></a>Tilføj spoofed afsenderblokposter 
+### <a name="add-spoofed-sender-block-entries"></a>Tilføj spoofed afsenderblokposter
 
 Hvis du vil tilføje spoofede afsenderposter på listen over tilladte/blokerede lejere, skal du bruge følgende syntaks:
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a067672a013f3e0ed7b9009604f8a4fe000ea47f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 64b9c044a463e940b0d9862221ca854fe0eebfdc
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172830"
+ms.locfileid: "65182637"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -90,7 +90,6 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
   > [!NOTE]
   >
   > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser *og* tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
-  >
   > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 ## <a name="configure-the-tenant-allowblock-list"></a>Konfigurer listen over tilladte/blokerede lejere
@@ -111,7 +110,7 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
 
 ## <a name="view-entries-in-the-tenant-allowblock-list"></a>Vis poster på listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Lejer tillad/bloker lister** i afsnittet **Regler**. Hvis du vil gå direkte til siden **med lister over tilladte/blokerede lejere** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Lejer tillad/bloker lister** i afsnittet **Regler**. Hvis du vil gå direkte til siden **Med lejer-/bloklister** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Vælg den ønskede fane. De kolonner, der er tilgængelige, afhænger af den fane, du har valgt:
 
@@ -122,6 +121,11 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
      - **Senest opdateret**
      - **Fjern den**
      - **Bemærkninger**
+   - **Spoofing**
+     - **Poofed bruger**
+     - **Sender infrastruktur**
+     - **Spoof-type**: Værdien **Intern** eller **Ekstern**.
+     - **Handling**: Værdien **Block** eller **Allow**.
    - **URL-adresser**:
      - **Værdi**: URL-adressen.
      - **Handling**: Værdien **Allow** eller **Block**.
@@ -136,20 +140,15 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
      - **Senest opdateret**
      - **Fjern den**
      - **Bemærkninger**
-   - **Spoofing**
-     - **Poofed bruger**
-     - **Sender infrastruktur**
-     - **Spoof-type**: Værdien **Intern** eller **Ekstern**.
-     - **Handling**: Værdien **Block** eller **Allow**.
 
    Du kan klikke på en kolonneoverskrift for at sortere i stigende eller faldende rækkefølge.
 
    Du kan klikke på **Gruppér** for at gruppere resultaterne. De værdier, der er tilgængelige, afhænger af den fane, du har valgt:
 
    - **Afsendere**: Du kan gruppere resultaterne efter **handling**.
+   - **Spoofing**: Du kan gruppere resultaterne efter **Handling** eller **Spoof-type**.
    - **URL-adresser**: Du kan gruppere resultaterne efter **handling**.
    - **Filer**: Du kan gruppere resultaterne efter **handling**.
-   - **Spoofing**: Du kan gruppere resultaterne efter **Handling** eller **Spoof-type**.
 
    Klik på **Søg**, indtast hele eller en del af en værdi, og tryk derefter på ENTER for at finde en bestemt værdi. Når du er færdig, skal du klikke på ![Ikonet Ryd søgning.](../../media/m365-cc-sc-close-icon.png) **Ryd søgning**.
 
@@ -160,6 +159,9 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
      - **Udløber aldrig**
      - **Dato for seneste opdatering**
      - **Fjern den**
+   - **Spoofing**
+     - **Handling**
+     - **Spoof-type**
    - **Webadresser**
      - **Handling**
      - **Udløber aldrig**
@@ -170,9 +172,6 @@ Hvis du vil administrere alle tilladelser og blokke, skal du se [Tilføj blokke 
      - **Udløber aldrig**
      - **Senest opdateret**
      - **Fjern den**
-   - **Spoofing**
-     - **Handling**
-     - **Spoof-type**
 
    Klik på **Anvend**, når du er færdig. Hvis du vil rydde eksisterende filtre, skal du klikke på **Filter** og klikke på **Ryd filtre** i pop **op-vinduet Filter**, der vises.
 

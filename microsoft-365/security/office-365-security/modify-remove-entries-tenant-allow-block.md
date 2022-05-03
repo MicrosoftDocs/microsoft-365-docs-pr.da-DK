@@ -16,12 +16,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de redigerer og fjerner poster på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7da986c42421c797f2d01b1e61d50c06933e373f
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ac612b51cab9069e50c4eec05948b3aa840b9cc9
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970891"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182689"
 ---
 # <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Rediger og fjern poster på listen over tilladte/blokerede lejer
 
@@ -38,7 +38,7 @@ Du kan bruge Microsoft 365 Defender-portalen eller PowerShell til at redigere og
 
 ### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Rediger poster på listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
+1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> Sektionen **Regler for trusselspolitikker**\>, **lejerlister** \> for tilladelse/blokering. Du kan også gå direkte til siden **Med lejer-/blokliste** ved at bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Vælg den fane, der indeholder den type post, du vil ændre:
    - **Afsendere**
@@ -66,7 +66,7 @@ Du kan bruge Microsoft 365 Defender-portalen eller PowerShell til at redigere og
 
 ### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Fjern poster fra listen over tilladte/blokerede lejere
 
-1. I Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker** \> **Regler** for \> **lejer tillad/bloker lister**.
+1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> Sektionen **Regler for trusselspolitikker**\>, **lejerlister** \> for tilladelse/blokering. Du kan også gå direkte til siden **Med lejer-/blokliste** ved at bruge <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Vælg den fane, der indeholder den type post, du vil fjerne:
    - **Afsendere**

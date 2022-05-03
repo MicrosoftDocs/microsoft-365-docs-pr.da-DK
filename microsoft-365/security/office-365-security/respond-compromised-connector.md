@@ -16,14 +16,14 @@ ms.custom: ''
 description: Få mere at vide om, hvordan du genkender og reagerer på en kompromitteret connector i Microsoft 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d3aadcd44fcf2c6ab6665546a6335dd15997e3d2
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 50caf98bec9d918dd3ff1bcb076a080b123a357a
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130234"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182639"
 ---
-# <a name="respond-to-a-compromised-connector"></a>Svar på en kompromitteret connector
+# <a name="respond-to-a-compromised-connector"></a>Besvar en kompromitteret forbindelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -83,7 +83,7 @@ Hvis du har [Microsoft Defender for Office 365 plan 2](defender-for-office-365.m
 
     :::image type="content" source="../../media/connector-compromise-sender-ip.png" alt-text="Afsender-IP og organisationens IP-adresse i det lokale miljø" lightbox="../../media/connector-compromise-sender-ip.png":::
 
-Hvis du har [Microsoft Defender for Office 365 Plan 1](defender-for-office-365.md) eller [Exchange Online Protection](exchange-online-protection-overview.md), skal du gå til https://admin-sdf.exchange.microsoft.com/#/messagetrace. 
+Hvis du har [Microsoft Defender for Office 365 Plan 1](defender-for-office-365.md) eller [Exchange Online Protection](exchange-online-protection-overview.md), skal du gå til https://admin.exchange.microsoft.com/#/messagetrace. 
 
 1. Åbn beskeden **om mistænkelig forbindelsesaktivitet** i https://security.microsoft.com/alerts.  
 
@@ -91,13 +91,13 @@ Hvis du har [Microsoft Defender for Office 365 Plan 1](defender-for-office-365.m
 
     :::image type="content" source="../../media/connector-compromise-outbound-email-details.png" alt-text="Connector kompromitterer oplysninger om udgående mail" lightbox="../../media/connector-compromise-outbound-email-details.png":::
     
-3. Søg ved hjælp af **connectordomæne** og **IP-adresse** i [**Meddelelsessporing**](https://admin-sdf.exchange.microsoft.com/#/messagetrace). 
+3. Søg ved hjælp af **connectordomæne** og **IP-adresse** i [**Meddelelsessporing**](https://admin.exchange.microsoft.com/#/messagetrace). 
 
     :::image type="content" source="../../media/connector-compromise-new-message-trace.png" alt-text="Nyt pop op-vindue til meddelelsessporing" lightbox="../../media/connector-compromise-new-message-trace.png":::
     
 4. Identificer følgende i søgeresultaterne **for meddelelsessporing** : 
 
-    - Hvis et betydeligt antal mails for nylig blev markeret som **FilteredAsSpam**.  Dette er en god indikator for, at en kompromitteret connector bruges til at sende spam. 
+    - Hvis et betydeligt antal mails for nylig blev markeret som **FilteredAsSpam**. Dette er en god indikator for, at en kompromitteret connector bruges til at sende spam. 
 
     - Hvis modtagerne er dem, som din organisation normalt forbliver i kontakt med. 
 
