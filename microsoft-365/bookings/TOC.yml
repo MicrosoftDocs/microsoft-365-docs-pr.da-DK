@@ -27,6 +27,8 @@
           href: add-questions.md
         - name: Angiv buffertid
           href: set-buffer-time.md
+        - name: Administrer gruppedeltagere i Bookings
+          href: manage-attendees-bookings.md
         - name: Målinger og aktivitetssporing
           href: metrics-and-activity-tracking.md
         - name: Angiv sprog og tidszone
