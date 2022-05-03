@@ -1,8 +1,8 @@
 ---
-title: OData-forespørgsler med Microsoft Defender til slutpunkt
+title: OData-forespørgsler med Microsoft Defender for Endpoint
 ms.reviewer: ''
-description: Brug disse eksempler på OData-forespørgsler (Open Data Protocol) til at hjælpe med dataadgangsprotokoller i Microsoft Defender til slutpunkt.
-keywords: API'er, understøttede api'er, odata, forespørgsel
+description: Brug disse eksempler på OData-forespørgsler (Open Data Protocol) til at hjælpe med protokoller til dataadgang i Microsoft Defender for Endpoint.
+keywords: apis, understøttede API'er, odata, forespørgsel
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,37 +16,41 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6ee47a1c624020ffa40848910866738072044d27
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 808ff3e6cc0dc69d748dabed102c478a27593790
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63592092"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172281"
 ---
-# <a name="odata-queries-with-microsoft-defender-for-endpoint"></a>OData-forespørgsler med Microsoft Defender til slutpunkt
+# <a name="odata-queries-with-microsoft-defender-for-endpoint"></a>OData-forespørgsler med Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/index.yml)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Avancerede jagtegenskaber er ikke inkluderet i Defender for Business. Se [Sammenlign Microsoft Defender til virksomheder med Microsoft Defender for Endpoint plan 1 og 2](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Hvis du ikke kender til OData-forespørgsler, skal du se: [OData V4-forespørgsler](https://www.odata.org/documentation/)
+Hvis du ikke kender OData-forespørgsler, kan du se: [OData V4-forespørgsler](https://www.odata.org/documentation/)
 
-Ikke alle egenskaber kan filtreres.
+Det er ikke alle egenskaber, der kan filtreres.
 
 ## <a name="properties-that-support-filter"></a>Egenskaber, der understøtter $filter
 
-- [Advarsel](alerts.md): `alertCreationTime`, `lastUpdateTime`, `incidentId`,`InvestigationId``status` , og `severity``category`.
-- [Computer](machine.md): `ComputerDnsName`, `LastSeen`, `HealthStatus`, `OsPlatform`, `onboardingStatus`og `RiskScore``RbacGroupId`.
+- [Advarsel](alerts.md): `alertCreationTime`, `lastUpdateTime`, `incidentId`,`InvestigationId``status` , `severity`, og `category`.
+- [Computer](machine.md): `ComputerDnsName`, `LastSeen`, `HealthStatus`, `OsPlatform`, `onboardingStatus`, `RiskScore`og `RbacGroupId`.
 - [MachineAction](machineaction.md): `Status`, `MachineId`, `Type`, `Requestor`og `CreationDateTimeUtc`.
-- [Indikator](ti-indicator.md): `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`og `severity``action`.
+- [Indikator](ti-indicator.md): `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`, `severity`og `action`.
 
 ### <a name="example-1"></a>Eksempel 1
 
@@ -257,7 +261,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdate
 
 ### <a name="example-3"></a>Eksempel 3
 
-Hent alle enheder med "høj" "risikoscore":
+Hent alle enhederne med 'Høj' 'RiskScore':
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScore+eq+'High'
@@ -310,7 +314,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScor
 
 ### <a name="example-4"></a>Eksempel 4
 
-Få top 100 enheder med "HealthStatus" ikke er lig med "Aktiv":
+Hent de 100 bedste enheder med 'HealthStatus' er ikke lig med 'Aktiv':
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100 
@@ -363,7 +367,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthSt
 
 ### <a name="example-5"></a>Eksempel 5
 
-Hent alle de enheder, der sidst blev vist efter 10-10-20 20 20:
+Få alle de enheder, der sidst blev set efter 10-2018-20:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen gt 2018-08-01Z
@@ -416,7 +420,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen
 
 ### <a name="example-6"></a>Eksempel 6
 
-Få alle de antivirusscanninger, som brugeren har Analyst@examples.onmicrosoft.com ved hjælp af Microsoft Defender til slutpunkt:
+Hent alle de antivirusscanninger, som brugeren Analyst@examples.onmicrosoft.com oprettet ved hjælp af Microsoft Defender for Endpoint:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machineactions?$filter=requestor eq 'Analyst@contoso.com' and type eq 'RunAntiVirusScan'
@@ -448,7 +452,7 @@ json{
 
 ### <a name="example-7"></a>Eksempel 7
 
-Få antallet af åbne beskeder for en bestemt enhed:
+Hent antallet af åbne beskeder for en bestemt enhed:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa415b8e5f383c6388bff446c62/alerts/$count?$filter=status ne 'Resolved'
@@ -462,7 +466,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa4
 
 ### <a name="example-8"></a>Eksempel 8
 
-Hent alle enheder med 'computerDnsName', startende med 'mymachine':
+Hent alle enheder med 'computerDnsName' startende med 'mymachine':
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=startswith(computerDnsName,'mymachine')
@@ -515,4 +519,4 @@ json{
 
 ## <a name="see-also"></a>Se også
 
-[Microsoft Defender til endpoint-API'er](apis-intro.md)
+[Microsoft Defender for Endpoint API'er](apis-intro.md)

@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 77766c153582f519aa0ba9853d18c216092747bc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9211597ec8a0e25130b010a6049832ac151840fc
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092299"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173705"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint
 
@@ -37,7 +37,7 @@ ms.locfileid: "65092299"
 Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler.
 
 > [!TIP]
-> Snart vil Microsoft Defender for Endpoint være tilgængelige i to planer. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i Microsoft Defender for Endpoint Plan 2. [Få mere at vide om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
+> Microsoft Defender for Endpoint er tilgængelig i to planer: Defender for Endpoint Plan 1 og Plan 2. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i hver plan. [Få mere at vide om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
 > 
 
 <p><p>

@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: f6046576fcea2fe961e73e88168c6254a2d95a40
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 7b76fff060b46cbe13c11eb90f521af61e8900f5
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665046"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172924"
 ---
 # <a name="device-discovery-overview"></a>Oversigt over enhedssøgning
 
@@ -114,21 +114,45 @@ Søg efter "SSH"-relaterede sikkerhedsanbefalinger for at finde SSH-sikkerhedsri
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Dashboardet med sikkerhedsanbefalinger" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::
 
 
-## <a name="use-advanced-hunting-on-discovered-devices"></a>Brug Avanceret jagt på registrerede enheder
+## <a name="use-advanced-hunting-on-discovered-devices"></a>Brug avanceret jagt på registrerede enheder
 
-Du kan bruge Forespørgsler om avanceret jagt til at få indsigt på registrerede enheder.
-Find oplysninger om registrerede slutpunkter i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
+Du kan bruge avancerede jagtforespørgsler til at få indsigt på registrerede enheder. Find oplysninger om registrerede enheder i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
 
 :::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Siden Avanceret jagt, hvor forespørgsler kan bruges" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
-Enhedsregistrering udnytter Microsoft Defender for Endpoint onboardede enheder som en netværksdatakilde til at tildele aktiviteter til ikke-onboardede enheder. Det betyder, at hvis en Microsoft Defender for Endpoint onboardet enhed kommunikeres med en ikke-onboardet enhed, kan aktiviteter på den ikke-onboardede enhed ses på tidslinjen og via tabellen Advanced hunting DeviceNetworkEvents.
+### <a name="query-discovered-devices-details"></a>Oplysninger om fundne enheder for forespørgsler
 
-Nye hændelser er TCP-forbindelser (Transmission Control Protocol) og passer til det aktuelle DeviceNetworkEvents-skema. TCP-indgående data til den Microsoft Defender for Endpoint aktiverede enhed fra en ikke-Microsoft Defender for Endpoint aktiveret.
+Kør denne forespørgsel i tabellen DeviceInfo for at returnere alle registrerede enheder sammen med flest oplysninger om hver enhed:
 
-Følgende handlingstyper er også blevet tilføjet:
+```query
+DeviceInfo
+| summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
+| where isempty(MergedToDeviceId) // Remove invalidated/merged devices
+| where OnboardingStatus != "Onboarded" 
+```
+
+Ved at aktivere funktionen **SeenBy** kan du i din avancerede jagtforespørgsel få detaljer om, hvilken onboardet enhed en registreret enhed blev set af.Disse oplysninger kan hjælpe med at bestemme netværksplaceringen for hver fundet enhed og derefter hjælpe med at identificere den i netværket.  
+
+```query
+DeviceInfo
+| where OnboardingStatus != "Onboarded" 
+| summarize arg_max(Timestamp, *) by DeviceId  
+| where isempty(MergedToDeviceId)  
+| limit 100 
+| invoke SeenBy() 
+| project DeviceId, DeviceName, DeviceType, SeenBy  
+```
+
+Du kan få flere oplysninger i funktionen [SeenBy().](/microsoft-365/security/defender/advanced-hunting-seenby-function)
+
+### <a name="query-network-related-information"></a>Forespørg om netværksrelaterede oplysninger
+
+Enhedsregistrering udnytter Microsoft Defender for Endpoint onboardede enheder som en netværksdatakilde til at tildele aktiviteter til ikke-onboardede enheder. Netværkssensoren på den Microsoft Defender for Endpoint onboardede enhed identificerer to nye forbindelsestyper:
 
 - ConnectionAttempt – Et forsøg på at oprette en TCP-forbindelse (syn)
 - ConnectionAcknowledged – En bekræftelse på, at en TCP-forbindelse blev accepteret (syn\ack)
+
+Det betyder, at når en ikke-onboardet enhed forsøger at kommunikere med en onboardet Microsoft Defender for Endpoint enhed, genererer forsøget en DeviceNetworkEvent, og de ikke-onboardede enhedsaktiviteter kan ses på den onboardede enhedstidslinje og via tabellen Advanced hunting DeviceNetworkEvents.
 
 Du kan prøve denne eksempelforespørgsel:
 

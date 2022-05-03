@@ -1,5 +1,5 @@
 ---
-title: Tilmeld dig Microsoft 365 fyrtårn
+title: Tilmeld dig Microsoft 365 Fyrtårn
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -16,56 +16,56 @@ ms.custom:
 - M365-Lighthouse
 - intro-get-started
 search.appverid: MET150
-description: For administrerede tjenesteudbydere kan du se, hvordan du tilmelder dig Microsoft 365 Lighthouse.
-ms.openlocfilehash: 25ad88edc63d53e3c9110062a64285bbb759a775
-ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
+description: For MSP'er (Managed Service Providers) kan du få mere at vide om, hvordan du tilmelder dig Microsoft 365 Lighthouse.
+ms.openlocfilehash: 8d845ed454a672b1480ca0b6fe6f471cc30a37a6
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64645174"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172199"
 ---
-# <a name="sign-up-for-microsoft-365-lighthouse"></a>Tilmeld dig Microsoft 365 fyrtårn
+# <a name="sign-up-for-microsoft-365-lighthouse"></a>Tilmeld dig Microsoft 365 Fyrtårn
 
-Denne artikel indeholder en vejledning til, hvordan du tilmelder dig Microsoft 365 Lighthouse. Microsoft 365 Lighthouse er en administrationsportal, der hjælper administrerede tjenesteudbydere med at sikre og administrere enheder, data og brugere på skala for små og mellemstore virksomheder (SMB), der bruger Microsoft 365 Business Premium, Microsoft 365 E3 eller Windows 365 Business. 
+Denne artikel indeholder instruktioner til, hvordan du tilmelder dig Microsoft 365 Lighthouse. Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers). 
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Microsoft 365 Lighthouse kun installeret i partnerlejeren&mdash; i kundelejerne, men sørg for, at du og dine kundelejere opfylder kravene [i Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
+- Microsoft 365 Lighthouse udrulles kun&mdash; i partnerlejer ikke i kundens lejere, men sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
 
-- Du skal være global administrator i partnerlejeren, som du logger på.
+- Du skal være global administrator i den partnerlejer, du logger på.
 
-## <a name="steps-to-sign-up-for-microsoft-365-lighthouse"></a>Trin til at tilmelde dig Microsoft 365 Lighthouse
+## <a name="steps-to-sign-up-for-microsoft-365-lighthouse"></a>Sådan tilmelder du dig Microsoft 365 Fyrtårn
 
-1. Gå til den Microsoft 365 Administration, og <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> log på med legitimationsoplysningerne for din partnerlejer. 
+1. Gå til Microsoft 365 Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> , og log på med dine legitimationsoplysninger til din partnerlejer. 
 
-1. Gå til **BillingPurchase** >  **ServicesOther** >  Services.
+1. Gå til **FaktureringKøb** >  **tjenesterAndre** >  tjenester.
 
-    Hvis Microsoft 365 Lighthouse ikke findes på listen over tjenester, skal du vælge **Se alle andre tjenester.**
+    Hvis Microsoft 365 Fyrtårn ikke findes på listen over tjenester, skal du vælge **Se alle andre serviceprodukter**.
 
-    Hvis du støder på fejlsiden Køb tjenester, **skal du vælge** Vis produkter nederst på siden.
+    Hvis du støder på fejlsiden Køb tjenester, skal du vælge **Få vist produkter** nederst på siden.
 
-1. Under **Microsoft 365 Fyrtårn** skal du vælge **Detaljer**. 
+1. Vælg **Detaljer** under **Microsoft 365 Fyrtårn**. 
 
 1. Vælg **Køb**.
 
     > [!NOTE]
-    > Lighthouse kræver kun én licens til partnerlejeren. Der kræves ingen yderligere pr. bruger-licenser til partneren, og der kræves ingen fyrtårnslicenser i nogen kundelejer. 
+    > Lighthouse kræver kun én licens til partnerlejer. Der kræves ingen yderligere licenser pr. bruger for partneren, og der kræves ingen Lighthouse-licenser i nogen kundelejer. 
 
-    For at bekræfte at Lighthouse er blevet føjet korrekt til din lejer, skal du Microsoft 365 Lighthouse under **> Dine produkter** Microsoft 365 Administration.
+    Hvis du vil kontrollere, at Lighthouse er føjet til din lejer, skal du kigge efter Microsoft 365 Fyr under **Fakturering > Dine produkter** i Microsoft 365 Administration.
 
-1. Hvis du ikke bliver omdirigeret til fyrtårnsportalen, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2168110" target="_blank">https://lighthouse.microsoft.com</a>.
+1. Hvis du ikke omdirigeres til Lighthouse-portalen, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2168110" target="_blank">https://lighthouse.microsoft.com</a>.
 
-1. Vælg **Agree & Continue for** at fuldføre ændringen af partneraftalen.
+1. Vælg **Acceptér & Fortsæt** for at fuldføre ændringen af partneraftalen.
 
     > [!NOTE]
-    > Når du har fuldført tilmeldingen, kan det tage op til 48 timer, før kundedata vises i Fyrtårn.
+    > Når du har fuldført tilmeldingen, kan det tage op til 48 timer, før kundedata vises i Lighthouse.
 
 ## <a name="next-steps"></a>Næste trin
 
-[Konfigurere Microsoft 365 Lighthouse-portalens sikkerhed](m365-lighthouse-configure-portal-security.md) 
+[Konfigurer sikkerhed i Microsoft 365 Lighthouse Portal](m365-lighthouse-configure-portal-security.md) 
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Oversigt over Microsoft 365 fyrtårn](m365-lighthouse-overview.md) (artikel)   
-[Microsoft 365 ofte stillede spørgsmål om fyrtårn](m365-lighthouse-faq.yml) (artikel)   
-[Microsoft 365 fyrtårn og Microsoft Defender til virksomheder](../security/defender-business/mdb-lighthouse-integration.md) (artikel)
+[Oversigt over Microsoft 365 Fyrtårn](m365-lighthouse-overview.md) (artikel)   
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)   
+[Microsoft 365 Fyrtårn og Microsoft Defender til virksomheder](../security/defender-business/mdb-lighthouse-integration.md) (artikel)

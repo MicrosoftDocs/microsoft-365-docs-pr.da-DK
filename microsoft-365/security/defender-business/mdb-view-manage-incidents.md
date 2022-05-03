@@ -1,13 +1,12 @@
 ---
 title: Få vist og administrer hændelser i Microsoft Defender til virksomheder
-description: Få mere at vide om, hvordan du får vist & administrere beskeder, reagere på trusler, administrere enheder og gennemse afhjælpningshandlinger
+description: Få vist og administrer beskeder, reager på trusler, administrer enheder, og gennemse afhjælpningshandlinger på registrerede trusler i Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ec1d85b72cfbe17e182d3aed573476e4fadfdef6
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 04c8d32c6bb016d4640094013d1f71eb248a8d6c
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861438"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172718"
 ---
 # <a name="view-and-manage-incidents-in-microsoft-defender-for-business"></a>Få vist og administrer hændelser i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Når der registreres trusler, og beskeder udløses, oprettes der hændelser. Virksomhedens sikkerhedsteam kan få vist og administrere hændelser på Microsoft 365 Defender portalen.
 

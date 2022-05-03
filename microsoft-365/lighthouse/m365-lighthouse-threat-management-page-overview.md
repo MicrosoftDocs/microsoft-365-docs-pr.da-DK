@@ -16,20 +16,20 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Trusselsstyring for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: fea297845446bd8cbb14c81851afb5d51ce33717
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 6e6a49cd1e31132881f45877bc00801d91aff492
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023343"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173765"
 ---
 # <a name="overview-of-the-threat-management-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Threat Management i Microsoft 365 Lighthouse 
 
 **Gælder for:**
 
-- Windows 10
+- Windows
 
-Microsoft Defender Antivirus beskytter lejere, brugere og enheder mod softwaretrusler, herunder virus, malware og spyware. Den er robust, løbende beskyttelse, der er indbygget i Windows 10 og inkluderet i Microsoft 365 Business Premium og Microsoft365E3&nbsp;&nbsp;.  
+Microsoft Defender Antivirus beskytter lejere, brugere og enheder mod softwaretrusler, herunder virus, malware og spyware. Den er robust og løbende beskyttelse, der er indbygget i Windows.  
   
 Hvis du vil have adgang til siden Trusselsadministration i Microsoft 365 Lighthouse, skal du vælge **Threat Management** i venstre navigationsrude for at få vist dine kundelejere' sikkerhedsholdning mod trusler. Du får vist lejere, brugere og enheder, der kræver din opmærksomhed og anbefalinger, som kan hjælpe dig med at reducere risikoen.  
   

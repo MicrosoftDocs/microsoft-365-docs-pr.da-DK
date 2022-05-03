@@ -1,13 +1,12 @@
 ---
 title: Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder
-description: Forstå forskellene mellem Defender for Business og Defender for Endpoint. Hvis du ved, hvad der er inkluderet i hver plan, kan det hjælpe dig med at træffe en informeret beslutning for din virksomhed.
+description: Hvordan er Defender for Business sammenlignet med Defender for Endpoint og Microsoft 365 Business Premium? Se, hvad der er inkluderet i de enkelte planer, så du kan træffe en mere informeret beslutning for din virksomhed.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,23 +16,16 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: d14215c7c648bafd4d21f765848f20a391a13a2f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 971617311ce8d2443f90a1792339d4f0927ade3e
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100231"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174734"
 ---
 # <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder
 
-> [!IMPORTANT]
-> Microsoft Defender til virksomheder udrulles til [Microsoft 365 Business Premium](../../business-premium/index.md) kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.
->
-> Nogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her.
-
 Microsoft tilbyder en lang række cloudløsninger og -tjenester, herunder flere forskellige planer for små og mellemstore virksomheder. [Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md) omfatter f.eks. funktioner til administration af sikkerhed og enheder sammen med produktivitetsfunktioner, f.eks. Office apps. Denne artikel er udviklet til at hjælpe med at tydeliggøre, hvilke sikkerhedsfunktioner, f.eks. enhedsbeskyttelse, der er inkluderet i Microsoft 365 Business Premium, Microsoft Defender til virksomheder og Microsoft Defender for Endpoint.
-
-Microsoft Defender til virksomheder er tilgængelig som et separat tilbud eller som en del af Microsoft 365 Business Premium (fra og med 1. marts 2022).
 
 >
 > **Har du et øjeblik?**
@@ -50,13 +42,11 @@ Microsoft Defender til virksomheder er tilgængelig som et separat tilbud eller 
 ## <a name="compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>Sammenlign sikkerhedsfunktioner i Microsoft Defender til virksomheder med Microsoft 365 Business Premium
 
 > [!NOTE]
-> Denne artikel er beregnet til at give et overordnet overblik over de trusselsbeskyttelsesfunktioner, der er inkluderet i Microsoft Defender til virksomheder (som en separat plan) og Microsoft 365 Business Premium (hvilket omfatter Defender for Business). Denne artikel er ikke beregnet til at fungere som en tjenestebeskrivelse eller et licenskontraktdokument. Du kan finde flere oplysninger [under Microsoft 365 licensvejledning til overholdelse af sikkerheds- &](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+> Denne artikel er beregnet til at give et overordnet overblik over de trusselsbeskyttelsesfunktioner, der er inkluderet i Microsoft Defender til virksomheder (som en separat plan) og Microsoft 365 Business Premium (hvilket omfatter Defender for Business). Denne artikel er ikke beregnet til at fungere som en tjenestebeskrivelse eller et licenskontraktdokument. Du kan finde flere oplysninger i [Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-**Fra og med den 1. marts 2022 begynder Defender for Business at udrulle som en del af Microsoft 365 Business Premium. Defender for Business som et separat tilbud fås stadig som prøveversion.**
+**Pr. 1. marts 2022 er Defender for Business inkluderet i Microsoft 365 Business Premium. Defender for Business er også tilgængelig som et separat abonnement.** I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business (separat) med Microsoft 365 Business Premium.
 
-I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business (separat) med Microsoft 365 Business Premium.
-
-|Funktion/funktionalitet|[Microsoft Defender for Business](mdb-overview.md)<br/>(separat, i øjeblikket i prøveversion)|[Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md)<br/>(omfatter Defender for Business)|
+|Funktion/funktionalitet|[Microsoft Defender for Business](mdb-overview.md)<br/>(separat)|[Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md)<br/>(omfatter Defender for Business)|
 |---|---|---|
 |Mailbeskyttelse|Ja <br/>- [Mailscanning med Microsoft Defender Antivirus](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md)|Ja <br/>- [Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md) <br/>- [Mailscanning med Microsoft Defender Antivirus](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md)|
 |Antispambeskyttelse|Ja <br/>- Til enheder|Ja <br/>- Til enheder<br/>- Til Microsoft 365 mailindhold, f.eks. meddelelser og vedhæftede filer|
@@ -71,11 +61,9 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 
 ## <a name="compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2"></a>Sammenlign Microsoft Defender til virksomheder med Microsoft Defender for Endpoint plan 1 og 2
 
-Defender for Business giver små og mellemstore virksomheder professionelle funktioner i Defender for Endpoint.
+Defender for Business giver små og mellemstore virksomheder professionelle funktioner i Defender for Endpoint. I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business med virksomhedstilbud, Microsoft Defender for Endpoint Plan 1 og 2.
 
-I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender for Business med virksomhedstilbud, Microsoft Defender for Endpoint Plan 1 og 2.
-
-|Funktion/funktionalitet|[Defender for Business](mdb-overview.md)<br/>(separat, i øjeblikket i prøveversion)|[Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)<br/>(til virksomhedskunder) |[Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)<br/>(til virksomhedskunder) |
+|Funktion/funktionalitet|[Defender for Business](mdb-overview.md)<br/>(separat)|[Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)<br/>(til virksomhedskunder) |[Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)<br/>(til virksomhedskunder) |
 |---|---|---|---|
 |[Centraliseret administration](../defender-endpoint/manage-atp-post-migration.md) |Ja <sup>[[1](#fn1)]</sup>|Ja|Ja|
 |[Forenklet klientkonfiguration](mdb-simplified-configuration.md)|Ja|Nej|Nej|
@@ -91,7 +79,7 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 |Partner-API'er|Ja|Ja|Ja|
 |[integration af Microsoft 365 fyrtårn](../../lighthouse/m365-lighthouse-overview.md) <br/>(Til visning af sikkerhedshændelser på tværs af kundelejere)|Ja|Nej|Nej|
 
-(<a id="fn1">1</a>) Onboarde og administrer enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller med Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
+(<a id="fn1">1</a>) Onboard og administrer enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller med Microsoft Intune, der administreres i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
 
 (<a id="fn2">2</a>) Slutpunktsregistrerings- og svarfunktioner (Slutpunktsregistrering og -svar) i Defender for Business omfatter funktionsmådebaseret registrering og følgende fire typer manuelle svarhandlinger: 
 - Kør antivirusscanning
@@ -105,7 +93,7 @@ I følgende tabel sammenlignes sikkerhedsfunktioner og -egenskaber i Defender fo
 
 (<a id="fn5">5</a>) I Defender for Business er trusselsanalyser optimeret til små og mellemstore virksomheder.
 
-(<a id="fn6">6</a>) I løbet af prøveversionsprogrammet understøttes Windows klientenheder til onboarding på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). Du kan bruge den lokale scriptmetode. Se [Onboard-enheder for at Microsoft Defender til virksomheder](mdb-onboard-devices.md).
+(<a id="fn6">6</a>) Se [Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
 
 ## <a name="next-steps"></a>Næste trin
 

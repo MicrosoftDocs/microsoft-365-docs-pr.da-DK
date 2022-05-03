@@ -1,13 +1,12 @@
 ---
 title: Tildel roller og tilladelser i Microsoft Defender til virksomheder
-description: Få mere at vide om, hvordan du tildeler roller og tilladelser i Microsoft Defender til virksomheder
+description: Tildel roller til dit cybersikkerhedsteam. Få mere at vide om disse roller og tilladelser i Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,26 +15,21 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: e4a3be91ff46626654f0c0f7b027557958429b33
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 03295989e1ee44ab43fe0cc53e4029a6c4307ea8
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862670"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172642"
 ---
 # <a name="assign-roles-and-permissions-in-microsoft-defender-for-business"></a>Tildel roller og tilladelser i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Hvis du vil udføre opgaver på Microsoft 365 Defender-portalen, f.eks. konfiguration af Microsoft Defender til virksomheder, visning af rapporter eller svarhandlinger på registrerede trusler, skal sikkerhedsteamet tildeles de relevante tilladelser. Tilladelser tildeles via roller, der er tildelt på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller i [Azure Active Directory](/azure/active-directory/roles/manage-roles-portal). 
 
 ## <a name="what-to-do"></a>Sådan gør du
 
 1. [Få mere at vide om roller i Defender for Business](#roles-in-defender-for-business).
-
 2. [Få vist eller rediger rolletildelinger for dit sikkerhedsteam](#view-or-edit-role-assignments).
-
 3. [Fortsæt til de næste trin](#next-steps).
 
 >
@@ -45,7 +39,7 @@ Hvis du vil udføre opgaver på Microsoft 365 Defender-portalen, f.eks. konfigur
 
 ## <a name="roles-in-defender-for-business"></a>Roller i Defender for Business
 
-I følgende tabel beskrives de tre roller, der kan tildeles i Defender for Business. [Mer informasjon om administratorroller](../../admin/add-users/about-admin-roles.md).
+I følgende tabel beskrives de tre roller, der kan tildeles i Defender for Business. [Få mere at vide om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 | Tilladelsesniveau | Beskrivelse |
 |:---|:---|
@@ -69,7 +63,7 @@ I følgende tabel beskrives de tre roller, der kan tildeles i Defender for Busin
    > [!IMPORTANT]
    > Microsoft anbefaler, at personer kun får adgang til det, de har brug for til at udføre deres opgaver. Vi kalder dette begreb *færrest rettigheder* for tilladelser. Du kan få mere at vide under [Bedste praksis for mindst privilegeret adgang til programmer](/azure/active-directory/develop/secure-least-privileged-access). 
 
-4. I sideruden skal du vælge linket **Administrer medlemmer i Azure AD** . Denne handling fører dig til Azure Active Directory (Azure AD), hvor du kan få vist og administrere dine rolletildelinger.
+4. I sideruden skal du vælge linket **Administrer medlemmer i Azure AD**. Denne handling fører dig til Azure Active Directory (Azure AD), hvor du kan få vist og administrere dine rolletildelinger.
 
 5. Vælg en bruger for at åbne vedkommendes profil, og vælg derefter **Tildelte roller**.
 

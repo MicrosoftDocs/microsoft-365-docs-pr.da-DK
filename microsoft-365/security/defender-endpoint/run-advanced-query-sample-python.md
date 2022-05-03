@@ -1,8 +1,8 @@
 ---
-title: Avanceret jagt med Python API-vejledning
+title: Vejledning til avanceret jagt med Python-API
 ms.reviewer: ''
-description: Få mere at vide om, hvordan du forespørger ved hjælp af Microsoft Defender for Endpoint API ved hjælp af Python, med eksempler.
-keywords: API'er, understøttede api'er, avanceret jagt, forespørgsel
+description: Få mere at vide om, hvordan du forespørger ved hjælp af api'en Microsoft Defender for Endpoint ved hjælp af Python med eksempler.
+keywords: apis, understøttede API'er, avanceret jagt, forespørgsel
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 73be2b3c2aa40bb88ac6ccff60eec5cb7f55338c
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 99fc848088725f7b28d91eebc78327c688059de8
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63597476"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174764"
 ---
 # <a name="advanced-hunting-using-python"></a>Avanceret jagt ved hjælp af Python
 
@@ -30,17 +30,17 @@ ms.locfileid: "63597476"
 **Gælder for:** 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Kør avancerede forespørgsler ved hjælp af Python, se [Avanceret jagt-API](run-advanced-query-api.md).
+Kør avancerede forespørgsler ved hjælp af Python, se [API til avanceret jagt](run-advanced-query-api.md).
 
 I dette afsnit deler vi Python-eksempler for at hente et token og bruge det til at køre en forespørgsel.
 
-> **Forudsætninger**: Du skal først [oprette en app](apis-intro.md).
+> **Forudsætning**: Du skal først [oprette en app](apis-intro.md).
 
 ## <a name="get-token"></a>Hent token
 
@@ -74,18 +74,18 @@ jsonResponse = json.loads(response.read())
 aadToken = jsonResponse["access_token"]
 ```
 
-hvor
+Hvor
 
-- tenantId: Id for lejeren på vegne af hvilken du vil køre forespørgslen (det vil sige, at forespørgslen køres på dataene for denne lejer)
-- appId: Id for din Azure AD-app (appen skal have tilladelsen "Kør avancerede forespørgsler" til Microsoft Defender til slutpunkt)
-- appSekret: Hemmeligheden bag din Azure AD-app
+- tenantId: Id'et for den lejer, som du vil køre forespørgslen på (dvs. forespørgslen køres på dataene i denne lejer)
+- appId: Id'et for din Azure AD app (appen skal have tilladelsen 'Kør avancerede forespørgsler' for at Microsoft Defender for Endpoint)
+- appSecret: Hemmeligheden ved din Azure AD-app
 
 ## <a name="run-query"></a>Kør forespørgsel
 
  Kør følgende forespørgsel:
 
 ```python
-query = 'RegistryEvents | limit 10' # Paste your own query here
+query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
 url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
 headers = { 
@@ -103,12 +103,12 @@ schema = jsonResponse["Schema"]
 results = jsonResponse["Results"]
 ```
 
-- skema indeholder skemaet for resultaterne af forespørgslen
-- resultater indeholder resultaterne af din forespørgsel
+- skemaet indeholder skemaet over resultaterne af din forespørgsel
+- resultaterne indeholder resultaterne af din forespørgsel
 
 ### <a name="complex-queries"></a>Komplekse forespørgsler
 
-Hvis du vil køre komplekse forespørgsler (eller forespørgsler med flere linjer), skal du gemme forespørgslen i en fil og, i stedet for den første linje i eksemplet ovenfor, køre nedenstående kommando:
+Hvis du vil køre komplekse forespørgsler (eller forespørgsler med flere linjer), skal du gemme forespørgslen i en fil og i stedet for den første linje i ovenstående eksempel køre kommandoen nedenfor:
 
 ```python
 queryFile = open("D:\\Temp\\myQuery.txt", 'r') # Replace with the path to your file
@@ -120,7 +120,7 @@ queryFile.close()
 
 Du kan nu bruge forespørgselsresultaterne.
 
-Hvis du vil genaktivere resultaterne, skal du gøre følgende:
+Hvis du vil gentage resultaterne, skal du gøre følgende:
 
 ```python
 for result in results:
@@ -128,7 +128,7 @@ for result in results:
     print(result["EventTime"]) # Prints only the property 'EventTime' from the result
 ```
 
-Hvis du vil have vist resultaterne af forespørgslen i CSV-format i file1.csv skal du gøre følgende:
+Hvis du vil sende resultaterne af forespørgslen i CSV-format i en fil file1.csv skal du gøre følgende:
 
 ```python
 import csv
@@ -142,7 +142,7 @@ for result in results:
 outputFile.close()
 ```
 
-Gør følgende for at få vist resultaterne af forespørgslen i JSON-format i file file1.json:
+Hvis du vil sende resultaterne af forespørgslen i JSON-format i filen file1.json, skal du gøre følgende:
 
 ```python
 outputFile = open("D:\\Temp\\file1.json", 'w')
@@ -152,6 +152,6 @@ outputFile.close()
 
 ## <a name="related-topic"></a>Relateret emne
 
-- [Microsoft Defender til endpoint-API'er](apis-intro.md)
-- [Avanceret api til jagt](run-advanced-query-api.md)
+- [Microsoft Defender for Endpoint API'er](apis-intro.md)
+- [Avanceret jagt-API](run-advanced-query-api.md)
 - [Avanceret jagt ved hjælp af PowerShell](run-advanced-query-sample-powershell.md)

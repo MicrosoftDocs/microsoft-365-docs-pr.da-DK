@@ -1,25 +1,24 @@
 ---
 title: Tilføj brugere, og tildel licenser i Microsoft Defender til virksomheder
-description: Få mere at vide om, hvordan du tilføjer brugere og tildeler licenser
+description: Tilføj brugere, og tildel Defender for Business-licenser for at beskytte deres enheder
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.collection: M365-security-compliance.
-ms.reviewer: inbadian, shlomiakirav
+ms.collection: M365-security-compliance
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
-ms.openlocfilehash: d954d745cde6505fb91eff8e394aee4f06c59092
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: d108064edc361f25f9301c0d4511d68d0856d817
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862913"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172297"
 ---
 # <a name="add-users-and-assign-licenses-in-microsoft-defender-for-business"></a>Tilføj brugere, og tildel licenser i Microsoft Defender til virksomheder
 

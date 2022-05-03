@@ -1,34 +1,30 @@
 ---
-title: Oversigt over Microsoft Defender til virksomheder
-description: Få mere at vide om Microsoft Defender til virksomheder, herunder konfiguration, introduktion, og hvordan du bruger tjenesterne
+title: Hvad er Microsoft Defender for Business?
+description: Microsoft Defender til virksomheder er en cybersikkerhedsløsning til små og mellemstore virksomheder. Defender for Business beskytter mod trusler på tværs af dine enheder.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 8e382e8cf1c4863ffa67bc7687f549d6ae0a4f81
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3589b6a0a0cc7af9e2bcfcb11541309042871591
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101463"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173273"
 ---
-# <a name="overview-of-microsoft-defender-for-business"></a>Oversigt over Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
+# <a name="what-is-microsoft-defender-for-business"></a>Hvad er Microsoft Defender for Business?
 
 Microsoft Defender til virksomheder er en ny sikkerhedsløsning til slutpunkter, der er udviklet specielt til små og mellemstore virksomheder (op til 300 medarbejdere). Med denne sikkerhedsløsning til slutpunkter er din virksomheds enheder bedre beskyttet mod ransomware, malware, phishing og andre trusler. 
 
@@ -65,16 +61,17 @@ Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din
    - [Få mere at vide om, hvordan du får Microsoft Defender til virksomheder](get-defender-business.md)
 
 - **Se, hvordan du konfigurerer dine trusselsbeskyttelsesfunktioner** 
+   - [Brug prøvebogen: Microsoft Defender til virksomheder](trial-playbook-defender-business.md)
+   - [Få mere at vide om den forenklede konfigurationsproces](mdb-simplified-configuration.md)
    - [Se, hvordan du konfigurerer Defender for Business](mdb-setup-configuration.md)
 
 - **Hjælp dig med at komme i gang med at bruge Defender for Business**– startende med Microsoft 365 Defender-portalen 
    - [Gå til Microsoft 365 Defender-portalen](mdb-get-started.md)
-   - [Prøv prøveversionsscenarier, selvstudier og simuleringer](mdb-tutorials.md)
+   - [Prøv scenarier, selvstudier og simuleringer](mdb-tutorials.md)
 
 - **Giv vejledning i administration af enheder og sikkerhedspolitikker**
-   - [Administrer enheder](mdb-manage-devices.md)
+   - [Overvåg eller administrer enheder](mdb-manage-devices.md)
    - [Få vist eller rediger sikkerhedspolitikker](mdb-view-edit-policies.md)
-   - [Administrer brugerdefinerede regler for firewallpolitikker](mdb-custom-rules-firewall.md)  
 
 ## <a name="next-steps"></a>Næste trin
 

@@ -1,13 +1,12 @@
 ---
 title: Rapporter i Microsoft Defender til virksomheder
-description: Få et overblik over de rapporter, der er tilgængelige i Microsoft Defender til virksomheder
+description: Få et overblik over sikkerhedsrapporter i Defender for Business. Rapporter viser registrerede trusler, beskeder, sikkerhedsrisici og enhedsstatus.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,17 +15,14 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5b3a21a45e1b9e90cf5a8a7f666861502205552e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a4fbfc830c349df69180524305339582f444a609
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093256"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174841"
 ---
 # <a name="reports-in-microsoft-defender-for-business"></a>Rapporter i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Der findes flere rapporter på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). I denne artikel beskrives disse rapporter, hvordan du kan bruge dem, og hvordan du finder dem.
 

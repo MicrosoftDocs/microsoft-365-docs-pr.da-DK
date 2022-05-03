@@ -104,6 +104,8 @@
   items:
     - name: Ordliste over ord
       href: m365bp-glossary.md
+    - name: Ofte stillede spørgsmål om Microsoft 365 Business Premium
+      href: microsoft-365-business-faqs.yml
     - name: Microsoft 365 administratorindhold
       href: /microsoft-365/admin/
     - name: Microsoft Defender for Business

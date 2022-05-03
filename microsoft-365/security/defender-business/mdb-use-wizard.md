@@ -1,34 +1,30 @@
 ---
 title: Brug installationsguiden i Microsoft Defender til virksomheder
-description: Defender for Business indeholder en guidelignende konfigurations- og konfigurationsproces. Brug guiden til at spare tid og kræfter.
+description: Defender for Business gør det nemt at konfigurere med en guide, der kører, første gang du bruger Defender for Business. Se, hvordan installationsguiden fungerer.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 697dfc567eb2719a6e81a7b57df321ba2af40911
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 042f20cce0e0d30195ed241b376bf304abeaa2aa
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882302"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172785"
 ---
 # <a name="use-the-setup-wizard-in-microsoft-defender-for-business"></a>Brug installationsguiden i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Microsoft Defender til virksomheder var designet til at spare små og mellemstore virksomheder tid og kræfter. Du kan f.eks. foretage indledende konfiguration med en installationsguide. Konfigurationsguiden hjælper dig med at tildele adgang til dit sikkerhedsteam, konfigurere mailmeddelelser til dit sikkerhedsteam og onboarde virksomhedens Windows enheder.
 
@@ -69,30 +65,30 @@ Installationsguiden er udviklet til at hjælpe dig med hurtigt og effektivt at k
 
    [Få mere at vide om roller og tilladelser](mdb-roles-permissions.md). 
 
-2. **Konfigurer mailmeddelelser**. I dette trin kan du konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres en besked, eller der registreres en ny sårbarhed, vil dit sikkerhedsteam ikke om det, selvom de ikke er væk fra deres skrivebord. [Få mere at vide om mailmeddelelser](mdb-email-notifications.md). 
+2. **Konfigurer mailmeddelelser**. I dette trin kan du konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres en besked, eller der registreres en ny sårbarhed, vil dit sikkerhedsteam ikke gå glip af den, selvom de er væk fra deres skrivebord. [Få mere at vide om mailmeddelelser](mdb-email-notifications.md). 
 
 3. **Onboarde og konfigurer Windows enheder**. I dette trin kan du hurtigt onboarde din virksomheds Windows-enheder til Defender for Business. Onboarding af enheder med det samme hjælper med at beskytte disse enheder fra dag 1. 
 
-   - **Hvis du allerede bruger Microsoft Endpoint Manager** (hvilket omfatter Microsoft Intune), og din virksomhed har enheder tilmeldt Endpoint Manager, bliver du spurgt, om du vil bruge [automatisk onboarding](#what-is-automatic-onboarding) til nogle eller alle dine tilmeldte Windows enheder. Automatisk onboarding konfigurerer en forbindelse mellem Endpoint Manager og Defender for Business og onboarder derefter uden problemer Windows enheder til Defender for Business. 
-   - **Hvis du ikke allerede bruger Endpoint Manager**, kan du [onboarde enheder til Defender for Business](mdb-onboard-devices.md). 
+   - **Hvis du allerede bruger Microsoft Intune**, og din virksomhed har enheder, der er tilmeldt Intune, bliver du spurgt, om du vil bruge [automatisk onboarding](#what-is-automatic-onboarding) til nogle eller alle dine tilmeldte Windows enheder. Automatisk onboarding konfigurerer en forbindelse mellem Intune og Defender for Business og onboarder derefter uden problemer Windows enheder til Defender for Business. 
+   - **Hvis du ikke allerede bruger Intune**, kan du [onboarde enheder til Defender for Business](mdb-onboard-devices.md). 
    
    [Få mere at vide om onboarding af enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
    
-4. **Konfigurer dine sikkerhedspolitikker**. Defender for Business indeholder standardsikkerhedspolitikker for næste generations beskyttelse og firewallbeskyttelse, der kan anvendes på virksomhedens enheder. Disse standardpolitikker bruger anbefalede indstillinger og er designet til at yde stærk beskyttelse af dine enheder. Du kan også oprette dine egne sikkerhedspolitikker. Og hvis du allerede bruger Endpoint Manager, kan du fortsætte med at bruge det til at administrere dine sikkerhedspolitikker.
+4. **Konfigurer dine sikkerhedspolitikker**. Defender for Business indeholder standardsikkerhedspolitikker for næste generations beskyttelse og firewallbeskyttelse, der kan anvendes på virksomhedens enheder. Disse standardpolitikker bruger anbefalede indstillinger og er designet til at yde stærk beskyttelse af dine enheder. Du kan også oprette dine egne sikkerhedspolitikker. Og hvis du allerede bruger Intune, kan du fortsætte med at bruge Microsoft Endpoint Manager Administration til at administrere dine sikkerhedspolitikker.
 
    [Få vist og rediger dine sikkerhedspolitikker og -indstillinger](mdb-configure-security-settings.md).
 
 ## <a name="what-is-automatic-onboarding"></a>Hvad er automatisk onboarding?
 
-Automatisk onboarding er en forenklet måde at onboarde Windows enheder på til Defender for Business. Automatisk onboarding er kun tilgængelig for Windows enheder, der allerede er tilmeldt Microsoft Endpoint Manager (eller Microsoft Intune). 
+Automatisk onboarding er en forenklet måde at onboarde Windows enheder på til Defender for Business. Automatisk onboarding er kun tilgængelig for Windows enheder, der allerede er tilmeldt Microsoft Intune. 
 
-Mens du bruger installationsguiden, registrerer systemet, om Windows enheder allerede er tilmeldt Endpoint Manager. Du bliver spurgt, om du vil bruge automatisk onboarding for alle eller nogle af disse enheder. Du kan onboarde alle Windows enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere. 
+Mens du bruger installationsguiden, registrerer systemet, om Windows enheder allerede er tilmeldt Intune. Du bliver spurgt, om du vil bruge automatisk onboarding for alle eller nogle af disse enheder. Du kan onboarde alle Windows enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere. 
 
 Hvis du vil onboarde andre enheder, skal du se [Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
 
 > [!TIP]
-> - Vi anbefaler, at du vælger indstillingen "alle de enheder, der er tilmeldt". På den måde bliver Windows enheder automatisk onboardet i Defender for Business, når de er tilmeldt Endpoint Manager senere. 
-> - Hvis du har administreret sikkerhedspolitikker og -indstillinger i Endpoint Manager, anbefaler vi, at du skifter til Microsoft 365 Defender portal for at administrere dine enheder, politikker og indstillinger. Du kan få mere at vide under [Vælg, hvor du vil administrere sikkerhedspolitikker og -enheder](mdb-configure-security-settings.md#choose-where-to-manage-security-policies-and-devices).
+> - Vi anbefaler, at du vælger indstillingen "alle de enheder, der er tilmeldt". På den måde bliver Windows enheder automatisk føjet til Defender for Business, når de er tilmeldt Intune senere. 
+> - Hvis du har administreret sikkerhedspolitikker og -indstillinger i Endpoint Manager Administration, anbefaler vi, at du skifter til portalen Microsoft 365 Defender for at administrere dine enheder, politikker og indstillinger. Du kan få mere at vide under [Vælg, hvor du vil administrere sikkerhedspolitikker og -enheder](mdb-configure-security-settings.md#choose-where-to-manage-security-policies-and-devices).
 
 ## <a name="what-happens-if-i-dont-use-the-wizard"></a>Hvad sker der, hvis jeg ikke bruger guiden?
 

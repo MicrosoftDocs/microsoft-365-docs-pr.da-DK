@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5e5d2b2bd47ba30aaf152171605947bb9a627480
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 1f387696797d52805495777be0850ebe135fd38a
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666344"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173117"
 ---
 # <a name="investigate-entities-on-devices-using-live-response"></a>Undersøg enheder på enheder ved hjælp af live-svar
 
@@ -165,7 +165,7 @@ Følgende kommandoer er tilgængelige for brugerroller, der har fået mulighed f
 | Forbindelser  | Viser alle de aktive forbindelser.  | Y  | N  | N  |
 | Dir  | Viser en liste over filer og undermapper i en mappe.  | Y  | Y  | Y  |
 | Drivere  | Viser alle de drivere, der er installeret på enheden.  | Y  | N  | N  |
-| Fg `<command ID>`  | Placer det angivne job i forgrunden i forgrunden, så det er det aktuelle job.  BEMÆRK! Fg tager et 'kommando-id', der er tilgængeligt fra job, ikke et PID  | Y  | Y  | Y  |
+| Fg `<command ID>`  | Placer det angivne job i forgrunden, hvilket gør det til det aktuelle job.  BEMÆRK! Fg tager et 'kommando-id', der er tilgængeligt fra job, ikke et PID  | Y  | Y  | Y  |
 | filinfo  | Hent oplysninger om en fil.  | Y  | Y  | Y  |
 | findfile  | Angiver filer med et givent navn på enheden.  | Y  | Y  | Y  |
 | getfile <file_path>  | Downloader en fil.  | Y  | Y  | Y  |
@@ -346,7 +346,7 @@ Vælg fanen **Kommandolog** for at se de kommandoer, der bruges på enheden unde
 - En enhed kan kun være i én session ad gangen.
 - Der gælder følgende grænser for filstørrelsen:
   - `getfile` grænse: 3 GB
-  - `fileinfo` grænse: 10 GB
+  - `fileinfo` grænse: 30 GB
   - `library` grænse: 250 MB
 
 ## <a name="related-article"></a>Relateret artikel

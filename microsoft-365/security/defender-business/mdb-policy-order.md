@@ -1,32 +1,28 @@
 ---
 title: Forstå politikrækkefølgen i Microsoft Defender til virksomheder
-description: Få mere at vide om prioritetsrækkefølgen med politikker i Microsoft Defender til virksomheder
+description: Få mere at vide om prioritetsrækkefølgen med politikker for cybersikkerhed for at beskytte dine virksomhedsenheder med Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 56b7bbcb95bc00c8647fb4cc39e0d1e0611596ab
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 4003585c82c835c21218fd1200b3468140c8370b
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862164"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174093"
 ---
 # <a name="understand-policy-order-in-microsoft-defender-for-business"></a>Forstå politikrækkefølgen i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 ## <a name="policy-order-in-microsoft-defender-for-business"></a>Politikrækkefølge i Microsoft Defender til virksomheder
 
@@ -50,7 +46,7 @@ Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge.
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Első lépések ved hjælp af Defender for Business](mdb-get-started.md)
+- [Kom i gang med at bruge Defender for Business](mdb-get-started.md)
 - [Administrer enheder](mdb-manage-devices.md)
 - [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
 - [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)

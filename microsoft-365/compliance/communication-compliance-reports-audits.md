@@ -1,6 +1,7 @@
 ---
-title: Brug rapporter og revisioner i forbindelse med overholdelse af kommunikation
-description: Få mere at vide om at bruge rapporter om overholdelse af kommunikation og revisioner.
+title: Brug rapporter og overvågninger for kommunikation med overholdelse af angivne standarder
+description: Få mere at vide om brug af rapporter om kommunikation med overholdelse af angivne standarder og overvågninger.
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, kommunikation
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -18,174 +19,176 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: a65a72538afa3684cf4ad9351d30313e0dc43b8d
-ms.sourcegitcommit: 726a72f135358603c2fde3f4067d834536e6deb2
+ms.openlocfilehash: e7e26451e2cf4786f73b16f74bedd46ca764f6ed
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63606721"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173736"
 ---
-# <a name="use-communication-compliance-reports-and-audits"></a>Brug rapporter og revisioner i forbindelse med overholdelse af kommunikation
+# <a name="use-communication-compliance-reports-and-audits"></a>Brug rapporter og overvågninger for kommunikation med overholdelse af angivne standarder
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="reports"></a>Rapporter
 
-Det nye dashboard **Rapporter er** den centrale placering til visning af alle rapporter om overholdelse af kommunikation. Rapportwidgets giver en hurtig oversigt over de indsigter, der oftest er nødvendige for en overordnet vurdering af status for aktiviteter til overholdelse af kommunikation. Oplysningerne i rapportwidgets kan ikke eksporteres. Detaljerede rapporter giver detaljerede oplysninger om specifikke kommunikationsoverholdelsesområder og giver mulighed for at filtrere, gruppere, sortere og eksportere oplysninger under gennemsyn. 
+Det nye dashboard **Rapporter** er den centrale placering til visning af alle rapporter om kommunikation med overholdelse af angivne standarder. Rapportwidgets giver et hurtigt overblik over de indsigter, der oftest kræves for at få en samlet vurdering af status for aktiviteter for kommunikation med overholdelse af angivne standarder. Oplysningerne i rapportwidgets kan ikke eksporteres. Detaljerede rapporter indeholder detaljerede oplysninger, der er relateret til specifikke områder for overholdelse af kommunikation, og giver mulighed for at filtrere, gruppere, sortere og eksportere oplysninger under gennemsyn. 
 
-For datoområdefilteret vises dato og klokkeslæt for begivenheder i UTC (Coordinated Universal Time). Ved filtrering af meddelelser for rapporter bestemmer den anmodende brugers lokale dato/klokkeslæt resultaterne baseret på konverteringen af brugerens lokale dato/klokkeslæt til UTC. Hvis en bruger i AMERIKANSK PACIFIC Daylight Time (PDT) filtrerer en rapport fra 30-08-2021 til 31-08-2021 kl. 00:00, indeholder rapporten meddelelser fra 30-08-2021 07:00 UTC til 31-08-2021 07:00 UTC. Hvis den samme bruger var i det amerikanske Eastern Daylight Time (EDT), når der blev filtreret kl. 00:00, medtager rapporten meddelelser fra 30-08-2021 04:00 UTC til d. 31-08-2021 04:00 UTC.
+For filteret for datointerval vises dato og klokkeslæt for hændelser i UTC (Coordinated Universal Time). Når meddelelser filtreres for rapporter, bestemmer den anmodende brugers lokale dato/klokkeslæt resultaterne baseret på konverteringen af brugerens lokale dato/klokkeslæt til UTC. Hvis en bruger i USA f.eks. PDT (Pacific Daylight Time) filtrerer en rapport fra 30-08-2021 til 31-08-2021 kl. 00:00, indeholder rapporten meddelelser fra 30-08-2021 07:00 UTC til 8/31/2021 07:00 UTC. Hvis den samme bruger var i U.S. Eastern Daylight Time (EDT), da der filtreres kl. 00:00, indeholder rapporten meddelelser fra 30-08-2021 04:00 UTC til 31-08-2021 04:00 UTC.
 
-![Dashboard til rapporter om overholdelse af kommunikation.](../media/communication-compliance-reports-dashboard.png)
+![Dashboard til rapporter om kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-reports-dashboard.png)
 
-**Dashboardet Rapporter indeholder** følgende rapportwidgets og links til detaljerede rapporter:
+**Dashboardet Rapporter** indeholder følgende rapportwidgets og detaljerede rapportlinks:
 
 ### <a name="report-widgets"></a>Rapportwidgets
 
-- **Seneste politik matches**: Viser antallet af matches af aktive politikker over tid.
-- **Løste elementer efter politik**: Viser antallet af beskeder om match af politikker, som er blevet løst af politikken over tid.
-- **Brugere med de fleste politikmatches**: viser brugerne (eller anonymiserede brugernavne) og antallet af politikoverensstemmelser for en given periode.
-- **Politik med de fleste matches**: Viser politikkerne og antallet af matches for en given periode, rangeret fra højeste til laveste for match.
-- **Eskalering efter politik**: Viser antallet af eskaleringer pr. politik i et givet tidsrum.
+- **Seneste politikforekomster**: Viser antallet af matches efter aktiv politik over tid.
+- **Løste elementer efter politik**: Viser antallet af beskeder om politikmatch, der er løst af politikken over tid.
+- **Brugere med de fleste politikmatch**: Viser brugerne (eller anonymiserede brugernavne) og antallet af politikmatch for en given periode.
+- **Politik med de fleste matches**: Viser politikkerne og antallet af matches for en given periode, rangeret højest til laveste for matches.
+- **Eskaleringer efter politik**: viser antallet af eskaleringer pr. politik over en given tid.
 
 ### <a name="detailed-reports"></a>Detaljerede rapporter
 
-Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rapportdetaljerne til en hvilken som helst detaljeret rapport.
+Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rapportdetaljerne for en detaljeret rapport. Indstillingen *Eksportér* rapport understøtter filstørrelser, der downloades op til 3 MB.
 
-- **Politikindstillinger og -status**: giver et detaljeret kig på politikkonfiguration og indstillinger samt den generelle status for hver af politikken (matches og handlinger) for meddelelser. Omfatter politikoplysninger, og hvordan politikker er knyttet til brugere og grupper, placeringer, gennemse procentdele, korrekturlæsere, status og hvornår politikken sidst blev ændret. Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rapportdetaljerne.
-- **Elementer og handlinger pr. politik**: Gennemse og eksportér matchende elementer og afhjælpningshandlinger pr. politik. Omfatter politikoplysninger, og hvordan politikker er knyttet til:
+- **Politikindstillinger og status**: Giver et detaljeret kig på politikkonfiguration og -indstillinger samt den generelle status for hver af politikken (matches og handlinger) i meddelelser. Indeholder politikoplysninger, og hvordan politikker er knyttet til brugere og grupper, placeringer, korrekturprocenter, korrekturlæsere, status og hvornår politikken sidst blev ændret. Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rapportoplysningerne.
+- **Elementer og handlinger pr. politik**: Gennemse og eksportér tilsvarende elementer og afhjælpningshandlinger pr. politik. Indeholder politikoplysninger, og hvordan politikker er knyttet til:
 
-    - Elementer, der er matchet
+    - Elementer, der stemmer overens
     - Eskalerede elementer
     - Løste elementer
     - Mærket som kompatibel
     - Mærket som ikke-kompatibel
-    - Mærket som tvivlsomme
-    - Elementer, der venter på gennemsyn
-    - Brugeren får besked
+    - Mærket som tvivlsom
+    - Elementer, der afventer gennemsyn
+    - Bruger med besked
     - Sag oprettet
 
-- **Element og handlinger pr. placering**: Gennemse og eksportér matchende elementer, og afhjælpningshandlinger pr. Microsoft 365 placering. Indeholder oplysninger om, hvordan arbejdsbelastningsplatforme er knyttet til:
+- **Element og handlinger pr. placering**: Gennemse og eksportér tilsvarende elementer og afhjælpningshandlinger pr. Microsoft 365 placering. Indeholder oplysninger om, hvordan arbejdsbelastningsplatforme er knyttet til:
 
-    - Elementer, der er matchet
+    - Elementer, der stemmer overens
     - Eskalerede elementer
     - Løste elementer
     - Mærket som kompatibel
     - Mærket som ikke-kompatibel
-    - Mærket som tvivlsomme
-    - Elementer, der venter på gennemsyn
-    - Brugeren får besked
+    - Mærket som tvivlsom
+    - Elementer, der afventer gennemsyn
+    - Bruger med besked
     - Sag oprettet
 
-- **Aktivitet efter bruger**: Gennemse og eksportér matchende elementer samt afhjælpningshandlinger pr. bruger. Indeholder oplysninger om, hvordan brugere er knyttet til:
+- **Aktivitet efter bruger**: Gennemse og eksportér matchende elementer og afhjælpningshandlinger pr. bruger. Indeholder oplysninger om, hvordan brugere er knyttet til:
 
-    - Elementer, der er matchet
+    - Elementer, der stemmer overens
     - Eskalerede elementer
     - Løste elementer
     - Mærket som kompatibel
     - Mærket som ikke-kompatibel
-    - Mærket som tvivlsomme
-    - Elementer, der venter på gennemsyn
-    - Brugeren får besked
+    - Mærket som tvivlsom
+    - Elementer, der afventer gennemsyn
+    - Bruger med besked
     - Sag oprettet
 
-- **Type af følsomme oplysninger pr. placering** (forhåndsvisning): Gennemse og eksportér oplysninger om registrering af følsomme oplysningstyper og de tilknyttede kilder i politikker for overholdelse af kommunikation. Omfatter den samlede mængde og den specifikke opdeling af følsomme oplysningstypeforekomster i de kilder, der er konfigureret i organisationen. Værdierne for hver tredjepartskilde vises i separate kolonner i .csv fil. Her er nogle eksempler:
+- **Type af følsomme oplysninger pr. placering** (prøveversion): Gennemse og eksportér oplysninger om registrering af følsomme oplysningstyper og de tilknyttede kilder i politikker for kommunikation med overholdelse af angivne standarder. Omfatter den samlede total og den specifikke opdeling af forekomster af følsomme oplysninger i de kilder, der er konfigureret i din organisation. Værdierne for hver tredjepartskilde vises i separate kolonner i .csv-filen. Eksempler er:
 
-    - **Mail**: Følsomme oplysningstyper, der registreres Exchange e-mail-meddelelser.
-    - **Teams**: Følsomme oplysningstyper, der registreres i Microsoft Teams kanaler og chatmeddelelser.
-    - **Skype for Business**: Følsomme oplysningstyper, der registreres i Skype til virksomhedskommunikation.
-    - **Yammer**: Typer af følsomme oplysninger, der registreres Yammer indbakker, indlæg, chats og svar.
-    - **Tredjepartskilder: Følsomme** oplysningstyper registreres for aktiviteter, der er knyttet til tredjepartsforbindelser, der er konfigureret i organisationen. Hvis du vil se en opdeling af tredjepartskilder for en bestemt type af følsomme oplysninger i rapporten, skal du holde musen over værdien for typen af følsomme oplysninger i kolonnen Tredjepartskilde.
-    - **Andet**: Typer af følsomme oplysninger, der bruges til intern systembehandling. Valg eller fravalg af denne kilde til rapporten påvirker ikke nogen værdier.
+    - **Mail**: Følsomme oplysningstyper, der er registreret i Exchange mails.
+    - **Teams**: Følsomme informationstyper, der registreres i Microsoft Teams kanaler og chatbeskeder.
+    - **Skype for Business**: Følsomme informationstyper, der registreres i Skype til forretningskommunikation.
+    - **Yammer**: Typer af følsomme oplysninger, der registreres i Yammer indbakker, indlæg, chats og svar.
+    - **Tredjepartskilder**: Følsomme oplysningstyper, der registreres for aktiviteter, der er knyttet til tredjepartsconnectors, som er konfigureret i din organisation. Hvis du vil se opdelingen af tredjepartskilder for en bestemt følsom oplysningstype i rapporten, skal du holde musen over værdien for typen af følsomme oplysninger i kildekolonnen fra tredjepart.
+    - **Andet**: Følsomme informationstyper, der bruges til intern systembehandling. Valg eller fravalg af denne kilde til rapporten påvirker ikke nogen værdier.
 
-### <a name="message-details-report-preview"></a>Rapport med meddelelsesdetaljer (eksempel)
+### <a name="message-details-report-preview"></a>Rapport med meddelelsesoplysninger (prøveversion)
 
-Opret brugerdefinerede rapporter og gennemse detaljer for meddelelser, der er indeholdt i bestemte politikker **på fanen** Politikker. Disse rapporter kan bruges til alle gennemgange af meddelelser og til at oprette et øjebliksbillede af rapporten for statussen for meddelelser i en brugerdefineret tidsperiode. Når du har oprettet en rapport, kan du få vist og downloade detaljerapporten som en .csv fil på fanen **Rapporter med meddelelsesdetaljer** .
+Opret brugerdefinerede rapporter, og gennemse detaljer for meddelelser i bestemte politikker under fanen **Politikker** . Disse rapporter kan bruges til samlet gennemgang af meddelelser og til at oprette et snapshot af rapporten for status for meddelelser i en tidsperiode, der kan tilpasses. Når du har oprettet en rapport, kan du få vist og downloade detaljerapporten som en .csv-fil under fanen **Rapporter med meddelelsesoplysninger** .
 
-![Detaljerapport over meddelelser om overholdelse af kommunikation.](../media/communication-compliance-message-detail-report.png)
+![Detaljeret rapport over meddelelse om kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-message-detail-report.png)
 
-Hvis du vil oprette en rapport med oplysninger om en ny meddelelse, skal du udføre følgende trin:
+Hvis du vil oprette en ny rapport med meddelelsesoplysninger, skal du udføre følgende trin:
 
-1. Log på Microsoft 365 Overholdelsescenter med en konto, der er medlem af rollegruppen *Overholdelse af regler* og standarder i kommunikation.
-2. Gå til fanen **Politikker** , vælg en politik, og vælg derefter **Opret rapport med meddelelsesdetaljer**.
-3. I **ruden Opret rapport med meddelelsesdetaljer** skal du angive et navn til rapporten i **feltet Rapportnavn** .
-4. Vælg **en Startdato og** Slutdato for *rapporten i* *Vælg et* datointerval.
+1. Log på Microsoft Purview-overholdelsesportalen med en konto, der er medlem af rollegruppen *Communication Compliance Investigators* .
+2. Gå til fanen **Politikker** , vælg en politik, og vælg derefter **Opret rapport med meddelelsesoplysninger**.
+3. I ruden **Opret rapport med meddelelsesoplysninger** skal du angive et navn til rapporten i feltet **Rapportnavn** .
+4. Vælg en *startdato* og *en slutdato* for rapporten i **Vælg et datointerval**.
 5. Vælg **Opret**.
-6. Bekræftelsen af oprettelse af rapporten vises.
+6. Bekræftelsen på oprettelse af rapporten vises.
 
-Afhængigt af antallet af elementer i rapporten kan det tage et par minutter til timer, før rapporten er klar til at blive downloadet. Du kan kontrollere status under fanen Rapporter med meddelelsesdetaljer. Status for rapporten *er i gang* eller *Klar til at blive downloadet*. Du kan have op til 15 separate rapporter, der behandles samtidigt. Hvis du vil downloade en rapport, skal du vælge en rapport *i tilstanden Klar til at downloade* og vælge **Download rapport**.
+Afhængigt af antallet af elementer i rapporten kan det tage et par minutter til timer, før rapporten er klar til at blive downloadet. Du kan kontrollere status under fanen Meddelelsesdetaljer om rapporter. Rapportstatus er *i gang* eller *Klar til download*. Du kan have op til 15 separate rapporter, der behandles samtidigt. Hvis du vil downloade en rapport, skal du vælge en rapport i tilstanden *Klar til at downloade* og vælge **Download rapport**.
 
 > [!NOTE]
-> Hvis den valgte tidsperiode ikke returnerer nogen meddelelsesresultater i rapporten, var der ikke nogen meddelelser for den valgte tidsperiode. Rapporten vil være tom.
+> Hvis den valgte tidsperiode ikke returnerer nogen meddelelsesresultater i rapporten, var der ikke nogen meddelelser for den valgte tidsperiode. Rapporten er tom.
 
-Rapporter med meddelelsesdetaljer indeholder følgende oplysninger for hvert meddelelseselement i politikken:
+Rapporter med meddelelsesoplysninger indeholder følgende oplysninger for hvert meddelelseselement i politikken:
 
-- **Match-id**: Entydigt id for meddelelsen i politikken.
-- **Afsender**: afsenderen af meddelelsen.
-- **Modtagere**: Modtagerne af meddelelsen.
-- **Dato sendt**: den dato, hvor meddelelsen blev sendt.
-- **Matchdato**: den dato, hvor meddelelsen opfylder politikbetingelserne.
-- **Emne**: meddelelsens emne.
-- **Indeholder vedhæftede** filer: status for eventuelle vedhæftede filer i meddelelsen. Værdierne er enten Ja eller Nej.
-- **Politiknavn**: navnet på den politik, der er knyttet til meddelelsen. Denne værdi er den samme for alle meddelelser i rapporten.
-- **Elementstatus**: status for meddelelseselementet i politikken. Værdierne er Afventende eller Løst.
-- **Mærker**: de mærker, der er tildelt til meddelelsen. Værdier er tvivlsomme, kompatible eller ikke-kompatible.
-- **Nøgleordet matcher**: nøgleordet matcher for meddelelsen.
-- **Korrekturlæsere**: Korrekturlæsere tildelt meddelelsen.
-- **Afventer i (dage)**: antallet af dage, meddelelsen har været i en ventende tilstand. For løste meddelelser er værdien 0.
+- **Match-id**: entydigt id for meddelelsen i politikken.
+- **Afsender**: meddelelsens afsender.
+- **Modtagere**: de modtagere, der er inkluderet i meddelelsen.
+- **Dato for afsendelse**: Den dato, hvor meddelelsen blev sendt.
+- **Matchdato**: Den dato, hvor meddelelsen var et match for politikbetingelserne.
+- **Om**: Meddelelsens emne.
+- **Indeholder vedhæftede filer**: status for eventuelle vedhæftede filer i meddelelsen. Værdier er enten Ja eller Nej.
+- **Politiknavn**: Navnet på den politik, der er knyttet til meddelelsen. Denne værdi vil være den samme for alle meddelelser i rapporten.
+- **Elementstatus**: Status for meddelelseselementet i politikken. Værdier afventer eller løses.
+- **Tags**: de mærker, der er tildelt meddelelsen. Værdier er tvivlsomme, kompatible eller ikke-kompatible.
+- **Nøgleordsforekomster**: Nøgleordsforekomster for meddelelsen.
+- **Korrekturlæsere: Korrekturlæsere** er tildelt til meddelelsen.
+- **Ventende i (dage)**: det antal dage, meddelelsen har været i ventende tilstand. Værdien er 0 for løste meddelelser.
 - **Kommentar til løst**: kommentarerne til den meddelelse, der blev angivet, da den blev løst.
 - **Løst dato**: den dato og det klokkeslæt, hvor meddelelsen blev løst.
-- **Senest opdateret af**: brugernavnet til den seneste opdatering.
-- **Senest opdateret den**: den dato og det klokkeslæt, hvor meddelelsen sidst blev opdateret.
-- **Oversigt over kommentarer**: liste over alle kommentarer til beskeden, herunder kommentarforfatter og dato/klokkeslæt for kommentaren.
+- **Senest opdateret af**: brugernavnet på den seneste opdatering.
+- **Senest opdateret** den: den dato og det klokkeslæt, hvor meddelelsen sidst blev opdateret.
+- **Oversigt over kommentarer**: liste over alle kommentarer til meddelelsen, herunder kommentarforfatter og dato/klokkeslæt for kommentaren.
 
-## <a name="audit"></a>Overvågning
+## <a name="audit"></a>Revision
 
-I nogle tilfælde skal du give oplysninger til lovgivningsmæssige revisorer eller revisionsrevisorer for at bevise overvågning af brugeraktiviteter og kommunikation. Disse oplysninger kan være en oversigt over alle aktiviteter, der er knyttet til en defineret organisationspolitik, eller når en politik for overholdelse af kommunikation ændres. Politikker for overholdelse af kommunikation har indbyggede revisionsspor for komplet parathed til interne eller eksterne revisioner. Detaljerede revisionshistorikker for hver handling, du opretter, redigerer og sletter, registreres af dine kommunikationspolitikker for at levere dokumentation for kontrolprocedurer.
+I nogle tilfælde skal du give oplysninger til revisorer for lovgivning eller overholdelse af angivne standarder for at bevise overvågning af brugeraktiviteter og kommunikation. Disse oplysninger kan være en oversigt over alle aktiviteter, der er knyttet til en defineret organisationspolitik, eller når en politik for kommunikation med overholdelse af angivne standarder ændres. Politikker for kommunikation med overholdelse af angivne standarder har indbyggede overvågningsspor til komplet parathed til interne eller eksterne revisioner. Detaljerede overvågningshistorikker for hver oprettelses-, redigerings- og sletningshandling registreres af dine kommunikationspolitikker for at give bevis for tilsynsprocedurer.
 
 > [!IMPORTANT]
-> Overvågning skal være aktiveret for din organisation, før hændelser i forbindelse med overholdelse af kommunikation registreres. Se Aktivér overvågningsloggen for [at aktivere overvågning](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365-overvågningsloggen, kan der gå op til 48 timer, før disse hændelser kan ses i politikker for overholdelse af kommunikation.
+> Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365 overvågningslog, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
 
-Hvis du vil have vist opdateringsaktiviteter for politikker til overholdelse af kommunikation, **skal** du vælge kontrolelementet Eksportér politikopdateringer på hovedsiden for enhver politik. Du skal have tildelt *rollerne Global administrator eller* *Kommunikationsoverholdelsesadministrator* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i det .csv, der indeholder følgende oplysninger:
+Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, skal du vælge kontrolelementet **Eksportér politikopdateringer** på hovedsiden for en hvilken som helst politik. Du skal være tildelt rollerne *Global administrator* eller *Administrator af kommunikationsoverholdelse* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
-|**Felt**|**Detaljer**|
+|**Feltet**|**Detaljer**|
 |:-----|:-----|
-| **CreationDate** | Den dato, hvor opdateringsaktiviteten blev udført i en politik. |
+| **Oprettelsesdato** | Den dato, hvor opdateringsaktiviteten blev udført i en politik. |
 | **UserIds** | Den bruger, der udførte opdateringsaktiviteten i en politik. |
-| **Handlinger** | Opdateringshandlingerne, der udføres på politikken. |
-| **AuditData** | Dette felt er den primære datakilde for alle politikopdateringsaktiviteter. Alle opdateringsaktiviteter registreres og adskilles af kommaseparatorer. |
+| **Operationer** | De opdateringshandlinger, der udføres på politikken. |
+| **Overvågningsdata** | Dette felt er den primære datakilde for alle politikopdateringsaktiviteter. Alle opdateringsaktiviteter registreres og adskilles af kommaafgrænsere. |
 
-Hvis du vil have vist aktiviteter til gennemsyn af overholdelse af  kommunikation for en politik, skal du vælge kontrolelementet Eksportér gennemsyn-aktiviteter **på** siden Oversigt for en bestemt politik. Du skal have tildelt *rollerne Global administrator eller* *Kommunikationsoverholdelsesadministrator* for at eksportere gennemsynsaktiviteter. Denne handling genererer en overvågningsfil i det .csv, der indeholder følgende oplysninger:
+Hvis du vil have vist aktiviteter til gennemgang af overholdelse af angivne standarder for en politik, skal du vælge kontrolelementet **Eksportér aktiviteter til gennemsyn** på siden **Oversigt** for en bestemt politik. Du skal være tildelt rollerne *Global administrator* eller *Administrator af kommunikationsoverholdelse* for at kunne eksportere korrekturaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
-|**Felt**|**Detaljer**|
+|**Feltet**|**Detaljer**|
 |:-----|:-----|
-| **CreationDate** | Den dato, hvor gennemsynsaktiviteten blev udført i en politik. |
+| **Oprettelsesdato** | Den dato, hvor korrekturaktiviteten blev udført i en politik. |
 | **UserIds** | Den bruger, der udførte gennemsynsaktiviteten i en politik. |
-| **Handlinger** | De gennemsynshandlinger, der udføres på politikken. |
-| **AuditData** | Dette felt er den vigtigste datakilde for alle politikgennemsynsaktiviteter. Alle gennemsynsaktiviteter registreres og adskilles af kommaseparatorer. |
+| **Operationer** | De korrekturhandlinger, der er udført på politikken. |
+| **Overvågningsdata** | Dette felt er den primære datakilde for alle aktiviteter til gennemsyn af politikker. Alle korrekturaktiviteter registreres og adskilles af kommaafgrænsere. |
 
-Du kan også få vist overvågningsaktiviteter i den samlede overvågningslog eller med [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) PowerShell-cmdlet'en. Du kan få mere at vide om opbevaringspolitikker for overvågningslogfiler under [Administrere opbevaringspolitikker for overvågningslogfiler](audit-log-retention-policies.md).
+Du kan også få vist overvågningsaktiviteter i den samlede overvågningslog eller med PowerShell-cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) . Du kan få mere at vide om politikker for opbevaring af overvågningslog under [Administrer opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md).
 
-I følgende eksempel returneres aktiviteterne for alle aktiviteter til kontrolvurdering (politikker og regler):
+Følgende eksempel returnerer f.eks. aktiviteterne for alle overvågningsaktiviteter (politikker og regler):
 
 ```PowerShell
 Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -RecordType AeD -Operations SupervisoryReviewTag
 ```
 
-I dette eksempel returneres opdateringsaktiviteterne for dine politikker for overholdelse af regler og standarder i kommunikation:
+I dette eksempel returneres opdateringsaktiviteterne for politikkerne for kommunikation med overholdelse af angivne standarder:
 
 ```PowerShell
 Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -RecordType Discovery -Operations SupervisionPolicyCreated,SupervisionPolicyUpdated,SupervisionPolicyDeleted
 ```
 
-I dette eksempel returneres aktiviteter, der svarer til dine aktuelle politikker for overholdelse af regler og standarder i kommunikation:
+I dette eksempel returneres aktiviteter, der stemmer overens med dine aktuelle politikker for overholdelse af angivne standarder for kommunikation:
 
 ```PowerShell
 Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -Operations SupervisionRuleMatch
 ```
 
-Matches af kommunikationspolitik gemmes i en postkasse til overvågning for hver politik. I nogle tilfælde kan det være nødvendigt at kontrollere størrelsen på din postkasse til overvågning for en politik for at sikre, at du ikke nærmer dig den aktuelle 100 GB-lagerstørrelse eller 1 million meddelelsesgrænse. Hvis postkassegrænsen er nået, registreres politikoverensstemmelse ikke, og du skal oprette en ny politik (med de samme indstillinger) for at fortsætte med at registrere matches for de samme aktiviteter.
+Overholdelsespolitik for kommunikation gemmes i en overvågningspostkasse for hver politik. I nogle tilfælde skal du muligvis kontrollere størrelsen på din overvågningspostkasse for en politik for at sikre, at du ikke nærmer dig den aktuelle lagerstørrelse på 100 GB eller 1 million meddelelser. Hvis grænsen for postkassen nås, registreres politikforekomster ikke, og du skal oprette en ny politik (med de samme indstillinger) for at fortsætte med at hente match for de samme aktiviteter.
 
-Hvis du vil kontrollere størrelsen på en postkasse til overvågning for en politik, skal du udføre følgende trin:
+Hvis du vil kontrollere størrelsen på en tilsynspostkasse for en politik, skal du udføre følgende trin:
 
-1. Brug [Forbind-ExchangeOnline-cmdlet'en](/powershell/module/exchange/connect-exchangeonline) i Exchange Online PowerShell V2-modulet til at oprette forbindelse til Exchange Online PowerShell ved hjælp af moderne godkendelse.
+1. Brug [cmdlet'en Forbind-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) i Exchange Online PowerShell V2-modulet til at oprette forbindelse til Exchange Online PowerShell ved hjælp af moderne godkendelse.
 2. Kør følgende kommando i PowerShell:
 
     ```PowerShell

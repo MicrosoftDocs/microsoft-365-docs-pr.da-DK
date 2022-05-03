@@ -11,15 +11,15 @@ metadata:
   ms.custom:
   - AdminSurgePortfolio
   - intro-hub-or-landing
-  author: efrene
-  ms.author: efrene
-  ms.date: 04/08/2022
-  ms.openlocfilehash: e319645e0dea93a04213402003788d069a64a2b0
-  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  author: denisebmsft
+  ms.author: deniseb
+  ms.date: 05/02/2022
+  ms.openlocfilehash: a9e7a3cd8ed3fb331c37c60453e8ef864ee96e3a
+  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65092585"
+  ms.lasthandoff: 05/03/2022
+  ms.locfileid: "65174798"
 productDirectory:
   title: Produktivitet og sikkerhed med Microsoft 365 Business Premium
   items:
@@ -57,7 +57,7 @@ conceptualContent:
       text: Sammenlign Microsoft 365 for virksomhedsplaner
     - url: ../admin/misc/microsoft-365-business-faqs.yml
       itemType: reference
-      text: Ofte stillede spørgsmål om Microsoft 365 til virksomheder
+      text: Ofte stillede spørgsmål om Microsoft 365 Business Premium
     - url: ../business-video/index.yml
       itemType: video
       text: Microsoft 365 til videoer om virksomhedstræning
@@ -117,9 +117,12 @@ conceptualContent:
       text: Kom i gang med Partnercenter
   - title: Beskyt enheder
     links:
+    - url: ../security/defender-business/index.yml
+      itemType: overview
+      text: Kom i gang med Microsoft Defender til virksomheder
     - url: ../business-premium/m365bp-devices-overview.md
       itemType: overview
-      text: Beskyt personlige (ikke-administrerede) enheder
+      text: Konfigurer ikke-administrerede (BYOD) enheder
     - url: ../business-premium/m365bp-multifactor-authentication.md
       itemType: how-to-guide
       text: Konfigurer multifaktorgodkendelse på enheder
@@ -134,9 +137,12 @@ conceptualContent:
       text: Konfigurer og beskyt administrerede enheder
   - title: Beskyt mailindhold og Office filer
     links:
+    - url: ..//security/office-365-security/index.yml
+      itemType: overview
+      text: Kom i gang med Microsoft Defender for Office 365
     - url: ../business-premium/m365bp-increase-protection.md
       itemType: how-to-guide
-      text: Konfigurer dine sikkerhedspolitikker
+      text: Beskyt mod phishing, malware og andre trusler
     - url: ../business-premium/avoid-phishing-and-attacks.md
       itemType: how-to-guide
       text: Vide, hvad du skal holde øje med i mailindhold

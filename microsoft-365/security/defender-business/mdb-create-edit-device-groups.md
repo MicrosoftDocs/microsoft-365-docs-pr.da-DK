@@ -1,33 +1,29 @@
 ---
 title: Enhedsgrupper i Microsoft Defender til virksomheder
-description: Få mere at vide om enhedsgrupper i Microsoft Defender til virksomheder
+description: Sikkerhedspolitikker anvendes på enheder via enhedsgrupper i Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 6c02a92132f7f5249f2ba67ca2841902b889d52b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: abb1c694f98ace7595f1389e3270ca3479d0c745
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861729"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172219"
 ---
 # <a name="device-groups-in-microsoft-defender-for-business"></a>Enhedsgrupper i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 I Microsoft Defender til virksomheder anvendes politikker på enheder via visse samlinger, der kaldes enhedsgrupper. 
 
@@ -112,7 +108,7 @@ Når du opretter eller redigerer en politik, kan du muligvis se indstillingen **
 
 :::image type="content" source="media/add-all-devices-option.png" alt-text="Skærmbillede af indstillingen Tilføj alle enheder.":::
 
-Hvis du vælger denne indstilling, modtager alle enheder, der er tilmeldt Microsoft Endpoint Manager (herunder Microsoft Intune), den politik, du opretter eller redigerer som standard. 
+Hvis du vælger denne indstilling, modtager alle de enheder, der er tilmeldt Microsoft Intune som standard den politik, du opretter eller redigerer. 
 
 ## <a name="next-steps"></a>Næste trin
 

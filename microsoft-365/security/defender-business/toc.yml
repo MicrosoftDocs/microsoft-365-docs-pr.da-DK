@@ -5,8 +5,10 @@
       items:
         - name: Hvad er Microsoft Defender for Business?
           href: mdb-overview.md
-        - name: Den forenklede konfigurationsproces
+        - name: Forenklet konfiguration
           href: mdb-simplified-configuration.md
+        - name: Prøveversion af strategiplan – Defender for Business
+          href: trial-playbook-defender-business.md
         - name: Sammenlign planer for små og mellemstore virksomheder
           href: compare-mdb-m365-plans.md
         - name: Integration med Microsoft 365 Lighthouse
@@ -49,7 +51,7 @@
           href: mdb-review-remediation-actions.md
         - name: Få vist og brug rapporter
           href: mdb-reports.md
-    - name: Administrer sikkerhedspolitikker
+    - name: Få vist eller rediger sikkerhedspolitikker
       items:
         - name: 'Få vist, rediger og opret politikker'
           href: mdb-view-edit-create-policies.md
@@ -61,7 +63,7 @@
           href: mdb-firewall.md
         - name: Administrer regler for firewallpolitikker
           href: mdb-custom-rules-firewall.md
-    - name: Administrer enheder
+    - name: Overvåg eller administrer enheder
       items:
         - name: Få vist og administrer enheder
           href: mdb-manage-devices.md
@@ -71,6 +73,8 @@
           href: mdb-offboard-devices.md
     - name: Referenceoplysninger
       items:
+        - name: Oplysninger om API-reference
+          href: /microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners
         - name: Sådan får du hjælp eller kontakter support
           href: mdb-get-help.md
         - name: Ofte stillede spørgsmål

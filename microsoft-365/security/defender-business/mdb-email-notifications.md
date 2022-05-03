@@ -1,39 +1,33 @@
 ---
 title: Konfigurer mailmeddelelser til dit sikkerhedsteam
-description: Konfigurer mailmeddelelser for at fortælle personer om beskeder og sikkerhedsrisici med Microsoft Defender til virksomheder
+description: Konfigurer mailmeddelelser for at fortælle dit sikkerhedsteam om beskeder og sikkerhedsrisici i Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: a65634a5827e60d710cec56ca10835c73053cb10
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: b6381f5bfa8ebe4f7c23a16d9a214cadb4e511e6
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862846"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174491"
 ---
 # <a name="set-up-email-notifications"></a>Konfigurer mailmeddelelser
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Du kan konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter genereres beskeder, eller der registreres nye sikkerhedsrisici, får personer i dit sikkerhedsteam automatisk besked. 
 
 ## <a name="what-to-do"></a>Sådan gør du
 
 1. [Få mere at vide om typer af mailmeddelelser](#types-of-email-notifications).
-
 2. [Få vist og rediger indstillinger for mailbeskeder](#view-and-edit-email-notifications).
-
 3. [Fortsæt til de næste trin](#next-steps).
 
 

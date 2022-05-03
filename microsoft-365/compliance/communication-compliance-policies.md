@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 47c7ddbc5ce935e8b9fedb7682daa6af468b66b4
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: 9be1c581edb1b9564349ae8c3a659d226d6ef312
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65015018"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173784"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
 
@@ -112,10 +112,10 @@ Administratorer skal straks tildele brugerdefinerede korrekturlæsere til denne 
 4. I ruden **Overvåg for brugerrapporterede meddelelser** skal du tildele validatorer til politikken. Korrekturlæsere skal have postkasser, der hostes på Exchange Online. Når validatorer føjes til en politik, modtager de automatisk en mail, der giver dem besked om tildelingen til politikken og indeholder links til oplysninger om korrekturprocessen.
 5. Vælg **Gem**.
 
-Hvis du vil deaktivere brugere fra at rapportere Teams meddelelser med *indstillingen Rapportér et problem*, skal du deaktivere indstillingen **Slutbrugerrapportering** i [Teams Administration](/microsoftteams/manage-teams-in-modern-portal). 
+Indstillingen *Rapportér et problem* er aktiveret som standard og kan styres via Teams meddelelsespolitikker i [Teams Administration](/microsoftteams/manage-teams-in-modern-portal). Brugere i din organisation får automatisk den globale politik, medmindre du opretter og tildeler en brugerdefineret politik. Rediger indstillingerne i den globale politik, eller opret og tildel en eller flere brugerdefinerede politikker for at aktivere eller deaktivere indstillingen *Rapportér et problem* . Du kan få mere at vide under [Administrer meddelelsespolitikker i Teams](/microsoftteams/messaging-policies-in-teams).  
 
 >[!IMPORTANT]
->Hvis du bruger PowerShell til at deaktivere indstillingen **Slutbrugerrapportering** i Teams Administration, skal du bruge [Microsoft Teams cmdlet'er modul version 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) eller nyere.
+>Hvis du bruger PowerShell til at aktivere eller deaktivere indstillingen **Slutbrugerrapportering** i Teams Administration, skal du bruge [Microsoft Teams cmdlet'er modulversion 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) eller nyere.
 
 ## <a name="storage-limit-notification-preview"></a>Storage meddelelse om grænse (prøveversion)
 

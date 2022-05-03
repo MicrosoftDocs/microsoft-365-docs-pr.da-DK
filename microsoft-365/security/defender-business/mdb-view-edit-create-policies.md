@@ -1,13 +1,12 @@
 ---
 title: Få vist eller rediger politikker i Microsoft Defender til virksomheder
-description: Få mere at vide om, hvordan du får vist, redigerer, opretter og sletter næste generations beskyttelsespolitikker i Microsoft Defender til virksomheder
+description: Få mere at vide om, hvordan du får vist, redigerer, opretter og sletter politikker for cybersikkerhed i Defender for Business. Beskyt dine enheder med sikkerhedspolitikker.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ba7f6846809009b8bb9df258b8ac18536a910b6d
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 85845ec12b8ad43abe965e277f8ea3f6c67e1d7d
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862120"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174174"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>Få vist eller rediger politikker i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 I Microsoft Defender til virksomheder konfigureres sikkerhedsindstillinger via politikker, der anvendes på enheder. For at hjælpe med at forenkle din konfigurationsoplevelse indeholder Defender for Business forudkonfigurerede politikker, der hjælper med at beskytte din virksomheds enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere politikker eller oprette dine egne politikker.
 

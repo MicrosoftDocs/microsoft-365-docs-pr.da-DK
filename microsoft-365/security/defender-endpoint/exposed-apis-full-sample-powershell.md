@@ -1,8 +1,8 @@
 ---
-title: Avanceret jagt med PowerShell API-vejledning
+title: Vejledning til avanceret jagt med PowerShell-API
 ms.reviewer: ''
-description: Brug disse kodeeksempler, og forespørger på flere Microsoft Defender for Endpoint-API'er.
-keywords: API'er, understøttede api'er, avanceret jagt, forespørgsel
+description: Brug disse kodeeksempler til at forespørge på flere Microsoft Defender for Endpoint API'er.
+keywords: apis, understøttede API'er, avanceret jagt, forespørgsel
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,57 +15,61 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
-ms.date: 09/24/2018
+ms.date: 04/27/2022
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6b1f501b942512500c11c7f9fe1e9308d67706e9
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: c23bf15a188527b2b4c24270fbc1312537da4154
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63593179"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174878"
 ---
-# <a name="microsoft-defender-for-endpoint-apis-using-powershell"></a>Microsoft Defender til slutpunkt-API'er ved hjælp af PowerShell
+# <a name="microsoft-defender-for-endpoint-apis-using-powershell"></a>Microsoft Defender for Endpoint API'er ved hjælp af PowerShell
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:** 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/index.yml)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Avancerede jagtegenskaber er ikke inkluderet i Defender for Business. Se [Sammenlign Microsoft Defender til virksomheder med Microsoft Defender for Endpoint plan 1 og 2](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
-Fuldt scenarie ved brug af flere API'er fra Microsoft Defender til slutpunkt.
+Komplet scenarie med flere API'er fra Microsoft Defender for Endpoint.
 
-I dette afsnit deler vi PowerShell-eksempler til 
+I dette afsnit deler vi PowerShell-eksempler med 
 - Hent et token 
-- Brug token til at hente de seneste beskeder i Microsoft Defender til Slutpunkt
-- Hvis beskeden har mellem eller høj prioritet og stadig er i gang, skal du kontrollere, hvor mange gange enheden har oprettet forbindelse til mistænkelig URL-adresse for hver besked.
+- Brug token til at hente de seneste beskeder i Microsoft Defender for Endpoint
+- Hvis beskeden har mellem- eller høj prioritet og stadig er i gang, skal du kontrollere, hvor mange gange enheden har oprettet forbindelse til mistænkelig URL-adresse for hver besked.
 
-**Forudsætninger**: Du skal først [oprette en app](apis-intro.md).
+**Forudsætning**: Du skal først [oprette en app](apis-intro.md).
 
-## <a name="preparation-instructions"></a>Vejledning til forberedelse
+## <a name="preparation-instructions"></a>Forberedelsesinstruktioner
 
 - Åbn et PowerShell-vindue.
-- Hvis din politik ikke tillader, at du kører PowerShell-kommandoerne, kan du køre nedenstående kommando:
+- Hvis politikken ikke tillader, at du kører PowerShell-kommandoerne, kan du køre følgende kommando:
   ```
   Set-ExecutionPolicy -ExecutionPolicy Bypass
   ```
 
-Du kan finde flere oplysninger i [dokumentationen til PowerShell](/powershell/module/microsoft.powershell.security/set-executionpolicy)
+Du kan få flere oplysninger i [PowerShell-dokumentationen](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 ## <a name="get-token"></a>Hent token
 
 Kør nedenstående:
 
-- $tenantId: Id for lejeren på vegne af hvilken du vil køre forespørgslen (dvs. forespørgslen køres på dataene for denne lejer)
-- $appId: Id for din AAD-app (appen skal have tilladelsen "Kør avancerede forespørgsler" til Defender til slutpunkt)
-- $appSecret: Hemmelig for din Azure AD-app
+- $tenantId: Id'et for den lejer, som du vil køre forespørgslen på (dvs. forespørgslen køres på dataene i denne lejer)
+- $appId: Id'et for din AAD app (appen skal have tilladelsen 'Kør avancerede forespørgsler' til Defender for Endpoint)
+- $appSecret: Hemmeligheden bag din Azure AD app
 
 - $suspiciousUrl: URL-adressen
 
@@ -132,6 +136,6 @@ $response
 
 
 ## <a name="see-also"></a>Se også
-- [Microsoft Defender til endpoint-API'er](apis-intro.md)
-- [Avanceret api til jagt](run-advanced-query-api.md)
+- [Microsoft Defender for Endpoint API'er](apis-intro.md)
+- [Avanceret jagt-API](run-advanced-query-api.md)
 - [Avanceret jagt ved hjælp af Python](run-advanced-query-sample-python.md)

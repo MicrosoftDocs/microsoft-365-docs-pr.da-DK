@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Forbind til din Microsoft 365 lejer ved hjælp af PowerShell, så Microsoft 365 kan udføre administrationsopgaver fra kommandolinjen.
-ms.openlocfilehash: a7f493bd0073762d995a232918d732e999a85777
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a69fa6885e254e0c15cd65833a4f8368ec239c4f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093915"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174815"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>Opret forbindelse til Microsoft 365 med PowerShell
 
@@ -107,9 +107,9 @@ Svar **ja** eller **Ja til alle** for at fortsætte installationen.
     Import-Module  AzureAD
     ```
     
-### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>Trin 2: Forbind til Azure AD for dit Microsoft 365-abonnement
+### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>Trin 2: Forbind at Azure AD for dit Microsoft 365 abonnement
 
-Hvis du vil oprette forbindelse til Azure Active Directory (Azure AD) for dit Microsoft 365-abonnement med et kontonavn og en adgangskode eller med multifaktorgodkendelse, skal du køre en af disse kommandoer fra en kommandoprompt Windows PowerShell. (Det behøver ikke at blive forøget).
+Hvis du vil oprette forbindelse til Azure Active Directory (Azure AD) for dit Microsoft 365-abonnement med et kontonavn og en adgangskode eller med multifaktorgodkendelse, skal du køre en af disse kommandoer fra en kommandoprompt med Windows PowerShell. (Det behøver ikke at blive forøget).
 
 | Office 365 cloud | Kommando |
 |:-------|:-----|
@@ -147,7 +147,7 @@ Disse trin kræves kun én gang på computeren. Men du skal sandsynligvis opdate
    1. Hvis du bliver bedt om at installere NuGet-udbyderen, skal du skrive **Y** og trykke på Enter.
    1. Hvis du bliver bedt om at installere modulet fra PSGallery, skal du skrive **Y** og trykke på Enter.
     
-### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>Trin 2: Forbind til Azure AD for dit Microsoft 365-abonnement
+### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>Trin 2: Forbind at Azure AD for dit Microsoft 365 abonnement
 
 Hvis du vil oprette forbindelse til Azure AD for dit Microsoft 365-abonnement med et kontonavn og en adgangskode eller med multifaktorgodkendelse, skal du køre en af disse kommandoer fra en Windows PowerShell kommandoprompt. (Det behøver ikke at blive forøget).
 
@@ -204,6 +204,13 @@ Hvis du vil oprette forbindelse til og bruge Azure Cloud Shell fra Microsoft 365
 Du skal bruge et aktivt Azure-abonnement til din organisation, der er knyttet til dit Microsoft 365 abonnement. Hvis du ikke allerede har en, kan du oprette en. Når du har et Azure-abonnement, åbnes der et PowerShell-vindue, hvorfra du kan køre PowerShell-kommandoer og -scripts.
 
 Du kan få flere oplysninger under [Azure Cloud Shell](/azure/cloud-shell/overview).
+
+
+## <a name="get-started-with-the-microsoft-graph-powershell-sdk"></a>Kom i gang med Microsoft Graph PowerShell SDK
+
+Du kan bruge Microsoft Graph PowerShell SDK til at få adgang til alle Microsoft Graph API'er.
+
+Du kan få flere oplysninger under [Kom i gang med Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started?view=graph-powershell-beta)
 
 ## <a name="see-also"></a>Se også
 

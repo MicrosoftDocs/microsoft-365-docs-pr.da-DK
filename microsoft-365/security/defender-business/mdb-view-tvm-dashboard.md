@@ -1,13 +1,12 @@
 ---
 title: Få vist dashboardet Administration af sårbarheder & Threat & i Microsoft Defender til virksomheder
-description: Brug din trussel & Threat & Threat & Dashboard til administration af sårbarheder for at se vigtige elementer, der skal håndteres.
+description: Brug dashboardet threat & Threat & Threat & Vulnerability Management til at se vigtige elementer, der skal håndteres i Defender for Business.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: b7761d7ad35f00ec9637c117e9a84b6258ad1904
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 25085dc22fd2f939e10833c98bc4fb599dd5a11f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101419"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172624"
 ---
 # <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>Brug dashboardet Administration af sårbarheder i & Threat & i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Microsoft Defender til virksomheder omfatter et dashboard til administration af sårbarheder & threat &, der er designet til at spare tid og kræfter på dit sikkerhedsteam. Ud over at angive en eksponeringsscore kan du også få vist oplysninger om eksponerede enheder og sikkerhedsanbefalinger. Du kan bruge dashboardet Administration af sårbarheder & Threat & til at:
 

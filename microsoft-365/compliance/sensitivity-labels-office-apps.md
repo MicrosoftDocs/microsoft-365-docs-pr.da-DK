@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger til it-administratorer om administration af følsomhedsmærkater i Office apps til stationære computere, mobilenheder og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0f24e707bef05b541f301a41596737c17b4ed587
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 792b87c8d045002ebec27dc5de38177cec0ae647
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098422"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172319"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -115,8 +115,7 @@ Hvis brugerne har [Azure Information Protection-klienten (AIP)](/azure/informati
 > [!NOTE]
 > Hvis du ikke får vist de navngivningsfunktioner, du forventer på Windows computere, kan det skyldes, at du skal [deaktivere AIP-tilføjelsesprogrammet](sensitivity-labels-aip.md#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps), selvom du har bekræftet de mindste understøttede versioner for din Office opdateringskanal.
 
-Hvis du vil vide mere om understøttelse af mærkning med AIP-klienten, skal du se [Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps](sensitivity-labels-aip.md).
-
+Hvis du vil vide mere om understøttelse af mærkning med AIP-klienten, og hvordan du deaktiverer denne klient i Office apps, skal du se [Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps](sensitivity-labels-aip.md).
 
 ## <a name="if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows"></a>Hvis du har brug for at slå indbygget mærkning fra i Office apps på Windows
 
@@ -135,12 +134,6 @@ Hvis du senere har brug for at gendanne denne konfiguration, skal du ændre vær
 Udrul denne indstilling ved hjælp af Gruppepolitik eller ved hjælp af [tjenesten Office cloudpolitik](/DeployOffice/overview-office-cloud-policy-service). Indstillingen træder i kraft, når disse Office apps genstartes. 
 
 Da denne indstilling er specifik for Windows Office apps, har den ingen indvirkning på andre apps på Windows, der understøtter følsomhedsmærkater (f.eks. Power BI) eller andre platforme (f.eks. macOS, mobilenheder og Office på internettet). Hvis du ikke ønsker, at nogle eller alle brugere skal se og bruge følsomhedsmærkater på tværs af alle apps og alle platforme, skal du ikke tildele en politik for følsomhedsmærkat til disse brugere.
-
-### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>Office indbygget navngivningsklient og Azure Information Protection-klienten
-
-Hvis brugerne har [Azure Information Protection-klienten (AIP)](/azure/information-protection/rms-client/aip-clientv2) installeret på deres Windows computere, er indbyggede mærkater som standard slået fra i [Windows Office apps, der understøtter dem](#labeling-client-for-desktop-apps). Da indbyggede mærkater ikke bruger et Office-tilføjelsesprogram, som bruges af AIP-klienten, har de fordel af mere stabilitet og bedre ydeevne. De understøtter også de nyeste funktioner, f.eks. avancerede klassificeringer.
-
-Hvis du vil vide mere om valg af mærkat med AIP-klienten, skal du se [Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps](sensitivity-labels-aip.md).
 
 ## <a name="office-file-types-supported"></a>understøttede Office filtyper
 
@@ -259,11 +252,11 @@ Når en bruger med en Microsoft-konto åbner et krypteret dokument på denne må
 Den automatiske gæstekonto oprettes dog ikke med det samme i dette scenarie på grund af replikeringsventetid. Hvis du angiver personlige mailadresser som en del af dine indstillinger for mærkatkryptering, anbefaler vi, at du opretter tilsvarende gæstekonti i Azure Active Directory. Giv derefter disse brugere besked om, at de skal bruge denne konto til at åbne et krypteret dokument fra din organisation.
 
 > [!TIP]
-> Da du ikke kan være sikker på, at eksterne brugere bruger en understøttet Office klientapp, kan du dele links fra SharePoint og OneDrive, når du har oprettet gæstekonti (for bestemte brugere), eller når du bruger [SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview)  (for alle godkendte brugere) er en mere pålidelig metode til at understøtte sikkert samarbejde med eksterne brugere.
+> Da du ikke kan være sikker på, at eksterne brugere bruger en understøttet Office klientapp, deler links fra SharePoint og OneDrive, når du har oprettet gæstekonti (for bestemte brugere), eller når du bruger [SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview)  (for alle godkendte brugere) er en mere pålidelig metode til at understøtte sikkert samarbejde med eksterne brugere.
 
 ### <a name="conditional-access-policies"></a>Politikker for betinget adgang
 
-Hvis din organisation har implementeret [Azure Active Directory politikker for betinget adgang](/azure/active-directory/conditional-access/overview), skal du kontrollere konfigurationen af disse politikker. Hvis politikkerne omfatter **Microsoft Azure Information Protection**, og politikken udvides til eksterne brugere, skal disse eksterne brugere have en gæstekonto i din lejer, selvom de har en Azure AD-konto i deres egen lejer.
+Hvis din organisation har implementeret [Azure Active Directory politikker for betinget adgang](/azure/active-directory/conditional-access/overview), skal du kontrollere konfigurationen af disse politikker. Hvis politikkerne omfatter **Microsoft Azure Information Protection**, og politikken udvides til eksterne brugere, skal disse eksterne brugere have en gæstekonto i din lejer, selvom de har en Azure AD konto i deres egen lejer.
 
 Uden denne gæstekonto kan de ikke åbne det krypterede dokument og få vist en fejlmeddelelse. Meddelelsesteksten kan informere vedkommende om, at vedkommendes konto skal tilføjes som ekstern bruger i lejeren med den forkerte instruktion til dette scenarie om at **logge af og logge på igen med en anden Azure Active Directory brugerkonto**.
 
@@ -313,7 +306,7 @@ Når du konfigurerer en følsomhedsmærkat for indholdsmarkeringer, kan du bruge
 | `${Item.Name}` | Filnavn eller mailemne for det indhold, der forsynes med mærkater | **Sales.docx** |
 | `${Item.Location}` | Sti og filnavn for det dokument, der forsynes med mærkater, eller mailemnet for en mail, der forsynes med mærkater | **\\\Sales\2020\Q3\Report.docx**|
 | `${User.Name}` | Vist navn på den bruger, der anvender etiketten | **Richard Simone** |
-| `${User.PrincipalName}` | UPN (Azure AD-brugerens hovednavn) for den bruger, der anvender mærkaten | **rsimone\@ contoso.com** |
+| `${User.PrincipalName}` | Azure AD brugerens hovednavn (UPN) for den bruger, der anvender etiketten | **rsimone\@ contoso.com** |
 | `${Event.DateTime}` | Dato og klokkeslæt for, hvornår indholdet er mærket, i den lokale tidszone for den bruger, der anvender mærkaten i Microsoft 365 apps, eller UTC (Coordinated Universal Time) for Office Online- og automatisk navngivningspolitikker | **10-08-2020 kl. 13:30** |
 
 > [!NOTE]

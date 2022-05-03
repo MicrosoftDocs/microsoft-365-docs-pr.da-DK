@@ -1,13 +1,12 @@
 ---
 title: Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder
-description: Når der registreres trusler, kan du udføre handlinger for at reagere på og afhjælpe disse trusler.
+description: Da der registreres trusler i Defender for Business, kan du reagere på disse trusler. Se, hvordan du bruger enhedsoversigtsvisningen.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: b6d85d5032b9eb5837482649d4164e68b7c08275
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0481ffdf51b60a40de854ec2e4eb9b9d38d4344a
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098774"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174855"
 ---
 # <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 På Microsoft 365 Defender-portalen kan dit sikkerhedsteam reagere på og afhjælpe registrerede trusler. I denne artikel gennemgås et eksempel på, hvordan du kan bruge Defender for Business.
 

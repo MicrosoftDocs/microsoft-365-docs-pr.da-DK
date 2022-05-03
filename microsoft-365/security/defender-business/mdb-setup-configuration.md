@@ -1,33 +1,29 @@
 ---
 title: Konfigurer og konfigurer Microsoft Defender til virksomheder
-description: Få en oversigt over konfigurationsprocessen for Microsoft Defender til virksomheder
+description: Se, hvordan du konfigurerer din Defender for Business-løsning til cybersikkerhed. Onboarde enheder, gennemse dine politikker, og rediger dine indstillinger efter behov.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: e832a06a27d479bcd9ffecaf00e07b20f55d1042
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 5dd056640101d3feb97d9f502e4dcc8661454115
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862648"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173238"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-business"></a>Konfigurer og konfigurer Microsoft Defender til virksomheder
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 Microsoft Defender til virksomheder giver en strømlinet konfigurationsoplevelse, der er udviklet specielt til små og mellemstore virksomheder. Brug denne artikel som en vejledning til den overordnede proces.
 
@@ -54,7 +50,7 @@ I følgende diagram vises den overordnede konfigurationsproces for Defender for 
 | 2 | [Tildel roller og tilladelser](mdb-roles-permissions.md)     | Personer i dit sikkerhedsteam skal have tilladelse til at udføre opgaver, f.eks. gennemse registrerede trusler & afhjælpningshandlinger, få vist & redigeringspolitikker, onboardingenheder og bruge rapporter. Du kan tildele disse tilladelser via bestemte roller. Se [Tildel roller og tilladelser](mdb-roles-permissions.md).        |
 | 3 | [Konfigurer mailmeddelelser](mdb-email-notifications.md) | Du kan angive, hvem der skal modtage mailmeddelelser, når beskeder udløses, eller der registreres nye sikkerhedsrisici. Se [Konfigurer mailmeddelelser](mdb-email-notifications.md).| 
 | 4 | [Onboard enheder](mdb-onboard-devices.md)     | Microsoft Defender til virksomheder er konfigureret, så du kan vælge mellem flere muligheder for at onboarde din virksomheds enheder. Se [Onboard-enheder for at Microsoft Defender til virksomheder](mdb-onboard-devices.md).         |
-| 5 | [Konfigurer dine sikkerhedsindstillinger og -politikker](mdb-configure-security-settings.md) | Du kan vælge mellem flere indstillinger for at konfigurere dine sikkerhedsindstillinger og -politikker, herunder en forenklet konfigurationsproces eller Microsoft Endpoint Manager. Se [Konfigurer dine sikkerhedsindstillinger og -politikker](mdb-configure-security-settings.md). |
+| 5 | [Konfigurer dine sikkerhedsindstillinger og -politikker](mdb-configure-security-settings.md) | Du kan vælge mellem flere muligheder for at konfigurere dine sikkerhedsindstillinger og -politikker, herunder en forenklet konfigurationsproces i Defender for Business eller ved hjælp af Microsoft Endpoint Manager Administration. Se [Konfigurer dine sikkerhedsindstillinger og -politikker](mdb-configure-security-settings.md). |
 
 ## <a name="next-steps"></a>Næste trin
 

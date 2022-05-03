@@ -1,30 +1,30 @@
 ### YamlMime:FAQ
 metadata:
   title: Microsoft Defender til virksomheder ofte stillede spørgsmål
-  description: Få svar på dine spørgsmål om Microsoft Defender til virksomheder
+  description: Få svar på spørgsmål om Defender for Business, en cybersikkerhedsløsning til små og mellemstore virksomheder.
   search.appverid: MET150
   author: denisebmsft
   ms.author: deniseb
   manager: dansimp
   audience: Admin
   ms.topic: faq
-  ms.date: 04/12/2022
   ms.prod: m365-security
   ms.technology: mdb
   ms.localizationpriority: medium
-  ms.reviewer: inbadian, shlomiakirav
+  ms.reviewer: shlomiakirav
   f1.keywords: NOCSH
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 482c2fa4d4ef0ee06c88ee85715c7a70eefc52c3
-  ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+  ms.openlocfilehash: 3fb8d76b702a66756d17d8464d68442a079be729
+  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/15/2022
-  ms.locfileid: "64861350"
+  ms.lasthandoff: 05/03/2022
+  ms.locfileid: "65172691"
 title: Microsoft Defender til virksomheder – Ofte stillede spørgsmål og svar
-summary: "Microsoft Defender til virksomheder udrulles til Microsoft 365 Business Premium kunder fra den 1. marts 2022. Defender for Business som et separat abonnement fås som prøveversion og udrulles gradvist til kunder og [it-partnere, der tilmelder sig her](https://aka.ms/mdb-preview) for at anmode om det. Prøveversionen indeholder et [indledende sæt scenarier](mdb-tutorials.md#try-these-preview-scenarios), og vi tilføjer jævnligt funktioner.\n\nNogle oplysninger i denne artikel er relateret til forhåndsudgivne produkter/tjenester, der kan blive ændret væsentligt, før de udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, for de oplysninger, der er angivet her. \n\nBrug denne artikel til at få svar på spørgsmål, du kan have om Defender for Business.\n"
+summary: >
+  Brug denne artikel til at få svar på spørgsmål, du kan have om Defender for Business.
 sections:
 - name: Generel
   questions:
@@ -38,57 +38,52 @@ sections:
 
       - Eksempel 2: Hvis du har [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (købt eller et prøveabonnement), og du får Defender for Business, har Defender for Cloud forrang. I dette tilfælde kan du ikke se Defender for Business-oplevelsen.
   - question: Hvilke forskelle er der mellem Defender for Business og Defender for Endpoint Plans 1 og 2?
-    answer: "Defender for Business er udviklet til små og mellemstore virksomheder (op til 300 ansatte). Med en [forenklet konfigurationsproces](mdb-simplified-configuration.md) og [onboardingmuligheder for enheder](mdb-onboard-devices.md) giver Defender for Business kunder, der ikke nødvendigvis har en sikkerhedsbaggrund, mulighed for at konfigurere og bruge Defender for Business.  \n\nBåde Defender for Business og Defender for Endpoint leverer stærke trusselsbeskyttelsesfunktioner til din virksomheds slutpunkter. Hvis du vil vide mere om forskellene, skal du se [Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium](compare-mdb-m365-plans.md).\n"
-  - question: 如何实现 tilmelde dig prøveversionen af Defender for Business?
+    answer: "Både Defender for Business og Defender for Endpoint leverer stærke trusselsbeskyttelsesfunktioner til din virksomheds slutpunkter. Defender for Business er udviklet til små og mellemstore virksomheder (op til 300 ansatte). Med en [forenklet konfigurationsproces](mdb-simplified-configuration.md) og [onboardingmuligheder for enheder](mdb-onboard-devices.md) giver Defender for Business kunder, der ikke nødvendigvis har en sikkerhedsbaggrund, mulighed for at konfigurere og bruge Defender for Business til at beskytte virksomhedens enheder.  \n\nHvis du vil vide mere om forskellene, skal du se [Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium](compare-mdb-m365-plans.md).\n"
+  - question: Hvordan gør jeg prøve eller købe Defender for Business?
     answer: >
-      Defender for Business udrulles som en del af Microsoft 365 Business Premium fra den 1. marts 2022. Hvis du har Microsoft 365 Business Premium, får du snart automatisk Defender for Business-funktioner.
+      Gå til [websiden Microsoft Defender til virksomheder](https://www.microsoft.com/security/business/threat-protection/microsoft-defender-business), og vælg indstillingen for at prøve eller købe Defender for Business.
 
 
-      Den separate version af Defender for Business er stadig en prøveversion. Besøg [https://aka.ms/MDB-Preview](https://aka.ms/MDB-Preview) for at ansøge om prøveversionsprogrammet. Du kan få mere at vide under [Sådan får du Microsoft Defender til virksomheder](get-defender-business.md).
-  - question: Er der nogen forudsætninger for prøveversionen af Defender for Business?
+      Du kan få flere oplysninger under [Hent Microsoft Defender til virksomheder](get-defender-business.md).
+  - question: Er der en grænse for, hvor mange brugere der kan have licens til Defender for Business?
     answer: >
-      Din virksomhed skal være en af følgende:
-
-
-      - En partner, der tilbyder it-tjenester til små og mellemstore virksomheder
-
-
-      - En lille eller mellemstor virksomhed med op til 300 medarbejdere
-
-
-      Du behøver ikke allerede at have et andet Microsoft 365 abonnement. Du kan få mere at vide under [krav til Microsoft Defender til virksomheder](mdb-requirements.md).
-  - question: Hvad vil licensmodellen være på GA?
+      Defender for Business er udviklet til små og mellemstore virksomheder med op til 300 brugere. Hvis du har mere end 300 brugere, kan du overveje [Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
+  - question: Hvor mange enheder kan jeg onboarde og sikre med Defender for Business?
     answer: >
-      Fra og med den 1. marts 2022 udrulles Defender for Business som en del af Microsoft 365 Business Premium. Defender for Business er nu offentligt tilgængelig for Microsoft 365 Business Premium kunder.
-
-
-      For kunder, der ikke har Microsoft 365 Business Premium, er Defender for Business en mulighed som en separat plan. Den separate version af Defender for Business er stadig tilgængelig som prøveversion og når frem til offentlig tilgængelighed senere i dette kalenderår.
+      Du kan onboarde og sikre op til 5 enheder pr. brugerlicens.
+  - question: Understøtter Defender for Business servere?
+    answer: "Serversupport kommer snart. Dette nye servertilbud har en licensbaseret forudsætning for Microsoft 365 Business Premium eller Microsoft Defender til virksomheder (separat).  \n"
+  - question: Beskytter Defender for Business macOS-, Android- og iOS-/iPadOS-klientenheder?
+    answer: "Ja. Defender for Business understøtter beskyttelse af macOS-, Android- og iOS-/iPadOS-enheder i dag. \n\nDu kan onboarde macOS-enheder ved hjælp af et lokalt script på Microsoft 365 Defender-portalen. Onboarding af Android- og iOS-/iPadOS-enheder kræver en licens til [Microsoft Intune](/mem/intune/). Se [Indbyggede enheder](mdb-onboard-devices.md).\n\nIntune er inkluderet i Microsoft 365 Business Premium og kan købes til Defender for Business (separat).\n\nYderligere forenkling af macOS-, iOS-/iPadOS- og Android-enheder er på vej. \n"
+  - question: Hvis prøveversionsprogrammet til Defender for Business er afsluttet, kan jeg så forlænge det?
+    answer: >
+      Når din prøveversion af Defender for Business er afsluttet, kan du købe Defender for Business. Se [Hent Microsoft Defender til virksomheder](get-defender-business.md).
   - question: Hvis jeg allerede bruger Microsoft 365 Business Premium, hvorfor skal jeg så bruge Defender for Business?
     answer: >
-      Microsoft 365 Business Premium omfatter i øjeblikket funktioner til administration af enheder, Defender for Office 365 Plan 1 og Microsoft Defender Antivirus næste generations beskyttelse af Windows enheder. Defender for Business udvider disse funktioner ved at tilføje øget sikkerhed for virksomhedens enheder. Du kan få mere at vide i følgende artikler:
+      Hvis du har Microsoft 365 Business Premium, er Defender for Business inkluderet i dit abonnement. Du kan få mere at vide i følgende artikler:
 
 
       - [Oversigt over Defender for Business](mdb-overview.md)
 
 
-      - [Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium](compare-mdb-m365-plans.md
-  - question: Hvad sker der med prøveversionen af Defender for Business, hvis prøveversionstilbuddet udløber, før Defender for Business bliver offentligt tilgængeligt?
-    answer: >
-      Microsoft-partnere kan forlænge prøveversionslicenser op til det tidspunkt, hvor de er tilgængelige. Når den generelle tilgængelighed er fuldført, forlænges prøveversionen ikke.
+      - [Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium](compare-mdb-m365-plans.md)
+
+
+      Defender for Business udvider sikkerhedsegenskaberne i Microsoft 365 Business Premium med slutpunktsbeskyttelse for virksomhedens enheder.
   - question: Hvad sker der, hvis en kunde har 20 brugere med en blanding af abonnementer? Lad os f.eks. antage, at de har 10 brugere tildelt en Defender for Business-licens, og 10 brugere har tildelt en Defender for Endpoint Plan 2-licens?
-    answer: "Blandede licenser understøttes ikke i øjeblikket. Vi understøtter i øjeblikket ikke blandede licenser. Den højeste funktionelle licens angiver oplevelsen for lejeren. I vores eksempel er lejeroplevelsen Defender for Endpoint Plan 2 og kræver 20 Licenser til Defender for Endpoint Plan 2. \n"
+    answer: "Blandede licenser understøttes ikke i øjeblikket. Den højeste funktionelle licens angiver oplevelsen for lejeren. I vores eksempel er lejeroplevelsen Defender for Endpoint Plan 2 og kræver 20 Licenser til Defender for Endpoint Plan 2. \n"
   - question: Kan jeg konfigurere mere end én politik for filtrering af webindhold i Defender for Business?
     answer: "I øjeblikket understøtter Defender for Business kun én ensartet webfiltreringspolitik pr. Defender for Business-lejer. \n"
   - question: Hvordan kan jeg køre brugerdefinerede rapporter med Defender for Business?
     answer: >
-      Defender for Business indeholder i øjeblikket et sæt API'er, der understøtter robust brugerdefineret rapportering og en Power BI connector. Du kan planlægge et PowerShell-script for at generere chefoversigter, der er formateret i HTML, og sende disse oversigter via mail.
+      Defender for Business indeholder i øjeblikket et sæt API'er, der understøtter robust brugerdefineret rapportering og en Power BI connector. Du kan planlægge et PowerShell-script for at generere chefoversigter, der er formateret i HTML, og sende disse oversigter via mail. Se [oplysninger om API-reference](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners).
   - question: Jeg er Microsoft-partner. Kan jeg administrere flere lejere fra ét kontrolpanel, eller skal jeg logge på hver lejer enkeltvist?
+    answer: "Defender for Business er aktiveret i Microsoft 365 Lighthouse til understøttelse af flere lejere i en enkelt konsol ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)). \n\nI øjeblikket giver en hændelseskø med flere lejere dig en visning på tværs af lejere af hændelser, der kræver opmærksomhed. Konfiguration og onboarding udføres dog i kundens lejer ved hjælp af dine partnerlegitimationsoplysninger. Der er planlagt flere integrationsscenarier.\n\nDu kan få mere at vide under [Oversigt over Microsoft 365 Fyrtårn](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
+  - question: Hvordan gør jeg konfigurere regler og egenskaber for reduktion af angrebsoverfladen i Defender for Business?
     answer: >
-      Defender for Business er aktiveret i Microsoft 365 Lighthouse til understøttelse af flere lejere i en enkelt konsol. I øjeblikket giver en hændelseskø med flere lejere dig en visning på tværs af lejere af hændelser, der kræver opmærksomhed. Konfiguration og onboarding udføres dog i kundens lejer ved hjælp af dine partnerlegitimationsoplysninger. Der er planlagt flere integrationsscenarier.
-  - question: 如何实现 konfigurere regler og egenskaber for reduktion af angrebsoverfladen i Defender for Business?
-    answer: "Forenklet konfiguration af regler og funktioner til reduktion af angrebsoverfladen via Defender for Business på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) understøttes ikke endnu. Hvis du har Microsoft Endpoint Manager, kan du bruge Endpoint Manager til at konfigurere dine politikker til reduktion af angrebsoverfladen. \n"
-  - question: Hvis jeg i øjeblikket ikke har Microsoft Endpoint Manager, har jeg så brug for en ekstra licens til at bruge funktioner, der er inkluderet i både Defender for Business og Endpoint Manager?
-    answer: "Hvis du har Defender for Business som et separat abonnement, og du ikke har Microsoft Intune (en del af Endpoint Manager), kan du administrere Windows enheder i Defender for Business ved hjælp af Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). Du kan også administrere dine næste generations beskyttelsespolitikker og firewallbeskyttelsespolitikker på Microsoft 365 Defender portalen med en [forenklet konfigurationsoplevelse](mdb-simplified-configuration.md). Hvis du vil administrere andre indstillinger, f.eks. politikker for reduktion af angrebsoverfladen eller onboarde nogle enheder (f.eks Android-enheder), skal du bruge Endpoint Manager.  \n"
+      Forenklet konfiguration af regler og funktioner til reduktion af angrebsoverfladen via Defender for Business på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) understøttes ikke endnu. Hvis du har Microsoft Intune, kan du bruge Microsoft Endpoint Manager Administration til at konfigurere dine politikker til reduktion af angrebsoverfladen. Se [Politik for reduktion af angrebsoverfladen for at få oplysninger om sikkerhed for slutpunkter i Intune](/mem/intune/protect/endpoint-security-asr-policy).
+  - question: Hvis jeg i øjeblikket ikke har Microsoft Intune, har jeg så brug for en ekstra licens til at bruge funktioner, der er inkluderet i både Defender for Business og Intune?
+    answer: "Hvis du har Defender for Business som et separat abonnement, og du ikke har Intune, kan du onboarde og sikre Windows- og macOS-enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). \n\nDu kan også administrere dine næste generations beskyttelsespolitikker og firewallbeskyttelsespolitikker på Microsoft 365 Defender portalen med en [forenklet konfigurationsoplevelse](mdb-simplified-configuration.md). \n\nHvis du vil administrere andre indstillinger, f.eks. politikker for reduktion af angrebsoverfladen eller onboarde andre enheder, f.eks. Android- eller iOS-/iPadOS-enheder, skal du bruge Intune. Intune er inkluderet i Microsoft 365 Business Premium og kan købes til defender for Business-abonnementer (separat). \n"
 additionalContent: >-
   ## <a name="see-also"></a>Se også
 

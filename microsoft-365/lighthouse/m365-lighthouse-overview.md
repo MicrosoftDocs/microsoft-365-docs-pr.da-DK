@@ -17,16 +17,16 @@ ms.custom:
 - intro-overview
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) kan du få mere at vide om, hvordan Microsoft 365 Lighthouse kan hjælpe dig med at sikre og administrere kundelejere på én placering.
-ms.openlocfilehash: 9a75cd43ac09d63c4524495a3146bf0b860627a4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 218442ee6714ece4c984fbf13478e5c4f3982101
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094676"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173954"
 ---
 # <a name="overview-of-microsoft-365-lighthouse"></a>Oversigt over Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers), der bruger Microsoft 365 Business Premium eller Microsoft 365 E3.
+Microsoft 365 Lighthouse er en administrationsportal, der hjælper MSP'er (Managed Service Providers) med at sikre og administrere enheder, data og brugere i stor skala til SMB-kunder (Managed Service Providers).
 
 Lighthouse forenkler onboarding af kundelejere ved at anbefale grundlæggende sikkerhedskonfigurationer, der er skræddersyet til SMB-kunder, og give visninger med flere lejere på tværs af alle kundemiljøer. Med Lighthouse kan MSP'er skalere administrationen af deres kunder, fokusere på det vigtigste, hurtigt finde og undersøge risici og træffe foranstaltninger for at få deres kunder til en sund og sikker tilstand.
 

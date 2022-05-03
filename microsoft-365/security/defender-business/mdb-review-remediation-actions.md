@@ -1,13 +1,12 @@
 ---
 title: Gennemse afhjælpningshandlinger i Microsoft Defender til virksomheder
-description: Vis afhjælpninger, der er taget automatisk, eller som afventer godkendelse i Løsningscenter
+description: Få vist afhjælpninger, der blev udført på registrerede trusler med Defender for Business. Du kan få vist handlinger i Løsningscenter på Microsoft 365 Defender-portalen.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 15a64491f6e97137d1e919aa126d4bf134c47999
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 438d43548b4318499c44aea65399a7d5a3a5f43d
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862208"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174363"
 ---
 # <a name="review-remediation-actions-in-the-action-center"></a>Gennemse afhjælpningshandlinger i Løsningscenter
-
-> [!NOTE]
-> Microsoft Defender til virksomheder er nu inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md). 
 
 I takt med at der registreres trusler, spiller afhjælpningshandlinger ind. Afhængigt af den specifikke trussel, og hvordan dine sikkerhedsindstillinger er konfigureret, kan afhjælpningshandlinger udføres automatisk eller kun efter godkendelse. Eksempler på afhjælpningshandlinger omfatter afsendelse af en fil til karantæne, stop af en proces i at køre og fjernelse af en planlagt opgave. Alle afhjælpningshandlinger spores i Løsningscenter.
 
