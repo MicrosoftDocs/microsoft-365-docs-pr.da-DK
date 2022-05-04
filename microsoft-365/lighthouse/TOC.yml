@@ -26,6 +26,8 @@
   items:
     - name: Oversigt over siden Lejere
       href: m365-lighthouse-tenants-page-overview.md
+    - name: Få vist dine Azure AD roller på tværs af lejere
+      href: m365-lighthouse-view-your-roles.md
     - name: Administrer din lejerliste
       href: m365-lighthouse-manage-tenant-list.md
     - name: Få vist lejertjenestens tilstand
