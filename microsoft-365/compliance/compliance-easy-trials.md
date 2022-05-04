@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om prøveversionen af Microsoft Purview-løsninger, og hvordan du tilmelder dig.
-ms.openlocfilehash: ed7848a12483062c2873f4735ecb2188cad373a1
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 653c80e7c8b412ac1d9c14a021519ca80baab6e9
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023673"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188828"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Om prøveversionen af Microsoft Purview-løsninger
 
@@ -31,7 +31,7 @@ Prøveversionen af Microsoft Purview-løsninger er den nemmeste måde at prøve 
 
 ## <a name="terms-and-conditions"></a>Vilkår og betingelser
 
-Se [vilkår og betingelser](terms-conditions.md) for Prøveversioner af Microsoft Purview.
+Se [vilkår og betingelser](/legal/microsoft-365/microsoft-365-trial) for Microsoft 365 prøveversioner.
 
 ## <a name="eligibility"></a>Støtteberettigelse
 

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: 2c1ea20f9b663ca8cee59043bbe6399f5bae66f1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1895669c20d06bdae13ed2d25183dff92862d44f
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "65145266"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188850"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
 
@@ -279,7 +279,7 @@ Når du vælger indstillingen for en klassificering, der kan oplæres, kan du v�
 > [!CAUTION]
 > Vi udfaser den prækvalificerede klassificering af **stødende sprog** , fordi den har produceret et højt antal falske positiver. Brug ikke denne klassificering, og hvis du i øjeblikket bruger den, anbefaler vi, at du fjerner dine forretningsprocesser fra den og i stedet bruger de forududlærte klassificeringer **målrettet chikane**, **bandeord** og **trussel** .
 
-Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint websteder og postkasser have mindst 10 MB data.
+Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint websteder samt postkasser have mindst 10 MB data.
 
 Du kan finde flere oplysninger om klassificeringer, der kan oplæres, under [Få mere at vide om klassificeringer, der kan oplæres](classifier-learn-about.md).
 

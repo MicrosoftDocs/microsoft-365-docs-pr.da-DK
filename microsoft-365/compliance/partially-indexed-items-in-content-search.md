@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: ff21f04456d6886e7849a8d9a0770640897a62ac
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 27f59ac9bf6a580fa0a3193ee91f66a4ac58ab1e
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091495"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188784"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>Delvist indekserede elementer i eDiscovery
 
@@ -162,7 +162,10 @@ Du kan finde en liste over indekseringsgrænser for SharePoint dokumenter under 
 
 - Selvom en filtype understøttes til indeksering og er indekseret, kan der være indekserings- eller søgefejl, der medfører, at en fil returneres som et delvist indekseret element. Det kan f.eks. være en delvis succes at søge i en stor Excel fil (fordi de første 4 MB indekseres), men det mislykkes derefter, fordi grænsen for filstørrelsen er overskredet. I dette tilfælde er det muligt, at den samme fil returneres sammen med søgeresultaterne og som et delvist indekseret element.
 
-- Filer, der er krypteret med [Microsoft-krypteringsteknologier](encryption.md) og er knyttet til en mail, der opfylder kriterierne i en søgning, kan gennemses og dekrypteres, når der eksporteres. På nuværende tidspunkt indekseres filer, der er krypteret med Microsofts krypteringsteknologier (og gemt i SharePoint eller OneDrive for Business), delvist.
+- Filer, der er krypteret med [Microsoft-krypteringsteknologier](encryption.md) og er knyttet til en mail, der opfylder kriterierne i en søgning, kan gennemses og dekrypteres, når der eksporteres. På nuværende tidspunkt indekseres filer, der er krypteret med Microsofts krypteringsteknologier (og gemt i SharePoint eller OneDrive for Business), delvist. 
+
+   > [!NOTE]
+   > Filer, der er krypteret ved hjælp af følsomhedsmærkater, dekrypteres ikke.
 
 - Mails, der er krypteret med S/MIME, indekseres delvist. Dette omfatter krypterede meddelelser med eller uden vedhæftede filer.
 

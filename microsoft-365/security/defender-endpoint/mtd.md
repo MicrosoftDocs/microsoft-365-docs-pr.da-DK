@@ -1,8 +1,8 @@
 ---
-title: Microsoft Defender til slutpunkt – Mobile Threat Defense
+title: Microsoft Defender for Endpoint – Mobile Threat Defense
 ms.reviewer: ''
-description: Oversigt over Mobile Threat Defense i Microsoft Defender til slutpunkt
-keywords: mobil, defender, Microsoft Defender til Slutpunkt, ios, mtd, android, sikkerhed
+description: Oversigt over Mobile Threat Defense i Microsoft Defender for Endpoint
+keywords: mobil, defender, Microsoft Defender for Endpoint, ios, mtd, android, sikkerhed
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,115 +17,115 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 07cd42d1ab1c6b945525b1e9ed4b463ee76376e1
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: 83da2034a04da85849383700204174110ceffa57
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63594638"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188520"
 ---
-# <a name="microsoft-defender-for-endpoint---mobile-threat-defense"></a>Microsoft Defender til slutpunkt – Mobile Threat Defense
+# <a name="microsoft-defender-for-endpoint---mobile-threat-defense"></a>Microsoft Defender for Endpoint – Mobile Threat Defense
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Microsoft Defender til slutpunkt på Android og iOS er vores **mobile trusselsforbehold (MTD)**. Typisk beskytter virksomheder proaktivt pc'er mod sårbarheder og angreb, mens mobilenheder ofte bliver overvåget og ubeskyttet. Hvis mobilplatforme har indbygget beskyttelse, f.eks. appisolation og har undersøgt forbrugerapplagre, forbliver disse platforme sårbar over for webbaserede eller andre avancerede angreb. Efterhånden som flere medarbejdere bruger enheder til arbejde og til at få adgang til følsomme oplysninger, er det af afgørende betydning, at virksomheder udruller en MTD-løsning for at beskytte enheder og dine ressourcer mod endnu mere avancerede angreb på mobil.
+Microsoft Defender for Endpoint på Android og iOS er vores **MTD (Mobile Threat Defense Solution).** Virksomheder er typisk proaktive i forhold til at beskytte pc'er mod sårbarheder og angreb, mens mobilenheder ofte ikke overvåges og beskyttes. Hvor mobilplatforme har indbygget beskyttelse, f.eks. appisolation og overvågede forbrugerappbutikker, forbliver disse platforme sårbare over for webbaserede eller andre avancerede angreb. Efterhånden som flere medarbejdere bruger enheder til arbejde og til at få adgang til følsomme oplysninger, er det altafgørende, at virksomheder udruller en MTD-løsning for at beskytte enheder og dine ressourcer mod stadig mere avancerede angreb på mobilenheder.
 
-## <a name="key-capabilities"></a>Vigtige funktioner
+## <a name="key-capabilities"></a>Nøglefunktioner
 
-Microsoft Defender til Slutpunkt på Android og iOS indeholder nedenstående vigtige funktioner. Du kan finde oplysninger om de nyeste funktioner og fordele ved at læse [vores meddelelser](https://aka.ms/mdeblog).
+Microsoft Defender for Endpoint på Android og iOS indeholder nedenstående vigtige funktioner. Du kan få oplysninger om de nyeste funktioner og fordele ved at læse vores [meddelelser](https://aka.ms/mdeblog).
 
 <br>
 
-|Funktion|Beskrivelse|
+|Kapacitet|Beskrivelse|
 |---|---|
-|Webbeskyttelse|Antiphishing, blokering af usikre netværksforbindelser og understøttelse af brugerdefinerede indikatorer.|
-|Malwarebeskyttelse (kun Android)|Scanning efter skadelige apps.|
-|Jailbreak-registrering (kun iOS)|Registrering af jailbroken-enheder.|
-|Administration af trusler og sikkerhedsrisiko (TVM) |Vurdering af sikkerhedsrisiko for onboardede mobilenheder. Besøg denne [side](next-gen-threat-and-vuln-mgt.md) for at få mere at vide Håndtering af trusler og sikkerhedsrisici i Microsoft Defender til slutpunkt. *Bemærk, at på iOS er det kun sikkerhedsrisici i operativsystemet, der understøttes i dette eksempel.*|
-|Samlet advarsel|Beskeder fra alle platforme i den samlede M365-sikkerhedskonsol|
-|Betinget adgang, Betinget start|Blokering af risikabelt udstyr fra at få adgang til virksomhedens ressourcer. Defender til Slutpunkt-risikosignaler kan også føjes til politikker for appbeskyttelse (MAM)|
-|Kontrolelementer til beskyttelse af personlige oplysninger. I forhåndsvisning (se noten nedenfor)|Konfigurer beskyttelse af personlige oplysninger i trusselsrapporterne ved at kontrollere de data, der er sendt af Microsoft Defender til Slutpunkt. *Bemærk, at kontrolelementer til beskyttelse af personlige oplysninger i øjeblikket kun er tilgængelige for enheder, der er tilmeldt. Kontrolelementer til enheder, der ikke er tilmeldt, tilføjes senere*|
-|Integration med Microsoft Tunnel|Kan integreres med Microsoft Tunnel, en VPN-gatewayløsning for at aktivere sikkerhed og forbindelse i en enkelt app. Kun tilgængelig på Android i øjeblikket|
+|Webbeskyttelse|Anti-phishing, blokering af usikre netværksforbindelser og understøttelse af brugerdefinerede indikatorer.|
+|Beskyttelse mod skadelig software (kun Android)|Søger efter skadelige apps.|
+|Jailbreak Detection (kun iOS)|Registrering af jailbrokenenheder.|
+|Trussels- og sårbarhedsstyring (TVM) |Vurdering af sårbarheder for onboardede mobilenheder. Besøg denne [side](next-gen-threat-and-vuln-mgt.md) for at få mere at vide om Håndtering af trusler og sikkerhedsrisici i Microsoft Defender for Endpoint. *Bemærk, at i iOS understøttes kun sikkerhedsrisici i operativsystemet i denne prøveversion.*|
+|Unified Alerting|Beskeder fra alle platforme i den samlede M365-sikkerhedskonsol|
+|Betinget adgang, betinget start|Blokering af risikable enheder i at få adgang til virksomhedens ressourcer. Defender for Endpoint-risikosignaler kan også føjes til politikker for appbeskyttelse (MAM)|
+|Kontrolelementer til beskyttelse af personlige oplysninger. I eksempelvisning (se note nedenfor)|Konfigurer beskyttelse af personlige oplysninger i trusselsrapporterne ved at styre de data, der sendes af Microsoft Defender for Endpoint. *Bemærk, at kontrolelementer til beskyttelse af personlige oplysninger i øjeblikket kun er tilgængelige for tilmeldte enheder. Kontrolelementer for ikke-tilmeldte enheder tilføjes senere*|
+|Integration med Microsoft Tunnel|Kan integrere med Microsoft Tunnel, en VPN-gatewayløsning for at aktivere sikkerhed og forbindelse i en enkelt app. Tilgængelig på Android og er nu også offentlig tilgængelig på iOS.|
 
-Alle disse funktioner er tilgængelige for Microsoft Defender for slutbrugere af slutpunkter. Få mere at vide under [Licenskrav](minimum-requirements.md#licensing-requirements).
+Alle disse funktioner er tilgængelige for Microsoft Defender for Endpoint licensindehavere. Du kan få flere oplysninger under [Licenskrav](minimum-requirements.md#licensing-requirements).
 
 
-## <a name="overview-and-deploy"></a>Oversigt og installation
+## <a name="overview-and-deploy"></a>Oversigt og udrul
 
-Installation af Microsoft Defender til slutpunkt på mobil kan udføres via Microsoft Endpoint Manager (MEM). Se denne video for at få en hurtig oversigt over MTD-funktioner og -installation:
+Installation af Microsoft Defender for Endpoint på mobilenheder kan udføres via Microsoft Endpoint Manager (MEM). Se denne video for at få et hurtigt overblik over MTD-funktioner og -udrulning:
 
 <br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMpiC]
 
-### <a name="deploy"></a>Installér
+### <a name="deploy"></a>Rul ud
 
-Følgende tabel opsummerer, hvordan du installerer Microsoft Defender til Slutpunkt på Android og iOS. Hvis du vil have detaljeret dokumentation, skal du se 
-- [Oversigt over Microsoft Defender til slutpunkt på Android](microsoft-defender-endpoint-android.md), og
-- [Oversigt over Microsoft Defender til slutpunkt på iOS](microsoft-defender-endpoint-ios.md)
+I følgende tabel opsummeres det, hvordan du installerer Microsoft Defender for Endpoint på Android og iOS. Du kan finde en detaljeret dokumentation under 
+- [Oversigt over Microsoft Defender for Endpoint på Android](microsoft-defender-endpoint-android.md) og
+- [Oversigt over Microsoft Defender for Endpoint på iOS](microsoft-defender-endpoint-ios.md)
 
 **Android**
 
-|Registreringstype     |Detaljer      |
+|Tilmeldingstype     |Detaljer      |
 |--------------------|-------------|
-|Android Enterprise med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|[Installér på Android Enterprise-enheder, der er tilmeldt](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
-|Enhedsadministrator med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|[Installér på enheder, der er tilmeldt Enhedsadministrator](android-intune.md#deploy-on-device-administrator-enrolled-devices)|
-|Ikke-administrerede BYOD ELLER-enheder, der administreres af andre Unified Endpoint Managers/Setup app protection policy (MAM)|[Konfigurer Defender-risikosignaler i appbeskyttelsespolitik (MAM)](android-configure-mam.md)|
+|Android Enterprise med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|[Installér på tilmeldte Android Enterprise-enheder](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
+|Enhedsadministrator med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|[Installér på de enheder, der er tilmeldt af enhedsadministratoren](android-intune.md#deploy-on-device-administrator-enrolled-devices)|
+|Ikke-administrerede BYOD ELLER-enheder, der administreres af andre Unified Endpoint Managers/Setup App Protection Policy (MAM)|[Konfigurer Defender-risikosignaler i appbeskyttelsespolitikken (MAM)](android-configure-mam.md)|
 
-**iOS**
+**Ios**
 
-|Registreringstype     |Detaljer      |
+|Tilmeldingstype     |Detaljer      |
 |--------------------|-------------|
-|Overvågede enheder med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|1. [Installér som iOS Store-app](ios-install.md)<br/>2. [Konfiguration af Webbeskyttelse uden VPN til overvågede iOS-enheder](ios-install.md#complete-deployment-for-supervised-devices)|
-|Ikke-uperviserede (BYOD)-enheder, der er tilmeldt Intune UEM (Microsoft Endpoint Manager)|[Installér som iOS Store-app](ios-install.md)|
-|Ikke-administrerede BYOD OR-enheder administreret af andre UEMs/Setup app protection policy (MAM)|[Konfigurer Defender-risikosignaler i appbeskyttelsespolitik (MAM)](ios-install-unmanaged.md)|
+|Overvågede enheder med Intune Unified Endpoint Manager (Microsoft Endpoint Manager)|1. [Udrul som iOS Store-app](ios-install.md)<br/>2. [Konfigurer webbeskyttelse uden VPN til overvågede iOS-enheder](ios-install.md#complete-deployment-for-supervised-devices)|
+|BYOD-enheder (Unsupervised) med Intune UEM (Microsoft Endpoint Manager)|[Udrul som iOS Store-app](ios-install.md)|
+|Ikke-administrerede BYOD ELLER-enheder, der administreres af andre VM'er/konfiguration af appbeskyttelsespolitik (MAM)|[Konfigurer Defender-risikosignaler i appbeskyttelsespolitikken (MAM)](ios-install-unmanaged.md)|
 
-### <a name="end-user-onboarding"></a>Onboarding til slutbruger
+### <a name="end-user-onboarding"></a>Onboarding af slutbrugere
 
-- [Konfigurer onboarding uden touch til iOS-tilmeldte](ios-install.md#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview) enheder: Administratorer kan konfigurere installationen af nul-touch til automatisk at onboarde Microsoft Defender til slutpunkt på tilmeldte iOS-enheder, uden at brugeren er nødt til at åbne appen. 
+- [Konfigurer Zero-touch onboard for iOS-tilmeldte enheder](ios-install.md#zero-touch-onboarding-of-microsoft-defender-for-endpoint): Administratorer kan konfigurere zero-touch-installation til automatisk onboarding af Microsoft Defender for Endpoint på tilmeldte iOS-enheder, uden at brugeren skal åbne appen. 
 
-- [Konfigurer Betinget adgang for at gennemtvinge bruger-onboarding](android-configure.md#conditional-access-with-defender-for-endpoint-on-android): Dette kan anvendes for at sikre onboarding af slutbrugere i Microsoft Defender for Endpoint-appen efter udrulning. Watch this video for a quick demo on configuring conditional access with Defender for Endpoint risk signals. 
+- [Konfigurer betinget adgang for at gennemtvinge bruger onboarding](android-configure.md#conditional-access-with-defender-for-endpoint-on-android): Dette kan anvendes for at sikre, at slutbrugere onboardes i Microsoft Defender for Endpoint-appen efter installation. Se denne video for at få en hurtig demo om konfiguration af betinget adgang med Defender for Endpoint-risikosignaler. 
 
   <br/>
 
   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMwR1]
 
-### <a name="simplify-onboarding"></a>Gør onboarding nemmere
+### <a name="simplify-onboarding"></a>Gør onboarding mere enkel
 
-- [iOS – Zero-Touch onboard](ios-install.md#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview)
-- [Android Enterprise – Setup Always-on VPN](android-intune.md#auto-setup-of-always-on-vpn).
+- [iOS – Zero-Touch onboardet](ios-install.md#zero-touch-onboarding-of-microsoft-defender-for-endpoint)
+- [Android Enterprise – Konfigurer Vpn, der altid er aktiveret](android-intune.md#auto-setup-of-always-on-vpn).
 - [iOS – Automatisk konfiguration af VPN-profil](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding)
 
 ## <a name="pilot-evaluation"></a>Pilotevaluering
 
-Når du vurderer mobiltrusler mod forsvar med Microsoft Defender til slutpunkt, kan du kontrollere, at visse kriterier er opfyldt, før du fortsætter med at installere tjenesten på et større sæt enheder. Du kan definere udgangskriterierne og sikre, at de er opfyldt, før de implementeres i stor udstrækning.
+Mens du evaluerer forsvar af mobiltrussel med Microsoft Defender for Endpoint, kan du kontrollere, at visse kriterier er opfyldt, før du fortsætter med at udrulle tjenesten på et større sæt enheder. Du kan definere afslutningskriterierne og sikre, at de er opfyldt, før du udruller bredt.
 
-Dette er med til at reducere potentielle problemer, der kan opstå under udrulningen af tjenesten. Her er nogle test og exit-kriterier, som måske kan hjælpe:
+Dette hjælper med at reducere potentielle problemer, der kan opstå, når tjenesten udrulles. Her er nogle test og afslutningskriterier, der kan hjælpe:
 
-- Enheder vises på lagerlisten for enheder: Når onboarding af Defender til slutpunkt er udført på mobilenheden, skal du kontrollere, at enheden er angivet i Lagerenhed i [sikkerhedskonsollen](https://security.microsoft.com).
+- Enheder vises på listen over enheders lager: Når onboarding af Defender for Endpoint på mobilenheden er fuldført, skal du kontrollere, at enheden er angivet i enhedsoversigten i [sikkerhedskonsollen](https://security.microsoft.com).
 
-- Kør en test til registrering af malware på en Android-enhed: Installer en testvirusapp fra Google Play Butik, og bekræft, at den bliver registreret af Microsoft Defender til slutpunkt. Her er en eksempelapp, der kan bruges til denne test: [Testvirus](https://play.google.com/store/apps/details?id=com.androidantivirus.testvirus). Bemærk, at på Android Enterprise med en arbejdsprofil understøttes kun arbejdsprofilen.
+- Kør en test til registrering af malware på en Android-enhed: Installér en hvilken som helst testvirusapp fra Google Play Store, og kontrollér, at den registreres af Microsoft Defender for Endpoint. Her er et eksempel på en app, der kan bruges til denne test: [Test virus](https://play.google.com/store/apps/details?id=com.androidantivirus.testvirus). Bemærk, at det kun er arbejdsprofilen, der understøttes på Android Enterprise med en arbejdsprofil.
 
-- Kør en phishingtest: Find og bekræft https://smartscreentestratings2.net , at det bliver blokeret af Microsoft Defender til slutpunkt. Bemærk, at på Android Enterprise med en arbejdsprofil understøttes kun arbejdsprofilen.
+- Kør en phishing-test: Gå til , https://smartscreentestratings2.net og bekræft, at den blokeres af Microsoft Defender for Endpoint. Bemærk, at det kun er arbejdsprofilen, der understøttes på Android Enterprise med en arbejdsprofil.
 
-- Beskeder vises i dashboard: Kontrollér, at beskeder for ovenstående registreringstest vises på [sikkerhedskonsollen](https://security.microsoft.com).
+- Beskeder vises i dashboardet: Kontrollér, at beskeder om ovenstående registreringstest vises på [sikkerhedskonsollen](https://security.microsoft.com).
 
 ## <a name="configure"></a>Konfigurer
 
 - [Konfigurer Android-funktioner](android-configure.md)
 - [Konfigurer iOS-funktioner](ios-configure-features.md)
-- [Konfigurer Webbeskyttelse uden VPN til overvågede iOS-enheder](ios-install.md#complete-deployment-for-supervised-devices)
+- [Konfigurer webbeskyttelse uden VPN for overvågede iOS-enheder](ios-install.md#complete-deployment-for-supervised-devices)
 
 ## <a name="resources"></a>Ressourcer
 
-- [Microsoft Defender til slutpunkt på Android](microsoft-defender-endpoint-android.md)
-- [Microsoft Defender til Slutpunkt på iOS](microsoft-defender-endpoint-ios.md)
-- Hold dig informeret om kommende udgivelser ved at læse [vores meddelelser](https://aka.ms/mdeblog).
+- [Microsoft Defender for Endpoint på Android](microsoft-defender-endpoint-android.md)
+- [Microsoft Defender for Endpoint på iOS](microsoft-defender-endpoint-ios.md)
+- Hold dig orienteret om kommende udgivelser ved at læse vores [meddelelser](https://aka.ms/mdeblog).
 

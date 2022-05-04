@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer din lejerliste.
-ms.openlocfilehash: b4bffcfd5b8962253e68938a956949ca8470f818
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: bdd92f066f0b94c545b102b96eedb7e08c10ed96
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022421"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188322"
 ---
 # <a name="manage-your-tenant-list-in-microsoft-365-lighthouse"></a>Administrer din lejerliste i Microsoft 365 Fyrtårn
 
@@ -106,4 +106,6 @@ Når du har oprettet og tildelt mærker, kan du bruge dem til at filtrere dine l
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel) [Oversigt over siden Overholdelse af enhed i Microsoft 365 Lighthouse](m365-lighthouse-device-compliance-page-overview.md) (artikel) [Microsoft 365 Ofte stillede spørgsmål om lighthouse](m365-lighthouse-faq.yml) (artikel)
+[Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel)\
+[Oversigt over siden Med enhedsoverholdelse i Microsoft 365 Lighthouse](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
+[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)

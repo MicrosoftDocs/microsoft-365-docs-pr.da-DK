@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan opbevaring fungerer for Exchange.
-ms.openlocfilehash: 66b7ad888e62ff84b6a2de49714bbbdf96268312
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: d5c961c733dd757c1f2b8179793b43991e71b4d8
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911418"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188740"
 ---
 # <a name="learn-about-retention-for-exchange"></a>Få mere at vide om opbevaring for Exchange
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md), fordi den indeholder oplysninger, der er specifikke for Exchange.  For andre arbejdsbelastninger skal du se:
 
@@ -41,6 +43,8 @@ Kalenderelementer, der har en slutdato, understøttes for opbevaringspolitikker,
 Kontakter og alle opgaver og kalenderelementer, der ikke har en slutdato, understøttes ikke.
 
 Andre elementer, der er gemt i en postkasse, f.eks. Skype og Teams meddelelser, er ikke inkluderet i opbevaringspolitikker eller mærkater for Exchange. Disse elementer har deres egne opbevaringspolitikker.
+
+Postkasser skal have mindst 10 MB data, før opbevaringsindstillinger gælder for dem, og opbevaringsmærkater kan publiceres til dem.
 
 ## <a name="how-retention-works-for-exchange"></a>Sådan fungerer opbevaring for Exchange
 
@@ -97,7 +101,7 @@ Når opbevaringsindstillingerne ikke længere gælder, fordi dataene slettes per
 
 ## <a name="configuration-guidance"></a>Konfigurationsvejledning
 
-Hvis du ikke har konfigureret opbevaring i Microsoft 365, skal du se [Kom i gang med styring af oplysninger](get-started-with-information-governance.md).
+Hvis du ikke har arbejdet med at konfigurere opbevaring i Microsoft 365, skal du se [Kom i gang med administration af datalivscyklus](get-started-with-data-lifecycle-management.md).
 
 Hvis du er klar til at konfigurere en opbevaringspolitik eller en opbevaringsmærkat for Exchange, skal du se følgende instruktioner:
 - [Opret og konfigurer opbevaringspolitikker](create-retention-policies.md)

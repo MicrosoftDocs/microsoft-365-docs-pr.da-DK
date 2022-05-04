@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du konfigurerer portalsikkerhed.
-ms.openlocfilehash: de93ebfff03241500bb1788fc282c4b2bb747ea2
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 60e0d2f1ba61e5def3979358f338da0846914543
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823559"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188674"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Konfigurer sikkerhed i Microsoft 365 Lighthouse Portal
 
@@ -56,15 +56,15 @@ Følgende trin hæver brugere af partnerlejere til tidsbaserede roller med høje
 
 1. Opret en gruppe, der kan tildeles roller, som beskrevet i artiklen [Opret en gruppe til tildeling af roller i Azure Active Directory](/azure/active-directory/roles/groups-create-eligible).
 
-2. Gå til [Azure AD – alle grupper](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) , og tilføj den nye gruppe som medlem af en sikkerhedsgruppe for roller med rettigheder på højt niveau (f.eks. sikkerhedsgruppen Administratoragenter for DAP eller en tilsvarende sikkerhedsgruppe for GDAP-roller).
+2. Gå til [Azure AD – alle grupper](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups), og tilføj den nye gruppe som medlem af en sikkerhedsgruppe for roller med rettigheder på højt niveau (f.eks. sikkerhedsgruppen Administratoragenter for DAP eller en tilsvarende respektive sikkerhedsgruppe for GDAP-roller).
 
 3. Konfigurer privilegeret adgang til den nye gruppe som beskrevet i artiklen [Tildel berettigede ejere og medlemmer til privilegerede adgangsgrupper](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
 
 Du kan få mere at vide om PIM under [Hvad er Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
 
-## <a name="set-up-risk-based-azure-ad-conditional-access"></a>Konfigurer risikobaseret betinget adgang til Azure AD
+## <a name="set-up-risk-based-azure-ad-conditional-access"></a>Konfigurer risikobaseret Azure AD betinget adgang
 
-MSP'er kan bruge risikobaseret betinget adgang til at sikre, at deres medarbejdere beviser deres identitet ved hjælp af MFA og ved at ændre deres adgangskode, når de registreres som en risikobetonet bruger (med lækkede legitimationsoplysninger eller pr. Azure AD-trusselsintelligens). Brugerne skal også logge på fra en velkendt placering eller en registreret enhed, når de registreres som et risikabelt logon. Andre risikable funktionsmåder omfatter at logge på fra en skadelig eller anonym IP-adresse eller fra en atypisk eller umulig rejseplacering, ved hjælp af et unormalt token, ved hjælp af en adgangskode fra en adgangskodespray eller udviser andre usædvanlige logonadfærd. Afhængigt af en brugers risikoniveau kan MSP'er også vælge at blokere adgang ved logon. Du kan få mere at vide om risici under [Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
+MSP'er kan bruge risikobaseret betinget adgang til at sikre, at deres medarbejdere beviser deres identitet ved hjælp af MFA og ved at ændre deres adgangskode, når de registreres som en risikobetonet bruger (med lækkede legitimationsoplysninger eller pr. Azure AD trusselsintelligens). Brugerne skal også logge på fra en velkendt placering eller en registreret enhed, når de registreres som et risikabelt logon. Andre risikable funktionsmåder omfatter at logge på fra en skadelig eller anonym IP-adresse eller fra en atypisk eller umulig rejseplacering, ved hjælp af et unormalt token, ved hjælp af en adgangskode fra en adgangskodespray eller udviser andre usædvanlige logonadfærd. Afhængigt af en brugers risikoniveau kan MSP'er også vælge at blokere adgang ved logon. Du kan få mere at vide om risici under [Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
 > [!NOTE]
 > Betinget adgang kræver en Azure AD Premium P2-licens i partnerlejer. Hvis du vil konfigurere betinget adgang, skal du se [Konfiguration af Azure Active Directory Betinget adgang](/appcenter/general/configuring-aad-conditional-access).
@@ -72,6 +72,8 @@ MSP'er kan bruge risikobaseret betinget adgang til at sikre, at deres medarbejde
 ## <a name="related-content"></a>Relateret indhold
 
 [Tilladelser til nulstilling af adgangskode](/azure/active-directory/roles/permissions-reference#password-reset-permissions) (artikel)\
+[Oversigt over tilladelser i Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md) (artikel)\
+[Få vist dine Azure Active Directory roller i Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (artikel)\
 [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md) (artikel)\
 [Oversigt over Microsoft 365 Fyrtårn](m365-lighthouse-overview.md) (artikel)\
 [Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (artikel)\

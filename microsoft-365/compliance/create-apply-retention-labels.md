@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Instruktioner til publicering af opbevaringsmærkater, så du derefter kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: c2088afd895b47945bea056c940e564b4dd770fb
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dd20de86b17460d5b150b5bb576ae811e40eed32
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "65145376"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187794"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Publicer opbevaringsmærkater, og anvend dem i apps
 
@@ -88,7 +88,7 @@ Hvis du vil redigere en eksisterende politik for opbevaringsmærkater (politikty
 
 Hvis du publicerer opbevaringsmærkater til SharePoint eller OneDrive, ser disse mærkater typisk ud til brugerne at vælge inden for én dag. Der kan dog gå op til syv dage. 
 
-Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv dage, før disse opbevaringsmærkater vises for brugerne, og postkassen skal indeholde mindst 10 MB data.
+Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv dage, før disse opbevaringsmærkater vises for brugerne. Som med alle opbevaringsindstillinger for Exchange skal postkassen indeholde mindst 10 MB data.
 
 ![Diagram over, hvornår publicerede navne træder i kraft.](../media/retention-labels-published-timings.png)
 

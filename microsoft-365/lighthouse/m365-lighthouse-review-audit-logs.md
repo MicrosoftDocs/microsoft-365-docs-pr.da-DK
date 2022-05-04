@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om, hvordan du gennemser overvågningslogge for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: ca4d1e9941e0c15fee169def7be0c2d801f522c2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 59e45f33b1c6708b4743605bda6ac4c93499bf59
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022821"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188762"
 ---
 # <a name="review-audit-logs-in-microsoft-365-lighthouse"></a>Gennemse overvågningslogge i Microsoft 365 Fyrtårn
 
@@ -31,7 +31,7 @@ Microsoft 365 Lighthouse-overvågningslogge registrerer handlinger, der generere
 
 Hvis du vil have vist overvågningslogge, skal du have en af følgende tilladelser:
 
-- rolle Azure Active Directory (Azure AD) – Global administrator af partnerlejer
+- Azure Active Directory rolle (Azure AD) – Global administrator af partnerlejer
 
 - Rolle i Microsoft Partnercenter – Administratoragent
 
@@ -96,8 +96,9 @@ I følgende tabel vises de aktiviteter, der registreres i overvågningslogge for
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis du har brug for flere oplysninger, kan du bruge Microsoft Graph API til at få adgang til flere overvågningshændelser. Du kan få flere oplysninger under [Oversigt over administration af flere lejere ved hjælp af api'en til Microsoft 365 Lighthouse](/graph/managedtenants-concept-overview).
+Brug Microsoft Graph API til at få adgang til flere overvågningshændelser, hvis det er nødvendigt. Du kan få flere oplysninger under [Oversigt over administration af flere lejere ved hjælp af api'en til Microsoft 365 Lighthouse](/graph/managedtenants-concept-overview).
 
 ## <a name="related-content"></a>Relateret indhold
 
-[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Microsoft 365 Ofte stillede spørgsmål om Fyrtårn](m365-lighthouse-faq.yml) (artikel)\
+[Få vist dine Azure Active Directory roller i Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (artikel)

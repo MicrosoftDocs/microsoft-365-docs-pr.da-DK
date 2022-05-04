@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 51d5814d718c1422d493f5227b311a58f99f7a82
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 7b7586a75c95202e2737bab857ab1ffebd04d6c4
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783265"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187728"
 ---
 # <a name="microsoft-virus-initiative"></a>Microsoft Virus Initiative
 
@@ -53,6 +53,7 @@ Hvis du vil kvalificere dig til MVI-programmet, skal din organisation opfylde al
 |SKD Labs|Certificeringskrav Produkt: Antivirus eller Antimalware </br> <http://www.skdlabs.com/html/english/> </br> <http://www.skdlabs.com/cert/>|CERTIFICERINGskrav til SKD Labs Star Check Pass >= 98,5 % med On Demand-, On Access- og Total Detection-test|
 |VB 100|VB100 Certification Test V1.1 </br> <https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1/>|VB100-certificering|
 |Laboratorier for vestkysten|Markering certificeret </br> <http://www.checkmarkcertified.com/sme/>|"A"-bedømmelse af produktsikkerhedsydeevne|
+|SE Labs|Protection, Small Business eller Enterprise EP Protection Test  </br> <https://selabs.uk/en/reports/consumers/>|Protection En bedømmelse eller Small Business EP A- eller Enterprise EP Protection A-bedømmelse |
 
 ## <a name="apply-now"></a>Anvend nu
 

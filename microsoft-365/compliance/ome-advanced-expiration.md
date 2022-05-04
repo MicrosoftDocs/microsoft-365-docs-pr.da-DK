@@ -1,5 +1,5 @@
 ---
-title: Angiv en udløbsdato for mails, der er krypteret med Avanceret kryptering af meddelelser i Office 365
+title: Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Microsoft Purview
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -15,34 +15,38 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: Brug Avanceret kryptering af meddelelser i Office 365 til at udvide din mailsikkerhed ved at angive en udløbsdato for mails via en brugerdefineret brandet skabelon.
+description: Brug Avanceret meddelelseskryptering i Microsoft Purview til at udvide din mailsikkerhed ved at angive en udløbsdato for mails via en brugerdefineret brandet skabelon.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1213ecf48ee9bd2e04accdd13aaf3ecd74d3faba
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e8689820adc3158ae2a36a4d52ebad0959097b49
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587522"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188388"
 ---
-# <a name="set-an-expiration-date-for-email-encrypted-by-office-365-advanced-message-encryption"></a>Angiv en udløbsdato for mails, der er krypteret med Avanceret kryptering af meddelelser i Office 365
+# <a name="set-an-expiration-date-for-email-encrypted-by-microsoft-purview-advanced-message-encryption"></a>Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Microsoft Purview
 
-Avanceret kryptering af meddelelser i Office 365 er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (nonprofitmedarbejderpriser) Office 365 Enterprise E5 (nonprofitorganisationers priser for personale) og Office 365 Education A5. Hvis din organisation har et abonnement, der ikke Avanceret kryptering af meddelelser i Office 365, kan du købe det med Microsoft 365 E5 Overholdelse SKU-tilføjelsesprogrammet til Microsoft 365 E3, Microsoft 365 E3  (Nonprofit Staff Pricing) eller Avanceret overholdelse i Office 365 SKU-tilføjelsesprogrammet til Microsoft 365 E3, Microsoft 365 E3 (nonprofitorganisationers personalepriser) eller Office 365 SKU'er.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Du kan bruge udløb af meddelelser på mails, som dine brugere sender til eksterne modtagere, der bruger OME-portalen til at få adgang til krypterede mails. Du tvinger modtagerne til at bruge OME-portalen til at få vist og svare på krypterede mails, der er sendt af din organisation, ved hjælp af en brugerdefineret brandet skabelon, der angiver en udløbsdato i Windows PowerShell.
+Microsoft Purview Advanced Message Encryption er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (priser på personale til nonprofitorganisationer) og Office 365 Education A5. Microsoft 365 E5 Overholdelse SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for nonprofitmedarbejdere) eller tilføjelsesprogrammet Avanceret overholdelse i Office 365 SKU for Microsoft 365 E3, Microsoft 365 E3 (pris på personale til nonprofitorganisationer) eller Office 365 SKU'er.
 
-Som global Office 365 administrator kan du, når du anvender dit firmas brand for at tilpasse udseendet af din organisations mails, også angive en udløb for disse mails. Med Avanceret kryptering af meddelelser i Office 365 kan du oprette flere skabeloner til krypterede mails, der stammer fra din organisation. Ved hjælp af en skabelon kan du styre, hvor længe modtagerne har adgang til mails, der sendes af dine brugere.
+Hvis din organisation har et abonnement, der ikke indeholder avanceret meddelelseskryptering fra Microsoft Purview, kan du købe det med tilføjelsesprogrammet Microsoft 365 E5 Overholdelse SKU til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for personale til nonprofitorganisationer), eller Avanceret overholdelse i Office 365 SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for nonprofit-medarbejdere) eller Office 365 SKU'er.
 
-Når en slutbruger modtager en mail, der har angivet en udløbsdato, får brugeren vist udløbsdatoen i wrappermailen. Hvis en bruger forsøger at åbne en udløbet mail, vises der en fejl i OME-portalen.
+Du kan bruge meddelelsesudløb på mails, som dine brugere sender til eksterne modtagere, som bruger OME-portalen til at få adgang til krypterede mails. Du tvinger modtagerne til at bruge OME-portalen til at få vist og besvare krypterede mails, der er sendt af din organisation, ved hjælp af en brugerdefineret brandet skabelon, der angiver en udløbsdato i Windows PowerShell.
+
+Når du som Office 365 global administrator anvender dit firmamærke til at tilpasse udseendet af organisationens mails, kan du også angive et udløb for disse mails. Med Avanceret meddelelseskryptering i Microsoft Purview kan du oprette flere skabeloner til krypterede mails, der stammer fra din organisation. Ved hjælp af en skabelon kan du styre, hvor længe modtagerne har adgang til mails, der sendes af dine brugere.
+
+Når en slutbruger modtager mails, hvor der er angivet en udløbsdato, får brugeren vist udløbsdatoen i ombrydermailen. Hvis en bruger forsøger at åbne en udløbet mail, vises der en fejl på OME-portalen.
 
 Du kan kun angive udløbsdatoer for mails til eksterne modtagere.
 
-Når Avanceret kryptering af meddelelser i Office 365 bruger brugerdefineret branding, anvender Office 365 wrapperen på mails, der passer til den regel for mailflow, du anvender skabelonen på. Desuden kan du kun bruge udløb, hvis du bruger brugerdefineret branding.
+Med Avanceret meddelelseskryptering i Microsoft Purview anvender Office 365 ombryderen på mail, der passer til den regel for mailflowet, som du anvender skabelonen på, når du anvender den. Derudover kan du kun bruge udløb, hvis du bruger brugerdefineret branding.
 
-## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>Opret en brugerdefineret brandingskabelon for at gennemtvinge udløb af mails ved hjælp af PowerShell
+## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>Opret en brugerdefineret brandingskabelon for at gennemtvinge mailudløb ved hjælp af PowerShell
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) med en konto, der har globale administratorrettigheder i organisationen.
+1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) med en konto, der har globale administratortilladelser i din organisation.
 
-2. Kør New-OMEConfiguration cmdlet'en.
+2. Kør cmdlet'en New-OMEConfiguration.
 
     ```powershell
     New-OMEConfiguration -Identity "Expire in 7 days" -ExternalMailExpiryInDays 7
@@ -52,12 +56,12 @@ Hvor:
 
 - `Identity` er navnet på den brugerdefinerede skabelon.
 
-- `ExternalMailExpiryInDays` identificerer det antal dage, som modtagerne kan beholde mails, før de udløber. Du kan bruge en hvilken som helst værdi mellem 1-730 dage.
+- `ExternalMailExpiryInDays` identificerer det antal dage, modtagerne kan beholde mails, før den udløber. Du kan bruge en hvilken som helst værdi mellem 1-730 dage.
 
-## <a name="more-information-about-office-365-advanced-message-encryption"></a>Flere oplysninger om Avanceret kryptering af meddelelser i Office 365
+## <a name="more-information-about-microsoft-purview-advanced-message-encryption"></a>Flere oplysninger om avanceret meddelelseskryptering i Microsoft Purview
 
-- [Avanceret kryptering af meddelelser i Office 365](ome-advanced-message-encryption.md)
+- [Avanceret meddelelseskryptering](ome-advanced-message-encryption.md)
 
-- [Tilbagekald mail, der er krypteret med Avanceret kryptering af meddelelser i Office 365](revoke-ome-encrypted-mail.md)
+- [Tilbagekald mail, der er krypteret af Avanceret meddelelseskryptering i Microsoft Purview](revoke-ome-encrypted-mail.md)
 
 - [Beskrivelse af meddelelsespolitik og overholdelsestjeneste](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)

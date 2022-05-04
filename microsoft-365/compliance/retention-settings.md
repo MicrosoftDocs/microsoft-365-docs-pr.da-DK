@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: c0214476494e024247b76911475df88bdfbfa4ff
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: ab3adee8275f6c64dd7ad3b21547e8205b00ff7d
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129216"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187772"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -240,6 +240,8 @@ Placeringer i politikker for opbevaring identificerer specifikke Microsoft 365 t
 
 ### <a name="configuration-information-for-exchange-email-and-exchange-public-folders"></a>Konfigurationsoplysninger for Exchange mail og Exchange offentlige mapper
 
+Både **den Exchange mailplacering** og placeringen **af de Exchange offentlige mapper** kræver, at postkasser har mindst 10 MB data, før opbevaringsindstillingerne gælder for dem.
+
 Den **Exchange mailplacering** understøtter opbevaring af brugernes mail, kalender og andre postkasseelementer ved at anvende opbevaringsindstillinger på niveauet for en postkasse. Delte postkasser understøttes også.
 
 Ressourcepostkasser, kontakter og Microsoft 365 gruppepostkasser understøttes ikke for Exchange mail. For Microsoft 365 gruppepostkasser skal du i stedet vælge placeringen **Microsoft 365-grupper**. Selvom den Exchange placering til at starte med tillader, at en gruppepostkasse vælges til et statisk område, får du vist en fejl om, at "RemoteGroupMailbox" ikke er et gyldigt valg for denne placering, når du forsøger at gemme opbevaringspolitikken.
@@ -294,6 +296,8 @@ Når du konfigurerer en politik for opbevaring, der bruger tilpassede politikomr
 ### <a name="configuration-information-for-microsoft-365-groups"></a>Konfigurationsoplysninger for Microsoft 365-grupper
 
 Hvis du vil bevare eller slette indhold for en Microsoft 365 gruppe (tidligere Office 365 gruppe), skal du bruge den **Microsoft 365-grupper** placering. For opbevaringspolitikker omfatter denne placering gruppepostkassen og SharePoint teams-webstedet. Denne placering omfatter kun SharePoint teamswebsted for opbevaringsmærkater.
+
+Postkasser, som du målretter med denne politikplacering, kræver mindst 10 MB data, før opbevaringsindstillingerne gælder for dem.
 
 > [!NOTE]
 > Selvom en Microsoft 365 gruppe har en Exchange postkasse, indeholder en opbevaringspolitik for **den Exchange mailplacering** ikke indhold i Microsoft 365 gruppepostkasser.

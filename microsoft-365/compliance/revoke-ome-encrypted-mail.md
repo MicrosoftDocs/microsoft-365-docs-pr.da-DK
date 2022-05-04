@@ -9,27 +9,31 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 03/04/2022
+ms.date: 05/02/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Som administrator og som afsender af en meddelelse kan du tilbagekalde visse mails, der er krypteret med Avanceret kryptering af meddelelser i Office 365.
-ms.openlocfilehash: 313cbe990e322285fc81465329fa5e19b52e2701
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Som administrator og som afsender af en meddelelse kan du tilbagekalde visse mails, der er krypteret med avanceret meddelelseskryptering i Microsoft Purview.
+ms.openlocfilehash: 79d09c13755c0c73e4d68598e83ac41344b9281a
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759385"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187937"
 ---
 # <a name="revoke-email-encrypted-by-advanced-message-encryption"></a>Tilbagekald mail, der er krypteret af avanceret meddelelseskryptering
 
-Tilbagekaldelse af mail tilbydes som en del af Avanceret kryptering af meddelelser i Office 365. Avanceret kryptering af meddelelser i Office 365 er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (pris på personale til nonprofitorganisationer), Office 365 Enterprise E5 (pris på nonprofitpersonale) og Office 365 Education A5. Hvis din organisation har et abonnement, der ikke indeholder Avanceret kryptering af meddelelser i Office 365, kan du købe det med tilføjelsesprogrammet Microsoft 365 E5 Overholdelse SKU til Microsoft 365 E3 Microsoft 365 E3  (Prisfastsættelse for personale til nonprofitorganisationer) eller tilføjelsesprogrammet Avanceret overholdelse i Office 365 SKU til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for personale til nonprofitorganisationer) eller Office 365 SKU'er.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Tilbagekaldelse af mail tilbydes som en del af avanceret meddelelseskryptering i Microsoft Purview. Microsoft Purview Advanced Message Encryption er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (priser på personale til nonprofitorganisationer) og Office 365 Education A5. Hvis du vil bruge funktionerne til tilbagekaldelse og udløb af avanceret meddelelseskryptering, skal du aktivere indstillingen **Premium Kryptering i Office 365** i din E5-licens.
+
+Hvis din organisation har et abonnement, der ikke indeholder avanceret meddelelseskryptering fra Microsoft Purview, kan du købe det med tilføjelsesprogrammet Microsoft 365 E5 Overholdelse SKU til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for personale til nonprofitorganisationer), eller Avanceret overholdelse i Office 365 SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for nonprofit-medarbejdere) eller Office 365 SKU'er.
 
 Denne artikel er en del af en større serie af artikler om [Office 365 meddelelseskryptering](ome.md).
 
-Hvis en meddelelse blev krypteret ved hjælp af Avanceret kryptering af meddelelser i Office 365, og du er Microsoft 365 administrator, eller du er afsender af meddelelsen, kan du tilbagekalde meddelelsen under visse betingelser. Administratorer tilbagekalder meddelelser ved hjælp af PowerShell. Som afsender tilbagekalder du en meddelelse, du har sendt direkte fra Outlook på internettet. I denne artikel beskrives de omstændigheder, hvor tilbagekaldelse er mulig, og hvordan du gør det.
+Hvis en meddelelse blev krypteret ved hjælp af Avanceret meddelelseskryptering i Microsoft Purview, og du er Microsoft 365 administrator, eller du er afsender af meddelelsen, kan du tilbagekalde meddelelsen under visse betingelser. Administratorer tilbagekalder meddelelser ved hjælp af PowerShell. Som afsender tilbagekalder du en meddelelse, du har sendt direkte fra Outlook på internettet. I denne artikel beskrives de omstændigheder, hvor tilbagekaldelse er mulig, og hvordan du gør det.
 
 > [!NOTE]
 > Hvis du vil garantere, at muligheden for at spore og tilbagekalde OME-meddelelser er tilgængelig, skal du tilføje en brugerdefineret brandingskabelon. Se [Føj din organisations brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md)
@@ -92,7 +96,7 @@ Der er flere måder at finde meddelelses-id'et for den mail, du vil tilbagekalde
 
 2. Når du har fundet mailen, skal du vælge den for at få vist ruden **Meddelelsessporingsoplysninger** . Udvid **Flere oplysninger** for at finde meddelelses-id'et.
 
-#### <a name="to-identify-the-message-id-of-the-email-you-want-to-revoke-by-using-office-message-encryption-reports-in-the-security-amp-compliance-center"></a>Til at identificere meddelelses-id'et for den mail, du vil tilbagekalde ved hjælp af Office rapporter om meddelelsekryptering i Security &amp; Compliance Center
+#### <a name="to-identify-the-message-id-of-the-email-you-want-to-revoke-by-using-message-encryption-reports-in-the-security-amp-compliance-center"></a>Til at identificere meddelelses-id'et for den mail, du vil tilbagekalde ved hjælp af rapporter om meddelelsekryptering i Security &amp; Compliance Center
 
 1. I Security &amp; Compliance Center skal du navigere til **rapporten Meddelelsekryptering**. Du kan få oplysninger om denne rapport under [Få vist mailsikkerhedsrapporter i Security &amp; Compliance Center](../security/office-365-security/view-email-security-reports.md).
 
@@ -154,10 +158,10 @@ Hvis du vil tilbagekalde en mail ved hjælp af Windows PowerShell, skal du bruge
      Revoked: True
      ```
 
-## <a name="more-information-about-office-365-advanced-message-encryption"></a>Flere oplysninger om Avanceret kryptering af meddelelser i Office 365
+## <a name="more-information-about-microsoft-purview-advanced-message-encryption"></a>Flere oplysninger om avanceret meddelelseskryptering i Microsoft Purview
 
-- [Avanceret meddelelseskryptering i Office 365](ome-advanced-message-encryption.md)
+- [Avanceret meddelelseskryptering i Microsoft Purview](ome-advanced-message-encryption.md)
 
-- [Avanceret kryptering af meddelelser i Office 365 – mailudløb](ome-advanced-expiration.md)
+- [Avanceret meddelelseskryptering i Microsoft Purview – mailudløb](ome-advanced-expiration.md)
 
 - [Beskrivelse af meddelelsespolitik og overholdelsestjeneste](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)

@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Få trinvise værktøjer til at planlægge, overføre og implementere funktionerne i din lejers licenser. Find en vejledning til, hvordan du konfigurerer en tjeneste eller en app, du skal køre.
-ms.openlocfilehash: 6018a490cf77498b1767e7e269b17937f11ae011
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 61eccec443a939591e563daa5135239bf0e23a74
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097354"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188718"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365 og Office 365 tjenester
 
@@ -103,11 +103,11 @@ Vejledningen [Identitetssikkerhed for teams](https://admin.microsoft.com/Adminpo
 
 ### <a name="add-or-sync-users-to-microsoft-365"></a>Føj eller synkroniser brugere til Microsoft 365
 
-[Denne vejledning](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard) hjælper med at strømline processen med at få dine brugerkonti konfigureret i **Microsoft 365**. Baseret på dit miljø og dine behov kan du vælge at tilføje brugere individuelt, overføre din lokale mappe med Azure AD-cloudsynkronisering eller Azure AD-Forbind eller foretage fejlfinding af eksisterende synkroniseringsproblemer, når det er nødvendigt.
+[Denne vejledning](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard) hjælper med at strømline processen med at få dine brugerkonti konfigureret i **Microsoft 365**. Baseret på dit miljø og dine behov kan du vælge at tilføje brugere individuelt, overføre din lokale mappe med Azure AD cloudsynkronisering eller Azure AD Forbind eller foretage fejlfinding af eksisterende synkroniseringsproblemer, når det er nødvendigt.
 
-### <a name="azure-ad-setup-guide"></a>Konfigurationsvejledning til Azure AD
+### <a name="azure-ad-setup-guide"></a>Azure AD konfigurationsvejledning
 
-[Konfigurationsvejledningen til Azure AD](https://aka.ms/aadpguidance) indeholder oplysninger, der sikrer, at din organisation har et stærkt sikkerhedsgrundlag. I denne vejledning skal du konfigurere de første funktioner, f.eks. Azure Role-based access control (Azure RBAC) for administratorer, Azure AD-Forbind til din lokale mappe og Azure AD Forbind Health, så du kan overvåge din hybrididentitets tilstand under automatiserede synkroniseringer.
+[Konfigurationsvejledningen til Azure AD](https://aka.ms/aadpguidance) indeholder oplysninger, der sikrer, at din organisation har et stærkt sikkerhedsgrundlag. I denne vejledning skal du konfigurere de første funktioner, f.eks. Azure Role-based access control (Azure RBAC) for administratorer, Azure AD Forbind til din lokale mappe og Azure AD Forbind Health, så du kan overvåge din hybrididentitets tilstand under automatiserede synkroniseringer.
 
 Den indeholder også vigtige oplysninger om aktivering af selvbetjent nulstilling af adgangskode, betinget adgang og integreret tredjepartslogon, herunder valgfri avanceret identitetsbeskyttelse og automatisering af brugerklargøring.
 
@@ -181,13 +181,13 @@ Løsningerne i denne vejledning hjælper dig med at få indblik i brugeraktivite
 * Med løsningen til overholdelse af angivne standarder for kommunikation kan du identificere og reagere på kommunikationsrisici for elementer som vold på arbejdspladsen, insiderhandel, chikane, ordensregler og overtrædelser af lovmæssige standarder.
 * Løsningen til styring af insiderrisiko hjælper dig med at identificere, undersøge og reagere på risici for tyveri af immaterielle rettigheder, følsomme datalækager, sikkerhedsovertrædelser, dataspild og fortrolighedsovertrædelser.
 
-### <a name="information-protection-setup-guide"></a>Vejledning til konfiguration af Information Protection
+### <a name="microsoft-purview-information-protection-setup-guide"></a>Installationsvejledning til Microsoft Purview Information Protection
 
-Få et overblik over de funktioner, du kan anvende i din strategi til beskyttelse af oplysninger, så du kan være sikker på, at dine følsomme oplysninger er beskyttet. Brug en tilgang med fire trins livscyklus, hvor du opdager, klassificerer, beskytter og overvåger følsomme oplysninger. [Microsofts vejledning til beskyttelse af oplysninger](https://aka.ms/mipsetupguide) sørger for vejledning til at fuldføre hver af disse trin.
+Få et overblik over de funktioner, du kan anvende i din strategi til beskyttelse af oplysninger, så du kan være sikker på, at dine følsomme oplysninger er beskyttet. Brug en tilgang med fire trins livscyklus, hvor du opdager, klassificerer, beskytter og overvåger følsomme oplysninger. [Konfigurationsvejledningen til Microsoft Purview Information Protection](https://aka.ms/microsoftpurviewinformationprotectionsetupguide) indeholder en vejledning i, hvordan du fuldfører hver af disse faser.
 
-### <a name="data-lifecycle-management-setup-guide"></a>Vejledning til konfiguration af datalivscyklusstyring
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Konfigurationsvejledning til Microsoft Purview Data Lifecycle Management
 
-Microsofts [vejledning til styring af oplysninger](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du har angivet. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer mærkater, mærkatpolitikker og opbevaringspolitikker, der anvendes på din organisations indhold, der kan genbruges, og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
+[Konfigurationsvejledningen til Microsoft Purview Data Lifecycle Management](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du har angivet. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer opbevaringsmærkater, politikker for opbevaringsmærkater og opbevaringspolitikker, der anvendes på din organisations indhold og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
 
 ### <a name="microsoft-defender-for-cloud-apps-setup-guide"></a>konfigurationsvejledning til Microsoft Defender for Cloud Apps
 

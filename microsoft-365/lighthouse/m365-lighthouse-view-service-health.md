@@ -16,22 +16,22 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist tilstanden for lejertjenesten.
-ms.openlocfilehash: c5cfed4449fbdbb6cb63bc80dfd8e23ca4d5c4bb
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 8ad96c77f14148fefd6d00cd51af093cd081d857
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023607"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187816"
 ---
 # <a name="view-tenant-service-health-in-microsoft-365-lighthouse"></a>Få vist lejerens tjenestetilstand i Microsoft 365 Fyrtårn
 
-Du kan få vist tjenestetilstanden for de lejere, du administrerer i Microsoft 365 Lighthouse. Tjenestetilstand omfatter hændelser og gode råd til flere tjenester, herunder Microsoft Intune, identitetstjenester for Azure Active Directory (Azure AD) og MDM-cloudtjenester (Mobile Device Management). Du kan også se, hvor mange af dine administrerede lejere der påvirkes af hændelser. Hvis en af dine lejere f.eks. oplever problemer, kan du kontrollere siden Tjenestetilstand for at finde ud af, om det er et kendt problem med en igangværende løsning, eller om en nylig ændring kan påvirke dem. Det kan spare dig tid ved fejlfinding og reducere supportopkald.
+Du kan få vist tjenestetilstanden for de lejere, du administrerer i Microsoft 365 Lighthouse. Tjenestetilstand omfatter hændelser og gode råd til flere tjenester, herunder Microsoft Intune, Azure Active Directory (Azure AD) identitetstjenester og MDM-cloudtjenester (Mobile Device Management). Du kan også se, hvor mange af dine administrerede lejere der påvirkes af hændelser. Hvis en af dine lejere f.eks. oplever problemer, kan du kontrollere siden Tjenestetilstand for at finde ud af, om det er et kendt problem med en igangværende løsning, eller om en nylig ændring kan påvirke dem. Det kan spare dig tid ved fejlfinding og reducere supportopkald.
 
 Hvis du ikke kan logge på Lighthouse, kan du bruge [siden Microsoft 365 tjenestetilstandsstatus](https://status.office365.com/) til at kontrollere, om der er kendte problemer, der forhindrer dig i at logge på din partnerlejer. Du kan også tilmelde dig for at følge [@MSFT365status](https://twitter.com/MSFT365Status) på Twitter for at få vist oplysninger om specifikke tjenestehændelser.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Hvis du vil have vist tjenestetilstand, skal du have en Azure AD-rolle i partnerlejer med følgende **egenskabssæt: microsoft.office365.serviceHealth/allEntities/allTasks**. Du kan se en liste over Azure [AD-roller under Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference).
+Hvis du vil have vist tjenestetilstand, skal du have en Azure AD rolle i partnerlejer med følgende **egenskabssæt: microsoft.office365.serviceHealth/allEntities/allTasks**. Du kan se en liste over Azure AD roller [under Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="view-service-health-status-for-all-tenants"></a>Vis tjenestetilstandsstatus for alle lejere
 
@@ -62,4 +62,5 @@ Under fanen **Berørte lejere** kan du eksportere en liste over berørte lejere 
 ## <a name="related-content"></a>Relateret indhold
 
 [Sådan kontrollerer du Microsoft 365 tjenestetilstand](/microsoft-365/enterprise/view-service-health) (artikel)\
-[Kendte problemer med Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) (artikel)
+[Kendte problemer med Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) (artikel)\
+[Få vist dine Azure Active Directory roller i Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (artikel)
