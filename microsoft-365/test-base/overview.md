@@ -1,6 +1,6 @@
 ---
 title: Oversigt
-description: Forstå testbase
+description: Om testbasen
 search.appverid: MET150
 author: Tinacyt
 ms.author: tinachen
@@ -14,55 +14,50 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 8d7539dfeecf1e34a639bc506f312c35a4243323
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: 13eaea1e62dd030f86e08d885ad743d673d6142c
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63593927"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231687"
 ---
-# <a name="what-is-test-base-for-microsoft-365"></a>Hvad er Test Base for Microsoft 365?
+# <a name="what-is-test-base-for-microsoft-365"></a>Hvad er testbase for Microsoft 365?
 
-Testbase for Microsoft 365 (Test Base) er Microsofts valideringstjeneste, der er baseret på det sikre Azure-miljø.
-Med Test Base kan softwareleverandører og systemintegratorer fremskynde valideringen af deres programmer i forhold til foreløbige Windows sikkerheds- og funktions builds. Dette er et stærkt engageret samarbejde mellem SV-partnere og Microsoft, som muliggør fælles test, validering og afhjælpning.
+Test Base er en Azure-tjeneste, der muliggør test af datadrevne programmer, samtidig med at brugeren får adgang til intelligent test overalt i verden.
 
-Testbase giver en god mulighed for at opbygge og vedligeholde en sikker valideringstjeneste på Azure, hvor kunder og partnere kan iscenestille og teste deres programmers arbejdsbelastning i forhold til vores foreløbige sikkerhedsopdateringer.
+Følgende enheder opfordres til at onboarde deres programmer, binære filer og testscripts i testbasen for Microsoft 365-tjenesten: UAFHÆNGIGE softwareleverandører (ISV'er), systemintegratorer (SIs) for at validere deres programmer og it-teknikere, der vil validere deres line of business-programmer (LOB) gennem integration med Microsoft Intune.
 
-Med Test Base får SV'er mere indsigt i potentielle problemer, der kan forhindre deres programmer i at udføre sit bedste på den nye VERSION af operativsystemet, før Microsoft udgiver opdateringen på markedet.
+## <a name="why-test-your-application-with-test-base"></a>Hvorfor teste dit program med testbasen?
 
-Denne nye tjeneste hjælper SV'er med at gøre testindsatsen enklere og mere effektiv. Virksomhedskunder vil drage fordel af SV- og Microsoft-test sammen i et samarbejdsmiljø og få mere tillid til, at deres programmer fungerer som forventet.
+Testbasen for Microsoft 365-tjenesten kan imødekomme udvidelsen af din testmatrix efter behov, så du har tillid til dine programmers integritet, kompatibilitet og anvendelighed.
 
-**Advantages Test Base tilbyder virksomheder og deres SV-partnere:**
+Testbasen gør det muligt for dit program at fortsætte med at fungere som forventet, selvom platformafhængigheder varierer, og der anvendes nye opdateringer af Windows opdateringstjenesten. Med testbasen kan du undgå forværring, langvarige tidsforpligtelser og udgifter til konfiguration og vedligeholdelse af et komplekst laboratoriemiljø til test af dine programmer.
 
-- Hurtigere udrulning af sikkerhedsopdateringer for at sikre dine enheder;
-- Reducerede omkostninger til opdateringsvalidering ved at hoste ændringerne og programmet for operativsystemet i det samme miljø.
-- Førsteklasses intelligencerapport fra Microsoft om dine apps (kode dækning, API-effektanalyse og så videre);
-- Microsofts ekspertise inden for skift af testindhold og -udnyttelse til Azure.
+Derudover kan du automatisk teste kompatibilitet mod sikkerheds- og funktionsopdateringer til Windows ved hjælp af sikre virtuelle maskiner (VM'er), samtidig med at du får adgang til intelligens i verdensklasse til test af dine programmer. Du kan også få dine apps testet for kompatibilitet i forhold til foreløbige windows-sikkerhedsopdateringer ved at sende en anmodning om at få adgang.
 
-## <a name="guide-to-navigating-the-test-base-portal"></a>Vejledning til navigation i Test Base-portalen
+## <a name="how-does-test-base-work"></a>Hvordan fungerer testbasen?
 
-Denne vejledning er opdelt i fire (4) dele for at sikre en gratis oplevelse, mens du bruger vores tjeneste:
+Hvis du vil tilmelde dig testbasetjenesten, skal du se [Opret en ny testbasekonto](createAccount.md).
 
-1. **Oversigten**, som indeholder detaljerede, trinvise retningslinjer for, hvordan du uploader dit program via vores selvbetjenings-onboardingportal.
+Når en kunde har tilmeldt sig testbasetjenesten, er det nemt at begynde at uploade programpakker til test.
 
-2. Sektionen **Hurtigstarter, som** indeholder oplysninger om formatet for den ZIP-komprimerede mappestruktur, og hvad du skal vide, når du forbereder dine testscripts.
+Efter en vellykket upload testes pakker mod Windows foreløbige opdateringer.
 
-3. Vejledning **, der indeholder en** detaljeret oversigt over, hvordan du bruger Test Base til at udlede testresultater.
+Når de indledende test er fuldført, kan kunden foretage en grundig gennemgang med indsigt i ydeevne og regressionsanalyse for at registrere, om foreløbige indholdsopdateringer på nogen måde har forringet programydeevnen.
 
-4. Afsnittet **Reference** , der indeholder svar på de typiske spørgsmål, vi modtager fra vores kunder.
+Men hvis pakken mislykkedes en test, kan kunden også udnytte Insights fra hukommelses- eller CPU-regressioner for at afhjælpe fejlen og derefter opdatere pakken efter behov.
 
-## <a name="test-base-has-reached-general-availability"></a>Testbase har nået den generelle tilgængelighed
+Med Test Base kan kunden bruge en enkelt placering til at administrere alle de pakker, der testes, hvilket også kan lette upload og opdatering af pakker for at generere nye programversioner efter behov.
 
-Testbasen blev officielt erklæret generelt tilgængelighed under mødet Microsoft Ignite i november 2021. 
+> [!NOTE]
+> **For at kunderne kan drage fordel af indhold fra foreløbige opdateringer, skal de specifikt anmode om adgang til det. Når din anmodning om adgang til foreløbige opdateringer er godkendt, bliver dine uploadede pakker automatisk planlagt til at blive testet i forhold til den foreløbige Windows opdateringer til de operativsystemversioner, der blev valgt under onboarding**.
 
-Det betyder, at alle med en gyldig Enterprise Azure-konto kan onboarde deres testmaterialer og hurtigt begynde at teste deres programmer på tjenesten.
+Når nye Windows foreløbige opdateringer bliver tilgængelige, testes programpakker automatisk med nyt foreløbig indhold. Derefter kan det være nødvendigt med en ekstra runde indsigt. Hvis kunderne ikke specifikt anmoder om adgang, bliver programpakkerne kun testet i forhold til den aktuelt udgivne version af Windows.
 
-## <a name="who-should-onboard"></a>Who skal onboarde?
-
-Vi opfordrer alle softwareleverandører, systemintegratorer (SIS'er) til at samle deres programmer, binære og teste scripts i tjenesten.
+Når pakkerne er testet, kan kunderne levere dem til deres softwarekunder og slutbrugere med tillid og forsikringen om, at Test Base gjorde sit arbejde.
 
 ## <a name="next-steps"></a>Næste trin
 
 Følg linket for at komme i gang
 > [!div class="nextstepaction"]
-> [Næste trin](createaccount.md)
+> [Opret en ny testbasekonto | Microsoft Docs](createaccount.md)

@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du beskytter dine følsomme oplysninger ved hjælp af microsoft Purview-politikker og -værktøjer til forebyggelse af datatab og får en rundvisning i DLP-livscyklussen.
-ms.openlocfilehash: 755593830b489b268c81e722bd35a5984f2d1d93
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: aa32eba1111f4a119652ba88b59062581bb6cc4b
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953399"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231767"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab
 
@@ -183,7 +183,7 @@ Når politikken er synkroniseret til de rigtige placeringer, begynder den at eva
 
 ## <a name="viewing-policy-application-results"></a>Visning af resultater for politikprogram
 
-DLP rapporterer en stor mængde oplysninger til Microsoft Purview fra overvågning, politikkampe og handlinger og brugeraktiviteter. Du skal bruge og reagere på disse oplysninger for at justere dine politikker og triage handlinger, der udføres på følsomme elementer. Telemetrien går først ind på [Microsoft Purview-overholdelsesportalen Overvågningslogge](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-center) , behandles og gør sin vej til forskellige rapporteringsværktøjer. Hvert rapporteringsværktøj har forskellige formål.
+DLP rapporterer en stor mængde oplysninger til Microsoft Purview fra overvågning, politikkampe og handlinger og brugeraktiviteter. Du skal bruge og reagere på disse oplysninger for at justere dine politikker og triage handlinger, der udføres på følsomme elementer. Telemetrien går først ind på [Microsoft Purview-overholdelsesportalen Overvågningslogge](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) , behandles og gør sin vej til forskellige rapporteringsværktøjer. Hvert rapporteringsværktøj har forskellige formål.
 
 ### <a name="dlp-alerts-dashboard"></a>DLP-beskeddashboard
 
@@ -217,7 +217,7 @@ Hvis du vil vide mere om Microsoft Purview DLP, skal du se:
 
 - [Få mere at vide om forebyggelse af datatab ved slutpunkt](endpoint-dlp-learn-about.md)
 - [Få mere at vide om standardpolitikken for forebyggelse af datatab i Microsoft Teams (prøveversion)](dlp-teams-default-policy.md)
-- [Få mere at vide om forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md)
+- [Få mere at vide om scanner til forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md)
 - [Få mere at vide om Microsoft Overholdelsesudvidelse](dlp-chrome-learn-about.md)
 - [Få mere at vide om dashboardet til forebyggelse af datatab](dlp-alerts-dashboard-learn.md)
 

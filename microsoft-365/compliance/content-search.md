@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Brug eDiscovery-værktøjet til indholdssøgning i Overholdelsescenter til at søge efter indhold i forskellige Microsoft 365 tjenester.
-ms.openlocfilehash: 418bdffd71e83aea548c21589c6b8c08ae2419e8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 90b1ce142b5d629be86ba058071af906485e765f
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097090"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231709"
 ---
 # <a name="create-a-content-search"></a>Opret en indholdssøgning
 
@@ -50,7 +50,9 @@ Når du har kørt en søgning, vises antallet af indholdsplaceringer og et ansl�
 
 - Hvis du vil have adgang til indholdssøgeværktøjet på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> (for at køre søgninger og få vist resultater og eksportere resultater), skal en administrator, overholdelsesofficer eller eDiscovery-leder være medlem af rollegruppen eDiscovery Manager i overholdelsesportalen. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
-- I en Exchange hybridinstallation kan du ikke bruge søgeværktøjet Indhold til at søge i postkasser i det lokale miljø. Du kan kun bruge værktøjet til at søge i skybaserede postkasser.
+- I en Exchange hybridinstallation kan du ikke bruge søgeværktøjet Indhold til at søge efter mails i postkasser i det lokale miljø. Du kan kun bruge værktøjet til at søge i skybaserede postkasser.
+
+- I en Exchange hybridinstallation kan du søge efter Teams chatdata i postkasser i det lokale miljø. Du kan få flere oplysninger under [Teams chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users?view=o365-worldwide).
 
 ## <a name="create-and-run-a-search"></a>Opret og kør en søgning
   

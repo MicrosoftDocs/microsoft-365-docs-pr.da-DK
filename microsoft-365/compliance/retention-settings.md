@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: ab3adee8275f6c64dd7ad3b21547e8205b00ff7d
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: ddfa921c8dae22bbe091e2c0f66fc9ae42aeea41
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187772"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231790"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -55,7 +55,7 @@ Når du har besluttet, om du vil bruge et adaptivt eller statisk område, kan du
 
 ### <a name="configuration-information-for-adaptive-scopes"></a>Konfigurationsoplysninger for tilpassede områder
 
-Når du vælger at bruge tilpassede områder, bliver du bedt om at vælge, hvilken type adaptivt omfang du vil have. Der er tre forskellige typer adaptive områder, og hver enkelt understøtter forskellige attributter eller egenskaber:
+Når du vælger at bruge tilpassede områder, bliver du bedt om at vælge, hvilken type tilpasset område du vil have. Der er tre forskellige typer adaptive områder, og hver enkelt understøtter forskellige attributter eller egenskaber:
 
 | Type af tilpasset område | Attributter eller egenskaber, der understøttes, omfatter |
 |:-----|:-----|
@@ -73,7 +73,7 @@ Attributnavnene for brugere og grupper er baseret på [de modtageregenskaber, de
 De attributter og egenskaber, der er angivet i tabellen, kan nemt angives, når du konfigurerer et adaptivt omfang ved hjælp af den enkle forespørgselsgenerator. Yderligere attributter og egenskaber understøttes med den avancerede forespørgselsgenerator, som beskrevet i følgende afsnit.
 
 > [!TIP]
-> Du kan finde flere oplysninger om brug af den avancerede forespørgselsgenerator i følgende webinarer: 
+> Du kan få flere oplysninger om brug af den avancerede forespørgselsgenerator i følgende webinarer: 
 > - [Oprettelse af avancerede forespørgsler til brugere og grupper med tilpassede politikområder](https://mipc.eventbuilder.com/event/52683/occurrence/49452/recording?rauth=853.3181650.1f2b6e8b4a05b4441f19b890dfeadcec24c4325e90ac492b7a58eb3045c546ea)
 > - [Oprettelse af avancerede forespørgsler for SharePoint websteder med tilpassede politikområder](https://aka.ms/AdaptivePolicyScopes-AdvancedSharePoint)
 
@@ -130,11 +130,11 @@ Specifikt for SharePoint websteder kan der være behov for yderligere SharePoint
     - I **forbindelse med SharePoint områder** skal du bruge KQL (Keyword Query Language). Du kender måske allerede KQL til at søge efter SharePoint ved hjælp af indekserede webstedsegenskaber. Du kan få hjælp til at angive disse KQL-forespørgsler under [Reference til nøgleordsforespørgselssprog (KQL).](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
         
         Da SharePoint områder for websteder f.eks. automatisk inkluderer alle SharePoint webstedstyper, som omfatter Microsoft 365 grupperede og OneDrive websteder, kan du bruge den indekserede webstedsegenskab **SiteTemplate** til at inkludere eller udelade bestemte webstedstyper. De skabeloner, du kan angive:
-        - SITEPAGEPUBLISHING til moderne kommunikationswebsteder
-        - GRUPPE for Microsoft 365 websteder, der er forbundet med grupper
-        - TEAMCHANNEL til websteder med Microsoft Teams private kanaler
-        - STS til et klassisk SharePoint teamwebsted
-        - SPSPERS til OneDrive websteder
+        - `SITEPAGEPUBLISHING` til moderne kommunikationswebsteder
+        - `GROUP`til Microsoft 365 grupperede websteder
+        - `TEAMCHANNEL`for Microsoft Teams private kanalwebsteder
+        - `STS`til et klassisk SharePoint teamwebsted
+        - `SPSPERS`for OneDrive websteder
         
         Så hvis du vil oprette et adaptivt omfang, der kun indeholder moderne kommunikationswebsteder og udelukker Microsoft 365 goup-forbundne og OneDrive websteder, skal du angive følgende KQL-forespørgsel:
         ````console
@@ -175,19 +175,19 @@ Sådan kører du en forespørgsel ved hjælp af PowerShell:
 
 1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en konto med [de relevante Exchange Online administratortilladelser](/powershell/exchange/find-exchange-cmdlet-permissions#use-powershell-to-find-the-permissions-required-to-run-a-cmdlet).
 
-2. Brug enten [Hent-modtager](/powershell/module/exchange/get-recipient) eller [Hent-postkasse](/powershell/module/exchange/get-mailbox) med parameteren *-Filter* og [din OPATH-forespørgsel](/powershell/exchange/filter-properties) til det tilpassede omfang, der er omsluttet af krøllede parenteser (`{`,`}`). Hvis dine attributværdier er strenge, skal du omslutte disse værdier i dobbelte eller enkelte anførselstegn.  
+2. Brug enten [Get-Recipient](/powershell/module/exchange/get-recipient), [Get-Mailbox](/powershell/module/exchange/get-mailbox) eller [Get-User](/powershell/module/exchange/get-user) med parameteren *-Filter* og din [OPATH-forespørgsel](/powershell/exchange/filter-properties) til det tilpassede område, der er omsluttet af krøllede parenteser (`{`,`}`). Hvis dine attributværdier er strenge, skal du omslutte disse værdier i dobbelte eller enkelte anførselstegn.
 
-    Du kan afgøre, om du vil bruge `Get-Mailbox` eller `Get-Recipient` til validering, ved at identificere, hvilken cmdlet der understøttes af den [OPATH-egenskab](/powershell/exchange/filter-properties) , du vælger til din forespørgsel.
+    Du kan bestemme, om du vil bruge Get-Mailbox, Get-Recipient eller Get-User til validering ved at identificere, hvilken cmdlet der understøttes af den [OPATH-egenskab](/powershell/exchange/filter-properties) , du vælger til din forespørgsel.
 
     > [!IMPORTANT]
-    > `Get-Mailbox` understøtter ikke *modtagertypen MailUser* , så `Get-Recipient` den skal bruges til at validere forespørgsler, der omfatter postkasser i det lokale miljø i et hybridmiljø.
+    > Get-Mailbox understøtter ikke *modtagertypen MailUser* , så Get-Recipient eller Get-User skal bruges til at validere forespørgsler, der omfatter postkasser i det lokale miljø i et hybridmiljø.
 
-    Hvis du vil validere et **brugerområde** , skal du bruge et af følgende:
-    - `Get-Mailbox` med `-RecipientTypeDetails UserMailbox` eller
-    - `Get-Recipient` Med `-RecipientTypeDetails UserMailbox,MailUser`
+    Hvis du vil validere et **brugerområde** , skal du bruge den relevante kommando:
+    - `Get-Mailbox` with *–RecipientTypeDetails UserMailbox,SharedMailbox,RoomMailbox,EquipmentMailbox*
+    - `Get-Recipient` with *–RecipientTypeDetails UserMailbox,MailUser,SharedMailbox,RoomMailbox,EquipmentMailbox*
     
     Hvis du vil validere et **Microsoft 365 gruppeområde**, skal du bruge:
-    - `Get-Mailbox` eller `Get-Recipient` med `-RecipientTypeDetails GroupMailbox`
+    - `Get-Mailbox` with *-GroupMailbox* eller `Get-Recipient` with *-RecipientTypeDetails GroupMailbox*
 
     Hvis du f.eks. vil validere et **brugerområde** , kan du bruge:
     
@@ -200,6 +200,11 @@ Sådan kører du en forespørgsel ved hjælp af PowerShell:
     ```PowerShell
     Get-Mailbox -RecipientTypeDetails GroupMailbox -Filter {CustomAttribute15 -eq "Marketing"} -ResultSize Unlimited
     ```
+    
+    > [!TIP]
+    > Når du bruger disse kommandoer til at validere et brugerområde, kan det skyldes, at det omfatter brugere, der ikke har en gyldig licens til tilpassede områder, hvis antallet af returnerede modtagere er højere end forventet. Disse brugere vil ikke have anvendt opbevaringsindstillingerne på dem.
+    > 
+    > I et hybridmiljø kan du f.eks. have synkroniserede brugerkonti uden licens uden en Exchange postkasse i det lokale miljø eller i Exchange Online. Du kan identificere disse brugere ved at køre følgende kommando: `Get-User -RecipientTypeDetails User`
 
 3. Kontrollér, at outputtet stemmer overens med de forventede brugere eller grupper for dit tilpassede omfang. Hvis den ikke gør det, skal du kontrollere din forespørgsel og værdierne hos den relevante administrator for at få Azure AD eller Exchange.
  
@@ -217,7 +222,7 @@ Når du vælger at bruge statiske områder, skal du derefter beslutte, om du vil
 
 #### <a name="a-policy-that-applies-to-entire-locations"></a>En politik, der gælder for hele placeringer
 
-Med undtagelse af Skype for Business er standarden, at alle forekomster af de valgte placeringer automatisk medtages i politikken, uden at du behøver at angive dem som inkluderet.
+Med undtagelse af Skype for Business er standarden, at alle forekomster for de valgte placeringer automatisk medtages i politikken, uden at du behøver at angive dem som inkluderet.
 
 F.eks. **Alle modtagere** for **Exchange mailplacering**. Med denne standardindstilling medtages alle eksisterende brugerpostkasser i politikken, og alle nye postkasser, der oprettes efter politikkens anvendelse, nedarver automatisk politikken.
 
@@ -242,9 +247,9 @@ Placeringer i politikker for opbevaring identificerer specifikke Microsoft 365 t
 
 Både **den Exchange mailplacering** og placeringen **af de Exchange offentlige mapper** kræver, at postkasser har mindst 10 MB data, før opbevaringsindstillingerne gælder for dem.
 
-Den **Exchange mailplacering** understøtter opbevaring af brugernes mail, kalender og andre postkasseelementer ved at anvende opbevaringsindstillinger på niveauet for en postkasse. Delte postkasser understøttes også.
+Den **Exchange mailplacering** understøtter opbevaring af brugernes mail, kalender og andre postkasseelementer ved at anvende opbevaringsindstillinger på niveauet for en postkasse. Delte postkasser og ressourcepostkasser til udstyr og lokaler understøttes også.
 
-Ressourcepostkasser, kontakter og Microsoft 365 gruppepostkasser understøttes ikke for Exchange mail. For Microsoft 365 gruppepostkasser skal du i stedet vælge placeringen **Microsoft 365-grupper**. Selvom den Exchange placering til at starte med tillader, at en gruppepostkasse vælges til et statisk område, får du vist en fejl om, at "RemoteGroupMailbox" ikke er et gyldigt valg for denne placering, når du forsøger at gemme opbevaringspolitikken.
+Mailkontakter og Microsoft 365 gruppepostkasser understøttes ikke for Exchange mail. For Microsoft 365 gruppepostkasser skal du i stedet vælge placeringen **Microsoft 365-grupper**. Selvom den Exchange placering til at starte med gør det muligt at vælge en gruppepostkasse til et statisk område, får du vist en fejl om, at "RemoteGroupMailbox" ikke er et gyldigt valg for denne placering, når du forsøger at gemme opbevaringspolitikken.
 
 Afhængigt af din politikkonfiguration kan [inaktive postkasser](inactive-mailboxes-in-office-365.md) være inkluderet eller ej:
 
@@ -306,7 +311,7 @@ Hvis du bruger statiske områder: Selvom **den Exchange mailplacering** for et s
 
 En opbevaringspolitik, der anvendes på en Microsoft 365 gruppe, omfatter som standard gruppepostkassen og SharePoint teams-webstedet. Filer, der er gemt på SharePoint teams-webstedet, er dækket med denne placering, men ikke Teams chats eller Teams kanalmeddelelser, der har deres egne placeringer for opbevaringspolitik.
 
-Hvis du vil ændre standarden, fordi opbevaringspolitikken skal gælde for enten de Microsoft 365 postkasser eller blot de forbundne SharePoint teamswebsteder, skal du bruge PowerShell-cmdlet'en [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) med parameteren *Applications* med en af følgende værdier:
+Hvis du vil ændre standarden, fordi opbevaringspolitikken skal gælde for enten de Microsoft 365 postkasser eller blot de forbundne SharePoint teamswebsteder, skal du bruge [PowerShell-cmdlet'en Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) og parameteren *Applications* med en af følgende værdier:
 
 - `Group:Exchange`kun for Microsoft 365 postkasser, der er forbundet til gruppen.
 - `Group:SharePoint`kun for SharePoint websteder, der har forbindelse til gruppen.
@@ -325,7 +330,7 @@ Når der anvendes en politik for opbevaring (statisk politikomfang eller adaptiv
 
 - Det gruppetilsluttede SharePoint websted bevares og administreres fortsat af opbevaringspolitikken med **den Microsoft 365-grupper** placering. Webstedet er stadig tilgængeligt for de personer, der havde adgang til det, før gruppen blev slettet, og eventuelle nye tilladelser skal nu administreres via SharePoint.
     
-    På nuværende tidspunkt kan du ikke udelade webstedet fra den Microsoft 365-grupper placering, fordi du ikke kan angive den slettede gruppe. Hvis du har brug for at frigive opbevaringspolitikken fra dette websted, skal du kontakte Microsoft Support. Du kan f.eks. åbne en [serviceanmodning i Microsoft 365 Administration Center](https://admin.microsoft.com/Adminportal/Home#/support).
+    På nuværende tidspunkt kan du ikke udelade webstedet fra den Microsoft 365-grupper placering, fordi du ikke kan angive den slettede gruppe. Hvis du har brug for at frigive opbevaringspolitikken fra dette websted, skal du kontakte Microsoft Support. Åbn f.eks. [en supportanmodning i Microsoft 365 Administration Center](/microsoft-365/admin/get-help-support#online-support).
 
 - Postkassen for den slettede gruppe bliver inaktiv, og ligesom SharePoint websted er den stadig underlagt opbevaringsindstillinger. Du kan få flere oplysninger under [Inaktive postkasser i Exchange Online](inactive-mailboxes-in-office-365.md).
 
@@ -384,7 +389,7 @@ Eksempler:
 
 - Exchange: Hvis du vil gemme elementer i en postkasse i syv år, og der blev sendt en meddelelse for seks år siden, bevares meddelelsen kun i ét år. For Exchange elementer er alderen baseret på den dato, der er modtaget for indgående mail, eller den dato, der er sendt for udgående mail. Bevarelse af elementer, der er baseret på, hvornår de senest blev ændret, gælder kun for webstedsindhold i OneDrive og SharePoint.
 
-I slutningen af opbevaringsperioden vælger du, om indholdet skal slettes permanent. For opbevaringspoliti:
+I slutningen af opbevaringsperioden vælger du, om indholdet skal slettes permanent. For opbevaringspolitikker:
 
 ![Siden Med indstillinger for opbevaring.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
 
@@ -400,7 +405,7 @@ Før du konfigurerer opbevaring, skal du først blive fortrolig med kapacitets- 
 
 Opbevaringsindstillinger kan bevare og derefter slette elementer eller slette gamle elementer uden at bevare dem.
 
-Hvis dine opbevaringsindstillinger sletter elementer i begge tilfælde, er det vigtigt at forstå, at den angivne tidsperiode ikke beregnes ud fra det tidspunkt, hvor politikken blev tildelt, men i henhold til starten af den angivne opbevaringsperiode. Det kan f.eks. være fra det tidspunkt, hvor elementet blev oprettet, ændret eller navngivet.
+Hvis dine opbevaringsindstillinger sletter elementer i begge tilfælde, er det vigtigt at forstå, at den angivne tidsperiode ikke beregnes fra det tidspunkt, hvor politikken blev tildelt, men i henhold til starten af den angivne opbevaringsperiode. Det kan f.eks. være fra det tidspunkt, hvor elementet blev oprettet, ændret eller navngivet.
 
 Derfor skal du først overveje alderen på det eksisterende indhold, og hvordan indstillingerne kan påvirke det pågældende indhold. Overvej at kommunikere dine valgte indstillinger til dine brugere og helpdesk, før indstillingerne anvendes på indhold, hvilket giver dem tid til at vurdere den mulige indvirkning.
 

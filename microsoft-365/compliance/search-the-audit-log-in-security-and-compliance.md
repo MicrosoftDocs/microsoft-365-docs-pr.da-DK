@@ -21,14 +21,14 @@ description: Brug Microsoft Purview-overholdelsesportalen til at søge i den sam
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: e6754601aca5dda74ee59ed2c6c52b3f8b1eb2a3
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: b3ad71878f6d0c766cbcf5ba435bc61396f45ed6
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128494"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231753"
 ---
-# <a name="search-the-audit-log-in-the-compliance-center"></a>Søg i overvågningsloggen i Overholdelsescenter
+# <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -93,7 +93,6 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
 
 - Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogge i Exchange Online for at søge i overvågningsloggen. Disse roller tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i Exchange Administration. Globale administratorer i Office 365 og Microsoft 365 tilføjes automatisk som medlemmer af rollegruppen Organisationsadministration i Exchange Online. Hvis du vil give en bruger mulighed for at søge i overvågningsloggen med minimumsniveauet for rettigheder, kan du oprette en brugerdefineret rollegruppe i Exchange Online, tilføje rollen View-Only Overvågningslogge eller Overvågningslogge og derefter tilføje brugeren som medlem af den nye rollegruppe. Du kan få flere oplysninger under [Administrer rollegrupper i Exchange Online](/Exchange/permissions-exo/role-groups).
 
-  > [!IMPORTANT]
   > Hvis du tildeler en bruger rollen View-Only overvågningslogge eller overvågningslogge på siden **Tilladelser på overholdelsesportalen** , kan vedkommende ikke søge i overvågningsloggen. Du skal tildele tilladelserne i Exchange Online. Det skyldes, at den underliggende cmdlet, der bruges til at søge i overvågningsloggen, er en Exchange Online-cmdlet.
 
 - Når en overvåget aktivitet udføres af en bruger eller administrator, oprettes der en overvågningspost, som gemmes i overvågningsloggen for din organisation. Den tid, en overvågningspost opbevares (og kan søges i i overvågningsloggen), afhænger af dit Office 365 eller Microsoft 365 Enterprise abonnement, og specifikt den licenstype, der er tildelt til bestemte brugere.
@@ -103,7 +102,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
     > [!NOTE]
     > Hvis din organisation har deltaget i det private prøveversionsprogram for opbevaring af overvågningsposter i ét år, nulstilles opbevaringsvarigheden for de overvågningsposter, der blev genereret før udrulningsdatoen for generel tilgængelighed.
 
-  - For brugere, der har fået tildelt andre (ikke-E5) Office 365 eller Microsoft 365 licens, bevares overvågningsposter i 90 dage. Du kan se en liste over Office 365 og Microsoft 365 abonnementer, der understøtter samlet overvågningslogføring, [i tjenestebeskrivelsen for Security and Compliance Center](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
+  - For brugere, der har fået tildelt andre (ikke-E5) Office 365 eller Microsoft 365 licens, bevares overvågningsposter i 90 dage. Du kan se en liste over Office 365 og Microsoft 365 abonnementer, der understøtter samlet overvågningslogføring, [i tjenestebeskrivelsen for portalen for sikkerhed og overholdelse af angivne standarder](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
 
     > [!NOTE]
     > Selvom overvågning af postkasser som standard er slået til, vil du måske bemærke, at overvågningshændelser for postkasser for nogle brugere ikke findes i søgninger i overvågningsloggen på overholdelsesportalen eller via API'en for Office 365 administrationsaktiviteter. Du kan få flere oplysninger under [Flere oplysninger om logføring af overvågning af postkasser](enable-mailbox-auditing.md#more-information).
@@ -244,7 +243,7 @@ Du kan eksportere resultaterne af en søgning i overvågningsloggen til en komma
 
 #### <a name="more-information-about-exporting-and-viewing-audit-log-search-results"></a>Flere oplysninger om eksport og visning af søgeresultater i overvågningsloggen
 
-- Når du downloader alle søgeresultater, indeholder CSV-filen kolonnerne **CreationDate**, **UserIds**, **Operations** og **AuditData**. Kolonnen **AuditData** indeholder yderligere oplysninger om hver enkelt hændelse (svarer til de detaljerede oplysninger, der vises på pop op-siden, når du får vist søgeresultaterne i Overholdelsescenter). Dataene i denne kolonne består af et JSON-objekt, der indeholder flere egenskaber fra overvågningslogposten. Hvert *property:value-par* i JSON-objektet er adskilt af et komma. Du kan bruge JSON-transformeringsværktøjet i Power Query-editor i Excel til at opdele kolonnen **AuditData** i flere kolonner, så hver egenskab i JSON-objektet har sin egen kolonne. Det giver dig mulighed for at sortere og filtrere på en eller flere af disse egenskaber. Du kan finde en trinvis vejledning i, hvordan du bruger Power Query-editor til at transformere JSON-objektet, under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
+- Når du downloader alle søgeresultater, indeholder CSV-filen kolonnerne **CreationDate**, **UserIds**, **Operations** og **AuditData**. Kolonnen **AuditData** indeholder yderligere oplysninger om hver enkelt hændelse (svarer til de detaljerede oplysninger, der vises på pop op-siden, når du får vist søgeresultaterne på overholdelsesportalen). Dataene i denne kolonne består af et JSON-objekt, der indeholder flere egenskaber fra overvågningslogposten. Hvert *property:value-par* i JSON-objektet er adskilt af et komma. Du kan bruge JSON-transformeringsværktøjet i Power Query-editor i Excel til at opdele kolonnen **AuditData** i flere kolonner, så hver egenskab i JSON-objektet har sin egen kolonne. Det giver dig mulighed for at sortere og filtrere på en eller flere af disse egenskaber. Du kan finde en trinvis vejledning i, hvordan du bruger Power Query-editor til at transformere JSON-objektet, under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
 
   Når du har opdelt kolonnen **AuditData** , kan du filtrere kolonnen **Handlinger** for at få vist de detaljerede egenskaber for en bestemt type aktivitet.
 
@@ -254,7 +253,7 @@ Du kan eksportere resultaterne af en søgning i overvågningsloggen til en komma
 
 ## <a name="audited-activities"></a>Overvågede aktiviteter
 
-Tabellerne i dette afsnit beskriver de aktiviteter, der overvåges i Microsoft 365. Du kan søge efter disse hændelser ved at søge i overvågningsloggen i Security and Compliance Center.
+Tabellerne i dette afsnit beskriver de aktiviteter, der overvåges i Microsoft 365. Du kan søge efter disse hændelser ved at søge i overvågningsloggen på portalen for sikkerhed og overholdelse af angivne standarder.
 
 Disse tabeller grupperer relaterede aktiviteter eller aktiviteter fra en bestemt tjeneste. Tabellerne indeholder det fulde navn, der vises på rullelisten **Aktiviteter** , og navnet på den tilsvarende handling, der vises i detaljerede oplysninger om en overvågningspost og i CSV-filen, når du eksporterer søgeresultaterne. Du kan finde beskrivelser af de detaljerede oplysninger [under Detaljerede egenskaber i overvågningsloggen](detailed-properties-in-the-office-365-audit-log.md).
 
@@ -401,6 +400,18 @@ Klik på et af følgende links for at gå til en bestemt tabel.
     :::column-end:::
     :::column:::
         [Exchange administratoraktiviteter](#exchange-admin-audit-log)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        [Krypterede aktiviteter på meddelelsesportalen](#encrypted-message-portal-activities)
+    :::column-end:::
+    :::column:::
+        
+    :::column-end:::
+    :::column:::
+        
     :::column-end:::
 :::row-end:::
 
@@ -769,7 +780,7 @@ I følgende tabel vises Azure AD mappe- og domænerelaterede aktiviteter, der lo
 
 ### <a name="ediscovery-activities"></a>eDiscovery-aktiviteter
 
-Indholdssøgning og eDiscovery-relaterede aktiviteter, der udføres i Security and Compliance Center eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Dette omfatter følgende aktiviteter:
+Indholdssøgning og eDiscovery-relaterede aktiviteter, der udføres på sikkerheds- og overholdelsesportalen eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Dette omfatter følgende aktiviteter:
 
 - Oprettelse og administration af eDiscovery-sager
 
@@ -1145,7 +1156,7 @@ Som tidligere forklaret bevares overvågningsposter for aktiviteter, der udføre
 
 Ja. API'en til administration af Office 365 bruges til at hente overvågningslogfilerne programmatisk.  For at komme i gang skal du se [Kom i gang med Office 365 Management API'er](/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Er der andre måder at hente overvågningslogge på end ved hjælp af Security and Compliance Center eller API'en til Office 365 Management Activity?**
+**Er der andre måder at hente overvågningslogge på end ved hjælp af portalen til sikkerhed og overholdelse eller API'en til Office 365-administrationsaktivitet?**
 
 Nej. Dette er de eneste to måder at hente data fra overvågningstjeneste på.
 

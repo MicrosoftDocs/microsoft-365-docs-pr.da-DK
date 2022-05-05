@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du opretter beskeder for aktiviteter i Microsoft Purview Compliance Manager, der kan påvirke din score for overholdelse af angivne standarder.
-ms.openlocfilehash: b1e5630e20ace4835f8651d1878e731e423f58b1
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 32ab22f47d35d64fa72dcc4898f5fff06d20c13c
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129150"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231731"
 ---
 # <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Besked- og beskedpolitikker i Microsoft Purview Compliance Manager
 
@@ -36,8 +36,7 @@ Manger kan advare dig om ændringer, så snart de sker, så du kan holde styr p�
 
 Hvis du vil oprette beskeder, skal du først konfigurere en beskedpolitik for at skitsere de betingelser, der udløser en besked, og hyppigheden af meddelelser. Når vi registrerer et match til dine politikbetingelser, modtager du en meddelelse via mail med oplysninger, så du kan afgøre, om du vil undersøge det eller foretage dig yderligere.
 
-
-Alle beskeder vises under fanen **Beskeder** i Overholdelsesstyring, og alle beskedpolitikker vises **under fanen Politikker for beskeder**.
+Alle beskeder vises under fanen **Beskeder** i Overholdelsesstyring, og alle beskedpolitikker vises **under fanen Politikker for beskeder**.  Alle organisationer har allerede konfigureret en [standardpolitik for ændring af score](#default-score-change-policy) for dem.
 
 ## <a name="understanding-the-alerts-and-alert-policies-pages"></a>Om siderne Beskeder og Beskedpolitikker
 
@@ -95,6 +94,28 @@ Du kan oprette politikker, der giver dig besked, når visse ændringer eller hæ
 - **Ændring af implementeringsstatus**: En bruger har ændret implementeringsstatus for en forbedringshandling.
 - **Ændring af teststatus**: En bruger har ændret teststatussen for en forbedringshandling.
 - **Ændring af bevismateriale**: En bruger har uploadet eller slettet et bevisdokument under fanen **Dokumenter** i forbedringshandlingen.
+
+#### <a name="default-score-change-policy"></a>Politik for ændring af standardresultat
+
+Overholdelsesstyring konfigurerer en standardbeskedpolitik, der skal overvåges for scoreændringer i forbedringshandlinger. Standardpolitikken genererer en besked, når en forbedringshandlings score ændres. De fleste indstillinger for standardpolitikken kan ikke redigeres, men du kan tilføje flere modtagere til meddelelser.
+
+Her er indstillingerne for standardpolitikken:
+
+- Alle match, der registreres inden for et tidsrum af 60 minutter, grupperes i én enkelt besked for at reducere overdrevne meddelelser. Hvis fem forbedringshandlinger f.eks. oplever en scoreændring inden for én time, genereres der én besked.
+
+- Alvorsgraden for disse beskeder er **mellem**.
+
+- Den globale administrator for din organisation er standardmodtageren af beskedmeddelelser.
+
+- Du kan tilføje flere modtagere af beskeder ved at følge disse trin:
+    - Find **standardbeskedpolitikken for Overholdelsesstyring** på siden **Politikker for beskeder**.
+    - Markér afkrydsningsfeltet til venstre for navnet, og vælg knappen **Rediger** øverst over filtrene.
+    - Vælg knappen **Næste** , indtil du kommer til siden **Beskedmodtagere** .
+    - Vælg **+Vælg modtagere** , og markér afkrydsningsfelterne ud for hvert brugernavn i pop op-ruden, som du vil modtage mailmeddelelsen til. Når du er færdig, skal du vælge **Tilføj modtager** og derefter vælge **Næste**.
+    - På siden **Gennemse og afslut** skal du vælge **Opdater** for at gemme dine ændringer.
+
+- Standardpolitikken kan ikke slettes, men du kan deaktivere den ved [at følge de trin, der er beskrevet nedenfor](#activate-or-inactivate-a-policy).
+
 
 ### <a name="policy-creation-steps"></a>Trin til oprettelse af politik
 
