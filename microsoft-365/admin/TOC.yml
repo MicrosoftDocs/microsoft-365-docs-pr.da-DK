@@ -353,7 +353,7 @@
         - name: Aktivér moderne godkendelse for Office 2013
           href: security-and-compliance/enable-modern-authentication.md
         - name: Forudsætninger for databeskyttelse
-          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection.md
+          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection
         - name: Øg trusselsbeskyttelsen
           href: security-and-compliance/increase-threat-protection.md
         - name: Trusler registreret af Microsoft Defender Antivirus
@@ -373,13 +373,13 @@
         - name: Microsoft Intune-dokumentation
           href: /mem/intune/
         - name: Få vist og rediger politikker og enheder
-          href: /microsoft-365/business-premium/view-policies-and-devices.md
+          href: /microsoft-365/business-premium/m365bp-view-policies-and-devices
         - name: Fjern virksomhedsdata
-          href: /microsoft-365/business-premium/m365bp-remove-company-data.md
+          href: /microsoft-365/business-premium/m365bp-remove-company-data
         - name: Nulstil enheder til fabriksindstillingerne
           href: devices/reset-devices-to-factory-settings.md
         - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
-          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings.md
+          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings
         - name: Enhedens tilstande
           href: devices/device-states.md
         - name: Indstillinger for appbeskyttelse til Windows 10-pc'er
@@ -391,7 +391,7 @@
         - name: Autopilot
           items:
             - name: Opret og rediger AutoPilot-profiler
-              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles.md
+              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles
             - name: Opret og rediger AutoPilot-enheder
               href: devices/create-and-edit-autopilot-devices.md
         - name: Microsoft 365 for enterprise-dokumentation

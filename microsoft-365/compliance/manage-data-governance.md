@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Implementer funktioner fra Microsoft Purview Data Lifecycle Management & Microsoft Purview Records Management for at styre dine data for overholdelse af angivne standarder eller lovmæssige krav.
-ms.openlocfilehash: d79396b9489bc21f899eaa6ab1ef89b175831095
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0b507fad6b4455755a3a0036bff15a7973b906ee
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973333"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217616"
 ---
 # <a name="govern-your-data-with-microsoft-purview"></a>Styr dine data med Microsoft Purview
 
@@ -29,6 +29,9 @@ ms.locfileid: "64973333"
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Brug funktionerne fra **Microsoft Purview Data Lifecycle Management** (tidligere Microsoft Information Governance) og **Microsoft Purview Records Management** til at styre dine data for overholdelse af angivne standarder eller lovmæssige krav.
+
+> [!TIP]
+> Ønsker du at kortlægge og administrere dine data på tværs af hele dit dataområde, herunder multi-cloud og SaaS (software-as-a-service)? Brug [Microsoft Purview-datakort, Microsoft Purview Data Catalog og Microsoft Purview Data Estate Insights](/azure/purview/overview).
 
 Fra et [licensperspektiv](#licensing-requirements) kan der være betydelig overlapning mellem administration af datalivscyklusser og datastyring. Begge løsninger understøtter opbevaring og sletning af data til Microsoft 365 apps og tjenester.
 

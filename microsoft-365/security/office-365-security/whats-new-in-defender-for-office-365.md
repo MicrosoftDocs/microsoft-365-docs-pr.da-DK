@@ -21,12 +21,12 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c5b1d501f0d33e5b837abcd81f7b228cdc74d943
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 557b81db3c211b294166af8e5f8aaa783fc563a6
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973019"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65215787"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Nyheder i Microsoft Defender for Office 365
 
@@ -50,7 +50,10 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 - [Nyheder i Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
 - [Nyheder i Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [Nyheder i Microsoft Cloud App Security](/cloud-app-security/release-notes)
+## <a name="april-2022"></a>April 2022
 
+- [Forbedringer af manuel mailafhjælpning](/microsoft-365/security/office-365-security/remediate-malicious-email-delivered-office-365): Manuel mailrensningshandlinger, der udføres i Microsoft Defender for Office 365, i det samlede løsningscenter i Microsoft 365 Defender (M365D) ved hjælp af en ny handlingsfokuseret undersøgelse.
+ 
 ## <a name="march-2022"></a>Marts 2022
 
 - [Strømlinede indsendelsesoplevelsen i Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/streamlining-the-submissions-experience-in-microsoft-defender/ba-p/3152080): Vi introducerer den nye samlede og strømlinede indsendelsesproces for at gøre din oplevelse enklere.

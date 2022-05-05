@@ -1,7 +1,7 @@
 ---
 title: Politikker for styring af insiderrisiko
-description: Få mere at vide om politikker for styring af insiderrisiko i Microsoft 365
-keywords: Microsoft 365, insiderrisikostyring, risikostyring, overholdelse af angivne standarder
+description: Få mere at vide om politikker for styring af insiderrisiko i Microsoft Purview
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,14 +13,16 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 7f77ca2f53e05291533395d3de5a860e9444732c
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 8277c962b149cb105dd8e08e983594610618bdd4
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824020"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217414"
 ---
 # <a name="insider-risk-management-policies"></a>Politikker for styring af insiderrisiko
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Politikker for styring af insiderrisiko bestemmer, hvilke brugere der er inden for området, og hvilke typer risikoindikatorer der er konfigureret til beskeder. Du kan hurtigt oprette en politik, der gælder for alle brugere i organisationen, eller du kan definere individuelle brugere eller grupper til administration i en politik. Politikker understøtter indholdsprioriteter for at fokusere politikbetingelser på flere eller specifikke Microsoft Teams, SharePoint websteder, datafølsomhedstyper og datamærkater. Ved hjælp af skabeloner kan du vælge specifikke risikoindikatorer og tilpasse hændelsestærskler for politikindikatorer, tilpasse risikoscores effektivt og niveauet og hyppigheden af beskeder. Derudover hjælper boostere af risikoscore og registreringer af uregelmæssigheder med at identificere brugeraktivitet, der er af højere vigtighed eller mere usædvanlig. Politikvinduer giver dig mulighed for at definere den tidsramme, hvor politikken skal anvendes på beskedaktiviteter, og bruges til at bestemme varigheden af politikken, når den er aktiveret.
 
@@ -58,7 +60,7 @@ Når brugere forlader din organisation, er der specifikke risikoindikatorer, der
 
 ### <a name="general-data-leaks"></a>Generelle datalækager
 
-Beskyttelse af data og forebyggelse af datalækager er en konstant udfordring for de fleste organisationer, især med den hurtige vækst i antallet af nye data, der oprettes af brugere, enheder og tjenester. Brugerne er bemyndiget til at oprette, gemme og dele oplysninger på tværs af tjenester og enheder, der gør administration af datalækager mere og mere kompleks og vanskelig. Datalækager kan omfatte utilsigtet overdeling af oplysninger uden for din organisation eller datatyveri med ondsindede hensigter. Med en tildelt DLP-politik (Forebyggelse af datatab), indbyggede eller tilpassede udløserhændelser starter denne skabelon scoring af registreringer i realtid af mistænkelige SharePoint Online-dataoverførsler, fil- og mappedeling, udskrivning af filer og kopiering af data til personlige cloudbeskeder og lagertjenester.
+Beskyttelse af data og forebyggelse af datalækager er en konstant udfordring for de fleste organisationer, især med den hurtige vækst i antallet af nye data, der oprettes af brugere, enheder og tjenester. Brugerne er bemyndiget til at oprette, gemme og dele oplysninger på tværs af tjenester og enheder, der gør administration af datalækager mere og mere kompleks og vanskelig. Datalækager kan omfatte utilsigtet overdeling af oplysninger uden for din organisation eller datatyveri med ondsindede hensigter. Med en tildelt DLP-politik (Microsoft Purview Data Loss Prevention), indbyggede eller tilpassede udløserhændelser starter denne skabelon scoring af registreringer i realtid af mistænkelige SharePoint Online-dataoverførsler, fil- og mappedeling, udskrivning af filer og kopiering af data til personlige cloudbeskeder og lagertjenester.
 
 Når du bruger en skabelon for *datalækager* , kan du tildele en DLP-politik til at udløse indikatorer i insiderrisikopolitikken for beskeder med høj alvorsgrad i din organisation. Når en besked med høj alvorsgrad genereres af en DLP-politikregel føjes til Office 365 overvågningslog, undersøger insiderrisikopolitikker, der oprettes med denne skabelon, automatisk DLP-beskeden med høj alvorsgrad. Hvis beskeden indeholder en bruger i området, der er defineret i insiderrisikopolitikken, behandles beskeden af insiderrisikopolitikken som en ny besked og tildeles en insiderrisiko alvorsgrad og risikoscore. Du kan også vælge at tildele valgte indikatorer som udløsende hændelser for en politik. Denne fleksibilitet og tilpasning hjælper med kun at tilpasse politikken til de aktiviteter, der er omfattet af indikatorerne. Denne politik giver dig mulighed for at evaluere denne besked i kontekst med andre aktiviteter, der er inkluderet i sagen.
 
@@ -84,7 +86,7 @@ Se artiklen [Opret, test og juster en DLP-politik](create-test-tune-dlp-policy.m
 
 ### <a name="data-leaks-by-priority-users-preview"></a>Datalækager fra prioriterede brugere (prøveversion)
 
-Beskyttelse af data og forebyggelse af datalækager for brugere i din organisation kan afhænge af deres placering, adgangsniveau til følsomme oplysninger eller risikohistorik. Datalækager kan omfatte utilsigtet overdeling af meget følsomme oplysninger uden for din organisation eller datatyveri med ondsindede hensigter. Med en tildelt DLP-politik (Forebyggelse af datatab) som en udløserhændelsesmulighed begynder denne skabelon at score registreringer i realtid af mistænkelig aktivitet og resultere i en øget sandsynlighed for insiderrisikobeskeder og beskeder med højere alvorsgradsniveauer. Prioritetsbrugere defineres i [prioriterede brugergrupper](insider-risk-management-settings.md#priority-user-groups-preview) , der er konfigureret i området indstillinger for styring af insiderrisiko.
+Beskyttelse af data og forebyggelse af datalækager for brugere i din organisation kan afhænge af deres placering, adgangsniveau til følsomme oplysninger eller risikohistorik. Datalækager kan omfatte utilsigtet overdeling af meget følsomme oplysninger uden for din organisation eller datatyveri med ondsindede hensigter. Med en tildelt DLP-politik (forebyggelse af datatab) som en udløserhændelsesmulighed begynder denne skabelon at score registreringer i realtid af mistænkelig aktivitet og resultere i en øget sandsynlighed for insiderrisikobeskeder og beskeder med højere alvorsgradsniveauer. Prioritetsbrugere defineres i [prioriterede brugergrupper](insider-risk-management-settings.md#priority-user-groups-preview) , der er konfigureret i området indstillinger for styring af insiderrisiko.
 
 Som med **skabelonen Generelle datalækager** kan du vælge en DLP-politik til at udløse indikatorer i insiderrisikopolitikken for beskeder med høj alvorsgrad i din organisation. Følg retningslinjerne for datalækagepolitik for DLP-politikker, når du opretter en politik med indstillingen DLP, når du bruger denne skabelon. Du kan også vælge at tildele valgte indikatorer som udløsende hændelser for en politik. Denne fleksibilitet og tilpasning hjælper med at tilpasse politikken til de aktiviteter, der er omfattet af indikatorerne. Derudover skal du tildele prioriterede brugergrupper, der er oprettet i **Insider-risikostyring** >  **Indstillinger** >  **Priority-brugergrupper** til politikken.
 
@@ -134,21 +136,21 @@ Afhængigt af den skabelon, du vælger til en politik for styring af insiderrisi
 
 I følgende tabel vises de udløsende hændelser og forudsætninger for politikker, der er oprettet ud fra hver politikskabelon for styring af insiderrisiko:
 
-|Politikskabelon|Udløsende hændelser for politikker|Forudsætninger|
-|---|---|---|
-|**Datatyveri foretaget af afrejsende brugere**|Indikator for fratræden eller slutdato fra HR-connector eller sletning af Azure Active Directory konto|(valgfrit) Microsoft 365 HR-connector, der er konfigureret til indikatorer for afslutning og fratrædelsesdato|
-|**Generelle datalækager**|Politikaktivitet for datalækage, der opretter en besked med *høj alvorsgrad* eller indbyggede eksfiltrationshændelsesudløsere|DLP-politik, der er konfigureret til beskeder *med høj alvorsgrad* <br><br> ELLER <br><br> Brugerdefinerede udløserindikatorer|
-|**Datalækager fra prioriterede brugere**|Politikaktivitet for datalækage, der opretter en besked med *høj alvorsgrad* eller indbyggede eksfiltrationshændelsesudløsere|DLP-politik, der er konfigureret til beskeder *med høj alvorsgrad* <br><br> ELLER <br><br> Brugerdefinerede udløserindikatorer <br><br> Prioriterede brugergrupper, der er konfigureret i indstillinger for insiderrisiko|
-|**Datalækager fra utilfredse brugere**|Indikatorer for forbedring af ydeevnen, dårlig ydeevne eller ændring af jobniveau fra HR-connector|Microsoft 365 HR-connector, der er konfigureret til disgruntlementindikatorer|
-|**Overtrædelser af den generelle sikkerhedspolitik**|Forsvarsunddragelse af sikkerhedskontroller eller uønsket software, der opdages af Microsoft Defender for Endpoint|Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft 365 Overholdelsescenter konfigureret|
-|**Generel misbrug af patientdata**|Forsvarsunddragelse af sikkerhedskontroller fra EMR-systemer <br><br> Matchende indikatorer for bruger- og patientadresse fra HR-systemer|Adgangsindikatorer for sundhedssektoren, der er valgt i politik eller indstillinger for insiderrisiko <br><br> Microsoft 365 HR-connector, der er konfigureret til adressematchning <br><br> Konfigureret Microsoft Healthcare- eller Epic-connector|
-|**Sikkerhedspolitikovertrædelser af afrejsende brugere**|Indikatorer for fratrædelses- eller slutdato fra HR-connector eller sletning af Azure Active Directory konto|(valgfrit) Microsoft 365 HR-connector, der er konfigureret til indikatorer for afslutning og fratrædelsesdato <br><br> Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft 365 Overholdelsescenter konfigureret|
-|**Sikkerhedspolitiske overtrædelser af prioriterede brugere**|Forsvarsunddragelse af sikkerhedskontroller eller uønsket software, der opdages af Microsoft Defender for Endpoint|Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft 365 Overholdelsescenter konfigureret <br><br> Prioriterede brugergrupper, der er konfigureret i indstillinger for insiderrisiko|
-|**Sikkerhedspolitikovertrædelser af utilfreds bruger**|Indikatorer for forbedring af ydeevnen, dårlig ydeevne eller ændring af jobniveau fra HR-connector|Microsoft 365 HR-connector, der er konfigureret til disgruntlementindikatorer <br><br> Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft 365 Overholdelsescenter konfigureret|
+| **Politikskabelon** | **Udløsende hændelser for politikker** | **Forudsætninger** |
+| :------------------ | :--------------------------------- | :---------------- |
+| **Datatyveri foretaget af afrejsende brugere** | Indikator for fratræden eller slutdato fra HR-connector eller sletning af Azure Active Directory konto | (valgfrit) Microsoft 365 HR-connector, der er konfigureret til indikatorer for afslutning og fratrædelsesdato |
+| **Generelle datalækager** | Politikaktivitet for datalækage, der opretter en besked med *høj alvorsgrad* eller indbyggede eksfiltrationshændelsesudløsere | DLP-politik, der er konfigureret til beskeder *med høj alvorsgrad* <br><br> ELLER <br><br> Brugerdefinerede udløserindikatorer |
+| **Datalækager fra prioriterede brugere** | Politikaktivitet for datalækage, der opretter en besked med *høj alvorsgrad* eller indbyggede eksfiltrationshændelsesudløsere | DLP-politik, der er konfigureret til beskeder *med høj alvorsgrad* <br><br> ELLER <br><br> Brugerdefinerede udløserindikatorer <br><br> Prioriterede brugergrupper, der er konfigureret i indstillinger for insiderrisiko |
+| **Datalækager fra utilfredse brugere** | Indikatorer for forbedring af ydeevnen, dårlig ydeevne eller ændring af jobniveau fra HR-connector | Microsoft 365 HR-connector, der er konfigureret til disgruntlementindikatorer |
+| **Overtrædelser af den generelle sikkerhedspolitik** | Forsvarsunddragelse af sikkerhedskontroller eller uønsket software, der opdages af Microsoft Defender for Endpoint | Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft Purview-overholdelsesportalen konfigureret |
+| **Generel misbrug af patientdata** | Forsvarsunddragelse af sikkerhedskontroller fra EMR-systemer <br><br> Matchende indikatorer for bruger- og patientadresse fra HR-systemer | Adgangsindikatorer for sundhedssektoren, der er valgt i politik eller indstillinger for insiderrisiko <br><br> Microsoft 365 HR-connector, der er konfigureret til adressematchning <br><br> Konfigureret Microsoft Healthcare- eller Epic-connector |
+| **Sikkerhedspolitikovertrædelser af afrejsende brugere** | Indikatorer for fratrædelses- eller slutdato fra HR-connector eller sletning af Azure Active Directory konto | (valgfrit) Microsoft 365 HR-connector, der er konfigureret til indikatorer for afslutning og fratrædelsesdato <br><br> Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft Purview-overholdelsesportalen konfigureret |
+| **Sikkerhedspolitiske overtrædelser af prioriterede brugere** | Forsvarsunddragelse af sikkerhedskontroller eller uønsket software, der opdages af Microsoft Defender for Endpoint | Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft Purview-overholdelsesportalen konfigureret <br><br> Prioriterede brugergrupper, der er konfigureret i indstillinger for insiderrisiko |
+| **Sikkerhedspolitikovertrædelser af utilfreds bruger** | Indikatorer for forbedring af ydeevnen, dårlig ydeevne eller ændring af jobniveau fra HR-connector | Microsoft 365 HR-connector, der er konfigureret til disgruntlementindikatorer <br><br> Abonnement på aktive Microsoft Defender for Endpoint <br><br> Microsoft Defender for Endpoint integration med Microsoft Purview-overholdelsesportalen konfigureret |
 
 ## <a name="prioritize-content-in-policies"></a>Prioriter indhold i politikker
 
-Politikker for styring af insiderrisiko understøtter angivelse af en højere prioritet for indhold, afhængigt af hvor det er gemt, eller hvordan det klassificeres. Hvis indhold angives som en prioritet, øges risikoscoren for alle tilknyttede aktiviteter, hvilket igen øger risikoen for at generere en besked med høj alvorsgrad. Nogle aktiviteter genererer dog slet ikke en besked, medmindre det relaterede indhold indeholder indbyggede eller brugerdefinerede følsomme infotyper eller er angivet som en prioritet i politikken.
+Politikker for styring af insiderrisiko understøtter angivelse af en højere prioritet for indhold, afhængigt af hvor det er gemt, typen af indhold, eller hvordan det klassificeres. Hvis indhold angives som en prioritet, øges risikoscoren for alle tilknyttede aktiviteter, hvilket igen øger risikoen for at generere en besked med høj alvorsgrad. Nogle aktiviteter genererer dog slet ikke en besked, medmindre det relaterede indhold indeholder indbyggede eller brugerdefinerede følsomme infotyper eller er angivet som en prioritet i politikken.
 
 Din organisation har f.eks. et dedikeret SharePoint websted til et meget fortroligt projekt. Datalækager til information på dette SharePoint websted kan kompromittere projektet og have en betydelig indvirkning på dets succes. Ved at prioritere dette SharePoint websted i en politik for datalækager øges risikoscores for kvalificerede aktiviteter automatisk. Denne prioritering øger sandsynligheden for, at disse aktiviteter genererer en insiderrisikobesked og øger alvorsgraden for beskeden.
 
@@ -157,6 +159,7 @@ Når du opretter en politik for styring af insiderrisiko i guiden Politik, kan d
 - **SharePoint websteder**: Alle aktiviteter, der er knyttet til alle filtyper i definerede SharePoint websteder, tildeles en højere risikoscore. Brugere, der konfigurerer politikken og vælger prioriterede Share Point-websteder, kan vælge SharePoint websteder, de har tilladelse til at få adgang til. Hvis den aktuelle bruger ikke kan vælge SharePoint websteder i politikken, kan en anden bruger med de nødvendige tilladelser vælge webstederne til politikken senere, eller den aktuelle bruger skal have adgang til de påkrævede websteder.
 - **Følsomme oplysningstyper**: Alle aktiviteter, der er knyttet til indhold, som indeholder [følsomme oplysningstyper](sensitive-information-type-entity-definitions.md) , tildeles en højere risikoscore.
 - **Følsomhedsmærkater**: Alle aktiviteter, der er knyttet til indhold, som har specifikke [følsomhedsmærkater](sensitivity-labels.md) , tildeles en højere risikoscore.
+- **Filtypenavne**: Alle aktiviteter, der er knyttet til indhold, som har bestemte filtypenavne. Brugere, der konfigurerer en politik for datatyveri/lækage, som vælger **Filtypenavne, der skal prioriteres** i politikguiden, kan definere op til 50 filtypenavne, der skal prioriteres i politikken. De angivne udvidelser kan indeholde eller udelade et '.' som det første tegn i den prioriterede udvidelse.
 
 ## <a name="sequence-detection-preview"></a>Sekvensregistrering (prøveversion)
 
@@ -185,7 +188,7 @@ Hvis du vil vide mere om administration af sekvensregistrering i **visningen Bru
 
 Insiderrisikoindikatorer hjælper med at identificere usædvanlige niveauer af risikoaktiviteter, når de evalueres dagligt for brugere, der er omfattet af politikker for insiderrisiko. Akkumuleret eksfiltrationsregistrering bruger modeller til maskinel indlæring til at hjælpe dig med at identificere, hvornår exfiltrationsaktiviteter, som en bruger udfører over en bestemt tid, overstiger den normale mængde, der er udført af brugere i din organisation i de seneste 30 dage over flere eksfiltrationsaktivitetstyper. Hvis en bruger f.eks. delte flere filer end de fleste brugere i løbet af den seneste måned, ville denne aktivitet blive registreret og klassificeret som en kumulativ eksfiltrationsaktivitet.
 
-Analytikere og efterforskere af styring af insiderrisiko kan bruge akkumuleret indsigt i eksfiltrationsregistrering til at identificere eksfiltrationsaktiviteter, der typisk ikke genererer beskeder, men er over det, der er typisk for deres organisation. Nogle eksempler kan være, at brugere, der forlader virksomheden langsomt, exfiltrerer data på tværs af en række dage, eller når brugerne gentagne gange deler data på tværs af flere kanaler mere end normalt for datadeling for din organisation.  Højere risikoscores tildeles akkumulerede eksfiltrationsaktiviteter for SharePoint websteder, følsomme oplysningstyper og indhold med [følsomhedsmærkater](/microsoft-365/compliance/sensitivity-labels#label-priority-order-matters), der er konfigureret som prioriteret indhold i en politik, eller for aktiviteter, der involverer mærkater, der er konfigureret som høj prioritet i Microsoft Information Protection.
+Analytikere og efterforskere af styring af insiderrisiko kan bruge akkumuleret indsigt i eksfiltrationsregistrering til at identificere eksfiltrationsaktiviteter, der typisk ikke genererer beskeder, men er over det, der er typisk for deres organisation. Nogle eksempler kan være, at brugere, der forlader virksomheden langsomt, exfiltrerer data på tværs af en række dage, eller når brugerne gentagne gange deler data på tværs af flere kanaler mere end normalt for datadeling for din organisation.  Der tildeles højere risikoscores til akkumulerede eksfiltrationsaktiviteter for SharePoint websteder, følsomme oplysningstyper og indhold med [følsomhedsmærkater](/microsoft-365/compliance/sensitivity-labels#label-priority-order-matters), der er konfigureret som prioriteret indhold i en politik, eller til aktiviteter, der involverer mærkater, der er konfigureret som høj prioritet i Microsoft Purview-Information Protection.
 
 Akkumuleret eksfiltrationsregistrering er som standard aktiveret, når følgende politikskabeloner bruges:
 
@@ -234,7 +237,7 @@ Brug følgende tabel til at få mere at vide om anbefalinger og advarsler og han
 |Der er ikke valgt nogen indikatorer for denne politik|Alle politikskabeloner|Der er ikke valgt indikatorer for politikken <br><br> Rediger politikken, og vælg de relevante politikindikatorer for politikken.|
 |Der er ikke medtaget nogen prioritetsbrugergrupper i denne politik|- Datalækager fra prioriterede brugere <br> - Prioriterede brugeres overtrædelser af sikkerhedspolitik|Prioritetsbrugergrupper tildeles ikke til politikken. <br><br> Konfigurer prioritetsbrugergrupper i Indstillinger for styring af insiderrisiko, og tildel prioritetsbrugergrupper til politikken.|
 |Der er ikke valgt nogen udløsende hændelse for denne politik|Alle politikskabeloner|Der er ikke konfigureret en udløserhændelse for politikken <br><br> Scorer for risici tildeles ikke til brugeraktiviteter, før du redigerer politikken og vælger en udløsende hændelse.|
-|HR-connectoren er ikke konfigureret eller fungerer som forventet|- Datatyveri ved afrejsende bruger <br> - Sikkerhedspolitikovertrædelser ved afrejsebruger <br> - Datalækager fra utilfredse brugere <br> – Sikkerhedspolitiske overtrædelser af utilfredse brugere|Der er et problem med HR-connectoren. <br><br> 1. Hvis du bruger en HR-connector, skal du kontrollere, at din HR-connector sender korrekte data <br><br> ELLER <br><br> 2. Vælg den slettede udløserhændelse for Azure AD-kontoen.|
+|HR-connectoren er ikke konfigureret eller fungerer som forventet|- Datatyveri ved afrejsende bruger <br> - Sikkerhedspolitikovertrædelser ved afrejsebruger <br> - Datalækager fra utilfredse brugere <br> – Sikkerhedspolitiske overtrædelser af utilfredse brugere|Der er et problem med HR-connectoren. <br><br> 1. Hvis du bruger en HR-connector, skal du kontrollere, at din HR-connector sender korrekte data <br><br> ELLER <br><br> 2. Vælg den slettede udløserhændelse for Azure AD konto.|
 |Der er ikke onboardet nogen enheder|- Datatyveri ved afrejsende brugere <br> – Generelle datalækager <br> - Datalækager fra utilfredse brugere <br> - Datalækager fra prioriterede brugere|Enhedsindikatorer er valgt, men der er ikke nogen enheder, der er onboardet i Microsoft 365 <br><br> Kontrollér, om enheder er onboardet og opfylder kravene.|
 |HR-connectoren har ikke uploadet data for nylig|- Datatyveri ved afrejsende bruger <br> - Sikkerhedspolitikovertrædelser ved afrejsebruger <br> - Datalækager fra utilfredse brugere <br> – Sikkerhedspolitiske overtrædelser af utilfredse brugere|HR-connectoren har ikke importeret data i mere end syv dage. <br><br> Kontrollér, at HR-connectoren er konfigureret korrekt og sender data.|
 |Vi kan ikke kontrollere status for hr-connectoren lige nu. Kontrollér igen senere|- Datatyveri ved afrejsende bruger <br> - Sikkerhedspolitikovertrædelser ved afrejsebruger <br> - Datalækager fra utilfredse brugere <br> – Sikkerhedspolitiske overtrædelser af utilfredse brugere|Løsningen til styring af insiderrisiko kan ikke kontrollere status for hr-connectoren. <br><br> Kontrollér, at hr-connectoren er konfigureret korrekt og sender data, eller vend tilbage og kontrollér politikstatussen.|
@@ -268,11 +271,11 @@ Brug følgende tabel til at bestemme det maksimale antal brugere i området, der
 
 ## <a name="create-a-new-policy"></a>Opret en ny politik
 
-Hvis du vil oprette en ny politik for styring af insiderrisiko, skal du bruge guiden Politik i **Insider Risk Management-løsningen** i Microsoft 365 Overholdelsescenter.
+Hvis du vil oprette en ny politik for styring af insiderrisiko, skal du bruge politikguiden i **Insider Risk Management-løsningen** på Microsoft Purview-overholdelsesportalen.
 
 Udfør følgende trin for at oprette en ny politik:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker** .
 2. Vælg **Opret politik** for at åbne politikguiden.
 3. Vælg en politikkategori på siden **Politikskabelon** , og vælg derefter skabelonen til den nye politik. Disse skabeloner består af betingelser og indikatorer, der definerer de risikoaktiviteter, du vil registrere og undersøge. Gennemse skabelonforudsætningerne, udløsende hændelser og registrerede aktiviteter for at bekræfte, at denne politikskabelon passer til dine behov.
 
@@ -294,11 +297,12 @@ Udfør følgende trin for at oprette en ny politik:
 
 10. Vælg **Næste** for at fortsætte.
 
-11. Hvis du har valgt **Jeg vil angive SharePoint websteder, følsomhedsmærkater og/eller følsomme oplysningstyper som prioriteret indhold** i det forrige trin, får du vist detaljesiderne for *SharePoint websteder*, *typer af følsomme oplysninger* og *følsomhedsmærkater*. Brug disse detaljesider til at definere de SharePoint, følsomme infotyper og følsomhedsmærkater, der skal prioriteres i politikken.
+11. Hvis du har valgt **Jeg vil angive, SharePoint websteder, følsomhedsmærkater, følsomme oplysningstyper og/eller filtypenavne som prioriteret indhold** i det forrige trin, får du vist detaljesiderne for *SharePoint websteder*, *følsomme oplysningstyper*, *følsomhedsmærkater* og *filtypenavne*. Brug disse detaljesider til at definere de SharePoint, følsomme infotyper og følsomhedsmærkater, der skal prioriteres i politikken.
 
     - **SharePoint websteder**: Vælg **Tilføj SharePoint websted**, og vælg de SharePoint websteder, du har adgang til, og som du vil prioritere. For eksempel *"group1@contoso.sharepoint.com/sites/group1"*.
     - **Type af følsomme oplysninger**: Vælg **Tilføj type følsomme oplysninger** , og vælg de følsomhedstyper, du vil prioritere. Det kan f.eks *. være "Bankkontonummer for USA"* og *"Kreditkortnummer"*.
     - **Følsomhedsmærkater**: Vælg **Tilføj følsomhedsmærkat** , og vælg de mærkater, du vil prioritere. Det kan f.eks. være *"Fortroligt"* og *"Hemmelig"*.
+    - **Filtypenavne**: Tilføj op til 50 filtypenavne. Du kan medtage eller udelade '.' med filtypenavnet. *.py* eller *py* vil f.eks. prioritere Python-filer.
 
     >[!NOTE]
     >Brugere, der konfigurerer politikken og vælger prioriterede Share Point-websteder, kan vælge SharePoint websteder, de har tilladelse til at få adgang til. Hvis den aktuelle bruger ikke kan vælge SharePoint websteder i politikken, kan en anden bruger med de nødvendige tilladelser vælge webstederne til politikken senere, eller den aktuelle bruger skal have adgang til de påkrævede websteder.
@@ -330,11 +334,11 @@ Udfør følgende trin for at oprette en ny politik:
 
 ## <a name="update-a-policy"></a>Opdater en politik
 
-Hvis du vil opdatere en eksisterende politik for styring af insiderrisiko, skal du bruge guiden Politik i **Insider Risk Management-løsningen** i Microsoft 365 Overholdelsescenter.
+Hvis du vil opdatere en eksisterende politik for styring af insiderrisiko, skal du bruge politikguiden i **Insider Risk Management-løsningen** på Microsoft Purview-overholdelsesportalen.
 
 Fuldfør følgende trin for at administrere en eksisterende politik:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker** .
 2. Vælg den politik, du vil administrere, på politikdashboardet.
 3. På siden med politikoplysninger skal du vælge **Rediger politik**
 4. I politikguiden kan du ikke redigere følgende:
@@ -346,16 +350,17 @@ Fuldfør følgende trin for at administrere en eksisterende politik:
 8. Vælg **Næste** for at fortsætte.
 9. På siden Indhold, der **skal prioriteres** kan du tildele (hvis det er nødvendigt) de kilder, der skal prioriteres, hvilket øger chancen for at generere en besked med høj alvorsgrad for disse kilder. Vælg et af følgende muligheder:
 
-    - **Jeg vil angive SharePoint websteder, følsomhedsmærkater og/eller følsomme oplysningstyper som prioriteret indhold**. Hvis du vælger denne indstilling, kan detaljesider i guiden konfigurere disse kanaler.
+    - **Jeg vil angive, SharePoint websteder, følsomhedsmærkater, typer af følsomme oplysninger og/eller filtypenavne som prioriteret indhold**. Hvis du vælger denne indstilling, kan detaljesider i guiden konfigurere disse kanaler.
     - **Jeg vil ikke angive prioritetsindhold lige nu (det kan du gøre, når politikken er oprettet).** Hvis du vælger denne indstilling, springes kanaldetaljesiderne i guiden over.
 
 10. Vælg **Næste** for at fortsætte.
 
-11. Hvis du har valgt **Jeg vil angive SharePoint websteder, følsomhedsmærkater og/eller følsomme oplysningstyper som prioriteret indhold** i det forrige trin, får du vist detaljesiderne for *SharePoint websteder*, *typer af følsomme oplysninger* og *følsomhedsmærkater*. Brug disse detaljesider til at definere de SharePoint, følsomme infotyper og følsomhedsmærkater, der skal prioriteres i politikken.
+11. Hvis du har valgt **Jeg vil angive SharePoint websteder, følsomhedsmærkater og/eller følsomme oplysningstyper som prioriteret indhold** i det forrige trin, får du vist detaljerede sider for *SharePoint websteder*, *følsomme infotyper* og *følsomhedsmærkater*. Brug disse detaljesider til at definere de SharePoint, følsomme infotyper og følsomhedsmærkater, der skal prioriteres i politikken.
 
     - **SharePoint websteder**: Vælg **Tilføj SharePoint websted**, og vælg de SharePoint websteder, du har adgang til, og som du vil prioritere. For eksempel *"group1@contoso.sharepoint.com/sites/group1"*.
     - **Type af følsomme oplysninger**: Vælg **Tilføj type følsomme oplysninger** , og vælg de følsomhedstyper, du vil prioritere. Det kan f.eks *. være "Bankkontonummer for USA"* og *"Kreditkortnummer"*.
     - **Følsomhedsmærkater**: Vælg **Tilføj følsomhedsmærkat** , og vælg de mærkater, du vil prioritere. Det kan f.eks. være *"Fortroligt"* og *"Hemmelig"*.
+    - **Filtypenavne**: Tilføj op til 50 filtypenavne. Du kan medtage eller udelade '.' med filtypenavnet. *.py* eller *py* vil f.eks. prioritere Python-filer.
 
     >[!NOTE]
     >Brugere, der konfigurerer politikken og vælger prioriterede Share Point-websteder, kan vælge SharePoint websteder, de har tilladelse til at få adgang til. Hvis den aktuelle bruger ikke kan vælge SharePoint websteder i politikken, kan en anden bruger med de nødvendige tilladelser vælge webstederne til politikken senere, eller den aktuelle bruger skal have adgang til de påkrævede websteder.
@@ -391,7 +396,7 @@ Du skal muligvis oprette en ny politik, der svarer til en eksisterende politik, 
 
 Fuldfør følgende trin for at kopiere en eksisterende politik:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker** .
 2. Vælg den politik, du vil kopiere, på politikdashboardet.
 3. Vælg Kopiér på siden med politikoplysninger.
 4. I politikguiden skal du navngive den nye politik og opdatere politikkonfigurationen efter behov.
@@ -411,7 +416,7 @@ Nogle scenarier, hvor det kan være en god ide at starte med at score brugerakti
 
 Hvis du vil starte scoringsaktiviteten manuelt for brugere i en eller flere politikker for styring af insiderrisiko, skal du fuldføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker** .
 2. Vælg den eller de politikker, du vil føje brugere til, på politikdashboardet.
 3. Vælg **Start resultataktivitet for brugere**.
 4. I **feltet Årsag** i ruden **Føj brugere til flere politikker** skal du tilføje en årsag til at tilføje brugerne.
@@ -438,7 +443,7 @@ Hvis du vil stoppe scoringsbrugerne i en politik, skal du se artiklen [Brugere a
 
 Hvis du vil slette en eksisterende politik for styring af insiderrisiko, skal du udføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker**.
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Politikker** .
 2. Vælg den politik, du vil slette, på politikdashboardet.
 3. Vælg **Slet** på dashboardværktøjslinjen.
 4. Vælg **Ja** i dialogboksen **Slet** for at slette politikken, eller vælg **Annuller** for at lukke dialogboksen.

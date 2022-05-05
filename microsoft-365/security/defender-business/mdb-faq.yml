@@ -16,12 +16,12 @@ metadata:
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 8f544cfb15c03e78219fcb31bdae1e09cb7c628f
-  ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+  ms.openlocfilehash: 6819cfe99b118298ec1d319d42dc2246d8194943
+  ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/04/2022
-  ms.locfileid: "65188366"
+  ms.lasthandoff: 05/05/2022
+  ms.locfileid: "65217580"
 title: Microsoft Defender til virksomheder – Ofte stillede spørgsmål og svar
 summary: >
   Brug denne artikel til at få svar på spørgsmål, du kan have om Defender for Business.
@@ -63,8 +63,7 @@ sections:
   - question: Hvilke forskelle er der mellem Defender for Business og Defender for Endpoint Plans 1 og 2?
     answer: "Både Defender for Business og Defender for Endpoint leverer stærke trusselsbeskyttelsesfunktioner til din virksomheds slutpunkter. Defender for Business er udviklet til små og mellemstore virksomheder (op til 300 ansatte). Med en [forenklet konfigurationsproces](mdb-simplified-configuration.md) og [onboardingmuligheder for enheder](mdb-onboard-devices.md) giver Defender for Business kunder, der ikke nødvendigvis har en sikkerhedsbaggrund, mulighed for at konfigurere og bruge Defender for Business til at beskytte virksomhedens enheder.  \n\nHvis du vil vide mere om forskellene, skal du se [Sammenlign Microsoft Defender til virksomheder med Microsoft 365 Business Premium](compare-mdb-m365-plans.md).\n"
   - question: Hvad sker der, hvis jeg har en blanding af abonnementer? Lad os f.eks. antage, at jeg har 10 brugere tildelt en Defender for Business-licens, og 10 andre brugere har tildelt en Defender for Endpoint Plan 2-licens i den samme lejer?
-    answer: >
-      Blandede licenser understøttes ikke. Den højeste funktionelle licens angiver oplevelsen for lejeren. I vores eksempel er lejeroplevelsen [Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) og kræver 20 Licenser til Defender for Endpoint Plan 2. Bemærk, at [Defender for Business](mdb-overview.md) og [Microsoft 365 Business Premium](/microsoft-365/business-premium/) er beregnet til kunder med op til 300 brugere. For kunder, der har brug for mere end 300 pladser, anbefaler vi, at du får Microsoft 365 E3 eller E5 eller Microsoft Defender for Endpoint Plan 1 eller Plan 2.
+    answer: "Blandede licenser understøttes ikke. Den højeste funktionelle Defender-licens angiver oplevelsen for lejeren. \n\nI vores eksempel er lejeroplevelsen [Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) for alle 20 brugere. \n\nBemærk, at [Defender for Business](mdb-overview.md) og [Microsoft 365 Business Premium](/microsoft-365/business-premium/) er beregnet til kunder med op til 300 brugere. For kunder, der har brug for mere end 300 brugerlicenser, anbefaler vi, at du får et virksomhedsabonnement, der omfatter Microsoft Defender for Endpoint Plan 1 eller Plan 2.\n\nDu kan finde oplysninger om licenser under [Licenser og produktvilkår for Microsoft 365 abonnementer](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).\n"
   - question: Jeg har et andet Microsoft Cloud-abonnement. Hvorfor kan jeg ikke se Microsoft Defender til virksomheder på min portal?
     answer: "Når en kunde har flere abonnementer, har det højeste abonnement i øjeblikket forrang. Her er nogle eksempler:\n\n- Eksempel 1: Hvis du har [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2) (købt eller prøveabonnement), og du får Microsoft Defender til virksomheder, har Defender for Endpoint Plan 2 forrang. I dette tilfælde kan du ikke se Defender for Business-oplevelsen.\n- Eksempel 2: Hvis du har [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (købt eller et prøveabonnement), og du får Defender for Business, har Defender for Cloud forrang. I dette tilfælde kan du ikke se Defender for Business-oplevelsen.\n\n\n\n \n \n"
 additionalContent: >-

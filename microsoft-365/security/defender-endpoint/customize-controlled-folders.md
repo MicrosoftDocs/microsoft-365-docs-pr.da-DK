@@ -15,12 +15,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 5b941cf40a220f2d9298a4918d334349f784dd13
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: ba9102f96ea08bf33f72a260779b4b37d6a6f0f4
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789882"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217370"
 ---
 # <a name="customize-controlled-folder-access"></a>Tilpas styret mappeadgang
 
@@ -160,7 +160,7 @@ Et tilladt program eller en tilladt tjeneste har kun skriveadgang til en kontrol
 
 ### <a name="use-mdm-csps-to-allow-specific-apps"></a>Brug MDM CSP'er til at tillade bestemte apps
 
-Brug [./Vendor/MSFT/Policy/Config/Defender/GuardedFoldersAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) CSP (Configuration Service Provider) til at tillade apps at foretage ændringer af beskyttede mapper.
+Brug [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) CSP (Configuration Service Provider) til at tillade apps at foretage ændringer af beskyttede mapper.
 
 ## <a name="allow-signed-executable-files-to-access-protected-folders"></a>Tillad, at signerede eksekverbare filer får adgang til beskyttede mapper
 

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 5e474505eecca0c42aa919b42364a1ad54c27e17
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9bca10cf946a7e812064f07cc3be6fa658edf39
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094733"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217392"
 ---
 # <a name="learn-the-advanced-hunting-query-language"></a>Få mere at vide om det avancerede forespørgselssprog for jagt
 
@@ -175,14 +175,14 @@ Du kan bruge forespørgselseditoren til at eksperimentere med flere forespørgsl
 
 Hvis du vil have et mere effektivt arbejdsområde, kan du også bruge flere faner på den samme jagtside. Vælg **Ny forespørgsel** for at åbne en fane til den nye forespørgsel.
 
-:::image type="content" source="../../media/multitab.png" alt-text="Et eksempel på udførelse af flere forespørgsler på siden **Ny forespørgsel** på Microsoft 365 Defender-portalen" lightbox="../../media/multitab.png":::
+:::image type="content" source="../../media/multitab.png" alt-text="Åbning af en ny fane ved at vælge Opret ny i avanceret jagt på Microsoft 365 Defender portalen" lightbox="../../media/multitab.png":::
 
 Du kan derefter køre forskellige forespørgsler uden at åbne en ny browserfane. 
 
-:::image type="content" source="../../media/multitab-examples.png" alt-text="Et eksempel på udførelse af flere forespørgsler på siden **Ny forespørgsel** på Microsoft 365 Defender-portalen" lightbox="../../media/multitab-examples.png":::
+:::image type="content" source="../../media/multitab-examples.png" alt-text="Kør forskellige forespørgsler uden at forlade den avancerede jagtside på Microsoft 365 Defender-portalen" lightbox="../../media/multitab-examples.png":::
 
 >[!NOTE] 
-> Du risikerer at miste ikke-gemte forespørgsler, hvis du åbner en ny browserfane for en ny forespørgsel.
+> Hvis du bruger flere browserfaner med avanceret jagt, kan det medføre, at du mister dine forespørgsler, der ikke er gemt. Hvis du vil forhindre dette, skal du bruge fanefunktionen i avanceret jagt i stedet for separate browserfaner.
 
 ## <a name="use-sample-queries"></a>Brug eksempelforespørgsler
 
