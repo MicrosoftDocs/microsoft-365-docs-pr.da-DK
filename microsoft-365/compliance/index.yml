@@ -14,25 +14,25 @@ metadata:
   ms.author: robmazz
   ms.date: 04/22/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 5581cb78600a36fd1b942bb8a86b2ed38f6a7db9
-  ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+  ms.openlocfilehash: b848abdb739d09595e9be91b8217acf09b01dbd2
+  ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
   ms.translationtype: HT
   ms.contentlocale: da-DK
   ms.lasthandoff: 05/06/2022
-  ms.locfileid: "65242980"
+  ms.locfileid: "65249591"
 landingContent:
 - title: Beskyt følsomme data på tværs af clouds, apps og enheder
   linkLists:
   - linkListType: overview
     links:
     - text: Kend dine data
-      url: /microsoft-365/compliance/sensitivity-labels
+      url: /microsoft-365/compliance/information-protection#know-your-data
     - text: Beskyt dine data
-      url: /microsoft-365/compliance/information-protection-solution
+      url: /microsoft-365/compliance/information-protection#protect-your-data
     - text: Undgå datatab
-      url: /microsoft-365/compliance/dlp-learn-about-dlp
+      url: /microsoft-365/compliance/information-protection#prevent-data-loss
     - text: Administrer din datalivscyklus
-      url: /microsoft-365/compliance/data-lifecycle-management
+      url: /microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management
     - text: Kryptér dine data, og styr dine krypteringsnøgler
       url: /microsoft-365/compliance/encryption
     - text: Importér og arkivér ikke-Microsoft-data
@@ -48,7 +48,7 @@ landingContent:
     - text: Begræns kommunikation og samarbejde mellem brugere
       url: /microsoft-365/compliance/information-barriers
     - text: Administrer forretningskrav, juridiske krav eller lovmæssige krav til registrering.
-      url: /microsoft-365/compliance/records-management
+      url: /microsoft-365/compliance/manage-data-governance#microsoft-purview-records-management
     - text: Logfør og søgning efter overvågede aktiviteter i SharePoint og OneDrive
       url: /microsoft-365/compliance/auditing-solutions-overview
     - text: Identificer og administrer data for juridiske sager

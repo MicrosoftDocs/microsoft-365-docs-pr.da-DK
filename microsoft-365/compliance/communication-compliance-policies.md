@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 9be1c581edb1b9564349ae8c3a659d226d6ef312
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 8418683577ffe3bf63fe7fe3bf4aff2ef55007f5
+ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173784"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65249625"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
 
@@ -166,11 +166,15 @@ Konfigurer brugerordbøger med nøgleord (eller leksikoner) for at give enkel ad
 
 Indbyggede og globale klassificeringer scanner sendte eller modtagne meddelelser på tværs af alle kommunikationskanaler i din organisation for forskellige typer problemer med overholdelse af angivne standarder. Klassificeringer bruger en kombination af kunstig intelligens og nøgleord til at identificere sprog i meddelelser, der kan være i strid med politikker til bekæmpelse af chikane. Indbyggede klassificeringer understøtter i øjeblikket identifikation af nøgleord på flere sprog:
 
+- Arabisk
 - Kinesisk (forenklet)
+- Kinesisk (traditionelt)
+- Dutch
 - English
 - French
 - German
 - Italian
+- Korean
 - Japanese
 - Portugisisk
 - Spanish
