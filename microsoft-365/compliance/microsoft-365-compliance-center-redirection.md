@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 description: Få mere at vide om automatisk omdirigering af brugere fra brugere af Office 365 Security and Compliance Center til Microsoft Purview-overholdelsesportalen.
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: b65f2521afd3802274a9c6e605ced16a66c0a76d
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: b88c5f5915944c813f5c803e3526f1bf42040159
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972986"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243002"
 ---
 # <a name="redirection-of-users-from-the-office-365-security-and-compliance-center-to-the-microsoft-purview-compliance-portal"></a>Omdirigering af brugere fra Office 365 Security and Compliance Center til Microsoft Purview-overholdelsesportalen
 
@@ -32,16 +32,16 @@ Automatisk omdirigering er som standard aktiveret for alle brugere, der tilgår 
 - [eDiscovery (Premium)](overview-ediscovery-20.md)
 - [Kommunikationsoverholdelse](communication-compliance.md)
 - [Indholdssøgning](search-for-content.md)
-- [eDiscovery (standard)](get-started-core-ediscovery.md)
+- [eDiscovery (Standard)](get-started-core-ediscovery.md)
 - [Klassificering af data](data-classification-overview.md)
-- [Microsoft Purview DLP (Forebyggelse af datatab)](dlp-learn-about-dlp.md)
+- [Forebyggelse af datatab (DLP)](dlp-learn-about-dlp.md)
 - [Anmodninger fra den registrerede](/compliance/regulatory/gdpr-manage-gdpr-data-subject-requests-with-the-dsr-case-tool)
-- [Informationsstyring](manage-data-governance.md)
+- [Administration af datalivscyklus](manage-data-governance.md) (tidligere **Styring af oplysninger**)
 - [Datastyring](records-management.md)
 
 Brugerne dirigeres automatisk til de samme løsninger til overholdelse af angivne standarder på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a>.
 
-Denne funktion og tilknyttede kontrolelementer aktiverer ikke automatisk omdirigering af sikkerhedsfunktioner for Microsoft Defender for Office 365. Hvis du vil aktivere omdirigering for sikkerhedsfunktioner, skal du se [Omdirigering af konti fra Microsoft Defender for Office 365 til Microsoft 365 Defender-portalen for at](/microsoft-365/security/defender/microsoft-365-security-mdo-redirection) få flere oplysninger.
+Denne funktion og tilknyttede kontrolelementer aktiverer ikke automatisk omdirigering af sikkerhedsfunktioner for Microsoft Defender for Office 365. Du kan få flere oplysninger [under Microsoft Defender for Office 365 i Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdo).
 
 ## <a name="related-information"></a>Relaterede oplysninger
 

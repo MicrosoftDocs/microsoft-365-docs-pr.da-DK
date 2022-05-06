@@ -1,8 +1,8 @@
 ---
-title: Avanceret jagt med grundlæggende powershell-API
+title: Grundlæggende oplysninger om avanceret jagt med PowerShell API
 ms.reviewer: ''
-description: Lær det grundlæggende om forespørgsler i Microsoft Defender for Endpoint API ved hjælp af PowerShell.
-keywords: API'er, understøttede api'er, avanceret jagt, forespørgsel
+description: Få grundlæggende oplysninger om, hvordan du forespørger Microsoft Defender for Endpoint-API'en ved hjælp af PowerShell.
+keywords: apis, understøttede API'er, avanceret jagt, forespørgsel
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 5de8778f1da44f8a9453616dc1e3b6f2af948397
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: fc0cae0ff8c45f4c32213130773e3c118d779ed6
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63591780"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243134"
 ---
 # <a name="advanced-hunting-using-powershell"></a>Avanceret jagt ved hjælp af PowerShell
 
@@ -30,30 +30,30 @@ ms.locfileid: "63591780"
 **Gælder for:** 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Kør avancerede forespørgsler ved hjælp af PowerShell, se [Avanceret api på jagt](run-advanced-query-api.md).
+Kør avancerede forespørgsler ved hjælp af PowerShell under [API til avanceret jagt](run-advanced-query-api.md).
 
 I dette afsnit deler vi PowerShell-eksempler for at hente et token og bruge det til at køre en forespørgsel.
 
 ## <a name="before-you-begin"></a>Før du begynder
 Du skal først [oprette en app](apis-intro.md).
 
-## <a name="preparation-instructions"></a>Vejledning til forberedelse
+## <a name="preparation-instructions"></a>Forberedelsesinstruktioner
 
 - Åbn et PowerShell-vindue.
 
-- Hvis din politik ikke tillader, at du kører PowerShell-kommandoerne, kan du køre følgende kommando:
+- Hvis politikken ikke tillader, at du kører PowerShell-kommandoerne, kan du køre følgende kommando:
 
   ```powershell
   Set-ExecutionPolicy -ExecutionPolicy Bypass
   ```
 
-Du kan finde flere oplysninger i [dokumentationen til PowerShell](/powershell/module/microsoft.powershell.security/set-executionpolicy)
+Du kan få flere oplysninger i [PowerShell-dokumentationen](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 ## <a name="get-token"></a>Hent token
 
@@ -76,17 +76,17 @@ $response = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $body -ErrorActi
 $aadToken = $response.access_token
 ```
 
-hvor
-- $tenantId: Id for lejeren på vegne af hvilken du vil køre forespørgslen (det vil sige, at forespørgslen køres på dataene for denne lejer)
-- $appId: Id for din Azure AD-app (appen skal have tilladelsen "Kør avancerede forespørgsler" til Defender til slutpunkt)
-- $appSecret: Hemmelig for din Azure AD-app
+Hvor
+- $tenantId: Id'et for den lejer, som du vil køre forespørgslen på (dvs. forespørgslen køres på dataene i denne lejer)
+- $appId: Id'et for din Azure AD app (appen skal have tilladelsen 'Kør avancerede forespørgsler' til Defender for Endpoint)
+- $appSecret: Hemmeligheden bag din Azure AD app
 
 ## <a name="run-query"></a>Kør forespørgsel
 
 Kør følgende forespørgsel:
 
 ```powershell
-$query = 'RegistryEvents | limit 10' # Paste your own query here
+$query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
 $url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
 $headers = @{ 
@@ -102,11 +102,11 @@ $schema = $response.Schema
 ```
 
 - $results indeholder resultaterne af forespørgslen
-- $schema indeholder skemaet for resultaterne af forespørgslen
+- $schema indeholder skemaet over resultaterne af forespørgslen
 
 ### <a name="complex-queries"></a>Komplekse forespørgsler
 
-Hvis du vil køre komplekse forespørgsler (eller forespørgsler med flere linjer), skal du gemme forespørgslen i en fil og, i stedet for den første linje i eksemplet ovenfor, køre følgende kommando:
+Hvis du vil køre komplekse forespørgsler (eller forespørgsler med flere linjer), skal du gemme forespørgslen i en fil og i stedet for den første linje i ovenstående eksempel køre følgende kommando:
 
 ```powershell
 $query = [IO.File]::ReadAllText("C:\myQuery.txt"); # Replace with the path to your file
@@ -116,13 +116,13 @@ $query = [IO.File]::ReadAllText("C:\myQuery.txt"); # Replace with the path to yo
 
 Du kan nu bruge forespørgselsresultaterne.
 
-Hvis du vil have vist resultaterne af forespørgslen i CSV-format i file1.csv, skal du køre følgende kommando:
+Kør følgende kommando for at sende resultaterne af forespørgslen i CSV-format i file1.csv:
 
 ```powershell
 $results | ConvertTo-Csv -NoTypeInformation | Set-Content file1.csv
 ```
 
-Kør følgende kommando for at få vist resultaterne af forespørgslen i JSON-format i fil1.json:
+Kør følgende kommando for at sende resultaterne af forespørgslen i JSON-format i filen file1.json:
 
 ```powershell
 $results | ConvertTo-Json | Set-Content file1.json
@@ -130,6 +130,6 @@ $results | ConvertTo-Json | Set-Content file1.json
 
 
 ## <a name="related-topic"></a>Relateret emne
-- [Microsoft Defender til endpoint-API'er](apis-intro.md)
-- [Avanceret api til jagt](run-advanced-query-api.md)
+- [Microsoft Defender for Endpoint API'er](apis-intro.md)
+- [Avanceret jagt-API](run-advanced-query-api.md)
 - [Avanceret jagt ved hjælp af Python](run-advanced-query-sample-python.md)

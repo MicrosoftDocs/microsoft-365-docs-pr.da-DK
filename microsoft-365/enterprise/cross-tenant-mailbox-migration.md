@@ -8,7 +8,7 @@ ms.prod: microsoft-365-enterprise
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 09/21/2020
+ms.date: 05/05/2022
 ms.reviewer: georgiah
 ms.custom:
 - it-pro
@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 8cbaee1e4f0cd3bae519c939f2f619343bf996bd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 984df48edf4ba75569286618086d8be9ab684b60
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101067"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243046"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
@@ -73,7 +73,7 @@ Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.
 
    ![Nyt program](../media/tenant-to-tenant-mailbox-move/b36698df128e705eacff4bff7231056a.png)
 
-5. På siden Registrer et program under Understøttede kontotyper skal du vælge Konti i en hvilken som helst organisationsmappe (Enhver Azure AD-mappe – Multitenant). Vælg derefter Web under Omdirigerings-URI (valgfrit), og angiv <https://office.com>. Endelig skal du vælge Registrer.
+5. På siden Registrer et program under Understøttede kontotyper skal du vælge Konti i en hvilken som helst organisationsmappe (Enhver Azure AD mappe – Multitenant). Vælg derefter Web under Omdirigerings-URI (valgfrit), og angiv <https://office.com>. Endelig skal du vælge Registrer.
 
    ![Programregistrering](../media/tenant-to-tenant-mailbox-move/edcdf18b9f504c47284fe4afb982c433.png)
 
@@ -246,7 +246,7 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
       - UserPrincipalName: UPN justeres i forhold til brugerens NYE identitet eller målfirma (f.eks. user@northwindtraders.onmicrosoft.com).
       - Primær SMTP-adresse: Primær SMTP-adresse justeres i forhold til brugerens NYE firma (f.eks. user@northwind.com).
       - TargetAddress/ExternalEmailAddress: MailUser refererer til brugerens aktuelle postkasse, der hostes i kildelejeren (f.eks. user@contoso.onmicrosoft.com). Når du tildeler denne værdi, skal du kontrollere, at du har/også tildeler PrimarySMTPAddress, ellers angiver denne værdi PrimarySMTPAddress, hvilket medfører flytningsfejl.
-      - Du kan ikke føje ældre smtp-proxyadresser fra kildepostkassen til destinationen MailUser. Du kan f.eks. ikke vedligeholde contoso.com på MEU i fabrikam.onmicrosoft.com lejerobjekter). Domæner er kun knyttet til én Azure AD- eller Exchange Online-lejer.
+      - Du kan ikke føje ældre smtp-proxyadresser fra kildepostkassen til destinationen MailUser. Du kan f.eks. ikke vedligeholde contoso.com på MEU i fabrikam.onmicrosoft.com lejerobjekter). Domæner er kun knyttet til én Azure AD eller Exchange Online lejer.
 
      Eksempel **på destinationens** MailUser-objekt:
 
@@ -286,7 +286,7 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
    - msExchSafeRecipientsHash – skriver online sikre og blokerede afsenderdata tilbage fra klienter til Active Directory i det lokale miljø.
    - msExchSafeSendersHash – skriver online sikre og blokerede afsenderdata fra klienter tilbage til Active Directory i det lokale miljø.
 
-2. Hvis kildepostkassen er på LitigationHold, og størrelsen på genoprettelige elementer i kildepostkassen er større end standarddatabasen (30 GB), fortsættes flytningen ikke, da målkvoten er mindre end størrelsen på kildepostkassen. Du kan opdatere destinationsobjektet MailUser for at overføre ELC-postkasseflagene fra kildemiljøet til destinationen, hvilket udløser destinationssystemet for at udvide kvoten for MailUser til 100 GB, hvilket gør det muligt at flytte til destinationen. Disse instruktioner fungerer kun for hybrididentitet, der kører Azure AD Forbind, da kommandoerne til at stemple ELC-flagene ikke vises for lejeradministratorer.
+2. Hvis kildepostkassen er på LitigationHold, og størrelsen på genoprettelige elementer i kildepostkassen er større end standarddatabasen (30 GB), fortsættes flytningen ikke, da målkvoten er mindre end størrelsen på kildepostkassen. Du kan opdatere destinationsobjektet MailUser for at overføre ELC-postkasseflagene fra kildemiljøet til destinationen, hvilket udløser destinationssystemet for at udvide kvoten for MailUser til 100 GB, hvilket gør det muligt at flytte til destinationen. Disse instruktioner fungerer kun for hybrididentitet, der kører Azure AD Forbind, da kommandoerne til at stemple ELC-flagene ikke eksponeres for lejeradministratorer.
 
     > [!NOTE]
     > EKSEMPEL – SOM DET ER, INGEN GARANTI
@@ -434,7 +434,7 @@ Get-MoveRequest -Flags "CrossTenant"
    ```powershell
    # Now sync the changes from On-Premises to Azure and Exchange Online in the Target tenant
    # This action should create the target mail enabled users (MEUs) in the Target tenant
-   Start-ADSyncCycle
+   Start-ADSyncSyncCycle
    ```
 
 **Hvordan får vi adgang til Outlook den 1. dag, når brugspostkassen er flyttet?**
@@ -575,7 +575,7 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
 
   MailUser-objekter er markørerne til ikke-lokale postkasser. I tilfælde af migrering af postkasser på tværs af lejere bruger vi MailUser-objekter til at repræsentere enten kildepostkassen (fra målorganisationens perspektiv) eller destinationspostkassen (fra kildeorganisationens perspektiv). MailUsers har en ExternalEmailAddress (targetAddress), der peger på smtp-adressen på den faktiske postkasse (ProxyTest@fabrikam.onmicrosoft.com) og den primæreSMTP-adresse, der repræsenterer den viste SMTP-adresse for postkassebrugeren i mappen. Nogle organisationer vælger at vise den primære SMTP-adresse som en ekstern SMTP-adresse, ikke som en adresse, der ejes/bekræftes af den lokale lejer (f.eks. fabrikam.com i stedet for som contoso.com).  Men når et Exchange serviceplanobjekt er anvendt på MailUser via licenshandlinger, ændres den primære SMTP-adresse, så den vises som et domæne, der er bekræftet af den lokale organisation (contoso.com). Der er to mulige årsager:
 
-  - Når en Exchange serviceplan anvendes på en MailUser, begynder Azure AD-processen at gennemtvinge proxy-rensning for at sikre, at den lokale organisation ikke kan sende mails ud, spoof eller mail fra en anden lejer. Alle SMTP-adresser på et modtagerobjekt med disse tjenesteplaner fjernes, hvis adressen ikke bekræftes af den lokale organisation. Som det er tilfældet i eksemplet, bekræftes det Fabikam.com domæne IKKE af den contoso.onmicrosoft.com lejer, så rensningen fjerner det fabrikam.com domæne. Hvis du vil bevare disse eksterne domæner på MailUser, enten før migreringen eller efter migreringen, skal du ændre dine overførselsprocesser for at fjerne licenser, når flytningen er fuldført, eller før flytningen for at sikre, at brugerne har anvendt den forventede eksterne branding. Du skal sikre, at postkasseobjektet er korrekt licenseret til ikke at påvirke posttjenesten.
+  - Når en Exchange serviceplan anvendes på en MailUser, begynder Azure AD processen at gennemtvinge proxy-rensning for at sikre, at den lokale organisation ikke kan sende mails ud, spoof eller mail fra en anden lejer. Alle SMTP-adresser på et modtagerobjekt med disse tjenesteplaner fjernes, hvis adressen ikke bekræftes af den lokale organisation. Som det er tilfældet i eksemplet, bekræftes det Fabikam.com domæne IKKE af den contoso.onmicrosoft.com lejer, så rensningen fjerner det fabrikam.com domæne. Hvis du vil bevare disse eksterne domæner på MailUser, enten før migreringen eller efter migreringen, skal du ændre dine overførselsprocesser for at fjerne licenser, når flytningen er fuldført, eller før flytningen for at sikre, at brugerne har anvendt den forventede eksterne branding. Du skal sikre, at postkasseobjektet er korrekt licenseret til ikke at påvirke posttjenesten.
   - Her vises et eksempelscript til fjernelse af tjenesteplaner på en MailUser i den contoso.onmicrosoft.com lejer.
 
     ```powershell

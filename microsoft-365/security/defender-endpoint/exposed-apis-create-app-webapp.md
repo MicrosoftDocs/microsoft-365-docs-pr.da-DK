@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: f8b620d519b0e27fd54313329040096f10c070f9
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 6b9ad54a881ae5e14767e55da8dfc23b2fb237eb
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172335"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243112"
 ---
 # <a name="create-an-app-to-access-microsoft-defender-for-endpoint-without-a-user"></a>Opret en app for at få adgang til Microsoft Defender for Endpoint uden en bruger
 
@@ -143,6 +143,7 @@ $authBody = [Ordered] @{
 }
 $authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
 $token = $authResponse.access_token
+$token
 ```
 
 ### <a name="use-c"></a>Brug C#:
@@ -171,6 +172,7 @@ Følgende kode blev testet med NuGet Microsoft.IdentityModel.Clients.ActiveDirec
     ClientCredential clientCredential = new ClientCredential(appId, appSecret);
     AuthenticationResult authenticationResult = auth.AcquireTokenAsync(wdatpResourceId, clientCredential).GetAwaiter().GetResult();
     string token = authenticationResult.AccessToken;
+    console.write(token)
     ```
 
 

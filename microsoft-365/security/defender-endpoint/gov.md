@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a27cb75a9bace821e20a914bc3c63b571079f9db
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 67ae082e61c3322c28031b2d20e99f4070389dd2
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188410"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243024"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender for Endpoint for US Government-kunder
 
@@ -107,8 +107,8 @@ Windows 10, version 1709|![Nej.](images/svg/check-no.svg) <br /> Bemærk! Unders
 Windows 10, version 1703 og tidligere|![Nej.](images/svg/check-no.svg) <br /> Bemærk! Understøttes ikke|![Nej](images/svg/check-no.svg) <br /> Bemærk! Understøttes ikke|![Nej](images/svg/check-no.svg) <br /> Bemærk! Understøttes ikke
 Windows Server 2022|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2019 (med [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup>)|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Windows Server 2016 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
-Windows Server 2012 R2 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
+Windows Server 2016 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
+Windows Server 2012 R2 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2016 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2012 R2 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2008 R2 SP1 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)

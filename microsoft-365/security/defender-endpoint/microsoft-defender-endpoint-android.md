@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ea1c551c216dffe8d9ac4e0cedd5679146483e5e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 51f4915da08920018526ac7eb17372247e28de6d
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666234"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243090"
 ---
 # <a name="microsoft-defender-for-endpoint-on-android"></a>Microsoft Defender for Endpoint på Android
 
@@ -45,7 +45,8 @@ I dette emne beskrives det, hvordan du installerer, konfigurerer, opdaterer og b
 ### <a name="prerequisites"></a>Forudsætninger
 
 - **For slutbrugere**:
-  - Microsoft Defender for Endpoint licens, der er tildelt slutbrugerne af appen. Se [Microsoft Defender for Endpoint licenskrav](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
+  - Microsoft Defender for Endpoint licens, der er tildelt slutbrugerne af appen. Se [Microsoft Defender for Endpoint licenskrav](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
+  - Intune licens er nødvendig, før du onboarder Android-enheder.
   - Intune-firmaportal app kan downloades fra [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) og er tilgængelig på Android-enheden.
   - Derudover kan enheder [tilmeldes](/mem/intune/user-help/enroll-device-android-company-portal) via Intune-firmaportal-appen for at gennemtvinge Intune politikker for enhedsoverholdelse. Dette kræver, at slutbrugeren tildeles en Microsoft Intune licens.
   - Du kan få flere oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
