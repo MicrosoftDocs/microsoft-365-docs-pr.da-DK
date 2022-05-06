@@ -14,74 +14,64 @@ metadata:
   ms.author: robmazz
   ms.date: 04/22/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 465f54a97d099611d6a03c857a5c4e754bb45cf3
-  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  ms.openlocfilehash: 5581cb78600a36fd1b942bb8a86b2ed38f6a7db9
+  ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65077867"
+  ms.lasthandoff: 05/06/2022
+  ms.locfileid: "65242980"
 landingContent:
-- title: Administrer beskyttelse af oplysninger & styring
+- title: Beskyt følsomme data på tværs af clouds, apps og enheder
   linkLists:
   - linkListType: overview
     links:
     - text: Kend dine data
-      url: information-protection.md#know-your-data
+      url: /microsoft-365/compliance/sensitivity-labels
     - text: Beskyt dine data
-      url: information-protection.md#protect-your-data
+      url: /microsoft-365/compliance/information-protection-solution
     - text: Undgå datatab
-      url: information-protection.md#prevent-data-loss
-    - text: Styr dine data
-      url: manage-data-governance.md
-    - text: 'Læringsforløb: Administrer informationsbeskyttelse og -styring'
-      url: /learn/paths/m365-compliance-information
-- title: Administrer insider-risici
+      url: /microsoft-365/compliance/dlp-learn-about-dlp
+    - text: Administrer din datalivscyklus
+      url: /microsoft-365/compliance/data-lifecycle-management
+    - text: Kryptér dine data, og styr dine krypteringsnøgler
+      url: /microsoft-365/compliance/encryption
+    - text: Importér og arkivér ikke-Microsoft-data
+      url: /microsoft-365/compliance/archiving-third-party-data
+- title: Identificer datarisici, og administrer lovmæssige krav til overholdelse af angivne standarder
   linkLists:
   - linkListType: overview
     links:
-    - text: Styring af Insider-risiko i Microsoft Purview
-      url: insider-risk-management.md
-    - text: Kommunikationsoverholdelse i Microsoft Purview
-      url: communication-compliance.md
-    - text: Microsoft Purview-informationsbarrierer
-      url: information-barriers.md
-    - text: Microsoft Purview-Privileged Access Management
-      url: privileged-access-management-overview.md
-    - text: Kundelockbox
-      url: customer-lockbox-requests.md
-- title: Opdag og svar
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Microsoft Purview eDiscovery (Premium)
-      url: overview-ediscovery-20.md
-    - text: Microsoft Purview eDiscovery (Standard)
-      url: ./get-started-core-ediscovery.md
-    - text: Indholdssøgning
-      url: search-for-content.md
-    - text: Microsoft Purview Audit-løsninger
-      url: auditing-solutions-overview.md
+    - text: Registrer og handl på risikoaktiviteter
+      url: /microsoft-365/compliance/insider-risk-management
+    - text: Registrer og handl på upassende og følsomme meddelelser
+      url: /microsoft-365/compliance/communication-compliance
+    - text: Begræns kommunikation og samarbejde mellem brugere
+      url: /microsoft-365/compliance/information-barriers
+    - text: Administrer forretningskrav, juridiske krav eller lovmæssige krav til registrering.
+      url: /microsoft-365/compliance/records-management
+    - text: Logfør og søgning efter overvågede aktiviteter i SharePoint og OneDrive
+      url: /microsoft-365/compliance/auditing-solutions-overview
+    - text: Identificer og administrer data for juridiske sager
+      url: /microsoft-365/compliance/ediscovery
 - title: Kom i gang med overholdelse af lovmæssige standarder
   linkLists:
   - linkListType: get-started
     links:
-    - text: Overholdelsesstyring
-      url: compliance-manager.md
-    - text: GDPR-handlingsplan for overholdelse af angivne standarder
+    - text: Kom i gang med Overholdelsesstyring
+      url: /microsoft-365/compliance/compliance-manager
+    - text: Implementer en handlingsplan for overholdelse af GDPR
       url: /compliance/regulatory/gdpr-action-plan
-    - text: ISO-handlingsplan for overholdelse af angivne standarder
-      url: /compliance/regulatory/iso-action-plan
-    - text: NIST-handlingsplan for overholdelse af angivne standarder
-      url: /compliance/regulatory/nist-action-plan
-- title: Udrul løsninger til overholdelse af angivne standarder
+    - text: Få mere at vide om tilbud om Microsoft overholdelse af angivne standarder
+      url: /compliance/regulatory/offering-home
+- title: Udrul Purview-løsninger overholdelse af angivne standarder
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Beskyt data med Nul tillid
       url: /security/zero-trust/data
     - text: Installér en Microsoft Purview-løsning til oplysningsbeskyttelse
-      url: information-protection-solution.md
+      url: /microsoft-365/compliance/information-protection-solution
     - text: Udrul beskyttelse af oplysninger i forbindelse med bestemmelser om beskyttelse af personlige oplysninger
-      url: ../solutions/information-protection-deploy.md
-    - text: Illustrationer af beskyttelse af oplysninger og overholdelse af angivne standarder
-      url: ../solutions/productivity-illustrations.md#microsoft-365-information-protection-and-compliance-capabilities
+      url: /microsoft-365/solutions/information-protection-deploy
+    - text: Udforsk illustrationer af oplysninger om beskyttelse og overholdelse af angivne standarder
+      url: /microsoft-365/solutions/productivity-illustrations
