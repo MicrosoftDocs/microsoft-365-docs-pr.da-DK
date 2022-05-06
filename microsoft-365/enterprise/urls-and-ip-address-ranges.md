@@ -3,7 +3,7 @@ title: Office 365-URL-adresser og IP-adresseintervaller
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 03/28/2022
+ms.date: 04/28/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,22 +24,22 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 'Oversigt: Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365-planer, herunder Government Community Cloud (GCC).'
 hideEdit: true
-ms.openlocfilehash: 04522b211056b1d7c6feba08dd97fc3a2d33451a
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: 80e4c14652303d1f04e697f73153b0f013b987cd
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634861"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217326"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365-URL-adresser og IP-adresseintervaller
 
-Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365-planer, herunder Government Community Cloud (GCC).
+Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365-abonnementer, herunder Government Community Cloud (GCC).
   
 *Office 365 Worldwide (+GCC)*\|[Office 365 drevet af 21 Vianet](urls-and-ip-address-ranges-21vianet.md)\|[Office 365 U.S. Government DoD](microsoft-365-u-s-government-dod-endpoints.md)\|[Office 365 U.S. Government GCC High](microsoft-365-u-s-government-gcc-high-endpoints.md)\|
 
 |Bemærkninger|Download|Brug|
 |---|---|---|
-|**Senest opdateret:** 28/03/2022 – ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** alle påkrævede og valgfrie destinationer på én [JSON-formateret](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.|**Brug:** vores proxy [PAC-filer](managing-office-365-endpoints.md#pacfiles)|
+|**Senest opdateret:** 28/04/2022 – ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** alle påkrævede og valgfrie destinationer på én [JSON-formateret](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.|**Brug:** vores proxy [PAC-filer](managing-office-365-endpoints.md#pacfiles)|
 |
 
 Start med [Administration af Office 365-slutpunkter](managing-office-365-endpoints.md) for at forstå vores anbefalinger til administration af netværksforbindelse ved hjælp af disse data. Slutpunktsdata opdateres efter behov i begyndelsen af hver måned med nye IP-adresser og URL-adresser, der er publiceret 30 dage før, de er aktive. Dette giver kunder, der endnu ikke har automatiserede opdateringer, mulighed for at fuldføre deres processer, før der kræves ny forbindelse. Slutpunkter kan også opdateres i løbet af måneden, hvis det er nødvendigt for at håndtere supporteskaleringer, sikkerhedshændelser eller andre øjeblikkelige driftskrav. De data, der vises på denne side nedenfor, er alle genereret fra de REST-baserede webtjenester. Hvis du bruger et script eller en netværksenhed til at få adgang til disse data, skal du gå direkte til den [Webtjeneste](microsoft-365-ip-web-service.md).
