@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6b9ad54a881ae5e14767e55da8dfc23b2fb237eb
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: 5bce1fc2e9aa149da2bb3ddc28e56fc826ad1768
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243112"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268859"
 ---
 # <a name="create-an-app-to-access-microsoft-defender-for-endpoint-without-a-user"></a>Opret en app for at få adgang til Microsoft Defender for Endpoint uden en bruger
 
@@ -149,6 +149,9 @@ $token
 ### <a name="use-c"></a>Brug C#:
 
 Følgende kode blev testet med NuGet Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8.
+
+> [!IMPORTANT]
+> [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020.   Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
 
 1. Opret et nyt konsolprogram.
 1. Installér NuGet [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/).

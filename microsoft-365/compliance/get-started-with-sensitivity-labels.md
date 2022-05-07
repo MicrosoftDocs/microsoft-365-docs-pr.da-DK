@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at udrulle følsomhedsmærkater for at beskytte din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske vejledninger, der kan hjælpe dig med at komme på din mærkatrejse.
-ms.openlocfilehash: 3f163c19cfd6e627887f0e34b81bc99d2e86cb6c
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: b0fcf435d7805440e93f0d1248723f4b5599d4a9
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971038"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268765"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Kom i gang med følsomhedsmærkater
 
@@ -102,6 +102,7 @@ Alle scenarier kræver, at du [opretter og konfigurerer følsomhedsmærkater og 
 |Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og individuelle dokumenter i SharePoint og OneDrive |[Brug følsomhedsmærkater til at angive standardlinket til deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md)|
 |Anvend en følsomhedsmærkat på en model til dokumentforståelse, så identificerede dokumenter i et SharePoint bibliotek automatisk klassificeres og beskyttes |[Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)|
 |Undgå eller advar brugere om deling af filer eller mails med en bestemt følsomhedsmærkat |[Brug følsomhedsmærkater som betingelser i DLP-politikker](dlp-sensitivity-label-as-condition.md) |
+|Anvend en følsomhedsmærkat på en fil, når jeg modtager en besked om, at indhold, der indeholder personlige data, deles og skal beskyttes| [Undersøg og afhjælp beskeder i Administration af risiko for beskyttelse af personlige oplysninger](/privacy/priva/risk-management-alerts)|
 |Anvend en opbevaringsmærkat for at bevare eller slette filer eller mails, der har en bestemt følsomhedsmærkat|[Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold](apply-retention-labels-automatically.md) |
 |Find, mærk og beskyt filer, der er gemt i datalagre i det lokale miljø |[Udrulning af Azure Information Protection-scanneren for automatisk at klassificere og beskytte filer](/azure/information-protection/deploy-aip-scanner)|
 |Find, mærk og beskyt filer, der er gemt i datalagre i cloudmiljøet|[Opdag, klassificer, mærk og beskyt regulerede og følsomme data, der er gemt i cloudmiljøet](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|

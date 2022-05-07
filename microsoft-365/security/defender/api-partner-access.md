@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: ccd92b38937bcb64fdcf738b803160119c0a025a
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 612cbb4005285f46594bc900cbbc14497b72ffec
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665574"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268810"
 ---
 # <a name="create-an-app-with-partner-access-to-microsoft-365-defender-apis"></a>Opret en app med partneradgang til Microsoft 365 Defender API'er
 
@@ -55,7 +55,7 @@ Da denne app er flerlejer, skal du også have [administratorsamtykke](/azure/act
 
 I denne artikel forklares det, hvordan du:
 
-- Opret et Azure **AD-program med flere lejere**
+- Opret et Azure AD program med **flere lejere**
 - Få godkendt samtykke fra din brugeradministrator til, at dit program kan få adgang til de Microsoft 365 Defender, som det har brug for.
 - Hent et adgangstoken til Microsoft 365 Defender
 - Valider tokenet
@@ -64,12 +64,12 @@ Microsoft 365 Defender fremviser mange af sine data og handlinger via et sæt pr
 
 Generelt skal du gøre følgende for at bruge API'erne:
 
-- Opret et Azure **AD-program med flere lejere** .
+- Opret et Azure AD program med **flere lejere**.
 - Få godkendt (samtykke) af din brugeradministrator, så dit program kan få adgang til Microsoft 365 Defender ressourcer, det har brug for.
 - Hent et adgangstoken ved hjælp af dette program.
 - Brug tokenet til at få adgang til Microsoft 365 Defender API.
 
-Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med flere lejere, henter et adgangstoken til Microsoft 365 Defender og validerer tokenet.
+Følgende trin med vejledning i, hvordan du opretter et Azure AD program med flere lejere, får et adgangstoken til Microsoft 365 Defender og validerer tokenet.
 
 ## <a name="create-the-multi-tenant-app"></a>Opret appen med flere lejere
 
@@ -82,7 +82,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 3. I registreringsformularen:
 
    - Vælg et navn til programmet.
-   - Fra **Understøttede kontotyper** skal du vælge **Konti i en hvilken som helst organisationsmappe (enhver Azure AD-mappe) – Multitenant**.
+   - Fra **Understøttede kontotyper** skal du vælge **Konti i en hvilken som helst organisationsmappe (Enhver Azure AD mappe) – Multitenant**.
    - Udfyld afsnittet **omdirigerings-URI** . Vælg skriv **Web** , og giv omdirigerings-URI'en som **https://portal.azure.com**.
 
    Når du er færdig med at udfylde formularen, skal du vælge **Registrer**.
@@ -145,7 +145,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD-program med fle
 
 ## <a name="get-an-access-token"></a>Hent et adgangstoken
 
-Du kan få flere oplysninger om Azure AD-tokens i [Azure AD-selvstudiet](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
+Du kan få flere oplysninger om Azure AD tokens i [selvstudiet Azure AD](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
 > [!IMPORTANT]
 > Selvom eksemplerne i dette afsnit opfordrer dig til at indsætte hemmelige værdier til testformål, bør du **aldrig hardcode hemmeligheder** i et program, der kører i produktion. En tredjepart kan bruge din hemmelighed til at få adgang til ressourcer. Du kan hjælpe med at beskytte din apps hemmeligheder ved hjælp af [Azure Key Vault](/azure/key-vault/general/about-keys-secrets-certificates). Hvis du vil have et praktisk eksempel på, hvordan du kan beskytte din app, skal du se [Administrer hemmeligheder i dine serverapps med Azure Key Vault](/learn/modules/manage-secrets-with-azure-key-vault/).
@@ -184,6 +184,9 @@ return $token
 
 > [!NOTE]
 > Følgende kode blev testet med Nuget Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8.
+
+> [!IMPORTANT]
+> [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020.   Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
 
 1. Opret et nyt konsolprogram.
 1. Installér NuGet [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/).

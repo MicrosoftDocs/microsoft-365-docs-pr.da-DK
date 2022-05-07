@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: ddfa921c8dae22bbe091e2c0f66fc9ae42aeea41
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+ms.openlocfilehash: 90a048cf96bb2414a42d803bcd2f15deab4e711b
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231790"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268787"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -278,6 +278,9 @@ Når du konfigurerer en politik, der automatisk anvender følsomme oplysningstyp
 ### <a name="configuration-information-for-sharepoint-sites-and-onedrive-accounts"></a>Konfigurationsoplysninger for SharePoint websteder og OneDrive konti
 
 Når du vælger placeringen **af SharePoint websteder**, kan politikken for opbevaring bevare og slette dokumenter på SharePoint kommunikationswebsteder, teamwebsteder, der ikke er forbundet af Microsoft 365 grupper, og klassiske websteder. Medmindre du bruger [tilpassede politikområder](#exceptions-for-adaptive-policy-scopes), understøttes teamwebsteder, der er forbundet af Microsoft 365 grupper, ikke med denne indstilling, og brug i stedet den **Microsoft 365-grupper** placering, der gælder for indhold i gruppens postkasse, websted og filer.
+
+> [!TIP]
+> Du kan bruge et [filter i SharePoint Administration](/sharepoint/customize-admin-center-site-list) eller en [SharePoint PowerShell-kommando](/powershell/module/sharepoint-online/get-sposite#example-10) til at bekræfte, om et websted er forbundet med en gruppe. I forbindelse med statiske områder understøttes disse websteder med **den Microsoft 365-grupper** placering.
 
 Du kan finde detaljerede oplysninger om, hvad der er inkluderet og udeladt, når du konfigurerer opbevaringsindstillinger for SharePoint og OneDrive, under [Hvad er inkluderet i forbindelse med opbevaring og sletning](retention-policies-sharepoint.md#whats-included-for-retention-and-deletion).
 

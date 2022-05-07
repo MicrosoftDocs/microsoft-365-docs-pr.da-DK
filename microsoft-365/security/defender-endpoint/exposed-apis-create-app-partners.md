@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: fde2cc894fb989628f9e2e0d9d7297bdb3c9e9da
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5f17f29f083df6e567218363027e7677c87ee154
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172400"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268858"
 ---
 # <a name="partner-access-through-microsoft-defender-for-endpoint-apis"></a>Partneradgang via Microsoft Defender for Endpoint API'er
 
@@ -169,6 +169,9 @@ return $token
 ### <a name="using-c"></a>Brug af C #
 
 > Nedenstående kode blev testet med Nuget Microsoft.IdentityModel.Clients.ActiveDirectory
+
+> [!IMPORTANT]
+> [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020.   Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
 
 - Opret et nyt konsolprogram
 - Installér NuGet [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/)

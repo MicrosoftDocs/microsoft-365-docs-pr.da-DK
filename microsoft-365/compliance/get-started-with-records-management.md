@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Har du brug for en datastyringsløsning til Microsoft 365, der administrerer indhold af høj værdi for juridiske, forretningsmæssige eller lovmæssige forpligtelser, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske retningslinjer for at komme i gang.
-ms.openlocfilehash: e73cb1a118235082978ee93efcdb77f5e5135f8c
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: bbba24a2627c6040873da8d01185e4e6bdfdbfc8
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971467"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268743"
 ---
 # <a name="get-started-with-records-management"></a>Kom i gang med datastyring
 
@@ -81,6 +81,7 @@ Brug følgende tabel som en hjælp til at knytte dine forretningskrav til de sce
 |Start opbevaringsperioden, når der opstår en hændelse, f.eks.:  <br />- Medarbejdere forlader organisationen <br />- Kontrakterne udløber <br />- Produktets levetid ophører| [Start opbevaring, når der opstår en hændelse](event-driven-retention.md)|
 |Begræns ændringer af politikker for at hjælpe med at opfylde lovmæssige krav eller beskytte mod rogue-administratorer| [Brug Bevarelseslås til at begrænse ændringer af opbevaringspolitikker og politikker for opbevaringsmærkater](retention-preservation-lock.md)
 |Administrer livscyklussen for forskellige dokumenttyper i SharePoint| [Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint](auto-apply-retention-labels-scenario.md)|
+|Anvend en opbevaringsmærkat på en fil, når jeg modtager en besked om, at indhold, der indeholder personlige data, gemmes eller forbliver uberørt i for lang tid| [Undersøg og afhjælp beskeder i Administration af risiko for beskyttelse af personlige oplysninger](/privacy/priva/risk-management-alerts)|
 |Sørg for, at nogen gennemser og godkender, før indholdet slettes i slutningen af opbevaringsperioden|[Dispositionsgennemgange](disposition.md#disposition-reviews) |
 |Hav bevis for fordeling for indhold, der slettes permanent ved slutningen af opbevaringsperioden|[Fordeling af poster](disposition.md#disposition-of-records) |
 | Overvåg, hvordan og hvor indstillinger for bevarelse og sletning anvendes på elementer | [Overvågning af opbevaringsmærkater](retention.md#monitoring-retention-labels) |
