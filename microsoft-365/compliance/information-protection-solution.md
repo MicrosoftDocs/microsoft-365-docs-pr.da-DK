@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 description: Præskriptive vejledning til installation af Microsoft Purview Information Protection til din organisation.
-ms.openlocfilehash: 28d0af5bba237a9f2d120f67eb1e79dd74a69f2a
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d672e113e4f1bdaca155881afba6262878d0ecb3
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65284892"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294750"
 ---
 # <a name="deploy-an-information-protection-solution-with-microsoft-purview"></a>Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview
 
@@ -43,7 +43,7 @@ Brug Microsoft Purview Information Protection til at hjælpe dig med at finde, k
 
 Se følgende Ignite-session for at se, hvordan disse funktioner understøtter og bygger videre på hinanden: [Kend dine data, beskyt dine data, og undgå tab af data med Microsoft Information Protection](https://myignite.microsoft.com/archives/IG20-OD273).
 
-Du kan få oplysninger om, hvordan du styrer dine data, under [Styr dine data med Microsoft Purview](manage-Information-governance.md).
+Hvis du vil have datastyring, skal du se [Installér en løsning til datastyring med Microsoft Purview](data-governance-solution.md).
 
 ## <a name="licensing"></a>Licensering
 

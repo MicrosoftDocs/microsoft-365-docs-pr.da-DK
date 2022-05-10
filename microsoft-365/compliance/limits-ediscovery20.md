@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
-ms.openlocfilehash: 3d0204eb452b669937d30fe5519e5af073b64d6d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7aa9dcd65cb047914a8b1b68de3340bb9d7b728f
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099207"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294603"
 ---
 # <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
@@ -64,7 +64,8 @@ I følgende tabel vises indekseringsgrænserne i eDiscovery (Premium).
 |Det maksimale antal tegn, der udtrækkes fra en enkelt fil.|10 <sup>millioner4</sup>|
 |Maksimal størrelse på en enkelt fil.|150 <sup>MB4</sup>|
 |Maksimal dybde for integrerede elementer i et dokument.|<sup>254</sup>|
-|Maksimal størrelse af filer, der behandles af optisk tegngenkendelse (OCR).|24 <sup>MB4</sup> <br/>  
+|Maksimal størrelse af filer, der behandles af optisk tegngenkendelse (OCR).|24 <sup>MB4</sup> <br/> |
+|Maksimalt avanceret gennemløb for indeksering | 2 GB pr. time |
 
 ## <a name="search-limits"></a>Søgegrænser
 

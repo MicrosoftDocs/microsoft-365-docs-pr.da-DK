@@ -18,12 +18,12 @@ ms.collection:
 - m365initiative-compliance
 recommendations: false
 description: Implementer Microsoft Purview Information Protection funktioner for at hjælpe dig med at beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
-ms.openlocfilehash: 97f5172479d889ec1914cfc46102a58a83165269
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: b055e71ee6c22cc9804b82a36f339a73675ce914
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285472"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294641"
 ---
 # <a name="protect-your-sensitive-data-with-microsoft-purview"></a>Beskyt dine følsomme data med Microsoft Purview
 
@@ -40,9 +40,9 @@ Disse funktioner til beskyttelse af oplysninger giver dig værktøjer til at [ke
 
 ![Billede af, hvordan Microsoft Purview Information Protection hjælper dig med at finde, klassificere og beskytte følsomme data.](../media/powered-by-intelligent-platform.png)
 
-Hvis du vil have en præskriptiv vejledning til installation af en Microsoft Purview-Information Protection-løsning til din organisation, skal du se [Installér en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md).
+Brug følgende afsnit til at få mere at vide om de tilgængelige funktioner, og hvordan du kommer i gang med hver enkelt. Men hvis du leder efter en guidet installation, skal du se [Installér en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md).
 
-Du kan få oplysninger om, hvordan du styrer dine data, under [Styr dine data med Microsoft Purview](manage-Information-governance.md).
+Du kan få oplysninger om, hvordan du styrer dine data i forbindelse med overholdelse af angivne standarder eller lovmæssige krav, under [Styr dine data med Microsoft Purview](manage-data-governance.md).
 
 ## <a name="know-your-data"></a>Kend dine data
 
@@ -60,7 +60,7 @@ Hvis du vil anvende fleksible beskyttelseshandlinger, der omfatter kryptering, a
 
 |Kapacitet|Hvilke problemer løser det?|Kom i gang|
 |:------|:------------|---------------------|
-|[Følsomhedsmærkater](sensitivity-labels.md)| En enkelt løsning på tværs af apps, tjenester og enheder til mærkning og beskyttelse af dine data, efterhånden som de bevæger sig i og uden for din organisation. <br /><br /> Eksempelscenarier: <br />- [Administrer følsomhedsmærkater for Office apps](sensitivity-labels-office-apps.md) <br />- [Kryptér dokumenter og mails](encryption-sensitivity-labels.md) <br />-  [Anvend og få vist navne i Power BI](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Du kan se en omfattende liste over scenarier for følsomhedsmærkater i dokumentationen Introduktion.|[Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md) |
+|[Følsomhedsmærkater](sensitivity-labels.md)| En enkelt mærkatløsning på tværs af apps, tjenester og enheder for at beskytte dine data, efterhånden som de bevæger sig i og uden for din organisation. <br /><br /> Eksempelscenarier: <br />- [Administrer følsomhedsmærkater for Office apps](sensitivity-labels-office-apps.md) <br />- [Kryptér dokumenter og mails](encryption-sensitivity-labels.md) <br />-  [Anvend og få vist navne i Power BI](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Du kan se en omfattende liste over understøttede scenarier for følsomhedsmærkater i dokumentationen Kom i gang.|[Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md) |
 |[Azure Information Protection Unified Labeling Client](/azure/information-protection/rms-client/aip-clientv2)| For Windows computere udvides mærkaten til Stifinder og PowerShell med yderligere funktioner til Office apps, hvis det er nødvendigt| [Vejledning til Azure Information Protection unified labeling-klientadministrator](/azure/information-protection/rms-client/clientv2-admin-guide)|
 |[Kryptering med dobbelt nøgle](double-key-encryption.md)| Under alle omstændigheder er det kun din organisation, der nogensinde kan dekryptere beskyttet indhold eller til lovmæssige krav, du skal have krypteringsnøgler inden for en geografisk grænse. | [Installer kryptering med dobbelt nøgle](double-key-encryption.md#deploy-dke)|
 |[Kryptering af Office 365-meddelelser](ome.md)| Krypterer mails og vedhæftede dokumenter, der sendes til alle brugere på en hvilken som helst enhed, så det kun er godkendte modtagere, der kan læse mailoplysninger. <br /><br />  Eksempelscenarie: [Tilbagekald mail, der er krypteret af avanceret meddelelseskryptering](revoke-ome-encrypted-mail.md) | [Konfigurer nye funktioner til meddelelsekryptering](set-up-new-message-encryption-capabilities.md)|

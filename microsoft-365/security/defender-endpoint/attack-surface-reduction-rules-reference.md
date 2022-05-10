@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 64162b83376facddbdeffd1c3079baa49f9d8924
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 2f76a8ec53d6f7c809ed9f6612f2c8abf7388d1b
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788012"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294772"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
@@ -33,7 +33,8 @@ ms.locfileid: "64788012"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Antivirus
 
-**Platforme**
+**Platforme:**
+
 - Windows
 
 Denne artikel indeholder oplysninger om regler for reduktion af angreb:
@@ -57,7 +58,7 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 >
 > Regler for reduktion af angrebsoverfladen i Windows&nbsp; Server2012R2&nbsp;&nbsp; og Windows&nbsp; Server2016&nbsp; er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Regelnavn|Windows 10 | Windows Server 2019 | &nbsp;Windows Server | Windows Server 2016 <sup>[[1, 2](#fn1)]<sup></sup> | Windows Server 2012&nbsp; R2 <sup>[[1, 2](#fn1)]<sup></sup> |
+| Regelnavn| &nbsp;Windows 11 <br>Og<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>Og<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <br> <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp; <br> <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig kanal) eller nyere | Y | Y |
 | [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y version 1809 eller nyere | Y | Y | Y | Y |
@@ -102,7 +103,6 @@ Links til oplysninger om systemversioner til konfigurationsstyring, der referere
 |[Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y |   |Y <br><br> CB 1802  | Y  | Y  |
 |[Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) | Y |   | Y <br><br> CB 1710  | Y  |  Y |
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Y |   | Y <br><br> CB 1802 | Y  | Y  |
-|  |  |  |  |  |  |
 
   (<a id="fn1">1</a>) Du kan konfigurere regler for reduktion af angrebsoverflader pr. regel ved hjælp af en hvilken som helst regels GUID.
 
@@ -139,7 +139,6 @@ For regler med "Regeltilstand" angivet:
 |[Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
 |[Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
-|   |   |   |   |
   
 ## <a name="asr-rules-and-guids-matrix"></a>Matrix for ASR-regler og GUID'er
 

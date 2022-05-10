@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt skiftende overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: b79015ce0ca55bf9a74b6acac8f38f09b9e5e984
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3bfa6ce581b0bd4846ebe27b95cf27d1228b10b2
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100523"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294602"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Nyheder i Microsoft Purview
 
@@ -44,6 +44,81 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-overholdel
 > Og besøg [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap) for at få mere at vide om Microsoft 365 funktioner, der blev startet, udrulles, er under udvikling, er blevet annulleret eller tidligere udgivet.
 
 ## <a name="april-2022"></a>April 2022
+
+### <a name="communication-compliance"></a>Kommunikationsoverholdelse
+
+- [Opret og administrer politikker for kommunikation med overholdelse af angivne standarder](communication-compliance-policies.md) – opdateret med vejledning tilføjet for den nye brugerrapporterede politikfunktion for Microsoft Teams integration.
+- [Kom i gang med overholdelse af kommunikation](communication-compliance-configure.md) – opdateret for at tilføje afklaring for F5-abonnement og licenser.
+
+### <a name="compliance-manager"></a>Overholdelsesstyring
+
+- [Liste over skabeloner til Overholdelsesstyring](compliance-manager-templates-list.md) – der er tilføjet 6 nye skabeloner og navigationslinks på siden for nemmere at gå til skabelonkategorier.
+- [Oversigt over Overholdelsesstyring](compliance-manager.md) – opdateret video med produktoversigt.
+
+### <a name="compliance-offerings--service-assurance"></a>Tilbud om overholdelse & service assurance
+
+- [Tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home) – opdateringer til tjenestedækning og overvågningsrapportering for VPATS-, SOC-, ISO- og FedRAMP-tilbud.
+
+### <a name="data-lifecycle-management-and-records-management"></a>Administration af datalivscyklus og datastyring
+
+- [Styr dine data med Microsoft Purview](manage-data-governance.md) – dataconnectors fjernes fra denne side, og løsningen til datastyring præsenteres som et peer-produkt.
+- [Almindelige indstillinger for opbevaringspolitikker og opbevaringsmærkater](retention-settings.md) – afspejler nye navigations- og brugergrænsefladereferencer for den nyligt designede guide til opbevaringsmærkater.
+- [Deklarer poster ved hjælp af opbevaringsmærkater](declare-records.md) og [Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive](record-versioning.md) – nye oplysninger om den nye mærkatindstilling "Lås denne post op som standard", som aktuelt udrulles i prøveversion.
+- [Brug filplanen til at oprette og administrere opbevaringsmærkater](file-plan-manager.md#information-about-the-label-properties-for-import)  – i importafsnittet vises de mærkatindstillinger, der i øjeblikket ikke understøttes til import (gennemgang af fordeling i flere faser, og lås denne post op som standard).
+
+### <a name="data-loss-prevention"></a>Forebyggelse af datatab
+
+- Artikler, der er opdateret til onboarding af macOS-enheder:
+  - [Få mere at vide om slutpunkt DLP](endpoint-dlp-learn-about.md)
+  - [Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt](dlp-configure-endpoint-settings.md)
+  - [Plan for forebyggelse af datatab (DLP)](dlp-overview-plan-for-dlp.md)
+  - [Reference til politik til forebyggelse af datatab](dlp-policy-reference.md)
+  - [Kom i gang med forebyggelse af datatab forebyggelse af datatab ved slutpunkt](endpoint-dlp-getting-started.md)
+- [DLP-politikbetingelser, -undtagelser og -handlinger](dlp-conditions-and-exceptions.md) – tilføjet vejledning til handlingen Rediger emne.
+- [Reference til politik til forebyggelse af datatab](dlp-policy-reference.md) – prædikater for GENEREL SPO/ODB; opdateret med ny vejledning i behandling af regler på slutpunkter.
+
+### <a name="device-onboarding"></a>Enheds onboarding
+
+- Artikler, der er opdateret til onboarding af macOS-enheder:
+  - [Onboarde macOS-enheder i for at Microsoft 365 oversigt](device-onboarding-macos-overview.md)
+  - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-intune-mde.md)
+  - [Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune](device-onboarding-offboarding-macos-intune.md)
+  - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-jamfpro-mde.md)
+  - [Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro](device-onboarding-offboarding-macos-jamfpro.md)
+
+### <a name="information-barriers"></a>Informationsbarrierer
+
+- [Brug informationsbarrierer med SharePoint](/sharepoint/information-barriers) – vejledning til understøttelse af nye private kanaler i SharePoint.
+- [Administrer politikker for informationsbarrierer](information-barriers-edit-segments-policies.md) – vejledning til fjernelse af segmenter og politik/segmenter sammen.
+
+### <a name="microsoft-priva"></a>Microsoft Priva
+
+- [Politikker for styring af beskyttelse af personlige oplysninger](/privacy/priva/risk-management) – nye sider, vigtige opdateringer og omstrukturering af politikkernes indhold; detaljer nedenfor:
+  - [Politikker for styring af beskyttelse af personlige oplysninger](/privacy/priva/risk-management-policies) – tilføjede vigtige oplysninger om politikkonfiguration og -administration, der gælder for alle politikker. tilføjede links til nye sider for hver af de tre politiktyper.
+  - [Politikker for overeksponering af data](/privacy/priva/risk-management-policy-data-overexposure) – formulerer behovet for og anvendelsen af politikken; beskriver standardindstillinger for oprettelse af standardenheder og detaljerede instruktioner til tilpasning af indstillinger.
+  - [Politikker for dataoverførsel](/privacy/priva/risk-management-policy-data-transfer) – fremhæver den nye betingelse for, at politikken skal registrere overførsler uden for organisationen; formulerer behovet for og anvendelsen af politikken beskriver standardindstillinger for oprettelse af standardenheder og detaljerede instruktioner til tilpasning af indstillinger.
+  - [Politikker for minimering af data](/privacy/priva/risk-management-policy-data-minimization) – formulerer behovet for og anvendelsen af politikken; beskriver standardindstillinger for oprettelse af standardenheder og detaljerede instruktioner til tilpasning af indstillinger.
+  - [Undersøg og afhjælp beskeder](/privacy/priva/risk-management-alerts) – tilføjede tydeliggøring af detaljer og formateringsændringer for at forbedre læsbarheden.
+  - [Brugermeddelelser](/privacy/priva/risk-management-notifications) – tilføjede oplysninger om funktionaliteten til visning og tilpasning af mailmeddelelsesindhold.
+- [Opret en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-create) – tilføjet et afsnit om at komme i gang med din første anmodning med standardindstillinger for at udforske funktionaliteten.
+- [Gennemse data for en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-data-review) – tilføjede oplysninger, der forklarer de prioriterede elementer, der skal gennemses, og hvordan du finder dem, og behovet for at konfigurere matchning af data for at få denne indsigt.
+- [Find og visualiser personlige data](/privacy/priva/priva-data-profile) – det blev præciseret, at brugerne skal konfigurere matchning af data for at få indsigt i "Elementer med det mest registrerede indhold" under "Nøgleindsigt".
+- [Datamatchning for anmodninger om emnerettigheder](/privacy/priva/subject-rights-requests-data-match) – afklarede trinforløbet i denne proces og tilføjede det andet trin til oprettelse af følsomme infotyper.
+
+### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
+
+- [Brug navngivne objekter i DLP-politikker](named-entities-use.md) – navngivne enheder ga.
+- [Få mere at vide om navngivne enheder](named-entities-learn.md) – navngivne enheder, ga.
+- [Objektdefinitioner for følsomme oplysningstyper](sensitive-information-type-entity-definitions.md) – navngivne enheders ga og mønsteropdateringer.
+- [Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md) – navngivne enheder – GA.
+
+### <a name="sensitivity-labels"></a>Følsomhedsmærkater
+
+- [Brug følsomhedsmærkater til at beskytte indhold i Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md#configure-site-sharing-permissions-by-using-powershell-advanced-settings) – ny konfiguration nu som prøveversion til tilladelser til deling af websteder ved hjælp af avancerede PowerShell-indstillinger.
+- [Begræns adgangen til indhold ved hjælp af følsomhedsmærkater for at anvende kryptering](encryption-sensitivity-labels.md) . Tilføjede det kendte problem med angivelse af en gruppe, der indeholder mailkontakter, med et link til det publicerede KB for at få flere oplysninger og løsninger.
+- [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) – fjernede automatisk det kendte problem med slettede OneDrive websteder, der fejlagtigt blev vist i simuleringsresultaterne for politikker for automatisk mærkning)
+- [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md) – som følge af kundefeedback fjernede billedforklaringen i afsnittet Forudsætninger, at denne funktion endnu ikke understøttes af Semi-Annual Enterprise Channel, og tilføjede i stedet Semi-Annual Enterprise Channel (prøveversion) med minimumversion 2202.
+- [Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md) – supportoplysninger om anvendelse af en standardmærkat på eksisterende dokumenter opdateres for at rette op på, at denne version stadig udrulles i betakanalen på Windows og nu udrulles fuldt ud til internettet.
 
 ### <a name="changes-to-product-names"></a>Ændringer af produktnavne
 
@@ -232,122 +307,3 @@ Følgende nye artikler er tilføjet:
 
 ### <a name="sensitivity-labels"></a>Følsomhedsmærkater
 - Områdenavnet for [mærkater fra Microsoft Purview-dataoversigten](/azure/purview/create-sensitivity-label) er nu "Skematiserede dataaktiver".
-
-## <a name="october-2021"></a>Oktober 2021
-
-### <a name="app-governance"></a>Appstyring
-
-- [Tilføjelsesprogrammet Appstyring til Defender for Cloud Apps er offentligt tilgængeligt](/cloud-app-security/app-governance-manage-app-governance). Dokumentation til appstyring er flyttet for at deltage i dokumentationen til Defender for Cloud Apps.
-
-### <a name="compliance--service-assurance"></a>Overholdelse & service assurance
-
-- [Service assurance](/compliance) – indholdsopdateringer til kvartalsvis gennemgang af certificeringer og erklæringer om anvendelighed) Administration af datacenteraktiver
-  - Datacenterarkitektur og infrastruktur
-  - Datacenters forretningskontinuitet og it-katastrofeberedskab
-  - Miljøforanstaltninger for datacenter
-  - Sikkerhed for fysisk adgang til datacenter
-  - Microsoft 365 SDL-overholdelsesprogram
-  - adgangskontrol til Microsoft 365 tjenestetekniker
-  - Vejledning til risikovurdering for MS Cloud
-
-### <a name="data-loss-prevention"></a>Forebyggelse af datatab
-
-- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](endpoint-dlp-learn-about.md) blev opdateret til macOS-understøttelse og avanceret klassificering. opdateret til oprettelse af en brugerdefineret DLP-politik til overvågning af aktivitet for alle understøttede filtyper.
-- [Kom i gang med Microsoft 365 Forebyggelse af datatab i Slutpunkt](endpoint-dlp-getting-started.md) blev opdateret til macOS-understøttelse og avanceret klassificering.
-- [Brug af Forebyggelse af datatab for Slutpunkt](endpoint-dlp-using.md) blev opdateret til macOS-understøttelse og avanceret klassificering.
-- [Referencen til politiktip til forebyggelse af datatab](dlp-policy-tips-reference.md) blev opdateret til understøttelse af macOS og avanceret klassificering.
-- [Onboard macOS-enheder i Microsoft 365 (prøveversion)](device-onboarding-macos-overview.md) blev opdateret til macOS-understøttelse og avanceret klassificering.
-- Følgende nye sider til onboarding af enheder er tilføjet:
-  - [Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune (prøveversion)](device-onboarding-offboarding-macos-intune.md)
-  - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder (prøveversion)](device-onboarding-offboarding-macos-intune-mde.md)
-  - [Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro (prøveversion)](device-onboarding-offboarding-macos-jamfpro.md)
-  - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder (prøveversion)](device-onboarding-offboarding-macos-jamfpro-mde.md)
-
-### <a name="ediscovery"></a>eDiscovery
-
-- [Indsaml vedhæftede filer i skyen i eDiscovery (Premium)](advanced-ediscovery-cloud-attachments.md) ud over at indsamle den nyeste version af en vedhæftet fil i skyen, kan du indsamle den version, der blev delt i en mail eller Teams chatsamtale. Den nye funktionalitet til automatisk anvendelse af en opbevaringsmærkat på vedhæftede filer i skyen gør det muligt at indsamle den delte version.
-- [Konfigurer historiske versioner i ny funktionalitet i eDiscovery (Premium),](advanced-ediscovery-historical-versions.md) der indekserer alle versioner af dokumenter, der er gemt på et SharePoint websted til søgning. Det betyder, at dokumentversioner, der indeholder indhold, som svarer til en samlingsforespørgsel, returneres i søgeresultaterne.
-
-### <a name="encryption"></a>Kryptering
-
-- [Brug end-to-end-kryptering for en til en-Microsoft Teams kald (offentlig prøveversion)](/microsoftteams/teams-end-to-end-encryption) Nyt indhold til den offentlige prøveversion.
-
-### <a name="data-lifecycle-management"></a>Administration af datalivscyklus
-
-- [Konfigurer en connector til import af Epic EHR-overvågningsdata](import-epic-data.md) ny connector giver dig mulighed for at importere data fra Epics elektroniske system til sundhedssektoren for at understøtte et nyt scenarie for misbrug af patientdata i forbindelse med administration af insiderrisiko.
-- [Konfiguration af en connector til import af ehr-overvågningsdata til sundhedssektoren](import-healthcare-data.md) ny connector giver dig mulighed for at importere data fra et elektronisk system til registrering af patientdata for at understøtte et nyt scenarie for misbrug af generelle patientdata til styring af insiderrisiko.
-
-### <a name="retention-and-records-management"></a>Opbevarings- og datastyring
-- [Områder for tilpassede politikker frigives](retention.md#adaptive-or-static-policy-scopes-for-retention) som prøveversion for opbevaringspolitikker og politikker for opbevaringsmærkater.
-- Du kan nu [automatisk anvende en opbevaringsmærkat baseret på en følsomhedsmærkat](apply-retention-labels-automatically.md#identify-files-and-emails-that-have-a-sensitivity-label).
-- Filplanen har en ny [importproces](file-plan-manager.md#import-retention-labels-into-your-file-plan).
-- [Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater](retention-settings.md): Ny artikel, der indeholder detaljerede oplysninger om konfiguration af tilpassede områder og andre indstillinger i både opbevaringspolitikker og politikker for opbevaringsmærkater.
-
-### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
-
-- [Få mere at vide om navngivne enheder (prøveversion)](named-entities-learn.md) nyt indhold for navngivne objekter.
-- [Brug navngivne objekter i dine politikker til forebyggelse af datatab (prøveversion)](named-entities-use.md) nyt indhold ved hjælp af navngivne objekter.
-
-### <a name="sensitivity-labels"></a>Følsomhedsmærkater
-
-- [Standardmærkater og standardpolitikker](mip-easy-trials.md) udrulles til berettigede kunder.
-
-## <a name="september-2021"></a>September 2021
-
-### <a name="app-governance"></a>Appstyring
-
-- [Strømlinet appstyring – introduktionsoplysninger](app-governance-get-started.md) har en ændret arbejdsproces og tilføjet nye links til tilmelding til offentlig prøveversion
-- [Ny definition af registreringsbeskeder](app-governance-anomaly-detection-alerts.md#app-made-high-volume-of-importance-mail-read-and-created-inbox-rule) er tilføjet (opdateret; tilføjet ny definition for besked om samling)
-
-### <a name="auditing"></a>Overvågning
-
-- [Slå overvågning til eller fra](turn-audit-log-search-on-or-off.md) tilføjet nyt afsnit om, hvordan ændringer af overvågningsstatus i en organisation overvåges selv. Det betyder, at overvågningsposter logføres, når overvågning er slået til eller fra. du kan søge i Exchange administratorens overvågningslog for disse overvågningsposter
-
-### <a name="communication-compliance"></a>Kommunikationsoverholdelse
-
-- [Vejledning til kommunikation med SIEM-løsninger](communication-compliance-siem.md) til integration af kommunikationsoverholdelse med SIEM-løsninger)
-
-### <a name="compliance-offerings"></a>Tilbud om overholdelse af angivne standarder
-
-- [MTCS (Multi-Tier Cloud Security)](/compliance/regulatory/offering-mtcs-singapore) Standard for Singapore-opdateringer til Dynamics 365-dækning
-- [Payment Card Industry (PCI)](/compliance/regulatory/offering-pci-dss) DSS-opdateringer (Data Security Standard) for SharePoint onlinedækning
-- Vejledning til den nye klientsoftware [i afsnit 508](/compliance/regulatory/offering-section-508-vpats)
-- [Retningslinjer for tilgængelighed af webindhold](/compliance/regulatory/offering-wcag-2-1) – vejledning til ny klientsoftware
-
-### <a name="compliance--service-assurance"></a>Overholdelse & service assurance
-
-- [Service assurance](/compliance/) kvartalsvise opdateringer af indholdsopdateringer for certificeringer og erklæringer om anvendelighed
-  - Ødelæggelse af databærende enheder
-  - DDOS-angreb
-
-### <a name="data-connectors"></a>Dataconnectors
-
-- [Arkivering af tredjepartsdata i Microsoft 365](archiving-third-party-data.md#data-connectors-in-the-us-government-cloud) dataconnectors fra CellTrust og 17a-4 LLC, der nu er tilgængelige i GCC organisationer i US Government-cloudmiljøet
-- [Konfiguration af en connector til arkivering af YouTube-data](archive-youtube-data.md) giver ny vejledning til denne funktion i en offentlig prøveversion.
-
-### <a name="ediscovery"></a>eDiscovery
-
-- [Brug KQL-editoren til at oprette en offentlig prøveversion af søgeforespørgsler](ediscovery-kql-editor.md) på en ny måde at oprette søgeforespørgsler på i Indholdssøgning, eDiscovery (Standard) og eDiscovery (Premium). KQL-editoren leverer automatisk fuldførelse af understøttede søgeegenskaber og -betingelser og viser lister over understøttede værdier for standardegenskaber og -betingelser. KQL-editoren giver også fejlregistrering og forslag til rettelser af potentielle fejl i søgeforespørgsler
-
-### <a name="information-barriers"></a>Informationsbarrierer
-
-- [Kom i gang med informationsbarrierer](information-barriers-policies.md#step-6-information-barriers-modes) Ny prøveversionsfunktion til informationsbarrieretilstande
-- [Informationsbarrierer med Microsoft Teams](/microsoftteams/information-barriers-in-teams) ny prøveversionsfunktion for informationsbarrierer
-- [Informationsbarrierer med OneDrive](/onedrive/information-barriers) ny prøveversionsfunktion for informationsbarrierer
-- [Informationsbarrierer med SharePoint Ny](/sharepoint/information-barriers) prøveversionsfunktion til informationsbarrierer
-
-### <a name="insider-risk-management"></a>Styring af insider-risiko
-
-- [Kom i gang med styring af insiderrisiko](insider-risk-management-configure.md#recommended-actions-preview) ny prøveversionsfunktion til at komme i gang med anbefalede handlinger
-- [Undersøg insiderrisikoaktiviteter](insider-risk-management-activities.md#get-help-managing-your-insider-risk-alert-queue) nye afsnit "Få hjælp til at administrere din insiderrisikobeskedkø"
-- [Kom i gang med indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#admin-notifications) ny prøveversionsfunktion for administratormeddelelser
-
-### <a name="retention-and-records-management"></a>Opbevarings- og datastyring
-- [Gennemgang af flere faser](disposition.md) er nu offentlig tilgængelig med nye [overvågningshændelser](search-the-audit-log-in-security-and-compliance.md#disposition-review-activities). Gennemsyn af flere faser i dispositionen kan du angive op til fem på hinanden følgende stadier af gennemgangen af dispositionen for en opbevaringsmærkat, og korrekturlæsere kan føje andre brugere til deres dispositionsgennemgangsfase. Du kan også tilpasse mailmeddelelser og påmindelser.
-- Private kanaler til [Teams opbevaringspolitikker](create-retention-policies.md#retention-policy-for-teams-locations) er nu offentligt tilgængelige.
-
-### <a name="sensitivity-labels"></a>Følsomhedsmærkater
-- [Samtidig redigering og AutoSave](sensitivity-labels-coauthoring.md) er nu offentlig tilgængelig for Windows (minimumversion af 2107 fra Current Channel eller Monthly Enterprise Channel) og macOS (minimumversion af 16.51).
-- Udrulning til Office apps, der bruger indbyggede mærkater: Standardindstillingen for mærkater understøtter nu eksisterende dokumenter samt nye dokumenter. Denne ændring i funktionsmåden giver paritet med Azure Information Protection Unified-mærkatklienten. Du kan få flere oplysninger om udrulningen pr. app og minimumversioner i [tabellen med funktioner](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) til Word, Excel og PowerPoint.
-- Objektbeholdermærkater understøtter nu [standardindstillingerne for delingslinks ved hjælp af avancerede indstillinger i PowerShell](sensitivity-labels-teams-groups-sites.md#configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings).
-- De [kapacitetstabeller](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) , der viser de minimumversioner, der understøttes for indbygget mærkning, har nu versioner for Current Channel, Monthly Enterprise Channel og Semi-Annual Enterprise Channel.
