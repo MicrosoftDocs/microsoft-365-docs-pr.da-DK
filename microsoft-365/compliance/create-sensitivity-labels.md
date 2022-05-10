@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Et krav til alle Microsoft Purview-Information Protection-løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: 7dc8cfc095167021df2cec093734ab9c1b101868
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: e35d6e317abc3fb32bb11a6bdf937f303212fc23
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286940"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302348"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
@@ -47,7 +47,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
     
     Hvis du ikke kan se denne indstilling med det samme, skal du først vælge **Vis alle**.
 
-2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte konfigurationen Ny følsomhedsmærkat: 
+2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte den nye konfiguration af følsomhedsmærkat: 
     
     ![Opret en følsomhedsmærkat.](../media/create-sensitivity-label-full.png)
 
@@ -70,7 +70,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 5. Gentag disse trin for at oprette flere mærkater. Men hvis du vil oprette en undermærkat, skal du først vælge den overordnede etiket og vælge **...** for **Flere handlinger** og derefter vælge **Tilføj undernavn**.
 
-6. Når du har oprettet alle de etiketter, du har brug for, skal du gennemse deres rækkefølge og om nødvendigt flytte dem op eller ned. Hvis du vil ændre rækkefølgen af en etiket, skal du vælge **...** for **Flere handlinger** og derefter vælge **Flyt op** eller **Flyt ned**. Du kan få flere oplysninger under [Mærkatprioritet (ordrespørgsmål)](sensitivity-labels.md#label-priority-order-matters) i oversigtsoplysningerne.
+6. Når du har oprettet alle de mærkater, du har brug for, kan du gennemse deres rækkefølge og om nødvendigt flytte dem op eller ned. Hvis du vil ændre rækkefølgen af en etiket, skal du vælge **...** for **Flere handlinger** og derefter vælge **Flyt op** eller **Flyt ned**. Du kan få flere oplysninger under [Mærkatprioritet (ordrespørgsmål)](sensitivity-labels.md#label-priority-order-matters) i oversigtsoplysningerne.
 
 Hvis du vil redigere en eksisterende etiket, skal du markere den og derefter vælge knappen **Rediger etiket** :
 
@@ -195,21 +195,21 @@ Du kan også bruge [Remove-Label](/powershell/module/exchange/remove-label) og [
 
 I et produktionsmiljø er det usandsynligt, at du skal fjerne følsomhedsmærkater fra en mærkatpolitik eller slette følsomhedsmærkater. Det er mere sandsynligt, at du skal udføre en eller en af disse handlinger i en indledende testfase. Sørg for at forstå, hvad der sker, når du udfører en af disse handlinger.
 
-Det er mindre risikabelt at fjerne en mærkat fra en mærkatpolitik end at slette den, og du kan altid føje den til en mærkatpolitik igen senere, hvis det er nødvendigt:
+Det er mindre risikabelt at fjerne en mærkat fra en mærkatpolitik end at slette den, og den kan altid tilføjes igen senere, hvis det er nødvendigt. Du kan ikke slette en etiket, hvis den stadig er i en mærkatpolitik.
 
-- Når du fjerner et navn fra en mærkatpolitik, så mærkaten ikke længere publiceres til de oprindeligt angivne brugere, kan brugerne ikke længere se, at mærkaten skal vælges i deres Office-app, næste gang mærkatpolitikken opdateres. Men hvis mærkaten er blevet anvendt på dokumenter eller mails, fjernes mærkaten ikke fra det pågældende indhold. Kryptering, der er anvendt af mærkaten, forbliver, og den underliggende beskyttelsesskabelon forbliver publiceret. 
-
-- For etiketter, der er fjernet, men tidligere er blevet anvendt på indhold, kan brugere, der bruger indbygget mærkat til Word, Excel og PowerPoint, stadig se det anvendte navnenavn på statuslinjen. På samme måde viser etiketter, der er fjernet, og som er anvendt på SharePoint websteder, stadig navnet på mærkaten i kolonnen **Følsomhed**.
+Når du fjerner en mærkat fra en mærkatpolitik, så mærkaten ikke længere publiceres til de oprindeligt angivne brugere, kan brugerne ikke længere se den mærkat, der skal vælges i deres Office apps, næste gang mærkatpolitikken opdateres. Hvis denne etiket allerede er anvendt, fjernes navnet ikke fra indholdet eller objektbeholderen. Brugere, der bruger indbygget mærkat i skrivebordsapps til Word, Excel og PowerPoint, kan f.eks. stadig se navnet på det anvendte navn på statuslinjen. En anvendt objektbeholderetiket fortsætter med at beskytte det Teams eller SharePoint websted.
 
 Når du til sammenligning sletter en etiket:
 
 - Hvis mærkaten anvendte kryptering, arkiveres den underliggende beskyttelsesskabelon, så tidligere beskyttet indhold stadig kan åbnes. På grund af denne arkiverede beskyttelsesskabelon kan du ikke oprette en ny mærkat med det samme navn. Selvom det er muligt at slette en beskyttelsesskabelon ved hjælp af [PowerShell](/powershell/module/aipservice/remove-aipservicetemplate), skal du ikke gøre dette, medmindre du er sikker på, at du ikke behøver at åbne indhold, der er krypteret med den arkiverede skabelon.
 
-- For skrivebordsapps: Mærkatoplysningerne i metadataene forbliver, men da det ikke længere er muligt at tilknytte et mærkat-id til navne, kan brugerne ikke se det anvendte navn, der vises (f.eks. på statuslinjen), så brugerne antager, at indholdet ikke er mærket. Hvis mærkaten anvendte kryptering, forbliver krypteringen, og når indholdet åbnes, får brugerne stadig vist navnet på og beskrivelsen af den nu arkiverede beskyttelsesskabelon.
+- For dokumenter, der er gemt i SharePoint eller OneDrive, og du har [aktiveret følsomhedsmærkater for Office filer](sensitivity-labels-sharepoint-onedrive-files.md): Når du åbner dokumentet i Office på internettet, kan du ikke se den mærkat, der er anvendt i appen, og navnet vises ikke længere i kolonnen **Følsomhed** i SharePoint. Hvis den slettede mærkat anvendte kryptering, og tjenesterne kan behandle det krypterede indhold, fjernes krypteringen. Egress handlinger fra disse tjenester resulterer i det samme resultat. Download, kopiér til, flyt til og åbn f.eks. med en Office desktop- eller mobilapp. Selvom mærkatoplysningerne forbliver i filens metadata, kan apps ikke længere knytte mærkat-id'et til et vist navn, så brugerne antager, at en fil ikke er mærket.
 
-- For Office på internettet: Brugerne kan ikke se navnet på mærkaten på statuslinjen eller i kolonnen **Følsomhed**. Navneoplysningerne i metadataene forbliver kun, hvis mærkaten ikke anvendte kryptering. Hvis mærkaten anvendte kryptering, og du har aktiveret [følsomhedsmærkater for SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md), fjernes mærkatoplysningerne i metadataene, og krypteringen fjernes. 
+- For dokumenter, der er gemt uden for SharePoint og OneDrive, eller du ikke har aktiveret følsomhedsmærkater for Office filer og for mails: Når du åbner indholdet, forbliver mærkatoplysningerne i metadataene, men uden navnetilknytningen for mærkat-id'et kan brugerne ikke se det anvendte mærkatnavn vist (f.eks. på statuslinjen for skrivebordsapps). Hvis den slettede mærkat anvendte kryptering, forbliver krypteringen, og brugerne kan stadig se navnet på og beskrivelsen af den nu arkiverede beskyttelsesskabelon.
 
-Når du fjerner en følsomhedsmærkat fra en mærkatpolitik eller sletter en følsomhedsmærkat, kan disse ændringer tage op til 24 timer at replikere til alle brugere og tjenester.
+- For objektbeholdere, f.eks. websteder i SharePoint og Teams: Etiketten fjernes, og de indstillinger, der er konfigureret med den pågældende mærkat, gennemtvinges ikke længere. Denne handling tager typisk mellem 48-72 timer for SharePoint websteder og kan være hurtigere i Teams og Microsoft 365-grupper.
+
+Som med alle mærkatændringer tager det tid at replikere til alle brugere og tjenester, hvis du fjerner en følsomhedsmærkat fra en mærkatpolitik eller sletter en følsomhedsmærkat.
 
 ## <a name="next-steps"></a>Næste trin
 

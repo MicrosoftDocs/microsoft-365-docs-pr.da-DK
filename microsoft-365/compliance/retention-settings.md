@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: 39c0258cb4b471e05bae24d0d35c708a42252219
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: ec7743c2e72016c606decb1346bdd558e40ae412
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285374"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302112"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -396,6 +396,8 @@ I slutningen af opbevaringsperioden vælger du, om indholdet skal slettes perman
 
 ![Siden Med indstillinger for opbevaring.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
 
+Som forklaret i næste afsnit har opbevaringsmærkater en anden mulighed. for at anvende en anden opbevaringsmærkat med sin egen opbevaringsperiode.
+
 Før du konfigurerer opbevaring, skal du først blive fortrolig med kapacitets- og lagergrænser for de respektive arbejdsbelastninger:
 
 - I forbindelse med SharePoint og OneDrive gemmes bevarede elementer i webstedets bibliotek for bevarelse af venteposition, som er inkluderet i webstedets lagerkvote. Du kan få flere oplysninger i [Administrer grænser for webstedslager](/sharepoint/manage-site-collection-storage-limits) i dokumentationen til SharePoint.
@@ -403,6 +405,55 @@ Før du konfigurerer opbevaring, skal du først blive fortrolig med kapacitets- 
 - Hvis du vil have Exchange, Teams og Yammer, hvor gemte meddelelser gemmes i postkasser, [skal du se Exchange Online grænser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits) og aktivere [automatisk udvidelse af arkivering](autoexpanding-archiving.md).
     
     I ekstreme tilfælde, hvor en stor mængde mail slettes inden for en kort periode, enten af brugere eller automatisk fra politikindstillinger, skal du muligvis også konfigurere Exchange til oftere at flytte elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i deres arkivpostkasse. Du kan finde en trinvis vejledning under [Forøg kvoten for genoprettelige elementer for postkasser i venteposition](increase-the-recoverable-quota-for-mailboxes-on-hold.md).
+
+#### <a name="relabeling-at-the-end-of-the-retention-period"></a>Genmærkning ved slutningen af opbevaringsperioden
+
+> [!NOTE]
+> Denne indstilling udrulles i øjeblikket som prøveversion og kan ændres.
+
+Når du konfigurerer en opbevaringsmærkat til automatisk at anvende en anden opbevaringsmærkat i slutningen af opbevaringsperioden, er elementet underlagt opbevaringsindstillingerne for det nyligt valgte opbevaringsmærkat. Med denne indstilling kan du automatisk ændre opbevaringsindstillingerne for elementet.
+
+Du kan ændre erstatningsmærkaten, når du har oprettet og gemt den primære opbevaringsmærkat. For elementer, der allerede har den primære opbevaringsmærkat anvendt og inden for den konfigurerede opbevaringsperiode, synkroniseres ændringen af erstatningsmærkaten med disse elementer. Som med andre navneændringer kan der gå op til 7 dage for denne synkroniseringsperiode.
+
+For erstatningsmærkaten vælger du typisk en etiket, der har en længere opbevaringsperiode end den primære opbevaringsmærkat. Det er dog ikke nødvendigvis tilfældet på grund af mærkatindstillingen, hvornår opbevaringsperioden skal starte. Den primære opbevaringsmærkat er f.eks. konfigureret til at starte opbevaringsperioden, når elementet oprettes, og erstatningsmærkaten starter opbevaringsperioden, når den er mærket, eller når der opstår en hændelse.
+
+Hvis der også er en ændring i, om etiketten [markerer elementet som en post eller en regelmæssigt post](declare-records.md), kan erstatningsopbevaringsmærkaten også ændre [begrænsningerne for, hvilken handling der er tilladt eller blokeret](records-management.md#records) for det pågældende element.
+
+##### <a name="relabeling-example-configuration"></a>Eksempel på konfiguration med genmærkning
+
+Du kan oprette og konfigurere en opbevaringsmærkat for et krav til overholdelse af branchereglerne for at bevare indhold i tre år, efter at det er oprettet, og markere elementet som en post. Når denne mærkat anvendes, kan brugerne ikke slette elementet fra deres app, fordi det er en af begrænsningerne for en post.
+
+I slutningen af de tre år vil du automatisk bevare indholdet i to år mere på grund af interne politikker for overholdelse af angivne standarder, men det er ikke nødvendigt at markere det som en post med de begrænsninger, som denne konfiguration gælder for.
+
+Hvis du vil fuldføre konfigurationen, skal du vælge etiketindstillingen for at ændre mærkaten i slutningen af opbevaringsperioden og vælge en etiket, der bevarer indhold i fem år, efter at indholdet blev oprettet, og som ikke markerer elementet som en post. 
+
+Med disse sammenkædede indstillinger kan brugerne slette elementet fra deres app efter tre år, men det forbliver tilgængeligt for eDiscovery-søgninger i fem år.
+
+##### <a name="considerations-for-the-relabeling-option"></a>Overvejelser i forbindelse med indstillingen til genmærkning
+
+- Du kan ikke angive en lovmæssig post igen, men erstatningsmærkaten kan konfigureres til at markere indholdet som en lovmæssig post.
+
+- Du kan ikke slette en opbevaringsmærkat, der er valgt som erstatningsmærkat.
+
+- Du kan vælge en erstatningsmærkat, der er konfigureret til at anvende en anden erstatningsmærkat. Der er ingen grænse for, hvor mange erstatningsnavne et element kan have.
+
+- Hvis erstatningsmærkaten markerer elementet som en post eller lovmæssig post, men ikke kan anvendes, fordi filen i øjeblikket er tjekket ud, gøres der en ny prøve på relabelprocessen, når filen tjekkes ind igen, eller udtjekningen kasseres.
+
+- Som et kendt problem i denne prøveversion er en erstatningsmærkat kun synlig for brugere i Outlook, når denne mærkat er inkluderet i en publiceret etiketpolitik for den samme placering, eller den er konfigureret til kun at blive slettet.
+
+##### <a name="configuration-paths-for-relabeling"></a>Konfigurationsstier til genmærkning
+
+Indstillingen til genmærkning i slutningen af opbevaringsperioden har to konfigurationsstier, når du opretter en opbevaringsmærkat:
+
+- Hvis du først har brug for at bevare indhold med den primære etiket (mest almindelige): På siden **Definer etiketindstillinger** skal du vælge **Bevar elementer på ubestemt tid eller for en bestemt periode** og angive opbevaringsperioden. Vælg derefter **Skift mærkatVælg** >  **en etiket** på siden **Vælg, hvad der sker efter opbevaringsperioden**.
+
+- Hvis du ikke behøver at bevare indholdet med den primære etiket i første omgang: På siden **Definer etiketindstillinger** skal du vælge **Gennemtving handlinger efter en bestemt periode**, angive opbevaringsperioden og derefter vælge **Skift mærkatVælg** >  **en etiket**.
+
+I begge tilfælde skal erstatningsmærkaten allerede oprettes, men den skal ikke medtages i en eksisterende mærkatpolitik.
+
+![Skift etiketindstillingen efter opbevaringsperioden.](../media/change-label-option.png)
+
+Alternativt kan dispositionslæsere manuelt vælge en erstatningsmærkat som en del af [processen til gennemgang af fordeling](disposition.md#disposition-reviews) , hvis etiketindstillingen **Start en dispositionsgennemsyn** er valgt på siden **Vælg, hvad der sker efter opbevaringsperioden** .
 
 ### <a name="deleting-content-thats-older-than-a-specific-age"></a>Sletning af indhold, der er ældre end en bestemt alder
 

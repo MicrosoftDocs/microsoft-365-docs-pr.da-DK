@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 6fd2f56d6876b6a3832e869767880890486551db
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: c8ac850c77c97cbcc313108ffc74e05aa1735fde
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286918"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302217"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
@@ -101,9 +101,11 @@ I modsætning til opbevaringspolitikker følger opbevaringsindstillinger fra opb
 
 - Brug [klassificeringer, der kan oplæres](classifier-learn-about.md) , til at identificere indhold, der skal navngives.
 
-- Anvend et standardnavn til SharePoint dokumenter.
+- Anvend et standardnavn for SharePoint elementer eller Exchange meddelelser.
 
-- Understøttelse [af gennemgang af fordeling](./disposition.md) for at gennemse indholdet, før det slettes permanent.
+- Understøttede handlinger i slutopbevaringsperioden:
+    - [Dispositionsgennemgang](./disposition.md)  for at gennemse indholdet, før det slettes permanent.
+    - Anvend automatisk en anden opbevaringsmærkat
 
 - Markér indholdet som en [post](records-management.md#records) som en del af etiketindstillingerne, og hav altid [bevis for fordeling](disposition.md#disposition-of-records) , når indhold slettes ved slutningen af opbevaringsperioden.
 
@@ -219,14 +221,18 @@ For standardopbevaringsmærkater (de markerer ikke elementer som en [post eller 
 
 - Når der allerede er anvendt en opbevaringsmærkat for indhold, fjernes eller erstattes den eksisterende mærkat ikke automatisk af en anden opbevaringsmærkat med en mulig undtagelse: Den eksisterende mærkat blev anvendt som standardetiket. Når du bruger et standardnavn, er der nogle scenarier, hvor det kan erstattes af et andet standardnavn eller fjernes automatisk.
 
-  Du kan finde flere oplysninger om funktionsmåden for mærkater, når den anvendes ved hjælp af et standardnavn:
-
-  - Standardnavn for SharePoint: [Funktionsmåde for navne, når du bruger en standardetiket til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-  - Standardnavn til Outlook: [Anvendelse af en standardopbevaringsmærkat på en Outlook mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- Når der allerede er anvendt en opbevaringsmærkat for indhold, fjernes eller erstattes den eksisterende mærkat ikke automatisk af en anden opbevaringsmærkat med to mulige undtagelser: 
+    
+    - Den eksisterende mærkat er konfigureret til automatisk at anvende en anden opbevaringsmærkat i slutningen af opbevaringsperioden.
+    - Den eksisterende etiket blev anvendt som en standardetiket. Når du bruger et standardnavn, er der nogle scenarier, hvor det kan erstattes af et andet standardnavn eller fjernes automatisk. 
+        
+        Du kan finde flere oplysninger om funktionsmåden for mærkater, når den anvendes ved hjælp af et standardnavn:
+        - Standardnavn for SharePoint: [Funktionsmåde for navne, når du bruger en standardetiket til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+        - Standardnavn til Outlook: [Anvendelse af en standardopbevaringsmærkat på en Outlook mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 
 - Hvis der er flere politikker for automatisk anvendelse af mærkater, der kan anvende en opbevaringsmærkat, og indhold opfylder betingelserne i flere politikker, anvendes opbevaringsmærkaten for den ældste politik for automatisk anvendelse af mærkater (efter oprettelsesdato).
 
-Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig post, ændres disse mærkater aldrig automatisk. Det er kun administratorer af objektbeholderen, der manuelt kan ændre eller fjerne opbevaringsmærkater, der markerer elementer som en post, men ikke lovmæssige poster. Du kan få flere oplysninger under [Sammenlign begrænsninger for, hvilke handlinger der er tilladt eller blokeret](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig post, ændres disse mærkater aldrig automatisk i løbet af deres konfigurerede opbevaringsperiode. Det er kun administratorer af objektbeholderen, der manuelt kan ændre eller fjerne opbevaringsmærkater, der markerer elementer som en post, men ikke lovmæssige poster. Du kan få flere oplysninger under [Sammenlign begrænsninger for, hvilke handlinger der er tilladt eller blokeret](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
 
 #### <a name="monitoring-retention-labels"></a>Overvågning af opbevaringsmærkater
 
@@ -254,6 +260,7 @@ Brug følgende tabel til at hjælpe dig med at identificere, om du vil bruge en 
 |Opbevaringsindstillinger, der kan bevare og derefter slette, kun bevare eller slette |Ja |Ja |
 |Understøttede arbejdsbelastninger: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupper <br />- Skype for Business <br />- Teams<br />- Yammer|<br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja | <br /> Ja, undtagen offentlige mapper <br /> Ja <br /> Ja <br /> Ja <br /> Nej <br /> Nej <br /> Nej |
 |Opbevaring anvendes automatisk | Ja | Ja |
+|Anvend automatisk forskellige opbevaringsindstillinger i slutningen af opbevaringsperioden | Nej | Ja |
 |Opbevaring anvendt på baggrund af betingelser <br /> – følsomme infotyper, KQL-forespørgsler og -nøgleord, klassificeringer, der kan oplæres, vedhæftede filer i cloudmiljøet| Nej | Ja |
 |Opbevaring anvendes manuelt | Nej | Ja |
 |Slutbrugerinteraktion | Nej | Ja |

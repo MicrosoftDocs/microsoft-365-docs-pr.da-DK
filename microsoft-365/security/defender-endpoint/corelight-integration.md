@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: bf3095b9178b4ff2e71d4ee5f652d9316f233746
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a3d7548dc71c3a9d588d2a77fae5c4ed71f139f4
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664584"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302309"
 ---
 # <a name="enable-corelight-data-integration"></a>Aktiver Integration af Corelight-data
 
@@ -67,52 +67,41 @@ Hvis du vil aktivere Corelight-integrationen, skal du udføre følgende trin:
 ### <a name="step-3-configure-your-corelight-appliance-to-send-data-to-microsoft-365-defender"></a>Trin 3: Konfigurer corelight-enheden til at sende data til Microsoft 365 Defender
 
 > [!NOTE]
->  Integrationen vil være offentlig i Corelight Sensor software v24 og nyere. 
-
-Hvis du vil have vist et eksempel i v23 eller v22.1, skal du udføre `corelight-client configuration update --enable.adfiot 1` for at aktivere konfigurationsafsnittet i den grafiske brugergrænseflade.
-
-Derudover kræver den grafiske brugergrænsefladevalidering, at der er konfigureret en mægler i konfigurationsafsnittet på alle v23-udgivelser.  Den mægler, du angiver, er påkrævet, men bruges faktisk ikke. Angiv `127.0.0.1:1234` i feltet _kafka broker_ for at sikre, at valideringen lykkes, før du følger nedenstående trin for at aktivere afsendelse af data til Microsoft 365 Defender.
-
-> [!NOTE]
+> Integrationen er tilgængelig i Corelight Sensor software v24 og nyere.
+> 
 > Du skal bruge internetforbindelse, for at din sensor kan nå både Defender- og Corelight-cloudtjenesterne, for at løsningen kan fungere.
 
-#### <a name="enabling-in-the-corelight-sensor-gui"></a>Aktivering i den grafiske brugergrænseflade for Corelight-sensoren
+#### <a name="enable-the-integration-in-the-corelight-web-interface"></a>Aktivér integration i Corelight-webgrænsefladen
 
-1. I konfigurationsafsnittet Corelight Sensor GUI skal du vælge **Sensoreksport**\>.
-2. Gå til **EKSPORTÉR TIL KAFKA** på listen, og vælg skift for at slå den til.
+1. I corelight-webgrænsefladen skal du navigere til **Sensoreksport**\>.
 
-   :::image type="content" source="images/exporttokafka.png" alt-text="Kafka-eksporten" lightbox="images/exporttokafka.png":::
+   :::image type="content" source="images/exporttodefender.png" alt-text="Kafka-eksporten" lightbox="images/exporttodefender.png":::
 
-3. Slå derefter **EKSPORTÉR TIL AZURE DEFENDER FOR IOT til** , og angiv dit lejer-id, som er angivet i trin 1, i feltet LEJER-id.
+2. Aktivér **Eksportér til Microsoft Defender**.
+3. Angiv dit Lejer-id til Microsoft 356 Defender.
+4. Du kan eventuelt:
+    - angiv **Zeek Logs til Exclude**. Det minimale sæt logge, du skal inkludere, er: dns, conn, files, http, ssl, ssh, x509, snmp, smtp, ftp, sip, dhcp og notice.
+    - vælg at oprette et **Microsoft Defender-logfilter**.
+5. Vælg **Anvend ændringer**.
 
-   :::image type="content" source="images/exporttodiot.png" alt-text="Den ikke-eksporterede" lightbox="images/exporttodiot.png":::
+#### <a name="enable-the-integration-in-the-corelight-client"></a>Aktivér integrationen i corelight-client
 
-4. Vælg **Anvend ændringer**.
+1. Aktivér **Eksportér til Microsoft Defender** ved hjælp af følgende kommando i corelight-client:
 
-   :::image type="content" source="images/corelightapply.png" alt-text="Ikonet Anvend ændringer" lightbox="images/corelightapply.png":::
+    ``` command
+    corelight-client configuration update \
+    --bro.export.defender.enable True
+    ```
 
-> [!NOTE]
-> Konfigurationsindstillinger i Kafka (undtagen logudeladelse og filtre) bør ikke ændres. Eventuelle ændringer, der er foretaget, ignoreres.
+2. Angiv dit lejer-id
 
-#### <a name="enabling-in-the-corelight-client"></a>Aktivering i corelight-client
+3. Du kan eventuelt bruge følgende kommando til at udelade bestemte logge eller til at oprette et Microsoft Defender-logfilter. Det minimale sæt logge, du skal inkludere, er: dns, conn, files, http, ssl, ssh, x509, snmp, smtp, ftp, sip, dhcp og notice.
 
-Du kan aktivere **EKSPORTÉR TIL KAFKA** og **EKSPORTÉR TIL AZURE DEFENDER FOR IOT** ved hjælp af følgende kommando i corelight-client:
-
-`corelight-client configuration update --bro.export.kafka.defender.enable true --bro.export.kafka.defender.tenant\_id <your tenant>`.
-
-> [!IMPORTANT]
-> Hvis du allerede bruger Kafka-eksport, skal du kontakte Corelight Support for at få en alternativ konfiguration.
-
-Sådan konfigurerer du kun afsendelse af det minimale sæt logge:
-
-1. I gui'en Corelight Sensor skal du gå til afsnittet Kafka
-2. Gå til **Zeek-logfiler for at udelade**
-3. Markér **alle**
-4. Vælg derefter **x** ud for følgende logge for at sikre, at de fortsætter med at gå til Microsoft:  
-    `dns  conn  files  http  ssl  ssh  x509  snmp  smtp  ftp  sip  dhcp  notice`
-5. Vælg **Anvend ændringer**
-
-Listen over logfiler, der overføres til Microsoft, udvides muligvis over tid.
+   ``` command
+     corelight-client configuration update \
+    --bro.export.defender.exclude=<logs_to_exclude> \
+    --bro.export.defender.filter=<logs_to_filter>
+   ```
 
 ## <a name="see-also"></a>Se også
 

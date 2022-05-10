@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 72d4f64ca00defe26ddaff7fe27d641cb65f13be
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: c6e2b52c9dbde60dfb554dd92c8a0cae2ba05ced
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130511"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302282"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -74,8 +74,8 @@ Hvis du vil oprette og konfigurere politikker til bekæmpelse af spam, skal du s
 |**Testtilstand** (_TestModeAction_)|**Ingen**|**Ingen**|**Ingen**|Denne indstilling er en del af ASF. Du kan få flere oplysninger i afsnittet [om asf-indstillinger i politikker til bekæmpelse af spam](#asf-settings-in-anti-spam-policies) i denne artikel.|
 |**Handlinger**||||Uanset hvor du vælger **Karantænemeddelelse**, er feltet **Vælg karantænepolitik** tilgængeligt. Karantænepolitikker definerer, hvad brugerne må gøre for at sætte meddelelser i karantæne. <br/><br/> Når du opretter en ny politik til bekæmpelse af spam, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der blev sat i karantæne af den pågældende dom (AdminOnlyAccessPolicy for **phishing med høj genkendelsessikkerhed**. DefaultFullAccessPolicy for alt andet). <br/><br/> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer mere restriktive eller mindre restriktive funktioner for brugerne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
 |**Spamregistreringshandling** <br/><br/> _Spamhandling_|**Flyt meddelelse til mappen Uønsket mail** <br/><br/> `MoveToJmf`|**Flyt meddelelse til mappen Uønsket mail** <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
-|**Registreringshandling for spam med høj genkendelsessikkerhed** <br/><br/> _HighConfidenceSpamAction_|**Karantænemeddelelse** <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
-|**Phishing-registreringshandling** <br/><br/> _PhishSpamAction_|**Karantænemeddelelse** <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
+|**Registreringshandling for spam med høj genkendelsessikkerhed** <br/><br/> _HighConfidenceSpamAction_|**Flyt meddelelse til mappen Uønsket mail** <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
+|**Phishing-registreringshandling** <br/><br/> _PhishSpamAction_|**Flyt meddelelse til mappen Uønsket mail**<sup>\*</sup> <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`|<sup>\*</sup> Standardværdien er **Flyt meddelelse til mappen Uønsket mail** i standardpolitikken for spam og i nye politikker til bekæmpelse af spam, som du opretter i PowerShell. Standardværdien er **Karantænemeddelelse** i nye politikker til bekæmpelse af spam, som du opretter på Microsoft 365 Defender portalen.|
 |**Handling til registrering af phishing med høj genkendelsessikkerhed** <br/><br/> _HighConfidencePhishAction_|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
 |**Masseregistreringshandling** <br/><br/> _BulkSpamAction_|**Flyt meddelelse til mappen Uønsket mail** <br/><br/> `MoveToJmf`|**Flyt meddelelse til mappen Uønsket mail** <br/><br/> `MoveToJmf`|**Karantænemeddelelse** <br/><br/> `Quarantine`||
 |**Behold spam i karantæne i så mange dage** <br/><br/> _QuarantineRetentionPeriod_|15 dage<sup>\*</sup>|30 dage|30 dage|<sup>\*</sup> Standardværdien er 15 dage i standardpolitikken for spam og i nye politikker mod spam, som du opretter i PowerShell. Standardværdien er 30 dage i nye politikker mod spam, som du opretter på Microsoft 365 Defender portalen. <br/><br/> Denne værdi påvirker også meddelelser, der er sat i karantæne af politikker til bekæmpelse af phishing. Du kan få flere oplysninger under [Karantænelagrede mails i EOP](quarantine-email-messages.md).|
@@ -163,6 +163,8 @@ Hvis du vil oprette og konfigurere politikker for antimalware, skal du se [Konfi
 
 Du kan få flere oplysninger om disse indstillinger under [Spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings). Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer anti-phishing-politikker i EOP](configure-anti-phishing-policies-eop.md).
 
+Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis første kontakt sikkerhedstip** har ingen afhængighed af spoof-indstillinger.
+
 |Navn på sikkerhedsfunktion|Standard|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Tærskel for phishing & beskyttelse**|||||
@@ -224,18 +226,6 @@ Du kan få flere oplysninger om disse indstillinger [under Repræsentationsindst
 #### <a name="eop-anti-phishing-policy-settings-in-microsoft-defender-for-office-365"></a>Indstillinger for EOP-politik til anti-phishing i Microsoft Defender for Office 365
 
 Dette er de samme indstillinger, som er tilgængelige i [politikindstillinger for anti-spam i EOP](#eop-anti-spam-policy-settings).
-
-Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis første kontakt sikkerhedstip** har ingen afhængighed af spoof-indstillinger.
-
-|Navn på sikkerhedsfunktion|Standard|Standard|Strenge|Kommenter|
-|---|:---:|:---:|:---:|---|
-|**Tærskel for phishing & beskyttelse**|||||
-|**Aktivér spoof intelligence** <br/><br/> _EnableSpoofIntelligence_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`||
-|**Handlinger**|||||
-|**Hvis meddelelsen registreres som spoof** <br/><br/> _AuthenticationFailAction_|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <br/><br/> `MoveToJmf`|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <br/><br/> `MoveToJmf`|**Sæt meddelelsen i karantæne** <br/><br/> `Quarantine`|Denne indstilling gælder for spoofede afsendere, der automatisk blev blokeret som vist i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt blokeret på [listen over tilladte/blokerede lejere](tenant-allow-block-list.md). <br/><br/> Hvis du vælger **Sæt meddelelsen i karantæne**, er feltet **Anvend karantænepolitik** tilgængeligt for at vælge den karantænepolitik, der definerer, hvad brugerne har tilladelse til at gøre for karantænemeddelelser. Når du opretter en ny anti-phishing-politik, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for spoof-karantænemeddelelser (DefaultFullAccessPolicy). <br/><br/> Administratorer kan oprette og vælge en brugerdefineret karantænepolitik, der definerer, hvad modtagerne har tilladelse til at gøre ved disse meddelelser i karantæne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
-|**Vis første kontakt sikkerhedstip** <br/><br/> _EnableFirstContactSafetyTips_|Ikke markeret <br/><br/> `$false`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
-|**Vis (?) for ikke-godkendte afsendere for spoof** <br/><br/> _EnableUnauthenticatedSender_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificerede forfalskede afsendere. Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|**Vis mærket "via"** <br/><br/> _EnableViaTag_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . <br/><br/> Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 
 ### <a name="safe-attachments-settings"></a>Pengeskab indstillinger for vedhæftede filer
 

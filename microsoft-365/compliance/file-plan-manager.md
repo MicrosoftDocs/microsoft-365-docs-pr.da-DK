@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 5ed2ccfa1c26efc8e55f048e24de005701417576
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d025dc7637b9c7b494a5bff3447fe4429ba24701
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286072"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302195"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
@@ -221,9 +221,11 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 
 Navneindstillinger understøttes ikke i øjeblikket for import:
 
-- Gennemgang af fordeling i flere faser: Selvom du kan konfigurere indstillingerne for en enkelt fase for gennemgang af disposition, når du importerer opbevaringsmærkater med en skabelon, kan du ikke angive yderligere korrekturfaser. Konfigurer i stedet disse i Overholdelsescenter, når importen er fuldført.
+- Gennemgang af fordeling i flere faser: Selvom du kan konfigurere indstillingerne for en enkelt fase for gennemgang af disposition, når du importerer opbevaringsmærkater med en skabelon, kan du ikke angive yderligere korrekturfaser. Konfigurer i stedet disse på overholdelsesportalen, når importen er fuldført.
 
-- Lås denne post op som standard (udrulles i prøveversion): Denne indstilling er ikke tilgængelig i den skabelon, der skal importeres, og du kan ikke vælge denne indstilling i overholdelsescenter, når importen er fuldført.
+- Lås denne post op som standard (udrulles i prøveversion): Denne indstilling er ikke tilgængelig i den skabelon, der skal importeres, og du kan ikke vælge denne indstilling på overholdelsesportalen, når importen er fuldført.
+
+- Erstatningsmærkat (udrulles i prøveversion): Denne indstilling er ikke tilgængelig i skabelonen, der skal importeres, men du kan vælge denne indstilling på overholdelsesportalen, når importen er fuldført.
 
 
 ## <a name="next-steps"></a>Næste trin
