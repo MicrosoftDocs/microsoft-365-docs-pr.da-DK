@@ -577,6 +577,8 @@
   items:
     - name: Styr dine data
       href: manage-data-governance.md
+    - name: Udrul en datastyringsløsning
+      href: data-governance-solution.md
     - name: Forstå opbevaring og sletning af data
       items:
         - name: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
