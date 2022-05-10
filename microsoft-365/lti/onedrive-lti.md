@@ -13,14 +13,18 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Opret og begrader opgaver, byg og organiser kursusindhold, og samarbejd om filer i realtid med den nye Microsoft OneDrive Learning Tools Interoperability App for Canvas.
-ms.openlocfilehash: 5de027c9d7606ebe546a8dc8e087b91da7f0400e
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 8a4e3a1fc1b1d19bed093d5e72bf66e1afb2f591
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824558"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285560"
 ---
 # <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>Integrer Microsoft OneDrive LTI med lærred
+
+Denne artikel henvender sig til it-administratorer på uddannelsesområdet, som skal konfigurere Microsoft OneDrive LTI for Canvas.
+
+Hvis du vil have en vejledning til undervisere om, hvordan du bruger OneDrive LTI på lærredet, skal [du se Brug Microsoft OneDrive med dit LMS](https://support.microsoft.com/topic/use-microsoft-onedrive-with-your-lms-c2ddeb48-f695-4267-94f2-14f7ff1b7bdd).
 
 Integration af Microsoft OneDrive LTI med lærred er en proces med to trin. Det første trin aktiverer Microsoft OneDrive på lærredet, og det andet trin gør Microsoft OneDrive LTI tilgængelig i lærredskurser.
 
@@ -76,7 +80,10 @@ Integration af Microsoft OneDrive LTI med lærred er en proces med to trin. Det 
    :::image type="content" source="media/OneDrive-LTI-20.png" alt-text="LTI-lejerregistreringssiden, der viser JSON-teksten og tekstfeltet, som nøglen skal kopieres til.":::
 
 9. Gennemse og gem dine ændringer. Der vises en meddelelse ved vellykket registrering.
+
 10. Dine registreringsoplysninger kan også gennemses ved at vælge knappen **Vis LTI-lejere** på startsiden.
+
+Fremtidige udgivelser kan kræve yderligere administratorsamtykke. I disse tilfælde skal du kun gentage trin 1 og 2.
 
 ## <a name="enable-microsoft-onedrive-lti-in-canvas-courses"></a>Aktivér Microsoft OneDrive LTI i lærredskurser
 

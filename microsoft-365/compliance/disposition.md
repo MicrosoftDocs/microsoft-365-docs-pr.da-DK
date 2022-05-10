@@ -1,5 +1,5 @@
 ---
-title: Disposition af indhold
+title: Fordeling af indhold
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,51 +16,53 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Overvåge og administrere afhændelse af indhold, når du bruger en dispositionsgennemgang, eller elementer, der er markeret som poster, slettes automatisk i overensstemmelse med de indstillinger, du har konfigureret.
-ms.openlocfilehash: dbc713c665367bb973fb8faded24015ad6c2d5c3
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+description: Overvåg og administrer bortskaffelsen af indhold, når du bruger en dispositionsgennemgang, eller elementer, der er markeret som poster, slettes automatisk i henhold til de indstillinger, du har konfigureret.
+ms.openlocfilehash: c8a9db05367dd7007ad164bbfe95e4a190253f85
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594812"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285122"
 ---
-# <a name="disposition-of-content"></a>Disposition af indhold
+# <a name="disposition-of-content"></a>Fordeling af indhold
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Brug siden **Disposition** fra **Datastyring** i Microsoft 365 Overholdelsescenter til at administrere dispositionsvurderinger og få vist metadataene for poster [](records-management.md#records), der er blevet slettet automatisk i slutningen af deres opbevaringsperiode.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Brug siden **Disposition** fra **Datastyring** i Microsoft Purview-overholdelsesportalen til at administrere dispositionsgennemgange og få vist metadataene for [poster](records-management.md#records) , der automatisk er blevet slettet i slutningen af deres opbevaringsperiode.
 
 ## <a name="prerequisites-for-viewing-content-dispositions"></a>Forudsætninger for visning af indholdsdispositioner
 
-Hvis du vil administrere dispositionsvurderinger og bekræfte, at poster er blevet slettet, skal du have tilstrækkelige tilladelser, og overvågning skal være aktiveret. Vær også opmærksom på eventuelle [begrænsninger](retention-limits.md#maximum-number-of-items-for-disposition) for disposition.
+Hvis du vil administrere dispositionsgennemgange og bekræfte, at poster er blevet slettet, skal du have de nødvendige tilladelser, og overvågning skal være aktiveret. Vær også opmærksom på eventuelle [begrænsninger](retention-limits.md#maximum-number-of-items-for-disposition) for fordeling.
 
 ### <a name="permissions-for-disposition"></a>Tilladelser til disposition
 
-For at få adgang **til fanen Disposition** i Microsoft 365 Overholdelsescenter skal brugere have rollen **Dispositionsstyring**. Fra december 2020 er denne rolle nu inkluderet i **standardrollegruppen** Datastyring.
+Brugerne skal have rollen Dispositionsstyring for at få adgang til fanen **Disposition** på Microsoft Purview-overholdelsesportalen. Fra december 2020 er denne rolle nu inkluderet i standardrollegruppen **Datastyring** .
 
 > [!NOTE]
-> Som standard tildeles en global administrator ikke rollen **dispositionsstyring** . 
+> En global administrator tildeles som standard ikke rollen **Dispositionsstyring** . 
 
-Hvis du kun vil give brugerne de tilladelser, de skal bruge til gennemgang af dispositioner, uden at give dem tilladelse til at få vist og konfigurere andre funktioner til opbevaring og datastyring, skal du oprette en brugerdefineret rollegruppe (f.eks. kaldet "Dispositions reviewere") og tildele denne gruppe rollen **Dispositionsstyring** .
+Hvis du kun vil give brugerne de tilladelser, de har brug for til dispositionsgennemgange, uden at tildele dem tilladelser til at få vist og konfigurere andre funktioner til opbevaring og datastyring, skal du oprette en brugerdefineret rollegruppe (f.eks. kaldet "Disposition Reviewers") og tildele denne gruppe rollen **Dispositionsstyring** .
 
-Du kan finde en vejledning til at føje brugere til standardrollerne eller oprette dine egne [rollegrupper under Tilladelser i Microsoft 365 Overholdelsescenter](microsoft-365-compliance-center-permissions.md).
+Du kan finde oplysninger om, hvordan du føjer brugere til standardrollerne eller opretter dine egne rollegrupper, [under Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md).
 
 Derudover:
 
-- Hvis du vil have vist indholdet af elementer under dispositionsprocessen, skal du føje brugere til **rollegruppen Indholdsvisning i Indholdsoversigt** . Hvis brugerne ikke har tilladelser fra denne rollegruppe, kan de stadig vælge en handling til dispositionsgennemsyn for at fuldføre dispositionsgennemsynet, men de skal gøre det uden at kunne se elementets indhold fra minivisningsruden i overholdelsescenteret.
+- Hvis du vil have vist indholdet af elementer under fordelingsprocessen, skal du føje brugere til rollegruppen **Indholdsfremviser i Indholdsoversigt** . Hvis brugerne ikke har tilladelserne fra denne rollegruppe, kan de stadig vælge en dispositionsgennemsynshandling for at fuldføre dispositionsgennemgangen, men de skal gøre det uden at kunne få vist elementets indhold fra ruden med minivisning i Microsoft Purview-overholdelsesportalen.
 
-- Som standard får hver person, der får adgang til **siden Disposition** , kun vist elementer, som de er tildelt til at gennemgå. For at en datastyringsadministrator kan se alle elementer, der er tildelt til alle brugere, og alle opbevaringsnavne, der er konfigureret til dispositionsgennemsyn:  >  Gå til Indstillinger for datastyringDisposition for at vælge og derefter aktivere en mailaktiveret sikkerhedsgruppe, der indeholder administratorkontiene.
+- Hver person, der får adgang til siden **Disposition** , kan som standard kun se de elementer, de er tildelt til gennemsyn. For at en administrator af datastyring kan se alle elementer, der er tildelt alle brugere, og alle opbevaringsmærkater, der er konfigureret til gennemgang af disposition: Naviger til **indstillinger for** >  **datastyringFøj** for at vælge og derefter aktivere en mailaktiveret sikkerhedsgruppe, der indeholder administratorkontiene.
     
-    Microsoft 365 grupper og sikkerhedsgrupper, der ikke er mailaktiverede, understøtter ikke denne funktion og vises ikke på listen for at vælge den. Hvis du vil oprette en ny mailaktiveret sikkerhedsgruppe, skal du bruge linket til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration til at</a> oprette den nye gruppe. 
+    Microsoft 365 grupper og sikkerhedsgrupper, der ikke er mailaktiverede, understøtter ikke denne funktion og vises ikke på listen for at vælge. Hvis du har brug for at oprette en ny mailaktiveret sikkerhedsgruppe, skal du bruge linket til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> til at oprette den nye gruppe. 
     
     > [!IMPORTANT]
-    > Når du har aktiveret gruppen, kan du ikke ændre den i Overholdelsescenter. Se næste afsnit for at finde ud af, hvordan du aktiverer en anden gruppe ved hjælp af PowerShell.
+    > Når du har aktiveret gruppen, kan du ikke ændre den på Microsoft Purview-overholdelsesportalen. I næste afsnit kan du se, hvordan du aktiverer en anden gruppe ved hjælp af PowerShell.
 
-- Indstillingen **Indstillinger for datastyring** er kun synlig for administratorer af datastyring. 
+- Indstillingen **Indstillinger for datastyring** er kun synlig for administratorer af postadministration. 
 
-#### <a name="enabling-another-security-group-for-disposition"></a>Aktivering af en anden sikkerhedsgruppe til disposition
+#### <a name="enabling-another-security-group-for-disposition"></a>Aktivering af en anden sikkerhedsgruppe til fordeling
 
-Når du har aktiveret en sikkerhedsgruppe til disposition fra  indstillingerne for datastyring i Microsoft 365 Overholdelsescenter, kan du ikke deaktivere denne tilladelse for gruppen eller erstatte den valgte gruppe i overholdelsescenteret. Du kan dog aktivere en anden mailaktiveret sikkerhedsgruppe ved hjælp [af cmdlet'en Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage) .
+Når du har aktiveret en sikkerhedsgruppe til fordeling fra **indstillingerne for datastyring** på Microsoft Purview-overholdelsesportalen, kan du ikke deaktivere denne tilladelse for gruppen eller erstatte den valgte gruppe på Microsoft Purview-overholdelsesportalen. Du kan dog aktivere en anden mailaktiveret sikkerhedsgruppe ved hjælp af cmdlet'en [Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage) .
 
 Eksempel: 
 
@@ -70,98 +72,98 @@ Enable-ComplianceTagStorage -RecordsManagementSecurityGroupEmail dispositionrevi
 
 ### <a name="enable-auditing"></a>Aktivér overvågning
 
-Sørg for, at overvågning er aktiveret mindst én dag før den første dispositionshandling. Få mere at vide under [Søg i overvågningsloggen i overholdelsescenteret](search-the-audit-log-in-security-and-compliance.md). 
+Sørg for, at overvågning er aktiveret mindst én dag før den første dispositionshandling. Du kan finde flere oplysninger under [Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen](search-the-audit-log-in-security-and-compliance.md). 
 
-## <a name="disposition-reviews"></a>Dispositionsvurderinger
+## <a name="disposition-reviews"></a>Dispositionsgennemgange
 
-Når indholdet når slutningen af dets opbevaringsperiode, kan der være flere grunde til, at du bør gennemse indholdet og bekræfte, om det kan slettes permanent ("bortkastet"). I stedet for at slette indholdet kan det f.eks. være nødvendigt at:
+Når indholdet når slutningen af opbevaringsperioden, er der flere grunde til, at du måske vil gennemse indholdet og bekræfte, om det kan slettes permanent ("bortskaffes"). I stedet for at slette indholdet skal du f.eks.:
   
-- Suspender sletning af relevant indhold til procesførelse eller en overvågning.
+- Suspender sletningen af relevant indhold i forbindelse med procesførelse eller revision.
 
-- Tildel indholdet en anden opbevaringsperiode, måske fordi de oprindelige opbevaringsindstillinger var en midlertidig eller midlertidig løsning.
+- Tildel en anden opbevaringsperiode til indholdet, måske fordi de oprindelige opbevaringsindstillinger var en midlertidig eller midlertidig løsning.
 
-- Flyt indholdet fra dens eksisterende placering til en arkivplacering, f.eks. hvis indholdet har forskning eller historisk værdi.
+- Flyt indholdet fra den eksisterende placering til en arkivplacering, f.eks. hvis indholdet har forskning eller historisk værdi.
 
-Når en gennemgang af disposition udløses i slutningen af opbevaringsperioden, modtager de korrekturlæsere, du vælger, en mail om, at de har indhold, der skal gennemgås. Disse korrekturlæsere kan være individuelle brugere eller mailaktiverede sikkerhedsgrupper.
+Når en dispositionsgennemgang udløses i slutningen af opbevaringsperioden, modtager de korrekturlæsere, du vælger, en mail om, at de har indhold, der skal gennemses. Disse korrekturlæsere kan være individuelle brugere eller mailaktiverede sikkerhedsgrupper.
 
-Du kan tilpasse den mail om meddelelser, som korrekturlæsere modtager, herunder instruktioner på forskellige sprog. For understøttelse af flere sprog skal du selv angive oversættelserne, og denne brugerdefinerede tekst vises for alle korrekturlæsere uanset deres landesprog.
+Du kan tilpasse den meddelelsesmail, som korrekturlæsere modtager, herunder instruktioner på forskellige sprog. Hvis du vil understøtte flere sprog, skal du selv angive oversættelserne, og denne brugerdefinerede tekst vises for alle korrekturlæsere, uanset deres landestandard.
 
-Brugere modtager en indledende mailbesked pr. etiket ved slutningen af elementets opbevaringsperiode med en påmindelse pr. etiket én gang om ugen af alle dispositionsvurderinger, de er tildelt. De kan klikke på linket i notifikations- og påmindelsesmailene for at gå direkte til siden Datastyringsdisposition  >  i Microsoft 365 Overholdelsescenter for at gennemse indholdet og gøre noget. Ellers kan korrekturlæserne navigere til siden **Disposition** i overholdelsescenteret. Gør derefter følgende:
+Brugerne modtager en indledende mailmeddelelse pr. mærkat i slutningen af elementets opbevaringsperiode med en påmindelse pr. etiket én gang om ugen for alle dispositionsgennemgange, som de er tildelt. De kan klikke på linket i meddelelses- og påmindelsesmailene for at gå direkte til siden **DatastyringDisposition** >  på Microsoft Purview-overholdelsesportalen for at gennemse indholdet og udføre en handling. Alternativt kan korrekturlæserne navigere til denne **dispositionsside** på Microsoft Purview-overholdelsesportalen. Derefter:
 
-- Korrekturlæsere kan kun se de dispositionsvurderinger, der er tildelt til dem, hvorimod administratorer, der er føjet til den valgte sikkerhedsgruppe for datastyring, kan se alle dispositionsvurderinger.
+- Korrekturlæsere kan kun se de dispositionsgennemgange, der er tildelt dem, hvorimod administratorer, der er føjet til den valgte sikkerhedsgruppe for datastyring, kan se alle dispositionsgennemgange.
 
-- Korrekturlæsere kan tilføje nye brugere til den samme gennemgang af dispositionen. Bemærk, at denne handling ikke automatisk giver de tilføjede brugere [de nødvendige tilladelser](#permissions-for-disposition).
+- Korrekturlæsere kan føje nye brugere til den samme dispositionsgennemgang. Bemærk, at denne handling ikke automatisk giver de tilføjede brugere de [nødvendige tilladelser](#permissions-for-disposition).
 
-- I forbindelse med processen til gennemgang af fordeling viser en minigennemsynsrude for hvert element et eksempel på indholdet, hvis de har tilladelse til at se det. Hvis de ikke har tilladelser, kan de vælge linket til indhold og anmode om tilladelser. Denne minigennemsynsrude indeholder også faner til yderligere oplysninger om indholdet:
-   - **Detaljer** for at få vist indekserede egenskaber, hvor den er placeret, hvem der har oprettet den, hvornår, hvem der senest har ændret den og hvornår.
-   - **Oversigt** , der viser historikken for alle handlinger til gennemgang af fordeling til dato med korrekturlæserens kommentarer, hvis de er tilgængelige.
+- I forbindelse med processen til gennemgang af fordeling viser en minigennemsynsrude for hvert element et eksempel på indholdet, hvis de har tilladelse til at se det. Hvis de ikke har tilladelser, kan de vælge indholdslinket og anmode om tilladelser. Denne minigennemgangsrude indeholder også faner til yderligere oplysninger om indholdet:
+   - **Oplysninger om** visning af indekserede egenskaber, hvor de er placeret, hvem der har oprettet dem, hvornår og hvem der senest har ændret dem, og hvornår.
+   - **Historik** , der viser historikken for alle dispositionsgennemgangshandlinger til dato med kommentarer fra korrekturlæseren, hvis de er tilgængelige.
 
-En gennemgang af dispositionen kan omfatte indhold Exchange postkasser, SharePoint websteder og OneDrive konti. Indhold, der afventer en gennemgang af dispositionen på disse placeringer, slettes først permanent, når en korrekturlæser for det sidste trin i dispositionen vælger at slette indholdet permanent.
+En dispositionsgennemgang kan omfatte indhold i Exchange postkasser, SharePoint websteder og OneDrive konti. Indhold, der afventer en dispositionsgennemsyn på disse placeringer, slettes kun permanent, når en validator for den sidste fase af dispositionen vælger at slette indholdet permanent.
 
 > [!NOTE]
-> En postkasse skal have mindst 10 MB data for at understøtte dispositionsvurderinger.
+> En postkasse skal have mindst 10 MB data for at understøtte dispositionsgennemgange.
 
-Administratorer kan se en oversigt over alle ventende dispositioner på **fanen** Oversigt. Korrekturlæsere kan kun se deres elementer, der afventer disposition. Eksempel:
+Administratorer kan se en oversigt over alle ventende dispositioner under fanen **Oversigt** . Korrekturlæsere kan kun se deres ventende elementer. Eksempel:
 
-![Ventende dispositioner i Oversigt over datastyring.](../media/dispositions-overview.png)
+![Oversigt over ventende dispositioner i Datastyring.](../media/dispositions-overview.png)
 
-Når du vælger **Vis alle ventende dispositioner**, kommer du til **siden Disposition** . Eksempel:
+Når du vælger **Vis alle ventende dispositioner**, føres du til siden **Disposition** . Eksempel:
 
-![Siden Dispositioner i Microsoft 365 Overholdelsescenter.](../media/disposition-tab.png)
+![Siden Dispositioner på Microsoft Purview-overholdelsesportalen.](../media/disposition-tab.png)
 
 
-### <a name="workflow-for-a-disposition-review"></a>Arbejdsproces for en gennemgang af dispositionen
+### <a name="workflow-for-a-disposition-review"></a>Arbejdsproces til gennemgang af fordeling
 
-Følgende diagram viser den grundlæggende arbejdsproces for en dispositionsgennemgang (enkelt trin), når en opbevaringsetiket publiceres og derefter anvendes manuelt af en bruger. Alternativt kan et opbevaringsmærkat, der er konfigureret til en dispositionsgennemsyn, automatisk anvendes på indhold.
+I følgende diagram vises den grundlæggende arbejdsproces for en dispositionsgennemgang (enkeltfase), når en opbevaringsmærkat udgives og derefter anvendes manuelt af en bruger. Alternativt kan en opbevaringsmærkat, der er konfigureret til en dispositionsgennemgang, anvendes automatisk på indhold.
   
-![Diagram, der viser, hvordan disposition fungerer.](../media/5fb3f33a-cb53-468c-becc-6dda0ec52778.png)
+![Diagram, der viser flowet for, hvordan fordeling fungerer.](../media/5fb3f33a-cb53-468c-becc-6dda0ec52778.png)
 
-### <a name="how-to-configure-a-retention-label-for-disposition-review"></a>Sådan konfigureres en opbevaringsetiket til gennemgang af disposition
+### <a name="how-to-configure-a-retention-label-for-disposition-review"></a>Sådan konfigurerer du en opbevaringsmærkat til gennemgang af fordeling
 
-Udløsning af en dispositionsvurdering i slutningen af en opbevaringsperiode er en konfigurationsindstilling, der kun er tilgængelig med en opbevaringsmærkat. Gennemgang af disposition er ikke tilgængelig for en opbevaringspolitik. Du kan finde flere oplysninger om disse to opbevaringsløsninger under [Få mere at vide om opbevaringspolitikker og opbevaringsnavne](retention.md).
+Udløsning af en gennemgang af fordeling i slutningen af opbevaringsperioden er en konfigurationsindstilling, der kun er tilgængelig med en opbevaringsmærkat. Dispositionsgennemsyn er ikke tilgængelig for en opbevaringspolitik. Du kan finde flere oplysninger om disse to opbevaringsløsninger under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
 
-Fra siden **Definer opbevaringsindstillinger** for en opbevaringsetiket:
+På siden **Definer opbevaringsindstillinger** for en opbevaringsmærkat:
 
 ![Opbevaringsindstillinger for en etiket.](../media/disposition-review-option.png)
  
-Når du har valgt  denne indstilling Udløs en dispositionsgennemsynsindstilling, skal du på næste side i konfigurationen angive, hvor mange efterfølgende trin i dispositionen, du ønsker, samt korrekturlæserne for dispositionen for hver fase:
+Når du har valgt denne indstilling **Udløs en dispositionsgennemgang** , skal du på næste side i konfigurationen angive, hvor mange efterfølgende dispositionsfaser du vil have, og dispositionslæserne for hver fase:
 
-![Angivelse af korrekturlæsere for fordeling.](../media/disposition-reviewers.png) 
+![Angiver disponeringslæsere.](../media/disposition-reviewers.png) 
 
-Vælg **Tilføj en fase**, og navngive din fase for at identificere den. Angiv derefter korrekturlæserne for det pågældende trin.
+Vælg **Tilføj en fase**, og navngiv fasen med henblik på identifikation. Angiv derefter korrekturlæserne for den pågældende fase.
 
-Til korrekturlæserne skal du angive en bruger eller en mailaktiveret sikkerhedsgruppe. Microsoft 365 ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) understøttes ikke til denne indstilling.
+For korrekturlæserne skal du angive en bruger eller en mailaktiveret sikkerhedsgruppe. Microsoft 365 grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) understøttes ikke for denne indstilling.
 
-Hvis du har brug for mere end én person til at gennemgå et element i slutningen af dets opbevaringsperiode, skal du vælge Tilføj en fase igen og gentage konfigurationsprocessen for antallet af trin, du har brug for, med maksimalt fem trin. 
+Hvis du har brug for mere end én person til at gennemse et element i slutningen af opbevaringsperioden, skal du vælge **Tilføj en fase** igen og gentage konfigurationsprocessen for det antal faser, du har brug for, med højst fem faser. 
 
-Inden for hver enkelt dispositionsfase er alle de brugere, du angiver for det pågældende trin, autoriseret til at tage den næste handling for elementet i slutningen af dets opbevaringsperiode. Disse brugere kan også føje andre brugere til deres gennemgangsfase for disposition.
+Inden for hver enkelt dispositionsfase er alle de brugere, du angiver for den pågældende fase, godkendt til at udføre den næste handling for elementet i slutningen af opbevaringsperioden. Disse brugere kan også føje andre brugere til fasen med gennemgang af disposition.
 
 > [!NOTE]
-> Hvis du har konfigureret opbevaringsnavne, før gennemgang af flere faser var tilgængelig, kan du opgradere dine etiketter for at understøtte denne funktion: I guiden til etiketter skal du vælge Tilføj en fase eller redigere de eksisterende korrekturlæsere eller tilføje nye korrekturlæsere.
+> Hvis du har konfigureret opbevaringsmærkater, før gennemgangen af flere faser var tilgængelig, kan du opgradere mærkaterne for at understøtte denne funktion: Vælg **Tilføj en fase** i guiden Mærkat, rediger de eksisterende korrekturlæsere, eller tilføj nye korrekturlæsere.
 
-I konfigurationsfasen kan du for hver angivet fase omdøbe den, ændre rækkefølgen eller fjerne den ved at vælge indstillingen Fasehandlinger (**...**): 
+I konfigurationsfasen kan du for hver angivet fase omdøbe den, omarrangere den eller fjerne den ved at vælge indstillingen Fasehandlinger (**...**): 
 
-![Trinhandlinger for gennemgang af fordeling.](../media/stage-actions-disposition-review.png)
+![Fasehandlinger til dispositionsgennemgange.](../media/stage-actions-disposition-review.png)
 
-Du kan dog ikke ændre rækkefølgen eller fjerne en fase, når du har oprettet opbevaringsnavnet.
+Du kan dog ikke omarrangere eller fjerne en fase, når du har oprettet opbevaringsmærkaten.
 
-Når du har angivet dine korrekturlæsere, skal du huske at give dem tilladelse **til rollen Dispositionsstyring** . Du kan finde flere oplysninger i [afsnittet Tilladelser til disposition](#permissions-for-disposition) på denne side.
+Når du har angivet dine korrekturlæsere, skal du huske at tildele dem rollen **Dispositionsstyring** . Du kan få flere oplysninger i afsnittet [Tilladelser til disposition](#permissions-for-disposition) på denne side.
 
 ### <a name="how-to-customize-email-messages-for-disposition-review"></a>Sådan tilpasser du mails til dispositionsgennemsyn
 
-Eksempel på standardmailmeddelelse sendt til en korrekturlæser:
+Eksempel på standardmeddelelse via mail, der er sendt til en korrekturlæser:
 
-![Eksempel på mailbesked med standardtekst, når et element er klar til gennemgang af disposition.](../media/disposition-review-email.png)
+![Eksempel på mailmeddelelse med standardtekst, når et element er klar til dispositionsgennemsyn.](../media/disposition-review-email.png)
 
-Du kan tilpasse de mails, der sendes til korrekturlæsere af dispositionen for den første meddelelse og derefter påmindelser.
+Du kan tilpasse de mails, der sendes til dispositionslæsere for den første meddelelse og derefter påmindelser.
 
-Fra alle siderne til datastyring i overholdelsescenteret skal du vælge **Indstillinger for datastyring**:  
+Vælg **Indstillinger for datastyring** på en af siderne til datastyring på Microsoft Purview-overholdelsesportalen:  
 
 ![Indstillinger for datastyring.](../media/record-management-settings.png)
 
-Vælg **og angiv** , om du kun vil bruge standardmailmeddelelsen, eller tilføj din egen tekst til standardmeddelelsen i sektionen Mailbeskeder **om dispositionsvurderinger** under fanen Disposition. Din brugerdefinerede tekst føjes til mailinstruktionerne efter oplysningerne om opbevaringsmærkaten og før de næste trins instruktioner.
+Under fanen **Disposition** i afsnittet **Mailmeddelelser om dispositionsgennemgange** skal du vælge og angive, om du kun vil bruge standardmailmeddelelsen eller føje din egen tekst til standardmeddelelsen. Din brugerdefinerede tekst føjes til mailinstruktionerne efter oplysningerne om opbevaringsmærkaten og før de næste trins instruktioner.
 
-Tekst til alle sprog kan tilføjes, men formatering og billeder understøttes ikke. URL-adresser og mailadresser kan indtastes som tekst, og afhængigt af mailklienten kan du få vist som links eller uformateret tekst i den brugerdefinerede mail.
+Der kan tilføjes tekst til alle sprog, men formatering og billeder understøttes ikke. URL-adresser og mailadresser kan angives som tekst og, afhængigt af mailklienten, vises som links eller ikke-formateret tekst i den brugerdefinerede mail.
 
 Eksempeltekst, der skal tilføjes:
 
@@ -169,61 +171,61 @@ Eksempeltekst, der skal tilføjes:
 If you need additional information, visit the helpdesk website (https://support.contoso.com) or send them an email (helpdesk@contoso.com).
 ```
 
-Vælg **Gem** for at gemme ændringerne.
+Vælg **Gem** for at gemme eventuelle ændringer.
 
-### <a name="viewing-and-disposing-of-content"></a>Visning og afvisning af indhold
+### <a name="viewing-and-disposing-of-content"></a>Visning og bortskaffelse af indhold
 
-Når en korrekturlæser får besked via mail om, at indholdet er klar til at blive gennemset, kan vedkommende klikke på et link i mailen, der  fører vedkommende direkte til siden **Disposition** fra Datastyring i Microsoft 365 Overholdelsescenter. Her kan korrekturlæserne se, hvor mange elementer for hver opbevaringsetiket, der venter på disposition, med den **Type** , der viser **Afventer disposition**. De vælger derefter en opbevaringsetiket og **Åbn i nyt vindue for** at få vist alt indhold med den pågældende etiket:
+Når en korrekturlæser får besked via mail om, at indholdet er klar til gennemsyn, kan vedkommende klikke på et link i mailen, der fører dem direkte til siden **Disposition** fra **Datastyring** på Microsoft Purview-overholdelsesportalen. Der kan korrekturlæserne se, hvor mange elementer for hver opbevaringsmærkat der venter disposition med den **type,** der viser **Ventende disposition**. De vælger derefter en opbevaringsmærkat og **Åbner i et nyt vindue** for at få vist alt indhold med den pågældende etiket:
 
-![Åbn i nyt vindue for gennemgang af disposition.](../media/open-in-new-window.png)
+![Åbn i et nyt vindue til dispositionsgennemsyn.](../media/open-in-new-window.png)
 
-På siden **Ventende dispositioner** kan de se alle ventende dispositioner for den pågældende etiket. Når et eller flere elementer er markeret, kan de bruge minivisningsruden og fanen **Kilde, Detaljer** og Oversigt til  at undersøge **indholdet, før** der sker noget på det:
+Fra siden **Ventende dispositioner** kan de se alle ventende dispositioner for den pågældende etiket. Når et eller flere elementer er markeret, kan de bruge ruden med minieksemplet og fanen **Kilde**, **Detaljer** og **Oversigt** til at undersøge indholdet, før du foretager en handling på det:
 
 ![Dispositionsindstillinger.](../media/retention-disposition-options.png)
 
-Hvis du bruger det vandrette rullepanel eller lukker min.gennemsynsruden, kan du se flere kolonner, der indeholder udløbsdatoen og navnet på dispositionsgennemsynsfasen.
+Hvis du bruger det vandrette rullepanel eller lukker ruden til min. gennemsyn, får du vist flere kolonner, der indeholder udløbsdatoen og navnet på fasen til gennemgang af dispositionen.
 
 Som du kan se i det viste eksempel, er de understøttede handlinger: 
   
-- **Godkend afhændelse**:
-    - Når denne handling er valgt for en midlertidig dispositionsgennemgang (du har konfigureret flere faser): Elementet flyttes til den næste dispositionsfase.
-    - Når denne handling er valgt til den sidste fase af gennemgangen af dispositionen, eller der kun er én dispositionsfase: Elementet markeres som berettiget til permanent sletning, som et timerjob derefter handlingerer inden for 7 dage. Den nøjagtige tidsindstilling for det element, der skal slettes permanent, afhænger af arbejdsmængden. Få mere at vide under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) [og Hvordan fungerer opbevaring for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
+- **Godkend afsætning**:
+    - Når denne handling er valgt til en midlertidig fase i dispositionsgennemgangen (du har konfigureret flere faser): Elementet flyttes til den næste dispositionsfase.
+    - Når denne handling er valgt til den sidste fase i dispositionsgennemgangen, eller der kun er én dispositionsfase: Elementet er markeret som berettiget til permanent sletning, som et timerjob derefter udfører inden for 7 dage. Det nøjagtige tidspunkt for det element, der skal slettes permanent, afhænger af arbejdsbelastningen. Du kan få flere oplysninger under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) og [Sådan fungerer opbevaring for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
 
 - **Relabel**:
-    - Når denne handling er valgt, afslutter elementet gennemgangen af dispositionen for den oprindelige etiket. Elementet er derefter underlagt opbevaringsindstillingerne for den nyligt valgte opbevaringsmærkat.
+    - Når denne handling er valgt, afslutter elementet processen til gennemgang af fordeling for den oprindelige etiket. Elementet er derefter underlagt opbevaringsindstillingerne for den nyligt valgte opbevaringsmærkat.
 
 - **Udvid**:
-    - Når denne handling er valgt, suspenderes dispositionsgennemsyn effektivt indtil slutningen af den udvidede periode, og derefter udløses dispositionsgennemsyn igen fra første fase.
+    - Når denne handling er valgt, afbrydes gennemgangen af fordeling effektivt indtil slutningen af den forlængede periode, og derefter udløses dispositionsgennemgangen igen fra den første fase.
 
 - **Tilføj korrekturlæsere**:
-    - Når denne handling er markeret, bliver brugeren bedt om at angive og tilføje andre brugere til gennemsyn.
+    - Når denne handling er valgt, bliver brugeren bedt om at angive og tilføje andre brugere til gennemsyn.
     > [!NOTE]
-    > Denne handling giver ikke automatisk de nødvendige [tilladelser til de](#permissions-for-disposition) brugere, der er tilføjet. Hvis de ikke har disse tilladelser, kan de ikke deltage i gennemgangen af dispositionen.
+    > Denne handling tildeler ikke automatisk de [nødvendige tilladelser](#permissions-for-disposition) til de brugere, der er tilføjet. Hvis de ikke har disse tilladelser, kan de ikke deltage i dispositionsgennemgangen.
 
-Hver handling, der er foretaget, har en tilsvarende overvågningshændelse i gruppen [Aktiviteter til overvågning](search-the-audit-log-in-security-and-compliance.md#disposition-review-activities) af dispositionsgennemsyn.
+Hver handling, der udføres, har en tilsvarende overvågningshændelse i gruppen [Disposition review activities](search-the-audit-log-in-security-and-compliance.md#disposition-review-activities) auditing activities.
 
-Under en gennemgang af dispositionen flyttes indholdet aldrig fra dets oprindelige placering, og det markeres ikke til permanent sletning, før denne handling er valgt af en korrekturlæser for den endelige fase eller kun dispositionsfasen.
+Under en dispositionsgennemgang flyttes indholdet aldrig fra den oprindelige placering, og det markeres ikke til permanent sletning, før denne handling er valgt af en korrekturlæser til den endelige eller eneste dispositionsfase.
 
-## <a name="disposition-of-records"></a>Disposition af poster
+## <a name="disposition-of-records"></a>Fordeling af poster
 
-Fra **hovedsiden til** administration af poster > **fanen Disposition** kan du identificere:
+På hovedsiden **Datastyring** > fanen **Disposition** kan du identificere:
 
-- Elementer, der er blevet slettet som et resultat af en gennemgang af dispositionen.
-- Elementer, der er markeret som en post eller en lovgivningsmæssig post, som blev slettet automatisk ved afslutningen af deres opbevaringsperiode.
+- Elementer, der er slettet som følge af en dispositionsgennemgang.
+- Elementer, der er markeret som en post eller lovmæssig post, som automatisk blev slettet ved slutningen af deres opbevaringsperiode.
 
-Disse elementer viser **Poster, der er** afhændet **i kolonnen Type** . Eksempel:
+Disse elementer viser **Poster, der er fjernet** i kolonnen **Type** . Eksempel:
 
-![Elementer, der blev afhændet uden en gennemgang af dispositionen.](../media/records-disposed2.png)
+![Elementer, der blev fjernet uden en dispositionsgennemgang.](../media/records-disposed2.png)
 
 > [!NOTE]
-> Denne funktion bruger oplysninger [fra den samlede](search-the-audit-log-in-security-and-compliance.md) overvågningslog og kræver derfor overvågning for at være aktiveret og søgbar, så de tilhørende hændelser registreres.[](turn-audit-log-search-on-or-off.md)
+> Denne funktionalitet bruger oplysninger fra den [samlede overvågningslog](search-the-audit-log-in-security-and-compliance.md) og kræver derfor, at overvågning [er aktiveret og kan søges i](turn-audit-log-search-on-or-off.md) , så de tilsvarende hændelser registreres.
 
-Hvis du vil overvåge slettede elementer, der er markeret som poster eller lovgivningsposter,  skal du søge efter Slettet fil, der er markeret som en post i kategorien Filer og **sideaktiviteter**. Denne overvågningshændelse gælder for dokumenter og mails.
+Hvis du vil overvåge slettede elementer, der er markeret som poster eller lovmæssige poster, skal du søge efter **Slettet fil, der er markeret som en post** i kategorien **Fil- og sideaktiviteter** . Denne overvågningshændelse gælder for dokumenter og mails.
 
 ## <a name="filter-and-export-the-views"></a>Filtrer og eksportér visningerne
 
-Når du vælger et opbevaringsnavn på siden **Disposition**, kan du under fanen Afventer **disposition** (hvis det  er relevant) og fanen Kassér elementer filtrere visningerne, så du nemmere kan finde elementer.
+Når du vælger en opbevaringsmærkat på siden **Disposition** , kan du bruge fanen **Ventende fordeling** (hvis det er relevant) og fanen **Kasserede elementer** til at filtrere visningerne, så du nemmere kan finde elementer.
 
-For ventende dispositioner er tidsintervallet baseret på udløbsdatoen. For afhændede varer er tidsintervallet baseret på datoen for sletningen.
+For ventende dispositioner er tidsintervallen baseret på udløbsdatoen. For fjernede varer er tidsintervallet baseret på datoen for sletning.
   
-Du kan eksportere oplysninger om elementerne i begge visning som en .csv, som du derefter kan sortere og administrere ved hjælp af Excel.
+Du kan eksportere oplysninger om elementerne i begge visninger som en .csv fil, som du derefter kan sortere og administrere ved hjælp af Excel.

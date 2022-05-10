@@ -19,12 +19,12 @@ ms.custom: ''
 description: Få mere at vide om den rigtige måde at migrere fra beskyttelsestjenester eller enheder fra tredjepart, f.eks. Google Postini, Barracuda Spam og Virus Firewall, eller Cisco IronPort for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2f67135e2b8a3700a2fb6a6e24fc4f66696db2e3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 87100c2faa071075b9658591dad821d240b60b84
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098708"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65284968"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Overfør fra en beskyttelsestjeneste eller enhed fra tredjepart til Microsoft Defender for Office 365
 
@@ -32,6 +32,9 @@ ms.locfileid: "65098708"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
 Hvis du allerede har en eksisterende beskyttelsestjeneste eller enhed fra tredjepart, der er placeret foran Microsoft 365, kan du bruge denne vejledning til at migrere din beskyttelse til Microsoft Defender for Office 365 for at få fordelene ved en konsolideret ledelsesoplevelse, potentielt reducerede omkostninger (ved hjælp af produkter, du allerede betaler for) og et modent produkt med integreret sikkerhed  Beskyttelse. Du kan få flere oplysninger under [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
+
+Se denne korte video for at få mere at vide om migrering til Defender for Office 365.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfH]
 
 Denne vejledning indeholder specifikke trin, der kan handles på, for din migrering og antager følgende fakta:
 

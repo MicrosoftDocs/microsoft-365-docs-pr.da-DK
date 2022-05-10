@@ -17,16 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Deklarer poster ved hjælp af opbevaringsmærkater.
-ms.openlocfilehash: 23dd6c61d9da787eecd2e1fa825fe338d961d1d1
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: 75445d1cd61bd86dd41d6325efc6e71fac20ddc0
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911449"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286050"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Erklær data ved hjælp af opbevaringsmærkater
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis du vil deklarere dokumenter og mails som [poster](records-management.md#records), skal du bruge [opbevaringsmærkater](retention.md#retention-labels) , der markerer indholdet som en **post** eller en **lovmæssig post**.
 
@@ -55,11 +57,7 @@ Hvis du skifter mening om at få vist denne indstilling i guiden til opbevarings
 
 ## <a name="configuring-retention-labels-to-declare-records"></a>Konfiguration af opbevaringsmærkater for at deklarere poster
 
-Når du opretter en opbevaringsmærkat fra løsningen **Datastyring** i Microsoft 365 Overholdelsescenter, kan du vælge indstillingen **Markér elementer som en post**. Som en ekstra mulighed, der i øjeblikket udrulles som prøveversion, kan du låse posten op som standard for SharePoint og OneDrive.
-
-Den ekstra indstilling **Lås denne post op som standard** giver brugerne mulighed for effektivt at deklarere poster, fordi de låser posten, når de er færdige med at redigere indholdet. Du kan få flere oplysninger om dette understøttede scenarie under [Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive](record-versioning.md).
-
-Hvis du kørte PowerShell-kommandoen fra det forrige afsnit, kan du alternativt markere elementer som en lovmæssig post.
+Når du opretter en opbevaringsmærkat fra løsningen **Datastyring** på Microsoft Purview-overholdelsesportalen, har du mulighed for at markere elementer som en post. Hvis du kørte PowerShell-kommandoen fra det forrige afsnit, kan du alternativt markere elementer som en lovmæssig post.
 
 Eksempel:
 
@@ -77,7 +75,7 @@ Hvis du vil have en komplet vejledning:
 
 Hvis du vil bruge opbevaringsmærkater til at deklarere elementer som poster (i stedet for lovmæssige poster) i SharePoint og OneDrive skal du overveje, om du skal ændre standardindstillingen for lejeren, der giver brugerne mulighed for at redigere egenskaberne for en [låst post](record-versioning.md), når filer er større end 0 byte.
 
-Hvis du vil ændre denne standard, skal du gå til indstillingerne [for administration af Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com/) >  **PostadministrationAdministrationsnavneTillad** >  >  >  **redigering af postegenskaber** og derefter deaktivere indstillingen **Tillad brugere at redigere postegenskaber**.
+Hvis du vil ændre denne standard, skal du gå til [Microsoft Purview-overholdelsesportalPostadministrationIndstillinger](https://compliance.microsoft.com/) >  **for** >  **administration** >  **afpostadministrationRetentionsmærkaterTillad** >  **redigering af postegenskaber** og derefter deaktivere indstillingen **Tillad brugere at redigere postegenskaber**.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Anvendelse af den konfigurerede opbevaringsmærkat på indhold
 

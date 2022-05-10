@@ -1,5 +1,5 @@
 ---
-title: Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive
+title: Brug postversionsstyring i SharePoint eller OneDrive
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,21 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om poster, der kan hjælpe dig med at implementere en løsning til datastyring i Microsoft 365.
-ms.openlocfilehash: 7fc4f9bb14e9e49c7894e864b8ff9e8f4337149a
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 9515622af6a6ddb5abe28d6fb920eed72f487f41
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835881"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285056"
 ---
 # <a name="use-record-versioning-to-update-records-stored-in-sharepoint-or-onedrive"></a>Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 > [!NOTE]
 > Da lovmæssige poster blokerer redigering, er versionering af poster ikke tilgængelig for lovmæssige poster.
 >
-> Du kan også forhindre versionering af poster for din lejer, selvom du ikke bruger lovmæssige poster: Gå til noden **Styring af poster** i **indstillingerne for** >  administration af Microsoft 365 Overholdelsescenter > **PosterKonfigurer** >  **postversionsstyring**, og slå indstillingen for **Aktivér postversionsstyring** fra.
+> Du kan også forhindre postversionsstyring for din lejer, selvom du ikke bruger lovmæssige poster: Gå til **Dataadministration** på Microsoft Purview-overholdelsesportalen > **indstillinger for administration af posterIndstillinger** >  for  >  administration af **posterKonfigurer postversionsstyring**, og slå derefter indstillingen for **Aktivér postversionsstyring** fra.
 
 Muligheden for at markere et dokument som en [post](records-management.md#records) og begrænse handlinger, der kan udføres på posten, er et vigtigt mål for enhver løsning til datastyring. Der kan dog også være behov for samarbejde, for at personer kan oprette efterfølgende versioner.
 

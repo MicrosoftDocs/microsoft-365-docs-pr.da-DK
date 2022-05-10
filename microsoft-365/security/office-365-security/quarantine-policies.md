@@ -1,5 +1,5 @@
 ---
-title: Karantænepolitikker
+title: Karantænepolitik
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -14,133 +14,133 @@ ms.assetid: ''
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan du kan bruge karantænepolitikker til at styre, hvad brugerne kan gøre for meddelelser, der er sat i karantæne.
+description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0e5f1ea75a24d84f0b6d6b9e003a0123928ac49a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 2f24592460daa4f476e969069d0c1b7636f6a23e
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682829"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285538"
 ---
-# <a name="quarantine-policies"></a>Karantænepolitikker
+# <a name="quarantine-policies"></a>Karantænepolitik
 
-Karantænepolitikker (tidligere kaldet karantænemærker _) i_ Exchange Online Protection (EOP) og Microsoft Defender til Office 365 giver administratorer mulighed for at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne, baseret på, hvorfor meddelelsen var i karantæne.
+Karantænepolitikker (tidligere kaldet _karantænetags_) i Exchange Online Protection (EOP) og Microsoft Defender for Office 365 gør det muligt for administratorer at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne baseret på, hvorfor meddelelsen blev sat i karantæne.
 
-Traditionelt har brugere fået tilladelses- eller afvist niveauer for interaktivitet for meddelelser, der er sat i karantæne, baseret på, hvorfor meddelelsen blev sat i karantæne. Brugere kan f.eks. få vist og frigive meddelelser, der er sat i karantæne af antispamfiltrering som spam eller massemails, men de kan ikke få vist eller slippe meddelelser, der var i karantæne, så meget phishing eller malware er i karantæne.
+Brugere har traditionelt fået tilladelse til eller nægtet niveauer af interaktivitet for karantænemeddelelser baseret på, hvorfor meddelelsen blev sat i karantæne. Brugerne kan f.eks. få vist og frigive meddelelser, der er sat i karantæne af filtrering mod spam som spam eller masse, men de kan ikke få vist eller frigive meddelelser, der er sat i karantæne som phishing eller malware med høj sikkerhed.
 
-For [understøttede beskyttelsesfunktioner](#step-2-assign-a-quarantine-policy-to-supported-features) angiver karantænepolitikker, hvad brugerne har tilladelse til at gøre med deres egne meddelelser (meddelelser, hvor de er modtager) i karantæne og i _karantænemeddelelser_. [Karantænemeddelelser](use-spam-notifications-to-release-and-report-quarantined-messages.md) er erstatningen for beskeder om spam til slutbrugeren. Disse meddelelser styres nu af karantænepolitikker og indeholder oplysninger om meddelelser, der er sat i karantæne, for alle understøttede beskyttelsesfunktioner (ikke kun antispampolitik og antiphishingpolitik).
+I forbindelse med [understøttede beskyttelsesfunktioner](#step-2-assign-a-quarantine-policy-to-supported-features) angiver karantænepolitikker, hvad brugerne har tilladelse til at gøre med deres egne meddelelser (meddelelser, hvor de er modtager) i karantæne og i _karantænemeddelelser_. [Karantænemeddelelser](use-spam-notifications-to-release-and-report-quarantined-messages.md) er erstatning for spammeddelelser fra slutbrugere. Disse meddelelser styres nu af karantænepolitikker og indeholder oplysninger om karantænemeddelelser for alle understøttede beskyttelsesfunktioner (ikke kun anti-spam-politik og dom over phishing-politik).
 
-Standardkarantænepolitikker, der gennemtvinger de historiske brugeregenskaber, tildeles automatisk til handlinger i de understøttede beskyttelsesfunktioner, der sætter meddelelser i karantæne. Eller du kan oprette brugerdefinerede karantænepolitikker og tildele dem de understøttede beskyttelsesfunktioner for at tillade eller forhindre brugere i at udføre bestemte handlinger på disse typer af meddelelser, der er sat i karantæne.
+Standard karantænepolitikker, der gennemtvinger de historiske brugeregenskaber, tildeles automatisk til handlinger i de understøttede beskyttelsesfunktioner, der sætter meddelelser i karantæne. Du kan også oprette brugerdefinerede karantænepolitikker og tildele dem til de understøttede beskyttelsesfunktioner for at tillade eller forhindre brugerne i at udføre bestemte handlinger på disse typer af karantænemeddelelser.
 
-De enkelte karantænepolitiktilladelser kombineres til følgende foruddefinerede tilladelsesgrupper:
+De individuelle tilladelser til karantænepolitik kombineres i følgende forudindstillede tilladelsesgrupper:
 
 - Ingen adgang
 - Begrænset adgang
 - Fuld adgang
 
-De enkelte karantænepolitiktilladelser, der er indeholdt i de foruddefinerede tilladelsesgrupper, er beskrevet i følgende tabel:
+De individuelle karantænepolitiktilladelser, der findes i de forudindstillede tilladelsesgrupper, er beskrevet i følgende tabel:
 
 |Tilladelse|Ingen adgang|Begrænset adgang|Fuld adgang|
 |---|:---:|:---:|:---:|
-|**Bloker afsender** (_PermissionToBlockSender_)||![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|**Slet** (_PermissionToDelete_)||![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|**Forhåndsvisning** (_PermissionToPreview_)||![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|**Tillad modtagere at frigive en meddelelse fra karantæne** (_PermissionToRelease_)|||![Markering.](../../media/checkmark.png)|
-|**Tillad, at modtagerne anmoder om, at en meddelelse frigives fra karantæne** (_PermissionToRequestRelease_)||![Markering](../../media/checkmark.png)||
+|**Bloker afsender** (_PermissionToBlockSender_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|**Slet** (_PermissionToDelete_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|**Eksempelvisning** (_PermissionToPreview_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|**Tillad, at modtagere frigiver en meddelelse fra karantæne** (_PermissionToRelease_)|||![Markeret.](../../media/checkmark.png)|
+|**Tillad, at modtagere anmoder om, at en meddelelse frigives fra karantæne** (_PermissionToRequestRelease_)||![Markeret](../../media/checkmark.png)||
 
-Standardpolitikker for karantæne, deres tilknyttede tilladelsesgrupper, og om karantænemeddelelser er aktiveret, er beskrevet i følgende tabel:
+Standardpolitikkerne for karantæne, deres tilknyttede tilladelsesgrupper, og om karantænemeddelelser er aktiveret, er beskrevet i følgende tabel:
 
-|Standardpolitik for karantæne|Brugt tilladelsesgruppe|Er karantæne for meddelelser aktiveret?|
+|Standard karantænepolitik|Tilladelsesgruppe brugt|Er karantænemeddelelser aktiveret?|
 |---|---|---|
 |AdminOnlyAccessPolicy|Ingen adgang|Nej|
 |DefaultFullAccessPolicy|Fuld adgang|Nej|
 |NotificationEnabledPolicy<sup>\*</sup>|Fuld adgang|Ja|
 
-Hvis du ikke kan lide standardtilladelserne i de foruddefinerede tilladelsesgrupper, eller hvis du vil aktivere meddelelser i karantæne, skal du oprette og bruge brugerdefinerede karantænepolitikker. Du kan finde flere oplysninger om, hvad hver enkelt tilladelse gør, i afsnittet Oplysninger om [tilladelse til karantænepolitik](#quarantine-policy-permission-details) senere i denne artikel.
+Hvis du ikke kan lide standardtilladelserne i de forudindstillede tilladelsesgrupper, eller hvis du vil aktivere karantænemeddelelser, skal du oprette og bruge brugerdefinerede karantænepolitikker. Du kan finde flere oplysninger om, hvad hver tilladelse gør, i afsnittet [Oplysninger om tilladelse til karantænepolitik](#quarantine-policy-permission-details) senere i denne artikel.
 
-Du opretter og tildeler karantænepolitikker i Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med Exchange Online-postkasser; enkeltstående EOP PowerShell i EOP-organisationer uden Exchange Online postkasser).
+Du opretter og tildeler karantænepolitikker på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med Exchange Online postkasser; enkeltstående EOP PowerShell i EOP-organisationer uden Exchange Online postkasser).
 
 > [!NOTE]
-> Hvor længe meddelelser, der er sat i karantæne, før de udløber, styres af Behold spam i karantæne **for** dette antal dage (_QuarantineRetentionPeriod_) i antispampolitikker. Få mere at vide under [Konfigurer antispam-politikker i EOP](configure-your-spam-filter-policies.md).
+> Hvor længe karantænemeddelelser opbevares i karantæne, før de udløber, kontrolleres af **Bevar spam i karantæne i dette antal dage** (_QuarantineRetentionPeriod_) i politikker for bekæmpelse af spam. Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af spam i EOP](configure-your-spam-filter-policies.md).
 >
-> Hvis du ændrer den karantænepolitik, der er tildelt en understøttet beskyttelsesfunktion, påvirker ændringen meddelelser, der er sat i karantæne _, efter du_ har ændringen. Meddelelser, der tidligere var i karantæne af denne beskyttelsesfunktion, påvirkes ikke af indstillingerne for den nye politiktildeling i karantæne.
+> Hvis du ændrer den karantænepolitik, der er tildelt til en understøttet beskyttelsesfunktion, påvirker ændringen meddelelser, der er sat i karantæne, _når_ du har foretaget ændringen. Meddelelser, der tidligere er sat i karantæne af denne beskyttelsesfunktion, påvirkes ikke af indstillingerne for den nye karantænepolitiktildeling.
 
-## <a name="full-access-permissions-and-quarantine-notifications"></a>Meddelelser om fuld adgang og karantæne
+## <a name="full-access-permissions-and-quarantine-notifications"></a>Fuld adgangstilladelser og karantænemeddelelser
 
-<sup>\*</sup> Karantænepolitikken NotificationEnabledPolicy er ikke til stede i alle miljøer. Du har politikken NotificationEnabledPolicy-karantæne, hvis din organisation opfylder begge af følgende krav:
+<sup>\*</sup> Karantænepolitikken med navnet NotificationEnabledPolicy findes ikke i alle miljøer. Du har karantænepolitikken NotificationEnabledPolicy, hvis din organisation opfylder begge følgende krav:
 
-- Din organisation eksisterede, før politikken for karantæne var slået til (sidst i juli/tidligt i august 2021).
-- Du havde en [eller flere](configure-your-spam-filter-policies.md) antispampolitikker (standardpolitikken for uønsket post eller brugerdefinerede politikker for uønsket post), hvor indstillingen Aktivér beskeder om **spam** til slutbrugeren var slået til.
+- Din organisation fandtes, før funktionen til karantænepolitik blev aktiveret (sent i juli/begyndelsen af august 2021).
+- Du havde en eller flere [politikker til bekæmpelse af spam](configure-your-spam-filter-policies.md) (standardpolitikken for spam eller brugerdefinerede politikker mod spam), hvor indstillingen **Aktivér slutbrugermeddelelser om spam** er slået til.
 
-Som beskrevet tidligere erstatter karantænemeddelelser i karantænepolitikker beskeder om spam til slutbrugeren, som du har brugt til at slå antispam til eller fra. Den indbyggede karantænepolitik, der hedder DefaultFullAccessPolicy, duplikerede de historiske _tilladelser for meddelelser_,  der er sat i karantæne, men karantænemeddelelser er ikke slået til i karantænepolitikken. Og fordi du ikke kan ændre den indbyggede politik, kan du ikke aktivere karantænemeddelelser i DefaultFullAccessPolicy.
+Som beskrevet tidligere erstatter karantænemeddelelser i karantænepolitikker slutbrugerens spammeddelelser, som du brugte til at aktivere eller deaktivere i politikker mod spam. Den indbyggede karantænepolitik med navnet DefaultFullAccessPolicy duplikerer de historiske _tilladelser_ til karantænemeddelelser, men _karantænemeddelelser_ er ikke slået til i karantænepolitikken. Og da du ikke kan ændre den indbyggede politik, kan du ikke aktivere karantænemeddelelser i DefaultFullAccessPolicy.
 
-For at give tilladelserne for DefaultFullAccessPolicy, men med meddelelser om karantæne aktiveret, har vi oprettet politikken NotificationEnabledPolicy, der skal bruges i stedet for DefaultFullAccessPolicy for de organisationer, der har brug for det (organisationer, hvor beskeder om spam til slutbrugeren er slået til).
+For at give tilladelserne til DefaultFullAccessPolicy, men med karantænemeddelelser slået til, har vi oprettet politikken med navnet NotificationEnabledPolicy, der skal bruges i stedet for DefaultFullAccessPolicy for de organisationer, der har brug for den (organisationer, hvor slutbrugerens spammeddelelser er slået til).
 
-For nye organisationer eller ældre organisationer, der aldrig har haft beskeder om spam til slutbruger aktiveret i antispampolitikker, har du ikke politikken for karantæne ved navn NotificationEnabledPolicy. Du kan slå karantænemeddelelser til ved at oprette og bruge brugerdefinerede karantænepolitikker, hvor meddelelser om karantæne er slået til.
+For nye organisationer eller ældre organisationer, der aldrig har haft meddelelser om uønsket post fra slutbrugere aktiveret i politikker for spam, har du ikke karantænepolitikken med navnet NotificationEnabledPolicy. Den måde, du kan aktivere karantænemeddelelser på, er ved at oprette og bruge brugerdefinerede karantænepolitikker, hvor karantænemeddelelser er slået til.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Med karantænepolitikker** , skal du bruge <https://security.microsoft.com/quarantinePolicies>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Karantænepolitikker** , skal du bruge <https://security.microsoft.com/quarantinePolicies>.
 
-- Hvis du vil oprette Exchange Online forbindelse til PowerShell, [skal du Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du Forbind Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Hvis du vil have vist, oprette, redigere eller fjerne karantænepolitikker, skal du være medlem af administratorrollerne Organisationsadministration **, Sikkerhedsadministrator** eller **Karantæneadministrator** i Microsoft 365 Defender-portalen.  Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).
+- Hvis du vil have vist, oprette, redigere eller fjerne karantænepolitikker, skal du være medlem af rollerne **Organisationsadministration**, **Sikkerhedsadministrator** eller **Karantæneadministrator** på Microsoft 365 Defender portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-## <a name="step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Trin 1: Opret karantænepolitikker i Microsoft 365 Defender portal
+## <a name="step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Trin 1: Opret karantænepolitikker på Microsoft 365 Defender-portalen
 
-1. I portalen [Microsoft 365 Defender skal](https://security.microsoft.com) du gå til **& politikker** \> for samarbejde **& Politikker** \>  \> for trussel mod **trusler i** **afsnittet Regler**.
+1. På [Microsoft 365 Defender portal skal](https://security.microsoft.com) du gå til **Mail & samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
 
-2. Klik på **Ikonet Tilføj brugerdefineret** politik på ![siden Karantænepolitik.](../../media/m365-cc-sc-create-icon.png) **Tilføj brugerdefineret politik**.
+2. Klik på Ikonet Tilføj brugerdefineret politik på ![siden **Karantænepolitikker**.](../../media/m365-cc-sc-create-icon.png) **Tilføj brugerdefineret politik**.
 
-3. Guiden **Ny politik** åbnes. Angiv et **kort,** men entydigt navn i feltet Politiknavn på **siden Politiknavn** . Du skal identificere og vælge karantænepolitikken ud fra navn i kommende trin. Klik på Næste, når du er **færdig**.
+3. Guiden **Ny politik** åbnes. Angiv et kort, men entydigt navn i feltet **Politiknavn** på siden **Politiknavn** . Du skal identificere og vælge karantænepolitikken efter navn i kommende trin. Klik på **Næste**, når du er færdig.
 
-4. På siden **Adgang til modtagermeddelelse** skal du vælge en af følgende værdier:
-   - **Begrænset adgang**: De individuelle tilladelser, der er inkluderet i denne tilladelsesgruppe, er beskrevet tidligere i denne artikel.
-   - **Angiv specifik adgang (Avanceret)**: Brug denne værdi til at angive brugerdefinerede tilladelser. Konfigurer følgende indstillinger, der vises:
-     - **Vælg indstilling for udgivelseshandling**: Vælg en af følgende værdier:
+4. Vælg en af følgende værdier på **adgangssiden for modtagermeddelelsen** :
+   - **Begrænset adgang**: De individuelle tilladelser, der er inkluderet i denne tilladelsesgruppe, beskrives tidligere i denne artikel.
+   - **Angiv specifik adgang (avanceret):** Brug denne værdi til at angive brugerdefinerede tilladelser. Konfigurer følgende indstillinger, der vises:
+     - **Vælg indstillinger for udgivelseshandling**: Vælg en af følgende værdier:
        - Tom: Dette er standardværdien.
-       - **Tillad modtagere at frigive en meddelelse fra karantæne**
-       - **Tillad, at modtagerne anmoder om, at en meddelelse frigives fra karantæne**
-     - **Vælg yderligere handlinger, som modtagere kan udføre på meddelelser, der er sat** i karantæne: Markér nogle, alle eller ingen af følgende værdier:
-       - **Slet**
-       - **Eksempel**
-       - **Bloker afsender**
+       - **Tillad, at modtagere frigiver en meddelelse fra karantæne**
+       - **Tillad, at modtagere anmoder om, at en meddelelse frigives fra karantæne**
+     - **Vælg yderligere handlinger, som modtagere kan foretage i karantænemeddelelser**: Vælg nogle, alle eller ingen af følgende værdier:
+       - **Slette**
+       - **Preview**
+       - **Afsender af blok**
 
-   Disse tilladelser og deres virkning på meddelelser, der er sat i karantæne, og i karantænemeddelelser er beskrevet i afsnittet Detaljer om tilladelse til [karantænepolitik senere](#quarantine-policy-permission-details) i denne artikel.
+   Disse tilladelser og deres virkning på karantænemeddelelser og i karantænemeddelelser er beskrevet i afsnittet [Oplysninger om tilladelse til karantænepolitik](#quarantine-policy-permission-details) senere i denne artikel.
 
-   Klik på Næste, når du er **færdig**.
+   Klik på **Næste**, når du er færdig.
 
-5. På siden **Besked om spam til slutbruger skal** du vælge **Aktivér** for at aktivere beskeder om karantæne (tidligere kaldet beskeder om spam til slutbrugeren). Klik på Næste, når du er **færdig**.
+5. På siden **Med slutbrugerens spammeddelelse** skal du vælge **Aktivér** for at aktivere karantænemeddelelser (tidligere kaldet meddelelser om uønsket post fra slutbrugere). Klik på **Næste**, når du er færdig.
 
    > [!NOTE]
-   > Som nævnt tidligere har de indbyggede politikker (AdminOnlyAccessPolicy eller DefaultFullAccessPolicy) ikke aktiveret meddelelser, der er sat i karantæne, og du kan ikke ændre politikkerne.
+   > Som beskrevet tidligere har de indbyggede politikker (AdminOnlyAccessPolicy eller DefaultFullAccessPolicy) ikke aktiveret karantænemeddelelser, og du kan ikke ændre politikkerne.
 
-6. Gennemgå **dine indstillinger på** siden Gennemse politik. Du kan vælge **Rediger** i hver sektion for at ændre indstillingerne i sektionen. Eller du kan klikke **på** Tilbage eller vælge den bestemte side i guiden.
+6. Gennemse dine indstillinger på siden **Gennemse politik** . Du kan vælge **Rediger** i hver sektion for at redigere indstillingerne i sektionen. Du kan også klikke på **Tilbage** eller vælge den specifikke side i guiden.
 
-   Klik på Send, når du er **færdig**.
+   Klik på **Send**, når du er færdig.
 
-7. Klik på Udført på bekræftelsessiden, der **vises**.
+7. Klik på **Udført** på den bekræftelsesside, der vises.
 
-Nu er du klar til at tildele karantænepolitikken til en karantænefunktion, sådan som det er beskrevet i [trin 2-sektionen](#step-2-assign-a-quarantine-policy-to-supported-features) .
+Nu er du klar til at tildele karantænepolitikken til en karantænefunktion som beskrevet i [afsnittet Trin 2](#step-2-assign-a-quarantine-policy-to-supported-features) .
 
 ### <a name="create-quarantine-policies-in-powershell"></a>Opret karantænepolitikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at oprette karantænepolitikker, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge **New-QuarantinePolicy-cmdlet'en**.
+Hvis du hellere vil bruge PowerShell til at oprette karantænepolitikker, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge cmdlet'en **New-QuarantinePolicy**.
 
 > [!NOTE]
-> Hvis du ikke bruger parameteren _ESNEnabled_ `$true`og værdien , deaktiveres beskeder i karantæne.
+> Hvis du ikke bruger parameteren _ESNEnabled_ og værdien `$true`, deaktiveres karantænemeddelelser.
 
 #### <a name="use-the-enduserquarantinepermissionsvalue-parameter"></a>Brug parameteren EndUserQuarantinePermissionsValue
 
-Hvis du vil oprette en karantænepolitik ved _hjælp af parameteren EndUserQuarantinePermissionsValue_ , skal du bruge følgende syntaks:
+Hvis du vil oprette en karantænepolitik ved hjælp af parameteren _EndUserQuarantinePermissionsValue_ , skal du bruge følgende syntaks:
 
 ```powershell
 New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 to 236> [-EsnEnabled $true]
 ```
 
-_Parameteren EndUserQuarantinePermissionsValue_ anvender en decimalværdi, der konverteres fra en binær værdi. Den binære værdi svarer til de tilgængelige tilladelser til slutbrugerkarantæne i en bestemt ordre. For hver tilladelse er værdien 1 lig med Sand, og værdien 0 er lig med Falsk.
+Parameteren _EndUserQuarantinePermissionsValue_ bruger en decimalværdi, der konverteres fra en binær værdi. Den binære værdi svarer til de tilgængelige tilladelser til slutbrugerens karantæne i en bestemt rækkefølge. For hver tilladelse er værdien 1 lig med True, og værdien 0 er lig med False.
 
 Den påkrævede rækkefølge og de påkrævede værdier for hver enkelt tilladelse er beskrevet i følgende tabel:
 
@@ -155,13 +155,13 @@ Den påkrævede rækkefølge og de påkrævede værdier for hver enkelt tilladel
 |PermissionToPreview|2|00000010|
 |PermissionToDelete|1|00000001|
 
-<sup>\*</sup>Værdien 0 skjuler ikke knappen Vis brevhoved i  oplysningerne om den meddelelse, der er sat i karantæne (knappen er altid tilgængelig).
+<sup>\*</sup> Værdien 0 skjuler ikke knappen **Vis meddelelsesoverskrift** i detaljerne for den karantænerede meddelelse (knappen er altid tilgængelig).
 
-<sup>\*\*</sup> Denne indstilling bruges ikke (værdien 0 eller 1 gør intet).
+<sup>\*\*</sup> Denne indstilling bruges ikke (værdien 0 eller 1 gør ingenting).
 
-<sup>\*\*\*</sup> Angiv ikke begge disse værdier til 1. Indstil én til 1 og den anden til 0, eller indstil begge til 0.
+<sup>\*\*\*</sup> Angiv ikke begge disse værdier til 1. Angiv den ene til 1 og den anden til 0, eller angiv begge til 0.
 
-For tilladelser med begrænset adgang er de påkrævede værdier:
+For begrænsede adgangstilladelser er de påkrævede værdier:
 
 |Tilladelse|Begrænset adgang|
 |---|:--:|
@@ -176,400 +176,403 @@ For tilladelser med begrænset adgang er de påkrævede værdier:
 |Binær værdi|00011011|
 |Decimalværdi, der skal bruges|27|
 
-I dette eksempel oprettes der en ny karantænepolitik kaldet LimitedAccess, hvor karantænemeddelelser er slået til, og som tildeler tilladelserne Begrænset adgang som beskrevet i den forrige tabel.
+I dette eksempel oprettes der en ny karantænepolitik med navnet LimitedAccess, hvor karantænemeddelelser er slået til, og som tildeler tilladelserne begrænset adgang som beskrevet i den forrige tabel.
 
 ```powershell
 New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 27 -EsnEnabled $true
 ```
 
-For brugerdefinerede tilladelser skal du bruge den forrige tabel til at få den binære værdi, der svarer til de ønskede tilladelser. Konvertér den binære værdi til en decimalværdi, og brug decimalværdien for _parameteren EndUserQuarantinePermissionsValue_ . Brug ikke den binære værdi for parameterværdien.
+I forbindelse med brugerdefinerede tilladelser skal du bruge den forrige tabel til at få den binære værdi, der svarer til de ønskede tilladelser. Konvertér den binære værdi til en decimalværdi, og brug decimalværdien for parameteren _EndUserQuarantinePermissionsValue_ . Brug ikke den binære værdi til parameterværdien.
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
 
 ## <a name="step-2-assign-a-quarantine-policy-to-supported-features"></a>Trin 2: Tildel en karantænepolitik til understøttede funktioner
 
-I _understøttede_ beskyttelsesfunktioner, som sætter mails i karantæne, kan du tildele en karantænepolitik til de tilgængelige karantænehandlinger. Funktioner, der karantænemeddelelser og tilgængeligheden af karantænepolitikker er beskrevet i følgende tabel:
+I _understøttede_ beskyttelsesfunktioner, der sætter mails i karantæne, kan du tildele en karantænepolitik til de tilgængelige karantænehandlinger. Funktioner, der sætter meddelelser i karantæne og tilgængeligheden af karantænepolitikker, er beskrevet i følgende tabel:
 
-|Funktion|Understøttes karantænepolitikker?|Standardkarantænepolitikker anvendt|
+|Funktion|Understøttes karantænepolitikker?|Standard karantænepolitikker, der bruges|
 |---|:---:|---|
-|[Antispampolitikker](configure-your-spam-filter-policies.md): <ul><li>**Spam** (_SpamAction_)</li><li>**Spam med høj tillid** (_HighConfidenceSpamAction_)</li><li>**Phishing** (_PhishSpamAction_)</li><li>**Phishing med høj tillid** (_HighConfidencePhishAction_)</li><li>**Masse** (_BulkSpamAction_)</li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>AdminOnlyAccessPolicy (Ingen adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li></ul>|
-|Antiphishing-politikker: <ul><li>[Spoof intelligence protection](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Repræsentationsbeskyttelse i Defender til Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**Hvis meddelelsen registreres som en efterligning af en bruger** (_TargetedUserProtectionAction_)</li><li>**Hvis meddelelsen registreres som et efterligning af domæne** (_TargetedDomainProtectionAction_)</li><li>**Hvis postkasseintelligens registrerer og efterligner en bruger** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>Repræsentationsbeskyttelse:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Fuld adgang)</li></ul></li></ul>|
-|[Antimalwarepolitikker](configure-anti-malware-policies.md): Alle registrerede meddelelser er altid i karantæne.|Ja|AdminOnlyAccessPolicy (Ingen adgang)|
-|[Pengeskab beskyttelse af vedhæftede filer](safe-attachments.md): <ul><li>Mails med vedhæftede filer, der er sat i karantæne som malware Pengeskab politikker for vedhæftede filer (_Aktivér_ og _handling_)</li><li>Filer, der er sat i karantæne [som malware, Pengeskab vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Ja</li><li>Nej</li></ul>|<ul><li>AdminOnlyAccessPolicy (Ingen adgang)</li><li>i/t</li></ul>|
-|[Regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kaldet transportregler) med handlingen: **Levere meddelelsen til den tilknyttede karantæne** (_karantæne_).|Nej|i/t|
+|[Politikker mod spam](configure-your-spam-filter-policies.md): <ul><li>**Spam** (_SpamAction_)</li><li>**Spam med høj genkendelsessikkerhed** (_HighConfidenceSpamAction_)</li><li>**Phishing** (_PhishSpamAction_)</li><li>**Phishing med høj genkendelsessikkerhed** (_HighConfidencePhishAction_)</li><li>**Masse** (_BulkSpamAction_)</li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>AdminOnlyAccessPolicy (ingen adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li></ul>|
+|Politikker til bekæmpelse af phishing: <ul><li>[Spoof intelligence-beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Repræsentationsbeskyttelse i Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**Hvis meddelelsen registreres som en repræsenteret bruger** (_TargetedUserProtectionAction_)</li><li>**Hvis meddelelsen registreres som et repræsenterede domæne** (_TargetedDomainProtectionAction_)</li><li>**Hvis mailbox intelligence registrerer og repræsenterer en bruger** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>Repræsentationsbeskyttelse:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li></ul></li></ul>|
+|[Politikker for antimalware](configure-anti-malware-policies.md): Alle registrerede meddelelser er altid sat i karantæne.|Ja|AdminOnlyAccessPolicy (ingen adgang)|
+|[beskyttelse Pengeskab vedhæftede filer](safe-attachments.md): <ul><li>Mails med vedhæftede filer, der er sat i karantæne som malware af Pengeskab politikker for vedhæftede filer (_aktivér_ og _handling_)</li><li>Filer, der er sat i karantæne som malware af [Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Ja</li><li>Nej</li></ul>|<ul><li>AdminOnlyAccessPolicy (ingen adgang)</li><li>Nielsen</li></ul>|
+|[Regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kendt som transportregler) med handlingen: **Levér meddelelsen til den hostede karantæne** (_karantæne_).|Nej|Nielsen|
 
-<sup>\*</sup> Som [tidligere beskrevet i denne artikel](#full-access-permissions-and-quarantine-notifications) bruger din organisation muligvis NotificationEnabledPolicy i stedet for DefaultFullAccessPolicy. Den eneste forskel mellem disse to karantænepolitikker er karantænemeddelelser, er slået til i NotificationEnabledPolicy og slået fra i DefaultFullAccessPolicy.
+<sup>\*</sup> Som [tidligere beskrevet i denne artikel](#full-access-permissions-and-quarantine-notifications) bruger din organisation muligvis NotificationEnabledPolicy i stedet for DefaultFullAccessPolicy. Den eneste forskel mellem disse to karantænepolitikker er, at karantænemeddelelser er slået til i NotificationEnabledPolicy og slået fra i DefaultFullAccessPolicy.
 
-Standardkarantænepolitikker, foruddefinerede tilladelsesgrupper og tilladelser er beskrevet [i starten af denne artikel](#quarantine-policies) [og senere i denne artikel](#preset-permissions-groups).
+Standard karantænepolitikker, forudindstillede tilladelsesgrupper og tilladelser beskrives i [starten af denne artikel](#quarantine-policies) og [senere i denne artikel](#preset-permissions-groups).
 
 > [!NOTE]
-> Hvis du er tilfreds med standardtilladelserne for slutbrugeren og meddelelser i karantæne, der er angivet (eller ikke er angivet) i standardkarantænepolitikker, behøver du ikke at gøre noget. Hvis du vil tilføje eller fjerne egenskaber for slutbrugeren (de tilgængelige knapper) for meddelelser, der er sat i karantæne af brugere, eller aktivere beskeder i karantæne og tilføje eller fjerne de samme funktioner i karantænemeddelelser, kan du tildele en anden karantænepolitik til karantænehandlingen.
+> Hvis du er tilfreds med standardtilladelserne for slutbrugere og karantænemeddelelser, der leveres (eller ikke er angivet) af standardkarantænepolitikkerne, behøver du ikke at foretage dig noget. Hvis du vil tilføje eller fjerne slutbrugerfunktioner (de tilgængelige knapper) for meddelelser i karantæne for brugere eller aktivere karantænemeddelelser og tilføje eller fjerne de samme funktioner i karantænemeddelelser, kan du tildele en anden karantænepolitik til karantænehandlingen.
 
-## <a name="assign-quarantine-policies-in-supported-policies-in-the-microsoft-365-defender-portal"></a>Tildel karantænepolitikker i understøttede politikker i Microsoft 365 Defender-portalen
+## <a name="assign-quarantine-policies-in-supported-policies-in-the-microsoft-365-defender-portal"></a>Tildel karantænepolitikker i understøttede politikker på portalen Microsoft 365 Defender
 
-### <a name="anti-spam-policies"></a>Antispampolitikker
+### <a name="anti-spam-policies"></a>Politikker til bekæmpelse af spam
 
-1. I portalen [Microsoft 365 Defender skal](https://security.microsoft.com) du gå til **& politikker** \> for **samarbejde & politikker** \>  \> for trussel mod **spam** i **sektionen** Politikker.
+1. På [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Anti-spam** i afsnittet **Politikker**.
 
-   Eller du kan bruge for at gå **direkte til siden Ant-spam-politikker**<https://security.microsoft.com/antispam>.
+   Du kan også gå direkte til siden **Ant-spam policies** ved at bruge <https://security.microsoft.com/antispam>.
 
-2. Gør **et af følgende på** siden Antispam-politikker:
-   - Find og vælg en eksisterende **indgående** antispampolitik.
-   - Opret en ny **indgående** antispampolitik.
+2. Benyt en af følgende fremgangsmåder på siden **Politikker til bekæmpelse af spam** :
+   - Find og vælg en eksisterende **politik for indgående** spam.
+   - Opret en ny **politik for indgående** spam.
 
 3. Udfør et af følgende trin:
-   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-menuen med politikoplysninger skal du gå **til sektionen** Handlinger og derefter klikke på **Rediger handlinger**.
-   - **Opret ny**: I guiden Ny politik skal du gå til **siden** Handlinger.
+   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Handlinger** og derefter klikke på **Rediger handlinger**.
+   - **Opret ny**: I den nye politikguide skal du gå til siden **Handlinger** .
 
-4. På siden **Handlinger** har hver vurdering, der har meddelelseshandlingen **Karantæne** , også feltet **Vælg** karantænepolitik, hvor du kan vælge en tilsvarende karantænepolitik.
+4. På siden **Handlinger** vil alle domme, der har handlingen **Karantænemeddelelse** , også have feltet **Vælg karantænepolitik** , så du kan vælge en tilsvarende karantænepolitik.
 
-   **Bemærk**! Når du opretter en ny politik, angiver en  tom værdi for Vælg karantænepolitik standardkarantænepolitikken for den pågældende beslutning. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantænepolitiknavne som beskrevet i den forrige tabel.
+   **Bemærk**! Når du opretter en ny politik, angiver en tom værdi for **Vælg karantænepolitik** standardkarantænepolitikken for den pågældende dom. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantatpolitiknavne, som beskrevet i den forrige tabel.
 
-   ![An karantæne af politikvalg i en antispampolitik.](../../media/quarantine-tags-in-anti-spam-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-spam-policies.png" alt-text="Valg af karantænepolitik i en politik mod spam" lightbox="../../media/quarantine-tags-in-anti-spam-policies.png":::
 
-Alle instruktioner til oprettelse og ændring af antispampolitikker er beskrevet i [Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md).
+Komplette instruktioner til oprettelse og ændring af politikker til bekæmpelse af spam er beskrevet i [Konfigurer politikker til bekæmpelse af spam i EOP](configure-your-spam-filter-policies.md).
 
-#### <a name="anti-spam-policies-in-powershell"></a>Antispam-politikker i PowerShell
+#### <a name="anti-spam-policies-in-powershell"></a>Politikker mod spam i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i antispampolitikker, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i politikker til bekæmpelse af spam, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
 
 ```powershell
 <New-HostedContentFilterPolicy -Name "<Unique name>" | Set-HostedContentFilterPolicy -Identity "<Policy name>"> [-SpamAction Quarantine] [-SpamQuarantineTag <QuarantineTagName>] [-HighConfidenceSpamAction Quarantine] [-HighConfidenceSpamQuarantineTag <QuarantineTagName>] [-PhishSpamAction Quarantine] [-PhishQuarantineTag <QuarantineTagName>] [-HighConfidencePhishQuarantineTag <QuarantineTagName>] [-BulkSpamAction Quarantine] [-BulkQuarantineTag <QuarantineTagName>] ...
 ```
 
-**Bemærkninger**:
+**Noter**:
 
-- Standardværdien for _parametrene PhishSpamAction_ og _HighConfidencePhishAction_ er Karantæne, så du behøver ikke at bruge disse parametre, når du opretter nye politikker for spamfilter i PowerShell. For _parametrene SpamAction_, _HighConfidenceSpamAction_ og _BulkSpamAction_ i nye eller eksisterende antispampolitikker gælder karantænepolitikken kun, hvis værdien er Karantæne.
+- Standardværdien for parametrene _PhishSpamAction_ og _HighConfidencePhishAction_ er Karantæne, så du behøver ikke at bruge disse parametre, når du opretter nye politikker for spamfilter i PowerShell. For parametrene _SpamAction_, _HighConfidenceSpamAction_ og _BulkSpamAction_ i nye eller eksisterende politikker til bekæmpelse af spam er karantænepolitikken kun effektiv, hvis værdien er Quarantine.
 
-  Kør følgende kommando for at få vist vigtige parameterværdier i eksisterende antispampolitikker:
+  Hvis du vil se de vigtige parameterværdier i eksisterende politikker mod spam, skal du køre følgende kommando:
 
   ```powershell
   Get-HostedContentFilterPolicy | Format-List Name,*SpamAction,HighConfidencePhishAction,*QuarantineTag
   ```
 
-  Du kan finde oplysninger om standardhandlingsværdierne og de anbefalede handlingsværdier for Standard og Streng i [Politikindstillinger for EOP-antispam](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  Du kan få oplysninger om standardværdierne for handlingen og de anbefalede handlingsværdier for Standard og Strict under [Politikindstillinger for EOP-antispam](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
-- Når du opretter nye antispampolitikker, betyder det, at spamfiltrering ikke har en tilsvarende karantænepolitikparameter, at der anvendes standardkarantænepolitik [for denne](#step-2-assign-a-quarantine-policy-to-supported-features) konklusion.
+- Når du opretter nye politikker mod spam, betyder en dom for spamfiltrering uden en tilsvarende karantænepolitikparameter [standardkarantatpolitikken](#step-2-assign-a-quarantine-policy-to-supported-features) for den pågældende dom.
 
-  Du skal kun erstatte en standardkarantænepolitik med en brugerdefineret karantænepolitik, hvis du vil ændre standardfunktionerne for slutbrugere på meddelelser, der er sat i karantæne, for den pågældende spamfiltreringsslutning.
+  Du skal kun erstatte en standard karantænepolitik med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i karantænemeddelelser for den bestemte dom for filtrering af spam.
 
-- En ny antispampolitik i PowerShell kræver en politik for spamfilter (indstillinger), der bruger **cmdlet'en New-HostedContentFilterPolicy** og en eksklusiv regel for spamfilter (modtagerfiltre) ved hjælp af **new-HostedContentFilterRule-cmdlet'en** . Du kan finde en vejledning [under Brug PowerShell til at oprette antispampolitikker](configure-your-spam-filter-policies.md#use-powershell-to-create-anti-spam-policies).
+- En ny politik til bekæmpelse af spam i PowerShell kræver en politik for spamfilter (indstillinger) ved hjælp af cmdlet'en **New-HostedContentFilterPolicy** og en eksklusiv regel for spamfilter (modtagerfiltre) ved hjælp af cmdlet'en **New-HostedContentFilterRule** . Du kan finde instruktioner under [Brug PowerShell til at oprette politikker til bekæmpelse af spam](configure-your-spam-filter-policies.md#use-powershell-to-create-anti-spam-policies).
 
 I dette eksempel oprettes en ny politik for spamfilter med navnet Forskningsafdeling med følgende indstillinger:
 
-- Handlingen for alle beskeder om spamfiltrering er indstillet til Karantæne.
-- Den brugerdefinerede karantænepolitik, der hedder NoAccess, der tildeler Ingen adgangstilladelser, erstatter eventuelle standardkarantænepolitikker, der ikke allerede tildeler **Ingen** adgangstilladelser som standard.
+- Handlingen for alle spamfiltreringsdomme er indstillet til Karantæne.
+- Den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** , erstatter alle standard karantænepolitikker, der ikke allerede tildeler **ingen adgangstilladelser** som standard.
 
 ```powershell
 New-HostedContentFilterPolicy -Name "Research Department" -SpamAction Quarantine -SpamQuarantineTag NoAccess -HighConfidenceSpamAction Quarantine -HighConfidenceSpamQuarantineTag NoAction -PhishSpamAction Quarantine -PhishQuarantineTag NoAction -BulkSpamAction Quarantine -BulkQuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
 
-I dette eksempel ændres den eksisterende politik for spamfilter med navnet HUMAN Resources. Handlingen for vurdering af spamkarantæne er indstillet til Karantæne, og den brugerdefinerede karantænepolitik, der hedder NoAccess, tildeles.
+I dette eksempel ændres den eksisterende politik for spamfilter med navnet HR. Handlingen for dom for spamkarantæne er angivet til Karantæne, og den brugerdefinerede karantænepolitik med navnet NoAccess er tildelt.
 
 ```powershell
 Set-HostedContentFilterPolicy -Identity "Human Resources" -SpamAction Quarantine -SpamQuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
 
-### <a name="anti-phishing-policies"></a>Antiphishing-politikker
+### <a name="anti-phishing-policies"></a>Politikker for antiphishing
 
-Spoof-intelligens er tilgængelig i EOP og Defender Office 365. Bruger efterligningsbeskyttelse, domæneefterligning og postkasseintelligens er kun tilgængelig i Defender Office 365. Du kan finde flere oplysninger [i Antiphishing-politikker Microsoft 365](set-up-anti-phishing-policies.md).
+Spoof intelligence er tilgængelig i EOP og Defender for Office 365. Beskyttelse mod repræsentation af brugere, beskyttelse mod repræsentation af domæner og postkasseintelligens er kun tilgængelige i Defender for Office 365. Du kan få flere oplysninger [under Politikker til bekæmpelse af phishing i Microsoft 365](set-up-anti-phishing-policies.md).
 
-1. I Microsoft 365 Defender [skal](https://security.microsoft.com) du gå til **& politikker** \> for **samarbejde & regler** \>  \> for trussel **mod phishing** i **sektionen** Politikker.
+1. I [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**.
 
-   Eller du kan bruge for at gå **direkte til siden Ant-spam-politikker**<https://security.microsoft.com/antiphishing>.
+   Du kan også gå direkte til siden **Ant-spam policies** ved at bruge <https://security.microsoft.com/antiphishing>.
 
-2. Gør et **af følgende** på siden Antiphishing:
-   - Find og vælg en eksisterende antiphishingpolitik.
-   - Opret en ny antiphishingpolitik.
+2. Benyt en af følgende fremgangsmåder på siden **Anti-phishing** :
+   - Find og vælg en eksisterende politik til bekæmpelse af phishing.
+   - Opret en ny politik til bekæmpelse af phishing.
 
 3. Udfør et af følgende trin:
-   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-dialogboksen med politikoplysninger skal du gå **til sektionen Beskyttelsesindstillinger** og derefter klikke **på Rediger beskyttelsesindstillinger**.
-   - **Opret ny**: I guiden Ny politik skal du gå til **siden** Handlinger.
+   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Beskyttelsesindstillinger** og derefter klikke på **Rediger beskyttelsesindstillinger**.
+   - **Opret ny**: I den nye politikguide skal du gå til siden **Handlinger** .
 
-4. På siden **Beskyttelsesindstillinger** skal du kontrollere, at følgende indstillinger er aktiveret og konfigureret efter behov:
+4. På siden **Beskyttelsesindstillinger** skal du kontrollere, at følgende indstillinger er slået til og konfigureret efter behov:
    - **Aktiverede brugere til at beskytte**: Angiv brugere.
-   - **Aktiverede domæner at beskytte**: Vælg **Medtag domæner, jeg ejer** og/eller **Medtag brugerdefinerede domæner** , og angiv domænerne.
+   - **Aktiverede domæner, der skal beskyttes**: Vælg **Medtag domæner, jeg ejer** og/eller **Medtag brugerdefinerede domæner** , og angiv domænerne.
    - **Aktivér postkasseintelligens**
-   - **Aktivere intelligens til repræsentationsbeskyttelse**
-   - **Aktivér efterlignet intelligens**
+   - **Aktivér intelligens til repræsentationsbeskyttelse**
+   - **Aktivér spoof intelligence**
 
 5. Udfør et af følgende trin:
-   - **Rediger eksisterende**: I pop op-menuen med politikoplysninger skal du gå til **sektionen Handlinger** og derefter klikke på **Rediger handlinger**.
-   - **Opret ny**: I guiden Ny politik skal du gå til **siden** Handlinger.
+   - **Rediger eksisterende**: I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Handlinger** og derefter klikke på **Rediger handlinger**.
+   - **Opret ny**: I den nye politikguide skal du gå til siden **Handlinger** .
 
-6. På siden **Handlinger** har hver vurdering, der har meddelelseshandlingen Karantæne, også feltet Anvend  karantænepolitik, hvor du kan vælge en tilsvarende karantænepolitik.
+6. På siden **Handlinger** vil alle domme, der har **handlingen Sæt meddelelsen i karantæne** , også have feltet **Anvend karantænepolitik** , så du kan vælge en tilsvarende karantænepolitik.
 
-   **Bemærk**! Når du opretter en ny politik, angiver en  tom værdi for Anvend karantænepolitik standardkarantænepolitikken for den pågældende handling. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantænepolitiknavne som beskrevet i den forrige tabel.
+   **Bemærk**! Når du opretter en ny politik, angiver en tom værdi for **Anvend karantænepolitik** standardkarantænepolitikken for den pågældende handling. Når du senere redigerer politikken, erstattes de tomme værdier af de faktiske standardkarantatpolitiknavne, som beskrevet i den forrige tabel.
 
-   ![An karantæne af politikvalg i en antiphishingpolitik.](../../media/quarantine-tags-in-anti-phishing-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-phishing-policies.png" alt-text="Valg af karantænepolitik i en anti-phishing-politik" lightbox="../../media/quarantine-tags-in-anti-phishing-policies.png":::
 
-Du kan finde komplette instruktioner om oprettelse og ændring af antiphishing-politikker i følgende emner:
+Du kan finde en komplet vejledning i, hvordan du opretter og ændrer politikker til bekæmpelse af phishing, i følgende emner:
 
-- [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)
-- [Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)
+- [Konfigurer politikker for antiphishing i EOP](configure-anti-phishing-policies-eop.md)
+- [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
 
-#### <a name="anti-phishing-policies-in-powershell"></a>Antiphishing-politikker i PowerShell
+#### <a name="anti-phishing-policies-in-powershell"></a>Anti-phishing-politikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i antiphishing-politikker, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i politikker til bekæmpelse af phishing, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
 
 ```powershell
 <New-AntiPhishPolicy -Name "<Unique name>" | Set-AntiPhishPolicy -Identity "<Policy name>"> [-EnableSpoofIntelligence $true] [-AuthenticationFailAction Quarantine] [-SpoofQuarantineTag <QuarantineTagName>] [-EnableMailboxIntelligence $true] [-EnableMailboxIntelligenceProtection $true] [-MailboxIntelligenceProtectionAction Quarantine] [-MailboxIntelligenceQuarantineTag <QuarantineTagName>] [-EnableOrganizationDomainsProtection $true] [-EnableTargetedDomainsProtection $true] [-TargetedDomainProtectionAction Quarantine] [-TargetedDomainQuarantineTag <QuarantineTagName>] [-EnableTargetedUserProtection $true] [-TargetedUserProtectionAction Quarantine] [-TargetedUserQuarantineTag <QuarantineTagName>] ...
 ```
 
-**Bemærkninger**:
+**Noter**:
 
-- _Parametrene\*_ Aktivér er nødvendige for at aktivere de specifikke beskyttelsesfunktioner. Standardværdien for _parametrene EnableMailboxIntelligence_ og _EnableSpoofIntelligence_ er $true, så du behøver ikke at bruge disse parametre, når du opretter nye antiphish-politikker i PowerShell. Alle andre _Aktivér-parametre\*_ skal have værdien $true så du kan angive værdien Karantæne _\*_ i de tilsvarende handlingsparametre for derefter at tildele en karantænepolitik. Ingen af _parametrene *\Handling_ har standardværdien Karantæne.
+- _Aktivér\*_ parametre er påkrævet for at aktivere de specifikke beskyttelsesfunktioner. Standardværdien for parametrene _EnableMailboxIntelligence_ og _EnableSpoofIntelligence_ er $true, så du behøver ikke at bruge disse parametre, når du opretter nye anti-phish-politikker i PowerShell. Alle andre _Aktivér\*_ parametre skal have værdien $true, så du kan angive værdien Karantæne i de tilsvarende _\*handlingsparametre_ for derefter at tildele en karantænepolitik. Ingen af parametrene _for *\Action_ har standardværdien Quarantine.
 
-  Kør følgende kommando for at få vist vigtige parameterværdier i eksisterende antiphish-politikker:
+  Hvis du vil se de vigtige parameterværdier i eksisterende anti-phish-politikker, skal du køre følgende kommando:
 
   ```powershell
   Get-AntiPhishPolicy | Format-List Name,Enable*Intelligence,Enable*Protection,*Action,*QuarantineTag
   ```
 
-  Du kan finde oplysninger om standardhandlingsværdierne og de anbefalede handlingsværdier for Standard og Streng i [Politikindstillinger for EOP-antiphishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) og Indstillinger for repræsentation i [antiphishing-politikker i Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  Du kan få oplysninger om standardværdierne og de anbefalede handlingsværdier for Standard og Strict under [EOP-politikindstillinger for anti-phishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) og [Repræsentationsindstillinger i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-- Når du opretter antiphishing-politikker, betyder en antiphishing-handling uden en tilsvarende karantænepolitikparameter standardkarantænepolitikken [for denne](#step-2-assign-a-quarantine-policy-to-supported-features) konklusion.
+- Når du opretter politikker til anti-phishing, betyder en anti-phishing-handling uden en tilsvarende karantænepolitikparameter [standardkarantatpolitikken](#step-2-assign-a-quarantine-policy-to-supported-features) for den pågældende dom.
 
-  Du skal kun erstatte en standardkarantænepolitik med en brugerdefineret karantænepolitik, hvis du vil ændre standardfunktionerne for slutbrugere på meddelelser, der er sat i karantæne, for den pågældende beslutning.
+  Du skal kun erstatte en standard karantænepolitik med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i karantænemeddelelser for den pågældende dom.
 
-- En ny antiphishingpolitik i PowerShell kræver en antiphish-politik (indstillinger) ved hjælp af cmdlet'en **New-AntiPhishPolicy** og en eksklusiv antiphish-regel (modtagerfiltre) ved hjælp af den nye **antiphishRule-cmdlet** . Du kan finde en vejledning i følgende emner:
-  - [Brug PowerShell til at konfigurere antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
-  - [Brug Exchange Online PowerShell til at konfigurere antiphishing-politikker](configure-mdo-anti-phishing-policies.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+- En ny anti-phishing-politik i PowerShell kræver en anti-phish-politik (indstillinger) ved hjælp af cmdlet'en **New-AntiPhishPolicy** og en eksklusiv anti-phish-regel (modtagerfiltre) ved hjælp af cmdlet'en **New-AntiPhishRule** . Du kan finde instruktioner i følgende emner:
+  - [Brug PowerShell til at konfigurere anti-phishing-politikker i EOP](configure-anti-phishing-policies-eop.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+  - [Brug Exchange Online PowerShell til at konfigurere politikker til bekæmpelse af phishing](configure-mdo-anti-phishing-policies.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
 
-I dette eksempel oprettes en ny antiphish-politik med navnet Forskningsafdeling med følgende indstillinger:
+I dette eksempel oprettes en ny anti-phish-politik med navnet Forskningsafdeling med følgende indstillinger:
 
-- Handlingen for alle beskeder om spamfiltrering er indstillet til Karantæne.
-- Den brugerdefinerede karantænepolitik, der hedder NoAccess, der tildeler Ingen adgangstilladelser, erstatter eventuelle standardkarantænepolitikker, der ikke allerede tildeler **Ingen** adgangstilladelser som standard.
+- Handlingen for alle spamfiltreringsdomme er indstillet til Karantæne.
+- Den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** , erstatter alle standard karantænepolitikker, der ikke allerede tildeler **ingen adgangstilladelser** som standard.
 
 ```powershell
 New-AntiPhishPolicy -Name "Research Department" -AuthenticationFailAction Quarantine -SpoofQuarantineTag NoAccess -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -MailboxIntelligenceQuarantineTag NoAccess -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-AntiPhishPolicy](/powershell/module/exchange/new-antiphishpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-AntiPhishPolicy](/powershell/module/exchange/new-antiphishpolicy).
 
-I dette eksempel ændres den eksisterende antiphish-politik med navnet HUMAN Resources. Handlingen for meddelelser, der registreres af bruger efterligning og domæne efterligning, er angivet til Karantæne, og den brugerdefinerede karantænepolitik NoAccess tildeles.
+I dette eksempel ændres den eksisterende anti-phish-politik med navnet Human Resources. Handlingen for meddelelser, der registreres af bruger repræsentation og domæne repræsentation, er angivet til Karantæne, og den brugerdefinerede karantænepolitik med navnet NoAccess tildeles.
 
 ```powershell
 Set-AntiPhishPolicy -Identity "Human Resources" -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-AntiPhishPolicy](/powershell/module/exchange/set-antiphishpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-AntiPhishPolicy](/powershell/module/exchange/set-antiphishpolicy).
 
-### <a name="anti-malware-policies"></a>Antimalwarepolitikker
+### <a name="anti-malware-policies"></a>Politikker for antimalware
 
-1. I portalen [Microsoft 365 Defender skal](https://security.microsoft.com) du gå til **& politikker** \> for **samarbejde & regler** \>  \> **for trussel mod malware** i **sektionen** Politikker.
+1. I [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Antimalware** i afsnittet **Politikker**.
 
-   Eller du kan bruge for at gå **direkte til siden antimalware**<https://security.microsoft.com/antimalwarev2>.
+   Du kan også gå direkte til siden **Anti-malware** ved at bruge <https://security.microsoft.com/antimalwarev2>.
 
-2. Gør **et af følgende** på siden antimalware:
-   - Find og vælg en eksisterende antimalwarepolitik.
+2. Benyt en af følgende fremgangsmåder på siden **Antimalware** :
+   - Find og vælg en eksisterende politik for antimalware.
    - Opret en ny antimalwarepolitik.
 
 3. Udfør et af følgende trin:
-   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-dialogboksen med politikoplysninger skal du gå **til sektionen Beskyttelsesindstillinger** og derefter klikke **på Rediger beskyttelsesindstillinger**.
-   - **Opret ny**: I guiden Ny politik skal du gå til **siden** Handlinger.
+   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Beskyttelsesindstillinger** og derefter klikke på **Rediger beskyttelsesindstillinger**.
+   - **Opret ny**: I den nye politikguide skal du gå til siden **Handlinger** .
 
-4. På siden **Beskyttelse skal** du vælge en karantænepolitik i **feltet Karantænepolitik** .
+4. På siden **Beskyttelsesindstillinger** skal du vælge en karantænepolitik i feltet **Karantænepolitik** .
 
-   **Bemærk**! Når du opretter en ny politik, angiver **en tom** politikværdi for Karantæne standardkarantænepolitikken for den, der anvendes. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardpolitiknavn for karantæne, sådan som det er beskrevet i den forrige tabel.
+   **Bemærk**! Når du opretter en ny politik, angiver en tom værdi for **karantænepolitik** standardkartantaetpolitikken for den, der bruges. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardnavn for karantænepolitikken, som beskrevet i den forrige tabel.
 
 #### <a name="anti-malware-policies-in-powershell"></a>Antimalwarepolitikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i antimalwarepolitikker, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i politikker til antimalware, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
 
 ```powershell
 <New-AntiMalwarePolicy -Name "<Unique name>" | Set-AntiMalwarePolicy -Identity "<Policy name>"> [-QuarantineTag <QuarantineTagName>]
 ```
 
-**Bemærkninger**:
+**Noter**:
 
-- Når du opretter nye antimalwarepolitikker uden at bruge parameteren QuarantineTag, når du opretter en ny antimalwarepolitik, bruges standardpolitikken for malwareregistrering i karantæne (AdminOnlyAccessPolicy).
+- Når du opretter nye politikker for antimalware uden at bruge parameteren QuarantineTag, når du opretter en ny politik for antimalware, bruges standard karantænepolitikken for malwareregistreringer (AdminOnlyAccessPolicy).
 
-  Du skal kun erstatte standardkarantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardfunktionerne for slutbrugere på meddelelser, der er sat i karantæne som malware.
+  Du skal kun erstatte standard karantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i meddelelser, der er sat i karantæne som malware.
 
-  Kør følgende kommando for at få vist vigtige parameterværdier i eksisterende antiphish-politikker:
+  Hvis du vil se de vigtige parameterværdier i eksisterende anti-phish-politikker, skal du køre følgende kommando:
 
   ```powershell
   Get-MalwareFilterPolicy | Format-Table Name,QuarantineTag
   ```
 
-- En ny antimalwarepolitik i PowerShell kræver en politik for malwarefiltrering (indstillinger), der bruger **cmdlet'en New-MalwareFilterPolicy** og en eksklusiv regel for malwarefiltre (modtagerfiltre), der bruger cmdlet'en **New-MalwareFilterRule** . Du kan finde en [vejledning under Brug Exchange Online PowerShell eller den enkeltstående EOP PowerShell til at konfigurere antimalwarepolitikker](configure-anti-malware-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-anti-malware-policies).
+- En ny antimalwarepolitik i PowerShell kræver en politik for malwarefilter (indstillinger) ved hjælp af cmdlet'en **New-MalwareFilterPolicy** og en eksklusiv regel for malwarefilter (modtagerfiltre) ved hjælp af cmdlet'en **New-MalwareFilterRule** . Du kan finde instruktioner under [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for antimalware](configure-anti-malware-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-anti-malware-policies).
 
-I dette eksempel **oprettes en** politik for malwarefilter med navnet Forskningsafdeling, som bruger den brugerdefinerede karantænepolitik NoAccess, der tildeler Ingen adgangstilladelser til meddelelser, der er sat i karantæne.
+I dette eksempel oprettes der en politik for malwarefilter med navnet Research Department, der bruger den brugerdefinerede karantænepolitik med navnet NoAccess, som tildeler **ingen adgangstilladelser** til de karantænerede meddelelser.
 
 ```powershell
 New-MalwareFilterPolicy -Name "Research Department" -QuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
 
-Dette eksempel ændrer den eksisterende politik for malwarefiltrering med navnet HUMAN Resources ved at tildele politikken for brugerdefinerede karantæner ved navn NoAccess, der tildeler Ingen adgangstilladelser til meddelelser, der er i karantæne.
+I dette eksempel ændres den eksisterende politik for malwarefilter med navnet HR ved at tildele den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** til de karantænerede meddelelser.
 
 ```powershell
 New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
 ### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Pengeskab politikker for vedhæftede filer i Defender for Office 365
 
-1. I portalen [Microsoft 365 Defender skal](https://security.microsoft.com) du gå til **Politikker for & mailsamarbejde** \> **& politikker** \>  \> for **trussel Pengeskab** Vedhæftede filer i **sektionen** Politikker.
+1. På [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**.
 
-   Du kan også gå direkte til siden **Pengeskab vedhæftede filer** ved hjælp af <https://security.microsoft.com/safeattachmentv2>.
+   Du kan også gå direkte til siden **Pengeskab Vedhæftede filer** ved at bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab vedhæftede** filer skal du gøre et af følgende:
-   - Find og vælg en eksisterende Pengeskab politik for vedhæftede filer.
-   - Opret en ny Pengeskab politik for vedhæftede filer.
+2. Benyt en af følgende fremgangsmåder på siden **Pengeskab vedhæftede filer**:
+   - Find og vælg en eksisterende politik for Pengeskab Vedhæftede filer.
+   - Opret en ny politik for vedhæftede filer Pengeskab.
 
 3. Udfør et af følgende trin:
-   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-menuen med politikoplysninger skal du gå **til Indstillinger** og derefter klikke på **Rediger indstillinger**.
-   - **Opret ny**: I guiden Ny politik skal du gå til **Indstillinger** side.
+   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Indstillinger** og derefter klikke på **Rediger indstillinger**.
+   - **Opret ny**: Gå til siden **Indstillinger** i den nye politikguide.
 
-4. På **siden Indstillinger** skal du gøre følgende:
-   1. **Pengeskab ukendt malwaresvar ved vedhæftede filer**: **Vælg Bloker**, **erstat** eller **Dynamisk levering**.
-   2. Vælg en karantænepolitik i **feltet Karantænepolitik** .
+4. Benyt følgende fremgangsmåde på siden **Indstillinger**:
+   1. **Pengeskab Vedhæftede filer ukendt malware-svar**: Vælg **Bloker**, **Erstat** eller **Dynamisk levering**.
+   2. Vælg en karantænepolitik i feltet **Karantænepolitik** .
 
-   **Bemærk**! Når du opretter en ny politik, angiver **en tom** politikværdi for Karantæne standardkarantænepolitikken. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardpolitiknavn for karantæne, sådan som det er beskrevet i den forrige tabel.
+   **Bemærk**! Når du opretter en ny politik, angiver en tom værdi for **karantænepolitikken** , at standardkarantænepolitikken bruges. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardnavn for karantænepolitikken, som beskrevet i den forrige tabel.
 
-Fulde instruktioner til oprettelse og redigering Pengeskab Politikker for vedhæftede filer er beskrevet i [Konfigurer Pengeskab Politikker for vedhæftede filer i Microsoft Defender til Office 365](set-up-safe-attachments-policies.md).
+Komplette instruktioner til oprettelse og ændring af politikker for vedhæftede filer Pengeskab er beskrevet i [Konfigurer politikker for Pengeskab vedhæftede filer i Microsoft Defender for Office 365](set-up-safe-attachments-policies.md).
 
 #### <a name="safe-attachments-policies-in-powershell"></a>Pengeskab politikker for vedhæftede filer i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i Pengeskab Politikker for vedhæftede filer, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i Pengeskab politikker for vedhæftede filer, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
 
 ```powershell
 <New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | Replace | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
 ```
 
-**Bemærkninger**:
+**Noter**:
 
-- Værdierne _for_ handlingsparameteren Bloker, Erstat eller DynamicDelivery kan resultere i meddelelser, der er sat i karantæne (værdien Tillad sætter ikke meddelelser i karantæne). Værdien af parameteren _Handling_ giver kun mening, når værdien af _parameteren Aktivér_ er `$true`.
+- _Parameterværdierne_ Bloker, Erstat eller DynamicDelivery kan resultere i karantænemeddelelser (værdien Tillad sætter ikke meddelelser i karantæne). Værdien af _handlingsparameteren_ giver kun mening, når værdien af parameteren _Enable_ er `$true`.
 
-- Når du opretter nye Pengeskab Politikker for vedhæftede filer uden at bruge parameteren QuarantineTag, bruges standardkarantænepolitikken for Pengeskab Registreringer af vedhæftede filer i mail (AdminOnlyAccessPolicy).
+- Når du opretter nye Pengeskab politikker for vedhæftede filer uden at bruge parameteren QuarantineTag, bruges standardkarantænepolitikken for Pengeskab registreringer af vedhæftede filer i mail (AdminOnlyAccessPolicy).
 
-  Du skal kun erstatte standardkarantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardfunktionerne for slutbrugere på mails, der er sat i karantæne af Pengeskab politikker for vedhæftede filer.
+  Du skal kun erstatte standard karantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i mails, der er sat i karantæne af Pengeskab politikker for vedhæftede filer.
 
-  Kør følgende kommando for at få vist vigtige parameterværdier:
+  Kør følgende kommando for at se de vigtige parameterværdier:
 
   ```powershell
   Get-SafeAttachmentPolicy | Format-List Name,Enable,Action,QuarantineTag
   ```
 
-- En ny Pengeskab Politik for vedhæftede filer i PowerShell kræver en sikker politik for vedhæftede filer (indstillinger), der bruger **New-SafeAttachmentPolicy-cmdlet'en** og en eksklusiv regel for sikre vedhæftede filer (modtagerfiltre) ved hjælp af den **nye SafeAttachmentRule-cmdlet**. Du kan finde en [vejledning under Brug Exchange Online PowerShell eller den enkeltstående EOP PowerShell til at konfigurere Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
+- En ny politik for vedhæftede filer Pengeskab i PowerShell kræver en politik for sikker vedhæftede filer (indstillinger) ved hjælp af **Cmdlet'en New-SafeAttachmentPolicy** og en eksklusiv regel for sikre vedhæftede filer (modtagerfiltre) ved hjælp af **New-SafeAttachmentRule-cmdlet'en**. Du kan finde instruktioner under [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
 
-I dette eksempel **oprettes en** politik for sikre vedhæftede filer med navnet Forskningsafdeling, som blokerer registrerede meddelelser og bruger den brugerdefinerede karantænepolitik NoAccess, der tildeler Ingen adgangstilladelser til meddelelser, der er i karantæne.
+I dette eksempel oprettes der en politik for sikker vedhæftede filer med navnet Research Department, der blokerer registrerede meddelelser og bruger den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** til de karantænelagrede meddelelser.
 
 ```powershell
 New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block -QuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
 
-I dette eksempel ændres den eksisterende politik for sikre vedhæftede filer med navnet HUMAN Resources ved at tildele politikken for brugerdefinerede karantæner ved navn NoAccess, der **tildeler Ingen adgangstilladelser** .
+I dette eksempel ændres den eksisterende politik for sikre vedhæftede filer med navnet HR ved at tildele den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** .
 
 ```powershell
 Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
-## <a name="configure-global-quarantine-notification-settings-in-the-microsoft-365-defender-portal"></a>Konfigurere indstillinger for meddelelser om global karantæne i Microsoft 365 Defender portal
+## <a name="configure-global-quarantine-notification-settings-in-the-microsoft-365-defender-portal"></a>Konfigurer globale indstillinger for karantænebeskeder på Microsoft 365 Defender-portalen
 
-De globale indstillinger for karantænepolitikker giver dig mulighed for at tilpasse de meddelelser i karantæne, der sendes til modtagere af meddelelser, der er sat i karantæne, hvis karantænemeddelelser er slået til i karantænepolitikken. Du kan finde flere oplysninger om disse meddelelser under [Karantænemeddelelser](use-spam-notifications-to-release-and-report-quarantined-messages.md).
+De globale indstillinger for karantænepolitikker giver dig mulighed for at tilpasse de karantænemeddelelser, der sendes til modtagere af karantænemeddelelser, hvis karantænemeddelelser er slået til i karantænepolitikken. Du kan få flere oplysninger om disse meddelelser under [Karantænemeddelelser](use-spam-notifications-to-release-and-report-quarantined-messages.md).
 
-1. I portalen Microsoft 365 Defender skal du gå til **& politikker** \> for samarbejde **& regler** \>  \> Om trusselspolitikker **Karantænepolitikker** i **sektionen** Regler.
+1. På Microsoft 365 Defender-portalen skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
 
-2. På siden **Karantænepolitik** skal du vælge **Globale indstillinger**.
+2. På siden **Karantænepolitikker** skal du vælge **Globale indstillinger**.
 
-3. I pop **op-vindue med beskedindstillinger** for karantæne, der åbnes, skal du konfigurere nogle af eller alle følgende indstillinger:
+3. I pop op-vinduet **Indstillinger for karantænemeddelelse** , der åbnes, skal du konfigurere følgende indstillinger:
 
-   - **Visningsnavn**: Tilpas afsenderens viste navn, der bruges i karantænemeddelelser.
+   - Tilpas karantænemeddelelser baseret på modtagerens sprog:
 
-     For hvert sprog, du har tilføjet, skal du vælge sproget i det andet sprogfelt (klik ikke på X) og angive den ønskede tekstværdi i feltet **Vist** navn.
+     - **Vist navn på** den afsender, der bruges i karantænemeddelelser som vist på følgende skærmbillede.
 
-     Følgende skærmbillede viser det tilpassede viste navn i en besked om karantæne:
+       :::image type="content" source="../../media/quarantine-tags-esn-customization-display-name.png" alt-text="Et brugerdefineret afsendervisningsnavn i en karantænemeddelelse." lightbox="../../media/quarantine-tags-esn-customization-display-name.png":::
 
-     ![Et tilpasset afsendervisningsnavn i en besked i karantæne.](../../media/quarantine-tags-esn-customization-display-name.png)
+     - Teksten **Ansvarsfraskrivelse** , der er føjet til bunden af karantænemeddelelser. Den lokaliserede tekst **, En ansvarsfraskrivelse fra din organisation:** inkluderes altid først efterfulgt af den tekst, du angiver som vist på følgende skærmbillede:
 
-   - **Ansvarsfraskrivelse**: Føj en brugerdefineret ansvarsfraskrivelse til bunden af meddelelser i karantæne. Den oversatte tekst, **En ansvarsfraskrivelse fra din organisation:** medtages altid først efterfulgt af den tekst, du angiver.
+       :::image type="content" source="../../media/quarantine-tags-esn-customization-disclaimer.png" alt-text="En brugerdefineret ansvarsfraskrivelse nederst i en karantænemeddelelse." lightbox="../../media/quarantine-tags-esn-customization-disclaimer.png":::
 
-     For hvert sprog, du har tilføjet, skal du vælge sproget i feltet med det andet sprog (klik ikke på X) og angive den ønskede tekstværdi i feltet **Ansvarsfraskrivelse** .
+     - Sprog-id'et for værdierne **Vist navn** og **Ansvarsfraskrivelse** . Karantænemeddelelser er allerede lokaliseret på baggrund af modtagerens sprogindstillinger. Værdierne **Vist navn** og **Ansvarsfraskrivelse** bruges i karantænemeddelelser, der gælder for modtagerens sprog.
 
-     Følgende skærmbillede viser den tilpassede ansvarsfraskrivelse i en karantænemeddelelse:
+       Vælg sproget i feltet **Vælg sprog** , _før_ du angiver værdier i felterne **Vist navn** og **Ansvarsfraskrivelse** . Når du ændrer værdien i feltet **Vælg sprog** , tømmes værdierne i felterne **Vist navn** og **Ansvarsfraskrivelse** .
 
-     ![En brugerdefineret ansvarsfraskrivelse nederst i en besked om karantæne.](../../media/quarantine-tags-esn-customization-disclaimer.png)
+     Følg disse trin for at tilpasse karantænemeddelelser baseret på modtagerens sprog:
 
-   - **Vælg sprog**: Meddelelser om karantæne lokaliseres allerede baseret på modtagerens sprogindstillinger. Du kan angive brugerdefineret tekst på forskellige sprog for **værdierne Vist navn** og **Ansvarsfraskrivelse** .
+     1. Vælg sproget i feltet **Vælg sprog** . Standardværdien er **Default**, hvilket betyder engelsk.
+     2. Angiv værdier for **Vist navn** og **Ansvarsfraskrivelse**. Værdierne skal være entydige for hvert sprog. Hvis du forsøger at genbruge værdien **Vist navn** eller **Ansvarsfraskrivelse** for flere sprog, får du vist en fejl, når du klikker på **Gem**.
+     3. Klik på knappen **Tilføj** .
+     4. Gentag de forrige trin for at oprette maksimalt tre tilpassede karantænemeddelelser baseret på modtagerens sprog. Et felt uden mærkat viser de sprog, du har konfigureret:
 
-     Vælg mindst ét sprog fra det første sprogfelt, og klik derefter på **Tilføj**. Du kan markere flere sprog ved at klikke **på** Tilføj efter hvert sprog. Et sektionssprogfelt viser alle de sprog, du har valgt:
+        :::image type="content" source="../../media/quarantine-tags-esn-customization-selected-languages.png" alt-text="De valgte sprog i de globale indstillinger for karantænebeskeder for karantænepolitikker." lightbox="../../media/quarantine-tags-esn-customization-selected-languages.png":::
 
-     ![Valgte sprog i det andet sprogfelt i de globale indstillinger for meddelelser om karantæne i karantænepolitikker.](../../media/quarantine-tags-esn-customization-selected-languages.png)
+   - **Brug mit firmalogo**: Vælg denne indstilling for at erstatte det Microsoft-standardlogo, der bruges øverst i karantænemeddelelser. Før du udfører dette trin, skal du følge vejledningen i [Tilpas det Microsoft 365 tema for din organisation for](../../admin/setup/customize-your-organization-theme.md) at uploade dit brugerdefinerede logo.
 
-   - **Brug mit firmalogo**: Vælg denne indstilling for at erstatte Microsoft-standardlogoet, der bruges øverst i karantænemeddelelser. Før du gør dette, skal du følge vejledningen i Tilpasse Microsoft 365 [til organisationen for at](../../admin/setup/customize-your-organization-theme.md) overføre dit brugerdefinerede logo.
+     På følgende skærmbillede vises et brugerdefineret logo i en karantænemeddelelse:
 
-     Følgende skærmbillede viser et brugerdefineret logo i en besked om karantæne:
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-logo.png" alt-text="Et brugerdefineret logo i en karantænemeddelelse" lightbox="../../media/quarantine-tags-esn-customization-logo.png":::
 
-     ![Et brugerdefineret logo i en besked om karantæne.](../../media/quarantine-tags-esn-customization-logo.png)
+   - **Send slutbrugerens spammeddelelse hver (dag)**: Vælg hyppigheden for karantænemeddelelser. Standardværdien er 3 dage, men du kan vælge 1 til 15 dage.
 
-   - **Send beskeder om spam til slutbruger hver (dage)**: Vælg hyppigheden for beskeder i karantæne.
+4. Klik på **Gem**, når du er færdig.
 
-## <a name="view-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Få vist karantænepolitikker i Microsoft 365 Defender portal
+## <a name="view-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Få vist karantænepolitikker på Microsoft 365 Defender-portalen
 
-1. I portalen Microsoft 365 Defender skal du gå til **& politikker** \> for samarbejde **& regler** \>  \> Om trusselspolitikker **Karantænepolitikker** i **sektionen** Regler.
+1. På Microsoft 365 Defender-portalen skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
 
-2. Siden **for karantænepolitik** viser listen over politikker efter **navn og** **dato for seneste** opdatering.
+2. På siden **Karantænepolitikker** vises en liste over politikker efter **navn** og **dato for seneste opdatering** .
 
 3. Hvis du vil have vist indstillingerne for indbyggede eller brugerdefinerede karantænepolitikker, skal du vælge karantænepolitikken på listen ved at klikke på navnet.
 
-4. Hvis du vil have vist de globale indstillinger, skal du klikke **på Globale indstillinger**
+4. Klik på **Globale indstillinger** for at få vist de globale indstillinger
 
 ### <a name="view-quarantine-policies-in-powershell"></a>Få vist karantænepolitikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at få vist karantænepolitikker, skal du gøre et af følgende:
+Hvis du hellere vil bruge PowerShell til at få vist karantænepolitikker, skal du gøre et af følgende trin:
 
-- Hvis du vil have vist en oversigtsliste over alle indbyggede eller brugerdefinerede politikker, skal du køre følgende kommando:
+- Kør følgende kommando for at få vist en oversigtsliste over alle indbyggede eller brugerdefinerede politikker:
 
   ```powershell
   Get-QuarantinePolicy | Format-Table Name
   ```
 
-- Hvis du vil have vist indstillingerne for indbyggede eller brugerdefinerede karantænepolitikker, \<QuarantinePolicyName\> skal du erstatte med navnet på karantænepolitikken og køre følgende kommando:
+- Hvis du vil have vist indstillingerne for indbyggede eller brugerdefinerede karantænepolitikker, skal du erstatte \<QuarantinePolicyName\> med navnet på karantænepolitikken og køre følgende kommando:
 
   ```powershell
   Get-QuarantinePolicy -Identity "<QuarantinePolicyName>"
   ```
 
-- Kør følgende kommando for at få vist de globale indstillinger for meddelelser i karantæne:
+- Kør følgende kommando for at få vist de globale indstillinger for karantænemeddelelser:
 
   ```powershell
   Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
   ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
 
-## <a name="modify-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Rediger karantænepolitikker i Microsoft 365 Defender portal
+## <a name="modify-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Rediger karantænepolitikker på Microsoft 365 Defender-portalen
 
-Du kan ikke ændre de indbyggede karantænepolitikker, der hedder AdminOnlyAccessPolicy eller DefaultFullAccessPolicy. Du kan ændre den indbyggede politik med navnet NotificationEnabledPolicy (hvis [du har det](#full-access-permissions-and-quarantine-notifications)) og brugerdefinerede karantænepolitikker.
+Du kan ikke ændre de indbyggede karantænepolitikker med navnet AdminOnlyAccessPolicy eller DefaultFullAccessPolicy. Du kan ændre den indbyggede politik med navnet NotificationEnabledPolicy ([hvis du har den](#full-access-permissions-and-quarantine-notifications)) og brugerdefinerede karantænepolitikker.
 
-1. I portalen Microsoft 365 Defender skal du gå til **& politikker** \> for samarbejde **& regler** \>  \> Om trusselspolitikker **Karantænepolitikker** i **sektionen** Regler.
+1. På Microsoft 365 Defender-portalen skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
 
 2. På siden **Karantænepolitikker** skal du vælge politikken ved at klikke på navnet.
 
-3. Når du har valgt politikken, skal du klikke på ![ikonet Rediger politik.](../../media/m365-cc-sc-edit-icon.png) **Ikonet Rediger politik** , der vises.
+3. Når du har valgt politikken, skal du klikke på ikonet ![Rediger politik.](../../media/m365-cc-sc-edit-icon.png) **Rediger politikikon** , der vises.
 
-4. Guiden **Rediger politik,** der åbnes, er næsten identisk med  guiden Ny politik som beskrevet i afsnittet Opret karantænepolitikker [i Microsoft 365 Defender-portalen](#step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal) tidligere i denne artikel.
+4. Guiden **Rediger politik**, der åbnes, er stort set identisk med guiden **Ny politik**, som beskrevet i afsnittet [Opret karantænepolitikker i afsnittet Microsoft 365 Defender portal](#step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal) tidligere i denne artikel.
 
    Den største forskel er: Du kan ikke omdøbe en eksisterende politik.
 
-5. Når du er færdig med at ændre politikken, skal du gå til **siden Oversigt** og klikke på **Send**.
+5. Når du er færdig med at redigere politikken, skal du gå til siden **Oversigt** og klikke på **Send**.
 
 ### <a name="modify-quarantine-policies-in-powershell"></a>Rediger karantænepolitikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at ændre en brugerdefineret karantænepolitik, \<QuarantinePolicyName\> skal du erstatte med navnet på karantænepolitikken og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at ændre en brugerdefineret karantænepolitik, skal du erstatte \<QuarantinePolicyName\> med navnet på karantænepolitikken og bruge følgende syntaks:
 
 ```powershell
 Set-QuarantinePolicy -Identity "<QuarantinePolicyName>" [Settings]
@@ -577,162 +580,162 @@ Set-QuarantinePolicy -Identity "<QuarantinePolicyName>" [Settings]
 
 De tilgængelige indstillinger er de samme som beskrevet for oprettelse af karantænepolitikker tidligere i denne artikel.
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
 
-## <a name="remove-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Fjern karantænepolitikker i Microsoft 365 Defender-portalen
+## <a name="remove-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Fjern karantænepolitikker på Microsoft 365 Defender-portalen
 
-**Bemærkninger**:
+**Noter**:
 
-- Du kan ikke fjerne de indbyggede karantænepolitikker, der hedder AdminOnlyAccessPolicy eller DefaultFullAccessPolicy. Du kan fjerne den indbyggede politik med navnet NotificationEnabledPolicy (hvis [du har det](#full-access-permissions-and-quarantine-notifications)) og brugerdefinerede karantænepolitikker.
+- Du kan ikke fjerne de indbyggede karantænepolitikker med navnet AdminOnlyAccessPolicy eller DefaultFullAccessPolicy. Du kan fjerne den indbyggede politik med navnet NotificationEnabledPolicy ([hvis du har den](#full-access-permissions-and-quarantine-notifications)) og brugerdefinerede karantænepolitikker.
 - Før du fjerner en karantænepolitik, skal du kontrollere, at den ikke bruges. Kør f.eks. følgende kommando i PowerShell:
 
   ```powershell
   Write-Output -InputObject "Anti-spam policies","----------------------";Get-HostedContentFilterPolicy | Format-List Name,*QuarantineTag; Write-Output -InputObject "Anti-phishing policies","----------------------";Get-AntiPhishPolicy | Format-List Name,*QuarantineTag; Write-Output -InputObject "Anti-malware policies","----------------------";Get-MalwareFilterPolicy | Format-List Name,QuarantineTag; Write-Output -InputObject "Safe Attachments policies","---------------------------";Get-SafeAttachmentPolicy | Format-List Name,QuarantineTag
   ```
 
-  Hvis karantænepolitikken bruges, skal du erstatte [den tildelte karantænepolitik,](#step-2-assign-a-quarantine-policy-to-supported-features) før du fjerner den.
+  Hvis karantænepolitikken bruges, skal du [erstatte den tildelte karantænepolitik](#step-2-assign-a-quarantine-policy-to-supported-features) , før du fjerner den.
 
-1. I portalen Microsoft 365 Defender skal du gå til **& politikker** \> for samarbejde **& regler** \>  \> Om trusselspolitikker **Karantænepolitikker** i **sektionen** Regler.
+1. På Microsoft 365 Defender-portalen skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
 
-2. På siden **Karantænepolitik** skal du vælge den brugerdefinerede karantænepolitik, du vil fjerne, ved at klikke på navnet.
+2. På siden **Karantænepolitikker** skal du vælge den brugerdefinerede karantænepolitik, du vil fjerne, ved at klikke på navnet.
 
-3. Når du har valgt politikken, skal du klikke på ![ikonet Slet politik.](../../media/m365-cc-sc-delete-icon.png) **Ikonet Slet politik** , der vises.
+3. Når du har valgt politikken, skal du klikke på ikonet ![Slet politik.](../../media/m365-cc-sc-delete-icon.png) **Ikonet Slet politik** , der vises.
 
-4. Klik **på Fjern politik** i den bekræftelsesdialogboks, der vises.
+4. Klik på **Fjern politik** i den bekræftelsesdialogboks, der vises.
 
 ### <a name="remove-quarantine-policies-in-powershell"></a>Fjern karantænepolitikker i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at fjerne en brugerdefineret karantænepolitik, \<QuarantinePolicyName\> skal du erstatte med navnet på karantænepolitikken og køre følgende kommando:
+Hvis du hellere vil bruge PowerShell til at fjerne en brugerdefineret karantænepolitik, skal du erstatte \<QuarantinePolicyName\> med navnet på karantænepolitikken og køre følgende kommando:
 
 ```powershell
 Remove-QuarantinePolicy -Identity "<QuarantinePolicyName>"
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i Remove-QuarantinePolicy](/powershell/module/exchange/remove-quarantinepolicy).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Remove-QuarantinePolicy](/powershell/module/exchange/remove-quarantinepolicy).
 
-## <a name="system-alerts-for-quarantine-release-requests"></a>Systembeskeder for udgivelsesanmodninger i karantæne
+## <a name="system-alerts-for-quarantine-release-requests"></a>Systembeskeder for anmodninger om karantænefrigivelse
 
-Som standard genererer standardpolitikken for påmindelsesbeskeder, der hedder Bruger har anmodet om at frigive en meddelelse i karantæne, automatisk en informationsbesked og sender meddelelser til medlemmer af følgende rollegrupper, når en bruger anmoder om frigivelse af en meddelelse i karantæne:
+Standardbeskedpolitikken med navnet **Bruger anmodede som standard om at frigive en karantænemeddelelse** og genererer automatisk en informationsbesked og sender meddelelsesmeddelelser til medlemmer af følgende rollegrupper, når en bruger anmoder om frigivelse af en karantænemeddelelse:
 
 - Karantæneadministrator
 - Sikkerhedsadministrator
 - Organisationsadministration (global administrator)
 
-Administratorer kan tilpasse modtagerne af mailbeskeder eller oprette en brugerdefineret beskedpolitik for at få flere valgmuligheder.
+Administratorer kan tilpasse modtagerne af mailmeddelelser eller oprette en brugerdefineret beskedpolitik for at få flere indstillinger.
 
-Du kan finde flere oplysninger om beskedpolitikker [under Påmindelsespolitikker i Microsoft 365](../../compliance/alert-policies.md).
+Du kan få flere oplysninger om politikker for beskeder [under Beskedpolitikker i Microsoft 365](../../compliance/alert-policies.md).
 
 ## <a name="quarantine-policy-permission-details"></a>Oplysninger om tilladelse til karantænepolitik
 
-I de følgende afsnit beskrives effekterne af foruddefinerede tilladelsesgrupper og individuelle tilladelser i oplysningerne om meddelelser, der er sat i karantæne, og i meddelelser om karantæne.
+I følgende afsnit beskrives effekten af forudindstillede tilladelsesgrupper og individuelle tilladelser i detaljerne om karantænemeddelelser og i karantænemeddelelser.
 
 ### <a name="preset-permissions-groups"></a>Forudindstillede tilladelsesgrupper
 
-De individuelle tilladelser, der er inkluderet i foruddefinerede tilladelsesgrupper, vises i tabellen i starten af denne artikel.
+De individuelle tilladelser, der er inkluderet i forudindstillede tilladelsesgrupper, vises i tabellen i starten af denne artikel.
 
 #### <a name="no-access"></a>Ingen adgang
 
-Hvis karantænepolitikken tildeler tilladelsen Ingen **adgang** (kun administratoradgang), kan brugerne ikke se de meddelelser, der er i karantæne:
+Hvis karantænepolitikken tildeler tilladelserne **Ingen adgang** (kun administratoradgang), kan brugerne ikke se de meddelelser, der er sat i karantæne:
 
-- **Oplysninger om meddelelser i karantæne**: Der vises ingen meddelelser i slutbrugervisningen.
+- **Oplysninger om karantænemeddelelser**: Der vises ingen meddelelser i slutbrugervisningen.
 - **Karantænemeddelelser**: Der sendes ingen meddelelser for disse meddelelser.
 
 #### <a name="limited-access"></a>Begrænset adgang
 
-Hvis karantænepolitikken tildeler **tilladelsen Begrænset** adgang, får brugerne følgende egenskaber:
+Hvis karantænepolitikken tildeler tilladelserne **Begrænset adgang** , får brugerne følgende funktioner:
 
-- **Oplysninger om meddelelser i karantæne**: Følgende knapper er tilgængelige:
-  - **Anmod om frigivelse**
-  - **Få vist brevhoveder for meddelelser**
-  - **Forhåndsvisning af meddelelse**
+- **Oplysninger om karantænemeddelelse**: Følgende knapper er tilgængelige:
+  - **Anmodning om udgivelse**
+  - **Vis brevhoveder**
+  - **Vis meddelelse**
   - **Fjern fra karantæne**
-  - **Bloker afsender**
+  - **Afsender af blok**
 
-  ![Tilgængelige knapper i oplysningerne om meddelelser, der er sat i karantæne, hvis karantænepolitikken giver brugeren tilladelsen Begrænset adgang.](../../media/quarantine-tags-quarantined-message-details-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-limited-access.png" alt-text="De tilgængelige knapper i den karantænede meddelelse indeholder oplysninger, hvis karantænepolitikken giver brugeren begrænsede adgangstilladelser" lightbox="../../media/quarantine-tags-quarantined-message-details-limited-access.png":::
 
-- **Karantænemeddelelser**: Der er følgende knapper tilgængelige:
-  - **Bloker afsender**
-  - **Anmod om frigivelse**
-  - **Gennemse**
+- **Karantænemeddelelser**: Følgende knapper er tilgængelige:
+  - **Afsender af blok**
+  - **Anmodning om udgivelse**
+  - **Vurder**
 
-  ![Tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren tilladelsen Begrænset adgang.](../../media/quarantine-tags-esn-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-limited-access.png" alt-text="De tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren begrænsede adgangstilladelser" lightbox="../../media/quarantine-tags-esn-limited-access.png":::
 
 #### <a name="full-access"></a>Fuld adgang
 
-Hvis karantænepolitikken tildeler **tilladelsen Fuld** adgang (alle tilgængelige tilladelser), får brugerne følgende funktioner:
+Hvis karantænepolitikken tildeler tilladelserne **Fuld adgang** (alle tilgængelige tilladelser), får brugerne følgende funktioner:
 
-- **Oplysninger om meddelelser i karantæne**: Følgende knapper er tilgængelige:
-  - **Udgivelsesmeddelelse**
-  - **Få vist brevhoveder for meddelelser**
-  - **Forhåndsvisning af meddelelse**
+- **Oplysninger om karantænemeddelelse**: Følgende knapper er tilgængelige:
+  - **Frigiv meddelelse**
+  - **Vis brevhoveder**
+  - **Vis meddelelse**
   - **Fjern fra karantæne**
-  - **Bloker afsender**
+  - **Afsender af blok**
 
-  ![Tilgængelige knapper i oplysningerne om meddelelser, der er sat i karantæne, hvis karantænepolitikken giver brugeren tilladelsen Fuld adgang.](../../media/quarantine-tags-quarantined-message-details-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-full-access.png" alt-text="De tilgængelige knapper i den karantænede meddelelse indeholder oplysninger om, om karantænepolitikken giver brugeren fuld adgangstilladelser" lightbox="../../media/quarantine-tags-quarantined-message-details-full-access.png":::
 
-- **Karantænemeddelelser**: Der er følgende knapper tilgængelige:
-  - **Bloker afsender**
+- **Karantænemeddelelser**: Følgende knapper er tilgængelige:
+  - **Afsender af blok**
   - **Udgivelse**
-  - **Gennemse**
+  - **Vurder**
 
-  ![Tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren tilladelsen Fuld adgang.](../../media/quarantine-tags-esn-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="De tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren fuld adgangstilladelser" lightbox="../../media/quarantine-tags-esn-full-access.png":::
 
 ### <a name="individual-permissions"></a>Individuelle tilladelser
 
-#### <a name="block-sender-permission"></a>Blokere afsendertilladelse
+#### <a name="block-sender-permission"></a>Bloker afsendertilladelse
 
-Tilladelsen **Bloker afsender** (_PermissionToBlockSender_) styrer adgangen til knappen, der giver brugere mulighed for nemt at føje afsenderen, der er sat i karantæne, til deres liste over blokerede afsendere.
+Tilladelsen **Block sender** (_PermissionToBlockSender_) styrer adgangen til den knap, der gør det nemt for brugerne at føje afsender af meddelelser i karantæne til deres liste over blokerede afsendere.
 
-- **Oplysninger om meddelelser i karantæne**:
-  - **Bloker afsendertilladelse** aktiveret: **Knappen Bloker** afsender er tilgængelig.
-  - **Bloker afsendertilladelse** deaktiveret: **Knappen Bloker** afsender er ikke tilgængelig.
+- **Oplysninger om karantænemeddelelse**:
+  - **Tilladelsen Bloker afsender** er aktiveret: Knappen **Bloker afsender** er tilgængelig.
+  - **Tilladelsen Bloker afsender** er deaktiveret: Knappen **Bloker afsender** er ikke tilgængelig.
 
 - **Karantænemeddelelser**:
-  - **Bloker afsendertilladelse** aktiveret: **Knappen Bloker** afsender er tilgængelig.
-  - **Bloker afsendertilladelse** deaktiveret: **Knappen Bloker** afsender er ikke tilgængelig.
+  - **Tilladelsen Bloker afsender** er aktiveret: Knappen **Bloker afsender** er tilgængelig.
+  - **Tilladelsen Bloker afsender** er deaktiveret: Knappen **Bloker afsender** er ikke tilgængelig.
 
-Du kan finde flere oplysninger om listen over blokerede afsendere i Bloker meddelelser fra en person og [Brug Exchange Online PowerShell](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) til at konfigurere indsamlingen af sikre lister i en postkasse.[](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667)
+Du kan finde flere oplysninger om listen over blokerede afsendere under [Bloker meddelelser fra en person](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667) og [Brug Exchange Online PowerShell til at konfigurere samlingen af sikre lister i en postkasse](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 #### <a name="delete-permission"></a>Slet tilladelse
 
-Tilladelsen **Slet** (_PermissionToDelete_) styrer brugernes mulighed for at slette deres meddelelser (meddelelser, hvor brugeren er modtager) fra karantæne.
+Tilladelsen **Delete** (_PermissionToDelete_) styrer brugernes mulighed for at slette deres meddelelser (meddelelser, hvor brugeren er modtager) fra karantæne.
 
-- **Oplysninger om meddelelser i karantæne**:
-  - **Slet** tilladelse er aktiveret: **Knappen Fjern fra** karantæne er tilgængelig.
-  - **Slet** tilladelse er deaktiveret: **Knappen Fjern fra karantæne** er ikke tilgængelig.
+- **Oplysninger om karantænemeddelelse**:
+  - **Tilladelsen Slet** er aktiveret: Knappen **Fjern fra karantæne** er tilgængelig.
+  - **Slet** tilladelse er deaktiveret: Knappen **Fjern fra karantæne** er ikke tilgængelig.
 
-- **Karantænemeddelelser**: Ingen virkning.
+- **Karantænemeddelelser**: Ingen effekt.
 
-#### <a name="preview-permission"></a>Tilladelse til forhåndsvisning
+#### <a name="preview-permission"></a>Tilladelse til eksempelvisning
 
-Tilladelse **til eksempelvisning** (_PermissionToPreview) styrer_ brugernes mulighed for at få vist deres meddelelser i karantæne.
+Tilladelsen **Eksempel** (_PermissionToPreview_) styrer brugernes mulighed for at få vist deres meddelelser i karantæne.
 
-- **Oplysninger om meddelelser i karantæne**:
-  - **Tilladelse for** eksempel aktiveret: **Knappen Vis** meddelelse er tilgængelig.
-  - **Forhåndsvisningstilladelse** deaktiveret: **Knappen Vis** meddelelse er ikke tilgængelig.
+- **Oplysninger om karantænemeddelelse**:
+  - **Tilladelse til forhåndsvisning** er aktiveret: Knappen **Vis meddelelse** er tilgængelig.
+  - **Tilladelse til eksempelvisning** er deaktiveret: Knappen **Vis meddelelse** er ikke tilgængelig.
 
-- **Karantænemeddelelser**: Ingen virkning.
+- **Karantænemeddelelser**: Ingen effekt.
 
-#### <a name="allow-recipients-to-release-a-message-from-quarantine-permission"></a>Tillad, at modtagerne frigiver en meddelelse fra karantænetilladelsen
+#### <a name="allow-recipients-to-release-a-message-from-quarantine-permission"></a>Tillad, at modtagere frigiver en meddelelse fra karantænetilladelsen
 
-Tillad **modtagere at** frigive en meddelelse fra karantænetilladelse (_PermissionToRelease_) styrer brugernes mulighed for at frigive deres meddelelser, der er i karantæne, direkte og uden godkendelse fra en administrator.
+**Tillad, at modtagerne frigiver en meddelelse fra karantænetilladelsen** (_PermissionToRelease_) styrer brugernes mulighed for at frigive deres karantænemeddelelser direkte og uden godkendelse fra en administrator.
 
-- **Oplysninger om meddelelser i karantæne**:
-  - Tilladelse aktiveret: **Knappen Udgivelsesmeddelelse** er tilgængelig.
-  - Tilladelse deaktiveret: **Knappen Slip meddelelse** er ikke tilgængelig.
-
-- **Karantænemeddelelser**:
-  - Tilladelse aktiveret: **Knappen Slip** er tilgængelig.
-  - Tilladelse deaktiveret: **Knappen Slip** er ikke tilgængelig.
-
-#### <a name="allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission"></a>Tillad, at modtagerne anmoder om, at en meddelelse frigives fra karantænetilladelse
-
-Tillad **modtagere at** anmode om, at en meddelelse frigives fra karantænetilladelse (_PermissionToRequestRelease_) styrer brugernes mulighed for at anmode  om frigivelse af deres meddelelser, der er i karantæne. Meddelelsen frigives først, når en administrator godkender anmodningen.
-
-- **Oplysninger om meddelelser i karantæne**:
-  - Tilladelse aktiveret: Knappen **Anmod om** frigivelse er tilgængelig.
-  - Tilladelse deaktiveret: Knappen **Anmod om** frigivelse er ikke tilgængelig.
+- **Oplysninger om karantænemeddelelse**:
+  - Tilladelse er aktiveret: Knappen **Udgivelsesmeddelelse** er tilgængelig.
+  - Tilladelse er deaktiveret: Knappen **Udgivelsesmeddelelse** er ikke tilgængelig.
 
 - **Karantænemeddelelser**:
-  - Tilladelse aktiveret: Knappen **Anmod om** frigivelse er tilgængelig.
-  - Tilladelse deaktiveret: Knappen **Anmod om** frigivelse er ikke tilgængelig.
+  - Tilladelse er aktiveret: Knappen **Udgivelse** er tilgængelig.
+  - Tilladelse er deaktiveret: Knappen **Udgivelse** er ikke tilgængelig.
+
+#### <a name="allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission"></a>Tillad, at modtagere anmoder om, at en meddelelse frigives fra karantænetilladelse
+
+**Tillad, at modtagerne anmoder om en meddelelse, der skal frigives fra karantænetilladelsen** (_PermissionToRequestRelease_), styrer brugernes mulighed for at _anmode om_ frigivelse af deres karantænemeddelelser. Meddelelsen udgives kun, når en administrator har godkendt anmodningen.
+
+- **Oplysninger om karantænemeddelelse**:
+  - Tilladelse aktiveret: Knappen **Anmodningsfrigivelse** er tilgængelig.
+  - Tilladelse er deaktiveret: Knappen **Anmod om udgivelse** er ikke tilgængelig.
+
+- **Karantænemeddelelser**:
+  - Tilladelse aktiveret: Knappen **Anmodningsfrigivelse** er tilgængelig.
+  - Tilladelse er deaktiveret: Knappen **Anmod om udgivelse** er ikke tilgængelig.

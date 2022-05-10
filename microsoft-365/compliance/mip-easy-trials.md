@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om standardnavne og -politikker for Microsoft Information Protection
+title: Få mere at vide om standardmærkater og -politikker til beskyttelse af dine data
 f1.keywords:
 - CSH
 ms.author: cabailey
@@ -10,180 +10,182 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: high
-description: Få mere at vide om standardetiketter og politikker for Microsoft Information Protection (MIP) til klassificering og beskyttelse af følsomt indhold.
-ms.openlocfilehash: a0634a8f67e28d84334cfadd4be7d9694084af6c
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Få mere at vide om standardmærkater og -politikker for Microsoft Purview Information Protection at klassificere og beskytte følsomt indhold.
+ms.openlocfilehash: 486286780eaa3a2deedb2c3df837a93814280f39
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63598527"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286444"
 ---
-# <a name="default-labels-and-policies-for-microsoft-information-protection"></a>Standardnavne og -politikker for Microsoft Information Protection
+# <a name="default-labels-and-policies-to-protect-your-data"></a>Standardmærkater og -politikker til beskyttelse af dine data
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Berettigede kunder kan aktivere standardetiketter og politikker for Microsoft Information Protection (MIP): 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-- Følsomhedsmærkater og en følsomhedsmærkatpolitik
+Berettigede kunder kan aktivere standardmærkater og -politikker for Microsoft Purview-Information Protection: 
+
+- Følsomhedsmærkater og en politik for følsomhedsmærkater
 - Automatisk mærkning på klientsiden
-- Automatisk mærkning på tjenestesiden
-- Politikker til forebyggelse af datatab (DLP) for Teams enheder
+- Automærkater på tjenestesiden
+- DLP-politikker (forebyggelse af datatab) for Teams og enheder
 
-Disse standardkonfigurationer hjælper dig med at komme hurtigt i gang med Microsoft Information Protection fra Microsoft 365 overholdelse af regler og standarder. Du kan bruge dem, som de er, foretage nogle få ændringer eller tilpasse dem fuldt ud, så de passer bedre til virksomhedens behov. 
+Disse standardkonfigurationer hjælper dig med hurtigt at komme i gang med Microsoft Purview-Information Protection til Microsoft 365. Du kan bruge dem, som de er, foretage nogle få ændringer eller tilpasse dem fuldt ud, så de passer bedre til dine forretningsbehov. 
 
-Berettigelse omfatter kunder, der har [en gratis prøveversion til Microsoft 365 Overholdelse](compliance-easy-trials.md) af regler og standarder, og nogle kunder, der allerede har en Microsoft 365 E5-plan:
+Berettigelse omfatter kunder, der har en [gratis prøveversion til Microsoft Purview](compliance-easy-trials.md), og nogle kunder, der allerede har en Microsoft 365 E5 plan:
 
-- **Nye kunder**: Hvis du har haft Microsoft 365 overholdelse af regler og standarder i mindre end 30 dage, kan din lejer aktivere alle de angivne standardkonfigurationer. Du kan altid deaktivere, fjerne eller redigere dem.
+- **Nye kunder**: Hvis du har haft Microsoft Purview i mindre end 30 dage, kan din lejer aktivere alle de angivne standardkonfigurationer. Du kan altid deaktivere, fjerne eller redigere dem.
 
-- **Eksisterende kunder**: Hvis du har haft Microsoft 365 Overholdelse i mere end 30 dage, kan du aktivere standardkonfigurationerne, hvis du endnu ikke har konfigureret en tilsvarende:
+- **Eksisterende kunder**: Hvis du har haft Microsoft Purview i mere end 30 dage, kan du aktivere standardkonfigurationerne, hvis du endnu ikke har konfigureret en tilsvarende:
 
-    | Standardkonfiguration| Tilsvarende |
+    | Standardkonfiguration| Svarer |
     |:-----|:-----|
-    |Følsomhedsmærkater og en følsomhedsmærkatpolitik | Publicerede følsomhedsmærkater |
-    |Automatisk mærkning på klientsiden | En eller flere følsomhedsmærkater, der er konfigureret til automatisk at anvende (eller anbefale til brugere) Office apps|
-    |Automatisk mærkning på tjenestesiden | Mindst én politik for automatisk mærkater, som er slået til|
-    |DLP til Teams | Mindst én DLP-politik for Teams|
-    |DLP til enheder | Mindst én DLP-politik til enheder|
+    |Følsomhedsmærkater og en politik for følsomhedsmærkater | Publicerede følsomhedsmærkater |
+    |Automatisk mærkning på klientsiden | En eller flere følsomhedsmærkater, der er konfigureret til automatisk at blive anvendt (eller anbefalet til brugere) i Office apps|
+    |Automærkater på tjenestesiden | Mindst én politik for automatisk mærkning, der er slået til|
+    |DLP for Teams | Mindst én DLP-politik for Teams|
+    |DLP til enheder | Mindst én DLP-politik for enheder|
 
-## <a name="activate-the-default-labels-and-policies"></a>Aktivere standardnavnene og -politikkerne
+## <a name="activate-the-default-labels-and-policies"></a>Aktivér standardnavne og -politikker
 
-Sådan får du disse forudkonfigurerede etiketter og politikker: 
+Sådan henter du disse forudkonfigurerede mærkater og politikker: 
 
-1. Fra [Microsoft 365 Overholdelsescenter vælge](https://compliance.microsoft.com/) **SolutionsInformation** >  **Protection**
+1. Vælg **LøsningerInformationsbeskyttelse**  >  på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
     
-    Hvis du ikke umiddelbart kan se denne indstilling, skal du først **vælge Vis alle** i navigationsruden. 
+    Hvis du ikke kan se denne indstilling med det samme, skal du først vælge **Vis alle** i navigationsruden. 
     
-2. Hvis du er berettiget til Microsoft Information Protection standardnavne og -politikker, får du vist følgende oplysninger, hvor du kan aktivere standardnavnene og -politikkerne. Eksempel:
+2. Hvis du er berettiget til Microsoft Purview-Information Protection standardmærkater og -politikker, får du vist følgende oplysninger, hvor du kan aktivere standardmærkater og -politikker. Eksempel:
     
-    :::image type="content" alt-text="Microsoft Information Protection aktivering af forudkonfigurerede etiketter og politikker." source="../media/mip-preconfigured.png" lightbox="../media/mip-preconfigured.png":::
+    :::image type="content" alt-text="Microsoft Purview Information Protection aktivering af forudkonfigurerede mærkater og politikker." source="../media/mip-preconfigured.png" lightbox="../media/mip-preconfigured.png":::
     
-    Hvis disse oplysninger ikke vises sammen med aktiveringsindstillingen, er du i øjeblikket ikke berettiget til automatisk oprettelse af følsomhedsmærkater og -politikker. Du kan prøve at vende tilbage senere for at se, om denne status er ændret, eller du kan bruge de følgende indstillinger til manuelt at oprette de samme etiketter og politikker.
+    Hvis du ikke kan se disse oplysninger, der vises med aktiveringsindstillingen, er du i øjeblikket ikke berettiget til automatisk oprettelse af følsomhedsmærkater og politikker. Du kan prøve at vende tilbage senere for at se, om denne status er ændret, eller du kan bruge de efterfølgende indstillingsoplysninger til manuelt at oprette de samme mærkater og politikker.
 
-3. Aktivér nu følsomhedsetiketter for SharePoint og OneDrive. Dette trin er en forudsætning for at kunne bruge følsomhedsmærkater Office på internettet politikker for automatisk mærkater til SharePoint og OneDrive.
+3. Aktivér nu følsomhedsmærkater for SharePoint og OneDrive. Dette trin er en forudsætning for at kunne bruge følsomhedsmærkater i Office på internettet og politikker til automatisk mærkning af SharePoint og OneDrive.
    
-    Brug følgende banner øverst på fanen Oversigt over beskyttelse **af oplysninger** , og vælg **Aktivér nu**. Hvis du ikke kan se dette banner, er følsomhedsmærkaterne for SharePoint og OneDrive allerede aktiveret for din lejer.
+    Brug følgende banner øverst på fanen Information Protection **Oversigt**, og vælg **Slå til nu**. Hvis du ikke kan se dette banner, er følsomhedsmærkater for SharePoint og OneDrive allerede blevet aktiveret for din lejer.
     
-    ![Aktivér følsomhedsmærkater SharePoint et OneDrive banner.](../media/turn-on-mip-labels.png)
+    ![Aktivér følsomhedsmærkater for banneret SharePoint og OneDrive.](../media/turn-on-mip-labels.png)
     
-    Du kan finde flere oplysninger om denne funktionalitet under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+    Du kan få flere oplysninger om denne funktion under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
 
-## <a name="default-sensitivity-labels"></a>Standardmærkater for følsomhed
+## <a name="default-sensitivity-labels"></a>Standardfølsomhedsmærkater
 
-Når du ikke har offentliggjort følsomhedsmærkater, opretter vi følgende mærkater til dig:
+Når du ikke har følsomhedsmærkater, der er publiceret, opretter vi følgende mærkater for dig:
 
 
-|Navn på etiket|Etiketbeskrivelse for brugere|Indstillinger|
+|Navn|Beskrivelse af mærkat for brugere|Indstillinger|
 |-------------------------------|---------------------------|-----------------|
-|Personal|Ikke-virksomhedsdata, kun til personlig brug.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Offentlig|Virksomhedsdata, der er specifikt forberedt og godkendt til offentligt forbrug.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Generel|Virksomhedsdata, der ikke er beregnet til offentligt forbrug. Dette kan dog deles med eksterne partnere efter behov. Eksempler omfatter virksomhedens interne telefonbog, organisationsdiagrammer, interne standarder og de fleste interne kommunikation.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Generel <br /> \ Alle (ubegrænset)|Organisationsdata, der ikke er beregnet til offentligt forbrug, men som kan deles med eksterne partnere, hvis det er relevant. Eksempler omfatter kundesamtaler, der ikke omfatter følsomme oplysninger eller udgivet marketingmateriale.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Generel <br /> \ Alle medarbejdere (ubegrænset)|Organisationsdata, der ikke er beregnet til offentligt forbrug. Hvis du vil dele dette indhold med eksterne partnere, skal du bekræfte med andre dataejere, at det er OK at dele, og derefter ændre navnet til Generelt \ Alle (ubegrænset). Eksempler omfatter virksomhedens interne telefonbog, organisationsdiagrammer, interne standarder og de fleste interne kommunikation.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Fortroligt|Følsomme forretningsdata, der kan skade virksomheden, hvis de deles med uautoriserede personer. Eksempler kan være kontrakter, sikkerhedsrapporter, prognoseoversigter og salgskontodata.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Nej<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Fortroligt <br /> \ Alle (ubegrænset)|Fortrolige data, der ikke behøver at være krypteret. Brug denne indstilling med pleje og passende forretningsberettigelse.|Denne etiket er valgt [til automatisk mærkatning på](#client-side-auto-labeling) klientsiden [og automatisk mærkning på tjenestesiden](#service-side-auto-labeling).<br /><br /> **Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Sidefod: Klassificeret som fortrolig<br /><br />**Automatisk mærkning: Anbefal**, at brugerne anvender etiketten <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Fortroligt <br /> \ Alle medarbejdere|Fortrolige data, der kræver beskyttelse, som giver alle medarbejdere fuld tilladelse. Dataejere kan spore og tilbagekalde indhold.|Denne etiket er valgt [til automatisk mærkatning på](#client-side-auto-labeling) klientsiden [og automatisk mærkning på tjenestesiden](#service-side-auto-labeling).<br /><br /> **Omfang**: Fil, Mail <br /><br />**Kryptering**: Alle brugere og grupper i organisationen: Co-Author<br /><br />**Indholdsmærkning**: Sidefod: Klassificeret som fortrolig<br /><br />**Automatisk mærkning: Anbefal**, at brugerne anvender etiketten <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen |
-|Fortroligt <br /> \ Personer, der er tillid til|Fortrolige data, der kan deles med personer, der er tillid til, i og uden for organisationen. Disse personer kan også dele dataene igen efter behov.|**Omfang**: Fil, Mail <br /><br />**Kryptering**: Lad brugere tildele tilladelser: <br /> - Encrypt-Only til Outlook <br />- Spørg brugerne i Word, PowerPoint og Excel<br /><br />**Indholdsmærkning**: Sidefod: Klassificeret som fortrolig<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Meget fortrolig|Meget følsomme forretningsdata, der ville skade virksomheden, hvis de blev delt med uautoriserede personer. Eksempler er medarbejder- og kundeoplysninger, adgangskoder, kildekode og på forhånd annoncerede økonomiske rapporter.|**Omfang**: Fil, Mail <br /><br />**Indholdsmærkning**: Vandmærke: MEGET FORTROLIGT<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Meget fortrolig <br /> \ Alle medarbejdere|Meget fortrolige data, der giver alle medarbejdere mulighed for at få vist, redigere og svare på dette indhold. Dataejere kan spore og tilbagekalde indhold.|**Omfang**: Fil, Mail <br /><br />**Kryptering**: Alle brugere og grupper i organisationen: Co-Author<br /><br />**Indholdsmærkning**: Sidefod: Klassificeret som meget fortrolig<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
-|Meget fortrolig <br /> \ Bestemte personer |Meget fortrolige data, der kræver beskyttelse, og som kun kan ses af personer, du angiver, og med det tilladelsesniveau, du vælger.|**Omfang**: Fil, Mail <br /><br />**Kryptering**: Lad brugere tildele tilladelser: <br />- Videresendes ikke for Outlook <br />- Spørg brugerne i Word, PowerPoint og Excel<br /><br />**Indholdsmærkning**: Sidefod: Klassificeret som meget fortrolig<br /><br />**Automatisk mærkat:** Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkat for databasekolonner**: Ingen|
+|Personal|Ikke-forretningsrelaterede data, kun til personlig brug.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Offentlige|Forretningsdata, der er specifikt forberedt og godkendt til offentligt forbrug.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Generel|Forretningsdata, der ikke er beregnet til offentligt forbrug. Dette kan dog deles med eksterne partnere efter behov. Eksempler omfatter virksomhedens interne telefonliste, organisationsdiagrammer, interne standarder og de fleste interne kommunikationer.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Generel <br /> \ Alle (ubegrænset)|Organisationsdata, der ikke er beregnet til offentligt forbrug, men som kan deles med eksterne partnere, hvis det er relevant. Eksempler omfatter kundesamtaler, der ikke indeholder følsomme oplysninger eller udgivet marketingmateriale.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Generel <br /> \ Alle medarbejdere (ubegrænset)|Organisationsdata, der ikke er beregnet til offentligt forbrug. Hvis du har brug for at dele dette indhold med eksterne partnere, skal du bekræfte med andre dataejere, at det er OK at dele og derefter ændre etiketten til Generelt \ Alle (ubegrænset) . Eksempler omfatter virksomhedens interne telefonliste, organisationsdiagrammer, interne standarder og de fleste interne kommunikationer.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Fortrolige|Følsomme forretningsdata, der kan beskadige virksomheden, hvis de deles med uautoriserede personer. Eksempler omfatter kontrakter, sikkerhedsrapporter, prognoseoversigter og salgskontodata.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Nej<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Fortrolige <br /> \ Alle (ubegrænset)|Fortrolige data, der ikke behøver at blive krypteret. Brug denne indstilling med omhyggelig og passende forretningsberettigelse.|Denne etiket er valgt til [automatisk mærkning på klientsiden](#client-side-auto-labeling) og [automatisk mærkning på servicesiden](#service-side-auto-labeling).<br /><br /> **Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Sidefod: Klassificeret som fortroligt<br /><br />**Automatisk mærkning**: Anbefal, at brugerne anvender mærkaten <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Fortrolige <br /> \ Alle medarbejdere|Fortrolige data, der kræver beskyttelse, hvilket giver alle medarbejdere fulde tilladelser. Dataejere kan spore og tilbagekalde indhold.|Denne etiket er valgt til [automatisk mærkning på klientsiden](#client-side-auto-labeling) og [automatisk mærkning på servicesiden](#service-side-auto-labeling).<br /><br /> **Område**: Fil, Mail <br /><br />**Kryptering**: Alle brugere og grupper i organisationen: Co-Author<br /><br />**Indholdsmarkering**: Sidefod: Klassificeret som fortroligt<br /><br />**Automatisk mærkning**: Anbefal, at brugerne anvender mærkaten <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen |
+|Fortrolige <br /> \ Personer, der er tillid til|Fortrolige data, der kan deles med personer, der er tillid til, i og uden for din organisation. Disse personer kan også dele dataene igen efter behov.|**Område**: Fil, Mail <br /><br />**Kryptering**: Lad brugerne tildele tilladelser: <br /> - Encrypt-Only til Outlook <br />– Spørg brugere i Word, PowerPoint og Excel<br /><br />**Indholdsmarkering**: Sidefod: Klassificeret som fortroligt<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Meget fortroligt|Meget følsomme forretningsdata, der kan beskadige virksomheden, hvis de deles med uautoriserede personer. Eksempler omfatter medarbejder- og kundeoplysninger, adgangskoder, kildekode og forhånds annoncerede regnskaber.|**Område**: Fil, Mail <br /><br />**Indholdsmarkering**: Vandmærke: MEGET FORTROLIGT<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Meget fortroligt <br /> \ Alle medarbejdere|Meget fortrolige data, der giver alle medarbejdere tilladelse til at få vist, redigere og svare på dette indhold. Dataejere kan spore og tilbagekalde indhold.|**Område**: Fil, Mail <br /><br />**Kryptering**: Alle brugere og grupper i organisationen: Co-Author<br /><br />**Indholdsmarkering**: Sidefod: Klassificeret som meget fortroligt<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
+|Meget fortroligt <br /> \ Bestemte personer |Meget fortrolige data, der kræver beskyttelse og kun kan ses af de personer, du angiver, og med det tilladelsesniveau, du vælger.|**Område**: Fil, Mail <br /><br />**Kryptering**: Lad brugerne tildele tilladelser: <br />- Videresend ikke for Outlook <br />– Spørg brugere i Word, PowerPoint og Excel<br /><br />**Indholdsmarkering**: Sidefod: Klassificeret som meget fortroligt<br /><br />**Automatisk mærkning**: Nej <br /><br />**Gruppeindstillinger**: Nej<br /><br />**Indstillinger for websted**: Nej <br /><br />**Automatisk mærkning af databasekolonner**: Ingen|
 
 > [!NOTE]
-> Navne og beskrivelser er automatisk tilgængelige for følgende lande/ lande: amerikansk engelsk, forenklet kinesisk og traditionelt, fransk, tysk, italiensk, japansk, koreansk, portugisisk (Brasilien) og russisk.
+> Navne og beskrivelser er automatisk tilgængelige for følgende landestandarder: amerikansk engelsk, kinesisk (forenklet) og traditionelt, fransk, tysk, italiensk, japansk, koreansk, portugisisk (Brasilien), russisk og spansk.
 > 
 > Hvis du har brug for flere sprog, kan du angive dine oversættelser [ved hjælp af PowerShell](create-sensitivity-labels.md#example-configuration-to-configure-a-sensitivity-label-for-different-languages).
 
-Du kan finde flere oplysninger om disse konfigurationsindstillinger, og hvad følsomhedsmærkater kan, under [Hvad følsomhedsmærkater kan gøre](sensitivity-labels.md#what-sensitivity-labels-can-do).
+Du kan få flere oplysninger om disse konfigurationsindstillinger, og hvad følsomhedsmærkater kan gøre, under [Hvad følsomhedsmærkater kan gøre](sensitivity-labels.md#what-sensitivity-labels-can-do).
 
-Hvis du vil redigere disse standardmærkater for følsomhed, skal du [se Opret og konfigurer følsomhedsmærkater](create-sensitivity-labels.md#create-and-configure-sensitivity-labels).
+Hvis du har brug for at redigere disse standardfølsomhedsmærkater, skal du se [Opret og konfigurer følsomhedsmærkater](create-sensitivity-labels.md#create-and-configure-sensitivity-labels).
 
-## <a name="default-sensitivity-label-policy"></a>Standardpolitik for følsomhedsmærkater
+## <a name="default-sensitivity-label-policy"></a>Standardpolitik for følsomhedsmærkat
 
-Standardpolitikken for følsomhedsmærkater gør mærkaterne tilgængelige, så brugerne kan begynde at navnmærke deres dokumenter og mails med følsomhedsmærkater. Den har følgende konfiguration:
+Standardpolitikken for følsomhedsmærkat gør mærkaterne tilgængelige, så brugerne kan begynde at forsyne deres dokumenter og mails med følsomhedsmærkater. Den har følgende konfiguration:
 
-- Udgive standardetiketterne til alle brugere i din lejer
-- **Standardetiket for GeneralAlle** \  **medarbejdere (ubegrænset)** for dokumenter og mails uden navn
-- Brugerne skal angive en begrundelse for at fjerne en etiket eller sænke dens klassificering
+- Publicer standardnavnene til alle brugere i din lejer
+- Standardmærkat for **GeneralAll** \  **Employees (ubegrænset)** for ikke-navngivne dokumenter og mails
+- Brugerne skal angive en begrundelse for at fjerne en mærkat eller sænke klassificeringen
 
-Du kan finde flere oplysninger om disse politikindstillinger og andre politikindstillinger, der er tilgængelige, under [Hvilke etiketpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do).
+Du kan få flere oplysninger om disse politikindstillinger og andre politikindstillinger, der er tilgængelige, under [Hvad mærkatpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do).
 
-Hvis du vil redigere disse standardpolitikindstillinger, skal du se [Publicere følsomhedsmærkater ved at oprette en etiketpolitik](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy).
+Hvis du har brug for at redigere disse standardpolitikindstillinger, skal du se [Publicer følsomhedsmærkater ved at oprette en mærkatpolitik](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy).
 
-Når du bruger disse etiketter i Office-apps på Windows, macOS, iOS og Android, får brugerne vist nye navne inden for fire timer og inden for en time for Word, Excel og PowerPoint på internettet, når du opdaterer browseren. Det kan dog være nødvendigt at tillade, at ændringer replikeres til alle apps og tjenester i op til 24 timer.
+Når du bruger disse mærkater i Office apps på Windows, macOS, iOS og Android, kan brugerne se nye mærkater inden for fire timer og inden for én time for Word, Excel og PowerPoint på internettet, når du opdaterer browseren. Det kan dog være nødvendigt at tillade op til 24 timer, før ændringer replikeres til alle apps og tjenester.
 
 ## <a name="client-side-auto-labeling"></a>Automatisk mærkning på klientsiden
 
-Standardkonfigurationen af automatisk mærkning på klientsiden anbefaler automatisk, at brugerne anvender et følsomhedsmærkat, når vi registrerer kreditkortnumre i dokumenter eller mails, de arbejder med. Som en anbefaling i stedet for automatisk anvendelse fungerer denne konfiguration som et godt første trin til at fremhæve fremhævet indhold og introducerer brugerne til etiketning af deres dokumenter og mails.
+Standardkonfigurationen for automatisk mærkning på klientsiden anbefaler automatisk, at brugerne anvender en følsomhedsmærkat, når vi registrerer kreditkortnumre i dokumenter eller mails, de arbejder med. Som en anbefaling i stedet for automatisk anvendelse fungerer denne konfiguration som et godt første skridt til fremhævning af indhold og introducerer brugerne til praksis med at forsyne deres dokumenter og mails med mærkater.
 
-Automatisk mærkning på klientsiden fungerer kun for dokumenter og mails, der bruges af Office-appsene Word, Excel, PowerPoint og Outlook. 
+Automatisk mærkning på klientsiden fungerer kun for dokumenter og mails, der bruges af Office apps i Word, Excel, PowerPoint og Outlook. 
 
-Automatisk mærkater på klientsiden har følgende konfiguration: 
+Standardindstillingen for automatisk mærkning på klientsiden har følgende konfiguration: 
 
-- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsetiketten **ConfidentialAnyone**  \  (ubegrænset) 
+- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkaten **ConfidentialAnyone**  \  (ubegrænset) 
 
-- Hvis der er fundet 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkatet **FortroligeAlle medarbejdere**  \  
-
-> [!NOTE]
-> Hvis vi har opdaget, at du har publiceret dine egne følsomhedsmærkater, beder vi dig om at vælge en af dine egne etiketter til automatisk mærkning og konfigurere den for dig.
-
-Hvis du vil redigere konfigurationen af automatisk mærkning på klientsiden, skal du se Sådan konfigureres [automatisk mærkater til Office apps](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-for-office-apps).
-
-## <a name="service-side-auto-labeling"></a>Automatisk mærkning på tjenestesiden 
-
-Automatisk mærkning på tjenestesiden hjælper med at mærke følsomme dokumenter, når de er indeværende, og mails, der er under overførsel. Standardpolitikken for automatisk mærkning på tjenestesiden opretter en politik i simuleringstilstand for dokumenter, der er gemt på alle SharePoint- eller OneDrive-websteder, og alle mails, der sendes via Exchange Online. I simuleringstilstand navnmærkes elementer faktisk ikke, før du slår politikken til. Simuleringstilstand giver dig mulighed for at se, hvilke elementer der ville blive mærket, når politikken er slået til, så du har tillid til etiketfunktionen, før du installerer politikken for den faktiske mærkning til din lejer. 
-
-Automatisk mærkning på tjenestesiden har følgende konfiguration: 
-
-- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument, skal du anvende følsomhedsetiketten **ConfidentialAnyone** \  **(uden begrænsninger)**
-
-- Hvis der er fundet 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkatet **FortroligeAlle medarbejdere**  \  
+- Hvis der findes 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkaten **ConfidentialAll** \  **Employees** 
 
 > [!NOTE]
-> Hvis vi har opdaget, at du har publiceret dine egne følsomhedsmærkater, beder vi dig om at vælge en af dine egne etiketter til din automatiske mærkningspolitik.
+> Hvis vi har registreret, at du har publiceret dine egne følsomhedsmærkater, beder vi dig om at vælge en af dine egne mærkater til automatisk mærkning og konfigurere den for dig.
 
-Når simulering er fuldført, skal du gennemse resultaterne, og hvis du er tilfreds med dem, skal du aktivere politikken.
+Hvis du vil redigere konfigurationen af automatisk mærkat på klientsiden, skal du se [Sådan konfigurerer du automatisk mærkning for Office apps](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-for-office-apps).
 
-Du kan finde flere oplysninger om simuleringstilstand i [Få mere at vide om simuleringstilstand](apply-sensitivity-label-automatically.md#learn-about-simulation-mode).
+## <a name="service-side-auto-labeling"></a>Automærkater på tjenestesiden 
 
-Hvis du vil redigere politikken for automatisk mærkning af tjenester, skal du se Sådan konfigureres politikker for automatisk mærkater [for SharePoint, OneDrive og Exchange](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
+Automatisk mærkning på tjenestesiden hjælper med at mærke inaktive følsomme dokumenter og mails under overførsel. Standardpolitikken for automatisk mærkat på tjenestesiden opretter en politik i simuleringstilstand for dokumenter, der er gemt på alle SharePoint eller OneDrive websteder, og alle mails, der sendes via Exchange Online. I simuleringstilstand mærkes elementer ikke, før du aktiverer politikken. I simuleringstilstand kan du se, hvilke elementer der skal mærkes, når politikken er slået til, så du har tillid til mærkatfunktionen, før du udruller politikken til din lejer til faktisk mærkning. 
 
-## <a name="dlp-for-teams"></a>DLP til Teams
+Standardindstillingen for automatisk mærkning på tjenestesiden har følgende konfiguration: 
 
-Standard-DLP-politikken for Teams registrerer tilstedeværelsen af kreditkortnumre i alle chatsamtaler Teams kanalmeddelelser. Når disse følsomme oplysninger registreres, får administratorer besked om lav alvorsgrad.
+- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument, skal du anvende følsomhedsmærkaten **ConfidentialAnyone**  \  (ubegrænset)
 
-Denne politik er ikke-diskret for brugere uden synlig politiktip og ingen meddelelser blokeret, men administratorer vil have poster for de følsomme oplysninger, der deles i disse meddelelser. Hvis det er nødvendigt, kan du redigere indstillingerne for at ændre denne standardkonfiguration.
+- Hvis der findes 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkaten **ConfidentialAll** \  **Employees** 
 
-Hvis du vil se resultaterne af denne politik, skal du [bruge DLP-aktivitetsoversigt](dlp-learn-about-dlp.md#dlp-activity-explorer).
+> [!NOTE]
+> Hvis vi har registreret, at du har publiceret dine egne følsomhedsmærkater, beder vi dig om at vælge et af dine egne mærkater til din politik for automatisk mærkning.
 
-Hvis du vil redigere DLP-politikken, skal du [se Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md).
+Når simuleringen er fuldført, skal du gennemse resultaterne, og hvis du er tilfreds med dem, skal du aktivere politikken.
+
+Du kan finde flere oplysninger om simuleringstilstand under [Få mere at vide om simuleringstilstand](apply-sensitivity-label-automatically.md#learn-about-simulation-mode).
+
+Hvis du vil redigere politikken for automatisk mærkning på tjenestesiden, skal du se [Sådan konfigurerer du politikker for automatisk mærkning for SharePoint, OneDrive og Exchange](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
+
+## <a name="dlp-for-teams"></a>DLP for Teams
+
+Standard-DLP-politikken for Teams registrerer tilstedeværelsen af kreditkortnumre i alle Teams chats og kanalmeddelelser. Når disse følsomme oplysninger registreres, får administratorer besked om lav alvorsgrad.
+
+Denne politik er diskret for brugere uden synlige politiktip og ingen blokerede meddelelser, men administratorer vil have poster over de følsomme oplysninger, der deles i disse meddelelser. Hvis det er nødvendigt, kan du redigere indstillingerne for at ændre denne standardkonfiguration.
+
+Hvis du vil se resultaterne af denne politik, skal du bruge [DLP-aktivitetsoversigt.](dlp-learn-about-dlp.md#dlp-activity-explorer)
+
+Hvis du vil redigere DLP-politikken, skal du se [Opret, test og juster en DLP-politik](create-test-tune-dlp-policy.md).
 
 ## <a name="dlp-for-devices"></a>DLP til enheder
 
-DLP-standardpolitikken for enheder registrerer tilstedeværelsen af kreditkortnumre på enheder, Windows 10 er blevet onboardet i Microsoft 365 overholdelse af regler og standarder. Derefter overvåges (blokeres ikke) følgende handlinger: 
+Standard-DLP-politikken for enheder registrerer tilstedeværelsen af kreditkortnumre på Windows 10 enheder, der er blevet onboardet i Microsoft Purview. Derefter overvåges (blokerer ikke) følgende handlinger: 
 
-- Upload til skytjenestedomæner eller adgang fra ikke-tilladte browsere
+- Upload til cloudtjenestedomæner eller adgang af ikke-tilladte browsere
 
 - Kopiér til Udklipsholder, USB eller netværksshare 
 
 - Adgang fra ikke-tilladte apps 
 
-- Udskriv 
+- Udskrive 
 
-- Kopiér eller flyt ved hjælp af Bluetooth-app 
+- Kopiér eller flyt ved hjælp af ikke-tilladte Bluetooth app 
 
 - Fjernskrivebord-tjenester 
 
-Hvis indhold indeholder 10 eller flere forekomster af kreditkort, og en eller flere af de angivne aktiviteter registreres, sendes der en besked om beskeden med mellemstor alvorsgrad til administratorer.
+Hvis indholdet indeholder 10 eller flere forekomster af kreditkort, og en eller flere af de viste aktiviteter registreres, sendes der en besked med mellem alvorsgrad til administratorer.
 
-Denne politik er ikke-diskret for brugere uden synlig politiktip og ingen handlinger blokeret, men administratorer vil have poster for alle mistænkelige aktiviteter. Hvis det er nødvendigt, kan du redigere disse indstillinger for at ændre denne standardkonfiguration.
+Denne politik er diskret for brugere uden synlige politiktips og ingen handlinger blokeret, men administratorer vil have poster over alle mistænkelige aktiviteter. Hvis det er nødvendigt, kan du redigere disse indstillinger for at ændre denne standardkonfiguration.
 
-Hvis du vil se resultaterne af denne politik, skal du [bruge DLP-aktivitetsoversigt](dlp-learn-about-dlp.md#dlp-activity-explorer).
+Hvis du vil se resultaterne af denne politik, skal du bruge [DLP-aktivitetsoversigt.](dlp-learn-about-dlp.md#dlp-activity-explorer)
 
-Hvis du vil redigere DLP-politikken, skal du [se Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md).
+Hvis du vil redigere DLP-politikken, skal du se [Opret, test og juster en DLP-politik](create-test-tune-dlp-policy.md).
 
 ## <a name="additional-resources"></a>Yderligere ressourcer
 
-Du kan få mere at vide om følsomhedsmærkater, forebyggelse af datatab og alle de tilgængelige Microsoft Information Protection ved at se følgende ressourcer:
+Du kan få mere at vide om følsomhedsmærkater, forebyggelse af datatab og alle de funktioner, der er tilgængelige med Microsoft Purview Information Protection, i følgende ressourcer:
 
 - [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md)
 - [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
-- [Microsoft Information Protection i Microsoft 365](information-protection.md)
+- [Beskyt dine data med Microsoft Purview](information-protection.md)

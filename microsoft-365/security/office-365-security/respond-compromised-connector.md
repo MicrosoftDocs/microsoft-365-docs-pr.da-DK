@@ -16,12 +16,12 @@ ms.custom: ''
 description: Få mere at vide om, hvordan du genkender og reagerer på en kompromitteret connector i Microsoft 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 50caf98bec9d918dd3ff1bcb076a080b123a357a
-ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
+ms.openlocfilehash: fd4c5f22de51081f5b848c367bf79a8c7033f3d3
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65182639"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285393"
 ---
 # <a name="respond-to-a-compromised-connector"></a>Besvar en kompromitteret forbindelse
 
@@ -35,7 +35,7 @@ ms.locfileid: "65182639"
 
 Forbindelser bruges til at aktivere mailflow mellem Microsoft 365- eller Office 365- og mailservere, som du har i dit lokale miljø. Du kan få flere oplysninger under [Konfigurer mailflow ved hjælp af connectors i Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
 
-En kompromitteret indgående connector defineres som når en uautoriseret person enten anvender ændringer på en eksisterende indgående connector eller opretter en ny indgående connector i en Microsoft 365 lejer med det formål at sende spam eller phish-mails.  
+En kompromitteret indgående connector defineres som når en uautoriseret person enten anvender ændringer på en eksisterende indgående connector eller opretter en ny indgående connector i en Microsoft 365 lejer med det formål at sende spam eller phish-mails. Bemærk, at dette kun gælder for indgående forbindelser af typen OnPremises. 
 
 ## <a name="detect-a-compromised-connector"></a>Registrer en kompromitteret connector
 

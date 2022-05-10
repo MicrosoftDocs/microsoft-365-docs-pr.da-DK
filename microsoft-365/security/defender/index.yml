@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: Microsoft 365 Defender
+summary: Få mere at vide om de robuste sikkerhedsløsninger i Microsoft 365 Defender, så du bedre kan beskytte din virksomhed på tværs af angrebsoverflader.
+metadata:
+  title: Dokumentation for Microsoft 365 Defender
+  description: Få mere at vide om de robuste sikkerhedsløsninger i Microsoft 365 Defender, så du bedre kan beskytte din virksomhed på tværs af angrebsoverflader.
+  services: office-365-security-compliance
+  ms.service: O365-seccomp
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 09/13/2019
+  ms.localizationpriority: high
+  ms.openlocfilehash: 473a0b6ca9641c12c7ae9b8d9aeba1e0e9d477d8
+  ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 12/30/2021
+  ms.locfileid: "63603035"
+landingContent:
+- title: Microsoft 365 Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft 365 Defender?
+      url: microsoft-365-defender.md
+  - linkListType: whats-new
+    links:
+    - text: Nyheder i Microsoft 365 Defender
+      url: ../defender/whats-new.md
+  - linkListType: video
+    links:
+    - text: Oversigtsvideo
+      url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww
+- title: Evaluer funktioner
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Opret et prøveversionslaboratorie
+      url: eval-overview.md
+    - text: Kør pilotprojekt i produktion
+      url: eval-overview.md
+- title: Kom i gang
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Kom i gang med Microsoft 365 Defender
+      url: get-started.md
+  - linkListType: deploy
+    links:
+    - text: Slå Microsoft 365 Defender til
+      url: m365d-enable.md
+    - text: Udrul understøttede tjenester
+      url: deploy-supported-services.md
+- title: Microsoft Defender for Identity
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Identity?
+      url: /defender-for-identity/what-is
+    - text: Microsoft Defender for Identity-arkitektur
+      url: /defender-for-identity/architecture
+- title: Microsoft Defender for Office 365
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Office 365?
+      url: ../office-365-security/defender-for-office-365.md
+    - text: Beskrivelse af Microsoft Defender for Office 365-tjenesten
+      url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
+    - text: Microsoft Defender for Office 365 i Microsoft 365 Defender
+      url: microsoft-365-security-center-mdo.md
+    - text: Omdirigering af Microsoft Defender for Office 365 i Microsoft 365 Defender
+      url: microsoft-365-security-mdo-redirection.md
+- title: Microsoft Defender for Endpoint
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Endpoint?
+      url: ../defender-endpoint/microsoft-defender-endpoint.md
+    - text: Defender for Endpoint i Microsoft 365 Defender
+      url: microsoft-365-security-center-mde.md
+    - text: Omdirigering af Defender for Endpoint til Microsoft 365 Defender
+      url: ../defender/microsoft-365-security-mde-redirection.md
+- title: Microsoft Defender for Cloud Apps
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Cloudapps
+      url: /cloud-app-security/what-is-cloud-app-security
+    - text: Kom i gang med Microsoft Defender for Cloudapps
+      url: /cloud-app-security/getting-started-with-cloud-app-security
+- title: Administrer hændelser og underretninger
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Undersøg hændelser
+      url: investigate-incidents.md
+    - text: Spor og reager på nye trusler
+      url: threat-analytics.md
+    - text: Automatiseret undersøgelse og svar
+      url: m365d-autoir.md
+    - text: Gå på jagt efter trusler
+      url: advanced-hunting-overview.md
+- title: Reference
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Microsoft 365 Defender API'er
+      url: api-overview.md

@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at begynde at styre din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle præskriptive retningslinjer for at komme i gang.
-ms.openlocfilehash: c5b9e931e2ab822a4d888b775de9fb8fa2acb13b
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0d9545a04b94b75ee1b9429d7db75b39e90b06ef
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972359"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286840"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Kom i gang med administration af datalivscyklus
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Er du klar til at begynde at styre din organisations data ved at bevare det indhold, du skal beholde, og slette det indhold, du ikke har? Du kommer i gang ved at bruge følgende vejledning til Administration af Microsoft Purview-datalivscyklus (tidligere Microsoft Information Governance):
 

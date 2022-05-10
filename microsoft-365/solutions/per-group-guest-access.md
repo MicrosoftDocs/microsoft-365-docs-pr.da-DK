@@ -1,5 +1,5 @@
 ---
-title: Forhindre gæster i at blive føjet til en bestemt gruppe
+title: Undgå, at gæster føjes til en bestemt gruppe
 ms.reviewer: arvaradh
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -16,33 +16,33 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om, hvordan du forhindrer gæster i at blive føjet til en bestemt gruppe
-ms.openlocfilehash: 4b9ebc6366934db52c30d51091ac9991ff82d8c3
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: f050011427ceeeff8347c2acd5b6d3fbbcf11bec
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570057"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285308"
 ---
-# <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Forhindre gæster i at blive føjet til en bestemt Microsoft 365 gruppe eller Microsoft Teams team
+# <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Undgå, at gæster føjes til en bestemt Microsoft 365 gruppe eller Microsoft Teams team
 
-Hvis du vil tillade gæsteadgang til de fleste grupper og teams, men har nogle, hvor du gerne vil forhindre gæsteadgang, kan du blokere gæsteadgang for individuelle grupper og teams. Blokering af gæsteadgang til et team udføres ved at blokere gæsteadgang til den tilknyttede gruppe. Dette forhindrer, at nye gæster kan tilføjes, men fjerner ikke gæster, der allerede findes i gruppen eller teamet.
+Hvis du vil tillade gæsteadgang til de fleste grupper og teams, men har et sted, hvor du vil forhindre gæsteadgang, kan du blokere gæsteadgang for individuelle grupper og teams. (Blokering af gæsteadgang til et team gøres ved at blokere gæsteadgang til den tilknyttede gruppe). Dette forhindrer nye gæster i at blive tilføjet, men fjerner ikke gæster, der allerede er i gruppen eller teamet.
 
-Hvis du bruger følsomhedsmærkater i din organisation, anbefaler vi, at du bruger dem til at kontrollere gæsteadgang pr. gruppe. Hvis du vil have mere at vide om, hvordan du gør dette, skal du bruge følsomhedsetiketter til at beskytte indhold [Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md). Dette er den anbefalede fremgangsmåde.
+Hvis du bruger følsomhedsmærkater i din organisation, anbefaler vi, at du bruger dem til at styre gæsteadgangen pr. gruppe. Du kan finde oplysninger om, hvordan du gør dette, [ved at bruge følsomhedsmærkater til at beskytte indhold på Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md). Dette er den anbefalede fremgangsmåde.
 
 ## <a name="change-group-settings-using-microsoft-powershell"></a>Skift gruppeindstillinger ved hjælp af Microsoft PowerShell
 
-Du kan også forhindre, at der tilføjes nye gæster til individuelle grupper ved hjælp af PowerShell. Husk, at teamets tilknyttede websted SharePoint separate [kontrolelementer for gæstedeling](/sharepoint/change-external-sharing-site).
+Du kan også forhindre, at nye gæster føjes til individuelle grupper ved hjælp af PowerShell. Husk, at teamets tilknyttede SharePoint websted har [separate gæstedelingskontrolelementer](/sharepoint/change-external-sharing-site).
 
 Du skal bruge prøveversionen af [Azure Active Directory PowerShell til Graph](/powershell/azure/active-directory/install-adv2) (modulnavn **AzureADPreview**) for at ændre indstillingen for gæsteadgang på gruppeniveau:
 
-- Hvis du ikke har installeret en version af Azure AD PowerShell-modulet før, skal du se Installation af [Azure AD-modulet](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) og følge vejledningen for at installere den offentlige prøveversion.
+- Hvis du ikke har installeret nogen version af Azure AD PowerShell-modulet før, skal du se [Installér Azure AD-modulet](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) og følge vejledningen for at installere den offentlige prøveversion.
 
-- Hvis du har 2.0-versionen af Azure AD PowerShell-modulet (AzureAD) installeret, `Uninstall-Module AzureAD` skal du fjerne den ved at køre i din PowerShell-session og derefter installere preview-versionen `Install-Module AzureADPreview`ved at køre .
+- Hvis du har version 2.0 til generel tilgængelighed af Azure AD PowerShell-modulet (AzureAD), skal du fjerne den ved at køre `Uninstall-Module AzureAD` i din PowerShell-session og derefter installere prøveversionen ved at køre `Install-Module AzureADPreview`.
 
-- Hvis du allerede har installeret prøveversionen, skal du køre for `Install-Module AzureADPreview` at sikre, at det er den nyeste version af dette modul.
+- Hvis du allerede har installeret prøveversionen, skal du køre `Install-Module AzureADPreview` for at sikre, at det er den nyeste version af dette modul.
 
 > [!NOTE]
-> Du skal have globale administratorrettigheder for at køre disse kommandoer. 
+> Du skal have globale administratorrettigheder for at kunne køre disse kommandoer. 
 
 Kør følgende script, og skift *\<GroupName\>* til navnet på den gruppe, hvor du vil blokere gæsteadgang.
 
@@ -58,7 +58,7 @@ $groupID= (Get-AzureADGroup -SearchString $GroupName).ObjectId
 New-AzureADObjectSetting -TargetType Groups -TargetObjectId $groupID -DirectorySetting $settingsCopy
 ```
 
-Kør denne kommando for at bekræfte dine indstillinger:
+Kør denne kommando for at bekræfte indstillingerne:
 
 ```PowerShell
 Get-AzureADObjectSetting -TargetObjectId $groupID -TargetType Groups | fl Values
@@ -66,9 +66,9 @@ Get-AzureADObjectSetting -TargetObjectId $groupID -TargetType Groups | fl Values
 
 Bekræftelsen ser sådan ud:
     
-![Skærmbillede af PowerShell-vinduet, der viser, at gæstegruppeadgang er indstillet til falsk.](../media/09ebfb4f-859f-44c3-a29e-63a59fd6ef87.png)
+![Skærmbillede af PowerShell-vinduet, der viser, at adgang til gæstegrupper er angivet til falsk.](../media/09ebfb4f-859f-44c3-a29e-63a59fd6ef87.png)
 
-Hvis du vil slå indstillingen til igen for at tillade gæsteadgang til en bestemt gruppe, skal du køre følgende script og skifte til navnet på den gruppe, ```<GroupName>``` hvor du vil tillade gæsteadgang.
+Hvis du vil slå indstillingen tilbage for at tillade gæsteadgang til en bestemt gruppe, skal du køre følgende script og skifte ```<GroupName>``` til navnet på den gruppe, hvor du vil tillade gæsteadgang.
 
 ```PowerShell
 $GroupName = "<GroupName>"
@@ -87,19 +87,19 @@ Set-AzureADObjectSetting -TargetType Groups -TargetObjectId $groupID -DirectoryS
 
 Du kan tillade eller blokere gæster, der bruger et bestemt domæne. Hvis din virksomhed (Contoso) f.eks. har et partnerskab med en anden virksomhed (Fabrikam), kan du føje Fabrikam til din tilladelsesliste, så brugerne kan føje disse gæster til deres grupper.
 
-Få mere at vide under [Tillad eller bloker invitationer til B2B-brugere fra bestemte organisationer](/azure/active-directory/b2b/allow-deny-list).
+Du kan få flere oplysninger under [Tillad eller bloker invitationer til B2B-brugere fra bestemte organisationer](/azure/active-directory/b2b/allow-deny-list).
 
 ## <a name="add-guests-to-the-global-address-list"></a>Føj gæster til den globale adresseliste
 
-Gæster vises som standard ikke på den globale Exchange adresseliste. Brug nedenstående trin til at gøre en gæst synlig på den globale adresseliste.
+Gæster er som standard ikke synlige på Exchange globale adresseliste. Brug nedenstående trin til at gøre en gæst synlig på den globale adresseliste.
 
-Find gæstens objekt-id ved at køre:
+Find gæstens ObjectID ved at køre:
 
 ```PowerShell
-Get-AzureADUser -Filter "userType eq 'Guest'"
+get-AzureADUser -all $true | ?{$_.CreationType -eq "Invitation"}
 ```
 
-Kør derefter følgende med de relevante værdier for ObjectID, GivenName, Efternavn, DisplayName og TelephoneNumber.
+Kør derefter følgende ved hjælp af de relevante værdier for ObjectID, GivenName, Surname, DisplayName og TelephoneNumber.
 
 ```PowerShell
 Set-AzureADUser -ObjectId cfcbd1a0-ed18-4210-9b9d-cf0ba93cf6b2 -ShowInAddressList $true -GivenName 'Megan' -Surname 'Bowen' -DisplayName 'Megan Bowen' -TelephoneNumber '555-555-5555'
@@ -113,6 +113,6 @@ Set-AzureADUser -ObjectId cfcbd1a0-ed18-4210-9b9d-cf0ba93cf6b2 -ShowInAddressLis
 
 [Administrer gruppemedlemskab i Microsoft 365 Administration](../admin/create-groups/add-or-remove-members-from-groups.md)
   
-[Azure Active Directory tilgå anmeldelser](/azure/active-directory/active-directory-azure-ad-controls-perform-access-review)
+[Azure Active Directory adgang til korrekturer](/azure/active-directory/active-directory-azure-ad-controls-perform-access-review)
 
 [Set-AzureADUser](/powershell/module/azuread/set-azureaduser)

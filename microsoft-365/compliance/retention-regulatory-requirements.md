@@ -1,5 +1,5 @@
 ---
-title: Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til styring af oplysninger og datastyring
+title: Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til administration af datalivscyklus og datastyring
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -14,19 +14,21 @@ ms.localizationpriority: high
 search.appverid:
 - MOE150
 - MET150
-description: Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til styring af oplysninger og datastyring.
-ms.openlocfilehash: d5f0c2d405d35147a7868635520521134d0ee8f0
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til administration af datalivscyklus og datastyring.
+ms.openlocfilehash: 2d66aa6ac7eee3fab0718e2850f62730d0bd66f1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759805"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286422"
 ---
-# <a name="regulatory-requirements-for-information-governance-and-records-management"></a>Lovmæssige krav til styring af oplysninger og datastyring
+# <a name="regulatory-requirements-for-data-lifecycle-management-and-records-management"></a>Lovmæssige krav til administration af datalivscyklus og datastyring
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Brug ressourcerne på denne side til at hjælpe dig med at opfylde specifikke lovmæssige krav til styring af oplysninger og datastyring i Microsoft 365. I hvert afsnit i dette dokument fokuseres der på en eller flere relaterede regler, og den indeholder alle eksisterende vejledninger eller vurderinger fra tredjepart om, hvordan du konfigurerer Microsoft 365 for at hjælpe med de skitserede krav.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Brug ressourcerne på denne side til at hjælpe dig med at opfylde specifikke lovmæssige krav til administration af datalivscyklus og datastyring i Microsoft 365. I hvert afsnit i dette dokument fokuseres der på en eller flere relaterede regler, og den indeholder alle eksisterende vejledninger eller vurderinger fra tredjepart om, hvordan du konfigurerer Microsoft 365 for at hjælpe med de skitserede krav.
 
 Disse ressourcer kan downloades fra siden [Databeskyttelsesressourcer, ofte stillede spørgsmål og whitepapers](https://servicetrust.microsoft.com/ViewPage/TrustDocuments) på Service Trust Portal.
 

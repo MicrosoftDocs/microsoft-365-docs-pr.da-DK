@@ -1,5 +1,5 @@
 ---
-title: Begræns adgangen til indhold ved hjælp af følsomhedsmærkater for at anvende kryptering
+title: Anvend kryptering ved hjælp af følsomhedsmærkater
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,16 +16,18 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0ec60e573d5c05c4a30e74f235ffae5983de03dc
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 7355ef75eb455ad7442052daf1df814eb9b3bf26
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705402"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285078"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du opretter en følsomhedsmærkat, kan du begrænse adgangen til indhold, som mærkaten anvendes på. Med krypteringsindstillingerne for en følsomhedsmærkat kan du f.eks. beskytte indhold, så:
 
@@ -45,7 +47,7 @@ Når du som administrator konfigurerer en følsomhedsmærkat til at anvende kryp
 - **Tildel tilladelser nu**, så du kan bestemme præcis, hvilke brugere der får hvilke tilladelser til indhold med den pågældende mærkat.
 - **Lad brugerne tildele tilladelser** , når de anvender mærkaten på indhold. På denne måde kan du give personer i din organisation en vis fleksibilitet, som de muligvis har brug for til at samarbejde og få udført deres arbejde.
 
-Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) i Microsoft 365 Overholdelsescenter. Du kan også bruge den ældre portal, Security & Compliance Center.
+Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) på Microsoft Purview-overholdelsesportalen.
 
 ## <a name="understand-how-the-encryption-works"></a>Forstå, hvordan krypteringen fungerer
 
@@ -192,7 +194,7 @@ Når du tildeler tilladelser, kan du vælge:
 
 - Alle godkendte brugere. Sørg for at forstå [kravene og begrænsningerne](#requirements-and-limitations-for-add-any-authenticated-users) for denne indstilling, før du vælger den.
 
-- En bestemt bruger- eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe ([tidligere Office 365 gruppe](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) i Azure AD. Den Microsoft 365 gruppe kan have statisk eller [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule). Bemærk, at du ikke kan bruge en [dynamisk distributionsgruppe fra Exchange](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups), fordi denne gruppetype ikke er synkroniseret til Azure AD, og du ikke kan bruge en sikkerhedsgruppe, der ikke er mailaktiveret.
+- En bestemt bruger- eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe ([tidligere Office 365 gruppe](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) i Azure AD. Den Microsoft 365 gruppe kan have statisk eller [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule). Bemærk, at du ikke kan bruge en [dynamisk distributionsgruppe fra Exchange](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups), fordi denne gruppetype ikke er synkroniseret til Azure AD, og du kan ikke bruge en sikkerhedsgruppe, der ikke er mailaktiveret.
     
     Selvom du kan angive grupper, der indeholder mailkontakter, som en praktisk metode til at give adgang til flere personer uden for din organisation, er der i øjeblikket et kendt problem med denne konfiguration. Du kan få flere oplysninger under [Mailkontakter i grupper har periodisk adgang til krypteret indhold](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content).
 

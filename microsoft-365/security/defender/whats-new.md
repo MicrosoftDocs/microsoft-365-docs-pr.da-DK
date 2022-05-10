@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 0cbcc198f31497996595a9f17df9cf689c435b58
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 3c11e531e8b4706128e1519b790046f800827d67
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130533"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285012"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -45,6 +45,8 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 
 Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescenteret](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
 
+## <a name="may-2022"></a>Maj 2022
+- (eksempelvisning) I overensstemmelse med den nyligt annoncerede udvidelse til en ny tjenestekategori kaldet [Microsoft Security Experts](https://aka.ms/MicrosoftSecurityExperts) introducerer vi tilgængeligheden af [Microsoft Defender Experts for Hunting](defenderexpertsforhuntingprev.md) (Defender Experts for Hunting) til offentlig prøveversion. Defender Experts for Hunting er til kunder, der har et robust center for sikkerhedshandlinger, men som gerne vil have Microsoft til proaktivt at jage efter trusler på tværs af Microsoft Defender-data, herunder slutpunkter, Office 365, cloudprogrammer og identitet. 
 
 ## <a name="april-2022"></a>April 2022
 - (eksempelvisning) [Handlinger](advanced-hunting-take-action.md) kan nu udføres på mails direkte fra resultaterne af jagtforespørgslen. Mails kan flyttes til andre mapper eller slettes permanent. 

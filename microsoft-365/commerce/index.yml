@@ -1,0 +1,82 @@
+### YamlMime:Landing
+title: Virksomhedsabonnementer og faktureringsdokumentation
+summary: Få mere at vide om, hvordan du køber og administrerer virksomhedsabonnementer, udfører licensstyringsopgaver og administrerer fakturering og betalinger for dine virksomhedskonti med Microsoft.
+metadata:
+  title: Virksomhedsabonnementer og faktureringsdokumentation
+  description: Få mere at vide om, hvordan du køber og administrerer virksomhedsabonnementer, udfører licensstyringsopgaver og administrerer fakturering og betalinger for dine virksomhedskonti med Microsoft.
+  ms.service: o365-administration
+  ms.topic: landing-page
+  ms.collection:
+  - commerce
+  - Adm_TOC
+  ms.custom:
+  - commerce_landingpage
+  author: cmcatee-MSFT
+  ms.author: cmcatee
+  manager: scotv
+  ms.date: 02/27/2020
+  ms.localizationpriority: medium
+  search.appverid: MET150
+  ms.openlocfilehash: 30e99fcf7b984c2af17cbc7902bc4ff0fad6c3a6
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "63588155"
+landingContent:
+- title: Administrer regninger og betalinger
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Få vist din regning eller faktura
+      url: billing-and-payments/view-your-bill-or-invoice.md
+    - text: Forstå din regning eller faktura
+      url: billing-and-payments/understand-your-invoice2.md
+    - text: Betal for dit abonnement
+      url: billing-and-payments/pay-for-your-subscription.md
+    - text: Administrer betalingsmetoder
+      url: billing-and-payments/manage-payment-methods.md
+    - text: Rediger din faktureringsadresse
+      url: billing-and-payments/change-your-billing-addresses.md
+- title: Administrer licenser
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Køb eller fjern licenser
+      url: licenses/buy-licenses.md
+    - text: Tildel licenser til brugerne
+      url: ../admin/manage/assign-licenses-to-users.md
+    - text: Fjern licenser fra brugere
+      url: ../admin/manage/remove-licenses-from-users.md
+    - text: Forstå abonnementer og licenser
+      url: licenses/subscriptions-and-licenses.md
+    - text: Download tidsubegrænset software og produktnøgle
+      url: ../admin/setup/download-software-licenses-csp.md
+- title: Opgrader, forny eller annuller
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Skift til en anden plan
+      url: subscriptions/upgrade-to-different-plan.md
+    - text: Forny dit abonnement
+      url: subscriptions/renew-your-subscription.md
+    - text: Genaktiver dit abonnement
+      url: subscriptions/reactivate-your-subscription.md
+    - text: Annuller dit abonnement
+      url: subscriptions/cancel-your-subscription.md
+    - text: Luk din konto
+      url: close-your-account.md
+- title: Prøv eller køb
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Prøv eller køb Microsoft 365
+      url: try-or-buy-microsoft-365.md
+    - text: Køb et abonnement fra din gratis prøveversion
+      url: ./try-or-buy-microsoft-365.md#buy-a-subscription-from-your-free-trial
+    - text: Forlæng din prøve
+      url: extend-your-trial.md#extend-your-trial
+    - text: Tilføj lagerplads
+      url: add-storage-space.md
+    - text: Køb et domænenavn
+      url: ../admin/get-help-with-domains/buy-a-domain-name.md

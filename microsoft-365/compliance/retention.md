@@ -18,18 +18,19 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 5c9a88b27814b89077a013b03d25b4d53ef3f125
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 6fd2f56d6876b6a3832e869767880890486551db
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972057"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286918"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Hvis du får vist meddelelser om opbevaringspolitikker i Teams eller har spørgsmål om opbevaringsmærkater i dine apps, skal du kontakte it-afdelingen for at få oplysninger om, hvordan de er konfigureret for dig. I mellemtiden kan følgende artikler være nyttige:
@@ -323,7 +324,7 @@ Når du opretter en politik for opbevaringspolitik eller opbevaringsmærkat, ska
 
 - Et **adaptivt område** bruger en forespørgsel, som du angiver, så medlemskabet er ikke statisk, men dynamisk ved at køre dagligt i forhold til de attributter eller egenskaber, du angiver for de valgte placeringer. Du kan bruge flere tilpassede områder med en enkelt politik.
 
-    Eksempel: Mails og OneDrive dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et adaptivt omfang, der bruger azure AD-attributtens stillingsbetegnelse "Direktør", og derefter vælger Exchange mail og OneDrive kontoplaceringer for politikken. Det er ikke nødvendigt at angive mailadresser eller OneDrive URL-adresser for disse brugere, fordi det tilpassede område automatisk henter disse værdier. For nye direktører er det ikke nødvendigt at konfigurere opbevaringspolitikken igen, fordi disse nye brugere med deres tilsvarende værdier for mail og OneDrive hentes automatisk.
+    Eksempel: Mails og OneDrive dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et adaptivt omfang, der bruger den Azure AD attributjobtitel for "Direktør", og derefter vælger Exchange mail og OneDrive kontoplaceringer for politikken. Det er ikke nødvendigt at angive mailadresser eller OneDrive URL-adresser for disse brugere, fordi det tilpassede område automatisk henter disse værdier. For nye direktører er det ikke nødvendigt at konfigurere opbevaringspolitikken igen, fordi disse nye brugere med deres tilsvarende værdier for mail og OneDrive hentes automatisk.
 
 - Et **statisk område** bruger ikke forespørgsler og er begrænset i konfigurationen, da det kan anvendes på alle instanser for en angivet placering eller bruge medtagelse og udeladelser for bestemte instanser for den pågældende placering. Disse tre valgmuligheder omtales nogle gange som henholdsvis "organisationsdækkende", "include", og "excludes".
 
@@ -335,7 +336,7 @@ Fordele ved at bruge tilpassede områder:
 
 - Der er ingen grænser for [antallet af elementer pr. politik](retention-limits.md#maximum-number-of-items-per-policy). Selvom tilpassede politikker stadig er underlagt det [maksimale antal politikker pr. lejerbegrænsninger](retention-limits.md#maximum-number-of-policies-per-tenant) , vil den mere fleksible konfiguration sandsynligvis resultere i langt færre politikker.
 
-- Mere effektiv målretning i forhold til dine opbevaringskrav. Du kan f.eks. tildele forskellige opbevaringsindstillinger til brugerne i henhold til deres geografiske placering ved hjælp af eksisterende Azure AD-attributter uden den administrative belastning, der er forbundet med at oprette og vedligeholde grupper til dette formål.
+- Mere effektiv målretning i forhold til dine opbevaringskrav. Du kan f.eks. tildele forskellige opbevaringsindstillinger til brugerne i henhold til deres geografiske placering ved hjælp af eksisterende Azure AD attributter, uden at der er administrative omkostninger forbundet med at oprette og vedligeholde grupper til dette formål.
 
 - Forespørgselsbaseret medlemskab sikrer robusthed over for forretningsændringer, der muligvis ikke afspejles pålideligt i gruppemedlemskab eller eksterne processer, der er afhængige af kommunikation på tværs af afdelinger.
 

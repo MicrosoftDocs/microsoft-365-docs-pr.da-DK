@@ -1,0 +1,41 @@
+### YamlMime:Hub
+title: Planlægger til Microsoft 365
+summary: Få mere at vide om, hvordan du konfigurerer Planlægger til Microsoft 365 til at planlægge møder ved hjælp af Cortana.
+brand: m365
+metadata:
+  title: Planlægger til Microsoft 365
+  description: Få mere at vide om, hvordan du konfigurerer Planlægger til Microsoft 365 til at planlægge møder ved hjælp af Cortana.
+  ms.service: exchange-online
+  ms.topic: hub-page
+  author: AshaIyengar21
+  ms.author: v-aiyengar
+  manager: serdars
+  audience: Admin
+  ms.date: 04/23/2021
+  ms.openlocfilehash: e67079f787b012d34482e7e94f85a6d7a822a8ae
+  ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 11/03/2021
+  ms.locfileid: "63606538"
+additionalContent:
+  sections:
+  - items:
+    - title: Hvad er Planlægger til Microsoft 365?
+      summary: Få mere at vide om Planlægger til Microsoft 365 og dens funktioner, hvem og hvordan det vil gavne.
+      url: scheduler-overview.md
+    - title: Tillid og beskyttelse af personlige oplysninger
+      summary: Få mere at vide om, hvordan Planlægger til Microsoft 365 sikrer, at din tillid og beskyttelse af personlige oplysninger er beskyttet.
+      url: scheduler-trust-privacy.md
+    - title: Konfigurerer Planlægger til Microsoft 365
+      summary: Få mere at vide om, hvad der kræves for at konfigurere Planlægger til Microsoft 365.
+      url: scheduler-setup.md
+    - title: Brug Planlægger til Microsoft 365
+      summary: Få mere at vide om, hvordan du bruger Planlægger til Microsoft 365.
+      url: scheduler-using.md
+    - title: Planlæg dynamiske tilbagevendende møder
+      summary: Få mere at vide om planlægning af dynamiske tilbagevendende møder.
+      url: scheduler-recurring-meetings.md
+    - title: Ofte stillede spørgsmål om Planlægger
+      summary: Ofte stillede spørgsmål og svar i Planlægger til Microsoft 365.
+      url: scheduler-faqs.md

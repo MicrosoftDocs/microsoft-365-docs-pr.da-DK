@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Brug denne side til at oprette din personaleliste og til at administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse.
-ms.openlocfilehash: ca938acf4bfb567d366c7ffd684e8bce8c9eea74
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: b6ceee7c4464daf050f6e6626628c9cb3d94960f
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746788"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285450"
 ---
 # <a name="add-staff-to-bookings"></a>Føj medarbejdere til Bookings
 
@@ -45,10 +45,11 @@ Selvom Bookings er en funktion i Microsoft 365, er det ikke alle dine medarbejde
     > [!NOTE]
     > Personale uden for din lejer kan ikke dele oplysninger om ledig/optaget tid med Bookings.
 
-5. For hver medarbejder skal du vælge en rolle: Administrator, Seer eller Gæst.
-    - **Administratorer** kan redigere alle indstillinger, tilføje og fjerne medarbejdere og oprette, redigere eller slette bookinger.
-    - **Seerne** kan se alle bookinger i kalenderen, men de kan ikke ændre eller slette dem. De har skrivebeskyttet adgang til indstillinger.
-    - **Gæster** kan tildeles til bookinger, men de kan ikke åbne bookingpostkassen.
+5. For hver medarbejder skal du vælge en rolle: Teammedlem, Tidsplan, Læser eller Gæst.
+    - **Teammedlemmet** kan administrere bookinger i deres egen kalender og deres tilgængelighed i bookingpostkassen. Når du tilføjer eller redigerer en booking i deres kalender, tildeles de som personale.
+    - **Planlægger** kan administrere bookinger i kalenderen og kundeoplysninger. De har skrivebeskyttet adgang til indstillinger, personale og tjenester.
+    - **Seer** kan se alle bookinger i kalenderen, men de kan ikke ændre eller slette dem. De har skrivebeskyttet adgang til indstillinger.
+    - **Gæsten** kan tildeles til bookinger, men de kan ikke åbne bookingpostkassen.
 
 6. Vælg **Giv alle medarbejdere besked via mail, når en reservation, der er tildelt dem, oprettes eller ændres** for at aktivere personalemails. Følgende er et eksempel på en mail:
 

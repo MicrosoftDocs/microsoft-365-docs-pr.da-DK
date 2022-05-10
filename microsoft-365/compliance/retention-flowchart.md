@@ -1,5 +1,5 @@
 ---
-title: Rutediagram til at bestemme, hvornår et element bevares eller slettes permanent
+title: Rutediagram, der bestemmer, hvornår et element bevares eller slettes
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,32 +17,34 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug et rutediagram til at bestemme resultatet, når et element har flere opbevaringspolitikker eller en opbevaringsmærkat og opbevaringspolitikker
-ms.openlocfilehash: b9c3b94dcb50499b6af72fd124da384f90d16da9
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: cf35a89faf3ed526c94acf362f1a927eb36420f0
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63593991"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286796"
 ---
-# <a name="flowchart-to-determine-when-an-item-will-be-retained-or-permanently-deleted"></a>Rutediagram til at bestemme, hvornår et element bevares eller slettes permanent
+# <a name="flowchart-to-determine-when-an-item-will-be-retained-or-permanently-deleted"></a>Rutediagram, der bestemmer, hvornår et element bevares eller slettes permanent
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Brug følgende rutediagram til at anvende principperne for [](retention.md#the-principles-of-retention-or-what-takes-precedence) opbevaring på et element for at afgøre, om systemet bevarer det eller sletter det permanent som et resultat af en opbevaringsmærkat eller opbevaringspolitik.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Brug følgende rutediagram til at anvende [principperne for opbevaring af](retention.md#the-principles-of-retention-or-what-takes-precedence) et element for at afgøre, om systemet vil bevare eller slette det permanent som følge af en opbevaringsmærkat eller opbevaringspolitik.
 
 Dette logikflow bruges til et element, når en af følgende betingelser gælder:
 
-- Der er anvendt mere end én opbevaringspolitik
-- Der er et opbevaringsnavn og en eller flere opbevaringspolitikker
+- Der anvendes mere end én opbevaringspolitik
+- Der er en opbevaringsmærkat og en eller flere opbevaringspolitikker
 
-Når et element er underlagt et eDiscovery-sæt (eller de ældre teknologier fra Retslig tilbageholdelse eller In-Place Hold), bevares det altid før beslutningsforløb for opbevaringspolitikker og et opbevaringsnavn.
+Når et element er i eDiscovery-venteposition (eller de ældre teknologier inden for procesførelse eller In-Place venteposition), bevares det altid før beslutningsflowene for opbevaringspolitikker og en opbevaringsmærkat.
 
-Hvis du ikke er bekendt med nogen af de udtryk, der bruges i dette rutediagram, kan du se [Få mere at vide om opbevaringspolitikker og opbevaringsnavne](retention.md).
+Hvis du ikke kender nogen af de ord, der bruges i dette rutediagram, skal du se [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
 
 
-   ![Rutediagram for at bestemme, hvornår et element bevares eller slettes permanent.](../media/retention-flowchart.svg)
+   ![Rutediagram, der bestemmer, hvornår et element bevares eller slettes permanent.](../media/retention-flowchart.svg)
 
 > [!NOTE]
-> Det er vigtigt at skelne mellem den længste opbevaringsperiode for elementet vs. den længste angivne periode i en opbevaringspolitik eller etiket. Og på samme måde mellem den korteste udløbsdato for elementet vs. den korteste angivne periode i en opbevaringspolitik.
+> Det er vigtigt at skelne mellem den længste opbevaringsperiode for elementet i forhold til den længste angivne periode i en opbevaringspolitik eller -mærkat. Og på samme måde mellem den korteste udløbsdato for elementet i forhold til den korteste angivne periode i en opbevaringspolitik.
 > 
-> Du kan finde flere oplysninger i forklaringen efter grafikken i [afsnittet om principper for](retention.md#the-principles-of-retention-or-what-takes-precedence) opbevaring.
+> Du kan få flere oplysninger i forklaringen efter grafikken i [afsnittet principper for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence) .

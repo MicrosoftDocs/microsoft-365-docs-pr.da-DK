@@ -1,5 +1,5 @@
 ---
-title: Brug følsomhedsmærkater med Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
+title: Brug følsomhedsmærkater på websteder med Microsoft Teams, Microsoft 365-grupper og SharePoint
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -18,16 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: 0c8462333a3b3fd0c062c72fce0f673977c54b9b
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 9b9427fc736dfee3ea326b8c523d3f872ad98c70
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916243"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286094"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold på Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Ud over at bruge [følsomhedsmærkater](sensitivity-labels.md) til at klassificere og beskytte dokumenter og mails kan du også bruge følsomhedsmærkater til at beskytte indhold i følgende objektbeholdere: Microsoft Teams websteder, Microsoft 365 grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) og SharePoint websteder. Til denne klassificering og beskyttelse på beholderniveau skal du bruge følgende mærkatindstillinger:
 
@@ -66,9 +68,9 @@ Når du har aktiveret og konfigureret følsomhedsmærkater for objektbeholdere, 
 
 Hvis du endnu ikke har aktiveret følsomhedsmærkater for objektbeholdere, skal du benytte følgende fremgangsmåde som en engangsprocedure:
 
-1. Da denne funktion bruger Azure AD-funktionalitet, skal du følge vejledningen i Dokumentationen til Azure AD for at aktivere understøttelse af følsomhedsmærkater: [Tildel følsomhedsmærkater til Microsoft 365 grupper i Azure Active Directory](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels).
+1. Da denne funktion bruger Azure AD funktionalitet, skal du følge vejledningen i dokumentationen til Azure AD for at aktivere understøttelse af følsomhedsmærkater: [Tildel følsomhedsmærkater til Microsoft 365 grupper i Azure Active Directory](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels).
 
-2. Du skal nu synkronisere dine følsomhedsmærkater til Azure AD. Først skal [du oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+2. Du skal nu synkronisere følsomhedsmærkater for at Azure AD. Først skal [du oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
    I en PowerShell-session, som du kører som administrator, skal du f.eks. logge på med en global administratorkonto.
 
@@ -93,7 +95,7 @@ Når følsomhedsmærkater er aktiveret for objektbeholdere som beskrevet i forri
 2. Vælg derefter en eller begge af de tilgængelige indstillinger på siden **Definer beskyttelsesindstillinger for grupper og websteder** :
     
     - **Indstillinger for beskyttelse af personlige oplysninger og ekstern brugeradgang** for at konfigurere indstillingerne for **beskyttelse af personlige oplysninger** og **eksterne brugeres adgang** . 
-    - **Indstillinger for ekstern deling og betinget adgang** for at konfigurere indstillingen **Kontrollér ekstern deling fra navngivne SharePoint websteder** og **Brug betinget adgang i Azure AD til at beskytte navngivne SharePoint websteder**.
+    - **Indstillinger for ekstern deling og betinget adgang** for at konfigurere indstillingen **Kontrollér ekstern deling fra navngivne SharePoint websteder** og **Brug Azure AD Betinget adgang til at beskytte navngivne SharePoint websteder**.
 
 3. Hvis du har valgt **Indstillinger for beskyttelse af personlige oplysninger og ekstern brugeradgang**, skal du nu konfigurere følgende indstillinger:
     
@@ -111,9 +113,9 @@ Når følsomhedsmærkater er aktiveret for objektbeholdere som beskrevet i forri
     
     - **Kontrollér ekstern deling fra navngivne SharePoint websteder**: Vælg denne indstilling for derefter enten at vælge ekstern deling for alle, nye og eksisterende gæster, eksisterende gæster eller kun personer i din organisation. Du kan få flere oplysninger om denne konfiguration og disse indstillinger i dokumentationen til SharePoint, [Slå ekstern deling til eller fra for et websted](/sharepoint/change-external-sharing-site).
     
-    - **Brug betinget adgang i Azure AD til at beskytte navngivne SharePoint websteder**: Vælg kun denne indstilling, hvis din organisation har konfigureret og bruger [Azure Active Directory Betinget adgang](/azure/active-directory/conditional-access/overview). Vælg derefter en af følgende indstillinger:
+    - **Brug Azure AD betinget adgang til at beskytte navngivne SharePoint websteder**: Vælg kun denne indstilling, hvis din organisation har konfigureret og bruger [Azure Active Directory Betinget adgang](/azure/active-directory/conditional-access/overview). Vælg derefter en af følgende indstillinger:
     
-        - **Bestem, om brugerne kan få adgang til SharePoint websteder fra ikke-administrerede enheder**: Denne indstilling bruger funktionen SharePoint, der bruger Betinget adgang i Azure AD til at blokere eller begrænse adgang til SharePoint og OneDrive indhold fra ikke-administrerede enheder. Du kan få flere oplysninger under [Kontrollér adgang fra ikke-administrerede enheder](/sharepoint/control-access-from-unmanaged-devices) fra dokumentationen til SharePoint. Den indstilling, du angiver for denne mærkatindstilling, svarer til at køre en PowerShell-kommando for et websted, som beskrevet i trin 3-5 fra [Bloker eller begræns adgang til et bestemt SharePoint websted eller OneDrive](/sharepoint/control-access-from-unmanaged-devices#block-or-limit-access-to-a-specific-sharepoint-site-or-onedrive) afsnit fra SharePoint instruktioner.
+        - **Bestem, om brugerne kan få adgang til SharePoint websteder fra ikke-administrerede enheder**: Denne indstilling bruger funktionen SharePoint, der bruger Azure AD Betinget adgang til at blokere eller begrænse adgang til SharePoint og OneDrive indhold fra ikke-administrerede enheder. Du kan få flere oplysninger under [Kontrollér adgang fra ikke-administrerede enheder](/sharepoint/control-access-from-unmanaged-devices) fra dokumentationen til SharePoint. Den indstilling, du angiver for denne mærkatindstilling, svarer til at køre en PowerShell-kommando for et websted, som beskrevet i trin 3-5 fra [Bloker eller begræns adgang til et bestemt SharePoint websted eller OneDrive](/sharepoint/control-access-from-unmanaged-devices#block-or-limit-access-to-a-specific-sharepoint-site-or-onedrive) afsnit fra SharePoint instruktioner.
             
             Du kan finde flere konfigurationsoplysninger under [Flere oplysninger om afhængighederne for indstillingen ikke-administrerede enheder](#more-information-about-the-dependencies-for-the-unmanaged-devices-option) i slutningen af dette afsnit.
             
@@ -142,7 +144,7 @@ Da du kan konfigurere indstillingerne for SharePoint separat fra mærkatkonfigur
 
 ##### <a name="more-information-about-the-dependencies-for-the-authentication-context-option"></a>Flere oplysninger om afhængighederne for indstillingen godkendelseskontekst
 
-Godkendelseskontekster skal oprettes, konfigureres og publiceres som en del af konfigurationen Azure Active Directory Betingelsesadgang for at kunne vises på rullelisten til valg. Du kan finde flere oplysninger og instruktioner i afsnittet [Konfigurer godkendelseskontekster](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) i dokumentationen til betinget adgang til Azure AD.
+Godkendelseskontekster skal oprettes, konfigureres og publiceres som en del af konfigurationen Azure Active Directory Betingelsesadgang for at kunne vises på rullelisten til valg. Du kan finde flere oplysninger og instruktioner i afsnittet [Konfigurer godkendelseskontekster](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) i dokumentationen Azure AD Betinget adgang.
 
 Det er ikke alle apps, der understøtter godkendelseskontekster. Hvis en bruger med en app, der ikke understøttes, opretter forbindelse til det websted, der er konfigureret til en godkendelseskontekst, får vedkommende vist enten en meddelelse om adgang nægtet, eller de bliver bedt om at godkende, men afvist. De apps, der i øjeblikket understøtter godkendelseskontekster:
 
@@ -181,7 +183,7 @@ Kendte begrænsninger for denne prøveversion:
 
 ### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>Konfigurer indstillinger for standardlinktypen for deling for et websted ved hjælp af avancerede powerShell-indstillinger
 
-Ud over etiketindstillingerne for websteder og grupper, som du kan konfigurere fra Overholdelsescenter, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
+Ud over mærkatindstillingerne for websteder og grupper, som du kan konfigurere fra Microsoft Purview-overholdelsesportalen, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
 
 Du kan finde flere oplysninger og instruktioner [under Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md).
 
@@ -266,7 +268,7 @@ Du kan bruge PowerShell, hvis du har brug for at [anvende en følsomhedsmærkat 
 
 ### <a name="apply-sensitivity-labels-to-microsoft-365-groups"></a>Anvend følsomhedsmærkater på Microsoft 365 grupper
 
-Du er nu klar til at anvende følsomhedsmærkaten eller -mærkaterne på Microsoft 365 grupper. Gå tilbage til Dokumentationen til Azure AD for at få instruktioner:
+Du er nu klar til at anvende følsomhedsmærkaten eller -mærkaterne på Microsoft 365 grupper. Gå tilbage til dokumentationen til Azure AD for at få instruktioner:
 
 - [Tildel en etiket til en ny gruppe i Azure Portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
 
@@ -367,8 +369,7 @@ Følgende apps og tjenester understøtter følsomhedsmærkater, der er konfigure
   - SharePoint Administration
   - Teams Administration
   - Microsoft 365 Administration
-  - Microsoft 365-overholdelsescenter
-  - Azure Active Directory portal
+  - Microsoft Purview-overholdelsesportal
 
 - Brugerapps og -tjenester:
 
@@ -392,13 +393,13 @@ Følgende apps og tjenester understøtter i øjeblikket ikke følsomhedsmærkate
   - Project
   - Power BI
 
-## <a name="classic-azure-ad-group-classification"></a>Klassisk Azure AD-gruppeklassificering
+## <a name="classic-azure-ad-group-classification"></a>Klassisk Azure AD gruppeklassificering
 
 Når du har aktiveret følsomhedsmærkater for objektbeholdere, understøttes gruppeklassificeringer fra Azure AD ikke længere af Microsoft 365 og vises ikke på websteder, der understøtter følsomhedsmærkater. Du kan dog konvertere dine gamle klassificeringer til følsomhedsmærkater.
 
 Som et eksempel på, hvordan du kan have brugt den gamle gruppeklassificering til SharePoint, skal du se [SharePoint klassificering af "moderne" websteder](/sharepoint/dev/solution-guidance/modern-experience-site-classification).
 
-Disse klassificeringer blev konfigureret ved hjælp af Azure AD PowerShell eller PnP Core-biblioteket og definere værdier for `ClassificationList` indstillingen. Hvis din lejer har defineret klassificeringsværdier, vises de, når du kører følgende kommando fra [AzureADPreview PowerShell-modulet](https://www.powershellgallery.com/packages/AzureADPreview):
+Disse klassificeringer blev konfigureret ved hjælp af Azure AD PowerShell eller PnP-kernebiblioteket og definere værdier for `ClassificationList` indstillingen. Hvis din lejer har defineret klassificeringsværdier, vises de, når du kører følgende kommando fra [AzureADPreview PowerShell-modulet](https://www.powershellgallery.com/packages/AzureADPreview):
 
 ```powershell
 ($setting["ClassificationList"])
@@ -418,7 +419,7 @@ Derefter:
 
 Selvom du ikke kan forhindre brugerne i at oprette nye grupper i apps og tjenester, der endnu ikke understøtter følsomhedsmærkater, kan du køre et tilbagevendende PowerShell-script for at søge efter nye grupper, som brugerne har oprettet med de gamle klassificeringer, og konvertere dem til at bruge følsomhedsmærkater.
 
-Hvis du vil hjælpe dig med at administrere ligheden mellem følsomhedsmærkater og Azure AD-klassificeringer for websteder og grupper, skal du se [Azure Active Directory klassificering og følsomhedsmærkater for Microsoft 365 grupper](migrate-aad-classification-sensitivity-labels.md).
+Hvis du vil hjælpe dig med at administrere samtidighed af følsomhedsmærkater og Azure AD klassificeringer for websteder og grupper, skal du se [Azure Active Directory klassificering og følsomhedsmærkater for Microsoft 365 grupper](migrate-aad-classification-sensitivity-labels.md).
 
 ### <a name="use-powershell-to-convert-classifications-for-microsoft-365-groups-to-sensitivity-labels"></a>Brug PowerShell til at konvertere klassificeringer for Microsoft 365 grupper til følsomhedsmærkater
 
@@ -481,13 +482,13 @@ Alle disse overvågningshændelser kan findes i kategorien [Aktiviteter for føl
 
 Du kan deaktivere følsomhedsmærkater for Microsoft Teams, Microsoft 365 grupper og SharePoint websteder ved hjælp af de samme instruktioner fra [Aktivér understøttelse af følsomhedsmærkat i PowerShell](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#enable-sensitivity-label-support-in-powershell). Hvis du vil deaktivere funktionen, skal du dog angive `$setting["EnableMIPLabels"] = "False"`i trin 5.
 
-Ud over at gøre alle indstillingerne utilgængelige for grupper og websteder, når du opretter eller redigerer følsomhedsmærkater, gendanner denne handling den egenskab, objektbeholderne bruger til deres konfiguration. Aktivering af følsomhedsmærkater for Microsoft Teams, Microsoft 365 grupper og SharePoint websteder skifter den egenskab, der bruges fra Klassificering (bruges til [Azure AD-gruppeklassificering](#classic-azure-ad-group-classification)), til **Følsomhed**. Når du deaktiverer følsomhedsmærkater for objektbeholdere, ignorerer objektbeholderne egenskaben Følsomhed og bruger egenskaben Klassificering igen.
+Ud over at gøre alle indstillingerne utilgængelige for grupper og websteder, når du opretter eller redigerer følsomhedsmærkater, gendanner denne handling den egenskab, objektbeholderne bruger til deres konfiguration. Aktivering af følsomhedsmærkater for Microsoft Teams, Microsoft 365 grupper og SharePoint websteder skifter den egenskab, der bruges fra **Klassificering** (bruges til [Azure AD gruppeklassificering](#classic-azure-ad-group-classification)), til **Følsomhed**. Når du deaktiverer følsomhedsmærkater for objektbeholdere, ignorerer objektbeholderne egenskaben Følsomhed og bruger egenskaben Klassificering igen.
 
 Det betyder, at alle etiketindstillinger fra websteder og grupper, der tidligere er anvendt på objektbeholdere, ikke gennemtvinges, og objektbeholdere viser ikke længere mærkaterne.
 
-Hvis der er anvendt Azure AD-klassificeringsværdier for disse objektbeholdere, vender objektbeholderne tilbage til at bruge klassificeringerne igen. Vær opmærksom på, at nye websteder eller grupper, der er oprettet efter aktivering af funktionen, ikke viser en mærkat eller har en klassificering. For disse objektbeholdere og eventuelle nye objektbeholdere kan du nu anvende klassificeringsværdier. Du kan finde flere oplysninger [under SharePoint klassificering af "moderne" websteder](/sharepoint/dev/solution-guidance/modern-experience-site-classification) og [Opret klassificeringer for Office grupper i din organisation](../enterprise/manage-microsoft-365-groups-with-powershell.md).
+Hvis disse objektbeholdere har Azure AD anvendte klassificeringsværdier, vender objektbeholderne tilbage til at bruge klassificeringerne igen. Vær opmærksom på, at nye websteder eller grupper, der er oprettet efter aktivering af funktionen, ikke viser en mærkat eller har en klassificering. For disse objektbeholdere og eventuelle nye objektbeholdere kan du nu anvende klassificeringsværdier. Du kan finde flere oplysninger [under SharePoint klassificering af "moderne" websteder](/sharepoint/dev/solution-guidance/modern-experience-site-classification) og [Opret klassificeringer for Office grupper i din organisation](../enterprise/manage-microsoft-365-groups-with-powershell.md).
 
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 Se webinarets optagelse og besvarede spørgsmål om [brug af følsomhedsmærkater med Microsoft Teams, O365-grupper og SharePoint onlinewebsteder](https://techcommunity.microsoft.com/t5/security-privacy-and-compliance/using-sensitivity-labels-with-microsoft-teams-o365-groups-and/ba-p/1221885#M1380).
 

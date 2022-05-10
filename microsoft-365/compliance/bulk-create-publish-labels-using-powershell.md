@@ -1,5 +1,5 @@
 ---
-title: Opret og udgiv opbevaringsnavne ved hjælp af PowerShell
+title: Opret og publicer opbevaringsmærkater ved hjælp af PowerShell
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -18,52 +18,54 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du bruger PowerShell til at oprette og publicere opbevaringsnavne fra kommandolinjen uafhængigt Microsoft 365 Overholdelsescenter.
-ms.openlocfilehash: 3f64fc7aede06e512d735908b8f06b7a8cb3e032
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du bruger PowerShell til at oprette og publicere opbevaringsmærkater fra kommandolinjen uafhængigt af Microsoft Purview-overholdelsesportalen.
+ms.openlocfilehash: 7d650c87aad92cdb65ed9a40c98c8fc3c94e01fb
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587486"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287150"
 ---
-# <a name="create-and-publish-retention-labels-by-using-powershell"></a>Opret og udgiv opbevaringsnavne ved hjælp af PowerShell
+# <a name="create-and-publish-retention-labels-by-using-powershell"></a>Opret og publicer opbevaringsmærkater ved hjælp af PowerShell
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Når du har besluttet dig for at [](retention.md) bruge opbevaringsnavne til at hjælpe dig med at beholde eller slette dokumenter og mails i Microsoft 365, har du måske opdaget, at du har mange og muligvis hundredvis af opbevaringsnavne at oprette og publicere. Den anbefalede metode til at oprette opbevaringsnavne på skala er ved [at bruge filplan](file-plan-manager.md) fra Microsoft 365 Overholdelsescenter. Du kan dog også bruge [PowerShell](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Når du har besluttet at bruge [opbevaringsmærkater](retention.md) som en hjælp til at opbevare eller slette dokumenter og mails i Microsoft 365, har du måske indset, at du har mange og muligvis hundredvis af opbevaringsmærkater til at oprette og publicere. Den anbefalede metode til at oprette opbevaringsmærkater i stor skala er ved hjælp af [en filplan](file-plan-manager.md) fra Microsoft Purview-overholdelsesportalen. Du kan dog også bruge [PowerShell](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels).
   
-Brug oplysningerne, skabelonfilerne og eksemplerne og scriptet i denne artikel for at hjælpe dig med masseopret opbevaringsnavne og udgive dem i opbevaringspolitikker. Derefter kan opbevaringsmærkaterne anvendes [af administratorer og brugere](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
+Brug oplysningerne, skabelonfilerne og eksemplerne og scriptet i denne artikel til at hjælpe dig med at masseoprete opbevaringsmærkater og publicere dem i politikker for opbevaringsmærkater. Derefter kan opbevaringsmærkater [anvendes af administratorer og brugere](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
 
-Den medfølgende vejledning understøtter ikke opbevaringsetiketter, der anvendes automatisk.
+De angivne instruktioner understøtter ikke opbevaringsmærkater, der anvendes automatisk.
 
-Oversigt: 
+Oversigt over: 
 
-1. I Excel du oprette en liste over dine opbevaringsnavne og en liste over deres opbevaringsetiketters politikker.
+1. I Excel skal du oprette en liste over dine opbevaringsmærkater og en liste over deres politikker for opbevaringsmærkater.
 
-2. Brug PowerShell til at oprette opbevaringsetiketter og opbevaringsetiketter på disse lister.
+2. Brug PowerShell til at oprette politikker for opbevaringsmærkater og opbevaringsmærkater på disse lister.
   
 ## <a name="disclaimer"></a>Ansvarsfraskrivelse
 
-Eksempelscriptene, der er angivet i denne artikel, understøttes ikke i nogen Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptene leveres som de er, uden garantier af nogen art. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, men ikke begrænset til stiltiende garantier for salgbarhed eller egnethed til bestemte formål. Den samlede risiko ved anvendelse eller ydeevne af eksempelscripts og dokumentation forbliver hos dig. I intet tilfælde kan Microsoft, dets forfattere eller andre involverede i oprettelse, produktion eller levering af scripts holdes ansvarlige for erstatning (herunder, men ikke begrænset til, erstatning for tabt forretningsfortjenester, driftstab, tabt erhvervsinformation eller andre økonomiske tab) som følge af brug af eller manglende mulighed for at bruge eksempelscripts eller dokumentation,  også selvom Microsoft er blevet underrettet om risikoen for sådanne skader.
+De eksempelscripts, der er angivet i denne artikel, understøttes ikke i et hvilket som helst Microsoft-standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
   
-## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>Trin 1: Opret en .csv fil til opbevaringsetiketterne
+## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>Trin 1: Opret en .csv fil til opbevaringsmærkater
 
-1. Kopiér følgende eksempelfil .csv en skabelon og eksempelposter for fire forskellige opbevaringsnavne, og indsæt dem i Excel. 
+1. Kopiér følgende eksempelfil .csv for en skabelon og eksempelposter for fire forskellige opbevaringsmærkater, og indsæt dem i Excel. 
 
-2. Konvertér teksten til kolonner: **Tekst** på fanen \> Data **til Kolonner** \> **Afgrænset** \> **komma** \> **Generelt**
+2. Konvertér teksten til kolonner: **Fanen** \> **Data Tekst til Kolonner** \> **afgrænset** \> **komma** \> **generelt**
 
-2. Erstat eksemplerne med poster til dine egne opbevaringsnavne og -indstillinger. Du kan finde flere oplysninger om parameterværdierne under [New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
+2. Erstat eksemplerne med poster for dine egne opbevaringsmærkater og -indstillinger. Du kan få flere oplysninger om parameterværdierne under [New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
 
 3. Gem regnearket som en .csv fil på en placering, der er nem at finde til et senere trin. Eksempel: C:\>Scripts\Labels.csv
 
   
-Bemærkninger:
+Noter:
 
-- Hvis filen .csv en opbevaringsetiket med det samme navn som et, der allerede findes, springer scriptet over, når du opretter den pågældende opbevaringsetiket. Der oprettes ingen dublerede opbevaringsnavne.
+- Hvis den .csv-fil indeholder en opbevaringsmærkat med samme navn som et, der allerede findes, springer scriptet oprettelsen af opbevaringsmærkaten over. Der oprettes ingen dubletopbevaringsnavne.
     
-- Du må ikke ændre eller omdøbe kolonneoverskrifterne fra eksempelfilen, .csv, ellers mislykkes scriptet.
+- Undlad at ændre eller omdøbe kolonneoverskrifterne fra den angivne eksempelfil .csv, ellers mislykkes scriptet.
     
-### <a name="sample-csv-file-for-retention-labels"></a>Eksempel på .csv fil til opbevaringsetiketter
+### <a name="sample-csv-file-for-retention-labels"></a>Eksempel på .csv fil til opbevaringsmærkater
 
 ```
 Name (Required),Comment (Optional),IsRecordLabel (Required),RetentionAction (Optional),RetentionDuration (Optional),RetentionType (Optional),ReviewerEmail (Optional)
@@ -73,24 +75,24 @@ LabelName_t_3,5 year delete,$false,Delete,1825,TaggedAgeInDays,
 LabelName_t_4,Record label tag - financial,$true,Keep,730,CreationAgeInDays,
 ```
 
-## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>Trin 2: Opret en .csv fil til opbevaringsetiketpolitikker
+## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>Trin 2: Opret en .csv fil til politikker for opbevaringsmærkater
 
-1. Kopiér følgende eksempelfil .csv en skabelon og eksempler på poster for tre forskellige politikker for opbevaringsetiket, og sæt dem ind Excel. 
+1. Kopiér følgende eksempelfil .csv for en skabelon og eksempelposter for tre forskellige politikker for opbevaringsmærkater, og indsæt dem i Excel. 
 
-2. Konvertér teksten til kolonner: **Tekst** på fanen \> Data **til Kolonner** \> **Afgrænset** \> **komma** \> **Generelt**
+2. Konvertér teksten til kolonner: **Fanen** \> **Data Tekst til Kolonner** \> **afgrænset** \> **komma** \> **generelt**
 
-2. Erstat eksemplerne med poster til dine egne politikker for opbevaringsmærkater og deres indstillinger. Du kan finde flere oplysninger om parameterværdierne for denne cmdlet under [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
+2. Erstat eksemplerne med poster for dine egne politikker for opbevaringsmærkater og deres indstillinger. Du kan få flere oplysninger om parameterværdierne for denne cmdlet under [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
 
 3. Gem regnearket som en .csv fil på en placering, der er nem at finde til et senere trin. For eksempel: `<path>Policies.csv`
 
 
-Bemærkninger:
+Noter:
   
-- Hvis filen .csv en opbevaringsetiketpolitik med det samme navn som den, der allerede findes, springer scriptet over ved oprettelse af denne politik for opbevaringsetiket. Der oprettes ingen politikker for duplikerede opbevaringsmærkater.
+- Hvis filen .csv indeholder en politik for opbevaringsmærkat med samme navn som et, der allerede findes, springer scriptet oprettelse af denne politik for opbevaringsmærkat over. Der oprettes ingen dubletpolitikker for opbevaringsmærkater.
     
-- Du må ikke ændre eller omdøbe kolonneoverskrifterne fra eksempelfilen, .csv, ellers mislykkes scriptet.
+- Undlad at ændre eller omdøbe kolonneoverskrifterne fra den angivne eksempelfil .csv, ellers mislykkes scriptet.
     
-### <a name="sample-csv-file-for-retention-policies"></a>Eksempel .csv fil til opbevaringspolitikker
+### <a name="sample-csv-file-for-retention-policies"></a>Eksempel på .csv fil til opbevaringspolitikker
 
 ```
 Policy Name (Required),PublishComplianceTag (Required),Comment (Optional),Enabled (Required),ExchangeLocation (Optional),ExchangeLocationException (Optional),ModernGroupLocation (Optional),ModernGroupLocationException (Optional),OneDriveLocation (Optional),OneDriveLocationException (Optional),PublicFolderLocation (Optional),SharePointLocation (Optional),SharePointLocationException (Optional),SkypeLocation (Optional),SkypeLocationException (Optional)
@@ -103,15 +105,15 @@ Publishing Policy Yellow1,"LabelName_t_3, LabelName_t_4",N/A,$false,All,,,,,,,,,
 
 1. Kopiér og indsæt følgende PowerShell-script i Notesblok.
 
-2. Gem filen ved hjælp af filtypenavnet **.ps1på en** placering, der er nem at finde. For eksempel: `<path>CreateRetentionSchedule.ps1`
+2. Gem filen ved hjælp af filtypenavnet **.ps1** på en placering, der er nem at finde. For eksempel: `<path>CreateRetentionSchedule.ps1`
 
-Bemærkninger:
+Noter:
 
-- Scriptet beder dig om at angive de to kildefiler, du oprettede i de to foregående trin:
-    - Hvis du ikke angiver kildefilen for at oprette opbevaringsnavnene, går scriptet videre for at oprette politikker for opbevaringsetiketter. 
-    - Hvis du ikke angiver kildefilen for at oprette opbevaringsetiketpolitikker, opretter scriptet kun opbevaringsnavnene.
+- Scriptet beder dig om at angive de to kildefiler, du oprettede i de forrige to trin:
+    - Hvis du ikke angiver kildefilen til oprettelse af opbevaringsmærkater, fortsætter scriptet for at oprette politikker for opbevaringsmærkater. 
+    - Hvis du ikke angiver kildefilen til oprettelse af politikker for opbevaringsmærkater, opretter scriptet kun opbevaringsmærkater.
 
-- Scriptet genererer en logfil, der registrerer hver handling, det har taget, og om handlingen lykkedes eller mislykkedes. Se det sidste trin for at få en vejledning i, hvordan du finder denne logfil.
+- Scriptet genererer en logfil, der registrerer hver handling, den har udført, og om handlingen lykkedes eller mislykkedes. Se det sidste trin for at få en vejledning i, hvordan du finder denne logfil.
 
 ### <a name="powershell-script"></a>PowerShell-script
 
@@ -737,17 +739,17 @@ if ($ResultCSV)
 
 ## <a name="step-4-run-the-powershell-script"></a>Trin 4: Kør PowerShell-scriptet
 
-Først skal [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Først [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-Kør derefter det script, der opretter og udgiver opbevaringsnavnene:
+Kør derefter scriptet, der opretter og udgiver opbevaringsmærkater:
   
-1. I Din PowerShell-session & Security & Compliance Center skal `.\` du angive stien efterfulgt af tegn og filnavnet på scriptet og derefter trykke på Enter for at køre scriptet. Eksempel:
+1. I PowerShell-sessionen Security & Compliance Center skal du angive stien efterfulgt af tegnene `.\` og filnavnet på scriptet og derefter trykke på ENTER for at køre scriptet. Eksempel:
     
     ```powershell
     <path>.\CreateRetentionSchedule.ps1
     ```
 
-2. Scriptet beder dig om placeringen af de .csv, du oprettede i de forrige trin. Angiv stien efterfulgt af tegnene og `.\` filnavnet på filen.csv tryk derefter på Enter. For den første prompt:
+2. Scriptet beder dig om placeringen af de .csv filer, du oprettede i de forrige trin. Angiv stien efterfulgt af tegnene `.\` og filnavnet på filen .csv, og tryk derefter på ENTER. For den første prompt kan du f.eks.:
     
     ```powershell
     <path>.\Labels.csv
@@ -755,9 +757,9 @@ Kør derefter det script, der opretter og udgiver opbevaringsnavnene:
 
 ## <a name="step-5-view-the-log-file-with-the-results"></a>Trin 5: Få vist logfilen med resultaterne
 
-Brug den logfil, som scriptet har oprettet, til at kontrollere resultaterne og identificere eventuelle fejl, der skal løses.
+Brug den logfil, som scriptet oprettede, til at kontrollere resultaterne og identificere eventuelle fejl, der skal løses.
 
-Du kan finde logfilen på følgende placering, selvom cifrene i eksempelfilnavnet varierer.
+Du kan finde logfilen på følgende placering, selvom cifrene i eksempelfilens navn varierer.
   
 ```
 <path>.\Log_Publish_Compliance_Tag_01112018_151239.txt

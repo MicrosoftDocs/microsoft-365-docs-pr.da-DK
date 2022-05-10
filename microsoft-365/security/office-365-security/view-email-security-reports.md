@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d97442fc2c3767a30c1ea98dc4a1ee7a38e56b45
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c83213278c7f9bc3b63c141e4d964475d64599d1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970995"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286620"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -986,7 +986,7 @@ Når du holder markøren over en kile i cirkeldiagrammet, kan du se antallet af 
 
 Detaljetabellen under grafen viser afsendere eller modtagere og antallet af meddelelser baseret på den valgte visning.
 
-Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer** og vælge **Startdato** og **Slutdato**.
+Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer** og vælge **Startdato** og **Slutdato**. Brugerne kan også filtrere efter brugerkoder. 
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 

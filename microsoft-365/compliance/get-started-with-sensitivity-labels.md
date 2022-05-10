@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at udrulle følsomhedsmærkater for at beskytte din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske vejledninger, der kan hjælpe dig med at komme på din mærkatrejse.
-ms.openlocfilehash: b0fcf435d7805440e93f0d1248723f4b5599d4a9
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: f27f1a475f5880058db40894015dabdec9038be1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268765"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286028"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Kom i gang med følsomhedsmærkater
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan finde oplysninger om, hvad følsomhedsmærkater er, og hvordan de kan hjælpe dig med at beskytte din organisations data, under [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md).
 
@@ -106,6 +106,7 @@ Alle scenarier kræver, at du [opretter og konfigurerer følsomhedsmærkater og 
 |Anvend en opbevaringsmærkat for at bevare eller slette filer eller mails, der har en bestemt følsomhedsmærkat|[Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold](apply-retention-labels-automatically.md) |
 |Find, mærk og beskyt filer, der er gemt i datalagre i det lokale miljø |[Udrulning af Azure Information Protection-scanneren for automatisk at klassificere og beskytte filer](/azure/information-protection/deploy-aip-scanner)|
 |Find, mærk og beskyt filer, der er gemt i datalagre i cloudmiljøet|[Opdag, klassificer, mærk og beskyt regulerede og følsomme data, der er gemt i cloudmiljøet](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
+|Label SQL databasekolonner ved hjælp af de samme følsomhedsmærkater som dem, der bruges til filer og mails, så organisationen har en samlet mærkatløsning, der fortsat kan beskytte disse strukturerede data, når de eksporteres |[Klassificering af & dataregistrering for Azure SQL Database, Azure SQL Managed Instance og Azure Synapse Analytics](/azure/azure-sql/database/data-discovery-and-classification-overview) <br /><br /> [SQL dataregistrering og -klassificering for SQL Server i det lokale miljø](/sql/relational-databases/security/sql-data-discovery-and-classification)|
 |Anvend og få vist mærkater i Power BI, og beskyt data, når de gemmes uden for tjenesten|[Følsomhedsmærkater i Power BI](/power-bi/admin/service-security-sensitivity-label-overview)|
 |Overvåg og forstå, hvordan følsomhedsmærkater bruges i min organisation|[Om klassificering af data](data-classification-overview.md)|
 |Udvid følsomhedsmærkater til tredjepartsapps og -tjenester|[Microsoft Information Protection SDK](/information-protection/develop/overview#microsoft-information-protection-sdk)|

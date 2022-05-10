@@ -16,18 +16,18 @@ search.appverid:
 - MET150
 description: Oplysninger til it-administratorer om administration af følsomhedsmærkater i Office apps til stationære computere, mobilenheder og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 792b87c8d045002ebec27dc5de38177cec0ae647
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: cac0965ba9cd4b11280e1efd263f49137672399f
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172319"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286818"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har [publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) følsomhedsmærkater fra Microsoft Purview-overholdelsesportalen, vises de i Office apps, hvor brugerne kan klassificere og beskytte data, når de oprettes eller redigeres.
 

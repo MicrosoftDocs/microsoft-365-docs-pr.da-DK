@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 99710520b1b687fe6fc2469badb3ad18e6070371
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 161f05c1f9c27723ff4940087c715e0556484b79
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093498"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287128"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bruger [følsomhedsmærkater](sensitivity-labels.md) i Microsoft 365 Apps på Windows computere, kan du vælge at bruge mærkater, der er indbygget i Office apps, eller et tilføjelsesprogram fra [AIP-klienten (Azure Information Protection).](/azure/information-protection/rms-client/aip-clientv2) 
 

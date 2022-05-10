@@ -18,16 +18,18 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Forstå det maksimale antal politikker og elementer pr. politik for opbevaringspolitikker og politikker for opbevaringsmærkater
-ms.openlocfilehash: 260b99a4519937f962cc1c779a9beb9c6810e7e1
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: bb94043f68d46f98f005853cde03da048495e10f
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782803"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285352"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Grænser for opbevaringspolitikker og politikker for opbevaringsmærkater
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bruger [opbevaringspolitikker og politikker for opbevaringsmærkater](retention.md#retention-policies-and-retention-labels) til automatisk at gemme eller slette data for din organisation, er der nogle maksimale tal, du skal være opmærksom på.
 

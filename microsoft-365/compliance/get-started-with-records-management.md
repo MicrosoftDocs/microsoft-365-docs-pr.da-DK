@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Har du brug for en datastyringsløsning til Microsoft 365, der administrerer indhold af høj værdi for juridiske, forretningsmæssige eller lovmæssige forpligtelser, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske retningslinjer for at komme i gang.
-ms.openlocfilehash: bbba24a2627c6040873da8d01185e4e6bdfdbfc8
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 86d6f21963b33fde59cb498868b8ecec315e1ad8
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268743"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286774"
 ---
 # <a name="get-started-with-records-management"></a>Kom i gang med datastyring
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Er du klar til at begynde at administrere din organisations indhold af høj værdi for juridiske, forretningsmæssige eller lovmæssige forpligtelser ved hjælp af en løsning til datastyring i Microsoft 365? Brug følgende vejledning til at komme i gang:
 

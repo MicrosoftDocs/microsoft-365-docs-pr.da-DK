@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: Dokumentation for Microsoft Defender for Endpoint
+summary: Microsoft Defender for Endpoint leverer forebyggende beskyttelse, registrering efter sikkerhedsbrud, automatiseret undersøgelse og svar.
+metadata:
+  title: Dokumentation for Microsoft Defender for Endpoint
+  description: Få mere at vide om Microsoft Defender for Endpoint, og maksimer de indbyggede sikkerhedsfunktioner for at beskytte enheder, registrere skadelig aktivitet og afhjælpe trusler# Påkrævet; artikelbeskrivelse, der vises i søgeresultater. < 160 tegn.
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: mde
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 10/18/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: d141c9f8b6109bd55bd64e5839db552fc13588de
+  ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 12/30/2021
+  ms.locfileid: "63591901"
+landingContent:
+- title: Microsoft Defender for Endpoint
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Endpoint?
+      url: microsoft-defender-endpoint.md
+    - text: Defender for Endpoint Plan 1?
+      url: defender-endpoint-plan-1.md
+    - text: Sammenlign Defender for Endpoint Plan 1 med Plan 2
+      url: defender-endpoint-plan-1-2.md
+  - linkListType: whats-new
+    links:
+    - text: Nyheder i Microsoft Defender for Endpoint
+      url: whats-new-in-microsoft-defender-endpoint.md
+    - text: Præsentation af Microsoft Defender for Endpoint Plan 1
+      url: defender-endpoint-plan-1.md
+  - linkListType: video
+    links:
+    - text: Oversigtsvideo
+      url: https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0
+- title: Evaluer og udrul tjenesten
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Evaluer Microsoft Defender for Endpoint
+      url: evaluation-lab.md
+    - text: Planlæg din udrulning
+      url: deployment-strategy.md
+  - linkListType: deploy
+    links:
+    - text: Installationsvejledning
+      url: deployment-phases.md
+    - text: Onboard understøttede enheder
+      url: onboard-configure.md
+    - text: Konfigurer Defender for Endpoint Plan 1
+      url: mde-p1-setup-configuration.md
+  - linkListType: how-to-guide
+    links:
+    - text: Overførselsvejledning
+      url: migration-guides.md
+  - linkListType: video
+    links:
+    - text: Onboardingvideo
+      url: https://www.microsoft.com/videoplayer/embed/RE4bGqr
+- title: Sikkerhedshandlinger
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Slutpunktsregistrering og -svar
+      url: overview-endpoint-detection-response.md
+    - text: Blokering og opbevaring af funktionsmåder
+      url: behavioral-blocking-containment.md
+    - text: Automatisk undersøgelse og svar (AIR)
+      url: automated-investigations.md
+    - text: Avanceret jagt
+      url: advanced-hunting-overview.md
+    - text: Microsoft Threat Experts
+      url: microsoft-threat-experts.md
+    - text: Trusselsanalyse
+      url: threat-analytics.md
+- title: Brug Microsoft Defender for Endpoint på andre platforme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Defender for Endpoint på Mac
+      url: microsoft-defender-endpoint-mac.md
+    - text: Microsoft Defender for Endpoint på iOS
+      url: microsoft-defender-endpoint-ios.md
+    - text: Microsoft Defender for Endpoint på Linux
+      url: microsoft-defender-endpoint-linux.md
+    - text: Microsoft Defender for Endpoint på Android
+      url: microsoft-defender-endpoint-android.md
+- title: Reference
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Administration og API'er
+      url: management-apis.md
+    - text: Partnerintegration
+      url: partner-integration.md
+- title: Sikkerhedsadministration
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Håndtering af trusler og sikkerhedsrisici
+      url: next-gen-threat-and-vuln-mgt.md
+    - text: Reduktion af angrebsoverfladen
+      url: overview-attack-surface-reduction.md
+    - text: Næste generations beskyttelse
+      url: next-generation-protection.md

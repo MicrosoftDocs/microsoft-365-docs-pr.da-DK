@@ -17,12 +17,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om bedste praksis for styring af Microsoft 365 samarbejdsværktøjer, herunder Microsoft 365-grupper, Teams, SharePoint og Yammer.
-ms.openlocfilehash: 130342725e8c43b4aeaac116b94704db3046e059
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4afed27fa6d40f7f6967583bcfd3f43c69c7963
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941385"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65284990"
 ---
 # <a name="what-is-collaboration-governance"></a>Hvad er styring af samarbejde?
 
@@ -147,8 +147,8 @@ Styringsfunktioner til samarbejde i Microsoft 365 omfatter funktioner i Microsof
 |Tillad/bloker domæne|Begræns deling med personer uden for din organisation til personer fra bestemte domæner.|Microsoft 365 E5 eller E3|
 |Oprettelse af selvbetjeningswebsted|Tillad eller undgå, at brugerne opretter deres egne SharePoint websteder.|Microsoft 365 E5 eller E3|
 |Begrænset websteds- og fildeling|Begræns deling af websteder, filer og mapper til medlemmer af en bestemt sikkerhedsgruppe.|Microsoft 365 E5 eller E3|
-|Oprettelse af begrænset gruppe|Begræns oprettelse af team og gruppe til medlemmer af en bestemt sikkerhedsgruppe.|Microsoft 365 E5 eller E3 med Azure AD Premium- eller Azure AD Basic EDU-licenser|
-|Politik for navngivning af gruppe|Gennemtving præfikser eller suffikser for gruppe- og teamnavne.|Microsoft 365 E5 eller E3 med Azure AD Premium- eller Azure AD Basic EDU-licenser|
+|Oprettelse af begrænset gruppe|Begræns oprettelse af team og gruppe til medlemmer af en bestemt sikkerhedsgruppe.|Microsoft 365 E5 eller E3 med Azure AD Premium eller Azure AD Grundlæggende EDU-licenser|
+|Politik for navngivning af gruppe|Gennemtving præfikser eller suffikser for gruppe- og teamnavne.|Microsoft 365 E5 eller E3 med Azure AD Premium eller Azure AD Grundlæggende EDU-licenser|
 |Politik for gruppeudløb|Angiv inaktive grupper og teams til at udløbe og slettes efter et angivet tidsrum.|Microsoft 365 E5 eller E3 med Azure AD Premium licenser|
 |Gæsteadgang pr. gruppe|Tillad eller undgå deling af team og grupper med personer uden for din organisation pr. gruppe.|Microsoft 365 E5 eller E3|
 
@@ -182,7 +182,7 @@ Disse træningsmoduler fra Microsoft Learn kan hjælpe dig med at lære styrings
 
 |Uddannelse:|Beskyt virksomhedsoplysninger med Microsoft 365|
 |:---|:---|
-|![Teams træningsikon.](../media/protect-enterprise-information-microsoft-365.svg)|Det er mere udfordrende end nogensinde før at beskytte og beskytte din organisations oplysninger. Læringsforløbet Beskyt virksomhedsoplysninger med Microsoft 365 beskriver, hvordan du beskytter dine følsomme oplysninger mod utilsigtet overdeling eller misbrug, hvordan du finder og klassificerer data, hvordan du beskytter dem med følsomhedsmærkater, og hvordan du både overvåger og analyserer dine følsomme oplysninger for at beskytte mod tab. Dette læringsforløb kan hjælpe dig med at forberede dig på Microsoft 365 Certificeret: Sikkerhedsadministratormedarbejder og Microsoft 365 certificeret: Certificeringer fra virksomhedsadministrationseksperter..<br><br>1 t. – Learning sti – 5 moduler|
+|![Teams træningsikon.](../media/protect-enterprise-information-microsoft-365.svg)|Det er mere udfordrende end nogensinde før at beskytte og beskytte din organisations oplysninger. Læringsforløbet Beskyt virksomhedsoplysninger med Microsoft 365 beskriver, hvordan du beskytter dine følsomme oplysninger mod utilsigtet overdeling eller misbrug, hvordan du finder og klassificerer data, hvordan du beskytter dem med følsomhedsmærkater, og hvordan du både overvåger og analyserer dine følsomme oplysninger for at beskytte mod tab. Dette læringsforløb kan hjælpe dig med at forberede dig på Microsoft 365 Certificeret: Sikkerhedsadministratormedarbejder og Microsoft 365 Certificeret: Certificeringer fra virksomhedsadministrationseksperter.<br><br>1 t. – Learning sti – 5 moduler|
 
 > [!div class="nextstepaction"]
 > [Start >](/learn/modules/m365-security-info-overview/introduction/)
@@ -205,7 +205,7 @@ Det har it-arkitekter brug for at vide om grupper i Microsoft 365
 
 |**Element**|**Beskrivelse**|
 |:-----|:-----|
-|[![Miniaturebillede for gruppers infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Opdateret i juni 2019|Disse illustrationer beskriver de forskellige typer af grupper, hvordan de oprettes og administreres, og nogle få anbefalinger til styring.|
+|[![Miniaturebillede for gruppers infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) <br/> [PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx) <br> Opdateret i maj 2022|Disse illustrationer beskriver de forskellige typer af grupper, hvordan de oprettes og administreres, og nogle få anbefalinger til styring.|
 
 ### <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>Microsoft Teams og relaterede produktivitetstjenester i Microsoft 365 for it-arkitekter
 Den logiske arkitektur af produktivitetstjenester i Microsoft 365, der fører med Microsoft Teams.
@@ -223,7 +223,7 @@ Dette sæt illustrationer bruger en af de mest regulerede industrier, finansiell
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: Microsoft Purview information protection and compliance capabilities.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Microsoft Purview Information Protection og Microsoft Purview forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
+|[![Modelplakat: Microsoft Purview information protection and compliance capabilities.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Microsoft Purview Information Protection og Microsoft Purview Forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
 
 ## <a name="conference-sessions"></a>Mødesessioner
 
@@ -245,7 +245,7 @@ Få mere at vide om, hvordan du konfigurerer dine gruppers udløbslivscyklus, na
 
 Se et eksempel bag kulisserne på, hvordan Microsoft 365-grupper, SharePoint, Teams og Yammer arbejder sammen om at levere en global samarbejdsplatform.
 
-- [Find et godt sted at samarbejde med Office 365 Grupper, SharePoint, Teams og Yammer](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
+- [Find et godt sted at samarbejde med Microsoft 365-grupper, SharePoint, Teams og Yammer](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
 
 ## <a name="see-also"></a>Se også
 

@@ -1,5 +1,5 @@
 ---
-title: Brug opbevaringsnavne til at administrere livscyklussen for dokumenter, der er gemt i SharePoint
+title: Brug opbevaringsmærkater til at administrere SharePoint dokumentlivscyklus
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -18,277 +18,279 @@ ms.custom:
 search.appverid:
 - MOE150
 - MET150
-description: Sådan kan du bruge opbevaringsmærkater til at administrere livscyklussen for dokumenter i SharePoint ved hjælp af metadata til at klassificere indholdet, anvende etiketterne automatisk og bruge hændelsesbaseret opbevaring til at starte en opbevaringsperiode.
-ms.openlocfilehash: 35c43a96e07fe52d9e5e0cc0a72195353b6f5da6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Sådan kan du bruge opbevaringsmærkater til at administrere livscyklussen for dokumenter i SharePoint ved hjælp af metadata til at klassificere indholdet, automatisk anvende mærkaterne og bruge hændelsesbaseret opbevaring til at starte opbevaringsperioden.
+ms.openlocfilehash: ad8d4f48aa104db18256d62fc5034d1fb38b2817
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587329"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286510"
 ---
-# <a name="use-retention-labels-to-manage-the-lifecycle-of-documents-stored-in-sharepoint"></a>Brug opbevaringsnavne til at administrere livscyklussen for dokumenter, der er gemt i SharePoint
+# <a name="use-retention-labels-to-manage-the-lifecycle-of-documents-stored-in-sharepoint"></a>Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint
 
->*[Microsoft 365 licenseringsvejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel beskrives det, hvordan du kan administrere livscyklussen for dokumenter, der er gemt i SharePoint, ved hjælp af automatisk anvendte opbevaringsmærkater og hændelsesbaseret opbevaring.
 
-Funktionen til automatisk anvendelse anvender SharePoint til dokumentklassificering. Eksemplet i denne artikel er til produktrelaterede dokumenter, men de samme begreber kan bruges i andre scenarier. I olie- og brændstofbranchen kan du f.eks. bruge den til at administrere livscyklussen for dokumenter om fysiske aktiver som f.eks. olieplatforme, logfiler eller produktionslicenser. Inden for den finansielle sektor kan du administrere dokumenter vedrørende bankkonto, realkredit eller forsikring. I den offentlige sektor kan du administrere byggetilladelser eller skatteformularer.
+Funktionen anvend automatisk bruger SharePoint metadata til dokumentklassificering. Eksemplet i denne artikel er til produktrelaterede dokumenter, men de samme begreber kan bruges til andre scenarier. I olie- og gasbranchen kan du f.eks. bruge den til at administrere livscyklussen for dokumenter om fysiske aktiver, f.eks. olieplatforme, well logs eller produktionslicenser. I sektoren for finansielle tjenesteydelser kan du administrere dokumenter om bankkonto, realkreditlån eller forsikringskontrakter. I den offentlige sektor kan du administrere byggetilladelser eller skatteformularer.
 
-I denne artikel ser vi nærmere på informationsarkitekturen og definitionen af opbevaringsnavnene. Derefter klassificerer vi dokumenter ved automatisk at anvende etiketterne. Og endelig genererer vi de hændelser, der starter en opbevaringsperiode.
+I denne artikel kigger vi på informationsarkitekturen og definitionen af opbevaringsmærkater. Derefter klassificerer vi dokumenter ved automatisk at anvende mærkaterne. Og endelig genererer vi de hændelser, der starter opbevaringsperioden.
 
 ## <a name="information-architecture"></a>Informationsarkitektur
 
-Vores scenarie er en produktionsvirksomhed, der SharePoint til at gemme alle dokumenter om de produkter, som virksomheden udvikler. Disse dokumenter omfatter produktspecifikationer, aftaler med leverandører og brugermanualer. Når disse dokumenter er gemt i SharePoint i Enterprise Content Management-politikker, defineres dokumentmetadata, som bruges til at klassificere dem. Hvert dokument har følgende metadataegenskaber:
+Vores scenarie er en produktionsvirksomhed, der bruger SharePoint til at gemme alle dokumenter om de produkter, som virksomheden udvikler. Disse dokumenter omfatter produktspecifikationer, aftaler med leverandører og brugervejledninger. Når disse dokumenter gemmes i SharePoint via politikker for administration af virksomhedsindhold, defineres dokumentmetadata, som bruges til at klassificere dem. Hvert dokument har følgende metadataegenskaber:
 
-- **Dokumenttype** (f.eks. produktspecifikation, aftale eller brugermanual)
+- **Dokumenttype** (f.eks. produktspecifikation, aftale eller brugervejledning)
 
 - **Produktnavn**
 
 - **Status** (kladde eller endelig)
 
-Disse metadata danner en grundlæggende indholdstype kaldet *Produktionsdokument* for alle dokumenterne.
+Disse metadata udgør en grundlæggende indholdstype med navnet *Produktionsdokument* for alle dokumenterne.
 
 ![Tabel over metadata for produktdokumentation.](../media/SPRetention1.png)
 
 > [!NOTE]
-> **Egenskaberne Dokumenttype** **og Status** bruges af opbevaringspolitikker senere i dette scenarie til at klassificere og anvende opbevaringsetiketter automatisk.
+> Egenskaberne **Dokumenttype** og **Status** bruges af opbevaringspolitikker senere i dette scenarie til at klassificere og anvende opbevaringsmærkater automatisk.
 
 Vi kan have flere indholdstyper, der repræsenterer forskellige typer dokumenter, men lad os fokusere på produktdokumentationen.
 
-I dette scenarie bruger vi tjenesten Administrerede metadata og ordtypen Store til at oprette et ordsæt for *Dokumenttype* og et andet for *Produktnavn*. For hvert ordsæt opretter vi et ord for hver værdi. Det ville se sådan ud i ord Store for din SharePoint organisation:
+I dette scenarie bruger vi tjenesten Administrerede metadata og ord Store til at oprette et ordsæt for *dokumenttype* og et andet for *Produktnavn*. For hvert ordsæt opretter vi et ord for hver værdi. Det vil se sådan ud i Ord Store for din SharePoint organisation:
 
-![Eksempel på et ordsæt til produktdokumentation i Store.](../media/SPRetention2.png)
+![Eksempelordsæt til produktdokumentation i Term Store.](../media/SPRetention2.png)
 
-*Indholdstype* kan oprettes og publiceres ved hjælp af [Hub til indholdstype](https://support.office.com/article/manage-content-type-publishing-06f39ac0-5576-4b68-abbc-82b68334889b). Du kan også oprette og publicere en indholdstype ved hjælp af værktøjer til klargøring af websteder, f.eks [. PnP-klargøringsrammen](/sharepoint/dev/solution-guidance/pnp-provisioning-framework) eller [JSON-skemaet for webstedsdesign](/sharepoint/dev/declarative-customization/site-design-json-schema#define-a-new-content-type).
+*Indholdstypen* kan oprettes og publiceres ved hjælp af [indholdstypehubben](https://support.office.com/article/manage-content-type-publishing-06f39ac0-5576-4b68-abbc-82b68334889b). Du kan også oprette og publicere en indholdstype ved hjælp af værktøjer til klargøring af websteder, f.eks [. PnP-klargøringsstrukturen](/sharepoint/dev/solution-guidance/pnp-provisioning-framework) eller [JSON-skemaet til webstedsdesign](/sharepoint/dev/declarative-customization/site-design-json-schema#define-a-new-content-type).
 
-Hvert produkt har en dedikeret SharePoint, der indeholder ét dokumentbibliotek, der har de rigtige indholdstyper aktiveret. Alle dokumenter gemmes i dette dokumentbibliotek.
+Hvert produkt har et dedikeret SharePoint websted, der indeholder ét dokumentbibliotek, hvor de rette indholdstyper er aktiveret. Alle dokumenter gemmes i dette dokumentbibliotek.
 
 [![Dokumentbibliotek til produktdokumentation.](../media/SPRetention3.png) ](../media/SPRetention3.png#lightbox)
 
 > [!NOTE]
-> I stedet for at have et SharePoint-websted pr. produkt kunne produktionsfirmaet i dette scenarie bruge et Microsoft Team pr. produkt til at understøtte samarbejde mellem medlemmer af teamet, f.eks. via fast chat, og bruge fanen Filer i Teams til dokumentstyring. I denne artikel fokuserer vi kun på dokumenter, så vi bruger kun et websted.
+> I stedet for at have et SharePoint websted pr. produkt, kan produktionsvirksomheden i dette scenarie bruge et Microsoft-team pr. produkt til at understøtte samarbejde mellem medlemmer af teamet, f.eks. gennem vedvarende chat, og bruge fanen **Filer** i Teams til dokumentstyring. I denne artikel fokuserer vi kun på dokumenter, så vi bruger kun et websted.
 
-Her er en visning af dokumentbiblioteket for produktet til den roterende widget:
+Her er en visning af dokumentbiblioteket for produktet Spinning Widget:
 
-[![Roterende widget-dokumentbibliotek.](../media/SPRetention4.png) ](../media/SPRetention4.png#lightbox)
+[![Spinning Widget-dokumentbibliotek.](../media/SPRetention4.png) ](../media/SPRetention4.png#lightbox)
 
-Nu hvor vi har den grundlæggende informationsarkitektur på plads til dokumentstyring, så lad os se på opbevarings- og afhændelsesstrategi for de dokumenter, der bruger metadataene, og hvordan vi klassificerer disse dokumenter.
+Nu, hvor vi har den grundlæggende informationsarkitektur på plads til dokumentstyring, kan vi se på opbevarings- og bortskaffelsesstrategien for de dokumenter, der bruger metadataene, og hvordan vi klassificerer disse dokumenter.
 
-## <a name="retention-and-disposition"></a>Opbevaring og disposition
+## <a name="retention-and-disposition"></a>Opbevaring og fordeling
 
-Produktionsselskabets politikker for overholdelse af regler og standarder og datastyring bestemmer, hvordan data bevares og afhændes. Produktrelaterede dokumenter skal opbevares, så længe produktet er fremstillet og i en bestemt ekstra periode. Den ekstra periode er forskellig for produktspecifikationer, aftaler og brugermanualer. Følgende tabel angiver kravene til opbevaring og fordeling:
+Produktionsvirksomhedens politikker for overholdelse af angivne standarder og datastyring dikterer, hvordan data bevares og bortskaffes. Produktrelaterede dokumenter skal opbevares, så længe produktet er fremstillet, og i en bestemt yderligere periode. Den ekstra periode varierer for produktspecifikationer, aftaler og brugervejledninger. Følgende tabel angiver opbevarings- og fordelingskravene:
 
-|   Dokumenttype            |   Opbevaring                            |   Disposition                                |
+|   Dokumenttype            |   Fastholdelse                            |   Fordeling                                |
 | -------------------------- | -------------------------------------- | -------------------------------------------- |
-| Produktspecifikationer      | 5 år efter produktionsstop  | Slet                                       |
-| Produktaftaler          | 10 år efter produktionsstop | Gennemse                                       |
-| Brugermanualer                | 5 år efter produktionsstop  | Slet                                       |
-| Alle andre typer dokumenter | Behold ikke aktivt  | Slet, når dokumentet er ældre end 3 år <br /><br /> Et dokument betragtes som ældre end 3 år, hvis det ikke er blevet ændret inden for de seneste 3 år. |
+| Produktspecifikationer      | 5 år efter produktionsstop  | Slette                                       |
+| Produktaftaler          | 10 år efter produktionsstop | Vurder                                       |
+| Brugermanualer                | 5 år efter produktionsstop  | Slette                                       |
+| Alle andre dokumenttyper | Bevar ikke aktivt  | Slet, når dokumentet er ældre end tre år <br /><br /> Et dokument anses for at være ældre end 3 år, hvis det ikke er blevet ændret inden for de sidste tre år. |
 |||
 
-Vi bruger Microsoft 365 Overholdelsescenter til at oprette følgende [opbevaringsnavne](retention.md#retention-labels):
+Vi bruger Microsoft Purview-overholdelsesportalen til at oprette følgende [opbevaringsmærkater](retention.md#retention-labels):
 
-  - Produktspecifikation
+  - Varespecifikationen
 
   - Produktaftale
 
-  - Brugermanual
+  - Brugervejledning
 
-I denne artikel viser vi kun, hvordan du opretter og automatisk anvender opbevaringsmærkaten for produktspecifikationen. For at implementere det komplette scenarie skal du også oprette og automatisk anvende opbevaringsmærkater for de to andre dokumenttyper.
+I denne artikel viser vi kun, hvordan du opretter og anvender opbevaringsmærkaten for produktspecifikationen automatisk. Hvis du vil implementere hele scenariet, skal du også oprette og automatisk anvende opbevaringsmærkater for de to andre dokumenttyper.
 
 ### <a name="settings-for-the-product-specification-retention-label"></a>Indstillinger for opbevaringsmærkaten for produktspecifikationen
 
-Her er filplanen [for opbevaringsmærkatet](file-plan-manager.md) for produktspecifikationen:
+Her er [filplanen](file-plan-manager.md) for opbevaringsmærkaten for produktspecifikationen:
 
-- **Navn:** Produktspecifikation
+- **Navn:** Varespecifikationen
 
-- **Beskrivelse af brugere:** Behold i 5 år efter produktionsstop.
+- **Beskrivelse af brugere:** Bevar i 5 år, efter produktionen er ophørt.
 
-- **Beskrivelse af administratorer:** Bevar i 5 år efter produktionsstop, automatisk sletning, begivenhedsbaseret opbevaring, hændelsestype er *Produktbevarelse*.
+- **Beskrivelse af administratorer:** Bevar i 5 år, efter produktionen stopper, automatisk sletning, hændelsesbaseret opbevaring, hændelsestypen er *Produktophør*.
 
-- **Opbevaringshandling:** Behold og slet.
+- **Opbevaringshandling:** Bevar og slet.
 
 - **Opbevaringsvarighed:** 5 år (1.825 dage).
 
-- **Postetiket**: Konfigurer opbevaringsetiketten til at markere elementer som en [post, hvilket](records-management.md#records) betyder, at de mærkede dokumenter ikke kan ændres eller slettes af brugerne.
+- **Postetiket**: Konfigurer opbevaringsmærkaten for at markere elementer som en [post](records-management.md#records), hvilket betyder, at de navngivne dokumenter derefter ikke kan ændres eller slettes af brugerne.
 
-- **Beskrivelse af filplan:** For at forenkle scenariet findes der ingen valgfri filbeskrivelser.
+- **Beskrivelse af filplan:** Der er ikke angivet nogen valgfri filbeskrivelser for at forenkle scenariet.
 
-Følgende skærmbillede viser indstillingerne, når du opretter opbevaringsmærkatet for Produktspecifikation i Microsoft 365 Overholdelsescenter. Du kan oprette *begivenhedstypen Produktarrangement* , når du opretter opbevaringsmærkaten. Se fremgangsmåden i det følgende afsnit.
+På følgende skærmbillede vises indstillingerne, når du opretter opbevaringsmærkaten Produktspecifikation på Microsoft Purview-overholdelsesportalen. Du kan oprette hændelsestypen *Produktophør* , når du opretter opbevaringsmærkaten. Se proceduren i følgende afsnit.
 
-![Opbevaringsindstillinger for produktspecifikationsmærkaten.](../media/SPRetention5.png)
+![Opbevaringsindstillinger for mærkaten Produktspecifikation.](../media/SPRetention5.png)
 
 > [!NOTE]
-> Du kan undgå at vente 5 år på dokumentsletning ved at angive opbevaringsvarigheden til ***1*** dag, hvis du genskaber dette scenarie i et testmiljø.
+> Hvis du vil undgå en 5-års ventetid for dokumentsletning, skal du angive opbevaringsvarigheden til ***1 dag*** , hvis du opretter dette scenarie igen i et testmiljø.
 
-### <a name="create-an-event-type-when-you-create-a-retention-label"></a>Oprette en begivenhedstype, når du opretter en opbevaringsetiket
+### <a name="create-an-event-type-when-you-create-a-retention-label"></a>Opret en hændelsestype, når du opretter en opbevaringsmærkat
 
-1. På siden **Definer opbevaringsindstillinger** i guiden Opret opbevaringsnavn skal du efter **Start opbevaringsperioden** baseret på **vælge Opret ny hændelsestype**:
+1. På siden **Definer opbevaringsindstillinger** i guiden Opret opbevaringsmærkat skal du efter **Start opbevaringsperioden baseret på** vælge **Opret ny hændelsestype**:
 
-    ![Opret en ny hændelsestype for dialogboksen Etiket for produktspecifikation.](../media/SPRetention6.png)
+    ![Opret en ny hændelsestype for dialogboksen Produktspecifikationsmærkat.](../media/SPRetention6.png)
 
-3. På siden **Navngiv din begivenhedstype** skal du angive **Produktoplysninger** og en valgfri beskrivelse. Vælg derefter **Næste**, **Send** og **Udført**.
+3. På siden **Navngiv din hændelsestype** skal du angive **Produktophør** og en valgfri beskrivelse. Vælg derefter **Næste**, **Indsend** og **Udført**.
 
-4. Tilbage på siden **Definer opbevaringsindstillinger** skal du for **Start** opbevaringsperioden baseret på bruge rullelisten til at vælge den produktbevarelseshændelsestype, du har oprettet.
+4. Tilbage på siden **Definer opbevaringsindstillinger** for **Start den opbevaringsperiode**, der er baseret på, skal du bruge rullelisten til at vælge hændelsestypen **Produktophør** , som du har oprettet.
 
-    Sådan ser indstillingerne ud for opbevaringsmærkatet for Produktspecifikation:
+    Sådan ser indstillingerne ud for opbevaringsmærkaten for produktspecifikationen:
 
-   ![Indstillinger til den nye produktspecifikationsmærkat.](../media/SPRetention7.png)
+   ![Indstillinger for den nye mærkat for produktspecifikationen.](../media/SPRetention7.png)
 
-6. Vælg **Opret etiket**, og når du på næste side ser mulighederne **for** at publicere navnet, anvende etiketten automatisk eller blot gemme navnet: Vælg Gem blot etiketten indtil videre, og vælg derefter **Udført**.
+6. Vælg **Opret etiket**, og på næste side, når du ser indstillingerne for udgivelse af etiketten, skal du anvende etiketten automatisk eller blot gemme etiketten: Vælg **Gem blot etiketten for nu**, og vælg derefter **Udført**.
 
     > [!TIP]
-    > Hvis du vil have en mere detaljeret vejledning, [skal du se Opret en etiket, hvis opbevaringsperiode er baseret på en begivenhed](event-driven-retention.md#step-1-create-a-label-whose-retention-period-is-based-on-an-event).
+    > Du kan finde flere detaljerede trin under [Opret en mærkat, hvis opbevaringsperiode er baseret på en hændelse](event-driven-retention.md#step-1-create-a-label-whose-retention-period-is-based-on-an-event).
 
-Lad os nu se på, hvordan vi automatisk anvender opbevaringsmærkaten på indhold med produktspecifikationer.
+Lad os nu se på, hvordan vi automatisk anvender opbevaringsmærkaten på indholdet i produktspecifikationen.
 
 ## <a name="auto-apply-retention-labels-to-documents"></a>Anvend automatisk opbevaringsmærkater på dokumenter
 
-Vi vil bruge KQL (Keyword Query Language) til automatisk at anvende de [opbevaringsetiketter](apply-retention-labels-automatically.md) , vi har oprettet. KQL er det sprog, der bruges til at opbygge søgeforespørgsler. I KQL kan du søge ved hjælp af nøgleord eller administrerede egenskaber. Du kan finde flere oplysninger i Reference til syntaks [for Sprog til nøgleordsforespørgsel (KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)).
+Vi bruger KQL (Keyword Query Language) til [automatisk at anvende](apply-retention-labels-automatically.md) de opbevaringsmærkater, vi har oprettet. KQL er det sprog, der bruges til at oprette søgeforespørgsler. I KQL kan du søge ved hjælp af nøgleord eller administrerede egenskaber. Du kan få flere oplysninger under [Reference til KQL-syntaks (Keyword Query Language).](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
 
-Grundlæggende vil vi bede Microsoft 365 "anvende opbevaringsmærkaten for produktspecifikationen på alle dokumenter, der har status som endelig  og en  dokumenttype for  **produktspecifikationen**". Husk, **at Status** og **Dokumenttype er** de webstedskolonner, vi har defineret for indholdstypen Produktdokumentation i [sektionen Informationsarkitektur](#information-architecture) . For at gøre dette skal vi konfigurere søgeskemaet.
+Grundlæggende vil vi gerne bede Microsoft 365 om at "anvende opbevaringsmærkaten for **produktspecifikationen** på alle dokumenter, der har **status** **som endelig** og **dokumenttype** for **produktspecifikation**." Husk, at **Status** og **Dokumenttype** er de webstedskolonner, vi har defineret for indholdstypen Produktdokumentation i afsnittet [Informationsarkitektur](#information-architecture) . Det gør vi ved at konfigurere søgeskemaet.
 
-Når SharePoint indekserer indhold, genererer det automatisk gennemsøgte egenskaber for hver webstedskolonne. I dette scenarie er vi interesseret i **egenskaberne Dokumenttype** **og Status** . Vi har brug for dokumenter i det bibliotek, der er den rigtige indholdstype, og har webstedskolonnerne udfyldt til søgning for at oprette de gennemsøgte egenskaber.
+Når SharePoint indekserer indhold, genereres gennemsøgte egenskaber automatisk for hver webstedskolonne. I dette scenarie er vi interesseret i egenskaberne **Dokumenttype** og **Status** . Vi skal bruge dokumenter i biblioteket, der er den rigtige indholdstype, og webstedskolonnerne skal udfyldes til søgning for at oprette de gennemsøgte egenskaber.
 
-Åbn <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">søgekonfigurationen SharePoint</a> Administration, og vælg Administrer søgeskema for at få  vist og konfigurere de gennemsøgte egenskaber.
+Åbn søgekonfigurationen <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">i SharePoint Administration</a>, og vælg **Administrer søgeskema** for at få vist og konfigurere de gennemsøgte egenskaber.
 
 ![Gennemsøgte egenskaber i søgeskemaet.](../media/SPRetention8.png)
 
-Hvis vi skriver ***status** _ i feltet _ *Crawled Properties**, og vælger den grønne pil, får vi vist et resultat som dette:
+Hvis vi skriver ***status** _ i feltet _ *Gennemsøgte egenskaber** og vælger den grønne pil, får vi vist et resultat som dette:
 
 ![Den ows_Status gennemsøgte egenskab.](../media/SPRetention9.png)
 
-Egenskaben **owsStatus\_\_** (bemærk dobbelt understregningstegn) er den, der interesserer os. Det er en tilknytning til **egenskaben Status** for indholdstypen Produktionsdokument.
+Egenskaben **owsStatus\_\_** (bemærk det dobbelte understregningstegn) er den, der interesserer os. Den knyttes til egenskaben **Status** for indholdstypen Produktionsdokument.
 
-Hvis vi nu skriver ***owsdoc\_ og*** vælger den grønne pil, får vi vist noget i retning af dette:
+Hvis vi skriver ***owsdoc\_*** og vælger den grønne pil, kan vi se noget i stil med dette:
 
 ![Den ows_Doc_Type gennemsøgte egenskab.](../media/SPRetention10.png)
 
-Egenskaben **owsDocx0020Type\_\_\_ er** den anden egenskab, der interesserer os. Den knyttes til **egenskaben Dokumenttype** for indholdstypen Produktionsdokument.
+Egenskaben **owsDocx0020Type\_\_\_** er den anden egenskab, der interesserer os. Den knyttes til egenskaben **Doc Type** for indholdstypen Produktionsdokument.
 
 > [!TIP]
-> For at identificere navnet på en gennemsøgt egenskab for dette scenarie skal du gå til det dokumentbibliotek, der indeholder produktionsdokumenterne. Gå derefter til biblioteksindstillingerne. Ud **for Kolonner** skal du vælge navnet på kolonnen (f.eks. **Status** eller **Dokumenttype**) for at åbne webstedskolonnesiden. *Feltparameteren* i URL-adressen for den pågældende side indeholder navnet på feltet. Dette feltnavn, der har præfikset "ows_", er navnet på den gennemsøgte egenskab. Eksempelvis svarer URL-adressen `https://tenantname.sharepoint.com/sites/SpinningWidget/_layouts/15/FldEdit.aspx?List=%7BC38C2F45-3BD6-4C3B-AA3B-EF5DF6B3D172%7D&Field=_Status` til den *gennemsøgte egenskab owsStatus\_\_*.
+> Hvis du vil identificere navnet på en gennemsøgt egenskab for dette scenarie, skal du gå til det dokumentbibliotek, der indeholder produktionsdokumenterne. Gå derefter til biblioteksindstillingerne. For **Kolonner** skal du vælge navnet på kolonnen (f.eks **. Status** eller **Dokumenttype**) for at åbne webstedskolonnesiden. *Feltparameteren* i URL-adressen for den pågældende side indeholder navnet på feltet. Dette feltnavn med præfikset "ows_" er navnet på den gennemsøgte egenskab. URL-adressen `https://tenantname.sharepoint.com/sites/SpinningWidget/_layouts/15/FldEdit.aspx?List=%7BC38C2F45-3BD6-4C3B-AA3B-EF5DF6B3D172%7D&Field=_Status` svarer f.eks. til den gennemsøgte *egenskab owsStatus\_\_*.
 
-Hvis de gennemsøgte egenskaber, du leder efter, ikke vises i sektionen Administrer søgeskema SharePoint Administration:
+Hvis de gennemsøgte egenskaber, du leder efter, ikke vises i afsnittet Administrer søgeskema i SharePoint Administration:
 
-- Måske er dokumenterne ikke blevet indekseret. Du kan gennemtvinge et nyt bibliotek ved at gå til Indstillinger **for dokumentbibliotekAdvanceret** >  **Indstillinger**.
+- Måske er dokumenterne ikke indekseret. Du kan gennemtvinge en genintegration af biblioteket ved at gå til **Indstillinger for** >  **dokumentbibliotekAvanceret Indstillinger**.
 
-- Hvis dokumentbiblioteket er på et moderne websted, skal du sikre dig, at SharePoint er administrator for gruppen af websteder.
+- Hvis dokumentbiblioteket findes på et moderne websted, skal du sørge for, at den SharePoint administrator også er administrator af gruppen af websteder.
 
-Du kan finde flere oplysninger om gennemsøgte og administrerede egenskaber [under Automatisk oprettede administrerede egenskaber SharePoint Server](/sharepoint/technical-reference/automatically-created-managed-properties-in-sharepoint).
+Du kan få flere oplysninger om gennemsøgte og administrerede egenskaber [under Automatisk oprettede administrerede egenskaber i SharePoint Server](/sharepoint/technical-reference/automatically-created-managed-properties-in-sharepoint).
 
-### <a name="map-crawled-properties-to-pre-defined-managed-properties"></a>Knytte gennemsøgte egenskaber til foruddefinerede administrerede egenskaber
+### <a name="map-crawled-properties-to-pre-defined-managed-properties"></a>Knyt gennemsøgte egenskaber til foruddefinerede administrerede egenskaber
 
-KQL kan ikke bruge gennemsøgte egenskaber i søgeforespørgsler. Den skal bruge en administreret egenskab. I et typisk søgescenarie opretter vi en administreret egenskab og tilknytter den til den gennemsøgte egenskab, vi har brug for. Men for automatisk anvendelse af opbevaringsetiketter kan du kun angive foruddefinerede administrerede egenskaber i KQL og ikke brugerdefinerede administrerede egenskaber. Der er et sæt foruddefinerede administrerede egenskaber i systemet for *strengRefinableString00* til *RefinableString199* , som du kan bruge. Du kan finde en komplet liste under Standard [ubrugte administrerede egenskaber](/sharepoint/manage-search-schema#default-unused-managed-properties). Disse standard administrerede egenskaber bruges typisk til at definere søge afgrænsning.
+KQL kan ikke bruge gennemsøgte egenskaber i søgeforespørgsler. Den skal bruge en administreret egenskab. I et typisk søgescenarie opretter vi en administreret egenskab og knytter den til den gennemsøgte egenskab, vi har brug for. Men for automatisk anvendelse af opbevaringsmærkater kan du kun angive foruddefinerede administrerede egenskaber i KQL og ikke brugerdefinerede administrerede egenskaber. Der er et sæt foruddefinerede administrerede egenskaber i systemet for strengen *RefinableString00* til *RefinableString199* , som du kan bruge. Du kan se en komplet liste under [Standard for ubrugte administrerede egenskaber](/sharepoint/manage-search-schema#default-unused-managed-properties). Disse administrerede standardegenskaber bruges typisk til at definere søgeindskrænkninger.
 
-Hvis KQL-forespørgslen automatisk skal anvende den korrekte opbevaringsetiket på produktdokumentindhold, tilknytter vi de gennemsøgte egenskaber **owsDocx0020Type\_\_\_* og *owsStatus\_\_** til to refinerbare administrerede egenskaber. I vores testmiljø til dette **scenarie bruges RefinableString00** og **RefinableString01** ikke. Det har vi besluttet ved at **se på Administrerede** **egenskaber i Administrer** <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
+Hvis KQL-forespørgslen automatisk skal anvende den korrekte opbevaringsmærkat på produktdokumentindhold, knytter vi de gennemsøgte egenskaber **owsDocx0020Type\_\_\_* og *owsStatus til to administrerede egenskaber, der kan afgrænses\_\_**. I vores testmiljø til dette scenarie bruges **RefinableString00** og **RefinableString01** ikke. Vi har bestemt dette ved **at se på Administrerede egenskaber** i **Administrer søgeskema** i <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
 
-[![Administrerede egenskaber i søgeskemaet.](../media/SPRetention12.png) ](../media/SPRetention12.png#lightbox)
+[![Administrerede egenskaber i søgeskema.](../media/SPRetention12.png) ](../media/SPRetention12.png#lightbox)
 
-Bemærk, at **kolonnen Tilknyttede gennemsøgte** egenskaber i det forrige skærmbillede er tom.
+Bemærk, at kolonnen **Tilknyttede gennemsøgte egenskaber** på det forrige skærmbillede er tom.
 
-Hvis du vil tilknytte **egenskaben owsDocx0020Type\_\_\_, der** gennemsøges, skal du følge disse trin:
+Hvis du vil tilknytte den gennemsøgte egenskab **owsDocx0020Type\_\_\_**, skal du følge disse trin:
 
-1. I **filterfeltet Administreret** egenskab skal du **_skrive RefinableString00_** og vælge den grønne pil.
+1. I feltet **Filter for administreret egenskab** skal du skrive **_RefinableString00_** og vælge den grønne pil.
 
-2. Vælg linket **RefinableString00** på resultatlisten, og rul derefter ned til sektionen **Tilknytninger til gennemsøgte** egenskaber.
+2. På listen over resultater skal du vælge linket **RefinableString00** og derefter rulle ned til afsnittet **Tilknytninger til gennemsøgte egenskaber** .
 
-3. Vælg **Tilføj en** tilknytning, og skriv **_derefter owsDocx0020Type\_\_\__*_* i feltet _Search for a crawled property name** i vinduet **for** gennemsøgte egenskaber. Vælg **Søg**.
+3. Vælg **Tilføj en tilknytning**, og skriv derefter **_owsDocx0020Type\_\_\__*_ i feltet _* Søg efter et navn på en gennemsøgt egenskab** i **vinduet Valg af gennemsøgt egenskab**. Vælg **Find**.
 
-4. På resultatlisten skal du vælge **owsDocx0020Type\_\_\_** og derefter vælge **OK**.
+4. På listen over resultater skal du vælge **owsDocx0020Type\_\_\_** og derefter vælge **OK**.
 
-   I sektionen **Tilknyttede gennemsøgte egenskaber** bør du få vist noget, der ligner dette skærmbillede:
+   I afsnittet **Tilknyttede gennemsøgte egenskaber** kan du se noget, der ligner dette skærmbillede:
 
-   [![Vælg Tilføj en tilknytning i sektionen Tilknyttede gennemsøgte egenskaber.](../media/SPRetention13.png) ](../media/SPRetention13.png#lightbox)
+   [![Vælg Tilføj en tilknytning i afsnittet Tilknyttede gennemsøgte egenskaber.](../media/SPRetention13.png) ](../media/SPRetention13.png#lightbox)
 
 
-5. Rul til bunden af siden, og vælg **OK** for at gemme tilknytningen.
+5. Rul ned til bunden af siden, og vælg **OK** for at gemme tilknytningen.
 
-Gentag disse trin for at **tilknytte RefinableString01** **og owsStatus\_\_**.
+Gentag disse trin for at tilknytte **RefinableString01** og **owsStatus\_\_**.
 
-Nu bør du have to administrerede egenskaber tilknyttet de to gennemsøgte egenskaber:
+Nu skal du have knyttet to administrerede egenskaber til de to gennemsøgte egenskaber:
 
-[![Administrerede egenskaber vist tilknyttet gennemsøgte egenskaber.](../media/SPRetention14.png) ](../media/SPRetention14.png#lightbox)
+[![De administrerede egenskaber, der vises knyttet til gennemsøgte egenskaber.](../media/SPRetention14.png) ](../media/SPRetention14.png#lightbox)
 
-Lad os kontrollere, at vores konfiguration er korrekt, ved at køre en virksomhedssøgning. Gå til https://*\<your_tenant>.sharepoint.com/search i en browser*. Skriv ***RefinableString00:"Produktspecifikation"_ i** søgefeltet, og tryk på Enter. Denne søgning bør returnere alle dokumenter, der har en _ *produktspecifikation** af **_dokumenttype_**.
+Lad os kontrollere, at vores konfiguration er korrekt, ved at køre en virksomhedssøgning. Gå til *https://\<your_tenant>.sharepoint.com/search* i en browser. Skriv ***RefinableString00:"Product Specification"** _ i søgefeltet, og tryk på Enter. Denne søgning skal returnere alle dokumenter, der har en _ *Product Specification** af **_dokumenttypen_**.
 
-Nu skal du i søgefeltet skrive **RefinableString00:"Produktspecifikation" OG RefinableString01:Final** og trykke på Enter. Dette bør returnere alle dokumenter, der har **produktspecifikationen** **_for Doc Type_*_ og en _* Status** for **_Endelig_**.
+Skriv **RefinableString00:"Product Specification" AND RefinableString01:Final** i søgefeltet, og tryk på Enter. Dette skal returnere alle dokumenter, der har **produktspecifikationen** **_for Doc Type_*_ og en _* Status** of **_Final_**.
 
-### <a name="create-auto-apply-label-policies"></a>Opret politikker for automatisk anvendelse af navne
+### <a name="create-auto-apply-label-policies"></a>Opret mærkatpolitikker for automatisk anvendelse
 
-Nu hvor vi har bekræftet, at KQL-forespørgslen fungerer, så lad os oprette en automatisk anvendelse af etiketpolitik, der bruger en KQL-forespørgsel til automatisk at anvende produktspecifikationens opbevaringsetiket på de relevante dokumenter.
+Nu, hvor vi har bekræftet, at KQL-forespørgslen fungerer, kan vi oprette en politik for automatisk anvendelse af mærkater, der bruger en KQL-forespørgsel til automatisk at anvende opbevaringsmærkaten for produktspecifikationen på de relevante dokumenter.
 
-1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter skal</a> du gå til **Records managementLabel** >  **policiesAuto-apply** >  a label.
+1. På <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> skal du gå til **DatastyringLabel-politikkerAuto-anvend** >  >  **en mærkat**.
 
-   [![Vælg "Anvend automatisk en etiket" på siden Etiketter](../media/SPRetention16.png) ](../media/SPRetention16.png#lightbox)
+   [![Vælg "Anvend automatisk en etiket" på siden](../media/SPRetention16.png) Navne ](../media/SPRetention16.png#lightbox)
 
-2. I guiden Opret politik for automatisk mærkater på siden Navngive  din politik for automatisk mærkater skal du angive et navn, f.eks. Anvend automatisk etiketten for produktspecifikationen og en valgfri beskrivelse. Vælg derefter **Næste**.
+2. I guiden Opret politik til automatisk mærkning skal du angive et navn, f.eks **. Anvend mærkat til produktspecifikation automatisk**, og en valgfri beskrivelse på siden **Navngiv politik for automatisk mærkning**. Vælg derefter **Næste**.
 
-3. På siden **Vælg den type** indhold, du vil anvende denne etiket på skal du vælge Anvend etiket på indhold, der indeholder bestemte ord eller udtryk eller **egenskaber, og** vælg derefter **Næste**.
+3. På siden **Vælg den type indhold, du vil anvende denne etiket** på, skal du vælge **Anvend mærkat på indhold, der indeholder bestemte ord eller udtryk eller egenskaber**, og derefter vælge **Næste**.
 
-   [![Vælg Anvend etiket på indhold, der indeholder bestemte ord eller udtryk eller egenskaber.](../media/SPRetention17.png) ](../media/SPRetention17.png#lightbox)
+   [![Vælg Anvend mærkat på indhold, der indeholder bestemte ord, udtryk eller egenskaber.](../media/SPRetention17.png) ](../media/SPRetention17.png#lightbox)
 
-   Med denne indstilling kan vi levere den samme KQL-søgeforespørgsel, som vi testede i forrige afsnit. Forespørgslen returnerer alle produktspecifikationsdokumenter, der har statussen *Endelig*. Når vi bruger den samme forespørgsel i automatisk anvendelse af etiketpolitikken, anvendes opbevaringsmærkaten for produktspecifikationen automatisk på alle dokumenter, der passer til den.
+   Denne indstilling giver os mulighed for at angive den samme KQL-søgeforespørgsel, som vi testede i det forrige afsnit. Forespørgslen returnerer alle dokumenter med produktspecifikationen, der har statussen *Endelig*. Når vi bruger den samme forespørgsel i politikken for automatisk anvendelse af mærkat, anvendes opbevaringsmærkaten for produktspecifikationen automatisk for alle dokumenter, der stemmer overens med den.
 
-4. På siden **Anvend etiket** på indhold, der matcher denne forespørgsel skal du skrive **RefinableString00:"Produktspecifikation" AND RefinableString01:Final** og derefter vælge **Næste**.
+4. På siden **Anvend mærkat på indhold, der stemmer overens med denne forespørgselsside** , skal du skrive **RefinableString00:"Product Specification" AND RefinableString01:Final** og derefter vælge **Næste**.
 
-   ![Angiv forespørgslen i feltet Nøgleordsforespørgselseditor.](../media/SPRetention19.png)
+   ![Angiv forespørgslen i feltet Forespørgselseditor med nøgleord.](../media/SPRetention19.png)
 
-5. På siden **Vælg placeringer for at anvende politikken** skal du vælge de indholdsplaceringer, du vil anvende politikken på. I dette scenarie anvender vi kun politikken på SharePoint, fordi alle produktionsdokumenter gemmes i SharePoint dokumentbiblioteker. Slå status for mail **, Exchange** konti **OneDrive konti og** grupper **Microsoft 365 fra****.** Sørg for, at status for SharePoint er indstillet til **Til**, før du vælger **Næste**:
+5. På siden **Vælg placeringer, hvor politikken skal anvendes** skal du vælge de indholdsplaceringer, du vil anvende politikken på. I dette scenarie anvender vi kun politikken på SharePoint placeringer, fordi alle produktionsdokumenter gemmes i SharePoint dokumentbiblioteker. Slå status for **Exchange mail**, **OneDrive konti** og **Microsoft 365-grupper** til **Fra**. Sørg for, at status for SharePoint websteder er angivet til **Til**, før du vælger **Næste**:
 
-    ![Vælg bestemte websteder for automatisk at anvende navne på.](../media/SPRetentionSPlocations.png)
+    ![Vælg bestemte websteder, der automatisk skal anvendes mærkater på.](../media/SPRetentionSPlocations.png)
 
    > [!TIP]
-   > I stedet for at anvende politikken på SharePoint websteder kan du vælge **Vælg** websted og tilføje URL-adresserne for bestemte SharePoint websteder.
+   > I stedet for at anvende politikken på alle SharePoint websteder kan du vælge **Vælg websted** og tilføje URL-adresserne for bestemte SharePoint websteder.
 
-6. På siden **Vælg en etiket til automatisk anvendelse skal** du vælge **Tilføj etiket**.
+6. På siden **Vælg en etiket, der skal anvendes automatisk** skal du vælge **Tilføj etiket**.
 
-7. Vælg Produktspecifikation på listen over **opbevaringsnavne**. Vælg derefter **Tilføj** og **Næste**.
+7. Vælg **Produktspecifikation** på listen over opbevaringsmærkater. Vælg derefter **Tilføj** og **Næste**.
 
 8. Gennemse dine indstillinger:
 
     ![Indstillinger at anvende etiketten automatisk.](../media/SPRetention18.png)
 
-9. Vælg **Send** for at oprette automatisk anvendelse af etiketpolitik.
+9. Vælg **Send** for at oprette mærkatpolitikken for automatisk anvendelse.
 
    > [!NOTE]
-   > Det tager op til 7 dage at anvende produktspecifikationens etiket automatisk på alle dokumenter, der svarer til KQL-søgeforespørgslen.
+   > Det tager op til 7 dage at anvende mærkaten for produktspecifikationen automatisk på alle dokumenter, der svarer til KQL-søgeforespørgslen.
 
 ### <a name="verify-that-the-retention-label-was-automatically-applied"></a>Kontrollér, at opbevaringsmærkaten blev anvendt automatisk
 
-Efter syv dage kan du bruge [](data-classification-activity-explorer.md) Aktivitetsstifinder i Overholdelsescenter til at bekræfte, at den automatiske anvendelse af etiketpolitikken, vi har oprettet, automatisk anvender opbevaringsmærkaterne på produktdokumenterne.
+Efter syv dage skal du bruge [aktivitetsoversigten](data-classification-activity-explorer.md) på Microsoft Purview-overholdelsesportalen til at bekræfte, at den automatiske anvendelse af mærkatpolitikken, som vi har oprettet, automatisk har anvendt opbevaringsmærkater på produktdokumenterne.
 
-Se også på egenskaberne for dokumenterne i dokumentbiblioteket. I informationspanelet kan du se, at opbevaringsmærkaten anvendes på et markeret dokument.
+Se også egenskaberne for dokumenterne i dokumentbiblioteket. I informationspanelet kan du se, at opbevaringsmærkaten anvendes på et valgt dokument.
 
-[![Kontrollér, at navnet er blevet anvendt, ved at se på dokumentegenskaberne i dokumentbiblioteket.](../media/SPRetention21.png) ](../media/SPRetention21.png#lightbox)
+[![Kontrollér, at mærkaten blev anvendt, ved at se på dokumentegenskaberne i dokumentbiblioteket.](../media/SPRetention21.png) ](../media/SPRetention21.png#lightbox)
 
-Da opbevaringsetiketterne er blevet anvendt automatisk på dokumenter, er disse dokumenter beskyttet mod sletning, fordi opbevaringsetiketten er konfigureret til at erklære dokumenterne som *poster*. Som et eksempel på denne beskyttelse får vi vist følgende fejlmeddelelse, når vi forsøger at slette et af disse dokumenter:
+Da opbevaringsmærkater automatisk blev anvendt på dokumenter, er disse dokumenter beskyttet mod sletning, fordi opbevaringsmærkaten er konfigureret til at deklarere dokumenterne som *poster*. Som et eksempel på denne beskyttelse får vi vist følgende fejlmeddelelse, når vi forsøger at slette et af disse dokumenter:
 
-[![En fejlmeddelelse viser, at dokumenter ikke kan slettes, fordi etiketten erklærer, at dokumenterne er poster.](../media/SPRetention22.png) ](../media/SPRetention22.png#lightbox)
+[![En fejlmeddelelse viser, at dokumenter ikke kan slettes, fordi etiketten angiver, at dokumenterne er poster.](../media/SPRetention22.png) ](../media/SPRetention22.png#lightbox)
 
-## <a name="generate-the-event-that-triggers-the-retention-period"></a>Generere den hændelse, der udløser opbevaringsperioden
+## <a name="generate-the-event-that-triggers-the-retention-period"></a>Generér den hændelse, der udløser opbevaringsperioden
 
-Nu, hvor opbevaringsetiketterne er anvendt, fokuserer vi på den begivenhed, der angiver slutdatoen for produktion for et bestemt produkt. Denne hændelse udløser starten af den opbevaringsperiode, der er defineret i opbevaringsnavnene. For produktspecifikationsdokumenter starter opbevaringsperioden på fem år, når "slut på produktion"-hændelsen udløses.
+Nu, hvor opbevaringsmærkater anvendes, skal vi fokusere på den hændelse, der angiver afslutningen af produktionen for et bestemt produkt. Denne hændelse udløser starten af den opbevaringsperiode, der er defineret i opbevaringsmærkater. For dokumenter med produktspecifikation begynder opbevaringsperioden på 5 år f.eks., når hændelsen "ophør af produktion" udløses.
 
-Du kan manuelt oprette begivenheden i Microsoft 365 Overholdelsescenter ved at gå til **Records ManagementsEvents** > . Du skal vælge hændelsestypen, angive de korrekte aktiv-i-oplysninger og angive en dato for begivenheden. Få mere at vide under [Start opbevaring, når en hændelse indtræffer](event-driven-retention.md).
+Du kan manuelt oprette hændelsen på Microsoft Purview-overholdelsesportalen ved at gå til **Datastyringhændelser** > . Du skal vælge hændelsestypen, angive de korrekte aktiv-id'er og angive en dato for hændelsen. Du kan få flere oplysninger under [Start opbevaring, når der opstår en hændelse](event-driven-retention.md).
 
-Men i dette scenarie genererer vi automatisk begivenheden ud fra et eksternt produktionssystem. Systemet er en simpel liste SharePoint der angiver, om et produkt er i produktion. Et [Power Automate](/power-automate/getting-started) flow, der er knyttet til listen, udløser hændelsen. I et virkelige scenarie kan du bruge forskellige systemer til at generere begivenheden, f.eks. et HR- eller CRM-system. Power Automate indeholder mange brugerklare interaktioner og byggesten til Microsoft 365-arbejdsbelastninger, f.eks. Microsoft Exchange, SharePoint, Teams og Dynamics 365 samt tredjepartsapps som Twitter, Box, Salesforce og Arbejdsdage. Denne funktion gør det nemt at integrere Power Automate med forskellige systemer. Få mere at vide under [Automatiser begivenhedsbaseret opbevaring](./event-driven-retention.md#automate-events-by-using-a-rest-api).
+Men i dette scenarie genererer vi automatisk hændelsen fra et eksternt produktionssystem. Systemet er en simpel SharePoint liste, der angiver, om et produkt er i produktion. Et [Power Automate](/power-automate/getting-started) flow, der er knyttet til listen, udløser hændelsen. I et realistisk scenarie kan du bruge forskellige systemer til at generere hændelsen, f.eks. et HR- eller CRM-system. Power Automate indeholder mange brugsklare interaktioner og byggesten til Microsoft 365 arbejdsbelastninger, f.eks. Microsoft Exchange, SharePoint, Teams og Dynamics 365 samt tredjepartsapps som f.eks. Twitter, Box, Salesforce og Workdays. Denne funktion gør det nemt at integrere Power Automate med forskellige systemer. Du kan få flere oplysninger under [Automatiser hændelsesdrevet opbevaring](./event-driven-retention.md#automate-events-by-using-a-rest-api).
 
-Følgende skærmbillede viser den SharePoint liste, der skal bruges til at udløse hændelsen:
+På følgende skærmbillede kan du se den SharePoint liste, der skal bruges til at udløse hændelsen:
 
 [![Den liste, der udløser opbevaringshændelsen.](../media/SPRetention23.png) ](../media/SPRetention23.png#lightbox)
 
-Der er i øjeblikket to produkter i produktion, som angivet af ***Ja** _ i kolonnen _ *I* produktion*. Når værdien i denne kolonne er angivet til **_Nej_** for et produkt, vil det flow, der er knyttet til listen, automatisk generere hændelsen. Hændelsen starter starten af opbevaringsperioden for den opbevaringsetiket, der blev anvendt automatisk på de tilsvarende produktdokumenter.
+Der er i øjeblikket to produkter i produktion, som angivet med ***Ja** _ i kolonnen _ *I produktion**. Når værdien i denne kolonne er angivet til **_Nej_** for et produkt, genererer det flow, der er knyttet til listen, automatisk hændelsen. Hændelsen udløser starten på opbevaringsperioden for den opbevaringsmærkat, der automatisk blev anvendt på de tilsvarende produktdokumenter.
 
 I dette scenarie bruger vi følgende flow til at udløse hændelsen:
 
 [![Konfiguration af det flow, der udløser hændelsen.](../media/SPRetention24.png) ](../media/SPRetention24.png#lightbox)
 
-Hvis du vil oprette dette flow, skal du starte fra SharePoint forbindelse og vælge **udløseren Når et element oprettes eller ændres**. Angiv webstedets adresse og listenavn. Tilføj derefter en betingelse baseret på, hvornår  værdien i listen I produktion er angivet til **_Nej_* _ (eller lig _false* på betingelseskortet). Tilføj derefter en handling, der er baseret på den indbyggede HTTP-skabelon. Brug værdierne i følgende afsnit til at konfigurere HTTP-handlingen. Du kan kopiere værdierne for **URI'en og** **egenskaberne** for Brødtekst fra følgende afsnit og indsætte dem i skabelonen.
+Hvis du vil oprette dette flow, skal du starte fra en SharePoint connector og vælge udløseren **Når et element oprettes eller ændres**. Angiv webstedsadressen og listenavnet. Tilføj derefter en betingelse, der er baseret på, hvornår kolonneværdien på listen **In Production** er angivet til **_No_* _ (eller lig med _false* på betingelseskortet). Tilføj derefter en handling baseret på den indbyggede HTTP-skabelon. Brug værdierne i følgende afsnit til at konfigurere HTTP-handlingen. Du kan kopiere værdierne for **egenskaberne URI** og **Brødtekst** fra følgende afsnit og indsætte dem i skabelonen.
 
 - **Metode**: POST
 - **URI**: `https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentionEvent`
-- **Overskrifter**: Nøgle = Content-Type, Value = application/atom+xml
+- **Headere**: Key = Content-Type, Value = application/atom+xml
 - **Brødtekst**:
 
     ```xml
@@ -307,44 +309,44 @@ Hvis du vil oprette dette flow, skal du starte fra SharePoint forbindelse og væ
     </entry>
     ```
 
-Denne liste beskriver parametrene i egenskaben **Brødtekst** for den handling, der skal konfigureres til dette scenarie:
+På denne liste beskrives parametrene i egenskaben **Body** for den handling, der skal konfigureres for dette scenarie:
 
-- **Navn**: Denne parameter angiver navnet på den hændelse, der oprettes i Microsoft 365 Overholdelsescenter. I dette scenarie er navnet "Kantproduktion *xxx*", hvor *xxx* er værdien af den **Administrerede ProductName-egenskab** , som vi oprettede tidligere.
-- **EventType**: Værdien for denne parameter svarer til den hændelsestype, som den oprettede hændelse gælder for. Denne hændelsestype blev defineret, da du oprettede opbevaringsnavnet. I dette scenarie er hændelsestypen "Produktbegivenhed".
-- **SharePointAssetIdQuery**: Denne parameter definerer aktiv-id'et for hændelsen. Hændelsesbaseret opbevaring skal have entydig identifier for dokumentet. Vi kan bruge aktiv-id'er til at identificere de dokumenter, som en bestemt hændelse gælder for, eller, som i dette scenarie, **metadatakolonnen Produktnavn**. For at gøre dette skal vi oprette en ny **ProductName-administreret** egenskab, der kan bruges i KQL-forespørgslen. (Alternativt kan vi bruge **RefinableString00 i stedet** for at oprette en ny administreret egenskab). Vi skal også knytte denne nye administrerede egenskab til den **ows_Product_x0020_Name** gennemsøgte egenskab. Her er et skærmbillede af denne administrerede egenskab.
+- **Navn**: Denne parameter angiver navnet på den hændelse, der oprettes på Microsoft Purview-overholdelsesportalen. I dette scenarie er navnet "Ophørsproduktion *xxx*", hvor *xxx* er værdien af den **administrerede egenskab ProductName** , som vi oprettede tidligere.
+- **EventType**: Værdien for denne parameter svarer til den hændelsestype, som den oprettede hændelse gælder for. Denne hændelsestype blev defineret, da du oprettede opbevaringsmærkaten. I dette scenarie er hændelsestypen "Produktophør".
+- **SharePointAssetIdQuery**: Denne parameter definerer aktiv-id'et for hændelsen. Hændelsesbaseret opbevaring skal bruge et entydigt id for dokumentet. Vi kan bruge aktiv-id'er til at identificere de dokumenter, som en bestemt hændelse gælder for, eller som i dette scenarie kolonnen **Product Name** for metadata. For at gøre dette skal vi oprette en ny **productName-administreret** egenskab, der kan bruges i KQL-forespørgslen. (Alternativt kan vi bruge **RefinableString00** i stedet for at oprette en ny administreret egenskab). Vi skal også knytte denne nye administrerede egenskab til den **ows_Product_x0020_Name** gennemsøgte egenskab. Her er et skærmbillede af denne administrerede egenskab.
 
-    [![Leje administreret egenskab.](../media/SPRetention25.png) ](../media/SPRetention25.png#lightbox)
+    [![Leje administreret ejendom.](../media/SPRetention25.png) ](../media/SPRetention25.png#lightbox)
 
 - **EventDateTime**: Denne parameter definerer den dato, hvor hændelsen forekommer. Brug det aktuelle datoformat:<br/><br/>*formatDateTime(utcNow(),'yyyy-MM-dd'*)
 
-### <a name="putting-it-all-together"></a>Samle det hele
+### <a name="putting-it-all-together"></a>Sætte det hele sammen
 
-Nu oprettes og anvendes opbevaringsmærkaten automatisk, og flowet konfigureres og oprettes. Når værdien i kolonnen I  produktion for produktet roterende widget på listen Produkter ændres fra **_Ja_*_ til _*_No_ _, udløses flowet for at *oprette begivenheden. Hvis du vil se denne hændelse i overholdelsescenteret, skal du gå til _* Records** **managementEvents** > .
+Nu oprettes og anvendes opbevaringsmærkaten automatisk, og flowet konfigureres og oprettes. Når værdien i kolonnen **I produktion** for produktet Spinning Widget på listen Produkter ændres fra **_Ja_*_ til _*_No_*_, udløses flowet for at oprette hændelsen. Hvis du vil se denne hændelse på Microsoft Purview-overholdelsesportalen, skal du gå til _* DatastyringHændelser** > .
 
-[![Den hændelse, der blev udløst af flowet, vises på siden Hændelser i overholdelsescenteret.](../media/SPRetention28.png) ](../media/SPRetention28.png#lightbox)
+[![Den hændelse, der blev udløst af flowet, vises på siden Hændelser på Microsoft Purview-overholdelsesportalen.](../media/SPRetention28.png) ](../media/SPRetention28.png#lightbox)
 
-Vælg begivenheden for at få vist detaljerne på pop op-siden. Bemærk, at selvom begivenheden oprettes, viser begivenhedsstatussen, at SharePoint websteder eller dokumenter er blevet behandlet.
+Vælg hændelsen for at få vist detaljerne på pop op-siden. Bemærk, at selvom hændelsen oprettes, viser hændelsesstatussen, at ingen SharePoint websteder eller dokumenter er blevet behandlet.
 
-![Oplysninger om begivenhed.](../media/SPRetention29.png)
+![Hændelsesoplysninger.](../media/SPRetention29.png)
 
-Men efter en forsinkelse viser hændelsesstatussen, at SharePoint websted og et SharePoint dokument er blevet behandlet.
+Men efter en forsinkelse viser hændelsesstatussen, at et SharePoint websted og et SharePoint dokument er blevet behandlet.
 
-![Oplysninger om begivenhed viser, at dokumenterne er blevet behandlet.](../media/SPRetention31.png)
+![Hændelsesdetaljer viser, at dokumenter blev behandlet.](../media/SPRetention31.png)
 
-Dette viser, at opbevaringsperioden for den etiket, der anvendes på produktdokumentet til roterende widget, er blevet startet baseret på datoen for begivenheden for den tvede produktionswidget, der *drejes* . Hvis du har implementeret scenariet i dit testmiljø ved at konfigurere en opbevaringsperiode på én dag, kan du gå til dokumentbiblioteket for dine produktdokumenter et par dage efter, at begivenheden blev oprettet, og bekræfte, at dokumentet er blevet slettet (efter sletningsjobbet i SharePoint er kørt).
+Dette viser, at opbevaringsperioden for det mærkat, der anvendes på produktdokumentet Spinning Widget, er blevet startet baseret på hændelsesdatoen for hændelsen *Ophørsproduktion Spinning Widget* . Hvis du har implementeret scenariet i dit testmiljø ved at konfigurere en opbevaringsperiode på én dag, kan du gå til dokumentbiblioteket for produktdokumenterne et par dage efter, at hændelsen blev oprettet, og kontrollere, at dokumentet blev slettet (efter at sletningsjobbet i SharePoint er kørt).
 
 ### <a name="more-about-asset-ids"></a>Mere om aktiv-id'er
 
-Som det [forklares i](event-driven-retention.md) artiklen Start opbevaring, når en hændelse indtræffer, er det vigtigt at forstå relationen mellem hændelsestyper, opbevaringsmærkater, begivenheder og aktiv-it'er. Aktiv-id'et er blot en dokumentegenskab i SharePoint og OneDrive. Det hjælper dig med at identificere de dokumenter, hvis opbevaringsperiode udløses af begivenheden. Har som standard SharePoint **aktiv-id,** som du kan bruge til hændelsesbaseret opbevaring:
+Som det forklares i artiklen [Start opbevaring, når en hændelse indtræffer](event-driven-retention.md) , er det vigtigt at forstå relationen mellem hændelsestyper, opbevaringsmærkater, hændelser og aktiv-id'er. Aktiv-id'et er blot en dokumentegenskab i SharePoint og OneDrive. Det hjælper dig med at identificere de dokumenter, hvis opbevaringsperiode udløses af hændelsen. SharePoint har som standard egenskaben **Aktiv-id**, som du kan bruge til hændelsesbaseret opbevaring:
 
-![Egenskaben Aktiv-id vises på detaljesiden for dokumentegenskaber.](../media/SPRetention26.png)
+![Egenskaben Aktiv-id vises på en side med dokumentegenskaber.](../media/SPRetention26.png)
 
-Som det fremgår af følgende skærmbillede, kaldes den administrerede egenskab for **aktiv-id'et ComplianceAssetId**.
+Som vist på følgende skærmbillede kaldes den administrerede egenskab for **aktiv-id'et ComplianceAssetId**.
 
-[![Administreret egenskab for ComplianceAssetId.](../media/SPRetention27.png) ](../media/SPRetention27.png#lightbox)
+[![ComplianceAssetId administreret egenskab.](../media/SPRetention27.png) ](../media/SPRetention27.png#lightbox)
 
-I stedet for at bruge **standardegenskaben** Aktiv-id, som vi gør i dette scenarie, kan du bruge en hvilken som helst anden egenskab. Men det er vigtigt at forstå, at hvis du ikke angiver et aktiv-id eller nøgleord for en begivenhed, vil alt det indhold, der har en etiket af den pågældende hændelsestype, få sin opbevaringsperiode udløst af begivenheden.
+I stedet for at bruge standardegenskaben **Aktiv-id** , som vi gør i dette scenarie, kan du bruge en hvilken som helst anden egenskab. Men det er vigtigt at forstå, at hvis du ikke angiver et aktiv-id eller nøgleord for en hændelse, får alt det indhold, der har en mærkat af den pågældende hændelsestype, sin opbevaringsperiode udløst af hændelsen.
 
 ### <a name="using-advanced-search-in-sharepoint"></a>Brug af avanceret søgning i SharePoint
 
-I det forrige skærmbillede kan du se, at der er en anden administreret egenskab relateret til opbevaringsetiketter kaldet **Overholdelsestag** , der er knyttet til en gennemsøgt egenskab. Den **administrerede egenskab ComplianceAssetId** er også knyttet til en gennemsøgt egenskab. Det betyder, at du kan bruge disse administrerede egenskaber i avanceret søgning til at hente alle dokumenter, der er mærket med en opbevaringsetiket.
+På det forrige skærmbillede kan du se, at der er en anden administreret egenskab, der er relateret til opbevaringsmærkater kaldet **ComplianceTag** , som er knyttet til en gennemsøgt egenskab. Den administrerede egenskab **ComplianceAssetId** knyttes også til en gennemsøgt egenskab. Det betyder, at du kan bruge disse administrerede egenskaber i avanceret søgning til at hente alle dokumenter, der er mærket med en opbevaringsmærkat.

@@ -328,6 +328,10 @@
               href: microsoft-threat-experts.md
             - name: Konfigurer og administrer Microsoft Threat Experts-funktioner
               href: configure-microsoft-threat-experts.md
+        - name: Samarbejd med Microsoft Defender Experts til Jagt
+          items:
+            - name: Oversigt
+              href: defenderexpertsforhuntingprev.md
     - name: Vejledning til sikkerhedshandlinger
       items:
         - name: Oversigt

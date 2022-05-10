@@ -17,16 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan opbevaring fungerer for SharePoint og OneDrive.
-ms.openlocfilehash: ed9cc45218dde112baec8fbca997abc6e82b4d72
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: cbcc8015b8b24309c882e5b8ca7a9c56fb6e344d
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911484"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285984"
 ---
 # <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>Få mere at vide om opbevaring for SharePoint og OneDrive
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md), fordi den indeholder oplysninger, der er specifikke for SharePoint og OneDrive.
 
@@ -78,7 +80,7 @@ Brugerne får også vist en fejlmeddelelse, hvis de forsøger at slette et navng
 
 - Indstillingen for datastyring, der giver brugerne mulighed for at slette navngivne elementer, er deaktiveret.
     
-    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **Datastyring** i Microsoft 365 Overholdelsescenter > **Administration af posterIndstillinger** >  **for** >  administration af **posterAdministrationsnavneSletning** >  **af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
+    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **til datastyring** på Microsoft Purview-overholdelsesportalen > **Indstillinger for administration** >  af **posterIndstillinger** for  >  administration af **posterSletning** >  **af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
     
     Hvis du ikke har adgang til løsningen til **dataadministration** , kan du også bruge *AllowFilesWithKeepLabelToBeDeletedSPO* og *AllowFilesWithKeepLabelToBeDeletedODB* fra [Get-PnPTenant](/powershell/module/sharepoint-pnp/get-pnptenant) og [Set-PnPTenant](/powershell/module/sharepoint-pnp/set-pnptenant).
 
@@ -170,7 +172,7 @@ Når opbevaringsperioden udløber, og opbevaringsindstillingerne inkluderede en 
 
 ## <a name="configuration-guidance"></a>Konfigurationsvejledning
 
-Hvis du ikke har konfigureret opbevaring i Microsoft 365, skal du se [Kom i gang med styring af oplysninger](get-started-with-information-governance.md).
+Hvis du ikke har arbejdet med at konfigurere opbevaring i Microsoft 365, skal du se [Kom i gang med administration af datalivscyklus](get-started-with-data-lifecycle-management.md).
 
 Hvis du er klar til at konfigurere en opbevaringspolitik eller en opbevaringsmærkat for Exchange, skal du se følgende instruktioner:
 - [Opret og konfigurer opbevaringspolitikker](create-retention-policies.md)

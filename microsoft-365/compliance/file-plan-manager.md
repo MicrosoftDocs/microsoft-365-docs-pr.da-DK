@@ -1,5 +1,5 @@
 ---
-title: Brug filplanen til at administrere opbevaringsmærkater i hele indholdslivscyklussen
+title: Brug filplan til at administrere opbevaringsmærkater
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,18 +17,20 @@ search.appverid:
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 40c395d609a9a02637b937cafae988578dc6e14f
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 5ed2ccfa1c26efc8e55f048e24de005701417576
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836166"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286072"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Selvom du kan oprette og administrere opbevaringsmærkater fra **Styring af oplysninger** i Microsoft 365 Overholdelsescenter, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Selvom du kan oprette og administrere opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
 
 - Du kan masseoprete opbevaringsmærkater ved at importere de relevante oplysninger fra et regneark.
 
@@ -50,7 +52,7 @@ Hvis du vil have adgang til filplanen, skal du have en af følgende administrato
 
 - Kun visningsstyring
 
-I Microsoft 365 Overholdelsescenter skal du gå til **LøsningPostadministrationFilplan** >  > :
+På Microsoft Purview-overholdelsesportalen skal du gå til **LøsningPostadministrationFilplan** >  > :
 
 ![Filplanside](../media/compliance-file-plan.png). 
 
@@ -58,9 +60,9 @@ Hvis **Datastyring** ikke vises i navigationsruden, skal du først rulle ned og 
 
 ## <a name="navigating-your-file-plan"></a>Navigering i filplanen
 
-Hvis du allerede har oprettet opbevaringsmærkater fra **Styring af oplysninger** i Microsoft 365 Overholdelsescenter, vises disse mærkater automatisk i filplanen. 
+Hvis du allerede har oprettet opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, vises disse mærkater automatisk i din filplan. 
 
-Hvis du på samme måde nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **Styring af oplysninger** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
+Hvis du på samme måde nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **Administration af datalivscyklus** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
 
 På siden **Filplan** kan du se alle dine mærkater med deres status og indstillinger, valgfri filplanbeskrivelser, en eksportmulighed for at analysere eller aktivere offlinegennemsyn af dine mærkater og en importmulighed for at oprette opbevaringsmærkater. 
 
@@ -196,10 +198,10 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 - Alle andre værdier: Ubegrænset længde
 <br/>
 
-|Ejendom|Type|Kræves|Gyldige værdier|
+|Ejendom|Type|Påkrævet|Gyldige værdier|
 |:-----|:-----|:-----|:-----|
 |Navn|String|Ja|Denne egenskab angiver navnet på opbevaringsmærkaten og skal være entydig i din lejer. Understøttede tegn til import: a-z, A-Z, 0-9, bindestreg (-) og mellemrumstegnet.|
-|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten i Overholdelsescenter.|
+|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten på Microsoft Purview-overholdelsesportalen.|
 |Bemærkninger|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for brugerne. Denne beskrivelse vises, når brugerne holder markøren over mærkaten i apps, f.eks. Outlook, SharePoint og OneDrive. Hvis du lader denne egenskab være tom, vises der en standardbeskrivelse, som forklarer indstillingerne for opbevaring af mærkaten. |
 |IsRecordLabel|String|Nej, medmindre **lovgivningen** er **SAND**|Denne egenskab angiver, om etiketten markerer indholdet som en post. Gyldige værdier er: </br>**TRUE**: Etiketten markerer elementet som en post, og elementet kan derfor ikke slettes. </br>**FALSE**: Etiketten markerer ikke indholdet som en post. Dette er standardværdien. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction, RetentionDuration og RetentionType også angives.|
 |Opbevaringshandling|String|Nej, medmindre **RetentionDuration**, **RetentionType** eller **ReviewerEmail** er angivet|Denne egenskab angiver, hvilken handling der skal udføres, når den værdi, der er angivet af egenskaben RetentionDuration (hvis angivet), udløber. Gyldige værdier er: </br>**Slet**: Elementer, der er ældre end den værdi, der er angivet af egenskaben RetentionDuration, slettes.</br>**Bevar**: Bevar elementer i den varighed, der er angivet af egenskaben RetentionDuration, og gør derefter ingenting, når varighedsperioden udløber. </br>**KeepAndDelete**: Bevar elementer i den varighed, der er angivet i egenskaben RetentionDuration, og slet dem derefter, når varighedsperioden udløber. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionDuration og RetentionType også angives. |

@@ -1,5 +1,5 @@
 ---
-title: Aktivér samtidig redigering af dokumenter, der er krypteret af følsomhedsmærkater i Microsoft 365
+title: Aktivér samtidig redigering af krypterede dokumenter
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -13,16 +13,18 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: Slå en indstilling til, der muliggør samtidig redigering og automatisk lagring i skrivebordsapps for navngivne og krypterede dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: 0fee934af5e2dfb01c681c9b2e415ef538312367
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 72935a58931c1458466f145c17a9e423e6b6d31c
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836100"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286984"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Aktivér indstillingen for at understøtte [samtidig redigering](https://support.office.com/article/ee1509b4-1f6e-401e-b04a-782d26f564a4) af Office desktopapps, så flere brugere kan redigere disse dokumenter på samme tid, når dokumenter mærkes og krypteres af [følsomhedsmærkater](sensitivity-labels.md).
 
@@ -136,7 +138,7 @@ Før du aktiverer lejerindstillingen for samtidig redigering af filer, der er kr
 
 Hvis du allerede har aktiveret denne indstilling i prøveperioden, er der ikke behov for yderligere handling, og du kan springe denne procedure over.
 
-1. Log på [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) som global administrator for din lejer.
+1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) som global administrator for din lejer.
 
 2. Vælg **Indstillinger** >  **Co-authoring for filer med følsomhedsfiler** i navigationsruden.
 

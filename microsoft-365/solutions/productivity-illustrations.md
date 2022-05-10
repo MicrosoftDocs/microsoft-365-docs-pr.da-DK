@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 0aee30dff19f6d1127e63d14fa69e5d72232e305
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 8319cd07fb1a648e4aa20bc3a29535a2f4916f6b
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972527"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286378"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365-produktivitetsillustrationer
 
@@ -38,16 +38,16 @@ At vide, hvilken metode (eller kombinationer af metoder) der skal bruges, og hvo
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Plakat med contoso-virksomhedskommunikationsscenarie.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Opdateret januar 2022   |Denne plakat illustrerer, hvordan Contoso holder medarbejderne informeret og engageret på tværs af populære kommunikationsscenarier. Contoso bruger en række M365-apps, herunder et nyt tilbud, Viva Connections.<br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Organisationskommunikation: Vejledning, metoder og produkter](/sharepoint/corporate-communications-overview)|
+|[![Plakat med contoso-virksomhedskommunikationsscenarie.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Opdateret januar 2022   |Denne plakat illustrerer, hvordan Contoso holder medarbejderne informeret og engageret på tværs af populære kommunikationsscenarier. Contoso bruger en række Microsoft 365 apps, herunder et nyt tilbud, Viva Connections.<br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Organisationskommunikation: Vejledning, metoder og produkter](/sharepoint/corporate-communications-overview)|
 
 ## <a name="groups-in-microsoft-365-for-it-architects"></a>Grupper i Microsoft 365 for it-arkitekter
 Denne illustration indeholder oplysninger til it-arkitekter om Microsoft 365-grupper. Hvis du vil vide mere om konfiguration og administration af Microsoft 365-grupper og teams til samarbejde i din organisation, skal du se [Konfigurer sikkert samarbejde med Microsoft 365](/microsoft-365/solutions/setup-secure-collaboration-with-teams) og [Hvad er styring af samarbejde?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Miniaturebillede for gruppers infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Opdateret i maj 2020|Disse illustrationer beskriver de forskellige typer af grupper, hvordan de oprettes og administreres, og nogle få anbefalinger til styring.
+|[![Miniaturebillede for gruppers infografik.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) <br/> [PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx) <br> Opdateret i maj 2022|Disse illustrationer beskriver de forskellige typer af grupper, hvordan de oprettes og administreres, og nogle få anbefalinger til styring.
 
-## <a name="migrate-to-microsoft-365"></a>Overfør til Microsoft 365
+## <a name="migrate-to-microsoft-365"></a>Migrer til Microsoft 365
 
 Microsoft indeholder værktøjer til overførsel af dine netværksfilshares og SharePoint Server-websteder, så de Microsoft 365 med fokus på at beskytte og sikre dit indholds sikkerhed under overførslen. Dette sæt illustrationer viser de forskellige metoder, der er tilgængelige til at flytte dit indhold til SharePoint, Teams og OneDrive, og hvordan dine data flyder gennem processen.
 
@@ -64,7 +64,7 @@ Dette sæt illustrationer bruger en af de mest regulerede industrier, finansiell
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Microsoft Purview Information Protection og Microsoft Purview forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
+|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Microsoft Purview Information Protection og Microsoft Purview Forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Sikkerhed og Information Protection for organisationer med flere områder

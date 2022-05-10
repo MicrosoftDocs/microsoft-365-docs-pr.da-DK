@@ -1,5 +1,5 @@
 ---
-title: Brug Bevarelseslås til at begrænse ændringer af opbevaringspolitikker og politikker for opbevaringsmærkater
+title: Brug bevarelseslås til at begrænse ændringer af opbevaringspolitikker
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -15,16 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug bevarelseslås med politikker for opbevaring og politikker for opbevaringsmærkat for at hjælpe dig med at opfylde lovmæssige krav og beskytte mod rogue-administratorer.
-ms.openlocfilehash: ac957475474e1d99dff541ac9a208ae5dc681217
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cf72f0b2eed6328244bf78c9e365447c9f38edeb
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761721"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286006"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Brug Bevarelseslås til at begrænse ændringer af opbevaringspolitikker og politikker for opbevaringsmærkater
 
 >*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
 > I øjeblikket understøtter [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention) ikke Bevarelseslås.
@@ -91,4 +93,4 @@ Du bør se **, at RestrictiveRetention** er angivet til **Sand**. Eksempel:
 
 ## <a name="see-also"></a>Se også
 
-[Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til styring af oplysninger og datastyring](retention-regulatory-requirements.md)
+[Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til administration af datalivscyklus og datastyring](retention-regulatory-requirements.md)

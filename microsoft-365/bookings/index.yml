@@ -1,0 +1,41 @@
+### YamlMime:Hub
+title: Microsoft Bookings
+summary: Få mere at vide om, hvordan du konfigurerer Microsoft Bookings til at levere tjenester til kunder efter aftale.
+brand: m365
+metadata:
+  title: Microsoft Bookings
+  description: Få mere at vide om, hvordan du konfigurerer Microsoft Bookings til at levere tjenester til kunder efter aftale.
+  ms.service: bookings
+  ms.topic: hub-page
+  author: dmaguire
+  ms.author: dmaguire
+  manager: serdars
+  audience: Admin
+  ms.date: 09/04/2020
+  ms.openlocfilehash: 8c7158c72700a7db866051a4de10bbc890ad4478
+  ms.sourcegitcommit: d08fe0282be75483608e96df4e6986d346e97180
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 09/12/2021
+  ms.locfileid: "63591430"
+additionalContent:
+  sections:
+  - items:
+    - title: Hvad er Microsoft Bookings?
+      summary: Planlæg og administrer aftaler med en webbaseret reservationskalender og -app, herunder Outlook-integration for dine medarbejdere og automatiserede meddelelsesmails.
+      url: bookings-overview.md
+    - title: Angiv dine virksomhedsoplysninger
+      summary: Opret din side Om os, herunder firmanavn, adresse, telefonnummer, URL-adresse til websted, logo og åbningstider i Microsoft Bookings.
+      url: enter-business-information.md
+    - title: Hent Bookings-appen
+      summary: Skift farvetemaet, og konfigurer, hvordan din eksterne reservationsside kommer til at se ud.
+      url: customize-booking-page.md
+    - title: Føj medarbejdere til Bookings
+      summary: Opret en liste over medarbejdere, og administrer oplysninger om den ansatte, f.eks. navn, telefonnummer og mailadresse.
+      url: add-staff.md
+    - title: Planlæg åbningstider, fritid og ferie
+      summary: Planlæg kontorets åbningstider og medarbejders fritid i Bookings-kalenderen, så medarbejderne er markeret som utilgængelige for bookinger i løbet af de angivne tidspunkter.
+      url: schedule-closures-time-off-vacation.md
+    - title: Angiv medarbejderes arbejdstid i Microsoft Bookings
+      summary: Angiv medarbejdernes arbejdstid og tilgængelighed i Microsoft Bookings.
+      url: employee-hours.md

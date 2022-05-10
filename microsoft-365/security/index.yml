@@ -1,0 +1,94 @@
+### YamlMime:Landing
+title: Sikkerhedsdokumentation for Microsoft 365
+summary: Microsoft 365 Defender-portalen forener flere sikkerhedsteknologier i én omfattende administrationskonsol med forbedringer, der beskytter din virksomhed.
+metadata:
+  title: Sikkerhedsdokumentation for Microsoft 365
+  description: Få mere at vide om Microsoft Defender for Endpoint – hvordan det beskytter slutpunkter mod cybertrusler og giver sikkerhedshandlingsteams kapacitet til at afhjælpe trusler.
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: m365d
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 02/05/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: 199f3005de41d8b97b6ae110740d687d5d4692e9
+  ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+  ms.translationtype: HT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 11/19/2021
+  ms.locfileid: "63588898"
+landingContent:
+- title: Microsoft 365 Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduktion til Microsoft 365 Defender
+      url: defender/microsoft-365-defender.md
+- title: Start med gratis prøveversioner
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Evaluer Microsoft 365 Defender
+      url: defender/eval-overview.md
+    - text: Microsoft 365 Defender-pilotstrategiplan
+      url: defender/eval-overview.md
+- title: Beskyt din eksterne arbejdsstyrke
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Beskyt din eksterne arbejdsstyrke
+      url: /enterprise-mobility-security/remote-work/
+- title: Microsoft Defender for Identity
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Identity?
+      url: /azure-advanced-threat-protection/what-is-atp
+    - text: Microsoft Defender for Identity-arkitektur
+      url: /azure-advanced-threat-protection/atp-architecture
+- title: Defender for Office 365
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Defender for Office 365?
+      url: office-365-security/defender-for-office-365.md
+    - text: Power BI til Office 365. Beskrivelse af tjenesten
+      url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
+- title: Microsoft Defender for Endpoint
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Endpoint?
+      url: defender-endpoint/microsoft-defender-endpoint.md
+    - text: Oversigt over Microsoft Defender Security Center-portal
+      url: defender-endpoint/portal-overview.md
+- title: Microsoft Defender for Cloud
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Cloud?
+      url: /azure/security-center/security-center-intro
+    - text: Understøttede funktioner
+      url: /azure/security-center/security-center-services
+- title: Microsoft Defender for Cloud Apps
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Defender for Cloudapps
+      url: /cloud-app-security/what-is-cloud-app-security
+    - text: Kom i gang med Microsoft Defender for Cloudapps
+      url: /cloud-app-security/getting-started-with-cloud-app-security
+- title: Sikkerhedsadministration
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Secure Score
+      url: defender/microsoft-secure-score.md
+- title: Microsoft Sentinel
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hvad er Microsoft Sentinel?
+      url: /azure/sentinel/overview
