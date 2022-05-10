@@ -2,6 +2,8 @@
   href: index.md
 - name: Microsoft OneLTI-administration
   href: manage-microsoft-one-lti.md
+- name: Tillad browsercookies for LMS URL-adresser
+  href: browser-cookies.md
 - name: Lærredsintegrationer
   items:
     - name: Brug Microsoft OneDrive LTI med lærred
