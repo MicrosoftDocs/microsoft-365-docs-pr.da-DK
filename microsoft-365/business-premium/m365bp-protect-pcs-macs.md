@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt ikke-administrerede eller byod-enheder (bring-your-own devices) mod cyberangreb med Microsoft 365 Business Premium. Sådan konfigurerer du cybersikkerhed til Windows pc'er og Macs.
-ms.openlocfilehash: a8b0fb278e4fb005d6e31d92521791134395b811
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0b13c208fd2cdd0fcadf7f5bc820d41b3621eebd
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094157"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318828"
 ---
 # <a name="protect-unmanaged-windows-10-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows 10 pc'er og Macs på Microsoft 365 Business Premium
 
@@ -71,6 +71,8 @@ Du kan også reducere risikoen for malware ved kun at bruge software fra pålide
 
 **Slå firewallbeskyttelse til**<p>
 Brug firewallindstillinger til at beskytte Din Mac mod uønsket kontakt, der startes af andre computere, når du har forbindelse til internettet eller et netværk. Uden denne beskyttelse kan din Mac være mere sårbar over for uautoriseret adgang. Se [om programfirewallen](https://support.apple.com/HT201642) for at få vejledning.
+
+## <a name="next-mission"></a>Næste mission
 
 Okay, missionen er fuldført! Lad os nu arbejde på [at beskytte mailsystemet](m365bp-protect-email-overview.md) mod phishing og andre angreb.
 

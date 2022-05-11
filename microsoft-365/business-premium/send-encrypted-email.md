@@ -26,14 +26,14 @@ search.appverid:
 - MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Få mere at vide om, hvordan du sender krypteret mail ved hjælp af Outlook.
-ms.openlocfilehash: 02dc3b7720f6aa46ffaf3cf4a04511c725798a24
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9b2251114831bfe0b6364dc4327bd0c21da55e2
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095160"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65316826"
 ---
-# <a name="encrypt-or-label-sensitive-email"></a>Kryptér eller mærkatfølsom mail
+# <a name="encrypt-or-label-sensitive-email"></a>Kryptér eller forsyn følsom mail med mærkat
 
 Dine data og oplysninger er vigtige og ofte fortrolige. Målet her er at hjælpe med at beskytte disse følsomme oplysninger ved at sikre, at alle bruger følsomhedsmærkater, så mailmodtagere behandler oplysningerne med den største følsomhed.
 
@@ -59,7 +59,7 @@ Du kan få mere at vide om konfiguration af mailkryptering på [Mailkryptering i
 
 Administratorer kan oprette regler for mailflow for automatisk at beskytte mails, der sendes og modtages fra en kampagne eller virksomhed. Konfigurer regler for at kryptere eventuelle udgående mails, og fjern kryptering fra krypterede meddelelser, der kommer fra din organisation, eller fra svar på krypterede meddelelser, der er sendt fra din organisation.
 
-Du opretter regler for mailflow for at kryptere mails med Microsoft Purview Message Encryption. Definer regler for mailflow for udløsning af meddelelseskryptering ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC).</a>
+Du opretter regler for mailflow for at kryptere mails med Microsoft Purview-meddelelseskryptering. Definer regler for mailflow for udløsning af meddelelseskryptering ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC).</a>
 
 1. Log på ved hjælp af en arbejds- eller skolekonto, der er tildelt globale administratortilladelser, i en webbrowser.
 2. Vælg feltet Administrator.
@@ -71,5 +71,6 @@ Du kan finde flere oplysninger under [Definer regler for mailflow for at krypter
 
 Du kan også anvende branding til at tilpasse udseendet og teksten i mailmeddelelserne. Du kan få flere oplysninger under [Føj organisationens brand til dine krypterede meddelelser](../compliance/email-encryption.md).
 
-Hvis du har fået så langt, har du gennemført en anden mission, så tillykke! Der er ikke tid til at hvile på vores succeser, så lad os komme i gang med at konfigurere et sikkert miljø, hvor teamet kan [samarbejde sikkert](m365bp-collaborate-share-securely.md). 
+## <a name="next-mission"></a>Næste mission
 
+Hvis du har fået så langt, har du gennemført en anden mission, så tillykke! Der er ikke tid til at hvile på vores succeser, så lad os komme i gang med at konfigurere et sikkert miljø, hvor teamet kan [samarbejde sikkert](m365bp-collaborate-share-securely.md).

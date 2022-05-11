@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer og beskytter dine administratorkonti i Microsoft 365 Business Premium.
-ms.openlocfilehash: b054267264b8440929559ad1a2e335449f3c0309
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1428ee6b447f3f841e7e8e9b77cfd82c2f7a6444
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091517"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320003"
 ---
 # <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>Beskyt dine administratorkonti i Microsoft 365 Business Premium
 
@@ -50,17 +50,17 @@ Sådan opretter du flere administratorkonti:
 
     ![Vælg Brugere og derefter Aktive brugere i venstre navigationsrude.](../media/Activeusers.png)
 
- 2. På siden **Aktive brugere** skal du vælge **Tilføj en bruger** øverst på siden, og i panelet **Ny bruger** skal du angive navnet og andre oplysninger.
+ 1. På siden **Aktive brugere** skal du vælge **Tilføj en bruger** øverst på siden. 
 
- 3. Udvid afsnittet **Roller**, og vælg **Global administrator** for at give denne bruger global administrator adgang. Du kan også vælge **Brugerdefineret administrator** og vælge en af de roller, der vises.
+ 1. I panelet **Tilføj en bruger** skal du angive grundlæggende oplysninger, f.eks. oplysninger om navn og brugernavn.
 
-    Angiv en alternativ mail i tekstfeltet **Alternativ mailadresse** . Du kan bruge denne adresse til at gendanne dine adgangskodeoplysninger, hvis du låses ude. For globale administratorer sendes der også en faktureringsopgørelse til denne adresse.
+ 1. Angiv og konfigurer oplysninger om **produktlicenser** .
 
-    ![Vælg administratorrollen.](../media/adminroles.png)
+ 1. I **Valgfrie indstillinger** skal du definere brugerens rolle, herunder tilføje adgang til Administration, hvis det er relevant.
 
- 4. I afsnittet **Produktlicenser** skal du flytte vælgeren for **Microsoft 365 Business** til **Fra** og **Opret bruger uden produktlicens** til **Til**.
+    :::image type="content" source="media/m365bp-global-admin.png" alt-text="Definer nye brugerroller.":::
 
-    ![Vælg produktlicensen.](../media/productlicense.png)
+ 1. Udfør og gennemse dine indstillinger, og vælg **Afslut tilføjelse** for at bekræfte detaljerne.
 
 ## <a name="create-an-emergency-admin-account"></a>Opret en nødadministratorkonto
 
@@ -68,17 +68,19 @@ Du skal også oprette en sikkerhedskopikonto, der ikke er konfigureret med multi
 
 ## <a name="create-a-user-account-for-yourself"></a>Opret en brugerkonto til dig selv
 
-Brug din brugerkonto til at deltage i samarbejde med din organisation, herunder tjek af mail. Det betyder, at dine administratorlegitimationsoplysninger ligner  *Alice.Chavez <span></span>@Contoso.org* , og at din almindelige brugerkonto ligner *Alice <span></span>@Contoso.com*.
+Brug din brugerkonto til at deltage i samarbejde med din organisation, herunder tjek af mail. Det betyder, at dine administratorlegitimationsoplysninger  *f.eks. svarer til Alice.Chavez <span></span>@Contoso.org*, og at din almindelige brugerkonto ligner *Alice <span></span>@Contoso.com*.
 
 Sådan opretter du en ny brugerkonto:
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">Microsoft 365 Administration</a>, og vælg derefter **Aktive** \> **brugere** i venstre navigationsrude.
 
-2. På siden **Aktive brugere** skal du vælge **Tilføj en bruger** øverst på siden, og i panelet **Ny bruger** skal du angive navnet og andre oplysninger.
+1. På siden **Aktive brugere** skal du vælge **Tilføj en bruger** øverst på siden og angive navnet og andre oplysninger i panelet **Tilføj en bruger** .
 
-3. Udvid afsnittet **Roller**, og vælg **Bruger (ingen administrativ adgang).**
+1. I afsnittet **Produktlicenser** skal du markere afkrydsningsfeltet for **Microsoft 365 Business Premium (ingen administrativ adgang)**.
 
-4. I afsnittet **Produktlicenser** skal du flytte vælgeren for **Microsoft 365 Business** til **Til**.
+1. I afsnittet **Valgfrie indstillinger** skal du lade standard alternativknappen være valgt for **Bruger (ingen adgang til Administration).**
+
+1. Udfør og gennemse dine indstillinger, og vælg **Afslut tilføjelse** for at bekræfte detaljerne.
 
 ## <a name="additional-recommendations"></a>Yderligere anbefalinger
 

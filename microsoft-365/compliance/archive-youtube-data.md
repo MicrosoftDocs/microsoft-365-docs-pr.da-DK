@@ -12,20 +12,20 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere YouTube-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, eDiscovery- og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 2c24e8d73a097f2745d89913091c366ac9c81cc0
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1a3dab65ecd4595962d6e78e94d154ec195ed30f
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100583"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317567"
 ---
 # <a name="set-up-a-connector-to-archive-youtube-data"></a>Konfigurer en connector til arkivering af YouTube-data
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra YouTube til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som f.eks. chats, vedhæftede filer, opgaver, noter og indlæg fra YouTube til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra YouTube til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som f.eks. chats, vedhæftede filer, opgaver, noter og indlæg fra YouTube til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når YouTube-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en YouTube-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når YouTube-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en YouTube-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-youtube-data"></a>Oversigt over arkivering af YouTube-data
 
@@ -47,7 +47,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret et YouTube-program for at hente data fra din YouTube-konto. Du kan finde en trinvis vejledning i, hvordan du opretter programmet, under [Brugervejledning til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20YouTube%20User%20Guide.pdf).
 
-- Den bruger, der opretter YouTube-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter YouTube-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="step-1-set-up-the-youtube-connector"></a>Trin 1: Konfigurer YouTube-connectoren
 
@@ -85,7 +85,7 @@ Når du har oprettet YouTube-connectoren, kan du få vist connectorstatussen på
 
 2. Klik på fanen **Forbindelser,** og vælg derefter **YouTube-connectoren** for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet. Du kan finde flere oplysninger under [Få vist administratorlogge for dataconnectors](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Kendte problemer
 

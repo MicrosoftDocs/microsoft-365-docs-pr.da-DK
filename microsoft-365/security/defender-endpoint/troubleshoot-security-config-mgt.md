@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: e7b9e757f15663338f2e12c645cc3cb0b63ef34b
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: 958c58fab875ce86b0a3290450e2cf17c4b75a44
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302239"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320491"
 ---
 # <a name="troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint"></a>Foretag fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint
 
@@ -120,14 +120,14 @@ I følgende tabel vises en liste over fejl og retninger for, hvad du skal prøve
 
 |Fejlkode|Status for tilmelding|Administratorhandlinger|
 |---|---|---|
-|`5-9`,`11-12`, `26-33`|Generel fejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration. Dette kan skyldes, at enheden ikke opfylder [forudsætningerne for Microsoft Defender for Endpoint administrationskanal](security-config-management.md). Kørsel af [klientanalysen](https://aka.ms/BetaMDEAnalyzer) på enheden kan hjælpe med at identificere rodårsagen til problemet. Hvis dette ikke hjælper, skal du kontakte support.|
+|`5-7`, `9`, `11-12`, `26-33`|Generel fejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration. Dette kan skyldes, at enheden ikke opfylder [forudsætningerne for Microsoft Defender for Endpoint administrationskanal](security-config-management.md). Kørsel af [klientanalysen](https://aka.ms/BetaMDEAnalyzer) på enheden kan hjælpe med at identificere rodårsagen til problemet. Hvis dette ikke hjælper, skal du kontakte support.|
+| `8`, `44` | Microsoft Endpoint Manager konfigurationsproblem | Enheden blev onboardet til Microsoft Defender for Endpoint. Microsoft Endpoint Manager er dog ikke konfigureret via Administration for at tillade Microsoft Defender for Endpoint sikkerhedskonfiguration. Sørg for, at den [Microsoft Endpoint Manager lejer er konfigureret, og at funktionen er slået til](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management).|
 |`13-14`,`20`,`24`,`25`|Forbindelsesproblem|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, som kan skyldes et forbindelsesproblem. Kontrollér, at [slutpunkterne Azure Active Directory og Microsoft Endpoint Manager](security-config-management.md#connectivity-requirements) er åbnet i firewallen.|
 |`10`,`42`|Generel hybridjoinforbindelsesfejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, og operativsystemet kunne ikke udføre hybridjoinforbindelse. Brug [Foretag fejlfinding af hybride Azure Active Directory-joinforbundne enheder](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) til fejlfinding af fejl i hybridjoinforbindelse på OS-niveau.|
 |`15`|Lejeruoverensstemmelse|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, fordi dit Microsoft Defender for Endpoint lejer-id ikke stemmer overens med dit Azure Active Directory lejer-id. Sørg for, at det Azure Active Directory lejer-id fra din Defender for Endpoint-lejer stemmer overens med lejer-id'et i SCP-posten for dit domæne. Du kan finde flere oplysninger [ved at foretage fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|
 |`16`,`17`|Hybridfejl – Tjenesteforbindelsespunkt|Enheden blev onboardet til Microsoft Defender for Endpoint. Posten tjenesteforbindelsespunkt (SCP) er dog ikke konfigureret korrekt, og enheden kunne ikke tilsluttes Azure AD. Dette kan skyldes, at SCP'et er konfigureret til at blive medlem af Enterprise DRS. Sørg for, at SCP-posten peger på AAD og SCP er konfigureret i nedenstående bedste praksis. Du kan få flere oplysninger under [Konfigurer et tjenesteforbindelsespunkt](/azure/active-directory/devices/hybrid-azuread-join-manual#configure-a-service-connection-point).|
 |`18`|Certifikatfejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration på grund af en fejl i enhedscertifikatet. Enhedscertifikatet tilhører en anden lejer. Kontrollér, at bedste praksis følges, når du opretter certifikatprofiler, der er [tillid til](/mem/intune/protect/certificates-trusted-root#create-trusted-certificate-profiles).|
-|`36`|Fejl i LDAP-API|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration på grund af en forkert konfiguration i AAD Forbind. Hvis du vil identificere, hvad der forhindrer enheden i at registrere sig i AAD, kan du overveje at køre [fejlfindingsværktøjet til enhedsregistrering](/samples/azure-samples/dsregtool/dsregtool). For Windows Server 2012 R2 skal du køre de [dedikerede fejlfindingsinstruktioner](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy).  |
-|`37`|Problem med synkronisering i det lokale område|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration på grund af en forkert konfiguration i AAD Forbind. Hvis du vil identificere, hvad der forhindrer enheden i at registrere sig i AAD, kan du overveje at køre [fejlfindingsværktøjet til enhedsregistrering](/samples/azure-samples/dsregtool/dsregtool). For Windows Server 2012 R2 skal du køre de [dedikerede fejlfindingsinstruktioner](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy). |
+|`36` , `37`| AAD-Forbind forkert konfiguration |Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration på grund af en forkert konfiguration i AAD-Forbind. Hvis du vil finde ud af, hvad der forhindrer enheden i at registrere sig i AAD, kan du overveje at køre [fejlfindingsværktøjet til enhedsregistrering](/samples/azure-samples/dsregtool/dsregtool). For Windows Server 2012 R2 skal du køre de [dedikerede fejlfindingsinstruktioner](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy).  |
 |`38`,`41`|DNS-fejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration på grund af en DNS-fejl. Kontrollér internetforbindelsen og/eller DNS-indstillingerne på enheden. De ugyldige DNS-indstillinger kan være på arbejdsstationens side. Active Directory kræver, at du bruger domæne-DNS for at fungere korrekt (og ikke routerens adresse). Du kan finde flere oplysninger under [Fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration, for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|
 |`40`|Problem med synkronisering af ur|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration. Kontrollér, at uret er indstillet korrekt, og at det er synkroniseret på den enhed, hvor fejlen opstår.|
 
@@ -141,14 +141,14 @@ Nedenfor kan du se en typisk fejl i AADRT-log, og hvordan du læser den:
 
 :::image type="content" source="images/event-properties.png" alt-text="Siden med hændelsesegenskaber" lightbox="images/event-properties.png":::
 
-Ud fra oplysningerne i meddelelsen er det i de fleste tilfælde muligt at forstå, hvilken fejl der opstod, hvilken Win32-API der returnerede fejlen (hvis relevant), hvilken URL-adresse (hvis relevant) der blev brugt, og hvilken AAD Kørsels-API-fejl der blev fundet.
+Ud fra oplysningerne i meddelelsen er det i de fleste tilfælde muligt at forstå, hvilken fejl der opstod, hvilken Win32-API der returnerede fejlen (hvis relevant), hvilken URL-adresse (hvis relevant) der blev brugt, og hvilken AAD Runtime API-fejl der blev fundet.
 
-## <a name="instructions-for-applying-computer-join-rule-in-aad-connect"></a>Instruktioner til anvendelse af Computer Join-regel i AAD Forbind
+## <a name="instructions-for-applying-computer-join-rule-in-aad-connect"></a>Instruktioner til anvendelse af Computer Join-regel i AAD-Forbind
 
 I forbindelse med Sikkerhedsadministration for Microsoft Defender for Endpoint på Windows Server 2012 R2-domænetilsluttede computere er der behov for en opdatering til Azure AD Forbind synkroniseringsregel "In from AD-Computer Join". Dette kan opnås ved at klone og ændre reglen, hvilket deaktiverer den oprindelige regel "In from AD - Computer Join". Azure AD Forbind giver som standard denne oplevelse til at foretage ændringer af indbyggede regler.
 
 > [!NOTE]
->Disse ændringer skal anvendes på den server, hvor AAD Forbind kører. Hvis du har installeret flere forekomster af AAD Forbind, skal disse ændringer anvendes på alle forekomster.
+>Disse ændringer skal anvendes på den server, hvor AAD-Forbind kører. Hvis du har installeret flere forekomster af AAD-Forbind, skal disse ændringer anvendes på alle forekomster.
 
 1. Åbn programmet Editor til synkroniseringsregler i menuen Start. Find reglen med navnet **In fra AD – Computer Join** på regellisten. **Notér værdien i kolonnen 'Rangplacering' for denne regel.**
 

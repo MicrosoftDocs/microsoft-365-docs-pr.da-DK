@@ -18,12 +18,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6822f736cae73d7d4654f8b4310e0e397cffa677
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f427bcfbc5f8b6538c72cebea4adf6edc80a42ba
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077481"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320513"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
 
@@ -721,6 +721,21 @@ Vi anbefaler, at du opdaterer dine Windows 10 (Enterprise-, Pro- og Home-udgaver
 Du kan få flere oplysninger under [Microsoft Defender-opdatering til Windows afbildninger af operativsystemet](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
 <details>
+<summary>20220506.6</summary>
+
+&ensp;Pakkeversion: **20220506.6**<br/>
+&ensp;Platformversion: **4.18.2203.5**<br/>
+&ensp;Programversion: **1.1.19200.5**<br/>
+&ensp;Signaturversion: **1.363.1436.0**<br/>
+
+### <a name="fixes"></a>Rettelser
+- Ingen
+
+### <a name="additional-information"></a>Flere oplysninger:
+- Ingen
+
+<br/>
+</details><details>
 <summary>20220321.1</summary>
 
 &ensp;Pakkeversion: **20220321.1**<br/>

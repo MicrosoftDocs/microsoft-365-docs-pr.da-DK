@@ -14,21 +14,21 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
-description: Få mere at vide om, hvordan du konfigurerer og bruger en connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Cisco Jabber på PostgreSQL for at Microsoft 365.
-ms.openlocfilehash: 8b7500e97681233af6921902f2676d589a0670f5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du konfigurerer og bruger en connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Cisco Jabber på PostgreSQL for at Microsoft 365.
+ms.openlocfilehash: a435ee321d14c6eddf445f6dddcfdecc86c1963b
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096159"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318806"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-postgresql-data"></a>Konfigurer en connector til arkivering af Cisco Jabber på PostgreSQL-data
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Cisco Jabber-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Cisco Jabber på PostgreSQL-connector](https://www.veritas.com/insights/merge1/jabber), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. meddelelser, chats og delt indhold fra Cisco Jabber på PostgreSQL, til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Cisco Jabber-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Cisco Jabber på PostgreSQL-connector](https://www.veritas.com/insights/merge1/jabber), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og importere disse elementer til Microsoft 365. Connectoren konverterer indholdet, f.eks. meddelelser, chats og delt indhold fra Cisco Jabber på PostgreSQL, til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når Cisco Jabber på PostgreSQL-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Cisco Jabber på PostgreSQL-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Cisco Jabber på PostgreSQL-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Cisco Jabber på PostgreSQL-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-cisco-jabber-on-postgresql-data"></a>Oversigt over arkivering af Cisco Jabber på PostgreSQL-data
 
@@ -48,9 +48,9 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret en Flet1-konto til Microsoft-connectors. For at gøre dette skal du kontakte [Veritas Kundesupport](https://www.veritas.com/content/support/en_US). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter Cisco Jabber på PostgreSQL-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Cisco Jabber på PostgreSQL-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-cisco-jabber-on-postgresql-connector"></a>Trin 1: Konfigurer Cisco Jabber på PostgreSQL-connector
 
@@ -88,7 +88,7 @@ Når du har oprettet Cisco Jabber på PostgreSQL-connectoren, kan du få vist co
 
 2. Klik på fanen **Forbindelser,** og vælg derefter **Cisco Jabber på PostgreSQL-connectoren** for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet. Du kan finde flere oplysninger under [Få vist administratorlogge for dataconnectors](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Kendte problemer
 

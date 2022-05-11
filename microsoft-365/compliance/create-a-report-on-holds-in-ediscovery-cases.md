@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: 9/11/2017
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -20,18 +20,18 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du opretter en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager.
-ms.openlocfilehash: 1b36b134b8de490e5ca7d9e61044a3c7cac4904f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 25e201e1b8bef0a4ccc3724a6adab6c095f34d54
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097024"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318009"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>Brug et script til at oprette en rapport om ventepositioner i eDiscovery-sager
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til core- og eDiscovery-sager (Premium) i Microsoft Purview-overholdelsesportalen. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
+Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til sager med eDiscovery (Standard) og eDiscovery (Premium) i Microsoft Purview-compliance-portal. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
 
 Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret beskrivelse af de oplysninger, der er inkluderet i rapporten.
 
@@ -203,7 +203,7 @@ Sagen indeholder en rapport, der oprettes, når du kører scriptet i denne artik
 
 - Navnet på ventepositionen og navnet på den eDiscovery-sag, som ventepositionen er knyttet til.
 
-- Angiver, om ventepositionen er knyttet til en Core- eller eDiscovery-sag (Premium).
+- Angiver, om ventepositionen er knyttet til en eDiscovery-sag (Standard) eller eDiscovery-sag (Premium).
 
 - Hvorvidt eDiscovery-sagen er aktiv eller lukket.
 

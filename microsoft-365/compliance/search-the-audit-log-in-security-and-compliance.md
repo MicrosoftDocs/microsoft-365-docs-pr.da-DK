@@ -1,5 +1,5 @@
 ---
-title: Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen
+title: Søg i overvågningsloggen i Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,22 +17,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Brug Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
+description: Brug Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: b3ad71878f6d0c766cbcf5ba435bc61396f45ed6
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+ms.openlocfilehash: 585b3be2149b1e94dc27633bac20707a6b193c0f
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231753"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320600"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
+Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog i Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Microsoft 365 tjenester, der understøtter overvågning
 
@@ -44,6 +44,7 @@ Hvorfor en samlet overvågningslog? Da du kan søge i overvågningsloggen efter 
 | Azure Information Protection|AipDiscover, AipSensitivityLabelAction, AipProtectionAction, AipFileDeleted, AipHeartBeat |
 | Kommunikationsoverholdelse|ComplianceSuperVisionExchange|
 | Indholdsoversigt|LabelContentExplorer|
+| Dataconnectors|ComplianceConnector|
 | Forebyggelse af datatab (DLP)|ComplianceDLPSharePoint, ComplianceDLPExchange, DLPEndpoint|
 | Dynamics 365|CRM|
 | eDiscovery|Discovery, AeD|
@@ -67,7 +68,6 @@ Hvorfor en samlet overvågningslog? Da du kan søge i overvågningsloggen efter 
 | Threat Intelligence|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
 | Workplace Analytics|WorkplaceAnalytics|
 | Yammer|Yammer|
-|||
 
 Du kan få flere oplysninger om de handlinger, der overvåges i hver af de tjenester, der er angivet i den forrige tabel, i afsnittet [Overvågede aktiviteter](#audited-activities) i denne artikel.
 
@@ -454,7 +454,6 @@ I følgende tabel beskrives fil- og sideaktiviteterne i SharePoint Online og One
 |(ingen)|PageViewedExtended|Dette er relateret til aktiviteten "Set side" (PageViewed). En PageViewedExtended-hændelse logføres, når den samme person hele tiden får vist en webside i en længere periode (op til 3 timer). <br/><br/> Formålet med logføring af PageViewedExtended-hændelser er at reducere antallet af PageViewed-hændelser, der logføres, når en side hele tiden vises. Dette hjælper med at reducere støjen fra flere PageViewed-poster for det, der i bund og grund er den samme brugeraktivitet, og giver dig mulighed for at fokusere på den indledende (og vigtigere) PageViewed-hændelse.|
 |Visning, der signaleres af klienten|ClientViewSignaled|En brugers klient (f.eks. websted eller mobilapp) har signaleret, at den angivne side er blevet set af brugeren. Denne aktivitet logføres ofte efter en hændelse, der er forudrådet for en side. <br/><br/>**BEMÆRK**! Da clientViewSignaled-hændelser signaleres af klienten i stedet for serveren, er det muligt, at hændelsen ikke logføres af serveren og derfor ikke vises i overvågningsloggen. Det er også muligt, at du ikke har tillid til oplysningerne i overvågningsposten. Men da brugerens identitet valideres af det token, der bruges til at oprette signalet, er brugerens identitet angivet i den tilsvarende overvågningspost korrekt. Systemet venter fem minutter, før det logfører den samme hændelse, når den samme brugers klient signalerer, at siden er blevet vist igen af brugeren.|
 |(ingen)|Side forside er forældet|En brugers klient (f.eks. websted eller mobilapp) har anmodet om den angivne side for at hjælpe med at forbedre ydeevnen, hvis brugeren går til den. Denne hændelse logføres for at angive, at sideindholdet er blevet leveret til brugerens klient. Denne hændelse er ikke en endelig indikation af, at brugeren har navigeret til siden. <br/><br/> Når sideindholdet gengives af klienten (i henhold til brugerens anmodning), skal der oprettes en ClientViewSignaled-hændelse. Det er ikke alle klienter, der understøtter angivelse af en forudhentning, og derfor logføres nogle af de aktiviteter, der allerede er hentet, i stedet som PageViewed-hændelser.|
-||||
 
 #### <a name="frequently-asked-questions-about-fileaccessed-and-filepreviewed-events"></a>Ofte stillede spørgsmål om FileAccessed- og FilePreviewed-hændelser
 
@@ -505,7 +504,6 @@ I følgende tabel beskrives mappeaktiviteterne i SharePoint Online og OneDrive f
 |Flyttet mappe|MappeFlytning|Brugeren flytter en mappe til en anden placering på et websted.|
 |Omdøbt mappe|MappeNavngivet|Brugeren omdøber en mappe på et websted.|
 |Gendannet mappe|Mapperestored|Brugeren gendanner en slettet mappe fra papirkurven på et websted.|
-||||
 
 ### <a name="sharepoint-list-activities"></a>SharePoint listeaktiviteter
 
@@ -535,7 +533,6 @@ I følgende tabel beskrives aktiviteter, der er relateret til, når brugerne int
 |Opdateret webstedskolonne|SiteColumnUpdated|En bruger har opdateret en SharePoint webstedskolonne ved at ændre en eller flere egenskaber.|
 |Opdateret webstedsindholdstype|SiteContentTypeUpdated|En bruger har opdateret en webstedsindholdstype ved at ændre en eller flere egenskaber.|
 |Vist listeelement|ListItemViewed|En bruger fik vist et SharePoint listeelement. Når en bruger får vist et listeelement, logføres hændelsen ListItemViewed ikke igen for den samme bruger for samme listeelement i de næste fem minutter.|
-||||
 
 ### <a name="sharing-and-access-request-activities"></a>Delings- og adgangsanmodningsaktiviteter
 
@@ -570,7 +567,6 @@ I følgende tabel beskrives aktiviteter for brugerdelings- og adgangsanmodninger
 |Brugeren er føjet til et sikkert link|AddedToSecureLink|En bruger blev føjet til listen over enheder, der kan bruge et sikkert delingslink.|
 |Brugeren er fjernet fra et sikkert link|RemovedFromSecureLink|En bruger blev fjernet fra listen over enheder, der kan bruge et sikkert delingslink.|
 |Tilbagekald invitation til deling|SharingInvitationRevoked|Brugeren trak en invitation til deling tilbage til en ressource.|
-||||
 
 ### <a name="synchronization-activities"></a>Synkroniseringsaktiviteter
 
@@ -584,7 +580,6 @@ I følgende tabel vises en liste over aktiviteter til synkronisering af filer i 
 |Downloadede filændringer på computeren|FileSyncDownloadedPartial|Denne hændelse frarådes sammen med den gamle OneDrive for Business synkroniseringsapp (Groove.exe).|
 |Overførte filer til dokumentbiblioteket|FileSyncUploadedFull|Brugeren uploader en ny fil eller ændringer til en fil i SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive-synkronisering app (OneDrive.exe).|
 |Overførte filændringer til dokumentbiblioteket|FileSyncUploadedPartial|Denne hændelse frarådes sammen med den gamle OneDrive for Business synkroniseringsapp (Groove.exe).|
-||||
 
 ### <a name="site-permissions-activities"></a>Aktiviteter for webstedstilladelser
 
@@ -608,7 +603,6 @@ I følgende tabel vises hændelser, der er relateret til tildeling af tilladelse
 |Anmodede tilladelser som webstedsadministrator|Anmodning om ændring af webstedsændring|Brugeranmodninger om at blive tilføjet som administrator af en gruppe af websteder for en gruppe af websteder. Administratorer af gruppen af websteder har fuld kontrol over tilladelser til gruppen af websteder og alle underordnede websteder.|
 |Gendannet nedarvning af deling|DelinginheritanceReset|Der blev foretaget en ændring, så et element nedarver delingstilladelser fra det overordnede element.|
 |Opdateret gruppe|GroupUpdated|Webstedsadministratoren eller -ejeren ændrer indstillingerne for en gruppe for et websted. Dette kan omfatte ændring af gruppens navn, hvem der kan få vist eller redigere gruppemedlemskabet, og hvordan anmodninger om medlemskab håndteres.|
-||||
 
 ### <a name="site-administration-activities"></a>Webstedsadministrationsaktiviteter
 
@@ -647,7 +641,6 @@ I følgende tabel vises hændelser, der stammer fra administrationsopgaver for w
 |Angiv lagerkvote for geografisk placering|GeoQuotaAllocated|En SharePoint eller global administrator konfigurerede lagerkvoten for en geografisk placering i et multi-geo-miljø.|
 |Ikke-sluttet websted fra hubwebsted|HubSite Er ikke sluttet til|En webstedsejer fjerner tilknytningen fra sit websted fra et hubwebsted.|
 |Ikke-registreret hubwebsted|HubSiteDet er ikke registreret|En SharePoint eller global administrator fjerner registreringen af et websted som et hubwebsted. Når et hubwebsted ikke er registreret, fungerer det ikke længere som et hubwebsted.|
-||||
 
 ### <a name="exchange-mailbox-activities"></a>Exchange postkasseaktiviteter
 
@@ -680,7 +673,6 @@ I følgende tabel vises de aktiviteter, der kan logføres af logføring af overv
 |Opdateret meddelelse|Opdater|En meddelelse eller dens egenskaber blev ændret.|
 |Brugeren er logget på postkassen|MailboxLogin|Brugeren er logget på sin postkasse.|
 |Mærk meddelelsen som en post||En bruger har anvendt en opbevaringsmærkat på en mail, og denne etiket er konfigureret til at markere elementet som en post. |
-||||
 
 #### <a name="system-accounts-in-exchange-mailbox-audit-records"></a>Systemkonti i Exchange postkassens overvågningsposter
 
@@ -705,7 +697,6 @@ I følgende tabel vises de brugeradministrationsaktiviteter, der logføres, når
 |Angiv en egenskab, der tvinger brugeren til at ændre adgangskode|Angiv gennemtving ændring af brugeradgangskode.|Administratoren angiver den egenskab, der tvinger en bruger til at ændre sin adgangskode, næste gang brugeren logger på Microsoft 365.|
 |Angiv licensegenskaber|Angiv licensegenskaber.|Administratoren ændrer egenskaberne for en licens, der er tildelt en bruger.|
 |Opdateret bruger|Opdater bruger.|Administratoren ændrer en eller flere egenskaber for en brugerkonto. Du kan se en liste over de brugeregenskaber, der kan opdateres, i afsnittet "Opdater brugerattributter" i [Azure Active Directory Hændelser i overvågningsrapport](/azure/active-directory/reports-monitoring/concept-audit-logs).|
-||||
 
 ### <a name="azure-ad-group-administration-activities"></a>Azure AD gruppeadministrationsaktiviteter
 
@@ -721,7 +712,6 @@ I følgende tabel vises de gruppeadministrationsaktiviteter, der logføres, når
 |Slettet gruppe|Slet gruppe.|En gruppe blev slettet.|
 |Fjernede medlem fra gruppe|Fjern medlem fra gruppe.|Et medlem blev fjernet fra en gruppe.|
 |Opdateret gruppe|Opdater gruppe.|En egenskab for en gruppe blev ændret.|
-||||
 
 ### <a name="application-administration-activities"></a>Programadministrationsaktiviteter
 
@@ -739,7 +729,6 @@ I følgende tabel vises de programadministratoraktiviteter, der logføres, når 
 |Fjernede en tjenesteprincipal fra mappen|Fjern tjenesteprincipalen.|Et program blev slettet/fjernet fra Azure AD. Et program repræsenteres af en tjenesteprincipal i mappen.|
 |Fjernede legitimationsoplysninger fra en tjenesteprincipal|Fjern legitimationsoplysningerne for tjenesteprincipalen.|Legitimationsoplysningerne blev fjernet fra en tjenesteprincipal i Azure AD. Et tjenesteprincip repræsenterer et program i mappen.|
 |Angiv delegeringsindtastning|Angiv delegeringsindtastning.|En godkendelsestilladelse blev opdateret for et program i Azure AD.|
-||||
 
 ### <a name="role-administration-activities"></a>Aktiviteter til rolleadministration
 
@@ -753,7 +742,6 @@ I følgende tabel vises Azure AD aktiviteter til rolleadministration, der logfø
 |Føj medlem til rolle|Føj medlem til rolle.|Føjede en bruger til en administratorrolle i Microsoft 365.|
 |Fjernede en bruger fra en mapperolle|Fjern medlem fra rolle.|Fjernede en bruger til fra en administratorrolle i Microsoft 365.|
 |Angiv firmakontaktoplysninger|Angiv firmakontaktoplysninger.|Opdaterede organisationens kontaktindstillinger på virksomhedsniveau. Dette omfatter mailadresser til abonnementsrelaterede mails, der sendes af Microsoft 365, og tekniske meddelelser om tjenester.|
-||||
 
 ### <a name="directory-administration-activities"></a>Aktiviteter til administration af adresseliste
 
@@ -776,7 +764,6 @@ I følgende tabel vises Azure AD mappe- og domænerelaterede aktiviteter, der lo
 |Opdateret domæne|Opdater domæne.|Opdaterede indstillingerne for et domæne i din organisation.|
 |Bekræftet domæne|Kontrollér domænet.|Bekræftet, at din organisation er ejer af et domæne.|
 |Bekræftet mailbekræftet domæne|Bekræft mailbekræftet domæne.|Brugte mailbekræftelse til at bekræfte, at din organisation er ejer af et domæne.|
-||||
 
 ### <a name="ediscovery-activities"></a>eDiscovery-aktiviteter
 
@@ -825,7 +812,6 @@ Workplace Analytics giver indsigt i, hvordan grupper samarbejder på tværs af d
 |Bruger, der er logget på<sup>*</sup>| UserLoggedIn |En bruger er logget på sin Microsoft 365 brugerkonto.|
 |Brugeren er logget af<sup>*</sup>| UserLoggedOff |En bruger loggede af sin Microsoft 365 brugerkonto.
 |Set udforsk|ViewedExplore|Analytiker fik vist visualiseringer under en eller flere udforsk sidefaner.|
-||||
 
 > [!NOTE]
 > <sup>*</sup>Disse er Azure Active Directory logon- og log af-aktiviteter. Disse aktiviteter logføres, selvom du ikke har Workplace Analytics slået til i din organisation. Du kan finde flere oplysninger om brugerlogføringsaktiviteter under [Logge på Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
@@ -880,7 +866,6 @@ I følgende tabel vises de bruger- og administratoraktiviteter i Yammer, der er 
 |Opdateret meddelelse<sup>*</sup>|Meddelelse er blevet gemt|Brugeren opdaterer en meddelelse.|
 |Vist fil|FilVisited|Brugeren får en fil til at se.|
 |Vist meddelelse<sup>*</sup>|Meddelelse vist|Brugeren får vist en meddelelse.|
-||||
 
 ### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate aktiviteter
 
@@ -901,7 +886,6 @@ I følgende tabel vises de aktiviteter i Indholdsoversigt, der er logført i ove
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
 |Element, der er åbnet|LabelContentExplorerAccessedItem|En administrator (eller en bruger, der er medlem af rollegruppen Indholdsoversigt i Indholdsoversigt) bruger Indholdsoversigt til at få vist en mail eller SharePoint/OneDrive dokument.|
-||||
 
 ### <a name="quarantine-activities"></a>Karantæneaktiviteter
 
@@ -914,7 +898,6 @@ I følgende tabel vises de karantæneaktiviteter, du kan søge efter i overvågn
 |Eksempel på karantænemeddelelse|Eksempel på karantæne|En bruger fik forhåndsvist en mail, der blev anset for at være skadelig.|
 |Frigivet karantænemeddelelse|Karantænerelease|En bruger har frigivet en mail fra karantæne, der blev anset for at være skadelig.|
 |Fik vist karantænemeddelelsens brevhoved|QuarantineViewHeader|En bruger fik vist overskriften i en mail, der blev anset for at være skadelig.|
-||||
 
 ### <a name="microsoft-forms-activities"></a>Microsoft Forms aktiviteter
 
@@ -973,7 +956,6 @@ Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder,
 |Omdøbte en samling|CollectionRenamed|Formularejeren ændrede navnet på en samling.|
 |Flyttede en formular til en samling|MovedFormIntoCollection|Ejeren af formularen flyttede en formular til en samling.|
 |Flyttede en formular ud af samlingen|MovedFormOutofCollection|Ejeren af formularen flyttede en formular ud af en samling.|
-||||
 
 #### <a name="forms-activities-performed-by-coauthors-and-anonymous-responders"></a>Formularaktiviteter udført af medforfattere og anonyme respondere
 
@@ -983,13 +965,12 @@ I følgende tabel beskrives overvågningsaktiviteterne og oplysningerne i overv�
 
 |Aktivitetstype|Intern eller ekstern bruger|Bruger-id, der er logført|Organisationen er logget på|Formularbrugertype|
 |:-----|:-----|:-----|:-----|:-----|
-|Samtidig redigering af aktiviteter|Interne|UPN|Formularejerens organisation|Medforfatter|
-|Samtidig redigering af aktiviteter|Eksterne|UPN<br>|Medforfatters organisation<br>|Medforfatter|
-|Samtidig redigering af aktiviteter|Eksterne|`urn:forms:coauthor#a0b1c2d3@forms.office.com`<br>(Den anden del af id'et er et hash, som vil variere for forskellige brugere)|Formularejerens organisation<br>|Medforfatter|
+|samtidig redigering aktiviteter|Interne|UPN|Formularejerens organisation|Medforfatter|
+|samtidig redigering aktiviteter|Eksterne|UPN<br>|Medforfatters organisation<br>|Medforfatter|
+|samtidig redigering aktiviteter|Eksterne|`urn:forms:coauthor#a0b1c2d3@forms.office.com`<br>(Den anden del af id'et er et hash, som vil variere for forskellige brugere)|Formularejerens organisation<br>|Medforfatter|
 |Svaraktiviteter|Eksterne|UPN<br>|Responderens organisation<br>|Responder|
 |Svaraktiviteter|Eksterne|`urn:forms:external#a0b1c2d3@forms.office.com`<br>(Den anden del af bruger-id'et er et hash, som vil variere for forskellige brugere)|Formularejerens organisation|Responder|
 |Svaraktiviteter|Anonym|`urn:forms:anonymous#a0b1c2d3@forms.office.com`<br>(Den anden del af bruger-id'et er et hash, som vil variere for forskellige brugere)|Formularejerens organisation|Responder|
-||||
 
 ### <a name="sensitivity-label-activities"></a>Aktiviteter med følsomhedsmærkater
 
@@ -1003,7 +984,6 @@ I følgende tabel vises hændelser, der skyldes brug af [følsomhedsmærkater](s
 |Ændret følsomhedsmærkat anvendt på fil|FileSensitivityLabelChanged<br /><br>SensitivityLabelUpdated|Der blev anvendt en anden følsomhedsmærkat på et dokument. <br /><br>Handlingerne for denne aktivitet er forskellige, afhængigt af hvordan mærkaten blev ændret:<br /> - Office på internettet eller en politik for automatisk mærkning (FileSensitivityLabelChanged) <br /> – Microsoft 365 apps (SensitivityLabelUpdated)|
 |Ændret følsomhedsmærkat på et websted|SensitivityLabelChanged|Der blev anvendt en anden følsomhedsmærkat på et SharePoint eller Teams websted.|
 |Følsomhedsmærkaten er fjernet fra filen|FileSensitivityLabelRemoved|En følsomhedsmærkat blev fjernet fra et dokument ved hjælp af Microsoft 365 apps, Office på internettet, en politik for automatisk mærkning eller cmdlet'en [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile).|
-||||
 
 ### <a name="retention-policy-and-retention-label-activities"></a>Opbevaringspolitik og aktiviteter med opbevaringsmærkater
 
@@ -1025,7 +1005,6 @@ I følgende tabel beskrives konfigurationsaktiviteterne for [opbevaringspolitikk
 | Opdaterede indstillinger for en opbevaringspolitik | SetRetentionComplianceRule | Administratoren ændrede opbevaringsindstillingerne for en eksisterende opbevaringspolitik. Opbevaringsindstillinger omfatter, hvor længe elementer bevares, og hvad der sker med elementer, når opbevaringsperioden udløber (f.eks. sletning af elementer, bevarelse af elementer eller opbevaring og derefter sletning af dem). Denne aktivitet svarer også til at køre cmdlet'en [Set-RetentionComplianceRule](/powershell/module/exchange/set-retentioncompliancerule) . |
 | Opdateret opbevaringsmærkat |SetComplianceTag  | Administratoren har opdateret en eksisterende opbevaringsmærkat.|
 | Opdateret opbevaringspolitik |SetRetentionCompliancePolicy |Administratoren har opdateret en eksisterende opbevaringspolitik. Opdateringer, der udløser denne hændelse, omfatter tilføjelse eller udeladelse af indholdsplaceringer, som opbevaringspolitikken anvendes på.|
-||||
 
 ### <a name="briefing-email-activities"></a>Aktiviteter i briefingmail
 
@@ -1039,7 +1018,6 @@ I følgende tabel vises de aktiviteter i Briefing-mail, der er logført i Micros
 |:----|:-----|:-----|
 |Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administratoren opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
 |Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administratoren opdaterer indstillingerne for beskyttelse af personlige oplysninger for Briefing-mail.
-||||
 
 ### <a name="myanalytics-activities"></a>MyAnalytics-aktiviteter
 
@@ -1049,7 +1027,6 @@ I følgende tabel vises de aktiviteter i MyAnalytics, der er logført i Microsof
 |:-----|:-----|:-----|
 |Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administratoren opdaterer indstillinger på organisationsniveau for MyAnalytics. |
 |Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administratoren opdaterer brugerindstillingerne for MyAnalytics.|
-||||
 
 ### <a name="information-barriers-activities"></a>Aktiviteter inden for informationsbarrierer
 
@@ -1060,7 +1037,6 @@ I følgende tabel vises de aktiviteter i informationsbarrierer, der logføres i 
 | Føjede segmenter til et websted | SegmenterTilføj | En SharePoint, global administrator eller webstedsejer har føjet et eller flere informationsbarrierer til et websted. |
 | Ændrede segmenter på et websted | Segment ændret | En SharePoint eller global administrator ændrede et eller flere informationsbarrieresegmenter for et websted. |
 | Fjernede segmenter fra et websted | Segmentflytning | En SharePoint eller global administrator fjernede et eller flere informationsbarrieresegmenter fra et websted. |
-||||
 
 ### <a name="disposition-review-activities"></a>Dispositionsgennemgangsaktiviteter
 
@@ -1072,7 +1048,6 @@ I følgende tabel vises de aktiviteter, som en dispositionslæser tog, da et ele
 |Forlænget opbevaringsperiode|UdvidRetention|En dispositionslæser udvidede opbevaringsperioden for elementet.|
 |Element, der er navngivet igen|RelabelItem|En dispositionslæser har navngivet opbevaringsmærkaten igen.|
 |Tilføjede korrekturlæsere|AddReviewer|En dispositionslæser føjede en eller flere brugere til den aktuelle fase i dispositionsgennemgangen.|
-||||
 
 ### <a name="communication-compliance-activities"></a>Aktiviteter i forbindelse med overholdelse af angivne standarder for kommunikation
 
@@ -1083,7 +1058,6 @@ I følgende tabel vises aktiviteter for kommunikation med overholdelse af angivn
 |Opdatering af politik|TilsynspolitikOprettet, TilsynSpolitikOpdatering, TilsynspolitikDeleted|En administrator af kommunikationsoverholdelse har udført en politikopdatering.|
 |Politikmatch|TilsynSregelmatch|En bruger har sendt en meddelelse, der svarer til en politiks betingelse.|
 |Mærke, der er anvendt på meddelelser|Tilsynsvisningsmærke|Mærker anvendes på meddelelser, eller meddelelser fortolkes.|
-||||
 
 ### <a name="report-activities"></a>Rapportaktiviteter
 
@@ -1092,7 +1066,6 @@ I følgende tabel vises de aktiviteter for forbrugsrapporter, der er logført i 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
 |Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger for forbrugsrapporter. |
-||||
 
 ### <a name="exchange-admin-audit-log"></a>Exchange administratorens overvågningslog
 

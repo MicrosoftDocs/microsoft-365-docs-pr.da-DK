@@ -30,12 +30,12 @@ search.appverid:
 - MET150
 ms.assetid: 2d7ff45e-0da0-4caa-89a9-48cabf41f193
 description: Konfigurer Windows enheder, der kører Windows 10 Pro for Microsoft 365 Business Premium brugere, og aktivér central administration og sikkerhedskontroller.
-ms.openlocfilehash: 57db37f73d2b9145f7c4fb9c1ee1005318c629d7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9c8a5eb724a74959983e86dcdcb8f2f8f96b540
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096220"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318574"
 ---
 # <a name="set-up-windows-devices-for-microsoft-365-business-premium-users"></a>Konfigurer Windows enheder til Microsoft 365 Business Premium brugere
 
@@ -56,11 +56,11 @@ Du kan få flere oplysninger om, hvordan du opgraderer Windows enheder, i følge
 - [Opgrader Windows startside til Windows Pro](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
 - [Opgrader til Windows 10 Pro](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
   
-Når du har opgraderet, skal du se [Kontrollér, at enheden har forbindelse til Azure AD](#verify-the-device-is-connected-to-azure-ad) for at bekræfte, at du har opgraderingen, eller for at sikre, at opgraderingen fungerer.
+Når du har opgraderet, skal du se [Kontrollér, at enheden har forbindelse til Azure AD](#verify-the-device-is-connected-to-azure-ad) for at bekræfte, at du har opgraderingen, eller for at sikre, at opgraderingen virkede.
 
-## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Deltag Windows enheder i din organisations Azure AD
+## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Deltag Windows enheder i organisationens Azure AD
 
-Når alle virksomhedens Windows enheder kører Windows 10 Pro eller Windows 11 Pro, kan du tilmelde disse enheder til din organisations Azure Active Directory (Azure AD). 
+Når alle virksomhedens Windows enheder kører Windows 10 Pro eller Windows 11 Pro, kan du tilmelde disse enheder til organisationens Azure Active Directory (Azure AD). 
 
 1. På en Windows enhed skal du vælge logoet Windows og derefter ikonet Indstillinger.
   
@@ -80,6 +80,6 @@ På siden **Synkroniseringsstatus** skal du vælge **Synkroniser** for at få de
 
 Hvis du vil konfigurere dine mobilenheder, skal du se [Konfigurer mobilenheder til Microsoft 365 Business Premium brugere](set-up-mobile-devices.md), 
 
-Hvis du vil øge beskyttelsen, skal du se [Top 10 måder at sikre Microsoft 365 til forretningsplaner](../security-and-compliance/secure-your-business-data.md) på.
+Hvis du vil øge beskyttelsen, skal du se [Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../security-and-compliance/secure-your-business-data.md).
   
 

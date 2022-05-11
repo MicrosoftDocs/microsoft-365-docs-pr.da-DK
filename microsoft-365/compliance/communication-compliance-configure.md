@@ -22,12 +22,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: b5752d0ebeb0095defe47f52529392e4b9c01212
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c4e28c91cc7e7fe441d000553e9099ad39420991
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973723"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317033"
 ---
 # <a name="get-started-with-communication-compliance"></a>Kom i gang med kommunikationsoverholdelse
 
@@ -71,12 +71,12 @@ Aktivitet, der involverer [følsomme oplysningstyper](/microsoft-365/compliance/
 > [!IMPORTANT]
 > Når du har konfigureret dine rollegrupper, kan det tage op til 30 minutter, før rollegruppens tilladelser gælder for tildelte brugere på tværs af organisationen.
 
-Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling på Microsoft Purview-overholdelsesportalen og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
+Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling i Microsoft Purview-compliance-portal og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
 
 - Azure Active Directory [*rolle som global administrator*](/azure/active-directory/roles/permissions-reference#global-administrator)
 - rollen Azure Active Directory [*overholdelsesadministrator*](/azure/active-directory/roles/permissions-reference#compliance-administrator)
-- Rollegruppe for Microsoft Purview-overholdelsesportal [*til organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
-- Rollegruppe for Microsoft [*Purview-overholdelsesportalen Overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- Microsoft Purview-compliance-portal [*rollegruppe for organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- rollegruppe for Microsoft Purview-compliance-portal [*overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
 - *Rollegruppe for kommunikation med overholdelse af angivne standarder*
 - Rollegruppe *for administrator af kommunikationsoverholdelse*
 
@@ -84,8 +84,8 @@ Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluder
 
 - Azure Active Directory *global administrator*
 - Azure Active Directory *overholdelsesadministrator*
-- Microsoft Purview Compliance Portal *Organisationsadministration*
-- Microsoft Purview Compliance Portal *Compliance Administrator*
+- Microsoft Purview-compliance-portal *organisationsstyring*
+- Microsoft Purview-compliance-portal *overholdelsesadministrator*
 
 > [!IMPORTANT]
 > Sørg for, at du altid har mindst én bruger i rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.
@@ -122,7 +122,7 @@ Vælg mellem disse indstillinger for løsningsrollegruppen, når du konfigurerer
 
 Brug denne indstilling til at tildele brugere til bestemte rollegrupper til at segmentere adgang til og ansvar for overholdelse af angivne standarder for kommunikation mellem forskellige brugere i din organisation.
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation, og gå derefter til **Tilladelser**</a>.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation, og gå derefter til **Tilladelser**</a>.
 
 2. Vælg linket for at få vist og administrere roller i Office 365.
 
@@ -216,9 +216,9 @@ Du kan få flere oplysninger om konfiguration af Yammer i oprindelig tilstand i:
 >[!TIP]  
 >Vil du se en detaljeret gennemgang af, hvordan du konfigurerer en ny politik for overholdelse af angivne standarder for kommunikation og afhjælper en besked? Se [denne 15-minutters video](communication-compliance-plan.md#creating-a-communication-compliance-policy-walkthrough) for at se en demonstration af, hvordan politikker for kommunikation med overholdelse af angivne standarder kan hjælpe dig med at registrere upassende meddelelser, undersøge potentielle overtrædelser og afhjælpe problemer med overholdelse af angivne standarder.
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. På Microsoft Purview-overholdelsesportalen skal du vælge **Kommunikation med overholdelse**.
+2. Vælg **Kommunikation med overholdelse af angivne standarder** i Microsoft Purview-compliance-portal.
 
 3. Vælg fanen **Politikker** .
 
@@ -288,9 +288,9 @@ Hvis du vil have mulighed for at svare på en politikbesked ved at sende en påm
 
 Du kan også vælge at aktivere anonymisering for viste brugernavne, når du undersøger politikforekomster og udfører handlinger på meddelelser.
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. På Microsoft Purview-overholdelsesportalen skal du gå til **Kommunikation med overholdelse**.
+2. I Microsoft Purview-compliance-portal skal du gå til **Kommunikation med overholdelse af angivne standarder**.
 
 3. Hvis du vil konfigurere anonymisering for brugernavne, skal du vælge fanen **Beskyttelse af personlige oplysninger** .
 
@@ -312,7 +312,7 @@ Du kan også vælge at aktivere anonymisering for viste brugernavne, når du und
 
 ## <a name="step-8-optional-test-your-communication-compliance-policy"></a>Trin 8 (valgfrit): Test politikken for overholdelse af angivne standarder for kommunikation
 
-Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, er det en god idé at teste den for at sikre, at de betingelser, du har defineret, håndhæves korrekt af politikken. Du kan også [teste dine Microsoft Purview DLP-politikker (Forebyggelse af datatab),](create-test-tune-dlp-policy.md) hvis politikkerne for kommunikation med overholdelse af angivne standarder omfatter følsomme oplysningstyper. Sørg for, at du giver dine politikker tid til at aktivere, så den kommunikation, du vil teste, registreres.
+Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, er det en god idé at teste den for at sikre, at de betingelser, du har defineret, håndhæves korrekt af politikken. Det kan også være en god idé at [teste dine DLP-politikker (Microsoft Purview Forebyggelse af datatab),](create-test-tune-dlp-policy.md) hvis politikkerne for kommunikation med overholdelse af angivne standarder omfatter følsomme oplysningstyper. Sørg for, at du giver dine politikker tid til at aktivere, så den kommunikation, du vil teste, registreres.
 
 Følg disse trin for at teste politikken for overholdelse af angivne standarder for kommunikation:
 
@@ -321,7 +321,7 @@ Følg disse trin for at teste politikken for overholdelse af angivne standarder 
 2. Send en mail, Microsoft Teams chat eller Yammer meddelelse, der opfylder de kriterier, du har defineret i politikken for kommunikation med overholdelse af angivne standarder. Denne test kan være et nøgleord, størrelse på vedhæftede filer, domæne osv. Sørg for, at du finder ud af, om dine konfigurerede betingede indstillinger i politikken er for restriktive eller for milde.
 
     > [!NOTE]
-    > Det kan tage op til 24 timer, før mails behandles fuldt ud i en politik. Det kan tage op til 48 timer, før kommunikation på Microsoft Teams, Yammer og tredjepartsplatforme behandles fuldt ud i en politik.
+    > Det kan tage ca. 24 timer, før mails behandles fuldt ud i en politik. Kommunikation på Microsoft Teams, Yammer og tredjepartsplatforme kan tage ca. 48 timer at behandle en politik fuldt ud.
 
 3. Log på Microsoft 365 som en korrekturlæser, der er angivet i politikken for kommunikation med overholdelse af angivne standarder. Gå til **Overholdelse af** **kommunikationAlerts** >  for at få vist beskederne for dine politikker.
 

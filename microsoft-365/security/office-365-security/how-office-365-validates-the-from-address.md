@@ -19,12 +19,12 @@ description: Administratorer kan få mere at vide om de typer mailadresser, der 
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 92b7072e3127da71f423648c83fc94c17bed7caa
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: c8b9fb5c9e2b67a656948684838b61b4a9c33a8d
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131058"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319544"
 ---
 # <a name="how-eop-validates-the-from-address-to-prevent-phishing"></a>Sådan validerer EOP Fra-adressen for at forhindre phishing
 
@@ -136,4 +136,4 @@ Du kan ikke tilsidesætte fra-adressekravene for udgående mails, som du sender 
 
 ## <a name="other-ways-to-prevent-and-protect-against-cybercrimes-in-microsoft-365"></a>Andre måder at forebygge og beskytte mod cyberkriminelle på i Microsoft 365
 
-Du kan finde flere oplysninger om, hvordan du kan styrke din organisation mod phishing, spam, brud på datasikkerheden og andre trusler, i [Top 10 måder at sikre Microsoft 365 til forretningsplaner](../../admin/security-and-compliance/secure-your-business-data.md) på.
+Du kan finde flere oplysninger om, hvordan du kan styrke din organisation mod phishing, spam, brud på datasikkerheden og andre trusler, i [Bedste praksis for sikring af Microsoft 365 til virksomhedsplaner](../../admin/security-and-compliance/secure-your-business-data.md).

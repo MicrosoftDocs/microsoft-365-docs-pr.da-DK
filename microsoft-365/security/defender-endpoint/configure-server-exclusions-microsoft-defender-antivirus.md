@@ -14,14 +14,13 @@ author: denisebmsft
 ms.author: deniseb
 ms.topic: article
 ms.custom: nextgen
-ms.date: 02/04/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 487c253adc422d69be5ce011ffef1fc1a014474b
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 890be814be75c303aa42feb5cb7a16cb4f5c3bd9
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789772"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320634"
 ---
 # <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server
 
@@ -42,12 +41,12 @@ Ud over serverrolledefinerede automatiske udeladelser kan du tilføje eller fjer
 
 ## <a name="a-few-points-to-keep-in-mind"></a>Et par punkter, du skal være opmærksom på
 
-Vær opmærksom på følgende vigtige punkter:
-
 - Brugerdefinerede udeladelser har forrang frem for automatiske udeladelser.
-- Automatiske undtagelser gælder kun for RTP-scanning (Real-Time Protection). Automatiske udeladelser anvendes ikke under en fuld, hurtig eller on-demand-scanning.
+- Automatiske undtagelser gælder kun for [RTP-scanning (real-time protection).](configure-protection-features-microsoft-defender-antivirus.md) 
+- Automatiske udeladelser anvendes ikke under en [fuld, hurtig eller on-demand-scanning](schedule-antivirus-scans.md#quick-scan-full-scan-and-custom-scan).
 - Brugerdefinerede og duplikerede udeladelser er ikke i konflikt med automatiske udeladelser.
 - Microsoft Defender Antivirus bruger DISM-værktøjer (Deployment Image Servicing and Management) til at bestemme, hvilke roller der er installeret på computeren.
+- Relevante undtagelser skal angives for software, der ikke er inkluderet i operativsystemet.
 - Windows Server 2012 R2 har ikke Microsoft Defender Antivirus som en installerbar funktion. Når du onboarder disse servere til Defender for Endpoint, installerer du Windows Defender Antivirus, og der anvendes standardudeladelser for operativsystemfiler. Udeladelser for serverroller (som angivet nedenfor) gælder dog ikke automatisk, og du skal konfigurere disse udeladelser efter behov. Du kan få mere at vide under [Onboard Windows servere til tjenesten Microsoft Defender for Endpoint](configure-server-endpoints.md).
 
 Denne artikel indeholder en oversigt over undtagelser for Microsoft Defender Antivirus på Windows Server 2016 eller nyere.
@@ -55,8 +54,6 @@ Denne artikel indeholder en oversigt over undtagelser for Microsoft Defender Ant
 Da Microsoft Defender Antivirus er indbygget i Windows Server 2016 og nyere, sker udeladelser for operativsystemfiler og serverroller automatisk. Du kan dog definere brugerdefinerede udeladelser. Du kan også fravælge automatiske undtagelser, hvis det er nødvendigt.
 
 Denne artikel indeholder følgende afsnit:
-
-<br/><br/>
 
 |Afsnit|Beskrivelse|
 |---|---|
@@ -87,8 +84,9 @@ De følgende afsnit indeholder de udeladelser, der leveres med filstier og filty
 
 I dette afsnit vises standardudeladelser for alle roller i Windows Server 2016, Windows Server 2019 og Windows Server 2022.
 
-> [!NOTE]
-> Standardplaceringerne kan være anderledes end dem, der er angivet i denne artikel.
+> [!IMPORTANT]
+> - Standardplaceringer kan være anderledes end de placeringer, der er beskrevet i denne artikel.
+> - Hvis du vil angive udeladelser for software, der ikke er inkluderet som en Windows funktion eller serverrolle, skal du se softwareproducentens dokumentation.
 
 ##### <a name="windows-tempedb-files"></a>Windows filer af typen "temp.edb"
 
@@ -171,8 +169,6 @@ I dette afsnit vises standardudeladelser for alle roller i Windows Server 2016, 
 ##### <a name="hyper-v-exclusions"></a>Hyper-V-udeladelser
 
 I følgende tabel vises de filtypeudeladelser, mappeudeladelser og procesudeladelser, der leveres automatisk, når du installerer Hyper-V-rollen.
-
-<br><br/>
 
 |Udeladelsestype|Detaljerne|
 |---|---|
@@ -381,10 +377,10 @@ Hvis det er nødvendigt, kan du tilføje eller fjerne brugerdefinerede udeladels
 - [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

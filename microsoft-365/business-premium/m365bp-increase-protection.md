@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få hjælp til at øge beskyttelsesniveauet i Microsoft 365 Business Premium
-ms.openlocfilehash: c653e4f84ad3f4dd537ab82382e8a57da7d2876e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2bd00329f160c187325fc696114f0fac4e503656
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099893"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319127"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 
@@ -212,4 +212,6 @@ Du kan forhindre personer i din organisation i at dele deres kalendere. Du kan o
 
 Hvis brugerne har tilladelse til at dele deres kalendere, kan du se [disse instruktioner](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) for, hvordan de deler fra Outlook på internettet.
 
-Nu er det tid til at starte din mission om at [**konfigurere BYOD-enheder**](m365bp-devices-overview.md).
+## <a name="next-steps"></a>Næste trin
+
+Okay, lad os nu starte missionen om at [**konfigurere BYOD-enheder**](m365bp-devices-overview.md).

@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Søg efter indhold, der kan være relevant for en eDiscovery-sag (Standard).
-ms.openlocfilehash: 372f8beba2567c24e8af75acf4d11e3fe6220f2c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d0c565e46860329c4dc6dac741fb0312ddccfd2c
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090401"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318918"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>Søg efter indhold i en eDiscovery-sag (Standard)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når der er oprettet en Microsoft Purview eDiscovery (Standard)-sag, og personer af interesse for sagen er sat i venteposition, kan du oprette og køre en eller flere søgninger efter indhold, der er relevant for sagen. Søgninger, der er knyttet til en eDiscovery-sag (Standard), vises ikke på siden **Indholdssøgning** på Microsoft Purview-overholdelsesportalen. Disse søgninger vises på siden **Søgninger** i eDiscover-kernecasen, som søgninger er knyttet til. Det betyder også, at sagsmedlemmer kun kan få adgang til søgninger, der er knyttet til en sag.
+Når der er oprettet en Microsoft Purview eDiscovery-sag (Standard), og personer af interesse for sagen er sat i venteposition, kan du oprette og køre en eller flere søgninger efter indhold, der er relevant for sagen. Søgninger, der er knyttet til en eDiscovery-sag (Standard), vises ikke på siden **Indholdssøgning** i Microsoft Purview-compliance-portal. Disse søgninger vises på siden **Søgninger** i eDiscovery (Standard), hvis søgninger er knyttet til. Det betyder også, at sagsmedlemmer kun kan få adgang til søgninger, der er knyttet til en sag.
 
 Sådan opretter du en eDiscovery-søgning (Standard):
   

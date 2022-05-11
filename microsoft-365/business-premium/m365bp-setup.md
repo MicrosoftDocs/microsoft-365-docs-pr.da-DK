@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: f888556ea32d9d59c53728b30b629169bc9db45d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9e24e6bada3b1f5aa047692dc4d742a5a006b9af
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093234"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317978"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 
@@ -40,7 +40,7 @@ Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocesse
 | Abonnement | Microsoft 365 Business Premium eller Microsoft 365 til kampagner <br/><br/> Hvis du vil starte en prøveversion eller købe dit abonnement, skal du se følgende artikler: <br/>- [Hent Microsoft 365 Business Premium](get-microsoft-365-business-premium.md)<br/>- [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md) |
 | Tilladelser  | Hvis du vil fuldføre den indledende konfigurationsproces, skal du være global administrator. [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md). |
 | Krav til browser | Microsoft Edge, Safari, Chrome eller Firefox. [Få mere at vide om krav til browser](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources#coreui-heading-uyetipy).  |
-| Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 eller nyere eller Windows Server 2016<br/><br/>**macOS**: En af de tre nyeste versioner af macOS |
+| Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 eller nyere eller Windows Server 2016<br/><br/>**macOS**: En af de tre seneste versioner af macOS |
 
 > [!TIP]
 > Du kan finde flere detaljerede oplysninger om Microsoft 365, Office og systemkrav under [ressourcer Microsoft 365 og Office](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources).
@@ -53,9 +53,9 @@ Microsoft 365 Business Premium indeholder en guidet proces til grundlæggende ko
 - [Tilføjelse af brugere og tildeling af licenser](../admin/add-users/add-users.md)
 - [Opdatering af dine DNS-poster](../admin/setup/setup-business-basic.md#connect-your-domain)
 
-I følgende video vises den guidede konfigurationsproces for Microsoft 365 Business Basic, som fungerer på samme måde i Microsoft 365 Business Premium.<br/><br/>
+I følgende video kan du se den automatiserede konfigurationsproces for Microsoft 365 Business Standard, som fungerer på samme måde i Microsoft 365 Business Premium.<br/><br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vk3W]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ]
 
 > [!TIP]
 > Når du har tilføjet brugere, skal du give dem et link til [vejledningen til hurtig konfiguration af medarbejdere](../admin/setup/employee-quick-setup.md). I vejledningen gennemgås, hvordan du logger på, henter Office apps og gemmer, kopierer og deler filer.
@@ -72,8 +72,13 @@ Hvis du foretrækker at have en Microsoft-partner, der hjælper dig med at få o
 
 4. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
 
-Se også [Find din partner eller forhandler](../admin/manage/find-your-partner-or-reseller.md).
+## <a name="see-also"></a>Se også
 
+- [Find din partner eller forhandler](../admin/manage/find-your-partner-or-reseller.md)
+
+- [Konfigurer selvbetjeningsadgangskoder](../admin/add-users/let-users-reset-passwords.md)
+
+- [Konfigurer selvbetjent gruppeadministration](/azure/active-directory/enterprise-users/groups-self-service-management)
 ## <a name="next-objectives"></a>Næste mål
 
 Når du er færdig med din indledende konfigurationsproces, er dine næste mål at konfigurere dine sikkerheds- og overholdelsesfunktioner:

@@ -24,16 +24,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Konfigurer multifaktorgodkendelse for mobilenheder.
-ms.openlocfilehash: 16f160eb3d489837cdd3588c3e8a68267da9ffc0
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 63f5538882496ed67dacdb3428a6dd02696d21e7
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097486"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320268"
 ---
-# <a name="set-up-multi-factor-authentication-with-your-mobile-device"></a>Konfigurer multifaktorgodkendelse med din mobilenhed
+# <a name="set-up-multifactor-authentication-with-your-mobile-device"></a>Konfigurer multifaktorgodkendelse med din mobilenhed
 
-Multifaktorgodkendelse giver større sikkerhed, da der i stedet for kun at bruge en adgangskode eller en kode via tekst bruges en separat app på din telefon til at bekræfte adgangen. Det gør det svært at hacke. Når der kræves MFA, kan medlemmer af organisationen bruge appen Microsoft Authenticator til sikkert at logge på deres enheder. <br/><br/>
+Multifactor-godkendelse (MFA) giver mere sikkerhed, fordi der i stedet for kun at bruge en adgangskode eller en kode via tekst bruges en separat app på din telefon til at bekræfte adgangen. Det gør det svært at hacke. Når der kræves MFA, kan medlemmer af organisationen bruge appen Microsoft Authenticator til sikkert at logge på deres enheder. <br/><br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MmQR]
 
@@ -41,9 +41,10 @@ Se mere under [Konfigurer multifaktorgodkendelse i Microsoft 365](https://suppor
 
 ## <a name="use-the-outlook-app-on-your-devices"></a>Brug appen Outlook på dine enheder
 
-Når en administrator har krævet, at frontlinjebrugerne bruger MFA, fungerer godkenderappen som en anden form for godkendelse. Vi anbefaler, at du får dem til at installere og bruge appen Outlook til at få adgang til deres Microsoft 365 mail. Se [Konfigurer mobilenheder](../business/set-up-mobile-devices.md) for at få oplysninger om, hvordan du installerer Office apps, herunder Outlook, på en telefon.
+Når en administrator har krævet, at frontlinjebrugerne bruger MFA, fungerer godkenderappen som en anden form for godkendelse. Vi anbefaler, at du får dem til at installere og bruge appen Outlook til at få adgang til deres Microsoft 365 mail. Se [Konfigurer mobilenheder](../admin/setup/set-up-mobile-devices.md) for at få oplysninger om, hvordan du installerer Office apps, herunder Outlook, på en telefon.
 
 ## <a name="next-objective"></a>Næste mål
 
 Følg vejledningen for at [installere Office apps](m365bp-install-office-apps.md).
 
+ 

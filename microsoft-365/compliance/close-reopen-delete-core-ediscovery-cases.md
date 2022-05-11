@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du administrerer eDiscovery-sager (Standard). Dette omfatter lukning af en sag, genåbning af en lukket sag og sletning af en sag.
-ms.openlocfilehash: 27dc46fcfe65b6a39c3a217fd72fcc97037ccb99
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f527d206e7112534db557928daf6ab8942c60d1c
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094003"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318310"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>Luk, genåbn og slet en eDiscovery-sag (Standard)
 
@@ -38,13 +38,13 @@ Når den juridiske sag eller undersøgelse, der understøttes af en eDiscovery-s
 
 - Hvis du lukker en sag, deaktiveres de ventepositioner, der er knyttet til den pågældende sag, kun. Hvis andre ventepositioner placeres på en indholdsplacering (f.eks. en procesførelsesholdning, en opbevaringspolitik eller en venteposition fra en anden eDiscovery(Standard)-sag, bevares disse ventepositioner stadig.
 
-- Sagen vises stadig på siden eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen. Detaljer, ventepositioner, søgninger og medlemmer af en lukket sag bevares.
+- Sagen vises stadig på siden eDiscovery (Standard) i Microsoft Purview-compliance-portal. Detaljer, ventepositioner, søgninger og medlemmer af en lukket sag bevares.
 
 - Du kan redigere en sag, når den er lukket. Du kan f.eks. tilføje eller fjerne medlemmer, oprette søgninger og eksportere søgeresultater. Den primære forskel mellem aktive og lukkede sager er, at eDiscovery-ventepositioner er slået fra, når en sag lukkes.
 
 Sådan lukker du en sag:
   
-1. Klik på **eDiscoveryCore** >  på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
+1. Klik på **eDiscoveryeDiscovery** >  **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
 
 2. Klik på navnet på den sag, du vil lukke.
 
@@ -104,7 +104,7 @@ Sådan sletter du en eDiscovery-venteposition:
 
 Sådan sletter du en sag:
 
-1. Klik på **eDiscoveryCore** >  på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
+1. Klik på **eDiscoveryeDiscovery** >  **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
 
 2. Klik på navnet på den sag, du vil slette.
 

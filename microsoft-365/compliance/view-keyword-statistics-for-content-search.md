@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,20 +14,20 @@ ms.localizationpriority: medium
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery(Standard) sag i Microsoft Purview-overholdelsesportalen.
+description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery-sag (Standard) i Microsoft Purview-compliance-portal.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d96ad67a638ab3917743e64462debd9f2c94ef4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cc8e249f62b0dbfbeaa6bcf32e7873ca2ff5b36d
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092199"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318066"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>Vis statistik for eDiscovery-søgeresultater
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard)-sag, kan du få vist statistikker om de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til oversigten over de anslåede søgeresultater, der vises på søgevinduets side), forespørgselsstatistikken, f.eks. antallet af indholdsplaceringer med elementer, der stemmer overens med søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
+Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard), kan du få vist statistikker om de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til oversigten over de anslåede søgeresultater, der vises på søgevinduets side), forespørgselsstatistikken, f.eks. antallet af indholdsplaceringer med elementer, der stemmer overens med søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
   
 Du kan også bruge listen over nøgleord til at konfigurere en søgning til at returnere statistikker for hvert nøgleord i en søgeforespørgsel. Her kan du sammenligne antallet af resultater, der returneres af hvert nøgleord i en forespørgsel.
   
@@ -37,13 +37,13 @@ Du kan også downloade søgestatistik til en CSV-fil. Det giver dig mulighed for
 
 Sådan får du vist statistikker for en indholdssøgning eller en søgning, der er knyttet til en eDiscovery-sag (Standard).
   
-1. På Microsoft Purview-overholdelsesportalen skal du klikke på **Vis alle** og derefter gøre et af følgende:
+1. Klik på **Vis alle** i Microsoft Purview-compliance-portal, og benyt derefter en af følgende fremgangsmåder:
 
    - Klik på **Indholdssøgning** , og vælg derefter en søgning for at få vist pop op-siden.
 
      ELLER
 
-   - Klik på **eDiscoveryCore** > , vælg en sag, og vælg derefter en søgning på fanen **Søgninger** for at få vist pop op-siden.
+   - Klik på **eDiscoveryeDiscovery** >  **(Standard),** vælg en sag, og vælg derefter en søgning på fanen **Søgninger** for at få vist pop op-siden.
 
 2. Klik på fanen **Søg efter statistik** på pop op-siden i den valgte søgning.
   

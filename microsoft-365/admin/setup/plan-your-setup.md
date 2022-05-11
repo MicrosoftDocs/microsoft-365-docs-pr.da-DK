@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: eb926624-018b-4486-bf11-5fba6ee4d645
 description: Få mere at vide om kravene og overvejelserne i forbindelse med flytningen til Microsoft 365 til virksomheder.
-ms.openlocfilehash: 9a8ca80a9559d4ecdb988c515c20add4676e602d
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: a5f777a411f82de30c1d7dc69f07f92eadbbedce
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128886"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317466"
 ---
 # <a name="plan-your-setup-of-microsoft-365-for-business"></a>Planlæg din konfiguration af Microsoft 365 til virksomheder
 
@@ -149,4 +149,4 @@ For større organisationer, eller hvis du starter fra Skype for Business, det lo
 
 ## <a name="see-also"></a>Se også
 
-[Top 10 måder at sikre Microsoft 365 til forretningsplaner på](../security-and-compliance/secure-your-business-data.md)
+[Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../security-and-compliance/secure-your-business-data.md)

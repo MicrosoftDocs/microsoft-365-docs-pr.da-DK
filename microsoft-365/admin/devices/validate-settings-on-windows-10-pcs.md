@@ -27,12 +27,12 @@ search.appverid:
 - MET150
 ms.assetid: fae8819d-7235-495f-9f07-d016f545887f
 description: Få mere at vide om, hvordan du bekræfter, at beskyttelsesindstillinger for Microsoft 365 til virksomhedsapps trådte i kraft på dine brugeres Windows 10 enheder.
-ms.openlocfilehash: c107741d87c63472310352b58872ec0b6ecc1d4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cbb26461da9fcc73f57d219c36ef04d97e7fc209
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090657"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317547"
 ---
 # <a name="validate-device-protection-settings-for-windows-10-pcs"></a>Valider indstillinger for enhedsbeskyttelse for Windows 10 pc'er
 
@@ -67,5 +67,5 @@ Når du [har konfigureret enhedspolitikker](../../business-premium/m365bp-protec
 
 [Microsoft 365 til forretningsdokumentation og -ressourcer](/admin)
 
-[Angiv enhedskonfigurationer for Windows 10 pc'erTop](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md)
- [10 måder at sikre Microsoft 365 til forretningsplaner](../../admin/security-and-compliance/secure-your-business-data.md) på
+[Angiv enhedskonfigurationer for Windows 10](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md) PCsBest-praksisser 
+[for sikring af Microsoft 365 til forretningsplaner](../../admin/security-and-compliance/secure-your-business-data.md)

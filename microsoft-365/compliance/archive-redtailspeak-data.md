@@ -12,20 +12,20 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en connector til at importere og arkivere Red tail Speak-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 14dd732a0ca268073a22aafa5e47e0fdce22d91f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: fb2e3bcb2bc8725d7cd452bd091bb18408a4224e
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095944"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320734"
 ---
 # <a name="set-up-a-connector-to-archive-redtail-speak-data"></a>Konfigurer en connector til arkivering af Redtail Speak-data
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug en Veritas-connector på Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra Redtail Speak til brugerpostkasser i din Microsoft 365 organisation. Veritas giver dig en [Redtail Speak-connector](https://globanet.com/redtail/) , der er konfigureret til at hente elementer fra din organisations SFTP-server, hvor varerne modtages fra Redtail. Connectoren konverterer indholdet fra Redtail Speak til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Redtail Speak til brugerpostkasser i din Microsoft 365 organisation. Veritas giver dig en [Redtail Speak-connector](https://globanet.com/redtail/) , der er konfigureret til at hente elementer fra din organisations SFTP-server, hvor varerne modtages fra Redtail. Connectoren konverterer indholdet fra Redtail Speak til et mailformat og importerer derefter disse elementer til brugerens postkasse i Microsoft 365.
 
-Når Redtail Speak-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Redtail Speak-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når Redtail Speak-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Redtail Speak-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-the-redtail-speak-data"></a>Oversigt over arkivering af Redtail Speak-dataene
 
@@ -47,9 +47,9 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - I trin 2 skal du angive din organisations SFTP-server. Dette trin er nødvendigt, så Veritas Merge1 kan kontakte det for at indsamle Redtail Speak-data via SFTP.
 
-- Den bruger, der opretter connectoren Redtail Speak Importer i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter connectoren Redtail Speak Importer i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-redtail-speak-connector"></a>Trin 1: Konfigurer Redtail Speak-connectoren
 
@@ -87,7 +87,7 @@ Når du har oprettet Redtail Speak-connectoren, kan du få vist connectorstatuss
 
 2. Vælg fanen **Forbindelser,** og vælg derefter connectoren **Redtail Speak** for at få vist pop op-siden. På denne side vises egenskaber og oplysninger om connectoren.
 
-3. Under **Forbindelsesstatus med kilde** skal du vælge linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
+3. Under **Forbindelsesstatus med kilde** skal du vælge linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet. Du kan finde flere oplysninger under [Få vist administratorlogge for dataconnectors](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Kendte problemer
 

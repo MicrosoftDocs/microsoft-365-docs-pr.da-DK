@@ -1,5 +1,5 @@
 ---
-title: Sammenlign forskellige metoder til beskyttelse af enheder og apps
+title: Sammenlign forskellige databeskyttelsesmetoder for enheder og apps
 f1.keywords:
 - NOCSH
 ms.author: sharik
@@ -18,46 +18,46 @@ ms.custom:
 search.appverid:
 - MET150
 description: Vælg mellem forskellige MDM- og MAM-metoder.
-ms.openlocfilehash: 0fa7389fc68523cf2db253c9e4e9f64cc85139a0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 49c8fe8e61026e56b1698d7da2fdbac07896c858
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591722"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317488"
 ---
-# <a name="options-for-protecting-your-devices-and-app-data"></a>Indstillinger til beskyttelse af dine enheder og appdata
+# <a name="options-for-protecting-your-devices-and-app-data"></a>Muligheder for at beskytte dine enheder og appdata
 
-Du har flere måder at sikre dine organisationers enheder og data på dem med Microsoft 365 til virksomheder og virksomheder. Du kan bruge følgende enkeltstående planer:
+Du har flere måder at beskytte dine organisationers enheder og data på med Microsoft 365 for virksomheder og virksomheder. Du kan bruge følgende separate planer:
 
 - Intune (en del af Microsoft Endpoint Management)
 - Azure Active Directory Premium planer.
-- Grundlæggende mobilitet og sikkerhed (inkluderet i de fleste Microsoft 365 for business- og enterprise-planer) Eller brug de abonnementer, der indeholder nogle eller alle de tidligere enkeltstående planer.
-- Microsoft Defender for Business (inkluderet i Microsoft 365 Business Premium, også tilgængelig som enkeltstående plan)
-- Et Microsoft 365 Business Premium-abonnement, som omfatter sikkerhed og trusselsbeskyttelse til små virksomheder under 300 brugere.
+- Basic Mobility and Security (inkluderet i de fleste Microsoft 365 for business- og enterprise-planer) Eller brug de abonnementer, der omfatter nogle eller alle de tidligere separate planer.
+- Microsoft Defender til virksomheder (inkluderet i Microsoft 365 Business Premium, også tilgængelig som en separat plan)
+- Et Microsoft 365 Business Premium abonnement, som omfatter sikkerhed og trusselsbeskyttelse for mindre virksomheder under 300 brugere.
 - Microsoft 365 Enterprise planer, der omfatter avanceret sikkerhed og trusselsbeskyttelse.
 
 ## <a name="device-management-options"></a>Indstillinger for enhedshåndtering
 
-- **Grundlæggende mobilitet og sikkerhed** tilbydes med de fleste Microsoft 365-planer, og er den eneste indbyggede valgmulighed, der tilbydes til Microsoft 365 Business Standard og Microsoft 365 Business Basic. Få mere at vide under [tilgængeligheden af Grundlæggende mobilitet og sikkerhed](../basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md#availability-of-basic-mobility-and-security-and-intune). 
+- **Basic Mobility and Security** tilbydes med de fleste Microsoft 365 planer og er det eneste indbyggede valg, der tilbydes til Microsoft 365 Business Standard og Microsoft 365 Business Basic. Du kan få flere oplysninger under [Tilgængeligheden af grundlæggende mobilitet og sikkerhed](../basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md#availability-of-basic-mobility-and-security-and-intune). 
 
-    Hvis du enten har Microsoft 365 Business Basic eller Microsoft 365 Business Standard, kan du også købe Intune, hvis din organisation har mere komplekse sikkerhedsbehov.
+    Hvis du har enten Microsoft 365 Business Basic eller Microsoft 365 Business Standard, kan du også købe Intune, hvis din organisation har mere komplekse sikkerhedsbehov.
  
-- **Microsoft Intune** er en enkeltstående plan, der også følger med nogle Microsoft 365 for business- eller enterprise-planer. Hvis du har Intune enten som en enkeltstående enhed eller en del af dit abonnement, giver det mulighed for at finjustere administrationen af din enhed og app-data. Du kan finde flere oplysninger om Microsoft 365 i [Tilgængelighed af Intune](../basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md#availability-of-basic-mobility-and-security-and-intune).
+- **Microsoft Intune** er en separat plan, der også er inkluderet i nogle Microsoft 365 til virksomhedsplaner eller virksomhedsplaner. Hvis du har Intune enten som enkeltstående eller en del af dit abonnement, giver det mulighed for at finjustere din enhed og administration af appdata. Du kan få flere oplysninger om tilgængelighed med Microsoft 365 under [Tilgængelighed af Intune](../basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md#availability-of-basic-mobility-and-security-and-intune).
 
-    Microsoft Intune er en skybaseret tjeneste, der fokuserer på administration af mobilenheder (MDM) og administration af mobilapps (MAM). Du styrer, hvordan organisationens enheder bruges, herunder mobiltelefoner, tablets og bærbare computere. Du kan også konfigurere bestemte politikker til at styre programmer. Du kan finde flere oplysninger [Microsoft Intune dokumentationen](/mem/intune/).
+    Microsoft Intune er en cloudbaseret tjeneste, der fokuserer på administration af mobilenheder (MDM) og administration af mobilapps (MAM). Du styrer, hvordan organisationens enheder bruges, herunder mobiltelefoner, tablets og bærbare computere. Du kan også konfigurere specifikke politikker til at styre programmer. Du kan få flere oplysninger [i dokumentationen til Microsoft Intune](/mem/intune/).
 
-- **Azure Active Directory (AD) Premium-planer** er enkeltstående planer, som også omfatter nogle af Microsoft 365 til virksomheder og virksomheder. Få mere at vide under [Azure AD-priser](https://azure.microsoft.com/pricing/details/active-directory/).
+- **Azure Active Directory (AD) Premium** planer er separate planer, der også følger med nogle af de Microsoft 365 for virksomheder og virksomhedsplaner. Du kan finde flere oplysninger under [Azure AD priser](https://azure.microsoft.com/pricing/details/active-directory/).
 
-     Azure AD Premium P1 og Azure AD Premium P2 giver dig mulighed for at angive betingede adgangsfunktioner, nulstilling af adgangskode via selvbetjening osv. Du kan finde flere oplysninger om egenskaberne for Premium på siden [Azure AD-priser](https://azure.microsoft.com/pricing/details/active-directory/).
+     Azure AD Premium P1 og Azure AD Premium P2 giver dig mulighed for at angive funktioner for betinget adgang, selvbetjent nulstilling af adgangskode osv. Du kan finde flere oplysninger om funktionerne i de Premium planer på siden [med Azure AD priser](https://azure.microsoft.com/pricing/details/active-directory/).
 
-- **Microsoft 365 Business Premium** omfatter Intune og Azure Active Directory Premium P1, Microsoft Defender Office 365 Plan 1 og Microsoft Defender for Business. 
+- **Microsoft 365 Business Premium** omfatter Intune og Azure Active Directory Premium P1, Microsoft Defender for Office 365 Plan 1 og Microsoft Defender til virksomheder. 
  
-    Microsoft 365 Business Premium et sæt politikskabeloner til sikring af dine enheder og appdata. Den tilbyder et godt niveau af sikkerhed og trusselsbeskyttelse til de fleste virksomheder under 300 brugere. Du kan finde flere oplysninger [Microsoft 365 Business Premium Oversigt](../../business-premium/index.md) over [og Oversigt over Microsoft Defender for Business](../../security/defender-business/mdb-overview.md).
+    Microsoft 365 Business Premium tilbyder et sæt politikskabeloner til beskyttelse af dine enheder og appdata. Det tilbyder et godt sikkerhedsniveau og trusselsbeskyttelse for de fleste virksomheder under 300 brugere. Du kan få flere oplysninger [under Microsoft 365 Business Premium Oversigt](../../business-premium/index.md) og [Oversigt over Microsoft Defender til virksomheder](../../security/defender-business/mdb-overview.md).
 
-- **Microsoft 365 til virksomhedsabonnementer** inkluderer Microsoft Intune og E5 omfatter også Azure AD Premium-planerne 1 og 2.
+- **Microsoft 365 til virksomhedsabonnementer** omfatter Microsoft Intune, og E5 omfatter også Azure AD Premium-abonnement 1 og 2.
 
-    Microsoft 365 E5 giver det højeste niveau af sikkerhed og trusselsbeskyttelse af alle Microsoft 365-abonnementer. Du kan finde flere oplysninger [Microsoft 365 for at få en virksomhedsoversigt](../../enterprise/microsoft-365-overview.md).
+    Microsoft 365 E5 tilbyder det højeste niveau af sikkerhed og trusselsbeskyttelse af alle de Microsoft 365 abonnementer. Du kan få flere oplysninger [under Microsoft 365 for virksomhedsoversigt](../../enterprise/microsoft-365-overview.md).
 
 ## <a name="see-also"></a>Se også
 
-[De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](../security-and-compliance/secure-your-business-data.md)
+[Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../security-and-compliance/secure-your-business-data.md)

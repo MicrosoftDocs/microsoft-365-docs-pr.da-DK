@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: ee73b5a83a669653087bf787061e8ad59b23ed18
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2c218cd2b0f04201f46155a72a916cc7676aaddb
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095206"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320812"
 ---
 # <a name="device-groups-in-microsoft-365-business-premium"></a>Enhedsgrupper i Microsoft 365 Business Premium
 
@@ -70,6 +70,8 @@ Du kan oprette en ny enhedsgruppe, mens du er i gang med at oprette eller redige
 9. Gennemse og rediger indstillingerne efter behov på siden **Konfigurationsindstillinger** , og vælg derefter **Næste**. Du kan finde flere oplysninger om disse indstillinger [under Forstå næste generations konfigurationsindstillinger i Microsoft Defender til virksomheder](../security/defender-business/mdb-next-gen-configuration-settings.md).
 
 10. Gennemse alle indstillingerne i trinnet **Gennemse din politik** , foretag de nødvendige ændringer, og vælg derefter **Opret politik** eller **Opdater politik**.
+
+## <a name="next-steps"></a>Næste trin
 
 Nu, hvor du har fuldført dine primære missioner, kan du konfigurere dine [svarteams](m365bp-security-incident-management.md) og [vedligeholde dit miljø](m365bp-maintain-environment.md).
 

@@ -18,24 +18,24 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Beskriver, hvordan du eksporterer og downloader indhold fra en eDiscovery -sag (Standard) i Microsoft 365.
-ms.openlocfilehash: fb142a735d30a59735bd4f9a6370543a92f3d926
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 550bdda2c8b2f8afb0e7b4934f5337d7ee323d3a
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095834"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318652"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>Eksportér indhold fra en eDiscovery-sag (Standard)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når en søgning, der er knyttet til en eDiscovery-sag (Standard), er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
+Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard) sag, er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
   
 ## <a name="export-search-results"></a>Eksportér søgeresultater
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
-2. I venstre navigationsrude i overholdelsesportalen skal du vælge **Vis alle** og derefter vælge **eDiscoveryCore** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
+2. I venstre navigationsrude i overholdelsesportalen skal du vælge **Vis alle** og derefter vælge **eDiscoveryeDiscovery** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**(Standard)**</a>.
 
 3. Klik på navnet på den sag, du vil oprette venteposition for, på siden **eDiscovery (Standard** ).
 

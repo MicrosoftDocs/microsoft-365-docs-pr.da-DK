@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: high
 ms.collection: M365-security-compliance
+ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
-ms.custom: seo-marvel-may2020
-ms.openlocfilehash: d025dc7637b9c7b494a5bff3447fe4429ba24701
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: d509d878b244054138e4e95329d00759719e131d
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302195"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319032"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
@@ -30,7 +30,7 @@ ms.locfileid: "65302195"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Selvom du kan oprette og administrere opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
+Selvom du kan oprette og administrere opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
 
 - Du kan masseoprete opbevaringsmærkater ved at importere de relevante oplysninger fra et regneark.
 
@@ -52,15 +52,13 @@ Hvis du vil have adgang til filplanen, skal du have en af følgende administrato
 
 - Kun visningsstyring
 
-På Microsoft Purview-overholdelsesportalen skal du gå til **LøsningPostadministrationFilplan** >  > :
-
-![Filplanside](../media/compliance-file-plan.png). 
+I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) gå til **LøsningPostadministrationFilplan** >  > .
 
 Hvis **Datastyring** ikke vises i navigationsruden, skal du først rulle ned og vælge **Vis alle**.
 
 ## <a name="navigating-your-file-plan"></a>Navigering i filplanen
 
-Hvis du allerede har oprettet opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, vises disse mærkater automatisk i din filplan. 
+Hvis du allerede har oprettet opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, vises disse mærkater automatisk i filplanen. 
 
 Hvis du på samme måde nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **Administration af datalivscyklus** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
 
@@ -86,6 +84,9 @@ Alle kolonner undtagen navnet **kan** vises eller skjules ved at vælge indstill
 - **Låses op som standard** – udrulles i øjeblikket – identificerer, om det element, der er markeret som en post, låses op, når mærkaten anvendes. Gyldige værdier:
     - Nej
     - Ja
+
+- **Relabel til** – i øjeblikket udrulning – identificerer, om mærkaten er konfigureret til at anvende en anden mærkat ved slutningen af opbevaringsperioden. Gyldige værdier:
+    - Tomt eller det valgte navn
 
 - **Opbevaringsvarighed** identificerer opbevaringsperioden. Gyldige værdier:
     - Dage
@@ -153,9 +154,7 @@ Det kan dog tage op til to dage, før indholdsoversigten viser de elementer, der
 
 Fra din filplan kan du eksportere oplysningerne om alle opbevaringsmærkater til en .csv fil for at hjælpe dig med at facilitere periodiske gennemgange af overholdelse af angivne standarder med interessenter i forbindelse med datastyring i din organisation.
 
-Sådan eksporterer du alle opbevaringsmærkater: Klik på **Eksportér** på siden **Filplan**:
-
-![Mulighed for at eksportere filplanen.](../media/compliance-file-plan-export-labels.png)
+Sådan eksporterer du alle opbevaringsmærkater: Klik på **Eksportér** på siden **Filplan**.
 
 Der åbnes en *.csv fil, der indeholder alle eksisterende opbevaringsmærkater. Eksempel:
 
@@ -201,7 +200,7 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 |Ejendom|Type|Påkrævet|Gyldige værdier|
 |:-----|:-----|:-----|:-----|
 |Navn|String|Ja|Denne egenskab angiver navnet på opbevaringsmærkaten og skal være entydig i din lejer. Understøttede tegn til import: a-z, A-Z, 0-9, bindestreg (-) og mellemrumstegnet.|
-|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten på Microsoft Purview-overholdelsesportalen.|
+|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten i Microsoft Purview-compliance-portal.|
 |Bemærkninger|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for brugerne. Denne beskrivelse vises, når brugerne holder markøren over mærkaten i apps, f.eks. Outlook, SharePoint og OneDrive. Hvis du lader denne egenskab være tom, vises der en standardbeskrivelse, som forklarer indstillingerne for opbevaring af mærkaten. |
 |IsRecordLabel|String|Nej, medmindre **lovgivningen** er **SAND**|Denne egenskab angiver, om etiketten markerer indholdet som en post. Gyldige værdier er: </br>**TRUE**: Etiketten markerer elementet som en post, og elementet kan derfor ikke slettes. </br>**FALSE**: Etiketten markerer ikke indholdet som en post. Dette er standardværdien. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction, RetentionDuration og RetentionType også angives.|
 |Opbevaringshandling|String|Nej, medmindre **RetentionDuration**, **RetentionType** eller **ReviewerEmail** er angivet|Denne egenskab angiver, hvilken handling der skal udføres, når den værdi, der er angivet af egenskaben RetentionDuration (hvis angivet), udløber. Gyldige værdier er: </br>**Slet**: Elementer, der er ældre end den værdi, der er angivet af egenskaben RetentionDuration, slettes.</br>**Bevar**: Bevar elementer i den varighed, der er angivet af egenskaben RetentionDuration, og gør derefter ingenting, når varighedsperioden udløber. </br>**KeepAndDelete**: Bevar elementer i den varighed, der er angivet i egenskaben RetentionDuration, og slet dem derefter, når varighedsperioden udløber. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionDuration og RetentionType også angives. |

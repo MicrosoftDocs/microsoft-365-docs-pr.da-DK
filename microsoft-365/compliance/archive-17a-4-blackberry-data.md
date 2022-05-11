@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Lær, hvordan du konfigurerer og bruger en 17a-4 BlackBerry DataParser-connector til at importere og arkivere BlackBerry-data i Microsoft 365.
-ms.openlocfilehash: 93b876a8091007d99584269c7d9b3114b72d18fe
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c6dff24ecea12309363dce8469a148a2183493af
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098058"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317178"
 ---
 # <a name="set-up-a-connector-to-archive-blackberry-data"></a>Konfigurer en connector til arkivering af BlackBerry-data
 
@@ -25,7 +25,7 @@ ms.locfileid: "65098058"
 
 Brug [BlackBerry DataParser](https://www.17a-4.com/BlackBerry-dataparser/) fra 17a-4 LLC til at importere og arkivere BlackBerry-virksomhedsdata til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en BlackBerry-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. BlackBerry DataParser-connectoren konverterer BlackBerry-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Når BlackBerry-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikationsoverholdelse. Brug af en BlackBerry-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når BlackBerry-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en BlackBerry-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-blackberry-data"></a>Oversigt over arkivering af BlackBerry-data
 
@@ -37,7 +37,7 @@ I følgende oversigt forklares det, hvordan du bruger en dataconnector til at ar
 
 2. Regelmæssigt indsamles BlackBerry-varer af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. BlackBerry DataParser-connectoren, som du opretter på Microsoft Purview-overholdelsesportalen, opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den BlackBerry DataParser-connector, du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 
 4. Der oprettes en undermappe i mappen Indbakke med navnet **BlackBerry DataParser** i brugerpostkasserne, og BlackBerry-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle BlackBerry-elementer indeholder denne ejendom, som udfyldes med mailadressen på hver deltager.
 
@@ -47,7 +47,7 @@ I følgende oversigt forklares det, hvordan du bruger en dataconnector til at ar
 
 - Den bruger, der opretter BlackBerry DataParser-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-blackberry-dataparser-connector"></a>Trin 1: Konfigurer en BlackBerry DataParser-connector
 
@@ -79,7 +79,7 @@ Når du har oprettet en BlackBerry DataParser-connector, kan du få vist connect
 
 2. Klik på fanen **Forbindelser,** og vælg derefter den BlackBerry DataParser-connector, du oprettede, for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet.
 
 ## <a name="known-issues"></a>Kendte problemer
 

@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en Slack eDiscovery-dataconnector, der leveres af Microsoft, til at importere og arkivere chatdata.
-ms.openlocfilehash: dc63673ae51d4ea47931a8a27acd7ef2191397d7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 65d7b666390c132995882ca4e8d027064482df13
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093081"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320670"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Konfigurer en connector til at arkivere Slack eDiscovery-data (prøveversion)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af angivne standarder, f.eks. procesførelse, Microsoft Purview eDiscovery (Premium), kommunikationoverholdelse og opbevaringsindstillinger for Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af regler og standarder, f.eks. procesførelse, Microsoft Purview eDiscovery (Premium), overholdelse af kommunikation og opbevaringsindstillinger for Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Oversigt over arkivering af Slack eDiscovery-data
 
@@ -45,7 +45,7 @@ I følgende oversigt forklares processen med at bruge en Microsoft-dataconnector
 
 - Hent brugernavnet og adgangskoden til din organisations Slack-virksomhedskonto. Du kan bruge disse legitimationsoplysninger til at logge på denne konto, når du opretter dataconnectoren. Det anbefales også, at du har automatiseret brugerklargøring i din Slack-organisation konfigureret til at bruge enkeltlogon (SSO). [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Den bruger, der opretter Slack eDiscovery-connectoren, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** på Microsoft Purview-overholdelsesportalen. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Slack eDiscovery-connectoren, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft Purview-compliance-portal. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="step-1-create-a-slack-ediscovery-connector"></a>Trin 1: Opret en Slack eDiscovery-connector
 
@@ -121,7 +121,7 @@ Når du har oprettet Slack eDiscovery-connectoren, kan du få vist connectorstat
 
 2. Klik på fanen **Forbindelser,** og vælg derefter **Slack eDiscovery-connectoren** for at få vist pop op-siden, som indeholder egenskaberne og oplysningerne om connectoren.
 
-3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder data, der er importeret til Microsoft-cloudmiljøet.
+3. Under **Forbindelsesstatus med kilde** skal du klikke på linket **Downloadlog** for at åbne (eller gemme) statusloggen for connectoren. Denne log indeholder oplysninger om de data, der er importeret til Microsoft-cloudmiljøet. Du kan finde flere oplysninger under [Få vist administratorlogge for dataconnectors](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Kendte problemer
 

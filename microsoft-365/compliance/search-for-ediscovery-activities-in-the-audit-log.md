@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,22 +15,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgning, eDiscovery (Standard) og eDiscovery-opgaver (Premium) på Microsoft Purview-overholdelsesportalen.
+description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgning, eDiscovery (Standard) og eDiscovery-opgaver (Premium) i Microsoft Purview-compliance-portal.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6a11c8a939954b7319b88b45ea8f0d43b1b72442
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0b94c53d497b5e300cdb0a08dbb5f02daec28c19
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090855"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317510"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Søg efter eDiscovery-aktiviteter i overvågningsloggen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)), der udføres i Microsoft Purview-overholdelsesportalen eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
+Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)), der udføres i Microsoft Purview-compliance-portal eller ved at køre de tilsvarende PowerShell-cmdlet'er, er logført i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
   
-- Oprettelse og administration af core- og eDiscovery-sager (Premium)
+- Oprettelse og administration af sager med eDiscovery (Standard) og eDiscovery (Premium)
 
 - Oprettelse, start og redigering af indholdssøgninger
 

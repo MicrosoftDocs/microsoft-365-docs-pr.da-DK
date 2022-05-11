@@ -1,5 +1,5 @@
 ---
-title: Gennemse registrerede trusler, og reaktion
+title: Gennemgå registrerede trusler, og udfør handlinger
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -14,109 +14,109 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
-description: Få mere at vide om, hvordan du gennemser og administrerer trusler, der registreres af Microsoft Defender Antivirus på Windows 10 enheder.
-ms.openlocfilehash: c836554445f56a9a915885d55a4490c6bb5bd1a9
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Få mere at vide om, hvordan du gennemser og administrerer trusler, der er registreret af Microsoft Defender Antivirus på dine Windows 10 enheder.
+ms.openlocfilehash: 9b819edc21d6cfcac663c54e15b1a060b2b16fa2
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64633210"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319303"
 ---
-# <a name="review-detected-threats-and-take-action"></a>Gennemse registrerede trusler, og reaktion
+# <a name="review-detected-threats-and-take-action"></a>Gennemgå registrerede trusler, og udfør handlinger
 
-Så snart der registreres en skadelig fil eller software, Microsoft Defender Antivirus den og forhindrer den i at køre. Og med cloud-leveret beskyttelse slået til føjes nyligt registrerede trusler til antivirus- og antimalwareprogrammet, så dine andre enheder og brugere også er beskyttet.
+Så snart der registreres en skadelig fil eller software, blokerer Microsoft Defender Antivirus den og forhindrer den i at køre. Og med skybaseret beskyttelse slået til, føjes nyligt registrerede trusler til antivirus- og antimalwareprogrammet, så dine andre enheder og brugere også er beskyttet.
 
-Microsoft Defender Antivirus registrerer og beskytter mod følgende slags trusler:
+Microsoft Defender Antivirus registrerer og beskytter mod følgende typer trusler:
 
 - Virus, malware og webbaserede trusler på enheder
-- Forsøg på phishing
-- Datatyveriforsøg
+- Phishingforsøg
+- Forsøg på datatyveri
 
-Som it-fagperson/administrator kan du få vist oplysninger om trusselsregistreringer på [tværs Windows 10](/mem/intune/enrollment/device-enrollment) enheder, der er Intune i Microsoft 365 Administration. Du får vist oversigtsoplysninger, f.eks.:
+Som it-ekspert/administrator kan du få vist oplysninger om trusselsregistreringer på tværs [af Windows 10 enheder, der er tilmeldt Intune](/mem/intune/enrollment/device-enrollment) i Microsoft 365 Administration. Du får vist oversigtsoplysninger, f.eks.:
 
-- Hvor mange enheder, der skal beskyttes mod antivirus
-- Hvor mange enheder, der ikke overholder sikkerhedspolitikkerne
-- Hvor mange trusler, der i øjeblikket er aktive, afhjælpes eller løses
+- Hvor mange enheder har brug for antivirusbeskyttelse
+- Hvor mange enheder, der ikke overholder sikkerhedspolitikker
+- Hvor mange trusler der i øjeblikket er aktive, afhjælpes eller løses
 
-Du har flere muligheder for at få vist specifikke oplysninger om trusselsregistreringer og enheder:
+Du har flere muligheder for at få vist specifikke oplysninger om trusselsregistreringer og -enheder:
 
-- Siden **Aktive** enheder i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Se [Administrer trusselsregistreringer på siden Aktive enheder](#manage-threat-detections-on-the-active-devices-page) i denne artikel.
+- Siden **Aktive enheder** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Se [Administrer trusselsregistreringer på siden Aktive enheder](#manage-threat-detections-on-the-active-devices-page) i denne artikel.
 - Siden **Aktive trusler** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Se [Administrer trusselsregistreringer på siden Aktive trusler](#manage-threat-detections-on-the-active-threats-page) i denne artikel.
-- Siden **Antivirus** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">Microsoft Endpoint Manager</a>. Se [Administrer trusselsregistreringer Microsoft Endpoint Manager](#manage-threat-detections-in-microsoft-endpoint-manager) denne artikel.
+- Siden **Antivirus** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">Microsoft Endpoint Manager</a>. Se [Administrer trusselsregistreringer i Microsoft Endpoint Manager](#manage-threat-detections-in-microsoft-endpoint-manager) i denne artikel.
 
-Du kan få mere at vide [under Trusler, der er registreret af Microsoft Defender Antivirus](threats-detected-defender-av.md).
+Du kan få mere at vide under [Trusler registreret af Microsoft Defender Antivirus](threats-detected-defender-av.md).
 
-## <a name="manage-threat-detections-on-the-active-devices-page"></a>Administrer trusselsregistreringer på **siden Aktive** enheder
+## <a name="manage-threat-detections-on-the-active-devices-page"></a>Administrer trusselsregistreringer på siden **Aktive enheder**
 
 Følgende procedure gælder for kunder, der har Microsoft 365 Business Premium.
 
-1. Gå til Microsoft 365 Administration, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> og log på.
+1. Gå til Microsoft 365 Administration på , og log på<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
 
-2. På navigationssiden skal du vælge **EnhederAktivér** >  enheder. Du får vist en liste over aktive enheder og detaljer, f.eks. beskyttelsesstatus, antivirustilstand (AV)-beskyttelsestilstand og antallet af registrerede aktive trusler.
+2. Vælg **EnhederAktive** >  enheder på navigationssiden. Du får vist en liste over aktive enheder og oplysninger, f.eks. beskyttelsesstatus, beskyttelsestilstand for antivirus (AV) og antallet af registrerede aktive trusler.
 
-3. Vælg en enhed for at få vist flere oplysninger om enheden og tilgængelige handlinger. Der åbnes et pop op-vindue med anbefalinger og tilgængelige handlinger, f.eks Opdateringspolitik **, Opdater** **antivirus****, Kør** hurtig scanning, **Kør fuld scanning** og meget mere.
+3. Vælg en enhed for at få vist flere oplysninger om den pågældende enhed og tilgængelige handlinger. Der åbnes et pop op-vindue med anbefalinger og tilgængelige handlinger, f.eks **. Opdateringspolitik**, **Opdater antivirus**, **Kør hurtig scanning**, **Kør fuld scanning** med mere.
 
-## <a name="manage-threat-detections-on-the-active-threats-page"></a>Administrer trusselsregistreringer på **siden Aktive** trusler
+## <a name="manage-threat-detections-on-the-active-threats-page"></a>Administrer trusselsregistreringer på siden **Aktive trusler**
 
-Følgende procedure gælder for kunder, der har Microsoft 365 Business Premium. [Windows 10 enheder skal være sikret](../setup/secure-win-10-pcs.md) [og tilmeldt Intune](/mem/intune/enrollment/windows-enrollment-methods).
+Følgende procedure gælder for kunder, der har Microsoft 365 Business Premium. [Windows 10 enheder skal sikres](../setup/secure-win-10-pcs.md) og [være tilmeldt Intune](/mem/intune/enrollment/windows-enrollment-methods).
 
 > [!NOTE]
-> Siden **Microsoft Defender Antivirus** aktive **trusler rulles** ud i faser, så du har muligvis ikke øjeblikkelig adgang til dem.
+> Siden **Microsoft Defender Antivirus** kort og **aktive trusler** udrulles i faser, så du har muligvis ikke umiddelbar adgang til dem.
 
-1. Gå til Microsoft 365 Administration, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> og log på.
+1. Gå til Microsoft 365 Administration på , og log på<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
 
-2. På kortet **Microsoft Defender Antivirus** skal du **vælge Vis aktive trusler**. (Du kan også vælge Tilstand i **navigationsruden** >  **Trusler & antivirus**.)
+2. Vælg **Få vist aktive trusler** på kortet **Microsoft Defender Antivirus**. (Du kan også vælge **Tilstand** >  i navigationsruden **Trusler & antivirus**).
 
-3. På siden **Aktive trusler skal du** vælge en registreret trussel for at få mere at vide om den. Der åbnes en pop op-vindue med oplysninger om denne trussel, herunder hvilke enheder der er påvirket.
+3. På siden **Aktive trusler** skal du vælge en registreret trussel for at få mere at vide om den. Der åbnes et pop op-vindue med oplysninger om denne trussel, herunder hvilke enheder der påvirkes.
 
-4. Vælg en enhed i pop op-pop-menuen for at få vist tilgængelige handlinger, f.eks Opdateringspolitik **, Opdater** **antivirus**, Kør **hurtig scanning** og meget mere.
+4. På pop op-vinduet skal du vælge en enhed for at få vist tilgængelige handlinger, f.eks **Opdateringspolitik**, **Opdater antivirus**, **Kør hurtig scanning** og meget mere.
 
-## <a name="actions-you-can-take"></a>Handlinger, du kan udføre
+## <a name="actions-you-can-take"></a>Handlinger, du kan foretage
 
-Når du får vist detaljer om specifikke trusler eller enheder, får du vist anbefalinger og en eller flere handlinger, du kan udføre. I følgende tabel beskrives de handlinger, du kan få vist.<br><br>
+Når du får vist detaljer om bestemte trusler eller enheder, får du vist anbefalinger og en eller flere handlinger, du kan foretage. I følgende tabel beskrives de handlinger, du kan se.<br><br>
 
 | Handling | Beskrivelse |
 |--|--|
-| Konfigurer beskyttelse | Dine politikker for trusselsbeskyttelse skal konfigureres. Vælg linket for at gå til siden konfiguration af politik.<br><br>Har du brug for hjælp? Se [Administrer enhedssikkerhed med slutpunktssikkerhedspolitikker i Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
-| Opdateringspolitik | Beskyttelsespolitikkerne for dit antivirusprogram og i realtid skal opdateres eller konfigureres. Vælg linket for at gå til siden til konfiguration af politik.<br><br>Har du brug for hjælp? Se [Administrer enhedssikkerhed med slutpunktssikkerhedspolitikker i Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
-| Kør Hurtig scanning | Starter en hurtig antivirusscanning på enheden, fokuserer på almindelige steder, hvor malware kan være registreret, f.eks registreringsdatabasenøgler og kendte Windows startmapper. |
-| Kør fuld scanning | Starter en komplet antivirusscanning på enheden, fokuserer på fælles steder, hvor der kan registreres malware, og herunder alle filer og mapper på enheden. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
-| Opdater antivirus | Kræver, at enheden henter [sikkerhedsintelligensopdateringer](https://go.microsoft.com/fwlink/?linkid=2149926) til antivirus- og antimalwarebeskyttelse. |
-| Genstart enhed | Tvinger en Windows 10 til at genstarte inden for fem minutter.<br><br>**VIGTIGT:** Ejeren af enheden eller brugeren får ikke automatisk besked om genstart og kan miste ikke-gemt arbejde. |
+| Konfigurer beskyttelse | Dine politikker for trusselsbeskyttelse skal konfigureres. Vælg linket for at gå til siden til konfiguration af politikken.<br><br>Har du brug for hjælp? Se [Administrer enhedssikkerhed med sikkerhedspolitikker for slutpunkter i Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
+| Opdater politik | Dine beskyttelsespolitikker for antivirus og realtid skal opdateres eller konfigureres. Vælg linket for at gå til siden til konfiguration af politik.<br><br>Har du brug for hjælp? Se [Administrer enhedssikkerhed med sikkerhedspolitikker for slutpunkter i Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
+| Kør hurtig scanning | Starter en hurtig antivirusscanning på enheden med fokus på almindelige placeringer, hvor malware kan registreres, f.eks. registreringsdatabasenøgler og kendte Windows startmapper. |
+| Kør fuld scanning | Starter en komplet antivirusscanning på enheden med fokus på almindelige placeringer, hvor malware kan registreres, og herunder alle filer og mapper på enheden. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
+| Opdater antivirus | Kræver, at enheden henter [opdateringer til sikkerhedsintelligens](https://go.microsoft.com/fwlink/?linkid=2149926) til beskyttelse mod antivirus og antimalware. |
+| Genstart enhed | Gennemtvinger, at en Windows 10 enhed genstartes inden for fem minutter.<br><br>**VIGTIGT:** Ejeren eller brugeren af enheden får ikke automatisk besked om genstarten og kan miste arbejde, der ikke er gemt. |
 
 ## <a name="manage-threat-detections-in-microsoft-endpoint-manager"></a>Administrer trusselsregistreringer i Microsoft Endpoint Manager
 
-Du kan bruge Microsoft Endpoint Manager til at administrere trusselsregistreringer. Windows 10-enheder skal [være tilmeldt Intune (en](/mem/intune/enrollment/windows-enrollment-methods) del af Microsoft Endpoint Manager).
+Du kan bruge Microsoft Endpoint Manager til at administrere trusselsregistreringer. Windows 10 enheder skal [være tilmeldt Intune](/mem/intune/enrollment/windows-enrollment-methods) (en del af Microsoft Endpoint Manager).
 
-1. Gå til Microsoft Endpoint Manager Administration, <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a> og log på.
+1. Gå til Microsoft Endpoint Manager Administration på , og log på<a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a>.
 
-2. Vælg Slutpunktssikkerhed i **navigationsruden**.
+2. Vælg **Slutpunktssikkerhed** i navigationsruden.
 
-3. Under **Administrer** skal du vælge **Antivirus**. Du får vist flere faner, f.eks Oversigt **, Windows 10 usunde slutpunkter** og **Windows 10 registreret malware**.
+3. Under **Administrer** skal du vælge **Antivirus**. Du får vist flere faner, f.eks **. Oversigt**, **Windows 10 usunde slutpunkter** og **Windows 10 registreret malware**.
 
-4. Gennemse oplysningerne på de tilgængelige faner, og gør derefter de nødvendige handlinger.
+4. Gennemse oplysningerne under de tilgængelige faner, og foretag derefter de nødvendige handlinger.
 
-Antag f.eks., at enheder er angivet **på Windows 10 registreret malware**. Når du vælger en enhed, er visse handlinger tilgængelige, f.eks **Genstart, Hurtig** **scanning,** **Fuld** **scanning, Synkronisering** eller **Opdater signaturer**. Vælg en handling for den pågældende enhed.
+Antag f.eks., at enheder er angivet på fanen **Windows 10 registreret malware**. Når du vælger en enhed, har du visse handlinger tilgængelige, f.eks **. Genstart**, **Hurtig scanning**, **Fuld scanning**, **Synkroniser** eller **Opdater signaturer**. Vælg en handling for den pågældende enhed.
 
 I følgende tabel beskrives de handlinger, du kan se i Microsoft Endpoint Manager.<br><br>
 
 | Handling | Beskrivelse |
 |--|--|
-| Genstart | Tvinger en Windows 10 til at genstarte inden for fem minutter.<br><br>**VIGTIGT:** Ejeren af enheden eller brugeren får ikke automatisk besked om genstart og kan miste ikke-gemt arbejde. |
-| Hurtig scanning | Starter en hurtig antivirusscanning på enheden, fokuserer på almindelige steder, hvor malware kan være registreret, f.eks registreringsdatabasenøgler og kendte Windows startmapper. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
-| Fuld scanning | Starter en komplet antivirusscanning på enheden, fokuserer på fælles steder, hvor der kan registreres malware, og herunder alle filer og mapper på enheden. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
-| Synkroniser | Kræver, at du har en enhed til at tjekke Intune (en del Microsoft Endpoint Manager). Når enheden tjekker ind, modtager enheden alle ventende handlinger eller politikker, der er tildelt enheden. |
-| Opdater signaturer | Kræver, at enheden henter [sikkerhedsintelligensopdateringer](https://go.microsoft.com/fwlink/?linkid=2149926) til antivirus- og antimalwarebeskyttelse. |
+| Genstarte | Gennemtvinger, at en Windows 10 enhed genstartes inden for fem minutter.<br><br>**VIGTIGT:** Ejeren eller brugeren af enheden får ikke automatisk besked om genstarten og kan miste arbejde, der ikke er gemt. |
+| Hurtig scanning | Starter en hurtig antivirusscanning på enheden med fokus på almindelige placeringer, hvor malware kan registreres, f.eks. registreringsdatabasenøgler og kendte Windows startmapper. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
+| Fuld scanning | Starter en komplet antivirusscanning på enheden med fokus på almindelige placeringer, hvor malware kan registreres, og herunder alle filer og mapper på enheden. Resultaterne sendes til [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager). |
+| Sync | Kræver, at en enhed tjekker ind med Intune (en del af Microsoft Endpoint Manager). Når enheden tjekker ind, modtager enheden eventuelle ventende handlinger eller politikker, der er tildelt enheden. |
+| Opdater signaturer | Kræver, at enheden henter [opdateringer til sikkerhedsintelligens](https://go.microsoft.com/fwlink/?linkid=2149926) til beskyttelse mod antivirus og antimalware. |
 
 > [!TIP]
-> Du kan få mere at vide [under Fjernhandlinger for enheder](/mem/intune/protect/endpoint-security-manage-devices#remote-actions-for-devices).
+> Du kan få flere oplysninger under [Fjernhandlinger for enheder](/mem/intune/protect/endpoint-security-manage-devices#remote-actions-for-devices).
 
-## <a name="how-to-submit-a-file-for-malware-analysis"></a>Sådan sender du en fil til malwareanalyse
+## <a name="how-to-submit-a-file-for-malware-analysis"></a>Sådan indsender du en fil til malwareanalyse
 
-Hvis du har en fil, du mener er gået glip af eller fejlagtigt klassificeret som malware, kan du sende denne fil til Microsoft til malwareanalyse. Brugere og it-administratorer kan sende en fil til analyse. Gå til [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission).
+Hvis du har en fil, som du mener blev savnet eller fejlagtigt klassificeret som malware, kan du sende denne fil til Microsoft til analyse af malware. Brugere og it-administratorer kan sende en fil til analyse. Besøg [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission).
 
 ## <a name="see-also"></a>Se også
 
-[De 10 mest populære måder at sikre Microsoft 365 planer til virksomheder på](../../admin/security-and-compliance/secure-your-business-data.md)
+[Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../../admin/security-and-compliance/secure-your-business-data.md)
 
-[Oversigt over Microsoft Defender til virksomheder](../../security/defender-business/mdb-overview.md) (Defender for Business rulles ud til Microsoft 365 Business Premium kunder fra 1. marts 2022)
+[Oversigt over Microsoft Defender til virksomheder](../../security/defender-business/mdb-overview.md) (Defender for Business udrulles til Microsoft 365 Business Premium kunder fra 1. marts 2022)

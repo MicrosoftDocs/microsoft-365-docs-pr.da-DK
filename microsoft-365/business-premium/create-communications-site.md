@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvorfor og hvordan du opretter et SharePoint kommunikationswebsted for din kampagne eller virksomhed med Microsoft 365, og beskyt teamet mod cyberangreb og angreb mod malware og andre trusler på grund af forkert fildeling.
-ms.openlocfilehash: 1e1e2792e4a667737118974b95ae5f77cb6ae224
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 72794c9aac0f1409675af0e3fa40c8cd1881f73a
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100175"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319522"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>Opret et kommunikationswebsted i SharePoint
 
@@ -72,5 +72,7 @@ Få mere at vide [om kommunikationswebsteder](https://support.office.com/article
 ## <a name="admin-settings"></a>Administratorindstillinger
 
 Hvis du ikke kan se linket **+ Opret** websted, er oprettelse af websteder muligvis ikke tilgængelig i Microsoft 365. Hvis du vil oprette et teamwebsted, skal du kontakte den person, der administrerer Microsoft 365 i din organisation. Hvis du er Microsoft 365 administrator, skal du se [Administrer oprettelse af websted i SharePoint Online](/sharepoint/manage-site-creation) for at aktivere oprettelse af selvbetjeningswebsteder for din organisation eller [Administrer websteder i det nye SharePoint Administration](/sharepoint/manage-sites-in-new-admin-center) for at oprette et websted fra <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
+
+## <a name="next-mission"></a>Næste mission
 
 Tillykke, &mdash; du har fuldført missionen! Nu skal du straks vende fokus mod [at beskytte de administrerede enheder](m365bp-protect-devices.md) for hele organisationen!

@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 ms.assetid: f3433b6b-02f7-447f-9d62-306bf03638b0
 description: Få mere at vide om, hvordan du validerer indstillingerne for Microsoft 365 Business Premium appbeskyttelse på dine Android- eller iOS-enheder.
-ms.openlocfilehash: 98b3110516d074fe945e1bb68652b40e93fa7fb7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7e1355f71e9757e1055999e1951b4f093b0d21a0
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090679"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317910"
 ---
 # <a name="validate-app-protection-settings-on-android-or-ios-devices"></a>Valider indstillinger for appbeskyttelse på Android- eller iOS-enheder
 
@@ -208,4 +208,4 @@ I ruden **Rediger politik** skal du vælge **Rediger** ud for **Beskyttelse mod 
 
 ## <a name="see-also"></a>Se også
 
-[Top 10 måder at sikre Microsoft 365 til forretningsplaner på](../security-and-compliance/secure-your-business-data.md)
+[Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../security-and-compliance/secure-your-business-data.md)
