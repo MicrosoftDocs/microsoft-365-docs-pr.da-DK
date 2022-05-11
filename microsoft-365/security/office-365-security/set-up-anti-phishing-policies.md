@@ -1,5 +1,5 @@
 ---
-title: Antiphishing-politikker
+title: Politikker for antiphishing
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,17 +14,17 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om de antiphishing-politikker, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
+description: Administratorer kan få mere at vide om de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5389e83634bc92dd01908b16e8ca0a76dd76c765
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 8b8d75bbb520a2f31ff1d1b55d97e445748a110c
+ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475691"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65349859"
 ---
-# <a name="anti-phishing-policies-in-microsoft-365"></a>Antiphishing-politikker i Microsoft 365
+# <a name="anti-phishing-policies-in-microsoft-365"></a>Politikker til bekæmpelse af phishing i Microsoft 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -33,209 +33,209 @@ ms.locfileid: "64475691"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Politikker til konfiguration af antiphishing-beskyttelse er tilgængelige i Microsoft 365-organisationer med Exchange Online-postkasser, enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online postkasser og Microsoft Defender for Office 365 organisationer.
+Politikker til konfiguration af indstillinger for beskyttelse mod phishing er tilgængelige i Microsoft 365 organisationer med Exchange Online postkasser, enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser, og Microsoft Defender for Office 365 organisationer.
 
-Eksempler Microsoft Defender for Office 365 organisationer omfatter:
+Eksempler på Microsoft Defender for Office 365 organisationer omfatter:
 
 - Microsoft 365 Enterprise E5, Microsoft 365 Education A5 osv.
 - [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home)
-- [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft Defender for Office 365 som et tilføjelsesprogrammet](https://products.office.com/exchange/advance-threat-protection)
+- [Microsoft 365 virksomhed](https://www.microsoft.com/microsoft-365/business)
+- [Microsoft Defender for Office 365 som et tilføjelsesprogram](https://products.office.com/exchange/advance-threat-protection)
 
-De store forskelle mellem antiphishing-politikker i EOP og antiphishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
+Forskellene på højt niveau mellem anti-phishing-politikker i EOP og anti-phishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
 
-|Funktion|Antiphishing-politikker i EOP|Antiphishing-politikker i Defender for Office 365|
+|Funktion|Politikker til bekæmpelse af phishing i EOP|Politikker til bekæmpelse af phishing i Defender for Office 365|
 |---|:---:|:---:|
-|Automatisk oprettet standardpolitik|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|Opret brugerdefinerede politikker|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|Almindelige politikindstillinger<sup>\*</sup>|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|Spoof-indstillinger|![Markering.](../../media/checkmark.png)|![Markering.](../../media/checkmark.png)|
-|Første kontakt sikkerhedstip|![Markering.](../../media/checkmark.png)|![Markering](../../media/checkmark.png)|
-|Indstillinger for repræsentation||![Markering](../../media/checkmark.png)|
-|Avancerede grænseværdier for phishing||![Markering](../../media/checkmark.png)|
+|Automatisk oprettet standardpolitik|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Opret brugerdefinerede politikker|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Almindelige politikindstillinger<sup>\*</sup>|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Spoof-indstillinger|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Første kontakt sikkerhedstip|![Markeret.](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)|
+|Repræsentationsindstillinger||![Markeret](../../media/checkmark.png)|
+|Avancerede tærskler for phishing||![Markeret](../../media/checkmark.png)|
 
-<sup>\*</sup> I standardpolitikken er politikkens navn og beskrivelse skrivebeskyttet (beskrivelsen er tom), og du kan ikke angive, hvem politikken gælder for (standardpolitikken gælder for alle modtagere).
+<sup>\*</sup> I standardpolitikken er politiknavnet og beskrivelsen skrivebeskyttet (beskrivelsen er tom), og du kan ikke angive, hvem politikken gælder for (standardpolitikken gælder for alle modtagere).
 
-Hvis du vil konfigurere antiphishing-politikker, skal du se følgende artikler:
+Hvis du vil konfigurere politikker til bekæmpelse af phishing, skal du se følgende artikler:
 
-- [Konfigurer antiphishing-politikker i EOP](configure-anti-phishing-policies-eop.md)
-- [Konfigurer antiphishing-politikker i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
+- [Konfigurer politikker for antiphishing i EOP](configure-anti-phishing-policies-eop.md)
+- [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)
 
-I resten af denne artikel beskrives de indstillinger, der er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365.
+I resten af denne artikel beskrives de indstillinger, der er tilgængelige i politikker til bekæmpelse af phishing i EOP og Defender for Office 365.
 
 ## <a name="common-policy-settings"></a>Almindelige politikindstillinger
 
-Følgende politikindstillinger er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365:
+Følgende politikindstillinger er tilgængelige i politikker til bekæmpelse af phishing i EOP og Defender for Office 365:
 
-- **Navn**: Du kan ikke omdøbe standardpolitikken for phishing. Når du har oprettet en brugerdefineret politik for phishing, kan du ikke omdøbe politikken i Microsoft 365 Defender portal.
+- **Navn**: Du kan ikke omdøbe standardpolitikken til anti-phishing. Når du har oprettet en brugerdefineret anti-phishing-politik, kan du ikke omdøbe politikken på Microsoft 365 Defender portalen.
 
-- **Beskrivelse** Du kan ikke føje en beskrivelse til standardpolitikken for phishing, men du kan tilføje og ændre beskrivelsen af brugerdefinerede politikker, du opretter.
+- **Beskrivelse** Du kan ikke føje en beskrivelse til standardpolitikken til anti-phishing, men du kan tilføje og ændre beskrivelsen af brugerdefinerede politikker, som du opretter.
 
-- **Brugere, grupper og domæner: Identificerer** interne modtagere, som politikken mod phishing gælder for. Denne værdi er påkrævet i brugerdefinerede politikker og er ikke tilgængelig i standardpolitikken (standardpolitikken gælder for alle modtagere).
+- **Brugere, grupper og domæner**: Identificerer interne modtagere, som politikken mod phishing gælder for. Denne værdi kræves i brugerdefinerede politikker og er ikke tilgængelig i standardpolitikken (standardpolitikken gælder for alle modtagere).
 
-  Du kan kun bruge en betingelse eller undtagelse én gang, men du kan angive flere værdier for betingelsen eller undtagelsen. Flere værdier af samme betingelse eller undtagelse bruger ELLER-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
+  Du kan kun bruge en betingelse eller undtagelse én gang, men du kan angive flere værdier for betingelsen eller undtagelsen. Flere værdier med samme betingelse eller undtagelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
-  - **Brugere**: En eller flere postkasser, mailbrugere eller mailkontakter i organisationen.
-  - **Grupper**: En eller flere grupper i organisationen.
-  - **Domæner**: Et eller flere af de konfigurerede [accepterede domæner i](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) Microsoft 365.
+  - **Brugere**: En eller flere postkasser, mailbrugere eller mailkontakter i din organisation.
+  - **Grupper**: En eller flere grupper i din organisation.
+  - **Domæner**: Et eller flere af de konfigurerede [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i Microsoft 365.
 
-  - **Udelad disse brugere, grupper og domæner**: Undtagelser for politikken. Indstillingerne og funktionsmåden er nøjagtig som betingelserne:
+  - **Udelad disse brugere, grupper og domæner**: Undtagelser for politikken. Indstillingerne og funktionsmåden er præcis som betingelserne:
     - **Brugere**
     - **Grupper**
     - **Domæner**
 
   > [!NOTE]
-  > Der kræves mindst ét valg i indstillingerne brugere, grupper og domæner i brugerdefinerede antiphishing-politikker for at identificere de **meddelelsesmodtagere**,  <u>som politikken gælder for</u>. Antiphishing-politikker i Defender for Office 365 har også [](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) indstillinger for repræsentation, hvor du kan angive mailadresser eller afsenderdomæner, der modtager <u>repræsentationsbeskyttelse</u>, som beskrevet senere i denne artikel.
+  > Der kræves mindst ét valg i indstillingerne **for brugere, grupper og domæner** i brugerdefinerede politikker til bekæmpelse af phishing for at identificere de meddelelsesmodtagere  <u>, som politikken gælder for</u>. Politikker til bekæmpelse af phishing i Defender for Office 365 har også [repræsentationsindstillinger](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), hvor du kan angive individuelle afsendermailadresser eller afsenderdomæner<u>, der modtager repræsentationsbeskyttelse</u>, som beskrevet senere i denne artikel.
 
 ## <a name="spoof-settings"></a>Spoof-indstillinger
 
-Spoofing er, når Fra-adressen i en mail (afsenderadressen, der vises i mailklienter) ikke stemmer overens med domænet for mailkilden. Du kan finde flere oplysninger om spoofing [under Beskyttelse mod spoofing Microsoft 365](anti-spoofing-protection.md).
+Spoofing er, når Fra-adressen i en mail (den afsenderadresse, der vises i mailklienter) ikke svarer til domænet for mailkilden. Du kan få flere oplysninger om spoofing under [Beskyttelse mod spoofing i Microsoft 365](anti-spoofing-protection.md).
 
-Følgende spoof-indstillinger er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365:
+Følgende spoof-indstillinger er tilgængelige i politikker til bekæmpelse af phishing i EOP og Defender for Office 365:
 
-- **Aktivér efterlignet intelligens**: Slår efterlignet intelligens til eller fra. Vi anbefaler, at du lader den være slået til.
+- **Aktivér spoof intelligence**: Slår spoof intelligence til eller fra. Vi anbefaler, at du lader den være tændt.
 
-  Når efterlignet intelligens er aktiveret, viser spoof-intelligensindsigtet **spoof** afsendere, der blev registreret og tilladt eller blokeret af efterlignet intelligens. Du kan manuelt tilsidesætte efterlignet intelligenss konklusion om at tillade eller blokere den registrerede spoofed afsendere fra indsigten. Men når du gør det, forsvinder den efterlignede afsender fra efterlignet intelligens indsigt og er nu kun synlig på fanen **Spoof** i lejerens tilladelses-/blokeringsliste. Du kan også manuelt oprette tillade eller blokere poster for efterlignede afsendere på lejerens tilladelses-/blokeringsliste. Du kan finde flere oplysninger i følgende artikler:
+  Når spoof intelligence er aktiveret, viser **indsigten spoof intelligence** spoofed afsendere, der automatisk blev registreret og tilladt eller blokeret af spoof intelligence. Du kan tilsidesætte spoof intelligence-dommen manuelt for at tillade eller blokere de registrerede spoofed-afsendere inde fra indsigten. Men når du gør det, forsvinder den spoofede afsender fra indsigten spoof intelligence og er nu kun synlig på fanen **Spoof** på listen over tilladte/blokerede lejere. Du kan også manuelt oprette tillad eller blokere poster for spoofede afsendere på lejerlisten Tillad/Bloker. Du kan finde flere oplysninger i følgende artikler:
 
-  - [Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md)
-  - [Administrer lejerens tilladelses-/blokeringsliste i EOP](tenant-allow-block-list.md)
+  - [Spoof intelligence-indsigt i EOP](learn-about-spoof-intelligence.md)
+  - [Administrer listen over tilladte/blokerede lejere i EOP](tenant-allow-block-list.md)
 
   > [!NOTE]
   >
-  > - Beskyttelse mod spoofing er aktiveret som standard i standardpolitikken for phishing og i eventuelle nye brugerdefinerede antiphishing-politikker, du opretter.
-  > - Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. Du skal i stedet aktivere Udvidet filtrering for forbindelser. Du kan finde en [vejledning under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
-  > - Deaktivering af beskyttelse mod spoofing deaktiverer kun _implicit_ spoofingbeskyttelse fra [sammensatte godkendelseskontroller](email-validation-and-authentication.md#composite-authentication) . Hvis afsenderen ikke eksplicit _kontrollerer_[,](use-dmarc-to-validate-email.md) hvor politikken er indstillet til at sætte i karantæne eller afvise den, er meddelelsen stadig sat i karantæne eller afvist.
+  > - Beskyttelse mod spoofing er som standard aktiveret i standardpolitikken mod phishing og i alle nye brugerdefinerede politikker til bekæmpelse af phishing, som du opretter.
+  > - Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+  > - Deaktivering af beskyttelse mod spoofing deaktiverer kun _implicit_ spoofing-beskyttelse fra [kontrol af sammensatte godkendelser](email-validation-and-authentication.md#composite-authentication) . Hvis afsenderen ikke kan _udføre eksplicit_ [DMARC-kontrol](use-dmarc-to-validate-email.md) , hvor politikken er indstillet til at sætte den i karantæne eller afvises, er meddelelsen stadig sat i karantæne eller afvist.
 
-- **Ikke-godkendte afsendermeddelelser: Disse** meddelelser er kun tilgængelige, når efterlignet intelligens er slået til. Se oplysningerne i næste afsnit.
-- **Handlinger**: For meddelelser fra blokerede efterlignede afsendere (automatisk blokeret af efterlignet intelligens eller manuelt blokeret på lejerens liste over tilladte/blokerede afsendere) kan du også angive den handling, der skal sker på meddelelserne:
-  - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Dette er standardværdien. Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan finde flere oplysninger [i Konfigurere indstillinger for uønsket mail Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
-  - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de tilsigtede modtagere. Du kan finde oplysninger om karantæne i følgende artikler:
-    - [Karantæne i Microsoft 365](quarantine-email-messages.md)
-    - [Administrer meddelelser og filer i karantæne som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
-    - [Find og slip meddelelser, der er sat i karantæne, som en bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
+- **Ikke-godkendte afsendermeddelelser**: Disse meddelelser er kun tilgængelige, når spoof intelligence er slået til. Se oplysningerne i næste afsnit.
+- **Handlinger**: For meddelelser fra blokerede spoofede afsendere (automatisk blokeret af spoof intelligence eller manuelt blokeret på listen over tilladte/blokerede lejere) kan du også angive den handling, der skal udføres på meddelelserne:
+  - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Dette er standardværdien. Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
+  - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de ønskede modtagere. Du kan få oplysninger om karantæne i følgende artikler:
+    - [Sæt Microsoft 365 i karantæne](quarantine-email-messages.md)
+    - [Administrer karantænemeddelelser og filer som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
+    - [Find og frigiv karantænemeddelelser som bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
 
-    Hvis du vælger **Karantæne i meddelelsen**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af efterlignet intelligensbeskyttelse. Karantænepolitikker definerer, hvad brugerne kan gøre for meddelelser, der er sat i karantæne, og om brugerne modtager beskeder om karantæne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+    Hvis du vælger **Sæt meddelelsen i karantæne**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af spoof intelligence Protection. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
 ### <a name="unauthenticated-sender"></a>Ikke-godkendt afsender
 
-Meddelelser om ikke-godkendte afsendere er en del af [Spoof-indstillingerne](#spoof-settings), der er tilgængelige i antiphishing-politikker i EOP og Defender for Office 365 som beskrevet i forrige afsnit. Følgende indstillinger er kun tilgængelige, når efterlignet intelligens er slået til:
+De ikke-godkendte afsendermeddelelser er en del af [de Spoof-indstillinger](#spoof-settings), der er tilgængelige i politikker til bekæmpelse af phishing i EOP og Defender for Office 365 som beskrevet i forrige afsnit. Følgende indstillinger er kun tilgængelige, når spoof intelligence er slået til:
 
-- **Vis (?) for** ikke-godkendte afsendere for spoof: Denne meddelelse føjer et spørgsmålstegn til afsenderens billede i feltet Fra, hvis meddelelsen ikke passerer SPF- eller DKIM-kontroller, og meddelelsen ikke  passerer DMARC eller [ikke-sammensat godkendelse](email-validation-and-authentication.md#composite-authentication). Når denne indstilling er slået fra, føjes spørgsmålstegnet ikke til afsenderens billede.
+- **Vis (?) for ikke-godkendte afsendere til spoof**: Denne meddelelse føjer et spørgsmålstegn til afsenderens foto i feltet Fra, hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC- eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication). Når denne indstilling er slået fra, føjes spørgsmålstegnet ikke til afsenderens foto.
 
-- Vis **"via"**-mærket?: Denne meddelelse tilføjer via-mærket (chris@contoso.com <u>via</u> fabrikam.com) i feltet Fra, hvis domænet i Fra-adressen (meddelelsesafsenderen, der vises i mailklienter) er forskelligt fra domænet i DKIM-signaturen eller **MAIL FRA-adressen**. Du kan finde flere oplysninger om disse adresser [i En oversigt over mailstandarder](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
+- **Vis "via"-mærket?**: Denne meddelelse tilføjer via-mærket (chris@contoso.com <u>via</u> fabrikam.com) i feltet Fra, hvis domænet i fra-adressen (den meddelelsesafsender, der vises i mailklienter) er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . Du kan få flere oplysninger om disse adresser under [En oversigt over standarder for mailmeddelelser](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
 
-Hvis du vil forhindre, at spørgsmålstegnet eller via-mærket føjes til meddelelser fra bestemte afsendere, har du følgende muligheder:
+Hvis du vil forhindre, at spørgsmålstegnet eller via -mærket føjes til meddelelser fra bestemte afsendere, har du følgende muligheder:
 
-- Tillad spoof-afsenderen i [efterlignet intelligensindsigt](learn-about-spoof-intelligence.md) eller manuelt på [lejerens tilladelses-/blokeringsliste](tenant-allow-block-list.md). Hvis du tillader, at den spooferede afsender forhindrer via-mærket i at blive vist i meddelelser fra afsenderen, når ikke-godkendt afsenderidentifikation er deaktiveret.
-- [Konfigurere mailgodkendelse](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own) for afsenderdomænet.
-  - For spørgsmålstegnet i afsenderens billede er SPF eller DKIM det vigtigste.
-  - For via-mærket skal du bekræfte, at domænet i DKIM-signaturen eller **MAIL FROM-adressen** svarer til (eller er et underdomæne af) domænet i Fra-adressen.
+- Tillad den spoofede afsender i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt på [lejerlisten tillad/bloker](tenant-allow-block-list.md). Hvis du tillader den spoofede afsender, forhindres via-mærket i at blive vist i meddelelser fra afsenderen, når ikke-godkendt afsenderidentifikation er deaktiveret.
+- [Konfigurer mailgodkendelse](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own) for afsenderdomænet.
+  - For spørgsmålstegnet på afsenderens billede er SPF eller DKIM det vigtigste.
+  - For via-koden skal du bekræfte, at domænet i **DKIM-signaturen eller MAIL FROM-adressen** matcher (eller er et underdomæne af) domænet i Fra-adressen.
 
-Få mere at vide under [Identificer mistænkelige meddelelser på Outlook.com og Outlook på internettet](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
+Du kan finde flere oplysninger [under Identificer mistænkelige meddelelser på Outlook.com og Outlook på internettet](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
 
 ## <a name="first-contact-safety-tip"></a>Første kontakt sikkerhedstip
 
-Indstillingerne **vis første kontaktoplysninger sikkerhedstip** tilgængelige i EOP og Defender for Office 365-organisationer og er ikke afhængig af efterlignet intelligens eller indstillinger for repræsentationsbeskyttelse. Den sikkerhedstip vises til modtagerne i følgende scenarier:
+Indstillingerne **Vis første kontakt sikkerhedstip** er tilgængelige i EOP og Defender for Office 365 organisationer og er ikke afhængige af indstillinger for spoof intelligence eller repræsentationsbeskyttelse. Den sikkerhedstip vises til modtagere i følgende scenarier:
 
-- Første gang der vises en meddelelse fra en afsender
+- Første gang, de modtager en meddelelse fra en afsender
 - De modtager ikke ofte meddelelser fra afsenderen.
 
-:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Første kontakt sikkerhedstip meddelelser med én modtager" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
+:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Den første kontakt sikkerhedstip for meddelelser med én modtager" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
 
-:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="The First contact sikkerhedstip for messages with with multiple recipients" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
+:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="Den første kontakt sikkerhedstip for meddelelser med flere modtagere" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
 
-Denne funktion tilføjer et ekstra lag af sikkerhedsbeskyttelse mod potentielle efterligning angreb, så vi anbefaler, at du slår den til.
+Denne funktion tilføjer et ekstra lag af sikkerhedsbeskyttelse mod potentielle repræsentationsangreb, så vi anbefaler, at du slår den til.
 
-Den første kontakt sikkerhedstip erstatter også behovet for at oprette regler for mailflow (også kaldet transportregler), der tilføjer sidehovedet **X-MS-Exchange-EnableFirstContactSafetyTip** med værdien Aktivér meddelelser (selvom denne egenskab stadig  er tilgængelig).
-
-> [!NOTE]
-> Hvis meddelelsen har flere modtagere, om tippet vises, og til hvem der er baseret på en flertalsmodel. Hvis størstedelen af modtagerne aldrig eller ikke ofte modtager meddelelser fra afsenderen, modtager de påvirkede modtagere tippet Nogle, der har modtaget **denne meddelelse.** Hvis du er bekymret for, at denne adfærd blotlægger den ene modtagers kommunikationsvaner til en anden, bør du ikke aktivere den første sikkerhedstip og fortsætte med at bruge regler for mailflow i stedet.
-
-## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Eksklusive indstillinger i antiphishing-politikker i Microsoft Defender for Office 365
-
-I dette afsnit beskrives de politikindstillinger, der kun er tilgængelige i antiphishing-politikker i Defender for Office 365.
+Den første kontakt sikkerhedstip erstatter også behovet for at oprette regler for mailflow (også kaldet transportregler), der tilføjer headeren med navnet **X-MS-Exchange-EnableFirstContactSafetyTip** med værdien **Aktivér** til meddelelser (selvom denne funktion stadig er tilgængelig).
 
 > [!NOTE]
-> Standardpolitikken for phishing i Defender for Office 365 giver [efterlignet beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) og postkasseintelligens til alle modtagere. Men de andre tilgængelige funktioner [til repræsentationsbeskyttelse](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og [avancerede indstillinger](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) er ikke konfigureret eller aktiveret i standardpolitikken. Hvis du vil aktivere alle beskyttelsesfunktioner, skal du ændre standardpolitikken for phishing eller oprette flere antiphishing-politikker.
+> Hvis meddelelsen har flere modtagere, om tip vises, og til hvem der er baseret på en flertalsmodel. Hvis størstedelen af modtagerne aldrig eller ofte modtager meddelelser fra afsenderen, modtager de berørte modtagere tipet **Nogle personer, der har modtaget denne meddelelse...** Hvis du er bekymret for, at denne funktionsmåde viser en modtagers kommunikationsvaner for en anden, bør du ikke aktivere den første kontakt sikkerhedstip og fortsætte med at bruge regler for mailflow i stedet.
 
-### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Indstillinger for repræsentation i antiphishing-politikker i Microsoft Defender for Office 365
+## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Eksklusive indstillinger i anti-phishing-politikker i Microsoft Defender for Office 365
 
-Efterligning er der, hvor afsenderen eller afsenderens maildomæne i en meddelelse ligner en rigtig afsender eller et rigtigt domæne:
-
-- Et eksempel på efterligning af domænet contoso.com er ćóntoso.com.
-- Bruger efterligning er kombinationen af brugerens viste navn og mailadresse. Valeria Barrios (vbarrios@contoso.com) kan f.eks. være efterlignet som Valeria Barrios, men med en helt anden mailadresse.
+I dette afsnit beskrives de politikindstillinger, der kun er tilgængelige i politikker til bekæmpelse af phishing i Defender for Office 365.
 
 > [!NOTE]
-> Repræsentationsbeskyttelse søger efter domæner, der ligner hinanden. Hvis dit domæne f.eks. er contoso.com, søger vi efter forskellige topdomæner (.com, .biz osv.) som repræsentationsforsøg, men også domæner, der i nogen grad ligner hinanden. Eksempler på contosososo.com eller contoabcdef.com kan ses som forsøg på at efterligne contoso.com.
+> Standardpolitikken mod phishing i Defender for Office 365 giver [spoof-beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) og postkasseintelligens til alle modtagere. De andre tilgængelige [repræsentationsbeskyttelsesfunktioner](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og [avancerede indstillinger](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) er dog ikke konfigureret eller aktiveret i standardpolitikken. Hvis du vil aktivere alle beskyttelsesfunktioner, skal du ændre standardpolitikken for anti-phishing eller oprette yderligere politikker til bekæmpelse af phishing.
 
-Et efterligning af domæne kan ellers betragtes som legitimt (registreret domæne, konfigurerede mailgodkendelsesposter osv.), bortset fra at dets formål er at bedrage modtagere.
+### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Repræsentationsindstillinger i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365
 
-Følgende repræsentationsindstillinger er kun tilgængelige i antiphishing-politikker i Defender for Office 365:
+Repræsentation er det tilfælde, hvor afsenderens eller afsenderens maildomæne i en meddelelse ligner en rigtig afsender eller et rigtigt domæne:
 
-- **Giv brugerne mulighed for at** beskytte: Forhindrer, at de angivne interne eller eksterne mailadresser bliver **efterligning som meddelelsesafsendere**. Du modtager f.eks. en mail fra vicedirektøren for din virksomhed, der beder dig sende hende nogle interne firmaoplysninger. Ville du gøre det? Mange personer ville sende svaret uden at tænke dig om.
+- Et eksempel på repræsentation af domæne contoso.com er ćóntoso.com.
+- Bruger repræsentation er en kombination af brugerens viste navn og mailadresse. Valeria Barrios (vbarrios@contoso.com) kan f.eks. repræsenteres som Valeria Barrios, men med en helt anden mailadresse.
 
-  Du kan bruge beskyttede brugere til at tilføje interne og eksterne mailadresser for at beskytte mod efterligning. Denne liste over  afsendere, der er beskyttet mod bruger efterligning, er forskellig fra listen  over modtagere, som politikken gælder for (alle modtagere af standardpolitikken; bestemte modtagere som konfigureret i indstillingen Brugere **,** grupper og domæner i sektionen Fælles politikindstillinger).[](#common-policy-settings)
+> [!NOTE]
+> Repræsentationsbeskyttelse søger efter domæner, der ligner hinanden. Hvis dit domæne f.eks. er contoso.com, søger vi efter forskellige domæner på øverste niveau (.com, .biz osv.) som repræsentationsforsøg, men også domæner, der ligner hinanden noget. Contosososo.com eller contoabcdef.com kan f.eks. ses som repræsentationsforsøg på contoso.com.
+
+Et repræsenterede domæne kan ellers blive betragtet som legitimt (registreret domæne, konfigurerede mailgodkendelsesposter osv.), bortset fra at det er hensigten at bedrage modtagere.
+
+Følgende repræsentationsindstillinger er kun tilgængelige i politikker til bekæmpelse af phishing i Defender for Office 365:
+
+- **Giv brugerne mulighed for at beskytte**: Forhindrer, at de angivne interne eller eksterne mailadresser repræsenteres **som afsendere af meddelelser**. Du modtager f.eks. en mail fra virksomhedens næstformand, hvor du bliver bedt om at sende hende nogle interne firmaoplysninger. Vil du gøre det? Mange ville sende svaret uden at tænke.
+
+  Du kan bruge beskyttede brugere til at tilføje interne og eksterne afsendermailadresser for at beskytte mod repræsentation. Denne liste over **afsendere** , der er beskyttet mod brugerrepræsentation, er forskellig fra listen over **modtagere** , som politikken gælder for (alle modtagere for standardpolitikken, bestemte modtagere som konfigureret i indstillingen **Brugere, grupper og domæner** i afsnittet [Indstillinger for fælles politik](#common-policy-settings) ).
 
   > [!NOTE]
   >
-  > - I hver antiphishingpolitik kan du angive maksimalt 350 beskyttede brugere (afsendermailadresser). Du kan ikke angive den samme beskyttede bruger i flere politikker. Så uanset hvor mange politikker der gælder for en modtager, er det maksimale antal beskyttede brugere (afsendermailadresser) for hver enkelt modtager 350. Du kan finde flere oplysninger om prioritet af politikker, og hvordan behandling af politikker stopper, når den første politik er anvendt, under Rækkefølge [og prioritering af mailbeskyttelse](how-policies-and-protections-are-combined.md).
-  > - Beskyttelse af bruger efterligning fungerer ikke, hvis afsenderen og modtageren tidligere har kommunikeret via mail. Hvis afsenderen og modtageren aldrig har kommunikeret via mail, identificeres meddelelsen som et forsøg på efterligning.
+  > - I hver politik til bekæmpelse af phishing kan du maksimalt angive 350 beskyttede brugere (afsendermailadresser). Du kan ikke angive den samme beskyttede bruger i flere politikker. Så uanset hvor mange politikker der gælder for en modtager, er det maksimale antal beskyttede brugere (afsendermailadresser) for hver enkelt modtager 350. Du kan finde flere oplysninger om politikprioritet, og hvordan behandlingen af politikker stopper, når den første politik anvendes, under [Rækkefølge af mailbeskyttelse og prioritet](how-policies-and-protections-are-combined.md).
+  > - Beskyttelse af brugerrepræsentation fungerer ikke, hvis afsenderen og modtageren tidligere har kommunikeret via mail. Hvis afsenderen og modtageren aldrig har kommunikeret via mail, identificeres meddelelsen som et repræsentationsforsøg.
 
-  Som standard er ingen afsendermailadresser konfigureret til beskyttelse mod efterligning i **Brugere for at beskytte.** Derfor er ingen afsendermailadresser som standard dækket af beskyttelse mod efterligning, hverken i standardpolitikken eller i brugerdefinerede politikker.
+  Som standard er ingen afsendermailadresser konfigureret til repræsentationsbeskyttelse i **Brugere for at beskytte**. Derfor er ingen afsendermailadresser som standard omfattet af repræsentationsbeskyttelse, hverken i standardpolitikken eller i brugerdefinerede politikker.
 
-  Når du føjer interne eller eksterne mailadresser til  listen Brugere for at beskytte, bliver meddelelser fra disse afsendere underlagt kontrol af **repræsentationsbeskyttelse**. Meddelelsen kontrolleres for efterligning,  hvis meddelelsen sendes til en modtager,  som politikken gælder for (alle modtagere af standardpolitikken; **Brugere, grupper og domæner modtagere** i brugerdefinerede politikker). Hvis der registreres repræsentation i afsenderens mailadresse, anvendes handlingerne til repræsentationsbeskyttelse for brugerne på meddelelsen (hvad skal der gøre med meddelelsen, om der skal vises sikkerhedstip som efterligninger osv.).
+  Når du føjer interne eller eksterne mailadresser til **brugerne for at beskytte** listen, er meddelelser fra disse **afsendere** underlagt kontrol af repræsentationsbeskyttelse. Meddelelsen kontrolleres for repræsentation **, hvis** meddelelsen sendes til en **modtager** , som politikken gælder for (alle modtagere for standardpolitikken. **Brugere, grupper og domæner modtagere** i brugerdefinerede politikker). Hvis der registreres repræsentation i afsenderens mailadresse, anvendes repræsentationsbeskyttelseshandlinger for brugerne på meddelelsen (hvad der skal gøres med meddelelsen, om der skal vises sikkerhedstip til repræsenterede brugere osv.).
 
-- **Aktivér domæner, der skal** beskyttes: Forhindrer, at de angivne domæner bliver efterligning **i meddelelsens afsenders domæne**. For eksempel alle domæner, som du [ejer (accepterede](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) domæner) eller bestemte brugerdefinerede domæner (domæner, du ejer eller partnerdomæner). Denne liste over  afsenderdomæner, der er beskyttet mod efterligning, er forskellig fra listen  over modtagere, som politikken gælder for (alle modtagere af standardpolitikken; bestemte modtagere som konfigureret i indstillingen Brugere **,** grupper og domæner i sektionen Fælles politikindstillinger).[](#common-policy-settings)
+- **Aktivér domæner for at beskytte**: Forhindrer, at de angivne domæner **repræsenteres i meddelelsens afsenders domæne**. For eksempel alle domæner, som du ejer ([accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)) eller specifikke brugerdefinerede domæner (domæner, du ejer eller partnerdomæner). Denne liste over **afsenderdomæner** , der er beskyttet mod repræsentation, er forskellig fra listen over **modtagere** , som politikken gælder for (alle modtagere for standardpolitikken, bestemte modtagere som konfigureret i indstillingen **Brugere, grupper og domæner** i afsnittet [Indstillinger for fælles politik](#common-policy-settings) ).
 
   > [!NOTE]
-  > Det maksimale antal beskyttede domæner, som du kan definere i alle antiphishing-politikker, er 50.
+  > Du kan maksimalt angive 50 brugerdefinerede domæner i hver anti-phishing-politik.
 
-  Som standard er ingen afsenderdomæner konfigureret til repræsentationsbeskyttelse i **Aktivér domæner at beskytte**. Derfor er ingen afsenderdomæner som standard dækket af beskyttelse efterligning, hverken i standardpolitikken eller i brugerdefinerede politikker.
+  Der er som standard ikke konfigureret nogen afsenderdomæner til repræsentationsbeskyttelse i **Aktivér domæner for at beskytte**. Derfor er ingen afsenderdomæner som standard omfattet af repræsentationsbeskyttelse, hverken i standardpolitikken eller i brugerdefinerede politikker.
 
-  Når du føjer domæner til listen  Aktivér domæner for at beskytte, bliver meddelelser  fra afsendere på disse domæner underlagt kontrol af repræsentationsbeskyttelse. Meddelelsen kontrolleres for efterligning,  hvis meddelelsen sendes til en modtager,  som politikken gælder for (alle modtagere af standardpolitikken; **Brugere, grupper og domæner modtagere** i brugerdefinerede politikker). Hvis efterligning registreres i afsenderens domæne, anvendes efterligningbeskyttelseshandlingerne for domæner på meddelelsen (hvad du skal gøre med meddelelsen, om du skal vise sikkerhedstip for efterligninger af brugere osv.).
+  Når du føjer domæner til listen **Aktivér domæner for at beskytte** , er meddelelser fra **afsendere i disse domæner** underlagt kontrol af repræsentationsbeskyttelse. Meddelelsen kontrolleres for repræsentation **, hvis** meddelelsen sendes til en **modtager** , som politikken gælder for (alle modtagere for standardpolitikken. **Brugere, grupper og domæner modtagere** i brugerdefinerede politikker). Hvis der registreres repræsentation i afsenderens domæne, anvendes repræsentationsbeskyttelseshandlingerne for domæner på meddelelsen (hvad skal der gøres med meddelelsen, om der skal vises sikkerhedstip for repræsenterede brugere osv.).
 
-- **Handlinger**: Vælg den handling, der skal udføre på indgående meddelelser, der indeholder efterligningsforsøg mod de beskyttede brugere og beskyttede domæner i politikken. Du kan angive forskellige handlinger for efterligning af beskyttede brugere vs. efterligning af beskyttede domæner:
+- **Handlinger**: Vælg den handling, der skal udføres på indgående meddelelser, der indeholder repræsentationsforsøg mod de beskyttede brugere og beskyttede domæner i politikken. Du kan angive forskellige handlinger for repræsentation af beskyttede brugere i forhold til repræsentation af beskyttede domæner:
   - **Anvend ikke nogen handling**
-  - **Omdiriger meddelelse til andre** mailadresser: Sender meddelelsen til de angivne modtagere i stedet for til de tilsigtede modtagere.
-  - **Flyt meddelelser til modtagernes mapper med** uønsket mail: Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan finde flere oplysninger [i Konfigurere indstillinger for uønsket mail Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
-  - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de tilsigtede modtagere. Du kan finde oplysninger om karantæne i følgende artikler:
-    - [Karantæne i Microsoft 365](quarantine-email-messages.md)
-    - [Administrer meddelelser og filer i karantæne som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
-    - [Find og slip meddelelser, der er sat i karantæne, som en bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
+  - **Omdiriger meddelelse til andre mailadresser**: Sender meddelelsen til de angivne modtagere i stedet for de ønskede modtagere.
+  - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
+  - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de ønskede modtagere. Du kan få oplysninger om karantæne i følgende artikler:
+    - [Sæt Microsoft 365 i karantæne](quarantine-email-messages.md)
+    - [Administrer karantænemeddelelser og filer som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
+    - [Find og frigiv karantænemeddelelser som bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
 
-    Hvis du vælger **Karantæne for** meddelelsen, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er i karantæne af bruger efterligning eller domæne efterligningsbeskyttelse. Karantænepolitikker definerer, hvad brugerne kan gøre for meddelelser, der er sat i karantæne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+    Hvis du vælger **Sæt meddelelsen i karantæne**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af beskyttelse mod brugerpræsentation eller domæne repræsentation. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-  - **Aflever meddelelsen, og føj andre adresser til linjen Bcc**: Lever meddelelsen til de tilsigtede modtagere, og overlever automatisk meddelelsen til de angivne modtagere.
-  - **Slet meddelelsen, før den leveres**: Sletter automatisk hele meddelelsen, inklusive alle vedhæftede filer.
+  - **Levér meddelelsen, og føj andre adresser til Bcc-linjen**: Levér meddelelsen til de ønskede modtagere, og levér meddelelsen uovervåget til de angivne modtagere.
+  - **Slet meddelelsen, før den leveres**: Sletter hele meddelelsen uovervåget, herunder alle vedhæftede filer.
 
-- **Sikkerhedstip om efterligning**: Slå følgende sikkerhedstip til efterligning til eller fra, som vises for meddelelser, der ikke kontrollerer efterligning:
-  - **Vis tip for efterligning af brugere**: Fra-adressen indeholder en **Gør det muligt for brugere at beskytte** brugere. Kun tilgængelig, **hvis Aktivér brugere at beskytte** er aktiveret og konfigureret.
-  - **Vis tip for efterligninger af domæner**: Fra-adressen indeholder en **Aktivér domæner for at beskytte** domæne. Kun tilgængelig, **hvis Aktivér domæner for at beskytte** er aktiveret og konfigureret.
-  - **Vis tip for** usædvanlige tegn: Fra-adressen indeholder usædvanlige tegnsæt (f.eks. matematiske symboler og tekst eller en blanding af store og små bogstaver) i en  Aktivér brugere til at beskytte afsendere eller et Aktivér domæner for at **beskytte afsenderdomænet**.  Kun tilgængelig, **hvis Aktivér brugere for at** _beskytte eller_ **Aktivér domæner for at** beskytte er aktiveret og konfigureret.
+- **Tip til repræsentation af sikkerhed**: Slå følgende tip til repræsentation af sikkerhed til eller fra, der vises meddelelser, der ikke kan repræsenteres:
+  - **Vis tip til repræsenterede brugere**: Fra-adressen indeholder en **Aktivér brugere for at beskytte** brugeren. Kun tilgængelig, hvis **Aktivér brugere til at beskytte** er slået til og konfigureret.
+  - **Vis tip til repræsenterede domæner**: Fra-adressen indeholder en **Aktivér domæner for at beskytte** domænet. Kun tilgængelig, hvis **Aktivér domæner for at beskytte** er slået til og konfigureret.
+  - **Vis tip til usædvanlige tegn**: Fra-adressen indeholder usædvanlige tegnsæt (f.eks. matematiske symboler og tekst eller en blanding af store og små bogstaver) i et **Aktivér brugere til at beskytte** afsenderen eller et **Aktivér domæner for at beskytte** afsenderdomæner.  Kun tilgængelig, hvis **Aktivér brugere til at beskytte** _eller_ **Aktivér domæner for at beskytte** er slået til og konfigureret.
 
-- **Aktivér postkasseintelligens**: Aktiverer eller deaktiverer kunstig intelligens, der bestemmer brugernes mailmønstre med deres hyppige kontakter. Med denne indstilling kan AI skelne mellem meddelelser fra legitime og efterligninger af afsendere.
+- **Aktivér postkasseintelligens**: Aktiverer eller deaktiverer kunstig intelligens (AI), der bestemmer brugermailmønstre med deres hyppige kontakter. Denne indstilling hjælper AI'en med at skelne mellem meddelelser fra legitime og repræsenterede afsendere.
 
-  Gabriela Laureano (glaureano@contoso.com) er f.eks. den administrerende direktør i din virksomhed, så du tilføjer hende som en beskyttet afsender i indstillingen Giv  brugerne mulighed for at beskytte indstillingerne for politikken. Men nogle af de modtagere, som politikken gælder for, skal kommunikere regelmæssigt med en leverandør, som også hedder Gabriela Laureano (glaureano@fabrikam.com). Da disse modtagere har en kommunikationsoversigt med glaureano@fabrikam.com, vil postkasseintelligens ikke identificere meddelelser fra glaureano@fabrikam.com som et forsøg på efterligning af glaureano@contoso.com for disse modtagere.
+  Gabriela Laureano (glaureano@contoso.com) er f.eks. ceo for din virksomhed, så du tilføjer hende som beskyttet afsender i **Aktivér brugere for at beskytte** indstillingerne for politikken. Men nogle af de modtagere, som politikken gælder for at kommunikere regelmæssigt med en leverandør, der også hedder Gabriela Laureano (glaureano@fabrikam.com). Da disse modtagere har en kommunikationsoversigt med glaureano@fabrikam.com, identificerer postkasseintelligens ikke meddelelser fra glaureano@fabrikam.com som et forsøg på at glaureano@contoso.com for disse modtagere.
 
-  Hvis du vil bruge hyppige kontakter, der er blevet lært af postkasseintelligens (og mangler derfra) til at beskytte brugere mod efterligningangreb, kan du aktivere Aktivér beskyttelse af intelligens efter aktivering af postkassens **intelligens.**
+  Hvis du vil bruge hyppige kontakter, der blev lært af postkasseintelligens (og mangel på samme) til at hjælpe med at beskytte brugere mod repræsentationsangreb, kan du aktivere **Aktivér beskyttelse af identitet for intelligens** , når du har slået **Aktivér postkasseintelligens** til.
 
-- **Aktivér intelligence-repræsentationsbeskyttelse**: Aktivér denne indstilling for at angive den handling, der skal gøre følgende for meddelelser til repræsentationsregistreringer fra postkassens intelligensresultater:
-  - **Anvend ikke nogen handling: Bemærk**, at denne værdi har det samme resultat som aktivering af **Postkasse-intelligens** , men deaktiver **Aktivér** beskyttelse af efterligning.
+- **Aktivér beskyttelse af repræsentation af intelligens**: Aktivér denne indstilling for at angive den handling, der skal udføres på meddelelser til repræsentationsregistreringer fra resultaterne af mailbox intelligence:
+  - **Anvend ikke nogen handling**: Bemærk, at denne værdi har det samme resultat som at aktivere **Mailbox intelligence** , men deaktivere **Aktivér beskyttelse af repræsentation af intelligens**.
   - **Omdiriger meddelelse til andre mailadresser**
   - **Flyt meddelelsen til modtagernes mapper med uønsket mail**
-  - **Sæt meddelelsen i karantæne**: Hvis du vælger denne handling, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af postkassens intelligencebeskyttelse. Karantænepolitikker definerer, hvad brugerne kan gøre for meddelelser, der er sat i karantæne, og om brugerne modtager beskeder om karantæne. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
-  - **Levere meddelelsen og føje andre adresser til linjen Bcc**
+  - **Sæt meddelelsen i karantæne**: Hvis du vælger denne handling, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af mailbox intelligence Protection. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
+  - **Levér meddelelsen, og føj andre adresser til Bcc-linjen**
   - **Slet meddelelsen, før den leveres**
 
-- **Tilføj afsendere og domæner, der er tillid til**: Undtagelser til indstillingerne for repræsentationsbeskyttelse. Meddelelser fra de angivne afsendere og afsenderdomæner klassificeres aldrig som efterligningsbaserede angreb af politikken. Med andre ord anvendes handlingen for beskyttede afsendere, beskyttede domæner eller postkassens intelligensbeskyttelse ikke på disse afsendere eller afsenderdomæner, der er tillid til. Den maksimale grænse for disse lister er 1024 poster.
+- **Tilføj afsendere og domæner, der er tillid** til: Undtagelser fra indstillingerne for repræsentationsbeskyttelse. Meddelelser fra de angivne afsendere og afsenderdomæner klassificeres aldrig som repræsentationsbaserede angreb af politikken. Det vil sige, at handlingen for beskyttede afsendere, beskyttede domæner eller postkasseintelligensbeskyttelse ikke anvendes på disse afsendere eller afsenderdomæner, der er tillid til. Den maksimale grænse for disse lister er 1024 poster.
 
-### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Avancerede grænseværdier for phishing i antiphishing-politikker i Microsoft Defender for Office 365
+### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Avancerede tærskler for phishing i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365
 
-Følgende avancerede grænseværdier for phishing er kun tilgængelige i antiphishing-politikker i Defender for Office 365. Disse grænseværdier styrer følsomheden ved anvendelse af maskinlæringsmodeller på meddelelser for at afgøre, om phishingen skal afgøres:
+Følgende avancerede tærskler for phishing er kun tilgængelige i politikker til bekæmpelse af phishing i Defender for Office 365. Disse tærskler styrer følsomheden for anvendelse af modeller til maskinel indlæring på meddelelser for at fastslå en phishing-dom:
 
-- **1 – Standard**: Dette er standardværdien. Alvorsgraden af den handling, der er foretaget på meddelelsen, afhænger af graden af tillid til, at meddelelsen er phishing (lav, mellem, høj eller meget høj). Meddelelser, der identificeres som phishing med en meget høj grad af tillid, har f.eks. de mest alvorlige handlinger anvendt, mens meddelelser, der identificeres som phishing med en lav grad af tillid, har anvendt mindre alvorlige handlinger.
-- **2 – Aggressive**: Meddelelser, der identificeres som phishing med høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
+- **1 – Standard**: Dette er standardværdien. Alvorsgraden af den handling, der udføres på meddelelsen, afhænger af graden af tillid til, at meddelelsen er phishing (lav, mellem, høj eller meget høj tillid). Meddelelser, der identificeres som phishing med en meget høj grad af tillid, har f.eks. de mest alvorlige handlinger anvendt, mens meddelelser, der er identificeret som phishing med en lav grad af tillid, har anvendt mindre alvorlige handlinger.
+- **2 – Aggressive**: Meddelelser, der identificeres som phishing med en høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 - **3 – Mere aggressive**: Meddelelser, der identificeres som phishing med en medium eller høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 - **4 – Mest aggressive**: Meddelelser, der identificeres som phishing med lav, mellem eller høj grad af tillid, behandles, som om de blev identificeret med en meget høj grad af tillid.
 
-Risikoen for falske positive (gode meddelelser, der er markeret som dårlige) øges, når du øger denne indstilling. Du kan finde oplysninger om de anbefalede indstillinger [under Antiphishing-politik Microsoft Defender for Office 365 indstillinger](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+Chancen for falske positiver (gode meddelelser markeret som dårlige) øges, efterhånden som du øger denne indstilling. Du kan få flere oplysninger om de anbefalede indstillinger [under politik til bekæmpelse af phishing i Microsoft Defender for Office 365 indstillinger](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).

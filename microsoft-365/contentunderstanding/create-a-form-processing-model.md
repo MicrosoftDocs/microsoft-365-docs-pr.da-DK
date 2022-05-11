@@ -14,12 +14,12 @@ ms.collection:
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en formularbehandlingsmodel i SharePoint Syntex.
-ms.openlocfilehash: 3eb14a76bd597f1f382b87813c7e4bd2a4518e19
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: bf0a15894e7b9bbc4905a0372d557e1880650e84
+ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882346"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65349810"
 ---
 # <a name="create-a-form-processing-model-in-microsoft-sharepoint-syntex"></a>Opret en formularbehandlingsmodel i Microsoft SharePoint Syntex
 
@@ -43,7 +43,7 @@ Oprettelse af en formularbehandlingsmodel omfatter følgende trin:
 
 Du kan kun oprette en formularbehandlingsmodel i SharePoint dokumentbiblioteker, som den er aktiveret for. Hvis formularbehandling er aktiveret, kan du se **AutomateAI** >  **BuilderOpret** >  **en model til behandling af formularmenuen** i dokumentbiblioteket. Hvis behandlingen skal være aktiveret i dokumentbiblioteket, skal du kontakte SharePoint administrator.
 
- ![Skærmbillede, der viser AI Builder-modellen.](../media/content-understanding/create-ai-builder-model2.png)
+![Skærmbillede, der viser AI Builder-modellen.](../media/content-understanding/create-ai-builder-model2.png)
 
 ## <a name="step-1-create-a-form-processing-model"></a>Trin 1: Opret en formularbehandlingsmodel
 
@@ -114,11 +114,9 @@ Du skal mærke dokumenterne for at lære modellen at kende for at forstå de fel
 
 2. Når modellen er publiceret, skal du vælge **Brug model** og derefter vælge **Opret flow**. Dette opretter et Power Automate flow, der kan køre i SharePoint dokumentbibliotek, og som udtrækker de felter, der er identificeret i modellen.
 
-    ![Skærmbillede i AI Builder, der viser panelet Opret et flow.](../media/content-understanding/ai-builder-create-a-flow.png)
+    ![Skærmbillede i AI Builder, der viser panelet Opret et flow.](../media/content-understanding/ai-builder-create-a-flow-1.png)
  
 3. Når du er færdig, får du vist meddelelsen: *Dit flow blev oprettet*.
-
-    ![Skærmbillede i AI Builder, der viser, at flowet blev oprettet.](../media/content-understanding/ai-builder-flow-created.png)
 
 4. Vælg knappen **Gå til SharePoint** for at se, at dokumentbiblioteket er opdateret med din model.
 
