@@ -18,18 +18,18 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt skiftende overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 3bfa6ce581b0bd4846ebe27b95cf27d1228b10b2
-ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
+ms.openlocfilehash: 4af9cb3073e4fa150a2683c2dd2f125336ef01b8
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65294602"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363108"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Nyheder i Microsoft Purview
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center.md), opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, Microsoft 365 hjælper dig med at holde dig opdateret om det stadigt foranderlige overholdelseslandskab. Se nedenfor for at se nyheder i Microsoft Purview i dag.
+Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-compliance-portal](microsoft-365-compliance-center.md), opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, Microsoft 365 hjælper dig med at holde styr på det stadigt foranderlige overholdelseslandskab. Se nedenfor for at se nyheder i Microsoft Purview i dag.
 
 > [!NOTE]
 > Nogle funktioner til overholdelse af angivne standarder udrulles med forskellige hastigheder til vores kunder. Hvis du endnu ikke kan se en funktion, kan du prøve at føje dig selv til [målrettet udgivelse](/office365/admin/manage/release-options-in-office-365).
@@ -61,14 +61,13 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-overholdel
 
 ### <a name="data-lifecycle-management-and-records-management"></a>Administration af datalivscyklus og datastyring
 
-- [Styr dine data med Microsoft Purview](manage-data-governance.md) – dataconnectors fjernes fra denne side, og løsningen til datastyring præsenteres som et peer-produkt.
-- [Almindelige indstillinger for opbevaringspolitikker og opbevaringsmærkater](retention-settings.md) – afspejler nye navigations- og brugergrænsefladereferencer for den nyligt designede guide til opbevaringsmærkater.
-- [Deklarer poster ved hjælp af opbevaringsmærkater](declare-records.md) og [Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive](record-versioning.md) – nye oplysninger om den nye mærkatindstilling "Lås denne post op som standard", som aktuelt udrulles i prøveversion.
-- [Brug filplanen til at oprette og administrere opbevaringsmærkater](file-plan-manager.md#information-about-the-label-properties-for-import)  – i importafsnittet vises de mærkatindstillinger, der i øjeblikket ikke understøttes til import (gennemgang af fordeling i flere faser, og lås denne post op som standard).
+- Med [ændringen af produktnavnet](#changes-to-product-names) omdøbes **Styring af oplysninger** **til Administration af datalivscyklus** på portalen for overholdelse af angivne standarder.
+- Udrullet i øjeblikket: Nyt design til konfigurationen af indstillinger for opbevaringsmærkat.
+- Udrullet i øjeblikket: ny mærkatindstilling i prøveversionen "Lås denne post op som standard". Du kan få flere oplysninger under [Konfiguration af opbevaringsmærkater for at deklarere poster](declare-records.md#configuring-retention-labels-to-declare-records) og [Bruge postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive](record-versioning.md).
 
 ### <a name="data-loss-prevention"></a>Forebyggelse af datatab
 
-- Artikler, der er opdateret til onboarding af macOS-enheder:
+- Artikler, der er opdateret for macOS enheds onboarding GA:
   - [Få mere at vide om slutpunkt DLP](endpoint-dlp-learn-about.md)
   - [Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt](dlp-configure-endpoint-settings.md)
   - [Plan for forebyggelse af datatab (DLP)](dlp-overview-plan-for-dlp.md)
@@ -79,12 +78,12 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-overholdel
 
 ### <a name="device-onboarding"></a>Enheds onboarding
 
-- Artikler, der er opdateret til onboarding af macOS-enheder:
-  - [Onboarde macOS-enheder i for at Microsoft 365 oversigt](device-onboarding-macos-overview.md)
+- Artikler, der er opdateret for macOS enheds onboarding GA:
+  - [Oversigt over onboarding af macOS enheder i Microsoft 365](device-onboarding-macos-overview.md)
   - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-intune-mde.md)
-  - [Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune](device-onboarding-offboarding-macos-intune.md)
+  - [Onboarde og offboard macOS enheder i Microsoft Purview løsninger ved hjælp af Intune](device-onboarding-offboarding-macos-intune.md)
   - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-jamfpro-mde.md)
-  - [Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro](device-onboarding-offboarding-macos-jamfpro.md)
+  - [Onboarde og offboard macOS enheder i Microsoft Purview løsninger ved hjælp af JAMF-Pro](device-onboarding-offboarding-macos-jamfpro.md)
 
 ### <a name="information-barriers"></a>Informationsbarrierer
 
@@ -114,34 +113,33 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-overholdel
 
 ### <a name="sensitivity-labels"></a>Følsomhedsmærkater
 
-- [Brug følsomhedsmærkater til at beskytte indhold i Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md#configure-site-sharing-permissions-by-using-powershell-advanced-settings) – ny konfiguration nu som prøveversion til tilladelser til deling af websteder ved hjælp af avancerede PowerShell-indstillinger.
-- [Begræns adgangen til indhold ved hjælp af følsomhedsmærkater for at anvende kryptering](encryption-sensitivity-labels.md) . Tilføjede det kendte problem med angivelse af en gruppe, der indeholder mailkontakter, med et link til det publicerede KB for at få flere oplysninger og løsninger.
-- [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) – fjernede automatisk det kendte problem med slettede OneDrive websteder, der fejlagtigt blev vist i simuleringsresultaterne for politikker for automatisk mærkning)
-- [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md) – som følge af kundefeedback fjernede billedforklaringen i afsnittet Forudsætninger, at denne funktion endnu ikke understøttes af Semi-Annual Enterprise Channel, og tilføjede i stedet Semi-Annual Enterprise Channel (prøveversion) med minimumversion 2202.
-- [Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md) – supportoplysninger om anvendelse af en standardmærkat på eksisterende dokumenter opdateres for at rette op på, at denne version stadig udrulles i betakanalen på Windows og nu udrulles fuldt ud til internettet.
+- Nyligt understøttet scenarie for SharePoint websteder, nu som prøveversion: [Konfigurer tilladelser til deling af websteder ved hjælp af avancerede powerShell-indstillinger](sensitivity-labels-teams-groups-sites.md#configure-site-sharing-permissions-by-using-powershell-advanced-settings)
+- [Samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md) , er nu tilgængelig til test med kanalen Semi-Annual Enterprise Channel (prøveversion).
+- Slettede OneDrive konti vises nu korrekt i simuleringsresultaterne for politikker for automatisk mærkning.
+- Kendt problem, hvis du [tildeler tilladelser til mailkontakter i grupper](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content) , når du konfigurerer en følsomhedsmærkat til kryptering.
 
 ### <a name="changes-to-product-names"></a>Ændringer af produktnavne
 
-Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et omfattende sæt løsninger, der hjælper dig med at forstå, styre og beskytte hele dit dataområde for at imødegå udfordringerne på en decentraliseret og datarig arbejdsplads i dag. Denne nye brandfamilie kombinerer funktionerne i det tidligere Microsoft Purview Data Map og porteføljen af Microsoft 365 overholdelse af angivne standarder, som kunderne allerede er afhængige af, hvilket giver samlet datastyring og risikostyring for din organisation.
+Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et omfattende sæt løsninger, der hjælper dig med at forstå, styre og beskytte hele dit dataområde for at imødegå udfordringerne på en decentraliseret og datarig arbejdsplads i dag. Denne nye brandfamilie kombinerer funktionerne i det tidligere Microsoft Purview datakort og porteføljen af Microsoft 365 overholdelse af angivne standarder, som kunderne allerede er afhængige af, hvilket giver samlet datastyring og risikostyring for din organisation.
 
 | **Tidligere navn** | **Nyt navn** | **Beskrivelse** |
 |:----------------|:-------------|:----------------|
-| Microsoft 365 avanceret overvågning <br><br> Microsoft 365 grundlæggende overvågning | Microsoft Purview Audit (Premium) <br><br> Microsoft Purview Audit (Standard)| Overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelsesforpligtelser. Du kan få mere at vide under [Microsoft Purview Advanced Audit (Premium)](advanced-audit.md) og [Microsoft Purview Advanced Audit (Standard).](set-up-basic-audit.md) |
-| Microsoft 365 overholdelse af kommunikation | Kommunikationsoverholdelse i Microsoft Purview | Kommunikation med overholdelse af angivne standarder hjælper med at minimere risici ved hurtigt at registrere, registrere og håndtere afhjælpningshandlinger for virksomhedens kommunikationskanaler og politikovertrædelser. Du kan få mere at vide under [Microsoft Purview Communication Compliance](communication-compliance-solution-overview.md). |
-| Microsoft Compliance Manager | Microsoft Purview Compliance Manager | Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Du kan få mere at vide under [Microsoft Purview Compliance Manager](compliance-manager.md). |
-| Microsoft 365 kundenøgle | Microsoft Purview-kundenøgle | Kundenøglen giver ekstra beskyttelse mod visning af data af uautoriserede systemer eller medarbejdere og supplerer BitLocker-diskkryptering i Microsoft-datacentre. Du kan få mere at vide under [Microsoft Purview Customer Key](customer-key-overview.md). |
-| Office 365 Kundelåseboks | Microsoft Purview Customer Lockbox | Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Du kan få mere at vide under [Microsoft Purview Customer Lockbox](customer-lockbox-requests.md). |
+| Microsoft 365 avanceret overvågning <br><br> Microsoft 365 grundlæggende overvågning | Microsoft Purview overvågning (Premium) <br><br> Microsoft Purview overvågning (standard)| Overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelsesforpligtelser. Du kan få mere at vide [under Microsoft Purview Avanceret overvågning (Premium)](advanced-audit.md) og [Microsoft Purview Avanceret overvågning (Standard).](set-up-basic-audit.md) |
+| Microsoft 365 overholdelse af kommunikation | Kommunikationsoverholdelse i Microsoft Purview | Kommunikation med overholdelse af angivne standarder hjælper med at minimere risici ved hurtigt at registrere, registrere og håndtere afhjælpningshandlinger for virksomhedens kommunikationskanaler og politikovertrædelser. Du kan få mere at vide under [Microsoft Purview Kommunikationsoverholdelse](communication-compliance-solution-overview.md). |
+| Microsoft Compliance Manager | Microsoft Purview Overholdelsesstyring | Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Du kan få mere at vide [under Microsoft Purview Overholdelsesstyring](compliance-manager.md). |
+| Microsoft 365 kundenøgle | Microsoft Purview kundenøgle | Kundenøglen giver ekstra beskyttelse mod visning af data af uautoriserede systemer eller medarbejdere og supplerer BitLocker-diskkryptering i Microsoft-datacentre. Du kan få mere at vide under [Microsoft Purview kundenøgle](customer-key-overview.md). |
+| Office 365 Kundelåseboks | Microsoft Purview kundelåseboks | Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Du kan få mere at vide [under Microsoft Purview Customer Lockbox](customer-lockbox-requests.md). |
 | Forebyggelse af datatab | Microsoft Purview Forebyggelse af datatab | DLP hjælper med at beskytte følsomme data og reducere risikoen ved at forhindre brugerne i at dele disse data med personer, der ikke skulle have dem. Du kan få mere at vide under [Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md). |
-| Kryptering med dobbelt nøgle for Microsoft 365 | Kryptering af Dobbelt nøgle i Microsoft Purview | DkE (Double Key Encryption) bruger to nøgler sammen til at få adgang til beskyttet indhold. Microsoft gemmer én nøgle i Microsoft Azure, og du holder den anden nøgle. Du kan få mere at vide under [Kryptering af dobbelt nøgle i Microsoft Purview](double-key-encryption.md) |
-| Microsoft 365 informationsbarrierer | Microsoft Purview-informationsbarrierer | Informationsbarrierer er en løsning, der begrænser kommunikation og samarbejde mellem visse personer i din organisation for at beskytte interne oplysninger. Du kan få mere at vide under [Microsoft Purview Information Barriers](information-barriers-solution-overview.md). |
+| Kryptering med dobbelt nøgle for Microsoft 365 | kryptering af Microsoft Purview dobbelt nøgle | DkE (Double Key Encryption) bruger to nøgler sammen til at få adgang til beskyttet indhold. Microsoft gemmer én nøgle i Microsoft Azure, og du holder den anden nøgle. Du kan få mere at vide [under kryptering af Microsoft Purview dobbelt nøgle](double-key-encryption.md) |
+| Microsoft 365 informationsbarrierer | Microsoft Purview-informationsbarrierer | Informationsbarrierer er en løsning, der begrænser kommunikation og samarbejde mellem visse personer i din organisation for at beskytte interne oplysninger. Du kan få mere at vide [under Microsoft Purview informationsbarrierer](information-barriers-solution-overview.md). |
 | Microsoft Information Protection | Microsoft Purview Information Protection | Information Protection hjælper dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de bor eller rejser. Du kan få mere at vide under [Microsoft Purview Information Protection](information-protection.md). |
 | Microsoft Information Governance | Administration af Microsoft Purview-datalivscyklus | Administration af datalivscyklus giver dig værktøjer og funktioner til at bevare det indhold, du skal bruge for at beholde og slette det indhold, du ikke har. Du kan få mere at vide under [Administration af Microsoft Purview-datalivscyklus](data-lifecycle-management.md). |
-| Microsoft 365 Styring af insiderrisiko | Styring af Insider-risiko i Microsoft Purview | Insiderrisikostyring bruger hele bredden af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikable brugeraktivitet. Du kan få mere at vide under [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
-| Office 365 meddelelsekryptering | Microsoft Purview-meddelelsekryptering | Med Meddelelsekryptering kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Du kan få mere at vide under [Microsoft Purview-meddelelsekryptering](ome.md). |
-| Privilegeret adgangsstyring i Microsoft 365 | Microsoft Purview-Privileged Access Management | Privilegeret adgangsstyring hjælper med at beskytte din organisation mod brud og hjælper med at overholde bedste praksis for overholdelse af angivne standarder ved at begrænse stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan få mere at vide under [Privilegeret adgangsstyring i Microsoft Purview](privileged-access-management-solution-overview.md). |
-| Microsoft-dataforbindelser | Microsoft Purview-dataconnectors | Microsoft 365 gør det muligt for administratorer at bruge dataconnectors til at importere og arkivere ikke-Microsoft-data fra sociale medieplatforme, chatplatforme og platforme til dokumentsamarbejde til postkasser i din Microsoft 365 organisation. Du kan få mere at vide under [Microsoft Purview-dataconnectors](compliance-extensibility.md). |
-| Microsoft 365 Avanceret eDiscovery <br><br> Microsoft 365 Core eDiscovery | Microsoft Purview eDiscovery (Premium) <br><br> Microsoft Purview eDiscovery (Standard) | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide under [Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md) og [Microsoft Purview eDiscovery (Standard).](get-started-core-ediscovery.md) |
-| Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administrationsportal til adgang til løsninger og løsningskatalog i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide på [Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center.md). |
+| Microsoft 365 Styring af insiderrisiko | Styring af Insider-risiko i Microsoft Purview | Insiderrisikostyring bruger hele bredden af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikable brugeraktivitet. Du kan få mere at vide under [Microsoft Purview Styring af insider-risiko](insider-risk-management.md). |
+| Office 365 meddelelsekryptering | Microsoft Purview-meddelelseskryptering | Med Meddelelsekryptering kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Du kan få mere at vide under [Microsoft Purview-meddelelseskryptering](ome.md). |
+| Privilegeret adgangsstyring i Microsoft 365 | Microsoft Purview-Privileged Access Management | Privilegeret adgangsstyring hjælper med at beskytte din organisation mod brud og hjælper med at overholde bedste praksis for overholdelse af angivne standarder ved at begrænse stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan få mere at vide [under Microsoft Purview Privilegeret adgangsstyring](privileged-access-management-solution-overview.md). |
+| Microsoft-dataforbindelser | Microsoft Purview dataconnectors | Microsoft 365 gør det muligt for administratorer at bruge dataconnectors til at importere og arkivere ikke-Microsoft-data fra sociale medieplatforme, chatplatforme og platforme til dokumentsamarbejde til postkasser i din Microsoft 365 organisation. Du kan få mere at vide under [Microsoft Purview dataconnectors](compliance-extensibility.md). |
+| Microsoft 365 Avanceret eDiscovery <br><br> Microsoft 365 Core eDiscovery | Microsoft Purview eDiscovery (Premium) <br><br> Microsoft Purview eDiscovery (Standard) | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide [under Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md) og [Microsoft Purview eDiscovery (Standard)](get-started-core-ediscovery.md). |
+| Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administrationsportal til adgang til løsninger og løsningskatalog i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide under [Microsoft Purview-compliance-portal](microsoft-365-compliance-center.md). |
 
 ## <a name="march-2022"></a>Marts 2022
 
@@ -178,11 +176,11 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-- [Understøttelse af produktbemærkninger med dobbeltbytetegnsæt](mip-dbcs-relnotes.md) – ekstra vejledning til macOS.
+- [Understøttelse af produktbemærkninger med dobbeltbytetegnsæt](mip-dbcs-relnotes.md) – tilføjet vejledning til macOS.
 
 ### <a name="microsoft-priva"></a>Microsoft Priva
 
-- [Konfigurer Priva-indstillinger](/privacy/priva/priva-settings) – opdaterede afklaring af oplysninger om opbevaringsperioder for registreredes rettigheder. tilføjede oplysninger om administration og anvendelse af datagennemsynstags for anmodninger om emnerettigheder.
+- [Konfigurer indstillinger for Priva](/privacy/priva/priva-settings) – opdateret, der tydeliggør oplysninger om opbevaringsperioder for registreredes rettigheder. Der er tilføjet oplysninger om administration og anvendelse af datagennemsynstags for anmodninger om fysiske personers rettigheder.
 - [Opret en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-create) – tilføjede oplysninger om finjustering af søgninger og valg af betingelser og attributter. tilføjede oplysninger om ny funktionalitet, der gør det muligt for brugerne at vælge alle versioner af SharePoint elementer i deres søgning (i forhold til standardindstillingen, som kun returnerer den aktuelle version af SharePoint elementer).
 - [Gennemse data for en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-data-review) – tilføjet oplysninger i trin 3 om gennemsyn af elementer i fasen til datagennemsyn, herunder markering af filer som "include/exclude", anmærkning af filer for at anvende redigeringer, anvende mærker og angive noter.
 - [Generér rapporter, og indfri en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-reports) – der er tilføjet oplysninger om, hvordan du forstår rapporter. præciseres, når der genereres en eksportpakke, og hvordan du arbejder med dens indhold tilføjede oplysninger om overvågningslogge, mærkede filrapporter og opbevaringsperioder for SRR-data og -rapporter.
@@ -222,7 +220,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="microsoft-purview-data-lifecycle-management"></a>Administration af Microsoft Purview-datalivscyklus
 
-- Dokumentationen til tidligere Microsoft Information Governance er blevet væsentligt revideret og omstruktureret, så du nemmere kan finde oplysninger, der er relateret til de løsninger, du konfigurerer på Microsoft Purview-overholdelsesportalen: Dataconnectors, Datalivscyklusstyring og Datastyring. Som en del af denne revision giver dokumentationen en tydeligere skelnen mellem opbevaringsscenarier for administration af datalivscyklus i forhold til datastyring.
+- Dokumentationen til tidligere Microsoft Information Governance er blevet væsentligt revideret og omstruktureret, så du nemmere kan finde oplysninger, der er relateret til de løsninger, du konfigurerer i Microsoft Purview-compliance-portal: Dataconnectors, datalivscyklusstyring og datastyring. Som en del af denne revision giver dokumentationen en tydeligere skelnen mellem opbevaringsscenarier for administration af datalivscyklus i forhold til datastyring.
 - [Få mere at vide om administration af datalivscyklus](data-lifecycle-management.md) – ny for at understøtte omstruktureringen.
 - [Kom i gang med administration af datalivscyklus](get-started-with-data-lifecycle-management.md) – ny, der erstatter "Kom i gang med opbevaring", denne artikel indeholder introduktionstrin til alle funktioner til administration af datalivscyklusser, hvilket omfatter opbevaring.
 - [Opret opbevaringsmærkater for undtagelser fra dine opbevaringspolitikker](create-retention-labels-data-lifecycle-management.md) – nyt, identificeret scenarie til brug af opbevaringsmærkater til administration af datalivscyklus i stedet for datastyring.
@@ -230,7 +228,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="microsoft-priva"></a>Microsoft Priva
 
-- [Administration af beskyttelse af personlige oplysninger er nu Microsoft Priva](/privacy/priva/priva-overview) – opdateret for at rebrande produktet og dets løsninger, Administration af risiko for beskyttelse af personlige oplysninger og Priva Subject Rights-anmodninger.
+- [Beskyttelse af personlige oplysninger er nu Microsoft Priva](/privacy/priva/priva-overview) – opdateret for at rebrande produktet og dets løsninger, Priva håndtering af privatlivsrisici og Priva Anmodninger om den registreredes rettigheder.
 
 ### <a name="sensitivity-labels"></a>Følsomhedsmærkater
 
@@ -257,7 +255,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="information-protection"></a>Beskyttelse af oplysninger
 
-- [Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md) – Ny trinvis vejledning til kunder, der leder efter en præskriptiv oversigt over installation af Microsoft Purview Information Protection
+- [Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md) – Ny trinvis vejledning til kunder, der leder efter en præskriptiv køreplan til installation Microsoft Purview Information Protection
 
 ### <a name="retention-and-records-management"></a>Opbevarings- og datastyring
 
@@ -272,16 +270,16 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 ### <a name="compliance-manager"></a>Overholdelsesstyring
 
-Nye indholdsopdateringer kan ses i [Nyheder i Microsoft Purview Compliance Manager](compliance-manager-whats-new.md).
+Nye indholdsopdateringer kan ses i [Nyheder i Microsoft Purview Overholdelsesstyring](compliance-manager-whats-new.md).
 
 ### <a name="device-onboarding"></a>Enheds onboarding
 
 Følgende artikler blev tilføjet for onboarding af enheder:
 
 - [Oversigt over onboarding af macOS-enheder i Microsoft 365 (prøveversion)](device-onboarding-macos-overview.md)
-- [Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune (prøveversion)](device-onboarding-offboarding-macos-intune.md)
+- [Onboarde og offboard macOS enheder i Microsoft Purview løsninger ved hjælp af Intune (prøveversion)](device-onboarding-offboarding-macos-intune.md)
 - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder (prøveversion)](device-onboarding-offboarding-macos-intune-mde.md)
-- [Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro (prøveversion)](device-onboarding-offboarding-macos-jamfpro.md)
+- [Onboarde og offboard macOS enheder i Microsoft Purview løsninger ved hjælp af JAMF-Pro (prøveversion)](device-onboarding-offboarding-macos-jamfpro.md)
 - [Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder (prøveversion)](device-onboarding-offboarding-macos-jamfpro-mde.md)
 
 ### <a name="ediscovery"></a>eDiscovery
@@ -306,4 +304,4 @@ Følgende nye artikler er tilføjet:
 - [Opdater kildetabelfilen for følsomme oplysninger](sit-use-exact-data-refresh-data.md)
 
 ### <a name="sensitivity-labels"></a>Følsomhedsmærkater
-- Områdenavnet for [mærkater fra Microsoft Purview-dataoversigten](/azure/purview/create-sensitivity-label) er nu "Skematiserede dataaktiver".
+- Områdenavnet for [Microsoft Purview navne på datatilknytninger](/azure/purview/create-sensitivity-label) er nu "Skematiserede dataaktiver".

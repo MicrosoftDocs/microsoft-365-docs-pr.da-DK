@@ -18,16 +18,22 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 3b943569485ffaa96b33208c1c4bf0a491c23a95
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: bb452c74763e31be11a6431cc260667319d2582f
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939471"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363186"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Nul tillid udrulningsplan i Microsoft 365
 
 Denne artikel indeholder en udrulningsplan til opbygning **Nul tillid** sikkerhed med Microsoft 365. Nul tillid er en ny sikkerhedsmodel, der forudsætter brud og kontrollerer hver anmodning, som om den stammer fra et ikke-kontrolleret netværk. Uanset hvor anmodningen stammer fra, eller hvilken ressource den får adgang til, lærer Nul tillid-modellen os at "hav aldrig tillid til, bekræft altid".
+
+Brug denne artikel sammen med denne plakat.
+
+| Element | Beskrivelse |
+|:-----|:-----|
+|[![Illustration af Microsoft 365 Nul tillid udrulningsplan.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Opdateret marts 2022 | **Relaterede løsningsvejledninger** <br/> <ul><li>[Udrul din identitetsinfrastruktur til Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Anbefalede konfigurationer for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Administrer enheder med Intune](../solutions/manage-devices-with-intune-overview.md)</li><li>[Evaluer og test Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Installér en Microsoft Information Protection løsning](../compliance/information-protection-solution.md)</li><li>[Udrul beskyttelse af oplysninger i forbindelse med bestemmelser om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md)</li></ul>
 
 ## <a name="zero-trust-security-architecture"></a>Nul tillid sikkerhedsarkitektur
 
@@ -69,7 +75,7 @@ Det første trin er at opbygge dit Nul tillid fundament ved at konfigurere besky
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-1b.png" alt-text="Processen til konfiguration af Nul tillid identitets- og enhedsadgangsbeskyttelse" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-1b.png":::
 
-Gå til [**_Nul tillid beskyttelse af identitet og enhedsadgang_**](office-365-security/microsoft-365-policies-configurations.md) for at få en præskriptiv vejledning til at opnå dette. I denne artikelserie beskrives et sæt konfigurationer af forudsætninger for identitet og adgang til enheden og et sæt betinget adgang til Azure Active Directory (Azure AD), Microsoft Intune og andre politikker, der sikrer adgang til Microsoft 365  til cloudapps og -tjenester til virksomheder, andre SaaS-tjenester og programmer i det lokale miljø, der er publiceret med Azure AD-Programproxy.
+Gå til [**_Nul tillid beskyttelse af identitet og enhedsadgang_**](office-365-security/microsoft-365-policies-configurations.md) for at få en præskriptiv vejledning til at opnå dette. I denne artikelserie beskrives et sæt konfigurationer af forudsætninger for identitet og adgang til enheden og et sæt Azure Active Directory (Azure AD) betinget adgang, Microsoft Intune og andre politikker, der sikrer adgang til Microsoft 365  til cloudapps og -tjenester til virksomheder, andre SaaS-tjenester og programmer i det lokale miljø, der er publiceret med Azure AD Programproxy.
 
 |Omfatter|Forudsætninger|Omfatter ikke|
 |---------|---------|---------|
@@ -111,13 +117,13 @@ Gå til [**_Evaluer og pilot Microsoft 365 Defender_**](defender/eval-overview.m
 
 |Omfatter|Forudsætninger|Omfatter ikke|
 |---------|---------|---------|
-|Konfigurer evaluerings- og pilotmiljøet for alle komponenter: <ul><li>Defender for Identity</li><li>Defender for Office 365</li><li>Defender for Endpoint</li><li>Microsoft Defender for Cloud Apps</li></ul> <br> Beskyt mod trusler <br><br> Undersøg og reager på trusler|Se vejledningen for at læse om arkitekturkravene for hver komponent i Microsoft 365 Defender.| Azure AD Identity Protection er ikke inkluderet i denne løsningsvejledning. Den er inkluderet i [trin 1. Konfigurer Nul tillid beskyttelse mod identitet og enhedsadgang](#step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies).|
+|Konfigurer evaluerings- og pilotmiljøet for alle komponenter: <ul><li>Defender for Identity</li><li>Defender for Office 365</li><li>Defender for Endpoint</li><li>Microsoft Defender for Cloud Apps</li></ul> <br> Beskyt mod trusler <br><br> Undersøg og reager på trusler|Se vejledningen for at læse om arkitekturkravene for hver komponent i Microsoft 365 Defender.| Azure AD Identitetsbeskyttelse er ikke inkluderet i denne løsningsvejledning. Den er inkluderet i [trin 1. Konfigurer Nul tillid beskyttelse mod identitet og enhedsadgang](#step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies).|
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Trin 5. Beskyt og styr følsomme data
 
-Implementer Microsoft Purview Information Protection for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de befinder sig eller rejser.
+Implementer Microsoft Purview Information Protection for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de bor eller rejser.
 
-Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview og giver dig værktøjerne til at kende dine data, beskytte dine data og forhindre tab af data.
+Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview og giver dig værktøjer til at kende dine data, beskytte dine data og forhindre tab af data.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Funktionerne til beskyttelse af oplysninger, der beskytter data gennem håndhævelse af politikker" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
@@ -127,6 +133,6 @@ Microsoft Purview Information Protection indeholder en struktur, proces og egens
 
 ![Microsoft Purview Information Protection](../media/zero-trust/mip-solution-overview.png)
 
-Du kan få flere oplysninger om, hvordan du planlægger og installerer beskyttelse af oplysninger, under [**_Installér en Microsoft Purview-Information Protection-løsning_**](../compliance/information-protection-solution.md). 
+Du kan få flere oplysninger om, hvordan du planlægger og installerer beskyttelse af oplysninger, under [**_Installér en Microsoft Purview Information Protection løsning_**](../compliance/information-protection-solution.md). 
 
 Hvis du udruller beskyttelse af oplysninger i forbindelse med regler for beskyttelse af personlige oplysninger, indeholder denne løsningsvejledning en anbefalet struktur for hele processen: [**_Udrul bestemmelser om beskyttelse af personlige oplysninger i forbindelse med Microsoft 365_**](../solutions/information-protection-deploy.md).

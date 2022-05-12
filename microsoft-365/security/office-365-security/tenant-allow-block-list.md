@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 64b9c044a463e940b0d9862221ca854fe0eebfdc
-ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
+ms.openlocfilehash: 6e112b6b386e0a2961119478aae7d4cb53138ccf
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65182637"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363308"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -248,7 +248,7 @@ Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-TenantAllow
 
 - Jokertegn (*) er tilladt i følgende scenarier:
 
-  - Et venstre jokertegn skal efterfølges af et punktum for at angive et underdomæne.
+  - Et venstre jokertegn skal efterfølges af et punktum for at angive et underdomæne. (gælder kun for blokke)
 
     Er f.eks `*.contoso.com` . tilladt. `*contoso.com` Er ikke tilladt.
 
@@ -265,8 +265,6 @@ Du kan finde detaljerede syntaks- og parameteroplysninger under [Get-TenantAllow
   - Et venstre tilde angiver et domæne og alle underdomæner.
 
     Omfatter `contoso.com` f.eks. `~contoso.com` og `*.contoso.com`.
-
-- URL-adresser, der indeholder protokoller (f.eks. `http://`, `https://`eller `ftp://`), mislykkes, fordi URL-adresser gælder for alle protokoller.
 
 - Et brugernavn eller en adgangskode understøttes eller kræves ikke.
 
@@ -285,7 +283,6 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 - **Tillad match**: contoso.com
 
 - **Tillad ikke matchet**:
-
   - abc-contoso.com
   - contoso.com/a
   - payroll.contoso.com
@@ -295,7 +292,6 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
   - www.contoso.com/q=a@contoso.com
 
 - **Blokmatch**:
-
   - contoso.com
   - contoso.com/a
   - payroll.contoso.com
@@ -308,15 +304,16 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 
 #### <a name="scenario-left-wildcard-subdomain"></a>Scenarie: Venstre jokertegn (underdomæne)
 
+> [!NOTE]
+> Dette scenarie gælder kun for blokke.
+
 **Indtastning**: `*.contoso.com`
 
-- **Tillad match** og **blokmatch**:
-
+- **Blokmatch**:
   - www.contoso.com
   - xyz.abc.contoso.com
 
-- **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
-
+- **Blok, der ikke stemmer overens**:
   - 123contoso.com
   - contoso.com
   - test.com/contoso.com
@@ -327,13 +324,11 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 **Indtastning**: `contoso.com/a/*`
 
 - **Tillad match** og **blokmatch**:
-
   - contoso.com/a/b
   - contoso.com/a/b/c
   - contoso.com/a/?q=joe@t.com
 
 - **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
-
   - contoso.com
   - contoso.com/a
   - www.contoso.com
@@ -344,13 +339,11 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 **Indtastning**: `~contoso.com`
 
 - **Tillad match** og **blokmatch**:
-
   - contoso.com
   - www.contoso.com
   - xyz.abc.contoso.com
 
 - **Tillad ikke matchet** , og **Blok stemmer ikke overens**:
-
   - 123contoso.com
   - contoso.com/abc
   - www.contoso.com/abc
@@ -360,7 +353,6 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 **Indtastning**: `contoso.com/*`
 
 - **Tillad match** og **blokmatch**:
-
   - contoso.com/?q=whatever@fabrikam.com
   - contoso.com/a
   - contoso.com/a/b/c
@@ -373,17 +365,19 @@ Gyldige URL-adresser og deres resultater er beskrevet i følgende afsnit.
 
 #### <a name="scenario-left-wildcard-subdomain-and-right-wildcard-suffix"></a>Scenarie: Underdomæne for venstre jokertegn og højre jokertegnsuffiks
 
+> [!NOTE]
+> Dette scenarie gælder kun for blokke.
+
 **Indtastning**: `*.contoso.com/*`
 
-- **Tillad match** og **blokmatch**:
-
+- **Blokmatch**:
   - abc.contoso.com/ab
   - abc.xyz.contoso.com/a/b/c
   - www.contoso.com/a
   - www.contoso.com/b/a/c
   - xyz.contoso.com/ba
 
-- **Tillad ikke matchet** , og **Blok stemmer ikke overens**: contoso.com/b
+- **Blok, der ikke stemmer overens**: contoso.com/b
 
 #### <a name="scenario-left-and-right-tilde"></a>Scenarie: Venstre og højre tilde
 

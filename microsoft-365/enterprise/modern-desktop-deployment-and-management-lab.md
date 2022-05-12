@@ -15,21 +15,23 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Få mere at vide om, hvor du kan få adgang til Windows og Office Deployment Lab Kit.
-ms.openlocfilehash: 70a7e5d1c44e0fb80860ce0a1932b00616dcfe94
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: cbcde8f0593adb54d3496156b1bf83dca1cd5064
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952682"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363076"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows- og Office 365-installationslaboratoriesæt
 
 Den Windows og Office 365 udrulningslaboratoriepakke er designet til at hjælpe dig med at planlægge, teste og validere din udrulning og administration af stationære computere, der kører Windows 10 Enterprise eller Windows 11 Enterprise og Microsoft 365 Apps for enterprise. Øvelserne i kittet dækker ved hjælp af Microsoft Endpoint Configuration Manager, OneDrive, Windows Autopilot og meget mere. Dette sæt anbefales på det kraftigste til organisationer, der forbereder sig på skrivebordsopgraderinger. Som et isoleret miljø er laboratoriet også ideelt til at udforske opdateringer af udrulningsværktøjet og teste din installationsrelaterede automatisering.
 
-**Windows 10 og Windows 11 versioner af installationslaboratoriesættet kan nu downloades gratis i Microsoft Evaluation Center.**
+Der er to versioner af laboratoriet, som kan downloades gratis:  
 
-[Download Windows 11 med Office 365 installationslaboratoriesæt](https://www.microsoft.com/evalcenter/evaluate-windows-11-office-365-lab-kit)<br>
-[Download Windows 10 med Office 365 udrulningslaboratoriepakke](https://www.microsoft.com/evalcenter/evaluate-lab-kit)
+|Windows 10-laboratorie|Windows 11-laboratorie|
+|---|---|
+|[Win 10 lab-miljø](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
+|[Win 10 lab guides](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab_guides.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
 
 ## <a name="a-complete-lab-environment"></a>Et komplet laboratoriemiljø
 
@@ -38,7 +40,7 @@ Den Windows og Office 365 udrulningslaboratoriepakke er designet til at hjælpe 
 |Windows 10-laboratorie|Windows 11-laboratorie|
 |---|---|
 |Windows 10 Enterprise, version 21H1|Windows 11 Enterprise|
-|Microsoft Endpoint Configuration Manager, version 2103|Microsoft Endpoint Configuration Manager, version 2111|
+|Microsoft Endpoint Configuration Manager, version 2203|Microsoft Endpoint Configuration Manager, version 2203|
 |Windows vurderings- og installationspakke til Windows 10|Windows vurderings- og installationspakke til Windows 11|
 |Windows Server 2019|Windows Server 2022|
 
@@ -96,7 +98,7 @@ Detaljerede laboratorievejledninger fører dig gennem flere installations- og ad
 - Windows Hello til virksomheder
 
 > [!NOTE]
-> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Det Windows 10 laboratorie udløber den 16. maj 2022. Det Windows 11 laboratorie udløber den 6. maj 2022. Nye versioner udgives før udløb.
+> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Det Windows 10 laboratorie udløber den 16. maj 2022. Det Windows 11 laboratorie udløber den 7. august 2022. Nye versioner udgives før udløb.
 
 ## <a name="additional-guidance"></a>Yderligere vejledning
 

@@ -1,7 +1,7 @@
 ---
 title: Få mere at vide om informationsbarrierer
 description: Få mere at vide om informationsbarrierer i Microsoft Purview.
-keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, informationsbarrierer
+keywords: Microsoft 365, Microsoft Purview, overensstemmelse
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -17,46 +17,35 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 72a53580222b315f86fd397e391b026937b8035b
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 214a2614b6ca7381bbded39ff5f5143236f6c001
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287172"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363109"
 ---
 # <a name="learn-about-information-barriers"></a>Få mere at vide om informationsbarrierer
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsofts cloudtjenester omfatter effektive kommunikations- og samarbejdsfunktioner. Lad os antage, at du vil begrænse kommunikationen og samarbejdet mellem to grupper for at undgå, at der opstår en interessekonflikt i din organisation. Eller måske vil du begrænse kommunikationen og samarbejdet mellem bestemte personer i din organisation for at beskytte interne oplysninger. Microsoft 365 muliggør kommunikation og samarbejde på tværs af grupper og organisationer, så er det muligt at begrænse kommunikation og samarbejde mellem bestemte grupper af brugere, når det er nødvendigt? Med Microsoft Purview Information Barriers (IB) kan du!
+Microsoft Purview Information Barriers (IB) er en overholdelsesløsning, der giver dig mulighed for at begrænse tovejskommunikation og samarbejde mellem grupper og brugere i Microsoft Teams, SharePoint Online og OneDrive for Business. IB bruges ofte i stærkt regulerede brancher og kan hjælpe med at undgå interessekonflikter og beskytte interne oplysninger mellem brugere og organisatoriske områder.
 
-Microsoft Teams, SharePoint Online og OneDrive for Business understøtter informationsbarrierer. Under forudsætning af at dit [abonnement](#required-licenses-and-permissions) indeholder informationsbarrierer, kan en overholdelsesadministrator eller administrator af informationsbarrierer definere politikker, der tillader eller forhindrer kommunikation mellem grupper af brugere i Microsoft Teams. Politikker for informationsbarrierer kan bruges til situationer som disse:
+Når IB-politikker er på plads, kan brugere, der ikke skal kommunikere eller dele filer med andre specifikke brugere, ikke finde, vælge, chatte eller ringe til disse brugere. IB-politikker placerer automatisk kontroller for at registrere og forhindre uautoriseret kommunikation og samarbejde mellem definerede grupper og brugere. IB-politikker er uafhængige af [overholdelsesgrænser](/microsoft-365/compliance/set-up-compliance-boundaries) for eDiscovery-undersøgelser, der styrer placering af brugerindhold, som eDiscovery-ledere kan søge efter.
 
-- Brugeren i dag erhvervsdrivende gruppe bør ikke kommunikere eller dele filer med markedsføring team
-- Økonomiafdelingen, der arbejder med fortrolige virksomhedsoplysninger, må ikke kommunikere eller dele filer med bestemte grupper i organisationen
+IB-politikker kan tillade eller forhindre kommunikation og samarbejde mellem grupper og brugere i følgende eksempelscenarier:
+
+- Brugere i *Day Trader-gruppen* må ikke kommunikere eller dele filer med *marketingteamet*
+- Økonomiafdelingen, der arbejder med fortrolige firmaoplysninger, må ikke kommunikere eller dele filer med visse grupper i organisationen
 - Et internt team med faghemmeligt materiale må ikke ringe til eller chatte online med personer i visse grupper i organisationen
 - Et forskningsteam bør kun ringe til eller chatte online med et produktudviklingsteam
-- Et websted for dag erhvervsdrivende gruppe bør ikke deles eller tilgås af nogen uden for den dag erhvervsdrivende gruppe
+- Et SharePoint websted for *Day Trader-gruppen* må ikke deles eller tilgås af nogen uden for *Day Trader-gruppen*
 
 > [!IMPORTANT]
-> Informationsbarrierer ***understøtter kun** _ tovejsbegrænsninger. Envejsbegrænsninger, f.eks. marketing, kan kommunikere og samarbejde med daghandlere, men daghandlere kan ikke kommunikere og samarbejde med marketing _*_understøttes ikke_**.
+> Informationsbarrierer **understøtter kun** tovejskommunikations- og samarbejdsbegrænsninger. Et scenarie, hvor marketing kan kommunikere og samarbejde med Day Traders, men Day Traders ikke kan kommunikere og samarbejde med Marketing **, understøttes f.eks. ikke**.
 
-I alle disse eksempelscenarier (og meget mere) kan der defineres politikker for informationsbarrierer for at forhindre eller tillade kommunikation og samarbejde i Microsoft Teams, SharePoint Online og OneDrive. Sådanne politikker kan forhindre personer i at ringe til eller chatte med dem, de ikke burde, eller give andre mulighed for kun at kommunikere med bestemte grupper i Microsoft Teams. Med politikker for informationsbarrierer i kraft, når brugere, der er omfattet af disse politikker, forsøger at kommunikere og samarbejde med andre i Microsoft Teams, udføres der SharePoint online- eller OneDrive kontrol for at forhindre (eller tillade) kommunikation og samarbejde (som defineret i politikker for informationsbarrierer).
+## <a name="information-barriers-and-microsoft-teams"></a>Informationsbarrierer og -Microsoft Teams
 
-Hvis du vil vide mere om brugeroplevelsen med informationsbarrierer, kan du se:
-
-- [Informationsbarrierer i Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams)
-- [Informationsbarrierer i SharePoint Online](/sharepoint/information-barriers)
-- [Informationsbarrierer i OneDrive](/onedrive/information-barriers)
-
-> [!IMPORTANT]
-> I øjeblikket gælder informationsbarrierer ikke for e-mailkommunikation. Informationsbarrierer er desuden uafhængige af [overholdelsesgrænser](set-up-compliance-boundaries.md).<p> Før du definerer og anvender politikker for informationsbarrierer, skal du sørge for, at organisationen ikke har [Exchange politikker for adressekartoteker](/exchange/address-books/address-book-policies/address-book-policies) i kraft. (Informationsbarrierer er baseret på politikker for adressekartoteker).
-
-## <a name="what-happens-with-information-barriers"></a>Hvad sker der med informationsbarrierer?
-
-Når politikker for informationsbarrierer er på plads, kan personer, der ikke må kommunikere eller dele filer med andre specifikke brugere, ikke finde, vælge, chatte eller ringe til disse brugere. Med informationsbarrierer er der indført kontroller for at forhindre uautoriseret kommunikation og samarbejde.
-
-Informationsbarrierer gælder for Microsoft Teams (chats og kanaler), SharePoint Online og OneDrive. I Microsoft Teams fastlægger og forhindrer politikker for informationsbarrierer følgende former for uautoriseret kommunikation:
+I Microsoft Teams bestemmer og forhindrer IB-politikker følgende former for uautoriseret kommunikation og samarbejde:
 
 - Søger efter en bruger
 - Tilføjelse af et medlem til et team
@@ -66,49 +55,33 @@ Informationsbarrierer gælder for Microsoft Teams (chats og kanaler), SharePoint
 - Deling af en skærm
 - Afgivelse af et opkald
 - Deling af en fil med en anden bruger
-- Adgang til fil via delingslink
+- Adgang til en fil via deling af et link
 
-Hvis de involverede personer indgår i en informationsbarrierepolitik for at forhindre aktiviteten, vil de ikke kunne fortsætte. Derudover kan alle, der indgår i en informationspolitik, muligvis blokeres fra at kommunikere med andre i Microsoft Teams. Når personer, der påvirkes af politikker for informationsbarrierer, er en del af det samme team eller gruppechat, kan de blive fjernet fra disse chatsessioner, og yderligere kommunikation med gruppen er muligvis ikke tilladt.
+Hvis de brugere, der udfører disse aktiviteter i Microsoft Teams, er inkluderet i en IB-politik for at forhindre aktiviteten, kan de ikke fortsætte. Desuden kan alle, der er inkluderet i en IB-politik, potentielt blokeres fra at kommunikere med andre brugere i Microsoft Teams. Når personer, der påvirkes af IB-politikker, er en del af den samme team- eller gruppechat, kan de blive fjernet fra disse chatsessioner, og yderligere kommunikation med gruppen er muligvis ikke tilladt.
 
-Hvis du vil vide mere om brugeroplevelsen med informationsbarrierer, kan [du se informationsbarrierer i Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams).
+Se [informationsbarrierer i Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams) for at få flere oplysninger.
 
-I SharePoint Online og OneDrive bestemmer og forhindrer politikker for informationsbarrierer følgende former for uautoriseret samarbejde:
+## <a name="information-barriers-and-sharepoint-and-onedrive"></a>Informationsbarrierer, SharePoint og OneDrive
+
+I SharePoint Online og OneDrive registrerer og forhindrer IB-politikker følgende former for uautoriseret samarbejde:
 
 - Tilføjelse af et medlem til et websted
 - Adgang til webstedet eller indhold af en bruger
 - Deling af websted eller indhold med en anden bruger
 - Søger på et websted
 
-Hvis du vil vide mere om brugeroplevelsen med informationsbarrierer, kan [du se informationsbarrierer i SharePoint Online](/sharepoint/information-barriers)
+For mere information, se [Informationsbarrierer i SharePoint](/sharepoint/information-barriers) og [Informationsbarrierer i OneDrive](/onedrive/information-barriers).
 
-## <a name="required-licenses-and-permissions"></a>Påkrævede licenser og tilladelser
+## <a name="information-barriers-and-exchange-online"></a>Informationsbarrierer og Exchange Online
 
-Før du kommer i gang med IB, skal du bekræfte dit [Microsoft 365 abonnement](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) og eventuelle tilføjelsesprogrammer. Hvis du vil have adgang til og bruge IB, skal din organisation have et af følgende abonnementer eller tilføjelsesprogrammer:
+IB-politikker er ikke tilgængelige til at begrænse kommunikation og samarbejde mellem grupper og brugere i mails. IB-politikker er baseret på [Exchange Online politikker for adressekartoteker.](/exchange/address-books/address-book-policies/address-book-policies) ABPs gør det muligt for organisationer praktisk talt at tildele brugere til bestemte grupper for at kunne levere tilpassede visninger af organisationens globale adressekartotek (GAL). Når der oprettes IB-politikker, oprettes ABP'er for politikkerne automatisk. Efterhånden som IB-politikker tilføjes i din organisation, ændres strukturen og funktionsmåden for din globale adresseliste for at overholde IB-politikker.
 
-- Microsoft 365 E5/A5-abonnement (betalt version eller prøveversion)
-- Office 365 E5/A5/A3/A1-abonnement (betalt version eller prøveversion)
-- Avanceret overholdelse i Office 365 tilføjelsesprogram (ikke længere tilgængeligt for nye abonnementer)
-- Microsoft 365 E3/A3/A1-abonnement + tilføjelsesprogrammet Microsoft 365 E5/A5 Overholdelse
-- Microsoft 365 E3/A3/A1-abonnement + tilføjelsesprogrammet Microsoft 365 E5/A5 Insider Risk Management
+Før du definerer og anvender politikker for IB, skal du fjerne alle eksisterende Exchange politikker for adressekartoteker i din organisation. IB-politikker er baseret på politikker for adressekartoteker, og eksisterende ABP-politikker er ikke kompatible med de ABP'er, der er oprettet af IB. Hvis du vil fjerne dine eksisterende politikker for adressekartoteker, skal du se [Fjern en adressekartotekspolitik i Exchange Online](/exchange/address-books/address-book-policies/remove-an-address-book-policy). Når IB-politikker er aktiveret, og hvis du har aktiveret hierarkisk adressekartotek, kan alle brugere, der ikke er inkluderet i et IB-segment, se det [hierarkiske adressekartotek](/exchange/address-books/hierarchical-address-books/hierarchical-address-books) i Exchange online.
 
-Du kan finde flere oplysninger [under Microsoft 365 licensvejledning til sikkerheds- & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+Det er kun Exchange Online installationer, der understøttes i øjeblikket for IB-politikker. Hvis din organisation har brug for at definere og styre mailkommunikation, kan du overveje at bruge [Exchange regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).
 
-Hvis du vil [definere eller redigere politikker for informationsbarrierer](information-barriers-policies.md), skal du have tildelt en af følgende roller:
+## <a name="ready-to-get-started"></a>Er du klar til at komme i gang?
 
-- Microsoft 365 global administrator
-- Office 365 global administrator
-- Overholdelsesadministrator
-- Administration af IB-overholdelse
-
-Du kan få mere at vide om roller og tilladelser [under Tilladelser i Office 365 Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).
-
-Du skal have kendskab til PowerShell-cmdlet'er for at kunne definere, validere eller redigere politikker for informationsbarrierer. Selvom vi indeholder flere eksempler på PowerShell-cmdlet'er i [artiklen Vejledning](information-barriers-policies.md), skal du kende andre oplysninger, f.eks. parametre, for din organisation.
-
-## <a name="next-steps"></a>Næste trin
-
-- [Få mere at vide om informationsbarrierer i Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams)
-- [Få mere at vide om informationsbarrierer i SharePoint Online](/sharepoint/information-barriers)
-- [Få mere at vide om informationsbarrierer i OneDrive](/onedrive/information-barriers)
+- [Kom i gang med informationsbarrierer](information-barriers-policies.md)
+- [Administrer politikker for informationsbarrierer](information-barriers-edit-segments-policies.md)
 - [Se de attributter, der kan bruges til politikker for informationsbarrierer](information-barriers-attributes.md)
-- [Definer politikker for informationsbarrierer](information-barriers-policies.md)
-- [Rediger (eller fjern) politikker for informationsbarrierer](information-barriers-edit-segments-policies.md)

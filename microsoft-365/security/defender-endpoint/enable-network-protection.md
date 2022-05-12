@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: d37723e45c5c4049e913422b2500b74d36c701eb
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: e53cda0ac61bdc546e972d663bf0063b02b21ad3
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789706"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363254"
 ---
 # <a name="turn-on-network-protection"></a>Slå netværksbeskyttelse til
 
@@ -38,7 +38,7 @@ ms.locfileid: "64789706"
 > [!TIP]
 > Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-[Netværksbeskyttelse](network-protection.md) hjælper med at forhindre medarbejdere i at bruge alle programmer til at få adgang til farlige domæner, der kan hoste phishing-svindel, udnyttelser og andet skadeligt indhold på internettet. Du kan [overvåge netværksbeskyttelse](evaluate-network-protection.md) i et testmiljø for at få vist, hvilke apps der blokeres, før du aktiverer den.
+[Netværksbeskyttelse](network-protection.md) hjælper med at forhindre medarbejdere i at bruge alle programmer til at få adgang til farlige domæner, der kan hoste phishing-svindel, udnyttelser og andet skadeligt indhold på internettet. Du kan [overvåge netværksbeskyttelse](evaluate-network-protection.md) i et testmiljø for at få vist, hvilke apps der blokeres, før du aktiverer netværksbeskyttelse.
 
 [Få mere at vide om konfigurationsindstillinger for netværksfiltrering.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
@@ -140,27 +140,19 @@ Brug følgende procedure til at aktivere netværksbeskyttelse på domænetilslut
    > [!IMPORTANT]
    > Hvis du vil aktivere netværksbeskyttelse fuldt ud, skal du angive indstillingen Gruppepolitik til **Aktiveret** og også vælge **Bloker** i rullemenuen med indstillinger.
 
-Bekræft, at netværksbeskyttelse er aktiveret på en lokal computer ved hjælp af Registreringseditor:
-
-1. Vælg **Start** , og skriv **regedit** for at åbne **Registreringseditor**.
-
-2. Naviger til **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection**
-
-3. Vælg **EnableNetworkProtection,** og bekræft værdien:
-   - 0=Fra
-   - 1=Slået til
-   - 2=Overvågning
+   > [!NOTE]
+   > Valgfrit: Følg trinnene i [Kontrollér, om netværksbeskyttelse er aktiveret](#check-if-network-protection-is-enabled) for at kontrollere, at dine Gruppepolitik indstillinger er korrekte.
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager
 
 1. Åbn Configuration Manager-konsollen.
 
-2. Gå til **Assets and Compliance** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**. 
+2. Gå til **Assets and Compliance** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**.
 
 3. Vælg **Opret Exploit Guard-politik** på båndet for at oprette en ny politik.
    - Hvis du vil redigere en eksisterende politik, skal du vælge politikken og derefter vælge **Egenskaber** på båndet eller i genvejsmenuen. Rediger indstillingen **Konfigurer netværksbeskyttelse** under fanen **Netværksbeskyttelse** .  
 
-4. Angiv et navn til den nye politik på siden **Generelt** , og kontrollér, at indstillingen **Netværksbeskyttelse** er aktiveret. 
+4. Angiv et navn til den nye politik på siden **Generelt** , og kontrollér, at indstillingen **Netværksbeskyttelse** er aktiveret.
 
 5. På siden **Netværksbeskyttelse** skal du vælge en af følgende indstillinger for indstillingen **Konfigurer netværksbeskyttelse** :
    - **Bloker**
