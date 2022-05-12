@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: a3d7548dc71c3a9d588d2a77fae5c4ed71f139f4
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: 629d475c160d5836d155ca0374630ad64b0928b4
+ms.sourcegitcommit: 3226bdf213b290ec5262670873c3a75f17b66ddd
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302309"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65372015"
 ---
 # <a name="enable-corelight-data-integration"></a>Aktiver Integration af Corelight-data
 
@@ -67,7 +67,7 @@ Hvis du vil aktivere Corelight-integrationen, skal du udføre følgende trin:
 ### <a name="step-3-configure-your-corelight-appliance-to-send-data-to-microsoft-365-defender"></a>Trin 3: Konfigurer corelight-enheden til at sende data til Microsoft 365 Defender
 
 > [!NOTE]
-> Integrationen er tilgængelig i Corelight Sensor software v24 og nyere.
+> Integrationen er tilgængelig i Corelight Sensor software v25 og nyere.
 > 
 > Du skal bruge internetforbindelse, for at din sensor kan nå både Defender- og Corelight-cloudtjenesterne, for at løsningen kan fungere.
 
