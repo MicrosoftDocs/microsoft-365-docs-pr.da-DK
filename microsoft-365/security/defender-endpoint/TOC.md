@@ -101,6 +101,7 @@
 ###### [Konfigurer og valider udeladelser](mac-exclusions.md)
 ###### [Angiv indstillinger](mac-preferences.md)
 ###### [Find og bloker potentielt uønskede programmer](mac-pua.md)
+###### [Beskyt macOS-sikkerhedsindstillinger ved hjælp af manipulationsbeskyttelse](tamperprotection-macos.md)
 ###### [Enhedsstyring]()
 ####### [Oversigt over enhedsstyring](mac-device-control-overview.md)
 ####### [SYLTEF-eksempler](mac-device-control-jamf.md)

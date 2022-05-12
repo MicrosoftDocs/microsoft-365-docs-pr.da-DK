@@ -214,6 +214,8 @@
       href: work-with-partner-to-archive-third-party-data.md
     - name: Søg efter tredjepartsdata
       href: use-content-search-to-search-third-party-data-that-was-imported.md
+    - name: Få vist administratorlogge for dataconnectorer
+      href: data-connector-admin-logs.md
 - name: Administrer insider-risici
   items:
     - name: Microsoft Purview-løsninger for insider-risiko

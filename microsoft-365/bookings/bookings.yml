@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Bookings
-summary: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede beskeder.
+summary: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede meddelelser.
 metadata:
   title: Microsoft Bookings
-  description: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede beskeder.
+  description: Planlæg og administrer aftaler med Microsoft Bookings. Omfatter integration med Outlook og automatiserede meddelelser.
   ms.service: bookings
   ms.topic: landing-page
   author: dmaguire
@@ -32,15 +32,15 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Angiv dine firmaoplysninger
+    - text: Angiv dine virksomhedsoplysninger
       url: enter-business-information.md
-    - text: Angiv dine planlægningspolitikker
+    - text: Angiv dine politikker for tidsbestilling
       url: set-scheduling-policies.md
     - text: Definer dine servicetilbud
       url: define-service-offerings.md
-    - text: Angiv medarbejdernes arbejdstider
+    - text: Angiv arbejdstimer for medarbejdere
       url: employee-hours.md
-    - text: Tilpasse og publicere din bookingside
+    - text: Tilpas og publicer din bookingside
       url: customize-booking-page.md
     - text: Opret og bemand dine bookinger
       url: create-a-manual-booking.md
