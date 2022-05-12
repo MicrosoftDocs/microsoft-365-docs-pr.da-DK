@@ -17,19 +17,21 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 9211597ec8a0e25130b010a6049832ac151840fc
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: c9fe313994e7468004e17df05b1ec4d7c3cf7a6b
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173705"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65367936"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
+
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -37,10 +39,13 @@ ms.locfileid: "65173705"
 Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler.
 
 > [!TIP]
-> Microsoft Defender for Endpoint er tilgængelig i to planer: Defender for Endpoint Plan 1 og Plan 2. I denne artikel beskrives de funktioner og egenskaber, der er inkluderet i hver plan. [Få mere at vide om Microsoft Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md).
-> 
+> Microsoft Defender for Endpoint er tilgængelig i to planer, Defender for Endpoint Plan 1 og Plan 2. Et nyt Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender-tilføjelsesprogram er nu tilgængeligt for Plan 2.
+>
+> Du kan få flere oplysninger om de funktioner og egenskaber, der er inkluderet i hver plan, herunder det nye tilføjelsesprogram til administration af sårbarheder i Defender, under [Sammenlign Microsoft Defender for Endpoint planer](defender-endpoint-plan-1-2.md).
 
 <p><p>
+
+Se følgende video for at få mere at vide om Defender for Endpoint:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
 
@@ -55,7 +60,7 @@ Defender for Endpoint bruger følgende kombination af teknologi, der er indbygge
 <center><h2>Microsoft Defender for Endpoint</center></h2>
 <table>
 <tr>
-<td><a href="#tvm"><center><img src="images/TVM_icon.png" alt="Threat & Vulnerability Management"> <br><b>Administration af sårbarheder i forbindelse med trussel &</b></center></a></td>
+<td><a href="#tvm"><center><img src="images/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Administration af sårbarheder i core Defender</b></center></a></td>
 <td><a href="#asr"><center><img src="images/asr-icon.png" alt="Attack surface reduction"><br><b>Reduktion af angrebsoverflade</b></center></a></td>
 <td><center><a href="#ngp"><img src="images/ngp-icon.png" alt="Next-generation protection"><br> <b>Næste generations beskyttelse</b></a></center></td>
 <td><center><a href="#edr"><img src="images/edr-icon.png" alt="Endpoint detection and response"><br> <b>Registrering af slutpunkt og svar</b></a></center></td>
@@ -86,9 +91,11 @@ Defender for Endpoint bruger følgende kombination af teknologi, der er indbygge
 
 <a name="tvm"></a>
 
-**[Administration af sårbarheder i forbindelse med trussel &](next-gen-threat-and-vuln-mgt.md)**
+**[Administration af sårbarheder i core Defender](../defender-vulnerability-management/defender-vulnerability-management.md)**
 
-Denne indbyggede funktion bruger en spilændrende risikobaseret tilgang til registrering, prioritering og afhjælpning af sårbarheder og fejlkonfigurationer af slutpunkter.
+Indbyggede kernefunktioner håndtering af sikkerhedsrisici bruger en moderne risikobaseret tilgang til søgning, vurdering, prioritering og afhjælpning af slutpunktssårbarheder og fejlkonfigurationer. For yderligere at forbedre din evne til at vurdere din sikkerhedsniveau og reducere risikoen, er der et nyt tilføjelsesprogram til Administration af sårbarheder til Plan 2 tilgængeligt.
+
+Du kan få flere oplysninger om de forskellige håndtering af sikkerhedsrisici funktioner, der er tilgængelige for dig, under [Sammenlign Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender tilbud](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md).
 
 <a name="asr"></a>
 
@@ -162,7 +169,7 @@ Med dette læringsforløb fra Microsoft Learn kan du forstå Defender for Endpoi
 
 |Uddannelse:|Registrer og reager på cyberangreb med Microsoft 365 Defender|
 |---|---|
-|![Microsoft 365 Defender træningsikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Defender for Endpoint er en sikkerhedsløsning for slutpunkter, der tilbyder håndtering af sikkerhedsrisici, slutpunktsbeskyttelse, slutpunktsregistrering og -svar, mobiltrusselforsvar og administrerede tjenester på en enkelt samlet platform.<p> 2 t. 25 min. - Learning sti - 9 moduler|
+|![Microsoft 365 Defender træningsikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Defender for Endpoint er en sikkerhedsløsning for slutpunkter, der tilbyder håndtering af sikkerhedsrisici, slutpunktsbeskyttelse, slutpunktsregistrering og -svar, mobiltrusselforsvar og administrerede tjenester på en enkelt samlet platform.<p> 2 t. 25 min. - læringsforløb - 9 moduler|
 
 > [!div class="nextstepaction"]
 > [Start >](/learn/paths/defender-endpoint-fundamentals/)

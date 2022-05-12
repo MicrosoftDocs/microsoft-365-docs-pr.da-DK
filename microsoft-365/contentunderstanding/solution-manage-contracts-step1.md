@@ -11,202 +11,202 @@ ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
 ROBOTS: ''
-description: Lær at bruge en SharePoint Syntex at identificere kontraktfiler og udtrække data ved hjælp af en Microsoft 365 løsning.
-ms.openlocfilehash: c654c72ef36bf86337b7564efc68e4523516f4f9
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Få mere at vide om, hvordan du bruger SharePoint Syntex til at identificere kontraktfiler og udtrække data ved hjælp af en Microsoft 365 løsning.
+ms.openlocfilehash: 7d2874260ce7a307aa42c67ba571104ed4c4da87
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63597927"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368083"
 ---
 # <a name="step-1-use-sharepoint-syntex-to-identify-contract-files-and-extract-data"></a>Trin 1. Brug SharePoint Syntex til at identificere kontraktfiler og udtrække data
 
-Din organisation har brug for en metode til at identificere og klassificere alle kontraktdokumenter fra de mange filer, du modtager. Du ønsker også hurtigt at kunne få vist flere vigtige elementer i hver af de kontraktfiler *, der* er identificeret (f.eks. *beløb* til klient, leverandør *og gebyr*). Det kan du gøre ved SharePoint Syntex [oprette en](index.md) dokumentforståelsesmodel og anvende den i et dokumentbibliotek.
+Din organisation skal bruge en metode til at identificere og klassificere alle kontraktdokumenter fra de mange filer, du modtager. Du ønsker også hurtigt at kunne se flere vigtige elementer i hver af de identificerede kontraktfiler (f.eks *. klient*, *entreprenør* og *gebyrbeløb*). Det kan du gøre ved hjælp af [SharePoint Syntex](index.md) til at oprette en model til forståelse af et dokument og anvende den i et dokumentbibliotek.
 
 ## <a name="overview-of-the-process"></a>Oversigt over processen
 
-[Dokumentforståelse](document-understanding-overview.md) bruger kunstig intelligens til at automatisere klassificeringen af filer og udtræk af oplysninger. Dokumentforståelsesmodeller er også optimal til at udtrække oplysninger fra ustrukturerede og semistrukturerede dokumenter, hvor de oplysninger, du skal bruge, ikke findes i tabeller eller formularer, f.eks. kontrakter. 
+[Dokumentforståelse](document-understanding-overview.md) bruger AI-modeller (artificial intelligence) til at automatisere klassificering af filer og udtrækning af oplysninger. Modeller til dokumentforståelse er også optimale til at udtrække oplysninger fra ustrukturerede og semi-strukturerede dokumenter, hvor de oplysninger, du har brug for, ikke findes i tabeller eller formularer, f.eks. kontrakter. 
 
-Dokumentforståelsesmodeller bruger Optical Character Recognition-teknologi (OCR) til at scanne PDF-filer, billeder og TIFF-filer, både når du træner en model med eksempelfiler, og når du kører modellen mod filer i et dokumentbibliotek.
+Modeller til dokumentforståelse bruger OCR-teknologien (Optical Character Recognition) til at scanne PDF-filer, billeder og TIFF-filer, både når du oplærer en model med eksempelfiler, og når du kører modellen mod filer i et dokumentbibliotek.
 
-1. Først skal du finde mindst fem eksempelfiler, som du kan bruge til at "træne" modellen til at søge efter karakteristika, der er specifikke for den indholdstype, du forsøger at identificere (en kontrakt). 
+1. Først skal du finde mindst fem eksempelfiler, som du kan bruge til at "oplære" modellen til at søge efter egenskaber, der er specifikke for den indholdstype, du forsøger at identificere (en kontrakt). 
 
-2. Opret SharePoint Syntex dokumentforståelsesmodel ved hjælp af en ny dokumentforståelsesmodel. Ved hjælp af dine eksempelfiler skal du [oprette en klassificering](create-a-classifier.md). Ved at uddanne klassificeringen med dine eksempelfiler lærer du den at søge efter karakteristika, der er specifikke for, hvad du ville se i virksomhedens kontrakter. Du kan [f.eks](create-a-classifier.md#create-an-explanation). oprette en "forklaring", der søger efter bestemte strenge, der findes i dine kontrakter, f.eks. *Serviceaftale**, Vilkår* for aftale og *Løn*. Du kan endda træne din forklaring til at lede efter disse strenge i bestemte afsnit i dokumentet eller ved siden af andre strenge. Når du mener, at du har trænet din klassificering med de oplysninger, den skal bruge, kan du teste din model på et eksempelsæt med eksempelfiler for at se, hvor effektivt det er. Efter testning kan du, hvis det er nødvendigt, vælge at foretage ændringer til dine forklaringer for at gøre dem mere effektive. 
+2. Opret en ny model til dokumentforståelse ved hjælp af SharePoint Syntex. Ved hjælp af dine eksempelfiler skal du [oprette en klassificering](create-a-classifier.md). Ved at oplære klassificeringen med dine eksempelfiler lærer du det at søge efter egenskaber, der er specifikke for, hvad du ville se i din virksomheds kontrakter. Du kan f.eks. [oprette en "forklaring"](create-a-classifier.md#create-an-explanation) , der søger efter bestemte strenge, der findes i dine kontrakter, f.eks *. Serviceaftale*, *Aftalevilkår* og *Kompensation*. Du kan endda oplære din forklaring til at søge efter disse strenge i bestemte afsnit i dokumentet eller placeret ud for andre strenge. Når du mener, at du har oplært din klassificering med de oplysninger, den har brug for, kan du teste din model på et eksempelsæt af eksempelfiler for at se, hvor effektiv den er. Efter testen kan du om nødvendigt vælge at foretage ændringer af dine forklaringer for at gøre dem mere effektive. 
 
-3. I din model kan du [oprette en extractor](create-an-extractor.md) til at udtrække bestemte data fra hver kontrakt. For hver kontrakt gælder det f.eks. om de oplysninger, du er mest bekymret om, hvem klienten er, navnet på entreprenøren og de samlede omkostninger.
+3. I din model kan du [oprette en udtrækningsmaskine](create-an-extractor.md) for at udtrække bestemte data fra hver kontrakt. For hver kontrakt er de oplysninger, du er mest bekymret for, f.eks. hvem kunden er, navnet på underleverandøren og de samlede omkostninger.
 
-4. Når du har oprettet modellen, skal [du anvende den på SharePoint dokumentbibliotek.](apply-a-model.md) Når du overfører dokumenter til dokumentbiblioteket, kører din dokumentforståelsesmodel og identificerer og klassificerer alle filer, der svarer til de kontrakters indholdstype, du har defineret i modellen. Alle filer, der er klassificeret som kontrakter, vises i en brugerdefineret biblioteksvisning. Filerne vil også vise værdierne fra hver kontrakt, som du har defineret i din extractor.
+4. Når du har oprettet din model, [kan du anvende den på et SharePoint dokumentbibliotek](apply-a-model.md). Når du uploader dokumenter til dokumentbiblioteket, kører modellen til dokumentforståelse og identificerer og klassificerer alle filer, der svarer til den kontraktindholdstype, du har defineret i din model. Alle filer, der er klassificeret som kontrakter, vises i en brugerdefineret biblioteksvisning. Filerne viser også værdierne fra hver kontrakt, du har defineret i udtrækningen.
 
-   ![Kontrakter i dokumentbibliotek.](../media/content-understanding/doc-lib-solution.png)
+   ![Kontrakter i dokumentbiblioteket.](../media/content-understanding/doc-lib-solution.png)
 
-5. Hvis du har opbevarings- eller sikkerhedskrav til dine kontrakter, kan du også bruge modellen til at [](apply-a-retention-label-to-a-model.md) anvende en opbevaringsmærkat eller en følsomhedsmærkat, der kan forhindre, at dine kontrakter slettes i en bestemt tidsperiode, eller til at begrænse, hvem der kan få adgang til kontrakterne.[](apply-a-sensitivity-label-to-a-model.md)
+5. Hvis du har opbevarings- eller sikkerhedskrav til dine kontrakter, kan du også bruge din model til at anvende en [opbevaringsmærkat](apply-a-retention-label-to-a-model.md) eller en [følsomhedsmærkat](apply-a-sensitivity-label-to-a-model.md) , der forhindrer, at dine kontrakter slettes i et bestemt tidsrum, eller til at begrænse, hvem der har adgang til kontrakterne.
 
-## <a name="steps-to-create-and-train-your-model"></a>Trin til at oprette og træne din model
+## <a name="steps-to-create-and-train-your-model"></a>Trin til oprettelse og oplæring af din model
 
 > [!NOTE]
-> Til disse trin kan du bruge eksempelfilerne i lageret [med løsningsaktiver til kontraktstyring](https://github.com/pnp/syntex-samples/tree/main/scenario%20assets/Contracts%20Management). Eksemplerne i dette lager indeholder både dokumentet om modelfiler og de filer, der bruges til at træne modellen.
+> Til disse trin kan du bruge eksempelfilerne i [lageret Med løsningsaktiver til styring af kontrakter](https://github.com/pnp/syntex-samples/tree/main/scenario%20samples/Contracts%20Management). Eksemplerne i dette lager indeholder både det dokument, der forstår modelfiler, og de filer, der bruges til at oplære modellen.
 
 ### <a name="create-a-contract-model"></a>Opret en kontraktmodel
 
 Det første trin er at oprette din kontraktmodel.
 
-1. I indholdscenteret skal du **vælge Ny** og derefter **Opret en model**.
+1. Vælg **Ny** i indholdscenteret, og vælg derefter **Opret en model**.
 
-2. Skriv **navnet på modellen i** feltet Navn i **ruden** Ny dokumentforståelsesmodel. For denne løsning til kontraktadministration kan du navngive modellen *Kontrakt*.
+2. Skriv navnet på modellen i feltet **Navn** i ruden **Nyt dokumentforståelse** af model. I forbindelse med denne kontraktstyringsløsning kan du navngive *modelkontrakten*.
 
 4. Vælg **Opret**. Dette opretter en startside for modellen.</br>
 
-    ![Skærmbillede af startsiden for kontrakt.](../media/content-understanding/models-contract-home-page.png)
+    ![Skærmbillede af startsiden kontrakt.](../media/content-understanding/models-contract-home-page.png)
 
 
-### <a name="train-your-model-to-classify-a-type-of-file"></a>Træn din model til at klassificere en filtype
+### <a name="train-your-model-to-classify-a-type-of-file"></a>Oplær din model til at klassificere en filtype
 
-#### <a name="add-example-files-for-your-model"></a>Tilføje eksempelfiler til din model
+#### <a name="add-example-files-for-your-model"></a>Tilføj eksempelfiler til din model
 
-Du skal tilføje mindst fem eksempelfiler, som er kontraktdokumenter, og en eksempelfil, der ikke er et kontraktdokument (f.eks. en arbejdserklæring). 
+Du skal tilføje mindst fem eksempelfiler, der er kontraktdokumenter, og én eksempelfil, der ikke er et kontraktdokument (f.eks. en arbejdserklæring). 
 
-1. På siden **Modeller > Kontrakt** under **Vigtige handlingerFæl** >  **eksempelfiler**, og vælg **Tilføj filer**.
+1. Vælg **Tilføj filer** under **NøglehandlingerTilføj** >  **eksempelfiler** på siden **Modeller > Kontrakt**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Tilføj eksempelfiler fremhævet.](../media/content-understanding/key-actions-add-example-files.png)
 
-2. På siden **Vælg eksempelfiler til din model** skal du åbne mappen Kontrakt, vælge de filer, du vil bruge, og derefter vælge **Tilføj**. Hvis du ikke har eksempelfiler der, skal du Upload **for** at tilføje dem.
+2. Åbn mappen Kontrakt på siden **Vælg eksempelfiler til din model** , vælg de filer, du vil bruge, og vælg derefter **Tilføj**. Hvis du ikke har eksempelfiler der, skal du vælge **Upload** for at tilføje dem.
 
-#### <a name="label-the-files-as-positive-or-negative-examples"></a>Giv filerne et navn som positive eller negative eksempler
+#### <a name="label-the-files-as-positive-or-negative-examples"></a>Mærk filerne som positive eller negative eksempler
 
-1. På siden **Modeller > Kontrakt** **under** >  Vigtige **handlingerKlassificer filer**, og kør kursus skal du **vælge Træn klassificering**.
+1. På siden **Modeller > Kontrakt** under **NøglehandlingerKlassificer** >  filer, og kør oplæring skal du vælge **Oplær klassificering**.
 
-   ![Skærmbillede, der viser siden Kontrakter med Klassificer filer og kør kursusvalg fremhævet.](../media/content-understanding/key-actions-classify-files.png)
+   ![Skærmbillede, der viser siden Kontrakter med indstillingen Klassificer filer og kør oplæring fremhævet.](../media/content-understanding/key-actions-classify-files.png)
 
-2. På siden Model **> Contract > Contract-klassificering** i fremviseren øverst i den første eksempelfil får du vist tekst, der spørger, om filen er et eksempel på den kontraktmodel, du har oprettet. Hvis det er et positivt eksempel, skal du vælge **Ja**. Hvis det er et negativt eksempel, skal du vælge **Nej**.
+2. På siden **Modeller > Contract > Contract-klassificering** kan du i fremviseren øverst i den første eksempelfil se tekst, hvor du bliver spurgt, om filen er et eksempel på den kontraktmodel, du har oprettet. Hvis det er et positivt eksempel, skal du vælge **Ja**. Hvis det er et negativt eksempel, skal du vælge **Nej**.
 
-3. På listen **Med etiketter til venstre** skal du markere andre filer, du vil bruge som eksempler, og markere dem med mærkat. 
+3. Vælg andre filer, du vil bruge som eksempler, på listen **Navngivne eksempler** til venstre, og mærk dem. 
 
-    ![Startside for klassificering.](../media/content-understanding/models-contract-classifier.png) 
+    ![Klassificeringsstartside.](../media/content-understanding/models-contract-classifier.png) 
 
 #### <a name="add-at-least-one-explanation-to-train-the-classifier"></a>Tilføj mindst én forklaring for at oplære klassificeringen 
 
-1. På siden **Model > kontrakt > Contract-klassificering** skal du vælge **fanen** Træ.
+1. Vælg fanen **Oplær** **på siden Modeller > Contract > Contract classifier**.
 
-2. I sektionen **Oplærte** filer får du vist en liste over de eksempelfiler, du tidligere har navnmærket. Vælg en af de positive filer på listen for at få den vist i fremviseren.
+2. I afsnittet **Oplærte filer** kan du se en liste over de eksempelfiler, du tidligere har mærket. Vælg en af de positive filer på listen for at få den vist i fremviseren.
 
-3. I sektionen **Forklaringer** skal du vælge **Ny** og derefter **Tom**.
+3. I afsnittet **Forklaringer** skal du vælge **Ny** og derefter **Tom**.
 
 4. På siden **Opret en forklaring** :
 
-    a. Skriv navnet **på** forklaringen i feltet Navn (f.eks. "Aftale").
+    a. I feltet **Navn** skal du skrive navnet på forklaringen (f.eks. "Aftale").
 
-    b. I feltet **Forklaringstype** skal du vælge **listen Udtryk**, fordi du tilføjer en tekststreng.
+    b. I feltet **Forklaringstype** skal du vælge **Sætningsliste**, fordi du tilføjer en tekststreng.
 
-    c. Skriv **strengen (** f.eks. "AFTALE") på listen Udtryk. Du kan vælge Store **og små bogstaver** , hvis der skal være store og små bogstaver i strengen.
+    c. Skriv strengen (f.eks. "AGREEMENT") **på listen Udtryk** . Du kan vælge **Forskel på store og små bogstaver** , hvis strengen skal skelne mellem store og små bogstaver.
 
-    d. Vælg **Gem og træn**.
+    d. Vælg **Gem og oplær**.
 
     ![Skærmbillede af panelet Opret en forklaring.](../media/content-understanding/contract-classifier-create-explanation.png) 
 
 #### <a name="test-your-model"></a>Test din model
 
-Du kan teste din kontraktmodel på eksempelfiler, den ikke har set før. Dette er valgfrit, men det kan være en nyttig bedste fremgangsmåde.
+Du kan teste din Kontraktmodel på eksempelfiler, den ikke har set før. Dette er valgfrit, men det kan være en nyttig bedste praksis.
 
-1. På siden **Modeller > kontrakt > Kontrakt-klassificering** skal du vælge **fanen Test** . Dette kører modellen på dine eksempelfiler uden navn.
+1. Vælg fanen **Test** **på siden Modeller > Contract > Contract classifier**. Dette kører modellen på de eksempelfiler, der ikke er navngivet.
 
-2. På listen **Testfiler** vises og vises dine eksempelfiler, hvis modellen forudsagte, at de var positive eller negative. Brug disse oplysninger til at bestemme effektiviteten af din klassificering til at identificere dine dokumenter.
+2. På listen **Test filer** vises dine eksempelfiler, og de vises, hvis modellen forudsagde, at de var positive eller negative. Brug disse oplysninger til at fastslå klassificeringens effektivitet i identificering af dine dokumenter.
 
-    ![Skærmbillede af filerne uden navn på listen Tekstfiler.](../media/content-understanding/test-on-files.png) 
+    ![Skærmbillede af ikke-navngivne filer på listen Tekstfiler.](../media/content-understanding/test-on-files.png) 
 
-3. Når du er færdig, skal **du vælge Afslut kursus**.
+3. Når du er færdig, skal du vælge **Afslut oplæring**.
 
-### <a name="create-and-train-an-extractor"></a>Opret og træn en extractor
+### <a name="create-and-train-an-extractor"></a>Opret og oplær en udtrækningsmaskine
 
-1. På siden **Modelmodel > kontrakt** under Vigtige **handlingerOprette** >  og **træne udtrækkere** skal du **vælge Opret udtræk**.
+1. På siden **Modeller > Kontrakt** under **NøglehandlingerOpret** >  **og oplær udtræksmaskiner** skal du vælge **Opret udtrækningsmaskine**.
 
-   ![Skærmbillede, der viser siden Kontrakter med indstillingen Opret og træudtræk fremhævet.](../media/content-understanding/key-actions-create-extractors.png)
+   ![Skærmbillede, der viser siden Kontrakter med indstillingen Opret og oplær udtræk fremhævet.](../media/content-understanding/key-actions-create-extractors.png)
 
-2. På panelet **Ny enhedsudtrækeller** i **feltet Nyt navn** skal du skrive navnet på din extractor. Navngive *den f.eks* . Klient, hvis du vil hente navnet på klienten fra hver kontrakt.
+2. Skriv navnet på udtrækningsenheden i feltet **Nyt navn** i panelet **Udtrækning af ny enhed**. Navngiv det f.eks *. Client* , hvis du vil udtrække navnet på klienten fra hver kontrakt.
 
-3. Vælg Opret, når du er **færdig**.
+3. Når du er færdig, skal du vælge **Opret**.
 
-#### <a name="label-the-entity-you-want-to-extract"></a>Navnknyt den enhed, du vil udtrække
+#### <a name="label-the-entity-you-want-to-extract"></a>Mærk den enhed, du vil udtrække
 
-Når du opretter extractoren, åbnes extractor-siden. Her kan du se en liste over dine eksempelfiler, hvor den første fil på listen vises i fremviseren.
+Når du opretter udtrækningen, åbnes siden extractor. Her kan du se en liste over dine eksempelfiler, hvor den første fil vises på listen i fremviseren.
 
-![Skærmbillede af siden Klientudtrækeller Med etiketter.](../media/content-understanding/client-extractor-labeled-examples.png) 
+![Skærmbillede af siden Klientudtrækningsmaskine med navngivne eksempler.](../media/content-understanding/client-extractor-labeled-examples.png) 
 
-Sådan navnmærkes enheden:
+Sådan navngiver du objektet:
 
-1. Vælg i fremviseren de data, du vil udtrække fra filerne. Hvis du f.eks. vil udtrække *klienten, skal* du fremhæve klientværdien i den første fil (i dette eksempel *Bedst til dig organicer*) og derefter vælge **Gem**. Du får vist værdien fra filen på listen **Etiketekseler** **under kolonnen Navn** .
+1. Vælg de data, du vil udtrække fra filerne, i fremviseren. Hvis du f.eks. vil udtrække *klienten*, skal du fremhæve klientværdien i den første fil (i dette eksempel *Bedst til dig organiske elementer*) og derefter vælge **Gem**. Du kan se den værdi, der vises fra filen, på listen **Navngivne eksempler** under kolonnen **Mærkat** .
 
-2. Vælg **Næste fil** for at gemme automatisk og åbne den næste fil på listen i fremviseren. Eller vælg **Gem**, og vælg derefter en anden fil **på listen Med etiketter.**
+2. Vælg **Næste fil** for at gemme automatisk, og åbn den næste fil på listen i fremviseren. Eller vælg **Gem**, og vælg derefter en anden fil på listen **Navngivne eksempler** .
 
-3. Gentag trin 1 og 2 i fremviseren, og gentag derefter, indtil du har gemt navnet i alle filerne.
+3. Gentag trin 1 og 2 i fremviseren, og gentag derefter, indtil du har gemt mærkaten i alle filerne.
 
-Når du har mærket filerne, vises der et meddelelsesbanner, som informerer dig om at gå til uddannelse. Du kan vælge at navnmærke flere dokumenter eller gå videre til kurser.
+Når du har mærket filerne, vises der et meddelelsesbanner, der informerer dig om, at du skal skifte til oplæring. Du kan vælge at navngive flere dokumenter eller gå videre til oplæringen.
 
 #### <a name="add-an-explanation"></a>Tilføj en forklaring
 
-Du kan oprette en forklaring, der giver et tip om selve enhedsformatet og variationer, det kan have i eksempelfilerne. En datoværdi kan f.eks. være i mange forskellige formater, f.eks.:
+Du kan oprette en forklaring, der giver et tip om selve enhedsformatet og de variationer, der kan være i eksempelfilerne. En datoværdi kan f.eks. være i mange forskellige formater, f.eks.:
 
 - 10/14/2019
 - 14. oktober 2019
-- mandag d. 14. oktober 2019
+- Mandag den 14. oktober 2019
 
-Du kan oprette en *forklaring på et mønster for* at identificere startdatoen for kontrakten.
+Hvis du vil identificere *kontraktens startdato*, kan du oprette en mønsterforklaring.
 
-1. I sektionen **Forklaringer** skal du vælge **Ny** og derefter **Tom**.
+1. I afsnittet **Forklaringer** skal du vælge **Ny** og derefter **Tom**.
 
 2. På siden **Opret en forklaring** :
 
-    a. Skriv navnet **på** forklaringen i feltet Navn (f.eks *. Dato*).
+    a. I feltet **Navn** skal du skrive navnet på forklaringen (f.eks *. Dato*).
 
-    b. I feltet **Forklaringstype** skal du vælge **Listen Mønster**.
+    b. Vælg **Mønsterliste** i feltet **Forklaringstype**.
 
-    c. Angiv **datovariationen** , som de vises i eksempelfilerne, i feltet Værdi. Hvis du f.eks. har datoformater, der vises som 00-00-0000, skal du angive de variationer, der vises i dine dokumenter, f.eks.:
+    c. I feltet **Værdi** skal du angive datovariationen, som de vises i eksempelfilerne. Hvis du f.eks. har datoformater, der vises som 00/00/0000, skal du angive eventuelle variationer, der vises i dine dokumenter, f.eks.:
 
     - 0/0/0000
     - 0/00/0000
     - 00/0/0000
     - 00/00/0000
 
-4. Vælg **Gem og træn**.
+4. Vælg **Gem og oplær**.
 
 #### <a name="test-your-model-again"></a>Test din model igen
 
-Du kan teste din kontraktmodel på eksempelfiler, den ikke har set før. Dette er valgfrit, men det kan være en nyttig bedste fremgangsmåde.
+Du kan teste din Kontraktmodel på eksempelfiler, den ikke har set før. Dette er valgfrit, men det kan være en nyttig bedste praksis.
 
-1. På siden **Modeller > kontrakt > Kontrakt-klassificering** skal du vælge **fanen Test** . Dette kører modellen på dine eksempelfiler uden navn.
+1. Vælg fanen **Test** **på siden Modeller > Contract > Contract classifier**. Dette kører modellen på de eksempelfiler, der ikke er navngivet.
 
-2. På listen **Test filer** viser og viser dine eksempelfiler, om modellen kan udtrække de oplysninger, du har brug for. Brug disse oplysninger til at bestemme effektiviteten af din klassificering til at identificere dine dokumenter.
+2. På listen **Test filer** vises dine eksempelfiler, og de viser, om modellen kan udtrække de oplysninger, du har brug for. Brug disse oplysninger til at fastslå klassificeringens effektivitet i identificering af dine dokumenter.
 
-3. Når du er færdig, skal **du vælge Afslut kursus**.
+3. Når du er færdig, skal du vælge **Afslut oplæring**.
 
 ### <a name="apply-your-model-to-a-document-library"></a>Anvend din model på et dokumentbibliotek
 
 Sådan anvender du din model på et SharePoint dokumentbibliotek:
 
-1. På siden **Modeller > Kontrakt** under **Vigtige handlingerAnsøg** >  **model på biblioteker skal** du vælge **Anvend model**.
+1. Vælg **Anvend model** under **NøglehandlingerAnvend** >  **model til biblioteker** på siden **Modeller > Kontrakt**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Anvend model på biblioteker fremhævet.](../media/content-understanding/key-actions-apply-model.png)
 
-2. I panelet **Tilføj kontrakt** skal du vælge det SharePoint, der indeholder det dokumentbibliotek, som du vil anvende modellen på. Hvis webstedet ikke vises på listen, kan du bruge søgefeltet til at finde det. Vælg **Tilføj**.
+2. I panelet **Tilføj kontrakt** skal du vælge det SharePoint websted, der indeholder det dokumentbibliotek, du vil anvende modellen på. Hvis webstedet ikke vises på listen, skal du bruge søgefeltet til at finde det. Vælg **Tilføj**.
 
     > [!NOTE]
-    > Du skal have *tilladelse til* at administrere liste *eller redigere* rettigheder til det dokumentbibliotek, du anvender modellen på.
+    > Du skal have *tilladelserne Administrer liste* eller *Rediger* til det dokumentbibliotek, du anvender modellen på.
 
-3. Når du har valgt webstedet, skal du vælge det dokumentbibliotek, som du vil anvende modellen på.
+3. Når du har valgt webstedet, skal du vælge det dokumentbibliotek, du vil anvende modellen på.
 
-4. Da modellen er knyttet til en indholdstype, tilføjer den indholdstypen og dens visning med de etiketter, du udtrækker, og vises som kolonner, når du anvender den på biblioteket. Denne visning er bibliotekets standardvisning som standard, men du kan vælge ikke at have den som standardvisning ved at markere Avancerede indstillinger og fjerne markeringen  i afkrydsningsfeltet Angiv denne  nye visning som standard.
+4. Da modellen er knyttet til en indholdstype, tilføjer den indholdstypen og dens visning med de etiketter, du udtrækkede, og som vises som kolonner, når du anvender den på biblioteket. Denne visning er bibliotekets standardvisning, men du kan eventuelt vælge ikke at få den til at være standardvisning ved at vælge **Avancerede indstillinger** og fjerne markeringen i afkrydsningsfeltet **Angiv denne nye visning som standard** .
 
 5. Vælg **Tilføj** for at anvende modellen på biblioteket.
 
-6. På siden **Model >,** i sektionen Biblioteker med denne **model**, får du vist URL-adressen til SharePoint websted.
+6. På siden **Modeller > kontrakt** kan du i afsnittet **Biblioteker med denne model** se URL-adressen til det SharePoint websted, der er angivet.
 
-    ![Skærmbillede af startsiden for kontrakt, der viser sektionen Biblioteker med denne model.](../media/content-understanding/contract-libraries-with-this-model.png)
+    ![Skærmbillede af startsiden kontrakt, der viser sektionen Biblioteker med denne model.](../media/content-understanding/contract-libraries-with-this-model.png)
 
 7. Under **Indstillinger** >  **Library-indstillinger**:
 
-   - Tilføj en kolonne med **navnet Status** , **og vælg Valg** som kolonnetype.
-   - Anvend **værdierne Til gennemsyn**, Godkendt **og** Afvist. 
+   - Tilføj en kolonne med navnet **Status,** og vælg **Valg** som kolonnetype.
+   - Anvend værdierne **I gennemsyn**, **Godkendt** og **Afvist** .
 
-Når du har overført modellen til dokumentbiblioteket, kan du begynde at overføre dokumenter til webstedet og se resultaterne.
+Når du har anvendt modellen på dokumentbiblioteket, kan du begynde at overføre dokumenter til webstedet og se resultaterne.
 
 ## <a name="next-step"></a>Næste trin
 

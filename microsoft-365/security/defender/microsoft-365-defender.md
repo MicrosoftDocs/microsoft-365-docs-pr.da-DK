@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 99549ba8077d966c4d5649e144fa0259f9178629
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 45e63c489093c147895c467c3471f16a8bb99918
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944343"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368325"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -47,6 +47,7 @@ Med den integrerede Microsoft 365 Defender løsning kan sikkerhedseksperter saml
 
 <center><h2>Microsoft 365 Defender-tjenester</center></h2>
 <table><tr><td><center><b><a href="/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint"><b>Microsoft Defender for Endpoint</b></center></a></td>
+<td><center><b><a href="/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management"><b>Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender</b></center></a></td>
 <td><center><b><a href="/microsoft-365/security/office-365-security/overview"><b>Microsoft Defender for Office 365</b></center></a></td>
 <td><center><b><a href="/defender-for-identity/"><b>Microsoft Defender for Identity</b></a></center></td>
 <td><center><b><a href="/cloud-app-security/"><b>Microsoft Defender for Cloud Apps</b></a></center></td>
@@ -65,8 +66,9 @@ I denne interaktive vejledning lærer du, hvordan du beskytter din organisation 
 Microsoft 365 Defender tjenester beskytter:
 
 - **Slutpunkter med Defender for Endpoint** – Defender for Endpoint er en samlet slutpunktsplatform til forebyggende beskyttelse, registrering efter brud, automatiseret undersøgelse og svar.
+- **Assets with Defender Vulnerability Management** – Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender leverer løbende synlighed af aktiver, intelligente risikobaserede vurderinger og indbyggede afhjælpningsværktøjer, der kan hjælpe dine sikkerheds- og it-teams med at prioritere og håndtere kritiske sikkerhedsrisici og fejlkonfigurationer på tværs af din Organisation.
 - **Mail og samarbejde med Defender for Office 365** – Defender for Office 365 beskytter din organisation mod skadelige trusler fra mailmeddelelser, links (URL-adresser) og samarbejdsværktøjer.
-- **Identiteter med Defender for Identity and Azure Active Directory (Azure AD) Identity Protection** – Defender for Identity bruger dine AD DS-signaler (Active Directory i det lokale miljø Domain Services) til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og skadelige insiderhandlinger, der er rettet mod din organisation. Azure AD Identity Protection automatiserer registrering og afhjælpning af identitetsbaserede risici i dit cloudbaserede Azure AD.
+- **Identiteter med Defender for Identity and Azure Active Directory (Azure AD) Identity Protection** – Defender for Identity bruger dine AD DS-signaler (Active Directory i det lokale miljø Domain Services) til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og ondsindet insider handlinger, der er rettet mod din organisation. Azure AD Identity Protection automatiserer registrering og afhjælpning af identitetsbaserede risici i dine cloudbaserede Azure AD.
 - **Programmer med Microsoft Defender for Cloud Apps** – Microsoft Defender for Cloud Apps er en omfattende saaS-løsning, der giver dig dyb synlighed, stærke datakontroller og forbedret trusselsbeskyttelse af dine cloudapps.
 
 >[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww]
@@ -158,7 +160,7 @@ Når du vælger et hændelsesnavn, vises en side, der viser værdien af centrali
 
 :::image type="content" source="../../media/converged-incident-info-3.png" alt-text="Oversigtssiden for en hændelse på Microsoft 365 Defender-portalen" lightbox="../../media/converged-incident-info-3.png":::
 
-Øverst på en hændelsesside kan du se fanerne **Oversigt**, **Beskeder**, **Enheder**, **Brugere**, **Postkasser**, **Undersøgelser**, **Beviser og svar** og **Graph**. Vælg disse faner for at få mere detaljerede oplysninger. Fanen **Brugere** viser f.eks. oplysninger om brugere fra konvergerede arbejdsbelastninger (Microsoft Defender for Endpoint, Microsoft Defender for Identity og Microsoft Defender for Cloud Apps) og en række kilder, f.eks. Active Directory i det lokale miljø Domænetjenester (AD DS), Azure AD og tredjeparts-identitetsudbydere. Du kan få flere oplysninger under [Undersøg brugere](investigate-users.md).
+Øverst på en hændelsesside kan du se fanerne **Oversigt**, **Beskeder**, **Enheder**, **Brugere**, **Postkasser**, **Undersøgelser**, **Beviser og svar** og **Graph**. Vælg disse faner for at få mere detaljerede oplysninger. Fanen **Brugere** viser f.eks. oplysninger om brugere fra konvergerede arbejdsbelastninger (Microsoft Defender for Endpoint, Microsoft Defender for Identity og Microsoft Defender for Cloud Apps) og en række kilder, f.eks. Active Directory i det lokale miljø domænetjenester (AD DS), Azure AD og tredjeparts-identitetsudbydere. Du kan få flere oplysninger under [Undersøg brugere](investigate-users.md).
 
 Tag dig tid til at gennemse hændelserne i dit miljø, foretage detailudledning i disse faner og øve dig i at opbygge en forståelse af, hvordan du får adgang til de oplysninger, der er angivet for hændelser for forskellige typer trusler.
 
@@ -176,7 +178,7 @@ Almindelige kontrolelementer og indhold vises enten på samme sted eller komprim
 
 :::image type="content" source="../../media/converged-roles-5.png" alt-text="Slutpunktsrollerne & grupper, der vises på siden Tilladelser & roller" lightbox="../../media/converged-roles-5.png":::
 
-Adgang til Microsoft 365 Defender er konfigureret med globale Azure AD-roller eller ved hjælp af brugerdefinerede roller. Hvis du vil have mere at vide om Defender for Endpoint, skal du se [Tildel brugeradgang til portalen Microsoft 365 Defender](/microsoft-365/security/defender-endpoint/assign-portal-access). Du kan få Defender for Office 365 [under Tilladelser på Microsoft Purview-overholdelsesportalen og Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
+Adgang til Microsoft 365 Defender er konfigureret med Azure AD globale roller eller ved hjælp af brugerdefinerede roller. Hvis du vil have mere at vide om Defender for Endpoint, skal du se [Tildel brugeradgang til portalen Microsoft 365 Defender](/microsoft-365/security/defender-endpoint/assign-portal-access). Du kan få Defender for Office 365 [under Tilladelser i Microsoft Purview-compliance-portal og Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
 
 - Få mere at vide om, hvordan [du administrerer adgang til Microsoft 365 Defender](m365d-permissions.md)
 - Få mere at vide om, hvordan [du opretter brugerdefinerede roller](custom-roles.md) i Microsoft 365 Defender
@@ -274,7 +276,7 @@ Brug *denne side* til feedback om selve artiklen. Tak for din feedback. Din stem
 
 Fortsæt med at udforske funktionerne og egenskaberne i Microsoft 365 Defender:
 
-- [Administrer hændelser og beskeder](manage-incidents.md)
+- [Administrer hændelser og underretninger](manage-incidents.md)
 - [Spor og reager på nye trusler med trusselsanalyse](threat-analytics.md)
 - [Løsningscenter](m365d-action-center.md)
 - [Jagt efter trusler på tværs af enheder, mails, apps og identiteter](./advanced-hunting-query-emails-devices.md)
@@ -288,7 +290,7 @@ Med dette læringsforløb fra Microsoft Learn kan du forstå Microsoft 365 Defen
 
 |Uddannelse:|Registrer og reager på cyberangreb med Microsoft 365 Defender|
 |---|---|
-|![Microsoft 365 Defender træningsikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Microsoft 365 Defender samler trusselssignaler på tværs af slutpunkter, identiteter, mail og programmer for at sikre integreret beskyttelse mod avancerede cyberangreb. Microsoft 365 Defender er den centrale oplevelse til at undersøge og reagere på hændelser og proaktivt søge efter igangværende ondsindede cybersikkerhedsaktiviteter.<p> 1 t. 38 min. - Learning sti - 5 moduler|
+|![Microsoft 365 Defender træningsikon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Microsoft 365 Defender samler trusselssignaler på tværs af slutpunkter, identiteter, mail og programmer for at sikre integreret beskyttelse mod avancerede cyberangreb. Microsoft 365 Defender er den centrale oplevelse til at undersøge og reagere på hændelser og proaktivt søge efter igangværende ondsindede cybersikkerhedsaktiviteter.<p> 1 t. 38 min. - læringsforløb - 5 moduler|
 
 > [!div class="nextstepaction"]
 > [Start >](/learn/paths/defender-detect-respond/)

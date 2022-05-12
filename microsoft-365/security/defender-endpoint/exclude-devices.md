@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cbfc82f56cc1922a663c31defe30dc61c2d3dd9b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: d97e8db205d066671b7c0d430e3dbf79f0dd6ebd
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664144"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368105"
 ---
 # <a name="exclude-devices"></a>Udelad enheder
 
@@ -33,11 +33,11 @@ ms.locfileid: "64664144"
 
 > Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
-## <a name="exclude-devices-from-threat-and-vulnerability-management"></a>Udelad enheder fra Håndtering af trusler og sikkerhedsrisici
+## <a name="exclude-devices-from-vulnerability-management"></a>Udelad enheder fra håndtering af sikkerhedsrisici
 
-Hvis du udelader enheder, der er inaktive, duplikerede eller uden for omfanget, kan du fokusere på at finde og prioritere risiciene på dine aktive enheder. Denne handling kan også hjælpe med at afspejle en mere præcis Håndtering af trusler og sikkerhedsrisici eksponeringsscore, da de ekskluderede enheder ikke er synlige i dine Håndtering af trusler og sikkerhedsrisici rapporter.
+Hvis du udelader enheder, der er inaktive, duplikerede eller uden for omfanget, kan du fokusere på at finde og prioritere risiciene på dine aktive enheder. Denne handling kan også hjælpe med at afspejle en mere præcis håndtering af sikkerhedsrisici eksponeringsscore, da de ekskluderede enheder ikke er synlige i dine håndtering af sikkerhedsrisici rapporter.
 
-Når enheder er udelukket, kan du ikke få vist opdaterede eller relevante oplysninger om sikkerhedsrisici og installeret software på disse enheder. Det påvirker alle Håndtering af trusler og sikkerhedsrisici sider, rapporter og relaterede tabeller i avanceret jagt.
+Når enheder er udelukket, kan du ikke få vist opdaterede eller relevante oplysninger om sikkerhedsrisici og installeret software på disse enheder. Det påvirker alle håndtering af sikkerhedsrisici sider, rapporter og relaterede tabeller i avanceret jagt.
 
 Selvom funktionen til enhedsudeladelse fjerner enhedsdataene fra håndtering af sikkerhedsrisici sider og rapporter, forbliver enhederne tilsluttet netværket og kan stadig være en risiko for organisationen. Du kan når som helst annullere enhedsudeladelse.
 
