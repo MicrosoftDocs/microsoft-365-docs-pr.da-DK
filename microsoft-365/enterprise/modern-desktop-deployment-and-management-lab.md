@@ -2,10 +2,11 @@
 title: Windows- og Office 365-installationslaboratoriesæt
 f1.keywords:
 - NOCSH
-ms.author: greglin
-author: greg-lindsay
+ms.author: aaroncz
+author: cdmm12
 manager: dougeby
-ms.date: 11/18/2021
+ms.reviewer: alainme
+ms.date: 05/11/2022
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Få mere at vide om, hvor du kan få adgang til Windows og Office Deployment Lab Kit.
-ms.openlocfilehash: cbcde8f0593adb54d3496156b1bf83dca1cd5064
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: bfa8d52776e93f4a9c33f484f7d56696fdab31fe
+ms.sourcegitcommit: 35d0c891f3d927f3346044be61ab9f348e8da2b4
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363076"
+ms.locfileid: "65364291"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows- og Office 365-installationslaboratoriesæt
 
@@ -30,7 +31,7 @@ Der er to versioner af laboratoriet, som kan downloades gratis:
 
 |Windows 10-laboratorie|Windows 11-laboratorie|
 |---|---|
-|[Win 10 lab-miljø](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
+|[Win 10 lab-miljø](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_05.09.zip)|
 |[Win 10 lab guides](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab_guides.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
 
 ## <a name="a-complete-lab-environment"></a>Et komplet laboratoriemiljø
