@@ -17,12 +17,12 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 214a2614b6ca7381bbded39ff5f5143236f6c001
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: f5db5fbe81913666f052cbd664e8a7f813da6a7c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363109"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396195"
 ---
 # <a name="learn-about-information-barriers"></a>Få mere at vide om informationsbarrierer
 
@@ -83,5 +83,5 @@ Det er kun Exchange Online installationer, der understøttes i øjeblikket for I
 ## <a name="ready-to-get-started"></a>Er du klar til at komme i gang?
 
 - [Kom i gang med informationsbarrierer](information-barriers-policies.md)
-- [Administrer politikker for informationsbarrierer](information-barriers-edit-segments-policies.md)
-- [Se de attributter, der kan bruges til politikker for informationsbarrierer](information-barriers-attributes.md)
+- [Administrer IB-politikker](information-barriers-edit-segments-policies.md)
+- [Se de attributter, der kan bruges til IB-politikker](information-barriers-attributes.md)
