@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 1cf677ccf4716ede6182db48bb1e1a2622fd9abe
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 730eb90202acff9efad1cc2f01fd60431366e997
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368762"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393432"
 ---
 # <a name="export-security-baselines-assessment-per-device"></a>Eksportér vurdering af grundlæggende sikkerhedsdata pr. enhed
 
@@ -53,23 +53,32 @@ Data, der indsamles ved hjælp af enten '_JSON-svar_ eller _via filer_', er det 
 
 Returnerer alle vurderinger af grundlæggende sikkerhedsdata for alle enheder på enhedsbasis. Den returnerer en tabel med en separat post for hver entydige kombination af DeviceId, ProfileId og ConfigurationId.
 
-#### <a name="12-limitations"></a>1.2 Begrænsninger
+### <a name="12-permissions"></a>1.2 Tilladelser
+
+En af følgende tilladelser er påkrævet for at kalde denne API. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Brug Microsoft Defender for Endpoint API'er](apis-intro.md) for at få flere oplysninger.
+
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
+:---|:---|:---
+Program|SecurityBaselinesAssessment.Read.All |"Læs alle oplysninger om vurderinger af grundlæggende sikkerhedsgrundlinjer"
+Uddelegeret (arbejds- eller skolekonto)|SecurityBaselinesAssessment.Read|'Læs oplysninger om vurderinger af grundlæggende sikkerhedsgrundlinjer'
+
+### <a name="13-limitations"></a>1.3 Begrænsninger
 
 - Den maksimale sidestørrelse er 200.000.
 - Hastighedsbegrænsninger for denne API er 30 kald pr. minut og 1.000 opkald pr. time.
 
-### <a name="13-parameters"></a>1.3 Parametre
+### <a name="14-parameters"></a>1.4 Parametre
 
 - pageSize (standard = 50.000): Antal resultater i svar.
 - $top: Antallet af resultater, der skal returneres (returnerer ikke @odata.nextLink og trækker derfor ikke alle dataene).
 
-### <a name="14-http-request"></a>1.4 HTTP-anmodning
+### <a name="15-http-request"></a>1.5 HTTP-anmodning
 
 ```http
 GET /api/machines/baselineComplianceAssessmentByMachine
 ```
 
-### <a name="15-properties-json-response"></a>1.5 Egenskaber (JSON-svar)
+### <a name="16-properties-json-response"></a>1.6 Egenskaber (JSON-svar)
 
 > [!NOTE]
 > Hver post er ca. 1 KB data. Du skal tage højde for dette, når du vælger den korrekte pageSize-parameter.
@@ -97,15 +106,15 @@ Egenskab (id)|Datatype|Beskrivelse
 |CurrentValue|String|Sæt af registrerede værdier, der blev fundet på enheden.
 |Kilde|String|Stien til registreringsdatabasen eller en anden placering, der bruges til at bestemme den aktuelle enhedsindstilling.
 
-## <a name="16-example"></a>1.6 Eksempel
+## <a name="17-example"></a>1.7 Eksempel
 
-### <a name="161-request-example"></a>1.6.1 Eksempel på anmodning
+### <a name="171-request-example"></a>1.7.1 Eksempel på anmodning
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
 ```
 
-### <a name="162-response-example"></a>1.6.2 Svareksempel
+### <a name="172-response-example"></a>1.7.2 Svareksempel
 
 ```json
 { 

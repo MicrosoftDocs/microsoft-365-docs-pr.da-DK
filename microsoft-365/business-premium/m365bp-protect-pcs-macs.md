@@ -1,5 +1,5 @@
 ---
-title: Beskyt ikke-administrerede Windows 10 pc'er og Macs på Microsoft 365 Business Premium
+title: Beskyt ikke-administrerede Windows pc'er og Macs i Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
 ms.author: deniseb
@@ -24,14 +24,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt ikke-administrerede eller byod-enheder (bring-your-own devices) mod cyberangreb med Microsoft 365 Business Premium. Sådan konfigurerer du cybersikkerhed til Windows pc'er og Macs.
-ms.openlocfilehash: 0b13c208fd2cdd0fcadf7f5bc820d41b3621eebd
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 2c2c94e79e7f694e75ab6aeb6ed38005dbd1f2f4
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318828"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393236"
 ---
-# <a name="protect-unmanaged-windows-10-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows 10 pc'er og Macs på Microsoft 365 Business Premium
+# <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows pc'er og Macs i Microsoft 365 Business Premium
 
 Dette mål fokuserer på at skabe beskyttelse for alle ikke-administrerede Windows 10 pc'er og Macs, der ikke er tilmeldt Microsoft Intune. Det er meget sandsynligt, at din lille virksomhed eller kampagne kan have medarbejdere, der medbringer deres egne enheder (BYID'er), og disse enheder administreres ikke. BYID'er omfatter personligt ejede telefoner, tablets og pc'er. 
 

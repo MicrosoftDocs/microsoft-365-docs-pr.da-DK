@@ -1,5 +1,5 @@
 ---
-title: Konfigurer et team med sikkerhedsisolering
+title: Konfigurer et team med sikkerhedsisolation ved hjælp af en entydig følsomhedsmærkat
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -18,14 +18,14 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Få mere at vide om, hvordan du opretter et team med en unik følsomhedsmærkat af hensyn til sikkerheden.
-ms.openlocfilehash: cfea35dccd09e0eea361e56f1914700660b7fdd4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 15f155255518df38921288f68dcc9365703e4f2a
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943123"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393104"
 ---
-# <a name="configure-a-team-with-security-isolation"></a>Konfigurer et team med sikkerhedsisolering
+# <a name="configure-a-team-with-security-isolation-by-using-a-unique-sensitivity-label"></a>Konfigurer et team med sikkerhedsisolation ved hjælp af en entydig følsomhedsmærkat
 
 I denne artikel får du anbefalinger og trin til at konfigurere et privat team i Microsoft Teams og bruge en entydig følsomhedsmærkat til at kryptere filer, så det kun er teammedlemmer, der kan dekryptere dem.
 
@@ -111,7 +111,7 @@ Hvis du har en intern partner eller interessentgruppe, der skal kunne få vist k
 
 Sådan opretter du en følsomhedsmærkat
 
-1. Åbn Microsoft Purview-overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**Information Protection**</a> under **Løsninger**.
+1. Åbn Microsoft Purview-compliance-portal, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**Information Protection**</a> under **Løsninger**.
 1. Klik på **Opret en etiket**.
 1. Giv etiketten et navn. Vi foreslår, at du navngiver det efter det team, du bruger det sammen med.
 1. Tilføj et vist navn og en beskrivelse, og klik derefter på **Næste**.
@@ -143,7 +143,7 @@ Når du har oprettet mærkaten, skal du publicere den til de brugere, der skal b
 
 Sådan udgiver du en følsomhedsmærkat:
 
-1. Vælg fanen **Mærkatpolitikker** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">siden **Beskyttelse af oplysninger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg fanen **Mærkatpolitikker** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">siden **Information Protection**</a> i Microsoft Purview-compliance-portal.
 2. Klik på **Publicer navne**.
 3. På siden **Vælg følsomhedsmærkater, der skal udgives** skal du klikke på **Vælg følsomhedsmærkater, der skal publiceres**.
 4. Vælg den etiket, du har oprettet, og klik derefter på **Tilføj**.
@@ -261,7 +261,7 @@ Denne træning bør omfatte praktiske øvelser, så dine teammedlemmer kan oplev
 
 I ugerne efter træningen:
 
-- Adresser hurtigt feedback fra teammedlemmer, og finjuster politi og konfigurationer.
+- Løs hurtigt feedback fra teammedlemmer, og finjuster politikker og konfigurationer.
 - Analysér forbruget for teamet, og sammenlign det med forbrugsforventninger.
 - Kontrollér, at stærkt regulerede filer er forsynet med en korrekt mærkat med følsomhedsmærkaten. Du kan se, hvilke filer der har fået tildelt en mærkat, ved at få vist en mappe i SharePoint og tilføje kolonnen **Følsomhed** via indstillingen **Vis/skjul kolonner** i **Tilføj kolonne**.
 
@@ -269,4 +269,4 @@ Oplær dine brugere efter behov.
 
 ## <a name="see-also"></a>Se også
 
-[Azure AD-Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure)
+[Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure)

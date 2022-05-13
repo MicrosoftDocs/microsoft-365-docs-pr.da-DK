@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: 25085dc22fd2f939e10833c98bc4fb599dd5a11f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: a4df65d0364aff71c3d3bbfb261952859d6d8ecf
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172624"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393082"
 ---
 # <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>Brug dashboardet Administration af sårbarheder i & Threat & i Microsoft Defender til virksomheder
 
@@ -31,11 +31,11 @@ Microsoft Defender til virksomheder omfatter et dashboard til administration af 
 - Få vist dine vigtigste sikkerhedsanbefalinger, f.eks. adressering af nedsat kommunikation med enheder, aktivering af firewallbeskyttelse eller opdatering af Microsoft Defender Antivirus definitioner
 - Få vist afhjælpningsaktiviteter, f.eks. filer, der er sendt til karantæne, eller sikkerhedsrisici, der findes på enheder
 
-Vil du se, hvordan det fungerer? Se denne video, der beskriver administration af trussel & sårbarheder i [Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md).
+Vil du se, hvordan det fungerer? Se denne video, der beskriver [Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/defender-vulnerability-management.md).
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r1nv]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Y1FX]
 
-Hvis du vil vide mere om administration af sårbarheder i threat &, skal [du se Trussel og håndtering af sikkerhedsrisici i Microsoft Defender for Endpoint](../defender-endpoint/next-gen-threat-and-vuln-mgt.md).
+[Få mere at vide om Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/defender-vulnerability-management.md).
 
 >
 > **Har du et øjeblik?**

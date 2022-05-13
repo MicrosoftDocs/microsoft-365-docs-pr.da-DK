@@ -9,42 +9,44 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 04/01/2022
+ms.date: 05/12/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Avanceret meddelelseskryptering hjælper organisationer med at opfylde deres overholdelsesforpligtelser ved at give administratorerne mulighed for at gøre endnu mere med beskyttede meddelelser.
-ms.openlocfilehash: 74d94bdb837531fdbbb819c86f9dbb7dd80272e8
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Avanceret meddelelseskryptering hjælper organisationer med at opfylde deres overholdelsesforpligtelser ved at gøre det muligt for administratorer at gøre endnu mere med beskyttede meddelelser.
+ms.openlocfilehash: 077a17921c456ddff30e7490611dd4e78aaa5232
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634333"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393280"
 ---
 # <a name="advanced-message-encryption"></a>Avanceret meddelelseskryptering
 
-Avanceret kryptering af meddelelser i Office 365 er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (nonprofitmedarbejderpriser) Office 365 Enterprise E5 (nonprofitorganisationers priser for personale) og Office 365 Education A5. Hvis du vil bruge funktionerne avanceret tilbagekaldelse af meddelelseskryptering og udløb, **skal du Premium indstillingen kryptering Office 365** i din E5-licens.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Hvis din organisation har et abonnement, der ikke Avanceret kryptering af meddelelser i Office 365, kan du købe det med Microsoft 365 E5 Overholdelse SKU-tilføjelsesprogrammet til Microsoft 365 E3, Microsoft 365 E3  (Nonprofit Staff Pricing) eller Avanceret overholdelse i Office 365-tilføjelsesprogrammet Microsoft 365 E3, Microsoft 365 E3 (nonprofitorganisationers personalepriser), Office 365 SKU'er eller Microsoft 365 E5/A5 Information Protection og tilføjelsesprogrammet Styrings-SKU til Microsoft 365 A3/E3.
+Microsoft Purview avanceret meddelelseskryptering er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (personale til nonprofitorganisationer og Office 365 Education A5. Hvis din organisation har et abonnement, der ikke indeholder Microsoft Purview avanceret meddelelseskryptering, kan du købe det med tilføjelsesprogrammet Microsoft 365 E5 Overholdelse SKU til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for medarbejdere til nonprofitorganisationer), eller Avanceret overholdelse i Office 365 SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (pris på nonprofitpersonale), Office 365 SKU'er eller Microsoft 365 E5/A5 sku-tilføjelsesprogrammet Information Protection og styring for Microsoft 365 A3/E3.
 
-Avanceret meddelelseskryptering hjælper kunder med at opfylde overholdelsesforpligtelser, der kræver mere fleksible kontroller over eksterne modtagere og deres adgang til krypterede mails. Med avanceret meddelelseskryptering Office 365 du styre følsomme mails, der deles uden for organisationen, ved hjælp af automatiske politikker. Du kan konfigurere disse politikker for at identificere følsomme oplysningstyper, f.eks. PII-, finansielle eller tilstands-id'er, eller du kan bruge nøgleord til at forbedre beskyttelsen. Når du har konfigureret politikkerne, kan du parre politikker med brugerdefinerede brandede mailskabeloner og derefter tilføje en udløbsdato for at få ekstra kontrol over mails, der passer til politikken. Administratorer kan desuden når som helst kontrollere krypterede mails, der er åbnet eksternt, ved at tilbagekalde adgangen til mailen.
+Avanceret meddelelseskryptering hjælper kunder med at opfylde overholdelsesforpligtelser, der kræver mere fleksible kontroller over eksterne modtagere og deres adgang til krypterede mails. Med Avanceret meddelelseskryptering i Office 365 kan du styre følsomme mails, der deles uden for organisationen, med automatiske politikker og spore disse aktiviteter via de krypterede adgangslogge for meddelelsesportalen. Du kan konfigurere disse politikker til at identificere følsomme oplysningstyper, f.eks. pii-, økonomi- eller sundheds-id'er, eller du kan bruge nøgleord til at forbedre beskyttelsen. Når du har konfigureret politikkerne, parres politikker med brugerdefinerede mailskabeloner med mærkevarer, og du tilføjer derefter en udløbsdato for at få ekstra kontrol over mails, der passer til politikken. Administratorer kan også yderligere kontrollere krypterede mails, der tilgås eksternt via en sikker webportal, ved at tilbagekalde adgangen til mailen når som helst.
 
 Du kan kun tilbagekalde og angive en udløbsdato for mails, der sendes til eksterne modtagere.
 
-## <a name="get-started-with-office-365-advanced-message-encryption"></a>Introduktion til Avanceret kryptering af meddelelser i Office 365
+## <a name="get-started-with-microsoft-purview-advanced-message-encryption"></a>Kom i gang med Microsoft Purview avanceret meddelelseskryptering
 
 I følgende artikler beskrives det, hvordan du konfigurerer og bruger avanceret meddelelseskryptering.
 
-Din organisation skal have et abonnement, der omfatter Avanceret kryptering af meddelelser i Office 365. Du kan finde detaljerede oplysninger om understøttede abonnementer i Beskrivelse af [meddelelsespolitik og overholdelsestjeneste](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance).
+Organisationen skal have et abonnement, der indeholder Microsoft Purview avanceret meddelelseskryptering. Du kan finde detaljerede oplysninger om understøttede abonnementer i [beskrivelsen af meddelelsespolitik og overholdelse af angivne standarder](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance).
 
-Hvis du ikke har konfigureret Office 365 af meddelelseskryptering, skal du se Konfigurer [Office 365 egenskaber for meddelelseskryptering](set-up-new-message-encryption-capabilities.md).
+Hvis du ikke allerede har Office 365 meddelelseskryptering, skal du se [Konfigurer nye funktioner til Office 365 Meddelelsekryptering](set-up-new-message-encryption-capabilities.md).
 
-Med avanceret meddelelseskryptering er du ikke begrænset til en enkelt brandingskabelon. I stedet kan du oprette og bruge flere brandingskabeloner. Ved at tilføje brugerdefineret branding kan du også aktivere sporing af en tilbagekaldelse af krypterede meddelelser. Du kan finde flere [oplysninger i Føje organisationens brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md). Når du bruger brugerdefineret branding, modtager eksterne modtagere en mail, der indeholder et link til OME-portalen. Reglen for mailflow bestemmer, hvilken brandingskabelon mailen og OME Portal bruger. På denne måde sendes dit sikre indhold ikke uden for organisationen.
+Med Avanceret meddelelseskryptering er du ikke begrænset til en enkelt brandingskabelon. Du kan i stedet oprette og bruge flere brandingskabeloner. Hvis du tilføjer brugerdefineret branding, kan du også aktivere sporing af en tilbagekaldelse af krypterede meddelelser. Du kan få flere oplysninger under [Føj organisationens brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md). Når du bruger brugerdefineret branding, modtager eksterne modtagere en meddelelsesmail, der indeholder et link til OME-portalen. Reglen for mailflow bestemmer, hvilken brandingskabelon meddelelsesmailen og OME-portalen bruger. På denne måde sendes dit sikre indhold ikke uden for din organisation.
 
-Du kan kun tilbagekalde meddelelser og anvende udløbsdatoer på meddelelser, som brugerne modtager via portalen. Med andre ord mails, hvor der er anvendt en brugerdefineret brandingskabelon. Du kan finde flere oplysninger og et eksempel i vejledningen i Sikre, at alle eksterne modtagere bruger [OME-portalen til at læse krypteret mail](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
+Du kan kun tilbagekalde meddelelser og anvende udløbsdatoer på meddelelser, som brugerne modtager via portalen. Med andre ord, mail, hvor der er anvendt en brugerdefineret brandingskabelon. Du kan finde flere oplysninger og et eksempel i vejledningen under [Sørg for, at alle eksterne modtagere bruger OME-portalen til at læse krypterede mails](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
 
-[Angiv en udløbsdato for mails, der er krypteret med Avanceret kryptering af meddelelser i Office 365](ome-advanced-expiration.md). Styr følsomme mails, der deles uden for organisationen, med automatiske politikker, der forbedrer beskyttelsen ved at udløbe adgang via en sikker webportal til krypterede mails.
+[Angiv en udløbsdato for mail, der er krypteret af Microsoft Purview avanceret meddelelseskryptering](ome-advanced-expiration.md). Styr følsomme mails, der deles uden for organisationen, med automatiske politikker, der forbedrer beskyttelsen ved at udløbe adgangen via en sikker webportal til krypterede mails.
 
-[Tilbagekald mails, der er krypteret Avanceret kryptering af meddelelser i Office 365](revoke-ome-encrypted-mail.md). Styr følsomme mails, der deles uden for organisationen, og forbedr beskyttelsen ved at tilbagekalde adgangen via en sikker webportal til krypterede mails.  
+[Tilbagekald mail, der er krypteret af Microsoft Purview avanceret meddelelseskryptering](revoke-ome-encrypted-mail.md). Styr følsomme mails, der deles uden for organisationen, og gør beskyttelsen bedre ved at tilbagekalde adgangen via en sikker webportal til krypterede mails.
+
+[Aktivitetslog for krypteret meddelelsesportal af Microsoft Purview avanceret meddelelseskryptering](ome-message-access-logs.md). Overvåg følsomme mails, der deles uden for organisationen i den krypterede meddelelsesportal.
