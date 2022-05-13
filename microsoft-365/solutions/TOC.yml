@@ -61,7 +61,7 @@
               href: configure-teams-sensitive-protection.md
             - name: Konfigurer yderst følsom beskyttelse
               href: configure-teams-highly-sensitive-protection.md
-            - name: Konfigurer et team med sikkerhedsisolering
+            - name: Konfigurer et team med en entydig følsomhedsmærkat
               href: secure-teams-security-isolation.md
         - name: Konfigurer ekstern deling
           items:
