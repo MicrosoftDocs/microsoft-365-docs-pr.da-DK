@@ -8,7 +8,7 @@
           href: document-understanding-overview.md
         - name: Forskelle mellem modeller
           href: difference-between-document-understanding-and-form-processing-model.md
-        - name: Importere en eksempelmodel
+        - name: Importér en prøvemodel
           href: learn-about-document-understanding-models-through-the-sample-model.md
         - name: Opret et indholdscenter
           href: create-a-content-center.md
@@ -16,29 +16,29 @@
           href: create-a-classifier.md
         - name: Dupliker en model
           href: duplicate-a-model.md
-        - name: Omdøbe en model
+        - name: Omdøb en model
           href: rename-a-model.md
-        - name: Opret en extractor
+        - name: Opret en udtrækningsfunktion
           href: create-an-extractor.md
-        - name: Omdøbe en extractor
+        - name: Omdøb en udtrækningsfunktion
           href: rename-an-extractor.md
         - name: Forklaringstyper
           href: explanation-types-overview.md
         - name: Brug forklaringsskabeloner
           href: explanation-templates.md
-        - name: Anvend en dokumentforståelsesmodel
+        - name: Anvend en model til dokumentforståelse
           href: apply-a-model.md
-        - name: Udgive og finde en model
+        - name: Publicer og find en model
           href: model-discovery.md
-        - name: Anvend en opbevaringsetiket
+        - name: Anvend en opbevaringsmærkat
           href: apply-a-retention-label-to-a-model.md
-        - name: Anvend et følsomhedsmærkat
+        - name: Anvend en følsomhedsmærkat
           href: apply-a-sensitivity-label-to-a-model.md
         - name: Opret en lokal model
           href: create-local-model.md
-        - name: Modelforbrugsanalyse
+        - name: Analyse af modelforbrug
           href: model-usage-analytics.md
-        - name: Brug term store-taksonomi ved oprettelse af en extractor
+        - name: 'Udnyt ordbank-taksonomi, når du opretter en udtrækningsfunktion'
           href: leverage-term-store-taxonomy.md
         - name: Tilgængelighedstilstand
           href: accessibility-mode.md
@@ -48,41 +48,41 @@
           href: form-processing-overview.md
         - name: Forskelle mellem modeller
           href: difference-between-document-understanding-and-form-processing-model.md
-        - name: Oprette en formularbehandlingsmodel
+        - name: Opret en model for formularbehandling
           href: create-a-form-processing-model.md
-        - name: Anvend en opbevaringsetiket
+        - name: Anvend en opbevaringsmærkat
           href: apply-a-retention-label-to-a-model.md
-        - name: Modelforbrugsanalyse
+        - name: Analyse af modelforbrug
           href: model-usage-analytics.md
-- name: Færdigbuilte modeller
+- name: Færdigbyggede modeller
   items:
     - name: Oversigt
       href: prebuilt-overview.md
-    - name: Færdigbuilte faktura- og kvitteringsmodeller
+    - name: Færdigbyggede modeller til faktura og kvittering
       href: prebuilt-models.md
-    - name: Anvend en opbevaringsetiket
+    - name: Anvend en opbevaringsmærkat
       href: apply-a-retention-label-to-a-model.md
     - name: Opret en lokal model
       href: create-local-model.md
-    - name: Modelforbrugsanalyse
+    - name: Analyse af modelforbrug
       href: model-usage-analytics.md
 - name: Indholdssamling
   items:
-    - name: Oprette dokumenter ved hjælp af en indholdssamling
+    - name: Opret dokumenter ved hjælp af indholdssamling
       href: content-assembly.md
-- name: Metadatasøgning
+- name: Metadata søgning
   items:
-    - name: Søge efter metadata i dokumentbiblioteker
+    - name: Søg efter metadata i dokumentbiblioteker
       href: metadata-search.md
 - name: Taksonomi
   items:
-    - name: Importere ved hjælp af SKOS
+    - name: Importér ved hjælp af SKOS
       href: import-term-set-skos.md
     - name: SKOS-formateringsreference
       href: skos-format-reference.md
-    - name: Skubbe indholdstype til hub
+    - name: Push indholdstype til hub
       href: push-content-type-to-hub.md
-    - name: Rapporter over ordlager
+    - name: Ordbank rapport
       href: term-store-analytics.md
 - name: Konfiguration og administration
   items:
@@ -98,18 +98,20 @@
           href: powershell-syntex-intro.md
         - name: Eksportér og importér modeller
           href: powershell-syntex-import-export.md
-        - name: Udgiv modeller
+        - name: Publicer modeller
           href: powershell-syntex-publishing.md
-        - name: Anmod om behandling efter en model
+        - name: Anmod om behandling af en model
           href: powershell-syntex-processing.md
-        - name: Arbejd med modelforklaringer
+        - name: Arbejd med model forklaringer
           href: powershell-syntex-explanations.md
-- name: Indføring
+- name: Adoption
   items:
-    - name: Introduktion til indføring
+    - name: Kom i gang med ibrugtagning
       href: adoption-getstarted.md
-    - name: Scenarier og use cases
+    - name: Scenarier og brugseksempler
       href: adoption-scenarios.md
+    - name: Vurder dit miljø
+      href: adoption-assessment-tool.md
     - name: Kør en prøveversion
       href: trial-syntex.md
     - name: Administrer kontrakter i Microsoft 365
@@ -122,9 +124,9 @@
           href: solution-manage-contracts-step2.md
         - name: Trin 3. Brug Power Automate
           href: solution-manage-contracts-step3.md
-    - name: Webstedsskabelon til administration af kontrakter
+    - name: Webstedsskabelon til kontraktstyring
       href: use-contracts-management-site.md
-    - name: Webstedsskabelon til indholdscenter
+    - name: Webstedsskabelon for indholdscenter
       href: use-content-center-site.md
 - name: Mulighed for udvidelse
   href: /sharepoint/dev/apis/syntex/syntex-model-rest-api
