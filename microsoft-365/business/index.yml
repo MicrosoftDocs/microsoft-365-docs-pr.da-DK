@@ -13,13 +13,13 @@ metadata:
   - intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.date: 05/02/2022
-  ms.openlocfilehash: a9e7a3cd8ed3fb331c37c60453e8ef864ee96e3a
-  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+  ms.date: 05/12/2022
+  ms.openlocfilehash: d6fe8affc4195e46c9205754f1716517eaa9dc1c
+  ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/03/2022
-  ms.locfileid: "65174798"
+  ms.lasthandoff: 05/13/2022
+  ms.locfileid: "65393390"
 productDirectory:
   title: Produktivitet og sikkerhed med Microsoft 365 Business Premium
   items:
@@ -58,29 +58,29 @@ conceptualContent:
     - url: ../admin/misc/microsoft-365-business-faqs.yml
       itemType: reference
       text: Ofte stillede spørgsmål om Microsoft 365 Business Premium
-    - url: ../business-video/index.yml
-      itemType: video
-      text: Microsoft 365 til videoer om virksomhedstræning
   - title: Konfigurer Microsoft 365 Business Premium
     links:
     - url: ../business-premium/get-microsoft-365-business-premium.md
       itemType: how-to-guide
       text: Få Microsoft 365 Business Premium
-    - url: ../business-premium/m365bp-setup-overview.md
+    - url: ../business-premium/m365bp-setup.md#use-the-guided-process-for-basic-setup
       itemType: how-to-guide
       text: 1. Fuldfør den grundlæggende konfigurationsproces
     - url: ../business-premium/m365bp-security-overview.md
       itemType: overview
-      text: 2. Beskyt dit miljø
+      text: 2. Opgrader sikkerhed
     - url: ../business-premium/m365bp-devices-overview.md
       itemType: overview
-      text: 3. Konfigurer personlige (ikke-administrerede) enheder
+      text: 3. Konfigurer ikke-administrerede (BYOD) enheder
     - url: ../business-premium/m365bp-protect-email-overview.md
       itemType: overview
       text: 4. Brug mail på en mere sikker måde
     - url: ../business-premium/m365bp-collaborate-share-securely.md
       itemType: overview
       text: 5. Samarbejd og del mere sikkert
+    - url: ../business-premium/m365bp-protect-devices.md
+      itemType: how-to-guide
+      text: 6. Konfigurer og beskyt administrerede enheder
     - url: ../business-premium/m365bp-maintain-environment.md
       itemType: overview
       text: Vedligehold dit miljø
@@ -163,6 +163,9 @@ conceptualContent:
     - url: https://support.microsoft.com/office/7f681212-c649-4a3e-a43b-32b1d1e58988
       itemType: video
       text: Få hjælp
+    - url: ../business-video/index.yml
+      itemType: video
+      text: Microsoft 365 til videoer om virksomhedstræning
     - url: https://techcommunity.microsoft.com/t5/Microsoft-365-Business/bd-p/Microsoft365business
       itemType: overview
       text: Send feedback

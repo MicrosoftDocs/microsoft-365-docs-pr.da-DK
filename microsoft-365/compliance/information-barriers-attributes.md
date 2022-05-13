@@ -1,6 +1,7 @@
 ---
 title: Attributter for informationsbarrierer
-description: Denne artikel er en reference til de Azure Active Directory, du kan bruge til at definere informationsbarrieresegmenter.
+description: Denne artikel er en reference til de Azure Active Directory brugerkontoattributter, som du kan bruge til at definere informationsbarrieresegmenter.
+keywords: Microsoft 365, Microsoft Purview, overensstemmelse
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -13,55 +14,57 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 33143e85bf17a707ade6dd0d6d0c66886fd85373
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e09331fb819d2b00764cd6dacd1687ade8ee116c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588931"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396261"
 ---
 # <a name="information-barriers-attributes"></a>Attributter for informationsbarrierer
 
-Visse attributter i Azure Active Directory kan bruges til at segmentere brugere. Når segmenter er defineret, kan disse segmenter bruges som filtre til politikker for informationsbarrierer. Du kan f.eks. bruge **Afdeling** til at definere segmenter af brugere efter afdeling i din organisation (det antages, at der ikke er enkelte medarbejdere, der arbejder for to afdelinger på samme tid).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Denne artikel beskriver, hvordan du bruger attributter med informationsbarrierer, og den indeholder en liste over attributter, der kan bruges. Du kan få mere at vide om informationsbarrierer i følgende ressourcer:
+Visse attributter i Azure Active Directory kan bruges til at segmentere brugere i informationsbarrierer (IB). Når segmenter er defineret, kan disse segmenter bruges som filtre for IB-politikker. Du kan f.eks. bruge **Afdeling** til at definere segmenter af brugere efter afdeling i din organisation (forudsat at ingen enkelt medarbejder arbejder for to afdelinger på samme tid).
+
+I denne artikel beskrives det, hvordan du bruger attributter med informationsbarrierer, og den indeholder en liste over attributter, der kan bruges. Du kan få mere at vide om informationsbarrierer i følgende ressourcer:
 
 - [Informationsbarrierer](information-barriers.md)
 - [Definer politikker for informationsbarrierer i Microsoft Teams](information-barriers-policies.md)
-- [Rediger (eller fjern) politikker for informationsbarrierer](information-barriers-edit-segments-policies.md)
+- [Rediger (eller fjern) IB-politikker](information-barriers-edit-segments-policies.md)
 
-## <a name="how-to-use-attributes-in-information-barrier-policies"></a>Sådan bruger du attributter i politikker for informationsbarrierer
+## <a name="how-to-use-attributes-in-ib-policies"></a>Sådan bruger du attributter i IB-politikker
 
-De attributter, der er angivet i denne artikel, kan bruges til at definere eller redigere brugersegmenter. Dine definerede segmenter fungerer som parametre (kaldet *UserGroupFilter-værdier* ) i [informationsbarrierepolitikker](information-barriers-policies.md).
+De attributter, der er angivet i denne artikel, kan bruges til at definere eller redigere segmenter af brugere. Dine definerede segmenter fungerer som parametre (kaldet *UserGroupFilter-værdier* ) i [IB-politikker](information-barriers-policies.md).
 
 1. Find ud af, hvilken attribut du vil bruge til at definere segmenter. Se afsnittet [Reference](#reference) i denne artikel.
 
-2. Sørg for, at brugerkontiene har værdier udfyldt for den eller de attribut(er), du valgte i trin 1. Få vist oplysninger om brugerkontoen, og rediger om nødvendigt brugerkonti for at medtage attributværdier. 
+2. Sørg for, at der er udfyldt værdier for de attribut(er), du valgte i trin 1, på brugerkontiene. Få vist oplysninger om brugerkontoen, og rediger evt. brugerkonti for at inkludere attributværdier. 
 
-    - Hvis du vil redigere flere konti (eller bruge PowerShell til at redigere en enkelt konto), skal du se Konfigurere egenskaber [for brugerkonti Office 365 PowerShell](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md).
+    - Hvis du vil redigere flere konti (eller bruge PowerShell til at redigere en enkelt konto), skal du se [Konfigurer egenskaber for brugerkonto med Office 365 PowerShell](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md).
 
-    - Hvis du vil redigere en enkelt konto, [skal du se Tilføje eller opdatere en brugers profiloplysninger ved hjælp Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+    - Hvis du vil redigere en enkelt konto, skal du se [Tilføj eller opdater en brugers profiloplysninger ved hjælp af Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
-3. [Definer segmenter ved hjælp af PowerShell](information-barriers-policies.md#define-segments-using-powershell) i stil med følgende eksempler:
+3. [Definer segmenter ved hjælp af PowerShell](information-barriers-policies.md#define-segments-using-powershell) på samme måde som følgende eksempler:
 
     |**Eksempel**|**Cmdlet**|
     |:----------|:---------|
     | Definer et segment med navnet Segment1 ved hjælp af attributten Afdeling | `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"` |
-    | Definer et segment med navnet SegmentA ved hjælp af attributten MemberOf (antag, at denne attribut indeholder gruppenavne, f.eks. "BlueGroup") | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"` |
-    | Definer et segment med navnet Day Automatisk brug af ExtensionAttribute1 (antag, at denne attribut indeholder jobtitler, f.eks. "Day Automatisk") | `New-OrganizationSegment -Name "DayTraders" -UserGroupFilter "ExtensionAttribute1 -eq 'DayTrader'"` |
+    | Definer et segment kaldet SegmentA ved hjælp af attributten MemberOf (lad os antage, at denne attribut indeholder gruppenavne, f.eks. "BlueGroup") | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"` |
+    | Definer et segment med navnet DayTraders ved hjælp af ExtensionAttribute1 (lad os antage, at denne attribut indeholder jobtitler, f.eks. "DayTrader") | `New-OrganizationSegment -Name "DayTraders" -UserGroupFilter "ExtensionAttribute1 -eq 'DayTrader'"` |
 
     > [!TIP]
-    > Når du definerer segmenter, skal du bruge den samme attribut for alle dine segmenter. Hvis du f.eks. definerer nogle segmenter ved hjælp *af Afdeling*, skal du definere alle segmenter ved hjælp af *Afdeling*. Definer ikke nogle segmenter ved hjælp af *Afdeling og* andre, der *bruger MemberOf*. Sørg for, at dine segmenter ikke overlapper. Hver bruger skal være tildelt præcis ét segment.
+    > Når du definerer segmenter, skal du bruge den samme attribut for alle dine segmenter. Hvis du f.eks. definerer nogle segmenter ved hjælp af *Afdeling*, skal du definere alle de segmenter, der bruger *Afdeling*. Definer ikke nogle segmenter ved hjælp af *Afdeling* og andre, der bruger *MemberOf*. Sørg for, at dine segmenter ikke overlapper hinanden. hver bruger skal tildeles nøjagtigt ét segment.
 
 ## <a name="reference"></a>Reference
 
-I følgende tabel vises de attributter, du kan bruge med informationsbarrierer.
+I følgende tabel vises de attributter, du kan bruge sammen med informationsbarrierer.
 
-|**Azure Active Directory egenskabsnavn<br/>(LDAP-visningsnavn)**|**Exchange egenskabsnavn**|
+|**Azure Active Directory egenskabsnavn<br/> (vist navn på LDAP)**|**Exchange egenskabsnavn**|
 |:---------------------------------------------------------------|:-------------------------|
 | Co | Co |
-| Firma | Firma |
-| Afdeling | Afdeling |
+| Virksomhed | Virksomhed |
+| Institut | Institut |
 | ExtensionAttribute1 | CustomAttribute1 |
 | ExtensionAttribute2 | CustomAttribute2 |
 | ExtensionAttribute3 | CustomAttribute3 |
@@ -85,14 +88,14 @@ I følgende tabel vises de attributter, du kan bruge med informationsbarrierer.
 | MailNickname | Alias |
 | PhysicalDeliveryOfficeName | Office |
 | Postnummer | Postnummer |
-| ProxyAddresses | Mailadresser |
-| StreetAddress | StreetAddress |
-| TargetAddress | ExternalEmailAddress |
+| ProxyAdresser | Mailadresser |
+| Gadeadresse | Gadeadresse |
+| Targetaddress | ExternalEmailAddress |
 | UsageLocation | UsageLocation |
 | UserPrincipalName | UserPrincipalName |
 | Mail | WindowsEmailAddress |
 | Beskrivelse | Beskrivelse |
-| MedlemAf | MemberOfGroup |
+| Medlem af | MemberOfGroup |
 
 ## <a name="resources"></a>Ressourcer
 

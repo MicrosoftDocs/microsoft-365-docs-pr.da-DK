@@ -16,20 +16,20 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ef2c8c5c4dfdbb1598c8f6edc5344da9351b6ad7
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 74da3ee1c2b3339a66ff205989dd978fdd00a530
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363286"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396222"
 ---
 # <a name="get-started-with-information-barriers"></a>Kom i gang med informationsbarrierer
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-I denne artikel beskrives det, hvordan du konfigurerer politikker for informationsbarrierer (IB) i din organisation. Der er flere trin involveret, så sørg for at gennemse hele processen, før du begynder at konfigurere IB-politikker.
+I denne artikel beskrives det, hvordan du konfigurerer IB-politikker (Information Barriers) i din organisation. Der er flere trin involveret, så sørg for at gennemse hele processen, før du begynder at konfigurere IB-politikker.
 
-Du skal have kendskab til [PowerShell-cmdlet'er](/powershell/exchange/scc-powershell) for at kunne definere, validere eller redigere IB-politikker. Selvom vi indeholder flere eksempler på PowerShell-cmdlet'er i denne artikel, skal du kende andre oplysninger (f.eks. parameterværdier) for din organisation.
+Du konfigurerer IB i din organisation ved hjælp af [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) eller ved hjælp af [Office 365 Security and Compliance PowerShell](/powershell/exchange/scc-powershell). For organisationer, der konfigurerer IB for første gang, anbefaler vi, at du bruger løsningen **Informationsbarrierer** på overholdelsesportalen. Hvis du administrerer en eksisterende IB-konfiguration, og du er tryg ved at bruge PowerShell, har du stadig denne mulighed.
 
 Du kan finde flere oplysninger om IB-scenarier og -funktioner under [Få mere at vide om informationsbarrierer](information-barriers.md).
 
@@ -59,30 +59,30 @@ Hvis du vil vide mere om roller og tilladelser, skal du se [Tilladelser i Office
 
 ## <a name="configuration-concepts"></a>Konfigurationsbegreber
 
-Når du definerer politikker for IB, arbejder du med flere objekter og begreber.
+Når du konfigurerer IB, arbejder du med flere objekter og begreber.
 
-- **Brugerkontoattributter** defineres i Azure Active Directory (eller Exchange Online). Disse attributter kan omfatte afdeling, stilling, placering, teamnavn og andre oplysninger om jobprofiler.
-- **Segmenter** er sæt af brugere, der er defineret i Microsoft Purview-compliance-portal ved hjælp af en valgt **brugerkontoattribut**. Se listen over [understøttede IB-attributter](information-barriers-attributes.md) for at få flere oplysninger.
-- **Synlighed for ikke-IB-brugere og -grupper**. Ikke-IB-brugere og -grupper er brugere og grupper, der er udelukket fra IB-segmenter og -politikker. Afhængigt af typen af IB-politikker (blokere eller tillade) vil funktionsmåden for disse brugere og grupper variere i Microsoft Teams, SharePoint, OneDrive og på din globale adresseliste. For brugere, der er defineret i *tillad* politikker, vil ikke-IB-grupper og brugere ikke være synlige for brugere, der er inkluderet i IB-segmenter og -politikker. For brugere, der er defineret i *blokpolitikker* , vil ikke-IB-grupper og brugere være synlige for brugere, der er inkluderet i IB-segmenter og -politikker.
-- **Gruppesupport**. Det er i øjeblikket kun moderne grupper, der understøttes i IB, og distributionslister/sikkerhedsgrupper behandles som ikke-IB-grupper.
-- **Skjulte/deaktiverede brugerkonti**. For skjulte/deaktiverede konti i din organisation angives parameteren *HiddenFromAddressListEnabled* automatisk til *Sand* , når brugerkontiene skjules eller deaktiveres. I IB-aktiverede organisationer forhindres disse konti i at kommunikere med alle andre brugerkonti. I Microsoft Teams låses alle chats, herunder disse konti, eller brugerne fjernes automatisk fra samtaler.
-- **IB-politikker** bestemmer kommunikationsgrænser eller -begrænsninger. Når du definerer politikker for informationsbarrierer, vælger du mellem to typer politikker:
+- **Brugerkontoattributter** defineres i Azure Active Directory (eller Exchange Online). Disse attributter kan omfatte afdeling, stilling, placering, teamnavn og andre oplysninger om jobprofiler. Du skal tildele brugere eller grupper til segmenter med disse attributter.
+- **Segmenter** er grupper eller brugere, der er defineret i overholdelsesportalen eller ved hjælp af PowerShell, der bruger de valgte gruppe- eller brugerkontoattributter. Se listen over [understøttede IB-attributter](information-barriers-attributes.md) for at få flere oplysninger.
+- **IB-politikker** bestemmer kommunikationsgrænser eller -begrænsninger. Når du definerer politikker for IB, vælger du mellem to typer politikker:
   - *Blokpolitikker* forhindrer, at ét segment kommunikerer med et andet segment.
   - *Tillad* politikker, at ét segment kun kommunikerer med visse andre segmenter.
 
     > [!NOTE]
-    > I forbindelse **med tilladte** politikker vil ikke-IB-grupper og brugere ikke være synlige for brugere, der er inkluderet i IB-segmenter og -politikker. Hvis du har brug for, at ikke-IB-grupper og brugere skal være synlige for brugere, der er inkluderet i IB-segmenter og -politikker, skal du bruge **blokpolitikker** .
+    > I forbindelse *med tilladte* politikker vil ikke-IB-grupper og brugere ikke være synlige for brugere, der er inkluderet i IB-segmenter og -politikker. Hvis du har brug for, at ikke-IB-grupper og brugere skal være synlige for brugere, der er inkluderet i IB-segmenter og -politikker, skal du bruge *blokpolitikker* .
 
-- *Politikprogrammet* udføres, når alle IB-politikker er defineret, og du er klar til at anvende dem i din organisation.
+- **Politikprogrammet** udføres, når alle IB-politikker er defineret, og du er klar til at anvende dem i din organisation.
+- **Synlighed for ikke-IB-brugere og -grupper**. Ikke-IB-brugere og -grupper er brugere og grupper, der er udelukket fra IB-segmenter og -politikker. Afhængigt af typen af IB-politikker (blokere eller tillade) vil funktionsmåden for disse brugere og grupper variere i Microsoft Teams, SharePoint, OneDrive og på din globale adresseliste. For brugere, der er defineret i *tillad* politikker, vil ikke-IB-grupper og brugere ikke være synlige for brugere, der er inkluderet i IB-segmenter og -politikker. For brugere, der er defineret i *blokpolitikker* , vil ikke-IB-grupper og brugere være synlige for brugere, der er inkluderet i IB-segmenter og -politikker.
+- **Gruppesupport**. Det er i øjeblikket kun moderne grupper, der understøttes i IB, og distributionslister/sikkerhedsgrupper behandles som ikke-IB-grupper.
+- **Skjulte/deaktiverede brugerkonti**. For skjulte/deaktiverede konti i din organisation angives parameteren *HiddenFromAddressListEnabled* automatisk til *Sand* , når brugerkontiene skjules eller deaktiveres. I IB-aktiverede organisationer forhindres disse konti i at kommunikere med alle andre brugerkonti. I Microsoft Teams låses alle chats, herunder disse konti, eller brugerne fjernes automatisk fra samtaler.
 
-## <a name="configuration-at-a-glance"></a>Konfiguration med et hurtigt øjekast
+## <a name="configuration-overview"></a>Konfigurationsoversigt
 
 | **Trin** | **Hvad er involveret** |
 |:------|:----------------|
-| **Trin 1**: [Sørg for, at forudsætninger er opfyldt](#step-1-make-sure-prerequisites-are-met) | – Kontrollér, at du har de påkrævede abonnementer og tilladelser <br/>– Kontrollér, at mappen indeholder data til segmentering af brugere<br/>- Aktivér [søgning efter navn for Microsoft Teams](/microsoftteams/teams-scoped-directory-search)<br/>- Sørg for, at logføring af overvågning er slået til<br/>- Sørg for, at der ikke er nogen Exchange politikker for adressekartoteket<br/>– Brug PowerShell (eksempler er angivet)<br/>– Angiv administratorsamtykke for Microsoft Teams (trinnene er inkluderet) |
+| **Trin 1**: [Sørg for, at forudsætninger er opfyldt](#step-1-make-sure-prerequisites-are-met) | – Kontrollér, at du har de påkrævede abonnementer og tilladelser <br/>– Kontrollér, at mappen indeholder data til segmentering af brugere<br/>- Aktivér [søgning efter navn for Microsoft Teams](/microsoftteams/teams-scoped-directory-search)<br/>- Sørg for, at logføring af overvågning er slået til<br/>- Sørg for, at der ikke er nogen Exchange politikker for adressekartoteket <br/>– Angiv administratorsamtykke for Microsoft Teams (trinnene er inkluderet) |
 | **Trin 2**: [Segmentér brugere i din organisation](#step-2-segment-users-in-your-organization) | – Fastlæg, hvilke politikker der er behov for<br/>– Opret en liste over segmenter, der skal defineres<br/>- Identificer, hvilke attributter der skal bruges<br/>– Definer segmenter med hensyn til politikfiltre |
-| **Trin 3**: [Definer politikker for informationsbarrierer](#step-3-define-information-barrier-policies) | – Definer dine politikker (gælder ikke endnu)<br/>- Vælg mellem to typer (blok eller tillad) |
-| **Trin 4**: [Anvend politikker for informationsbarrierer](#step-4-apply-information-barrier-policies) | – Angiv politikker til aktiv status<br/>- Kør politikprogrammet<br/>- Få vist politikstatus |
+| **Trin 3**: [Opret politikker for informationsbarrierer](#step-3-create-ib-policies) | – Opret dine politikker (gælder ikke endnu)<br/>- Vælg mellem to typer (blok eller tillad) |
+| **Trin 4**: [Anvendelse af politikker for informationsbarrierer](#step-4-apply-ib-policies) | – Angiv politikker til aktiv status<br/>- Kør politikprogrammet<br/>- Få vist politikstatus |
 | **Trin 5**: [Konfiguration af informationsbarrierer på SharePoint og OneDrive (valgfrit)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | – Konfigurer IB for SharePoint og OneDrive |
 | **Trin 6**: [Informationsbarrierer (valgfrit)](#step-6-information-barriers-modes) | – Opdater IB-tilstande, hvis det er relevant |
 
@@ -101,15 +101,15 @@ Ud over de påkrævede abonnementer og tilladelser skal du sørge for, at følge
 
 - **Fjern eksisterende Exchange Online politikker for adressekartoteket**: Før du definerer og anvender politikker for IB, skal du fjerne alle eksisterende Exchange Online politikker for adressekartoteket i din organisation. IB-politikker er baseret på politikker for adressekartoteker, og eksisterende ABP-politikker er ikke kompatible med de ABP'er, der er oprettet af IB. Hvis du vil fjerne dine eksisterende politikker for adressekartoteker, skal du se [Fjern en adressekartotekspolitik i Exchange Online](/exchange/address-books/address-book-policies/remove-an-address-book-policy). Du kan få flere oplysninger om IB-politikker og -Exchange Online under [Informationsbarrierer og Exchange Online](information-barriers.md#information-barriers-and-exchange-online).
 
-- **Administrer ved hjælp af PowerShell**: I øjeblikket er IB-politikker defineret og administreret i Security & Compliance Center PowerShell. Selvom der er angivet flere eksempler i denne artikel, skal du have kendskab til PowerShell-cmdlet'er og -parametre. Du skal også bruge Azure Active Directory PowerShell-modulet.
-  - [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell)
+- **Administrer ved hjælp af PowerShell (valgfrit):** IB-segmenter og -politikker kan defineres og administreres i Office 365 Security & Compliance PowerShell. Selvom der er angivet flere eksempler i denne artikel, skal du have kendskab til PowerShell-cmdlet'er og -parametre, hvis du vælger at bruge PowerShell til at konfigurere og administrere IB-segmenter og -politikker. Du skal også bruge Azure Active Directory PowerShell-modulet, hvis du vælger denne konfigurationsindstilling.
+  - [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell)
   - [Installér Azure Active Directory PowerShell til Graph](/powershell/azure/active-directory/install-adv2)
 
 - **Administratorsamtykke for IB i Microsoft Teams**: Når dine IB-politikker er på plads, kan de fjerne brugere, der ikke overholder IB-politikken, fra Grupper (f.eks. Teams kanaler, der er baseret på grupper). Denne konfiguration hjælper med at sikre, at din organisation fortsat overholder politikker og regler. Brug følgende procedure til at aktivere, at IB-politikker fungerer som forventet i Microsoft Teams.
 
    1. Forudsætning: [Installér Azure Active Directory PowerShell til Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Kør følgende PowerShell-cmdlet'er:
+   2. Kør følgende PowerShell-cmdlet'er:
 
       ```powershell
       Connect-AzureAD -Tenant "<yourtenantdomain.com>"  //for example: Connect-AzureAD -Tenant "Contoso.onmicrosoft.com"
@@ -119,18 +119,15 @@ Ud over de påkrævede abonnementer og tilladelser skal du sørge for, at følge
       Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
       ```
 
-   1. Når du bliver bedt om det, skal du logge på med din arbejds- eller skolekonto for Office 365.
+   3. Når du bliver bedt om det, skal du logge på med din arbejds- eller skolekonto for Office 365.
 
-   1. Gennemse oplysningerne i dialogboksen **Tilladelser,** og vælg derefter **Acceptér**. De tilladelser, der anmodes om af appen, er angivet nedenfor.
-
-      > [!div class="mx-imgBorder"]
-      > ![Billede.](https://user-images.githubusercontent.com/8932063/107690955-b1772300-6c5f-11eb-9527-4235de860b27.png)
+   4. Gennemse oplysningerne i dialogboksen **Tilladelser,** og vælg derefter **Acceptér**.
 
 Når alle forudsætningerne er opfyldt, skal du gå videre til næste trin.
 
 ## <a name="step-2-segment-users-in-your-organization"></a>Trin 2: Segmentér brugere i din organisation
 
-I løbet af dette trin bestemmer du, hvilke IB-politikker der skal bruges, opretter en liste over segmenter, der skal defineres, og definerer derefter dine segmenter.
+I dette trin bestemmer du, hvilke IB-politikker der skal bruges, opretter en liste over segmenter, der skal defineres, og definerer dine segmenter. Definition af segmenter påvirker ikke brugerne. Det angiver blot fasen for IB-politikker, der skal defineres og derefter anvendes.
 
 ### <a name="determine-what-policies-are-needed"></a>Find ud af, hvilke politikker der er brug for
 
@@ -159,15 +156,32 @@ Find ud af, hvilke attributter i organisationens katalogdata du skal bruge til a
 > [!IMPORTANT]
 > **Før du fortsætter til næste afsnit, skal du sørge for, at dine katalogdata indeholder værdier for attributter, som du kan bruge til at definere segmenter**. Hvis dine mappedata ikke har værdier for de attributter, du vil bruge, skal brugerkontiene opdateres, så de indeholder disse oplysninger, før du fortsætter med at konfigurere IB. Du kan få hjælp til dette i følgende ressourcer:<br/>- [Konfigurer egenskaber for brugerkonto med Office 365 PowerShell](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)<br/>- [Tilføj eller opdater en brugers profiloplysninger ved hjælp af Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
+### <a name="define-segments-using-the-compliance-portal"></a>Definer segmenter ved hjælp af overholdelsesportalen
+
+Hvis du vil definere segmenter på overholdelsesportalen, skal du udføre følgende trin:
+
+1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
+2. På overholdelsesportalen skal du vælge **InformationsbarriererSegmenter** > .
+3. På siden **Segmenter** skal du vælge **Nyt segment** for at oprette og konfigurere et nyt segment.
+4. Angiv et navn til segmentet på siden **Navn** . Du kan ikke omdøbe et segment, når det først er oprettet.
+5. Vælg **Næste**.
+6. På siden **Brugergruppefilter** skal du vælge **Tilføj** for at konfigurere gruppen og brugerattributterne for segmentet. Vælg en attribut for segmentet på listen over tilgængelige attributter.
+7. For den valgte attribut skal du vælge enten *Equal* eller *Not equal* og derefter angive værdien for attributten. Hvis du f.eks. har valgt *Afdeling* som attribut og *Lig med*, kan du angive *Marketing* som den definerede *afdeling* for denne segmentbetingelse. Du kan tilføje yderligere betingelser for en attribut ved at vælge **Tilføj betingelse**. Hvis du har brug for at slette en attribut eller en attributbetingelse, skal du vælge sletteikonet for attributten eller betingelsen.
+8. Tilføj yderligere attributter efter behov på siden **Brugergruppefilter** , og vælg derefter **Næste**.
+9. På siden **Gennemse dine indstillinger** skal du gennemse de indstillinger, du har valgt for segmentet, og eventuelle forslag eller advarsler til dine valg. Vælg **Rediger** for at ændre en af segmentattributterne og -betingelserne, eller vælg **Send** for at oprette segmentet.
+
+    > [!IMPORTANT]
+    > **Sørg for, at dine segmenter ikke overlapper hinanden**. Hver bruger, der påvirkes af IB-politikker, skal tilhøre ét (og kun ét) segment. Ingen bruger må tilhøre to eller flere segmenter. Se [eksempel: Contosos definerede segmenter](#contosos-defined-segments) i denne artikel for et eksempelscenarie.
+
 ### <a name="define-segments-using-powershell"></a>Definer segmenter ved hjælp af PowerShell
 
-Den næste opgave er at definere segmenter for din organisation. Definition af segmenter påvirker ikke brugerne. Det angiver blot fasen for IB-politikker, der skal defineres og derefter anvendes.
+Hvis du vil definere segmenter med PowerShell, skal du fuldføre følgende trin:
 
 1. Brug **New-OrganizationSegment-cmdlet'en** med parameteren **UserGroupFilter** , der svarer til den [attribut,](information-barriers-attributes.md) du vil bruge.
 
     | Syntaks | Eksempel |
     |:---------|:----------|
-    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>I dette eksempel defineres et segment med navnet *HR* ved hjælp af *HR*, som er en værdi i attributten *Afdeling* . **-eq-delen** af cmdlet'en refererer til "lig med". (Alternativt kan du bruge **-ne** til at betyde "ikke lig med". Se [Brug af "er lig med" og "ikke lig med" i segmentdefinitioner](#using-equals-and-not-equals-in-segment-definitions). |
+    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>I dette eksempel defineres et segment med navnet *HR* ved hjælp af *HR*, som er en værdi i attributten *Afdeling* . **-eq-delen** af cmdlet'en refererer til "lig med". (Alternativt kan du bruge **-ne** til at betyde "ikke lig med". Se [Brug af "er lig med" og "ikke lig med" i segmentdefinitioner](#using-equals-and-not-equals-in-powershell-segment-definitions). |
 
     Når du har kørt hver cmdlet, får du vist en liste over detaljer om det nye segment. Detaljer omfatter segmentets type, hvem der oprettede eller senest ændrede det osv. 
 
@@ -176,11 +190,11 @@ Den næste opgave er at definere segmenter for din organisation. Definition af s
     > [!IMPORTANT]
     > **Sørg for, at dine segmenter ikke overlapper hinanden**. Hver bruger, der påvirkes af IB-politikker, skal tilhøre ét (og kun ét) segment. Ingen bruger må tilhøre to eller flere segmenter. Se [eksempel: Contosos definerede segmenter](#contosos-defined-segments) i denne artikel for et eksempelscenarie.
 
-Når du har defineret dine segmenter, skal du gå til [Trin 3: Definer politikker for informationsbarrierer](#step-3-define-information-barrier-policies).
+Når du har defineret dine segmenter, skal du gå til [Trin 3: Opret IB-politikker](#step-3-create-ib-policies).
 
-### <a name="using-equals-and-not-equals-in-segment-definitions"></a>Brug af "er lig med" og "ikke lig med" i segmentdefinitioner
+### <a name="using-equals-and-not-equals-in-powershell-segment-definitions"></a>Brug af "er lig med" og "ikke lig med" i PowerShell-segmentdefinitioner
 
-I følgende eksempel definerer vi et segment, så "Afdeling er lig med HR". 
+I følgende eksempel konfigurerer vi IB-segmenter ved hjælp af PowerShell og definerer et segment, så "Afdeling er lig med HR".
 
 | Eksempel | Bemærk |
 |:----------|:-------|
@@ -204,9 +218,9 @@ Ud over at definere segmenter, der bruger parametrene "er lig med" eller "ikke l
 > [!TIP]
 > Hvis det er muligt, kan du bruge segmentdefinitioner, der omfatter "-eq" eller "-ne". Prøv ikke at definere komplekse segmentdefinitioner.
 
-## <a name="step-3-define-information-barrier-policies"></a>Trin 3: Definer politikker for informationsbarrierer
+## <a name="step-3-create-ib-policies"></a>Trin 3: Opret IB-politikker
 
-Find ud af, om du har brug for at forhindre kommunikation mellem bestemte segmenter eller begrænse kommunikationen til bestemte segmenter. Ideelt set skal du bruge det mindste antal IB-politikker til at sikre, at din organisation overholder interne, juridiske og branchemæssige krav.
+Når du opretter dine IB-politikker, bestemmer du, om du har brug for at forhindre kommunikation mellem bestemte segmenter eller begrænse kommunikationen til bestemte segmenter. Ideelt set skal du bruge det mindste antal IB-politikker til at sikre, at din organisation overholder interne, juridiske og branchemæssige krav. Du kan bruge overholdelsesportalen eller PowerShell til at oprette og anvende IB-politikker.
 
 > [!TIP]
 > For konsistens i brugeroplevelsen anbefaler vi, at du bruger Bloker politikker til de fleste scenarier, hvis det er muligt.
@@ -217,13 +231,42 @@ Med din liste over brugersegmenter og de IB-politikker, du vil definere, skal du
 - [Scenarie 2: Tillad, at et segment kun kommunikerer med ét andet segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> **Sørg for, at når du definerer politikker, kan du ikke tildele mere end én politik til et segment**. Hvis du f.eks. definerer én politik for et segment med navnet *Salg*, skal du ikke definere en yderligere politik for *Salg*.<p> Når du definerer politikker for IB, skal du desuden sørge for at angive disse politikker til inaktiv status, indtil du er klar til at anvende dem. Definition (eller redigering) af politikker påvirker ikke brugerne, før disse politikker er angivet til aktiv status og derefter anvendt.
+> **Sørg for, at når du definerer politikker, kan du ikke tildele mere end én politik til et segment**. Hvis du f.eks. definerer én politik for et segment med navnet *Salg*, skal du ikke definere en yderligere politik for segmentet *Salg* .<br> Når du definerer politikker for IB, skal du desuden sørge for at angive disse politikker til inaktiv status, indtil du er klar til at anvende dem. Definition (eller redigering) af politikker påvirker ikke brugerne, før disse politikker er angivet til aktiv status og derefter anvendt.
 
 ### <a name="scenario-1-block-communications-between-segments"></a>Scenarie 1: Bloker kommunikation mellem segmenter
 
 Når du vil blokere segmenter fra at kommunikere med hinanden, definerer du to politikker: én for hver retning. Hver politik blokerer kun kommunikation i én retning.
 
-Lad os f.eks. antage, at du vil blokere kommunikation mellem Segment A og Segment B. I dette tilfælde skal du definere én politik, der forhindrer Segment A i at kommunikere med Segment B, og derefter definere en anden politik for at forhindre, at Segment B kommunikerer med Segment A.
+Lad os f.eks. antage, at du vil blokere kommunikation mellem Segment A og Segment B. I dette tilfælde skal du definere to politikker:
+
+- Én politik, der forhindrer Segment A i at kommunikere med Segment B
+- En anden politik, der forhindrer Segment B i at kommunikere med Segment A
+
+#### <a name="create-policies-using-the-compliance-portal-for-scenario-1"></a>Opret politikker ved hjælp af overholdelsesportalen for scenarie 1
+
+Hvis du vil definere politikker på overholdelsesportalen, skal du udføre følgende trin:
+
+1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
+2. På portalen til overholdelse skal du vælge **Politikker for informationsbarrierer** > .
+3. På siden **Politikker** skal du vælge **Opret politik** for at oprette og konfigurere en ny IB-politik.
+4. Angiv et navn til politikken på siden **Navn** , og vælg derefter **Næste**.
+5. På siden **Tildelt segment** skal du vælge **Vælg segment**. Brug søgefeltet til at søge efter et segment efter navn, eller rul for at vælge segmentet på den viste liste. Vælg **Tilføj** for at føje det valgte segment til politikken. Du kan kun vælge ét segment.
+6. Vælg **Næste**.
+7. På siden **Kommunikation og samarbejde** skal du vælge politiktypen i feltet **Kommunikation og samarbejde** . Politikindstillingerne er enten *Tilladt* eller *Blokeret*. I dette eksempelscenarie vælges *Blokeret* for den første politik.
+
+    >[!IMPORTANT]
+    >Statussen Tilladt og Blokeret for segmenter kan ikke ændres, når du har oprettet en politik. Hvis du vil ændre status, når du har oprettet en politik, skal du slette politikken og oprette en ny.
+
+8. Vælg **Vælg segment** for at definere handlingerne for målsegmentet. Du kan tildele mere end ét segment i dette trin. Hvis du f.eks. vil blokere brugere i et segment, der kaldes *Salg* , fra at kommunikere med brugere i et segment med navnet *Opslag*, ville du have defineret *salgssegmentet* i trin 5, og du ville tildele *Opslag* i indstillingen **Vælg segment** i dette trin.
+9. Vælg **Næste**.
+10. På siden **Politikstatus** skal du slå den aktive politikstatus til **Til**. Vælg **Næste** for at fortsætte.
+11. På siden **Gennemse dine indstillinger** skal du gennemse de indstillinger, du har valgt for politikken, og eventuelle forslag eller advarsler til dine valg. Vælg **Rediger** for at ændre et af politiksegmenterne og status, eller vælg **Send** for at oprette politikken.
+
+I dette eksempel skal du gentage de forrige trin for at oprette endnu en *blokpolitik* for at begrænse til at blokere brugere i et segment kaldet *Opslag* fra at kommunikere med brugere i et segment med navnet *Salg*. Du ville have defineret segmentet *Opslag* i trin 5, og du ville tildele *Salg* (eller flere segmenter) i indstillingen **Vælg segment** .
+
+#### <a name="create-policies-using-powershell-for-scenario-1"></a>Opret politikker ved hjælp af PowerShell til scenarie 1
+
+Hvis du vil definere politikker med PowerShell, skal du fuldføre følgende trin:
 
 1. Hvis du vil definere din første blokeringspolitik, skal du bruge **New-InformationBarrierPolicy-cmdlet'en** med parameteren **SegmentsBlocked** .
 
@@ -240,11 +283,35 @@ Lad os f.eks. antage, at du vil blokere kommunikation mellem Segment A og Segmen
 3. Fortsæt til en af følgende handlinger:
 
    - (Hvis det er nødvendigt) [Definer en politik for at tillade, at et segment kun kommunikerer med ét andet segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
-   - (Når alle dine politikker er defineret) [Anvend politikker for informationsbarrierer](#step-4-apply-information-barrier-policies)
+   - (Når alle dine politikker er defineret) [Anvend IB-politikker](#step-4-apply-ib-policies)
 
 ### <a name="scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment"></a>Scenarie 2: Tillad, at et segment kun kommunikerer med ét andet segment
 
 Når du vil tillade, at et segment kun kommunikerer med ét andet segment, definerer du kun én politik for det pågældende segment. Det segment, der kommunikeres med, kræver ikke en lignende retningspolitik (fordi de som standard kan kommunikere og samarbejde med alle).
+
+#### <a name="create-a-policy-using-the-compliance-portal-for-scenario-2"></a>Opret en politik ved hjælp af overholdelsesportalen for scenarie 2
+
+Hvis du vil definere politikker på overholdelsesportalen, skal du udføre følgende trin:
+
+1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
+2. På portalen til overholdelse skal du vælge **Politikker for informationsbarrierer** > .
+3. På siden **Politikker** skal du vælge **Opret politik** for at oprette og konfigurere en ny IB-politik.
+4. Angiv et navn til politikken på siden **Navn** , og vælg derefter **Næste**.
+5. På siden **Tildelt segment** skal du vælge **Vælg segment**. Brug søgefeltet til at søge efter et segment efter navn, eller rul for at vælge segmentet på den viste liste. Vælg **Tilføj** for at føje det valgte segment til politikken. Du kan kun vælge ét segment.
+6. Vælg **Næste**.
+7. På siden **Kommunikation og samarbejde** skal du vælge politiktypen i feltet **Kommunikation og samarbejde** . Politikindstillingerne er enten *Tilladt* eller *Blokeret*. I dette eksempelscenarie ville *Allowed* blive valgt for politikken.
+
+    >[!IMPORTANT]
+    >Statussen Tilladt og Blokeret for segmenter kan ikke ændres, når du har oprettet en politik. Hvis du vil ændre status, når du har oprettet en politik, skal du slette politikken og oprette en ny.
+
+8. Vælg **Vælg segment** for at definere handlingerne for målsegmentet. Du kan tildele mere end ét segment i dette trin. Hvis du f.eks. vil give brugere i et segment kaldet *Produktion* tilladelse til at kommunikere med brugere i et segment med navnet *HR*, ville du have *defineret produktionssegmentet* i trin 5, og du ville tildele *HR* i indstillingen **Vælg segment** på dette trin.
+9. Vælg **Næste**.
+10. På siden **Politikstatus** skal du slå den aktive politikstatus til **Til**. Vælg **Næste** for at fortsætte.
+11. På siden **Gennemse dine indstillinger** skal du gennemse de indstillinger, du har valgt for politikken, og eventuelle forslag eller advarsler til dine valg. Vælg **Rediger** for at ændre et af politiksegmenterne og status, eller vælg **Send** for at oprette politikken.
+
+#### <a name="create-a-policy-using-powershell-for-scenario-2"></a>Opret en politik ved hjælp af PowerShell til scenarie 2
+
+Hvis du vil definere politikker med PowerShell, skal du fuldføre følgende trin:
 
 1. Hvis du vil tillade, at ét segment kun kommunikerer med ét andet segment, skal du bruge cmdlet'en **New-InformationBarrierPolicy** med parameteren **SegmentsAllowed** .
 
@@ -263,11 +330,26 @@ Når du vil tillade, at et segment kun kommunikerer med ét andet segment, defin
 2. Fortsæt til en af følgende handlinger:
 
    - (Hvis det er nødvendigt) [Definer en politik til blokering af kommunikation mellem segmenter](#scenario-1-block-communications-between-segments) 
-   - (Når alle dine politikker er defineret) [Anvend politikker for informationsbarrierer](#step-4-apply-information-barrier-policies)
+   - (Når alle dine politikker er defineret) [Anvend IB-politikker](#step-4-apply-ib-policies)
 
-## <a name="step-4-apply-information-barrier-policies"></a>Trin 4: Anvend politikker for informationsbarrierer
+## <a name="step-4-apply-ib-policies"></a>Trin 4: Anvend IB-politikker
 
 IB-politikker er ikke i kraft, før du angiver dem til aktiv status og anvender politikkerne.
+
+### <a name="apply-policies-using-the-compliance-portal"></a>Anvend politikker ved hjælp af overholdelsesportalen
+
+Hvis du vil anvende politikker på overholdelsesportalen, skal du udføre følgende trin:
+
+1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
+2. På overholdelsesportalen skal du vælge **Information barriersPolicy** >  **application**.
+3. På siden **Politikker-program** skal du vælge **Anvend alle politikker** for at anvende alle IB-politikker i din organisation.
+
+    >[!NOTE]
+    >Tillad, at systemet anvender politikkerne i 30 minutter. Systemet anvender politikker, som brugeren anvender. Systemet behandler ca. 5.000 brugerkonti pr. time.
+
+### <a name="apply-policies-using-powershell"></a>Anvend politikker ved hjælp af PowerShell
+
+Hvis du vil anvende politikker ved hjælp af PowerShell, skal du udføre følgende trin:
 
 1. Brug **cmdlet'en Get-InformationBarrierPolicy** til at få vist en liste over de politikker, der er defineret. Bemærk status og id (GUID) for hver politik.
 
@@ -281,7 +363,7 @@ IB-politikker er ikke i kraft, før du angiver dem til aktiv status og anvender 
 
     Gentag dette trin efter behov for hver politik.
 
-3. Når du er færdig med at angive dine IB-politikker til aktiv status, skal du bruge cmdlet'en **Start-InformationBarrierPoliciesApplication** i Security & Compliance Center PowerShell.
+3. Når du er færdig med at angive dine IB-politikker til aktiv status, skal du bruge cmdlet'en **Start-InformationBarrierPoliciesApplication** i Security & Compliance PowerShell.
 
     Syntaks: `Start-InformationBarrierPoliciesApplication`
 
@@ -293,11 +375,11 @@ Med PowerShell kan du få vist status for brugerkonti, segmenter, politikker og 
 
 | Sådan får du vist disse oplysninger | Udfør denne handling |
 |:---------------|:----------|
-| Brugerkonti | Brug cmdlet'en **Get-InformationBarrierRecipientStatus** med identitetsparametre. <p> Syntaks: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Du kan bruge en hvilken som helst værdi, der entydigt identificerer hver bruger, f.eks. navn, alias, entydigt navn, vedtaget domænenavn, mailadresse eller GUID. <p> Eksempel: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> I dette eksempel henviser vi til to brugerkonti i Office 365: *meganb* for *Megan* og *alexw* for *Alex*. <p> (Du kan også bruge denne cmdlet til en enkelt bruger: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Denne cmdlet returnerer oplysninger om brugere, f.eks. attributværdier og eventuelle politikker for informationsbarrierer, der anvendes.|
+| Brugerkonti | Brug cmdlet'en **Get-InformationBarrierRecipientStatus** med identitetsparametre. <p> Syntaks: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Du kan bruge en hvilken som helst værdi, der entydigt identificerer hver bruger, f.eks. navn, alias, entydigt navn, vedtaget domænenavn, mailadresse eller GUID. <p> Eksempel: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> I dette eksempel henviser vi til to brugerkonti i Office 365: *meganb* for *Megan* og *alexw* for *Alex*. <p> (Du kan også bruge denne cmdlet til en enkelt bruger: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Denne cmdlet returnerer oplysninger om brugere, f.eks. attributværdier og eventuelle IB-politikker, der anvendes.|
 | Segmenter | Brug cmdlet'en **Get-OrganizationSegment** .<p> Syntaks: `Get-OrganizationSegment` <p> Denne cmdlet viser en liste over alle de segmenter, der er defineret for din organisation. |
-| Politikker for informationsbarrierer | Brug cmdlet'en **Get-InformationBarrierPolicy** . <p> Syntaks: `Get-InformationBarrierPolicy` <p> Denne cmdlet viser en liste over definerede politikker for informationsbarrierer og deres status. |
-| Den seneste anvendelse af informationsbarrierepolitik | Brug cmdlet'en **Get-InformationBarrierPoliciesApplicationStatus** . <p> Syntaks: `Get-InformationBarrierPoliciesApplicationStatus`<p> Denne cmdlet viser oplysninger om, hvorvidt politikprogrammet er fuldført, mislykket eller er i gang. |
-| Alle applikationer til barrierepolitik for information|Bruge `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Denne cmdlet viser oplysninger om, hvorvidt politikprogrammet er fuldført, mislykket eller er i gang.|
+| IB-politikker | Brug cmdlet'en **Get-InformationBarrierPolicy** . <p> Syntaks: `Get-InformationBarrierPolicy` <p> Denne cmdlet viser en liste over de IB-politikker, der er defineret, og deres status. |
+| Det seneste IB-politikprogram | Brug cmdlet'en **Get-InformationBarrierPoliciesApplicationStatus** . <p> Syntaks: `Get-InformationBarrierPoliciesApplicationStatus`<p> Denne cmdlet viser oplysninger om, hvorvidt politikprogrammet er fuldført, mislykket eller er i gang. |
+| Alle IB-politikprogrammer|Bruge `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Denne cmdlet viser oplysninger om, hvorvidt politikprogrammet er fuldført, mislykket eller er i gang.|
 
 ### <a name="what-if-i-need-to-remove-or-change-policies"></a>Hvad gør jeg, hvis jeg har brug for at fjerne eller ændre politikker?
 
@@ -322,7 +404,7 @@ Følgende IB-tilstande understøttes i Microsoft 365 ressourcer:
 |:-----|:------------|:--------|
 | **Åbne** | Der er ikke knyttet nogen IB-politikker eller -segmenter til den Microsoft 365 ressource. Alle kan inviteres til at være medlem af ressourcen. | Et teamwebsted, der er oprettet til picnicbegivenhed for din organisation. |
 | **Ejer ændret (prøveversion)** | IB-politikken for den Microsoft 365 ressource bestemmes ud fra ressourceejerens IB-politik. Ressourceejerne kan invitere alle brugere til ressourcen på baggrund af deres IB-politikker. Denne tilstand er nyttig, når din virksomhed ønsker at tillade samarbejde mellem inkompatible segmentbrugere, der er ændret af ejeren. Det er kun ressourceejeren, der kan tilføje nye medlemmer i henhold til deres IB-politik. | HR-vicedirektøren ønsker at samarbejde med VP'erne til salg og forskning. Et nyt SharePoint websted, der er angivet med Ejer i IB-tilstand *Begrænset* for at føje både brugere af salgs- og opslagssegmentet til det samme websted. Det er ejerens ansvar at sikre, at de relevante medlemmer føjes til ressourcen. |
-| **Implicit** | IB-politikken eller -segmenterne for den Microsoft 365 ressource nedarves fra ressourcemedlemmernes IB-politik. Ejeren kan tilføje medlemmer, så længe de er kompatible med de eksisterende medlemmer af ressourcen. Dette er standard-IB-tilstanden for Microsoft Teams. | Brugeren af salgssegmentet opretter et Microsoft Teams team til at samarbejde med andre kompatible segmenter i organisationen. |
+| **Implicit** | IB-politikken eller -segmenterne for den Microsoft 365 ressource nedarves fra ressourcemedlemmernes IB-politik. Ejeren kan tilføje medlemmer, så længe de er kompatible med de eksisterende medlemmer af ressourcen. Denne tilstand er standard-IB-tilstand for Microsoft Teams. | Brugeren af salgssegmentet opretter et Microsoft Teams team til at samarbejde med andre kompatible segmenter i organisationen. |
 | **Eksplicit** | IB-politikken for den Microsoft 365 ressource er pr. de segmenter, der er knyttet til ressourcen. Ressourceejeren eller SharePoint-administratoren har mulighed for at administrere segmenterne på ressourcen.  | Et websted, der kun er oprettet for medlemmer af salgssegmentet for at samarbejde ved at knytte segmentet Salg til webstedet.   |
 
 Du kan få flere oplysninger om IB-tilstande, og hvordan de er konfigureret på tværs af tjenester, i følgende artikler:
@@ -369,14 +451,14 @@ Contoso bruger attributten Afdeling i Azure Active Directory til at definere seg
 
 Når segmenterne er defineret, fortsætter Contoso med at definere IB-politikkerne.
 
-### <a name="contosos-information-barrier-policies"></a>Contosos politik for informationsbarrierer
+### <a name="contosos-ib-policies"></a>Contosos IB-politikker
 
 Contoso definerer tre IB-politikker, som beskrevet i følgende tabel:
 
 | Politik | Politikdefinition |
 |:---------|:--------------------|
-| **Politik 1: Undgå, at salg kommunikerer med opslag** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> I dette eksempel kaldes politikken for informationsbarrierer *Sales-Research*. Når denne politik er aktiv og anvendt, hjælper det med at forhindre brugere, der er i segmentet Salg, i at kommunikere med brugere i segmentet Opslag. Denne politik er en envejspolitik. Det forhindrer ikke Research i at kommunikere med Sales. Til det formål er Politik 2 nødvendig. |
-| **Politik 2: Undgå, at opslag kommunikerer med Salg** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> I dette eksempel kaldes politikken for informationsbarrierer *Research-Sales*. Når denne politik er aktiv og anvendt, hjælper det med at forhindre brugere, der er i segmentet Opslag, i at kommunikere med brugere i segmentet Salg. |
+| **Politik 1: Undgå, at salg kommunikerer med opslag** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> I dette eksempel kaldes *IB-politikken Sales-Research*. Når denne politik er aktiv og anvendt, hjælper det med at forhindre brugere, der er i segmentet Salg, i at kommunikere med brugere i segmentet Opslag. Denne politik er en envejspolitik. Det forhindrer ikke Research i at kommunikere med Sales. Til det formål er Politik 2 nødvendig. |
+| **Politik 2: Undgå, at opslag kommunikerer med Salg** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> I dette eksempel kaldes *IB-politikken Research-Sales*. Når denne politik er aktiv og anvendt, hjælper det med at forhindre brugere, der er i segmentet Opslag, i at kommunikere med brugere i segmentet Salg. |
 | **Politik 3: Tillad, at produktion kun kommunikerer med HR og marketing** | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Marketing","Manufacturing" -State Inactive` <p> I dette tilfælde kaldes *IB-politikken Manufacturing-HRMarketing*. Når denne politik er aktiv og anvendt, kan Produktion kun kommunikere med HR og Marketing. HR og marketing er ikke begrænset til at kommunikere med andre segmenter. |
 
 Når segmenter og politikker er defineret, anvender Contoso politikkerne ved at køre cmdlet'en **Start-InformationBarrierPoliciesApplication** .

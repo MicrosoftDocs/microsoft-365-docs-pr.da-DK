@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
-ms.openlocfilehash: d509d878b244054138e4e95329d00759719e131d
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 7cb963106551951fb6ae1e2455d21fa44d47a77c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319032"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396320"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
@@ -49,10 +49,11 @@ Du kan finde oplysninger om, hvad opbevaringsmærkater er, og hvordan du bruger 
 Hvis du vil have adgang til filplanen, skal du have en af følgende administratorroller:
     
 - Opbevaringsstyring
-
 - Kun visningsstyring
 
-I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) gå til **LøsningPostadministrationFilplan** >  > .
+I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) gå til **LøsningPostadministrationFilplan** >  > :
+
+![Filplanside](../media/compliance-file-plan.png). 
 
 Hvis **Datastyring** ikke vises i navigationsruden, skal du først rulle ned og vælge **Vis alle**.
 
@@ -154,7 +155,9 @@ Det kan dog tage op til to dage, før indholdsoversigten viser de elementer, der
 
 Fra din filplan kan du eksportere oplysningerne om alle opbevaringsmærkater til en .csv fil for at hjælpe dig med at facilitere periodiske gennemgange af overholdelse af angivne standarder med interessenter i forbindelse med datastyring i din organisation.
 
-Sådan eksporterer du alle opbevaringsmærkater: Klik på **Eksportér** på siden **Filplan**.
+Sådan eksporterer du alle opbevaringsmærkater: Vælg **Eksportér** på siden **Filplan**:
+
+![Mulighed for at eksportere filplanen.](../media/compliance-file-plan-export-labels.png)
 
 Der åbnes en *.csv fil, der indeholder alle eksisterende opbevaringsmærkater. Eksempel:
 
@@ -164,7 +167,7 @@ Der åbnes en *.csv fil, der indeholder alle eksisterende opbevaringsmærkater. 
 
 I filplanen kan du masseimportér nye opbevaringsmærkater ved hjælp af en .csv fil med et bestemt format: 
 
-1. Klik på **Importér** på siden **Filplan**: ![Mulighed for at importere filplan](../media/compliance-file-plan-import-labels.png)
+1. Vælg **Importér** på siden **Filplan**: ![Mulighed for at importere filplan](../media/compliance-file-plan-import-labels.png)
 
 2. I ruden **Udfyld og importér filplanen** skal du vælge **Download en tom skabelon**:
 

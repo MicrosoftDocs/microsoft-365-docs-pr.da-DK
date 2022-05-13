@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ce3c458013a96f845da528104997b63360879c56
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: ebe8f623842716ab53b4eae64d24ef85b9598099
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174040"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396151"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Om bord på enheder til Microsoft Defender til virksomheder
 
@@ -34,7 +34,7 @@ Med Microsoft Defender til virksomheder har du flere muligheder at vælge imelle
 
 ## <a name="what-to-do"></a>Sådan gør du
 
-1. Vælg fanen for operativsystemet: **Windows klienter**, **macOS-computere** eller **mobilenheder**.
+1. Vælg fanen for operativsystemet: **Windows klienter**, **macOS computere** eller **mobilenheder**.
 2. Få vist dine onboardingindstillinger, og følg vejledningen på den valgte fane.
 3. Fortsæt til de næste trin.
 
@@ -148,21 +148,21 @@ Hvis du vil have vist listen over enheder, der er onboardet til Defender for Bus
 - Hvis du er færdig med at onboarde enheder, skal du gå til [Trin 5: Konfigurer dine sikkerhedsindstillinger og politikker i Microsoft Defender til virksomheder](mdb-configure-security-settings.md)
 - Se [Kom i gang med at bruge Microsoft Defender til virksomheder](mdb-get-started.md).
 
-## <a name="macos"></a>[**Macos**](#tab/macOSdevices)
+## <a name="macos"></a>[**macOS**](#tab/macOSdevices)
 
-## <a name="macos-computers"></a>macOS-computere
+## <a name="macos-computers"></a>macOS computere
 
 > [!NOTE]
-> - Vi anbefaler, at du bruger et [lokalt script til at onboarde macOS-enheder](#local-script-for-macos). Selvom du kan [konfigurere tilmelding til macOS-enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding af macOS-enheder til Defender for Business. 
+> - Vi anbefaler, at du bruger et [lokalt script til at onboarde macOS enheder](#local-script-for-macos). Selvom du kan [konfigurere tilmelding for macOS enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding macOS enheder til Defender for Business. 
 
-Vælg en af følgende muligheder for at onboarde macOS-enheder:
+Vælg en af følgende muligheder for at onboarde macOS enheder:
 
 - [Lokalt script til macOS](#local-script-for-macos) (*anbefales*)
 - [Intune til macOS](#microsoft-intune-for-macos)
 
 ### <a name="local-script-for-macos"></a>Lokalt script til macOS
 
-Når du kører det lokale script på en macOS-enhed, oprettes der et tillidsforhold til Azure Active Directory (hvis denne tillid ikke allerede findes), tilmelder enheden Microsoft Intune (hvis den ikke allerede er tilmeldt) og onboarder derefter enheden til Defender for Business. Den lokale scriptmetode fungerer, selvom du ikke har Intune i øjeblikket. Vi anbefaler onboarding af op til 10 enheder ad gangen ved hjælp af denne metode.
+Når du kører det lokale script på en macOS enhed, oprettes der et tillidsforhold til Azure Active Directory (hvis denne tillid ikke allerede findes), tilmeldes enheden i Microsoft Intune (hvis den ikke allerede er tilmeldt) og onboarder derefter enheden til Defender for Business. Den lokale scriptmetode fungerer, selvom du ikke har Intune i øjeblikket. Vi anbefaler onboarding af op til 10 enheder ad gangen ved hjælp af denne metode.
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
@@ -172,7 +172,7 @@ Når du kører det lokale script på en macOS-enhed, oprettes der et tillidsforh
 
 4. Vælg **Download onboarding-pakke**, og gem den på et flytbart drev. Vælg også **Download installationspakken**, og gem den på din flytbare enhed.
 
-5. På en macOS-enhed skal du gemme installationspakken som `wdav.pkg` til en lokal mappe.
+5. På en macOS enhed skal du gemme installationspakken som `wdav.pkg` en lokal mappe.
 
 6. Gem onboardingpakken som `WindowsDefenderATPOnboardingPackage.zip` i den samme mappe, som du brugte til installationspakken.
 
@@ -188,24 +188,24 @@ Når du kører det lokale script på en macOS-enhed, oprettes der et tillidsforh
 
 ### <a name="microsoft-intune-for-macos"></a>Microsoft Intune til macOS
 
-Hvis dit abonnement omfatter Microsoft Intune, kan du onboarde macOS-enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Intune som en del af dit abonnement.  
+Hvis dit abonnement omfatter Microsoft Intune, kan du onboarde macOS enheder i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Hvis du f.eks. har [Microsoft 365 Business Premium](../../business/index.yml), har du Intune som en del af dit abonnement.  
 
 Der findes flere metoder til tilmelding af enheder i Intune. Vi anbefaler, at du starter med en af følgende metoder:
 
-- [Vælg en indstilling for virksomhedsejede MacOS-enheder](#options-for-company-owned-macos-devices)
-- [Bed brugerne om at tilmelde deres egne MacOS-enheder i Intune](#ask-users-to-enroll-their-own-macos-devices-in-intune)
+- [Vælg en indstilling for virksomhedsejede macOS enheder](#options-for-company-owned-macos-devices)
+- [Bed brugerne om at tilmelde deres egne macOS enheder i Intune](#ask-users-to-enroll-their-own-macos-devices-in-intune)
 
-#### <a name="options-for-company-owned-macos-devices"></a>Indstillinger for virksomhedsejede macOS-enheder
+#### <a name="options-for-company-owned-macos-devices"></a>Indstillinger for virksomhedsejede macOS enheder
 
-Vælg en af indstillingerne i følgende tabel for at tilmelde virksomhedsadministrerede macOS-enheder i Intune:
+Vælg en af indstillingerne i følgende tabel for at tilmelde virksomhedsadministrerede macOS enheder i Intune:
 
 | Mulighed  | Beskrivelse  |
 |---------|---------|
-| Apple Automated Device Enrollment |  Brug denne metode til at automatisere tilmeldingsoplevelsen på enheder, der er købt via Apple Business Manager eller Apple School Manager. Automatiseret tilmelding af enheder udruller tilmeldingsprofilen via internettet, så du ikke behøver at have fysisk adgang til enheder. <br/><br/>Se [Tilmeld automatisk macOS-enheder med Apple Business Manager eller Apple School Manager](/mem/intune/enrollment/device-enrollment-program-enroll-macos). |
+| Apple Automated Device Enrollment |  Brug denne metode til at automatisere tilmeldingsoplevelsen på enheder, der er købt via Apple Business Manager eller Apple School Manager. Automatiseret tilmelding af enheder udruller tilmeldingsprofilen via internettet, så du ikke behøver at have fysisk adgang til enheder. <br/><br/>Se [Tilmeld automatisk macOS enheder med Apple Business Manager eller Apple School Manager](/mem/intune/enrollment/device-enrollment-program-enroll-macos). |
 | Administrator af enhedsregistrering (DEM)  |  Brug denne metode til udrulninger i stor skala, og når der er flere personer i din organisation, som kan hjælpe med konfiguration af tilmelding. En person med administratorrettigheder til enhedsregistrering kan tilmelde op til 1.000 enheder med en enkelt Azure Active Directory konto. Denne metode bruger Firmaportal-appen eller Microsoft Intune-appen til at tilmelde enheder. Du kan ikke bruge en demografikonto til at tilmelde enheder via automatiseret enhedsregistrering.<br/><br/> Se [Tilmeld enheder i Intune ved hjælp af en administratorkonto til enhedsregistrering](/mem/intune/enrollment/device-enrollment-manager-enroll).  |
-| Direkte tilmelding  | Direkte tilmelding tilmelder enheder uden brugertilhør, så denne metode er bedst til enheder, der ikke er knyttet til en enkelt bruger. Denne metode kræver, at du har fysisk adgang til de Macs, du tilmelder dig. <br/><br/>Se [Brug direkte tilmelding til macOS-enheder](/mem/intune/enrollment/device-enrollment-direct-enroll-macos).      |
+| Direkte tilmelding  | Direkte tilmelding tilmelder enheder uden brugertilhør, så denne metode er bedst til enheder, der ikke er knyttet til en enkelt bruger. Denne metode kræver, at du har fysisk adgang til de Macs, du tilmelder dig. <br/><br/>Se [Brug direkte tilmelding til macOS enheder](/mem/intune/enrollment/device-enrollment-direct-enroll-macos).      |
 
-#### <a name="ask-users-to-enroll-their-own-macos-devices-in-intune"></a>Bed brugerne om at tilmelde deres egne MacOS-enheder i Intune
+#### <a name="ask-users-to-enroll-their-own-macos-devices-in-intune"></a>Bed brugerne om at tilmelde deres egne macOS enheder i Intune
 
 Hvis din virksomhed foretrækker at få personer til at tilmelde deres egne enheder i Intune, skal du bede brugerne om at følge disse trin:
 
@@ -215,7 +215,7 @@ Hvis din virksomhed foretrækker at få personer til at tilmelde deres egne enhe
 
 3. Installér Firmaportal-appen på [https://aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac), og følg vejledningen i appen.
 
-### <a name="confirm-that-a-macos-device-is-onboarded"></a>Bekræft, at en macOS-enhed er onboardet
+### <a name="confirm-that-a-macos-device-is-onboarded"></a>Bekræft, at en macOS enhed er onboardet
 
 1. Hvis du vil bekræfte, at enheden er knyttet til dit firma, skal du bruge følgende Python-kommando i Bash: `mdatp health --field org_id`.
 
