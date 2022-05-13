@@ -14,12 +14,12 @@ metadata:
   ms.author: macapara
   ms.date: 10/18/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: d141c9f8b6109bd55bd64e5839db552fc13588de
-  ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+  ms.openlocfilehash: 74b5ca4b6abed02f5015a6c6c09e15ce7fcda5cc
+  ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 12/30/2021
-  ms.locfileid: "63591901"
+  ms.lasthandoff: 05/12/2022
+  ms.locfileid: "65368193"
 landingContent:
 - title: Microsoft Defender for Endpoint
   linkLists:
@@ -27,9 +27,9 @@ landingContent:
     links:
     - text: Hvad er Microsoft Defender for Endpoint?
       url: microsoft-defender-endpoint.md
-    - text: Defender for Endpoint Plan 1?
+    - text: Hvad er Defender for Endpoint plan 1?
       url: defender-endpoint-plan-1.md
-    - text: Sammenlign Defender for Endpoint Plan 1 med Plan 2
+    - text: Sammenlign Defender for Endpoint-planer
       url: defender-endpoint-plan-1-2.md
   - linkListType: whats-new
     links:
@@ -105,8 +105,8 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Håndtering af trusler og sikkerhedsrisici
-      url: next-gen-threat-and-vuln-mgt.md
+    - text: Microsoft Defender Vulnerability Management
+      url: ../defender-vulnerability-management/defender-vulnerability-management.md
     - text: Reduktion af angrebsoverfladen
       url: overview-attack-surface-reduction.md
     - text: Næste generations beskyttelse

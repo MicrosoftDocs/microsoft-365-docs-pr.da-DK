@@ -2,7 +2,7 @@
 
 ## [Oversigt]()
 ### [Hvad er Microsoft Defender for Endpoint?](microsoft-defender-endpoint.md)
-### [Sammenlign Defender for Endpoint Plan 1 med Plan 2](defender-endpoint-plan-1-2.md)
+### [Sammenlign Defender for Endpoint-planer](defender-endpoint-plan-1-2.md)
 ### [Minimumskrav](minimum-requirements.md)
 ### [Nyheder i Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 ### [Visningsfunktioner](preview.md)
@@ -54,7 +54,6 @@
 
 ##### [Onboard tidligere versioner af Windows](onboard-downlevel.md)
 
-
 ##### [Onboard Windows-enheder og Windows Servers]()
 ###### [Onboard Windows Server 2012 R2, 2016, Halvårlig kanal, 2019 og 2022](configure-server-endpoints.md)
 ###### [Onboard Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
@@ -64,9 +63,6 @@
 ###### [Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
 ###### [Onboard Windows 10 enheder med flere sessioner i Windows Virtual Desktop](onboard-windows-multi-session-device.md)
 
-
-
-
 #### [Integration med Microsoft Defender for Cloud](azure-server-integration.md)
 
 #### [Onboard enheder uden internetadgang](onboard-offline-machines.md)
@@ -74,8 +70,6 @@
 #### [Kør simulerede angreb på enheder](attack-simulations.md)
 #### [Konfigurer indstillinger for proxy- og internetforbindelse](configure-proxy-internet.md)
 #### [Opret en beskedregel for onboarding eller offboarding](onboarding-notification.md)
-
-
 
 ### [Microsoft Defender for Endpoint på andre operativsystemer]()
 #### [Onboard ikke-Windows-enheder](configure-endpoints-non-windows.md)
@@ -118,7 +112,6 @@
 ##### [Beskyttelse af personlige oplysninger](mac-privacy.md)
 ##### [Ressourcer](mac-resources.md)
 
-
 #### [Microsoft Defender for Endpoint på Linux]()
 ##### [Oversigt over Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 ##### [Nyheder](linux-whatsnew.md)
@@ -137,7 +130,6 @@
 ###### [Find og bloker potentielt uønskede programmer](linux-pua.md)
 ###### [Planlæg scanninger med Microsoft Defender for Endpoint på Linux](linux-schedule-scan-mde.md)
 ###### [Planlæg en opdatering af Microsoft Defender for Endpoint (Linux)](linux-update-MDE-Linux.md)
-
 
 ##### [Fejlfinding]()
 ###### [Fejlfinding af installationsproblemer](linux-support-install.md)
@@ -184,17 +176,12 @@
 
 ###### [Beskyttelse af personlige oplysninger](ios-privacy.md)
 
-
 ### [Administrer konfigurationsindstillinger for Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](security-config-management.md)
 
 ### [Fejlfinding af problemer med onboarding]()
 #### [Fejlfinding af problemer under onboarding](troubleshoot-onboarding.md)
 #### [Fejlfinding af problemer med abonnements- og portaladgang](troubleshoot-onboarding-error-messages.md)
 #### [Fejlfinding af problemer med onboarding af styring af sikkerhedskonfigurations](troubleshoot-security-config-mgt.md)
-
-
-
-
 
 ### [Konfigurer portalindstillinger]()
 #### [Konfigurer generelle indstillinger for Defender for Endpoint](preferences-setup.md)
@@ -230,30 +217,7 @@
 #### [Konfigurer Microsoft Defender Security Center tidszoneindstillinger](time-settings.md)
 
 ## [Find trusler, og beskyt slutpunkter]()
-### [Håndtering af trusler og sikkerhedsrisici]()
-#### [Oversigt](next-gen-threat-and-vuln-mgt.md)
-#### [Introduktion]()
-##### [Tilladelser & forudsætninger](tvm-prerequisites.md)
-##### [Platforme og funktioner til understøttede operativsystemer](tvm-supported-os.md)
-##### [Tildel enhedsværdi](tvm-assign-device-value.md)
-#### [Vurder dit sikkerhedsniveau]()
-##### [Dashboardindsigt](tvm-dashboard-insights.md)
-##### [Eksponeringsscore](tvm-exposure-score.md)
-##### [Microsoft Secure Score til enheder](tvm-microsoft-secure-score-devices.md)
-#### [Forbedr din sikkerhed, & reducer risikoen]()
-##### [Adresser sikkerhedsanbefalinger](tvm-security-recommendation.md)
-##### [Afhjælpning af sikkerhedsrisici](tvm-remediation.md)
-##### [Undtagelser for sikkerhedsanbefalinger](tvm-exception.md)
-##### [Plan for ophør af supportsoftware](tvm-end-of-support-software.md)
-##### [Afhjælpning af zero-day-sårbarheder](tvm-zero-day-vulnerabilities.md)
-#### [Forstå sikkerhedsrisici på dine enheder]()
-##### [Softwarelager](tvm-software-inventory.md)
-##### [Sårbarheder i min organisation](tvm-weaknesses.md)
-##### [Tidslinje for begivenhed](threat-and-vuln-mgt-event-timeline.md)
-##### [Rapport over følsomme enheder](tvm-vulnerable-devices-report.md)
-##### [Gå på jagt efter eksponerede enheder](tvm-hunt-exposed-devices.md)
-#### [Vejledning til aktive trusler og kampagner]()
-##### [Administrer Log4Shell-sårbarheden](tvm-manage-log4shell-guidance.md)
+### [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 ### [Enhedssøgning]()
 #### [Oversigt over enhedssøgning](device-discovery.md)
 #### [Konfigurer enhedssøgning](configure-device-discovery.md)
@@ -395,14 +359,15 @@
 ##### [blokering af klientfunktionsmåder](client-behavioral-blocking.md)
 ##### [Blokering af feedbackløkker](feedback-loop-blocking.md)
 
-
 ### [Adresser falske positive/negativer i Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-
 
 ### [Administrer enhedskonfiguration]()
 
 #### [Øg overholdelsen af sikkerhedsbaseline](configure-machines-security-baseline.md)
 #### [Optimer udrulning af regler for reduktion af angrebsoverfladen og registreringer](configure-machines-asr.md)
+
+## [Vejledning til aktive trusler og kampagner]()
+### [Administrer Log4Shell-sårbarheden](tvm-manage-log4shell-guidance.md)
 
 ## [Undersøg og reager på trusler]()
 ### [Slutpunktsregistrering og -svar]()
@@ -520,7 +485,6 @@
 ####### [Få beskedrelaterede enhedsoplysninger](get-alert-related-machine-info.md)
 ####### [Få beskedrelaterede brugeroplysninger](get-alert-related-user-info.md)
 
-
 ###### [Vurdering af sårbarheder og sikre konfigurationer]()
 ####### [Eksporter bedømmelsesmetoder og egenskaber](get-assessment-methods-properties.md)
 ####### [Eksportér sikker konfigurationsvurdering](get-assessment-secure-config.md)
@@ -532,6 +496,9 @@
 ####### [Angiv undersøgelse](get-investigation-collection.md)
 ####### [Hent undersøgelse](get-investigation-object.md)
 ####### [Start undersøgelse](initiate-autoir-investigation.md)
+
+###### [Certifikatlager]()
+####### [Eksportér vurdering af certifikatlager](export-certificate-inventory-assessment.md)
 
 ###### [Domæne]()
 ####### [Få domænerelaterede beskeder](get-domain-related-alerts.md)
@@ -562,7 +529,6 @@
 ####### [Upload til Direkte svar-bibliotek](upload-library.md)
 ####### [Slet fra bibliotek](delete-library.md)
 
-
 ###### [Maskine]()
 ####### [Metoder og egenskaber for maskiner](machine.md)
 ####### [Angiv maskiner](get-machines.md)
@@ -578,8 +544,6 @@
 ####### [Få manglende KB'er](get-missing-kbs-machine.md)
 ####### [Angiv enhedsværdi](set-device-value.md)
 ####### [Opdater maskine](update-machine-method.md)
-
-
 
 ###### [Maskinhandling]()
 ####### [Metoder og egenskaber for maskinhandling](machineaction.md)
@@ -617,6 +581,11 @@
 ####### [Angiv over eksponeringsscore efter maskingruppe](get-machine-group-exposure-score.md)
 ####### [Få eksponeringsscore](get-exposure-score.md)
 ####### [Få sikker score på enhed](get-device-secure-score.md)
+
+###### [Sikkerhedsbaselines]()
+####### [Eksportér vurdering af sikkerhedsbaselines](export-security-baseline-assessment.md)
+####### [Vis vurderingsprofiler for sikkerhedsbaselines](get-security-baselines-assessment-profiles.md)
+####### [Angiv vurderingskonfigurationer for sikkerhedsbaselines](get-security-baselines-assessment-configurations.md)
 
 ###### [Software]()
 ####### [Softwaremetoder og -egenskaber](software.md)
