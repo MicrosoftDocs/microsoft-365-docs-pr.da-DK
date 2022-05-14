@@ -18,13 +18,13 @@ ms.custom:
 - commerce_licensing
 search.appverid: MET150
 description: Få mere at vide om funktionen nye tildelinger.
-ms.date: 03/17/2021
-ms.openlocfilehash: 339533d4635e29bb277fe7f0344ba2da17f4ec7d
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.date: 05/12/2022
+ms.openlocfilehash: c251d653aa95fa489a2482ae0c9ef80c9851fc4b
+ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841840"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65403310"
 ---
 # <a name="allotment-basics"></a>Grundlæggende om tildeling
 

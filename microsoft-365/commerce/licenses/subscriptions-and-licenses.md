@@ -21,13 +21,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: De programmer og tjenester, du modtager, afhænger af, hvilke Microsoft 365 produkt du har købt, f.eks. Microsoft 365 Apps for business.
-ms.date: 07/01/2020
-ms.openlocfilehash: fca1e5239745e28c32c200c76cc229aedeccf2a4
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.date: 05/12/2022
+ms.openlocfilehash: 48186847368af2bc43831c6e27ef7d347981f1b3
+ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841675"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65403222"
 ---
 # <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Forstå abonnementer og licenser i Microsoft 365 til virksomheder
 
@@ -78,7 +78,7 @@ Forskellige typer administratorer kan arbejde med licenser på forskellige måde
 |Faktureringsadministrator|Nej|Nej|Ja|Nej|
 |Global administrator|Ja|Ja|Ja|Ja|
 |Licensadministrator|Ja|Ja|Nej|Nej|
-|Tjenestesupportadministrator|Nej|Nej|Nej|Nej|
+|Administrator af tjenestesupport|Nej|Nej|Nej|Nej|
 |Brugeradministrator|Ja|Ja|Nej|Ja|
 
 ## <a name="related-content"></a>Relateret indhold

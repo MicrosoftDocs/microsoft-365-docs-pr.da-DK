@@ -19,13 +19,13 @@ ms.custom:
 search.appverid: MET150
 ROBOTS: NOINDEX
 description: Få mere at vide om, hvordan du føjer licenser til dit Microsoft 365 abonnement, der er købt via tredjepartspartneren, som genkendes af Microsoft.
-ms.date: 08/27/2021
-ms.openlocfilehash: 56779a263a42ef385b1d6cf4df608b2243495e9a
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.date: 05/12/2022
+ms.openlocfilehash: a9a449edb5d03a43e39338a9b52df2b40fa9ad7a
+ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713817"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65403244"
 ---
 # <a name="add-licenses-to-a-subscription-purchased-through-the-volume-licensing-service-center"></a>Føj licenser til et abonnement, der er købt via Volume Licensing Service Center
 
@@ -33,12 +33,12 @@ Hvis du har købt din Microsoft 365 til virksomheder eller Office 365 Enterprise
   
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 2. Vælg det abonnement, du vil føje licenser til, og vælg derefter linket **Volume Licensing Service Center (VLSC).**
