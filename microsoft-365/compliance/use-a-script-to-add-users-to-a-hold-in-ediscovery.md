@@ -21,19 +21,19 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: c652cd7d553faa5a7f85c59127e4aa2acfd7df4b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-compliance-portal.
+ms.openlocfilehash: b828c9c1e6494ad4d0da4ca471feb7ace563d152
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097904"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416008"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Security & Compliance Center PowerShell indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge Microsoft Purview eDiscovery-sagen (Standard) i Microsoft Purview-overholdelsesportalen til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
+Security & Compliance Center PowerShell indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge Microsoft Purview eDiscovery-sagen (Standard) i Microsoft Purview-compliance-portal til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
   
 Scriptet beder dig om navnet på organisationens Mit websted-domæne (f.eks `contoso` . i URL-adressen https://contoso-my.sharepoint.com), navnet på en eksisterende eDiscovery-sag, navnet på den nye venteposition, der er knyttet til sagen, en liste over mailadresser på de brugere, du vil sætte i venteposition, og en søgeforespørgsel, der skal bruges, hvis du vil oprette en forespørgselsbaseret venteposition. Scriptet henter derefter URL-adressen for det OneDrive for Business websted for hver bruger på listen, opretter den nye venteposition og føjer derefter postkassen og OneDrive for Business websted for hver bruger på listen til ventepositionen. Scriptet genererer også logfiler, der indeholder oplysninger om den nye venteposition.
   

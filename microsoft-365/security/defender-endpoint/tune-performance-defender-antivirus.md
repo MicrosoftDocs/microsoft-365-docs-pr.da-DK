@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 3c517d9adcdc2181b43c430a92be3de9ac889dd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 43b39cac260f5bda773af6a428304dc898444771
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101111"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419588"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Effektivitetsanalyse til Microsoft Defender Antivirus
 

@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mest ud af din Defender for Business-prøveversion med denne playbook. Kom hurtigt i gang med at konfigurere, og kom i gang med at bruge dine nye sikkerhedsfunktioner.
-ms.openlocfilehash: 8a676d7c412746e4f941e11d91e44faddc7237a7
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 4f239a08e46e8c8bede5c2e972c3daed2af8b550
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65175000"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418983"
 ---
 # <a name="trial-playbook-microsoft-defender-for-business"></a>Playbook til prøveversion: Microsoft Defender til virksomheder
 
@@ -109,7 +109,7 @@ Hvis du har brugt installationsguiden, men du har brug for at onboarde flere enh
    | Enheder | Onboardingmetoder |
    |:---|:---|
    | [Windows klienter](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde Windows klientenheder til Defender for Business:<br/>– Lokalt script (til onboarding af enheder manuelt på Microsoft 365 Defender-portalen)<br/>- Gruppepolitik (hvis du allerede bruger Gruppepolitik og foretrækker denne metode)<br/>- Microsoft Intune (*anbefalet*; medtaget i [Microsoft 365 Business Premium](../../business-premium/index.md)) |
-   | [macOS-computere](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde macOS-enheder:<br/>- Lokalt script til macOS (*anbefales*) <br/>- Microsoft Intune til macOS (Intune er inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md))<br/><br/>Vi anbefaler, at du bruger et lokalt script til at onboarde macOS-enheder. Selvom du kan [konfigurere tilmelding til macOS-enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding af macOS-enheder til Defender for Business. |
+   | [macOS computere](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde macOS enheder:<br/>- Lokalt script til macOS (*anbefales*) <br/>- Microsoft Intune for macOS (Intune er medtaget i [Microsoft 365 Business Premium](../../business-premium/index.md))<br/><br/>Vi anbefaler, at du bruger et lokalt script til at onboarde macOS enheder. Selvom du kan [konfigurere tilmelding for macOS enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding macOS enheder til Defender for Business. |
    | Windows Server- og Linux-servere | *Windows server- og Linux-servere understøttes ikke i øjeblikket. Server onboarding og sikkerhedsfunktioner kommer snart til Defender for Business*. |
    | [Mobilenheder](mdb-onboard-devices.md) | Du skal bruge Microsoft Intune til at onboarde mobilenheder, f.eks. Android- og iOS-/iPadOS-enheder. Hvis du har [Microsoft 365 Business Premium](../../business-premium/index.md), har du Intune som en del af dit abonnement. Intune kan også købes separat. Se følgende ressourcer for at få hjælp til at tilmelde disse enheder til Intune:<br/>- [Tilmeld Android-enheder](/mem/intune/enrollment/android-enroll)<br/>- [Tilmeld iOS- eller iPadOS-enheder](/mem/intune/enrollment/ios-enroll) |
 

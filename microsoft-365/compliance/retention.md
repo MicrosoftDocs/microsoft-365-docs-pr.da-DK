@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: c8ac850c77c97cbcc313108ffc74e05aa1735fde
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: 95d79bd95aa816b82e69399b9bde99500fcc8b6b
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302217"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419522"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
@@ -104,8 +104,8 @@ I modsætning til opbevaringspolitikker følger opbevaringsindstillinger fra opb
 - Anvend et standardnavn for SharePoint elementer eller Exchange meddelelser.
 
 - Understøttede handlinger i slutopbevaringsperioden:
-    - [Dispositionsgennemgang](./disposition.md)  for at gennemse indholdet, før det slettes permanent.
-    - Anvend automatisk en anden opbevaringsmærkat
+  - [Gennemgang af fordeling](./disposition.md) for at gennemse indholdet, før det slettes permanent.
+  - Anvend automatisk en anden opbevaringsmærkat
 
 - Markér indholdet som en [post](records-management.md#records) som en del af etiketindstillingerne, og hav altid [bevis for fordeling](disposition.md#disposition-of-records) , når indhold slettes ved slutningen af opbevaringsperioden.
 
@@ -177,7 +177,7 @@ Du kan f.eks. oprette og anvende en opbevaringsmærkat med navnet "Gennemse sene
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>Brug af en opbevaringsmærkat som en betingelse i en DLP-politik
 
-Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Data Loss Prevention) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
+Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Forebyggelse af datatab) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
 
 Du kan få flere oplysninger under [Brug af en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -221,14 +221,15 @@ For standardopbevaringsmærkater (de markerer ikke elementer som en [post eller 
 
 - Når der allerede er anvendt en opbevaringsmærkat for indhold, fjernes eller erstattes den eksisterende mærkat ikke automatisk af en anden opbevaringsmærkat med en mulig undtagelse: Den eksisterende mærkat blev anvendt som standardetiket. Når du bruger et standardnavn, er der nogle scenarier, hvor det kan erstattes af et andet standardnavn eller fjernes automatisk.
 
-- Når der allerede er anvendt en opbevaringsmærkat for indhold, fjernes eller erstattes den eksisterende mærkat ikke automatisk af en anden opbevaringsmærkat med to mulige undtagelser: 
-    
-    - Den eksisterende mærkat er konfigureret til automatisk at anvende en anden opbevaringsmærkat i slutningen af opbevaringsperioden.
-    - Den eksisterende etiket blev anvendt som en standardetiket. Når du bruger et standardnavn, er der nogle scenarier, hvor det kan erstattes af et andet standardnavn eller fjernes automatisk. 
-        
-        Du kan finde flere oplysninger om funktionsmåden for mærkater, når den anvendes ved hjælp af et standardnavn:
-        - Standardnavn for SharePoint: [Funktionsmåde for navne, når du bruger en standardetiket til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-        - Standardnavn til Outlook: [Anvendelse af en standardopbevaringsmærkat på en Outlook mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- Når der allerede er anvendt en opbevaringsmærkat for indhold, fjernes eller erstattes den eksisterende mærkat ikke automatisk af en anden opbevaringsmærkat med to mulige undtagelser:
+
+  - Den eksisterende mærkat er konfigureret til automatisk at anvende en anden opbevaringsmærkat i slutningen af opbevaringsperioden.
+  - Den eksisterende etiket blev anvendt som en standardetiket. Når du bruger et standardnavn, er der nogle scenarier, hvor det kan erstattes af et andet standardnavn eller fjernes automatisk.
+
+  Du kan finde flere oplysninger om funktionsmåden for mærkater, når den anvendes ved hjælp af et standardnavn:
+
+  - Standardnavn for SharePoint: [Funktionsmåde for navne, når du bruger en standardetiket til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+  - Standardnavn til Outlook: [Anvendelse af en standardopbevaringsmærkat på en Outlook mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 
 - Hvis der er flere politikker for automatisk anvendelse af mærkater, der kan anvende en opbevaringsmærkat, og indhold opfylder betingelserne i flere politikker, anvendes opbevaringsmærkaten for den ældste politik for automatisk anvendelse af mærkater (efter oprettelsesdato).
 
@@ -236,7 +237,7 @@ Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig pos
 
 #### <a name="monitoring-retention-labels"></a>Overvågning af opbevaringsmærkater
 
-På Microsoft Purview-overholdelsesportalen skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
+På Microsoft Purview-compliance-portal skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
 
 Du kan derefter foretage detailudledning i detaljer ved hjælp af [Indholdsoversigt](data-classification-content-explorer.md) og [Aktivitetsoversigt](data-classification-activity-explorer.md).
 
@@ -285,7 +286,7 @@ Følgende eksempler er blot nogle af de måder, hvorpå du kan kombinere opbevar
 
 Du kan finde flere oplysninger om, hvordan opbevaringspolitikker og opbevaringsmærkater arbejder sammen, og hvordan du bestemmer deres kombinerede resultat, i afsnittet på denne side, der forklarer [principperne for opbevaring, og hvad der har forrang](#the-principles-of-retention-or-what-takes-precedence).
 
-**Eksempel på, at brugere tilsidesætter automatisk sletning**
+#### <a name="example-for-users-to-override-automatic-deletion"></a>Eksempel på, at brugere tilsidesætter automatisk sletning
 
 Scenarie: Indhold i brugernes OneDrive-konti slettes som standard automatisk efter fem år, men brugerne skal have mulighed for at tilsidesætte dette for bestemte dokumenter.
 
@@ -293,7 +294,7 @@ Scenarie: Indhold i brugernes OneDrive-konti slettes som standard automatisk eft
 
 2. Du opretter og konfigurerer en opbevaringsmærkat, der bevarer indhold for evigt, og føjer dette til en mærkatpolitik, som du publicerer til alle OneDrive konti. Du forklarer brugerne, hvordan de manuelt anvender denne mærkat på bestemte dokumenter, der skal udelukkes fra automatisk sletning, hvis de ikke ændres efter fem år.
 
-**Eksempel på opbevaring af elementer i længere tid**
+Eksempel på bevarelse af elementer i længere tid**
 
 Scenarie: Som standard bevares SharePoint elementer automatisk og slettes derefter efter fem år, men dokumenter i bestemte biblioteker skal opbevares i 10 år.
 
@@ -301,7 +302,7 @@ Scenarie: Som standard bevares SharePoint elementer automatisk og slettes dereft
 
 2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk bevarer indhold i 10 år. Du publicerer dette navn til SharePoint webstedsadministratorer, så de kan anvende det som en standardetiket, der nedarves af alle elementer i bestemte dokumentbiblioteker.
 
-**Eksempel på sletning af elementer i en kortere tidsperiode**
+#### <a name="example-to-delete-items-in-a-shorter-time-period"></a>Eksempel på sletning af elementer i en kortere tidsperiode
 
 Scenarie: Mails bevares som standard ikke, men slettes automatisk efter 10 år. Mails relateret til et bestemt projekt, der har et kodenavn for forhåndsudgivelse, skal dog slettes automatisk efter et år.
 
@@ -368,7 +369,7 @@ Hvis du vil se et optaget webinar (kræver registrering), skal du gå [til Detal
 
 ## <a name="policy-lookup"></a>Politikopslag
 
-Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde de politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne til **administration af datalivscyklus** eller **Dataadministration** på Microsoft Purview-overholdelsesportalen.
+Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne **til administration af datalivscyklus** eller **datastyring** i Microsoft Purview-compliance-portal.
 
 Eksempel:
 

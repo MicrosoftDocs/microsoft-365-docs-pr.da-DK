@@ -15,12 +15,12 @@ ms.author: deniseb
 ms.topic: article
 ms.custom: nextgen
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 890be814be75c303aa42feb5cb7a16cb4f5c3bd9
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 3d1fce680062f2ca63f220754ac1ab3f8b9b33d3
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320634"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419852"
 ---
 # <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server
 
@@ -377,7 +377,7 @@ Hvis det er nødvendigt, kan du tilføje eller fjerne brugerdefinerede udeladels
 - [Konfigurer og valider udeladelser for filer, der er åbnet af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

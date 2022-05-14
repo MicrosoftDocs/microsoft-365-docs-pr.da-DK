@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Skype for Business til Microsoft 365.
-ms.openlocfilehash: ceca2068f819d4b7bec32ab65e673b055775c217
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 8b824a8ac0db74d639c402bdec9e0894078b2dea
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318334"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415942"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Konfigurer en connector til arkivering af Skype for Business data
 

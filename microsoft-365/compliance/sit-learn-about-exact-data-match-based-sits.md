@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Få mere at vide om præcise datamatchbaserede følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7f883d2509961ee07045949530f8fbb50629212f
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0574c11751898b31b22da4642f2d5dd415991732
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759761"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415920"
 ---
 # <a name="learn-about-exact-data-match-based-sensitive-information-types"></a>Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Følsomme oplysningstyper](sensitive-information-type-learn-about.md) bruges til at hjælpe med at identificere følsomme elementer, så du kan forhindre, at de deles utilsigtet eller upassende, for at hjælpe med at finde relevante data i eDiscovery og anvende styringshandlinger på visse typer oplysninger. Du definerer en brugerdefineret type følsomme oplysninger (SIT) baseret på:
 
@@ -44,10 +46,10 @@ Men hvad nu, hvis du vil have en brugerdefineret type følsomme oplysninger (SIT
 
 ![EDM-baseret klassificering.](../media/EDMClassification.png)
 
-Med EDM-baseret klassificering kan du oprette brugerdefinerede typer følsomme oplysninger, der refererer til præcise værdier i en database med følsomme oplysninger. Databasen kan opdateres dagligt og indeholde op til 100 millioner rækker med data. Så efterhånden som medarbejdere, patienter eller klienter kommer og går, og registrerer ændringer, forbliver dine brugerdefinerede følsomme oplysningstyper aktuelle og relevante. Og du kan bruge EDM-baseret klassificering med politikker, f.eks[. politikker til forebyggelse af datatab](dlp-learn-about-dlp.md) eller [Microsoft Cloud App Security filpolitikker](/cloud-app-security/data-protection-policies).
+Med EDM-baseret klassificering kan du oprette brugerdefinerede typer følsomme oplysninger, der refererer til præcise værdier i en database med følsomme oplysninger. Databasen kan opdateres dagligt og indeholde op til 100 millioner rækker med data. Så efterhånden som medarbejdere, patienter eller klienter kommer og går, og registrerer ændringer, forbliver dine brugerdefinerede følsomme oplysningstyper aktuelle og relevante. Og du kan bruge EDM-baseret klassificering med politikker, f.eks. [Microsoft Purview politikker til forebyggelse af datatab](dlp-learn-about-dlp.md) eller [Microsoft Cloud App Security filpolitikker](/cloud-app-security/data-protection-policies).
 
 > [!NOTE]
-> Microsoft 365 Information Protection understøtter sprog med dobbeltbytetegnsæt for:
+> Microsoft Purview Information Protection understøtter sprog med dobbeltbytetegnsæt for:
 >
 > - Kinesisk (forenklet)
 > - Kinesisk (traditionelt)
@@ -93,7 +95,7 @@ Proximity – Antallet af tegn mellem primært og understøttende element
 
 ### <a name="you-supply-your-own-schema-and-data"></a>Du angiver dit eget skema og dine egne data
 
-[Microsoft 365 leveres med mere end 200 SITS](sensitive-information-type-entity-definitions.md) med foruddefinerede skemaer, regexmønstre, nøgleord og tillidsniveauer. Med EDM SIT'er er du ansvarlig for at definere skemaet samt primære og sekundære felter, der identificerer følsomme elementer. Da skemaet og de primære og sekundære dataværdier er meget følsomme, krypterer du dem via en [hashfunktion](/dotnet/standard/security/ensuring-data-integrity-with-hash-codes) , der indeholder en tilfældigt genereret eller selvleveret [saltværdi](https://en.wikipedia.org/wiki/Salt_(cryptography)#:~:text=The%20salt%20value%20is%20generated%20at%20random%20and,the%20salt%20value%20and%20hashed%20value%20are%20stored.) . Disse hashkodede værdier uploades derefter til tjenesten, så dine følsomme data aldrig er åbne.
+[Microsoft Purview leveres med mere end 200 SITS](sensitive-information-type-entity-definitions.md) med foruddefinerede skemaer, regex-mønstre, nøgleord og tillidsniveauer. Med EDM SIT'er er du ansvarlig for at definere skemaet samt primære og sekundære felter, der identificerer følsomme elementer. Da skemaet og de primære og sekundære dataværdier er meget følsomme, krypterer du dem via en [hashfunktion](/dotnet/standard/security/ensuring-data-integrity-with-hash-codes) , der indeholder en tilfældigt genereret eller selvleveret [saltværdi](https://en.wikipedia.org/wiki/Salt_(cryptography)#:~:text=The%20salt%20value%20is%20generated%20at%20random%20and,the%20salt%20value%20and%20hashed%20value%20are%20stored.) . Disse hashkodede værdier uploades derefter til tjenesten, så dine følsomme data aldrig er åbne.
 
 ### <a name="primary-and-secondary-support-elements"></a>Primære og sekundære supportelementer
 
@@ -110,4 +112,3 @@ EDM finder resultater ved at sammenligne indhold, der findes, med en tabel med f
 ## <a name="see-also"></a>Se også
 
 - [Kom i gang med nøjagtigt datamatch baseret på typer af følsomme oplysninger](sit-get-started-exact-data-match-based-sits-overview.md#get-started-with-exact-data-match-based-sensitive-information-types)
-   

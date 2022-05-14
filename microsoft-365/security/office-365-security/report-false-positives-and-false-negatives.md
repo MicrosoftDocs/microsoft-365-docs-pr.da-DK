@@ -13,12 +13,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du rapporterer falske positiver og falske negativer i Outlook ved hjælp af funktionen Rapportmeddelelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8f52b4d085c13f2e1e1a48c2a8a12e6782f13960
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 762f16916e03940f4d0f95c48f13751d3cbd63c7
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974097"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416966"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Rapportér falske positiver og falske negativer i Outlook
 
@@ -47,6 +47,9 @@ I Microsoft 365 organisationer med postkasser i Exchange Online eller lokale pos
 - Du kan få flere oplysninger om, hvordan du henter og aktiverer tilføjelsesprogrammer til rapportmeddelelse eller phishing af rapporter, under [Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing](enable-the-report-message-add-in.md).
 
 - Du kan få flere oplysninger om rapportering af meddelelser til Microsoft under [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
+
+Se denne korte video for at få mere at vide om, hvordan du kan bruge Microsoft Defender for Office 365 til nemt at undersøge brugerindsendelser for at bestemme indholdet af en meddelelse og reagere på indsendelsen ved at anvende den relevante afhjælpningshandling. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBHof]
 
 ### <a name="turn-off-the-built-in-reporting-experience"></a>Slå den indbyggede rapporteringsoplevelse fra
 

@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 730eb90202acff9efad1cc2f01fd60431366e997
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: 93a818789efee763a296d6a6c7cc501b1a7ffb37
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393432"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418415"
 ---
 # <a name="export-security-baselines-assessment-per-device"></a>Eksportér vurdering af grundlæggende sikkerhedsdata pr. enhed
 
@@ -117,31 +117,31 @@ GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAsse
 ### <a name="172-response-example"></a>1.7.2 Svareksempel
 
 ```json
-{ 
-"@odata.context": " https://api.securitycenter.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)", 
+{
+"@odata.context": " https://api.securitycenter.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)",
 "value": [
-{ 
-    "id": "0000682575d5d473e82ed4d8680425d152411251_9e1b90be-e83e-485b-a5ec-4a429412e734_1.1.1", 
-    "configurationId": "1.1.1", 
-    "deviceId": "0000682575d5d473242222425d152411251", 
-    "deviceName": " ComputerPII_365f5c0bb7202c163937dad3d017969b2d760eb4.DomainPII_29596 ", 
-    "profileId": "9e1b90be-e83e-485b-a5ec-4a429412e734", 
-    "osPlatform": "WindowsServer2019", 
-    "osVersion": "10.0.17763.2330", 
-    "rbacGroupId": 86, 
-    "rbacGroupName": "UnassignedGroup", 
-    "isApplicable": true, 
-    "isCompliant": false, 
-    "dataCollectionTimeOffset": "2021-12-22T00:08:02.478Z", 
-    "recommendedValue": [ 
-                    "Greater than or equal '24'" 
-                ], 
-                "currentValue": [ 
-                    "24" 
-                ], 
-                "source": [ 
-                    "password_hist_len"
-                ], 
+{
+    "id": "0000682575d5d473e82ed4d8680425d152411251_9e1b90be-e83e-485b-a5ec-4a429412e734_1.1.1",
+    "configurationId": "1.1.1",
+    "deviceId": "0000682575d5d473242222425d152411251",
+    "deviceName": " ComputerPII_365f5c0bb7202c163937dad3d017969b2d760eb4.DomainPII_29596 ",
+    "profileId": "9e1b90be-e83e-485b-a5ec-4a429412e734",
+    "osPlatform": "WindowsServer2019",
+    "osVersion": "10.0.17763.2330",
+    "rbacGroupId": 86,
+    "rbacGroupName": "UnassignedGroup",
+    "isApplicable": true,
+    "isCompliant": false,
+    "dataCollectionTimeOffset": "2021-12-22T00:08:02.478Z",
+    "recommendedValue": [
+                    "Greater than or equal '24'"
+                ],
+                "currentValue": [
+                    "24"
+                ],
+                "source": [
+                    "password_hist_len"
+                ],
 }
 ```
 
@@ -163,7 +163,7 @@ GET /api/machines/BaselineComplianceAssessmentExport
 
 ### <a name="24-parameters"></a>2.4 Parametre
 
-- sasValidHours: Det antal timer, som URL-adresserne til download er gyldige i (højst 24 timer). 
+- sasValidHours: Det antal timer, som URL-adresserne til download er gyldige i (højst 24 timer).
 
 ### <a name="25-properties-via-files"></a>2.5 Egenskaber (via filer)
 
@@ -194,14 +194,14 @@ GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAsse
 ### <a name="262-response-example"></a>2.6.2 Svareksempel
 
 ```json
-{ 
-    "@odata.context": "https://api.securitycenter. contoso.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse", 
-    "exportFiles": 
-    [ 
-    "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId= OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00000-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv=ABCD", 
-   "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00001-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv= ABCD", 
-    ], 
-    "generatedTime": "2021-01-11T11:01:00Z" 
+{
+    "@odata.context": "https://api.securitycenter. contoso.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+    "exportFiles": 
+    [
+    "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId= OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00000-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv=ABCD",
+   "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00001-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv= ABCD",
+    ],
+    "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
 

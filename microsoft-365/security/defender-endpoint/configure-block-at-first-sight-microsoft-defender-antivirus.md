@@ -15,12 +15,12 @@ ms.date: 10/18/2021
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 071bd6fe59a7200e1d16cf94633b0d7b3cb688c5
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: fb65e1ad898427c3f0a2fc1ba9a13685c1617bc1
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788100"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416272"
 ---
 # <a name="turn-on-block-at-first-sight"></a>Slå Bloker når den ses første gang til
 
@@ -153,7 +153,7 @@ Du kan bekræfte, at blokering ved første øjekast er aktiveret på individuell
 
 ## <a name="validate-block-at-first-sight-is-working"></a>Valider, at blok ved første øjekast fungerer
 
-Hvis du vil validere, at funktionen fungerer, skal du downloade [eksempelfilen Blok ved første øjekast](https://demo.wd.microsoft.com/Page/BAFS). Hvis du vil downloade filen, skal du bruge en konto i Azure AD, hvor rollen Sikkerhedsadministrator eller Global administrator er tildelt.
+Hvis du vil validere, at funktionen fungerer, skal du downloade [eksempelfilen Blok ved første øjekast](https://demo.wd.microsoft.com/Page/BAFS). Hvis du vil downloade filen, skal du have en konto i Azure AD, der har tildelt rollen Sikkerhedsadministrator eller Global administrator.
 
 Hvis du vil validere, at skyaktiveret beskyttelse fungerer, skal du følge vejledningen i [Valider forbindelser mellem dit netværk og cloudmiljøet](configure-network-connections-microsoft-defender-antivirus.md#validate-connections-between-your-network-and-the-cloud).
 
@@ -208,7 +208,7 @@ Hvis du har en personlig enhed, der ikke administreres af en organisation, undre
 
 1. Åbn appen Windows Sikkerhed på din Windows 10 eller Windows 11 computer.
 
-2. Vælg **Virus & trusselsbeskyttelse**.
+2. Vælg **Virus- og trusselsbeskyttelse**.
 
 3. Under **Indstillinger for virus & trusselsbeskyttelse** skal du vælge **Administrer indstillinger**.
 
@@ -223,9 +223,9 @@ Hvis du har en personlig enhed, der ikke administreres af en organisation, undre
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

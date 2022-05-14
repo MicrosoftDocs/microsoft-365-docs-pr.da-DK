@@ -25,16 +25,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Konfigurer onlinemøder med Microsoft Teams.
-ms.openlocfilehash: 9ed624d8fe607f460d36eb391d801066b69f7141
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 367d344aac8d85a68875f7f51685f59310277c27
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095138"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417726"
 ---
 # <a name="set-up-meetings"></a>Konfigurer møder
 
-Sørg for, at medlemmer af organisationen bruger Microsoft Teams til alle møder. Teams mødefiler omfatter lyd, video og deling, og fordi de er online, er der altid et mødested, og der er ikke behov for et rum med en projektor! Microsoft Teams møder er en god måde at mødes med dine medarbejdere både i og uden for organisationen på. 
+Sørg for, at medlemmer af organisationen bruger Microsoft Teams til alle møder. Teams mødefiler omfatter lyd, video og deling, og fordi de er online, er der altid et mødested, og der er ikke behov for et rum med en projektor! Microsoft Teams møder er en god måde at mødes med dine medarbejdere både i og uden for organisationen på.
 
 Når du bruger Teams, behøver du ikke at være medlem af organisationen eller endda have en konto for at deltage i et møde. Du kan planlægge og køre onlinemøder, hvor du kan dele din skærm, dele filer, tildele opgaver og meget mere. Politiske kampagner kan omfatte personale, frivillige eller gæster uden for organisationen. Du kan nemt mødes med klienter, medarbejdere eller partnere over Microsoft Teams og i et sikkert og problemfrit miljø.
 
@@ -64,5 +64,3 @@ Få mere at vide om møde i Microsoft Teams:
 ## <a name="next-objective"></a>Næste mål
 
 Når denne mission er fuldført, kan du lære at [dele filer og videoer](share-files-and-videos.md) på en sikker måde
-
-

@@ -16,12 +16,12 @@ ms.date: 06/10/2021
 description: Få mere at vide om, hvordan du fremskynder processen med at registrere og løse kompromitterede brugerkonti med automatiserede undersøgelses- og svarfunktioner i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a8c78847e36d4a4887c4f7a3c54904cc26a012e5
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 97466622a138a6604b9be51333148b472f7cd519
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131146"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418264"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Håndter kompromitterede brugerkonti med automatiseret undersøgelse og svar
 
@@ -62,6 +62,9 @@ Når en brugerkonto kompromitteres, udløses der beskeder. Og i nogle tilfælde 
 
 > [!IMPORTANT]
 > Du skal have de nødvendige tilladelser til at udføre følgende opgaver. Se [Påkrævede tilladelser til at bruge AIR-funktioner](office-365-air.md#required-permissions-to-use-air-capabilities).
+
+Se denne korte video for at få mere at vide om, hvordan du kan registrere og reagere på bruger kompromitteret Microsoft Defender for Office 365 ved hjælp af AIR (Automated Investigation and Response) og kompromitterede brugerbeskeder.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWAl83]
 
 ### <a name="view-and-investigate-restricted-users"></a>Få vist og undersøg begrænsede brugere
 

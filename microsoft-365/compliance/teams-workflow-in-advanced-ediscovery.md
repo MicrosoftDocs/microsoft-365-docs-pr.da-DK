@@ -14,18 +14,18 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du bevarer, indsamler, gennemser og eksporterer indhold fra Microsoft Teams i eDiscovery (Premium).
-ms.openlocfilehash: 36bfcde1b2ee5ad9b088db008249cdeb1cf90eb4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 46fe8491533f6d2fa6954eab76758213eaa7d30d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092265"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65414860"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>eDiscovery-arbejdsproces (Premium) for indhold i Microsoft Teams
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Denne artikel indeholder en omfattende række procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsproces til Teams indhold.
+Denne artikel indeholder et omfattende sæt procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium) til at bevare, indsamle, gennemse og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsproces til Teams indhold.
 
 Der er fem kategorier af Teams indhold, som du kan indsamle og behandle ved hjælp af eDiscovery (Premium):
 
@@ -70,7 +70,7 @@ Sådan opretter du en sag:
 
 1. Gå til , <https://compliance.microsoft.com> og log på.
 
-2. Klik på **eDiscovery > Avanceret** i navigationsruden til venstre på Microsoft Purview-overholdelsesportalen.
+2. Klik på **eDiscovery > Avanceret** i navigationsruden til venstre i Microsoft Purview-compliance-portal.
 
 3. På siden **eDiscovery (Premium)** skal du klikke på fanen **Sager** og derefter klikke på **Opret en sag**.
 

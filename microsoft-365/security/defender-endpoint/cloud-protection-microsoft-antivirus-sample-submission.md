@@ -15,12 +15,12 @@ ms.technology: mde
 ms.topic: article
 ms.date: 02/24/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9192ecae72156531b0c5dccc360b2e2ea7bd343a
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 08f8e0c861bfd19f11c5b011d0a8db41ce3e73bc
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789046"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419940"
 ---
 # <a name="cloud-protection-and-sample-submission-at-microsoft-defender-antivirus"></a>Cloudbeskyttelse og eksempelindsendelse på Microsoft Defender Antivirus
 
@@ -71,16 +71,16 @@ Microsoft Defender Antivirus og cloudbeskyttelse blokerer automatisk de fleste n
 
       2. **Spørg altid**
          - Hvis den er konfigureret, bliver brugeren altid bedt om samtykke, før filen indsendes
-         - Denne indstilling er ikke tilgængelig i macOS Cloud Protection
+         - Denne indstilling er ikke tilgængelig i macOS cloudbeskyttelse
 
       3. **Send alle eksempler automatisk**
          - Hvis den er konfigureret, sendes alle eksempler automatisk
          - Hvis du vil medtage makroer, der er integreret i Word-dokumenter, skal du vælge "Send alle eksempler automatisk"
-         - Denne indstilling er ikke tilgængelig på macOS Cloud Protection
+         - Denne indstilling er ikke tilgængelig i macOS cloudbeskyttelse
 
       4. **Send ikke**
          - Forhindrer "blok ved første øjekast" baseret på fileksempelanalyse
-         - "Send ikke" svarer til indstillingen "Deaktiveret" i macOS-politikken
+         - "Send ikke" svarer til indstillingen "Deaktiveret" i macOS politik
          - Metadata sendes til registreringer, selvom eksempelafsendelse er deaktiveret
 
    3. Når metadata og/eller filer er sendt til cloudbeskyttelse, kan du bruge **eksempler**, **detonation** eller modeller til maskinel indlæring **til analyse af big data** for at nå frem til en dom. Hvis du deaktiverer skybaseret beskyttelse, begrænses analysen til kun at være det, klienten kan levere via lokale modeller til maskinel indlæring og lignende funktioner.
@@ -142,9 +142,9 @@ Der er to scenarier mere, hvor Defender for Endpoint kan anmode om et fileksempe
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

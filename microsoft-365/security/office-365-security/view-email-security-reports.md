@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c83213278c7f9bc3b63c141e4d964475d64599d1
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: dcc04b1c06e5ca2900cca9f0a66fe5b041af734e
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286620"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417166"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -43,6 +43,9 @@ Der findes en række forskellige rapporter på Microsoft 365 Defender-portalen p
 > Nogle af rapporterne på siden **Mail & samarbejdsrapporter** kræver Microsoft Defender for Office 365. Du kan få oplysninger om disse rapporter under [Få vist Defender for Office 365 rapporter på portalen Microsoft 365 Defender](view-reports-for-mdo.md).
 >
 > Rapporter, der er relateret til mailflow, findes nu i Exchange Administration. Du kan få flere oplysninger om disse rapporter [under Mailflowrapporter i det nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+
+Se denne korte video for at få mere at vide om, hvordan du kan bruge rapporter til at forstå effektiviteten af Defender for Office 365 i din organisation.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBkxB]
 
 ## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Ændringer i sikkerhedsrapporten via mail på Microsoft 365 Defender-portalen
 

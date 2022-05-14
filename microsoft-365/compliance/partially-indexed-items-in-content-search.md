@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/13/2022
 audience: Admin
 ms.topic: article
 f1_keywords:
@@ -20,23 +20,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
-description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 27f59ac9bf6a580fa0a3193ee91f66a4ac58ab1e
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører i Microsoft Purview-compliance-portal.
+ms.openlocfilehash: 0efb96f8d36868f182476a0eb7b0087beb3134f9
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188784"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417034"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>Delvist indekserede elementer i eDiscovery
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-En Microsoft Purview eDiscovery-søgning, som du kører fra Microsoft Purview-overholdelsesportalen, inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. I Exchange indeholder et delvist indekseret element typisk en fil (af en filtype, der ikke kan indekseres), som er knyttet til en mail. Her er nogle andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
+En Microsoft Purview eDiscovery-søgning, du kører fra Microsoft Purview-compliance-portal inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. I Exchange indeholder et delvist indekseret element typisk en fil (af en filtype, der ikke kan indekseres), som er knyttet til en mail. Her er nogle andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
   
 - Filtypen kan ikke genkendes eller understøttes ikke til indeksering.
 
-- Meddelelser har en vedhæftet fil, der ikke kan åbnes, f.eks. billedfiler. dette er den mest almindelige årsag til delvist indekserede mailelementer.
+- Meddelelser har en vedhæftet fil, der ikke kan åbnes. dette er den mest almindelige årsag til delvist indekserede mailelementer.
 
 - Filtypen understøttes til indeksering, men der opstod en indekseringsfejl for en bestemt fil.
 

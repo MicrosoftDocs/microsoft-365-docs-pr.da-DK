@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Opret og administrer inaktive postkasser, der bevarer indholdet af slettede postkasser i Microsoft 365.
-ms.openlocfilehash: 485352f292321ccfa56e59451cf017c01f3d7fdd
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: b7a33101135b43357b095af6864b54c618abd84d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393360"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417396"
 ---
 # <a name="create-and-manage-inactive-mailboxes"></a>Opret og administrer inaktive postkasser
 
@@ -72,9 +72,11 @@ Sådan får du vist en liste over de inaktive postkasser i din organisation:
 
    ![Indstillingen Inaktiv postkasse på siden Opbevaringspolitikker fra administration af datalivscyklus.](../media/inactive-mailbox-option.png)
 
-4. På siden **Inaktive postkasser** vises en liste over inaktive postkasser. Vælg en for at få vist oplysninger om den inaktive postkasse. Detaljerne omfatter, hvor længe det har været inaktivt, Exchange-id' et, hvornår det blev sat i venteposition.
+4. På siden **Inaktive postkasser** vises en liste over inaktive postkasser. Vælg en for at få vist oplysninger om den inaktive postkasse. Oplysningerne omfatter Exchange-id'et for postkassen, og om den er [i en procesførelsesventeposition](create-a-litigation-hold.md).
+    
+    Du kan ikke se andre typer ventepositioner i detaljeruden, f.eks. en Microsoft 365 opbevaringspolitik eller eDiscovery-venteposition. Hvis du vil finde disse oplysninger, skal du se [Sådan identificerer du den type venteposition, der er placeret i en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
 
-På siden **Inaktive postkasser** skal du vælge ![Ikonet Eksportér søgeresultater.](../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png) **Eksportér** for at få vist eller downloade en CSV-fil, der indeholder flere oplysninger om de inaktive postkasser i din organisation.
+Hvis du har mange inaktive postkasser, kan det være nemmere at søge efter og sortere en CSV-fil efter de oplysninger, du får vist på listen: Vælg :::image type="icon" source="../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png"::: **Eksportér** på siden **Inaktive postkasser**.
 
 Du kan også køre følgende kommando i Exchange Online PowerShell for at få vist listen over inaktive postkasser:
 

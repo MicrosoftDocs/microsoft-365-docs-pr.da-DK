@@ -16,12 +16,12 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/19/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: b5dc8832839c86fee98e9f27264b70e6a63f380c
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 23c079f8f845e6116bc39b9edb3fb186883ef576
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790696"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418220"
 ---
 # <a name="common-mistakes-to-avoid-when-defining-exclusions"></a>Almindelige fejl, der skal undgås, når du definerer udeladelser
 
@@ -31,7 +31,7 @@ ms.locfileid: "64790696"
 
 **Platforme**
 - Windows
-- Macos
+- macOS
 - Linux
 
 Du kan definere en udeladelsesliste for elementer, som du ikke vil scanne Microsoft Defender Antivirus. Sådanne udeladte elementer kan indeholde trusler, der gør din enhed sårbar. I denne artikel beskrives nogle almindelige fejl, som du bør undgå, når du definerer udeladelser.
@@ -106,7 +106,7 @@ Definer generelt ikke udeladelser for følgende mappeplaceringer:
 
 `C:\Windows\Temp\*`
 
-#### <a name="linux-and-macos-platforms"></a>Linux- og macOS-platforme
+#### <a name="linux-and-macos-platforms"></a>Linux- og macOS platforme
 
 `/`
 
@@ -273,7 +273,7 @@ Definer generelt ikke udeladelser for følgende processer:
 
 `windbg.exe`
 
-#### <a name="linux-and-macos-platforms"></a>Linux- og macOS-platforme
+#### <a name="linux-and-macos-platforms"></a>Linux- og macOS platforme
 
 `bash`
 
@@ -304,9 +304,9 @@ Se [Brug jokertegn på filnavns- og mappestien eller i lister over undtagelser f
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

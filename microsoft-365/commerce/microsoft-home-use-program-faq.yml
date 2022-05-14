@@ -19,12 +19,12 @@ metadata:
   search.appverid: MET150
   description: Ofte stillede spørgsmål om Microsoft Home Use Program.
   ms.date: 05/01/2021
-  ms.openlocfilehash: 8f9b3bb1e6bba0bb9b473962bbaf50653f733760
-  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+  ms.openlocfilehash: 58ebd94bad0e68cd6bfdf231c920a8170430d968
+  ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64823910"
+  ms.lasthandoff: 05/14/2022
+  ms.locfileid: "65415466"
 title: Microsoft Home Use Program ofte stillede spørgsmål
 summary: >
   Volume Licensing-kunder bruger Microsoft Home Use Program (HUP) på [Microsoft Store til Virksomheder websted](https://go.microsoft.com/fwlink/?linkid=2139192).
@@ -46,11 +46,11 @@ sections:
     answer: "Rabatter på abonnementer på Microsoft 365 Family og personlige tilbydes til berettigede virksomheder over hele verden med disse undtagelser:\n\n- Libanon, Macao, Rusland og Venezuela: Dette tilbud er ikke tilgængeligt på disse markeder.\n- Kina og Hongkong: Et abonnement på et år er tilgængeligt på disse markeder. For Kina kan du besøge [Microsoft 365 i Kina](https://www.microsoftstore.com.cn/home-use-program/invite). For Hong Kong kan du besøge [Køb Microsoft 365 til en rabatpris](https://www.microsoftestore.com.hk/partner/hup?locale=en_HK).\n- Japan: Microsoft 365 Family er ikke tilgængeligt.\n- Rabatter på udvalgte Surface-enheder og -tilbehør tilbydes til berettigede virksomheder på udvalgte markeder. \n"
   - question: >
       Hvordan kvalificerer en organisation sig til HUP-rabatter?
-    answer: "For at medarbejderne kan drage fordel af den Microsoft Home Use Program rabat, skal de have en gyldig firmamailadresse og en aktiv Microsoft-konto, og din organisation skal opfylde et af følgende kriterier:\n\n- Kunder, der har en aktiv Software Assurance for at kvalificere Office programmer\n- Kunder, der har Microsoft 365/Microsoft 365 E3/E5 fra Software Assurance\n- Kommercielle og offentlige kunder, der har købt ≥ 2.000 licenser af en eller en blanding af Microsoft 365 E3/E5\n- Uddannelses- og almennyttige kunder\n- Kommercielle og offentlige kunder, der har brugt $250.000 USD eller mere i de forrige 12 måneder på berettigede Power BI, Office, Surface-enheder & tilbehør, Windows og Enterprise Mobility \n"
+    answer: "For at medarbejderne kan drage fordel af den Microsoft Home Use Program rabat, skal de have en gyldig firmamailadresse og en aktiv Microsoft-konto, og din organisation skal opfylde et af følgende kriterier:\n\n- Kunder, der har en aktiv Software Assurance for at kvalificere Office programmer\n- Kunder, der har Microsoft 365/Microsoft 365 E3/E5 fra Software Assurance\n- Kommercielle og offentlige kunder, der har købt 2.000 eller flere licenser af en eller en blanding af Microsoft 365 E3/E5\n- Uddannelses- og almennyttige kunder\n- Kommercielle og offentlige kunder, der har brugt $250.000 USD eller mere i de forrige 12 måneder på berettigede Power BI, Office, Surface-enheder & tilbehør, Windows og Enterprise Mobility \n"
   - question: >
-      Hvorfor skal jeg oprette en Azure Active Directory (AAD)-konto for at bruge home use-programmet/-Microsoft Store til Virksomheder?
+      Hvorfor skal jeg oprette en AAD-konto (Azure Active Directory) for at bruge home use program/Microsoft Store til Virksomheder?
     answer: >
-      For at opdatere og modernisere Home Use Program til en bredere vifte af licens- og produktfordele var vi nødt til at ændre den måde, vi opfylder HUP på. Microsoft Store til Virksomheder bruges til validering af berettigelse og til at tildele HUP-fordele, og for at det er afhængig af AAD til at oprette forbindelse til oplysninger fra VLSC og til at validere, hvilke maildomæner organisationens medarbejdere er på. Du kan få flere oplysninger under [Sådan tilmelder du dig Azure AD-konti via Office 365 for Business](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
+      For at opdatere og modernisere Home Use Program til en bredere vifte af licens- og produktfordele var vi nødt til at ændre den måde, vi opfylder HUP på. Microsoft Store til Virksomheder bruges til validering af berettigelse og til at tildele HUP-fordele, og til at den er afhængig af AAD til at forbinde oplysninger fra VLSC og til at validere de maildomæner, som organisationens medarbejdere er på. Du kan få flere oplysninger under [Sådan tilmelder du dig Azure AD konti via Office 365 for Business](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
   - question: >
       Hvordan gør jeg blive tildelt it-administrator for en administreret lejer?
     answer: >

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: e5f38f701c865ad337bd04cb731ba40e00bf6118
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 75fa8c4e3dff9ed05716389ec5bed1d5331eefba
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130389"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419028"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Installér Microsoft Defender for Endpoint på Android med Microsoft Intune
 
@@ -44,8 +44,6 @@ Få mere at vide om, hvordan du installerer Defender for Endpoint på Android p�
 
 ## <a name="deploy-on-device-administrator-enrolled-devices"></a>Installér på de enheder, der er tilmeldt af enhedsadministratoren
 
-**Installér Defender for Endpoint på Android på Intune-firmaportal – Enheder, der er tilmeldt af enhedsadministratoren**
-
 Få mere at vide om, hvordan du installerer Defender for Endpoint på Android på Intune-firmaportal – enheder, der er tilmeldt af enhedsadministratoren.
 
 ### <a name="add-as-android-store-app"></a>Tilføj som Android Store-app
@@ -59,7 +57,7 @@ Få mere at vide om, hvordan du installerer Defender for Endpoint på Android p�
    - **Name**
    - **Beskrivelse**
    - **Publisher** som Microsoft.
-   - **URL-adresse til App Store** som https://play.google.com/store/apps/details?id=com.microsoft.scmx (URL-adresse til Defender for Endpoint-app i Google Play Store)
+   - **URL-adresse til App Store** som https://play.google.com/store/apps/details?id=com.microsoft.scmx (URL-adresse til Defender for Endpoint-app Google Play Butik)
 
    Andre felter er valgfri. Vælg **Næste**.
 
@@ -118,7 +116,6 @@ Følg nedenstående trin for at føje Microsoft Defender for Endpoint app til di
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/07e6d4119f265037e3b80a20a73b856f.png" alt-text="Siden Administreret Google Play på Microsoft Endpoint Manager Administrationsportal" lightbox="images/07e6d4119f265037e3b80a20a73b856f.png":::
-      
 
 4. Du får vist de tilladelser, som Defender for Endpoint får til at fungere. Gennemse dem, og vælg derefter **Godkend**.
 
@@ -167,11 +164,9 @@ Følg nedenstående trin for at føje Microsoft Defender for Endpoint app til di
 
        :::image type="content" alt-text="Billede af valg af konfigurationspolitikker til Android." source="images/selectconfigurations.png" lightbox="images/selectconfigurations.png":::
 
-
     1. Du bør kunne se alle de valgte konfigurationer på listen. Du kan ændre konfigurationsværdien efter behov og derefter vælge **Næste**.
-        
-        :::image type="content" alt-text="Billede af valgte konfigurationspolitikker." source="images/listedconfigurations.png" lightbox="images/listedconfigurations.png":::
-       
+
+       :::image type="content" alt-text="Billede af valgte konfigurationspolitikker." source="images/listedconfigurations.png" lightbox="images/listedconfigurations.png":::
 
     1. På siden **Tildelinger** skal du vælge den brugergruppe, som denne appkonfigurationspolitik skal tildeles til. Klik på **Vælg de grupper, der skal medtages** , og vælg den relevante gruppe, og vælg derefter **Næste**. Den gruppe, der vælges her, er normalt den samme gruppe, som du tildeler Microsoft Defender for Endpoint Android-app.
 
@@ -186,7 +181,7 @@ Følg nedenstående trin for at føje Microsoft Defender for Endpoint app til di
 
 10. Vælg **Microsoft Defender ATP-app** på listen \> **Egenskaber** \> **Tildelinger** \> **Rediger**.
 
-   :::image type="content" source="images/mda-properties.png" alt-text="Indstillingen Rediger på siden Egenskaber" lightbox="images/mda-properties.png":::
+    :::image type="content" source="images/mda-properties.png" alt-text="Indstillingen Rediger på siden Egenskaber" lightbox="images/mda-properties.png":::
 
 11. Tildel appen som en *påkrævet* app til en brugergruppe. Den installeres automatisk i *arbejdsprofilen* under den næste synkronisering af enheden via Firmaportal app. Denne tildeling kan udføres ved at navigere til sektionen \> *Påkrævet* **Tilføj gruppe,** vælge brugergruppen og klikke på **Vælg**.
 
@@ -264,21 +259,22 @@ Enhedskonfigurationsprofilen er nu tildelt den valgte brugergruppe.
 
 ## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>Konfigurer Microsoft Defender i personlig profil på Android Enterprise i BYOD-tilstand
 
->[!NOTE]
->Microsoft Defender-understøttelse i personlig profil i Android Enterprise-tilstand (AE) i BYOD-tilstand (Bring-Your-Own-Device) er nu tilgængelig som offentlig prøveversion. Følgende oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
+> [!NOTE]
+> Microsoft Defender-understøttelse i personlig profil i Android Enterprise-tilstand (AE) i BYOD-tilstand (Bring-Your-Own-Device) er nu tilgængelig som offentlig prøveversion. Følgende oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-Med understøttelse af Microsoft Defender i personlige Android-profiler kan brugerenheder beskyttes mod phishing- og malwareangreb på en personlig profil, der potentielt kan kompromittere virksomhedens ressourcer på arbejdsprofilen. 
+Med understøttelse af Microsoft Defender i personlige Android-profiler kan brugerenheder beskyttes mod phishing- og malwareangreb på en personlig profil, der potentielt kan kompromittere virksomhedens ressourcer på arbejdsprofilen.
 
-**Konfigurer Microsoft Defender i personlig profil**
+### <a name="set-up-microsoft-defender-in-personal-profile"></a>Konfigurer Microsoft Defender i personlig profil
 
 Administratorer kan gå til Administration af [Microsoft Endpoint Management](https://endpoint.microsoft.com) for at konfigurere Microsoft Defender-support i personlige profiler ved at følge disse trin:
+
 1. Gå til **Apps> politikker for konfiguration af apps** , og klik på **Tilføj**. Vælg **Administrerede enheder**.
 
     > [!div class="mx-imgBorder"]
     > ![Billede af tilføjelse af appkonfigurationspolitik.](images/addpolicy.png)
 
-1.  Angiv **Navn** og **Beskrivelse** for entydigt at identificere konfigurationspolitikken. Vælg platform som **'Android Enterprise'**, Profiltype som **'Kun personligt ejet arbejdsprofil'** og Målrettet app som **'Microsoft Defender'**.
- 
+1. Angiv **Navn** og **Beskrivelse** for entydigt at identificere konfigurationspolitikken. Vælg platform som **'Android Enterprise'**, Profiltype som **'Kun personligt ejet arbejdsprofil'** og Målrettet app som **'Microsoft Defender'**.
+
     > [!div class="mx-imgBorder"]
     > ![Billede af politik for navngivning af konfiguration.](images/selectapp.png)
 
@@ -300,24 +296,24 @@ Administratorer kan gå til Administration af [Microsoft Endpoint Management](ht
 Administratorer kan også konfigurere **kontrolelementer til beskyttelse af personlige oplysninger** fra Microsoft Endpoint Manager Administration for at styre, hvilke data der kan sendes af Defender-mobilklienten til sikkerhedsportalen. Du kan få flere oplysninger under [Konfiguration af kontrolelementer til beskyttelse af personlige oplysninger](android-configure.md).
 
 Organisationer kan kommunikere med deres brugere for at beskytte personlig profil med Microsoft Defender på deres tilmeldte BYOD-enheder.
+
 - Forudsætning: Microsoft Defender skal allerede være installeret og aktiv i arbejdsprofilen for at aktivere Microsoft Defender i personlige profiler.
 
-**Sådan fuldfører du onboarding af en enhed**
-1.  Installér Microsoft Defender-programmet i en personlig profil med en personlig Google Play-butikskonto.
-2.  Installér programmet Firmaportal på en personlig profil. Der kræves ingen logon.
-3.  Når en bruger starter programmet, får vedkommende vist logonskærmen. **Log kun på med firmakontoen**.
-4.  Ved vellykket logon får brugerne vist følgende skærmbilleder:
+### <a name="to-complete-onboarding-a-device"></a>Sådan fuldfører du onboarding af en enhed
 
-    a.  **Skærmbilledet slutbrugerlicensaftale**: Vises kun, hvis brugeren ikke allerede har givet samtykke til det i profilen Arbejde.
+1. Installér Microsoft Defender-programmet i en personlig profil med en personlig Google Play-butikskonto.
+2. Installér programmet Firmaportal på en personlig profil. Der kræves ingen logon.
+3. Når en bruger starter programmet, får vedkommende vist logonskærmen. **Log kun på med firmakontoen**.
+4. Ved vellykket logon får brugerne vist følgende skærmbilleder:
+   1. **Skærmbilledet slutbrugerlicensaftale**: Vises kun, hvis brugeren ikke allerede har givet samtykke til det i profilen Arbejde.
+   2. **Meddelelsesskærm**: Brugerne skal give samtykke på denne skærm for at komme videre med onboarding af programmet. Dette er kun påkrævet under den første kørsel af appen.
+5. Angiv de nødvendige tilladelser for at fuldføre onboarding.
 
-    b.  **Meddelelsesskærm**: Brugerne skal give samtykke på denne skærm for at komme videre med onboarding af programmet. Dette er kun påkrævet under den første kørsel af appen.
-5.  Angiv de nødvendige tilladelser for at fuldføre onboarding.
-
->[!NOTE]
->**Forudsætning:**
- >1. Firmaportalen skal være aktiveret på en personlig profil.
- >2. Microsoft Defender skal allerede være installeret og aktiv i arbejdsprofilen.
-
+> [!NOTE]
+> **Forudsætning:**
+>
+> 1. Firmaportalen skal være aktiveret på en personlig profil.
+> 2. Microsoft Defender skal allerede være installeret og aktiv i arbejdsprofilen.
 
 ## <a name="related-topics"></a>Relaterede emner
 

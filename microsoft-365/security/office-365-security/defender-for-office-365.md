@@ -20,12 +20,12 @@ ms.custom:
 description: Microsoft Defender for Office 365 omfatter Pengeskab Attachments, Pengeskab Links, avancerede værktøjer til anti-phishing, rapporteringsværktøjer og funktioner til trusselsintelligens.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a181f8ef6bb7ca018fb9ddf0f0adc4fe565b73e1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9be72102f9813394cb2d9eab1e4d163c6d87bd4b
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941539"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417814"
 ---
 # <a name="microsoft-defender-for-office-365"></a>Microsoft Defender for Office 365
 
@@ -91,7 +91,11 @@ I følgende tabel opsummeres det, der er inkluderet i de enkelte planer.
 
 - Hvis dit aktuelle abonnement ikke omfatter Microsoft Defender for Office 365, og du vil have det, skal du [kontakte salg for at starte en prøveversion](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html) og finde ud af, hvordan Microsoft Defender for Office 365 kan fungere i din organisation.
 
-- Microsoft Defender for Office 365 P2-kunder har adgang til **Microsoft 365 Defender-integration** til effektivt at registrere, gennemse og reagere på hændelser og beskeder.
+- Microsoft Defender for Office 365 P2-kunder har adgang til **Microsoft 365 Defender-integration** til effektivt at registrere, gennemse og reagere på hændelser og beskeder. 
+
+Se denne korte video for at få mere at vide om Microsoft Defender for Office 365 P2-funktioner, der er flyttet ind på Microsoft 365 Defender-portalen.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfx]
+
 
 ## <a name="configure-microsoft-defender-for-office-365-policies"></a>Konfigurer Microsoft Defender for Office 365 politikker
 
@@ -147,7 +151,7 @@ Hvis du vil have adgang til Microsoft Defender for Office 365 funktioner, skal d
 |global administrator (organisationsadministration)|Du kan tildele denne rolle i Azure Active Directory eller på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).|
 |Sikkerhedsadministrator|Du kan tildele denne rolle i Azure Active Directory eller på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).|
 |Organisationsadministration i Exchange Online|[Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo) <p> [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell)|
-|Søg og fjern|Denne rolle er kun tilgængelig på Microsoft 365 Defender-portalen eller Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser på Microsoft Purview-overholdelsesportalen](../../compliance/microsoft-365-compliance-center-permissions.md).|
+|Søg og fjern|Denne rolle er kun tilgængelig på Microsoft 365 Defender-portalen eller i Microsoft Purview-compliance-portal. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser i Microsoft Purview-compliance-portal](../../compliance/microsoft-365-compliance-center-permissions.md).|
 |||
 
 ## <a name="get-microsoft-defender-for-office-365"></a>Hent Microsoft Defender for Office 365

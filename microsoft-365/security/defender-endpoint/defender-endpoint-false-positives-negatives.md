@@ -23,12 +23,12 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: d7477c2006acd04008e6cb56cb22261a4db4a92b
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 81c41abffc6ec01c127b901ac63b3a5d3b6c5732
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789904"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418450"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Adresser falske positive/negativer i Microsoft Defender for Endpoint
 
@@ -460,9 +460,9 @@ Hvis du har gennemg책et alle trinnene i denne artikel og stadig har brug for hj�
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint p책 macOS](mac-preferences.md)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint p책 macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint p책 Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint p책 Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint p책 Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint p책 Android-funktioner](android-configure.md)

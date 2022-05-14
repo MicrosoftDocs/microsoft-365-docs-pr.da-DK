@@ -18,12 +18,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility og Security kan hjælpe dig med at sikre og administrere mobilenheder.
-ms.openlocfilehash: aa5c6bb757604763e9ba7348d1d4f952a6555865
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 96deda323c6dedcae860811a1e538aaa0bffa25d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935253"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65414838"
 ---
 # <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Administrer indstillinger for enhedsadgang i Basic Mobility og Security
 
@@ -33,12 +33,12 @@ Brug disse trin:
 
 1. Log på for at Microsoft 365 med din globale administratorkonto.
 
-2. I din browser skal du skrive: [https://protection.office.com](https://protection.office.com/).
+2. I din browser skal du skrive: <https://protection.office.com/>.
 
     > [!IMPORTANT]
     > Hvis det er første gang, du bruger Basic Mobility and Security til Microsoft 365 Business Standard, skal du aktivere den her: [Aktivér grundlæggende sikkerhed og mobilitet](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Når du har aktiveret den, kan du administrere dine enheder med [Office 365 Security & Compliance](https://protection.office.com/).
 
-3. Gå til  **Forebyggelse af** >  **datatabAdviceadministrationDevice-politikker** >, og vælg  **Administrer indstillinger for enhedsadgang for hele organisationen**. ****
+3. Gå til **Forebyggelse af** \> datatab **Enhedspolitikker** for **enhed**\>, og vælg **Administrer indstillinger for enhedsadgang for hele organisationen**.
 
 4. Vælg **Blok**.
 

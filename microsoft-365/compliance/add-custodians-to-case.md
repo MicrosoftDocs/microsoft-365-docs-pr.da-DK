@@ -17,18 +17,18 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du bruger det indbyggede værktøj til administration af tilsynsførende i Microsoft Purview eDiscovery (Premium) til at koordinere dine arbejdsprocesser og identificere relevante datakilder i en sag.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 3810880ca414efaaa3471c65d2c8c7b8d2956120
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 59caac668972968ae3eada2d52d4a5fff8abeae0
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093212"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416106"
 ---
 # <a name="add-custodians-to-an-ediscovery-premium-case"></a>Føj tilsynsførende til en eDiscovery-sag (Premium)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Brug det indbyggede værktøj til administration af tilsynsførende i Microsoft Purview eDiscovery (Premium) til at koordinere dine arbejdsprocesser omkring administration af tilsynsførende og identificering af relevante, frihedsberøvende datakilder, der er knyttet til en sag. Når du tilføjer en tilsynsførende, kan systemet automatisk identificere og placere en venteposition på deres Exchange postkasse og OneDrive for Business konto. Under undersøgelsens registreringsproces kan du også identificere andre datakilder (f.eks. postkasser, websteder eller Teams), som en tilsynsførende har tilgået eller bidraget til. I denne situation kan du bruge værktøjet til administration af tilsynsførende til at knytte disse datakilder til en bestemt tilsynsførende. Når du har føjet tilsynsførende til en sag og knyttet andre datakilder til dem, kan du hurtigt bevare data og søge i dataene om varetægtsfængsling.
+Brug det indbyggede værktøj til administration af tilsynsførende i Microsoft Purview eDiscovery (Premium) til at koordinere dine arbejdsprocesser omkring administration af tilsynsførende og identificere relevante, frihedsberøvende datakilder, der er knyttet til en sag. Når du tilføjer en tilsynsførende, kan systemet automatisk identificere og placere en venteposition på deres Exchange postkasse og OneDrive for Business konto. Under undersøgelsens registreringsproces kan du også identificere andre datakilder (f.eks. postkasser, websteder eller Teams), som en tilsynsførende har tilgået eller bidraget til. I denne situation kan du bruge værktøjet til administration af tilsynsførende til at knytte disse datakilder til en bestemt tilsynsførende. Når du har føjet tilsynsførende til en sag og knyttet andre datakilder til dem, kan du hurtigt bevare data og søge i dataene om varetægtsfængsling.
 
 Du kan tilføje og administrere tilsynsførende i eDiscovery-sager (Premium) i fire trin:
 
@@ -48,7 +48,7 @@ Hvis du vil føje tilsynsførende til en sag, skal du være medlem af rollegrupp
 
 1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com) og log på med en brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
-2. Vælg **eDiscoveryeDiscovery** >  **(Premium)** i venstre navigationsrude i Microsoft Purview-overholdelsesportalen, og vælg fanen [**Sager**](https://go.microsoft.com/fwlink/p/?linkid=2173764).
+2. Vælg **eDiscoveryeDiscovery** >  **(Premium)** i navigationsruden til venstre i Microsoft Purview-compliance-portal, og vælg fanen [**Sager**](https://go.microsoft.com/fwlink/p/?linkid=2173764).
 
 3. Vælg den sag, du vil føje tilsynsførende til.
 

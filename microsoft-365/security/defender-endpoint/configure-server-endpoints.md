@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 14ec731eebe21f6b399e03d445fef248b8675026
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a68c589870262d9d8fc26acce0175043b6917b72
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098752"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417374"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -53,21 +53,19 @@ Du skal udføre følgende generelle trin for at kunne onboarde servere.
 
 :::image type="content" source="images/server-onboarding-tools-methods.png" alt-text="En illustration af onboardingflow for Windows servere og Windows 10 enheder" lightbox="images/server-onboarding-tools-methods.png":::
 
-**Windows Server 2012 R2 og Windows Server 2016**
+**Windows Server 2012 R2 og Windows Server 2016**:
 
 - Download installations- og onboardingpakker
 - Anvend installationspakken
 - Følg onboardingtrinnene for det tilsvarende værktøj
 
-**Windows Server Semi-Annual Enterprise Channel og Windows Server 2019**
+**Windows Server Semi-Annual Enterprise Channel og Windows Server 2019**:
 
 - Download onboardingpakken
 - Følg onboardingtrinnene for det tilsvarende værktøj
 
 >[!IMPORTANT]
->For at være berettiget til at købe Microsoft Defender for Endpoint Server SKU skal du allerede have købt et kombineret minimum af følgende, Windows E5/A5, Microsoft 365 E5/A5 eller Microsoft 365 E5 Sikkerhed abonnementslicenser.  Du kan få flere oplysninger om licenser under [Produktvilkår](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpointServer/all).  
-
-
+>For at være berettiget til at købe Microsoft Defender for Endpoint Server SKU skal du allerede have købt et kombineret minimum af følgende, Windows E5/A5, Microsoft 365 E5/A5 eller Microsoft 365 E5 Sikkerhed abonnementslicenser.  Du kan få flere oplysninger om licenser under [Produktvilkår](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpointServer/all).
 
 ### <a name="new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution"></a>Ny Windows Server 2012 R2- og 2016-funktionalitet i den moderne samlede løsning
 
@@ -101,11 +99,11 @@ Hvis du tidligere har onboardet dine servere ved hjælp af MMA, skal du følge v
 
 Følgende specifikke oplysninger gælder for den nye samlede løsningspakke til Windows Server 2012 R2 og 2016:
 
-- Sørg for, at forbindelseskravene som angivet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](/microsoft-365/security/defender-endpoint/configure-proxy-internet?enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) er opfyldt. De svarer til dem, der gælder for Windows Server 2019. 
+- Sørg for, at forbindelseskravene som angivet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](/microsoft-365/security/defender-endpoint/configure-proxy-internet?enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) er opfyldt. De svarer til dem, der gælder for Windows Server 2019.
 - Vi har identificeret et problem med Windows Server 2012 R2-forbindelse til skyen, når der bruges statisk telemetryProxyServer, **og** URL-adresserne på listen over tilbagekaldte certifikater (CRL) kan ikke nås fra SYSTEM-kontokonteksten. Den øjeblikkelige afhjælpning er enten at bruge en alternativ proxyindstilling ("hele systemet"), der leverer en sådan forbindelse, eller konfigurere den samme proxy via indstillingen WinInet på SYSTEM-kontokonteksten.
 Alternativt kan du bruge instruktionerne i [Løsning på et kendt problem med TelemetryProxyServer på frakoblede computere](#workaround-for-a-known-issue-with-telemetryproxyserver-on-disconnected-machines) for at installere et certifikat som en midlertidig løsning.
 - Tidligere var brugen af Microsoft Monitoring Agent (MMA) på Windows Server 2016 og nedenfor tilladt for OMS/Log Analytics-gatewayen for at give forbindelse til Defender-cloudtjenester. Den nye løsning, f.eks. Microsoft Defender for Endpoint på Windows Server 2019, Windows Server 2022 og Windows 10, understøtter ikke denne gateway.
-- På Windows Server 2016 skal du kontrollere, at Microsoft Defender Antivirus er installeret, er aktiv og opdateret. Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).  
+- På Windows Server 2016 skal du kontrollere, at Microsoft Defender Antivirus er installeret, er aktiv og opdateret. Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 - På Windows Server 2012 R2 er der ingen brugergrænseflade til Microsoft Defender Antivirus. Derudover tillader brugergrænsefladen på Windows Server 2016 kun grundlæggende handlinger. Hvis du vil udføre handlinger på en enhed lokalt, skal du se [Administrer Microsoft Defender for Endpoint med PowerShell, WMI og MPCmdRun.exe](/microsoft-365/security/defender-endpoint/manage-mde-post-migration-other-tools). Derfor fungerer funktioner, der specifikt er afhængige af brugerinteraktion, f.eks. hvor brugeren bliver bedt om at træffe en beslutning eller udføre en bestemt opgave, muligvis ikke som forventet. Det anbefales at deaktivere eller ikke aktivere brugergrænsefladen eller kræve brugerinteraktion på en administreret server, da det kan påvirke beskyttelsesfunktionerne.
 - Det er ikke alle regler for reduktion af angrebsoverfladen, der er tilgængelige på alle operativsystemer. Se [ASR-regler (Attack Surface Reduction).](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules)
 - Yderligere konfiguration er påkrævet for at aktivere [Netværksbeskyttelse](/microsoft-365/security/defender-endpoint/network-protection):
@@ -150,7 +148,7 @@ Du kan få flere oplysninger under [Integration med Microsoft Defender for Cloud
 
 ### <a name="prerequisites"></a>Forudsætninger
 
-**Forudsætninger for Windows Server 2012 R2**
+#### <a name="prerequisites-for-windows-server-2012-r2"></a>Forudsætninger for Windows Server 2012 R2
 
 Hvis du har opdateret dine maskiner fuldt ud med den seneste [månedlige akkumuleringspakke](https://support.microsoft.com/topic/october-12-2021-kb5006714-monthly-rollup-4dc4a2cd-677c-477b-8079-dcfef2bda09e) , er der **ingen** yderligere forudsætninger.
 
@@ -159,32 +157,29 @@ Installationspakken kontrollerer, om følgende komponenter allerede er installer
 - [Opdatering til kundeoplevelse og diagnosticeringstelemetri](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
 - [Opdatering til Universal C Runtime i Windows](https://support.microsoft.com/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c)
 
-**Forudsætninger for Windows Server 2016** 
+#### <a name="prerequisites-for-windows-server-2016"></a>Forudsætninger for Windows Server 2016
 
-- Service stack-opdateringen (SSU) fra 14. september 2021 eller nyere skal installeres.  
+- Service stack-opdateringen (SSU) fra 14. september 2021 eller nyere skal installeres.
 - Den seneste kumulative opdatering (LCU) fra 20. september 2018 eller nyere skal installeres.  Det anbefales at installere den nyeste tilgængelige SSU og LCU på serveren.  - Funktionen Microsoft Defender Antivirus skal være aktiveret/installeret og opdateret. Du kan downloade og installere den nyeste platformversion ved hjælp af Windows Update. Du kan også hente opdateringspakken manuelt fra [Microsoft Update-kataloget](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) eller fra [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 
-**Forudsætninger for at køre med sikkerhedsløsninger fra tredjepart**
+#### <a name="prerequisites-for-running-with-third-party-security-solutions"></a>Forudsætninger for at køre med sikkerhedsløsninger fra tredjepart
 
 Hvis du vil bruge en antimalwareløsning fra tredjepart, skal du køre Microsoft Defender Antivirus i passiv tilstand. Du skal huske at indstille til passiv tilstand under installationen og onboardingprocessen.
 
 > [!NOTE]
 > Hvis du installerer Microsoft Defender for Endpoint på servere med McAfee Endpoint Security (ENS) eller VirusScan Enterprise (VSE), skal versionen af McAfee-platformen muligvis opdateres for at sikre, at Microsoft Defender Antivirus ikke fjernes eller deaktiveres. Du kan få flere oplysninger, herunder de specifikke versionsnummer, der kræves, i [artiklen McAfee Knowledge Center](https://kc.mcafee.com/corporate/index?page=content&id=KB88214).
 
-**Opdateringspakke til Microsoft Defender for Endpoint på Windows Server 2012 R2 og 2016**
+#### <a name="update-package-for-microsoft-defender-for-endpoint-on-windows-server-2012-r2-and-2016"></a>Opdateringspakke til Microsoft Defender for Endpoint på Windows Server 2012 R2 og 2016
 
 Hvis du vil modtage regelmæssige produktforbedringer og rettelser til komponenten Slutpunktsregistrering og -svar sensor, skal du sikre, at Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) anvendes eller godkendes. Hvis du vil holde beskyttelseskomponenterne opdaterede, skal du desuden se [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
 
-
 Hvis du bruger Windows Server Update Services (WSUS) og/eller Microsoft Endpoint Configuration Manager, er denne nye "Microsoft Defender for Endpoint opdatering til Slutpunktsregistrering og -svar  Sensor" er tilgængelig under kategorien "Microsoft Defender for Endpoint".
-
-
 
 ### <a name="onboarding-steps-summary"></a>Oversigt over onboardingtrin
 
 - TRIN 1: [Download installations- og onboardingpakkerne](#step-1-download-installation-and-onboarding-packages)
 - TRIN 2: [Anvend installations- og onboardingpakken](#step-2-apply-the-installation-and-onboarding-package)
-- TRIN 3: [Fuldfør onboardingtrinnene](#step-3-complete-the-onboarding-steps) 
+- TRIN 3: [Fuldfør onboardingtrinnene](#step-3-complete-the-onboarding-steps)
 
 ### <a name="step-1-download-installation-and-onboarding-packages"></a>TRIN 1: Download installations- og onboardingpakker
 
@@ -193,12 +188,10 @@ Du skal downloade både **installations** - og **onboardingpakker** fra portalen
 > [!div class="mx-imgBorder"]
 > ![Billede af onboardingdashboard](images/install-agent-onboard.png)
 
-
    > [!NOTE]
    > På Windows Server 2012R2 installeres Microsoft Defender Antivirus af installationspakken, og den vil være aktiv, medmindre du angiver den til passiv tilstand. På Windows Server 2016 skal Microsoft Defender Antivirus installeres som en funktion (se [Skift til MDE](/microsoft-365/security/defender-endpoint/switch-to-mde-phase-2#re-enable-microsoft-defender-antivirus-on-windows-server-2016)) først og opdateres fuldt ud, før du fortsætter med installationen.
-   > 
+   >
    > Hvis du kører en antimalwareløsning, der ikke er fra Microsoft, skal du sikre, at du føjer udeladelser for Microsoft Defender Antivirus ([fra denne liste over Microsoft Defender-processer under fanen Defender-processer](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)) til den løsning, der ikke er Microsoft, før installationen.  Det anbefales også at føje sikkerhedsløsninger, der ikke er fra Microsoft, til listen over undtagelser fra Defender Antivirus.
-
 
 **Installationspakken** indeholder en MSI-fil, der installerer den Microsoft Defender for Endpoint agent.
 
@@ -207,38 +200,38 @@ Du skal downloade både **installations** - og **onboardingpakker** fra portalen
 - `OptionalParamsPolicy` – indeholder den indstilling, der muliggør indsamling af eksempler
 - `WindowsDefenderATPOnboardingScript.cmd` - indeholder onboardingscriptet
 
-Brug følgende trin til at downloade pakkerne: 
+Brug følgende trin til at downloade pakkerne:
 
 1. I Microsoft 365 Defender skal du gå til **Indstillinger > Enhedshåndtering > Onboarding**.
 
 2. Vælg **Windows Server 2012 R2 og 2016**.
 
-3. Vælg **Download installationspakken** , og gem .msi-filen. 
- 
+3. Vælg **Download installationspakken** , og gem .msi-filen.
+
 4. Vælg **Download onboarding-pakke,** og gem filen .zip.
 
 5. Installér installationspakken ved hjælp af en af mulighederne for at installere Microsoft Defender Antivirus. Installationen kræver administrative tilladelser.
 
-
-
 ### <a name="step-2-apply-the-installation-and-onboarding-package"></a>TRIN 2: Anvend installations- og onboardingpakken
-I dette trin skal du installere de komponenter til forebyggelse og registrering, der kræves, før du onboarder din enhed til det Microsoft Defender for Endpoint cloudmiljø, for at forberede maskinen til onboarding. Sørg for, at alle [forudsætninger](#prerequisites) er opfyldt. 
+
+I dette trin skal du installere de komponenter til forebyggelse og registrering, der kræves, før du onboarder din enhed til det Microsoft Defender for Endpoint cloudmiljø, for at forberede maskinen til onboarding. Sørg for, at alle [forudsætninger](#prerequisites) er opfyldt.
 
    > [!NOTE]
-   > Microsoft Defender Antivirus installeres og er aktiv, medmindre du angiver den til passiv tilstand. 
+   > Microsoft Defender Antivirus installeres og er aktiv, medmindre du angiver den til passiv tilstand.
 
 #### <a name="options-to-install-the-microsoft-defender-for-endpoint-packages"></a>Indstillinger for installation af Microsoft Defender for Endpoint-pakker
 
-I det forrige afsnit har du downloadet en installationspakke. Installationspakken indeholder installationsprogrammet til alle Microsoft Defender for Endpoint komponenter. 
+I det forrige afsnit har du downloadet en installationspakke. Installationspakken indeholder installationsprogrammet til alle Microsoft Defender for Endpoint komponenter.
 
 Du kan bruge en af følgende indstillinger til at installere agenten:
+
 - [Installér ved hjælp af kommandolinjen](#install-microsoft-defender-for-endpoint-using-the-command-line)
 - [Installér ved hjælp af et script](#install-microsoft-defender-for-endpoint-using-a-script)
 - [Anvend installations- og onboardingpakker ved hjælp af Gruppepolitik](#apply-the-microsoft-defender-for-endpoint-installation-and-onboarding-packages-using-group-policy)
 
 ##### <a name="install-microsoft-defender-for-endpoint-using-the-command-line"></a>Installér Microsoft Defender for Endpoint ved hjælp af kommandolinjen
-Brug installationspakken fra det forrige trin til at installere Microsoft Defender for Endpoint. 
 
+Brug installationspakken fra det forrige trin til at installere Microsoft Defender for Endpoint.
 
 Kør følgende kommando for at installere Microsoft Defender for Endpoint:
 
@@ -287,16 +280,14 @@ Du kan bruge [installationsscriptet](server-migration.md#installer-script) til a
 
     ```console
      -ExecutionPolicy RemoteSigned \\servername-or-dfs-space\share-name\install.ps1 -OnboardingScript \\servername-or-dfs-space\share-name\windowsdefenderatponboardingscript.cmd
-    ```  
+    ```
 
-     >[!NOTE]
-    >Hvis du har brug for at foretage fejlfinding af agentinstallationsproblemer, skal du føje '-etl -log' til install.ps1 scriptparametre.
+    > [!NOTE]
+    > Hvis du har brug for at foretage fejlfinding af agentinstallationsproblemer, skal du føje '-etl -log' til install.ps1 scriptparametre.
     >
-    >Den anbefalede politikindstilling for udførelse er `Allsigned`. Dette kræver, at scriptets signeringscertifikat importeres til det lokale udgiverlager, der er tillid til, hvis scriptet kører som SYSTEM på slutpunktet.
+    > Den anbefalede politikindstilling for udførelse er `Allsigned`. Dette kræver, at scriptets signeringscertifikat importeres til det lokale udgiverlager, der er tillid til, hvis scriptet kører som SYSTEM på slutpunktet.
 
     Erstat \\servernavn-eller-dfs-space\share-name med UNC-stien ved hjælp af filserverens fulde domænenavn (FQDN) for den delte *install.ps1* fil. Installationspakken md4ws.msi skal placeres i den samme mappe.  Sørg også for, at tilladelserne for UNC-stien giver læseadgang til den computerkonto, der installerer platformen.
-
-   
 
     I forbindelse med scenarier, hvor du vil have, at Microsoft Defender Antivirus skal fungere sammen med ikke-Microsoft-antimalwareløsninger, skal du tilføje parameteren $Passive for at angive passiv tilstand under installationen.
 
@@ -316,7 +307,8 @@ Følgende trin gælder kun, hvis du bruger en tredjepartsløsning til antimalwar
     - Type: `REG_DWORD`
     - Værdi: `1`
 
-       :::image type="content" source="images/atp-verify-passive-mode.png" alt-text="Bekræftelsesresultatet for passiv tilstand" lightbox="images/atp-verify-passive-mode.png":::
+   :::image type="content" source="images/atp-verify-passive-mode.png" alt-text="Bekræftelsesresultatet for passiv tilstand" lightbox="images/atp-verify-passive-mode.png":::
+
 > [!IMPORTANT]
 >
 > - Når du bruger Microsoft Defender for Cloud til at overvåge servere, oprettes der automatisk en Defender for Endpoint-lejer (i USA for amerikanske brugere, i EU for europæiske brugere og i Storbritannien for brugere i Storbritannien).
@@ -325,8 +317,6 @@ Data, der indsamles af Defender for Endpoint, gemmes på lejerens geo-placering 
 > - Når dataene er konfigureret, kan du ikke ændre den placering, hvor dine data er gemt. Hvis du har brug for at flytte dine data til en anden placering, skal du kontakte Microsoft Support for at nulstille lejeren.
 > - Onboarding-pakken til Windows Server 2019 og Windows Server 2022 gennem Microsoft Endpoint Manager sender i øjeblikket et script. Du kan få flere oplysninger om, hvordan du installerer scripts i Configuration Manager, [under Pakker og programmer i Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs).
 > - Et lokalt script er egnet til blåstempling, men bør ikke bruges til produktionsinstallation. I forbindelse med en produktionsinstallation anbefaler vi, at du bruger Gruppepolitik eller Microsoft Endpoint Configuration Manager.
-
-
 
 ## <a name="windows-server-semi-annual-enterprise-channel-sac-windows-server-2019-and-windows-server-2022"></a>Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019 og Windows Server 2022
 
@@ -339,7 +329,6 @@ Data, der indsamles af Defender for Endpoint, gemmes på lejerens geo-placering 
 3. Vælg **Download pakke**. Gem den som WindowsDefenderATPOnboardingPackage.zip.
 
 4. Følg de trin, der er angivet i afsnittet [Fuldfør onboardingtrinnene](#step-3-complete-the-onboarding-steps) .
-
 
 ## <a name="verify-the-onboarding-and-installation"></a>Kontrollér onboarding og installation
 
@@ -354,20 +343,22 @@ Når du har onboardet enheden, kan du vælge at køre en registreringstest for a
 
 1. Kør følgende kommando for at kontrollere, at Microsoft Defender Antivirus er installeret:
 
-    >[!NOTE]
-    >Dette kaldtrin er kun påkrævet, hvis du bruger Microsoft Defender Antivirus som din aktive antimalwareløsning.
+    > [!NOTE]
+    > Dette bekræftelsestrin er kun påkrævet, hvis du bruger Microsoft Defender Antivirus som din aktive antimalwareløsning.
 
-    `sc.exe query Windefend`
+    ```DOS
+    sc.exe query Windefend
+    ```
 
-
-    Hvis resultatet er 'Den angivne tjeneste findes ikke som en installeret tjeneste', skal du installere Microsoft Defender Antivirus. 
-
+    Hvis resultatet er 'Den angivne tjeneste findes ikke som en installeret tjeneste', skal du installere Microsoft Defender Antivirus.
 
     Du kan få oplysninger om, hvordan du bruger Gruppepolitik til at konfigurere og administrere Microsoft Defender Antivirus på dine Windows servere, under [Brug Gruppepolitik indstillinger til at konfigurere og administrere Microsoft Defender Antivirus ](use-group-policy-microsoft-defender-antivirus.md).
 
 2. Kør følgende kommando for at kontrollere, at Microsoft Defender for Endpoint kører:
 
-    `sc.exe query sense`
+    ```DOS
+    sc.exe query sense
+    ```
 
     Resultatet bør vise, at det kører. Hvis du støder på problemer med onboarding, skal du se [Fejlfinding af onboarding](troubleshoot-onboarding.md).
 

@@ -16,12 +16,12 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 70360ac3b9ade0e6039239fe257d83c7ba3a2db0
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 8da099332ffbe2cc3d860faef504e4c5d9663614
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787598"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418626"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Konfigurer og valider Microsoft Defender Antivirus netværksforbindelser
 
@@ -120,9 +120,9 @@ Der forekommer en lignende meddelelse, hvis du bruger Internet Explorer:
 
     > [!TIP]
     > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-    > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+    > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
     > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-    > - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+    > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
     > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
     > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
     > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)

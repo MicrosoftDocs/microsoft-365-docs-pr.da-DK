@@ -19,18 +19,18 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility and Security kan hjælpe dig med at sikre og administrere dine organisationers mobilenheder.
-ms.openlocfilehash: cb724a4f7d5b4118bb50b0aeaf1138a4a1aebfb6
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 74d2a2d6034b1e893987e2ede47a96bc00658f47
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129128"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415145"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Administrer de enheder, der er tilmeldt mobile Enhedshåndtering i Microsoft 365
 
 Den indbyggede administration af mobilenheder til Microsoft 365 hjælper dig med at sikre og administrere dine brugeres mobilenheder, f.eks. iPhones, iPads, Androids og Windows telefoner. Det første trin er at logge på Microsoft 365 og konfigurere Grundlæggende mobilitet og sikkerhed. Du kan finde flere oplysninger under [Konfigurer grundlæggende mobilitet og sikkerhed](set-up.md).
 
-Når du har konfigureret den, skal personerne i din organisation tilmelde deres enheder i tjenesten. Du kan finde flere oplysninger under [Tilmeld din mobilenhed ved hjælp af Basic Mobility og Security](enroll-your-mobile-device.md).Du kan derefter bruge Basic Mobility and Security til at administrere enheder i din organisation. Du kan f.eks. bruge politikker for enhedssikkerhed til at begrænse mailadgang eller andre tjenester, få vist enhedsrapporter og fjerne sletning af en enhed. Du går typisk til Security & Compliance Center for at udføre disse opgaver. Du kan finde flere oplysninger på [Microsoft Purview-overholdelsesportalen](../../compliance/microsoft-365-compliance-center.md).
+Når du har konfigureret den, skal personerne i din organisation tilmelde deres enheder i tjenesten. Du kan finde flere oplysninger under [Tilmeld din mobilenhed ved hjælp af Basic Mobility og Security](enroll-your-mobile-device.md). Du kan derefter bruge Basic Mobility and Security til at administrere enheder i din organisation. Du kan f.eks. bruge politikker for enhedssikkerhed til at begrænse mailadgang eller andre tjenester, få vist enhedsrapporter og fjerne sletning af en enhed. Du går typisk til Security & Compliance Center for at udføre disse opgaver. Du kan finde flere oplysninger under [Microsoft Purview-compliance-portal](../../compliance/microsoft-365-compliance-center.md).
 
 ## <a name="device-management-tasks"></a>Opgaver i forbindelse med enhedshåndtering
 

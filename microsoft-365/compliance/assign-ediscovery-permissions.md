@@ -1,5 +1,5 @@
 ---
-title: Tildel eDiscovery-tilladelser på Microsoft Purview-overholdelsesportalen
+title: Tildel eDiscovery-tilladelser i Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -16,23 +16,26 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5b9a067b-9d2e-4aa5-bb33-99d8c0d0b5d7
-description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-overholdelsesportalen.
+description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-compliance-portal.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: e764aae4313a8e5d4dfc402e4c1f87eb8c1a5bbb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 112109d50f0f7e1f11687a325f8756cf2b355e5c
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090511"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419434"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Tildel eDiscovery-tilladelser på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Hvis du vil have, at brugerne skal bruge et af de [eDiscovery-relaterede værktøjer](ediscovery.md) på Microsoft Purview-overholdelsesportalen, skal du tildele dem de relevante tilladelser. Den nemmeste måde at gøre dette på er at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser** i Overholdelsescenter. I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
-  
+Hvis andre skal bruge [eDiscovery-relaterede værktøjer](ediscovery.md) i Microsoft Purview-compliance-portal, skal du tildele dem de nødvendige tilladelser. Den nemmeste måde at gøre dette på er ved at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser på overholdelsesportalen** . I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
+
+> [!TIP]
+> Du kan få vist dine egne tilladelser på oversigtssiden for eDiscovery (Premium) på overholdelsesportalen. Du skal have tildelt mindst én rolle, for at dine tilladelser kan vises.
+
 Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **eDiscovery Manager**. Der er to undergrupper i denne rollegruppe.
   
 - **eDiscovery Manager** – En eDiscovery Manager kan bruge eDiscovery-søgeværktøjer til at søge efter indholdsplaceringer i organisationen og udføre forskellige søgerelaterede handlinger, f.eks. få vist og eksportere søgeresultater. Medlemmer kan også oprette og administrere sager i Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium), tilføje og fjerne medlemmer til en sag, oprette ventepositioner for sager, køre søgninger, der er knyttet til en sag, og få adgang til sagsdata. eDiscovery-ledere kan kun få adgang til og administrere de sager, de opretter. De kan ikke få adgang til eller administrere sager, der er oprettet af andre eDiscovery-ledere.
@@ -135,7 +138,7 @@ Du kan finde flere oplysninger [under Arbejd med vogtere i eDiscovery (Premium)]
 
 Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Det giver dem også mulighed for at forberede søgeresultater til analyse i eDiscovery (Premium).
 
-Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-overholdelsesportalen](export-search-results.md).
+Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-compliance-portal](export-search-results.md).
 
 ### <a name="hold"></a>Holde
 

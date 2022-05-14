@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 51a2e3584ea391a5b759fed4514efa2a0c4d6772
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 7cbb9c71e56242d15506c2c1e46f1120021928fa
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317200"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415964"
 ---
 # <a name="view-and-edit-device-protection-policies"></a>Få vist og rediger politikker for beskyttelse af enheder
 

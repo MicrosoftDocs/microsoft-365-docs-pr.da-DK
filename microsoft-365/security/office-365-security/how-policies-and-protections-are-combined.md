@@ -1,6 +1,6 @@
 ---
-title: Rækkefølge og rangorden af mailbeskyttelse
-keywords: sikkerhed, malware, Microsoft 365, M365, security center, Microsoft 365 Defender-portal, Microsoft Defender til slutpunkt, Microsoft Defender Office 365, Microsoft Defender til identitet
+title: Rækkefølgen og rækkefølgen af mailbeskyttelse
+keywords: sikkerhed, malware, Microsoft 365, M365, Security Center, Microsoft 365 Defender portal, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,65 +14,65 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om programrækkefølgen for beskyttelse i Exchange Online Protection (EOP), og hvordan prioritetsværdien i beskyttelsespolitikker bestemmer, hvilken politik der anvendes.
+description: Administratorer kan få mere at vide om beskyttelsesrækkefølgen i Exchange Online Protection (EOP), og hvordan prioritetsværdien i beskyttelsespolitikker bestemmer, hvilken politik der anvendes.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1debec0d2f8ca1498fd674f3d5a2d5a4681196eb
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8b7bf48de0939ec913982feb399b38dc2c540157
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679780"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417748"
 ---
-# <a name="order-and-precedence-of-email-protection"></a>Rækkefølge og rangorden af mailbeskyttelse
+# <a name="order-and-precedence-of-email-protection"></a>Rækkefølgen og rækkefølgen af mailbeskyttelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser kan indgående mail blive markeret med flere former for beskyttelse. De indbyggede antiphishing-politikker i EOP, der er tilgængelige for alle Microsoft 365-kunder, og de mere robuste antiphishing-politikker, der er tilgængelige for Microsoft Defender for Office 365-kunder. Meddelelser passerer også gennem scanninger til flere registreringer for malware, spam, phishing osv. Under al denne aktivitet kan der være noget forvirring om, hvilken politik der anvendes.
+I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser, kan indgående mails være markeret med flere former for beskyttelse. Det kan f.eks. være de indbyggede politikker til bekæmpelse af phishing i EOP, der er tilgængelige for alle Microsoft 365 kunder, og de mere robuste politikker til bekæmpelse af phishing, der er tilgængelige for Microsoft Defender for Office 365 kunder. Meddelelser passerer også gennem flere registreringsscanninger for malware, spam, phishing osv. På grund af al denne aktivitet kan der være en vis forvirring om, hvilken politik der anvendes.
 
-Generelt er en politik, der anvendes på en meddelelse, identificeret i **X-Forefront Antispam-Report-overskriften** i **CAT (Kategori)** -egenskaben. Du kan få mere at vide [under Brevhoveder for uønsket post](anti-spam-message-headers.md).
+Generelt identificeres en politik, der anvendes på en meddelelse, i **headeren X-Forefront-Antispam-Report** i egenskaben **CAT (Category).** Du kan få flere oplysninger under [Brevhoveder til anti-spam](anti-spam-message-headers.md).
 
-Der er to overordnede faktorer, der bestemmer, hvilken politik der anvendes på en meddelelse:
+Der er to vigtige faktorer, der bestemmer, hvilken politik der anvendes på en meddelelse:
 
-- **Prioriteten af mailbeskyttelsestypen**: Denne ordre kan ikke konfigureres og er beskrevet i følgende tabel:
+- **Behandlingsrækkefølgen for mailbeskyttelsestypen**: Denne rækkefølge kan ikke konfigureres, og den er beskrevet i følgende tabel:
 
-  |Prioritet|Mailbeskyttelse|Kategori|Her kan du administrere|
-  |---|---|---|---|
-  |1|Malware|KAT:MALW|[Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md)|
-  |2|Phishing|KAT:PHSH|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
-  |3|Spam med høj tillid|CAT:HSPM|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
-  |4|Spoofing|KAT:SPOOF|[Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md)|
-  |5<sup>\*</sup>|Bruger efterligning (beskyttede brugere)|UIMP|[Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)|
-  |6<sup>\*</sup>|Domænepersonation (beskyttede domæner)|DIMP|[Konfigurer antiphishing-politikker i Microsoft Defender til Office 365](configure-mdo-anti-phishing-policies.md)|
-  |7|Spam|KAT:SPM|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
-  |8|Masse|KAT:MASSE|[Konfigurer antispampolitikker i EOP](configure-your-spam-filter-policies.md)|
+  |Rækkefølge|Mailbeskyttelse|Kategori|Hvor skal du administrere?|
+  |:---:|---|---|---|
+  |1|Malware|CAT:MALW|[Konfigurer politikker for antimalware i EOP](configure-anti-malware-policies.md)|
+  |2|Phishing|CAT:PHSH|[Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md)|
+  |3|Spam med høj genkendelsessikkerhed|CAT:HSPM|[Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md)|
+  |4|Spoofing|CAT:SPOOF|[Spoof intelligence-indsigt i EOP](learn-about-spoof-intelligence.md)|
+  |5<sup>\*</sup>|Repræsentation af brugere (beskyttede brugere)|UIMP|[Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)|
+  |6<sup>\*</sup>|Repræsentation af domæne (beskyttede domæner)|DIMP|[Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md)|
+  |7|Spam|CAT:SPM|[Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md)|
+  |8|Bulk|CAT:BULK|[Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md)|
 
-  <sup>\*</sup>Disse funktioner er kun tilgængelige i antiphishing-politikker i Microsoft Defender Office 365.
+  <sup>\*</sup>Disse funktioner er kun tilgængelige i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365.
 
-- **Politikkens** prioritet: For hver type politik (antispam, antimalware, antiphishing osv.) er der en standardpolitik, der gælder for alle, men du kan oprette brugerdefinerede politikker, der gælder for bestemte brugere. Hver brugerdefineret politik har en prioritetsværdi, der bestemmer den rækkefølge, politikkerne anvendes i. Standardpolitikken anvendes altid sidst.
+- **Prioriteten for politikken**: For hver type politik (anti-spam, anti-malware, anti-phishing osv.) er der en standardpolitik, der gælder for alle, men du kan oprette brugerdefinerede politikker, der gælder for bestemte brugere (modtagere). Hver brugerdefineret politik har en prioritetsværdi, der bestemmer den rækkefølge, som politikkerne anvendes i. Standardpolitikken anvendes altid sidst.
 
   > [!IMPORTANT]
-  > Hvis en bruger er defineret i flere politikker af samme type, er det kun politikken med højeste prioritet, der anvendes på dem. Eventuelle resterende politikker af den pågældende type evalueres ikke for brugeren (herunder standardpolitikken).
+  > Hvis en modtager er defineret i flere politikker af samme type (anti-spam, anti-phishing osv.), er det kun politikken med den højeste prioritet, der anvendes på modtageren. Eventuelle resterende politikker af denne type evalueres ikke for modtageren (herunder standardpolitikken).
 
-Overvej f.eks. følgende antiphishing-politikker i Microsoft Defender for Office 365, der gælder for de samme **brugere, og** en meddelelse, der identificeres som både bruger efterligning og spoofing:
+Overvej f.eks. følgende **anti-phishing-politikker** i Microsoft Defender for Office 365 **, der gælder for de samme brugere**, og en meddelelse, der er identificeret som **både brugerrepræsentation og spoofing**:
 
-|Politiknavn|Prioritet|Bruger efterligning|Antispoofing|
-|---|---|---|---|
-|Politik A|1|Til|Fra|
-|Politik B|2|Fra|Til|
+|Politiknavn|Prioritet|Bruger repræsenter|Anti-spoofing|
+|---|:---:|:---:|:---:|
+|Politik A|1|På|Ud|
+|Politik B|2|Ud|På|
 
-1. Meddelelsen markeres og behandles som spoof, fordi spoofing har en højere prioritet (4) end brugerens efterligning (5).
-2. Politik A anvendes på brugerne, fordi den har en højere prioritet end politik B.
-3. Baseret på indstillingerne i Politik A, sker der ikke noget med meddelelsen, fordi antispoofing er slået fra i politikken.
-4. Behandling af politikker stopper, så politik B aldrig anvendes for brugerne.
+1. Meddelelsen identificeres som spoofing, fordi spoofing (4) evalueres før brugerrepræsentation (5).
+2. Politik A anvendes først, fordi den har en højere prioritet end Politik B.
+3. På baggrund af indstillingerne i Politik A udføres der ingen handling på meddelelsen, fordi anti-spoofing er slået fra.
+4. Behandlingen af anti-phishing-politikker stopper for alle inkluderede modtagere, så Politik B anvendes aldrig på modtagere, der også er i Politik A.
 
-Da det er muligt, at de samme brugere er med eller uden overlæg inkluderet i flere brugerdefinerede politikker af samme type, skal du bruge følgende designretningslinjer for brugerdefinerede politikker:
+Da de samme brugere bevidst eller utilsigtet er inkluderet i flere politikker af samme type, skal du bruge følgende retningslinjer for design for brugerdefinerede politikker:
 
 - Tildel en højere prioritet til politikker, der gælder for et lille antal brugere, og en lavere prioritet til politikker, der gælder for et stort antal brugere. Husk, at standardpolitikken altid anvendes sidst.
-- Konfigurer dine politikker med højere prioritet, så de har strengere eller mere specialiserede indstillinger end politikker med lavere prioritet.
-- Overvej at bruge færre brugerdefinerede politikker (brug kun brugerdefinerede politikker til brugere, der kræver mere restriktive eller mere specialiserede indstillinger).
+- Konfigurer dine politikker med højere prioritet for at have strengere eller mere specialiserede indstillinger end politikker med lavere prioritet.
+- Overvej at bruge færre brugerdefinerede politikker (brug kun brugerdefinerede politikker for brugere, der kræver strengere eller mere specialiserede indstillinger).

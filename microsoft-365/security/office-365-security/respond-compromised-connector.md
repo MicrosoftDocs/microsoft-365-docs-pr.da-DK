@@ -16,12 +16,12 @@ ms.custom: ''
 description: Få mere at vide om, hvordan du genkender og reagerer på en kompromitteret connector i Microsoft 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fd4c5f22de51081f5b848c367bf79a8c7033f3d3
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 6f32f9960655c8998abd8d9fb8fa939368373520
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285393"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419015"
 ---
 # <a name="respond-to-a-compromised-connector"></a>Besvar en kompromitteret forbindelse
 
