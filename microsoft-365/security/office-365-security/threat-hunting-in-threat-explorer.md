@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d8515ce2bccb90478f11fa4a1813c7cb4ab7fb7d
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: efeaf3fadfed0032da90db15a6bb57f5a1fc822a
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973833"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418012"
 ---
 # <a name="threat-hunting-in-threat-explorer-for-microsoft-defender-for-office-365"></a>Trusselsjagt i Threat Explorer efter Microsoft Defender for Office 365
 
@@ -52,6 +52,9 @@ Med disse værktøjer kan du:
 - Undersøg ondsindet mail m.m.
 
 Du kan få flere oplysninger under [Mailsikkerhed med Threat Explorer](email-security-in-microsoft-defender.md).
+
+Se denne korte video for at få mere at vide om, hvordan du jagter og undersøger mail- og samarbejdsbaserede trusler ved hjælp af Microsoft Defender for Office 365. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWyPRU]
 
 ## <a name="threat-explorer-walk-through"></a>Gennemgang af Threat Explorer
 

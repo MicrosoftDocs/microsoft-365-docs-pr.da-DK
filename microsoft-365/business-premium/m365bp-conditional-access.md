@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan sikkerhedsstandarder kan hjælpe med at beskytte din organisation mod identitetsrelaterede angreb ved at angive forudkonfigurerede sikkerhedsindstillinger for Microsoft 365 Business Premium.
-ms.openlocfilehash: af9b19dcf33f1b79d4057662cf759ace27aec38f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c1a63efc29154768a7d54d31f51c25a3c84fa30a
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095262"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417836"
 ---
 # <a name="security-defaults-and-multi-factor-authentication"></a>Sikkerhedsstandarder og multifaktorgodkendelse
 
@@ -97,7 +97,7 @@ Hvis du vil bruge Betinget adgang til at konfigurere politikker, skal du se føl
 - [Kræv MFA til Azure-administration](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management)
 - [Bloker ældre godkendelse](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
 - [Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
-- [Kræv Azure AD MFA-registrering](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) – kræver Azure AD Identity Protection, som er en del af Azure Active Directory Premium P2
+- [Kræv Azure AD MFA-registrering](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) – kræver Azure AD identitetsbeskyttelse, som er en del af Azure Active Directory Premium P2
 
 Du kan få mere at vide om Betinget adgang under [Hvad er betinget adgang?](/azure/active-directory/conditional-access/overview) Du kan få flere oplysninger om oprettelse af politikker for betinget adgang under [Opret en politik for betinget adgang](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).
 
@@ -107,4 +107,3 @@ Du kan få mere at vide om Betinget adgang under [Hvad er betinget adgang?](/azu
 ## <a name="next-objective"></a>Næste mål
 
 Konfigurer måder at [beskytte mod malware og andre trusler](m365bp-increase-protection.md) på.
-

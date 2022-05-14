@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5d16cae309a90b8ffe10c90fea8ca3a359ece33b
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: 8e9faf6114551725dc1fc3b8b6af173bbe1e21b4
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144811"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417946"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -45,6 +45,9 @@ Når du sender en mail til analyse, får du:
 > Payloadomdømme/detonation og graderanalyse udføres ikke i alle lejere. Oplysninger blokeres fra at gå uden for organisationen, når data ikke skal forlade lejergrænsen af hensyn til overholdelse af angivne standarder.
 
 Hvis du vil have andre måder at sende mails, URL-adresser og vedhæftede filer til Microsoft på, skal du se [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
+
+Se denne korte video for at få mere at vide om, hvordan du bruger administratorindsendelser i Microsoft Defender for Office 365 til at sende meddelelser til Microsoft til evaluering. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 

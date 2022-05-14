@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 8059668e5ac13b506f91a91a7088ffc6ffc0e63d
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: bf65bb13ab45d127bf2302464f1948437e1fe02d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787550"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417968"
 ---
 # <a name="troubleshoot-microsoft-defender-antivirus-reporting-in-update-compliance"></a>Fejlfinding af Microsoft Defender Antivirus-rapportering i Update Compliance
 
@@ -80,9 +80,9 @@ Hvis ovenstående forudsætninger alle er opfyldt, skal du muligvis gå videre t
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
-> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS](mac-preferences.md)
+> - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus politikindstillinger for Microsoft Defender Antivirus til Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint på Linux](microsoft-defender-endpoint-linux.md)
 > - [Konfigurer Defender for Endpoint på Android-funktioner](android-configure.md)
