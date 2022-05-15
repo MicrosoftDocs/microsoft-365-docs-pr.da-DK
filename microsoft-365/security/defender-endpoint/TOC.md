@@ -329,6 +329,10 @@
 ##### [Udeladelser for Windows Server-](configure-server-exclusions-microsoft-defender-antivirus.md)
 ##### [Almindelige fejl at undgå](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
+#### Fejlfindingstilstand for Defender for Endpoint
+##### [Kom i gang med fejlfindingstilstand](enable-troubleshooting-mode.md)
+##### [Scenarier for fejlfindingstilstand](troubleshooting-mode-scenarios.md)
+
 #### Diagnosticering og ydeevne for Microsoft Defender Antivirus
 ##### [Rapporter om enhedens tilstand og overholdelse af angivne standarder](machine-reports.md)
 ##### [Fejlfinding af problemer med ydeevnen i forbindelse med beskyttelse i realtid](troubleshoot-performance-issues.md) 

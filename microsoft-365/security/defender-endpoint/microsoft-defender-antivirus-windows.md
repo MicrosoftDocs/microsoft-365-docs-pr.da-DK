@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 352b60caa3af581a5d1162b1896b255bfcea873c
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: adc6b447f7f29cde344ab0b90f9388154025f587
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790234"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418308"
 ---
 # <a name="microsoft-defender-antivirus-in-windows"></a>Microsoft Defender Antivirus i Windows
 

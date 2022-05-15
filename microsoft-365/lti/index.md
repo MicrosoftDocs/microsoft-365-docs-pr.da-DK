@@ -13,12 +13,12 @@ ms.collection:
 - M365-modern-desktop
 ms.localizationpriority: ''
 description: Få mere at vide om Microsoft LTI-apps (Learning Tools Interoperability), og hvordan de kan hjælpe undervisere, når de integrerer Microsoft-apps i deres LMS (Learning Management System).
-ms.openlocfilehash: 8140b89b4bfeb26f64e8949f6d7835ca59645cbe
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 99ae862890989b0422cb819f65781a0a99340135
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746755"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65414760"
 ---
 # <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Integration af Microsoft-produkter med dit Learning Management System (LMS)
 
@@ -32,7 +32,7 @@ Disse værktøjer omfatter:
 - [Teams-møder LTI](#teams-meetings-lti)
 - [Teams-hold LTI](#teams-classes-lti)
 
-Du kan få generelle oplysninger om administration af Microsoft OneLTI-værktøjer under [Administrer Microsoft OneLTI for alle LMS](manage-microsoft-one-lti.md).
+Du kan få generelle oplysninger om administration af Microsoft LTI-apps under [Administrer Microsoft LTI-apps for alle LMS](manage-microsoft-one-lti.md).
 
 ## <a name="onedrive-lti-apps"></a>OneDrive LTI-apps
 
