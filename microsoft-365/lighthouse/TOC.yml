@@ -56,6 +56,8 @@
       href: m365-lighthouse-compare-compliance-policies.md
     - name: Oversigt over siden Windows 365 (cloud-pc'er)
       href: m365-lighthouse-win365-page-overview.md
+    - name: Klargør en Windows 365 Cloud-pc igen
+      href: m365-lighthouse-reprovision-cloudpc.md
 - name: Administrer trusler
   items:
     - name: Oversigt over siden Trusselsadministration

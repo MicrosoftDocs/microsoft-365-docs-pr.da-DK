@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 11/14/2019
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
 description: Brug denne testvejledning til at oprette et letvægtstestmiljø til test Microsoft 365 til virksomheder.
-ms.openlocfilehash: 0da4a38ad951d30a536e653336571e7bad04a889
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: fcfa3f67ec790244fc44f3539af8da1df7a09432
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435297"
+ms.locfileid: "65444196"
 ---
 # <a name="the-lightweight-base-configuration"></a>Letvægtsbasekonfigurationen
 
@@ -35,6 +35,7 @@ I denne artikel beskrives det, hvordan du opretter et forenklet miljø med et Mi
 ![Det lette Microsoft 3656 Enterprise-testmiljø.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase4.png)
 
 Oprettelse af et letvægtstestmiljø omfatter fem faser:
+
 - [Fase 1: Opret dit Microsoft 365 E5 abonnement](#phase-1-create-your-microsoft-365-e5-subscription)
 - [Fase 2: Konfigurer dit Office 365 prøveabonnement](#phase-2-configure-your-office-365-trial-subscription)
 - [Fase 3: Tilføj et Microsoft 365 E5 prøveabonnement](#phase-3-add-a-microsoft-365-e5-trial-subscription)
@@ -86,10 +87,10 @@ Du skulle se Microsoft 365 Administration.
 
 ## <a name="phase-2-configure-your-office-365-trial-subscription"></a>Fase 2: Konfigurer dit Office 365 prøveabonnement
 
-I denne fase konfigurerer du dit abonnement med andre brugere og tildeler dem Office 365 E5 licenser.
+I denne fase konfigurerer du dit abonnement med flere brugere og tildeler dem Office 365 E5 licenser.
   
 Hvis du vil oprette forbindelse til dit abonnement med modulet Azure Active Directory PowerShell til Graph fra din computer, skal du bruge vejledningen i [Forbind til at Microsoft 365 med PowerShell](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
-    
+
 I dialogboksen **Windows PowerShell anmodning om legitimationsoplysninger** skal du angive det globale administratornavn (f.eks. *jdoe@contosotoycompany.onmicrosoft.com*) og adgangskoden.
   
 Udfyld organisationens navn (f.eks. *contosotoycompany*), landekoden på to tegn for din placering, en almindelig kontoadgangskode, og kør derefter følgende kommandoer fra PowerShell-prompten:
@@ -115,7 +116,7 @@ for($i=2;$i -le 4; $i++) {
 ```
 
 > [!NOTE]
-> Brug af en almindelig adgangskode her er til automatisering og nem konfiguration af et testmiljø. Dette frarådes naturligvis i høj grad for produktionsabonnementer. 
+> Brug af en almindelig adgangskode her er til automatisering og nem konfiguration af et testmiljø. Dette frarådes naturligvis i høj grad for produktionsabonnementer.
 
 ### <a name="record-key-information-for-future-reference"></a>Registrer nøgleoplysninger til fremtidig reference
 
@@ -127,7 +128,7 @@ Hvis du ikke allerede har registreret disse værdier, kan du optage dem nu:
 
 - Organisationen for dit prøveabonnement: ![Linje.](../media/Common-Images/TableLine.png) (fra trin 4 i fase 1)
 
-- Hvis du vil have vist en liste over kontiene for Bruger 2, Bruger 3, Bruger 4 og Bruger 5, skal du køre følgende kommando fra Azure Active Directory modul for Windows PowerShell prompt:
+- Hvis du vil have vist en liste over kontiene for Bruger 2, Bruger 3, Bruger 4 og Bruger 5, skal du køre følgende kommando fra Windows Azure Active Directory modul for Windows PowerShell prompt:
 
   ```powershell
   Get-AzureADUser | Sort UserPrincipalName | Select UserPrincipalName
@@ -149,7 +150,7 @@ Hvis du ikke allerede har registreret disse værdier, kan du optage dem nu:
 
 Hvis du kun har brug for et Office 365 testmiljø, behøver du ikke at læse resten af denne artikel.
 
-Du kan finde andre Test Lab-vejledninger, der gælder for både Office 365 og Microsoft 365, [under Microsoft 365 til vejledninger til testlaboratorier til virksomheder](m365-enterprise-test-lab-guides.md).
+Du kan finde flere Test Lab-vejledninger, der gælder for både Office 365 og Microsoft 365, [under Microsoft 365 til vejledninger til virksomhedstestlaboratorier](m365-enterprise-test-lab-guides.md).
   
 ## <a name="phase-3-add-a-microsoft-365-e5-trial-subscription"></a>Fase 3: Tilføj et Microsoft 365 E5 prøveabonnement
 
@@ -158,9 +159,9 @@ I denne fase tilmelder du dig Microsoft 365 E5 prøveabonnementet og føjer det 
 Først skal du tilføje prøveabonnementet på Microsoft 365 E5 og tildele den nye Microsoft 365-licens til din globale administratorkonto.
   
 1. I et privat vindue i en internetbrowser skal du bruge legitimationsoplysningerne til din globale administratorkonto til at logge på Microsoft 365 Administration på [https://admin.microsoft.com](https://admin.microsoft.com).
-    
+
 2. Vælg **FaktureringKøb** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**tjenester**</a> i venstre navigationsrude på siden **Microsoft 365 Administration**.
-    
+
 3. På siden **Køb tjenester** skal du vælge **Microsoft 365 E5** og derefter vælge **Hent gratis prøveversion**.
 
 4. På siden **Microsoft 365 E5 prøveversion** skal du beslutte at modtage en sms eller et telefonopkald, angive dit telefonnummer og derefter vælge **Tekst mig** eller **Ring til mig**. Udfør bekræftelsen.
@@ -188,7 +189,7 @@ Dit testmiljø har nu:
   
 - Et Microsoft 365 E5 prøveabonnement.
 - Alle dine relevante brugerkonti (enten kun den globale administrator eller alle fem brugerkonti) er aktiveret til at bruge Microsoft 365 E5.
-    
+
 Din resulterende konfiguration, som tilføjer Microsoft 365 E5, ser ud på følgende måde:
   
 ![Fase 3 i Microsoft 3656 Enterprise-testmiljøet.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase2.png)
@@ -199,18 +200,12 @@ I denne fase opretter du en separat computer, der kører Windows 10 Enterprise s
   
 ### <a name="physical-computer"></a>Fysisk computer
 
-Installer Windows 10 Enterprise på en personlig computer. Du kan downloade en evalueringsversion af Windows 10 Enterprise.
-
-> [!NOTE]
-> Microsoft Evalueringscenter er ikke tilgængeligt i øjeblikket. Hvis du vil have adgang til denne download, skal du se [Adgang til prøveversioner og kits til Windows (Løsning til Evalueringscenter).](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125)<!-- 6049663 -->
-
+Installer Windows 10 Enterprise på en personlig computer. Du kan downloade prøveversionen af Windows 10 Enterprise [her](https://www.microsoft.com/software-download/windows10).
+  
 ### <a name="virtual-machine"></a>Virtuel maskine
 
-Brug den hypervisor, du vælger, til at oprette en virtuel maskine, og installér derefter Windows 10 Enterprise på den. Du kan downloade en evalueringsversion af Windows 10 Enterprise.
-
-> [!NOTE]
-> Microsoft Evalueringscenter er ikke tilgængeligt i øjeblikket. Hvis du vil have adgang til denne download, skal du se [Adgang til prøveversioner og kits til Windows (Løsning til Evalueringscenter).](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125)<!-- 6049663 -->
-
+Brug den hypervisor, du vælger, til at oprette en virtuel maskine, og installér derefter Windows 10 Enterprise på den. Du kan downloade prøveversionen af Windows 10 Enterprise [her](https://www.microsoft.com/software-download/windows10).
+  
 ### <a name="virtual-machine-in-azure"></a>Virtuel maskine i Azure
 
 Hvis du vil oprette en Windows 10 virtuel maskine i Microsoft Azure, ***skal du have et Visual Studio-baseret abonnement***, som har adgang til billedet for Windows 10 Enterprise. Andre typer Azure-abonnementer, f.eks. prøveversioner og betalte abonnementer, har ikke adgang til dette billede. Du kan finde de seneste oplysninger under [Brug Windows klient i Azure til udviklings-/testscenarier](/azure/virtual-machines/windows/client-images).
@@ -253,7 +248,7 @@ $locName="<location name, such as West US>"
 New-AzResourceGroup -Name $rgName -Location $locName
 ```
 
-Opret derefter et nyt virtuelt netværk og den virtuelle WIN10-maskine med disse kommandoer. Når du bliver bedt om det, skal du angive navnet og adgangskoden for den lokale administratorkonto for WIN10 og gemme disse oplysninger på en sikker placering.
+Opret derefter et nyt virtuelt netværk og den virtuelle WIN10-maskine med disse kommandoer. Når du bliver bedt om det, skal du angive navnet og adgangskoden for den lokale administratorkonto for WIN10 og gemme dem på en sikker placering.
   
 ```powershell
 $corpnetSubnet=New-AzVirtualNetworkSubnetConfig -Name Corpnet -AddressPrefix 10.0.0.0/24
@@ -292,7 +287,7 @@ Derefter skal du slutte WIN10-computeren til den Azure AD lejer for dit Microsof
 
 4. Angiv adgangskoden til din globale administratorkonto i **Angiv adgangskode**, og vælg derefter **Log på**.
 
-5. Når du bliver bedt om at sikre dig, at denne organisation er din, skal du vælge **Deltag** og derefter vælge **Udført**.
+5. Når du bliver bedt om at sikre dig, at dette er din organisation, skal du vælge **Deltag** og derefter vælge **Udført**.
 
 6. Luk vinduet indstillinger.
 
@@ -310,17 +305,17 @@ Dit resulterende miljø ser sådan ud:
 
 ![Fase 5 i Microsoft 3656 Enterprise-testmiljøet.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase4.png)
 
-Dette miljø omfatter den WIN10-computer, der har:
+Dette omfatter den WIN10-computer, der har:
 
 - Deltager i Azure AD lejeren for dit Microsoft 365 E5 abonnement.
 - Tilmeldt som en Azure AD enhed i Microsoft Intune (EMS).
 - Microsoft 365 Apps for enterprise installeret.
   
-Du er nu klar til at eksperimentere med flere funktioner [i Microsoft 365 til virksomheder](https://www.microsoft.com/microsoft-365/enterprise).
+Du er nu klar til at eksperimentere med yderligere funktioner [i Microsoft 365 til virksomheder](https://www.microsoft.com/microsoft-365/enterprise).
   
 ## <a name="next-steps"></a>Næste trin
 
-Udforsk disse andre sæt testlaboratorier:
+Udforsk disse ekstra sæt testlaboratorier:
   
 - [Identitet](m365-enterprise-test-lab-guides.md#identity)
 - [Administration af mobilenheder](m365-enterprise-test-lab-guides.md#mobile-device-management)

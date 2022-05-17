@@ -10,13 +10,13 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: high
-description: Få mere at vide om standardmærkater og -politikker for Microsoft Purview Information Protection at klassificere og beskytte følsomt indhold.
-ms.openlocfilehash: 486286780eaa3a2deedb2c3df837a93814280f39
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+description: Få mere at vide om standardmærkater og -politikker for Microsoft Purview Information Protection til at klassificere og beskytte følsomt indhold.
+ms.openlocfilehash: a17ba3e87e219d19d8f88f413bf446664aa094a2
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286444"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65444174"
 ---
 # <a name="default-labels-and-policies-to-protect-your-data"></a>Standardmærkater og -politikker til beskyttelse af dine data
 
@@ -24,16 +24,16 @@ ms.locfileid: "65286444"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Berettigede kunder kan aktivere standardmærkater og -politikker for Microsoft Purview-Information Protection: 
+Berettigede kunder kan aktivere standardmærkater og -politikker for Microsoft Purview Information Protection: 
 
 - Følsomhedsmærkater og en politik for følsomhedsmærkater
 - Automatisk mærkning på klientsiden
 - Automærkater på tjenestesiden
 - DLP-politikker (forebyggelse af datatab) for Teams og enheder
 
-Disse standardkonfigurationer hjælper dig med hurtigt at komme i gang med Microsoft Purview-Information Protection til Microsoft 365. Du kan bruge dem, som de er, foretage nogle få ændringer eller tilpasse dem fuldt ud, så de passer bedre til dine forretningsbehov. 
+Disse standardkonfigurationer hjælper dig med hurtigt at komme i gang med Microsoft Purview Information Protection til Microsoft 365. Du kan bruge dem, som de er, foretage nogle få ændringer eller tilpasse dem fuldt ud, så de passer bedre til dine forretningsbehov. 
 
-Berettigelse omfatter kunder, der har en [gratis prøveversion til Microsoft Purview](compliance-easy-trials.md), og nogle kunder, der allerede har en Microsoft 365 E5 plan:
+Berettigelse omfatter kunder, der har en [gratis prøveversion til Microsoft Purview](compliance-easy-trials.md) og nogle kunder, der allerede har en Microsoft 365 E5 plan:
 
 - **Nye kunder**: Hvis du har haft Microsoft Purview i mindre end 30 dage, kan din lejer aktivere alle de angivne standardkonfigurationer. Du kan altid deaktivere, fjerne eller redigere dem.
 
@@ -51,11 +51,11 @@ Berettigelse omfatter kunder, der har en [gratis prøveversion til Microsoft Pur
 
 Sådan henter du disse forudkonfigurerede mærkater og politikker: 
 
-1. Vælg **LøsningerInformationsbeskyttelse**  >  på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
+1. Vælg **LøsningerInformationsbeskyttelse**  >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
     
     Hvis du ikke kan se denne indstilling med det samme, skal du først vælge **Vis alle** i navigationsruden. 
     
-2. Hvis du er berettiget til Microsoft Purview-Information Protection standardmærkater og -politikker, får du vist følgende oplysninger, hvor du kan aktivere standardmærkater og -politikker. Eksempel:
+2. Hvis du er berettiget til Microsoft Purview Information Protection standardmærkater og -politikker, får du vist følgende oplysninger, hvor du kan aktivere standardmærkater og -politikker. Eksempel:
     
     :::image type="content" alt-text="Microsoft Purview Information Protection aktivering af forudkonfigurerede mærkater og politikker." source="../media/mip-preconfigured.png" lightbox="../media/mip-preconfigured.png":::
     
@@ -110,7 +110,7 @@ Du kan få flere oplysninger om disse politikindstillinger og andre politikindst
 
 Hvis du har brug for at redigere disse standardpolitikindstillinger, skal du se [Publicer følsomhedsmærkater ved at oprette en mærkatpolitik](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy).
 
-Når du bruger disse mærkater i Office apps på Windows, macOS, iOS og Android, kan brugerne se nye mærkater inden for fire timer og inden for én time for Word, Excel og PowerPoint på internettet, når du opdaterer browseren. Det kan dog være nødvendigt at tillade op til 24 timer, før ændringer replikeres til alle apps og tjenester.
+Når du bruger disse mærkater i Office apps på Windows, macOS, iOS og Android, får brugerne vist nye mærkater inden for fire timer og inden for én time for Word, Excel og PowerPoint på internettet, når du opdaterer browseren. Det kan dog være nødvendigt at tillade op til 24 timer, før ændringer replikeres til alle apps og tjenester.
 
 ## <a name="client-side-auto-labeling"></a>Automatisk mærkning på klientsiden
 
@@ -135,9 +135,9 @@ Automatisk mærkning på tjenestesiden hjælper med at mærke inaktive følsomme
 
 Standardindstillingen for automatisk mærkning på tjenestesiden har følgende konfiguration: 
 
-- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument, skal du anvende følsomhedsmærkaten **ConfidentialAnyone**  \  (ubegrænset)
+- Hvis der findes 1-9 forekomster af kreditkortnumre i et dokument eller en mail, skal du anvende følsomhedsmærkaten **ConfidentialAnyone**  \  (ubegrænset)
 
-- Hvis der findes 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, anbefaler vi, at brugeren anvender følsomhedsmærkaten **ConfidentialAll** \  **Employees** 
+- Hvis der findes 10 eller flere forekomster af kreditkortnumre i et dokument eller en mail, skal du anvende følsomhedsmærkaten **ConfidentialAll** \  **Employees** 
 
 > [!NOTE]
 > Hvis vi har registreret, at du har publiceret dine egne følsomhedsmærkater, beder vi dig om at vælge et af dine egne mærkater til din politik for automatisk mærkning.
@@ -160,7 +160,7 @@ Hvis du vil redigere DLP-politikken, skal du se [Opret, test og juster en DLP-po
 
 ## <a name="dlp-for-devices"></a>DLP til enheder
 
-Standard-DLP-politikken for enheder registrerer tilstedeværelsen af kreditkortnumre på Windows 10 enheder, der er blevet onboardet i Microsoft Purview. Derefter overvåges (blokerer ikke) følgende handlinger: 
+Standard-DLP-politikken for enheder registrerer tilstedeværelsen af kreditkortnumre på Windows 10 enheder, der er onboardet i Microsoft Purview. Derefter overvåges (blokerer ikke) følgende handlinger: 
 
 - Upload til cloudtjenestedomæner eller adgang af ikke-tilladte browsere
 

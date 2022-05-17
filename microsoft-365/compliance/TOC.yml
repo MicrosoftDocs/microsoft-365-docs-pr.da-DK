@@ -362,7 +362,7 @@
               href: sit-modify-keyword-dictionary.md
             - name: Administrer dit skema for nøjagtige datamatch
               href: sit-use-exact-data-manage-schema.md
-            - name: Opdater kildetabelfilen for følsomme oplysninger
+            - name: Opdater EDM-kildetabelfilen for følsomme oplysninger
               href: sit-use-exact-data-refresh-data.md
             - name: Brug navngivne enheder i dine politikker til forebyggelse af datatab
               href: named-entities-use.md

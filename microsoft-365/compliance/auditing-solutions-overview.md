@@ -19,18 +19,18 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du overvåger brugeres og administratorers aktiviteter i din Microsoft 365 organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 4dd26229e5ca29344524238903dd2e972ac09ad7
-ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
+ms.openlocfilehash: d7c6ba3e63e50370579f6db89a919ec8a2dafd8f
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65145349"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65444239"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Overvågning af løsninger i Microsoft Purview
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview-overvågningsløsninger indeholder en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelse af angivne standarder. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Der kan søges i overvågningsposter for disse hændelser af sikkerhedsadministratorer, it-administratorer, insiderrisikoteams og overholdelses- og juridiske efterforskere i din organisation. Denne funktion giver indblik i de aktiviteter, der udføres på tværs af din Microsoft 365 organisation.
+Microsoft Purview overvågningsløsninger leverer en integreret løsning, der kan hjælpe organisationer med effektivt at reagere på sikkerhedshændelser, retsmedicinske undersøgelser, interne undersøgelser og overholdelse af angivne standarder. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Der kan søges i overvågningsposter for disse hændelser af sikkerhedsadministratorer, it-administratorer, insiderrisikoteams og overholdelses- og juridiske efterforskere i din organisation. Denne funktion giver indblik i de aktiviteter, der udføres på tværs af din Microsoft 365 organisation.
 
 ## <a name="microsoft-purview-auditing-solutions"></a>Overvågningsløsninger til Microsoft Purview
 
@@ -42,9 +42,9 @@ Microsoft Purview indeholder to overvågningsløsninger: Overvågning (Standard)
 
 Microsoft Purview Audit (Standard) giver dig mulighed for at logge og søge efter overvågede aktiviteter og styrke dine kriminaltekniske, it-, overholdelses- og juridiske undersøgelser.
 
-- **Aktiveret som standard**. Overvågning (Standard) er som standard slået til for alle organisationer med det relevante abonnement. Det betyder, at poster for overvågede aktiviteter registreres og kan søges i. Den eneste konfiguration, der kræves, er at tildele de nødvendige tilladelser til at få adgang til søgeværktøjet til overvågningsloggen (og den tilsvarende cmdlet) og sikre, at brugerens er tildelt den rette licens til funktioner i Microsoft Purview Audit (Premium).
+- **Aktiveret som standard**. Overvågning (Standard) er som standard slået til for alle organisationer med det relevante abonnement. Det betyder, at poster for overvågede aktiviteter registreres og kan søges i. Den eneste konfiguration, der kræves, er at tildele de nødvendige tilladelser til at få adgang til søgeværktøjet til overvågningsloggen (og den tilsvarende cmdlet) og sikre, at brugerens er tildelt den rette licens til Microsoft Purview overvågningsfunktioner (Premium).
 - **Tusindvis af overvågningshændelser, der kan søges i**. Du kan søge efter en lang række overvågede aktiviteter, der forekommer, er de fleste af de Microsoft 365 tjenester i din organisation. Du kan finde en delvis liste over de aktiviteter, du kan søge efter, under [Overvågede aktiviteter](search-the-audit-log-in-security-and-compliance.md#audited-activities). Du kan se en liste over de tjenester og funktioner, der understøtter overvågede aktiviteter, under [Overvågningslogposttype](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
-- **Overvåg søgeværktøjet på Microsoft Purview-overholdelsesportalen**. Brug søgeværktøjet Overvågningslog på overholdelsesportalen til at søge efter overvågningsposter. Du kan søge efter bestemte aktiviteter, aktiviteter, der er udført af bestemte brugere, og aktiviteter, der fandt sted med et datointerval. Her er et skærmbillede af værktøjet Til overvågning af søgning i Overholdelsescenter.
+- **Overvågningssøgeværktøj i Microsoft Purview-compliance-portal**. Brug søgeværktøjet Overvågningslog på overholdelsesportalen til at søge efter overvågningsposter. Du kan søge efter bestemte aktiviteter, aktiviteter, der er udført af bestemte brugere, og aktiviteter, der fandt sted med et datointerval. Her er et skærmbillede af værktøjet Til overvågning af søgning i Overholdelsescenter.
 
    ![Søgeværktøj til overvågningslog på overholdelsesportalen.](../media/AuditLogSearchToolMCC.png)
 
@@ -101,13 +101,13 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 ### <a name="audit-standard"></a>Overvågning (standard)
 
 - Microsoft Purview Business Basic-abonnement
-- Microsoft Purview Apps for Business-abonnement
+- abonnement på Microsoft Purview Apps for Business
 - Microsoft Purview Enterprise E3-abonnement
-- Microsoft Purview Business Premium
+- Microsoft Purview business-Premium
 - Microsoft Purview Education A3-abonnement
-- Microsoft Purview Government G3-abonnement
-- Microsoft Purview Government G1-abonnement
-- Microsoft Purview Frontline F1- eller F3-abonnement eller F5 Security-tilføjelsesprogram
+- G3-abonnement Microsoft Purview offentlige myndigheder
+- G1-abonnement til Microsoft Purview offentlige myndigheder
+- Microsoft Purview Frontline F1- eller F3-abonnement eller tilføjelsesprogrammet F5 Security
 - Office 365 Enterprise E3-abonnement
 - Office 365 Enterprise E1-abonnement
 - Office 365 Education A1-abonnement
@@ -128,9 +128,9 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 - Office 365 Enterprise E5-abonnement
 - Office 365 Education A5-abonnement
 
-## <a name="set-up-microsoft-purview-auditing-solutions"></a>Konfigurer Microsoft Purview-overvågningsløsninger
+## <a name="set-up-microsoft-purview-auditing-solutions"></a>Konfigurer Microsoft Purview overvågningsløsninger
 
-Hvis du vil i gang med at bruge overvågningsløsningerne i Microsoft Purview, skal du se følgende konfigurationsvejledning.
+Hvis du vil i gang med at bruge overvågningsløsninger i Microsoft Purview, skal du se følgende konfigurationsvejledning.
 
 ### <a name="set-up-audit-standard"></a>Konfigurer overvågning (standard)
 
@@ -168,14 +168,16 @@ Hvis din organisation har et abonnement, der understøtter Overvågning (Premium
 
 Du kan finde mere detaljerede instruktioner under [Konfigurer overvågning (Premium)](set-up-advanced-audit.md).
 
-## <a name="encrypt-audit-records-using-customer-key"></a>Kryptér overvågningsposter ved hjælp af kundenøgle
+<!--
+## Encrypt audit records using Customer Key
 
-Du kan aktivere kryptering af kundenøglen for overvågningsposter. Overvågning bygger på [tjenestekryptering med kundenøglen](customer-key-overview.md) for at kryptere følsomme oplysninger i organisationens overvågningsdata. Implementering af kundenøglen giver ekstra beskyttelse ved at forhindre uautoriserede systemer eller Microsofts datacenterpersonale i at få vist dine overvågningsdata i overvågningspipelinen og inaktive data. Brug af Kundenøgle til at kryptere dine overvågningsdata hjælper dig også med at overholde lovmæssige eller overholdelsesforpligtelser, fordi din organisation leverer og styrer krypteringsnøglerne.
+You can enable Customer Key encryption for audit records. Auditing builds on the [Service encryption with Customer Key](customer-key-overview.md) to encrypt sensitive information in your organization's auditing data. Implementing Customer Key provides extra protection by preventing unauthorized systems or Microsoft data center personnel from viewing your auditing data in the auditing pipeline and at rest. Using Customer Key to encrypt your auditing data also helps you meet regulatory or compliance obligations because your organization provides and controls the encryption keys.
 
-Hvis du vil implementere kundenøglen til overvågning, skal du oprette en politik for datakryptering med flere arbejdsbelastninger, som definerer krypteringshierarkiet. Du kan finde detaljerede trinvise instruktioner under [Konfigurer kundenøgle](customer-key-set-up.md).
+To implement Customer Key for auditing, you have to create a multi-workload Data Encryption Policy (DEP), which defines the encryption hierarchy. For detailed step-by-step instructions, see [Set up Customer Key](customer-key-set-up.md).
 
 > [!NOTE]
-> Ikke alle overvågningsposter i din organisation er krypteret. Microsoft Purview-tjenesten, der genererer bestemte overvågningsposter for aktivitet i den pågældende tjeneste, definerer, om overvågningsposten er krypteret eller ej.
+> Not all audit records in your organization are encrypted. The Microsoft Purview service that generates specific audit records for activity in that service defines whether the audit record is encrypted or not.
+-->
 
 ## <a name="training"></a>Uddannelse
 
