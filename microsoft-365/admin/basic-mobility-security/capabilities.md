@@ -18,13 +18,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Basic Mobility and Security kan hjælpe dig med at sikre og administrere dine mobilenheder.
-ms.openlocfilehash: b0e303af27d731cf3dba3af13019b3b993e52bfe
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Basic Mobility and Security hjælper dig med at sikre og administrere mobilenheder med politikker, der styrer adgangen til organisationens Microsoft 365 mail og dokumenter.
+ms.openlocfilehash: e63f052e0beebe93f9faa27b54725dbac2a9443f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937757"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435849"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Funktioner i Basic Mobility og Security
 
@@ -230,7 +230,7 @@ Du kan angive disse yderligere politikindstillinger ved hjælp af PowerShell-cmd
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Fjernsletning af en mobilenhed
 
-Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at udføre en sletning fra **Microsoft Purview-overholdelsesportalEn portal** >  **til forebyggelse af** >  **datatabAdministration af datatab**. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
+Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at slette **Microsoft Purview-compliance-portal** >  **Administration** **af forebyggelse af** >  datatab. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
 
 Du kan få flere oplysninger under [Slet en mobilenhed i Grundlæggende mobilitet og sikkerhed](wipe-mobile-device.md).
 

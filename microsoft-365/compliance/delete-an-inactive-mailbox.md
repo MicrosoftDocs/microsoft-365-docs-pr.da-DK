@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Når du ikke længere har brug for at bevare indholdet af en Microsoft 365 inaktiv postkasse, kan du slette den inaktive postkasse permanent.
-ms.openlocfilehash: 1e518bda3d11ff17c4ce5aa1ebb6997f8bc09c4d
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: b1a828b2248be7eed583141e13a3badef948b32e
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363110"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438438"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Slet en inaktiv postkasse
 
@@ -38,7 +38,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Før du sletter en inaktiv postkasse
 
-- Du skal bruge Exchange Online PowerShell til at fjerne en retslig venteposition fra en inaktiv postkasse. Du kan ikke bruge Exchange Administration (EAC). Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du skal bruge Exchange Online PowerShell til at fjerne ventepositioner fra en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til disse procedurer. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du kan kopiere indholdet af en inaktiv postkasse til en anden postkasse, før du fjerner ventepositionen og sletter en inaktiv postkasse. Du kan finde flere oplysninger under [Gendan en inaktiv postkasse i Office 365](restore-an-inactive-mailbox.md).
 
@@ -50,7 +50,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af
 
 Som tidligere nævnt kan en politik for procesførelse, In-Place venteposition eller opbevaring være placeret i en inaktiv postkasse. Det første trin er at identificere ventepositionerne i en inaktiv postkasse.
   
-Kør følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
+[Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) og derefter køre følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
@@ -83,7 +83,7 @@ Når du har identificeret, hvilken type venteposition der er placeret i den inak
   
 ### <a name="remove-a-litigation-hold"></a>Fjern en procesførelsesventeposition
 
-Som tidligere nævnt skal du bruge Windows PowerShell til at fjerne en retslig venteposition fra en inaktiv postkasse. Du kan ikke bruge EAC. Kør følgende kommando for at fjerne en procesførelsesventeposition.
+Kør følgende PowerShell-kommando for at fjerne en retslig venteposition.
   
 ```powershell
 Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -LitigationHoldEnabled $false
@@ -102,7 +102,7 @@ Proceduren til fjernelse af en inaktiv postkasse fra en opbevaringspolitik for M
 
 #### <a name="remove-an-inactive-mailbox-from-an-organization-wide-retention-policy"></a>Fjern en inaktiv postkasse fra en opbevaringspolitik for hele organisationen
 
-Kør følgende kommando i Exchange Online PowerShell for at udelade en inaktiv postkasse fra en opbevaringspolitik for hele organisationen.
+Kør følgende PowerShell-kommando for at udelade en inaktiv postkasse fra en opbevaringspolitik for hele organisationen.
 
 ```powershell
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromOrgHolds <retention policy GUID without prefix or suffix>
@@ -110,7 +110,7 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromOrgHolds <retention polic
 
 Du kan finde flere oplysninger om, hvordan du identificerer opbevaringspolitikker for hele organisationen, som anvendes på en inaktiv postkasse og henter GUID'et for en opbevaringspolitik, i afsnittet "Get-OrganizationConfig" i [Sådan identificeres den type venteposition, der er placeret i en postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#get-organizationconfig).
 
-Du kan også køre følgende kommando for at fjerne den inaktive postkasse fra alle politikker for hele organisationen:
+Du kan også køre følgende PowerShell-kommando for at fjerne den inaktive postkasse fra alle politikker for hele organisationen:
 
 ```powershell
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
@@ -118,13 +118,13 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
 
 #### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Fjern en inaktiv postkasse fra en bestemt opbevaringspolitik for en placering
 
-Kør følgende kommando i [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) for at fjerne en inaktiv postkasse fra en eksplicit opbevaringspolitik.
+Brug [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) til at fjerne en inaktiv postkasse fra en eksplicit opbevaringspolitik:
 
 ```powershell
 Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -RemoveExchangeLocation <identity of inactive mailbox>
 ```
 
-Du kan finde flere oplysninger om, hvordan du identificerer specifikke politikker for placeringsopbevaring, der anvendes på en inaktiv postkasse og henter GUID'et for en opbevaringspolitik, i afsnittet "Hent-postkasse" i [Sådan identificeres den type venteposition, der er placeret i en postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox).
+Du kan finde flere oplysninger om identifikation af specifikke politikker for placeringsopbevaring, der anvendes på en inaktiv postkasse, og hente GUID'et for en opbevaringspolitik i afsnittet "Hent-postkasse" i [Sådan identificeres den type venteposition, der er placeret i en postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox).
 
 ### <a name="remove-in-place-holds"></a>Fjern In-Place ventepositioner
 

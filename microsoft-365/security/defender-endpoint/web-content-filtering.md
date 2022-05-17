@@ -6,8 +6,8 @@ ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -15,50 +15,51 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 01000e08153e96042e6873dc45fcb0627ea82e47
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: caee6f216ad5006eb31750d2c5cbd0d9e47f21ce
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782979"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438921"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
 
 > [!TIP]
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Filtrering af webindhold er en del af [webbeskyttelsesfunktionerne](web-protection-overview.md) i Microsoft Defender for Endpoint. Det gør det muligt for din organisation at spore og regulere adgangen til websteder baseret på deres indholdskategorier. Mange af disse websteder kan, selvom de ikke er skadelige, være problematiske på grund af overholdelsesregler, båndbreddeforbrug eller andre bekymringer.
+## <a name="what-is-web-content-filtering"></a>Hvad er filtrering af webindhold?
+
+Filtrering af webindhold er en del af [webbeskyttelsesfunktionerne](web-protection-overview.md) i Microsoft Defender for Endpoint og Microsoft Defender til virksomheder. Filtrering af webindhold gør det muligt for din organisation at spore og regulere adgangen til websteder baseret på deres indholdskategorier. Mange af disse websteder (selvom de ikke er skadelige) kan være problematiske på grund af overholdelsesregler, båndbreddeforbrug eller andre bekymringer.
 
 Konfigurer politikker på tværs af dine enhedsgrupper for at blokere bestemte kategorier. Blokering af en kategori forhindrer brugere i angivne enhedsgrupper i at få adgang til URL-adresser, der er knyttet til kategorien. FOR alle kategorier, der ikke er blokeret, overvåges URL-adresserne automatisk. Dine brugere kan få adgang til URL-adresserne uden afbrydelser, og du skal indsamle adgangsstatistikker for at hjælpe med at oprette en mere brugerdefineret politikbeslutning. Brugerne får vist en meddelelse om blokering, hvis et element på den side, de får vist, foretager kald til en blokeret ressource.
 
-Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke udført af Windows Defender SmartScreen (Microsoft Edge) og Network Protection (Chrome, Firefox, Brave og Opera). Du kan få flere oplysninger om browsersupport i afsnittet Forudsætninger.
+Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke udført af Windows Defender SmartScreen (Microsoft Edge) og Network Protection (Chrome, Firefox, Brave og Opera). Du kan få flere oplysninger om browsersupport i afsnittet [Forudsætninger](#prerequisites) .
 
 ## <a name="benefits-of-web-content-filtering"></a>Fordele ved filtrering af webindhold
 
 - Brugerne forhindres i at få adgang til websteder i blokerede kategorier, uanset om de søger i det lokale miljø eller væk fra webstedet.
-
-- Dit sikkerhedsteam kan nemt udrulle politikker til grupper af brugere ved hjælp af enhedsgrupper, der er defineret i [Microsoft Defender for Endpoint rollebaserede indstillinger for adgangskontrol](/microsoft-365/security/defender-endpoint/rbac).
-
 - Dit sikkerhedsteam kan få adgang til webrapporter på den samme centrale placering med synlighed over faktiske blokke og webforbrug.
+- Hvis du bruger Defender for Endpoint, kan dit sikkerhedsteam nemt udrulle politikker til grupper af brugere ved hjælp af enhedsgrupper, der er defineret i [Microsoft Defender for Endpoint rollebaserede indstillinger for adgangskontrol](/microsoft-365/security/defender-endpoint/rbac).
+- Hvis du bruger Defender for Business, kan du definere én politik for filtrering af webindhold, der skal anvendes på alle brugere. 
 
 ## <a name="prerequisites"></a>Forudsætninger
 
-Før du afprøver denne funktion, skal du sørge for at opfylde følgende krav:
+Før du afprøver denne funktion, skal du sikre dig, at du opfylder de krav, der er beskrevet i følgende tabel:
 
-- Dit abonnement omfatter en af følgende: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Sikkerhed, Microsoft 365 E3 eller Microsoft Defender for Endpoint  enkeltstående licens. 
-
-- Du har adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>.
-
-- Organisationens enheder kører Windows 10 jubilæumsopdatering (version 1607) eller nyere eller Windows 11 med de [nyeste antivirus-/antimalware-opdateringer](manage-updates-baselines-microsoft-defender-antivirus.md).
-
-- Windows Defender SmartScreen og Network Protection er aktiveret på organisationens enheder.
+| Krav | Beskrivelse |
+|:---|:---|
+| Abonnement | Dit abonnement skal indeholde en af følgende:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Sikkerhed<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 eller Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md) |
+| Portaladgang | Du skal have adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. |
+| Operativsystem | Organisationens enheder skal køre et af følgende operativsystemer med de [nyeste antivirus-/antimalwareopdateringer](manage-updates-baselines-microsoft-defender-antivirus.md): <br/>- Windows 11<br/>- Windows 10 jubilæumsopdatering (version 1607) eller nyere |
+| Relateret beskyttelse | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) og [netværksbeskyttelse](network-protection.md) skal være aktiveret på organisationens enheder. |
 
 ## <a name="data-handling"></a>Datahåndtering
 
@@ -66,7 +67,13 @@ Data gemmes i det område, der blev valgt som en del af [indstillingerne for Mic
 
 ## <a name="turn-on-web-content-filtering"></a>Slå filtrering af webindhold til
 
-Vælg **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** i navigationen til venstre i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a>. Rul ned, indtil du kan se posten for **filtrering af webindhold**. Skift til/fra-knappen til **indstillingerne** **Til** og Gem.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og log på.
+
+2. Vælg **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** i navigationsruden. 
+
+3. Rul ned, indtil du kan se **filtrering af webindhold**. 
+
+4. Skift til/fra-knappen til **Til**, og vælg derefter **Gem indstillinger**.
 
 ### <a name="configure-web-content-filtering-policies"></a>Konfigurer politikker for filtrering af webindhold
 
@@ -169,10 +176,12 @@ Hvis du vil tilføje en ny politik, skal du følge disse trin:
 
 4. Angiv politikområdet. Vælg enhedsgrupperne for at angive, hvor politikken skal anvendes. Det er kun enheder i de valgte enhedsgrupper, der forhindres i at få adgang til websteder i de valgte kategorier.
 
+   > [!IMPORTANT]
+   > Hvis du bruger Defender for Business, gælder det ikke for et bestemt niveau. Spring dette trin over, og fortsæt til trin 5.
+
 5. Gennemse oversigten, og gem politikken. Det kan tage op til to timer, før opdateringen af politikken gælder for de valgte enheder.
 
 > [!NOTE]
->
 > - Du kan installere en politik uden at vælge en hvilken som helst kategori i en enhedsgruppe. Denne handling opretter en politik, der kun tillader overvågning, for at hjælpe dig med at forstå brugeradfærd, før du opretter en blokpolitik.
 > - Hvis du fjerner en politik eller ændrer enhedsgrupper på samme tid, kan det medføre en forsinkelse i udrulningen af politikken.
 > - Blokering af kategorien "Ikke-kategoriseret" kan medføre uventede og uønskede resultater.

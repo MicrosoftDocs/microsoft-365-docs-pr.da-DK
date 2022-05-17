@@ -27,27 +27,27 @@ ms.custom:
 search.appverid:
 - MET150
 ROBOTS: NOINDEX
-description: Forstå, hvad du bør vide, før du går gennem tilmeldingsprocessen til Office 365.
+description: Forstå, hvad du har brug for at vide om de nyeste versioner af Office-programmerne, før du gennemgår tilmeldingsprocessen for Office 365.
 ms.date: 03/17/2021
-ms.openlocfilehash: 045540074b42b528c07d638d643f0d1b74e1f724
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 015f99a2f0b6f9fcd17592e399bccf044313f993
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588477"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436113"
 ---
 # <a name="how-to-sign-up---admin-help"></a>Sådan tilmelder du dig – Hjælp til administratorer
 
-Tilmeld dig en Microsoft 365 til virksomheder, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office-programmer.
+Tilmeld dig Microsoft 365 til virksomheder, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office programmer.
 
 ::: moniker range="o365-21vianet"
 
-Hvis du er i Kina, er Office 365 drevet af 21Vianet designet til at opfylde behovene for sikre, pålidelige og skalerbare skytjenester i Kina. Denne tjeneste drives af teknologi, som Microsoft har givet licens til 21Vianet. Microsoft driver ikke selve tjenesten. 21Vianet driver, leverer og administrerer levering af tjenesten. 21Vianet er den største udbyder af datacentertjenester, der er neutral for udbydere af datacentre i Kina, som udbyder hosting, administrerede netværkstjenester og skybaserede infrastrukturtjenester for databehandling. Ved at licensere Microsoft-teknologier driver 21Vianet lokale Microsoft-datacentre for at give dig mulighed for at bruge Microsoft-tjenester mens du holder dine data i Kina. 21Vianet leverer også dine abonnements- og faktureringstjenester samt support.
+Hvis du er i Kina, er Office 365, der drives af 21Vianet, designet til at opfylde behovene for sikre, pålidelige og skalerbare cloudtjenester i Kina. Denne tjeneste er drevet af teknologi, som Microsoft har givet licens til 21Vianet. Microsoft driver ikke selve tjenesten. 21Vianet driver, leverer og administrerer levering af tjenesten. 21Vianet er den største udbyder af mobilneutrale internetdatacentertjenester i Kina, der leverer hosting, administrerede netværkstjenester og cloudcomputinginfrastrukturtjenester. Ved at licensere Microsoft-teknologier driver 21Vianet lokale Microsoft-datacentre for at give dig mulighed for at bruge Microsoft-tjenester samtidig med, at dine data bevares i Kina. 21Vianet leverer også dit abonnement og faktureringstjenester samt support.
   
 > [!NOTE]
 > Disse tjenester er underlagt kinesisk lovgivning.
   
-Tilmeld dig Office 365 af 21Vianet, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office-programmer.
+Tilmeld dig Office 365, der drives af 21Vianet, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office programmer.
   
 Er du klar til at tilmelde dig? [Vælg en plan](https://products.office.com/zh-cn/business/compare-office-365-for-business-plans).
   
@@ -56,15 +56,15 @@ Er du klar til at tilmelde dig? [Vælg en plan](https://products.office.com/zh-c
 ::: moniker range="o365-worldwide"
 ## <a name="choose-a-plan"></a>Vælg en plan
 
-Før du køber, skal du overveje, hvilket abonnement du tilmelder dig. På den måde undgår du problemer, når din virksomhed på et senere tidspunkt får vokseværk.
+Før du køber, skal du overveje den plan, du tilmelder dig. Dette vil hjælpe med at forhindre voksende smerter senere.
 
-## <a name="watch-choose-a-microsoft-365-subscription"></a>Se: Vælg et Microsoft 365 abonnement
+## <a name="watch-choose-a-microsoft-365-subscription"></a>Se: Vælg et Microsoft 365-abonnement
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/906be77d-ded6-48fb-a25f-da110f787282]
 
-Hvis du synes, denne video var nyttig, kan du [se den komplette kursusserie til små virksomheder og dem, der er nye Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
 
-Har du brug for hjælp til at vælge en plan? Vores salgskonsulenter er klar til at besvare dine spørgsmål. Gå til [Sammenlign alle produkter,](https://products.office.com/compare-all-microsoft-office-products?tab=2) og vælg en af de kontaktsupportmuligheder, der vises i venstre side af siden.
+Har du brug for hjælp til at vælge en plan? Salgskonsulenter er tilgængelige til at besvare dine spørgsmål. Gå til [Sammenlign alle produkter](https://products.office.com/compare-all-microsoft-office-products?tab=2) , og vælg en af de kontaktsupportmuligheder, der er angivet i venstre side.
   
 ::: moniker-end
 
@@ -76,7 +76,7 @@ Gå til [Sammenlign alle produkter](https://products.office.com/compare-all-micr
   
 Hvis du starter med en gratis prøveversion, kan du [købe den senere](../../commerce/try-or-buy-microsoft-365.md). Alle dine brugere og data fra prøveversionen vil stadig være der.
   
-Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonnementet, udløber det automatisk ved udgangen af prøveperioden, og alle oplysninger slettes permanent.
+Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonnementet, udløber det automatisk i slutningen af prøveperioden, og alle oplysningerne slettes permanent.
 
 ## <a name="watch-sign-up-for-microsoft-365-business-premium"></a>Se: Tilmeld dig Microsoft 365 Business Premium
 
@@ -84,29 +84,29 @@ Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonn
 
 ::: moniker-end
 
-## <a name="youll-be-asked-for-the-following-information-when-you-sign-up"></a>Du vil blive bedt om følgende oplysninger, når du tilmelder dig
+## <a name="youll-be-asked-for-the-following-information-when-you-sign-up"></a>Du bliver bedt om følgende oplysninger, når du tilmelder dig
 
-- **Adressen og kontaktoplysningerne for dit abonnement:**
+- **Adresse og kontaktoplysninger for dit abonnement:**
 
-  - **Land** , hvor tjenesterne vil blive brugt. Du **vil ikke** kunne ændre landet senere, selv under tilmeldingsprocessen; skal du genstarte tilmeldingsguiden.
+  - **Land** , hvor tjenesterne skal bruges. Du **kan ikke** ændre landet senere, selv under tilmeldingsprocessen. Du skal genstarte guiden til tilmelding.
 
-  - **Mail** og **telefonnummer, så vi** kan kontakte dig om dit abonnement, hvis det er nødvendigt. Hvis du f.eks. glemmer din adgangskode, bruger vi disse oplysninger til at sende dig en midlertidig adgangskode. Vi sender også dine faktureringsoplysninger til den mailadresse, du angiver.
+  - **E-mail** og **telefonnummer** , så vi kan kontakte dig, hvis det er nødvendigt om dit abonnement. Hvis du f.eks. glemmer din adgangskode, vil vi bruge disse oplysninger til at sende dig en midlertidig. Vi sender også dine faktureringsoplysninger til den mailadresse, du angiver.
 
     > [!NOTE]
-    > Den mailadresse, du angiver her, er forskellig fra Microsoft 365 mailadresse (dit logonnavn nedenfor). Da vi også sender dine faktureringsoplysninger til denne mailadresse, anbefaler vi, at du bruger en mailadresse, der er passende til at modtage virksomhedsmail.
+    > Den mailadresse, du angiver her, er forskellig fra din Microsoft 365 mailadresse (dit logonnavn nedenfor). Da det er her, vi også sender dine faktureringsoplysninger, anbefaler vi, at du bruger en mailadresse, der er relevant for modtagelse af firmamail.
   
-- **Et logonnavn (bruger-id):** Dette bruger-id bliver din Microsoft 365 mailadresse, så du hurtigt kan komme i gang.
+- **Et logonnavn (bruger-id):** Dette bruger-id bliver din første Microsoft 365 mailadresse, bare for at komme hurtigt i gang.
 
-    Dette bruger-id er den mailadresse, du bruger til at logge på med. Hvis virksomhedens navn f.eks. er Fourth Coffee, kan du vælge rob@fourthcoffee.onmicrosoft.com som dit bruger-id.
+    Dette bruger-id er den mailadresse, du bruger til at logge på. Hvis dit virksomhedsnavn f.eks. er Fjerde kaffe, kan du vælge rob@fourthcoffee.onmicrosoft.com for dit bruger-id.
 
-    De fleste tilføjer deres eget brugerdefinerede domæne kort efter tilmeldingen, så de kan begynde at modtage mails til det. Hvis du f.eks. har et brugerdefineret domæne med fourthcoffee.com navn, kan du konfigurere din mailadresse som rob@fourthcoffee.com.
+    De fleste personer tilføjer deres eget brugerdefinerede domæne, kort efter de tilmelder sig, så de kan begynde at få mail til det. Hvis du f.eks. har et brugerdefineret domæne med navnet fourthcoffee.com, kan du konfigurere din mailadresse som rob@fourthcoffee.com.
 
 - **Betalingsoplysninger:**
 
     Du kan betale for dit abonnement med et kreditkort. Hvis omkostningerne når et bestemt beløb, kan du også have mulighed for at betale via faktura.
 
     > [!IMPORTANT]
-    >  Når du tilmelder dig, skal du sørge for at vælge den bedste betalingsmåde for din organisation. Når du ændrer betalingsmetode, skal du ringe til faktureringssupport.
+    >  Når du tilmelder dig, skal du sørge for at vælge den bedste betalingsmulighed for din organisation. Ændring af betalingsmuligheder omfatter opkald til faktureringssupport.
 
 ## <a name="watch-set-up-microsoft-365-business-premium"></a>Se: Konfigurer Microsoft 365 Business Premium
 
@@ -114,4 +114,4 @@ Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonn
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 til virksomhedsvideoer](../../business-video/index.yml) (linkside)
+[Microsoft 365 til træningsvideoer til virksomheder](../../business-video/index.yml) (linkside)

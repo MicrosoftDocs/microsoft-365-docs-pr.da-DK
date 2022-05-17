@@ -13,13 +13,13 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Administrer iOS-enheder i Basic Mobility og Security.
-ms.openlocfilehash: 99aa909bf9adab1464ad3858cfac4a04cc541609
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Hvis du vil administrere iOS-enheder, f.eks. iPads og iPhones i Basic Mobility and Security, skal du starte med at oprette et APN-certifikat.
+ms.openlocfilehash: 8bcbcdeac9f1cadd945c3f7c44e9192d57db7c82
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781155"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435783"
 ---
 # <a name="create-an-apns-certificate-for-ios-devices"></a>Opret et APNs-certifikat til iOS-enheder
 

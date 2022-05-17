@@ -22,13 +22,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Brug enten forenklet visning i Microsoft 365 til at administrere almindelige opgaver eller dashboardvisning for at få mere komplekse indstillinger og opgaver.
-ms.openlocfilehash: b75a4e63b313654be68d9569daa497a738520bbc
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+description: Brug enten forenklet visning i Microsoft 365 Administration til at administrere almindelige opgaver eller dashboardvisning for at få mere komplekse indstillinger og opgaver.
+ms.openlocfilehash: d553eff9a9ed78225200320bbadb5a7e28d517f0
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128821"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436135"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Oversigt over Microsoft 365 Administration
 

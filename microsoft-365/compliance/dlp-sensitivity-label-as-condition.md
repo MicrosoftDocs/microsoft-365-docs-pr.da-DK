@@ -20,14 +20,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de tjenester og elementtyper, du kan bruge følsomhedsmærkater som betingelser i DLP-politikker
-ms.openlocfilehash: 1117471e38b430f1d7289c6aae76994ac5acd494
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: bf0fcb327b2869e21a54de22822d0d51c72e25b8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63594331"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438450"
 ---
 # <a name="use-sensitivity-labels-as-conditions-in-dlp-policies"></a>Brug følsomhedsmærkater som betingelser i DLP-politikker
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan bruge [følsomhedsmærkater](sensitivity-labels.md) som en betingelse i DLP-politikker for disse placeringer:
 
@@ -36,13 +38,13 @@ Du kan bruge [følsomhedsmærkater](sensitivity-labels.md) som en betingelse i D
 - OneDrive for Business websteder
 - Windows 10 enheder
 
-Følsomhedsmærkater vises som en indstilling på **listen Indhold** indeholder.
+Følsomhedsmærkater vises som en indstilling på listen **Indhold indeholder** .
 
 > [!div class="mx-imgBorder"]
 > ![følsomhedsmærkat som en betingelse.](../media/dlp-sensitivity-label-as-a-condition.png)
 
 > [!IMPORTANT]
-> **FølsomhedSetiketter** som en betingelse er ikke tilgængelige, hvis du har **valgt at Teams chat og kanalmeddelelser** som en placering til at anvende DLP-politikken.
+> **Følsomhedsmærkater** som en betingelse vil ikke være tilgængelige, hvis du har valgt **Teams chat- og kanalmeddelelser** som en placering, hvor DLP-politikken skal anvendes.
 
 
 ## <a name="supported-items-scenarios-and-policy-tips"></a>Understøttede elementer, scenarier og politiktip
@@ -51,44 +53,44 @@ Du kan bruge følsomhedsmærkater som betingelser for disse elementer og i disse
 
 ### <a name="supported-items"></a>Understøttede elementer
 
-|Tjeneste  |Elementtype  |Tilgængelig for politiktip  |Kan håndhæves  |
+|Tjeneste  |Elementtype  |Tilgængelig for politiktip  |Eksigibel  |
 |---------|---------|---------|---------|
-|Exchange    |mail         |Ja         |Ja         |
-|Exchange    |vedhæftet fil i mail         |Nej         |ja *         |
+|Exchange    |mailmeddelelse         |Ja         |Ja         |
+|Exchange    |vedhæftet fil         |Nej         |Ja *         |
 |SharePoint Online     |elementer i SharePoint Online         |Ja         |Ja         |
-|OneDrive for Business     |elementer         |Ja         |Ja         |
+|OneDrive for Business     |Elementer         |Ja         |Ja         |
 |Teams     |Teams og kanalmeddelelser         |ikke tilgængelig         |ikke tilgængelig         |
-|Teams     |vedhæftede filer         |ja **         |ja **         |
-|Windows 10 enheder     |elementer         |Ja         |Ja         |
-|MCAS (preview) |elementer         |Ja         |Ja         |
+|Teams     |Vedhæftede filer         |ja **         |ja **         |
+|Windows 10 enheder     |Elementer         |Ja         |Ja         |
+|MCAS (prøveversion) |Elementer         |Ja         |Ja         |
 
-\*DLP-registrering af følsomhedsmærkater for vedhæftede filer i mails understøttes Office alle filtyper.
+\*DLP-registrering af vedhæftede filer i mails med følsomhedsmærkater understøttes kun for Open XML-baserede Office filtyper.
 
-\** Vedhæftede filer, der Teams via 1:1 chat eller kanaler, uploades automatisk til OneDrive for Business og SharePoint. Så hvis SharePoint Online eller OneDrive for Business er inkluderet som placeringer i din DLP-politik, medtages etiketterede vedhæftede filer, der er sendt i Teams, automatisk i omfanget af denne betingelse. Teams som en placering behøver ikke at være valgt i DLP-politikken.
+\** Vedhæftede filer, der sendes i Teams over 1:1 chat eller kanaler, uploades automatisk til OneDrive for Business og SharePoint. Så hvis SharePoint Online eller OneDrive for Business er inkluderet som placeringer i din DLP-politik, medtages navngivne vedhæftede filer, der sendes i Teams, automatisk i omfanget af denne betingelse. Teams som en placering behøver ikke at blive valgt i DLP-politikken.
 
 > [!NOTE]
-> DLP's mulighed for at registrere følsomhedsmærkater i SharePoint og OneDrive til virksomheder er begrænset. Få mere at vide under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
+> DLP's evne til at registrere følsomhedsmærkater i SharePoint og OneDrive til virksomheder er begrænset. Du kan få flere oplysninger under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
 
 ### <a name="supported-scenarios"></a>Understøttede scenarier
 
-- DLP-administratoren vil kunne se en liste over alle følsomhedsmærkater i lejeren, når de vælger at medtage en eller flere følsomhedsmærkater som en betingelse.
+- DLP-administratoren kan se en liste over alle følsomhedsmærkater i lejeren, når de vælger at inkludere en eller flere følsomhedsmærkater som en betingelse.
 
-- Brug af følsomhedsetiketter som en betingelse understøttes på tværs af alle arbejdsbelastninger som angivet i supportmatrixen ovenfor.
+- Brug af følsomhedsmærkater som en betingelse understøttes på tværs af alle arbejdsbelastninger som angivet i supportmatrixen ovenfor.
 
-- Tips til DLP-politik vil fortsat blive vist på tværs af arbejdsbelastninger (undtagen Outlook Win32) for DLP-politikker, der indeholder følsomhedsmærkat som en betingelse.
+- Tip til DLP-politikker vises fortsat på tværs af arbejdsbelastninger (undtagen Outlook Win32) for DLP-politikker, der indeholder følsomhedsmærkat som en betingelse.
 
-- Følsomhedsmærkater vises også som en del af mailen med hændelsesrapporten, hvis en DLP-politik med følsomhedsmærkat som en betingelse er matchet.
+- Følsomhedsmærkater vises også som en del af mailen med hændelsesrapporten, hvis der matches en DLP-politik med følsomhedsmærkat som en betingelse.
 
-- Oplysninger om følsomhedsmærkat vises også i DLP-reglens overvågningslog for match til DLP-politik, der indeholder følsomhedsmærkat som en betingelse.
+- Detaljer om følsomhedsmærkaten vises også i overvågningsloggen for DLP-reglens match for et DLP-politikmatch, der indeholder følsomhedsmærkat som en betingelse.
 
 
 ### <a name="support-policy-tips"></a>Tip til supportpolitik
 
 
-|Arbejdsbelastning  |Politiktip understøttes/understøttes ikke  |
+|Arbejdsbyrde  |Politiktip understøttes/understøttes ikke  |
 |---------|---------|
-|OWA |    understøttet     |
+|OWA |    Understøttes     |
 |Outlook Win 32    |  understøttes ikke       |
-|SharePoint   |   understøttet      |
-|OneDrive for Business    |    understøttet     |
+|SharePoint   |   Understøttes      |
+|OneDrive for Business    |    Understøttes     |
 |slutpunktsenheder   |  understøttes ikke       |

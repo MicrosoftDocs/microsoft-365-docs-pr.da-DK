@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Office 365 i Microsoft 365 Defender
 description: Få mere at vide om ændringer fra Security & Compliance Center til Microsoft 365 Defender.
-keywords: Microsoft 365 sikkerhed, Introduktion til Microsoft 365 Defender, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, MDO, MDE, enkelt glasrude, ny sikkerhedsportal, ny forsvarer sikkerhedsportal
+keywords: Microsoft 365 sikkerhed, Introduktion til Microsoft 365 Defender, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, MDO, MDE, ny sikkerhedsportal til defender
 ms.date: 02/21/2021
 ms.author: tracyp
 author: msfttracyp
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.prod: m365-security
 ms.technology: m365d
-ms.openlocfilehash: 84fed53ec1f12ebe7e52d0b789dc9db57360cf4f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4cd43c5f9e8ecad35ed574d5b60eaf1fa2e635d9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945555"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438280"
 ---
 # <a name="microsoft-defender-for-office-365-in-microsoft-365-defender"></a>Microsoft Defender for Office 365 i Microsoft 365 Defender
 
@@ -36,35 +36,32 @@ ms.locfileid: "64945555"
 
 I nedenstående tabel vises ændringerne i navigationen mellem Security & Compliance Center og Microsoft 365 Defender.
 
-<br>
-
 ****
 
 |[Security & Compliance Center](https://protection.office.com)|[Microsoft 365 Defender](https://security.microsoft.com)|[Microsoft Purview-overholdelsesportal](https://compliance.microsoft.com/homepage)|[Exchange Administration](https://admin.exchange.microsoft.com)|
 |---|---|---|---|
 |Beskeder|<ul><li>[Politikker for beskeder](https://security.microsoft.com/alertpolicies)</li><li>[Hændelser & beskeder](https://security.microsoft.com/alerts)</li></ul>|[Siden Beskeder](https://compliance.microsoft.com/homepage)||
-|Klassificering||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|Forebyggelse af datatab||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|Datastyring||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|Informationsstyring||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
+|Klassificering||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
+|Forebyggelse af datatab||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
+|Datastyring||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
+|Informationsstyring||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
 |Trusselsstyring|[Mail & samarbejde](https://security.microsoft.com/homepage)|||
-|Tilladelser|[Tilladelser & roller](https://security.microsoft.com/emailandcollabpermissions)|Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
+|Tilladelser|[Tilladelser & roller](https://security.microsoft.com/emailandcollabpermissions)|Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
 |Mailflow|||Se [Exchange Administration](https://admin.exchange.microsoft.com/#/)|
-|Beskyttelse af personlige data||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
+|Beskyttelse af personlige data||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
 |Søg|[Revision](https://security.microsoft.com/auditlogsearch?viewid=Async%20Search)|Søg (indholdssøgning)||
 |Rapporter|[Rapport](https://security.microsoft.com/emailandcollabreport)|||
-|Service assurance||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|Tilsyn||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|eDiscovery||Se [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/homepage)||
-|||||
+|Service assurance||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
+|Tilsyn||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
+|eDiscovery||Se [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/homepage)||
 
 [Microsoft 365 Defender](./microsoft-365-defender.md) at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a> kombinerer sikkerhedsfunktioner fra eksisterende Microsoft-sikkerhedsportaler, herunder Security & Compliance Center. Dette forbedrede center hjælper sikkerhedsteams med at beskytte deres organisation mod trusler mere effektivt og effektivt.
 
-Hvis du har kendskab til Security & Compliance Center (protection.office.com), beskrives nogle af ændringerne og forbedringerne i Microsoft 365 Defender i denne artikel.
+Hvis du er fortrolig med Security & Compliance Center (protection.office.com), beskrives nogle af ændringerne og forbedringerne i Microsoft 365 Defender i denne artikel.
 
 Få mere at vide om fordelene: [Oversigt over Microsoft 365 Defender](microsoft-365-defender.md)
 
-Hvis du leder efter elementer, der er relateret til overholdelse af angivne standarder, skal du besøge <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
+Hvis du leder efter elementer, der er relateret til overholdelse af angivne standarder, skal du besøge <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 ## <a name="new-and-improved-capabilities"></a>Nye og forbedrede funktioner
 
@@ -72,11 +69,11 @@ Den venstre navigationslinje eller værktøjslinjen Hurtig start vil se bekendt 
 
 Med den samlede Microsoft 365 Defender løsning kan du sy trusselssignalerne sammen og bestemme det fulde omfang og den fulde indvirkning af truslen, og hvordan den i øjeblikket påvirker organisationen.
 
-:::image type="content" source="../../media/M365-defender-converge-experience.png" alt-text="Den Microsoft 365 Defender konvergerede oplevelse" lightbox="../../media/M365-defender-converge-experience.png":::
+![Den Microsoft 365 Defender konvergerede oplevelse.](../../media/mdo-m36d-nav-collapsed.png)
 
 Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer.
 
-:::image type="content" source="../../media/Defender-for-O365.png" alt-text="Portalen Defender for Office 365" lightbox="../../media/Defender-for-O365.png":::
+![Portalen Defender for Office 365.](../../media/mdo-m365d-nav.png)
 
 ### <a name="incidents-and-alerts"></a>Hændelser og beskeder
 
@@ -85,7 +82,7 @@ Samler administration af hændelser og beskeder på tværs af dine mails, enhede
 - [Få mere at vide om undersøgelser](incidents-overview.md)
 - [Få mere at vide om administration af beskeder](/windows/security/threat-protection/microsoft-defender-atp/review-alerts)
 
-:::image type="content" source="../../media/converge-1-alerts-and-actions.png" alt-text="Værktøjslinjen Hurtig start af beskeder og handlinger på portalen Microsoft 365 Defender" lightbox="../../media/converge-1-alerts-and-actions.png":::
+![Værktøjslinjen Hurtig start af beskeder og handlinger på portalen Microsoft 365 Defender.](../../media/m365d-incident-nav.png)
 
 ### <a name="hunting"></a>Jagt
 
@@ -117,8 +114,8 @@ Få mere at vide om, hvordan [du sporer og reagerer på nye trusler med trussels
 
 Spor og undersøg trusler mod dine brugeres mail, spor kampagner m.m. Hvis du har brugt Security & Compliance Center, kender du dette.
 
-:::image type="content" source="../../media/converge-3-email-and-collab-new.png" alt-text="Menuen Hurtig start for Mail & Collab (eller MSDO) i navigationsruden til venstre på Microsoft 365 Defender-portalen" lightbox="../../media/converge-3-email-and-collab-new.png":::
-
+![Menuen Hurtig start for Mail & samling i venstre navigationsrude i Microsoft 365 Defender portalen.](../../media/mdo-m365d-nav.png)
+  
 #### <a name="email-entity-page"></a>Mailobjektside
 
 Siden [Mailobjekt](../office-365-security/mdo-email-entity-page.md) *samler* mailoplysninger, der tidligere var blevet punktoprettet på tværs af forskellige sider eller visninger. Undersøgelse af mail for trusler og tendenser *er centraliseret*. Sidehovedoplysninger og eksempelvisning af mails er tilgængelige via den samme mailside sammen med andre nyttige mailrelaterede oplysninger. På samme måde kan du finde detonationsstatus for vedhæftede filer eller URL-adresser på en fane på samme side. Enhedssiden Mail giver administratorer og sikkerhedsteams mulighed for at forstå en mailtrussel og dens status hurtigt og derefter handle hurtigt og fastlægge håndteringen hurtigt.
@@ -127,8 +124,8 @@ Siden [Mailobjekt](../office-365-security/mdo-email-entity-page.md) *samler* mai
 
 Få vist rapporter, rediger dine indstillinger, og rediger brugerroller.
 
-:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="Menuen Hurtig start til Microsoft 365 Defender tilladelser og rapportering i venstre navigationsrude på Microsoft 365 Defender-portalen" lightbox="../../media/converge-4-access-and-reporting-new.png":::
-
+![Menuen Hurtig start til Microsoft 365 Defender tilladelser og rapportering i venstre navigationsrude i Microsoft 365 Defender portalen.](../../media/m365d-settings-nav.png)
+  
 > [!NOTE]
 > DomainKeys Identificeret mail (DKIM) sikrer, at destinationens mailsystemer har tillid til meddelelser, der sendes udgående fra dit brugerdefinerede domæne.
 > For Defender for Office 365 brugere kan du nu *administrere og rotere* DKIM-nøgler via Microsoft 365 Defender: <https://security.microsoft.com/threatpolicy>eller navigere til sektionen **Politik & regler** \> **Trusselspolitikker** \> \> **Afsnittet** \> **Regler DKIM**.
@@ -139,8 +136,6 @@ Få vist rapporter, rediger dine indstillinger, og rediger brugerroller.
 
 Denne tabel er en hurtig reference til Threat Management, hvor der er sket ændringer mellem Security & Compliance Center og portalen Microsoft 365 Defender. Klik på linkene for at læse mere om disse områder.
 
-<br>
-
 ****
 
 |Område|Beskrivelse af ændring|
@@ -148,7 +143,6 @@ Denne tabel er en hurtig reference til Threat Management, hvor der er sket ændr
 |[Undersøgelse](../office-365-security/office-365-air.md#changes-are-coming-soon-in-your-microsoft-365-defender-portal)|Samler AIR-funktioner i [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) og [Defender for Endpoint](../defender-endpoint/automated-investigations.md). Med disse opdateringer og forbedringer kan dit team for sikkerhedshandlinger få vist oplysninger om automatiserede undersøgelser og afhjælpningshandlinger på tværs af din mail, samarbejdsindhold, brugerkonti og enheder på ét sted.|
 |[Beskedkø](../../compliance/alert-policies.md)|Pop op-vinduet **Vis beskeder** i Security & Compliance Center indeholder nu links til Microsoft 365 Defender. Klik på linket **Åbn beskedside**, og Microsoft 365 Defender åbnes. Du kan få adgang til siden **Vis beskeder** ved at klikke på en hvilken som helst Office 365 besked i køen Beskeder.|
 |[Træning i simulering af angreb](../office-365-security/attack-simulation-training-insights.md)|Brug oplæring af angrebssimulering til at køre realistiske angrebsscenarier i din organisation. Disse simulerede angreb kan hjælpe med at oplære din arbejdsstyrke, før et reelt angreb påvirker din organisation. Oplæring af angrebssimulering omfatter flere muligheder, forbedrede rapporter og forbedrede træningsflows, der gør det nemmere at levere og administrere dine angrebssimulerings- og træningsscenarier.|
-|
 
 Ingen ændringer af disse områder:
 

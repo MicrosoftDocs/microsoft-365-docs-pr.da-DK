@@ -17,29 +17,34 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 3589b6a0a0cc7af9e2bcfcb11541309042871591
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: b247bf7d4fdc1935a0b971f4d4687afd10eb0787
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173273"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437651"
 ---
 # <a name="what-is-microsoft-defender-for-business"></a>Hvad er Microsoft Defender for Business?
 
 Microsoft Defender til virksomheder er en ny sikkerhedsløsning til slutpunkter, der er udviklet specielt til små og mellemstore virksomheder (op til 300 medarbejdere). Med denne sikkerhedsløsning til slutpunkter er din virksomheds enheder bedre beskyttet mod ransomware, malware, phishing og andre trusler. 
 
-Se følgende video for at få mere at vide om Defender for Business: <br/><br/>
-
-> [!VIDEO https://www.youtube.com/embed/umhUNzMqZto]
-
 I denne artikel beskrives, hvad der er inkluderet i Defender for Business, med links til at få mere at vide om disse funktioner og funktioner.
-
-:::image type="content" source="media/mdb-offering-overview.png" alt-text="Microsoft Defender til virksomheder funktioner og egenskaber.":::
 
 >
 > **Har du et øjeblik?**
 > Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
 >
+
+## <a name="video-enterprise-grade-protection-for-small-and-medium-sized-businesses"></a>Video: Beskyttelse af små og mellemstore virksomheder i virksomhedsklasse
+
+Se følgende video for at få mere at vide om Defender for Business: <br/><br/>
+
+> [!VIDEO https://www.youtube.com/embed/umhUNzMqZto]
+
+
+:::image type="content" source="media/mdb-offering-overview.png" alt-text="Microsoft Defender til virksomheder funktioner og egenskaber.":::
+
+## <a name="whats-included-with-defender-for-business"></a>Det, der følger med Defender for Business
 
 Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din virksomhed bruger med:
 
@@ -75,5 +80,6 @@ Med Defender for Business kan du hjælpe med at beskytte de enheder og data, din
 
 ## <a name="next-steps"></a>Næste trin
 
+- [Prøv den interaktive vejledning: Kom i gang med Defender for Business](https://aka.ms/MDB-GetStartedGuide)
 - [Få mere at vide om den forenklede konfigurationsproces i Microsoft Defender til virksomheder](mdb-simplified-configuration.md)
 - [Få mere at vide om, hvordan du får Microsoft Defender til virksomheder](get-defender-business.md)

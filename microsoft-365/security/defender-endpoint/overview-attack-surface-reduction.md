@@ -18,13 +18,13 @@ ms.technology: mde
 ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
-ms.date: 1/18/2022
-ms.openlocfilehash: 5c3724989db1bd8e6389b8a70ba591ce4e109390
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.date: 05/16/2022
+ms.openlocfilehash: ec39e02b48471857932a63ba19547ff2ad1b3390
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787704"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438078"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Forstå og brug funktioner til reduktion af angrebsoverfladen
 
@@ -32,9 +32,9 @@ ms.locfileid: "64787704"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 **Platforme**
@@ -70,8 +70,8 @@ Hvis du vil konfigurere reduktion af angrebsoverfladen i dit miljø, skal du fø
 7. Konfigurer din netværksfirewall.
 
    1. Få et overblik over [Windows Defender Firewall med avanceret sikkerhed](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
-   2. Brug [designvejledningen til Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) til at beslutte, hvordan du vil designe dine firewallpolitikker.
-   3. Brug [installationsvejledningen til Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) til at konfigurere din organisations firewall med avanceret sikkerhed.
+   2. Brug [Windows Defender Firewall designvejledning](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) til at beslutte, hvordan du vil designe firewallpolitikker.
+   3. Brug [installationsvejledningen til Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) til at konfigurere organisationens firewall med avanceret sikkerhed.
 
 > [!TIP]
 > Når du konfigurerer funktioner til reduktion af angrebsoverfladen, kan du i de fleste tilfælde vælge mellem flere metoder:

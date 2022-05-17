@@ -24,44 +24,44 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Følg disse trin for at slette en tidligere medarbejders brugerkonto.
-ms.openlocfilehash: 631405b66c777060463a4e98620ff3c8b06c7e77
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Når du har gemt og fået adgang til alle en tidligere medarbejders brugerdata, kan du slette den tidligere medarbejders konto i Microsoft 365 Administration.
+ms.openlocfilehash: d6e53dd8d14add9383e3eff9d3c1d90a5087ec45
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63593860"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436259"
 ---
 # <a name="step-7---delete-a-former-employees-user-account"></a>Trin 7 – Slet en tidligere medarbejders brugerkonto
 
 Når du har gemt og fået adgang til alle den tidligere medarbejders brugerdata, kan du slette den tidligere medarbejders konto.
 
 > [!IMPORTANT]
-> Slet ikke kontoen, hvis du har konfigureret videresendelse af mail eller konverteret den til en delt postkasse. Begge dele skal bruge kontoen som forankring for videresendelse eller delt postkasse.
+> Slet ikke kontoen, hvis du har konfigureret videresendelse af mail eller konverteret den til en delt postkasse. Begge skal bruge kontoen for at forankre videresendelses- eller den delte postkasse.
 
-1. I Administration skal du gå til **siden Aktive** \> brugere <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">for</a> brugere.
+1. I Administration skal du gå til siden **Brugere** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Aktive brugere</a> .
 2. Vælg navnet på den medarbejder, du vil slette.
-3. Vælg Slet bruger under **brugerens navn**. Vælg de ønskede indstillinger for denne bruger, og vælg derefter **Slet bruger**. Hvis du allerede har givet en anden bruger adgang til denne brugers mail og OneDrive, behøver du ikke at gøre det igen her.
+3. Vælg **Slet bruger** under brugerens navn. Vælg de ønskede indstillinger for denne bruger, og vælg derefter **Slet bruger**. Hvis du allerede har givet en anden bruger adgang til denne brugers mail og OneDrive, behøver du ikke at gøre det igen her.
 
-Når du sletter en bruger, bliver kontoen inaktiv i ca. 30 dage. Du har indtil da til at gendanne kontoen, før den slettes permanent.
+Når du sletter en bruger, bliver kontoen inaktiv i ca. 30 dage. Indtil da skal du gendanne kontoen, før den slettes permanent.
 
 ## <a name="watch-delete-a-former-employees-user-account"></a>Se: Slet en tidligere medarbejders brugerkonto
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR]
 
-Hvis du synes, denne video var nyttig, kan du [se den komplette kursusserie til små virksomheder og dem, der er nye Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
 
 ## <a name="does-your-organization-use-active-directory"></a>Bruger din organisation Active Directory?
 
 Hvis din organisation synkroniserer brugerkonti til Microsoft 365 fra et lokalt Active Directory-miljø, skal du slette og gendanne disse brugerkonti i din lokale Active Directory-tjeneste. Du kan ikke slette eller gendanne dem i Office 365.
 
-Hvis du vil lære, hvordan du sletter og gendanner brugerkonto i Active Directory, [skal du se Slette en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)).
+Hvis du vil vide mere om, hvordan du sletter og gendanner en brugerkonto i Active Directory, skal du se [Slet en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)).
   
-Hvis du bruger en Azure Active Directory, skal du se [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) PowerShell-cmdlet'en.
+Hvis du bruger Azure Active Directory, skal du se [PowerShell-cmdlet'en Remove-MsolUser](/powershell/module/msonline/remove-msoluser).
   
-## <a name="what-you-need-to-know-about-terminating-an-employees-email-session"></a>Hvad du bør vide om at afslutte en medarbejders mailsession
+## <a name="what-you-need-to-know-about-terminating-an-employees-email-session"></a>Det har du brug for at vide om afslutning af en medarbejders mailsession
 
-Her er oplysninger om, hvordan du får en medarbejder væk fra mail (Exchange).
+Her er oplysninger om, hvordan du får en medarbejder ud af mail (Exchange).
 
 <br>
 
@@ -69,12 +69,12 @@ Her er oplysninger om, hvordan du får en medarbejder væk fra mail (Exchange).
 
 |Det kan du gøre|Sådan gør du det|
 |:-----|:-----|
-|Afslut en session (f.eks. Outlook på internettet, Outlook, Exchange aktiv synkronisering osv.), og gennemtving åbning af en ny session|Nulstil adgangskode|
-|Afslut en session, og bloker adgangen til fremtidige sessioner (for alle protokoller)|Deaktiver kontoen. For eksempel (i Exchange eller ved hjælp af PowerShell): <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
-|Afslut sessionen for en bestemt protokol (f.eks. ActiveSync)|Deaktiver protokollen. For eksempel (i Exchange eller ved hjælp af PowerShell): <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
+|Afslut en session (f.eks. Outlook på internettet, Outlook, Exchange aktiv synkronisering osv.), og tving til at åbne en ny session|Nulstil adgangskode|
+|Afslut en session, og bloker adgang til fremtidige sessioner (for alle protokoller)|Deaktiver kontoen. F.eks. (i Exchange Administration eller ved hjælp af PowerShell): <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
+|Afslut sessionen for en bestemt protokol (f.eks. ActiveSync)|Deaktiver protokollen. F.eks. (i Exchange Administration eller ved hjælp af PowerShell): <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
 |
 
-Ovennævnte handlinger kan udføres tre steder:
+Ovenstående handlinger kan udføres tre steder:
   
 <br>
 
@@ -82,16 +82,16 @@ Ovennævnte handlinger kan udføres tre steder:
 
 |Hvis du afslutter sessionen her|Hvor lang tid det tager|
 |---|---|
-|I Exchange Administration eller ved hjælp af PowerShell|Forventet forsinkelse er inden for 30 min.|
-|I Azure Active Directory Administration|Forventet forsinkelse er 60 min.|
-|I et lokalt miljø|Forventet forsinkelse er 3 timer eller mere|
+|I Exchange Administration eller ved hjælp af PowerShell|Den forventede forsinkelse er inden for 30 min.|
+|I Azure Active Directory Administration|Den forventede forsinkelse er 60 min.|
+|I et lokalt miljø|Den forventede forsinkelse er 3 timer eller mere|
 |
 
-### <a name="how-to-get-fastest-response-for-account-termination"></a>Sådan får du hurtigst svar ved lukning af konto
+### <a name="how-to-get-fastest-response-for-account-termination"></a>Sådan får du hurtigst svar på kontoafslutning
 
 **Hurtigst**: Brug Exchange Administration (brug PowerShell) eller Azure Active Directory Administration. I et lokalt miljø kan det tage flere timer at synkronisere ændringen via DirSync.
   
-Det hurtigste for en bruger med tilstedeværelse i det lokale miljø og i **Exchange-datacenteret**: Afslut sessionen ved hjælp af Azure Active Directory Administration/Exchange Administration, OG foretag også ændringen i det lokale miljø. Ellers bliver ændringen Azure Active Directory Administration/Exchange Administration overskrevet af DirSync.
+**Hurtigst for en bruger med tilstedeværelse i det lokale miljø og i Exchange Datacenter**: Afslut sessionen ved hjælp af Azure Active Directory Administration/Exchange Administration, og foretag også ændringen i det lokale miljø. Ellers overskrives ændringen i Azure Active Directory Administration/Exchange Administration af DirSync.
   
 ## <a name="related-content"></a>Relateret indhold
 

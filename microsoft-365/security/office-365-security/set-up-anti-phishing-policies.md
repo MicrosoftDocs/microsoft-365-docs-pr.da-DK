@@ -17,12 +17,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b8d75bbb520a2f31ff1d1b55d97e445748a110c
-ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
+ms.openlocfilehash: 786a71e37e9602be2c8de4637ffd5f83a70e7e59
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65349859"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438877"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Politikker til bekæmpelse af phishing i Microsoft 365
 
@@ -106,7 +106,7 @@ Følgende spoof-indstillinger er tilgængelige i politikker til bekæmpelse af p
   > - Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
   > - Deaktivering af beskyttelse mod spoofing deaktiverer kun _implicit_ spoofing-beskyttelse fra [kontrol af sammensatte godkendelser](email-validation-and-authentication.md#composite-authentication) . Hvis afsenderen ikke kan _udføre eksplicit_ [DMARC-kontrol](use-dmarc-to-validate-email.md) , hvor politikken er indstillet til at sætte den i karantæne eller afvises, er meddelelsen stadig sat i karantæne eller afvist.
 
-- **Ikke-godkendte afsendermeddelelser**: Disse meddelelser er kun tilgængelige, når spoof intelligence er slået til. Se oplysningerne i næste afsnit.
+- **Ikke-godkendte afsenderindikatorer**: Tilgængelige i afsnittet **Tip til sikkerhed & kun indikatorer** , når spoof intelligence er slået til. Se detaljerne i næste afsnit.
 - **Handlinger**: For meddelelser fra blokerede spoofede afsendere (automatisk blokeret af spoof intelligence eller manuelt blokeret på listen over tilladte/blokerede lejere) kan du også angive den handling, der skal udføres på meddelelserne:
   - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Dette er standardværdien. Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
   - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de ønskede modtagere. Du kan få oplysninger om karantæne i følgende artikler:
@@ -116,17 +116,17 @@ Følgende spoof-indstillinger er tilgængelige i politikker til bekæmpelse af p
 
     Hvis du vælger **Sæt meddelelsen i karantæne**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af spoof intelligence Protection. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-### <a name="unauthenticated-sender"></a>Ikke-godkendt afsender
+### <a name="unauthenticated-sender-indicators"></a>Ikke-godkendte afsenderindikatorer
 
-De ikke-godkendte afsendermeddelelser er en del af [de Spoof-indstillinger](#spoof-settings), der er tilgængelige i politikker til bekæmpelse af phishing i EOP og Defender for Office 365 som beskrevet i forrige afsnit. Følgende indstillinger er kun tilgængelige, når spoof intelligence er slået til:
+Ikke-godkendte afsenderindikatorer er en del af de [Spoof-indstillinger](#spoof-settings), der er tilgængelige i afsnittet **Sikkerhedstips & indikatorer** i politikker til bekæmpelse af phishing i både EOP og Defender for Office 365. Følgende indstillinger er kun tilgængelige, når spoof intelligence er slået til:
 
-- **Vis (?) for ikke-godkendte afsendere til spoof**: Denne meddelelse føjer et spørgsmålstegn til afsenderens foto i feltet Fra, hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC- eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication). Når denne indstilling er slået fra, føjes spørgsmålstegnet ikke til afsenderens foto.
+- **Vis (?) for ikke-godkendte afsendere til spoof**: Føjer et spørgsmålstegn til afsenderens foto i feltet Fra, hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication). Når denne indstilling er slået fra, føjes spørgsmålstegnet ikke til afsenderens foto.
 
-- **Vis "via"-mærket?**: Denne meddelelse tilføjer via-mærket (chris@contoso.com <u>via</u> fabrikam.com) i feltet Fra, hvis domænet i fra-adressen (den meddelelsesafsender, der vises i mailklienter) er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . Du kan få flere oplysninger om disse adresser under [En oversigt over standarder for mailmeddelelser](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
+- **Vis koden "via"**: Tilføjer via-mærket (chris@contoso.com <u>via</u> fabrikam.com) i feltet Fra, hvis domænet i fra-adressen (den meddelelsesafsender, der vises i mailklienter) er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . Du kan få flere oplysninger om disse adresser under [En oversigt over standarder for mailmeddelelser](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
 
 Hvis du vil forhindre, at spørgsmålstegnet eller via -mærket føjes til meddelelser fra bestemte afsendere, har du følgende muligheder:
 
-- Tillad den spoofede afsender i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt på [lejerlisten tillad/bloker](tenant-allow-block-list.md). Hvis du tillader den spoofede afsender, forhindres via-mærket i at blive vist i meddelelser fra afsenderen, når ikke-godkendt afsenderidentifikation er deaktiveret.
+- Tillad den spoofede afsender i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt på [lejerlisten tillad/bloker](tenant-allow-block-list.md). Hvis du tillader den spoofede afsender, forhindres via-mærket i at blive vist i meddelelser fra afsenderen, selvom **kodeindstillingen Vis "via"** er slået til i politikken.
 - [Konfigurer mailgodkendelse](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own) for afsenderdomænet.
   - For spørgsmålstegnet på afsenderens billede er SPF eller DKIM det vigtigste.
   - For via-koden skal du bekræfte, at domænet i **DKIM-signaturen eller MAIL FROM-adressen** matcher (eller er et underdomæne af) domænet i Fra-adressen.

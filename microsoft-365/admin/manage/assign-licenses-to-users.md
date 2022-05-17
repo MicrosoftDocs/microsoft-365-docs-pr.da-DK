@@ -26,14 +26,14 @@ ms.custom:
 search.appverid: MET150
 description: Tildel licenser, afhængigt af om du vil tildele produktlicenser til bestemte brugere eller tildele brugerlicenser til et bestemt produkt.
 ms.date: 04/22/2022
-ms.openlocfilehash: 32c91c82388cdb87b0dd6b980b51b888d1cec521
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 71b6886ed8248f05339e135f96b24f2af2282e0b
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092619"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437547"
 ---
-# <a name="assign-licenses-to-users"></a>Tildel licenser til brugerne
+# <a name="assign-microsoft-365-licenses-to-users"></a>Tildel brugere Microsoft 365 licenser
 
 Du kan tildele licenser til brugere på siden **Aktive brugere** eller på siden **Licenser** . Den metode, du bruger, afhænger af, om du vil tildele produktlicenser til bestemte brugere eller tildele brugerlicenser til et bestemt produkt.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Trin 3: Slette og blokere en tidligere medarbejders mobilenhed'
+title: Trin 3 – Slet og bloker en tidligere medarbejders mobilenhed
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -25,26 +25,26 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Følg disse trin for at blokere en tidligere medarbejders adgang til mobilenheder.
-ms.openlocfilehash: 8d6423611b1bf228fbfd5bf13037ade4033013a0
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Brug Exchange Administration til at slette og blokere en tidligere medarbejders enhed, så alle organisationsdata fjernes, og der oprettes ikke længere forbindelse til Microsoft 365.
+ms.openlocfilehash: 5ee94e9f9bfff2e4f257bf0ff3364806136e3f42
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63595920"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436597"
 ---
-# <a name="step-3---wipe-and-block-a-former-employees-mobile-device"></a>Trin 3: Slette og blokere en tidligere medarbejders mobilenhed
+# <a name="step-3---wipe-and-block-a-former-employees-mobile-device"></a>Trin 3 – Slet og bloker en tidligere medarbejders mobilenhed
 
-Hvis den tidligere medarbejder havde en organisationstelefon, kan du bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange</a> Administration til at slette og blokere enheden, så alle organisationens data fjernes fra enheden, og den ikke længere kan oprette forbindelse til Office 365. Hvis din organisation bruger Grundlæggende mobilitet og sikkerhed til at administrere mobilenheder, kan du slette og blokere disse enheder ved hjælp af Grundlæggende mobilitet og sikkerhed.
+Hvis din tidligere medarbejder havde en organisationstelefon, kan du bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til at slette og blokere enheden, så alle organisationsdata fjernes fra enheden, og den kan ikke længere oprette forbindelse til Office 365. Hvis din organisation bruger Basic Mobility og Security til at administrere mobilenheder, kan du slette og blokere disse enheder ved hjælp af Basic Mobility og Security.
 
-## <a name="wipe-mobile-device-using-the-exchange-admin-center"></a>Slette mobilenhed ved Exchange Administration
+## <a name="wipe-mobile-device-using-the-exchange-admin-center"></a>Slet mobilenhed ved hjælp af Exchange Administration
 
-1. Gå til Exchange Administration > **Modtageres** \> <a href="https://go.microsoft.com/fwlink/?linkid=2183135" target="_blank">postkasser</a>.
-1. Vælg brugeren, og vælg **Vis detaljer** under **Mobilenheder**.
-1. På siden **Detaljer om mobilenhed** under **Mobilenheder skal** du vælge mobilenheden, vælge Slet DataWipe-enhed ![](../../media/1c113a36-53cb-4974-884f-3ecd9535506e.png)og derefter vælge **Bloker**.
+1. Gå til Exchange Administration > <a href="https://go.microsoft.com/fwlink/?linkid=2183135" target="_blank">modtagerpostkasser</a>\>.
+1. Vælg brugeren, og vælg **Få vist detaljer** under **Mobilenheder**.
+1. På siden **Oplysninger om mobilenhed** under **Mobilenheder** skal du vælge mobilenheden, vælge **Slet dataWipe**![ Enhed](../../media/1c113a36-53cb-4974-884f-3ecd9535506e.png) og derefter vælge **Bloker**.
 1. Vælg **Gem**.
    > [!TIP]
-   > Sørg for at fjerne eller deaktivere brugeren fra din lokale Blackberry Enterprise Service. Du bør også deaktivere Blackberry-enheder for brugeren. Se Blackberry Business Cloud Services-administrationsvejledning, hvis du har brug for specifikke trin til, hvordan du deaktiverer brugeren.
+   > Sørg for at fjerne eller deaktivere brugeren fra din Blackberry Enterprise Service i det lokale miljø. Du bør også deaktivere enhver Blackberry-enheder for brugeren. Se Blackberry Business Cloud Services Administration Guide, hvis du har brug for specifikke trin til, hvordan du deaktiverer brugeren.
 
 ## <a name="related-content"></a>Relateret indhold
 

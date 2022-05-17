@@ -18,13 +18,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Brug Basic Mobility og Security til at angive politikker for enhedssikkerhed og adgangsregler.
-ms.openlocfilehash: b4752a6f1b71c453b3d1b89adeb25f337a65c255
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Administrer og sikker mobilenheder, der er forbundet til din Microsoft 365 organisation, ved at konfigurere og bruge Grundlæggende mobilitet og sikkerhed.
+ms.openlocfilehash: ca2f5f18dc67517fd9af3bf4f1d1a05e17010c35
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780847"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435695"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Oversigt over grundlæggende mobilitet og sikkerhed for Microsoft 365
 

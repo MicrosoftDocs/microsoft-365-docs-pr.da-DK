@@ -26,14 +26,14 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Administratorroller, f.eks. tjenesteadministrator, knyttes til forretningsfunktioner og giver tilladelse til at udføre bestemte opgaver i Administration.
-ms.openlocfilehash: 8a1df118b5dfe1ad484f3a8048cce9cf748ab54b
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 01659905becdbd599c9d597e4a7dac3533d1eeb9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937657"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435319"
 ---
-# <a name="about-admin-roles"></a>Om administratorroller
+# <a name="about-admin-roles-in-the-microsoft-365-admin-center"></a>Om administratorroller i Microsoft 365 Administration
 
 Microsoft 365- eller Office 365-abonnementet fås med et sæt administratorroller, som du kan tildele til brugere i organisationen ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. De enkelte administratorroller relaterer til almindelige forretningsfunktioner og giver personer tilladelse til at udføre bestemte opgaver i Administrationerne.
 

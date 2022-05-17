@@ -15,20 +15,21 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 00f0471e32147f7171f60887d28386d6b7df204d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 99790921d51bf6d7b5a7268c541b4f754e7b99c9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414717"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438855"
 ---
 # <a name="next-generation-protection-overview"></a>Oversigt over næste generations beskyttelse
 
 **Gælder for**
 
 - Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/index.yml)
 
 **Platforme**
 - Windows
@@ -40,7 +41,7 @@ Microsoft Defender for Endpoint omfatter næste generations beskyttelse for at s
 - [Dedikeret beskyttelse og produktopdateringer](manage-updates-baselines-microsoft-defender-antivirus.md), som omfatter opdateringer, der er relateret til at holde Microsoft Defender Antivirus opdateret.
 
 > [!TIP]
-> Næste generations beskyttelse er inkluderet i både Microsoft Defender for Endpoint Plan 1 og Plan 2. [Få mere at vide om Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md)
+> Næste generations beskyttelse er inkluderet i både Microsoft Defender for Endpoint Plan 1 og Plan 2. [Få mere at vide om Defender for Endpoint Plan 1 og Plan 2](defender-endpoint-plan-1-2.md) Næste generations beskyttelse er også inkluderet i Microsoft Defender til virksomheder og Microsoft 365 Business Premium. [Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder](../defender-business/compare-mdb-m365-plans.md).
 
 ## <a name="try-a-demo"></a>Prøv en demo!
 
@@ -61,7 +62,7 @@ Du kan finde oplysninger om, hvordan du konfigurerer næste generations beskytte
 > Konfiguration og administration er stort set den samme i Windows Server som i Windows klienter. Der er dog nogle forskelle. 
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

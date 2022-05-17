@@ -24,33 +24,33 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du gemmer indholdet af en tidligere medarbejders postkasse.
-ms.openlocfilehash: 67664bfe7cdb62b772a441bf205d3e47b9986a58
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Når du har blokeret en brugers mulighed for at logge på din organisation, kan du få mere at vide om to måder, du kan gemme indholdet af den tidligere medarbejders postkasse på.
+ms.openlocfilehash: 05d3ba3a4a6cc25758d3572af330231c41a24394
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63599393"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436619"
 ---
 # <a name="step-2---save-the-contents-of-a-former-employees-mailbox"></a>Trin 2 – Gem indholdet af en tidligere medarbejders postkasse
 
-I dette trin skal du placere et retsligt sæt i venteposition eller et direkte sæt i venteposition på brugeren eller eksportere Outlook til en .pst-fil.
+I dette trin skal du placere en venteposition for procesførelse eller bevarelse på stedet for brugeren, eller eksportér brugerens Outlook data til en .pst-fil.
 
-## <a name="place-hold-or-export-users-data-to-a-pst-file"></a>Placere eller eksportere brugerens data til en .pst-fil
+## <a name="place-hold-or-export-users-data-to-a-pst-file"></a>Placer venteposition eller eksportér brugerens data til en .pst-fil
 
-Når du har blokeret en bruger fra at kunne logge på din organisation, kan du gemme indholdet af brugerens postkasse. Der er to måder, hvorpå du kan gemme indholdet af den tidligere medarbejders postkasse.
+Når du har blokeret en brugers mulighed for at logge på din organisation, kan du gemme indholdet af brugerens postkasse. Du kan gemme indholdet af den tidligere medarbejders postkasse på to måder.
   
-1. Placer en retslig venteposition eller In-Place hold på postkassen, før du sletter brugerkontoen. Dette er meget mere kompliceret end den anden mulighed, men værd at gøre, hvis: din Enterprise-plan omfatter arkivering og retslig venteposition, procesførelse er en mulighed, og du har en teknisk stærk it-afdeling.
+1. Placer en retslig venteposition eller In-Place venteposition på postkassen, før brugerkontoen slettes. Dette er meget mere kompliceret end den anden mulighed, men værd at gøre, hvis: Din Enterprise-plan omfatter arkivering og juridisk bevarelse, procesførelse er en mulighed, og du har en teknisk stærk it-afdeling.
 
-    Når du har konverteret postkassen til en "inaktiv postkasse", kan administratorer, compliance officers eller records managers bruge In-Place eDiscovery-værktøjer i Exchange Online til at få adgang til og søge i indholdet.
+    Når du har konverteret postkassen til en "inaktiv postkasse", kan administratorer, overholdelsesansvarlige eller dataadministratorer bruge In-Place eDiscovery-værktøjer i Exchange Online til at få adgang til og søge i indholdet.
 
-    Inaktive postkasser kan ikke modtage mails og vises ikke i organisationens delte adressekartotek eller andre lister.
+    Inaktive postkasser kan ikke modtage mail og vises ikke i organisationens delte adressekartotek eller andre lister.
 
-    Du kan få mere at vide om, hvordan du placerer en venteposition på en postkasse, under [Administrer inaktive postkasser Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).
+    Hvis du vil vide mere om, hvordan du placerer en venteposition på en postkasse, skal du se [Administrer inaktive postkasser i Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).
 
     **ELLER**
 
-2. Føj den tidligere medarbejders mailadresse til din version af Outlook på skrivebordet, og eksportér derefter dataene til en .pst-fil. Du kan importere dataene til en anden mailkonto efter behov. Se Trin [4 – Giv en anden medarbejder adgang til OneDrive og Outlook data](remove-former-employee-step-4.md).
+2. Føj den tidligere medarbejders mailadresse til din version af Outlook på Desktop, og eksportér derefter dataene til en .pst-fil. Du kan importere dataene til en anden mailkonto efter behov. Se [trin 4 – Giv en anden medarbejder adgang til OneDrive og Outlook data](remove-former-employee-step-4.md).
 
 ## <a name="related-content"></a>Relateret indhold
 

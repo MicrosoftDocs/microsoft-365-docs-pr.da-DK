@@ -24,14 +24,14 @@ search.appverid:
 - MOE150
 ms.assetid: 0b0bd900-68b1-4bf5-808b-5d240a7739f4
 description: 'Få mere at vide om, hvordan du kan have mere end én mailadresse, der kaldes et mailalias, tilknyttet din Microsoft 365 til virksomhedskonto. '
-ms.openlocfilehash: 19303cb2c60455713595dbe23a23bae7e57efb71
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 2951b5eef21748ace22bee50afb24f86123fa46a
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780209"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437453"
 ---
-# <a name="add-another-email-alias-for-a-user"></a>Føj et andet mailalias til en bruger
+# <a name="add-another-email-alias-for-a-microsoft-365-business-subscription-user"></a>Tilføj et andet mailalias for en bruger af et Microsoft 365 virksomhedsabonnement
   
 Denne artikel henvender sig til Microsoft 365 administratorer, der har virksomhedsabonnementer. Det er ikke til private brugere.
   
@@ -45,7 +45,7 @@ Du kan oprette op til 400 aliasser for en bruger. Der kræves ingen ekstra gebyr
 > Hvis flere personer skal administrere mails, der sendes til en enkelt mailadresse, f.eks. info@NodPublishers.com eller sales@NodPublishers.com, skal du oprette en delt postkasse. Du kan få mere at vide under [Opret en delt postkasse](create-a-shared-mailbox.md).
 
 > [!TIP]
-> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft-specialist i mindre virksomheder](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist får du og dine medarbejdere døgnet rundt adgang til specialister i mindre virksomheder, efterhånden som du udvikler din virksomhed – lige fra onboarding til daglig brug.
+> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
   
 ## <a name="add-email-aliases-to-a-user"></a>Føj mailaliasser til en bruger
 

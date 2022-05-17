@@ -1,5 +1,5 @@
 ---
-title: Slå krav til stærke adgangskoder fra for brugere
+title: Deaktiver stærke adgangskodekrav for brugere
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,29 +20,29 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du angiver stærke adgangskodekrav for dine brugere ved hjælp Windows PowerShell.
-ms.openlocfilehash: 5932f01c2f17a72f4f6a20a6457d263bed7dd85e
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+description: Hvis du er administrator og administrerer adgangskodepolitik for en virksomhed, skole eller nonprofitorganisation, kan du angive stærke adgangskodekrav ved hjælp af Windows PowerShell.
+ms.openlocfilehash: 20bea953207a85b589bf1ae821f988a3cfe8e22c
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63594349"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436179"
 ---
-# <a name="turn-off-strong-password-requirements-for-users"></a>Slå krav til stærke adgangskoder fra for brugere
+# <a name="turn-off-strong-password-requirements-for-users"></a>Deaktiver stærke adgangskodekrav for brugere
 
-I denne artikel forklares det, hvordan du deaktiverer stærke adgangskodekrav for dine brugere. Stærke adgangskodekrav er som standard slået til i din Microsoft 365 for virksomhedsorganisation. Din organisation har muligvis krav om at deaktivere stærke adgangskoder. Følg nedenstående trin for at slå krav til stærke adgangskoder fra. Du skal udføre disse trin ved hjælp af PowerShell.
+I denne artikel forklares det, hvordan du deaktiverer stærke adgangskodekrav for dine brugere. Stærke krav til adgangskoder er som standard slået til i din Microsoft 365 for virksomhedsorganisation. Din organisation kan have krav om at deaktivere stærke adgangskoder. Følg nedenstående trin for at slå stærke krav til adgangskoder fra. Du skal fuldføre disse trin ved hjælp af PowerShell.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Denne artikel er til personer, der administrerer adgangskodepolitik for en virksomhed, skole eller non-profit organisation. For at fuldføre disse trin skal du logge på med Microsoft 365 administratorkonto. [Hvad er en administratorkonto?] (Oversigt over Microsoft 365 Administration](.. /admin-overview/admin-center-overview.md) Du skal være [global administrator eller adgangskodeadministrator for](about-admin-roles.md) at udføre disse trin.
+Denne artikel er til personer, der administrerer adgangskodepolitikken for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365 administratorkonto. [Hvad er en administratorkonto?] (Oversigt over Microsoft 365 Administration](.. /admin-overview/admin-center-overview.md) Du skal være [global administrator eller adgangskodeadministrator](about-admin-roles.md) for at kunne udføre disse trin.
 
 Du skal også oprette forbindelse til Microsoft 365 med PowerShell.
 
 ## <a name="set-strong-passwords"></a>Angiv stærke adgangskoder
 
-1. [Forbind til Microsoft 365 med PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+1. [Forbind til at Microsoft 365 med PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
-2. Ved hjælp af PowerShell kan du deaktivere stærke adgangskodekrav for alle brugere med følgende kommando:
+2. Ved hjælp af PowerShell kan du slå stærke adgangskodekrav fra for alle brugere med følgende kommando:
 
     ```powershell
     Get-MsolUser | Set-MsolUser -StrongPasswordRequired $false
@@ -54,7 +54,7 @@ Du skal også oprette forbindelse til Microsoft 365 med PowerShell.
     ```
 
 > [!NOTE]
-> userPrincipalName skal være i internetformatet, hvor brugernavnet efterfølges af snultegnet (@) og et domænenavn. For eksempel: user@contoso.com.
+> UserPrincipalName skal være i internetlogonformatet, hvor brugernavnet efterfølges af at-tegnet (@) og et domænenavn. Eksempel: user@contoso.com.
 
 ## <a name="related-content"></a>Relateret indhold
 

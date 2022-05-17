@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c6e2b52c9dbde60dfb554dd92c8a0cae2ba05ced
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: c1248c7192c9bd085938ae6436589a4445dd8ee8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302282"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437955"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -172,8 +172,8 @@ Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis første k
 |**Handlinger**|||||
 |**Hvis meddelelsen registreres som spoof** <br/><br/> _AuthenticationFailAction_|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <br/><br/> `MoveToJmf`|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <br/><br/> `MoveToJmf`|**Sæt meddelelsen i karantæne** <br/><br/> `Quarantine`|Denne indstilling gælder for spoofede afsendere, der automatisk blev blokeret som vist i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt blokeret på [listen over tilladte/blokerede lejere](tenant-allow-block-list.md). <br/><br/> Hvis du vælger **Sæt meddelelsen i karantæne**, er feltet **Anvend karantænepolitik** tilgængeligt for at vælge den karantænepolitik, der definerer, hvad brugerne må gøre med meddelelser, der er sat i karantæne som spoofing. Når du opretter en ny anti-phishing-politik, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der blev sat i karantæne som spoofing (DefaultFullAccessPolicy). <br/><br/> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer mere restriktive eller mindre restriktive funktioner for brugerne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
 |**Vis første kontakt sikkerhedstip** <br/><br/> _EnableFirstContactSafetyTips_|Ikke markeret <br/><br/> `$false`|Ikke markeret <br/><br/> `$false`|Ikke markeret <br/><br/> `$false`|Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
-|**Vis (?) for ikke-godkendte afsendere for spoof** <br/><br/> _EnableUnauthenticatedSender_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificerede forfalskede afsendere. Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|**Vis mærket "via"** <br/><br/> _EnableViaTag_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . <br/><br/> Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).|
+|**Vis (?) for ikke-godkendte afsendere for spoof** <br/><br/> _EnableUnauthenticatedSender_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificerede forfalskede afsendere. Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).|
+|**Vis mærket "via"** <br/><br/> _EnableViaTag_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . <br/><br/> Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).|
 
 ## <a name="microsoft-defender-for-office-365-security"></a>Microsoft Defender for Office 365 sikkerhed
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: 9b9427fc736dfee3ea326b8c523d3f872ad98c70
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 56b6d53d56c8f9fb16e900271b8d6a4c152f6440
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286094"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437999"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold på Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -47,9 +47,6 @@ Ud over at bruge [følsomhedsmærkater](sensitivity-labels.md) til at klassifice
 Når du anvender denne følsomhedsmærkat på en understøttet objektbeholder, anvender mærkaten automatisk klassificeringen og de konfigurerede beskyttelsesindstillinger på webstedet eller gruppen.
 
 Indholdet i disse objektbeholdere arver dog ikke mærkaterne til klassificeringen eller indstillingerne for filer og mails, f.eks. visuelle markeringer og kryptering. Så brugerne kan mærke deres dokumenter på SharePoint websteder eller på teamwebsteder, skal du sørge for, at du har [aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
-
-> [!NOTE]
-> Følsomhedsmærkater for objektbeholdere understøttes ikke sammen med Office 365 CDN'er (Content Delivery Networks).
 
 ## <a name="using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug af følsomhedsmærkater til Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -150,7 +147,7 @@ Det er ikke alle apps, der understøtter godkendelseskontekster. Hvis en bruger 
 
 - Office på internettet, som omfatter Outlook til internettet
 
-- Microsoft Teams til Windows og macOS (ekskluderer Teams webapp)
+- Microsoft Teams til Windows og macOS (omfatter ikke Teams webapp)
 
 - Microsoft Planner
 
@@ -183,7 +180,7 @@ Kendte begrænsninger for denne prøveversion:
 
 ### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>Konfigurer indstillinger for standardlinktypen for deling for et websted ved hjælp af avancerede powerShell-indstillinger
 
-Ud over mærkatindstillingerne for websteder og grupper, som du kan konfigurere fra Microsoft Purview-overholdelsesportalen, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
+Ud over etiketindstillingerne for websteder og grupper, som du kan konfigurere fra Microsoft Purview-compliance-portal, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
 
 Du kan finde flere oplysninger og instruktioner [under Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md).
 

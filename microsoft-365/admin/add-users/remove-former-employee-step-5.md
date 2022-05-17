@@ -25,13 +25,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Følg trinnene i denne artikel for at give en anden medarbejder adgang til den tidligere medarbejders OneDrive og Outlook data.
-ms.openlocfilehash: c710826d0403c6935127f14dade3dfe30a8b5c13
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+description: Følg trinnene i denne artikel for at få adgang til en tidligere medarbejders OneDrive og Outlook data, sikkerhedskopiere dem og vælge, om du vil give adgang til en anden medarbejder.
+ms.openlocfilehash: 2ec2b2418fd5ca287c51950c23e403168d09f48f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129194"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436553"
 ---
 # <a name="step-5---give-another-employee-access-to-onedrive-and-outlook-data"></a>Trin 5 – Giv en anden medarbejder adgang til OneDrive og Outlook data
 
@@ -77,7 +77,7 @@ Du kan også give adgang til en anden bruger for at få adgang til en tidligere 
 
 9. Føj brugeren til **administratorer af gruppen af websteder,** og vælg **OK**.
 
-10. Brugeren kan nu få adgang til den tidligere medarbejders OneDrive ved hjælp af URL-adressen til OneDrive. Du kan få flere oplysninger under [Om OneDrive URL-adresser](/onedrive/list-onedrive-urls#about-onedrive-urls).
+10. Brugeren kan nu få adgang til den tidligere medarbejders OneDrive ved hjælp af URL-adressen til OneDrive. 
 
 ### <a name="revoke-admin-access-to-a-users-onedrive"></a>Tilbagekald administratoradgang til en brugers OneDrive
 

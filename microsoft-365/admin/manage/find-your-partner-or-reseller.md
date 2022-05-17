@@ -23,42 +23,42 @@ search.appverid:
 - MOE150
 - BEA160
 ms.assetid: b6c18a9b-2aed-4c84-9d75-af709160258c
-description: Få mere at vide om, hvordan du Microsoft 365 en ny partner, eller få kontaktoplysninger for en partner, du har arbejdet med tidligere.
-ms.openlocfilehash: d50c829281654842079a2124be4f8a8e16e993bf
-ms.sourcegitcommit: 166bf635c0905ae12c04b1865cb17aadef81e82a
+description: Få mere at vide om, hvordan du finder en ny Microsoft 365 partner eller får kontaktoplysninger til en partner, du tidligere har arbejdet med.
+ms.openlocfilehash: 3fe7a2ded991bf8b3603ea992fcd64c6d7866c90
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "63590155"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437546"
 ---
-# <a name="find-your-partner-or-reseller"></a>Find din partner eller forhandler
+# <a name="find-your-microsoft-365-subscriptions-partner-or-reseller"></a>Find din Microsoft 365-abonnementspartner eller -forhandler
 
-Som administrator kan du arbejde sammen med en partner om at købe, aktivere og forny Microsoft 365-abonnementer via et Microsoft Open Volume Licensing-program. 
+Som administrator kan du samarbejde med en partner om at købe, aktivere og forny Microsoft 365 abonnementer via et Microsoft Open Volume Licensing-program. 
   
- **Ved du ikke, om Open Volume Licensing er noget for dig?** Se oversigten [over Microsoft Open-programmer](https://go.microsoft.com/fwlink/p/?LinkId=613298).
+ **Er du ikke sikker på, om Open Volume Licensing er noget for dig?** Se [oversigten over Microsoft Open-programmer](https://go.microsoft.com/fwlink/p/?LinkId=613298).
   
 ## <a name="find-a-new-partner-or-reseller"></a>Find en ny partner eller forhandler
 
-Hvis du er klar til at købe eller forny Microsoft 365 via Open Volume Licensing, eller hvis du blot ønsker flere oplysninger om at arbejde med en partner, kan du vælge en indstilling nedenfor. 
+Hvis du er klar til at købe eller forny Microsoft 365 via Open Volume Licensing, eller du blot vil have flere oplysninger om at arbejde med en partner, skal du vælge en mulighed nedenfor. 
   
 - [Søg efter en Microsoft-certificeret servicepartner](https://go.microsoft.com/fwlink/p/?LinkId=613304)
     
-- [Ring til Microsoft Volumenlicens](https://go.microsoft.com/fwlink/p/?LinkId=613305)
+- [Ring til Microsoft Volume Licensing](https://go.microsoft.com/fwlink/p/?LinkId=613305)
     
-## <a name="find-contact-information-for-a-partner-youve-worked-with-in-the-past"></a>Find kontaktoplysninger for en partner, du har arbejdet med tidligere
+## <a name="find-contact-information-for-a-partner-youve-worked-with-in-the-past"></a>Find kontaktoplysninger for en partner, du tidligere har arbejdet med
 
 > [!NOTE]
-> I nogle tilfælde kan du finde oplysninger i Microsoft 365 Administration for partnere, du har arbejdet med tidligere. Husk, at disse oplysninger kan være forældede. Som bedste fremgangsmåde anbefaler vi, at du kontakter den person eller afdeling, der er ansvarlig for indkøb i din organisation, for at finde ud af, hvilken partner du skal arbejde med. 
+> I nogle tilfælde kan du finde oplysninger i Microsoft 365 Administration for partnere, du tidligere har arbejdet med. Vær opmærksom på, at disse oplysninger kan være forældede. Som bedste praksis anbefaler vi, at du kontakter den person eller afdeling, der er ansvarlig for at købe i din organisation, for at finde ud af, hvilken partner du skal arbejde med. 
   
-## <a name="get-partner-info-in-the-admin-center"></a>Få partneroplysninger i Administration
+## <a name="get-partner-info-in-the-admin-center"></a>Hent partneroplysninger i Administration
 
 1. I Administration skal du gå til siden **Indstillinger** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2074649" target="_blank">Partner-relationer</a>.
   
-2. Hvis du har en partner, vises partnerens navn og relation til din organisation her. Vælg partnerens navn for at få vist partnerens kontaktoplysninger (telefonnummer og mailadresse).
+2. Hvis du har en partner, vises partnerens navn og relation til din organisation her. Hvis du vil have vist partnerens kontaktoplysninger (telefonnummer og mailadresse), skal du vælge partnernavnet.
     
 ## <a name="more-resources"></a>Flere ressourcer
 
-[Microsoft Volume Licensing Service Center-kurser og -ressourcer](https://go.microsoft.com/fwlink/?LinkId=613306)
+[Uddannelse og ressourcer i Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/?LinkId=613306)
   
  **Til Microsoft-partnere**
   

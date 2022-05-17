@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 69a36789e4143e3e8852976eb5e41c12ab6872f8
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: b1a364fc6053483a05d0ea055000b863b31a94cf
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287216"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438021"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -31,7 +31,7 @@ ms.locfileid: "65287216"
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!TIP]
-> Du kan få oplysninger om automatisk anvendelse af en følsomhedsmærkat i datatilknytningen [under Mærkat i Microsoft Purview-datatilknytning](/azure/purview/create-sensitivity-label).
+> Du kan få oplysninger om automatisk anvendelse af en følsomhedsmærkat i datatilknytningen [under Mærkning i Microsoft Purview datakort](/azure/purview/create-sensitivity-label).
 
 Når du opretter en følsomhedsmærkat, kan du automatisk tildele denne mærkat til filer og mails, når den opfylder betingelser, som du angiver.
 
@@ -67,17 +67,17 @@ Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat
     - Maksimalt 25.000 automatisk navngivne filer i din lejer pr. dag.
     - Der kan maksimalt angives 100 politikker for automatisk mærkning pr. lejer, som hver især er målrettet til op til 100 websteder (SharePoint eller OneDrive), når de er angivet individuelt. Du kan også angive alle websteder, og denne konfiguration er undtaget fra maksimum 100 websteder.
     - Eksisterende værdier for ændret, ændret af og datoen ændres ikke som følge af politikker for automatisk mærkning – både for simuleringstilstand, og når der anvendes mærkater.
-    - Når mærkaten anvender kryptering, er [udstederen af Rights Management og Rights Management-ejeren](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen. Hvis denne konto ikke længere er i Azure Active Directory, anvendes mærkaten ikke, fordi disse værdier ikke kan angives.
+    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen. Hvis denne konto ikke længere er i Azure Active Directory, anvendes mærkaten ikke, fordi disse værdier ikke kan angives.
 
     Specifik til automatisk mærkning af Exchange:
     
     - I modsætning til manuel mærkning eller automatisk mærkning med Office apps scannes vedhæftede PDF-filer samt Office vedhæftede filer også for de betingelser, du angiver i politikken for automatisk mærkning. Når der er et match, er mailen mærket, men ikke den vedhæftede fil.
         - Hvis mærkaten anvender kryptering for PDF-filer, krypteres disse filer ved hjælp af [meddelelsekryptering](ome.md) , når din lejer er [aktiveret for vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-).
         - For disse Office-filer understøttes Word, PowerPoint og Excel. Hvis mærkaten anvender kryptering, krypteres de ved hjælp af [Meddelelsekryptering](ome.md).
-    - Hvis du har Exchange regler for mailflow eller DLP-politikker (Microsoft Purview Data Loss Prevention), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra reglerne for Exchange mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
+    - Hvis du har Exchange regler for mailflow eller DLP-politikker (Microsoft Purview Forebyggelse af datatab), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra reglerne for Exchange mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
     - Mail, der har IRM-kryptering uden mærkat, erstattes af en mærkat med eventuelle krypteringsindstillinger, når der er et match ved hjælp af automatisk mærkning.
-    - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management-ejer.
-    - Når mærkaten anvender kryptering, er Udstederen [af Rights Management og Rights Management-ejeren](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management-ejer for indgående mail, der er mærket og krypteret af din politik.
+    - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management ejer.
+    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management ejer af indgående mail, der er mærket og krypteret af din politik.
     - Hvis mærkaten er konfigureret til at anvende [dynamiske markeringer](sensitivity-labels-office-apps.md#dynamic-markings-with-variables), skal du være opmærksom på, at for indgående mail kan denne konfiguration resultere i, at navnene på personer uden for din organisation vises.
 
 ## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>Sammenlign automatisk mærkning for Office apps med politikker for automatisk mærkning
@@ -97,10 +97,10 @@ Brug følgende tabel som en hjælp til at identificere forskellene i funktionsm�
 |Anvend visuelle markeringer |Ja |Ja (kun mail) |
 |Tilsidesæt IRM-kryptering, der er anvendt uden et navn|Ja, hvis brugeren har minimumsretten til eksport |Ja (kun mail) |
 |Navn på indgående mail|Nej |Ja|
-|Tildel en Rights Management-ejer til mails, der er sendt fra en anden organisation |Nej |Ja|
+|Tildel en Rights Management ejer til mails, der er sendt fra en anden organisation |Nej |Ja|
 |Erstat eksisterende mærkat med samme eller lavere prioritet for mails |Nej |Ja (kan konfigureres)|
 
-\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig på Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig i Microsoft Purview-compliance-portal. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Hvordan flere betingelser evalueres, når de gælder for mere end én etiket
 
@@ -126,7 +126,7 @@ Standardfunktionsmåde for, om automatisk mærkning tilsidesætter et eksisteren
 - Automatisk mærkning erstatter en [følsomhedsmærkat med lavere prioritet](sensitivity-labels.md#label-priority-order-matters) , der blev anvendt automatisk, men ikke en mærkat med højere prioritet.
     
     > [!TIP]
-    > Følsomhedsmærkaten øverst på listen på Microsoft Purview-overholdelsesportalen hedder f.eks. **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
+    > Følsomhedsmærkaten øverst på listen i Microsoft Purview-compliance-portal har f.eks. navnet **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
 
 Kun for politikker for automatisk mærkning af mails kan du vælge en indstilling, der altid skal tilsidesætte en eksisterende følsomhedsmærkat, uanset hvordan den blev anvendt.
 
@@ -229,6 +229,23 @@ Specifik til Azure Information Protection Unified Labeling-klienten:
 
 - Følsomme oplysninger kan registreres i brødtekst i dokumenter og mails og i sidehoveder og sidefødder – men ikke i emnelinjen eller vedhæftede filer i mails.
 
+### <a name="convert-your-label-settings-into-an-auto-labeling-policy"></a>Konvertér etiketindstillingerne til en politik for automatisk mærkning
+
+> [!NOTE]
+> Denne indstilling udrulles gradvist.
+
+Hvis mærkaten indeholder følsomme oplysningstyper for de konfigurerede betingelser, får du vist en indstilling i slutningen af processen til oprettelse eller redigering af mærkater for automatisk at oprette en politik for automatisk mærkning, der er baseret på de samme indstillinger for automatisk mærkning.
+
+Da politikker for automatisk mærkning ikke understøtter klassificeringer, der kan oplæres:
+
+- Hvis mærkatbetingelserne kun indeholder klassificeringer, der kan oplæres, kan du ikke se muligheden for automatisk at oprette en politik for automatisk mærkning.
+
+- Hvis mærkatbetingelserne indeholder klassificeringer, der kan oplæres, og typerne af følsomhedsoplysninger, oprettes der en politik for automatisk mærkning for kun de følsomme infotyper. 
+
+Selvom der automatisk oprettes en politik for automatisk mærkning for dig ved automatisk at udfylde de værdier, du skal vælge manuelt, hvis du har oprettet politikken fra bunden, kan du stadig få vist og redigere værdierne, før de gemmes.
+
+Som standard er alle placeringer for SharePoint, OneDrive og Exchange inkluderet i politikken for automatisk mærkat, og når politikken gemmes, køres den i [simuleringstilstand](#learn-about-simulation-mode). Der er ingen kontrol af, at du har [aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md), hvilket er en af forudsætningerne for, at automatisk mærkning kan anvendes på indhold i SharePoint og OneDrive.
+
 ## <a name="how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange"></a>Sådan konfigurerer du politikker for automatisk mærkning for SharePoint, OneDrive og Exchange
 
 Sørg for, at du er opmærksom på forudsætningerne, før du konfigurerer politikker for automatisk mærkning.
@@ -280,7 +297,7 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
 
 ### <a name="creating-an-auto-labeling-policy"></a>Oprettelse af en politik for automatisk mærkning
 
-1. Gå til følsomhedsmærkater på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>:
+1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal skal du</a> navigere til følsomhedsmærkater:
 
     - **Løsninger** >  **Information Protection**
 
@@ -350,9 +367,9 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
     
     - **Erstat automatisk eksisterende mærkater med samme eller lavere prioritet**: Gælder for både indgående og udgående mails, når du vælger denne indstilling, sikrer det, at der altid anvendes en matchende følsomhedsmærkat. Hvis du ikke vælger denne indstilling, anvendes der ikke en matchende følsomhedsmærkat på mails, der har en eksisterende følsomhedsmærkat med [en højere prioritet](sensitivity-labels.md#label-priority-order-matters) , eller som er manuelt mærket.
     
-    - **Anvend kryptering på mails, der modtages uden for din organisation**: Når du vælger denne indstilling, skal du tildele en [Rights Management-ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) for at sikre, at en autoriseret person i organisationen har [brugsrettigheder](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) til fuld kontrol for mails, der er sendt fra din uden for organisationen, og dine politikmærkater med kryptering. Denne rolle kan være nødvendig for senere at fjerne krypteringen eller tildele forskellige brugsrettigheder til brugere i din organisation.
+    - **Anvend kryptering på mails, der modtages uden for din organisation**: Når du vælger denne indstilling, skal du tildele en [Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) for at sikre, at en autoriseret person i din organisation har [brugsrettigheder](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) til fuld kontrol for mails, der er sendt fra din uden for organisationen, og dine politikmærkater med kryptering. Denne rolle kan være nødvendig for senere at fjerne krypteringen eller tildele forskellige brugsrettigheder til brugere i din organisation.
         
-        For **Tildel en Rights Management-ejer** skal du angive en enkelt bruger efter en mailadresse, der ejes af din organisation. Angiv ikke en mailkontakt, en delt postkasse eller en gruppetype, da disse ikke understøttes for denne rolle.
+        For **Tildel en Rights Management ejer** skal du angive en enkelt bruger efter en mailadresse, der ejes af din organisation. Angiv ikke en mailkontakt, en delt postkasse eller en gruppetype, da disse ikke understøttes for denne rolle.
 
 10. På siden **Beslut, om du vil teste politikken nu eller senere** : Vælg **Kør politik i simuleringstilstand** , hvis du er klar til at køre politikken for automatisk mærkning nu i simuleringstilstand. Ellers skal du vælge **Forlad politik slået fra**. Vælg **Næste**:
 

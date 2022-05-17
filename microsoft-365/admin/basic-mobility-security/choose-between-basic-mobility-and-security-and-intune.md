@@ -18,13 +18,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Basic Mobility and Security er en del af Microsoft 365 planer.
-ms.openlocfilehash: 36190be6345188503e7ba5147b72918a342aba73
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Basic Mobility and Security er en del af Microsoft 365 planer, mens Microsoft Intune er et separat produkt, der er inkluderet i visse Microsoft 365 planer.
+ms.openlocfilehash: 1d04beea6ece35d5d28bdd961041b30c1f8f2793
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781177"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435761"
 ---
 # <a name="choose-between-basic-mobility-and-security-or-intune"></a>Vælg mellem grundlæggende mobilitet og sikkerhed eller Intune
 

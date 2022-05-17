@@ -18,13 +18,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid:
 - MET150
-description: Basic Mobility and Security kan hjælpe dig med at sikre og administrere dine organisationers mobilenheder.
-ms.openlocfilehash: 74d2a2d6034b1e893987e2ede47a96bc00658f47
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Log på for at Microsoft 365, og konfigurer Basic Mobility and Security til at bruge den indbyggede administration af mobilenheder til at sikre og administrere dine brugeres mobilenheder.
+ms.openlocfilehash: c24d36b1151b22fee228d1a85368bf26a381e4d2
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415145"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435717"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Administrer de enheder, der er tilmeldt mobile Enhedshåndtering i Microsoft 365
 

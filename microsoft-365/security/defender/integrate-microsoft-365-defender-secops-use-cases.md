@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: ae77d89a568f79e3369f9ded4cfb0a96aa0255d0
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 4c65943ac28315f54e6c2f4cc8b2314e810b291f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782539"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438068"
 ---
 # <a name="step-5-develop-and-test-use-cases"></a>Trin 5. Udvikl og test use cases
 
@@ -102,7 +102,7 @@ Derudover kunne SOC-holdene have foretaget de opdagelser, der er beskrevet i ned
 
 |SOC-team|Krav|Personer, der skal opfylde kravet|Behandl for at opfylde kravet|Relevant teknologi|Identificeret mellemrum|Ændringslog for use case|Undtaget (Y/N)|
 |---|---|---|---|---|---|---|---|
-|SOC-tilsyn|Alle aktiver, der er forbundet til godkendte netværk, identificeres og kategoriseres|SOC Tilsyn, BU ejere, programejere, it-aktiv ejere, osv.|Centraliseret system til administration af aktiver for at finde og vise aktivkategori og -attributter baseret på risiko.|ServiceNow eller andre aktiver. <br><br>[Microsoft 365 enhedsoversigt](/security/defender-endpoint/device-discovery)|Kun 70% af aktiverne er blevet opdaget. Microsoft 365 Defender afhjælpningssporing, der kun gælder for kendte aktiver|Ældre tjenester til administration af aktivlivscyklus for at sikre, at Microsoft 365 Defender har 100 % dækning|N|
+|SOC-tilsyn|Alle aktiver, der er forbundet til godkendte netværk, identificeres og kategoriseres|SOC Tilsyn, BU ejere, programejere, it-aktiv ejere, osv.|Centraliseret system til administration af aktiver for at finde og vise aktivkategori og -attributter baseret på risiko.|ServiceNow eller andre aktiver. <br><br>[Microsoft 365 enhedsoversigt](/microsoft-365/security/defender-endpoint/device-discovery)|Kun 70% af aktiverne er blevet opdaget. Microsoft 365 Defender afhjælpningssporing, der kun gælder for kendte aktiver|Ældre tjenester til administration af aktivlivscyklus for at sikre, at Microsoft 365 Defender har 100 % dækning|N|
 |& SecOps-Teams|Høj indvirkning og kritiske sårbarheder i aktiver afhjælpes i henhold til politikken|SecOps-teknikere, SOC-analytikere: Sårbarhed & overholdelse af angivne standarder, sikkerhedskonstruktion|Defineret proces til kategorisering af høj risiko og kritiske sikkerhedsrisici|[Dashboards til administration af trusler og sårbarheder](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)|Defender for Endpoint har identificeret høj indvirkning, enheder med høj besked uden afhjælpningsplan eller implementering af Microsofts anbefalede aktivitet|Tilføj en arbejdsproces for at give aktivejere besked, når afhjælpningsaktivitet er påkrævet inden for 30 dage pr. politik. Implementer et billetsystem for at give aktivejere besked om afhjælpningstrin.|N|
 |Overvågning Teams|Trussels- og sårbarhedsstatus rapporteres via virksomhedens intranetportal|Soc-analytiker på niveau 2|Automatisk genererede rapporter fra Microsoft 365 Defender, der viser status for afhjælpning af aktiver|[Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <br><br> Overvågning af sikker score|Der kommunikeres ingen visninger eller dashboardrapporter til aktivejere vedrørende aktivernes trussels- og sårbarhedsstatus.|Opret et automatiseringsscript for at udfylde status for afhjælpning af høj risiko og alvorlig sårbarhed i forbindelse med aktiver i organisationen.|N|
 

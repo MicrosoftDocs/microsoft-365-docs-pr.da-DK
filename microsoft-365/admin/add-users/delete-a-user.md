@@ -19,13 +19,13 @@ ms.custom:
 search.appverid:
 - MET150
 ms.assetid: d5155593-3bac-4d8d-9d8b-f4513a81479e
-description: Få mere at vide om, hvordan du sletter en brugerkonto, og hvad du skal gøre med brugerens mail og OneDrive indhold, og om du vil beholde produktlicensen.
-ms.openlocfilehash: 894bcef6cc273c067b3d9b622f244d361ed24d96
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du sletter en Microsoft 365 brugerkonto, hvad du skal gøre med brugerens mail og OneDrive indhold, og om du vil beholde produktlicensen.
+ms.openlocfilehash: faa971fa8419f6bcc80855fd9dcd559a542e00a8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090701"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436773"
 ---
 # <a name="delete-a-user-from-your-organization"></a>Slet en bruger fra din organisation
   
@@ -52,7 +52,7 @@ Før du begynder, skal du tænke over, hvad du vil gøre med brugerens mail og O
 |Produktlicenser  <br/> |Du kan fjerne licensen fra brugeren og fjerne den fra dine abonnementer for at stoppe med at betale for den pågældende licens. Hvis du vælger denne indstilling, fjernes licensen automatisk fra dine abonnementer.  <br/><br/> **Du kan ikke fjerne licensen** , hvis du har købt den via en partner eller volumenlicens. Hvis du betaler for en årlig plan, eller hvis du er midt i en faktureringscyklus, kan du ikke fjerne licensen fra dit abonnement, før din forpligtelse er fuldført.  <br/> |
 |OneDrive indhold  <br/> |Hvis brugeren har gemt sine filer til OneDrive, kan du give en anden bruger adgang til disse filer.  <br/><br/> Du skal flytte de filer, du vil beholde, inden for den opbevaringsperiode, der er angivet for OneDrive filer. **Opbevaringsperioden er som standard 30 dage.** Hvis du ikke flytter filerne inden for opbevaringsperioden efter sletning af brugeren, flyttes OneDrive for den slettede bruger til papirkurven for gruppen af websteder, hvor den opbevares i 93 dage. I denne periode vil brugerne ikke længere kunne få adgang til delt indhold i OneDrive. Hvis du vil gendanne OneDrive, skal du bruge PowerShell. Du kan finde flere oplysninger under [Gendan en slettet OneDrive](/onedrive/restore-deleted-onedrive).<br/><br/> Hvis du vil øge det antal dage, du bevarer OneDrive filer for slettede konti, skal du se [Angiv opbevaring af OneDrive for slettede brugere](/onedrive/set-retention).  <br/><br/> **Vigtigt!** Hvis den slettede bruger har brugt en personlig computer til at downloade filer fra SharePoint og OneDrive, kan du ikke slette de filer, de har gemt på deres computer. De vil fortsat have adgang til filer, der blev synkroniseret fra OneDrive.           |
 |E-mail  <br/> | Hvis du giver en anden bruger adgang til den slettede brugers mail, konverteres den slettede brugers postkasse til en delt postkasse. Den nye postkasseejer kan derefter få adgang til postkassen og overvåge nye mails. Du har også følgende muligheder:  <br/>  <br/>Skift det viste navn – Vi anbefaler, at du ændrer det viste navn, så det er nemt at identificere den delte postkasse på listen **Aktive brugere** .  <br/>  <br/>  Slå autosvar til - Vi har allerede skrevet et høfligt autosvar til dig. Du kan sende forskellige autosvar til personer i din organisation og personer uden for organisationen. <br/> <br/> [Fjern alle eksisterende kalendertilladelser](/powershell/module/exchange/remove-mailboxfolderpermission?view=exchange-ps) ved hjælp af PowerShell. <br/> <br/> Ryd op i aliasser – Aliasser er yderligere mailadresser for brugere. Nogle organisationer bruger dem ikke, så hvis du ikke har nogen, behøver du ikke at foretage dig andet her. Hvis brugeren har aliasser, anbefaler vi, at du fjerner dem, så du kan genbruge disse mailadresser. Ellers kan du ikke genbruge disse mailadresser, før opbevaringsperioden for slettede postkasser er overskredet. En slettet postkasse kan som standard gendannes i 30 dage. Du kan finde flere oplysninger under [Slet eller gendan brugerpostkasser i Exchange Online](/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes#delete-a-user-mailbox). <br/> |
-|Active Directory  <br/> |Hvis din virksomhed bruger **Active Directory** , der synkroniseres med Azure AD, skal du slette brugerkontoen fra Active Directory. Du kan ikke gøre det gennem Office 365. Du kan finde [instruktioner under Slet en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)).  <br/> |
+|Active Directory  <br/> |Hvis din virksomhed bruger **Active Directory**, der synkroniseres med Azure AD, skal du slette brugerkontoen fra Active Directory. Du kan ikke gøre det gennem Office 365. Du kan finde [instruktioner under Slet en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)).  <br/> |
 
 ### <a name="get-started"></a>Kom i gang
 
@@ -139,4 +139,4 @@ Her er de mest almindelige problemer, som personer støder på, når de sletter 
 [Slet en postkasse](/exchange/permanently-delete-a-mailbox-exchange-2013-help) permanent (artikel)\
 [Fjern en tidligere medarbejder fra Office 365](remove-former-employee.md) (artikel)\
 [Føj en ny medarbejder til Office 365](add-new-employee.md) (artikel)\
-[Slet en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)): Brug disse instruktioner, hvis din virksomhed bruger **Active Directory** , der synkroniseres med Azure AD. Du kan ikke gøre det gennem Office 365. (artikel)
+[Slet en brugerkonto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753730(v=ws.11)): Brug disse instruktioner, hvis din virksomhed bruger **Active Directory**, der synkroniseres med Azure AD. Du kan ikke gøre det gennem Office 365. (artikel)

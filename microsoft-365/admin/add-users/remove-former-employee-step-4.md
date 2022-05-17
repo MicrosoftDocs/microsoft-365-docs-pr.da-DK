@@ -1,5 +1,5 @@
 ---
-title: Trin 4 – Videresende en tidligere medarbejders mail til en anden medarbejder eller konvertere til en delt postkasse
+title: Trin 4 – Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér til en delt postkasse
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -24,45 +24,45 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Følg disse trin for at videresende en tidligere medarbejders mail til en anden medarbejder eller konvertere til en delt postkasse.
-ms.openlocfilehash: 910fb8c30982cc02c4d71f1236fd54095eda96c7
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér den til en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person.
+ms.openlocfilehash: 302517ae44d9f263b293a6aa629a7bc58f8594ec
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63593858"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436575"
 ---
-# <a name="step-4---forward-a-former-employees-email-to-another-employee-or-convert-to-a-shared-mailbox"></a>Trin 4 – Videresende en tidligere medarbejders mail til en anden medarbejder eller konvertere til en delt postkasse
+# <a name="step-4---forward-a-former-employees-email-to-another-employee-or-convert-to-a-shared-mailbox"></a>Trin 4 – Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér til en delt postkasse
 
 I dette trin skal du tildele den tidligere medarbejders mailadresse til en anden medarbejder eller konvertere brugerens postkasse til en delt postkasse.
 
-## <a name="convert-former-employees-mailbox-to-a-shared-mailbox"></a>Konvertér den tidligere medarbejders postkasse til en delt postkasse
+## <a name="convert-former-employees-mailbox-to-a-shared-mailbox"></a>Konvertér tidligere medarbejders postkasse til en delt postkasse
 
-Når du konverterer en brugers postkasse til en delt postkasse, bevares hele den eksisterende mail og kalender. Først nu findes den i en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person. Du kan konvertere en delt postkasse tilbage til en bruger (privat) postkasse på et senere tidspunkt, hvis du ønsker det.
+Når du konverterer en brugers postkasse til en delt postkasse, bevares alle eksisterende mails og kalendere. Først nu er det i en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person. Du kan konvertere en delt postkasse tilbage til en brugerpostkasse (privat) på et senere tidspunkt, hvis du vil.
 
-- Det billigere at oprette en delt postkasse er, fordi du ikke skal betale for en licens, så længe postkassen er mindre end **50 GB**. Hvis den er over 50 GB, skal du tildele den en licens.
-- Hvis du konverterer postkassen til en delt postkasse, vil alle de gamle mails også være tilgængelige. Det kan tage en masse plads.
-- Hvis du konfigurerer videresendelse af mail, vil kun *nye* mails, der sendes til den tidligere medarbejder, blive sendt til den aktuelle medarbejder.
+- Oprettelse af en delt postkasse er den billigere måde at gå på, fordi du ikke behøver at betale for en licens, **så længe postkassen er mindre end 50 GB**. Hvis den er over 50 GB, skal du tildele den en licens.
+- Hvis du konverterer postkassen til en delt postkasse, vil alle de gamle mails også være tilgængelige. Det kan tage meget plads.
+- Hvis du konfigurerer videresendelse af mail, er det kun *nye* mails, der sendes til den tidligere medarbejder, der sendes til den aktuelle medarbejder.
 
-Følg disse trin for [at konvertere brugerens postkasse til en delt postkasse](../email/convert-user-mailbox-to-shared-mailbox.md).
+Følg disse trin for at [konvertere brugerens postkasse til en delt postkasse](../email/convert-user-mailbox-to-shared-mailbox.md).
 
-## <a name="forward-a-former-employees-email-to-another-employee"></a>Videresende en tidligere medarbejders mail til en anden medarbejder
+## <a name="forward-a-former-employees-email-to-another-employee"></a>Videresend en tidligere medarbejders mail til en anden medarbejder
 
  > [!IMPORTANT]
- > Hvis du konfigurerer videresendelse af mail eller en delt postkasse, sletter du i sidste ende ikke den tidligere medarbejders konto. Kontoen skal være der for at forankre videresendelse af mail eller en delt postkasse.
+ > Hvis du konfigurerer videresendelse af mail eller en delt postkasse, skal du i sidste ende ikke slette den tidligere medarbejders konto. Kontoen skal være der for at forankre videresendelse af mail eller delt postkasse.
 
-1. I Administration skal du gå til **siden Aktive** \> brugere <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">for</a> brugere.
-2. Vælg navnet på den medarbejder, du vil blokere, og vælg derefter **fanen Mail** .
-3. Under **Videresendelse af mail skal** du vælge **Administrer videresendelse af mail**.
-4. Slå **Videressendelse af alle mails, der sendes til denne postkasse til**. I feltet **Videresendelsesadresse** skal du skrive mailadressen på den aktuelle medarbejder, der skal modtage mailen.
+1. I Administration skal du gå til siden **Brugere** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Aktive brugere</a> .
+2. Vælg navnet på den medarbejder, du vil blokere, og vælg derefter fanen **Mail** .
+3. Under **Videresendelse af mail** skal du vælge **Administrer videresendelse af mail**.
+4. Slå **Videresend alle mails, der er sendt til denne postkasse, til**. Skriv mailadressen på den aktuelle medarbejder, der skal hente mailen, i feltet **Videresendelsesadresse** .
 5. Vælg **Gem**.
-6. Husk, at du ikke må slette den tidligere medarbejders konto.
+6. Husk, at du ikke skal slette den tidligere medarbejders konto.
 
-### <a name="cancel-outlook-meetings"></a>Annullere Outlook møder
+### <a name="cancel-outlook-meetings"></a>Annuller Outlook møder
 
-Sørg for at annullere alle møder, som den tidligere bruger havde i sin kalender. Det gør det muligt at fjerne de møder, der er oprettet af den tidligere bruger.
+Sørg for at annullere alle møder, som den tidligere bruger havde i sin kalender. Dette gør det muligt at fjerne de møder, der er oprettet af den tidligere bruger.
 
-Hvis personen havde møder med reserveret udstyr eller lokaler, kan vedkommende ikke reserveres, før disse møder er annulleret. Læs [Slet en aftale eller et møde](https://support.microsoft.com/office/delete-an-appointment-or-a-meeting-2703bfdb-9a07-4396-be3b-a9f79438455b) for at se trinnene.
+Hvis personen havde møder, der reserverede udstyr eller lokaler, vil de ikke være tilgængelige for at blive booket, før disse møder er aflyst. Læs [Slet en aftale eller et møde](https://support.microsoft.com/office/delete-an-appointment-or-a-meeting-2703bfdb-9a07-4396-be3b-a9f79438455b) for trinnene.
 
 ## <a name="related-content"></a>Relateret indhold
 
@@ -72,4 +72,4 @@ Hvis personen havde møder med reserveret udstyr eller lokaler, kan vedkommende 
 
 [Exchange Administration i Exchange Online](/exchange/exchange-admin-center)
 
-[Få en anden persons mail og kalender til at gå i gang](https://support.microsoft.com/office/manage-another-person-s-mail-and-calendar-items-afb79d6b-2967-43b9-a944-a6b953190af5)
+[Chef en anden persons mail og kalenderelementer](https://support.microsoft.com/office/manage-another-person-s-mail-and-calendar-items-afb79d6b-2967-43b9-a944-a6b953190af5)

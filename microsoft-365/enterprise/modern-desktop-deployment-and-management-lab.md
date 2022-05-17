@@ -16,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Få mere at vide om, hvor du kan få adgang til Windows og Office Deployment Lab Kit.
-ms.openlocfilehash: bfa8d52776e93f4a9c33f484f7d56696fdab31fe
-ms.sourcegitcommit: 35d0c891f3d927f3346044be61ab9f348e8da2b4
+ms.openlocfilehash: 5ce9ebcdd3a36b62f74292e2b8e261928ef12043
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65364291"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435341"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows- og Office 365-installationslaboratoriesæt
 
@@ -32,7 +32,7 @@ Der er to versioner af laboratoriet, som kan downloades gratis:
 |Windows 10-laboratorie|Windows 11-laboratorie|
 |---|---|
 |[Win 10 lab-miljø](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_05.09.zip)|
-|[Win 10 lab guides](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab_guides.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
+|[Win 10 lab guides](https://download.microsoft.com/download/2/9/9/29952cdb-b98d-4f9b-9d6e-9fb49644b0a0/Win10_21H1_Lab_05.12.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
 
 ## <a name="a-complete-lab-environment"></a>Et komplet laboratoriemiljø
 
@@ -99,7 +99,7 @@ Detaljerede laboratorievejledninger fører dig gennem flere installations- og ad
 - Windows Hello til virksomheder
 
 > [!NOTE]
-> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Det Windows 10 laboratorie udløber den 16. maj 2022. Det Windows 11 laboratorie udløber den 7. august 2022. Nye versioner udgives før udløb.
+> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Det Windows 10 laboratorie udløber den 11. august 2022. Det Windows 11 laboratorie udløber den 7. august 2022. Nye versioner udgives før udløb.
 
 ## <a name="additional-guidance"></a>Yderligere vejledning
 

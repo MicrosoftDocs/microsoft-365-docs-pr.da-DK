@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter, redigerer og sletter de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection organisationer (EOP) med eller uden Exchange Online postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f199cb3dbaddc47416c24a82b3066a2631641706
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 08523e98577f208858fb615911ef24aacf7bedc6
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847375"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438899"
 ---
 # <a name="configure-anti-phishing-policies-in-eop"></a>Konfigurer politikker for antiphishing i EOP
 
@@ -75,7 +75,7 @@ Hvis du vil øge effektiviteten af beskyttelse mod phishing, kan du oprette brug
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen <sup>\*</sup>.
 
 - Du kan se vores anbefalede indstillinger for politikker til anti-phishing under [Politikindstillinger for EOP til anti-phishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
@@ -138,7 +138,7 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
 
      Hvis du vil aktivere en indstilling, skal du markere afkrydsningsfeltet. Hvis du vil slå den fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
-     <sup>\*</sup> Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Du kan få flere oplysninger under [Ikke-godkendt afsender](set-up-anti-phishing-policies.md#unauthenticated-sender).
+     <sup>\*</sup> Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).
 
    Klik på **Næste**, når du er færdig.
 

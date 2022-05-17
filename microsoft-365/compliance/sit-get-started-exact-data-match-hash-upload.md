@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Hash og upload tabellen med følsomme oplysninger for at få præcise data til at matche følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0277a53b74359bdcac1de8fa6013082b991247f4
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: d3c45c618caad24084ee9c85410be886863dd733
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417518"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437629"
 ---
 # <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Hash og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der stemmer overens med typer af følsomme oplysninger
 
@@ -231,6 +231,9 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>
    ```
+
+> [!NOTE]
+> Hvis du vil automatisere hash- og uploadprocessen, når du har oprettet den første gang, skal du se [Opdater den nøjagtige datamatch af tabellen med følsomme oplysninger](sit-use-exact-data-refresh-data.md).
 
 ## <a name="next-step"></a>Næste trin
 
