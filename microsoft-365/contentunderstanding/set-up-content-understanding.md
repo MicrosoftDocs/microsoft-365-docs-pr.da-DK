@@ -15,12 +15,12 @@ ms.custom:
 search.appverid: MET150
 ms.localizationpriority: high
 description: Konfigurer SharePoint Syntex
-ms.openlocfilehash: 0d7cbe0f99747629bcac581bd080d88af27e8a06
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 97d12527667de1583f787844da11a4ad875f34ba
+ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935363"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65463137"
 ---
 # <a name="set-up-sharepoint-syntex"></a>Konfigurer SharePoint Syntex
 
@@ -45,7 +45,13 @@ Før du konfigurerer, skal du sørge for at planlægge den bedste måde at konfi
 
 Som administrator kan du også foretage ændringer af dine valgte indstillinger når som helst efter konfigurationen og i hele indstillingerne for administration af indhold i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 
-Hvis du planlægger at bruge et brugerdefineret Power [Platform-miljø, skal du installere *AI Builder til Project Cortex* app i dette miljø](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) og [tildele AI Builder-kreditter](/power-platform/admin/capacity-add-on) til det, før du kan oprette modeller til formularbehandling. Når du bruger et brugerdefineret miljø, skal modeloprettere tildeles sikkerhedsrollen Miljøopretter, og modelbrugere skal have tildelt sikkerhedsrollen Grundlæggende bruger. Se [Tildel en sikkerhedsrolle til en bruger for at](/power-platform/admin/assign-security-roles) få flere oplysninger.
+### <a name="custom-power-platform-environments"></a>Brugerdefinerede Power Platform-miljøer
+
+Hvis du planlægger at bruge et brugerdefineret Power Platform-miljø, skal du installere *AI Builder til Project Cortex* app i dette miljø. Se [Administrer Dynamics 365-apps](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) for at få flere oplysninger, og se *efter AI Builder til Project Cortex* app på listen over Dynamics 365-apps.
+
+Du skal også [tildele AI Builder-kreditter](/power-platform/admin/capacity-add-on) til det brugerdefinerede miljø, før du kan oprette modeller til formularbehandling. 
+
+Når du bruger et brugerdefineret miljø, skal modeloprettere tildeles sikkerhedsrollen Miljøopretter, og modelbrugere skal have tildelt sikkerhedsrollen Grundlæggende bruger. Se [Tildel en sikkerhedsrolle til en bruger for at](/power-platform/admin/assign-security-roles) få flere oplysninger.
 
 Brugere, der opretter modeller på et [indholdscenterwebsted](/microsoft-365/contentunderstanding/create-a-content-center) , skal være medlemmer af webstedet. Brugere, der opretter modeller lokalt uden for indholdscenteret, skal være webstedsejere af disse websteder.
 

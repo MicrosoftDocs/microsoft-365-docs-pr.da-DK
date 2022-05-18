@@ -1009,8 +1009,6 @@
           href: detailed-properties-in-the-office-365-audit-log.md
         - name: Slå overvågning til eller fra
           href: turn-audit-log-search-on-or-off.md
-        - name: Brug Kundenøglen til at kryptere overvågningsposter
-          href: auditing-cmk-encryption.md
         - name: Brug overvågningsloggen til at undersøge almindelige problemer
           href: auditing-troubleshooting-scenarios.md
         - name: Brug overvågning af deling i overvågningsloggen
