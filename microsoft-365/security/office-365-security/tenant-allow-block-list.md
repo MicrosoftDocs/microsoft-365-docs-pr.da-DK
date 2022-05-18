@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6e112b6b386e0a2961119478aae7d4cb53138ccf
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 58b1fadc85b993701d49b1c33750fc7db2527264
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363308"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468102"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -485,3 +485,10 @@ Du kan f.eks. tilføje en tilladelsespost for følgende domænepar:
 - **Infrastruktur**: tms.mx.com
 
 Det er kun meddelelser fra dette domæne *og* det afsendende infrastrukturpar, der må spoof. Andre afsendere, der forsøger at spoof gmail.com, er ikke tilladt. Meddelelser fra afsendere i andre domæner, der stammer fra tms.mx.com kontrolleres af spoof intelligence.
+
+
+## <a name="what-to-expect-after-you-add-an-allow-or-block-entry"></a>Hvad kan du forvente, når du har tilføjet en tilladelses- eller blokindtastning?
+
+Når du har tilføjet en tilladelsespost via indsendelsesportalen eller en blokpost på lejerlisten tillad/bloker, skal posten begynde at fungere med det samme.
+
+Vi anbefaler, at du lader poster udløbe automatisk efter 30 dage for at se, om systemet har lært om tillad eller blok. Hvis ikke, skal du angive en ny post for at give systemet yderligere 30 dage til at lære.

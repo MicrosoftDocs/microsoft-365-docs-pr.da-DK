@@ -1,5 +1,5 @@
 ---
-title: GDPR forenklet En vejledning til din lille virksomhed
+title: 'GDPR forenklet: En vejledning til din lille virksomhed'
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: Få mere at vide om, hvordan Microsoft 365 for virksomheder kan hjælpe dig med processen med den generelle forordning om databeskyttelse (GDPR).
-ms.openlocfilehash: 4f900b8694acb97be3449072a2ccf5ac7d89ff1f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28f39b8aaf715c9f95f89fe30ae0cfc077327eda
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934131"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469508"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR forenklet: En vejledning til din lille virksomhed
 
@@ -257,7 +257,7 @@ For at blive klar til GDPR er her nogle forslag til de næste trin, du skal tage
 > [!IMPORTANT]
 > Få juridisk rådgivning, der passer til din virksomhed eller organisation.
   
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 [Oversigt over GDPR i Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview
 )

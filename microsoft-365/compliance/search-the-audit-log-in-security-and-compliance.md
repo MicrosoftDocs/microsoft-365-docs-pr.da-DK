@@ -21,12 +21,12 @@ description: Brug Microsoft Purview-compliance-portal til at søge i den samlede
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 585b3be2149b1e94dc27633bac20707a6b193c0f
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 70bb6383b67392da1766d3ca8d1ef0806d105bb1
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320600"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465970"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
@@ -532,7 +532,6 @@ I følgende tabel beskrives aktiviteter, der er relateret til, når brugerne int
 |Opdateret listeelement|ListItemUpdated|En bruger har opdateret et SharePoint listeelement ved at ændre en eller flere egenskaber.|
 |Opdateret webstedskolonne|SiteColumnUpdated|En bruger har opdateret en SharePoint webstedskolonne ved at ændre en eller flere egenskaber.|
 |Opdateret webstedsindholdstype|SiteContentTypeUpdated|En bruger har opdateret en webstedsindholdstype ved at ændre en eller flere egenskaber.|
-|Vist listeelement|ListItemViewed|En bruger fik vist et SharePoint listeelement. Når en bruger får vist et listeelement, logføres hændelsen ListItemViewed ikke igen for den samme bruger for samme listeelement i de næste fem minutter.|
 
 ### <a name="sharing-and-access-request-activities"></a>Delings- og adgangsanmodningsaktiviteter
 

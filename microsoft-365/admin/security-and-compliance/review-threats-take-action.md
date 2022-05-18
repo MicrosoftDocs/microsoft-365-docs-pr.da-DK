@@ -15,14 +15,14 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Få mere at vide om, hvordan du gennemser og administrerer trusler, der er registreret af Microsoft Defender Antivirus på dine Windows 10 enheder.
-ms.openlocfilehash: 9b819edc21d6cfcac663c54e15b1a060b2b16fa2
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 2d75149f8bcb4ea13e1e474acbb1dedfccb4ec50
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319303"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469464"
 ---
-# <a name="review-detected-threats-and-take-action"></a>Gennemgå registrerede trusler, og udfør handlinger
+# <a name="review-threats-detected-by-microsoft-defender-antivirus-and-take-action"></a>Gennemse trusler, der er registreret af Microsoft Defender Antivirus, og udfør handlinger
 
 Så snart der registreres en skadelig fil eller software, blokerer Microsoft Defender Antivirus den og forhindrer den i at køre. Og med skybaseret beskyttelse slået til, føjes nyligt registrerede trusler til antivirus- og antimalwareprogrammet, så dine andre enheder og brugere også er beskyttet.
 

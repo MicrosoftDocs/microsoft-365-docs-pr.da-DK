@@ -21,85 +21,85 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 9fa2539a-2211-41fd-85a0-bc37b9619ca4
-description: Gør din organisation mere sikker mod adgangskodeangreb, og forbyder almindelige adgangskoder og aktivér risikobaseret multifaktorgodkendelse.
-ms.openlocfilehash: 46e6c4ba163df0693630896b8db17b4eefe9828a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Gør din organisation mere sikker mod adgangskodeangreb, og forbud mod almindelige adgangskoder, og aktivér risikobaseret multifaktorgodkendelse.
+ms.openlocfilehash: 006e537c2e2d77a19b27f1c2d537269d69d07c1e
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588507"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469002"
 ---
-# <a name="password-policy-recommendations"></a>Anbefalinger til adgangskodepolitik
+# <a name="password-policy-recommendations-for-microsoft-365-passwords"></a>Anbefalinger til adgangskodepolitik for Microsoft 365 adgangskoder
 
-Som administrator for en organisation er du ansvarlig for at angive adgangskodepolitikken for brugere i organisationen. Det kan være kompliceret og forvirrende at angive adgangskodepolitikken, og denne artikel indeholder anbefalinger til at gøre din organisation mere sikker mod adgangskodeangreb.
+Som administrator af en organisation er du ansvarlig for at angive adgangskodepolitikken for brugere i din organisation. Angivelse af adgangskodepolitikken kan være kompliceret og forvirrende, og denne artikel indeholder anbefalinger til at gøre din organisation mere sikker mod adgangskodeangreb.
 
-Microsoft-konti, der kun er skybaserede, har en foruddefineret adgangskodepolitik, der ikke kan ændres. De eneste elementer, du kan ændre, er antallet af dage, der går, før en adgangskode udløber, og hvorvidt adgangskoder overhovedet udløber eller ej. 
+Microsoft-konti kun i skyen har en foruddefineret adgangskodepolitik, der ikke kan ændres. De eneste elementer, du kan ændre, er antallet af dage, indtil en adgangskode udløber, og om adgangskoder overhovedet udløber. 
   
-Hvis du vil fastlægge, Microsoft 365 adgangskoder udløber i din organisation, skal du se [Angive udløbspolitik for adgangskoder Microsoft 365](../manage/set-password-expiration-policy.md).
+Hvis du vil finde ud af, hvor ofte Microsoft 365 adgangskoder udløber i din organisation, skal du se [Angiv politik for udløb af adgangskode for Microsoft 365](../manage/set-password-expiration-policy.md).
 
-Du kan finde flere oplysninger Microsoft 365 adgangskoder i:
+Du kan få flere oplysninger om Microsoft 365 adgangskoder under:
 
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)
 
 [Angiv en individuel brugers adgangskode til aldrig at udløbe](../add-users/set-password-to-never-expire.md) (artikel)
 
-[Lad brugere nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)
+[Lad brugerne nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)
 
-[Sende en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)
+[Send en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)
   
-## <a name="understanding-password-recommendations"></a>Forstå anbefalinger til adgangskoder
+## <a name="understanding-password-recommendations"></a>Om anbefalinger til adgangskoder
 
-Gode adgangskodevaner kan indordnes i nogle få, brede kategorier:
+God praksis for adgangskoder kan opdeles i nogle få brede kategorier:
   
-- **Modstå almindelige angreb** Dette indebærer valget af, hvor brugerne indtaster adgangskoder (kendte og pålidelige enheder med god malwareregistrering, validerede websteder), og valget af hvilken adgangskode, der skal vælges (længde og entydighed).
+- **Modstand mod almindelige angreb** Dette omfatter valget af, hvor brugerne indtaster adgangskoder (kendte og pålidelige enheder med god malwareregistrering, validerede websteder) og valget af, hvilken adgangskode de skal vælge (længde og unikhed).
 
-- **Besigtig vellykkede angreb** At begrænse hackerangreb, der er sket, handler om at begrænse adgangen til en bestemt tjeneste eller helt at forhindre denne skade, hvis en brugers adgangskode bliver stjålet. Det kan f.eks. være at sikre, at en overtrædelse af dine legitimationsoplysninger til sociale netværk ikke gør din bankkonto sårbar eller ikke tillader en dårligt bevogtt konto at nulstille links til en vigtig konto.
+- **Indeholder vellykkede angreb** At indeholde vellykkede hackerangreb handler om at begrænse eksponeringen for en bestemt tjeneste eller forhindre, at skaden helt forhindres, hvis en brugers adgangskode bliver stjålet. For eksempel at sikre, at et brud på dine legitimationsoplysninger til sociale netværk ikke gør din bankkonto sårbar eller ikke lader en dårligt overvåget konto acceptere nulstillingslinks for en vigtig konto.
 
-- **Forstå den menneskelige natur** Mange gode adgangskodevaner står ikke under for naturlig menneskelig opførsel. Det er vigtigt at forstå den menneskelige natur, fordi forskning viser, at stort set hver eneste regel, du pålægger dine brugere, vil betyde, at adgangskoden svækkes. Længdekrav, krav til særlige tegn og krav om ændring af adgangskode fører alle til normalisering af adgangskoder, hvilket gør det nemmere for hackere at gætte eller revne adgangskoder.
+- **Forståelse af den menneskelige natur** Mange gyldige praksisser for adgangskoder mislykkes i forhold til naturlige menneskelige adfærd. Det er vigtigt at forstå den menneskelige natur, fordi forskning viser, at næsten alle de regler, du pålægger dine brugere, vil resultere i en svækkelse af adgangskodekvaliteten. Krav til længde, særlige tegnkrav og krav til ændring af adgangskode resulterer alle i normalisering af adgangskoder, hvilket gør det nemmere for hackere at gætte eller knække adgangskoder.
 
 ## <a name="password-guidelines-for-administrators"></a>Retningslinjer for adgangskoder for administratorer
 
-Det primære mål med et sikkert adgangskodesystem er mangfoldighed. Din adgangskodepolitik skal indeholde masser af forskellige adgangskoder, der er svære at gætte. Her er nogle anbefalinger til, hvordan du holder din organisation så sikker som muligt.
+Det primære mål med et mere sikkert adgangskodesystem er mangfoldighed af adgangskoder. Din adgangskodepolitik skal indeholde mange forskellige adgangskoder, som er svære at gætte. Her er nogle anbefalinger til, hvordan du holder din organisation så sikker som muligt.
   
-- Bevar et krav til minimumlængde på 8 tegn
+- Bevar et minimumlængdekrav på 8 tegn
 
-- Du behøver ikke krav til tegnsammensætning. F.eks. \*&amp;(^%$
+- Kræver ikke krav til tegnkomposition. F.eks. \*&amp;(^%$
 
-- Kræver ikke obligatoriske periodiske nulstillinger af adgangskoder for brugerkonti
+- Kræver ikke obligatorisk periodisk nulstilling af adgangskode for brugerkonti
 
-- Forbyder almindelige adgangskoder for at holde de mest følsomme adgangskoder ude af dit system
+- Forbud mod almindelige adgangskoder for at holde de mest sårbare adgangskoder ude af systemet
 
-- Opdan dine brugere, at de ikke må genbruge deres organisationsadgangskoder til ikke-arbejdsrelaterede formål
+- Oplær dine brugere i ikke at genbruge deres organisationsadgangskoder til ikke-arbejdsrelaterede formål
 
-- Gennemtving registrering [for multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md)
+- Gennemtving registrering for [multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md)
 
-- Aktivér risikobaseret multifaktorgodkendelsesudfordringer
+- Aktivér risikobaserede udfordringer med multifaktorgodkendelse
 
-### <a name="password-guidance-for-your-users"></a>Retningslinjer for adgangskoder til dine brugere
+### <a name="password-guidance-for-your-users"></a>Vejledning til adgangskoder til dine brugere
 
-Her er nogle retningslinjer for adgangskoder til brugerne i organisationen. Sørg for, at dine brugere kender til disse anbefalinger, og gennemtving de anbefalede adgangskodepolitikker på organisationsniveau.
+Her er nogle vejledninger til adgangskoder for brugere i din organisation. Sørg for at fortælle brugerne om disse anbefalinger og gennemtvinge de anbefalede adgangskodepolitikker på organisationsniveau.
   
-- Brug ikke en adgangskode, der er den samme som eller ligner den, du bruger på andre websteder
+- Brug ikke en adgangskode, der er den samme eller ligner den, du bruger på andre websteder
 
-- Brug ikke et enkelt ord, f.eks. **en adgangskode** eller et almindeligt brugt udtryk som **jeg loveyou**
+- Brug ikke et enkelt ord, f.eks. **adgangskode**, eller et almindeligt brugt udtryk som **f.eks.**
 
-- Gør det svært at gætte adgangskoder, selv for dem, der kender dig godt, f.eks. navne og fødselsdage på venner og familie, dit yndlingsband og sætninger, du godt kan lide at bruge
+- Gør det svært at gætte adgangskoder, selv af dem, der ved meget om dig, f.eks. dine venners og venners fødselsdage, dine yndlingsbands og sætninger, du kan lide at bruge
 
-## <a name="some-common-approaches-and-their-negative-impacts"></a>Almindelige fremgangsmåder og deres negative indvirkninger
+## <a name="some-common-approaches-and-their-negative-impacts"></a>Nogle almindelige tilgange og deres negative virkninger
 
-Dette er nogle af de mest almindeligt anvendte fremgangsmåder inden for administration af adgangskoder, men forskning advarer os om de negative konsekvenser af dem.
+Dette er nogle af de mest anvendte praksisser for administration af adgangskoder, men undersøgelser advarer os om de negative virkninger af dem.
   
-### <a name="password-expiration-requirements-for-users"></a>Krav til udløb af adgangskoder for brugere
+### <a name="password-expiration-requirements-for-users"></a>Krav til udløb af adgangskode for brugere
 
-Krav til udløb af adgangskoder gør mere skade end gavn, fordi disse krav får brugerne til at vælge forudsigelige adgangskoder, der består af sekvenser af ord og tal, der ligner hinanden meget. I disse tilfælde kan den næste adgangskode forudsiges ud fra den forrige adgangskode. Krav om udløb af adgangskoder giver ingen muligheder for opbevaring, fordi cyberkriminelle næsten altid bruger legitimationsoplysninger, så snart de har kompromitteret dem. Se Tid [til at genoverveje obligatorisk ændring af adgangskode](https://go.microsoft.com/fwlink/p/?linkid=861018) for at få flere oplysninger.
+Kravene til udløb af adgangskoder skader mere end gavn, da disse krav gør, at brugerne vælger forudsigelige adgangskoder, der består af sekventielle ord og tal, der er tæt forbundet med hinanden. I disse tilfælde kan den næste adgangskode forudsiges baseret på den forrige adgangskode. Krav til udløb af adgangskode giver ingen opbevaringsfordele, fordi cyberkriminelle næsten altid bruger legitimationsoplysninger, så snart de kompromitterer dem. Se [Tid til at gentænke obligatoriske adgangskodeændringer](https://go.microsoft.com/fwlink/p/?linkid=861018) for at få flere oplysninger.
   
-### <a name="requiring-long-passwords"></a>Krav om lange adgangskoder
+### <a name="requiring-long-passwords"></a>Kræver lange adgangskoder
 
-Krav til adgangskodelængde (på mere end 10 tegn) kan resultere i forudsigelig og uønsket brugeradfærd. Brugere, der skal have en adgangskode på 16 tegn, kan f.eks. vælge at gentage mønstre som **fourfourfour** eller **passwordpassword** , der opfylder kravet til tegnlængde, men som ikke er svære at gætte. Kravene til længden øger desuden risikoen for, at brugerne indfører andre usikre fremgangsmåder, f.eks. at skrive deres adgangskoder ned, genbruge dem eller gemme dem ikke-krypteret i deres dokumenter. Hvis du vil opfordre brugerne til at overveje en entydig adgangskode, anbefaler vi, at du holder dig til en fornuftig minimumslængde på 8 tegn.
+Krav til adgangskodens længde (mere end ca. 10 tegn) kan resultere i en forudsigelig og uønsket brugeradfærd. Brugere, der skal have en adgangskode på 16 tegn, kan f.eks. vælge gentagne mønstre, f.eks. **firefourfour** eller **passwordpassword** , der opfylder kravet om tegnlængde, men som ikke er svære at gætte. Derudover øger længdekrav chancen for, at brugerne vil anvende andre usikre fremgangsmåder, f.eks. at skrive deres adgangskoder ned, genbruge dem eller gemme dem ukrypteret i deres dokumenter. Hvis du vil opfordre brugerne til at tænke på en unik adgangskode, anbefaler vi, at du beholder et rimeligt minimumlængdekrav på 8 tegn.
   
 ### <a name="requiring-the-use-of-multiple-character-sets"></a>Krav om brug af flere tegnsæt
 
-Krav til kompleksiteten af adgangskoder reducerer antallet af nøgler og får brugerne til at handle på forudsigelige måder og gøre mere skade end gavn. De fleste systemer gennemtvinger et niveau af krav til kompleksiteten af adgangskoder. For eksempel skal adgangskoder bruge tegn fra alle de følgende tre kategorier:
+Krav til adgangskodekompleksitet reducerer den centrale plads og får brugerne til at handle på forudsigelige måder og gøre mere skade end gavn. De fleste systemer gennemtvinger et vist niveau af kompleksitetskrav til adgangskoder. Adgangskoder skal f.eks. bruge tegn fra alle tre af følgende kategorier:
   
 - store bogstaver
 
@@ -107,53 +107,53 @@ Krav til kompleksiteten af adgangskoder reducerer antallet af nøgler og får br
 
 - ikke-alfanumeriske tegn
 
-De fleste bruger de samme mønstre, f.eks. et stort bogstav i første position, et symbol i den sidste og et tal i den sidste 2. Cyberkriminelle kender dette, så de kører deres ordbogsangreb med de mest almindelige erstatninger, "$" for "s", "@" for "a", "1" for "I". Når du tvinger dine brugere til at vælge en kombination af store og små bogstaver og specialtegn, har det en negativ effekt. Nogle krav til kompleksitet forhindrer endda brugere i at bruge sikre adgangskoder, der er mindeværdige, og tvinger dem til at finde på mindre sikre adgangskoder, der er lettere at huske.
+De fleste bruger lignende mønstre, f.eks. et stort bogstav i første position, et symbol i det sidste og et tal i de sidste 2. Cyberkriminelle ved dette, så de kører deres ordbogsangreb ved hjælp af de mest almindelige erstatninger, "$" for "s", "@" for "a", "1" for "l". Det har en negativ effekt at tvinge brugerne til at vælge en kombination af øvre, nederste, cifre og specialtegn. Nogle kompleksitetskrav forhindrer endda brugerne i at bruge sikre og mindeværdige adgangskoder og tvinger dem til at komme med mindre sikre og mindre mindeværdige adgangskoder.
   
-## <a name="successful-patterns"></a>Gode mønstre
+## <a name="successful-patterns"></a>Vellykkede mønstre
 
-Her er til sammenligning nogle anbefalinger til, hvordan man fremmer mangfoldighed.
+I modsætning hertil er her nogle anbefalinger til at fremme mangfoldighed af adgangskoder.
   
-### <a name="ban-common-passwords"></a>Forbyder almindelige adgangskoder
+### <a name="ban-common-passwords"></a>Forbud mod almindelige adgangskoder
 
-Det vigtigste krav til adgangskoder, du skal stille til dine brugere, når du opretter adgangskoder, er at forbyde almindelige adgangskoder for at reducere din organisations følsomhed over for brute-force-angreb på adgangskoder. Almindelige brugeradgangskoder omfatter: **abcdefg**, **password**, **abe.**
+Det vigtigste krav til adgangskoder, som du skal stille til dine brugere, når du opretter adgangskoder, er at forbyde brugen af almindelige adgangskoder for at reducere din organisations følsomhed over for brute force-adgangskodeangreb. Almindelige brugeradgangskoder omfatter: **abcdefg**, **adgangskode**, **abe**.
   
-### <a name="educate-users-to-not-reuse-organization-passwords-anywhere-else"></a>Opdater brugerne til ikke at genbruge organisationsadgangskoder andre steder
+### <a name="educate-users-to-not-reuse-organization-passwords-anywhere-else"></a>Oplær brugerne i ikke at genbruge organisationsadgangskoder andre steder
 
-Et af de vigtigste budskaber at give brugerne i organisationen er ikke at genbruge deres organisationsadgangskoden andre steder. Brugen af organisationsadgangskoder på eksterne websteder øger risikoen for, at cyberkriminelle får adgang til disse adgangskoder.
+En af de vigtigste meddelelser, du kan få adgang til for brugerne i din organisation, er ikke at genbruge deres organisationsadgangskode andre steder. Brugen af organisationsadgangskoder på eksterne websteder øger i høj grad sandsynligheden for, at cyberkriminelle kompromitterer disse adgangskoder.
   
-### <a name="enforce-multi-factor-authentication-registration"></a>Gennemtving registrering for multifaktorgodkendelse
+### <a name="enforce-multi-factor-authentication-registration"></a>Gennemtving registrering af multifaktorgodkendelse
 
-Sørg for, at dine brugere opdaterer deres kontakt- og sikkerhedsoplysninger, f.eks. en alternativ mailadresse, telefonnummer eller en enhed, der er registreret til pushmeddelelser, så de kan reagere på sikkerhedsmæssige udfordringer og få besked om sikkerhedshændelser. Opdaterede kontakt- og sikkerhedsoplysninger hjælper brugerne med at bekræfte deres identitet, hvis de glemmer deres adgangskode, eller hvis en anden forsøger at overtage deres konto. Det giver også en out of band-meddelelseskanal i tilfælde af sikkerhedshændelser såsom forsøg på at logge på eller ændrede adgangskoder. 
+Sørg for, at brugerne opdaterer kontakt- og sikkerhedsoplysninger, f.eks. en alternativ mailadresse, et telefonnummer eller en enhed, der er registreret til pushmeddelelser, så de kan reagere på sikkerhedsudfordringer og få besked om sikkerhedshændelser. Opdaterede kontakt- og sikkerhedsoplysninger hjælper brugerne med at bekræfte deres identitet, hvis de glemmer deres adgangskode, eller hvis en anden forsøger at overtage deres konto. Den indeholder også en kanal, hvor der ikke er flere båndmeddelelser, hvis der er sikkerhedshændelser, f.eks. logonforsøg eller ændrede adgangskoder. 
   
-Du kan få mere at [vide under Konfigurer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md).
+Du kan få mere at vide under [Konfigurer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md).
   
 ### <a name="enable-risk-based-multi-factor-authentication"></a>Aktivér risikobaseret multifaktorgodkendelse
 
-Risikobaseret multifaktorgodkendelse sikrer, at når vores system registrerer mistænkelig aktivitet, kan det udfordring brugeren for at sikre, at de er den legitime kontoejer. 
+Risikobaseret multifaktorgodkendelse sikrer, at når vores system registrerer mistænkelig aktivitet, kan det udfordre brugeren for at sikre, at de er den legitime kontoejer. 
   
 ## <a name="next-steps"></a>Næste trin
 
-Vil du vide mere om administration af adgangskoder? Her er nogle anbefalede læsninger:
+Vil du vide mere om administration af adgangskoder? Her er nogle anbefalede læsning:
 
-- [Glem adgangskoder, slip for adgangskoder](https://www.microsoft.com/security/business/identity-access-management/passwordless-authentication)
+- [Glem adgangskoder, gå uden adgangskode](https://www.microsoft.com/security/business/identity-access-management/passwordless-authentication)
 
 - [Vejledning til Microsoft-adgangskode](https://www.microsoft.com/research/wp-content/uploads/2016/06/Microsoft_Password_Guidance-1.pdf)
 
-- [Får man noget ud af stærke webadgangskoder?](https://go.microsoft.com/fwlink/p/?linkid=861008)
+- [Udfører stærke webadgangskoder noget?](https://go.microsoft.com/fwlink/p/?linkid=861008)
 
-- [Adgangskodeporteføljer og Finite-Effort bruger](https://go.microsoft.com/fwlink/p/?linkid=861014)
+- [Oversigter over adgangskoder og den Finite-Effort bruger](https://go.microsoft.com/fwlink/p/?linkid=861014)
 
-- [Undgå svage adgangskoder ved at læse brugernes tanker](https://go.microsoft.com/fwlink/p/?linkid=861015)
+- [Forhindrer svage adgangskoder ved at læse brugernes sind](https://go.microsoft.com/fwlink/p/?linkid=861015)
 
 - [Valg af sikre adgangskoder](https://go.microsoft.com/fwlink/p/?linkid=861016)
 
-- [Tid til at genoverveje obligatorisk ændring af adgangskode](https://go.microsoft.com/fwlink/p/?linkid=861018)
+- [Tid til at gentænke obligatoriske adgangskodeændringer](https://go.microsoft.com/fwlink/p/?linkid=861018)
 
 - [Værste adgangskoder i 2015](https://go.microsoft.com/fwlink/p/?linkid=861020)
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)\
-[Indstil en individuel brugers adgangskode til aldrig at udløbe](../add-users/set-password-to-never-expire.md) (artikel)\
-[Lad brugere nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)\
-[Sende en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)
+[Angiv en individuel brugers adgangskode til aldrig at udløbe](../add-users/set-password-to-never-expire.md) (artikel)\
+[Lad brugerne nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)\
+[Send en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)

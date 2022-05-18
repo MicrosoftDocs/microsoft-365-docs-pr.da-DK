@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: a2bfa434d5a564307498f621cb5105f411daff4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 691c6999e97350184fbe72e28f2b380dcf7b41d9
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65087211"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467542"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
 
@@ -84,8 +84,8 @@ Hvis du vil gøre dataene i Teams brugeraktivitetsrapport anonyme, skal du være
 
 3. Vælg **Gem ændringer**.
 
+## <a name="related-content"></a>Relateret indhold
 
-## <a name="see-also"></a>Se også
 [Microsoft Teams rapport over enhedsforbrug](../activity-reports/microsoft-teams-device-usage-preview.md)
 
 [Microsoft Teams forbrugsaktivitetsrapport](../activity-reports/microsoft-teams-usage-activity.md) 

@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du får en Microsoft Forms aktivitetsrapport ved hjælp af dashboardet Microsoft 365 Rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: c00c9e91d4b8e37021a30798088f46b786b3b4fc
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du får en Microsoft Forms aktivitetsrapport ved hjælp af dashboardet Microsoft 365 Rapporter og finder ud af, hvordan brugere med licens interagerer med formularer.
+ms.openlocfilehash: ccfacbfb7450aef7c1880e7022b374799ac8307b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781923"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467640"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---forms-activity"></a>Microsoft 365 rapporter i Administration – Formularaktivitet
 

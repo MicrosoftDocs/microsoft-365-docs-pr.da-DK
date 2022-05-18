@@ -17,13 +17,13 @@ search.appverid:
 - MET150
 - MOE150
 - GEA150
-description: Få mere at vide om, hvordan du får en Microsoft 365 Apps til forbrugsrapport for Viva Insights aktivitet i dashboardet Microsoft 365 Rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: c0b19871db61f37585384766d4e44ccb602a661b
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du får en Microsoft 365 Apps til forbrugsrapport, så du f.eks. kan få mere at vide om aktive brugeres indførelse af Viva Insights.
+ms.openlocfilehash: ae79a1c547c695d86289544159e3492ae8d9bf86
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781309"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467202"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---viva-insights-activity"></a>Microsoft 365 rapporter i Administration – Viva Insights aktivitet
 

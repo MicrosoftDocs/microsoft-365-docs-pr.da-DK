@@ -10,26 +10,25 @@ ms.topic: article
 author: martyav
 ms.author: v-maave
 ms.custom: nextgen
-ms.date: 10/19/2018
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 24e43ac3e99f99061489e2719c76245270422c57
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5e0db56306b1e56ee0ab21d2c3728f30a8c47ec8
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419654"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468234"
 ---
 # <a name="troubleshoot-microsoft-defender-antivirus-while-migrating-from-a-third-party-solution"></a>Fejlfinding af Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- Microsoft Defender Antivirus
+- [Microsoft Defender Antivirus](https://www.microsoft.com/windows/comprehensive-security)
 
 **Platforme**
 - Windows
@@ -139,7 +138,7 @@ En anden funktion, der kaldes [begrænset periodisk scanning](limited-periodic-s
 > Begrænset periodisk scanning anbefales ikke i virksomhedsmiljøer. De registrerings-, administrations- og rapporteringsfunktioner, der er tilgængelige, når du kører Microsoft Defender Antivirus i denne tilstand, reduceres sammenlignet med aktiv tilstand.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer fillagring og -deling
+title: Konfigurer OneDrive fillagring og -deling
 f1.keywords:
 - NOCSH
 ms.author: sharik
@@ -30,12 +30,12 @@ search.appverid:
 - ODB160
 ms.assetid: 7aa9cdc8-2245-4218-81ee-86fa7c35f1de
 description: Få mere at vide om, hvordan du bruger OneDrive og et teamwebsted til Microsoft 365 lager og Microsoft 365 fildeling.
-ms.openlocfilehash: e17f4cdb7abefdc7374e1ada073c154d0f006216
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 8fa78b4acbba85932778194f1785bee3fd04315c
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417232"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465926"
 ---
 # <a name="set-up-file-storage-and-sharing-in-microsoft-365"></a>Konfigurer fillagring og -deling i Microsoft 365
 

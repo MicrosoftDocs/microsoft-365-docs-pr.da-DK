@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7355ef75eb455ad7442052daf1df814eb9b3bf26
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 14be99abd0a31a8141f5f66a205a9cd0e17391af
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285078"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469442"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
@@ -47,11 +47,11 @@ Når du som administrator konfigurerer en følsomhedsmærkat til at anvende kryp
 - **Tildel tilladelser nu**, så du kan bestemme præcis, hvilke brugere der får hvilke tilladelser til indhold med den pågældende mærkat.
 - **Lad brugerne tildele tilladelser** , når de anvender mærkaten på indhold. På denne måde kan du give personer i din organisation en vis fleksibilitet, som de muligvis har brug for til at samarbejde og få udført deres arbejde.
 
-Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) på Microsoft Purview-overholdelsesportalen.
+Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) i Microsoft Purview-compliance-portal.
 
 ## <a name="understand-how-the-encryption-works"></a>Forstå, hvordan krypteringen fungerer
 
-Kryptering bruger Azure Rights Management-tjenesten (Azure RMS) fra Azure Information Protection. Denne beskyttelsesløsning bruger politikker for kryptering, identitet og godkendelse. Du kan få mere at vide under [Hvad er Azure Rights Management?](/azure/information-protection/what-is-azure-rms) i dokumentationen til Azure Information Protection. 
+Kryptering bruger Azure Rights Management-tjenesten (Azure RMS) fra Azure Information Protection. Denne beskyttelsesløsning bruger politikker for kryptering, identitet og godkendelse. Du kan få mere at vide under [Hvad er Azure Rights Management?](/azure/information-protection/what-is-azure-rms) fra dokumentationen til Azure Information Protection. 
 
 Når du bruger denne krypteringsløsning, sikrer **funktionen superbruger** , at godkendte personer og tjenester altid kan læse og inspicere de data, der er krypteret for din organisation. Hvis det er nødvendigt, kan krypteringen derefter fjernes eller ændres. Du kan finde flere oplysninger under [Konfiguration af superbrugere til Azure Information Protection- og registreringstjenester eller datagendannelse](/azure/information-protection/configure-super-users).
 
@@ -61,7 +61,7 @@ Før du kan bruge kryptering, skal du muligvis udføre nogle konfigurationsopgav
 
 - Aktivér beskyttelse fra Azure Information Protection
     
-    Hvis følsomhedsmærkater skal anvende kryptering, skal beskyttelsestjeneste (Azure Rights Management) fra Azure Information Protection være aktiveret for din lejer. I nyere lejere er dette standardindstillingen, men du skal muligvis aktivere tjenesten manuelt. Du kan få flere oplysninger under [Aktivering af beskyttelsestjeneste fra Azure Information Protection](/azure/information-protection/activate-service).
+    Hvis følsomhedsmærkater skal anvende kryptering, skal beskyttelsestjenesten (Azure Rights Management) fra Azure Information Protection være aktiveret for din lejer. I nyere lejere er dette standardindstillingen, men du skal muligvis aktivere tjenesten manuelt. Du kan få flere oplysninger under [Aktivering af beskyttelsestjeneste fra Azure Information Protection](/azure/information-protection/activate-service).
 
 - Kontrollér, om der er netværkskrav
     
@@ -69,9 +69,9 @@ Før du kan bruge kryptering, skal du muligvis udføre nogle konfigurationsopgav
 
 - Konfigurer Exchange til Azure Information Protection
     
-    Exchange behøver ikke at være konfigureret til Azure Information Protection, før brugerne kan anvende mærkater i Outlook for at kryptere deres mails. Men indtil Exchange er konfigureret til Azure Information Protection, får du ikke den fulde funktionalitet ved at bruge Azure Rights Management-beskyttelse med Exchange.
+    Exchange behøver ikke at være konfigureret til Azure Information Protection, før brugerne kan anvende mærkater i Outlook for at kryptere deres mails. Men indtil Exchange er konfigureret til Azure Information Protection, får du ikke den fulde funktionalitet ved at bruge Azure Rights Management beskyttelse med Exchange.
     
-    Brugerne kan f.eks. ikke få vist krypterede mails på mobiltelefoner eller med Outlook på internettet krypterede mails kan ikke indekseres til søgning, og du kan ikke konfigurere Exchange Online DLP for Rights Management-beskyttelse. 
+    Brugerne kan f.eks. ikke få vist krypterede mails på mobiltelefoner eller med Outlook på internettet krypterede mails kan ikke indekseres til søgning, og du kan ikke konfigurere Exchange Online DLP til Rights Management beskyttelse. 
     
     Se følgende for at sikre, at Exchange kan understøtte disse yderligere scenarier:
     
@@ -125,11 +125,11 @@ I følgende tabel identificeres det, hvad der sker med eksisterende kryptering, 
 I de tilfælde, hvor den nye mærkatkryptering anvendes, eller den oprindelige kryptering fjernes, sker dette kun, hvis den bruger, der anvender mærkaten, har en brugsrettighed eller rolle, der understøtter denne handling:
 
 - [Brugsrettigheden](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) Eksportér eller Fuld kontrol.
-- Rollen som [Rettighedsadministration-udsteder eller Rights Management-ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) eller [superbruger](/azure/information-protection/configure-super-users).
+- Rollen som [Rights Management udsteder eller Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) eller [superbruger](/azure/information-protection/configure-super-users).
 
 Hvis brugeren ikke har en af disse rettigheder eller roller, kan mærkaten ikke anvendes, og den oprindelige kryptering bevares. Brugeren får vist følgende meddelelse: **Du har ikke tilladelse til at foretage denne ændring af følsomhedsmærkaten. Kontakt ejeren af indholdet.**
 
-Den person, der anvender Videresend ikke på en mail, kan f.eks. genmærke tråden for at erstatte krypteringen eller fjerne den, fordi de er ejeren af Rights Management for mailen. Men med undtagelse af superbrugere kan modtagere af denne mail ikke genmærke den, fordi de ikke har de nødvendige brugsrettigheder.
+Den person, der anvender Videresend ikke på en mail, kan f.eks. genmærke tråden for at erstatte krypteringen eller fjerne den, fordi de er den Rights Management ejer af mailen. Men med undtagelse af superbrugere kan modtagere af denne mail ikke genmærke den, fordi de ikke har de nødvendige brugsrettigheder.
 
 #### <a name="email-attachments-for-encrypted-email-messages"></a>Vedhæftede filer i mails for krypterede mails
 
@@ -158,21 +158,24 @@ Brug følgende indstillinger til at styre, hvem der har adgang til mail eller do
 
 - **Tillad, at adgangen til markeret indhold udløber** enten på en bestemt dato eller efter et bestemt antal dage, efter at mærkaten er anvendt. Efter dette tidspunkt kan brugerne ikke åbne det mærkede element. Hvis du angiver en dato, træder den fra midnat på denne dato i din aktuelle tidszone. Bemærk, at nogle mailklienter muligvis ikke gennemtvinger udløb og viser mails efter deres udløbsdato på grund af deres cachelagringsmekanismer.
 
-- **Tillad offlineadgang** aldrig, altid eller i et bestemt antal dage, efter at etiketten er anvendt. Hvis du begrænser offlineadgang til aldrig eller et antal dage, når denne grænse nås, skal brugerne godkendes igen, og deres adgang logføres. Du kan finde flere oplysninger i næste afsnit om brugslicensen til Rights Management.
+- **Tillad offlineadgang** aldrig, altid eller i et bestemt antal dage, efter at etiketten er anvendt. Hvis du begrænser offlineadgang til aldrig eller et antal dage, når denne grænse nås, skal brugerne godkendes igen, og deres adgang logføres. Du kan finde flere oplysninger i næste afsnit om Rights Management bruge licensen.
 
 Indstillinger til adgangskontrol af krypteret indhold:
 
 ![Indstillinger for administratordefinerede tilladelser.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
 
-### <a name="rights-management-use-license-for-offline-access"></a>Rights Management bruger licens til offlineadgang
+### <a name="rights-management-use-license-for-offline-access"></a>Rights Management bruge en licens til offlineadgang
 
-Når en bruger åbner et dokument eller en mail, der er beskyttet af kryptering fra Azure Rights Management-tjenesten, tildeles brugeren en Azure Rights Management-brugerlicens til det pågældende indhold. Denne brugslicens er et certifikat, der indeholder brugerens brugsrettigheder til dokumentet eller mailen og den krypteringsnøgle, der blev brugt til at kryptere indholdet. Brugslicensen indeholder også en udløbsdato, hvis den er angivet, og hvor lang tid brugslicensen er gyldig.
+> [!NOTE]
+> Selvom du kan konfigurere krypteringsindstillingen for at tillade offlineadgang, understøtter nogle apps muligvis ikke offlineadgang til krypteret indhold. Navngivne og krypterede filer i [Power BI Desktop](/power-bi/admin/service-security-sensitivity-label-overview) åbnes f.eks. ikke, hvis du er offline.
+
+Når en bruger åbner et dokument eller en mail, der er beskyttet af kryptering fra Azure Rights Management-tjenesten, tildeles brugeren en Azure Rights Management brugerlicens til det pågældende indhold. Denne brugslicens er et certifikat, der indeholder brugerens brugsrettigheder til dokumentet eller mailen og den krypteringsnøgle, der blev brugt til at kryptere indholdet. Brugslicensen indeholder også en udløbsdato, hvis den er angivet, og hvor lang tid brugslicensen er gyldig.
 
 Hvis der ikke er angivet en udløbsdato, er standardlicensens gyldighedsperiode for brug 30 dage for en lejer. I varigheden af brugslicensen bliver brugeren ikke godkendt eller godkendt igen for indholdet. Denne proces gør det muligt for brugeren at fortsætte med at åbne det beskyttede dokument eller den beskyttede mail uden en internetforbindelse. Når gyldighedsperioden for brugslicensen udløber, skal brugeren godkendes og godkendes igen, næste gang brugeren tilgår det beskyttede dokument eller den beskyttede mail.
 
 Ud over at godkende igen evalueres krypteringsindstillingerne og brugergruppemedlemskabet igen. Det betyder, at brugerne kan opleve forskellige adgangsresultater for det samme dokument eller den samme mail, hvis der er ændringer i krypteringsindstillingerne eller gruppemedlemskabet, fra da de sidst fik adgang til indholdet.
 
-Hvis du vil vide mere om, hvordan du ændrer standardindstillingen for 30 dage, skal du se [Rights Management-brugslicens](/azure/information-protection/configure-usage-rights#rights-management-use-license).
+Hvis du vil vide mere om, hvordan du ændrer standardindstillingen for 30 dage, skal du se [Rights Management bruge licens](/azure/information-protection/configure-usage-rights#rights-management-use-license).
 
 ### <a name="assign-permissions-to-specific-users-or-groups"></a>Tildel tilladelser til bestemte brugere eller grupper
 
@@ -237,17 +240,17 @@ Det gør du ved at tilføje brugere eller grupper, tildele dem tilladelser og ge
 
 ![Forskellige brugere med forskellige tilladelser.](../media/Sensitivity-Multiple-users-permissions.png)
 
-#### <a name="rights-management-issuer-user-applying-the-sensitivity-label-always-has-full-control"></a>Rights Management-udsteder (bruger, der anvender følsomhedsmærkaten) har altid Fuld kontrol
+#### <a name="rights-management-issuer-user-applying-the-sensitivity-label-always-has-full-control"></a>Rights Management udsteder (bruger, der anvender følsomhedsmærkaten) har altid Fuld kontrol
 
-Kryptering af en følsomhedsmærkat bruger Azure Rights Management-tjenesten fra Azure Information Protection. Når en bruger anvender en følsomhedsmærkat for at beskytte et dokument eller en mail ved hjælp af kryptering, bliver brugeren Rights Management-udstederen for det pågældende indhold.
+Kryptering af en følsomhedsmærkat bruger Azure Rights Management-tjenesten fra Azure Information Protection. Når en bruger anvender en følsomhedsmærkat for at beskytte et dokument eller en mail ved hjælp af kryptering, bliver denne bruger den Rights Management udsteder for det pågældende indhold.
 
-Rights Management-udstederen tildeles altid fuld kontrol-tilladelser til dokumentet eller mailen og derudover:
+Den Rights Management udsteder tildeles altid fuld kontrol-tilladelser til dokumentet eller mailen og derudover:
 
-- Hvis krypteringsindstillingerne indeholder en udløbsdato, kan Rights Management-udstederen stadig åbne og redigere dokumentet eller mailen efter denne dato.
-- Rights Management-udstederen kan altid få adgang til dokumentet eller mailen offline.
-- Rights Management-udstederen kan stadig åbne et dokument, når det er tilbagekaldt.
+- Hvis krypteringsindstillingerne indeholder en udløbsdato, kan udstederen af Rights Management stadig åbne og redigere dokumentet eller mailen efter denne dato.
+- Den Rights Management udsteder kan altid få adgang til dokumentet eller mailen offline.
+- Den Rights Management udsteder kan stadig åbne et dokument, når det er tilbagekaldt.
 
-Du kan få flere oplysninger under [Udsteder af Rights Management og Rights Management-ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+Du kan få flere oplysninger [under Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 ### <a name="double-key-encryption"></a>Kryptering med dobbelt nøgle
 
@@ -318,7 +321,7 @@ Med Azure Information Protection Unified-mærkatklienten kan brugerne f.eks.:[](
 
 - Vælg et tilladelsesniveau, f.eks. Fremviser (som tildeler tilladelsen Vis kun) eller Co-Author (som tildeler tilladelserne Vis, Rediger, Kopiér og Udskriv).
 - Vælg brugere, grupper eller organisationer. Dette kan omfatte personer både i og uden for din organisation.
-- Angiv en udløbsdato, hvorefter de valgte brugere ikke kan få adgang til indholdet. Du kan få flere oplysninger i afsnittet [Rights Management bruger licens til offlineadgang](#rights-management-use-license-for-offline-access).
+- Angiv en udløbsdato, hvorefter de valgte brugere ikke kan få adgang til indholdet. Du kan få flere oplysninger i ovenstående afsnit [Rights Management bruge licens til offlineadgang](#rights-management-use-license-for-offline-access).
 
 ![Indstillinger, som brugeren kan beskytte med brugerdefinerede tilladelser.](../media/sensitivity-aip-custom-permissions-dialog.png)
 

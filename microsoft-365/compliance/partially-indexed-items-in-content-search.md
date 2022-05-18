@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører i Microsoft Purview-compliance-portal.
-ms.openlocfilehash: 0efb96f8d36868f182476a0eb7b0087beb3134f9
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0f3d7d4b2e2a7d4c3c23d89ad6c2b8ba20fd6afb
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417034"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468826"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>Delvist indekserede elementer i eDiscovery
 
@@ -163,9 +163,6 @@ Du kan finde en liste over indekseringsgrænser for SharePoint dokumenter under 
 - Selvom en filtype understøttes til indeksering og er indekseret, kan der være indekserings- eller søgefejl, der medfører, at en fil returneres som et delvist indekseret element. Det kan f.eks. være en delvis succes at søge i en stor Excel fil (fordi de første 4 MB indekseres), men det mislykkes derefter, fordi grænsen for filstørrelsen er overskredet. I dette tilfælde er det muligt, at den samme fil returneres sammen med søgeresultaterne og som et delvist indekseret element.
 
 - Filer, der er krypteret med [Microsoft-krypteringsteknologier](encryption.md) og er knyttet til en mail, der opfylder kriterierne i en søgning, kan gennemses og dekrypteres, når der eksporteres. På nuværende tidspunkt indekseres filer, der er krypteret med Microsofts krypteringsteknologier (og gemt i SharePoint eller OneDrive for Business), delvist. 
-
-   > [!NOTE]
-   > Filer, der er krypteret ved hjælp af følsomhedsmærkater, dekrypteres ikke.
 
 - Mails, der er krypteret med S/MIME, indekseres delvist. Dette omfatter krypterede meddelelser med eller uden vedhæftede filer.
 

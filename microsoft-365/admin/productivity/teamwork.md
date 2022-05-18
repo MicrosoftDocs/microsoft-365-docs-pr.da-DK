@@ -1,5 +1,5 @@
 ---
-title: Microsoft Productivity Score – Teamwork
+title: Microsoft Produktivitetsscore og indsigt i teamwork
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,147 +19,147 @@ search.appverid:
 - MET150
 - MOE150
 description: Detaljer om teamwork – personer oplever produktivitetsscore.
-ms.openlocfilehash: 0c06f968555e3d84944f2be9ba627a81aba746d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b7291ec2a4bf0e97c0bc8b3558c2cdc17d86a19a
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590685"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466388"
 ---
-# <a name="teamwork--people-experiences"></a>Teamwork – oplevelser med mennesker
+# <a name="teamwork--people-experiences"></a>Teamwork – personoplevelser
 
-Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem dens brug af Microsoft 365 og de teknologioplevelser, der understøtter den. Organisationens resultat afspejler måleenheder for personer og teknologi og kan sammenlignes med benchmarks fra organisationer, der ligner din. Kategorien teamwork er en del af de målinger, der falder ind under folks oplevelser. Du kan få mere at vide i Oversigt [over Produktivitetsscore](productivity-score.md) og læse [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
+Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem brugen af Microsoft 365 og de teknologioplevelser, der understøtter den. Din organisations score afspejler målingerne af person- og teknologioplevelsen og kan sammenlignes med benchmarks fra organisationer, der svarer til dine. Teamworkkategorien er en del af de målinger, der falder ind under personoplevelser. Du kan få mere at vide ved at se [oversigten over produktivitetsscore](productivity-score.md) og læse [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
 
 ## <a name="prerequisites"></a>Forudsætninger
 
-For at komme i gang med teamwork-indsigter skal personer i din organisation have licens til at:
+For at komme i gang med indsigt i teamwork skal personer i din organisation have licens til:
 
 - Microsoft Teams
 - SharePoint
 - Exchange Online
 
-Få mere at vide under [Tildel licenser til brugere](../manage/assign-licenses-to-users.md).
+Du kan få flere oplysninger under [Tildel licenser til brugere](../manage/assign-licenses-to-users.md).
 
-Når personer har været aktive i ovenstående produkter mindst én gang inden for de seneste 28 dage, begynder du at få vist indsigterne.
+Når personer har været aktive i ovenstående produkter mindst én gang inden for de sidste 28 dage, begynder du at se indsigten.
 
-## <a name="why-your-orgs-teamwork-score-matters"></a>Derfor betyder din organisations teamwork-resultat noget
+## <a name="why-your-orgs-teamwork-score-matters"></a>Hvorfor din organisations teamworkscore er vigtig
 
-En grundlæggende søjle for den organisatoriske produktivitet er, når en gruppe af personer med et fælles mål arbejder sammen med hinanden og med fælles ressourcer til kollektiv succes. Opslag angiver, at når folk deler oplysninger og samarbejder i delte arbejdsområder, sparer de op til 4 timer om ugen. De kan finde relaterede dokumenter, finde kontekst til tidligere diskussioner og nå fælles mål. Se [theevidence](https://www.microsoft.com/microsoft-365/blog/wp-content/uploads/sites/2/2019/04/Total-Economic-Impact-Microsoft-Teams.pdf)
+En grundlæggende søjle for organisationsproduktivitet er, når en gruppe mennesker med et fælles mål arbejder med hinanden og med fælles ressourcer for kollektiv succes. Opslag angiver, at når personer deler oplysninger og samarbejder i delte arbejdsområder, sparer de op til 4 timer om ugen. De kan finde relaterede dokumenter, finde kontekst for tidligere diskussioner og levere mod delte mål. [Sevidence](https://www.microsoft.com/microsoft-365/blog/wp-content/uploads/sites/2/2019/04/Total-Economic-Impact-Microsoft-Teams.pdf)
 
-## <a name="how-we-calculate-the-teamwork-score"></a>Sådan beregner vi teamwork-resultatet
+## <a name="how-we-calculate-the-teamwork-score"></a>Sådan beregner vi scoren for teamwork
 
-Vi giver dig en primær indsigt i den oplevelse, der indeholder nøgletal for denne kategori i organisationen. Derefter bruges en pointdelingsstruktur, som er beskrevet nedenfor, til disse målepunkter til at beregne din organisations score.
+Vi giver en primær indsigt i den oplevelse, der indeholder de vigtigste målepunkter for denne kategori i din organisation. Derefter bruges en resultatstruktur, der er beskrevet nedenfor, til disse målepunkter til at beregne din organisations score.
 
 ### <a name="primary-insight"></a>Primær indsigt
 
-Den primære indsigt kigger på alle de personer, der kommunikerer ved hjælp af mails og meddelelser på Microsoft Teams og interagerer med indhold i skyen i delte arbejdsområder. I Microsoft 365 er Microsoft 365 Groups grundlaget for, at folk kan samles i et delt arbejdsområde med mulighed for at sende mails til gruppepostkassen, dele filer på SharePoint-teamwebstedet og sende kanalmeddelelser via Microsoft Teams.
+Den primære indsigt ser på alle de personer, der kommunikerer ved hjælp af mail og meddelelser på Microsoft Teams, og interagerer med indhold i cloudmiljøet i delte arbejdsområder. I Microsoft 365 er Microsoft 365-grupper grundlaget for, at folk kan mødes i et delt arbejdsområde, så de kan sende mails til gruppepostkassen, dele filer på SharePoint teamwebsted og sende kanalmeddelelser via Microsoft Teams.
 
-:::image type="content" source="../../media/teamwork-score.png" alt-text="Diagram, der viser den primære indsigt i teamwork-resultatet.":::
+:::image type="content" source="../../media/teamwork-score.png" alt-text="Diagram, der viser primær indsigt i scoren for teamwork.":::
 
-1. **Sidehoved:** Indeholder nøgletal for personer i din organisation, der udfører en af følgende aktiviteter:
-      - Afsendelse af mail til en gruppepostkasse via Exchange.
-      - Sende kanalmeddelelser via Teams
-      - Læsning og oprettelse af indhold (det, som vi samlet kalder indholdsinteraktion) SharePoint teamwebsteder.
+1. **Header:** Leverer den vigtigste metrikværdi for personer i din organisation, der udfører en af følgende aktiviteter:
+      - Sender mail til en gruppepostkasse via Exchange.
+      - Sender kanalmeddelelser via Teams
+      - Læsning og oprettelse af indhold (det, vi samlet kalder indholdsinteraktion) på SharePoint teamwebsteder.
 
-        Som procentdel af alle personer i organisationen, der udfører en af følgende aktiviteter (inden for eller uden for delte arbejdsområder):
-        - Sende mail via Exchange.
-        - Afsendelse af beskeder (chat eller kanalmeddelelser) på Microsoft Teams.
-        - Læse og oprette indhold på OneDrive eller SharePoint.
+        Som en procentdel af alle personer i din organisation, der udfører en af følgende aktiviteter (i eller uden for delte arbejdsområder):
+        - Sender mail via Exchange.
+        - Sender meddelelser (chat- eller kanalmeddelelser) på Microsoft Teams.
+        - Læsning og oprettelse af indhold på OneDrive eller SharePoint.
 
-            Og har adgang til mindst én af følgende tjenester: Exchange, Microsoft Teams eller SharePoint
+            Og have adgang til mindst en af følgende tjenester: Exchange, Microsoft Teams eller SharePoint
 
-1. **Brødtekst:** Indeholder flere oplysninger om, hvordan kommunikation og interaktion med indhold kan give positive resultater for produktiviteten i din organisation, når du er færdig i et delt arbejdsområde.
+1. **Kroppen:** Indeholder flere oplysninger om, hvordan kommunikation og interaktion med indhold kan have positive resultater for produktiviteten i din organisation, når det udføres i et delt arbejdsområde.
 2. **Visualisering (aktuel tilstand):**
-      - Vandret søjlediagram, hvor den blå del repræsenterer procentdelen udtrykt i sidehovedet
-      - Fremhæver den brøk (tæller/nævner), der bruges til at beregne den procentdel, der vises i sidehovedet
-        - Tæller: Antallet af personer i organisationen, der sender mails til en gruppepostkasse via Exchange, ELLER som sender kanalmeddelelser via Teams ELLER læser og opretter indhold på SharePoint teamwebsteder.
-        - Nævner: Antallet af personer i din organisation, der sender mails via Exchange, ELLER sender meddelelser (chat- eller kanalmeddelelser) på Microsoft Teams ELLER læser og opretter indhold på OneDrive eller SharePoint, OG har adgang til mindst én af følgende tjenester: Exchange, Microsoft Teams eller SharePoint.
-   - Peer-benchmarkværdien for nøgletal vises også som en procentdel.
-3. **Få vist ressourcer om teamwork:** Vælg dette link for at få vist hjælp-indhold.
+      - Vandret søjle, hvor den blå del repræsenterer den procentdel, der er udtrykt i overskriften
+      - Fremhæver den brøk (tæller/nævner), der bruges til at beregne den procentdel, der vises i headeren
+        - Tæller: Antallet af personer i din organisation, der sender mail til en gruppepostkasse via Exchange, ELLER som sender kanalmeddelelser via Teams eller læser og opretter indhold på SharePoint teamwebsteder.
+        - Nævner: Antallet af personer i din organisation, der sender mails via Exchange eller sender meddelelser (chat- eller kanalmeddelelser) på Microsoft Teams, ELLER læser og opretter indhold på OneDrive eller SharePoint, OG har adgang til mindst en af følgende tjenester: Exchange, Microsoft Teams eller SharePoint.
+   - Peer benchmark-værdien for nøglemetrikværdien vises også som en procentdel.
+3. **Vis ressourcer om teamwork:** Vælg dette link for at få vist Hjælp-indhold.
 
-#### <a name="trend-visualization-of-the-primary-insight"></a>Tendensvisualisering af det primære indsigt
+#### <a name="trend-visualization-of-the-primary-insight"></a>Tendensvisualisering af den primære indsigt
 
-Følgende diagram viser tendensen for tælleren og nævneren for nøglemetrik i det primære indsigt. Den viser antallet af personer, der er beskæftiget i delte arbejdsområder, og antallet af personer, der kommunikerer eller interagerer med indhold inden for de seneste 180 dage. Hvert datapunkt i kurvediagrammet er en sammenlagt aktivitet for de seneste 28 dage.
+Følgende diagram viser tendensen for tælleren og nævneren af nøglemetrikværdien i den primære indsigt. Det viser antallet af personer, der er involveret i delte arbejdsområder, og antallet af personer, der kommunikerer eller interagerer med indhold inden for de sidste 180 dage. Hvert datapunkt i kurvediagrammet er en samlet aktivitet for de sidste 28 dage.
 
 :::image type="content" source="../../media/trend-peopleiinsharedworkspaces.png" alt-text="Diagram, der viser antallet af personer, der er involveret i delte arbejdsområder.":::
 
-### <a name="scoring-framework"></a>Pointdelingsstruktur
+### <a name="scoring-framework"></a>Resultatstruktur
 
-Teamwork-resultatet for din organisations målinger på et samlet (organisatorisk) niveau, uanset om brugerne konsekvent kommunikerer eller deltager i filaktivitet i delte arbejdsområder inden for de seneste 28 dage.
+Scoren for teamwork for din organisation måler på aggregeret (organisationsniveau), uanset om brugerne konsekvent kommunikerer eller engagerer sig i filaktivitet i delte arbejdsområder inden for de sidste 28 dage.
 
-Karakterer gives ikke på det individuelle brugerniveau.
+Scorer er ikke angivet på individuelt brugerniveau .
 
 ## <a name="explore-more-about-teamwork-in-your-organization"></a>Udforsk mere om teamwork i din organisation
 
-Vi giver også yderligere oplysninger om, hvordan personer i organisationen arbejder sammen. Disse yderligere målepunkter bidrager ikke direkte til din produktivitetsscore, men er relevante i forbindelse med at hjælpe dig med at oprette en handlingsplan som en del af din digitale transformation.
+Vi giver også yderligere oplysninger om, hvordan personer i din organisation arbejder sammen. Disse ekstra målepunkter bidrager ikke direkte til din produktivitetsscore, men er relevante for at hjælpe dig med at oprette en handlingsplan som en del af din digitale transformation.
 
-### <a name="breakdown-of-how-people-engage-in-shared-workspaces"></a>En opdeling af, hvordan folk interagerer i delte arbejdsområder
+### <a name="breakdown-of-how-people-engage-in-shared-workspaces"></a>Opdeling af, hvordan personer engagerer sig i delte arbejdsområder
 
-:::image type="content" source="../../media/people-sharedworkspace-engagement.png" alt-text="Diagram, der viser, hvordan personer i organisationen er involveret i delte arbejdsområder.":::
+:::image type="content" source="../../media/people-sharedworkspace-engagement.png" alt-text="Diagram, der viser, hvordan personer i din organisation er engageret i delte arbejdsområder.":::
 
-1. **Sidehoved:** Viser en detaljeret opdeling på tværs af de forskellige typer teamwork, der måles.
-2. **Brødtekst:** Indeholder oplysninger om værdien af at arbejde i delte arbejdsområder for at hjælpe teams med at være mere effektive.
-3. **Visualisering:** Visualiseringen viser det omfang, i hvilket personer, der kommunikerer eller interagerer med indhold, gør det i delte arbejdsområder, som følger:
-      - **Afsendelse af mail**: Den farvede del og brøkdelen repræsenterer procentdelen af personer, der sender mails til gruppepostkasser. Brøken består af:
+1. **Header:** Viser en detaljeret opdeling på tværs af de forskellige typer teamwork, der måles.
+2. **Kroppen:** Indeholder oplysninger om værdien af at arbejde i delte arbejdsområder for at hjælpe teams med at blive mere effektive.
+3. **Visualisering:** Visualiseringen viser, i hvilket omfang personer, der kommunikerer eller interagerer med indhold, gør det i delte arbejdsområder på følgende måde:
+      - **Sender mail**: Den farvede del og brøken repræsenterer procentdelen af personer, der sender mail til gruppepostkasser. Brøken består af:
         - Tæller: Personer, der sender mails til gruppepostkasser inden for de seneste 28 dage.
-        - Nævner: Personer, der sender mails inden for de seneste 28 dage. Dette er den samme gruppe af personer, der er markeret som at sende mails i det primære indsigt i kommunikationsproduktivitetsresultatet.
-      - **Afsendelse af** meddelelser: Den farvede del og brøkdelen repræsenterer procentdelen af personer, der sender meddelelser i kanaler Microsoft Teams. Brøken består af:
+        - Nævner: Personer, der sender mails inden for de seneste 28 dage. Dette er den samme gruppe personer, der er markeret som afsendelse af mail i den primære indsigt i scoren for kommunikationsproduktivitet.
+      - **Sender meddelelser**: Den farvede del og brøken repræsenterer procentdelen af personer, der sender meddelelser i kanaler i Microsoft Teams. Brøken består af:
         - Tæller: Personer, der sender kanalmeddelelser inden for de seneste 28 dage.
-        - Nævner: Personer, der sender chat- eller kanalmeddelelser inden for de seneste 28 dage. Dette er den samme gruppe af personer, der er markeret som at sende meddelelser Microsoft Teams i den primære indsigt i kommunikationskategorien i Produktivitetsscore.
-    - **Oprettelse af indhold**: Den farvede del og brøken repræsenterer procentdelen af personer, der læser eller opretter indhold Microsoft 365 SharePoint teamwebsteder.
-        - Tæller: Antallet af personer, der læser eller opretter indhold på Microsoft 365 forbundne teamwebsteder.
-        - Nævner: Antallet af personer med adgang til SharePoint, der har læst eller oprettet indhold af enhver type i OneDrive eller SharePoint-websteder inden for de seneste 28 dage.
-4. **Få vist relateret indhold:** Vælg dette link for at få vist hjælp-indhold.
+        - Nævner: Personer, der sender chat- eller kanalmeddelelser inden for de seneste 28 dage. Dette er den samme gruppe personer, der er markeret som afsendelse af meddelelser i Microsoft Teams i den primære indsigt i kommunikationskategorien i Produktivitetsscore.
+    - **Oprettelse af indhold**: Den farvede del og brøken repræsenterer procentdelen af personer, der læser eller opretter indhold på Microsoft 365 SharePoint teamwebsteder.
+        - Tæller: Antal personer, der læser eller opretter indhold på Microsoft 365 teamwebsteder, der er forbundet med grupper.
+        - Nævner: Antal personer med adgang til SharePoint, der har læst eller oprettet indhold af enhver art i OneDrive eller SharePoint websteder inden for de seneste 28 dage.
+4. **Få vist relateret indhold:** Vælg dette link for at få vist Hjælp-indhold.
 
-### <a name="breakdown-of-workspace-engagement-by-size-and-age"></a>Opdeling af arbejdsområdets engagement efter størrelse og alder
+### <a name="breakdown-of-workspace-engagement-by-size-and-age"></a>Opdeling af arbejdsområdeengagement efter størrelse og alder
 
-:::image type="content" source="../../media/workspace-engagement-bysizeage.png" alt-text="Diagram, der viser engagementet i arbejdsområdet kategoriseret efter størrelse og alder.":::
+:::image type="content" source="../../media/workspace-engagement-bysizeage.png" alt-text="Diagram, der viser engagement i arbejdsområdet som kategoriseret efter størrelse og alder.":::
 
-1. **Sidehoved:** Viser kategoriseringen af engagement i arbejdsområder, opdelt efter størrelse for antallet af medlemmer i arbejdsområdet og arbejdsområdets alder i måneder.
-2. **Brødtekst:** Indeholder oplysninger om værdien af at opfordre personer i organisationen til kun at beholde de arbejdsområder, der er nødvendige for at fremme mere effektivt teamwork.
-3. **Visualisering:** Aftaleopdelingen vises i form af et varmekort på tværs af to dimensioner.
+1. **Header:** Viser kategoriseringen af forpligtelser i arbejdsområder opdelt efter størrelse for antallet af medlemmer i arbejdsområdet og arbejdsområdets alder i måneder.
+2. **Kroppen:** Indeholder oplysninger om værdien af at opfordre personer i din organisation til kun at beholde de arbejdsområder, der er nødvendige for at fremme mere effektivt teamwork.
+3. **Visualisering:** Opdelingen af aftalen vises i form af et varmekort på tværs af to dimensioner.
 
-      - **Arbejdsområdets størrelse:** Arbejdsområder er opdelt i tre kategorier baseret på antallet af medlemmer: 2-10 personer, 11-100 personer og over 100 personer. Kategorien &quot;Alle&quot; omfatter alle størrelseskategorier.
-      - **Arbejdsområdets alder:** Arbejdsområder kategoriseres efter antallet af måneder, siden arbejdsområdet blev oprettet. Kategorien &quot;Alle&quot; indeholder alle alderskategorier.
+      - **Arbejdsområdestørrelse:** Arbejdsområder opdeles i tre kategorier baseret på antallet af medlemmer: 2-10 personer, 11-100 personer og over 100 personer. Kategorien &quot;Alle&quot; indeholder alle størrelseskategorier.
+      - **Arbejdsområdets alder:** Arbejdsområder er kategoriseret efter antallet af måneder, siden arbejdsområdet blev oprettet første gang. Kategorien &quot;Alle&quot; indeholder alle alderskategorier.
 
-        Hver celle i diagrammet har et tal og en farve, der er baseret på procentdelen af engagerede arbejdsområder, der tilhører den pågældende kategori. Arbejdsområdekategorierne er baseret på den alder og størrelse, der vises i skæringspunktet mellem cellen. Hvis cellen f.eks. i skæringspunktet mellem 11-100 personer og 4-12 måneder har en værdi på 52 %, betyder det, at 52 % af arbejdsområderne med 11-100 medlemmer, der er mellem 4-12 måneder gamle, har en form for aftale. Procentdelen beregnes som:
+        Hver celle i diagrammet har et tal og en farve, der er baseret på procentdelen af engagerede arbejdsområder, der tilhører den pågældende kategori. Kategorierne for arbejdsområdet er baseret på den alder og størrelse, der vises i skæringspunktet for den pågældende celle. Hvis cellen ved skæringspunktet for f.eks. 11-100 personer og 4-12 måneder har en værdi på 52 %, betyder det, at 52 % af arbejdsområderne med 11-100 medlemmer, der er mellem 4-12 måneder gamle, har en form for engagement. Procentdelen beregnes som:
 
-        - **Tæller:** Arbejdsområder, der har en aftale i form af kommunikation (mail- og kanalmeddelelser) eller indholdsinteraktion inden for de seneste 28 dage
-        - **Nævner: alle arbejdsområder** , der er tilgængelige i din organisation de seneste 28 dage
+        - **Tælleren:** Arbejdsområder, der har engagement i form af kommunikation (mail og kanalmeddelelser) eller indholdsinteraktion inden for de sidste 28 dage
+        - **Nævner:** alle arbejdsområder, der er tilgængelige i din organisation i de sidste 28 dage
 
-1. **Få vist relateret indhold:** Vælg dette link for at få vist hjælp-indhold.
+1. **Få vist relateret indhold:** Vælg dette link for at få vist Hjælp-indhold.
 
 ### <a name="breakdown-of-workspaces-by-level-of-engagement"></a>Opdeling af arbejdsområder efter engagementsniveau
 
 :::image type="content" source="../../media/workspace-by-engagement.png" alt-text="Diagram, der viser opdelingen af arbejdsområder efter aftale efter grupper.":::
 
-1. **Sidehoved:** Indeholder en opdeling af arbejdsområder opdelt efter engagementsniveau ved hjælp af gruppemail, kanalmeddelelser og indholdsinteraktion.
-2. **Brødtekst:** Indeholder oplysninger om værdien af konsekvent engagement i de delte arbejdsområder for at gøre dem mere effektive på teamwork.
-3. **Visualisering:** Giver en visning af arbejdsområderne i organisationen baseret på intensiteten af engagement pr. uge. Visningen indeholder fordelinger for forskellige aktivitetstyper målt inden for teamwork ud over enhver aftale, som dækker følgende kategorier:
-      - **Gruppemail:** Procent af arbejdsområder, der ikke har nogen dage/1 dag/2-3 dage/4 + dage gruppemailaktivitet pr. uge i løbet af de seneste 28 dage.
-      - **Kanalmeddelelser:** Procent af arbejdsområder, der ikke har dage/1 dag/2-3 dage/4+ dage kanalmeddelelser pr. uge i løbet af de seneste 28 dage.
-      - **Læsning eller oprettelse af indhold:** Procent af arbejdsområder, der ikke har dage/1 dag/2-3 dage/4+ dage at læse eller oprette indhold pr. uge i løbet af de seneste 28 dage.
-4. **Få vist relateret indhold:** Vælg dette link for at få vist hjælp-indhold.
+1. **Header:** Viser en opdeling af arbejdsområder, der er opdelt efter engagementsniveau, ved hjælp af gruppemail, kanalmeddelelser og indholdsinteraktion.
+2. **Kroppen:** Indeholder oplysninger om værdien af konsekvent engagement i de delte arbejdsområder for at gøre dem mere effektive i teamwork.
+3. **Visualisering:** Giver en visning af arbejdsområderne i din organisation baseret på intensiteten af engagement pr. uge. Visningen indeholder distributioner for forskellige aktivitetstyper, der måles i teamwork, ud over enhver forpligtelse, som dækker følgende kategorier:
+      - **Gruppemail:** Procent af arbejdsområder, der ikke har nogen dage/1 dag/2-3 dage/4+ dage for gruppemailaktivitet pr. uge i løbet af de sidste 28 dage.
+      - **Kanalmeddelelser:** Procent af arbejdsområder, der ikke har nogen dage/1 dag/2-3 dage/4+ dage med kanalmeddelelser pr. uge i løbet af de sidste 28 dage.
+      - **Læsning eller oprettelse af indhold:** Procent af arbejdsområder, der ikke har dage/1 dag/2-3 dage/4+ dage til læsning eller oprettelse af indhold pr. uge i løbet af de sidste 28 dage.
+4. **Få vist relateret indhold:** Vælg dette link for at få vist Hjælp-indhold.
 
 ### <a name="use-of-teams-within-microsoft-teams"></a>Brug af teams i Microsoft Teams
 
-:::image type="content" source="../../media/useof-teams-within-teams.png" alt-text="Diagram, der viser, hvor mange delingsarbejdsområder, der bruges Microsoft Teams.":::
+:::image type="content" source="../../media/useof-teams-within-teams.png" alt-text="Diagram, der viser, hvor mange delingsarbejdsområder der bruges af Microsoft Teams.":::
 
-1. **Sidehoved:** Viser antallet af delte arbejdsområder, der har en gruppe Microsoft Teams, der er knyttet til dem.
-2. **Brødtekst:** Indeholder oplysninger om værdien af at have et Microsoft Teams-team knyttet til de delte arbejdsområder for at gøre de personer, der er knyttet til dem, mere effektive til teamwork.
-3. **Visualisering:** Den farvede del af donutdiagrammet afspejler procentdelen af arbejdsområder, der har Microsoft Teams team knyttet til dem. Procentdelen beregnes således:
+1. **Header:** Viser antallet af delte arbejdsområder, der har et Microsoft Teams team tilknyttet.
+2. **Kroppen:** Indeholder oplysninger om værdien af at have et Microsoft Teams team knyttet til de delte arbejdsområder for at gøre personer, der er knyttet til dem, mere effektive i teamwork.
+3. **Visualisering:** Den farvede del af kransediagrammet afspejler procentdelen af arbejdsområder, der har et Microsoft Teams team tilknyttet. Procentdelen beregnes på følgende måde:
 
-      - Tæller: Antallet af delte arbejdsområder i organisationen, der har Microsoft Teams tilknyttet et team i de seneste 28 dage
+      - Tæller: Antallet af delte arbejdsområder i din organisation, hvor der inden for de seneste 28 dage var knyttet et Microsoft Teams team til dem
       - Nævner: Antallet af delte arbejdsområder i din organisation inden for de seneste 28 dage
 
-        Tallet i midten af donutdiagrammet repræsenterer det samlede antal delte arbejdsområder, der har et Microsoft Teams tilknyttet.
-4. **Få vist relateret indhold:** Vælg dette link for at få vist hjælp-indhold.
+        Tallet midt i kransediagrammet repræsenterer det samlede antal delte arbejdsområder, der har et Microsoft Teams team tilknyttet.
+4. **Få vist relateret indhold:** Vælg dette link for at få vist Hjælp-indhold.
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 apps sundhed – Teknologioplevelser](apps-health.md) (artikel)\
-[Kommunikation – Personers oplevelser](communication.md) (artikel)\
-[Indholdsamarbejde – Oplevelser med mennesker](content-collaboration.md) (artikel)\
-[Møder – Personer-oplevelser](meetings.md) (artikel)\
-[Mobilitet – Personers oplevelser](mobility.md) (artikel)\
+[Microsoft 365 apps – teknologioplevelser](apps-health.md) (artikel)\
+[Kommunikation – personoplevelser](communication.md) (artikel)\
+[Indholdssamarbejde – personoplevelser](content-collaboration.md) (artikel)\
+[Møder – personoplevelser](meetings.md) (artikel)\
+[Mobilitet – personoplevelser](mobility.md) (artikel)\
 [Kontrolelementer til beskyttelse af personlige oplysninger for Produktivitetsscore](privacy.md) (artikel)

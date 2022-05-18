@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 687eb92693d3343fb0ef5b2392d4622d9af4bb9d
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 916fb67d8fb2376a1a59d3d2aa61a8e7d041f194
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971941"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469376"
 ---
 # <a name="insider-risk-management-cases"></a>Sager vedrørende styring af insiderrisiko
 
@@ -145,7 +145,7 @@ Dashboardet sagsnoter viser noter fra den bruger, der oprettede noten, og det ti
 
 Sådan føjer du en note til en sag:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter fanen **Sagsnoter** .
 3. Vælg **Tilføj sagsnote**.
 4. Skriv din note til sagen i dialogboksen **Tilføj sagsnote** . Vælg **Gem** for at føje noten til sagen, eller vælg **Annuller** luk uden at gemme noten i sagen.
@@ -162,7 +162,7 @@ Du kan give midlertidig adgang til en sag ved at tilføje en bruger som bidragyd
 
 Sådan føjer du en bidragyder til en sag:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter fanen **Bidragydere** .
 3. Vælg **Tilføj bidragyder**.
 4. I dialogboksen **Tilføj bidragyder** skal du begynde at skrive navnet på den bruger, du vil tilføje, og derefter vælge brugeren på listen over foreslåede brugere. Denne liste oprettes ud fra Azure Active Directory for dit lejerabonnement.
@@ -170,7 +170,7 @@ Sådan føjer du en bidragyder til en sag:
 
 ## <a name="case-actions"></a>Sagshandlinger
 
-Risikoforskere kan handle på en sag på en af flere metoder, afhængigt af sagens alvorsgrad, historikken over risikoen for brugeren og retningslinjerne for risikoen i din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller en dataundersøgelse for at samarbejde med andre områder i din organisation og dykke dybere ned i risikoaktiviteter. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med administration af komplette løsninger.
+Risikoforskere kan handle på en sag på en af flere metoder, afhængigt af sagens alvorsgrad, historikken over risikoen for brugeren og retningslinjerne for risikoen i din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller en dataundersøgelse for at samarbejde med andre områder i din organisation og dykke dybere ned i risikoaktiviteter. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview løsninger for at hjælpe dig med administration af komplette løsninger.
 
 ### <a name="send-email-notice"></a>Send meddelelse via mail
 
@@ -180,7 +180,7 @@ Det er vigtigt at huske, at afsendelse af en mailmeddelelse til en bruger ***ikk
 
 Sådan sender du en meddelelse til den bruger, der er tildelt en sag:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter knappen **Send meddelelse via mail** på værktøjslinjen med sagshandlingen.
 3. I dialogboksen **Send mailmeddelelse** skal du vælge rullelistekontrolelementet **Vælg en meddelelsesskabelon** for at vælge meddelelsesskabelonen til meddelelsen. Dette valg udfylder på forhånd de andre felter i meddelelsen.
 4. Gennemse meddelelsesfelterne, og opdater efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
@@ -188,17 +188,17 @@ Sådan sender du en meddelelse til den bruger, der er tildelt en sag:
 
 ### <a name="escalate-for-investigation"></a>Eskaler til undersøgelse
 
-Eskaler sagen for brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner et nyt Microsoft Purview eDiscovery-tilfælde (Premium) i din Microsoft 365 organisation. eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelse om juridiske ventepositioner for at kommunikere med tilsynsførende, der er involveret i en sag. Tildeling af en korrekturlæser som tilsynsførende i en eDiscovery-sag (Premium), der er oprettet ud fra en sag om styring af insiderrisiko, hjælper dit juridiske team med at træffe de nødvendige foranstaltninger og administrere bevarelse af indhold. Hvis du vil vide mere om eDiscovery-sager (Premium), skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+Eskaler sagen for brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner et nyt Microsoft Purview eDiscovery-tilfælde (Premium) i din Microsoft 365 organisation. eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelse om juridiske ventepositioner for at kommunikere med tilsynsførende, der er involveret i en sag. Eskalering til en eDiscovery-sag (Premium) fra en sag om administration af insiderrisiko hjælper dit juridiske team med at træffe de nødvendige foranstaltninger og administrere bevarelse af indhold. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 Sådan eskalerer du en sag til en brugerundersøgelse:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter knappen **Eskaler til undersøgelse** på værktøjslinjen sagshandling.
 3. Angiv et navn til den nye brugerundersøgelse i dialogboksen **Eskaler til undersøgelse** . Angiv evt. noter om sagen, og vælg **Eskaler**.
 4. Gennemse meddelelsesfelterne, og opdater efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
 5. Vælg **Bekræft** for at oprette brugerundersøgelsessagen, eller vælg **Annuller** for at lukke dialogboksen uden at oprette en ny brugerundersøgelsessag.
 
-Når insiderrisikostyringscasen er eskaleret til en ny brugerundersøgelsessag, kan du gennemse den nye sag i området **eDiscoveryAdvanced** >  på Microsoft Purview-overholdelsesportalen.
+Når insiderrisikostyringscasen er eskaleret til en ny brugerundersøgelsessag, kan du gennemse den nye sag i området **eDiscoveryAdvanced** >  i Microsoft Purview-compliance-portal.
 
 ### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Kør automatiserede opgaver med Power Automate flow for sagen
 
@@ -236,7 +236,7 @@ Når risikoanalytikere og efterforskere har afsluttet deres gennemgang og unders
 
 Sådan løses en sag:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager** .
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter knappen **Løs sag** på værktøjslinjen sag.
 3. I dialogboksen **Løs sag** skal du vælge rullemenuen **Løs som** for at vælge løsningsklassificeringen for sagen. Indstillingerne er overtrædelse af politikken **Godartet** eller **Bekræftet**.
 4. I dialogboksen **Løs sag** skal du angive årsagerne til løsningsklassificeringen i tekstfeltet **Handling udført** .

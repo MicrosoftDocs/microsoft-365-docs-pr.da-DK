@@ -1,5 +1,5 @@
 ---
-title: Føj firmaoplysninger til logonsiden
+title: Føj din firmabranding til logonsiden for Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -22,23 +22,23 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: a1229cdb-ce19-4da5-90c7-2b9b146aef0a
-description: Tilpas Microsoft 365 ved hjælp af Azure Active Directory. Du kan føje en illustration, et logo og tekst til logonsiden.
-ms.openlocfilehash: 39bbda08e280c5bc1eb0eee321de9e8f4eeeabce
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Tilpas Microsoft 365 logonsiden ved hjælp af Azure Active Directory. Du kan føje en illustration, et logo og tekst til logonsiden.
+ms.openlocfilehash: ec1fb413b8b8b3fa0100e0751a7971b6c5dd5441
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589314"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466322"
 ---
-# <a name="add-your-company-branding-to-the-sign-in-page"></a>Føj firmaoplysninger til logonsiden
+# <a name="add-your-company-branding-to-the-microsoft-365-sign-in-page"></a>Føj din firmabranding til logonsiden for Microsoft 365
 
- Du kan nu bruge det Azure Active Directory (AD),-abonnement, der følger med dit Microsoft 365-abonnement, til at tilpasse den logonside, dine brugere får vist. 
+ Du kan nu bruge det AD-abonnement (Azure Active Directory), der er inkluderet i dit Microsoft 365 abonnement, til at tilpasse den logonside, som brugerne får vist. 
   
-## <a name="add-company-branding-to-your-sign-in-page-and-access-panel-pages"></a>Føj firmaoplysninger til din logonside og siderne med adgangspaneler
+## <a name="add-company-branding-to-your-sign-in-page-and-access-panel-pages"></a>Føj firmabranding til din logonside og Adgangspanel sider
 
-Hvis du har et betalt abonnement på Microsoft 365 til virksomheder, Microsoft Dynamics CRM Online, Enterprise Mobility Suite eller andre Microsoft-tjenester, har du et gratis abonnement på Azure Active Directory. Du kan bruge Azure Active Directory til at oprette og administrere bruger- og gruppekonti og føje firmaoplysninger til dine sider. For at aktivere dette abonnement og Microsoft Azure administrationsportalen skal du gennemføre en registreringsproces én gang. Derefter kan du få adgang til Azure Active Directory fra din Microsoft-tjeneste, der bruger den. Du kan finde en vejledning til, hvordan du registrerer dit Microsoft 365-abonnement, under Registrer dit gratis [Azure Active Directory-abonnement](../../compliance/use-your-free-azure-ad-subscription-in-office-365.md) og under Administrer kataloget [for dit Microsoft 365-abonnement i Azure](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) for at få en generel vejledning til administration. 
+Hvis du har et betalt abonnement på Microsoft 365 til virksomheder, Microsoft Dynamics CRM Online, Enterprise Mobility Suite eller andre Microsoft-tjenester, har du et gratis abonnement på Azure Active Directory. Du kan bruge Azure Active Directory til at oprette og administrere bruger- og gruppekonti og føje firmabranding til dine sider. Hvis du vil aktivere dette abonnement og få adgang til Microsoft Azure-administrationsportalen, skal du fuldføre en engangsregistreringsproces. Derefter kan du få adgang til Azure Active Directory fra din Microsoft-tjeneste, der bruger den. Du kan finde oplysninger om, hvordan du registrerer dit Microsoft 365-abonnement, under [Registrer dit gratis Azure Active Directory-abonnement](../../compliance/use-your-free-azure-ad-subscription-in-office-365.md), og se [Administrer mappen for dit Microsoft 365-abonnement i Azure](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) for at få generelle administrationsvejledninger. 
   
-Figuren nedenfor viser, hvilke dele af logonsiden, der kan ændres i Azure.
+Følgende figur viser, hvilke dele af logonsiden der kan ændres i Azure.
   
 ![Områder på logonsiden, som du kan tilpasse.](../../media/screenshotbranding.png)
   
@@ -48,14 +48,14 @@ Figuren nedenfor viser, hvilke dele af logonsiden, der kan ændres i Azure.
     
 3. Du kan også føje tekst til dette område
     
-Ud over logonsiden kan du tilpasse siden Adgangspanel i Azure.
+Ud over logonsiden kan du tilpasse den Adgangspanel side i Azure.
   
 ## <a name="next-steps"></a>Næste trin
 
-Hvis du er klar til at tilføje branding, kan du udforske tilpasningsmulighederne i Azure-indholdssættet: Føj firmabranding til din logon og [siderne med adgangspaneler](/azure/active-directory/fundamentals/customize-branding).
+Hvis du er klar til at tilføje branding, kan du udforske tilpasningsindstillingerne i [Azure-indholdssættet: Føj firmabranding til dine logon- og Adgangspanel sider](/azure/active-directory/fundamentals/customize-branding).
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Tilpas Microsoft 365 til organisationen](customize-your-organization-theme.md) (artikel)\
-[Forskellen mellem konfigurationsguiden og installationssiden](o365-setup-wizard-and-setup-page.md) (artikel)\
-[Konfigurer mobilenheder til Microsoft 365 til virksomhedsbrugere](../../business/set-up-mobile-devices.md) (video)
+[Tilpas temaet Microsoft 365 for din organisation](customize-your-organization-theme.md) (artikel)\
+[Forskel mellem installationsguiden og installationssiden](o365-setup-wizard-and-setup-page.md) (artikel)\
+[Konfigurer mobilenheder til Microsoft 365 til erhvervsbrugere](../../business/set-up-mobile-devices.md) (video)

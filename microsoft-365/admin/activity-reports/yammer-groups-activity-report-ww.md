@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få aktivitetsrapporten Yammer grupper til at få mere at vide om antallet af Yammer grupper, der oprettes og bruges i din organisation, og deres aktivitet.
-ms.openlocfilehash: 443129beaf39a2e46bd5fbcb18bdb9cd9b4770c3
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få aktivitetsrapporten Yammer grupper for at få mere at vide om antallet af Yammer grupper, der oprettes og bruges i din organisation og deres aktivitet.
+ms.openlocfilehash: 27e2057bb743c7d25d3ebb848151f7a32e3de52a
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781244"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467136"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---yammer-groups-activity-report"></a>Microsoft 365 rapporter i Administration – aktivitetsrapport for Yammer grupper
 

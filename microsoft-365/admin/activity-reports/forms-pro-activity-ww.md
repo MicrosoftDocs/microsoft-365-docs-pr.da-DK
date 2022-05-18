@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du får en Microsoft Dynamics 365 Customer Voice-aktivitetsrapport ved hjælp af dashboardet Microsoft 365 Rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: 19e2a0d0514b9d5722ec9649c08a4d6a97025873
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du får en Microsoft Dynamics 365 Customer Voice-aktivitetsrapport ved hjælp af dashboardet Rapporter og finder ud af, hvordan licenserede brugere samarbejder.
+ms.openlocfilehash: c8c7678991635139f2bdfb97a8baf7ccc2c667aa
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781945"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467596"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---dynamics-365-customer-voice-activity"></a>Microsoft 365 rapporter i Administration – Dynamics 365 Customer Voice-aktivitet
 

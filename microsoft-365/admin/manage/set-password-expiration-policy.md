@@ -26,12 +26,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0f54736f-eb22-414c-8273-498a0918678f
 description: Få mere at vide om, hvordan en administrator kan angive en udløbspolitik for adgangskoder for din virksomhed, skole eller nonprofitorganisation i Microsoft 365 Administration.
-ms.openlocfilehash: ed94cb8bc3bdcc1c1f30c6cb9bf56907c83de41e
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: b7f7691d0c1c0e6177d5414bc7802b62bb07a3b3
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022333"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468772"
 ---
 # <a name="set-the-password-expiration-policy-for-your-organization"></a>Angiv politikken for udløb af adgangskode for din organisation
 
@@ -54,18 +54,16 @@ Hvis du er bruger, har du ikke tilladelse til at angive din adgangskode til aldr
 
 Følg nedenstående trin, hvis du vil angive, at brugeradgangskoder skal udløbe efter et bestemt tidsrum.
 
-1. I Microsoft 365 Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">fanen **Sikkerhed & beskyttelse af personlige oplysninger**</a> under **Organisationens Indstillinger**.
+1. I Microsoft 365 Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">fanen **Sikkerhed & beskyttelse af personlige oplysninger**</a>.
 
-    Hvis du ikke er global administrator eller sikkerhedsadministrator, kan du ikke se indstillingen Sikkerhed og beskyttelse af personlige oplysninger.
+    Hvis du ikke er global administrator eller sikkerhedsadministrator, kan du ikke se indstillingen Sikkerhed & beskyttelse af personlige oplysninger.
   
 1. Vælg **Politik for udløb af adgangskode**.
   
-1. Hvis du ikke ønsker, at brugerne skal ændre adgangskoder, skal du fjerne markeringen i afkrydsningsfeltet ud for **Angiv, at brugeradgangskoder skal udløbe efter et antal dage**.
+1. Hvis du ikke ønsker, at brugerne skal ændre adgangskoder, skal du fjerne markeringen i afkrydsningsfeltet ud for **Angiv adgangskoder til aldrig at udløbe**.
 
 1. Skriv, hvor ofte adgangskoder skal udløbe. Vælg et antal dage mellem 14 og 730.
-  
-1. I det andet felt skal du skrive, når brugerne får besked om, at deres adgangskode udløber, og derefter vælge **Gem**. Vælg et antal dage mellem 1 og 30.
-
+ 
 > [!IMPORTANT]
 > Meddelelser om udløb af adgangskode understøttes ikke længere i Office webapps eller [i Administration](https://portal.office.com).
   
@@ -77,13 +75,13 @@ Personer, der kun bruger Outlook-appen, bliver ikke tvunget til at nulstille der
 
 Hvis du vil forhindre dine brugere i at genbruge gamle adgangskoder, kan du gøre det ved at gennemtvinge adgangskoder i Active Directory i det lokale miljø (AD). Se [Opret en brugerdefineret adgangskodepolitik](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
 
-I Azure AD kan den sidste adgangskode ikke bruges igen, når brugeren ændrer en adgangskode. Adgangskodepolitikken anvendes på alle brugerkonti, der oprettes og administreres direkte i Azure AD. Denne adgangskodepolitik kan ikke ændres. Se [Politikker for adgangskode til Azure AD](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
+I Azure AD kan den sidste adgangskode ikke bruges igen, når brugeren ændrer en adgangskode. Adgangskodepolitikken anvendes på alle brugerkonti, der oprettes og administreres direkte i Azure AD. Denne adgangskodepolitik kan ikke ændres. Se [Azure AD adgangskodepolitikker](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
 
 ## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Synkroniser brugeradgangskoder fra en Active Directory i det lokale miljø til Azure AD (Microsoft 365)
 
 Denne artikel omhandler angivelse af udløbspolitikken for brugere, der kun har skyen (Azure AD). Det gælder ikke for hybride identitetsbrugere, der bruger synkronisering af adgangskodehash, pass-through-godkendelse eller sammenslutning i det lokale miljø, f.eks. ADFS.
   
-Du kan få mere at vide om, hvordan du synkroniserer brugeradgangskodehash fra ad i det lokale miljø til Azure AD under [Implementer synkronisering af adgangskodehash med Azure AD Forbind synkronisering](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization).
+Hvis du vil vide mere om, hvordan du synkroniserer brugeradgangskodehash fra AD i det lokale miljø til Azure AD, skal du se [Implementer synkronisering af adgangskodehash med Azure AD Forbind synkronisering](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization).
 
 ## <a name="password-policies-and-account-restrictions-in-azure-active-directory"></a>Adgangskodepolitikker og kontobegrænsninger i Azure Active Directory
 

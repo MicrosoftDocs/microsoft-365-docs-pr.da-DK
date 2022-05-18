@@ -5,8 +5,7 @@ keywords: nyheder i Microsoft Defender for Office 365, ga, offentligt tilgængel
 search.appverid: met150
 ms.sitesec: library
 ms.pagetype: security
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 ms.author: tracyp
 author: msfttracyp
 ms.localizationpriority: medium
@@ -16,17 +15,16 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.topic: conceptual
-ms.date: 12/03/2021
 ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 557b81db3c211b294166af8e5f8aaa783fc563a6
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 8c2321ce8ed367db386fa97640564d07208db78b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65215787"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466256"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Nyheder i Microsoft Defender for Office 365
 
@@ -50,8 +48,10 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 - [Nyheder i Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
 - [Nyheder i Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [Nyheder i Microsoft Cloud App Security](/cloud-app-security/release-notes)
+
 ## <a name="april-2022"></a>April 2022
 
+- [Vi præsenterer tabellen URLClickEvents i Microsoft 365 Defender Avanceret jagt](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-the-urlclickevents-table-in-advanced-hunting-with/ba-p/3295096): Vi præsenterer tabellen URLClickEvents i avanceret jagt med Microsoft Defender for Office 365.
 - [Forbedringer af manuel mailafhjælpning](/microsoft-365/security/office-365-security/remediate-malicious-email-delivered-office-365): Manuel mailrensningshandlinger, der udføres i Microsoft Defender for Office 365, i det samlede løsningscenter i Microsoft 365 Defender (M365D) ved hjælp af en ny handlingsfokuseret undersøgelse.
  
 ## <a name="march-2022"></a>Marts 2022
@@ -122,6 +122,5 @@ Vidste du, at Microsoft Defender for Office 365 er tilgængelig i to planer? [F�
 
 ## <a name="see-also"></a>Se også
 
-[køreplan for Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap)
-
-[Beskrivelse af Microsoft Defender for Office 365-tjeneste](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+- [køreplan for Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap)
+- [Beskrivelse af Microsoft Defender for Office 365-tjeneste](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)

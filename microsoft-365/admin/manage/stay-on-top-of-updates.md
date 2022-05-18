@@ -20,14 +20,14 @@ search.appverid:
 - MOE150
 ms.assetid: 719f4904-cbdd-4889-a0cf-fbd7837dfecd
 description: Få mere at vide om, hvordan du kan holde styr på de Microsoft 365 opdateringer ved hjælp af Meddelelsescenter, Målrettet udgivelse, Roadmap og Blogs og Community.
-ms.openlocfilehash: f38805b3c09c3b40198930014a3083a3ebc03cf9
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: cf4adf2e603517dfb4db57811e291195a1536488
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129304"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468520"
 ---
-# <a name="stay-on-top-of-changes"></a>Hold styr på ændringer
+# <a name="stay-on-top-of-microsoft-365-product-and-feature-changes"></a>Hold dig opdateret om Microsoft 365 produkt- og funktionsændringer
 
 Med Microsoft 365 modtager du nye produktopdateringer og funktioner, når de bliver tilgængelige i stedet for planlagte opdateringer, der er måneder eller år fra hinanden. Derfor vil du og dine brugere rutinemæssigt opleve nye og forbedrede måder at udføre dit arbejde på i stedet for en dyr og tidskrævende opgradering i hele virksomheden. Udfordringen med en sådan model er at følge med ændringerne og opdateringerne. Her er et par måder, du kan holde styr på Microsoft 365 opdateringer i din organisation på.
 

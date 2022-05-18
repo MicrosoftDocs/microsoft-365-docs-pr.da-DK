@@ -1,5 +1,5 @@
 ---
-title: Planlæg forretningslukninger, fridage og ferietid
+title: Planlæg åbningstider, fritid og ferie
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,15 +8,15 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
-description: Planlæg kontorlukninger og fridage for medarbejdere fra Bookings kalender, så medarbejderne markeres som utilgængelige for bookinger på de angivne tidspunkter.
-ms.openlocfilehash: 1f20a28fa56f57680c547981f1c4d8357d75728e
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+description: Planlæg kontorets åbningstider og medarbejders fritid i Bookings-kalenderen, så medarbejderne er markeret som utilgængelige for bookinger i løbet af de angivne tidspunkter.
+ms.openlocfilehash: 32f1d930daf44d000a1dbf03eded3f05fbb976eb
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64747291"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468388"
 ---
-# <a name="schedule-business-closures-time-off-and-vacation-time"></a>Planlæg forretningslukninger, fridage og ferietid
+# <a name="schedule-bookings-business-closures-time-off-and-vacation-time"></a>Planlæg Bookings forretningslukninger, fridage og ferietid
 
 > [!NOTE]
 > Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.

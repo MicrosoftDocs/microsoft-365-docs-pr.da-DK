@@ -21,13 +21,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: 'Få OneDrive for Business anvendelsesrapport for at få mere at vide om det samlede antal filer og lagerplads, der bruges på tværs af organisationen. '
-ms.openlocfilehash: f212a29a5fb41aae9ecb0daeae0638d7af1e5dd1
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få OneDrive for Business forbrugsrapport for at få mere at vide om det samlede antal filer og lagerplads, der bruges på tværs af din organisation.
+ms.openlocfilehash: d195a521fba9dc82867821e27414d125dca09c61
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781545"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467268"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---onedrive-for-business-usage"></a>Microsoft 365 rapporter i Administration – OneDrive for Business brug
 

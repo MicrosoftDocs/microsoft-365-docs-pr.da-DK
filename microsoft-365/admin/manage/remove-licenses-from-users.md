@@ -23,14 +23,14 @@ ms.custom:
 search.appverid: MET150
 description: Den metode, du bruger til at fjerne tildelingen af produktlicenser, afhænger af, om du fjerner tildelingen af licenser fra bestemte brugere eller fra et bestemt produkt.
 ms.date: 04/22/2022
-ms.openlocfilehash: b5294bd6234c36e6040ff8cc7433c3e66b7d34b6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 29d46ac745487328ecfe49bf658fdaa79fa346d9
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093696"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465794"
 ---
-# <a name="unassign-licenses-from-users"></a>Fjern licenser fra brugere
+# <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365 licenser fra brugere
 
 Du kan fjerne tildelingen af licenser fra brugere på siden **Aktive brugere** eller på siden **Licenser** . Den metode, du bruger, afhænger af, om du vil fjerne tildelingen af produktlicenser fra bestemte brugere eller fjerne tildelingen af brugerlicenser fra et bestemt produkt.
 

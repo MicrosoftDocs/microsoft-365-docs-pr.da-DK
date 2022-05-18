@@ -1,5 +1,5 @@
 ---
-title: Tilmeld dig Microsoft Teams som en del af et virksomhedsabonnement
+title: Tilmeld dig et Microsoft Teams virksomhedsabonnement
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -14,12 +14,12 @@ ms.collection:
 ms.custom:
 - AdminSurgePortfolio
 description: Følg trinnene i denne artikel for at tilmelde dig Microsoft Teams som en del af et virksomhedsabonnement.
-ms.openlocfilehash: 9bdf5327de2dc2e542e2c3a37b3cceea83a86b3f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 9be7805e8b3ee29128eab2b99ee0f2f87f42b607
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782957"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465838"
 ---
 # <a name="sign-up-for-microsoft-teams-as-part-of-a-business-subscription"></a>Tilmeld dig Microsoft Teams som en del af et virksomhedsabonnement
 

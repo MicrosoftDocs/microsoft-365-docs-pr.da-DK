@@ -1,5 +1,5 @@
 ---
-title: Microsoft Productivity Score – beskyttelse af personlige oplysninger
+title: Microsoft Produktivitetsscore og indsigt i beskyttelse af personlige oplysninger
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -17,44 +17,44 @@ ms.custom: AdminSurgePortfolio
 search.appverid:
 - MET150
 - MOE150
-description: Sådan beskyttes beskyttelse af personlige oplysninger med Produktivitetsscore.
-ms.openlocfilehash: 94e0e1fb3190bc45fb0ad580cd823cb121fb60cf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Sådan beskyttes beskyttelse af personlige oplysninger med produktivitetsscoren.
+ms.openlocfilehash: 823e2cc087d3f0e9c486d8c0c4eca92ba42aee21
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63594335"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467926"
 ---
-# <a name="privacy-controls-for-productivity-score"></a>Kontrolelementer til beskyttelse af personlige oplysninger for Produktivitetsscore
+# <a name="privacy-controls-for-productivity-score"></a>Kontrolelementer til beskyttelse af personlige oplysninger for produktivitetsscore
 
-Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem dens brug af Microsoft 365 og de teknologioplevelser, der understøtter den.  Organisationens resultat afspejler måleenheder for personer og teknologi og kan sammenlignes med benchmarks fra organisationer, der ligner din. Få mere at vide i Oversigt [over Produktivitetsscore](productivity-score.md).
+Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem brugen af Microsoft 365 og de teknologioplevelser, der understøtter den.  Din organisations score afspejler målingerne af person- og teknologioplevelsen og kan sammenlignes med benchmarks fra organisationer, der svarer til dine. Du kan finde flere oplysninger i [oversigten produktivitetsscore](productivity-score.md).
 
-Det er vigtigt for Microsoft, at du beskytter dine personlige oplysninger. Du kan få mere at vide om, hvordan vi beskytter dine personlige oplysninger, [i Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement). Produktivitetsscore giver dig som din organisations it-administrator adgang til indstillinger for beskyttelse af personlige oplysninger for at sikre, at der kan handles på alle produktivitetsscoreoplysninger, du får vist, mens du ikke går på kompromis med den tillid, din organisation placerer i Microsoft.
+Dine personlige oplysninger er vigtige for Microsoft. Du kan få mere at vide om, hvordan vi beskytter dine personlige oplysninger, i [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement). Produktivitetsscore giver dig som din organisations it-administrator adgang til indstillinger for beskyttelse af personlige oplysninger for at sikre, at alle produktivitetsscoreoplysninger, du får vist, kan handles på, uden at det går ud over den tillid, som din organisation placerer i Microsoft.
 
-I området med personers oplevelser er målepunkter kun tilgængelige på organisationsniveau. Dette område ser på, hvordan Microsoft 365 ved at se på kategorierne for indholdsamarbejde, mobilitet, møder, teamwork og kommunikation. Vi giver dig mulighed for at bruge flere niveauer af kontrolelementer til at hjælpe dig med at opfylde dine interne behov for politik om beskyttelse af personlige oplysninger.
+I området personoplevelser er målepunkter kun tilgængelige på organisationsniveau. I dette område ser vi på, hvordan personer bruger Microsoft 365 ved at se på kategorierne indholdssamarbejde, mobilitet, møder, teamwork og kommunikation. Vi giver dig mulighed for at bruge flere niveauer af kontrolelementer, der kan hjælpe dig med at opfylde dine interne behov for politik om beskyttelse af personlige oplysninger.
 Kontrolelementerne giver dig:
 
 - Fleksible administratorroller til at styre, hvem der kan se oplysningerne i Produktivitetsscore.
-- Muligheden for at fravælge personers oplevelsesområde.
+- Muligheden for at fravælge personoplevelsesområdet.
 
 ## <a name="flexible-admin-roles-to-control-who-can-see-the-information-in-productivity-score"></a>Fleksible administratorroller til at styre, hvem der kan se oplysningerne i Produktivitetsscore
 
-Hvis du vil have vist hele Produktivitetsscore, skal du have en af følgende administratorroller:
+Hvis du vil have vist hele produktivitetsresultatet, skal du have en af følgende administratorroller:
 
 - Global administrator
 - Exchange administratorer
-- SharePoint administrator
+- SharePoint-administrator
 - Skype for Business administrator
 - Teams administrator
 - Global læser
 - Rapportlæser
-- Læser til oversigt over brugsrapporter
+- Læser af forbrugsoversigtsrapporter
 
-Tildel rollen Rapportlæser eller Oversigt over brugsrapporter til alle, der er ansvarlige for administration og anvendelse af ændringer, men ikke nødvendigvis en it-administrator. Denne rolle giver dem adgang til den komplette produktivitetsscore-oplevelse Microsoft 365 Administration.
+Tildel rollen Rapportlæser eller Læser af oversigt over forbrugsrapporter til alle, der er ansvarlige for administration og implementering af ændringer, men ikke nødvendigvis en it-administrator. Denne rolle giver dem adgang til den komplette produktivitetsscore i Microsoft 365 Administration.
 
-Rollen Læser til brugsoversigtsrapporter skal tildeles via PowerShell-cmdlet'er, før den kan tildeles fra Microsoft 365 Administration senere i 2020.
+Rollen Rapportlæser for forbrugsoversigt skal tildeles via PowerShell-cmdlet'er, indtil den kan tildeles fra Microsoft 365 Administration senere i 2020.
 
-Sådan tildeles rollen Brugeroversigt over rapporter Reader med PowerShell:
+Sådan tildeler du rollen Rapportlæser for forbrugsoversigt med PowerShell:
 
 - Kør følgende PowerShell:
 
@@ -70,14 +70,14 @@ Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId $u.ObjectId
 </br>
 
 
-## <a name="capability-to-opt-out-of-people-experiences"></a>Mulighed for at fravælge oplevelser med personer
+## <a name="capability-to-opt-out-of-people-experiences"></a>Mulighed for at fravælge personoplevelser
 
-Du kan også fravælge området personer, der oplever produktivitetsscore. Hvis du fravælger, vil ingen fra din organisation kunne se disse målepunkter, og din organisation fjernes fra enhver beregning, der involverer kommunikation, møder, teamwork, indholdsamarbejde og mobilitet. Du skal være global administrator for at fravælge rapporterne om personers oplevelser i organisationen.
+Du kan også fravælge personoplevelsesområdet for Produktivitetsscore. Hvis du fravælger, kan ingen fra din organisation få vist disse målepunkter, og din organisation fjernes fra alle beregninger, der involverer kommunikation, møder, teamwork, indholdssamarbejde og mobilitet. Du skal være global administrator for at fravælge rapporterne over personoplevelser i din organisation.
 
 Sådan fravælger du:
 
-1. I Administration skal du gå **til Indstillinger**  >   **Org Indstillinger** >  **Productivity Score**.
-2. Fjern et afkrydsningsfelt, hvor der står **Tillad, Microsoft 365 brugsdata skal bruges til personoplevelser**. For at forstå, hvordan du redigerer indstillinger for datadeling for Endpoint Analytics i Intune Configuration Manager, skal du vælge **Få mere at vide**.
+1. I Administration skal du gå til **Indstillinger**  >   **Ellerg Indstillinger** >  **Produktivitetsscore**.
+2. Fjern markeringen i afkrydsningsfeltet med teksten **Tillad, at Microsoft 365 forbrugsdata bruges til indsigt i brugeroplevelser**. Hvis du vil vide mere om, hvordan du ændrer indstillinger for datadeling for Endpoint Analytics i Intune konfigurationsstyring, skal du vælge **Få mere at vide**.
 3. Vælg  **Gem**.
 
-:::image type="content" source="../../media/orgsettingspageoptout.png" alt-text="Siden Indstillinger for organisation, hvor du kan fravælge personers oplevelser.":::
+:::image type="content" source="../../media/orgsettingspageoptout.png" alt-text="Siden Med organisationsindstillinger, hvor du kan fravælge personoplevelser.":::

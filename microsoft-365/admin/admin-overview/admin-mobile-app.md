@@ -1,5 +1,5 @@
 ---
-title: Om Microsoft 365 Administration-mobilappen
+title: Om mobilappen Microsoft 365 administrator
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få Microsoft 365 Administration-appen, din ledsagerapp til den webbaserede Microsoft 365 Administration, til at administrere din onlineorganisation fra din telefon eller tablet.
-ms.openlocfilehash: b4d3759002b7ad175a98a6619fc5cbcade16f7a7
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 1a6e267a06ea902638d9c5ef5a9c0c7aee44823d
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436157"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466740"
 ---
 # <a name="about-the-microsoft-365-admin-mobile-app"></a>Om Microsoft 365 Administration-mobilappen
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Produktivitetsscore – tilstand for Microsoft 365 apps
+title: Produktivitetsscore og tilstanden for dine Microsoft 365 apps
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,16 +19,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Detaljer om Microsoft 365 Apps tilstand – teknologi giver produktivitetsscore.
-ms.openlocfilehash: 2e8e44c954d8d1d6bacca766bd528c3897b7686b
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: a87bd49ace301eeb6f48edc31fba5a02d0386de6
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782143"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466366"
 ---
 # <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 Apps sundhed – teknologioplevelser
 
-Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem brugen af Microsoft 365 og de teknologioplevelser, der understøtter den. Din organisations score afspejler målingerne af person- og teknologioplevelsen og kan sammenlignes med benchmarks fra organisationer, der svarer til dine. Kategorien Apps-tilstand er en del af de målinger, der er omfattet af teknologioplevelser. Du kan få mere at vide ved at se [oversigten over produktivitetsscore](productivity-score.md) og læse [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
+Produktivitetsscore giver indsigt i din organisations digitale transformationsrejse gennem brugen af Microsoft 365 og de teknologioplevelser, der understøtter den. Din organisations score afspejler målinger af personer og teknologioplevelser og kan sammenlignes med benchmarks fra organisationer, der ligner dine. Kategorien Apps-tilstand er en del af de målinger, der er omfattet af teknologioplevelser. Du kan få mere at vide ved at se [oversigten over produktivitetsscore](productivity-score.md) og læse [Microsofts erklæring om beskyttelse af personlige oplysninger](https://privacy.microsoft.com/privacystatement).
 
 ## <a name="why-your-organizations-microsoft-365-apps-health-score-matters"></a>Derfor er tilstandsscoren for din organisations Microsoft 365 apps vigtig
 

@@ -24,19 +24,19 @@ search.appverid:
 - MOE150
 ms.assetid: 2e122487-e1f5-4f26-ba41-5689249d93ba
 description: 'Få mere at vide om, hvordan du konverterer en privat postkasse til en delt postkasse, som flere personer kan få adgang til i stedet for kun én person. '
-ms.openlocfilehash: 4838dc7bd4856c89448cb501fdd20066d1c97aa2
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 07b36e5c8b2cb7b2e88dfedd80b31353cb8f7e32
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861933"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466212"
 ---
 # <a name="convert-a-user-mailbox-to-a-shared-mailbox"></a>Konvertér en brugerpostkasse til en delt postkasse
 
 Når du konverterer en brugers postkasse til en delt postkasse, bevares al den eksisterende mail og kalender. Først nu er det i en delt postkasse, hvor flere personer kan få adgang til den i stedet for én person. På et senere tidspunkt kan du konvertere en delt postkasse tilbage til en brugerpostkasse (privat).
 
 > [!TIP]
-> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft-specialist i mindre virksomheder](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist får du og dine medarbejdere døgnet rundt adgang til specialister i mindre virksomheder, efterhånden som du udvikler din virksomhed – lige fra onboarding til daglig brug.
+> Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -76,7 +76,7 @@ Du kan se alt andet, du har brug for at vide om delte postkasser, under [Om delt
 
 2. Vælg **Modtageres** \> **postkasser**.
 
-3. Vælg brugerpostkassen. Under fanen **Postkasse** under **Flere handlinger** skal du vælge **Konvertér til delt postkasse**.
+3. Vælg brugerpostkassen. Under fanen **Andre** skal du vælge **Konvertér til delt postkasse**.
 
 4. Hvis postkassen er mindre end 50 GB, kan du fjerne [licensen fra brugeren](../manage/remove-licenses-from-users.md) og stoppe med at betale for den. Slet ikke brugerens konto. Den delte postkasse skal bruge den der som et anker. Hvis du konverterer postkassen for en medarbejder, der forlader organisationen, skal du udføre yderligere trin for at sikre, at vedkommende ikke længere kan logge på. Se [Fjern en tidligere medarbejder fra Microsoft 365](../add-users/remove-former-employee.md).
 
@@ -106,7 +106,7 @@ Når du har slettet en brugerkonto, skal du følge disse trin for at konvertere 
 
 3. Vælg den delte postkasse. Under **Konvertér til almindelig postkasse** skal du vælge **Konvertér**.
 
-4. Go back til Administration. Under **Brugere** skal du vælge den brugerkonto, der er knyttet til den gamle delte postkasse. Tildel en licens til kontoen, og nulstil derefter adgangskoden.
+4. Gå tilbage til Administration. Under **Brugere** skal du vælge den brugerkonto, der er knyttet til den gamle delte postkasse. Tildel en licens til kontoen, og nulstil derefter adgangskoden.
 
    Det tager et par minutter, før postkassen er konfigureret, men derefter er den person, der skal bruge kontoen, klar til at gå i gang. Når de logger på, får de vist de mail- og kalenderelementer, der tidligere var i den delte postkasse.
 

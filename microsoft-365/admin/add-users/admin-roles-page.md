@@ -1,5 +1,5 @@
 ---
-title: Om administratorroller
+title: Om siden administratorroller i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,13 +20,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Administratorroller knyttes til forretningsfunktioner og giver tilladelser til at udføre bestemte opgaver i Administration. Tjenesteadministratoren åbner f.eks. supportanmodninger med Microsoft.
-ms.openlocfilehash: 07a46d7dfa23838715364ab1ab36ced992265b29
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+description: Få mere at vide om administratorroller, f.eks. den tjenesteadministrator, der åbner supportanmodninger, der knyttes til forretningsfunktioner og har tilladelser til opgaver i Administration.
+ms.openlocfilehash: 58bbc4b15f3fd477b72c8dac3f0f624b1e152a2a
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437079"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466762"
 ---
 # <a name="get-started-with-the-microsoft-365-admin-roles-page"></a>Kom i gang med siden med Microsoft 365 administratorroller
 

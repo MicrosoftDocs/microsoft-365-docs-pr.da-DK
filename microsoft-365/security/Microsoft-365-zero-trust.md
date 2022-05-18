@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: bb452c74763e31be11a6431cc260667319d2582f
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 2f8fe053d0ffb6d453029ab3f7fee17846661b6d
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363186"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469267"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Nul tillid udrulningsplan i Microsoft 365
 
@@ -49,11 +49,13 @@ I illustrationen:
 - Identiteter, enheder, data, apps, netværk og andre infrastrukturkomponenter er alle konfigureret med den relevante sikkerhed. Politikker, der er konfigureret for hver af disse komponenter, koordineres med din overordnede Nul tillid strategi. Enhedspolitikker bestemmer f.eks. kriterierne for sunde enheder, og politikker for betinget adgang kræver sunde enheder for at få adgang til bestemte apps og data.
 - Trusselsbeskyttelse og -intelligens overvåger miljøet, viser aktuelle risici og udfører automatiserede handlinger for at afhjælpe angreb.
 
+Du kan finde flere oplysninger om Nul tillid i Microsofts [_**Nul tillid Guidance Center**_](/security/zero-trust).
+
 <!---
 For more information about this architecture, including deployment objectives for your entire digital estate, see [Zero Trust Rapid Modernization Plan (RaMP)](https://review.docs.microsoft.com/security/zero-trust/zero-trust-ramp-overview?branch=zt-content-prototype).
 -->
 
-Du kan finde flere oplysninger om Nul tillid i Microsofts [_**Nul tillid Guidance Center**_](/security/zero-trust).
+
 
 ## <a name="deploying-zero-trust-for-microsoft-365"></a>Installerer Nul tillid til Microsoft 365
 
@@ -68,6 +70,9 @@ I denne illustration:
 - Nul tillid begynder med et fundament af identitets- og enhedsbeskyttelse.
 - Trusselsbeskyttelsesfunktioner er bygget oven på dette fundament for at levere overvågning og afhjælpning af sikkerhedstrusler i realtid.
 - Beskyttelse og styring af oplysninger leverer avancerede kontroller, der er målrettet til bestemte typer data, for at beskytte dine mest værdifulde oplysninger og for at hjælpe dig med at overholde angivne standarder, herunder beskyttelse af personlige oplysninger.
+
+
+I denne artikel forudsættes det, at du allerede har konfigureret et cloud-id. Hvis du har brug for vejledning til denne målsætning, skal du se [**Udrul din identitetsinfrastruktur til Microsoft 365**](/microsoft-365/enterprise/deploy-identity-solution-overview).
 
 ## <a name="step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies"></a>Trin 1. Konfigurer Nul tillid beskyttelse af identitet og enhedsadgang – startpunktspolitikker
 

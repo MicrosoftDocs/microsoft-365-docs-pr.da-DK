@@ -21,13 +21,13 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: fc1cf1d0-cd84-43fd-adb7-a4c4dfa8112d
-description: Få mere at vide om, hvordan du får en rapport over aktive brugere ved hjælp af dashboardet Microsoft 365 rapporter i Microsoft 365 Administration og finde ud af, hvor mange produktlicenser der bruges.
-ms.openlocfilehash: 65ea3f3624bda4f33a8c5680a53749595dc7aa15
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du henter en rapport over aktive brugere ved hjælp af dashboardet Microsoft 365 rapporter i Administration og finder ud af, hvor mange produktlicenser der bruges.
+ms.openlocfilehash: 88041c5821c95271723320fb2b4474a369723fbb
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781989"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467970"
 ---
 # <a name="assess-the-microsoft-365-active-users-report"></a>Vurder rapporten over Microsoft 365 aktive brugere
 

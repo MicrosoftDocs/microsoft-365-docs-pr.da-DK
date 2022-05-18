@@ -22,14 +22,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du bruger lejerskifteren og visninger med flere lejere, der giver dig mulighed for at administrere lejere fra en enkelt placering.
-ms.openlocfilehash: 0058bdb45b42e2c67b96ff3e30ce1cd04e5658b2
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 4a1168b1c2676bf25f0bb4ad7f3353a5e65f8caa
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713949"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468080"
 ---
-# <a name="multi-tenant-management"></a>Administration af flere lejere
+# <a name="multi-tenant-management-for-microsoft-365-partner-admins"></a>Administration med flere lejere for Microsoft 365 partneradministratorer
 
 Administration med flere lejere tilbyder en samlet form for administration, der gør det muligt for Microsoft 365 partneradministratorer at administrere alle de lejere, de administrerer fra en enkelt placering. Hvis du er partner og har en uddelegeret administratorrolle og administrerer flere lejere, kan du:
 

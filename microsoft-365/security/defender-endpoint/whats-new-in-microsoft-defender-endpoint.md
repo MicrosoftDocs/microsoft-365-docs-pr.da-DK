@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 8a3d8caa02aa04412925b4d0648d166194df0548
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 615a68d7725e180e512674909f490e27d3da6771
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319193"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468794"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Nyheder i Microsoft Defender for Endpoint
 
@@ -30,11 +30,11 @@ ms.locfileid: "65319193"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 Følgende funktioner er tilgængelige som prøveversion eller offentligt tilgængelige i den seneste version af Microsoft Defender for Endpoint.
 
@@ -125,7 +125,7 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 
 - [Definitioner af enhedsgruppe](/microsoft-365/security/defender-endpoint/machine-groups) kan nu indeholde flere værdier for hver betingelse. Du kan angive flere mærker, enhedsnavne og domæner til definitionen af en enkelt enhedsgruppe.
 
-- [Understøttelse af administration af mobilapps](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Denne forbedring gør det muligt Microsoft Defender for Endpoint beskytte en organisations data i et administreret program, når Intune bruges til at administrere mobilapps. Du kan få flere oplysninger om administration af mobilapps i [denne dokumentation](/microsoft-365/mem/intune/apps/mam-faq).
+- [Understøttelse af administration af mobilapps](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Denne forbedring gør det muligt Microsoft Defender for Endpoint beskytte en organisations data i et administreret program, når Intune bruges til at administrere mobilapps. Du kan få flere oplysninger om administration af mobilapps i [denne dokumentation](/mem/intune/apps/mam-faq).
 
 - [Microsoft Tunnel VPN-integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN-funktioner er nu integreret med Microsoft Defender for Endpoint app til Android. Denne forening giver organisationer mulighed for at tilbyde en forenklet slutbrugeroplevelse med én sikkerhedsapp – der tilbyder både mobilt trusselsforsvar og mulighed for at få adgang til ressourcer i det lokale miljø fra deres mobilenhed, mens sikkerhed og it-teams kan opretholde de samme administratoroplevelser, som de kender.
 

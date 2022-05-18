@@ -18,13 +18,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du får rapporten over Microsoft Teams forbrugsaktivitet og får indsigt i den Teams aktivitet i din organisation.
-ms.openlocfilehash: 93bcb5d1e6c8d0e3bbb96671333bff1c6b7b429f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: I Teams forbrugsrapport kan du se, hvordan brugerne kommunikerer og samarbejder i Teams, herunder antallet af aktive brugere, kanaler og meddelelser.
+ms.openlocfilehash: fc720f9e164e2c9d20fb8b03e78b520102a0c021
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781690"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467561"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-usage-activity"></a>Microsoft 365 Rapporter i Administration – Microsoft Teams forbrugsaktivitet
 
@@ -107,7 +107,7 @@ Data til følgende målepunkter er tilgængelige for individuelle teams.
 |Aktive gæster|Gæster, der har mindst én panelhandling i den angivne tidsperiode. <br/> <br/> En gæst defineres som personer uden for din organisation, der tilgår delte ressourcer ved at logge på en gæstekonto i min mappe.|
 |Eksterne aktive brugere|Eksterne deltagere, der har mindst én panelhandling i den angivne tidsperiode.<br/><br/> En ekstern deltager defineres som en person uden for din organisation, der deltager i en ressource – f.eks. en delt kanal – ved hjælp af deres egen identitet og ikke en gæstekonto i din mappe.|
 |Aktive kanaler|Gyldige kanaler i aktive teams, der har mindst én aktiv bruger i den angivne tidsperiode. Dette omfatter offentlige, private eller delte kanaler.|
-|Aktive delte kanaler|Gyldige delte kanaler i aktive teams, der har mindst én aktiv bruger på det angivne tidspunkt. <br/> <br/>En delt kanal defineres som en Teams kanal, der kan deles med personer uden for teamet. Disse personer kan være i din organisation eller fra andre Azure AD-organisationer.|
+|Aktive delte kanaler|Gyldige delte kanaler i aktive teams, der har mindst én aktiv bruger på det angivne tidspunkt. <br/> <br/>En delt kanal defineres som en Teams kanal, der kan deles med personer uden for teamet. Disse personer kan være i din organisation eller fra andre Azure AD organisationer.|
 |Samlede organiserede møder|Summen af engangs planlagte, tilbagevendende, ad hoc- og ikke-klassificerede møder, som en bruger har organiseret i den angivne tidsperiode.|
 |Indlæg|Antallet af alle indlægsmeddelelser i kanaler i den angivne tidsperiode.|
 |Svar|Antallet af alle svarmeddelelser i kanaler i den angivne tidsperiode.|

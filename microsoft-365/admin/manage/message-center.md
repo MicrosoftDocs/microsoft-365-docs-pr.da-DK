@@ -1,5 +1,5 @@
 ---
-title: Meddelelsescenter
+title: Meddelelsescenter i Microsoft 365 Administration
 f1.keywords:
 - CSH
 ms.author: kwekua
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 38fb3333-bfcc-4340-a37b-deda509c2093
 description: Få et overblik over Microsoft 365 Meddelelsescenter og dets rolle i sporing af nye og ændrede funktioner og andre vigtige meddelelser.
-ms.openlocfilehash: 687da2d7dec0ea913e629a4cf41740d4b664b346
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 498267d62dadef0ec9c0e8811708416dd138eb58
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437695"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466784"
 ---
 # <a name="track-new-and-changed-features-in-the-microsoft-365-message-center"></a>Spor nye og ændrede funktioner i Microsoft 365 Meddelelsescenter
 

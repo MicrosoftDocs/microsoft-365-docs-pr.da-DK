@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan opbevaring fungerer for SharePoint og OneDrive.
-ms.openlocfilehash: cbcc8015b8b24309c882e5b8ca7a9c56fb6e344d
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 8515b84f21677644be821ca129ab02083121ab84
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285984"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468848"
 ---
 # <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>Få mere at vide om opbevaring for SharePoint og OneDrive
 
@@ -80,9 +80,9 @@ Brugerne får også vist en fejlmeddelelse, hvis de forsøger at slette et navng
 
 - Indstillingen for datastyring, der giver brugerne mulighed for at slette navngivne elementer, er deaktiveret.
     
-    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **til datastyring** på Microsoft Purview-overholdelsesportalen > **Indstillinger for administration** >  af **posterIndstillinger** for  >  administration af **posterSletning** >  **af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
+    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **Datastyring** i Microsoft Purview-compliance-portal > **DatastyringIndstillinger** >  **for** >  administration af **posterAdministrationsnavneSletning** >  **af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
     
-    Hvis du ikke har adgang til løsningen til **dataadministration** , kan du også bruge *AllowFilesWithKeepLabelToBeDeletedSPO* og *AllowFilesWithKeepLabelToBeDeletedODB* fra [Get-PnPTenant](/powershell/module/sharepoint-pnp/get-pnptenant) og [Set-PnPTenant](/powershell/module/sharepoint-pnp/set-pnptenant).
+    Hvis du ikke har adgang til løsningen til **dataadministration** , kan du også bruge *AllowFilesWithKeepLabelToBeDeletedSPO* og *AllowFilesWithKeepLabelToBeDeletedODB* fra [Get-PnPTenant](https://pnp.github.io/powershell/cmdlets/Get-PnPTenant.html) og [Set-PnPTenant](https://pnp.github.io/powershell/cmdlets/Set-PnPTenant.html).
 
 - Opbevaringsmærkaten markerer elementer som en post, og den er [låst](record-versioning.md).
     

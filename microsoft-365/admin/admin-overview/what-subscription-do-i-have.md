@@ -1,5 +1,5 @@
 ---
-title: Hvilket abonnement har jeg?
+title: Hvilket Microsoft 365 abonnement har jeg?
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -23,12 +23,12 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvilke Microsoft 365 abonnementer din organisation har, ved at gå til siden Dine produkter.
 ms.date: 01/21/2021
-ms.openlocfilehash: a65ddc3d2f6e9577ee8da781306a0b7f289345af
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 0f88b833157485e0b7d27a84b94c6de801df56f8
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435739"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466696"
 ---
 # <a name="which-microsoft-365-subscription-do-i-have"></a>Hvilket Microsoft 365 abonnement har jeg?
 

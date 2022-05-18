@@ -20,23 +20,23 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: a7c98273-067e-4162-b3a1-4ba081796012
-description: Send mail som en distributionsliste i Microsoft 365 så når et medlem svarer på en meddelelse, ser det ud som om, det er fra distributionslisten.
-ms.openlocfilehash: d38a7cb2efe3ddd3a915030f6aff4acc1eba1aef
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Send mail som en distributionsliste i Microsoft 365, så når et medlem besvarer en meddelelse, ser det ud til at være fra distributionslisten.
+ms.openlocfilehash: dd6e1f906481fe1c04bfa7cd275bd108ab558d59
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588317"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468454"
 ---
-# <a name="send-email-as-a-distribution-list"></a>Send mail som en distributionsliste
+# <a name="send-microsoft-365-email-as-a-distribution-list"></a>Send Microsoft 365 mail som en distributionsliste
 
-I Microsoft 365 kan du sende mail som en distributionsliste. Når en person, der er medlem af distributionslisten, svarer på en meddelelse, der er sendt til distributionslisten, ser mailen ud til at komme fra distributionslisten og ikke fra den enkelte bruger. I dette emne kan du se, hvordan du gør dette.
+I Microsoft 365 kan du sende mail som en distributionsliste. Når en person, der er medlem af distributionslisten, besvarer en meddelelse, der er sendt til distributionslisten, ser mailen ud til at være fra distributionslisten og ikke fra den enkelte bruger. I dette emne kan du se, hvordan du gør det.
   
 ## <a name="before-you-begin"></a>Før du begynder
 
-Før du udfører disse trin, skal du kontrollere, at du er blevet føjet til en Microsoft 365-distributionsliste, og at du har fået Send som-tilladelse til den.
+Før du udfører disse trin, skal du kontrollere, at du er føjet til en Microsoft 365 distributionsliste, og at du har fået tildelt tilladelsen Send som til den.
   
- Administratorer: Sørg for, at du har fulgt trinnene i Føj en [Microsoft 365-bruger](../email/add-user-or-contact-to-distribution-list.md) eller -kontakt til en liste og Tillad medlemmer at [](../../solutions/allow-members-to-send-as-or-send-on-behalf-of-group.md#allow-members-to-send-email-as-a-group) sende mail som Microsoft 365-gruppeemner og føjet de rigtige personer til **distributionslisten**.
+ **Administratorer**: Sørg for, at du har fulgt trinnene i [Føj en Microsoft 365 bruger eller kontakt til en liste](../email/add-user-or-contact-to-distribution-list.md) og [Tillad, at medlemmer sender mail som Microsoft 365 gruppeemner](../../solutions/allow-members-to-send-as-or-send-on-behalf-of-group.md#allow-members-to-send-email-as-a-group), og føj de korrekte personer til distributionslisten.
   
 ## <a name="outlook-on-the-web"></a>Outlook på internettet
 
@@ -44,21 +44,21 @@ Før du udfører disse trin, skal du kontrollere, at du er blevet føjet til en 
     
 2. Åbn en meddelelse, der blev sendt til distributionslisten. 
     
-3. Vælg **Besvar**. 
+3. Vælg **Svar**. 
     
-4. Nederst i meddelelsen skal du vælge **Flere** \> **slideshow fra**.<br/> ![Vælg Mere, og vælg derefter Vis fra.](../../media/534f13b7-9f15-48ea-8835-ea2ed1863ece.png)
+4. Nederst i meddelelsen skal du vælge **Flere** \> **vis fra**.<br/> ![Vælg Mere, og vælg derefter Vis fra.](../../media/534f13b7-9f15-48ea-8835-ea2ed1863ece.png)
   
-5. Højreklik på Fra-adressen – f.eks. `Ina@weewalter.me` – og vælg **Fjern**.<br/> ![Fjern FROM-aliasset.](../../media/9b8d8e8f-dc46-499c-89bd-0a480603bf1f.png)
+5. Højreklik på adressen Fra , f.eks `Ina@weewalter.me` . - og vælg **Fjern**.<br/> ![Fjern aliasset FROM.](../../media/9b8d8e8f-dc46-499c-89bd-0a480603bf1f.png)
   
-6. Skriv derefter distributionslisteadressen, f.eks support@contoso.com mail, og send meddelelsen. Næste gang du svarer fra distributionslisten, vises dens adresse som en indstilling på **Fra-listen** .<br/>![Alias for den delte postkasse vises.](../../media/f7632a9a-9cab-446c-9e37-23ef50c5b975.png)
+6. Skriv derefter adressen på distributionslisten, f.eks. support@contoso.com, og send meddelelsen. Næste gang du svarer fra distributionslisten, vises adressen som en indstilling på listen **Fra** .<br/>![Aliasset for den delte postkasse vises.](../../media/f7632a9a-9cab-446c-9e37-23ef50c5b975.png)
 
 ## <a name="outlook"></a>Outlook
 
-1. Åbn Outlook-klienten på computeren.
+1. Åbn Outlook desktopklient.
 
-2. Opret en ny mail. Klik på **feltet** Fra, og **vælg Anden mailadresse**. Hvis du ikke kan se feltet Fra, skal du gå **til Indstillinger** og **vælge** Fra i sektionen Vis felter.
+2. Opret en ny mail. Klik på feltet **Fra** , og vælg **Anden mailadresse**. Hvis du ikke kan se feltet Fra, skal du navigere til **Indstillinger** og vælge **Fra** i afsnittet Vis felter.
 
-3. Vælg **distributionslistens** adresse fra den globale adresseliste.
+3. Vælg adressen på **distributionslisten** på den globale adresseliste.
 
 4. Send mailen.
 

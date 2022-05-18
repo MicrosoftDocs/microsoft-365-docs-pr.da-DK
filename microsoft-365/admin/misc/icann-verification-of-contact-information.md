@@ -19,23 +19,23 @@ search.appverid:
 - MOE150
 ms.assetid: 0413dcce-26be-4b8c-b3fa-73ac1ac4fb35
 ROBOTS: NOINDEX
-description: Få mere at vide om, hvordan du validerer dine kontaktoplysninger for at overholde ICANN-bestemmelser.
-ms.openlocfilehash: a1ea60422ebd503ff1cfaac325a5a74433756831
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Få mere at vide om, hvordan du validerer dine kontaktoplysninger for at overholde ICANN-reglerne.
+ms.openlocfilehash: f3c35bd258800ef7edc0cd1f7fda0b2f319ded4c
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590748"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467904"
 ---
 # <a name="icann-verification-of-contact-information"></a>ICANN-bekræftelse af kontaktoplysninger
 
-Når du køber et domæne eller foretager ændringer i kontaktoplysningerne for et domæne, skal registratoren validere dine kontaktoplysninger for at overholde ICANN-bestemmelserne.
+Når du køber et domæne eller foretager ændringer af kontaktoplysningerne for et domæne, skal registratoren validere dine kontaktoplysninger for at overholde ICANN-reglerne.
 
-Til validering sendes en mail til adressen.
+Til validering sendes der en mail til registrantens adresse.
 
- **For at bekræfte dine kontaktoplysninger skal du vælge linket i bekræftelsesmailen.** Hvis domæneejerne ikke bekræfter mailadressen, suspenderes domænet. Gå derefter til [siden Domæner i](https://admin.microsoft.com/adminportal/home?ref=Domains) Administration, og kontrollér din domænestatus.
+ **Hvis du vil bekræfte dine kontaktoplysninger, skal du vælge linket i bekræftelsesmailen.** Hvis domæneejerne ikke bekræfter mailadressen, suspenderes domænet. Gå derefter til [siden Domæner](https://admin.microsoft.com/adminportal/home?ref=Domains) i Administration, og kontrollér din domænestatus.
 
-Mailen ser sådan ud:
+Mailen vil se sådan ud:
 
 ![Eksempel på mail.](../../media/8bf27c08-510c-4d49-b152-8d047d038f1f.jpg)
 

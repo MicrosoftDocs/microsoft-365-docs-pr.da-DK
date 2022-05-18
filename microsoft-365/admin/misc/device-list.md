@@ -1,5 +1,5 @@
 ---
-title: CSV-fil med liste over enheder
+title: CSV-fil med enhedsliste
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -22,34 +22,34 @@ search.appverid:
 - MOE150
 ms.assetid: 932e3676-2491-49f0-9177-d893d2f5276e
 ROBOTS: NOINDEX
-description: Få mere at vide om, hvordan du laver en CSV-fil til AutoPilot Microsoft 365 til virksomheder.
-ms.openlocfilehash: 62dbcddbdab1a08ab3b19c6616b814c421a57c04
-ms.sourcegitcommit: 2a4dddf7c655b44b17d4fd7f5e1e5d8a6e2b7aef
+description: Få mere at vide om, hvordan du opretter en CSV-fil til AutoPilot i Microsoft 365 til virksomheder.
+ms.openlocfilehash: af695448e31ea93d36b36a8831702acb84a92410
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "63589382"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469552"
 ---
-# <a name="device-list-csv-file"></a>CSV-fil med liste over enheder
+# <a name="windows-autopilot-device-list-csv-file"></a>Windows CSV-fil med listen over autopilotenheder
 
-## <a name="device-list-csv-file-format"></a>Enhedsliste .csv-filformat
+## <a name="device-list-csv-file-format"></a>Enhedsliste .csv filformat
 
-For at administrere og udrulle enheder Windows Autopilot, skal du bruge en .csv fil, der indeholder specifikke oplysninger om enhederne.
+Hvis du vil administrere og installere enheder via Windows Autopilot, skal du bruge en .csv fil, der indeholder specifikke oplysninger om enhederne.
   
 Kolonnerne i enhedslistefilen skal have følgende overskrifter i den angivne rækkefølge:
   
 - Kolonne A: Enhedens serienummer
 
-- Kolonne B: lad feltet være tomt
+- Kolonne B: Lad argumentet være tomt
 
 - Kolonne C: Hardwarehash
 
-Du kan få disse oplysninger fra din hardwareleverandør, eller du kan bruge scriptet [Get-WindowsAutoPilotInfo PowerShell](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) , der genererer en CSV-fil. 
+Du kan få disse oplysninger fra din hardwareleverandør, eller du kan bruge [PowerShell-scriptet Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) , der genererer en CSV-fil. 
 
-Når du tilføjer enheder, skal du også føje dem til en profil. En profil bruges til at anvende AutoPilot-udrulningsprofiler på en enhed eller en gruppe af enheder.
+Når du tilføjer enheder, skal du også føje dem til en profil. En profil bruges til at anvende AutoPilot-installationsprofiler på en enhed eller en gruppe enheder.
   
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 til virksomhedsdokumentation og -ressourcer](../../index.yml)
+[Microsoft 365 til forretningsdokumentation og -ressourcer](../../index.yml)
   
-[Introduktion til Microsoft 365 til virksomheder](../../admin/admin-overview/what-is-microsoft-365.md)
+[Kom i gang med Microsoft 365 til virksomheder](../../admin/admin-overview/what-is-microsoft-365.md)

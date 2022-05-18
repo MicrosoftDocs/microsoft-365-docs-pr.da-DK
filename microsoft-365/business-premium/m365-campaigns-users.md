@@ -24,14 +24,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan disse sikkerhedsanbefalinger til Microsoft 365 Business Premium påvirker dine brugere og beskytter dine data.
-ms.openlocfilehash: 202df778e74fb0f14a92b572df977088f8319595
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ffd25f52c0f230506a43a3f611ce933f59d26802
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099955"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469223"
 ---
-# <a name="how-these-security-recommendations-affect-your-users"></a>Sådan påvirker disse sikkerhedsanbefalinger dine brugere
+# <a name="how-these-security-recommendations-affect-your-microsoft-365-users"></a>Sådan påvirker disse sikkerhedsanbefalinger dine Microsoft 365 brugere
 
 Sikkerhedsanbefalinger til Microsoft 365 i denne løsning gør det meget sværere for hackere at få adgang til dit miljø. Konsekvensen er, at brugerne skal være opmærksomme på, hvordan de arbejder i dette mere sikre miljø. Vi forstår, at der kræves lidt ekstra tålmodighed, men det er værd at beskytte din organisation.
 

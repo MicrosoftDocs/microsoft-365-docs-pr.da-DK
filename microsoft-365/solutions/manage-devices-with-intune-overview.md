@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 23a0bb391acdf584d278c9de4aee0fdedf4d8071
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 218ffa6ba9b2e7a4eb5fcd2f042b77b207ab8594
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934219"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468036"
 ---
 # <a name="manage-devices-with-intune-overview"></a>Administrer enheder med Intune Oversigt
 
@@ -36,6 +36,11 @@ Selvom Microsoft 365 indeholder flere værktøjer og metoder til administration 
 - Tillad BYOD-enheder med planer om at implementere beskyttelse af apps og data og/eller tilmelde disse enheder for at Intune.
 
 Hvis dit miljø indeholder planer for medadministration, herunder Microsoft Endpoint Configuration Manager, skal du på den anden side se Dokumentation til [samtidig administration](/mem/configmgr/comanage/) for at udvikle den bedste vej for din organisation. Hvis dit miljø indeholder planer for Windows 365 Cloud-pc, skal du se [Windows 365 Enterprise dokumentation](/windows-365/enterprise/) for at udvikle den bedste sti til din organisation.
+
+Se denne video for at få en oversigt over udrulningsprocessen.
+<br>
+<br>
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4F1af]
 
 ## <a name="why-manage-endpoints"></a>Hvorfor administrere slutpunkter?
 
@@ -49,7 +54,7 @@ I denne artikelserie gennemgås en anbefalet proces til administration af enhede
 
 ## <a name="implementing-the-layers-of-protection-on-and-for-devices"></a>Implementering af beskyttelseslag på og for enheder
 
-Beskyttelse af data og apps på enheder og selve enhederne er en proces med flere lag. Der er nogle beskyttelser, du kan få på ikke-administrerede enheder. Når du har tilmeldt enheder til administration, kan du implementere mere avancerede kontrolelementer. Når trusselsbeskyttelse udrulles på tværs af dine slutpunkter, får du endnu mere indsigt og muligheden for automatisk at afhjælpe nogle angreb. Hvis din organisation har lagt arbejdet i at identificere følsomme data, anvende klassificering og mærkater og konfigurere Microsoft Purview-politikker til forebyggelse af datatab, kan du opnå endnu mere detaljeret beskyttelse af data på dine slutpunkter.
+Beskyttelse af data og apps på enheder og selve enhederne er en proces med flere lag. Der er nogle beskyttelser, du kan få på ikke-administrerede enheder. Når du har tilmeldt enheder til administration, kan du implementere mere avancerede kontrolelementer. Når trusselsbeskyttelse udrulles på tværs af dine slutpunkter, får du endnu mere indsigt og muligheden for automatisk at afhjælpe nogle angreb. Hvis din organisation har arbejdet med at identificere følsomme data, anvende klassificering og mærkater og konfigurere Microsoft Purview politikker til forebyggelse af datatab, kan du opnå endnu mere detaljeret beskyttelse af data på dine slutpunkter.
 
 Følgende diagram illustrerer byggestenene til at opnå en Nul tillid sikkerhedsholdning for Microsoft 365 og andre SaaS-apps, som du introducerer til dette miljø. De elementer, der er relateret til enheder, nummereres fra 1 til 7. Dette er lagene af beskyttelse af enhedsadministratorer, der koordinerer med andre administratorer for at opnå dette.
 
@@ -59,25 +64,25 @@ I denne illustration:
 
 |&nbsp;|Trin|Beskrivelse|Licenskrav|
 |---|---|---|---|
-|1|Konfigurer startpunkt Nul tillid politikker for identitet og enhedsadgang|Samarbejd med din identitetsadministrator om at [implementere databeskyttelsespolitikker på niveau 2 (APP).](manage-devices-with-intune-app-protection.md) Disse politikker kræver ikke, at du administrerer enheder. Du kan konfigurere APP-politikkerne i Intune. Din identitetsadministrator konfigurerer en politik for betinget adgang til at kræve godkendte apps.|E3, E5, F1, F3, F5|
-|2|Tilmeld enheder til Intune|Denne opgave kræver mere planlægning og tid til at implementere. Microsoft anbefaler, at du bruger Intune til at tilmelde enheder, da dette værktøj sikrer optimal integration. Der er flere muligheder for at tilmelde enheder, afhængigt af platformen. Windows enheder kan f.eks. tilmeldes ved hjælp af Azure AD Join eller ved hjælp af Autopilot. Du skal gennemse indstillingerne for hver platform og beslutte, hvilken tilmeldingsmulighed der passer bedst til dit miljø. Se [Trin 3 – Tilmeld enheder for at Intune for at](manage-devices-with-intune-enroll.md) få flere oplysninger.|E3, E5, F1, F3, F5|
-|3|Konfigurer politikker for overholdelse af regler og standarder|Du vil være sikker på, at enheder, der tilgår dine apps og data, opfylder minimumskravene, f.eks. at enheder er adgangskode- eller pinkodebeskyttede, og at operativsystemet er opdateret. Politikker for overholdelse af regler og standarder er den måde, hvorpå du kan definere de krav, enhederne skal opfylde. [Trin 3. Konfigurer politikker for overholdelse af angivne standarder](manage-devices-with-intune-compliance-policies.md) hjælper dig med at konfigurere disse politikker.|E3, E5, F3, F5|
-|4|Konfigurer Virksomhedspolitikker (anbefales) Nul tillid identitets- og enhedsadgangspolitikker|Nu, hvor dine enheder er tilmeldt, kan du samarbejde med din identitetsadministrator om at [justere politikker for betinget adgang for at kræve sunde og kompatible enheder](manage-devices-with-intune-require-compliance.md).|E3, E5, F3, F5|
-|5|Udrul konfigurationsprofiler|I modsætning til politikker for enhedsoverholdelse, der blot markerer en enhed som kompatibel eller ikke er baseret på de kriterier, du konfigurerer, ændrer konfigurationsprofiler faktisk konfigurationen af indstillingerne på en enhed. Du kan bruge konfigurationspolitikker til at hærde enheder mod cyberthreats. Se [trin 5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md).|E3, E5, F3, F5|
-|6|Overvåg enhedsrisiko og overholdelse af sikkerhedsbaselinjer|I dette trin opretter du forbindelse Intune til Microsoft Defender for Endpoint. Med denne integration kan du derefter overvåge enhedsrisikoen som en betingelse for adgang. Enheder, der er i risikotilstand, blokeres. Du kan også overvåge overholdelse af grundlæggende sikkerhedsgrundlinjer. Se [trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer](manage-devices-with-intune-monitor-risk.md).|E5, F5|
-|7|Implementer forebyggelse af datatab (DLP) med funktioner til beskyttelse af oplysninger|Hvis din organisation har arbejdet på at identificere følsomme data og forsyne dokumenter med mærkater, kan du samarbejde med administratoren af beskyttelse af oplysninger for at [beskytte følsomme oplysninger og dokumenter på dine enheder](manage-devices-with-intune-dlp-mip.md).|Tilføjelsesprogrammet E5, F5 til overholdelse af angivne standarder|
+|1|Konfigurer startpunkt Nul tillid politikker for identitet og enhedsadgang|Samarbejd med din identitetsadministrator om at [**implementere databeskyttelsespolitikker på niveau 2 (APP).**](manage-devices-with-intune-app-protection.md) Disse politikker kræver ikke, at du administrerer enheder. Du kan konfigurere APP-politikkerne i Intune. Din identitetsadministrator konfigurerer en politik for betinget adgang til at kræve godkendte apps.|E3, E5, F1, F3, F5|
+|2|Tilmeld enheder til Intune|Denne opgave kræver mere planlægning og tid til at implementere. Microsoft anbefaler, at du bruger Intune til at tilmelde enheder, da dette værktøj sikrer optimal integration. Der er flere muligheder for at tilmelde enheder, afhængigt af platformen. Du kan f.eks. tilmelde Windows enheder ved hjælp af Azure AD Join eller ved hjælp af Autopilot. Du skal gennemse indstillingerne for hver platform og beslutte, hvilken tilmeldingsmulighed der passer bedst til dit miljø. Se [**trin 2. Tilmeld enheder til Intune for at**](manage-devices-with-intune-enroll.md) få flere oplysninger.|E3, E5, F1, F3, F5|
+|3|Konfigurer politikker for overholdelse af regler og standarder|Du vil være sikker på, at enheder, der tilgår dine apps og data, opfylder minimumskravene, f.eks. at enheder er adgangskode- eller pinkodebeskyttede, og at operativsystemet er opdateret. Politikker for overholdelse af regler og standarder er den måde, hvorpå du kan definere de krav, enhederne skal opfylde. [**Trin 3. Konfigurer politikker for overholdelse af angivne standarder**](manage-devices-with-intune-compliance-policies.md) hjælper dig med at konfigurere disse politikker.|E3, E5, F3, F5|
+|4|Konfigurer Virksomhedspolitikker (anbefales) Nul tillid identitets- og enhedsadgangspolitikker|Nu, hvor dine enheder er tilmeldt, kan du samarbejde med din identitetsadministrator om at [**justere politikker for betinget adgang for at kræve sunde og kompatible enheder**](manage-devices-with-intune-require-compliance.md).|E3, E5, F3, F5|
+|5|Udrul konfigurationsprofiler|I modsætning til politikker for enhedsoverholdelse, der blot markerer en enhed som kompatibel eller ikke er baseret på de kriterier, du konfigurerer, ændrer konfigurationsprofiler faktisk konfigurationen af indstillingerne på en enhed. Du kan bruge konfigurationspolitikker til at hærde enheder mod cyberthreats. Se [**trin 5. Udrul konfigurationsprofiler**](manage-devices-with-intune-configuration-profiles.md).|E3, E5, F3, F5|
+|6|Overvåg enhedsrisiko og overholdelse af sikkerhedsbaselinjer|I dette trin opretter du forbindelse Intune til Microsoft Defender for Endpoint. Med denne integration kan du derefter overvåge enhedsrisikoen som en betingelse for adgang. Enheder, der er i risikotilstand, blokeres. Du kan også overvåge overholdelse af grundlæggende sikkerhedsgrundlinjer. Se [**trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer**](manage-devices-with-intune-monitor-risk.md).|E5, F5|
+|7|Implementer forebyggelse af datatab (DLP) med funktioner til beskyttelse af oplysninger|Hvis din organisation har arbejdet på at identificere følsomme data og forsyne dokumenter med mærkater, kan du samarbejde med administratoren af beskyttelse af oplysninger for at [**beskytte følsomme oplysninger og dokumenter på dine enheder**](manage-devices-with-intune-dlp-mip.md).|Tilføjelsesprogrammet E5, F5 til overholdelse af angivne standarder|
 
 ## <a name="coordinating-endpoint-management-with-zero-trust-identity-and-device-access-policies"></a>Koordinering af administration af slutpunkter med Nul tillid politikker for identitet og enhedsadgang
 
-Denne vejledning er tæt koordineret med de anbefalede [Nul tillid politikker for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md). Du arbejder sammen med dit identitetsteam om at gennemføre beskyttelse, som du konfigurerer med Intune i politikker for betinget adgang i Azure AD.
+Denne vejledning er tæt koordineret med de anbefalede [**Nul tillid politikker for identitet og enhedsadgang**](../security/office-365-security/microsoft-365-policies-configurations.md). Du arbejder sammen med dit identitetsteam om at gennemføre beskyttelse, som du konfigurerer med Intune i politikker for betinget adgang i Azure AD.
 
-Her er en illustration af den anbefalede politik, der er angivet med trinvise billedforklaeringer for det arbejde, du skal udføre i Intune/MEM og de relaterede politikker for betinget adgang, som du kan hjælpe med at koordinere i Azure AD.
+Her er en illustration af den anbefalede politik, der er angivet med trinvise billedforklaeringer for det arbejde, du skal udføre i Intune/MEM, og de relaterede politikker for betinget adgang, som du kan hjælpe med at koordinere i Azure AD.
 
 [![Nul tillid politikker for identitet og enhedsadgang](../media/devices/identity-device-overview-steps.png#lightbox)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/devices/identity-device-overview-steps.png)
 
 I denne illustration:
 
-- I trin 1 skal du [implementere niveau 2 App Protection Policies (APP)](manage-devices-with-intune-app-protection.md) for at konfigurere det anbefalede niveau for databeskyttelse med APP-politikker. Derefter arbejder du sammen med dit identitetsteam for at konfigurere den relaterede regel for betinget adgang, så den kræver brug af denne beskyttelse.
+- I trin 1 skal du [**implementere niveau 2 App Protection Policies (APP)**](manage-devices-with-intune-app-protection.md) for at konfigurere det anbefalede niveau for databeskyttelse med APP-politikker. Derefter arbejder du sammen med dit identitetsteam for at konfigurere den relaterede regel for betinget adgang, så den kræver brug af denne beskyttelse.
 - I trin 2, 3 og 4 tilmelder du enheder til administration med Intune, definerer politikker for enhedsoverholdelse og koordinerer derefter med dit identitetsteam for at konfigurere den relaterede regel for betinget adgang, så der kun tillades adgang til enheder, der overholder angivne standarder.
 
 <!---
@@ -99,7 +104,7 @@ I illustrationen:
 
 1. Tilmeld enheder til administration med Intune.
 2. Brug Intune til at føje enheder til Defender for Endpoint.
-3. Enheder, der er onboardet til Defender for Endpoint, er også onboardet til Microsoft Purview-funktioner, herunder Endpoint DLP.
+3. Enheder, der er onboardet til Defender for Endpoint, er også onboardet til Microsoft Purview funktioner, herunder Endpoint DLP.
  
 Bemærk, at kun Intune administrerer enheder. Onboarding refererer til muligheden for, at en enhed kan dele oplysninger med en bestemt tjeneste. I følgende tabel opsummeres forskellene mellem at tilmelde enheder til administration og onboarding af enheder for en bestemt tjeneste.
 
@@ -108,7 +113,7 @@ Bemærk, at kun Intune administrerer enheder. Onboarding refererer til mulighede
 |---------|---------|---------|
 |Beskrivelse     |  Tilmelding gælder for administration af enheder. Enheder er tilmeldt administration med Intune eller Configuration Manager.        | Onboarding konfigurerer en enhed til at arbejde med et bestemt sæt funktioner i Microsoft 365. Onboarding gælder i øjeblikket for funktioner til Microsoft Defender for Endpoint og Microsofts overholdelse af angivne standarder. <br><br>På Windows enheder involverer onboarding at slå en indstilling til i Windows Defender, der gør det muligt for Defender at oprette forbindelse til onlinetjenesten og acceptere politikker, der gælder for enheden.        |
 |Omfanget     | Disse værktøjer til enhedshåndtering administrerer hele enheden, herunder konfiguration af enheden, så den opfylder bestemte målsætninger, f.eks. sikkerhed.        |Onboarding påvirker kun de tjenester, der gælder.     |
-|Anbefalet metode     | Azure Active Directory tilmelde enheder til Intune automatisk.        | Intune er den foretrukne metode til onboarding af enheder til Windows Defender til Slutpunkt og derfor Microsoft Purview-funktioner.<br><br>Bemærk, at enheder, der er onboardet til Microsoft Purview-funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.        |
+|Anbefalet metode     | Azure Active Directory tilmelde enheder til Intune automatisk.        | Intune er den foretrukne metode til onboarding af enheder til Windows Defender for Endpoint og derfor Microsoft Purview funktioner.<br><br>Bemærk, at enheder, der er onboardet til Microsoft Purview funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.        |
 |Andre metoder     |   Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.      | Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge:<br><li>Konfigurationsstyring<li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)<li>Lokalt script<li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)<li>Gruppepolitik|
 | | |     |
 
@@ -118,7 +123,7 @@ Bemærk, at kun Intune administrerer enheder. Onboarding refererer til mulighede
 |---|---|---|
 |Beskrivelse|Tilmelding gælder for administration af enheder. Enheder er tilmeldt administration med Intune eller Configuration Manager.|Onboarding konfigurerer en enhed til at arbejde med et bestemt sæt funktioner i Microsoft 365. Onboarding gælder i øjeblikket for funktioner til Microsoft Defender for Endpoint og Microsofts overholdelse af angivne standarder. <br/><br/> På Windows enheder involverer onboarding at slå en indstilling til i Windows Defender, der gør det muligt for Defender at oprette forbindelse til onlinetjenesten og acceptere politikker, der gælder for enheden.|
 |Omfanget|Disse værktøjer til enhedshåndtering administrerer hele enheden, herunder konfiguration af enheden, så den opfylder bestemte målsætninger, f.eks. sikkerhed.|Onboarding påvirker kun de funktioner, der gælder.|
-|Anbefalet metode|Azure Active Directory tilmelde enheder til Intune automatisk.|Intune er den foretrukne metode til onboarding af enheder til Windows Defender til Slutpunkt og derfor Microsoft Purview-funktioner. <br/><br/> Bemærk, at enheder, der er onboardet til Microsoft Purview-funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.|
+|Anbefalet metode|Azure Active Directory tilmelde enheder til Intune automatisk.|Intune er den foretrukne metode til onboarding af enheder til Windows Defender for Endpoint og derfor Microsoft Purview funktioner. <br/><br/> Bemærk, at enheder, der er onboardet til Microsoft Purview funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.|
 |Andre metoder|Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.|Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge: <ul><li>Konfigurationsstyring</li><li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)</li><li>Lokalt script</li><li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)</li><li>Gruppepolitik</li></ul>|
 
 ## <a name="learning-for-administrators"></a>Learning for administratorer

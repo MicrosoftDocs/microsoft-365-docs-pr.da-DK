@@ -21,24 +21,24 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan listen Gæstebrugere udfyldes i Microsoft 365 Administration.
-ms.openlocfilehash: 0de0187211b874f62ede6cfc8b9e1008adc88220
-ms.sourcegitcommit: 81533e5d3e1aee0823539a7c9bdc20dba6541a02
+description: Få mere at vide om, hvordan du udfylder listen over gæstebrugere i Microsoft 365 Administration, så gæster kan deltage i møder, få vist dokumenter og chatte i Teams, de inviteres til.
+ms.openlocfilehash: 5677492ca8607fd3034b62264897d397e1e65f32
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "63590280"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466872"
 ---
 # <a name="guest-users-in-microsoft-365-admin-center"></a>Gæstebrugere i Microsoft 365 Administration
 
-De gæster, du føjer til Microsoft Teams, SharePoint eller Azure Active Directory, føjes også til listen Gæstebrugere <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">i Microsoft 365 Administration</a>. Gæster kan deltage i møder, få vist dokumenter og chatte Teams som de er inviteret til.
-Når en bruger vises på listen **Gæstebrugere** , kan du fjerne deres adgang der.
+De gæster, du føjer til dine Microsoft Teams, SharePoint eller Azure Active Directory, føjes også til listen **Gæstebrugere** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">Microsoft 365 Administration</a>. Gæster kan deltage i møder, få vist dokumenter og chatte i Teams, de er inviteret til.
+Når en bruger vises på listen **Gæstebrugere** , kan du fjerne vedkommendes adgang der.
 
-Hvis du vil have vist <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">gæstebrugere, Microsoft 365 Administration</a> i venstre navigationslinje, **udvide** Brugere og derefter vælge **Gæstebrugere**.
+Hvis du vil have vist gæstebrugere, <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">skal du</a> udvide **Brugere** i den venstre navigationsrude i Microsoft 365 Administration og derefter vælge **Gæstebrugere**.
 
-## <a name="before-you-begin"></a>Før du begynder 
+## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være global administrator for at udføre denne opgave.
+Du skal være global administrator for at kunne udføre denne opgave.
 
 ## <a name="watch-add-guests-to-teams"></a>Se: Føj gæster til Teams
 
@@ -50,24 +50,24 @@ Du skal være global administrator for at udføre denne opgave.
 
 ## <a name="steps-add-guests-in-azure-active-directory"></a>Trin: Tilføj gæster i Azure Active Directory
 
-Hvis du vil tilføje gæster i Azure Active Directory, skal du [se Tilføj gæstebrugere](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+Hvis du vil tilføje gæster i Azure Active Directory, skal du se [Tilføj gæstebrugere](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
 
-Når du har tilføjet en bruger, kan du også tildele vedkommende til en gruppe eller give vedkommende adgang til en app i organisationen. Når du har tilføjet en bruger i Azure AD-portalen, vil den pågældende bruger også være angivet på  siden Gæstebrugere <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">i Microsoft 365 Administration</a>.
-Når en bruger er føjet til **listen Gæstebrugere**, kan de [føjes til Grupper](../create-groups/manage-guest-access-in-groups.md#add-guests-to-a-microsoft-365-group-from-the-admin-center) <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">i Microsoft 365 Administration</a>.
+Når du har tilføjet en bruger, kan du også tildele dem til en gruppe eller give dem adgang til en app i din organisation. Når du har tilføjet en bruger på Azure AD-portalen, vises denne bruger også på siden **Gæstebrugere** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">Microsoft 365 Administration</a>.
+Når en bruger er føjet til listen **Gæstebrugere**, kan vedkommende [føjes til Grupper](../create-groups/manage-guest-access-in-groups.md#add-guests-to-a-microsoft-365-group-from-the-admin-center) i <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">Microsoft 365 Administration</a>.
 
-Se [Tilføj gæster en masse for](/azure/active-directory/b2b/tutorial-bulk-invite) at invitere flere gæster til at samarbejde med din organisation.
+Se [Tilføj gæster samlet](/azure/active-directory/b2b/tutorial-bulk-invite) for at invitere flere gæster til at samarbejde med din organisation.
 
 ## <a name="next-steps-remove-a-guest"></a>Næste trin: Fjern en gæst
 
-Når du er færdig med at samarbejde med en gæstebruger, kan du fjerne vedkommende, og vedkommende har ikke længere adgang til din organisation.
+Når du er færdig med at samarbejde med en gæstebruger, kan du fjerne dem, så har de ikke længere adgang til din organisation.
 
-1. I menuen Microsoft 365 Administration du udvide **Brugere** og derefter vælge <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">**Gæstebrugere**</a>.
+1. I Microsoft 365 Administration skal du udvide **Brugere** og derefter vælge <a href="https://go.microsoft.com/fwlink/p/?linkid=2074830" target="_blank">**Gæstebrugere**</a>.
 1. På siden **Gæstebrugere** skal du vælge den bruger, du vil fjerne, og derefter vælge **Slet en bruger**.
 
-Hvis du vil fjerne brugere i Azure AD-portalen, skal du [se Fjern en gæstebruger og -ressourcer](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal#clean-up-resources).
+Hvis du vil fjerne brugere på Azure AD-portalen, skal du se [Fjern en gæstebruger og ressourcer](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal#clean-up-resources).
 
 ## <a name="related-content"></a>Relateret indhold
 
 [gæstebrugere i Microsoft 365 Administration](about-guest-users.md)
 
-[forhindre gæster i at blive føjet til en bestemt Microsoft 365-gruppe eller et Microsoft Teams-team](../../solutions/per-group-guest-access.md)
+[forhindre, at gæster føjes til en bestemt Microsoft 365-gruppe eller microsoft teams-team](../../solutions/per-group-guest-access.md)

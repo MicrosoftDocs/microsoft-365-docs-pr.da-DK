@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview prøveversion af playbook til løsninger.
-ms.openlocfilehash: 10dd4ac9447c920112fd85075c3bf6ae3093ee9c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: cf054a27fb56589c42552bb1b79ae837a666d81f
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415254"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466278"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview løsninger
 
@@ -444,4 +444,4 @@ Identificer og beskyt proaktivt mod risici for beskyttelse af personlige oplysni
 
 **Microsoft Security Technical Content Library**: Udforsk dette bibliotek for at finde interaktive vejledninger og andet læringsindhold, der er relevant for dine behov. [Besøg bibliotek](/security).
 
-**Microsoft-sikkerhedsressourcer**: Fra antimalware til Nul tillid kan du hente alle relevante ressourcer til din organisations sikkerhedsbehov. [Besøg ressourcer](/security/business/resources).
+**Microsoft-sikkerhedsressourcer**: Fra antimalware til Nul tillid kan du hente alle relevante ressourcer til din organisations sikkerhedsbehov.
