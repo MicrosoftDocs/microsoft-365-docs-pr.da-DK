@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 6ac255fecaad4fd442116d4abb951be71d3ce6c7
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: e47fc4630e83cb79a591f1c4fd4fc7421746a15e
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173128"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587386"
 ---
 # <a name="get-microsoft-defender-for-business"></a>Hent Microsoft Defender til virksomheder
 
@@ -46,7 +46,7 @@ Hvis du har tilmeldt dig en prøveversion, kan du [aktivere din prøveversion og
 3. Fortsæt til [Tilføj brugere, og tildel licenser](mdb-add-users.md).
 
 > [!TIP]
-> Sørg for at se [prøvebogen: Microsoft Defender til virksomheder](trial-playbook-defender-business.md).
+> Se [playbook til prøveversion for Defender for Business](trial-playbook-defender-business.md).
 
 ## <a name="get-microsoft-365-business-premium"></a>Få Microsoft 365 Business Premium
 
@@ -84,8 +84,8 @@ Når du modtager din acceptmail, kan du aktivere dit prøveabonnement på følge
 
    | Scenario | Procedure |
    |:---|:---|
-   | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<br/><br/>1. Installér dine Office apps nu, eller vælg **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.<br/><br/>2. Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.<br/><br/>3. Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](mdb-add-users.md). |
-   | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | 1. Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.<br/><br/>2. Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. <br/><br/>3. Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md). |
+   | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<ol><li>Du skal enten installere dine Office apps nu eller vælge **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.</li><li>Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.</li><li>Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](mdb-add-users.md).</li></ol> |
+   | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | <ol><li>Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.</li><li>Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. </li><li>Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md).</li></ol> |
 
 ## <a name="two-portals-for-setup"></a>To portaler til konfiguration
 
@@ -93,8 +93,8 @@ Når du er klar til at komme i gang, skal du arbejde med to hovedportaler: Micro
 
 |Portal  |Beskrivelse  |
 |---------|---------|
-| Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Brug Microsoft 365 Administration til at aktivere din prøveversion og logge på første gang.<br/><br/> Du skal også bruge Microsoft 365 Administration til at: <br/>– Tilføj eller fjern brugere.<br/>– Tildel brugerlicenser.<br/>- Se dine produkter og tjenester.<br/>– Fuldføre konfigurationsopgaverne for dit Microsoft 365 abonnement. <br/><br/> Du kan få mere at vide under [Oversigt over Microsoft 365 Administration](../../admin/admin-overview/admin-center-overview.md).      |
-| Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com))     | Brug Microsoft 365 Defender-portalen til at konfigurere Defender for Business. <br/><br/>Du skal bruge Microsoft 365 Defender-portalen til at: <br/>– Få vist dine enheder og politikker for enhedsbeskyttelse.<br/>- Få vist registrerede trusler, og udfør handlinger.<br/>– Få vist sikkerhedsanbefalinger, og administrer dine sikkerhedsindstillinger.<br/><br/>Du kan få mere at vide under [Kom i gang med at bruge Microsoft 365 Defender-portalen](mdb-get-started.md).        |
+| Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Brug Microsoft 365 Administration til at aktivere din prøveversion og logge på første gang.<p> Du skal også bruge Microsoft 365 Administration til at: <ul><li>Tilføj eller fjern brugere.</li><li>Tildel brugerlicenser.</li><li>Få vist dine produkter og tjenester.</li><li>Fuldfør konfigurationsopgaverne for dit Microsoft 365-abonnement.</li></ul><p>Du kan få mere at vide under [Oversigt over Microsoft 365 Administration](../../admin/admin-overview/admin-center-overview.md).      |
+| Portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com))     | Brug Microsoft 365 Defender-portalen til at konfigurere Defender for Business.<p>Du skal bruge Microsoft 365 Defender-portalen til at: <ul><li>Få vist dine enheder og politikker for enhedsbeskyttelse.</li><li>Få vist registrerede trusler, og udfør handlinger.</li><li>Få vist sikkerhedsanbefalinger, og administrer dine sikkerhedsindstillinger.</li></ul><p>Du kan få mere at vide under [Kom i gang med at bruge Microsoft 365 Defender-portalen](mdb-get-started.md).        |
 
 > [!TIP]
 > Hvis du har Microsoft 365 Business Premium, så har du også Microsoft Intune. Du kan bruge Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) til at administrere enheder og konfigurere sikkerhedsindstillinger. Hvis du vil vide mere om Intune, [skal du se Microsoft Intune er MDM- og MAM-udbyder til dine enheder](/mem/intune/fundamentals/what-is-intune).

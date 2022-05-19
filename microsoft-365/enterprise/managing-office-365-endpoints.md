@@ -3,6 +3,7 @@ title: Administrere Office 365-slutpunkter
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
+ms.date: 05/18/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,12 +19,12 @@ ms.custom:
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Få mere at vide om, hvordan du administrerer Office 365 slutpunkter, så de fungerer sammen med netværksarkitekturen i din virksomhed.
-ms.openlocfilehash: 6743ab1c3241b84b0eb1dd3e9f5e67e100e18b40
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 68b778ac695c0b37b55dfe84414f72551d10ce68
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090335"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587462"
 ---
 # <a name="managing-office-365-endpoints"></a>Administrere Office 365-slutpunkter
 
@@ -47,6 +48,9 @@ Microsoft arbejder sammen med SD-WAN-udbydere om at aktivere automatiseret konfi
 Brug PAC- eller WPAD-filer til at administrere netværksanmodninger, der er knyttet til Office 365, men som ikke har en IP-adresse. Typiske netværksanmodninger, der sendes via en proxy- eller perimeterenhed, øger ventetiden. Mens SSL Break og Inspect opretter den største ventetid, kan andre tjenester, f.eks. proxygodkendelse og omdømmeopslag, medføre dårlig ydeevne og en dårlig brugeroplevelse. Derudover skal disse perimeternetværksenheder have tilstrækkelig kapacitet til at behandle alle anmodninger om netværksforbindelse. Vi anbefaler, at du tilsidesætter dine proxy- eller kontrolenheder til direkte Office 365 netværksanmodninger.
   
 [PowerShell Gallery Get-PacFile er et PowerShell-script](https://www.powershellgallery.com/packages/Get-PacFile), der læser de nyeste netværksslutpunkter fra Office 365 IP-adresse og URL-webtjeneste og opretter en eksempel-PAC-fil. Du kan ændre scriptet, så det kan integreres med din eksisterende PAC-filadministration.
+
+> [!NOTE]
+> Du kan finde flere oplysninger om overvejelser om sikkerhed og ydeevne i forbindelse med direkte forbindelse til Office 365 slutpunkter under [principper for Office 365 Network Connectivity](microsoft-365-network-connectivity-principles.md).
 
 ![Oprettelse af forbindelse til Office 365 via firewalls og proxyer.](../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png)
 

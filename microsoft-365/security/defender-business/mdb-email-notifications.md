@@ -13,12 +13,12 @@ ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: b6381f5bfa8ebe4f7c23a16d9a214cadb4e511e6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 7dc6c65221211367e080fac46506f209d17f88ff
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174491"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587440"
 ---
 # <a name="set-up-email-notifications"></a>Konfigurer mailmeddelelser
 
@@ -67,6 +67,9 @@ Hvis du vil have vist eller redigere indstillinger for mailbeskeder for dit firm
    - Hvis du ikke kan se nogen elementer på fanen **Sårbarheder** , kan du oprette en regel, der giver personer besked, når der registreres en ny sikkerhedsrisiko. Hvis du vil have hjælp til denne opgave, skal du se [Opret regler for hændelser for sårbarheder](../defender-endpoint/configure-vulnerability-email-notifications.md).
 
    - Hvis du har oprettet regler, skal du vælge en regel for at redigere den. Du kan også slette en regel. 
+
+> [!IMPORTANT]
+> Når du konfigurerer mailmeddelelser i Defender for Business, skal du tildele meddelelsesreglerne til bestemte brugere. Defender for Business bruger ikke [rollebaseret adgangskontrol, som Defender for Endpoint gør](../defender-endpoint/rbac.md). Mailmeddelelser kan heller ikke anvendes på enhedsgrupper i Defender for Business. 
 
 ## <a name="next-steps"></a>Næste trin
 
