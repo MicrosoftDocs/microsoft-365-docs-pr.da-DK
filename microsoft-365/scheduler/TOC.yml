@@ -2,15 +2,15 @@
   href: index.yml
   expanded: true
   items:
-    - name: Velkommen til Scheduler for Microsoft 365
+    - name: Velkommen til Scheduler til Microsoft 365
       href: scheduler-overview.md
     - name: Tillid og beskyttelse af personlige oplysninger
       href: scheduler-trust-privacy.md
-    - name: Konfiguration af Scheduler for Microsoft 365
+    - name: Konfigurerer Planlægger til Microsoft 365
       href: scheduler-setup.md
-    - name: Sådan bruges Scheduler til Microsoft 365
+    - name: Sådan bruger du Scheduler til Microsoft 365
       href: scheduler-using.md
     - name: Planlægning af tilbagevendende møder
       href: scheduler-recurring-meetings.md
-    - name: Ofte stillede spørgsmål om Scheduler Microsoft 365 tidsplaner
+    - name: Ofte stillede spørgsmål om Scheduler til Microsoft 365
       href: scheduler-faqs.md

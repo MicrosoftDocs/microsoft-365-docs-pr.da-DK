@@ -22,14 +22,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får online- eller telefonsupport til dit abonnement på Microsoft 365 til virksomheder. Du skal være administrator for et virksomhedsabonnement for at få support.
-ms.openlocfilehash: 54c25cd9b6a7fcca46bd434f4e195c088d8d0986
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: b0caf57ddc71f028cf913f29fa983ed1d7bcffc2
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63596965"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465882"
 ---
-# <a name="get-support"></a>Få support
+# <a name="get-support-for-microsoft-365-for-business"></a>Få support til Microsoft 365 til virksomheder
 
 ::: moniker range="o365-worldwide"
 
@@ -48,9 +48,9 @@ Start med [kontrol af dine tjenesters aktuelle tilstand](../enterprise/view-serv
 
 Spar tid ved at starte din tjenesteanmodning online. Vi hjælper dig med at finde en løsning eller sætte dig i forbindelse med teknisk support.
 
-1. Gå til Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">https://admin.microsoft.com</a>. Hvis du får vist en meddelelse om, at du ikke har tilladelse til at få adgang til denne side eller udføre denne handling, er du ikke administrator. Du kan få flere oplysninger under [Hvem har administratortilladelser i min virksomhed?](../admin/admin-overview/admin-center-overview.md#who-has-admin-permissions-in-my-business).
+1. Gå til Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">https://admin.microsoft.com</a>. Hvis du får vist en meddelelse om, at du ikke har tilladelse til at få adgang til denne side eller udføre denne handling, er du ikke administrator. Du kan få mere at vide under [Hvem har administratortilladelser i min virksomhed?](../admin/admin-overview/admin-center-overview.md#who-has-admin-permissions-in-my-business)
 2. Vælg **Hjælp & support**.
-3. Skriv et spørgsmål eller nøgleord i tekstfeltet. Hvis du får vist en rulleliste, skal du vælge det, der er tættest på dit spørgsmål, eller fortsætte med at skrive dit spørgsmål og derefter trykke på **Enter**.
+3. Skriv et spørgsmål eller nøgleord i tekstfeltet. Hvis du får vist en rulleliste, skal du vælge den, der er tættest på dit spørgsmål, eller fortsætte med at skrive dit spørgsmål og derefter trykke på **Enter**.
 4. Hvis resultaterne ikke hjælper, skal du nederst vælge **Kontakt Support**.
 5. Angiv en beskrivelse af problemet, bekræft dit kontaktnummer og din mailadresse, vælg din foretrukne kontaktmetode, og vælg derefter **Kontakt mig**. Den forventede ventetid er angivet i ruden **Kontakt support**.
 
@@ -82,7 +82,7 @@ Hvis nummeret til support ikke er angivet ovenfor, kan du bruge rullemenuen nede
 
 Få mest muligt ud af dit abonnement med ekspertråd fra specialister i små virksomheder.
 
-Business Assist til Microsoft 365 er udviklet til små virksomheder, så du og dine medarbejdere døgnet rundt kan få adgang til specialister i små virksomheder, efterhånden som du vækster din virksomhed, fra onboarding til daglig brug. Du kan få mere at vide under [Business Assist](../admin/misc/business-assist.md).
+Virksomhedsassistent til Microsoft 365 er udviklet til små virksomheder, så du og dine medarbejdere døgnet rundt kan få adgang til små virksomhedsspecialister, efterhånden som du vækster din virksomhed, fra onboarding til hverdagsbrug. Du kan få mere at vide under [Virksomhedsassistent](../admin/misc/business-assist.md).
 
 ::: moniker-end
 
@@ -90,13 +90,13 @@ Business Assist til Microsoft 365 er udviklet til små virksomheder, så du og d
 
 Med hvert abonnement på Office 365 drevet af 21Vianet yder 21Vianet-support teknisk support, førsalgs-, fakturerings- og abonnementssupport. Support er tilgængelig både online via Office 365 drevet af 21Vianet-portalen og via telefon for både betalte abonnementer og prøveabonnementer.
 
-Autoriserede administratorer kan bruge Office 365 drevet af 21Vianet-portalen til at sende serviceanmodninger online og få adgang til supporttelefonnumre. Find en vejledning i [Kontakt support](#contact-support).
+Autoriserede administratorer kan bruge Office 365 drevet af 21Vianet-portalen til at sende serviceanmodninger online og få adgang til supporttelefonnumre. Du kan finde en vejledning under [Kontakt support](#contact-support).
 
 Office 365 drevet af 21Vianets tekniske supportteam foretager kun fejlfinding af de problemer, der er relateret til Office 365 drevet af 21Vianet. Problemer, der stammer fra kundens netværk, falder uden for Office 365-supportgrænserne, og i disse tilfælde må kunderne arbejde sammen med deres netværksteam for at få hjælp.
 
 ## <a name="community-and-self-service-support-options"></a>Community og supportmuligheder for selvbetjening
 
-Selvbetjeningssupport er tilgængelig for alle Office 365 drevet af 21Vianet-brugere, og omfatter fejlfindingsværktøjer og -videoer, hjælpeartikler og -videoer samt forummer og wikier i [Office 365-community](https://go.microsoft.com/fwlink/p/?linkid=842838). Du kan finde flere selvhjælpsressourcer under [Få mere at vide om Office 365 drevet af 21Vianet](../admin/services-in-china/services-in-china.md).
+Selvbetjeningssupport er tilgængelig for alle Office 365-brugere, der drives af 21Vianet-brugere, og omfatter fejlfindingsværktøjer og -videoer, hjælpeartikler og -videoer samt forummer og wikier i [Office 365-community](https://go.microsoft.com/fwlink/p/?linkid=842838). Du kan finde flere selvhjælpsressourcer under [Få mere at vide om Office 365 drevet af 21Vianet](../admin/services-in-china/services-in-china.md).
 
 ## <a name="pre-sales-support"></a>Førsalgssupport
 
@@ -169,7 +169,7 @@ Spar tid ved at starte din tjenesteanmodning online. Gå til <a href="https://go
 
 ### <a name="call-support"></a>Ring til support
 
-Ring til support. Hvis du støder på problemer med onlineanmodningen, er telefonsupport tilgængelig på (86) 400-089-0365.
+Ring til support. Hvis du støder på problemer med onlineanmodning, er telefonsupport tilgængelig på (86) 400-089-0365.
 
 ### <a name="shared-support-responsibilities"></a>Delte supportansvarsområder
 
