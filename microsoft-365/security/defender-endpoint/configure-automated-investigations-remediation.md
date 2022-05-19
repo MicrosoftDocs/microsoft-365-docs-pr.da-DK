@@ -15,22 +15,23 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
-ms.openlocfilehash: c82962640f992f892e21205dcfc0725a79001f10
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 7e94cd14f392eb47a9b747cfb5e5f846f03fdc63
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437868"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535752"
 ---
 # <a name="configure-automated-investigation-and-remediation-capabilities-in-microsoft-defender-for-endpoint"></a>Konfigurer automatiserede undersøgelses- og afhjælpningsfunktioner i Microsoft Defender for Endpoint
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
 
 > Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Hvis din organisation bruger [Microsoft Defender for Endpoint](/windows/security/threat-protection/) (Defender for Endpoint), kan [automatiserede undersøgelses- og afhjælpningsfunktioner](/microsoft-365/security/defender-endpoint/automated-investigations) spare tid og kræfter på dit sikkerhedsteam. Som beskrevet i [dette blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946) efterligner disse funktioner de ideelle trin, som en sikkerhedsanalytiker tager for at undersøge og afhjælpe trusler. [Få mere at vide om automatiseret undersøgelse og afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
+Hvis din organisation bruger [Defender for Endpoint](/windows/security/threat-protection/) (eller [Defender for Business](../defender-business/mdb-overview.md)), kan [automatiserede undersøgelses- og afhjælpningsfunktioner](/microsoft-365/security/defender-endpoint/automated-investigations) spare tid og kræfter på dit sikkerhedsteam. Som beskrevet i [dette blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946) efterligner disse funktioner de ideelle trin, som en sikkerhedsanalytiker tager for at undersøge og afhjælpe trusler. [Få mere at vide om automatiseret undersøgelse og afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
 
 Sådan konfigurerer du automatiseret undersøgelse og afhjælpning:
 
@@ -39,20 +40,30 @@ Sådan konfigurerer du automatiseret undersøgelse og afhjælpning:
 
 ## <a name="turn-on-automated-investigation-and-remediation"></a>Slå automatiseret undersøgelse og afhjælpning til
 
-1. Som global administrator eller sikkerhedsadministrator skal du gå til Microsoft 365 Defender-portalen (<https://security.microsoft.com>) og logge på.
+1. Som global administrator eller sikkerhedsadministrator skal du gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) og logge på.
+
 2. Vælg **Indstillinger** i navigationsruden.
+
 3. Vælg **Slutpunkter**, og vælg derefter **Avancerede funktioner**.
+
 4. Aktivér både **Automatiseret undersøgelse** og **Automatisk løsning af beskeder**.
 
 ## <a name="set-up-device-groups"></a>Konfigurer enhedsgrupper
 
-1. På Microsoft 365 Defender-portalen (<https://security.microsoft.com>) på siden **Indstillinger** under **Tilladelser** skal du vælge **Enhedsgrupper**.
+> [!NOTE]
+> Denne procedure gælder ikke for Defender for Business.
+
+1. På Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) på siden **Indstillinger** under **Tilladelser** skal du vælge **Enhedsgrupper**.
+
 2. Vælg **+ Tilføj enhedsgruppe**.
+
 3. Opret mindst én enhedsgruppe på følgende måde:
+
    - Angiv et navn og en beskrivelse til enhedsgruppen.
    - Vælg et niveau på **listen Automatiseringsniveau**, f.eks **. Fuld – afhjælp automatisk trusler**. Automatiseringsniveauet bestemmer, om afhjælpningshandlinger udføres automatisk eller kun efter godkendelse. Du kan få mere at vide [under Automatiseringsniveauer i automatiseret undersøgelse og afhjælpning](automation-levels.md).
    - I afsnittet **Medlemmer** skal du bruge en eller flere betingelser til at identificere og inkludere enheder.
    - Under fanen **Brugeradgang** skal du vælge de [Azure Active Directory grupper](/azure/active-directory/fundamentals/active-directory-manage-groups?context=azure/active-directory/users-groups-roles/context/ugr-context), der skal have adgang til den enhedsgruppe, du opretter.
+
 4. Vælg **Udført** , når du er færdig med at konfigurere din enhedsgruppe.
 
 ## <a name="next-steps"></a>Næste trin

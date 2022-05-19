@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f1d32c546fc270e044d391dd35f325afc98fe5a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: da9e030d929f65c7ea5bd83010d2b7f49b1d90d9
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101441"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535586"
 ---
 # <a name="create-indicators-for-files"></a>Opret indikatorer for filer
 
@@ -28,12 +28,13 @@ ms.locfileid: "65101441"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
 
 > [!TIP]
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 Undgå yderligere overførsel af et angreb i din organisation ved at forbyde potentielt skadelige filer eller mistanke om malware. Hvis du kender en potentielt skadelig PE-fil (Portable Executable), kan du blokere den. Denne handling forhindrer, at den læses, skrives eller udføres på enheder i din organisation.
 
@@ -60,6 +61,9 @@ Det er vigtigt at forstå følgende forudsætninger, før du opretter indikatore
 
 Denne funktion er designet til at forhindre, at formodet malware (eller potentielt skadelige filer) downloades fra internettet. Den understøtter i øjeblikket bærbare eksekverbare filer (PE), herunder .exe og .dll filer. Dækningen vil blive forlænget over tid.
 
+> [!IMPORTANT]
+> I Defender for Endpoint Plan 1 og Defender for Business kan du oprette en indikator for at blokere eller tillade en fil. I Defender for Business anvendes indikatoren på tværs af dit miljø og kan ikke begrænses til bestemte enheder.
+
 ## <a name="create-an-indicator-for-files-from-the-settings-page"></a>Opret en indikator for filer fra indstillingssiden
 
 1. Vælg **Indstillinger** \> **Slutpunktsindikatorer** \> (under **Regler**) i navigationsruden.
@@ -71,7 +75,7 @@ Denne funktion er designet til at forhindre, at formodet malware (eller potentie
 4. Angiv følgende oplysninger:
     - Indikator – Angiv enhedsoplysningerne, og definer indikatorens udløb.
     - Handling – Angiv den handling, der skal udføres, og angiv en beskrivelse.
-    - Scope – Definer omfanget af enhedsgruppen.
+    - Scope – Definer omfanget af enhedsgruppen (området er ikke tilgængeligt i [Defender for Business](../defender-business/mdb-overview.md)).
 
 5. Gennemse oplysningerne under fanen Oversigt, og vælg derefter **Gem**.
 

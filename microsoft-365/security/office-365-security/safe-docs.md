@@ -13,17 +13,17 @@ search.appverid:
 ms.assetid: ''
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om Pengeskab dokumenter i Microsoft 365 E5/A5 eller Microsoft 365 E5/A5 Security.
+description: Få mere at vide om Pengeskab dokumenter i Microsoft 365 A5 eller E5 Security.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fa1c7e07c1e1cd117ee20f4712dbbadad3c2b5c
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 4e9e83ec902ec3beafff76e26fff3ce13d0a9b9a
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174137"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535520"
 ---
-# <a name="safe-documents-in-microsoft-365-e5a5"></a>Pengeskab dokumenter i Microsoft 365 E5/A5
+# <a name="safe-documents-in-microsoft-365-a5-or-e5-security"></a>Pengeskab dokumenter i Microsoft 365 A5 eller E5 Security
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 

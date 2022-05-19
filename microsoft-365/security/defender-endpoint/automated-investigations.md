@@ -9,7 +9,6 @@ ms.sitesec: library
 ms.pagetype: security
 author: dansimp
 ms.author: dansimp
-ms.date: 11/24/2021
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,21 +18,21 @@ ms.collection:
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.custom: AIR
-ms.openlocfilehash: eadf9fe7f6112d1219f085662686b2a930b3ff28
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: cfc3ebb1a32487bf2b32074059091c0d4d3517ec
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789794"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535774"
 ---
 # <a name="overview-of-automated-investigations"></a>Oversigt over automatiserede undersøgelser
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
-- Microsoft Defender Antivirus
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
 
 **Platforme**
 - Windows
@@ -53,15 +52,10 @@ Denne artikel indeholder en oversigt over AIR og indeholder links til næste tri
 
 En automatiseret undersøgelse kan starte, når en besked udløses, eller når en sikkerhedsoperator starter undersøgelsen.
 
-<br>
-
-****
-
-|Situation|Hvad sker der?|
+|Situation|Hvad sker der|
 |---|---|
 |En besked udløses|Generelt starter en automatisk undersøgelse, når en [besked](review-alerts.md) udløses, og der oprettes en [hændelse](view-incidents-queue.md) . Antag f.eks., at der findes en skadelig fil på en enhed. Når filen registreres, udløses en besked, og der oprettes en hændelse. En automatisk undersøgelsesproces starter på enheden. Da andre beskeder genereres på grund af den samme fil på andre enheder, føjes de til den tilknyttede hændelse og til den automatiserede undersøgelse.|
 |En undersøgelse startes manuelt|En automatiseret undersøgelse kan startes manuelt af sikkerhedsteamet. Lad os f.eks. antage, at en sikkerhedsoperatør gennemgår en liste over enheder og bemærker, at en enhed har et højt risikoniveau. Sikkerhedsoperatoren kan vælge enheden på listen for at åbne dens pop op-vindue og derefter vælge **Start automatiseret undersøgelse**.|
-|
 
 ## <a name="how-an-automated-investigation-expands-its-scope"></a>Sådan udvider en automatiseret undersøgelse omfanget
 
@@ -84,11 +78,11 @@ Afhængigt af det [automatiseringsniveau](automation-levels.md) , der er angivet
 Alle afhjælpningshandlinger, uanset om de afventer eller er fuldført, spores i [Løsningscenter](auto-investigation-action-center.md). Hvis det er nødvendigt, kan dit team af sikkerhedshandlinger fortryde en afhjælpningshandling. Du kan få mere at vide under [Gennemse og godkend afhjælpningshandlinger efter en automatisk undersøgelse](/microsoft-365/security/defender-endpoint/manage-auto-investigation).
 
 > [!TIP]
-> Se den nye, samlede undersøgelsesside på portalen Microsoft 365 Defender. Du kan få mere at vide under [(NY!) Unified Investigation-side](/microsoft-365/security/defender/m365d-autoir-results#new-unified-investigation-page).
+> Se den nye, samlede undersøgelsesside på portalen Microsoft 365 Defender. Du kan få mere at vide på [siden Unified-undersøgelse](/microsoft-365/security/defender/m365d-autoir-results#new-unified-investigation-page).
 
 ## <a name="requirements-for-air"></a>Krav til LUFT
 
-Din organisation skal have Defender for Endpoint (se [Minimumkrav til Microsoft Defender for Endpoint](minimum-requirements.md)).
+Dit abonnement skal omfatte [Defender for Endpoint](microsoft-defender-endpoint.md) eller [Defender for Business](../defender-business/mdb-overview.md).
 
 > [!NOTE]
 > Automatiseret undersøgelse og svar kræver Microsoft Defender Antivirus for at køre i passiv tilstand eller aktiv tilstand. Hvis Microsoft Defender Antivirus er deaktiveret eller fjernet, fungerer automatiseret undersøgelse og svar ikke korrekt.

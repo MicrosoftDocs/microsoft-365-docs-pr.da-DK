@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: caee6f216ad5006eb31750d2c5cbd0d9e47f21ce
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 2e86aa7fc8ed304327ab2c07ec487789ad966fc7
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438921"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535442"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
@@ -177,7 +177,7 @@ Hvis du vil tilføje en ny politik, skal du følge disse trin:
 4. Angiv politikområdet. Vælg enhedsgrupperne for at angive, hvor politikken skal anvendes. Det er kun enheder i de valgte enhedsgrupper, der forhindres i at få adgang til websteder i de valgte kategorier.
 
    > [!IMPORTANT]
-   > Hvis du bruger Defender for Business, gælder det ikke for et bestemt niveau. Spring dette trin over, og fortsæt til trin 5.
+   > Hvis du bruger Defender for Business, anvendes din politik for filtrering af webindhold som standard for alle brugere. Der gælder ikke et bestemt udsnit.
 
 5. Gennemse oversigten, og gem politikken. Det kan tage op til to timer, før opdateringen af politikken gælder for de valgte enheder.
 

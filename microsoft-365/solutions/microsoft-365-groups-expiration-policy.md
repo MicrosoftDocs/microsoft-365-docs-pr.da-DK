@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Få mere at vide om udløbspolitikker for Microsoft 365 grupper.
-ms.openlocfilehash: 9287d61b95d635eccbbef64d307c0aa0e3d12357
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: 431d2ae027e92c83d645a4b27ab515d17326c1b7
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738555"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535796"
 ---
 # <a name="microsoft-365-group-expiration-policy"></a>udløbspolitik for Microsoft 365 gruppe
 
@@ -40,8 +40,6 @@ Grupper, der aktivt bruges, fornys automatisk. En af følgende handlinger vil au
 - Teams – Besøg en teams-kanal.
 - Yammer – få vist et indlæg i et Yammer-community eller en interaktiv mail i Outlook.
 - Formularer – få vist, opret eller rediger formularer, eller send et svar til en formular. 
-
-Bemærk, at den eneste Yammer aktivitet, der udløser en automatisk gruppefornyelse, er upload af et dokument til SharePoint i community'et.
 
 > [!IMPORTANT]
 > Når du ændrer udløbspolitikken, genberegner tjenesten udløbsdatoen for hver gruppe. Den starter altid med at tælle fra den dato, hvor gruppen blev oprettet, og anvender derefter den nye udløbspolitik.

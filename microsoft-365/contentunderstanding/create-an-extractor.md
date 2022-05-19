@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en udtrækningsmaskine i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 7d9e04b26e04a3145f5008121bfde162387a9f6b
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 5be59cc7b99d64ceceb08bc400eeb0c44e3de1a8
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882522"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535476"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Opret en udtrækningsmaskine i Microsoft SharePoint Syntex
 
@@ -75,13 +75,13 @@ Funktionen Find er nyttig, hvis du søger i et stort dokument, eller hvis der er
 
 ## <a name="add-an-explanation"></a>Tilføj en forklaring
 
-I vores eksempel opretter vi en forklaring, der giver et tip om selve enhedsformatet og de variationer, der kan være i eksempeldokumenterne. En datoværdi kan f.eks. være i en række forskellige formater, f.eks.:
+I vores eksempel opretter vi en forklaring, der giver et tip om selve enhedsformatet og de variationer, der kan være i eksempeldokumenterne. En datoværdi kan f.eks. være i flere forskellige formater, f.eks.:
 
 - 10/14/2019
 - 14. oktober 2019
 - Mandag den 14. oktober 2019
 
-Du kan oprette en mønsterforklaring for at hjælpe med at identificere *tjenestens startdato* .
+Hvis du vil identificere *tjenestens startdato*, kan du oprette en mønsterforklaring.
 
 1. I afsnittet Forklaring skal du vælge **Ny** og skrive et navn (f.eks *. Dato*).
 2. Vælg **Mønsterliste** for Type.
@@ -140,15 +140,15 @@ Hvis du igen modtager en **uoverensstemmelse** i dine navngivne filer, skal du s
 
 ## <a name="test-your-model"></a>Test din model
 
-Hvis du modtager et match på dine mærkede eksempelfiler, kan du nu teste din model på de resterende eksempelfiler, der ikke er forsynet med mærkater. Dette er valgfrit, men et nyttigt trin til at evaluere modellens "fitness" eller parathed, før du bruger den, ved at teste den på filer, som modellen ikke har set før.
+Hvis du modtager et match på dine mærkede eksempelfiler, kan du nu teste din model på de resterende eksempelfiler, der ikke er forsynet med mærkater. Dette trin er valgfrit, men nyttigt til at evaluere modellens "fitness" eller parathed, før du bruger den, ved at teste den på filer, som modellen ikke har set før.
 
-1. Vælg fanen **Test** på modellens startside.  Dette kører modellen på dine eksempelfiler, der ikke er navngivet.
+1. Vælg fanen **Test** på modellens startside.  Dette vil køre modellen på de eksempelfiler, der ikke er navngivet.
 
 2. På listen **Test filer** vises dine eksempelfiler for at vise, om modellen kan udtrække de oplysninger, du har brug for. Brug disse oplysninger til at fastslå klassificeringens effektivitet i identificering af dine dokumenter.
 
     ![Test af dine filer.](../media/content-understanding/test-filies-extractor.png)
 
-### <a name="further-refine-an-extractor"></a>Forfin en udtrækningsmaskine yderligere
+## <a name="further-refine-an-extractor"></a>Forfin en udtrækningsmaskine yderligere
 
 Hvis du har dubletobjekter og kun vil udtrække én værdi eller et bestemt antal værdier, kan du angive en regel for at angive, hvordan den skal behandles. Hvis du vil tilføje en regel for at afgrænse udtrukne oplysninger, skal du følge disse trin:
 
@@ -182,7 +182,7 @@ Hvis du har dubletobjekter og kun vil udtrække én værdi eller et bestemt anta
 
 [Forklaringstyper](explanation-types-overview.md)
 
-[Udnyt ordbankens taksonomi, når du opretter en udtrækningsfunktion](leverage-term-store-taxonomy.md)
+[Udnyt ordbank-taksonomi, når du opretter en udtrækningsfunktion](leverage-term-store-taxonomy.md)
 
 [Oversigt over dokumentforståelse](document-understanding-overview.md)
 

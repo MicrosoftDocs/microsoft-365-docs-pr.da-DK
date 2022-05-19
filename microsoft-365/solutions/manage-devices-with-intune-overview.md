@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 218ffa6ba9b2e7a4eb5fcd2f042b77b207ab8594
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 08abc5c53c54c5a4e4100cc88adf0fb25af5c23b
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468036"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535354"
 ---
 # <a name="manage-devices-with-intune-overview"></a>Administrer enheder med Intune Oversigt
 
@@ -40,7 +40,8 @@ Hvis dit miljø indeholder planer for medadministration, herunder Microsoft Endp
 Se denne video for at få en oversigt over udrulningsprocessen.
 <br>
 <br>
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4F1af]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Y4fC]
+
 
 ## <a name="why-manage-endpoints"></a>Hvorfor administrere slutpunkter?
 
@@ -117,14 +118,6 @@ Bemærk, at kun Intune administrerer enheder. Onboarding refererer til mulighede
 |Andre metoder     |   Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.      | Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge:<br><li>Konfigurationsstyring<li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)<li>Lokalt script<li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)<li>Gruppepolitik|
 | | |     |
 
-Bemærk, at kun Intune administrerer enheder. Onboarding refererer til muligheden for, at en enhed kan dele oplysninger med en bestemt tjenesteegenskab. I følgende tabel opsummeres forskellene mellem at tilmelde enheder til administration og onboarding af enheder for en bestemt funktion.
-
-|&nbsp;|Tilmelde|Onboard|
-|---|---|---|
-|Beskrivelse|Tilmelding gælder for administration af enheder. Enheder er tilmeldt administration med Intune eller Configuration Manager.|Onboarding konfigurerer en enhed til at arbejde med et bestemt sæt funktioner i Microsoft 365. Onboarding gælder i øjeblikket for funktioner til Microsoft Defender for Endpoint og Microsofts overholdelse af angivne standarder. <br/><br/> På Windows enheder involverer onboarding at slå en indstilling til i Windows Defender, der gør det muligt for Defender at oprette forbindelse til onlinetjenesten og acceptere politikker, der gælder for enheden.|
-|Omfanget|Disse værktøjer til enhedshåndtering administrerer hele enheden, herunder konfiguration af enheden, så den opfylder bestemte målsætninger, f.eks. sikkerhed.|Onboarding påvirker kun de funktioner, der gælder.|
-|Anbefalet metode|Azure Active Directory tilmelde enheder til Intune automatisk.|Intune er den foretrukne metode til onboarding af enheder til Windows Defender for Endpoint og derfor Microsoft Purview funktioner. <br/><br/> Bemærk, at enheder, der er onboardet til Microsoft Purview funktioner ved hjælp af andre metoder, ikke automatisk tilmeldes Defender for Endpoint.|
-|Andre metoder|Andre metoder til tilmelding afhænger af enhedens platform, og om det er BYOD eller administreres af din organisation.|Andre metoder til onboarding af enheder omfatter i anbefalet rækkefølge: <ul><li>Konfigurationsstyring</li><li>Andet værktøj til administration af mobilenheder (hvis enheden administreres af et)</li><li>Lokalt script</li><li>VDI-konfigurationspakke til onboarding af ikke-vedvarende VDI-enheder (Virtual Desktop Infrastructure)</li><li>Gruppepolitik</li></ul>|
 
 ## <a name="learning-for-administrators"></a>Learning for administratorer
 

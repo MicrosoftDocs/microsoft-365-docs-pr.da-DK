@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Få trinvise værktøjer til at planlægge, overføre og implementere funktionerne i din lejers licenser. Find en vejledning til, hvordan du konfigurerer en tjeneste eller en app, du skal køre.
-ms.openlocfilehash: 61eccec443a939591e563daa5135239bf0e23a74
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 5ffb0652b145bba6ae4e834815c5cb51b7ad2b94
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188718"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535918"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365 og Office 365 tjenester
 
@@ -181,13 +181,13 @@ Løsningerne i denne vejledning hjælper dig med at få indblik i brugeraktivite
 * Med løsningen til overholdelse af angivne standarder for kommunikation kan du identificere og reagere på kommunikationsrisici for elementer som vold på arbejdspladsen, insiderhandel, chikane, ordensregler og overtrædelser af lovmæssige standarder.
 * Løsningen til styring af insiderrisiko hjælper dig med at identificere, undersøge og reagere på risici for tyveri af immaterielle rettigheder, følsomme datalækager, sikkerhedsovertrædelser, dataspild og fortrolighedsovertrædelser.
 
-### <a name="microsoft-purview-information-protection-setup-guide"></a>Installationsvejledning til Microsoft Purview Information Protection
+### <a name="microsoft-purview-information-protection-setup-guide"></a>Microsoft Purview Information Protection konfigurationsvejledning
 
 Få et overblik over de funktioner, du kan anvende i din strategi til beskyttelse af oplysninger, så du kan være sikker på, at dine følsomme oplysninger er beskyttet. Brug en tilgang med fire trins livscyklus, hvor du opdager, klassificerer, beskytter og overvåger følsomme oplysninger. [Konfigurationsvejledningen til Microsoft Purview Information Protection](https://aka.ms/microsoftpurviewinformationprotectionsetupguide) indeholder en vejledning i, hvordan du fuldfører hver af disse faser.
 
-### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Konfigurationsvejledning til Microsoft Purview Data Lifecycle Management
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Administration af Microsoft Purview-datalivscyklus konfigurationsvejledning
 
-[Konfigurationsvejledningen til Microsoft Purview Data Lifecycle Management](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du har angivet. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer opbevaringsmærkater, politikker for opbevaringsmærkater og opbevaringspolitikker, der anvendes på din organisations indhold og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
+[Konfigurationsvejledningen til Administration af Microsoft Purview-datalivscyklus](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du angiver. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer opbevaringsmærkater, politikker for opbevaringsmærkater og opbevaringspolitikker, der anvendes på din organisations indhold og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
 
 ### <a name="microsoft-defender-for-cloud-apps-setup-guide"></a>konfigurationsvejledning til Microsoft Defender for Cloud Apps
 
@@ -210,6 +210,10 @@ Transformér, hvordan dine medarbejdere arbejder sammen med [dashboardet Medarbe
 ### <a name="microsoft-teams-setup-guide"></a>konfigurationsvejledning til Microsoft Teams
 
 [Konfigurationsvejledningen til Microsoft Teams](https://aka.ms/teamsguidance) giver din organisation vejledning til at konfigurere teamarbejdsområder, der hoster samtaler i realtid via beskeder, opkald og lyd- eller videomøder for både team og privat kommunikation. Brug værktøjerne i denne vejledning til at konfigurere gæsteadgang, angive, hvem der kan oprette teams, og tilføje teammedlemmer fra en .csv-fil, alt sammen uden at det er nødvendigt at åbne en PowerShell-session. Du får også de bedste fremgangsmåder til at fastlægge organisationens netværkskrav og sikre en vellykket Teams udrulning.
+
+### <a name="teams-phone-setup-guide"></a>Teams Telefon konfigurationsvejledning
+
+[Konfigurationsvejledningen til Teams Telefon](https://aka.ms/teamsphonesetupguide) hjælper dig med at holde forbindelsen ved hjælp af moderne opkaldsløsninger. Anvend nøglefunktioner med et skybaseret opkaldskontrolsystem, der understøtter arbejdsbelastningen for telekommunikation for Teams. Du kan vælge og installere funktioner fra de tilgængelige offentlige PSTN-tilslutningsmuligheder (Switched Telephone Network). Du kan også finde hjælp til andre funktioner, f.eks. automatisk omstilling, opkaldskøer, Lydmøde, opkalds-id og livebegivenheder.
 
 ### <a name="sharepoint-setup-guide"></a>konfigurationsvejledning til SharePoint
 

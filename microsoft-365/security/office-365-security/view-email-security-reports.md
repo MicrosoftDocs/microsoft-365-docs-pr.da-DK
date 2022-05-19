@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dcc04b1c06e5ca2900cca9f0a66fe5b041af734e
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 476807a03954475470a976113a2faa926862c008
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417166"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535940"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -1180,7 +1180,9 @@ Hver eksporteret .csv fil er begrænset til 150.000 rækker. Hvis dataene indeho
 
 ## <a name="related-topics"></a>Relaterede emner
 
-[Beskyttelse mod spam og antimalware i EOP](anti-spam-and-anti-malware-protection.md)
+[Beskyttelse mod spam i EOP](anti-spam-protection.md)
+
+[Beskyttelse mod skadelig software i EOP](anti-malware-protection.md)
 
 [Intelligente rapporter og indsigter på Microsoft 365 Defender-portalen](reports-and-insights-in-security-and-compliance.md)
 
